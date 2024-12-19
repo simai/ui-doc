@@ -1,0 +1,28 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # Замените на нужную ветку
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@v0.1.8
+      with:
+        host: 85.92.108.56
+        username: dev
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          cd /var/www/dev/data/git/ui-doc
+          git pull origin main
+          yfm -i /var/www/dev/data/git/ui-doc -o /var/www/dev/data/www/doc.simai.io
+          # Добавьте команды для перезапуска сервера, если нужно, например:
+          # systemctl restart your-service
