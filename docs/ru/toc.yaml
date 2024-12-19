@@ -1,0 +1,13 @@
+title: Пример документации на диплодоке
+href: index.yaml
+items: 
+  - name: О проекте
+    href: about.md
+  - name: Дополнительные материалы
+    href: page.md
+  - name: Другая страница
+    href: anotherpage.md
+  - name: Подраздел
+    include:
+      path: sub-section/toc.yaml
+      mode: link
