@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SRCDIR=$(dirname $(dirname $(node -pe "require('fs').realpathSync('${0//\\//}')")))
+BINDIR=$(dirname $(cd "$SRCDIR"; node -pe "require.resolve('stylelint/package.json')"))
+
+if [[ -z "$BINDIR" ]]; then
+  echo "Required package 'stylelint' not found"
+  exit 1
+fi
+
+# Redirect to original stylelint bin
+chmod +x $BINDIR/bin/stylelint.mjs
+$BINDIR/bin/stylelint.mjs $@

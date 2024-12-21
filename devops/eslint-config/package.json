@@ -1,0 +1,38 @@
+{
+  "name": "@diplodoc/eslint-config",
+  "version": "1.0.17",
+  "description": "diplodoc ESLint config, following our styleguide",
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "prettier.js"
+  ],
+  "scripts": {
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "@gravity-ui/eslint-config": "^3.1.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-security": "1.7.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diplodoc/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/diplodoc/eslint-config/issues"
+  },
+  "homepage": "https://github.com/diplodoc/eslint-config#readme"
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SRCDIR=$(dirname $(dirname $(node -pe "require('fs').realpathSync('${0//\\//}')")))
+BINDIR=$(dirname $(cd "$SRCDIR"; node -pe "require.resolve('svgo/package.json')"))
+
+if [[ -z "$BINDIR" ]]; then
+  echo "Required package 'svgo' not found"
+  exit 1
+fi
+
+# Redirect to original svgo bin
+chmod +x $BINDIR/bin/svgo
+$BINDIR/bin/svgo $@

@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+set -e
+
+BINDIR=$(dirname "$0")
+SRCDIR=$(dirname $(dirname $(node -pe "require('fs').realpathSync('${0//\\//}')")))
+
+while (( $# )); do
+    case "$1" in
+        fix ) :
+            FIX=1
+            ;;
+        init ) :
+            INIT=1
+            ;;
+        update ) :
+            UPDATE=1
+            ;;
+    esac
+    shift
+done
+
+if [[ -n "$INIT$UPDATE" ]]; then
+  if [[ -n $INIT ]]; then
+    echo "[@diplodoc/lint] Extend package.json configuration"
+    node "$SRCDIR/scripts/modify-package.js"
+
+    $BINDIR/husky init
+  fi
+
+  echo "[@diplodoc/lint] Add initial lint configs"
+  cp -a "$SRCDIR/scaffolding/." .
+
+  echo "[@diplodoc/lint] Extend .ignore configuration"
+  node "$SRCDIR/scripts/modify-ignore.js"
+
+  exit 0
+fi
+
+if [[ -n $FIX ]]; then
+  echo "Run linters in fix mode"
+
+  $BINDIR/eslint '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}' --fix
+  $BINDIR/prettier --write '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
+  if [[ -n $(find . -type f -name '*.css' -name '*.scss' | grep -vwFf .stylelintignore) ]]; then
+    $BINDIR/stylelint '**/*.{css,scss}' --fix
+  fi
+
+  exit 0
+fi
+
+echo "Run linters"
+
+$BINDIR/eslint '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
+$BINDIR/prettier --check '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
+if [[ -n $(find . -type f -name '*.css' -name '*.scss' | grep -vwFf .stylelintignore) ]]; then
+  $BINDIR/stylelint '**/*.{css,scss}'
+fi

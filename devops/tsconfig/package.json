@@ -1,0 +1,21 @@
+{
+  "name": "@diplodoc/tsconfig",
+  "version": "1.0.2",
+  "description": "diplodoc TypeScript config for our projects",
+  "keywords": [
+    "typescript",
+    "config"
+  ],
+  "license": "MIT",
+  "files": [
+    "tsconfig.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diplodoc-platform/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/diplodoc-platform/tsconfig/issues"
+  },
+  "homepage": "https://github.com/diplodoc-platform/tsconfig#readme"
+}

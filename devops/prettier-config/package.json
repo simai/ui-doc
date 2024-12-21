@@ -1,0 +1,29 @@
+{
+  "name": "@diplodoc/prettier-config",
+  "version": "2.0.0",
+  "description": "diplodoc Prettier config, following our styleguide",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diplodoc/prettier-config"
+  },
+  "bugs": {
+    "url": "https://github.com/diplodoc/prettier-config/issues"
+  },
+  "homepage": "https://github.com/diplodoc/prettier-config#readme",
+  "scripts": {
+    "lint": "npm run prettier -- --check",
+    "prettier": "prettier '**/*.{js,md,yaml,yml,json}'"
+  },
+  "dependencies": {
+    "@gravity-ui/prettier-config": "^1.1.0",
+    "prettier": "^3.0.3"
+  }
+}
