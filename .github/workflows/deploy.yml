@@ -16,10 +16,10 @@ jobs:
     - name: Deploy via SSH
       uses: appleboy/ssh-action@v0.1.8
       with:
-        host: 85.92.108.56
-        username: dev
+        host: ${{ vars.SSH_SERVER }}
+        username: ${{ vars.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
+        port: ${{ vars.SSH_PORT }}
         script: |
           cd /var/www/dev/data/git/ui-doc
           git pull origin main
