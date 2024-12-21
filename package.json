@@ -1,49 +1,46 @@
 {
-  "name": "@diplodoc/documentation-template",
-  "version": "0.0.0",
-  "description": "template for your diplodoc documentation with hot reload development server",
-  "homepage": "https://github.com/diplodoc-platform/documentation-template",
+  "name": "@diplodoc/diplodoc",
+  "version": "1.0.0",
+  "description": "Meta package for Diplodoc platform development",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "devops/*",
+    "extensions/*",
+    "extensions/**/example",
+    "packages/*"
+  ],
+  "scripts": {
+    "reset": "npx zx scripts/reset.js",
+    "deps": "npx zx scripts/deps.js",
+    "bootstrap": "scripts/bootstrap.sh",
+    "codespaces": "scripts/codespaces.sh",
+    "git:init": "scripts/git-init.sh",
+    "git:head": "scripts/git-head.sh"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:diplodoc-platform/documentation-template.git"
+    "url": "git+https://github.com/diplodoc-platform/diplodoc.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/diplodoc-platform/documentation-template/issues",
-    "email": "morozov.kirill.moki@gmail.com"
+    "url": "https://github.com/diplodoc-platform/diplodoc/issues"
   },
-  "author": {
-    "name": "moki",
-    "email": "morozov.kirill.moki@gmail.com",
-    "url": "github.com/moki"
+  "homepage": "https://github.com/diplodoc-platform/diplodoc#readme",
+  "devDependencies": {
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
+    "nx": "^20.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zx": "^8.1.8"
   },
-  "keywords": [
-    "diplodoc",
-    "markdown-it",
-    "markdown",
-    "playground",
-    "sandbox",
-    "documentation",
-    "development",
-    "hot-reload",
-    "codespaces",
-    "template"
-  ],
-  "license": "MIT",
-  "main": "scripts/serve.js",
-  "scripts": {
-    "start": "npm run build:docs && node scripts/serve.js",
-    "build:docs": "yfm --input docs --output docs-html"
+  "overrides": {
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.1"
   },
   "dependencies": {
-    "@doc-tools/docs": "^3.23.0",
-    "chokidar": "^3.5.3",
-    "express": "^4.18.2",
-    "glob": "^10.3.4",
-    "lodash": "^4.17.21",
-    "open": "^8.4.2",
-    "parse5": "^7.1.2",
-    "parse5-utils": "^2.0.0",
-    "serve-static": "^1.15.0"
-  },
-  "devDependencies": {}
+    "typescript": "^5.4.5"
+  }
 }

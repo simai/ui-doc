@@ -1,23 +1,26 @@
-# Basic "About page" 
+# О Diplodoc
 
-This is an example for basic documenation project.
-It contains simple structure with couple of pages (this page, another page) and nested sub-section. 
+Добро пожаловать на платформу документирования Diplodoc — решение, созданное для тех, кто стремится эффективно управлять и публиковать документацию с использованием подхода «docs as code».
 
-Diplodoc provides you with unique name how this project can be reached on https://diplodoc.com like 
-"https://common---gh-aje0e4eg9hffg001r5e5.viewer.diplodoc.com/en/" 
+Diplodoc предоставляет два варианта использования (оба из которых абсолютно бесплатны):
 
-If you would like to extend your project - please refer to [YFM Project Organization guide](https://diplodoc.com/docs/en/project/)
+{% list tabs %}
 
-All changes for this project can be done within you public github repository called "diplodoc-example/docs". 
-To make changes and apply them: 
+- Серверная версия
 
-- go to your repo under "diplodoc-example/docs" 
-- make changes for project structure or content
-- commit & push into your repository 
-- go to "Actions" tab for docs repository 
-- run "Release" action and wait till completion 
-- done, updates should be available for everyone. 
+  Серверная версия Diplodoc обеспечивает простоту и удобство использования платформы без необходимости организации собственного хостинга. В этом варианте вся обработка и рендеринг контента осуществляется на наших ресурсах.
 
+  Вы просто работаете с Markdown-файлами на Github, и платформа автоматически генерирует из них документацию на домене [diplodoc.com](https://diplodoc.com/).
 
-In case if you would like to make proxy from your own domain to this Documentation - please [Contact Us](https://diplodoc.com/#contact) - we will support you accordingly till appropriate documentation creation. 
+  Одним из преимуществ серверной версии является возможность проксирования с вашего собственного домена, что позволяет сохранить брендовый стиль и профессиональный вид документационного портала.
+
+- Cтатическая документация
+
+  Для пользователей, предпочитающих полный контроль над инфраструктурой, Diplodoc предлагает вариант использования через интерфейс командной строки (CLI).
+
+  В этом сценарии вы можете использовать наш CLI для генерации статических HTML-страниц из вашего контента, написанного в Markdown.
+
+  Этот подход позволяет размещать собранные файлы на любых собственных хостинговых платформах, обеспечивая максимальную гибкость и независимость. Это идеальный вариант для команд, желающих интегрировать процесс создания документации в свои CI/CD пайплайны.
+
+{% endlist %}
 
