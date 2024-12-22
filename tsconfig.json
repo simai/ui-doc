@@ -1,0 +1,16 @@
+{
+  "extends": "@diplodoc/tsconfig",
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "target": "ES2019",
+    "outDir": "build",
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "experimentalDecorators": false,
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],
+  "types": ["node"]
+}

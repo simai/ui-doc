@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Allow load custom resources md2html with metadata: filelist 1`] = `
+"[
+  "_bundle/search-async-0",
+  "_bundle/app-css-1",
+  "_bundle/app-js-1",
+  "_bundle/search-css-2",
+  "_bundle/search-js-0",
+  "_bundle/search-js-1",
+  "_bundle/search/index.js",
+  "_bundle/search/langs/ar.js",
+  "_bundle/search/langs/da.js",
+  "_bundle/search/langs/de.js",
+  "_bundle/search/langs/du.js",
+  "_bundle/search/langs/el.js",
+  "_bundle/search/langs/es.js",
+  "_bundle/search/langs/fi.js",
+  "_bundle/search/langs/fr.js",
+  "_bundle/search/langs/he.js",
+  "_bundle/search/langs/hi.js",
+  "_bundle/search/langs/hu.js",
+  "_bundle/search/langs/hy.js",
+  "_bundle/search/langs/index.js",
+  "_bundle/search/langs/it.js",
+  "_bundle/search/langs/ja.js",
+  "_bundle/search/langs/jp.js",
+  "_bundle/search/langs/kn.js",
+  "_bundle/search/langs/ko.js",
+  "_bundle/search/langs/nl.js",
+  "_bundle/search/langs/no.js",
+  "_bundle/search/langs/pt.js",
+  "_bundle/search/langs/ro.js",
+  "_bundle/search/langs/ru.js",
+  "_bundle/search/langs/sa.js",
+  "_bundle/search/langs/sv.js",
+  "_bundle/search/langs/ta.js",
+  "_bundle/search/langs/te.js",
+  "_bundle/search/langs/th.js",
+  "_bundle/search/langs/tr.js",
+  "_bundle/search/langs/vi.js",
+  "_bundle/search-css-0",
+  "_bundle/search-js-2",
+  "_bundle/search-css-1",
+  "index.html",
+  "page.html",
+  "project/config.html",
+  "toc.js"
+]"
+`;
+
+exports[`Allow load custom resources md2html with metadata: index.html 1`] = `
+<!DOCTYPE html>
+<html lang="ru"
+      dir="ltr"
+>
+  <head>
+    <meta charset="utf-8">
+    <base href="./">
+    <meta name="test-yfm"
+          content="inline test"
+    >
+    <meta name="yfm-config"
+          content="config test"
+    >
+    <meta name="title"
+          content="Documentation"
+    >
+    <meta name="noIndex"
+          content="true"
+    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+      Documentation | Documentation
+    </title>
+    <style type="text/css">
+      body {
+                        height: 100vh;
+                    }
+    </style>
+    <link type="text/css"
+          rel="stylesheet"
+          href="_bundle/search-css-0"
+    >
+    <link type="text/css"
+          rel="stylesheet"
+          href="_bundle/app-css-1"
+    >
+  </head>
+  <body class="g-root g-root_theme_light">
+    <div id="root">
+    </div>
+    <script type="application/javascript">
+      window.STATIC_CONTENT = false
+                   window.__DATA__ = {"data":{"data":{"title":"Documentation","description":"","meta":{"title":"Documentation","noIndex":true,"metadata":[{"name":"test-yfm","content":"inline test"},{"name":"yfm-config","content":"config test"}],"style":[],"script":[],"csp":[]},"links":[{"title":"Getting started with Documentation","description":"This guide will show you the basics of working with Documentation","href":"page.html"}]},"meta":{"title":"Documentation","noIndex":true,"metadata":[{"name":"test-yfm","content":"inline test"},{"name":"yfm-config","content":"config test"}],"style":[],"script":[],"csp":[]},"title":"Documentation","leading":true},"router":{"pathname":"index","depth":1},"lang":"ru","langs":["ru"]};
+    </script>
+    <script src="toc.js"
+            type="application/javascript"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/search-js-0"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/app-js-1"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/search-js-2"
+    >
+    </script>
+  </body>
+</html>
+`;
+
+exports[`Allow load custom resources md2html with metadata: page.html 1`] = `
+<!DOCTYPE html>
+<html lang="ru"
+      dir="ltr"
+>
+  <head>
+    <meta charset="utf-8">
+    <base href="./">
+    <meta name="yfm"
+          value="builder in page"
+    >
+    <meta name="test-yfm"
+          content="inline test"
+    >
+    <meta name="yfm-config"
+          content="config test"
+    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+      Documentation
+    </title>
+    <style type="text/css">
+      body {
+                        height: 100vh;
+                    }
+    </style>
+    <link type="text/css"
+          rel="stylesheet"
+          href="_bundle/search-css-0"
+    >
+    <link type="text/css"
+          rel="stylesheet"
+          href="_bundle/app-css-1"
+    >
+  </head>
+  <body class="g-root g-root_theme_light">
+    <div id="root">
+    </div>
+    <script type="application/javascript">
+      window.STATIC_CONTENT = false
+                   window.__DATA__ = {"data":{"meta":{"metadata":[{"name":"yfm","value":"builder in page"},{"name":"test-yfm","content":"inline test"},{"name":"yfm-config","content":"config test"}],"style":[],"script":[],"csp":[]},"assets":[],"headings":[],"title":"","includes":[],"html":"
+      <p>Lorem
+      </p>/n","leading":false},"router":{"pathname":"page","depth":1},"lang":"ru","langs":["ru"]};
+    </script>
+    <script src="toc.js"
+            type="application/javascript"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/search-js-0"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/app-js-1"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/search-js-2"
+    >
+    </script>
+  </body>
+</html>
+`;
+
+exports[`Allow load custom resources md2html with metadata: project/config.html 1`] = `
+<!DOCTYPE html>
+<html lang="ru"
+      dir="ltr"
+>
+  <head>
+    <meta charset="utf-8">
+    <base href="../">
+    <meta name="yfm"
+          value="builder in config"
+    >
+    <meta name="test-yfm"
+          content="inline test"
+    >
+    <meta name="yfm-config"
+          content="config test"
+    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"
+    >
+    <title>
+      Documentation
+    </title>
+    <style type="text/css">
+      body {
+                        height: 100vh;
+                    }
+    </style>
+    <link type="text/css"
+          rel="stylesheet"
+          href="_bundle/search-css-0"
+    >
+    <link type="text/css"
+          rel="stylesheet"
+          href="_bundle/app-css-1"
+    >
+  </head>
+  <body class="g-root g-root_theme_light">
+    <div id="root">
+    </div>
+    <script type="application/javascript">
+      window.STATIC_CONTENT = false
+                   window.__DATA__ = {"data":{"meta":{"metadata":[{"name":"yfm","value":"builder in config"},{"name":"test-yfm","content":"inline test"},{"name":"yfm-config","content":"config test"}],"style":[],"script":[],"csp":[]},"assets":[],"headings":[],"title":"","includes":[],"html":"
+      <p>Lorem
+      </p>/n","leading":false},"router":{"pathname":"project/config","depth":2},"lang":"ru","langs":["ru"]};
+    </script>
+    <script src="toc.js"
+            type="application/javascript"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/search-js-0"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/app-js-1"
+    >
+    </script>
+    <script type="application/javascript"
+            src="_bundle/search-js-2"
+    >
+    </script>
+  </body>
+</html>
+`;
+
+exports[`Allow load custom resources md2html with metadata: toc.js 1`] = `"window.__DATA__.data.toc = {"title":"Documentation","href":"index.html","items":[{"name":"Documentation","href":"page.html","id":"Documentation-RANDOM"},{"name":"Config","href":"project/config.html","id":"Config-RANDOM"}]};"`;
+
+exports[`Allow load custom resources md2md with metadata: filelist 1`] = `
+"[
+  "index.yaml",
+  "page.md",
+  "project/config.md",
+  "toc.yaml"
+]"
+`;
+
+exports[`Allow load custom resources md2md with metadata: index.yaml 1`] = `
+"title: Documentation
+description: ''
+meta:
+  title: Documentation
+  noIndex: true
+links:
+  - title: Getting started with Documentation
+    description: This guide will show you the basics of working with Documentation
+    href: page.md
+"
+`;
+
+exports[`Allow load custom resources md2md with metadata: page.md 1`] = `
+"---
+metadata:
+  - name: yfm
+    content: builder in page
+  - name: test-yfm
+    content: inline test
+  - name: yfm-config
+    content: config test
+---
+
+Lorem"
+`;
+
+exports[`Allow load custom resources md2md with metadata: project/config.md 1`] = `
+"---
+metadata:
+  - name: yfm
+    value: builder in config
+  - name: test-yfm
+    content: inline test
+  - name: yfm-config
+    content: config test
+---
+
+Lorem"
+`;
+
+exports[`Allow load custom resources md2md with metadata: toc.yaml 1`] = `
+"title: Documentation
+href: index.yaml
+items:
+  - name: Documentation
+    href: page.md
+  - name: Config
+    href: project/config.md
+"
+`;

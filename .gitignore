@@ -1,3 +1,25 @@
-.nx
-/node_modules
-/experiments
+/external
+/build
+/assets
+input
+output
+output-html
+!tests/**/input
+schemas/page-constructor-schema.json
+
+# libraries
+npm-debug.log
+node_modules
+
+# editor
+.vscode
+.idea
+
+coverage
+.env
+.tvm.json
+.DS_Store
+
+# tests
+tests/coverage
+tests/node_modules

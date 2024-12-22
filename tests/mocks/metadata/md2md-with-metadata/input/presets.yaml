@@ -1,0 +1,6 @@
+default:
+  __metadata:
+    - name: test-yfm
+      content: inline test
+    - name: yfm-config
+      content: config test
