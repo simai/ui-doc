@@ -1,3 +1,8 @@
+    <link rel="stylesheet" href="_assets/style/core.min.css">
+    <link rel="stylesheet" href="_assets/style/utility.full.min.css">
+
+
+
 # О Diplodoc
 
 <div style="background: red">Hello World!</div>
