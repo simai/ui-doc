@@ -1,6 +1,8 @@
 # О Diplodoc
 
-<div style="background: red">Hello World!<div>
+<div style="background: red">Hello World!</div>
+
+<div class="text-5 c-primary">Test text size</div>
 
 Добро пожаловать на платформу документирования Diplodoc — решение, созданное для тех, кто стремится эффективно управлять и публиковать документацию с использованием подхода «docs as code».
 
