@@ -1,7 +1,10 @@
+ <head>
     <link rel="stylesheet" href="_assets/style/core.min.css">
     <link rel="stylesheet" href="_assets/style/utility.full.min.css">
+</head>
 
-
+<script src="_assets/style/core.min.css"></script>
+<script src="_assets/style/utility.full.min.css"></script>
 
 # О Diplodoc
 
