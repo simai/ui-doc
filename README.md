@@ -1,62 +1,40 @@
-**english** | [русский](https://github.com/diplodoc-platform/cli/blob/master/README.ru.md)
-- - -
+# Documentation Template created by Diplodoc
 
-[![NPM version](https://img.shields.io/npm/v/@diplodoc/cli.svg?style=flat)](https://www.npmjs.org/package/@diplodoc/cli)
+Features:
 
-# yfm-docs
+- initial project structure
+- dev server with hot reload
+- codespaces support
+- vscode tutorial via code tours
 
-Yfm-docs lets you build a full-fledged documentation project: with navigation, internal transitions, and full
-[Yandex Flavored Markdown (YFM)](https://diplodoc.com/docs/en/index-yfm) support.
+## Initial project structure
 
-![Example of displaying a documentation page](docsAssets/overview.jpg)
-
-## Documentation
-
-[ydocs.tech](https://diplodoc.com/docs/en/tools/docs)
+Initiatl project structure with basic content can be found within your public github repo "diplodoc-example/docs" 
 
 ## Usage
 
-```bash
-npm i @diplodoc/cli -g
+### Run locally by cloning repo:
+
 ```
+> git clone git@github.com:diplodoc-platform/documentation-template.git
 
-```bash
-npm run start -- -i ./input-folder -o ./ouput-folder -v "{\"name\":\"Alice\"}"
+> cd documentation-template
+
+> npm start
+
+> listening on 0.0.0.0:8000
+
 ```
+now you have development server with hot reload runing and serving built documentation on `0.0.0.0:8000`
 
-## Source files
+### github codespaces
 
-### Preparation
+press Use this template -> Open in a codespace
 
-You need to add `.env` file into repo root with data below:
+![open in a codespace](images/open-in-a-codespace.jpeg)
 
-```bash
-GITHUB_OWNER=
-GITHUB_REPO= # docs
-GITHUB_TOKEN= # personal access token
-GITHUB_BASE_URL= # for ex: https://api.github.com
-VCS_CONNECTOR_TYPE= # github
-```
+wait for the development server startup
 
-or you can update .yfm file into docs repo
+enjoy developing documentation with html result preview in split view
 
-```bash
-connector:
-    type:
-    github:
-        endpoint:
-        token:
-        owner:
-        repo:
-```
-
-### Build from source
-
-```bash
-cd cli
-npm ci && npm run build
-```
-
-## License
-
-MIT
+![codespaces project](images/codespaces-project.jpeg)
