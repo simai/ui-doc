@@ -13,9 +13,9 @@ docs-viewer:
   langs: ['en','ru']
   favicon-src: https://storage.yandexcloud.net/diplodoc-www-assets/favicon/favicon.ico
   github-url-prefix: https://github.com/diplodoc-platform/docs/blob/master
-  logo-link-preview: https://storage.yandexcloud.net/diplodoc-www-assets/navigation/diplodoc-logo.svg
+  logo-link-preview: _images/simai-name.svg
   logo-options:
-    src: https://storage.yandexcloud.net/diplodoc-www-assets/navigation/diplodoc-logo.svg
+    src: _images/simai-name.svg
     src-dark: https://storage.yandexcloud.net/diplodoc-www-assets/logo/ddos-logo-dark.svg
     src-preview:
       ru: https://storage.yandexcloud.net/diplodoc-www-assets/navigation/diplodoc-share-doc-ru.png
