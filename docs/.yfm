@@ -4,6 +4,8 @@ langs: ['en','ru']
 resources:
   style:
     - _assets/style/custom.css
+    - _assets/style/core.min.css
+    - _assets/style/utility.full.min.css
 
 docs-viewer:
   project-name: diplodoc
