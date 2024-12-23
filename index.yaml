@@ -2,4 +2,3 @@ resources:
   style:
     - /assets/css/core.min.css
     - /assets/css/utility.full.min.css
-

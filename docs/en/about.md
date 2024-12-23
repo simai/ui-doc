@@ -1,5 +1,7 @@
 # Basic "About page" 
 
+<div class="mb-4 c-primary t-4 outline bg-warning">TTEST DIV - HELLO WORLD!</div>
+
 This is an example for basic documenation project.
 It contains simple structure with couple of pages (this page, another page) and nested sub-section. 
 
