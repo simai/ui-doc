@@ -1,0 +1,31 @@
+title: "Документация Diplodoc"
+description: "Руководство по использованию Diplodoc"
+version: "1.0"
+lang: "ru"
+
+assets:  # Подключаемые ресурсы
+  - css:
+      - assets/css/core.min.css
+      - assets/css/utility.full.min.css
+
+
+navigation: # Навигация по структуре
+  - title: "Введение"
+    path: "intro.md"
+  - title: "Руководство"
+    children:
+      - title: "Установка"
+        path: "guides/install.md"
+      - title: "Настройка"
+        path: "guides/configuration.md"
+
+plugins: # Подключенные плагины
+  - tabs
+  - cut
+  - mermaid
+
+search: # Настройки поиска
+  enabled: true
+
+toc: # Генерация оглавления
+  depth: 3
