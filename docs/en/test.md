@@ -1,5 +1,7 @@
 # Basic "About page" 
 
+<div class="t-2 c-primary bg-warning outline">Этот слой должен быть красным и с границей</div>
+
 This is an example for basic documenation project.
 It contains simple structure with couple of pages (this page, another page) and nested sub-section. 
 
