@@ -1,0 +1,31 @@
+<?php
+return array (
+  'title' => 'Типографика',
+  'order' => 22,
+  'menu' =>
+  array (
+    'text-default' => 'Параметры по умолчанию (text-default)',
+    'text-role-modifiers' => 'Модификаторы ролей текста',
+    'text-size' => 'Размер текста (text-size)',
+    'title-size' => 'Размер заголовков (title-size)',
+    'font-family' => 'Семейство шрифтов (font-family)',
+    'font-smoothing' => 'Сглаживание шрифтов (font-smoothing)',
+    'font-style' => 'Стиль шрифта (font-style)',
+    'font-weight' => 'Толщина шрифта (font-weight)',
+    'font-variant' => 'Начертание шрифта (капитель) (font-variant)',
+    'font-variant-numeric' => 'Начертание цифр (font-variant-numeric)',
+    'text-transform' => 'Трансформация текста (text-transform)',
+    'line-height' => 'Высота строки (line-height)',
+    'letter-spacing' => 'Трекинг текста (letter-spacing)',
+    'text-indent' => 'Отступ текста (text-indent)',
+    'text-max-width' => 'Длина строки (text-max-width)',
+    'text-align' => 'Выравнивание текста (text-align)',
+    'vertical-align' => 'Выравнивание по вертикали (vertical-align)',
+    'list-style-type' => 'Стиль маркера списка (list-style-type)',
+    'list-style-position' => 'Положение маркера списка (list-style-position)',
+    'text-overflow' => 'Обрезка текста (text-overflow)',
+    'white-space' => 'Обработка пробелов (white-space)',
+    'word-break' => 'Перенос строк (word-break)',
+    'content' => 'Содержимое',
+  ),
+);
