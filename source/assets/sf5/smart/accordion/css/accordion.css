@@ -1,8 +1,0 @@
-.sf--accordion-default button[data-accordion].active {
-  background: #0ca678; }
-
-.cl--accordion-block {
-  display: none; }
-  .cl--accordion-block.active {
-    display: block; }
-

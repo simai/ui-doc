@@ -1,1 +1,0 @@
-new SF.cl.propsLoader("news",{send:async function(a){return new Promise(((t,n)=>{const e=this.ajax,o=a.data?a.data:{};if(e){e.props.initEvents.send.request({url:a.url,method:a.method,data:o}).then((a=>{t(a)})).catch((a=>{console.log("ошибка"),n(new Error(a))}))}}))},setData:function(a){a.data?this.props.data=a.data.data:console.warn("Не передана дата")}});

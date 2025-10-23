@@ -1,1 +1,0 @@
-new SF.cl.propsLoader("button",{initForm:t=>{console.log("test_button_test")}});

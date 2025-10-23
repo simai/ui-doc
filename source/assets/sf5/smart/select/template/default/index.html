@@ -1,5 +1,0 @@
-<select class="w-full block weight-4 appearance-none transition p-top-1 p-bottom-1 p-right-2 p-left-2 text-1 radius-2 color-main bg-white border-1 border-gray-3 bg-origin-padding bg-arrow-down bg-right-b2 bg-repeat-none" aria-label="Пример раскрывающегося списка">
-    <% _.forEach(data.select, function(item,index) { %>
-    <option <%= item.selected ? 'selected' : '' %>  value="<%= item.value %>"><%= item.name %></option>
-    <% }); %>
-</select>

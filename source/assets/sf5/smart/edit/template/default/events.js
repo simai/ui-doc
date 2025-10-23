@@ -1,1 +1,0 @@
-new SF.cl.propsLoader("edit",{test:o=>{console.log("Кастомная функция из шаблона загружена"),console.log(o)}});
