@@ -31,12 +31,6 @@ jobs:
       - name: Install JavaScript dependencies
         run: YARN_IGNORE_ENGINES=1 yarn install
 
-      - name: Install PHP dependencies
-        run: composer install --no-interaction --prefer-dist
-
-      - name: Build frontend assets
-        run: yarn prod
-
       - name: Prepare .env
         run: |
           cat <<'EOF' > .env
@@ -45,6 +39,12 @@ jobs:
           AZURE_REGION=''
           AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
           EOF
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Build frontend assets
+        run: yarn prod
 
       - name: Build static site
         run: ./vendor/bin/jigsaw build production
