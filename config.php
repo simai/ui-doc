@@ -17,7 +17,7 @@
         'baseUrl' => '',
         'production' => false,
         'env' => getenv(),
-        'category' => false,
+        'category' => true,
         'cache' => false,
         'siteName' => 'Simai Documentation',
         'siteDescription' => 'Simai framework documentation',

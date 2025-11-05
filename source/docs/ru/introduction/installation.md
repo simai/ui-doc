@@ -4,6 +4,7 @@ section: content
 title: Установка
 description: Установка
 ---
+
 ![][image1]
 # SIMAI Framework UI Utilities
 
