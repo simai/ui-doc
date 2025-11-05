@@ -4,7 +4,6 @@
 /source/assets/build/
 /composer.json
 /bootstrap.php
-/config.php
 .idea
 yarn.lock
 tailwind.config.js
