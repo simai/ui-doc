@@ -7,8 +7,6 @@ description: Соотношение сторон (Aspect Ratio)
 
 # Соотношение сторон (Aspect Ratio)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/aspect-ratio.php](https://dev.ru.simai.io/ru/ui/utility/layout/aspect-ratio.php)
-
 ## Описание
 
 Модификатор `aspect-{width}x{height}` задаёт соотношение сторон для элемента. Это полезно при создании элементов,
