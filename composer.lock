@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2385991cce306f2188ad424b8332cbdf",
+    "content-hash": "7020c064af2452e7b5bf833a90b27f8b",
     "packages": [
         {
             "name": "brick/math",
@@ -2558,16 +2558,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "5c82aa359df4701c762402f3bdd70ab0b20add0e"
+                "reference": "6085f2f4ccb37b3d18df34885d6a4f34e0634a6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/5c82aa359df4701c762402f3bdd70ab0b20add0e",
-                "reference": "5c82aa359df4701c762402f3bdd70ab0b20add0e",
+                "url": "https://api.github.com/repos/simai/docara/zipball/6085f2f4ccb37b3d18df34885d6a4f34e0634a6b",
+                "reference": "6085f2f4ccb37b3d18df34885d6a4f34e0634a6b",
                 "shasum": ""
             },
             "require": {
@@ -2646,9 +2646,9 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara/tree/v1.0.10"
+                "source": "https://github.com/simai/docara/tree/v1.0.11"
             },
-            "time": "2025-12-01T09:46:18+00:00"
+            "time": "2025-12-01T10:08:42+00:00"
         },
         {
             "name": "spatie/backtrace",
