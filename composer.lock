@@ -2558,16 +2558,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "5be4d111aa91f3ddd56b5a9024f4dd9aeab39833"
+                "reference": "d7484a14211d434d51c618e885f008b9d0319e31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/5be4d111aa91f3ddd56b5a9024f4dd9aeab39833",
-                "reference": "5be4d111aa91f3ddd56b5a9024f4dd9aeab39833",
+                "url": "https://api.github.com/repos/simai/docara/zipball/d7484a14211d434d51c618e885f008b9d0319e31",
+                "reference": "d7484a14211d434d51c618e885f008b9d0319e31",
                 "shasum": ""
             },
             "require": {
@@ -2646,9 +2646,9 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara/tree/v1.0.6"
+                "source": "https://github.com/simai/docara/tree/v1.0.7"
             },
-            "time": "2025-12-01T09:18:03+00:00"
+            "time": "2025-12-01T09:25:47+00:00"
         },
         {
             "name": "spatie/backtrace",
