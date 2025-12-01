@@ -25,7 +25,7 @@
         'locales' => [
             'ru' => 'Русский',
         ],
-        'pretty' => false,
+        'pretty' => true,
         'defaultLocale' => 'ru',
         'lang_path' => 'source/lang',
         'tags' => ['ExampleTag','ListWrap'],
