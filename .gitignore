@@ -7,7 +7,6 @@
 yarn.lock
 tailwind.config.js
 webpack.mix.js
-composer.lock
 .env
 temp
 trash
