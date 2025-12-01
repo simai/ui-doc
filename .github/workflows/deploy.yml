@@ -2,7 +2,8 @@ name: Deploy UI Development
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -43,18 +44,16 @@ jobs:
         env:
           YARN_IGNORE_ENGINES: 1
         run: |
-          php docara init --update
+          php vendor/bin/docara init --update
 
       - name: Build frontend assets
         env:
           YARN_IGNORE_ENGINES: 1
         run: |
-          mkdir -p vendor/bin
-          ln -sf "$PWD/docara" vendor/bin/docara
           yarn prod
 
       - name: Build static site
-        run: php docara build production
+        run: php vendor/bin/docara build production
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.8
@@ -65,7 +64,7 @@ jobs:
           port: ${{ vars.SSH_PORT }}
           script: |
             set -e
-            cd /var/www/dev/data/git/ui-doc  
+            cd /var/www/dev/data/git/ui-doc
             export HOME=/home/git
             mkdir -p ~/.ssh
             ssh-keyscan -H github.com >> ~/.ssh/known_hosts
@@ -83,9 +82,7 @@ jobs:
             AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
             EOF
             composer install --no-dev --prefer-dist --no-interaction
-            php docara init --update
-            mkdir -p vendor/bin
-            ln -sf "$PWD/docara" vendor/bin/docara
+            php vendor/bin/docara init --update
             yarn prod
-            php docara build production
+            php vendor/bin/docara build production
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
