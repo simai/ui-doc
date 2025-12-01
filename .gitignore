@@ -2,7 +2,6 @@
 /node_modules/
 /vendor/
 /source/assets/build/
-/composer.json
 /bootstrap.php
 .idea
 yarn.lock

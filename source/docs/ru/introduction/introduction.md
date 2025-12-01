@@ -5,7 +5,6 @@ title: Введение
 description: Введение
 ---
 
-
 # Введение
 
 **SIMAI Framework UI Utilities** — это набор инструментов, ориентированных на упрощение и ускорение создания адаптивных,
@@ -21,7 +20,9 @@ description: Введение
 
 Ниже приведен небольшой пример кода, демонстрирующий применение нескольких модификаторов:
 
-<iframe src="https://play.simai.io/embed.html?component=buttons&group=buttons"></iframe>
+<div class="sf-playground">
+    <iframe src="http://localhost:5173/embed.html?component=buttons&group=buttons"></iframe>
+</div>
 
 ```html
 

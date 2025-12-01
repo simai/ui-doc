@@ -2,8 +2,7 @@ name: Deploy UI Development
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -28,9 +27,6 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install JavaScript dependencies
-        run: YARN_IGNORE_ENGINES=1 yarn install
-
       - name: Prepare .env
         run: |
           cat <<'EOF' > .env
@@ -43,11 +39,22 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist
 
+      - name: Initialize project (stubs, core, npm/yarn install)
+        env:
+          YARN_IGNORE_ENGINES: 1
+        run: |
+          php docara init --update
+
       - name: Build frontend assets
-        run: yarn prod
+        env:
+          YARN_IGNORE_ENGINES: 1
+        run: |
+          mkdir -p vendor/bin
+          ln -sf "$PWD/docara" vendor/bin/docara
+          yarn prod
 
       - name: Build static site
-        run: ./vendor/bin/jigsaw build production
+        run: php docara build production
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.8
@@ -58,7 +65,7 @@ jobs:
           port: ${{ vars.SSH_PORT }}
           script: |
             set -e
-            cd /var/www/dev/data/git/ui-doc
+            cd /var/www/dev/data/git/ui-doc  
             export HOME=/home/git
             mkdir -p ~/.ssh
             ssh-keyscan -H github.com >> ~/.ssh/known_hosts
@@ -69,8 +76,16 @@ jobs:
             export XDG_CONFIG_HOME=$PWD/.config
             export XDG_CACHE_HOME=$PWD/.cache
             mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
-            yarn install
+            cat <<'EOF' > .env
+            DOCS_DIR=docs
+            AZURE_KEY=''
+            AZURE_REGION=''
+            AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
+            EOF
             composer install --no-dev --prefer-dist --no-interaction
+            php docara init --update
+            mkdir -p vendor/bin
+            ln -sf "$PWD/docara" vendor/bin/docara
             yarn prod
-            ./vendor/bin/jigsaw build production
+            php docara build production
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
