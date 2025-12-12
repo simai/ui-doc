@@ -69,6 +69,8 @@ jobs:
             mkdir -p ~/.ssh
             ssh-keyscan -H github.com >> ~/.ssh/known_hosts
             git config --global --add safe.directory /var/www/dev/data/git/ui-doc
+            git reset --hard
+            git clean -fd
             git pull --ff-only origin main
             git submodule update --init --remote
             export YARN_IGNORE_ENGINES=1
