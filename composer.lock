@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f172a856f3fa5492fc64b1469106c53",
+    "content-hash": "1aec21b8bf96dd6279b302f8c00ea0bb",
     "packages": [
         {
             "name": "brick/math",
@@ -2558,7 +2558,7 @@
         },
         {
             "name": "simai/docara",
-            "version": "v1.0.29",
+            "version": "v1.0.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
@@ -2646,7 +2646,7 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara/tree/v1.0.29"
+                "source": "https://github.com/simai/docara/tree/v1.0.30"
             },
             "time": "2025-12-12T13:39:37+00:00"
         },
