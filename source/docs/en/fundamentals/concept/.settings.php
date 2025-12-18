@@ -1,0 +1,25 @@
+<?php
+return array(
+    'title' => 'Concept',
+    'order' => 3,
+    'menu' => array(
+        'modifiers' => 'Modifiers',
+        'modifiers-conditions-for-the-action' => 'Modifier conditions',
+        'break-points' => 'Breakpoints',
+        'conditions-of-the-state' => 'State conditions',
+        'properties-of-modifiers' => 'Modifier properties',
+        'abbreviations-of-properties' => 'Property abbreviations',
+        'modifier-parameters' => 'Modifier parameters',
+        'modifier-limitations' => 'Modifier constraints',
+        'values' => 'Values',
+        'colors' => 'Colors',
+        'directions' => 'Directions',
+        'alignment' => 'Alignment',
+        'variables' => 'Variables',
+        'color' => 'Color',
+        'color-primitives' => 'Color primitives',
+        'themes' => 'Themes',
+        'sizes' => 'Sizes',
+        'typography' => 'Typography',
+    ),
+);

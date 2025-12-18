@@ -1,10 +1,12 @@
 <?php
-    return array (
-        'title' => 'Установка',
-        'order' => 1,
-        'menu' =>
-            array (
-                'introduction' => 'Введение',
-                'utilities' => 'Утилиты',
-            ),
-    );
+return array(
+    'title' => 'Документация SF UI',
+    'order' => 1,
+    'menu' => array(
+        'start' => 'Старт',
+        'fundamentals' => 'Основы',
+        'utilities' => 'Утилиты',
+        'components' => 'Компоненты',
+        'smart-components' => 'Смарт-компоненты',
+    ),
+);

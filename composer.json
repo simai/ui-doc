@@ -1,5 +1,13 @@
 {
-  "require": {
-    "simai/docara": "^1.0.30"
-  }
+    "require": {
+        "simai/docara": "^1.0.30"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "source/"
+        }
+    },
+    "scripts": {
+        "docs:create": "php bin/docs-create.php"
+    }
 }

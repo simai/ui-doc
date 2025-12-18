@@ -78,6 +78,7 @@
         'github' => 'https://github.com/simai/ui-doc/',
         'locales' => [
             'ru' => 'Русский',
+            'en' => 'English',
         ],
         'pretty' => true,
         'defaultLocale' => 'ru',

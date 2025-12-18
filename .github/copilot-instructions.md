@@ -1,0 +1,21 @@
+# Copilot Instructions
+
+- Stack: Docara + Jigsaw static docs site; PHP 8.2, Node 20 with Laravel Mix builds and a Docara configurator injected into page templates.
+- Always reply to the user (including confirmations/system-style status messages) in the language they use in chat.
+- Docs live under `DOCS_DIR` (see .env, default `docs`) with one folder per locale (e.g., source/docs/ru); collections are generated automatically per locale in [source/_core/collections.php](source/_core/collections.php).
+- Pages use Blade+Markdown front matter: typically `extends: _core._layouts.documentation` and `section: content` as in [source/docs/ru/introduction/introduction.md](source/docs/ru/introduction/introduction.md). The public entry redirects to the appropriate locale/index via cookie logic in [source/index.blade.md](source/index.blade.md).
+- Navigation and ordering come from `.settings.php` files in each section (see [source/docs/ru/.settings.php](source/docs/ru/.settings.php) and [source/docs/ru/introduction/.settings.php](source/docs/ru/introduction/.settings.php)); `menu` defines child slugs -> titles, `order` controls sort, `showInMenu` hides/show sections.
+- UI strings per locale live in `.lang.php` (e.g., [source/docs/ru/.lang.php](source/docs/ru/.lang.php)); keep keys in sync when adding languages.
+- Layout switches (header/search/toolbar, sidebars, floating FAB) are centralized in the `$layoutConfiguration` block of [config.php](config.php); use these flags instead of hardcoding component toggles.
+- `config.php` also wires helper closures (breadcrumbs, prev/next, menu, translations, locale detection, GitHub source link), so reuse `$page->configurator` APIs there rather than re-implementing navigation logic.
+- Core event hooks for custom build logic are stubbed in [source/_core/bootstrap.php](source/_core/bootstrap.php) (beforeBuild/afterCollections/afterBuild) and mirrored at the root [bootstrap.php](bootstrap.php).
+- Asset pipeline: [source/_core/webpack.mix.js](source/_core/webpack.mix.js) builds SCSS/JS from source/_core/_assets to source/assets/build; it copies optional source/img to build. Use `yarn dev`/`yarn watch` for local work and `yarn prod` for optimized builds.
+- Postinstall copies canonical configs from _core into the project root via [source/_core/copy-template-configs.js](source/_core/copy-template-configs.js); avoid deleting this hook and re-run it if configs drift.
+- Client runtime: [source/_core/_assets/js/main.js](source/_core/_assets/js/main.js) powers nav, scrollspy, search (Fuse.js over `search-index_<locale>.json`), theme/read-mode/font-size toggles, and Turbo support; when adjusting markup, keep expected IDs/classes (e.g., `.sf-side-menu-list-item`, `#side_menu_list`).
+- Localization/translation workflow uses [translate.config.php](translate.config.php) and Azure Translator creds in .env; run `php vendor/bin/docara translate` (or `... --test`) to update target locales.
+- Build workflow: `composer install`, `php vendor/bin/docara init --update` (pulls/updates _core stubs, respects existing docs), `yarn dev/watch/prod`, then `php vendor/bin/docara build` (use `... build production` for deploy as in [.github/workflows/deploy.yml](.github/workflows/deploy.yml)).
+- CI deploy job mirrors local steps (init → yarn prod → docara build production) before rsync; keep new commands compatible with that order.
+- Default locale is `ru` with cookie-based redirect; adding locales requires creating `source/docs/<locale>`, updating `.lang.php`/`.settings.php`, and ensuring `DOCS_DIR` is set.
+- When editing menus or titles, update both `.settings.php` and the corresponding page front matter to keep nav, breadcrumbs, and prev/next helpers consistent.
+- Avoid writing to build outputs (`build_local`, `build_production`, `source/assets/build`)—they are generated; commit only source files.
+- If you need to alter layout components, prefer editing `_core/_layouts` and `_core/_components` rather than duplicating markup in pages to keep theme behavior intact.

@@ -1,0 +1,28 @@
+<?php
+    return array(
+        'search' => 'Search',
+        'actions' => 'Actions',
+        'settings' => 'Settings',
+        'notFound' => 'Nothing found',
+        'concept' => 'Concept',
+        'core' => 'Core',
+        'navigation' => 'Navigation',
+        'utilities' => 'Utilities',
+        'components' => 'Components',
+        'smart components' => 'Smart components',
+        'russian' => 'Russian',
+        'dark' => 'Dark',
+        'off' => 'Off',
+        'on' => 'On',
+        'wide' => 'Wide layout',
+        'text size' => 'Text size',
+        'reduced' => 'Reduced',
+        'default' => 'Default',
+        'increased' => 'Increased',
+        'edit article' => 'Edit article',
+        'report a bug' => 'Report a bug',
+        'previous' => 'Previous',
+        'next' => 'Next',
+        'copy' => 'Copy',
+        'copy done' => 'Copied'
+    );

@@ -1,0 +1,49 @@
+# Утилиты
+
+Справочник модификаторов SF UI. Утилиты разбиты по категориям CSS-свойств: от сеток и типографики до масок и фильтров. Каждая страница описывает конкретный модификатор, его значения и примеры.
+
+## Категории
+- [Макет](layout/index.md) — базовое позиционирование и отображение элементов.
+- [Разрыв макета](layout-break/index.md) — управление колонками и переносами.
+- [Объекты](objects/index.md) — выравнивание и подгонка медиа.
+- [Размеры](sizes/index.md) — ширина, высота и их ограничения.
+- [Отступы](indents/index.md) — margin, padding и пространственные модификаторы.
+- [Сетка](grid/index.md) — grid-шаблоны и размещение ячеек.
+- [Флексбоксы](flex/index.md) — направление, рост/сжатие и wrap.
+- [Утилиты для сетки и флексбоксов](grid-and-flexbox-utilities/index.md) — выравнивание и порядок элементов.
+- [Типографика](typography/index.md) — роли текста, размеры, насыщенность.
+- [Оформление текста](text-formatting/index.md) — цвета, толщина, подчёркивания.
+- [Ссылки](links/index.md) — состояния и форматирование ссылок.
+- [Таблицы](tables/index.md) — оформление таблиц и ячеек.
+- [SVG](svg/index.md) — заливки, обводки и размеры SVG.
+- [Граница](border/index.md) — ширина, стиль и радиусы.
+- [Разделитель](divider/index.md) — стили горизонтальных/вертикальных линий.
+- [Внешняя граница](outline/index.md) — outline для фокуса и акцента.
+- [Фоновый цвет](background-color/index.md) — базовые цветовые модификаторы.
+- [Фоновое изображение](background-image/index.md) — позиция, повторение, размер.
+- [Градиент](background-gradient/index.md) — типы и параметры фоновых градиентов.
+- [Маска](mask/index.md) — clip, repeat и позиционирование масок.
+- [Тени](shadows/index.md) — тени элементов и капельные тени.
+- [Фильтры элемента](filters/index.md) — blur, hue-rotate и другие CSS-фильтры.
+- [Фильтры подложки](backdrop-filter/index.md) — блюры и корректировки фона.
+- [Анимация](animation/index.md) — transition и типы анимаций.
+- [Прокрутка](overscroll/index.md) — scroll snap, цвета и радиусы скролла.
+- [Преобразования](transform/index.md) — rotate, scale, skew и translate.
+- [Формы](forms/index.md) — состояние полей и вспомогательные свойства.
+- [Интерактивность](interactivity/index.md) — курсоры, user-select, touch-action.
+- [Печать](print/index.md) — управление отображением в режиме печати.
+- [Полосы](stripes/index.md) — штриховка и фоновые полосы.
+
+## Часто используемые
+- [Макет](layout/index.md)
+- [Сетка](grid/index.md)
+- [Флексбоксы](flex/index.md)
+- [Отступы](indents/index.md)
+- [Размеры](sizes/index.md)
+- [Типографика](typography/index.md)
+- [Оформление текста](text-formatting/index.md)
+- [Фоновый цвет](background-color/index.md)
+- [Граница](border/index.md)
+- [Тени](shadows/index.md)
+- [Преобразования](transform/index.md)
+- [Интерактивность](interactivity/index.md)
