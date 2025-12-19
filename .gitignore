@@ -24,4 +24,8 @@ npm-debug.log
 /source/404.blade.php
 /source/favicon.ico
 /source/_core/*
+!/source/_core/_components/
+/source/_core/_components/*
+!/source/_core/_components/header/
+/source/_core/_components/header/*
 !/source/_core/_components/header/logo.blade.php
