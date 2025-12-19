@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: false
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -43,6 +43,7 @@ jobs:
       - name: Initialize project (stubs, core, npm/yarn install)
         env:
           YARN_IGNORE_ENGINES: 1
+          DOCARA_SKIP_FRONTEND_INSTALL: "true"
         run: |
           php vendor/bin/docara init --update
 
@@ -50,6 +51,7 @@ jobs:
         env:
           YARN_IGNORE_ENGINES: 1
         run: |
+          yarn install
           yarn prod
 
       - name: Build static site
@@ -72,7 +74,6 @@ jobs:
             git reset --hard
             git clean -fd
             git pull --ff-only origin main
-            git submodule update --init --remote
             export YARN_IGNORE_ENGINES=1
             export XDG_CONFIG_HOME=$PWD/.config
             export XDG_CACHE_HOME=$PWD/.cache
@@ -84,7 +85,8 @@ jobs:
             AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
             EOF
             composer install --no-dev --prefer-dist --no-interaction
-            php vendor/bin/docara init --update
+            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update
+            yarn install
             yarn prod
             php vendor/bin/docara build production
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
