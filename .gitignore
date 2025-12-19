@@ -23,3 +23,5 @@ npm-debug.log
 /package-lock.json
 /source/404.blade.php
 /source/favicon.ico
+/source/_core/*
+!/source/_core/_components/header/logo.blade.php
