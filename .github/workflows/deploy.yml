@@ -85,7 +85,7 @@ jobs:
             AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
             EOF
             composer install --no-dev --prefer-dist --no-interaction
-            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update
+            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
             yarn install
             yarn prod
             php vendor/bin/docara build production
