@@ -69,6 +69,7 @@
     return [
         'baseUrl' => '',
         'production' => false,
+        'turbo' => true,
         'env' => getenv(),
         'category' => true,
         'cache' => true,

@@ -4,7 +4,6 @@ return array(
     'order' => 2,
     'menu' => array(
         'values' => 'Values',
-        'colors' => 'Color roles',
         'color' => 'Color system',
         'sizes' => 'Sizes',
         'typography' => 'Typography',

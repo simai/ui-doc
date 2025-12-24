@@ -4,7 +4,6 @@ return array(
     'order' => 2,
     'menu' => array(
         'values' => 'Значения',
-        'colors' => 'Цветовые роли',
         'color' => 'Система цвета',
         'sizes' => 'Размеры',
         'typography' => 'Типографика',
