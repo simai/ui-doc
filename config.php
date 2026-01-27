@@ -69,6 +69,7 @@
     return [
         'baseUrl' => '',
         'production' => false,
+        'modulePath' => getenv('DOCARA_MODULE_PATH') ?: null,
         'turbo' => false,
         'env' => getenv(),
         'category' => true,
