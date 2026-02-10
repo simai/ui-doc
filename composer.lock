@@ -2612,7 +2612,7 @@
         },
         {
             "name": "simai/docara",
-            "version": "v1.3.23",
+            "version": "v1.3.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
@@ -2700,7 +2700,7 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara/tree/v1.3.23"
+                "source": "https://github.com/simai/docara/tree/v1.3.24"
             },
             "time": "2026-02-05T12:03:51+00:00"
         },
