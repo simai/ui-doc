@@ -5,7 +5,7 @@
 ## Материалы раздела
 - [Цвет границы](border-color.md)
 - [Параметры по умолчанию (для границ)](border-default-parameters.md)
-- [Закругление границ](border-radius.md)
+- [Скругление границы](border-radius.md)
 - [Стиль границы](border-style.md)
 - [Толщина границы](border-width.md)
 

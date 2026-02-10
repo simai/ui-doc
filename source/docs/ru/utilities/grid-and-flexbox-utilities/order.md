@@ -69,3 +69,8 @@ description: Сортировка (order)
     <!-- Начиная с md элемент будет отображаться последним -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=order"></iframe>
+</div>

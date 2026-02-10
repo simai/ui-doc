@@ -39,3 +39,8 @@ description: "Фон в оттенках серого элемента (backdrop
   Наведи, чтобы фон стал серым
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-grayscale"></iframe>
+</div>

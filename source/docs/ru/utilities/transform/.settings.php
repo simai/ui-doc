@@ -2,12 +2,11 @@
 return array (
   'title' => 'Преобразования',
   'order' => 5,
-  'menu' => 
-  array (
+  'menu' => array (
     'transform-scale' => 'Масштабирование (transform-scale)',
     'transform-rotate' => 'Вращение (transform-rotate)',
     'transform-translate' => 'Смещение (transform-translate)',
     'transform-skew' => 'Наклон (transform-skew)',
-    'transform-origin' => 'Исходные координаты (transform-origin)',
+    'transform-origin' => 'Точка трансформации (transform-origin)',
   ),
 );

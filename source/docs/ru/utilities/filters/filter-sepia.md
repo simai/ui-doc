@@ -49,3 +49,8 @@ description: "Сепия элемента (filter-sepia)"
   Наведи для сепии
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-sepia"></iframe>
+</div>

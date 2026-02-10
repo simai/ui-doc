@@ -5,6 +5,7 @@ return array (
   'menu' => 
   array (
     'backdrop-blur' => 'Размытие фона элемента (backdrop-blur)',
+    'backdrop-brightness' => 'Яркость фона элемента (backdrop-brightness)',
     'backdrop-opacity' => 'Прозрачность фона элемента (backdrop-opacity)',
     'backdrop-contrast' => 'Контрастность фона элемента (backdrop-contrast)',
     'backdrop-grayscale' => 'Фон в оттенках серого элемента (backdrop-grayscale)',

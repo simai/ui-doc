@@ -76,3 +76,8 @@ description: "Размытие элемента (filter-blur)"
 {.table}
 
 Используйте данные соответствия, чтобы перейти с предыдущей версии на новую.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-blur"></iframe>
+</div>

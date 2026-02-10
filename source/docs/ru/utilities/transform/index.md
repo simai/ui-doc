@@ -1,15 +1,15 @@
 # Преобразования
 
-Утилиты категории Преобразования помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
+Утилиты раздела «Преобразования» управляют `transform` и `transform-origin`.
 
 ## Материалы раздела
-- [Исходные координаты (transform-origin)](transform-origin.md)
-- [Вращение (transform-rotate)](transform-rotate.md)
 - [Масштабирование (transform-scale)](transform-scale.md)
-- [Наклон (transform-skew)](transform-skew.md)
+- [Вращение (transform-rotate)](transform-rotate.md)
 - [Смещение (transform-translate)](transform-translate.md)
+- [Наклон (transform-skew)](transform-skew.md)
+- [Точка трансформации (transform-origin)](transform-origin.md)
 
-## Связанные категории
+## Связанные разделы
 - [Анимация](../animation/index.md)
-- [Фильтры элемента](../filters/index.md)
 - [Интерактивность](../interactivity/index.md)
+- [Позиционирование](../layout/index.md)

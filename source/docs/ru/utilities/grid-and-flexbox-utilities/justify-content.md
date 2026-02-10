@@ -64,3 +64,8 @@ description: "Выравнивание содержимого по основн�
     <!-- Начиная с md выравнивание элементов будет flex-start -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-content"></iframe>
+</div>

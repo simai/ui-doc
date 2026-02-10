@@ -56,3 +56,8 @@ description: "Выравнивание текста (text-align)"
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=text-align"></iframe>
+</div>

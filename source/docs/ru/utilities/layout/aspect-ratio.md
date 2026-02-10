@@ -52,3 +52,8 @@ description: Соотношение сторон (Aspect Ratio)
 ```html
 <div class="md:aspect-3x4"></div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=aspect-ratio"></iframe>
+</div>

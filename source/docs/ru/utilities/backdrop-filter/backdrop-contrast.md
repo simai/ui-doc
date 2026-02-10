@@ -59,3 +59,8 @@ description: "Контрастность фона элемента (backdrop-con
 | .backdrop-contrast-5 | .backdrop-contrast-3   |
 | .backdrop-contrast-6 | .backdrop-contrast-4   |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-contrast"></iframe>
+</div>

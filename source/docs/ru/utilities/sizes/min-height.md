@@ -68,3 +68,8 @@ description: "Минимальная высота (min-height)"
 ```
 
 В этом примере минимальная высота будет равна нулю (`min-h-0`) при ширине экрана `md` и больше.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=sizes&group=min-height"></iframe>
+</div>

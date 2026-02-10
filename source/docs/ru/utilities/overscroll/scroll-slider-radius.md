@@ -1,11 +1,11 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Радиус границы ползунка прокрутки (scroll-slider-radius)"
-description: "Радиус границы ползунка прокрутки (scroll-slider-radius)"
+title: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
+description: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
 ---
 
-# Радиус границы ползунка прокрутки (scroll-slider-radius)
+# Радиус границы ползунка прокрутки (scroll-thumb-radius)
 
 С помощью данных модификаторов вы можете изменить радиус скругления ползунка прокрутки.
 
@@ -13,10 +13,10 @@ description: "Радиус границы ползунка прокрутки (s
 
 | Класс               | Значение переменной                  |
 |:--------------------|:-------------------------------------|
-| .scroll-bg-radius-1 | `--sf-scroll-radius`: var(`--sf-a1`) |
-| .scroll-bg-radius-2 | `--sf-scroll-radius`: var(`--sf-a2`) |
-| .scroll-bg-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`) |
-| .scroll-bg-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`) |
+| .scroll-thumb-radius-1 | `--sf-scroll-radius`: var(`--sf-a1`) |
+| .scroll-thumb-radius-2 | `--sf-scroll-radius`: var(`--sf-a2`) |
+| .scroll-thumb-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`) |
+| .scroll-thumb-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`) |
 
 {.table}
 
@@ -28,15 +28,21 @@ description: "Радиус границы ползунка прокрутки (s
 
 ## Синтаксис
 
-- scroll-bg-radius-{1...4} – задать радиус скругления ползунка.
+- scroll-thumb-radius-{1...4} – задать радиус скругления ползунка.
+- scroll-radius-{1...4} – устаревший алиас (поддерживается для совместимости).
 
 ## Пример использования
 
 ```html
 
-<html class="scroll-bg-radius-3 h-d5 overflow-auto ...">
+<html class="scroll-thumb-radius-3 h-d5 overflow-auto ...">
 <div class="p-1">
     abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
 </div>
 </html>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-radius"></iframe>
+</div>

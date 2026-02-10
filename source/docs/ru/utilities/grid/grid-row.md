@@ -9,59 +9,57 @@ description: "Размер строки сетки (grid-row)"
 
 [https://dev.ru.simai.io/ru/ui/utility/grid/grid-row.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-row.php)
 
-В SIMAI Framework с помощью модификаторов можно управлять параметрами размещения строк в сетке, задавая элементам размер
-и положение относительно строк сетки.
+Модификаторы `grid-row` управляют высотой и позиционированием элементов по вертикали в grid-сетке.
 
 ## Таблица классов
 
-| Класс          | Значение                   |
-|:---------------|:---------------------------|
-| .row-auto      | grid-row: auto;            |
-| .row-span-1    | grid-row: span 1 / span 1; |
-| .row-span-2    | grid-row: span 2 / span 2; |
-| .row-span-3    | grid-row: span 3 / span 3; |
-| .row-span-4    | grid-row: span 4 / span 4; |
-| .row-span-5    | grid-row: span 5 / span 5; |
-| .row-span-6    | grid-row: span 6 / span 6; |
-| .row-span-full | grid-row: 1/-1;            |
+| Класс            | Значение                 |
+|:-----------------|:-------------------------|
+| .row-span-{n}    | grid-row: span {n};      |
+| .row-span-full   | grid-row: 1 / -1;        |
+| .row-span-none   | grid-row: auto;          |
+| .row-start-{n}   | grid-row-start: {n};     |
+| .row-start-auto  | grid-row-start: auto;    |
+| .row-end-{n}     | grid-row-end: {n};       |
+| .row-end-auto    | grid-row-end: auto;      |
 {.table}
+
+Диапазон `n` соответствует утилитам в SCSS (`row-span` от 1 до 6, `row-start`/`row-end` от 1 до 7).
 
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`).  
-  Если не указана, модификатор применяется для всех размеров.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Без указания действует везде.
+- Модификатор *(обязательный параметр)*: указывает нужный `row-span`, `row-start` или `row-end`.
 
-- Модификатор *(обязательный параметр)*:
+## Примеры
 
-    - `row-auto` — размер строки определяется автоматически.
-    - `row-span-{n}` (где n от 1 до 6\) — элемент занимает указанное количество строк.
-    - `row-span-full` — элемент занимает все доступные строки сетки.
-
-## Пример использования
-
+### Span
 ```html
-<div class="grid grid-row-3 gap-1 grid-flow-col">
-    <div class="row-auto">1</div>
-    <div class="row-span-2">2</div>
-    <div class="row-span-full">3</div>
+<div class="grid grid-col-3 gap-2">
+  <div class="sf-card bg-primary color-on-primary p-2 row-span-2">row span 2</div>
+  <div class="sf-card bg-secondary color-on-secondary p-2">row span 1</div>
+  <div class="sf-card bg-tertiary color-on-tertiary p-2">row span 1</div>
 </div>
 ```
 
-В данном примере:
-
-- Элемент с классом `row-auto` занимает одну строку, размер определяется автоматически.
-- Элемент с классом `row-span-2` занимает 2 строки.
-- Элемент с классом `row-span-full` занимает все строки сетки (в данном случае все 3 строки).
+### Start / End
+```html
+<div class="grid grid-col-3 grid-row-4 gap-2">
+  <div class="sf-card bg-success color-on-success p-2 row-start-2 row-end-4">start 2 / end 4</div>
+</div>
+```
 
 ## Адаптивность
 
-Для изменения параметров размещения строк, начиная с определенного размера экрана, добавьте контрольную точку. Например:
-
 ```html
-<div class="md:row-span-4">
-    <!-- Начиная с md и больше элемент будет занимать 4 строки -->
+<div class="row-span-2 md:row-span-3">
+  <!-- Высота строки увеличится на брейкпоинте md -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row"></iframe>
+</div>

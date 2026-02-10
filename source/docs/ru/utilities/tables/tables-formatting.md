@@ -7,82 +7,22 @@ description: Оформление таблицы
 
 # Оформление таблицы
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table.php](https://dev.ru.simai.io/ru/ui/utility/table/table.php)
-
-С помощью модификаторов можно управлять внешним видом таблиц в SIMAI Framework.
-
 ## Таблица классов
 
-| Класс        | Значение                       |
-|:-------------|:-------------------------------|
-| .table       | стандартное оформление таблицы |
-| .table-small | уменьшенный размер таблицы     |
+| Класс | Значение |
+|:--|:--|
+| `.table` | Базовое оформление таблицы |
+| `.table-sm` | Компактные отступы ячеек |
 {.table}
 
-## Описание
-
-Модификатор `table` задаёт базовое оформление таблицы, а `table-small` уменьшает её размеры и отступы.
-
-## Пример использования
-
-### Оформление по умолчанию
+## Пример
 
 ```html
-<table class="table">
-    <thead>
-        <tr>
-            <th>Песня</th>
-            <th>Артист</th>
-            <th>Год</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-        </tr>
-        <tr>
-            <td>Witchy Woman</td>
-            <td>The Eagles</td>
-            <td>1972</td>
-        </tr>
-        <tr>
-            <td>Shining Star</td>
-            <td>Earth, Wind, and Fire</td>
-            <td>1975</td>
-        </tr>
-    </tbody>
-</table>
+<table class="table">...</table>
+<table class="table table-sm">...</table>
 ```
+## Playground
 
-### Уменьшенная таблица
-
-```html
-<table class="table table-small">
-    <thead>
-        <tr>
-            <th>Песня</th>
-            <th>Артист</th>
-            <th>Год</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-        </tr>
-        <tr>
-            <td>Witchy Woman</td>
-            <td>The Eagles</td>
-            <td>1972</td>
-        </tr>
-        <tr>
-            <td>Shining Star</td>
-            <td>Earth, Wind, and Fire</td>
-            <td>1975</td>
-        </tr>
-    </tbody>
-</table>
-```
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=tables&group=tables-formatting"></iframe>
+</div>

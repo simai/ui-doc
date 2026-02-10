@@ -84,3 +84,8 @@ description: "Заполнение объектом (object-fit)"
 
 Таким образом, модификаторы `object-fit` упрощают работу с различными типами медиа, обеспечивая корректное и эстетичное
 масштабирование содержимого под контейнеры любого размера.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=objects&group=object-fit"></iframe>
+</div>

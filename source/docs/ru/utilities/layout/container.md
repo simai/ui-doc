@@ -65,3 +65,8 @@ description: Контейнер (container)
 
 Таким образом, контейнер помогает поддерживать адаптивный и аккуратный макет сайта, изменяя свои размеры и отступы в
 зависимости от ширины области просмотра.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=container"></iframe>
+</div>

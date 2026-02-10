@@ -23,11 +23,6 @@ description: "Начальное положение строки сетки (gri
 | .grid-row-start-5    | grid-row-start: 5;    |
 | .grid-row-start-6    | grid-row-start: 6;    |
 | .grid-row-start-7    | grid-row-start: 7;    |
-| .grid-row-start-8    | grid-row-start: 8;    |
-| .grid-row-start-9    | grid-row-start: 9;    |
-| .grid-row-start-10   | grid-row-start: 10;   |
-| .grid-row-start-11   | grid-row-start: 11;   |
-| .grid-row-start-12   | grid-row-start: 12;   |
 | .grid-row-start-auto | grid-row-start: auto; |
 {.table}
 
@@ -41,7 +36,7 @@ description: "Начальное положение строки сетки (gri
 
 - Модификатор *(обязательный параметр)*:
 
-    - `grid-row-start-{n}` (где n от 1 до 12\) — элемент начинается с указанной строки.
+    - `grid-row-start-{n}` (где n от 1 до 7) — элемент начинается с указанной строки.
     - `grid-row-start-auto` — начало строки определяется автоматически.
 
 ## Пример использования
@@ -67,3 +62,8 @@ description: "Начальное положение строки сетки (gri
     <!-- Начиная с md элемент будет начинаться со 2-й строки -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row-start"></iframe>
+</div>

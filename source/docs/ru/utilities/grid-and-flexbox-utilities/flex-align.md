@@ -61,3 +61,8 @@ description: "Одновременное выравнивание по двум 
   <!-- Начиная с md элементы будут по центру по обеим осям -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=flex-align"></iframe>
+</div>

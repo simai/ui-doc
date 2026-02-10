@@ -7,51 +7,21 @@ description: Параметры по умолчанию для таблиц
 
 # Параметры по умолчанию для таблиц
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-default.php](https://dev.ru.simai.io/ru/ui/utility/table/table-default.php)
-
-По умолчанию таблицы (тег `table`) в SIMAI Framework имеют следующие стили, использующие переменные для настройки цвета
-границ, заливки строк и столбцов, а также состояний при наведении и множественном выделении.
-
-## Значения по умолчанию 
-
-| Объект                             | Переменная                        |
-|:-------------------------------------------------------|:----------------------------------|
-| цвет границ таблицы                                    | `--sf-outline-variant`            |
-| заливка чередующихся строк или столбцов                | `--sf-surface-transparent-select` |
-| заливка выделенных строк (при наведении)               | `--sf-primary-transparent-hover`  |
-| заливка выделенных строк (при множественном выделении) | `--sf-primary-transparent-select` |
-{.table}
-Используя эти переменные, вы можете легко менять внешний вид таблиц, подстраивая их под нужный дизайн.
+Базовый класс `.table` задаёт стандартный внешний вид таблицы и использует токены темы:
+- `--sf-outline-variant` для границ,
+- `--sf-surface-transparent-select` для полос,
+- `--sf-primary-transparent-hover` для hover,
+- `--sf-primary-transparent-select` для active.
 
 ## Пример
 
 ```html
-<table>
-    <thead>
-        <tr>
-            <th>Заголовок 1</th>
-            <th>Заголовок 2</th>
-            <th>Заголовок 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Данные 1</td>
-            <td>Данные 2</td>
-            <td>Данные 3</td>
-        </tr>
-        <tr>
-            <td>Данные A</td>
-            <td>Данные B</td>
-            <td>Данные C</td>
-        </tr>
-    </tbody>
+<table class="table">
+  ...
 </table>
 ```
+## Playground
 
-В данном примере:
-
-* Цвет границ таблицы будет взят из переменной `--sf-outline-variant`.
-* При применении дополнительных классов или состояний можно использовать заливки для чередующихся строк или выделения
-  строк по наведению или множественному выделению, использующие переменные `--sf-surface-transparent-select`,
-  `--sf-primary-transparent-hover` и `--sf-primary-transparent-select`.
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=tables&group=tables-default-parameters"></iframe>
+</div>

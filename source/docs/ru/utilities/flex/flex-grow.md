@@ -63,3 +63,8 @@ description: "Растяжимость элементов (flex-grow)"
   <!-- Начиная с md элемент будет растягиваться, заполняя доступное пространство -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=flex&group=flex-grow"></iframe>
+</div>

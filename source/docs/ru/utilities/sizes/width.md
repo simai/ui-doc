@@ -52,6 +52,7 @@ description: Ширина (width)
 | .w-11/12        | width: 91.666667%;                                                  |
 | .w-px           | width: 1px;                                                         |
 | .w-0            | width: 0;                                                           |
+| .w-1 … .w-99    | width: 1% … 99% (шаг 1%);                                           |
 | .w-a0 ... .w-i9 | width: var(--sf-\[a-i\]\[0-9\]); (фиксированные размеры фреймворка) |
 {.table}
 
@@ -67,6 +68,7 @@ description: Ширина (width)
 
     - `w-0` — ширина 0
     - `w-px` — ширина 1px
+    - `w-1 … w-99` — проценты с шагом 1%
     - `w-a1 ... w-i9` — фиксированные размеры из системы размеров фреймворка
     - `w-1/2 ... w-11/12` — доли от ширины родительского элемента
     - `w-auto` — автоматическая ширина
@@ -145,3 +147,8 @@ description: Ширина (width)
 ```
 
 В этом примере ширина будет 50% (`w-1/2`) только при размерах экрана `md` и больше.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=sizes&group=width"></iframe>
+</div>

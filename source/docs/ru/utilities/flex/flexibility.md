@@ -46,3 +46,7 @@ description: Гибкость элементов (flex)
     <div class="flex-1 bg-neutral-30">Длинный текст, способный занять больше места, если оно доступно</div>
 </div>
 ```
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=flex&group=flexibility"></iframe>
+</div>

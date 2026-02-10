@@ -28,6 +28,7 @@ description: "Конечное положение колонки сетки (gri
 | .col-end-10   | grid-column-end: 10;   |
 | .col-end-11   | grid-column-end: 11;   |
 | .col-end-12   | grid-column-end: 12;   |
+| .col-end-13   | grid-column-end: 13;   |
 | .col-end-auto | grid-column-end: auto; |
 {.table}
 
@@ -68,3 +69,8 @@ description: "Конечное положение колонки сетки (gri
     <!-- Начиная с размера экрана md и больше элемент будет заканчиваться на 4-й линии сетки -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column-end"></iframe>
+</div>

@@ -48,3 +48,8 @@ description: "Толщина подложки прокрутки (scroll-backdro
   </div>
 </html>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-width"></iframe>
+</div>

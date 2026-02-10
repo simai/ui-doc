@@ -79,3 +79,8 @@ description: "Положение элемента по оси Z (z-index)"
 ```html
 <div class="md:z-1">Элемент со z-index:10 на больших экранах</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=z-index"></iframe>
+</div>

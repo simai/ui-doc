@@ -58,3 +58,8 @@ description: "Выделение текста (user-select)"
   Быстрая коричневая лиса прыгает через ленивую собаку.
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=interactivity&group=user-select"></iframe>
+</div>

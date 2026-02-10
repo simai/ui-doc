@@ -57,3 +57,8 @@ description: "Максимальный размер контейнера (max-co
 
 Это позволяет создавать более сложные, адаптивные сетки с чётко заданными максимальными размерами, что особенно полезно
 для крупноформатных дисплеев и высоких разрешений.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=max-container"></iframe>
+</div>

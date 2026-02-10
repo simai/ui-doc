@@ -1,22 +1,22 @@
-# Прокрутка
+﻿# Прокрутка
 
-Утилиты категории Прокрутка помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
+Утилиты категории «Прокрутка» помогают настраивать поведение скролла, цвет/размер трека и ползунка, а также snap-механики.
 
 ## Материалы раздела
 - [Плавность прокрутки](overscroll-behavior-smooth.md)
 - [Поведение при прокрутке](overscroll-behavior.md)
 - [Цвет подложки прокрутки (scroll-backdrop-color)](scroll-backdrop-color.md)
-- [Радиус границы подложки прокрутки (scroll-backdrop-radius)](scroll-backdrop-radius.md)
+- [Радиус подложки прокрутки (scroll-backdrop-radius)](scroll-backdrop-radius.md)
 - [Толщина подложки прокрутки (scroll-backdrop-width)](scroll-backdrop-width.md)
 - [Полоса прокрутки при наведении (scroll-hover)](scroll-hover.md)
 - [Внешний отступ прокрутки](scroll-margin.md)
 - [Внутренний отступ прокрутки (scroll-padding)](scroll-padding.md)
-- [Цвет ползунка прокрутки (scroll-slider-color)](scroll-slider-color.md)
-- [Радиус границы ползунка прокрутки (scroll-slider-radius)](scroll-slider-radius.md)
-- [Выравнивание привязки прокрутки (scroll-snap-align)](scroll-snap-align.md)
+- [Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)](scroll-slider-color.md)
+- [Радиус ползунка прокрутки (scroll-slider-radius / scroll-thumb-radius)](scroll-slider-radius.md)
+- [Выровнивание привязки прокрутки (scroll-snap-align)](scroll-snap-align.md)
 - [Ограничитель прокрутки (scroll-snap-stop)](scroll-snap-stop.md)
 - [Тип привязки прокрутки (scroll-snap-type)](scroll-snap-type.md)
-- [Толщина ползунка прокрутки (scroll)](scroll.md)
+- [Толщина ползунка прокрутки (scroll / scroll-thumb-size)](scroll.md)
 
 ## Связанные категории
 - [Разрыв макета](../layout-break/index.md)

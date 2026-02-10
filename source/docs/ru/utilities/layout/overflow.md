@@ -150,3 +150,8 @@ description: Переполнение элемента (overflow)
 ```html
 <div class="md:overflow-hidden"></div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=overflow"></iframe>
+</div>

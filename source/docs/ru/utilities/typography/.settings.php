@@ -26,6 +26,7 @@ return array (
     'text-overflow' => 'Обрезка текста (text-overflow)',
     'white-space' => 'Обработка пробелов (white-space)',
     'word-break' => 'Перенос строк (word-break)',
-    'content' => 'Содержимое',
+    
+    'line-clamp' => 'Ограничение строк (line-clamp)',
   ),
 );

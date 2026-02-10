@@ -9,40 +9,35 @@ description: Размер маски
 
 [https://dev.ru.simai.io/ru/ui/utility/mask/mask-size.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-size.php)
 
-С помощью модификаторов размера маски можно управлять тем, как изображение маски будет масштабироваться относительно
-элемента.
+Утилиты `mask-size` управляют масштабом изображения маски внутри элемента.
 
 ## Таблица классов
 
-| Класс         | Значение            |
-|:--------------|:--------------------|
-| .mask-auto    | mask-size: auto;    |
-| .mask-cover   | mask-size: cover;   |
-| .mask-contain | mask-size: contain; |
+| Класс         | Значение              |
+|:--------------|:----------------------|
+| .mask-auto    | mask-size: auto;      |
+| .mask-cover   | mask-size: cover;     |
+| .mask-contain | mask-size: contain;   |
+| .mask-full    | mask-size: 100% 100%; |
 {.table}
 
 ## Описание
 
-Модификаторы размера маски определяют, как изображение маски масштабируется внутри элемента:
+- `mask-auto` — маска в исходном размере.
+- `mask-cover` — маска покрывает весь блок, может обрезаться.
+- `mask-contain` — маска целиком помещается в блок без обрезки.
+- `mask-full` — маска растягивается ровно на ширину и высоту блока.
 
-- **mask-auto** – маска отображается в исходном размере изображения.
-- **mask-cover** – маска масштабируется так, чтобы полностью покрыть область элемента, может быть обрезана.
-- **mask-contain** – маска масштабируется так, чтобы полностью поместиться внутри области элемента, не искажая
-  пропорций.
-
-## Примеры использования
+## Примеры
 
 ```html
-<!-- Маска в исходном размере -->
 <div class="mask-auto"></div>
-```
-
-```html
-<!-- Маска, покрывающая весь элемент -->
 <div class="mask-cover"></div>
-```
-
-```html
-<!-- Маска, вписанная в область элемента -->
 <div class="mask-contain"></div>
+<div class="mask-full"></div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=mask&group=mask-size"></iframe>
+</div>

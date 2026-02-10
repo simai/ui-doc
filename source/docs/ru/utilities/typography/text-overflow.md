@@ -55,3 +55,8 @@ description: "Обрезка текста (text-overflow)"
 <p class="overflow-hidden whitespace-nowrap t-clip ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=text-overflow"></iframe>
+</div>

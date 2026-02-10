@@ -53,3 +53,8 @@ description: "Толщина шрифта (font-weight)"
   Текст будет полужирным на экранах размером Medium и больше.
 </p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=font-weight"></iframe>
+</div>

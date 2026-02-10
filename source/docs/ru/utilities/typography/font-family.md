@@ -39,3 +39,8 @@ description: "Семейство шрифтов (font-family)"
 ```html
 <p class="md:serif">На экранах md и больше текст будет шрифтом serif.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=font-family"></iframe>
+</div>

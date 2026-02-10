@@ -46,3 +46,8 @@ description: "Оформление элемента, разбитого на н�
     World
 </span>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=box-decoration-break"></iframe>
+</div>

@@ -15,21 +15,21 @@ description: "Высота строки (line-height)"
 
 | Класс     | Значение               |
 |:----------|:-------------------------------------------|
-| .line-1/4 | line-height: var(`--sf-text--height-1/4`); |
-| .line-1/3 | line-height: var(`--sf-text--height-1/3`); |
-| .line-1/2 | line-height: var(`--sf-text--height-1/2`); |
-| .line-1   | line-height: var(`--sf-text--height-1`);   |
-| .line-2   | line-height: var(`--sf-text--height-2`);   |
-| .line-3   | line-height: var(`--sf-text--height-3`);   |
-| .line-4   | line-height: var(`--sf-text--height-4`);   |
-| .line-5   | line-height: var(`--sf-text--height-5`);   |
-| .line-6   | line-height: var(`--sf-text--height-6`);   |
-| .line-7   | line-height: var(`--sf-text--height-7`);   |
-| .line-8   | line-height: var(`--sf-text--height-8`);   |
-| .line-9   | line-height: var(`--sf-text--height-9`);   |
-| .line-10  | line-height: var(`--sf-text--height-10`);  |
-| .line-11  | line-height: var(`--sf-text--height-11`);  |
-| .line-12  | line-height: var(`--sf-text--height-12`);  |
+| .line-1/4 | line-height: var(`--sf-text-height-1/4`); |
+| .line-1/3 | line-height: var(`--sf-text-height-1/3`); |
+| .line-1/2 | line-height: var(`--sf-text-height-1/2`); |
+| .line-1   | line-height: var(`--sf-text-height-1`);   |
+| .line-2   | line-height: var(`--sf-text-height-2`);   |
+| .line-3   | line-height: var(`--sf-text-height-3`);   |
+| .line-4   | line-height: var(`--sf-text-height-4`);   |
+| .line-5   | line-height: var(`--sf-text-height-5`);   |
+| .line-6   | line-height: var(`--sf-text-height-6`);   |
+| .line-7   | line-height: var(`--sf-text-height-7`);   |
+| .line-8   | line-height: var(`--sf-text-height-8`);   |
+| .line-9   | line-height: var(`--sf-text-height-9`);   |
+| .line-10  | line-height: var(`--sf-text-height-10`);  |
+| .line-11  | line-height: var(`--sf-text-height-11`);  |
+| .line-12  | line-height: var(`--sf-text-height-12`);  |
 {.table}
 
 Относительная высота строки:
@@ -88,3 +88,8 @@ description: "Высота строки (line-height)"
 ```html
 <p class="md:line-2">Текст, который при ширине экрана medium и больше будет с высотой строки, соответствующей переменной line-2.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=line-height"></iframe>
+</div>

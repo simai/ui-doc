@@ -53,3 +53,7 @@ description: Общее свойство перехода
 
 При наведении курсора на кнопку цвет текста плавно сменится на основной (`text-primary`), так как все свойства с
 переходом (`transition-all`) будут изменяться плавно.
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-property"></iframe>
+</div>

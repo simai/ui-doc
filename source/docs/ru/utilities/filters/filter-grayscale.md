@@ -46,3 +46,8 @@ description: "Монохромность элемента (filter-grayscale)"
 <!-- Монохромный элемент при наведении -->
 <div class="grayscale-none hover:grayscale p-4 bg-secondary transition">Наведи, чтобы стало монохромным</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-grayscale"></iframe>
+</div>

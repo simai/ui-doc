@@ -40,3 +40,8 @@ description: "Сглаживание шрифтов (font-smoothing)"
 ```html
 <p class="md:antialiased">На экранах md и больше текст будет отображаться с сглаживанием оттенков серого.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=font-smoothing"></iframe>
+</div>

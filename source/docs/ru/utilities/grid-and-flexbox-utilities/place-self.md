@@ -66,3 +66,8 @@ description: "Размещение отдельного элемента (place-
   <!-- Начиная с md элемент будет прижат к началу ячейки по обеим осям -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-self"></iframe>
+</div>

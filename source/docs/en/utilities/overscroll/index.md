@@ -12,7 +12,7 @@
 - [Внешний отступ прокрутки](scroll-margin.md)
 - [Внутренний отступ прокрутки (scroll-padding)](scroll-padding.md)
 - [Цвет ползунка прокрутки (scroll-slider-color)](scroll-slider-color.md)
-- [Радиус границы ползунка прокрутки (scroll-slider-radius)](scroll-slider-radius.md)
+- [Радиус границы ползунка прокрутки (scroll-slider-radius / scroll-thumb-radius)](scroll-slider-radius.md)
 - [Выравнивание привязки прокрутки (scroll-snap-align)](scroll-snap-align.md)
 - [Ограничитель прокрутки (scroll-snap-stop)](scroll-snap-stop.md)
 - [Тип привязки прокрутки (scroll-snap-type)](scroll-snap-type.md)

@@ -73,3 +73,8 @@ description: "Перенос строк (word-break)"
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=word-break"></iframe>
+</div>

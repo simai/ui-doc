@@ -59,3 +59,8 @@ description: "Автоматический размер строк сетки (g
     <!-- Начиная с md строки будут ориентироваться на минимальный размер содержимого -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-auto-rows"></iframe>
+</div>

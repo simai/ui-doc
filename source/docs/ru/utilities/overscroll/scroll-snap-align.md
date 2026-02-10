@@ -57,3 +57,8 @@ description: "Выравнивание привязки прокрутки (scro
   <div class="snap-end inline-block bg-surface-1 p-2 ..."><img src="./image.jpg" alt="Изображение 3"></div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-align"></iframe>
+</div>

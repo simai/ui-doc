@@ -1,0 +1,23 @@
+---
+extends: _core._layouts.documentation
+section: content
+title: Прозрачность placeholder
+description: Прозрачность текста placeholder
+---
+
+# Прозрачность placeholder
+
+Утилиты `placeholder-opacity-*` управляют прозрачностью текста placeholder.
+
+## Классы
+
+| Класс | Значение |
+|:--|:--|
+| `.placeholder-opacity-0 ... .placeholder-opacity-9` | `opacity: 0 ... 0.9` |
+| `.placeholder-opacity-full` | `opacity: 1` |
+{.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=forms&group=placeholder-opacity"></iframe>
+</div>

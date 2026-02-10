@@ -9,8 +9,7 @@ description: Плавающий элемент (float)
 
 [https://dev.ru.simai.io/ru/ui/utility/layout/float.php](https://dev.ru.simai.io/ru/ui/utility/layout/float.php)
 
-Модификаторы `float` управляют тем, как элемент обтекается текстом и другими элементами. Они определяют, по какой
-стороне будет «плавать» элемент относительно контента.
+Модификаторы `float` управляют обтеканием и используют логические стороны (`inline-start`, `inline-end`), чтобы работать в LTR/RTL.
 
 ## Синтаксис
 
@@ -29,25 +28,25 @@ description: Плавающий элемент (float)
 
 - Модификатор (обязательный параметр):
 
-    - `float-right` — элемент «плавает» справа;
-    - `float-left` — элемент «плавает» слева;
+    - `float-inline-end` — «плавание» по логической правой стороне;
+    - `float-inline-start` — «плавание» по логической левой стороне;
     - `float-none` — элемент не «плавает».
 
 ## Примеры
 
-### **float-right**  
-С помощью `float-right` элемент будет «плавать» справа.
+### **float-inline-end**  
+Элемент «плавает» по логической правой стороне.
 
 ```html
-<img class="float-right ... " alt="Picture">
+<img class="float-inline-end ... " alt="Picture">
 <p>Lorem ipsum dolor sit amet, ...</p>
 ```
 
-### **float-left**  
-С помощью `float-left` элемент будет «плавать» слева.
+### **float-inline-start**  
+Элемент «плавает» по логической левой стороне.
 
 ```html
-<img class="float-left ... " alt="Picture">
+<img class="float-inline-start ... " alt="Picture">
 <p>Lorem ipsum dolor sit amet, ...</p>
 ```
 
@@ -69,3 +68,8 @@ description: Плавающий элемент (float)
 ```html
 <div class="md:float-right"></div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=float"></iframe>
+</div>

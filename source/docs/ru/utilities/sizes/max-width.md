@@ -9,25 +9,24 @@ description: "Максимальная ширина (max-width)"
 
 [https://dev.ru.simai.io/ru/ui/utility/size/max-width.php](https://dev.ru.simai.io/ru/ui/utility/size/max-width.php)
 
-В SIMAI Framework с помощью модификаторов можно задать максимальную ширину элемента, адаптируя её под разные размеры
-экранов или ограничения дизайна.
+В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
 
 ## Таблица классов
 
 | Класс              | Значение                                          |
-|:-------------------|:----------------------------------------------------------------------|
-| .max-w-full        | max-width: 100%;                                                      |
-| .max-w-screen      | max-width: 100vw;                                                     |
-| .max-w-content-min | max-width: min-content;                                               |
-| .max-w-content-max | max-width: max-content;                                               |
-| .max-w-fit         | max-width: fit-content;                                               |
-| .max-w-prose       | max-width: 65ch;                                                      |
-| .max-w-none        | max-width: none;                                                      |
-| .max-w-0           | max-width: 0;                                                         |
-| .max-w-sm          | max-width: 576px;                                                     |
-| .max-w-md          | max-width: 768px;                                                     |
-| .max-w-lg          | max-width: 992px;                                                     |
-| . max-w-xl         | max-width: 1200px;                                                    |
+|:-------------------|:--------------------------------------------------|
+| .max-w-full        | max-width: 100%;                                  |
+| .max-w-screen      | max-width: 100vw;                                 |
+| .max-w-min         | max-width: min-content;                           |
+| .max-w-max         | max-width: max-content;                           |
+| .max-w-fit         | max-width: fit-content;                           |
+| .max-w-prose       | max-width: 65ch;                                  |
+| .max-w-none        | max-width: none;                                  |
+| .max-w-0           | max-width: 0;                                     |
+| .max-w-sm          | max-width: 520px;                                 |
+| .max-w-md          | max-width: 720px;                                 |
+| .max-w-lg          | max-width: 960px;                                 |
+| .max-w-xl          | max-width: 1140px;                                |
 | .max-w-a0 ... i9   | max-width: var(--sf-...); фиксированные размеры из системы фреймворка |
 {.table}
 ## Синтаксис
@@ -38,18 +37,7 @@ description: "Максимальная ширина (max-width)"
   Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).  
   Если не указана, модификатор действует для всех размеров экрана.
 
-- Модификатор (обязательный параметр):
-
-    - `max-w-a1 ... max-w-i9` — максимальная ширина равна фиксированным размерам из системы размеров фреймворка
-    - `max-w-(sm|md|lg|xl)` — максимальная ширина равна предустановленным контрольным точкам
-    - `max-w-full` — максимально возможная ширина родительского элемента
-    - `max-w-screen` — максимально возможная ширина равна ширине экрана
-    - `max-w-min` — внутренняя минимальная ширина контента
-    - `max-w-max` — внутренняя предпочтительная максимальная ширина контента
-    - `max-w-fit` — максимальная ширина, вычисляемая как fit-content
-    - `max-w-prose` — максимальная ширина равна \~65 символам (оптимальна для удобного чтения текста)
-    - `max-w-none` — без ограничений по максимальной ширине
-    - `max-w-0` — максимальная ширина равна нулю
+- Модификатор *(обязательный параметр)*: `max-w-full`, `max-w-screen`, `max-w-min`, `max-w-max`, `max-w-fit`, `max-w-prose`, `max-w-none`, `max-w-0`, `max-w-(sm|md|lg|xl)`, `max-w-a0 ... max-w-i9`.
 
 ## Примеры
 
@@ -103,3 +91,8 @@ description: "Максимальная ширина (max-width)"
 ```
 
 В этом примере максимальная ширина будет 100% (`max-w-full`) только при размерах экрана `md` и больше.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=sizes&group=max-width"></iframe>
+</div>

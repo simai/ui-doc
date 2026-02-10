@@ -59,3 +59,8 @@ description: "Насыщенность подложки (backdrop-saturate)"
 | .backdrop-saturate-3 | .backdrop-saturate-2   |
 | .backdrop-saturate-4 | .backdrop-saturate-4   |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-saturate"></iframe>
+</div>

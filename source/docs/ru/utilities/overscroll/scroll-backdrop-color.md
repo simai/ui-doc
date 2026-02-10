@@ -68,3 +68,8 @@ abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzab
 
 Обратите внимание, что этот стиль может не работать во всех браузерах. Поддержку можно проверить
 здесь: [MDN scrollbar-color](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color).
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-color"></iframe>
+</div>

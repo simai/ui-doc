@@ -71,3 +71,8 @@ description: "Отступ текста (text-indent)"
 ```html
 <p class="md:indent-3">Начиная с размера экрана md, отступ будет средний.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=text-indent"></iframe>
+</div>

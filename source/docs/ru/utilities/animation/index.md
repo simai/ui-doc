@@ -4,6 +4,7 @@
 
 ## Материалы раздела
 - [Параметры по умолчанию для анимации](animation-default-parameters.md)
+- [Продолжительность анимации](animation-duration.md)
 - [Анимация при появлении](animation-transition-appearing.md)
 - [Задержка перехода](animation-transition-delay.md)
 - [Продолжительность перехода](animation-transition-duration.md)

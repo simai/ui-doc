@@ -7,52 +7,28 @@ description: Оформление текста
 
 # Оформление текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration.php)
-
-С помощью модификаторов оформления текста можно подчеркнуть, надчеркнуть или перечеркнуть текст, а также убрать
-оформление.
-
 ## Таблица классов
 
-| Класс           | Значение                       |
-|:----------------|:-------------------------------|
-| .underline      | text-decoration: underline;    |
-| .overline       | text-decoration: overline;     |
-| .line-through   | text-decoration: line-through; |
-| .underline-none | text-decoration: none;         |
+| Класс | Значение |
+|:--|:--|
+| `.text-start` | `text-align: start;` |
+| `.text-center` | `text-align: center;` |
+| `.text-end` | `text-align: end;` |
+| `.uppercase` | `text-transform: uppercase;` |
+| `.lowercase` | `text-transform: lowercase;` |
+| `.capitalize` | `text-transform: capitalize;` |
+| `.truncate` | Обрезка строки с многоточием |
+| `.line-clamp-2` | Ограничение текста до 2 строк |
 {.table}
 
-## Описание
-
-Модификаторы оформления текста при состояниях элемента позволяют  
-изменять стили текста при наведении (`hover`), фокусе (`focus`) или  
-активном состоянии (`active`) элемента.
-
-## Синтаксис
-
-Использование: `{состояние}:{модификатор}`
-
-- Состояние *(обязательный параметр)*:
-
-    - `hover` — при наведении курсора на элемент.
-    - `focus` — при получении фокуса элементом.
-    - `active` — при активном состоянии элемента (например, при нажатии).
-- Модификатор *(обязательный параметр)*:
-
-    - `underline` — подчеркнутый текст.
-    - `overline` — надчеркнутый текст.
-    - `line-through` — перечеркнутый текст.
-    - `underline-none` — текст без оформления.
-
-## Пример использования
+## Пример
 
 ```html
-<!-- Подчеркивание текста при наведении -->
-<p class="hover:underline">Этот текст будет подчеркнутым при наведении.</p>
-
-<!-- Перечеркивание текста при фокусе -->
-<button class="focus:line-through">Кнопка, текст будет перечеркнут при фокусе.</button>
-
-<!-- Удаление оформления при активном состоянии -->
-<a href="#" class="active:underline-none">Ссылка, оформление исчезнет при нажатии.</a>
+<p class="text-center uppercase">Sample text</p>
+<p class="truncate">Very long single-line text...</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-text"></iframe>
+</div>

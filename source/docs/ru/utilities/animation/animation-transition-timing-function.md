@@ -56,3 +56,7 @@ description: Функция времени перехода
     Эта карточка изменяет свои свойства плавно, начиная и заканчивая медленно (ease-in-out).
 </div>
 ```
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-timing-function"></iframe>
+</div>

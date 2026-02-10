@@ -16,9 +16,9 @@ description: Продолжительность перехода
 
 | Класс            | Значение                                             |
 |:-----------------|:-------------------------------------------------------------------------|
-| .fast            | transition-duration: var(`--sf-duration-fast`); *(по умолчанию 100ms)*   |
+| .duration-fast            | transition-duration: var(`--sf-duration-fast`); *(по умолчанию 100ms)*   |
 | .duration-normal | transition-duration: var(`--sf-duration-normal`); *(по умолчанию 300ms)* |
-| .slow            | transition-duration: var(`--sf-duration-slow`); *(по умолчанию 500ms)*   |
+| .duration-slow            | transition-duration: var(`--sf-duration-slow`); *(по умолчанию 500ms)*   |
 {.table}
 
 ## Описание
@@ -31,7 +31,7 @@ description: Продолжительность перехода
 
 Использование модификатора: `{модификатор}`
 
-Примените один из модификаторов `fast`, `duration-normal` или `slow` к элементу, которому хотите задать конкретную
+Примените один из модификаторов `duration-fast`, `duration-normal` или `duration-slow` к элементу, которому хотите задать конкретную
 длительность перехода. Например:
 
 ```html
@@ -45,7 +45,7 @@ description: Продолжительность перехода
 ## Пример использования
 
 ```html
-<div class="transition fast hover:bg-primary p-2 radius-1/3">
+<div class="transition duration-fast hover:bg-primary p-2 radius-1/3">
     Наведи на меня, анимация будет быстрой (100ms).
 </div>
 
@@ -53,7 +53,7 @@ description: Продолжительность перехода
     Наведи на меня, анимация будет нормальной (300ms).
 </div>
 
-<div class="transition slow hover:bg-tertiary p-2 radius-1/3">
+<div class="transition duration-slow hover:bg-tertiary p-2 radius-1/3">
     Наведи на меня, анимация будет медленной (500ms).
 </div>
 ```
@@ -62,7 +62,13 @@ description: Продолжительность перехода
 
 | Старый класс                   | Новый класс      |
 |:---------------------------------------------------|:-----------------|
-| .duration-1, .duration-2, .duration-3              | .fast            |
+| .duration-1, .duration-2, .duration-3              | .duration-fast   |
 | .duration-4, .duration-5                           | .duration-normal |
-| .duration-6, .duration-7, .duration-8, .duration-9 | .slow            |
+| .duration-6, .duration-7, .duration-8, .duration-9 | .duration-slow   |
 {.table}
+
+
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-duration"></iframe>
+</div>

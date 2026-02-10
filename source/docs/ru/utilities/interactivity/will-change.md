@@ -42,3 +42,8 @@ description: "Подготовка к изменениям (will-change)"
   <!-- Элемент, который будет анимирован с transform -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=interactivity&group=will-change"></iframe>
+</div>

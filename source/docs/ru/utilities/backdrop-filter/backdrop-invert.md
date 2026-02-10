@@ -40,3 +40,8 @@ description: "Инвертирование цвета фона элемента 
   Наведи, чтобы инвертировать цвет фона
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-invert"></iframe>
+</div>

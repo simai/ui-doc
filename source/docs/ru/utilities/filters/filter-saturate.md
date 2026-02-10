@@ -68,3 +68,8 @@ description: "Насыщенность элемента (filter-saturate)"
 | .saturate-3  | .saturate-2   |
 | .saturate-4  | .saturate-4   |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-saturate"></iframe>
+</div>

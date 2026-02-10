@@ -9,35 +9,34 @@ description: "Цвет падающей тени (drop-shadow-color)"
 
 [https://dev.ru.simai.io/ru/ui/utility/shadow/drop-shadow-color.php](https://dev.ru.simai.io/ru/ui/utility/shadow/drop-shadow-color.php)
 
-Данные модификаторы позволяют задать цвет падающей тени элемента, используя роли (переменные), без адаптивности. Можно
-также изменять цвет при наведении с помощью `hover:drop-shadow-{color}`.
+Данные модификаторы позволяют задать цвет падающей тени элемента, используя роли (переменные), без адаптивности.
+Также можно изменять цвет при наведении с помощью `hover:drop-shadow-{color}`.
 
 ## Классы
 
-| Класс                   | Значение                 |
-|:------------------------|:---------------------------------------------|
-| .drop-shadow-primary    | `--sf-shadow--color`: var(`--sf-primary`)    |
-| .drop-shadow-secondary  | `--sf-shadow--color`: var(`--sf-secondary`)  |
-| .drop-shadow-tertiary   | `--sf-shadow--color`: var(`--sf-tertiary`)   |
-| .drop-shadow-error      | `--sf-shadow--color`: var(`--sf-error`)      |
-| .drop-shadow-warning    | `--sf-shadow--color`: var(`--sf-warning`)    |
-| .drop-shadow-success    | `--sf-shadow--color`: var(`--sf-success`)    |
-| .drop-shadow-on-surface | `--sf-shadow--color`: var(`--sf-on-surface`) |
+| Класс | Значение |
+|:------|:---------|
+| `.drop-shadow-{color}` | `--sf-shadow--color: var(--sf-{token})` |
+| `.hover:drop-shadow-{color}` | Аналогично, но только в состоянии `:hover` |
+| Поддерживаемые `color` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `on-surface`, `on-surface-variant` |
+| Также поддерживаются | `surface`, `surface-0`, `surface-1`, `surface-2`, `surface-3`, `surface-4`, `surface-container`, `surface-inverse`, `surface-inverse-fixed` |
+| Дополнительно | `primary-container`, `secondary-container`, `tertiary-container`, `error-container`, `warning-container`, `success-container`, `transparent`, `current` |
+| Прозрачные варианты | `primary-transparent-select`, `primary-transparent-overlay`, `secondary-transparent-select`, `secondary-transparent-overlay`, `tertiary-transparent-select`, `tertiary-transparent-overlay`, `error-transparent-select`, `error-transparent-overlay`, `warning-transparent-select`, `warning-transparent-overlay`, `success-transparent-select`, `success-transparent-overlay` |
 {.table}
 
 ## Описание
 
-Модификаторы `drop-shadow-{color}` задают цвет падающей тени. При необходимости можно использовать
-`hover:drop-shadow-{color}` для изменения цвета тени при наведении курсора.
+Модификаторы `drop-shadow-{color}` задают цвет падающей тени через семантические токены.
+Модификатор `hover:drop-shadow-{color}` задаёт цвет падающей тени при наведении.
 
-- Используйте `drop-shadow-primary` или `drop-shadow-secondary` и т.д. для установки цвета падающей тени.
+- Используйте `drop-shadow-primary`, `drop-shadow-success`, `drop-shadow-surface-container` и другие семантические модификаторы.
 - Комбинируйте с классами уровня тени, например `drop-shadow-2`, для достижения нужного эффекта.
-- Применяйте `hover:drop-shadow-error` для изменения цвета тени при наведении.
+- Применяйте `hover:drop-shadow-error`, `hover:drop-shadow-warning` и т.д. для изменения цвета при наведении.
 
 ## Синтаксис
 
-- `drop-shadow-{color}` — задать цвет падающей тени.
-- `hover:drop-shadow-{color}` — задать цвет падающей тени при наведении.
+- `drop-shadow-{color}` — базовый цвет падающей тени.
+- `hover:drop-shadow-{color}` — цвет падающей тени в `:hover`.
 
 ## Пример использования
 
@@ -52,3 +51,8 @@ description: "Цвет падающей тени (drop-shadow-color)"
     Наведи на меня
 </button>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow-color"></iframe>
+</div>

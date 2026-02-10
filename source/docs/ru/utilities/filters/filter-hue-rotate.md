@@ -64,3 +64,8 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 | .hue-rotate-4 | .hue-rotate-90  |
 | .hue-rotate-5 | .hue-rotate-180 |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-hue-rotate"></iframe>
+</div>

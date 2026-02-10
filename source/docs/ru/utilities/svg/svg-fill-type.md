@@ -7,46 +7,26 @@ description: Тип заливки
 
 # Тип заливки
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/fill-rule.php](https://dev.ru.simai.io/ru/ui/utility/svg/fill-rule.php)
+Классы задают `fill-rule` у SVG-пути.
 
-Модификаторы типа заливки (`fill-evenodd` и `fill-nonzero`) определяют,  
-как будет рассчитываться область заливки внутри фигур в SVG-графике.
-
-## Таблица классов
-
-| Класс         | Значение              |
-|:--------------|:----------------------|
-| .fill-evenodd | `fill-rule: evenodd;` |
-| .fill-nonzero | `fill-rule: nonzero;` |
+| Класс | Значение |
+|:--|:--|
+| `.fill-nonzero` | `fill-rule: nonzero;` |
+| `.fill-evenodd` | `fill-rule: evenodd;` |
 {.table}
-
-## Описание
-
-Модификаторы типа заливки определяют алгоритм, по которому определяется,  
-какие области сложной фигуры считаются "внутри" и подлежат заливке. Это важно,  
-когда одна фигура имеет несколько контуров, вложенных или пересекающихся.
-
-- `fill-evenodd`: Использует правило "even-odd". Область считается залитой,  
-  если луч, проведённый от точки наружу, пересекает контуры нечетное число раз.
-
-- `fill-nonzero`: Использует правило "nonzero". Рассчитывается баланс обхода  
-  контуров, и точка считается внутри, если обход контуров вокруг неё не сводится к нулю.
 
 ## Синтаксис
 
-Использование: `{модификатор}`
+`fill-{nonzero|evenodd}`
 
-- `fill-evenodd` — Задаёт правило заливки even-odd.
-- `fill-nonzero` — Задаёт правило заливки nonzero.
-
-## Пример использования
+## Пример
 
 ```html
-<svg class="fill-evenodd">
-    <!-- Содержимое SVG с правилом evenodd -->
-</svg>
-
-<svg class="fill-nonzero">
-    <!-- Содержимое SVG с правилом nonzero -->
-</svg>
+<svg class="fill-nonzero"></svg>
+<svg class="fill-evenodd"></svg>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=svg&group=svg-fill-type"></iframe>
+</div>

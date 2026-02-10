@@ -54,3 +54,8 @@ description: Колонки (column)
 
 Таким образом, модификатор `column` упрощает управление колонками в интерфейсе, делая дизайн более гибким и адаптируемым
 под различные размеры экранов.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout-break&group=column"></iframe>
+</div>

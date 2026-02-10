@@ -65,3 +65,8 @@ description: "Размытие фона элемента (backdrop-blur)"
 | .backdrop-blur-3                                                       | .backdrop-blur-medium |
 | .backdrop-blur-4, .backdrop-blur-5, .backdrop-blur-6, .backdrop-blur-7 | .backdrop-blur-large  |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-blur"></iframe>
+</div>

@@ -5,6 +5,7 @@ return array (
   'menu' => 
   array (
     'animation-default-parameters' => 'Параметры по умолчанию для анимации',
+    'animation-duration' => 'Продолжительность анимации',
     'animation-transition-property' => 'Общее свойство перехода',
     'animation-transition-duration' => 'Продолжительность перехода',
     'animation-transition-timing-function' => 'Функция времени перехода',

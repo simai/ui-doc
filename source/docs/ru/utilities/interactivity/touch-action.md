@@ -58,3 +58,8 @@ description: "Сенсорное действие (touch-action)"
     <img class="h-auto w-150" src="./picture.svg">
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=interactivity&group=touch-action"></iframe>
+</div>

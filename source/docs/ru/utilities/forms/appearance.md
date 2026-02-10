@@ -43,3 +43,8 @@ description: Сброс стиля (appearance)
     <option>Возможно</option>
 </select>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=forms&group=appearance"></iframe>
+</div>

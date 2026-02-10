@@ -7,51 +7,24 @@ description: Концы обводки (Line Cap)
 
 # Концы обводки (Line Cap)
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/stroke-linecap.php](https://dev.ru.simai.io/ru/ui/utility/svg/stroke-linecap.php)
+Классы задают `stroke-linecap`.
 
-С помощью модификаторов концов обводки можно задать форму завершения линий в SVG-графике. Различные варианты позволяют
-получить разное визуальное впечатление от окончаний линий.
-
-## Таблица классов
-
-| Класс           | Значение                |
-|:----------------|:------------------------|
-| .linecap-butt   | stroke-linecap: butt;   |
-| .linecap-round  | stroke-linecap: round;  |
-| .linecap-square | stroke-linecap: square; |
+| Класс | Значение |
+|:--|:--|
+| `.linecap-butt` | `stroke-linecap: butt;` |
+| `.linecap-round` | `stroke-linecap: round;` |
+| `.linecap-square` | `stroke-linecap: square;` |
 {.table}
 
-## Описание
-
-Модификаторы концов обводки определяют, как будет выглядеть конец каждой линии:
-
-- `linecap-butt`: Линия обрывается ровно в конце, без дополнительного оформления.  
-  Подходит для точных и строгих визуальных стилей.
-
-- `linecap-round`: Конец линии закруглён. Длина закругления равна половине толщины  
-  обводки. Такой вариант придаёт линиям более мягкий и плавный вид.
-
-- `linecap-square`: Конец линии заканчивается квадратом, который выступает за точку  
-  окончания линии на половину её толщины. Это создаёт более геометрический,  
-  чёткий эффект.
-
-## Синтаксис
-
-Использование: `{модификатор}`
-
-- `linecap-{butt|round|square}` — задаёт соответствующий тип оконцовки линий.
-
-## Пример использования
+## Пример
 
 ```html
-<svg class="linecap-butt" width="100" height="50">
-    <line x1="10" y1="25" x2="90" y2="25" stroke="black" stroke-width="8"/>
-</svg>
-
-<svg class="linecap-round" width="100" height="50">
-    <line x1="10" y1="25" x2="90" y2="25" stroke="black" stroke-width="8"/>
-</svg>
+<svg class="stroke-primary stroke-6 linecap-butt"></svg>
+<svg class="stroke-primary stroke-6 linecap-round"></svg>
+<svg class="stroke-primary stroke-6 linecap-square"></svg>
 ```
+## Playground
 
-В первом примере конец линии обрывается сразу по окончанию (`butt`),  
-а во втором — закругляется (`round`), придавая более мягкий вид.
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-cap"></iframe>
+</div>

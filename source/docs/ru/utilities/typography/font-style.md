@@ -39,3 +39,8 @@ description: "Стиль шрифта (font-style)"
 ```html
 <p class="md:italic">На экранах md и больше текст будет отображаться наклонным шрифтом.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=font-style"></iframe>
+</div>

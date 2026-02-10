@@ -89,3 +89,8 @@ description: "Направление размещения (flex-direction)"
     <!-- Начиная с md элементы будут расположены в строку слева направо -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=flex&group=flex-direction"></iframe>
+</div>

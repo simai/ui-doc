@@ -23,7 +23,7 @@ description: Высота (height)
 | .h-1/3          | height: 33.333333%;                                               |
 | .h-2/3          | height: 66.666667%;                                               |
 | .h-1/4          | height: 25%;                                                      |
-| . h-2/4         | height: 50%;                                                      |
+| .h-2/4         | height: 50%;                                                      |
 | .h-3/4          | height: 75%;                                                      |
 | .h-1/5          | height: 20%;                                                      |
 | .h-2/5          | height: 40%;                                                      |
@@ -124,3 +124,8 @@ description: Высота (height)
 ```
 
 В этом примере высота будет 50% (`h-1/2`) при `md` и больше.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=sizes&group=height"></iframe>
+</div>

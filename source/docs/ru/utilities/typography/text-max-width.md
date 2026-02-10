@@ -69,3 +69,8 @@ description: "Длина строки (text-max-width)"
 | `--sf-text--measure-wide`   | 80ch;    |
 | `--sf-text--measure-narrow` | 45ch;    |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=text-max-width"></iframe>
+</div>

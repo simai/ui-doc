@@ -7,50 +7,36 @@ description: "Отображение элемента при печати (displ
 
 # Отображение элемента при печати (display-print)
 
-[https://dev.ru.simai.io/ru/ui/utility/print/display-print.php](https://dev.ru.simai.io/ru/ui/utility/print/display-print.php)
+Утилиты `print-*` задают `display` только внутри `@media print`.
 
-Модификаторы позволяют изменить способ отображения элемента только во время печати страницы. Это полезно, когда вам
-нужно скрыть или показать определённые элементы при выводе на печать.
+## Классы и значения
 
-## Классы и их значения
-
-| Класс               | Значение                                                                        |
-|:--------------------|:----------------------------------------------------------------------------------------------------|
-| .print-block        | Во время печати элемент отображается как блочный (**display: block;**)                              |
-| .print-inline-block | Во время печати элемент отображается как блочно-строчный (**display: inline-block;**)               |
-| .print-inline       | Во время печати элемент отображается как строчный (**display: inline;**)                            |
-| .print-flex         | Во время печати элемент отображается как flex-контейнер (**display: flex;**)                        |
-| .print-inline-flex  | Во время печати элемент отображается как блочно-строчный flex-контейнер (**display: inline-flex;**) |
-| .print-table        | Во время печати элемент отображается как таблица (**display: table;**)                              |
-
+| Класс | Значение в режиме печати |
+|:--|:--|
+| `.print-block` | `display: block;` |
+| `.print-inline-block` | `display: inline-block;` |
+| `.print-inline` | `display: inline;` |
+| `.print-flex` | `display: flex;` |
+| `.print-inline-flex` | `display: inline-flex;` |
+| `.print-table` | `display: table;` |
 {.table}
 
-## Описание
+## Как это работает
 
-Данные модификаторы применяют стили отображения только при печати, не влияя на отображение при просмотре страницы в
-браузере. Это даёт возможность управлять контентом для печати, скрывая ненужные элементы или меняя их структуру.
+Каждый `print-*` класс в обычном экране выставляет `display: none`, а при печати включает нужный `display`.
 
 ## Синтаксис
 
-- `print-block` – при печати элемент будет блочным.
-- `print-inline-block` – при печати элемент будет блочно-строчным.
-- `print-inline` – при печати элемент будет строчным.
-- `print-flex` – при печати элемент станет flex-контейнером.
-- `print-inline-flex` – при печати элемент станет блочно-строчным flex-контейнером.
-- `print-table` – при печати элемент будет отображаться как таблица.
+`print-{block|inline-block|inline|flex|inline-flex|table}`
 
-## Пример использования
+## Пример
 
 ```html
-
-<div class="hidden print-block">
-    <!-- Этот элемент будет скрыт на экране, но показан как блочный при печати -->
-    Контент, который нужен только при печати
-</div>
-
-<div class="print-inline-flex">
-    <!-- При печати этот элемент будет отображаться как inline-flex-контейнер -->
-    <span>Элемент 1</span>
-    <span>Элемент 2</span>
-</div>
+<div class="hidden print-block">Printed as block</div>
+<div class="hidden print-inline-flex">Printed as inline-flex</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=print&group=display-print"></iframe>
+</div>

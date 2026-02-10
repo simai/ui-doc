@@ -1,52 +1,42 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: Цвет тени
-description: Цвет тени
+title: Цвет тени элемента (box-shadow-color)
+description: Цвет тени для default / hover / active
 ---
 
-# Цвет тени
+# Цвет тени элемента (box-shadow-color)
 
 [https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow-color.php](https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow-color.php)
 
-Данные модификаторы устанавливают цвет тени элемента через специальную переменную `--sf-shadow--color`. Это позволяет
-гибко настраивать визуальное восприятие тени. Используя состояние `hover`, можно изменять цвет тени при наведении
-курсора, подчеркивая интерактивность элемента.
+Утилиты задают цвет тени в состояниях `default`, `hover`, `active`.
 
-## Классы
+## Таблица классов
 
-| Класс              | Значение                 |
-|:-------------------|:---------------------------------------------|
-| .shadow-primary    | `--sf-shadow--color`: var(`--sf-primary`)    |
-| .shadow-secondary  | `--sf-shadow--color`: var(`--sf-secondary`)  |
-| .shadow-tertiary   | `--sf-shadow--color`: var(`--sf-tertiary`)   |
-| .shadow-error      | `--sf-shadow--color`: var(`--sf-error`)      |
-| .shadow-warning    | `--sf-shadow--color`: var(`--sf-warning`)    |
-| .shadow-success    | `--sf-shadow--color`: var(`--sf-success`)    |
-| .shadow-on-surface | `--sf-shadow--color`: var(`--sf-on-surface`) |
+| Класс | Значение |
+|:--|:--|
+| `.shadow-{color}` | цвет тени в базовом состоянии |
+| `.hover:shadow-{color}` | цвет тени в `:hover` |
+| `.active:shadow-{color}` | цвет тени в `:active` |
 {.table}
 
-## Описание
-
-Данные модификаторы (`shadow-{color}`) устанавливают цвет тени через переменную `--sf-shadow--color`. Это позволяет
-гибко управлять визуальным видом тени элемента. При использовании состояния `hover` можно менять цвет тени при наведении
-на элемент, что подчеркивает его интерактивность.
+Поддерживаемые `color`: `on-surface`, `primary`, `secondary`, `tertiary`, `error`, `success`, `warning`.
 
 ## Синтаксис
 
-- `shadow-{color}` — задать цвет тени.
-- `hover:shadow-{color}` — задать цвет тени при наведении.
+- `shadow-{color}`
+- `hover:shadow-{color}`
+- `active:shadow-{color}`
 
-## Пример использования тени
+## Пример
 
 ```html
-<!-- Элемент с тенью основного цвета -->
-<div class="shadow-primary shadow-3 p-4 radius-1/3">
-    Элемент с основной тенью
-</div>
-
-<!-- При наведении тень меняет цвет на “error” -->
-<button class="shadow-secondary hover:shadow-error shadow-2 p-2 radius-1/2">
-    Наведи на меня
+<button class="shadow-2 shadow-primary hover:shadow-warning active:shadow-error p-2 radius-2 border border-outline-variant">
+  Shadow color states
 </button>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=shadows&group=element-color"></iframe>
+</div>

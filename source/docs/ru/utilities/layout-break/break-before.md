@@ -61,3 +61,8 @@ description: "Разрыв до элемента (break-before)"
 
 Таким образом, модификатор `break-before` позволяет точно управлять разрывами до элементов, улучшая контроль над
 адаптивными макетами и многостраничными документами.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout-break&group=break-before"></iframe>
+</div>

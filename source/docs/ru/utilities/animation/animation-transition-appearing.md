@@ -1,48 +1,50 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: Анимация при появлении
-description: Анимация при появлении
+title: Анимация элемента
+description: Классы animation и infinite
 ---
 
-# Анимация при появлении
+# Анимация элемента
 
 [https://dev.ru.simai.io/ru/ui/utility/animation/animation.php](https://dev.ru.simai.io/ru/ui/utility/animation/animation.php)
 
-При помощи пакета классов `animation` в SIMAI Framework вы можете задать анимацию, которая будет срабатывать при
-появлении элемента в зоне видимости окна браузера. Также есть возможность указать бесконечный повтор анимации.
+Утилита добавляет CSS-анимацию элементу.
 
-## Классы и их значения
+## Классы и значения
 
-| Класс     | Значение                                                                                                      |
-|:----------|:----------------------------------------------------------------------------------------------------------------------------------|
-| animation | Запускает анимацию при появлении элемента в зоне видимости (аналог функционала класса `wow` из прошлой версии).                   |
-| infinite  | Повторяет анимацию бесконечно.                                                                                                    |
+| Класс      | Значение |
+|:-----------|:---------|
+| `.animation` | Базовая анимация появления (`fade`) с `--sf-duration-normal` и `--sf-animation`. |
+| `.infinite`  | Бесконечный повтор анимации (`animation-iteration-count: infinite`). |
 {.table}
-
-## Описание
-
-Используя класс `animation`, элемент будет анимирован при появлении в зоне видимости окна браузера. Если добавить к нему
-класс `infinite`, анимация будет повторяться без остановки.
 
 ## Синтаксис
 
-Использование модификатора: `{animation}` и при необходимости `{infinite}`
-
 ```html
-<div class="animation infinite">
-    Этот блок анимируется при появлении и делает это бесконечно.
-</div>
+<div class="animation">...</div>
+<div class="animation infinite">...</div>
 ```
 
-## Пример использования
+## Важно про появление в viewport
+
+Класс `.animation` запускает обычную CSS-анимацию элемента (при его рендере/появлении в DOM).
+
+Если нужен запуск именно при входе в область видимости (scroll appear), используйте компонент `wow` и его атрибуты (`data-wow-*`).
+
+## Пример
 
 ```html
-<div class="animation p-2 radius-1/3 bg-primary color-on-surface-inverse">
-    Появляюсь с анимацией!
+<div class="animation p-2 radius-1/3 bg-primary color-on-primary">
+  Появление по fade-анимации
 </div>
 
-<div class="animation infinite p-2 radius-1/3 bg-secondary color-on-surface-inverse">
-    Появляюсь с анимацией и повторяюсь бесконечно!
+<div class="animation infinite p-2 radius-1/3 bg-secondary color-on-secondary">
+  Бесконечное повторение анимации
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-appearing"></iframe>
+</div>

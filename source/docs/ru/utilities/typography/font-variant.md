@@ -40,3 +40,8 @@ description: "Начертание шрифта (капитель) (font-variant
   На экранах Medium и больше текст будет в стиле капитель.
 </p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=font-variant"></iframe>
+</div>

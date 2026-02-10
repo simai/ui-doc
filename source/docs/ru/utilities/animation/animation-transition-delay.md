@@ -57,3 +57,7 @@ description: Задержка перехода
     Этот блок изменит цвет с задержкой 700ms перед началом анимации.
 </div>
 ```
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-delay"></iframe>
+</div>

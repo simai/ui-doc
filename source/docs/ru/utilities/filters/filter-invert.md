@@ -44,3 +44,8 @@ description: "Инвертирование цвета элемента (filter-i
   Наведи, чтобы инвертировать цвета
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-invert"></iframe>
+</div>

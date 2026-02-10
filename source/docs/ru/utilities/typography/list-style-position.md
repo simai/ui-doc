@@ -48,3 +48,8 @@ description: "Положение маркера списка (list-style-positio
   <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
 </ul>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=list-style-position"></iframe>
+</div>

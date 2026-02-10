@@ -2,47 +2,55 @@
 extends: _core._layouts.documentation
 section: content
 title: Контекст наложения (isolation)
-description: Контекст наложения (isolation)
+description: Управление контекстом наложения и смешиванием слоёв
 ---
 
 # Контекст наложения (isolation)
 
 [https://dev.ru.simai.io/ru/ui/utility/layout/isolation.php](https://dev.ru.simai.io/ru/ui/utility/layout/isolation.php)
 
-Модификатор `isolation` предназначен для управления контекстом наложения элемента. Он определяет, будет ли элемент и его
-потомки создавать новый контекст наложения, что особенно полезно при использовании эффектов наложения или смешивания
-цветов.
+`isolate` управляет созданием отдельного stacking context. Это важно, когда используются `mix-blend-*` и нужно ограничить их влияние пределами контейнера.
+
+## Таблица классов
+
+| Класс | Значение |
+|:--|:--|
+| `.isolate` | `isolation: isolate;` |
+| `.isolation-auto` | `isolation: auto;` |
+| `.mix-blend-{mode}` | `mix-blend-mode: ...;` |
+{.table}
+
+Поддерживаемые `mode`: `normal`, `multiply`, `screen`, `overlay`, `darken`, `lighten`, `color-dodge`, `color-burn`, `hard-light`, `soft-light`, `difference`, `exclusion`, `hue`, `saturation`, `color`, `luminosity`.
 
 ## Синтаксис
 
-Использование: `{модификатор}`
-
-- Модификатор (обязательный параметр):
-    - `isolate` — создаёт новый контекст наложения для элемента. Это означает, что эффект смешивания (blend) или
-      наложения применённый к элементам внутри этого блока не будет влиять на элементы снаружи.
-    - `isolation-auto` — автоматически создаёт новый контекст наложения, если это необходимо. Если ни одно из свойств не
-      требует отдельного контекста, он не будет создан.
+- `isolate`
+- `isolation-auto`
+- `mix-blend-{mode}`
 
 ## Примеры
 
-### `isolate`  
-С помощью модификатора `isolate` можно создать новый контекст наложения:
+### isolate
 
 ```html
-<div class="bg-success-tonal ...">
-    <div class="isolate ...">
-        <div class="mix-blend-multiply bg-warning-tonal ..."></div>
-    </div>
+<div class="bg-success-tonal">
+  <div class="isolate">
+    <div class="mix-blend-multiply bg-warning-tonal">...</div>
+  </div>
 </div>
 ```
 
-### `isolation-auto`  
-С помощью модификатора `isolation-auto` новый контекст наложения создаётся по необходимости:
+### isolation-auto
 
 ```html
-<div class="bg-success-tonal ...">
-    <div class="isolation-auto ...">
-        <div class="mix-blend-multiply bg-warning-tonal ..."></div>
-    </div>
+<div class="bg-success-tonal">
+  <div class="isolation-auto">
+    <div class="mix-blend-multiply bg-warning-tonal">...</div>
+  </div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=isolation"></iframe>
+</div>

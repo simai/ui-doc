@@ -166,3 +166,8 @@ description: Метод отображения элемента (display)
 ```html
 <div class="md:hidden">Скрывается на экранах от md и больше</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=display"></iframe>
+</div>

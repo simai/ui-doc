@@ -1,69 +1,69 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Размер текста (text-size)"
-description: "Размер текста (text-size)"
+title: "Р В Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° (text-size)"
+description: "Р В Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° (text-size)"
 ---
 
-# Размер текста (text-size)
+# Р В Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° (text-size)
 
 [https://dev.ru.simai.io/ru/ui/utility/typography/text-size.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-size.php)
 
-Количество поддерживаемых размеров шрифта уменьшилось с 13 до 12, а также обновлены соответствующие переменные и классы.
-Данные модификаторы изменяют размер шрифта и высоту строки одновременно.
+Р С™Р С•Р В»Р С‘РЎвЂЎР ВµРЎРѓРЎвЂљР Р†Р С• Р С—Р С•Р Т‘Р Т‘Р ВµРЎР‚Р В¶Р С‘Р Р†Р В°Р ВµР СРЎвЂ№РЎвЂ¦ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р С•Р Р† РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° РЎС“Р СР ВµР Р…РЎРЉРЎв‚¬Р С‘Р В»Р С•РЎРѓРЎРЉ РЎРѓ 13 Р Т‘Р С• 12, Р В° РЎвЂљР В°Р С”Р В¶Р Вµ Р С•Р В±Р Р…Р С•Р Р†Р В»Р ВµР Р…РЎвЂ№ РЎРѓР С•Р С•РЎвЂљР Р†Р ВµРЎвЂљРЎРѓРЎвЂљР Р†РЎС“РЎР‹РЎвЂ°Р С‘Р Вµ Р С—Р ВµРЎР‚Р ВµР СР ВµР Р…Р Р…РЎвЂ№Р Вµ Р С‘ Р С”Р В»Р В°РЎРѓРЎРѓРЎвЂ№.
+Р вЂќР В°Р Р…Р Р…РЎвЂ№Р Вµ Р СР С•Р Т‘Р С‘РЎвЂћР С‘Р С”Р В°РЎвЂљР С•РЎР‚РЎвЂ№ Р С‘Р В·Р СР ВµР Р…РЎРЏРЎР‹РЎвЂљ РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° Р С‘ Р Р†РЎвЂ№РЎРѓР С•РЎвЂљРЎС“ РЎРѓРЎвЂљРЎР‚Р С•Р С”Р С‘ Р С•Р Т‘Р Р…Р С•Р Р†РЎР‚Р ВµР СР ВµР Р…Р Р…Р С•.
 
-## Таблица классов
+## Р СћР В°Р В±Р В»Р С‘РЎвЂ Р В° Р С”Р В»Р В°РЎРѓРЎРѓР С•Р Р†
 
-| Класс     | Свойства                                                           |
+| Р С™Р В»Р В°РЎРѓРЎРѓ     | Р РЋР Р†Р С•Р в„–РЎРѓРЎвЂљР Р†Р В°                                                           |
 |:----------|:---------------------------------------------------------------------------------------|
-| .text-1/4 | font-size: var(`--sf-text--size-1/4`);<br/> line-height: var(`--sf-text--height-1/4`); |
-| .text-1/3 | font-size: var(`--sf-text--size-1/3`);<br/> line-height: var(`--sf-text--height-1/3`); |
-| .text-1/2 | font-size: var(`--sf-text--size-1/2`);<br/> line-height: var(`--sf-text--height-1/2`); |
-| .text-1   | font-size: var(`--sf-text--size-1`);<br/> line-height: var(`--sf-text--height-1`);     |
-| .text-2   | font-size: var(`--sf-text--size-2`);<br/> line-height: var(`--sf-text--height-2`);     |
-| .text-3   | font-size: var(`--sf-text--size-3`);<br/> line-height: var(`--sf-text--height-3`);     |
-| .text-4   | font-size: var(`--sf-text--size-4`);<br/> line-height: var(`--sf-text--height-4`);     |
-| .text-5   | font-size: var(`--sf-text--size-5`);<br/> line-height: var(`--sf-text--height-5`);     |
-| .text-6   | font-size: var(`--sf-text--size-6`);<br/> line-height: var(`--sf-text--height-6`);     |
-| .text-7   | font-size: var(`--sf-text--size-7`);<br/> line-height: var(`--sf-text--height-7`);     |
-| .text-8   | font-size: var(`--sf-text--size-8`);<br/> line-height: var(`--sf-text--height-8`);     |
-| .text-9   | font-size: var(`--sf-text--size-9`);<br/> line-height: var(`--sf-text--height-9`);     |
-| .text-10  | font-size: var(`--sf-text--size-10`);<br/> line-height: var(`--sf-text--height-10`);   |
-| .text-11  | font-size: var(`--sf-text--size-11`);<br/> line-height: var(`--sf-text--height-11`);   |
-| .text-12  | font-size: var(`--sf-text--size-12`);<br/> line-height: var(`--sf-text--height-12`);   |
+| .text-1/4 | font-size: var(`--sf-text-size-1/4`);<br/> line-height: var(`--sf-text-height-1/4`); |
+| .text-1/3 | font-size: var(`--sf-text-size-1/3`);<br/> line-height: var(`--sf-text-height-1/3`); |
+| .text-1/2 | font-size: var(`--sf-text-size-1/2`);<br/> line-height: var(`--sf-text-height-1/2`); |
+| .text-1   | font-size: var(`--sf-text-size-1`);<br/> line-height: var(`--sf-text-height-1`);     |
+| .text-2   | font-size: var(`--sf-text-size-2`);<br/> line-height: var(`--sf-text-height-2`);     |
+| .text-3   | font-size: var(`--sf-text-size-3`);<br/> line-height: var(`--sf-text-height-3`);     |
+| .text-4   | font-size: var(`--sf-text-size-4`);<br/> line-height: var(`--sf-text-height-4`);     |
+| .text-5   | font-size: var(`--sf-text-size-5`);<br/> line-height: var(`--sf-text-height-5`);     |
+| .text-6   | font-size: var(`--sf-text-size-6`);<br/> line-height: var(`--sf-text-height-6`);     |
+| .text-7   | font-size: var(`--sf-text-size-7`);<br/> line-height: var(`--sf-text-height-7`);     |
+| .text-8   | font-size: var(`--sf-text-size-8`);<br/> line-height: var(`--sf-text-height-8`);     |
+| .text-9   | font-size: var(`--sf-text-size-9`);<br/> line-height: var(`--sf-text-height-9`);     |
+| .text-10  | font-size: var(`--sf-text-size-10`);<br/> line-height: var(`--sf-text-height-10`);   |
+| .text-11  | font-size: var(`--sf-text-size-11`);<br/> line-height: var(`--sf-text-height-11`);   |
+| .text-12  | font-size: var(`--sf-text-size-12`);<br/> line-height: var(`--sf-text-height-12`);   |
 {.table}
 
-**Примечание:** Ранее существовал класс `text-13`, но теперь максимально доступный размер — `text-12`.
+**Р СџРЎР‚Р С‘Р СР ВµРЎвЂЎР В°Р Р…Р С‘Р Вµ:** Р В Р В°Р Р…Р ВµР Вµ РЎРѓРЎС“РЎвЂ°Р ВµРЎРѓРЎвЂљР Р†Р С•Р Р†Р В°Р В» Р С”Р В»Р В°РЎРѓРЎРѓ `text-13`, Р Р…Р С• РЎвЂљР ВµР С—Р ВµРЎР‚РЎРЉ Р СР В°Р С”РЎРѓР С‘Р СР В°Р В»РЎРЉР Р…Р С• Р Т‘Р С•РЎРѓРЎвЂљРЎС“Р С—Р Р…РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РІР‚вЂќ `text-12`.
 
-## Пример использования
+## Р СџРЎР‚Р С‘Р СР ВµРЎР‚ Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°Р Р…Р С‘РЎРЏ
 
-### Текст меньше базового размера:
+### Р СћР ВµР С”РЎРѓРЎвЂљ Р СР ВµР Р…РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С• РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В°:
 
 ```html
-<p class="text-1/4">Очень мелкий текст</p>
-<p class="text-1/3">Меньше базового</p>
-<p class="text-1/2">Почти базовый</p>
+<p class="text-1/4">Р С›РЎвЂЎР ВµР Р…РЎРЉ Р СР ВµР В»Р С”Р С‘Р в„– РЎвЂљР ВµР С”РЎРѓРЎвЂљ</p>
+<p class="text-1/3">Р СљР ВµР Р…РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С•</p>
+<p class="text-1/2">Р СџР С•РЎвЂЎРЎвЂљР С‘ Р В±Р В°Р В·Р С•Р Р†РЎвЂ№Р в„–</p>
 ```
 
-### Базовый размер текста:
+### Р вЂР В°Р В·Р С•Р Р†РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°:
 
 ```html
-<p class="text-1">Базовый размер текста</p>
+<p class="text-1">Р вЂР В°Р В·Р С•Р Р†РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°</p>
 ```
 
-### Текст больше базового размера:
+### Р СћР ВµР С”РЎРѓРЎвЂљ Р В±Р С•Р В»РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С• РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В°:
 
 ```html
-<p class="text-2">Чуть больше базового</p>
-<p class="text-3">Ещё крупнее</p>
-<p class="text-12">Максимальный размер текста</p>
+<p class="text-2">Р В§РЎС“РЎвЂљРЎРЉ Р В±Р С•Р В»РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С•</p>
+<p class="text-3">Р вЂўРЎвЂ°РЎвЂ Р С”РЎР‚РЎС“Р С—Р Р…Р ВµР Вµ</p>
+<p class="text-12">Р СљР В°Р С”РЎРѓР С‘Р СР В°Р В»РЎРЉР Р…РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°</p>
 ```
 
-## Адаптивность
+## Р С’Р Т‘Р В°Р С—РЎвЂљР С‘Р Р†Р Р…Р С•РЎРѓРЎвЂљРЎРЉ
 
-Для установки размера шрифта начиная с определённой контрольной точки (`sm`, `md`, `lg`, `xl`) добавьте префикс.
-Например:
+Р вЂќР В»РЎРЏ РЎС“РЎРѓРЎвЂљР В°Р Р…Р С•Р Р†Р С”Р С‘ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° Р Р…Р В°РЎвЂЎР С‘Р Р…Р В°РЎРЏ РЎРѓ Р С•Р С—РЎР‚Р ВµР Т‘Р ВµР В»РЎвЂР Р…Р Р…Р С•Р в„– Р С”Р С•Р Р…РЎвЂљРЎР‚Р С•Р В»РЎРЉР Р…Р С•Р в„– РЎвЂљР С•РЎвЂЎР С”Р С‘ (`sm`, `md`, `lg`, `xl`) Р Т‘Р С•Р В±Р В°Р Р†РЎРЉРЎвЂљР Вµ Р С—РЎР‚Р ВµРЎвЂћР С‘Р С”РЎРѓ.
+Р СњР В°Р С—РЎР‚Р С‘Р СР ВµРЎР‚:
 
 ```html
-<p class="md:text-2">Этот текст станет размером text-2 начиная с размера экрана md</p>
+<p class="md:text-2">Р В­РЎвЂљР С•РЎвЂљ РЎвЂљР ВµР С”РЎРѓРЎвЂљ РЎРѓРЎвЂљР В°Р Р…Р ВµРЎвЂљ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р С•Р С text-2 Р Р…Р В°РЎвЂЎР С‘Р Р…Р В°РЎРЏ РЎРѓ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° РЎРЊР С”РЎР‚Р В°Р Р…Р В° md</p>
 ```

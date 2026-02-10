@@ -55,3 +55,8 @@ description: "Выравнивание по вертикали (vertical-align)"
 
 <span class="inline-block text-sub">Подстрочный индекс</span>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=vertical-align"></iframe>
+</div>

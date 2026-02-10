@@ -1,8 +1,8 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Конечное положение строки сетки (grid-row-end)"
-description: "Конечное положение строки сетки (grid-row-end)"
+title: 'Конечное положение строки сетки (grid-row-end)'
+description: 'Конечное положение строки сетки (grid-row-end)'
 ---
 
 # Конечное положение строки сетки (grid-row-end)
@@ -14,8 +14,8 @@ description: "Конечное положение строки сетки (grid-
 
 ## Таблица классов
 
-| Класс              | Значение            |
-|:-------------------|:--------------------|
+| Класс         | Значение    |
+| :----------------- | :------------------ |
 | .grid-row-end-1    | grid-row-end: 1;    |
 | .grid-row-end-2    | grid-row-end: 2;    |
 | .grid-row-end-3    | grid-row-end: 3;    |
@@ -23,39 +23,34 @@ description: "Конечное положение строки сетки (grid-
 | .grid-row-end-5    | grid-row-end: 5;    |
 | .grid-row-end-6    | grid-row-end: 6;    |
 | .grid-row-end-7    | grid-row-end: 7;    |
-| .grid-row-end-8    | grid-row-end: 8;    |
-| .grid-row-end-9    | grid-row-end: 9;    |
-| .grid-row-end-10   | grid-row-end: 10;   |
-| .grid-row-end-11   | grid-row-end: 11;   |
-| .grid-row-end-12   | grid-row-end: 12;   |
 | .grid-row-end-auto | grid-row-end: auto; |
+
 {.table}
 
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
+- Контрольная точка _(необязательный параметр)_:  
   Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).  
   Если не указана, модификатор применяется для всех размеров.
 
-- Модификатор *(обязательный параметр)*:
-
-    - `grid-row-end-{n}` (где n от 1 до 12\) — элемент заканчивается на указанной строке.
-    - `grid-row-end-auto` — конец строки определяется автоматически.
+- Модификатор _(обязательный параметр)_:
+  - `grid-row-end-{n}` (где n от 1 до 7) — элемент заканчивается на указанной строке.
+  - `grid-row-end-auto` — конец строки определяется автоматически.
 
 ## Пример использования
 
 ```html
 <div class="grid grid-col-6 gap-1">
-    <!-- Элемент начнётся с первой строки и закончится на четвертой -->
-    <div class="grid-row-start-1 grid-row-end-4 col-span-2">1</div>
-    
-    <!-- Элемент заканчивается на третьей строке -->
-    <div class="col-start-1 col-end-3 grid-row-end-3">2</div>
-    
-    <!-- Элемент занимает все строки, если сетка, скажем, из 6 строк -->
-    <div class="col-end-7 col-span-2 grid-row-end-auto">3</div>
+  <!-- Элемент начнётся с первой строки и закончится на четвертой -->
+  <div class="grid-row-start-1 grid-row-end-4 col-span-2">1</div>
+
+  <!-- Элемент заканчивается на третьей строке -->
+  <div class="col-start-1 col-end-3 grid-row-end-3">2</div>
+
+  <!-- Элемент занимает все строки, если сетка, скажем, из 6 строк -->
+  <div class="col-end-7 col-span-2 grid-row-end-auto">3</div>
 </div>
 ```
 
@@ -69,6 +64,11 @@ description: "Конечное положение строки сетки (grid-
 
 ```html
 <div class="md:grid-row-end-4">
-    <!-- Начиная с md элемент будет заканчиваться на 4-й строке -->
+  <!-- Начиная с md элемент будет заканчиваться на 4-й строке -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row-end"></iframe>
+</div>

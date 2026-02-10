@@ -74,7 +74,7 @@
         'env' => getenv(),
         'category' => true,
         'cache' => true,
-        'moduleCache' => true,
+        'moduleCache' => false,
         'cachePath' => $projectRoot . '/.cache',
         'siteName' => 'Simai Documentation',
         'siteDescription' => 'Simai framework documentation',

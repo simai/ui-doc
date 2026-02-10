@@ -7,47 +7,18 @@ description: Оформление кода
 
 # Оформление кода
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/code.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/code.php)
-
-Для оформления текста кода во фреймворке используется набор переменных,  
-которые позволяют быстро менять его внешний вид. К выделенному коду  
-относятся фрагменты текста, помещённые в теге `<code>`.
-
-## Таблица стилей
-
-| Тег   | Значение                                                                                                                                                                                             |
-|:------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| .code | color: var(`--sf-code--color`);<br/> background-color: var(`--sf-code--background`);<br/> font-family: var(`--sf-code--font-family`);<br/> border-radius: var(`--sf-code--radius`);<br/> padding: var(`--sf-space-1/2`); |
-{.table}
-
-## Описание
-
-Используйте тег `<code>` для выделения фрагментов кода или терминальных  
-команд. Переменные оформления кода позволяют адаптировать внешний вид  
-под различные темы и стилистику. Цвет текста, фон, шрифт и скругление  
-краёв — всё это настраивается с помощью переменных.
-
-## Синтаксис
-
-```html
-<code>...</code>
-```
+Для коротких вставок используйте тег `<code>`. Для длинных строк применяйте утилиты обрезки текста:
+- `.truncate` для одной строки,
+- `.line-clamp-*` для нескольких строк.
 
 ## Пример
 
 ```html
-<p>
-  Для вывода сообщения в консоль используйте:
-  <code>console.log("Hello, world!");</code>
-</p>
+<p>Use <code>line-clamp-2</code> and <code>truncate</code> utilities.</p>
+<p class="truncate">Very long single-line text...</p>
 ```
+## Playground
 
-## Переменные
-
-| Переменная               | Значение по умолчанию          |
-|:-------------------------|:-------------------------------|
-| `--sf-code--color`       | var(`--sf-tertiary`)           |
-| `--sf-code--background`  | var(`--sf-tertiary-container`) |
-| `--sf-code--font-family` | var(`--sf-mono`)               |
-| `--sf-code--radius`      | var(`--sf-radius-1/3`)         |
-{.table}
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-code"></iframe>
+</div>

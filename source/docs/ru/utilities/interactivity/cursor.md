@@ -77,3 +77,8 @@ description: Вид курсора (cursor)
     Подтвердить
 </button>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=interactivity&group=cursor"></iframe>
+</div>

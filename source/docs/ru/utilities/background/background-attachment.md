@@ -74,3 +74,8 @@ description: Вложение фона
     <div class="h-f8"></div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=background&group=background-attachment"></iframe>
+</div>

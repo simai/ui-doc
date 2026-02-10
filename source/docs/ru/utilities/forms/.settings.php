@@ -8,6 +8,8 @@ return array (
     'caret-color' => 'Цвет каретки (caret-color)',
     'appearance' => 'Сброс стиля (appearance)',
     'pointer-events' => 'События указателя (pointer-events)',
-    'resize' => 'Изменение размера (resize)',
+    
+    'placeholder-color' => 'Цвет placeholder (placeholder-color)',
+    'placeholder-opacity' => 'Прозрачность placeholder (placeholder-opacity)',
   ),
 );

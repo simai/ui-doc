@@ -20,7 +20,7 @@ description: "Максимальная высота (max-height)"
 | .max-h-screen           | max-height: 100vh;                          |
 | .max-h-px               | max-height: 1px;                            |
 | .max-h-0                | max-height: 0;                              |
-| . max-h-min             | max-height: min-content;                    |
+| .max-h-min             | max-height: min-content;                    |
 | .max-h-max              | max-height: max-content;                    |
 | .max-h-fit              | max-height: fit-content;                    |
 | .max-h-a0 ... .max-h-i9 | Фиксированные размеры из системы фреймворка |
@@ -36,8 +36,10 @@ description: "Максимальная высота (max-height)"
 
 - Модификатор (обязательный параметр):
 
-    - `max-h-0` \- максимальная высота равна нулю
-    - `max-h-(a0...i9)` \- максимальная высота равна фиксированным размерам из системы размеров
+    - `max-h-0` — максимальная высота равна нулю
+    - `max-h-px` — 1px
+    - `max-h-full`, `max-h-screen`, `max-h-min`, `max-h-max`, `max-h-fit`
+    - `max-h-(a0...i9)` — фиксированные размеры из системы размеров
     - `max-h-full` \- максимальная высота равна высоте родительского элемента
     - `max-h-screen` \- максимальная высота равна высоте экрана
     - `max-h-min` \- максимальная высота равна внутренней минимальной предпочтительной высоте
@@ -69,3 +71,8 @@ description: "Максимальная высота (max-height)"
 ```
 
 В этом примере максимальная высота будет равна нулю (`max-h-0`) при ширине экрана `md` и больше.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=sizes&group=max-height"></iframe>
+</div>

@@ -107,3 +107,8 @@ description: "Обработка пробелов (white-space)"
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=white-space"></iframe>
+</div>

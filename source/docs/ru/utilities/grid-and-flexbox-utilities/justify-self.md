@@ -48,3 +48,8 @@ description: "Выравнивание отдельного элемента в 
   <div></div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-self"></iframe>
+</div>

@@ -17,6 +17,6 @@ description: Scroll (scroll)
 * Scroll backdrop color (scroll-backdrop-color).
 * Scroll backdrop width (scroll-backdrop-width).
 * Scroll backdrop border radius (scroll-backdrop-radius).
-* Scroll slider color (scroll-slider-color).
-* Scroll slider thickness (scroll-slider-width).
-* Scroll slider border radius (scroll-slider-radius).
+* Scroll thumb color (scroll-slider-color / scroll-thumb-color).
+* Scroll thumb thickness (scroll-slider-width / scroll-thumb-size).
+* Scroll thumb border radius (scroll-slider-radius / scroll-thumb-radius).

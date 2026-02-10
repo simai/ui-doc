@@ -88,3 +88,8 @@ description: "Полоса прокрутки при наведении (scroll-
     transition: var(--sf-duration-normal) var(--sf-animation);
 }
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-hover"></iframe>
+</div>

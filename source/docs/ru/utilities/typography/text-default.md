@@ -58,8 +58,8 @@ description: "Параметры по умолчанию (text-default)"
 | Селектор                                                                                                                     | Значение                                                                                                                                                                                                                                                          |
 |:-----------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | root                                                                                                                         | font-style: var(`--sf-text--style`);<br/> font-size: var(`--sf-text--size`);<br/> line-height: var(`--sf-text--height`);<br/> font-weight: var(`--sf-text--weight`);<br/> font-family: var(`--sf-text--family`);<br/> letter-spacing: var(`--sf-text--tracking`); |
-| h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 | font-family: var(`--sf-heading--family`);<br/> font-weight: var(`--sf-heading--weight`);                                                                                                                                                                          |
-| .d1, .d2, .d3, .d4, .d5, .d6, display-1, display-2, display-3, display-4, display-5, display-6                               | font-family: var(`--sf-display--family`);<br/> font-weight: var(`--sf-display--weight`);                                                                                                                                                                          |
+| h1, h2, h3, h4, h5, h6, .sf-h-1, .sf-h-2, .sf-h-3, .sf-h-4, .sf-h-5, .sf-h-6                                                  | font-family: var(`--sf-heading--family`);<br/> font-weight: var(`--sf-heading--weight`);                                                                                                                                                                          |
+| .sf-display-1..6, .d1..6, .display1..6                                                                                       | font-family: var(`--sf-display--family`);<br/> font-weight: var(`--sf-display--weight`);                                                                                                                                                                          |
 {.table}
 
 ## Пример применённых стилей
@@ -75,14 +75,14 @@ description: "Параметры по умолчанию (text-default)"
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+.sf-h-1, .sf-h-2, .sf-h-3, .sf-h-4, .sf-h-5, .sf-h-6 {
   font-family: var(--sf-heading--family);
   font-weight: var(--sf-heading--weight);
 }
 
+.sf-display-1, .sf-display-2, .sf-display-3, .sf-display-4, .sf-display-5, .sf-display-6,
 .d1, .d2, .d3, .d4, .d5, .d6,
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+.display1, .display2, .display3, .display4, .display5, .display6 {
   font-family: var(--sf-display--family);
   font-weight: var(--sf-display--weight);
 }
@@ -99,3 +99,8 @@ h2, h3, h4, h5, h6 {
   margin-top: var(--sf-heading--space-top);
 }
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=text-default"></iframe>
+</div>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 return array (
   'title' => 'Интерактивность',
   'order' => 4,
@@ -7,6 +7,7 @@ return array (
     'cursor' => 'Вид курсора (cursor)',
     'touch-action' => 'Сенсорное действие (touch-action)',
     'user-select' => 'Выделение текста (user-select)',
-    'will-change' => 'Подготовка к изменениям (will-change)',
+    
+    'sr-only' => 'Визуально скрытый контент (sr-only)',
   ),
 );

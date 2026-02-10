@@ -19,6 +19,7 @@ description: "Выравнивание каждого элемента в яче
 | .items-cross-start   | align-items: start;   |
 | .items-cross-end     | align-items: end;     |
 | .items-cross-center  | align-items: center;  |
+| .items-cross-baseline| align-items: baseline;|
 | .items-cross-stretch | align-items: stretch; |
 {.table}
 
@@ -35,6 +36,7 @@ description: "Выравнивание каждого элемента в яче
     - `items-cross-start` – каждый элемент прижимается к началу ячейки по поперечной оси;
     - `items-cross-end` – каждый элемент прижимается к концу ячейки по поперечной оси;
     - `items-cross-center` – каждый элемент выравнивается по центру ячейки по поперечной оси;
+    - `items-cross-baseline` – выравнивание по базовой линии текста элементов;
     - `items-cross-stretch` – каждый элемент растягивается, заполняя ячейку по поперечной оси.
 
 ## Пример использования
@@ -58,3 +60,8 @@ description: "Выравнивание каждого элемента в яче
   <!-- Начиная с md каждый элемент будет прижат к началу ячейки по поперечной оси -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-items"></iframe>
+</div>

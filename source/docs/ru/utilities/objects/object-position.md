@@ -2,119 +2,53 @@
 extends: _core._layouts.documentation
 section: content
 title: "Позиционирование объекта (object-position)"
-description: "Позиционирование объекта (object-position)"
+description: "Утилиты object-position управляют тем, какую часть заменяемого элемента (img/video) показывать внутри контейнера."
 ---
 
 # Позиционирование объекта (object-position)
 
-[https://dev.ru.simai.io/ru/ui/utility/object/object-position.php](https://dev.ru.simai.io/ru/ui/utility/object/object-position.php)
+Модификаторы `object-*` задают точку привязки содержимого внутри контейнера. Утилиты используют логические направления (`inline-start/end`, `top/bottom`) — поэтому корректно работают в LTR/RTL.
 
-Модификаторы `object-position` в SIMAI Framework позволяют управлять положением объекта (например, изображения или
-видео) внутри контейнера. Это особенно полезно, когда важно, чтобы часть контента отображалась в определенной области
-контейнера, независимо от его размера.
+## Таблица классов
+
+| Класс                    | Значение                      |
+|:-------------------------|:------------------------------|
+| .object-bottom           | object-position: bottom;      |
+| .object-center           | object-position: center;      |
+| .object-inline-start     | object-position: left;        |
+| .object-inline-start-top | object-position: left top;    |
+| .object-inline-start-bottom | object-position: left bottom; |
+| .object-inline-end       | object-position: right;       |
+| .object-inline-end-top   | object-position: right top;   |
+| .object-inline-end-bottom| object-position: right bottom;|
+| .object-top              | object-position: top;         |
+{.table}
 
 ## Синтаксис
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`.
 
-- Контрольная точка (необязательный параметр):  
-  Применяет модификатор начиная с определённого размера области просмотра (`sm`, `md`, `lg`, `xl`).  
-  Если не указана, модификатор действует для всех размеров области просмотра.
+- **Контрольная точка** *(опционально)*: `sm`, `md`, `lg`, `xl` — применяет модификатор, начиная с указанного брейкпоинта.
+- **Модификатор** *(обязательно)*: один из классов таблицы выше.
 
-- Модификатор (обязательный параметр):
-
-    - `object-bottom` — располагает объект в нижней части контейнера.
-    - `object-center` — располагает объект по центру контейнера.
-    - `object-left` — располагает объект в левой части контейнера.
-    - `object-left-bottom` — располагает объект в левом нижнем углу контейнера.
-    - `object-left-top` — располагает объект в левом верхнем углу контейнера.
-    - `object-right` — располагает объект в правой части контейнера.
-    - `object-right-bottom` — располагает объект в правом нижнем углу контейнера.
-    - `object-right-top` — располагает объект в правом верхнем углу контейнера.
-    - `object-top` — располагает объект в верхней части контейнера.
+Пример с брейкпоинтом: `md:object-inline-end-bottom`.
 
 ## Примеры
 
-### `object-bottom`:
-
 ```html
-<div class="bg-primary-container ...">
-  <img class="object-bottom object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
+<div class="grid grid-col-2 gap-3">
+  <div class="sf-card surface p-3 radius-2 border border-outline-variant">
+    <div class="text-subtitle-2 m-b-2">inline-start top</div>
+    <img class="w-full h-e5 object-cover object-inline-start-top bg-surface-1 radius-2" src="...">
+  </div>
+  <div class="sf-card surface p-3 radius-2 border border-outline-variant">
+    <div class="text-subtitle-2 m-b-2">inline-end bottom</div>
+    <img class="w-full h-e5 object-cover object-inline-end-bottom bg-surface-1 radius-2" src="...">
+  </div>
 </div>
 ```
+## Playground
 
-### `object-center`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-center object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=objects&group=object-position"></iframe>
 </div>
-```
-
-### `object-left`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-left object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-### `object-left-bottom`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-left-bottom object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-### `object-left-top`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-left-top object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-### `object-right`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-right object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-### `object-right-bottom`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-right-bottom object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-### `object-right-top`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-right-top object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-### `object-top`:
-
-```html
-<div class="bg-primary-container ...">
-  <img class="object-top object-none h-e4 w-full ..." src="image.jpg" alt="Описание">
-</div>
-```
-
-## Адаптивность
-
-Чтобы применять эти модификаторы только с определённого размера экрана, используйте префиксы контрольных точек.
-Например, `md:object-center` будет применять позиционирование по центру для размеров экрана от `md` и выше.
-
-```html
-<div class="md:object-center"></div>
-```
-
-Таким образом, модификаторы `object-position` предоставляют гибкие возможности для точной настройки расположения
-медиа-содержимого внутри контейнера.

@@ -40,3 +40,8 @@ description: "Сепия подложки (backdrop-sepia)"
   Наведи, чтобы применить сепию к фону
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-sepia"></iframe>
+</div>

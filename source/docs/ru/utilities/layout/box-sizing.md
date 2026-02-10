@@ -51,3 +51,8 @@ description: "Метод расчёта размера элемента (box-siz
 Использование модификаторов `box-border` или `box-content` зависит от предпочтений в организации размеров элементов. По
 умолчанию во фреймворке нередко используется `box-border` (border-box), чтобы заданные размеры элементов были итоговыми
 габаритами, упрощая верстку.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=box-sizing"></iframe>
+</div>

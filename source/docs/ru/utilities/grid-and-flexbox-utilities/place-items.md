@@ -63,3 +63,8 @@ description: "Размещение элементов по обеим осям (
   <!-- Начиная с md элементы будут прижаты к началу ячеек по обеим осям -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-items"></iframe>
+</div>

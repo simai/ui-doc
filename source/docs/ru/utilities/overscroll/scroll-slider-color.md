@@ -1,11 +1,11 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Цвет ползунка прокрутки (scroll-slider-color)"
-description: "Цвет ползунка прокрутки (scroll-slider-color)"
+title: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
+description: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
 ---
 
-# Цвет ползунка прокрутки (scroll-slider-color)
+# Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)
 
 [https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-color.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-color.php)
 
@@ -13,12 +13,12 @@ description: "Цвет ползунка прокрутки (scroll-slider-color)
 
 | Класс               | Значение переменной           |
 |:--------------------|:--------------------------------------------------|
-| .scroll-transparent | `--sf-scroll-bg-thumb`: var(`--sf-transparent`);  |
-| .scroll-current     | `--sf-scroll-bg-thumb`: currentColor;             |
-| .scroll-surface     | `--sf-scroll-bg-thumb`: var(`--sf-on-surface`);   |
-| .scroll-primary     | `--sf-scroll-bg-thumb`: var(`--sf-on-primary`);   |
-| .scroll-secondary   | `--sf-scroll-bg-thumb`: var(`--sf-on-secondary`); |
-| .scroll-tertiary    | `--sf-scroll-bg-thumb`: var(`--sf-on-tertiary`);  |
+| .scroll-transparent / .scroll-thumb-transparent | `--sf-scroll-bg-thumb`: var(`--sf-transparent`);  |
+| .scroll-current / .scroll-thumb-current     | `--sf-scroll-bg-thumb`: currentColor;             |
+| .scroll-surface / .scroll-thumb-surface     | `--sf-scroll-bg-thumb`: var(`--sf-on-surface`);   |
+| .scroll-primary / .scroll-thumb-primary     | `--sf-scroll-bg-thumb`: var(`--sf-on-primary`);   |
+| .scroll-secondary / .scroll-thumb-secondary | `--sf-scroll-bg-thumb`: var(`--sf-on-secondary`); |
+| .scroll-tertiary / .scroll-thumb-tertiary   | `--sf-scroll-bg-thumb`: var(`--sf-on-tertiary`);  |
 {.table}
 
 ## Описание
@@ -29,15 +29,20 @@ description: "Цвет ползунка прокрутки (scroll-slider-color)
 
 ## Синтаксис
 
-- scroll-{transparent|current|surface|primary|secondary|tertiary} – задать цвет ползунка прокрутки.
+- scroll-{transparent|current|surface|primary|secondary|tertiary} / scroll-thumb-{transparent|current|surface|primary|secondary|tertiary} – задать цвет ползунка прокрутки.
 
 ## Пример использования
 
 ```html
 
-<html class="scroll-primary h-d5 overflow-auto ...">
+<html class="scroll-thumb-primary h-d5 overflow-auto ...">
 <div class="p-1">
     abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
 </div>
 </html>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-color"></iframe>
+</div>

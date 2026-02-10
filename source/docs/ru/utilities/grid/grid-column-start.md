@@ -28,6 +28,7 @@ description: "Начальное положение колонки сетки (g
 | .col-start-10   | grid-column-start: 10;   |
 | .col-start-11   | grid-column-start: 11;   |
 | .col-start-12   | grid-column-start: 12;   |
+| .col-start-13   | grid-column-start: 13;   |
 | .col-start-auto | grid-column-start: auto; |
 {.table}
 
@@ -70,3 +71,8 @@ description: "Начальное положение колонки сетки (g
     <!-- Начиная с размера экрана md и больше элемент будет начинаться с 4-й линии сетки -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column-start"></iframe>
+</div>

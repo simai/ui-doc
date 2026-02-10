@@ -1,17 +1,12 @@
 # Таблицы
 
-Утилиты категории Таблицы помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
+Утилиты раздела помогают управлять отображением таблиц: базовым стилем, компактностью, границами, чередованием строк/столбцов, активным состоянием и алгоритмом раскладки.
 
 ## Материалы раздела
-- [Границы вокруг ячеек](table-border-cells.md)
-- [Границы таблицы](table-border.md)
-- [Макет таблицы](table-layout.md)
-- [Активные строки и ячейки](tables-active-rows-and-cells.md)
-- [Чередование строки и столбцов](tables-alternating-rows-and-columns.md)
 - [Параметры по умолчанию для таблиц](tables-default-parameters.md)
 - [Оформление таблицы](tables-formatting.md)
-
-## Связанные категории
-- [Типографика](../typography/index.md)
-- [Оформление текста](../text-formatting/index.md)
-- [Макет](../layout/index.md)
+- [Чередование строк и столбцов](tables-alternating-rows-and-columns.md)
+- [Активные строки и ячейки](tables-active-rows-and-cells.md)
+- [Границы таблицы](table-border.md)
+- [Границы вокруг ячеек](table-border-cells.md)
+- [Макет таблицы](table-layout.md)

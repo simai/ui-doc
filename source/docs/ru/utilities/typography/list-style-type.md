@@ -56,3 +56,8 @@ description: "Стиль маркера списка (list-style-type)"
   <li>Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</li>
 </ul>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=list-style-type"></iframe>
+</div>

@@ -1,4 +1,4 @@
-```markdown
+﻿```markdown
 ---
 extends: _core._layouts.documentation
 section: content
@@ -18,7 +18,9 @@ versions:
 | `--sf-radius-1`    | `--sf-a8`      | 8px  | `--sf-b2`       | 12px |
 | `--sf-radius-2`    | `--sf-b6`      | 16px | `--sf-c2`       | 24px |
 | `--sf-radius-3`    | `--sf-c6`      | 32px | `--sf-d2`       | 48px |
-| `--sf-radius-full` | 9999px         |      | 9999px          |      |
+| `--sf-radius-rounded` | 9999px      |      | 9999px          |      |
+| `--sf-radius-round` | alias of `--sf-radius-rounded` | | alias of `--sf-radius-rounded` | |
 {.table}
 
 ```
+

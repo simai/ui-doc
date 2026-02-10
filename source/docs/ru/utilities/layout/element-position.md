@@ -9,9 +9,8 @@ description: "Позиция элемента (element-position)"
 
 [https://dev.ru.simai.io/ru/ui/utility/layout/element-position.php](https://dev.ru.simai.io/ru/ui/utility/layout/element-position.php)
 
-Модификаторы позиционирования управляют расположением элемента внутри его родительского контейнера. Применение данных
-модификаторов эффективно при использовании свойств позиционирования (
-`position: relative; position: absolute; position: fixed; position: sticky;`).
+Модификаторы позиционирования управляют расположением элемента внутри родительского контейнера. Работают в сочетании с
+`position: relative/absolute/fixed/sticky`.
 
 ## Синтаксис
 
@@ -28,33 +27,25 @@ description: "Позиция элемента (element-position)"
 
   Если условие действия не указано, модификатор применяется ко всем размерам.
 
-- Модификатор (обязательный параметр): определяет отступы от соответствующих сторон родительского контейнера.
+- Модификатор *(обязательный параметр)*: определяет отступы от соответствующих логических сторон (inline-start/end, top, bottom).
 
 ## Описание
 
-Эффект модификаторов зависит от значения свойства `position`:
-
-- При `position: absolute` или `position: fixed`:  
-  Свойства `top`, `right`, `bottom`, `left` определяют расстояние от соответствующей стороны элемента до стороны
-  родительского контейнера (или области просмотра для fixed).
-
-- При `position: relative`: Свойства `top`, `right`, `bottom`, `left` смещают элемент от его нормальной позиции.
-
-- При `position: sticky`: Свойства `top`, `right`, `bottom`, `left` работают, как при `position: relative` внутри
-  области просмотра, и как при `position: fixed` при выходе из видимой области.
-
-- При `position: static`: Свойства `top`, `right`, `bottom`, `left` не влияют на позиционирование.
+Эффект зависит от `position`:
+- `absolute` / `fixed`: отступы задают координаты элемента относительно контейнера (или вьюпорта для fixed).
+- `relative`: смещение от нормального положения.
+- `sticky`: ведёт себя как relative, пока не «прилипнет», далее как fixed.
 
 ## Примеры модификаторов
 
-- `inset-0` — `top:0; right:0; bottom:0; left:0;`
-- `inset-x-0` — `left:0; right:0;`
+- `inset-0` — `top:0; inline-end:0; bottom:0; inline-start:0;`
+- `inset-x-0` — `inline-start:0; inline-end:0;`
 - `inset-y-0` — `top:0; bottom:0;`
-- `inset-center` — `left: 50%; top: 50%;`
+- `inset-center` — `inline-start:50%; top:50%;`
 - `top-1/2` — `top: 50%;`
-- `right-1/3` — `right: 33.333333%;`
+- `inline-end-1/3` — `inset-inline-end: 33.333333%;`
 - `bottom-a1` — `bottom: var(--sf-a1);`
-- `-left-b2` — `left: calc(0rem - var(--sf-b2));`
+- `-inline-start-b2` — `inset-inline-start: calc(0rem - var(--sf-b2));`
 
 Множество классов для позиций рассчитаны в процентах (от 1/2 до 1/12 с шагом), а также на основе системы размеров (a, b,
 c, d, e, f, g, h, i), что позволяет гибко управлять позиционированием.
@@ -69,11 +60,11 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 </div>
 ```
 
-### **Позиционирование по правому краю:**
+### **Позиционирование по логической «правой» стороне:**
 
 ```html
 <div class="relative h-d6 ...">
-  <div class="absolute right-0 inset-y-0 w-d1 ...">2</div>
+  <div class="absolute inline-end-0 inset-y-0 w-d1 ...">2</div>
 </div>
 ```
 
@@ -137,3 +128,8 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 ```html
 <div class="md:top-0"></div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=layout&group=element-position"></iframe>
+</div>

@@ -9,67 +9,58 @@ description: "Размер колонки сетки (grid-column)"
 
 [https://dev.ru.simai.io/ru/ui/utility/grid/grid-column.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-column.php)
 
-В SIMAI Framework с помощью модификаторов можно управлять параметрами размещения столбцов в сетке, регулируя их
-положение и размер.
+Модификаторы `grid-column` позволяют задавать колонки и их интервалы в сетке, управляя шириной и расположением элементов по горизонтали.
 
 ## Таблица классов
 
-| Класс          | Значение    |
-|:---------------|:--------------------------------|
-| .col-auto      | grid-column: auto;              |
-| .col-span-1    | grid-column: span 1 / span 1;   |
-| .col-span-2    | grid-column: span 2 / span 2;   |
-| .col-span-3    | grid-column: span 3 / span 3;   |
-| .col-span-4    | grid-column: span 4 / span 4;   |
-| .col-span-5    | grid-column: span 5 / span 5;   |
-| .col-span-6    | grid-column: span 6 / span 6;   |
-| .col-span-7    | grid-column: span 7 / span 7;   |
-| .col-span-8    | grid-column: span 8 / span 8;   |
-| .col-span-9    | grid-column: span 9 / span 9;   |
-| .col-span-10   | grid-column: span 10 / span 10; |
-| .col-span-11   | grid-column: span 11 / span 11; |
-| .col-span-12   | grid-column: span 12 / span 12; |
-| .col-span-full | grid-column: 1/-1;              |
+| Класс              | Значение                  |
+|:-------------------|:--------------------------|
+| .col-span-{n}      | grid-column: span {n};    |
+| .col-span-full     | grid-column: 1 / -1;      |
+| .col-span-none     | grid-column: auto;        |
+| .col-start-{n}     | grid-column-start: {n};   |
+| .col-start-auto    | grid-column-start: auto;  |
+| .col-end-{n}       | grid-column-end: {n};     |
+| .col-end-auto      | grid-column-end: auto;    |
 {.table}
+
+Диапазон `n` соответствует объявленным утилитам в SCSS (`col-span` от 1 до 12, `col-start`/`col-end` от 1 до 13).
 
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`).  
-  Если не указана, модификатор применяется для всех размеров.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Если не указана — действует для всех размеров.
+- Модификатор *(обязательный параметр)*: указывает нужный `col-span`, `col-start` или `col-end`.
 
-- Модификатор *(обязательный параметр)*:
+## Примеры
 
-    - `col-auto` — размер элемента определяется автоматически;
-    - `col-span-{1...12}` — размер элемента устанавливается в указанное количество столбцов;
-    - `col-span-full` — элемент занимает все доступные столбцы сетки.
-
-## Пример использования
-
+### Span
 ```html
-<div class="grid grid-col-4 gap-1">
-    <div class="col-auto">1</div>
-    <div></div>
-    <div class="col-span-2">2</div>
-    <div class="col-span-full">3</div>
+<div class="grid grid-col-6 gap-2">
+  <div class="sf-card bg-primary color-on-primary p-2 col-span-4">span 4</div>
+  <div class="sf-card bg-secondary color-on-secondary p-2 col-span-2">span 2</div>
 </div>
 ```
 
-В данном примере:
-
-- Первый элемент `col-auto` занимает автоматически определённый размер;
-- Третий элемент `col-span-2` занимает 2 столбца;
-- Четвёртый элемент `col-span-full` растягивается на все оставшиеся столбцы.
+### Start / End
+```html
+<div class="grid grid-col-6 gap-2">
+  <div class="sf-card bg-tertiary color-on-tertiary p-2 col-start-2 col-end-5">start 2 / end 5</div>
+</div>
+```
 
 ## Адаптивность
 
-Для изменения параметров размещения столбцов начиная с определённого размера экрана используйте префикс контрольной
-точки. Например:
+Чтобы менять расположение на определённых брейкпоинтах, добавьте контрольную точку:
 
 ```html
-<div class="md:col-span-4">
-    <!-- Начиная с размера экрана md и больше элемент будет занимать 4 столбца -->
+<div class="col-span-6 md:col-span-3 lg:col-span-2">
+  <!-- элемент занимает разную ширину на разных экранах -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column"></iframe>
+</div>

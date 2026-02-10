@@ -7,77 +7,50 @@ description: Толщина границы
 
 # Толщина границы
 
-[https://dev.ru.simai.io/ru/ui/utility/border/border-width.php](https://dev.ru.simai.io/ru/ui/utility/border/border-width.php)
+С помощью модификаторов толщины границы в SIMAI Framework вы можете задавать толщину для всех сторон, по осям или для отдельных сторон.
 
-С помощью модификаторов толщины границы в SIMAI Framework вы можете контролировать толщину границ со всех сторон
-элемента, по горизонтали или вертикали, а также с конкретных сторон. Это позволяет точно управлять отображением границ и
-подстраивать их под дизайн вашего интерфейса.
+## Классы и значения
 
-## Таблица классов
+| Класс | Значение |
+|:--|:--|
+| `.border-{n}` | `border-width: var(--sf-*)` |
+| `.border-x-{n}` | `border-inline-start-width` + `border-inline-end-width` |
+| `.border-y-{n}` | `border-top-width` + `border-bottom-width` |
+| `.border-inline-start-{n}` | `border-inline-start-width` |
+| `.border-inline-end-{n}` | `border-inline-end-width` |
+| `.border-top-{n}` | `border-top-width` |
+| `.border-bottom-{n}` | `border-bottom-width` |
 
-| Класс            | Значение                                                |
-|:-----------------|:----------------------------------------------------------------------------|
-| .border-0        | border-width: var(`--sf-0`);                                                |
-| .border-x-0      | border-left-width: var(`--sf-0`);<br/> border-right-width: var(`--sf-0`);   |
-| .border-y-0      | border-top-width: var(`--sf-0`);<br/> border-bottom-width: var(`--sf-0`);   |
-| .border-left-0   | border-left-width: var(`--sf-0`);                                           |
-| .border-right-0  | border-right-width: var(`--sf-0`);                                          |
-| .border-top-0    | border-top-width: var(`--sf-0`);                                            |
-| .border-bottom-0 | border-bottom-width: var(`--sf-0`);                                         |
-| .border-1        | border-width: var(`--sf-a1`);                                               |
-| .border-x-1      | border-left-width: var(`--sf-a1`);<br/> border-right-width: var(`--sf-a1`); |
-| .border-y-1      | border-top-width: var(`--sf-a1`);<br/> border-bottom-width: var(`--sf-a1`); |
-| .border-left-1   | border-left-width: var(`--sf-a1`);                                          |
-| .border-right-1  | border-right-width: var(`--sf-a1`);                                         |
-| .border-top-1    | border-top-width: var(`--sf-a1`);                                           |
-| .border-bottom-1 | border-bottom-width: var(`--sf-a1`);                                        |
-| .border-2        | border-width: var(`--sf-a2`);                                               |
-| ...              | ...                                                                         |
-| .border-4        | border-width: var(`--sf-a4`);                                               |
-| ...              | ...                                                                         |
 {.table}
 
-*(Полный список смотрите в исходных данных. Вы можете использовать значения от 0 до 4.)*
+`n`: `0..10`
 
 ## Описание
 
-Модификаторы толщины границы позволяют быстро изменять толщину обводки элемента:
+- `border-{n}` задаёт толщину границы со всех сторон.
+- `border-x-{n}` и `border-y-{n}` задают толщину по осям.
+- `border-inline-start-{n}`, `border-inline-end-{n}`, `border-top-{n}`, `border-bottom-{n}` задают толщину на конкретной стороне.
 
-- `border-{число}` задаёт толщину границы со всех сторон.
-- `border-x-{число}` и `border-y-{число}` управляют толщиной границы по горизонтали  
-  или вертикали.
-- `border-{left|right|top|bottom}-{число}` позволяет задать толщину границы для  
-  конкретной стороны.
+> В текущей версии используются логические стороны (`inline-start` / `inline-end`) вместо физических (`left` / `right`).
 
 ## Синтаксис
 
-Использование:
+- `{модификатор}` — для всех размеров экрана.
+- `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`), например `md:border-4`.
 
-- `{модификатор}` — применить модификатор для всех размеров экрана.
-- `{контрольная точка}:{модификатор}` — адаптивное применение модификатора, начиная  
-  с заданного размера экрана (например, `md:border-2`).
-
-Адаптивность позволяет изменять толщину границ на разных размерах экрана, а добавление  
-`hover:` перед модификатором позволит изменять толщину границ при наведении курсора.
-
-## Пример использования
+## Примеры
 
 ```html
-<!-- Толщина границ со всех сторон -->
 <div class="border-2">border-2</div>
-
-<!-- Толщина границ по горизонтали -->
-<div class="border-x-2">border-x-2</div>
-
-<!-- Толщина границ по вертикали -->
-<div class="border-y-2">border-y-2</div>
-
-<!-- Толщина границы только слева -->
-<div class="border-left-2">border-left-2</div>
-
-<!-- Увеличение толщины границы при наведении -->
-<div class="hover:border-3">Наведи на меня</div>
-
-<!-- Адаптивное применение: начиная с размера экрана md толщина границы будет 2 -->
-<div class="md:border-2">Толщина 2 при md и больше</div>
+<div class="border-x-4">border-x-4</div>
+<div class="border-y-3">border-y-3</div>
+<div class="border-inline-start-6">border-inline-start-6</div>
+<div class="border-inline-end-1">border-inline-end-1</div>
+<div class="border-top-10">border-top-10</div>
+<div class="md:border-bottom-5">md:border-bottom-5</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=border&group=border-width"></iframe>
+</div>

@@ -40,3 +40,8 @@ description: "Радиус границы подложки прокрутки (s
 </div>
 </html>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-radius"></iframe>
+</div>

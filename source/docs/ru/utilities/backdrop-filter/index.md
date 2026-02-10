@@ -1,9 +1,10 @@
 # Фильтры подложки
 
-Утилиты категории Фильтры подложки помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
+Утилиты категории Фильтры подложки помогают настраивать визуальные эффекты для фона за элементом через `backdrop-filter`.
 
 ## Материалы раздела
 - [Размытие фона элемента (backdrop-blur)](backdrop-blur.md)
+- [Яркость фона элемента (backdrop-brightness)](backdrop-brightness.md)
 - [Контрастность фона элемента (backdrop-contrast)](backdrop-contrast.md)
 - [Фон в оттенках серого элемента (backdrop-grayscale)](backdrop-grayscale.md)
 - [Вращение оттенка фона элемента (backdrop-hue-rotate)](backdrop-hue-rotate.md)
@@ -14,5 +15,4 @@
 
 ## Связанные категории
 - [Фильтры элемента](../filters/index.md)
-- [Фоновое изображение](../background-image/index.md)
-- [Градиент](../background-gradient/index.md)
+- [Фон](../background/index.md)

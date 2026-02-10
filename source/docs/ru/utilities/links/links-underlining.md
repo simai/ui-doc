@@ -7,46 +7,30 @@ description: Подчеркивание ссылок
 
 # Подчеркивание ссылок
 
-[https://dev.ru.simai.io/ru/ui/utility/link/link-underline.php](https://dev.ru.simai.io/ru/ui/utility/link/link-underline.php)
-
-С помощью модификатора подчеркивания ссылок в SIMAI Framework можно убрать  
-подчеркивание ссылки, оставив её без оформления по умолчанию.
+Утилита `link-underline-none` отключает подчеркивание у ссылки.
 
 ## Таблица классов
 
-| Класс                | Значение                    |
-|:---------------------|:----------------------------|
-| .link-underline-none | text-decoration-line: none; |
+| Класс | Значение |
+|:--|:--|
+| `.link-underline-none` | `text-decoration-line: none` для ссылки и `:hover` |
 {.table}
-
-## Описание
-
-Модификатор `link-underline-none` отключает подчеркивание для ссылки, даже  
-при наведении или при активном состоянии. Можно применять его непосредственно  
-к ссылке или к родительскому элементу, чтобы все вложенные ссылки унаследовали  
-данный стиль.
 
 ## Синтаксис
 
-Использование: `{модификатор}`
+Использование: `{контрольная точка}:{модификатор}` или `{модификатор}`.
 
-- Модификатор *(обязательный параметр)*:
-    - `link-underline-none` — ссылка без подчеркивания при отображении, наведении и активном состоянии.
+- Контрольные точки: `sm`, `md`, `lg`, `xl`.
+- Модификатор: `link-underline-none`.
 
-## Пример использования
+## Пример
 
 ```html
-<!-- Применение к отдельной ссылке -->
-<p>Здесь <a href="#" class="link-underline-none">ссылка без подчеркивания</a> в тексте.</p>
+<p>Default <a href="#">underlined link</a></p>
+<p><a href="#" class="link-underline-none">Link without underline</a></p>
 ```
+## Playground
 
-## Наследование
-
-Если применить модификатор к родительскому элементу, все вложенные ссылки  
-унаследуют отсутствие подчеркивания.
-
-```html
-<div class="link-underline-none">
-  <p>В этом блоке <a href="#">все ссылки</a> не имеют подчеркивания.</p>
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=links&group=links-underlining"></iframe>
 </div>
-```

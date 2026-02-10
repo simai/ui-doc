@@ -65,3 +65,8 @@ description: "Яркость элемента (filter-brightness)"
 <!-- Увеличение яркости при наведении -->
 <div class="brightness-1 hover:brightness-3 p-4 bg-tertiary m-top-2 transition">Наведи, чтобы увеличить яркость</div>
 ````
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-brightness"></iframe>
+</div>

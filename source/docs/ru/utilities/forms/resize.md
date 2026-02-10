@@ -49,3 +49,8 @@ description: Изменение размера (resize)
 <!-- Заблокировать изменение размера -->
 <textarea class="resize-none p-1 border-1 ..."></textarea>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=forms&group=resize"></iframe>
+</div>

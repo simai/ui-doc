@@ -64,3 +64,8 @@ description: "Контрастность элемента (filter-contrast)"
 | .contrast-7              | .contrast-3   |
 | .contrast-8, .contrast-9 | .contrast-4   |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-contrast"></iframe>
+</div>

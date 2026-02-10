@@ -91,3 +91,8 @@ description: "Начертание цифр (font-variant-numeric)"
 ```html
 <p class="num-stacked-fractions">1/2 3/4 5/6</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=font-variant-numeric"></iframe>
+</div>

@@ -34,3 +34,8 @@ description: "Содержимое (content)"
 <p class="after-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 <p class="before-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=content"></iframe>
+</div>

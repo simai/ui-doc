@@ -7,39 +7,34 @@ description: "Видимость элемента при печати (print-vis
 
 # Видимость элемента при печати (print-visibility)
 
-[https://dev.ru.simai.io/ru/ui/utility/print/print-visibility.php](https://dev.ru.simai.io/ru/ui/utility/print/print-visibility.php)
+Утилиты `print-visible` и `print-hidden` управляют `visibility` только внутри `@media print`.
 
-Модификаторы позволяют управлять видимостью элемента только во время печати страницы. Это полезно в ситуациях, когда
-нужно скрыть или показать определённые элементы при печати, не затрагивая их отображение при обычном просмотре.
+## Классы и значения
 
-## Классы и их значения
-
-| Класс               | Значение                                   |
-|:--------------------|:---------------------------------------------------------------|
-| .print-visible      | Во время печати элемент будет видим (**visibility: visible;**) |
-| .print-visible-none | Во время печати элемент будет скрыт (**visibility: hidden;**)  |
+| Класс | Значение в режиме печати |
+|:--|:--|
+| `.print-visible` | `visibility: visible;` |
+| `.print-hidden` | `visibility: hidden;` |
+| `.print-visible-none` | alias для `print-hidden` |
 {.table}
 
 ## Описание
 
-Данные модификаторы изменяют видимость элемента только при выводе документа на печать. Они не влияют на состояние
-элемента при обычном просмотре страницы в браузере.
+- На экране эти классы не меняют поведение элемента.
+- При печати можно скрывать или показывать элементы, не ломая поток разметки.
 
 ## Синтаксис
 
-- `print-visible` – при печати элемент будет видим.
-- `print-visible-none` – при печати элемент будет скрыт.
+`print-visible` | `print-hidden` | `print-visible-none`
 
-## Пример использования
+## Пример
 
 ```html
-<div class="print-visible-none">
-  <!-- Этот элемент будет скрыт при печати -->
-  Контент, который не нужен при печати
-</div>
-
-<div class="print-visible">
-  <!-- Этот элемент будет показан при печати -->
-  Контент, необходимый только для печати
-</div>
+<div class="print-hidden">Hidden in print</div>
+<div class="print-visible">Visible in print</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=print&group=display-visibility"></iframe>
+</div>

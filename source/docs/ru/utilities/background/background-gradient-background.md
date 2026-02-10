@@ -33,6 +33,8 @@ description: Градиент фона
 | .gr1-secondary-container, .gr2-secondary-container, .gr3-secondary-container | `--sf-gradient--color-1/2/3` | var(`--sf-secondary-container`) |
 | .gr1-tertiary, .gr2-tertiary, .gr3-tertiary                                  | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary`)            |
 | .gr1-tertiary-container, .gr2-tertiary-container, .gr3-tertiary-container    | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary-container`)  |
+| .gr1-success, .gr2-success, .gr3-success                                     | `--sf-gradient--color-1/2/3` | var(`--sf-success`)             |
+| .gr1-warning, .gr2-warning, .gr3-warning                                     | `--sf-gradient--color-1/2/3` | var(`--sf-warning`)             |
 {.table}
 
 *(Прежние классы цветов заменяются по аналогии с заменой для цвета фона. Например, вместо `gr1-blue-4`
@@ -64,3 +66,8 @@ description: Градиент фона
 
 Используйте подходящие классы для каждого шага градиента и модификатор вида градиента для создания нужного визуального
 эффекта.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=background&group=background-gradient-background"></iframe>
+</div>

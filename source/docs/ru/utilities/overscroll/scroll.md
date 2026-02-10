@@ -1,41 +1,47 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: Толщина ползунка прокрутки (scroll)
-description: Толщина ползунка прокрутки (scroll)
+title: Толщина ползунка прокрутки (scroll / scroll-thumb-size)
+description: Управление минимальным размером ползунка прокрутки
 ---
 
-# Толщина ползунка прокрутки (scroll)
+# Толщина ползунка прокрутки (scroll / scroll-thumb-size)
 
 [https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-width.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-width.php)
 
-## Классы и их значения
+## Классы и значения
 
-| Класс     | Значение переменной     |
-|:----------|:------------------------|
-| .scroll-1 | height: var(`--sf-a1`); |
-| .scroll-2 | height: var(`--sf-a2`); |
-| .scroll-3 | height: var(`--sf-a4`); |
-| .scroll-4 | height: var(`--sf-a8`); |
+| Класс | Значение переменной |
+|:--|:--|
+| `.scroll-1` / `.scroll-thumb-1` | `--sf-scroll-thumb-size: var(--sf-a4);` |
+| `.scroll-2` / `.scroll-thumb-2` | `--sf-scroll-thumb-size: var(--sf-a3);` |
+| `.scroll-3` / `.scroll-thumb-3` | `--sf-scroll-thumb-size: var(--sf-a2);` |
+| `.scroll-4` / `.scroll-thumb-4` | `--sf-scroll-thumb-size: var(--sf-a1);` |
 {.table}
 
 ## Описание
 
-Данные модификаторы позволяют задавать толщину (высоту) ползунка вертикальной прокрутки. Их применение изменяет значение
-высоты ползунка. В ядре фреймворка эта настройка применяется к псевдоклассам scrollbar, чтобы задать размер
-вертикального скроллбара. Используя классы scroll-1 ... scroll-4 вы можете регулировать толщину ползунка в соответствии
-с дизайном.
+Эти модификаторы задают минимальный видимый размер ползунка (`thumb`) через переменную `--sf-scroll-thumb-size`.
+
+- `scroll-*` — историческое имя.
+- `scroll-thumb-*` — предпочтительное имя для новых примеров и документации.
 
 ## Синтаксис
 
-- scroll-{1...4} – задать толщину ползунка прокрутки.
+- `scroll-{1...4}`
+- `scroll-thumb-{1...4}`
 
-## Пример использования
+## Пример
 
 ```html
-<html class="scroll-4 h-d5 overflow-auto ...">
+<html class="scroll-thumb-4 h-d5 overflow-auto">
   <div class="p-1">
-    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
   </div>
 </html>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll"></iframe>
+</div>

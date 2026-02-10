@@ -62,3 +62,8 @@ snap-always) или сможет "проскользнуть" мимо опре�
   </div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-stop"></iframe>
+</div>

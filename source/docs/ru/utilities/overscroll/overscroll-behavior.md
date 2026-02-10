@@ -63,3 +63,8 @@ description: Поведение при прокрутке
     <!-- Длинный текст или контент -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=overscroll-behavior"></iframe>
+</div>

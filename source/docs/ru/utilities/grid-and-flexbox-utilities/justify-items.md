@@ -58,3 +58,8 @@ description: "Выравнивание каждого элемента по ос
     <!-- Начиная с md каждый элемент выравнивается по началу ячейки относительно основной оси -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-items"></iframe>
+</div>

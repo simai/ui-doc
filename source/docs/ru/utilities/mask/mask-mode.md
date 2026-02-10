@@ -41,3 +41,8 @@ description: Режим маски
 <!-- Маскирование с использованием источника -->
 <div class="mask-source">...</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=mask&group=mask-mode"></iframe>
+</div>

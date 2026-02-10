@@ -7,33 +7,33 @@ description: Положение маски
 
 # Положение маски
 
-С помощью модификаторов положения маски можно задать, где именно будет располагаться маска относительно её контейнера.
+Утилиты `mask-*` задают позицию маски внутри элемента.
+Для горизонтали используются логические направления `inline-start`/`inline-end` (корректно для LTR/RTL).
 
 ## Таблица классов
 
-| Класс              | Значение                     |
-|:-------------------|:-----------------------------|
-| .mask-top          | mask-position: top;          |
-| .mask-right        | mask-position: right;        |
-| .mask-bottom       | mask-position: bottom;       |
-| .mask-left         | mask-position: left;         |
-| .mask-center       | mask-position: center;       |
-| .mask-left-top     | mask-position: left top;     |
-| .mask-left-bottom  | mask-position: left bottom;  |
-| .mask-right-top    | mask-position: right top;    |
-| .mask-right-bottom | mask-position: right bottom; |
+| Класс                      | Значение                     |
+|:---------------------------|:-----------------------------|
+| .mask-top                  | mask-position: top;          |
+| .mask-bottom               | mask-position: bottom;       |
+| .mask-center               | mask-position: center;       |
+| .mask-inline-start         | mask-position: left;         |
+| .mask-inline-end           | mask-position: right;        |
+| .mask-inline-start-top     | mask-position: left top;     |
+| .mask-inline-start-bottom  | mask-position: left bottom;  |
+| .mask-inline-end-top       | mask-position: right top;    |
+| .mask-inline-end-bottom    | mask-position: right bottom; |
 {.table}
 
-## Описание
+## Примеры
 
-Модификаторы положения маски определяют, где именно будет отображаться маска внутри блока:
+```html
+<div class="mask-top"></div>
+<div class="mask-center"></div>
+<div class="mask-inline-end-bottom"></div>
+```
+## Playground
 
-- **mask-top** – маска располагается сверху.
-- **mask-right** – маска располагается справа.
-- **mask-bottom** – маска располагается снизу.
-- **mask-left** – маска располагается слева.
-- **mask-center** – маска располагается по центру.
-- **mask-right-top** – маска располагается сверху справа.
-- **mask-right-bottom** – маска располагается снизу справа.
-- **mask-left-top** – маска располагается сверху слева.
-- **mask-left-bottom** – маска располагается снизу слева.
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=mask&group=mask-position"></iframe>
+</div>

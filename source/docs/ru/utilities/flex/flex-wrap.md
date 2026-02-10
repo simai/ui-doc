@@ -89,3 +89,8 @@ description: "Перенос элементов (flex-wrap)"
     <!-- Начиная с md элементы будут переноситься на новую строку -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=flex&group=flex-wrap"></iframe>
+</div>

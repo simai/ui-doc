@@ -120,3 +120,8 @@ description: "Внутренний отступ прокрутки (scroll-paddi
   <div class="scroll-pl-4 snap-start inline-block bg-surface-1 p-2 ...">Элемент 3</div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-padding"></iframe>
+</div>

@@ -37,3 +37,8 @@ description: Полосы
 <div class="stripe-3 p-3">Полосы в стиле stripe-3</div>
 <div class="stripe-4 p-3">Полосы в стиле stripe-4</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=stripes&group=stripes"></iframe>
+</div>

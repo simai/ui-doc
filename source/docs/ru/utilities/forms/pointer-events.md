@@ -44,3 +44,8 @@ description: "События указателя (pointer-events)"
     Нажать можно
 </button>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=forms&group=pointer-events"></iframe>
+</div>

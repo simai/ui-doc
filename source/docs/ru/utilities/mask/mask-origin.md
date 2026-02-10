@@ -61,3 +61,8 @@ description: Вложение маски
 <!-- Маска относительно view-box (SVG) -->
 <div class="mask-origin-viewbox">...</div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=mask&group=mask-origin"></iframe>
+</div>

@@ -15,7 +15,7 @@ description: 2.3 AssetManager.php — Генерация и сборка асе�
 
 ## Основная структура
 
-| class AssetManager{    public array $components \= \[\];    public array $frameworksFiles \= \[\];    public array $frameworkHash \= \[\];    public array $frameworks \= \[\];    public array $gzipSupport \= \[\];    public array $contentPerPages \= \[\];    public bool $isTemp \= false;    ...} |
+| class AssetManager{    public array $components \= \[\];    public array $frameworksFiles \= \[\];    public array $frameworkHash \= \[\];    public array $frameworks \= \[\];    public array $gzipSupport \= \[\];    public array $contentPerPages \= \[\];    public bool $isTemp \= false;    ...} |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 `$components` — обычные плагины;

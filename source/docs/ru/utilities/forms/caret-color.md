@@ -44,3 +44,8 @@ description: "Цвет каретки (caret-color)"
 ```html
 <textarea class="caret-primary ..."></textarea>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=forms&group=caret-color"></iframe>
+</div>

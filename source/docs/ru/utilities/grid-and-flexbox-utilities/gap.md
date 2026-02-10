@@ -16,36 +16,42 @@ description: "Промежутки между элементами (gap)"
 
 | Класс    | Значение                           |
 |:---------|:-----------------------------------|
-| .g-0     | gap: var(`--sf-space-0`);          |
-| .gap-x-0 | column-gap: var(`--sf-space-0`);   |
-| .gap-y-0 | row-gap: var(`--sf-space-0`);      |
-| .g-1     | gap: var(`--sf-space-1/3`);        |
-| .gap-x-1 | column-gap: var(`--sf-space-1/3`); |
-| .gap-y-1 | row-gap: var(`--sf-space-1/3`);    |
-| .g-2     | gap: var(`--sf-space-1/2`);        |
-| .gap-x-2 | column-gap: var(`--sf-space-1/2`); |
-| .gap-y-2 | row-gap: var(`--sf-space-1/2`);    |
-| .g-3     | gap: var(`--sf-space-1`);          |
-| .gap-x-3 | column-gap: var(`--sf-space-1`);   |
-| .gap-y-3 | row-gap: var(`--sf-space-1`);      |
-| .g-4     | gap: var(`--sf-space-1`);          |
-| .gap-x-4 | column-gap: var(`--sf-space-1`);   |
-| .gap-y-4 | row-gap: var(`--sf-space-1`);      |
-| .g-5     | gap: var(`--sf-space-2`);          |
-| .gap-x-5 | column-gap: var(`--sf-space-2`);   |
-| .gap-y-5 | row-gap: var(`--sf-space-2`);      |
-| .g-6     | gap: var(`--sf-space-3`);          |
-| .gap-x-6 | column-gap: var(`--sf-space-3`);   |
-| .gap-y-6 | row-gap: var(`--sf-space-3`);      |
-| .g-7     | gap: var(`--sf-space-4`);          |
-| .gap-x-7 | column-gap: var(`--sf-space-4`);   |
-| .gap-y-7 | row-gap: var(`--sf-space-4`);      |
-| .g-8     | gap: var(`--sf-space-4`);          |
-| .gap-x-8 | column-gap: var(`--sf-space-4`);   |
-| .gap-y-8 | row-gap: var(`--sf-space-4`);      |
-| .g-9     | gap: var(`--sf-space-5`);          |
-| .gap-x-9 | column-gap: var(`--sf-space-5`);   |
-| .gap-y-9 | row-gap: var(`--sf-space-5`);      |
+| .gap-0      | gap: var(`--sf-space-0`);        |
+| .gap-x-0    | column-gap: var(`--sf-space-0`); |
+| .gap-y-0    | row-gap: var(`--sf-space-0`);    |
+| .gap-1/4    | gap: var(`--sf-space-1/4`);      |
+| .gap-x-1/4  | column-gap: var(`--sf-space-1/4`);|
+| .gap-y-1/4  | row-gap: var(`--sf-space-1/4`);  |
+| .gap-1/3    | gap: var(`--sf-space-1/3`);      |
+| .gap-x-1/3  | column-gap: var(`--sf-space-1/3`);|
+| .gap-y-1/3  | row-gap: var(`--sf-space-1/3`);  |
+| .gap-1/2    | gap: var(`--sf-space-1/2`);      |
+| .gap-x-1/2  | column-gap: var(`--sf-space-1/2`);|
+| .gap-y-1/2  | row-gap: var(`--sf-space-1/2`);  |
+| .gap-1      | gap: var(`--sf-space-1`);        |
+| .gap-x-1    | column-gap: var(`--sf-space-1`); |
+| .gap-y-1    | row-gap: var(`--sf-space-1`);    |
+| .gap-2      | gap: var(`--sf-space-2`);        |
+| .gap-x-2    | column-gap: var(`--sf-space-2`); |
+| .gap-y-2    | row-gap: var(`--sf-space-2`);    |
+| .gap-3      | gap: var(`--sf-space-3`);        |
+| .gap-x-3    | column-gap: var(`--sf-space-3`); |
+| .gap-y-3    | row-gap: var(`--sf-space-3`);    |
+| .gap-4      | gap: var(`--sf-space-4`);        |
+| .gap-x-4    | column-gap: var(`--sf-space-4`); |
+| .gap-y-4    | row-gap: var(`--sf-space-4`);    |
+| .gap-5      | gap: var(`--sf-space-5`);        |
+| .gap-x-5    | column-gap: var(`--sf-space-5`); |
+| .gap-y-5    | row-gap: var(`--sf-space-5`);    |
+| .gap-6      | gap: var(`--sf-space-6`);        |
+| .gap-x-6    | column-gap: var(`--sf-space-6`); |
+| .gap-y-6    | row-gap: var(`--sf-space-6`);    |
+| .gap-7      | gap: var(`--sf-space-7`);        |
+| .gap-x-7    | column-gap: var(`--sf-space-7`); |
+| .gap-y-7    | row-gap: var(`--sf-space-7`);    |
+| .gap-8      | gap: var(`--sf-space-8`);        |
+| .gap-x-8    | column-gap: var(`--sf-space-8`); |
+| .gap-y-8    | row-gap: var(`--sf-space-8`);    |
 {.table}
 
 ## Синтаксис
@@ -66,7 +72,7 @@ description: "Промежутки между элементами (gap)"
 
 ```html
 <!-- Пример: одинаковый промежуток -->
-<div class="grid grid-col-2 g-1">
+<div class="grid grid-col-2 gap-1">
   <div class="h-d1 radius-1/3 text-center bg-primary"></div>
   <div class="h-d1 radius-1/3 text-center bg-primary"></div>
 </div>
@@ -89,3 +95,8 @@ description: "Промежутки между элементами (gap)"
     <!-- Начиная с md: промежуток будет var(--sf-space-1) (старый p-8) -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=gap"></iframe>
+</div>

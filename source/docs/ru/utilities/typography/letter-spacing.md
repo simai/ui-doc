@@ -69,3 +69,8 @@ description: "Трекинг текста (letter-spacing)"
 ```html
 <p class="md:tracking-wide">Начиная с размера md, трекинг станет шире.</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=letter-spacing"></iframe>
+</div>

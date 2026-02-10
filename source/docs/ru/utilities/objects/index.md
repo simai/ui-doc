@@ -9,4 +9,4 @@
 ## Связанные категории
 - [Размеры](../sizes/index.md)
 - [Макет](../layout/index.md)
-- [Фоновое изображение](../background-image/index.md)
+- [Фон](../background/index.md)

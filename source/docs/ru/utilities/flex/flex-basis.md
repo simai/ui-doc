@@ -16,22 +16,38 @@ description: "Базисный размер (flex-basis)"
 
 | Класс                   | Значение                |
 |:------------------------|:------------------------|
-| .basis-auto             | flex-basis: auto;       |
-| .basis-full             | flex-basis: 100%;       |
-| .basis-1/2              | flex-basis: 50%;        |
-| .basis-1/3              | flex-basis: 33.333333%; |
-| .basis-2/3              | flex-basis: 66.666667%; |
-| .basis-1/4              | flex-basis: 25%;        |
-| .basis-2/4              | flex-basis: 50%;        |
-| .basis-3/4              | flex-basis: 75%;        |
-| .basis-1/5              | flex-basis: 20%;        |
-| .basis-2/5              | flex-basis: 40%;        |
-| .basis-3/5              | flex-basis: 60%;        |
-| .basis-4/5              | flex-basis: 80%;        |
-| ...                     | ...                     |
-| .basis-px               | flex-basis: 1px;        |
-| .basis-0                | flex-basis: 0;          |
-| .basis-1 ... .basis-100 | flex-basis: {1..100}%   |
+| .basis-auto  | flex-basis: auto;         |
+| .basis-full  | flex-basis: 100%;         |
+| .basis-1/1   | flex-basis: 100%;         |
+| .basis-1/2   | flex-basis: 50%;          |
+| .basis-1/3   | flex-basis: 33.333333%;   |
+| .basis-2/3   | flex-basis: 66.666667%;   |
+| .basis-1/4   | flex-basis: 25%;          |
+| .basis-2/4   | flex-basis: 50%;          |
+| .basis-3/4   | flex-basis: 75%;          |
+| .basis-1/5   | flex-basis: 20%;          |
+| .basis-2/5   | flex-basis: 40%;          |
+| .basis-3/5   | flex-basis: 60%;          |
+| .basis-4/5   | flex-basis: 80%;          |
+| .basis-1/6   | flex-basis: 16.666667%;   |
+| .basis-2/6   | flex-basis: 33.333333%;   |
+| .basis-3/6   | flex-basis: 50%;          |
+| .basis-4/6   | flex-basis: 66.666667%;   |
+| .basis-5/6   | flex-basis: 83.333333%;   |
+| .basis-1/12  | flex-basis: 8.333333%;    |
+| .basis-2/12  | flex-basis: 16.666667%;   |
+| .basis-3/12  | flex-basis: 25%;          |
+| .basis-4/12  | flex-basis: 33.333333%;   |
+| .basis-5/12  | flex-basis: 41.666667%;   |
+| .basis-6/12  | flex-basis: 50%;          |
+| .basis-7/12  | flex-basis: 58.333333%;   |
+| .basis-8/12  | flex-basis: 66.666667%;   |
+| .basis-9/12  | flex-basis: 75%;          |
+| .basis-10/12 | flex-basis: 83.333333%;   |
+| .basis-11/12 | flex-basis: 91.666667%;   |
+| .basis-px    | flex-basis: 1px;          |
+| .basis-0     | flex-basis: 0;            |
+| .basis-1 ... .basis-100 | flex-basis: {1..100}%; |
 {.table}
 
 ## Синтаксис
@@ -44,11 +60,8 @@ description: "Базисный размер (flex-basis)"
 
 - Модификатор *(обязательный параметр)*:
 
-    - `basis-{0, px, auto, full, 1/2, 1/3, 2/3, ...}` — устанавливает начальный размер флекс-элемента как долю ширины
-      родительского элемента или заданный процент/значение.
-
-  Широко используются относительные значения (например, `basis-1/2` или `basis-3/5`) для построения адаптивных
-  интерфейсов.
+    - `basis-{auto|full|1/1|1/2|1/3|2/3|1/4|2/4|3/4|1/5|2/5|3/5|4/5|1/6...5/6|1/12...11/12|1..100|px|0}` — задаёт базовый размер
+      флекс‑элемента в процентах (включая целые 1–100), долях, пикселях или автоматически. Относительные значения удобны для адаптивных интерфейсов.
 
 ## Пример использования
 
@@ -72,3 +85,8 @@ description: "Базисный размер (flex-basis)"
     <!-- Начиная с md элемент будет иметь начальный размер 50% -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=flex&group=flex-basis"></iframe>
+</div>

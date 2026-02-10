@@ -86,7 +86,7 @@ composer dump-autoload
 
 ## Определяемые константы
 
-| const SF_MAIN = '/simai';define(\"SF_PATH\", $_SERVER[\"DOCUMENT_ROOT\"] . SF_MAIN); |
+| const SF_MAIN = '/simai';define(\"SF_PATH\", $_SERVER[\"DOCUMENT_ROOT\"] . SF_MAIN); |
 |:------------------------------------------------------------------------------------------|
 
 ## Значения

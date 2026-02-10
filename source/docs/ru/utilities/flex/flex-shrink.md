@@ -62,3 +62,8 @@ description: "Сжимаемость (flex-shrink)"
   <!-- Начиная с md элемент будет сжиматься при нехватке пространства -->
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=flex&group=flex-shrink"></iframe>
+</div>

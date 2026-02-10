@@ -7,6 +7,7 @@
 - [Разрыв до элемента (break-before)](break-before.md)
 - [Разрыв внутри элемента (break-inside)](break-inside.md)
 - [Колонки (column)](column.md)
+- [Межколоночный интервал (column-gap)](column-gap.md)
 
 ## Связанные категории
 - [Макет](../layout/index.md)

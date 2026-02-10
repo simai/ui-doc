@@ -7,39 +7,24 @@ description: Выделение текста
 
 # Выделение текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/mark.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/mark.php)
+## Таблица классов
 
-Для выделения фрагментов текста можно использовать HTML-тег `<mark>`.
-
-## Таблица стилей
-
-| Тег   | Значение                                                                                                                    |
-|:------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| .mark | position: relative;<br/> white-space: pre-wrap;<br/> background-color: var(`--sf-mark--color`);<br/> font-weight: inherit; font-style: inherit; |
+| Класс | Значение |
+|:--|:--|
+| `.select-none` | Запрет выделения |
+| `.select-text` | Обычное выделение текста |
+| `.select-all` | Выделение всего содержимого при клике |
+| `.select-auto` | Поведение по умолчанию браузера |
 {.table}
 
-## Описание
-
-HTML элемент `<mark>` обозначает фрагмент текста, выделенный из\-за особой  
-актуальности в контексте. Например, его можно использовать на странице  
-результатов поиска для подсветки всех вхождений искомого слова.
-
-## Пример использования
+## Пример
 
 ```html
-<p>Lorem ipsum dolor sit amet, <mark>consectetur adipiscing elit</mark>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="select-none">Selection disabled</p>
+<p class="select-all">Click to select all</p>
 ```
+## Playground
 
-## Переменные
-
-| Старая переменная          | Новая переменная   |
-|:---------------------------|:-------------------|
-| `--sf-color--bg-text-mark` | `--sf-mark--color` |
-{.table}
-
-Значение новой переменной:
-
-| Переменная         | Значение            |
-|:-------------------|:----------------------------------------|
-| `--sf-mark--color` | var(`--sf-warning-transparent-overlay`) |
-{.table}
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-selecting"></iframe>
+</div>

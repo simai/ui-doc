@@ -7,62 +7,29 @@ description: Стиль оформления текста
 
 # Стиль оформления текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-style.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-style.php)
-
-С помощью модификаторов стиля оформления текста можно изменить стиль линии  
-подчеркивания текста.
-
 ## Таблица классов
 
-| Класс              | Значение                       |
-|:-------------------|:-------------------------------|
-| .decoration-solid  | text-decoration-style: solid;  |
-| .decoration-double | text-decoration-style: double; |
-| .decoration-dotted | text-decoration-style: dotted; |
-| .decoration-dashed | text-decoration-style: dashed; |
-| .decoration-wavy   | text-decoration-style: wavy;   |
+| Класс | Значение |
+|:--|:--|
+| `.underline` | Подчеркивание |
+| `.overline` | Надчеркивание |
+| `.line-through` | Зачеркивание |
+| `.decoration-none` | Отключение линии |
+| `.decoration-solid` | Сплошная линия |
+| `.decoration-dotted` | Точечная линия |
+| `.decoration-dashed` | Пунктир |
+| `.decoration-double` | Двойная линия |
+| `.decoration-wavy` | Волнистая линия |
 {.table}
 
-## Описание
-
-Модификаторы стиля оформления текста изменяют вид линии подчеркивания.  
-Это может быть сплошная линия, двойная, точечная, штриховая или волнистая линия.
-
-Данные модификаторы не являются адаптивными и не используют состояния (hover, focus, active).  
-Они просто определяют стиль линии, используемой для оформления текста.
-
-## Синтаксис
-
-Использование: `{модификатор}`
-
-- Модификатор *(обязательный параметр)*:
-
-    - `decoration-solid` — сплошная линия.
-    - `decoration-double` — двойная линия.
-    - `decoration-dotted` — точечная линия.
-    - `decoration-dashed` — штриховая линия.
-    - `decoration-wavy` — волнистая линия.
-
-## Пример использования
+## Пример
 
 ```html
-<p class="decoration-solid underline">
-  Этот текст будет подчеркнут сплошной линией.
-</p>
-
-<p class="decoration-double underline">
-  Этот текст будет подчеркнут двойной линией.
-</p>
-
-<p class="decoration-dotted underline">
-  Этот текст будет подчеркнут точечной линией.
-</p>
-
-<p class="decoration-dashed underline">
-  Этот текст будет подчеркнут штриховой линией.
-</p>
-
-<p class="decoration-wavy underline">
-  Этот текст будет подчеркнут волнистой линией.
-</p>
+<p class="underline decoration-wavy">Wavy underline</p>
+<p class="line-through decoration-dashed">Dashed line-through</p>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-style"></iframe>
+</div>

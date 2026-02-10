@@ -65,3 +65,8 @@ description: Повтор маски
 <!-- Повтор маски с возможными промежутками -->
 <div class="mask-repeat-space"></div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=mask&group=mask-repeat"></iframe>
+</div>

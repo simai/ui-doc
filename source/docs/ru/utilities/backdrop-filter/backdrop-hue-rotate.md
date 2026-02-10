@@ -57,3 +57,8 @@ description: "Вращение оттенка фона элемента (backdro
 | .backdrop-hue-rotate-4 | .backdrop-hue-rotate-90  |
 | .backdrop-hue-rotate-5 | .backdrop-hue-rotate-180 |
 {.table}
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-hue-rotate"></iframe>
+</div>

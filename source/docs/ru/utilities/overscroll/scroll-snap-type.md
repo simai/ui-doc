@@ -69,3 +69,8 @@ description: "Тип привязки прокрутки (scroll-snap-type)"
   <div class="snap-center inline-block w-b2 h-b2 bg-tertiary m-1 ..."></div>
 </div>
 ```
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-type"></iframe>
+</div>
