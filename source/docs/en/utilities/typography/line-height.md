@@ -1,90 +1,64 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Р’С‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё (line-height)"
-description: "Р’С‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё (line-height)"
+title: "Line Height (line-height)"
+description: "Fixed and relative line-height utilities"
 ---
 
-# Р’С‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё (line-height)
+# Line Height (line-height)
 
-РЎ РїРѕРјРѕС‰СЊСЋ РјРѕРґРёС„РёРєР°С‚РѕСЂРѕРІ РІС‹ РјРѕР¶РµС‚Рµ Р·Р°РґР°С‚СЊ С„РёРєСЃРёСЂРѕРІР°РЅРЅСѓСЋ РёР»Рё РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅСѓСЋ РІС‹СЃРѕС‚Сѓ СЃС‚СЂРѕРєРё.
+Use line-height utilities to set either fixed token-based values or relative multipliers.
 
-## РўР°Р±Р»РёС†Р° РєР»Р°СЃСЃРѕРІ
+## Class Table
 
-Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ РІС‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё:
+Fixed line-height:
 
-| РљР»Р°СЃСЃ     | Р—РЅР°С‡РµРЅРёРµ               |
-|:----------|:-------------------------------------------|
-| .line-1/4 | line-height: var(`--sf-text-height-1/4`); |
-| .line-1/3 | line-height: var(`--sf-text-height-1/3`); |
-| .line-1/2 | line-height: var(`--sf-text-height-1/2`); |
-| .line-1   | line-height: var(`--sf-text-height-1`);   |
-| .line-2   | line-height: var(`--sf-text-height-2`);   |
-| .line-3   | line-height: var(`--sf-text-height-3`);   |
-| .line-4   | line-height: var(`--sf-text-height-4`);   |
-| .line-5   | line-height: var(`--sf-text-height-5`);   |
-| .line-6   | line-height: var(`--sf-text-height-6`);   |
-| .line-7   | line-height: var(`--sf-text-height-7`);   |
-| .line-8   | line-height: var(`--sf-text-height-8`);   |
-| .line-9   | line-height: var(`--sf-text-height-9`);   |
-| .line-10  | line-height: var(`--sf-text-height-10`);  |
-| .line-11  | line-height: var(`--sf-text-height-11`);  |
-| .line-12  | line-height: var(`--sf-text-height-12`);  |
+| Class | Value |
+|:--|:--|
+| `.line-1/4` | `line-height: var(--sf-text-height-1/4);` |
+| `.line-1/3` | `line-height: var(--sf-text-height-1/3);` |
+| `.line-1/2` | `line-height: var(--sf-text-height-1/2);` |
+| `.line-1 ... .line-12` | `line-height: var(--sf-text-height-*);` |
 {.table}
 
-РћС‚РЅРѕСЃРёС‚РµР»СЊРЅР°СЏ РІС‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё:
+Relative line-height:
 
-| РљР»Р°СЃСЃ         | Р—РЅР°С‡РµРЅРёРµ            |
-|:--------------|:--------------------|
-| .line-none    | line-height: 1;     |
-| .line-tight   | line-height: 1.25;  |
-| .line-snug    | line-height: 1.375; |
-| .line-normal  | line-height: 1.5;   |
-| .line-relaxed | line-height: 1.625; |
-| .line-loose   | line-height: 2;     |
+| Class | Value |
+|:--|:--|
+| `.line-none` | `line-height: 1;` |
+| `.line-tight` | `line-height: 1.25;` |
+| `.line-snug` | `line-height: 1.375;` |
+| `.line-normal` | `line-height: 1.5;` |
+| `.line-relaxed` | `line-height: 1.625;` |
+| `.line-loose` | `line-height: 2;` |
 {.table}
 
+## Syntax
 
-## РЎРёРЅС‚Р°РєСЃРёСЃ
+Use `{breakpoint}:{modifier}` or `{modifier}`.
 
-РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ: `{РєРѕРЅС‚СЂРѕР»СЊРЅР°СЏ С‚РѕС‡РєР°}:{РјРѕРґРёС„РёРєР°С‚РѕСЂ}` РёР»Рё РїСЂРѕСЃС‚Рѕ `{РјРѕРґРёС„РёРєР°С‚РѕСЂ}`
+- Breakpoint (optional): `sm`, `md`, `lg`, `xl`.
+- Modifier: one of fixed (`line-1/4 ... line-12`) or relative (`line-none ... line-loose`) values.
 
-- РљРѕРЅС‚СЂРѕР»СЊРЅР°СЏ С‚РѕС‡РєР° *(РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ)*:  
-  РџСЂРёРјРµРЅСЏРµС‚ РјРѕРґРёС„РёРєР°С‚РѕСЂ РЅР°С‡РёРЅР°СЏ СЃ РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР° СЌРєСЂР°РЅР° (`sm`, `md`, `lg`, `xl`).  
-  Р•СЃР»Рё РЅРµ СѓРєР°Р·Р°РЅР°, РјРѕРґРёС„РёРєР°С‚РѕСЂ РїСЂРёРјРµРЅСЏРµС‚СЃСЏ РґР»СЏ РІСЃРµС… СЂР°Р·РјРµСЂРѕРІ.
-
-- РњРѕРґРёС„РёРєР°С‚РѕСЂ *(РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ)*:
-
-    - Р¤РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ (`line-1/4`, `line-1/3`, `line-1/2`, `line-1` вЂ¦ `line-12`) РёСЃРїРѕР»СЊР·СѓСЋС‚ РїСЂРµРґРѕРїСЂРµРґРµР»РµРЅРЅС‹Рµ
-      РїРµСЂРµРјРµРЅРЅС‹Рµ.
-    - РћС‚РЅРѕСЃРёС‚РµР»СЊРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ (`line-none`, `line-tight`, `line-snug`, `line-normal`, `line-relaxed`, `line-loose`)
-      РёСЃРїРѕР»СЊР·СѓСЋС‚ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РѕС‚ РІС‹СЃРѕС‚С‹ С€СЂРёС„С‚Р°.
-
-## РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ
-
-### Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ РІС‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё
+## Usage Example
 
 ```html
-<p class="line-1">РўРµРєСЃС‚ СЃ Р±Р°Р·РѕРІРѕР№ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё</p>
-<p class="line-2">РўРµРєСЃС‚ СЃ СѓРІРµР»РёС‡РµРЅРЅРѕР№ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё</p>
-<p class="line-1/2">РўРµРєСЃС‚ СЃ СѓРјРµРЅСЊС€РµРЅРЅРѕР№ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё</p>
+<p class="line-1">Base line-height</p>
+<p class="line-2">Larger line-height</p>
+<p class="line-1/2">Smaller line-height</p>
+
+<p class="line-tight">Tight line-height</p>
+<p class="line-normal">Normal line-height</p>
+<p class="line-loose">Loose line-height</p>
 ```
 
-### РћС‚РЅРѕСЃРёС‚РµР»СЊРЅР°СЏ РІС‹СЃРѕС‚Р° СЃС‚СЂРѕРєРё
+## Notes
 
-```html
-<p class="line-none">РўРµРєСЃС‚ СЃ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё, СЂР°РІРЅРѕР№ СЂР°Р·РјРµСЂСѓ С€СЂРёС„С‚Р°</p>
-<p class="line-tight">РўРµРєСЃС‚ СЃ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё 1.25 РѕС‚ СЂР°Р·РјРµСЂР° С€СЂРёС„С‚Р°</p>
-<p class="line-normal">РўРµРєСЃС‚ СЃ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё 1.5 (РЅРѕСЂРјР°Р»СЊРЅР°СЏ)</p>
-<p class="line-loose">РўРµРєСЃС‚ СЃ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё, РІ 2 СЂР°Р·Р° Р±РѕР»СЊС€Рµ СЂР°Р·РјРµСЂР° С€СЂРёС„С‚Р°</p>
-```
+- `line-13` from older versions is deprecated; use `line-12`.
+- Use responsive prefixes if needed, e.g. `md:line-2`.
 
-## Р—Р°РјРµС‚РєРё
+## Playground
 
-- Р•СЃР»Рё РІ РїСЂРµРґС‹РґСѓС‰РёС… РІРµСЂСЃРёСЏС… РёСЃРїРѕР»СЊР·РѕРІР°Р»СЃСЏ РєР»Р°СЃСЃ `line-13`, Р·Р°РјРµРЅРёС‚Рµ РµРіРѕ РЅР° `line-12`.
-- РџСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РґР°РїС‚РёРІРЅРѕСЃС‚СЊ, РЅР°РїСЂРёРјРµСЂ, СѓРІРµР»РёС‡РёС‚СЊ РІС‹СЃРѕС‚Сѓ СЃС‚СЂРѕРєРё РЅР°С‡РёРЅР°СЏ СЃРѕ СЃСЂРµРґРЅРµРіРѕ СЂР°Р·РјРµСЂР° СЌРєСЂР°РЅР°,
-  РґРѕР±Р°РІСЊС‚Рµ РїСЂРµС„РёРєСЃ `md:`:
-
-```html
-<p class="md:line-2">РўРµРєСЃС‚, РєРѕС‚РѕСЂС‹Р№ РїСЂРё С€РёСЂРёРЅРµ СЌРєСЂР°РЅР° medium Рё Р±РѕР»СЊС€Рµ Р±СѓРґРµС‚ СЃ РІС‹СЃРѕС‚РѕР№ СЃС‚СЂРѕРєРё, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµР№ РїРµСЂРµРјРµРЅРЅРѕР№ line-2.</p>
-```
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=line-height"></iframe>
+</div>

@@ -1,69 +1,48 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Р В Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° (text-size)"
-description: "Р В Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° (text-size)"
+title: "Text Size (text-size)"
+description: "Text size utilities"
 ---
 
-# Р В Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° (text-size)
+# Text Size (text-size)
 
 [https://dev.ru.simai.io/ru/ui/utility/typography/text-size.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-size.php)
 
-Р С™Р С•Р В»Р С‘РЎвЂЎР ВµРЎРѓРЎвЂљР Р†Р С• Р С—Р С•Р Т‘Р Т‘Р ВµРЎР‚Р В¶Р С‘Р Р†Р В°Р ВµР СРЎвЂ№РЎвЂ¦ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р С•Р Р† РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° РЎС“Р СР ВµР Р…РЎРЉРЎв‚¬Р С‘Р В»Р С•РЎРѓРЎРЉ РЎРѓ 13 Р Т‘Р С• 12, Р В° РЎвЂљР В°Р С”Р В¶Р Вµ Р С•Р В±Р Р…Р С•Р Р†Р В»Р ВµР Р…РЎвЂ№ РЎРѓР С•Р С•РЎвЂљР Р†Р ВµРЎвЂљРЎРѓРЎвЂљР Р†РЎС“РЎР‹РЎвЂ°Р С‘Р Вµ Р С—Р ВµРЎР‚Р ВµР СР ВµР Р…Р Р…РЎвЂ№Р Вµ Р С‘ Р С”Р В»Р В°РЎРѓРЎРѓРЎвЂ№.
-Р вЂќР В°Р Р…Р Р…РЎвЂ№Р Вµ Р СР С•Р Т‘Р С‘РЎвЂћР С‘Р С”Р В°РЎвЂљР С•РЎР‚РЎвЂ№ Р С‘Р В·Р СР ВµР Р…РЎРЏРЎР‹РЎвЂљ РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° Р С‘ Р Р†РЎвЂ№РЎРѓР С•РЎвЂљРЎС“ РЎРѓРЎвЂљРЎР‚Р С•Р С”Р С‘ Р С•Р Т‘Р Р…Р С•Р Р†РЎР‚Р ВµР СР ВµР Р…Р Р…Р С•.
+The supported text scale is now `text-1/4 ... text-12`.
+`text-*` utilities update `font-size` and `line-height` together.
 
-## Р СћР В°Р В±Р В»Р С‘РЎвЂ Р В° Р С”Р В»Р В°РЎРѓРЎРѓР С•Р Р†
+## Class Table
 
-| Р С™Р В»Р В°РЎРѓРЎРѓ     | Р РЋР Р†Р С•Р в„–РЎРѓРЎвЂљР Р†Р В°                                                           |
-|:----------|:---------------------------------------------------------------------------------------|
-| .text-1/4 | font-size: var(`--sf-text-size-1/4`);<br/> line-height: var(`--sf-text-height-1/4`); |
-| .text-1/3 | font-size: var(`--sf-text-size-1/3`);<br/> line-height: var(`--sf-text-height-1/3`); |
-| .text-1/2 | font-size: var(`--sf-text-size-1/2`);<br/> line-height: var(`--sf-text-height-1/2`); |
-| .text-1   | font-size: var(`--sf-text-size-1`);<br/> line-height: var(`--sf-text-height-1`);     |
-| .text-2   | font-size: var(`--sf-text-size-2`);<br/> line-height: var(`--sf-text-height-2`);     |
-| .text-3   | font-size: var(`--sf-text-size-3`);<br/> line-height: var(`--sf-text-height-3`);     |
-| .text-4   | font-size: var(`--sf-text-size-4`);<br/> line-height: var(`--sf-text-height-4`);     |
-| .text-5   | font-size: var(`--sf-text-size-5`);<br/> line-height: var(`--sf-text-height-5`);     |
-| .text-6   | font-size: var(`--sf-text-size-6`);<br/> line-height: var(`--sf-text-height-6`);     |
-| .text-7   | font-size: var(`--sf-text-size-7`);<br/> line-height: var(`--sf-text-height-7`);     |
-| .text-8   | font-size: var(`--sf-text-size-8`);<br/> line-height: var(`--sf-text-height-8`);     |
-| .text-9   | font-size: var(`--sf-text-size-9`);<br/> line-height: var(`--sf-text-height-9`);     |
-| .text-10  | font-size: var(`--sf-text-size-10`);<br/> line-height: var(`--sf-text-height-10`);   |
-| .text-11  | font-size: var(`--sf-text-size-11`);<br/> line-height: var(`--sf-text-height-11`);   |
-| .text-12  | font-size: var(`--sf-text-size-12`);<br/> line-height: var(`--sf-text-height-12`);   |
+| Class | Properties |
+|:--|:--|
+| `.text-1/4` | `font-size: var(--sf-text-size-1/4); line-height: var(--sf-text-height-1/4);` |
+| `.text-1/3` | `font-size: var(--sf-text-size-1/3); line-height: var(--sf-text-height-1/3);` |
+| `.text-1/2` | `font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2);` |
+| `.text-1 ... .text-12` | `font-size: var(--sf-text-size-*); line-height: var(--sf-text-height-*);` |
 {.table}
 
-**Р СџРЎР‚Р С‘Р СР ВµРЎвЂЎР В°Р Р…Р С‘Р Вµ:** Р В Р В°Р Р…Р ВµР Вµ РЎРѓРЎС“РЎвЂ°Р ВµРЎРѓРЎвЂљР Р†Р С•Р Р†Р В°Р В» Р С”Р В»Р В°РЎРѓРЎРѓ `text-13`, Р Р…Р С• РЎвЂљР ВµР С—Р ВµРЎР‚РЎРЉ Р СР В°Р С”РЎРѓР С‘Р СР В°Р В»РЎРЉР Р…Р С• Р Т‘Р С•РЎРѓРЎвЂљРЎС“Р С—Р Р…РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РІР‚вЂќ `text-12`.
+## Note
 
-## Р СџРЎР‚Р С‘Р СР ВµРЎР‚ Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°Р Р…Р С‘РЎРЏ
+`text-13` from older versions is deprecated. Use `text-12` as the largest size.
 
-### Р СћР ВµР С”РЎРѓРЎвЂљ Р СР ВµР Р…РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С• РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В°:
-
-```html
-<p class="text-1/4">Р С›РЎвЂЎР ВµР Р…РЎРЉ Р СР ВµР В»Р С”Р С‘Р в„– РЎвЂљР ВµР С”РЎРѓРЎвЂљ</p>
-<p class="text-1/3">Р СљР ВµР Р…РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С•</p>
-<p class="text-1/2">Р СџР С•РЎвЂЎРЎвЂљР С‘ Р В±Р В°Р В·Р С•Р Р†РЎвЂ№Р в„–</p>
-```
-
-### Р вЂР В°Р В·Р С•Р Р†РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°:
+## Usage Example
 
 ```html
-<p class="text-1">Р вЂР В°Р В·Р С•Р Р†РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°</p>
+<p class="text-1/4">Very small text</p>
+<p class="text-1">Base text</p>
+<p class="text-3">Larger text</p>
+<p class="text-12">Largest text</p>
 ```
 
-### Р СћР ВµР С”РЎРѓРЎвЂљ Р В±Р С•Р В»РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С• РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В°:
+## Responsive
 
 ```html
-<p class="text-2">Р В§РЎС“РЎвЂљРЎРЉ Р В±Р С•Р В»РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С•</p>
-<p class="text-3">Р вЂўРЎвЂ°РЎвЂ Р С”РЎР‚РЎС“Р С—Р Р…Р ВµР Вµ</p>
-<p class="text-12">Р СљР В°Р С”РЎРѓР С‘Р СР В°Р В»РЎРЉР Р…РЎвЂ№Р в„– РЎР‚Р В°Р В·Р СР ВµРЎР‚ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°</p>
+<p class="md:text-2">Applies text-2 from md and up</p>
 ```
 
-## Р С’Р Т‘Р В°Р С—РЎвЂљР С‘Р Р†Р Р…Р С•РЎРѓРЎвЂљРЎРЉ
+## Playground
 
-Р вЂќР В»РЎРЏ РЎС“РЎРѓРЎвЂљР В°Р Р…Р С•Р Р†Р С”Р С‘ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° Р Р…Р В°РЎвЂЎР С‘Р Р…Р В°РЎРЏ РЎРѓ Р С•Р С—РЎР‚Р ВµР Т‘Р ВµР В»РЎвЂР Р…Р Р…Р С•Р в„– Р С”Р С•Р Р…РЎвЂљРЎР‚Р С•Р В»РЎРЉР Р…Р С•Р в„– РЎвЂљР С•РЎвЂЎР С”Р С‘ (`sm`, `md`, `lg`, `xl`) Р Т‘Р С•Р В±Р В°Р Р†РЎРЉРЎвЂљР Вµ Р С—РЎР‚Р ВµРЎвЂћР С‘Р С”РЎРѓ.
-Р СњР В°Р С—РЎР‚Р С‘Р СР ВµРЎР‚:
-
-```html
-<p class="md:text-2">Р В­РЎвЂљР С•РЎвЂљ РЎвЂљР ВµР С”РЎРѓРЎвЂљ РЎРѓРЎвЂљР В°Р Р…Р ВµРЎвЂљ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р С•Р С text-2 Р Р…Р В°РЎвЂЎР С‘Р Р…Р В°РЎРЏ РЎРѓ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° РЎРЊР С”РЎР‚Р В°Р Р…Р В° md</p>
-```
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=text-size"></iframe>
+</div>

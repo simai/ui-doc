@@ -1,74 +1,44 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
-title: РўРµРЅСЊ СЌР»РµРјРµРЅС‚Р°
-description: РўРµРЅСЊ СЌР»РµРјРµРЅС‚Р°
+title: Element Shadow (box-shadow)
+description: Element depth and hover shadow states
 ---
 
-# РўРµРЅСЊ СЌР»РµРјРµРЅС‚Р°
+# Element Shadow (box-shadow)
 
 [https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow.php](https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow.php)
 
-Р’ **SIMAI Framework** СЃ РїРѕРјРѕС‰СЊСЋ РјРѕРґРёС„РёРєР°С‚РѕСЂРѕРІ РјРѕР¶РЅРѕ Р·Р°РґР°С‚СЊ С‚РµРЅСЊ СЌР»РµРјРµРЅС‚Р°.  
-РњРѕРґРёС„РёРєР°С‚РѕСЂС‹ РїРѕР·РІРѕР»СЏСЋС‚ РёР·РјРµРЅСЏС‚СЊ РіР»СѓР±РёРЅСѓ С‚РµРЅРё, Р° С‚Р°РєР¶Рµ Р·Р°РґР°РІР°С‚СЊ С‚РµРЅСЊ РїСЂРё РЅР°РІРµРґРµРЅРёРё РєСѓСЂСЃРѕСЂР° (`hover`).
+`shadow-*` utilities set depth by changing `--sf-shadow--level-ratio`.
 
-## РљР»Р°СЃСЃС‹
+## Class Table
 
-| РљР»Р°СЃСЃ     | Р—РЅР°С‡РµРЅРёРµ                       |
-|:----------|:-------------------------------|
-| .shadow-0 | `--sf-shadow--level-ratio`: 0  |
-| .shadow-1 | `--sf-shadow--level-ratio`: 1  |
-| .shadow-2 | `--sf-shadow--level-ratio`: 2  |
-| .shadow-3 | `--sf-shadow--level-ratio`: 4  |
-| .shadow-4 | `--sf-shadow--level-ratio`: 8  |
-| .shadow-5 | `--sf-shadow--level-ratio`: 16 |
+| Class | Value |
+|:--|:--|
+| `.shadow-0` | no shadow |
+| `.shadow-1` | `--sf-shadow--level-ratio: 1` |
+| `.shadow-2` | `--sf-shadow--level-ratio: 2` |
+| `.shadow-3` | `--sf-shadow--level-ratio: 4` |
+| `.shadow-4` | `--sf-shadow--level-ratio: 8` |
+| `.shadow-5` | `--sf-shadow--level-ratio: 16` |
+| `.hover:shadow-0 ... .hover:shadow-5` | set depth in `:hover` |
 {.table}
 
-**hover:** РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ СѓСЂРѕРІРЅСЏ С‚РµРЅРё РїСЂРё РЅР°РІРµРґРµРЅРёРё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ `hover:shadow-{0...5}`.
+## Syntax
 
-## РћРїРёСЃР°РЅРёРµ
+- `shadow-{0...5}`
+- `hover:shadow-{0...5}`
 
-РњРѕРґРёС„РёРєР°С‚РѕСЂС‹ С‚РµРЅРё (`shadow-{0...5}`) РІ **SIMAI Framework** СѓСЃС‚Р°РЅР°РІР»РёРІР°СЋС‚ РіР»СѓР±РёРЅСѓ С‚РµРЅРё РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ, Р·Р°РґР°РІР°СЏ РїРµСЂРµРјРµРЅРЅСѓСЋ
-`--sf-shadow--level-ratio`. Р§РµРј РІС‹С€Рµ С‡РёСЃР»Рѕ, С‚РµРј Р±РѕР»РµРµ РІС‹СЂР°Р¶РµРЅР° С‚РµРЅСЊ. РЎ РїРѕРјРѕС‰СЊСЋ СЃРѕСЃС‚РѕСЏРЅРёСЏ `hover` РјРѕР¶РЅРѕ Р·Р°РґР°С‚СЊ Р±РѕР»РµРµ
-РіР»СѓР±РѕРєСѓСЋ С‚РµРЅСЊ РїСЂРё РЅР°РІРµРґРµРЅРёРё РєСѓСЂСЃРѕСЂР°, С‡С‚Рѕ СЃРѕР·РґР°РµС‚ РІРёР·СѓР°Р»СЊРЅС‹Р№ СЌС„С„РµРєС‚ РїСЂРёРїРѕРґРЅСЏС‚РѕСЃС‚Рё РёР»Рё РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕСЃС‚Рё СЌР»РµРјРµРЅС‚Р°.
-
-## РЎРёРЅС‚Р°РєСЃРёСЃ
-
-- `shadow-{0...5}` вЂ“ Р·Р°РґР°С‚СЊ СѓСЂРѕРІРµРЅСЊ С‚РµРЅРё.
-- `hover:shadow-{0...5}` вЂ“ Р·Р°РґР°С‚СЊ СѓСЂРѕРІРµРЅСЊ С‚РµРЅРё РїСЂРё РЅР°РІРµРґРµРЅРёРё.
-
-## РџСЂРёРјРµСЂС‹ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ
-
-### РљР°СЂС‚РѕС‡РєРё Рё РґСЂСѓРіРёРµ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹
-
-- Р’Р°СЂРёР°РЅС‚ 1: `border hover:shadow-2`  
-      Р­Р»РµРјРµРЅС‚ РёР·РЅР°С‡Р°Р»СЊРЅРѕ СЃ СЂР°РјРєРѕР№, РїСЂРё РЅР°РІРµРґРµРЅРёРё РїРѕСЏРІР»СЏРµС‚СЃСЏ С‚РµРЅСЊ.
-- Р’Р°СЂРёР°РЅС‚ 2: `shadow-1 hover:shadow-2`  
-  Р­Р»РµРјРµРЅС‚ РёР·РЅР°С‡Р°Р»СЊРЅРѕ СЃ Р»С‘РіРєРѕР№ С‚РµРЅСЊСЋ, РїСЂРё РЅР°РІРµРґРµРЅРёРё С‚РµРЅСЊ СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РіР»СѓР±Р¶Рµ.
-
-### FAB СЌР»РµРјРµРЅС‚С‹ 
-
-`shadow-3 hover:shadow-4` вЂ“ РїР»Р°РІР°СЋС‰Р°СЏ РєРЅРѕРїРєР° СЃ РіР»СѓР±РѕРєРёРјРё С‚РµРЅСЏРјРё.
-
-### Р’СЃРїР»С‹РІР°СЋС‰РёРµ РѕРєРЅР°:
-
-`shadow-5` вЂ“ РґР»СЏ РіР»СѓР±РѕРєРёС… С‚РµРЅРµР№ Рё С‡С‘С‚РєРѕРіРѕ РІС‹РґРµР»РµРЅРёСЏ РІСЃРїР»С‹РІР°СЋС‰РµРіРѕ РѕРєРЅР°.
+## Usage Example
 
 ```html
-<div class="border hover:shadow-2 p-2 radius-1/2">
-    РљР°СЂС‚РѕС‡РєР° СЃ С‚РµРЅСЊСЋ РїСЂРё РЅР°РІРµРґРµРЅРёРё
-</div>
-
-<button class="shadow-1 hover:shadow-2 p-2 radius-1/2">
-    РљРЅРѕРїРєР° СЃ СѓРІРµР»РёС‡РµРЅРёРµРј С‚РµРЅРё РїСЂРё РЅР°РІРµРґРµРЅРёРё
-</button>
-
-<div class="shadow-3 hover:shadow-4 w-8 h-8 radius-rounded flex items-cross-center content-main-center">
-    FAB
-</div>
-
-<div class="shadow-5 p-4 radius-1/3">
-    Р’СЃРїР»С‹РІР°СЋС‰РµРµ РѕРєРЅРѕ СЃ РіР»СѓР±РѕРєРѕР№ С‚РµРЅСЊСЋ
+<div class="shadow-1 hover:shadow-3 p-2 radius-2 border border-outline-variant">
+  Hover to increase depth
 </div>
 ```
 
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"></iframe>
+</div>

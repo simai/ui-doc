@@ -1,51 +1,54 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Р В Р В°Р В·Р СР ВµРЎР‚ Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р С•Р Р† (title-size)"
-description: "Р В Р В°Р В·Р СР ВµРЎР‚ Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р С•Р Р† (title-size)"
+title: "Title Size (title-size)"
+description: "Heading/title size utilities"
 ---
 
-# Р В Р В°Р В·Р СР ВµРЎР‚ Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р С•Р Р† (title-size)
+# Title Size (title-size)
 
 [https://dev.ru.simai.io/ru/ui/utility/typography/title-size.php](https://dev.ru.simai.io/ru/ui/utility/typography/title-size.php)
 
-Р С›Р В±Р Р…Р С•Р Р†Р В»РЎвЂР Р…Р Р…РЎвЂ№Р в„– Р Р…Р В°Р В±Р С•РЎР‚ Р СР С•Р Т‘Р С‘РЎвЂћР С‘Р С”Р В°РЎвЂљР С•РЎР‚Р С•Р Р† Р Т‘Р В»РЎРЏ Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р С•Р Р† Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·РЎС“Р ВµРЎвЂљ РЎР‚Р В°Р В·Р В»Р С‘РЎвЂЎР Р…РЎвЂ№Р Вµ Р Р…Р В°Р В±Р С•РЎР‚РЎвЂ№ Р С—Р ВµРЎР‚Р ВµР СР ВµР Р…Р Р…РЎвЂ№РЎвЂ¦ Р Т‘Р В»РЎРЏ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° Р С‘ Р Т‘Р В»РЎРЏ Р Р†РЎвЂ№РЎРѓР С•РЎвЂљРЎвЂ№
-РЎРѓРЎвЂљРЎР‚Р С•Р С”Р С‘. Р СџРЎР‚Р С‘ РЎРЊРЎвЂљР С•Р С Р Т‘Р В»РЎРЏ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° РЎв‚¬РЎР‚Р С‘РЎвЂћРЎвЂљР В° Р С—РЎР‚Р С‘Р СР ВµР Р…РЎРЏРЎР‹РЎвЂљРЎРѓРЎРЏ Р С—Р ВµРЎР‚Р ВµР СР ВµР Р…Р Р…РЎвЂ№Р Вµ Р С‘Р В· РЎРѓР С‘РЎРѓРЎвЂљР ВµР СРЎвЂ№ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В°, Р В° Р Т‘Р В»РЎРЏ Р Р†РЎвЂ№РЎРѓР С•РЎвЂљРЎвЂ№ РЎРѓРЎвЂљРЎР‚Р С•Р С”Р С‘ Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·РЎС“РЎР‹РЎвЂљРЎРѓРЎРЏ
-Р С—Р ВµРЎР‚Р ВµР СР ВµР Р…Р Р…РЎвЂ№Р Вµ Р С‘Р В· РЎРѓР С‘РЎРѓРЎвЂљР ВµР СРЎвЂ№ Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р С•Р Р†.
+The updated title scale uses different token groups for `font-size` and `line-height`:
+- `font-size` comes from text-size tokens.
+- `line-height` comes from title-height tokens.
 
-## Р СћР В°Р В±Р В»Р С‘РЎвЂ Р В° Р С”Р В»Р В°РЎРѓРЎРѓР С•Р Р†
+## Class Table
 
-| Р С™Р В»Р В°РЎРѓРЎРѓ     | Р РЋР Р†Р С•Р в„–РЎРѓРЎвЂљР Р†Р В°                                                          |
-|:----------|:--------------------------------------------------------------------------------------|
-| .title-1  | font-size: var(`--sf-text-size-1`);<br/> line-height: var(`--sf-title-height-1`);   |
-| .title-2  | font-size: var(`--sf-text-size-2`);<br/> line-height: var(`--sf-title-height-2`);   |
-| .title-3  | font-size: var(`--sf-text-size-3`);<br/> line-height: var(`--sf-title-height-3`);   |
-| .title-4  | font-size: var(`--sf-text-size-4`);<br/> line-height: var(`--sf-title-height-4`);   |
-| .title-5  | font-size: var(`--sf-text-size-5`);<br/> line-height: var(`--sf-title-height-5`);   |
-| .title-6  | font-size: var(`--sf-text-size-6`);<br/> line-height: var(`--sf-title-height-6`);   |
-| .title-7  | font-size: var(`--sf-text-size-7`);<br/> line-height: var(`--sf-title-height-7`);   |
-| .title-8  | font-size: var(`--sf-text-size-8`);<br/> line-height: var(`--sf-title-height-8`);   |
-| .title-9  | font-size: var(`--sf-text-size-9`);<br/> line-height: var(`--sf-title-height-9`);   |
-| .title-10 | font-size: var(`--sf-text-size-10`);<br/> line-height: var(`--sf-title-height-10`); |
-| .title-11 | font-size: var(`--sf-text-size-11`);<br/> line-height: var(`--sf-title-height-11`); |
-| .title-12 | font-size: var(`--sf-text-size-12`);<br/> line-height: var(`--sf-title-height-12`); |
+| Class | Properties |
+|:--|:--|
+| `.title-1` | `font-size: var(--sf-text-size-1); line-height: var(--sf-title-height-1);` |
+| `.title-2` | `font-size: var(--sf-text-size-2); line-height: var(--sf-title-height-2);` |
+| `.title-3` | `font-size: var(--sf-text-size-3); line-height: var(--sf-title-height-3);` |
+| `.title-4` | `font-size: var(--sf-text-size-4); line-height: var(--sf-title-height-4);` |
+| `.title-5` | `font-size: var(--sf-text-size-5); line-height: var(--sf-title-height-5);` |
+| `.title-6` | `font-size: var(--sf-text-size-6); line-height: var(--sf-title-height-6);` |
+| `.title-7` | `font-size: var(--sf-text-size-7); line-height: var(--sf-title-height-7);` |
+| `.title-8` | `font-size: var(--sf-text-size-8); line-height: var(--sf-title-height-8);` |
+| `.title-9` | `font-size: var(--sf-text-size-9); line-height: var(--sf-title-height-9);` |
+| `.title-10` | `font-size: var(--sf-text-size-10); line-height: var(--sf-title-height-10);` |
+| `.title-11` | `font-size: var(--sf-text-size-11); line-height: var(--sf-title-height-11);` |
+| `.title-12` | `font-size: var(--sf-text-size-12); line-height: var(--sf-title-height-12);` |
 {.table}
 
-## Р СџРЎР‚Р С‘Р СР ВµРЎР‚ Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°Р Р…Р С‘РЎРЏ
+## Usage Example
 
 ```html
-<p class="title-1">Р вЂ”Р В°Р С–Р С•Р В»Р С•Р Р†Р С•Р С” Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С• РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В°</p>
-<p class="title-2">Р вЂ”Р В°Р С–Р С•Р В»Р С•Р Р†Р С•Р С” РЎвЂЎРЎС“РЎвЂљРЎРЉ Р В±Р С•Р В»РЎРЉРЎв‚¬Р Вµ Р В±Р В°Р В·Р С•Р Р†Р С•Р С–Р С•</p>
-<p class="title-12">Р СљР В°Р С”РЎРѓР С‘Р СР В°Р В»РЎРЉР Р…Р С• Р С”РЎР‚РЎС“Р С—Р Р…РЎвЂ№Р в„– Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С•Р С”</p>
+<p class="title-1">Base title size</p>
+<p class="title-2">Slightly larger title</p>
+<p class="title-12">Largest title size</p>
 ```
 
-## Р С’Р Т‘Р В°Р С—РЎвЂљР С‘Р Р†Р Р…Р С•РЎРѓРЎвЂљРЎРЉ
+## Responsive
 
-Р вЂќР В»РЎРЏ РЎС“РЎРѓРЎвЂљР В°Р Р…Р С•Р Р†Р С”Р С‘ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В° Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р В° Р Р…Р В°РЎвЂЎР С‘Р Р…Р В°РЎРЏ РЎРѓ Р С•Р С—РЎР‚Р ВµР Т‘Р ВµР В»РЎвЂР Р…Р Р…Р С•Р в„– Р С”Р С•Р Р…РЎвЂљРЎР‚Р С•Р В»РЎРЉР Р…Р С•Р в„– РЎвЂљР С•РЎвЂЎР С”Р С‘ (`sm`, `md`, `lg`, `xl`) Р Т‘Р С•Р В±Р В°Р Р†РЎРЉРЎвЂљР Вµ
-РЎРѓР С•Р С•РЎвЂљР Р†Р ВµРЎвЂљРЎРѓРЎвЂљР Р†РЎС“РЎР‹РЎвЂ°Р С‘Р в„– Р С—РЎР‚Р ВµРЎвЂћР С‘Р С”РЎРѓ Р С” Р С”Р В»Р В°РЎРѓРЎРѓРЎС“:
+Use breakpoint prefixes:
 
 ```html
-<p class="md:title-2">Р СњР В° РЎРЊР С”РЎР‚Р В°Р Р…Р В°РЎвЂ¦ md Р С‘ Р В±Р С•Р В»РЎРЉРЎв‚¬Р Вµ Р В±РЎС“Р Т‘Р ВµРЎвЂљ Р С—РЎР‚Р С‘Р СР ВµР Р…РЎвЂР Р… title-2</p>
+<p class="md:title-2">Applies title-2 from md and up</p>
 ```
 
-Р СћР В°Р С”Р С‘Р С Р С•Р В±РЎР‚Р В°Р В·Р С•Р С, Р СР С•Р В¶Р Р…Р С• Р С–Р С‘Р В±Р С”Р С• РЎС“Р С—РЎР‚Р В°Р Р†Р В»РЎРЏРЎвЂљРЎРЉ РЎР‚Р В°Р В·Р СР ВµРЎР‚Р В°Р СР С‘ Р В·Р В°Р С–Р С•Р В»Р С•Р Р†Р С”Р С•Р Р† Р Т‘Р В»РЎРЏ РЎР‚Р В°Р В·Р В»Р С‘РЎвЂЎР Р…РЎвЂ№РЎвЂ¦ РЎР‚Р В°Р В·РЎР‚Р ВµРЎв‚¬Р ВµР Р…Р С‘Р в„– РЎРЊР С”РЎР‚Р В°Р Р…Р В°.
+## Playground
+
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=typography&group=title-size"></iframe>
+</div>

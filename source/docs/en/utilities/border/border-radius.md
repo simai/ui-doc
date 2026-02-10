@@ -1,113 +1,53 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
-title: Р—Р°РєСЂСѓРіР»РµРЅРёРµ РіСЂР°РЅРёС†
-description: Р—Р°РєСЂСѓРіР»РµРЅРёРµ РіСЂР°РЅРёС†
+title: Border Radius
+description: Border radius
 ---
 
-# Р—Р°РєСЂСѓРіР»РµРЅРёРµ РіСЂР°РЅРёС†
+# Border Radius
 
-[https://dev.ru.simai.io/ru/ui/utility/border/border-radius.php](https://dev.ru.simai.io/ru/ui/utility/border/border-radius.php)
+Radius modifiers let you round the whole element, specific sides, or specific logical corners.
 
-РЎ РїРѕРјРѕС‰СЊСЋ РјРѕРґРёС„РёРєР°С‚РѕСЂРѕРІ Р·Р°РєСЂСѓРіР»РµРЅРёСЏ РіСЂР°РЅРёС† РІ SIMAI Framework РІС‹ РјРѕР¶РµС‚Рµ Р·Р°РґР°С‚СЊ СЂР°РґРёСѓСЃ СЃРєСЂСѓРіР»РµРЅРёСЏ РґР»СЏ РІСЃРµС… СЃС‚РѕСЂРѕРЅ СЌР»РµРјРµРЅС‚Р°
-РёР»Рё С‚РѕР»СЊРєРѕ РґР»СЏ РѕС‚РґРµР»СЊРЅС‹С… РµРіРѕ СѓРіР»РѕРІ Рё СЃС‚РѕСЂРѕРЅ.
+## Radius Sizes
 
-![][image30]
+`0`, `1/3`, `1/2`, `1`, `2`, `3`, `default`, `square`, `rounded`, `round`
 
-## РўР°Р±Р»РёС†Р° РєР»Р°СЃСЃРѕРІ
+## Base Classes
 
-| РљР»Р°СЃСЃ        | Р—РЅР°С‡РµРЅРёРµ            |
-|:-------------|:----------------------------------------|
-| .radius-0    | border-radius: var(`--sf-0`);           |
-| .radius-1/3  | border-radius: var(`--sf-radius-1/3`);  |
-| .radius-1/2  | border-radius: var(`--sf-radius-1/2`);  |
-| .radius-1    | border-radius: var(`--sf-radius-1`);    |
-| .radius-2    | border-radius: var(`--sf-radius-2`);    |
-| .radius-3    | border-radius: var(`--sf-radius-3`);    |
-| .radius-rounded | border-radius: var(`--sf-radius-rounded`); |
+| Class | Value |
+|:--|:--|
+| `.radius-{size}` | `border-radius: var(--sf-radius-*)` |
+| `.radius-top-{size}` | top corners |
+| `.radius-bottom-{size}` | bottom corners |
+| `.radius-inline-start-{size}` | inline-start corners |
+| `.radius-inline-end-{size}` | inline-end corners |
+| `.radius-top-inline-start-{size}` | top inline-start corner |
+| `.radius-top-inline-end-{size}` | top inline-end corner |
+| `.radius-bottom-inline-start-{size}` | bottom inline-start corner |
+| `.radius-bottom-inline-end-{size}` | bottom inline-end corner |
 {.table}
 
-Р”Р»СЏ РєР°Р¶РґРѕРіРѕ СЂР°Р·РјРµСЂР° РґРѕСЃС‚СѓРїРЅС‹ РІР°СЂРёР°РЅС‚С‹ `radius-top-`, `radius-bottom-`, `radius-left-`,  
-`radius-right-`, Р° С‚Р°РєР¶Рµ `radius-top-left-`, `radius-top-right-`, `radius-bottom-left-`,  
-`radius-bottom-right-` РґР»СЏ Р·Р°РєСЂСѓРіР»РµРЅРёСЏ РѕС‚РґРµР»СЊРЅС‹С… СЃС‚РѕСЂРѕРЅ РёР»Рё СѓРіР»РѕРІ.
+## Syntax
 
-## РћРїРёСЃР°РЅРёРµ
+- `{modifier}` for all breakpoints.
+- `{breakpoint}:{modifier}` for responsive behavior (`sm`, `md`, `lg`, `xl`).
 
-РњРѕРґРёС„РёРєР°С‚РѕСЂС‹ РїРѕР·РІРѕР»СЏСЋС‚ Р·Р°РґР°РІР°С‚СЊ СЂР°РґРёСѓСЃ Р·Р°РєСЂСѓРіР»РµРЅРёСЏ РіСЂР°РЅРёС† СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј  
-СЃС‚Р°РЅРґР°СЂС‚РёР·РёСЂРѕРІР°РЅРЅС‹С… СЂР°Р·РјРµСЂРѕРІ:
-
-- `0` вЂ” РѕС‚СЃСѓС‚СЃС‚РІРёРµ Р·Р°РєСЂСѓРіР»РµРЅРёСЏ.
-- `1/3` вЂ” РЅРµР±РѕР»СЊС€РѕР№ СЂР°РґРёСѓСЃ.
-- `1/2` вЂ” СЃСЂРµРґРЅРёР№ СЂР°РґРёСѓСЃ.
-- `1` вЂ” СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ СЂР°РґРёСѓСЃ.
-- `2` вЂ” СѓРІРµР»РёС‡РµРЅРЅС‹Р№ СЂР°РґРёСѓСЃ.
-- `3` вЂ” РµС‰С‘ Р±РѕР»СЊС€РёР№ СЂР°РґРёСѓСЃ.
-- `full` вЂ” РјР°РєСЃРёРјР°Р»СЊРЅРѕ РІРѕР·РјРѕР¶РЅС‹Р№ СЂР°РґРёСѓСЃ (РїСЂРµРІСЂР°С‰РµРЅРёРµ РєРІР°РґСЂР°С‚Р° РІ РєСЂСѓРі).
-
-Р’С‹ РјРѕР¶РµС‚Рµ РєРѕРјР±РёРЅРёСЂРѕРІР°С‚СЊ РјРѕРґРёС„РёРєР°С‚РѕСЂС‹ РґР»СЏ РѕС‚РґРµР»СЊРЅС‹С… СЃС‚РѕСЂРѕРЅ Рё СѓРіР»РѕРІ, РЅР°РїСЂРёРјРµСЂ:  
-`radius-top-1/2`, `radius-bottom-right-1`, Рё С‚.Рґ.
-
-## РЎРёРЅС‚Р°РєСЃРёСЃ
-
-РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ: `{РєРѕРЅС‚СЂРѕР»СЊРЅР°СЏ С‚РѕС‡РєР°}:{РјРѕРґРёС„РёРєР°С‚РѕСЂ}` РёР»Рё `{РјРѕРґРёС„РёРєР°С‚РѕСЂ}`
-
-- РљРѕРЅС‚СЂРѕР»СЊРЅР°СЏ С‚РѕС‡РєР° *(РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ)*: РџСЂРёРјРµРЅСЏРµС‚ РјРѕРґРёС„РёРєР°С‚РѕСЂ РЅР°С‡РёРЅР°СЏ СЃ РѕРїСЂРµРґРµР»С‘РЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР° СЌРєСЂР°РЅР° (sm, md,
-  lg, xl).
-
-- РњРѕРґРёС„РёРєР°С‚РѕСЂ *(РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ)*: РќР°РїСЂРёРјРµСЂ: `radius-1/3`, `radius-top-1/2`, `radius-bottom-right-1`,
-  `radius-rounded`.
-
-## РџСЂРёРјРµСЂС‹ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ
+## Usage Example
 
 ```html
-<!-- Р—Р°РєСЂСѓРіР»РµРЅРёРµ СЃРѕ РІСЃРµС… СЃС‚РѕСЂРѕРЅ -->
-<div class="radius-1/3">РќРµР±РѕР»СЊС€РѕРµ Р·Р°РєСЂСѓРіР»РµРЅРёРµ</div>
-<div class="radius-rounded">РџРѕР»РЅРѕРµ Р·Р°РєСЂСѓРіР»РµРЅРёРµ</div>
+<div class="radius-1/3">radius-1/3</div>
+<div class="radius-rounded">radius-rounded</div>
 
-<!-- Р—Р°РєСЂСѓРіР»РµРЅРёРµ РѕРґРЅРѕР№ СЃС‚РѕСЂРѕРЅС‹ -->
-<div class="radius-left-1/2">Р—Р°РєСЂСѓРіР»РµРЅРёРµ СЃР»РµРІР°</div>
-<div class="radius-bottom-1">Р—Р°РєСЂСѓРіР»РµРЅРёРµ СЃРЅРёР·Сѓ</div>
+<div class="radius-top-2">radius-top-2</div>
+<div class="radius-inline-start-1">radius-inline-start-1</div>
 
-<!-- Р—Р°РєСЂСѓРіР»РµРЅРёРµ РѕРґРЅРѕРіРѕ СѓРіР»Р° -->
-<div class="radius-top-left-2">Р—Р°РєСЂСѓРіР»РµРЅРёРµ РІРµСЂС…РЅРµРіРѕ Р»РµРІРѕРіРѕ СѓРіР»Р°</div>
+<div class="radius-top-inline-start-3">radius-top-inline-start-3</div>
+<div class="radius-bottom-inline-end-rounded">radius-bottom-inline-end-rounded</div>
 ```
 
-## РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ
+## Playground
 
-Р”Р»СЏ СѓСЃС‚Р°РЅРѕРІРєРё СЂР°РґРёСѓСЃР° Р·Р°РєСЂСѓРіР»РµРЅРёСЏ, РЅР°С‡РёРЅР°СЏ СЃ РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР° СЌРєСЂР°РЅР°, РґРѕР±Р°РІСЊС‚Рµ  
-РїСЂРµС„РёРєСЃ РєРѕРЅС‚СЂРѕР»СЊРЅРѕР№ С‚РѕС‡РєРё (sm, md, lg, xl):
-
-```html
-<div class="md:radius-1/2 ..."></div>
-```
-
-## Р—Р°РјРµРЅР° РєР»Р°СЃСЃРѕРІ
-
-Р’ РЅРѕРІРѕР№ РІРµСЂСЃРёРё РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ СЃС‚Р°РЅРґР°СЂС‚РёР·РёСЂРѕРІР°РЅРЅС‹Рµ СЂР°Р·РјРµСЂС‹. Р”Р»СЏ РїРµСЂРµС…РѕРґР° СЃ РїСЂРµРґС‹РґСѓС‰РµР№ РІРµСЂСЃРёРё  
-РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃР»РµРґСѓСЋС‰СѓСЋ С‚Р°Р±Р»РёС†Сѓ:
-
-| РЎС‚Р°СЂС‹Р№ РєР»Р°СЃСЃ           | РќРѕРІС‹Р№ РєР»Р°СЃСЃ              |
-|:-----------------------|:-------------------------|
-| .radius-1              | .radius-1/3              |
-| .radius-top-1          | .radius-top-1/3          |
-| .radius-bottom-1       | .radius-bottom-1/3       |
-| .radius-left-1         | .radius-left-1/3         |
-| .radius-right-1        | .radius-right-1/3        |
-| .radius-top-left-1     | .radius-top-left-1/3     |
-| .radius-top-right-1    | .radius-top-right-1/3    |
-| .radius-bottom-left-1  | .radius-bottom-left-1/3  |
-| .radius-bottom-right-1 | .radius-bottom-right-1/3 |
-| .radius-2              | .radius-1/3              |
-| .radius-3              | .radius-1/2              |
-| .radius-4              | .radius-1/2              |
-| .radius-5              | .radius-1                |
-| .radius-6              | .radius-1                |
-| .radius-7              | .radius-1                |
-| .radius-8              | .radius-2                |
-| .radius-9              | .radius-3                |
-{.table}
-
-*(Р”Р»СЏ РїРѕР»РЅРѕРіРѕ СЃРїРёСЃРєР° Р·Р°РјРµРЅ СЃРј. РѕРїРёСЃР°РЅРёРµ РІС‹С€Рµ.)*
-
-[image30]: /assets/build/img/b64/bbbccbb8ce1f5530.png
-
+<div class="sf-playground">
+<iframe src="https://play.simai.io/embed.html?component=border&group=border-radius"></iframe>
+</div>
