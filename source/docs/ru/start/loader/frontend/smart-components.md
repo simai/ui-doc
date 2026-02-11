@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "1.7 Поддержка Smart-компонентов"
@@ -55,13 +55,13 @@ Smart-компоненты используют HTML-шаблоны, котор�
 ### Хранилище в localStorage
 
 ```js
-localStorage["SF_SMART_GZIP"] = compressToUTF16(JSON.stringify(this.cachedTemplates));
+localStorage["SF_SMART_LIST-<pageHash>"] = compressToUTF16(JSON.stringify(this.cachedTemplates));
 ```
 
 ### Загрузка из localStorage
 
 ```js
-const gzip = localStorage.getItem('SF_SMART_GZIP');
+const gzip = localStorage.getItem('SF_SMART_LIST-<pageHash>');
 this.gZipReady = JSON.parse(decompressFromUTF16(gzip));
 ```
 
@@ -93,3 +93,5 @@ this.gZipReady = JSON.parse(decompressFromUTF16(gzip));
 * Поддержка динамической вставки в DOM;
 * Сжатое и быстрое кеширование в localStorage;
 * Быстрое восстановление интерфейса при повторной инициализации.
+
+

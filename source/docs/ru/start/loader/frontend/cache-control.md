@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: 1.8 Очистка и контроль кэша
@@ -22,7 +22,6 @@ description: 1.8 Очистка и контроль кэша
 
 * `SF_PLUGIN_LIST-<pageHash>` — список уже загруженных плагинов;
 * `SF_SMART_LIST-<pageHash>` — данные и шаблоны Smart-компонентов;
-* `SF_SMART_GZIP` — все данные и шаблоны, сжатые через `compressToUTF16`;
 * `SF_MISSING_PLUGINS` — список файлов плагинов, которые не удалось загрузить.
 
 Дополнительно могут использоваться `document.cookie` для временных данных, если включена соответствующая поддержка (
@@ -51,7 +50,7 @@ SF.Loader.clearCache()
 
 ### 3. Через DevTools
 
-* Перейти в Application → Local Storage → удалить ключи `SF_PLUGIN_LIST-*`, `SF_SMART_LIST-*`, `SF_SMART_GZIP`,
+* Перейти в Application → Local Storage → удалить ключи `SF_PLUGIN_LIST-*`, `SF_SMART_LIST-*`,
   `SF_MISSING_PLUGINS.`
 * Также можно очистить cookies при необходимости.
 
@@ -60,7 +59,6 @@ SF.Loader.clearCache()
 Метод выполняет:
 
 * Удаление всех ключей `SF_PLUGIN_LIST-*` и `SF_SMART_LIST-*` из localStorage;
-* Удаление `SF_SMART_GZIP`;
 * Очистку `SF_MISSING_PLUGINS`;
 * Опционально сброс кеша шаблонов (если включён `CacheManager`);
 
@@ -69,3 +67,5 @@ SF.Loader.clearCache()
 * Очистка кэша не влияет на статически встроенные компоненты.
 * После очистки компоненты будут загружены заново при следующем визите.
 * Очистка влияет только на текущий домен.
+
+
