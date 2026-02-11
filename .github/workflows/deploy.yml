@@ -55,7 +55,9 @@ jobs:
           yarn prod
 
       - name: Build static site
-        run: php vendor/bin/docara build production
+        run: |
+          rm -rf .cache build_production
+          php vendor/bin/docara build production --cache=false
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.8
@@ -88,5 +90,6 @@ jobs:
             DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-files
             yarn install
             yarn prod
-            php vendor/bin/docara build production
+            rm -rf .cache build_production
+            php vendor/bin/docara build production --cache=false
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
