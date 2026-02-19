@@ -61,6 +61,6 @@ description: "Выравнивание привязки прокрутки (scro
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-align"></iframe>
 </div>

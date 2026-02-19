@@ -38,6 +38,6 @@ description: Область маски
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-clip"></iframe>
 </div>

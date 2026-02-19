@@ -29,6 +29,6 @@ description: Параметры по умолчанию
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=links&group=links-default-parameters"></iframe>
 </div>

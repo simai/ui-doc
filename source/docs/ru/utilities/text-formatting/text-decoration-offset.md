@@ -13,6 +13,6 @@ description: Смещение underline/overline/line-through
 Классы: `decoration-offset-auto`, `decoration-offset-0...4`.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration-offset"></iframe>
 </div>

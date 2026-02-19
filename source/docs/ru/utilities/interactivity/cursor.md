@@ -81,6 +81,6 @@ description: Вид курсора (cursor)
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=cursor"></iframe>
 </div>

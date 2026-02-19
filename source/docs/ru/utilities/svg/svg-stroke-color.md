@@ -34,6 +34,6 @@ description: Цвет обводки
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-color"></iframe>
 </div>

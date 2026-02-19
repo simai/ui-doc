@@ -46,6 +46,6 @@ description: "Радиус границы ползунка прокрутки (s
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-radius"></iframe>
 </div>

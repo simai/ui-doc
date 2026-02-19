@@ -36,6 +36,6 @@ description: "Классы смещения transform-translate"
 Для `value` доступны базовые (`0...9`) и расширенные (`a0...i9`) токены.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=transform&group=transform-translate"></iframe>
 </div>

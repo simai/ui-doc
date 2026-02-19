@@ -46,6 +46,6 @@ description: "Шаблон строк сетки (grid-template-rows)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-template-rows"></iframe>
 </div>

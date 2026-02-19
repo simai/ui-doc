@@ -82,6 +82,6 @@ description: "Положение элемента по оси Z (z-index)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=z-index"></iframe>
 </div>

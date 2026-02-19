@@ -86,6 +86,6 @@ description: Положение фона
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-position"></iframe>
 </div>

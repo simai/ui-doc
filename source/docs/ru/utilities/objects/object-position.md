@@ -52,6 +52,6 @@ description: "Утилиты object-position управляют тем, каку
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=objects&group=object-position"></iframe>
 </div>

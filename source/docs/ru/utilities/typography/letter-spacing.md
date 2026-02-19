@@ -73,6 +73,6 @@ description: "Трекинг текста (letter-spacing)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=letter-spacing"></iframe>
 </div>

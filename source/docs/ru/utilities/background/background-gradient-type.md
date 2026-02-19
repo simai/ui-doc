@@ -54,6 +54,6 @@ description: "Утилиты выбора типа фонового градие
 **Важно:** без указания цветов (`gr1-/gr2-/gr3-` или `from-/via-/to-`) градиент будет прозрачным, так как в переменных `--sf-gradient--color-*` нет значений.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-gradient-type"></iframe>
 </div>

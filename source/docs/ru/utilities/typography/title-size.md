@@ -53,6 +53,6 @@ description: "Размер заголовков (title-size)"
 Таким образом, можно гибко управлять размерами заголовков для различных разрешений экрана.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=title-size"></iframe>
 </div>

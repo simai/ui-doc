@@ -46,6 +46,6 @@ description: Параметры по умолчанию
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=divider&group=divider-default-parameters"></iframe>
 </div>

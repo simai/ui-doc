@@ -66,6 +66,6 @@ description: Паттерн фона
 `md:pattern-2` применит паттерн №2 только на экранах от размера Medium и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-pattern"></iframe>
 </div>

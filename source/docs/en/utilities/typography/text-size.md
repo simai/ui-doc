@@ -42,6 +42,6 @@ The supported text scale is now `text-1/4 ... text-12`.
 
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-size"></iframe>
 </div>

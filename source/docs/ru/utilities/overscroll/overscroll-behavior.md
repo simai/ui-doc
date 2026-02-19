@@ -67,6 +67,6 @@ description: Поведение при прокрутке
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=overscroll-behavior"></iframe>
 </div>

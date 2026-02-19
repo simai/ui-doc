@@ -74,6 +74,6 @@ description: "Максимальная высота (max-height)"
 В этом примере максимальная высота будет равна нулю (`max-h-0`) при ширине экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=max-height"></iframe>
 </div>

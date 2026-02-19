@@ -62,6 +62,6 @@ h1, .sf-h-1 {
 текстовых блоков, меток и прочих элементов типографики.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-role-modifiers"></iframe>
 </div>

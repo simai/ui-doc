@@ -54,6 +54,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-opacity"></iframe>
 </div>

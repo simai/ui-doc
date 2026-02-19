@@ -103,6 +103,6 @@ h2, h3, h4, h5, h6 {
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-default"></iframe>
 </div>

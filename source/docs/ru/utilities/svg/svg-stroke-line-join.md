@@ -30,6 +30,6 @@ description: Углы обводки (Line Join)
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-join"></iframe>
 </div>

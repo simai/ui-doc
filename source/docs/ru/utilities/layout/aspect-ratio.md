@@ -56,6 +56,6 @@ description: Соотношение сторон (Aspect Ratio)
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=aspect-ratio"></iframe>
 </div>

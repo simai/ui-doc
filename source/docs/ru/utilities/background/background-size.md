@@ -54,6 +54,6 @@ description: Управление размером фонового изобра
 
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-size"></iframe>
 </div>

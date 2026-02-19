@@ -48,6 +48,6 @@ description: "Цвет каретки (caret-color)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=caret-color"></iframe>
 </div>

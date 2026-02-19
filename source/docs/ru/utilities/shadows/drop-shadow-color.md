@@ -55,6 +55,6 @@ description: "Цвет падающей тени (drop-shadow-color)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow-color"></iframe>
 </div>

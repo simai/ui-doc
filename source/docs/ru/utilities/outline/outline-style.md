@@ -41,6 +41,6 @@ description: Стиль внешней границы
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=outline-style"></iframe>
 </div>

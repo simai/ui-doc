@@ -62,6 +62,6 @@ description: "Выделение текста (user-select)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=user-select"></iframe>
 </div>

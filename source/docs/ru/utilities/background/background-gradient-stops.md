@@ -16,6 +16,6 @@ description: Утилиты from/via/to для цветов градиента
 - `to-*` -> `--sf-gradient--color-3`
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-gradient-stops"></iframe>
 </div>

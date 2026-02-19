@@ -38,6 +38,6 @@ description: Классы animation-duration-fast, animation-duration-normal и 
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-duration"></iframe>
 </div>

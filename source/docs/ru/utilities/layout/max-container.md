@@ -60,6 +60,6 @@ description: "Максимальный размер контейнера (max-co
 для крупноформатных дисплеев и высоких разрешений.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=max-container"></iframe>
 </div>

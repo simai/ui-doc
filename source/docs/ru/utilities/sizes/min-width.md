@@ -84,6 +84,6 @@ description: "Минимальная ширина (min-width)"
 В этом примере минимальная ширина будет 100% (`min-w-full`) только при размерах экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=min-width"></iframe>
 </div>

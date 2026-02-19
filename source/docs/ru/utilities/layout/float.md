@@ -71,6 +71,6 @@ description: Плавающий элемент (float)
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=float"></iframe>
 </div>

@@ -48,6 +48,6 @@ description: Гибкость элементов (flex)
 </div>
 ```
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=flex&group=flexibility"></iframe>
 </div>

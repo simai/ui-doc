@@ -52,6 +52,6 @@ description: "Толщина подложки прокрутки (scroll-backdro
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-width"></iframe>
 </div>

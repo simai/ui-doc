@@ -22,6 +22,6 @@ description: Оформление кода
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-code"></iframe>
 </div>

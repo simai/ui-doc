@@ -46,6 +46,6 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-template-columns"></iframe>
 </div>

@@ -59,6 +59,6 @@ description: Внешний отступ (margin)
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=indents&group=margin"></iframe>
 </div>

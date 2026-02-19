@@ -26,6 +26,6 @@ description: Макет таблицы
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=table-layout"></iframe>
 </div>

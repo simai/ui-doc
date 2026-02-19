@@ -59,6 +59,6 @@ description: "Трансформация текста (text-transform)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-transform"></iframe>
 </div>

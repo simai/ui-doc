@@ -48,6 +48,6 @@ description: "События указателя (pointer-events)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=pointer-events"></iframe>
 </div>

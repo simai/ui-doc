@@ -39,6 +39,6 @@ description: "Классы масштабирования transform-scale"
 Где `value`: `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=transform&group=transform-scale"></iframe>
 </div>

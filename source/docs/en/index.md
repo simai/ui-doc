@@ -27,7 +27,7 @@ the quality of the products you build.
 
 Below is a short code example showing several modifiers in action:
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=buttons&group=buttons"></iframe>
 </div>
 

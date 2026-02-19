@@ -13,6 +13,6 @@ description: Fill-цвета брендов для SVG
 Утилиты `fill-*` из `fill-brand` задают брендовые цвета для SVG.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-fill-brand"></iframe>
 </div>

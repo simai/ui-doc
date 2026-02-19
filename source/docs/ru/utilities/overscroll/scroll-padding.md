@@ -124,6 +124,6 @@ description: "Внутренний отступ прокрутки (scroll-paddi
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-padding"></iframe>
 </div>

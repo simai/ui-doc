@@ -74,6 +74,6 @@ description: "Начальное положение колонки сетки (g
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column-start"></iframe>
 </div>

@@ -39,6 +39,6 @@ description: Цвет тени для default / hover / active
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=element-color"></iframe>
 </div>

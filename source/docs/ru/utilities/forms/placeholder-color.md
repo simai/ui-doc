@@ -27,6 +27,6 @@ description: Цвет текста placeholder
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=placeholder-color"></iframe>
 </div>

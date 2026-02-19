@@ -88,6 +88,6 @@ description: "Заполнение объектом (object-fit)"
 масштабирование содержимого под контейнеры любого размера.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=objects&group=object-fit"></iframe>
 </div>

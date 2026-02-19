@@ -36,6 +36,6 @@ description: "Классы вращения transform-rotate"
 Где `value`: `0`, `1`, `2`, `3`, `5`, `15`, `45`, `90`, `180`.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=transform&group=transform-rotate"></iframe>
 </div>

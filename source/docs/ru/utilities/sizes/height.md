@@ -127,6 +127,6 @@ description: Высота (height)
 В этом примере высота будет 50% (`h-1/2`) при `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=height"></iframe>
 </div>

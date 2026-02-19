@@ -61,6 +61,6 @@ description: "Размер строки сетки (grid-row)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row"></iframe>
 </div>

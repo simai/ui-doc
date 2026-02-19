@@ -67,6 +67,6 @@ description: "Выравнивание содержимого по основн�
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden">
+<div class="sf-playground overflow-hidden border">
 <iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-content"></iframe>
 </div>
