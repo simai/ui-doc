@@ -22,6 +22,6 @@ description: Скрытие и возврат контента для screen rea
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=sr-only"></iframe>
 </div>

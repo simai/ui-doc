@@ -66,6 +66,6 @@ description: "Размещение элементов по обеим осям (
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-items"></iframe>
 </div>

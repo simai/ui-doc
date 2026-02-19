@@ -131,6 +131,6 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=element-position"></iframe>
 </div>

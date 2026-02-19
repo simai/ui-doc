@@ -65,6 +65,6 @@ description: "Разрыв после колонки (break-after)"
 настройку адаптивных макетов и многостраничных документов.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=layout-break&group=break-after"></iframe>
 </div>

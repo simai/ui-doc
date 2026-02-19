@@ -45,6 +45,6 @@ description: "Цвет ползунка прокрутки (scroll-slider-color 
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-color"></iframe>
 </div>

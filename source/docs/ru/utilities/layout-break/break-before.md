@@ -65,6 +65,6 @@ description: "Разрыв до элемента (break-before)"
 адаптивными макетами и многостраничными документами.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=layout-break&group=break-before"></iframe>
 </div>

@@ -13,6 +13,6 @@ description: Внутреннее положение ring
 Утилита `ring-inset` переводит кольцо (`ring`) во внутреннюю часть элемента.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=ring-inset"></iframe>
 </div>

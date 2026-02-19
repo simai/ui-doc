@@ -28,7 +28,7 @@ description: Введение
 
 Ниже приведен небольшой пример кода, демонстрирующий применение нескольких модификаторов:
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=buttons&group=buttons"></iframe>
 </div>
 

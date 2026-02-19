@@ -15,6 +15,6 @@ description: Фоновые цвета брендов соцсетей и сер
 Примеры: `bg-fb`, `bg-youtube`, `bg-whatsapp`, `bg-instagram`, `bg-telegram`, `bg-linkedin`, `bg-vk`.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-color-brand"></iframe>
 </div>

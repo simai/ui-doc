@@ -19,6 +19,6 @@ description: Nonzero и evenodd для SVG fill-rule
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-fill-rule"></iframe>
 </div>

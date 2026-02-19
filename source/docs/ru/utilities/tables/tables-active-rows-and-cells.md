@@ -28,6 +28,6 @@ description: Активные строки и ячейки
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=tables-active-rows-and-cells"></iframe>
 </div>

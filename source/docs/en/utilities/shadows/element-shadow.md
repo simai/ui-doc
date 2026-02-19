@@ -38,6 +38,6 @@ description: Element depth and hover shadow states
 
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"></iframe>
 </div>

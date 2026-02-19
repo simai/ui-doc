@@ -124,6 +124,6 @@ description: Внешний отступ прокрутки
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-margin"></iframe>
 </div>

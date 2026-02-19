@@ -54,6 +54,6 @@ description: "Метод расчёта размера элемента (box-siz
 габаритами, упрощая верстку.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=box-sizing"></iframe>
 </div>

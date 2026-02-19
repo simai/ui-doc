@@ -88,6 +88,6 @@ description: "Базисный размер (flex-basis)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=flex&group=flex-basis"></iframe>
 </div>

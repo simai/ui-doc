@@ -150,6 +150,6 @@ description: Ширина (width)
 В этом примере ширина будет 50% (`w-1/2`) только при размерах экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=width"></iframe>
 </div>

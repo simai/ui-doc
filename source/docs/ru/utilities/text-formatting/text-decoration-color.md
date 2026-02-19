@@ -13,6 +13,6 @@ description: Цвет text-decoration
 Примеры: `decoration-primary`, `decoration-secondary`, `decoration-error`, `decoration-success`, `decoration-current`, `decoration-transparent`.
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration-color"></iframe>
 </div>

@@ -111,6 +111,6 @@ description: "Обработка пробелов (white-space)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
+<div class="sf-playground overflow-hidden border border-surface-overlay">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=white-space"></iframe>
 </div>
