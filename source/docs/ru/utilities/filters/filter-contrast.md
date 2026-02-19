@@ -7,7 +7,7 @@ description: "Контрастность элемента (filter-contrast)"
 
 # Контрастность элемента (filter-contrast)
 
-!rtags[filter-contrast]
+!rtags[filter-contrast hover]
 
 
 

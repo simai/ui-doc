@@ -7,7 +7,7 @@ description: Толщина внешней границы
 
 # Толщина внешней границы
 
-!rtags[outline-width]
+!rtags[outline-width focus]
 
 
 | Класс | Значение |

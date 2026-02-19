@@ -7,7 +7,7 @@ description: "Монохромность элемента (filter-grayscale)"
 
 # Монохромность элемента (filter-grayscale)
 
-!rtags[filter-grayscale]
+!rtags[filter-grayscale hover]
 
 
 

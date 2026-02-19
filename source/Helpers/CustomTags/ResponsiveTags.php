@@ -31,13 +31,14 @@ final class ResponsiveTags extends BaseTag
 
         $utility = trim((string) ($attrs['utility'] ?? $attrs['name'] ?? ''));
         $bpsRaw = trim((string) ($attrs['bps'] ?? $attrs['breakpoints'] ?? ''));
+        $statesRaw = trim((string) ($attrs['states'] ?? $attrs['state'] ?? ''));
 
         if ($raw !== '') {
             $parts = preg_split('/[\s,|]+/u', $raw, -1, PREG_SPLIT_NO_EMPTY) ?: [];
             if ($utility === '' && isset($parts[0])) {
                 $utility = array_shift($parts);
             }
-            if ($bpsRaw === '' && ! empty($parts)) {
+            if ($bpsRaw === '' && $statesRaw === '' && ! empty($parts)) {
                 $bpsRaw = implode(' ', $parts);
             }
         }
@@ -51,15 +52,15 @@ final class ResponsiveTags extends BaseTag
             return '';
         }
 
-        $breakpoints = $this->normalizeBreakpoints($bpsRaw);
+        $modifiers = $this->normalizeModifiers(trim($bpsRaw . ' ' . $statesRaw));
         $utilityHtml = htmlspecialchars($utility, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
         $html = '<div class="flex flex-wrap m-block-1 gap-1/3">';
         $html .= $this->renderBadge($utilityHtml, true);
 
-        foreach ($breakpoints as $bp) {
-            $bpHtml = htmlspecialchars($bp, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-            $html .= $this->renderBadge($bpHtml, false);
+        foreach ($modifiers as $modifier) {
+            $modifierHtml = htmlspecialchars($modifier, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+            $html .= $this->renderBadge($modifierHtml, false);
         }
 
         $html .= '</div>';
@@ -67,9 +68,41 @@ final class ResponsiveTags extends BaseTag
         return $html;
     }
 
-    private function normalizeBreakpoints(string $raw): array
+    private function normalizeModifiers(string $raw): array
     {
-        $allowed = ['sm', 'md', 'lg', 'xl', 'xxl'];
+        $allowed = [
+            // Breakpoints
+            'xs',
+            'sm',
+            'md',
+            'lg',
+            'xl',
+            'xxl',
+            // States / pseudo-states
+            'hover',
+            'focus',
+            'focus-visible',
+            'focus-within',
+            'active',
+            'visited',
+            'disabled',
+            'checked',
+            'required',
+            'invalid',
+            'valid',
+            'read-only',
+            'open',
+            'target',
+            // Group/media-like modifiers often used in utility chains
+            'group-hover',
+            'group-focus',
+            'motion-safe',
+            'motion-reduce',
+            'dark',
+            'print',
+            'rtl',
+            'ltr',
+        ];
         $parts = preg_split('/[\s,|]+/u', strtolower(trim($raw)), -1, PREG_SPLIT_NO_EMPTY) ?: [];
         if (empty($parts)) {
             return [];

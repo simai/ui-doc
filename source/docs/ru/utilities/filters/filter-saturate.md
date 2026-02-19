@@ -7,7 +7,7 @@ description: "Насыщенность элемента (filter-saturate)"
 
 # Насыщенность элемента (filter-saturate)
 
-!rtags[filter-saturate]
+!rtags[filter-saturate hover]
 
 
 

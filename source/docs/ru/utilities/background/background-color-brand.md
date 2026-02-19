@@ -7,7 +7,7 @@ description: Фоновые цвета брендов соцсетей и сер
 
 # Брендовые цвета фона
 
-!rtags[background-color-brand]
+!rtags[background-color-brand hover]
 
 
 Утилиты `bg-*` из `background-color-brand` задают брендовые цвета сервисов.

@@ -7,7 +7,7 @@ description: "Инвертирование цвета элемента (filter-i
 
 # Инвертирование цвета элемента (filter-invert)
 
-!rtags[filter-invert]
+!rtags[filter-invert hover]
 
 
 

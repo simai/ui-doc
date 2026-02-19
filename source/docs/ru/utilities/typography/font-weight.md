@@ -7,7 +7,7 @@ description: "Толщина шрифта (font-weight)"
 
 # Толщина шрифта (font-weight)
 
-!rtags[font-weight sm md lg xl]
+!rtags[font-weight sm md lg xl hover]
 
 
 

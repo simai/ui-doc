@@ -7,7 +7,7 @@ description: Цвет текста
 
 # Цвет текста
 
-!rtags[text-color]
+!rtags[text-color hover focus active]
 
 
 ## Таблица классов

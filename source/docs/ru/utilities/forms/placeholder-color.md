@@ -7,7 +7,7 @@ description: Цвет текста placeholder
 
 # Цвет placeholder
 
-!rtags[placeholder-color]
+!rtags[placeholder-color hover focus]
 
 
 Утилиты `placeholder-*` задают цвет текста placeholder у полей ввода.

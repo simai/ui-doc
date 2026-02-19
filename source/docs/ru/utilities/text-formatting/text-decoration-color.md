@@ -7,7 +7,7 @@ description: Цвет text-decoration
 
 # Цвет линий оформления (text-decoration-color)
 
-!rtags[text-decoration-color]
+!rtags[text-decoration-color hover focus active]
 
 
 Примеры: `decoration-primary`, `decoration-secondary`, `decoration-error`, `decoration-success`, `decoration-current`, `decoration-transparent`.

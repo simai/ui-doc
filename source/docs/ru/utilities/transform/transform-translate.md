@@ -7,7 +7,7 @@ description: "Классы смещения transform-translate"
 
 # Смещение (transform-translate)
 
-!rtags[transform-translate]
+!rtags[transform-translate hover]
 
 
 `transform-translate` сдвигает элемент по оси `x` и/или `y`.

@@ -7,7 +7,7 @@ description: "Акцентный цвет (accent-color)"
 
 # Акцентный цвет (accent-color)
 
-!rtags[accent-color]
+!rtags[accent-color hover]
 
 
 

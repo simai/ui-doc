@@ -7,7 +7,7 @@ description: "Размытие элемента (filter-blur)"
 
 # Размытие элемента (filter-blur)
 
-!rtags[filter-blur]
+!rtags[filter-blur hover]
 
 
 

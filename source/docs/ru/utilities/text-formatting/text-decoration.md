@@ -7,7 +7,7 @@ description: underline, overline, line-through, decoration-none
 
 # Линии оформления текста (text-decoration)
 
-!rtags[text-decoration]
+!rtags[text-decoration hover focus active]
 
 
 - `.underline`

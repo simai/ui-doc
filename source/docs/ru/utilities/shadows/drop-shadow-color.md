@@ -7,7 +7,7 @@ description: "Цвет падающей тени (drop-shadow-color)"
 
 # Цвет падающей тени (drop-shadow-color)
 
-!rtags[drop-shadow-color]
+!rtags[drop-shadow-color hover]
 
 
 

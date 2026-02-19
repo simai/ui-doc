@@ -7,7 +7,7 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 
 # Вращение оттенка элемента (filter-hue-rotate)
 
-!rtags[filter-hue-rotate]
+!rtags[filter-hue-rotate hover]
 
 
 

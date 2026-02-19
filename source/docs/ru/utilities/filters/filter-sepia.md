@@ -7,7 +7,7 @@ description: "Сепия элемента (filter-sepia)"
 
 # Сепия элемента (filter-sepia)
 
-!rtags[filter-sepia]
+!rtags[filter-sepia hover]
 
 
 

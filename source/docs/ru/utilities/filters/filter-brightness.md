@@ -7,7 +7,7 @@ description: "Яркость элемента (filter-brightness)"
 
 # Яркость элемента (filter-brightness)
 
-!rtags[filter-brightness]
+!rtags[filter-brightness hover]
 
 
 

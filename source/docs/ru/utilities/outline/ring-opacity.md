@@ -7,7 +7,7 @@ description: Прозрачность цвета ring
 
 # Прозрачность кольца (ring-opacity)
 
-!rtags[ring-opacity]
+!rtags[ring-opacity hover focus]
 
 
 Утилиты `ring-opacity-*` задают прозрачность цвета кольца.

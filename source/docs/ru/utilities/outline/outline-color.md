@@ -7,7 +7,7 @@ description: Цвет внешней границы
 
 # Цвет внешней границы
 
-!rtags[outline-color]
+!rtags[outline-color hover focus active]
 
 
 | Класс | Значение |

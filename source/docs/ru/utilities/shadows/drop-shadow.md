@@ -7,7 +7,7 @@ description: "Падающая тень (drop-shadow)"
 
 # Падающая тень (drop-shadow)
 
-!rtags[drop-shadow]
+!rtags[drop-shadow hover]
 
 
 

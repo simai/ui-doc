@@ -7,7 +7,7 @@ description: Цвет границы
 
 # Цвет границы
 
-!rtags[border-color]
+!rtags[border-color hover focus active]
 
 
 Утилиты цвета границы позволяют быстро назначать цвет рамки через токены SIMAI.

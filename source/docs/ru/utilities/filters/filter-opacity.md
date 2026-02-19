@@ -7,7 +7,7 @@ description: "Прозрачность элемента (filter-opacity)"
 
 # Прозрачность элемента (filter-opacity)
 
-!rtags[filter-opacity]
+!rtags[filter-opacity hover]
 
 
 
