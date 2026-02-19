@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Одновременное выравнивание по двум осям (flex-align)"
@@ -7,7 +7,6 @@ description: "Одновременное выравнивание по двум 
 
 # Одновременное выравнивание по двум осям (flex-align)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/flex-align.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/flex-align.php)
 
 Данные модификаторы позволяют задать одновременное выравнивание содержимого флексбокса сразу по основной и поперечной
 оси, фактически комбинируя свойства `justify-content` и `align-items`.

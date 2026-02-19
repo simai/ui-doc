@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Плавающий элемент (float)
@@ -7,7 +7,8 @@ description: Плавающий элемент (float)
 
 # Плавающий элемент (float)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/float.php](https://dev.ru.simai.io/ru/ui/utility/layout/float.php)
+!rtags[float sm md lg xl]
+
 
 Модификаторы `float` управляют обтеканием и используют логические стороны (`inline-start`, `inline-end`), чтобы работать в LTR/RTL.
 
@@ -70,6 +71,6 @@ description: Плавающий элемент (float)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=float"></iframe>
 </div>

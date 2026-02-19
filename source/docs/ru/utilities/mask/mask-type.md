@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Тип маски
@@ -7,7 +7,9 @@ description: Тип маски
 
 # Тип маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-type.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-type.php)
+!rtags[mask-type]
+
+
 
 `mask-type` задает, какой канал использовать для вычисления маски.
 
@@ -27,6 +29,6 @@ description: Тип маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-type"></iframe>
 </div>

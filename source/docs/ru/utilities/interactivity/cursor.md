@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вид курсора (cursor)
@@ -7,7 +7,9 @@ description: Вид курсора (cursor)
 
 # Вид курсора (cursor)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/cursor.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/cursor.php)
+!rtags[cursor]
+
+
 
 С помощью данных модификаторов вы можете управлять стилем курсора мыши при наведении на элемент.
 
@@ -79,6 +81,6 @@ description: Вид курсора (cursor)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=cursor"></iframe>
 </div>

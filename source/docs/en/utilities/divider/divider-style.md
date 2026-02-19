@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль разделителя
@@ -7,7 +7,6 @@ description: Стиль разделителя
 
 # Стиль разделителя
 
-[https://dev.ru.simai.io/ru/ui/utility/divider/divider-style.php](https://dev.ru.simai.io/ru/ui/utility/divider/divider-style.php)
 
 В SIMAI Framework с помощью модификаторов можно задать стиль отображения разделителя между элементами. Разделитель может
 быть сплошным, пунктирным, точечным, двойным, скрытым или отсутствовать вовсе.

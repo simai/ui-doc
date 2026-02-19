@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Стиль маркера списка (list-style-type)"
@@ -7,7 +7,6 @@ description: "Стиль маркера списка (list-style-type)"
 
 # Стиль маркера списка (list-style-type)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/list-style-type.php](https://dev.ru.simai.io/ru/ui/utility/typography/list-style-type.php)
 
 С помощью модификаторов можно изменить вид маркера списка.
 

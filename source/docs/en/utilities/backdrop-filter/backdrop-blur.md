@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размытие фона элемента (backdrop-blur)"
@@ -7,7 +7,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 
 # Размытие фона элемента (backdrop-blur)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-blur.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-blur.php)
 
 Данный модификатор позволяет размывать задний фон элемента.
 

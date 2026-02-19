@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Ширина (width)
@@ -7,7 +7,6 @@ description: Ширина (width)
 
 # Ширина (width)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/width.php](https://dev.ru.simai.io/ru/ui/utility/size/width.php)
 
 В SIMAI Framework с помощью модификаторов можно задать ширину элемента. С помощью данных классов можно быстро определить
 ширину блока, используя как фиксированные размеры, так и пропорциональные величины, зависящие от родительского элемента

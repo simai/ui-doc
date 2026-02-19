@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Область маски
@@ -7,7 +7,9 @@ description: Область маски
 
 # Область маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-clip.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-clip.php)
+!rtags[mask-clip]
+
+
 
 `mask-clip` ограничивает область, в которой маска влияет на содержимое.
 
@@ -36,6 +38,6 @@ description: Область маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-clip"></iframe>
 </div>

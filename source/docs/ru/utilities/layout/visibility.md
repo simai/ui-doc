@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Видимость элемента (visibility)
@@ -7,7 +7,8 @@ description: Видимость элемента (visibility)
 
 # Видимость элемента (visibility)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/visibility.php](https://dev.ru.simai.io/ru/ui/utility/layout/visibility.php)
+!rtags[visibility sm md lg xl]
+
 
 С помощью данных модификаторов можно управлять видимостью элементов, сохраняя их место в DOM. Это позволяет, например,
 скрыть элемент визуально, но при этом не нарушать поток документа.
@@ -64,6 +65,6 @@ description: Видимость элемента (visibility)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=visibility"></iframe>
 </div>

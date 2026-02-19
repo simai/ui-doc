@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Точка трансформации (transform-origin)"
@@ -6,6 +6,9 @@ description: "Классы точки трансформации transform-origi
 ---
 
 # Точка трансформации (transform-origin)
+
+!rtags[transform-origin]
+
 
 `transform-origin` задает точку, относительно которой выполняется `rotate/scale/skew`.
 
@@ -33,6 +36,6 @@ description: "Классы точки трансформации transform-origi
 Используйте logical-названия `inline-start/inline-end` для корректной LTR/RTL семантики в разметке.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=transform&group=transform-origin"></iframe>
 </div>

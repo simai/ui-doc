@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Активные строки и ячейки
@@ -6,6 +6,9 @@ description: Активные строки и ячейки
 ---
 
 # Активные строки и ячейки
+
+!rtags[tables-active-rows-and-cells]
+
 
 ## Таблица классов
 
@@ -25,6 +28,6 @@ description: Активные строки и ячейки
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=tables-active-rows-and-cells"></iframe>
 </div>

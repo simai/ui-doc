@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание отдельного элемента по поперечной оси (align-self)"
@@ -7,7 +7,8 @@ description: "Выравнивание отдельного элемента п�
 
 # Выравнивание отдельного элемента по поперечной оси (align-self)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/align-self.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/align-self.php)
+!rtags[align-self sm md lg xl]
+
 
 Данные модификаторы определяют, как отдельно взятый элемент в сетке или флексбоксе будет выравнен внутри своей ячейки
 относительно поперечной оси.
@@ -65,6 +66,6 @@ description: "Выравнивание отдельного элемента п�
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-self"></iframe>
 </div>

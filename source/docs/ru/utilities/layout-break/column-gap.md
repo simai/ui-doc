@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Межколоночный интервал (column-gap)"
@@ -6,6 +6,9 @@ description: "Утилита col-gap-* задаёт расстояние меж�
 ---
 
 # Межколоночный интервал (column-gap)
+
+!rtags[column-gap sm md lg xl]
+
 
 Модификатор `col-gap-*` задаёт расстояние между колонками в многоколоночном макете (`layout-col-*`). Используются те же размерные токены, что и для отступов (`--sf-space-*`).
 
@@ -38,6 +41,6 @@ description: "Утилита col-gap-* задаёт расстояние меж�
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout-break&group=column-gap"></iframe>
 </div>

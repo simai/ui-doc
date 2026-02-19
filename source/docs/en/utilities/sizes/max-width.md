@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальная ширина (max-width)"
@@ -7,7 +7,6 @@ description: "Максимальная ширина (max-width)"
 
 # Максимальная ширина (max-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/max-width.php](https://dev.ru.simai.io/ru/ui/utility/size/max-width.php)
 
 В SIMAI Framework с помощью модификаторов можно задать максимальную ширину элемента, адаптируя её под разные размеры
 экранов или ограничения дизайна.

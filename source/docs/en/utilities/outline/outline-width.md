@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина внешней границы
@@ -7,7 +7,6 @@ description: Толщина внешней границы
 
 # Толщина внешней границы
 
-[https://dev.ru.simai.io/ru/ui/utility/outline/outline-width.php](https://dev.ru.simai.io/ru/ui/utility/outline/outline-width.php)
 
 С помощью модификаторов толщины внешней границы вы можете гибко управлять её размерами, подстраивая внешний вид
 элементов под различные размеры экранов.

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Шаблон колонок сетки (grid-template-columns)"
@@ -7,7 +7,6 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 
 # Шаблон колонок сетки (grid-template-columns)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-columns.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-columns.php)
 
 В SIMAI Framework с помощью модификаторов можно создать сетку с определённым количеством равных по ширине колонок.
 

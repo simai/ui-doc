@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Положение фона
@@ -7,7 +7,9 @@ description: Положение фона
 
 # Положение фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-position.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-position.php)
+!rtags[background-position sm md lg xl]
+
+
 
 С помощью модификаторов `background-position` вы можете управлять положением фонового изображения в пределах элемента.
 
@@ -84,6 +86,6 @@ description: Положение фона
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-position"></iframe>
 </div>

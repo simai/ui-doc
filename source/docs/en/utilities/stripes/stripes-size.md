@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Размер полосок
@@ -7,7 +7,6 @@ description: Размер полосок
 
 # Размер полосок
 
-[https://dev.ru.simai.io/ru/ui/utility/stripe/stripe-width.php](https://dev.ru.simai.io/ru/ui/utility/stripe/stripe-width.php)
 
 С помощью модификаторов `stripe-size-{1...4}` можно изменить размер полосок в паттерне фона. Каждый модификатор
 устанавливает переменную `--sf-stripe--size` в определенное значение, что влияет на размер повторяющихся полос.

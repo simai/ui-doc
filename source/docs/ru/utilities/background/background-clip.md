@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Обрезка фона
@@ -7,7 +7,9 @@ description: Обрезка фона
 
 # Обрезка фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-clip.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-clip.php)
+!rtags[background-clip sm md lg xl]
+
+
 
 С помощью модификаторов `background-clip` вы можете управлять тем, как фон распределяется под границами элемента и его
 содержимым.
@@ -83,6 +85,6 @@ description: Обрезка фона
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-clip"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Границы вокруг ячеек
@@ -6,6 +6,9 @@ description: Управление схлопыванием границ и ра�
 ---
 
 # Границы вокруг ячеек
+
+!rtags[table-border-cells]
+
 
 Утилиты этой группы управляют поведением границ таблицы.
 
@@ -32,6 +35,6 @@ description: Управление схлопыванием границ и ра�
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=table-border-cells"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Наследование цвета ссылок
@@ -6,6 +6,9 @@ description: Наследование цвета ссылок
 ---
 
 # Наследование цвета ссылок
+
+!rtags[heritage-link-color]
+
 
 Утилиты наследования делают ссылку цветом текущего текста.
 
@@ -37,6 +40,6 @@ description: Наследование цвета ссылок
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=links&group=heritage-link-color"></iframe>
 </div>

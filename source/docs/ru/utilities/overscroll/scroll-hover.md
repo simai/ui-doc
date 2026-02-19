@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Полоса прокрутки при наведении (scroll-hover)"
@@ -6,6 +6,9 @@ description: "Полоса прокрутки при наведении (scroll-
 ---
 
 # Полоса прокрутки при наведении (scroll-hover)
+
+!rtags[scroll-hover]
+
 
 Перед вами пример решения, при котором полоса прокрутки по умолчанию скрыта или сведена к минимальному отображению, а
 при наведении курсора на контейнер с классом `.scroll-hover` — полоса плавно появляется.
@@ -90,6 +93,6 @@ description: "Полоса прокрутки при наведении (scroll-
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-hover"></iframe>
 </div>

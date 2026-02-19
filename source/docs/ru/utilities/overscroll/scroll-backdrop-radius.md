@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Радиус границы подложки прокрутки (scroll-backdrop-radius)"
@@ -7,7 +7,9 @@ description: "Радиус границы подложки прокрутки (s
 
 # Радиус границы подложки прокрутки (scroll-backdrop-radius)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-radius.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-radius.php)
+!rtags[scroll-backdrop-radius]
+
+
 
 ## Классы и их значения
 
@@ -42,6 +44,6 @@ description: "Радиус границы подложки прокрутки (s
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-radius"></iframe>
 </div>

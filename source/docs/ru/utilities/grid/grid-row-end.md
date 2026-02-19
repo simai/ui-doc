@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: 'Конечное положение строки сетки (grid-row-end)'
@@ -7,7 +7,8 @@ description: 'Конечное положение строки сетки (grid-
 
 # Конечное положение строки сетки (grid-row-end)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-row-end.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-row-end.php)
+!rtags[grid-row-end sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, на какой строке заканчивается элемент в сетке, определяя
 его конечное положение относительно строк.
@@ -69,6 +70,6 @@ description: 'Конечное положение строки сетки (grid-
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row-end"></iframe>
 </div>

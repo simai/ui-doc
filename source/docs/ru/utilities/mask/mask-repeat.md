@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Повтор маски
@@ -7,7 +7,9 @@ description: Повтор маски
 
 # Повтор маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-repeat.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-repeat.php)
+!rtags[mask-repeat]
+
+
 
 С помощью модификаторов повтора маски можно управлять тем, как будет повторяться маска внутри элемента.
 
@@ -67,6 +69,6 @@ description: Повтор маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-repeat"></iframe>
 </div>

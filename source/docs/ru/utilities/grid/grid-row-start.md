@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Начальное положение строки сетки (grid-row-start)"
@@ -7,7 +7,8 @@ description: "Начальное положение строки сетки (gri
 
 # Начальное положение строки сетки (grid-row-start)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-row-start.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-row-start.php)
+!rtags[grid-row-start sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, с какой строки начинается элемент в сетке, задавая его
 положение относительно строк.
@@ -64,6 +65,6 @@ description: "Начальное положение строки сетки (gri
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row-start"></iframe>
 </div>

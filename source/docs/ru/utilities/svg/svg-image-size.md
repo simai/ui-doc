@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Размер SVG-изображений
@@ -6,6 +6,9 @@ description: Размер SVG-изображений
 ---
 
 # Размер SVG-изображений
+
+!rtags[svg-image-size sm md lg xl]
+
 
 Классы `svg-*` задают `width` и `height` по текстовой шкале токенов.
 
@@ -24,6 +27,6 @@ description: Размер SVG-изображений
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-image-size"></iframe>
 </div>

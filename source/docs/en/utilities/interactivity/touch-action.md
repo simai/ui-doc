@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Сенсорное действие (touch-action)"
@@ -7,7 +7,6 @@ description: "Сенсорное действие (touch-action)"
 
 # Сенсорное действие (touch-action)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/touch-action.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/touch-action.php)
 
 С помощью данных модификаторов вы можете управлять поведением прокрутки и масштабирования элемента на сенсорных экранах.
 Это может оказаться полезным, если вы хотите ограничить или изменить направление прокрутки, либо отключить определённые

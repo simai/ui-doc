@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание каждого элемента в ячейках по поперечной оси (align-items)"
@@ -7,7 +7,6 @@ description: "Выравнивание каждого элемента в яче
 
 # Выравнивание каждого элемента в ячейках по поперечной оси (align-items)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/align-items.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/align-items.php)
 
 Данные модификаторы определяют, как каждый элемент внутри ячейки сетки или флексбокса будет выравниваться относительно
 поперечной оси.

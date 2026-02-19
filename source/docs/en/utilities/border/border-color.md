@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет границы
@@ -7,7 +7,6 @@ description: Цвет границы
 
 # Цвет границы
 
-[https://dev.ru.simai.io/ru/ui/utility/border/border-color.php](https://dev.ru.simai.io/ru/ui/utility/border/border-color.php)
 
 С помощью модификаторов цвета границы в SIMAI Framework вы можете задать  
 цвет границы для элемента, используя предустановленные цветовые роли.

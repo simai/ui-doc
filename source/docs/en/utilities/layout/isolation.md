@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Контекст наложения (isolation)
@@ -7,7 +7,6 @@ description: Контекст наложения (isolation)
 
 # Контекст наложения (isolation)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/isolation.php](https://dev.ru.simai.io/ru/ui/utility/layout/isolation.php)
 
 Модификатор `isolation` предназначен для управления контекстом наложения элемента. Он определяет, будет ли элемент и его
 потомки создавать новый контекст наложения, что особенно полезно при использовании эффектов наложения или смешивания

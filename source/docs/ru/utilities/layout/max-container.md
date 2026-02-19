@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальный размер контейнера (max-container)"
@@ -7,7 +7,8 @@ description: "Максимальный размер контейнера (max-co
 
 # Максимальный размер контейнера (max-container)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/max-container.php](https://dev.ru.simai.io/ru/ui/utility/layout/max-container.php)
+!rtags[max-container]
+
 
 Данный модификатор позволяет изменить максимальную ширину контейнера при достижении определённой контрольной точки. В
 новой версии фреймворка размеры привязаны к переменным масштабирования из системы размеров. По умолчанию, данные
@@ -59,6 +60,6 @@ description: "Максимальный размер контейнера (max-co
 для крупноформатных дисплеев и высоких разрешений.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=max-container"></iframe>
 </div>

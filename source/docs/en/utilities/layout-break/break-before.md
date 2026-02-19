@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Разрыв до элемента (break-before)"
@@ -7,7 +7,6 @@ description: "Разрыв до элемента (break-before)"
 
 # Разрыв до элемента (break-before)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout-break/break-before.php](https://dev.ru.simai.io/ru/ui/utility/layout-break/break-before.php)
 
 Модификатор `break-before` в SIMAI Framework позволяет контролировать разрывы столбца или страницы до определённого
 элемента. Это полезно при работе с многостраничными документами или макетами, где требуется точное управление разбиением

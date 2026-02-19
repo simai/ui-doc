@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Начальное положение колонки сетки (grid-column-start)"
@@ -7,7 +7,6 @@ description: "Начальное положение колонки сетки (g
 
 # Начальное положение колонки сетки (grid-column-start)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-column-start.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-column-start.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять начальным положением столбцов в сетке, задавая от какой линии
 сетки элемент должен начинаться.

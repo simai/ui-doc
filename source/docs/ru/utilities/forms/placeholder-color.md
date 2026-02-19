@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет placeholder
@@ -6,6 +6,9 @@ description: Цвет текста placeholder
 ---
 
 # Цвет placeholder
+
+!rtags[placeholder-color]
+
 
 Утилиты `placeholder-*` задают цвет текста placeholder у полей ввода.
 
@@ -24,6 +27,6 @@ description: Цвет текста placeholder
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=placeholder-color"></iframe>
 </div>

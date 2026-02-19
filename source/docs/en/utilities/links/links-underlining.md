@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Подчеркивание ссылок
@@ -7,7 +7,6 @@ description: Подчеркивание ссылок
 
 # Подчеркивание ссылок
 
-[https://dev.ru.simai.io/ru/ui/utility/link/link-underline.php](https://dev.ru.simai.io/ru/ui/utility/link/link-underline.php)
 
 С помощью модификатора подчеркивания ссылок в SIMAI Framework можно убрать  
 подчеркивание ссылки, оставив её без оформления по умолчанию.

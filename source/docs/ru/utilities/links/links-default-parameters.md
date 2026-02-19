@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию
@@ -6,6 +6,9 @@ description: Параметры по умолчанию
 ---
 
 # Параметры по умолчанию
+
+!rtags[links-default-parameters]
+
 
 Ссылки по умолчанию используют токены темы и меняют цвет в состояниях `:hover`, `:active`, `:visited`.
 
@@ -26,6 +29,6 @@ description: Параметры по умолчанию
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=links&group=links-default-parameters"></iframe>
 </div>

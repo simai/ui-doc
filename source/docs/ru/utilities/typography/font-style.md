@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Стиль шрифта (font-style)"
@@ -7,7 +7,9 @@ description: "Стиль шрифта (font-style)"
 
 # Стиль шрифта (font-style)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-style.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-style.php)
+!rtags[font-style]
+
+
 
 Модификаторы для управления стилем шрифта позволяют задать наклонный (italic) или нормальный стиль.
 
@@ -41,6 +43,6 @@ description: "Стиль шрифта (font-style)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=font-style"></iframe>
 </div>

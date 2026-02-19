@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль разделителя
@@ -6,6 +6,9 @@ description: Стиль разделителя
 ---
 
 # Стиль разделителя
+
+!rtags[divider-style]
+
 
 Утилиты стиля определяют тип линии разделителя.
 
@@ -32,6 +35,6 @@ description: Стиль разделителя
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=divider&group=divider-style"></iframe>
 </div>

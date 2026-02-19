@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию
@@ -7,7 +7,6 @@ description: Параметры по умолчанию
 
 # Параметры по умолчанию
 
-[https://dev.ru.simai.io/ru/ui/utility/outline/outline-default.php](https://dev.ru.simai.io/ru/ui/utility/outline/outline-default.php)
 
 В большинстве случаев будет использоваться внешняя граница (outline) с параметрами по умолчанию. Для упрощения добавлены
 два модификатора: один для установки внешней границы, другой — для её удаления. Стили по этим модификаторам должны

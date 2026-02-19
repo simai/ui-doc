@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание отдельного элемента в ячейке по основной оси (justify-self)"
@@ -7,7 +7,8 @@ description: "Выравнивание отдельного элемента в 
 
 # Выравнивание отдельного элемента в ячейке по основной оси (justify-self)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/justify-self.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/justify-self.php)
+!rtags[justify-self sm md lg xl]
+
 
 Данные модификаторы определяют, как отдельный элемент будет выравниваться по основной оси внутри своей ячейки сетки или
 флекс-контейнера.
@@ -50,6 +51,6 @@ description: "Выравнивание отдельного элемента в 
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-self"></iframe>
 </div>

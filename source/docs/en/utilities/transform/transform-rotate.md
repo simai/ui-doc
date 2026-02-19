@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Вращение (transform-rotate)"
@@ -7,7 +7,6 @@ description: "Вращение (transform-rotate)"
 
 # Вращение (transform-rotate)
 
-[https://dev.ru.simai.io/ru/ui/utility/transform/transform-rotate.php](https://dev.ru.simai.io/ru/ui/utility/transform/transform-rotate.php)
 
 С помощью модификаторов вращения `transform-rotate` в SIMAI Framework вы можете поворачивать элементы на заданный угол.
 Это удобно для создания анимаций или эффектов при наведении курсора (hover) без ручного переопределения стилей.

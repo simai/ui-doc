@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Брендовые цвета фона
@@ -7,11 +7,14 @@ description: Фоновые цвета брендов соцсетей и сер
 
 # Брендовые цвета фона
 
+!rtags[background-color-brand]
+
+
 Утилиты `bg-*` из `background-color-brand` задают брендовые цвета сервисов.
 
 Примеры: `bg-fb`, `bg-youtube`, `bg-whatsapp`, `bg-instagram`, `bg-telegram`, `bg-linkedin`, `bg-vk`.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-color-brand"></iframe>
 </div>

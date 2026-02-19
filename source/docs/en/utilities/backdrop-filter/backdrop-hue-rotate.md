@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
@@ -7,7 +7,6 @@ description: "Вращение оттенка фона элемента (backdro
 
 # Вращение оттенка фона элемента (backdrop-hue-rotate)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-hue-rotate.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-hue-rotate.php)
 
 Данный модификатор позволяет управлять вращением оттенка фона элемента.
 

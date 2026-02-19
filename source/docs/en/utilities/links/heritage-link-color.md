@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Наследственный цвет ссылок
@@ -7,7 +7,6 @@ description: Наследственный цвет ссылок
 
 # Наследственный цвет ссылок
 
-[https://dev.ru.simai.io/ru/ui/utility/link/link-color-inherit.php](https://dev.ru.simai.io/ru/ui/utility/link/link-color-inherit.php)
 
 С помощью модификаторов наследования цвета в SIMAI Framework вы можете  
 сделать цвет ссылок таким же, как у обычного текста, что упрощает  

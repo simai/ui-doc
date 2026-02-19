@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Размер маски
@@ -7,7 +7,9 @@ description: Размер маски
 
 # Размер маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-size.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-size.php)
+!rtags[mask-size]
+
+
 
 Утилиты `mask-size` управляют масштабом изображения маски внутри элемента.
 
@@ -38,6 +40,6 @@ description: Размер маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-size"></iframe>
 </div>

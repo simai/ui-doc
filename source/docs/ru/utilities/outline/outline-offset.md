@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Отступ внешней границы
@@ -6,6 +6,9 @@ description: Отступ внешней границы
 ---
 
 # Отступ внешней границы
+
+!rtags[outline-offset]
+
 
 | Класс | Значение |
 |:--|:--|
@@ -35,6 +38,6 @@ description: Отступ внешней границы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=outline-offset"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Минимальная ширина (min-width)"
@@ -7,7 +7,8 @@ description: "Минимальная ширина (min-width)"
 
 # Минимальная ширина (min-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/min-width.php](https://dev.ru.simai.io/ru/ui/utility/size/min-width.php)
+!rtags[min-width sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно задать минимальную ширину элемента. Это особенно полезно при создании
 адаптивных макетов, когда необходимо гарантировать, что элемент не станет уже заданного порога ширины даже при
@@ -83,6 +84,6 @@ description: "Минимальная ширина (min-width)"
 В этом примере минимальная ширина будет 100% (`min-w-full`) только при размерах экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=min-width"></iframe>
 </div>

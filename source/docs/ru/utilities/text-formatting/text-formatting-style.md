@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль оформления текста
@@ -6,6 +6,9 @@ description: Стиль оформления текста
 ---
 
 # Стиль оформления текста
+
+!rtags[text-formatting-style]
+
 
 ## Таблица классов
 
@@ -30,6 +33,6 @@ description: Стиль оформления текста
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-style"></iframe>
 </div>

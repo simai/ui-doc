@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление кода
@@ -7,7 +7,6 @@ description: Оформление кода
 
 # Оформление кода
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/code.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/code.php)
 
 Для оформления текста кода во фреймворке используется набор переменных,  
 которые позволяют быстро менять его внешний вид. К выделенному коду  

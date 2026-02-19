@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вид курсора (cursor)
@@ -7,7 +7,6 @@ description: Вид курсора (cursor)
 
 # Вид курсора (cursor)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/cursor.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/cursor.php)
 
 С помощью данных модификаторов вы можете управлять стилем курсора мыши при наведении на элемент.
 

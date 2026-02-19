@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Контейнер (container)
@@ -7,7 +7,6 @@ description: Контейнер (container)
 
 # Контейнер (container)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/container.php](https://dev.ru.simai.io/ru/ui/utility/layout/container.php)
 
 Контейнер используется для ограничения ширины и добавления горизонтальных отступов в зависимости от размера области
 просмотра. По умолчанию ширина контейнера устанавливается в 100%, а также добавляется внутренний отступ, чтобы контент

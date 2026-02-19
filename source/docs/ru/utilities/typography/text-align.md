@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание текста (text-align)"
@@ -7,7 +7,9 @@ description: "Выравнивание текста (text-align)"
 
 # Выравнивание текста (text-align)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-align.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-align.php)
+!rtags[text-align sm md lg xl]
+
+
 
 С помощью модификаторов вы можете задать выравнивание текста.
 
@@ -58,6 +60,6 @@ description: "Выравнивание текста (text-align)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-align"></iframe>
 </div>

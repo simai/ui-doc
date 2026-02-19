@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Контрастность элемента (filter-contrast)"
@@ -7,7 +7,9 @@ description: "Контрастность элемента (filter-contrast)"
 
 # Контрастность элемента (filter-contrast)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-contrast.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-contrast.php)
+!rtags[filter-contrast]
+
+
 
 Данный модификатор позволяет управлять контрастностью элемента.
 
@@ -66,6 +68,6 @@ description: "Контрастность элемента (filter-contrast)"
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-contrast"></iframe>
 </div>

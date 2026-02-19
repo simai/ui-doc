@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Промежутки (space)
@@ -7,7 +7,6 @@ description: Промежутки (space)
 
 # Промежутки (space)
 
-[https://dev.ru.simai.io/ru/ui/utility/space/space.php](https://dev.ru.simai.io/ru/ui/utility/space/space.php)
 
 Модификаторы для промежутков (`space`) позволяют автоматически расставлять отступы между последовательными дочерними
 элементами, не изменяя отступы крайних элементов.

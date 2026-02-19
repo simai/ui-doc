@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание по вертикали (vertical-align)"
@@ -7,7 +7,6 @@ description: "Выравнивание по вертикали (vertical-align)"
 
 # Выравнивание по вертикали (vertical-align)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/vertical-align.php](https://dev.ru.simai.io/ru/ui/utility/typography/vertical-align.php)
 
 С помощью модификаторов вы можете выровнять строчные элементы (inline elements) по вертикали.
 

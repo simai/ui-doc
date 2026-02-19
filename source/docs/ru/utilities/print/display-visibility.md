@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Видимость элемента при печати (print-visibility)"
@@ -6,6 +6,9 @@ description: "Видимость элемента при печати (print-vis
 ---
 
 # Видимость элемента при печати (print-visibility)
+
+!rtags[display-visibility]
+
 
 Утилиты `print-visible` и `print-hidden` управляют `visibility` только внутри `@media print`.
 
@@ -35,6 +38,6 @@ description: "Видимость элемента при печати (print-vis
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=print&group=display-visibility"></iframe>
 </div>

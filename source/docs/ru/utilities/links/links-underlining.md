@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Подчеркивание ссылок
@@ -6,6 +6,9 @@ description: Подчеркивание ссылок
 ---
 
 # Подчеркивание ссылок
+
+!rtags[links-underlining]
+
 
 Утилита `link-underline-none` отключает подчеркивание у ссылки.
 
@@ -31,6 +34,6 @@ description: Подчеркивание ссылок
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=links&group=links-underlining"></iframe>
 </div>

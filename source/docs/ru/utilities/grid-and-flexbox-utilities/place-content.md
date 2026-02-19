@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размещение содержимого по обеим осям (place-content)"
@@ -7,7 +7,8 @@ description: "Размещение содержимого по обеим ося
 
 # Размещение содержимого по обеим осям (place-content)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-content.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-content.php)
+!rtags[place-content sm md lg xl]
+
 
 Модификаторы из этого раздела задают одновременное выравнивание содержимого сетки или флексбокса сразу по двум осям (
 основной и поперечной).
@@ -70,6 +71,6 @@ description: "Размещение содержимого по обеим ося
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-content"></iframe>
 </div>

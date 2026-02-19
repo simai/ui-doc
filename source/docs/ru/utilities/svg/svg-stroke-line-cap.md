@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Концы обводки (Line Cap)
@@ -6,6 +6,9 @@ description: Концы обводки (Line Cap)
 ---
 
 # Концы обводки (Line Cap)
+
+!rtags[svg-stroke-line-cap]
+
 
 Классы задают `stroke-linecap`.
 
@@ -25,6 +28,6 @@ description: Концы обводки (Line Cap)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-cap"></iframe>
 </div>

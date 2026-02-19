@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Положение фона
@@ -7,7 +7,6 @@ description: Положение фона
 
 # Положение фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-position.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-position.php)
 
 С помощью модификаторов `background-position` вы можете управлять положением фонового изображения в пределах элемента.
 

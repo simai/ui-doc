@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Прозрачность элемента (filter-opacity)"
@@ -7,7 +7,6 @@ description: "Прозрачность элемента (filter-opacity)"
 
 # Прозрачность элемента (filter-opacity)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-opacity.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-opacity.php)
 
 Данные модификаторы позволяют задавать различную степень прозрачности элемента.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Анимация элемента
@@ -7,7 +7,9 @@ description: Классы animation и infinite
 
 # Анимация элемента
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/animation.php](https://dev.ru.simai.io/ru/ui/utility/animation/animation.php)
+!rtags[animation-transition-appearing]
+
+
 
 Утилита добавляет CSS-анимацию элементу.
 
@@ -45,6 +47,6 @@ description: Классы animation и infinite
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-appearing"></iframe>
 </div>

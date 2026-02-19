@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Внутренний отступ (padding)
@@ -7,7 +7,6 @@ description: Внутренний отступ (padding)
 
 # Внутренний отступ (padding)
 
-[https://dev.ru.simai.io/ru/ui/utility/space/padding.php](https://dev.ru.simai.io/ru/ui/utility/space/padding.php)
 
 Модификатор для внутреннего отступа (`padding`) контролирует пространство между контентом элемента и его границами.
 

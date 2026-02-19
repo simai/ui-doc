@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вложение фона
@@ -7,7 +7,9 @@ description: Вложение фона
 
 # Вложение фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-attachment.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-attachment.php)
+!rtags[background-attachment sm md lg xl]
+
+
 
 С помощью модификаторов вложения фона (`background-attachment`) вы можете управлять поведением фонового изображения при
 прокрутке страницы или контейнера.
@@ -76,6 +78,6 @@ description: Вложение фона
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-attachment"></iframe>
 </div>

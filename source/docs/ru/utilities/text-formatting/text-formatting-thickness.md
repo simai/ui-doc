@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина оформления текста
@@ -6,6 +6,9 @@ description: Толщина оформления текста
 ---
 
 # Толщина оформления текста
+
+!rtags[text-formatting-thickness]
+
 
 ## Таблица классов
 
@@ -24,6 +27,6 @@ description: Толщина оформления текста
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-thickness"></iframe>
 </div>

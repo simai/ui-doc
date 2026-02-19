@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вид градиента
@@ -7,7 +7,6 @@ description: Вид градиента
 
 # Вид градиента
 
-[https://dev.ru.simai.io/ru/ui/utility/gradient/gradient-type.php](https://dev.ru.simai.io/ru/ui/utility/gradient/gradient-type.php)
 
 С помощью модификаторов вида градиента можно задать тип градиентной заливки для фона элемента.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выделение текста (user-select)"
@@ -7,7 +7,9 @@ description: "Выделение текста (user-select)"
 
 # Выделение текста (user-select)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/user-select.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/user-select.php)
+!rtags[user-select]
+
+
 
 Данные модификаторы позволяют управлять поведением выделения текста пользователем в элементе. Вы можете запретить
 выделение, автоматически выделять весь текст или использовать настройки по умолчанию.
@@ -60,6 +62,6 @@ description: "Выделение текста (user-select)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=user-select"></iframe>
 </div>

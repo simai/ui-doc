@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина границы
@@ -7,7 +7,6 @@ description: Толщина границы
 
 # Толщина границы
 
-[https://dev.ru.simai.io/ru/ui/utility/border/border-width.php](https://dev.ru.simai.io/ru/ui/utility/border/border-width.php)
 
 С помощью модификаторов толщины границы в SIMAI Framework вы можете контролировать толщину границ со всех сторон
 элемента, по горизонтали или вертикали, а также с конкретных сторон. Это позволяет точно управлять отображением границ и

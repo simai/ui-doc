@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Позиция элемента (element-position)"
@@ -7,7 +7,6 @@ description: "Позиция элемента (element-position)"
 
 # Позиция элемента (element-position)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/element-position.php](https://dev.ru.simai.io/ru/ui/utility/layout/element-position.php)
 
 Модификаторы позиционирования управляют расположением элемента внутри его родительского контейнера. Применение данных
 модификаторов эффективно при использовании свойств позиционирования (

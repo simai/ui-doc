@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет фона
@@ -7,7 +7,9 @@ description: Цвет фона
 
 # Цвет фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-color/background-color.php](https://dev.ru.simai.io/ru/ui/utility/background-color/background-color.php)
+!rtags[background-color]
+
+
 
 С помощью модификаторов цвета фона можно задать фон элемента, включая состояния при наведении (`hover``) и при активном
 состоянии (`active`).
@@ -154,6 +156,6 @@ description: Цвет фона
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-color"></iframe>
 </div>

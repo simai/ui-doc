@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Падающая тень (drop-shadow)"
@@ -7,7 +7,6 @@ description: "Падающая тень (drop-shadow)"
 
 # Падающая тень (drop-shadow)
 
-[https://dev.ru.simai.io/ru/ui/utility/shadow/drop-shadow.php](https://dev.ru.simai.io/ru/ui/utility/shadow/drop-shadow.php)
 
 Данные модификаторы позволяют задать уровень падающей тени для элемента, используя переменную
 `--sf-shadow--level-ratio`. От традиционного `box-shadow` падающая тень отличается тем, что отбрасывается только от

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Подготовка к изменениям (will-change)"
@@ -7,7 +7,6 @@ description: "Подготовка к изменениям (will-change)"
 
 # Подготовка к изменениям (will-change)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/will-change.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/will-change.php)
 
 Модификаторы позволяют оптимизировать предстоящую анимацию элементов, предупреждая браузер о будущих изменениях. Это
 может улучшить производительность анимаций и переходов.

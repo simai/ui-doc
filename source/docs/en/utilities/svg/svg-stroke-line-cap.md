@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Концы обводки (Line Cap)
@@ -7,7 +7,6 @@ description: Концы обводки (Line Cap)
 
 # Концы обводки (Line Cap)
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/stroke-linecap.php](https://dev.ru.simai.io/ru/ui/utility/svg/stroke-linecap.php)
 
 С помощью модификаторов концов обводки можно задать форму завершения линий в SVG-графике. Различные варианты позволяют
 получить разное визуальное впечатление от окончаний линий.

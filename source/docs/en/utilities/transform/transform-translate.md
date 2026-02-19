@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Смещение (transform-translate)"
@@ -7,7 +7,6 @@ description: "Смещение (transform-translate)"
 
 # Смещение (transform-translate)
 
-[https://dev.ru.simai.io/ru/ui/utility/transform/transform-translate.php](https://dev.ru.simai.io/ru/ui/utility/transform/transform-translate.php)
 
 С помощью модификаторов смещения `transform-translate` в SIMAI Framework вы можете перемещать элементы по осям X и Y на
 заданное расстояние. Это удобно для создания анимаций, эффектов при наведении (hover) или динамического позиционирования

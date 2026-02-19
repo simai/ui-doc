@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Высота (height)
@@ -7,7 +7,6 @@ description: Высота (height)
 
 # Высота (height)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/height.php](https://dev.ru.simai.io/ru/ui/utility/size/height.php)
 
 В SIMAI Framework с помощью модификаторов можно задать высоту элемента, адаптируя её под различные размеры экрана или
 особенности дизайна.  

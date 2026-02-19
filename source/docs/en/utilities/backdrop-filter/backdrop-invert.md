@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Инвертирование цвета фона элемента (backdrop-invert)"
@@ -7,7 +7,6 @@ description: "Инвертирование цвета фона элемента 
 
 # Инвертирование цвета фона элемента (backdrop-invert)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-invert.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-invert.php)
 
 Данный модификатор позволяет управлять инвертированием цвета фона элемента.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Сепия элемента (filter-sepia)"
@@ -7,7 +7,6 @@ description: "Сепия элемента (filter-sepia)"
 
 # Сепия элемента (filter-sepia)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-sepia.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-sepia.php)
 
 Данный модификатор позволяет отображать элемент с эффектом сепии, придавая ему теплый, коричневатый оттенок.
 

@@ -7,7 +7,9 @@ description: Управление размером фонового изобра
 
 # Размер фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-size.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-size.php)
+!rtags[background-size sm md lg xl]
+
+
 
 Утилиты `background-size` управляют масштабированием фонового изображения внутри элемента.
 
@@ -52,6 +54,6 @@ description: Управление размером фонового изобра
 
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-size"></iframe>
 </div>

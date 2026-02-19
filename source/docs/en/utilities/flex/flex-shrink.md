@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Сжимаемость (flex-shrink)"
@@ -7,7 +7,6 @@ description: "Сжимаемость (flex-shrink)"
 
 # Сжимаемость (flex-shrink)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex-shrink.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex-shrink.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять сжимаемостью элементов флексбокса.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Тип маски
@@ -7,7 +7,6 @@ description: Тип маски
 
 # Тип маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-type.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-type.php)
 
 С помощью модификаторов типа маски можно указать, какой канал использовать для формирования маски элемента: альфа-канал
 или яркость.

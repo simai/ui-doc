@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Вращение оттенка элемента (filter-hue-rotate)"
@@ -7,7 +7,9 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 
 # Вращение оттенка элемента (filter-hue-rotate)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-hue-rotate.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-hue-rotate.php)
+!rtags[filter-hue-rotate]
+
+
 
 Данный модификатор позволяет управлять вращением оттенка (цветового тона) элемента.
 
@@ -66,6 +68,6 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-hue-rotate"></iframe>
 </div>

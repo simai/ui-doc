@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Метод отображения элемента (display)
@@ -7,7 +7,6 @@ description: Метод отображения элемента (display)
 
 # Метод отображения элемента (display)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/display.php](https://dev.ru.simai.io/ru/ui/utility/layout/display.php)
 
 Модификатор `display` управляет методом отображения элемента и может применяться как самостоятельно, так и в сочетании с
 адаптивными префиксами, определяющими область применения на определённых размерах экранов.

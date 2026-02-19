@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размещение элементов по обеим осям (place-items)"
@@ -7,7 +7,6 @@ description: "Размещение элементов по обеим осям (
 
 # Размещение элементов по обеим осям (place-items)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-items.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-items.php)
 
 Модификаторы из этого раздела задают одновременное выравнивание элементов сетки или флексбокса в ячейках относительно
 обеих осей одновременно.

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Автоматическая ширина столбцов сетки (grid-auto-columns)"
@@ -7,7 +7,8 @@ description: "Автоматическая ширина столбцов сет�
 
 # Автоматическая ширина столбцов сетки (grid-auto-columns)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-auto-columns.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-auto-columns.php)
+!rtags[grid-auto-columns sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять размером автоматически создаваемых столбцов сетки, для которых не задана явная ширина. Это помогает гибко адаптировать макет под разные сценарии и размеры экрана.
 
@@ -69,6 +70,6 @@ description: "Автоматическая ширина столбцов сет�
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-auto-columns"></iframe>
 </div>

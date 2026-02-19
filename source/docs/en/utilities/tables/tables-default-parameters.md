@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для таблиц
@@ -7,7 +7,6 @@ description: Параметры по умолчанию для таблиц
 
 # Параметры по умолчанию для таблиц
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-default.php](https://dev.ru.simai.io/ru/ui/utility/table/table-default.php)
 
 По умолчанию таблицы (тег `table`) в SIMAI Framework имеют следующие стили, использующие переменные для настройки цвета
 границ, заливки строк и столбцов, а также состояний при наведении и множественном выделении.

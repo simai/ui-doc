@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Композиция маски
@@ -7,7 +7,9 @@ description: Композиция маски
 
 # Композиция маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-composite.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-composite.php)
+!rtags[mask-composite]
+
+
 
 С помощью модификаторов композиции маски можно комбинировать несколько слоев маски, определяя логику их взаимодействия
 друг с другом.
@@ -48,6 +50,6 @@ description: Композиция маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-composite"></iframe>
 </div>

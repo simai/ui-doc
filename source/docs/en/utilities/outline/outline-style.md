@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль внешней границы
@@ -7,7 +7,6 @@ description: Стиль внешней границы
 
 # Стиль внешней границы
 
-[https://dev.ru.simai.io/ru/ui/utility/outline/outline-style.php](https://dev.ru.simai.io/ru/ui/utility/outline/outline-style.php)
 
 С помощью модификаторов стиля внешней границы (`outline`) вы можете определять, как будет выглядеть внешняя рамка вокруг
 элемента.

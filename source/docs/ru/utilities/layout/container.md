@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Контейнер (container)
@@ -7,7 +7,8 @@ description: Контейнер (container)
 
 # Контейнер (container)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/container.php](https://dev.ru.simai.io/ru/ui/utility/layout/container.php)
+!rtags[container sm md lg xl]
+
 
 Контейнер используется для ограничения ширины и добавления горизонтальных отступов в зависимости от размера области
 просмотра. По умолчанию ширина контейнера устанавливается в 100%, а также добавляется внутренний отступ, чтобы контент
@@ -67,6 +68,6 @@ description: Контейнер (container)
 зависимости от ширины области просмотра.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=container"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Направление размещения (flex-direction)"
@@ -7,7 +7,8 @@ description: "Направление размещения (flex-direction)"
 
 # Направление размещения (flex-direction)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex-direction.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex-direction.php)
+!rtags[flex-direction sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно задать направление размещения элементов флексбокса, определяя ориентацию
 и порядок элементов внутри контейнера.
@@ -91,6 +92,6 @@ description: "Направление размещения (flex-direction)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=flex&group=flex-direction"></iframe>
 </div>

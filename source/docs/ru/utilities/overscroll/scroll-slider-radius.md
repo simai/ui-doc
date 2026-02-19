@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
@@ -6,6 +6,9 @@ description: "Радиус границы ползунка прокрутки (s
 ---
 
 # Радиус границы ползунка прокрутки (scroll-thumb-radius)
+
+!rtags[scroll-slider-radius]
+
 
 С помощью данных модификаторов вы можете изменить радиус скругления ползунка прокрутки.
 
@@ -43,6 +46,6 @@ description: "Радиус границы ползунка прокрутки (s
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-radius"></iframe>
 </div>

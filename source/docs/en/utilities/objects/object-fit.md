@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Заполнение объектом (object-fit)"
@@ -7,7 +7,6 @@ description: "Заполнение объектом (object-fit)"
 
 # Заполнение объектом (object-fit)
 
-[https://dev.ru.simai.io/ru/ui/utility/object/object-fit.php](https://dev.ru.simai.io/ru/ui/utility/object/object-fit.php)
 
 Модификатор `object-fit` в SIMAI Framework позволяет управлять тем, как элемент (например, изображение или видео)
 масштабируется и вписывается в контейнер. Это особенно полезно для адаптивных макетов, где контент должен корректно

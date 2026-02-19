@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет внешней границы
@@ -6,6 +6,9 @@ description: Цвет внешней границы
 ---
 
 # Цвет внешней границы
+
+!rtags[outline-color]
+
 
 | Класс | Значение |
 |:--|:--|
@@ -42,6 +45,6 @@ description: Цвет внешней границы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=outline-color"></iframe>
 </div>

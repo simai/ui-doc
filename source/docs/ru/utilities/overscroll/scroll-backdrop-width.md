@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Толщина подложки прокрутки (scroll-backdrop-width)"
@@ -7,7 +7,9 @@ description: "Толщина подложки прокрутки (scroll-backdro
 
 # Толщина подложки прокрутки (scroll-backdrop-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-width.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-width.php)
+!rtags[scroll-backdrop-width]
+
+
 
 С помощью данных модификаторов вы можете изменить ширину подложки полосы прокрутки, используя предопределённые размеры.
 
@@ -50,6 +52,6 @@ description: "Толщина подложки прокрутки (scroll-backdro
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-width"></iframe>
 </div>

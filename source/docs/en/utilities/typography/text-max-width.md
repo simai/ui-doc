@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Длина строки (text-max-width)"
@@ -7,7 +7,6 @@ description: "Длина строки (text-max-width)"
 
 # Длина строки (text-max-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-max-width.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-max-width.php)
 
 С помощью модификаторов можно задать максимальную длину строки текста.
 

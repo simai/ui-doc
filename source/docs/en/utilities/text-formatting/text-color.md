@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет текста
@@ -7,7 +7,6 @@ description: Цвет текста
 
 # Цвет текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-color.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-color.php)
 
 С помощью модификаторов цвета текста можно управлять цветом текста для различных состояний и тем.
 

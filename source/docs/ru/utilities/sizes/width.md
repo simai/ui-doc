@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Ширина (width)
@@ -7,7 +7,8 @@ description: Ширина (width)
 
 # Ширина (width)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/width.php](https://dev.ru.simai.io/ru/ui/utility/size/width.php)
+!rtags[width sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно задать ширину элемента. С помощью данных классов можно быстро определить
 ширину блока, используя как фиксированные размеры, так и пропорциональные величины, зависящие от родительского элемента
@@ -149,6 +150,6 @@ description: Ширина (width)
 В этом примере ширина будет 50% (`w-1/2`) только при размерах экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=width"></iframe>
 </div>

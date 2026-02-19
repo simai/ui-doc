@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Тип анимации
@@ -7,7 +7,6 @@ description: Тип анимации
 
 # Тип анимации
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/animation-type.php](https://dev.ru.simai.io/ru/ui/utility/animation/animation-type.php)
 
 Тип анимации позволяет выбрать конкретный тип анимации (например, появление слева, справа или снизу). Эти классы
 используются без адаптивных условий и состояний наведения. Они дополняют класс `animation`, задавая конкретный эффект.

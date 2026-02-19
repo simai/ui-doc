@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление кода
@@ -6,6 +6,9 @@ description: Оформление кода
 ---
 
 # Оформление кода
+
+!rtags[text-code]
+
 
 Для коротких вставок используйте тег `<code>`. Для длинных строк применяйте утилиты обрезки текста:
 - `.truncate` для одной строки,
@@ -19,6 +22,6 @@ description: Оформление кода
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-code"></iframe>
 </div>

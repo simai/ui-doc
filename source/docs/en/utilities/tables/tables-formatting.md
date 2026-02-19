@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление таблицы
@@ -7,7 +7,6 @@ description: Оформление таблицы
 
 # Оформление таблицы
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table.php](https://dev.ru.simai.io/ru/ui/utility/table/table.php)
 
 С помощью модификаторов можно управлять внешним видом таблиц в SIMAI Framework.
 

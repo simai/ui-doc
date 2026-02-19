@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Продолжительность перехода
@@ -7,7 +7,9 @@ description: Продолжительность перехода
 
 # Продолжительность перехода
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/transition-duration.php](https://dev.ru.simai.io/ru/ui/utility/animation/transition-duration.php)
+!rtags[animation-transition-duration]
+
+
 
 С помощью данных модификаторов можно задать длительность переходов CSS-свойств. Это позволяет контролировать, насколько
 быстро или медленно будут воспроизводиться анимации при взаимодействии с элементом.
@@ -69,6 +71,6 @@ description: Продолжительность перехода
 
 
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-duration"></iframe>
 </div>

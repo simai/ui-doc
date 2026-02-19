@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размытие элемента (filter-blur)"
@@ -7,7 +7,9 @@ description: "Размытие элемента (filter-blur)"
 
 # Размытие элемента (filter-blur)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-blur.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-blur.php)
+!rtags[filter-blur]
+
+
 
 Данные модификаторы позволяют задавать различную степень размытия элемента.
 
@@ -78,6 +80,6 @@ description: "Размытие элемента (filter-blur)"
 Используйте данные соответствия, чтобы перейти с предыдущей версии на новую.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-blur"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Тень элемента (box-shadow)
@@ -7,7 +7,9 @@ description: Глубина тени элемента и состояния hove
 
 # Тень элемента (box-shadow)
 
-[https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow.php](https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow.php)
+!rtags[element-shadow]
+
+
 
 Утилиты `shadow-*` задают уровень тени через `--sf-shadow--level-ratio`.
 
@@ -38,6 +40,6 @@ description: Глубина тени элемента и состояния hove
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет тени элемента (box-shadow-color)
@@ -7,7 +7,9 @@ description: Цвет тени для default / hover / active
 
 # Цвет тени элемента (box-shadow-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow-color.php](https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow-color.php)
+!rtags[element-color]
+
+
 
 Утилиты задают цвет тени в состояниях `default`, `hover`, `active`.
 
@@ -37,6 +39,6 @@ description: Цвет тени для default / hover / active
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=element-color"></iframe>
 </div>

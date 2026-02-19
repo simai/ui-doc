@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Макет таблицы
@@ -6,6 +6,9 @@ description: Макет таблицы
 ---
 
 # Макет таблицы
+
+!rtags[table-layout]
+
 
 ## Таблица классов
 
@@ -23,6 +26,6 @@ description: Макет таблицы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=table-layout"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Наклон (transform-skew)"
@@ -7,7 +7,6 @@ description: "Наклон (transform-skew)"
 
 # Наклон (transform-skew)
 
-[https://dev.ru.simai.io/ru/ui/utility/transform/transform-skew.php](https://dev.ru.simai.io/ru/ui/utility/transform/transform-skew.php)
 
 С помощью модификаторов наклона `transform-skew` в SIMAI Framework вы можете наклонять элементы по осям X или Y на
 заданный угол, создавая визуально интересные эффекты и анимации.

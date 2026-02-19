@@ -74,7 +74,7 @@
         'env' => getenv(),
         'category' => true,
         'cache' => true,
-        'moduleCache' => true,
+        'moduleCache' => false,
         'cachePath' => $projectRoot . '/.cache',
         'siteName' => 'Simai Documentation',
         'siteDescription' => 'Simai framework documentation',
@@ -86,7 +86,7 @@
         'pretty' => true,
         'defaultLocale' => 'ru',
         'lang_path' => 'source/lang',
-        'tags' => ['ExampleTag','Folders', 'ListWrap'],
+        'tags' => ['ExampleTag','Folders', 'ListWrap', 'ResponsiveTags'],
         'getNavItems' => function ($page) {
             return $page->configurator->getPrevAndNext($page->getPath(), $page->locale());
         },

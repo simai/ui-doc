@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Содержимое (content)"
@@ -7,7 +7,9 @@ description: "Содержимое (content)"
 
 # Содержимое (content)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/content.php](https://dev.ru.simai.io/ru/ui/utility/typography/content.php)
+!rtags[content]
+
+
 
 С помощью модификаторов можно управлять содержимым псевдоэлементов `::before` и `::after`.
 
@@ -36,6 +38,6 @@ description: "Содержимое (content)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=content"></iframe>
 </div>

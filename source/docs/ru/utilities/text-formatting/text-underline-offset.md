@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Смещение подчеркивания текста
@@ -6,6 +6,9 @@ description: Смещение подчеркивания текста
 ---
 
 # Смещение подчеркивания текста
+
+!rtags[text-underline-offset]
+
 
 ## Таблица классов
 
@@ -23,6 +26,6 @@ description: Смещение подчеркивания текста
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-underline-offset"></iframe>
 </div>

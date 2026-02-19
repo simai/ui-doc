@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Монохромность элемента (filter-grayscale)"
@@ -7,7 +7,9 @@ description: "Монохромность элемента (filter-grayscale)"
 
 # Монохромность элемента (filter-grayscale)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-grayscale.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-grayscale.php)
+!rtags[filter-grayscale]
+
+
 
 Данный модификатор позволяет управлять оттенком серого для элемента.  
 Убираем адаптивность (`sm`, `md`, `lg`, `xl`), оставляем поддержку `hover`.
@@ -48,6 +50,6 @@ description: "Монохромность элемента (filter-grayscale)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-grayscale"></iframe>
 </div>

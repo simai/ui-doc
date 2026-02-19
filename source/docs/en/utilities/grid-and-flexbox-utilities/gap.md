@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Промежутки между элементами (gap)"
@@ -7,7 +7,6 @@ description: "Промежутки между элементами (gap)"
 
 # Промежутки между элементами (gap)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/gap.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/gap.php)
 
 Этот модификатор задает расстояние между элементами внутри сетки (grid) или флексбокса (flex), упрощая управление
 горизонтальными и вертикальными промежутками.

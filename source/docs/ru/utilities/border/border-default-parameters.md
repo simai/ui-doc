@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию (для границ)
@@ -6,6 +6,9 @@ description: Параметры по умолчанию (для границ)
 ---
 
 # Параметры по умолчанию (для границ)
+
+!rtags[border-default-parameters]
+
 
 Базовые утилиты для быстрого включения/отключения рамки с дефолтными параметрами.
 
@@ -34,6 +37,6 @@ description: Параметры по умолчанию (для границ)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=border&group=border-default-parameters"></iframe>
 </div>

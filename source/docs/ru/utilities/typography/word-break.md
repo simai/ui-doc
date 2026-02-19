@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Перенос строк (word-break)"
@@ -7,7 +7,9 @@ description: "Перенос строк (word-break)"
 
 # Перенос строк (word-break)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/word-break.php](https://dev.ru.simai.io/ru/ui/utility/typography/word-break.php)
+!rtags[word-break]
+
+
 
 С помощью модификаторов можно управлять переносом строк, когда слова не помещаются в отведённую ширину.
 
@@ -75,6 +77,6 @@ description: "Перенос строк (word-break)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=word-break"></iframe>
 </div>

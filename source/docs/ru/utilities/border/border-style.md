@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль границы
@@ -6,6 +6,9 @@ description: Стиль границы
 ---
 
 # Стиль границы
+
+!rtags[border-style]
+
 
 С помощью модификаторов стиля границы в SIMAI Framework вы можете задавать стиль для всех сторон, по осям или для отдельных сторон.
 
@@ -53,6 +56,6 @@ description: Стиль границы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=border&group=border-style"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет подложки прокрутки (scroll-backdrop-color)"
@@ -7,7 +7,9 @@ description: "Цвет подложки прокрутки (scroll-backdrop-colo
 
 # Цвет подложки прокрутки (scroll-backdrop-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-color.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-color.php)
+!rtags[scroll-backdrop-color]
+
+
 
 Используя данные модификаторы, вы можете изменить цвет фоновой подложки ползунка прокрутки.
 
@@ -70,6 +72,6 @@ abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzab
 здесь: [MDN scrollbar-color](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color).
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-color"></iframe>
 </div>

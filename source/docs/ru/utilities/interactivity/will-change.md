@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Подготовка к изменениям (will-change)"
@@ -7,7 +7,9 @@ description: "Подготовка к изменениям (will-change)"
 
 # Подготовка к изменениям (will-change)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/will-change.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/will-change.php)
+!rtags[will-change]
+
+
 
 Модификаторы позволяют оптимизировать предстоящую анимацию элементов, предупреждая браузер о будущих изменениях. Это
 может улучшить производительность анимаций и переходов.
@@ -44,6 +46,6 @@ description: "Подготовка к изменениям (will-change)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=will-change"></iframe>
 </div>

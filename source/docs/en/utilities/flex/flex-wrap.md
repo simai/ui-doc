@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Перенос элементов (flex-wrap)"
@@ -7,7 +7,6 @@ description: "Перенос элементов (flex-wrap)"
 
 # Перенос элементов (flex-wrap)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex-wrap.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex-wrap.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, переносятся ли элементы флексбокса на новую линию или
 продолжаются в одной.

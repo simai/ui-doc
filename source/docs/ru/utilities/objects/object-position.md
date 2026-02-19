@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Позиционирование объекта (object-position)"
@@ -6,6 +6,9 @@ description: "Утилиты object-position управляют тем, каку
 ---
 
 # Позиционирование объекта (object-position)
+
+!rtags[object-position sm md lg xl]
+
 
 Модификаторы `object-*` задают точку привязки содержимого внутри контейнера. Утилиты используют логические направления (`inline-start/end`, `top/bottom`) — поэтому корректно работают в LTR/RTL.
 
@@ -49,6 +52,6 @@ description: "Утилиты object-position управляют тем, каку
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=objects&group=object-position"></iframe>
 </div>

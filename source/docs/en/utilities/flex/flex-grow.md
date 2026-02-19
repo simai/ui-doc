@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Растяжимость элементов (flex-grow)"
@@ -7,7 +7,6 @@ description: "Растяжимость элементов (flex-grow)"
 
 # Растяжимость элементов (flex-grow)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex-grow.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex-grow.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, насколько элементы флексбокса могут растягиваться,
 заполняя доступное пространство.

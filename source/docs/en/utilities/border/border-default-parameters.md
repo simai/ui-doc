@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию (для границ)
@@ -7,7 +7,6 @@ description: Параметры по умолчанию (для границ)
 
 # Параметры по умолчанию (для границ)
 
-[https://dev.ru.simai.io/ru/ui/utility/border/border-default.php](https://dev.ru.simai.io/ru/ui/utility/border/border-default.php)
 
 Для упрощения работы с границами элементов предусмотрены два модификатора,  
 которые добавляют или убирают границу с параметрами по умолчанию. Эти модификаторы загружаются до остальных

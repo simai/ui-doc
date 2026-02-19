@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Брендовая SVG-заливка
@@ -7,9 +7,12 @@ description: Fill-цвета брендов для SVG
 
 # Брендовая SVG-заливка
 
+!rtags[svg-fill-brand]
+
+
 Утилиты `fill-*` из `fill-brand` задают брендовые цвета для SVG.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-fill-brand"></iframe>
 </div>

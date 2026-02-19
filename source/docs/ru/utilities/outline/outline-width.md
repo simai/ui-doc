@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина внешней границы
@@ -6,6 +6,9 @@ description: Толщина внешней границы
 ---
 
 # Толщина внешней границы
+
+!rtags[outline-width]
+
 
 | Класс | Значение |
 |:--|:--|
@@ -37,6 +40,6 @@ description: Толщина внешней границы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=outline-width"></iframe>
 </div>

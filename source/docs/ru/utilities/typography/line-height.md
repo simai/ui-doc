@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Высота строки (line-height)"
@@ -6,6 +6,9 @@ description: "Высота строки (line-height)"
 ---
 
 # Высота строки (line-height)
+
+!rtags[line-height sm md lg xl]
+
 
 С помощью модификаторов вы можете задать фиксированную или относительную высоту строки.
 
@@ -90,6 +93,6 @@ description: "Высота строки (line-height)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=line-height"></iframe>
 </div>

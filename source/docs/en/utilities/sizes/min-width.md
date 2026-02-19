@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Минимальная ширина (min-width)"
@@ -7,7 +7,6 @@ description: "Минимальная ширина (min-width)"
 
 # Минимальная ширина (min-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/min-width.php](https://dev.ru.simai.io/ru/ui/utility/size/min-width.php)
 
 В SIMAI Framework с помощью модификаторов можно задать минимальную ширину элемента. Это особенно полезно при создании
 адаптивных макетов, когда необходимо гарантировать, что элемент не станет уже заданного порога ширины даже при

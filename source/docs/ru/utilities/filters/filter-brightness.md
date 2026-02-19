@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Яркость элемента (filter-brightness)"
@@ -7,7 +7,9 @@ description: "Яркость элемента (filter-brightness)"
 
 # Яркость элемента (filter-brightness)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-brightness.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-brightness.php)
+!rtags[filter-brightness]
+
+
 
 Данные модификаторы позволяют управлять яркостью элемента.
 
@@ -67,6 +69,6 @@ description: "Яркость элемента (filter-brightness)"
 ````
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-brightness"></iframe>
 </div>

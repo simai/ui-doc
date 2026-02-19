@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Длина строки (text-max-width)"
@@ -7,7 +7,9 @@ description: "Длина строки (text-max-width)"
 
 # Длина строки (text-max-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-max-width.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-max-width.php)
+!rtags[text-max-width sm md lg xl]
+
+
 
 С помощью модификаторов можно задать максимальную длину строки текста.
 
@@ -71,6 +73,6 @@ description: "Длина строки (text-max-width)"
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-max-width"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Переполнение элемента (overflow)
@@ -7,7 +7,6 @@ description: Переполнение элемента (overflow)
 
 # Переполнение элемента (overflow)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/overflow.php](https://dev.ru.simai.io/ru/ui/utility/layout/overflow.php)
 
 Модификаторы `overflow` управляют тем, как содержимое элемента отображается при его переполнении. Вы можете управлять
 вертикальной (`overflow-y`), горизонтальной (`overflow-x`) или обеими осями одновременно.

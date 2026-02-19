@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Насыщенность элемента (filter-saturate)"
@@ -7,7 +7,6 @@ description: "Насыщенность элемента (filter-saturate)"
 
 # Насыщенность элемента (filter-saturate)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-saturate.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-saturate.php)
 
 Данный модификатор позволяет управлять насыщенностью элемента, делая цвета более или менее интенсивными.
 

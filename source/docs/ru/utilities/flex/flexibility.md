@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Гибкость элементов (flex)
@@ -7,7 +7,8 @@ description: Гибкость элементов (flex)
 
 # Гибкость элементов (flex)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex.php)
+!rtags[flex sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять степенью растяжения и сжатия элементов во флексбоксе.
 
@@ -47,6 +48,6 @@ description: Гибкость элементов (flex)
 </div>
 ```
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=flex&group=flexibility"></iframe>
 </div>

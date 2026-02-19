@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Размер фона
@@ -7,7 +7,6 @@ description: Размер фона
 
 # Размер фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-size.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-size.php)
 
 С помощью модификаторов `background-size` вы можете управлять тем, как будет масштабироваться фоновое изображение внутри
 элемента.

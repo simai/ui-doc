@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вложение фона
@@ -7,7 +7,6 @@ description: Вложение фона
 
 # Вложение фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-attachment.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-attachment.php)
 
 С помощью модификаторов вложения фона (`background-attachment`) вы можете управлять поведением фонового изображения при
 прокрутке страницы или контейнера.

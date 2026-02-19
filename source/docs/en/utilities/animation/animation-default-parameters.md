@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для анимации
@@ -7,7 +7,6 @@ description: Параметры по умолчанию для анимации
 
 # Параметры по умолчанию для анимации
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/фanimation-default.php](https://dev.ru.simai.io/ru/ui/utility/animation/фanimation-default.php)
 
 Для анимаций в SIMAI Framework предусмотрены переменные, определяющие временные промежутки и кривую перехода. Данные
 переменные позволяют легко переопределять значения анимации под нужды проекта.

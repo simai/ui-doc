@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размер текста (text-size)"
@@ -7,7 +7,9 @@ description: "Размер текста (text-size)"
 
 # Размер текста (text-size)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-size.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-size.php)
+!rtags[text-size sm md lg xl]
+
+
 
 Количество поддерживаемых размеров шрифта уменьшилось с 13 до 12, а также обновлены соответствующие переменные и классы.
 Данные модификаторы изменяют размер шрифта и высоту строки одновременно.
@@ -69,6 +71,6 @@ description: "Размер текста (text-size)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-size"></iframe>
 </div>

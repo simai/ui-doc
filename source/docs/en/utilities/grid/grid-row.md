@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размер строки сетки (grid-row)"
@@ -7,7 +7,6 @@ description: "Размер строки сетки (grid-row)"
 
 # Размер строки сетки (grid-row)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-row.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-row.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять параметрами размещения строк в сетке, задавая элементам размер
 и положение относительно строк сетки.

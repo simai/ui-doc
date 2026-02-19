@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Позиция элемента (element-position)"
@@ -7,7 +7,8 @@ description: "Позиция элемента (element-position)"
 
 # Позиция элемента (element-position)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/element-position.php](https://dev.ru.simai.io/ru/ui/utility/layout/element-position.php)
+!rtags[element-position sm md lg xl]
+
 
 Модификаторы позиционирования управляют расположением элемента внутри родительского контейнера. Работают в сочетании с
 `position: relative/absolute/fixed/sticky`.
@@ -130,6 +131,6 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=element-position"></iframe>
 </div>

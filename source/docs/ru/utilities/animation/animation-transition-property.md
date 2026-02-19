@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Общее свойство перехода
@@ -6,6 +6,9 @@ description: Общее свойство перехода
 ---
 
 # Общее свойство перехода
+
+!rtags[animation-transition-property sm md lg xl]
+
 
 Данные модификаторы позволяют задать, какие именно CSS-свойства будут плавно изменяться при взаимодействии с элементом.
 Применяя соответствующий модификатор, вы контролируете, для каких свойств будет выполняться переход, а также можете
@@ -54,6 +57,6 @@ description: Общее свойство перехода
 При наведении курсора на кнопку цвет текста плавно сменится на основной (`text-primary`), так как все свойства с
 переходом (`transition-all`) будут изменяться плавно.
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-property"></iframe>
 </div>

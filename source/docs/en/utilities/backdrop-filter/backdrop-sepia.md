@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Сепия подложки (backdrop-sepia)"
@@ -7,7 +7,6 @@ description: "Сепия подложки (backdrop-sepia)"
 
 # Сепия подложки (backdrop-sepia)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-sepia.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-sepia.php)
 
 Данный модификатор позволяет управлять отображением фона элемента как сепия.
 

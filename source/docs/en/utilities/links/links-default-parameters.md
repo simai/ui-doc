@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для ссылок
@@ -7,7 +7,6 @@ description: Параметры по умолчанию для ссылок
 
 # Параметры по умолчанию для ссылок
 
-[https://dev.ru.simai.io/ru/ui/utility/link/link-default.php](https://dev.ru.simai.io/ru/ui/utility/link/link-default.php)
 
 Ссылки в SIMAI Framework имеют оформление по умолчанию, использующее  
 переменные цвета для различных состояний (обычное, наведенное, нажатое  

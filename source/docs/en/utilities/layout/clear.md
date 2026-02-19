@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Перенос после плавающих элементов (clear)
@@ -7,7 +7,6 @@ description: Перенос после плавающих элементов (cl
 
 # Перенос после плавающих элементов (clear)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/clear.php](https://dev.ru.simai.io/ru/ui/utility/layout/clear.php)
 
 Модификаторы `clear` управляют тем, как контент будет располагаться относительно плавающих элементов (float). Они
 определяют, вниз под какими плавающими элементами (слева, справа, или с обеих сторон) будет смещаться контент.

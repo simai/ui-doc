@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Перенос после плавающих элементов (clear)
@@ -7,7 +7,8 @@ description: Перенос после плавающих элементов (cl
 
 # Перенос после плавающих элементов (clear)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/clear.php](https://dev.ru.simai.io/ru/ui/utility/layout/clear.php)
+!rtags[clear sm md lg xl]
+
 
 Модификаторы `clear` управляют тем, как контент располагается относительно плавающих элементов. Используются логические стороны (`inline-start`, `inline-end`), чтобы корректно работать в LTR/RTL.
 
@@ -79,6 +80,6 @@ description: Перенос после плавающих элементов (cl
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=clear"></iframe>
 </div>

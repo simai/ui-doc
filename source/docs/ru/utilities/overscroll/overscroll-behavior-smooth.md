@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Плавность прокрутки
@@ -7,7 +7,9 @@ description: Плавность прокрутки
 
 # Плавность прокрутки
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-behavior.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-behavior.php)
+!rtags[overscroll-behavior-smooth]
+
+
 
 Модификаторы из пакета `scroll-behavior` позволяют управлять тем, будет ли прокрутка происходить скачкообразно или
 плавно.
@@ -51,6 +53,6 @@ description: Плавность прокрутки
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=overscroll-behavior-smooth"></iframe>
 </div>

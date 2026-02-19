@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размер заголовков (title-size)"
@@ -7,7 +7,9 @@ description: "Размер заголовков (title-size)"
 
 # Размер заголовков (title-size)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/title-size.php](https://dev.ru.simai.io/ru/ui/utility/typography/title-size.php)
+!rtags[title-size sm md lg xl]
+
+
 
 Обновлённый набор модификаторов для заголовков использует различные наборы переменных для размера шрифта и для высоты
 строки. При этом для размера шрифта применяются переменные из системы текста, а для высоты строки используются
@@ -51,6 +53,6 @@ description: "Размер заголовков (title-size)"
 Таким образом, можно гибко управлять размерами заголовков для различных разрешений экрана.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=title-size"></iframe>
 </div>

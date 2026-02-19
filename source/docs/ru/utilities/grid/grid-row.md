@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размер строки сетки (grid-row)"
@@ -7,7 +7,8 @@ description: "Размер строки сетки (grid-row)"
 
 # Размер строки сетки (grid-row)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-row.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-row.php)
+!rtags[grid-row sm md lg xl]
+
 
 Модификаторы `grid-row` управляют высотой и позиционированием элементов по вертикали в grid-сетке.
 
@@ -60,6 +61,6 @@ description: "Размер строки сетки (grid-row)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-row"></iframe>
 </div>

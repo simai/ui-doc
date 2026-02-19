@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Задержка перехода
@@ -7,7 +7,9 @@ description: Задержка перехода
 
 # Задержка перехода
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/transition-delay.php](https://dev.ru.simai.io/ru/ui/utility/animation/transition-delay.php)
+!rtags[animation-transition-delay sm md lg xl]
+
+
 
 В SIMAI Framework с помощью модификаторов можно задавать задержку при выполнении переходов CSS.  
 Управление задержкой позволяет более точно настроить моменты начала анимации, делая интерфейс более отзывчивым или
@@ -58,6 +60,6 @@ description: Задержка перехода
 </div>
 ```
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-delay"></iframe>
 </div>

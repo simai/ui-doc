@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Положение маркера списка (list-style-position)"
@@ -7,7 +7,6 @@ description: "Положение маркера списка (list-style-positio
 
 # Положение маркера списка (list-style-position)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/list-style-position.php](https://dev.ru.simai.io/ru/ui/utility/typography/list-style-position.php)
 
 С помощью модификаторов можно изменить положение маркера списка.
 

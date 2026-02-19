@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина ползунка прокрутки (scroll)
@@ -7,7 +7,6 @@ description: Толщина ползунка прокрутки (scroll)
 
 # Толщина ползунка прокрутки (scroll)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-width.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-width.php)
 
 ## Классы и их значения
 

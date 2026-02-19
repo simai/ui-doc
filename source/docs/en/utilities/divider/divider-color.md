@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет разделителя
@@ -7,7 +7,6 @@ description: Цвет разделителя
 
 # Цвет разделителя
 
-[https://dev.ru.simai.io/ru/ui/utility/divider/divider-color.php](https://dev.ru.simai.io/ru/ui/utility/divider/divider-color.php)
 
 В SIMAI Framework с помощью модификаторов можно изменить цвет разделителя между элементами. Использование ролей цвета
 позволяет легко адаптировать цвет разделителя в зависимости от необходимого дизайна.

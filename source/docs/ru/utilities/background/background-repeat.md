@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Повтор фона
@@ -7,7 +7,9 @@ description: Повтор фона
 
 # Повтор фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-repeat.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-repeat.php)
+!rtags[background-repeat sm md lg xl]
+
+
 
 С помощью модификаторов `background-repeat` вы можете управлять тем, как будет повторяться фоновое изображение внутри
 элемента.
@@ -73,6 +75,6 @@ description: Повтор фона
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-repeat"></iframe>
 </div>

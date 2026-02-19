@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Внутренний отступ (padding)
@@ -7,7 +7,8 @@ description: Внутренний отступ (padding)
 
 # Внутренний отступ (padding)
 
-[https://dev.ru.simai.io/ru/ui/utility/space/padding.php](https://dev.ru.simai.io/ru/ui/utility/space/padding.php)
+!rtags[padding sm md lg xl]
+
 
 `padding` управляет расстоянием от контента до границ элемента. Размеры привязаны к токенам `--sf-space-*`.
 
@@ -50,6 +51,6 @@ description: Внутренний отступ (padding)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=indents&group=padding"></iframe>
 </div>

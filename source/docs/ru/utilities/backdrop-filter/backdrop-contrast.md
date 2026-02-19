@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Контрастность фона элемента (backdrop-contrast)"
@@ -7,7 +7,9 @@ description: "Контрастность фона элемента (backdrop-con
 
 # Контрастность фона элемента (backdrop-contrast)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-contrast.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-contrast.php)
+!rtags[backdrop-contrast]
+
+
 
 Данный модификатор позволяет управлять контрастностью фона элемента.
 
@@ -61,6 +63,6 @@ description: "Контрастность фона элемента (backdrop-con
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-contrast"></iframe>
 </div>

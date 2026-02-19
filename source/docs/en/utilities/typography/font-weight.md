@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Толщина шрифта (font-weight)"
@@ -7,7 +7,6 @@ description: "Толщина шрифта (font-weight)"
 
 # Толщина шрифта (font-weight)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-weight.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-weight.php)
 
 Модификаторы для управления толщиной шрифта позволяют задать нужное начертание в диапазоне от очень тонкого (100) до
 очень жирного (900).

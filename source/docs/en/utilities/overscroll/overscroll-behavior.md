@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Поведение при прокрутке
@@ -7,7 +7,6 @@ description: Поведение при прокрутке
 
 # Поведение при прокрутке
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/overscroll-behavior.php](https://dev.ru.simai.io/ru/ui/utility/scroll/overscroll-behavior.php)
 
 С помощью модификаторов из пакета `overscroll-behavior` вы можете управлять поведением браузера при достижении границы
 области прокрутки элемента. Это позволяет контролировать возможность «прокрутки за пределы» контейнера и включать или

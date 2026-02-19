@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Углы обводки (Line Join)
@@ -7,7 +7,6 @@ description: Углы обводки (Line Join)
 
 # Углы обводки (Line Join)
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/stroke-linejoin.php](https://dev.ru.simai.io/ru/ui/utility/svg/stroke-linejoin.php)
 
 С помощью модификаторов угла обводки можно задать способ соединения линий в углах пути для SVG-графики. Различные
 значения позволяют получить разные визуальные эффекты при соприкосновении линий под различными углами.

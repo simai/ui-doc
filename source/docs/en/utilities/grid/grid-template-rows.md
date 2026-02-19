@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Шаблон строк сетки (grid-template-rows)"
@@ -7,7 +7,6 @@ description: "Шаблон строк сетки (grid-template-rows)"
 
 # Шаблон строк сетки (grid-template-rows)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-rows.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-rows.php)
 
 В SIMAI Framework с помощью модификаторов можно задать шаблон строк сетки, определяя количество одинаковых по высоте
 строк. Это упрощает создание вертикальных макетов и адаптацию под разные размеры экранов.

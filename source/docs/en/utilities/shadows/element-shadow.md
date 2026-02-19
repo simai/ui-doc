@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Element Shadow (box-shadow)
@@ -7,7 +7,6 @@ description: Element depth and hover shadow states
 
 # Element Shadow (box-shadow)
 
-[https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow.php](https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow.php)
 
 `shadow-*` utilities set depth by changing `--sf-shadow--level-ratio`.
 
@@ -39,6 +38,6 @@ description: Element depth and hover shadow states
 
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина разделителя
@@ -7,7 +7,6 @@ description: Толщина разделителя
 
 # Толщина разделителя
 
-[https://dev.ru.simai.io/ru/ui/utility/divider/divider-width.php](https://dev.ru.simai.io/ru/ui/utility/divider/divider-width.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять толщиной разделителя между соседними элементами. Толщина
 задаётся в условных единицах от 0 до 4.

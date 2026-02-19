@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Обрезка текста (text-overflow)"
@@ -7,7 +7,9 @@ description: "Обрезка текста (text-overflow)"
 
 # Обрезка текста (text-overflow)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-overflow.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-overflow.php)
+!rtags[text-overflow]
+
+
 
 С помощью модификаторов можно обрезать текст, который не помещается в родительский элемент, добавляя многоточие или
 полностью скрывая лишние символы.
@@ -57,6 +59,6 @@ description: "Обрезка текста (text-overflow)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-overflow"></iframe>
 </div>

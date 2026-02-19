@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина оформления текста
@@ -7,7 +7,6 @@ description: Толщина оформления текста
 
 # Толщина оформления текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-thickness.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-thickness.php)
 
 С помощью модификаторов толщины оформления текста можно изменить толщину  
 линии подчеркивания текста.

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Полосы
@@ -7,7 +7,6 @@ description: Полосы
 
 # Полосы
 
-[https://dev.ru.simai.io/ru/ui/utility/stripe/stripe.php](https://dev.ru.simai.io/ru/ui/utility/stripe/stripe.php)
 
 С помощью модификаторов `stripe-{1...4}` можно добавить к фону полосатый паттерн.
 

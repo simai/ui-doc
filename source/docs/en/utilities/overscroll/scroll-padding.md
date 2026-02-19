@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Внутренний отступ прокрутки (scroll-padding)"
@@ -7,7 +7,6 @@ description: "Внутренний отступ прокрутки (scroll-paddi
 
 # Внутренний отступ прокрутки (scroll-padding)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-padding.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-padding.php)
 
 Модификаторы из пакета `scroll-padding` позволяют задать внутренние отступы при прокрутке, чтобы элементы при переходе к
 ним оказывались с заданным отступом от края области просмотра.

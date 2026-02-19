@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Функция времени перехода
@@ -7,7 +7,6 @@ description: Функция времени перехода
 
 # Функция времени перехода
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/transition-timing-function.php](https://dev.ru.simai.io/ru/ui/utility/animation/transition-timing-function.php)
 
 Для настройки плавности переходов в SIMAI Framework доступны модификаторы, позволяющие изменять функцию времени. Это
 определяет, с какой скоростью будут происходить изменения CSS-свойств в ходе анимации.

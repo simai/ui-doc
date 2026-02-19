@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Конечное положение колонки сетки (grid-column-end)"
@@ -7,7 +7,8 @@ description: "Конечное положение колонки сетки (gri
 
 # Конечное положение колонки сетки (grid-column-end)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-column-end.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-column-end.php)
+!rtags[grid-column-end sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять конечным положением столбцов в сетке, задавая на какой линии
 сетки элемент должен заканчиваться.
@@ -71,6 +72,6 @@ description: "Конечное положение колонки сетки (gri
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column-end"></iframe>
 </div>

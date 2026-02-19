@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размещение отдельного элемента (place-self)"
@@ -7,7 +7,6 @@ description: "Размещение отдельного элемента (place-
 
 # Размещение отдельного элемента (place-self)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-self.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-self.php)
 
 Модификаторы из этого раздела задают одновременное выравнивание отдельного элемента сетки или флексбокса в ячейке
 относительно обеих осей сразу.

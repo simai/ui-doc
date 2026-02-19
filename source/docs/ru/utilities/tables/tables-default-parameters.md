@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для таблиц
@@ -6,6 +6,9 @@ description: Параметры по умолчанию для таблиц
 ---
 
 # Параметры по умолчанию для таблиц
+
+!rtags[tables-default-parameters]
+
 
 Базовый класс `.table` задаёт стандартный внешний вид таблицы и использует токены темы:
 - `--sf-outline-variant` для границ,
@@ -22,6 +25,6 @@ description: Параметры по умолчанию для таблиц
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=tables-default-parameters"></iframe>
 </div>

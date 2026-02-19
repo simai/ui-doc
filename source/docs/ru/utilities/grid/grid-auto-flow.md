@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Автоматическое формирование сетки (grid-auto-flow)"
@@ -7,7 +7,8 @@ description: "Автоматическое формирование сетки (
 
 # Автоматическое формирование сетки (grid-auto-flow)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-auto-flow.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-auto-flow.php)
+!rtags[grid-auto-flow sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять автоматическим размещением элементов в сетке. Это позволяет гибко адаптировать отображение контента, сохраняя порядок либо оптимизируя использование доступного пространства.
 
@@ -56,6 +57,6 @@ description: "Автоматическое формирование сетки (
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-auto-flow"></iframe>
 </div>

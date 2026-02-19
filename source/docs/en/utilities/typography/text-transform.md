@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Трансформация текста (text-transform)"
@@ -7,7 +7,6 @@ description: "Трансформация текста (text-transform)"
 
 # Трансформация текста (text-transform)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-transform.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-transform.php)
 
 С помощью модификаторов трансформации текста можно управлять регистром символов текста.
 

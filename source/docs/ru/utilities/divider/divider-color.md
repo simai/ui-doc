@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет разделителя
@@ -6,6 +6,9 @@ description: Цвет разделителя
 ---
 
 # Цвет разделителя
+
+!rtags[divider-color]
+
 
 Утилиты цвета задают цвет линии разделителя между соседними элементами.
 
@@ -36,6 +39,6 @@ description: Цвет разделителя
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=divider&group=divider-color"></iframe>
 </div>

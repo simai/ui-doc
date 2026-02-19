@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Трансформация текста (text-transform)"
@@ -7,7 +7,9 @@ description: "Трансформация текста (text-transform)"
 
 # Трансформация текста (text-transform)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-transform.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-transform.php)
+!rtags[text-transform]
+
+
 
 С помощью модификаторов трансформации текста можно управлять регистром символов текста.
 
@@ -57,6 +59,6 @@ description: "Трансформация текста (text-transform)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-transform"></iframe>
 </div>

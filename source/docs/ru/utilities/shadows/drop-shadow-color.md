@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет падающей тени (drop-shadow-color)"
@@ -7,7 +7,9 @@ description: "Цвет падающей тени (drop-shadow-color)"
 
 # Цвет падающей тени (drop-shadow-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/shadow/drop-shadow-color.php](https://dev.ru.simai.io/ru/ui/utility/shadow/drop-shadow-color.php)
+!rtags[drop-shadow-color]
+
+
 
 Данные модификаторы позволяют задать цвет падающей тени элемента, используя роли (переменные), без адаптивности.
 Также можно изменять цвет при наведении с помощью `hover:drop-shadow-{color}`.
@@ -53,6 +55,6 @@ description: "Цвет падающей тени (drop-shadow-color)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow-color"></iframe>
 </div>

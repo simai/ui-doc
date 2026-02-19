@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Контрастность фона элемента (backdrop-contrast)"
@@ -7,7 +7,6 @@ description: "Контрастность фона элемента (backdrop-con
 
 # Контрастность фона элемента (backdrop-contrast)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-contrast.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-contrast.php)
 
 Данный модификатор позволяет управлять контрастностью фона элемента.
 

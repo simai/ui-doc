@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Чередование строк и столбцов
@@ -6,6 +6,9 @@ description: Чередование строк и столбцов
 ---
 
 # Чередование строк и столбцов
+
+!rtags[tables-alternating-rows-and-columns]
+
 
 ## Таблица классов
 
@@ -23,6 +26,6 @@ description: Чередование строк и столбцов
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=tables-alternating-rows-and-columns"></iframe>
 </div>

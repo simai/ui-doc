@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Сброс стиля (appearance)
@@ -7,7 +7,6 @@ description: Сброс стиля (appearance)
 
 # Сброс стиля (appearance)
 
-[https://dev.ru.simai.io/ru/ui/utility/form/appearance.php](https://dev.ru.simai.io/ru/ui/utility/form/appearance.php)
 
 С помощью модификатора сброса стиля в SIMAI Framework вы можете отменять стандартные стили элементов управления формами,
 таких как выпадающие списки или поля ввода, и применять собственные стили.

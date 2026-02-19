@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание текста (text-align)"
@@ -7,7 +7,6 @@ description: "Выравнивание текста (text-align)"
 
 # Выравнивание текста (text-align)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-align.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-align.php)
 
 С помощью модификаторов вы можете задать выравнивание текста.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Сортировка (order)
@@ -7,7 +7,6 @@ description: Сортировка (order)
 
 # Сортировка (order)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/order.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/order.php)
 
 Данный модификатор управляет порядком отображения элементов в потоке раскладки, не изменяя их логический порядок в
 документе.

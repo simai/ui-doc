@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет заливки
@@ -6,6 +6,9 @@ description: Цвет заливки
 ---
 
 # Цвет заливки
+
+!rtags[svg-fill-color]
+
 
 Классы `fill-*` задают `fill` для SVG.
 
@@ -32,6 +35,6 @@ description: Цвет заливки
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-fill-color"></iframe>
 </div>

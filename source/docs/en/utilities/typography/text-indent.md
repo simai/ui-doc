@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Отступ текста (text-indent)"
@@ -7,7 +7,6 @@ description: "Отступ текста (text-indent)"
 
 # Отступ текста (text-indent)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-indent.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-indent.php)
 
 С помощью модификаторов можно задать отступ для первой строки текста.
 

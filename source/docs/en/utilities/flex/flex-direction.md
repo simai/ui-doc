@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Направление размещения (flex-direction)"
@@ -7,7 +7,6 @@ description: "Направление размещения (flex-direction)"
 
 # Направление размещения (flex-direction)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex-direction.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex-direction.php)
 
 В SIMAI Framework с помощью модификаторов можно задать направление размещения элементов флексбокса, определяя ориентацию
 и порядок элементов внутри контейнера.

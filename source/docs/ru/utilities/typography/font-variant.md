@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Начертание шрифта (капитель) (font-variant)"
@@ -7,7 +7,9 @@ description: "Начертание шрифта (капитель) (font-variant
 
 # Начертание шрифта (капитель) (font-variant)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-variant.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-variant.php)
+!rtags[font-variant]
+
+
 
 Модификаторы для отображения строчных символов в виде уменьшенных заглавных (капитель).
 
@@ -42,6 +44,6 @@ description: "Начертание шрифта (капитель) (font-variant
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=font-variant"></iframe>
 </div>

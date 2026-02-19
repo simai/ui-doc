@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Перенос строк (word-break)"
@@ -7,7 +7,6 @@ description: "Перенос строк (word-break)"
 
 # Перенос строк (word-break)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/word-break.php](https://dev.ru.simai.io/ru/ui/utility/typography/word-break.php)
 
 С помощью модификаторов можно управлять переносом строк, когда слова не помещаются в отведённую ширину.
 

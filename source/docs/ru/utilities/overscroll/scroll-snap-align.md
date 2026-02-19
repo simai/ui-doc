@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание привязки прокрутки (scroll-snap-align)"
@@ -7,7 +7,9 @@ description: "Выравнивание привязки прокрутки (scro
 
 # Выравнивание привязки прокрутки (scroll-snap-align)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-snap-align.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-snap-align.php)
+!rtags[scroll-snap-align]
+
+
 
 Модификаторы из пакета `scroll-snap-align` позволяют управлять тем, как элементы выравниваются при остановке прокрутки
 внутри контейнера с привязкой прокрутки.
@@ -59,6 +61,6 @@ description: "Выравнивание привязки прокрутки (scro
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-align"></iframe>
 </div>

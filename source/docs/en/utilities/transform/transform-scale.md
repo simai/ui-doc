@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Масштабирование (transform-scale)"
@@ -7,7 +7,6 @@ description: "Масштабирование (transform-scale)"
 
 # Масштабирование (transform-scale)
 
-[https://dev.ru.simai.io/ru/ui/utility/transform/transform-scale.php](https://dev.ru.simai.io/ru/ui/utility/transform/transform-scale.php)
 
 С помощью модификаторов масштабирования `transform-scale` в SIMAI Framework вы можете изменять размер (увеличение или
 уменьшение) элементов. Это удобно для создания эффектов при наведении курсора (hover) или для адаптации размеров

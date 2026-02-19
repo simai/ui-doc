@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Углы обводки (Line Join)
@@ -6,6 +6,9 @@ description: Углы обводки (Line Join)
 ---
 
 # Углы обводки (Line Join)
+
+!rtags[svg-stroke-line-join]
+
 
 Классы задают `stroke-linejoin`.
 
@@ -27,6 +30,6 @@ description: Углы обводки (Line Join)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-join"></iframe>
 </div>

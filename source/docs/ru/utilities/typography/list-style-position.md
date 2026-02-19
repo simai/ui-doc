@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Положение маркера списка (list-style-position)"
@@ -7,7 +7,9 @@ description: "Положение маркера списка (list-style-positio
 
 # Положение маркера списка (list-style-position)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/list-style-position.php](https://dev.ru.simai.io/ru/ui/utility/typography/list-style-position.php)
+!rtags[list-style-position]
+
+
 
 С помощью модификаторов можно изменить положение маркера списка.
 
@@ -50,6 +52,6 @@ description: "Положение маркера списка (list-style-positio
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=list-style-position"></iframe>
 </div>

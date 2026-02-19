@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для анимации
@@ -7,7 +7,9 @@ description: Параметры по умолчанию для анимации
 
 # Параметры по умолчанию для анимации
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/фanimation-default.php](https://dev.ru.simai.io/ru/ui/utility/animation/фanimation-default.php)
+!rtags[animation-default-parameters]
+
+
 
 Для анимаций в SIMAI Framework предусмотрены переменные, определяющие временные промежутки и кривую перехода. Данные
 переменные позволяют легко переопределять значения анимации под нужды проекта.
@@ -65,6 +67,6 @@ cubic-bezier(.25,.8,.25,1) будут использованы по умолча
 (В примере можно не указывать класс `transition`, так как переход задан глобально. Если же вам нужно указать другую
 длительность в конкретном месте, переопределите переменные или примените `transition` со своими значениями.)
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-default-parameters"></iframe>
 </div>

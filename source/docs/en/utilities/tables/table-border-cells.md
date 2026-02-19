@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Границы вокруг ячеек
@@ -7,7 +7,6 @@ description: Границы вокруг ячеек
 
 # Границы вокруг ячеек
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-separate.php](https://dev.ru.simai.io/ru/ui/utility/table/table-separate.php)
 
 С помощью модификаторов можно контролировать, должны ли границы таблицы  
 «сворачиваться» или «разделяться» между ячейками.

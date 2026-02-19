@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Высота (height)
@@ -7,7 +7,8 @@ description: Высота (height)
 
 # Высота (height)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/height.php](https://dev.ru.simai.io/ru/ui/utility/size/height.php)
+!rtags[height sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно задать высоту элемента, адаптируя её под различные размеры экрана или
 особенности дизайна.  
@@ -126,6 +127,6 @@ description: Высота (height)
 В этом примере высота будет 50% (`h-1/2`) при `md` и больше.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=height"></iframe>
 </div>

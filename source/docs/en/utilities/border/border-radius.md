@@ -48,6 +48,6 @@ Radius modifiers let you round the whole element, specific sides, or specific lo
 
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=border&group=border-radius"></iframe>
 </div>

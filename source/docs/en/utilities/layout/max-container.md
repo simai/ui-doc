@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальный размер контейнера (max-container)"
@@ -7,7 +7,6 @@ description: "Максимальный размер контейнера (max-co
 
 # Максимальный размер контейнера (max-container)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/max-container.php](https://dev.ru.simai.io/ru/ui/utility/layout/max-container.php)
 
 Данный модификатор позволяет изменить максимальную ширину контейнера при достижении определённой контрольной точки. В
 новой версии фреймворка размеры привязаны к переменным масштабирования из системы размеров. По умолчанию, данные

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Фон в оттенках серого элемента (backdrop-grayscale)"
@@ -7,7 +7,6 @@ description: "Фон в оттенках серого элемента (backdrop
 
 # Фон в оттенках серого элемента (backdrop-grayscale)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-grayscale.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-grayscale.php)
 
 Данный модификатор позволяет управлять отображением фона элемента в оттенках серого.
 

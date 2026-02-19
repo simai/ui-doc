@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Тип заливки
@@ -7,7 +7,6 @@ description: Тип заливки
 
 # Тип заливки
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/fill-rule.php](https://dev.ru.simai.io/ru/ui/utility/svg/fill-rule.php)
 
 Модификаторы типа заливки (`fill-evenodd` и `fill-nonzero`) определяют,  
 как будет рассчитываться область заливки внутри фигур в SVG-графике.

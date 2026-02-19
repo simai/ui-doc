@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Внешний отступ (margin)
@@ -7,7 +7,6 @@ description: Внешний отступ (margin)
 
 # Внешний отступ (margin)
 
-[https://dev.ru.simai.io/ru/ui/utility/space/margin.php](https://dev.ru.simai.io/ru/ui/utility/space/margin.php)
 
 Модификатор внешнего отступа (`margin`) управляет свободным пространством вокруг элемента, влияя на положение элемента
 относительно соседних объектов. Он не влияет на внутреннее пространство элемента, а регулирует отступ от границ соседних

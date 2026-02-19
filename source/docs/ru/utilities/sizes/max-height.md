@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальная высота (max-height)"
@@ -7,7 +7,8 @@ description: "Максимальная высота (max-height)"
 
 # Максимальная высота (max-height)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/max-height.php](https://dev.ru.simai.io/ru/ui/utility/size/max-height.php)
+!rtags[max-height sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно ограничить максимальную высоту элемента. Это позволяет избежать
 чрезмерного растягивания блока при большом объёме контента, сохранив при этом адаптивность интерфейса.
@@ -73,6 +74,6 @@ description: "Максимальная высота (max-height)"
 В этом примере максимальная высота будет равна нулю (`max-h-0`) при ширине экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=max-height"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Отступ внешней границы
@@ -7,7 +7,6 @@ description: Отступ внешней границы
 
 # Отступ внешней границы
 
-[https://dev.ru.simai.io/ru/ui/utility/outline/outline-offset.php](https://dev.ru.simai.io/ru/ui/utility/outline/outline-offset.php)
 
 С помощью модификаторов отступа внешней границы вы можете контролировать расстояние между внешней границей (`outline`) и
 элементом.

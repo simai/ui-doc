@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Функция времени перехода
@@ -7,7 +7,9 @@ description: Функция времени перехода
 
 # Функция времени перехода
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/transition-timing-function.php](https://dev.ru.simai.io/ru/ui/utility/animation/transition-timing-function.php)
+!rtags[animation-transition-timing-function]
+
+
 
 Для настройки плавности переходов в SIMAI Framework доступны модификаторы, позволяющие изменять функцию времени. Это
 определяет, с какой скоростью будут происходить изменения CSS-свойств в ходе анимации.
@@ -57,6 +59,6 @@ description: Функция времени перехода
 </div>
 ```
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-timing-function"></iframe>
 </div>

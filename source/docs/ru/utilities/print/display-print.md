@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Отображение элемента при печати (display-print)"
@@ -6,6 +6,9 @@ description: "Отображение элемента при печати (displ
 ---
 
 # Отображение элемента при печати (display-print)
+
+!rtags[display-print]
+
 
 Утилиты `print-*` задают `display` только внутри `@media print`.
 
@@ -37,6 +40,6 @@ description: "Отображение элемента при печати (displ
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=print&group=display-print"></iframe>
 </div>

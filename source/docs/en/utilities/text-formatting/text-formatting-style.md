@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль оформления текста
@@ -7,7 +7,6 @@ description: Стиль оформления текста
 
 # Стиль оформления текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-style.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-style.php)
 
 С помощью модификаторов стиля оформления текста можно изменить стиль линии  
 подчеркивания текста.

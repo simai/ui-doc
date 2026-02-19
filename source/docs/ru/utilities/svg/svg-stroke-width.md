@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина обводки
@@ -6,6 +6,9 @@ description: Толщина обводки
 ---
 
 # Толщина обводки
+
+!rtags[svg-stroke-width sm md lg xl]
+
 
 Классы `stroke-N` задают `stroke-width`.
 
@@ -24,6 +27,6 @@ description: Толщина обводки
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-width"></iframe>
 </div>

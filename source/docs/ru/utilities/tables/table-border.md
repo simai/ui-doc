@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Границы таблицы
@@ -6,6 +6,9 @@ description: Границы таблицы
 ---
 
 # Границы таблицы
+
+!rtags[table-border]
+
 
 ## Таблица классов
 
@@ -21,6 +24,6 @@ description: Границы таблицы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=table-border"></iframe>
 </div>

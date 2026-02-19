@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Видимость элемента при печати (print-visibility)"
@@ -7,7 +7,6 @@ description: "Видимость элемента при печати (print-vis
 
 # Видимость элемента при печати (print-visibility)
 
-[https://dev.ru.simai.io/ru/ui/utility/print/print-visibility.php](https://dev.ru.simai.io/ru/ui/utility/print/print-visibility.php)
 
 Модификаторы позволяют управлять видимостью элемента только во время печати страницы. Это полезно в ситуациях, когда
 нужно скрыть или показать определённые элементы при печати, не затрагивая их отображение при обычном просмотре.

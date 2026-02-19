@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Тип анимации
@@ -7,7 +7,9 @@ description: animation-from-left/right/bottom
 
 # Тип анимации
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/animation-type.php](https://dev.ru.simai.io/ru/ui/utility/animation/animation-type.php)
+!rtags[animation-type]
+
+
 
 Классы типа задают направление анимации.
 
@@ -47,6 +49,6 @@ description: animation-from-left/right/bottom
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=animation&group=animation-type"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальная ширина (max-width)"
@@ -7,7 +7,8 @@ description: "Максимальная ширина (max-width)"
 
 # Максимальная ширина (max-width)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/max-width.php](https://dev.ru.simai.io/ru/ui/utility/size/max-width.php)
+!rtags[max-width sm md lg xl]
+
 
 В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
 
@@ -93,6 +94,6 @@ description: "Максимальная ширина (max-width)"
 В этом примере максимальная ширина будет 100% (`max-w-full`) только при размерах экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=sizes&group=max-width"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление ссылок
@@ -7,7 +7,6 @@ description: Оформление ссылок
 
 # Оформление ссылок
 
-[https://dev.ru.simai.io/ru/ui/utility/link/link-style.php](https://dev.ru.simai.io/ru/ui/utility/link/link-style.php)
 
 С помощью модификаторов оформления ссылок в SIMAI Framework можно изменить  
 вид подчеркивания ссылок на точечный или прерывистый, создавая разнообразные  

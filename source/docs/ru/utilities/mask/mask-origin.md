@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вложение маски
@@ -7,7 +7,9 @@ description: Вложение маски
 
 # Вложение маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-origin.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-origin.php)
+!rtags[mask-origin]
+
+
 
 С помощью модификаторов вложения маски можно указать, относительно какого элемента или области будет рассчитываться
 позиция маски.
@@ -63,6 +65,6 @@ description: Вложение маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-origin"></iframe>
 </div>

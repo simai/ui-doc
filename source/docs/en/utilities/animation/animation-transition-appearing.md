@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Анимация при появлении
@@ -7,7 +7,6 @@ description: Анимация при появлении
 
 # Анимация при появлении
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/animation.php](https://dev.ru.simai.io/ru/ui/utility/animation/animation.php)
 
 При помощи пакета классов `animation` в SIMAI Framework вы можете задать анимацию, которая будет срабатывать при
 появлении элемента в зоне видимости окна браузера. Также есть возможность указать бесконечный повтор анимации.

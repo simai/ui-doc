@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет фона
@@ -7,7 +7,6 @@ description: Цвет фона
 
 # Цвет фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-color/background-color.php](https://dev.ru.simai.io/ru/ui/utility/background-color/background-color.php)
 
 С помощью модификаторов цвета фона можно задать фон элемента, включая состояния при наведении (`hover``) и при активном
 состоянии (`active`).

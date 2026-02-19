@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Трекинг текста (letter-spacing)"
@@ -7,7 +7,9 @@ description: "Трекинг текста (letter-spacing)"
 
 # Трекинг текста (letter-spacing)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/letter-spacing.php](https://dev.ru.simai.io/ru/ui/utility/typography/letter-spacing.php)
+!rtags[letter-spacing]
+
+
 
 С помощью модификаторов можно регулировать межбуквенные интервалы (трекинг).
 
@@ -71,6 +73,6 @@ description: "Трекинг текста (letter-spacing)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=letter-spacing"></iframe>
 </div>

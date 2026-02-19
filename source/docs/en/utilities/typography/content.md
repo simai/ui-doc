@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Содержимое (content)"
@@ -7,7 +7,6 @@ description: "Содержимое (content)"
 
 # Содержимое (content)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/content.php](https://dev.ru.simai.io/ru/ui/utility/typography/content.php)
 
 С помощью модификаторов можно управлять содержимым псевдоэлементов `::before` и `::after`.
 

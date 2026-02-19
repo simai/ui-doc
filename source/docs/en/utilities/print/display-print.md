@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Отображение элемента при печати (display-print)"
@@ -7,7 +7,6 @@ description: "Отображение элемента при печати (displ
 
 # Отображение элемента при печати (display-print)
 
-[https://dev.ru.simai.io/ru/ui/utility/print/display-print.php](https://dev.ru.simai.io/ru/ui/utility/print/display-print.php)
 
 Модификаторы позволяют изменить способ отображения элемента только во время печати страницы. Это полезно, когда вам
 нужно скрыть или показать определённые элементы при выводе на печать.

@@ -7,6 +7,8 @@ description: Соотношение сторон (Aspect Ratio)
 
 # Соотношение сторон (Aspect Ratio)
 
+!rtags[aspect-ratio sm md lg xl]
+
 ## Описание
 
 Модификатор `aspect-{width}x{height}` задаёт соотношение сторон для элемента. Это полезно при создании элементов,
@@ -54,6 +56,6 @@ description: Соотношение сторон (Aspect Ratio)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=aspect-ratio"></iframe>
 </div>

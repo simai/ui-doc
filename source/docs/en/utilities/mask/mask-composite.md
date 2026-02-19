@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Композиция маски
@@ -7,7 +7,6 @@ description: Композиция маски
 
 # Композиция маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-composite.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-composite.php)
 
 С помощью модификаторов композиции маски можно комбинировать несколько слоев маски, определяя логику их взаимодействия
 друг с другом.

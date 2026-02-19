@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина разделителя
@@ -6,6 +6,9 @@ description: Толщина разделителя
 ---
 
 # Толщина разделителя
+
+!rtags[divider-width]
+
 
 Утилиты толщины задают ширину линии между соседними элементами по оси `x` или `y`.
 
@@ -38,6 +41,6 @@ description: Толщина разделителя
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=divider&group=divider-width"></iframe>
 </div>

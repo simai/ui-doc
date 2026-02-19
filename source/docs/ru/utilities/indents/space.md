@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Промежутки (space)
@@ -7,7 +7,8 @@ description: Промежутки (space)
 
 # Промежутки (space)
 
-[https://dev.ru.simai.io/ru/ui/utility/space/space.php](https://dev.ru.simai.io/ru/ui/utility/space/space.php)
+!rtags[space sm md lg xl]
+
 
 `space` добавляет равномерные отступы между соседними дочерними элементами, не затрагивая крайние.
 
@@ -47,6 +48,6 @@ description: Промежутки (space)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=indents&group=space"></iframe>
 </div>

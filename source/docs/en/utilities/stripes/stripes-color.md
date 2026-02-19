@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет полос
@@ -7,7 +7,6 @@ description: Цвет полос
 
 # Цвет полос
 
-[https://dev.ru.simai.io/ru/ui/utility/stripe/stripe-color.php](https://dev.ru.simai.io/ru/ui/utility/stripe/stripe-color.php)
 
 С помощью модификаторов `stripe-{color}` можно задать цвет полосок паттерна фона.  
 Доступны следующие цвета:

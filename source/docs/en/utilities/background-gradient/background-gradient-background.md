@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Градиент фона
@@ -7,7 +7,6 @@ description: Градиент фона
 
 # Градиент фона
 
-[https://dev.ru.simai.io/ru/ui/utility/gradient/gradient-color.php](https://dev.ru.simai.io/ru/ui/utility/gradient/gradient-color.php)
 
 С помощью модификаторов цвета градиента можно задать цвета для градиентного фона элемента. В сочетании с модификаторами
 вида градиента (`gr-line-2`, `gr-line-3`, `gr-radial-2`, `gr-radial-3`, `gr-conic-2`, `gr-conic-3`) эти классы

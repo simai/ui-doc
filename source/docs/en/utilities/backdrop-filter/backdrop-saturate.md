@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Насыщенность подложки (backdrop-saturate)"
@@ -7,7 +7,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 
 # Насыщенность подложки (backdrop-saturate)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-saturate.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-saturate.php)
 
 Данный модификатор позволяет управлять насыщенностью фона элемента.
 

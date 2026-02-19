@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Минимальная высота (min-height)"
@@ -7,7 +7,6 @@ description: "Минимальная высота (min-height)"
 
 # Минимальная высота (min-height)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/min-height.php](https://dev.ru.simai.io/ru/ui/utility/size/min-height.php)
 
 В SIMAI Framework с помощью модификаторов можно задать минимальную высоту элемента, что позволяет контролировать
 начальную высоту блока и предотвратить его сжатие ниже определенного значения. Это удобно, когда необходимо, чтобы

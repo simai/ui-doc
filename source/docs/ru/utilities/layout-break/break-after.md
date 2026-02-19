@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Разрыв после колонки (break-after)"
@@ -7,7 +7,9 @@ description: "Разрыв после колонки (break-after)"
 
 # Разрыв после колонки (break-after)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout-break/break-after.php](https://dev.ru.simai.io/ru/ui/utility/layout-break/break-after.php)
+!rtags[break-after sm md lg xl]
+
+
 
 Модификатор `break-after` в SIMAI Framework позволяет контролировать разрывы столбцов или страниц после определённых
 элементов. Это особенно полезно при работе с многостраничными документами или макетами, где требуется точное управление
@@ -63,6 +65,6 @@ description: "Разрыв после колонки (break-after)"
 настройку адаптивных макетов и многостраничных документов.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout-break&group=break-after"></iframe>
 </div>

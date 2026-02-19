@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет оформления текста
@@ -7,7 +7,6 @@ description: Цвет оформления текста
 
 # Цвет оформления текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-color.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-color.php)
 
 С помощью модификаторов цвета оформления текста можно задать цвет линии  
 подчеркивания текста. Данные модификаторы также можно использовать вместе  

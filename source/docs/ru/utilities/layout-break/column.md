@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Колонки (column)
@@ -7,7 +7,9 @@ description: Колонки (column)
 
 # Колонки (column)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout-break/column.php](https://dev.ru.simai.io/ru/ui/utility/layout-break/column.php)
+!rtags[column sm md lg xl]
+
+
 
 Модификатор `column` в SIMAI Framework позволяет управлять количеством столбцов в элементе. Это полезно при создании
 адаптивных макетов, где количество колонок может меняться в зависимости от размера области просмотра.
@@ -56,6 +58,6 @@ description: Колонки (column)
 под различные размеры экранов.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout-break&group=column"></iframe>
 </div>

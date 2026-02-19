@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Плавность прокрутки
@@ -7,7 +7,6 @@ description: Плавность прокрутки
 
 # Плавность прокрутки
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-behavior.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-behavior.php)
 
 Модификаторы из пакета `scroll-behavior` позволяют управлять тем, будет ли прокрутка происходить скачкообразно или
 плавно.

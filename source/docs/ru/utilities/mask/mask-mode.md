@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Режим маски
@@ -7,7 +7,9 @@ description: Режим маски
 
 # Режим маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-mode.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-mode.php)
+!rtags[mask-mode]
+
+
 
 С помощью модификаторов режима маски можно указать, каким образом будет накладываться маска: через альфа-канал или по
 яркости, либо автоматически соответствует источнику.
@@ -43,6 +45,6 @@ description: Режим маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-mode"></iframe>
 </div>

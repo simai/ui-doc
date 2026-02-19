@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина границы
@@ -6,6 +6,9 @@ description: Толщина границы
 ---
 
 # Толщина границы
+
+!rtags[border-width sm md lg xl]
+
 
 С помощью модификаторов толщины границы в SIMAI Framework вы можете задавать толщину для всех сторон, по осям или для отдельных сторон.
 
@@ -51,6 +54,6 @@ description: Толщина границы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=border&group=border-width"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление таблицы
@@ -6,6 +6,9 @@ description: Оформление таблицы
 ---
 
 # Оформление таблицы
+
+!rtags[tables-formatting]
+
 
 ## Таблица классов
 
@@ -23,6 +26,6 @@ description: Оформление таблицы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=tables&group=tables-formatting"></iframe>
 </div>

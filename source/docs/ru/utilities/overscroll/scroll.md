@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина ползунка прокрутки (scroll / scroll-thumb-size)
@@ -7,7 +7,9 @@ description: Управление минимальным размером пол
 
 # Толщина ползунка прокрутки (scroll / scroll-thumb-size)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-width.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-width.php)
+!rtags[scroll]
+
+
 
 ## Классы и значения
 
@@ -42,6 +44,6 @@ description: Управление минимальным размером пол
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll"></iframe>
 </div>

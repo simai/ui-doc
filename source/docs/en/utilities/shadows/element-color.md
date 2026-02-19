@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет тени
@@ -7,7 +7,6 @@ description: Цвет тени
 
 # Цвет тени
 
-[https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow-color.php](https://dev.ru.simai.io/ru/ui/utility/shadow/box-shadow-color.php)
 
 Данные модификаторы устанавливают цвет тени элемента через специальную переменную `--sf-shadow--color`. Это позволяет
 гибко настраивать визуальное восприятие тени. Используя состояние `hover`, можно изменять цвет тени при наведении

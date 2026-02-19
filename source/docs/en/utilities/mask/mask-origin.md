@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вложение маски
@@ -7,7 +7,6 @@ description: Вложение маски
 
 # Вложение маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-origin.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-origin.php)
 
 С помощью модификаторов вложения маски можно указать, относительно какого элемента или области будет рассчитываться
 позиция маски.

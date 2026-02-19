@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Внешний отступ прокрутки
@@ -7,7 +7,9 @@ description: Внешний отступ прокрутки
 
 # Внешний отступ прокрутки
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-margin.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-margin.php)
+!rtags[scroll-margin]
+
+
 
 Модификаторы из пакета `scroll-margin` позволяют задать дополнительные отступы вокруг элементов при прокрутке, улучшая
 видимость и удобство навигации.
@@ -122,6 +124,6 @@ description: Внешний отступ прокрутки
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-margin"></iframe>
 </div>

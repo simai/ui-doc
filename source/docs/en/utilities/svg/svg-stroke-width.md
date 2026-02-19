@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Толщина обводки
@@ -7,7 +7,6 @@ description: Толщина обводки
 
 # Толщина обводки
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/stroke-width.php](https://dev.ru.simai.io/ru/ui/utility/svg/stroke-width.php)
 
 С помощью модификаторов толщины обводки можно управлять шириной линии у SVG-элементов.
 

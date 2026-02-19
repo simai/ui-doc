@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление текста
@@ -7,7 +7,6 @@ description: Оформление текста
 
 # Оформление текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration.php)
 
 С помощью модификаторов оформления текста можно подчеркнуть, надчеркнуть или перечеркнуть текст, а также убрать
 оформление.

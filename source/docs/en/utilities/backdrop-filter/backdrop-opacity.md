@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Прозрачность фона элемента (backdrop-opacity)"
@@ -7,7 +7,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 
 # Прозрачность фона элемента (backdrop-opacity)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-opacity.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-opacity.php)
 
 Данный модификатор позволяет управлять прозрачностью фона элемента.
 

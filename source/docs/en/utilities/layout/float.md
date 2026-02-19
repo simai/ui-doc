@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Плавающий элемент (float)
@@ -7,7 +7,6 @@ description: Плавающий элемент (float)
 
 # Плавающий элемент (float)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/float.php](https://dev.ru.simai.io/ru/ui/utility/layout/float.php)
 
 Модификаторы `float` управляют тем, как элемент обтекается текстом и другими элементами. Они определяют, по какой
 стороне будет «плавать» элемент относительно контента.

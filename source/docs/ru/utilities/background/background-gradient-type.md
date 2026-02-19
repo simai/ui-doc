@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Вид градиента"
@@ -7,7 +7,9 @@ description: "Утилиты выбора типа фонового градие
 
 # Вид градиента
 
-[https://dev.ru.simai.io/ru/ui/utility/gradient/gradient-type.php](https://dev.ru.simai.io/ru/ui/utility/gradient/gradient-type.php)
+!rtags[background-gradient-type sm md lg xl]
+
+
 
 Утилиты `gr-*` задают тип градиента и то, сколько цветовых точек используется. Сами цвета и угол задаются через отдельные утилиты:
 
@@ -52,6 +54,6 @@ description: "Утилиты выбора типа фонового градие
 **Важно:** без указания цветов (`gr1-/gr2-/gr3-` или `from-/via-/to-`) градиент будет прозрачным, так как в переменных `--sf-gradient--color-*` нет значений.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-gradient-type"></iframe>
 </div>

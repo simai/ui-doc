@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Положение элемента по оси Z (z-index)"
@@ -7,7 +7,8 @@ description: "Положение элемента по оси Z (z-index)"
 
 # Положение элемента по оси Z (z-index)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/z-index.php](https://dev.ru.simai.io/ru/ui/utility/layout/z-index.php)
+!rtags[z-index sm md lg xl]
+
 
 Вы можете управлять положением элемента по оси Z, используя модификаторы z-index. Значения z-index задаются через
 переменные, что позволяет гибко настраивать слойность элементов.
@@ -81,6 +82,6 @@ description: "Положение элемента по оси Z (z-index)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=z-index"></iframe>
 </div>

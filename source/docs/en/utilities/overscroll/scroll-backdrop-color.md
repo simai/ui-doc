@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет подложки прокрутки (scroll-backdrop-color)"
@@ -7,7 +7,6 @@ description: "Цвет подложки прокрутки (scroll-backdrop-colo
 
 # Цвет подложки прокрутки (scroll-backdrop-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-color.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-color.php)
 
 Используя данные модификаторы, вы можете изменить цвет фоновой подложки ползунка прокрутки.
 

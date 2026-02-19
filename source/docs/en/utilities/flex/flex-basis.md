@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Базисный размер (flex-basis)"
@@ -7,7 +7,6 @@ description: "Базисный размер (flex-basis)"
 
 # Базисный размер (flex-basis)
 
-[https://dev.ru.simai.io/ru/ui/utility/flex/flex-basis.php](https://dev.ru.simai.io/ru/ui/utility/flex/flex-basis.php)
 
 В SIMAI Framework с помощью модификаторов можно задать начальный размер флекс-элемента, определяя, сколько места он
 займёт до распределения оставшегося пространства.

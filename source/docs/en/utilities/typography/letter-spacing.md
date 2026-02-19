@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Трекинг текста (letter-spacing)"
@@ -7,7 +7,6 @@ description: "Трекинг текста (letter-spacing)"
 
 # Трекинг текста (letter-spacing)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/letter-spacing.php](https://dev.ru.simai.io/ru/ui/utility/typography/letter-spacing.php)
 
 С помощью модификаторов можно регулировать межбуквенные интервалы (трекинг).
 

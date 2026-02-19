@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Выделение текста
@@ -7,7 +7,6 @@ description: Выделение текста
 
 # Выделение текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/mark.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/mark.php)
 
 Для выделения фрагментов текста можно использовать HTML-тег `<mark>`.
 

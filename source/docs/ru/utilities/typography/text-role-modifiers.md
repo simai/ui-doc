@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Модификаторы ролей текста
@@ -7,8 +7,7 @@ description: Модификаторы ролей текста
 
 # Модификаторы ролей текста
 
-Новый раздел для документации: [
-*http://sf5.simai.pro/ru/ui/utility/typography/roles.php*](http://sf5.simai.pro/ru/ui/utility/typography/roles.php)
+!rtags[text-role-modifiers]
 
 Модификаторы ролей текста применяются для одновременной настройки размера и высоты строки. Они могут быть применены как
 к тегам (например, `h1`), так и к классам (например, `.sf-h-1`), при этом один и тот же результат можно получить через
@@ -63,6 +62,6 @@ h1, .sf-h-1 {
 текстовых блоков, меток и прочих элементов типографики.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-role-modifiers"></iframe>
 </div>

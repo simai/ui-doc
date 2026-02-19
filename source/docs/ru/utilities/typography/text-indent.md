@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Отступ текста (text-indent)"
@@ -7,7 +7,9 @@ description: "Отступ текста (text-indent)"
 
 # Отступ текста (text-indent)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-indent.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-indent.php)
+!rtags[text-indent]
+
+
 
 С помощью модификаторов можно задать отступ для первой строки текста.
 
@@ -73,6 +75,6 @@ description: "Отступ текста (text-indent)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-indent"></iframe>
 </div>

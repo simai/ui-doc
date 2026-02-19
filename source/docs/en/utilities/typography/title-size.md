@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Title Size (title-size)"
@@ -7,7 +7,6 @@ description: "Heading/title size utilities"
 
 # Title Size (title-size)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/title-size.php](https://dev.ru.simai.io/ru/ui/utility/typography/title-size.php)
 
 The updated title scale uses different token groups for `font-size` and `line-height`:
 - `font-size` comes from text-size tokens.
@@ -49,6 +48,6 @@ Use breakpoint prefixes:
 
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=title-size"></iframe>
 </div>

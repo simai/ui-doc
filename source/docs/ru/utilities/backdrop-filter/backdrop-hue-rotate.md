@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
@@ -7,7 +7,9 @@ description: "Вращение оттенка фона элемента (backdro
 
 # Вращение оттенка фона элемента (backdrop-hue-rotate)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-hue-rotate.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-hue-rotate.php)
+!rtags[backdrop-hue-rotate]
+
+
 
 Данный модификатор позволяет управлять вращением оттенка фона элемента.
 
@@ -59,6 +61,6 @@ description: "Вращение оттенка фона элемента (backdro
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-hue-rotate"></iframe>
 </div>

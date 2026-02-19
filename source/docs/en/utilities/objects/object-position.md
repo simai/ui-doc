@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Позиционирование объекта (object-position)"
@@ -7,7 +7,6 @@ description: "Позиционирование объекта (object-position)"
 
 # Позиционирование объекта (object-position)
 
-[https://dev.ru.simai.io/ru/ui/utility/object/object-position.php](https://dev.ru.simai.io/ru/ui/utility/object/object-position.php)
 
 Модификаторы `object-position` в SIMAI Framework позволяют управлять положением объекта (например, изображения или
 видео) внутри контейнера. Это особенно полезно, когда важно, чтобы часть контента отображалась в определенной области

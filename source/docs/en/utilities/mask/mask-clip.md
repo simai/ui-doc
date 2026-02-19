@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Область маски
@@ -7,7 +7,6 @@ description: Область маски
 
 # Область маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-clip.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-clip.php)
 
 С помощью модификаторов области маски можно определить границы, в пределах которых будет отображаться содержимое блока.
 Маска фактически ограничивает видимую часть содержимого в зависимости от выбранной области.

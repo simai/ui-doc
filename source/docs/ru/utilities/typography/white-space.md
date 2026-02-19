@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Обработка пробелов (white-space)"
@@ -7,7 +7,9 @@ description: "Обработка пробелов (white-space)"
 
 # Обработка пробелов (white-space)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/white-space.php](https://dev.ru.simai.io/ru/ui/utility/typography/white-space.php)
+!rtags[white-space]
+
+
 
 С помощью модификаторов можно управлять тем, как обрабатываются пробельные символы при отображении текста.
 
@@ -109,6 +111,6 @@ description: "Обработка пробелов (white-space)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=white-space"></iframe>
 </div>

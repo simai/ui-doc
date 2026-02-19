@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Обрезка фона
@@ -7,7 +7,6 @@ description: Обрезка фона
 
 # Обрезка фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-clip.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-clip.php)
 
 С помощью модификаторов `background-clip` вы можете управлять тем, как фон распределяется под границами элемента и его
 содержимым.

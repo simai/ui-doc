@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Радиус границы подложки прокрутки (scroll-backdrop-radius)"
@@ -7,7 +7,6 @@ description: "Радиус границы подложки прокрутки (s
 
 # Радиус границы подложки прокрутки (scroll-backdrop-radius)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-radius.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-backdrop-radius.php)
 
 ## Классы и их значения
 

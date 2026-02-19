@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Разрыв внутри элемента (break-inside)"
@@ -7,7 +7,6 @@ description: "Разрыв внутри элемента (break-inside)"
 
 # Разрыв внутри элемента (break-inside)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout-break/break-inside.php](https://dev.ru.simai.io/ru/ui/utility/layout-break/break-inside.php)
 
 Модификатор `break-inside` в SIMAI Framework позволяет контролировать разрывы столбца или страницы внутри элемента. Это
 особенно полезно при работе со сложными макетами или документами, где требуется точный контроль над тем, как контент

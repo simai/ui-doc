@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Исходные координаты (transform-origin)"
@@ -7,7 +7,6 @@ description: "Исходные координаты (transform-origin)"
 
 # Исходные координаты (transform-origin)
 
-[https://dev.ru.simai.io/ru/ui/utility/transform/transform-origin.php](https://dev.ru.simai.io/ru/ui/utility/transform/transform-origin.php)
 
 С помощью модификаторов исходных координат `transform-origin` в SIMAI Framework вы можете определять точку, относительно
 которой будет производиться трансформация элемента (например, поворот, масштабирование).

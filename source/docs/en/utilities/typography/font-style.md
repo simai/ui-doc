@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Стиль шрифта (font-style)"
@@ -7,7 +7,6 @@ description: "Стиль шрифта (font-style)"
 
 # Стиль шрифта (font-style)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-style.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-style.php)
 
 Модификаторы для управления стилем шрифта позволяют задать наклонный (italic) или нормальный стиль.
 

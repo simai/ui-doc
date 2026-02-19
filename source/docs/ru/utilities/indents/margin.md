@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Внешний отступ (margin)
@@ -7,7 +7,8 @@ description: Внешний отступ (margin)
 
 # Внешний отступ (margin)
 
-[https://dev.ru.simai.io/ru/ui/utility/space/margin.php](https://dev.ru.simai.io/ru/ui/utility/space/margin.php)
+!rtags[margin sm md lg xl]
+
 
 Модификаторы `margin` управляют пространством вокруг элемента: задают расстояние до соседних блоков и контейнера.
 
@@ -58,6 +59,6 @@ description: Внешний отступ (margin)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=indents&group=margin"></iframe>
 </div>

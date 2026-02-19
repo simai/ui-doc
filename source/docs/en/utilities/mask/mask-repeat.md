@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Повтор маски
@@ -7,7 +7,6 @@ description: Повтор маски
 
 # Повтор маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-repeat.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-repeat.php)
 
 С помощью модификаторов повтора маски можно управлять тем, как будет повторяться маска внутри элемента.
 

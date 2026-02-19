@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Монохромность элемента (filter-grayscale)"
@@ -7,7 +7,6 @@ description: "Монохромность элемента (filter-grayscale)"
 
 # Монохромность элемента (filter-grayscale)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-grayscale.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-grayscale.php)
 
 Данный модификатор позволяет управлять оттенком серого для элемента.  
 Убираем адаптивность (`sm`, `md`, `lg`, `xl`), оставляем поддержку `hover`.

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Параметры по умолчанию (text-default)"
@@ -7,7 +7,9 @@ description: "Параметры по умолчанию (text-default)"
 
 # Параметры по умолчанию (text-default)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/text-default.php](https://dev.ru.simai.io/ru/ui/utility/typography/text-default.php)
+!rtags[text-default]
+
+
 
 В новой версии настройки типографики упрощены и используют обновлённые переменные. Базовые параметры (размер шрифта,
 высота строки и т.д.) теперь управляются через более понятные и краткие наименования переменных.
@@ -101,6 +103,6 @@ h2, h3, h4, h5, h6 {
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=text-default"></iframe>
 </div>

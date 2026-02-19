@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Контрастность элемента (filter-contrast)"
@@ -7,7 +7,6 @@ description: "Контрастность элемента (filter-contrast)"
 
 # Контрастность элемента (filter-contrast)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-contrast.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-contrast.php)
 
 Данный модификатор позволяет управлять контрастностью элемента.
 

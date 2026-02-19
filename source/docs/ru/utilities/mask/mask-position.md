@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Положение маски
@@ -6,6 +6,9 @@ description: Положение маски
 ---
 
 # Положение маски
+
+!rtags[mask-position]
+
 
 Утилиты `mask-*` задают позицию маски внутри элемента.
 Для горизонтали используются логические направления `inline-start`/`inline-end` (корректно для LTR/RTL).
@@ -34,6 +37,6 @@ description: Положение маски
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=mask&group=mask-position"></iframe>
 </div>

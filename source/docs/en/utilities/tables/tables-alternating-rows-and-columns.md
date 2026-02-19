@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Чередование строки и столбцов
@@ -7,7 +7,6 @@ description: Чередование строки и столбцов
 
 # Чередование строки и столбцов
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-stripe.php](https://dev.ru.simai.io/ru/ui/utility/table/table-stripe.php)
 
 С помощью модификаторов можно задать чередование цветов для строк или столбцов в таблице.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
@@ -7,7 +7,9 @@ description: "Цвет ползунка прокрутки (scroll-slider-color 
 
 # Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-color.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-color.php)
+!rtags[scroll-slider-color]
+
+
 
 ## Классы и их значения
 
@@ -43,6 +45,6 @@ description: "Цвет ползунка прокрутки (scroll-slider-color 
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-color"></iframe>
 </div>

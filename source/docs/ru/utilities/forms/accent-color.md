@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Акцентный цвет (accent-color)"
@@ -7,7 +7,9 @@ description: "Акцентный цвет (accent-color)"
 
 # Акцентный цвет (accent-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/form/accent-color.php](https://dev.ru.simai.io/ru/ui/utility/form/accent-color.php)
+!rtags[accent-color]
+
+
 
 Используя модификаторы акцентного цвета `accent-color` в SIMAI Framework, вы можете задавать цвет акцентирования для
 элементов управления формы, таких как чекбоксы и радиокнопки. Это позволяет легко стилизовать акцентные элементы,
@@ -52,6 +54,6 @@ description: "Акцентный цвет (accent-color)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=accent-color"></iframe>
 </div>

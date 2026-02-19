@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Инвертирование цвета фона элемента (backdrop-invert)"
@@ -7,7 +7,9 @@ description: "Инвертирование цвета фона элемента 
 
 # Инвертирование цвета фона элемента (backdrop-invert)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-invert.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-invert.php)
+!rtags[backdrop-invert]
+
+
 
 Данный модификатор позволяет управлять инвертированием цвета фона элемента.
 
@@ -42,6 +44,6 @@ description: "Инвертирование цвета фона элемента 
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-invert"></iframe>
 </div>

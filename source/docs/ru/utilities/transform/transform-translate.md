@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Смещение (transform-translate)"
@@ -6,6 +6,9 @@ description: "Классы смещения transform-translate"
 ---
 
 # Смещение (transform-translate)
+
+!rtags[transform-translate]
+
 
 `transform-translate` сдвигает элемент по оси `x` и/или `y`.
 
@@ -33,6 +36,6 @@ description: "Классы смещения transform-translate"
 Для `value` доступны базовые (`0...9`) и расширенные (`a0...i9`) токены.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=transform&group=transform-translate"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет полос
@@ -7,7 +7,9 @@ description: Цвет полос
 
 # Цвет полос
 
-[https://dev.ru.simai.io/ru/ui/utility/stripe/stripe-color.php](https://dev.ru.simai.io/ru/ui/utility/stripe/stripe-color.php)
+!rtags[stripes-color]
+
+
 
 С помощью модификаторов `stripe-{color}` можно задать цвет полос паттерна фона.
 
@@ -43,6 +45,6 @@ description: Цвет полос
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=stripes&group=stripes-color"></iframe>
 </div>

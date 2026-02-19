@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет каретки (caret-color)"
@@ -7,7 +7,9 @@ description: "Цвет каретки (caret-color)"
 
 # Цвет каретки (caret-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/form/caret-color.php](https://dev.ru.simai.io/ru/ui/utility/form/caret-color.php)
+!rtags[caret-color]
+
+
 
 С помощью модификаторов цвета каретки в SIMAI Framework вы можете задавать цвет курсора ввода текста. Это может быть
 полезно для стилизации форм, полей ввода и текстовых областей, позволяя легко адаптировать интерфейс под визуальный
@@ -46,6 +48,6 @@ description: "Цвет каретки (caret-color)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=caret-color"></iframe>
 </div>

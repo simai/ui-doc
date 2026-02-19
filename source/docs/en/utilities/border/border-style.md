@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль границы
@@ -7,7 +7,6 @@ description: Стиль границы
 
 # Стиль границы
 
-[https://dev.ru.simai.io/ru/ui/utility/border/border-style.php](https://dev.ru.simai.io/ru/ui/utility/border/border-style.php)
 
 С помощью модификаторов стиля границы в SIMAI Framework вы можете задавать различные стили границ: точечные, пунктирные,
 сплошные, двойные, скрытые или отсутствующие, а также применять их ко всем сторонам сразу или только к определённым

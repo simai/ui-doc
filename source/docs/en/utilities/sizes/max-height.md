@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальная высота (max-height)"
@@ -7,7 +7,6 @@ description: "Максимальная высота (max-height)"
 
 # Максимальная высота (max-height)
 
-[https://dev.ru.simai.io/ru/ui/utility/size/max-height.php](https://dev.ru.simai.io/ru/ui/utility/size/max-height.php)
 
 В SIMAI Framework с помощью модификаторов можно ограничить максимальную высоту элемента. Это позволяет избежать
 чрезмерного растягивания блока при большом объёме контента, сохранив при этом адаптивность интерфейса.

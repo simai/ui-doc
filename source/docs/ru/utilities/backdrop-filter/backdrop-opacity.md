@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Прозрачность фона элемента (backdrop-opacity)"
@@ -7,7 +7,9 @@ description: "Прозрачность фона элемента (backdrop-opaci
 
 # Прозрачность фона элемента (backdrop-opacity)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-opacity.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-opacity.php)
+!rtags[backdrop-opacity]
+
+
 
 Данный модификатор позволяет управлять прозрачностью фона элемента.
 
@@ -52,6 +54,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-opacity"></iframe>
 </div>

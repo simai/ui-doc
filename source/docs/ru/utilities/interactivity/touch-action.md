@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Сенсорное действие (touch-action)"
@@ -7,7 +7,9 @@ description: "Сенсорное действие (touch-action)"
 
 # Сенсорное действие (touch-action)
 
-[https://dev.ru.simai.io/ru/ui/utility/interactivity/touch-action.php](https://dev.ru.simai.io/ru/ui/utility/interactivity/touch-action.php)
+!rtags[touch-action]
+
+
 
 С помощью данных модификаторов вы можете управлять поведением прокрутки и масштабирования элемента на сенсорных экранах.
 Это может оказаться полезным, если вы хотите ограничить или изменить направление прокрутки, либо отключить определённые
@@ -60,6 +62,6 @@ description: "Сенсорное действие (touch-action)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=interactivity&group=touch-action"></iframe>
 </div>

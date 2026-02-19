@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размещение содержимого по обеим осям (place-content)"
@@ -7,7 +7,6 @@ description: "Размещение содержимого по обеим ося
 
 # Размещение содержимого по обеим осям (place-content)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-content.php](https://dev.ru.simai.io/ru/ui/utility/grid-flex/place-content.php)
 
 Модификаторы из этого раздела задают одновременное выравнивание содержимого сетки или флексбокса сразу по двум осям (
 основной и поперечной).

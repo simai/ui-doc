@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Стиль внешней границы
@@ -6,6 +6,9 @@ description: Стиль внешней границы
 ---
 
 # Стиль внешней границы
+
+!rtags[outline-style]
+
 
 | Класс | Значение |
 |:--|:--|
@@ -38,6 +41,6 @@ description: Стиль внешней границы
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=outline-style"></iframe>
 </div>

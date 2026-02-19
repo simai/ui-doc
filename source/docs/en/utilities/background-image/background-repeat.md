@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Повтор фона
@@ -7,7 +7,6 @@ description: Повтор фона
 
 # Повтор фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-repeat.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-repeat.php)
 
 С помощью модификаторов `background-repeat` вы можете управлять тем, как будет повторяться фоновое изображение внутри
 элемента.

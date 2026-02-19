@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Макет таблицы
@@ -7,7 +7,6 @@ description: Макет таблицы
 
 # Макет таблицы
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-layout.php](https://dev.ru.simai.io/ru/ui/utility/table/table-layout.php)
 
 С помощью модификаторов можно управлять алгоритмом макета таблицы.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Изменение размера (resize)
@@ -7,7 +7,9 @@ description: Изменение размера (resize)
 
 # Изменение размера (resize)
 
-[https://dev.ru.simai.io/ru/ui/utility/form/resize.php](https://dev.ru.simai.io/ru/ui/utility/form/resize.php)
+!rtags[resize]
+
+
 
 С помощью модификаторов resize вы можете управлять тем, может ли элемент быть изменён в размерах пользователем, и в
 каком направлении.
@@ -51,6 +53,6 @@ description: Изменение размера (resize)
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=forms&group=resize"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Шаблон строк сетки (grid-template-rows)"
@@ -7,7 +7,8 @@ description: "Шаблон строк сетки (grid-template-rows)"
 
 # Шаблон строк сетки (grid-template-rows)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-rows.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-rows.php)
+!rtags[grid-template-rows sm md lg xl]
+
 
 Модификаторы `grid-row-*` задают количество строк в сетке и их базовый размер.
 
@@ -45,6 +46,6 @@ description: "Шаблон строк сетки (grid-template-rows)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-template-rows"></iframe>
 </div>

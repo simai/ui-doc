@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Границы таблицы
@@ -7,7 +7,6 @@ description: Границы таблицы
 
 # Границы таблицы
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-border.php](https://dev.ru.simai.io/ru/ui/utility/table/table-border.php)
 
 С помощью модификатора можно добавить границы к таблице, чтобы визуально  
 отделить её содержимое.

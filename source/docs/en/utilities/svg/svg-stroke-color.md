@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет обводки
@@ -7,7 +7,6 @@ description: Цвет обводки
 
 # Цвет обводки
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/stroke-color.php](https://dev.ru.simai.io/ru/ui/utility/svg/stroke-color.php)
 
 С помощью модификаторов цвета обводки можно задать цвет линии у SVG-элементов.
 

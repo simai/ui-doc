@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Стиль маркера списка (list-style-type)"
@@ -7,7 +7,9 @@ description: "Стиль маркера списка (list-style-type)"
 
 # Стиль маркера списка (list-style-type)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/list-style-type.php](https://dev.ru.simai.io/ru/ui/utility/typography/list-style-type.php)
+!rtags[list-style-type]
+
+
 
 С помощью модификаторов можно изменить вид маркера списка.
 
@@ -58,6 +60,6 @@ description: "Стиль маркера списка (list-style-type)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=list-style-type"></iframe>
 </div>

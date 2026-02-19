@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию
@@ -6,6 +6,9 @@ description: Параметры по умолчанию
 ---
 
 # Параметры по умолчанию
+
+!rtags[outline-default-parameters]
+
 
 Классы по умолчанию для внешней границы:
 
@@ -35,6 +38,6 @@ description: Параметры по умолчанию
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=outline&group=outline-default-parameters"></iframe>
 </div>

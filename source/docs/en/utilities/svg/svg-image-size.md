@@ -46,6 +46,6 @@ Use breakpoint prefixes: `sm:`, `md:`, `lg:`, `xl:`.
 
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=svg&group=svg-image-size"></iframe>
 </div>

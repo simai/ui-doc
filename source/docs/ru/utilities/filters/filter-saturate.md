@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Насыщенность элемента (filter-saturate)"
@@ -7,7 +7,9 @@ description: "Насыщенность элемента (filter-saturate)"
 
 # Насыщенность элемента (filter-saturate)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-saturate.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-saturate.php)
+!rtags[filter-saturate]
+
+
 
 Данный модификатор позволяет управлять насыщенностью элемента, делая цвета более или менее интенсивными.
 
@@ -70,6 +72,6 @@ description: "Насыщенность элемента (filter-saturate)"
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-saturate"></iframe>
 </div>

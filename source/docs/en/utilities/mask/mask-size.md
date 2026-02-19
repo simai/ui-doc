@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Размер маски
@@ -7,7 +7,6 @@ description: Размер маски
 
 # Размер маски
 
-[https://dev.ru.simai.io/ru/ui/utility/mask/mask-size.php](https://dev.ru.simai.io/ru/ui/utility/mask/mask-size.php)
 
 С помощью модификаторов размера маски можно управлять тем, как изображение маски будет масштабироваться относительно
 элемента.

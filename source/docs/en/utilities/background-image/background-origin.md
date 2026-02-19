@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Вложение фона
@@ -7,7 +7,6 @@ description: Вложение фона
 
 # Вложение фона
 
-[https://dev.ru.simai.io/ru/ui/utility/background-image/background-origin.php](https://dev.ru.simai.io/ru/ui/utility/background-image/background-origin.php)
 
 С помощью модификаторов `background-origin` вы можете управлять тем, относительно какой области будет позиционироваться
 фоновое изображение.

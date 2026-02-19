@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Семейство шрифтов (font-family)"
@@ -7,7 +7,6 @@ description: "Семейство шрифтов (font-family)"
 
 # Семейство шрифтов (font-family)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-family.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-family.php)
 
 В текущей версии для изменения семейства шрифтов используется система переменных. Значения переменных задаются в ядре
 фреймворка. Использование классов семейства шрифтов позволяет гибко переключать стили текста без необходимости

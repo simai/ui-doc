@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размер колонки сетки (grid-column)"
@@ -7,7 +7,6 @@ description: "Размер колонки сетки (grid-column)"
 
 # Размер колонки сетки (grid-column)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-column.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-column.php)
 
 В SIMAI Framework с помощью модификаторов можно управлять параметрами размещения столбцов в сетке, регулируя их
 положение и размер.

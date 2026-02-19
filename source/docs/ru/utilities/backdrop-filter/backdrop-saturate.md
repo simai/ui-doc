@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Насыщенность подложки (backdrop-saturate)"
@@ -7,7 +7,9 @@ description: "Насыщенность подложки (backdrop-saturate)"
 
 # Насыщенность подложки (backdrop-saturate)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-saturate.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-saturate.php)
+!rtags[backdrop-saturate]
+
+
 
 Данный модификатор позволяет управлять насыщенностью фона элемента.
 
@@ -61,6 +63,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-saturate"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Автоматический размер строк сетки (grid-auto-rows)"
@@ -7,7 +7,8 @@ description: "Автоматический размер строк сетки (g
 
 # Автоматический размер строк сетки (grid-auto-rows)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-auto-rows.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-auto-rows.php)
+!rtags[grid-auto-rows sm md lg xl]
+
 
 В SIMAI Framework с помощью модификаторов можно управлять размером строк для тех, у которых явно не указаны размеры. Это
 позволяет гибко настраивать сетку, учитывая особенности содержимого.
@@ -61,6 +62,6 @@ description: "Автоматический размер строк сетки (g
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-auto-rows"></iframe>
 </div>

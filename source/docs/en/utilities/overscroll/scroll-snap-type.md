@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Тип привязки прокрутки (scroll-snap-type)"
@@ -7,7 +7,6 @@ description: "Тип привязки прокрутки (scroll-snap-type)"
 
 # Тип привязки прокрутки (scroll-snap-type)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-snap-type.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-snap-type.php)
 
 Данные модификаторы позволяют определять, как именно точки привязки прокрутки будут влиять на поведение контейнера. Вы
 можете указать направление привязки (горизонтальное, вертикальное или обе оси) и степень строгости, с которой контейнер

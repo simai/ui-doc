@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Ограничитель прокрутки (scroll-snap-stop)"
@@ -7,7 +7,6 @@ description: "Ограничитель прокрутки (scroll-snap-stop)"
 
 # Ограничитель прокрутки (scroll-snap-stop)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-snap-stop.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-snap-stop.php)
 
 Данные модификаторы из пакета `scroll-snap-stop` позволяют управлять тем, как контейнер прокрутки будет останавливаться
 на элементах, имеющих привязку прокрутки. Они задают, возможно ли "проскочить" мимо возможных позиций привязки или

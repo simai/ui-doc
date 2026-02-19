@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Активные строки и ячейки
@@ -7,7 +7,6 @@ description: Активные строки и ячейки
 
 # Активные строки и ячейки
 
-[https://dev.ru.simai.io/ru/ui/utility/table/table-active.php](https://dev.ru.simai.io/ru/ui/utility/table/table-active.php)
 
 С помощью модификатора можно визуально выделять конкретные строки или ячейки таблицы, делая их «активными».
 

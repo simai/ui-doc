@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Прозрачность элемента (filter-opacity)"
@@ -7,7 +7,9 @@ description: "Прозрачность элемента (filter-opacity)"
 
 # Прозрачность элемента (filter-opacity)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-opacity.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-opacity.php)
+!rtags[filter-opacity]
+
+
 
 Данные модификаторы позволяют задавать степень прозрачности элемента через CSS filter.
 
@@ -54,6 +56,6 @@ description: "Прозрачность элемента (filter-opacity)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-opacity"></iframe>
 </div>

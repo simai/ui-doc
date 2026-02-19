@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размытие элемента (filter-blur)"
@@ -7,7 +7,6 @@ description: "Размытие элемента (filter-blur)"
 
 # Размытие элемента (filter-blur)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-blur.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-blur.php)
 
 Данные модификаторы позволяют задавать различную степень размытия элемента.
 

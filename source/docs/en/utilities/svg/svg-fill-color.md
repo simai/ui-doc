@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет заливки
@@ -7,7 +7,6 @@ description: Цвет заливки
 
 # Цвет заливки
 
-[https://dev.ru.simai.io/ru/ui/utility/svg/fill.php](https://dev.ru.simai.io/ru/ui/utility/svg/fill.php)
 
 С помощью модификаторов цвета заливки вы можете задать цвет заливки для  
 SVG-элементов, используя роли вместо исходных цветовых переменных.

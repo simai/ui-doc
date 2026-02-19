@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Оформление ссылок
@@ -6,6 +6,9 @@ description: Оформление ссылок
 ---
 
 # Оформление ссылок
+
+!rtags[links-formatting]
+
 
 Утилиты задают стиль подчеркивания ссылки.
 
@@ -32,6 +35,6 @@ description: Оформление ссылок
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=links&group=links-formatting"></iframe>
 </div>

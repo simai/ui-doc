@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Контекст наложения (isolation)
@@ -7,7 +7,8 @@ description: Управление контекстом наложения и с�
 
 # Контекст наложения (isolation)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/isolation.php](https://dev.ru.simai.io/ru/ui/utility/layout/isolation.php)
+!rtags[isolate sm md lg xl]
+
 
 `isolate` управляет созданием отдельного stacking context. Это важно, когда используются `mix-blend-*` и нужно ограничить их влияние пределами контейнера.
 
@@ -51,6 +52,6 @@ description: Управление контекстом наложения и с�
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=isolation"></iframe>
 </div>

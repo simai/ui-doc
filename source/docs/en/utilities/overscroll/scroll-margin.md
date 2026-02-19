@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Внешний отступ прокрутки
@@ -7,7 +7,6 @@ description: Внешний отступ прокрутки
 
 # Внешний отступ прокрутки
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-margin.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-margin.php)
 
 Модификаторы из пакета `scroll-margin` позволяют задать дополнительные отступы вокруг элементов при прокрутке, улучшая
 видимость и удобство навигации.

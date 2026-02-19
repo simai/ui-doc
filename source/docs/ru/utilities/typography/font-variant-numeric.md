@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Начертание цифр (font-variant-numeric)"
@@ -7,7 +7,9 @@ description: "Начертание цифр (font-variant-numeric)"
 
 # Начертание цифр (font-variant-numeric)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-variant-numeric.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-variant-numeric.php)
+!rtags[font-variant-numeric]
+
+
 
 Модификаторы начертания цифр позволяют изменить отображение чисел и некоторых их особенностей (например, дробей).
 
@@ -93,6 +95,6 @@ description: "Начертание цифр (font-variant-numeric)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=font-variant-numeric"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Инвертирование цвета элемента (filter-invert)"
@@ -7,7 +7,9 @@ description: "Инвертирование цвета элемента (filter-i
 
 # Инвертирование цвета элемента (filter-invert)
 
-[https://dev.ru.simai.io/ru/ui/utility/filter/filter-invert.php](https://dev.ru.simai.io/ru/ui/utility/filter/filter-invert.php)
+!rtags[filter-invert]
+
+
 
 Данный модификатор позволяет управлять инвертированием цвета элемента, превращая светлые тона в темные и наоборот.  
 Убираем адаптивность (`sm`, `md`, `lg`, `xl`), оставляем поддержку `hover`.
@@ -46,6 +48,6 @@ description: "Инвертирование цвета элемента (filter-i
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=filters&group=filter-invert"></iframe>
 </div>

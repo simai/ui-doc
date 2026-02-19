@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "События указателя (pointer-events)"
@@ -7,7 +7,6 @@ description: "События указателя (pointer-events)"
 
 # События указателя (pointer-events)
 
-[https://dev.ru.simai.io/ru/ui/utility/form/pointer-events.php](https://dev.ru.simai.io/ru/ui/utility/form/pointer-events.php)
 
 С помощью модификаторов pointer-events вы можете управлять тем, будет ли элемент реагировать на события указателя (
 например, клики мыши или касания).

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет ползунка прокрутки (scroll-slider-color)"
@@ -7,7 +7,6 @@ description: "Цвет ползунка прокрутки (scroll-slider-color)
 
 # Цвет ползунка прокрутки (scroll-slider-color)
 
-[https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-color.php](https://dev.ru.simai.io/ru/ui/utility/scroll/scroll-slider-color.php)
 
 ## Классы и их значения
 

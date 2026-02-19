@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Метод расчёта размера элемента (box-sizing)"
@@ -7,7 +7,8 @@ description: "Метод расчёта размера элемента (box-siz
 
 # Метод расчёта размера элемента (box-sizing)
 
-[https://dev.ru.simai.io/ru/ui/utility/layout/box-sizing.php](https://dev.ru.simai.io/ru/ui/utility/layout/box-sizing.php)
+!rtags[box-sizing]
+
 
 Модификаторы `box-border` и `box-content` позволяют контролировать метод расчёта размера элемента с учётом его
 внутренних отступов (padding) и границ (border).
@@ -53,6 +54,6 @@ description: "Метод расчёта размера элемента (box-siz
 габаритами, упрощая верстку.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=layout&group=box-sizing"></iframe>
 </div>

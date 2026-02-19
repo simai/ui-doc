@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Паттерн фона
@@ -6,6 +6,9 @@ description: Паттерн фона
 ---
 
 # Паттерн фона
+
+!rtags[background-pattern sm md lg xl]
+
 
 С помощью модификаторов паттернов фона (`pattern-{номер}`) вы можете задать повторяющийся узор в качестве фонового
 изображения. Каждый паттерн задаётся встроенным (inline) SVG-кодом, который не требует дополнительных ресурсов.
@@ -63,6 +66,6 @@ description: Паттерн фона
 `md:pattern-2` применит паттерн №2 только на экранах от размера Medium и больше.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=background&group=background-pattern"></iframe>
 </div>

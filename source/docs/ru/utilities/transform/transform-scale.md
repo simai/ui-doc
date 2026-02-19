@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Масштабирование (transform-scale)"
@@ -6,6 +6,9 @@ description: "Классы масштабирования transform-scale"
 ---
 
 # Масштабирование (transform-scale)
+
+!rtags[transform-scale]
+
 
 `transform-scale` изменяет размер элемента по обеим осям или отдельно по `x`/`y`.
 
@@ -36,6 +39,6 @@ description: "Классы масштабирования transform-scale"
 Где `value`: `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`.
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=transform&group=transform-scale"></iframe>
 </div>

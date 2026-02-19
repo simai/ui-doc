@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размер колонки сетки (grid-column)"
@@ -7,7 +7,8 @@ description: "Размер колонки сетки (grid-column)"
 
 # Размер колонки сетки (grid-column)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-column.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-column.php)
+!rtags[grid-column sm md lg xl]
+
 
 Модификаторы `grid-column` позволяют задавать колонки и их интервалы в сетке, управляя шириной и расположением элементов по горизонтали.
 
@@ -61,6 +62,6 @@ description: "Размер колонки сетки (grid-column)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column"></iframe>
 </div>

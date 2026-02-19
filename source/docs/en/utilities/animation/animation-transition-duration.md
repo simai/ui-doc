@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Продолжительность перехода
@@ -7,7 +7,6 @@ description: Продолжительность перехода
 
 # Продолжительность перехода
 
-[https://dev.ru.simai.io/ru/ui/utility/animation/transition-duration.php](https://dev.ru.simai.io/ru/ui/utility/animation/transition-duration.php)
 
 С помощью данных модификаторов можно задать длительность переходов CSS-свойств. Это позволяет контролировать, насколько
 быстро или медленно будут воспроизводиться анимации при взаимодействии с элементом.

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Размытие фона элемента (backdrop-blur)"
@@ -7,7 +7,9 @@ description: "Размытие фона элемента (backdrop-blur)"
 
 # Размытие фона элемента (backdrop-blur)
 
-[https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-blur.php](https://dev.ru.simai.io/ru/ui/utility/backdrop-filter/backdrop-filter-blur.php)
+!rtags[backdrop-blur]
+
+
 
 Данный модификатор позволяет размывать задний фон элемента.
 
@@ -67,6 +69,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 {.table}
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-blur"></iframe>
 </div>

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Выделение текста
@@ -6,6 +6,9 @@ description: Выделение текста
 ---
 
 # Выделение текста
+
+!rtags[text-selecting]
+
 
 ## Таблица классов
 
@@ -25,6 +28,6 @@ description: Выделение текста
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-selecting"></iframe>
 </div>

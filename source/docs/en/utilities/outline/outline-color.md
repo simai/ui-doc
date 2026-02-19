@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет внешней границы
@@ -7,7 +7,6 @@ description: Цвет внешней границы
 
 # Цвет внешней границы
 
-[https://dev.ru.simai.io/ru/ui/utility/outline/outline-color.php](https://dev.ru.simai.io/ru/ui/utility/outline/outline-color.php)
 
 С помощью модификаторов цвета внешней границы (`outline`) вы можете изменять цвет внешней рамки элемента.
 

@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Цвет текста
@@ -6,6 +6,9 @@ description: Цвет текста
 ---
 
 # Цвет текста
+
+!rtags[text-color]
+
 
 ## Таблица классов
 
@@ -26,6 +29,6 @@ description: Цвет текста
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-color"></iframe>
 </div>

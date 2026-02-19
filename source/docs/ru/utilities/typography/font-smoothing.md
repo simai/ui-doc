@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Сглаживание шрифтов (font-smoothing)"
@@ -7,7 +7,9 @@ description: "Сглаживание шрифтов (font-smoothing)"
 
 # Сглаживание шрифтов (font-smoothing)
 
-[https://dev.ru.simai.io/ru/ui/utility/typography/font-smoothing.php](https://dev.ru.simai.io/ru/ui/utility/typography/font-smoothing.php)
+!rtags[font-smoothing]
+
+
 
 Модификаторы для управления сглаживанием шрифта позволяют выбрать между субпиксельным сглаживанием и сглаживанием
 оттенков серого.
@@ -42,6 +44,6 @@ description: "Сглаживание шрифтов (font-smoothing)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=typography&group=font-smoothing"></iframe>
 </div>

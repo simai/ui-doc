@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Смещение подчеркивания текста
@@ -7,7 +7,6 @@ description: Смещение подчеркивания текста
 
 # Смещение подчеркивания текста
 
-[https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-offset.php](https://dev.ru.simai.io/ru/ui/utility/text-decoration/text-decoration-offset.php)
 
 С помощью модификаторов смещения подчеркивания можно изменить отступ между  
 текстом и линией подчеркивания.

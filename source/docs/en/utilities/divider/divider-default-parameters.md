@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию
@@ -7,7 +7,6 @@ description: Параметры по умолчанию
 
 # Параметры по умолчанию
 
-[https://dev.ru.simai.io/ru/ui/utility/divider/divider-default.php](https://dev.ru.simai.io/ru/ui/utility/divider/divider-default.php)
 
 По умолчанию в большинстве случаев используется разделитель (divider) с заранее определёнными параметрами. Для удобства
 добавлены модификаторы, которые либо включают, либо убирают разделитель. Эти модификаторы следует подключать до

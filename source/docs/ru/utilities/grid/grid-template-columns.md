@@ -1,4 +1,4 @@
----
+﻿---
 extends: _core._layouts.documentation
 section: content
 title: "Шаблон колонок сетки (grid-template-columns)"
@@ -7,7 +7,8 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 
 # Шаблон колонок сетки (grid-template-columns)
 
-[https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-columns.php](https://dev.ru.simai.io/ru/ui/utility/grid/grid-template-columns.php)
+!rtags[grid-template-columns sm md lg xl]
+
 
 Модификаторы `grid-col-*` задают количество колонок и их размер, формируя базовый шаблон сетки.
 
@@ -45,6 +46,6 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 ```
 ## Playground
 
-<div class="sf-playground">
+<div class="sf-playground overflow-hidden">
 <iframe src="https://play.simai.io/embed.html?component=grid&group=grid-template-columns"></iframe>
 </div>
