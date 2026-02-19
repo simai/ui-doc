@@ -5,9 +5,12 @@ title: "Размытие фона элемента (backdrop-blur)"
 description: "Размытие фона элемента (backdrop-blur)"
 ---
 
-# Размытие фона элемента (backdrop-blur)
+# Размытие фона элемента (backdrop-blur)
 
-!rtags[backdrop-blur]
+!rtags[backdrop-filter-blur hover]
+
+
+
 
 
 

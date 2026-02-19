@@ -7,7 +7,7 @@ description: Углы обводки (Line Join)
 
 # Углы обводки (Line Join)
 
-!rtags[svg-stroke-line-join]
+!rtags[stroke-linejoin]
 
 
 Классы задают `stroke-linejoin`.

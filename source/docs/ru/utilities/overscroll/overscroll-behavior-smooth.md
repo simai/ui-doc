@@ -7,7 +7,7 @@ description: Плавность прокрутки
 
 # Плавность прокрутки
 
-!rtags[overscroll-behavior-smooth]
+!rtags[scroll-behavior]
 
 
 

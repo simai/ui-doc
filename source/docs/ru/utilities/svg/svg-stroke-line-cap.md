@@ -7,7 +7,7 @@ description: Концы обводки (Line Cap)
 
 # Концы обводки (Line Cap)
 
-!rtags[svg-stroke-line-cap]
+!rtags[stroke-linecap]
 
 
 Классы задают `stroke-linecap`.

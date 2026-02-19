@@ -7,7 +7,7 @@ description: Общее свойство перехода
 
 # Общее свойство перехода
 
-!rtags[animation-transition-property sm md lg xl]
+!rtags[transition-property sm md lg xl]
 
 
 Данные модификаторы позволяют задать, какие именно CSS-свойства будут плавно изменяться при взаимодействии с элементом.

@@ -5,9 +5,12 @@ title: Оформление текста
 description: Оформление текста
 ---
 
-# Оформление текста
+# Оформление текста
 
-!rtags[text-formatting-text]
+!rtags[text-align sm md lg xl]
+
+
+
 
 
 ## Таблица классов

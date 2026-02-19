@@ -7,7 +7,7 @@ description: Оформление таблицы
 
 # Оформление таблицы
 
-!rtags[tables-formatting]
+!rtags[table]
 
 
 ## Таблица классов

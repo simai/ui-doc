@@ -7,7 +7,7 @@ description: Функция времени перехода
 
 # Функция времени перехода
 
-!rtags[animation-transition-timing-function]
+!rtags[transition-timing-function]
 
 
 

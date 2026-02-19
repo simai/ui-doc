@@ -7,7 +7,7 @@ description: Параметры по умолчанию для анимации
 
 # Параметры по умолчанию для анимации
 
-!rtags[animation-default-parameters]
+!rtags[animation]
 
 
 

@@ -5,9 +5,12 @@ title: Брендовая SVG-заливка
 description: Fill-цвета брендов для SVG
 ---
 
-# Брендовая SVG-заливка
+# Брендовая SVG-заливка
 
-!rtags[svg-fill-brand]
+!rtags[fill-brand hover]
+
+
+
 
 
 Утилиты `fill-*` из `fill-brand` задают брендовые цвета для SVG.

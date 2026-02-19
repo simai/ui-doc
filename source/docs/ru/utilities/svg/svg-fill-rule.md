@@ -7,7 +7,7 @@ description: Nonzero и evenodd для SVG fill-rule
 
 # Правило заливки SVG (fill-rule)
 
-!rtags[svg-fill-rule]
+!rtags[fill-rule]
 
 
 ## Классы

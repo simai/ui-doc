@@ -5,9 +5,12 @@ title: "Инвертирование цвета фона элемента (backd
 description: "Инвертирование цвета фона элемента (backdrop-invert)"
 ---
 
-# Инвертирование цвета фона элемента (backdrop-invert)
+# Инвертирование цвета фона элемента (backdrop-invert)
 
-!rtags[backdrop-invert]
+!rtags[backdrop-filter-invert hover]
+
+
+
 
 
 

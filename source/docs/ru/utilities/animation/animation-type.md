@@ -7,7 +7,7 @@ description: animation-from-left/right/bottom
 
 # Тип анимации
 
-!rtags[animation-type]
+!rtags[animation]
 
 
 

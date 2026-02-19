@@ -7,7 +7,7 @@ description: "Размер заголовков (title-size)"
 
 # Размер заголовков (title-size)
 
-!rtags[title-size sm md lg xl]
+!rtags[title]
 
 
 

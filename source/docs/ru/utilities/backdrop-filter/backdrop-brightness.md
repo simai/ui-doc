@@ -5,9 +5,12 @@ title: "Яркость фона элемента (backdrop-brightness)"
 description: "Яркость фона элемента (backdrop-brightness)"
 ---
 
-# Яркость фона элемента (backdrop-brightness)
+# Яркость фона элемента (backdrop-brightness)
 
-!rtags[backdrop-brightness]
+!rtags[backdrop-filter-brightness hover]
+
+
+
 
 
 

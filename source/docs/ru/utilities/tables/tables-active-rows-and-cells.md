@@ -7,7 +7,7 @@ description: Активные строки и ячейки
 
 # Активные строки и ячейки
 
-!rtags[tables-active-rows-and-cells]
+!rtags[table-active]
 
 
 ## Таблица классов

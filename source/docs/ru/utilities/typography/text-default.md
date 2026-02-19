@@ -7,7 +7,7 @@ description: "Параметры по умолчанию (text-default)"
 
 # Параметры по умолчанию (text-default)
 
-!rtags[text-default]
+!rtags[title]
 
 
 

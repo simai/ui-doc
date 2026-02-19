@@ -5,9 +5,12 @@ title: Параметры по умолчанию
 description: Параметры по умолчанию
 ---
 
-# Параметры по умолчанию
+# Параметры по умолчанию
 
-!rtags[outline-default-parameters]
+!rtags[outline-width focus]
+
+
+
 
 
 Классы по умолчанию для внешней границы:

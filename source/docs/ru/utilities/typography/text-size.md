@@ -7,7 +7,7 @@ description: "Размер текста (text-size)"
 
 # Размер текста (text-size)
 
-!rtags[text-size sm md lg xl]
+!rtags[font-size-ext sm md lg xl]
 
 
 

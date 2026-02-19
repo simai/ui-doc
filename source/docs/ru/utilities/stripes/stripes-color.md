@@ -7,7 +7,7 @@ description: Цвет полос
 
 # Цвет полос
 
-!rtags[stripes-color]
+!rtags[stripe-color]
 
 
 

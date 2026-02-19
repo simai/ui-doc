@@ -5,9 +5,12 @@ title: Полосы
 description: Полосы
 ---
 
-# Полосы
+# Полосы
 
-!rtags[stripes]
+!rtags[stripe sm md lg xl]
+
+
+
 
 
 

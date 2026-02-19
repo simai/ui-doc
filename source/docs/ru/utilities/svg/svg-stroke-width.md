@@ -7,7 +7,7 @@ description: Толщина обводки
 
 # Толщина обводки
 
-!rtags[svg-stroke-width sm md lg xl]
+!rtags[stroke-width sm md lg xl]
 
 
 Классы `stroke-N` задают `stroke-width`.

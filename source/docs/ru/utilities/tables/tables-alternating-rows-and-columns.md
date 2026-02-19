@@ -7,7 +7,7 @@ description: Чередование строк и столбцов
 
 # Чередование строк и столбцов
 
-!rtags[tables-alternating-rows-and-columns]
+!rtags[table-stripe]
 
 
 ## Таблица классов

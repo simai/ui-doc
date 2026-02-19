@@ -5,9 +5,12 @@ title: Цвет оформления текста
 description: Цвет оформления текста
 ---
 
-# Цвет оформления текста
+# Цвет оформления текста
 
-!rtags[text-formatting-color]
+!rtags[text-decoration-color hover focus active]
+
+
+
 
 
 ## Таблица классов

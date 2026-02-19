@@ -7,7 +7,7 @@ description: Продолжительность перехода
 
 # Продолжительность перехода
 
-!rtags[animation-transition-duration]
+!rtags[transition-duration]
 
 
 

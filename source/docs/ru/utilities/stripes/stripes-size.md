@@ -5,9 +5,12 @@ title: Размер полосок
 description: Размер полосок
 ---
 
-# Размер полосок
+# Размер полосок
 
-!rtags[stripes-size]
+!rtags[stripe-width sm md lg xl]
+
+
+
 
 
 

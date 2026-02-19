@@ -7,7 +7,7 @@ description: "Утилиты выбора типа фонового градие
 
 # Вид градиента
 
-!rtags[background-gradient-type sm md lg xl]
+!rtags[gradient-type sm md lg xl]
 
 
 

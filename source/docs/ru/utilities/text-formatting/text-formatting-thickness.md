@@ -7,7 +7,7 @@ description: Толщина оформления текста
 
 # Толщина оформления текста
 
-!rtags[text-formatting-thickness]
+!rtags[text-decoration-thickness]
 
 
 ## Таблица классов

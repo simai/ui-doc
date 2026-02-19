@@ -5,9 +5,12 @@ title: "Контрастность фона элемента (backdrop-contrast)
 description: "Контрастность фона элемента (backdrop-contrast)"
 ---
 
-# Контрастность фона элемента (backdrop-contrast)
+# Контрастность фона элемента (backdrop-contrast)
 
-!rtags[backdrop-contrast]
+!rtags[backdrop-filter-contrast hover]
+
+
+
 
 
 

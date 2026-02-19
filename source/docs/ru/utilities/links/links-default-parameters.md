@@ -5,9 +5,12 @@ title: Параметры по умолчанию
 description: Параметры по умолчанию
 ---
 
-# Параметры по умолчанию
+# Параметры по умолчанию
 
-!rtags[links-default-parameters]
+!rtags[text-color hover focus active]
+
+
+
 
 
 Ссылки по умолчанию используют токены темы и меняют цвет в состояниях `:hover`, `:active`, `:visited`.

@@ -7,7 +7,7 @@ description: Цвет тени для default / hover / active
 
 # Цвет тени элемента (box-shadow-color)
 
-!rtags[element-color]
+!rtags[box-shadow-color hover active]
 
 
 

@@ -7,7 +7,7 @@ description: Паттерн фона
 
 # Паттерн фона
 
-!rtags[background-pattern sm md lg xl]
+!rtags[pattern sm md lg xl]
 
 
 С помощью модификаторов паттернов фона (`pattern-{номер}`) вы можете задать повторяющийся узор в качестве фонового

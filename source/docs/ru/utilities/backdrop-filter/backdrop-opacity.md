@@ -5,9 +5,12 @@ title: "Прозрачность фона элемента (backdrop-opacity)"
 description: "Прозрачность фона элемента (backdrop-opacity)"
 ---
 
-# Прозрачность фона элемента (backdrop-opacity)
+# Прозрачность фона элемента (backdrop-opacity)
 
-!rtags[backdrop-opacity]
+!rtags[backdrop-filter-opacity hover]
+
+
+
 
 
 

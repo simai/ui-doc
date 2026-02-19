@@ -7,7 +7,7 @@ description: Смещение подчеркивания текста
 
 # Смещение подчеркивания текста
 
-!rtags[text-underline-offset]
+!rtags[text-decoration-offset]
 
 
 ## Таблица классов

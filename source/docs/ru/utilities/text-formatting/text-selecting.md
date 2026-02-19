@@ -7,7 +7,7 @@ description: Выделение текста
 
 # Выделение текста
 
-!rtags[text-selecting]
+!rtags[user-select]
 
 
 ## Таблица классов

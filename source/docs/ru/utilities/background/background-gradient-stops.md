@@ -7,7 +7,7 @@ description: Утилиты from/via/to для цветов градиента
 
 # Точки градиента (gradient-stops)
 
-!rtags[background-gradient-stops]
+!rtags[gradient-stops]
 
 
 Утилиты `from-*`, `via-*`, `to-*` задают цветовые точки градиента:

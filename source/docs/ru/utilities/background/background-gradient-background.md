@@ -7,7 +7,7 @@ description: Градиент фона
 
 # Градиент фона
 
-!rtags[background-gradient-background]
+!rtags[gradient-color]
 
 
 

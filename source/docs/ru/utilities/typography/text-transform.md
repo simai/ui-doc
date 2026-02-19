@@ -7,7 +7,7 @@ description: "Трансформация текста (text-transform)"
 
 # Трансформация текста (text-transform)
 
-!rtags[text-transform]
+!rtags[font-transform]
 
 
 

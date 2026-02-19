@@ -7,7 +7,7 @@ description: Глубина тени элемента и состояния hove
 
 # Тень элемента (box-shadow)
 
-!rtags[element-shadow]
+!rtags[box-shadow hover]
 
 
 

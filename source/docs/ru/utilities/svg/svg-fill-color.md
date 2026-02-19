@@ -7,7 +7,7 @@ description: Цвет заливки
 
 # Цвет заливки
 
-!rtags[svg-fill-color]
+!rtags[fill]
 
 
 Классы `fill-*` задают `fill` для SVG.

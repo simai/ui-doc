@@ -7,7 +7,7 @@ description: Управление минимальным размером пол
 
 # Толщина ползунка прокрутки (scroll / scroll-thumb-size)
 
-!rtags[scroll]
+!rtags[scroll-slider-width]
 
 
 

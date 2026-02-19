@@ -5,9 +5,12 @@ title: "Фон в оттенках серого элемента (backdrop-grays
 description: "Фон в оттенках серого элемента (backdrop-grayscale)"
 ---
 
-# Фон в оттенках серого элемента (backdrop-grayscale)
+# Фон в оттенках серого элемента (backdrop-grayscale)
 
-!rtags[backdrop-grayscale]
+!rtags[backdrop-filter-grayscale hover]
+
+
+
 
 
 

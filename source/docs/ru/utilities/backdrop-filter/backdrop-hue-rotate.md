@@ -5,9 +5,12 @@ title: "Вращение оттенка фона элемента (backdrop-hue-
 description: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
 ---
 
-# Вращение оттенка фона элемента (backdrop-hue-rotate)
+# Вращение оттенка фона элемента (backdrop-hue-rotate)
 
-!rtags[backdrop-hue-rotate]
+!rtags[backdrop-filer-hue-rotate hover]
+
+
+
 
 
 

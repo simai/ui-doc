@@ -7,7 +7,7 @@ description: Задержка перехода
 
 # Задержка перехода
 
-!rtags[animation-transition-delay sm md lg xl]
+!rtags[transition-delay sm md lg xl]
 
 
 

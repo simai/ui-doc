@@ -7,7 +7,7 @@ description: Оформление ссылок
 
 # Оформление ссылок
 
-!rtags[links-formatting]
+!rtags[text-decoration-style]
 
 
 Утилиты задают стиль подчеркивания ссылки.

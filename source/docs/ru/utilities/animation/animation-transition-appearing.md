@@ -7,7 +7,7 @@ description: Классы animation и infinite
 
 # Анимация элемента
 
-!rtags[animation-transition-appearing]
+!rtags[animation]
 
 
 

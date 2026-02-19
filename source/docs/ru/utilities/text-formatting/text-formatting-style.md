@@ -7,7 +7,7 @@ description: Стиль оформления текста
 
 # Стиль оформления текста
 
-!rtags[text-formatting-style]
+!rtags[text-decoration-style]
 
 
 ## Таблица классов

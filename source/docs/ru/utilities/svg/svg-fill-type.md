@@ -7,7 +7,7 @@ description: Тип заливки
 
 # Тип заливки
 
-!rtags[svg-fill-type]
+!rtags[fill]
 
 
 Классы задают `fill-rule` у SVG-пути.

@@ -5,9 +5,12 @@ title: Цвет обводки
 description: Цвет обводки
 ---
 
-# Цвет обводки
+# Цвет обводки
 
-!rtags[svg-stroke-color]
+!rtags[stroke-color hover]
+
+
+
 
 
 Классы `stroke*` задают `stroke` у SVG.
