@@ -26,7 +26,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Prepare .env
         run: |
@@ -51,13 +51,9 @@ jobs:
         env:
           YARN_IGNORE_ENGINES: 1
         run: |
+          rm -rf .cache build_production
           yarn install
           yarn prod
-
-      - name: Build static site
-        run: |
-          rm -rf .cache build_production
-          php vendor/bin/docara build production --cache=false
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.8
@@ -87,9 +83,8 @@ jobs:
             AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
             EOF
             composer install --no-dev --prefer-dist --no-interaction
-            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-files
+            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
             yarn install
-            yarn prod
             rm -rf .cache build_production
-            php vendor/bin/docara build production --cache=false
+            yarn prod
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
