@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Толщина разделителя
@@ -41,6 +41,6 @@ description: Толщина разделителя
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=divider&group=divider-width"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=divider&group=divider-width"></iframe>
 </div>

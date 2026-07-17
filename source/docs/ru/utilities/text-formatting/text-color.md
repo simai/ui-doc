@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Цвет текста
@@ -29,6 +29,6 @@ description: Цвет текста
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-color"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-color"></iframe>
 </div>

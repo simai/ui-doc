@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Автоматическая ширина столбцов сетки (grid-auto-columns)"
@@ -70,6 +70,6 @@ description: "Автоматическая ширина столбцов сет�
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-auto-columns"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-auto-columns"></iframe>
 </div>

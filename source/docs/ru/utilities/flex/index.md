@@ -3,14 +3,14 @@
 Утилиты категории Флексбоксы помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
 
 ## Материалы раздела
-- [Базисный размер (flex-basis)](flex-basis.md)
-- [Направление размещения (flex-direction)](flex-direction.md)
-- [Растяжимость элементов (flex-grow)](flex-grow.md)
-- [Сжимаемость (flex-shrink)](flex-shrink.md)
-- [Перенос элементов (flex-wrap)](flex-wrap.md)
-- [Гибкость элементов (flex)](flexibility.md)
+- [Базисный размер (flex-basis)](/ru/utilities/flex/flex-basis/)
+- [Направление размещения (flex-direction)](/ru/utilities/flex/flex-direction/)
+- [Растяжимость элементов (flex-grow)](/ru/utilities/flex/flex-grow/)
+- [Сжимаемость (flex-shrink)](/ru/utilities/flex/flex-shrink/)
+- [Перенос элементов (flex-wrap)](/ru/utilities/flex/flex-wrap/)
+- [Гибкость элементов (flex)](/ru/utilities/flex/flexibility/)
 
 ## Связанные категории
-- [Сетка](../grid/index.md)
-- [Утилиты для сетки и флексбоксов](../grid-and-flexbox-utilities/index.md)
-- [Макет](../layout/index.md)
+- [Сетка](/ru/utilities/grid/)
+- [Утилиты для сетки и флексбоксов](/ru/utilities/grid-and-flexbox-utilities/)
+- [Макет](/ru/utilities/layout/)

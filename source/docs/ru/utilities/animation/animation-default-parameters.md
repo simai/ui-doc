@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для анимации
@@ -67,6 +67,6 @@ cubic-bezier(.25,.8,.25,1) будут использованы по умолча
 (В примере можно не указывать класс `transition`, так как переход задан глобально. Если же вам нужно указать другую
 длительность в конкретном месте, переопределите переменные или примените `transition` со своими значениями.)
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-default-parameters"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-default-parameters"></iframe>
 </div>

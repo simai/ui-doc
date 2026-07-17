@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Размер текста (text-size)"
@@ -71,6 +71,6 @@ description: "Размер текста (text-size)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=typography&group=text-size"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-size"></iframe>
 </div>

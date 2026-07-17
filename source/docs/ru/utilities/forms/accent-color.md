@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Акцентный цвет (accent-color)"
@@ -54,6 +54,6 @@ description: "Акцентный цвет (accent-color)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=forms&group=accent-color"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=accent-color"></iframe>
 </div>

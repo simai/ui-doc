@@ -1,24 +1,24 @@
-﻿# Прокрутка
+# Прокрутка
 
 Утилиты категории «Прокрутка» помогают настраивать поведение скролла, цвет/размер трека и ползунка, а также snap-механики.
 
 ## Материалы раздела
-- [Плавность прокрутки](overscroll-behavior-smooth.md)
-- [Поведение при прокрутке](overscroll-behavior.md)
-- [Цвет подложки прокрутки (scroll-backdrop-color)](scroll-backdrop-color.md)
-- [Радиус подложки прокрутки (scroll-backdrop-radius)](scroll-backdrop-radius.md)
-- [Толщина подложки прокрутки (scroll-backdrop-width)](scroll-backdrop-width.md)
-- [Полоса прокрутки при наведении (scroll-hover)](scroll-hover.md)
-- [Внешний отступ прокрутки](scroll-margin.md)
-- [Внутренний отступ прокрутки (scroll-padding)](scroll-padding.md)
-- [Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)](scroll-slider-color.md)
-- [Радиус ползунка прокрутки (scroll-slider-radius / scroll-thumb-radius)](scroll-slider-radius.md)
-- [Выровнивание привязки прокрутки (scroll-snap-align)](scroll-snap-align.md)
-- [Ограничитель прокрутки (scroll-snap-stop)](scroll-snap-stop.md)
-- [Тип привязки прокрутки (scroll-snap-type)](scroll-snap-type.md)
-- [Толщина ползунка прокрутки (scroll / scroll-thumb-size)](scroll.md)
+- [Плавность прокрутки](/ru/utilities/overscroll/overscroll-behavior-smooth/)
+- [Поведение при прокрутке](/ru/utilities/overscroll/overscroll-behavior/)
+- [Цвет подложки прокрутки (scroll-backdrop-color)](/ru/utilities/overscroll/scroll-backdrop-color/)
+- [Радиус подложки прокрутки (scroll-backdrop-radius)](/ru/utilities/overscroll/scroll-backdrop-radius/)
+- [Толщина подложки прокрутки (scroll-backdrop-width)](/ru/utilities/overscroll/scroll-backdrop-width/)
+- [Полоса прокрутки при наведении (scroll-hover)](/ru/utilities/overscroll/scroll-hover/)
+- [Внешний отступ прокрутки](/ru/utilities/overscroll/scroll-margin/)
+- [Внутренний отступ прокрутки (scroll-padding)](/ru/utilities/overscroll/scroll-padding/)
+- [Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)](/ru/utilities/overscroll/scroll-slider-color/)
+- [Радиус ползунка прокрутки (scroll-slider-radius / scroll-thumb-radius)](/ru/utilities/overscroll/scroll-slider-radius/)
+- [Выровнивание привязки прокрутки (scroll-snap-align)](/ru/utilities/overscroll/scroll-snap-align/)
+- [Ограничитель прокрутки (scroll-snap-stop)](/ru/utilities/overscroll/scroll-snap-stop/)
+- [Тип привязки прокрутки (scroll-snap-type)](/ru/utilities/overscroll/scroll-snap-type/)
+- [Толщина ползунка прокрутки (scroll / scroll-thumb-size)](/ru/utilities/overscroll/scroll/)
 
 ## Связанные категории
-- [Разрыв макета](../layout-break/index.md)
-- [Интерактивность](../interactivity/index.md)
-- [Печать](../print/index.md)
+- [Разрыв макета](/ru/utilities/layout-break/)
+- [Интерактивность](/ru/utilities/interactivity/)
+- [Печать](/ru/utilities/print/)

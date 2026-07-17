@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Наклон (transform-skew)"
@@ -41,6 +41,6 @@ description: "Классы наклона transform-skew"
 Где `value`: `0`, `1`, `2`, `3`, `5`, `15`.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=transform&group=transform-skew"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-skew"></iframe>
 </div>

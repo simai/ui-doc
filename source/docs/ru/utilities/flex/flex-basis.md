@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Базисный размер (flex-basis)"
@@ -88,6 +88,6 @@ description: "Базисный размер (flex-basis)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=flex&group=flex-basis"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flex-basis"></iframe>
 </div>

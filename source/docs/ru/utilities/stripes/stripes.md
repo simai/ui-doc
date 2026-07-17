@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Полосы
 description: Полосы
 ---
 
-# Полосы
+# Полосы
+
 
 !rtags[stripe sm md lg xl]
 
@@ -30,12 +31,12 @@ description: Полосы
 ## Описание
 
 Модификаторы `stripe-1`, `stripe-2`, `stripe-3`, `stripe-4` создают разные узоры полос. Сами цвета и размер полос
-определяются через переменные, такие как `--sf-stripe--color` и `--sf-stripe--size`.  
+определяются через переменные, такие как `--sf-stripe--color` и `--sf-stripe--size`.
 Данные модификаторы добавляют к фону элемента полосатый паттерн в разных конфигурациях.
 
 ## Пример использования
 
-```html 
+```html
 
 <div class="stripe-1 p-3">Полосы в стиле stripe-1</div>
 <div class="stripe-2 p-3">Полосы в стиле stripe-2</div>
@@ -44,6 +45,6 @@ description: Полосы
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=stripes&group=stripes"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=stripes&group=stripes"></iframe>
 </div>

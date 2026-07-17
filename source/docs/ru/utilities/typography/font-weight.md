@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Толщина шрифта (font-weight)"
@@ -57,6 +57,6 @@ description: "Толщина шрифта (font-weight)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=typography&group=font-weight"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-weight"></iframe>
 </div>

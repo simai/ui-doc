@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Положение элемента по оси Z (z-index)"
@@ -82,6 +82,6 @@ description: "Положение элемента по оси Z (z-index)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=layout&group=z-index"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=z-index"></iframe>
 </div>

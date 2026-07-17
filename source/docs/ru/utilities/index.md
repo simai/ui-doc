@@ -1,54 +1,69 @@
+---
+extends: _core._layouts.documentation
+section: content
+title: Утилиты
+description: Каталог CSS-утилит SIMAI Framework и правила их безопасного применения.
+---
+
 # Утилиты
 
-Справочник модификаторов SF UI. Утилиты разбиты по категориям CSS-свойств: от сеток и типографики до масок и фильтров. Каждая страница описывает конкретный модификатор, его значения и примеры.
+Утилиты — CSS-модификаторы для типовых задач интерфейса: макета, размеров,
+отступов, сеток, типографики, фонов и интерактивности. Страница конкретной
+утилиты должна быть прочитана вместе с её ограничениями, условиями и статусом
+в approved release catalog.
+
+Для baseline `5.4.0` этот сайт не подменяет release catalog историческими
+списками или плавающими CDN-refs. До утверждения immutable compatibility lock
+сверяйте применяемые правила с фактическим артефактом поставки.
 
 ## Направление (LTR/RTL)
-- Фреймворк автоматически выставляет `dir` на `<html>` (`ltr` по умолчанию, `rtl` если страница уже помечена).
-- Утилиты используют логические свойства (`inline-start/end`, `block-start/end`), поэтому классы работают одинаково в LTR и RTL без отдельного набора модификаторов.
-- Если пишете собственные шаблоны, не снимайте `dir` и не задавайте вручную `left/right`, чтобы сохранить совместимость с RTL.
+
+Логические имена свойств сами по себе не являются гарантией RTL-поддержки.
+Пока release lock и browser smoke не подтвердят конкретное правило, проверяйте
+LTR и RTL отдельно: значение `dir` на документе, generated CSS и визуальный
+результат. Не заявляйте RTL-совместимость для собственного шаблона только по
+наличию класса.
 
 ## Категории
-- [Макет](layout/index.md) — базовое позиционирование и отображение элементов.
-- [Разрыв макета](layout-break/index.md) — управление колонками и переносами.
-- [Объекты](objects/index.md) — выравнивание и подгонка медиа.
-- [Размеры](sizes/index.md) — ширина, высота и их ограничения.
-- [Отступы](indents/index.md) — margin, padding и пространственные модификаторы.
-- [Сетка](grid/index.md) — grid-шаблоны и размещение ячеек.
-- [Флексбоксы](flex/index.md) — направление, рост/сжатие и wrap.
-- [Утилиты для сетки и флексбоксов](grid-and-flexbox-utilities/index.md) — выравнивание и порядок элементов.
-- [Типографика](typography/index.md) — роли текста, размеры, насыщенность.
-- [Оформление текста](text-formatting/index.md) — цвета, толщина, подчёркивания.
-- [Ссылки](links/index.md) — состояния и форматирование ссылок.
-- [Таблицы](tables/index.md) — оформление таблиц и ячеек.
-- [SVG](svg/index.md) — заливки, обводки и размеры SVG.
-- [Граница](border/index.md) — ширина, стиль и радиусы.
-- [Разделитель](divider/index.md) — стили горизонтальных/вертикальных линий.
-- [Внешняя граница](outline/index.md) — outline для фокуса и акцента.
-- [Фоновый цвет](background-color/index.md) — базовые цветовые модификаторы.
-- [Фоновое изображение](background-image/index.md) — позиция, повторение, размер.
-- [Градиент](background-gradient/index.md) — типы и параметры фоновых градиентов.
-- [Маска](mask/index.md) — clip, repeat и позиционирование масок.
-- [Тени](shadows/index.md) — тени элементов и капельные тени.
-- [Фильтры элемента](filters/index.md) — blur, hue-rotate и другие CSS-фильтры.
-- [Фильтры подложки](backdrop-filter/index.md) — блюры и корректировки фона.
-- [Анимация](animation/index.md) — transition и типы анимаций.
-- [Прокрутка](overscroll/index.md) — scroll snap, цвета и радиусы скролла.
-- [Преобразования](transform/index.md) — rotate, scale, skew и translate.
-- [Формы](forms/index.md) — состояние полей и вспомогательные свойства.
-- [Интерактивность](interactivity/index.md) — курсоры, user-select, touch-action.
-- [Печать](print/index.md) — управление отображением в режиме печати.
-- [Полосы](stripes/index.md) — штриховка и фоновые полосы.
+- [Макет](/ru/utilities/layout/) — базовое позиционирование и отображение.
+- [Разрыв макета](/ru/utilities/layout-break/) — управление колонками и переносами.
+- [Объекты](/ru/utilities/objects/) — выравнивание и подгонка медиа.
+- [Размеры](/ru/utilities/sizes/) — ширина, высота и ограничения.
+- [Отступы](/ru/utilities/indents/) — margin, padding и пространство.
+- [Сетка](/ru/utilities/grid/) — grid-шаблоны и ячейки.
+- [Флексбоксы](/ru/utilities/flex/) — направление, рост, сжатие и wrap.
+- [Утилиты сетки и флексбоксов](/ru/utilities/grid-and-flexbox-utilities/) — выравнивание и порядок.
+- [Типографика](/ru/utilities/typography/) — роли текста, размеры и насыщенность.
+- [Оформление текста](/ru/utilities/text-formatting/) — цвет, толщина и подчёркивание.
+- [Ссылки](/ru/utilities/links/) — состояния и форматирование ссылок.
+- [Таблицы](/ru/utilities/tables/) — оформление таблиц и ячеек.
+- [SVG](/ru/utilities/svg/) — заливки, обводки и размеры SVG.
+- [Граница](/ru/utilities/border/) — ширина, стиль и радиусы.
+- [Разделитель](/ru/utilities/divider/) — горизонтальные и вертикальные линии.
+- [Внешняя граница](/ru/utilities/outline/) — outline для фокуса и акцента.
+- [Фоны](/ru/utilities/background/) — цвет, изображение, градиент и позиционирование.
+- [Маска](/ru/utilities/mask/) — clip, repeat и позиционирование масок.
+- [Тени](/ru/utilities/shadows/) — тени элементов и капельные тени.
+- [Фильтры элемента](/ru/utilities/filters/) — blur, hue-rotate и другие CSS-фильтры.
+- [Фильтры подложки](/ru/utilities/backdrop-filter/) — blur и корректировка фона.
+- [Анимация](/ru/utilities/animation/) — transition и типы анимаций.
+- [Прокрутка](/ru/utilities/overscroll/) — scroll snap и связанные свойства.
+- [Преобразования](/ru/utilities/transform/) — rotate, scale, skew и translate.
+- [Формы](/ru/utilities/forms/) — состояния полей и вспомогательные свойства.
+- [Интерактивность](/ru/utilities/interactivity/) — cursor, user-select и touch-action.
+- [Печать](/ru/utilities/print/) — отображение для печати.
+- [Полосы](/ru/utilities/stripes/) — штриховка и фоновые полосы.
 
 ## Часто используемые
-- [Макет](layout/index.md)
-- [Сетка](grid/index.md)
-- [Флексбоксы](flex/index.md)
-- [Отступы](indents/index.md)
-- [Размеры](sizes/index.md)
-- [Типографика](typography/index.md)
-- [Оформление текста](text-formatting/index.md)
-- [Фоновый цвет](background-color/index.md)
-- [Граница](border/index.md)
-- [Тени](shadows/index.md)
-- [Преобразования](transform/index.md)
-- [Интерактивность](interactivity/index.md)
+- [Макет](/ru/utilities/layout/)
+- [Сетка](/ru/utilities/grid/)
+- [Флексбоксы](/ru/utilities/flex/)
+- [Отступы](/ru/utilities/indents/)
+- [Размеры](/ru/utilities/sizes/)
+- [Типографика](/ru/utilities/typography/)
+- [Оформление текста](/ru/utilities/text-formatting/)
+- [Фоны](/ru/utilities/background/)
+- [Граница](/ru/utilities/border/)
+- [Тени](/ru/utilities/shadows/)
+- [Преобразования](/ru/utilities/transform/)
+- [Интерактивность](/ru/utilities/interactivity/)

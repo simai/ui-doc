@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Чередование строк и столбцов
@@ -26,6 +26,6 @@ description: Чередование строк и столбцов
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=tables&group=tables-alternating-rows-and-columns"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=tables-alternating-rows-and-columns"></iframe>
 </div>

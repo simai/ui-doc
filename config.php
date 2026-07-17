@@ -70,8 +70,8 @@ return [
     'cache' => true,
     'moduleCache' => false,
     'cachePath' => $projectRoot . '/.cache',
-    'siteName' => 'Simai Documentation',
-    'siteDescription' => 'Simai framework documentation',
+    'siteName' => 'SIMAI Framework Documentation',
+    'siteDescription' => 'Documentation for SIMAI Framework',
     'brand' => [
         'title' => 'SitePack',
         'logoSvg' => null,

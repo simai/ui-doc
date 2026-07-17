@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Прозрачность разделителя
@@ -13,6 +13,6 @@ description: Прозрачность линии divider
 Утилиты `divider-opacity-*` / `divide-opacity-*` задают прозрачность линии разделителя.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=divider&group=divider-opacity"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=divider&group=divider-opacity"></iframe>
 </div>

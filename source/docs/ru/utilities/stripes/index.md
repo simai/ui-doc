@@ -1,13 +1,19 @@
+---
+extends: _core._layouts.documentation
+section: content
+title: Полосы
+description: Утилиты для штриховки и фоновых полос.
+---
+
 # Полосы
 
 Утилиты категории Полосы помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
 
 ## Материалы раздела
-- [Цвет полос](stripes-color.md)
-- [Размер полосок](stripes-size.md)
-- [Полосы](stripes.md)
+- [Цвет полос](/ru/utilities/stripes/stripes-color/)
+- [Размер полосок](/ru/utilities/stripes/stripes-size/)
+- [Полосы](/ru/utilities/stripes/stripes/)
 
 ## Связанные категории
-- [Фоновый цвет](../background-color/index.md)
-- [Градиент](../background-gradient/index.md)
-- [Таблицы](../tables/index.md)
+- [Фоны](/ru/utilities/background/)
+- [Таблицы](/ru/utilities/tables/)

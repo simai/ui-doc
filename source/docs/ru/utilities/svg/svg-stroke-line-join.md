@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Углы обводки (Line Join)
@@ -30,6 +30,6 @@ description: Углы обводки (Line Join)
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-join"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-join"></iframe>
 </div>

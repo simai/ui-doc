@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Оформление текста
 description: Оформление текста
 ---
 
-# Оформление текста
+# Оформление текста
+
 
 !rtags[text-align sm md lg xl]
 
@@ -35,6 +36,6 @@ description: Оформление текста
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-text"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-text"></iframe>
 </div>

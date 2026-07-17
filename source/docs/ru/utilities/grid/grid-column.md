@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Размер колонки сетки (grid-column)"
@@ -62,6 +62,6 @@ description: "Размер колонки сетки (grid-column)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-column"></iframe>
 </div>

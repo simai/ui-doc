@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Сенсорное действие (touch-action)"
@@ -62,6 +62,6 @@ description: "Сенсорное действие (touch-action)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=interactivity&group=touch-action"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=interactivity&group=touch-action"></iframe>
 </div>

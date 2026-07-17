@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Насыщенность подложки (backdrop-saturate)"
 description: "Насыщенность подложки (backdrop-saturate)"
 ---
 
-# Насыщенность подложки (backdrop-saturate)
+# Насыщенность подложки (backdrop-saturate)
+
 
 !rtags[backdrop-filter-saturate hover]
 
@@ -38,7 +39,7 @@ description: "Насыщенность подложки (backdrop-saturate)"
 - `backdrop-saturate-1/4`, `backdrop-saturate-1/3`, `backdrop-saturate-1/2` — промежуточные ступени для более точного
   контроля насыщенности.
 
-Можно использовать `hover:` для изменения при наведении, например:  
+Можно использовать `hover:` для изменения при наведении, например:
 `hover:backdrop-saturate-2` для увеличения насыщенности при наведении.
 
 ## Синтаксис
@@ -66,6 +67,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-saturate"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-saturate"></iframe>
 </div>

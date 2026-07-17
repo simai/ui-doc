@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Сепия подложки (backdrop-sepia)"
 description: "Сепия подложки (backdrop-sepia)"
 ---
 
-# Сепия подложки (backdrop-sepia)
+# Сепия подложки (backdrop-sepia)
+
 
 !rtags[backdrop-filter-sepia hover]
 
@@ -29,7 +30,7 @@ description: "Сепия подложки (backdrop-sepia)"
 - `backdrop-sepia-none` — фон отображается без сепии.
 - `backdrop-sepia` — фон отображается в стиле сепии.
 
-Убираем адаптивность, но оставляем возможность использовать `hover:` для изменения состояния при наведении, например:  
+Убираем адаптивность, но оставляем возможность использовать `hover:` для изменения состояния при наведении, например:
 `hover:backdrop-sepia` для применения сепии при наведении курсора.
 
 ## Синтаксис
@@ -47,6 +48,6 @@ description: "Сепия подложки (backdrop-sepia)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-sepia"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-sepia"></iframe>
 </div>

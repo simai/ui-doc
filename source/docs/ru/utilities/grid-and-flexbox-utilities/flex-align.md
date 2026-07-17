@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Одновременное выравнивание по двум осям (flex-align)"
@@ -64,6 +64,6 @@ description: "Одновременное выравнивание по двум 
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=flex-align"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=flex-align"></iframe>
 </div>

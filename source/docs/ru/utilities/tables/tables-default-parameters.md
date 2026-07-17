@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Параметры по умолчанию для таблиц
@@ -25,6 +25,6 @@ description: Параметры по умолчанию для таблиц
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=tables&group=tables-default-parameters"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=tables-default-parameters"></iframe>
 </div>

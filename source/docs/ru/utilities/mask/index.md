@@ -3,15 +3,15 @@
 Утилиты раздела управляют поведением CSS-масок: областью, позицией, размером, повторением, режимами и композицией.
 
 ## Материалы раздела
-- [Область маски](mask-clip.md)
-- [Композиция маски](mask-composite.md)
-- [Режим маски](mask-mode.md)
-- [Вложение маски](mask-origin.md)
-- [Положение маски](mask-position.md)
-- [Повтор маски](mask-repeat.md)
-- [Размер маски](mask-size.md)
-- [Тип маски](mask-type.md)
+- [Область маски](/ru/utilities/mask/mask-clip/)
+- [Композиция маски](/ru/utilities/mask/mask-composite/)
+- [Режим маски](/ru/utilities/mask/mask-mode/)
+- [Вложение маски](/ru/utilities/mask/mask-origin/)
+- [Положение маски](/ru/utilities/mask/mask-position/)
+- [Повтор маски](/ru/utilities/mask/mask-repeat/)
+- [Размер маски](/ru/utilities/mask/mask-size/)
+- [Тип маски](/ru/utilities/mask/mask-type/)
 
 ## Связанные категории
-- [Фон](../background/index.md)
-- [SVG](../svg/index.md)
+- [Фон](/ru/utilities/background/)
+- [SVG](/ru/utilities/svg/)

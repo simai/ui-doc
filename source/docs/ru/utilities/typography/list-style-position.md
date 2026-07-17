@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Положение маркера списка (list-style-position)"
@@ -52,6 +52,6 @@ description: "Положение маркера списка (list-style-positio
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=typography&group=list-style-position"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=list-style-position"></iframe>
 </div>

@@ -1,14 +1,14 @@
-﻿# Тени
+# Тени
 
 Утилиты категории `Тени` управляют глубиной и цветом тени для элементов интерфейса.
 
 ## Материалы раздела
-- [Цвет падающей тени (drop-shadow-color)](drop-shadow-color.md)
-- [Падающая тень (drop-shadow)](drop-shadow.md)
-- [Цвет тени элемента (box-shadow-color)](element-color.md)
-- [Глубина тени элемента (box-shadow)](element-shadow.md)
+- [Цвет падающей тени (drop-shadow-color)](/ru/utilities/shadows/drop-shadow-color/)
+- [Падающая тень (drop-shadow)](/ru/utilities/shadows/drop-shadow/)
+- [Цвет тени элемента (box-shadow-color)](/ru/utilities/shadows/element-color/)
+- [Глубина тени элемента (box-shadow)](/ru/utilities/shadows/element-shadow/)
 
 ## Связанные категории
-- [Фон](../background/index.md)
-- [Граница](../border/index.md)
-- [Объекты](../objects/index.md)
+- [Фон](/ru/utilities/background/)
+- [Граница](/ru/utilities/border/)
+- [Объекты](/ru/utilities/objects/)

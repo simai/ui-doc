@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Автоматический размер строк сетки (grid-auto-rows)"
@@ -62,6 +62,6 @@ description: "Автоматический размер строк сетки (g
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-auto-rows"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-auto-rows"></iframe>
 </div>

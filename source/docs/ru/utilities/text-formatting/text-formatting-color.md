@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Цвет оформления текста
 description: Цвет оформления текста
 ---
 
-# Цвет оформления текста
+# Цвет оформления текста
+
 
 !rtags[text-decoration-color hover focus active]
 
@@ -33,6 +34,6 @@ description: Цвет оформления текста
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-color"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-color"></iframe>
 </div>

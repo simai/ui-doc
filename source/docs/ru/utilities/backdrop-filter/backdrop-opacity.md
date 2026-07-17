@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Прозрачность фона элемента (backdrop-opacity)"
 description: "Прозрачность фона элемента (backdrop-opacity)"
 ---
 
-# Прозрачность фона элемента (backdrop-opacity)
+# Прозрачность фона элемента (backdrop-opacity)
+
 
 !rtags[backdrop-filter-opacity hover]
 
@@ -57,6 +58,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-opacity"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-opacity"></iframe>
 </div>

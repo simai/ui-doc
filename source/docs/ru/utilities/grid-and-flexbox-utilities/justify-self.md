@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание отдельного элемента в ячейке по основной оси (justify-self)"
@@ -51,6 +51,6 @@ description: "Выравнивание отдельного элемента в 
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-self"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-self"></iframe>
 </div>

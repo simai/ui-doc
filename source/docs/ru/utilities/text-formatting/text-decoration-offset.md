@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Смещение линий оформления (text-decoration-offset)
@@ -13,6 +13,6 @@ description: Смещение underline/overline/line-through
 Классы: `decoration-offset-auto`, `decoration-offset-0...4`.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration-offset"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration-offset"></iframe>
 </div>

@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Позиционирование объекта (object-position)"
@@ -52,6 +52,6 @@ description: "Утилиты object-position управляют тем, каку
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=objects&group=object-position"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=objects&group=object-position"></iframe>
 </div>

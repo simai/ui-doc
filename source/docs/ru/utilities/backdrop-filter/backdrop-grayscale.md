@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Фон в оттенках серого элемента (backdrop-grayscale)"
 description: "Фон в оттенках серого элемента (backdrop-grayscale)"
 ---
 
-# Фон в оттенках серого элемента (backdrop-grayscale)
+# Фон в оттенках серого элемента (backdrop-grayscale)
+
 
 !rtags[backdrop-filter-grayscale hover]
 
@@ -46,6 +47,6 @@ description: "Фон в оттенках серого элемента (backdrop
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-grayscale"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-grayscale"></iframe>
 </div>

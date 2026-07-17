@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Прозрачность элемента (filter-opacity)"
@@ -56,6 +56,6 @@ description: "Прозрачность элемента (filter-opacity)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-opacity"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-opacity"></iframe>
 </div>

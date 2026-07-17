@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание каждого элемента в ячейках по поперечной оси (align-items)"
@@ -63,6 +63,6 @@ description: "Выравнивание каждого элемента в яче
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
-<iframe src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-items"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-items"></iframe>
 </div>

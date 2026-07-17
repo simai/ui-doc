@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Выравнивание привязки прокрутки (scroll-snap-align)"
@@ -61,6 +61,6 @@ description: "Выравнивание привязки прокрутки (scro
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-align"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-align"></iframe>
 </div>

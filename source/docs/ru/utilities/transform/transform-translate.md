@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Смещение (transform-translate)"
@@ -70,6 +70,6 @@ transform: translate(var(--sf-translate-x, 0), var(--sf-translate-y, 0));
 
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=transform&group=transform-translate"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-translate"></iframe>
 </div>
