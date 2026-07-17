@@ -21,7 +21,7 @@ description: "Минимальная высота (min-height)"
 | .min-h-0      | min-height: 0;           |
 | .min-h-full   | min-height: 100%;        |
 | .min-h-screen | min-height: 100vh;       |
-| . min-h-min   | min-height: min-content; |
+| .min-h-min    | min-height: min-content; |
 | .min-h-max    | min-height: max-content; |
 | .min-h-fit    | min-height: fit-content; |
 {.table}

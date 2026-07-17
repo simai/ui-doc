@@ -37,6 +37,9 @@
                     ],
                 ],
             ],
+            'hero' => [
+                'enabled' => false,
+            ],
             'asideLeft' => [
                 'enabled' => true,
                 'blocks' => [
@@ -49,8 +52,9 @@
                 ],
             ],
             'main' => [
-                'innerContent' => ['enabled' => true],
-                'outerContent' => ['enabled' => false, 'mode' => 'iframe', 'src' => null],
+                'tabs' => ['enabled' => false],
+                'features' => ['enabled' => false],
+                'content' => ['enabled' => true],
             ],
             'asideRight' => [
                 'enabled' => true,
@@ -74,7 +78,7 @@
         'env' => getenv(),
         'category' => true,
         'cache' => true,
-        'moduleCache' => true,
+        'moduleCache' => false,
         'cachePath' => $projectRoot . '/.cache',
         'siteName' => 'Simai Documentation',
         'siteDescription' => 'Simai framework documentation',

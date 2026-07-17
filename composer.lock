@@ -2611,16 +2611,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v1.3.29",
+            "version": "v1.3.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "ae01ea86c9925f3ba3fd4dc87e23ebde21a2cdf1"
+                "reference": "3b1e7f0723aa92660613e927806fb84dbfc7cc12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/ae01ea86c9925f3ba3fd4dc87e23ebde21a2cdf1",
-                "reference": "ae01ea86c9925f3ba3fd4dc87e23ebde21a2cdf1",
+                "url": "https://api.github.com/repos/simai/docara/zipball/3b1e7f0723aa92660613e927806fb84dbfc7cc12",
+                "reference": "3b1e7f0723aa92660613e927806fb84dbfc7cc12",
                 "shasum": ""
             },
             "require": {
@@ -2649,7 +2649,7 @@
                 "vlucas/phpdotenv": "^5.6"
             },
             "require-dev": {
-                "laravel/pint": "^1.16",
+                "laravel/pint": "^1.27.1",
                 "mockery/mockery": "^1.6",
                 "phpunit/phpunit": "^11.0.6"
             },
@@ -2699,9 +2699,9 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara/tree/v1.3.29"
+                "source": "https://github.com/simai/docara/tree/v1.3.47"
             },
-            "time": "2026-02-19T12:34:19+00:00"
+            "time": "2026-07-17T12:11:48+00:00"
         },
         {
             "name": "spatie/backtrace",

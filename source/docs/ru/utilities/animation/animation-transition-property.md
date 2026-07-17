@@ -21,10 +21,19 @@ description: Общее свойство перехода
 | .transition-none      | transition-property: none;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                                  |
 | .transition-all       | transition-property: all;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                                   |
 | .transition           | transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                   |
-| .transition-color     | transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                            |
+| .transition-colors    | transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                            |
 | .transition-opacity   | transition-property: opacity;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                               |
-| .transition-shadow    | transition-property: shadow;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                                |
+| .transition-shadow    | transition-property: box-shadow;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                             |
 | .transition-transform | transition-property: transform;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                             |
+| .transition-width     | transition-property: width;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                                 |
+| .transition-height    | transition-property: height;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                                |
+| .transition-size      | transition-property: width, height;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                         |
+| .transition-max-width | transition-property: max-width;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                             |
+| .transition-max-height | transition-property: max-height;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                            |
+| .transition-max-size  | transition-property: max-width, max-height;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                 |
+| .transition-flex      | transition-property: flex, flex-basis;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                      |
+| .transition-flex-basis | transition-property: flex-basis;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                                                                            |
+| .transition-layout    | transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;<br/> transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);<br/> transition-duration: 150ms;                                                                                      |
 {.table}
 
 ## Описание
@@ -44,7 +53,18 @@ description: Общее свойство перехода
 ```
 
 В данном примере при наведении курсора на элемент изменится цвет фона с плавным переходом, так как задан модификатор
-`transition-color`.
+`transition-colors`.
+
+Для изменения размеров используйте модификаторы под конкретное свойство:
+
+- `transition-width` — если меняется `width`;
+- `transition-height` — если меняется `height`;
+- `transition-size` — если одновременно меняются `width` и `height`;
+- `transition-max-width`, `transition-max-height`, `transition-max-size` — если используется ограничение через `max-*`;
+- `transition-flex` или `transition-flex-basis` — если ширина элемента меняется через flex-свойства, например `flex-basis`.
+- `transition-layout` — если элемент переключается между обычным состоянием и `flex-1`, либо одновременно меняются flex-свойства и ограничения ширины.
+
+Для плавного перехода нужны числовые начальное и конечное значения. Переходы между `auto`, `fit-content`, `max-content` и `100%` могут отрабатывать скачком, потому что браузер не всегда может интерполировать такие значения.
 
 ## Пример использования
 
