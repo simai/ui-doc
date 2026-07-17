@@ -9,11 +9,4 @@ return array(
         'components' => 'Компоненты',
         'smart-components' => 'Смарт-компоненты',
     ),
-    'layoutOverrides' => [
-        'default' => [
-            'config' => ['hero' => ['enabled' => true]],
-            'recursive' => false,
-            'category' => false,
-        ],
-    ]
 );
