@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Яркость элемента (filter-brightness)"
@@ -69,6 +69,6 @@ description: "Яркость элемента (filter-brightness)"
 ````
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-brightness"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-brightness"></iframe>
 </div>

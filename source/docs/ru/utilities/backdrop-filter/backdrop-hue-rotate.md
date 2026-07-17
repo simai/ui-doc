@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
 description: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
 ---
 
-# Вращение оттенка фона элемента (backdrop-hue-rotate)
+# Вращение оттенка фона элемента (backdrop-hue-rotate)
+
 
 !rtags[backdrop-filer-hue-rotate hover]
 
@@ -64,6 +65,6 @@ description: "Вращение оттенка фона элемента (backdro
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-hue-rotate"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-hue-rotate"></iframe>
 </div>

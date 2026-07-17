@@ -3,11 +3,11 @@
 Утилиты категории Отступы помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
 
 ## Материалы раздела
-- [Внешний отступ (margin)](margin.md)
-- [Внутренний отступ (padding)](padding.md)
-- [Промежутки (space)](space.md)
+- [Внешний отступ (margin)](/ru/utilities/indents/margin/)
+- [Внутренний отступ (padding)](/ru/utilities/indents/padding/)
+- [Промежутки (space)](/ru/utilities/indents/space/)
 
 ## Связанные категории
-- [Размеры](../sizes/index.md)
-- [Макет](../layout/index.md)
-- [Типографика](../typography/index.md)
+- [Размеры](/ru/utilities/sizes/)
+- [Макет](/ru/utilities/layout/)
+- [Типографика](/ru/utilities/typography/)

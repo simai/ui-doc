@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Конечное положение колонки сетки (grid-column-end)"
@@ -72,6 +72,6 @@ description: "Конечное положение колонки сетки (gri
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
-<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column-end"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-column-end"></iframe>
 </div>

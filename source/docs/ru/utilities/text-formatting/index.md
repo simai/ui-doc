@@ -3,11 +3,11 @@
 Утилиты раздела управляют выравниванием, трансформацией, декорацией, переносами и выделением текста.
 
 ## Материалы раздела
-- [Цвет текста](text-color.md)
-- [Оформление текста](text-formatting-text.md)
-- [Цвет оформления текста](text-formatting-color.md)
-- [Стиль оформления текста](text-formatting-style.md)
-- [Толщина оформления текста](text-formatting-thickness.md)
-- [Смещение подчеркивания текста](text-underline-offset.md)
-- [Выделение текста](text-selecting.md)
-- [Оформление кода](text-code.md)
+- [Цвет текста](/ru/utilities/text-formatting/text-color/)
+- [Оформление текста](/ru/utilities/text-formatting/text-formatting-text/)
+- [Цвет оформления текста](/ru/utilities/text-formatting/text-formatting-color/)
+- [Стиль оформления текста](/ru/utilities/text-formatting/text-formatting-style/)
+- [Толщина оформления текста](/ru/utilities/text-formatting/text-formatting-thickness/)
+- [Смещение подчеркивания текста](/ru/utilities/text-formatting/text-underline-offset/)
+- [Выделение текста](/ru/utilities/text-formatting/text-selecting/)
+- [Оформление кода](/ru/utilities/text-formatting/text-code/)

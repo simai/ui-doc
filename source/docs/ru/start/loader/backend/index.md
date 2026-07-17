@@ -9,9 +9,9 @@ description: 2.1 Loader.php — Главный контроллер загруз
 
 ## Навигация по бэкенду
 
-- [Серверное взаимодействие](server-interaction.md)
-- [Кэширование и ассеты](caching.md)
-- [Интеграция](integration.md)
+- [Серверное взаимодействие](/ru/start/loader/backend/server-interaction/)
+- [Кэширование и ассеты](/ru/start/loader/backend/caching/)
+- [Интеграция](/ru/start/loader/backend/integration/)
 
 ## Инициализация ядра (`init()`)
 

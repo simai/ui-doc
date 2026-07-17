@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Тип привязки прокрутки (scroll-snap-type)"
@@ -73,6 +73,6 @@ description: "Тип привязки прокрутки (scroll-snap-type)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-type"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-type"></iframe>
 </div>

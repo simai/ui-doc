@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Тень элемента (box-shadow)
@@ -40,6 +40,6 @@ description: Глубина тени элемента и состояния hove
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"></iframe>
 </div>

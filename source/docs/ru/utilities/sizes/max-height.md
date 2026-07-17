@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальная высота (max-height)"
@@ -74,6 +74,6 @@ description: "Максимальная высота (max-height)"
 В этом примере максимальная высота будет равна нулю (`max-h-0`) при ширине экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=sizes&group=max-height"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=max-height"></iframe>
 </div>

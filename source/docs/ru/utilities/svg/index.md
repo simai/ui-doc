@@ -3,15 +3,15 @@
 Утилиты категории `svg` управляют размерами и стилем SVG-элементов: `fill`, `fill-rule`, `stroke`, `stroke-width`, `linecap`, `linejoin`.
 
 ## Материалы раздела
-- [Размер SVG-изображений](svg-image-size.md)
-- [Цвет заливки](svg-fill-color.md)
-- [Тип заливки](svg-fill-type.md)
-- [Цвет обводки](svg-stroke-color.md)
-- [Толщина обводки](svg-stroke-width.md)
-- [Углы обводки (Line Join)](svg-stroke-line-join.md)
-- [Концы обводки (Line Cap)](svg-stroke-line-cap.md)
+- [Размер SVG-изображений](/ru/utilities/svg/svg-image-size/)
+- [Цвет заливки](/ru/utilities/svg/svg-fill-color/)
+- [Тип заливки](/ru/utilities/svg/svg-fill-type/)
+- [Цвет обводки](/ru/utilities/svg/svg-stroke-color/)
+- [Толщина обводки](/ru/utilities/svg/svg-stroke-width/)
+- [Углы обводки (Line Join)](/ru/utilities/svg/svg-stroke-line-join/)
+- [Концы обводки (Line Cap)](/ru/utilities/svg/svg-stroke-line-cap/)
 
 ## Связанные категории
-- [Mask](../mask/index.md)
-- [Background](../background/index.md)
-- [Border](../border/index.md)
+- [Mask](/ru/utilities/mask/)
+- [Background](/ru/utilities/background/)
+- [Border](/ru/utilities/border/)

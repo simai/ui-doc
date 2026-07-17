@@ -4,10 +4,10 @@
 
 ## Материалы раздела
 
-- [Шаблон колонок](grid-template-columns.md)
-- [Шаблон строк](grid-template-rows.md)
-- [Размер колонки](grid-column.md)
-- [Размер строки](grid-row.md)
-- [Авто‑колонки](grid-auto-columns.md)
-- [Авто‑строки](grid-auto-rows.md)
-- [Авто‑поток](grid-auto-flow.md)
+- [Шаблон колонок](/ru/utilities/grid/grid-template-columns/)
+- [Шаблон строк](/ru/utilities/grid/grid-template-rows/)
+- [Размер колонки](/ru/utilities/grid/grid-column/)
+- [Размер строки](/ru/utilities/grid/grid-row/)
+- [Авто‑колонки](/ru/utilities/grid/grid-auto-columns/)
+- [Авто‑строки](/ru/utilities/grid/grid-auto-rows/)
+- [Авто‑поток](/ru/utilities/grid/grid-auto-flow/)

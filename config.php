@@ -77,10 +77,10 @@
         'env' => getenv(),
         'category' => true,
         'cache' => true,
-        'moduleCache' => false,
+        'moduleCache' => true,
         'cachePath' => $projectRoot . '/.cache',
-        'siteName' => 'Simai Documentation',
-        'siteDescription' => 'Simai framework documentation',
+        'siteName' => 'SIMAI Framework Documentation',
+        'siteDescription' => 'Documentation for SIMAI Framework',
         'github' => 'https://github.com/simai/ui-doc/',
         'locales' => [
             'ru' => 'Русский',
@@ -109,7 +109,26 @@
             $locale = $page->locale();
             $segments = $currentPath === '' ? [] : explode('/', $currentPath);
 
-            return $page->configurator->generateBreadCrumbs($locale, $segments);
+            $breadcrumbs = $page->configurator->generateBreadCrumbs($locale, $segments);
+            foreach ($breadcrumbs as &$breadcrumb) {
+                $path = $breadcrumb['path'] ?? null;
+                if (! is_string($path) || $path === '') {
+                    continue;
+                }
+
+                $parts = explode('/', trim($path, '/'));
+                if (($parts[0] ?? null) === $locale) {
+                    array_shift($parts);
+                }
+                $relativePath = implode('/', $parts);
+
+                if (isset($page->configurator->indexMenuDirs[$locale][$relativePath])) {
+                    $breadcrumb['path'] = rtrim($path, '/') . '/index';
+                }
+            }
+            unset($breadcrumb);
+
+            return $breadcrumbs;
         },
         'getJsTranslations' => function ($page) {
             $locale = $page->locale();

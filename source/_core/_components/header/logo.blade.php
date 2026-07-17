@@ -1,4 +1,4 @@
-<a href="/" title="{{ $page->siteName }} home" class="logo sf-logo inline-flex items-center">
+<a href="/{{ $page->locale() }}/" title="{{ $page->siteName }} home" class="logo sf-logo inline-flex items-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="125" height="32" fill="none" viewBox="0 0 125 32">
         <g clip-path="url(#a)">
             <path fill="#e81123" d="M0 3.2C0 1.433 1.428 0 3.19 0h25.514a3.195 3.195 0 0 1 3.189 3.2v25.6c0 1.767-1.428 3.2-3.19 3.2H3.19A3.195 3.195 0 0 1 0 28.8z"/>

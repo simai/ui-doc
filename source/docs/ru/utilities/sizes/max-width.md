@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Максимальная ширина (max-width)"
@@ -94,6 +94,6 @@ description: "Максимальная ширина (max-width)"
 В этом примере максимальная ширина будет 100% (`max-w-full`) только при размерах экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=sizes&group=max-width"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=max-width"></iframe>
 </div>

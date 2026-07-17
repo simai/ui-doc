@@ -3,12 +3,12 @@
 Утилиты разделителя управляют линиями между соседними элементами в контейнере.
 
 ## Материалы раздела
-- [Параметры по умолчанию](divider-default-parameters.md)
-- [Толщина разделителя](divider-width.md)
-- [Стиль разделителя](divider-style.md)
-- [Цвет разделителя](divider-color.md)
+- [Параметры по умолчанию](/ru/utilities/divider/divider-default-parameters/)
+- [Толщина разделителя](/ru/utilities/divider/divider-width/)
+- [Стиль разделителя](/ru/utilities/divider/divider-style/)
+- [Цвет разделителя](/ru/utilities/divider/divider-color/)
 
 ## Связанные категории
-- [Граница](../border/index.md)
-- [Внешняя граница](../outline/index.md)
-- [Таблицы](../tables/index.md)
+- [Граница](/ru/utilities/border/)
+- [Внешняя граница](/ru/utilities/outline/)
+- [Таблицы](/ru/utilities/tables/)

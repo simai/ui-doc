@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Подчеркивание ссылок
 description: Подчеркивание ссылок
 ---
 
-# Подчеркивание ссылок
+# Подчеркивание ссылок
+
 
 !rtags[text-decoration hover focus active]
 
@@ -37,6 +38,6 @@ description: Подчеркивание ссылок
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=links&group=links-underlining"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=links-underlining"></iframe>
 </div>

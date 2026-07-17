@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Размытие фона элемента (backdrop-blur)"
 description: "Размытие фона элемента (backdrop-blur)"
 ---
 
-# Размытие фона элемента (backdrop-blur)
+# Размытие фона элемента (backdrop-blur)
+
 
 !rtags[backdrop-filter-blur hover]
 
@@ -72,6 +73,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-blur"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-blur"></iframe>
 </div>

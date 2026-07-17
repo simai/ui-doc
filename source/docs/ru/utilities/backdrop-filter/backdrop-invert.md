@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Инвертирование цвета фона элемента (backdrop-invert)"
 description: "Инвертирование цвета фона элемента (backdrop-invert)"
 ---
 
-# Инвертирование цвета фона элемента (backdrop-invert)
+# Инвертирование цвета фона элемента (backdrop-invert)
+
 
 !rtags[backdrop-filter-invert hover]
 
@@ -29,7 +30,7 @@ description: "Инвертирование цвета фона элемента 
 - `backdrop-invert-none` — фон элемента без инвертирования цвета.
 - `backdrop-invert` — фон элемента становится инвертированным.
 
-Можно использовать `hover:` для изменения при наведении, например:  
+Можно использовать `hover:` для изменения при наведении, например:
 `hover:backdrop-invert` для инвертирования цвета фона при наведении.
 
 ## Синтаксис
@@ -47,6 +48,6 @@ description: "Инвертирование цвета фона элемента 
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-invert"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-invert"></iframe>
 </div>

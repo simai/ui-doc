@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Прозрачность кольца (ring-opacity)
@@ -21,6 +21,6 @@ description: Прозрачность цвета ring
 {.table}
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=outline&group=ring-opacity"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=ring-opacity"></iframe>
 </div>

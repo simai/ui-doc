@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Наследование цвета ссылок
 description: Наследование цвета ссылок
 ---
 
-# Наследование цвета ссылок
+# Наследование цвета ссылок
+
 
 !rtags[text-color hover focus active]
 
@@ -43,6 +44,6 @@ description: Наследование цвета ссылок
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=links&group=heritage-link-color"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=heritage-link-color"></iframe>
 </div>

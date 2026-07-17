@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Размер полосок
 description: Размер полосок
 ---
 
-# Размер полосок
+# Размер полосок
+
 
 !rtags[stripe-width sm md lg xl]
 
@@ -30,7 +31,7 @@ description: Размер полосок
 ## Описание
 
 Модификаторы `stripe-size-1`, `stripe-size-2`, `stripe-size-3`, `stripe-size-4` задают величину полос, используемых в
-различных паттернах (например, `stripe-1`, `stripe-2` и т.д.).  
+различных паттернах (например, `stripe-1`, `stripe-2` и т.д.).
 Изменение размера полосок позволяет подобрать необходимый визуальный эффект.
 
 ## Пример использования
@@ -43,6 +44,6 @@ description: Размер полосок
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=stripes&group=stripes-size"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=stripes&group=stripes-size"></iframe>
 </div>

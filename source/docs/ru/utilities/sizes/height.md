@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Высота (height)
@@ -127,6 +127,6 @@ description: Высота (height)
 В этом примере высота будет 50% (`h-1/2`) при `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=sizes&group=height"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=height"></iframe>
 </div>

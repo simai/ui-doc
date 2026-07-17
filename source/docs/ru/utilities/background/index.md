@@ -9,15 +9,15 @@ description: "Сводная страница по утилитам управл
 
 Утилиты фона сгруппированы по задачам:
 
-- [Цвет фона](../background-color/background-color) — базовые токены `bg-*` и состояния `hover:`/`active:`.
-- [Типы градиента](../background-gradient-type/background-gradient-type) — выбор типа градиента (`gr-line-*`, `gr-radial-*`, `gr-conic-*`).
-- [Цвета градиента](../background-gradient-background/background-gradient-background) — управление цветами и углом (`gr1-*`, `gr2-*`, `gr3-*`, `gr-angle-*`).
-- [Фоновое изображение: вложение](../background-attachment/background-attachment) — поведение фона при прокрутке.
-- [Фоновое изображение: обрезка](../background-clip/background-clip) — область отрисовки фона.
-- [Фоновое изображение: origin](../background-origin/background-origin) — точка отсчёта фона.
-- [Фоновое изображение: позиция](../background-position/background-position) — позиционирование фона внутри блока.
-- [Фоновое изображение: повтор](../background-repeat/background-repeat) — режимы повторения фона.
-- [Фоновое изображение: размер](../background-size/background-size) — режимы `auto`, `cover`, `contain`.
-- [Паттерны](../background-pattern/background-pattern) — встроенные SVG‑узоры `pattern-*` для быстрого декора без внешних файлов.
+- [Цвет фона](/ru/utilities/background/background-color/) — базовые токены `bg-*` и состояния `hover:`/`active:`.
+- [Типы градиента](/ru/utilities/background/background-gradient-type/) — выбор типа градиента.
+- [Цвета градиента](/ru/utilities/background/background-gradient-background/) — управление цветами и углом.
+- [Фоновое изображение: вложение](/ru/utilities/background/background-attachment/) — поведение фона при прокрутке.
+- [Фоновое изображение: обрезка](/ru/utilities/background/background-clip/) — область отрисовки фона.
+- [Фоновое изображение: origin](/ru/utilities/background/background-origin/) — точка отсчёта фона.
+- [Фоновое изображение: позиция](/ru/utilities/background/background-position/) — позиционирование фона внутри блока.
+- [Фоновое изображение: повтор](/ru/utilities/background/background-repeat/) — режимы повторения фона.
+- [Фоновое изображение: размер](/ru/utilities/background/background-size/) — режимы `auto`, `cover`, `contain`.
+- [Паттерны](/ru/utilities/background/background-pattern/) — встроенные SVG-узоры для декора без внешних файлов.
 
 Используйте эту страницу как точку входа и переходите в нужный подраздел за подробностями и примерами.

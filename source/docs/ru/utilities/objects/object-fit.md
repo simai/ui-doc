@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Заполнение объектом (object-fit)"
@@ -88,6 +88,6 @@ description: "Заполнение объектом (object-fit)"
 масштабирование содержимого под контейнеры любого размера.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=objects&group=object-fit"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=objects&group=object-fit"></iframe>
 </div>

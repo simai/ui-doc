@@ -1,12 +1,12 @@
 <?php
 return array(
-    'title' => 'Документация SF UI',
+    'title' => 'Документация SIMAI Framework',
     'order' => 1,
     'menu' => array(
         'start' => 'Старт',
         'fundamentals' => 'Основы',
         'utilities' => 'Утилиты',
         'components' => 'Компоненты',
-        'smart-components' => 'Смарт-компоненты',
+        'smart-components' => 'Smart Components',
     ),
 );

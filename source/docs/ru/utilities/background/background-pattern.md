@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Паттерн фона
@@ -66,6 +66,6 @@ description: Паттерн фона
 `md:pattern-2` применит паттерн №2 только на экранах от размера Medium и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=background&group=background-pattern"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-pattern"></iframe>
 </div>

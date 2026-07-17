@@ -1,15 +1,29 @@
+---
+extends: _core._layouts.documentation
+section: content
+title: Основы
+description: "Базовые понятия SIMAI Framework: модификаторы, условия, значения, цвета, контрольные точки и типографика."
+---
+
 # Основы
 
-Базовые принципы SF UI: значения модификаторов, цветовые роли, размеры, темы и типографика. Используйте этот раздел как справочник по ключевым концепциям перед углублением в утилиты.
+Этот раздел объясняет базовые понятия SIMAI Framework, которые нужны для
+осознанного использования утилит: как устроены модификаторы, когда они
+применяются и какие значения принимают.
 
-## Что изучить
-- [Значения](values.md) — типы значений модификаторов и правила использования.
-- [Контрольные точки](break-points/break-points.md) — базовая система брейкпоинтов.
-- [Цветовые роли](colors/colors.md) и [система цвета](color/color.md) — токены и подходы к цвету.
-- [Темы](themes/design-themes/design-themes.md) — работа с палитрами и темизацией.
-- [Размеры](sizes/sizes.md) — шкалы размеров и переводы.
-- [Типографика](typography/typography.md) — роли текста, размеры и стили.
-- [Переменные](variables/variables.md) — глобальные и локальные переменные.
-- [Направления и выравнивание](directions/directions.md) и [выравнивание](alignment/alignment.md).
-- [Параметры и ограничения модификаторов](modifier-parameters/modifier-parameters.md, modifier-limitations/modifier-limitations.md).
-- [Сокращения свойств](abbreviations-of-properties/abbreviations-of-properties.md).
+## С чего начать
+
+1. Изучите [модификаторы](/ru/fundamentals/modifiers/) и [условия действия](/ru/fundamentals/conditions/).
+2. Перейдите к [условиям состояния](/ru/fundamentals/states/) и [контрольным точкам](/ru/fundamentals/breakpoints/), если интерфейс меняется при взаимодействии или на разных ширинах экрана.
+3. Используйте справочные разделы о [значениях и шкалах](/ru/fundamentals/values-and-scales/), [цветах и темах](/ru/fundamentals/colors-and-themes/) и [типографике](/ru/fundamentals/typography-system/).
+
+## Разделы
+
+- [Модификаторы](/ru/fundamentals/modifiers/) — состав и назначение модификаторов.
+- [Условия действия](/ru/fundamentals/conditions/) — адаптивные условия и условия состояния.
+- [Условия состояния](/ru/fundamentals/states/) — состояния `hover`, `focus` и `active`.
+- [Значения и шкалы](/ru/fundamentals/values-and-scales/) — допустимые типы значений.
+- [Цвета и темы](/ru/fundamentals/colors-and-themes/) — примитивы, токены и цветовые роли.
+- [Контрольные точки](/ru/fundamentals/breakpoints/) — основа адаптивного поведения.
+- [Типографика](/ru/fundamentals/typography-system/) — роли и параметры текста.
+- [Ограничения модификаторов](/ru/fundamentals/best-practices/) — минимальные и максимальные значения свойств.

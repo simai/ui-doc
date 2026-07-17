@@ -3,12 +3,12 @@
 Утилиты раздела «Ссылки» управляют поведением и оформлением текстовых ссылок.
 
 ## Материалы раздела
-- [Параметры по умолчанию](links-default-parameters.md)
-- [Наследование цвета ссылок](heritage-link-color.md)
-- [Оформление ссылок](links-formatting.md)
-- [Подчеркивание ссылок](links-underlining.md)
+- [Параметры по умолчанию](/ru/utilities/links/links-default-parameters/)
+- [Наследование цвета ссылок](/ru/utilities/links/heritage-link-color/)
+- [Оформление ссылок](/ru/utilities/links/links-formatting/)
+- [Подчеркивание ссылок](/ru/utilities/links/links-underlining/)
 
 ## Связанные категории
-- [Оформление текста](../text-formatting/index.md)
-- [Типографика](../typography/index.md)
-- [Интерактивность](../interactivity/index.md)
+- [Оформление текста](/ru/utilities/text-formatting/)
+- [Типографика](/ru/utilities/typography/)
+- [Интерактивность](/ru/utilities/interactivity/)

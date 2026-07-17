@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Падающая тень (drop-shadow)"
@@ -61,6 +61,6 @@ description: "Падающая тень (drop-shadow)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow"></iframe>
 </div>

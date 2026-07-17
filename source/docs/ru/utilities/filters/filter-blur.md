@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Размытие элемента (filter-blur)"
@@ -80,6 +80,6 @@ description: "Размытие элемента (filter-blur)"
 Используйте данные соответствия, чтобы перейти с предыдущей версии на новую.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=filters&group=filter-blur"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-blur"></iframe>
 </div>

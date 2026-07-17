@@ -9,8 +9,7 @@ description: Генератор цветов
 
 Для создания цветовой палитры SIMAI Framework предлагает собственный генератор, построенный на основе генератора Google.
 
-* Генератор SIMAI: [http://sf5.simai.pro/ru/bx/color/](http://sf5.simai.pro/ru/bx/color/)
-* Генератор Google: [https://m3.material.io/theme-builder/](https://m3.material.io/theme-builder/#/)
+Для текущих проектов используйте [актуальное описание цветов и тем](/ru/fundamentals/colors-and-themes/).
 
 Процесс генерации:
 

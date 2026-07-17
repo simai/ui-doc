@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Начальное положение колонки сетки (grid-column-start)"
@@ -74,6 +74,6 @@ description: "Начальное положение колонки сетки (g
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border">
-<iframe src="https://play.simai.io/embed.html?component=grid&group=grid-column-start"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-column-start"></iframe>
 </div>

@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Видимость элемента при печати (print-visibility)"
 description: "Видимость элемента при печати (print-visibility)"
 ---
 
-# Видимость элемента при печати (print-visibility)
+# Видимость элемента при печати (print-visibility)
+
 
 !rtags[visibility sm md lg xl]
 
@@ -41,6 +42,6 @@ description: "Видимость элемента при печати (print-vis
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=print&group=display-visibility"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=print&group=display-visibility"></iframe>
 </div>

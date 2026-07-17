@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: Общее свойство перехода
@@ -77,6 +77,6 @@ description: Общее свойство перехода
 При наведении курсора на кнопку цвет текста плавно сменится на основной (`text-primary`), так как все свойства с
 переходом (`transition-all`) будут изменяться плавно.
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=animation&group=animation-transition-property"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-transition-property"></iframe>
 </div>

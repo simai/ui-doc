@@ -1,11 +1,12 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Яркость фона элемента (backdrop-brightness)"
 description: "Яркость фона элемента (backdrop-brightness)"
 ---
 
-# Яркость фона элемента (backdrop-brightness)
+# Яркость фона элемента (backdrop-brightness)
+
 
 !rtags[backdrop-filter-brightness hover]
 
@@ -58,6 +59,6 @@ description: "Яркость фона элемента (backdrop-brightness)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-brightness"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-brightness"></iframe>
 </div>

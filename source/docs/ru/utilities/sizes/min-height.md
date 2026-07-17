@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Минимальная высота (min-height)"
@@ -71,6 +71,6 @@ description: "Минимальная высота (min-height)"
 В этом примере минимальная высота будет равна нулю (`min-h-0`) при ширине экрана `md` и больше.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=sizes&group=min-height"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=min-height"></iframe>
 </div>

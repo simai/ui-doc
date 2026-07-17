@@ -3,13 +3,13 @@
 Утилиты категории `outline` управляют внешней границей элемента: включение/выключение, толщина, отступ, стиль и цвет.
 
 ## Материалы раздела
-- [Параметры по умолчанию](outline-default-parameters.md)
-- [Толщина внешней границы](outline-width.md)
-- [Отступ внешней границы](outline-offset.md)
-- [Стиль внешней границы](outline-style.md)
-- [Цвет внешней границы](outline-color.md)
+- [Параметры по умолчанию](/ru/utilities/outline/outline-default-parameters/)
+- [Толщина внешней границы](/ru/utilities/outline/outline-width/)
+- [Отступ внешней границы](/ru/utilities/outline/outline-offset/)
+- [Стиль внешней границы](/ru/utilities/outline/outline-style/)
+- [Цвет внешней границы](/ru/utilities/outline/outline-color/)
 
 ## Связанные категории
-- [Граница](../border/index.md)
-- [Разделитель](../divider/index.md)
-- [Интерактивность](../interactivity/index.md)
+- [Граница](/ru/utilities/border/)
+- [Разделитель](/ru/utilities/divider/)
+- [Интерактивность](/ru/utilities/interactivity/)

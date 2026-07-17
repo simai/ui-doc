@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Размер заголовков (title-size)"
@@ -53,6 +53,6 @@ description: "Размер заголовков (title-size)"
 Таким образом, можно гибко управлять размерами заголовков для различных разрешений экрана.
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=typography&group=title-size"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=title-size"></iframe>
 </div>

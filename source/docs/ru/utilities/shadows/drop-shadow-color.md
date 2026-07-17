@@ -1,4 +1,4 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
 title: "Цвет падающей тени (drop-shadow-color)"
@@ -55,6 +55,6 @@ description: "Цвет падающей тени (drop-shadow-color)"
 ```
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow-color"></iframe>
+<div class="sf-playground overflow-hidden">
+<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow-color"></iframe>
 </div>
