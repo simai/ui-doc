@@ -52,8 +52,8 @@
                 ],
             ],
             'main' => [
-                'tabs' => ['enabled' => true],
-                'features' => ['enabled' => true],
+                'tabs' => ['enabled' => false],
+                'features' => ['enabled' => false],
                 'content' => ['enabled' => true],
             ],
             'asideRight' => [
