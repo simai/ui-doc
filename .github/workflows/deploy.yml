@@ -72,6 +72,7 @@ jobs:
             git reset --hard
             git clean -fd
             git pull --ff-only origin main
+            git clean -fdX source/_core source/assets/build
             export YARN_IGNORE_ENGINES=1
             export XDG_CONFIG_HOME=$PWD/.config
             export XDG_CACHE_HOME=$PWD/.cache
