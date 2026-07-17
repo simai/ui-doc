@@ -2,7 +2,6 @@
 
     use Dotenv\Dotenv;
     use Illuminate\Support\Str;
-    use Simai\Docara\Support\Layout;
 
     $projectRoot = getcwd();
 
