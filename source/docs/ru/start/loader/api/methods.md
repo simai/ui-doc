@@ -204,4 +204,4 @@ window.SF_BOOT_CONFIG = {
 - `SF.create()` создаёт элемент, но не ждёт его upgrade. Для немедленного вызова методов используйте `SF.createAsync()`.
 - `SF.whenDefined()` ждёт browser custom element registry, а не завершение всех loader-задач.
 - `prepare()`, `search()` и scan-методы обычно запускаются самим loader-ом.
-- Для событий готовности см. раздел [«События загрузчика»](events.md).
+- Для событий готовности см. раздел [«События загрузчика»](/ru/start/loader/api/events/).

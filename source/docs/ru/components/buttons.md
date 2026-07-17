@@ -137,9 +137,7 @@ Link-вариант выглядит как текстовое действие.
 
 Плотность меняет вертикальные отступы без изменения смыслового размера кнопки. Используйте её локально, когда кнопку нужно вписать в более плотный или более свободный блок.
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="http://localhost:5173/embed.html?component=buttons&group=tightness"></iframe>
-</div>
+<a href="https://play.simai.io/embed.html?component=buttons&amp;group=tightness" target="_blank" rel="noopener noreferrer">Открыть пример плотности кнопок в Playground</a>
 
 ### Радиус
 
@@ -257,9 +255,7 @@ Link-вариант выглядит как текстовое действие.
 
 ## Playground
 
-<div class="sf-playground overflow-hidden border border-surface-overlay">
-<iframe src="https://play.simai.io/embed.html?component=buttons&group=buttons"></iframe>
-</div>
+<a href="https://play.simai.io/embed.html?component=buttons&amp;group=buttons" target="_blank" rel="noopener noreferrer">Открыть пример кнопок в Playground</a>
 
 ## Доступность
 
