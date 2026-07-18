@@ -40,20 +40,17 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist
 
-      - name: Initialize project (stubs, core, npm/yarn install)
+      - name: Initialize project (stubs and core)
         env:
-          YARN_IGNORE_ENGINES: 1
           DOCARA_SKIP_FRONTEND_INSTALL: "true"
         run: |
           php vendor/bin/docara init --update
 
       - name: Build frontend assets
-        env:
-          YARN_IGNORE_ENGINES: 1
         run: |
           rm -rf .cache build_production
-          yarn install
-          yarn prod
+          YARN_IGNORE_PATH=1 npx --yes yarn@1.22.22 --no-default-rc install --frozen-lockfile --production=false --non-interactive
+          YARN_IGNORE_PATH=1 npx --yes yarn@1.22.22 --no-default-rc prod
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.8
@@ -73,7 +70,6 @@ jobs:
             git clean -fd
             git pull --ff-only origin main
             git clean -fdX source/_core source/assets/build
-            export YARN_IGNORE_ENGINES=1
             export XDG_CONFIG_HOME=$PWD/.config
             export XDG_CACHE_HOME=$PWD/.cache
             mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
@@ -85,7 +81,7 @@ jobs:
             EOF
             composer install --no-dev --prefer-dist --no-interaction
             DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
-            yarn install
+            YARN_IGNORE_PATH=1 npx --yes yarn@1.22.22 --no-default-rc install --frozen-lockfile --production=false --non-interactive
             rm -rf .cache build_production
-            yarn prod
+            YARN_IGNORE_PATH=1 npx --yes yarn@1.22.22 --no-default-rc prod
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
