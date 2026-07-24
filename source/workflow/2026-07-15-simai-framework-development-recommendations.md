@@ -154,6 +154,7 @@ Proposal уже формулирует полезный native input:
 | D-09 | logical utilities используют физические left/right properties | `dir=rtl` не зеркалит layout | logical properties + RTL fixtures |
 | D-10 | README/release examples расходятся с VERSION/tag | потребитель выбирает неверную пару | release consistency gate блокирует tag |
 | D-11 | Core и border-radius utilities ссылаются на `--sf-radius-1/3` и `--sf-radius-0`, но актуальный `core.css` не объявляет эти токены | классы радиусов и `--sf-radius--ui` могут вычисляться в пустое значение | generator проверяет closure всех `var()`; недостающие токены объявлены либо ссылки мигрированы |
+| D-12 | `component/highlight` переопределяет webpack public path значением `window.sfPath`, хотя его динамические chunks лежат в `distr/component/highlight/js` | страницы с подсветкой кода получают `ChunkLoadError` и запрос к отсутствующему `distr/js/<chunk>.js` | public path вычисляется от URL entry script или отдельного module base; browser smoke загружает все chunks без ошибок Console |
 
 ## Целевая контрактная цепочка
 
