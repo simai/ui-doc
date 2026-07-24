@@ -79,6 +79,7 @@
         'cache' => true,
         'moduleCache' => true,
         'cachePath' => $projectRoot . '/.cache',
+        'sha' => getenv('DOCARA_FRAMEWORK_SHA') ?: null,
         'siteName' => 'SIMAI Framework Documentation',
         'siteDescription' => 'Documentation for SIMAI Framework',
         'github' => 'https://github.com/simai/ui-doc/',
