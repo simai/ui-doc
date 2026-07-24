@@ -6,6 +6,7 @@ return array(
         'values' => 'Значения',
         'color' => 'Система цвета',
         'sizes' => 'Размеры',
+        'adaptive-sizing-system' => 'Адаптивная система размеров',
         'typography' => 'Типографика',
         'themes' => 'Темы',
         'variables' => 'Переменные',
