@@ -27,6 +27,7 @@ npm-debug.log
 !/source/_core/_layouts/
 /source/_core/_layouts/*
 !/source/_core/_layouts/core.blade.php
+!/source/_core/_layouts/documentation.blade.php
 !/source/_core/_components/
 /source/_core/_components/*
 !/source/_core/_components/header/
