@@ -6,6 +6,7 @@ return array(
         'introduction' => 'Маршрут',
         'installation' => 'Установка и версия',
         'compatibility' => 'Совместимость и обновление',
+        'version-matrix' => 'Матрица sizing contract',
         'integration-patterns' => 'Интеграция в веб-проект',
         'quickstart' => 'Быстрый старт',
         'project-setup' => 'Подготовка проекта',
