@@ -1,65 +1,63 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: "Максимальный размер контейнера (max-container)"
-description: "Максимальный размер контейнера (max-container)"
+title: "Максимальная ширина контейнера (max-container)"
+description: "Ограничение ширины стандартного контейнера через токены системы размеров SIMAI Framework."
 ---
 
-# Максимальный размер контейнера (max-container)
+# Максимальная ширина контейнера
 
 !rtags[max-container]
 
-
-Данный модификатор позволяет изменить максимальную ширину контейнера при достижении определённой контрольной точки. В
-новой версии фреймворка размеры привязаны к переменным масштабирования из системы размеров. По умолчанию, данные
-модификаторы начинают действовать начиная с контрольной точки `desktop` (≥ var(--sf-breakpoint-lg)).
-
-## Переменные максимальной ширины контейнера
-
-| Переменная     {.wrap-normal} | Значение  | Размер |
-|:------------------------------|:----------|:-------|
-| `--sf-container-1--size-max`  | `--sf-h5` | 960px  |
-| `--sf-container-2--size-max`  | `--sf-h6` | 1024px |
-| `--sf-container-3--size-max`  | `--sf-h8` | 1152px |
-| `--sf-container-4--size-max`  | `--sf-i0` | 1280px |
-| `--sf-container-5--size-max`  | `--sf-i1` | 1408px |
-| `--sf-container-6--size-max`  | `--sf-i2` | 1536px |
-| `--sf-container-7--size-max`  | `--sf-i3` | 1664px |
-| `--sf-container-8--size-max`  | `--sf-i4` | 1792px |
-{.table}
-
-## Классы и значения
-
-| Класс            | Контрольная точка | Значение    {.wrap-normal}                    |
-|:-----------------|:------------------|:----------------------------------------------|
-| .max-container-1 | desktop           | max-width: var(`--sf-container-1--size-max`); |
-| .max-container-2 | desktop           | max-width: var(`--sf-container-2--size-max`); |
-| .max-container-3 | desktop           | max-width: var(`--sf-container-3--size-max`); |
-| .max-container-4 | desktop           | max-width: var(`--sf-container-4--size-max`); |
-| .max-container-5 | desktop           | max-width: var(`--sf-container-5--size-max`); |
-| .max-container-6 | desktop           | max-width: var(`--sf-container-6--size-max`); |
-| .max-container-7 | desktop           | max-width: var(`--sf-container-7--size-max`); |
-| .max-container-8 | desktop           | max-width: var(`--sf-container-8--size-max`); |
-{.table}
-
-## Пример использования
+`max-container-*` задаёт максимальную ширину вложенного `.container`. Модификатор
+ставится на родительский элемент, а сам контейнер остаётся стандартным и
+сохраняет адаптивные отступы.
 
 ```html
-<div class="max-container-5">
-    <div class="container">
-        ... ваш контент ...
-    </div>
+<div class="max-container-7">
+  <div class="container m-inline-auto">
+    ...контент...
+  </div>
 </div>
 ```
 
-В данном примере, начиная с контрольной точки `desktop`, максимальная ширина вложенного контейнера будет ограничена
-значением `var(--sf-container-5--size-max)` (примерно 1408px). До достижения этой ширины ограничение действовать не
-будет, и контейнер будет вести себя по умолчанию.
+До `desktop` вложенный контейнер занимает доступную ширину и не выходит за
+границы viewport. Начиная с `desktop`, его максимум определяется переменной
+`--sf-container-N--size-max`. Центрирование выполняет `m-inline-auto`.
 
-Это позволяет создавать более сложные, адаптивные сетки с чётко заданными максимальными размерами, что особенно полезно
-для крупноформатных дисплеев и высоких разрешений.
+## Значения
+
+| Класс | Переменная контейнера | Токен системы размеров |
+|:---|:---|:---|
+| `max-container-1` | `--sf-container-1--size-max` | `--sf-h5` |
+| `max-container-2` | `--sf-container-2--size-max` | `--sf-h6` |
+| `max-container-3` | `--sf-container-3--size-max` | `--sf-h8` |
+| `max-container-4` | `--sf-container-4--size-max` | `--sf-i0` |
+| `max-container-5` | `--sf-container-5--size-max` | `--sf-i1` |
+| `max-container-6` | `--sf-container-6--size-max` | `--sf-i2` |
+| `max-container-7` | `--sf-container-7--size-max` | `--sf-i3` |
+| `max-container-8` | `--sf-container-8--size-max` | `--sf-i4` |
+{.table}
+
+Размеры не дублируются в пикселях или `rem`: источником истины остаётся система
+размеров Framework. Если значение соответствующего токена изменится, контейнер
+автоматически получит новое значение.
+
+## Полноширинный фон и выровненный контент
+
+Родитель может занимать всю ширину экрана, а его содержимое — совпадать с общей
+сеткой страницы:
+
+```html
+<section class="bg-surface-1 max-container-7">
+  <div class="container m-inline-auto">
+    ...контент секции...
+  </div>
+</section>
+```
+
 ## Playground
 
 <div class="sf-playground overflow-hidden">
-<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=max-container"></iframe>
+<iframe title="Все значения max-container" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=max-container"></iframe>
 </div>

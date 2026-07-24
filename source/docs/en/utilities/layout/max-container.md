@@ -1,58 +1,61 @@
-﻿---
+---
 extends: _core._layouts.documentation
 section: content
-title: "Максимальный размер контейнера (max-container)"
-description: "Максимальный размер контейнера (max-container)"
+title: "Maximum container width (max-container)"
+description: "Limit the standard container through SIMAI Framework size-system tokens."
 ---
 
-# Максимальный размер контейнера (max-container)
+# Maximum container width
 
-
-Данный модификатор позволяет изменить максимальную ширину контейнера при достижении определённой контрольной точки. В
-новой версии фреймворка размеры привязаны к переменным масштабирования из системы размеров. По умолчанию, данные
-модификаторы начинают действовать начиная с контрольной точки `desktop` (≥ var(--sf-breakpoint-lg)).
-
-## Переменные максимальной ширины контейнера
-
-| Переменная     {.wrap-normal} | Значение  | Размер |
-|:------------------------------|:----------|:-------|
-| `--sf-container-1--size-max`  | `--sf-h5` | 960px  |
-| `--sf-container-2--size-max`  | `--sf-h6` | 1024px |
-| `--sf-container-3--size-max`  | `--sf-h8` | 1152px |
-| `--sf-container-4--size-max`  | `--sf-i0` | 1280px |
-| `--sf-container-5--size-max`  | `--sf-i1` | 1408px |
-| `--sf-container-6--size-max`  | `--sf-i2` | 1536px |
-| `--sf-container-7--size-max`  | `--sf-i3` | 1664px |
-| `--sf-container-8--size-max`  | `--sf-i4` | 1792px |
-{.table}
-
-## Классы и значения
-
-| Класс            | Контрольная точка | Значение    {.wrap-normal}                    |
-|:-----------------|:------------------|:----------------------------------------------|
-| .max-container-1 | desktop           | max-width: var(`--sf-container-1--size-max`); |
-| .max-container-2 | desktop           | max-width: var(`--sf-container-2--size-max`); |
-| .max-container-3 | desktop           | max-width: var(`--sf-container-3--size-max`); |
-| .max-container-4 | desktop           | max-width: var(`--sf-container-4--size-max`); |
-| .max-container-5 | desktop           | max-width: var(`--sf-container-5--size-max`); |
-| .max-container-6 | desktop           | max-width: var(`--sf-container-6--size-max`); |
-| .max-container-7 | desktop           | max-width: var(`--sf-container-7--size-max`); |
-| .max-container-8 | desktop           | max-width: var(`--sf-container-8--size-max`); |
-{.table}
-
-## Пример использования
+`max-container-*` limits the width of a nested `.container`. Apply the modifier
+to a parent and keep the standard container for responsive gutters.
 
 ```html
-<div class="max-container-5">
-    <div class="container">
-        ... ваш контент ...
-    </div>
+<div class="max-container-7">
+  <div class="container m-inline-auto">
+    ...content...
+  </div>
 </div>
 ```
 
-В данном примере, начиная с контрольной точки `desktop`, максимальная ширина вложенного контейнера будет ограничена
-значением `var(--sf-container-5--size-max)` (примерно 1408px). До достижения этой ширины ограничение действовать не
-будет, и контейнер будет вести себя по умолчанию.
+Below `desktop`, the nested container uses the available width without
+overflowing the viewport. From `desktop` onward, its maximum resolves through
+`--sf-container-N--size-max`. The `m-inline-auto` utility centers it in both
+LTR and RTL layouts.
 
-Это позволяет создавать более сложные, адаптивные сетки с чётко заданными максимальными размерами, что особенно полезно
-для крупноформатных дисплеев и высоких разрешений.
+## Values
+
+| Class | Container variable | Size-system token |
+|:---|:---|:---|
+| `max-container-1` | `--sf-container-1--size-max` | `--sf-h5` |
+| `max-container-2` | `--sf-container-2--size-max` | `--sf-h6` |
+| `max-container-3` | `--sf-container-3--size-max` | `--sf-h8` |
+| `max-container-4` | `--sf-container-4--size-max` | `--sf-i0` |
+| `max-container-5` | `--sf-container-5--size-max` | `--sf-i1` |
+| `max-container-6` | `--sf-container-6--size-max` | `--sf-i2` |
+| `max-container-7` | `--sf-container-7--size-max` | `--sf-i3` |
+| `max-container-8` | `--sf-container-8--size-max` | `--sf-i4` |
+{.table}
+
+Pixel and `rem` values are deliberately not duplicated here. The Framework
+size system remains the source of truth, so a token update automatically
+updates the container.
+
+## Full-bleed surface with aligned content
+
+The parent surface can span the viewport while its inner content stays aligned
+with the page grid:
+
+```html
+<section class="bg-surface-1 max-container-7">
+  <div class="container m-inline-auto">
+    ...section content...
+  </div>
+</section>
+```
+
+## Playground
+
+<div class="sf-playground overflow-hidden">
+<iframe title="All max-container values" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=max-container"></iframe>
+</div>
