@@ -32,3 +32,19 @@ npm-debug.log
 !/source/_core/_components/header/
 /source/_core/_components/header/*
 !/source/_core/_components/header/logo.blade.php
+
+# SIMAI local working artifacts
+.env.*
+!.env.example
+output/
+*.bak
+*.bak_*
+*.bak-*
+*.codex-bak-*
+.docara-state/
+build_*/
+source/assets/build/
+source/docs/.translate.php
+
+# SIMAI project memory runtime logs
+source/logs/

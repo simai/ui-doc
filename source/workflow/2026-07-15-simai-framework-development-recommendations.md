@@ -153,6 +153,7 @@ Proposal уже формулирует полезный native input:
 | G-08 | 13 из 64 component CSS не содержат `@layer` | layer ownership не классифицирован: `sf.components`, другой слой, vendor exception или legacy; unlayered CSS имеет более высокий priority | все native styles классифицированы; vendor exceptions документированы |
 | D-09 | logical utilities используют физические left/right properties | `dir=rtl` не зеркалит layout | logical properties + RTL fixtures |
 | D-10 | README/release examples расходятся с VERSION/tag | потребитель выбирает неверную пару | release consistency gate блокирует tag |
+| D-11 | Core и border-radius utilities ссылаются на `--sf-radius-1/3` и `--sf-radius-0`, но актуальный `core.css` не объявляет эти токены | классы радиусов и `--sf-radius--ui` могут вычисляться в пустое значение | generator проверяет closure всех `var()`; недостающие токены объявлены либо ссылки мигрированы |
 
 ## Целевая контрактная цепочка
 
