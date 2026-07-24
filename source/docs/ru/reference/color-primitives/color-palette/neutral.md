@@ -20,7 +20,7 @@ description: Neutral
 
 По умолчанию neutral \= grey-primary.
 
-![][image3]
+![Варианты нейтральной палитры grey-primary, grey-blue и grey][image3]
 
 **Изменение серого цвета**
 
@@ -123,4 +123,4 @@ body.neutral-grey-blue {
 | `--sf-neutral-5`  | #111111  |
 {.table}
 
-[image3]: /assets/build/img/b64/1b0bbe09c5de338b.png
+[image3]: /ru/assets/reference/image-03.png

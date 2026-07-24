@@ -9,7 +9,7 @@ description: Mark
 
 Роль Mark применяется для выделения текста, например, для подчёркивания важной информации или результатов поиска.
 
-![][image29]
+![Примеры применения ролей Focus и Mark][image29]
 
 Переменные для роли Mark:
 
@@ -17,4 +17,4 @@ description: Mark
 |:------------|:---------------------------|:---------------------------|
 | `--sf-mark` | `--sf-warning-50--alfa-24` | `--sf-warning-90--alfa-24` |
 
-[image29]: /assets/build/img/b64/680a97f6b84c07f5.png
+[image29]: /ru/assets/reference/image-29.png

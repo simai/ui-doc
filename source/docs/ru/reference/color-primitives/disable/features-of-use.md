@@ -21,9 +21,9 @@ description: Особенности использования
 Такой подход сохраняет визуальную связность: если активный элемент имеет окраску Primary, его неактивное состояние будет
 соответствовать Disable, а для текста на Primary автоматически используется On Disable.
 
-![][image22]
+![Примеры применения роли Disable][image22]
 
-![][image23]
+![Роли Disable в светлой и тёмной темах][image23]
 
 Для работы с ролью Disable используются следующие переменные:
 
@@ -34,5 +34,5 @@ description: Особенности использования
 | `--sf-outline-disable` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 {.table}
 
-[image22]: /assets/build/img/b64/49a66e5e4a47e2c6.png
-[image23]: /assets/build/img/b64/ac48e6f24fd4805f.png
+[image22]: /ru/assets/reference/image-22.png
+[image23]: /ru/assets/reference/image-23.png

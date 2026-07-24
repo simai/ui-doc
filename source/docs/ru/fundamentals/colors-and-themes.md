@@ -33,6 +33,8 @@ description: "Полная базовая палитра, семантическ
 
 Тон `98` — самый светлый, тон `5` — самый тёмный. Полная актуальная палитра:
 
+![Палитры Neutral, Primary, Secondary, Tertiary, Error, Warning и Success](/ru/fundamentals/assets/color-palette.png)
+
 | Тон | Neutral | Primary | Secondary | Tertiary | Info | Error | Warning | Success |
 |---:|:---|:---|:---|:---|:---|:---|:---|:---|
 | 98 | `#faf9fe` | `#f9f9ff` | `#f9f9ff` | `#fff7fa` | `#f9f9ff` | `#fff8f7` | `#fff8f5` | `#ecffe4` |
@@ -58,6 +60,16 @@ description: "Полная базовая палитра, семантическ
 суффиксов зависит от тона: `--alfa-4`, `8`, `10`, `12`, `15`, `16`, `20`,
 `24`, `28`, `30`, `32`, `36`, `40`, `44` или `48`.
 
+### Варианты нейтральной палитры
+
+По умолчанию используется `grey-primary`: нейтральная палитра с лёгким
+оттенком основного цвета. На корневом элементе страницы можно выбрать
+`neutral-grey-blue` или `neutral-grey`. Не смешивайте разные варианты внутри
+одной страницы: нейтральные роли формируют общий фон и контраст всего
+интерфейса.
+
+![Три варианта нейтральной палитры: grey-primary, grey-blue и grey](/ru/fundamentals/assets/neutral-palettes.png)
+
 ## Семантические роли
 
 | Семейство | Основные роли |
@@ -74,6 +86,48 @@ description: "Полная базовая палитра, семантическ
 
 Все имена используются с префиксом `--sf-`. Например:
 `--sf-surface-container`, `--sf-on-primary` и `--sf-outline-error`.
+
+### Как роли выглядят в интерфейсе
+
+Иллюстрации ниже показывают назначение ролей, а не готовые компоненты.
+Конкретный внешний вид компонента может отличаться, но смысл пары
+«фон / содержимое на фоне» сохраняется.
+
+#### Акцентные и статусные роли
+
+`Primary` выделяет главное действие или выбранное состояние.
+
+![Примеры применения роли Primary в интерфейсе](/ru/fundamentals/assets/role-primary-usage.png)
+
+`Error`, `Warning` и `Success` обозначают соответственно ошибку,
+предупреждение и успешный результат. Для текста и иконок на цветном фоне
+используйте соответствующую роль `on-*`.
+
+![Примеры применения роли Error](/ru/fundamentals/assets/role-error-usage.png)
+
+![Примеры применения роли Warning](/ru/fundamentals/assets/role-warning-usage.png)
+
+![Примеры применения роли Success](/ru/fundamentals/assets/role-success-usage.png)
+
+#### Нейтральные и служебные роли
+
+`Surface` формирует фон страницы, карточек и вложенных областей.
+
+![Примеры применения ролей Surface](/ru/fundamentals/assets/role-surface-usage.png)
+
+`Disable` снижает визуальный приоритет недоступного элемента, а `Outline`
+отделяет поля, контролы и области без лишнего цветового акцента.
+
+![Примеры применения роли Disable](/ru/fundamentals/assets/role-disable-usage.png)
+
+![Примеры применения роли Outline](/ru/fundamentals/assets/role-outline-usage.png)
+
+`Link`, `Focus` и `Mark` отвечают за ссылки, видимый клавиатурный фокус и
+выделение фрагмента текста.
+
+![Примеры применения роли Link](/ru/fundamentals/assets/role-link-usage.png)
+
+![Примеры применения ролей Focus и Mark](/ru/fundamentals/assets/role-focus-mark-usage.png)
 
 ## Светлая и тёмная темы
 

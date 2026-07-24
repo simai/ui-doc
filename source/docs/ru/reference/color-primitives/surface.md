@@ -18,9 +18,9 @@ description: Surface
 * **Surface Transparent** — полупрозрачный цвет для подчёркивания элементов с прозрачным фоном. Применяется при
   взаимодействии, например, для создания эффектов наведения (hover) у outline-кнопок.
 
-![][image20]
+![Примеры применения ролей Surface][image20]
 
-![][image21]
+![Роли Surface в светлой и тёмной темах][image21]
 
 Для работы с ролью Surface используются следующие переменные:
 
@@ -49,5 +49,5 @@ description: Surface
 | `--sf-surface-transparent-overlay` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 {.table}
 
-[image20]: /assets/build/img/b64/92dbbe6d114d1066.png
-[image21]: /assets/build/img/b64/d09425ddfe2b38ac.png
+[image20]: /ru/assets/reference/image-20.png
+[image21]: /ru/assets/reference/image-21.png

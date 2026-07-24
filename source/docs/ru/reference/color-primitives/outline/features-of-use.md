@@ -10,9 +10,9 @@ description: Особенности использования
 Для **Outline Variant** применяются полупрозрачные цвета, что позволяет разместить его поверх различных фонов с разным
 уровнем контрастности. Таким образом, контур остаётся видимым без усиления визуального шума.
 
-![][image24]
+![Примеры применения роли Outline][image24]
 
-![][image25]
+![Роли Outline в светлой и тёмной темах][image25]
 
 Для работы с ролью Outline используются следующие переменные:
 
@@ -22,5 +22,5 @@ description: Особенности использования
 | `--sf-outline-variant` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 {.table}
 
-[image24]: /assets/build/img/b64/c5e2dfd48bf76277.png
-[image25]: /assets/build/img/b64/69b024c509358c29.png
+[image24]: /ru/assets/reference/image-24.png
+[image25]: /ru/assets/reference/image-25.png

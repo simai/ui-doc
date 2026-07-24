@@ -24,9 +24,9 @@ description: Warning
 * **Outline Warning** — цвет для контуров, границ или разделителей, связанных с предупреждающими элементами.  
   Пример использования роли Warning:
 
-![][image15]
+  ![Примеры применения роли Warning][image15]
 
-![][image16]
+![Роли Warning в светлой и тёмной темах][image16]
 
 Для работы с ролью warning используются следующие переменные:
 
@@ -48,5 +48,5 @@ description: Warning
 | `--sf-outline-warning`              | `--sf-warning-50`          | `--sf-warning-60`          |
 {.table}
 
-[image15]: /assets/build/img/b64/faa5487eac403f05.png
-[image16]: /assets/build/img/b64/75051c00915713c5.png
+[image15]: /ru/assets/reference/image-15.png
+[image16]: /ru/assets/reference/image-16.png

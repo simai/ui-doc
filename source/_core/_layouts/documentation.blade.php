@@ -1,5 +1,17 @@
 @extends('_core._layouts.master')
 
+@push('meta')
+    <style>
+        /*
+         * Fenced examples are useful content, not a loading placeholder.
+         * Syntax highlighting may enhance them, but a failed optional chunk
+         * must never make the source code invisible.
+         */
+        .main--content pre code:not(.hljs) {
+            opacity: 1;
+        }
+    </style>
+@endpush
 
 @section('body')
     <section>

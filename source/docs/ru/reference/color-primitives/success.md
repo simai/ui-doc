@@ -7,7 +7,7 @@ description: Success
 
 # Success
 
-![][image17]
+![Обозначение успешного результата][image17]
 
 Роль **Success** предназначена для визуального оформления состояний, сигнализирующих об успешном завершении процесса или
 достигнутой цели. Цветовая гамма роли Success помогает пользователям заметить позитивный результат и почувствовать
@@ -25,9 +25,9 @@ description: Success
   например, для outline-кнопок).
 * **Outline Success** — цвет для контуров, границ или разделителей, связанных с успешными состояниями.
 
-![][image18]
+![Примеры применения роли Success][image18]
 
-![][image19]
+![Роли Success в светлой и тёмной темах][image19]
 
 Для работы с ролью Success используются следующие переменные:
 
@@ -49,6 +49,6 @@ description: Success
 | `--sf-outline-success`              | `--sf-success-50`          | `--sf-success-60`          |
 {.table}
 
-[image17]: /assets/build/img/b64/963cbfcfe6473fa1.png
-[image18]: /assets/build/img/b64/118af2f57773428a.png
-[image19]: /assets/build/img/b64/12d3d7bfba216e51.png
+[image17]: /ru/assets/reference/image-17.png
+[image18]: /ru/assets/reference/image-18.png
+[image19]: /ru/assets/reference/image-19.png
