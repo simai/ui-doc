@@ -1,5 +1,5 @@
 <?php
 return array (
-  'title' => 'Направления',
+  'title' => 'LTR и RTL',
   'order' => 7,
 );

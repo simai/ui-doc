@@ -10,6 +10,6 @@
 - [Размеры](sizes/sizes.md) — шкалы размеров и переводы.
 - [Типографика](typography/typography.md) — роли текста, размеры и стили.
 - [Переменные](variables/variables.md) — глобальные и локальные переменные.
-- [Направления и выравнивание](directions/directions.md) и [выравнивание](alignment/alignment.md).
+- [Поддержка LTR и RTL](directions/) и [выравнивание](alignment/alignment.md).
 - [Параметры и ограничения модификаторов](modifier-parameters/modifier-parameters.md, modifier-limitations/modifier-limitations.md).
 - [Сокращения свойств](abbreviations-of-properties/abbreviations-of-properties.md).

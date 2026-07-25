@@ -2,12 +2,12 @@
 extends: _core._layouts.documentation
 section: content
 title: Адаптивная система размеров
-description: Архитектура вертикальных размеров Simai Framework.
+description: Архитектура вертикальных размеров SIMAI Framework.
 ---
 
 # Адаптивная система размеров
 
-Simai Framework использует одну primitive scale A–I и semantic-роли, которые
+SIMAI Framework использует одну primitive scale A–I и semantic-роли, которые
 переключают значения между mobile и desktop. Разработчик выбирает роль, а не
 пишет отдельные пиксели для каждого экрана.
 

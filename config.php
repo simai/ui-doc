@@ -79,8 +79,8 @@
         'cache' => true,
         'moduleCache' => false,
         'cachePath' => $projectRoot . '/.cache',
-        'siteName' => 'Simai Documentation',
-        'siteDescription' => 'Simai framework documentation',
+        'siteName' => 'SIMAI Documentation',
+        'siteDescription' => 'SIMAI Framework documentation',
         'github' => 'https://github.com/simai/ui-doc/',
         'locales' => [
             'ru' => 'Русский',

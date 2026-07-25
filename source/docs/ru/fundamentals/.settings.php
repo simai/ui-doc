@@ -10,7 +10,7 @@ return array(
         'typography' => 'Типографика',
         'themes' => 'Темы',
         'variables' => 'Переменные',
-        'directions' => 'Направления',
+        'directions' => 'LTR и RTL',
         'alignment' => 'Выравнивание',
         'modifier-parameters' => 'Параметры модификаторов',
         'modifier-limitations' => 'Ограничения',

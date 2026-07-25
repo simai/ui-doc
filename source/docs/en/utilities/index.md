@@ -1,49 +1,63 @@
-# Утилиты
+# Utilities
 
-Справочник модификаторов SF UI. Утилиты разбиты по категориям CSS-свойств: от сеток и типографики до масок и фильтров. Каждая страница описывает конкретный модификатор, его значения и примеры.
+The SF UI modifier reference is organized by CSS capability, from layout and
+typography to masks and filters. Each page describes a modifier, its values,
+and examples.
 
-## Категории
-- [Макет](layout/index.md) — базовое позиционирование и отображение элементов.
-- [Разрыв макета](layout-break/index.md) — управление колонками и переносами.
-- [Объекты](objects/index.md) — выравнивание и подгонка медиа.
-- [Размеры](sizes/index.md) — ширина, высота и их ограничения.
-- [Отступы](indents/index.md) — margin, padding и пространственные модификаторы.
-- [Сетка](grid/index.md) — grid-шаблоны и размещение ячеек.
-- [Флексбоксы](flex/index.md) — направление, рост/сжатие и wrap.
-- [Утилиты для сетки и флексбоксов](grid-and-flexbox-utilities/index.md) — выравнивание и порядок элементов.
-- [Типографика](typography/index.md) — роли текста, размеры, насыщенность.
-- [Оформление текста](text-formatting/index.md) — цвета, толщина, подчёркивания.
-- [Ссылки](links/index.md) — состояния и форматирование ссылок.
-- [Таблицы](tables/index.md) — оформление таблиц и ячеек.
-- [SVG](svg/index.md) — заливки, обводки и размеры SVG.
-- [Граница](border/index.md) — ширина, стиль и радиусы.
-- [Разделитель](divider/index.md) — стили горизонтальных/вертикальных линий.
-- [Внешняя граница](outline/index.md) — outline для фокуса и акцента.
-- [Фоновый цвет](background-color/index.md) — базовые цветовые модификаторы.
-- [Фоновое изображение](background-image/index.md) — позиция, повторение, размер.
-- [Градиент](background-gradient/index.md) — типы и параметры фоновых градиентов.
-- [Маска](mask/index.md) — clip, repeat и позиционирование масок.
-- [Тени](shadows/index.md) — тени элементов и капельные тени.
-- [Фильтры элемента](filters/index.md) — blur, hue-rotate и другие CSS-фильтры.
-- [Фильтры подложки](backdrop-filter/index.md) — блюры и корректировки фона.
-- [Анимация](animation/index.md) — transition и типы анимаций.
-- [Прокрутка](overscroll/index.md) — scroll snap, цвета и радиусы скролла.
-- [Преобразования](transform/index.md) — rotate, scale, skew и translate.
-- [Формы](forms/index.md) — состояние полей и вспомогательные свойства.
-- [Интерактивность](interactivity/index.md) — курсоры, user-select, touch-action.
-- [Печать](print/index.md) — управление отображением в режиме печати.
-- [Полосы](stripes/index.md) — штриховка и фоновые полосы.
+## Direction (LTR/RTL)
 
-## Часто используемые
-- [Макет](layout/index.md)
-- [Сетка](grid/index.md)
-- [Флексбоксы](flex/index.md)
-- [Отступы](indents/index.md)
-- [Размеры](sizes/index.md)
-- [Типографика](typography/index.md)
-- [Оформление текста](text-formatting/index.md)
-- [Фоновый цвет](background-color/index.md)
-- [Граница](border/index.md)
-- [Тени](shadows/index.md)
-- [Преобразования](transform/index.md)
-- [Интерактивность](interactivity/index.md)
+- The Framework keeps an explicit root `dir` and adds one only when it is
+  missing.
+- Flow-relative utilities use logical `inline-start/end` and
+  `block-start/end` properties, so the same classes work in LTR and RTL.
+- Keep `dir` in custom templates and avoid physical `left` or `right` when the
+  value should follow the content flow.
+- Read the complete [LTR and RTL support guide](../fundamentals/directions/).
+
+## Categories
+
+- [Layout](layout/index.md) — positioning and display.
+- [Layout breaks](layout-break/index.md) — columns and breaks.
+- [Objects](objects/index.md) — media alignment and fitting.
+- [Sizing](sizes/index.md) — width, height, and constraints.
+- [Spacing](indents/index.md) — margins, padding, and spatial modifiers.
+- [Grid](grid/index.md) — grid templates and item placement.
+- [Flexbox](flex/index.md) — direction, growth, shrinkage, and wrapping.
+- [Grid and flexbox utilities](grid-and-flexbox-utilities/index.md) — alignment and ordering.
+- [Typography](typography/index.md) — text roles, sizes, and weight.
+- [Text formatting](text-formatting/index.md) — color, weight, and decoration.
+- [Links](links/index.md) — link states and formatting.
+- [Tables](tables/index.md) — table and cell presentation.
+- [SVG](svg/index.md) — fills, strokes, and sizing.
+- [Borders](border/index.md) — width, style, and radius.
+- [Dividers](divider/index.md) — horizontal and vertical dividers.
+- [Outline](outline/index.md) — focus and emphasis outlines.
+- [Background color](background-color/index.md) — background color modifiers.
+- [Background image](background-image/index.md) — position, repeat, and sizing.
+- [Gradients](background-gradient/index.md) — gradient types and parameters.
+- [Masks](mask/index.md) — clipping, repetition, and mask placement.
+- [Shadows](shadows/index.md) — box and drop shadows.
+- [Filters](filters/index.md) — blur, hue rotation, and other filters.
+- [Backdrop filters](backdrop-filter/index.md) — background blur and adjustment.
+- [Animation](animation/index.md) — transitions and animations.
+- [Scrolling](overscroll/index.md) — scroll snap, colors, and scroll radius.
+- [Transforms](transform/index.md) — rotation, scaling, skew, and translation.
+- [Forms](forms/index.md) — fields and supporting states.
+- [Interactivity](interactivity/index.md) — cursors, selection, and touch behavior.
+- [Print](print/index.md) — print visibility.
+- [Stripes](stripes/index.md) — striped and patterned backgrounds.
+
+## Commonly used
+
+- [Layout](layout/index.md)
+- [Grid](grid/index.md)
+- [Flexbox](flex/index.md)
+- [Spacing](indents/index.md)
+- [Sizing](sizes/index.md)
+- [Typography](typography/index.md)
+- [Text formatting](text-formatting/index.md)
+- [Background color](background-color/index.md)
+- [Borders](border/index.md)
+- [Shadows](shadows/index.md)
+- [Transforms](transform/index.md)
+- [Interactivity](interactivity/index.md)

@@ -1,5 +1,5 @@
 <?php
 return array (
-  'title' => 'Directions',
+  'title' => 'LTR and RTL',
   'order' => 7,
 );

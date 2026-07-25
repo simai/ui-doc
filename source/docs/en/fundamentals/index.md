@@ -10,6 +10,6 @@ Core SF UI principles: modifier values, color roles, sizes, themes, and typograp
 - [Sizes](sizes/sizes.md) — size scales and conversions.
 - [Typography](typography/typography.md) — text roles, sizes, and styles.
 - [Variables](variables/variables.md) — global and local variables.
-- [Directions and alignment](directions/directions.md) and [alignment](alignment/alignment.md).
+- [LTR and RTL support](directions/) and [alignment](alignment/alignment.md).
 - [Modifier parameters and limitations](modifier-parameters/modifier-parameters.md, modifier-limitations/modifier-limitations.md).
 - [Property abbreviations](abbreviations-of-properties/abbreviations-of-properties.md).

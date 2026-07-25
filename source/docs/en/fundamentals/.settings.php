@@ -9,7 +9,7 @@ return array(
         'typography' => 'Typography',
         'themes' => 'Themes',
         'variables' => 'Variables',
-        'directions' => 'Directions',
+        'directions' => 'LTR and RTL',
         'alignment' => 'Alignment',
         'modifier-parameters' => 'Modifier parameters',
         'modifier-limitations' => 'Limitations',
