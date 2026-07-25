@@ -131,9 +131,9 @@ Test the same DOM in both directions:
 5. Confirm that physical coordinates and mixed-direction content are not
    mirrored by mistake.
 
-[Open the LTR/RTL utility demo in SIMAI Framework Playground](https://play.simai.io/#/p/utility/ltr-rtl/system).
-LTR is the default. Use the direction control in the Playground toolbar to
-view the same elements in RTL.
+[Open the RTL utility example in SIMAI Framework Playground](https://play.simai.io/#/p/utility/rtl).
+The example page uses `dir="rtl"` itself and shows the direction-sensitive
+basics: text alignment, logical spacing, flex order, and inline start/end.
 
 A successful page check does not prove every component ready. Release readiness
 is established by the component matrix for the exact coordinated build.
