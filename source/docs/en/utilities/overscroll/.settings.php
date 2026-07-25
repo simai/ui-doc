@@ -4,6 +4,7 @@ return array (
   'order' => 14,
   'menu' => 
   array (
+    'scrollbar-presets' => 'Scrollbar presets',
     'overscroll-behavior' => 'Поведение при прокрутке',
     'overscroll-behavior-smooth' => 'Плавность прокрутки',
     'scroll-margin' => 'Внешний отступ прокрутки',

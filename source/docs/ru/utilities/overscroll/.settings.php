@@ -18,5 +18,6 @@ return array (
     'scroll' => 'Толщина ползунка прокрутки (scroll)',
     'scroll-slider-radius' => 'Радиус границы ползунка прокрутки (scroll-slider-radius)',
     'scroll-hover' => 'Полоса прокрутки при наведении (scroll-hover)',
+    'scrollbar-presets' => 'Режимы полосы прокрутки',
   ),
 );

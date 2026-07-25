@@ -32,3 +32,13 @@ npm-debug.log
 !/source/_core/_components/header/
 /source/_core/_components/header/*
 !/source/_core/_components/header/logo.blade.php
+
+# Local translation state and Codex recovery artifacts
+/source/docs/.translate.php
+/source/output/
+/output/
+codex-local-check*
+*.bak
+*.bak_*
+*.bak-*
+*.codex-bak-*

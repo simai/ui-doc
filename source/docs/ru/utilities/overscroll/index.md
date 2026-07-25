@@ -9,6 +9,7 @@
 - [Радиус подложки прокрутки (scroll-backdrop-radius)](scroll-backdrop-radius.md)
 - [Толщина подложки прокрутки (scroll-backdrop-width)](scroll-backdrop-width.md)
 - [Полоса прокрутки при наведении (scroll-hover)](scroll-hover.md)
+- [Режимы полосы прокрутки (sf-scrollbar)](scrollbar-presets.md)
 - [Внешний отступ прокрутки](scroll-margin.md)
 - [Внутренний отступ прокрутки (scroll-padding)](scroll-padding.md)
 - [Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)](scroll-slider-color.md)

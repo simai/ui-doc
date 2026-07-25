@@ -3,6 +3,7 @@
 Утилиты категории Прокрутка помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
 
 ## Материалы раздела
+- [Scrollbar presets](scrollbar-presets.md)
 - [Плавность прокрутки](overscroll-behavior-smooth.md)
 - [Поведение при прокрутке](overscroll-behavior.md)
 - [Цвет подложки прокрутки (scroll-backdrop-color)](scroll-backdrop-color.md)

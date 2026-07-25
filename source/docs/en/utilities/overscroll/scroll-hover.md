@@ -7,6 +7,10 @@ description: "Полоса прокрутки при наведении (scroll-
 
 # Полоса прокрутки при наведении (scroll-hover)
 
+> For new interfaces that need a ready-made scrollbar behavior, use the
+> [`sf-scrollbar` presets](scrollbar-presets.md). `scroll-hover` remains a
+> low-level compatibility utility for native scrollbars.
+
 Перед вами пример решения, при котором полоса прокрутки по умолчанию скрыта или сведена к минимальному отображению, а
 при наведении курсора на контейнер с классом `.scroll-hover` — полоса плавно появляется.
 
