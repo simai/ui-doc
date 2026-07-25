@@ -132,8 +132,8 @@ Test the same DOM in both directions:
    mirrored by mistake.
 
 [Open the LTR/RTL utility demo in SIMAI Framework Playground](https://play.simai.io/#/p/utility/ltr-rtl/system).
-It contains 22 scenarios covering layout utilities, forms, navigation, tables,
-dialogs, states, and Smart components.
+LTR is the default. Use the direction control in the Playground toolbar to
+view the same elements in RTL.
 
 A successful page check does not prove every component ready. Release readiness
 is established by the component matrix for the exact coordinated build.
