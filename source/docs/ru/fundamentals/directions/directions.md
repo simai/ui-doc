@@ -132,7 +132,7 @@ SIMAI Framework использует одно и то же дерево DOM и �
 5. Убедитесь, что физические координаты и смешанный текст не зеркалятся
    ошибочно.
 
-[Открыть демонстрацию LTR/RTL в SIMAI Framework Playground](https://play.simai.io/ltr-rtl/).
+[Открыть демонстрацию утилиты LTR/RTL в SIMAI Framework Playground](https://play.simai.io/#/p/utility/ltr-rtl/system).
 Она содержит 22 сценария для layout-утилит, форм, навигации, таблиц, модальных
 окон, состояний и Smart-компонентов.
 

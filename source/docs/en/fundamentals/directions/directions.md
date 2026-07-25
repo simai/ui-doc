@@ -131,7 +131,7 @@ Test the same DOM in both directions:
 5. Confirm that physical coordinates and mixed-direction content are not
    mirrored by mistake.
 
-[Open the LTR/RTL demo in SIMAI Framework Playground](https://play.simai.io/ltr-rtl/).
+[Open the LTR/RTL utility demo in SIMAI Framework Playground](https://play.simai.io/#/p/utility/ltr-rtl/system).
 It contains 22 scenarios covering layout utilities, forms, navigation, tables,
 dialogs, states, and Smart components.
 
