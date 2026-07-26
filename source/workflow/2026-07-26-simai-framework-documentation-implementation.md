@@ -2,13 +2,18 @@
 
 Дата старта: 2026-07-26
 
-Статус: active
+Статус: complete
 
 Track: `simai-framework-docs`
 
 Process model: `sf5_frontend_delivery`
 
-Current state: `integration_acceptance`
+Current state: `closed`
+
+Personal memory decision: `skip`
+
+Personal memory reason: no relevant personal-memory entry was used; all
+repository, runtime and browser claims were verified from current local sources.
 
 ## Final Outcome
 
@@ -113,9 +118,33 @@ Execution mode: `single_agent`; subagents: none.
 | G2 | Make Utilities and Fundamentals exact | missing contracts added, invalid examples/tokens/images corrected | complete |
 | G3 | Document ordinary Components | every classified public component has a verified reference contract | complete |
 | G4 | Document Smart Components | metadata/types/docs cover every classified public Smart tag | complete |
-| G5 | Integrate and accept | build, link, browser, accessibility and drift gates PASS | active |
+| G5 | Integrate and accept | build, link, browser, accessibility and drift gates PASS | complete |
 
 Auto Continue: allowed between safe local batches inside G1–G5.
+
+## Batches
+
+- G1.1 reproduced source defects and fixed repository boundaries.
+- G1.2 corrected Loader rules/assets and added fail-closed regression checks.
+- G1.3 established Smart and aggregate registries for an exact candidate pair.
+- G2 completed Fundamentals and all 225 Utility family references.
+- G3 documented all 58 ordinary Component contracts.
+- G4 documented all 50 Smart directories with explicit readiness status.
+- G5 integrated the exact pair into UI Admin and UI Docs and completed source,
+  build, browser, accessibility, responsive, RTL and drift acceptance.
+
+## Evidence Plan
+
+- Compare generated registry counts with Loader and Smart source inventories.
+- Run Loader, registry, Smart manifest and exact-pair UI Admin tests.
+- Regenerate references in check mode and validate every copied class, variable,
+  image and internal link.
+- Build the production site from immutable local revisions and scan rendered
+  links.
+- Browser-smoke representative Start, Fundamentals, Utilities, Components and
+  Smart routes on desktop and mobile, including accessibility controls.
+- Verify LTR/RTL selector parity, clean staged diffs and absence of secret-like
+  material before commit.
 
 ## Completed Stage: G1 — source contract stabilization
 
@@ -150,7 +179,7 @@ Evidence:
 - generate or validate Smart metadata and types from the owner source;
 - define an exact compatibility contract without claiming an unreleased tag.
 
-## Later Stages
+## Stages
 
 ### G2 — Utilities and Fundamentals
 
@@ -277,20 +306,42 @@ Evidence:
   internal rendered links, zero broken links. Desktop and 390 px browser smoke
   found no broken images or empty code; mobile tables now scroll locally
   without page overflow. Shared logo/search controls received accessible names.
+- 2026-07-26: G5 complete. Final browser smoke on Start, Fundamentals,
+  Utilities, Components and Smart paths has zero console errors, empty controls,
+  broken images, duplicate IDs, empty code blocks, archive warnings and page
+  overflow. The shipped utility CSS has 5,982 paired LTR/RTL selectors with no
+  asymmetric selectors.
+- 2026-07-26: final cross-repository verification PASS: five Loader tests, 16
+  registry tests, six Smart tests, Smart manifest drift check, `ui-admin`
+  exact-pair materialization test, 143 generated reference files, 2,054 checked
+  example classes, 62 checked CSS variables and zero findings.
+- 2026-07-26: local implementation commits are UI `2742ed22`, UI registry
+  `8fea5eb4`, Smart manifest `b5884eb5`, UI Admin `8b70c00` and UI Docs
+  `662df7f0`. No push, merge, release or deployment was performed. Existing
+  unrelated dirty files in `ui-doc` were preserved and excluded from commits.
 
 ## Remaining
 
-- Finish G5: final clean browser/accessibility rerun, cross-repository drift and
-  secret checks, clean scoped commits, reverse-outcome and federation
-  conformance evidence.
+- No implementation work remains inside the authorized local goal boundary.
+- Publication, merge, release and deployment remain separate approval gates.
 
 ## Next
 
-Complete G5 acceptance and prepare the local branch handoff without push,
-merge, release or deployment.
+Review the local branches and choose the publication/merge order. The candidate
+must remain marked non-production until a separately authorized release gate.
 
 ## Kaizen
+
+Kaizen review: lessons learned are recorded below; no canonical owner-skill or
+federation graph change is required for this project-local delivery. Graph sync
+evidence: not applicable; graph proposal: none. Technology quality feedback:
+validators should bind documentation acceptance to current source registries
+and runtime browser evidence, not merely to a successful static build.
 
 The earlier documentation workflow was closed from build/link evidence while
 runtime coverage was still incomplete. Goal acceptance must compare the final
 reader outcome against source registries, not only against a green site build.
+
+Owner review or handoff: local branch handoff is ready for user review.
+
+No open blockers remain inside the authorized local scope.
