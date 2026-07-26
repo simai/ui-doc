@@ -5,7 +5,7 @@ return array(
     'menu' => array(
         'introduction' => 'Введение',
         'installation' => 'Установка',
-        'version-matrix' => 'Матрица sizing contract',
+        'compatibility' => 'Версии и обновление',
         'loader' => 'Подключение (загрузчик)',
         'glossary' => 'Глоссарий',
     ),

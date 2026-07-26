@@ -66,4 +66,4 @@ control-height = line-height + 2 × block-padding
 
 - Точные значения: `/ru/reference/adaptive-sizing/generated-contract/`.
 - Правила обновления: `/ru/migration/adaptive-sizing-v1/`.
-- Совместимость версий: `/ru/start/version-matrix/`.
+- [Совместимость и порядок обновления](/ru/start/compatibility/).
