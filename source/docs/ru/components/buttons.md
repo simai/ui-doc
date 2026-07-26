@@ -1,25 +1,18 @@
 # Кнопки
 
-Компонент `buttons` задаёт базовое оформление кнопок действий. Он объединяет семантический HTML-элемент `<button>`, визуальные варианты, размеры, иконки и стандартные состояния интерфейса.
+`buttons` — компонент обычной кнопки действия в SIMAI Framework. Он включает
+визуальные варианты, пять размеров, иконки, состояния, сегменты и JavaScript API
+для программного создания кнопок.
 
-Используйте кнопку для действий, которые пользователь выполняет явно: сохранить, отправить, открыть, подтвердить, отменить или перейти к следующему шагу.
+Используйте нативный `<button>` для команды: сохранить, отправить, подтвердить,
+отменить или открыть интерфейс. Для перехода на другую страницу используйте
+`<a>`, а для действия без видимой подписи — компонент `icon-buttons`.
 
-## Когда использовать
+## Быстрый старт
 
-- Для основного или вторичного действия на странице.
-- Для команд в формах, карточках, тулбарах и модальных окнах.
-- Когда действие должно иметь управляемые состояния `disabled`, `loading` или `focus`.
-- Когда рядом с текстом нужна иконка, уточняющая смысл действия.
-
-## Когда не использовать
-
-- Для обычной навигационной ссылки, если действие не запускает команду.
-- Для выбора одного варианта из набора. В таких случаях используйте `radio-button`, `toggle` или `switch`.
-- Для компактного действия без текста, если достаточно `icon-buttons`.
-
-## Подключение
-
-Минимальная кнопка строится на классе `sf-button`. Для предсказуемого поведения внутри форм указывайте `type="button"`, если кнопка не должна отправлять форму.
+Loader обнаруживает класс `sf-button` в DOM и подключает CSS и JavaScript
+компонента автоматически. Отдельно подключать файлы из
+`distr/component/buttons` не нужно.
 
 ```html
 <button
@@ -29,245 +22,361 @@
 </button>
 ```
 
-Кнопка с иконками:
+Минимальная структура состоит из:
 
-```html
-<button
-  type="button"
-  class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-  <i class="sf-icon">chevron_left</i>
-  <span class="sf-button-text-container">Назад</span>
-</button>
-```
+| Часть | Назначение |
+| --- | --- |
+| `<button>` | Нативная семантика, клавиатурное управление и атрибуты формы. |
+| `sf-button` | Обязательный базовый класс и правило автоматического подключения. |
+| `sf-button--default` | Визуальный тип кнопки. |
+| `sf-button--primary` | Цветовая схема. |
+| `sf-button--size-1` | Размер. |
+| `sf-button-text-container` | Контейнер текста с типографикой и отступами компонента. |
+
+{.table}
 
 ## Варианты
 
-### Filled
+Выбирайте вариант по важности действия, а не по личному предпочтению. В одном
+контексте обычно достаточно одной основной filled-кнопки.
 
-Используйте filled-кнопки для главного действия в текущем контексте. Обычно это сохранение, подтверждение или переход к следующему шагу.
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+    <span class="sf-button-text-container">Основное</span>
+  </button>
+  <button type="button" class="sf-button sf-button--tonal sf-button--secondary sf-button--size-1">
+    <span class="sf-button-text-container">Вторичное</span>
+  </button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1">
+    <span class="sf-button-text-container">Нейтральное</span>
+  </button>
+  <button type="button" class="sf-button sf-button--link sf-button--primary sf-button--size-1">
+    <span class="sf-button-text-container">Текстовое</span>
+  </button>
+</div>
 
-Классы: `sf-button--default sf-button--primary` или `sf-button--default sf-button--on-surface`.
+| Вариант | Классы | Когда использовать |
+| --- | --- | --- |
+| Filled | `sf-button--default sf-button--primary` | Главное действие текущего экрана или блока. |
+| Filled neutral | `sf-button--default sf-button--on-surface` | Сильное нейтральное действие. |
+| Tonal | `sf-button--tonal sf-button--secondary` | Заметное вторичное действие. |
+| Tonal neutral | `sf-button--tonal sf-button--on-surface` | Вторичное действие без цветового акцента. |
+| Outline | `sf-button--outline sf-button--primary` или `sf-button--outline sf-button--on-surface` | Действие средней важности, например отмена. |
+| Link | `sf-button--link sf-button--primary` или `sf-button--link sf-button--on-surface` | Компактное действие с минимальным визуальным весом. |
+
+{.table}
 
 ```html
-<button
-  type="button"
-  class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-  <span class="sf-button-text-container">Сохранить</span>
-</button>
-```
-
-### Tonal
-
-Tonal-вариант подходит для вторичных действий, которые должны быть заметны, но не конкурировать с главным CTA.
-
-Классы: `sf-button--tonal sf-button--secondary` или `sf-button--tonal sf-button--on-surface`.
-
-```html
-<button
-  type="button"
+<button type="button"
   class="sf-button sf-button--tonal sf-button--secondary sf-button--size-1">
-  <span class="sf-button-text-container">Черновик</span>
+  <span class="sf-button-text-container">Сохранить черновик</span>
 </button>
 ```
 
-### Outline
+`secondary` поддерживается tonal-вариантом. Для `default`, `outline` и `link`
+используйте схемы `primary` или `on-surface`.
 
-Outline-вариант используйте для действий средней важности: отмена, дополнительный переход, открытие настроек.
+## Размеры
 
-Классы: `sf-button--outline sf-button--primary` или `sf-button--outline sf-button--on-surface`.
+Компонент поставляется с пятью размерами. Размер `1` — основной для большинства
+интерфейсов; дробные размеры подходят плотным панелям, а `2` и `3` — крупным
+акцентным действиям.
+
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1/3"><span class="sf-button-text-container">1/3</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1/2"><span class="sf-button-text-container">1/2</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">1</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-2"><span class="sf-button-text-container">2</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-3"><span class="sf-button-text-container">3</span></button>
+</div>
+
+| Значение | Класс | Рекомендуемый контекст |
+| --- | --- | --- |
+| `1/3` | `sf-button--size-1/3` | Очень плотные панели. |
+| `1/2` | `sf-button--size-1/2` | Компактные формы и тулбары. |
+| `1` | `sf-button--size-1` | Основной размер интерфейса. |
+| `2` | `sf-button--size-2` | Крупные действия. |
+| `3` | `sf-button--size-3` | Акцентные блоки с большим пространством. |
+
+{.table}
+
+## Иконки
+
+Иконка задаётся элементом `<i class="sf-icon">имя_иконки</i>`. Она может
+располагаться до текста, после него или с обеих сторон.
+
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+    <i class="sf-icon" aria-hidden="true">add</i>
+    <span class="sf-button-text-container">Добавить</span>
+  </button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1">
+    <span class="sf-button-text-container">Далее</span>
+    <i class="sf-icon" aria-hidden="true">chevron_right</i>
+  </button>
+</div>
 
 ```html
-<button
-  type="button"
-  class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1">
-  <span class="sf-button-text-container">Отмена</span>
+<button type="button"
+  class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+  <i class="sf-icon" aria-hidden="true">add</i>
+  <span class="sf-button-text-container">Добавить</span>
 </button>
 ```
 
-### Link
+Декоративную иконку скрывайте от скринридера через `aria-hidden="true"`.
+Кнопке только с иконкой требуется доступное имя через `aria-label`, но для
+такого сценария предпочтителен специализированный `icon-buttons`.
 
-Link-вариант выглядит как текстовое действие. Он полезен в плотных интерфейсах, где обычная кнопка визуально слишком тяжёлая.
+## Плотность и радиус
 
-Классы: `sf-button--link sf-button--primary` или `sf-button--link sf-button--on-surface`.
+Плотность меняет внутренние вертикальные отступы без смены смыслового размера:
+`tightness-low`, `tightness-high` и `tightness-highest`. Без модификатора
+используется стандартная плотность.
+
+Радиус можно изменить классами `radius-default`, `radius-square` и
+`radius-rounded`. Не переопределяйте радиус без требования дизайн-системы.
 
 ```html
-<button
-  type="button"
-  class="sf-button sf-button--link sf-button--primary sf-button--size-1">
-  <span class="sf-button-text-container">Подробнее</span>
+<button type="button"
+  class="sf-button sf-button--outline sf-button--primary sf-button--size-1
+         tightness-high radius-rounded">
+  <span class="sf-button-text-container">Компактная кнопка</span>
 </button>
 ```
 
-## Параметры
+## Сегментированные кнопки
 
-### Базовый класс
+Для визуально связанной группы используйте `segment-start`, `segment-middle` и
+`segment-end`. Модификаторы учитывают направление `ltr` и `rtl`; менять порядок
+скруглений вручную не нужно.
 
-Тип: класс
-Имя: `sf-button`
+<div class="flex items-cross-center">
+  <button type="button" class="sf-button segment-start sf-button--outline sf-button--primary sf-button--size-1"><span class="sf-button-text-container">День</span></button>
+  <button type="button" class="sf-button segment-middle sf-button--outline sf-button--primary sf-button--size-1 active" aria-pressed="true"><span class="sf-button-text-container">Неделя</span></button>
+  <button type="button" class="sf-button segment-end sf-button--outline sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Месяц</span></button>
+</div>
 
-Обязательный класс для всех кнопок. Без него не применяются базовые размеры, отступы, цвета и состояния.
+```html
+<div class="flex items-cross-center" role="group" aria-label="Период отчёта">
+  <button type="button"
+    class="sf-button segment-start sf-button--outline sf-button--primary sf-button--size-1">
+    <span class="sf-button-text-container">День</span>
+  </button>
+  <button type="button" aria-pressed="true"
+    class="sf-button segment-middle sf-button--outline sf-button--primary sf-button--size-1 active">
+    <span class="sf-button-text-container">Неделя</span>
+  </button>
+  <button type="button"
+    class="sf-button segment-end sf-button--outline sf-button--primary sf-button--size-1">
+    <span class="sf-button-text-container">Месяц</span>
+  </button>
+</div>
+```
 
-### Размер
+Сегменты отвечают только за оформление. Логику выбора и синхронизацию
+`aria-pressed` приложение реализует самостоятельно. Если пользователь выбирает
+одно значение формы, используйте семантически подходящую группу radio.
 
-Тип: класс
-Имя: `sf-button--size-*`
-Значения: `1/3`, `1/2`, `1`, `2`, `3`
+## Состояния
 
-Размер управляет отступами, высотой текста и размером иконок. Для большинства интерфейсов используйте `sf-button--size-1`; меньшие размеры подходят для плотных панелей, большие — для акцентных действий.
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Обычная</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 active" aria-pressed="true"><span class="sf-button-text-container">Активная</span></button>
+  <button type="button" disabled class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Недоступна</span></button>
+  <button type="button" disabled aria-busy="true" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading"><span class="sf-button-text-container">Сохранение</span></button>
+</div>
 
-### Тип
+| Состояние | Как задаётся | Примечание |
+| --- | --- | --- |
+| Hover | `:hover` | Возникает при наведении поддерживаемого устройства. |
+| Focus | `:focus` | Использует системный фокус `--sf-ui-focus`; не скрывайте его. |
+| Pressed | `:active` | Действует во время нажатия. |
+| Persistent active | класс `active` | Визуальное активное состояние; семантику задайте отдельно, например `aria-pressed`. |
+| Disabled | нативный атрибут `disabled` | Отключает взаимодействие и применяет disabled-оформление. |
+| Loading | классы `loading sf-button-state-loading` и `aria-busy="true"` | Показывает выполнение операции. |
 
-Тип: класс
-Имена: `sf-button--default`, `sf-button--tonal`, `sf-button--outline`, `sf-button--link`
+{.table}
 
-Тип определяет визуальную форму кнопки: заливка, мягкий фон, контур или текстовое действие.
-
-### Схема
-
-Тип: класс
-Имена: `sf-button--primary`, `sf-button--secondary`, `sf-button--on-surface`
-
-Схема задаёт цветовую роль. `primary` используйте для ключевых действий, `secondary` — для вспомогательных, `on-surface` — для нейтральных действий на поверхности.
-
-### Плотность
-
-Тип: класс
-Имя: `tightness-*`
-Значения: `low`, `high`, `highest`
-
-Плотность меняет вертикальные отступы без изменения смыслового размера кнопки. Используйте её локально, когда кнопку нужно вписать в более плотный или более свободный блок.
-
-<a href="https://play.simai.io/embed.html?component=buttons&amp;group=tightness" target="_blank" rel="noopener noreferrer">Открыть пример плотности кнопок в Playground</a>
-
-### Радиус
-
-Тип: класс
-Имя: `radius-*`
-
-Радиус переопределяет скругление кнопки через общие utility-классы радиуса. Используйте его только если локальный UI-паттерн требует отличаться от стандартного радиуса компонента.
-
-### Отключение
-
-Тип: атрибут
-Имя: `disabled`
-
-Нативно отключает кнопку, убирает её из активного взаимодействия и включает disabled-оформление.
+При ручной разметке состояния загрузки добавляйте оба класса. `loading`
+включает индикатор, а `sf-button-state-loading` выбирает его цвета для схемы.
+Если повторный запуск операции недопустим, одновременно задавайте `disabled`.
 
 ```html
 <button
   type="button"
   disabled
-  class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-  <span class="sf-button-text-container">Недоступно</span>
-</button>
-```
-
-### Загрузка
-
-Тип: класс
-Имя: `loading`
-
-Показывает, что действие выполняется. Для доступности добавляйте `aria-busy="true"`. Если повторный запуск недопустим, дополнительно используйте `disabled`.
-
-### Иконка
-
-Тип: элемент с классом
-Имя: `sf-icon`
-
-Иконку можно поставить до или после текста. Не используйте иконку как единственный доступный текст; для кнопок без видимой подписи нужен `aria-label`.
-
-```html
-<button
-  type="button"
-  class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-  <i class="sf-icon">add</i>
-  <span class="sf-button-text-container">Добавить</span>
-</button>
-```
-
-### Текст
-
-Тип: элемент с классом
-Имя: `sf-button-text-container`
-
-Контейнер текста нужен для корректных отступов, типографики и цвета текста внутри кнопки.
-
-## CSS-переменные
-
-| Переменная                                                              | Назначение                 |
-| :---------------------------------------------------------------------- | :------------------------- |
-| `--sf-button--background-color`                                         | Цвет фона кнопки.          |
-| `--sf-button--border-color`                                             | Цвет границы.              |
-| `--sf-button--border-width`                                             | Толщина границы.           |
-| `--sf-button--border-style`                                             | Стиль границы.             |
-| `--sf-button--box-shadow`                                               | Тень и фокусное кольцо.    |
-| `--sf-button--padding-top` / `--sf-button--padding-bottom`              | Вертикальные отступы.      |
-| `--sf-button--padding-inline-start` / `--sf-button--padding-inline-end` | Горизонтальные отступы.    |
-| `--sf-button-text-container--color`                                     | Цвет текста.               |
-| `--sf-button-text-container--font-size`                                 | Размер текста.             |
-| `--sf-button-text-container--line-height`                               | Высота строки.             |
-| `--sf-icon--color`                                                      | Цвет иконки внутри кнопки. |
-| `--sf-icon--font-size`                                                  | Размер иконки.             |
-
-{.table}
-
-## Состояния
-
-- `focus` добавляет стандартный фокус через `--sf-ui-focus`.
-- `disabled` отключает кнопку и переводит текст и иконки в disabled-цвета.
-- `loading` используется для визуального состояния выполнения действия.
-- `hover` и активные состояния наследуют визуальную схему выбранного варианта.
-
-Для состояния загрузки в программном создании также используется `aria-busy="true"`. Если вы пишете HTML вручную, добавляйте `aria-busy="true"` при длительном действии.
-
-## Примеры
-
-Основное действие:
-
-```html
-<button
-  type="button"
-  class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-  <span class="sf-button-text-container">Сохранить</span>
-</button>
-```
-
-Вторичное действие:
-
-```html
-<button
-  type="button"
-  class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1">
-  <span class="sf-button-text-container">Отмена</span>
-</button>
-```
-
-Состояние загрузки:
-
-```html
-<button
-  type="button"
-  class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading"
-  aria-busy="true">
+  aria-busy="true"
+  class="sf-button sf-button--default sf-button--primary sf-button--size-1
+         loading sf-button-state-loading">
   <span class="sf-button-text-container">Сохранение</span>
 </button>
 ```
 
-## Playground
+После завершения операции удалите `loading`, `sf-button-state-loading`,
+`aria-busy` и, если действие снова доступно, `disabled`.
 
-<a href="https://play.simai.io/embed.html?component=buttons&amp;group=buttons" target="_blank" rel="noopener noreferrer">Открыть пример кнопок в Playground</a>
+## Кнопка, ссылка и форма
+
+- Команда выполняется через `<button>`; переход — через `<a href="…">`.
+- У кнопки вне отправки формы задавайте `type="button"`.
+- Для отправки используйте `type="submit"`; для сброса — `type="reset"`.
+- Не имитируйте disabled-состояние только классом `disabled`: используйте
+  нативный атрибут `disabled`.
+- Текст кнопки должен описывать результат: «Сохранить изменения», а не «Да».
+
+JavaScript-конструктор безопасно задаёт `type="button"`, если `type` не передан
+через `attrs`. В ручной HTML-разметке это нужно сделать самостоятельно.
+
+## Программное создание
+
+Компонент регистрирует класс `Buttons` в `SF.Loader.ComponentRegistry`. Для
+явного подключения добавьте `sf-asset="buttons"`, дождитесь класса через
+`SF.Loader.ready()` и вставьте результат `render()` в DOM.
+
+```html
+<div sf-asset="buttons"></div>
+<div id="save-button"></div>
+
+<script>
+  SF.Loader.ready('Buttons', (Buttons) => {
+    const component = new Buttons({
+      id: 'save-action',
+      param: {
+        text: 'Сохранить',
+        icon: 'save',
+        iconPosition: 'start',
+        size: '1',
+        type: 'default',
+        scheme: 'primary'
+      },
+      attrs: {
+        type: 'button',
+        'aria-label': 'Сохранить изменения'
+      }
+    });
+
+    document.querySelector('#save-button').append(component.render());
+  });
+</script>
+```
+
+Вызывайте этот код после инициализации Core. Если код выполняется раньше,
+сначала дождитесь события `sf-loader-init`.
+
+### Параметры `param`
+
+| Параметр | По умолчанию | Допустимые значения / назначение |
+| --- | --- | --- |
+| `text` | `''` | Видимая подпись. |
+| `size` | `'1'` | `'1/3'`, `'1/2'`, `'1'`, `'2'`, `'3'`. |
+| `type` | `'default'` | `'default'`, `'tonal'`, `'outline'`, `'link'`. |
+| `scheme` | `'primary'` | `'primary'`, `'secondary'`, `'on-surface'` с учётом поддерживаемых сочетаний. |
+| `icon` | — | Имя одной иконки; позиция задаётся `iconPosition`. |
+| `iconPosition` | `'start'` | `'start'` / `'left'` или `'end'` / `'right'`. |
+| `iconLeft` | — | Иконка в начале; имеет приоритет над `icon`. |
+| `iconRight` | — | Иконка в конце; имеет приоритет над `icon`. |
+| `tightness` | — | `'low'`, `'high'`, `'highest'`. |
+| `radius` | — | `'default'`, `'square'`, `'rounded'`. |
+| `loading` | `false` | Добавляет оба loading-класса и `aria-busy="true"`. |
+| `disabled` | `false` | Устанавливает нативное свойство `disabled`. |
+| `utilities` | `{}` | Дополнительные utility-классы. |
+
+{.table}
+
+`attrs` передаёт атрибуты на `<button>`. `class` и `className` добавляют классы,
+остальные ключи становятся HTML-атрибутами. `id` верхнего уровня становится
+`id` кнопки.
+
+`utilities` принимает строку, массив классов или объект с областями `button`,
+`icon` и `textContainer`:
+
+```js
+param: {
+  text: 'Сохранить',
+  utilities: {
+    button: ['w-full'],
+    icon: ['shrink-0'],
+    textContainer: ['text-center']
+  }
+}
+```
+
+Используйте только существующие utility-классы SIMAI Framework. Базовые flex-
+классы для кнопки, иконки и текста компонент применяет сам.
+
+### Жизненный цикл и события
+
+| Событие | Момент | `event.detail` |
+| --- | --- | --- |
+| `Buttons:beforeRender` | Создание экземпляра до завершения разметки. | Экземпляр компонента. |
+| `Buttons:render` | После вызова `render()`. | Экземпляр компонента. |
+| `Buttons:destroy` | После вызова `destroy()`. | Экземпляр компонента. |
+
+{.table}
+
+`destroy()` удаляет созданный элемент из DOM и очищает внутренние ссылки.
+
+```js
+window.addEventListener('Buttons:render', (event) => {
+  event.detail.html.addEventListener('click', saveChanges);
+});
+```
+
+## CSS-переменные
+
+Переопределяйте переменные на локальном контейнере или модификаторе, чтобы не
+изменять все кнопки приложения.
+
+| Группа | Переменные |
+| --- | --- |
+| Фон и граница | `--sf-button--background-color`, `--sf-button--border-color`, `--sf-button--border-width`, `--sf-button--border-style` |
+| Форма | `--sf-button--border-top-left-radius`, `--sf-button--border-top-right-radius`, `--sf-button--border-bottom-left-radius`, `--sf-button--border-bottom-right-radius` |
+| Отступы | `--sf-button--padding-top`, `--sf-button--padding-bottom`, `--sf-button--padding-inline-start`, `--sf-button--padding-inline-end` |
+| Текст | `--sf-button-text-container--color`, `--sf-button-text-container--font-family`, `--sf-button-text-container--font-size`, `--sf-button-text-container--font-weight`, `--sf-button-text-container--line-height` |
+| Иконка | `--sf-icon--color`, `--sf-icon--font-size` |
+| Эффекты | `--sf-button--box-shadow`, `--sf-button-loading-stripe-1`, `--sf-button-loading-stripe-2` |
+
+{.table}
+
+```css
+.checkout-action {
+  --sf-button--padding-inline-start: var(--sf-space-3);
+  --sf-button--padding-inline-end: var(--sf-space-3);
+}
+```
+
+Цветовые роли и состояния уже определены темой. Не фиксируйте hex-цвета внутри
+компонента, если нужный результат можно получить выбором типа и схемы.
 
 ## Доступность
 
-- Используйте нативный `<button>` для действий, а `<a>` для переходов.
-- Всегда задавайте понятный текст действия.
-- Не убирайте видимый фокус.
-- Для кнопок с одной иконкой используйте текстовую подпись через `aria-label`.
-- Для длительных операций добавляйте `aria-busy="true"` и блокируйте повторное нажатие через `disabled`, если повторный запуск недопустим.
+- Сохраняйте нативный `<button>` и доступное имя.
+- Не удаляйте видимый фокус и проверяйте управление клавишами `Tab`, `Enter` и
+  `Space`.
+- Декоративным иконкам задавайте `aria-hidden="true"`.
+- Для переключаемого действия синхронизируйте `aria-pressed` с состоянием.
+- При загрузке используйте `aria-busy="true"`; важный результат операции
+  сообщайте отдельно через live region приложения.
+- Проверяйте контраст всех используемых сочетаний на реальном фоне.
+- Не используйте один цвет как единственный способ различить действия.
 
-## Связанные компоненты
+## Что проверить перед выпуском
 
-- `icon-buttons`
-- `dropdown`
-- `modal`
-- `toggle`
+1. Кнопка выполняет именно одно понятное действие.
+2. В форме явно указан корректный `type`.
+3. Есть состояния hover, focus, active, disabled и loading, если они нужны
+   сценарию.
+4. Повторное нажатие во время необратимой операции предотвращено.
+5. Текст не обрезается при локализации и масштабировании до 200%.
+6. Порядок и скругления сегментов корректны в `ltr` и `rtl`.
+7. Кнопка доступна с клавиатуры и имеет понятное доступное имя.
+
+## Дополнительные материалы
+
+- [Подключение компонентов](/ru/components/connection/)
+- [Сгенерированный runtime-справочник кнопок](/ru/components/reference/buttons/)
+- [Loader](/ru/start/loader/)
+- [Runtime-справочник Icon Buttons](/ru/components/reference/icon-buttons/)
+- <a href="https://play.simai.io/embed.html?component=buttons&amp;group=buttons" target="_blank" rel="noopener noreferrer">Кнопки в Playground</a>
+- <a href="https://play.simai.io/embed.html?component=buttons&amp;group=tightness" target="_blank" rel="noopener noreferrer">Плотность в Playground</a>
