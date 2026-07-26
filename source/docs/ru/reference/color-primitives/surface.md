@@ -41,6 +41,7 @@ description: Surface
 | `--sf-on-surface-hover`            | `--sf-neutral-15`          | `--sf-neutral-85`          |
 | `--sf-on-surface-active`           | `--sf-neutral-20`          | `--sf-neutral-80`          |
 | `--sf-on-surface-variant`          | `--sf-neutral-40`          | `--sf-neutral-60`          |
+| `--sf-on-surface-muted`            | `--sf-neutral-60`          | `--sf-neutral-40`          |
 | `--sf-on-surface-inverse`          | `--sf-neutral-90`          | `--sf-neutral-10`          |
 | `--sf-on-surface-inverse-fixed`    | `--sf-neutral-90`          | `--sf-neutral-90`          |
 | `--sf-surface-transparent-hover`   | `--sf-neutral-50--alfa-4`  | `--sf-neutral-90--alfa-4`  |
