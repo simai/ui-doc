@@ -1,61 +1,73 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: Начало работы
-description: Начало работы с SIMAI Framework
+title: Установка
+description: Подключение SIMAI Framework 5.4.0 из локальной неизменяемой поставки или по опубликованному тегу.
 ---
 
-# Установка и версия
+# Установка
 
-Перед подключением получите approved compatibility lock. В нём должны быть
-зафиксированы точные ref Core и Smart Components, профиль поставки и дата
-проверки. Эта страница не подставляет вместо lock `main`, `latest` или
-случайный commit.
+Для работы нужны `core.css`, `core.js` и неизменённая структура каталога
+`distr`. Базовый URL `window.sfPath` задайте до подключения `core.js`.
 
-## CDN после утверждения lock
+## Локальные статические файлы
 
-Замените `<approved-core-ref>` на ref из approved lock. Этот шаблон намеренно
-не является готовой командой до публикации lock.
+Скопируйте весь `distr` из одной поставки в публичную директорию проекта:
+
+```html
+<link rel="stylesheet" href="/assets/simai-framework/ui/distr/core/css/core.css">
+
+<script>
+  window.sfPath = '/assets/simai-framework/ui/distr';
+  window.SF_BOOT_CONFIG = {
+    preloader: { enabled: false }
+  };
+</script>
+<script src="/assets/simai-framework/ui/distr/core/js/core.js"></script>
+```
+
+Внутри `distr` должны сохраниться каталоги `core`, `utility` и `component`.
+Загрузчик сам добавляет к `window.sfPath` нужные внутренние пути.
+
+## Smart Components
+
+Каталог `smart` публикуется отдельно. `window.sfSmartPath` должен указывать на
+директорию, внутри которой находится `smart/`:
+
+```html
+<script>
+  window.sfPath = '/assets/simai-framework/ui/distr';
+  window.sfSmartPath = '/assets/simai-framework/ui-smart';
+</script>
+```
+
+Например, файл `smart/modal/js/modal.js` будет доступен по адресу
+`/assets/simai-framework/ui-smart/smart/modal/js/modal.js`.
+
+## CDN
+
+После публикации версии замените `{tag}` на точный неизменяемый тег. Не
+используйте `main`, `latest` или другую плавающую ссылку:
 
 ```html
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/simai/ui@<approved-core-ref>/distr/core/css/core.css">
-
+      href="https://cdn.jsdelivr.net/gh/simai/ui@{tag}/distr/core/css/core.css">
 <script>
-  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@<approved-core-ref>/distr';
+  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@{tag}/distr';
 </script>
-<script src="https://cdn.jsdelivr.net/gh/simai/ui@<approved-core-ref>/distr/core/js/core.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/simai/ui@{tag}/distr/core/js/core.js"></script>
 ```
 
-Если используются Smart Components, их ref и путь должны быть указаны в том
-же lock. Не выводите совместимость из названия ветки, каталога или версии
-README.
+Текущая документация собрана на закреплённой паре-кандидате `5.4.0`; её точные
+ревизии и ограничения указаны на странице
+[«Совместимость и обновление»](/ru/start/compatibility/). Кандидат не следует
+подменять вымышленным CDN-тегом до официальной публикации.
 
-## Локальные static assets
+## Проверка подключения
 
-Разместите каталог `distr` из той же утверждённой поставки под URL вашего
-проекта и укажите этот URL до загрузки Core:
+- `window.SF` и `window.SF.Loader` доступны в консоли;
+- `core.css`, `core.js` и найденные модули загружаются без `404`;
+- событие `sf-loader-ready` возникает один раз;
+- пример из [быстрого старта](/ru/start/quickstart/) отображается со стилями.
 
-```html
-<link rel="stylesheet" href="/assets/simai-framework/distr/core/css/core.css">
-
-<script>
-  window.sfPath = '/assets/simai-framework/distr';
-</script>
-<script src="/assets/simai-framework/distr/core/js/core.js"></script>
-```
-
-Путь должен вести на копию ровно того release-артефакта, который записан в
-lock; не смешивайте локальные файлы с CDN из другой версии.
-
-## Минимальная проверка
-
-1. Откройте страницу в новом профиле браузера.
-2. Убедитесь, что CSS и JavaScript загружены без 404 и ошибок Console.
-3. Проверьте, что Network показывает тот же immutable ref, который указан в
-   lock.
-4. Если проект использует Smart Components, повторите проверку на странице с
-   одним approved example.
-
-Для baseline `5.4.0` окончательные refs и runnable snippets появятся только
-после owner-approved release lock.
+Подробнее о поиске модулей — в разделе [«Загрузчик»](/ru/start/loader/).

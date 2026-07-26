@@ -56,10 +56,10 @@ description: Контейнер (container)
 отступы для этой контрольной точки.
 
 Для центрирования контейнера можно добавить классы отступов с отрицательными значениями или класс
-`m-right-auto m-left-auto` (автоматические отступы справа и слева):
+`m-inline-end-auto m-inline-start-auto` (автоматические отступы справа и слева):
 
 ```html
-<div class="container m-right-auto m-left-auto">
+<div class="container m-inline-end-auto m-inline-start-auto">
   ... ваш контент ...
 </div>
 ```

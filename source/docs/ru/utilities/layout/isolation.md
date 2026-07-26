@@ -17,7 +17,7 @@ description: Управление контекстом наложения и с�
 | Класс | Значение |
 |:--|:--|
 | `.isolate` | `isolation: isolate;` |
-| `.isolation-auto` | `isolation: auto;` |
+| `.auto` | `isolation: auto;` |
 | `.mix-blend-{mode}` | `mix-blend-mode: ...;` |
 {.table}
 
@@ -26,7 +26,7 @@ description: Управление контекстом наложения и с�
 ## Синтаксис
 
 - `isolate`
-- `isolation-auto`
+- `auto`
 - `mix-blend-{mode}`
 
 ## Примеры
@@ -34,19 +34,19 @@ description: Управление контекстом наложения и с�
 ### isolate
 
 ```html
-<div class="bg-success-tonal">
+<div class="bg-success-container">
   <div class="isolate">
-    <div class="mix-blend-multiply bg-warning-tonal">...</div>
+    <div class="mix-blend-multiply bg-warning-container">...</div>
   </div>
 </div>
 ```
 
-### isolation-auto
+### auto
 
 ```html
-<div class="bg-success-tonal">
-  <div class="isolation-auto">
-    <div class="mix-blend-multiply bg-warning-tonal">...</div>
+<div class="bg-success-container">
+  <div class="auto">
+    <div class="mix-blend-multiply bg-warning-container">...</div>
   </div>
 </div>
 ```

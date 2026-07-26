@@ -39,15 +39,15 @@ description: "Размер колонки сетки (grid-column)"
 ### Span
 ```html
 <div class="grid grid-col-6 gap-2">
-  <div class="sf-card bg-primary color-on-primary p-2 col-span-4">span 4</div>
-  <div class="sf-card bg-secondary color-on-secondary p-2 col-span-2">span 2</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2 col-span-4">span 4</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2 col-span-2">span 2</div>
 </div>
 ```
 
 ### Start / End
 ```html
 <div class="grid grid-col-6 gap-2">
-  <div class="sf-card bg-tertiary color-on-tertiary p-2 col-start-2 col-end-5">start 2 / end 5</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2 col-start-2 col-end-5">start 2 / end 5</div>
 </div>
 ```
 

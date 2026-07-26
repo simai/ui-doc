@@ -7,7 +7,7 @@ description: Primary
 
 # Primary
 
-![][image4]
+![Основной цветовой акцент Primary][image4]
 
 Роль **Primary** используется для самых заметных и важных элементов интерфейса, таких как кнопки с высоким приоритетом
 или состояния активных элементов. Применение этого цвета оправдано, когда необходимо привлечь внимание пользователя к
@@ -32,9 +32,9 @@ Primary должен быть редким, но выразительным ак
 
 Пример использования цвета Primary
 
-![][image5]
+![Примеры применения роли Primary в интерфейсе][image5]
 
-![][image6]
+![Роли Primary в светлой и тёмной темах][image6]
 
 Для работы с ролью Primary используются следующие переменные:
 
@@ -47,7 +47,7 @@ Primary должен быть редким, но выразительным ак
 | `--sf-primary-container-hover`      | `--sf-primary-85`          | `--sf-primary-35`          |
 | `--sf-primary-container-active`     | `--sf-primary-80`          | `--sf-primary-40`          |
 | `--sf-primary-transparent-hover`    | `--sf-primary-50--alfa-4`  | `--sf-primary-90--alfa-4`  |
-| `--sf-primary-transparent-select`   | `--sf-primary-50--alfa-8`  | `--sf-primary-90--alfa-8`  |
+| `--sf-primary-transparent-select`   | `--sf-primary-50--alfa-12`  | `--sf-primary-90--alfa-8`  |
 | `--sf-primary-transparent-active`   | `--sf-primary-50--alfa-12` | `--sf-primary-90--alfa-12` |
 | `--sf-primary-transparent-overlay`  | `--sf-primary-50--alfa-24` | `--sf-primary-90--alfa-24` |
 | `--sf-on-primary`                   | `--sf-white`               | `--sf-primary-20`          |
@@ -56,6 +56,6 @@ Primary должен быть редким, но выразительным ак
 | `--sf-outline-primary`              | `--sf-primary-50`          | `--sf-primary-60`          |
 {.table}
 
-[image4]: /assets/build/img/b64/04f4d95dc3599cf6.png
-[image5]: /assets/build/img/b64/e22b8d022dafae71.png
-[image6]: /assets/build/img/b64/000f8a8152454bc7.png
+[image4]: /ru/assets/reference/image-04.png
+[image5]: /ru/assets/reference/image-05.png
+[image6]: /ru/assets/reference/image-06.png

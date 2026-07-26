@@ -35,15 +35,15 @@ description: Промежутки (space)
 
 ```html
 <div class="flex space-x-3">
-  <div class="sf-card bg-primary color-on-primary p-2">A</div>
-  <div class="sf-card bg-secondary color-on-secondary p-2">B</div>
-  <div class="sf-card bg-tertiary color-on-tertiary p-2">C</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2">A</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2">B</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">C</div>
 </div>
 
 <div class="flex flex-col space-y-2 space-y-reverse">
-  <div class="sf-card bg-primary color-on-primary p-2">1</div>
-  <div class="sf-card bg-secondary color-on-secondary p-2">2</div>
-  <div class="sf-card bg-tertiary color-on-tertiary p-2">3</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2">1</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2">2</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">3</div>
 </div>
 ```
 ## Playground

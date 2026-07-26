@@ -24,7 +24,7 @@ description: "Начертание цифр (font-variant-numeric)"
 | .num-oldstyle           | font-variant-numeric: oldstyle-nums;      |
 | .num-proportional       | font-variant-numeric: proportional-nums;  |
 | .num-tabular            | font-variant-numeric: tabular-nums;       |
-| .num-diagonal-fractions | font-variant-numeric: diagonal-fractions; |
+| .num-diagonal | font-variant-numeric: diagonal-fractions; |
 | .num-stacked-fractions  | font-variant-numeric: stacked-fractions;  |
 {.table}
 
@@ -36,35 +36,35 @@ description: "Начертание цифр (font-variant-numeric)"
 <p class="num-ordinal num-slashed-zero num-tabular">1234567890</p>
 ```
 
-### **Порядковый номер (num-ordinal)**  
+### **Порядковый номер (num-ordinal)**
 Активирует специальные глифы для порядковых числительных (1st, 2nd и т.п.) в шрифтах, поддерживающих данную особенность:
 
 ```html
 <p class="num-ordinal">1st</p>
 ```
 
-### **Перечёркнутый ноль (num-slashed-zero)**  
+### **Перечёркнутый ноль (num-slashed-zero)**
 Помогает чётко отличать цифру 0 от буквы O:
 
 ```html
 <p class="num-slashed-zero">0</p>
 ```
 
-### **Заглавные цифры (num-lining)**  
+### **Заглавные цифры (num-lining)**
 Равно высокие цифры, стоящие на опорной линии текста:
 
 ```html
 <p class="num-lining">1234567890</p>
 ```
 
-### **Строчные цифры (num-oldstyle)**  
+### **Строчные цифры (num-oldstyle)**
 Минускульные цифры с нижними выносными элементами:
 
 ```html
 <p class="num-oldstyle">1234567890</p>
 ```
 
-### **Пропорциональные цифры (num-proportional)**  
+### **Пропорциональные цифры (num-proportional)**
 Цифры разной ширины:
 
 ```html
@@ -72,7 +72,7 @@ description: "Начертание цифр (font-variant-numeric)"
 <p class="num-proportional">0000</p>
 ```
 
-### **Моноширинные цифры (num-tabular)**  
+### **Моноширинные цифры (num-tabular)**
 Цифры одинаковой ширины, упрощающие выравнивание в таблицах:
 
 ```html
@@ -80,14 +80,14 @@ description: "Начертание цифр (font-variant-numeric)"
 <p class="num-tabular">0000</p>
 ```
 
-### **Диагональные дроби (num-diagonal-fractions)**  
+### **Диагональные дроби (num-diagonal)**
 Числитель и знаменатель уменьшены и разделены косой чертой:
 
 ```html
-<p class="num-diagonal-fractions">1/2 3/4 5/6</p>
+<p class="num-diagonal">1/2 3/4 5/6</p>
 ```
 
-### **Вертикальные дроби (num-stacked-fractions)**  
+### **Вертикальные дроби (num-stacked-fractions)**
 Числитель и знаменатель уменьшены, расположены друг над другом и разделены горизонтальной линией:
 
 ```html

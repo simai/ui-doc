@@ -17,7 +17,7 @@ description: "Позиция элемента (element-position)"
 
 Использование: `{условие действия}:{модификатор}`
 
-- Условие действия (необязательный параметр):  
+- Условие действия (необязательный параметр):
   Может принимать значения:
 
     - `sm` — для экранов шириной от 540px и больше;
@@ -81,7 +81,7 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 
 ```html
 <div class="relative h-d6 ...">
-  <div class="absolute left-0 inset-y-0 w-d1 ...">4</div>
+  <div class="absolute inline-start-0 inset-y-0 w-d1 ...">4</div>
 </div>
 ```
 
@@ -97,25 +97,25 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 
 ```html
 <div class="relative h-d6 ...">
-  <div class="absolute left-0 top-0 h-d1 w-d1 ...">6</div>
+  <div class="absolute inline-start-0 top-0 h-d1 w-d1 ...">6</div>
 </div>
 ```
 
 ```html
 <div class="relative h-d6 ...">
-  <div class="absolute top-0 right-0 h-d1 w-d1 ...">7</div>
+  <div class="absolute top-0 inline-end-0 h-d1 w-d1 ...">7</div>
 </div>
 ```
 
 ```html
 <div class="relative h-d6 ...">
-  <div class="absolute right-0 bottom-0 h-d1 w-d1 ...">8</div>
+  <div class="absolute inline-end-0 bottom-0 h-d1 w-d1 ...">8</div>
 </div>
 ```
 
 ```html
 <div class="relative h-d6 ...">
-  <div class="absolute bottom-0 left-0 h-d1 w-d1 ...">9</div>
+  <div class="absolute bottom-0 inline-start-0 h-d1 w-d1 ...">9</div>
 </div>
 ```
 

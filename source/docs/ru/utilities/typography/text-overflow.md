@@ -27,8 +27,8 @@ description: "Обрезка текста (text-overflow)"
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).  
+- Контрольная точка *(необязательный параметр)*:
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:
@@ -48,13 +48,13 @@ description: "Обрезка текста (text-overflow)"
 
 ```html
 <!-- Пример с t-ellipsis -->
-<p class="overflow-hidden whitespace-nowrap t-ellipsis ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="overflow-hidden wrap-none t-ellipsis ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 ```
 
 ```html
 <!-- Пример с t-clip -->
-<p class="overflow-hidden whitespace-nowrap t-clip ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="overflow-hidden wrap-none t-clip ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 ```
 ## Playground

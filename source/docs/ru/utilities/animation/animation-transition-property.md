@@ -43,11 +43,11 @@ description: Общее свойство перехода
 
 ## Синтаксис
 
-Использование модификатора: `{модификатор}`  
+Использование модификатора: `{модификатор}`
 Модификатор указывается непосредственно в классе элемента. Например, чтобы применить плавный переход для цвета:
 
 ```html
-<div class="transition-color hover:bg-primary p-2 radius-1/3">
+<div class="transition-colors hover:bg-primary p-2 radius-1/3">
     Наведи на меня
 </div>
 ```
@@ -69,7 +69,7 @@ description: Общее свойство перехода
 ## Пример использования
 
 ```html
-<button class="transition-all hover:text-primary p-2 radius-1/3">
+<button class="transition-all hover:color-primary p-2 radius-1/3">
     Нажми на меня
 </button>
 ```

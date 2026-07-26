@@ -34,9 +34,9 @@ description: "Утилита col-gap-* задаёт расстояние меж�
 
 ```html
 <div class="layout-col-3 col-gap-2">
-  <div class="sf-card surface p-3 radius-2">1</div>
-  <div class="sf-card surface p-3 radius-2">2</div>
-  <div class="sf-card surface p-3 radius-2">3</div>
+  <div class="border radius-1 bg-surface-1 p-3 radius-2">1</div>
+  <div class="border radius-1 bg-surface-1 p-3 radius-2">2</div>
+  <div class="border radius-1 bg-surface-1 p-3 radius-2">3</div>
 </div>
 ```
 ## Playground

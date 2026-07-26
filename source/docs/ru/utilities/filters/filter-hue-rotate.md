@@ -56,16 +56,6 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 </div>
 ```
 
-## Замена старых классов на новые
-
-| Старый класс  | Новый класс     |
-|:--------------|:----------------|
-| .hue-rotate-1 | .hue-rotate-15  |
-| .hue-rotate-2 | .hue-rotate-30  |
-| .hue-rotate-3 | .hue-rotate-60  |
-| .hue-rotate-4 | .hue-rotate-90  |
-| .hue-rotate-5 | .hue-rotate-180 |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

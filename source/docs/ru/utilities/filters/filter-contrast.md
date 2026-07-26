@@ -54,18 +54,6 @@ description: "Контрастность элемента (filter-contrast)"
 <div class="contrast-1 hover:contrast-3 p-4 bg-secondary m-top-2 transition">Наведи, чтобы повысить контрастность</div>
 ```
 
-## Замена классов с предыдущей версии
-
-| Старый класс             | Новый класс   |
-|:-------------------------|:--------------|
-| .contrast-1, .contrast-2 | .contrast-1/4 |
-| .contrast-3              | .contrast-1/3 |
-| .contrast-4              | .contrast-1/2 |
-| .contrast-5              | .contrast-1   |
-| .contrast-6              | .contrast-2   |
-| .contrast-7              | .contrast-3   |
-| .contrast-8, .contrast-9 | .contrast-4   |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

@@ -112,48 +112,24 @@ description: Цвет фона
 
 ```html
 <!-- Кнопка с основным цветом фона -->
-<button class="p-top-1/2 p-bottom-1/2 p-right-1 p-left-1 bg-primary color-on-surface-inverse radius-1/3 shadow-2 focus:outline-0">
+<button class="p-top-1/2 p-bottom-1/2 p-inline-end-1 p-inline-start-1 bg-primary color-on-surface-inverse radius-1/3 shadow-2 focus:outline-0">
     Click me
 </button>
 ```
 
 ```html
 <!-- Кнопка с фоном при наведении -->
-<button class="p-top-1/2 p-bottom-1/2 p-right-1 p-left-1 bg-primary hover:bg-primary-container color-on-surface-inverse radius-1/3 shadow-2 focus:outline-0 transition">
+<button class="p-top-1/2 p-bottom-1/2 p-inline-end-1 p-inline-start-1 bg-primary hover:bg-primary-container color-on-surface-inverse radius-1/3 shadow-2 focus:outline-0 transition">
     Hover me
 </button>
 ```
 
 ```html
 <!-- Поле ввода с фоном при фокусе -->
-<input class="transition border-1 border-surface-variant bg-surface-variant focus:bg-surface-0 color-text-primary appearance-none inline-block w-full radius-1/3 p-top-1 p-bottom-1 p-right-1 p-left-1 focus:outline-0"
+<input class="transition border-1 border-outline-variant bg-surface-container focus:border-surface-0 color-primary appearance-none inline-block w-full radius-1/3 p-top-1 p-bottom-1 p-inline-end-1 p-inline-start-1 focus:outline-0"
        placeholder="Focus me">
 ```
 
-## Замена с предыдущей версии
-
-| Старый класс                           | Новый класс            |
-|:-----------------------------------------------------------|:-----------------------|
-| .bg-white                                                  | .bg-surface-0          |
-| .bg-black                                                  | .bg-surface-inverse    |
-| .bg-gray-1, .bg-gray-2, .bg-gray-3 для отдельных элементов | .bg-surface-container  |
-| .bg-gray-6, .bg-gray-7, .bg-gray-8, .bg-gray-9             | .bg-surface-inverse    |
-| .bg-red-1, .bg-red-2, .bg-red-3                            | .bg-error-container    |
-| .bg-red-4 ... .bg-red-9                                    | .bg-error              |
-| .bg-orange-1, .bg-orange-2, .bg-orange-3                   | .bg-warning-container  |
-| .bg-orange-4 ... .bg-orange-9                              | .bg-warning            |
-| .bg-yellow-1, .bg-yellow-2, .bg-yellow-3                   | .bg-warning-container  |
-| .bg-yellow-4 ... .bg-yellow-9                              | .bg-warning            |
-| .bg-green-1, .bg-green-2, .bg-green-3                      | .bg-success-container  |
-| .bg-green-4 ... .bg-green-9                                | .bg-success            |
-| .bg-blue-1, .bg-blue-2, .bg-blue-3                         | .bg-primary-container  |
-| .bg-blue-4 ... .bg-blue-9                                  | .bg-primary            |
-| .bg-purple-1, .bg-purple-2, .bg-purple-3                   | .bg-tertiary-container |
-| .bg-purple-4 ... .bg-purple-9                              | .bg-tertiary           |
-| .bg-pink-1, .bg-pink-2, .bg-pink-3                         | .bg-tertiary-container |
-| .bg-pink-4 ... .bg-pink-9                                  | .bg-tertiary           |
-
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

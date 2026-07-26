@@ -45,19 +45,19 @@ description: "Сенсорное действие (touch-action)"
 
 ```html
 <div class="w-full h-f1 overflow-auto touch-auto ...">
-    <img class="h-auto w-150" src="./picture.svg">
+    <img class="h-auto w-e9" src="./picture.svg">
 </div>
 
 <div class="w-full h-f1 overflow-auto touch-none ...">
-    <img class="h-auto w-150" src="./picture.svg">
+    <img class="h-auto w-e9" src="./picture.svg">
 </div>
 
 <div class="w-full h-f1 overflow-auto touch-pan-x ...">
-    <img class="h-auto w-150" src="./picture.svg">
+    <img class="h-auto w-e9" src="./picture.svg">
 </div>
 
 <div class="w-full h-f1 overflow-auto touch-pan-y ...">
-    <img class="h-auto w-150" src="./picture.svg">
+    <img class="h-auto w-e9" src="./picture.svg">
 </div>
 ```
 ## Playground

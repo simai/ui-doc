@@ -14,18 +14,6 @@ description: "Параметры по умолчанию (text-default)"
 В новой версии настройки типографики упрощены и используют обновлённые переменные. Базовые параметры (размер шрифта,
 высота строки и т.д.) теперь управляются через более понятные и краткие наименования переменных.
 
-## Таблица соответствия старых и новых переменных
-
-| Старая переменная                | Новая переменная      |
-|:---------------------------------|:----------------------|
-| `--sf-text--font-size-default`   | `--sf-text--size`     |
-| `--sf-text--line-height-default` | `--sf-text--height`   |
-| `--sf-text--font-family-default` | `--sf-text--family`   |
-| `--sf-text--font-weight-default` | `--sf-text--weight`   |
-| `--sf-text--font-style-default`  | `--sf-text--style`    |
-| `--sf-text--tracking-default`    | `--sf-text--tracking` |
-{.table}
-
 ## Значения по умолчанию
 
 | Переменная             | Значение                        |

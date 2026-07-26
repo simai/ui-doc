@@ -29,7 +29,7 @@ description: Цвет границы
 
 {.table}
 
-Также поддерживаются palette-классы вида `.border-red-500`, `.border-blue-700`, и т.д.
+Также поддерживаются palette-классы вида `.border-red-5`, `.border-blue-700`, и т.д.
 
 ## Синтаксис
 
@@ -44,7 +44,7 @@ description: Цвет границы
 <div class="border border-primary">border-primary</div>
 <div class="border hover:border-warning">hover:border-warning</div>
 <div class="border active:border-error">active:border-error</div>
-<div class="border border-red-500">border-red-500</div>
+<div class="border border-red-5">border-red-5</div>
 ```
 ## Playground
 

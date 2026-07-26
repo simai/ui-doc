@@ -61,15 +61,6 @@ description: "Насыщенность элемента (filter-saturate)"
 </div>
 ```
 
-## Замена с предыдущей версии
-
-| Старый класс | Новый класс   |
-|:-------------|:--------------|
-| .saturate-1  | .saturate-1/3 |
-| .saturate-2  | .saturate-1   |
-| .saturate-3  | .saturate-2   |
-| .saturate-4  | .saturate-4   |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

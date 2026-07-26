@@ -12,7 +12,7 @@ description: Утилиты для штриховки и фоновых поло
 ## Материалы раздела
 - [Цвет полос](/ru/utilities/stripes/stripes-color/)
 - [Размер полосок](/ru/utilities/stripes/stripes-size/)
-- [Полосы](/ru/utilities/stripes/stripes/)
+- [Полосы](/ru/utilities/stripes/)
 
 ## Связанные категории
 - [Фоны](/ru/utilities/background/)

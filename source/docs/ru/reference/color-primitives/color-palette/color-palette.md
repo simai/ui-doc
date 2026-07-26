@@ -7,6 +7,6 @@ description: Цветовая палитра
 
 # Цветовая палитра
 
-![][image2]
+![Полная цветовая палитра SIMAI Framework][image2]
 
-[image2]: /assets/build/img/b64/0a2cc27ec130a1a2.png
+[image2]: /ru/assets/reference/image-02.png

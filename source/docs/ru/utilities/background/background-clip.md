@@ -37,7 +37,7 @@ description: Обрезка фона
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
+- Контрольная точка *(необязательный параметр)*:
   Применяет модификатор, начиная с определенного размера области просмотра (sm, md, lg, xl).
 - Модификатор *(обязательный параметр)*: `bg-clip-border`, `bg-clip-padding`, `bg-clip-content`, или `bg-clip-text`.
 
@@ -45,29 +45,29 @@ description: Обрезка фона
 
 ```html
 <!-- Фон под границей -->
-<div class="bg-clip-border p-3 radius-1/3 bg-primary border-4 border-danger-default border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
+<div class="bg-clip-border p-3 radius-1/3 bg-primary border-4 border-error border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
     <span class="p-top-1/2 p-bottom-1/2">bg-clip-border</span>
 </div>
 ```
 
 ```html
 <!-- Фон ограничен полем отступа -->
-<div class="bg-clip-padding p-3 radius-1/3 bg-primary border-4 border-danger-default border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
+<div class="bg-clip-padding p-3 radius-1/3 bg-primary border-4 border-error border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
     <span class="p-top-1/2 p-bottom-1/2">bg-clip-padding</span>
 </div>
 ```
 
 ```html
 <!-- Фон ограничен полем содержимого -->
-<div class="bg-clip-content p-3 radius-1/3 bg-primary border-4 border-danger-default border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
+<div class="bg-clip-content p-3 radius-1/3 bg-primary border-4 border-error border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
     <span class="p-top-1/2 p-bottom-1/2">bg-clip-content</span>
 </div>
 ```
 
 ```html
 <!-- Фон внутри текста -->
-<div class="t-center text-9 bold">
-    <span class="bg-clip-text color-transparent gr-line-2 gr-to-right gr1-red-5 gr2-purple-5">
+<div class="text-center text-9 bold">
+    <span class="bg-clip-text color-transparent gr-line-2 bg-gradient-to-r gr1-warning gr2-tertiary">
         Hello world
     </span>
 </div>

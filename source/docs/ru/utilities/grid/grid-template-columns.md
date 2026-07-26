@@ -31,9 +31,9 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 
 ```html
 <div class="grid grid-col-3 gap-2">
-  <div class="sf-card bg-primary color-on-primary p-2">1</div>
-  <div class="sf-card bg-secondary color-on-secondary p-2">2</div>
-  <div class="sf-card bg-tertiary color-on-tertiary p-2">3</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2">1</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2">2</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">3</div>
 </div>
 ```
 

@@ -28,8 +28,8 @@ description: "Обработка пробелов (white-space)"
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).  
+- Контрольная точка *(необязательный параметр)*:
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:
@@ -45,67 +45,67 @@ description: "Обработка пробелов (white-space)"
 
 ## Примеры использования
 
-### **wrap-none**  
+### **wrap-none**
 
 Модификатор `wrap-none` сохраняет текст в одной строке без переноса, пробелы сжимаются до одного:
 
 ```html
 <p class="wrap-none ...">
-	Lorem Ipsum is simply dummy text of the printing and typesetting 
-			industry. Lorem Ipsum has been the industry's standard dummy 
-					text ever since the 1500s, when an unknown printer took 
+	Lorem Ipsum is simply dummy text of the printing and typesetting
+			industry. Lorem Ipsum has been the industry's standard dummy
+					text ever since the 1500s, when an unknown printer took
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
 
-### **pre**  
+### **pre**
 
 Модификатор `pre` сохраняет все пробелы и переводы строк как есть:
 
 ```html
 <p class="pre ...">
-	Lorem Ipsum is simply dummy text of the printing and typesetting 
-			industry. Lorem Ipsum has been the industry's standard dummy 
-					text ever since the 1500s, when an unknown printer took 
+	Lorem Ipsum is simply dummy text of the printing and typesetting
+			industry. Lorem Ipsum has been the industry's standard dummy
+					text ever since the 1500s, when an unknown printer took
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
 
-### **pre-line**  
+### **pre-line**
 
 Модификатор `pre-line` объединяет последовательные пробелы в один, но учитывает переводы строк, разбивая текст:
 
 ```html
 <p class="pre-line ...">
-	Lorem Ipsum is simply dummy text of the printing and typesetting 
-			industry. Lorem Ipsum has been the industry's standard dummy 
-					text ever since the 1500s, when an unknown printer took 
+	Lorem Ipsum is simply dummy text of the printing and typesetting
+			industry. Lorem Ipsum has been the industry's standard dummy
+					text ever since the 1500s, when an unknown printer took
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
 
-### **pre-wrap**  
+### **pre-wrap**
 
 Модификатор `pre-wrap` сохраняет пробелы и переводы строк, текст может переноситься при необходимости:
 
 ```html
 <p class="pre-wrap ...">
-	Lorem Ipsum is simply dummy text of the printing and typesetting 
-			industry. Lorem Ipsum has been the industry's standard dummy 
-					text ever since the 1500s, when an unknown printer took 
+	Lorem Ipsum is simply dummy text of the printing and typesetting
+			industry. Lorem Ipsum has been the industry's standard dummy
+					text ever since the 1500s, when an unknown printer took
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
 
-### **whitespace-normal**  
+### **whitespace-normal**
 
 Модификатор `whitespace-normal` сводит пробелы к одному и позволяет переносить текст для заполнения области:
 
 ```html
 <p class="whitespace-normal ...">
-	Lorem Ipsum is simply dummy text of the printing and typesetting 
-			industry. Lorem Ipsum has been the industry's standard dummy 
-					text ever since the 1500s, when an unknown printer took 
+	Lorem Ipsum is simply dummy text of the printing and typesetting
+			industry. Lorem Ipsum has been the industry's standard dummy
+					text ever since the 1500s, when an unknown printer took
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```

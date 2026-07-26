@@ -7,7 +7,7 @@ description: Secondary
 
 # Secondary
 
-![][image7]
+![Дополнительный цветовой акцент Secondary][image7]
 
 Роль **Secondary** применяется к элементам интерфейса, которые либо повторяются на экране, либо не требуют сильного
 визуального акцента. Это может быть меню, повторяющиеся кнопки, вкладки или другие компоненты, присутствующие в
@@ -32,9 +32,9 @@ description: Secondary
 
 Пример использования цвета Secondary:
 
-![][image8]
+![Примеры применения роли Secondary в интерфейсе][image8]
 
-![][image9]
+![Роли Secondary в светлой и тёмной темах][image9]
 
 Для работы с ролью Secondary используются следующие переменные:
 
@@ -56,6 +56,6 @@ description: Secondary
 | `--sf-outline-secondary`              | `--sf-secondary-50`          | `--sf-secondary-60`          |
 {.table}
 
-[image7]: /assets/build/img/b64/59f5d584a028fa16.png
-[image8]: /assets/build/img/b64/f18b0b73f1e62795.png
-[image9]: /assets/build/img/b64/4fded5d66908782d.png
+[image7]: /ru/assets/reference/image-07.png
+[image8]: /ru/assets/reference/image-08.png
+[image9]: /ru/assets/reference/image-09.png

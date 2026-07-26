@@ -7,7 +7,7 @@ description: Tertiary
 
 # Tertiary
 
-![][image10]
+![Контрастный цветовой акцент Tertiary][image10]
 
 Роль **Tertiary** используется для выделения отдельных элементов среди уже существующих акцентов, созданных с помощью
 Primary и Secondary. Применение Tertiary позволяет добавить третий уровень акцентирования, делая интерфейс более
@@ -28,9 +28,9 @@ Primary и Secondary. Применение Tertiary позволяет доба�
 
 Пример использования цвета Tertiary:
 
-![][image11]
+![Примеры применения роли Tertiary в интерфейсе][image11]
 
-![][image12]
+![Роли Tertiary в светлой и тёмной темах][image12]
 
 Для работы с ролью Tertiary используются следующие переменные:
 
@@ -52,6 +52,6 @@ Primary и Secondary. Применение Tertiary позволяет доба�
 | `--sf-outline-tertiary`              | `--sf-tertiary-50`          | `--sf-tertiary-60`          |
 {.table}
 
-[image10]: /assets/build/img/b64/52f9cf90be5f330a.png
-[image11]: /assets/build/img/b64/5502f1e0f394cba9.png
-[image12]: /assets/build/img/b64/aaf234c5fa43a458.png
+[image10]: /ru/assets/reference/image-10.png
+[image11]: /ru/assets/reference/image-11.png
+[image12]: /ru/assets/reference/image-12.png

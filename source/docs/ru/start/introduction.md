@@ -1,22 +1,40 @@
 ---
 extends: _core._layouts.documentation
 section: content
-title: Маршрут по документации
-description: Выберите слой SIMAI Framework и начните с проверяемого compatibility lock.
+title: Введение
+description: Что такое SIMAI Framework и как устроена документация.
 ---
 
-# Маршрут по документации
+# Введение
 
-Начните с [установки и версии](/ru/start/installation/): она задаёт единую
-пару Core и Smart Components и не позволяет случайно получить assets из ветки.
-После smoke-проверки выберите нужный слой:
+SIMAI Framework — система для создания интерфейсов веб-сайтов и приложений. Она
+объединяет дизайн-токены, CSS-утилиты, обычные компоненты и Smart Components.
+Framework не зависит от конкретного backend: его можно использовать в
+статическом HTML, Laravel, Larena, 1С-Битрикс и других веб-проектах.
 
-- [Основы](/ru/fundamentals/) — если вы собираете интерфейс из CSS-утилит;
-- [Утилиты](/ru/utilities/) — если уже знаете нужную CSS-задачу;
-- [Компоненты](/ru/components/) — для presentation/interaction layer;
-- [Smart Components](/ru/smart-components/) — для custom elements со state и
-  зависимостями.
+## Как читать документацию
 
-Загрузчик — отдельная техническая поверхность. Его страницы полезны только
-после проверки API в том же release lock; начните с [границ
-контракта](/ru/start/loader/), а не с предположений о backend-интеграции.
+- [Старт](/ru/start/) — подключение, первый пример и устройство загрузчика;
+- [Основы](/ru/fundamentals/) — синтаксис модификаторов, значения, размеры,
+  цвета, темы, контрольные точки и типографика;
+- [Утилиты](/ru/utilities/) — справочник CSS-классов по свойствам;
+- [Компоненты](/ru/components/) — готовые элементы интерфейса;
+- [Smart Components](/ru/smart-components/) — пользовательские элементы с
+  JavaScript-логикой.
+
+Если вы только начинаете, сначала выполните [установку](/ru/start/installation/)
+и [быстрый старт](/ru/start/quickstart/), затем изучите [Основы](/ru/fundamentals/).
+
+## Принцип работы
+
+В разметке используются короткие классы-модификаторы:
+
+```html
+<article class="p-4 bg-surface-container radius-2">
+    <h2 class="sf-h-3">Карточка</h2>
+    <p class="sf-body-medium">Содержимое карточки.</p>
+</article>
+```
+
+Core задаёт базовые стили и токены, а загрузчик находит используемые классы и
+подключает необходимые CSS- и JavaScript-модули.

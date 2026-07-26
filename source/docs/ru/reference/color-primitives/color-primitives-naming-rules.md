@@ -23,7 +23,7 @@ description: Правила именования цветовых примити
 
 ```css
 --sf-primary-40
---sf-neutral-94
+--sf-neutral-95
 --sf-secondary-5
 ```
 
@@ -41,7 +41,7 @@ description: Правила именования цветовых примити
 
 ```css
 --sf-white--alfa-4
---sf-primary-50--alfa-8
+--sf-primary-50--alfa-12
 ```
 
 Прозрачность рассчитывается с помощью функции color-mix. Пример использования:

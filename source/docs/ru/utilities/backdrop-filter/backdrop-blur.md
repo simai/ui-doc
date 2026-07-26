@@ -63,14 +63,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 </div>
 ```
 
-## Замена классов с предыдущей версии
-
-| Старый класс                                       | Новый класс           |
-|:-----------------------------------------------------------------------|:----------------------|
-| .backdrop-blur-1, .backdrop-blur-2                                     | .backdrop-blur-small  |
-| .backdrop-blur-3                                                       | .backdrop-blur-medium |
-| .backdrop-blur-4, .backdrop-blur-5, .backdrop-blur-6, .backdrop-blur-7 | .backdrop-blur-large  |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

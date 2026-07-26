@@ -37,7 +37,7 @@ description: "Внутренний отступ прокрутки (scroll-paddi
 | .scroll-pr-2 | scroll-padding-right: var(`--sf-space--size-2`);                                                      |
 | .scroll-pb-2 | scroll-padding-bottom: var(`--sf-space--size-2`);                                                     |
 | .scroll-pl-2 | scroll-padding-left: var(`--sf-space--size-2`);                                                       |
-| .scroll-px-2 | scroll-padding-left: var(`--sf-space--size-2`);<br/> scroll-padding-right: var(`--sf-space--size-2`); |
+| .scroll-p-x-2 | scroll-padding-left: var(`--sf-space--size-2`);<br/> scroll-padding-right: var(`--sf-space--size-2`); |
 | .scroll-py-2 | scroll-padding-top: var(`--sf-space--size-2`);<br/> scroll-padding-bottom: var(`--sf-space--size-2`); |
 | .scroll-p-3  | scroll-padding: var(`--sf-space--size-3`);                                                            |
 | .scroll-pt-3 | scroll-padding-top: var(`--sf-space--size-3`);                                                        |

@@ -10,9 +10,9 @@ description: Link
 Роль **Link** предназначена для оформления ссылок в тексте, обеспечивая их визуальное выделение и понятные состояния при
 взаимодействии (hover, active, visited).
 
-![][image26]
+![Примеры применения роли Link][image26]
 
-![][image27]
+![Роли Link в светлой и тёмной темах][image27]
 
 Переменные для роли Link:
 
@@ -24,5 +24,5 @@ description: Link
 | `--sf-link-visited` | `--sf-tertiaty-40` | `--sf-tertiary-80` |
 {.table}
 
-[image26]: /assets/build/img/b64/c5e2dfd48bf76277.png
-[image27]: /assets/build/img/b64/7e0665ccbee8a3f4.png
+[image26]: /ru/assets/reference/image-26.png
+[image27]: /ru/assets/reference/image-27.png

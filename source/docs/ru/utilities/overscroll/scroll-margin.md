@@ -44,7 +44,7 @@ description: Внешний отступ прокрутки
 | .scroll-mr-3       | scroll-margin-right: var(`--sf-space-3`);                                               |
 | .scroll-m-bottom-3 | scroll-margin-bottom: var(`--sf-space-3`);                                              |
 | .scroll-ml-3       | scroll-margin-left: var(`--sf-space-3`);                                                |
-| .scroll-mx-3       | scroll-margin-left: var(`--sf-space-3`);<br/> scroll-margin-right: var(`--sf-space-3`); |
+| .scroll-m-inline-3       | scroll-margin-left: var(`--sf-space-3`);<br/> scroll-margin-right: var(`--sf-space-3`); |
 | .scroll-my-3       | scroll-margin-top: var(`--sf-space-3`);<br/> scroll-margin-bottom: var(`--sf-space-3`); |
 | .scroll-m-4        | scroll-margin: var(`--sf-space-4`);                                                     |
 | .scroll-mt-4       | scroll-margin-top: var(`--sf-space-4`);                                                 |
@@ -104,10 +104,10 @@ description: Внешний отступ прокрутки
 
 ```html
 <div class="snap-x overflow-auto ...">
-  <div class="scroll-mx-3 snap-start ...">
+  <div class="scroll-m-inline-3 snap-start ...">
     <img src="./picture.svg" />
   </div>
-  <div class="scroll-mx-3 snap-start ...">
+  <div class="scroll-m-inline-3 snap-start ...">
     <img src="./picture.svg" />
   </div>
 </div>
@@ -117,9 +117,9 @@ description: Внешний отступ прокрутки
 
 ```html
 <div class="snap-x overflow-auto w-full ...">
-  <div class="scroll-m-left-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 1</div>
-  <div class="scroll-m-left-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 2</div>
-  <div class="scroll-m-left-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 3</div>
+  <div class="scroll-m-inline-start-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 1</div>
+  <div class="scroll-m-inline-start-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 2</div>
+  <div class="scroll-m-inline-start-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 3</div>
 </div>
 ```
 ## Playground

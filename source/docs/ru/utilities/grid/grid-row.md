@@ -39,23 +39,23 @@ description: "Размер строки сетки (grid-row)"
 ### Span
 ```html
 <div class="grid grid-col-3 gap-2">
-  <div class="sf-card bg-primary color-on-primary p-2 row-span-2">row span 2</div>
-  <div class="sf-card bg-secondary color-on-secondary p-2">row span 1</div>
-  <div class="sf-card bg-tertiary color-on-tertiary p-2">row span 1</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2 grid-row-span-2">row span 2</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2">row span 1</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">row span 1</div>
 </div>
 ```
 
 ### Start / End
 ```html
 <div class="grid grid-col-3 grid-row-4 gap-2">
-  <div class="sf-card bg-success color-on-success p-2 row-start-2 row-end-4">start 2 / end 4</div>
+  <div class="border radius-1 bg-success color-on-success p-2 grid-row-start-2 grid-row-end-4">start 2 / end 4</div>
 </div>
 ```
 
 ## Адаптивность
 
 ```html
-<div class="row-span-2 md:row-span-3">
+<div class="grid-row-span-2 md:grid-row-span-3">
   <!-- Высота строки увеличится на брейкпоинте md -->
 </div>
 ```

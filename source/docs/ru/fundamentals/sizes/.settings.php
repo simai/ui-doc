@@ -4,6 +4,7 @@ return array (
   'order' => 7,
   'menu' =>
   array (
+    'size-scale' => 'Полная шкала размеров',
     'size-conversion' => 'Конвертация размеров',
     'relationship-between-letters-and-multipliers' => 'Соотношение букв и множителей',
     'reverse-conversion' => 'Обратная конвертация',

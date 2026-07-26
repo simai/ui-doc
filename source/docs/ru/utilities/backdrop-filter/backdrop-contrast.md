@@ -54,17 +54,6 @@ description: "Контрастность фона элемента (backdrop-con
 </div>
 ```
 
-## Замена с предыдущей версии:
-
-| Старый класс         | Новый класс            |
-|:---------------------|:-----------------------|
-| .backdrop-contrast-1 | .backdrop-contrast-1/4 |
-| .backdrop-contrast-2 | .backdrop-contrast-1/3 |
-| .backdrop-contrast-3 | .backdrop-contrast-1   |
-| .backdrop-contrast-4 | .backdrop-contrast-2   |
-| .backdrop-contrast-5 | .backdrop-contrast-3   |
-| .backdrop-contrast-6 | .backdrop-contrast-4   |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

@@ -31,9 +31,9 @@ description: "Шаблон строк сетки (grid-template-rows)"
 
 ```html
 <div class="grid grid-row-3 gap-2 h-e8">
-  <div class="sf-card bg-primary color-on-primary p-2">Short</div>
-  <div class="sf-card bg-secondary color-on-secondary p-2">Two<br/>lines</div>
-  <div class="sf-card bg-tertiary color-on-tertiary p-2">Three<br/>lines<br/>here</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2">Short</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2">Two<br/>lines</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">Three<br/>lines<br/>here</div>
 </div>
 ```
 

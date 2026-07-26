@@ -40,12 +40,12 @@ description: "Утилиты object-position управляют тем, каку
 
 ```html
 <div class="grid grid-col-2 gap-3">
-  <div class="sf-card surface p-3 radius-2 border border-outline-variant">
-    <div class="text-subtitle-2 m-b-2">inline-start top</div>
+  <div class="border radius-1 bg-surface-1 p-3 radius-2 border border-outline-variant">
+    <div class="text-2 m-bottom-2">inline-start top</div>
     <img class="w-full h-e5 object-cover object-inline-start-top bg-surface-1 radius-2" src="...">
   </div>
-  <div class="sf-card surface p-3 radius-2 border border-outline-variant">
-    <div class="text-subtitle-2 m-b-2">inline-end bottom</div>
+  <div class="border radius-1 bg-surface-1 p-3 radius-2 border border-outline-variant">
+    <div class="text-2 m-bottom-2">inline-end bottom</div>
     <img class="w-full h-e5 object-cover object-inline-end-bottom bg-surface-1 radius-2" src="...">
   </div>
 </div>

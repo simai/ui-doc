@@ -39,7 +39,7 @@ description: "Семейство шрифтов (font-family)"
 контрольной точки:
 
 ```html
-<p class="md:serif">На экранах md и больше текст будет шрифтом serif.</p>
+<p class="serif">На экранах md и больше текст будет шрифтом serif.</p>
 ```
 ## Playground
 

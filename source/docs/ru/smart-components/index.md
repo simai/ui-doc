@@ -2,24 +2,20 @@
 extends: _core._layouts.documentation
 section: content
 title: Smart Components SIMAI Framework
-description: Вход в документацию по Smart Components SIMAI Framework.
+description: Документация 50 Smart Components SIMAI Framework 5.4.0.
 ---
 
 # Smart Components
 
-В этом разделе собраны материалы по подключению, зависимостям и проверке Smart
-Components SIMAI Framework. Используйте его после закрепления поставки и не
-переносите сведения между разными release lock без новой проверки.
+Реестр `5.4.0` содержит **50 Smart Components**: 41 зарегистрирован в Loader,
+ещё 9 экспериментальных записей честно отмечены как заблокированные. Для всех
+50 сформированы страницы с тегами, зависимостями, атрибутами, свойствами,
+методами, событиями и исходными путями.
 
-- [Архитектура и выбор](/ru/smart-components/introduction/) — граница Smart
-  Components, обычных компонентов и утилит.
-- [Подключение](/ru/smart-components/connection/) — подготовка поставки по
-  утверждённой интеграционной схеме.
-- [Загрузка и зависимости](/ru/smart-components/lifecycle/) — как фиксировать
-  подтверждённую карту сценария.
-- [Каталог](/ru/smart-components/catalog/) — правила публикации записей.
-- [Шаблоны и ассеты](/ru/smart-components/templates-and-assets/) — как не
-  обобщать непроверенные детали реализации.
-- [Примеры](/ru/smart-components/examples/) и
-  [справочник](/ru/smart-components/reference/) — подготовка и оформление
-  точных reference-страниц.
+- [Архитектура и выбор](/ru/smart-components/introduction/)
+- [Подключение](/ru/smart-components/connection/)
+- [Загрузка и зависимости](/ru/smart-components/lifecycle/)
+- [Каталог и статусы](/ru/smart-components/catalog/)
+- [Шаблоны и ассеты](/ru/smart-components/templates-and-assets/)
+- [Полный справочник](/ru/smart-components/reference/)
+- [Проверка примеров](/ru/smart-components/examples/)

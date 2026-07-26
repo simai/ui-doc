@@ -32,5 +32,6 @@ return array (
     'forms' => 'Формы',
     'interactivity' => 'Интерактивность',
     'print' => 'Печать',
+    'reference' => 'Полный реестр',
   ),
 );

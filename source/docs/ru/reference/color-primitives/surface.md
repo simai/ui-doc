@@ -18,9 +18,9 @@ description: Surface
 * **Surface Transparent** — полупрозрачный цвет для подчёркивания элементов с прозрачным фоном. Применяется при
   взаимодействии, например, для создания эффектов наведения (hover) у outline-кнопок.
 
-![][image20]
+![Примеры применения ролей Surface][image20]
 
-![][image21]
+![Роли Surface в светлой и тёмной темах][image21]
 
 Для работы с ролью Surface используются следующие переменные:
 
@@ -41,6 +41,7 @@ description: Surface
 | `--sf-on-surface-hover`            | `--sf-neutral-15`          | `--sf-neutral-85`          |
 | `--sf-on-surface-active`           | `--sf-neutral-20`          | `--sf-neutral-80`          |
 | `--sf-on-surface-variant`          | `--sf-neutral-40`          | `--sf-neutral-60`          |
+| `--sf-on-surface-muted`            | `--sf-neutral-60`          | `--sf-neutral-40`          |
 | `--sf-on-surface-inverse`          | `--sf-neutral-90`          | `--sf-neutral-10`          |
 | `--sf-on-surface-inverse-fixed`    | `--sf-neutral-90`          | `--sf-neutral-90`          |
 | `--sf-surface-transparent-hover`   | `--sf-neutral-50--alfa-4`  | `--sf-neutral-90--alfa-4`  |
@@ -49,5 +50,5 @@ description: Surface
 | `--sf-surface-transparent-overlay` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 {.table}
 
-[image20]: /assets/build/img/b64/92dbbe6d114d1066.png
-[image21]: /assets/build/img/b64/d09425ddfe2b38ac.png
+[image20]: /ru/assets/reference/image-20.png
+[image21]: /ru/assets/reference/image-21.png

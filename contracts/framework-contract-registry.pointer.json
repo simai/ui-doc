@@ -1,0 +1,20 @@
+{
+  "schema_id": "simai.framework.contract-registry.consumer-pointer",
+  "schema_version": 1,
+  "consumer": {
+    "id": "simai/ui-doc",
+    "role": "documentation"
+  },
+  "compatibility_id": "simai-framework-5.4.0-candidate-2742ed22-b57afb30",
+  "registry": {
+    "owner": "simai/ui",
+    "commit": "8fea5eb45d8cf0464774ad29c34abe1547d9ce63",
+    "path": "contracts/generated/framework-contract-registry.json",
+    "file_sha256": "932078a8bfaf9bfeebd0162916f20002c1c68fc90ba27d8f6fe4284c1299b402"
+  },
+  "policy": {
+    "imports_upstream_metadata": false,
+    "generated_views_must_validate": true,
+    "production_ready": false
+  }
+}

@@ -56,15 +56,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 </div>
 ```
 
-## Замена классов с предыдущей версии
-
-| Старый класс         | Новый класс            |
-|:---------------------|:-----------------------|
-| .backdrop-saturate-1 | .backdrop-saturate-1/3 |
-| .backdrop-saturate-2 | .backdrop-saturate-1   |
-| .backdrop-saturate-3 | .backdrop-saturate-2   |
-| .backdrop-saturate-4 | .backdrop-saturate-4   |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

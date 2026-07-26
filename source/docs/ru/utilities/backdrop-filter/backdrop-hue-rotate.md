@@ -8,7 +8,7 @@ description: "Вращение оттенка фона элемента (backdro
 # Вращение оттенка фона элемента (backdrop-hue-rotate)
 
 
-!rtags[backdrop-filer-hue-rotate hover]
+!rtags[backdrop-filter-hue-rotate hover]
 
 
 
@@ -53,16 +53,6 @@ description: "Вращение оттенка фона элемента (backdro
 </div>
 ```
 
-## Замена классов с предыдущей версии
-
-| Старый класс           | Новый класс              |
-|:-----------------------|:-------------------------|
-| .backdrop-hue-rotate-1 | .backdrop-hue-rotate-15  |
-| .backdrop-hue-rotate-2 | .backdrop-hue-rotate-30  |
-| .backdrop-hue-rotate-3 | .backdrop-hue-rotate-60  |
-| .backdrop-hue-rotate-4 | .backdrop-hue-rotate-90  |
-| .backdrop-hue-rotate-5 | .backdrop-hue-rotate-180 |
-{.table}
 ## Playground
 
 <div class="sf-playground overflow-hidden">

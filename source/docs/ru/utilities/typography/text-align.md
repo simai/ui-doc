@@ -17,9 +17,9 @@ description: "Выравнивание текста (text-align)"
 
 | Класс         | Значение             |
 |:--------------|:---------------------|
-| .text-left    | text-align: left;    |
+| .text-start    | text-align: left;    |
 | .text-center  | text-align: center;  |
-| .text-right   | text-align: right;   |
+| .text-end   | text-align: right;   |
 | .text-justify | text-align: justify; |
 {.table}
 
@@ -28,23 +28,23 @@ description: "Выравнивание текста (text-align)"
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`).  
+- Контрольная точка *(необязательный параметр)*:
+  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:
 
-    - `text-left` – выравнивание по левому краю
+    - `text-start` – выравнивание по левому краю
     - `text-center` – выравнивание по центру
-    - `text-right` – выравнивание по правому краю
+    - `text-end` – выравнивание по правому краю
     - `text-justify` – выравнивание по ширине
 
 ## Пример использования
 
 ```html
-<p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="text-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 ```
 
@@ -54,7 +54,7 @@ description: "Выравнивание текста (text-align)"
 `md:`, `lg:`, `xl:`):
 
 ```html
-<p class="md:text-right">
+<p class="md:text-end">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```

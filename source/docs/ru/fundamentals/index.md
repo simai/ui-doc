@@ -2,28 +2,44 @@
 extends: _core._layouts.documentation
 section: content
 title: Основы
-description: "Базовые понятия SIMAI Framework: модификаторы, условия, значения, цвета, контрольные точки и типографика."
+description: "Базовые понятия и справочные системы SIMAI Framework: модификаторы, размеры, цвета, дизайн-токены, адаптивность и типографика."
 ---
 
 # Основы
 
-Этот раздел объясняет базовые понятия SIMAI Framework, которые нужны для
-осознанного использования утилит: как устроены модификаторы, когда они
-применяются и какие значения принимают.
+Этот раздел объясняет язык утилит и дизайн-систему SIMAI Framework: как
+составляются модификаторы, какие значения они принимают и на какие токены
+опираются размеры, цвета, адаптивность и типографика.
 
 ## С чего начать
 
-1. Изучите [модификаторы](/ru/fundamentals/modifiers/) и [условия действия](/ru/fundamentals/conditions/).
-2. Перейдите к [условиям состояния](/ru/fundamentals/states/) и [контрольным точкам](/ru/fundamentals/breakpoints/), если интерфейс меняется при взаимодействии или на разных ширинах экрана.
-3. Используйте справочные разделы о [значениях и шкалах](/ru/fundamentals/values-and-scales/), [цветах и темах](/ru/fundamentals/colors-and-themes/) и [типографике](/ru/fundamentals/typography-system/).
+1. Изучите [модификаторы](/ru/fundamentals/modifiers/), [условия действия](/ru/fundamentals/conditions/) и [параметры модификаторов](/ru/fundamentals/modifier-parameters/).
+2. Разберитесь со [значениями и шкалами](/ru/fundamentals/values-and-scales/), затем используйте полный справочник [размеров](/ru/fundamentals/sizes/) и [цветов](/ru/fundamentals/colors-and-themes/).
+3. Для системной настройки проекта перейдите к [дизайн-токенам](/ru/fundamentals/design-tokens/), [контрольным точкам](/ru/fundamentals/breakpoints/) и [типографике](/ru/fundamentals/typography-system/).
 
 ## Разделы
 
 - [Модификаторы](/ru/fundamentals/modifiers/) — состав и назначение модификаторов.
+- [Сокращения свойств](/ru/fundamentals/abbreviations-of-properties/) — короткие имена часто используемых свойств.
 - [Условия действия](/ru/fundamentals/conditions/) — адаптивные условия и условия состояния.
 - [Условия состояния](/ru/fundamentals/states/) — состояния `hover`, `focus` и `active`.
-- [Значения и шкалы](/ru/fundamentals/values-and-scales/) — допустимые типы значений.
-- [Цвета и темы](/ru/fundamentals/colors-and-themes/) — примитивы, токены и цветовые роли.
+- [Параметры модификаторов](/ru/fundamentals/modifier-parameters/) — оси, стороны и углы.
+- [Направления](/ru/fundamentals/directions/) и [выравнивание](/ru/fundamentals/alignment/) — физические и логические направления.
+- [Значения и шкалы](/ru/fundamentals/values-and-scales/) — типы значений и правила выбора.
+- [Размеры](/ru/fundamentals/sizes/) — полная шкала из 90 размерных примитивов и интервалы.
+- [Цвета и темы](/ru/fundamentals/colors-and-themes/) — палитры, семантические роли и светлая/тёмная темы.
+- [Дизайн-токены](/ru/fundamentals/design-tokens/) — интервалы, радиусы, тени, иконки, контейнеры и слои.
 - [Контрольные точки](/ru/fundamentals/breakpoints/) — основа адаптивного поведения.
-- [Типографика](/ru/fundamentals/typography-system/) — роли и параметры текста.
+- [Типографика](/ru/fundamentals/typography-system/) — семейства, веса, размеры и высоты строк.
 - [Ограничения модификаторов](/ru/fundamentals/best-practices/) — минимальные и максимальные значения свойств.
+
+## Примитивы, токены и утилиты
+
+Эти понятия относятся к разным уровням:
+
+1. **Примитив** хранит исходное значение: например, `--sf-c2` равно `24px`.
+2. **Семантический токен** выражает назначение: например, `--sf-space-4` или `--sf-primary`.
+3. **Утилита** применяет значение к CSS-свойству: например, `p-4`, `color-primary` или `bg-surface-0`.
+
+В прикладном коде предпочтительны семантические токены и утилиты. Примитивы
+нужны для точной настройки и для создания проектных токенов.

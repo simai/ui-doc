@@ -23,7 +23,7 @@ description: "Размытие элемента (filter-blur)"
 | .blur-large         | filter: blur(var(`--sf-blur-large`));  |
 {.table}
 
-## Переменные 
+## Переменные
 
 | Переменная         | Значение       |
 |:-------------------|:---------------|
@@ -54,7 +54,7 @@ description: "Размытие элемента (filter-blur)"
 
 ## Пример использования
 
-```html 
+```html
 <!-- Элемент без размытия -->
 <div class="blur-none p-4 bg-surface">Без размытия</div>
 
@@ -68,16 +68,6 @@ description: "Размытие элемента (filter-blur)"
 <div class="hover:blur-large p-4 bg-surface m-top-2 transition">Наведи для сильного размытия</div>
 ```
 
-## Замена с предыдущей версии
-
-| Старый класс    | Новый класс              |
-|:------------------------------------|:-------------------------|
-| .blur-1, .blur-2                    | .blur-small              |
-| .blur-3                             | .blur-medium (или .blur) |
-| .blur-4, .blur-5, .blur-6, .blur-7  | .blur-large              |
-{.table}
-
-Используйте данные соответствия, чтобы перейти с предыдущей версии на новую.
 ## Playground
 
 <div class="sf-playground overflow-hidden">

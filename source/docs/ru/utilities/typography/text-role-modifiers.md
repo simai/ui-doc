@@ -51,7 +51,7 @@ h1, .sf-h-1 {
   font-size: var(--sf-text-medium--size);
   line-height: var(--sf-text-medium--height);
 }
-  
+
 .label-large {
   font-size: var(--sf-label-large--size);
   line-height: var(--sf-label-large--height);

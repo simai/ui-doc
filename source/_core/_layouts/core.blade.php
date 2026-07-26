@@ -1,9 +1,8 @@
 @php
-    $hasSha = $page->sha ?? 'latest';
     $locale = $page->locale();
-    $distPath = "https://cdn.jsdelivr.net/gh/simai/ui@{$hasSha}/distr/"
+    $distPath = rtrim($page->frameworkBaseUrl ?? '/framework/ui/distr/', '/') . '/';
+    $smartPath = rtrim($page->frameworkSmartBaseUrl ?? '/framework/ui-smart', '/');
 @endphp
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <script>
 
     window.SF_BOOT_CONFIG = {
@@ -12,8 +11,9 @@
         },
     };
     window.sfPath = "{{$distPath}}";
+    window.sfSmartPath = "{{$smartPath}}";
     window.currentLocale = `{{$locale}}`
 </script>
-<script src="{{'https://cdn.jsdelivr.net/gh/simai/ui@'. $hasSha . '/distr/core/js/core.js'}}"></script>
-<link rel="preload" as="style"  href="{{'https://cdn.jsdelivr.net/gh/simai/ui@'. $hasSha . '/distr/core/css/core.css'}}">
-<link rel="stylesheet" href="{{'https://cdn.jsdelivr.net/gh/simai/ui@'. $hasSha . '/distr/core/css/core.css'}}"/>
+<script src="{{$distPath}}core/js/core.js"></script>
+<link rel="preload" as="style" href="{{$distPath}}core/css/core.css">
+<link rel="stylesheet" href="{{$distPath}}core/css/core.css"/>

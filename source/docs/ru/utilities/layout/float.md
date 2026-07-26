@@ -16,7 +16,7 @@ description: Плавающий элемент (float)
 
 Использование: `{условие действия}:{модификатор}`
 
-- Условие действия (необязательный параметр):  
+- Условие действия (необязательный параметр):
   Может принимать значения:
 
     - `sm` — для экранов шириной от 540px и больше;
@@ -35,7 +35,7 @@ description: Плавающий элемент (float)
 
 ## Примеры
 
-### **float-inline-end**  
+### **float-inline-end**
 Элемент «плавает» по логической правой стороне.
 
 ```html
@@ -43,7 +43,7 @@ description: Плавающий элемент (float)
 <p>Lorem ipsum dolor sit amet, ...</p>
 ```
 
-### **float-inline-start**  
+### **float-inline-start**
 Элемент «плавает» по логической левой стороне.
 
 ```html
@@ -51,7 +51,7 @@ description: Плавающий элемент (float)
 <p>Lorem ipsum dolor sit amet, ...</p>
 ```
 
-### **float-none**  
+### **float-none**
 С помощью `float-none` элемент не «плавает».
 
 ```html
@@ -67,7 +67,7 @@ description: Плавающий элемент (float)
 Например, чтобы элемент «плавал» справа только на экранах размера Medium и больше:
 
 ```html
-<div class="md:float-right"></div>
+<div class="md:float-inline-end"></div>
 ```
 ## Playground
 

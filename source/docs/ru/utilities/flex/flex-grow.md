@@ -25,8 +25,8 @@ description: "Растяжимость элементов (flex-grow)"
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*:  
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).  
+- Контрольная точка *(необязательный параметр)*:
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:
@@ -39,18 +39,18 @@ description: "Растяжимость элементов (flex-grow)"
 ```html
 <!-- Пример с grow: центральный элемент будет растягиваться, заполняя доступное пространство -->
 <div class="flex">
-  <div class="bg-neutral-10 px-2">Левый</div>
-  <div class="grow bg-neutral-20 px-2 text-center">Центральный (растяжимый)</div>
-  <div class="bg-neutral-30 px-2">Правый</div>
+  <div class="bg-surface-1 p-x-2">Левый</div>
+  <div class="grow bg-surface-2 p-x-2 text-center">Центральный (растяжимый)</div>
+  <div class="bg-surface-3 p-x-2">Правый</div>
 </div>
 ```
 
 ```html
 <!-- Пример с grow-none: центральный элемент не будет растягиваться, несмотря на доступное пространство -->
 <div class="flex">
-  <div class="grow bg-neutral-10 px-2">Левый (растяжимый)</div>
-  <div class="grow-none bg-neutral-20 px-2 text-center">Центральный (не растяжимый)</div>
-  <div class="grow bg-neutral-30 px-2">Правый (растяжимый)</div>
+  <div class="grow bg-surface-1 p-x-2">Левый (растяжимый)</div>
+  <div class="grow-none bg-surface-2 p-x-2 text-center">Центральный (не растяжимый)</div>
+  <div class="grow bg-surface-3 p-x-2">Правый (растяжимый)</div>
 </div>
 ```
 

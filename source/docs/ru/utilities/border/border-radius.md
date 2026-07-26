@@ -17,6 +17,10 @@ description: Скругление границы
 
 `0`, `1/3`, `1/2`, `1`, `2`, `3`, `default`, `square`, `rounded`, `round`
 
+Шкала задаёт радиусы от прямого угла до полностью круглой формы:
+
+![Схема размеров радиуса SIMAI Framework](/ru/utilities/border/assets/border-radius-scale.png)
+
 ## Базовые классы
 
 | Класс | Значение |

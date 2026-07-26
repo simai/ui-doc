@@ -32,7 +32,7 @@ description: 'Оформление элемента, разбитого на н�
 
 ```html
 <span
-  class="box-slice bg-clip-text color-transparent gr-line-2 gr-to-top gr1-purple-5 gr2-red-5">
+  class="box-slice bg-clip-text color-transparent gr-line-2 bg-gradient-to-t gr1-tertiary gr2-warning">
   Hello<br />
   World
 </span>
@@ -45,7 +45,7 @@ description: 'Оформление элемента, разбитого на н�
 
 ```html
 <span
-  class="box-clone bg-clip-text color-transparent gr-line-2 gr-to-top gr1-purple-5 gr2-red-5">
+  class="box-clone bg-clip-text color-transparent gr-line-2 bg-gradient-to-t gr1-tertiary gr2-warning">
   Hello<br />
   World
 </span>

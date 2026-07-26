@@ -25,9 +25,9 @@ description: Error
 
 Пример использования роли Error:
 
-![][image13]
+![Примеры применения роли Error][image13]
 
-![][image14]
+![Роли Error в светлой и тёмной темах][image14]
 
 Для работы с ролью Error используются следующие переменные:
 
@@ -49,5 +49,5 @@ description: Error
 | `--sf-outline-error`              | `--sf-error-50`          | `--sf-error-60`          |
 {.table}
 
-[image13]: /assets/build/img/b64/f686dd417f8a6496.png
-[image14]: /assets/build/img/b64/2b6d33f495587919.png
+[image13]: /ru/assets/reference/image-13.png
+[image14]: /ru/assets/reference/image-14.png

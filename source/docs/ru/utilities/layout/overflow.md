@@ -17,7 +17,7 @@ description: Переполнение элемента (overflow)
 
 Использование: `{условие действия}:{модификатор}`
 
-- Условие действия (необязательный параметр):  
+- Условие действия (необязательный параметр):
   Может принимать значения:
 
     - `sm` — для экранов шириной от 540px и больше;
@@ -45,7 +45,7 @@ description: Переполнение элемента (overflow)
 
 ## Примеры
 
-### **overflow-auto**  
+### **overflow-auto**
 Поведение определяется браузером автоматически.
 
 ```html
@@ -54,7 +54,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-hidden**  
+### **overflow-hidden**
 Контент обрезается, без предоставления прокрутки.
 
 ```html
@@ -63,7 +63,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-visible**  
+### **overflow-visible**
 Содержимое не обрезается, может отображаться снаружи блока.
 
 ```html
@@ -72,7 +72,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-scroll**  
+### **overflow-scroll**
 Содержимое обрезается и всегда появляется полоса прокрутки.
 
 ```html
@@ -81,7 +81,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-x-auto / overflow-y-auto**  
+### **overflow-x-auto / overflow-y-auto**
 По соответствующей оси поведение определяется браузером автоматически.
 
 ```html
@@ -96,7 +96,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-x-hidden / overflow-y-hidden**  
+### **overflow-x-hidden / overflow-y-hidden**
 Контент обрезается по соответствующей оси, без предоставления прокрутки.
 
 ```html
@@ -111,7 +111,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-x-visible / overflow-y-visible**  
+### **overflow-x-visible / overflow-y-visible**
 Содержимое не обрезается по соответствующей оси.
 
 ```html
@@ -126,7 +126,7 @@ description: Переполнение элемента (overflow)
 </div>
 ```
 
-### **overflow-x-scroll / overflow-y-scroll**  
+### **overflow-x-scroll / overflow-y-scroll**
 Содержимое обрезается и всегда доступна полоса прокрутки по соответствующей оси.
 
 ```html

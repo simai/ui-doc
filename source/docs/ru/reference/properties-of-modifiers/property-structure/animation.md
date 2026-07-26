@@ -10,4 +10,4 @@ description: Анимация (animation)
 * Свойство перехода (transition-property).
 * Продолжительность перехода (transition-duration).
 * Функция перехода (transition-timing-function).
-* Задержка перехода (transition-delay).  
+* Задержка перехода (transition-delay).

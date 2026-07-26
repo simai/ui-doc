@@ -70,6 +70,8 @@ return [
     'cache' => true,
     'moduleCache' => true,
     'cachePath' => $projectRoot . '/.cache',
+    'frameworkBaseUrl' => getenv('DOCARA_FRAMEWORK_BASE_URL') ?: '/framework/ui/distr/',
+    'frameworkSmartBaseUrl' => getenv('DOCARA_FRAMEWORK_SMART_BASE_URL') ?: '/framework/ui-smart',
     'siteName' => 'SIMAI Framework Documentation',
     'siteDescription' => 'Documentation for SIMAI Framework',
     'brand' => [

@@ -59,18 +59,3 @@ description: Продолжительность перехода
     Наведи на меня, анимация будет медленной (500ms).
 </div>
 ```
-
-## Замена прежних классов на новые
-
-| Старый класс                   | Новый класс      |
-|:---------------------------------------------------|:-----------------|
-| .duration-1, .duration-2, .duration-3              | .duration-fast   |
-| .duration-4, .duration-5                           | .duration-normal |
-| .duration-6, .duration-7, .duration-8, .duration-9 | .duration-slow   |
-{.table}
-
-
-
-<div class="sf-playground overflow-hidden">
-<iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-transition-duration"></iframe>
-</div>
