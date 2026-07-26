@@ -67,7 +67,7 @@ description: Обрезка фона
 ```html
 <!-- Фон внутри текста -->
 <div class="t-center text-9 bold">
-    <span class="bg-clip-text color-transparent gr-line-2 gr-to-right gr1-red-5 gr2-purple-5">
+    <span class="bg-clip-text color-transparent gr-line-2 gr-to-right gr1-error gr2-tertiary">
         Hello world
     </span>
 </div>

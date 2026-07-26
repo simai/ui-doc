@@ -29,7 +29,7 @@ description: "Оформление элемента, разбитого на н�
 С помощью модификатора `box-slice` элемент воспринимается как единый целый блок, даже при переносе содержимого:
 
 ```html
-<span class="box-slice bg-clip-text color-transparent gr-line-2 gr-to-top gr1-purple-5 gr2-red-5">
+<span class="box-slice bg-clip-text color-transparent gr-line-2 gr-to-top gr1-tertiary gr2-error">
     Hello<br>
     World
 </span>
@@ -40,7 +40,7 @@ description: "Оформление элемента, разбитого на н�
 каждый был отдельным элементом:
 
 ```html
-<span class="box-clone bg-clip-text color-transparent gr-line-2 gr-to-top gr1-purple-5 gr2-red-5">
+<span class="box-clone bg-clip-text color-transparent gr-line-2 gr-to-top gr1-tertiary gr2-error">
     Hello<br>
     World
 </span>
