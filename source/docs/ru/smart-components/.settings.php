@@ -4,5 +4,6 @@ return array(
     'order' => 5,
     'menu' => array(
         'introduction' => 'Обзор',
+        'badges' => 'Badge',
     ),
 );
