@@ -14,6 +14,7 @@ return array(
         'sizes' => 'Размеры',
         'colors-and-themes' => 'Цвета и темы',
         'design-tokens' => 'Дизайн-токены',
+        'content-spacing' => 'Вертикальный ритм',
         'breakpoints' => 'Контрольные точки',
         'typography-system' => 'Типографика',
         'best-practices' => 'Ограничения модификаторов',
