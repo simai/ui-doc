@@ -56,7 +56,8 @@ jobs:
         run: |
           rm -rf .cache build_production
           yarn install
-          yarn prod
+          DOCARA_SKIP_BUILD=1 yarn prod
+          php -d memory_limit=512M vendor/bin/docara build production --cache=false
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.8
@@ -86,9 +87,10 @@ jobs:
             AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
             EOF
             composer install --no-dev --prefer-dist --no-interaction
-            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
             npm run docs:integrity
+            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
             yarn install
             rm -rf .cache build_production
-            yarn prod
+            DOCARA_SKIP_BUILD=1 yarn prod
+            php -d memory_limit=512M vendor/bin/docara build production --cache=false
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
