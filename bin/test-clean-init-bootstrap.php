@@ -7,6 +7,9 @@ $config = file_get_contents($root . '/config.php');
 $package = json_decode((string) file_get_contents($root . '/package.json'), true);
 $initScript = file_get_contents($root . '/bin/init-project-update.sh');
 $postinstall = file_get_contents($root . '/bin/verify-project-postinstall.mjs');
+$composerRunner = file_get_contents($root . '/bin/run-composer.sh');
+$composerTest = file_get_contents($root . '/bin/test-composer-resolution.sh');
+$lifecycleTest = file_get_contents($root . '/bin/test-project-lifecycle.sh');
 $validationWorkflow = file_get_contents($root . '/.github/workflows/validation.yml');
 $deployWorkflow = file_get_contents($root . '/.github/workflows/deploy.yml');
 
@@ -38,6 +41,21 @@ if (!is_string($initScript)
 if (!is_string($postinstall) || !str_contains($postinstall, 'UI_DOC_PROJECT_CONFIG_PRESERVED')) {
     $failures[] = 'bin/verify-project-postinstall.mjs';
 }
+if (!is_string($composerRunner)
+    || !str_contains($composerRunner, 'command -v -- "$composer_candidate"')
+    || !str_contains($composerRunner, 'exec "$composer_binary" "$@"')) {
+    $failures[] = 'bin/run-composer.sh';
+}
+if (!is_string($composerTest)
+    || !str_contains($composerTest, 'UI_DOC_COMPOSER_RESOLUTION_PASS')
+    || !str_contains($composerTest, 'UI_DOC_COMPOSER_INCORRECTLY_INVOKED_THROUGH_PHP')) {
+    $failures[] = 'bin/test-composer-resolution.sh';
+}
+if (!is_string($lifecycleTest)
+    || str_contains($lifecycleTest, '"$php_binary" "$composer_binary"')
+    || !str_contains($lifecycleTest, '"$source_root/bin/run-composer.sh"')) {
+    $failures[] = 'bin/test-project-lifecycle.sh';
+}
 foreach ([
     '.github/workflows/validation.yml' => $validationWorkflow,
     '.github/workflows/deploy.yml' => $deployWorkflow,
@@ -66,6 +84,9 @@ fwrite(STDOUT, json_encode([
         'config.php',
         'package.json#/scripts/postinstall',
         'bin/init-project-update.sh',
+        'bin/run-composer.sh',
+        'bin/test-composer-resolution.sh',
+        'bin/test-project-lifecycle.sh',
         '.github/workflows/validation.yml',
         '.github/workflows/deploy.yml',
     ],

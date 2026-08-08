@@ -7,7 +7,7 @@
         "watch": "vite build --watch --mode development",
         "prod": "vite build --mode production",
         "docs:build": "bin/build-docs-production.sh",
-    "docs:integrity": "${PHP_BINARY:-php} bin/check-docs-integrity.php && ${PHP_BINARY:-php} bin/check-content-spacing-contract.php && ${PHP_BINARY:-php} bin/test-content-spacing-contract.php && ${PHP_BINARY:-php} bin/test-clean-init-bootstrap.php",
+        "docs:integrity": "${PHP_BINARY:-php} bin/check-docs-integrity.php && ${PHP_BINARY:-php} bin/check-content-spacing-contract.php && ${PHP_BINARY:-php} bin/test-content-spacing-contract.php && ${PHP_BINARY:-php} bin/test-clean-init-bootstrap.php && bash bin/test-composer-resolution.sh",
         "docs:rendered-links": "${PHP_BINARY:-php} bin/check-built-docs-links.php",
         "translate": "php vendor/bin/docara translate",
         "transpatetest": "php vendor/bin/docara translate --test",

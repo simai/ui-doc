@@ -4,7 +4,6 @@ set -euo pipefail
 
 source_root="$(cd "$(dirname "$0")/.." && pwd -P)"
 php_binary="${PHP_BINARY:-php}"
-composer_binary="${COMPOSER_BINARY:-composer}"
 composer_preference="${UI_DOC_COMPOSER_PREFERENCE:---prefer-dist}"
 expected_revision="$(git -C "$source_root" rev-parse HEAD)"
 lifecycle_root="$(mktemp -d "${TMPDIR:-/tmp}/ui-doc-lifecycle.XXXXXX")"
@@ -17,7 +16,8 @@ trap cleanup EXIT
 git clone --quiet --no-local "$source_root" "$lifecycle_root/repo"
 git -C "$lifecycle_root/repo" checkout --quiet --detach "$expected_revision"
 
-"$php_binary" "$composer_binary" install --no-interaction "$composer_preference" \
+PHP_BINARY="$php_binary" "$source_root/bin/run-composer.sh" \
+    install --no-interaction "$composer_preference" \
     --working-dir="$lifecycle_root/repo"
 
 (
