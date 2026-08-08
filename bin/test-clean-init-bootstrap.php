@@ -31,7 +31,7 @@ if (($package['scripts']['postinstall'] ?? null) !== 'node bin/verify-project-po
 }
 if (!is_string($initScript)
     || !str_contains($initScript, 'git -C "$repository_root" archive')
-    || !str_contains($initScript, 'vendor/bin/docara init --update')
+    || !str_contains($initScript, 'vendor/bin/docara init --update --force-core-files')
     || !str_contains($initScript, 'UI_DOC_PROJECT_SOURCE_NOT_PRESERVED')) {
     $failures[] = 'bin/init-project-update.sh';
 }

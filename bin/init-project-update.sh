@@ -31,7 +31,7 @@ nul_existed=false
 
 (
     cd "$repository_root"
-    DOCARA_SKIP_FRONTEND_INSTALL=true "$php_binary" vendor/bin/docara init --update
+    DOCARA_SKIP_FRONTEND_INSTALL=true "$php_binary" vendor/bin/docara init --update --force-core-files
 )
 
 tar -xf "$preserve_root/project-owned.tar" -C "$repository_root"
