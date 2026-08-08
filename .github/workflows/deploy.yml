@@ -47,6 +47,9 @@ jobs:
         run: |
           php vendor/bin/docara init --update
 
+      - name: Verify documentation integrity
+        run: npm run docs:integrity
+
       - name: Build frontend assets
         env:
           YARN_IGNORE_ENGINES: 1
@@ -84,6 +87,7 @@ jobs:
             EOF
             composer install --no-dev --prefer-dist --no-interaction
             DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
+            npm run docs:integrity
             yarn install
             rm -rf .cache build_production
             yarn prod
