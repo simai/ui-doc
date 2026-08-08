@@ -8,8 +8,7 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 !rtags[grid-template-columns sm md lg xl]
 
 
-Модификаторы `grid-col-*` задают количество колонок и и
- размер, формируя базовый шаблон сетки.
+Модификаторы `grid-col-*` задают количество колонок и их размер, формируя базовый шаблон сетки.
 
 ## Таблица классов
 
@@ -40,8 +39,7 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 
 ```html
 <div class="grid grid-col-2 md:grid-col-4">
-  <!-- 2 колонки на мобильны
-, 4 на md и выше -->
+  <!-- 2 колонки на мобильных, 4 на md и выше -->
 </div>
 ```
 ## Playground

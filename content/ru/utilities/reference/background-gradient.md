@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты backgr
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **10**.
+Всего уникальных классов в readable CSS: **10**.
 
 ```text
 bg-gradient-to-b

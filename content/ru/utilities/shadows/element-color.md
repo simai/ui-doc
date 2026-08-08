@@ -9,8 +9,7 @@ description: "Цвет тени для default / hover / active"
 
 
 
-Утилиты задают цвет тени в состояния
- `default`, `hover`, `active`.
+Утилиты задают цвет тени в состояниях `default`, `hover`, `active`.
 
 ## Таблица классов
 

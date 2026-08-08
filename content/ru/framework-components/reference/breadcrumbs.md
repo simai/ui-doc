@@ -20,8 +20,7 @@ Loader-правило: `breadcrumbs`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-breadcrumbs`, `.sf-breadcrumbs-item`, `.sf-breadcrumbs-item--default`, `.sf-breadcrumbs-item--link`, `.sf-breadcrumbs-item-container`, `.sf-icon`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-breadcrumbs--background-color`, `--sf-breadcrumbs--gap`, `--sf-breadcrumbs-item--background-color`, `--sf-breadcrumbs-item--box-shadow`, `--sf-breadcrumbs-item-container--background-color`, `--sf-breadcrumbs-item-container--color`, `--sf-breadcrumbs-item-container--font-family`, `--sf-breadcrumbs-item-container--font-size`, `--sf-breadcrumbs-item-container--font-weight`, `--sf-breadcrumbs-item-container--gap`, `--sf-breadcrumbs-item-container--line-height`, `--sf-font-weight-regular`, `--sf-icon--color`, `--sf-icon--fill`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-on-surface-variant`, `--sf-primary-active`, `--sf-primary-hover`, `--sf-space-1`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-transparent-for-focus`, `--sf-ui-focus`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-breadcrumbs--background-color`, `--sf-breadcrumbs--gap`, `--sf-breadcrumbs-item--background-color`, `--sf-breadcrumbs-item--box-shadow`, `--sf-breadcrumbs-item-container--background-color`, `--sf-breadcrumbs-item-container--color`, `--sf-breadcrumbs-item-container--font-family`, `--sf-breadcrumbs-item-container--font-size`, `--sf-breadcrumbs-item-container--font-weight`, `--sf-breadcrumbs-item-container--gap`, `--sf-breadcrumbs-item-container--line-height`, `--sf-font-weight-regular`, `--sf-icon--color`, `--sf-icon--fill`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-on-surface-variant`, `--sf-primary-active`, `--sf-primary-hover`, `--sf-space-1`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-transparent-for-focus`, `--sf-ui-focus`.
 
 ## Пример и поведенческий API
 

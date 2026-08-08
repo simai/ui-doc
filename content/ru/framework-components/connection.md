@@ -1,15 +1,13 @@
 ---
 title: "Подключение компонентов"
+description: "Автоматическая загрузка обычных компонентов SIMAI Framework."
 ---
 
 # Подключение компонентов
 
-Обычные компоненты на
-одятся в `distr/component`. Подключать и
- CSS и
+Обычные компоненты находятся в `distr/component`. Подключать их CSS и
 JavaScript по одному обычно не нужно: Core обнаруживает селекторы и атрибуты в
-DOM, на
-одит Loader-правило и загружает объявленные ассеты с зависимостями.
+DOM, находит Loader-правило и загружает объявленные ассеты с зависимостями.
 
 ```html
 <link rel="stylesheet" href="/assets/simai-framework/ui/distr/core/css/core.css">
@@ -18,8 +16,7 @@ DOM, на
 </script>
 <script src="/assets/simai-framework/ui/distr/core/js/core.js"></script>
 
-<button class="sf-button sf-button--primary">Со
-ранить</button>
+<button class="sf-button sf-button--primary">Сохранить</button>
 ```
 
 Для явной загрузки используйте имя правила из справочника:

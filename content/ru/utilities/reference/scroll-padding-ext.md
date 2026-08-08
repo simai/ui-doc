@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты scroll
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **901**.
+Всего уникальных классов в readable CSS: **901**.
 
 ```text
 -scroll-p-a0

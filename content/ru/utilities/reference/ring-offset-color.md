@@ -20,8 +20,7 @@ description: "Точный Loader- и CSS-контракт утилиты ring-o
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **100**.
+Всего уникальных классов в readable CSS: **100**.
 
 ```text
 focus:ring-offset-current

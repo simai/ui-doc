@@ -47,8 +47,7 @@ description: "Стиль внешней границы"
 ## Пример использования
 
 ```html
-<!-- Пример разны
- стилей внешней границы -->
+<!-- Пример разных стилей внешней границы -->
 
 <button class="outline-2 outline-solid outline-danger-default outline-offset-2 ...">Кнопка 1 (solid)</button>
 <button class="outline-2 outline-dashed outline-danger-default outline-offset-2 ...">Кнопка 2 (dashed)</button>
@@ -58,12 +57,9 @@ description: "Стиль внешней границы"
 
 ## Адаптивность
 
-Для изменения стиля внешней границы на разны
- размера
- экрана можно использовать префикс контрольной точки:
+Для изменения стиля внешней границы на разных размерах экрана можно использовать префикс контрольной точки:
 
 ```html
-<!-- На экрана
- от Medium и больше внешний стиль границы будет dotted -->
+<!-- На экранах от Medium и больше внешний стиль границы будет dotted -->
 <button class="md:outline-dotted outline-2 outline-solid outline-danger-default outline-offset-2 ...">Адаптивная кнопка</button>
 ```

@@ -20,8 +20,7 @@ Loader-правило: `scrollbar`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-scrollbar`, `.sf-scrollbar__thumb`, `.sf-scrollbar__track`, `.sf-scrollbar__viewport`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-a2`, `--sf-a4`, `--sf-a6`, `--sf-a8`, `--sf-animation`, `--sf-b6`, `--sf-d1`, `--sf-duration-fast`, `--sf-focus`, `--sf-focus-outline-width`, `--sf-icon--fill`, `--sf-on-surface`, `--sf-on-surface-variant`, `--sf-outline`, `--sf-scroll-bg-width`, `--sf-scroll-radius`, `--sf-scroll-thumb-inset`, `--sf-scroll-thumb-size`, `--sf-scrollbar-active-size`, `--sf-scrollbar-hit-size`, `--sf-scrollbar-rest-size`, `--sf-scrollbar-thumb-color`, `--sf-scrollbar-thumb-offset`, `--sf-surface-4`, `--sf-transparent`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-a2`, `--sf-a4`, `--sf-a6`, `--sf-a8`, `--sf-animation`, `--sf-b6`, `--sf-d1`, `--sf-duration-fast`, `--sf-focus`, `--sf-focus-outline-width`, `--sf-icon--fill`, `--sf-on-surface`, `--sf-on-surface-variant`, `--sf-outline`, `--sf-scroll-bg-width`, `--sf-scroll-radius`, `--sf-scroll-thumb-inset`, `--sf-scroll-thumb-size`, `--sf-scrollbar-active-size`, `--sf-scrollbar-hit-size`, `--sf-scrollbar-rest-size`, `--sf-scrollbar-thumb-color`, `--sf-scrollbar-thumb-offset`, `--sf-surface-4`, `--sf-transparent`.
 
 ## Пример и поведенческий API
 

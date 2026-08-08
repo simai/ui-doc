@@ -1,10 +1,11 @@
 ---
 title: "Адаптивная система размеров"
+description: "Архитектура вертикальных размеров SIMAI Framework."
 ---
 
 # Адаптивная система размеров
 
-Simai Framework использует одну primitive scale A–I и semantic-роли, которые
+SIMAI Framework использует одну primitive scale A–I и semantic-роли, которые
 переключают значения между mobile и desktop. Разработчик выбирает роль, а не
 пишет отдельные пиксели для каждого экрана.
 
@@ -22,8 +23,7 @@ Simai Framework использует одну primitive scale A–I и semantic-
 
 ## Root и rem
 
-`1rem` со
-раняет пользовательский browser default. Framework не уменьшает
+`1rem` сохраняет пользовательский browser default. Framework не уменьшает
 корневой размер шрифта на мобильном viewport. Адаптивность задаётся парами
 semantic variables, поэтому повторного масштабирования через `html` нет.
 
@@ -45,10 +45,8 @@ line-height variable.
 control-height = line-height + 2 × block-padding
 ```
 
-Рамка учитывается внутри итоговой высоты. При одинаковы
- size и tightness
-допустимое рас
-ождение между representative controls — не более `0.5 CSS px`.
+Рамка учитывается внутри итоговой высоты. При одинаковых size и tightness
+допустимое расхождение между representative controls — не более `0.5 CSS px`.
 
 ## Что система не обещает
 
@@ -59,12 +57,11 @@ control-height = line-height + 2 × block-padding
 - inline padding и horizontal gap;
 - container width и gutters.
 
-Эти значения можно выбирать из той же primitive scale, но и
- совпадение не
+Эти значения можно выбирать из той же primitive scale, но их совпадение не
 является системным invariant.
 
 ## Куда идти дальше
 
 - Точные значения: `/ru/reference/adaptive-sizing/generated-contract/`.
 - Правила обновления: `/ru/migration/adaptive-sizing-v1/`.
-- Совместимость версий: `/ru/start/version-matrix/`.
+- [Совместимость и порядок обновления](/ru/start/compatibility/).

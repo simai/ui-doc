@@ -1,9 +1,9 @@
 ---
+title: "Переход на вертикальный sizing contract"
 description: "Миграция root, typography и controls без горизонтального rebaseline."
 ---
 
-# Пере
-од на вертикальный sizing contract
+# Переход на вертикальный sizing contract
 
 ## До обновления
 
@@ -27,11 +27,8 @@ description: "Миграция root, typography и controls без горизо�
 ## Важное изменение
 
 Старый код мог рассчитывать, что mobile `rem` меньше desktop `rem`. Теперь
-корневой размер стабилен, а responsive difference на
-одится в semantic
-variables. Прямые `rem`-значения в продуктовы
- стиля
- поэтому нужно проверить
+корневой размер стабилен, а responsive difference находится в semantic
+variables. Прямые `rem`-значения в продуктовых стилях поэтому нужно проверить
 отдельно.
 
 ## Не менять в этой миграции

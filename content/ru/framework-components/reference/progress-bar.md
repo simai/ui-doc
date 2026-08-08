@@ -20,8 +20,7 @@ Loader-правило: `progress-bar`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-progress-bar`, `.sf-progress-bar--size-1`, `.sf-progress-bar--size-2`, `.sf-progress-bar--size-3`, `.sf-progress-bar-main`, `.sf-progress-bar-progress`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-font-weight-regular`, `--sf-on-surface`, `--sf-primary`, `--sf-progress-bar--background-color`, `--sf-progress-bar--color`, `--sf-progress-bar--font-family`, `--sf-progress-bar--font-size`, `--sf-progress-bar--font-weight`, `--sf-progress-bar--gap`, `--sf-progress-bar--line-height`, `--sf-progress-bar-main--background-color`, `--sf-progress-bar-main--border-radius`, `--sf-progress-bar-main--height`, `--sf-progress-bar-progress--background-color`, `--sf-progress-bar-progress--border-radius`, `--sf-radius-1`, `--sf-space-1`, `--sf-surface-container`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-height-2`, `--sf-text-size-1`, `--sf-text-size-2`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-font-weight-regular`, `--sf-on-surface`, `--sf-primary`, `--sf-progress-bar--background-color`, `--sf-progress-bar--color`, `--sf-progress-bar--font-family`, `--sf-progress-bar--font-size`, `--sf-progress-bar--font-weight`, `--sf-progress-bar--gap`, `--sf-progress-bar--line-height`, `--sf-progress-bar-main--background-color`, `--sf-progress-bar-main--border-radius`, `--sf-progress-bar-main--height`, `--sf-progress-bar-progress--background-color`, `--sf-progress-bar-progress--border-radius`, `--sf-radius-1`, `--sf-space-1`, `--sf-surface-container`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-height-2`, `--sf-text-size-1`, `--sf-text-size-2`.
 
 ## Пример и поведенческий API
 

@@ -20,8 +20,7 @@ Loader-правило: `clipboard`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-clipboard`, `.sf-clipboard-1`, `.sf-clipboard-2`, `.sf-clipboard-3`, `.sf-clipboard-surface`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-a8`, `--sf-b0`, `--sf-c0`, `--sf-c2`, `--sf-c8`, `--sf-space-1`, `--sf-surface-container`, `--sf-surface-container-hover`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-a8`, `--sf-b0`, `--sf-c0`, `--sf-c2`, `--sf-c8`, `--sf-space-1`, `--sf-surface-container`, `--sf-surface-container-hover`.
 
 ## Пример и поведенческий API
 

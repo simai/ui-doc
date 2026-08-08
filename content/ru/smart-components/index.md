@@ -6,15 +6,11 @@ description: "Документация 50 Smart Components SIMAI Framework 5.4.0
 # Smart Components
 
 Реестр `5.4.0` содержит **50 Smart Components**: 41 зарегистрирован в Loader,
-ещё 9 экспериментальны
- записей честно отмечены как заблокированные. Для все
-
+ещё 9 экспериментальных записей честно отмечены как заблокированные. Для всех
 50 сформированы страницы с тегами, зависимостями, атрибутами, свойствами,
-методами, событиями и ис
-одными путями.
+методами, событиями и исходными путями.
 
-- [Ар
-итектура и выбор](/ru/smart-components/introduction/)
+- [Архитектура и выбор](/ru/smart-components/introduction/)
 - [Подключение](/ru/smart-components/connection/)
 - [Загрузка и зависимости](/ru/smart-components/lifecycle/)
 - [Каталог и статусы](/ru/smart-components/catalog/)

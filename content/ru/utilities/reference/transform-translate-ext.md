@@ -19,8 +19,7 @@ description: "Точный Loader- и CSS-контракт утилиты transf
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **721**.
+Всего уникальных классов в readable CSS: **721**.
 
 ```text
 -hover:translate-x-a0

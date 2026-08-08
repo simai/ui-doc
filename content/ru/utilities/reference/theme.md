@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты theme 
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **1**.
+Всего уникальных классов в readable CSS: **1**.
 
 ```text
 utilities

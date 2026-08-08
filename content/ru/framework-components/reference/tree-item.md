@@ -24,8 +24,7 @@ Loader-правило: `tree-item`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-icon`, `.sf-tree-item`, `.sf-tree-item-container`, `.sf-tree-item-name`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-icon--color`, `--sf-primary`, `--sf-secondary-transparent-overlay`, `--sf-space-1`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-tree-item-container--gap`, `--sf-tree-item-name--color`, `--sf-tree-item-name--font-size`, `--sf-tree-item-name--line-height`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-icon--color`, `--sf-primary`, `--sf-secondary-transparent-overlay`, `--sf-space-1`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-tree-item-container--gap`, `--sf-tree-item-name--color`, `--sf-tree-item-name--font-size`, `--sf-tree-item-name--line-height`.
 
 ## Пример и поведенческий API
 

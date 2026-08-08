@@ -6,8 +6,7 @@
 - [Размытие элемента (filter-blur)](/en/utilities/filters/filter-blur/)
 - [Яркость элемента (filter-brightness)](/en/utilities/filters/filter-brightness/)
 - [Контрастность элемента (filter-contrast)](/en/utilities/filters/filter-contrast/)
-- [Моно
-ромность элемента (filter-grayscale)](/en/utilities/filters/filter-grayscale/)
+- [Монохромность элемента (filter-grayscale)](/en/utilities/filters/filter-grayscale/)
 - [Вращение оттенка элемента (filter-hue-rotate)](/en/utilities/filters/filter-hue-rotate/)
 - [Инвертирование цвета элемента (filter-invert)](/en/utilities/filters/filter-invert/)
 - [Прозрачность элемента (filter-opacity)](/en/utilities/filters/filter-opacity/)

@@ -20,8 +20,7 @@ Loader-правило: `close`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-close`, `.sf-close--size-1`, `.sf-close--size-2`, `.sf-close--size-3`, `.sf-close--size-4`, `.sf-close--size-5`, `.sf-close--size-6`, `.sf-close--size-7`, `.sf-close-icon`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-a1`, `--sf-a2`, `--sf-a3`, `--sf-a4`, `--sf-a6`, `--sf-a8`, `--sf-b0`, `--sf-close--background-color`, `--sf-close--padding-bottom`, `--sf-close--padding-inline-end`, `--sf-close--padding-inline-start`, `--sf-close--padding-top`, `--sf-close-icon---webkit-mask-image`, `--sf-close-icon---webkit-mask-repeat`, `--sf-close-icon---webkit-mask-size`, `--sf-close-icon--background-color`, `--sf-close-icon--border-color`, `--sf-close-icon--font-size`, `--sf-close-icon--height`, `--sf-close-icon--mask-image`, `--sf-close-icon--mask-repeat`, `--sf-close-icon--mask-size`, `--sf-close-icon--width`, `--sf-outline`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`, `--sf-text-size-4`, `--sf-text-size-5`, `--sf-text-size-6`, `--sf-text-size-7`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-a1`, `--sf-a2`, `--sf-a3`, `--sf-a4`, `--sf-a6`, `--sf-a8`, `--sf-b0`, `--sf-close--background-color`, `--sf-close--padding-bottom`, `--sf-close--padding-inline-end`, `--sf-close--padding-inline-start`, `--sf-close--padding-top`, `--sf-close-icon---webkit-mask-image`, `--sf-close-icon---webkit-mask-repeat`, `--sf-close-icon---webkit-mask-size`, `--sf-close-icon--background-color`, `--sf-close-icon--border-color`, `--sf-close-icon--font-size`, `--sf-close-icon--height`, `--sf-close-icon--mask-image`, `--sf-close-icon--mask-repeat`, `--sf-close-icon--mask-size`, `--sf-close-icon--width`, `--sf-outline`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`, `--sf-text-size-4`, `--sf-text-size-5`, `--sf-text-size-6`, `--sf-text-size-7`.
 
 ## Пример и поведенческий API
 

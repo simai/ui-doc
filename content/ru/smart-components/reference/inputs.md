@@ -68,8 +68,7 @@ Loader-статус: `registered`. Loader-правило: `cl-inputs`.
 
 ## События
 
-Все события всплывают (`bubbles`) и про
-одят границу Shadow DOM (`composed`).
+Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
 
 | Событие | Когда возникает |
 |:---|:---|

@@ -10,6 +10,9 @@ The migration was performed from the consolidated historical branches with
 contract, safely displays legacy raw HTML as text, relocates Framework component
 pages away from Docara's reserved `/components/` catalog, flattens unsupported
 route depth, and records compatible redirects in `redirects.json`.
+All PCRE line splitting runs explicitly in UTF-8 mode. A permanent fixture
+guards against interpreting the second byte of Cyrillic `х` as a legacy NEL
+line separator.
 
 Rollback is available from the pre-migration Git bundle and dirty-worktree
 backup retained outside the repository. No live site was modified by this

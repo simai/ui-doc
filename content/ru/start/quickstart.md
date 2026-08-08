@@ -31,7 +31,7 @@ description: "Минимальная страница на SIMAI Framework."
 Префиксы условий ставятся перед утилитой:
 
 ```html
-<div class="flex-column md:flex-row gap-2 md:gap-4">
+<div class="flex-col md:flex-row gap-2 md:gap-4">
     <button class="p-2 bg-primary color-on-primary hover:bg-primary">
         Действие
     </button>
@@ -39,6 +39,5 @@ description: "Минимальная страница на SIMAI Framework."
 ```
 
 `md:` применяет правило начиная с контрольной точки `md`, а `hover:` — при
-наведении. Полный синтаксис описан в [Основа
-](/ru/fundamentals/), все классы
+наведении. Полный синтаксис описан в [Основах](/ru/fundamentals/), все классы
 сгруппированы в [каталоге утилит](/ru/utilities/).

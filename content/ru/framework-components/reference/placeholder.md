@@ -20,8 +20,7 @@ Loader-правило: `placeholder`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-placeholder`, `.sf-placeholder--column`, `.sf-placeholder--row`, `.sf-placeholder-right`, `.sf-placeholder-top`, `.sf-placeholder-top-text`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-font-weight-regular`, `--sf-heading--family`, `--sf-heading--weight`, `--sf-on-surface`, `--sf-on-surface-variant`, `--sf-placeholder--background-color`, `--sf-placeholder--gap`, `--sf-placeholder-right--background-color`, `--sf-placeholder-right--gap`, `--sf-placeholder-top--background-color`, `--sf-placeholder-top--gap`, `--sf-placeholder-top-text--color`, `--sf-placeholder-top-text--font-family`, `--sf-placeholder-top-text--font-size`, `--sf-placeholder-top-text--font-weight`, `--sf-placeholder-top-text--line-height`, `--sf-space-1`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-title-height-2`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-font-weight-regular`, `--sf-heading--family`, `--sf-heading--weight`, `--sf-on-surface`, `--sf-on-surface-variant`, `--sf-placeholder--background-color`, `--sf-placeholder--gap`, `--sf-placeholder-right--background-color`, `--sf-placeholder-right--gap`, `--sf-placeholder-top--background-color`, `--sf-placeholder-top--gap`, `--sf-placeholder-top-text--color`, `--sf-placeholder-top-text--font-family`, `--sf-placeholder-top-text--font-size`, `--sf-placeholder-top-text--font-weight`, `--sf-placeholder-top-text--line-height`, `--sf-space-1`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-title-height-2`.
 
 ## Пример и поведенческий API
 

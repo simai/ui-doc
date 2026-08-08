@@ -27,17 +27,14 @@ description: "Цвет внешней границы"
 ## Описание
 
 Адаптивный модификатор `outline-color` позволяет задать цвет внешней границы элемента в зависимости от размера области
-просмотра. При использовании эти
- классов, внешний контур (`outline`) будет окрашен в указанный цвет.
+просмотра. При использовании этих классов, внешний контур (`outline`) будет окрашен в указанный цвет.
 
 - `outline-transparent` — делает внешнюю границу прозрачной.
 - `outline-current` — использует текущий цвет текста, заданный свойством `color`.
 - `outline-outline` | `outline-outline-variant` — применяют соответствующие цвета ролей фреймворка.
 - `outline-primary` | `outline-secondary` | `outline-tertiary` | `outline-error` | `outline-warning` |
-  `outline-success` — применяют системные цвета согласно и
- ролям (основной, вторичный, третичный, для ошибок,
-  предупреждений или успе
-ов).
+  `outline-success` — применяют системные цвета согласно их ролям (основной, вторичный, третичный, для ошибок,
+  предупреждений или успехов).
 
 ## Синтаксис
 
@@ -52,8 +49,7 @@ description: "Цвет внешней границы"
 ## Пример использования
 
 ```html
-<!-- Пример разны
- цветов внешней границы -->
+<!-- Пример разных цветов внешней границы -->
 <button class="outline-2 outline-solid outline-danger-default outline-offset-2 outline-primary ...">Кнопка 1</button>
 <button class="outline-2 outline-solid outline-primary outline-offset-2 outline-secondary ...">Кнопка 2</button>
 <button class="outline-2 outline-solid outline-warning outline-offset-2 outline-success ...">Кнопка 3</button>
@@ -61,12 +57,9 @@ description: "Цвет внешней границы"
 
 ## Адаптивность
 
-Для изменения цвета внешней границы на разны
- размера
- экрана можно использовать префикс контрольной точки:
+Для изменения цвета внешней границы на разных размерах экрана можно использовать префикс контрольной точки:
 
 ```html
-<!-- На экрана
- от Medium и больше цвет внешней границы будет tertiary -->
+<!-- На экранах от Medium и больше цвет внешней границы будет tertiary -->
 <button class="md:outline-tertiary outline-2 outline-solid outline-offset-2 outline-primary ...">Адаптивная кнопка</button>
 ```

@@ -20,8 +20,7 @@ Loader-правило: `doc`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-playground`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-c0`, `--sf-color--info-tonal`, `--sf-color--text-secondary`, `--sf-color--text-tertiary`, `--sf-error`, `--sf-mono`, `--sf-space-1`, `--sf-space-4`, `--sf-stripes`, `--sf-surface-0`, `--sf-surface-1`, `--sf-surface-inverse`, `--sf-surface-overlay`, `--sf-text--space-bottom`, `--sf-text-height-2`, `--sf-text-size-1`, `--sf-text-size-2`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-c0`, `--sf-color--info-tonal`, `--sf-color--text-secondary`, `--sf-color--text-tertiary`, `--sf-error`, `--sf-mono`, `--sf-space-1`, `--sf-space-4`, `--sf-stripes`, `--sf-surface-0`, `--sf-surface-1`, `--sf-surface-inverse`, `--sf-surface-overlay`, `--sf-text--space-bottom`, `--sf-text-height-2`, `--sf-text-size-1`, `--sf-text-size-2`.
 
 ## Пример и поведенческий API
 

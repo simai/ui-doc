@@ -4,10 +4,8 @@
 визуальные варианты, пять размеров, иконки, состояния, сегменты и JavaScript API
 для программного создания кнопок.
 
-Используйте нативный `&lt;button&gt;` для команды: со
-ранить, отправить, подтвердить,
-отменить или открыть интерфейс. Для пере
-ода на другую страницу используйте
+Используйте нативный `&lt;button&gt;` для команды: сохранить, отправить, подтвердить,
+отменить или открыть интерфейс. Для перехода на другую страницу используйте
 `&lt;a&gt;`, а для действия без видимой подписи — компонент `icon-buttons`.
 
 ## Быстрый старт
@@ -20,8 +18,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 <button
   type="button"
   class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-  <span class="sf-button-text-container">Со
-ранить</span>
+  <span class="sf-button-text-container">Сохранить</span>
 </button>
 ```
 
@@ -32,8 +29,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 | `&lt;button&gt;` | Нативная семантика, клавиатурное управление и атрибуты формы. |
 | `sf-button` | Обязательный базовый класс и правило автоматического подключения. |
 | `sf-button--default` | Визуальный тип кнопки. |
-| `sf-button--primary` | Цветовая с
-ема. |
+| `sf-button--primary` | Цветовая схема. |
 | `sf-button--size-1` | Размер. |
 | `sf-button-text-container` | Контейнер текста с типографикой и отступами компонента. |
 
@@ -73,20 +69,17 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 ```html
 <button type="button"
   class="sf-button sf-button--tonal sf-button--secondary sf-button--size-1">
-  <span class="sf-button-text-container">Со
-ранить черновик</span>
+  <span class="sf-button-text-container">Сохранить черновик</span>
 </button>
 ```
 
 `secondary` поддерживается tonal-вариантом. Для `default`, `outline` и `link`
-используйте с
-емы `primary` или `on-surface`.
+используйте схемы `primary` или `on-surface`.
 
 ## Размеры
 
 Компонент поставляется с пятью размерами. Размер `1` — основной для большинства
-интерфейсов; дробные размеры под
-одят плотным панелям, а `2` и `3` — крупным
+интерфейсов; дробные размеры подходят плотным панелям, а `2` и `3` — крупным
 акцентным действиям.
 
 &lt;div class="flex flex-wrap gap-2 items-cross-center"&gt;
@@ -110,8 +103,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 ## Иконки
 
 Иконка задаётся элементом `&lt;i class="sf-icon"&gt;имя_иконки&lt;/i&gt;`. Она может
-располагаться до текста, после него или с обеи
- сторон.
+располагаться до текста, после него или с обеих сторон.
 
 &lt;div class="flex flex-wrap gap-2 items-cross-center"&gt;
   &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;
@@ -182,11 +174,9 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 </div>
 ```
 
-Сегменты отвечают только за оформление. Логику выбора и син
-ронизацию
+Сегменты отвечают только за оформление. Логику выбора и синхронизацию
 `aria-pressed` приложение реализует самостоятельно. Если пользователь выбирает
-одно значение формы, используйте семантически под
-одящую группу radio.
+одно значение формы, используйте семантически подходящую группу radio.
 
 ## Состояния
 
@@ -194,8 +184,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
   &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;Обычная&lt;/span&gt;&lt;/button&gt;
   &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 active" aria-pressed="true"&gt;&lt;span class="sf-button-text-container"&gt;Активная&lt;/span&gt;&lt;/button&gt;
   &lt;button type="button" disabled class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;Недоступна&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" disabled aria-busy="true" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading"&gt;&lt;span class="sf-button-text-container"&gt;Со
-ранение&lt;/span&gt;&lt;/button&gt;
+  &lt;button type="button" disabled aria-busy="true" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading"&gt;&lt;span class="sf-button-text-container"&gt;Сохранение&lt;/span&gt;&lt;/button&gt;
 &lt;/div&gt;
 
 | Состояние | Как задаётся | Примечание |
@@ -210,8 +199,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 {.table}
 
 При ручной разметке состояния загрузки добавляйте оба класса. `loading`
-включает индикатор, а `sf-button-state-loading` выбирает его цвета для с
-емы.
+включает индикатор, а `sf-button-state-loading` выбирает его цвета для схемы.
 Если повторный запуск операции недопустим, одновременно задавайте `disabled`.
 
 ```html
@@ -221,8 +209,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
   aria-busy="true"
   class="sf-button sf-button--default sf-button--primary sf-button--size-1
          loading sf-button-state-loading">
-  <span class="sf-button-text-container">Со
-ранение</span>
+  <span class="sf-button-text-container">Сохранение</span>
 </button>
 ```
 
@@ -231,14 +218,12 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 
 ## Кнопка, ссылка и форма
 
-- Команда выполняется через `&lt;button&gt;`; пере
-од — через `&lt;a href="…"&gt;`.
+- Команда выполняется через `&lt;button&gt;`; переход — через `&lt;a href="…"&gt;`.
 - У кнопки вне отправки формы задавайте `type="button"`.
 - Для отправки используйте `type="submit"`; для сброса — `type="reset"`.
 - Не имитируйте disabled-состояние только классом `disabled`: используйте
   нативный атрибут `disabled`.
-- Текст кнопки должен описывать результат: «Со
-ранить изменения», а не «Да».
+- Текст кнопки должен описывать результат: «Сохранить изменения», а не «Да».
 
 JavaScript-конструктор безопасно задаёт `type="button"`, если `type` не передан
 через `attrs`. В ручной HTML-разметке это нужно сделать самостоятельно.
@@ -258,8 +243,7 @@ JavaScript-конструктор безопасно задаёт `type="button"
     const component = new Buttons({
       id: 'save-action',
       param: {
-        text: 'Со
-ранить',
+        text: 'Сохранить',
         icon: 'save',
         iconPosition: 'start',
         size: '1',
@@ -268,8 +252,7 @@ JavaScript-конструктор безопасно задаёт `type="button"
       },
       attrs: {
         type: 'button',
-        'aria-label': 'Со
-ранить изменения'
+        'aria-label': 'Сохранить изменения'
       }
     });
 
@@ -288,8 +271,7 @@ JavaScript-конструктор безопасно задаёт `type="button"
 | `text` | `''` | Видимая подпись. |
 | `size` | `'1'` | `'1/3'`, `'1/2'`, `'1'`, `'2'`, `'3'`. |
 | `type` | `'default'` | `'default'`, `'tonal'`, `'outline'`, `'link'`. |
-| `scheme` | `'primary'` | `'primary'`, `'secondary'`, `'on-surface'` с учётом поддерживаемы
- сочетаний. |
+| `scheme` | `'primary'` | `'primary'`, `'secondary'`, `'on-surface'` с учётом поддерживаемых сочетаний. |
 | `icon` | — | Имя одной иконки; позиция задаётся `iconPosition`. |
 | `iconPosition` | `'start'` | `'start'` / `'left'` или `'end'` / `'right'`. |
 | `iconLeft` | — | Иконка в начале; имеет приоритет над `icon`. |
@@ -303,8 +285,7 @@ JavaScript-конструктор безопасно задаёт `type="button"
 {.table}
 
 `attrs` передаёт атрибуты на `&lt;button&gt;`. `class` и `className` добавляют классы,
-остальные ключи становятся HTML-атрибутами. `id` вер
-него уровня становится
+остальные ключи становятся HTML-атрибутами. `id` верхнего уровня становится
 `id` кнопки.
 
 `utilities` принимает строку, массив классов или объект с областями `button`,
@@ -312,8 +293,7 @@ JavaScript-конструктор безопасно задаёт `type="button"
 
 ```js
 param: {
-  text: 'Со
-ранить',
+  text: 'Сохранить',
   utilities: {
     button: ['w-full'],
     icon: ['shrink-0'],
@@ -367,23 +347,18 @@ window.addEventListener('Buttons:render', (event) => {
 ```
 
 Цветовые роли и состояния уже определены темой. Не фиксируйте hex-цвета внутри
-компонента, если нужный результат можно получить выбором типа и с
-емы.
+компонента, если нужный результат можно получить выбором типа и схемы.
 
 ## Доступность
 
-- Со
-раняйте нативный `&lt;button&gt;` и доступное имя.
+- Сохраняйте нативный `&lt;button&gt;` и доступное имя.
 - Не удаляйте видимый фокус и проверяйте управление клавишами `Tab`, `Enter` и
   `Space`.
 - Декоративным иконкам задавайте `aria-hidden="true"`.
-- Для переключаемого действия син
-ронизируйте `aria-pressed` с состоянием.
+- Для переключаемого действия синхронизируйте `aria-pressed` с состоянием.
 - При загрузке используйте `aria-busy="true"`; важный результат операции
   сообщайте отдельно через live region приложения.
-- Проверяйте контраст все
- используемы
- сочетаний на реальном фоне.
+- Проверяйте контраст всех используемых сочетаний на реальном фоне.
 - Не используйте один цвет как единственный способ различить действия.
 
 ## Что проверить перед выпуском

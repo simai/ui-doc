@@ -26,8 +26,7 @@ Loader-правило: `tree`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-icon`, `.sf-icon-button`, `.sf-tree`, `.sf-tree-chevron`, `.sf-tree-item`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-icon-button--background-color`, `--sf-icon-button--padding-bottom`, `--sf-icon-button--padding-inline-end`, `--sf-icon-button--padding-inline-start`, `--sf-icon-button--padding-top`, `--sf-icon-size-3`, `--sf-space-1`, `--sf-space-3`, `--sf-transparent`, `--sf-tree--gap`, `--sf-tree--padding-bottom`, `--sf-tree--padding-inline-end`, `--sf-tree--padding-inline-start`, `--sf-tree--padding-top`, `--sf-tree-item--gap`, `--sf-tree-item--nested-padding-inline-start`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-icon-button--background-color`, `--sf-icon-button--padding-bottom`, `--sf-icon-button--padding-inline-end`, `--sf-icon-button--padding-inline-start`, `--sf-icon-button--padding-top`, `--sf-icon-size-3`, `--sf-space-1`, `--sf-space-3`, `--sf-transparent`, `--sf-tree--gap`, `--sf-tree--padding-bottom`, `--sf-tree--padding-inline-end`, `--sf-tree--padding-inline-start`, `--sf-tree--padding-top`, `--sf-tree-item--gap`, `--sf-tree-item--nested-padding-inline-start`.
 
 ## Пример и поведенческий API
 

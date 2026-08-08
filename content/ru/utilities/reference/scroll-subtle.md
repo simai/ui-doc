@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты scroll
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **2**.
+Всего уникальных классов в readable CSS: **2**.
 
 ```text
 scroll-subtle

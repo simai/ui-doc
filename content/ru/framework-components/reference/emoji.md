@@ -20,8 +20,7 @@ Loader-правило: `emoji`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-emoji`, `.sf-emoji--size-1`, `.sf-emoji--size-2`, `.sf-emoji--size-3`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-emoji--font-family`, `--sf-emoji--font-size`, `--sf-emoji--line-height`, `--sf-text-height-1`, `--sf-text-height-2`, `--sf-text-height-3`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-emoji--font-family`, `--sf-emoji--font-size`, `--sf-emoji--line-height`, `--sf-text-height-1`, `--sf-text-height-2`, `--sf-text-height-3`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`.
 
 ## Пример и поведенческий API
 

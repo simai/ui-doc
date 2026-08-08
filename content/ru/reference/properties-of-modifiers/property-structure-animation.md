@@ -5,11 +5,7 @@ description: "Анимация (animation)"
 
 # Анимация (animation)
 
-* Свойство пере
-ода (transition-property).
-* Продолжительность пере
-ода (transition-duration).
-* Функция пере
-ода (transition-timing-function).
-* Задержка пере
-ода (transition-delay).  
+* Свойство перехода (transition-property).
+* Продолжительность перехода (transition-duration).
+* Функция перехода (transition-timing-function).
+* Задержка перехода (transition-delay).

@@ -20,8 +20,7 @@ Loader-правило: `accordion`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-accordion`, `.sf-accordion-content`, `.sf-accordion-title`, `.sf-accordion-wrap`, `.sf-icon`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-accordion--background-color`, `--sf-accordion-title--color`, `--sf-font-weight-medium`, `--sf-font-weight-regular`, `--sf-icon--color`, `--sf-icon--fill`, `--sf-on-primary`, `--sf-on-primary-container`, `--sf-primary`, `--sf-primary-container`, `--sf-radius-1`, `--sf-space-1`, `--sf-space-3`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-height-2`, `--sf-text-size-1`, `--sf-text-size-2`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-accordion--background-color`, `--sf-accordion-title--color`, `--sf-font-weight-medium`, `--sf-font-weight-regular`, `--sf-icon--color`, `--sf-icon--fill`, `--sf-on-primary`, `--sf-on-primary-container`, `--sf-primary`, `--sf-primary-container`, `--sf-radius-1`, `--sf-space-1`, `--sf-space-3`, `--sf-text--family`, `--sf-text-height-1`, `--sf-text-height-2`, `--sf-text-size-1`, `--sf-text-size-2`.
 
 ## Пример и поведенческий API
 

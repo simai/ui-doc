@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты header
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **3**.
+Всего уникальных классов в readable CSS: **3**.
 
 ```text
 base

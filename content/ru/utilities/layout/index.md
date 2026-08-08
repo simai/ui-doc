@@ -6,8 +6,7 @@
 - [Соотношение сторон (Aspect Ratio)](/ru/utilities/layout/aspect-ratio/)
 - [Оформление элемента, разбитого на несколько строк (box-decoration-break)](/ru/utilities/layout/box-decoration-break/)
 - [Метод расчёта размера элемента (box-sizing)](/ru/utilities/layout/box-sizing/)
-- [Перенос после плавающи
- элементов (clear)](/ru/utilities/layout/clear/)
+- [Перенос после плавающих элементов (clear)](/ru/utilities/layout/clear/)
 - [Контейнер (container)](/ru/utilities/layout/container/)
 - [Метод отображения элемента (display)](/ru/utilities/layout/display/)
 - [Позиция элемента (element-position)](/ru/utilities/layout/element-position/)

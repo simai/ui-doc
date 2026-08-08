@@ -20,8 +20,7 @@ description: "Точный Loader- и CSS-контракт утилиты ring-w
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **16**.
+Всего уникальных классов в readable CSS: **16**.
 
 ```text
 focus:ring-0

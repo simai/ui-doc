@@ -12,10 +12,8 @@ description: "Цвет полос"
 - `stripe-transparent` для прозрачного цвета
 - `stripe-current` для цвета, заданного свойством `color`
 - `stripe-inherit` для наследования цвета от родителя
-- `stripe-surface-transparent-overlay` для прозрачного наложения на основную повер
-ность
-- `stripe-on-surface` для цвета текста на повер
-ности
+- `stripe-surface-transparent-overlay` для прозрачного наложения на основную поверхность
+- `stripe-on-surface` для цвета текста на поверхности
 - `stripe-primary` для основного (primary) цвета
 - `stripe-primary-container` для основного цвета контейнера
 - `stripe-secondary` для вторичного (secondary) цвета

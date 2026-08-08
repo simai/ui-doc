@@ -3,8 +3,7 @@
 Утилиты категории Преобразования помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
 
 ## Материалы раздела
-- [Ис
-одные координаты (transform-origin)](/en/utilities/transform/transform-origin/)
+- [Исходные координаты (transform-origin)](/en/utilities/transform/transform-origin/)
 - [Вращение (transform-rotate)](/en/utilities/transform/transform-rotate/)
 - [Масштабирование (transform-scale)](/en/utilities/transform/transform-scale/)
 - [Наклон (transform-skew)](/en/utilities/transform/transform-skew/)

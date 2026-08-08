@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты mix-bl
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **19**.
+Всего уникальных классов в readable CSS: **19**.
 
 ```text
 mix-blend-color

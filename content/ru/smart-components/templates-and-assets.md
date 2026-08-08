@@ -6,8 +6,7 @@ description: "Встроенные и внешние шаблоны Smart Compon
 # Шаблоны и ассеты Smart Components
 
 Обычный Smart-компонент поставляется с JavaScript и встроенным шаблоном
-`smart/&lt;name&gt;/template/default.js`. Наличие собственного CSS и дополнительны
-
+`smart/&lt;name&gt;/template/default.js`. Наличие собственного CSS и дополнительных
 файлов определяется Loader-правилом конкретной записи.
 
 ## Внешний шаблон

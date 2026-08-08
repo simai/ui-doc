@@ -22,7 +22,7 @@ description: "Primary"
 | `--sf-primary-60`          | #488fff                                                                  |
 | `--sf-primary-50`          | #0073ed                                                                  |
 | `--sf-primary-50--alfa-4`  | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-primary-50`) 4%);  |
-| `--sf-primary-50--alfa-8`  | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-primary-50`) 8%);  |
+| `--sf-primary-50--alfa-12`  | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-primary-50`) 8%);  |
 | `--sf-primary-50--alfa-12` | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-primary-50`) 12%); |
 | `--sf-primary-50--alfa-24` | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-primary-50`) 24%); |
 | `--sf-primary-40`          | #005bbe                                                                  |

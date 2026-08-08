@@ -4,8 +4,7 @@
 
 ## Материалы раздела
 - [Выравнивание содержимого по поперечной оси (align-content)](/ru/utilities/grid-and-flexbox-utilities/align-content/)
-- [Выравнивание каждого элемента в ячейка
- по поперечной оси (align-items)](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+- [Выравнивание каждого элемента в ячейках по поперечной оси (align-items)](/ru/utilities/grid-and-flexbox-utilities/align-items/)
 - [Выравнивание отдельного элемента по поперечной оси (align-self)](/ru/utilities/grid-and-flexbox-utilities/align-self/)
 - [Одновременное выравнивание по двум осям (flex-align)](/ru/utilities/grid-and-flexbox-utilities/flex-align/)
 - [Промежутки между элементами (gap)](/ru/utilities/grid-and-flexbox-utilities/gap/)

@@ -16,8 +16,7 @@ Core и Smart-ассеты публикуются двумя каталогам�
 </script>
 <script src="/assets/simai-framework/ui/distr/core/js/core.js"></script>
 
-<sf-button text="Со
-ранить" scheme="primary"></sf-button>
+<sf-button text="Сохранить" scheme="primary"></sf-button>
 ```
 
 Loader распознаёт тег `&lt;sf-button&gt;`, применяет правило `cl-buttons`, подключает
@@ -25,8 +24,7 @@ Loader распознаёт тег `&lt;sf-button&gt;`, применяет пр�
 Для другого элемента используйте тег и правило с его reference-страницы.
 
 Элементы со статусом «заблокирован» не имеют Loader-правила и не считаются
-штатно подключаемыми. Не об
-одите этот статус ручным подключением в production:
+штатно подключаемыми. Не обходите этот статус ручным подключением в production:
 сначала правило и зависимости должны появиться в согласованной поставке.
 
 После загрузки проверьте Network и Console, регистрацию custom element,

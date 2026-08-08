@@ -22,8 +22,7 @@ description: "Точный Loader- и CSS-контракт утилиты max-he
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **451**.
+Всего уникальных классов в readable CSS: **451**.
 
 ```text
 lg:max-h-a0

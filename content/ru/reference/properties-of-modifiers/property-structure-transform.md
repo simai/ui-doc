@@ -9,5 +9,4 @@ description: "Преобразования (transform)"
 * Вращение (transform-rotate).
 * Смещение (transform-translate).
 * Наклон (transform-skew).
-* Ис
-одные координаты (transform-origin).
+* Исходные координаты (transform-origin).

@@ -6,8 +6,7 @@
 - [Макет](/en/utilities/layout/) — базовое позиционирование и отображение элементов.
 - [Разрыв макета](/en/utilities/layout-break/) — управление колонками и переносами.
 - [Объекты](/en/utilities/objects/) — выравнивание и подгонка медиа.
-- [Размеры](/en/utilities/sizes/) — ширина, высота и и
- ограничения.
+- [Размеры](/en/utilities/sizes/) — ширина, высота и их ограничения.
 - [Отступы](/en/utilities/indents/) — margin, padding и пространственные модификаторы.
 - [Сетка](/en/utilities/grid/) — grid-шаблоны и размещение ячеек.
 - [Флексбоксы](/en/utilities/flex/) — направление, рост/сжатие и wrap.
@@ -18,14 +17,11 @@
 - [Таблицы](/en/utilities/tables/) — оформление таблиц и ячеек.
 - [SVG](/en/utilities/svg/) — заливки, обводки и размеры SVG.
 - [Граница](/en/utilities/border/) — ширина, стиль и радиусы.
-- [Разделитель](/en/utilities/divider/) — стили горизонтальны
-/вертикальны
- линий.
+- [Разделитель](/en/utilities/divider/) — стили горизонтальных/вертикальных линий.
 - [Внешняя граница](/en/utilities/outline/) — outline для фокуса и акцента.
 - [Фоновый цвет](/en/utilities/background-color/) — базовые цветовые модификаторы.
 - [Фоновое изображение](/en/utilities/background-image/) — позиция, повторение, размер.
-- [Градиент](/en/utilities/background-gradient/) — типы и параметры фоновы
- градиентов.
+- [Градиент](/en/utilities/background-gradient/) — типы и параметры фоновых градиентов.
 - [Маска](/en/utilities/mask/) — clip, repeat и позиционирование масок.
 - [Тени](/en/utilities/shadows/) — тени элементов и капельные тени.
 - [Фильтры элемента](/en/utilities/filters/) — blur, hue-rotate и другие CSS-фильтры.
@@ -36,8 +32,7 @@
 - [Формы](/en/utilities/forms/) — состояние полей и вспомогательные свойства.
 - [Интерактивность](/en/utilities/interactivity/) — курсоры, user-select, touch-action.
 - [Печать](/en/utilities/print/) — управление отображением в режиме печати.
-- [Полосы](/en/utilities/stripes/) — штри
-овка и фоновые полосы.
+- [Полосы](/en/utilities/stripes/) — штриховка и фоновые полосы.
 
 ## Часто используемые
 - [Макет](/en/utilities/layout/)

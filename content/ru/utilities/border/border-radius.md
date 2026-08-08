@@ -9,9 +9,7 @@ description: "Скругление границы"
 
 
 С помощью модификаторов радиуса вы можете задавать скругление для всего элемента,
-отдельны
- сторон и отдельны
- углов.
+отдельных сторон и отдельных углов.
 
 ## Размеры радиуса
 
@@ -19,31 +17,26 @@ description: "Скругление границы"
 
 Шкала задаёт радиусы от прямого угла до полностью круглой формы:
 
-!С
-ема размеров радиуса SIMAI Framework
+!Схема размеров радиуса SIMAI Framework
 
 ## Базовые классы
 
 | Класс | Значение |
 |:--|:--|
 | `.radius-{size}` | `border-radius: var(--sf-radius-*)` |
-| `.radius-top-{size}` | вер
-ние углы |
+| `.radius-top-{size}` | верхние углы |
 | `.radius-bottom-{size}` | нижние углы |
 | `.radius-inline-start-{size}` | углы по стороне `inline-start` |
 | `.radius-inline-end-{size}` | углы по стороне `inline-end` |
-| `.radius-top-inline-start-{size}` | вер
-ний `inline-start` угол |
-| `.radius-top-inline-end-{size}` | вер
-ний `inline-end` угол |
+| `.radius-top-inline-start-{size}` | верхний `inline-start` угол |
+| `.radius-top-inline-end-{size}` | верхний `inline-end` угол |
 | `.radius-bottom-inline-start-{size}` | нижний `inline-start` угол |
 | `.radius-bottom-inline-end-{size}` | нижний `inline-end` угол |
 {.table}
 
 ## Синтаксис
 
-- `{модификатор}` — применяет стиль для все
- размеров экрана.
+- `{модификатор}` — применяет стиль для всех размеров экрана.
 - `{контрольная точка}:{модификатор}` — применяет стиль с брейкпоинта (`sm`, `md`, `lg`, `xl`), например: `md:radius-2`.
 
 ## Пример

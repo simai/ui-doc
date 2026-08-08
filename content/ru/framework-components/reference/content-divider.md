@@ -20,8 +20,7 @@ Loader-правило: `contentDivider`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-divider`, `.sf-divider-borders`, `.sf-divider-button`, `.sf-divider-button--left`, `.sf-divider-button--right`, `.sf-divider-button--solo`, `.sf-divider-button-square--left`, `.sf-divider-button-square--right`, `.sf-divider-buttons`, `.sf-divider-content`, `.sf-divider-content--bold`, `.sf-divider-content--small`, `.sf-divider-content-border`, `.sf-divider-horizontal`, `.sf-icon`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-a1`, `--sf-c0`, `--sf-c2`, `--sf-d0`, `--sf-divider--background-color`, `--sf-divider--border-color`, `--sf-divider-borders--border-color`, `--sf-divider-content--background-color`, `--sf-divider-content--color`, `--sf-divider-content--font-size`, `--sf-divider-content--padding`, `--sf-icon--fill`, `--sf-on-surface`, `--sf-on-surface-variant`, `--sf-outline`, `--sf-outline-variant`, `--sf-radius-1`, `--sf-radius-3`, `--sf-space-1`, `--sf-surface`, `--sf-surface-0`, `--sf-text--font-weight-5`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-a1`, `--sf-c0`, `--sf-c2`, `--sf-d0`, `--sf-divider--background-color`, `--sf-divider--border-color`, `--sf-divider-borders--border-color`, `--sf-divider-content--background-color`, `--sf-divider-content--color`, `--sf-divider-content--font-size`, `--sf-divider-content--padding`, `--sf-icon--fill`, `--sf-on-surface`, `--sf-on-surface-variant`, `--sf-outline`, `--sf-outline-variant`, `--sf-radius-1`, `--sf-radius-3`, `--sf-space-1`, `--sf-surface`, `--sf-surface-0`, `--sf-text--font-weight-5`, `--sf-text-height-1`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`.
 
 ## Пример и поведенческий API
 

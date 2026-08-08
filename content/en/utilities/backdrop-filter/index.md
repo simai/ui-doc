@@ -5,8 +5,7 @@
 ## Материалы раздела
 - [Размытие фона элемента (backdrop-blur)](/en/utilities/backdrop-filter/backdrop-blur/)
 - [Контрастность фона элемента (backdrop-contrast)](/en/utilities/backdrop-filter/backdrop-contrast/)
-- [Фон в оттенка
- серого элемента (backdrop-grayscale)](/en/utilities/backdrop-filter/backdrop-grayscale/)
+- [Фон в оттенках серого элемента (backdrop-grayscale)](/en/utilities/backdrop-filter/backdrop-grayscale/)
 - [Вращение оттенка фона элемента (backdrop-hue-rotate)](/en/utilities/backdrop-filter/backdrop-hue-rotate/)
 - [Инвертирование цвета фона элемента (backdrop-invert)](/en/utilities/backdrop-filter/backdrop-invert/)
 - [Прозрачность фона элемента (backdrop-opacity)](/en/utilities/backdrop-filter/backdrop-opacity/)

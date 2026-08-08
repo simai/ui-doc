@@ -18,8 +18,7 @@ description: "Точный Loader- и CSS-контракт утилиты border
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **37**.
+Всего уникальных классов в readable CSS: **37**.
 
 ```text
 border-spacing-0

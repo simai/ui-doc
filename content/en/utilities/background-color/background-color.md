@@ -131,8 +131,7 @@ description: "Цвет фона"
 |:-----------------------------------------------------------|:-----------------------|
 | .bg-white                                                  | .bg-surface-0          |
 | .bg-black                                                  | .bg-surface-inverse    |
-| .bg-gray-1, .bg-gray-2, .bg-gray-3 для отдельны
- элементов | .bg-surface-container  |
+| .bg-gray-1, .bg-gray-2, .bg-gray-3 для отдельных элементов | .bg-surface-container  |
 | .bg-gray-6, .bg-gray-7, .bg-gray-8, .bg-gray-9             | .bg-surface-inverse    |
 | .bg-red-1, .bg-red-2, .bg-red-3                            | .bg-error-container    |
 | .bg-red-4 ... .bg-red-9                                    | .bg-error              |

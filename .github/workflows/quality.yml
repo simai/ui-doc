@@ -20,6 +20,7 @@ jobs:
           tools: composer
       - run: composer validate --strict --no-check-publish
       - run: composer install --no-interaction --prefer-source
+      - run: php scripts/test-migrate-legacy-content.php
       - name: Verify committed migration is idempotent
         run: |
           php scripts/migrate-legacy-content.php content redirects.json > /tmp/migration.json

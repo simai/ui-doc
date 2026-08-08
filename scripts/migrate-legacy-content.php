@@ -41,7 +41,9 @@ $normalizeRoute = static function (string $base, string $relative): string {
     return implode('/', $segments);
 };
 $escapeRawHtml = static function (string $markdown): string {
-    $lines = preg_split('/\R/', $markdown);
+    // PCRE must run in UTF-8 mode: without `u`, the second byte (0x85) of the
+    // Cyrillic letter "х" is interpreted as the legacy NEL line separator.
+    $lines = preg_split('/\R/u', $markdown);
     if (! is_array($lines)) {
         return $markdown;
     }
@@ -100,13 +102,13 @@ foreach ($iterator as $file) {
         : (iconv('UTF-8', 'UTF-8//IGNORE', $original) ?: $original);
     $source = preg_replace('/\A\xEF\xBB\xBF/', '', $source) ?? $source;
 
-    if (preg_match('/\A```markdown\R(.*)\R```\s*\z/s', $source, $wrapper)) {
+    if (preg_match('/\A```markdown\R(.*)\R```\s*\z/su', $source, $wrapper)) {
         $source = $wrapper[1] . "\n";
     }
 
     $source = preg_replace('/^#{1,6}\s+(`{3,}.*)$/m', '$1', $source) ?? $source;
 
-    if (! preg_match('/\A---\R(.*?)\R---\R/s', $source, $match)) {
+    if (! preg_match('/\A---\R(.*?)\R---\R/su', $source, $match)) {
         $target = $escapeRawHtml($source);
         if ($target !== $original) {
             file_put_contents($path, $target);
@@ -116,7 +118,7 @@ foreach ($iterator as $file) {
         continue;
     }
 
-    $frontMatter = preg_split('/\R/', $match[1]);
+    $frontMatter = preg_split('/\R/u', $match[1]);
     if (! is_array($frontMatter)) {
         continue;
     }

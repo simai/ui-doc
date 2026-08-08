@@ -28,8 +28,7 @@ description: "Вложение маски"
 
 - **mask-origin-content** – маска относительно области контента.
 - **mask-origin-padding** – маска относительно области padding.
-- **mask-origin-margin** – маска относительно внешни
- отступов margin.
+- **mask-origin-margin** – маска относительно внешних отступов margin.
 - **mask-origin-border** – маска относительно границ (учитывает border-width).
 - **mask-origin-fill** – маска относительно рамки объекта в SVG.
 - **mask-origin-stroke** – маска относительно области, ограничивающей обводку (stroke) SVG-элемента.

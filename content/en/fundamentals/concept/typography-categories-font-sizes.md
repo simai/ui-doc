@@ -7,8 +7,7 @@ description: "Font size categories"
 
 Font sizes are conventionally divided into three categories:
 
-* **Small fonts (ВјвЂ“В
-):** the difference between sizes is 0.125rem (2px).
+* **Small fonts (ВјвЂ“ВЅ):** the difference between sizes is 0.125rem (2px).
 * **Standard fonts (1вЂ“6):** the difference between sizes is 0.25rem (4px).
 * **Large fonts (7вЂ“12):** the difference between sizes is 0.5rem (8px).
 

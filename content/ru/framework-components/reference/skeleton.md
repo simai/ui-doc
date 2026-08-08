@@ -20,8 +20,7 @@ Loader-правило: `skeleton`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-skeleton`, `.sf-skeleton--animation-none`, `.sf-skeleton--animation-pulse`, `.sf-skeleton--animation-wave`, `.sf-skeleton-circle`, `.sf-skeleton-icon`, `.sf-skeleton-rounded`, `.sf-skeleton-square`, `.sf-skeleton-text`, `.sf-skeleton-text--size-1`, `.sf-skeleton-text--size-2`, `.sf-skeleton-text--size-3`, `.sf-skeleton-text--size-4`, `.sf-skeleton-text--size-5`, `.sf-skeleton-text--size-6`, `.sf-skeleton-text--size-7`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-b0`, `--sf-radius-1`, `--sf-radius-circle`, `--sf-skeleton-base`, `--sf-skeleton-highlight`, `--sf-skeleton-text--height`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`, `--sf-text-size-4`, `--sf-text-size-5`, `--sf-text-size-6`, `--sf-text-size-7`, `--sf-ui-skeleton`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-b0`, `--sf-radius-1`, `--sf-radius-circle`, `--sf-skeleton-base`, `--sf-skeleton-highlight`, `--sf-skeleton-text--height`, `--sf-text-size-1`, `--sf-text-size-2`, `--sf-text-size-3`, `--sf-text-size-4`, `--sf-text-size-5`, `--sf-text-size-6`, `--sf-text-size-7`, `--sf-ui-skeleton`.
 
 ## Пример и поведенческий API
 

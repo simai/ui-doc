@@ -7,8 +7,7 @@ description: "Font size categories"
 
 Font sizes fall into three buckets:
 
-* **Small (ВјвЂ“В
-):** steps of 0.125rem (2px).
+* **Small (ВјвЂ“ВЅ):** steps of 0.125rem (2px).
 * **Standard (1вЂ“6):** steps of 0.25rem (4px).
 * **Large (7вЂ“12):** steps of 0.5rem (8px).
 

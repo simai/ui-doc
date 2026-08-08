@@ -1,9 +1,9 @@
 ---
+title: "Справочник вертикальных размеров"
 description: "Сгенерированные пары mobile и desktop для типографики, интервалов и controls."
 ---
 
-# Справочник вертикальны
- размеров
+# Справочник вертикальных размеров
 
 > Этот файл сгенерирован командой `npm run tokens:sync`. Не меняйте числа
 > вручную. Источник: `simai.vertical-sizing@1.1.0`,
@@ -95,8 +95,6 @@ description: "Сгенерированные пары mobile и desktop для �
 
 ## Граница контракта
 
-В контракт в
-одят root/rem policy, viewport mode, typography, control height,
+В контракт входят root/rem policy, viewport mode, typography, control height,
 block padding и вертикальный rhythm. Межкомпонентное горизонтальное
-выравнивание, menu nesting, inline padding и container gutters не в
-одят.
+выравнивание, menu nesting, inline padding и container gutters не входят.

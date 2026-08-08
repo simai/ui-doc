@@ -20,8 +20,7 @@ Loader-правило: `dot`.
 
 Публично наблюдаемые селекторы в поставляемом CSS: `.sf-dot`, `.sf-dot--size-1`, `.sf-dot--size-2`, `.sf-dot-item`.
 
-Настраиваемые CSS-переменные, найденные в ассета
-: `--sf-a1`, `--sf-a4`, `--sf-a6`, `--sf-a8`, `--sf-b0`, `--sf-dot--background-color`, `--sf-dot--gap`, `--sf-dot--padding-bottom`, `--sf-dot--padding-left`, `--sf-dot--padding-right`, `--sf-dot--padding-top`, `--sf-dot-item--background-color`, `--sf-dot-item--border-radius`, `--sf-dot-item--height`, `--sf-dot-item--width`, `--sf-primary`, `--sf-radius-circle`.
+Настраиваемые CSS-переменные, найденные в ассетах: `--sf-a1`, `--sf-a4`, `--sf-a6`, `--sf-a8`, `--sf-b0`, `--sf-dot--background-color`, `--sf-dot--gap`, `--sf-dot--padding-bottom`, `--sf-dot--padding-left`, `--sf-dot--padding-right`, `--sf-dot--padding-top`, `--sf-dot-item--background-color`, `--sf-dot-item--border-radius`, `--sf-dot-item--height`, `--sf-dot-item--width`, `--sf-primary`, `--sf-radius-circle`.
 
 ## Пример и поведенческий API
 

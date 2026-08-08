@@ -6,8 +6,7 @@ description: "Контейнер (container)"
 # Контейнер (container)
 
 
-Контейнер используется для ограничения ширины и добавления горизонтальны
- отступов в зависимости от размера области
+Контейнер используется для ограничения ширины и добавления горизонтальных отступов в зависимости от размера области
 просмотра. По умолчанию ширина контейнера устанавливается в 100%, а также добавляется внутренний отступ, чтобы контент
 не прилегал плотно к краям.
 
@@ -52,15 +51,14 @@ description: "Контейнер (container)"
 использоваться базовый вариант container), а после `--sf-breakpoint-md` контейнер автоматически применит ограничения и
 отступы для этой контрольной точки.
 
-Use the logical `m-inline-auto` utility to center the container in both LTR and
-RTL layouts:
+Для центрирования контейнера можно добавить классы отступов с отрицательными значениями или класс
+`m-right-auto m-left-auto` (автоматические отступы справа и слева):
 
 ```html
-<div class="container m-inline-auto">
-  ...content...
+<div class="container m-right-auto m-left-auto">
+  ... ваш контент ...
 </div>
 ```
 
-When the standard maximum is not enough, apply `max-container-1..8` to a
-parent. Do not hard-code pixel widths: the modifiers resolve through the
-Framework size system.
+Таким образом, контейнер помогает поддерживать адаптивный и аккуратный макет сайта, изменяя свои размеры и отступы в
+зависимости от ширины области просмотра.

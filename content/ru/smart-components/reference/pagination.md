@@ -48,8 +48,7 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 | `action-apply-text` | `actionApplyText` | `String` | `"Применить"` | `—` |
 | `show-action-for-all` | `showActionForAll` | `Boolean` | `false` | `—` |
 | `action-for-all` | `actionForAll` | `Boolean` | `false` | `—` |
-| `action-for-all-label` | `actionForAllLabel` | `String` | `"Для все
-"` | `—` |
+| `action-for-all-label` | `actionForAllLabel` | `String` | `"Для всех"` | `—` |
 {.table}
 
 Общие атрибуты базового Smart-элемента:
@@ -67,8 +66,7 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 
 ## События
 
-Все события всплывают (`bubbles`) и про
-одят границу Shadow DOM (`composed`).
+Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
 
 | Событие | Когда возникает |
 |:---|:---|

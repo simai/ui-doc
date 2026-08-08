@@ -22,8 +22,7 @@ description: "Точный Loader- и CSS-контракт утилиты elemen
 
 ## Поставляемые классы
 
-Всего уникальны
- классов в readable CSS: **5401**.
+Всего уникальных классов в readable CSS: **5401**.
 
 ```text
 -block-end-a0

@@ -10,8 +10,7 @@ description: "Цвет заливки"
 
 Классы `fill-*` задают `fill` для SVG.
 
-Примеры поддерживаемы
- модификаторов:
+Примеры поддерживаемых модификаторов:
 - `fill-transparent`, `fill-current`
 - `fill-primary`, `fill-secondary`, `fill-tertiary`
 - `fill-error`, `fill-warning`, `fill-success`
