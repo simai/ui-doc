@@ -20,10 +20,16 @@ migration.
 - Docara runtime: `559593685a2273eca551b1643c90b3f0e897327c`.
 - Authored Markdown pages: 939.
 - Generated files: 2,259.
-- Deterministic tree-manifest SHA-256:
-  `887506e917da5f3f636de4d25a79435e551844b0065e20f86d7861b316c7c176`.
+- The exact committed candidate is verified by two byte-identical clean-root
+  builds; its tree-manifest digest is recorded in the release handoff rather
+  than in this file so that an evidence-only commit cannot invalidate itself.
 - Static verification: 1,692 HTML pages, 921,687 local references, 0 broken.
 - A repeated migration pass changes 0 Markdown files.
+
+The earlier pre-commit digest
+`887506e917da5f3f636de4d25a79435e551844b0065e20f86d7861b316c7c176`
+is historical only: its page metadata did not yet include the final Git
+revision, author, and commit timestamp.
 
 The branch history records the former content-spacing, fundamentals,
 Docara-container, Framework-contract, and version-matrix lines before they are

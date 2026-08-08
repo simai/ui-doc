@@ -3,10 +3,14 @@
 !/.env.example
 /.docara/
 /build_*/
+/output/
 /source/
 /vendor/
 /.phpunit.cache/
 /.DS_Store
 *.bak
+*.bak_*
+*.bak-*
+*.codex-bak-*
 *.orig
 *.rej
