@@ -26,7 +26,7 @@ migration.
 - The exact committed candidate is verified by two byte-identical clean-root
   builds; its tree-manifest digest is recorded in the release handoff rather
   than in this file so that an evidence-only commit cannot invalidate itself.
-- Static verification: 1,692 HTML pages, 921,687 local references, 0 broken.
+- Static verification: 1,692 HTML pages, 921,721 local references, 0 broken.
 - A repeated migration pass changes 0 Markdown files.
 
 The earlier pre-commit digest
