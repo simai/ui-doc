@@ -12,7 +12,7 @@
         "translate": "php vendor/bin/docara translate",
         "transpatetest": "php vendor/bin/docara translate --test",
         "init": "php vendor/bin/docara init",
-        "postinstall": "node source/_core/copy-template-configs.js"
+        "postinstall": "node bin/verify-project-postinstall.mjs"
     },
     "devDependencies": {
         "@hotwired/turbo": "^8.0.13",

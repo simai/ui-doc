@@ -12,21 +12,22 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           submodules: false
 
       - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@b604ade2a87db23f8871b7182e69ec5e75effb45 # v2
         with:
-          php-version: "8.2"
+          php-version: "8.4"
           coverage: none
           tools: composer
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: "22"
+          node-version: "20.19.5"
+          cache: yarn
 
       - name: Prepare .env
         run: |
@@ -40,27 +41,13 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist
 
-      - name: Initialize project (stubs, core, npm/yarn install)
+      - name: Validate clean lifecycle and build production documentation
         env:
-          YARN_IGNORE_ENGINES: 1
-          DOCARA_SKIP_FRONTEND_INSTALL: "true"
-        run: |
-          php vendor/bin/docara init --update
-
-      - name: Verify documentation integrity
-        run: npm run docs:integrity
-
-      - name: Build frontend assets
-        env:
-          YARN_IGNORE_ENGINES: 1
-        run: |
-          rm -rf .cache build_production
-          yarn install
-          DOCARA_SKIP_BUILD=1 yarn prod
-          php -d memory_limit=512M vendor/bin/docara build production --cache=false
+          PHP_BINARY: php
+        run: bin/validate-docs-project.sh
 
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v0.1.8
+        uses: appleboy/ssh-action@b60142998894e495c513803efc6d5d72a72c968a # v0.1.8
         with:
           host: ${{ vars.SSH_SERVER }}
           username: ${{ vars.SSH_USER }}
@@ -76,7 +63,6 @@ jobs:
             git reset --hard
             git clean -fd
             git pull --ff-only origin main
-            export YARN_IGNORE_ENGINES=1
             export XDG_CONFIG_HOME=$PWD/.config
             export XDG_CACHE_HOME=$PWD/.cache
             mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
@@ -87,10 +73,5 @@ jobs:
             AZURE_ENDPOINT=https://api.cognitive.microsofttranslator.com
             EOF
             composer install --no-dev --prefer-dist --no-interaction
-            npm run docs:integrity
-            DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update --force-core-configs
-            yarn install
-            rm -rf .cache build_production
-            DOCARA_SKIP_BUILD=1 yarn prod
-            php -d memory_limit=512M vendor/bin/docara build production --cache=false
+            PHP_BINARY=php bin/validate-docs-project.sh
             rsync -av --delete /var/www/dev/data/git/ui-doc/build_production/ /var/www/dev/data/www/ui.simai.io/
