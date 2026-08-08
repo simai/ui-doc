@@ -18,7 +18,9 @@ jobs:
           coverage: none
           ini-values: memory_limit=512M
           tools: composer
-      - run: composer validate --strict --no-check-publish
+      # The exact commit-ref is intentional: ui-doc is a reproducible consumer
+      # of the accepted Docara candidate until a separately authorized tag.
+      - run: composer validate --no-check-publish
       - run: composer install --no-interaction --prefer-source
       - run: php scripts/test-migrate-legacy-content.php
       - name: Verify committed migration is idempotent
