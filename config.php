@@ -139,7 +139,12 @@ return [
 
         return $current === $page->locale();
     },
-    'collections' => require_once ('source/_core/collections.php'),
+    // A clean checkout does not contain generated Core files yet. Keep the
+    // initial `docara init` bootstrap side-effect free; normal builds use the
+    // generated collections contract after initialization.
+    'collections' => is_file('source/_core/collections.php')
+        ? require_once ('source/_core/collections.php')
+        : [],
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
