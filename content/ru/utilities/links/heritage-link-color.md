@@ -1,0 +1,47 @@
+---
+title: "Наследование цвета ссылок"
+description: "Наследование цвета ссылок"
+---
+
+# Наследование цвета ссылок
+
+
+!rtags[text-color hover focus active]
+
+
+
+
+
+Утилиты наследования делают ссылку цветом текущего текста.
+
+## Таблица классов
+
+| Класс | Значение |
+|:--|:--|
+| `.link-inherit` | ссылка и ее состояния наследуют `currentColor` |
+| `.link-inherit-link` | ссылка и `:hover` наследуют `currentColor` |
+{.table}
+
+## Синтаксис
+
+Использование: `{контрольная точка}:{модификатор}` или `{модификатор}`.
+
+- Контрольные точки: `sm`, `md`, `lg`, `xl`.
+- Модификаторы: `link-inherit`, `link-inherit-link`.
+
+## Пример
+
+```html
+<p class="color-warning">
+  Text with <a href="#" class="link-inherit">inherited link color</a>
+</p>
+
+<p class="color-warning link-inherit-link">
+  Parent-level inherited <a href="#">link color</a>
+</p>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=heritage-link-color"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

@@ -1,0 +1,43 @@
+name: Quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          coverage: none
+          ini-values: memory_limit=512M
+          tools: composer
+      - run: composer validate --strict --no-check-publish
+      - run: composer install --no-interaction --prefer-source
+      - name: Verify committed migration is idempotent
+        run: |
+          php scripts/migrate-legacy-content.php content redirects.json > /tmp/migration.json
+          test "$(php -r '$r=json_decode(file_get_contents("/tmp/migration.json"),true,512,JSON_THROW_ON_ERROR); echo $r["changed_markdown_files"];')" = "0"
+          git diff --exit-code
+      - name: Build twice with identical output
+        run: |
+          php vendor/bin/docara build production
+          find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
+            printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
+          done > /tmp/build-first.sha256
+          rm -rf build_production
+          php vendor/bin/docara build production
+          find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
+            printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
+          done > /tmp/build-second.sha256
+          diff -u /tmp/build-first.sha256 /tmp/build-second.sha256
+      - name: Verify all generated local references
+        env:
+          DOCARA_COMPOSER_AUTOLOAD: ${{ github.workspace }}/vendor/autoload.php
+        run: php vendor/simai/docara/scripts/verify-static-build.php build_production

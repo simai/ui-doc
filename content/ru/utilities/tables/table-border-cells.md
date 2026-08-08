@@ -1,0 +1,37 @@
+---
+title: "Границы вокруг ячеек"
+---
+
+# Границы вокруг ячеек
+
+!rtags[table-border]
+
+
+Утилиты этой группы управляют поведением границ таблицы.
+
+## Таблица классов
+
+| Класс | Значение |
+|:--|:--|
+| `.border-collapse` | `border-collapse: collapse;` |
+| `.border-separate` | `border-collapse: separate;` |
+| `.border-spacing-{n}` | `border-spacing: var(--sf-...);` |
+{.table}
+
+## Описание
+
+- `border-collapse` объединяет соседние границы ячеек.
+- `border-separate` оставляет границы раздельными.
+- `border-spacing-*` задаёт расстояние между ячейками и имеет эффект только в режиме `border-separate`.
+
+## Пример
+
+```html
+<table class="table border-collapse">...</table>
+<table class="table border-separate border-spacing-2">...</table>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=table-border-cells"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

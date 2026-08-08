@@ -1,13 +1,22 @@
 {
-    "require": {
-        "simai/docara": "^1.0.30"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "source/"
+    "name": "simai/ui-doc",
+    "description": "Public SIMAI Framework documentation built with Docara v2.",
+    "type": "project",
+    "license": "proprietary",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/simai/docara.git",
+            "no-api": true
         }
+    ],
+    "require": {
+        "php": "^8.2",
+        "simai/docara": "dev-main#559593685a2273eca551b1643c90b3f0e897327c"
     },
-    "scripts": {
-        "docs:create": "php bin/docs-create.php"
+    "config": {
+        "allow-plugins": false,
+        "optimize-autoloader": true,
+        "sort-packages": true
     }
 }

@@ -1,0 +1,52 @@
+---
+title: "Инвертирование цвета фона элемента (backdrop-invert)"
+description: "Инвертирование цвета фона элемента (backdrop-invert)"
+---
+
+# Инвертирование цвета фона элемента (backdrop-invert)
+
+
+!rtags[backdrop-filter-invert hover]
+
+
+
+
+
+
+Данный модификатор позволяет управлять инвертированием цвета фона элемента.
+
+## Классы и и
+ значения
+
+| Класс                 | Значение                   |
+|:----------------------|:---------------------------|
+| .backdrop-invert-none | backdrop-filter: invert(0) |
+| .backdrop-invert      | backdrop-filter: invert(1) |
+{.table}
+
+## Описание
+
+- `backdrop-invert-none` — фон элемента без инвертирования цвета.
+- `backdrop-invert` — фон элемента становится инвертированным.
+
+Можно использовать `hover:` для изменения при наведении, например:
+`hover:backdrop-invert` для инвертирования цвета фона при наведении.
+
+## Синтаксис
+
+- `{модификатор}`: `backdrop-invert-none` или `backdrop-invert`
+- Без адаптивности, поддержка `hover:` доступна.
+
+## Пример использования
+
+```html
+<!-- При наведении фон станет инвертированным -->
+<div class="backdrop-invert-none hover:backdrop-invert p-4 bg-primary color-on-surface-inverse transition">
+  Наведи, чтобы инвертировать цвет фона
+</div>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-invert"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

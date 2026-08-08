@@ -1,0 +1,49 @@
+
+# Фон в оттенка
+ серого элемента (backdrop-grayscale)
+
+
+!rtags[backdrop-filter-grayscale hover]
+
+
+
+
+
+
+Данный модификатор позволяет управлять отображением фона элемента в оттенка
+ серого.
+
+## Классы и и
+ значения
+
+| Класс                    | Значение                      |
+|:-------------------------|:------------------------------|
+| .backdrop-grayscale-none | backdrop-filter: grayscale(0) |
+| .backdrop-grayscale      | backdrop-filter: grayscale(1) |
+{.table}
+
+## Описание
+
+- `backdrop-grayscale-none` — нормальная цветопередача фона.
+- `backdrop-grayscale` — переводит фон в оттенки серого.
+
+Вы можете использовать `hover:` для изменения состояния при наведении, например: `hover:backdrop-grayscale`.
+
+## Синтаксис
+
+- `{модификатор}`: `backdrop-grayscale-{none| }`
+- Без адаптивности, поддержка `hover:` доступна.
+
+## Пример использования
+
+```html
+<!-- При наведении фон станет оттенком серого -->
+<div class="backdrop-grayscale-none hover:backdrop-grayscale p-4 bg-primary color-on-surface-inverse transition">
+  Наведи, чтобы фон стал серым
+</div>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-grayscale"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

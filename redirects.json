@@ -1,0 +1,982 @@
+{
+    "schema": "docara.redirects.v1",
+    "version": 1,
+    "redirects": [
+        {
+            "from": "en/components/introduction",
+            "to": "en/framework-components/introduction"
+        },
+        {
+            "from": "en/fundamentals/abbreviations-of-properties",
+            "to": "en/fundamentals/abbreviations-of-properties/abbreviations-of-properties"
+        },
+        {
+            "from": "en/fundamentals/alignment",
+            "to": "en/fundamentals/alignment/alignment"
+        },
+        {
+            "from": "en/fundamentals/color",
+            "to": "en/fundamentals/color/color"
+        },
+        {
+            "from": "en/fundamentals/concept/abbreviations-of-properties/abbreviations-of-properties",
+            "to": "en/fundamentals/concept/abbreviations-of-properties-abbreviations-of-properties"
+        },
+        {
+            "from": "en/fundamentals/concept/alignment/alignment",
+            "to": "en/fundamentals/concept/alignment-alignment"
+        },
+        {
+            "from": "en/fundamentals/concept/break-points/break-points-description",
+            "to": "en/fundamentals/concept/break-points-break-points-description"
+        },
+        {
+            "from": "en/fundamentals/concept/break-points/break-points-mobile-and-desktop",
+            "to": "en/fundamentals/concept/break-points-break-points-mobile-and-desktop"
+        },
+        {
+            "from": "en/fundamentals/concept/break-points/break-points-prefixes",
+            "to": "en/fundamentals/concept/break-points-break-points-prefixes"
+        },
+        {
+            "from": "en/fundamentals/concept/break-points/break-points-relationship",
+            "to": "en/fundamentals/concept/break-points-break-points-relationship"
+        },
+        {
+            "from": "en/fundamentals/concept/break-points/break-points-variables",
+            "to": "en/fundamentals/concept/break-points-break-points-variables"
+        },
+        {
+            "from": "en/fundamentals/concept/color/color",
+            "to": "en/fundamentals/concept/color-color"
+        },
+        {
+            "from": "en/fundamentals/concept/color/color-generator",
+            "to": "en/fundamentals/concept/color-color-generator"
+        },
+        {
+            "from": "en/fundamentals/concept/color/color-palette",
+            "to": "en/fundamentals/concept/color-color-palette"
+        },
+        {
+            "from": "en/fundamentals/concept/color/new-approach-to-using-color",
+            "to": "en/fundamentals/concept/color-new-approach-to-using-color"
+        },
+        {
+            "from": "en/fundamentals/concept/directions/directions",
+            "to": "en/fundamentals/concept/directions-directions"
+        },
+        {
+            "from": "en/fundamentals/concept/modifier-parameters/angle-parameter",
+            "to": "en/fundamentals/concept/modifier-parameters-angle-parameter"
+        },
+        {
+            "from": "en/fundamentals/concept/modifier-parameters/axle-designations",
+            "to": "en/fundamentals/concept/modifier-parameters-axle-designations"
+        },
+        {
+            "from": "en/fundamentals/concept/modifier-parameters/examples-of-parameters-in-modifiers",
+            "to": "en/fundamentals/concept/modifier-parameters-examples-of-parameters-in-modifiers"
+        },
+        {
+            "from": "en/fundamentals/concept/modifier-parameters/modifier-parameters",
+            "to": "en/fundamentals/concept/modifier-parameters-modifier-parameters"
+        },
+        {
+            "from": "en/fundamentals/concept/modifier-parameters/side-parameter",
+            "to": "en/fundamentals/concept/modifier-parameters-side-parameter"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/direct-translation",
+            "to": "en/fundamentals/concept/sizes-direct-translation"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/from-old-to-new",
+            "to": "en/fundamentals/concept/sizes-from-old-to-new"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/indents",
+            "to": "en/fundamentals/concept/sizes-indents"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/mnemonic",
+            "to": "en/fundamentals/concept/sizes-mnemonic"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/relationship-between-letters-and-multipliers",
+            "to": "en/fundamentals/concept/sizes-relationship-between-letters-and-multipliers"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/reverse-conversion",
+            "to": "en/fundamentals/concept/sizes-reverse-conversion"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/reverse-translation",
+            "to": "en/fundamentals/concept/sizes-reverse-translation"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/size-conversion",
+            "to": "en/fundamentals/concept/sizes-size-conversion"
+        },
+        {
+            "from": "en/fundamentals/concept/sizes/sizes",
+            "to": "en/fundamentals/concept/sizes-sizes"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/border-radius",
+            "to": "en/fundamentals/concept/typography-border-radius"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/categories-font-sizes",
+            "to": "en/fundamentals/concept/typography-categories-font-sizes"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/changing-font-sizes",
+            "to": "en/fundamentals/concept/typography-changing-font-sizes"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/focus",
+            "to": "en/fundamentals/concept/typography-focus"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/font-family",
+            "to": "en/fundamentals/concept/typography-font-family"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/line-height",
+            "to": "en/fundamentals/concept/typography-line-height"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/links",
+            "to": "en/fundamentals/concept/typography-links"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/roles-of-text",
+            "to": "en/fundamentals/concept/typography-roles-of-text"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/shadows",
+            "to": "en/fundamentals/concept/typography-shadows"
+        },
+        {
+            "from": "en/fundamentals/concept/typography/text-indents",
+            "to": "en/fundamentals/concept/typography-text-indents"
+        },
+        {
+            "from": "en/fundamentals/concept/values/absolute-dimensions",
+            "to": "en/fundamentals/concept/values-absolute-dimensions"
+        },
+        {
+            "from": "en/fundamentals/concept/values/binary-values",
+            "to": "en/fundamentals/concept/values-binary-values"
+        },
+        {
+            "from": "en/fundamentals/concept/values/degrees",
+            "to": "en/fundamentals/concept/values-degrees"
+        },
+        {
+            "from": "en/fundamentals/concept/values/percents",
+            "to": "en/fundamentals/concept/values-percents"
+        },
+        {
+            "from": "en/fundamentals/concept/values/proportional-values",
+            "to": "en/fundamentals/concept/values-proportional-values"
+        },
+        {
+            "from": "en/fundamentals/concept/values/relative-sizes",
+            "to": "en/fundamentals/concept/values-relative-sizes"
+        },
+        {
+            "from": "en/fundamentals/concept/variables/variables",
+            "to": "en/fundamentals/concept/variables-variables"
+        },
+        {
+            "from": "en/fundamentals/concept/variables/variables-default",
+            "to": "en/fundamentals/concept/variables-variables-default"
+        },
+        {
+            "from": "en/fundamentals/concept/variables/variables-global",
+            "to": "en/fundamentals/concept/variables-variables-global"
+        },
+        {
+            "from": "en/fundamentals/concept/variables/variables-local",
+            "to": "en/fundamentals/concept/variables-variables-local"
+        },
+        {
+            "from": "en/fundamentals/concept/variables/variables-types",
+            "to": "en/fundamentals/concept/variables-variables-types"
+        },
+        {
+            "from": "en/fundamentals/directions",
+            "to": "en/fundamentals/directions/directions"
+        },
+        {
+            "from": "en/fundamentals/modifier-parameters",
+            "to": "en/fundamentals/modifier-parameters/modifier-parameters"
+        },
+        {
+            "from": "en/fundamentals/sizes",
+            "to": "en/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/change-background-on-hover",
+            "to": "en/fundamentals/themes/design-themes-change-background-on-hover"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/color-and-theme",
+            "to": "en/fundamentals/themes/design-themes-color-and-theme"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/design-themes",
+            "to": "en/fundamentals/themes/design-themes-design-themes"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/examples",
+            "to": "en/fundamentals/themes/design-themes-examples"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/named-colors",
+            "to": "en/fundamentals/themes/design-themes-named-colors"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/theme-color-palette/dark-theme-palette",
+            "to": "en/fundamentals/themes/design-themes-theme-color-palette-dark-theme-palette"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/theme-color-palette/light-theme-palette",
+            "to": "en/fundamentals/themes/design-themes-theme-color-palette-light-theme-palette"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/theme-color-palette/theme-color-palette",
+            "to": "en/fundamentals/themes/design-themes-theme-color-palette-theme-color-palette"
+        },
+        {
+            "from": "en/fundamentals/themes/design-themes/using-themes",
+            "to": "en/fundamentals/themes/design-themes-using-themes"
+        },
+        {
+            "from": "en/fundamentals/variables",
+            "to": "en/fundamentals/variables/variables"
+        },
+        {
+            "from": "en/reference/color-primitives",
+            "to": "en/reference/color-primitives/color-primitives"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/color-palette",
+            "to": "en/reference/color-primitives/color-palette-color-palette"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/error",
+            "to": "en/reference/color-primitives/color-palette-error"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/neutral",
+            "to": "en/reference/color-primitives/color-palette-neutral"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/primary",
+            "to": "en/reference/color-primitives/color-palette-primary"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/secondary",
+            "to": "en/reference/color-primitives/color-palette-secondary"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/success",
+            "to": "en/reference/color-primitives/color-palette-success"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/tertiary",
+            "to": "en/reference/color-primitives/color-palette-tertiary"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/transparent-white-black",
+            "to": "en/reference/color-primitives/color-palette-transparent-white-black"
+        },
+        {
+            "from": "en/reference/color-primitives/color-palette/warning",
+            "to": "en/reference/color-primitives/color-palette-warning"
+        },
+        {
+            "from": "en/reference/color-primitives/disable/disable",
+            "to": "en/reference/color-primitives/disable-disable"
+        },
+        {
+            "from": "en/reference/color-primitives/disable/features-of-use",
+            "to": "en/reference/color-primitives/disable-features-of-use"
+        },
+        {
+            "from": "en/reference/color-primitives/outline/features-of-use",
+            "to": "en/reference/color-primitives/outline-features-of-use"
+        },
+        {
+            "from": "en/reference/color-primitives/outline/outline",
+            "to": "en/reference/color-primitives/outline-outline"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers",
+            "to": "en/reference/properties-of-modifiers/properties-of-modifiers"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/animation",
+            "to": "en/reference/properties-of-modifiers/property-structure-animation"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/backdrop-filter",
+            "to": "en/reference/properties-of-modifiers/property-structure-backdrop-filter"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/background-color",
+            "to": "en/reference/properties-of-modifiers/property-structure-background-color"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/background-image",
+            "to": "en/reference/properties-of-modifiers/property-structure-background-image"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/border",
+            "to": "en/reference/properties-of-modifiers/property-structure-border"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/divider",
+            "to": "en/reference/properties-of-modifiers/property-structure-divider"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/filter",
+            "to": "en/reference/properties-of-modifiers/property-structure-filter"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/flex",
+            "to": "en/reference/properties-of-modifiers/property-structure-flex"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/form",
+            "to": "en/reference/properties-of-modifiers/property-structure-form"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/gradient",
+            "to": "en/reference/properties-of-modifiers/property-structure-gradient"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/grid",
+            "to": "en/reference/properties-of-modifiers/property-structure-grid"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/grid-flex",
+            "to": "en/reference/properties-of-modifiers/property-structure-grid-flex"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/interactivity",
+            "to": "en/reference/properties-of-modifiers/property-structure-interactivity"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/layout",
+            "to": "en/reference/properties-of-modifiers/property-structure-layout"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/layout-break",
+            "to": "en/reference/properties-of-modifiers/property-structure-layout-break"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/link",
+            "to": "en/reference/properties-of-modifiers/property-structure-link"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/object",
+            "to": "en/reference/properties-of-modifiers/property-structure-object"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/outline",
+            "to": "en/reference/properties-of-modifiers/property-structure-outline"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/print",
+            "to": "en/reference/properties-of-modifiers/property-structure-print"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/ring",
+            "to": "en/reference/properties-of-modifiers/property-structure-ring"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/scroll",
+            "to": "en/reference/properties-of-modifiers/property-structure-scroll"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/shadow",
+            "to": "en/reference/properties-of-modifiers/property-structure-shadow"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/size",
+            "to": "en/reference/properties-of-modifiers/property-structure-size"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/space",
+            "to": "en/reference/properties-of-modifiers/property-structure-space"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/stripe",
+            "to": "en/reference/properties-of-modifiers/property-structure-stripe"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/svg",
+            "to": "en/reference/properties-of-modifiers/property-structure-svg"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/table",
+            "to": "en/reference/properties-of-modifiers/property-structure-table"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/text-color",
+            "to": "en/reference/properties-of-modifiers/property-structure-text-color"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/text-decoration",
+            "to": "en/reference/properties-of-modifiers/property-structure-text-decoration"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/theme",
+            "to": "en/reference/properties-of-modifiers/property-structure-theme"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/transform",
+            "to": "en/reference/properties-of-modifiers/property-structure-transform"
+        },
+        {
+            "from": "en/reference/properties-of-modifiers/property-structure/typography",
+            "to": "en/reference/properties-of-modifiers/property-structure-typography"
+        },
+        {
+            "from": "en/start/loader/api",
+            "to": "en/start/loader/api-index"
+        },
+        {
+            "from": "en/start/loader/api/events",
+            "to": "en/start/loader/api-events"
+        },
+        {
+            "from": "en/start/loader/api/methods",
+            "to": "en/start/loader/api-methods"
+        },
+        {
+            "from": "en/start/loader/backend",
+            "to": "en/start/loader/backend-index"
+        },
+        {
+            "from": "en/start/loader/backend/caching",
+            "to": "en/start/loader/backend-caching"
+        },
+        {
+            "from": "en/start/loader/backend/integration",
+            "to": "en/start/loader/backend-integration"
+        },
+        {
+            "from": "en/start/loader/backend/server-interaction",
+            "to": "en/start/loader/backend-server-interaction"
+        },
+        {
+            "from": "en/start/loader/frontend",
+            "to": "en/start/loader/frontend-index"
+        },
+        {
+            "from": "en/start/loader/frontend/cache-control",
+            "to": "en/start/loader/frontend-cache-control"
+        },
+        {
+            "from": "en/start/loader/frontend/caching",
+            "to": "en/start/loader/frontend-caching"
+        },
+        {
+            "from": "en/start/loader/frontend/dependencies",
+            "to": "en/start/loader/frontend-dependencies"
+        },
+        {
+            "from": "en/start/loader/frontend/dynamic-js-css",
+            "to": "en/start/loader/frontend-dynamic-js-css"
+        },
+        {
+            "from": "en/start/loader/frontend/plugin-discovery",
+            "to": "en/start/loader/frontend-plugin-discovery"
+        },
+        {
+            "from": "en/start/loader/frontend/preloader",
+            "to": "en/start/loader/frontend-preloader"
+        },
+        {
+            "from": "en/start/loader/frontend/smart-components",
+            "to": "en/start/loader/frontend-smart-components"
+        },
+        {
+            "from": "en/start/loader/frontend/standalone",
+            "to": "en/start/loader/frontend-standalone"
+        },
+        {
+            "from": "ru/components",
+            "to": "ru/framework-components"
+        },
+        {
+            "from": "ru/components/buttons",
+            "to": "ru/framework-components/buttons"
+        },
+        {
+            "from": "ru/components/catalog",
+            "to": "ru/framework-components/catalog"
+        },
+        {
+            "from": "ru/components/connection",
+            "to": "ru/framework-components/connection"
+        },
+        {
+            "from": "ru/components/examples",
+            "to": "ru/framework-components/examples"
+        },
+        {
+            "from": "ru/components/introduction",
+            "to": "ru/framework-components/introduction"
+        },
+        {
+            "from": "ru/components/reference",
+            "to": "ru/framework-components/reference"
+        },
+        {
+            "from": "ru/components/reference/accordion",
+            "to": "ru/framework-components/reference/accordion"
+        },
+        {
+            "from": "ru/components/reference/admin-menu",
+            "to": "ru/framework-components/reference/admin-menu"
+        },
+        {
+            "from": "ru/components/reference/alerts",
+            "to": "ru/framework-components/reference/alerts"
+        },
+        {
+            "from": "ru/components/reference/avatars",
+            "to": "ru/framework-components/reference/avatars"
+        },
+        {
+            "from": "ru/components/reference/badges",
+            "to": "ru/framework-components/reference/badges"
+        },
+        {
+            "from": "ru/components/reference/breadcrumbs",
+            "to": "ru/framework-components/reference/breadcrumbs"
+        },
+        {
+            "from": "ru/components/reference/buttons",
+            "to": "ru/framework-components/reference/buttons"
+        },
+        {
+            "from": "ru/components/reference/carousel",
+            "to": "ru/framework-components/reference/carousel"
+        },
+        {
+            "from": "ru/components/reference/checkbox",
+            "to": "ru/framework-components/reference/checkbox"
+        },
+        {
+            "from": "ru/components/reference/clipboard",
+            "to": "ru/framework-components/reference/clipboard"
+        },
+        {
+            "from": "ru/components/reference/close",
+            "to": "ru/framework-components/reference/close"
+        },
+        {
+            "from": "ru/components/reference/content-divider",
+            "to": "ru/framework-components/reference/content-divider"
+        },
+        {
+            "from": "ru/components/reference/context-menu",
+            "to": "ru/framework-components/reference/context-menu"
+        },
+        {
+            "from": "ru/components/reference/country-code",
+            "to": "ru/framework-components/reference/country-code"
+        },
+        {
+            "from": "ru/components/reference/datepicker",
+            "to": "ru/framework-components/reference/datepicker"
+        },
+        {
+            "from": "ru/components/reference/doc",
+            "to": "ru/framework-components/reference/doc"
+        },
+        {
+            "from": "ru/components/reference/dot",
+            "to": "ru/framework-components/reference/dot"
+        },
+        {
+            "from": "ru/components/reference/download-file",
+            "to": "ru/framework-components/reference/download-file"
+        },
+        {
+            "from": "ru/components/reference/dropdown",
+            "to": "ru/framework-components/reference/dropdown"
+        },
+        {
+            "from": "ru/components/reference/emoji",
+            "to": "ru/framework-components/reference/emoji"
+        },
+        {
+            "from": "ru/components/reference/fab",
+            "to": "ru/framework-components/reference/fab"
+        },
+        {
+            "from": "ru/components/reference/featured-icon",
+            "to": "ru/framework-components/reference/featured-icon"
+        },
+        {
+            "from": "ru/components/reference/file-upload",
+            "to": "ru/framework-components/reference/file-upload"
+        },
+        {
+            "from": "ru/components/reference/hide-show",
+            "to": "ru/framework-components/reference/hide-show"
+        },
+        {
+            "from": "ru/components/reference/highlight",
+            "to": "ru/framework-components/reference/highlight"
+        },
+        {
+            "from": "ru/components/reference/icon-buttons",
+            "to": "ru/framework-components/reference/icon-buttons"
+        },
+        {
+            "from": "ru/components/reference/icons",
+            "to": "ru/framework-components/reference/icons"
+        },
+        {
+            "from": "ru/components/reference/inputs",
+            "to": "ru/framework-components/reference/inputs"
+        },
+        {
+            "from": "ru/components/reference/menu",
+            "to": "ru/framework-components/reference/menu"
+        },
+        {
+            "from": "ru/components/reference/modal",
+            "to": "ru/framework-components/reference/modal"
+        },
+        {
+            "from": "ru/components/reference/monaco",
+            "to": "ru/framework-components/reference/monaco"
+        },
+        {
+            "from": "ru/components/reference/pagination",
+            "to": "ru/framework-components/reference/pagination"
+        },
+        {
+            "from": "ru/components/reference/placeholder",
+            "to": "ru/framework-components/reference/placeholder"
+        },
+        {
+            "from": "ru/components/reference/progress-bar",
+            "to": "ru/framework-components/reference/progress-bar"
+        },
+        {
+            "from": "ru/components/reference/progress-scale",
+            "to": "ru/framework-components/reference/progress-scale"
+        },
+        {
+            "from": "ru/components/reference/quantity",
+            "to": "ru/framework-components/reference/quantity"
+        },
+        {
+            "from": "ru/components/reference/radio",
+            "to": "ru/framework-components/reference/radio"
+        },
+        {
+            "from": "ru/components/reference/range-slider",
+            "to": "ru/framework-components/reference/range-slider"
+        },
+        {
+            "from": "ru/components/reference/reference-link",
+            "to": "ru/framework-components/reference/reference-link"
+        },
+        {
+            "from": "ru/components/reference/scrollbar",
+            "to": "ru/framework-components/reference/scrollbar"
+        },
+        {
+            "from": "ru/components/reference/skeleton",
+            "to": "ru/framework-components/reference/skeleton"
+        },
+        {
+            "from": "ru/components/reference/slider",
+            "to": "ru/framework-components/reference/slider"
+        },
+        {
+            "from": "ru/components/reference/spinner",
+            "to": "ru/framework-components/reference/spinner"
+        },
+        {
+            "from": "ru/components/reference/step",
+            "to": "ru/framework-components/reference/step"
+        },
+        {
+            "from": "ru/components/reference/swiper",
+            "to": "ru/framework-components/reference/swiper"
+        },
+        {
+            "from": "ru/components/reference/switch",
+            "to": "ru/framework-components/reference/switch"
+        },
+        {
+            "from": "ru/components/reference/tab",
+            "to": "ru/framework-components/reference/tab"
+        },
+        {
+            "from": "ru/components/reference/tabs",
+            "to": "ru/framework-components/reference/tabs"
+        },
+        {
+            "from": "ru/components/reference/tags",
+            "to": "ru/framework-components/reference/tags"
+        },
+        {
+            "from": "ru/components/reference/textarea",
+            "to": "ru/framework-components/reference/textarea"
+        },
+        {
+            "from": "ru/components/reference/theme",
+            "to": "ru/framework-components/reference/theme"
+        },
+        {
+            "from": "ru/components/reference/theme-builder",
+            "to": "ru/framework-components/reference/theme-builder"
+        },
+        {
+            "from": "ru/components/reference/toast",
+            "to": "ru/framework-components/reference/toast"
+        },
+        {
+            "from": "ru/components/reference/toggle",
+            "to": "ru/framework-components/reference/toggle"
+        },
+        {
+            "from": "ru/components/reference/tooltip",
+            "to": "ru/framework-components/reference/tooltip"
+        },
+        {
+            "from": "ru/components/reference/tree",
+            "to": "ru/framework-components/reference/tree"
+        },
+        {
+            "from": "ru/components/reference/tree-item",
+            "to": "ru/framework-components/reference/tree-item"
+        },
+        {
+            "from": "ru/components/reference/verification",
+            "to": "ru/framework-components/reference/verification"
+        },
+        {
+            "from": "ru/fundamentals/abbreviations-of-properties",
+            "to": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties"
+        },
+        {
+            "from": "ru/fundamentals/alignment",
+            "to": "ru/fundamentals/alignment/alignment"
+        },
+        {
+            "from": "ru/fundamentals/directions",
+            "to": "ru/fundamentals/directions/directions"
+        },
+        {
+            "from": "ru/fundamentals/modifier-parameters",
+            "to": "ru/fundamentals/modifier-parameters/modifier-parameters"
+        },
+        {
+            "from": "ru/fundamentals/sizes",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/reference/color-primitives",
+            "to": "ru/reference/color-primitives/color-primitives"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/color-palette",
+            "to": "ru/reference/color-primitives/color-palette-color-palette"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/error",
+            "to": "ru/reference/color-primitives/color-palette-error"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/neutral",
+            "to": "ru/reference/color-primitives/color-palette-neutral"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/primary",
+            "to": "ru/reference/color-primitives/color-palette-primary"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/secondary",
+            "to": "ru/reference/color-primitives/color-palette-secondary"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/success",
+            "to": "ru/reference/color-primitives/color-palette-success"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/tertiary",
+            "to": "ru/reference/color-primitives/color-palette-tertiary"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/transparent-white-black",
+            "to": "ru/reference/color-primitives/color-palette-transparent-white-black"
+        },
+        {
+            "from": "ru/reference/color-primitives/color-palette/warning",
+            "to": "ru/reference/color-primitives/color-palette-warning"
+        },
+        {
+            "from": "ru/reference/color-primitives/disable/disable",
+            "to": "ru/reference/color-primitives/disable-disable"
+        },
+        {
+            "from": "ru/reference/color-primitives/disable/features-of-use",
+            "to": "ru/reference/color-primitives/disable-features-of-use"
+        },
+        {
+            "from": "ru/reference/color-primitives/outline/features-of-use",
+            "to": "ru/reference/color-primitives/outline-features-of-use"
+        },
+        {
+            "from": "ru/reference/color-primitives/outline/outline",
+            "to": "ru/reference/color-primitives/outline-outline"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers",
+            "to": "ru/reference/properties-of-modifiers/properties-of-modifiers"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/animation",
+            "to": "ru/reference/properties-of-modifiers/property-structure-animation"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/backdrop-filter",
+            "to": "ru/reference/properties-of-modifiers/property-structure-backdrop-filter"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/background-color",
+            "to": "ru/reference/properties-of-modifiers/property-structure-background-color"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/background-image",
+            "to": "ru/reference/properties-of-modifiers/property-structure-background-image"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/border",
+            "to": "ru/reference/properties-of-modifiers/property-structure-border"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/divider",
+            "to": "ru/reference/properties-of-modifiers/property-structure-divider"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/filter",
+            "to": "ru/reference/properties-of-modifiers/property-structure-filter"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/flex",
+            "to": "ru/reference/properties-of-modifiers/property-structure-flex"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/form",
+            "to": "ru/reference/properties-of-modifiers/property-structure-form"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/gradient",
+            "to": "ru/reference/properties-of-modifiers/property-structure-gradient"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/grid",
+            "to": "ru/reference/properties-of-modifiers/property-structure-grid"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/grid-flex",
+            "to": "ru/reference/properties-of-modifiers/property-structure-grid-flex"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/interactivity",
+            "to": "ru/reference/properties-of-modifiers/property-structure-interactivity"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/layout",
+            "to": "ru/reference/properties-of-modifiers/property-structure-layout"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/layout-break",
+            "to": "ru/reference/properties-of-modifiers/property-structure-layout-break"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/link",
+            "to": "ru/reference/properties-of-modifiers/property-structure-link"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/object",
+            "to": "ru/reference/properties-of-modifiers/property-structure-object"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/outline",
+            "to": "ru/reference/properties-of-modifiers/property-structure-outline"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/print",
+            "to": "ru/reference/properties-of-modifiers/property-structure-print"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/ring",
+            "to": "ru/reference/properties-of-modifiers/property-structure-ring"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/scroll",
+            "to": "ru/reference/properties-of-modifiers/property-structure-scroll"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/shadow",
+            "to": "ru/reference/properties-of-modifiers/property-structure-shadow"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/size",
+            "to": "ru/reference/properties-of-modifiers/property-structure-size"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/space",
+            "to": "ru/reference/properties-of-modifiers/property-structure-space"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/stripe",
+            "to": "ru/reference/properties-of-modifiers/property-structure-stripe"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/svg",
+            "to": "ru/reference/properties-of-modifiers/property-structure-svg"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/table",
+            "to": "ru/reference/properties-of-modifiers/property-structure-table"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/text-color",
+            "to": "ru/reference/properties-of-modifiers/property-structure-text-color"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/text-decoration",
+            "to": "ru/reference/properties-of-modifiers/property-structure-text-decoration"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/theme",
+            "to": "ru/reference/properties-of-modifiers/property-structure-theme"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/transform",
+            "to": "ru/reference/properties-of-modifiers/property-structure-transform"
+        },
+        {
+            "from": "ru/reference/properties-of-modifiers/property-structure/typography",
+            "to": "ru/reference/properties-of-modifiers/property-structure-typography"
+        }
+    ]
+}

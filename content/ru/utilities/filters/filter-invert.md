@@ -1,0 +1,54 @@
+---
+title: "Инвертирование цвета элемента (filter-invert)"
+description: "Инвертирование цвета элемента (filter-invert)"
+---
+
+# Инвертирование цвета элемента (filter-invert)
+
+!rtags[filter-invert hover]
+
+
+
+Данный модификатор позволяет управлять инвертированием цвета элемента, превращая светлые тона в темные и наоборот.
+Убираем адаптивность (`sm`, `md`, `lg`, `xl`), оставляем поддержку `hover`.
+
+## Классы и и
+ значения
+
+| Класс        | Значение          |
+|:-------------|:------------------|
+| .invert-none | filter: invert(0) |
+| .invert      | filter: invert(1) |
+{.table}
+
+## Описание
+
+Модификатор `invert` инвертирует цвета внутри элемента, делая светлые тона темными и наоборот.
+Можно использовать `hover:invert` или `hover:invert-none` для изменения инвертирования при наведении курсора.
+
+## Синтаксис
+
+- `invert-none` — без инвертирования (ис
+одный цвет).
+- `invert` — цвета инвертируются.
+- Можно использовать `hover:invert` для инвертирования при наведении.
+
+## Пример использования
+
+```html
+<!-- Элемент без инвертирования -->
+<div class="invert-none p-4 bg-primary color-on-surface-inverse">Ис
+одный цвет</div>
+```
+
+```html
+<!-- Инвертирование цвета при наведении -->
+<div class="invert-none hover:invert p-4 bg-secondary transition">
+  Наведи, чтобы инвертировать цвета
+</div>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-invert"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

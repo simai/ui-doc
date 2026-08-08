@@ -1,0 +1,59 @@
+---
+title: "Размер заголовков (title-size)"
+description: "Размер заголовков (title-size)"
+---
+
+# Размер заголовков (title-size)
+
+!rtags[title]
+
+
+
+Обновлённый набор модификаторов для заголовков использует различные наборы переменны
+ для размера шрифта и для высоты
+строки. При этом для размера шрифта применяются переменные из системы текста, а для высоты строки используются
+переменные из системы заголовков.
+
+## Таблица классов
+
+| Класс     | Свойства                                                          |
+|:----------|:--------------------------------------------------------------------------------------|
+| .title-1  | font-size: var(`--sf-text-size-1`);&lt;br/&gt; line-height: var(`--sf-title-height-1`);   |
+| .title-2  | font-size: var(`--sf-text-size-2`);&lt;br/&gt; line-height: var(`--sf-title-height-2`);   |
+| .title-3  | font-size: var(`--sf-text-size-3`);&lt;br/&gt; line-height: var(`--sf-title-height-3`);   |
+| .title-4  | font-size: var(`--sf-text-size-4`);&lt;br/&gt; line-height: var(`--sf-title-height-4`);   |
+| .title-5  | font-size: var(`--sf-text-size-5`);&lt;br/&gt; line-height: var(`--sf-title-height-5`);   |
+| .title-6  | font-size: var(`--sf-text-size-6`);&lt;br/&gt; line-height: var(`--sf-title-height-6`);   |
+| .title-7  | font-size: var(`--sf-text-size-7`);&lt;br/&gt; line-height: var(`--sf-title-height-7`);   |
+| .title-8  | font-size: var(`--sf-text-size-8`);&lt;br/&gt; line-height: var(`--sf-title-height-8`);   |
+| .title-9  | font-size: var(`--sf-text-size-9`);&lt;br/&gt; line-height: var(`--sf-title-height-9`);   |
+| .title-10 | font-size: var(`--sf-text-size-10`);&lt;br/&gt; line-height: var(`--sf-title-height-10`); |
+| .title-11 | font-size: var(`--sf-text-size-11`);&lt;br/&gt; line-height: var(`--sf-title-height-11`); |
+| .title-12 | font-size: var(`--sf-text-size-12`);&lt;br/&gt; line-height: var(`--sf-title-height-12`); |
+{.table}
+
+## Пример использования
+
+```html
+<p class="title-1">Заголовок базового размера</p>
+<p class="title-2">Заголовок чуть больше базового</p>
+<p class="title-12">Максимально крупный заголовок</p>
+```
+
+## Адаптивность
+
+Для установки размера заголовка начиная с определённой контрольной точки (`sm`, `md`, `lg`, `xl`) добавьте
+соответствующий префикс к классу:
+
+```html
+<p class="title-2">На экрана
+ md и больше будет применён title-2</p>
+```
+
+Таким образом, можно гибко управлять размерами заголовков для различны
+ разрешений экрана.
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=title-size"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

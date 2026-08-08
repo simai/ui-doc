@@ -1,0 +1,22 @@
+---
+title: "Правило заливки SVG (fill-rule)"
+description: "Nonzero и evenodd для SVG fill-rule"
+---
+
+# Правило заливки SVG (fill-rule)
+
+!rtags[fill-rule]
+
+
+## Классы
+
+| Класс | Значение |
+|:--|:--|
+| `.fill-nonzero` | `fill-rule: nonzero` |
+| `.fill-evenodd` | `fill-rule: evenodd` |
+{.table}
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-fill-rule"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

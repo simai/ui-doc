@@ -1,0 +1,19 @@
+---
+title: "Точки градиента (gradient-stops)"
+description: "Утилиты from/via/to для цветов градиента"
+---
+
+# Точки градиента (gradient-stops)
+
+!rtags[gradient-stops]
+
+
+Утилиты `from-*`, `via-*`, `to-*` задают цветовые точки градиента:
+- `from-*` -> `--sf-gradient--color-1`
+- `via-*` -> `--sf-gradient--color-2`
+- `to-*` -> `--sf-gradient--color-3`
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-gradient-stops"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

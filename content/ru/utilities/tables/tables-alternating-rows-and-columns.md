@@ -1,0 +1,29 @@
+---
+title: "Чередование строк и столбцов"
+description: "Чередование строк и столбцов"
+---
+
+# Чередование строк и столбцов
+
+!rtags[table-stripe]
+
+
+## Таблица классов
+
+| Класс | Значение |
+|:--|:--|
+| `.table-stripe` | Чередование строк |
+| `.table-stripe-col` | Чередование столбцов |
+{.table}
+
+## Пример
+
+```html
+<table class="table table-stripe">...</table>
+<table class="table table-stripe-col">...</table>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=tables-alternating-rows-and-columns"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

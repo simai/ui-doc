@@ -1,0 +1,24 @@
+---
+title: "Прозрачность placeholder"
+description: "Прозрачность текста placeholder"
+---
+
+# Прозрачность placeholder
+
+!rtags[placeholder-opacity hover focus]
+
+
+Утилиты `placeholder-opacity-*` управляют прозрачностью текста placeholder.
+
+## Классы
+
+| Класс | Значение |
+|:--|:--|
+| `.placeholder-opacity-0 ... .placeholder-opacity-9` | `opacity: 0 ... 0.9` |
+| `.placeholder-opacity-full` | `opacity: 1` |
+{.table}
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=placeholder-opacity"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

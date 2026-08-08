@@ -1,0 +1,18 @@
+---
+title: "Брендовые цвета фона"
+description: "Фоновые цвета брендов соцсетей и сервисов"
+---
+
+# Брендовые цвета фона
+
+!rtags[background-color-brand hover]
+
+
+Утилиты `bg-*` из `background-color-brand` задают брендовые цвета сервисов.
+
+Примеры: `bg-fb`, `bg-youtube`, `bg-whatsapp`, `bg-instagram`, `bg-telegram`, `bg-linkedin`, `bg-vk`.
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-color-brand"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

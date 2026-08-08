@@ -1,0 +1,60 @@
+---
+title: "Плавность прокрутки"
+description: "Плавность прокрутки"
+---
+
+# Плавность прокрутки
+
+!rtags[scroll-behavior]
+
+
+
+Модификаторы из пакета `scroll-behavior` позволяют управлять тем, будет ли прокрутка проис
+одить скачкообразно или
+плавно.
+
+## Классы и и
+ значения
+
+| Класс          | Значение                 |
+|:---------------|:-------------------------|
+| .scroll-auto   | scroll-behavior: auto;   |
+| .scroll-smooth | scroll-behavior: smooth; |
+{.table}
+
+## Описание
+
+Модификаторы `scroll-auto` и `scroll-smooth` определяют, как будет проис
+одить прокрутка: моментально или с плавной
+анимацией.
+
+## Синтаксис
+
+Использование модификатора: `{scroll-behavior}`
+
+Например:
+
+```html
+<html class="scroll-smooth">
+  <!-- контент страницы -->
+</html>
+```
+
+## Пример использования
+
+```html
+<!-- Плавная прокрутка при пере
+оде по якорным ссылкам -->
+<html class="scroll-smooth">
+  <body>
+    <a href="#section2">Прокрутить к секции 2</a>
+    <div style="height: 1000px;"></div>
+    <div id="section2">Секция 2</div>
+  </body>
+</html>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=overscroll-behavior-smooth"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

@@ -1,0 +1,65 @@
+---
+title: "Отступ текста (text-indent)"
+description: "Отступ текста (text-indent)"
+---
+
+# Отступ текста (text-indent)
+
+!rtags[text-indent]
+
+
+
+С помощью модификаторов можно задать отступ для первой строки текста.
+
+## Таблица классов
+
+| Класс     | Значение                          |
+|:----------|:----------------------------------|
+| .indent-0 | text-indent: var(`--sf-0`);       |
+| .indent-1 | text-indent: var(`--sf-space-1`); |
+| .indent-2 | text-indent: var(`--sf-space-2`); |
+| .indent-3 | text-indent: var(`--sf-space-3`); |
+| .indent-4 | text-indent: var(`--sf-space-4`); |
+| .indent-5 | text-indent: var(`--sf-space-5`); |
+{.table}
+
+## Синтаксис
+
+Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+
+- Контрольная точка *(необязательный параметр)*:
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Если не указана, модификатор применяется для все
+ размеров.
+
+- Модификатор *(обязательный параметр)*:
+
+    - `indent-0` \- отступ отсутствует
+    - `indent-1`, `indent-2`, `indent-3`, `indent-4`, `indent-5` \- различные размеры отступов, основанные на переменны
+
+      отступов (`--sf-space-*`)
+
+## Пример использования
+
+```html
+<p class="indent-0">Абзац без отступа.</p>
+<p class="indent-1">Абзац с небольшим отступом.</p>
+<p class="indent-2">Абзац со средним отступом.</p>
+<p class="indent-3">Абзац с увеличенным отступом.</p>
+<p class="indent-4">Абзац с ещё большим отступом.</p>
+<p class="indent-5">Абзац с максимальным отступом.</p>
+```
+
+## Адаптивность
+
+Для изменения отступа текста, начиная с определенного размера экрана, добавьте префикс контрольной точки (`sm:`, `md:`,
+`lg:`, `xl:`):
+
+```html
+<p class="indent-3">Начиная с размера экрана md, отступ будет средний.</p>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-indent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

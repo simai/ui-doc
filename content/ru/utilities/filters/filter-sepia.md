@@ -1,0 +1,57 @@
+---
+title: "Сепия элемента (filter-sepia)"
+description: "Сепия элемента (filter-sepia)"
+---
+
+# Сепия элемента (filter-sepia)
+
+!rtags[filter-sepia hover]
+
+
+
+Данный модификатор позволяет отображать элемент с эффектом сепии, придавая ему теплый, коричневатый оттенок.
+
+## Классы и и
+ значения
+
+| Класс       | Значение         |
+|:------------|:-----------------|
+| .sepia-none | filter: sepia(0) |
+| .sepia      | filter: sepia(1) |
+{.table}
+
+## Описание
+
+Модификатор `sepia` управляет отображением элемента с эффектом сепии.
+
+- `sepia-none` — без эффекта сепии,
+- `sepia` — элемент становится сепийным.
+
+Можно использовать `hover:sepia` для изменения состояния при наведении.
+
+## Синтаксис
+
+- `sepia-none` — без сепии,
+- `sepia` — добавить сепию,
+- Можно использовать `hover:sepia` для сепии при наведении.
+
+## Пример использования
+
+```html
+<!-- Без сепии -->
+<div class="sepia-none p-4 bg-primary color-on-surface-inverse">
+  Без сепии
+</div>
+```
+
+```html
+<!-- Сепия при наведении -->
+<div class="sepia-none hover:sepia p-4 bg-secondary transition">
+  Наведи для сепии
+</div>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-sepia"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

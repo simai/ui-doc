@@ -1,0 +1,31 @@
+---
+title: "Выделение текста"
+description: "Выделение текста"
+---
+
+# Выделение текста
+
+!rtags[user-select]
+
+
+## Таблица классов
+
+| Класс | Значение |
+|:--|:--|
+| `.select-none` | Запрет выделения |
+| `.select-text` | Обычное выделение текста |
+| `.select-all` | Выделение всего содержимого при клике |
+| `.select-auto` | Поведение по умолчанию браузера |
+{.table}
+
+## Пример
+
+```html
+<p class="select-none">Selection disabled</p>
+<p class="select-all">Click to select all</p>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-selecting"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

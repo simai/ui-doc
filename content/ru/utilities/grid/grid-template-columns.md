@@ -1,0 +1,51 @@
+---
+title: "Шаблон колонок сетки (grid-template-columns)"
+description: "Шаблон колонок сетки (grid-template-columns)"
+---
+
+# Шаблон колонок сетки (grid-template-columns)
+
+!rtags[grid-template-columns sm md lg xl]
+
+
+Модификаторы `grid-col-*` задают количество колонок и и
+ размер, формируя базовый шаблон сетки.
+
+## Таблица классов
+
+| Класс            | Значение                                |
+|:-----------------|:----------------------------------------|
+| .grid-col-1 … 12 | grid-template-columns: repeat(n, minmax(0, 1fr)); |
+| .grid-col-none   | grid-template-columns: none;            |
+{.table}
+
+## Синтаксис
+
+Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Если не указана, действует всегда.
+- Модификатор *(обязательный параметр)*: `grid-col-{n}` или `grid-col-none`.
+
+## Пример
+
+```html
+<div class="grid grid-col-3 gap-2">
+  <div class="border radius-1 bg-primary color-on-primary p-2">1</div>
+  <div class="border radius-1 bg-secondary color-on-secondary p-2">2</div>
+  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">3</div>
+</div>
+```
+
+## Адаптивность
+
+```html
+<div class="grid grid-col-2 md:grid-col-4">
+  <!-- 2 колонки на мобильны
+, 4 на md и выше -->
+</div>
+```
+## Playground
+
+&lt;div class="sf-playground overflow-hidden"&gt;
+&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-template-columns"&gt;&lt;/iframe&gt;
+&lt;/div&gt;

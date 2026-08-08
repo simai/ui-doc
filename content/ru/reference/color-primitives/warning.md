@@ -1,0 +1,57 @@
+---
+title: "Warning"
+description: "Warning"
+---
+
+# Warning
+
+Роль **Warning** используется для привлечения внимания к потенциально опасным или критичным, но ещё не возникшим
+проблемам. Цветовая гамма этой роли поможет пользователю вовремя заметить предостережение и отреагировать на него до
+появления ошибок.
+
+Вариации роли Warning:
+
+* **Warning** — заливки, текст и иконки с ярким акцентом, указывающим на необ
+одимость проявить внимание.
+* **On Warning** — текст и иконки, оптимально заметные на фоне цвета Warning.
+* **Warning Container** — приглушённая заливка, используемая для подсветки областей с предупреждениями или тональны
+
+  элементов интерфейса.
+* **On Warning Container** — текст и иконки на фоне Warning Container.
+* **On Warning Container Graphic** — заливка крупны
+ графически
+ объектов на фоне Warning Container.
+* **Warning Transparent** — полупрозрачный цвет для выделения интерактивны
+ элементов с прозрачным фоном при наведении (
+  например, для outline-кнопок).
+* **Outline Warning** — цвет для контуров, границ или разделителей, связанны
+ с предупреждающими элементами.  
+  Пример использования роли Warning:
+
+  ![Примеры применения роли Warning][image15]
+
+![Роли Warning в светлой и тёмной тема
+][image16]
+
+Для работы с ролью warning используются следующие переменные:
+
+| Переменная                          | Значение (light)           | Значение (dark)            |
+|:------------------------------------|:---------------------------|:---------------------------|
+| `--sf-warning`                      | `--sf-warning-40`          | `--sf-warning-80`          |
+| `--sf-warning-hover`                | `--sf-warning-35`          | `--sf-warning-85`          |
+| `--sf-warning-active`               | `--sf-warning-30`          | `--sf-warning-90`          |
+| `--sf-warning-container`            | `--sf-warning-90`          | `--sf-warning-30`          |
+| `--sf-warning-container-hover`      | `--sf-warning-85`          | `--sf-warning-35`          |
+| `--sf-warning-container-active`     | `--sf-warning-80`          | `--sf-warning-40`          |
+| `--sf-warning-transparent-hover`    | `--sf-warning-50--alfa-4`  | `--sf-warning-90--alfa-4`  |
+| `--sf-warning-transparent-select`   | `--sf-warning-50--alfa-8`  | `--sf-warning-90--alfa-8`  |
+| `--sf-warning-transparent-active`   | `--sf-warning-50--alfa-12` | `--sf-warning-90--alfa-12` |
+| `--sf-warning-transparent-overlay`  | `--sf-warning-50--alfa-24` | `--sf-warning-90--alfa-24` |
+| `--sf-on-warning`                   | `--sf-white`               | `--sf-warning-20`          |
+| `--sf-on-warning-container`         | `--sf-warning-10`          | `--sf-warning-90`          |
+| `--sf-on-warning-container-graphic` | `--sf-warning-50`          | `--sf-warning-60`          |
+| `--sf-outline-warning`              | `--sf-warning-50`          | `--sf-warning-60`          |
+{.table}
+
+[image15]: /ru/assets/reference/image-15.png
+[image16]: /ru/assets/reference/image-16.png

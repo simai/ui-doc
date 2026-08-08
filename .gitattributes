@@ -1,0 +1,2 @@
+# Two trailing spaces are valid Markdown hard-break syntax.
+*.md whitespace=-trailing-space
