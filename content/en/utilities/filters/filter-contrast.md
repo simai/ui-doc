@@ -20,7 +20,6 @@ description: "Контрастность элемента (filter-contrast)"
 | .contrast-2   | filter: contrast(1.05); |
 | .contrast-3   | filter: contrast(1.1);  |
 | .contrast-4   | filter: contrast(1.2);  |
-{.table}
 
 ## Описание
 
@@ -60,4 +59,3 @@ description: "Контрастность элемента (filter-contrast)"
 | .contrast-6              | .contrast-2   |
 | .contrast-7              | .contrast-3   |
 | .contrast-8, .contrast-9 | .contrast-4   |
-{.table}

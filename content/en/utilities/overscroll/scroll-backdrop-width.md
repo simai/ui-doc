@@ -16,7 +16,6 @@ description: "Толщина подложки прокрутки (scroll-backdro
 | .scroll-bg-2 | width: var(`--sf-a2`); |
 | .scroll-bg-3 | width: var(`--sf-a4`); |
 | .scroll-bg-4 | width: var(`--sf-a8`); |
-{.table}
 
 ## Описание
 

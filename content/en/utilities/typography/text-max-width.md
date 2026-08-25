@@ -15,7 +15,6 @@ description: "Длина строки (text-max-width)"
 | .measure        | max-width: var(`--sf-text--measure`);        |
 | .measure-wide   | max-width: var(`--sf-text--measure-wide`);   |
 | .measure-narrow | max-width: var(`--sf-text--measure-narrow`); |
-{.table}
 
 ## Синтаксис
 
@@ -65,4 +64,3 @@ description: "Длина строки (text-max-width)"
 | `--sf-text--measure`        | 65ch;    |
 | `--sf-text--measure-wide`   | 80ch;    |
 | `--sf-text--measure-narrow` | 45ch;    |
-{.table}

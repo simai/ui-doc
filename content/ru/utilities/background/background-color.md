@@ -99,7 +99,6 @@ description: "Цвет фона"
 | .bg-success-transparent-select    | background-color: var(`--sf-success-transparent-select`)    |
 | .bg-success-transparent-overlay   | background-color: var(`--sf-success-transparent-overlay`)   |
 
-{.table}
 
 ## Описание
 
@@ -108,28 +107,6 @@ description: "Цвет фона"
 
 ## Пример использования
 
-```html
-<!-- Кнопка с основным цветом фона -->
-<button class="p-top-1/2 p-bottom-1/2 p-inline-end-1 p-inline-start-1 bg-primary color-on-surface-inverse radius-1/3 shadow-2 focus:outline-0">
-    Click me
-</button>
-```
+:::example {id="utilities/background/background-color" label="Результат"}
+:::
 
-```html
-<!-- Кнопка с фоном при наведении -->
-<button class="p-top-1/2 p-bottom-1/2 p-inline-end-1 p-inline-start-1 bg-primary hover:bg-primary-container color-on-surface-inverse radius-1/3 shadow-2 focus:outline-0 transition">
-    Hover me
-</button>
-```
-
-```html
-<!-- Поле ввода с фоном при фокусе -->
-<input class="transition border-1 border-outline-variant bg-surface-container focus:border-surface-0 color-primary appearance-none inline-block w-full radius-1/3 p-top-1 p-bottom-1 p-inline-end-1 p-inline-start-1 focus:outline-0"
-       placeholder="Focus me">
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

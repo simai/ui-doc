@@ -15,7 +15,6 @@ SIMAI modifiers use prefix notation for breakpoints:
 | **lg** | ≥ `--sf-breakpoint-lg`    | ≥ 960px |
 | **xl** | ≥ `--sf-breakpoint-xl`    | ≥ 1152px |
 | **xxl**| ≥ `--sf-breakpoint-xxl`   | ≥ 1536px |
-{.table}
 
 **Usage examples:**
 

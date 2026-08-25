@@ -1,0 +1,26 @@
+{
+  "id": "ui-doc.capability.authored-content",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "feature",
+  "title": "Repository-owned documentation content",
+  "summary": "The content/ru and content/en trees contain 939 Markdown route owners plus locale UI strings and local assets. The 221 imported Playground consumers now reference 214 canonical repository-owned shared Docara examples; three unique landing demonstrations remain inline.",
+  "owner": "repository_owner",
+  "lifecycle": "validated",
+  "readiness": "R5_operational",
+  "evidence_status": "validated",
+  "source_refs": ["content", "examples", "assets", "redirects.json", "simai-framework.lock.json", "translations.lock.json"],
+  "evidence_refs": [
+    "scripts/test-migrate-legacy-content.php",
+    "source/workflow/2026-08-25-playground-example-migration-trial.md",
+    "source/output/human-centered-simplicity/2026-08-25-playground-example-migration-trial/verdict.json",
+    "source/workflow/2026-08-25-playground-native-example-migration.md",
+    "source/workflow/evidence/2026-08-25-playground-native-examples/migration-manifest.json",
+    "source/output/human-centered-simplicity/2026-08-25-playground-native-example-migration/verdict.json",
+    "source/workflow/2026-08-25-shared-examples-translation-tracking.md",
+    "source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json",
+    "source/workflow/evidence/2026-08-26-example-quality-cleanup/audit-inventory.json",
+    "source/workflow/evidence/2026-08-26-example-quality-cleanup/verification-summary.json"
+  ],
+  "tags": ["content", "markdown", "locales", "redirects", "shared-examples", "translation-tracking"]
+}

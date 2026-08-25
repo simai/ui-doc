@@ -12,8 +12,7 @@ description: "Утилиты from/via/to для цветов градиента"
 - `from-*` -> `--sf-gradient--color-1`
 - `via-*` -> `--sf-gradient--color-2`
 - `to-*` -> `--sf-gradient--color-3`
-## Playground
+## Пример
+:::example {id="utilities/background/background-gradient-stops" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-gradient-stops"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

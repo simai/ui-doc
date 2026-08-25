@@ -19,7 +19,6 @@ description: "Содержимое (content)"
 | .before-empty | content: ''   |
 | .after-none   | content: none |
 | .before-none  | content: none |
-{.table}
 
 ## Описание
 
@@ -28,14 +27,6 @@ description: "Содержимое (content)"
 
 ## Пример
 
-```html
-<p class="after-empty">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="before-empty">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="after-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<p class="before-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-```
-## Playground
+:::example {id="utilities/typography/content" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=content"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

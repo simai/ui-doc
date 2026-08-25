@@ -20,7 +20,6 @@ description: "Выравнивание содержимого по основн�
 | .content-main-between | justify-content: space-between; |
 | .content-main-around  | justify-content: space-around;  |
 | .content-main-evenly  | justify-content: space-evenly;  |
-{.table}
 
 ## Синтаксис
 

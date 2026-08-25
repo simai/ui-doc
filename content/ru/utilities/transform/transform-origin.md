@@ -24,7 +24,6 @@ description: "Классы точки трансформации transform-origi
 | `.origin-inline-start` | `transform-origin: left` |
 | `.origin-top-inline-start` | `transform-origin: top left` |
 
-{.table}
 
 ## Синтаксис
 
@@ -32,8 +31,7 @@ description: "Классы точки трансформации transform-origi
 - `hover:origin-{position}`
 
 Используйте logical-названия `inline-start/inline-end` для корректной LTR/RTL семантики в разметке.
-## Playground
+## Пример
+:::example {id="utilities/transform/transform-origin" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-origin"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

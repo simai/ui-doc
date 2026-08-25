@@ -11,8 +11,7 @@ description: "Обрезка текста по количеству строк"
 Утилиты `line-clamp-*` ограничивают число видимых строк текста и добавляют многоточие.
 
 Примеры: `line-clamp-1`, `line-clamp-2`, `line-clamp-3`.
-## Playground
+## Пример
+:::example {id="utilities/typography/line-clamp" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=line-clamp"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

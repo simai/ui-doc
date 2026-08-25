@@ -20,7 +20,6 @@ description: "Композиция маски"
 | .mask-subtract  | mask-composite: subtract;  |
 | .mask-intersect | mask-composite: intersect; |
 | .mask-exclude   | mask-composite: exclude;   |
-{.table}
 
 ## Описание
 
@@ -33,21 +32,6 @@ description: "Композиция маски"
 
 ## Примеры использования
 
-```html
-<!-- Суммирование масок -->
-<div class="mask-add">...</div>
+:::example {id="utilities/mask/mask-composite" label="Результат"}
+:::
 
-<!-- Вычитание маски -->
-<div class="mask-subtract">...</div>
-
-<!-- Пересечение масок -->
-<div class="mask-intersect">...</div>
-
-<!-- Исключение пересечений -->
-<div class="mask-exclude">...</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=mask&group=mask-composite"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -23,7 +23,6 @@ description: "Цвет границы"
 | .border-error           | border-color: var(`--sf-outline-error`);     |
 | .border-warning         | border-color: var(`--sf-outline-warning`);   |
 | .border-success         | border-color: var(`--sf-outline-success`);   |
-{.table}
 
 ## Описание
 
@@ -75,4 +74,3 @@ description: "Цвет границы"
 | .border-purple-4 ... .border-purple-9                          | .border-tertiary           |
 | .border-pink-1, .border-pink-2, .border-pink-3                 | .border-tertiary-container |
 | .border-pink-4 ... .border-pink-9                              | .border-tertiary           |
-{.table}

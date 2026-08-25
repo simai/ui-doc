@@ -21,7 +21,6 @@ description: "Цвет тени"
 | .shadow-warning    | `--sf-shadow--color`: var(`--sf-warning`)    |
 | .shadow-success    | `--sf-shadow--color`: var(`--sf-success`)    |
 | .shadow-on-surface | `--sf-shadow--color`: var(`--sf-on-surface`) |
-{.table}
 
 ## Описание
 

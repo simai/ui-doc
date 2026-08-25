@@ -14,7 +14,6 @@ description: "Сжимаемость (flex-shrink)"
 |:-------------|:----------------|
 | .shrink      | flex-shrink: 1; |
 | .shrink-none | flex-shrink: 0; |
-{.table}
 
 ## Синтаксис
 

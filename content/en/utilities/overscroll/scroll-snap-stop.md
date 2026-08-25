@@ -21,7 +21,6 @@ snap-always) или сможет "проскользнуть" мимо опре�
 |:-------------|:--------------------------|
 | .snap-normal | scroll-snap-stop: normal; |
 | .snap-always | scroll-snap-stop: always; |
-{.table}
 
 ## Описание
 

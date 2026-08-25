@@ -75,7 +75,6 @@ following set of tone values (example):
 | `--sf-neutral-15`          | #24262a                                          |
 | `--sf-neutral-10`          | #1a1b1f                                          |
 | `--sf-neutral-5`           | #0f1115                                          |
-{.table}
 
 This set of values can be changed using the color generator. The other two gray variants are defined statically and
 override the color via modifiers.
@@ -100,7 +99,6 @@ When using the **neutral-grey-blue** modifier, the main set of values is replace
 | `--sf-neutral-15` | #1e272d  |
 | `--sf-neutral-10` | #131d23  |
 | `--sf-neutral-5`  | #091218  |
-{.table}
 
 When using the **neutral-grey** modifier, the main set of values is replaced with the following set:
 
@@ -122,7 +120,6 @@ When using the **neutral-grey** modifier, the main set of values is replaced wit
 | `--sf-neutral-15` | #262626  |
 | `--sf-neutral-10` | #1b1b1b  |
 | `--sf-neutral-5`  | #111111  |
-{.table}
 
 [image3]: /assets/build/img/b64/1b0bbe09c5de338b.png
 

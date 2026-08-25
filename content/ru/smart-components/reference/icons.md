@@ -33,7 +33,6 @@ Loader-статус: `registered`. Loader-правило: `cl-icons`.
 | `filled` | `filled` | `Boolean` | `false` | `—` |
 | `weight` | `weight` | `Number` | `400` | `—` |
 | `size` | `size` | `String` | `""` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -42,7 +41,6 @@ Loader-статус: `registered`. Loader-правило: `cl-icons`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -60,7 +58,6 @@ Loader-статус: `registered`. Loader-правило: `cl-icons`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

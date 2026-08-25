@@ -16,9 +16,7 @@ description: "Прозрачность цвета ring"
 |:--|:--|
 | `.ring-opacity-0 ... .ring-opacity-9` | `opacity: 0 ... 0.9` |
 | `.ring-opacity-full` | `opacity: 1` |
-{.table}
-## Playground
+## Пример
+:::example {id="utilities/outline/ring-opacity" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=ring-opacity"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

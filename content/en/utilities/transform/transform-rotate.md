@@ -23,7 +23,6 @@ description: "Вращение (transform-rotate)"
 | .rotate-90  | transform: rotate(90deg)  |
 | .rotate-180 | transform: rotate(180deg) |
 
-{.table}
 
 ## Описание
 
@@ -53,4 +52,3 @@ description: "Вращение (transform-rotate)"
 | .rotate-7    | .rotate-90  |
 | .rotate-8    | .rotate-180 |
 
-{.table}

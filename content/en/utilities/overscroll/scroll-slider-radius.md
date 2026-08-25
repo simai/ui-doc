@@ -16,7 +16,6 @@ description: "Scroll thumb radius (scroll-thumb-radius)"
 | .scroll-thumb-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`) |
 | .scroll-thumb-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`) |
 
-{.table}
 
 ## Описание
 

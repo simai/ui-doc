@@ -16,7 +16,6 @@ description: "Размытие элемента (filter-blur)"
 | .blur-small         | filter: blur(var(`--sf-blur-small`));  |
 | .blur, .blur-medium | filter: blur(var(`--sf-blur-medium`)); |
 | .blur-large         | filter: blur(var(`--sf-blur-large`));  |
-{.table}
 
 ## Переменные 
 
@@ -25,7 +24,6 @@ description: "Размытие элемента (filter-blur)"
 | `--sf-blur-small`  | var(`--sf-a2`) |
 | `--sf-blur-medium` | var(`--sf-a4`) |
 | `--sf-blur-large`  | var(`--sf-a8`) |
-{.table}
 
 ## Описание
 
@@ -70,6 +68,5 @@ description: "Размытие элемента (filter-blur)"
 | .blur-1, .blur-2                    | .blur-small              |
 | .blur-3                             | .blur-medium (или .blur) |
 | .blur-4, .blur-5, .blur-6, .blur-7  | .blur-large              |
-{.table}
 
 Используйте данные соответствия, чтобы перейти с предыдущей версии на новую.

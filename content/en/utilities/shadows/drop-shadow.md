@@ -20,7 +20,6 @@ description: "Падающая тень (drop-shadow)"
 | .drop-shadow-3 | `--sf-shadow--level-ratio`: 4  |
 | .drop-shadow-4 | `--sf-shadow--level-ratio`: 8  |
 | .drop-shadow-5 | `--sf-shadow--level-ratio`: 16 |
-{.table}
 
 ## Описание
 

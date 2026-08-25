@@ -23,7 +23,6 @@ description: "Насыщенность элемента (filter-saturate)"
 | .saturate-2   | filter: saturate(1.25) |
 | .saturate-3   | filter: saturate(1.5)  |
 | .saturate-4   | filter: saturate(1.75) |
-{.table}
 
 ## Описание
 
@@ -45,22 +44,6 @@ description: "Насыщенность элемента (filter-saturate)"
 
 ## Пример использования
 
-```html
-<!-- Нормальная насыщенность -->
-<div class="saturate-1 p-4 bg-primary color-on-surface-inverse">
-  Нормальная насыщенность
-</div>
-```
+:::example {id="utilities/filters/filter-saturate" label="Результат"}
+:::
 
-```html
-<!-- Повышенная насыщенность при наведении -->
-<div class="saturate-1 hover:saturate-2 p-4 bg-secondary transition">
-  Наведи для увеличения насыщенности
-</div>
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-saturate"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

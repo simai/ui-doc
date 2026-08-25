@@ -18,7 +18,6 @@ description: "Инвертирование цвета элемента (filter-i
 |:-------------|:------------------|
 | .invert-none | filter: invert(0) |
 | .invert      | filter: invert(1) |
-{.table}
 
 ## Описание
 
@@ -33,19 +32,6 @@ description: "Инвертирование цвета элемента (filter-i
 
 ## Пример использования
 
-```html
-<!-- Элемент без инвертирования -->
-<div class="invert-none p-4 bg-primary color-on-surface-inverse">Исходный цвет</div>
-```
+:::example {id="utilities/filters/filter-invert" label="Результат"}
+:::
 
-```html
-<!-- Инвертирование цвета при наведении -->
-<div class="invert-none hover:invert p-4 bg-secondary transition">
-  Наведи, чтобы инвертировать цвета
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-invert"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

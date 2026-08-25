@@ -32,7 +32,6 @@ description: "Скругление границы"
 | `.radius-top-inline-end-{size}` | верхний `inline-end` угол |
 | `.radius-bottom-inline-start-{size}` | нижний `inline-start` угол |
 | `.radius-bottom-inline-end-{size}` | нижний `inline-end` угол |
-{.table}
 
 ## Синтаксис
 
@@ -41,19 +40,6 @@ description: "Скругление границы"
 
 ## Пример
 
-```html
-<div class="radius-1/3">radius-1/3</div>
-<div class="radius-rounded">radius-rounded</div>
+:::example {id="utilities/border/border-radius" label="Результат"}
+:::
 
-<div class="radius-top-2">radius-top-2</div>
-<div class="radius-inline-start-1">radius-inline-start-1</div>
-
-<div class="radius-top-inline-start-3">radius-top-inline-start-3</div>
-<div class="radius-bottom-inline-end-rounded">radius-bottom-inline-end-rounded</div>
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=border&group=border-radius"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

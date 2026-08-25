@@ -29,7 +29,6 @@ description: "Вращение оттенка фона элемента (backdro
 | .-backdrop-hue-rotate-30 | backdrop-filter: hue-rotate(-30deg)                   |
 | .-backdrop-hue-rotate-60 | backdrop-filter: hue-rotate(-60deg)                   |
 | .-backdrop-hue-rotate-90 | backdrop-filter: hue-rotate(-90deg)                   |
-{.table}
 
 ## Описание
 
@@ -44,15 +43,6 @@ description: "Вращение оттенка фона элемента (backdro
 
 ## Пример использования
 
-```html
-<!-- При наведении оттенок фона поворачивается на 90 градусов -->
-<div class="backdrop-hue-rotate-0 hover:backdrop-hue-rotate-90 p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы оттенок фона изменился
-</div>
-```
+:::example {id="utilities/backdrop-filter/backdrop-hue-rotate" label="Результат"}
+:::
 
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-hue-rotate"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

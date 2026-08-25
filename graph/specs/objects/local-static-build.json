@@ -1,0 +1,15 @@
+{
+  "id": "ui-doc.capability.local-static-build",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "feature",
+  "title": "Verified local static build",
+  "summary": "Docara builds build_production atomically; ui-doc.test serves that generated directory through the existing ServBay site binding.",
+  "owner": "repository_owner",
+  "lifecycle": "validated",
+  "readiness": "R5_operational",
+  "evidence_status": "validated",
+  "source_refs": ["docara.json", "README.md"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md"],
+  "tags": ["build", "servbay", "local-site", "verification"]
+}

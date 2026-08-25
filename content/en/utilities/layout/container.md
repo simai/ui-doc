@@ -20,7 +20,6 @@ description: "Контейнер (container)"
 |           |        lg         | width: var(`--sf-breakpoint-lg`);&lt;br/&gt; padding-left: var(`--sf-space-4`);&lt;br/&gt; padding-right: var(`--sf-space-4`);  |
 |           |        xl         | width: var(`--sf-breakpoint-xl`);&lt;br/&gt; padding-left: var(`--sf-space-5`);&lt;br/&gt; padding-right: var(`--sf-space-5`);  |
 |           |        xxl        | width: var(`--sf-breakpoint-xxl`);&lt;br/&gt; padding-left: var(`--sf-space-6`);&lt;br/&gt; padding-right: var(`--sf-space-6`); |
-{.table}
 
 Контрольные точки (`--sf-breakpoint-sm`, `--sf-breakpoint-md`, `--sf-breakpoint-lg`, `--sf-breakpoint-xl`,
 `--sf-breakpoint-xxl`) определены в ядре фреймворка, а размеры отступов (`--sf-space-*`) соответствуют новой системе

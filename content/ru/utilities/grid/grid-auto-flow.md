@@ -18,7 +18,6 @@ description: "Автоматическое формирование сетки (
 | .grid-flow-col       | grid-auto-flow: column;       |
 | .grid-flow-row-dense | grid-auto-flow: row dense;    |
 | .grid-flow-col-dense | grid-auto-flow: column dense; |
-{.table}
 
 ## Синтаксис
 
@@ -53,8 +52,7 @@ description: "Автоматическое формирование сетки (
   <!-- Начиная с md элементы будут размещаться плотнее по строкам -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-auto-flow" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-auto-flow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

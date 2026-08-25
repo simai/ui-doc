@@ -18,7 +18,6 @@ description: "Сглаживание шрифтов (font-smoothing)"
 |:-------------|:-----------------------------------------------------------------------------|
 | .antialiased | -webkit-font-smoothing: antialiased;&lt;br/&gt;-moz-osx-font-smoothing: grayscale; |
 | .smoothing   | -webkit-font-smoothing: auto;&lt;br/&gt;-moz-osx-font-smoothing: auto;             |
-{.table}
 
 ## Пример использования
 
@@ -40,8 +39,7 @@ description: "Сглаживание шрифтов (font-smoothing)"
 ```html
 <p class="antialiased">На экранах md и больше текст будет отображаться с сглаживанием оттенков серого.</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/font-smoothing" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-smoothing"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

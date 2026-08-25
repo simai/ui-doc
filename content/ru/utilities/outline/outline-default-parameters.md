@@ -18,7 +18,6 @@ description: "Параметры по умолчанию"
 |:--|:--|
 | `.outline` | `outline: var(--sf-px) var(--sf-outline-variant) solid;` |
 | `.outline-none` | `outline-width: var(--sf-0);` |
-{.table}
 
 ## Описание
 
@@ -34,12 +33,6 @@ description: "Параметры по умолчанию"
 
 ## Пример
 
-```html
-<div class="outline p-2 radius-2">Outline default</div>
-<div class="outline-none p-2 radius-2">Outline none</div>
-```
-## Playground
+:::example {id="utilities/outline/outline-default-parameters" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=outline-default-parameters"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

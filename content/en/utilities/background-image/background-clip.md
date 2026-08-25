@@ -17,7 +17,6 @@ description: "Обрезка фона"
 | .bg-clip-padding | background-clip: padding-box; |
 | .bg-clip-content | background-clip: content-box; |
 | .bg-clip-text    | background-clip: text;        |
-{.table}
 
 ## Описание
 

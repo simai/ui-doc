@@ -38,7 +38,6 @@ primitives (for example, `--sf-a0`, `--sf-b1`, `--sf-c2`, etc.) are omitted.
 | `--sf-display--weight`      | 300                                  | Font weight for display headings                                                |
 | `--sf-text--style`          | inherit                              | Text style                                                                       |
 | `--sf-text--tracking`       | inherit                              | Text tracking (letter spacing)                                                  |
-{.table}
 
 These variables allow you to flexibly configure the interface without directly changing size and color primitives.
 

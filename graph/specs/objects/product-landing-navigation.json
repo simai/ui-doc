@@ -1,0 +1,32 @@
+{
+  "id": "ui-doc.capability.product-landing-navigation",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "feature",
+  "title": "SIMAI Framework product landing and top navigation",
+  "summary": "The Russian and English locale home pages use the native Docara landing preset, one primary Hero action with responsive spacing, theme-safe ambient decoration, icon-led Framework layers, and an original Result/HTML workbench where Phone, Tablet and Desktop controls highlight the effective mobile-first modifier line while recomposing one card. The site also provides a restored stateful Steps timeline, an icon-triggered locale menu, first-level header links, and a sidebar scoped to the active top-level section.",
+  "owner": "repository_owner",
+  "lifecycle": "validated",
+  "readiness": "R5_operational",
+  "evidence_status": "validated",
+  "source_refs": [
+    "content/ru/index.md",
+    "content/ru/index.page.json",
+    "content/ru/section.json",
+    "content/en/index.md",
+    "content/en/index.page.json",
+    "content/en/section.json"
+  ],
+  "evidence_refs": [
+    "source/workflow/2026-08-25-simai-framework-landing-navigation.md",
+    "source/workflow/2026-08-25-landing-feedback-round-1.md",
+    "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-1/verdict.json",
+    "source/workflow/2026-08-25-landing-feedback-round-2.md",
+    "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-2/verdict.json",
+    "source/workflow/2026-08-25-landing-feedback-round-3.md",
+    "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-3/verdict.json",
+    "source/workflow/2026-08-25-landing-feedback-round-4.md",
+    "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-4/verdict.json"
+  ],
+  "tags": ["landing", "navigation", "positioning", "responsive", "accessibility", "seo"]
+}

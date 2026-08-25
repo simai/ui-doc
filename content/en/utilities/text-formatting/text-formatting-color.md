@@ -23,7 +23,6 @@ description: "Цвет оформления текста"
 | .decoration-error       | text-decoration-color: var(`--sf-outline-error`);     |
 | .decoration-warning     | text-decoration-color: var(`--sf-outline-warning`);   |
 | .decoration-success     | text-decoration-color: var(`--sf-outline-success`);   |
-{.table}
 
 ## Описание
 

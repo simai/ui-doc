@@ -18,7 +18,6 @@ description: "Стиль маркера списка (list-style-type)"
 | .list-none    | list-style-type: none;    |
 | .list-disc    | list-style-type: disc;    |
 | .list-decimal | list-style-type: decimal; |
-{.table}
 
 
 ## Синтаксис
@@ -37,27 +36,6 @@ description: "Стиль маркера списка (list-style-type)"
 
 ## Пример использования
 
-```html
-<ul class="list-none">
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
-  <li>Assumenda, quia temporibus eveniet a libero incidunt suscipit</li>
-  <li>Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</li>
-</ul>
+:::example {id="utilities/typography/list-style-type" label="Результат"}
+:::
 
-<ul class="list-disc">
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
-  <li>Assumenda, quia temporibus eveniet a libero incidunt suscipit</li>
-  <li>Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</li>
-</ul>
-
-<ul class="list-decimal">
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
-  <li>Assumenda, quia temporibus eveniet a libero incidunt suscipit</li>
-  <li>Quidem, ipsam illum quis sed voluptatum quae eum fugit earum</li>
-</ul>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=list-style-type"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -32,7 +32,6 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 | `size` | `size` | `String` | `'1'` | `—` |
 | `value` | `value` | `String` | `'0'` | `—` |
 | `show-text` | `showText` | `Boolean` | `true` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -41,7 +40,6 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -59,7 +57,6 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

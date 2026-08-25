@@ -15,7 +15,6 @@ To display the focus state (for example, when navigating to an element via keybo
 | `--sf-focus--offset` | `--sf-a0` |
 | `--sf-focus--style`  | solid     |
 | `--sf-focus--width`  | `--sf-a4` |
-{.table}
 
 Example of focus implementation in CSS:
 

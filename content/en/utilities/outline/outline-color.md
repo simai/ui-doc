@@ -22,7 +22,6 @@ description: "Цвет внешней границы"
 | .outline-error           | outline-color: var(`--sf-outline-error`)     |
 | .outline-warning         | outline-color: var(`--sf-outline-cation`)    |
 | .outline-success         | outline-color: var(`--sf-outline-success`)   |
-{.table}
 
 ## Описание
 

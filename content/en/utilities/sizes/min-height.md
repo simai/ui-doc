@@ -20,7 +20,6 @@ description: "Минимальная высота (min-height)"
 | . min-h-min   | min-height: min-content; |
 | .min-h-max    | min-height: max-content; |
 | .min-h-fit    | min-height: fit-content; |
-{.table}
 
 ## Синтаксис
 

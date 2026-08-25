@@ -1,0 +1,15 @@
+{
+  "id": "rel.ui-doc.site.generated-by-docara",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.documentation-site",
+  "to": "ui-doc.capability.docara-runtime",
+  "relation_type": "generated_by",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "validated",
+  "impact": "critical",
+  "owner": "repository_owner",
+  "source_refs": ["composer.json", "docara.json"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md"]
+}

@@ -26,7 +26,6 @@ The updated title scale uses different token groups for `font-size` and `line-he
 | `.title-10` | `font-size: var(--sf-text-size-10); line-height: var(--sf-title-height-10);` |
 | `.title-11` | `font-size: var(--sf-text-size-11); line-height: var(--sf-title-height-11);` |
 | `.title-12` | `font-size: var(--sf-text-size-12); line-height: var(--sf-title-height-12);` |
-{.table}
 
 ## Usage Example
 
@@ -44,8 +43,7 @@ Use breakpoint prefixes:
 <p class="md:title-2">Applies title-2 from md and up</p>
 ```
 
-## Playground
+## Example
+:::example {id="utilities/typography/title-size" label="Result"}
+:::
 
-&lt;div class="sf-playground overflow-hidden border"&gt;
-&lt;iframe src="https://play.simai.io/embed.html?component=typography&group=title-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

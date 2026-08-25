@@ -18,7 +18,6 @@ description: "Особенности использования"
 |:-----------------------|:---------------------------|:---------------------------|
 | `--sf-outline`         | `--sf-neutral-50`          | `--sf-neutral-60`          |
 | `--sf-outline-variant` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
-{.table}
 
 [image24]: /ru/assets/reference/image-24.png
 [image25]: /ru/assets/reference/image-25.png

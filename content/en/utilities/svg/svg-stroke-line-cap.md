@@ -16,7 +16,6 @@ description: "Концы обводки (Line Cap)"
 | .linecap-butt   | stroke-linecap: butt;   |
 | .linecap-round  | stroke-linecap: round;  |
 | .linecap-square | stroke-linecap: square; |
-{.table}
 
 ## Описание
 

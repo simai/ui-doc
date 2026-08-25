@@ -37,7 +37,6 @@ description: "Цвет полос"
 | .stripe-tertiary                    | `--sf-stripe--color`: var(`--sf-tertiary`);                    |
 | .stripe-tertiary-container          | `--sf-stripe--color`: var(`--sf-tertiary-container`);          |
 
-{.table}
 
 ## Описание
 

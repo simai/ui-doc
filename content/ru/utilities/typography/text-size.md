@@ -31,7 +31,6 @@ description: "Размер текста (text-size)"
 | .text-10  | font-size: var(`--sf-text-size-10`);&lt;br/&gt; line-height: var(`--sf-text-height-10`);   |
 | .text-11  | font-size: var(`--sf-text-size-11`);&lt;br/&gt; line-height: var(`--sf-text-height-11`);   |
 | .text-12  | font-size: var(`--sf-text-size-12`);&lt;br/&gt; line-height: var(`--sf-text-height-12`);   |
-{.table}
 
 **Примечание:** Ранее существовал класс `text-13`, но теперь максимально доступный размер — `text-12`.
 
@@ -67,8 +66,7 @@ description: "Размер текста (text-size)"
 ```html
 <p class="text-2">Этот текст станет размером text-2 начиная с размера экрана md</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/text-size" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

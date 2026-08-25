@@ -38,7 +38,6 @@ Some SIMAI Framework variables defined in the core and used by default. Color an
 | `--sf-display--weight`      | 300                                   | Display heading weight                                                             |
 | `--sf-text--style`          | inherit                               | Text style                                                                         |
 | `--sf-text--tracking`       | inherit                               | Text tracking                                                                      |
-{.table}
 
 These variables let you tune the interface without touching size/color primitives directly.
 

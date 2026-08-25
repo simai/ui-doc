@@ -30,7 +30,6 @@ description: "Особенности использования"
 | `--sf-disable`         | `--sf-neutral-50--alfa-12` | `--sf-neutral-90--alfa-12` |
 | `--sf-on-disable`      | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 | `--sf-outline-disable` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
-{.table}
 
 [image22]: /ru/assets/reference/image-22.png
 [image23]: /ru/assets/reference/image-23.png

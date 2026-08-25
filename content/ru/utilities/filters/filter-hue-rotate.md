@@ -25,7 +25,6 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 | .-hue-rotate-30 | filter: hue-rotate(-30deg) |
 | .-hue-rotate-60 | filter: hue-rotate(-60deg) |
 | .-hue-rotate-90 | filter: hue-rotate(-90deg) |
-{.table}
 
 ## Описание
 
@@ -42,20 +41,6 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 
 ## Пример использования
 
-```html
-<!-- Элемент без изменения оттенка -->
-<div class="hue-rotate-0 p-4 bg-primary color-on-surface-inverse">Исходный цвет</div>
-```
+:::example {id="utilities/filters/filter-hue-rotate" label="Результат"}
+:::
 
-```html
-<!-- Изменение оттенка при наведении -->
-<div class="hue-rotate-0 hover:hue-rotate-90 p-4 bg-secondary transition">
-  Наведи, чтобы оттенок изменился
-</div>
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-hue-rotate"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

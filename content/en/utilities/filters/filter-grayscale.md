@@ -15,7 +15,6 @@ description: "Монохромность элемента (filter-grayscale)"
 |:----------------|:----------------------|
 | .grayscale-none | filter: grayscale(0); |
 | .grayscale      | filter: grayscale(1); |
-{.table}
 
 ## Описание
 

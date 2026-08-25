@@ -20,7 +20,6 @@ description: "Общее свойство перехода"
 | .transition-opacity   | transition-property: opacity;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                               |
 | .transition-shadow    | transition-property: shadow;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                                |
 | .transition-transform | transition-property: transform;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                             |
-{.table}
 
 ## Описание
 

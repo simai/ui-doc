@@ -18,7 +18,6 @@ description: "Автоматическая ширина столбцов сет�
 | .auto-cols-min | grid-auto-columns: min-content;    |
 | .auto-cols-max | grid-auto-columns: max-content;    |
 | .auto-cols-fr  | grid-auto-columns: minmax(0, 1fr); |
-{.table}
 
 ## Синтаксис
 
@@ -66,8 +65,7 @@ description: "Автоматическая ширина столбцов сет�
   <!-- Начиная с ширины md и выше столбцы используют минимальный размер содержимого -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-auto-columns" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-auto-columns"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

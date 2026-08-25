@@ -43,7 +43,6 @@ Loader-статус: `registered`. Loader-правило: `cl-breadcrumbs`.
 | `aria-label` | `ariaLabel` | `String` | `'Breadcrumb'` | `—` |
 | `expand-on-ellipsis` | `expandOnEllipsis` | `Boolean` | `true` | `—` |
 | `max-items` | `maxItems` | `Number` | `4` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -52,7 +51,6 @@ Loader-статус: `registered`. Loader-правило: `cl-breadcrumbs`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -70,7 +68,6 @@ Loader-статус: `registered`. Loader-правило: `cl-breadcrumbs`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

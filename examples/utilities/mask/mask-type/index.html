@@ -1,0 +1,39 @@
+<div class="wrap grid grid-col-1 sm:grid-col-2 max-w-lg gap-3 content-main-start">
+  <div class="sf-card p-3 radius-2 border border-outline-variant">
+    <div class="text-subtitle-2 m-b-2 color-on-surface">mask-type-alpha</div>
+    <svg viewBox="0 0 240 120" class="w-full h-f4 radius-2 bg-surface-1">
+      <defs>
+        <mask id="mask-alpha" class="mask-type-alpha">
+          <rect width="240" height="120" fill="black"></rect>
+          <circle cx="70" cy="60" r="45" fill="white"></circle>
+        </mask>
+      </defs>
+      <rect width="240" height="120" fill="url(#g1)" mask="url(#mask-alpha)"></rect>
+      <defs>
+        <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#84a9ff"></stop>
+          <stop offset="100%" stop-color="#f3d1ff"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="sf-card p-3 radius-2 border border-outline-variant">
+    <div class="text-subtitle-2 m-b-2 color-on-surface">mask-type-luminance</div>
+    <svg viewBox="0 0 240 120" class="w-full h-f4 radius-2 bg-surface-1">
+      <defs>
+        <mask id="mask-luminance" class="mask-type-luminance">
+          <rect width="240" height="120" fill="black"></rect>
+          <circle cx="170" cy="60" r="45" fill="white"></circle>
+        </mask>
+      </defs>
+      <rect width="240" height="120" fill="url(#g2)" mask="url(#mask-luminance)"></rect>
+      <defs>
+        <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#9ce6b8"></stop>
+          <stop offset="100%" stop-color="#9fd5ff"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</div>

@@ -17,7 +17,6 @@ description: "Управление минимальным размером по�
 | `.scroll-2` / `.scroll-thumb-2` | `--sf-scroll-thumb-size: var(--sf-a3);` |
 | `.scroll-3` / `.scroll-thumb-3` | `--sf-scroll-thumb-size: var(--sf-a2);` |
 | `.scroll-4` / `.scroll-thumb-4` | `--sf-scroll-thumb-size: var(--sf-a1);` |
-{.table}
 
 ## Описание
 
@@ -33,15 +32,6 @@ description: "Управление минимальным размером по�
 
 ## Пример
 
-```html
-<html class="scroll-thumb-4 h-d5 overflow-auto">
-  <div class="p-1">
-    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-  </div>
-</html>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

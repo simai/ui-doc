@@ -21,7 +21,6 @@ description: "Фон в оттенках серого элемента (backdrop
 |:-------------------------|:------------------------------|
 | .backdrop-grayscale-none | backdrop-filter: grayscale(0) |
 | .backdrop-grayscale      | backdrop-filter: grayscale(1) |
-{.table}
 
 ## Описание
 
@@ -37,14 +36,6 @@ description: "Фон в оттенках серого элемента (backdrop
 
 ## Пример использования
 
-```html
-<!-- При наведении фон станет оттенком серого -->
-<div class="backdrop-grayscale-none hover:backdrop-grayscale p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы фон стал серым
-</div>
-```
-## Playground
+:::example {id="utilities/backdrop-filter/backdrop-grayscale" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-grayscale"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -20,7 +20,6 @@ description: "Выравнивание отдельного элемента в 
 | .self-main-end     | justify-self: end;     |
 | .self-main-center  | justify-self: center;  |
 | .self-main-stretch | justify-self: stretch; |
-{.table}
 
 ## Синтаксис
 
@@ -40,15 +39,6 @@ description: "Выравнивание отдельного элемента в 
 
 ## Пример использования
 
-```html
-<div class="grid grid-col-3">
-  <div></div>
-  <div class="self-main-center">Элемент по центру ячейки</div>
-  <div></div>
-</div>
-```
-## Playground
+:::example {id="utilities/grid-and-flexbox-utilities/justify-self" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-self"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

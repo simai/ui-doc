@@ -45,7 +45,6 @@ Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 | `meta-icon` | `metaIcon` | `String` | `""` | `—` |
 | `card-variant` | `cardVariant` | `String` | `"square"` | `—` |
 | `disabled` | `disabled` | `Boolean` | `false` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -54,7 +53,6 @@ Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -72,7 +70,6 @@ Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

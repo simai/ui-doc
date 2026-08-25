@@ -53,7 +53,6 @@ description: "Метод отображения элемента (display)"
 | .content            | display: contents;           |
 | .list-item          | display: list-item;          |
 | .hidden             | display: none;               |
-{.table}
 
 ## Примеры использования
 
@@ -165,8 +164,7 @@ description: "Метод отображения элемента (display)"
 ```html
 <div class="md:hidden">Скрывается на экранах от md и больше</div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/display" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=display"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

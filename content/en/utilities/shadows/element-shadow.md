@@ -19,7 +19,6 @@ description: "Element depth and hover shadow states"
 | `.shadow-4` | `--sf-shadow--level-ratio: 8` |
 | `.shadow-5` | `--sf-shadow--level-ratio: 16` |
 | `.hover:shadow-0 ... .hover:shadow-5` | set depth in `:hover` |
-{.table}
 
 ## Syntax
 
@@ -28,14 +27,6 @@ description: "Element depth and hover shadow states"
 
 ## Usage Example
 
-```html
-<div class="shadow-1 hover:shadow-3 p-2 radius-2 border border-outline-variant">
-  Hover to increase depth
-</div>
-```
+:::example {id="utilities/shadows/element-shadow" label="Result"}
+:::
 
-## Playground
-
-&lt;div class="sf-playground overflow-hidden border border-surface-overlay"&gt;
-&lt;iframe src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

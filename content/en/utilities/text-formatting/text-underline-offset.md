@@ -19,7 +19,6 @@ description: "Смещение подчеркивания текста"
 | .decoration-offset-2    | text-underline-offset: var(`--sf-a2`); |
 | .decoration-offset-3    | text-underline-offset: var(`--sf-a3`); |
 | .decoration-offset-4    | text-underline-offset: var(`--sf-a4`); |
-{.table}
 
 ## Описание
 

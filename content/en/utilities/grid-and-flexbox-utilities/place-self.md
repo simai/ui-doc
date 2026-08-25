@@ -18,7 +18,6 @@ description: "Размещение отдельного элемента (place-
 | .self-end     | place-self: end;     |
 | .self-center  | place-self: center;  |
 | .self-stretch | place-self: stretch; |
-{.table}
 
 *(Обратите внимание, что в исходном коде был класс `self-text-center`, но по описанию это `self-center`.)*
 

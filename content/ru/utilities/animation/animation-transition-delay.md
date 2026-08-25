@@ -27,7 +27,6 @@ description: "Задержка перехода"
 | .delay-7 | transition-delay: 700ms; |
 | .delay-8 | transition-delay: 1s;    |
 | .delay-9 | transition-delay: 2s;    |
-{.table}
 
 ## Описание
 
@@ -48,16 +47,6 @@ description: "Задержка перехода"
 
 ## Пример использования
 
-```html
-<div class="transition duration-normal ease-in-out delay-5 bg-primary color-on-surface-inverse p-2 radius-1/3">
-    Этот блок изменит цвет с задержкой 300ms перед началом анимации.
-</div>
+:::example {id="utilities/animation/animation-transition-delay" label="Результат"}
+:::
 
-<div class="transition duration-normal ease-in-out delay-7 bg-secondary color-on-surface-inverse p-2 radius-1/3">
-    Этот блок изменит цвет с задержкой 700ms перед началом анимации.
-</div>
-```
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-transition-delay"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

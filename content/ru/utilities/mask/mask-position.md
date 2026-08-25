@@ -24,17 +24,9 @@ description: "Положение маски"
 | .mask-inline-start-bottom  | mask-position: left bottom;  |
 | .mask-inline-end-top       | mask-position: right top;    |
 | .mask-inline-end-bottom    | mask-position: right bottom; |
-{.table}
 
 ## Примеры
 
-```html
-<div class="mask-top"></div>
-<div class="mask-center"></div>
-<div class="mask-inline-end-bottom"></div>
-```
-## Playground
+:::example {id="utilities/mask/mask-position" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=mask&group=mask-position"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

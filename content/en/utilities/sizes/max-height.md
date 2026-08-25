@@ -21,7 +21,6 @@ description: "Максимальная высота (max-height)"
 | .max-h-max              | max-height: max-content;                    |
 | .max-h-fit              | max-height: fit-content;                    |
 | .max-h-a0 ... .max-h-i9 | Фиксированные размеры из системы фреймворка |
-{.table}
 
 ## Синтаксис
 

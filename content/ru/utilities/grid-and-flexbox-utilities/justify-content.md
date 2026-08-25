@@ -22,7 +22,6 @@ description: "Выравнивание содержимого по основн�
 | .content-main-between | justify-content: space-between; |
 | .content-main-around  | justify-content: space-around;  |
 | .content-main-evenly  | justify-content: space-evenly;  |
-{.table}
 
 ## Синтаксис
 
@@ -63,8 +62,7 @@ description: "Выравнивание содержимого по основн�
     <!-- Начиная с md выравнивание элементов будет flex-start -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-content"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -17,7 +17,6 @@ The supported text scale is now `text-1/4 ... text-12`.
 | `.text-1/3` | `font-size: var(--sf-text-size-1/3); line-height: var(--sf-text-height-1/3);` |
 | `.text-1/2` | `font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2);` |
 | `.text-1 ... .text-12` | `font-size: var(--sf-text-size-*); line-height: var(--sf-text-height-*);` |
-{.table}
 
 ## Note
 
@@ -38,8 +37,7 @@ The supported text scale is now `text-1/4 ... text-12`.
 <p class="md:text-2">Applies text-2 from md and up</p>
 ```
 
-## Playground
+## Example
+:::example {id="utilities/typography/text-size" label="Result"}
+:::
 
-&lt;div class="sf-playground overflow-hidden border"&gt;
-&lt;iframe src="https://play.simai.io/embed.html?component=typography&group=text-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

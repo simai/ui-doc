@@ -30,7 +30,6 @@ description: "Цвет текста"
 | `.color-primary` | `--sf-primary` | Основной акцентный цвет |
 | `.color-warning` | `--sf-warning` | Предупреждение |
 | `.color-success` | `--sf-success` | Успешный результат |
-{.table}
 
 ## Пример
 
@@ -62,8 +61,7 @@ description: "Цвет текста"
 Для обычного вспомогательного текста предпочтителен штатный класс
 `.color-on-surface-variant`.
 
-## Playground
+## Пример
+:::example {id="utilities/text-formatting/text-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

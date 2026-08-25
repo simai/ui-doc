@@ -32,7 +32,6 @@ Default value examples used for color generation:
 | **Error**     | 25 (can be changed from 20 to 30\)                                   | 85 (can be changed from 50 to 100\) |
 | **Warning**   | 60 (can be changed from 55 to 80\)                                   | 60 (can be changed from 40 to 60\)  |
 | **Success**   | 145 (can be changed from 135 to 165\)                                 | 65 (can be changed from 30 to 100\) |
-{.table}
 
 By adjusting brightness, hue, and chroma settings, designers and developers can get the palette they need for the interface.
 
@@ -46,7 +45,6 @@ The following values were used when creating the UI Kit:
 | **Error**     | 25  |      85 |
 | **Warning**   | 60  |      60 |
 | **Success**   | 145 |      65 |
-{.table}
 
 For Neutral, three variants are available (Grey Primary, Gray Blue, Grey) with configurable Hue and Chroma parameters:
 
@@ -55,6 +53,5 @@ For Neutral, three variants are available (Grey Primary, Gray Blue, Grey) with c
 | **Grey Primary** | 265 |      5 |
 | **Gray Blue**    | 235 |     10 |
 | **Grey**         | 0   |      0 |
-{.table}
 
 Thanks to a flexible palette/token generation system and support for multiple themes (light and dark), SIMAI Framework simplifies working with color and makes interfaces clearer, more functional, and more aesthetically pleasing.

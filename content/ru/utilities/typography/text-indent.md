@@ -21,7 +21,6 @@ description: "Отступ текста (text-indent)"
 | .indent-3 | text-indent: var(`--sf-space-3`); |
 | .indent-4 | text-indent: var(`--sf-space-4`); |
 | .indent-5 | text-indent: var(`--sf-space-5`); |
-{.table}
 
 ## Синтаксис
 
@@ -56,8 +55,7 @@ description: "Отступ текста (text-indent)"
 ```html
 <p class="indent-3">Начиная с размера экрана md, отступ будет средний.</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/text-indent" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-indent"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

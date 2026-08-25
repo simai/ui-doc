@@ -24,16 +24,9 @@ description: "Оформление текста"
 | `.capitalize` | `text-transform: capitalize;` |
 | `.truncate` | Обрезка строки с многоточием |
 | `.line-clamp-2` | Ограничение текста до 2 строк |
-{.table}
 
 ## Пример
 
-```html
-<p class="text-center uppercase">Sample text</p>
-<p class="truncate">Very long single-line text...</p>
-```
-## Playground
+:::example {id="utilities/text-formatting/text-formatting-text" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-text"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

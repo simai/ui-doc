@@ -16,13 +16,6 @@ description: "Параметры по умолчанию для таблиц"
 
 ## Пример
 
-```html
-<table class="table">
-  ...
-</table>
-```
-## Playground
+:::example {id="utilities/tables/tables-default-parameters" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=tables-default-parameters"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -14,18 +14,9 @@ description: "Активные строки и ячейки"
 |:--|:--|
 | `.table-active` | Активное состояние строки/ячейки |
 | `.table-hover` | Подсветка строки по наведению |
-{.table}
 
 ## Пример
 
-```html
-<table class="table table-hover">
-  <tr class="table-active">...</tr>
-  <tr><td class="table-active">...</td></tr>
-</table>
-```
-## Playground
+:::example {id="utilities/tables/tables-active-rows-and-cells" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=tables-active-rows-and-cells"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

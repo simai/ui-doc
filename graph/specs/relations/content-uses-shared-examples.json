@@ -1,0 +1,15 @@
+{
+  "id": "rel.ui-doc.content.uses-shared-examples",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.authored-content",
+  "to": "ui-doc.capability.shared-examples",
+  "relation_type": "uses",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "validated",
+  "impact": "critical",
+  "owner": "repository_owner",
+  "source_refs": ["content", "examples"],
+  "evidence_refs": ["source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json", ".docara/examples.json"]
+}

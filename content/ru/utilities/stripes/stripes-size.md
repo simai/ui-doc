@@ -24,7 +24,6 @@ description: "Размер полосок"
 | .stripe-size-2 | `--sf-stripe--size: var(--sf-a2);` |
 | .stripe-size-3 | `--sf-stripe--size: var(--sf-a3);` |
 | .stripe-size-4 | `--sf-stripe--size: var(--sf-a4);` |
-{.table}
 
 ## Описание
 
@@ -34,14 +33,6 @@ description: "Размер полосок"
 
 ## Пример использования
 
-```html
-<div class="stripe-size-1 stripe-1 p-3">Полоски размера 1 в стиле stripe-1</div>
-<div class="stripe-size-2 stripe-2 p-3">Полоски размера 2 в стиле stripe-2</div>
-<div class="stripe-size-3 stripe-3 p-3">Полоски размера 3 в стиле stripe-3</div>
-<div class="stripe-size-4 stripe-4 p-3">Полоски размера 4 в стиле stripe-4</div>
-```
-## Playground
+:::example {id="utilities/stripes/stripes-size" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=stripes&group=stripes-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

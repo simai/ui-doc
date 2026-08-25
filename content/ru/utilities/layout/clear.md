@@ -76,8 +76,7 @@ description: "Перенос после плавающих элементов (c
 ```html
 <div class="md:clear-inline-end"></div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/clear" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=clear"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

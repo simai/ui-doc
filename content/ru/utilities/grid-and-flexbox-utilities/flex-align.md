@@ -24,7 +24,6 @@ description: "Одновременное выравнивание по двум 
 | .end-start     | justify-content: flex-end; align-items: flex-start;   |
 | .end-center    | justify-content: flex-end; align-items: center;       |
 | .end-end       | justify-content: flex-end; align-items: flex-end;     |
-{.table}
 
 ## Синтаксис
 
@@ -60,8 +59,7 @@ description: "Одновременное выравнивание по двум 
   <!-- Начиная с md элементы будут по центру по обеим осям -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/flex-align" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=flex-align"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

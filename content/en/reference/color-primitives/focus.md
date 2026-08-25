@@ -15,7 +15,6 @@ Variables for the Focus role:
 | Variable           | Value (light)              | Value (dark)               |
 |:-------------------|:---------------------------|:---------------------------|
 | `--sf-focus--color`| `--sf-primary-50--alfa-24` | `--sf-primary-90--alfa-24` |
-{.table}
 
 [image28]: /assets/build/img/b64/2117413ba01bd267.png
 

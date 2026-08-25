@@ -35,7 +35,6 @@ If a number is off-grid, use the nearest lower value.
 | `--sf-text-height-10`  | `--sf-d5`         | 60px | `--sf-e2`          | 96px  |
 | `--sf-text-height-11`  | `--sf-d6`         | 64px | `--sf-e3`          | 104px |
 | `--sf-text-height-12`  | `--sf-d8`         | 72px | `--sf-e5`          | 120px |
-{.table}
 
 ## Line height for **headings**
 
@@ -56,7 +55,6 @@ height 6).
 | `--sf-title-height-10` | `--sf-d2`         | 48px | `--sf-d9`          | 76px |
 | `--sf-title-height-11` | `--sf-d3`         | 52px | `--sf-e0`          | 80px |
 | `--sf-title-height-12` | `--sf-d4`         | 56px | `--sf-e2`          | 96px |
-{.table}
 
 ## Using the heading modifier
 
@@ -78,7 +76,6 @@ For **label** roles:
 | `--sf-label-small--height`  | `--sf-text-height-1/4` |
 | `--sf-label-medium--height` | `--sf-text-height-1/3` |
 | `--sf-label-large--height`  | `--sf-text-height-1/2` |
-{.table}
 
 For **body text**:
 
@@ -87,7 +84,6 @@ For **body text**:
 | `--sf-text-small--height`  | `--sf-text-height-1/2` |
 | `--sf-text-medium--height` | `--sf-text-height-1`   |
 | `--sf-text-large--height`  | `--sf-text-height-2`   |
-{.table}
 
 For **heading**:
 
@@ -99,7 +95,6 @@ For **heading**:
 | `--sf-heading-4--height` | `--sf-title-height-3` |
 | `--sf-heading-5--height` | `--sf-title-height-2` |
 | `--sf-heading-6--height` | `--sf-title-height-1` |
-{.table}
 
 For **display**:
 
@@ -111,4 +106,3 @@ For **display**:
 | `--sf-display-4--height` | `--sf-title-height-9`  |
 | `--sf-display-5--height` | `--sf-title-height-8`  |
 | `--sf-display-6--height` | `--sf-title-height-7`  |
-{.table}

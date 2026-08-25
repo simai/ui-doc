@@ -18,7 +18,6 @@ description: "Монохромность элемента (filter-grayscale)"
 |:----------------|:----------------------|
 | .grayscale-none | filter: grayscale(0); |
 | .grayscale      | filter: grayscale(1); |
-{.table}
 
 ## Описание
 
@@ -37,17 +36,6 @@ description: "Монохромность элемента (filter-grayscale)"
 
 ## Пример использования
 
-```html
-<!-- Элемент без монохромности -->
-<div class="grayscale-none p-4 bg-primary color-on-surface-inverse">Цветной элемент</div>
-```
+:::example {id="utilities/filters/filter-grayscale" label="Результат"}
+:::
 
-```html
-<!-- Монохромный элемент при наведении -->
-<div class="grayscale-none hover:grayscale p-4 bg-secondary transition">Наведи, чтобы стало монохромным</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-grayscale"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

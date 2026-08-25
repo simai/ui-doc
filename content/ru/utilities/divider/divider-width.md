@@ -18,27 +18,11 @@ description: "Толщина разделителя"
 | `.divider-y-{0..4}` / `.divide-y-{0..4}` | Толщина разделителя по вертикали |
 | `.divider-x-reverse` / `.divide-x-reverse` | Реверс распределения линии по оси `x` |
 | `.divider-y-reverse` / `.divide-y-reverse` | Реверс распределения линии по оси `y` |
-{.table}
 
 Значения толщины: `0`, `1`, `2`, `3`, `4`.
 
 ## Пример
 
-```html
-<div class="grid grid-col-3 divider-x-1">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>
+:::example {id="utilities/divider/divider-width" label="Результат"}
+:::
 
-<div class="flex flex-col-reverse divider-y-2 divider-y-reverse">
-  <div>A</div>
-  <div>B</div>
-  <div>C</div>
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=divider&group=divider-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

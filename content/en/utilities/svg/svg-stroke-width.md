@@ -17,7 +17,6 @@ description: "Толщина обводки"
 | .stroke-2 | stroke-width: 2; |
 | .stroke-3 | stroke-width: 3; |
 | .stroke-4 | stroke-width: 4; |
-{.table}
 
 ## Описание
 

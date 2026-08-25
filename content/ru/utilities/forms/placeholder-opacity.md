@@ -16,9 +16,7 @@ description: "Прозрачность текста placeholder"
 |:--|:--|
 | `.placeholder-opacity-0 ... .placeholder-opacity-9` | `opacity: 0 ... 0.9` |
 | `.placeholder-opacity-full` | `opacity: 1` |
-{.table}
-## Playground
+## Пример
+:::example {id="utilities/forms/placeholder-opacity" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=placeholder-opacity"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

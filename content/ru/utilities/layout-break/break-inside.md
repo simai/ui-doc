@@ -56,8 +56,7 @@ description: "Разрыв внутри элемента (break-inside)"
 
 Таким образом, модификатор `break-inside` позволяет точно управлять разрывами внутри элементов, что упрощает адаптивную
 верстку и улучшает читаемость контента.
-## Playground
+## Пример
+:::example {id="utilities/layout-break/break-inside" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout-break&group=break-inside"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

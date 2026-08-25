@@ -51,7 +51,6 @@ description: "Метод отображения элемента (display)"
 | .content            | display: contents;           |
 | .list-item          | display: list-item;          |
 | .hidden             | display: none;               |
-{.table}
 
 ## Примеры использования
 

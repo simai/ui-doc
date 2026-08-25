@@ -17,7 +17,6 @@ description: "Подготовка к изменениям (will-change)"
 | .will-change-scroll-position | will-change: scroll-position; |
 | .will-change-contents        | will-change: contents;        |
 | .will-change-transform       | will-change: transform;       |
-{.table}
 
 ## Описание
 

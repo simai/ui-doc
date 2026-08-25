@@ -33,7 +33,6 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 | `sf-button--size-1` | Размер. |
 | `sf-button-text-container` | Контейнер текста с типографикой и отступами компонента. |
 
-{.table}
 
 ## Варианты
 
@@ -64,7 +63,6 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 | Outline | `sf-button--outline sf-button--primary` или `sf-button--outline sf-button--on-surface` | Действие средней важности, например отмена. |
 | Link | `sf-button--link sf-button--primary` или `sf-button--link sf-button--on-surface` | Компактное действие с минимальным визуальным весом. |
 
-{.table}
 
 ```html
 <button type="button"
@@ -98,7 +96,6 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 | `2` | `sf-button--size-2` | Крупные действия. |
 | `3` | `sf-button--size-3` | Акцентные блоки с большим пространством. |
 
-{.table}
 
 ## Иконки
 
@@ -196,7 +193,6 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 | Disabled | нативный атрибут `disabled` | Отключает взаимодействие и применяет disabled-оформление. |
 | Loading | классы `loading sf-button-state-loading` и `aria-busy="true"` | Показывает выполнение операции. |
 
-{.table}
 
 При ручной разметке состояния загрузки добавляйте оба класса. `loading`
 включает индикатор, а `sf-button-state-loading` выбирает его цвета для схемы.
@@ -282,7 +278,6 @@ JavaScript-конструктор безопасно задаёт `type="button"
 | `disabled` | `false` | Устанавливает нативное свойство `disabled`. |
 | `utilities` | `{}` | Дополнительные utility-классы. |
 
-{.table}
 
 `attrs` передаёт атрибуты на `&lt;button&gt;`. `class` и `className` добавляют классы,
 остальные ключи становятся HTML-атрибутами. `id` верхнего уровня становится
@@ -313,7 +308,6 @@ param: {
 | `Buttons:render` | После вызова `render()`. | Экземпляр компонента. |
 | `Buttons:destroy` | После вызова `destroy()`. | Экземпляр компонента. |
 
-{.table}
 
 `destroy()` удаляет созданный элемент из DOM и очищает внутренние ссылки.
 
@@ -337,7 +331,6 @@ window.addEventListener('Buttons:render', (event) => {
 | Иконка | `--sf-icon--color`, `--sf-icon--font-size` |
 | Эффекты | `--sf-button--box-shadow`, `--sf-button-loading-stripe-1`, `--sf-button-loading-stripe-2` |
 
-{.table}
 
 ```css
 .checkout-action {

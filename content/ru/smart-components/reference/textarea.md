@@ -42,7 +42,6 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 | `mask` | `mask` | `Boolean` | `false` | `—` |
 | `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
 | `mask-options` | `maskOptions` | `String` | `''` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -51,7 +50,6 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -69,7 +67,6 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

@@ -26,7 +26,6 @@ Variables for the Mark role:
 | Variable  | Value (light)           | Value (dark)            |
 |:----------|:------------------------|:------------------------|
 | --sf-mark | --sf-warning-50--alfa-24 | --sf-warning-90--alfa-24 |
-{.table}
 
 ## Shadow
 
@@ -37,7 +36,6 @@ Variable for the default shadow:
 | Variable  | Value (light)           | Value (dark)            |
 |:----------|:------------------------|:------------------------|
 | --sf-mark | --sf-warning-50--alfa-24 | --sf-warning-90--alfa-24 |
-{.table}
 
 ## Border radius
 
@@ -46,7 +44,6 @@ Add a default border radius to the core.
 | Variable          | Value                   | Description                                                                                     |
 |:------------------|:------------------------|:------------------------------------------------------------------------------------------------|
 | `--sf-radius--ui` | `var(--sf-radius-1/3)` | Default border radius for UI elements (buttons, inputs, dropdowns, etc.) |
-{.table}
 
 This variable should be used to set the default radius for all small UI elements (buttons, inputs, dropdowns, etc.).
 

@@ -1,7 +1,7 @@
 # SIMAI Framework Documentation
 
 This repository contains the Russian and English public documentation for
-SIMAI Framework. It is a content-only Docara v2 project: authored pages live in
+SIMAI Framework. It is a content-only Docara 2 project: authored pages live in
 `content/<locale>/`, site configuration lives in `docara.json`, and local
 assets live in `assets/`.
 
@@ -22,7 +22,8 @@ material can be normalized through the same documented path.
 
 - One physical Markdown file owns each public page.
 - UI strings belong to `content/<locale>/lang.json`.
-- `simai/docara` is pinned in `composer.lock`; do not copy its runtime here.
+- Stable `simai/docara:^2.0` is pinned in `composer.lock`; do not copy its
+  runtime here.
 - GitHub Actions validates builds only. Publication and deployment are separate
   explicitly authorized operations.
 - Generated `build_*`, `vendor/`, `.docara/`, `.env`, and working `source/`

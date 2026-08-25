@@ -27,7 +27,6 @@ description: "Цвет каретки (caret-color)"
 | .caret-warning     | caret-color: var(`--sf-warning`);     |
 | .caret-success     | caret-color: var(`--sf-success`);     |
 
-{.table}
 
 ## Описание
 
@@ -41,11 +40,6 @@ description: "Цвет каретки (caret-color)"
 
 ## Пример использования
 
-```html
-<textarea class="caret-primary ..."></textarea>
-```
-## Playground
+:::example {id="utilities/forms/caret-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=caret-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

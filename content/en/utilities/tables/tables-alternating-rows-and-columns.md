@@ -14,7 +14,6 @@ description: "Чередование строки и столбцов"
 |:-------------------------------------------------------|:---------------------------------------------------------------------------------------------|
 | table-stripe > tbody > tr:nth-of-type(odd) > *         | `--sf-table-accent-bg`:var(`--sf-table-stripe-bg`);&lt;br/&gt;color:var(`--sf-table-stripe-color`) |
 | table-stripe-col > :not(caption) > tr > :nth-child(2n) | `--sf-table-accent-bg`:var(`--sf-table-stripe-bg`);&lt;br/&gt;color:var(`--sf-table-stripe-color`) |
-{.table}
 
 ## Описание
 

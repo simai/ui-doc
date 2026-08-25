@@ -25,14 +25,12 @@ Opacity and intensity variables:
 | `--sf-shadow--alfa-fill`    | 24%      |
 | `--sf-shadow--alfa-outline` | 12%      |
 | `--sf-shadow--alfa-shade`   | 8%       |
-{.table}
 
 Base color:
 
 | Variable           | Value |
 |:-------------------|:---------|
 | `--sf-shadow--color` | black    |
-{.table}
 
 Derived colors:
 
@@ -41,7 +39,6 @@ Derived colors:
 | `--sf-shadow--color-fill`    | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-shadow--color`) var(`--sf-shadow--alfa-fill`));    |
 | `--sf-shadow--color-outline` | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-shadow--color`) var(`--sf-shadow--alfa-outline`)); |
 | `--sf-shadow--color-shade`   | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-shadow--color`) var(`--sf-shadow--alfa-shade`));   |
-{.table}
 
 **Shadow level ratio**
 
@@ -50,7 +47,6 @@ Derived colors:
 | Variable                   | Value |
 |:---------------------------|:---------|
 | `--sf-shadow--level-ratio` | 1        |
-{.table}
 
 ```css
 :root * {

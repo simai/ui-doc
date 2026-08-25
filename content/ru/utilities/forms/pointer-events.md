@@ -18,7 +18,6 @@ description: "События указателя (pointer-events)"
 |:--------------------|:----------------------|
 | .pointer-event-none | pointer-events: none; |
 | .pointer-event-auto | pointer-events: auto; |
-{.table}
 
 ## Описание
 
@@ -33,19 +32,6 @@ description: "События указателя (pointer-events)"
 
 ## Пример использования
 
-```html
-<!-- Кнопка без реакции на указатель -->
-<button class="pointer-event-none bg-primary color-on-surface-inverse p-1 radius-1/3">
-    Нажать нельзя
-</button>
+:::example {id="utilities/forms/pointer-events" label="Результат"}
+:::
 
-<!-- Кнопка с реакцией на указатель -->
-<button class="pointer-event-auto bg-secondary color-on-surface-inverse p-1 radius-1/3">
-    Нажать можно
-</button>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=pointer-events"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

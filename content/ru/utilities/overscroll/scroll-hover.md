@@ -17,7 +17,6 @@ description: "Полоса прокрутки при наведении (scroll-
 |:--------------|:-------------------------------------------------------------------------------------------------------------|
 | .scroll-hover | По умолчанию скрывает (минимизирует) полосу прокрутки. При наведении курсора делает полосу прокрутки видимой |
 
-{.table}
 
 ## Описание
 
@@ -40,57 +39,6 @@ description: "Полоса прокрутки при наведении (scroll-
 
 ## Пример использования
 
-```html
+:::example {id="utilities/overscroll/scroll-hover" label="Результат"}
+:::
 
-<div class="scroll-hover overflow-auto" style="height: 200px;">
-    <!-- Поместите здесь длинный контент, например, последовательность букв английского алфавита: -->
-    ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
-</div>
-```
-
-## Пример стилей
-
-```css
-.scroll-hover {
-    /* Для Firefox: скрываем полосу прокрутки по умолчанию */
-    scrollbar-width: none;
-}
-
-/* Для WebKit-браузеров (Chrome, Safari, Edge Chromium): скрываем полосу прокрутки */
-.scroll-hover::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
-/* При наведении: делаем полосу прокрутки видимой */
-.scroll-hover:hover {
-    scrollbar-width: thin; /* Firefox: тонкая полоса прокрутки */
-}
-
-/* WebKit-браузеры: при наведении задаём толщину полосы */
-.scroll-hover:hover::-webkit-scrollbar {
-    width: var(--sf-scroll-bg-width);
-    height: var(--sf-scroll-bg-width);
-}
-
-.scroll-hover:hover::-webkit-scrollbar-thumb {
-    background-color: var(--sf-scroll-bg-thumb);
-    border-radius: var(--sf-scroll-radius);
-}
-
-.scroll-hover:hover::-webkit-scrollbar-track {
-    background-color: var(--sf-scroll-bg-track);
-}
-
-/* Плавный переход при наведении */
-.scroll-hover, .scroll-hover:hover::-webkit-scrollbar,
-.scroll-hover:hover::-webkit-scrollbar-thumb,
-.scroll-hover:hover::-webkit-scrollbar-track {
-    transition: var(--sf-duration-normal) var(--sf-animation);
-}
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-hover"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

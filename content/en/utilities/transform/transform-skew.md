@@ -26,7 +26,6 @@ description: "Наклон (transform-skew)"
 | .skew-x-15 | transform: skewX(15deg); |
 | .skew-y-15 | transform: skewY(15deg); |
 
-{.table}
 
 ## Описание
 
@@ -57,4 +56,3 @@ description: "Наклон (transform-skew)"
 | .skew-x-5, .skew-x-6, .skew-x-7, .skew-x-8 | .skew-x-15  |
 | .skew-y-5, .skew-y-6, .skew-y-7, .skew-y-8 | .skew-y-15  |
 
-{.table}

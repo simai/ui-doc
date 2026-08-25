@@ -21,7 +21,6 @@ description: "Сепия подложки (backdrop-sepia)"
 |:---------------------|:--------------------------|
 | .backdrop-sepia-none | backdrop-filter: sepia(0) |
 | .backdrop-sepia      | backdrop-filter: sepia(1) |
-{.table}
 
 ## Описание
 
@@ -38,14 +37,6 @@ description: "Сепия подложки (backdrop-sepia)"
 
 ## Пример использования
 
-```html
-<!-- При наведении фон элемента станет сепийным -->
-<div class="backdrop-sepia-none hover:backdrop-sepia p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы применить сепию к фону
-</div>
-```
-## Playground
+:::example {id="utilities/backdrop-filter/backdrop-sepia" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-sepia"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

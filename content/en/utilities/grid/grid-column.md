@@ -27,7 +27,6 @@ description: "Размер колонки сетки (grid-column)"
 | .col-span-11   | grid-column: span 11 / span 11; |
 | .col-span-12   | grid-column: span 12 / span 12; |
 | .col-span-full | grid-column: 1/-1;              |
-{.table}
 
 ## Синтаксис
 

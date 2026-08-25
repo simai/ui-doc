@@ -20,7 +20,6 @@ description: "Выделение текста (user-select)"
 | .select-text | user-select: text; |
 | .select-all  | user-select: all;  |
 | .select-auto | user-select: auto; |
-{.table}
 
 ## Описание
 
@@ -37,29 +36,6 @@ description: "Выделение текста (user-select)"
 
 ## Пример использования
 
-```html
-<!-- Предотвратить выделение текста -->
-<div class="select-none">
-  Быстрая коричневая лиса прыгает через ленивую собаку.
-</div>
+:::example {id="utilities/interactivity/user-select" label="Результат"}
+:::
 
-<!-- Разрешить выделение текста -->
-<div class="select-text">
-  Быстрая коричневая лиса прыгает через ленивую собаку.
-</div>
-
-<!-- Автоматически выделять весь текст при клике -->
-<div class="select-all">
-  Быстрая коричневая лиса прыгает через ленивую собаку.
-</div>
-
-<!-- Использовать поведение выделения по умолчанию -->
-<div class="select-auto">
-  Быстрая коричневая лиса прыгает через ленивую собаку.
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=interactivity&group=user-select"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

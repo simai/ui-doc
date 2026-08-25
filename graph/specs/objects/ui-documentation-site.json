@@ -1,0 +1,15 @@
+{
+  "id": "ui-doc.capability.documentation-site",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "feature",
+  "title": "SIMAI Framework documentation site",
+  "summary": "A bilingual static SIMAI Framework site with locale product landings, first-level header navigation and a full documentation tree generated from repository-owned Markdown and validated configuration.",
+  "owner": "repository_owner",
+  "lifecycle": "validated",
+  "readiness": "R5_operational",
+  "evidence_status": "validated",
+  "source_refs": ["README.md", "docara.json", "content/ru/section.json", "content/en/section.json"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md", "content/ru/index.page.json", "content/en/index.page.json"],
+  "tags": ["documentation", "landing", "header-navigation", "russian", "english", "static-site"]
+}

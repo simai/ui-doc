@@ -19,7 +19,6 @@ description: "Цвет ползунка прокрутки (scroll-slider-color 
 | .scroll-primary / .scroll-thumb-primary     | `--sf-scroll-bg-thumb`: var(`--sf-on-primary`);   |
 | .scroll-secondary / .scroll-thumb-secondary | `--sf-scroll-bg-thumb`: var(`--sf-on-secondary`); |
 | .scroll-tertiary / .scroll-thumb-tertiary   | `--sf-scroll-bg-thumb`: var(`--sf-on-tertiary`);  |
-{.table}
 
 ## Описание
 
@@ -33,16 +32,6 @@ description: "Цвет ползунка прокрутки (scroll-slider-color 
 
 ## Пример использования
 
-```html
+:::example {id="utilities/overscroll/scroll-slider-color" label="Результат"}
+:::
 
-<html class="scroll-thumb-primary h-d5 overflow-auto ...">
-<div class="p-1">
-    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-</div>
-</html>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -4,5 +4,18 @@
   "preset": "docs",
   "layout": {
     "container": {"max": 7}
+  },
+  "navigation": {
+    "scope": "section"
+  },
+  "header_navigation": {
+    "enabled": true,
+    "items": [
+      {"id": "start", "label": "Start", "href": "/en/start/introduction/"},
+      {"id": "fundamentals", "label": "Fundamentals", "href": "/en/fundamentals/"},
+      {"id": "utilities", "label": "Utilities", "href": "/en/utilities/"},
+      {"id": "components", "label": "Components", "href": "/en/framework-components/introduction/"},
+      {"id": "smart-components", "label": "Smart Components", "href": "/en/smart-components/introduction/"}
+    ]
   }
 }

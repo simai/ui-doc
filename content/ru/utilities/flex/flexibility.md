@@ -19,7 +19,6 @@ description: "Гибкость элементов (flex)"
 | .flex-content | flex: 1 0 auto; |
 | .flex-initial | flex: 0 1 auto; |
 | .flex-none    | flex: none;     |
-{.table}
 
 ## Синтаксис
 
@@ -39,15 +38,6 @@ description: "Гибкость элементов (flex)"
 
 ## Примеры использования
 
-```html
-<!-- Пример с flex-1: все элементы равномерно распределят доступное пространство -->
-<div class="flex">
-    <div class="flex-1 bg-surface-1">Короткий текст</div>
-    <div class="flex-1 bg-surface-2">Средний по длине текст</div>
-    <div class="flex-1 bg-surface-3">Длинный текст, способный занять больше места, если оно доступно</div>
-</div>
-```
+:::example {id="utilities/flex/flexibility" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flexibility"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -1,0 +1,15 @@
+{
+  "id": "rel.ui-doc.site.reports-translation-state",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.documentation-site",
+  "to": "ui-doc.capability.translation-tracking",
+  "relation_type": "reports",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "partial",
+  "impact": "high",
+  "owner": "repository_owner",
+  "source_refs": ["docara.json", "translations.lock.json", "content/ru", "content/en"],
+  "evidence_refs": [".docara/translation-status.json"]
+}

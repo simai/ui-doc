@@ -14,16 +14,9 @@ description: "Оформление таблицы"
 |:--|:--|
 | `.table` | Базовое оформление таблицы |
 | `.table-sm` | Компактные отступы ячеек |
-{.table}
 
 ## Пример
 
-```html
-<table class="table">...</table>
-<table class="table table-sm">...</table>
-```
-## Playground
+:::example {id="utilities/tables/tables-formatting" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=tables-formatting"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

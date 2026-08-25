@@ -34,7 +34,6 @@ Loader-статус: `registered`. Loader-правило: `cl-tree`.
 | `root-class` | `rootClass` | `String` | `''` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `''` | `—` |
 | `role` | `role` | `String` | `'tree'` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -43,7 +42,6 @@ Loader-статус: `registered`. Loader-правило: `cl-tree`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -61,7 +59,6 @@ Loader-статус: `registered`. Loader-правило: `cl-tree`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

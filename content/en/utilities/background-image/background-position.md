@@ -21,7 +21,6 @@ description: "Положение фона"
 | .bg-right-bottom | background-position: right bottom; |
 | .bg-right-top    | background-position: right top;    |
 | .bg-top          | background-position: top;          |
-{.table}
 
 ## Описание
 

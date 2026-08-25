@@ -15,7 +15,6 @@ description: "Перенос строк (word-break)"
 | .text-break-normal | overflow-wrap: normal;&lt;br/&gt; word-break: normal; |
 | .text-break-word   | overflow-wrap: break-word;                      |
 | .text-break-all    | word-break: break-all;                          |
-{.table}
 
 ## Синтаксис
 

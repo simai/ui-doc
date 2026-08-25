@@ -19,7 +19,6 @@ description: "Направление размещения (flex-direction)"
 | .flex-col         | flex-direction: column;         |
 | .flex-row-reverse | flex-direction: row-reverse;    |
 | .flex-col-reverse | flex-direction: column-reverse; |
-{.table}
 
 ## Синтаксис
 
@@ -88,8 +87,7 @@ description: "Направление размещения (flex-direction)"
     <!-- Начиная с md элементы будут расположены в строку слева направо -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/flex/flex-direction" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flex-direction"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

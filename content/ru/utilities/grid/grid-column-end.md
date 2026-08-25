@@ -29,7 +29,6 @@ description: "Конечное положение колонки сетки (gri
 | .col-end-12   | grid-column-end: 12;   |
 | .col-end-13   | grid-column-end: 13;   |
 | .col-end-auto | grid-column-end: auto; |
-{.table}
 
 ## Синтаксис
 
@@ -68,8 +67,7 @@ description: "Конечное положение колонки сетки (gri
     <!-- Начиная с размера экрана md и больше элемент будет заканчиваться на 4-й линии сетки -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-column-end" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-column-end"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

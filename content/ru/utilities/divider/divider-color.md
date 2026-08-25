@@ -24,19 +24,9 @@ description: "Цвет разделителя"
 | `.divider-warning` / `.divide-warning` | `border-color: var(--sf-outline-warning)` |
 | `.divider-success` / `.divide-success` | `border-color: var(--sf-outline-success)` |
 | `.hover:divider-*` | Цвет разделителя при `:hover` |
-{.table}
 
 ## Пример
 
-```html
-<div class="grid grid-col-3 divider-x-1 divider-primary hover:divider-error">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>
-```
-## Playground
+:::example {id="utilities/divider/divider-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=divider&group=divider-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

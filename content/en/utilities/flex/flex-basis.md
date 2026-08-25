@@ -29,7 +29,6 @@ description: "Базисный размер (flex-basis)"
 | .basis-px               | flex-basis: 1px;        |
 | .basis-0                | flex-basis: 0;          |
 | .basis-1 ... .basis-100 | flex-basis: {1..100}%   |
-{.table}
 
 ## Синтаксис
 

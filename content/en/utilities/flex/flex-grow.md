@@ -15,7 +15,6 @@ description: "Растяжимость элементов (flex-grow)"
 |:-----------|:--------------|
 | .grow      | flex-grow: 1; |
 | .grow-none | flex-grow: 0; |
-{.table}
 
 ## Синтаксис
 

@@ -16,7 +16,6 @@ description: "Шаблон строк сетки (grid-template-rows)"
 |:----------------|:-----------------------------------------|
 | .grid-row-1 … 12| grid-template-rows: repeat(n, minmax(0, 1fr)); |
 | .grid-row-none  | grid-template-rows: none;                |
-{.table}
 
 ## Синтаксис
 
@@ -42,8 +41,7 @@ description: "Шаблон строк сетки (grid-template-rows)"
   <!-- 2 строки на мобильных, 4 на md и выше -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-template-rows" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-template-rows"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

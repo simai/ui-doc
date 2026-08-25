@@ -13,15 +13,9 @@ description: "Границы таблицы"
 | Класс | Значение |
 |:--|:--|
 | `.table-border` | Добавляет границы таблицы и ячеек |
-{.table}
 
 ## Пример
 
-```html
-<table class="table table-border">...</table>
-```
-## Playground
+:::example {id="utilities/tables/table-border" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=table-border"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

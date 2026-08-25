@@ -20,7 +20,6 @@ Variables for the Link role:
 | `--sf-link-hover`  | `--sf-primary-35`  | `--sf-primary-85`  |
 | `--sf-link-active` | `--sf-primary-30`  | `--sf-primary-90`  |
 | `--sf-link-visited`| `--sf-tertiary-40` | `--sf-tertiary-80` |
-{.table}
 
 [image26]: /assets/build/img/b64/c5e2dfd48bf76277.png
 [image27]: /assets/build/img/b64/7e0665ccbee8a3f4.png

@@ -26,16 +26,9 @@ description: "Цвет обводки"
 | `.stroke-success` | `stroke: var(--sf-outline-success);` |
 | `.stroke-transparent` | `stroke: var(--sf-transparent);` |
 | `.stroke-current` | `stroke: currentColor;` |
-{.table}
 
 ## Пример
 
-```html
-<svg class="stroke-primary fill-transparent"></svg>
-<svg class="stroke-warning fill-transparent"></svg>
-```
-## Playground
+:::example {id="utilities/svg/svg-stroke-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

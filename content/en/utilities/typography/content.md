@@ -16,7 +16,6 @@ description: "Содержимое (content)"
 | .before-empty | content: ''   |
 | .after-none   | content: none |
 | .before-none  | content: none |
-{.table}
 
 ## Описание
 

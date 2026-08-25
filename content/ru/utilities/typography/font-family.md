@@ -20,7 +20,6 @@ description: "Семейство шрифтов (font-family)"
 | .sans  | font-family: var(`--sf-sans`);  |
 | .serif | font-family: var(`--sf-serif`); |
 | .mono  | font-family: var(`--sf-mono`);  |
-{.table}
 
 
 ## Пример использования
@@ -39,8 +38,7 @@ description: "Семейство шрифтов (font-family)"
 ```html
 <p class="serif">На экранах md и больше текст будет шрифтом serif.</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/font-family" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-family"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "project.ui-doc",
+  "title": "UI Documentation Project Graph",
+  "description": "Architecture, content, runtime, publication boundaries and verification evidence for the SIMAI Framework documentation site.",
+  "type_descriptor_files": [
+    "type-descriptors/core.json"
+  ],
+  "object_files": [
+    "objects/ui-documentation-site.json",
+    "objects/docara-runtime.json",
+    "objects/documentation-content.json",
+    "objects/shared-examples.json",
+    "objects/translation-tracking.json",
+    "objects/product-landing-navigation.json",
+    "objects/local-static-build.json",
+    "objects/publication-policy.json"
+  ],
+  "relation_files": [
+    "relations/site-generated-by-docara.json",
+    "relations/site-uses-authored-content.json",
+    "relations/content-uses-shared-examples.json",
+    "relations/site-reports-translation-state.json",
+    "relations/site-exposes-product-landing.json",
+    "relations/site-materialized-as-build.json",
+    "relations/build-guarded-by-publication-policy.json"
+  ],
+  "evolution_track_files": [
+    "evolution-tracks/docara-2-stable-migration.json"
+  ],
+  "question_files": [
+    "questions/discovery-questions.json"
+  ]
+}

@@ -18,7 +18,6 @@ description: "Повтор маски"
 | .mask-repeat-y     | mask-repeat: repeat-y;  |
 | .mask-repeat-round | mask-repeat: round;     |
 | .mask-repeat-space | mask-repeat: space;     |
-{.table}
 
 ## Описание
 

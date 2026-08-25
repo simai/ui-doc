@@ -72,7 +72,6 @@ body.neutral-grey-blue {
 | `--sf-neutral-15`          | #24262a                                                                  |
 | `--sf-neutral-10`          | #1a1b1f                                                                  |
 | `--sf-neutral-5`           | #0f1115                                                                  |
-{.table}
 
 Данный набор значений может меняться с помощью генератора цветов. Остальные два вида серого задаются статично и
 подменяют цвет с помощью модификаторов.
@@ -97,7 +96,6 @@ body.neutral-grey-blue {
 | `--sf-neutral-15` | #1e272d  |
 | `--sf-neutral-10` | #131d23  |
 | `--sf-neutral-5`  | #091218  |
-{.table}
 
 При использовании модификатора **neutral-grey** основной набор значений заменяется следующим набором значений:
 
@@ -119,6 +117,5 @@ body.neutral-grey-blue {
 | `--sf-neutral-15` | #262626  |
 | `--sf-neutral-10` | #1b1b1b  |
 | `--sf-neutral-5`  | #111111  |
-{.table}
 
 [image3]: /ru/assets/reference/image-03.png

@@ -239,7 +239,6 @@ description: "Все семейства утилит SIMAI Framework 5.4.0 candi
 | `will-change` | `will-change/default` | `distr/utility/will-change` | [Открыть](/ru/utilities/interactivity/will-change/) |
 | `word-break` | `word-break/default` | `distr/utility/word-break` | [Открыть](/ru/utilities/typography/word-break/) |
 | `z-index` | `z-index/default`&lt;br&gt;`z-index/lg`&lt;br&gt;`z-index/md`&lt;br&gt;`z-index/sm`&lt;br&gt;`z-index/xl` | `distr/utility/z-index` | [Открыть](/ru/utilities/layout/z-index/) |
-{.table}
 
 ## Как читать запись
 

@@ -20,7 +20,6 @@ description: "Наследование цвета ссылок"
 |:--|:--|
 | `.link-inherit` | ссылка и ее состояния наследуют `currentColor` |
 | `.link-inherit-link` | ссылка и `:hover` наследуют `currentColor` |
-{.table}
 
 ## Синтаксис
 
@@ -31,17 +30,6 @@ description: "Наследование цвета ссылок"
 
 ## Пример
 
-```html
-<p class="color-warning">
-  Text with <a href="#" class="link-inherit">inherited link color</a>
-</p>
+:::example {id="utilities/links/heritage-link-color" label="Результат"}
+:::
 
-<p class="color-warning link-inherit-link">
-  Parent-level inherited <a href="#">link color</a>
-</p>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=heritage-link-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

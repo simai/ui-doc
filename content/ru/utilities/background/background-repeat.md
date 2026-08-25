@@ -22,7 +22,6 @@ description: "Повтор фона"
 | .bg-repeat-y     | background-repeat: repeat-y;  |
 | .bg-repeat-round | background-repeat: round;     |
 | .bg-repeat-space | background-repeat: space;     |
-{.table}
 
 ## Описание
 
@@ -71,8 +70,7 @@ description: "Повтор фона"
     <div class="h-f8"></div>
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/background/background-repeat" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-repeat"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

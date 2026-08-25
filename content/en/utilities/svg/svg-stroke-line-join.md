@@ -18,7 +18,6 @@ description: "Углы обводки (Line Join)"
 | .linejoin-bevel      | stroke-linejoin: bevel;      |
 | .linejoin-miter-clip | stroke-linejoin: miter-clip; |
 | .linejoin-round      | stroke-linejoin: round;      |
-{.table}
 
 ## Описание
 

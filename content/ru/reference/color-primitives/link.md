@@ -20,7 +20,6 @@ description: "Link"
 | `--sf-link-hover`   | `--sf-primary-35`  | `--sf-primary-85`  |
 | `--sf-link-active`  | `--sf-primary-30`  | `--sf-primary-90`  |
 | `--sf-link-visited` | `--sf-tertiaty-40` | `--sf-tertiary-80` |
-{.table}
 
 [image26]: /ru/assets/reference/image-26.png
 [image27]: /ru/assets/reference/image-27.png

@@ -46,7 +46,6 @@ The following variables are used for the Surface role:
 | `--sf-surface-transparent-select` | `--sf-neutral-50--alfa-8` | `--sf-neutral-90--alfa-8` |
 | `--sf-surface-transparent-active` | `--sf-neutral-50--alfa-12`| `--sf-neutral-90--alfa-12`|
 | `--sf-surface-transparent-overlay`| `--sf-neutral-50--alfa-24`| `--sf-neutral-90--alfa-24`|
-{.table}
 
 [image20]: /assets/build/img/b64/92dbbe6d114d1066.png
 [image21]: /assets/build/img/b64/d09425ddfe2b38ac.png

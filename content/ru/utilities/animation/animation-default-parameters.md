@@ -55,16 +55,9 @@ cubic-bezier(.25,.8,.25,1) будут использованы по умолча
 
 ## Пример использования:
 
-```html
-<!-- По умолчанию переход будет 300ms и с cubic-bezier(.25,.8,.25,1). -->
-<div class="p-4 bg-primary color-on-surface-inverse hover:bg-primary-container">
-  Наведи на меня, чтобы увидеть плавный переход (по умолчанию 300ms)
-</div>
-```
-
 (В примере можно не указывать класс `transition`, так как переход задан глобально. Если же вам нужно указать другую
 длительность в конкретном месте, переопределите переменные или примените `transition` со своими значениями.)
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-default-parameters"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/animation/animation-default-parameters" label="Результат"}
+:::
+

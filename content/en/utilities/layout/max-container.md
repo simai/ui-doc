@@ -22,7 +22,6 @@ description: "Максимальный размер контейнера (max-co
 | `--sf-container-6--size-max`  | `--sf-i2` | 1536px |
 | `--sf-container-7--size-max`  | `--sf-i3` | 1664px |
 | `--sf-container-8--size-max`  | `--sf-i4` | 1792px |
-{.table}
 
 ## Классы и значения
 
@@ -36,7 +35,6 @@ description: "Максимальный размер контейнера (max-co
 | .max-container-6 | desktop           | max-width: var(`--sf-container-6--size-max`); |
 | .max-container-7 | desktop           | max-width: var(`--sf-container-7--size-max`); |
 | .max-container-8 | desktop           | max-width: var(`--sf-container-8--size-max`); |
-{.table}
 
 ## Пример использования
 

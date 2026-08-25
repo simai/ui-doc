@@ -17,7 +17,6 @@ description: "Оформление текста"
 | .overline       | text-decoration: overline;     |
 | .line-through   | text-decoration: line-through; |
 | .underline-none | text-decoration: none;         |
-{.table}
 
 ## Описание
 

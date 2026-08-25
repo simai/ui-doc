@@ -427,7 +427,6 @@ to find JS/CSS files when building assets in `Loader.php` and **`AssetManager`**
 | **$arSearchFileType** | List of extensions needed, e.g., `['js', 'css']`                         |
 | **$arIgnoreFile**     | Substring filters to exclude files (e.g., `['.map']`)                    |
 | **$sortFlag**         | Whether to sort results (default `true`)                                 |
-{.table}
 
 ## Behavior
 

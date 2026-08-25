@@ -19,7 +19,6 @@ description: "Параметры по умолчанию для ссылок"
 | a:hover   | color: var(`--sf-link-hover`);                       |
 | a:active  | color: var(`--sf-link-active`);                      |
 | a:visited | color: var(`--sf-link-visited`);                     |
-{.table}
 
 ## Описание
 

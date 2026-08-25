@@ -16,7 +16,6 @@ description: "Наследственный цвет ссылок"
 |:-------------------|:-----------------------------------------------------------------------|
 | .link-inherit      | text-decoration-color: currentColor;&lt;br/&gt; color: currentColor;         |
 | .link-inherit-link | a { color: inherit; }&lt;br/&gt; a:hover { color: var(`--sf-color--link`); } |
-{.table}
 
 ## Описание
 

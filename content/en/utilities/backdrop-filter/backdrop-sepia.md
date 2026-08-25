@@ -14,7 +14,6 @@ description: "Сепия подложки (backdrop-sepia)"
 |:---------------------|:--------------------------|
 | .backdrop-sepia-none | backdrop-filter: sepia(0) |
 | .backdrop-sepia      | backdrop-filter: sepia(1) |
-{.table}
 
 ## Описание
 

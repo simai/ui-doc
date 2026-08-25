@@ -86,7 +86,6 @@ description: "Внешний отступ прокрутки"
 | .scroll-ml-9       | scroll-margin-left: var(`--sf-space-9`);                                                |
 | .scroll-mx-9       | scroll-margin-left: var(`--sf-space-9`);&lt;br/&gt; scroll-margin-right: var(`--sf-space-9`); |
 | .scroll-my-9       | scroll-margin-top: var(`--sf-space-9`);&lt;br/&gt; scroll-margin-bottom: var(`--sf-space-9`); |
-{.table}
 
 ## Описание
 
@@ -113,15 +112,6 @@ description: "Внешний отступ прокрутки"
 
 ## Пример использования
 
-```html
-<div class="snap-x overflow-auto w-full ...">
-  <div class="scroll-m-inline-start-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 1</div>
-  <div class="scroll-m-inline-start-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 2</div>
-  <div class="scroll-m-inline-start-3 snap-start inline-block bg-surface-1 p-2 ...">Элемент 3</div>
-</div>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll-margin" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-margin"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

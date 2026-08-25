@@ -18,7 +18,6 @@ description: "Перенос элементов (flex-wrap)"
 | .flex-wrap         | flex-wrap: wrap;         |
 | .flex-wrap-reverse | flex-wrap: wrap-reverse; |
 | .flex-nowrap       | flex-wrap: nowrap;       |
-{.table}
 
 ## Синтаксис
 
@@ -88,8 +87,7 @@ description: "Перенос элементов (flex-wrap)"
     <!-- Начиная с md элементы будут переноситься на новую строку -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/flex/flex-wrap" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flex-wrap"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

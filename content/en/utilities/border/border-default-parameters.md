@@ -16,7 +16,6 @@ description: "Параметры по умолчанию (для границ)"
 |:-------------|:----------------------------------------------------------|
 | .border      | border: var(`--sf-a1`) var(`--sf-outline-variant`) solid; |
 | .border-none | border: var(`--sf-a1`) var(`--sf-transparent`) solid;     |
-{.table}
 
 ## Описание
 

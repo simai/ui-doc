@@ -22,7 +22,6 @@ description: "Глубина тени элемента и состояния hov
 | `.shadow-4` | `--sf-shadow--level-ratio: 8` |
 | `.shadow-5` | `--sf-shadow--level-ratio: 16` |
 | `.hover:shadow-0 ... .hover:shadow-5` | уровень тени в `:hover` |
-{.table}
 
 ## Синтаксис
 
@@ -31,13 +30,6 @@ description: "Глубина тени элемента и состояния hov
 
 ## Пример
 
-```html
-<div class="shadow-1 hover:shadow-3 p-2 radius-2 border border-outline-variant">
-  Hover to increase depth
-</div>
-```
-## Playground
+:::example {id="utilities/shadows/element-shadow" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=element-shadow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

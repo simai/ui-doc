@@ -25,7 +25,6 @@ description: "Семейства, веса, адаптивные размеры,
 | `--sf-weight--bold` | 700 |
 | `--sf-weight--extra-bold` | 800 |
 | `--sf-weight--black` | 900 |
-{.table}
 
 Для утилит и базовых элементов также определены краткие роли:
 `--sf-font-weight-light` (300), `regular` (400), `medium` (500) и `bold` (700).
@@ -48,7 +47,6 @@ description: "Семейства, веса, адаптивные размеры,
 | | | | `--sf-text-size-10` | 40px | 64px |
 | | | | `--sf-text-size-11` | 44px | 72px |
 | | | | `--sf-text-size-12` | 48px | 80px |
-{.table}
 
 ## Высота строки
 
@@ -66,7 +64,6 @@ description: "Семейства, веса, адаптивные размеры,
 | | | | `--sf-text-height-10` | 60px | 96px |
 | | | | `--sf-text-height-11` | 64px | 104px |
 | | | | `--sf-text-height-12` | 72px | 120px |
-{.table}
 
 Дополнительно утилиты высоты строки поддерживают относительные варианты:
 `line-none` (1), `line-tight` (1.25), `line-snug` (1.375), `line-normal`

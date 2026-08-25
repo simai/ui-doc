@@ -50,7 +50,6 @@ description: "Вид курсора (cursor)"
 | .cursor-nwse-resize   | cursor: nwse-resize;   |
 | .cursor-zoom-in       | cursor: zoom-in;       |
 | .cursor-zoom-out      | cursor: zoom-out;      |
-{.table}
 
 ## Описание
 
@@ -64,21 +63,6 @@ description: "Вид курсора (cursor)"
 
 ## Пример использования
 
-```html
-<button type="button" class="cursor-pointer p-1 border-1 ...">
-    Отправить
-</button>
+:::example {id="utilities/interactivity/cursor" label="Результат"}
+:::
 
-<button type="button" class="cursor-progress p-1 border-1 ...">
-    Сохранение...
-</button>
-
-<button type="button" disabled class="cursor-not-allowed p-1 border-1 ...">
-    Подтвердить
-</button>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=interactivity&group=cursor"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

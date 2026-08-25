@@ -18,13 +18,6 @@ description: "Толщина обводки"
 
 ## Пример
 
-```html
-<svg class="stroke-primary stroke-1 fill-transparent"></svg>
-<svg class="stroke-primary stroke-4 fill-transparent"></svg>
-<svg class="stroke-primary stroke-8 fill-transparent"></svg>
-```
-## Playground
+:::example {id="utilities/svg/svg-stroke-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

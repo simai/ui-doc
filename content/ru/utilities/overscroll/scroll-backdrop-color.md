@@ -21,7 +21,6 @@ description: "Цвет подложки прокрутки (scroll-backdrop-colo
 | .scroll-bg-primary     | var(`--sf-primary-transparent-overlay`)                           |
 | .scroll-bg-secondary   | var(`--sf-secondary-transparent-overlay`)                         |
 | .scroll-bg-tertiary    | var(`--sf-tertiary-transparent-overlay`)                          |
-{.table}
 
 ## Описание
 
@@ -58,18 +57,9 @@ abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzab
 
 (Длина набрана повторением алфавита несколько раз.)
 
-```html
-<html class="scroll-bg-surface h-d5 overflow-auto ...">
-  <div class="p-1">
-    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-  </div>
-</html>
-```
-
 Обратите внимание, что этот стиль может не работать во всех браузерах. Поддержку можно проверить
 здесь: [MDN scrollbar-color](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color).
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/overscroll/scroll-backdrop-color" label="Результат"}
+:::
+

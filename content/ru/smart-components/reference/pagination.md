@@ -49,7 +49,6 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 | `show-action-for-all` | `showActionForAll` | `Boolean` | `false` | `—` |
 | `action-for-all` | `actionForAll` | `Boolean` | `false` | `—` |
 | `action-for-all-label` | `actionForAllLabel` | `String` | `"Для всех"` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -58,7 +57,6 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -82,7 +80,6 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 | `sf-page-change` | Компонент-специфичное событие из source-класса |
 | `sf-page-size-change` | Компонент-специфичное событие из source-класса |
 | `sf-show-more` | Компонент-специфичное событие из source-класса |
-{.table}
 
 ## Минимальная разметка
 

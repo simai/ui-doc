@@ -22,7 +22,6 @@ description: "Цвет полос"
 | `.stripe-primary` | `--sf-stripe--color: var(--sf-primary)` |
 | `.stripe-secondary` | `--sf-stripe--color: var(--sf-secondary)` |
 | `.stripe-tertiary` | `--sf-stripe--color: var(--sf-tertiary)` |
-{.table}
 
 ## Описание
 
@@ -35,14 +34,6 @@ description: "Цвет полос"
 
 ## Пример использования
 
-```html
-<div class="stripe-1 stripe-primary p-3">Полоски primary в стиле stripe-1</div>
-<div class="stripe-2 stripe-on-surface p-3">Полоски on-surface в стиле stripe-2</div>
-<div class="stripe-3 stripe-tertiary p-3">Полоски tertiary в стиле stripe-3</div>
-<div class="stripe-4 stripe-current p-3">Полоски currentColor в стиле stripe-4</div>
-```
-## Playground
+:::example {id="utilities/stripes/stripes-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=stripes&group=stripes-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

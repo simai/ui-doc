@@ -24,7 +24,6 @@ description: "Начертание цифр (font-variant-numeric)"
 | .num-tabular            | font-variant-numeric: tabular-nums;       |
 | .num-diagonal | font-variant-numeric: diagonal-fractions; |
 | .num-stacked-fractions  | font-variant-numeric: stacked-fractions;  |
-{.table}
 
 ## Пример использования
 
@@ -91,8 +90,7 @@ description: "Начертание цифр (font-variant-numeric)"
 ```html
 <p class="num-stacked-fractions">1/2 3/4 5/6</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/font-variant-numeric" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-variant-numeric"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

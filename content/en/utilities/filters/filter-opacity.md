@@ -23,7 +23,6 @@ description: "Прозрачность элемента (filter-opacity)"
 | .opacity-8    | filter: opacity(0.8); |
 | .opacity-9    | filter: opacity(0.9); |
 | .opacity-full | filter: opacity(1);   |
-{.table}
 
 ## Описание
 

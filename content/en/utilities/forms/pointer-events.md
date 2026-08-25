@@ -15,7 +15,6 @@ description: "События указателя (pointer-events)"
 |:--------------------|:----------------------|
 | .pointer-event-none | pointer-events: none; |
 | .pointer-event-auto | pointer-events: auto; |
-{.table}
 
 ## Описание
 

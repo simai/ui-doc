@@ -23,7 +23,6 @@ description: "Цвет обводки"
 | .stroke-error           | stroke: var(`--sf-outline-error`)     |
 | .stroke-warning         | stroke: var(`--sf-outline-warning`)   |
 | .stroke-success         | stroke: var(`--sf-outline-success`)   |
-{.table}
 
 ## Описание
 

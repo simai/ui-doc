@@ -19,7 +19,6 @@ description: "Вложение фона"
 | .bg-origin-border  | background-origin: border-box;  |
 | .bg-origin-padding | background-origin: padding-box; |
 | .bg-origin-content | background-origin: content-box; |
-{.table}
 
 ## Описание
 
@@ -70,8 +69,7 @@ description: "Вложение фона"
     <div class="h-f8"></div>
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/background/background-origin" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-origin"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

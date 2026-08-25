@@ -24,7 +24,6 @@ description: "Полосы"
 | .stripe-3          | background: linear-gradient(0deg, var(`--sf-stripe--color`) 1%, transparent 1%, transparent 49%, var(`--sf-stripe--color`) 49%, var(`--sf-stripe--color`) 51%, transparent 51%, transparent 99%, var(`--sf-stripe--color`) 99%), linear-gradient(90deg, var(`--sf-stripe--color`) 1%, transparent 1%, transparent 49%, var(`--sf-stripe--color`) 49%, var(`--sf-stripe--color`) 51%, transparent 51%, transparent 99%, var(`--sf-stripe--color`) 99%);&lt;br/&gt; background-size: var(`--sf-stripe--size`) var(`--sf-stripe--size`); |
 | .stripe-4          | background: linear-gradient(135deg, var(`--sf-stripe--color`) 1%, transparent 1%, transparent 49%, var(`--sf-stripe--color`) 49%, var(`--sf-stripe--color`) 51%, transparent 51%, transparent 99%, var(`--sf-stripe--color`) 99%);&lt;br/&gt; background-size: var(`--sf-stripe--size`) var(`--sf-stripe--size`);                                                                                                                                                                                                                     |
 
-{.table}
 
 ## Описание
 
@@ -34,15 +33,6 @@ description: "Полосы"
 
 ## Пример использования
 
-```html
+:::example {id="utilities/stripes/stripes" label="Результат"}
+:::
 
-<div class="stripe-1 p-3">Полосы в стиле stripe-1</div>
-<div class="stripe-2 p-3">Полосы в стиле stripe-2</div>
-<div class="stripe-3 p-3">Полосы в стиле stripe-3</div>
-<div class="stripe-4 p-3">Полосы в стиле stripe-4</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=stripes&group=stripes"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

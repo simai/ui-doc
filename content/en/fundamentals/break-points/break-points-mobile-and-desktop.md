@@ -13,12 +13,10 @@ Variables:
 | Variable                | Value               | Size  |
 |--------------------------|---------------------|--------|
 | --sf-breakpoint-desktop | --sf-breakpoint-lg | 960px  |
-{.table}
 
 | Breakpoint        | Value                    | Size   |
 |-------------------|---------------------------|---------|
 | **mobile**        | \<--sf-breakpoint-desktop | \<960px |
 | **desktop**       | ≥--sf-breakpoint-desktop  | ≥960px  |
-{.table}
 
 This approach cleanly separates mobile and desktop styles, simplifying responsive development.

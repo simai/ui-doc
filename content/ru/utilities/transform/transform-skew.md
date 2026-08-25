@@ -27,7 +27,6 @@ description: "Классы наклона transform-skew"
 | `.skew-y-5` | `transform: skewY(5deg)` |
 | `.skew-y-15` | `transform: skewY(15deg)` |
 
-{.table}
 
 ## Синтаксис
 
@@ -37,8 +36,7 @@ description: "Классы наклона transform-skew"
 - `hover:skew-y-{value}`
 
 Где `value`: `0`, `1`, `2`, `3`, `5`, `15`.
-## Playground
+## Пример
+:::example {id="utilities/transform/transform-skew" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-skew"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

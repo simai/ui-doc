@@ -20,7 +20,6 @@ description: "Выравнивание каждого элемента в яче
 | .items-cross-center  | align-items: center;  |
 | .items-cross-baseline| align-items: baseline;|
 | .items-cross-stretch | align-items: stretch; |
-{.table}
 
 ## Синтаксис
 
@@ -59,8 +58,7 @@ description: "Выравнивание каждого элемента в яче
   <!-- Начиная с md каждый элемент будет прижат к началу ячейки по поперечной оси -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/align-items" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-items"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

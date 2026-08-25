@@ -18,7 +18,6 @@ description: "Метод расчёта размера элемента (box-siz
 |:-------------|:-------------------------|
 | .box-border  | box-sizing: border-box;  |
 | .box-content | box-sizing: content-box; |
-{.table}
 
 ### **box-border**  
 При использовании класса `box-border` размеры элемента (width, height) включают в себя не только контент, но и

@@ -14,7 +14,6 @@ description: "Отступ внешней границы"
 | `.outline-offset-2` | `outline-offset: var(--sf-a2);` |
 | `.outline-offset-3` | `outline-offset: var(--sf-a3);` |
 | `.outline-offset-4` | `outline-offset: var(--sf-a4);` |
-{.table}
 
 ## Описание
 
@@ -29,13 +28,6 @@ description: "Отступ внешней границы"
 
 ## Пример
 
-```html
-<button class="outline outline-2 outline-solid outline-primary outline-offset-1">offset-1</button>
-<button class="outline outline-2 outline-solid outline-primary outline-offset-2">offset-2</button>
-<button class="outline outline-2 outline-solid outline-primary outline-offset-4">offset-4</button>
-```
-## Playground
+:::example {id="utilities/outline/outline-offset" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=outline-offset"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

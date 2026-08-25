@@ -19,7 +19,6 @@ description: "Параметры по умолчанию"
 |:--|:--|
 | `.divider` | `> :not([hidden]) ~ :not([hidden]) { border: var(--sf-px) var(--sf-outline-variant) solid; }` |
 | `.divider-none` | `> :not([hidden]) ~ :not([hidden]) { border-width: var(--sf-0); }` |
-{.table}
 
 ## Синтаксис
 
@@ -30,20 +29,6 @@ description: "Параметры по умолчанию"
 
 ## Пример
 
-```html
-<div class="divider-y-1 divider-outline">
-  <div>Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
-</div>
+:::example {id="utilities/divider/divider-default-parameters" label="Результат"}
+:::
 
-<div class="divider-y-1 divider-none">
-  <div>Item A</div>
-  <div>Item B</div>
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=divider&group=divider-default-parameters"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

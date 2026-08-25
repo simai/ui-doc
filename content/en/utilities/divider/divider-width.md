@@ -23,7 +23,6 @@ description: "Толщина разделителя"
 | .divider-y-3 > :not([hidden]) ~ :not([hidden]) | border-top-width: calc(var(`--sf-a3`) * calc(1 - var(`--sf-divider--reverse-y`)));&lt;br/&gt; border-bottom-width: calc(var(`--sf-a3`) * var(`--sf-divider--reverse-y`));   |
 | .divider-x-4 > :not([hidden]) ~ :not([hidden]) | border-right-width: calc(var(`--sf-a4`) * var(`--sf-divider--reverse-x`));&lt;br/&gt; border-left-width: calc(var(`--sf-a4`) * calc(1 - var(`--sf-divider--reverse-x`)));   |
 | .divider-y-4 > :not([hidden]) ~ :not([hidden]) | border-top-width: calc(var(`--sf-a4`) * calc(1 - var(`--sf-divider--reverse-y`)));&lt;br/&gt; border-bottom-width: calc(var(`--sf-a4`) * var(`--sf-divider--reverse-y`));   |
-{.table}
 
 ## Описание
 

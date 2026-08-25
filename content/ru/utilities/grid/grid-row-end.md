@@ -24,7 +24,6 @@ description: 'Конечное положение строки сетки (grid-
 | .grid-row-end-7    | grid-row-end: 7;    |
 | .grid-row-end-auto | grid-row-end: auto; |
 
-{.table}
 
 ## Синтаксис
 
@@ -66,8 +65,7 @@ description: 'Конечное положение строки сетки (grid-
   <!-- Начиная с md элемент будет заканчиваться на 4-й строке -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-row-end" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-row-end"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

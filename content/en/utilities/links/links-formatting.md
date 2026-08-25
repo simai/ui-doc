@@ -16,7 +16,6 @@ description: "Оформление ссылок"
 |:-------------|:-------------------------------|
 | .link-dotted | text-decoration-style: dotted; |
 | .link-dashed | text-decoration-style: dashed; |
-{.table}
 
 ## Описание
 

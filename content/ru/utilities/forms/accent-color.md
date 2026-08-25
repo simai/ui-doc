@@ -27,7 +27,6 @@ description: "Акцентный цвет (accent-color)"
 | .accent-warning     | accent-color: var(`--sf-warning`);     |
 | .accent-success     | accent-color: var(`--sf-success`);     |
 
-{.table}
 
 ## Описание
 
@@ -42,16 +41,6 @@ description: "Акцентный цвет (accent-color)"
 
 ## Пример использования
 
-```html
-<label>
-    <input type="checkbox" class="accent-primary" checked> Акцент по умолчанию
-</label>
-<label>
-    <input type="checkbox" class="hover:accent-error" checked> Акцент при наведении
-</label>
-```
-## Playground
+:::example {id="utilities/forms/accent-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=accent-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

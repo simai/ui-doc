@@ -24,7 +24,6 @@ description: "Цвет каретки (caret-color)"
 | .caret-warning     | caret-color: var(`--sf-warning`);     |
 | .caret-success     | caret-color: var(`--sf-success`);     |
 
-{.table}
 
 ## Описание
 

@@ -15,7 +15,6 @@ description: "Тип заливки"
 |:--------------|:----------------------|
 | .fill-evenodd | `fill-rule: evenodd;` |
 | .fill-nonzero | `fill-rule: nonzero;` |
-{.table}
 
 ## Описание
 

@@ -52,7 +52,6 @@ description: "Secondary"
 | `--sf-on-secondary-container`         | `--sf-secondary-10`          | `--sf-secondary-90`          |
 | `--sf-on-secondary-container-graphic` | `--sf-secondary-50`          | `--sf-secondary-60`          |
 | `--sf-outline-secondary`              | `--sf-secondary-50`          | `--sf-secondary-60`          |
-{.table}
 
 [image7]: /ru/assets/reference/image-07.png
 [image8]: /ru/assets/reference/image-08.png

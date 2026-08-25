@@ -18,7 +18,6 @@ description: "Выравнивание отдельного элемента п�
 | .self-cross-end     | align-self: end;     |
 | .self-cross-center  | align-self: center;  |
 | .self-cross-stretch | align-self: stretch; |
-{.table}
 
 ## Синтаксис
 

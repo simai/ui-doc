@@ -15,7 +15,6 @@ description: "Плавность прокрутки"
 |:---------------|:-------------------------|
 | .scroll-auto   | scroll-behavior: auto;   |
 | .scroll-smooth | scroll-behavior: smooth; |
-{.table}
 
 ## Описание
 

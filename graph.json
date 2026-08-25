@@ -1,0 +1,51 @@
+{
+  "$schema": "https://mirai-graph.dev/schemas/graph-manifest.schema.json",
+  "aliases": [],
+  "extensions": {
+    "mirai.project_technology": {
+      "context_policy": "task_scoped",
+      "contract_version": "1.0.0",
+      "enabled": true,
+      "source_boundary": "hybrid_sot"
+    }
+  },
+  "format": "mirai-graph",
+  "graph": {
+    "generated": [],
+    "objects": [
+      "graph/specs/objects/ui-documentation-site.json",
+      "graph/specs/objects/docara-runtime.json",
+      "graph/specs/objects/documentation-content.json",
+      "graph/specs/objects/product-landing-navigation.json",
+      "graph/specs/objects/local-static-build.json",
+      "graph/specs/objects/publication-policy.json"
+    ],
+    "raw_sources": [
+      "README.md",
+      "docara.json",
+      "docs/developer/docara-v2-migration.md"
+    ],
+    "relations": [
+      "graph/specs/relations/site-generated-by-docara.json",
+      "graph/specs/relations/site-uses-authored-content.json",
+      "graph/specs/relations/site-exposes-product-landing.json",
+      "graph/specs/relations/site-materialized-as-build.json",
+      "graph/specs/relations/build-guarded-by-publication-policy.json"
+    ],
+    "root": "graph",
+    "schemas": [],
+    "source_of_truth": [
+      "graph/specs"
+    ]
+  },
+  "id": "project.ui-doc",
+  "imports": [],
+  "kind": "project_graph",
+  "owner": "repository_owner",
+  "profiles": [
+    "project_management"
+  ],
+  "schema_version": "2.0.0",
+  "scope": "repository",
+  "title": "ui-doc"
+}

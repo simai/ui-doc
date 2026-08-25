@@ -14,7 +14,6 @@ description: "Сепия элемента (filter-sepia)"
 |:------------|:-----------------|
 | .sepia-none | filter: sepia(0) |
 | .sepia      | filter: sepia(1) |
-{.table}
 
 ## Описание
 

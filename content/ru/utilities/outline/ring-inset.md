@@ -9,8 +9,7 @@ description: "Внутреннее положение ring"
 
 
 Утилита `ring-inset` переводит кольцо (`ring`) во внутреннюю часть элемента.
-## Playground
+## Пример
+:::example {id="utilities/outline/ring-inset" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=ring-inset"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

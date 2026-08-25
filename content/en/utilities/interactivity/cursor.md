@@ -47,7 +47,6 @@ description: "Вид курсора (cursor)"
 | .cursor-nwse-resize   | cursor: nwse-resize;   |
 | .cursor-zoom-in       | cursor: zoom-in;       |
 | .cursor-zoom-out      | cursor: zoom-out;      |
-{.table}
 
 ## Описание
 

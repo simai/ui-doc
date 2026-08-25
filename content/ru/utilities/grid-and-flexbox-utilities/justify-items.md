@@ -19,7 +19,6 @@ description: "Выравнивание каждого элемента по ос
 | .items-main-end     | justify-items: end;     |
 | .items-main-center  | justify-items: center;  |
 | .items-main-stretch | justify-items: stretch; |
-{.table}
 
 ## Синтаксис
 
@@ -57,8 +56,7 @@ description: "Выравнивание каждого элемента по ос
     <!-- Начиная с md каждый элемент выравнивается по началу ячейки относительно основной оси -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/justify-items" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=justify-items"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

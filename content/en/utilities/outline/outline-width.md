@@ -18,7 +18,6 @@ description: "Толщина внешней границы"
 | .outline-2 | outline-width: var(`--sf-a2`); |
 | .outline-3 | outline-width: var(`--sf-a3`); |
 | .outline-4 | outline-width: var(`--sf-a4`); |
-{.table}
 
 ## Описание
 

@@ -16,7 +16,6 @@ description: "Сжимаемость (flex-shrink)"
 |:-------------|:----------------|
 | .shrink      | flex-shrink: 1; |
 | .shrink-none | flex-shrink: 0; |
-{.table}
 
 ## Синтаксис
 
@@ -61,8 +60,7 @@ description: "Сжимаемость (flex-shrink)"
   <!-- Начиная с md элемент будет сжиматься при нехватке пространства -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/flex/flex-shrink" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flex-shrink"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

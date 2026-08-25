@@ -14,7 +14,6 @@ description: "Сброс стиля (appearance)"
 | Класс            | Значение          |
 |:-----------------|:------------------|
 | .appearance-none | appearance: none; |
-{.table}
 
 ## Описание
 

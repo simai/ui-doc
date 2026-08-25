@@ -22,7 +22,6 @@ description: "Цвет падающей тени (drop-shadow-color)"
 | Также поддерживаются | `surface`, `surface-0`, `surface-1`, `surface-2`, `surface-3`, `surface-4`, `surface-container`, `surface-inverse`, `surface-inverse-fixed` |
 | Дополнительно | `primary-container`, `secondary-container`, `tertiary-container`, `error-container`, `warning-container`, `success-container`, `transparent`, `current` |
 | Прозрачные варианты | `primary-transparent-select`, `primary-transparent-overlay`, `secondary-transparent-select`, `secondary-transparent-overlay`, `tertiary-transparent-select`, `tertiary-transparent-overlay`, `error-transparent-select`, `error-transparent-overlay`, `warning-transparent-select`, `warning-transparent-overlay`, `success-transparent-select`, `success-transparent-overlay` |
-{.table}
 
 ## Описание
 
@@ -40,19 +39,6 @@ description: "Цвет падающей тени (drop-shadow-color)"
 
 ## Пример использования
 
-```html
-<!-- Элемент с тенью и цветом тени -->
-<div class="drop-shadow-2 drop-shadow-primary p-4 radius-1/3 bg-surface">
-    Падающая тень с цветом primary
-</div>
+:::example {id="utilities/shadows/drop-shadow-color" label="Результат"}
+:::
 
-<!-- Элемент, при наведении цвет тени меняется на error -->
-<button class="drop-shadow-2 drop-shadow-success hover:drop-shadow-error p-2 radius-1/2 bg-surface-inverse color-on-surface m-top-2">
-    Наведи на меня
-</button>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

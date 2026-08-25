@@ -17,7 +17,6 @@ description: "Обработка пробелов (white-space)"
 | .pre-line          | white-space: pre-line; |
 | .pre-wrap          | white-space: pre-wrap; |
 | .whitespace-normal | white-space: normal;   |
-{.table}
 
 ## Синтаксис
 

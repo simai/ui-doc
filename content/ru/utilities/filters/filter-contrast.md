@@ -23,7 +23,6 @@ description: "Контрастность элемента (filter-contrast)"
 | .contrast-2   | filter: contrast(1.05); |
 | .contrast-3   | filter: contrast(1.1);  |
 | .contrast-4   | filter: contrast(1.2);  |
-{.table}
 
 ## Описание
 
@@ -42,18 +41,6 @@ description: "Контрастность элемента (filter-contrast)"
 
 ## Пример использования
 
-```html
-<!-- Нормальная контрастность -->
-<div class="contrast-1 p-4 bg-primary color-on-surface-inverse">Контрастность нормальная</div>
-```
+:::example {id="utilities/filters/filter-contrast" label="Результат"}
+:::
 
-```html
-<!-- Повышение контрастности при наведении -->
-<div class="contrast-1 hover:contrast-3 p-4 bg-secondary m-top-2 transition">Наведи, чтобы повысить контрастность</div>
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-contrast"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -20,7 +20,6 @@ description: "Насыщенность элемента (filter-saturate)"
 | .saturate-2   | filter: saturate(1.25) |
 | .saturate-3   | filter: saturate(1.5)  |
 | .saturate-4   | filter: saturate(1.75) |
-{.table}
 
 ## Описание
 
@@ -64,4 +63,3 @@ description: "Насыщенность элемента (filter-saturate)"
 | .saturate-2  | .saturate-1   |
 | .saturate-3  | .saturate-2   |
 | .saturate-4  | .saturate-4   |
-{.table}

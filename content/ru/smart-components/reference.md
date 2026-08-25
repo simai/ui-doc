@@ -64,4 +64,3 @@ description: "Полный source-backed справочник Smart Components S
 | [tooltip](/ru/smart-components/reference/tooltip/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-tooltip` |
 | [tree](/ru/smart-components/reference/tree/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-tree` |
 | [tree-item](/ru/smart-components/reference/tree-item/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-tree-item` |
-{.table}

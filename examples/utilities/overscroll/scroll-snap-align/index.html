@@ -1,0 +1,51 @@
+<div class="wrap grid grid-col-1 sm:grid-col-2 max-w-md gap-3 content-main-start">
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">snap-start</div>
+    <div class="flex gap-2 m-b-2">
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-scroll"
+        data-scroller-id="snap-start-scroller"
+        data-target-id="snap-start-target"
+        data-align="start">
+        Scroll to item #4
+      </button>
+    </div>
+    <div class="sf-card p-2 radius-2 border border-outline-variant overflow-auto snap-x snap-mandatory relative" id="snap-start-scroller">
+      <div class="w-f9 flex gap-2">
+        <div class="snap-start p-3 w-f4 bg-primary-container color-on-primary-container radius-1">1 start</div>
+        <div class="snap-start p-3 w-f4 bg-secondary-container color-on-secondary-container radius-1">2 start</div>
+        <div class="snap-start p-3 w-f4 bg-tertiary-container color-on-tertiary-container radius-1">3 start</div>
+        <div id="snap-start-target" class="snap-start p-3 w-f4 bg-success-container color-on-success-container radius-1">4 target</div>
+        <div class="snap-start p-3 w-f4 bg-warning-container color-on-warning-container radius-1">5 start</div>
+        <div class="snap-start p-3 w-f4 bg-error-container color-on-error-container radius-1">6 start</div>
+      </div>
+    </div>
+    <div class="m-t-2 text-size-2 color-on-surface-variant">Target snaps to the start edge of the scroll viewport.</div>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">snap-center</div>
+    <div class="flex gap-2 m-b-2">
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-scroll"
+        data-scroller-id="snap-center-scroller"
+        data-target-id="snap-center-target"
+        data-align="center">
+        Scroll to item #4
+      </button>
+    </div>
+    <div class="sf-card p-2 radius-2 border border-outline-variant overflow-auto snap-x snap-mandatory relative" id="snap-center-scroller">
+      <div class="w-f9 flex gap-2">
+        <div class="snap-center p-3 w-f4 bg-primary-container color-on-primary-container radius-1">1 center</div>
+        <div class="snap-center p-3 w-f4 bg-secondary-container color-on-secondary-container radius-1">2 center</div>
+        <div class="snap-center p-3 w-f4 bg-tertiary-container color-on-tertiary-container radius-1">3 center</div>
+        <div id="snap-center-target" class="snap-center p-3 w-f4 bg-success-container color-on-success-container radius-1">4 target</div>
+        <div class="snap-center p-3 w-f4 bg-warning-container color-on-warning-container radius-1">5 center</div>
+        <div class="snap-center p-3 w-f4 bg-error-container color-on-error-container radius-1">6 center</div>
+      </div>
+    </div>
+    <div class="m-t-2 text-size-2 color-on-surface-variant">Target snaps to the center of the scroll viewport.</div>
+  </div>
+</div>

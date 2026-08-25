@@ -18,7 +18,6 @@ description: "Трекинг текста (letter-spacing)"
 | .tracking-wide        | letter-spacing: var(`--sf-text--tracking-wide`);        |
 | .tracking-wider       | letter-spacing: var(`--sf-text--tracking-wider`);       |
 | .tracking-widest      | letter-spacing: var(`--sf-text--tracking-widest`);      |
-{.table}
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -57,7 +56,6 @@ description: "Трекинг текста (letter-spacing)"
 | `--sf-text--tracking-wide`        | 0.025    |
 | `--sf-text--tracking-wider`       | 0.05     |
 | `--sf-text--tracking-widest`      | 0.1      |
-{.table}
 
 ## Адаптивность
 

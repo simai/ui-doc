@@ -20,7 +20,6 @@ description: "Отображение элемента при печати (displ
 | `.print-flex` | `display: flex;` |
 | `.print-inline-flex` | `display: inline-flex;` |
 | `.print-table` | `display: table;` |
-{.table}
 
 ## Как это работает
 
@@ -32,12 +31,6 @@ description: "Отображение элемента при печати (displ
 
 ## Пример
 
-```html
-<div class="hidden print-block">Printed as block</div>
-<div class="hidden print-inline-flex">Printed as inline-flex</div>
-```
-## Playground
+:::example {id="utilities/print/display-print" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=print&group=display-print"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

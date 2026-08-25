@@ -21,7 +21,6 @@ description: "Минимальная ширина (min-width)"
 | .min-w-fit  | min-width: fit-content; |
 | .min-w-full | min-width: 100%;        |
 | .min-w-0    | min-width: 0;           |
-{.table}
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -80,8 +79,7 @@ description: "Минимальная ширина (min-width)"
 ```
 
 В этом примере минимальная ширина будет 100% (`min-w-full`) только при размерах экрана `md` и больше.
-## Playground
+## Пример
+:::example {id="utilities/sizes/min-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=min-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

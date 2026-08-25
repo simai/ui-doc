@@ -34,7 +34,6 @@ description: "Модификаторы ролей текста"
 | .d4, .display-4      | font-size: var(`--sf-display-4--size`);&lt;br/&gt; line-height: var(`--sf-display-4--height`);       |
 | .d5, .display-5      | font-size: var(`--sf-display-5--size`);&lt;br/&gt; line-height: var(`--sf-display-5--height`);       |
 | .d6, .display-6      | font-size: var(`--sf-display-6--size`);&lt;br/&gt; line-height: var(`--sf-display-6--height`);       |
-{.table}
 
 ## Пример использования
 

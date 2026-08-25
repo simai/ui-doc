@@ -14,7 +14,6 @@ description: "Стиль шрифта (font-style)"
 |:-------------|:--------------------|
 | .italic      | font-style: italic; |
 | .italic-none | font-style: normal; |
-{.table}
 
 
 ## Пример использования

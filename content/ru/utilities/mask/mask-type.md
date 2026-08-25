@@ -17,16 +17,9 @@ description: "Тип маски"
 |:---------------------|:----------------------|
 | .mask-type-alpha     | mask-type: alpha;     |
 | .mask-type-luminance | mask-type: luminance; |
-{.table}
 
 ## Примеры
 
-```html
-<svg class="mask-type-alpha">...</svg>
-<svg class="mask-type-luminance">...</svg>
-```
-## Playground
+:::example {id="utilities/mask/mask-type" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=mask&group=mask-type"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

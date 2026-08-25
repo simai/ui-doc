@@ -16,7 +16,6 @@ description: "Оси, физические и логические направ�
 | `block-start`, `block-end` | начало и конец блочной оси |
 | `inline-start`, `inline-end` | начало и конец строки с учётом направления письма |
 | `main`, `cross` | основная и поперечная оси Flex/Grid |
-{.table}
 
 Примеры: `gap-x-2`, `overflow-y-auto`, `p-inline-start-1`,
 `radius-top-inline-end-2`.

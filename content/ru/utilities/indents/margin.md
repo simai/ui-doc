@@ -25,7 +25,6 @@ description: "Внешний отступ (margin)"
 | .m-top-{n}            | margin-top: var(`--sf-space-{n}`);         |
 | .m-bottom-{n}         | margin-bottom: var(`--sf-space-{n}`);      |
 | отрицательные варианты| те же классы с префиксом `-`               |
-{.table}
 
 Где `{n}` ∈ `0, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, 6, 7, 8`. Используются логические стороны (`inline-start/end`) вместо left/right для поддержки LTR/RTL.
 
@@ -55,8 +54,7 @@ description: "Внешний отступ (margin)"
   <!-- Начиная с md отступ var(--sf-space-4) -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/indents/margin" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=indents&group=margin"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

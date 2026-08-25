@@ -33,4 +33,3 @@ This is an additional accent color that contrasts with the primary one.
 | `--sf-tertiary-15`        | #3e1249                                           |
 | `--sf-tertiary-10`        | #32053e                                           |
 | `--sf-tertiary-5`         | #23002d                                           |
-{.table}

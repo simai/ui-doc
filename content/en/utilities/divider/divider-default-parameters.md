@@ -16,7 +16,6 @@ description: "Параметры по умолчанию"
 |:--------------|:------------------------------------------------------------------------------------------------|
 | .divider      | > :not([hidden]) ~ :not([hidden]) { border: var(`--sf-px`) var(`--sf-outline-variant`) solid; } |
 | .divider-none | > :not([hidden]) ~ :not([hidden]) { border-width: var(`--sf-0`); }                              |
-{.table}
 
 ## Описание
 

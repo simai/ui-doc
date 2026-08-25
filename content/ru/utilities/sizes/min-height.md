@@ -22,7 +22,6 @@ description: "Минимальная высота (min-height)"
 | .min-h-min    | min-height: min-content; |
 | .min-h-max    | min-height: max-content; |
 | .min-h-fit    | min-height: fit-content; |
-{.table}
 
 ## Синтаксис
 
@@ -67,8 +66,7 @@ description: "Минимальная высота (min-height)"
 ```
 
 В этом примере минимальная высота будет равна нулю (`min-h-0`) при ширине экрана `md` и больше.
-## Playground
+## Пример
+:::example {id="utilities/sizes/min-height" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=min-height"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

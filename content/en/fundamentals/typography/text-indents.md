@@ -18,4 +18,3 @@ Headings H2–H6 inside text have built-in spacing; H1 has no top margin since i
 | `--sf-text--space-bottom`    | `--sf-space-1` |
 | `--sf-heading--space-top`    | `--sf-space-4` |
 | `--sf-heading--space-bottom` | `--sf-space-1` |
-{.table}

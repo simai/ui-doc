@@ -26,7 +26,6 @@ description: "Толщина шрифта (font-weight)"
 | .weight-7 | font-weight: 700;          |
 | .weight-8 | font-weight: 800;          |
 | .weight-9 | font-weight: 900;          |
-{.table}
 
 
 ## Пример использования

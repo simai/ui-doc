@@ -17,7 +17,6 @@ description: "Управление контекстом наложения и с
 | `.isolate` | `isolation: isolate;` |
 | `.auto` | `isolation: auto;` |
 | `.mix-blend-{mode}` | `mix-blend-mode: ...;` |
-{.table}
 
 Поддерживаемые `mode`: `normal`, `multiply`, `screen`, `overlay`, `darken`, `lighten`, `color-dodge`, `color-burn`, `hard-light`, `soft-light`, `difference`, `exclusion`, `hue`, `saturation`, `color`, `luminosity`.
 
@@ -48,8 +47,7 @@ description: "Управление контекстом наложения и с
   </div>
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/isolation" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=isolation"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

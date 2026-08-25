@@ -16,7 +16,6 @@ description: "Продолжительность перехода"
 | .fast            | transition-duration: var(`--sf-duration-fast`); *(по умолчанию 100ms)*   |
 | .duration-normal | transition-duration: var(`--sf-duration-normal`); *(по умолчанию 300ms)* |
 | .slow            | transition-duration: var(`--sf-duration-slow`); *(по умолчанию 500ms)*   |
-{.table}
 
 ## Описание
 
@@ -62,4 +61,3 @@ description: "Продолжительность перехода"
 | .duration-1, .duration-2, .duration-3              | .fast            |
 | .duration-4, .duration-5                           | .duration-normal |
 | .duration-6, .duration-7, .duration-8, .duration-9 | .slow            |
-{.table}

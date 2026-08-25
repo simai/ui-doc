@@ -19,6 +19,5 @@ To move from the old spacing system (`--sf-space--size-N`) to the new one (`--sf
 | `--sf-space--size-7` | `--sf-space-4`  |
 | `--sf-space--size-8` | `--sf-space-4`  |
 | `--sf-space--size-9` | `--sf-space-5`  |
-{.table}
 
 This way, when you switch to the new spacing system, you get a more logical, easy-to-use layout spacing model while keeping compatibility with the old system via the mappings above.

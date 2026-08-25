@@ -17,7 +17,6 @@ description: "Стиль шрифта (font-style)"
 |:-------------|:--------------------|
 | .italic      | font-style: italic; |
 | .italic-none | font-style: normal; |
-{.table}
 
 
 ## Пример использования
@@ -39,8 +38,7 @@ description: "Стиль шрифта (font-style)"
 ```html
 <p class="italic">На экранах md и больше текст будет отображаться наклонным шрифтом.</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/font-style" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-style"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

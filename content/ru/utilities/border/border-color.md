@@ -25,7 +25,6 @@ description: "Цвет границы"
 | `.border-warning` | `border-color: var(--sf-outline-warning)` |
 | `.border-success` | `border-color: var(--sf-outline-success)` |
 
-{.table}
 
 Также поддерживаются palette-классы вида `.border-red-5`, `.border-blue-700`, и т.д.
 
@@ -38,14 +37,6 @@ description: "Цвет границы"
 
 ## Примеры
 
-```html
-<div class="border border-primary">border-primary</div>
-<div class="border hover:border-warning">hover:border-warning</div>
-<div class="border active:border-error">active:border-error</div>
-<div class="border border-red-5">border-red-5</div>
-```
-## Playground
+:::example {id="utilities/border/border-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=border&group=border-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -17,7 +17,6 @@ description: "Управление схлопыванием границ и ра
 | `.border-collapse` | `border-collapse: collapse;` |
 | `.border-separate` | `border-collapse: separate;` |
 | `.border-spacing-{n}` | `border-spacing: var(--sf-...);` |
-{.table}
 
 ## Описание
 
@@ -27,12 +26,6 @@ description: "Управление схлопыванием границ и ра
 
 ## Пример
 
-```html
-<table class="table border-collapse">...</table>
-<table class="table border-separate border-spacing-2">...</table>
-```
-## Playground
+:::example {id="utilities/tables/table-border-cells" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=tables&group=table-border-cells"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

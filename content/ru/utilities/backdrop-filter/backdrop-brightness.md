@@ -27,7 +27,6 @@ description: "Яркость фона элемента (backdrop-brightness)"
 | `.backdrop-brightness-2`   | `backdrop-filter: brightness(1.05)` |
 | `.backdrop-brightness-3`   | `backdrop-filter: brightness(1.1)`  |
 | `.backdrop-brightness-4`   | `backdrop-filter: brightness(1.2)`  |
-{.table}
 
 ## Описание
 
@@ -50,13 +49,6 @@ description: "Яркость фона элемента (backdrop-brightness)"
 
 ## Пример использования
 
-```html
-<div class="backdrop-brightness-1 hover:backdrop-brightness-2 p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы увеличить яркость подложки
-</div>
-```
-## Playground
+:::example {id="utilities/backdrop-filter/backdrop-brightness" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-brightness"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

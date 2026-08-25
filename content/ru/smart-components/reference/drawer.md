@@ -47,7 +47,6 @@ Loader-статус: `unregistered`.
 | `header-class` | `headerClass` | `String` | `''` | `—` |
 | `body-class` | `bodyClass` | `String` | `''` | `—` |
 | `close-class` | `closeClass` | `String` | `''` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -56,7 +55,6 @@ Loader-статус: `unregistered`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -74,7 +72,6 @@ Loader-статус: `unregistered`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Доступность
 

@@ -24,7 +24,6 @@ description: "Задержка перехода"
 | .delay-7 | transition-delay: 700ms; |
 | .delay-8 | transition-delay: 1s;    |
 | .delay-9 | transition-delay: 2s;    |
-{.table}
 
 ## Описание
 

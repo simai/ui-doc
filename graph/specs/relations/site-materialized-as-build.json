@@ -1,0 +1,15 @@
+{
+  "id": "rel.ui-doc.site.materialized-as-build",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.documentation-site",
+  "to": "ui-doc.capability.local-static-build",
+  "relation_type": "materialized_as",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "validated",
+  "impact": "high",
+  "owner": "repository_owner",
+  "source_refs": ["README.md"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md"]
+}

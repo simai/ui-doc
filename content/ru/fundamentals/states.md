@@ -10,7 +10,6 @@ description: "Префиксы hover, focus и active и правила инте
 | `hover:` | `:hover` | Наведение указателя |
 | `focus:` | `:focus` | Получение фокуса |
 | `active:` | `:active` | Момент активации или нажатия |
-{.table}
 
 ```html
 <button class="

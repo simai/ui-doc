@@ -19,7 +19,6 @@ description: "Вложение фона"
 | .bg-fixed  | background-attachment: fixed;  |
 | .bg-local  | background-attachment: local;  |
 | .bg-scroll | background-attachment: scroll; |
-{.table}
 
 ## Описание
 
@@ -74,8 +73,7 @@ description: "Вложение фона"
     <div class="h-f8"></div>
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/background/background-attachment" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-attachment"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

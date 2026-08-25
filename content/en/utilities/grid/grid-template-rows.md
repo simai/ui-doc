@@ -20,7 +20,6 @@ description: "Шаблон строк сетки (grid-template-rows)"
 | .grid-row-5    | grid-template-rows: repeat(5, minmax(0, 1fr)); |
 | .grid-row-6    | grid-template-rows: repeat(6, minmax(0, 1fr)); |
 | .grid-row-none | grid-template-rows: none;                      |
-{.table}
 
 ## Синтаксис
 

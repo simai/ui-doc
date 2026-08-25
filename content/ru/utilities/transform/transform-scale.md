@@ -25,7 +25,6 @@ description: "Классы масштабирования transform-scale"
 | `.scale-x-*` | масштаб только по оси X |
 | `.scale-y-*` | масштаб только по оси Y |
 
-{.table}
 
 ## Синтаксис
 
@@ -35,8 +34,7 @@ description: "Классы масштабирования transform-scale"
 - `hover:scale-{value}`
 
 Где `value`: `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`.
-## Playground
+## Пример
+:::example {id="utilities/transform/transform-scale" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-scale"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -19,7 +19,6 @@ description: "Толщина подложки прокрутки (scroll-backdro
 | .scroll-bg-2 | width: var(`--sf-a2`); |
 | .scroll-bg-3 | width: var(`--sf-a4`); |
 | .scroll-bg-4 | width: var(`--sf-a8`); |
-{.table}
 
 ## Описание
 
@@ -41,15 +40,6 @@ description: "Толщина подложки прокрутки (scroll-backdro
 
 Ниже пример с очень длинным текстом для демонстрации полосы прокрутки.
 
-```html
-<html class="scroll-bg-3 h-d5 overflow-auto ...">
-  <div class="p-1">
-    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-  </div>
-</html>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll-backdrop-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-backdrop-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

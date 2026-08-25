@@ -20,4 +20,3 @@ usually placed at the beginning of the page and does not need extra space above.
 | `--sf-text--space-bottom`    | `--sf-space-1` |
 | `--sf-heading--space-top`    | `--sf-space-4` |
 | `--sf-heading--space-bottom` | `--sf-space-1` |
-{.table}

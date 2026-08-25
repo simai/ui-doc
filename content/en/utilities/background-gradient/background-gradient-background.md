@@ -30,7 +30,6 @@ description: "Градиент фона"
 | .gr1-secondary-container, .gr2-secondary-container, .gr3-secondary-container | `--sf-gradient--color-1/2/3` | var(`--sf-secondary-container`) |
 | .gr1-tertiary, .gr2-tertiary, .gr3-tertiary                                  | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary`)            |
 | .gr1-tertiary-container, .gr2-tertiary-container, .gr3-tertiary-container    | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary-container`)  |
-{.table}
 
 *(Прежние классы цветов заменяются по аналогии с заменой для цвета фона. Например, вместо `gr1-blue-4`
 использовать `gr1-primary`, вместо `gr1-gray-6` использовать `gr1-surface-inverse`, и т.д.)*

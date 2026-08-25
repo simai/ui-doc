@@ -18,7 +18,6 @@ description: "Стиль оформления текста"
 | .decoration-dotted | text-decoration-style: dotted; |
 | .decoration-dashed | text-decoration-style: dashed; |
 | .decoration-wavy   | text-decoration-style: wavy;   |
-{.table}
 
 ## Описание
 

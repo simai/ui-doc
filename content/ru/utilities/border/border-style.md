@@ -32,7 +32,6 @@ description: "Стиль границы"
 | `.border-top-{style}` | `border-top-style` |
 | `.border-bottom-{style}` | `border-bottom-style` |
 
-{.table}
 
 ## Синтаксис
 
@@ -43,17 +42,6 @@ description: "Стиль границы"
 
 ## Примеры
 
-```html
-<div class="border-2 border-dotted">border-dotted</div>
-<div class="border-2 border-x-dashed">border-x-dashed</div>
-<div class="border-2 border-y-solid">border-y-solid</div>
-<div class="border-2 border-inline-start-double">border-inline-start-double</div>
-<div class="border-2 border-inline-end-hidden">border-inline-end-hidden</div>
-<div class="border-2 border-top-inset">border-top-inset</div>
-<div class="border-2 border-bottom-none">border-bottom-none</div>
-```
-## Playground
+:::example {id="utilities/border/border-style" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=border&group=border-style"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

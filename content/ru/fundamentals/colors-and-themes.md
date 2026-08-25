@@ -22,7 +22,6 @@ description: "Полная базовая палитра, семантическ
 | `--sf-transparent` | &lt;span class="sf-doc-color-value"&gt;&lt;span class="sf-doc-color-chip sf-doc-color-chip--transparent" aria-hidden="true"&gt;&lt;/span&gt;&lt;code&gt;rgba(255,255,255,0)&lt;/code&gt;&lt;/span&gt; | Полностью прозрачный цвет |
 | `--sf-white` | &lt;span class="sf-doc-color-value"&gt;&lt;span class="sf-doc-color-chip" style="--sf-doc-color: #ffffff" aria-hidden="true"&gt;&lt;/span&gt;&lt;code&gt;#ffffff&lt;/code&gt;&lt;/span&gt; | Белый |
 | `--sf-black` | &lt;span class="sf-doc-color-value"&gt;&lt;span class="sf-doc-color-chip" style="--sf-doc-color: #000000" aria-hidden="true"&gt;&lt;/span&gt;&lt;code&gt;#000000&lt;/code&gt;&lt;/span&gt; | Чёрный |
-{.table}
 
 Для белого и чёрного также доступны варианты `--alfa-4`, `--alfa-8`,
 `--alfa-12`, `--alfa-24` и `--alfa-48`.
@@ -104,7 +103,6 @@ description: "Полная базовая палитра, семантическ
 | Поверхности | `surface-0`, `surface-1`, `surface-container`, `surface-overlay`, `surface-inverse` |
 | Текст на поверхности | `on-surface`, `on-surface-variant`, `on-surface-muted`, `on-surface-inverse` |
 | Служебные | `link`, `link-hover`, `link-active`, `link-visited`, `focus`, `mark`, `code`, `disable`, `on-disable` |
-{.table}
 
 Все имена используются с префиксом `--sf-`. Например:
 `--sf-surface-container`, `--sf-on-primary` и `--sf-outline-error`.

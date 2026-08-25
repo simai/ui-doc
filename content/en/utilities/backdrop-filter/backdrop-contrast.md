@@ -20,7 +20,6 @@ description: "Контрастность фона элемента (backdrop-con
 | .backdrop-contrast-2   | backdrop-filter: contrast(1.05) |
 | .backdrop-contrast-3   | backdrop-filter: contrast(1.1)  |
 | .backdrop-contrast-4   | backdrop-filter: contrast(1.2)  |
-{.table}
 
 ## Описание
 
@@ -55,4 +54,3 @@ description: "Контрастность фона элемента (backdrop-con
 | .backdrop-contrast-4 | .backdrop-contrast-2   |
 | .backdrop-contrast-5 | .backdrop-contrast-3   |
 | .backdrop-contrast-6 | .backdrop-contrast-4   |
-{.table}

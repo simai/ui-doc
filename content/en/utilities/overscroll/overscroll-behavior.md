@@ -23,7 +23,6 @@ description: "Поведение при прокрутке"
 | .scroll-over-y-contain | overscroll-behavior-y: contain; |
 | .scroll-over-x-none    | overscroll-behavior-x: none;    |
 | .scroll-over-y-none    | overscroll-behavior-y: none;    |
-{.table}
 
 ## Описание
 

@@ -86,7 +86,6 @@ description: "Внутренний отступ прокрутки (scroll-paddi
 | .scroll-pl-9 | scroll-padding-left: var(`--sf-space--size-9`);                                                       |
 | .scroll-px-9 | scroll-padding-left: var(`--sf-space--size-9`);&lt;br/&gt; scroll-padding-right: var(`--sf-space--size-9`); |
 | .scroll-py-9 | scroll-padding-top: var(`--sf-space--size-9`);&lt;br/&gt; scroll-padding-bottom: var(`--sf-space--size-9`); |
-{.table}
 
 ## Описание
 
@@ -113,15 +112,6 @@ description: "Внутренний отступ прокрутки (scroll-paddi
 
 ## Пример использования
 
-```html
-<div class="snap-x overflow-auto w-full ...">
-  <div class="scroll-pl-4 snap-start inline-block bg-surface-1 p-2 ...">Элемент 1</div>
-  <div class="scroll-pl-4 snap-start inline-block bg-surface-1 p-2 ...">Элемент 2</div>
-  <div class="scroll-pl-4 snap-start inline-block bg-surface-1 p-2 ...">Элемент 3</div>
-</div>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll-padding" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-padding"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

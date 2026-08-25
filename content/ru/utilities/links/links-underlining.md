@@ -19,7 +19,6 @@ description: "Подчеркивание ссылок"
 | Класс | Значение |
 |:--|:--|
 | `.link-underline-none` | `text-decoration-line: none` для ссылки и `:hover` |
-{.table}
 
 ## Синтаксис
 
@@ -30,12 +29,6 @@ description: "Подчеркивание ссылок"
 
 ## Пример
 
-```html
-<p>Default <a href="#">underlined link</a></p>
-<p><a href="#" class="link-underline-none">Link without underline</a></p>
-```
-## Playground
+:::example {id="utilities/links/links-underlining" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=links-underlining"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

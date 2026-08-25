@@ -20,7 +20,6 @@ description: "Обработка пробелов (white-space)"
 | .pre-line          | white-space: pre-line; |
 | .pre-wrap          | white-space: pre-wrap; |
 | .whitespace-normal | white-space: normal;   |
-{.table}
 
 ## Синтаксис
 
@@ -107,8 +106,7 @@ description: "Обработка пробелов (white-space)"
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/white-space" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=white-space"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

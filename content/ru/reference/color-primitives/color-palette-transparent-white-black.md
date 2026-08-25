@@ -33,4 +33,3 @@ description: "Transparent, White и Black"
 | `--sf-black--alfa-8`  | rgba(0,0,0,0.08)       |
 | `--sf-black--alfa-12` | rgba(0,0,0,0.12)       |
 | `--sf-black--alfa-24` | rgba(0,0,0,0.24)       |
-{.table}

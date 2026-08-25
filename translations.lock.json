@@ -1,0 +1,31 @@
+{
+    "entries": [
+        {
+            "key": "common.continue",
+            "kind": "lang",
+            "locale": "en",
+            "review": "ai_verified",
+            "source_path": "content/ru/lang.json#/common/continue",
+            "source_sha256": "a42aee58d60a7d2a2fa9c112cea5dd62ba3b4c6ea05610a8a671ccb0c4da558d",
+            "source_structure_sha256": "44e194478eef1bdbd7567d0cf92c6aa09c6ff3a713a572f870a8c3e3e0263687",
+            "target_path": "content/en/lang.json#/common/continue",
+            "target_sha256": "31fbef162594de01bab0cd525c51f74de7bcb15063029fa1a54b2cf5944c80d8",
+            "target_structure_sha256": "44e194478eef1bdbd7567d0cf92c6aa09c6ff3a713a572f870a8c3e3e0263687"
+        },
+        {
+            "key": "common.greeting",
+            "kind": "lang",
+            "locale": "en",
+            "review": "ai_verified",
+            "source_path": "content/ru/lang.json#/common/greeting",
+            "source_sha256": "cd85cf1fd22d1477f74aa709ee8887c21d66332ff9ce9bb02745c15449b187f9",
+            "source_structure_sha256": "44e194478eef1bdbd7567d0cf92c6aa09c6ff3a713a572f870a8c3e3e0263687",
+            "target_path": "content/en/lang.json#/common/greeting",
+            "target_sha256": "48e1645a3bf4c08fc0e1819c5ba4813f9fb385f957556196a6aedb88721e2266",
+            "target_structure_sha256": "44e194478eef1bdbd7567d0cf92c6aa09c6ff3a713a572f870a8c3e3e0263687"
+        }
+    ],
+    "exclusions": [],
+    "schema": "docara.translation_lock.v1",
+    "source_locale": "ru"
+}

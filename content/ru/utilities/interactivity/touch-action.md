@@ -27,7 +27,6 @@ description: "Сенсорное действие (touch-action)"
 | .touch-pan-down     | touch-action: pan-down;     |
 | .touch-pinch-zoom   | touch-action: pinch-zoom;   |
 | .touch-manipulation | touch-action: manipulation; |
-{.table}
 
 ## Описание
 
@@ -41,25 +40,6 @@ description: "Сенсорное действие (touch-action)"
 
 ## Пример использования
 
-```html
-<div class="w-full h-f1 overflow-auto touch-auto ...">
-    <img class="h-auto w-e9" src="./picture.svg">
-</div>
+:::example {id="utilities/interactivity/touch-action" label="Результат"}
+:::
 
-<div class="w-full h-f1 overflow-auto touch-none ...">
-    <img class="h-auto w-e9" src="./picture.svg">
-</div>
-
-<div class="w-full h-f1 overflow-auto touch-pan-x ...">
-    <img class="h-auto w-e9" src="./picture.svg">
-</div>
-
-<div class="w-full h-f1 overflow-auto touch-pan-y ...">
-    <img class="h-auto w-e9" src="./picture.svg">
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=interactivity&group=touch-action"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -24,7 +24,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 | .backdrop-blur        | backdrop-filter: blur(var(`--sf-blur-medium`)); |
 | .backdrop-blur-medium | backdrop-filter: blur(var(`--sf-blur-medium`)); |
 | .backdrop-blur-large  | backdrop-filter: blur(var(`--sf-blur-large`));  |
-{.table}
 
 ## Переменные для размытия
 
@@ -33,7 +32,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 | `--sf-blur-small`  | var(`--sf-a2`) |
 | `--sf-blur-medium` | var(`--sf-a4`) |
 | `--sf-blur-large`  | var(`--sf-a8`) |
-{.table}
 
 ## Описание
 
@@ -54,15 +52,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 
 ## Пример использования
 
-```html
-<!-- Слабое размытие фона при наведении -->
-<div class="backdrop-blur-none hover:backdrop-blur-small p-4 bg-primary color-on-surface-inverse transition">
-  Наведи для слабого размытия фона
-</div>
-```
+:::example {id="utilities/backdrop-filter/backdrop-blur" label="Результат"}
+:::
 
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-blur"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

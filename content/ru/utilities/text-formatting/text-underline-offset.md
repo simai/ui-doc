@@ -14,16 +14,9 @@ description: "Смещение подчеркивания текста"
 |:--|:--|
 | `.decoration-offset-auto` | Автоматическое смещение |
 | `.decoration-offset-0` ... `.decoration-offset-4` | Смещение по токенам `--sf-a0..--sf-a4` |
-{.table}
 
 ## Пример
 
-```html
-<p class="underline decoration-offset-1">Offset 1</p>
-<p class="underline decoration-offset-4">Offset 4</p>
-```
-## Playground
+:::example {id="utilities/text-formatting/text-underline-offset" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-underline-offset"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -25,7 +25,6 @@ description: "Соотношение сторон (Aspect Ratio)"
 | .aspect-4x3  | aspect-ratio: 4 / 3  |
 | .aspect-16x9 | aspect-ratio: 16 / 9 |
 | .aspect-9x16 | aspect-ratio: 9 / 16 |
-{.table}
 
 ## Использование
 

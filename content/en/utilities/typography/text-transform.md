@@ -16,7 +16,6 @@ description: "Трансформация текста (text-transform)"
 | .lowercase  | text-transform: lowercase;  |
 | .capitalize | text-transform: capitalize; |
 | .normalcase | text-transform: none;       |
-{.table}
 
 ## Синтаксис
 

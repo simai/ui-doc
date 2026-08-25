@@ -58,7 +58,6 @@ description: "Цвет текста"
 | .color-on-success                     | color: var(`--sf-on-success`);                     |
 | .color-on-success-container           | color: var(`--sf-on-success-container`);           |
 | .color-on-success-container-graphic   | color: var(`--sf-on-success-container-graphic`);   |
-{.table}
 
 ## Описание
 

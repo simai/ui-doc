@@ -49,8 +49,7 @@ description: 'Оформление элемента, разбитого на н�
 </span>
 ```
 
-## Playground
+## Пример
+:::example {id="utilities/layout/box-decoration-break" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=box-decoration-break"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

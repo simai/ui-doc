@@ -21,7 +21,6 @@ description: "Паттерн фона"
 | .pattern-7 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='2' height='2' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
 | .pattern-8 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='1'/&gt;&lt;rect x='0' y='2' width='3' height='1'/&gt;&lt;rect x='0' y='0' width='1' height='3'/&gt;&gt;&lt;rect x='2' y='0' width='1' height='3'/&gt;&gt;&lt;rect x='2' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                             |
 | .pattern-9 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='3' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
-{.table}
 
 ## Описание
 

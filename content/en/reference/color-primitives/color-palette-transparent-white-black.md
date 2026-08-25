@@ -33,4 +33,3 @@ structure and convenient work with colors in the interface.
 | `--sf-black--alfa-8`  | rgba(0,0,0,0.08)      |
 | `--sf-black--alfa-12` | rgba(0,0,0,0.12)      |
 | `--sf-black--alfa-24` | rgba(0,0,0,0.24)      |
-{.table}

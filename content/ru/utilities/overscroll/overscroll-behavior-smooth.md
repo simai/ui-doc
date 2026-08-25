@@ -18,7 +18,6 @@ description: "Плавность прокрутки"
 |:---------------|:-------------------------|
 | .scroll-auto   | scroll-behavior: auto;   |
 | .scroll-smooth | scroll-behavior: smooth; |
-{.table}
 
 ## Описание
 
@@ -39,18 +38,6 @@ description: "Плавность прокрутки"
 
 ## Пример использования
 
-```html
-<!-- Плавная прокрутка при переходе по якорным ссылкам -->
-<html class="scroll-smooth">
-  <body>
-    <a href="#section2">Прокрутить к секции 2</a>
-    <div style="height: 1000px;"></div>
-    <div id="section2">Секция 2</div>
-  </body>
-</html>
-```
-## Playground
+:::example {id="utilities/overscroll/overscroll-behavior-smooth" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=overscroll-behavior-smooth"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

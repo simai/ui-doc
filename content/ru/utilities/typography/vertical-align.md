@@ -21,7 +21,6 @@ description: "Выравнивание по вертикали (vertical-align)"
 | .text-bottom   | vertical-align: bottom;   |
 | .text-sup      | vertical-align: super;    |
 | .text-sub      | vertical-align: sub;      |
-{.table}
 
 ## Синтаксис
 
@@ -42,21 +41,6 @@ description: "Выравнивание по вертикали (vertical-align)"
 
 ## Пример использования
 
-```html
-<span class="inline-block text-baseline">Базовая линия</span>
+:::example {id="utilities/typography/vertical-align" label="Результат"}
+:::
 
-<span class="inline-block text-top">Верхний край</span>
-
-<span class="inline-block text-middle">Центр строки</span>
-
-<span class="inline-block text-bottom">Нижний край</span>
-
-<span class="inline-block text-sup">Надстрочный индекс</span>
-
-<span class="inline-block text-sub">Подстрочный индекс</span>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=vertical-align"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

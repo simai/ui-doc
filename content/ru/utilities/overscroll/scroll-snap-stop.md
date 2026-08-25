@@ -24,7 +24,6 @@ snap-always) или сможет "проскользнуть" мимо опре�
 |:-------------|:--------------------------|
 | .snap-normal | scroll-snap-stop: normal; |
 | .snap-always | scroll-snap-stop: always; |
-{.table}
 
 ## Описание
 
@@ -52,18 +51,6 @@ snap-always) или сможет "проскользнуть" мимо опре�
 
 ## Пример использования
 
-```html
-<div class="snap-x overflow-auto w-full ...">
-  <div class="snap-always snap-center inline-block bg-surface-1 p-2 ...">
-    <img src="./image.jpg" alt="Изображение 1">
-  </div>
-  <div class="snap-normal snap-center inline-block bg-surface-1 p-2 ...">
-    <img src="./image.jpg" alt="Изображение 2">
-  </div>
-</div>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll-snap-stop" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-stop"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

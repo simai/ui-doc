@@ -22,9 +22,7 @@ description: "Цвет текста placeholder"
 | `.placeholder-error` | `color: var(--sf-error)` |
 | `.placeholder-warning` | `color: var(--sf-warning)` |
 | `.placeholder-success` | `color: var(--sf-success)` |
-{.table}
-## Playground
+## Пример
+:::example {id="utilities/forms/placeholder-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=placeholder-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

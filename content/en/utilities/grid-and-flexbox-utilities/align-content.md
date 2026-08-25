@@ -18,7 +18,6 @@ description: "Выравнивание содержимого по попере�
 | .content-cross-between | align-content: space-between; |
 | .content-cross-around  | align-content: space-around;  |
 | .content-cross-evenly  | align-content: space-evenly;  |
-{.table}
 
 ## Синтаксис
 

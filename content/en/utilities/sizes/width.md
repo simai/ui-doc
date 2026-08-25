@@ -50,7 +50,6 @@ description: "Ширина (width)"
 | .w-px           | width: 1px;                                                         |
 | .w-0            | width: 0;                                                           |
 | .w-a0 ... .w-i9 | width: var(--sf-\[a-i\]\[0-9\]); (фиксированные размеры фреймворка) |
-{.table}
 
 ## Синтаксис
 

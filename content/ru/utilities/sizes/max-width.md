@@ -27,7 +27,6 @@ description: "Максимальная ширина (max-width)"
 | .max-w-lg          | max-width: 960px;                                 |
 | .max-w-xl          | max-width: 1140px;                                |
 | .max-w-a0 ... i9   | max-width: var(--sf-...); фиксированные размеры из системы фреймворка |
-{.table}
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -90,8 +89,7 @@ description: "Максимальная ширина (max-width)"
 ```
 
 В этом примере максимальная ширина будет 100% (`max-w-full`) только при размерах экрана `md` и больше.
-## Playground
+## Пример
+:::example {id="utilities/sizes/max-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=max-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

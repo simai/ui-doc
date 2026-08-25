@@ -24,7 +24,6 @@ description: "Сенсорное действие (touch-action)"
 | .touch-pan-down     | touch-action: pan-down;     |
 | .touch-pinch-zoom   | touch-action: pinch-zoom;   |
 | .touch-manipulation | touch-action: manipulation; |
-{.table}
 
 ## Описание
 

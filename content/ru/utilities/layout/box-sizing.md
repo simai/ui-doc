@@ -20,7 +20,6 @@ description: "Метод расчёта размера элемента (box-siz
 |:-------------|:-------------------------|
 | .box-border  | box-sizing: border-box;  |
 | .box-content | box-sizing: content-box; |
-{.table}
 
 ### **box-border**
 При использовании класса `box-border` размеры элемента (width, height) включают в себя не только контент, но и
@@ -50,8 +49,7 @@ description: "Метод расчёта размера элемента (box-siz
 Использование модификаторов `box-border` или `box-content` зависит от предпочтений в организации размеров элементов. По
 умолчанию во фреймворке нередко используется `box-border` (border-box), чтобы заданные размеры элементов были итоговыми
 габаритами, упрощая верстку.
-## Playground
+## Пример
+:::example {id="utilities/layout/box-sizing" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=box-sizing"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

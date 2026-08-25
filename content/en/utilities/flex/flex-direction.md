@@ -17,7 +17,6 @@ description: "Направление размещения (flex-direction)"
 | .flex-col         | flex-direction: column;         |
 | .flex-row-reverse | flex-direction: row-reverse;    |
 | .flex-col-reverse | flex-direction: column-reverse; |
-{.table}
 
 ## Синтаксис
 

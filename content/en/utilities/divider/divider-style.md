@@ -19,7 +19,6 @@ description: "Стиль разделителя"
 | .divider-double | > :not([hidden]) ~ :not([hidden]) { border-style: double; } |
 | .divider-hidden | > :not([hidden]) ~ :not([hidden]) { border-style: hidden; } |
 | .divider-none   | > :not([hidden]) ~ :not([hidden]) { border-style: none; }   |
-{.table}
 
 ## Описание
 

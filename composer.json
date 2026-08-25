@@ -3,16 +3,9 @@
     "description": "Public SIMAI Framework documentation built with Docara v2.",
     "type": "project",
     "license": "proprietary",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/simai/docara.git",
-            "no-api": true
-        }
-    ],
     "require": {
         "php": "^8.2",
-        "simai/docara": "dev-main#559593685a2273eca551b1643c90b3f0e897327c"
+        "simai/docara": "^2.1"
     },
     "config": {
         "allow-plugins": false,

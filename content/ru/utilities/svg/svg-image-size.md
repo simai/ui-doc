@@ -18,13 +18,6 @@ description: "Размер SVG-изображений"
 
 ## Пример
 
-```html
-<svg class="svg-1 fill-primary"></svg>
-<svg class="svg-4 fill-primary"></svg>
-<svg class="svg-8 fill-primary"></svg>
-```
-## Playground
+:::example {id="utilities/svg/svg-image-size" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-image-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

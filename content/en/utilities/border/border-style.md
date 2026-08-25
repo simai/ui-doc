@@ -56,7 +56,6 @@ description: "Стиль границы"
 | .border-right-none    | border-right-style: none;                                   |
 | .border-top-none      | border-top-style: none;                                     |
 | .border-bottom-none   | border-bottom-style: none;                                  |
-{.table}
 
 ## Описание
 

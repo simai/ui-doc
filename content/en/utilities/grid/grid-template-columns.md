@@ -25,7 +25,6 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 | .grid-col-11   | grid-template-columns: repeat(11, minmax(0, 1fr)); |
 | .grid-col-12   | grid-template-columns: repeat(12, minmax(0, 1fr)); |
 | .grid-col-none | grid-template-columns: none;                       |
-{.table}
 
 ## Синтаксис
 

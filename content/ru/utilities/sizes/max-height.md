@@ -23,7 +23,6 @@ description: "Максимальная высота (max-height)"
 | .max-h-max              | max-height: max-content;                    |
 | .max-h-fit              | max-height: fit-content;                    |
 | .max-h-a0 ... .max-h-i9 | Фиксированные размеры из системы фреймворка |
-{.table}
 
 ## Синтаксис
 
@@ -70,8 +69,7 @@ description: "Максимальная высота (max-height)"
 ```
 
 В этом примере максимальная высота будет равна нулю (`max-h-0`) при ширине экрана `md` и больше.
-## Playground
+## Пример
+:::example {id="utilities/sizes/max-height" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=max-height"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -35,7 +35,6 @@ description: "Смещение (transform-translate)"
 | .translate-x-9 | transform: translateX(var(`--sf-b6`)); |
 | .translate-y-9 | transform: translateY(var(`--sf-b6`)); |
 
-{.table}
 
 ## Описание
 

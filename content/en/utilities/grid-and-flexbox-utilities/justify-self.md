@@ -18,7 +18,6 @@ description: "Выравнивание отдельного элемента в 
 | .self-main-end     | justify-self: end;     |
 | .self-main-center  | justify-self: center;  |
 | .self-main-stretch | justify-self: stretch; |
-{.table}
 
 ## Синтаксис
 

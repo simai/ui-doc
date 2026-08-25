@@ -19,7 +19,6 @@ description: "Трансформация текста (text-transform)"
 | .lowercase  | text-transform: lowercase;  |
 | .capitalize | text-transform: capitalize; |
 | .normalcase | text-transform: none;       |
-{.table}
 
 ## Синтаксис
 
@@ -38,25 +37,6 @@ description: "Трансформация текста (text-transform)"
 
 ## Пример использования
 
-```html
-<p class="uppercase">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
+:::example {id="utilities/typography/text-transform" label="Результат"}
+:::
 
-<p class="lowercase">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-
-<p class="capitalize">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-
-<p class="normalcase">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-transform"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

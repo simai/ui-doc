@@ -15,7 +15,6 @@ description: "Тип маски"
 |:---------------------|:----------------------|
 | .mask-type-alpha     | mask-mode: alpha;     |
 | .mask-type-luminance | mask-mode: luminance; |
-{.table}
 
 ## Описание
 

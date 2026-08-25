@@ -22,15 +22,9 @@ description: "Параметры по умолчанию"
 | `a:hover` | `color: var(--sf-link-hover)` |
 | `a:active` | `color: var(--sf-link-active)` |
 | `a:visited` | `color: var(--sf-link-visited)` |
-{.table}
 
 ## Пример
 
-```html
-<a href="#">Default link</a>
-```
-## Playground
+:::example {id="utilities/links/links-default-parameters" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=links-default-parameters"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

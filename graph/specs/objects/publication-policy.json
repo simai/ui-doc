@@ -1,0 +1,15 @@
+{
+  "id": "ui-doc.policy.explicit-publication",
+  "schema_version": "1.0.0",
+  "kind": "policy",
+  "policy_type": "guard",
+  "title": "Explicit publication authorization",
+  "summary": "Git commit, push, release and public deployment are separate operations and require explicit user authorization.",
+  "owner": "repository_owner",
+  "lifecycle": "active",
+  "readiness": "R5_operational",
+  "evidence_status": "asserted_by_human",
+  "source_refs": ["README.md"],
+  "evidence_refs": [],
+  "tags": ["git", "release", "deployment", "safety"]
+}

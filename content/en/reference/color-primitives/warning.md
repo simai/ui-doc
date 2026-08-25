@@ -43,7 +43,6 @@ The following variables are used for the Warning role:
 | `--sf-on-warning-container`        | `--sf-warning-10`         | `--sf-warning-90`         |
 | `--sf-on-warning-container-graphic`| `--sf-warning-50`         | `--sf-warning-60`         |
 | `--sf-outline-warning`             | `--sf-warning-50`         | `--sf-warning-60`         |
-{.table}
 
 [image15]: /assets/build/img/b64/faa5487eac403f05.png
 [image16]: /assets/build/img/b64/75051c00915713c5.png

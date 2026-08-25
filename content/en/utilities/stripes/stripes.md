@@ -17,7 +17,6 @@ description: "Полосы"
 | .stripe-3          | background: linear-gradient(0deg, var(`--sf-stripe--color`) 1%, transparent 1%, transparent 49%, var(`--sf-stripe--color`) 49%, var(`--sf-stripe--color`) 51%, transparent 51%, transparent 99%, var(`--sf-stripe--color`) 99%), linear-gradient(90deg, var(`--sf-stripe--color`) 1%, transparent 1%, transparent 49%, var(`--sf-stripe--color`) 49%, var(`--sf-stripe--color`) 51%, transparent 51%, transparent 99%, var(`--sf-stripe--color`) 99%);&lt;br/&gt; background-size: var(`--sf-stripe--size`) var(`--sf-stripe--size`); |
 | .stripe-4          | background: linear-gradient(135deg, var(`--sf-stripe--color`) 1%, transparent 1%, transparent 49%, var(`--sf-stripe--color`) 49%, var(`--sf-stripe--color`) 51%, transparent 51%, transparent 99%, var(`--sf-stripe--color`) 99%);&lt;br/&gt; background-size: var(`--sf-stripe--size`) var(`--sf-stripe--size`);                                                                                                                                                                                                                     |
 
-{.table}
 
 ## Описание
 

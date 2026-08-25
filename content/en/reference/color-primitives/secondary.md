@@ -50,7 +50,6 @@ The following variables are used for the Secondary role:
 | `--sf-on-secondary-container`        | `--sf-secondary-10`         | `--sf-secondary-90`         |
 | `--sf-on-secondary-container-graphic`| `--sf-secondary-50`         | `--sf-secondary-60`         |
 | `--sf-outline-secondary`             | `--sf-secondary-50`         | `--sf-secondary-60`         |
-{.table}
 
 [image7]: /assets/build/img/b64/59f5d584a028fa16.png
 [image8]: /assets/build/img/b64/f18b0b73f1e62795.png

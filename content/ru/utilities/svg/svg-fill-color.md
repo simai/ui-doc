@@ -26,13 +26,6 @@ description: "Цвет заливки"
 
 ## Пример
 
-```html
-<svg class="svg-6 fill-primary"></svg>
-<svg class="svg-6 fill-warning"></svg>
-<svg class="svg-6 fill-error hover:fill-success"></svg>
-```
-## Playground
+:::example {id="utilities/svg/svg-fill-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-fill-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

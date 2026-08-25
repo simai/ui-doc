@@ -18,7 +18,6 @@ description: "Выравнивание по вертикали (vertical-align)"
 | .text-bottom   | vertical-align: bottom;   |
 | .text-sup      | vertical-align: super;    |
 | .text-sub      | vertical-align: sub;      |
-{.table}
 
 ## Синтаксис
 

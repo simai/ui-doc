@@ -33,4 +33,3 @@ This is a shade of the main accent color for repeated or less prominent elements
 | `--sf-secondary-15`        | #1a263b                                            |
 | `--sf-secondary-10`        | #101b31                                            |
 | `--sf-secondary-5`         | #051126                                            |
-{.table}

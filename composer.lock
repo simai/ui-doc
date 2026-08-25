@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69e0f5c6723ee5182f22b05b4eb02b60",
+    "content-hash": "8bfd666a6e756452810c07b7bdd812e1",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "dev-main",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "559593685a2273eca551b1643c90b3f0e897327c"
+                "reference": "0e58cc56e6da733d7a534e9e0330936034f86715"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/559593685a2273eca551b1643c90b3f0e897327c",
-                "reference": "559593685a2273eca551b1643c90b3f0e897327c",
+                "url": "https://api.github.com/repos/simai/docara/zipball/0e58cc56e6da733d7a534e9e0330936034f86715",
+                "reference": "0e58cc56e6da733d7a534e9e0330936034f86715",
                 "shasum": ""
             },
             "require": {
@@ -1596,7 +1596,6 @@
                 "mockery/mockery": "^1.6",
                 "phpunit/phpunit": "^11.0.6"
             },
-            "default-branch": true,
             "bin": [
                 "docara"
             ],
@@ -1606,39 +1605,7 @@
                     "Simai\\Docara\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
-            "archive": {
-                "exclude": [
-                    ".DS_Store",
-                    ".cache",
-                    "/.editorconfig",
-                    "/.env",
-                    "/.env.example",
-                    "/.git",
-                    "/.git-blame-ignore-revs",
-                    "/.gitattributes",
-                    "/.github",
-                    "/.markdownlint.json",
-                    "/composer.lock",
-                    "/CONTRIBUTING.md",
-                    ".hcs-audit",
-                    "/.idea",
-                    ".phpunit.cache",
-                    ".playwright-cli",
-                    "build_*",
-                    "/graph",
-                    "/output",
-                    "/phpunit.xml",
-                    "/pint.json",
-                    "/source",
-                    "/tests",
-                    "/vendor"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1657,7 +1624,11 @@
                 "site",
                 "static"
             ],
-            "time": "2026-08-08T15:01:05+00:00"
+            "support": {
+                "issues": "https://github.com/simai/docara/issues",
+                "source": "https://github.com/simai/docara/tree/v2.1.0"
+            },
+            "time": "2026-08-25T22:59:43+00:00"
         },
         {
             "name": "symfony/clock",
@@ -3136,9 +3107,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "simai/docara": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

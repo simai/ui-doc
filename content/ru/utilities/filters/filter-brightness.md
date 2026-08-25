@@ -22,7 +22,6 @@ description: "Яркость элемента (filter-brightness)"
 | .brightness-6                | brightness-2   |
 | .brightness-7                | brightness-3   |
 | .brightness-8, .brightness-9 | brightness-4   |
-{.table}
 
 ## Новые классы и их значения
 
@@ -36,7 +35,6 @@ description: "Яркость элемента (filter-brightness)"
 | .brightness-2   | filter: brightness(1.05); |
 | .brightness-3   | filter: brightness(1.1);  |
 | .brightness-4   | filter: brightness(1.2);  |
-{.table}
 
 ## Описание
 
@@ -55,18 +53,6 @@ description: "Яркость элемента (filter-brightness)"
 
 ## Пример использования
 
-````html
-<!-- Нормальная яркость -->
-<div class="brightness-1 p-4 bg-primary color-on-surface-inverse">Яркость нормальная</div>
+:::example {id="utilities/filters/filter-brightness" label="Результат"}
+:::
 
-```html
-
-```html
-<!-- Увеличение яркости при наведении -->
-<div class="brightness-1 hover:brightness-3 p-4 bg-tertiary m-top-2 transition">Наведи, чтобы увеличить яркость</div>
-````
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-brightness"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

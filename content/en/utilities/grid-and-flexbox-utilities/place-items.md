@@ -17,7 +17,6 @@ description: "Размещение элементов по обеим осям (
 | .items-end     | place-items: end;     |
 | .items-center  | place-items: center;  |
 | .items-stretch | place-items: stretch; |
-{.table}
 
 *(Обратите внимание, что в исходном коде был класс `items-text-center`, но по описанию это `items-center`.)*
 

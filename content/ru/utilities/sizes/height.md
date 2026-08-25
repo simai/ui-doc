@@ -47,7 +47,6 @@ description: "Высота (height)"
 | .h-px           | height: 1px;                                                      |
 | .h-0            | height: 0;                                                        |
 | .h-a0 ... .h-i9 | height: var(--sf-\*); фиксированные размеры по системе фреймворка |
-{.table}
 
 (Пример фиксированных размеров: h-c4, h-d4, h-e4 и т.д.)
 
@@ -123,8 +122,7 @@ description: "Высота (height)"
 ```
 
 В этом примере высота будет 50% (`h-1/2`) при `md` и больше.
-## Playground
+## Пример
+:::example {id="utilities/sizes/height" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=height"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -16,4 +16,3 @@ description: "Light theme palette"
 | .bg-theme-7 | .b-theme-7 | .c-theme-7 |
 | .bg-theme-8 | .b-theme-8 | .c-theme-8 |
 | .bg-theme-9 | .b-theme-9 | .c-theme-9 |
-{.table}

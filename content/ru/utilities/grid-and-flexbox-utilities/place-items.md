@@ -19,7 +19,6 @@ description: "Размещение элементов по обеим осям (
 | .items-end     | place-items: end;     |
 | .items-center  | place-items: center;  |
 | .items-stretch | place-items: stretch; |
-{.table}
 
 *(Обратите внимание, что в исходном коде был класс `items-text-center`, но по описанию это `items-center`.)*
 
@@ -62,8 +61,7 @@ description: "Размещение элементов по обеим осям (
   <!-- Начиная с md элементы будут прижаты к началу ячеек по обеим осям -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/place-items" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-items"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

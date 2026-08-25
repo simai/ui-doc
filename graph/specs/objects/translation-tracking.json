@@ -1,0 +1,15 @@
+{
+  "id": "ui-doc.capability.translation-tracking",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "quality-gate",
+  "title": "Report-only translation tracking",
+  "summary": "Russian is the source locale. Docara reports page and lang.json currency without changing sources or failing the build; only two explicitly accepted English UI keys are currently verified.",
+  "owner": "repository_owner",
+  "lifecycle": "active",
+  "readiness": "R3_review_required",
+  "evidence_status": "partial",
+  "source_refs": ["docara.json", "translations.lock.json", "content/ru", "content/en"],
+  "evidence_refs": [".docara/translation-status.json", "source/workflow/2026-08-25-shared-examples-translation-tracking.md"],
+  "tags": ["translation", "localization", "report", "ru", "en", "review-queue"]
+}

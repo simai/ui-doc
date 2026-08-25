@@ -21,7 +21,6 @@ description: "Внутренний отступ (padding)"
 | .p-inline-end-{n}   | padding-inline-end: var(`--sf-space-{n}`);   |
 | .p-x-{n}            | padding-inline: var(`--sf-space-{n}`);     |
 | .p-y-{n}            | padding-block: var(`--sf-space-{n}`);      |
-{.table}
 
 Где `{n}` ∈ `0, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, 6, 7, 8`. Логические стороны (`inline-start/end`) используются вместо left/right.
 
@@ -47,8 +46,7 @@ description: "Внутренний отступ (padding)"
   <!-- Начиная с md padding увеличится до var(--sf-space-4) -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/indents/padding" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=indents&group=padding"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

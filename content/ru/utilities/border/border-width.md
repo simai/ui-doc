@@ -22,7 +22,6 @@ description: "Толщина границы"
 | `.border-top-{n}` | `border-top-width` |
 | `.border-bottom-{n}` | `border-bottom-width` |
 
-{.table}
 
 `n`: `0..10`
 
@@ -41,17 +40,6 @@ description: "Толщина границы"
 
 ## Примеры
 
-```html
-<div class="border-2">border-2</div>
-<div class="border-x-4">border-x-4</div>
-<div class="border-y-3">border-y-3</div>
-<div class="border-inline-start-6">border-inline-start-6</div>
-<div class="border-inline-end-1">border-inline-end-1</div>
-<div class="border-top-10">border-top-10</div>
-<div class="md:border-bottom-5">md:border-bottom-5</div>
-```
-## Playground
+:::example {id="utilities/border/border-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=border&group=border-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

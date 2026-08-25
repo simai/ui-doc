@@ -16,7 +16,6 @@ description: "Размер маски"
 | .mask-auto    | mask-size: auto;    |
 | .mask-cover   | mask-size: cover;   |
 | .mask-contain | mask-size: contain; |
-{.table}
 
 ## Описание
 

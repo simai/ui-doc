@@ -43,7 +43,6 @@ description: "Промежутки между элементами (gap)"
 | .g-9     | gap: var(`--sf-space-5`);          |
 | .gap-x-9 | column-gap: var(`--sf-space-5`);   |
 | .gap-y-9 | row-gap: var(`--sf-space-5`);      |
-{.table}
 
 ## Синтаксис
 

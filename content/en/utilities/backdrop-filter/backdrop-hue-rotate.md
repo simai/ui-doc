@@ -22,7 +22,6 @@ description: "Вращение оттенка фона элемента (backdro
 | .-backdrop-hue-rotate-30 | backdrop-filter: hue-rotate(-30deg)                   |
 | .-backdrop-hue-rotate-60 | backdrop-filter: hue-rotate(-60deg)                   |
 | .-backdrop-hue-rotate-90 | backdrop-filter: hue-rotate(-90deg)                   |
-{.table}
 
 ## Описание
 
@@ -53,4 +52,3 @@ description: "Вращение оттенка фона элемента (backdro
 | .backdrop-hue-rotate-3 | .backdrop-hue-rotate-60  |
 | .backdrop-hue-rotate-4 | .backdrop-hue-rotate-90  |
 | .backdrop-hue-rotate-5 | .backdrop-hue-rotate-180 |
-{.table}

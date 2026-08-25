@@ -16,7 +16,6 @@ description: "Шаблон колонок сетки (grid-template-columns)"
 |:-----------------|:----------------------------------------|
 | .grid-col-1 … 12 | grid-template-columns: repeat(n, minmax(0, 1fr)); |
 | .grid-col-none   | grid-template-columns: none;            |
-{.table}
 
 ## Синтаксис
 
@@ -42,8 +41,7 @@ description: "Шаблон колонок сетки (grid-template-columns)"
   <!-- 2 колонки на мобильных, 4 на md и выше -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-template-columns" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-template-columns"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

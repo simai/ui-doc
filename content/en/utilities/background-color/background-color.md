@@ -96,7 +96,6 @@ description: "Цвет фона"
 | .bg-success-transparent-select    | background-color: var(`--sf-success-transparent-select`)    |
 | .bg-success-transparent-overlay   | background-color: var(`--sf-success-transparent-overlay`)   |
 
-{.table}
 
 ## Описание
 
@@ -148,4 +147,3 @@ description: "Цвет фона"
 | .bg-pink-1, .bg-pink-2, .bg-pink-3                         | .bg-tertiary-container |
 | .bg-pink-4 ... .bg-pink-9                                  | .bg-tertiary           |
 
-{.table}

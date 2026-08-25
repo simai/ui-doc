@@ -21,7 +21,6 @@ description: "Параметры по умолчанию (для границ)"
 | `.border` | `border: var(--sf-a1) var(--sf-outline-variant) solid` |
 | `.border-none` | `border: var(--sf-a1) var(--sf-transparent) solid` |
 
-{.table}
 
 ## Синтаксис
 
@@ -31,14 +30,6 @@ description: "Параметры по умолчанию (для границ)"
 
 ## Примеры
 
-```html
-<div class="border">border</div>
-<div class="border-none">border-none</div>
-<div class="hover:border-none">hover:border-none</div>
-<div class="md:border">md:border</div>
-```
-## Playground
+:::example {id="utilities/border/border-default-parameters" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=border&group=border-default-parameters"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

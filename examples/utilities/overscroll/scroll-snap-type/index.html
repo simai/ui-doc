@@ -1,0 +1,143 @@
+<div class="wrap grid grid-col-1 sm:grid-col-2 max-w-md gap-3 content-main-start">
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">snap-x snap-mandatory</div>
+    <div class="flex gap-2 m-b-2">
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-type-action"
+        data-scroller-id="snap-type-mandatory"
+        data-mode="mid-gap"
+      >
+        Scroll to mid-gap
+      </button>
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-type-action"
+        data-scroller-id="snap-type-mandatory"
+        data-mode="reset"
+      >
+        Reset
+      </button>
+    </div>
+    <div class="text-size-2 color-on-surface-variant">
+      Snapped item: <span id="snap-type-mandatory-active">-</span>
+    </div>
+    <div
+      id="snap-type-mandatory"
+      class="sf-card p-2 radius-2 border border-outline-variant overflow-auto snap-x snap-mandatory"
+    >
+      <div class="w-f9 flex gap-2 js-snap-track">
+        <div
+          class="snap-center p-3 w-f4 bg-primary-container color-on-primary-container radius-1"
+          data-item="1"
+        >
+          1
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-secondary-container color-on-secondary-container radius-1"
+          data-item="2"
+        >
+          2
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-tertiary-container color-on-tertiary-container radius-1"
+          data-item="3"
+        >
+          3
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-success-container color-on-success-container radius-1"
+          data-item="4"
+        >
+          4
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-warning-container color-on-warning-container radius-1"
+          data-item="5"
+        >
+          5
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-error-container color-on-error-container radius-1"
+          data-item="6"
+        >
+          6
+        </div>
+      </div>
+    </div>
+    <div class="m-t-2 text-size-2 color-on-surface-variant">
+      Mandatory always snaps to an item after scrolling.
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">snap-x snap-proximity</div>
+    <div class="flex gap-2 m-b-2">
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-type-action"
+        data-scroller-id="snap-type-proximity"
+        data-mode="mid-gap"
+      >
+        Scroll to mid-gap
+      </button>
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-type-action"
+        data-scroller-id="snap-type-proximity"
+        data-mode="reset"
+      >
+        Reset
+      </button>
+    </div>
+    <div class="text-size-2 color-on-surface-variant">
+      Snapped item: <span id="snap-type-proximity-active">-</span>
+    </div>
+    <div
+      id="snap-type-proximity"
+      class="sf-card p-2 radius-2 border border-outline-variant overflow-auto snap-x snap-proximity"
+    >
+      <div class="w-f9 flex gap-2 js-snap-track">
+        <div
+          class="snap-center p-3 w-f4 bg-primary-container color-on-primary-container radius-1"
+          data-item="1"
+        >
+          1
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-secondary-container color-on-secondary-container radius-1"
+          data-item="2"
+        >
+          2
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-tertiary-container color-on-tertiary-container radius-1"
+          data-item="3"
+        >
+          3
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-success-container color-on-success-container radius-1"
+          data-item="4"
+        >
+          4
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-warning-container color-on-warning-container radius-1"
+          data-item="5"
+        >
+          5
+        </div>
+        <div
+          class="snap-center p-3 w-f4 bg-error-container color-on-error-container radius-1"
+          data-item="6"
+        >
+          6
+        </div>
+      </div>
+    </div>
+    <div class="m-t-2 text-size-2 color-on-surface-variant">
+      Proximity may stay between items if the stop is not close enough.
+    </div>
+  </div>
+</div>

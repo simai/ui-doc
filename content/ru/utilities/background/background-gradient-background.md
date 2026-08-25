@@ -35,7 +35,6 @@ description: "Градиент фона"
 | .gr1-tertiary-container, .gr2-tertiary-container, .gr3-tertiary-container    | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary-container`)  |
 | .gr1-success, .gr2-success, .gr3-success                                     | `--sf-gradient--color-1/2/3` | var(`--sf-success`)             |
 | .gr1-warning, .gr2-warning, .gr3-warning                                     | `--sf-gradient--color-1/2/3` | var(`--sf-warning`)             |
-{.table}
 
 *(Прежние классы цветов заменяются по аналогии с заменой для цвета фона. Например, вместо `gr1-blue-4`
 использовать `gr1-primary`, вместо `gr1-gray-6` использовать `gr1-surface-inverse`, и т.д.)*
@@ -49,25 +48,9 @@ description: "Градиент фона"
 
 ## Пример использования
 
-```html
-<!-- Линейный градиент из двух цветов: первичный и контейнер первичного -->
-<div class="gr-line-2 gr1-primary gr2-primary-container ..."></div>
-```
-
-```html
-<!-- Радиальный градиент из трех цветов: поверхность-0, прозрачный и текущий -->
-<div class="gr-radial-3 gr1-surface-0 gr2-transparent gr3-current ..."></div>
-```
-
-```html
-<!-- Конический градиент из двух цветов: on-surface и tertiary-container -->
-<div class="gr-conic-2 gr1-on-surface gr2-tertiary-container ..."></div>
-```
-
 Используйте подходящие классы для каждого шага градиента и модификатор вида градиента для создания нужного визуального
 эффекта.
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-gradient-background"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/background/background-gradient-background" label="Результат"}
+:::
+

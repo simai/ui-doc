@@ -51,7 +51,6 @@ Loader-статус: `registered`. Loader-правило: `cl-inputs`.
 | `mask-lazy` | `maskLazy` | `String` | `''` | `—` |
 | `mask-placeholder-char` | `maskPlaceholderChar` | `String` | `''` | `—` |
 | `mask-options` | `maskOptions` | `String` | `''` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -60,7 +59,6 @@ Loader-статус: `registered`. Loader-правило: `cl-inputs`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -78,7 +76,6 @@ Loader-статус: `registered`. Loader-правило: `cl-inputs`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

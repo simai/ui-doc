@@ -17,7 +17,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 | .backdrop-blur        | backdrop-filter: blur(var(`--sf-blur-medium`)); |
 | .backdrop-blur-medium | backdrop-filter: blur(var(`--sf-blur-medium`)); |
 | .backdrop-blur-large  | backdrop-filter: blur(var(`--sf-blur-large`));  |
-{.table}
 
 ## Переменные для размытия
 
@@ -26,7 +25,6 @@ description: "Размытие фона элемента (backdrop-blur)"
 | `--sf-blur-small`  | var(`--sf-a2`) |
 | `--sf-blur-medium` | var(`--sf-a4`) |
 | `--sf-blur-large`  | var(`--sf-a8`) |
-{.table}
 
 ## Описание
 
@@ -61,4 +59,3 @@ description: "Размытие фона элемента (backdrop-blur)"
 | .backdrop-blur-1, .backdrop-blur-2                                     | .backdrop-blur-small  |
 | .backdrop-blur-3                                                       | .backdrop-blur-medium |
 | .backdrop-blur-4, .backdrop-blur-5, .backdrop-blur-6, .backdrop-blur-7 | .backdrop-blur-large  |
-{.table}

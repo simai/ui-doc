@@ -1,0 +1,143 @@
+<div class="wrap grid grid-col-1 sm:grid-col-2 max-w-md gap-3 content-main-start">
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">snap-normal</div>
+    <div class="flex gap-2 m-b-2">
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-stop-action"
+        data-scroller-id="snap-stop-normal"
+        data-mode="jump"
+      >
+        Jump +4 items
+      </button>
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-stop-action"
+        data-scroller-id="snap-stop-normal"
+        data-mode="reset"
+      >
+        Reset
+      </button>
+    </div>
+    <div class="text-size-2 color-on-surface-variant">
+      Active item: <span id="snap-stop-normal-active">1</span>
+    </div>
+    <div
+      id="snap-stop-normal"
+      class="sf-card p-2 radius-2 border border-outline-variant overflow-auto snap-x snap-mandatory"
+    >
+      <div class="w-f11 flex gap-2">
+        <div
+          class="snap-center snap-normal p-3 w-f4 bg-primary-container color-on-primary-container radius-1"
+          data-item="1"
+        >
+          1
+        </div>
+        <div
+          class="snap-center snap-normal p-3 w-f4 bg-secondary-container color-on-secondary-container radius-1"
+          data-item="2"
+        >
+          2
+        </div>
+        <div
+          class="snap-center snap-normal p-3 w-f4 bg-tertiary-container color-on-tertiary-container radius-1"
+          data-item="3"
+        >
+          3
+        </div>
+        <div
+          class="snap-center snap-normal p-3 w-f4 bg-success-container color-on-success-container radius-1"
+          data-item="4"
+        >
+          4
+        </div>
+        <div
+          class="snap-center snap-normal p-3 w-f4 bg-warning-container color-on-warning-container radius-1"
+          data-item="5"
+        >
+          5
+        </div>
+        <div
+          class="snap-center snap-normal p-3 w-f4 bg-error-container color-on-error-container radius-1"
+          data-item="6"
+        >
+          6
+        </div>
+      </div>
+    </div>
+    <div class="m-t-2 text-size-2 color-on-surface-variant">
+      Normal may skip intermediate snap points on fast/fling scroll.
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">snap-always</div>
+    <div class="flex gap-2 m-b-2">
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-stop-action"
+        data-scroller-id="snap-stop-always"
+        data-mode="jump"
+      >
+        Jump +4 items
+      </button>
+      <button
+        type="button"
+        class="p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-snap-stop-action"
+        data-scroller-id="snap-stop-always"
+        data-mode="reset"
+      >
+        Reset
+      </button>
+    </div>
+    <div class="text-size-2 color-on-surface-variant">
+      Active item: <span id="snap-stop-always-active">1</span>
+    </div>
+    <div
+      id="snap-stop-always"
+      class="sf-card p-2 radius-2 border border-outline-variant overflow-auto snap-x snap-mandatory"
+    >
+      <div class="w-f11 flex gap-2">
+        <div
+          class="snap-center snap-always p-3 w-f4 bg-primary-container color-on-primary-container radius-1"
+          data-item="1"
+        >
+          1
+        </div>
+        <div
+          class="snap-center snap-always p-3 w-f4 bg-secondary-container color-on-secondary-container radius-1"
+          data-item="2"
+        >
+          2
+        </div>
+        <div
+          class="snap-center snap-always p-3 w-f4 bg-tertiary-container color-on-tertiary-container radius-1"
+          data-item="3"
+        >
+          3
+        </div>
+        <div
+          class="snap-center snap-always p-3 w-f4 bg-success-container color-on-success-container radius-1"
+          data-item="4"
+        >
+          4
+        </div>
+        <div
+          class="snap-center snap-always p-3 w-f4 bg-warning-container color-on-warning-container radius-1"
+          data-item="5"
+        >
+          5
+        </div>
+        <div
+          class="snap-center snap-always p-3 w-f4 bg-error-container color-on-error-container radius-1"
+          data-item="6"
+        >
+          6
+        </div>
+      </div>
+    </div>
+    <div class="m-t-2 text-size-2 color-on-surface-variant">
+      Always is stricter and tends to stop on each snap point.
+    </div>
+  </div>
+</div>

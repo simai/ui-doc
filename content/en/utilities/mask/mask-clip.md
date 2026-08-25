@@ -22,7 +22,6 @@ description: "Область маски"
 | .mask-viewbox | mask-clip: view-box;    |
 | .mask-text    | mask-clip: text;        |
 | .mask-none    | mask-clip: no-clip;     |
-{.table}
 
 ## Описание
 

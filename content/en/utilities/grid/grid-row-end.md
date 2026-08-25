@@ -26,7 +26,6 @@ description: "Конечное положение строки сетки (grid-
 | .grid-row-end-11   | grid-row-end: 11;   |
 | .grid-row-end-12   | grid-row-end: 12;   |
 | .grid-row-end-auto | grid-row-end: auto; |
-{.table}
 
 ## Синтаксис
 

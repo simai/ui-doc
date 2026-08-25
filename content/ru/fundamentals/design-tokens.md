@@ -28,7 +28,6 @@ description: "Справочник семантических токенов и�
 | `--sf-space-6` | 32px | 48px |
 | `--sf-space-7` | 40px | 64px |
 | `--sf-space-8` | 48px | 80px |
-{.table}
 
 Для интервалов между текстом, самостоятельными блоками и разделами используйте
 не номера шкалы напрямую, а [семантические токены вертикального ритма](/ru/fundamentals/content-spacing/).
@@ -45,7 +44,6 @@ description: "Справочник семантических токенов и�
 | `--sf-radius-circle` | 1000px | 1000px |
 | `--sf-radius-square` | 0 | 0 |
 | `--sf-radius-rounded` | 1000px | 1000px |
-{.table}
 
 ## Размеры иконок
 
@@ -58,7 +56,6 @@ description: "Справочник семантических токенов и�
 | | | `--sf-icon-size-5` | 32px |
 | | | `--sf-icon-size-6` | 36px |
 | | | `--sf-icon-size-7` | 40px |
-{.table}
 
 ## Максимальная ширина контейнеров
 
@@ -74,7 +71,6 @@ description: "Справочник семантических токенов и�
 | `--sf-container-6--size-max` | 1536px |
 | `--sf-container-7--size-max` | 1664px |
 | `--sf-container-8--size-max` | 1792px |
-{.table}
 
 ## Прозрачность и слои
 

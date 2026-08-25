@@ -9,8 +9,7 @@ description: "Смещение underline/overline/line-through"
 
 
 Классы: `decoration-offset-auto`, `decoration-offset-0...4`.
-## Playground
+## Пример
+:::example {id="utilities/text-formatting/text-decoration-offset" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration-offset"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -21,7 +21,6 @@ description: "Размер строки сетки (grid-row)"
 | .row-start-auto  | grid-row-start: auto;    |
 | .row-end-{n}     | grid-row-end: {n};       |
 | .row-end-auto    | grid-row-end: auto;      |
-{.table}
 
 Диапазон `n` соответствует утилитам в SCSS (`row-span` от 1 до 6, `row-start`/`row-end` от 1 до 7).
 
@@ -57,8 +56,7 @@ description: "Размер строки сетки (grid-row)"
   <!-- Высота строки увеличится на брейкпоинте md -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-row" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-row"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

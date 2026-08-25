@@ -27,7 +27,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 | .backdrop-saturate-2   | backdrop-filter: saturate(1.25) |
 | .backdrop-saturate-3   | backdrop-filter: saturate(1.5)  |
 | .backdrop-saturate-4   | backdrop-filter: saturate(1.75) |
-{.table}
 
 ## Описание
 
@@ -47,15 +46,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 
 ## Пример использования
 
-```html
-<!-- При наведении насыщенность фона станет выше -->
-<div class="backdrop-saturate-1 hover:backdrop-saturate-3 p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы увеличить насыщенность фона
-</div>
-```
+:::example {id="utilities/backdrop-filter/backdrop-saturate" label="Результат"}
+:::
 
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-saturate"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

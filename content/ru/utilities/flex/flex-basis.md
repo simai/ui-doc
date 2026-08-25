@@ -47,7 +47,6 @@ description: "Базисный размер (flex-basis)"
 | .basis-px    | flex-basis: 1px;          |
 | .basis-0     | flex-basis: 0;            |
 | .basis-1 ... .basis-100 | flex-basis: {1..100}%; |
-{.table}
 
 ## Синтаксис
 
@@ -84,8 +83,7 @@ description: "Базисный размер (flex-basis)"
     <!-- Начиная с md элемент будет иметь начальный размер 50% -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/flex/flex-basis" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flex-basis"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

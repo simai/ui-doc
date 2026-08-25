@@ -69,7 +69,6 @@ this.gZipReady = JSON.parse(decompressFromUTF16(gzip));
 | **getLocalZipReady()**        | Restores templates from localStorage        |
 | **setCookie(obj, name)**      | Stores data in a cookie (optional)          |
 | **getCookie(name)**           | Reads a cookie value                        |
-{.table}
 
 ## When cache is used
 

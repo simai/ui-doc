@@ -15,7 +15,6 @@ description: "Инвертирование цвета элемента (filter-i
 |:-------------|:------------------|
 | .invert-none | filter: invert(0) |
 | .invert      | filter: invert(1) |
-{.table}
 
 ## Описание
 

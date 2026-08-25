@@ -149,8 +149,7 @@ description: "Переполнение элемента (overflow)"
 ```html
 <div class="md:overflow-hidden"></div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/overflow" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=overflow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

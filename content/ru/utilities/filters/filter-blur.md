@@ -19,7 +19,6 @@ description: "Размытие элемента (filter-blur)"
 | .blur-small         | filter: blur(var(`--sf-blur-small`));  |
 | .blur, .blur-medium | filter: blur(var(`--sf-blur-medium`)); |
 | .blur-large         | filter: blur(var(`--sf-blur-large`));  |
-{.table}
 
 ## Переменные
 
@@ -28,7 +27,6 @@ description: "Размытие элемента (filter-blur)"
 | `--sf-blur-small`  | var(`--sf-a2`) |
 | `--sf-blur-medium` | var(`--sf-a4`) |
 | `--sf-blur-large`  | var(`--sf-a8`) |
-{.table}
 
 ## Описание
 
@@ -52,22 +50,6 @@ description: "Размытие элемента (filter-blur)"
 
 ## Пример использования
 
-```html
-<!-- Элемент без размытия -->
-<div class="blur-none p-4 bg-surface">Без размытия</div>
+:::example {id="utilities/filters/filter-blur" label="Результат"}
+:::
 
-<!-- Элемент со слабым размытием -->
-<div class="blur-small p-4 bg-surface m-top-2">Слабое размытие</div>
-
-<!-- Элемент со средним размытием -->
-<div class="blur p-4 bg-surface m-top-2">Среднее размытие</div>
-
-<!-- Элемент с сильным размытием при наведении -->
-<div class="hover:blur-large p-4 bg-surface m-top-2 transition">Наведи для сильного размытия</div>
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-blur"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

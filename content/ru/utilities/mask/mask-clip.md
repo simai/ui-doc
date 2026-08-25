@@ -24,18 +24,9 @@ description: "Область маски"
 | .mask-viewbox | mask-clip: view-box;    |
 | .mask-text    | mask-clip: text;        |
 | .mask-none    | mask-clip: no-clip;     |
-{.table}
 
 ## Примеры
 
-```html
-<div class="mask-content">...</div>
-<div class="mask-border">...</div>
-<div class="mask-viewbox">...</div>
-<div class="mask-text">Hello</div>
-```
-## Playground
+:::example {id="utilities/mask/mask-clip" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=mask&group=mask-clip"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

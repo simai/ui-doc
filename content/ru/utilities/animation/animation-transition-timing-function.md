@@ -20,7 +20,6 @@ description: "Функция времени перехода"
 | .ease-in     | transition-timing-function: cubic-bezier(0.4, 0, 1, 1);                     |
 | .ease-out    | transition-timing-function: cubic-bezier(0, 0, 0.2, 1);                     |
 | .ease-in-out | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);                   |
-{.table}
 
 ## Описание:
 
@@ -43,20 +42,6 @@ description: "Функция времени перехода"
 
 ## Пример использования:
 
-```html
-<div class="transition duration-normal ease-in bg-primary color-on-surface-inverse p-2 radius-1/3">
-    Эта карточка изменяет свои свойства плавно, начиная медленно (ease-in).
-</div>
+:::example {id="utilities/animation/animation-transition-timing-function" label="Результат"}
+:::
 
-<div class="transition duration-normal ease-out bg-secondary color-on-surface-inverse p-2 radius-1/3">
-    Эта карточка изменяет свои свойства плавно, заканчивая медленно (ease-out).
-</div>
-
-<div class="transition duration-normal ease-in-out bg-tertiary color-on-surface-inverse p-2 radius-1/3">
-    Эта карточка изменяет свои свойства плавно, начиная и заканчивая медленно (ease-in-out).
-</div>
-```
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-transition-timing-function"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -20,7 +20,6 @@ description: "Обрезка фона"
 | .bg-clip-padding | background-clip: padding-box; |
 | .bg-clip-content | background-clip: content-box; |
 | .bg-clip-text    | background-clip: text;        |
-{.table}
 
 ## Описание
 
@@ -81,8 +80,7 @@ description: "Обрезка фона"
     <span>Адаптивный пример</span>
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/background/background-clip" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-clip"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

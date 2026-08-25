@@ -14,7 +14,6 @@ description: "Начертание шрифта (капитель) (font-variant
 |:-----------------|:--------------------------|
 | .small-caps      | font-variant: small-caps; |
 | .small-caps-none | font-variant: none;       |
-{.table}
 
 
 ## Пример использования

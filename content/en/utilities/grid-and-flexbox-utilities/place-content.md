@@ -20,7 +20,6 @@ description: "Размещение содержимого по обеим ося
 | .content-around  | place-content: space-around;  |
 | .content-evenly  | place-content: space-evenly;  |
 | .content-stretch | place-content: stretch;       |
-{.table}
 
 ## Синтаксис
 

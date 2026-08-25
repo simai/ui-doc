@@ -21,7 +21,6 @@ description: "Размер колонки сетки (grid-column)"
 | .col-start-auto    | grid-column-start: auto;  |
 | .col-end-{n}       | grid-column-end: {n};     |
 | .col-end-auto      | grid-column-end: auto;    |
-{.table}
 
 Диапазон `n` соответствует объявленным утилитам в SCSS (`col-span` от 1 до 12, `col-start`/`col-end` от 1 до 13).
 
@@ -58,8 +57,7 @@ description: "Размер колонки сетки (grid-column)"
   <!-- элемент занимает разную ширину на разных экранах -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-column" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-column"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

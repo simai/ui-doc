@@ -14,7 +14,6 @@ description: "Макет таблицы"
 |:-------------|:---------------------|
 | .table-auto  | table-layout: auto;  |
 | .table-fixed | table-layout: fixed; |
-{.table}
 
 ## Описание
 

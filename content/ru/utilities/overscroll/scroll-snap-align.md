@@ -26,7 +26,6 @@ description: "Выравнивание привязки прокрутки (scro
 | .snap-end        | scroll-snap-align: end;    |
 | .snap-center     | scroll-snap-align: center; |
 | .snap-align-none | scroll-snap-align: none;   |
-{.table}
 
 ## Описание
 
@@ -50,15 +49,6 @@ description: "Выравнивание привязки прокрутки (scro
 
 ## Пример использования
 
-```html
-<div class="snap-x overflow-auto w-full ...">
-  <div class="snap-start inline-block bg-surface-1 p-2 ..."><img src="./image.jpg" alt="Изображение 1"></div>
-  <div class="snap-center inline-block bg-surface-1 p-2 ..."><img src="./image.jpg" alt="Изображение 2"></div>
-  <div class="snap-end inline-block bg-surface-1 p-2 ..."><img src="./image.jpg" alt="Изображение 3"></div>
-</div>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll-snap-align" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-align"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

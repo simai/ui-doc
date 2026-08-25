@@ -44,7 +44,6 @@ description: "Warning"
 | `--sf-on-warning-container`         | `--sf-warning-10`          | `--sf-warning-90`          |
 | `--sf-on-warning-container-graphic` | `--sf-warning-50`          | `--sf-warning-60`          |
 | `--sf-outline-warning`              | `--sf-warning-50`          | `--sf-warning-60`          |
-{.table}
 
 [image15]: /ru/assets/reference/image-15.png
 [image16]: /ru/assets/reference/image-16.png

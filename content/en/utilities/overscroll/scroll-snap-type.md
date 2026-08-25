@@ -27,7 +27,6 @@ description: "Тип привязки прокрутки (scroll-snap-type)"
 | .snap-example   | scroll-snap-type: Array; *(пример, не использовать)*    |
 | .snap-mandatory | `--sf-scroll-snap-strictness`: mandatory;               |
 | .snap-proximity | `--sf-scroll-snap-strictness`: proximity;               |
-{.table}
 
 ## Описание
 

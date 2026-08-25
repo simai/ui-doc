@@ -21,7 +21,6 @@ description: "Видимость элемента при печати (print-vis
 | `.print-visible` | `visibility: visible;` |
 | `.print-hidden` | `visibility: hidden;` |
 | `.print-visible-none` | alias для `print-hidden` |
-{.table}
 
 ## Описание
 
@@ -34,12 +33,6 @@ description: "Видимость элемента при печати (print-vis
 
 ## Пример
 
-```html
-<div class="print-hidden">Hidden in print</div>
-<div class="print-visible">Visible in print</div>
-```
-## Playground
+:::example {id="utilities/print/display-visibility" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=print&group=display-visibility"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

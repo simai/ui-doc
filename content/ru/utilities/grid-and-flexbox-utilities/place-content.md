@@ -22,7 +22,6 @@ description: "Размещение содержимого по обеим ося
 | .content-around  | place-content: space-around;  |
 | .content-evenly  | place-content: space-evenly;  |
 | .content-stretch | place-content: stretch;       |
-{.table}
 
 ## Синтаксис
 
@@ -67,8 +66,7 @@ description: "Размещение содержимого по обеим ося
   <!-- Начиная с md элементы будут прижаты к началу по обеим осям -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/place-content" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-content"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

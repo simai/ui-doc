@@ -17,7 +17,6 @@ description: "Композиция маски"
 | .mask-subtract  | mask-composite: subtract;  |
 | .mask-intersect | mask-composite: intersect; |
 | .mask-exclude   | mask-composite: exclude;   |
-{.table}
 
 ## Описание
 

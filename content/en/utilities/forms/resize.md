@@ -17,7 +17,6 @@ description: "Изменение размера (resize)"
 | .resize-y    | resize: vertical;   |
 | .resize-x    | resize: horizontal; |
 | .resize      | resize: both;       |
-{.table}
 
 ## Описание
 

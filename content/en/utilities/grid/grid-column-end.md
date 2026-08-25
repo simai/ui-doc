@@ -26,7 +26,6 @@ description: "Конечное положение колонки сетки (gri
 | .col-end-11   | grid-column-end: 11;   |
 | .col-end-12   | grid-column-end: 12;   |
 | .col-end-auto | grid-column-end: auto; |
-{.table}
 
 ## Синтаксис
 

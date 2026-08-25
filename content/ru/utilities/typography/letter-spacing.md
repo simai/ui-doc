@@ -21,7 +21,6 @@ description: "Трекинг текста (letter-spacing)"
 | .tracking-wide        | letter-spacing: var(`--sf-text--tracking-wide`);        |
 | .tracking-wider       | letter-spacing: var(`--sf-text--tracking-wider`);       |
 | .tracking-widest      | letter-spacing: var(`--sf-text--tracking-widest`);      |
-{.table}
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -60,7 +59,6 @@ description: "Трекинг текста (letter-spacing)"
 | `--sf-text--tracking-wide`        | 0.025    |
 | `--sf-text--tracking-wider`       | 0.05     |
 | `--sf-text--tracking-widest`      | 0.1      |
-{.table}
 
 ## Адаптивность
 
@@ -69,8 +67,7 @@ description: "Трекинг текста (letter-spacing)"
 ```html
 <p class="tracking-wide">Начиная с размера md, трекинг станет шире.</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/letter-spacing" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=letter-spacing"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

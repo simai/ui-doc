@@ -15,7 +15,6 @@ description: "Оформление кода"
 | Тег   | Значение                                                                                                                                                                                             |
 |:------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | .code | color: var(`--sf-code--color`);&lt;br/&gt; background-color: var(`--sf-code--background`);&lt;br/&gt; font-family: var(`--sf-code--font-family`);&lt;br/&gt; border-radius: var(`--sf-code--radius`);&lt;br/&gt; padding: var(`--sf-space-1/2`); |
-{.table}
 
 ## Описание
 
@@ -47,4 +46,3 @@ description: "Оформление кода"
 | `--sf-code--background`  | var(`--sf-tertiary-container`) |
 | `--sf-code--font-family` | var(`--sf-mono`)               |
 | `--sf-code--radius`      | var(`--sf-radius-1/3`)         |
-{.table}

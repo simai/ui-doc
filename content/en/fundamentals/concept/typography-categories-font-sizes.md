@@ -30,7 +30,6 @@ This division simplifies working with typography, making font sizes more predict
 | `--sf-text-size-10`  | `--sf-d0`      | 40px | `--sf-d6`       | 64px |
 | `--sf-text-size-11`  | `--sf-d1`      | 44px | `--sf-d8`       | 72px |
 | `--sf-text-size-12`  | `--sf-d2`      | 48px | `--sf-e0`       | 80px |
-{.table}
 
 For the **label** role, the following text size variables are used:
 
@@ -39,7 +38,6 @@ For the **label** role, the following text size variables are used:
 | `--sf-label-small--size`  | `--sf-text-size-1/4` |
 | `--sf-label-medium--size` | `--sf-text-size-1/3` |
 | `--sf-label-large--size`  | `--sf-text-size-1/2` |
-{.table}
 
 For the **body-text** role, the following text size variables are used:
 
@@ -48,7 +46,6 @@ For the **body-text** role, the following text size variables are used:
 | `--sf-text-small--size`  | `--sf-text-size-1/2` |
 | `--sf-text-medium--size` | `--sf-text-size-1`   |
 | `--sf-text-large--size`  | `--sf-text-size-2`   |
-{.table}
 
 For the **heading** role, the following text size variables are used:
 
@@ -60,7 +57,6 @@ For the **heading** role, the following text size variables are used:
 | `--sf-heading-4--size` | `--sf-text-size-3` |
 | `--sf-heading-5--size` | `--sf-text-size-2` |
 | `--sf-heading-6--size` | `--sf-text-size-1` |
-{.table}
 
 For the **display** role, the following text size variables are used:
 
@@ -72,5 +68,4 @@ For the **display** role, the following text size variables are used:
 | `--sf-display-4--size` | `--sf-text-size-9`  |
 | `--sf-display-5--size` | `--sf-text-size-8`  |
 | `--sf-display-6--size` | `--sf-text-size-7`  |
-{.table}
 

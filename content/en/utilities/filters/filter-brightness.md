@@ -19,7 +19,6 @@ description: "Яркость элемента (filter-brightness)"
 | .brightness-6                | brightness-2   |
 | .brightness-7                | brightness-3   |
 | .brightness-8, .brightness-9 | brightness-4   |
-{.table}
 
 ## Новые классы и их значения
 
@@ -33,7 +32,6 @@ description: "Яркость элемента (filter-brightness)"
 | .brightness-2   | filter: brightness(1.05); |
 | .brightness-3   | filter: brightness(1.1);  |
 | .brightness-4   | filter: brightness(1.2);  |
-{.table}
 
 ## Описание
 

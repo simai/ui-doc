@@ -29,14 +29,12 @@ The following variables are used to control layer transparency and shadow intens
 | `--sf-shadow--alfa-fill`    | 24%   |
 | `--sf-shadow--alfa-outline` | 12%   |
 | `--sf-shadow--alfa-shade`   | 8%    |
-{.table}
 
 The base color is set in the `--sf-shadow--color` variable:
 
 | Variable             | Value |
 |:---------------------|:------|
 | `--sf-shadow--color` | black |
-{.table}
 
 Based on this data, the final colors for each shadow layer are calculated:
 
@@ -45,7 +43,6 @@ Based on this data, the final colors for each shadow layer are calculated:
 | `--sf-shadow--color-fill`    | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-shadow--color`) var(`--sf-shadow--alfa-fill`));    |
 | `--sf-shadow--color-outline` | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-shadow--color`) var(`--sf-shadow--alfa-outline`)); |
 | `--sf-shadow--color-shade`   | color-mix(in srgb, var(`--sf-transparent`), var(`--sf-shadow--color`) var(`--sf-shadow--alfa-shade`));   |
-{.table}
 
 **Shadow level ratio**
 
@@ -54,7 +51,6 @@ The `--sf-shadow--level-ratio` variable controls the intensity and scale of the 
 | Variable                   | Value |
 |:---------------------------|:------|
 | `--sf-shadow--level-ratio` | 1     |
-{.table}
 
 ```css
 :root * {

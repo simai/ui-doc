@@ -51,7 +51,6 @@ The following variables are used for the Primary role:
 | `--sf-on-primary-container`        | `--sf-primary-10`         | `--sf-primary-90`         |
 | `--sf-on-primary-container-graphic`| `--sf-primary-50`         | `--sf-primary-60`         |
 | `--sf-outline-primary`             | `--sf-primary-50`         | `--sf-primary-60`         |
-{.table}
 
 [image4]: /assets/build/img/b64/04f4d95dc3599cf6.png
 [image5]: /assets/build/img/b64/e22b8d022dafae71.png

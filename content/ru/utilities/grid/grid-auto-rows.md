@@ -19,7 +19,6 @@ description: "Автоматический размер строк сетки (g
 | .auto-rows-min | grid-auto-rows: min-content;    |
 | .auto-rows-max | grid-auto-rows: max-content;    |
 | .auto-rows-fr  | grid-auto-rows: minmax(0, 1fr); |
-{.table}
 
 ## Синтаксис
 
@@ -58,8 +57,7 @@ description: "Автоматический размер строк сетки (g
     <!-- Начиная с md строки будут ориентироваться на минимальный размер содержимого -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-auto-rows" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-auto-rows"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

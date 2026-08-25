@@ -33,4 +33,3 @@ This is the color used to indicate a successful state.
 | `--sf-success-15`        | #002d05                                          |
 | `--sf-success-10`        | #002203                                          |
 | `--sf-success-5`         | #001501                                          |
-{.table}

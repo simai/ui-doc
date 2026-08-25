@@ -17,7 +17,6 @@ description: "Выделение текста (user-select)"
 | .select-text | user-select: text; |
 | .select-all  | user-select: all;  |
 | .select-auto | user-select: auto; |
-{.table}
 
 ## Описание
 

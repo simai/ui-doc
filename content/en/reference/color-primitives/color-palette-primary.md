@@ -33,4 +33,3 @@ This is the main accent color.
 | `--sf-primary-15`        | #002453                                          |
 | `--sf-primary-10`        | #001a40                                          |
 | `--sf-primary-5`         | #00102c                                          |
-{.table}

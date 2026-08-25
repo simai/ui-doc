@@ -19,7 +19,6 @@ description: "Минимальная ширина (min-width)"
 | .min-w-fit  | min-width: fit-content; |
 | .min-w-full | min-width: 100%;        |
 | .min-w-0    | min-width: 0;           |
-{.table}
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`

@@ -16,7 +16,6 @@ description: "Стиль внешней границы"
 | `.outline-double` | `outline-style: double;` |
 | `.outline-hidden` | `outline-style: hidden;` |
 | `.outline-none` | `outline-style: none;` |
-{.table}
 
 ## Описание
 
@@ -31,14 +30,6 @@ description: "Стиль внешней границы"
 
 ## Пример
 
-```html
-<button class="outline outline-2 outline-solid outline-primary outline-offset-2">solid</button>
-<button class="outline outline-2 outline-dashed outline-primary outline-offset-2">dashed</button>
-<button class="outline outline-2 outline-dotted outline-primary outline-offset-2">dotted</button>
-<button class="outline outline-4 outline-double outline-primary outline-offset-2">double</button>
-```
-## Playground
+:::example {id="utilities/outline/outline-style" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=outline-style"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

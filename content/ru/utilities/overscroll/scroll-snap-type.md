@@ -30,7 +30,6 @@ description: "Тип привязки прокрутки (scroll-snap-type)"
 | .snap-example   | scroll-snap-type: Array; *(пример, не использовать)*    |
 | .snap-mandatory | `--sf-scroll-snap-strictness`: mandatory;               |
 | .snap-proximity | `--sf-scroll-snap-strictness`: proximity;               |
-{.table}
 
 ## Описание
 
@@ -61,16 +60,6 @@ description: "Тип привязки прокрутки (scroll-snap-type)"
 
 ## Пример использования
 
-```html
-<!-- Привязка по оси X, обязательная остановка и выравнивание по центру -->
-<div class="snap-x snap-mandatory overflow-auto w-full h-d5 bg-surface-1 ...">
-  <div class="snap-center inline-block w-b2 h-b2 bg-primary m-1 ..."></div>
-  <div class="snap-center inline-block w-b2 h-b2 bg-secondary m-1 ..."></div>
-  <div class="snap-center inline-block w-b2 h-b2 bg-tertiary m-1 ..."></div>
-</div>
-```
-## Playground
+:::example {id="utilities/overscroll/scroll-snap-type" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-snap-type"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

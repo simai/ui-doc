@@ -18,7 +18,6 @@ description: "Тип анимации"
 | .animation-from-left   | Элемент появляется слева.  |
 | .animation-from-right  | Элемент появляется справа. |
 | .animation-from-bottom | Элемент появляется снизу.  |
-{.table}
 
 ## Описание
 

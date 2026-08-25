@@ -19,7 +19,6 @@ description: "Обрезка текста (text-overflow)"
 | .truncate   | overflow: hidden;&lt;br/&gt; white-space: nowrap;&lt;br/&gt; text-overflow: ellipsis; |
 | .t-ellipsis | text-overflow: ellipsis;                                                  |
 | .t-clip     | text-overflow: clip;                                                      |
-{.table}
 
 ## Синтаксис
 
@@ -38,25 +37,6 @@ description: "Обрезка текста (text-overflow)"
 
 ## Пример использования
 
-```html
-<!-- Пример с truncate -->
-<p class="truncate ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+:::example {id="utilities/typography/text-overflow" label="Результат"}
+:::
 
-```
-
-```html
-<!-- Пример с t-ellipsis -->
-<p class="overflow-hidden wrap-none t-ellipsis ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-```
-
-```html
-<!-- Пример с t-clip -->
-<p class="overflow-hidden wrap-none t-clip ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-overflow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

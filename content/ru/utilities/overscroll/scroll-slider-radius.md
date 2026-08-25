@@ -19,7 +19,6 @@ description: "Радиус границы ползунка прокрутки (s
 | .scroll-thumb-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`) |
 | .scroll-thumb-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`) |
 
-{.table}
 
 ## Описание
 
@@ -34,16 +33,6 @@ description: "Радиус границы ползунка прокрутки (s
 
 ## Пример использования
 
-```html
+:::example {id="utilities/overscroll/scroll-slider-radius" label="Результат"}
+:::
 
-<html class="scroll-thumb-radius-3 h-d5 overflow-auto ...">
-<div class="p-1">
-    abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-</div>
-</html>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=scroll-slider-radius"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

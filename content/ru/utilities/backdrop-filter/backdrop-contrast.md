@@ -27,7 +27,6 @@ description: "Контрастность фона элемента (backdrop-con
 | .backdrop-contrast-2   | backdrop-filter: contrast(1.05) |
 | .backdrop-contrast-3   | backdrop-filter: contrast(1.1)  |
 | .backdrop-contrast-4   | backdrop-filter: contrast(1.2)  |
-{.table}
 
 ## Описание
 
@@ -45,15 +44,6 @@ description: "Контрастность фона элемента (backdrop-con
 
 ## Пример использования:
 
-```html
-<!-- При наведении контраст фона слегка уменьшится до 0.95 -->
-<div class="backdrop-contrast-1 hover:backdrop-contrast-1/2 p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы немного уменьшить контраст
-</div>
-```
+:::example {id="utilities/backdrop-filter/backdrop-contrast" label="Результат"}
+:::
 
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-contrast"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

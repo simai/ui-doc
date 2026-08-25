@@ -16,7 +16,6 @@ description: "Оформление ссылок"
 |:--|:--|
 | `.link-dotted` | `text-decoration-style: dotted` |
 | `.link-dashed` | `text-decoration-style: dashed` |
-{.table}
 
 ## Синтаксис
 
@@ -27,12 +26,6 @@ description: "Оформление ссылок"
 
 ## Пример
 
-```html
-<p><a href="#" class="link-dotted">Dotted underline link</a></p>
-<p><a href="#" class="link-dashed">Dashed underline link</a></p>
-```
-## Playground
+:::example {id="utilities/links/links-formatting" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=links&group=links-formatting"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

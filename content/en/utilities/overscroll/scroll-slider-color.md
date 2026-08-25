@@ -16,7 +16,6 @@ description: "Цвет ползунка прокрутки (scroll-slider-color)
 | .scroll-primary     | `--sf-scroll-bg-thumb`: var(`--sf-on-primary`);   |
 | .scroll-secondary   | `--sf-scroll-bg-thumb`: var(`--sf-on-secondary`); |
 | .scroll-tertiary    | `--sf-scroll-bg-thumb`: var(`--sf-on-tertiary`);  |
-{.table}
 
 ## Описание
 

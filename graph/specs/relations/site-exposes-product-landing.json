@@ -1,0 +1,21 @@
+{
+  "id": "rel.ui-doc.site.exposes-product-landing-navigation",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.documentation-site",
+  "to": "ui-doc.capability.product-landing-navigation",
+  "relation_type": "exposes",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "validated",
+  "impact": "high",
+  "owner": "repository_owner",
+  "source_refs": ["content/ru", "content/en"],
+  "evidence_refs": [
+    "source/workflow/2026-08-25-simai-framework-landing-navigation.md",
+    "source/workflow/2026-08-25-landing-feedback-round-1.md",
+    "source/workflow/2026-08-25-landing-feedback-round-2.md",
+    "source/workflow/2026-08-25-landing-feedback-round-3.md",
+    "source/workflow/2026-08-25-landing-feedback-round-4.md"
+  ]
+}

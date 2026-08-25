@@ -14,7 +14,6 @@ description: "Фон в оттенках серого элемента (backdrop
 |:-------------------------|:------------------------------|
 | .backdrop-grayscale-none | backdrop-filter: grayscale(0) |
 | .backdrop-grayscale      | backdrop-filter: grayscale(1) |
-{.table}
 
 ## Описание
 

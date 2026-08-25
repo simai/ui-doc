@@ -15,17 +15,9 @@ description: "Концы обводки (Line Cap)"
 | `.linecap-butt` | `stroke-linecap: butt;` |
 | `.linecap-round` | `stroke-linecap: round;` |
 | `.linecap-square` | `stroke-linecap: square;` |
-{.table}
 
 ## Пример
 
-```html
-<svg class="stroke-primary stroke-6 linecap-butt"></svg>
-<svg class="stroke-primary stroke-6 linecap-round"></svg>
-<svg class="stroke-primary stroke-6 linecap-square"></svg>
-```
-## Playground
+:::example {id="utilities/svg/svg-stroke-line-cap" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-stroke-line-cap"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

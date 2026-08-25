@@ -51,7 +51,6 @@ description: "Промежутки между элементами (gap)"
 | .gap-8      | gap: var(`--sf-space-8`);        |
 | .gap-x-8    | column-gap: var(`--sf-space-8`); |
 | .gap-y-8    | row-gap: var(`--sf-space-8`);    |
-{.table}
 
 ## Синтаксис
 
@@ -94,8 +93,7 @@ description: "Промежутки между элементами (gap)"
     <!-- Начиная с md: промежуток будет var(--sf-space-1) (старый p-8) -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/gap" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=gap"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

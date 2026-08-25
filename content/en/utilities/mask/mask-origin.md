@@ -20,7 +20,6 @@ description: "Вложение маски"
 | .mask-origin-fill    | mask-origin: fill-box;    |
 | .mask-origin-stroke  | mask-origin: stroke-box;  |
 | .mask-origin-viewbox | mask-origin: view-box;    |
-{.table}
 
 ## Описание
 

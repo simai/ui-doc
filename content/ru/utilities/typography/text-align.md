@@ -19,7 +19,6 @@ description: "Выравнивание текста (text-align)"
 | .text-center  | text-align: center;  |
 | .text-end   | text-align: right;   |
 | .text-justify | text-align: justify; |
-{.table}
 
 
 ## Синтаксис
@@ -56,8 +55,7 @@ description: "Выравнивание текста (text-align)"
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/text-align" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-align"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

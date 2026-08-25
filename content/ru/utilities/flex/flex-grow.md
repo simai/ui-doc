@@ -17,7 +17,6 @@ description: "Растяжимость элементов (flex-grow)"
 |:-----------|:--------------|
 | .grow      | flex-grow: 1; |
 | .grow-none | flex-grow: 0; |
-{.table}
 
 ## Синтаксис
 
@@ -62,8 +61,7 @@ description: "Растяжимость элементов (flex-grow)"
   <!-- Начиная с md элемент будет растягиваться, заполняя доступное пространство -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/flex/flex-grow" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=flex&group=flex-grow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

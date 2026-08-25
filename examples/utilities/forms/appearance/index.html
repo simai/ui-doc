@@ -1,0 +1,48 @@
+<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">default select</div>
+    <div class="sf-card p-3 radius-2 border border-outline-variant">
+      <select class="w-full" aria-label="Default appearance">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+      <p class="m-t-2">Native browser style (arrow, default control look).</p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">appearance-none</div>
+    <div class="sf-card p-3 radius-2 border border-outline-variant">
+      <select
+        aria-label="Appearance none"
+        class="appearance-none w-full border border-outline-variant radius-1 p-2 bg-surface-0 color-on-surface"
+      >
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+      <p class="m-t-2">
+        Native control skin removed; only utility styling remains.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">default search input</div>
+    <div class="sf-card p-3 radius-2 border border-outline-variant">
+      <input type="search" class="w-full" value="Search text" aria-label="Default search appearance" />
+      <p class="m-t-2">Native search field style from browser.</p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">appearance-none search input</div>
+    <div class="sf-card p-3 radius-2 border border-outline-variant">
+      <input
+        type="search"
+        aria-label="Appearance none search"
+        class="appearance-none w-full border border-outline-variant radius-1 p-2 bg-surface-0 color-on-surface"
+        value="Search text"
+      />
+      <p class="m-t-2">Native search styling removed.</p>
+    </div>
+  </div>
+</div>

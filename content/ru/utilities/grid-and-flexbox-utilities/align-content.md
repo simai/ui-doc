@@ -21,7 +21,6 @@ description: "Выравнивание содержимого по попере�
 | .content-cross-around  | align-content: space-around;  |
 | .content-cross-evenly  | align-content: space-evenly;  |
 | .content-cross-stretch | align-content: stretch;       |
-{.table}
 
 ## Синтаксис
 
@@ -65,8 +64,7 @@ description: "Выравнивание содержимого по попере�
   <!-- Начиная с md элементы будут прижаты к началу по поперечной оси -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/align-content" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-content"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

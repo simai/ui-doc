@@ -22,7 +22,6 @@ description: "Цвет разделителя"
 | .divider-error       | > :not([hidden]) ~ :not([hidden]) { border-color: var(`--sf-outline-error`); }     |
 | .divider-warning     | > :not([hidden]) ~ :not([hidden]) { border-color: var(`--sf-outline-cation`); }    |
 | .divider-success     | > :not([hidden]) ~ :not([hidden]) { border-color: var(`--sf-outline-success`); }   |
-{.table}
 
 ## Описание
 

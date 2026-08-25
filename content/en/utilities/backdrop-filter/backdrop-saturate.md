@@ -20,7 +20,6 @@ description: "Насыщенность подложки (backdrop-saturate)"
 | .backdrop-saturate-2   | backdrop-filter: saturate(1.25) |
 | .backdrop-saturate-3   | backdrop-filter: saturate(1.5)  |
 | .backdrop-saturate-4   | backdrop-filter: saturate(1.75) |
-{.table}
 
 ## Описание
 
@@ -55,4 +54,3 @@ description: "Насыщенность подложки (backdrop-saturate)"
 | .backdrop-saturate-2 | .backdrop-saturate-1   |
 | .backdrop-saturate-3 | .backdrop-saturate-2   |
 | .backdrop-saturate-4 | .backdrop-saturate-4   |
-{.table}

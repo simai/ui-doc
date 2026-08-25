@@ -53,7 +53,6 @@ description: "Ширина (width)"
 | .w-0            | width: 0;                                                           |
 | .w-1 … .w-99    | width: 1% … 99% (шаг 1%);                                           |
 | .w-a0 ... .w-i9 | width: var(--sf-\[a-i\]\[0-9\]); (фиксированные размеры фреймворка) |
-{.table}
 
 ## Синтаксис
 
@@ -146,8 +145,7 @@ description: "Ширина (width)"
 ```
 
 В этом примере ширина будет 50% (`w-1/2`) только при размерах экрана `md` и больше.
-## Playground
+## Пример
+:::example {id="utilities/sizes/width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=sizes&group=width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

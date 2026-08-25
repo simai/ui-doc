@@ -17,7 +17,6 @@ description: "Выравнивание каждого элемента в яче
 | .items-cross-end     | align-items: end;     |
 | .items-cross-center  | align-items: center;  |
 | .items-cross-stretch | align-items: stretch; |
-{.table}
 
 ## Синтаксис
 

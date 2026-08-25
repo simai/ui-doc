@@ -23,7 +23,6 @@ description: "Исходные координаты (transform-origin)"
 | .origin-left         | transform-origin: left;         |
 | .origin-top-left     | transform-origin: top left;     |
 
-{.table}
 
 ## Описание
 

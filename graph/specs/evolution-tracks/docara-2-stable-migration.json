@@ -1,0 +1,52 @@
+{
+  "id": "track.ui-doc.docara-2-stable-migration",
+  "schema_version": "1.0.0",
+  "object_id": "ui-doc.capability.docara-runtime",
+  "parent_dna_ref": "project.ui-doc",
+  "current_iteration": 3,
+  "current_state": "operational_with_review_queue",
+  "target_state": "operational",
+  "growth_vector": "Keep the stable Docara dependency, content migration, static verification and project technology context synchronized at meaningful task boundaries.",
+  "history": [
+    {
+      "iteration": 1,
+      "reason": "Replaced the superseded exact dev-main candidate with public simai/docara v2.0.0 and rebuilt the complete local site.",
+      "changed_relations": [
+        "rel.ui-doc.site.generated-by-docara",
+        "rel.ui-doc.site.materialized-as-build"
+      ],
+      "evidence_refs": ["docs/developer/docara-v2-migration.md"]
+    },
+    {
+      "iteration": 2,
+      "reason": "Moved imported Playground demonstrations into shared repository examples and enabled report-only translation tracking without guessing ambiguous page relations.",
+      "changed_relations": [
+        "rel.ui-doc.content.uses-shared-examples",
+        "rel.ui-doc.site.reports-translation-state"
+      ],
+      "evidence_refs": [
+        "source/workflow/2026-08-25-shared-examples-translation-tracking.md",
+        "source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json",
+        ".docara/examples.json",
+        ".docara/translation-status.json"
+      ]
+    },
+    {
+      "iteration": 3,
+      "reason": "Normalized Markdown authoring, removed redundant demonstration source, canonicalized duplicate examples, added repository-wide example quality checks and repaired responsive iframe height synchronization.",
+      "changed_relations": [
+        "rel.ui-doc.content.uses-shared-examples",
+        "rel.ui-doc.site.generated-by-docara"
+      ],
+      "evidence_refs": [
+        "source/workflow/2026-08-26-example-quality-cleanup.md",
+        "source/workflow/evidence/2026-08-26-example-quality-cleanup/audit-inventory.json",
+        "source/workflow/evidence/2026-08-26-example-quality-cleanup/verification-summary.json"
+      ]
+    }
+  ],
+  "next_questions": [
+    "Which missing, orphan and structure-mismatch page groups should be mapped, excluded or translated first?",
+    "When should the verified repository changes enter a separately authorized commit and publication stage?"
+  ]
+}

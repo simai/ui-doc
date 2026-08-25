@@ -1,0 +1,52 @@
+<div class="wrap grid grid-col-1 max-w-xl gap-3 content-main-start">
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">scroll-over-auto</div>
+    <div class="text-size-2 color-on-surface-variant">Parent scrollTop: <span id="auto-parent-value">0</span></div>
+    <div class="text-size-2 color-on-surface-variant">Child scrollTop: <span id="auto-child-value">0</span></div>
+    <button type="button" class="m-b-2 p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="auto-child">Set child to bottom</button>
+    <div id="auto-parent" class="sf-card p-2 radius-2 border border-outline-variant h-f8 overflow-auto">
+      <div class="h-f4 p-2 m-b-2 radius-1 bg-surface-container">Parent area (top)</div>
+      <div id="auto-child" class="h-f6 overflow-auto scroll-over-auto radius-1 border border-outline-variant p-2 bg-surface-0">
+        <div class="h-f3 p-2 m-b-2 bg-primary-container color-on-primary-container radius-1">Child block A</div>
+        <div class="h-f3 p-2 m-b-2 bg-primary-container color-on-primary-container radius-1">Child block B</div>
+        <div class="h-f3 p-2 m-b-2 bg-primary-container color-on-primary-container radius-1">Child block C</div>
+        <div class="h-f3 p-2 bg-primary-container color-on-primary-container radius-1">Child block D</div>
+      </div>
+      <div class="h-f8 p-2 m-t-2 radius-1 bg-surface-container">Parent area (bottom). When child is at edge, wheel continues here for auto.</div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">scroll-over-contain</div>
+    <div class="text-size-2 color-on-surface-variant">Parent scrollTop: <span id="contain-parent-value">0</span></div>
+    <div class="text-size-2 color-on-surface-variant">Child scrollTop: <span id="contain-child-value">0</span></div>
+    <button type="button" class="m-b-2 p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="contain-child">Set child to bottom</button>
+    <div id="contain-parent" class="sf-card p-2 radius-2 border border-outline-variant h-f8 overflow-auto">
+      <div class="h-f4 p-2 m-b-2 radius-1 bg-surface-container">Parent area (top)</div>
+      <div id="contain-child" class="h-f6 overflow-auto scroll-over-contain radius-1 border border-outline-variant p-2 bg-surface-0">
+        <div class="h-f3 p-2 m-b-2 bg-secondary-container color-on-secondary-container radius-1">Child block A</div>
+        <div class="h-f3 p-2 m-b-2 bg-secondary-container color-on-secondary-container radius-1">Child block B</div>
+        <div class="h-f3 p-2 m-b-2 bg-secondary-container color-on-secondary-container radius-1">Child block C</div>
+        <div class="h-f3 p-2 bg-secondary-container color-on-secondary-container radius-1">Child block D</div>
+      </div>
+      <div class="h-f8 p-2 m-t-2 radius-1 bg-surface-container">Parent area (bottom). Chain is blocked for contain.</div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">scroll-over-none</div>
+    <div class="text-size-2 color-on-surface-variant">Parent scrollTop: <span id="none-parent-value">0</span></div>
+    <div class="text-size-2 color-on-surface-variant">Child scrollTop: <span id="none-child-value">0</span></div>
+    <button type="button" class="m-b-2 p-2 radius-1 border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="none-child">Set child to bottom</button>
+    <div id="none-parent" class="sf-card p-2 radius-2 border border-outline-variant h-f8 overflow-auto">
+      <div class="h-f4 p-2 m-b-2 radius-1 bg-surface-container">Parent area (top)</div>
+      <div id="none-child" class="h-f6 overflow-auto scroll-over-none radius-1 border border-outline-variant p-2 bg-surface-0">
+        <div class="h-f3 p-2 m-b-2 bg-tertiary-container color-on-tertiary-container radius-1">Child block A</div>
+        <div class="h-f3 p-2 m-b-2 bg-tertiary-container color-on-tertiary-container radius-1">Child block B</div>
+        <div class="h-f3 p-2 m-b-2 bg-tertiary-container color-on-tertiary-container radius-1">Child block C</div>
+        <div class="h-f3 p-2 bg-tertiary-container color-on-tertiary-container radius-1">Child block D</div>
+      </div>
+      <div class="h-f8 p-2 m-t-2 radius-1 bg-surface-container">Parent area (bottom). Chain and effects are disabled.</div>
+    </div>
+  </div>
+</div>

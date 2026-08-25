@@ -18,7 +18,6 @@ description: "Длина строки (text-max-width)"
 | .measure        | max-width: var(`--sf-text--measure`);        |
 | .measure-wide   | max-width: var(`--sf-text--measure-wide`);   |
 | .measure-narrow | max-width: var(`--sf-text--measure-narrow`); |
-{.table}
 
 ## Синтаксис
 
@@ -68,9 +67,7 @@ description: "Длина строки (text-max-width)"
 | `--sf-text--measure`        | 65ch;    |
 | `--sf-text--measure-wide`   | 80ch;    |
 | `--sf-text--measure-narrow` | 45ch;    |
-{.table}
-## Playground
+## Пример
+:::example {id="utilities/typography/text-max-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-max-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

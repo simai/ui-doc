@@ -67,8 +67,7 @@ description: "Плавающий элемент (float)"
 ```html
 <div class="md:float-inline-end"></div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/float" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=float"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

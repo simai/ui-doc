@@ -20,7 +20,6 @@ description: "Изменение размера (resize)"
 | .resize-y    | resize: vertical;   |
 | .resize-x    | resize: horizontal; |
 | .resize      | resize: both;       |
-{.table}
 
 ## Описание
 
@@ -36,21 +35,6 @@ description: "Изменение размера (resize)"
 
 ## Пример использования
 
-```html
-<!-- Изменение размера во всех направлениях -->
-<textarea class="resize p-1 border-1 ..."></textarea>
+:::example {id="utilities/forms/resize" label="Результат"}
+:::
 
-<!-- Изменение размера только по вертикали -->
-<textarea class="resize-y p-1 border-1 ..."></textarea>
-
-<!-- Изменение размера только по горизонтали -->
-<textarea class="resize-x p-1 border-1 ..."></textarea>
-
-<!-- Заблокировать изменение размера -->
-<textarea class="resize-none p-1 border-1 ..."></textarea>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=resize"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

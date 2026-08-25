@@ -28,7 +28,6 @@ description: "Классы смещения transform-translate"
 | `.-translate-x-full`                  | `--sf-translate-x: -100%`      |
 | `.-translate-y-full`                  | `--sf-translate-y: -100%`      |
 
-{.table}
 
 ## Синтаксис
 
@@ -66,8 +65,7 @@ transform: translate(var(--sf-translate-x, 0), var(--sf-translate-y, 0));
 - `hover:translate-x-full`, `hover:translate-y-full`
 - `-hover:translate-x-full`, `-hover:translate-y-full`
 
-## Playground
+## Пример
+:::example {id="utilities/transform/transform-translate" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-translate"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -17,7 +17,6 @@ description: "Семейство шрифтов (font-family)"
 | .sans  | font-family: var(`--sf-sans`);  |
 | .serif | font-family: var(`--sf-serif`); |
 | .mono  | font-family: var(`--sf-mono`);  |
-{.table}
 
 
 ## Пример использования

@@ -16,5 +16,4 @@ Use these radius variables (mobile/desktop values):
 | `--sf-radius-3`    | `--sf-c6`         | 32px | `--sf-d2`          | 48px |
 | `--sf-radius-rounded` | 9999px         |      | 9999px             |      |
 | `--sf-radius-round` | alias of `--sf-radius-rounded` | | alias of `--sf-radius-rounded` | |
-{.table}
 

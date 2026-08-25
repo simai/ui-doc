@@ -1,0 +1,26 @@
+<div class="grid grid-col-1 sm:grid-col-2 gap-3">
+  <div
+    class="sf-card p-3 radius-2 border border-outline-variant flex flex-col gap-1 animation animation-from-left infinite"
+  >
+    <div><b>Global default</b></div>
+    <div class="text-4 color-outline m-b-1">
+      <code>--sf-duration-normal</code> from root
+    </div>
+    <div class="anim-default-tile p-2 radius-2 color-on-surface">
+      Moves + changes background
+    </div>
+  </div>
+
+  <div
+    style="--sf-duration-normal: 1400ms"
+    class="sf-card p-3 radius-2 border border-outline-variant flex flex-col gap-1 animation animation-from-left infinite"
+  >
+    <div><b>Local override</b></div>
+    <div class="text-4 color-outline m-b-1">
+      <code>--sf-duration-normal: 1400ms</code>
+    </div>
+    <div class="anim-default-tile p-2 radius-2 color-on-surface">
+      Same change, slower
+    </div>
+  </div>
+</div>

@@ -20,7 +20,6 @@ description: "Размещение отдельного элемента (place-
 | .self-end     | place-self: end;     |
 | .self-center  | place-self: center;  |
 | .self-stretch | place-self: stretch; |
-{.table}
 
 *(Обратите внимание, что в исходном коде был класс `self-text-center`, но по описанию это `self-center`.)*
 
@@ -65,8 +64,7 @@ description: "Размещение отдельного элемента (place-
   <!-- Начиная с md элемент будет прижат к началу ячейки по обеим осям -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/place-self" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=place-self"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

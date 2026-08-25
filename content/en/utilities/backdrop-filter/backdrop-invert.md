@@ -14,7 +14,6 @@ description: "Инвертирование цвета фона элемента 
 |:----------------------|:---------------------------|
 | .backdrop-invert-none | backdrop-filter: invert(0) |
 | .backdrop-invert      | backdrop-filter: invert(1) |
-{.table}
 
 ## Описание
 

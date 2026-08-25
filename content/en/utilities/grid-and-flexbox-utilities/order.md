@@ -28,7 +28,6 @@ description: "Сортировка (order)"
 | .order-first | order: \-9999; |
 | .order-last  | order: 9999;   |
 | .order-none  | order: 0;      |
-{.table}
 
 ## Синтаксис
 

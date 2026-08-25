@@ -18,7 +18,6 @@ description: "Отступ текста (text-indent)"
 | .indent-3 | text-indent: var(`--sf-space-3`); |
 | .indent-4 | text-indent: var(`--sf-space-4`); |
 | .indent-5 | text-indent: var(`--sf-space-5`); |
-{.table}
 
 ## Синтаксис
 
@@ -56,7 +55,6 @@ description: "Отступ текста (text-indent)"
 | .indent-6, .indent-7                       | .indent-3      |
 | .indent-8                                  | .indent-4      |
 | .indent-9                                  | .indent-5      |
-{.table}
 
 Адаптируйте старые классы в соответствии с новой схемой.
 

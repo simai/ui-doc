@@ -26,7 +26,6 @@ description: "Начальное положение колонки сетки (g
 | .col-start-11   | grid-column-start: 11;   |
 | .col-start-12   | grid-column-start: 12;   |
 | .col-start-auto | grid-column-start: auto; |
-{.table}
 
 ## Синтаксис
 

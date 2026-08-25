@@ -61,8 +61,7 @@ description: "Разрыв после колонки (break-after)"
 
 Таким образом, модификатор `break-after` обеспечивает гибкий контроль над разрывами после элементов, что упрощает
 настройку адаптивных макетов и многостраничных документов.
-## Playground
+## Пример
+:::example {id="utilities/layout-break/break-after" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout-break&group=break-after"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

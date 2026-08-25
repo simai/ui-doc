@@ -26,7 +26,6 @@ description: "Прозрачность элемента (filter-opacity)"
 | `.filter-opacity-8` | `filter: opacity(0.8)` |
 | `.filter-opacity-9` | `filter: opacity(0.9)` |
 | `.filter-opacity-full` | `filter: opacity(1)` |
-{.table}
 
 ## Описание
 
@@ -45,15 +44,6 @@ description: "Прозрачность элемента (filter-opacity)"
 
 ## Пример использования
 
-```html
-<div class="filter-opacity-0 p-4 bg-primary color-on-surface-inverse">Невидимый элемент</div>
-<div class="filter-opacity-5 p-4 bg-secondary m-top-2">50% прозрачности</div>
-<div class="filter-opacity-5 hover:filter-opacity-full p-4 bg-tertiary m-top-2 transition">
-  Наведи, чтобы сделать непрозрачным
-</div>
-```
-## Playground
+:::example {id="utilities/filters/filter-opacity" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-opacity"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

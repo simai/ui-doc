@@ -20,4 +20,3 @@ rules:
 | --sf-breakpoint-lg  | --sf-h5 |  960px |
 | --sf-breakpoint-xl  | --sf-h8 | 1152px |
 | --sf-breakpoint-xxl | --sf-i2 | 1536px |
-{.table}

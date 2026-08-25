@@ -83,7 +83,6 @@ description: "Внутренний отступ прокрутки (scroll-paddi
 | .scroll-pl-9 | scroll-padding-left: var(`--sf-space--size-9`);                                                       |
 | .scroll-px-9 | scroll-padding-left: var(`--sf-space--size-9`);&lt;br/&gt; scroll-padding-right: var(`--sf-space--size-9`); |
 | .scroll-py-9 | scroll-padding-top: var(`--sf-space--size-9`);&lt;br/&gt; scroll-padding-bottom: var(`--sf-space--size-9`); |
-{.table}
 
 ## Описание
 

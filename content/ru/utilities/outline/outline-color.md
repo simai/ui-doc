@@ -20,7 +20,6 @@ description: "Цвет внешней границы"
 | `.outline-error` | `outline-color: var(--sf-outline-error);` |
 | `.outline-warning` | `outline-color: var(--sf-outline-warning);` |
 | `.outline-success` | `outline-color: var(--sf-outline-success);` |
-{.table}
 
 ## Описание
 
@@ -36,13 +35,6 @@ description: "Цвет внешней границы"
 
 ## Пример
 
-```html
-<button class="outline outline-2 outline-solid outline-primary outline-offset-2">primary</button>
-<button class="outline outline-2 outline-solid outline-warning outline-offset-2">warning</button>
-<button class="outline outline-2 outline-solid outline-error outline-offset-2 hover:outline-success">hover:outline-success</button>
-```
-## Playground
+:::example {id="utilities/outline/outline-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=outline-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

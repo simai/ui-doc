@@ -43,7 +43,6 @@ description: "Промежутки (space)"
 | .space-y-8 \> \* \+ \*       | `--sf-space--reverse-y`: 0;&lt;br/&gt; margin-top: calc(var(`--sf-space-8`) \* calc(1 \- var(`--sf-space--reverse-y`)));&lt;br/&gt; margin-bottom: calc(var(`--sf-space-8`) \* var(`--sf-space--reverse-y`));     |
 | .space-x-reverse \> \* \+ \* | `--sf-space--reverse-x`: 1;                                                                                                                                                                           |
 | .space-y-reverse \> \* \+ \* | `--sf-space--reverse-y`: 1;                                                                                                                                                                           |
-{.table}
 
 Аналогичные классы действуют для вертикальных промежутков, заменяя `x` на `y`:
 
@@ -116,7 +115,6 @@ description: "Промежутки (space)"
 | .space-x-7      | .space-x-4     |
 | .space-x-8      | .space-x-4     |
 | .space-x-9      | .space-x-5     |
-{.table}
 
 Аналогично заменяются и вертикальные промежутки `space-y-{значение}`.
 

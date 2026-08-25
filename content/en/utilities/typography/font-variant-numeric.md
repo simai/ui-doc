@@ -21,7 +21,6 @@ description: "Начертание цифр (font-variant-numeric)"
 | .num-tabular            | font-variant-numeric: tabular-nums;       |
 | .num-diagonal-fractions | font-variant-numeric: diagonal-fractions; |
 | .num-stacked-fractions  | font-variant-numeric: stacked-fractions;  |
-{.table}
 
 ## Пример использования
 

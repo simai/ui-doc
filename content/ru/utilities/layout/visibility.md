@@ -61,8 +61,7 @@ description: "Видимость элемента (visibility)"
 ```html
 <div class="md:visible"></div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/visibility" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=visibility"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

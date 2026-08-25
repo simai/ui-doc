@@ -1,0 +1,42 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://simai.io/schemas/graph/project-target-state-contract.schema.json",
+  "title":"Project Technology Target State Extension",
+  "type":"object",
+  "required":["enabled","profile_id","root_object_ids","projection_ref","update_policy","enforcement","architecture","provider_binding"],
+  "properties":{
+    "enabled":{"type":"boolean"},
+    "profile_id":{"const":"profile.spec_tz_graph"},
+    "root_object_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","minLength":1}},
+    "projection_ref":{"const":"graph/generated/project-technology/target-state.md"},
+    "update_policy":{"const":"evidence_auto_semantics_proposal"},
+    "enforcement":{"const":"significant_changes"},
+    "architecture":{
+      "type":"object",
+      "required":["enabled","acceptance_policy","change_policy"],
+      "properties":{
+        "enabled":{"const":true},
+        "acceptance_policy":{"const":"explicit_human_owner_exact_digest"},
+        "change_policy":{"const":"proposal_then_separate_implementation_cycle"}
+      },
+      "additionalProperties":false
+    },
+    "provider_binding":{
+      "type":"object",
+      "required":["mode","required_fields","export_policy","execution_contract_policy","refresh_policy","revision_policy","transaction_policy","required_sets","enforcement"],
+      "properties":{
+        "mode":{"const":"exact_all_or_none"},
+        "required_fields":{"const":["target_id","semantic_digest","provider_revision"]},
+        "export_policy":{"const":"bounded_no_private_source"},
+        "execution_contract_policy":{"const":"accepted_ids_and_exact_scope"},
+        "refresh_policy":{"const":"explicit_same_target_semantic_forward_revision"},
+        "revision_policy":{"const":"verified_git_ancestor_only"},
+        "transaction_policy":{"const":"atomic_import_then_binding_with_rollback"},
+        "required_sets":{"const":["decisions","goal","done_when","requirements","acceptance","constraints","non_goals","deferred_boundaries","allowed_change_scope"]},
+        "enforcement":{"const":"significant_changes"}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":false
+}

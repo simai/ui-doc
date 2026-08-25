@@ -24,7 +24,6 @@ Radius modifiers let you round the whole element, specific sides, or specific lo
 | `.radius-top-inline-end-{size}` | top inline-end corner |
 | `.radius-bottom-inline-start-{size}` | bottom inline-start corner |
 | `.radius-bottom-inline-end-{size}` | bottom inline-end corner |
-{.table}
 
 ## Syntax
 
@@ -33,19 +32,6 @@ Radius modifiers let you round the whole element, specific sides, or specific lo
 
 ## Usage Example
 
-```html
-<div class="radius-1/3">radius-1/3</div>
-<div class="radius-rounded">radius-rounded</div>
+:::example {id="utilities/border/border-radius" label="Result"}
+:::
 
-<div class="radius-top-2">radius-top-2</div>
-<div class="radius-inline-start-1">radius-inline-start-1</div>
-
-<div class="radius-top-inline-start-3">radius-top-inline-start-3</div>
-<div class="radius-bottom-inline-end-rounded">radius-bottom-inline-end-rounded</div>
-```
-
-## Playground
-
-&lt;div class="sf-playground overflow-hidden border border-surface-overlay"&gt;
-&lt;iframe src="https://play.simai.io/embed.html?component=border&group=border-radius"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

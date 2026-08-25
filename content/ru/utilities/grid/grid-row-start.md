@@ -23,7 +23,6 @@ description: "Начальное положение строки сетки (gri
 | .grid-row-start-6    | grid-row-start: 6;    |
 | .grid-row-start-7    | grid-row-start: 7;    |
 | .grid-row-start-auto | grid-row-start: auto; |
-{.table}
 
 ## Синтаксис
 
@@ -61,8 +60,7 @@ description: "Начальное положение строки сетки (gri
     <!-- Начиная с md элемент будет начинаться со 2-й строки -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-row-start" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-row-start"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -48,7 +48,6 @@ The following variables are used for the Tertiary role:
 | `--sf-on-tertiary-container`        | `--sf-tertiary-10`          | `--sf-tertiary-90`          |
 | `--sf-on-tertiary-container-graphic`| `--sf-tertiary-50`          | `--sf-tertiary-60`          |
 | `--sf-outline-tertiary`             | `--sf-tertiary-50`          | `--sf-tertiary-60`          |
-{.table}
 
 [image10]: /assets/build/img/b64/52f9cf90be5f330a.png
 [image11]: /assets/build/img/b64/5502f1e0f394cba9.png

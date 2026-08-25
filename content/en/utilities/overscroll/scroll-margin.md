@@ -83,7 +83,6 @@ description: "Внешний отступ прокрутки"
 | .scroll-ml-9       | scroll-margin-left: var(`--sf-space-9`);                                                |
 | .scroll-mx-9       | scroll-margin-left: var(`--sf-space-9`);&lt;br/&gt; scroll-margin-right: var(`--sf-space-9`); |
 | .scroll-my-9       | scroll-margin-top: var(`--sf-space-9`);&lt;br/&gt; scroll-margin-bottom: var(`--sf-space-9`); |
-{.table}
 
 ## Описание
 

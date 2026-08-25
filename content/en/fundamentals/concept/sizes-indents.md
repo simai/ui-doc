@@ -23,4 +23,3 @@ Below is a table with the new spacing variables for mobile and desktop:
 | `--sf-space-6`  | `--sf-c6`      | 32px | `--sf-d2`       | 48px |
 | `--sf-space-7`  | `--sf-d0`      | 40px | `--sf-d6`       | 64px |
 | `--sf-space-8`  | `--sf-d2`      | 48px | `--sf-e0`       | 80px |
-{.table}

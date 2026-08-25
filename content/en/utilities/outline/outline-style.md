@@ -19,7 +19,6 @@ description: "Стиль внешней границы"
 | .outline-double | outline-style: double; |
 | .outline-hidden | outline-style: hidden; |
 | .outline-none   | outline-style: none;   |
-{.table}
 
 *(Обратите внимание: `outline-hidden` ведёт себя так же, как и `outline-none`.)*
 

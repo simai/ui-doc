@@ -23,7 +23,6 @@ description: "Вложение маски"
 | .mask-origin-fill    | mask-origin: fill-box;    |
 | .mask-origin-stroke  | mask-origin: stroke-box;  |
 | .mask-origin-viewbox | mask-origin: view-box;    |
-{.table}
 
 ## Описание
 
@@ -39,30 +38,6 @@ description: "Вложение маски"
 
 ## Примеры использования
 
-```html
-<!-- Маска относительно контента -->
-<div class="mask-origin-content">...</div>
+:::example {id="utilities/mask/mask-origin" label="Результат"}
+:::
 
-<!-- Маска относительно padding -->
-<div class="mask-origin-padding">...</div>
-
-<!-- Маска относительно margin -->
-<div class="mask-origin-margin">...</div>
-
-<!-- Маска относительно border -->
-<div class="mask-origin-border">...</div>
-
-<!-- Маска относительно fill-box (SVG) -->
-<div class="mask-origin-fill">...</div>
-
-<!-- Маска относительно stroke-box (SVG) -->
-<div class="mask-origin-stroke">...</div>
-
-<!-- Маска относительно view-box (SVG) -->
-<div class="mask-origin-viewbox">...</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=mask&group=mask-origin"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -14,9 +14,7 @@ description: "Nonzero и evenodd для SVG fill-rule"
 |:--|:--|
 | `.fill-nonzero` | `fill-rule: nonzero` |
 | `.fill-evenodd` | `fill-rule: evenodd` |
-{.table}
-## Playground
+## Пример
+:::example {id="utilities/svg/svg-fill-rule" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=svg&group=svg-fill-rule"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

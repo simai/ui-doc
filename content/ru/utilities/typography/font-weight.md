@@ -29,7 +29,6 @@ description: "Толщина шрифта (font-weight)"
 | .weight-7 | font-weight: 700;          |
 | .weight-8 | font-weight: 800;          |
 | .weight-9 | font-weight: 900;          |
-{.table}
 
 
 ## Пример использования
@@ -53,8 +52,7 @@ description: "Толщина шрифта (font-weight)"
   Текст будет полужирным на экранах размером Medium и больше.
 </p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/font-weight" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-weight"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

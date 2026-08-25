@@ -24,7 +24,6 @@ description: "Классы вращения transform-rotate"
 | `.rotate-90` | `transform: rotate(90deg)` |
 | `.rotate-180` | `transform: rotate(180deg)` |
 
-{.table}
 
 ## Синтаксис
 
@@ -32,8 +31,7 @@ description: "Классы вращения transform-rotate"
 - `hover:rotate-{value}`
 
 Где `value`: `0`, `1`, `2`, `3`, `5`, `15`, `45`, `90`, `180`.
-## Playground
+## Пример
+:::example {id="utilities/transform/transform-rotate" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=transform&group=transform-rotate"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

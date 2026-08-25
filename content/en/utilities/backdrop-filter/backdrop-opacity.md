@@ -23,7 +23,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 | .backdrop-opacity-8    | backdrop-filter: opacity(0.8) |
 | .backdrop-opacity-9    | backdrop-filter: opacity(0.9) |
 | .backdrop-opacity-full | backdrop-filter: opacity(1)   |
-{.table}
 
 ## Описание
 

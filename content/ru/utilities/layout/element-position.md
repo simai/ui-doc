@@ -127,8 +127,7 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 ```html
 <div class="md:top-0"></div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/element-position" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=element-position"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

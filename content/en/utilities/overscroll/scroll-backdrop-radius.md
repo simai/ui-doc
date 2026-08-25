@@ -14,7 +14,6 @@ description: "Радиус границы подложки прокрутки (s
 | .scroll-bg-radius-2 | `--sf-scroll-radius`: var(`--sf-a2`); |
 | .scroll-bg-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`); |
 | .scroll-bg-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`); |
-{.table}
 
 ## Описание
 

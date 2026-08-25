@@ -48,7 +48,6 @@ Primary и Secondary. Применение Tertiary позволяет доба�
 | `--sf-on-tertiary-container`         | `--sf-tertiary-10`          | `--sf-tertiary-90`          |
 | `--sf-on-tertiary-container-graphic` | `--sf-tertiary-50`          | `--sf-tertiary-60`          |
 | `--sf-outline-tertiary`              | `--sf-tertiary-50`          | `--sf-tertiary-60`          |
-{.table}
 
 [image10]: /ru/assets/reference/image-10.png
 [image11]: /ru/assets/reference/image-11.png

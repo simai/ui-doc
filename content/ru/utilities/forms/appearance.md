@@ -17,7 +17,6 @@ description: "Сброс стиля (appearance)"
 | Класс            | Значение          |
 |:-----------------|:------------------|
 | .appearance-none | appearance: none; |
-{.table}
 
 ## Описание
 
@@ -30,21 +29,6 @@ description: "Сброс стиля (appearance)"
 
 ## Пример использования
 
-```html
-<select>
-    <option>Да</option>
-    <option>Нет</option>
-    <option>Возможно</option>
-</select>
+:::example {id="utilities/forms/appearance" label="Результат"}
+:::
 
-<select class="appearance-none">
-    <option>Да</option>
-    <option>Нет</option>
-    <option>Возможно</option>
-</select>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=forms&group=appearance"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

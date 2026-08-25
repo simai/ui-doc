@@ -18,7 +18,6 @@ description: "Цвет тени для default / hover / active"
 | `.shadow-{color}` | цвет тени в базовом состоянии |
 | `.hover:shadow-{color}` | цвет тени в `:hover` |
 | `.active:shadow-{color}` | цвет тени в `:active` |
-{.table}
 
 Поддерживаемые `color`: `on-surface`, `primary`, `secondary`, `tertiary`, `error`, `success`, `warning`.
 
@@ -30,13 +29,6 @@ description: "Цвет тени для default / hover / active"
 
 ## Пример
 
-```html
-<button class="shadow-2 shadow-primary hover:shadow-warning active:shadow-error p-2 radius-2 border border-outline-variant">
-  Shadow color states
-</button>
-```
-## Playground
+:::example {id="utilities/shadows/element-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=element-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

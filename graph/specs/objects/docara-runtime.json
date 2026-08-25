@@ -1,0 +1,15 @@
+{
+  "id": "ui-doc.capability.docara-runtime",
+  "schema_version": "1.0.0",
+  "kind": "capability",
+  "subtype": "feature",
+  "title": "Docara 2 build runtime",
+  "summary": "Public simai/docara v2.0.0 package pinned by Composer lock to source revision d879a69f72e00c8329c74ce7d22d0840860f88c4.",
+  "owner": "docara",
+  "lifecycle": "validated",
+  "readiness": "R5_operational",
+  "evidence_status": "validated",
+  "source_refs": ["composer.json", "composer.lock"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md"],
+  "tags": ["docara", "composer", "build-runtime"]
+}

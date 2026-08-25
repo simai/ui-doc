@@ -20,7 +20,6 @@ description: "Цвет падающей тени (drop-shadow-color)"
 | .drop-shadow-warning    | `--sf-shadow--color`: var(`--sf-warning`)    |
 | .drop-shadow-success    | `--sf-shadow--color`: var(`--sf-success`)    |
 | .drop-shadow-on-surface | `--sf-shadow--color`: var(`--sf-on-surface`) |
-{.table}
 
 ## Описание
 

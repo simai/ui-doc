@@ -20,7 +20,6 @@ description: "Положение маски"
 | .mask-left-bottom  | mask-position: left bottom;  |
 | .mask-right-top    | mask-position: right top;    |
 | .mask-right-bottom | mask-position: right bottom; |
-{.table}
 
 ## Описание
 

@@ -16,7 +16,6 @@ description: "Параметры по умолчанию"
 |:--------------|:-----------------------------------------------------------|
 | .outline      | outline: var(`--sf-px`) var(`--sf-outline-variant`) solid; |
 | .outline-none | outline-width: var(`--sf-0`);                              |
-{.table}
 
 ## Описание
 

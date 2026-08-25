@@ -18,7 +18,6 @@ description: "animation-from-left/right/bottom"
 | `.animation-from-left`   | Появление сдвигом слева. |
 | `.animation-from-right`  | Появление сдвигом справа. |
 | `.animation-from-bottom` | Появление сдвигом снизу. |
-{.table}
 
 ## Как использовать
 
@@ -32,21 +31,6 @@ description: "animation-from-left/right/bottom"
 
 ## Пример
 
-```html
-<div class="animation animation-from-left p-2 radius-1/3 bg-success color-on-success">
-  Появление слева
-</div>
+:::example {id="utilities/animation/animation-type" label="Результат"}
+:::
 
-<div class="animation animation-from-right p-2 radius-1/3 bg-warning color-on-warning">
-  Появление справа
-</div>
-
-<div class="animation animation-from-bottom p-2 radius-1/3 bg-error color-on-error">
-  Появление снизу
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-type"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

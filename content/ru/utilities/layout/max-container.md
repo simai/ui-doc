@@ -24,7 +24,6 @@ description: "Максимальный размер контейнера (max-co
 | `--sf-container-6--size-max`  | `--sf-i2` | 1536px |
 | `--sf-container-7--size-max`  | `--sf-i3` | 1664px |
 | `--sf-container-8--size-max`  | `--sf-i4` | 1792px |
-{.table}
 
 ## Классы и значения
 
@@ -38,17 +37,8 @@ description: "Максимальный размер контейнера (max-co
 | .max-container-6 | desktop           | max-width: var(`--sf-container-6--size-max`); |
 | .max-container-7 | desktop           | max-width: var(`--sf-container-7--size-max`); |
 | .max-container-8 | desktop           | max-width: var(`--sf-container-8--size-max`); |
-{.table}
 
 ## Пример использования
-
-```html
-<div class="max-container-5">
-    <div class="container">
-        ... ваш контент ...
-    </div>
-</div>
-```
 
 В данном примере, начиная с контрольной точки `desktop`, максимальная ширина вложенного контейнера будет ограничена
 значением `var(--sf-container-5--size-max)` (примерно 1408px). До достижения этой ширины ограничение действовать не
@@ -56,8 +46,7 @@ description: "Максимальный размер контейнера (max-co
 
 Это позволяет создавать более сложные, адаптивные сетки с чётко заданными максимальными размерами, что особенно полезно
 для крупноформатных дисплеев и высоких разрешений.
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=max-container"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/layout/max-container" label="Результат"}
+:::
+

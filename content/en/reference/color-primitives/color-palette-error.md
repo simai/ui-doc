@@ -33,4 +33,3 @@ This is the color used to indicate errors.
 | `--sf-error-15`          | #540003                                         |
 | `--sf-error-10`          | #410002                                         |
 | `--sf-error-5`           | #2d0001                                         |
-{.table}

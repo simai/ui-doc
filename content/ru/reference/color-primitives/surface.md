@@ -46,7 +46,6 @@ description: "Surface"
 | `--sf-surface-transparent-select`  | `--sf-neutral-50--alfa-8`  | `--sf-neutral-90--alfa-8`  |
 | `--sf-surface-transparent-active`  | `--sf-neutral-50--alfa-12` | `--sf-neutral-90--alfa-12` |
 | `--sf-surface-transparent-overlay` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
-{.table}
 
 [image20]: /ru/assets/reference/image-20.png
 [image21]: /ru/assets/reference/image-21.png

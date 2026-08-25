@@ -18,7 +18,6 @@ description: "Вид градиента"
 | .gr-radial-3 | background: radial-gradient(var(`--sf-gradient--color-1`), var(`--sf-gradient--color-2`), var(`--sf-gradient--color-3`));                              |
 | .gr-conic-2  | background: conic-gradient(var(`--sf-gradient--color-1`), var(`--sf-gradient--color-2`));                                                              |
 | .gr-conic-3  | background: conic-gradient(var(`--sf-gradient--color-1`), var(`--sf-gradient--color-2`), var(`--sf-gradient--color-3`));                               |
-{.table}
 
 ## Описание
 

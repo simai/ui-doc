@@ -12,7 +12,6 @@ Use these variables to show focus states (e.g., keyboard navigation):
 | `--sf-focus--offset` | `--sf-a0` |
 | `--sf-focus--style`  | solid     |
 | `--sf-focus--width`  | `--sf-a4` |
-{.table}
 
 Focus CSS example:
 

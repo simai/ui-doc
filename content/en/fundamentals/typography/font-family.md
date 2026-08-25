@@ -12,7 +12,6 @@ Font families are set via variables for text, headings, and displays:
 | `--sf-text--family`    | "Inter", sans-serif; |
 | `--sf-heading--family` | "Inter", sans-serif; |
 | `--sf-display--family` | "Inter", sans-serif; |
-{.table}
 
 By default `--sf-body-text--family` is applied to the root to set the document font:
 
@@ -37,4 +36,3 @@ Additional font stack variables:
 | `--sf-sans`  | ui-sans-serif, system-ui, \-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; |
 | `--sf-serif` | ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;                                                                                                                                                      |
 | `--sf-mono`  | ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;                                                                                                               |
-{.table}

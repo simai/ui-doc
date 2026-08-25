@@ -15,7 +15,6 @@ description: "Утилита col-gap-* задаёт расстояние меж�
 | Класс        | Значение                             |
 |:-------------|:-------------------------------------|
 | .col-gap-{n} | column-gap: var(--sf-space-{n});     |
-{.table}
 
 Где `{n}` ∈ `0, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, 6, 7, 8`.
 
@@ -30,15 +29,6 @@ description: "Утилита col-gap-* задаёт расстояние меж�
 
 ## Пример
 
-```html
-<div class="layout-col-3 col-gap-2">
-  <div class="border radius-1 bg-surface-1 p-3 radius-2">1</div>
-  <div class="border radius-1 bg-surface-1 p-3 radius-2">2</div>
-  <div class="border radius-1 bg-surface-1 p-3 radius-2">3</div>
-</div>
-```
-## Playground
+:::example {id="utilities/layout-break/column-gap" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout-break&group=column-gap"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

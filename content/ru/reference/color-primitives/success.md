@@ -45,7 +45,6 @@ description: "Success"
 | `--sf-on-success-container`         | `--sf-success-10`          | `--sf-success-90`          |
 | `--sf-on-success-container-graphic` | `--sf-success-50`          | `--sf-success-60`          |
 | `--sf-outline-success`              | `--sf-success-50`          | `--sf-success-60`          |
-{.table}
 
 [image17]: /ru/assets/reference/image-17.png
 [image18]: /ru/assets/reference/image-18.png

@@ -38,7 +38,6 @@ Loader-статус: `registered`. Loader-правило: `cl-radio`.
 | `name` | `name` | `String` | `''` | `—` |
 | `value` | `value` | `String` | `''` | `—` |
 | `error` | `error` | `Boolean` | `false` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -47,7 +46,6 @@ Loader-статус: `registered`. Loader-правило: `cl-radio`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -65,7 +63,6 @@ Loader-статус: `registered`. Loader-правило: `cl-radio`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

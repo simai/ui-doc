@@ -19,7 +19,6 @@ description: "Режим маски"
 | .mask-alpha     | mask-mode: alpha;        |
 | .mask-luminance | mask-mode: luminance;    |
 | .mask-source    | mask-mode: match-source; |
-{.table}
 
 ## Описание
 
@@ -31,18 +30,6 @@ description: "Режим маски"
 
 ## Примеры использования
 
-```html
-<!-- Маскирование по альфа-каналу -->
-<div class="mask-alpha">...</div>
+:::example {id="utilities/mask/mask-mode" label="Результат"}
+:::
 
-<!-- Маскирование по яркости -->
-<div class="mask-luminance">...</div>
-
-<!-- Маскирование с использованием источника -->
-<div class="mask-source">...</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=mask&group=mask-mode"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

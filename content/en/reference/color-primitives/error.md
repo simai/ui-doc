@@ -45,7 +45,6 @@ The following variables are used for the Error role:
 | `--sf-on-error-container`        | `--sf-error-10`        | `--sf-error-90`        |
 | `--sf-on-error-container-graphic`| `--sf-error-50`        | `--sf-error-60`        |
 | `--sf-outline-error`             | `--sf-error-50`        | `--sf-error-60`        |
-{.table}
 
 [image13]: /assets/build/img/b64/f686dd417f8a6496.png
 [image14]: /assets/build/img/b64/2b6d33f495587919.png

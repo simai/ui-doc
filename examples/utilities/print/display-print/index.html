@@ -1,0 +1,29 @@
+<div class="wrap grid grid-col-1 sm:grid-col-2 max-w-md gap-3 content-main-start">
+  <div class="flex flex-col gap-1">
+    <div class="weight-6 m-b-2">screen behavior</div>
+    <div class="sf-card p-3 radius-2 border border-outline-variant">
+      <div class="text-2">
+        These blocks are hidden on screen because each
+        <code>print-*</code> class sets <code>display:none</code> outside print
+        media.
+      </div>
+      <div class="m-t-2 hidden print-block p-2 bg-surface-container radius-1">
+        print-block
+      </div>
+      <div
+        class="m-t-2 hidden print-inline-flex p-2 bg-surface-container radius-1"
+      >
+        print-inline-flex
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+          <div class="weight-6 m-b-2">how to test</div>
+    <div class="sf-card p-3 radius-2 border border-outline-variant">
+      <div class="text-2">
+        Open browser print preview (<code>Ctrl+P</code>). Elements with
+        <code>print-*</code> become visible only there.
+      </div>
+    </div>
+  </div>
+</div>

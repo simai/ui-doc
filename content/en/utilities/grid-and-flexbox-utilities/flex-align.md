@@ -22,7 +22,6 @@ description: "Одновременное выравнивание по двум 
 | .end-start     | justify-content: flex-end; align-items: flex-start;   |
 | .end-center    | justify-content: flex-end; align-items: center;       |
 | .end-end       | justify-content: flex-end; align-items: flex-end;     |
-{.table}
 
 ## Синтаксис
 

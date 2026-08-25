@@ -9,8 +9,7 @@ description: "solid, dotted, dashed, double, wavy"
 
 
 Классы: `decoration-solid`, `decoration-dotted`, `decoration-dashed`, `decoration-double`, `decoration-wavy`.
-## Playground
+## Пример
+:::example {id="utilities/text-formatting/text-decoration-style" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration-style"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

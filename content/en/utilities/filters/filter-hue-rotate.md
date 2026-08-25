@@ -22,7 +22,6 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 | .-hue-rotate-30 | filter: hue-rotate(-30deg) |
 | .-hue-rotate-60 | filter: hue-rotate(-60deg) |
 | .-hue-rotate-90 | filter: hue-rotate(-90deg) |
-{.table}
 
 ## Описание
 
@@ -60,4 +59,3 @@ description: "Вращение оттенка элемента (filter-hue-rotat
 | .hue-rotate-3 | .hue-rotate-60  |
 | .hue-rotate-4 | .hue-rotate-90  |
 | .hue-rotate-5 | .hue-rotate-180 |
-{.table}

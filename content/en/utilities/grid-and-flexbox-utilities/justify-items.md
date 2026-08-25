@@ -17,7 +17,6 @@ description: "Выравнивание каждого элемента по ос
 | .items-main-end     | justify-items: end;     |
 | .items-main-center  | justify-items: center;  |
 | .items-main-stretch | justify-items: stretch; |
-{.table}
 
 ## Синтаксис
 

@@ -38,7 +38,6 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 | `disabled` | `disabled` | `Boolean` | `false` | `—` |
 | `name` | `name` | `String` | `''` | `—` |
 | `value` | `value` | `String` | `''` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -47,7 +46,6 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -65,7 +63,6 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

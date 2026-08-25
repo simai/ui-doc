@@ -74,7 +74,6 @@ SVG-элементов, используя роли вместо исходны�
 | .hover:fill-success-transparent     | fill: var(`--sf-success-transparent-hover`);     |
 | .fill-success-transparent-select    | fill: var(`--sf-success-transparent-select`);    |
 | .fill-success-transparent-overlay   | fill: var(`--sf-success-transparent-overlay`);   |
-{.table}
 
 ## Описание
 
@@ -122,7 +121,6 @@ SVG-элементов, используя роли вместо исходны�
 | .fill-purple-4 ... .fill-purple-9                      | .fill-tertiary           |
 | .fill-pink-1, .fill-pink-2, .fill-pink-3               | .fill-tertiary-container |
 | .fill-pink-4 ... .fill-pink-9                          | .fill-tertiary           |
-{.table}
 
 ## Адаптивность
 

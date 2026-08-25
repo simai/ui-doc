@@ -21,7 +21,6 @@ description: "Инвертирование цвета фона элемента 
 |:----------------------|:---------------------------|
 | .backdrop-invert-none | backdrop-filter: invert(0) |
 | .backdrop-invert      | backdrop-filter: invert(1) |
-{.table}
 
 ## Описание
 
@@ -38,14 +37,6 @@ description: "Инвертирование цвета фона элемента 
 
 ## Пример использования
 
-```html
-<!-- При наведении фон станет инвертированным -->
-<div class="backdrop-invert-none hover:backdrop-invert p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы инвертировать цвет фона
-</div>
-```
-## Playground
+:::example {id="utilities/backdrop-filter/backdrop-invert" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-invert"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

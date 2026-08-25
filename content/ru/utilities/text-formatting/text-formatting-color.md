@@ -22,16 +22,9 @@ description: "Цвет оформления текста"
 | `.decoration-error` | `text-decoration-color: var(--sf-outline-error);` |
 | `.decoration-warning` | `text-decoration-color: var(--sf-outline-warning);` |
 | `.decoration-success` | `text-decoration-color: var(--sf-outline-success);` |
-{.table}
 
 ## Пример
 
-```html
-<p class="underline decoration-primary">Primary underline</p>
-<p class="underline decoration-warning">Warning underline</p>
-```
-## Playground
+:::example {id="utilities/text-formatting/text-formatting-color" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-formatting-color"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

@@ -16,7 +16,6 @@ description: "Режим маски"
 | .mask-alpha     | mask-mode: alpha;        |
 | .mask-luminance | mask-mode: luminance;    |
 | .mask-source    | mask-mode: match-source; |
-{.table}
 
 ## Описание
 

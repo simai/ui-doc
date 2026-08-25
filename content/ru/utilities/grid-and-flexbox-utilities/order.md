@@ -30,7 +30,6 @@ description: "Сортировка (order)"
 | .order-first | order: \-9999; |
 | .order-last  | order: 9999;   |
 | .order-none  | order: 0;      |
-{.table}
 
 ## Синтаксис
 
@@ -68,8 +67,7 @@ description: "Сортировка (order)"
     <!-- Начиная с md элемент будет отображаться последним -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/order" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=order"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

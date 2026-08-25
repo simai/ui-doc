@@ -31,31 +31,15 @@ description: "Колонки (column)"
 `layout-col-3`
 Пример с тремя колонками:
 
-```html
-<div class="layout-col-3">
-    <div class="aspect-1x1">...</div>
-    <div class="aspect-1x2">...</div>
-    <div class="aspect-2x1">...</div>
-</div>
-```
-
 `md:layout-col-3`
 Применение трёх колонок начиная с разрешения `md` (например, `md:layout-col-3`):
-
-```html
-<div class="md:layout-col-3">
-    <!-- При размере экрана меньше md будет 1 колонка или заданное по умолчанию значение,
-         при достижении md и более — 3 колонки -->
-</div>
-```
 
 В данном примере на экранах размера `Medium` и больше элемент будет отображаться в три колонки. На меньших экранах
 количество колонок будет по умолчанию (например, одна колонка, если не указано иное).
 
 Таким образом, модификатор `column` упрощает управление колонками в интерфейсе, делая дизайн более гибким и адаптируемым
 под различные размеры экранов.
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout-break&group=column"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/layout-break/column" label="Результат"}
+:::
+

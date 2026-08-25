@@ -29,7 +29,6 @@ description: "Размер заголовков (title-size)"
 | .title-10 | font-size: var(`--sf-text-size-10`);&lt;br/&gt; line-height: var(`--sf-title-height-10`); |
 | .title-11 | font-size: var(`--sf-text-size-11`);&lt;br/&gt; line-height: var(`--sf-title-height-11`); |
 | .title-12 | font-size: var(`--sf-text-size-12`);&lt;br/&gt; line-height: var(`--sf-title-height-12`); |
-{.table}
 
 ## Пример использования
 
@@ -49,8 +48,7 @@ description: "Размер заголовков (title-size)"
 ```
 
 Таким образом, можно гибко управлять размерами заголовков для различных разрешений экрана.
-## Playground
+## Пример
+:::example {id="utilities/typography/title-size" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=title-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

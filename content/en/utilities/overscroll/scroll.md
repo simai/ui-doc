@@ -14,7 +14,6 @@ description: "Толщина ползунка прокрутки (scroll)"
 | .scroll-2 | height: var(`--sf-a2`); |
 | .scroll-3 | height: var(`--sf-a4`); |
 | .scroll-4 | height: var(`--sf-a8`); |
-{.table}
 
 ## Описание
 

@@ -37,7 +37,6 @@ Loader-статус: `registered`. Loader-правило: `cl-context-menu`.
 | `role` | `role` | `String` | `"menu"` | `—` |
 | `content-class` | `contentClass` | `String` | `""` | `—` |
 | `root-class` | `rootClass` | `String` | `""` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -46,7 +45,6 @@ Loader-статус: `registered`. Loader-правило: `cl-context-menu`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -64,7 +62,6 @@ Loader-статус: `registered`. Loader-правило: `cl-context-menu`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

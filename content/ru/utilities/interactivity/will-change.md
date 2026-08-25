@@ -20,7 +20,6 @@ description: "Подготовка к изменениям (will-change)"
 | .will-change-scroll-position | will-change: scroll-position; |
 | .will-change-contents        | will-change: contents;        |
 | .will-change-transform       | will-change: transform;       |
-{.table}
 
 ## Описание
 
@@ -37,13 +36,6 @@ description: "Подготовка к изменениям (will-change)"
 
 ## Пример использования
 
-```html
-<div class="will-change-transform">
-  <!-- Элемент, который будет анимирован с transform -->
-</div>
-```
-## Playground
+:::example {id="utilities/interactivity/will-change" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=interactivity&group=will-change"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

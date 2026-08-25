@@ -12,8 +12,7 @@ description: "underline, overline, line-through, decoration-none"
 - `.overline`
 - `.line-through`
 - `.decoration-none`
-## Playground
+## Пример
+:::example {id="utilities/text-formatting/text-decoration" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=text-formatting&group=text-decoration"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

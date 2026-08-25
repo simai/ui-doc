@@ -15,7 +15,6 @@ description: "Сглаживание шрифтов (font-smoothing)"
 |:-------------|:-----------------------------------------------------------------------------|
 | .antialiased | -webkit-font-smoothing: antialiased;&lt;br/&gt;-moz-osx-font-smoothing: grayscale; |
 | .smoothing   | -webkit-font-smoothing: auto;&lt;br/&gt;-moz-osx-font-smoothing: auto;             |
-{.table}
 
 ## Пример использования
 

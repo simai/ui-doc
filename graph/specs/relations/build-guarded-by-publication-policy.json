@@ -1,0 +1,15 @@
+{
+  "id": "rel.ui-doc.build.guarded-by-publication-policy",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.local-static-build",
+  "to": "ui-doc.policy.explicit-publication",
+  "relation_type": "guarded_by",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "asserted_by_human",
+  "impact": "high",
+  "owner": "repository_owner",
+  "source_refs": ["README.md"],
+  "evidence_refs": []
+}

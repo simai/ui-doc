@@ -17,7 +17,6 @@ description: "Сепия элемента (filter-sepia)"
 |:------------|:-----------------|
 | .sepia-none | filter: sepia(0) |
 | .sepia      | filter: sepia(1) |
-{.table}
 
 ## Описание
 
@@ -36,21 +35,6 @@ description: "Сепия элемента (filter-sepia)"
 
 ## Пример использования
 
-```html
-<!-- Без сепии -->
-<div class="sepia-none p-4 bg-primary color-on-surface-inverse">
-  Без сепии
-</div>
-```
+:::example {id="utilities/filters/filter-sepia" label="Результат"}
+:::
 
-```html
-<!-- Сепия при наведении -->
-<div class="sepia-none hover:sepia p-4 bg-secondary transition">
-  Наведи для сепии
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=filters&group=filter-sepia"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

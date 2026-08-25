@@ -17,7 +17,6 @@ description: "Положение маркера списка (list-style-positio
 |:--------------|:------------------------------|
 | .list-inside  | list-style-position: inside;  |
 | .list-outside | list-style-position: outside; |
-{.table}
 
 
 ## Синтаксис
@@ -35,21 +34,6 @@ description: "Положение маркера списка (list-style-positio
 
 ## Пример использования
 
-```html
-<ul class="list-inside">
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-</ul>
+:::example {id="utilities/typography/list-style-position" label="Результат"}
+:::
 
-<ul class="list-outside">
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-</ul>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=list-style-position"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

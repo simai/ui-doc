@@ -29,7 +29,6 @@ description: "Начальное положение колонки сетки (g
 | .col-start-12   | grid-column-start: 12;   |
 | .col-start-13   | grid-column-start: 13;   |
 | .col-start-auto | grid-column-start: auto; |
-{.table}
 
 ## Синтаксис
 
@@ -70,8 +69,7 @@ description: "Начальное положение колонки сетки (g
     <!-- Начиная с размера экрана md и больше элемент будет начинаться с 4-й линии сетки -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid/grid-column-start" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid&group=grid-column-start"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

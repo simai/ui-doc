@@ -30,7 +30,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 | .backdrop-opacity-8    | backdrop-filter: opacity(0.8) |
 | .backdrop-opacity-9    | backdrop-filter: opacity(0.9) |
 | .backdrop-opacity-full | backdrop-filter: opacity(1)   |
-{.table}
 
 ## Описание
 
@@ -48,14 +47,6 @@ description: "Прозрачность фона элемента (backdrop-opaci
 
 ## Пример использования
 
-```html
-<!-- Фон станет на 50% прозрачным при наведении -->
-<div class="backdrop-opacity-full hover:backdrop-opacity-5 p-4 bg-primary color-on-surface-inverse transition">
-  Наведи, чтобы уменьшить непрозрачность фона
-</div>
-```
-## Playground
+:::example {id="utilities/backdrop-filter/backdrop-opacity" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=backdrop-filter&group=backdrop-opacity"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

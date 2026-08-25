@@ -21,7 +21,6 @@ description: "Выравнивание отдельного элемента п�
 | .self-cross-center  | align-self: center;  |
 | .self-cross-stretch | align-self: stretch; |
 | .self-cross-baseline| align-self: baseline;|
-{.table}
 
 ## Синтаксис
 
@@ -62,8 +61,7 @@ description: "Выравнивание отдельного элемента п�
   <!-- Начиная с md элемент будет прижат к началу ячейки по поперечной оси -->
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/grid-and-flexbox-utilities/align-self" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=grid-and-flexbox-utilities&group=align-self"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

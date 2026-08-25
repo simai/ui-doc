@@ -35,31 +35,12 @@ description: "Модификаторы ролей текста"
 | .sf-display-4, .d4, .display4 | font-size: var(`--sf-display-4--size`);&lt;br/&gt; line-height: var(`--sf-title-height-9`);        |
 | .sf-display-5, .d5, .display5 | font-size: var(`--sf-display-5--size`);&lt;br/&gt; line-height: var(`--sf-title-height-8`);        |
 | .sf-display-6, .d6, .display6 | font-size: var(`--sf-display-6--size`);&lt;br/&gt; line-height: var(`--sf-title-height-7`);        |
-{.table}
 
 ## Пример использования
 
-```css
-h1, .sf-h-1 {
-  font-size: var(--sf-text-size-6);
-  line-height: var(--sf-title-height-6);
-}
-
-.text-medium {
-  font-size: var(--sf-text-medium--size);
-  line-height: var(--sf-text-medium--height);
-}
-
-.label-large {
-  font-size: var(--sf-label-large--size);
-  line-height: var(--sf-label-large--height);
-}
-```
-
 Используя данные модификаторы, вы можете легко и быстро применять готовые роли текста для оформления заголовков,
 текстовых блоков, меток и прочих элементов типографики.
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=text-role-modifiers"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/typography/text-role-modifiers" label="Результат"}
+:::
+

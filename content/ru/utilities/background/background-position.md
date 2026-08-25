@@ -24,7 +24,6 @@ description: "Положение фона"
 | .bg-right-bottom | background-position: right bottom; |
 | .bg-right-top    | background-position: right top;    |
 | .bg-top          | background-position: top;          |
-{.table}
 
 ## Описание
 
@@ -82,8 +81,7 @@ description: "Положение фона"
     <div class="h-f8"></div>
 </div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/background/background-position" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-position"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

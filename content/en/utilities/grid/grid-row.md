@@ -21,7 +21,6 @@ description: "Размер строки сетки (grid-row)"
 | .row-span-5    | grid-row: span 5 / span 5; |
 | .row-span-6    | grid-row: span 6 / span 6; |
 | .row-span-full | grid-row: 1/-1;            |
-{.table}
 
 ## Синтаксис
 

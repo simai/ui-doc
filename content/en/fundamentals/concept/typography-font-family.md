@@ -15,7 +15,6 @@ To configure fonts in the framework, variables are used that define the font fam
 | `--sf-text--family`    | "Inter", sans-serif; |
 | `--sf-heading--family` | "Inter", sans-serif; |
 | `--sf-display--family` | "Inter", sans-serif; |
-{.table}
 
 By default, the `--sf-body-text--family` variable is used on the root element (`:root`) to set the font for the entire
 document:
@@ -41,6 +40,5 @@ Additionally, we need font type variables:
 | `--sf-sans`  | ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; |
 | `--sf-serif` | ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;                                                                                                                            |
 | `--sf-mono`  | ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;                                                                                   |
-{.table}
 
 ````

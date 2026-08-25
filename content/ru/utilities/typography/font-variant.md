@@ -17,7 +17,6 @@ description: "Начертание шрифта (капитель) (font-variant
 |:-----------------|:--------------------------|
 | .small-caps      | font-variant: small-caps; |
 | .small-caps-none | font-variant: none;       |
-{.table}
 
 
 ## Пример использования
@@ -40,8 +39,7 @@ description: "Начертание шрифта (капитель) (font-variant
   На экранах Medium и больше текст будет в стиле капитель.
 </p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/font-variant" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=font-variant"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

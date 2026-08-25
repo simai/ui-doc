@@ -24,7 +24,6 @@ description: "Положение элемента по оси Z (z-index)"
 | `--sf-z-index-7`  | 70       |
 | `--sf-z-index-8`  | 80       |
 | `--sf-z-index-9`  | 90       |
-{.table}
 
 ## Синтаксис
 

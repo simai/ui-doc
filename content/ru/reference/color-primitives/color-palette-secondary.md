@@ -33,4 +33,3 @@ description: "Secondary"
 | `--sf-secondary-15`          | #1a263b                                                                    |
 | `--sf-secondary-10`          | #101b31                                                                    |
 | `--sf-secondary-5`           | #051126                                                                    |
-{.table}

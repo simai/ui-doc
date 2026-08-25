@@ -31,7 +31,6 @@ description: "Высота строки (line-height)"
 | .line-10  | line-height: var(`--sf-text-height-10`);  |
 | .line-11  | line-height: var(`--sf-text-height-11`);  |
 | .line-12  | line-height: var(`--sf-text-height-12`);  |
-{.table}
 
 Относительная высота строки:
 
@@ -43,7 +42,6 @@ description: "Высота строки (line-height)"
 | .line-normal  | line-height: 1.5;   |
 | .line-relaxed | line-height: 1.625; |
 | .line-loose   | line-height: 2;     |
-{.table}
 
 
 ## Синтаксис
@@ -89,8 +87,7 @@ description: "Высота строки (line-height)"
 ```html
 <p class="md:line-2">Текст, который при ширине экрана medium и больше будет с высотой строки, соответствующей переменной line-2.</p>
 ```
-## Playground
+## Пример
+:::example {id="utilities/typography/line-height" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=typography&group=line-height"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

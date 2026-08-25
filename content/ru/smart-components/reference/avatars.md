@@ -53,7 +53,6 @@ Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 | `label-size` | `labelSize` | `String` | `''` | `—` |
 | `profile-size` | `profileSize` | `String` | `''` | `—` |
 | `root-class` | `rootClass` | `String` | `''` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -62,7 +61,6 @@ Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -80,7 +78,6 @@ Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-{.table}
 
 ## Минимальная разметка
 

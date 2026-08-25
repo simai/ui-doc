@@ -39,7 +39,6 @@ description: "Масштабирование (transform-scale)"
 | .scale-x-4   | transform: scaleX(1.2)  |
 | .scale-y-4   | transform: scaleY(1.2)  |
 
-{.table}
 
 ## Описание
 
@@ -77,4 +76,3 @@ description: "Масштабирование (transform-scale)"
 | .scale-7           | .scale-3    |
 | .scale-8, .scale-9 | .scale-4    |
 
-{.table}

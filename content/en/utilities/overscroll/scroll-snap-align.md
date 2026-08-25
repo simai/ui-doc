@@ -23,7 +23,6 @@ description: "Выравнивание привязки прокрутки (scro
 | .snap-end        | scroll-snap-align: end;    |
 | .snap-center     | scroll-snap-align: center; |
 | .snap-align-none | scroll-snap-align: none;   |
-{.table}
 
 ## Описание
 

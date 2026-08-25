@@ -30,7 +30,6 @@ The following variables are used for the Disable role:
 | `--sf-disable`        | `--sf-neutral-50--alfa-12` | `--sf-neutral-90--alfa-12` |
 | `--sf-on-disable`     | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 | `--sf-outline-disable`| `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
-{.table}
 
 [image22]: /assets/build/img/b64/49a66e5e4a47e2c6.png
 [image23]: /assets/build/img/b64/ac48e6f24fd4805f.png

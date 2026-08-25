@@ -26,7 +26,6 @@ description: "Положение элемента по оси Z (z-index)"
 | `--sf-z-index-7`  | 70       |
 | `--sf-z-index-8`  | 80       |
 | `--sf-z-index-9`  | 90       |
-{.table}
 
 ## Синтаксис
 
@@ -78,8 +77,7 @@ description: "Положение элемента по оси Z (z-index)"
 ```html
 <div class="md:z-1">Элемент со z-index:10 на больших экранах</div>
 ```
-## Playground
+## Пример
+:::example {id="utilities/layout/z-index" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=z-index"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

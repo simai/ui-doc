@@ -18,7 +18,6 @@ description: "Управление размером фонового изобр�
 | `.bg-auto`   | `background-size: auto;`  |
 | `.bg-cover`  | `background-size: cover;` |
 | `.bg-contain`| `background-size: contain;` |
-{.table}
 
 ## Таблица классов (расширенные)
 
@@ -26,7 +25,6 @@ description: "Управление размером фонового изобр�
 |:---------------------|:------------------------------------------|
 | `.bg-size-0`...`.bg-size-100` | `background-size: 0%...100%;` |
 | `.bg-size-a0`...`.bg-size-i9` | `background-size: var(--sf-a0)...var(--sf-i9);` |
-{.table}
 
 ## Описание
 
@@ -44,14 +42,6 @@ description: "Управление размером фонового изобр�
 
 ## Примеры использования
 
-```html
-<div class="bg-cover h-e8" style="background-image:url('/assets/img/simai.svg');"></div>
-<div class="bg-size-50 h-e8" style="background-image:url('/assets/img/simai.svg');"></div>
-<div class="bg-size-a8 h-e8" style="background-image:url('/assets/img/simai.svg');"></div>
-```
+:::example {id="utilities/background/background-size" label="Результат"}
+:::
 
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

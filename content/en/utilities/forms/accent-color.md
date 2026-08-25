@@ -24,7 +24,6 @@ description: "Акцентный цвет (accent-color)"
 | .accent-warning     | accent-color: var(`--sf-warning`);     |
 | .accent-success     | accent-color: var(`--sf-success`);     |
 
-{.table}
 
 ## Описание
 

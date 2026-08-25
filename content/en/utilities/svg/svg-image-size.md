@@ -15,7 +15,6 @@ description: "Set SVG width and height with utility classes"
 | `.svg-1/3` | `width: var(--sf-text-size-1/3); height: var(--sf-text-size-1/3); line-height: var(--sf-text-height-1/3);` |
 | `.svg-1/2` | `width: var(--sf-text-size-1/2); height: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2);` |
 | `.svg-1 ... .svg-12` | `width/height: var(--sf-text-size-*); line-height: var(--sf-text-height-*);` |
-{.table}
 
 ## Description
 
@@ -42,8 +41,7 @@ Use breakpoint prefixes: `sm:`, `md:`, `lg:`, `xl:`.
 <svg class="md:svg-7"></svg>
 ```
 
-## Playground
+## Example
+:::example {id="utilities/svg/svg-image-size" label="Result"}
+:::
 
-&lt;div class="sf-playground overflow-hidden border border-surface-overlay"&gt;
-&lt;iframe src="https://play.simai.io/embed.html?component=svg&group=svg-image-size"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

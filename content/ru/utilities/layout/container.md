@@ -22,19 +22,12 @@ description: "Контейнер (container)"
 |           |        lg         | width: var(`--sf-breakpoint-lg`);&lt;br/&gt; padding-left: var(`--sf-space-4`);&lt;br/&gt; padding-right: var(`--sf-space-4`);  |
 |           |        xl         | width: var(`--sf-breakpoint-xl`);&lt;br/&gt; padding-left: var(`--sf-space-5`);&lt;br/&gt; padding-right: var(`--sf-space-5`);  |
 |           |        xxl        | width: var(`--sf-breakpoint-xxl`);&lt;br/&gt; padding-left: var(`--sf-space-6`);&lt;br/&gt; padding-right: var(`--sf-space-6`); |
-{.table}
 
 Контрольные точки (`--sf-breakpoint-sm`, `--sf-breakpoint-md`, `--sf-breakpoint-lg`, `--sf-breakpoint-xl`,
 `--sf-breakpoint-xxl`) определены в ядре фреймворка, а размеры отступов (`--sf-space-*`) соответствуют новой системе
 размеров отступов.
 
 ## Пример использования
-
-```html
-<div class="container">
-  ... ваш контент ...
-</div>
-```
 
 В данном примере при любой ширине окна контейнер будет занимать 100% и иметь горизонтальные отступы равные
 `var(--sf-space-1)`.
@@ -43,12 +36,6 @@ description: "Контейнер (container)"
 адаптивный модификатор, например `md:container` для включения контейнера начиная с контрольной точки
 `--sf-breakpoint-md`:
 
-```html
-<div class="md:container">
-  ... ваш контент ...
-</div>
-```
-
 В этом случае до достижения ширины `--sf-breakpoint-md` элемент будет на всю ширину без отступов по умолчанию (или
 использоваться базовый вариант container), а после `--sf-breakpoint-md` контейнер автоматически применит ограничения и
 отступы для этой контрольной точки.
@@ -56,16 +43,9 @@ description: "Контейнер (container)"
 Для центрирования контейнера можно добавить классы отступов с отрицательными значениями или класс
 `m-inline-end-auto m-inline-start-auto` (автоматические отступы справа и слева):
 
-```html
-<div class="container m-inline-end-auto m-inline-start-auto">
-  ... ваш контент ...
-</div>
-```
-
 Таким образом, контейнер помогает поддерживать адаптивный и аккуратный макет сайта, изменяя свои размеры и отступы в
 зависимости от ширины области просмотра.
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=layout&group=container"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/layout/container" label="Результат"}
+:::
+

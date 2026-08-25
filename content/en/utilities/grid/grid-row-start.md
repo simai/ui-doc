@@ -26,7 +26,6 @@ description: "Начальное положение строки сетки (gri
 | .grid-row-start-11   | grid-row-start: 11;   |
 | .grid-row-start-12   | grid-row-start: 12;   |
 | .grid-row-start-auto | grid-row-start: auto; |
-{.table}
 
 ## Синтаксис
 

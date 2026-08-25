@@ -17,7 +17,6 @@ description: "Размер полосок"
 | .stripe-size-2 | `--sf-stripe--size: var(--sf-a2);` |
 | .stripe-size-3 | `--sf-stripe--size: var(--sf-a3);` |
 | .stripe-size-4 | `--sf-stripe--size: var(--sf-a4);` |
-{.table}
 
 ## Описание
 

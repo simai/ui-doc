@@ -1,0 +1,20 @@
+{
+  "id": "rel.ui-doc.site.uses-authored-content",
+  "schema_version": "1.0.0",
+  "kind": "relation",
+  "from": "ui-doc.capability.documentation-site",
+  "to": "ui-doc.capability.authored-content",
+  "relation_type": "uses",
+  "status": "active",
+  "confidence": 1,
+  "evidence_status": "validated",
+  "impact": "critical",
+  "owner": "repository_owner",
+  "source_refs": ["docara.json", "content"],
+  "evidence_refs": [
+    "docs/developer/docara-v2-migration.md",
+    "source/workflow/2026-08-25-playground-example-migration-trial.md",
+    "source/workflow/2026-08-25-playground-native-example-migration.md",
+    "source/workflow/evidence/2026-08-25-playground-native-examples/migration-manifest.json"
+  ]
+}

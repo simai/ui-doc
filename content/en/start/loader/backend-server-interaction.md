@@ -38,7 +38,6 @@ With parameters such as:
 | **load**    | Whether the backend was contacted before                  |
 | **gzip**    | Indicates gzip support (so curl is not run on every call) |
 
-{.table}
 
 ## Server processing
 

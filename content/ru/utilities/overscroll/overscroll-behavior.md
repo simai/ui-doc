@@ -26,7 +26,6 @@ description: "Поведение при прокрутке"
 | .scroll-over-y-contain | overscroll-behavior-y: contain; |
 | .scroll-over-x-none    | overscroll-behavior-x: none;    |
 | .scroll-over-y-none    | overscroll-behavior-y: none;    |
-{.table}
 
 ## Описание
 
@@ -47,24 +46,6 @@ description: "Поведение при прокрутке"
 
 ## Пример использования
 
-```html
-<!-- Разрешает продолжение прокрутки в родительской области при достижении границы -->
-<div class="scroll-over-auto h-d5 overflow-auto">
-    <!-- Длинный текст или контент -->
-</div>
+:::example {id="utilities/overscroll/overscroll-behavior" label="Результат"}
+:::
 
-<!-- Сохраняет эффект «отскока», но не запускает прокрутку родительского элемента -->
-<div class="scroll-over-contain h-d5 overflow-auto">
-    <!-- Длинный текст или контент -->
-</div>
-
-<!-- Запрещает любую прокрутку за пределы контейнера -->
-<div class="scroll-over-none h-d5 overflow-auto">
-    <!-- Длинный текст или контент -->
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=overscroll&group=overscroll-behavior"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

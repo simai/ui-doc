@@ -15,7 +15,6 @@ description: "Толщина внешней границы"
 | `.outline-2` | `outline-width: var(--sf-a2);` |
 | `.outline-3` | `outline-width: var(--sf-a3);` |
 | `.outline-4` | `outline-width: var(--sf-a4);` |
-{.table}
 
 ## Описание
 
@@ -31,13 +30,6 @@ description: "Толщина внешней границы"
 
 ## Пример
 
-```html
-<button class="outline outline-1 outline-solid outline-primary outline-offset-2">outline-1</button>
-<button class="outline outline-2 outline-solid outline-primary outline-offset-2">outline-2</button>
-<button class="outline outline-4 outline-solid outline-primary outline-offset-2">outline-4</button>
-```
-## Playground
+:::example {id="utilities/outline/outline-width" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=outline&group=outline-width"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

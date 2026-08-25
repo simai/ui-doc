@@ -16,7 +16,6 @@ description: "Обрезка текста (text-overflow)"
 | .truncate   | overflow: hidden;&lt;br/&gt; white-space: nowrap;&lt;br/&gt; text-overflow: ellipsis; |
 | .t-ellipsis | text-overflow: ellipsis;                                                  |
 | .t-clip     | text-overflow: clip;                                                      |
-{.table}
 
 ## Синтаксис
 

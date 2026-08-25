@@ -72,4 +72,3 @@ description: "Полный source-backed справочник компонент
 | [tree](/ru/framework-components/reference/tree/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `tree` |
 | [tree-item](/ru/framework-components/reference/tree-item/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `tree-item` |
 | [verification](/ru/framework-components/reference/verification/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `verification` |
-{.table}

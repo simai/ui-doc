@@ -17,7 +17,6 @@ description: "Классы animation и infinite"
 |:-----------|:---------|
 | `.animation` | Базовая анимация появления (`fade`) с `--sf-duration-normal` и `--sf-animation`. |
 | `.infinite`  | Бесконечный повтор анимации (`animation-iteration-count: infinite`). |
-{.table}
 
 ## Синтаксис
 
@@ -34,17 +33,6 @@ description: "Классы animation и infinite"
 
 ## Пример
 
-```html
-<div class="animation p-2 radius-1/3 bg-primary color-on-primary">
-  Появление по fade-анимации
-</div>
+:::example {id="utilities/animation/animation-transition-appearing" label="Результат"}
+:::
 
-<div class="animation infinite p-2 radius-1/3 bg-secondary color-on-secondary">
-  Бесконечное повторение анимации
-</div>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-transition-appearing"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

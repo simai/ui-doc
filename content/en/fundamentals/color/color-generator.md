@@ -32,7 +32,6 @@ Default values for palette generation:
 | **Error**     | 25 (tweak 20–30)                                  | 85 (tweak 50–100)         |
 | **Warning**   | 60 (tweak 55–80)                                  | 60 (tweak 40–60)          |
 | **Success**   | 145 (tweak 135–165)                               | 65 (tweak 30–100)         |
-{.table}
 
 Adjust hue, chroma, and tone to get the palette you need.
 
@@ -46,7 +45,6 @@ UI Kit example values:
 | **Error**     | 25  |     85 |
 | **Warning**   | 60  |     60 |
 | **Success**   | 145 |     65 |
-{.table}
 
 Neutral offers three variants (Grey Primary, Gray Blue, Grey) with tunable Hue/Chroma:
 
@@ -55,7 +53,6 @@ Neutral offers three variants (Grey Primary, Gray Blue, Grey) with tunable Hue/C
 | **Grey Primary** | 265 |     5 |
 | **Gray Blue**    | 235 |    10 |
 | **Grey**         | 0   |     0 |
-{.table}
 
 With flexible palette/token generation and light/dark themes, SIMAI Framework simplifies color work and keeps interfaces
 clear, functional, and aesthetic.

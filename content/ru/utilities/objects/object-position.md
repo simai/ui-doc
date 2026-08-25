@@ -23,7 +23,6 @@ description: "Утилиты object-position управляют тем, каку
 | .object-inline-end-top   | object-position: right top;   |
 | .object-inline-end-bottom| object-position: right bottom;|
 | .object-top              | object-position: top;         |
-{.table}
 
 ## Синтаксис
 
@@ -36,20 +35,6 @@ description: "Утилиты object-position управляют тем, каку
 
 ## Примеры
 
-```html
-<div class="grid grid-col-2 gap-3">
-  <div class="border radius-1 bg-surface-1 p-3 radius-2 border border-outline-variant">
-    <div class="text-2 m-bottom-2">inline-start top</div>
-    <img class="w-full h-e5 object-cover object-inline-start-top bg-surface-1 radius-2" src="...">
-  </div>
-  <div class="border radius-1 bg-surface-1 p-3 radius-2 border border-outline-variant">
-    <div class="text-2 m-bottom-2">inline-end bottom</div>
-    <img class="w-full h-e5 object-cover object-inline-end-bottom bg-surface-1 radius-2" src="...">
-  </div>
-</div>
-```
-## Playground
+:::example {id="utilities/objects/object-position" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=objects&group=object-position"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

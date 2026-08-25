@@ -20,7 +20,6 @@ description: "Толщина оформления текста"
 | .decoration-2    | text-decoration-thickness: var(`--sf-a2`); |
 | .decoration-3    | text-decoration-thickness: var(`--sf-a3`); |
 | .decoration-4    | text-decoration-thickness: var(`--sf-a4`); |
-{.table}
 
 ## Описание
 

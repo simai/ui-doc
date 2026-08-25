@@ -32,7 +32,6 @@ description: "Общее свойство перехода"
 | .transition-flex      | transition-property: flex, flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                      |
 | .transition-flex-basis | transition-property: flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                            |
 | .transition-layout    | transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                      |
-{.table}
 
 ## Описание
 
@@ -66,15 +65,9 @@ description: "Общее свойство перехода"
 
 ## Пример использования
 
-```html
-<button class="transition-all hover:color-primary p-2 radius-1/3">
-    Нажми на меня
-</button>
-```
-
 При наведении курсора на кнопку цвет текста плавно сменится на основной (`text-primary`), так как все свойства с
 переходом (`transition-all`) будут изменяться плавно.
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=animation&group=animation-transition-property"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/animation/animation-transition-property" label="Результат"}
+:::
+

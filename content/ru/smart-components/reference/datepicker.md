@@ -61,7 +61,6 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `mask-lazy` | `maskLazy` | `String` | `false` | `—` |
 | `mask-placeholder-char` | `maskPlaceholderChar` | `String` | `'_'` | `—` |
 | `mask-options` | `maskOptions` | `String` | `''` | `—` |
-{.table}
 
 Общие атрибуты базового Smart-элемента:
 
@@ -70,7 +69,6 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `root-class` | `String` | Классы корневого элемента шаблона |
 | `root-style` | `String` | Inline-стили корневого элемента шаблона |
 | `style` | `String` | Стили host-элемента |
-{.table}
 
 ## Методы
 
@@ -89,7 +87,6 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
 | `sf-change` | Компонент-специфичное событие из source-класса |
-{.table}
 
 ## Минимальная разметка
 

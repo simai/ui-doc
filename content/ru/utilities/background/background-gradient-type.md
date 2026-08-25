@@ -24,34 +24,11 @@ description: "Утилиты выбора типа фонового градие
 | .gr-radial-3 | `background-image: radial-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-2), var(--sf-gradient--color-3));` |
 | .gr-conic-2  | `background-image: conic-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-2));`                   |
 | .gr-conic-3  | `background-image: conic-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-2), var(--sf-gradient--color-3));` |
-{.table}
 
 ## Примеры
 
-```html
-<!-- Линейный градиент с двумя цветами -->
-<div class="gr-line-2 gr1-primary gr2-primary-container h-e5 radius-2"></div>
-```
-
-```html
-<!-- Линейный градиент с тремя цветами и кастомным углом -->
-<div class="gr-line-3 gr1-primary gr2-secondary gr3-tertiary h-e5 radius-2"
-     style="--sf-gradient--angle: 45deg;"></div>
-```
-
-```html
-<!-- Радиальный градиент: через from/via/to -->
-<div class="gr-radial-3 from-tertiary via-primary to-secondary h-e5 radius-2"></div>
-```
-
-```html
-<!-- Конический градиент -->
-<div class="gr-conic-2 gr1-primary gr2-secondary h-e5 radius-2"></div>
-```
-
 **Важно:** без указания цветов (`gr1-/gr2-/gr3-` или `from-/via-/to-`) градиент будет прозрачным, так как в переменных `--sf-gradient--color-*` нет значений.
-## Playground
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-gradient-type"&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+:::example {id="utilities/background/background-gradient-type" label="Результат"}
+:::
+

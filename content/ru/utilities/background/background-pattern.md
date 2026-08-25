@@ -24,7 +24,6 @@ description: "Паттерн фона"
 | .pattern-7 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='2' height='2' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
 | .pattern-8 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='1'/&gt;&lt;rect x='0' y='2' width='3' height='1'/&gt;&lt;rect x='0' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                             |
 | .pattern-9 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='3' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
-{.table}
 
 ## Описание
 
@@ -62,8 +61,7 @@ description: "Паттерн фона"
 
 Для изменения паттерна фона, начиная с определенного размера экрана, добавьте префикс контрольной точки. Например,
 `md:pattern-2` применит паттерн №2 только на экранах от размера Medium и больше.
-## Playground
+## Пример
+:::example {id="utilities/background/background-pattern" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=background&group=background-pattern"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

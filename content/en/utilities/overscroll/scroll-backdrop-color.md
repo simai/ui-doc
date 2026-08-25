@@ -18,7 +18,6 @@ description: "Цвет подложки прокрутки (scroll-backdrop-colo
 | .scroll-bg-primary     | var(`--sf-primary-transparent-overlay`)                           |
 | .scroll-bg-secondary   | var(`--sf-secondary-transparent-overlay`)                         |
 | .scroll-bg-tertiary    | var(`--sf-tertiary-transparent-overlay`)                          |
-{.table}
 
 ## Описание
 

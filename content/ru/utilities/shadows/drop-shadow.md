@@ -23,7 +23,6 @@ description: "Падающая тень (drop-shadow)"
 | .drop-shadow-3 | `--sf-shadow--level-ratio`: 4  |
 | .drop-shadow-4 | `--sf-shadow--level-ratio`: 8  |
 | .drop-shadow-5 | `--sf-shadow--level-ratio`: 16 |
-{.table}
 
 ## Описание
 
@@ -41,24 +40,6 @@ description: "Падающая тень (drop-shadow)"
 
 ## Пример использования
 
-```html
-<!-- Элемент без тени -->
-<div class="drop-shadow-0 p-4 radius-1/3 bg-surface">
-    Без тени
-</div>
+:::example {id="utilities/shadows/drop-shadow" label="Результат"}
+:::
 
-<!-- Элемент с небольшим уровнем тени -->
-<div class="drop-shadow-1 p-4 radius-1/3 bg-surface m-top-2">
-    С небольшой тенью
-</div>
-
-<!-- Элемент с глубокой тенью при наведении -->
-<button class="drop-shadow-2 hover:drop-shadow-4 p-2 radius-1/2 bg-primary color-on-surface-inverse m-top-2">
-    Наведи на меня
-</button>
-```
-## Playground
-
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=shadows&group=drop-shadow"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

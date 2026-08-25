@@ -45,7 +45,6 @@ The following variables are used for the Success role:
 | `--sf-on-success-container`        | `--sf-success-10`         | `--sf-success-90`         |
 | `--sf-on-success-container-graphic`| `--sf-success-50`         | `--sf-success-60`         |
 | `--sf-outline-success`             | `--sf-success-50`         | `--sf-success-60`         |
-{.table}
 
 [image17]: /assets/build/img/b64/963cbfcfe6473fa1.png
 [image18]: /assets/build/img/b64/118af2f57773428a.png

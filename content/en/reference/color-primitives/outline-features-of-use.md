@@ -18,7 +18,6 @@ The following variables are used for the Outline role:
 |:----------------------|:---------------------------|:---------------------------|
 | `--sf-outline`        | `--sf-neutral-50`          | `--sf-neutral-60`          |
 | `--sf-outline-variant`| `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
-{.table}
 
 [image24]: /assets/build/img/b64/c5e2dfd48bf76277.png
 [image25]: /assets/build/img/b64/69b024c509358c29.png

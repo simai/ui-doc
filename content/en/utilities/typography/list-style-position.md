@@ -14,7 +14,6 @@ description: "Положение маркера списка (list-style-positio
 |:--------------|:------------------------------|
 | .list-inside  | list-style-position: inside;  |
 | .list-outside | list-style-position: outside; |
-{.table}
 
 
 ## Синтаксис

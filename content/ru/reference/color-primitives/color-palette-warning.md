@@ -33,4 +33,3 @@ description: "Warning"
 | `--sf-warning-15`          | #3d1e00                                                                  |
 | `--sf-warning-10`          | #2e1500                                                                  |
 | `--sf-warning-5`           | #1f0c00                                                                  |
-{.table}

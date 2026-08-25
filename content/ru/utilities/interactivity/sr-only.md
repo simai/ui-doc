@@ -17,9 +17,7 @@ description: "Скрытие и возврат контента для screen re
 |:--|:--|
 | `.sr-only` | Визуально скрыть, оставить в accessibility tree |
 | `.not-sr-only` | Отменить `sr-only` |
-{.table}
-## Playground
+## Пример
+:::example {id="utilities/interactivity/sr-only" label="Результат"}
+:::
 
-&lt;div class="sf-playground overflow-hidden"&gt;
-&lt;iframe title="Пример в Playground" loading="lazy" src="https://play.simai.io/embed.html?component=interactivity&group=sr-only"&gt;&lt;/iframe&gt;
-&lt;/div&gt;

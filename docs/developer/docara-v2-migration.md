@@ -20,12 +20,13 @@ migration.
 
 ## Accepted migration ledger
 
-- Docara runtime: `559593685a2273eca551b1643c90b3f0e897327c`.
+- Stable Docara release: `simai/docara:v2.0.0` from source revision
+  `d879a69f72e00c8329c74ce7d22d0840860f88c4`.
 - Authored Markdown pages: 939.
 - Generated files: 2,259.
-- The exact committed candidate is verified by two byte-identical clean-root
-  builds; its tree-manifest digest is recorded in the release handoff rather
-  than in this file so that an evidence-only commit cannot invalidate itself.
+- The former exact `dev-main` candidate pin is superseded by the public stable
+  package route. Composer now resolves Docara through Packagist, while
+  `composer.lock` preserves the exact release source revision.
 - Static verification: 1,692 HTML pages, 921,721 local references, 0 broken.
 - A repeated migration pass changes 0 Markdown files.
 

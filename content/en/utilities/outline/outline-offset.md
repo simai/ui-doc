@@ -18,7 +18,6 @@ description: "Отступ внешней границы"
 | .outline-offset-2 | outline-offset: var(`--sf-a2`); |
 | .outline-offset-3 | outline-offset: var(`--sf-a3`); |
 | .outline-offset-4 | outline-offset: var(`--sf-a4`); |
-{.table}
 
 *(Числа от 1 до 4 здесь показаны как пример, фактический диапазон значений может быть уточнён в документации.)*
 

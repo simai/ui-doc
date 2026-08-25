@@ -45,7 +45,6 @@ description: "Error"
 | `--sf-on-error-container`         | `--sf-error-10`          | `--sf-error-90`          |
 | `--sf-on-error-container-graphic` | `--sf-error-50`          | `--sf-error-60`          |
 | `--sf-outline-error`              | `--sf-error-50`          | `--sf-error-60`          |
-{.table}
 
 [image13]: /ru/assets/reference/image-13.png
 [image14]: /ru/assets/reference/image-14.png

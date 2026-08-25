@@ -52,7 +52,6 @@ Primary должен быть редким, но выразительным ак
 | `--sf-on-primary-container`         | `--sf-primary-10`          | `--sf-primary-90`          |
 | `--sf-on-primary-container-graphic` | `--sf-primary-50`          | `--sf-primary-60`          |
 | `--sf-outline-primary`              | `--sf-primary-50`          | `--sf-primary-60`          |
-{.table}
 
 [image4]: /ru/assets/reference/image-04.png
 [image5]: /ru/assets/reference/image-05.png
