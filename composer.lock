@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bfd666a6e756452810c07b7bdd812e1",
+    "content-hash": "56688abb5ade2d2913f8171d4854dbe4",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v2.1.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "0e58cc56e6da733d7a534e9e0330936034f86715"
+                "reference": "c24cb112bb3f46b82ba1d60391a0d78d5dcf5f9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/0e58cc56e6da733d7a534e9e0330936034f86715",
-                "reference": "0e58cc56e6da733d7a534e9e0330936034f86715",
+                "url": "https://api.github.com/repos/simai/docara/zipball/c24cb112bb3f46b82ba1d60391a0d78d5dcf5f9d",
+                "reference": "c24cb112bb3f46b82ba1d60391a0d78d5dcf5f9d",
                 "shasum": ""
             },
             "require": {
@@ -1626,9 +1626,9 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara/tree/v2.1.0"
+                "source": "https://github.com/simai/docara/tree/v2.2.0"
             },
-            "time": "2026-08-25T22:59:43+00:00"
+            "time": "2026-08-26T18:39:21+00:00"
         },
         {
             "name": "symfony/clock",
