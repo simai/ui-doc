@@ -389,7 +389,7 @@ window.addEventListener('Buttons:render', (event) => {
 
 - [Подключение компонентов](/ru/framework-components/connection/)
 - [Сгенерированный runtime-справочник кнопок](/ru/framework-components/reference/buttons/)
-- [Loader](/ru/start/loader/)
+- [Подключение Framework](/ru/start/installation/)
 - [Runtime-справочник Icon Buttons](/ru/framework-components/reference/icon-buttons/)
 - [Кнопки в Playground](https://play.simai.io/embed.html?component=buttons&group=buttons)
 - [Плотность в Playground](https://play.simai.io/embed.html?component=buttons&group=tightness)

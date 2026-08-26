@@ -977,6 +977,34 @@
         {
             "from": "ru/reference/properties-of-modifiers/property-structure/typography",
             "to": "ru/reference/properties-of-modifiers/property-structure-typography"
+        },
+        {
+            "from": "ru/start/glossary",
+            "to": "ru/start"
+        },
+        {
+            "from": "ru/start/integration-patterns",
+            "to": "ru/start/installation"
+        },
+        {
+            "from": "ru/start/introduction",
+            "to": "ru/start"
+        },
+        {
+            "from": "ru/start/loader",
+            "to": "ru/start/installation"
+        },
+        {
+            "from": "ru/start/playground",
+            "to": "ru/start"
+        },
+        {
+            "from": "ru/start/project-setup",
+            "to": "ru/start/installation"
+        },
+        {
+            "from": "ru/start/quickstart",
+            "to": "ru/start"
         }
     ]
 }

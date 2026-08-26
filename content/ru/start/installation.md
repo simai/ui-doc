@@ -1,71 +1,80 @@
 ---
-title: "Установка"
-description: "Подключение SIMAI Framework 5.4.0 из локальной неизменяемой поставки или по опубликованному тегу."
+title: "Подключение к проекту"
+description: "Подключение SIMAI Framework через CDN или локальные статические файлы."
 ---
 
-# Установка
+# Подключение к проекту
 
-Для работы нужны `core.css`, `core.js` и неизменённая структура каталога
-`distr`. Базовый URL `window.sfPath` задайте до подключения `core.js`.
+SIMAI Framework поставляется как готовый каталог `distr`. Его можно отдавать с
+CDN или хранить вместе с проектом. Сборщик Framework для этого не нужен.
 
-## Локальные статические файлы
+## Выберите способ
 
-Скопируйте весь `distr` из одной поставки в публичную директорию проекта:
+| Способ | Когда подходит |
+| --- | --- |
+| CDN | знакомство, прототип и быстрый запуск |
+| Локальные файлы | рабочий проект, собственный кеш и независимость от внешнего CDN |
 
-```html
-<link rel="stylesheet" href="/assets/simai-framework/ui/distr/core/css/core.css">
-
-<script>
-  window.sfPath = '/assets/simai-framework/ui/distr';
-  window.SF_BOOT_CONFIG = {
-    preloader: { enabled: false }
-  };
-</script>
-<script src="/assets/simai-framework/ui/distr/core/js/core.js"></script>
-```
-
-Внутри `distr` должны сохраниться каталоги `core`, `utility` и `component`.
-Загрузчик сам добавляет к `window.sfPath` нужные внутренние пути.
-
-## Smart Components
-
-Каталог `smart` публикуется отдельно. `window.sfSmartPath` должен указывать на
-директорию, внутри которой находится `smart/`:
-
-```html
-<script>
-  window.sfPath = '/assets/simai-framework/ui/distr';
-  window.sfSmartPath = '/assets/simai-framework/ui-smart';
-</script>
-```
-
-Например, файл `smart/modal/js/modal.js` будет доступен по адресу
-`/assets/simai-framework/ui-smart/smart/modal/js/modal.js`.
+В обоих случаях используйте одну фиксированную версию. Не подключайте `main`
+или `latest`.
 
 ## CDN
 
-После публикации версии замените `{tag}` на точный неизменяемый тег. Не
-используйте `main`, `latest` или другую плавающую ссылку:
+Для опубликованной версии `v5.3.2` добавьте в общий шаблон страницы:
 
 ```html
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/simai/ui@{tag}/distr/core/css/core.css">
+      href="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/css/core.css">
+
 <script>
-  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@{tag}/distr';
+  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/';
+  window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
 </script>
-<script src="https://cdn.jsdelivr.net/gh/simai/ui@{tag}/distr/core/js/core.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/js/core.js"></script>
 ```
 
-Текущая документация собрана на закреплённой паре-кандидате `5.4.0`; её точные
-ревизии и ограничения указаны на странице
-[«Совместимость и обновление»](/ru/start/compatibility/). Кандидат не следует
-подменять вымышленным CDN-тегом до официальной публикации.
+`window.sfPath` задаётся до `core.js`. По этому адресу загрузчик находит
+утилиты и компоненты.
 
-## Проверка подключения
+## Локальные файлы
 
-- `window.SF` и `window.SF.Loader` доступны в консоли;
-- `core.css`, `core.js` и найденные модули загружаются без `404`;
-- событие `sf-loader-ready` возникает один раз;
-- пример из [быстрого старта](/ru/start/quickstart/) отображается со стилями.
+Возьмите весь каталог `distr` из одного опубликованного релиза и скопируйте его
+в публичную папку проекта. Не выбирайте из поставки отдельные файлы: загрузчику
+нужна сохранённая внутренняя структура.
 
-Подробнее о поиске модулей — в разделе [«Загрузчик»](/ru/start/loader/).
+```text
+public/
+└── assets/
+    └── simai-framework/
+        └── distr/
+            ├── core/
+            ├── component/
+            ├── utility/
+            └── rule/
+```
+
+Подключение для этой структуры:
+
+```html
+<link rel="stylesheet" href="/assets/simai-framework/distr/core/css/core.css">
+<script>
+  window.sfPath = '/assets/simai-framework/distr/';
+  window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
+</script>
+<script src="/assets/simai-framework/distr/core/js/core.js"></script>
+```
+
+В статическом сайте эти теги размещаются в HTML. В Laravel или Larena — в
+общем Blade-шаблоне, в 1С-Битрикс — в шаблоне сайта или менеджере ресурсов.
+Backend-обёртка для Framework не требуется.
+
+## Перед публикацией
+
+1. Проверьте отсутствие `404` и ошибок Console.
+2. Откройте основные страницы на мобильной и десктопной ширине.
+3. Проверьте светлую и тёмную тему, если проект их поддерживает.
+4. Зафиксируйте версию Framework рядом с другими зависимостями проекта.
+
+Smart Components имеют отдельное подключение, описанное в
+[их разделе](/ru/smart-components/connection/). Core автоматически находит
+используемые на странице утилиты и компоненты и загружает их из `window.sfPath`.

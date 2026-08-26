@@ -1,29 +1,89 @@
 ---
 title: "Старт"
-description: "Подключение SIMAI Framework и первый интерфейс."
+description: "Первая рабочая страница на SIMAI Framework за несколько минут."
 ---
 
 # Старт
 
-Здесь собран путь от первого знакомства с SIMAI Framework до подключения к
-реальному веб-проекту.
+Подключите SIMAI Framework к обычной HTML-странице и сразу проверьте результат.
+Для этого примера не нужны npm, сборщик или backend.
 
-## С чего начать
+## Что понадобится
 
-1. Прочитайте [введение](/ru/start/introduction/) и выберите нужный слой.
-2. [Подключите Framework](/ru/start/installation/) через CDN или локальные
-   статические файлы.
-3. Соберите страницу из [быстрого старта](/ru/start/quickstart/).
-4. Разберитесь с [модификаторами, размерами, цветами и
-   типографикой](/ru/fundamentals/).
-5. Найдите нужный CSS-класс в [каталоге утилит](/ru/utilities/).
+- браузер;
+- редактор кода;
+- Python 3 или другой локальный HTTP-сервер.
 
-## Что входит в SIMAI Framework
+## 1. Создайте страницу
 
-- **Core** — базовые стили, дизайн-токены и загрузчик;
-- **утилиты** — CSS-классы для макета, размеров и оформления;
-- **компоненты** — готовые элементы интерфейса;
-- **Smart Components** — веб-компоненты с собственной логикой.
+Создайте пустую папку и сохраните в ней файл `index.html`:
 
-Каждый слой подключается по мере необходимости. Для работы только с
-CSS-утилитами достаточно Core и каталога `utility`.
+```html
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Первая страница на SIMAI Framework</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/css/core.css">
+</head>
+<body>
+  <main class="p-4">
+    <article class="p-4 bg-surface-container radius-2">
+      <h1 class="sf-h-2 m-bottom-2">SIMAI Framework подключён</h1>
+      <p class="sf-body-medium color-on-surface">
+        Стили, токены и утилиты работают.
+      </p>
+    </article>
+  </main>
+
+  <script>
+    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/';
+    window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/js/core.js"></script>
+</body>
+</html>
+```
+
+В примере используется опубликованная и неизменяемая версия `v5.3.2`.
+Фиксированная версия защищает проект от неожиданных изменений.
+
+## 2. Запустите локальный сервер
+
+Откройте терминал в папке с файлом и выполните:
+
+```bash
+python3 -m http.server 8080
+```
+
+Затем откройте [http://localhost:8080](http://localhost:8080). Вы должны увидеть
+карточку с отступами, фоном, скруглением и типографикой Framework.
+
+## 3. Проверьте подключение
+
+Откройте инструменты разработчика в браузере:
+
+- на вкладке Network не должно быть ответов `404`;
+- в Console не должно быть ошибок загрузки Framework;
+- выражение `window.SF?.Loader` должно вернуть загрузчик, а не `undefined`.
+
+Классы в примере меняют страницу прямо в разметке: `p-4` задаёт отступ,
+`radius-2` — скругление, а `bg-surface-container` — цвет поверхности. Загрузчик
+находит эти классы и подключает нужные модули автоматически.
+
+## Попробуйте без проекта
+
+В [SIMAI Playground](https://play.simai.io/) можно открыть готовый пример,
+изменить классы и сразу увидеть результат в браузере. Это необязательный шаг:
+для подключения Framework к проекту достаточно инструкции выше.
+
+## Куда дальше
+
+- [Подключение к реальному проекту](/ru/start/installation/) — локальные файлы,
+  CDN и структура публичной папки.
+- [Основы](/ru/fundamentals/) — условия, размеры, цвета и типографика.
+- [Каталог утилит](/ru/utilities/) — доступные CSS-классы по задачам.
+- [Компоненты](/ru/framework-components/) — готовые элементы интерфейса.
