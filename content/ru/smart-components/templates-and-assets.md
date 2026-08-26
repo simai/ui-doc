@@ -6,7 +6,7 @@ description: "Встроенные и внешние шаблоны Smart Compon
 # Шаблоны и ассеты Smart Components
 
 Обычный Smart-компонент поставляется с JavaScript и встроенным шаблоном
-`smart/&lt;name&gt;/template/default.js`. Наличие собственного CSS и дополнительных
+`smart/<name>/template/default.js`. Наличие собственного CSS и дополнительных
 файлов определяется Loader-правилом конкретной записи.
 
 ## Внешний шаблон
@@ -22,7 +22,7 @@ description: "Встроенные и внешние шаблоны Smart Compon
 
 Поддерживается и совместимый вариант `window.SFSmartTemplatePath`. Для
 компонента и выбранного имени шаблона запрашиваются файлы вида
-`&lt;base&gt;/&lt;component&gt;/&lt;template&gt;/index.js` и связанный CSS, если он предусмотрен
+`<base>/<component>/<template>/index.js` и связанный CSS, если он предусмотрен
 реализацией.
 
 Не предполагается, что каждый компонент имеет отдельный CSS или одинаковые

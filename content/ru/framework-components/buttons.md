@@ -4,9 +4,9 @@
 визуальные варианты, пять размеров, иконки, состояния, сегменты и JavaScript API
 для программного создания кнопок.
 
-Используйте нативный `&lt;button&gt;` для команды: сохранить, отправить, подтвердить,
+Используйте нативный `<button>` для команды: сохранить, отправить, подтвердить,
 отменить или открыть интерфейс. Для перехода на другую страницу используйте
-`&lt;a&gt;`, а для действия без видимой подписи — компонент `icon-buttons`.
+`<a>`, а для действия без видимой подписи — компонент `icon-buttons`.
 
 ## Быстрый старт
 
@@ -26,7 +26,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 
 | Часть | Назначение |
 | --- | --- |
-| `&lt;button&gt;` | Нативная семантика, клавиатурное управление и атрибуты формы. |
+| `<button>` | Нативная семантика, клавиатурное управление и атрибуты формы. |
 | `sf-button` | Обязательный базовый класс и правило автоматического подключения. |
 | `sf-button--default` | Визуальный тип кнопки. |
 | `sf-button--primary` | Цветовая схема. |
@@ -39,20 +39,24 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 Выбирайте вариант по важности действия, а не по личному предпочтению. В одном
 контексте обычно достаточно одной основной filled-кнопки.
 
-&lt;div class="flex flex-wrap gap-2 items-cross-center"&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;
-    &lt;span class="sf-button-text-container"&gt;Основное&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--tonal sf-button--secondary sf-button--size-1"&gt;
-    &lt;span class="sf-button-text-container"&gt;Вторичное&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1"&gt;
-    &lt;span class="sf-button-text-container"&gt;Нейтральное&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--link sf-button--primary sf-button--size-1"&gt;
-    &lt;span class="sf-button-text-container"&gt;Текстовое&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
+:::example {label="Результат"}
+```html
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+    <span class="sf-button-text-container">Основное</span>
+  </button>
+  <button type="button" class="sf-button sf-button--tonal sf-button--secondary sf-button--size-1">
+    <span class="sf-button-text-container">Вторичное</span>
+  </button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1">
+    <span class="sf-button-text-container">Нейтральное</span>
+  </button>
+  <button type="button" class="sf-button sf-button--link sf-button--primary sf-button--size-1">
+    <span class="sf-button-text-container">Текстовое</span>
+  </button>
+</div>
+```
+:::
 
 | Вариант | Классы | Когда использовать |
 | --- | --- | --- |
@@ -80,13 +84,17 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 интерфейсов; дробные размеры подходят плотным панелям, а `2` и `3` — крупным
 акцентным действиям.
 
-&lt;div class="flex flex-wrap gap-2 items-cross-center"&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1/3"&gt;&lt;span class="sf-button-text-container"&gt;1/3&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1/2"&gt;&lt;span class="sf-button-text-container"&gt;1/2&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;1&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-2"&gt;&lt;span class="sf-button-text-container"&gt;2&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-3"&gt;&lt;span class="sf-button-text-container"&gt;3&lt;/span&gt;&lt;/button&gt;
-&lt;/div&gt;
+:::example {label="Результат"}
+```html
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1/3"><span class="sf-button-text-container">1/3</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1/2"><span class="sf-button-text-container">1/2</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">1</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-2"><span class="sf-button-text-container">2</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-3"><span class="sf-button-text-container">3</span></button>
+</div>
+```
+:::
 
 | Значение | Класс | Рекомендуемый контекст |
 | --- | --- | --- |
@@ -99,19 +107,23 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 
 ## Иконки
 
-Иконка задаётся элементом `&lt;i class="sf-icon"&gt;имя_иконки&lt;/i&gt;`. Она может
+Иконка задаётся элементом `<i class="sf-icon">имя_иконки</i>`. Она может
 располагаться до текста, после него или с обеих сторон.
 
-&lt;div class="flex flex-wrap gap-2 items-cross-center"&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;
-    &lt;i class="sf-icon" aria-hidden="true"&gt;add&lt;/i&gt;
-    &lt;span class="sf-button-text-container"&gt;Добавить&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1"&gt;
-    &lt;span class="sf-button-text-container"&gt;Далее&lt;/span&gt;
-    &lt;i class="sf-icon" aria-hidden="true"&gt;chevron_right&lt;/i&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
+:::example {label="Результат"}
+```html
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+    <i class="sf-icon" aria-hidden="true">add</i>
+    <span class="sf-button-text-container">Добавить</span>
+  </button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1">
+    <span class="sf-button-text-container">Далее</span>
+    <i class="sf-icon" aria-hidden="true">chevron_right</i>
+  </button>
+</div>
+```
+:::
 
 ```html
 <button type="button"
@@ -148,11 +160,15 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 `segment-end`. Модификаторы учитывают направление `ltr` и `rtl`; менять порядок
 скруглений вручную не нужно.
 
-&lt;div class="flex items-cross-center"&gt;
-  &lt;button type="button" class="sf-button segment-start sf-button--outline sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;День&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button segment-middle sf-button--outline sf-button--primary sf-button--size-1 active" aria-pressed="true"&gt;&lt;span class="sf-button-text-container"&gt;Неделя&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button segment-end sf-button--outline sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;Месяц&lt;/span&gt;&lt;/button&gt;
-&lt;/div&gt;
+:::example {label="Результат"}
+```html
+<div class="flex items-cross-center">
+  <button type="button" class="sf-button segment-start sf-button--outline sf-button--primary sf-button--size-1"><span class="sf-button-text-container">День</span></button>
+  <button type="button" class="sf-button segment-middle sf-button--outline sf-button--primary sf-button--size-1 active" aria-pressed="true"><span class="sf-button-text-container">Неделя</span></button>
+  <button type="button" class="sf-button segment-end sf-button--outline sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Месяц</span></button>
+</div>
+```
+:::
 
 ```html
 <div class="flex items-cross-center" role="group" aria-label="Период отчёта">
@@ -177,12 +193,16 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 
 ## Состояния
 
-&lt;div class="flex flex-wrap gap-2 items-cross-center"&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;Обычная&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 active" aria-pressed="true"&gt;&lt;span class="sf-button-text-container"&gt;Активная&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" disabled class="sf-button sf-button--default sf-button--primary sf-button--size-1"&gt;&lt;span class="sf-button-text-container"&gt;Недоступна&lt;/span&gt;&lt;/button&gt;
-  &lt;button type="button" disabled aria-busy="true" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading"&gt;&lt;span class="sf-button-text-container"&gt;Сохранение&lt;/span&gt;&lt;/button&gt;
-&lt;/div&gt;
+:::example {label="Результат"}
+```html
+<div class="flex flex-wrap gap-2 items-cross-center">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Обычная</span></button>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 active" aria-pressed="true"><span class="sf-button-text-container">Активная</span></button>
+  <button type="button" disabled class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Недоступна</span></button>
+  <button type="button" disabled aria-busy="true" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading"><span class="sf-button-text-container">Сохранение</span></button>
+</div>
+```
+:::
 
 | Состояние | Как задаётся | Примечание |
 | --- | --- | --- |
@@ -214,7 +234,7 @@ Loader обнаруживает класс `sf-button` в DOM и подключ�
 
 ## Кнопка, ссылка и форма
 
-- Команда выполняется через `&lt;button&gt;`; переход — через `&lt;a href="…"&gt;`.
+- Команда выполняется через `<button>`; переход — через `<a href="…">`.
 - У кнопки вне отправки формы задавайте `type="button"`.
 - Для отправки используйте `type="submit"`; для сброса — `type="reset"`.
 - Не имитируйте disabled-состояние только классом `disabled`: используйте
@@ -279,7 +299,7 @@ JavaScript-конструктор безопасно задаёт `type="button"
 | `utilities` | `{}` | Дополнительные utility-классы. |
 
 
-`attrs` передаёт атрибуты на `&lt;button&gt;`. `class` и `className` добавляют классы,
+`attrs` передаёт атрибуты на `<button>`. `class` и `className` добавляют классы,
 остальные ключи становятся HTML-атрибутами. `id` верхнего уровня становится
 `id` кнопки.
 
@@ -344,7 +364,7 @@ window.addEventListener('Buttons:render', (event) => {
 
 ## Доступность
 
-- Сохраняйте нативный `&lt;button&gt;` и доступное имя.
+- Сохраняйте нативный `<button>` и доступное имя.
 - Не удаляйте видимый фокус и проверяйте управление клавишами `Tab`, `Enter` и
   `Space`.
 - Декоративным иконкам задавайте `aria-hidden="true"`.
@@ -371,5 +391,5 @@ window.addEventListener('Buttons:render', (event) => {
 - [Сгенерированный runtime-справочник кнопок](/ru/framework-components/reference/buttons/)
 - [Loader](/ru/start/loader/)
 - [Runtime-справочник Icon Buttons](/ru/framework-components/reference/icon-buttons/)
-- &lt;a href="https://play.simai.io/embed.html?component=buttons&amp;group=buttons" target="_blank" rel="noopener noreferrer"&gt;Кнопки в Playground&lt;/a&gt;
-- &lt;a href="https://play.simai.io/embed.html?component=buttons&amp;group=tightness" target="_blank" rel="noopener noreferrer"&gt;Плотность в Playground&lt;/a&gt;
+- [Кнопки в Playground](https://play.simai.io/embed.html?component=buttons&group=buttons)
+- [Плотность в Playground](https://play.simai.io/embed.html?component=buttons&group=tightness)

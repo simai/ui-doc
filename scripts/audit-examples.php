@@ -27,10 +27,12 @@ $advisories = [];
 $tableMarkers = 0;
 $redundantFences = 0;
 $duplicateHeadings = 0;
+$escapedAnchorLinks = 0;
 foreach ($markdownPaths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
     $tableMarkers += preg_match_all('/^\h*\{\.table\}\h*$/m', $markdown);
+    $escapedAnchorLinks += preg_match_all('/^\h*-\h+&lt;a\h+href=/mi', $markdown);
     if (preg_match(
         '/^:::example\s+\{[^}]*\bid="([^"]+)"[^}]*}\s*$.*?^:::\s*$/ms',
         $markdown,
@@ -130,6 +132,9 @@ if ($redundantFences > 0) {
 if ($duplicateHeadings > 0) {
     $blockers[] = ['code' => 'duplicate_example_heading', 'count' => $duplicateHeadings];
 }
+if ($escapedAnchorLinks > 0) {
+    $blockers[] = ['code' => 'escaped_anchor_link_visible', 'count' => $escapedAnchorLinks];
+}
 foreach (['buttons_without_type', 'images_without_alt', 'known_class_typos'] as $metric) {
     if ($metrics[$metric] > 0) {
         $blockers[] = ['code' => $metric, 'count' => $metrics[$metric]];
@@ -146,6 +151,7 @@ $report = [
         'table_markers' => $tableMarkers,
         'redundant_demonstration_fences' => $redundantFences,
         'duplicate_example_headings' => $duplicateHeadings,
+        'escaped_anchor_links' => $escapedAnchorLinks,
         'blocker_count' => count($blockers),
         'advisory_count' => count($advisories),
     ],

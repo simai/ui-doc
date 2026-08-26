@@ -19,7 +19,7 @@ Core и Smart-ассеты публикуются двумя каталогам�
 <sf-button text="Сохранить" scheme="primary"></sf-button>
 ```
 
-Loader распознаёт тег `&lt;sf-button&gt;`, применяет правило `cl-buttons`, подключает
+Loader распознаёт тег `<sf-button>`, применяет правило `cl-buttons`, подключает
 `ui-smart/smart/buttons/js/buttons.js` и зависимый обычный компонент `buttons`.
 Для другого элемента используйте тег и правило с его reference-страницы.
 
