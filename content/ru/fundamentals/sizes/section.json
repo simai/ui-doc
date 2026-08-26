@@ -1,4 +1,5 @@
 {
   "schema": "docara.section.v1",
-  "title": "Система размеров"
+  "title": "Система размеров",
+  "navigation": {"order": 40}
 }

@@ -5,31 +5,35 @@ description: "Базовые понятия и справочные систем
 
 # Основы
 
-Этот раздел объясняет язык утилит и дизайн-систему SIMAI Framework: как
-составляются модификаторы, какие значения они принимают и на какие токены
-опираются размеры, цвета, адаптивность и типографика.
+Здесь описан общий язык SIMAI Framework: как читать классы, добавлять условия
+и выбирать значения из единой дизайн-системы. Для подключения Framework к
+проекту сначала пройдите раздел [«Старт»](/ru/start/).
 
 ## С чего начать
 
-1. Изучите [модификаторы](/ru/fundamentals/modifiers/), [условия действия](/ru/fundamentals/conditions/) и [параметры модификаторов](/ru/fundamentals/modifier-parameters/modifier-parameters/).
-2. Разберитесь со [значениями и шкалами](/ru/fundamentals/values-and-scales/), затем используйте полный справочник [размеров](/ru/fundamentals/sizes/sizes/) и [цветов](/ru/fundamentals/colors-and-themes/).
-3. Для системной настройки проекта перейдите к [дизайн-токенам](/ru/fundamentals/design-tokens/), [контрольным точкам](/ru/fundamentals/breakpoints/) и [типографике](/ru/fundamentals/typography-system/).
+1. [Модификаторы](/ru/fundamentals/modifiers/) — как устроен один класс.
+2. [Условия действия](/ru/fundamentals/conditions/) — как менять интерфейс на
+   разных ширинах и в интерактивных состояниях.
+3. [Значения и шкалы](/ru/fundamentals/values-and-scales/) — какие значения
+   можно передавать утилитам.
+4. [Система размеров](/ru/fundamentals/sizes/sizes/) и
+   [дизайн-токены](/ru/fundamentals/design-tokens/) — как сохранять единый
+   ритм интерфейса.
 
 ## Разделы
 
-- [Модификаторы](/ru/fundamentals/modifiers/) — состав и назначение модификаторов.
-- [Сокращения свойств](/ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties/) — короткие имена часто используемых свойств.
-- [Условия действия](/ru/fundamentals/conditions/) — адаптивные условия и условия состояния.
-- [Условия состояния](/ru/fundamentals/states/) — состояния `hover`, `focus` и `active`.
-- [Параметры модификаторов](/ru/fundamentals/modifier-parameters/modifier-parameters/) — оси, стороны и углы.
-- [Направления](/ru/fundamentals/directions/directions/) и [выравнивание](/ru/fundamentals/alignment/alignment/) — физические и логические направления.
-- [Значения и шкалы](/ru/fundamentals/values-and-scales/) — типы значений и правила выбора.
-- [Размеры](/ru/fundamentals/sizes/sizes/) — полная шкала из 90 размерных примитивов и интервалы.
-- [Цвета и темы](/ru/fundamentals/colors-and-themes/) — палитры, семантические роли и светлая/тёмная темы.
-- [Дизайн-токены](/ru/fundamentals/design-tokens/) — интервалы, радиусы, тени, иконки, контейнеры и слои.
-- [Контрольные точки](/ru/fundamentals/breakpoints/) — основа адаптивного поведения.
-- [Типографика](/ru/fundamentals/typography-system/) — семейства, веса, размеры и высоты строк.
-- [Ограничения модификаторов](/ru/fundamentals/best-practices/) — минимальные и максимальные значения свойств.
+- [Размеры](/ru/fundamentals/sizes/sizes/) — правила выбора и полная шкала из
+  90 размерных примитивов.
+- [Интервалы контента](/ru/fundamentals/content-spacing/) — отступы между
+  смысловыми частями страницы.
+- [Цвета и темы](/ru/fundamentals/colors-and-themes/) — палитры, семантические
+  роли и светлая/тёмная темы.
+- [Дизайн-токены](/ru/fundamentals/design-tokens/) — интервалы, радиусы, тени,
+  иконки, контейнеры и слои.
+- [Типографика](/ru/fundamentals/typography-system/) — семейства, веса, размеры
+  и высоты строк.
+- [Адаптивная система размеров](/ru/fundamentals/adaptive-sizing-system/) —
+  значения токенов на разных ширинах.
 
 ## Примитивы, токены и утилиты
 

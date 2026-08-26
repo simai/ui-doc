@@ -772,23 +772,103 @@
         },
         {
             "from": "ru/fundamentals/abbreviations-of-properties",
-            "to": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties"
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties",
+            "to": "ru/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/alignment",
-            "to": "ru/fundamentals/alignment/alignment"
+            "to": "ru/fundamentals/values-and-scales"
+        },
+        {
+            "from": "ru/fundamentals/alignment/alignment",
+            "to": "ru/fundamentals/values-and-scales"
+        },
+        {
+            "from": "ru/fundamentals/best-practices",
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/breakpoints",
+            "to": "ru/fundamentals/conditions"
         },
         {
             "from": "ru/fundamentals/directions",
-            "to": "ru/fundamentals/directions/directions"
+            "to": "ru/fundamentals/values-and-scales"
+        },
+        {
+            "from": "ru/fundamentals/directions/directions",
+            "to": "ru/fundamentals/values-and-scales"
         },
         {
             "from": "ru/fundamentals/modifier-parameters",
-            "to": "ru/fundamentals/modifier-parameters/modifier-parameters"
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/modifier-parameters/angle-parameter",
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/modifier-parameters/axle-designations",
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/modifier-parameters/examples-of-parameters-in-modifiers",
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/modifier-parameters/modifier-parameters",
+            "to": "ru/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/modifier-parameters/side-parameter",
+            "to": "ru/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/sizes",
             "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/direct-translation",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/from-old-to-new",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/indents",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/mnemonic",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/relationship-between-letters-and-multipliers",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/reverse-conversion",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/reverse-translation",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/size-conversion",
+            "to": "ru/fundamentals/sizes/sizes"
+        },
+        {
+            "from": "ru/fundamentals/states",
+            "to": "ru/fundamentals/conditions"
+        },
+        {
+            "from": "ru/fundamentals/values",
+            "to": "ru/fundamentals/values-and-scales"
         },
         {
             "from": "ru/reference/color-primitives",
