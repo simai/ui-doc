@@ -1,17 +1,10 @@
 ---
 title: "Полосы"
 description: "Полосы"
+tags: [stripe, sm, md, lg, xl]
 ---
 
 # Полосы
-
-
-!rtags[stripe sm md lg xl]
-
-
-
-
-
 
 С помощью модификаторов `stripe-{1...4}` можно добавить к фону полосатый паттерн.
 

@@ -1,12 +1,10 @@
 ---
 title: "Точки градиента (gradient-stops)"
 description: "Утилиты from/via/to для цветов градиента"
+tags: [gradient-stops]
 ---
 
 # Точки градиента (gradient-stops)
-
-!rtags[gradient-stops]
-
 
 Утилиты `from-*`, `via-*`, `to-*` задают цветовые точки градиента:
 - `from-*` -> `--sf-gradient--color-1`

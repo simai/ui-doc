@@ -20,17 +20,17 @@ CDN или хранить вместе с проектом. Сборщик Frame
 
 ## CDN
 
-Для опубликованной версии `v5.3.2` добавьте в общий шаблон страницы:
+Для опубликованной версии `v5.4.0` добавьте в общий шаблон страницы:
 
 ```html
 <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/css/core.css">
+      href="https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/core/css/core.css">
 
 <script>
-  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/';
+  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/';
   window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
 </script>
-<script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/js/core.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/core/js/core.js"></script>
 ```
 
 `window.sfPath` задаётся до `core.js`. По этому адресу загрузчик находит

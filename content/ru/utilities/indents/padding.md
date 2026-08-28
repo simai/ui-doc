@@ -1,12 +1,10 @@
 ---
 title: "Внутренний отступ (padding)"
 description: "Внутренний отступ (padding)"
+tags: [padding, sm, md, lg, xl]
 ---
 
 # Внутренний отступ (padding)
-
-!rtags[padding sm md lg xl]
-
 
 `padding` управляет расстоянием от контента до границ элемента. Размеры привязаны к токенам `--sf-space-*`.
 

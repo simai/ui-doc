@@ -1,13 +1,10 @@
 ---
 title: "Повтор фона"
 description: "Повтор фона"
+tags: [background-repeat, sm, md, lg, xl]
 ---
 
 # Повтор фона
-
-!rtags[background-repeat sm md lg xl]
-
-
 
 С помощью модификаторов `background-repeat` вы можете управлять тем, как будет повторяться фоновое изображение внутри
 элемента.

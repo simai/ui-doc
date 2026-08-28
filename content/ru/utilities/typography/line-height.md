@@ -1,12 +1,10 @@
 ---
 title: "Высота строки (line-height)"
 description: "Высота строки (line-height)"
+tags: [line-height, sm, md, lg, xl]
 ---
 
 # Высота строки (line-height)
-
-!rtags[line-height sm md lg xl]
-
 
 С помощью модификаторов вы можете задать фиксированную или относительную высоту строки.
 

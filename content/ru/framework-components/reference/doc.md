@@ -1,6 +1,6 @@
 ---
 title: "Doc"
-description: "Runtime-контракт компонента doc в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента doc в SIMAI Framework 5.4.0."
 ---
 
 # Doc

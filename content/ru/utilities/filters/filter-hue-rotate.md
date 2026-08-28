@@ -1,13 +1,10 @@
 ---
 title: "Вращение оттенка элемента (filter-hue-rotate)"
 description: "Вращение оттенка элемента (filter-hue-rotate)"
+tags: [filter-hue-rotate, hover]
 ---
 
 # Вращение оттенка элемента (filter-hue-rotate)
-
-!rtags[filter-hue-rotate hover]
-
-
 
 Данный модификатор позволяет управлять вращением оттенка (цветового тона) элемента.
 

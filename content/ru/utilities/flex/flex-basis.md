@@ -1,12 +1,10 @@
 ---
 title: "Базисный размер (flex-basis)"
 description: "Базисный размер (flex-basis)"
+tags: [flex-basis, sm, md, lg, xl]
 ---
 
 # Базисный размер (flex-basis)
-
-!rtags[flex-basis sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно задать начальный размер флекс-элемента, определяя, сколько места он
 займёт до распределения оставшегося пространства.

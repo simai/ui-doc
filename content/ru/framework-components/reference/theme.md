@@ -1,6 +1,6 @@
 ---
 title: "Theme"
-description: "Runtime-контракт компонента theme в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента theme в SIMAI Framework 5.4.0."
 ---
 
 # Theme

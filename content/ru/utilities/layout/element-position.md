@@ -1,12 +1,10 @@
 ---
 title: "Позиция элемента (element-position)"
 description: "Позиция элемента (element-position)"
+tags: [element-position, sm, md, lg, xl]
 ---
 
 # Позиция элемента (element-position)
-
-!rtags[element-position sm md lg xl]
-
 
 Модификаторы позиционирования управляют расположением элемента внутри родительского контейнера. Работают в сочетании с
 `position: relative/absolute/fixed/sticky`.

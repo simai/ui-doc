@@ -1,13 +1,10 @@
 ---
 title: "События указателя (pointer-events)"
 description: "События указателя (pointer-events)"
+tags: [pointer-events]
 ---
 
 # События указателя (pointer-events)
-
-!rtags[pointer-events]
-
-
 
 С помощью модификаторов pointer-events вы можете управлять тем, будет ли элемент реагировать на события указателя (
 например, клики мыши или касания).

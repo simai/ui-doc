@@ -1,12 +1,10 @@
 ---
 title: "Оформление ссылок"
 description: "Оформление ссылок"
+tags: [text-decoration-style]
 ---
 
 # Оформление ссылок
-
-!rtags[text-decoration-style]
-
 
 Утилиты задают стиль подчеркивания ссылки.
 

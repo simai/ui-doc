@@ -1,6 +1,6 @@
 ---
 title: "Flags"
-description: "API и runtime-контракт Smart-компонента flags в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента flags в SIMAI Framework 5.4.0."
 ---
 
 # Flags

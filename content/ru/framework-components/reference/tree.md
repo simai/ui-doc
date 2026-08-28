@@ -1,6 +1,6 @@
 ---
 title: "Tree"
-description: "Runtime-контракт компонента tree в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента tree в SIMAI Framework 5.4.0."
 ---
 
 # Tree

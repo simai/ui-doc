@@ -1,17 +1,10 @@
 ---
 title: "Контрастность фона элемента (backdrop-contrast)"
 description: "Контрастность фона элемента (backdrop-contrast)"
+tags: [backdrop-filter-contrast, hover]
 ---
 
 # Контрастность фона элемента (backdrop-contrast)
-
-
-!rtags[backdrop-filter-contrast hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять контрастностью фона элемента.
 

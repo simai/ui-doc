@@ -1,6 +1,6 @@
 ---
 title: "Tags"
-description: "Runtime-контракт компонента tags в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента tags в SIMAI Framework 5.4.0."
 ---
 
 # Tags

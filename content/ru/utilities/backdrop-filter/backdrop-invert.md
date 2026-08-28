@@ -1,17 +1,10 @@
 ---
 title: "Инвертирование цвета фона элемента (backdrop-invert)"
 description: "Инвертирование цвета фона элемента (backdrop-invert)"
+tags: [backdrop-filter-invert, hover]
 ---
 
 # Инвертирование цвета фона элемента (backdrop-invert)
-
-
-!rtags[backdrop-filter-invert hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять инвертированием цвета фона элемента.
 

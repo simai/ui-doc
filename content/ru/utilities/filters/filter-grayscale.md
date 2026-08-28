@@ -1,13 +1,10 @@
 ---
 title: "Монохромность элемента (filter-grayscale)"
 description: "Монохромность элемента (filter-grayscale)"
+tags: [filter-grayscale, hover]
 ---
 
 # Монохромность элемента (filter-grayscale)
-
-!rtags[filter-grayscale hover]
-
-
 
 Данный модификатор позволяет управлять оттенком серого для элемента.
 Убираем адаптивность (`sm`, `md`, `lg`, `xl`), оставляем поддержку `hover`.

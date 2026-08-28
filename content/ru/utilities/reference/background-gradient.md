@@ -1,6 +1,6 @@
 ---
 title: "Background Gradient"
-description: "Точный Loader- и CSS-контракт утилиты background-gradient в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты background-gradient в SIMAI Framework 5.4.0."
 ---
 
 # Background Gradient

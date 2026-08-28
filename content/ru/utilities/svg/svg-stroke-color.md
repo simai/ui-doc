@@ -1,16 +1,10 @@
 ---
 title: "Цвет обводки"
 description: "Цвет обводки"
+tags: [stroke-color, hover]
 ---
 
 # Цвет обводки
-
-
-!rtags[stroke-color hover]
-
-
-
-
 
 Классы `stroke*` задают `stroke` у SVG.
 

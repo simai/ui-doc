@@ -1,17 +1,10 @@
 ---
 title: "Сепия подложки (backdrop-sepia)"
 description: "Сепия подложки (backdrop-sepia)"
+tags: [backdrop-filter-sepia, hover]
 ---
 
 # Сепия подложки (backdrop-sepia)
-
-
-!rtags[backdrop-filter-sepia hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять отображением фона элемента как сепия.
 

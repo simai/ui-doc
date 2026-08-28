@@ -1,12 +1,10 @@
 ---
 title: "Промежутки (space)"
 description: "Промежутки (space)"
+tags: [space, sm, md, lg, xl]
 ---
 
 # Промежутки (space)
-
-!rtags[space sm md lg xl]
-
 
 `space` добавляет равномерные отступы между соседними дочерними элементами, не затрагивая крайние.
 

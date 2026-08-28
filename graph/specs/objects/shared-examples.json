@@ -4,12 +4,12 @@
   "kind": "capability",
   "subtype": "feature",
   "title": "Repository-owned shared examples",
-  "summary": "The root examples tree contains 214 canonical reusable HTML-first demonstrations consumed by 221 Markdown pages, with optional CSS, JavaScript and local assets published by Docara. Unique Russian component and design-system demonstrations remain valid inline Docara Example blocks. Deterministic audits guard duplication, responsive layout, accessibility semantics and Markdown authoring hygiene.",
+  "summary": "The root examples tree contains 214 canonical reusable HTML-first demonstrations consumed by 221 Markdown pages, with optional CSS, JavaScript and local assets published by Docara. Image-dependent utility examples use a minimal project-owned visual system for background, filter/crop and mask behavior instead of brand marks or generic placeholders. Unique Russian component and design-system demonstrations remain valid inline Docara Example blocks. Deterministic audits guard duplication, responsive layout, accessibility semantics and Markdown authoring hygiene.",
   "owner": "repository_owner",
   "lifecycle": "validated",
   "readiness": "R5_operational",
   "evidence_status": "validated",
   "source_refs": ["examples", "content", "scripts/migrate-shared-examples.php", "scripts/normalize-documentation-examples.php", "scripts/audit-examples.php"],
-  "evidence_refs": ["source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json", "source/workflow/evidence/2026-08-26-example-quality-cleanup/audit-inventory.json", "source/workflow/evidence/2026-08-26-example-quality-cleanup/verification-summary.json", "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json", "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json", ".docara/examples.json"],
-  "tags": ["examples", "html", "css", "javascript", "assets", "reusable-content", "responsive", "accessibility", "quality-audit"]
+  "evidence_refs": ["source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json", "source/workflow/evidence/2026-08-26-example-quality-cleanup/audit-inventory.json", "source/workflow/evidence/2026-08-26-example-quality-cleanup/verification-summary.json", "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json", "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json", "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json", ".docara/examples.json"],
+  "tags": ["examples", "html", "css", "javascript", "assets", "reusable-content", "responsive", "accessibility", "quality-audit", "visual-system"]
 }

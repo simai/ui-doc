@@ -1,13 +1,10 @@
 ---
 title: "Трекинг текста (letter-spacing)"
 description: "Трекинг текста (letter-spacing)"
+tags: [letter-spacing]
 ---
 
 # Трекинг текста (letter-spacing)
-
-!rtags[letter-spacing]
-
-
 
 С помощью модификаторов можно регулировать межбуквенные интервалы (трекинг).
 

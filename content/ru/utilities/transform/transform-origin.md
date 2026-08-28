@@ -1,12 +1,10 @@
 ---
 title: "Точка трансформации (transform-origin)"
 description: "Классы точки трансформации transform-origin"
+tags: [transform-origin]
 ---
 
 # Точка трансформации (transform-origin)
-
-!rtags[transform-origin]
-
 
 `transform-origin` задает точку, относительно которой выполняется `rotate/scale/skew`.
 

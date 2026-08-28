@@ -1,6 +1,6 @@
 ---
 title: "File Preview"
-description: "API и runtime-контракт Smart-компонента file-preview в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента file-preview в SIMAI Framework 5.4.0."
 ---
 
 # File Preview

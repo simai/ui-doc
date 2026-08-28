@@ -1,6 +1,6 @@
 ---
 title: "Contentdivider"
-description: "Runtime-контракт компонента contentDivider в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента contentDivider в SIMAI Framework 5.4.0."
 ---
 
 # Contentdivider

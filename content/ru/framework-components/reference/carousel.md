@@ -1,6 +1,6 @@
 ---
 title: "Carousel"
-description: "Runtime-контракт компонента carousel в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента carousel в SIMAI Framework 5.4.0."
 ---
 
 # Carousel

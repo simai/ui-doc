@@ -1,17 +1,10 @@
 ---
 title: "Насыщенность подложки (backdrop-saturate)"
 description: "Насыщенность подложки (backdrop-saturate)"
+tags: [backdrop-filter-saturate, hover]
 ---
 
 # Насыщенность подложки (backdrop-saturate)
-
-
-!rtags[backdrop-filter-saturate hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять насыщенностью фона элемента.
 

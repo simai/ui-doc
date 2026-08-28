@@ -1,17 +1,10 @@
 ---
 title: "Фон в оттенках серого элемента (backdrop-grayscale)"
 description: "Фон в оттенках серого элемента (backdrop-grayscale)"
+tags: [backdrop-filter-grayscale, hover]
 ---
 
 # Фон в оттенках серого элемента (backdrop-grayscale)
-
-
-!rtags[backdrop-filter-grayscale hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять отображением фона элемента в оттенках серого.
 

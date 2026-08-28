@@ -1,6 +1,6 @@
 ---
 title: "Breadcrumbs"
-description: "Runtime-контракт компонента breadcrumbs в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента breadcrumbs в SIMAI Framework 5.4.0."
 ---
 
 # Breadcrumbs

@@ -1,12 +1,10 @@
 ---
 title: "Цвет границы"
 description: "Цвет границы"
+tags: [border-color, hover, focus, active]
 ---
 
 # Цвет границы
-
-!rtags[border-color hover focus active]
-
 
 Утилиты цвета границы позволяют быстро назначать цвет рамки через токены SIMAI.
 

@@ -26,8 +26,8 @@ stays consistent.
 :::example {label="Result"}
 ```html
 <style>
-@import url('/en/_docara/vendor/simai-framework/typography/5.4.0-rc.1/core.css');
-@import url('/en/_docara/vendor/simai-framework/typography/5.4.0-rc.1/utility.full.css');
+@import url('/en/_docara/vendor/simai-framework/typography/5.4.0/core.css');
+@import url('/en/_docara/vendor/simai-framework/typography/5.4.0/utility.full.css');
 
 :root { color-scheme: light dark; --demo-surface: #fff; --demo-container: #f1f3f6; --demo-low: #f8f9fb; --demo-text: #1b1b1f; --demo-muted: #5f6368; --demo-outline: #d4d7dc; --demo-primary: #075fce; --demo-on-primary: #fff; --demo-primary-container: #d8e7ff; --demo-tertiary-container: #f2dcff; }
 @media (prefers-color-scheme: dark) { :root { --demo-surface: #111318; --demo-container: #1d2026; --demo-low: #17191f; --demo-text: #e4e2e8; --demo-muted: #c3c6cf; --demo-outline: #454850; --demo-primary: #a8c8ff; --demo-on-primary: #003064; --demo-primary-container: #164778; --demo-tertiary-container: #50395d; } }

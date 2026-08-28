@@ -1,6 +1,6 @@
 ---
 title: "Font Size"
-description: "Точный Loader- и CSS-контракт утилиты font-size в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты font-size в SIMAI Framework 5.4.0."
 ---
 
 # Font Size

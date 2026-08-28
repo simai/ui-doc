@@ -1,6 +1,6 @@
 ---
 title: "Icons"
-description: "Runtime-контракт компонента icons в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента icons в SIMAI Framework 5.4.0."
 ---
 
 # Icons

@@ -1,17 +1,10 @@
 ---
 title: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
 description: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
+tags: [backdrop-filter-hue-rotate, hover]
 ---
 
 # Вращение оттенка фона элемента (backdrop-hue-rotate)
-
-
-!rtags[backdrop-filter-hue-rotate hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять вращением оттенка фона элемента.
 

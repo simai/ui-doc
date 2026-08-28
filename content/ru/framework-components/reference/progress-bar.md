@@ -1,6 +1,6 @@
 ---
 title: "Progress Bar"
-description: "Runtime-контракт компонента progress-bar в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента progress-bar в SIMAI Framework 5.4.0."
 ---
 
 # Progress Bar

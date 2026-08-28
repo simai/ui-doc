@@ -1,13 +1,10 @@
 ---
 title: "Начертание цифр (font-variant-numeric)"
 description: "Начертание цифр (font-variant-numeric)"
+tags: [font-variant-numeric]
 ---
 
 # Начертание цифр (font-variant-numeric)
-
-!rtags[font-variant-numeric]
-
-
 
 Модификаторы начертания цифр позволяют изменить отображение чисел и некоторых их особенностей (например, дробей).
 

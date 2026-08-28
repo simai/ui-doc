@@ -1,6 +1,6 @@
 ---
 title: "Featured Icon"
-description: "Runtime-контракт компонента featured-icon в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента featured-icon в SIMAI Framework 5.4.0."
 ---
 
 # Featured Icon

@@ -1,6 +1,6 @@
 ---
 title: "Справочник Smart Components"
-description: "Полный source-backed справочник Smart Components SIMAI Framework 5.4.0 candidate."
+description: "Полный source-backed справочник Smart Components SIMAI Framework 5.4.0."
 ---
 
 # Справочник Smart Components

@@ -1,6 +1,6 @@
 ---
 title: "Transform Translate Ext"
-description: "Точный Loader- и CSS-контракт утилиты transform-translate-ext в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты transform-translate-ext в SIMAI Framework 5.4.0."
 ---
 
 # Transform Translate Ext

@@ -1,13 +1,10 @@
 ---
 title: "Отступ текста (text-indent)"
 description: "Отступ текста (text-indent)"
+tags: [text-indent]
 ---
 
 # Отступ текста (text-indent)
-
-!rtags[text-indent]
-
-
 
 С помощью модификаторов можно задать отступ для первой строки текста.
 

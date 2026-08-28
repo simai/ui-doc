@@ -1,17 +1,10 @@
 ---
 title: "Яркость фона элемента (backdrop-brightness)"
 description: "Яркость фона элемента (backdrop-brightness)"
+tags: [backdrop-filter-brightness, hover]
 ---
 
 # Яркость фона элемента (backdrop-brightness)
-
-
-!rtags[backdrop-filter-brightness hover]
-
-
-
-
-
 
 Утилита управляет яркостью фона за элементом через `backdrop-filter`.
 

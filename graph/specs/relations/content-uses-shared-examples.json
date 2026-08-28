@@ -11,5 +11,5 @@
   "impact": "critical",
   "owner": "repository_owner",
   "source_refs": ["content", "examples"],
-  "evidence_refs": ["source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json", ".docara/examples.json"]
+  "evidence_refs": ["source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json", "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json", ".docara/examples.json"]
 }

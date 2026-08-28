@@ -1,6 +1,6 @@
 ---
 title: "Country Code"
-description: "API и runtime-контракт Smart-компонента country-code в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента country-code в SIMAI Framework 5.4.0."
 ---
 
 # Country Code

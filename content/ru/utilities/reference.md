@@ -1,6 +1,6 @@
 ---
 title: "Реестр утилит"
-description: "Все семейства утилит SIMAI Framework 5.4.0 candidate и их точные Loader-правила."
+description: "Все семейства утилит SIMAI Framework 5.4.0 и их точные Loader-правила."
 ---
 
 # Реестр утилит

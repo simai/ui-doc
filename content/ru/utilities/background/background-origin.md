@@ -1,13 +1,10 @@
 ---
 title: "Вложение фона"
 description: "Вложение фона"
+tags: [background-origin, sm, md, lg, xl]
 ---
 
 # Вложение фона
-
-!rtags[background-origin sm md lg xl]
-
-
 
 С помощью модификаторов `background-origin` вы можете управлять тем, относительно какой области будет позиционироваться
 фоновое изображение.

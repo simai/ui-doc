@@ -1,13 +1,10 @@
 ---
 title: "Сепия элемента (filter-sepia)"
 description: "Сепия элемента (filter-sepia)"
+tags: [filter-sepia, hover]
 ---
 
 # Сепия элемента (filter-sepia)
-
-!rtags[filter-sepia hover]
-
-
 
 Данный модификатор позволяет отображать элемент с эффектом сепии, придавая ему теплый, коричневатый оттенок.
 

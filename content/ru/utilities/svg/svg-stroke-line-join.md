@@ -1,12 +1,10 @@
 ---
 title: "Углы обводки (Line Join)"
 description: "Углы обводки (Line Join)"
+tags: [stroke-linejoin]
 ---
 
 # Углы обводки (Line Join)
-
-!rtags[stroke-linejoin]
-
 
 Классы задают `stroke-linejoin`.
 

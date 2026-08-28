@@ -1,6 +1,6 @@
 ---
 title: "Icon Buttons"
-description: "API и runtime-контракт Smart-компонента icon-buttons в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента icon-buttons в SIMAI Framework 5.4.0."
 ---
 
 # Icon Buttons

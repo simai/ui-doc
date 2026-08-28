@@ -1,12 +1,10 @@
 ---
 title: "Сжимаемость (flex-shrink)"
 description: "Сжимаемость (flex-shrink)"
+tags: [flex-shrink, sm, md, lg, xl]
 ---
 
 # Сжимаемость (flex-shrink)
-
-!rtags[flex-shrink sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно управлять сжимаемостью элементов флексбокса.
 

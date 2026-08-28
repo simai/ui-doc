@@ -1,6 +1,6 @@
 ---
 title: "Theme"
-description: "Точный Loader- и CSS-контракт утилиты theme в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты theme в SIMAI Framework 5.4.0."
 ---
 
 # Theme

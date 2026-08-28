@@ -1,13 +1,10 @@
 ---
 title: "Размытие элемента (filter-blur)"
 description: "Размытие элемента (filter-blur)"
+tags: [filter-blur, hover]
 ---
 
 # Размытие элемента (filter-blur)
-
-!rtags[filter-blur hover]
-
-
 
 Данные модификаторы позволяют задавать различную степень размытия элемента.
 

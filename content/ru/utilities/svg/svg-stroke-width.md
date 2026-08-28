@@ -1,12 +1,10 @@
 ---
 title: "Толщина обводки"
 description: "Толщина обводки"
+tags: [stroke-width, sm, md, lg, xl]
 ---
 
 # Толщина обводки
-
-!rtags[stroke-width sm md lg xl]
-
 
 Классы `stroke-N` задают `stroke-width`.
 

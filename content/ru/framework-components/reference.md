@@ -1,6 +1,6 @@
 ---
 title: "Справочник компонентов"
-description: "Полный source-backed справочник компонентов SIMAI Framework 5.4.0 candidate."
+description: "Полный source-backed справочник компонентов SIMAI Framework 5.4.0."
 ---
 
 # Справочник компонентов

@@ -1,13 +1,10 @@
 ---
 title: "Выравнивание текста (text-align)"
 description: "Выравнивание текста (text-align)"
+tags: [text-align, sm, md, lg, xl]
 ---
 
 # Выравнивание текста (text-align)
-
-!rtags[text-align sm md lg xl]
-
-
 
 С помощью модификаторов вы можете задать выравнивание текста.
 

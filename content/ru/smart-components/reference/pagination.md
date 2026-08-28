@@ -1,6 +1,6 @@
 ---
 title: "Pagination"
-description: "API и runtime-контракт Smart-компонента pagination в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента pagination в SIMAI Framework 5.4.0."
 ---
 
 # Pagination

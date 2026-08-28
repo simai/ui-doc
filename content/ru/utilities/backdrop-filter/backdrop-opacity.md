@@ -1,17 +1,10 @@
 ---
 title: "Прозрачность фона элемента (backdrop-opacity)"
 description: "Прозрачность фона элемента (backdrop-opacity)"
+tags: [backdrop-filter-opacity, hover]
 ---
 
 # Прозрачность фона элемента (backdrop-opacity)
-
-
-!rtags[backdrop-filter-opacity hover]
-
-
-
-
-
 
 Данный модификатор позволяет управлять прозрачностью фона элемента.
 

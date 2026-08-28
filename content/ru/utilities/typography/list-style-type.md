@@ -1,13 +1,10 @@
 ---
 title: "Стиль маркера списка (list-style-type)"
 description: "Стиль маркера списка (list-style-type)"
+tags: [list-style-type]
 ---
 
 # Стиль маркера списка (list-style-type)
-
-!rtags[list-style-type]
-
-
 
 С помощью модификаторов можно изменить вид маркера списка.
 

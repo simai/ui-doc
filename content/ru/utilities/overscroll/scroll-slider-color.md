@@ -1,13 +1,10 @@
 ---
 title: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
 description: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
+tags: [scroll-slider-color]
 ---
 
 # Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)
-
-!rtags[scroll-slider-color]
-
-
 
 ## Классы и их значения
 

@@ -1,13 +1,10 @@
 ---
 title: "Прозрачность элемента (filter-opacity)"
 description: "Прозрачность элемента (filter-opacity)"
+tags: [filter-opacity, hover]
 ---
 
 # Прозрачность элемента (filter-opacity)
-
-!rtags[filter-opacity hover]
-
-
 
 Данные модификаторы позволяют задавать степень прозрачности элемента через CSS filter.
 

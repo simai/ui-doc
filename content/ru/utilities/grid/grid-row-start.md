@@ -1,12 +1,10 @@
 ---
 title: "Начальное положение строки сетки (grid-row-start)"
 description: "Начальное положение строки сетки (grid-row-start)"
+tags: [grid-row-start, sm, md, lg, xl]
 ---
 
 # Начальное положение строки сетки (grid-row-start)
-
-!rtags[grid-row-start sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, с какой строки начинается элемент в сетке, задавая его
 положение относительно строк.

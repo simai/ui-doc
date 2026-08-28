@@ -1,16 +1,10 @@
 ---
 title: "Оформление текста"
 description: "Оформление текста"
+tags: [text-align, sm, md, lg, xl]
 ---
 
 # Оформление текста
-
-
-!rtags[text-align sm md lg xl]
-
-
-
-
 
 ## Таблица классов
 

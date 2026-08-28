@@ -1,13 +1,10 @@
 ---
 title: "Стиль шрифта (font-style)"
 description: "Стиль шрифта (font-style)"
+tags: [font-style]
 ---
 
 # Стиль шрифта (font-style)
-
-!rtags[font-style]
-
-
 
 Модификаторы для управления стилем шрифта позволяют задать наклонный (italic) или нормальный стиль.
 

@@ -1,6 +1,6 @@
 ---
 title: "Datepicker"
-description: "API и runtime-контракт Smart-компонента datepicker в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента datepicker в SIMAI Framework 5.4.0."
 ---
 
 # Datepicker

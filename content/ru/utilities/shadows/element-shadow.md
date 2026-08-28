@@ -1,13 +1,10 @@
 ---
 title: "Тень элемента (box-shadow)"
 description: "Глубина тени элемента и состояния hover"
+tags: [box-shadow, hover]
 ---
 
 # Тень элемента (box-shadow)
-
-!rtags[box-shadow hover]
-
-
 
 Утилиты `shadow-*` задают уровень тени через `--sf-shadow--level-ratio`.
 

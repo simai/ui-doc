@@ -1,12 +1,10 @@
 ---
 title: "Линии оформления текста (text-decoration)"
 description: "underline, overline, line-through, decoration-none"
+tags: [text-decoration, hover, focus, active]
 ---
 
 # Линии оформления текста (text-decoration)
-
-!rtags[text-decoration hover focus active]
-
 
 - `.underline`
 - `.overline`

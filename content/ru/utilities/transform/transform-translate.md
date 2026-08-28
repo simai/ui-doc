@@ -1,11 +1,10 @@
 ---
 title: "Смещение (transform-translate)"
 description: "Классы смещения transform-translate"
+tags: [transform-translate, hover]
 ---
 
 # Смещение (transform-translate)
-
-!rtags[transform-translate hover]
 
 `transform-translate` сдвигает элемент по оси `x` и/или `y`.
 

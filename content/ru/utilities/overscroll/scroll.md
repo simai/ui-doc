@@ -1,13 +1,10 @@
 ---
 title: "Толщина ползунка прокрутки (scroll / scroll-thumb-size)"
 description: "Управление минимальным размером ползунка прокрутки"
+tags: [scroll-slider-width]
 ---
 
 # Толщина ползунка прокрутки (scroll / scroll-thumb-size)
-
-!rtags[scroll-slider-width]
-
-
 
 ## Классы и значения
 

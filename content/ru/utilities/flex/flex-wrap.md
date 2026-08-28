@@ -1,12 +1,10 @@
 ---
 title: "Перенос элементов (flex-wrap)"
 description: "Перенос элементов (flex-wrap)"
+tags: [flex-wrap, sm, md, lg, xl]
 ---
 
 # Перенос элементов (flex-wrap)
-
-!rtags[flex-wrap sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, переносятся ли элементы флексбокса на новую линию или
 продолжаются в одной.

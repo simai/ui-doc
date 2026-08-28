@@ -1,16 +1,10 @@
 ---
 title: "Видимость элемента при печати (print-visibility)"
 description: "Видимость элемента при печати (print-visibility)"
+tags: [visibility, sm, md, lg, xl]
 ---
 
 # Видимость элемента при печати (print-visibility)
-
-
-!rtags[visibility sm md lg xl]
-
-
-
-
 
 Утилиты `print-visible` и `print-hidden` управляют `visibility` только внутри `@media print`.
 

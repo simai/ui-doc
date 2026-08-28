@@ -1,6 +1,6 @@
 ---
 title: "Scrollbar"
-description: "Runtime-контракт компонента scrollbar в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента scrollbar в SIMAI Framework 5.4.0."
 ---
 
 # Scrollbar

@@ -1,13 +1,10 @@
 ---
 title: "Цвет подложки прокрутки (scroll-backdrop-color)"
 description: "Цвет подложки прокрутки (scroll-backdrop-color)"
+tags: [scroll-backdrop-color]
 ---
 
 # Цвет подложки прокрутки (scroll-backdrop-color)
-
-!rtags[scroll-backdrop-color]
-
-
 
 Используя данные модификаторы, вы можете изменить цвет фоновой подложки ползунка прокрутки.
 

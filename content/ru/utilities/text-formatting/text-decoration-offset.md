@@ -1,12 +1,10 @@
 ---
 title: "Смещение линий оформления (text-decoration-offset)"
 description: "Смещение underline/overline/line-through"
+tags: [text-decoration-offset]
 ---
 
 # Смещение линий оформления (text-decoration-offset)
-
-!rtags[text-decoration-offset]
-
 
 Классы: `decoration-offset-auto`, `decoration-offset-0...4`.
 ## Пример

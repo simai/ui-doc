@@ -1,12 +1,10 @@
 ---
 title: "Толщина оформления текста"
 description: "Толщина оформления текста"
+tags: [text-decoration-thickness]
 ---
 
 # Толщина оформления текста
-
-!rtags[text-decoration-thickness]
-
 
 ## Таблица классов
 

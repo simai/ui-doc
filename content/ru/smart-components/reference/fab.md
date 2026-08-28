@@ -1,6 +1,6 @@
 ---
 title: "Fab"
-description: "API и runtime-контракт Smart-компонента fab в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента fab в SIMAI Framework 5.4.0."
 ---
 
 # Fab

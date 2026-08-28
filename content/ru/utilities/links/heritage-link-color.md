@@ -1,16 +1,10 @@
 ---
 title: "Наследование цвета ссылок"
 description: "Наследование цвета ссылок"
+tags: [text-color, hover, focus, active]
 ---
 
 # Наследование цвета ссылок
-
-
-!rtags[text-color hover focus active]
-
-
-
-
 
 Утилиты наследования делают ссылку цветом текущего текста.
 

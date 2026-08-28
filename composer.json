@@ -5,7 +5,7 @@
     "license": "proprietary",
     "require": {
         "php": "^8.2",
-        "simai/docara": "^2.2"
+        "simai/docara": "^2.3"
     },
     "config": {
         "allow-plugins": false,

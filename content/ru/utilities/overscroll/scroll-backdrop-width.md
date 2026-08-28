@@ -1,13 +1,10 @@
 ---
 title: "Толщина подложки прокрутки (scroll-backdrop-width)"
 description: "Толщина подложки прокрутки (scroll-backdrop-width)"
+tags: [scroll-backdrop-width]
 ---
 
 # Толщина подложки прокрутки (scroll-backdrop-width)
-
-!rtags[scroll-backdrop-width]
-
-
 
 С помощью данных модификаторов вы можете изменить ширину подложки полосы прокрутки, используя предопределённые размеры.
 

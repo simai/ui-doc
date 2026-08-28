@@ -1,12 +1,10 @@
 ---
 title: "Конечное положение колонки сетки (grid-column-end)"
 description: "Конечное положение колонки сетки (grid-column-end)"
+tags: [grid-column-end, sm, md, lg, xl]
 ---
 
 # Конечное положение колонки сетки (grid-column-end)
-
-!rtags[grid-column-end sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно управлять конечным положением столбцов в сетке, задавая на какой линии
 сетки элемент должен заканчиваться.

@@ -1,12 +1,10 @@
 ---
 title: "Наклон (transform-skew)"
 description: "Классы наклона transform-skew"
+tags: [transform-skew, hover]
 ---
 
 # Наклон (transform-skew)
-
-!rtags[transform-skew hover]
-
 
 `transform-skew` наклоняет элемент по оси `x` или `y`.
 

@@ -1,12 +1,10 @@
 ---
 title: "Прозрачность placeholder"
 description: "Прозрачность текста placeholder"
+tags: [placeholder-opacity, hover, focus]
 ---
 
 # Прозрачность placeholder
-
-!rtags[placeholder-opacity hover focus]
-
 
 Утилиты `placeholder-opacity-*` управляют прозрачностью текста placeholder.
 

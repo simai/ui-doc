@@ -1,6 +1,6 @@
 ---
 title: "Toggle"
-description: "Runtime-контракт компонента toggle в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента toggle в SIMAI Framework 5.4.0."
 ---
 
 # Toggle

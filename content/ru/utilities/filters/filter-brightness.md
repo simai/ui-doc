@@ -1,13 +1,10 @@
 ---
 title: "Яркость элемента (filter-brightness)"
 description: "Яркость элемента (filter-brightness)"
+tags: [filter-brightness, hover]
 ---
 
 # Яркость элемента (filter-brightness)
-
-!rtags[filter-brightness hover]
-
-
 
 Данные модификаторы позволяют управлять яркостью элемента.
 

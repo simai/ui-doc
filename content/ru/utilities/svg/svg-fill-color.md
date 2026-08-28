@@ -1,12 +1,10 @@
 ---
 title: "Цвет заливки"
 description: "Цвет заливки"
+tags: [fill]
 ---
 
 # Цвет заливки
-
-!rtags[fill]
-
 
 Классы `fill-*` задают `fill` для SVG.
 

@@ -1,6 +1,6 @@
 ---
 title: "Accordion"
-description: "Runtime-контракт компонента accordion в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента accordion в SIMAI Framework 5.4.0."
 ---
 
 # Accordion

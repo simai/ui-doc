@@ -1,6 +1,6 @@
 ---
 title: "Progress Scale"
-description: "API и runtime-контракт Smart-компонента progress-scale в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента progress-scale в SIMAI Framework 5.4.0."
 ---
 
 # Progress Scale

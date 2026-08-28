@@ -1,13 +1,10 @@
 ---
 title: "Анимация элемента"
 description: "Классы animation и infinite"
+tags: [animation]
 ---
 
 # Анимация элемента
-
-!rtags[animation]
-
-
 
 Утилита добавляет CSS-анимацию элементу.
 

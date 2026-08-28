@@ -1,12 +1,10 @@
 ---
 title: "Выделение текста"
 description: "Выделение текста"
+tags: [user-select]
 ---
 
 # Выделение текста
-
-!rtags[user-select]
-
 
 ## Таблица классов
 

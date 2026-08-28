@@ -1,6 +1,6 @@
 ---
 title: "Padding Ext"
-description: "Точный Loader- и CSS-контракт утилиты padding-ext в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты padding-ext в SIMAI Framework 5.4.0."
 ---
 
 # Padding Ext

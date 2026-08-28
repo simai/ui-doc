@@ -1,13 +1,10 @@
 ---
 title: "Трансформация текста (text-transform)"
 description: "Трансформация текста (text-transform)"
+tags: [font-transform]
 ---
 
 # Трансформация текста (text-transform)
-
-!rtags[font-transform]
-
-
 
 С помощью модификаторов трансформации текста можно управлять регистром символов текста.
 

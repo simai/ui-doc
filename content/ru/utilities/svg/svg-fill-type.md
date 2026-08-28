@@ -1,12 +1,10 @@
 ---
 title: "Тип заливки"
 description: "Тип заливки"
+tags: [fill]
 ---
 
 # Тип заливки
-
-!rtags[fill]
-
 
 Классы задают `fill-rule` у SVG-пути.
 

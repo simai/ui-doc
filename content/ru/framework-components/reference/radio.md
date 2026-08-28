@@ -1,6 +1,6 @@
 ---
 title: "Radio"
-description: "Runtime-контракт компонента radio в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента radio в SIMAI Framework 5.4.0."
 ---
 
 # Radio

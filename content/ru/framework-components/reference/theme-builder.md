@@ -1,6 +1,6 @@
 ---
 title: "Theme Builder"
-description: "Runtime-контракт компонента theme-builder в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента theme-builder в SIMAI Framework 5.4.0."
 ---
 
 # Theme Builder

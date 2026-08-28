@@ -1,13 +1,10 @@
 ---
 title: "Положение фона"
 description: "Положение фона"
+tags: [background-position, sm, md, lg, xl]
 ---
 
 # Положение фона
-
-!rtags[background-position sm md lg xl]
-
-
 
 С помощью модификаторов `background-position` вы можете управлять положением фонового изображения в пределах элемента.
 

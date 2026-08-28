@@ -1,16 +1,10 @@
 ---
 title: "Подчеркивание ссылок"
 description: "Подчеркивание ссылок"
+tags: [text-decoration, hover, focus, active]
 ---
 
 # Подчеркивание ссылок
-
-
-!rtags[text-decoration hover focus active]
-
-
-
-
 
 Утилита `link-underline-none` отключает подчеркивание у ссылки.
 

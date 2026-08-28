@@ -1,13 +1,10 @@
 ---
 title: "Размер фона"
 description: "Управление размером фонового изображения"
+tags: [background-size, sm, md, lg, xl]
 ---
 
 # Размер фона
-
-!rtags[background-size sm md lg xl]
-
-
 
 Утилиты `background-size` управляют масштабированием фонового изображения внутри элемента.
 

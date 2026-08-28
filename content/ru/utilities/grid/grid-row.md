@@ -1,12 +1,10 @@
 ---
 title: "Размер строки сетки (grid-row)"
 description: "Размер строки сетки (grid-row)"
+tags: [grid-row, sm, md, lg, xl]
 ---
 
 # Размер строки сетки (grid-row)
-
-!rtags[grid-row sm md lg xl]
-
 
 Модификаторы `grid-row` управляют высотой и позиционированием элементов по вертикали в grid-сетке.
 

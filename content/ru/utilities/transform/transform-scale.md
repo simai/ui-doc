@@ -1,12 +1,10 @@
 ---
 title: "Масштабирование (transform-scale)"
 description: "Классы масштабирования transform-scale"
+tags: [transform-scale, hover]
 ---
 
 # Масштабирование (transform-scale)
-
-!rtags[transform-scale hover]
-
 
 `transform-scale` изменяет размер элемента по обеим осям или отдельно по `x`/`y`.
 

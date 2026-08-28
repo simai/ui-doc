@@ -1,13 +1,10 @@
 ---
 title: "Тип анимации"
 description: "animation-from-left/right/bottom"
+tags: [animation]
 ---
 
 # Тип анимации
-
-!rtags[animation]
-
-
 
 Классы типа задают направление анимации.
 

@@ -1,6 +1,6 @@
 ---
 title: "Ring Width"
-description: "Точный Loader- и CSS-контракт утилиты ring-width в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты ring-width в SIMAI Framework 5.4.0."
 ---
 
 # Ring Width

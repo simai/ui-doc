@@ -1,13 +1,10 @@
 ---
 title: "Содержимое (content)"
 description: "Содержимое (content)"
+tags: [content]
 ---
 
 # Содержимое (content)
-
-!rtags[content]
-
-
 
 С помощью модификаторов можно управлять содержимым псевдоэлементов `::before` и `::after`.
 

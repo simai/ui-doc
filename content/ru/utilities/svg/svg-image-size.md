@@ -1,12 +1,10 @@
 ---
 title: "Размер SVG-изображений"
 description: "Размер SVG-изображений"
+tags: [svg-size, sm, md, lg, xl]
 ---
 
 # Размер SVG-изображений
-
-!rtags[svg-size sm md lg xl]
-
 
 Классы `svg-*` задают `width` и `height` по текстовой шкале токенов.
 

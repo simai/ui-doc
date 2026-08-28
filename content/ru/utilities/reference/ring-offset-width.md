@@ -1,6 +1,6 @@
 ---
 title: "Ring Offset Width"
-description: "Точный Loader- и CSS-контракт утилиты ring-offset-width в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты ring-offset-width в SIMAI Framework 5.4.0."
 ---
 
 # Ring Offset Width

@@ -1,12 +1,10 @@
 ---
 title: "Границы таблицы"
 description: "Границы таблицы"
+tags: [table-border]
 ---
 
 # Границы таблицы
-
-!rtags[table-border]
-
 
 ## Таблица классов
 

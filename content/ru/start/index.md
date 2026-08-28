@@ -27,7 +27,7 @@ description: "Первая рабочая страница на SIMAI Framework 
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/css/core.css">
+        href="https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/core/css/core.css">
 </head>
 <body>
   <main class="p-4">
@@ -40,15 +40,15 @@ description: "Первая рабочая страница на SIMAI Framework 
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.3.2/distr/core/js/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/core/js/core.js"></script>
 </body>
 </html>
 ```
 
-В примере используется опубликованная и неизменяемая версия `v5.3.2`.
+В примере используется опубликованная и неизменяемая версия `v5.4.0`.
 Фиксированная версия защищает проект от неожиданных изменений.
 
 ## 2. Запустите локальный сервер

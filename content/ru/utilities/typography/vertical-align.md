@@ -1,13 +1,10 @@
 ---
 title: "Выравнивание по вертикали (vertical-align)"
 description: "Выравнивание по вертикали (vertical-align)"
+tags: [vertical-align]
 ---
 
 # Выравнивание по вертикали (vertical-align)
-
-!rtags[vertical-align]
-
-
 
 С помощью модификаторов вы можете выровнять строчные элементы (inline elements) по вертикали.
 

@@ -1,12 +1,10 @@
 ---
 title: "Вращение (transform-rotate)"
 description: "Классы вращения transform-rotate"
+tags: [transform-rotate, hover]
 ---
 
 # Вращение (transform-rotate)
-
-!rtags[transform-rotate hover]
-
 
 `transform-rotate` поворачивает элемент на заданный угол.
 

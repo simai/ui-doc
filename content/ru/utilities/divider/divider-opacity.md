@@ -1,12 +1,10 @@
 ---
 title: "Прозрачность разделителя"
 description: "Прозрачность линии divider"
+tags: [divider-opacity]
 ---
 
 # Прозрачность разделителя
-
-!rtags[divider-opacity]
-
 
 Утилиты `divider-opacity-*` / `divide-opacity-*` задают прозрачность линии разделителя.
 ## Пример

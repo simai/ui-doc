@@ -1,6 +1,6 @@
 ---
 title: "Buttons"
-description: "API и runtime-контракт Smart-компонента buttons в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента buttons в SIMAI Framework 5.4.0."
 ---
 
 # Buttons

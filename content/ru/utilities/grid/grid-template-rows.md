@@ -1,12 +1,10 @@
 ---
 title: "Шаблон строк сетки (grid-template-rows)"
 description: "Шаблон строк сетки (grid-template-rows)"
+tags: [grid-template-rows, sm, md, lg, xl]
 ---
 
 # Шаблон строк сетки (grid-template-rows)
-
-!rtags[grid-template-rows sm md lg xl]
-
 
 Модификаторы `grid-row-*` задают количество строк в сетке и их базовый размер.
 

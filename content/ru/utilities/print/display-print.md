@@ -1,12 +1,10 @@
 ---
 title: "Отображение элемента при печати (display-print)"
 description: "Отображение элемента при печати (display-print)"
+tags: [display-print]
 ---
 
 # Отображение элемента при печати (display-print)
-
-!rtags[display-print]
-
 
 Утилиты `print-*` задают `display` только внутри `@media print`.
 

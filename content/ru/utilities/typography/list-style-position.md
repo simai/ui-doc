@@ -1,13 +1,10 @@
 ---
 title: "Положение маркера списка (list-style-position)"
 description: "Положение маркера списка (list-style-position)"
+tags: [list-style-position]
 ---
 
 # Положение маркера списка (list-style-position)
-
-!rtags[list-style-position]
-
-
 
 С помощью модификаторов можно изменить положение маркера списка.
 

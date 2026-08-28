@@ -1,6 +1,6 @@
 ---
 title: "Context Menu"
-description: "Runtime-контракт компонента context-menu в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента context-menu в SIMAI Framework 5.4.0."
 ---
 
 # Context Menu

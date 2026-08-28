@@ -1,6 +1,6 @@
 ---
 title: "Spinner"
-description: "Runtime-контракт компонента spinner в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента spinner в SIMAI Framework 5.4.0."
 ---
 
 # Spinner

@@ -1,12 +1,10 @@
 ---
 title: "Концы обводки (Line Cap)"
 description: "Концы обводки (Line Cap)"
+tags: [stroke-linecap]
 ---
 
 # Концы обводки (Line Cap)
-
-!rtags[stroke-linecap]
-
 
 Классы задают `stroke-linecap`.
 

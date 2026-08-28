@@ -1,6 +1,6 @@
 ---
 title: "Verification"
-description: "Runtime-контракт компонента verification в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента verification в SIMAI Framework 5.4.0."
 ---
 
 # Verification

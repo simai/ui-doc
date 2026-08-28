@@ -1,6 +1,6 @@
 ---
 title: "Steps"
-description: "API и runtime-контракт Smart-компонента steps в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента steps в SIMAI Framework 5.4.0."
 ---
 
 # Steps

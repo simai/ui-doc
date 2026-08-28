@@ -1,13 +1,10 @@
 ---
 title: "Цвет тени элемента (box-shadow-color)"
 description: "Цвет тени для default / hover / active"
+tags: [box-shadow-color, hover, active]
 ---
 
 # Цвет тени элемента (box-shadow-color)
-
-!rtags[box-shadow-color hover active]
-
-
 
 Утилиты задают цвет тени в состояниях `default`, `hover`, `active`.
 

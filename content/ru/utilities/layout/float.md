@@ -1,12 +1,10 @@
 ---
 title: "Плавающий элемент (float)"
 description: "Плавающий элемент (float)"
+tags: [float, sm, md, lg, xl]
 ---
 
 # Плавающий элемент (float)
-
-!rtags[float sm md lg xl]
-
 
 Модификаторы `float` управляют обтеканием и используют логические стороны (`inline-start`, `inline-end`), чтобы работать в LTR/RTL.
 

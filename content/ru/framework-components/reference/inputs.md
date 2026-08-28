@@ -1,6 +1,6 @@
 ---
 title: "Inputs"
-description: "Runtime-контракт компонента inputs в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента inputs в SIMAI Framework 5.4.0."
 ---
 
 # Inputs

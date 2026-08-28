@@ -1,13 +1,10 @@
 ---
 title: "Акцентный цвет (accent-color)"
 description: "Акцентный цвет (accent-color)"
+tags: [accent-color, hover]
 ---
 
 # Акцентный цвет (accent-color)
-
-!rtags[accent-color hover]
-
-
 
 Используя модификаторы акцентного цвета `accent-color` в SIMAI Framework, вы можете задавать цвет акцентирования для
 элементов управления формы, таких как чекбоксы и радиокнопки. Это позволяет легко стилизовать акцентные элементы,

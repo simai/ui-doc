@@ -1,16 +1,10 @@
 ---
 title: "Параметры по умолчанию"
 description: "Параметры по умолчанию"
+tags: [text-color, hover, focus, active]
 ---
 
 # Параметры по умолчанию
-
-
-!rtags[text-color hover focus active]
-
-
-
-
 
 Ссылки по умолчанию используют токены темы и меняют цвет в состояниях `:hover`, `:active`, `:visited`.
 

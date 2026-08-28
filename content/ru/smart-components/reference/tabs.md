@@ -1,6 +1,6 @@
 ---
 title: "Tabs"
-description: "API и runtime-контракт Smart-компонента tabs в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента tabs в SIMAI Framework 5.4.0."
 ---
 
 # Tabs

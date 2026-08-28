@@ -1,12 +1,10 @@
 ---
 title: "Толщина внешней границы"
 description: "Толщина внешней границы"
+tags: [outline-width, focus]
 ---
 
 # Толщина внешней границы
-
-!rtags[outline-width focus]
-
 
 | Класс | Значение |
 |:--|:--|

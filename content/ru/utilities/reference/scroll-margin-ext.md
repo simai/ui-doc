@@ -1,6 +1,6 @@
 ---
 title: "Scroll Margin Ext"
-description: "Точный Loader- и CSS-контракт утилиты scroll-margin-ext в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты scroll-margin-ext в SIMAI Framework 5.4.0."
 ---
 
 # Scroll Margin Ext

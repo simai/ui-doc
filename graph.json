@@ -16,6 +16,7 @@
       "graph/specs/objects/ui-documentation-site.json",
       "graph/specs/objects/docara-runtime.json",
       "graph/specs/objects/documentation-content.json",
+      "graph/specs/objects/shared-examples.json",
       "graph/specs/objects/product-landing-navigation.json",
       "graph/specs/objects/local-static-build.json",
       "graph/specs/objects/publication-policy.json"
@@ -28,6 +29,7 @@
     "relations": [
       "graph/specs/relations/site-generated-by-docara.json",
       "graph/specs/relations/site-uses-authored-content.json",
+      "graph/specs/relations/content-uses-shared-examples.json",
       "graph/specs/relations/site-exposes-product-landing.json",
       "graph/specs/relations/site-materialized-as-build.json",
       "graph/specs/relations/build-guarded-by-publication-policy.json"

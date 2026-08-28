@@ -1,13 +1,10 @@
 ---
 title: "Длина строки (text-max-width)"
 description: "Длина строки (text-max-width)"
+tags: [text-max-width, sm, md, lg, xl]
 ---
 
 # Длина строки (text-max-width)
-
-!rtags[text-max-width sm md lg xl]
-
-
 
 С помощью модификаторов можно задать максимальную длину строки текста.
 

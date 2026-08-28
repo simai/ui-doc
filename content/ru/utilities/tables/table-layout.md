@@ -1,12 +1,10 @@
 ---
 title: "Макет таблицы"
 description: "Макет таблицы"
+tags: [table-layout]
 ---
 
 # Макет таблицы
-
-!rtags[table-layout]
-
 
 ## Таблица классов
 

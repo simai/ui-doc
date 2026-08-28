@@ -1,13 +1,10 @@
 ---
 title: "Радиус границы подложки прокрутки (scroll-backdrop-radius)"
 description: "Радиус границы подложки прокрутки (scroll-backdrop-radius)"
+tags: [scroll-backdrop-radius]
 ---
 
 # Радиус границы подложки прокрутки (scroll-backdrop-radius)
-
-!rtags[scroll-backdrop-radius]
-
-
 
 ## Классы и их значения
 

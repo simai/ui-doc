@@ -1,13 +1,10 @@
 ---
 title: "Падающая тень (drop-shadow)"
 description: "Падающая тень (drop-shadow)"
+tags: [drop-shadow, hover]
 ---
 
 # Падающая тень (drop-shadow)
-
-!rtags[drop-shadow hover]
-
-
 
 Данные модификаторы позволяют задать уровень падающей тени для элемента, используя переменную
 `--sf-shadow--level-ratio`. От традиционного `box-shadow` падающая тень отличается тем, что отбрасывается только от

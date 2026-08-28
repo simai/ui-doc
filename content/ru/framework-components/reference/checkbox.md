@@ -1,6 +1,6 @@
 ---
 title: "Checkbox"
-description: "Runtime-контракт компонента checkbox в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента checkbox в SIMAI Framework 5.4.0."
 ---
 
 # Checkbox

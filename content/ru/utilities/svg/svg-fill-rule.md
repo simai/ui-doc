@@ -1,12 +1,10 @@
 ---
 title: "Правило заливки SVG (fill-rule)"
 description: "Nonzero и evenodd для SVG fill-rule"
+tags: [fill-rule]
 ---
 
 # Правило заливки SVG (fill-rule)
-
-!rtags[fill-rule]
-
 
 ## Классы
 

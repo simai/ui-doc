@@ -1,12 +1,10 @@
 ---
 title: "Направление размещения (flex-direction)"
 description: "Направление размещения (flex-direction)"
+tags: [flex-direction, sm, md, lg, xl]
 ---
 
 # Направление размещения (flex-direction)
-
-!rtags[flex-direction sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно задать направление размещения элементов флексбокса, определяя ориентацию
 и порядок элементов внутри контейнера.

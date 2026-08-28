@@ -1,11 +1,10 @@
 ---
 title: "Соотношение сторон (Aspect Ratio)"
 description: "Соотношение сторон (Aspect Ratio)"
+tags: [aspect-ratio, sm, md, lg, xl]
 ---
 
 # Соотношение сторон (Aspect Ratio)
-
-!rtags[aspect-ratio sm md lg xl]
 
 ## Описание
 

@@ -1,6 +1,6 @@
 ---
 title: "Dropdown"
-description: "Runtime-контракт компонента dropdown в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента dropdown в SIMAI Framework 5.4.0."
 ---
 
 # Dropdown

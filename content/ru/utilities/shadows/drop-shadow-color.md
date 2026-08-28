@@ -1,13 +1,10 @@
 ---
 title: "Цвет падающей тени (drop-shadow-color)"
 description: "Цвет падающей тени (drop-shadow-color)"
+tags: [drop-shadow-color, hover]
 ---
 
 # Цвет падающей тени (drop-shadow-color)
-
-!rtags[drop-shadow-color hover]
-
-
 
 Данные модификаторы позволяют задать цвет падающей тени элемента, используя роли (переменные), без адаптивности.
 Также можно изменять цвет при наведении с помощью `hover:drop-shadow-{color}`.

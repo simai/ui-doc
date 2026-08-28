@@ -1,13 +1,10 @@
 ---
 title: "Обрезка фона"
 description: "Обрезка фона"
+tags: [background-clip, sm, md, lg, xl]
 ---
 
 # Обрезка фона
-
-!rtags[background-clip sm md lg xl]
-
-
 
 С помощью модификаторов `background-clip` вы можете управлять тем, как фон распределяется под границами элемента и его
 содержимым.

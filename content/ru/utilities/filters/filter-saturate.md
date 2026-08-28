@@ -1,13 +1,10 @@
 ---
 title: "Насыщенность элемента (filter-saturate)"
 description: "Насыщенность элемента (filter-saturate)"
+tags: [filter-saturate, hover]
 ---
 
 # Насыщенность элемента (filter-saturate)
-
-!rtags[filter-saturate hover]
-
-
 
 Данный модификатор позволяет управлять насыщенностью элемента, делая цвета более или менее интенсивными.
 

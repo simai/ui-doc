@@ -1,13 +1,10 @@
 ---
 title: "Цвет полос"
 description: "Цвет полос"
+tags: [stripe-color]
 ---
 
 # Цвет полос
-
-!rtags[stripe-color]
-
-
 
 С помощью модификаторов `stripe-{color}` можно задать цвет полос паттерна фона.
 

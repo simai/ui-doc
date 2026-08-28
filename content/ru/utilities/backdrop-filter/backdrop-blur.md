@@ -1,17 +1,10 @@
 ---
 title: "Размытие фона элемента (backdrop-blur)"
 description: "Размытие фона элемента (backdrop-blur)"
+tags: [backdrop-filter-blur, hover]
 ---
 
 # Размытие фона элемента (backdrop-blur)
-
-
-!rtags[backdrop-filter-blur hover]
-
-
-
-
-
 
 Данный модификатор позволяет размывать задний фон элемента.
 

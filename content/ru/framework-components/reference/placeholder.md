@@ -1,6 +1,6 @@
 ---
 title: "Placeholder"
-description: "Runtime-контракт компонента placeholder в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента placeholder в SIMAI Framework 5.4.0."
 ---
 
 # Placeholder

@@ -1,12 +1,10 @@
 ---
 title: "Максимальная ширина (max-width)"
 description: "Максимальная ширина (max-width)"
+tags: [max-width, sm, md, lg, xl]
 ---
 
 # Максимальная ширина (max-width)
-
-!rtags[max-width sm md lg xl]
-
 
 В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
 

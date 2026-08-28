@@ -1,13 +1,10 @@
 ---
 title: "Контрастность элемента (filter-contrast)"
 description: "Контрастность элемента (filter-contrast)"
+tags: [filter-contrast, hover]
 ---
 
 # Контрастность элемента (filter-contrast)
-
-!rtags[filter-contrast hover]
-
-
 
 Данный модификатор позволяет управлять контрастностью элемента.
 

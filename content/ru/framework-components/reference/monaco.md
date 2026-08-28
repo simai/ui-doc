@@ -1,6 +1,6 @@
 ---
 title: "Monaco"
-description: "Runtime-контракт компонента monaco в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента monaco в SIMAI Framework 5.4.0."
 ---
 
 # Monaco

@@ -1,6 +1,6 @@
 ---
 title: "Background Fake"
-description: "Точный Loader- и CSS-контракт утилиты background-fake в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты background-fake в SIMAI Framework 5.4.0."
 ---
 
 # Background Fake

@@ -1,12 +1,10 @@
 ---
 title: "Размер колонки сетки (grid-column)"
 description: "Размер колонки сетки (grid-column)"
+tags: [grid-column, sm, md, lg, xl]
 ---
 
 # Размер колонки сетки (grid-column)
-
-!rtags[grid-column sm md lg xl]
-
 
 Модификаторы `grid-column` позволяют задавать колонки и их интервалы в сетке, управляя шириной и расположением элементов по горизонтали.
 

@@ -1,6 +1,6 @@
 ---
 title: "Avatar"
-description: "API и runtime-контракт Smart-компонента avatar в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента avatar в SIMAI Framework 5.4.0."
 ---
 
 # Avatar

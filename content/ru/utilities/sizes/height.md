@@ -1,12 +1,10 @@
 ---
 title: "Высота (height)"
 description: "Высота (height)"
+tags: [height, sm, md, lg, xl]
 ---
 
 # Высота (height)
-
-!rtags[height sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно задать высоту элемента, адаптируя её под различные размеры экрана или
 особенности дизайна.

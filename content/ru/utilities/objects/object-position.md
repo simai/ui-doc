@@ -1,12 +1,10 @@
 ---
 title: "Позиционирование объекта (object-position)"
 description: "Утилиты object-position управляют тем, какую часть заменяемого элемента (img/video) показывать внутри контейнера."
+tags: [object-position, sm, md, lg, xl]
 ---
 
 # Позиционирование объекта (object-position)
-
-!rtags[object-position sm md lg xl]
-
 
 Модификаторы `object-*` задают точку привязки содержимого внутри контейнера. Утилиты используют логические направления (`inline-start/end`, `top/bottom`) — поэтому корректно работают в LTR/RTL.
 

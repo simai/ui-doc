@@ -1,6 +1,6 @@
 ---
 title: "Quantity"
-description: "Runtime-контракт компонента quantity в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента quantity в SIMAI Framework 5.4.0."
 ---
 
 # Quantity

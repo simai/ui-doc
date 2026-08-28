@@ -1,12 +1,10 @@
 ---
 title: "Брендовые цвета фона"
 description: "Фоновые цвета брендов соцсетей и сервисов"
+tags: [background-color-brand, hover]
 ---
 
 # Брендовые цвета фона
-
-!rtags[background-color-brand hover]
-
 
 Утилиты `bg-*` из `background-color-brand` задают брендовые цвета сервисов.
 

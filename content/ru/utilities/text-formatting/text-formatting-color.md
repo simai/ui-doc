@@ -1,16 +1,10 @@
 ---
 title: "Цвет оформления текста"
 description: "Цвет оформления текста"
+tags: [text-decoration-color, hover, focus, active]
 ---
 
 # Цвет оформления текста
-
-
-!rtags[text-decoration-color hover focus active]
-
-
-
-
 
 ## Таблица классов
 

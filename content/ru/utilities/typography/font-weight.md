@@ -1,13 +1,10 @@
 ---
 title: "Толщина шрифта (font-weight)"
 description: "Толщина шрифта (font-weight)"
+tags: [font-weight, sm, md, lg, xl, hover]
 ---
 
 # Толщина шрифта (font-weight)
-
-!rtags[font-weight sm md lg xl hover]
-
-
 
 Модификаторы для управления толщиной шрифта позволяют задать нужное начертание в диапазоне от очень тонкого (100) до
 очень жирного (900).

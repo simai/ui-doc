@@ -1,6 +1,6 @@
 ---
 title: "Admin Menu"
-description: "Runtime-контракт компонента admin-menu в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента admin-menu в SIMAI Framework 5.4.0."
 ---
 
 # Admin Menu

@@ -1,6 +1,6 @@
 ---
 title: "Max Width Ext"
-description: "Точный Loader- и CSS-контракт утилиты max-width-ext в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты max-width-ext в SIMAI Framework 5.4.0."
 ---
 
 # Max Width Ext

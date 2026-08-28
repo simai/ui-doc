@@ -1,6 +1,6 @@
 ---
 title: "Range Slider"
-description: "Runtime-контракт компонента range-slider в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента range-slider в SIMAI Framework 5.4.0."
 ---
 
 # Range Slider

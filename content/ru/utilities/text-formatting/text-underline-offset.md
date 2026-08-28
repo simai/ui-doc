@@ -1,12 +1,10 @@
 ---
 title: "Смещение подчеркивания текста"
 description: "Смещение подчеркивания текста"
+tags: [text-decoration-offset]
 ---
 
 # Смещение подчеркивания текста
-
-!rtags[text-decoration-offset]
-
 
 ## Таблица классов
 

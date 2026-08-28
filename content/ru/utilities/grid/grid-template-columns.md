@@ -1,12 +1,10 @@
 ---
 title: "Шаблон колонок сетки (grid-template-columns)"
 description: "Шаблон колонок сетки (grid-template-columns)"
+tags: [grid-template-columns, sm, md, lg, xl]
 ---
 
 # Шаблон колонок сетки (grid-template-columns)
-
-!rtags[grid-template-columns sm md lg xl]
-
 
 Модификаторы `grid-col-*` задают количество колонок и их размер, формируя базовый шаблон сетки.
 

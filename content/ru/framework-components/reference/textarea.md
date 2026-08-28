@@ -1,6 +1,6 @@
 ---
 title: "Textarea"
-description: "Runtime-контракт компонента textarea в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента textarea в SIMAI Framework 5.4.0."
 ---
 
 # Textarea

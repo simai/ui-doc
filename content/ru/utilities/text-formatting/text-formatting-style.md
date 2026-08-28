@@ -1,12 +1,10 @@
 ---
 title: "Стиль оформления текста"
 description: "Стиль оформления текста"
+tags: [text-decoration-style]
 ---
 
 # Стиль оформления текста
-
-!rtags[text-decoration-style]
-
 
 ## Таблица классов
 

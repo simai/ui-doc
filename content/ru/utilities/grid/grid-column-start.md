@@ -1,12 +1,10 @@
 ---
 title: "Начальное положение колонки сетки (grid-column-start)"
 description: "Начальное положение колонки сетки (grid-column-start)"
+tags: [grid-column-start, sm, md, lg, xl]
 ---
 
 # Начальное положение колонки сетки (grid-column-start)
-
-!rtags[grid-column-start sm md lg xl]
-
 
 В SIMAI Framework с помощью модификаторов можно управлять начальным положением столбцов в сетке, задавая от какой линии
 сетки элемент должен начинаться.

@@ -1,12 +1,10 @@
 ---
 title: "Внутреннее кольцо (ring-inset)"
 description: "Внутреннее положение ring"
+tags: [ring-inset, hover, focus]
 ---
 
 # Внутреннее кольцо (ring-inset)
-
-!rtags[ring-inset hover focus]
-
 
 Утилита `ring-inset` переводит кольцо (`ring`) во внутреннюю часть элемента.
 ## Пример

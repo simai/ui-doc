@@ -1,6 +1,6 @@
 ---
 title: "Drawer"
-description: "API и runtime-контракт Smart-компонента drawer в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента drawer в SIMAI Framework 5.4.0."
 ---
 
 # Drawer

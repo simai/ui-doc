@@ -1,6 +1,6 @@
 ---
 title: "Dot"
-description: "Runtime-контракт компонента dot в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента dot в SIMAI Framework 5.4.0."
 ---
 
 # Dot

@@ -1,12 +1,10 @@
 ---
 title: "Цвет внешней границы"
 description: "Цвет внешней границы"
+tags: [outline-color, hover, focus, active]
 ---
 
 # Цвет внешней границы
-
-!rtags[outline-color hover focus active]
-
 
 | Класс | Значение |
 |:--|:--|

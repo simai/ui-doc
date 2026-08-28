@@ -1,6 +1,6 @@
 ---
 title: "File Upload"
-description: "API и runtime-контракт Smart-компонента file-upload в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента file-upload в SIMAI Framework 5.4.0."
 ---
 
 # File Upload

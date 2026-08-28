@@ -1,12 +1,10 @@
 ---
 title: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
 description: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
+tags: [scroll-slider-radius]
 ---
 
 # Радиус границы ползунка прокрутки (scroll-thumb-radius)
-
-!rtags[scroll-slider-radius]
-
 
 С помощью данных модификаторов вы можете изменить радиус скругления ползунка прокрутки.
 

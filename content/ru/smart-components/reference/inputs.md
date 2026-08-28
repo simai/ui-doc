@@ -1,6 +1,6 @@
 ---
 title: "Inputs"
-description: "API и runtime-контракт Smart-компонента inputs в SIMAI Framework 5.4.0 candidate."
+description: "API и runtime-контракт Smart-компонента inputs в SIMAI Framework 5.4.0."
 ---
 
 # Inputs

@@ -1,6 +1,6 @@
 ---
 title: "Highlight"
-description: "Runtime-контракт компонента highlight в SIMAI Framework 5.4.0 candidate."
+description: "Runtime-контракт компонента highlight в SIMAI Framework 5.4.0."
 ---
 
 # Highlight

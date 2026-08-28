@@ -1,6 +1,6 @@
 ---
 title: "Mix Blend Mode"
-description: "Точный Loader- и CSS-контракт утилиты mix-blend-mode в SIMAI Framework 5.4.0 candidate."
+description: "Точный Loader- и CSS-контракт утилиты mix-blend-mode в SIMAI Framework 5.4.0."
 ---
 
 # Mix Blend Mode
