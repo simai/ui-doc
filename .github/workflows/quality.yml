@@ -18,8 +18,8 @@ jobs:
           coverage: none
           ini-values: memory_limit=512M
           tools: composer
-      # The exact commit-ref is intentional: ui-doc is a reproducible consumer
-      # of the accepted Docara candidate until a separately authorized tag.
+      # composer.lock pins the exact published Docara release revision so the
+      # documentation build remains reproducible.
       - run: composer validate --no-check-publish
       - run: composer install --no-interaction --prefer-source
       - run: php scripts/test-migrate-legacy-content.php

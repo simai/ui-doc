@@ -49,6 +49,11 @@ $escapeRawHtml = static function (string $markdown): string {
     }
 
     $fence = null;
+    $escapeHtmlSegment = static fn (string $segment): string => preg_replace_callback(
+        '/<!--.*?-->|<\/?[A-Za-z][^>\n]*>|<!DOCTYPE[^>\n]*>/i',
+        static fn (array $match): string => str_replace(['<', '>'], ['&lt;', '&gt;'], $match[0]),
+        $segment,
+    ) ?? $segment;
 
     foreach ($lines as &$line) {
         if (preg_match('/^ {0,3}(`{3,}|~{3,})/', $line, $match)) {
@@ -66,11 +71,43 @@ $escapeRawHtml = static function (string $markdown): string {
             continue;
         }
 
-        $line = preg_replace_callback(
-            '/<!--.*?-->|<\/?[A-Za-z][^>\n]*>|<!DOCTYPE[^>\n]*>/i',
-            static fn (array $match): string => str_replace(['<', '>'], ['&lt;', '&gt;'], $match[0]),
-            $line,
-        ) ?? $line;
+        // Raw HTML must be escaped, but angle brackets inside Markdown code
+        // spans are literal documentation and must remain byte-for-byte
+        // stable. Parse backtick runs instead of applying the HTML regexp to
+        // the complete line.
+        $escaped = '';
+        $offset = 0;
+        $delimiterLength = null;
+        $length = strlen($line);
+
+        while ($offset < $length) {
+            $tick = strpos($line, '`', $offset);
+            if ($tick === false) {
+                $tail = substr($line, $offset);
+                $escaped .= $delimiterLength === null ? $escapeHtmlSegment($tail) : $tail;
+                $offset = $length;
+                break;
+            }
+
+            $runEnd = $tick;
+            while ($runEnd < $length && $line[$runEnd] === '`') {
+                $runEnd++;
+            }
+            $runLength = $runEnd - $tick;
+            $segment = substr($line, $offset, $tick - $offset);
+            $escaped .= $delimiterLength === null ? $escapeHtmlSegment($segment) : $segment;
+            $escaped .= substr($line, $tick, $runLength);
+
+            if ($delimiterLength === null) {
+                $delimiterLength = $runLength;
+            } elseif ($delimiterLength === $runLength) {
+                $delimiterLength = null;
+            }
+
+            $offset = $runEnd;
+        }
+
+        $line = $escaped;
     }
     unset($line);
 
@@ -369,7 +406,7 @@ foreach ($files as $file) {
     ]));
 
     $target = preg_replace_callback(
-        '/\[([^\]]+)\]\(([^)\s]+\.md(?:#[^)\s]+)?)\)/',
+        '/(?<!!)\[([^\]]+)\]\(([^)\s]+\.md(?:#[^)\s]+)?)\)/',
         static function (array $match) use ($normalizeRoute, $routeMap, $sourceBases, $currentRoutes): string {
             [$path, $fragment] = array_pad(explode('#', $match[2], 2), 2, null);
             $absolute = str_starts_with($path, '/');
@@ -396,7 +433,7 @@ foreach ($files as $file) {
     ) ?? $source;
 
     $target = preg_replace_callback(
-        '/\[([^\]]+)\]\(\/([A-Za-z0-9._\/-]+)\/?(#[^)]*)?\)/',
+        '/(?<!!)\[([^\]]+)\]\(\/([A-Za-z0-9._\/-]+)\/?(#[^)]*)?\)/',
         static function (array $match) use ($routeMap, $currentRoutes): string {
             $route = trim($match[2], '/');
             $resolved = $routeMap[$route] ?? $route;

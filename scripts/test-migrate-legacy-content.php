@@ -38,6 +38,10 @@ description: Синхронизация разных потоков
 # Проверка
 
 Синхронизация сохраняет кириллическую букву х внутри разных потоков.
+
+Custom Element: `<sf-button>`. Нативный элемент: `<button>`.
+
+![Проверочная иллюстрация](/ru/assets/reference/image-02.png){ratio=auto fit=contain}
 MARKDOWN;
     file_put_contents($content.'/index.md', $fixture."\n");
 
@@ -61,6 +65,15 @@ MARKDOWN;
             throw new RuntimeException("UTF-8 migration regression: missing [$needle].");
         }
     }
+    foreach ([
+        '`<sf-button>`',
+        '`<button>`',
+        '![Проверочная иллюстрация](/ru/assets/reference/image-02.png){ratio=auto fit=contain}',
+    ] as $needle) {
+        if (! str_contains($migrated, $needle)) {
+            throw new RuntimeException("Modern Markdown migration regression: missing [$needle].");
+        }
+    }
 
     exec($command, $secondOutput, $secondStatus);
     $second = json_decode(implode("\n", $secondOutput), true, 512, JSON_THROW_ON_ERROR);
@@ -68,7 +81,7 @@ MARKDOWN;
         throw new RuntimeException('Second migration pass is not idempotent.');
     }
 
-    fwrite(STDOUT, "UI_DOC_MIGRATION_UTF8_PASS\n");
+    fwrite(STDOUT, "UI_DOC_MIGRATION_UTF8_AND_MARKDOWN_PASS\n");
 } finally {
     $remove($root);
 }
