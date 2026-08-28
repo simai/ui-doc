@@ -16,7 +16,7 @@ jobs:
         with:
           php-version: "8.3"
           coverage: none
-          ini-values: memory_limit=512M
+          ini-values: memory_limit=2G
           tools: composer
       # composer.lock pins the exact published Docara release revision so the
       # documentation build remains reproducible.
