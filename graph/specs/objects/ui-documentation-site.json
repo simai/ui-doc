@@ -4,12 +4,12 @@
   "kind": "capability",
   "subtype": "feature",
   "title": "SIMAI Framework documentation site",
-  "summary": "A bilingual static SIMAI Framework site with locale product landings, first-level header navigation and a full documentation tree generated from repository-owned Markdown and validated configuration. Russian nested navigation groups use explicit localized section metadata instead of humanized English directory names.",
+  "summary": "A bilingual static SIMAI Framework site with locale product landings, first-level header navigation and a full documentation tree generated from repository-owned Markdown and validated configuration. The canonical Russian ordinary-component route is /ru/components/: it is a flat 63-page section with a task-grouped index, reference authoring profile and redirects from the former /ru/framework-components/ hierarchy. Optional source-backed tracking reports whether Russian Core, utility, component and Smart Component pages and examples match the exact pinned Framework runtime without changing the separate translation workflow.",
   "owner": "repository_owner",
   "lifecycle": "validated",
   "readiness": "R5_operational",
   "evidence_status": "validated",
-  "source_refs": ["README.md", "docara.json", "content/ru/section.json", "content/en/section.json"],
-  "evidence_refs": ["docs/developer/docara-v2-migration.md", "content/ru/index.page.json", "content/en/index.page.json", "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json"],
-  "tags": ["documentation", "landing", "header-navigation", "russian", "english", "static-site"]
+  "source_refs": ["README.md", "docara.json", "docara.authoring.json", "documentation.lock.json", "simai-framework.lock.json", "content/ru/section.json", "content/ru/components/section.json", "content/en/section.json", "redirects.json"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md", "content/ru/index.page.json", "content/en/index.page.json", "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json", "source/workflow/2026-08-29-framework-components-documentation-rebuild.md"],
+  "tags": ["documentation", "landing", "header-navigation", "russian", "english", "static-site", "component-catalog", "documentation-tracking", "redirects"]
 }

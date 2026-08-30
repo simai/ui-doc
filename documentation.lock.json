@@ -1,0 +1,3043 @@
+{
+    "entries": [
+        {
+            "examples": {
+                "default": "components/accordion/overview"
+            },
+            "examples_sha256": "3d8b855b013ddaf2803fcb4609ee054390ce49388ddaaae16578f21ab2c1e03e",
+            "key": "component.accordion",
+            "kind": "component",
+            "page_path": "content/ru/components/accordion.md",
+            "page_sha256": "99a4800ea2e81aa62cdeefa468c32c791e64f5e63b13a0b605704e1de7877e71",
+            "review": "ai_verified",
+            "route": "/ru/components/accordion/",
+            "source": "simai-framework",
+            "source_sha256": "ea31c9230eb05bd3b793d482c9aabfc453cff8fad6aabde5592c28ea574f0bdb"
+        },
+        {
+            "examples": {
+                "default": "components/admin-menu/overview"
+            },
+            "examples_sha256": "7f520a9bfba4565108f5cbd3c39ee68209854fe830fe88e80f111ac7b358780d",
+            "key": "component.admin-menu",
+            "kind": "component",
+            "page_path": "content/ru/components/admin-menu.md",
+            "page_sha256": "e89171ab7b6304719933329f050db1c195eea0f3e74a2010baa6b967d5af4650",
+            "review": "ai_verified",
+            "route": "/ru/components/admin-menu/",
+            "source": "simai-framework",
+            "source_sha256": "c446b90773fe6d747d5efc153a7a6e0d254a2a15fa9deac8a50056b61f456382"
+        },
+        {
+            "examples": {
+                "default": "components/alerts/overview"
+            },
+            "examples_sha256": "c9b31bb46b7a987b9c6ebda142cc888ce82250d7179a1464feb90b756444d0be",
+            "key": "component.alerts",
+            "kind": "component",
+            "page_path": "content/ru/components/alerts.md",
+            "page_sha256": "e9f997b07005c6f23f3e01830dce8ded85985bc3af6fa4aba85e15d996977215",
+            "review": "ai_verified",
+            "route": "/ru/components/alerts/",
+            "source": "simai-framework",
+            "source_sha256": "4c285f460a8e87323bb163e2571e8a3128c2825f3f0044211cb38aaa44be2c10"
+        },
+        {
+            "examples": {
+                "default": "components/avatars/overview"
+            },
+            "examples_sha256": "931a30781c50f672f64ec65aec967f2f59399e6b48def055c74b46326db37111",
+            "key": "component.avatars",
+            "kind": "component",
+            "page_path": "content/ru/components/avatars.md",
+            "page_sha256": "6dccdb5f45058774aff373e5b01b1fdf361aa095ca45a6cb88b94bed12a50fd9",
+            "review": "ai_verified",
+            "route": "/ru/components/avatars/",
+            "source": "simai-framework",
+            "source_sha256": "fd018dc3add598de5c5e687185fbf8182b6cc625e560b9e9746b7d37835882c3"
+        },
+        {
+            "examples": {
+                "default": "components/badges/overview"
+            },
+            "examples_sha256": "f01cc21bc45d7eade6785d49f78d33375f7b449a572e2674ed26c9fed08db066",
+            "key": "component.badges",
+            "kind": "component",
+            "page_path": "content/ru/components/badges.md",
+            "page_sha256": "985476b1074e2012c78782541def47991a32c8430db4a4f9a9d102b06cbdfd6d",
+            "review": "ai_verified",
+            "route": "/ru/components/badges/",
+            "source": "simai-framework",
+            "source_sha256": "ac30935a7b7e056911bdad473a447a6c938edea07b893c5fafe7fe8be54e3d98"
+        },
+        {
+            "examples": {
+                "default": "components/breadcrumbs/overview"
+            },
+            "examples_sha256": "2cc9049be3c0a17a78223bc388cbff30ba7fb984a00ff1b35aa33a30b7d93708",
+            "key": "component.breadcrumbs",
+            "kind": "component",
+            "page_path": "content/ru/components/breadcrumbs.md",
+            "page_sha256": "085b5e51f270808fc5476c4fc5d12320a1727bb35bffaad8ca43e85e4cf69869",
+            "review": "ai_verified",
+            "route": "/ru/components/breadcrumbs/",
+            "source": "simai-framework",
+            "source_sha256": "c695d755b69bc79273e8f1270710fd9cb1ca03c5919c2f13ae815fdf73f7df4f"
+        },
+        {
+            "examples": {
+                "default": "components/button-group/overview"
+            },
+            "examples_sha256": "efbb5a7b16c4429d54966c8c4b6c1dbbc377ee29cb35f65f62a9b7d391328284",
+            "key": "component.button-group",
+            "kind": "component",
+            "page_path": "content/ru/components/button-group.md",
+            "page_sha256": "d4444df51c8adc2b68a1593deae88648018f453960f0d88ea4c55ecd27627d7b",
+            "review": "ai_verified",
+            "route": "/ru/components/button-group/",
+            "source": "simai-framework",
+            "source_sha256": "755963494f0eeeec386ba0f4bb745452fa5d2204b07e59ce04e9fcfa8930c455"
+        },
+        {
+            "examples": {
+                "default": "components/buttons/basic"
+            },
+            "examples_sha256": "d44142ba809970a21e38f9944340300b6a12cbdfdac74a2bbf71c6a2f55307d9",
+            "key": "component.buttons",
+            "kind": "component",
+            "page_path": "content/ru/components/buttons.md",
+            "page_sha256": "cd8aa32d9687e876bfc23634a57b21ac5df70a969bdfc5084cd180447972de9c",
+            "review": "ai_verified",
+            "route": "/ru/components/buttons/",
+            "source": "simai-framework",
+            "source_sha256": "5ddbc8f5ccfe39954905824148908951728c4cd457c96c7a19c965aa837a8d65"
+        },
+        {
+            "examples": {
+                "default": "components/carousel/overview"
+            },
+            "examples_sha256": "b4ac64f0bd8d9320dc01c771bf7c096b309cd393015a9fba4ce02e53f8489626",
+            "key": "component.carousel",
+            "kind": "component",
+            "page_path": "content/ru/components/carousel.md",
+            "page_sha256": "f2b6d98238015836344be9a7eb5a9a8d351737cacdab99e2776a8a61ababc1d0",
+            "review": "ai_verified",
+            "route": "/ru/components/carousel/",
+            "source": "simai-framework",
+            "source_sha256": "9bce6476ebd0ef9a1da121f7a5c3743ca1c4f3b30f6f4038796c4d217588e24a"
+        },
+        {
+            "examples": {
+                "default": "components/checkbox/overview"
+            },
+            "examples_sha256": "268ac99d516e99010ee1504eb5df9f6587a93cc2aca6bfba73c001bac24051a3",
+            "key": "component.checkbox",
+            "kind": "component",
+            "page_path": "content/ru/components/checkbox.md",
+            "page_sha256": "298a3f78c3cd62d861bec2a7d552ffaff7d7e462d67da6ec705aab13d8fdd349",
+            "review": "ai_verified",
+            "route": "/ru/components/checkbox/",
+            "source": "simai-framework",
+            "source_sha256": "debbc48fe038bdf08876ebebfc936332916320515c0a5d8104a54646c01523ff"
+        },
+        {
+            "examples": {
+                "default": "components/clipboard/overview"
+            },
+            "examples_sha256": "3197ffc0bc8fb41332bf7272f83d8ffd56553c8feb491f2262e0f725f09b1f6d",
+            "key": "component.clipboard",
+            "kind": "component",
+            "page_path": "content/ru/components/clipboard.md",
+            "page_sha256": "4aeecddb1557d25d18eec2b276923e1ba5beb94ffa1377f8c396f8ee5f3f64c6",
+            "review": "ai_verified",
+            "route": "/ru/components/clipboard/",
+            "source": "simai-framework",
+            "source_sha256": "0560ca1029ebf59492b56bd6971f47bd9977d61770e258b6acd05f2cf0404593"
+        },
+        {
+            "examples": {
+                "default": "components/close/overview"
+            },
+            "examples_sha256": "30b93abe59be7f1ba5a5cd0d4e137582dee310aeca53130b9e8f2c9a23b1bd09",
+            "key": "component.close",
+            "kind": "component",
+            "page_path": "content/ru/components/close.md",
+            "page_sha256": "ce24a6c340cec646498fc4590f037e8964bba4b101402fc9b63be2463bc73198",
+            "review": "ai_verified",
+            "route": "/ru/components/close/",
+            "source": "simai-framework",
+            "source_sha256": "2dc955329b276cdd7f40114717afba4d870641f9ea6c405220f21d9d325756db"
+        },
+        {
+            "examples": {
+                "default": "components/content-divider/overview"
+            },
+            "examples_sha256": "793d5e614fa3f95ee0d4f8e952ff44d0daa3618e8e17f5ca258cc0a51b4c6c42",
+            "key": "component.content-divider",
+            "kind": "component",
+            "page_path": "content/ru/components/content-divider.md",
+            "page_sha256": "5b71aa088f3f3ad6645fc20d4138affd2a1a3e9d1b0d819939ae584dc4ed58d5",
+            "review": "ai_verified",
+            "route": "/ru/components/content-divider/",
+            "source": "simai-framework",
+            "source_sha256": "28e8b1ad04b002898cbbb357fe1ffc51a4881255105048b567f8603f8406ef6a"
+        },
+        {
+            "examples": {
+                "default": "components/context-menu/overview"
+            },
+            "examples_sha256": "b05abbb72a60968456e463eae844180537e42c7eb60d198c9d8caf72877c3021",
+            "key": "component.context-menu",
+            "kind": "component",
+            "page_path": "content/ru/components/context-menu.md",
+            "page_sha256": "ad0c967878342e13b481d68cb110387cadb9085b58eabe39eee9c3f6336e644d",
+            "review": "ai_verified",
+            "route": "/ru/components/context-menu/",
+            "source": "simai-framework",
+            "source_sha256": "f8decc3511cc6b8c704775a65bc1ebd4e47459c7aac689acf0847a1d504e03c2"
+        },
+        {
+            "examples": {
+                "default": "components/country-code/overview"
+            },
+            "examples_sha256": "a9e8fb41b5ae41f40c7a0750c63245fa2904d14b5cb9ca0e93afd933a0131b4d",
+            "key": "component.country-code",
+            "kind": "component",
+            "page_path": "content/ru/components/country-code.md",
+            "page_sha256": "ea745a9338964b197e244cf87119a40489995decc96df0d37103f7e3e81a84d8",
+            "review": "ai_verified",
+            "route": "/ru/components/country-code/",
+            "source": "simai-framework",
+            "source_sha256": "c266ccce4b5fd14b23c01e70d2695759b1e05eaeed4d79fa7589a93d6c7be7e8"
+        },
+        {
+            "examples": {
+                "default": "components/datepicker/overview"
+            },
+            "examples_sha256": "4132b0d47ee9096dcbe69e2907823cae5cbe21eb758507f135c665f7cd1b0629",
+            "key": "component.datepicker",
+            "kind": "component",
+            "page_path": "content/ru/components/datepicker.md",
+            "page_sha256": "c3c9c1c70d15178c0126532a63a4a6bfb38481fb633d8ace434042d376700500",
+            "review": "ai_verified",
+            "route": "/ru/components/datepicker/",
+            "source": "simai-framework",
+            "source_sha256": "2bd3d7320a1ae45fb6b310e272fa41a8b7757161ab860a0cab7248e9564e4019"
+        },
+        {
+            "examples": {
+                "default": "components/doc/overview"
+            },
+            "examples_sha256": "80efd3969079c6f8b80297fcb602535631aa1fb8afe34dc263195602c135a3ed",
+            "key": "component.doc",
+            "kind": "component",
+            "page_path": "content/ru/components/doc.md",
+            "page_sha256": "71913f2540e4b22e1dcce230b156fab79b8c27c49f5a6158e2c012449a66952a",
+            "review": "ai_verified",
+            "route": "/ru/components/doc/",
+            "source": "simai-framework",
+            "source_sha256": "1fb2c3385d9528739bd035453e35912f11c57850238d619060324fb1fd7277fb"
+        },
+        {
+            "examples": {
+                "default": "components/dot/overview"
+            },
+            "examples_sha256": "9d1023aa4292eb4085b6f6626745f9e099e041bfd393bb061a09c5a49c788489",
+            "key": "component.dot",
+            "kind": "component",
+            "page_path": "content/ru/components/dot.md",
+            "page_sha256": "7434ef7a69ae71121c392e0ab663b65c1d4a1d1b5353e37fb7eccc4687b83c5f",
+            "review": "ai_verified",
+            "route": "/ru/components/dot/",
+            "source": "simai-framework",
+            "source_sha256": "440f01926bf2e05b5511495bd7197f26067a25f53292e7dd27642fd7b19f319f"
+        },
+        {
+            "examples": {
+                "default": "components/download-file/overview"
+            },
+            "examples_sha256": "a02e8701a24442b3d59602f2dec1220220119e3920435213614f95ec835e3a97",
+            "key": "component.download-file",
+            "kind": "component",
+            "page_path": "content/ru/components/download-file.md",
+            "page_sha256": "4335d6a4c72e47220ea768292d1444ab887420f890c3b38ce4692c4d049afc6f",
+            "review": "ai_verified",
+            "route": "/ru/components/download-file/",
+            "source": "simai-framework",
+            "source_sha256": "7362bcb9b5b5a363646fabe499737debccf537b568ec2a0767990440b7ce1ce2"
+        },
+        {
+            "examples": {
+                "default": "components/dropdown/overview"
+            },
+            "examples_sha256": "f911c302ab6ccef446b714746cc4954bb844234657ccb8a0d41724072f816be0",
+            "key": "component.dropdown",
+            "kind": "component",
+            "page_path": "content/ru/components/dropdown.md",
+            "page_sha256": "8890a7618322669b218378bae6af88d237ca393546dfab09b02a099f4e21268f",
+            "review": "ai_verified",
+            "route": "/ru/components/dropdown/",
+            "source": "simai-framework",
+            "source_sha256": "782e2bffd24727f48ca67776e439e88e9ec5d49d9eaaae492b33bd53b42fd9a1"
+        },
+        {
+            "examples": {
+                "default": "components/emoji/overview"
+            },
+            "examples_sha256": "68d2ae5a61c5943cd33e2a966f1bfd50881210d15a3499b42c3b906c7433960e",
+            "key": "component.emoji",
+            "kind": "component",
+            "page_path": "content/ru/components/emoji.md",
+            "page_sha256": "bb7352dc3b63ade5a56735bcb721484c899be9b374c8119e3b74bf4ff6a93e55",
+            "review": "ai_verified",
+            "route": "/ru/components/emoji/",
+            "source": "simai-framework",
+            "source_sha256": "3ffc7036b3a3560956193e15acdc852bdc22dedad05dd06264048acfb8631508"
+        },
+        {
+            "examples": {
+                "default": "components/fab/overview"
+            },
+            "examples_sha256": "b73f8641888b3f9dc409710a30f8e8e4dfac080c16cbbeec793be119c64042f4",
+            "key": "component.fab",
+            "kind": "component",
+            "page_path": "content/ru/components/fab.md",
+            "page_sha256": "59b664c118d9d89997454b37912677aee2840195ff1d2206c2a5ea0d60dda6fa",
+            "review": "ai_verified",
+            "route": "/ru/components/fab/",
+            "source": "simai-framework",
+            "source_sha256": "3c14a802cb86e278ddbc0e472cae9af5146b5b74b58838bf5b03553dd338cecb"
+        },
+        {
+            "examples": {
+                "default": "components/featured-icon/overview"
+            },
+            "examples_sha256": "3d4e0257a6856e0a5c827460daf310c4c692c22a35d3936c92a687ae0eb5eb60",
+            "key": "component.featured-icon",
+            "kind": "component",
+            "page_path": "content/ru/components/featured-icon.md",
+            "page_sha256": "f48c2c32b0ad78785297dd0b1411a459463262a146c7c9632e48b9e488b7086f",
+            "review": "ai_verified",
+            "route": "/ru/components/featured-icon/",
+            "source": "simai-framework",
+            "source_sha256": "8009de5840dd511f2657d829ce86b013ab795613685345397f1fa4f2be633dc0"
+        },
+        {
+            "examples": {
+                "default": "components/file-preview/overview"
+            },
+            "examples_sha256": "c21f8c12bf1366bf2dce968ed48fe1233671f24f94fc27ccd83587554709669b",
+            "key": "component.file-preview",
+            "kind": "component",
+            "page_path": "content/ru/components/file-preview.md",
+            "page_sha256": "ec0d16592730242f6dbc3a76aa76bcb247ea296d93f6222d9608973fc3082dff",
+            "review": "ai_verified",
+            "route": "/ru/components/file-preview/",
+            "source": "simai-framework",
+            "source_sha256": "a0c7881bcbeb8966eea64081929f7ea640ff6f53ff8049677fd012f6171ce4fd"
+        },
+        {
+            "examples": {
+                "default": "components/file-upload/overview"
+            },
+            "examples_sha256": "9431aecaf5592ffef7f7d964d69ade739cd2a2f8e9b0ed38e321745258c930ff",
+            "key": "component.file-upload",
+            "kind": "component",
+            "page_path": "content/ru/components/file-upload.md",
+            "page_sha256": "6ad0a2f9c3af8687bee6a75425777c56c15168a168f3c014e9550a0e1e4cf3ea",
+            "review": "ai_verified",
+            "route": "/ru/components/file-upload/",
+            "source": "simai-framework",
+            "source_sha256": "36ee969e3b8b410e6273ccfb5d3cf6f22f10555f8b5466e1223a71de80c1d6d0"
+        },
+        {
+            "examples": {
+                "default": "components/hide-show/overview"
+            },
+            "examples_sha256": "2d9aab595119ab0ffd0c276cd57af60c53fffb03ae2ac322017830abf13a3c4e",
+            "key": "component.hide-show",
+            "kind": "component",
+            "page_path": "content/ru/components/hide-show.md",
+            "page_sha256": "e3a9a57ce158227097df0ce63c55842e5d693ac5143e041e8a47432323101f6f",
+            "review": "ai_verified",
+            "route": "/ru/components/hide-show/",
+            "source": "simai-framework",
+            "source_sha256": "7e6952795bec2f5bed63337be0d76eb64c5e083fc9df332896a391214ba5e82a"
+        },
+        {
+            "examples": {
+                "default": "components/highlight/overview"
+            },
+            "examples_sha256": "9c2f5731336e1274d8e97d15a6287571b3f6d4511521016948426b3c78124b22",
+            "key": "component.highlight",
+            "kind": "component",
+            "page_path": "content/ru/components/highlight.md",
+            "page_sha256": "f7a24810b411ce74fbad8002924c52f0ebb516b95bfbb2c3d96ae9418de79afa",
+            "review": "ai_verified",
+            "route": "/ru/components/highlight/",
+            "source": "simai-framework",
+            "source_sha256": "745ca35464bccedb07023cc45074f2fa5d7c2361e89a3d67fec854fd6c815c57"
+        },
+        {
+            "examples": {
+                "default": "components/icon-buttons/overview"
+            },
+            "examples_sha256": "8a892decec97e5afb00b101ea5208529f3901987083fe53b87e4c2d37b211bc1",
+            "key": "component.icon-buttons",
+            "kind": "component",
+            "page_path": "content/ru/components/icon-buttons.md",
+            "page_sha256": "a79462b1fa8e40418efa35003aa18af91afc4e8918988fdf2fab8736cd7dee59",
+            "review": "ai_verified",
+            "route": "/ru/components/icon-buttons/",
+            "source": "simai-framework",
+            "source_sha256": "9fc5fd9e12ce0d15f9068e0e1dc5215cf1272f90515c231b24abf1bfe083f7ec"
+        },
+        {
+            "examples": {
+                "default": "components/icons/overview"
+            },
+            "examples_sha256": "d410346df88a7f740cbcb003dd31e54bb71ab27c6b6e5576dba65b8f693abe3f",
+            "key": "component.icons",
+            "kind": "component",
+            "page_path": "content/ru/components/icons.md",
+            "page_sha256": "bddfb634a01a2a3ff154bcc8b1bd07d107ed8f92959e956a249a53349646af7b",
+            "review": "ai_verified",
+            "route": "/ru/components/icons/",
+            "source": "simai-framework",
+            "source_sha256": "94296186819872892cd56293babbb351bd544f703ef75cf4a3d162442a86b90f"
+        },
+        {
+            "examples": {
+                "default": "components/inputs/overview"
+            },
+            "examples_sha256": "3135f82cbec4e422728a45d0b39a65dcd94112b501a7e68120335973a0a76194",
+            "key": "component.inputs",
+            "kind": "component",
+            "page_path": "content/ru/components/inputs.md",
+            "page_sha256": "3a2a317608b7374dc6b4e71800f76046a29d58fcf57adc107f782f3af87066f1",
+            "review": "ai_verified",
+            "route": "/ru/components/inputs/",
+            "source": "simai-framework",
+            "source_sha256": "1c3802159c6211ac8692d87c3b485ed080a16b1f8048c970e197356e3bd5d9c6"
+        },
+        {
+            "examples": {
+                "default": "components/kbd/overview"
+            },
+            "examples_sha256": "aafa71be2faeedc98e62c0782e26f90674499538ba496e90faa1078423bd2254",
+            "key": "component.kbd",
+            "kind": "component",
+            "page_path": "content/ru/components/kbd.md",
+            "page_sha256": "31b7c4bfdea9ccfeb42df0dc6b8ff99e895881d08763c893f435b63f72aefbff",
+            "review": "ai_verified",
+            "route": "/ru/components/kbd/",
+            "source": "simai-framework",
+            "source_sha256": "62c546a2bdaec709eeae4a56d316612c9d7eb2fded584f125ffc20a2486bedf0"
+        },
+        {
+            "examples": {
+                "default": "components/link/overview"
+            },
+            "examples_sha256": "b67494aadeff3acefc00faec38dd7cd06487f4f6566c1c2ecc75ee16a0ddd0f1",
+            "key": "component.link",
+            "kind": "component",
+            "page_path": "content/ru/components/link.md",
+            "page_sha256": "23455ac874fc97ea274b93cbefa1647572a3ba939651e7c94d345ce5916835b8",
+            "review": "ai_verified",
+            "route": "/ru/components/link/",
+            "source": "simai-framework",
+            "source_sha256": "d1bf1ccbfde8c9e7eba9eaf3773be33450648c8c14c3781e47e42359c32ff28c"
+        },
+        {
+            "examples": {
+                "default": "components/menu/overview"
+            },
+            "examples_sha256": "eea99959b826b75696338c03103f48825cfbfa9b73c62678a6fdb2644bab4b4b",
+            "key": "component.menu",
+            "kind": "component",
+            "page_path": "content/ru/components/menu.md",
+            "page_sha256": "992c8095fd2fa6b375f6124482ba9c9169f05d5b85eb3119f51c6c4c685e04d9",
+            "review": "ai_verified",
+            "route": "/ru/components/menu/",
+            "source": "simai-framework",
+            "source_sha256": "325198f30c1bc3cf3ee28e9d70d8c8194314b11adb603e6e4896f6d69b63fbcc"
+        },
+        {
+            "examples": {
+                "default": "components/modal/overview"
+            },
+            "examples_sha256": "3ca118a1b375ad619d5914f8a316270196657422bc431b90d164163049f2a0a0",
+            "key": "component.modal",
+            "kind": "component",
+            "page_path": "content/ru/components/modal.md",
+            "page_sha256": "4f3efa7c4e9252bcbc3286262ea5b9b82756df72bc176c6314bc791369297365",
+            "review": "ai_verified",
+            "route": "/ru/components/modal/",
+            "source": "simai-framework",
+            "source_sha256": "276ffcd8f705004504996a637b8c2fcdd02e4987c9a4a9de1126e3db13fb72d5"
+        },
+        {
+            "examples": {
+                "default": "components/monaco/overview"
+            },
+            "examples_sha256": "536e5b479dff735b038dc00b7cf988d821fcebedf0b89df04596ae7ce653db46",
+            "key": "component.monaco",
+            "kind": "component",
+            "page_path": "content/ru/components/monaco.md",
+            "page_sha256": "98becc4666ca5a57aa80affe6d6e1dbc998a4ef60178619c953b005499f1b55d",
+            "review": "ai_verified",
+            "route": "/ru/components/monaco/",
+            "source": "simai-framework",
+            "source_sha256": "7fa6f6678f874d0a9b6e8377dd3259bc69559e56fff113da7b143e6b9787a798"
+        },
+        {
+            "examples": {
+                "default": "components/outline/overview"
+            },
+            "examples_sha256": "215531810cd1684457bc1e6e6604de4859a383f5b988e869b25317e90ba15175",
+            "key": "component.outline",
+            "kind": "component",
+            "page_path": "content/ru/components/outline.md",
+            "page_sha256": "0a78fd956a8943491e2af5ec70773fef932ce24b46bc6040ff00fe4b467c4250",
+            "review": "ai_verified",
+            "route": "/ru/components/outline/",
+            "source": "simai-framework",
+            "source_sha256": "3224a0b574672e57ae480b258acbba243ab7373b3e7fd15e94dfc12328dca007"
+        },
+        {
+            "examples": {
+                "default": "components/pagination/overview"
+            },
+            "examples_sha256": "99d247153dd555b69c7f0d866a091ad10c6a1c6e6b10b09dc45795ed7ed26e7b",
+            "key": "component.pagination",
+            "kind": "component",
+            "page_path": "content/ru/components/pagination.md",
+            "page_sha256": "8e45401da3d68e570009cf3b6641cfa3cdf5f4a2bc01b1e63f5a26ec3e919113",
+            "review": "ai_verified",
+            "route": "/ru/components/pagination/",
+            "source": "simai-framework",
+            "source_sha256": "3be082b4ff2144b78318734d9517262e4414199dfb12440497cd555d6d22d864"
+        },
+        {
+            "examples": {
+                "default": "components/placeholder/overview"
+            },
+            "examples_sha256": "9c5d77f78ab8298f526dbcfd659f69aa8b1dfc033c87af3212aa781d7b2bd51a",
+            "key": "component.placeholder",
+            "kind": "component",
+            "page_path": "content/ru/components/placeholder.md",
+            "page_sha256": "ba90481301a86527792715705c3de11c111285a0cc507a18039221115c3d0cde",
+            "review": "ai_verified",
+            "route": "/ru/components/placeholder/",
+            "source": "simai-framework",
+            "source_sha256": "0057667dc6f1c5422b914453ed49c9f54a3b71f37318faa055a22a9ec4ce72c7"
+        },
+        {
+            "examples": {
+                "default": "components/progress-bar/overview"
+            },
+            "examples_sha256": "aac7a971efe0a0a531473bdb133769c2230b4fd827b77aeed7a32c5cbf8d2083",
+            "key": "component.progress-bar",
+            "kind": "component",
+            "page_path": "content/ru/components/progress-bar.md",
+            "page_sha256": "957a3f6edf1a8f63987de27244376905420670b5502837165f1c9c9008e92ac8",
+            "review": "ai_verified",
+            "route": "/ru/components/progress-bar/",
+            "source": "simai-framework",
+            "source_sha256": "47eeb581227c77c71164c5a9e9e1870c0c955ee192f19cabd5f5c4a34005e493"
+        },
+        {
+            "examples": {
+                "default": "components/progress-scale/overview"
+            },
+            "examples_sha256": "a7cabe80657b7ebbb2593b6e62a6ec25eecc2f56adb5e75b7ebbce724036d9cb",
+            "key": "component.progress-scale",
+            "kind": "component",
+            "page_path": "content/ru/components/progress-scale.md",
+            "page_sha256": "4c691d82e7d6cf25639dc2af45014348a97192411eeb3a17339de0d7f6327198",
+            "review": "ai_verified",
+            "route": "/ru/components/progress-scale/",
+            "source": "simai-framework",
+            "source_sha256": "06a2dc5b9056205e9069727061d6dcff266792f6c89bafe6c4cfbb76b71249d5"
+        },
+        {
+            "examples": {
+                "default": "components/quantity/overview"
+            },
+            "examples_sha256": "559ff5d3cacb1fd6513f1a2b2c44321946b7b9f8c27b8cf5cf148a1094ccae7e",
+            "key": "component.quantity",
+            "kind": "component",
+            "page_path": "content/ru/components/quantity.md",
+            "page_sha256": "b8eb6a421779ef4d6c9661fb2ba02bc029b7e0515d1de8419d0d8179a03dfc21",
+            "review": "ai_verified",
+            "route": "/ru/components/quantity/",
+            "source": "simai-framework",
+            "source_sha256": "f5c33baa963534e11955c480a3523f33a29c8d793be3e27d59d98e1aae9e9889"
+        },
+        {
+            "examples": {
+                "default": "components/radio/overview"
+            },
+            "examples_sha256": "7041ec9835c89a022d500c42223fdaa9666e7d394755528e07c6d0bba58a9b5b",
+            "key": "component.radio",
+            "kind": "component",
+            "page_path": "content/ru/components/radio.md",
+            "page_sha256": "2657434cc6d25de69b895a85dd34ccd687aedc9aecdbfb7baaa3c6f83f2e8329",
+            "review": "ai_verified",
+            "route": "/ru/components/radio/",
+            "source": "simai-framework",
+            "source_sha256": "675c93deeb4eb7744e6cc46eb28304b32528a07b8c7c8ea249b378c5ee0ca1de"
+        },
+        {
+            "examples": {
+                "default": "components/range-slider/overview"
+            },
+            "examples_sha256": "45d769c05df009e052f7c7559ad5064768301c71ed8bb7b413e4aadc38ba6ec2",
+            "key": "component.range-slider",
+            "kind": "component",
+            "page_path": "content/ru/components/range-slider.md",
+            "page_sha256": "91fcaa3b8957488040835e6493da500e2a139f962b482f4c00831b208b22e5df",
+            "review": "ai_verified",
+            "route": "/ru/components/range-slider/",
+            "source": "simai-framework",
+            "source_sha256": "8421030366f2b97cb8f3d917223ee28b4c513afef54135da1e1877ba64a01dcb"
+        },
+        {
+            "examples": {
+                "default": "components/reference-link/overview"
+            },
+            "examples_sha256": "c3e4a0b20b22a10439ba3e8f8a446216d9b401a5e88b074588a481a3b5a9cc41",
+            "key": "component.reference-link",
+            "kind": "component",
+            "page_path": "content/ru/components/reference-link.md",
+            "page_sha256": "a62903f0ffb41d89ad0d83d37912dbb808b13d78299212844dbaea4fe4c1143e",
+            "review": "ai_verified",
+            "route": "/ru/components/reference-link/",
+            "source": "simai-framework",
+            "source_sha256": "621d839912ef747bd6a953e29aff66055f2ef78acc8332631cc1e59d458e76d6"
+        },
+        {
+            "examples": {
+                "default": "components/scrollbar/overview"
+            },
+            "examples_sha256": "39b0633566e838e7c1d2ceaa2e8484705cb7c57873ae31c5b038c323544e618d",
+            "key": "component.scrollbar",
+            "kind": "component",
+            "page_path": "content/ru/components/scrollbar.md",
+            "page_sha256": "657050edf6c4c79fa0ab4821e7747b0f82a3b6ae0421dfedbb90390ef19309a8",
+            "review": "ai_verified",
+            "route": "/ru/components/scrollbar/",
+            "source": "simai-framework",
+            "source_sha256": "b9f542e972fad8e2fed2fa66f560775b1f98cbeb55c507270fa138450d762322"
+        },
+        {
+            "examples": {
+                "default": "components/skeleton/overview"
+            },
+            "examples_sha256": "22f34256758368d8d9e3df2da3df434d4d746391d5540bc090741fe068264ef1",
+            "key": "component.skeleton",
+            "kind": "component",
+            "page_path": "content/ru/components/skeleton.md",
+            "page_sha256": "51755f94182103a84301e2157740c42580cf490167fafbc72b9d532c9540c8c3",
+            "review": "ai_verified",
+            "route": "/ru/components/skeleton/",
+            "source": "simai-framework",
+            "source_sha256": "323710f34d22ee3c7586a9bf55971fd72db95519cd7e467146a58aae9bc83568"
+        },
+        {
+            "examples": {
+                "default": "components/slider/overview"
+            },
+            "examples_sha256": "a940edb8b2536d1429ed20fcf065242d5d641cc8697368afef6c5c609b3ac9df",
+            "key": "component.slider",
+            "kind": "component",
+            "page_path": "content/ru/components/slider.md",
+            "page_sha256": "2b17c27b129277bf001ef36ac6911c1f5b7f39992daa5f83d018124e9890e59b",
+            "review": "ai_verified",
+            "route": "/ru/components/slider/",
+            "source": "simai-framework",
+            "source_sha256": "a4f63715e1c00e09e84818bfbe2b731fb926f2125d72131b4c2dd4468d0fcc3e"
+        },
+        {
+            "examples": {
+                "default": "components/spinner/overview"
+            },
+            "examples_sha256": "0e6817a27a38550e696bf8f1d88fcd3eb7d97ae7996431bdbf8273793def6f18",
+            "key": "component.spinner",
+            "kind": "component",
+            "page_path": "content/ru/components/spinner.md",
+            "page_sha256": "82340e4d49ea8080504465e43da25bbc767dca39351a11441cc20b1bfb07e4d8",
+            "review": "ai_verified",
+            "route": "/ru/components/spinner/",
+            "source": "simai-framework",
+            "source_sha256": "c82ba7d3066d3503f8624e9b592fd36244eeca645d813d0281d0b0b5e8c551b3"
+        },
+        {
+            "examples": {
+                "default": "components/step/overview"
+            },
+            "examples_sha256": "32262d42b7fa4dc04c30c0d0c9708d0cbe9775b650bcbadb5e15bd5810c44bf2",
+            "key": "component.step",
+            "kind": "component",
+            "page_path": "content/ru/components/step.md",
+            "page_sha256": "390c8da4902f9bffbbbbe484197c045a0698b574ee9d2df8e248b7b739eed8c5",
+            "review": "ai_verified",
+            "route": "/ru/components/step/",
+            "source": "simai-framework",
+            "source_sha256": "678b4af0c233e78e8670f6bd95a40501d6bfdab196eee5c99f42b3332204e277"
+        },
+        {
+            "examples": {
+                "default": "components/swiper/overview"
+            },
+            "examples_sha256": "9404b063b2c78b0ea61ee5b90f54d8ea84e8cf680773ea37220fc4928f8db0cd",
+            "key": "component.swiper",
+            "kind": "component",
+            "page_path": "content/ru/components/swiper.md",
+            "page_sha256": "02bd897258ff3c927db5612412574dc59da9ee6ad63df563cc4406211c1630bd",
+            "review": "ai_verified",
+            "route": "/ru/components/swiper/",
+            "source": "simai-framework",
+            "source_sha256": "863f7cfc8ed72d018368954928c69f85921f4ce49b6f3d6abfc4e5020bb0da06"
+        },
+        {
+            "examples": {
+                "default": "components/switch/overview"
+            },
+            "examples_sha256": "8f90826f6f9e44205fa176223cd421a5baf8288dab904e6b5b75e31fa8d85576",
+            "key": "component.switch",
+            "kind": "component",
+            "page_path": "content/ru/components/switch.md",
+            "page_sha256": "da8b09307a9d8e81a876ec264bbe128e13cdfbd404b358fa0226384a24ebfcd7",
+            "review": "ai_verified",
+            "route": "/ru/components/switch/",
+            "source": "simai-framework",
+            "source_sha256": "1c0e56331b3f0932ff1c40757fd6a4ff4a62053bb12bcf279371b8a936995b0b"
+        },
+        {
+            "examples": {
+                "default": "components/tab/overview"
+            },
+            "examples_sha256": "c51001584497d6fdb8ba0ca78e7dfc6a8d0c6bcfa286f89c818bf9c4f27d4bb4",
+            "key": "component.tab",
+            "kind": "component",
+            "page_path": "content/ru/components/tab.md",
+            "page_sha256": "5c68cb38ec23297f5b4357a7a7edfbe3db985cc8b29053421adb07d4ee7a2baf",
+            "review": "ai_verified",
+            "route": "/ru/components/tab/",
+            "source": "simai-framework",
+            "source_sha256": "2e3afad27169da4edc24b0a611ca0930e7f4587febeb501a07ec0a33cc4502fc"
+        },
+        {
+            "examples": {
+                "default": "components/tabs/overview"
+            },
+            "examples_sha256": "616b64c8d5b7a257b70e6d8fa14dd4dc30b6979fdac43f9e5c6115c54d9265fc",
+            "key": "component.tabs",
+            "kind": "component",
+            "page_path": "content/ru/components/tabs.md",
+            "page_sha256": "5dd10a9223aa55cf255a199a0c64ed718af18877c1638ccbf026ebf5be2719f7",
+            "review": "ai_verified",
+            "route": "/ru/components/tabs/",
+            "source": "simai-framework",
+            "source_sha256": "d0ed3fa83bce8cd9651f2ab1a4eeb97410217a4adc4989106ac19e99abd19508"
+        },
+        {
+            "examples": {
+                "default": "components/tags/overview"
+            },
+            "examples_sha256": "9f684d492790caa9f2b9d9527301391a69ff50055512e6367e88003a37976ee2",
+            "key": "component.tags",
+            "kind": "component",
+            "page_path": "content/ru/components/tags.md",
+            "page_sha256": "6dc5db713cf773e8a853d1abefd55092090d1ede9d47fca2decf2530f3b9b232",
+            "review": "ai_verified",
+            "route": "/ru/components/tags/",
+            "source": "simai-framework",
+            "source_sha256": "ed3be4345b7b7fd6ef109aba2eeac566c658177d00615087fda160d3cf2e8a79"
+        },
+        {
+            "examples": {
+                "default": "components/textarea/overview"
+            },
+            "examples_sha256": "aab690808845582595a3b1931235fe63bbe5b767b6d582d2dcfe74ba0f137f97",
+            "key": "component.textarea",
+            "kind": "component",
+            "page_path": "content/ru/components/textarea.md",
+            "page_sha256": "acffdd4d917efa3eb2e65dca397377cb77c88d8be728a9974b1aa6f292793831",
+            "review": "ai_verified",
+            "route": "/ru/components/textarea/",
+            "source": "simai-framework",
+            "source_sha256": "d75ca81147cf5ec58b3ba03f489a8650398000933c7d9eb73a493944d5fbd7fa"
+        },
+        {
+            "examples": {
+                "default": "components/theme/overview"
+            },
+            "examples_sha256": "cc79a3d1ca5da8388e235913108a790e3cbf1e7859c956d688309bcc22ee6e12",
+            "key": "component.theme",
+            "kind": "component",
+            "page_path": "content/ru/components/theme.md",
+            "page_sha256": "f0b44ca3a88354c6ac049d857c939fdd6f1936a68cdda4c8f88fdda91c4f10ae",
+            "review": "ai_verified",
+            "route": "/ru/components/theme/",
+            "source": "simai-framework",
+            "source_sha256": "d7c1e243a97a33b05900f56d3df9406fa5f6eeca26eca0be94a1c6315b820cff"
+        },
+        {
+            "examples": {
+                "default": "components/theme-builder/overview"
+            },
+            "examples_sha256": "2453e8b5e37a68f100f3f2492718e8f033c5f798d1182f08503509914c3b69dc",
+            "key": "component.theme-builder",
+            "kind": "component",
+            "page_path": "content/ru/components/theme-builder.md",
+            "page_sha256": "938eb75914556f0077d918bb948f6e80c802b573347b58c81b18b983e8a89951",
+            "review": "ai_verified",
+            "route": "/ru/components/theme-builder/",
+            "source": "simai-framework",
+            "source_sha256": "eaafb1ceabb4bd99826934ae159cbde52bfec4b357e94d90dc0dfe4f341ec975"
+        },
+        {
+            "examples": {
+                "default": "components/toast/overview"
+            },
+            "examples_sha256": "4412b5152ff58268e8164c0e5f09ca6f3e9cf455c73d10a2439bd8f0485ab0a8",
+            "key": "component.toast",
+            "kind": "component",
+            "page_path": "content/ru/components/toast.md",
+            "page_sha256": "d6c8502069f9561db798cc695613d89ee6782cb424d257a042815590325fbcee",
+            "review": "ai_verified",
+            "route": "/ru/components/toast/",
+            "source": "simai-framework",
+            "source_sha256": "f34993abe9f94430a02da25dea7bbfab6ef7c3fd30705033b9d504d0e0910f2c"
+        },
+        {
+            "examples": {
+                "default": "components/toggle/overview"
+            },
+            "examples_sha256": "64db62b31a5b32dd3b72ae642fbbb6b4cc315ae88f1941576a9bdb5965ebdb53",
+            "key": "component.toggle",
+            "kind": "component",
+            "page_path": "content/ru/components/toggle.md",
+            "page_sha256": "71263d567ff0c3b5a543d06a17b9c45b9a2352312173e7b930697a4eb57ca8b9",
+            "review": "ai_verified",
+            "route": "/ru/components/toggle/",
+            "source": "simai-framework",
+            "source_sha256": "0317c38816f9f9feab29c78318df31d5bd38c712e4343498be176188b81ff36b"
+        },
+        {
+            "examples": {
+                "default": "components/tooltip/overview"
+            },
+            "examples_sha256": "2d87ee7e099a5b71c5d55cb0c0e43124aae74a2d3c6821d4c9168582461a2a9a",
+            "key": "component.tooltip",
+            "kind": "component",
+            "page_path": "content/ru/components/tooltip.md",
+            "page_sha256": "92d4a339b5c69b6057985f9d2386874379a9ee14f7d94707ce4e547ff1884018",
+            "review": "ai_verified",
+            "route": "/ru/components/tooltip/",
+            "source": "simai-framework",
+            "source_sha256": "cd4e3088e92b3fe2161624819df619f12068ef631c112db450e322f29bda8803"
+        },
+        {
+            "examples": {
+                "default": "components/tree/overview"
+            },
+            "examples_sha256": "2026508eac0e1b2ab8512f219648da746ecc1542a428133bd304d9cc5783e8c0",
+            "key": "component.tree",
+            "kind": "component",
+            "page_path": "content/ru/components/tree.md",
+            "page_sha256": "04880122d53656f1b71c7c4a40550e3341df087a8cf02afba81c786da3291485",
+            "review": "ai_verified",
+            "route": "/ru/components/tree/",
+            "source": "simai-framework",
+            "source_sha256": "dd25f316cc4d582d0009933515d2e226abdd1dd48457df75ffff5f01d752e9b0"
+        },
+        {
+            "examples": {
+                "default": "components/tree-item/overview"
+            },
+            "examples_sha256": "7cb3e5fcc27d88dd7f97d415a97fb46b5f5cafb97f1df66d3430c8fcbe8b5c18",
+            "key": "component.tree-item",
+            "kind": "component",
+            "page_path": "content/ru/components/tree-item.md",
+            "page_sha256": "eb8b0afbb30873310a0b5f9a6b725e90108c21ec0ad19f88b8193bb268884ead",
+            "review": "ai_verified",
+            "route": "/ru/components/tree-item/",
+            "source": "simai-framework",
+            "source_sha256": "fb45f1125dc48fa9b020baa814d734f093ec8313d43e6096c96aa8ba6eda1937"
+        },
+        {
+            "examples": {
+                "default": "components/verification/overview"
+            },
+            "examples_sha256": "8bcf8ec8f9df34f4618efcce4450af2769017400a9172985734bd61b95b552c5",
+            "key": "component.verification",
+            "kind": "component",
+            "page_path": "content/ru/components/verification.md",
+            "page_sha256": "183ff12083dbfb623fbaf2f7a20895e9eb6074fca7b085abc1245f4d35f2b8c4",
+            "review": "ai_verified",
+            "route": "/ru/components/verification/",
+            "source": "simai-framework",
+            "source_sha256": "7d71a5d6f513961bdea448557abbeaad78050c7c00f7ce41f0cf396d42262572"
+        },
+        {
+            "examples": [],
+            "examples_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "key": "core.design-tokens",
+            "kind": "core",
+            "page_path": "content/ru/fundamentals/design-tokens.md",
+            "page_sha256": "c3a89afc5350ad42931d36be2711c50d744d6a4a587185121704d41bfa5ef3fd",
+            "review": "ai_verified",
+            "route": "/ru/fundamentals/design-tokens/",
+            "source": "simai-framework",
+            "source_sha256": "b6eb979586cdf1a9f0615f3c163b90295689edf6be93e6b85801c9cb1c59b0cf"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/accent-color"
+            },
+            "examples_sha256": "796cd0b7ca74526446c8a10d9f5bec36d0be9c51929c21addab9fe9e093d4188",
+            "key": "utility.accent-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/accent-color.md",
+            "page_sha256": "1a102a3bcfa8d52839a4e6fa3e6428bc8908e3475b9e0d95ad8f01e4e738264b",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/accent-color/",
+            "source": "simai-framework",
+            "source_sha256": "89a5db64c39bfc54fe5676292d20c67bc638940508a9a89f8189bb161b80008f"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/align-content"
+            },
+            "examples_sha256": "a4e405daf311194853e20fb84445b307d5e67cd147c8326cf4bb31611365ceb0",
+            "key": "utility.align-content",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/align-content.md",
+            "page_sha256": "2d97a6b68bef1095f4208b77cd088ba511eb02d5820265c15dc3105f8bff34c6",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/align-content/",
+            "source": "simai-framework",
+            "source_sha256": "ee19ce911d46e2c050112804204d1a2204f82ad35bfc0955f86e19274cb95873"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/align-items"
+            },
+            "examples_sha256": "1ef1528f6b0c33b7389dba1d8b4fee930be2981bfd68ebca2c8d87494ab6fd52",
+            "key": "utility.align-items",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/align-items.md",
+            "page_sha256": "55b2834370b3cf43fa909d1af515ee3b267fa7fe37a604a9b45a23acb72646e6",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/align-items/",
+            "source": "simai-framework",
+            "source_sha256": "1740d6aec092705403ee5ec122789300a5f0d398a35ac86da4fbbfd8e535f25e"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/align-self"
+            },
+            "examples_sha256": "1a800cb3c75ae9f684c907e4901cd6af1eb97667102ea68e528eec713b1f4f05",
+            "key": "utility.align-self",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/align-self.md",
+            "page_sha256": "7cf5c0ecf94a81dc3e717eb600ccb148290b020031b605365d60d95a51ddcee5",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/align-self/",
+            "source": "simai-framework",
+            "source_sha256": "16e9e38a25f2f42952ca194f9bde1ea6cc554be43aeb7b5a1d447f6d4f365cf3"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/appearance"
+            },
+            "examples_sha256": "e96f35618a40e24cb2cfda6f296b0e8c4b267b5e57eaa792a7319fdecb63bac7",
+            "key": "utility.appearance",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/appearance.md",
+            "page_sha256": "c090c28f6d467b94cba4d1e9ceb6b8a881a6cb5e0302f67b4a5f88eeeee4046d",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/appearance/",
+            "source": "simai-framework",
+            "source_sha256": "f4821a892bf44eb1739d5a9c4dca6d6d55d4145a079e6509ee58542eb92ff8d8"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/aspect-ratio"
+            },
+            "examples_sha256": "dcd578090d082334f93abce8ecf4b54132d7aa3d65536c4dac1bae8420067119",
+            "key": "utility.aspect-ratio",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/aspect-ratio.md",
+            "page_sha256": "8fa6b0418f71b7586fd2d06c23930c566f54de69e9a0b69264c2de9596607f6f",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/aspect-ratio/",
+            "source": "simai-framework",
+            "source_sha256": "59fd27eb71df495033d4124126220989375caafb387b05b1dacd6e0e465906ee"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-attachment"
+            },
+            "examples_sha256": "2b1026c77df7f7c0bd9afb0b9c54f7e489ca5667f59677bc32c3d3e920162dc4",
+            "key": "utility.background-attachment",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-attachment.md",
+            "page_sha256": "466ff269f49988f538fa53b85c412cf8194f786fe3e756061cb5a7c24b1dedd6",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-attachment/",
+            "source": "simai-framework",
+            "source_sha256": "dff43539abfeb99728c268c118408dffe2946b175e550d34535dca488207c2a6"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-clip"
+            },
+            "examples_sha256": "7827c75df5ba610bbad5f09fc08d4fa36e87d3a5522898166790785f5d43697f",
+            "key": "utility.background-clip",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-clip.md",
+            "page_sha256": "9e2401bdc0e1bd51028102fd53449c523313149fc74fd761c380269e62a4db5d",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-clip/",
+            "source": "simai-framework",
+            "source_sha256": "4de533c4d8e9b7b61b5289a7267c0997f4b77ef76f4f6594d0d7cb39bd496b24"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-color"
+            },
+            "examples_sha256": "0bc0d88fc7ab08fc83491bdb79cbb2c2cf78966a10586a70aba90c9dbb2f5a53",
+            "key": "utility.background-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-color.md",
+            "page_sha256": "dc226e9bcabfffae0f0b4814df7a2f84017a21999430ed293e0b6199763dfadd",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-color/",
+            "source": "simai-framework",
+            "source_sha256": "5fa6c7531ad127a1cbaf4d04f7f154a081ca253fe6a51577851423a3e88df0c1"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-color-brand"
+            },
+            "examples_sha256": "c468b4fa6f9c697755b721c8b0cbfbcff5faf1987e22518af00d7e5175c6ed64",
+            "key": "utility.background-color-brand",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-color-brand.md",
+            "page_sha256": "9bab56a014e39870d0350f018e372c9ea7453af2ebfa3fcdef616e3d078b3fa0",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-color-brand/",
+            "source": "simai-framework",
+            "source_sha256": "d586f7600ed66e1d5c45729046d48a16f182e309807ef49613cc163491cf0c48"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-origin"
+            },
+            "examples_sha256": "02fe9c4ce8778a2a7c17f46e5319252b72c137f3fa8beb873cda57ae989a8163",
+            "key": "utility.background-origin",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-origin.md",
+            "page_sha256": "e2d5766fe6eedf1983ca1070988325f735b923a7734a451f1a6e8ae0012dbd04",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-origin/",
+            "source": "simai-framework",
+            "source_sha256": "a173a68f145d0cdd240a5723cefdca1e23660ee30499445825c11f98215165fc"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-position"
+            },
+            "examples_sha256": "a7cc407acbd679472e33c593512e1832a4518dfb551c52221055cba6307dad1e",
+            "key": "utility.background-position",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-position.md",
+            "page_sha256": "594d42882909d39e77783af38a017c97078fdcd6a9a00926e8382729d78640f7",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-position/",
+            "source": "simai-framework",
+            "source_sha256": "675d3ef902017aafec476fa9f311c3e5a77d2cdc74338af7554ffad8c4be7e82"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-repeat"
+            },
+            "examples_sha256": "6b4e02cb51bb4a4c94551150518979d8b5eee5315be311545419efc653978e4c",
+            "key": "utility.background-repeat",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-repeat.md",
+            "page_sha256": "e6371190dd6b0819353b670b6742eacf2bc2337b7c8e5a7da9849c3b14f965d4",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-repeat/",
+            "source": "simai-framework",
+            "source_sha256": "97c95d87b762cc4c8de9198fa5f9204ed282d21ad9b939a998efbced06809bdd"
+        },
+        {
+            "examples": {
+                "default": "utilities/background/background-size"
+            },
+            "examples_sha256": "85bc935e42f2f99fc5da3284048bb4443cadbc6913dd27714039855d77289039",
+            "key": "utility.background-size",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/background/background-size.md",
+            "page_sha256": "d2e73b47a8389adf64996a6237d7032052c1d727a404495b07ead0ee1e5e276c",
+            "review": "ai_verified",
+            "route": "/ru/utilities/background/background-size/",
+            "source": "simai-framework",
+            "source_sha256": "f7067517f16f6cdd0a74b5576dafa6bcb09ba3e848f2090712fdcc5ca09cd13b"
+        },
+        {
+            "examples": {
+                "default": "utilities/border/border-color"
+            },
+            "examples_sha256": "79166b969527972ab8e757fd67cca82c6b5d15dfc701bb886cf1e9d4c9517a0e",
+            "key": "utility.border-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/border/border-color.md",
+            "page_sha256": "c14953823fe50e74c27b0f542e12fc8c7e01a56b73f46a01d79fe05417aa3e66",
+            "review": "ai_verified",
+            "route": "/ru/utilities/border/border-color/",
+            "source": "simai-framework",
+            "source_sha256": "cb97c0687c992c46b1dbe44b211367a49705c79b9d4b9825a04f1da67c61a93e"
+        },
+        {
+            "examples": {
+                "default": "utilities/border/border-radius"
+            },
+            "examples_sha256": "9395fe664b31dedd0f24f652fcc28b7132da80c6b835a598a557711ae3abcc1d",
+            "key": "utility.border-radius",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/border/border-radius.md",
+            "page_sha256": "45e5f7e1a1bf240cd77ff4fcab2aa97aee6412b4f5f1196322a024ed53700459",
+            "review": "ai_verified",
+            "route": "/ru/utilities/border/border-radius/",
+            "source": "simai-framework",
+            "source_sha256": "1afea64b89256c300ef9531fd28a585a5b3a6020408b31a4f0d5960e9982aaa6"
+        },
+        {
+            "examples": {
+                "default": "utilities/border/border-style"
+            },
+            "examples_sha256": "7410e074a089a5fb212897ef61d60c91c28e96d94b62380c3611b444259bf9b1",
+            "key": "utility.border-style",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/border/border-style.md",
+            "page_sha256": "3174c31402e3d2008e966b7152314fe9882ad6ce3e5b729dfaed877b6c6b7591",
+            "review": "ai_verified",
+            "route": "/ru/utilities/border/border-style/",
+            "source": "simai-framework",
+            "source_sha256": "f23334ad63df4cfcfa64839dae4d508f5e04d78b8cca2005d5a89bf64501fcdf"
+        },
+        {
+            "examples": {
+                "default": "utilities/border/border-width"
+            },
+            "examples_sha256": "905116d38396a8206756324024f091c0a613390e5c69bb84a75e166984cfdfdc",
+            "key": "utility.border-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/border/border-width.md",
+            "page_sha256": "6ebe310db3484c3c2297d3d357b5d2106dbeda313c9301871947d233070a9d3a",
+            "review": "ai_verified",
+            "route": "/ru/utilities/border/border-width/",
+            "source": "simai-framework",
+            "source_sha256": "f48c98d69b1c11919ab8326e4fd15299c4ec0f90b97b7a64f6d58fcb89fa7f5f"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/box-decoration-break"
+            },
+            "examples_sha256": "b91a435ba663520c3d7284538ecfa9e70691a2df111b2ea7f59c73c5e6f0d48d",
+            "key": "utility.box-decoration-break",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/box-decoration-break.md",
+            "page_sha256": "2047baf432d21d5c720354ff1cb030293c672161fadc235698c94dada25f3ab3",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/box-decoration-break/",
+            "source": "simai-framework",
+            "source_sha256": "d0594bf726bc0778d2ae74b85b48ea32572fdc87bee522a82d0b45bbe4b7eca3"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/box-sizing"
+            },
+            "examples_sha256": "86f127b63b5254a9420ec9ad6c70abdf5c7c8460136bde77f52205f7d2ceadbe",
+            "key": "utility.box-sizing",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/box-sizing.md",
+            "page_sha256": "4deb3a127c531c04054412ff28c1fe1c43c980e092533be24d3910bf2c7ea2a8",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/box-sizing/",
+            "source": "simai-framework",
+            "source_sha256": "d149ef647502280ba833e47af4e616d9071fafd2507ef4ad0529416c760f59a3"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout-break/break-after"
+            },
+            "examples_sha256": "2eab04ce3801a85aa1a2f7c76a7acfceef4544cfed7eea5d1b230ff93c569aec",
+            "key": "utility.break-after",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout-break/break-after.md",
+            "page_sha256": "a52f6fcff2ec0950d3f0b9477f83a2739d8943bdb121267c08ea9c3372c1547b",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout-break/break-after/",
+            "source": "simai-framework",
+            "source_sha256": "8ba2507c875d772e10de4fbcaf9c21c3b51c5ff082781c6e22fb7daecf359888"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout-break/break-before"
+            },
+            "examples_sha256": "26bb0f09bd55dfba71bc07fbd0de12490d2959b1518a06780be9cc27874123ce",
+            "key": "utility.break-before",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout-break/break-before.md",
+            "page_sha256": "28665a2600ee50e2ec6c1b832778bd049fa081c72837706576570242141b5af8",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout-break/break-before/",
+            "source": "simai-framework",
+            "source_sha256": "d69ca3142e726861780ef6a00fb0030b809f9bfb17ee36404d1f88cf1a970d1c"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout-break/break-inside"
+            },
+            "examples_sha256": "0209f31b16473d90bcaf08502ef597a851ef0f3bbd79d9e569d2c8aaa383f1d9",
+            "key": "utility.break-inside",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout-break/break-inside.md",
+            "page_sha256": "a69996810c2406e15942ded1bb392057bcf0e127cfed785103a24b2029759c82",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout-break/break-inside/",
+            "source": "simai-framework",
+            "source_sha256": "652f93bc61592e0a6f6ba560adda874d2c274a4ad871966cb8bb7611f7918e33"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/caret-color"
+            },
+            "examples_sha256": "a4a47880f477f5a08a6a96d3d8c7b2edf2815ccfb1a4f502dac152a64911e654",
+            "key": "utility.caret-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/caret-color.md",
+            "page_sha256": "2d36f73437d5939f99c0b7946746b6e519af646718f5eb922d05169c5b3e69c5",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/caret-color/",
+            "source": "simai-framework",
+            "source_sha256": "3ce0fa21cc0982b7966a3fded65355eeea2f56f4e82c484225391c0f56eda4c8"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/clear"
+            },
+            "examples_sha256": "33492db92c7d776b525e35d6fc94ac71dbcc289224e671fa321e3077c298b585",
+            "key": "utility.clear",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/clear.md",
+            "page_sha256": "774c886f83e6b37ac84918cecc5005387562749335129448cb50f76b75d1747a",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/clear/",
+            "source": "simai-framework",
+            "source_sha256": "540e040f34f1676ad76871d426ee13016a92f84efc89ab57d475d382862f29dc"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout-break/column"
+            },
+            "examples_sha256": "99168b60b38355ecfa5e2972ff5992d892f501c1e277fa4110b0130dbd2003a5",
+            "key": "utility.column",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout-break/column.md",
+            "page_sha256": "9b5aa1c60f9f4ea9e0dc3c11ad2728355492a51e0e6a693cc419bb1a7aee0f19",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout-break/column/",
+            "source": "simai-framework",
+            "source_sha256": "1d714079802e7e83caaf6913514558698c5d45d39cd00f0a814ed88cb5e0c314"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout-break/column-gap"
+            },
+            "examples_sha256": "49d029e60eea58a9c37a960b8a2b47fdb44fc877227abf6e08dfcdf69e5466f8",
+            "key": "utility.column-gap",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout-break/column-gap.md",
+            "page_sha256": "3e6da4b77c095aaf05778d204a5636fd5abff0e9f07e9c05bd3a84e10cd1519b",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout-break/column-gap/",
+            "source": "simai-framework",
+            "source_sha256": "1d4abcb2cfba00f4f4e38b45aac5acb11e2dcffa511d4d82db07ad13b9d495a9"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/container"
+            },
+            "examples_sha256": "e5a97e569a322267e7ec73fa70eb4c007c0b9324f105d3a4c669b46c8c46c8fa",
+            "key": "utility.container",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/container.md",
+            "page_sha256": "073b2fbbcf683c952d887ff017636204522b7f82cd8d732a3e7b74caac264fa0",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/container/",
+            "source": "simai-framework",
+            "source_sha256": "ebea2df5a02ae102e6a64931023998c40948f7dbfc6c74be1ee7e6d06d0fff83"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/content"
+            },
+            "examples_sha256": "8f36d59712f78b2e009f77f99ab2ef7491060c227f69c148b593c372449ceaf5",
+            "key": "utility.content",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/content.md",
+            "page_sha256": "eb227667d23fa3d36b8036785e338f9e9afc170d89f778a1d280711da2db5857",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/content/",
+            "source": "simai-framework",
+            "source_sha256": "bcab3faae61e288f5a4de5bdb5ad48d9d2ec1bbc3e4bf038849d61c6cd633d7c"
+        },
+        {
+            "examples": {
+                "default": "utilities/interactivity/cursor"
+            },
+            "examples_sha256": "8e7bccc0027325d1b5a1d9182ed67c2cf930561d942f576e412c23d463d49999",
+            "key": "utility.cursor",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/interactivity/cursor.md",
+            "page_sha256": "3d84a6eb37b386862689337a605f575bc49fb35d5991bf024db66874a9a14423",
+            "review": "ai_verified",
+            "route": "/ru/utilities/interactivity/cursor/",
+            "source": "simai-framework",
+            "source_sha256": "94e4b364706fa199e73a1c4a25d7392fff58fe847c8c6a75e983128f0fb957bb"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/display"
+            },
+            "examples_sha256": "a19396edb5f18bfabb89e66d2ca048e378b8127c5f3f1c4ed8ef7ed18fd7e313",
+            "key": "utility.display",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/display.md",
+            "page_sha256": "1f00e56d2c4fe0874ac83a4914a0a57921f1a7ee1159bff3ed95d2364ec5d4bf",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/display/",
+            "source": "simai-framework",
+            "source_sha256": "3f79074553cbbdb76afee79547b19e5a6afc0014ec18f5f42202c1d4d3cfa660"
+        },
+        {
+            "examples": {
+                "default": "utilities/print/display-print"
+            },
+            "examples_sha256": "a30fe1427834445460845240677e112dd4cbeff96f7062b27df706f937df8969",
+            "key": "utility.display-print",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/print/display-print.md",
+            "page_sha256": "d400a48ef5a6b5e00e28a507ce85429b030131d1ec98658c081e343581171c61",
+            "review": "ai_verified",
+            "route": "/ru/utilities/print/display-print/",
+            "source": "simai-framework",
+            "source_sha256": "5ca1be9c50d0369c8b3aa196d00abb8e97ee4ba55947039b9730ebecd4b08e00"
+        },
+        {
+            "examples": {
+                "default": "utilities/divider/divider-color"
+            },
+            "examples_sha256": "45dc5c6f9183ab764c8651a1750c8008dac31c22c00c667feef54e094e1f083f",
+            "key": "utility.divider-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/divider/divider-color.md",
+            "page_sha256": "eec22a0c7b0e010bb437e19a3de10727d369d160477502d617f46cf79f937bf1",
+            "review": "ai_verified",
+            "route": "/ru/utilities/divider/divider-color/",
+            "source": "simai-framework",
+            "source_sha256": "ea182a5c5eb482aa544ab7e0f7da9c1c9498223d3aae1e19063da3bc0bd0b4e9"
+        },
+        {
+            "examples": {
+                "default": "utilities/divider/divider-opacity"
+            },
+            "examples_sha256": "a8196d31c8561646cedeb5b2dde08a6f31f55782d084a9384c9d6375e8fe2e38",
+            "key": "utility.divider-opacity",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/divider/divider-opacity.md",
+            "page_sha256": "6ab605465f8df718466a9bae740a84c04b4f0e065c86470ebef723d54a2adf05",
+            "review": "ai_verified",
+            "route": "/ru/utilities/divider/divider-opacity/",
+            "source": "simai-framework",
+            "source_sha256": "4dd73c4991d94a1b78432dcd2b6eb867a8fc04dbdcbc37a1cb3f83fc148c048f"
+        },
+        {
+            "examples": {
+                "default": "utilities/divider/divider-style"
+            },
+            "examples_sha256": "0104ad07379a4f6888a8414487aba63e0ec14e2aba2ad6e0c4947b41064a71ec",
+            "key": "utility.divider-style",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/divider/divider-style.md",
+            "page_sha256": "68fe4fe8b5a16a12a3f54a76ed8b59a4e053fd65be3a3d10d8bae4572463ea6f",
+            "review": "ai_verified",
+            "route": "/ru/utilities/divider/divider-style/",
+            "source": "simai-framework",
+            "source_sha256": "e477c96eb9aa5b5bed370020d8dc7736b34bd9565d73f206c97ec91d26b4bf16"
+        },
+        {
+            "examples": {
+                "default": "utilities/divider/divider-width"
+            },
+            "examples_sha256": "450a30057ad9c963f17259bf2dd7d9562b0c496946834638c504f40e60db164b",
+            "key": "utility.divider-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/divider/divider-width.md",
+            "page_sha256": "2057b46f5cd64ef76fd519e86632bc358aaeff47db1498a90d320efb4325c151",
+            "review": "ai_verified",
+            "route": "/ru/utilities/divider/divider-width/",
+            "source": "simai-framework",
+            "source_sha256": "2114885dde4317002c2d914320624b40463ed07b12c5695ec74657732e784260"
+        },
+        {
+            "examples": {
+                "default": "utilities/shadows/drop-shadow"
+            },
+            "examples_sha256": "9b86b2170bba7e2be3cd82947b09217d9e4765a241e1a2e122648f60749ef014",
+            "key": "utility.drop-shadow",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/shadows/drop-shadow.md",
+            "page_sha256": "f0eab1621631faee9d52a4a7e6f7c65a86b14d80231ff5ff54ab6e07e61064df",
+            "review": "ai_verified",
+            "route": "/ru/utilities/shadows/drop-shadow/",
+            "source": "simai-framework",
+            "source_sha256": "61a0bae42912a83ee6472c8399d58968d6180df4b15aa3b6b621796419380faa"
+        },
+        {
+            "examples": {
+                "default": "utilities/shadows/drop-shadow-color"
+            },
+            "examples_sha256": "635529b1fdcb4dcb5f8aa6bf0af494d49bc599930e1a28b56817642c27844939",
+            "key": "utility.drop-shadow-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/shadows/drop-shadow-color.md",
+            "page_sha256": "fbc88ab5866cb59842e3ec5e37bed67af611cf009cd26a8c440d13d861b9a293",
+            "review": "ai_verified",
+            "route": "/ru/utilities/shadows/drop-shadow-color/",
+            "source": "simai-framework",
+            "source_sha256": "94fa23b093f1f4edad9b79f1f54d12d9d7c6fd2c0c24880f65238adf969fd357"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/element-position"
+            },
+            "examples_sha256": "5d7c0a40f98fc7b2e49fcc3e939e20193acc35add2a8537484acbad6f65f7403",
+            "key": "utility.element-position",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/element-position.md",
+            "page_sha256": "0593277d57a09e0f500b41c3af19240cf7313ed40c4f83af0ebbccd0f04f6645",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/element-position/",
+            "source": "simai-framework",
+            "source_sha256": "a5051b5a1c36016df2e2e4cae374ffabc6be9a3cc8f874e0fdd1fc63000d6b9a"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-blur"
+            },
+            "examples_sha256": "c267f05853964d3d08fb924a5edc9c44424a9bae571ae1c06b4b3a549c801164",
+            "key": "utility.filter-blur",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-blur.md",
+            "page_sha256": "e916b3e9af01a1a80a288bdf2266113ac20d63c58297e6ac8e39a5808f943244",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-blur/",
+            "source": "simai-framework",
+            "source_sha256": "a1d5fb41ba5d7d6ccd6b47bdbc7c83dc7fdb060dd43ab471030016436e0d31de"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-brightness"
+            },
+            "examples_sha256": "145f5445dd6ccf0142b94c83cef466ab29743625906cdedf54b4e5e8fd7fa2b7",
+            "key": "utility.filter-brightness",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-brightness.md",
+            "page_sha256": "6410bf898e912debe611e8d90a46e2ce63e7617e3fe0d672bc00a3e4c3dd73fe",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-brightness/",
+            "source": "simai-framework",
+            "source_sha256": "d4b45451a7265ff24a5fc29abd50c27f6370f1dacb98d2f4184f5022fcf8eba3"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-contrast"
+            },
+            "examples_sha256": "8bc75d5409c7311a542ff679135657f5c77e66eb2d6996ec5cdcddf665bba216",
+            "key": "utility.filter-contrast",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-contrast.md",
+            "page_sha256": "6f7d40bd433dd09de3f151ebf7f9e0ec01db441d754df9f6af055093d7e02bc3",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-contrast/",
+            "source": "simai-framework",
+            "source_sha256": "d01c21267f8fa40033bcaeceabf800a5d53f580c8a1cb0c8dbc613193e7ba321"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-grayscale"
+            },
+            "examples_sha256": "df9695768c9e0d3ce183904b31ffe072141653cfa26179662b5f9e586fb2972d",
+            "key": "utility.filter-grayscale",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-grayscale.md",
+            "page_sha256": "52abe3b618b384ba133bb4c757258ca86897702e2a98c682eb8af7d5ad9128a9",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-grayscale/",
+            "source": "simai-framework",
+            "source_sha256": "756cdde14e001ad0b8a5dd9a234e004aadacbf79c9d85c63e40d34c42e66f4da"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-hue-rotate"
+            },
+            "examples_sha256": "f23e207953dafc43610bc9eaa080f23ff0099102bb4ffe3775554665b5352900",
+            "key": "utility.filter-hue-rotate",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-hue-rotate.md",
+            "page_sha256": "a7c802cfb25edde40a6950f77c02f899132121b3b29a0ca45e60aed2d952a9d8",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-hue-rotate/",
+            "source": "simai-framework",
+            "source_sha256": "dff0978384ead24ef5e218e7cd0981ef3844e90fad320d5036c1094c77d931b2"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-invert"
+            },
+            "examples_sha256": "f28d24227a29e76a47a629bc0ceaa3154f3f2f1e138b2eec7946d146029359da",
+            "key": "utility.filter-invert",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-invert.md",
+            "page_sha256": "7d2696f2ad5fcb616be3d815002b9e2acd62afaaddf42bc6ecc425b60a17cc06",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-invert/",
+            "source": "simai-framework",
+            "source_sha256": "d9a12b8b44c23440c2fae7a13433df458bd3aea2b4427551c8e43389d08a387b"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-opacity"
+            },
+            "examples_sha256": "a20ce319892380e561bb10dbf844858118bab06c40f41aabd5de6e30b9fa8341",
+            "key": "utility.filter-opacity",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-opacity.md",
+            "page_sha256": "c0373a969d0117bec9f1a627bca1c92f67129a6e383c36c7996aeda4181b9de7",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-opacity/",
+            "source": "simai-framework",
+            "source_sha256": "8e5e048b0b2496d874adf28e40b22e8c0f0c40422e28dcdf9bee5470691437b0"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-saturate"
+            },
+            "examples_sha256": "b84cebb1186de8e926578ecbafaa91c42ca652f4158ab3f0e2d5e43736a27401",
+            "key": "utility.filter-saturate",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-saturate.md",
+            "page_sha256": "0da83f856d086fa6b856acde339e9550d0aef1e0f7c740c5801e74d9c3ab3da8",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-saturate/",
+            "source": "simai-framework",
+            "source_sha256": "5adbe2af3da339060ec9bd2f2bd356b6698c7d295b51b71ebc1d28b11c190692"
+        },
+        {
+            "examples": {
+                "default": "utilities/filters/filter-sepia"
+            },
+            "examples_sha256": "9d234fcf8c056576961ed54a8ddd8543ee73910b0d6f9bc9d56a3e1d00c8d2cb",
+            "key": "utility.filter-sepia",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/filters/filter-sepia.md",
+            "page_sha256": "c509b28b7a2645edb11b032aec755ab39eba91c4b6c525911109af9fc9de1902",
+            "review": "ai_verified",
+            "route": "/ru/utilities/filters/filter-sepia/",
+            "source": "simai-framework",
+            "source_sha256": "83bf571ae43ebc2b676fc45a4d2d5eb9222fe4535b96cfc09f6411ed56694a39"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/flex-align"
+            },
+            "examples_sha256": "bca4dc03ff5833450d2192b0389790295960894e0ea761c1df795df46f5669da",
+            "key": "utility.flex-align",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/flex-align.md",
+            "page_sha256": "8c6783c4f240e59083100e79c86667074621f7a6b063300cd5bae1e530d0e0e4",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/flex-align/",
+            "source": "simai-framework",
+            "source_sha256": "4042a5919dc38ea17c72cc666d541ea0c2206632eafdf3a14b3ddcacaa5e5d23"
+        },
+        {
+            "examples": {
+                "default": "utilities/flex/flex-basis"
+            },
+            "examples_sha256": "b29d2a1d0b8e9c339860d788412e5c9dab422b42e01090fbc9c1bcf30bcfa2b2",
+            "key": "utility.flex-basis",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/flex/flex-basis.md",
+            "page_sha256": "d5971e5d5f4fac580f342d9c1f4b327d3f11cdea9af1c37d16a1991e354ad048",
+            "review": "ai_verified",
+            "route": "/ru/utilities/flex/flex-basis/",
+            "source": "simai-framework",
+            "source_sha256": "034c96f0fb897683a4d8fa39820c96e0c550f2f89ff7d7148069940c79c67fd2"
+        },
+        {
+            "examples": {
+                "default": "utilities/flex/flex-direction"
+            },
+            "examples_sha256": "9ec34a5b48ee6cc88a67a1df56df0297ccb813eefbedf07fa62bb829eaef2fe6",
+            "key": "utility.flex-direction",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/flex/flex-direction.md",
+            "page_sha256": "f535a6d0bd9b28161f00499630aadc3d48e99a0b97cac026ae8610a5f0fb71d4",
+            "review": "ai_verified",
+            "route": "/ru/utilities/flex/flex-direction/",
+            "source": "simai-framework",
+            "source_sha256": "a21b3c03e199b5ea8796376df6483aaa6f09e7b80d00180902007c8fb19e35b5"
+        },
+        {
+            "examples": {
+                "default": "utilities/flex/flex-grow"
+            },
+            "examples_sha256": "f56182576b00cc97d1457e4fcb9cd9ebacb505e42677461e94e760d661c658ba",
+            "key": "utility.flex-grow",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/flex/flex-grow.md",
+            "page_sha256": "28c611e51d14409dc7fff365f67f8ffbc2a61506573b535862442949d980b8e0",
+            "review": "ai_verified",
+            "route": "/ru/utilities/flex/flex-grow/",
+            "source": "simai-framework",
+            "source_sha256": "184735b96d120a068fdf70fef524b03a366064b76d9c2af32708a8ed5efa4573"
+        },
+        {
+            "examples": {
+                "default": "utilities/flex/flex-shrink"
+            },
+            "examples_sha256": "4144eaf1becfd3bd2f4219e944fdc5dfc05f246bffb28e24139f6f9482bfba6d",
+            "key": "utility.flex-shrink",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/flex/flex-shrink.md",
+            "page_sha256": "d10a365c32d3c92ceebafede5e8ed7e6f700e08696d31883f3a87c4480c023f3",
+            "review": "ai_verified",
+            "route": "/ru/utilities/flex/flex-shrink/",
+            "source": "simai-framework",
+            "source_sha256": "760c7182fcce5acf12c5b8fcdf990170d793319f1fbce474f05596d9f2f8ca99"
+        },
+        {
+            "examples": {
+                "default": "utilities/flex/flex-wrap"
+            },
+            "examples_sha256": "c580987b734ae27b30d766964978b761f011b3b2a02599d8f00e0f9394d6da84",
+            "key": "utility.flex-wrap",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/flex/flex-wrap.md",
+            "page_sha256": "dc3bbe218a395089d03211aaa18269e3df251119e43a122caaf2422133665f08",
+            "review": "ai_verified",
+            "route": "/ru/utilities/flex/flex-wrap/",
+            "source": "simai-framework",
+            "source_sha256": "79fd4b465d73fc95e117bd0c7d253adf9e909d2574d6d86bcaaab94c6502e122"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/float"
+            },
+            "examples_sha256": "9f0bf962ce9703e29ba8f824d70e39f328299abdfa83372e28ca39df75aff502",
+            "key": "utility.float",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/float.md",
+            "page_sha256": "cb266dfc95ddc0d0e639188d921df39fc182d73f465bb215f13487258b8cca74",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/float/",
+            "source": "simai-framework",
+            "source_sha256": "32004200a15bc20cf78befd876f0cfd3cbea1bd5aa171be40b966fab84765113"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/font-family"
+            },
+            "examples_sha256": "46e6cf639b30a0691f125faead0eaa9ada1e70e059e51a5596a9b0be04ee4289",
+            "key": "utility.font-family",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/font-family.md",
+            "page_sha256": "c1ae130e85f1fc7b5fdb0bb66c9685a117f36d7ebfd1ac2571d443699d88745e",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/font-family/",
+            "source": "simai-framework",
+            "source_sha256": "8baeb02ef252bb079c9d3fe5de2e0b4d37a0e5536e6b3745d16450a10d1ffce3"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/font-smoothing"
+            },
+            "examples_sha256": "915ff1d2ab08fd529e9aa603c022a896907f4f5b2c8878f5f92b0dcb8bd2685a",
+            "key": "utility.font-smoothing",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/font-smoothing.md",
+            "page_sha256": "1ffd6c76e51d86bcfa829bd057ad7ad30f151cefb0dedb4fe9d072d9bf6941cb",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/font-smoothing/",
+            "source": "simai-framework",
+            "source_sha256": "115e3ace8b203cf7ffb87b97ee6321c8364b5c654828025ad569eb1ce5051650"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/font-style"
+            },
+            "examples_sha256": "d7b00da453317f1933b0a4e0002b06c8c284775f409a87c6545fd3f6b5cfb05a",
+            "key": "utility.font-style",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/font-style.md",
+            "page_sha256": "f185aecead58d3f7dbb8dcd9936afc634d38935e87fe9e481f263eb48096c89a",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/font-style/",
+            "source": "simai-framework",
+            "source_sha256": "26c212e7b9a9f09611c5f35ba47f0be4e5a3f090cfa02e015dce7bd8ad365dcf"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/font-variant"
+            },
+            "examples_sha256": "f7f46b8fc88e3570c82614f9252b6ac8f776cb897cd4864401f5ce912419a883",
+            "key": "utility.font-variant",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/font-variant.md",
+            "page_sha256": "1cef097c7fb07c0644eef3efd3b5473c0dc27ba46151e6b34d0691902ab65409",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/font-variant/",
+            "source": "simai-framework",
+            "source_sha256": "ae50e3988191b6f889da047c58ca5af24048fa2b946518c85f5231e8c422fb10"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/font-variant-numeric"
+            },
+            "examples_sha256": "8afec80b8c83c22ecfc47e2317bf2fa019a6bc3e5d5d71dea1567fd45f7dd676",
+            "key": "utility.font-variant-numeric",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/font-variant-numeric.md",
+            "page_sha256": "322e38e43cd72679779aa504c60374cac686be60f22412f75f05da26eaf1dac9",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/font-variant-numeric/",
+            "source": "simai-framework",
+            "source_sha256": "9bd302dba0df417b05017a19b5e7e276ddc089906d8c7ebf1ee837c678ffb83c"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/font-weight"
+            },
+            "examples_sha256": "151bc90d4fcc4c5b91ba5e5a1f307f453d999e8ede750d395dbd42d138e98fdf",
+            "key": "utility.font-weight",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/font-weight.md",
+            "page_sha256": "149affc3d7aa52022e748b7bbb385a049e73fd967c0f9a47127a95930c378c67",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/font-weight/",
+            "source": "simai-framework",
+            "source_sha256": "e3ec2e3eed8b67170d94c4bec21a3965e5babfc053ec2ee353e51cb6631e1719"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/gap"
+            },
+            "examples_sha256": "8be09dabdf372b1b5b04e4a4d2b83320a7382015a2b25481bcb2611abb6c026a",
+            "key": "utility.gap",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/gap.md",
+            "page_sha256": "9fe238377f11f22df5243b17b64a40c53c80990c3c89164592a314f2de778c34",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/gap/",
+            "source": "simai-framework",
+            "source_sha256": "4bca90198590f4a9636528b239b886c1a9c738e16eb8f059464d43cd89d099fa"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-auto-columns"
+            },
+            "examples_sha256": "8151b58190ddfe8c0eece7f080d0493f9798d05fc165d92de21eb57c6d3f8c94",
+            "key": "utility.grid-auto-columns",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-auto-columns.md",
+            "page_sha256": "ef977a6c9dd7520b27ae53ee1eb5f998facfcc8fbfbc4c9650bd74ba15823684",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-auto-columns/",
+            "source": "simai-framework",
+            "source_sha256": "78714ac255022d5bf0002d64346062489fd2be1ab7c1175836912ab7c757d9aa"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-auto-flow"
+            },
+            "examples_sha256": "24eedad5668b6e64b864d7a2eb58cc09b0b0132a3f50c3dc45dbe120fc516b90",
+            "key": "utility.grid-auto-flow",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-auto-flow.md",
+            "page_sha256": "46d7be4862ca5530fcb54ab124d9b0135ce3ccfc6b210d05b821615f9b3a68ca",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-auto-flow/",
+            "source": "simai-framework",
+            "source_sha256": "3c9a1175880a091c4e14b54c60b22ead7d2d0070f713442deb605fe18bdc4d01"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-auto-rows"
+            },
+            "examples_sha256": "d52e0f99397af24e82762660f1dfd2206c43b8a6b346615d17db5efd5f6116be",
+            "key": "utility.grid-auto-rows",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-auto-rows.md",
+            "page_sha256": "cb45dbd7248f991bcac2c00dae30fec8330b1f206aaacfb8add763af29b4ded4",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-auto-rows/",
+            "source": "simai-framework",
+            "source_sha256": "466bd688938865302363bc1183adb356986b904f60c44d9a59470a5dae407be4"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-column"
+            },
+            "examples_sha256": "2b9e72165181f8066f8ee52f91962225f64fa9853ec8649f68a4a2ef723576bf",
+            "key": "utility.grid-column",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-column.md",
+            "page_sha256": "376d062daa08b9d2732b2521af6c296ebaece8878bb2b9d4dbd05740bcd1d761",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-column/",
+            "source": "simai-framework",
+            "source_sha256": "a287844c8d72e5195de9ce5fcba08a02e0d16f7806cde5d56438f7706323f372"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-column-end"
+            },
+            "examples_sha256": "cb667eb5ce8ed56912a7e045020138f15f2e3b92e0cbae5f7c7f21c77315f382",
+            "key": "utility.grid-column-end",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-column-end.md",
+            "page_sha256": "2396631724697daf1f61278fafeb7790dfc930521111606d66d82c7cca3b7a36",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-column-end/",
+            "source": "simai-framework",
+            "source_sha256": "b4a574e4c6179c3e938edf4cf54a17928b81c97ec0a7b43e602f949aa2d84009"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-column-start"
+            },
+            "examples_sha256": "ab083f3b7a73d8e73dc07c7bb0bf74e804ebf0ae6dd559d99e46fb5bd6853333",
+            "key": "utility.grid-column-start",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-column-start.md",
+            "page_sha256": "b6380bd5edf41d3148a254a1595fa1b422981f6417198876b2af3be7c5187f33",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-column-start/",
+            "source": "simai-framework",
+            "source_sha256": "2c02355b93afe2afeab8844a4c18511b9099940ec088c2096b03d4f5ff936b48"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-row"
+            },
+            "examples_sha256": "906527fff4949e65ad326d1e0f5728554e2a4cf46a8767d889627491bd6fe4d5",
+            "key": "utility.grid-row",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-row.md",
+            "page_sha256": "afabe1208faf222c94fe9a8193a83916d7913e58efa976aa4fd7a9d7409b2832",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-row/",
+            "source": "simai-framework",
+            "source_sha256": "89bb9a3a5fe0940e007897cfd4569a7f788dddd7d8e85aefb75cdd43b084e75c"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-row-end"
+            },
+            "examples_sha256": "df485a956f0da0f53bd28c54454790dcbedfab782ff37f52089bd8cecd57240d",
+            "key": "utility.grid-row-end",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-row-end.md",
+            "page_sha256": "96e28f486d96317fbfb529bf64c164b3706b43cb40a79a69bb87f71bf2881c23",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-row-end/",
+            "source": "simai-framework",
+            "source_sha256": "b74a400833a73805dab006f87285803ec4f8ef161823e034106cf8b001b59bce"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-row-start"
+            },
+            "examples_sha256": "2a68e1a60a8f71fe048c9b25e3a3f03b3a8c96a62c88d34e3f0b5e4edaa86859",
+            "key": "utility.grid-row-start",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-row-start.md",
+            "page_sha256": "219f9fd99f11d8b7369faadd3dd8de173e4b3d5eb641d069d5f30fbbefbddd19",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-row-start/",
+            "source": "simai-framework",
+            "source_sha256": "c0168cf6edba881036ca364e5db8d19f91dbde1241f1cd4099473080fb1140c6"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-template-columns"
+            },
+            "examples_sha256": "ac05387a6826e15250de8f19ac4ebb4b1ee2b4568eda058d0b740a5eabeb7883",
+            "key": "utility.grid-template-columns",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-template-columns.md",
+            "page_sha256": "1b21ae4b53e124ae86aca83a8d255f208d85b25180913279f992ec5328ba1a02",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-template-columns/",
+            "source": "simai-framework",
+            "source_sha256": "4d9af280f16ca17257dd6d2f98b13a5f0cbe163fe624eb8691c99ed18fd0d97b"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid/grid-template-rows"
+            },
+            "examples_sha256": "8a90cfe8a8632a2358ab71c9a2e95811f33d1036041fd3a7005050851c277aff",
+            "key": "utility.grid-template-rows",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid/grid-template-rows.md",
+            "page_sha256": "a5806722b12d27231fc853dbef7cd4356801377ca054f041814b5902ced0ab58",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid/grid-template-rows/",
+            "source": "simai-framework",
+            "source_sha256": "25e41a9547898d6cb6e8bab8311aade25d0356270e5b5bad43d2385707dda0e5"
+        },
+        {
+            "examples": {
+                "default": "utilities/sizes/height"
+            },
+            "examples_sha256": "0ce5c2eec921bcef1091d7cd65234e3771354436d142db8da8862d4659fecf8e",
+            "key": "utility.height",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/sizes/height.md",
+            "page_sha256": "749842c5311248d6978b9b250442706ac8183c2f48bef6ed7ec08432e01d9c30",
+            "review": "ai_verified",
+            "route": "/ru/utilities/sizes/height/",
+            "source": "simai-framework",
+            "source_sha256": "22a80a96d48a9eacc2de6fa689b84acc916e70e8914dba68585f87685da57afe"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/justify-content"
+            },
+            "examples_sha256": "62d6f0017a3e281786ba4eb824cdc3da0f76cc33e724f07adf91d335b8c0f64c",
+            "key": "utility.justify-content",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/justify-content.md",
+            "page_sha256": "06262e9972622a2ac0c130aea4ae16107400863bfc812d0e809c6acd47ff2343",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/justify-content/",
+            "source": "simai-framework",
+            "source_sha256": "5f082bc8bdbd640da7329ff081f13a894eaf7a6aac72bec07d7065b819eb9afb"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/justify-items"
+            },
+            "examples_sha256": "e509186551582bd04c41a63be2434094becabed2767f6b9470e6728770ea9149",
+            "key": "utility.justify-items",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/justify-items.md",
+            "page_sha256": "7ac563aeb8cfa2e05458365dd1de1dbdf4b33099105ecdaf04e4ffa010ab66d8",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/justify-items/",
+            "source": "simai-framework",
+            "source_sha256": "c0e56e0a81b0d3e2d3e50bec8006f539d4607fbcac853a649df3a207c8347550"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/justify-self"
+            },
+            "examples_sha256": "17f680fad09338e96607844f1e85c96db07f9be0469b2f2682061a387d62087b",
+            "key": "utility.justify-self",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/justify-self.md",
+            "page_sha256": "3f7e7bbb4dc0abd4ff6b76141779310a43ae5fbdf5719cb27d4395247c14c8f4",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/justify-self/",
+            "source": "simai-framework",
+            "source_sha256": "a7eb148bd45d4952cbe871f1c0698feb0bd19b1ef54b443218db4d0f97731a4b"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/letter-spacing"
+            },
+            "examples_sha256": "ed49ab478a7469725eb9237af1faa36120acba7951627ea78cd2ff457e155315",
+            "key": "utility.letter-spacing",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/letter-spacing.md",
+            "page_sha256": "6756320b3ad7241f62f8e7a747bb9eff4bd50ddf87f6d628cbb0b313a3723813",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/letter-spacing/",
+            "source": "simai-framework",
+            "source_sha256": "57d5ecc03d792233f73b10109c66050403541621a20f4ce2630f591ff52e6410"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/line-clamp"
+            },
+            "examples_sha256": "148fcddbe3ec051cf9114ee41d49681128c1b930e3f139bfb721799a71a281c0",
+            "key": "utility.line-clamp",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/line-clamp.md",
+            "page_sha256": "0a6b578b4aa5a0bb2cc78c5a1c8a0534202859660f90e7b60485f99a4a51f9c1",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/line-clamp/",
+            "source": "simai-framework",
+            "source_sha256": "9c4b18e8cc74518eae5b99aec74cbae21910e03929cacbb322316d4fa716a068"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/line-height"
+            },
+            "examples_sha256": "41737064a821f315dc0807f340801df97e3d3138e727b11f9ec22de3aa21f81c",
+            "key": "utility.line-height",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/line-height.md",
+            "page_sha256": "7f2e9ea5cba7de590e771c09164bdd2a490536db92db731e0772fccb8689d12e",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/line-height/",
+            "source": "simai-framework",
+            "source_sha256": "5610d1e56dc86e3b082443a8fe9deeda0ee9f9b91466192f3073a46daa7a8d33"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/list-style-position"
+            },
+            "examples_sha256": "4762878e4cdfe81d0348834ea35f0e66a8245556965c8d6c2ba2d5bf8c8688b8",
+            "key": "utility.list-style-position",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/list-style-position.md",
+            "page_sha256": "6c5baa661256a46d90e9e4ab2bedb092a4d391098ff6692415cb933cb3014124",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/list-style-position/",
+            "source": "simai-framework",
+            "source_sha256": "4eeb3daa6b3ce725c8180c4a6d5c248e17aea672c7101d2d951a5fae659b2795"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/list-style-type"
+            },
+            "examples_sha256": "34e0d9e942e61f2b6513e9926abe385402934cc1d4e46d22e797f86a7e3c523d",
+            "key": "utility.list-style-type",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/list-style-type.md",
+            "page_sha256": "f37c98e397de69ef714ccb95f0f731f1834afdc0255e30d09a66ba6e5823eecb",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/list-style-type/",
+            "source": "simai-framework",
+            "source_sha256": "4ee0c57871a991a3a4b07a4412ba260f0a0d3b0489edee9921edb27cf54bf79a"
+        },
+        {
+            "examples": {
+                "default": "utilities/indents/margin"
+            },
+            "examples_sha256": "0a2a0f63b1af3ca24c6548590d159999d8ba5cef9d3713ece7d2b446093a5dde",
+            "key": "utility.margin",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/indents/margin.md",
+            "page_sha256": "7a30dfc665183de2c91f67824c69d7e30e4046b9c0f435f3e886ddb3a29655bb",
+            "review": "ai_verified",
+            "route": "/ru/utilities/indents/margin/",
+            "source": "simai-framework",
+            "source_sha256": "30ecf616a3577ef6d86a02f34c62fe61292b093ce1bd7c421726ce79fb2efb02"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-clip"
+            },
+            "examples_sha256": "568691638f5bcfe6228b450eacee9ea110c6a8a3da7446c36c1f7f9223296dc0",
+            "key": "utility.mask-clip",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-clip.md",
+            "page_sha256": "cddf4a6cd439a4cbfe2fa246c9a42418fda3085ca25ae63ab56ec3afdc6b5c3a",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-clip/",
+            "source": "simai-framework",
+            "source_sha256": "dd5ba2cbeec26cc5b0ea228325b672517bd0b12ad0bab2abb34283ff8bddf324"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-composite"
+            },
+            "examples_sha256": "c34912688ff21d61b0937210e154432a60acdd1c6ffb79c0c39f62b541963a68",
+            "key": "utility.mask-composite",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-composite.md",
+            "page_sha256": "838ca076a984c93e938299addf7d06163729ee1ddb3acf97939d112bb68e4619",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-composite/",
+            "source": "simai-framework",
+            "source_sha256": "99a4e277c74d61716d7e0bcff5dea74692a1dee093b3c2625e91aa6b1ac217dd"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-mode"
+            },
+            "examples_sha256": "77edc9abaadc71fed8109f94047361ce54ddc5f74375e1bb19e751ea4c08b6fb",
+            "key": "utility.mask-mode",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-mode.md",
+            "page_sha256": "bcc56c5632ab13b6d724e4ac94c5d622f2e08ddcb12b1fd0607ab12703df5153",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-mode/",
+            "source": "simai-framework",
+            "source_sha256": "e77f46f42c1c46164cca20cc76e77152d624dcf8b75abce05bfeb024ff42baaf"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-origin"
+            },
+            "examples_sha256": "86a7d68b8859ed00f33fdceb23d3e12f4eed14407bf09eec1af5ea178bab042c",
+            "key": "utility.mask-origin",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-origin.md",
+            "page_sha256": "908762540d7ff9a25143d021b40f0b5f152f346e0774730963e525b81bc4fc8e",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-origin/",
+            "source": "simai-framework",
+            "source_sha256": "5396e9dead79bc4127652fc6ac2ef8004a88bddac9c62021d4afea4ab6a617fd"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-position"
+            },
+            "examples_sha256": "19981979e05232aaabc96788120e9685678d2d3fb0c1d5242d7d4def5e3bc66b",
+            "key": "utility.mask-position",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-position.md",
+            "page_sha256": "4176c5b632296a021b5b53a70963c49ca5e3a51225825fe1700506d29b602304",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-position/",
+            "source": "simai-framework",
+            "source_sha256": "63346931fe5cef0f1f0cfe73df1b01312aa6ea64e1c04f52155785cd444ed734"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-repeat"
+            },
+            "examples_sha256": "22a73916a0ac9fdcf7f5eb677b518cb96b36bdc9cffb16dd3e34b9452a300ce2",
+            "key": "utility.mask-repeat",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-repeat.md",
+            "page_sha256": "df0a0f0481df58f039e6a990e1af4048b27e2f77efee7069edfc1f4251baa77a",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-repeat/",
+            "source": "simai-framework",
+            "source_sha256": "81a90d7f37157ec0aca33c0c3661c55de619595f8f38602ed2405335d699e8ff"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-size"
+            },
+            "examples_sha256": "2f7633255577c9fc8d1a8b9e5916c341b843d00a2cdb8d58cca58d9bc12891e6",
+            "key": "utility.mask-size",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-size.md",
+            "page_sha256": "4045549c2da6ac39c05ba39f9c922705574ecfee1675ed9cd9e6abf6187d58ff",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-size/",
+            "source": "simai-framework",
+            "source_sha256": "913e9a6b9edada8452689459068cc42e0e7656996f525e9d37394db9df4fc9e7"
+        },
+        {
+            "examples": {
+                "default": "utilities/mask/mask-type"
+            },
+            "examples_sha256": "6dab3892f22b74cd335ace83d25729318fd389abc01cbbc2fbdbd799369bed09",
+            "key": "utility.mask-type",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/mask/mask-type.md",
+            "page_sha256": "58cf200624175a16a08ac34836056e69a363fc3892367e13f6b51d8bd6eb83ef",
+            "review": "ai_verified",
+            "route": "/ru/utilities/mask/mask-type/",
+            "source": "simai-framework",
+            "source_sha256": "86cc61afdf231a010c7b41bb3566b7651e78d2ab9628280141b0627c8f96c2b9"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/max-container"
+            },
+            "examples_sha256": "7b452ba585c6e43ea20f17a23cbd559bf8cdb27d4ab9d83789a84beed1fb4824",
+            "key": "utility.max-container",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/max-container.md",
+            "page_sha256": "dfab2afaa055313aaa7d08af2f950849ffcfc8196853a5b74d9b6f780b14e8cb",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/max-container/",
+            "source": "simai-framework",
+            "source_sha256": "4b68356818d1ed79ab2f0a41760ad7709bf85855eef5cf26da6ee515ccf774e5"
+        },
+        {
+            "examples": {
+                "default": "utilities/sizes/max-height"
+            },
+            "examples_sha256": "de98301bf71fccabf6456a2d1cc05ce8f30462ce9c8c6c0e7bf045d251383494",
+            "key": "utility.max-height",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/sizes/max-height.md",
+            "page_sha256": "fe6c7a13f413243f8a0f4bdc7ebcc55786703acae7aaccff55d10457701036e3",
+            "review": "ai_verified",
+            "route": "/ru/utilities/sizes/max-height/",
+            "source": "simai-framework",
+            "source_sha256": "a1386253a7e69a76cf2923b246a8b041d81bc8251fe66db6f40727685791ef8f"
+        },
+        {
+            "examples": {
+                "default": "utilities/sizes/max-width"
+            },
+            "examples_sha256": "01d20eae9fab9348b1405439ffa1bf90f468fd56a72df6f3e2872c87c65b20ce",
+            "key": "utility.max-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/sizes/max-width.md",
+            "page_sha256": "620a5b2934f1ce1865c6f51c3d712dc38fe55c96e3f627d8734b9d54f30a473b",
+            "review": "ai_verified",
+            "route": "/ru/utilities/sizes/max-width/",
+            "source": "simai-framework",
+            "source_sha256": "a7cfc6f86913d3fb2103ceb48b4b96a503b07c3884b98ce7e343ebf9226ceee4"
+        },
+        {
+            "examples": {
+                "default": "utilities/sizes/min-height"
+            },
+            "examples_sha256": "aeba1c8c82f3ed1f74a26cf9a7a7bbece0c874b4dc77f943d8b6682719ed0e52",
+            "key": "utility.min-height",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/sizes/min-height.md",
+            "page_sha256": "d0ed535a45a576b77ccdf42aab57fd705662883b9f242fa0986942d33f727368",
+            "review": "ai_verified",
+            "route": "/ru/utilities/sizes/min-height/",
+            "source": "simai-framework",
+            "source_sha256": "6a1abb2579039b8fa99bd373c861b75db2d6d8be52a92a970bb502e50f8d38d7"
+        },
+        {
+            "examples": {
+                "default": "utilities/sizes/min-width"
+            },
+            "examples_sha256": "45e5d15a6ba6017bd39b5f71a6827016c0faae41474ad397007db8b74da0924a",
+            "key": "utility.min-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/sizes/min-width.md",
+            "page_sha256": "02691edf23cde6e085b8a54ef011e8dcd5ad3a425cca36a1eb262d7ecba0ac7c",
+            "review": "ai_verified",
+            "route": "/ru/utilities/sizes/min-width/",
+            "source": "simai-framework",
+            "source_sha256": "ccc90390ed58baa9b057dd05f605d3eefc2a6b258181c9b5251a31f30e28bf44"
+        },
+        {
+            "examples": {
+                "default": "utilities/objects/object-fit"
+            },
+            "examples_sha256": "ac19d2a0b666cf2e826323dabfa6a77608e2543ac1e7fd84af45748b90817c67",
+            "key": "utility.object-fit",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/objects/object-fit.md",
+            "page_sha256": "b3d50ef27f19fa3e7ef8a7fbf06673d2b46c7e3762bab3fa034100807207e43f",
+            "review": "ai_verified",
+            "route": "/ru/utilities/objects/object-fit/",
+            "source": "simai-framework",
+            "source_sha256": "cf763d5253540288fe9b466007d096a03dcd9744bf903d5c0da7b99a8b7d0910"
+        },
+        {
+            "examples": {
+                "default": "utilities/objects/object-position"
+            },
+            "examples_sha256": "b712ff3d70ccedfe712a8013e3a91f0cce3a044a2f75705ca91f4511b77efd99",
+            "key": "utility.object-position",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/objects/object-position.md",
+            "page_sha256": "5799c9e51a0c5824b086b5f0f46360eb73b297b4340acda074cee3a7326c4ea4",
+            "review": "ai_verified",
+            "route": "/ru/utilities/objects/object-position/",
+            "source": "simai-framework",
+            "source_sha256": "23075e0e789aab807d955872bf745ab57d3baacef9beb574f290e58dc4dd8d1b"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/order"
+            },
+            "examples_sha256": "6edab1e35653731aac4f03fa1dcbf5437e0416c9d5f5fa7f6cf5730a035ede79",
+            "key": "utility.order",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/order.md",
+            "page_sha256": "cb182273e4dbde5c82e887f91b6f1d1c241a13890e8510ec61e534044cdc61d7",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/order/",
+            "source": "simai-framework",
+            "source_sha256": "73de52a05fa0c35b1ab9760729d51d34c2c88a4ceb3714992e905b73b8414136"
+        },
+        {
+            "examples": {
+                "default": "utilities/outline/outline-color"
+            },
+            "examples_sha256": "0c1a12c9ec8cab77af69e1444481a66489535ebeb158c412c2f499e891d54159",
+            "key": "utility.outline-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/outline/outline-color.md",
+            "page_sha256": "a7fd3234290a4e637a4c9246e244b21eef928418169f756839d6fc611342ad37",
+            "review": "ai_verified",
+            "route": "/ru/utilities/outline/outline-color/",
+            "source": "simai-framework",
+            "source_sha256": "f775f091985d7d2323aba19c86e75ab2382947d3da55a19d831e62ee2da7ba1f"
+        },
+        {
+            "examples": {
+                "default": "utilities/outline/outline-offset"
+            },
+            "examples_sha256": "9b3dd736e7f2b7bf434d2c84ed2543a40c2c7872757135a183a1e64011b59a7b",
+            "key": "utility.outline-offset",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/outline/outline-offset.md",
+            "page_sha256": "54bd5618e4d34e54ea6add5ec1c969aecfe8a7d80e065110d96f91e5082ed685",
+            "review": "ai_verified",
+            "route": "/ru/utilities/outline/outline-offset/",
+            "source": "simai-framework",
+            "source_sha256": "b3b895fde9699aed71ca5ceda1d83b5e68070df317b42f78a300e54897035751"
+        },
+        {
+            "examples": {
+                "default": "utilities/outline/outline-style"
+            },
+            "examples_sha256": "ed65fe2046cfa7399fc82b547270338abde817a4d4d7cd74fea8e00c50ef5e8e",
+            "key": "utility.outline-style",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/outline/outline-style.md",
+            "page_sha256": "c06d4288f91ff2b24788344e7c604a2c72da58425a1b8fb48789182c1f7b5017",
+            "review": "ai_verified",
+            "route": "/ru/utilities/outline/outline-style/",
+            "source": "simai-framework",
+            "source_sha256": "2fe93eb93d8dcf2d2fe0e1616319d59f0b2ddbc2f382eddf488e7c40935fd3a3"
+        },
+        {
+            "examples": {
+                "default": "utilities/outline/outline-width"
+            },
+            "examples_sha256": "3f5b27d10d124796998a41ec9d941e5a7e51fc3ecf9a08265e1a6af43b1d9555",
+            "key": "utility.outline-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/outline/outline-width.md",
+            "page_sha256": "c1a071afbbd1bd97bd5b10d872bdc03b5213daf83856fe290ea44f5910ae2874",
+            "review": "ai_verified",
+            "route": "/ru/utilities/outline/outline-width/",
+            "source": "simai-framework",
+            "source_sha256": "ef2055fd1693593c7048bc2d9433b9f084a222c340b18ff8d58b14186b7fa5fa"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/overflow"
+            },
+            "examples_sha256": "4edec9b8768f2e7e2f18bc2aa0f3a9f7bec68b5293c614d49e040a113408ba1e",
+            "key": "utility.overflow",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/overflow.md",
+            "page_sha256": "3753aae26e6beb0c2b2d9ef04803cd5378d3b114ec34dce443d0c23a9dbaf3a5",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/overflow/",
+            "source": "simai-framework",
+            "source_sha256": "d11607f5f3cdaab339ca2ff01d55944c3bd08803c52224f0960d33a36b2b2499"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/overscroll-behavior"
+            },
+            "examples_sha256": "de3dae1e706c88bf43f118ae6eaf3c02f72ddbccd83a8635101cf9a00406eddd",
+            "key": "utility.overscroll-behavior",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/overscroll-behavior.md",
+            "page_sha256": "e4aa0bb99f7eed9221dad3f11ca26e7db5e62eda907fde8e317627ab779ec452",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/overscroll-behavior/",
+            "source": "simai-framework",
+            "source_sha256": "22b5163438abf5cea8b45e9c683fe2193e503ba94405a84126a682ee0a4897d2"
+        },
+        {
+            "examples": {
+                "default": "utilities/indents/padding"
+            },
+            "examples_sha256": "4b84412c38afdc86dc1d816d8b3f9d2c1146b9aad35ef2affdd449daa34f1082",
+            "key": "utility.padding",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/indents/padding.md",
+            "page_sha256": "c385f92cd3fbee893f9b60ca5bab46ce5fcdc2e23694f414e901755a476a6ade",
+            "review": "ai_verified",
+            "route": "/ru/utilities/indents/padding/",
+            "source": "simai-framework",
+            "source_sha256": "5ba7e95e094893752aa48e9e120eb3c7011c7e92948b4084bc69f27c13eec260"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/place-content"
+            },
+            "examples_sha256": "4dc8b58c50b8cbb5ba17ca8c958a9f6507a2bca2b7d934c4bd2716c013aab106",
+            "key": "utility.place-content",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/place-content.md",
+            "page_sha256": "f7ed44d0200798fdc62f06b15b422cfc250dbb904a3df1b9db16dde2a7cd0f40",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/place-content/",
+            "source": "simai-framework",
+            "source_sha256": "549ce90f6df9cda24fd2c986dfe21ea2ccc822a6a0b5f063ab60f1ceaae32e05"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/place-items"
+            },
+            "examples_sha256": "4a12b3df5c2d1a4989a4b84104941d0d6499bf4558ebb74a3992b1e6cf7a1195",
+            "key": "utility.place-items",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/place-items.md",
+            "page_sha256": "be383c58009fb6a63bf1c146c22173f218420087c553a3a062c483ba37a320c8",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/place-items/",
+            "source": "simai-framework",
+            "source_sha256": "9f52cf566cd0dd35755296575abf9c4649c19f0726c320efd552a21fdee3b0d5"
+        },
+        {
+            "examples": {
+                "default": "utilities/grid-and-flexbox-utilities/place-self"
+            },
+            "examples_sha256": "b1551e0ea14bb3994e93dcbeec9615440065be87f7428ac30cf3f8d3c27d8861",
+            "key": "utility.place-self",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/grid-and-flexbox-utilities/place-self.md",
+            "page_sha256": "fea63f77ebea04dfb3b7d85f463153150d592ab95a7b1f88693cebb3b9b44cbd",
+            "review": "ai_verified",
+            "route": "/ru/utilities/grid-and-flexbox-utilities/place-self/",
+            "source": "simai-framework",
+            "source_sha256": "6c1e79848e75936fadc5cf74fa07f06ea466997e80d22a13653a47dcf24448c2"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/placeholder-color"
+            },
+            "examples_sha256": "b70a44364eb467b9da210c3fa8139c3678a2de0bd791f284ab71377840868f35",
+            "key": "utility.placeholder-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/placeholder-color.md",
+            "page_sha256": "2e81233f22cd2b6856f548b7bca3abac07c28f45b2c3cbba2daf10396c5e6378",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/placeholder-color/",
+            "source": "simai-framework",
+            "source_sha256": "2c8061352d729ebaf8bdf333fa63f51fb5372ef8d91426f452b9f4f3faf61257"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/placeholder-opacity"
+            },
+            "examples_sha256": "eaa9cbd0299d8d1a87250996c62ee7628549824a43ea727064837da3e6e60829",
+            "key": "utility.placeholder-opacity",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/placeholder-opacity.md",
+            "page_sha256": "5cd8fcfd8e3b27ba6044c1e444ac43cc94af75d4117a6eebc65d0a64c77852d3",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/placeholder-opacity/",
+            "source": "simai-framework",
+            "source_sha256": "b20ded7fe90bd6a734297055fe6ea04316d7ac6f348998b17e0fc3ea49cad2bc"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/pointer-events"
+            },
+            "examples_sha256": "c1833cad38871d6e3035343ee182a1b76c5447ddd6ead3cb3ba8c0173a5eca26",
+            "key": "utility.pointer-events",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/pointer-events.md",
+            "page_sha256": "c118473deb03b55c64591ba33cfb92ad932fabf5253b275c852d8aed8f927c29",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/pointer-events/",
+            "source": "simai-framework",
+            "source_sha256": "01396c4cd5d16b8000d94f606268b79f8371cb346e4f2d8d4348514771248c26"
+        },
+        {
+            "examples": {
+                "default": "utilities/forms/resize"
+            },
+            "examples_sha256": "f9de5766929861f8660b45dc30787382e9a48ad3090db70a1cdaf601777932c2",
+            "key": "utility.resize",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/forms/resize.md",
+            "page_sha256": "78037d60081de6a846db7b601d7d9ac5d44d435755af6f4bd7ab674e3f6cb679",
+            "review": "ai_verified",
+            "route": "/ru/utilities/forms/resize/",
+            "source": "simai-framework",
+            "source_sha256": "c253ee57ec403b2294f30e9ef07897b1732c2a8ec9cfcb4e81e8ad165811ab0f"
+        },
+        {
+            "examples": {
+                "default": "utilities/outline/ring-inset"
+            },
+            "examples_sha256": "8eee95062efc32bd8d89d0e92c40238e2385b68a3eb7eccd63732385a09f10e7",
+            "key": "utility.ring-inset",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/outline/ring-inset.md",
+            "page_sha256": "5a6122b17cb4d380b34967c3a031cfe27d560ee55fae363c971c6daed107b76f",
+            "review": "ai_verified",
+            "route": "/ru/utilities/outline/ring-inset/",
+            "source": "simai-framework",
+            "source_sha256": "694fdce8e69e3ab10fc1f291a011c447db3c22d7a97ee6e9439cc0393304f144"
+        },
+        {
+            "examples": {
+                "default": "utilities/outline/ring-opacity"
+            },
+            "examples_sha256": "8401c1dc977ced36087d7e86f5cd624ee6bd1b3704854476f5c1e5763582e43b",
+            "key": "utility.ring-opacity",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/outline/ring-opacity.md",
+            "page_sha256": "d3626cd2c7d7936042a9ef22903197e133c8f75879e196b847b26c9af53e0a96",
+            "review": "ai_verified",
+            "route": "/ru/utilities/outline/ring-opacity/",
+            "source": "simai-framework",
+            "source_sha256": "b1d685931bd505b6a320957f5c88e614015d624913cf60de3cdfe66a7486b09a"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-backdrop-color"
+            },
+            "examples_sha256": "a98a17609e40a0c7d2358025aa3c8c859f1d36debfc9e8a70ed0ce840cc7be51",
+            "key": "utility.scroll-backdrop-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-backdrop-color.md",
+            "page_sha256": "e866a0f913f691d6b881f5f2d71193b053089bbfd3052380c7a56ae569449b5c",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-backdrop-color/",
+            "source": "simai-framework",
+            "source_sha256": "3f44feae6ddcb6df48c029f206aa457bae6eac5c05de05c1b25ef5b7adbf074c"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-backdrop-radius"
+            },
+            "examples_sha256": "cb5d518452a458c947bce8526dd8b8946f8d218a1b5e3f8705f0b3c970725cd2",
+            "key": "utility.scroll-backdrop-radius",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-backdrop-radius.md",
+            "page_sha256": "3a557797f45cec66407731d71228056840f8e168e149cbf8f3a97d94e0fbce9d",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-backdrop-radius/",
+            "source": "simai-framework",
+            "source_sha256": "3b2726bcd88585303a21ea079b9aff7600e08625b457ce38e99ef311d3563f2e"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-backdrop-width"
+            },
+            "examples_sha256": "b039fe46eded42097020cec83eca11f380e6ab89b46cfa477747a05f4b6044ae",
+            "key": "utility.scroll-backdrop-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-backdrop-width.md",
+            "page_sha256": "cd643894644e3fef952d8e6fb38447fc177c8ad3fb530f95086377a96c022005",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-backdrop-width/",
+            "source": "simai-framework",
+            "source_sha256": "55b2971bbb69ec373fbcf5ac0b4cb9618db2921dfcb4c1e6fed1dc4f779d0af8"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-hover"
+            },
+            "examples_sha256": "b3c932c91738ca4e9c8725037e5f6fe094e88814a04144a2f3e072e767e7e607",
+            "key": "utility.scroll-hover",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-hover.md",
+            "page_sha256": "b17049a0ce2997d16c287f2353d00d6d8d4a7dcd80048f2d1fa98e420e73a3ed",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-hover/",
+            "source": "simai-framework",
+            "source_sha256": "8657c2efce5391653c0a275c4271c02bbb46fdeb8b0a80bbf81b713f9c0b0e9f"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-margin"
+            },
+            "examples_sha256": "950d17394552e21d516073c1a3a970e761ffe947befc8fa002db651185e89281",
+            "key": "utility.scroll-margin",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-margin.md",
+            "page_sha256": "4f7c9a0f4356af38c4c598c3f2c52487d92b48ffcd332d1d0c22c42c55a7ecde",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-margin/",
+            "source": "simai-framework",
+            "source_sha256": "ed9f65066af3cf53aec145cf5c54c9d82f0c93202561d44cabe05746bcbc62fb"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-padding"
+            },
+            "examples_sha256": "f1d311878bc926f32ea3ff7b9dc0aca13b4d69bf59c759296e980313911e2ea1",
+            "key": "utility.scroll-padding",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-padding.md",
+            "page_sha256": "ace57c9a9291a0e31230378fc7c7814dbe87ccde827d454cf89cfdefcd0fcbd2",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-padding/",
+            "source": "simai-framework",
+            "source_sha256": "579e43a819609412a72dee9df0f7b93fb66814e353d2a3f8c174e25dce61be61"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-slider-color"
+            },
+            "examples_sha256": "b0043ccf6e83bd48b5a1c432deef0e55b605f58e7a9f66e501e23feaa7dd91d4",
+            "key": "utility.scroll-slider-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-slider-color.md",
+            "page_sha256": "c5cd3a62d60637ce567357b2cc94146bc4eefc2bb77fc216e918ec63637b3d7f",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-slider-color/",
+            "source": "simai-framework",
+            "source_sha256": "ba15b84276fcffcea51e17a5aaff5ecae1ed37261c43b257b0c5948fbafd5a81"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-slider-radius"
+            },
+            "examples_sha256": "51d07cb4ac3d80bdaab74fb52f581a0239daaeee93b24a5fd3176a3e4ab0427e",
+            "key": "utility.scroll-slider-radius",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-slider-radius.md",
+            "page_sha256": "0c04422954812ed68b5bc15e372aab34eb1c4fbfdcc74b469154a611af7594d7",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-slider-radius/",
+            "source": "simai-framework",
+            "source_sha256": "aabce1c57564795a6f6e9583e36c727a5751e1abe7eaaba13198f14fb43d4781"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-snap-align"
+            },
+            "examples_sha256": "7834169d9b33f3c3bdbc2037f03daedfde6d910460b1e059d7a1c8c555c379af",
+            "key": "utility.scroll-snap-align",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-snap-align.md",
+            "page_sha256": "7057e65b9a56d7949744cfb7ec146ae0b11dd0ea10a924afb88057cebe8cb555",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-snap-align/",
+            "source": "simai-framework",
+            "source_sha256": "37423ff97bf7e82eb9e6d0b3668e23d3dec1a4c37545a536490d0d4904cf1210"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-snap-stop"
+            },
+            "examples_sha256": "f3281825f62369b53384ffcfaf1d9368109487bf0c964b842b727ecb37f97896",
+            "key": "utility.scroll-snap-stop",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-snap-stop.md",
+            "page_sha256": "c60e90e42fa98fef0bf25125d7d014de3e9dc38008fc292ead4a9ae2b1205ca9",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-snap-stop/",
+            "source": "simai-framework",
+            "source_sha256": "04c0941dea4702508b6534c91a85925861cce20df4112b175736310191bda9d4"
+        },
+        {
+            "examples": {
+                "default": "utilities/overscroll/scroll-snap-type"
+            },
+            "examples_sha256": "9c7c7a17446df490f5a2bbe5bc20d9d548f467a507cec9843464fd62b6441f7f",
+            "key": "utility.scroll-snap-type",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/overscroll/scroll-snap-type.md",
+            "page_sha256": "daa24fc8ae9301252c928403595919d60ff8f251d36da760928a3daedd14051d",
+            "review": "ai_verified",
+            "route": "/ru/utilities/overscroll/scroll-snap-type/",
+            "source": "simai-framework",
+            "source_sha256": "d9fa982c48d321e841a2e83f16472b71038962b35c8bfdcba0843b2046ba70b0"
+        },
+        {
+            "examples": {
+                "default": "utilities/indents/space"
+            },
+            "examples_sha256": "41d475fa4d544111d950c6ca16e0c7f7448a987761467b6288d382eeb42f65b6",
+            "key": "utility.space",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/indents/space.md",
+            "page_sha256": "16371be697d320f0bd5b68e75dd44ef52b1df85035d4c7795822b299e6dfbddc",
+            "review": "ai_verified",
+            "route": "/ru/utilities/indents/space/",
+            "source": "simai-framework",
+            "source_sha256": "70128e9bcb0462d6e6a97f0b5ebc1c518b2618ba53377037710b9928a4e627fd"
+        },
+        {
+            "examples": {
+                "default": "utilities/interactivity/sr-only"
+            },
+            "examples_sha256": "14cbc0199adbfe7eeff89f8694a881b25463ee00d773f2eeb158c0206d36ffa1",
+            "key": "utility.sr-only",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/interactivity/sr-only.md",
+            "page_sha256": "c4685209f43f8d5f07c83d56b9aca625fe73a2b65f15e0ed5474f72ba3b755bf",
+            "review": "ai_verified",
+            "route": "/ru/utilities/interactivity/sr-only/",
+            "source": "simai-framework",
+            "source_sha256": "d2485b162f11ea3c0ba0b99b086c6166f723a39947b3bdd8f50ca798ae678f29"
+        },
+        {
+            "examples": {
+                "default": "utilities/tables/table-border"
+            },
+            "examples_sha256": "b5a32e3badce4cfc959ff18ad94fd6ec5734fdbf9d1510b26e7013be3f655da6",
+            "key": "utility.table-border",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/tables/table-border.md",
+            "page_sha256": "0c7f95da0518986ed0f075856f4f1452cc0d68c0fe5e3a96f8fcae2c219a5544",
+            "review": "ai_verified",
+            "route": "/ru/utilities/tables/table-border/",
+            "source": "simai-framework",
+            "source_sha256": "8be530de50defb57c05d9863a317c16b45cb6bc7f880f5303d3ea78e1827764f"
+        },
+        {
+            "examples": {
+                "default": "utilities/tables/table-layout"
+            },
+            "examples_sha256": "007d38b1709d8746dce3102eff3e3c2b935ba8e7466092b289ad39ef4e6b98e7",
+            "key": "utility.table-layout",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/tables/table-layout.md",
+            "page_sha256": "13d7d34cb1ecc5805b3f4e62d3b02506611b7f5227a7877e90b5109475858428",
+            "review": "ai_verified",
+            "route": "/ru/utilities/tables/table-layout/",
+            "source": "simai-framework",
+            "source_sha256": "6c432e09be166f078a60e32820b43ffeaab24176b3c8445d23a4ee820faab5a2"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/text-align"
+            },
+            "examples_sha256": "a020f4ae75ef0531b0425ddd25ad03678185022a37d547831109040c61201250",
+            "key": "utility.text-align",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/text-align.md",
+            "page_sha256": "4dd89d08986f9d62d322a2712347cb296fedc466bd04dd903313c5fe161ffdd1",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/text-align/",
+            "source": "simai-framework",
+            "source_sha256": "3bc32baa07281faf56563ba293e19a5b53fcb8c654ce9f4d8ba7ab813a45c7cd"
+        },
+        {
+            "examples": {
+                "default": "utilities/text-formatting/text-color"
+            },
+            "examples_sha256": "728a04129a0201a10b5f8292d86d9ebfe469fd7e580247108dfe8b8d4f4c07f5",
+            "key": "utility.text-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/text-formatting/text-color.md",
+            "page_sha256": "b88bcec0d02503a48e8da44e523d705f12d1df69dab9e3726d8a146d64cab1be",
+            "review": "ai_verified",
+            "route": "/ru/utilities/text-formatting/text-color/",
+            "source": "simai-framework",
+            "source_sha256": "6476d4a77773c1ec94cbf17249b0a2cbe828378a39485b19c34d6503e7755063"
+        },
+        {
+            "examples": {
+                "default": "utilities/text-formatting/text-decoration"
+            },
+            "examples_sha256": "a02b8c2f9e150faec82986babc491bac7e8c6955076aea5504ecfb11923f4ef2",
+            "key": "utility.text-decoration",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/text-formatting/text-decoration.md",
+            "page_sha256": "0c7880e30f9220985303001f7dd54bdbb50f3aab4814eff13342c17562fd958e",
+            "review": "ai_verified",
+            "route": "/ru/utilities/text-formatting/text-decoration/",
+            "source": "simai-framework",
+            "source_sha256": "cfab0e475ad2069acb9381e18a9a02eba44b69262a47367b17b1a6bb87ca7775"
+        },
+        {
+            "examples": {
+                "default": "utilities/text-formatting/text-decoration-color"
+            },
+            "examples_sha256": "7f94d8ba8e48f971cbda1d5495ca2bedce1a46996e117c330ab9bdd5ee0e6c44",
+            "key": "utility.text-decoration-color",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/text-formatting/text-decoration-color.md",
+            "page_sha256": "5ef6f5c6f1a334a2882c9f58e0bf782e13f27198e9f398ad9904e3ac5df46c59",
+            "review": "ai_verified",
+            "route": "/ru/utilities/text-formatting/text-decoration-color/",
+            "source": "simai-framework",
+            "source_sha256": "4f650e724d5874e678ad1ee2ba8174e28af1c93592479b51cc4bb4cf7a63ecba"
+        },
+        {
+            "examples": {
+                "default": "utilities/text-formatting/text-decoration-offset"
+            },
+            "examples_sha256": "cb9d4d45c5c9523e928252017e26daa80d654188d42cbe065795b14118374036",
+            "key": "utility.text-decoration-offset",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/text-formatting/text-decoration-offset.md",
+            "page_sha256": "38f9e71a06ba31038aa7387d26eb4c5d63fcab1f50d7f2b93681881ecda7b048",
+            "review": "ai_verified",
+            "route": "/ru/utilities/text-formatting/text-decoration-offset/",
+            "source": "simai-framework",
+            "source_sha256": "bffa146b031baf6a27b9eb796499e7f6fe2cb2081379524817c7e80486c890cf"
+        },
+        {
+            "examples": {
+                "default": "utilities/text-formatting/text-decoration-style"
+            },
+            "examples_sha256": "0e194772a2cf1c846cc869fbf068bee7916a8f6b5225d77c111f59969f7d4ef7",
+            "key": "utility.text-decoration-style",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/text-formatting/text-decoration-style.md",
+            "page_sha256": "405d000cba2190d33e9535021e23ca8434d12623b9dfccfa2390d03a557ce3a1",
+            "review": "ai_verified",
+            "route": "/ru/utilities/text-formatting/text-decoration-style/",
+            "source": "simai-framework",
+            "source_sha256": "199109c225fbcebefd7b7675bfb00149c06391ec2f7efc93988d517a730e4ed6"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/text-indent"
+            },
+            "examples_sha256": "6d3867199146af53cf3fde774575370d70b6ee0fe45e58217f15e071a58e2dab",
+            "key": "utility.text-indent",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/text-indent.md",
+            "page_sha256": "09b979d53ef0ae528caeb38ad7d4deaab7e027681c9e232e7db7a6237a8aaaee",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/text-indent/",
+            "source": "simai-framework",
+            "source_sha256": "37b49c72e056bad8e52aa06a28709c3dc93d249484a1c7193506e95b567284ca"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/text-max-width"
+            },
+            "examples_sha256": "e18f44c0af4dce9120a9e9b5eaa02cd61d4195b1f07b421a631e141d243009cc",
+            "key": "utility.text-max-width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/text-max-width.md",
+            "page_sha256": "657e26d6971e8ea5af151cfb8cef86f095c4b353835d6a499285e5f961805e68",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/text-max-width/",
+            "source": "simai-framework",
+            "source_sha256": "76f073265027f3463dafef60e09d9b19db5d9df1f5ad860da927f0aa78181858"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/text-overflow"
+            },
+            "examples_sha256": "d24952cc35d22f6e622ce8fd1fb48c7c489b03775064ea34dffb50b4eddbdfec",
+            "key": "utility.text-overflow",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/text-overflow.md",
+            "page_sha256": "9f664b6104afe9962019aa7405019c4ab76c421fcffdee16fc1eac87df539cf6",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/text-overflow/",
+            "source": "simai-framework",
+            "source_sha256": "1b8d89d9ff0799538756de2cc2d477f8c415064ea069bfe6690f84d8882d8e17"
+        },
+        {
+            "examples": {
+                "default": "utilities/interactivity/touch-action"
+            },
+            "examples_sha256": "a41bd7ff6cd9bd201a10e8eb9af3b6235bbb9df9787e734e7d8faf5c6bddf550",
+            "key": "utility.touch-action",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/interactivity/touch-action.md",
+            "page_sha256": "ff4be4f6e6e731725ec56a456bdb2841e226e3559a4da4f22ba1a038d2db494a",
+            "review": "ai_verified",
+            "route": "/ru/utilities/interactivity/touch-action/",
+            "source": "simai-framework",
+            "source_sha256": "277f62a32354a0ed2f4e7d08e8a6621b861abf2fcbc0458fc56e72f9b3b34ec1"
+        },
+        {
+            "examples": {
+                "default": "utilities/transform/transform-origin"
+            },
+            "examples_sha256": "92fc6c7ebc7c3fc215ac619249aa01ee09b7a5d2d12833863fd13d37fa9c039f",
+            "key": "utility.transform-origin",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/transform/transform-origin.md",
+            "page_sha256": "d3277c7f4b5afc09ddf26651f6e2f8f0dcd3907d03138db5cc680f9ea218790d",
+            "review": "ai_verified",
+            "route": "/ru/utilities/transform/transform-origin/",
+            "source": "simai-framework",
+            "source_sha256": "8bcaed7d180fd727143f9a95ca424b43e73e8c93b39661a26183067bdb7067b4"
+        },
+        {
+            "examples": {
+                "default": "utilities/transform/transform-rotate"
+            },
+            "examples_sha256": "fe8b087257e3b9accdb9f36241890bdc63d8d464d503104da394d75e26ec4c51",
+            "key": "utility.transform-rotate",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/transform/transform-rotate.md",
+            "page_sha256": "876a7cd121f790b8788f4bc25a0e79b3d305adc82f1095a93114c43ed8403e7f",
+            "review": "ai_verified",
+            "route": "/ru/utilities/transform/transform-rotate/",
+            "source": "simai-framework",
+            "source_sha256": "66d0a6ac93a7fd3af356567c589ac7f4d6f3365ef241f8407b21b88f3048d95f"
+        },
+        {
+            "examples": {
+                "default": "utilities/transform/transform-scale"
+            },
+            "examples_sha256": "cece2fe1d31c040d939fe3e68fa7434421944e40435a8f02fdda03f6dc2f4d29",
+            "key": "utility.transform-scale",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/transform/transform-scale.md",
+            "page_sha256": "7a03092cf1829f3c1ea6a8ece39b6961fb6324aa0df9b183dddb9f16886f8910",
+            "review": "ai_verified",
+            "route": "/ru/utilities/transform/transform-scale/",
+            "source": "simai-framework",
+            "source_sha256": "4949fa7b3937a321e7d0e34a6ee6942cdb18bd1d12eb7a0739e592b2c036fec2"
+        },
+        {
+            "examples": {
+                "default": "utilities/transform/transform-skew"
+            },
+            "examples_sha256": "f81b8afc283c730417ab195a8ce753cc503fee58b48777959bd1e2f033f05973",
+            "key": "utility.transform-skew",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/transform/transform-skew.md",
+            "page_sha256": "7b643ae36539f0587b796bc4eece5f747582d532c9974e8ff2af39c91afad201",
+            "review": "ai_verified",
+            "route": "/ru/utilities/transform/transform-skew/",
+            "source": "simai-framework",
+            "source_sha256": "3d9973b4751f3eb7ffc28615235f8850309b075a04de5842897c762fd15c1007"
+        },
+        {
+            "examples": {
+                "default": "utilities/transform/transform-translate"
+            },
+            "examples_sha256": "938db27ccf99bfa3f15d91aae09029d1f2e04c108ca91cb6eef3ec4704914eb2",
+            "key": "utility.transform-translate",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/transform/transform-translate.md",
+            "page_sha256": "1a08b45b8a67c2b6239c54452408d7e1e3f5b36c0a21f85fba924f4cbd0f4a53",
+            "review": "ai_verified",
+            "route": "/ru/utilities/transform/transform-translate/",
+            "source": "simai-framework",
+            "source_sha256": "4f0521e90f8422609b72bebe0b163e66bd201149f339bac84c4619a00fc4289c"
+        },
+        {
+            "examples": {
+                "default": "utilities/interactivity/user-select"
+            },
+            "examples_sha256": "717beadf004ea1f073f56df6346b9b63218639c9e61ffe48c3f85f75b9a92d65",
+            "key": "utility.user-select",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/interactivity/user-select.md",
+            "page_sha256": "b9b93b65e21621b82874ce30840ffe4d99d254dc470490c2304556b2f4a1d085",
+            "review": "ai_verified",
+            "route": "/ru/utilities/interactivity/user-select/",
+            "source": "simai-framework",
+            "source_sha256": "5bf0d77cdc4f666f9da8c1fd9f604bd479aaad6c70cd240dbade36107a96aeec"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/vertical-align"
+            },
+            "examples_sha256": "f34d8c29c1d0e63e4d7315494340d45a02af6cd88158bc7cb23d42343f1c17f0",
+            "key": "utility.vertical-align",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/vertical-align.md",
+            "page_sha256": "5a1ebd7981231f664a5e31f82aca88ee03a24d9c6c31983903ba290edec0d70c",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/vertical-align/",
+            "source": "simai-framework",
+            "source_sha256": "ddc0e75d5568c4733a7bc6654ada54951b4364981fc5d687ca793d40c77d6941"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/visibility"
+            },
+            "examples_sha256": "a72471965312b1d3095def434508ec8f0542963b6a13fc27a8883817424b98e2",
+            "key": "utility.visibility",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/visibility.md",
+            "page_sha256": "6352f6036243e2595a22cfbba1cbe40e05ae10873f2e72a501be43c400cb29fc",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/visibility/",
+            "source": "simai-framework",
+            "source_sha256": "9a741d163137b3866d39badf9344fe9ff48de8ed461bdc381186c3a5f6341131"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/white-space"
+            },
+            "examples_sha256": "6fac4a044499252f19495008851373f213a985f6bc5260e09e7dce981dc6d778",
+            "key": "utility.white-space",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/white-space.md",
+            "page_sha256": "35bbf4a333c5c58dec7114579b058d410985362f1c22c5137162c003ee303e06",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/white-space/",
+            "source": "simai-framework",
+            "source_sha256": "c66d4b36d90e0f2c83a5a4dcb3069e70229576761e93915698d873f1d10e7772"
+        },
+        {
+            "examples": {
+                "default": "utilities/sizes/width"
+            },
+            "examples_sha256": "8c17ef6d1f0622213d6751aeff601dfa0ae8d0180f0c087286b83482744a92d2",
+            "key": "utility.width",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/sizes/width.md",
+            "page_sha256": "6dba9ebb68e61c7338c7fe0b6ea923b69eddaaa200ef527232267b6b51cb33bb",
+            "review": "ai_verified",
+            "route": "/ru/utilities/sizes/width/",
+            "source": "simai-framework",
+            "source_sha256": "ad2c19ae2f437f5a06b8fb1bc2dea8cf4900018645ddac41f2c5eb931d18b241"
+        },
+        {
+            "examples": {
+                "default": "utilities/interactivity/will-change"
+            },
+            "examples_sha256": "5fa8dae470b63a32414d990f471870e3bbe38d4c53f5f459c84906451408f726",
+            "key": "utility.will-change",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/interactivity/will-change.md",
+            "page_sha256": "988f6e7673d319b74cbfa2048cf50e609e0251e8eb95149cba2aab7e4543791c",
+            "review": "ai_verified",
+            "route": "/ru/utilities/interactivity/will-change/",
+            "source": "simai-framework",
+            "source_sha256": "9406119f49202f20e214673cb8a381a07bb79874a5f2291b9d5924971bf03e9a"
+        },
+        {
+            "examples": {
+                "default": "utilities/typography/word-break"
+            },
+            "examples_sha256": "92d5801208a332bb552c531789fcb70c68f00ad88ad892987555ccf120c90857",
+            "key": "utility.word-break",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/typography/word-break.md",
+            "page_sha256": "595ee01f578cad1634e6bcbb95d3e6f0850d9d43757bb7d1518e3a4336c2ada1",
+            "review": "ai_verified",
+            "route": "/ru/utilities/typography/word-break/",
+            "source": "simai-framework",
+            "source_sha256": "3d10176d64cfa1849ea815e69b9710e8581c3b0f9a6bbc752093aa4a91349ebe"
+        },
+        {
+            "examples": {
+                "default": "utilities/layout/z-index"
+            },
+            "examples_sha256": "1ecb0626d7cae3a4f649da7d69966d74fac9a1381fed7698369ddc8e03f9dbbb",
+            "key": "utility.z-index",
+            "kind": "utility",
+            "page_path": "content/ru/utilities/layout/z-index.md",
+            "page_sha256": "e9ac8b0a80aa2cffbaed88633635094a35fb98d95d9e2745ede57995dd6a58df",
+            "review": "ai_verified",
+            "route": "/ru/utilities/layout/z-index/",
+            "source": "simai-framework",
+            "source_sha256": "0f3b8da917140849b2b623287b4be39f8a389abe9c6c0a9a4902d03241c72731"
+        }
+    ],
+    "exclusions": [],
+    "schema": "docara.documentation_lock.v1",
+    "source_locale": "ru"
+}

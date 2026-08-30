@@ -1,0 +1,1267 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-1 items-cross-start">
+ <section class="grid content-main-start">
+ <div>
+ <aside class="flex h-full relative">
+ <section class="sf-admin-menu-panel flex flex-col">
+ <div class="sf-admin-menu-head flex flex-none">
+ <a class="" href="#">
+ <svg
+ width="40"
+ height="40"
+ viewBox="0 0 40 40"
+ fill="none"
+ xmlns="http://www.w3.org/2000/svg"
+ >
+ <path
+ fill-rule="evenodd"
+ clip-rule="evenodd"
+ d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20ZM5.80645 20.0003L16.5187 9.24731L20 12.7418L12.7682 20.0011L19.9987 27.259L16.5182 30.7527L5.80645 20.0003ZM23.4813 9.24731L34.1936 20.0003L23.4818 30.7527L20.0013 27.259L27.2318 20.0011L20 12.7418L23.4813 9.24731Z"
+ fill="#E81123"
+ />
+ </svg>
+ </a>
+ </div>
+ <div class="sf-admin-menu-search flex-none">
+ <button
+ id="search_toggle_menu"
+ type="button"
+ class="sf-admin-menu-item hidden flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon sf-icon-loaded">search</i>
+ </span>
+ </button>
+ <label
+ class="sf-input sf-input--size-1 sf-input--filled flex flex-col"
+ >
+ <span class="sf-input-field items-cross-center transition flex">
+ <span class="sf-input-left flex"
+ ><i class="sf-icon">search</i></span
+ >
+ <input
+ placeholder="Поиск по разделам"
+ type="text"
+ name="input_bordered_1"
+ />
+ </span>
+ </label>
+ </div>
+ <nav
+ class="sf-admin-menu-section sf-admin-menu-main flex-auto min-h-0"
+ >
+ <ul class="p-0 m-0">
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ data-menu="frameworks"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ <i class="sf-icon">chevron_right</i>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">link</i>
+ <span>Вендоры</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">person</i>
+ <span>Модуль биллинга</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">photo_camera</i>
+ <span>Модуль обновления</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">stethoscope</i>
+ <span>Модуль регистраций</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">health_and_safety</i>
+ <span>Главный модуль</span>
+ </span>
+ </button>
+ </li>
+ <!-- Дубли -->
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ </ul>
+ </nav>
+ <div class="sf-admin-menu-bottom flex-none">
+ <nav>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">star</i>
+ <span>Избранное</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <div class="sf-admin-menu-item-segment flex items-cross-center">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex-1 segment-start flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">settings</i>
+ <span>Настройки меню</span>
+ </span>
+ </button>
+ <button
+ id="toggle_menu"
+ type="button"
+ class="sf-admin-menu-item segment-end flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">keyboard_double_arrow_left</i>
+ </span>
+ </button>
+ </div>
+ </li>
+ </nav>
+ </div>
+ </section>
+ <section
+ class="sf-admin-menu-panel sf-admin-menu-panel-sub flex flex-col inline-end-full transition-all top-0 bottom-0 absolute"
+ data-panel="frameworks"
+ data-level="2"
+ >
+ <div
+ class="sf-admin-menu-head items-cross-center flex content-main-between flex-none"
+ >
+ <div class="sf-admin-menu-head-container flex items-cross-center">
+ <button
+ type="button"
+ data-menu="frameworks"
+ class="sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1"
+ >
+ <i class="sf-icon sf-icon-loaded">chevron_left</i>
+ </button>
+ <span>Фреймворки</span>
+ </div>
+ <button
+ type="button"
+ class="sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1"
+ >
+ <i class="sf-icon sf-icon-loaded">more_vert</i>
+ </button>
+ </div>
+ <nav
+ class="sf-admin-menu-section sf-admin-menu-main-sub flex-auto min-h-0 overflow-auto"
+ >
+ <ul class="p-0 m-0">
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ data-menu="orders"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ <i class="sf-icon">chevron_right</i>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">mail</i>
+ <span>Чаты</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">52</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ </ul>
+ </nav>
+ </section>
+ <section
+ class="sf-admin-menu-panel sf-admin-menu-panel-sub flex flex-col inline-end-full transition-all top-0 bottom-0 absolute"
+ data-panel="orders"
+ data-level="3"
+ >
+ <div
+ class="sf-admin-menu-head items-cross-center flex content-main-between flex-none"
+ >
+ <div class="sf-admin-menu-head-container flex items-cross-center">
+ <button
+ type="button"
+ data-menu="orders"
+ class="sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1"
+ >
+ <i class="sf-icon sf-icon-loaded">chevron_left</i>
+ </button>
+ <span>Заказы</span>
+ </div>
+ <button
+ type="button"
+ class="sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1"
+ >
+ <i class="sf-icon sf-icon-loaded">more_vert</i>
+ </button>
+ </div>
+ <nav
+ class="sf-admin-menu-section sf-admin-menu-main-sub flex-auto min-h-0 overflow-auto"
+ >
+ <ul class="p-0 m-0">
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">light_mode</i>
+ <span>Отчеты</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">imagesmode</i>
+ <span>Купоны</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">key</i>
+ <span>Фреймворки</span>
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">home</i>
+ <span>Дашборд</span>
+ </span>
+ <span
+ class="sf-badge sf-badge--main sf-badge--primary sf-badge--size-1/3 flex flex-row flex-nowrap content-main-center items-cross-center"
+ >
+ <span
+ class="sf-badge-text-container flex items-cross-center"
+ ><span class="sf-badge-text">99+</span></span
+ >
+ </span>
+ </button>
+ </li>
+ <li class="sf-admin-menu-item-wrap flex flex-col">
+ <button
+ type="button"
+ class="sf-admin-menu-item flex items-cross-center content-main-between"
+ >
+ <span
+ class="sf-admin-menu-item-container flex items-cross-center"
+ >
+ <i class="sf-icon">location_on</i>
+ <span>Заказы</span>
+ </span>
+ </button>
+ </li>
+ </ul>
+ </nav>
+ </section>
+ </aside>
+ </div>
+ </section>
+ <div class="flex gap-1">
+ <button
+ type="button"
+ id="for_test"
+ class="sf-button sf-button--default sf-button--primary sf-button--size-1"
+ >
+ <span class="sf-button-text-container">Small</span>
+ </button>
+ <button
+ type="button"
+ id="for_test2"
+ class="sf-button sf-button--default sf-button--primary sf-button--size-1"
+ >
+ <span class="sf-button-text-container">Big</span>
+ </button>
+ </div>
+</div>

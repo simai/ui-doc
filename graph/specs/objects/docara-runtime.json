@@ -4,12 +4,12 @@
   "kind": "capability",
   "subtype": "feature",
   "title": "Docara 2 build runtime",
-  "summary": "Public simai/docara v2.0.0 package pinned by Composer lock to source revision d879a69f72e00c8329c74ce7d22d0840860f88c4.",
+  "summary": "Public simai/docara v2.3.0 package pinned by Composer lock to source revision 51d65a55e30150bdb5790d4f5f859a4a3f4bdf0d; the current local verification also carries unreleased source fixes for locale-aware page validation and safe component JavaScript inside shared examples.",
   "owner": "docara",
   "lifecycle": "validated",
   "readiness": "R5_operational",
   "evidence_status": "validated",
-  "source_refs": ["composer.json", "composer.lock"],
-  "evidence_refs": ["docs/developer/docara-v2-migration.md"],
+  "source_refs": ["composer.json", "composer.lock", "simai-framework.lock.json"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md", "source/workflow/evidence/2026-08-29-framework-components-documentation-rebuild/verification-summary.json"],
   "tags": ["docara", "composer", "build-runtime"]
 }

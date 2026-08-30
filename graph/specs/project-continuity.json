@@ -1,0 +1,81 @@
+{
+  "objects": [
+    {
+      "approval_ref": null,
+      "id": "decision.proposal.8a6fd1527b052a55",
+      "kind": "decision",
+      "owner_ref": null,
+      "profile": "project_management",
+      "readiness": "proposal",
+      "source_evidence_ref": "evidence.continuity.89e0341ec884eec4",
+      "summary": "explicit_user_decision_for_commit_push_or_docara_release",
+      "title": "Decision proposal 1"
+    },
+    {
+      "changed_surfaces": [
+        "composer.lock",
+        "content/ru/components",
+        "contract",
+        "documentation.lock.json",
+        "examples/components",
+        "graph/specs"
+      ],
+      "checks": [
+        {
+          "evidence_ref": "https://ui-doc.test/ru/components/",
+          "id": "check.ui-doc.browser-smoke",
+          "verdict": "pass"
+        },
+        {
+          "evidence_ref": "repo://ui-doc/documentation.lock.json",
+          "id": "check.ui-doc.documentation-status.components",
+          "verdict": "pass"
+        },
+        {
+          "evidence_ref": "repo://ui-doc/build_production",
+          "id": "check.ui-doc.static-build",
+          "verdict": "pass"
+        }
+      ],
+      "evidence_refs": [
+        "https://github.com/simai/docara/releases/tag/v2.4.1",
+        "repo://ui-doc/documentation.lock.json",
+        "repo://ui-doc/graph/specs/objects/documentation-content.json",
+        "repo://ui-doc/graph/specs/objects/shared-examples.json"
+      ],
+      "id": "evidence.continuity.89e0341ec884eec4",
+      "kind": "evidence",
+      "profile": "project_management",
+      "provenance_digest": "sha256:89e0341ec884eec4ed38945647b7995afa24994bc53a49db677bb64f9762d042",
+      "readiness": "accepted",
+      "requirement_refs": [
+        "requirement.ui-doc.documentation-tracking",
+        "requirement.ui-doc.local-static-verification"
+      ],
+      "source_revision": null,
+      "summary": "Docara 2.4.1 is published, ui-doc uses the exact release, source-backed component documentation is current, and the local static site passed build, static, HTTP, and browser verification without public deployment.",
+      "task_digest": "sha256:cd221c6933812bd457005b5cecbaec01959ab5a1f02fab1017c4006160cc084d",
+      "title": "Verified task result 89e0341ec884eec4"
+    },
+    {
+      "boundary": "task_complete",
+      "case_signature": "case.ui-doc.documentation-tracking-v1",
+      "evidence_refs": [
+        "evidence.continuity.89e0341ec884eec4"
+      ],
+      "id": "regression_case.continuity.89e0341ec884eec4",
+      "kind": "regression_case",
+      "profile": "implementation_control",
+      "provenance_digest": "sha256:89e0341ec884eec4ed38945647b7995afa24994bc53a49db677bb64f9762d042",
+      "readiness": "accepted",
+      "requirement_refs": [
+        "requirement.ui-doc.documentation-tracking",
+        "requirement.ui-doc.local-static-verification"
+      ],
+      "summary": "Docara 2.4.1 is published, ui-doc uses the exact release, source-backed component documentation is current, and the local static site passed build, static, HTTP, and browser verification without public deployment.",
+      "task_digest": "sha256:cd221c6933812bd457005b5cecbaec01959ab5a1f02fab1017c4006160cc084d",
+      "title": "Verified reusable case 89e0341ec884eec4"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

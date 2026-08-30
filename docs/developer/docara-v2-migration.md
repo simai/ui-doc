@@ -7,9 +7,10 @@ the configuration required to build it with the shared Docara v2 runtime.
 
 The migration was performed from the consolidated historical branches with
 `scripts/migrate-legacy-content.php`. It normalizes the closed front-matter
-contract, safely displays legacy raw HTML as text, relocates Framework component
-pages away from Docara's reserved `/components/` catalog, flattens unsupported
-route depth, and records compatible redirects in `redirects.json`.
+contract, safely displays legacy raw HTML as text, flattens unsupported route
+depth, and records compatible redirects in `redirects.json`. The historical
+restriction on `/components/` no longer applies: the Russian Framework catalog
+uses this canonical route directly.
 All PCRE line splitting runs explicitly in UTF-8 mode. A permanent fixture
 guards against interpreting the second byte of Cyrillic `х` as a legacy NEL
 line separator.

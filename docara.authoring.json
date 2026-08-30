@@ -1,0 +1,14 @@
+{
+  "schema": "docara.authoring.v1",
+  "audiences": [
+    "frontend_developer",
+    "interface_designer",
+    "ai_agent"
+  ],
+  "rules": [
+    {
+      "match": "components/*.md",
+      "profile": "reference"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "rel.ui-doc.site.generated-by-docara",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.documentation-site",
+    "to": "ui-doc.capability.docara-runtime",
+    "relation_type": "generated_by",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "validated",
+    "impact": "critical",
+    "owner": "repository_owner",
+    "source_refs": [
+      "composer.json",
+      "docara.json"
+    ],
+    "evidence_refs": [
+      "docs/developer/docara-v2-migration.md"
+    ]
+  },
+  {
+    "id": "rel.ui-doc.site.uses-authored-content",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.documentation-site",
+    "to": "ui-doc.capability.authored-content",
+    "relation_type": "uses",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "validated",
+    "impact": "critical",
+    "owner": "repository_owner",
+    "source_refs": [
+      "docara.json",
+      "content"
+    ],
+    "evidence_refs": [
+      "docs/developer/docara-v2-migration.md",
+      "source/workflow/2026-08-25-playground-example-migration-trial.md",
+      "source/workflow/2026-08-25-playground-native-example-migration.md",
+      "source/workflow/evidence/2026-08-25-playground-native-examples/migration-manifest.json"
+    ]
+  },
+  {
+    "id": "rel.ui-doc.content.uses-shared-examples",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.authored-content",
+    "to": "ui-doc.capability.shared-examples",
+    "relation_type": "uses",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "validated",
+    "impact": "critical",
+    "owner": "repository_owner",
+    "source_refs": [
+      "content",
+      "examples"
+    ],
+    "evidence_refs": [
+      "source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json",
+      "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json",
+      ".docara/examples.json"
+    ]
+  },
+  {
+    "id": "rel.ui-doc.site.reports-translation-state",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.documentation-site",
+    "to": "ui-doc.capability.translation-tracking",
+    "relation_type": "reports",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "partial",
+    "impact": "high",
+    "owner": "repository_owner",
+    "source_refs": [
+      "docara.json",
+      "translations.lock.json",
+      "content/ru",
+      "content/en"
+    ],
+    "evidence_refs": [
+      ".docara/translation-status.json"
+    ]
+  },
+  {
+    "id": "rel.ui-doc.site.exposes-product-landing-navigation",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.documentation-site",
+    "to": "ui-doc.capability.product-landing-navigation",
+    "relation_type": "exposes",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "validated",
+    "impact": "high",
+    "owner": "repository_owner",
+    "source_refs": [
+      "content/ru",
+      "content/en"
+    ],
+    "evidence_refs": [
+      "source/workflow/2026-08-25-simai-framework-landing-navigation.md",
+      "source/workflow/2026-08-25-landing-feedback-round-1.md",
+      "source/workflow/2026-08-25-landing-feedback-round-2.md",
+      "source/workflow/2026-08-25-landing-feedback-round-3.md",
+      "source/workflow/2026-08-25-landing-feedback-round-4.md"
+    ]
+  },
+  {
+    "id": "rel.ui-doc.site.materialized-as-build",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.documentation-site",
+    "to": "ui-doc.capability.local-static-build",
+    "relation_type": "materialized_as",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "validated",
+    "impact": "high",
+    "owner": "repository_owner",
+    "source_refs": [
+      "README.md"
+    ],
+    "evidence_refs": [
+      "docs/developer/docara-v2-migration.md"
+    ]
+  },
+  {
+    "id": "rel.ui-doc.build.guarded-by-publication-policy",
+    "schema_version": "1.0.0",
+    "kind": "relation",
+    "from": "ui-doc.capability.local-static-build",
+    "to": "ui-doc.policy.explicit-publication",
+    "relation_type": "guarded_by",
+    "status": "active",
+    "confidence": 1,
+    "evidence_status": "asserted_by_human",
+    "impact": "high",
+    "owner": "repository_owner",
+    "source_refs": [
+      "README.md"
+    ],
+    "evidence_refs": []
+  }
+]

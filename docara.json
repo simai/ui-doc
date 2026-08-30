@@ -34,6 +34,19 @@
     "mode": "report",
     "lock_file": "translations.lock.json"
   },
+  "documentation_tracking": {
+    "enabled": true,
+    "source_locale": "ru",
+    "mode": "report",
+    "lock_file": "documentation.lock.json",
+    "sources": [
+      {
+        "id": "simai-framework",
+        "provider": "simai_framework",
+        "framework_lock": "simai-framework.lock.json"
+      }
+    ]
+  },
   "documentation_version": "current",
   "redirects_file": "redirects.json",
   "base_url": "/",

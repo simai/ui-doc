@@ -4,6 +4,7 @@
   "extensions": {
     "mirai.project_technology": {
       "context_policy": "task_scoped",
+      "continuity_policy": "task_boundary",
       "contract_version": "1.0.0",
       "enabled": true,
       "source_boundary": "hybrid_sot"
@@ -11,20 +12,28 @@
   },
   "format": "mirai-graph",
   "graph": {
-    "generated": [],
+    "generated": [
+      "graph/docs/project-context.md"
+    ],
     "objects": [
-      "graph/specs/objects/ui-documentation-site.json",
       "graph/specs/objects/docara-runtime.json",
       "graph/specs/objects/documentation-content.json",
-      "graph/specs/objects/shared-examples.json",
-      "graph/specs/objects/product-landing-navigation.json",
       "graph/specs/objects/local-static-build.json",
-      "graph/specs/objects/publication-policy.json"
+      "graph/specs/objects/product-landing-navigation.json",
+      "graph/specs/objects/publication-policy.json",
+      "graph/specs/objects/shared-examples.json",
+      "graph/specs/objects/ui-documentation-site.json",
+      "graph/specs/project-continuity.json"
     ],
     "raw_sources": [
       "README.md",
       "docara.json",
-      "docs/developer/docara-v2-migration.md"
+      "docara.authoring.json",
+      "documentation.lock.json",
+      "docs/developer/docara-v2-migration.md",
+      "content/ru/components/index.md",
+      "scripts/audit-component-docs.php",
+      "scripts/audit-examples.php"
     ],
     "relations": [
       "graph/specs/relations/site-generated-by-docara.json",

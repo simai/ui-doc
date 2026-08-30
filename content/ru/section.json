@@ -14,7 +14,7 @@
       {"id": "start", "label": "Старт", "href": "/ru/start/"},
       {"id": "fundamentals", "label": "Основы", "href": "/ru/fundamentals/"},
       {"id": "utilities", "label": "Утилиты", "href": "/ru/utilities/"},
-      {"id": "components", "label": "Компоненты", "href": "/ru/framework-components/"},
+      {"id": "components", "label": "Компоненты", "href": "/ru/components/"},
       {"id": "smart-components", "label": "Смарт-компоненты", "href": "/ru/smart-components/"}
     ]
   }

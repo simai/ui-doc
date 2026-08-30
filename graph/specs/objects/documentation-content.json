@@ -4,12 +4,12 @@
   "kind": "capability",
   "subtype": "feature",
   "title": "Repository-owned documentation content",
-  "summary": "The content/ru and content/en trees contain 939 Markdown route owners plus locale UI strings and local assets. Russian utility metadata uses supported front-matter tags rather than visible legacy rtags markers. A source-verified pilot renders the background-attachment package and its optional sm/md/lg/xl conditions as one compact native Docara badge line at the full component size; the implicit unprefixed baseline and redundant group labels are intentionally omitted. A global rollout remains deferred until presentation can be derived without duplicating metadata. All Russian pages have a deterministic content-quality baseline covering legacy and encoded generator leakage, escaped markup, image labels, H1 structure and explicit localized section titles. The 221 imported Playground consumers reference 214 canonical shared examples, while unique demonstrations may remain inline.",
+  "summary": "The content/ru and content/en trees contain repository-owned Markdown routes, locale UI strings and local assets. Russian utility metadata uses supported front-matter tags rather than visible legacy rtags markers. The canonical Russian component catalog is the flat /ru/components/ section: all 63 ordinary components declared by the pinned SIMAI Framework 5.4.1 registry have one reference-profile page, a task-grouped catalog entry and at least one executable shared example. Source-backed coverage and freshness are derived by Docara from the pinned Framework contract, documentation.lock.json, Markdown and examples; scripts/audit-component-docs.php is only a thin CLI wrapper. All Russian pages retain the deterministic content-quality baseline covering legacy and encoded generator leakage, escaped markup, image labels, H1 structure and explicit localized section titles.",
   "owner": "repository_owner",
   "lifecycle": "validated",
   "readiness": "R5_operational",
   "evidence_status": "validated",
-  "source_refs": ["content", "examples", "assets", "redirects.json", "simai-framework.lock.json", "translations.lock.json", "scripts/audit-russian-content.php"],
+  "source_refs": ["content", "examples", "assets", "redirects.json", "simai-framework.lock.json", "translations.lock.json", "documentation.lock.json", "docara.authoring.json", "docara.json", "scripts/audit-russian-content.php", "scripts/audit-component-docs.php"],
   "evidence_refs": [
     "scripts/test-migrate-legacy-content.php",
     "source/workflow/2026-08-25-playground-example-migration-trial.md",
@@ -24,7 +24,8 @@
     "source/qa/2026-08-26-ui-doc-russian-full/EVIDENCE/postfix-content-audit.json",
     "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json",
     "source/workflow/evidence/2026-08-27-legacy-rtags-cleanup/verification-summary.json",
-    "source/workflow/evidence/2026-08-27-utility-capability-badge-pilot/verification-summary.json"
+    "source/workflow/evidence/2026-08-27-utility-capability-badge-pilot/verification-summary.json",
+    "source/workflow/2026-08-29-framework-components-documentation-rebuild.md"
   ],
-  "tags": ["content", "markdown", "front-matter", "locales", "russian", "quality-audit", "navigation", "redirects", "shared-examples", "translation-tracking"]
+  "tags": ["content", "markdown", "front-matter", "locales", "russian", "quality-audit", "navigation", "redirects", "shared-examples", "translation-tracking", "documentation-tracking", "component-catalog", "authoring-profiles"]
 }

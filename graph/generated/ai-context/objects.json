@@ -1,0 +1,290 @@
+[
+  {
+    "id": "ui-doc.capability.authored-content",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "feature",
+    "title": "Repository-owned documentation content",
+    "summary": "The content/ru and content/en trees contain repository-owned Markdown routes, locale UI strings and local assets. Russian utility metadata uses supported front-matter tags rather than visible legacy rtags markers. The canonical Russian component catalog is the flat /ru/components/ section: all 63 ordinary components declared by the pinned SIMAI Framework 5.4.1 registry have one reference-profile page, a task-grouped catalog entry and at least one executable shared example. Source-backed coverage and freshness are derived by Docara from the pinned Framework contract, documentation.lock.json, Markdown and examples; scripts/audit-component-docs.php is only a thin CLI wrapper. All Russian pages retain the deterministic content-quality baseline covering legacy and encoded generator leakage, escaped markup, image labels, H1 structure and explicit localized section titles.",
+    "owner": "repository_owner",
+    "lifecycle": "validated",
+    "readiness": "R5_operational",
+    "evidence_status": "validated",
+    "source_refs": [
+      "content",
+      "examples",
+      "assets",
+      "redirects.json",
+      "simai-framework.lock.json",
+      "translations.lock.json",
+      "documentation.lock.json",
+      "docara.authoring.json",
+      "docara.json",
+      "scripts/audit-russian-content.php",
+      "scripts/audit-component-docs.php"
+    ],
+    "evidence_refs": [
+      "scripts/test-migrate-legacy-content.php",
+      "source/workflow/2026-08-25-playground-example-migration-trial.md",
+      "source/output/human-centered-simplicity/2026-08-25-playground-example-migration-trial/verdict.json",
+      "source/workflow/2026-08-25-playground-native-example-migration.md",
+      "source/workflow/evidence/2026-08-25-playground-native-examples/migration-manifest.json",
+      "source/output/human-centered-simplicity/2026-08-25-playground-native-example-migration/verdict.json",
+      "source/workflow/2026-08-25-shared-examples-translation-tracking.md",
+      "source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json",
+      "source/workflow/evidence/2026-08-26-example-quality-cleanup/audit-inventory.json",
+      "source/workflow/evidence/2026-08-26-example-quality-cleanup/verification-summary.json",
+      "source/qa/2026-08-26-ui-doc-russian-full/EVIDENCE/postfix-content-audit.json",
+      "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json",
+      "source/workflow/evidence/2026-08-27-legacy-rtags-cleanup/verification-summary.json",
+      "source/workflow/evidence/2026-08-27-utility-capability-badge-pilot/verification-summary.json",
+      "source/workflow/2026-08-29-framework-components-documentation-rebuild.md"
+    ],
+    "tags": [
+      "content",
+      "markdown",
+      "front-matter",
+      "locales",
+      "russian",
+      "quality-audit",
+      "navigation",
+      "redirects",
+      "shared-examples",
+      "translation-tracking",
+      "documentation-tracking",
+      "component-catalog",
+      "authoring-profiles"
+    ]
+  },
+  {
+    "id": "ui-doc.capability.docara-runtime",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "feature",
+    "title": "Docara 2 build runtime",
+    "summary": "Public simai/docara v2.3.0 package pinned by Composer lock to source revision 51d65a55e30150bdb5790d4f5f859a4a3f4bdf0d; the current local verification also carries unreleased source fixes for locale-aware page validation and safe component JavaScript inside shared examples.",
+    "owner": "docara",
+    "lifecycle": "validated",
+    "readiness": "R5_operational",
+    "evidence_status": "validated",
+    "source_refs": [
+      "composer.json",
+      "composer.lock",
+      "simai-framework.lock.json"
+    ],
+    "evidence_refs": [
+      "docs/developer/docara-v2-migration.md",
+      "source/workflow/evidence/2026-08-29-framework-components-documentation-rebuild/verification-summary.json"
+    ],
+    "tags": [
+      "docara",
+      "composer",
+      "build-runtime"
+    ]
+  },
+  {
+    "id": "ui-doc.capability.documentation-site",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "feature",
+    "title": "SIMAI Framework documentation site",
+    "summary": "A bilingual static SIMAI Framework site with locale product landings, first-level header navigation and a full documentation tree generated from repository-owned Markdown and validated configuration. The canonical Russian ordinary-component route is /ru/components/: it is a flat 63-page section with a task-grouped index, reference authoring profile and redirects from the former /ru/framework-components/ hierarchy. Optional source-backed tracking reports whether Russian Core, utility, component and Smart Component pages and examples match the exact pinned Framework runtime without changing the separate translation workflow.",
+    "owner": "repository_owner",
+    "lifecycle": "validated",
+    "readiness": "R5_operational",
+    "evidence_status": "validated",
+    "source_refs": [
+      "README.md",
+      "docara.json",
+      "docara.authoring.json",
+      "documentation.lock.json",
+      "simai-framework.lock.json",
+      "content/ru/section.json",
+      "content/ru/components/section.json",
+      "content/en/section.json",
+      "redirects.json"
+    ],
+    "evidence_refs": [
+      "docs/developer/docara-v2-migration.md",
+      "content/ru/index.page.json",
+      "content/en/index.page.json",
+      "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json",
+      "source/workflow/2026-08-29-framework-components-documentation-rebuild.md"
+    ],
+    "tags": [
+      "documentation",
+      "landing",
+      "header-navigation",
+      "russian",
+      "english",
+      "static-site",
+      "component-catalog",
+      "documentation-tracking",
+      "redirects"
+    ]
+  },
+  {
+    "id": "ui-doc.capability.local-static-build",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "feature",
+    "title": "Verified local static build",
+    "summary": "Docara 2.3.0 builds 909 authored pages into build_production; ui-doc.test serves the current verified 1,788-page output through the existing ServBay site binding with 370,065 checked local references and no broken references.",
+    "owner": "repository_owner",
+    "lifecycle": "validated",
+    "readiness": "R5_operational",
+    "evidence_status": "validated",
+    "source_refs": [
+      "docara.json",
+      "README.md"
+    ],
+    "evidence_refs": [
+      "docs/developer/docara-v2-migration.md",
+      "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json",
+      "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json",
+      "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json",
+      "source/workflow/evidence/2026-08-29-framework-components-documentation-rebuild/verification-summary.json"
+    ],
+    "tags": [
+      "build",
+      "servbay",
+      "local-site",
+      "verification"
+    ]
+  },
+  {
+    "id": "ui-doc.capability.product-landing-navigation",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "feature",
+    "title": "SIMAI Framework product landing and top navigation",
+    "summary": "The Russian and English locale home pages use the native Docara landing preset, one primary Hero action with responsive spacing, theme-safe ambient decoration, icon-led Framework layers, and an original Result/HTML workbench where Phone, Tablet and Desktop controls highlight the effective mobile-first modifier line while recomposing one card. The site also provides a restored stateful Steps timeline, an icon-triggered locale menu, first-level header links, and a sidebar scoped to the active top-level section.",
+    "owner": "repository_owner",
+    "lifecycle": "validated",
+    "readiness": "R5_operational",
+    "evidence_status": "validated",
+    "source_refs": [
+      "content/ru/index.md",
+      "content/ru/index.page.json",
+      "content/ru/section.json",
+      "content/en/index.md",
+      "content/en/index.page.json",
+      "content/en/section.json"
+    ],
+    "evidence_refs": [
+      "source/workflow/2026-08-25-simai-framework-landing-navigation.md",
+      "source/workflow/2026-08-25-landing-feedback-round-1.md",
+      "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-1/verdict.json",
+      "source/workflow/2026-08-25-landing-feedback-round-2.md",
+      "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-2/verdict.json",
+      "source/workflow/2026-08-25-landing-feedback-round-3.md",
+      "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-3/verdict.json",
+      "source/workflow/2026-08-25-landing-feedback-round-4.md",
+      "source/output/human-centered-simplicity/2026-08-25-landing-feedback-round-4/verdict.json"
+    ],
+    "tags": [
+      "landing",
+      "navigation",
+      "positioning",
+      "responsive",
+      "accessibility",
+      "seo"
+    ]
+  },
+  {
+    "id": "ui-doc.capability.shared-examples",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "feature",
+    "title": "Repository-owned shared examples",
+    "summary": "The root examples tree contains 287 canonical reusable HTML-first demonstrations consumed by 294 Markdown page-example relations, with optional JavaScript and local assets published by Docara. The component slice contains 72 example blocks covering every one of the 63 ordinary Framework components; examples use public SIMAI Framework classes, expose their executed HTML/JavaScript through Docara tabs and contain no project-owned presentation CSS. Image-dependent utility examples use a minimal project-owned visual system instead of brand marks or generic placeholders. Deterministic audits guard registry coverage, duplication, responsive layout, accessibility semantics and Markdown authoring hygiene.",
+    "owner": "repository_owner",
+    "lifecycle": "validated",
+    "readiness": "R5_operational",
+    "evidence_status": "validated",
+    "source_refs": [
+      "examples",
+      "content",
+      "scripts/migrate-shared-examples.php",
+      "scripts/normalize-documentation-examples.php",
+      "scripts/audit-examples.php",
+      "scripts/audit-component-docs.php"
+    ],
+    "evidence_refs": [
+      "source/workflow/evidence/2026-08-25-shared-examples/migration-receipt.json",
+      "source/workflow/evidence/2026-08-26-example-quality-cleanup/audit-inventory.json",
+      "source/workflow/evidence/2026-08-26-example-quality-cleanup/verification-summary.json",
+      "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json",
+      "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json",
+      "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json",
+      "source/workflow/2026-08-29-framework-components-documentation-rebuild.md",
+      ".docara/examples.json"
+    ],
+    "tags": [
+      "examples",
+      "html",
+      "javascript",
+      "assets",
+      "reusable-content",
+      "responsive",
+      "accessibility",
+      "quality-audit",
+      "visual-system",
+      "component-catalog",
+      "framework-registry"
+    ]
+  },
+  {
+    "id": "ui-doc.capability.translation-tracking",
+    "schema_version": "1.0.0",
+    "kind": "capability",
+    "subtype": "quality-gate",
+    "title": "Report-only translation tracking",
+    "summary": "Russian is the source locale. Docara reports page and lang.json currency without changing sources or failing the build. The current queue contains 190 missing, 111 orphan, 240 structure mismatch and 154 unverified items; two explicitly accepted English UI keys are current.",
+    "owner": "repository_owner",
+    "lifecycle": "active",
+    "readiness": "R3_review_required",
+    "evidence_status": "partial",
+    "source_refs": [
+      "docara.json",
+      "translations.lock.json",
+      "content/ru",
+      "content/en"
+    ],
+    "evidence_refs": [
+      ".docara/translation-status.json",
+      "source/workflow/2026-08-25-shared-examples-translation-tracking.md",
+      "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json"
+    ],
+    "tags": [
+      "translation",
+      "localization",
+      "report",
+      "ru",
+      "en",
+      "review-queue"
+    ]
+  },
+  {
+    "id": "ui-doc.policy.explicit-publication",
+    "schema_version": "1.0.0",
+    "kind": "policy",
+    "policy_type": "guard",
+    "title": "Explicit publication authorization",
+    "summary": "Git commit, push, release and public deployment are separate operations and require explicit user authorization.",
+    "owner": "repository_owner",
+    "lifecycle": "active",
+    "readiness": "R5_operational",
+    "evidence_status": "asserted_by_human",
+    "source_refs": [
+      "README.md"
+    ],
+    "evidence_refs": [],
+    "tags": [
+      "git",
+      "release",
+      "deployment",
+      "safety"
+    ]
+  }
+]

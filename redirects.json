@@ -511,264 +511,780 @@
             "to": "en/start/loader/frontend-standalone"
         },
         {
-            "from": "ru/components",
-            "to": "ru/framework-components"
-        },
-        {
-            "from": "ru/components/buttons",
-            "to": "ru/framework-components/buttons"
-        },
-        {
             "from": "ru/components/catalog",
-            "to": "ru/framework-components/catalog"
+            "to": "ru/components"
         },
         {
             "from": "ru/components/connection",
-            "to": "ru/framework-components/connection"
+            "to": "ru/components"
         },
         {
             "from": "ru/components/examples",
-            "to": "ru/framework-components/examples"
+            "to": "ru/components"
         },
         {
             "from": "ru/components/introduction",
-            "to": "ru/framework-components/introduction"
+            "to": "ru/components"
         },
         {
             "from": "ru/components/reference",
-            "to": "ru/framework-components/reference"
+            "to": "ru/components"
         },
         {
             "from": "ru/components/reference/accordion",
-            "to": "ru/framework-components/reference/accordion"
+            "to": "ru/components/accordion"
         },
         {
             "from": "ru/components/reference/admin-menu",
-            "to": "ru/framework-components/reference/admin-menu"
+            "to": "ru/components/admin-menu"
         },
         {
             "from": "ru/components/reference/alerts",
-            "to": "ru/framework-components/reference/alerts"
+            "to": "ru/components/alerts"
         },
         {
             "from": "ru/components/reference/avatars",
-            "to": "ru/framework-components/reference/avatars"
+            "to": "ru/components/avatars"
         },
         {
             "from": "ru/components/reference/badges",
-            "to": "ru/framework-components/reference/badges"
+            "to": "ru/components/badges"
         },
         {
             "from": "ru/components/reference/breadcrumbs",
-            "to": "ru/framework-components/reference/breadcrumbs"
+            "to": "ru/components/breadcrumbs"
+        },
+        {
+            "from": "ru/components/reference/button-group",
+            "to": "ru/components/button-group"
         },
         {
             "from": "ru/components/reference/buttons",
-            "to": "ru/framework-components/reference/buttons"
+            "to": "ru/components/buttons"
         },
         {
             "from": "ru/components/reference/carousel",
-            "to": "ru/framework-components/reference/carousel"
+            "to": "ru/components/carousel"
         },
         {
             "from": "ru/components/reference/checkbox",
-            "to": "ru/framework-components/reference/checkbox"
+            "to": "ru/components/checkbox"
         },
         {
             "from": "ru/components/reference/clipboard",
-            "to": "ru/framework-components/reference/clipboard"
+            "to": "ru/components/clipboard"
         },
         {
             "from": "ru/components/reference/close",
-            "to": "ru/framework-components/reference/close"
+            "to": "ru/components/close"
         },
         {
             "from": "ru/components/reference/content-divider",
-            "to": "ru/framework-components/reference/content-divider"
+            "to": "ru/components/content-divider"
         },
         {
             "from": "ru/components/reference/context-menu",
-            "to": "ru/framework-components/reference/context-menu"
+            "to": "ru/components/context-menu"
         },
         {
             "from": "ru/components/reference/country-code",
-            "to": "ru/framework-components/reference/country-code"
+            "to": "ru/components/country-code"
         },
         {
             "from": "ru/components/reference/datepicker",
-            "to": "ru/framework-components/reference/datepicker"
+            "to": "ru/components/datepicker"
         },
         {
             "from": "ru/components/reference/doc",
-            "to": "ru/framework-components/reference/doc"
+            "to": "ru/components/doc"
         },
         {
             "from": "ru/components/reference/dot",
-            "to": "ru/framework-components/reference/dot"
+            "to": "ru/components/dot"
         },
         {
             "from": "ru/components/reference/download-file",
-            "to": "ru/framework-components/reference/download-file"
+            "to": "ru/components/download-file"
         },
         {
             "from": "ru/components/reference/dropdown",
-            "to": "ru/framework-components/reference/dropdown"
+            "to": "ru/components/dropdown"
         },
         {
             "from": "ru/components/reference/emoji",
-            "to": "ru/framework-components/reference/emoji"
+            "to": "ru/components/emoji"
         },
         {
             "from": "ru/components/reference/fab",
-            "to": "ru/framework-components/reference/fab"
+            "to": "ru/components/fab"
         },
         {
             "from": "ru/components/reference/featured-icon",
-            "to": "ru/framework-components/reference/featured-icon"
+            "to": "ru/components/featured-icon"
         },
         {
             "from": "ru/components/reference/file-upload",
-            "to": "ru/framework-components/reference/file-upload"
+            "to": "ru/components/file-upload"
         },
         {
             "from": "ru/components/reference/hide-show",
-            "to": "ru/framework-components/reference/hide-show"
+            "to": "ru/components/hide-show"
         },
         {
             "from": "ru/components/reference/highlight",
-            "to": "ru/framework-components/reference/highlight"
+            "to": "ru/components/highlight"
         },
         {
             "from": "ru/components/reference/icon-buttons",
-            "to": "ru/framework-components/reference/icon-buttons"
+            "to": "ru/components/icon-buttons"
         },
         {
             "from": "ru/components/reference/icons",
-            "to": "ru/framework-components/reference/icons"
+            "to": "ru/components/icons"
         },
         {
             "from": "ru/components/reference/inputs",
-            "to": "ru/framework-components/reference/inputs"
+            "to": "ru/components/inputs"
+        },
+        {
+            "from": "ru/components/reference/kbd",
+            "to": "ru/components/kbd"
         },
         {
             "from": "ru/components/reference/menu",
-            "to": "ru/framework-components/reference/menu"
+            "to": "ru/components/menu"
         },
         {
             "from": "ru/components/reference/modal",
-            "to": "ru/framework-components/reference/modal"
+            "to": "ru/components/modal"
         },
         {
             "from": "ru/components/reference/monaco",
-            "to": "ru/framework-components/reference/monaco"
+            "to": "ru/components/monaco"
+        },
+        {
+            "from": "ru/components/reference/outline",
+            "to": "ru/components/outline"
         },
         {
             "from": "ru/components/reference/pagination",
-            "to": "ru/framework-components/reference/pagination"
+            "to": "ru/components/pagination"
         },
         {
             "from": "ru/components/reference/placeholder",
-            "to": "ru/framework-components/reference/placeholder"
+            "to": "ru/components/placeholder"
         },
         {
             "from": "ru/components/reference/progress-bar",
-            "to": "ru/framework-components/reference/progress-bar"
+            "to": "ru/components/progress-bar"
         },
         {
             "from": "ru/components/reference/progress-scale",
-            "to": "ru/framework-components/reference/progress-scale"
+            "to": "ru/components/progress-scale"
         },
         {
             "from": "ru/components/reference/quantity",
-            "to": "ru/framework-components/reference/quantity"
+            "to": "ru/components/quantity"
         },
         {
             "from": "ru/components/reference/radio",
-            "to": "ru/framework-components/reference/radio"
+            "to": "ru/components/radio"
         },
         {
             "from": "ru/components/reference/range-slider",
-            "to": "ru/framework-components/reference/range-slider"
+            "to": "ru/components/range-slider"
         },
         {
             "from": "ru/components/reference/reference-link",
-            "to": "ru/framework-components/reference/reference-link"
+            "to": "ru/components/reference-link"
         },
         {
             "from": "ru/components/reference/scrollbar",
-            "to": "ru/framework-components/reference/scrollbar"
+            "to": "ru/components/scrollbar"
         },
         {
             "from": "ru/components/reference/skeleton",
-            "to": "ru/framework-components/reference/skeleton"
+            "to": "ru/components/skeleton"
         },
         {
             "from": "ru/components/reference/slider",
-            "to": "ru/framework-components/reference/slider"
+            "to": "ru/components/slider"
         },
         {
             "from": "ru/components/reference/spinner",
-            "to": "ru/framework-components/reference/spinner"
+            "to": "ru/components/spinner"
         },
         {
             "from": "ru/components/reference/step",
-            "to": "ru/framework-components/reference/step"
+            "to": "ru/components/step"
         },
         {
             "from": "ru/components/reference/swiper",
-            "to": "ru/framework-components/reference/swiper"
+            "to": "ru/components/swiper"
         },
         {
             "from": "ru/components/reference/switch",
-            "to": "ru/framework-components/reference/switch"
+            "to": "ru/components/switch"
         },
         {
             "from": "ru/components/reference/tab",
-            "to": "ru/framework-components/reference/tab"
+            "to": "ru/components/tab"
         },
         {
             "from": "ru/components/reference/tabs",
-            "to": "ru/framework-components/reference/tabs"
+            "to": "ru/components/tabs"
         },
         {
             "from": "ru/components/reference/tags",
-            "to": "ru/framework-components/reference/tags"
+            "to": "ru/components/tags"
         },
         {
             "from": "ru/components/reference/textarea",
-            "to": "ru/framework-components/reference/textarea"
+            "to": "ru/components/textarea"
         },
         {
             "from": "ru/components/reference/theme",
-            "to": "ru/framework-components/reference/theme"
+            "to": "ru/components/theme"
         },
         {
             "from": "ru/components/reference/theme-builder",
-            "to": "ru/framework-components/reference/theme-builder"
+            "to": "ru/components/theme-builder"
         },
         {
             "from": "ru/components/reference/toast",
-            "to": "ru/framework-components/reference/toast"
+            "to": "ru/components/toast"
         },
         {
             "from": "ru/components/reference/toggle",
-            "to": "ru/framework-components/reference/toggle"
+            "to": "ru/components/toggle"
         },
         {
             "from": "ru/components/reference/tooltip",
-            "to": "ru/framework-components/reference/tooltip"
+            "to": "ru/components/tooltip"
         },
         {
             "from": "ru/components/reference/tree",
-            "to": "ru/framework-components/reference/tree"
+            "to": "ru/components/tree"
         },
         {
             "from": "ru/components/reference/tree-item",
-            "to": "ru/framework-components/reference/tree-item"
+            "to": "ru/components/tree-item"
         },
         {
             "from": "ru/components/reference/verification",
-            "to": "ru/framework-components/reference/verification"
+            "to": "ru/components/verification"
+        },
+        {
+            "from": "ru/framework-components",
+            "to": "ru/components"
+        },
+        {
+            "from": "ru/framework-components/accordion",
+            "to": "ru/components/accordion"
+        },
+        {
+            "from": "ru/framework-components/admin-menu",
+            "to": "ru/components/admin-menu"
+        },
+        {
+            "from": "ru/framework-components/alerts",
+            "to": "ru/components/alerts"
+        },
+        {
+            "from": "ru/framework-components/avatars",
+            "to": "ru/components/avatars"
+        },
+        {
+            "from": "ru/framework-components/badges",
+            "to": "ru/components/badges"
+        },
+        {
+            "from": "ru/framework-components/breadcrumbs",
+            "to": "ru/components/breadcrumbs"
+        },
+        {
+            "from": "ru/framework-components/button-group",
+            "to": "ru/components/button-group"
+        },
+        {
+            "from": "ru/framework-components/buttons",
+            "to": "ru/components/buttons"
+        },
+        {
+            "from": "ru/framework-components/carousel",
+            "to": "ru/components/carousel"
+        },
+        {
+            "from": "ru/framework-components/catalog",
+            "to": "ru/components"
+        },
+        {
+            "from": "ru/framework-components/checkbox",
+            "to": "ru/components/checkbox"
+        },
+        {
+            "from": "ru/framework-components/clipboard",
+            "to": "ru/components/clipboard"
+        },
+        {
+            "from": "ru/framework-components/close",
+            "to": "ru/components/close"
+        },
+        {
+            "from": "ru/framework-components/connection",
+            "to": "ru/components"
+        },
+        {
+            "from": "ru/framework-components/content-divider",
+            "to": "ru/components/content-divider"
+        },
+        {
+            "from": "ru/framework-components/context-menu",
+            "to": "ru/components/context-menu"
+        },
+        {
+            "from": "ru/framework-components/country-code",
+            "to": "ru/components/country-code"
+        },
+        {
+            "from": "ru/framework-components/datepicker",
+            "to": "ru/components/datepicker"
+        },
+        {
+            "from": "ru/framework-components/doc",
+            "to": "ru/components/doc"
+        },
+        {
+            "from": "ru/framework-components/dot",
+            "to": "ru/components/dot"
+        },
+        {
+            "from": "ru/framework-components/download-file",
+            "to": "ru/components/download-file"
+        },
+        {
+            "from": "ru/framework-components/dropdown",
+            "to": "ru/components/dropdown"
+        },
+        {
+            "from": "ru/framework-components/emoji",
+            "to": "ru/components/emoji"
+        },
+        {
+            "from": "ru/framework-components/examples",
+            "to": "ru/components"
+        },
+        {
+            "from": "ru/framework-components/fab",
+            "to": "ru/components/fab"
+        },
+        {
+            "from": "ru/framework-components/featured-icon",
+            "to": "ru/components/featured-icon"
+        },
+        {
+            "from": "ru/framework-components/file-upload",
+            "to": "ru/components/file-upload"
+        },
+        {
+            "from": "ru/framework-components/hide-show",
+            "to": "ru/components/hide-show"
+        },
+        {
+            "from": "ru/framework-components/highlight",
+            "to": "ru/components/highlight"
+        },
+        {
+            "from": "ru/framework-components/icon-buttons",
+            "to": "ru/components/icon-buttons"
+        },
+        {
+            "from": "ru/framework-components/icons",
+            "to": "ru/components/icons"
+        },
+        {
+            "from": "ru/framework-components/inputs",
+            "to": "ru/components/inputs"
+        },
+        {
+            "from": "ru/framework-components/introduction",
+            "to": "ru/components"
+        },
+        {
+            "from": "ru/framework-components/kbd",
+            "to": "ru/components/kbd"
+        },
+        {
+            "from": "ru/framework-components/menu",
+            "to": "ru/components/menu"
+        },
+        {
+            "from": "ru/framework-components/modal",
+            "to": "ru/components/modal"
+        },
+        {
+            "from": "ru/framework-components/monaco",
+            "to": "ru/components/monaco"
+        },
+        {
+            "from": "ru/framework-components/outline",
+            "to": "ru/components/outline"
+        },
+        {
+            "from": "ru/framework-components/pagination",
+            "to": "ru/components/pagination"
+        },
+        {
+            "from": "ru/framework-components/placeholder",
+            "to": "ru/components/placeholder"
+        },
+        {
+            "from": "ru/framework-components/progress-bar",
+            "to": "ru/components/progress-bar"
+        },
+        {
+            "from": "ru/framework-components/progress-scale",
+            "to": "ru/components/progress-scale"
+        },
+        {
+            "from": "ru/framework-components/quantity",
+            "to": "ru/components/quantity"
+        },
+        {
+            "from": "ru/framework-components/radio",
+            "to": "ru/components/radio"
+        },
+        {
+            "from": "ru/framework-components/range-slider",
+            "to": "ru/components/range-slider"
+        },
+        {
+            "from": "ru/framework-components/reference",
+            "to": "ru/components"
+        },
+        {
+            "from": "ru/framework-components/reference-link",
+            "to": "ru/components/reference-link"
+        },
+        {
+            "from": "ru/framework-components/reference/accordion",
+            "to": "ru/components/accordion"
+        },
+        {
+            "from": "ru/framework-components/reference/admin-menu",
+            "to": "ru/components/admin-menu"
+        },
+        {
+            "from": "ru/framework-components/reference/alerts",
+            "to": "ru/components/alerts"
+        },
+        {
+            "from": "ru/framework-components/reference/avatars",
+            "to": "ru/components/avatars"
+        },
+        {
+            "from": "ru/framework-components/reference/badges",
+            "to": "ru/components/badges"
+        },
+        {
+            "from": "ru/framework-components/reference/breadcrumbs",
+            "to": "ru/components/breadcrumbs"
+        },
+        {
+            "from": "ru/framework-components/reference/button-group",
+            "to": "ru/components/button-group"
+        },
+        {
+            "from": "ru/framework-components/reference/buttons",
+            "to": "ru/components/buttons"
+        },
+        {
+            "from": "ru/framework-components/reference/carousel",
+            "to": "ru/components/carousel"
+        },
+        {
+            "from": "ru/framework-components/reference/checkbox",
+            "to": "ru/components/checkbox"
+        },
+        {
+            "from": "ru/framework-components/reference/clipboard",
+            "to": "ru/components/clipboard"
+        },
+        {
+            "from": "ru/framework-components/reference/close",
+            "to": "ru/components/close"
+        },
+        {
+            "from": "ru/framework-components/reference/content-divider",
+            "to": "ru/components/content-divider"
+        },
+        {
+            "from": "ru/framework-components/reference/context-menu",
+            "to": "ru/components/context-menu"
+        },
+        {
+            "from": "ru/framework-components/reference/country-code",
+            "to": "ru/components/country-code"
+        },
+        {
+            "from": "ru/framework-components/reference/datepicker",
+            "to": "ru/components/datepicker"
+        },
+        {
+            "from": "ru/framework-components/reference/doc",
+            "to": "ru/components/doc"
+        },
+        {
+            "from": "ru/framework-components/reference/dot",
+            "to": "ru/components/dot"
+        },
+        {
+            "from": "ru/framework-components/reference/download-file",
+            "to": "ru/components/download-file"
+        },
+        {
+            "from": "ru/framework-components/reference/dropdown",
+            "to": "ru/components/dropdown"
+        },
+        {
+            "from": "ru/framework-components/reference/emoji",
+            "to": "ru/components/emoji"
+        },
+        {
+            "from": "ru/framework-components/reference/fab",
+            "to": "ru/components/fab"
+        },
+        {
+            "from": "ru/framework-components/reference/featured-icon",
+            "to": "ru/components/featured-icon"
+        },
+        {
+            "from": "ru/framework-components/reference/file-upload",
+            "to": "ru/components/file-upload"
+        },
+        {
+            "from": "ru/framework-components/reference/hide-show",
+            "to": "ru/components/hide-show"
+        },
+        {
+            "from": "ru/framework-components/reference/highlight",
+            "to": "ru/components/highlight"
+        },
+        {
+            "from": "ru/framework-components/reference/icon-buttons",
+            "to": "ru/components/icon-buttons"
+        },
+        {
+            "from": "ru/framework-components/reference/icons",
+            "to": "ru/components/icons"
+        },
+        {
+            "from": "ru/framework-components/reference/inputs",
+            "to": "ru/components/inputs"
+        },
+        {
+            "from": "ru/framework-components/reference/kbd",
+            "to": "ru/components/kbd"
+        },
+        {
+            "from": "ru/framework-components/reference/menu",
+            "to": "ru/components/menu"
+        },
+        {
+            "from": "ru/framework-components/reference/modal",
+            "to": "ru/components/modal"
+        },
+        {
+            "from": "ru/framework-components/reference/monaco",
+            "to": "ru/components/monaco"
+        },
+        {
+            "from": "ru/framework-components/reference/outline",
+            "to": "ru/components/outline"
+        },
+        {
+            "from": "ru/framework-components/reference/pagination",
+            "to": "ru/components/pagination"
+        },
+        {
+            "from": "ru/framework-components/reference/placeholder",
+            "to": "ru/components/placeholder"
+        },
+        {
+            "from": "ru/framework-components/reference/progress-bar",
+            "to": "ru/components/progress-bar"
+        },
+        {
+            "from": "ru/framework-components/reference/progress-scale",
+            "to": "ru/components/progress-scale"
+        },
+        {
+            "from": "ru/framework-components/reference/quantity",
+            "to": "ru/components/quantity"
+        },
+        {
+            "from": "ru/framework-components/reference/radio",
+            "to": "ru/components/radio"
+        },
+        {
+            "from": "ru/framework-components/reference/range-slider",
+            "to": "ru/components/range-slider"
+        },
+        {
+            "from": "ru/framework-components/reference/reference-link",
+            "to": "ru/components/reference-link"
+        },
+        {
+            "from": "ru/framework-components/reference/scrollbar",
+            "to": "ru/components/scrollbar"
+        },
+        {
+            "from": "ru/framework-components/reference/skeleton",
+            "to": "ru/components/skeleton"
+        },
+        {
+            "from": "ru/framework-components/reference/slider",
+            "to": "ru/components/slider"
+        },
+        {
+            "from": "ru/framework-components/reference/spinner",
+            "to": "ru/components/spinner"
+        },
+        {
+            "from": "ru/framework-components/reference/step",
+            "to": "ru/components/step"
+        },
+        {
+            "from": "ru/framework-components/reference/swiper",
+            "to": "ru/components/swiper"
+        },
+        {
+            "from": "ru/framework-components/reference/switch",
+            "to": "ru/components/switch"
+        },
+        {
+            "from": "ru/framework-components/reference/tab",
+            "to": "ru/components/tab"
+        },
+        {
+            "from": "ru/framework-components/reference/tabs",
+            "to": "ru/components/tabs"
+        },
+        {
+            "from": "ru/framework-components/reference/tags",
+            "to": "ru/components/tags"
+        },
+        {
+            "from": "ru/framework-components/reference/textarea",
+            "to": "ru/components/textarea"
+        },
+        {
+            "from": "ru/framework-components/reference/theme",
+            "to": "ru/components/theme"
+        },
+        {
+            "from": "ru/framework-components/reference/theme-builder",
+            "to": "ru/components/theme-builder"
+        },
+        {
+            "from": "ru/framework-components/reference/toast",
+            "to": "ru/components/toast"
+        },
+        {
+            "from": "ru/framework-components/reference/toggle",
+            "to": "ru/components/toggle"
+        },
+        {
+            "from": "ru/framework-components/reference/tooltip",
+            "to": "ru/components/tooltip"
+        },
+        {
+            "from": "ru/framework-components/reference/tree",
+            "to": "ru/components/tree"
+        },
+        {
+            "from": "ru/framework-components/reference/tree-item",
+            "to": "ru/components/tree-item"
+        },
+        {
+            "from": "ru/framework-components/reference/verification",
+            "to": "ru/components/verification"
+        },
+        {
+            "from": "ru/framework-components/scrollbar",
+            "to": "ru/components/scrollbar"
+        },
+        {
+            "from": "ru/framework-components/skeleton",
+            "to": "ru/components/skeleton"
+        },
+        {
+            "from": "ru/framework-components/slider",
+            "to": "ru/components/slider"
+        },
+        {
+            "from": "ru/framework-components/spinner",
+            "to": "ru/components/spinner"
+        },
+        {
+            "from": "ru/framework-components/step",
+            "to": "ru/components/step"
+        },
+        {
+            "from": "ru/framework-components/swiper",
+            "to": "ru/components/swiper"
+        },
+        {
+            "from": "ru/framework-components/switch",
+            "to": "ru/components/switch"
+        },
+        {
+            "from": "ru/framework-components/tab",
+            "to": "ru/components/tab"
+        },
+        {
+            "from": "ru/framework-components/tabs",
+            "to": "ru/components/tabs"
+        },
+        {
+            "from": "ru/framework-components/tags",
+            "to": "ru/components/tags"
+        },
+        {
+            "from": "ru/framework-components/textarea",
+            "to": "ru/components/textarea"
+        },
+        {
+            "from": "ru/framework-components/theme",
+            "to": "ru/components/theme"
+        },
+        {
+            "from": "ru/framework-components/theme-builder",
+            "to": "ru/components/theme-builder"
+        },
+        {
+            "from": "ru/framework-components/toast",
+            "to": "ru/components/toast"
+        },
+        {
+            "from": "ru/framework-components/toggle",
+            "to": "ru/components/toggle"
+        },
+        {
+            "from": "ru/framework-components/tooltip",
+            "to": "ru/components/tooltip"
+        },
+        {
+            "from": "ru/framework-components/tree",
+            "to": "ru/components/tree"
+        },
+        {
+            "from": "ru/framework-components/tree-item",
+            "to": "ru/components/tree-item"
+        },
+        {
+            "from": "ru/framework-components/verification",
+            "to": "ru/components/verification"
         },
         {
             "from": "ru/fundamentals/abbreviations-of-properties",

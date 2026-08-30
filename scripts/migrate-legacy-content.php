@@ -16,7 +16,7 @@ if (! is_string($root) || ! is_dir($root)) {
     exit(2);
 }
 
-$allowed = ['title', 'description', 'tags', 'draft', 'translation_key'];
+$allowed = ['title', 'description', 'tags', 'draft', 'translation_key', 'profile'];
 $canonicalRouteFromRelative = static function (string $relative): string {
     $route = preg_replace('/\.md$/', '', str_replace('\\', '/', $relative)) ?? $relative;
     if ($route === 'index') {
@@ -255,47 +255,6 @@ if ($renamed !== []) {
 }
 
 $relocated = [];
-foreach (['ru', 'en'] as $locale) {
-    $from = rtrim($root, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . 'components';
-    $to = rtrim($root, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . 'framework-components';
-    if (! is_dir($from)) {
-        if (is_dir($to)) {
-            $files = new RecursiveIteratorIterator(
-                new RecursiveDirectoryIterator($to, FilesystemIterator::SKIP_DOTS),
-            );
-            foreach ($files as $file) {
-                if (! $file->isFile() || strtolower($file->getExtension()) !== 'md') {
-                    continue;
-                }
-                $relative = str_replace('\\', '/', substr($file->getPathname(), strlen(rtrim($root, DIRECTORY_SEPARATOR)) + 1));
-                $new = $canonicalRouteFromRelative($relative);
-                $relocated[str_replace("$locale/framework-components", "$locale/components", $new)] = $new;
-            }
-        }
-        continue;
-    }
-    if (file_exists($to)) {
-        fwrite(STDERR, "Framework component relocation target already exists [$to].\n");
-        exit(7);
-    }
-
-    $files = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($from, FilesystemIterator::SKIP_DOTS),
-    );
-    foreach ($files as $file) {
-        if (! $file->isFile() || strtolower($file->getExtension()) !== 'md') {
-            continue;
-        }
-        $relative = str_replace('\\', '/', substr($file->getPathname(), strlen(rtrim($root, DIRECTORY_SEPARATOR)) + 1));
-        $old = $canonicalRouteFromRelative($relative);
-        $relocated[$old] = str_replace("$locale/components", "$locale/framework-components", $old);
-    }
-
-    if (! rename($from, $to)) {
-        fwrite(STDERR, "Cannot relocate legacy framework components [$from].\n");
-        exit(8);
-    }
-}
 
 $flattened = [];
 $files = new RecursiveIteratorIterator(

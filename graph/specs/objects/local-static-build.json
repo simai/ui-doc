@@ -4,12 +4,12 @@
   "kind": "capability",
   "subtype": "feature",
   "title": "Verified local static build",
-  "summary": "Docara 2.2.0 builds 939 authored pages into build_production atomically; ui-doc.test serves the current verified 1,665-page output through the existing ServBay site binding with 356,272 checked local references and no broken references.",
+  "summary": "Docara 2.3.0 builds 909 authored pages into build_production; ui-doc.test serves the current verified 1,788-page output through the existing ServBay site binding with 370,065 checked local references and no broken references.",
   "owner": "repository_owner",
   "lifecycle": "validated",
   "readiness": "R5_operational",
   "evidence_status": "validated",
   "source_refs": ["docara.json", "README.md"],
-  "evidence_refs": ["docs/developer/docara-v2-migration.md", "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json", "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json", "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json"],
+  "evidence_refs": ["docs/developer/docara-v2-migration.md", "source/workflow/evidence/2026-08-26-docara-2.1-current-audit/verification-summary.json", "source/workflow/evidence/2026-08-26-russian-documentation-audit/verification-summary.json", "source/workflow/evidence/2026-08-27-example-image-system/verification-summary.json", "source/workflow/evidence/2026-08-29-framework-components-documentation-rebuild/verification-summary.json"],
   "tags": ["build", "servbay", "local-site", "verification"]
 }

@@ -1,0 +1,30 @@
+<section class="grid gap-3 p-2 md:p-4 bg-surface-0 color-on-surface" data-layout-demo data-sf-require="utility.grid-template-columns utility.grid-column">
+  <header class="flex flex-col md:flex-row md:items-cross-end content-main-between gap-2">
+    <div class="grid gap-1/3">
+      <p class="m-0 color-primary label-small weight-8">ОДИН НАБОР ДАННЫХ</p>
+      <h2 class="m-0 sf-h-3">Запуск новой версии</h2>
+    </div>
+    <div class="inline-flex p-1/4 radius-1 border border-outline-variant bg-surface-container" role="group" aria-label="Представление данных">
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 segment-start" data-layout="list"><span class="sf-button-text-container">Список</span></button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 segment-middle" data-layout="cards"><span class="sf-button-text-container">Карточки</span></button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 segment-end" data-layout="focus"><span class="sf-button-text-container">Фокус</span></button>
+    </div>
+  </header>
+  <div class="p-2 md:p-3 radius-2 border border-outline-variant bg-surface-container">
+    <article class="grid gap-2" data-project>
+      <header class="flex flex-wrap items-cross-center content-main-between gap-1 p-2 radius-1 bg-primary-container color-on-primary-container" data-summary>
+        <div class="grid gap-1/3"><p class="m-0 color-on-surface-variant">Версия 5.4</p><h3 class="m-0 sf-h-4">Готовность команды</h3></div>
+        <span class="p-x-1 p-y-1/3 radius-rounded bg-success-container color-on-success-container label-small weight-8">В графике</span>
+      </header>
+      <div class="flex flex-col gap-1" data-items>
+        <section class="grid grid-col-2 items-cross-center gap-1 p-2 radius-1 border border-outline-variant bg-surface-0" data-item><div class="grid gap-1/3"><strong>Интерфейсы</strong><span class="color-on-surface-variant text-small">Готовые экраны</span></div><b class="color-primary text-2 bold" data-value>18/24</b></section>
+        <section class="grid grid-col-2 items-cross-center gap-1 p-2 radius-1 border border-outline-variant bg-surface-0" data-item><div class="grid gap-1/3"><strong>Компоненты</strong><span class="color-on-surface-variant text-small">Проверено тестами</span></div><b class="color-primary text-2 bold" data-value>92%</b></section>
+        <section class="grid grid-col-2 items-cross-center gap-1 p-2 radius-1 border border-outline-variant bg-surface-0" data-item><div class="grid gap-1/3"><strong>Документация</strong><span class="color-on-surface-variant text-small">Описанные сценарии</span></div><b class="color-primary text-2 bold" data-value>36</b></section>
+      </div>
+    </article>
+  </div>
+  <footer class="flex flex-wrap items-cross-center gap-1 color-on-surface-variant text-small">
+    <span>Применены классы:</span>
+    <code class="p-x-1 p-y-1/3 radius-1/2 bg-primary-container color-on-primary-container weight-7" data-recipe aria-live="polite">flex flex-col gap-1</code>
+  </footer>
+</section>

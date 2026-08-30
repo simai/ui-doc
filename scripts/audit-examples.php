@@ -33,40 +33,49 @@ foreach ($markdownPaths as $path) {
     $markdown = (string) file_get_contents($path);
     $tableMarkers += preg_match_all('/^\h*\{\.table\}\h*$/m', $markdown);
     $escapedAnchorLinks += preg_match_all('/^\h*-\h+&lt;a\h+href=/mi', $markdown);
-    if (preg_match(
+    preg_match_all(
         '/^:::example\s+\{[^}]*\bid="([^"]+)"[^}]*}\s*$.*?^:::\s*$/ms',
         $markdown,
-        $example,
-        PREG_OFFSET_CAPTURE,
-    ) !== 1) {
-        continue;
-    }
-    $id = (string) $example[1][0];
-    $consumers[$id][] = $relative;
-    $before = substr($markdown, 0, (int) $example[0][1]);
-    preg_match_all(
-        '/^(#{2,6})\s+([^\n]*(?:Пример|пример|Example|example|Usage Example)[^\n]*)\s*$/mu',
-        $before,
-        $headings,
+        $examples,
         PREG_SET_ORDER | PREG_OFFSET_CAPTURE,
     );
-    if ($headings === []) {
-        $blockers[] = ['code' => 'example_heading_missing', 'path' => $relative, 'id' => $id];
-        continue;
-    }
-    $run = [$headings[count($headings) - 1]];
-    for ($index = count($headings) - 2; $index >= 0; $index--) {
-        $later = $run[count($run) - 1];
-        $afterCurrent = (int) $headings[$index][0][1] + strlen((string) $headings[$index][0][0]);
-        $beforeLater = (int) $later[0][1];
-        if (preg_match('/^#{2,6}\s+/m', substr($before, $afterCurrent, $beforeLater - $afterCurrent)) === 1) {
-            break;
+    foreach ($examples as $example) {
+        $id = (string) $example[1][0];
+        $consumers[$id][] = $relative;
+        $before = substr($markdown, 0, (int) $example[0][1]);
+        preg_match_all(
+            '/^(#{2,6})\s+([^\n]*(?:Пример|пример|Example|example|Usage Example)[^\n]*)\s*$/mu',
+            $before,
+            $headings,
+            PREG_SET_ORDER | PREG_OFFSET_CAPTURE,
+        );
+        if ($headings === []) {
+            preg_match_all(
+                '/^(#{2,6})\s+([^\n]+)\s*$/mu',
+                $before,
+                $fallbackHeadings,
+                PREG_SET_ORDER | PREG_OFFSET_CAPTURE,
+            );
+            if ($fallbackHeadings === []) {
+                $blockers[] = ['code' => 'example_heading_missing', 'path' => $relative, 'id' => $id];
+                continue;
+            }
+            $headings = [$fallbackHeadings[count($fallbackHeadings) - 1]];
         }
-        $run[] = $headings[$index];
+        $run = [$headings[count($headings) - 1]];
+        for ($index = count($headings) - 2; $index >= 0; $index--) {
+            $later = $run[count($run) - 1];
+            $afterCurrent = (int) $headings[$index][0][1] + strlen((string) $headings[$index][0][0]);
+            $beforeLater = (int) $later[0][1];
+            if (preg_match('/^#{2,6}\s+/m', substr($before, $afterCurrent, $beforeLater - $afterCurrent)) === 1) {
+                break;
+            }
+            $run[] = $headings[$index];
+        }
+        $region = substr($before, (int) $run[count($run) - 1][0][1]);
+        $redundantFences += preg_match_all('/^(`{3,}|~{3,})[^\n]*\R.*?^\1\h*$/ms', $region);
+        $duplicateHeadings += max(0, count($run) - 1);
     }
-    $region = substr($before, (int) $run[count($run) - 1][0][1]);
-    $redundantFences += preg_match_all('/^(`{3,}|~{3,})[^\n]*\R.*?^\1\h*$/ms', $region);
-    $duplicateHeadings += max(0, count($run) - 1);
 }
 
 $examplePaths = glob($root . '/examples/*/*/*/index.html') ?: [];
@@ -83,6 +92,7 @@ $metrics = [
     'buttons_without_type' => 0,
     'images_without_alt' => 0,
     'known_class_typos' => 0,
+    'duplicate_attributes' => 0,
 ];
 foreach ($examplePaths as $path) {
     $id = str_replace('\\', '/', substr(dirname($path), strlen($root . '/examples') + 1));
@@ -96,7 +106,7 @@ foreach ($examplePaths as $path) {
     $metrics['with_inline_style'] += (int) (preg_match('/\sstyle\s*=/i', $html) === 1);
     $metrics['with_fixed_pixel_size'] += (int) (preg_match('/(?:width|height|min-width|min-height|max-width|max-height)\s*:\s*\d+px/i', $html) === 1);
     $metrics['with_interactive_controls'] += (int) (preg_match('/<(?:button|input|select|textarea|details)\b/i', $html) === 1);
-    $openingTag = preg_match('/^\s*<[^>]+>/', $html, $opening) === 1 ? $opening[0] : '';
+    $openingTag = preg_match('/^\x{FEFF}?\s*<[^>]+>/u', $html, $opening) === 1 ? $opening[0] : '';
     if (preg_match('/\bgrid-col-[2-9]\b/', $openingTag) === 1
         && preg_match('/\b(?:sm|md|lg|xl):grid-col-/', $openingTag) !== 1
     ) {
@@ -106,6 +116,7 @@ foreach ($examplePaths as $path) {
     $metrics['buttons_without_type'] += preg_match_all('/<button(?![^>]*\btype=)[^>]*>/i', $html);
     $metrics['images_without_alt'] += preg_match_all('/<img(?![^>]*\balt=)[^>]*>/i', $html);
     $metrics['known_class_typos'] += preg_match_all('/\b(?:transtion|trasition)\b/i', $html);
+    $metrics['duplicate_attributes'] += preg_match_all('/<[^>]*\s(class|id|name|type|href|src)=(?:"[^"]*"|\'[^\']*\')[^>]*\s\1=/i', $html);
 }
 
 foreach ($consumers as $id => $paths) {
@@ -135,7 +146,7 @@ if ($duplicateHeadings > 0) {
 if ($escapedAnchorLinks > 0) {
     $blockers[] = ['code' => 'escaped_anchor_link_visible', 'count' => $escapedAnchorLinks];
 }
-foreach (['buttons_without_type', 'images_without_alt', 'known_class_typos'] as $metric) {
+foreach (['buttons_without_type', 'images_without_alt', 'known_class_typos', 'duplicate_attributes'] as $metric) {
     if ($metrics[$metric] > 0) {
         $blockers[] = ['code' => $metric, 'count' => $metrics[$metric]];
     }
