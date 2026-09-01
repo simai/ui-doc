@@ -400,11 +400,11 @@
             "key": "component.icons",
             "kind": "component",
             "page_path": "content/ru/components/icons.md",
-            "page_sha256": "bddfb634a01a2a3ff154bcc8b1bd07d107ed8f92959e956a249a53349646af7b",
+            "page_sha256": "3d128a3c90b3bf3c4ee2afb315b3ba09e5908e284560b4498491e66191587844",
             "review": "ai_verified",
             "route": "/ru/components/icons/",
             "source": "simai-framework",
-            "source_sha256": "94296186819872892cd56293babbb351bd544f703ef75cf4a3d162442a86b90f"
+            "source_sha256": "8d8b50f4c42a7d69ed01526aa82f5749827e4a09a7d34e9b8d8a6cdf1191a614"
         },
         {
             "examples": {

@@ -37,7 +37,7 @@ profile: reference
 ## Технический контракт
 
 - Loader-идентификатор: `icons`.
-- Поставка: SIMAI Framework 5.4.0.
+- Поставка: SIMAI Framework 5.5.0.
 - Источник истины: Framework Registry и ассеты `distr/component/icons`.
 - Подключение выполняет Loader после обнаружения публичных классов компонента;
   отдельный проектный CSS для примера не требуется.
