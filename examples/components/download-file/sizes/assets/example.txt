@@ -1,0 +1,2 @@
+SIMAI Framework example file.
+This local asset is used to demonstrate the download-file component.

@@ -1,44 +1,8 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-3 content-main-start">
- <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
- <span class="sf-input-label flex">
- <span class="sf-input-text">Рабочая почта</span>
- <span class="sf-input-required" aria-hidden="true">*</span>
- </span>
- <span class="sf-input-field items-cross-center transition flex">
- <i class="sf-icon" aria-hidden="true">mail</i>
- <input type="email" name="email" placeholder="name@example.com" required />
- </span>
- <span class="sf-input-hint-text-wrap">Используем только для уведомлений</span>
- </label>
-
- <label class="sf-input sf-input--size-1 sf-input--filled flex flex-col">
- <span class="sf-input-label flex">
- <span class="sf-input-text">Поиск</span>
- </span>
- <span class="sf-input-field items-cross-center transition flex">
- <i class="sf-icon" aria-hidden="true">search</i>
- <input type="search" name="query" placeholder="Название компонента" />
- <span class="sf-input-right">⌘ K</span>
- </span>
- </label>
-
- <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
- <span class="sf-input-label flex">
- <span class="sf-input-text">Код проекта</span>
- </span>
- <span class="sf-input-field items-cross-center transition flex">
- <input class="error" type="text" name="project-code" value="demo space" aria-invalid="true" aria-describedby="project-code-error" />
- </span>
- <span id="project-code-error" class="sf-input-hint-text-wrap">Используйте латинские буквы без пробелов</span>
- </label>
-
- <label class="sf-input sf-input--size-1 sf-input--filled flex flex-col">
- <span class="sf-input-label flex">
- <span class="sf-input-text">Организация</span>
- </span>
- <span class="sf-input-field items-cross-center transition flex">
- <input type="text" name="organization" value="SIMAI" disabled />
- </span>
- <span class="sf-input-hint-text-wrap">Недоступно для изменения</span>
- </label>
-</div>
+<label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+  <span class="sf-input-label flex"><span class="sf-input-text">Рабочая почта</span></span>
+  <span class="sf-input-field items-cross-center transition flex">
+    <i class="sf-icon" aria-hidden="true">mail</i>
+    <input type="email" name="email" autocomplete="email" placeholder="name@example.com">
+  </span>
+  <span class="sf-input-hint-text-wrap">Используем только для уведомлений</span>
+</label>

@@ -1,10 +1,12 @@
 <div class="sf-carousel">
- <div class="sf-carousel-slider flex gap-2 overflow-hidden">
- <article class="surface-container p-3 radius-2 min-w-0 flex-1"><strong>Первый материал</strong><p>Краткое описание первого слайда.</p></article>
- <article class="surface-container p-3 radius-2 min-w-0 flex-1"><strong>Второй материал</strong><p>Краткое описание второго слайда.</p></article>
- </div>
- <div class="sf-carousel-pagination flex gap-1 items-main-center" aria-label="Слайды">
- <button class="sf-carousel-pagination-item sf-carousel-pagination-item--active" type="button" aria-label="Слайд 1"></button>
- <button class="sf-carousel-pagination-item" type="button" aria-label="Слайд 2"></button>
- </div>
+  <div class="sf-carousel-slider swiper overflow-hidden">
+    <div class="swiper-wrapper">
+      <article class="swiper-slide sf-carousel-slide surface-container p-3 radius-default"><strong>Первый материал</strong><p class="m-bottom-0">Краткое описание первого слайда.</p></article>
+      <article class="swiper-slide sf-carousel-slide surface-container p-3 radius-default"><strong>Второй материал</strong><p class="m-bottom-0">Краткое описание второго слайда.</p></article>
+      <article class="swiper-slide sf-carousel-slide surface-container p-3 radius-default"><strong>Третий материал</strong><p class="m-bottom-0">Краткое описание третьего слайда.</p></article>
+    </div>
+    <button type="button" class="sf-carousel-switch sf-carousel-switch--left sf-carousel-switch--primary" aria-label="Предыдущий слайд">‹</button>
+    <button type="button" class="sf-carousel-switch sf-carousel-switch--right sf-carousel-switch--primary" aria-label="Следующий слайд">›</button>
+  </div>
+  <div class="sf-carousel-pagination flex content-main-center" aria-label="Положение в карусели"></div>
 </div>

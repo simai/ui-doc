@@ -1,21 +1,24 @@
 <div class="grid gap-2">
- <div class="sf-accordion flex transition" aria-expanded="true">
- <div class="sf-accordion-wrap flex flex-col flex-1">
- <div class="sf-accordion-title">Что подключает Loader?</div>
- <div class="sf-accordion-content">
- Loader находит компонент в разметке и добавляет необходимые стили и поведение.
- </div>
- </div>
- <i class="sf-icon" aria-hidden="true">keyboard_arrow_up</i>
- </div>
-
- <div class="sf-accordion flex transition">
- <div class="sf-accordion-wrap flex flex-col flex-1">
- <div class="sf-accordion-title">Можно ли открыть раздел клавиатурой?</div>
- <div class="sf-accordion-content hidden">
- Да. Установите фокус и нажмите Enter или Пробел.
- </div>
- </div>
- <i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i>
- </div>
+  <article class="sf-accordion">
+    <h2 class="sf-accordion-heading">
+      <button class="sf-accordion-trigger" type="button" aria-expanded="true">
+        <span class="sf-accordion-title">Что входит в поставку?</span>
+        <i class="sf-icon" aria-hidden="true">chevron_right</i>
+      </button>
+    </h2>
+    <div class="sf-accordion-content" role="region">
+      Стили, поведение и публичный контракт компонента.
+    </div>
+  </article>
+  <article class="sf-accordion">
+    <h2 class="sf-accordion-heading">
+      <button class="sf-accordion-trigger" type="button" aria-expanded="false">
+        <span class="sf-accordion-title">Как открыть раздел?</span>
+        <i class="sf-icon" aria-hidden="true">chevron_right</i>
+      </button>
+    </h2>
+    <div class="sf-accordion-content hidden" role="region">
+      Нажмите на заголовок, Enter или Пробел.
+    </div>
+  </article>
 </div>
