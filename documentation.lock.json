@@ -8,11 +8,11 @@
             "key": "component.accordion",
             "kind": "component",
             "page_path": "content/ru/components/accordion.md",
-            "page_sha256": "ec695d512935dff141572c619706ac56200bacb87ded8c056fe4309f7e767a6f",
+            "page_sha256": "ff75f632f2006229cd3c346eee1e035bbcb555ea416689689a91896a909eb9a6",
             "review": "ai_verified",
             "route": "/ru/components/accordion/",
             "source": "simai-framework",
-            "source_sha256": "f46fecece27f23ff3f6ac98287b3f34087b4babd1fef683f22ea8e975360879a"
+            "source_sha256": "dde9dcebcdbeb7272efb8f1eaf0351fe537069ed21b4dc17f91c3b607a25d536"
         },
         {
             "examples": {
@@ -92,11 +92,11 @@
             "key": "component.button-group",
             "kind": "component",
             "page_path": "content/ru/components/button-group.md",
-            "page_sha256": "41a75382379042e7050ad4c3ccc0827d00300707dc5a269172ee284bed1f2c16",
+            "page_sha256": "a70b7f6c9f31a60358c0944c98d776e1eee05e3b72933a06ee73883fb116202d",
             "review": "ai_verified",
             "route": "/ru/components/button-group/",
             "source": "simai-framework",
-            "source_sha256": "755963494f0eeeec386ba0f4bb745452fa5d2204b07e59ce04e9fcfa8930c455"
+            "source_sha256": "93080c75a7b423d9c543324750b107bd16979a809de7cbc7580d0fc1aff28864"
         },
         {
             "examples": {
