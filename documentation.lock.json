@@ -18,15 +18,15 @@
             "examples": {
                 "default": "components/admin-menu/overview"
             },
-            "examples_sha256": "c99d83f422ebeb95ed97df9378f6e8a2482638c0cc04af64d6848b50065b07cf",
+            "examples_sha256": "88ed633182d1c7795a4c9c57e0d6ec703f055e203666add6a8d962c7bc9f4385",
             "key": "component.admin-menu",
             "kind": "component",
             "page_path": "content/ru/components/admin-menu.md",
-            "page_sha256": "3d0eaf8786bb43695751e6a852f48a5f678253d75bcdbf8395210adc6ca127b3",
+            "page_sha256": "b2cc075a052d6a8589607063482d50d1e290f42087b05ea0b4289c6bf1288313",
             "review": "ai_verified",
             "route": "/ru/components/admin-menu/",
             "source": "simai-framework",
-            "source_sha256": "c446b90773fe6d747d5efc153a7a6e0d254a2a15fa9deac8a50056b61f456382"
+            "source_sha256": "5a60249270b6134a9608b5429239d74d6eea25c77e7e216ecdc2dcaf56354f5f"
         },
         {
             "examples": {
