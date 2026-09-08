@@ -7,7 +7,7 @@ tags: [outline-width, focus]
 # Толщина внешней границы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.outline-0` | `outline-width: var(--sf-0);` |
 | `.outline-1` | `outline-width: var(--sf-a1);` |
 | `.outline-2` | `outline-width: var(--sf-a2);` |

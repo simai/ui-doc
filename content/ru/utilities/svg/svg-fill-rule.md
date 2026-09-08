@@ -9,7 +9,7 @@ tags: [fill-rule]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.fill-nonzero` | `fill-rule: nonzero` |
 | `.fill-evenodd` | `fill-rule: evenodd` |
 ## Пример

@@ -9,7 +9,7 @@ tags: [fill]
 Классы задают `fill-rule` у SVG-пути.
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.fill-nonzero` | `fill-rule: nonzero;` |
 | `.fill-evenodd` | `fill-rule: evenodd;` |
 

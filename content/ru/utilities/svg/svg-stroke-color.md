@@ -9,7 +9,7 @@ tags: [stroke-color, hover]
 Классы `stroke*` задают `stroke` у SVG.
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.stroke` | `stroke: var(--sf-outline-variant);` |
 | `.stroke-outline` | `stroke: var(--sf-outline);` |
 | `.stroke-primary` | `stroke: var(--sf-outline-primary);` |

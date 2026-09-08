@@ -11,7 +11,7 @@ tags: [border-width, sm, md, lg, xl]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.border` | `border: var(--sf-a1) var(--sf-outline-variant) solid` |
 | `.border-none` | `border: var(--sf-a1) var(--sf-transparent) solid` |
 

@@ -7,7 +7,7 @@ tags: [outline-offset]
 # Отступ внешней границы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.outline-offset-1` | `outline-offset: var(--sf-a1);` |
 | `.outline-offset-2` | `outline-offset: var(--sf-a2);` |
 | `.outline-offset-3` | `outline-offset: var(--sf-a3);` |

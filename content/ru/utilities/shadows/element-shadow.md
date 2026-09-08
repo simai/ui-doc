@@ -11,7 +11,7 @@ tags: [box-shadow, hover]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.shadow-0` | тень отключена |
 | `.shadow-1` | `--sf-shadow--level-ratio: 1` |
 | `.shadow-2` | `--sf-shadow--level-ratio: 2` |

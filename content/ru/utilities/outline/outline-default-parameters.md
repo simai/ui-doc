@@ -9,7 +9,7 @@ tags: [outline-width, focus]
 Классы по умолчанию для внешней границы:
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.outline` | `outline: var(--sf-px) var(--sf-outline-variant) solid;` |
 | `.outline-none` | `outline-width: var(--sf-0);` |
 

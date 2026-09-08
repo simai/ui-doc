@@ -21,7 +21,7 @@ tags: [border-style]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.border-{style}` | `border-style: {style}` |
 | `.border-x-{style}` | `border-inline-start-style` + `border-inline-end-style` |
 | `.border-y-{style}` | `border-top-style` + `border-bottom-style` |

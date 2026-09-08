@@ -7,7 +7,7 @@ tags: [outline-color, hover, focus, active]
 # Цвет внешней границы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.outline-transparent` | `outline-color: var(--sf-transparent);` |
 | `.outline-current` | `outline-color: currentColor;` |
 | `.outline-outline` | `outline-color: var(--sf-outline);` |

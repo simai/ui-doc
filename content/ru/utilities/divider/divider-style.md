@@ -11,7 +11,7 @@ tags: [divider-style]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.divider-solid` / `.divide-solid` | `border-style: solid` |
 | `.divider-dashed` / `.divide-dashed` | `border-style: dashed` |
 | `.divider-dotted` / `.divide-dotted` | `border-style: dotted` |

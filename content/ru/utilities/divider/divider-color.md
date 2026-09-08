@@ -11,7 +11,7 @@ tags: [divider-color, hover]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.divider-transparent` / `.divide-transparent` | `border-color: var(--sf-transparent)` |
 | `.divider-current` / `.divide-current` | `border-color: currentColor` |
 | `.divider-outline` / `.divide-outline` | `border-color: var(--sf-outline)` |

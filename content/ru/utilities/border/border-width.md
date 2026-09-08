@@ -11,7 +11,7 @@ tags: [border-width, sm, md, lg, xl]
 ## Классы и значения
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.border-{n}` | `border-width: var(--sf-*)` |
 | `.border-x-{n}` | `border-inline-start-width` + `border-inline-end-width` |
 | `.border-y-{n}` | `border-top-width` + `border-bottom-width` |

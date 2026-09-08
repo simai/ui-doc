@@ -20,7 +20,7 @@ tags: [text-color, hover, focus, active]
 ## Таблица классов
 
 | Класс | Токен | Назначение |
-|:--|:--|:--|
+|:---|:---|:---|
 | `.color-on-surface` | `--sf-on-surface` | Основной текст на поверхности |
 | `.color-on-surface-variant` | `--sf-on-surface-variant` | Вспомогательный текст и метаданные |
 | `.color-on-surface-fixed` | `--sf-on-surface-fixed` | Фиксированный цвет, не переключаемый вместе с темой |

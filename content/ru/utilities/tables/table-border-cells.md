@@ -11,7 +11,7 @@ tags: [table-border]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.border-collapse` | `border-collapse: collapse;` |
 | `.border-separate` | `border-collapse: separate;` |
 | `.border-spacing-{n}` | `border-spacing: var(--sf-...);` |

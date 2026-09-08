@@ -1,26 +1,33 @@
 ---
-title: "Максимальная высота (max-height)"
+title: "Максимальная высота"
 description: "Максимальная высота (max-height)"
 tags: [max-height, sm, md, lg, xl]
 ---
 
-# Максимальная высота (max-height)
+# Максимальная высота
+
+:badge[max-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно ограничить максимальную высоту элемента. Это позволяет избежать
 чрезмерного растягивания блока при большом объёме контента, сохранив при этом адаптивность интерфейса.
+
+## Наглядный пример
+
+:::example {id="utilities/sizes/max-height" label="Максимальная высота"}
+:::
 
 ## Таблица классов
 
 | Класс                   | Значение                |
 |:------------------------|:--------------------------------------------|
-| .max-h-full             | max-height: 100%;                           |
-| .max-h-screen           | max-height: 100vh;                          |
-| .max-h-px               | max-height: 1px;                            |
-| .max-h-0                | max-height: 0;                              |
-| .max-h-min             | max-height: min-content;                    |
-| .max-h-max              | max-height: max-content;                    |
-| .max-h-fit              | max-height: fit-content;                    |
-| .max-h-a0 ... .max-h-i9 | Фиксированные размеры из системы фреймворка |
+| `max-h-full` | `max-height: 100%;` |
+| `max-h-screen` | `max-height: 100vh;` |
+| `max-h-px` | `max-height: 1px;` |
+| `max-h-0` | `max-height: 0;` |
+| `max-h-min` | `max-height: min-content;` |
+| `max-h-max` | `max-height: max-content;` |
+| `max-h-fit` | `max-height: fit-content;` |
+| `max-h-a0 ... max-h-i9` | Фиксированные размеры из системы фреймворка |
 
 ## Синтаксис
 
@@ -67,7 +74,3 @@ tags: [max-height, sm, md, lg, xl]
 ```
 
 В этом примере максимальная высота будет равна нулю (`max-h-0`) при ширине экрана `md` и больше.
-## Пример
-:::example {id="utilities/sizes/max-height" label="Результат"}
-:::
-

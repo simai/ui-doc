@@ -11,7 +11,7 @@ tags: [text-decoration, hover, focus, active]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.link-underline-none` | `text-decoration-line: none` для ссылки и `:hover` |
 
 ## Синтаксис

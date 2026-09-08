@@ -9,7 +9,7 @@ tags: [text-decoration-color, hover, focus, active]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.decoration-primary` | `text-decoration-color: var(--sf-outline-primary);` |
 | `.decoration-secondary` | `text-decoration-color: var(--sf-outline-secondary);` |
 | `.decoration-tertiary` | `text-decoration-color: var(--sf-outline-tertiary);` |

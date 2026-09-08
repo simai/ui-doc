@@ -1,30 +1,37 @@
 ---
-title: "Максимальная ширина (max-width)"
+title: "Максимальная ширина"
 description: "Максимальная ширина (max-width)"
 tags: [max-width, sm, md, lg, xl]
 ---
 
-# Максимальная ширина (max-width)
+# Максимальная ширина
+
+:badge[max-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
+
+## Наглядный пример
+
+:::example {id="utilities/sizes/max-width" label="Максимальная ширина"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение                                          |
 |:-------------------|:--------------------------------------------------|
-| .max-w-full        | max-width: 100%;                                  |
-| .max-w-screen      | max-width: 100vw;                                 |
-| .max-w-min         | max-width: min-content;                           |
-| .max-w-max         | max-width: max-content;                           |
-| .max-w-fit         | max-width: fit-content;                           |
-| .max-w-prose       | max-width: 65ch;                                  |
-| .max-w-none        | max-width: none;                                  |
-| .max-w-0           | max-width: 0;                                     |
-| .max-w-sm          | max-width: 520px;                                 |
-| .max-w-md          | max-width: 720px;                                 |
-| .max-w-lg          | max-width: 960px;                                 |
-| .max-w-xl          | max-width: 1140px;                                |
-| .max-w-a0 ... i9   | max-width: var(--sf-...); фиксированные размеры из системы фреймворка |
+| `max-w-full` | `max-width: 100%;` |
+| `max-w-screen` | `max-width: 100vw;` |
+| `max-w-min` | `max-width: min-content;` |
+| `max-w-max` | `max-width: max-content;` |
+| `max-w-fit` | `max-width: fit-content;` |
+| `max-w-prose` | `max-width: 65ch;` |
+| `max-w-none` | `max-width: none;` |
+| `max-w-0` | `max-width: 0;` |
+| `max-w-sm` | `max-width: 520px;` |
+| `max-w-md` | `max-width: 720px;` |
+| `max-w-lg` | `max-width: 960px;` |
+| `max-w-xl` | `max-width: 1140px;` |
+| `max-w-a0 ... i9` | max-width: var(--sf-...); фиксированные размеры из системы фреймворка |
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -87,7 +94,3 @@ tags: [max-width, sm, md, lg, xl]
 ```
 
 В этом примере максимальная ширина будет 100% (`max-w-full`) только при размерах экрана `md` и больше.
-## Пример
-:::example {id="utilities/sizes/max-width" label="Результат"}
-:::
-

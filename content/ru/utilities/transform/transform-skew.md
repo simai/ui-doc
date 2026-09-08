@@ -11,7 +11,7 @@ tags: [transform-skew, hover]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.skew-x-0` | `transform: skewX(0deg)` |
 | `.skew-x-1` | `transform: skewX(1deg)` |
 | `.skew-x-2` | `transform: skewX(2deg)` |

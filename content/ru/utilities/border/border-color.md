@@ -11,7 +11,7 @@ tags: [border-color, hover, focus, active]
 ## Ролевые классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.border-transparent` | `border-color: var(--sf-transparent)` |
 | `.border-current` | `border-color: currentColor` |
 | `.border-outline` | `border-color: var(--sf-outline)` |

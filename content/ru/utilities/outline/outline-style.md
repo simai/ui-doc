@@ -7,7 +7,7 @@ tags: [outline-style]
 # Стиль внешней границы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.outline-solid` | `outline-style: solid;` |
 | `.outline-dashed` | `outline-style: dashed;` |
 | `.outline-dotted` | `outline-style: dotted;` |

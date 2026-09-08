@@ -11,7 +11,7 @@ tags: [transform-rotate, hover]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.rotate-0` | `transform: rotate(0deg)` |
 | `.rotate-1` | `transform: rotate(1deg)` |
 | `.rotate-2` | `transform: rotate(2deg)` |

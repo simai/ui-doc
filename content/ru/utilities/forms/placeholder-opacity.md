@@ -11,7 +11,7 @@ tags: [placeholder-opacity, hover, focus]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.placeholder-opacity-0 ... .placeholder-opacity-9` | `opacity: 0 ... 0.9` |
 | `.placeholder-opacity-full` | `opacity: 1` |
 ## Пример

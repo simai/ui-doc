@@ -11,7 +11,7 @@ tags: [placeholder-color, hover, focus]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.placeholder-transparent` | `color: var(--sf-transparent)` |
 | `.placeholder-current` | `color: currentColor` |
 | `.placeholder-primary` | `color: var(--sf-primary)` |

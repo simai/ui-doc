@@ -11,7 +11,7 @@ tags: [text-color, hover, focus, active]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.link-inherit` | ссылка и ее состояния наследуют `currentColor` |
 | `.link-inherit-link` | ссылка и `:hover` наследуют `currentColor` |
 

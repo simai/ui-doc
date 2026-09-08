@@ -11,7 +11,7 @@ tags: [ring-opacity, hover, focus]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.ring-opacity-0 ... .ring-opacity-9` | `opacity: 0 ... 0.9` |
 | `.ring-opacity-full` | `opacity: 1` |
 ## Пример

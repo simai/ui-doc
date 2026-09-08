@@ -9,7 +9,7 @@ tags: [text-decoration-offset]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.decoration-offset-auto` | Автоматическое смещение |
 | `.decoration-offset-0` ... `.decoration-offset-4` | Смещение по токенам `--sf-a0..--sf-a4` |
 

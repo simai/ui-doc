@@ -9,7 +9,7 @@ tags: [text-align, sm, md, lg, xl]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.text-start` | `text-align: start;` |
 | `.text-center` | `text-align: center;` |
 | `.text-end` | `text-align: end;` |

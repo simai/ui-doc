@@ -11,7 +11,7 @@ tags: [display-print]
 ## Классы и значения
 
 | Класс | Значение в режиме печати |
-|:--|:--|
+|:---|:---|
 | `.print-block` | `display: block;` |
 | `.print-inline-block` | `display: inline-block;` |
 | `.print-inline` | `display: inline;` |

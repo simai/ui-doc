@@ -11,7 +11,7 @@ tags: [text-decoration-style]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `.link-dotted` | `text-decoration-style: dotted` |
 | `.link-dashed` | `text-decoration-style: dashed` |
 

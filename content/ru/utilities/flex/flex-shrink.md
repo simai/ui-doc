@@ -1,19 +1,26 @@
 ---
-title: "Сжимаемость (flex-shrink)"
+title: "Сжимаемость"
 description: "Сжимаемость (flex-shrink)"
 tags: [flex-shrink, sm, md, lg, xl]
 ---
 
-# Сжимаемость (flex-shrink)
+# Сжимаемость
+
+:badge[flex-shrink]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять сжимаемостью элементов флексбокса.
+
+## Наглядный пример
+
+:::example {id="utilities/flex/flex-shrink" label="Сжимаемость"}
+:::
 
 ## Таблица классов
 
 | Класс        | Значение        |
 |:-------------|:----------------|
-| .shrink      | flex-shrink: 1; |
-| .shrink-none | flex-shrink: 0; |
+| `shrink` | `flex-shrink: 1;` |
+| `shrink-none` | `flex-shrink: 0;` |
 
 ## Синтаксис
 
@@ -58,7 +65,3 @@ tags: [flex-shrink, sm, md, lg, xl]
   <!-- Начиная с md элемент будет сжиматься при нехватке пространства -->
 </div>
 ```
-## Пример
-:::example {id="utilities/flex/flex-shrink" label="Результат"}
-:::
-

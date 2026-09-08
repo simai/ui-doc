@@ -1,25 +1,39 @@
 ---
-title: "Выравнивание содержимого по основной оси (justify-content)"
+title: "Выравнивание содержимого по основной оси"
 description: "Выравнивание содержимого по основной оси (justify-content)"
 tags: [justify-content, sm, md, lg, xl]
 ---
 
-# Выравнивание содержимого по основной оси (justify-content)
+# Выравнивание содержимого по основной оси
+
+:badge[justify-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Этот модификатор определяет, как именно элементы внутри контейнера (флексбокса или сетки) выравниваются вдоль основной
 оси. Основная ось зависит от направления (`flex-direction`). Если `row` (строка) — основная ось горизонтальная. Если
 `column` (столбец) — вертикальная.
 
+Каноническая форма — `justify-*`. Ранее опубликованные классы
+`content-main-*` остаются совместимыми на протяжении линейки SF5, но в новом
+коде и примерах следует использовать `justify-*`.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="Выравнивание содержимого по основной оси"}
+:::
+
 ## Таблица классов
 
 | Класс                 | Значение                        |
 |:----------------------|:--------------------------------|
-| .content-main-start   | justify-content: flex-start;    |
-| .content-main-end     | justify-content: flex-end;      |
-| .content-main-center  | justify-content: center;        |
-| .content-main-between | justify-content: space-between; |
-| .content-main-around  | justify-content: space-around;  |
-| .content-main-evenly  | justify-content: space-evenly;  |
+| `justify-start` | `justify-content: flex-start;` |
+| `justify-end` | `justify-content: flex-end;` |
+| `justify-center` | `justify-content: center;` |
+| `justify-between` | `justify-content: space-between;` |
+| `justify-around` | `justify-content: space-around;` |
+| `justify-evenly` | `justify-content: space-evenly;` |
+
+Для каждой строки также доступен совместимый псевдоним, например
+`content-main-center` для `justify-center`.
 
 ## Синтаксис
 
@@ -31,18 +45,18 @@ tags: [justify-content, sm, md, lg, xl]
 
 - Модификатор *(обязательный параметр)*:
 
-    - `content-main-start` – элементы прижаты к началу основной оси;
-    - `content-main-end` – элементы прижаты к концу основной оси;
-    - `content-main-center` – элементы выравнены по центру основной оси;
-    - `content-main-between` – элементы распределены равномерно с первым и последним элементом прижатыми к краям;
-    - `content-main-around` – элементы равномерно распределены так, что отступ от краёв вдвое меньше отступов между
+    - `justify-start` – элементы прижаты к началу основной оси;
+    - `justify-end` – элементы прижаты к концу основной оси;
+    - `justify-center` – элементы выравнены по центру основной оси;
+    - `justify-between` – элементы распределены равномерно с первым и последним элементом прижатыми к краям;
+    - `justify-around` – элементы равномерно распределены так, что отступ от краёв вдвое меньше отступов между
       элементами;
-    - `content-main-evenly` – элементы распределены с равными отступами между собой и от краёв.
+    - `justify-evenly` – элементы распределены с равными отступами между собой и от краёв.
 
 ## Пример использования
 
 ```html
-<div class="flex content-main-center">
+<div class="flex justify-center">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -56,11 +70,7 @@ tags: [justify-content, sm, md, lg, xl]
 Чтобы применить выравнивание, начиная с определённого размера экрана, добавьте контрольную точку. Например:
 
 ```html
-<div class="md:content-main-start">
+<div class="md:justify-start">
     <!-- Начиная с md выравнивание элементов будет flex-start -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="Результат"}
-:::
-
