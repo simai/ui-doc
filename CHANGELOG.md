@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Explained configurable, modular Framework delivery and added AI usage guidance,
+  distinguishing documentation URLs from the existing UI Studio MCP service.
 - Consolidated the useful history of the former documentation branches.
 - Migrated the public Russian and English documentation to the Docara v2
   content contract.
