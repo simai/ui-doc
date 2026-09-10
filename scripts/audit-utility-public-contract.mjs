@@ -39,50 +39,11 @@ for (const page of pages) {
 
 // These are documentation routes whose historical, reader-facing names differ
 // from the generated Loader family. They are aliases of pages, not aliases of CSS.
-const pageAliases = {
-  animation: 'animation-type',
-  'backdrop-filer-hue-rotate': 'backdrop-hue-rotate',
-  'backdrop-filter-blur': 'backdrop-blur',
-  'backdrop-filter-brightness': 'backdrop-brightness',
-  'backdrop-filter-contrast': 'backdrop-contrast',
-  'backdrop-filter-grayscale': 'backdrop-grayscale',
-  'backdrop-filter-invert': 'backdrop-invert',
-  'backdrop-filter-opacity': 'backdrop-opacity',
-  'backdrop-filter-saturate': 'backdrop-saturate',
-  'backdrop-filter-sepia': 'backdrop-sepia',
-  'box-shadow': 'element-shadow',
-  'box-shadow-color': 'element-color',
-  fill: 'svg-fill-type',
-  'fill-brand': 'svg-fill-brand',
-  'fill-rule': 'svg-fill-rule',
-  flex: 'flexibility',
-  'font-size-ext': 'font-size',
-  'font-transform': 'text-formatting-text',
-  'gradient-color': 'background-gradient-background',
-  'gradient-stops': 'background-gradient-stops',
-  'gradient-type': 'background-gradient-type',
-  isolate: 'isolation',
-  pattern: 'background-pattern',
-  'scroll-behavior': 'overscroll-behavior-smooth',
-  'scroll-slider-width': 'scroll-backdrop-width',
-  stripe: 'stripes',
-  'stripe-color': 'stripes-color',
-  'stripe-width': 'stripes-size',
-  'stroke-color': 'svg-stroke-color',
-  'stroke-linecap': 'svg-stroke-line-cap',
-  'stroke-linejoin': 'svg-stroke-line-join',
-  'stroke-width': 'svg-stroke-width',
-  'svg-size': 'svg-image-size',
-  table: 'tables-default-parameters',
-  'table-active': 'tables-active-rows-and-cells',
-  'table-stripe': 'tables-alternating-rows-and-columns',
-  'text-decoration-thickness': 'text-formatting-thickness',
-  title: 'headers',
-  'transition-delay': 'animation-transition-delay',
-  'transition-duration': 'animation-transition-duration',
-  'transition-property': 'animation-transition-property',
-  'transition-timing-function': 'animation-transition-timing-function',
-};
+const documentationMap = JSON.parse(fs.readFileSync(
+  path.join(projectRoot, 'scripts', 'utility-documentation-map.json'),
+  'utf8',
+));
+const pageAliases = documentationMap.page_aliases;
 
 const internalFamilies = {
   js: 'runtime bundle, not a CSS utility family',
