@@ -18,7 +18,7 @@ tags: [transform-scale, hover]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `scale-0` | `transform: scale(0)` |
 | `scale-1/4` | `transform: scale(.8)` |
 | `scale-1/3` | `transform: scale(.9)` |

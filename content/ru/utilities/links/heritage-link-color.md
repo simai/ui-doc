@@ -8,17 +8,17 @@ tags: [text-color, hover, focus, active]
 
 :badge[text-color]{type=main scheme=on-surface size=1}
 
-Утилиты наследования делают ссылку цветом текущего текста.
-
 ## Наглядный пример
 
 :::example {id="utilities/links/heritage-link-color" label="Наследование цвета ссылок"}
 :::
 
+Утилиты наследования делают ссылку цветом текущего текста.
+
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `link-inherit` | ссылка и ее состояния наследуют `currentColor` |
 | `link-inherit-link` | ссылка и `:hover` наследуют `currentColor` |
 
@@ -30,3 +30,4 @@ tags: [text-color, hover, focus, active]
 - Модификаторы: `link-inherit`, `link-inherit-link`.
 
 ## Пример
+

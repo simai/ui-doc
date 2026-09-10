@@ -8,17 +8,17 @@ tags: [divider-color, hover]
 
 :badge[divider-color]{type=main scheme=on-surface size=1}
 
-Утилиты цвета задают цвет линии разделителя между соседними элементами.
-
 ## Наглядный пример
 
 :::example {id="utilities/divider/divider-color" label="Цвет разделителя"}
 :::
 
+Утилиты цвета задают цвет линии разделителя между соседними элементами.
+
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `divider-transparent / divide-transparent` | `border-color: var(--sf-transparent)` |
 | `divider-current / divide-current` | `border-color: currentColor` |
 | `divider-outline / divide-outline` | `border-color: var(--sf-outline)` |
@@ -31,3 +31,4 @@ tags: [divider-color, hover]
 | `hover:divider-*` | Цвет разделителя при `:hover` |
 
 ## Пример
+

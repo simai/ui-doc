@@ -66,6 +66,9 @@ transform: translate(var(--sf-translate-x, 0), var(--sf-translate-y, 0));
 Для hover-состояния доступны соответствующие варианты:
 
 - `hover:translate-x-half`, `hover:translate-y-half`
-- `-hover:translate-x-half`, `-hover:translate-y-half`
+- `hover:-translate-x-half`, `hover:-translate-y-half`
 - `hover:translate-x-full`, `hover:translate-y-full`
-- `-hover:translate-x-full`, `-hover:translate-y-full`
+- `hover:-translate-x-full`, `hover:-translate-y-full`
+
+Состояние всегда записывается до знака: `hover:-translate-x-1`. Форма
+`-hover:translate-x-1` синтаксически неверна и не является публичным API.

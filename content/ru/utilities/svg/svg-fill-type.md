@@ -8,15 +8,15 @@ tags: [fill]
 
 :badge[fill]{type=main scheme=on-surface size=1}
 
-Классы задают `fill-rule` у SVG-пути.
-
 ## Наглядный пример
 
 :::example {id="utilities/svg/svg-fill-rule" label="Тип заливки"}
 :::
 
+Классы задают `fill-rule` у SVG-пути.
+
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `fill-nonzero` | `fill-rule: nonzero;` |
 | `fill-evenodd` | `fill-rule: evenodd;` |
 
@@ -25,3 +25,4 @@ tags: [fill]
 `fill-{nonzero|evenodd}`
 
 ## Пример
+

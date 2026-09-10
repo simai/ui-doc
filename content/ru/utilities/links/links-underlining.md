@@ -8,17 +8,17 @@ tags: [text-decoration, hover, focus, active]
 
 :badge[text-decoration]{type=main scheme=on-surface size=1}
 
-Утилита `link-underline-none` отключает подчеркивание у ссылки.
-
 ## Наглядный пример
 
 :::example {id="utilities/links/links-underlining" label="Подчеркивание ссылок"}
 :::
 
+Утилита `link-underline-none` отключает подчеркивание у ссылки.
+
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `link-underline-none` | `text-decoration-line: none` для ссылки и `:hover` |
 
 ## Синтаксис
@@ -29,3 +29,4 @@ tags: [text-decoration, hover, focus, active]
 - Модификатор: `link-underline-none`.
 
 ## Пример
+

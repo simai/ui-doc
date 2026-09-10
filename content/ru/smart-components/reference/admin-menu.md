@@ -18,7 +18,7 @@ Admin Menu объединяет навигацию, поиск, вложенны
 
 ## Пример
 
-:::example {id="components/admin-menu/smart-overview" label="Результат"}
+:::example {id="smart-components/admin-menu/overview" label="Навигация с четырьмя уровнями"}
 :::
 
 ## Теги и подключение

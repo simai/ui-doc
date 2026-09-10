@@ -11,7 +11,7 @@ tags: [stroke-linejoin]
 Классы задают `stroke-linejoin`.
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `linejoin-miter` | `stroke-linejoin: miter;` |
 | `linejoin-arcs` | `stroke-linejoin: arcs;` |
 | `linejoin-bevel` | `stroke-linejoin: bevel;` |

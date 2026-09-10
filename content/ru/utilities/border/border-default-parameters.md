@@ -8,17 +8,17 @@ tags: [border-width, sm, md, lg, xl]
 
 :badge[border-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
-Базовые утилиты для быстрого включения/отключения рамки с дефолтными параметрами.
-
 ## Наглядный пример
 
 :::example {id="utilities/border/border-default-parameters" label="Параметры по умолчанию (для границ)"}
 :::
 
+Базовые утилиты для быстрого включения/отключения рамки с дефолтными параметрами.
+
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `border` | `border: var(--sf-a1) var(--sf-outline-variant) solid` |
 | `border-none` | `border: var(--sf-a1) var(--sf-transparent) solid` |
 
@@ -29,3 +29,4 @@ tags: [border-width, sm, md, lg, xl]
 - `hover:{модификатор}` — применение при наведении.
 
 ## Примеры
+

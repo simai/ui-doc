@@ -1,91 +1,89 @@
 ---
-title: "Table"
-description: "API и runtime-контракт Smart-компонента table в SIMAI Framework 5.4.0."
+title: "Представление данных"
+description: "Комплексный Smart-компонент коллекции с таблицей, фильтрами, настройками и серверными намерениями."
+profile: reference
 ---
 
-# Table
+# Представление данных
 
-Идентификатор: `smart.table`. Smart-компонент готов к использованию; жизненный цикл — стабильный.
+:badge[smart.data-view]{type=main scheme=on-surface size=1} :badge[smart.table compatible]{type=tonal scheme=neutral size=1} :badge[experimental]{type=tonal scheme=warning size=1}
 
-## Теги и подключение
+`<sf-table>` — комплексное представление серверной коллекции. Оно объединяет поиск, фильтры, таблицу, выбор строк, действия, настройки колонок и пагинацию, но не забирает у приложения владение данными и правами доступа.
 
-Custom Elements: `<sf-table>`.
+Каноническое имя контракта — `smart.data-view`. Имя `smart.table` остаётся совместимым идентификатором существующего runtime и Loader.
 
-Loader-статус: `registered`. Loader-правило: `cl-table`.
+## Пример
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/table/css/table.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/table/js/table.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/table/template/default.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/table/template/default.js`
+:::example {id="smart-components/table/overview" label="Коллекция проектов"}
+:::
 
-## Зависимости
+Пример передаёт колонки и строки через публичные методы. Эти данные могли прийти с любого backend, но набор колонок, допустимые фильтры и действия должен быть заранее разрешён приложением.
 
-- `component.buttons`
-- `component.checkbox`
-- `component.icon-buttons`
-- `component.icons`
-- `component.inputs`
-- `component.pagination`
-- `component.tags`
-- `smart.datepicker`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `"default"` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `"Data table"` | `—` |
-| `selectable` | `selectable` | `Boolean` | `true` | `—` |
-| `settings` | `settings` | `Boolean` | `true` | `—` |
-| `pagin` | `pagin` | `Boolean` | `false` | `—` |
-| `actions` | `actions` | `Boolean` | `true` | `—` |
-| `filter-text` | `filterText` | `String` | `"Фильтр"` | `—` |
-| `clear-text` | `clearText` | `String` | `"Очистить"` | `—` |
-| `search-placeholder` | `searchPlaceholder` | `String` | `"Поиск"` | `—` |
-| `create-text` | `createText` | `String` | `"Создать"` | `—` |
-| `pagination-total` | `paginationTotal` | `Number` | `10` | `—` |
-| `pagination-page-size` | `paginationPageSize` | `Number` | `10` | `—` |
-| `page-sizes` | `pageSizes` | `String` | `"10` | `—` |
-| `context-menu-columns` | `contextMenuColumns` | `Number` | `2` | `—` |
-| `table-settings-key` | `tableSettingsKey` | `String` | `"users"` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`addColumns()`, `addRows()`, `animateColumnReorder()`, `applyColumnOrder()`, `applyColumnResizeWidths()`, `beforeRender()`, `bindColumnDragEvent()`, `bindColumnResizeEvent()`, `bindContextEvent()`, `bindFilterTemplateDrag()`, `bindHoverEvent()`, `changeTempFilterTemplateSettings()`, `clearColumnAnimationStyles()`, `clearColumnDragDom()`, `clearColumnDragState()`, `clearColumnResizeClasses()`, `clearSearchDebounce()`, `closeContextMenu()`, `closeContextSubmenu()`, `contextEvent()`, `createColumnDragGhost()`, `createFilterTemplatePatchState()`, `createRowComponentCell()`, `disconnectedCallback()`, `dispatchFilterTemplateSave()`, `dispatchFilterTemplatesSave()`, `emitColumnSettingsChange()`, `escapeColumnKey()`, `filterUpdate()`, `freezeColumnsWidthForResize()`, `get templateName()`, `getActionItems()`, `getActionRowItems()`, `getActions()`, `getChangedFilterTemplates()`, `getColumnAnimationCells()`, `getColumnCheckboxItems()`, `getColumnDragDropIndex()`, `getColumnDragHeader()`, `getColumnDragLayout()`, `getColumnItems()`, `getColumnResizeHandle()`, `getColumnResizeLimits()`, `getColumnSetting()`, `getColumnSettings()`, `getColumns()`, `getCurrentFilterTags()`, `getCurrentFilterValues()`, `getDefaultRowCell()`, `getFilterControlValue()`, `getFilterField()`, `getFilterFields()`, `getFilterOperatorLabel()`, `getFilterOptionSearch()`, `getFilterOptionSearchKeys()`, `getFilterOptions()`, `getFilterPayload()`, `getFilterTagColsData()`, `getFilterTemplateByKey()`, `getFilterTemplateDragAfterElement()`, `getFilterTemplateSortableItems()`, `getFilterTemplates()`, `getItemRef()`, `getMergedFilterDraftData()`, `getObjectPathValue()`, `getPendingFilterState()`, `getPortalContainer()`, `getSelectColumn()`, `getSelectedFilterTemplate()`, `getSortedFilterTemplates()`, `getSystemColumns()`, `getTableColsData()`, `getTableData()`, `getTableSettingsKey()`, `getVisibleFilterOptions()`, `getVisibleUserColumnKeysFromDom()`, `handleContextLayerClick()`, `handleSearchKeyDown()`, `handleSearchKeyUp()`, `hasColumnSize()`, `hasPendingFilterDataChanges()`, `hasUnsavedFilterDataChanges()`, `hoverEvents()`, `insertFilterTemplatePlaceholder()`, `isContextMenuEvent()`, `isEmptyFilterEntry()`, `isEmptyFilterValue()`, `isSameFilterData()`, `isSearchHoldKey()`, `mergeColumnSettings()`, `mergeFilterState()`, `mergeObjectDeep()`, `normalizeColumnSetting()`, `normalizeFilterDataForCompare()`, `normalizeFilterSearchValue()`, `normalizeFilterTemplate()`, `normalizeRow()`, `normalizeRows()`, `normalizeTableSettings()`, `onColumnDragPointerCancel()`, `onColumnDragPointerDown()`, `onColumnDragPointerMove()`, `onColumnDragPointerUp()`, `onColumnResizePointerDown()`, `onColumnResizePointerMove()`, `onColumnResizePointerUp()`, `openContextMenu()`, `openContextSubmenu()`, `optionMatchesSearch()`, `outEvent()`, `parseColumnSize()`, `patchColumnSettings()`, `patchColumnSettingsBatch()`, `patchFilterTemplateByKey()`, `patchFilterTemplateData()`, `patchTempColumnSettings()`, `patchTempFilterOptionSearch()`, `patchTempFilterTagSettings()`, `patchTempFilterTemplateSettings()`, `patchTempFilterValue()`, `removeFilterTag()`, `renderContextMenu()`, `renderContextSubmenu()`, `renderDateFilterControl()`, `renderEntityMultiSelectFilterControl()`, `renderFilterControl()`, `renderFilterFavoritesContextMenu()`, `renderFilterOption()`, `renderFilterOptionVisual()`, `renderFilterSettingsContextMenu()`, `renderMainContextMenu()`, `renderMultiSelectFilterControl()`, `renderNumberFilterControl()`, `renderRangeFilterControl()`, `renderRowSettingsContextMenu()`, `renderTableSettingsContextMenu()`, `renderTagsSettingsContextMenu()`, `renderTemplateActionsContextSubmenu()`, `renderTextFilterControl()`, `reorderColumnDomByKeys()`, `saveCurrentFilterTemplateData()`, `saveFilterTemplate()`, `saveFilterTemplatePatch()`, `scheduleSearchChange()`, `selectFilterTemplate()`, `selectTempFilterTemplate()`, `setCheckboxHeight()`, `setColumnDragPlaceholderClass()`, `setColumnResizeClasses()`, `setColumnSettings()`, `setColumns()`, `setDefaultFilterTemplate()`, `setFilterFields()`, `setIndeterminate()`, `setRows()`, `setTableData()`, `setTableSettings()`, `setTemplates()`, `snapshotColumnCellRects()`, `splitItemsByColumns()`, `syncFilterTemplateOrderFromContainer()`, `unBindHoverEvent()`, `unbindColumnDragEvent()`, `unbindColumnResizeEvent()`, `unbindContextEvent()`, `updateColumn()`, `updateColumnDragPreview()`, `updateRowByKey()`, `updateRowCell()`, `updateRowCellProps()`, `updateRows()`, `updateRowsByKey()`, `updateSearchState()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
+## Минимальное подключение
 
 ```html
-<sf-table></sf-table>
+<sf-table
+  aria-label="Проекты"
+  table-settings-key="projects">
+</sf-table>
 ```
+
+Оба атрибута обязательны: `aria-label` даёт области понятное имя, а `table-settings-key` изолирует пользовательские настройки конкретного представления.
+
+## Публичные методы данных
+
+| Метод | Назначение |
+|:---|:---|
+| `setTableData(patch)` | Атомарно обновить связанные части состояния |
+| `setColumns(columns)` | Заменить разрешённые backend-колонки |
+| `setRows(rows)` | Заменить текущий набор строк |
+| `addRows(rows)` | Добавить следующую страницу в режиме «Показать ещё» |
+| `setFilterFields(fields)` | Передать разрешённые поля и операторы фильтра |
+| `setTemplates(templates)` | Передать сохранённые представления пользователя |
+| `setTableSettings(settings)` | Применить подтверждённые настройки колонок |
+| `getFilterPayload()` | Получить нормализованный запрос фильтра |
+| `getColumnSettings()` | Получить пользовательскую дельту настроек колонок |
+
+Колонке нужен стабильный `key`, строке — стабильный `id`. Ширина, порядок и видимость колонок относятся к настройкам представления; сервер всё равно проверяет разрешённые поля и действия.
+
+## Параметры оболочки
+
+| Атрибут | По умолчанию | Назначение |
+|:---|:---|:---|
+| `selectable` | `true` | Выбор строк и массовые действия |
+| `settings` | `true` | Настройки колонок |
+| `actions` | `true` | Действия строки |
+| `pagin` | `false` | Встроенная пагинация |
+| `pagination-total` | `0` | Общее число страниц или записей по контракту приложения |
+| `pagination-page-size` | `10` | Размер страницы |
+| `page-sizes` | `10,20,30,40` | Разрешённые размеры страницы |
+| `context-menu-columns` | `2` | Число колонок в меню настроек, от 1 до 4 |
+
+## Серверные намерения
+
+Компонент сообщает о намерениях, но не выполняет сетевые запросы сам.
+
+| Событие | Что должно сделать приложение |
+|:---|:---|
+| `sf-data-view-query-change` | Проверить запрос и вернуть новый набор данных |
+| `sf-data-view-page-change` | Загрузить указанную страницу |
+| `sf-data-view-page-size-change` | Применить допустимый размер и вернуться на первую страницу |
+| `sf-data-view-show-more` | Добавить следующую страницу через `addRows()` |
+| `sf-data-view-row-action` | Проверить и выполнить действие над одной записью |
+| `sf-data-view-bulk-action` | Проверить и выполнить действие над выбранными записями |
+| `sf-data-view-column-settings-save` | Сохранить разрешённую дельту настроек |
+| `sf-data-view-template-save` | Сохранить разрешённое пользовательское представление |
+
+Идентификатор записи, действие, сортировку, фильтр и лимиты нельзя считать доверенными только потому, что их отправил компонент: приложение повторно проверяет их на backend.
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Компонент создаёт именованную область, сохраняет клавиатурную навигацию и возвращает фокус после закрытия меню и фильтров. Для узких экранов используйте собственные адаптивные настройки представления, а не уменьшайте текст или интерактивные цели произвольными размерами.
 
-## Источник
+## Контракт
 
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/table`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-table`
+- Канонический Smart-компонент: `smart.data-view`, версия `1.0.0`.
+- Совместимое runtime-имя: `smart.table`.
+- Custom Element: `<sf-table>`.
+- Loader-правило: `cl-table`.
+- Жизненный цикл: экспериментальный.

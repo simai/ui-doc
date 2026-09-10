@@ -8,12 +8,12 @@ tags: [border-style]
 
 :badge[border-style]{type=main scheme=on-surface size=1}
 
-С помощью модификаторов стиля границы в SIMAI Framework вы можете задавать стиль для всех сторон, по осям или для отдельных сторон.
-
 ## Наглядный пример
 
 :::example {id="utilities/border/border-style" label="Стиль границы"}
 :::
+
+С помощью модификаторов стиля границы в SIMAI Framework вы можете задавать стиль для всех сторон, по осям или для отдельных сторон.
 
 ## Поддерживаемые стили
 
@@ -28,7 +28,7 @@ tags: [border-style]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `border-{style}` | `border-style: {style}` |
 | `border-x-{style}` | `border-inline-start-style` + `border-inline-end-style` |
 | `border-y-{style}` | `border-top-style` + `border-bottom-style` |
@@ -45,3 +45,4 @@ tags: [border-style]
 > В текущей версии используются логические стороны (`inline-start` / `inline-end`) вместо `left` / `right`.
 
 ## Примеры
+

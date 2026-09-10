@@ -18,7 +18,7 @@ tags: [box-shadow-color, hover, active]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `shadow-{color}` | цвет тени в базовом состоянии |
 | `hover:shadow-{color}` | цвет тени в `:hover` |
 | `active:shadow-{color}` | цвет тени в `:active` |
@@ -32,3 +32,4 @@ tags: [box-shadow-color, hover, active]
 - `active:shadow-{color}`
 
 ## Пример
+

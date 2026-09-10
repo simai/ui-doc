@@ -8,12 +8,12 @@ tags: [divider-width]
 
 :badge[divider-width]{type=main scheme=on-surface size=1}
 
-Базовые классы включают или выключают разделители между соседними элементами контейнера.
-
 ## Наглядный пример
 
 :::example {id="utilities/divider/divider-default-parameters" label="Параметры по умолчанию"}
 :::
+
+Базовые классы включают или выключают разделители между соседними элементами контейнера.
 
 `divider` задает общий `border` для всех соседних элементов (`> * + *`).
 Если нужен классический "разделитель-линией" только по одной оси, используйте `divider-y-*` или `divider-x-*`.
@@ -21,7 +21,7 @@ tags: [divider-width]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `divider` | `> :not([hidden]) ~ :not([hidden]) { border: var(--sf-px) var(--sf-outline-variant) solid; }` |
 | `divider-none` | `> :not([hidden]) ~ :not([hidden]) { border-width: var(--sf-0); }` |
 
@@ -33,3 +33,4 @@ tags: [divider-width]
 - Модификаторы: `divider`, `divider-none`.
 
 ## Пример
+

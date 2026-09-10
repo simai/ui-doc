@@ -14,7 +14,7 @@ tags: [outline-color, hover, focus, active]
 :::
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `outline-transparent` | `outline-color: var(--sf-transparent);` |
 | `outline-current` | `outline-color: currentColor;` |
 | `outline-outline` | `outline-color: var(--sf-outline);` |
@@ -39,3 +39,4 @@ tags: [outline-color, hover, focus, active]
 - Модификатор: `outline-{transparent|current|outline|outline-variant|primary|secondary|tertiary|error|warning|success}`.
 
 ## Пример
+

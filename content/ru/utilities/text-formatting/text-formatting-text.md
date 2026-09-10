@@ -16,7 +16,7 @@ tags: [text-align, sm, md, lg, xl]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `text-start` | `text-align: start;` |
 | `text-center` | `text-align: center;` |
 | `text-end` | `text-align: end;` |
@@ -27,3 +27,4 @@ tags: [text-align, sm, md, lg, xl]
 | `line-clamp-2` | Ограничение текста до 2 строк |
 
 ## Пример
+

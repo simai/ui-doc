@@ -8,15 +8,15 @@ tags: [outline-width, focus]
 
 :badge[outline-width]{type=main scheme=on-surface size=1}
 
-Классы по умолчанию для внешней границы:
-
 ## Наглядный пример
 
 :::example {id="utilities/outline/outline-default-parameters" label="Параметры по умолчанию"}
 :::
 
+Классы по умолчанию для внешней границы:
+
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `outline` | `outline: var(--sf-px) var(--sf-outline-variant) solid;` |
 | `outline-none` | `outline-width: var(--sf-0);` |
 
@@ -33,3 +33,4 @@ tags: [outline-width, focus]
 - Модификаторы: `outline`, `outline-none`.
 
 ## Пример
+

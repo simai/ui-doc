@@ -22,8 +22,8 @@ material can be normalized through the same documented path.
 
 - One physical Markdown file owns each public page.
 - UI strings belong to `content/<locale>/lang.json`.
-- Stable `simai/docara:^2.0` is pinned in `composer.lock`; do not copy its
-  runtime here.
+- Stable Docara `2.9.0` is pinned to its exact published source revision in
+  `composer.lock`; do not copy or substitute its runtime here.
 - GitHub Actions validates builds only. Publication and deployment are separate
   explicitly authorized operations.
 - Generated `build_*`, `vendor/`, `.docara/`, `.env`, and working `source/`

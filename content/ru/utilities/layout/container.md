@@ -24,7 +24,6 @@ tags: [container, sm, md, lg, xl]
 Контейнер всегда остаётся не шире доступной области. На контрольных точках меняются только максимальная ширина и
 горизонтальные отступы.
 
-::::table {columns="regular compact wide fill"}
 | Класс | От ширины | Максимальная ширина | Горизонтальный отступ |
 | --- | --- | --- | --- |
 | `container` | всегда | `100%` | `--sf-space-1` |
@@ -33,7 +32,6 @@ tags: [container, sm, md, lg, xl]
 | `container` | `lg` | `--sf-breakpoint-lg` | `--sf-space-4` |
 | `container` | `xl` | `--sf-breakpoint-xl` | `--sf-space-5` |
 | `container` | `xxl` | `--sf-breakpoint-xxl` | `--sf-space-6` |
-::::
 
 Контрольные точки (`--sf-breakpoint-sm`, `--sf-breakpoint-md`, `--sf-breakpoint-lg`, `--sf-breakpoint-xl`,
 `--sf-breakpoint-xxl`) определены в ядре фреймворка, а размеры отступов (`--sf-space-*`) соответствуют новой системе

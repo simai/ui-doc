@@ -14,7 +14,7 @@ tags: [outline-style]
 :::
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `outline-solid` | `outline-style: solid;` |
 | `outline-dashed` | `outline-style: dashed;` |
 | `outline-dotted` | `outline-style: dotted;` |
@@ -34,3 +34,4 @@ tags: [outline-style]
 - Модификатор: `outline-{solid|dashed|dotted|double|hidden|none}`.
 
 ## Пример
+

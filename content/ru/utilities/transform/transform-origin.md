@@ -18,7 +18,7 @@ tags: [transform-origin]
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `origin-center` | `transform-origin: center` |
 | `origin-top` | `transform-origin: top` |
 | `origin-top-inline-end` | `transform-origin: top right` |

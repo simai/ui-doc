@@ -8,10 +8,11 @@ tags: [stroke-color, hover]
 
 :badge[stroke-color]{type=main scheme=on-surface size=1}
 
+
 Классы `stroke*` задают `stroke` у SVG.
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `stroke` | `stroke: var(--sf-outline-variant);` |
 | `stroke-outline` | `stroke: var(--sf-outline);` |
 | `stroke-primary` | `stroke: var(--sf-outline-primary);` |

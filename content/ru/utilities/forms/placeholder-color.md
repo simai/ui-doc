@@ -8,12 +8,13 @@ tags: [placeholder-color, hover, focus]
 
 :badge[placeholder-color]{type=main scheme=on-surface size=1}
 
+
 Утилиты `placeholder-*` задают цвет текста placeholder у полей ввода.
 
 ## Классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `placeholder-transparent` | `color: var(--sf-transparent)` |
 | `placeholder-current` | `color: currentColor` |
 | `placeholder-primary` | `color: var(--sf-primary)` |

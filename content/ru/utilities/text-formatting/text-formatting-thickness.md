@@ -16,9 +16,10 @@ tags: [text-decoration-thickness]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `decoration-auto` | Автоматическая толщина |
 | `decoration-font` | Толщина из шрифта |
 | `decoration-0 ... decoration-4` | Толщина по токенам `--sf-a0..--sf-a4` |
 
 ## Пример
+

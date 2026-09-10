@@ -8,13 +8,13 @@ tags: [text-color, hover, focus, active]
 
 :badge[text-color]{type=main scheme=on-surface size=1}
 
-Цвет текста задаётся классами `color-*`, связанными с семантическими токенами
-темы. Для обычного текста на поверхности используйте следующую иерархию:
-
 ## Наглядный пример
 
 :::example {id="utilities/text-formatting/text-color" label="Цвет текста"}
 :::
+
+Цвет текста задаётся классами `color-*`, связанными с семантическими токенами
+темы. Для обычного текста на поверхности используйте следующую иерархию:
 
 - `.color-on-surface` — основной текст;
 - `.color-on-surface-variant` — вспомогательный текст: пояснения, подписи,
@@ -27,7 +27,7 @@ tags: [text-color, hover, focus, active]
 ## Таблица классов
 
 | Класс | Токен | Назначение |
-|:--|:--|:--|
+|:---|:---|:---|
 | `color-on-surface` | `--sf-on-surface` | Основной текст на поверхности |
 | `color-on-surface-variant` | `--sf-on-surface-variant` | Вспомогательный текст и метаданные |
 | `color-on-surface-fixed` | `--sf-on-surface-fixed` | Фиксированный цвет, не переключаемый вместе с темой |
@@ -66,3 +66,4 @@ tags: [text-color, hover, focus, active]
 
 Для обычного вспомогательного текста предпочтителен штатный класс
 `.color-on-surface-variant`.
+

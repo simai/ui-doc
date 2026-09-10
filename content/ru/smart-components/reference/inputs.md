@@ -1,90 +1,69 @@
 ---
-title: "Inputs"
-description: "API и runtime-контракт Smart-компонента inputs в SIMAI Framework 5.4.0."
+title: "Поле ввода"
+description: "Smart-поле с единым контрактом состояний, подсказок, маски и логических start/end-элементов."
+profile: reference
 ---
 
-# Inputs
+# Поле ввода
 
-Идентификатор: `smart.inputs`. Smart-компонент готов к использованию; жизненный цикл — стабильный.
+:badge[smart.inputs]{type=main scheme=on-surface size=1} :badge[experimental]{type=tonal scheme=warning size=1}
 
-## Теги и подключение
+`<sf-input>` собирает подпись, нативное поле, подсказку, ошибку и дополнительные элементы в один управляемый компонент. В прикладном коде задавайте данные через атрибуты и работайте с нативным элементом через `getInputElement()`.
 
-Custom Elements: `<sf-input>`.
+## Пример
 
-Loader-статус: `registered`. Loader-правило: `cl-inputs`.
+:::example {id="smart-components/inputs/overview" label="Поле ввода"}
+:::
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/inputs/css/inputs.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/inputs/js/inputs.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/inputs/template/default.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/inputs/template/default.js`
+В примере иконка размещена у логического начала строки, а пояснение — у логического конца. Поэтому та же разметка корректно работает в LTR и RTL.
 
-## Зависимости
+## Основные параметры
 
-- `component.inputs`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
-| `type` | `type` | `String` | `'bordered'` | `—` |
-| `label` | `label` | `String` | `''` | `—` |
-| `required` | `required` | `Boolean` | `false` | `—` |
-| `placeholder` | `placeholder` | `String` | `''` | `—` |
-| `hint` | `hint` | `String` | `''` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-| `default-value` | `defaultValue` | `String` | `''` | `—` |
-| `name` | `name` | `String` | `''` | `—` |
-| `left-icon` | `leftIcon` | `String` | `''` | `—` |
-| `right-text` | `rightText` | `String` | `''` | `—` |
-| `hint-icon` | `hintIcon` | `String` | `''` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `readonly` | `readonly` | `Boolean` | `false` | `—` |
-| `error` | `error` | `Boolean` | `false` | `—` |
-| `mask` | `mask` | `Boolean` | `false` | `—` |
-| `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
-| `mask-lazy` | `maskLazy` | `String` | `''` | `—` |
-| `mask-placeholder-char` | `maskPlaceholderChar` | `String` | `''` | `—` |
-| `mask-options` | `maskOptions` | `String` | `''` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
+| Атрибут | По умолчанию | Назначение |
 |:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+| `label` | пусто | Видимая подпись поля |
+| `name` | пусто | Имя для формы и прикладной логики |
+| `value` | пусто | Текущее значение |
+| `default-value` | пусто | Начальное значение |
+| `placeholder` | пусто | Краткий пример ожидаемого ввода |
+| `hint` | пусто | Постоянная поясняющая подсказка |
+| `icon-start` | пусто | Иконка у логического начала строки |
+| `text-end` | пусто | Дополнительный текст у логического конца |
+| `size` | `1` | Ступень системной размерной шкалы |
+| `type` | `bordered` | Вариант представления поля |
+| `required` | `false` | Обязательное поле |
+| `disabled` | `false` | Недоступно для взаимодействия |
+| `readonly` | `false` | Доступно для чтения без редактирования |
+| `invalid` | `false` | Семантически невалидное значение |
+| `error-message` | пусто | Сообщение, связанное с ошибкой |
 
-## Методы
+`left-icon` и `right-text` сохранены только как совместимые псевдонимы. В новом коде используйте `icon-start` и `text-end`.
 
-`get defaultValue()`, `get disabled()`, `get error()`, `get hint()`, `get hintIcon()`, `get label()`, `get leftIcon()`, `get mask()`, `get maskLazy()`, `get maskOptions()`, `get maskPattern()`, `get maskPlaceholderChar()`, `get name()`, `get placeholder()`, `get readonly()`, `get required()`, `get rightText()`, `get size()`, `get state()`, `get type()`, `get value()`, `getInputElement()`, `onBlur()`, `onChange()`, `onFocus()`, `onInput()`, `onKeyDown()`, `onKeyUp()`, `set defaultValue()`, `set value()`.
+## Маска
 
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
+Маска включается атрибутом `mask`. Её параметры задаются через `mask-pattern`, `mask-lazy`, `mask-placeholder-char` и `mask-options`. Маска помогает вводить значение, но не заменяет серверную проверку.
 
 ```html
-<sf-input></sf-input>
+<sf-input
+  name="phone"
+  label="Телефон"
+  inputmode="tel"
+  mask
+  mask-pattern="+{7} (000) 000-00-00">
+</sf-input>
 ```
+
+## Публичный метод
+
+`getInputElement()` возвращает внутренний нативный `<input>`. Используйте его, когда форме нужен стандартный DOM API — например, `focus()`, `checkValidity()` или `setCustomValidity()`.
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Передавайте понятную подпись через `label`. Не заменяйте её одним `placeholder`: он исчезает после ввода. Состояния ошибки должны быть отражены через `invalid` и `error-message`, а видимый фокус сохраняется при клавиатурной навигации.
 
-## Источник
+## Контракт
 
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/inputs`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-inputs`
+- Smart-компонент: `smart.inputs`, версия `1.1.0`.
+- Custom Element: `<sf-input>`.
+- Loader-правило: `cl-inputs`.
+- Жизненный цикл: экспериментальный; совместимость публичного контракта ещё может уточняться до стабилизации.

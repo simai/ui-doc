@@ -18,7 +18,7 @@ tags: [text-color, hover, focus, active]
 ## Базовое поведение
 
 | Селектор | Значение |
-|:--|:--|
+|:---|:---|
 | `a` | `color: var(--sf-link)` |
 | `a:hover` | `color: var(--sf-link-hover)` |
 | `a:active` | `color: var(--sf-link-active)` |

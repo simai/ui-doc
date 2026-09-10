@@ -16,8 +16,9 @@ tags: [table-layout]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `table-auto` | `table-layout: auto;` |
 | `table-fixed` | `table-layout: fixed;` |
 
 ## Пример
+

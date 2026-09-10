@@ -14,7 +14,7 @@ tags: [outline-width, focus]
 :::
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `outline-0` | `outline-width: var(--sf-0);` |
 | `outline-1` | `outline-width: var(--sf-a1);` |
 | `outline-2` | `outline-width: var(--sf-a2);` |
@@ -34,3 +34,4 @@ tags: [outline-width, focus]
 - Модификатор: `outline-{0...4}`.
 
 ## Пример
+

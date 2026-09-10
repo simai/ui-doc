@@ -16,7 +16,7 @@ tags: [scroll-slider-width]
 ## Классы и значения
 
 | Класс | Значение переменной |
-|:--|:--|
+|:---|:---|
 | `scroll-1 / scroll-thumb-1` | `--sf-scroll-thumb-size: var(--sf-a4);` |
 | `scroll-2 / scroll-thumb-2` | `--sf-scroll-thumb-size: var(--sf-a3);` |
 | `scroll-3 / scroll-thumb-3` | `--sf-scroll-thumb-size: var(--sf-a2);` |
@@ -35,3 +35,4 @@ tags: [scroll-slider-width]
 - `scroll-thumb-{1...4}`
 
 ## Пример
+

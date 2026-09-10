@@ -8,17 +8,17 @@ tags: [divider-style]
 
 :badge[divider-style]{type=main scheme=on-surface size=1}
 
-Утилиты стиля определяют тип линии разделителя.
-
 ## Наглядный пример
 
 :::example {id="utilities/divider/divider-style" label="Стиль разделителя"}
 :::
 
+Утилиты стиля определяют тип линии разделителя.
+
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `divider-solid / divide-solid` | `border-style: solid` |
 | `divider-dashed / divide-dashed` | `border-style: dashed` |
 | `divider-dotted / divide-dotted` | `border-style: dotted` |
@@ -27,3 +27,4 @@ tags: [divider-style]
 | `divider-none / divide-none` | `border-style: none` |
 
 ## Пример
+

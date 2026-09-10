@@ -8,17 +8,17 @@ tags: [border-color, hover, focus, active]
 
 :badge[border-color]{type=main scheme=on-surface size=1}
 
-Утилиты цвета границы позволяют быстро назначать цвет рамки через токены SIMAI.
-
 ## Наглядный пример
 
 :::example {id="utilities/border/border-color" label="Цвет границы"}
 :::
 
+Утилиты цвета границы позволяют быстро назначать цвет рамки через токены SIMAI.
+
 ## Ролевые классы
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `border-transparent` | `border-color: var(--sf-transparent)` |
 | `border-current` | `border-color: currentColor` |
 | `border-outline` | `border-color: var(--sf-outline)` |
@@ -40,3 +40,4 @@ tags: [border-color, hover, focus, active]
 - `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`).
 
 ## Примеры
+

@@ -16,7 +16,7 @@ tags: [text-decoration-style]
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `underline` | Подчеркивание |
 | `overline` | Надчеркивание |
 | `line-through` | Зачеркивание |
@@ -28,3 +28,4 @@ tags: [text-decoration-style]
 | `decoration-wavy` | Волнистая линия |
 
 ## Пример
+

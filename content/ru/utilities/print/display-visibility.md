@@ -18,7 +18,7 @@ tags: [visibility, sm, md, lg, xl]
 ## Классы и значения
 
 | Класс | Значение в режиме печати |
-|:--|:--|
+|:---|:---|
 | `print-visible` | `visibility: visible;` |
 | `print-hidden` | `visibility: hidden;` |
 | `print-visible-none` | alias для `print-hidden` |
@@ -33,3 +33,4 @@ tags: [visibility, sm, md, lg, xl]
 `print-visible` | `print-hidden` | `print-visible-none`
 
 ## Пример
+

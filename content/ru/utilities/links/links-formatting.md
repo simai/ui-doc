@@ -8,17 +8,17 @@ tags: [text-decoration-style]
 
 :badge[text-decoration-style]{type=main scheme=on-surface size=1}
 
-Утилиты задают стиль подчеркивания ссылки.
-
 ## Наглядный пример
 
 :::example {id="utilities/links/links-formatting" label="Оформление ссылок"}
 :::
 
+Утилиты задают стиль подчеркивания ссылки.
+
 ## Таблица классов
 
 | Класс | Значение |
-|:--|:--|
+|:---|:---|
 | `link-dotted` | `text-decoration-style: dotted` |
 | `link-dashed` | `text-decoration-style: dashed` |
 
@@ -30,3 +30,4 @@ tags: [text-decoration-style]
 - Модификаторы: `link-dotted`, `link-dashed`.
 
 ## Пример
+
