@@ -1,24 +1,31 @@
 ---
-title: "Выравнивание содержимого по поперечной оси (align-content)"
+title: "Выравнивание содержимого по поперечной оси"
 description: "Выравнивание содержимого по поперечной оси (align-content)"
 tags: [align-content, sm, md, lg, xl]
 ---
 
-# Выравнивание содержимого по поперечной оси (align-content)
+# Выравнивание содержимого по поперечной оси
+
+:badge[align-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы определяют, как содержимое сетки или флексбокса будет выравниваться относительно поперечной оси.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/align-content" label="Выравнивание содержимого по поперечной оси"}
+:::
 
 ## Таблица классов
 
 | Класс                  | Значение                      |
 |:-----------------------|:------------------------------|
-| .content-cross-start   | align-content: flex-start;    |
-| .content-cross-end     | align-content: flex-end;      |
-| .content-cross-center  | align-content: center;        |
-| .content-cross-between | align-content: space-between; |
-| .content-cross-around  | align-content: space-around;  |
-| .content-cross-evenly  | align-content: space-evenly;  |
-| .content-cross-stretch | align-content: stretch;       |
+| `content-cross-start` | `align-content: flex-start;` |
+| `content-cross-end` | `align-content: flex-end;` |
+| `content-cross-center` | `align-content: center;` |
+| `content-cross-between` | `align-content: space-between;` |
+| `content-cross-around` | `align-content: space-around;` |
+| `content-cross-evenly` | `align-content: space-evenly;` |
+| `content-cross-stretch` | `align-content: stretch;` |
 
 ## Синтаксис
 
@@ -62,7 +69,3 @@ tags: [align-content, sm, md, lg, xl]
   <!-- Начиная с md элементы будут прижаты к началу по поперечной оси -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/align-content" label="Результат"}
-:::
-

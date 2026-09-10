@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $php = PHP_BINARY;
-$docara = dirname($root) . '/docara/docara';
+$docara = $root . '/vendor/bin/docara';
 if (! is_file($docara)) {
-    $docara = $root . '/vendor/bin/docara';
+    $docara = dirname($root) . '/docara/docara';
 }
 if (! is_file($docara)) {
     fwrite(STDERR, "Docara CLI is unavailable. Install project dependencies or use the adjacent Docara checkout.\n");

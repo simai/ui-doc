@@ -1,19 +1,26 @@
 ---
-title: "Шаблон колонок сетки (grid-template-columns)"
+title: "Шаблон колонок сетки"
 description: "Шаблон колонок сетки (grid-template-columns)"
 tags: [grid-template-columns, sm, md, lg, xl]
 ---
 
-# Шаблон колонок сетки (grid-template-columns)
+# Шаблон колонок сетки
+
+:badge[grid-template-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-col-*` задают количество колонок и их размер, формируя базовый шаблон сетки.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-template-columns" label="Шаблон колонок сетки"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                                |
 |:-----------------|:----------------------------------------|
-| .grid-col-1 … 12 | grid-template-columns: repeat(n, minmax(0, 1fr)); |
-| .grid-col-none   | grid-template-columns: none;            |
+| `grid-col-1 … 12` | `grid-template-columns: repeat(n, minmax(0, 1fr));` |
+| `grid-col-none` | `grid-template-columns: none;` |
 
 ## Синтаксис
 
@@ -39,7 +46,3 @@ tags: [grid-template-columns, sm, md, lg, xl]
   <!-- 2 колонки на мобильных, 4 на md и выше -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-template-columns" label="Результат"}
-:::
-

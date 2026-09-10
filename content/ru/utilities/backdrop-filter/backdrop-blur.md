@@ -1,22 +1,29 @@
 ---
-title: "Размытие фона элемента (backdrop-blur)"
+title: "Размытие фона элемента"
 description: "Размытие фона элемента (backdrop-blur)"
 tags: [backdrop-filter-blur, hover]
 ---
 
-# Размытие фона элемента (backdrop-blur)
+# Размытие фона элемента
+
+:badge[backdrop-filter-blur]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет размывать задний фон элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/backdrop-filter/backdrop-blur" label="Размытие фона элемента"}
+:::
 
 ## Классы
 
 | Класс                 | Значение                    |
 |:----------------------|:------------------------------------------------|
-| .backdrop-blur-none   | backdrop-filter: blur(0)                        |
-| .backdrop-blur-small  | backdrop-filter: blur(var(`--sf-blur-small`));  |
-| .backdrop-blur        | backdrop-filter: blur(var(`--sf-blur-medium`)); |
-| .backdrop-blur-medium | backdrop-filter: blur(var(`--sf-blur-medium`)); |
-| .backdrop-blur-large  | backdrop-filter: blur(var(`--sf-blur-large`));  |
+| `backdrop-blur-none` | backdrop-filter: blur(0)                        |
+| `backdrop-blur-small` | `backdrop-filter: blur(var(--sf-blur-small));` |
+| `backdrop-blur` | `backdrop-filter: blur(var(--sf-blur-medium));` |
+| `backdrop-blur-medium` | `backdrop-filter: blur(var(--sf-blur-medium));` |
+| `backdrop-blur-large` | `backdrop-filter: blur(var(--sf-blur-large));` |
 
 ## Переменные для размытия
 
@@ -44,7 +51,3 @@ tags: [backdrop-filter-blur, hover]
 - Можно использовать `hover:` префикс для применения эффекта при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/backdrop-filter/backdrop-blur" label="Результат"}
-:::
-

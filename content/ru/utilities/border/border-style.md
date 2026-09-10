@@ -6,7 +6,14 @@ tags: [border-style]
 
 # Стиль границы
 
+:badge[border-style]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов стиля границы в SIMAI Framework вы можете задавать стиль для всех сторон, по осям или для отдельных сторон.
+
+## Наглядный пример
+
+:::example {id="utilities/border/border-style" label="Стиль границы"}
+:::
 
 ## Поддерживаемые стили
 
@@ -22,14 +29,13 @@ tags: [border-style]
 
 | Класс | Значение |
 |:--|:--|
-| `.border-{style}` | `border-style: {style}` |
-| `.border-x-{style}` | `border-inline-start-style` + `border-inline-end-style` |
-| `.border-y-{style}` | `border-top-style` + `border-bottom-style` |
-| `.border-inline-start-{style}` | `border-inline-start-style` |
-| `.border-inline-end-{style}` | `border-inline-end-style` |
-| `.border-top-{style}` | `border-top-style` |
-| `.border-bottom-{style}` | `border-bottom-style` |
-
+| `border-{style}` | `border-style: {style}` |
+| `border-x-{style}` | `border-inline-start-style` + `border-inline-end-style` |
+| `border-y-{style}` | `border-top-style` + `border-bottom-style` |
+| `border-inline-start-{style}` | `border-inline-start-style` |
+| `border-inline-end-{style}` | `border-inline-end-style` |
+| `border-top-{style}` | `border-top-style` |
+| `border-bottom-{style}` | `border-bottom-style` |
 
 ## Синтаксис
 
@@ -39,7 +45,3 @@ tags: [border-style]
 > В текущей версии используются логические стороны (`inline-start` / `inline-end`) вместо `left` / `right`.
 
 ## Примеры
-
-:::example {id="utilities/border/border-style" label="Результат"}
-:::
-

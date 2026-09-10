@@ -1,25 +1,32 @@
 ---
-title: "Минимальная высота (min-height)"
+title: "Минимальная высота"
 description: "Минимальная высота (min-height)"
 tags: [min-height, sm, md, lg, xl]
 ---
 
-# Минимальная высота (min-height)
+# Минимальная высота
+
+:badge[min-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать минимальную высоту элемента, что позволяет контролировать
 начальную высоту блока и предотвратить его сжатие ниже определенного значения. Это удобно, когда необходимо, чтобы
 элемент имел хотя бы заданную высоту при любом объёме контента.
 
+## Наглядный пример
+
+:::example {id="utilities/sizes/min-height" label="Минимальная высота"}
+:::
+
 ## Таблица классов
 
 | Класс         | Значение                 |
 |:--------------|:-------------------------|
-| .min-h-0      | min-height: 0;           |
-| .min-h-full   | min-height: 100%;        |
-| .min-h-screen | min-height: 100vh;       |
-| .min-h-min    | min-height: min-content; |
-| .min-h-max    | min-height: max-content; |
-| .min-h-fit    | min-height: fit-content; |
+| `min-h-0` | `min-height: 0;` |
+| `min-h-full` | `min-height: 100%;` |
+| `min-h-screen` | `min-height: 100vh;` |
+| `min-h-min` | `min-height: min-content;` |
+| `min-h-max` | `min-height: max-content;` |
+| `min-h-fit` | `min-height: fit-content;` |
 
 ## Синтаксис
 
@@ -64,7 +71,3 @@ tags: [min-height, sm, md, lg, xl]
 ```
 
 В этом примере минимальная высота будет равна нулю (`min-h-0`) при ширине экрана `md` и больше.
-## Пример
-:::example {id="utilities/sizes/min-height" label="Результат"}
-:::
-

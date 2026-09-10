@@ -40,6 +40,13 @@
         "restored": "The site settings have been restored."
     },
     "redirect": {"title": "Page moved", "message": "The page address has changed.", "link": "Open the current page"},
-    "code": {"copy": "Copy", "copied": "Copied"},
+    "code": {
+        "copy": "Copy", "copied": "Copied",
+        "wrap": "Wrap long lines", "unwrap": "Keep original line layout"
+    },
+    "examples": {
+        "fullscreen": "Open example fullscreen",
+        "fullscreen_exit": "Exit fullscreen"
+    },
     "common": {"continue": "Continue", "greeting": "Hello, {name}!"}
 }

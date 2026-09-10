@@ -6,12 +6,19 @@ tags: [outline-offset]
 
 # Отступ внешней границы
 
+:badge[outline-offset]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/outline/outline-offset" label="Отступ внешней границы"}
+:::
+
 | Класс | Значение |
 |:--|:--|
-| `.outline-offset-1` | `outline-offset: var(--sf-a1);` |
-| `.outline-offset-2` | `outline-offset: var(--sf-a2);` |
-| `.outline-offset-3` | `outline-offset: var(--sf-a3);` |
-| `.outline-offset-4` | `outline-offset: var(--sf-a4);` |
+| `outline-offset-1` | `outline-offset: var(--sf-a1);` |
+| `outline-offset-2` | `outline-offset: var(--sf-a2);` |
+| `outline-offset-3` | `outline-offset: var(--sf-a3);` |
+| `outline-offset-4` | `outline-offset: var(--sf-a4);` |
 
 ## Описание
 
@@ -25,7 +32,3 @@ tags: [outline-offset]
 - Модификатор: `outline-offset-{1...4}`.
 
 ## Пример
-
-:::example {id="utilities/outline/outline-offset" label="Результат"}
-:::
-

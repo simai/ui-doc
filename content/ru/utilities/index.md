@@ -36,6 +36,7 @@ description: "Каталог CSS-утилит SIMAI Framework."
 - [Фоны](/ru/utilities/background/) — цвет, изображение, градиент и позиционирование.
 - [Маска](/ru/utilities/mask/) — clip, repeat и позиционирование масок.
 - [Тени](/ru/utilities/shadows/) — тени элементов и капельные тени.
+- [Полосы](/ru/utilities/stripes/) — штриховка и фоновые полосы.
 - [Фильтры элемента](/ru/utilities/filters/) — blur, hue-rotate и другие CSS-фильтры.
 - [Фильтры подложки](/ru/utilities/backdrop-filter/) — blur и корректировка фона.
 - [Анимация](/ru/utilities/animation/) — transition и типы анимаций.
@@ -44,7 +45,6 @@ description: "Каталог CSS-утилит SIMAI Framework."
 - [Формы](/ru/utilities/forms/) — состояния полей и вспомогательные свойства.
 - [Интерактивность](/ru/utilities/interactivity/) — cursor, user-select и touch-action.
 - [Печать](/ru/utilities/print/) — отображение для печати.
-- [Полосы](/ru/utilities/stripes/) — штриховка и фоновые полосы.
 
 ## Часто используемые
 - [Макет](/ru/utilities/layout/)

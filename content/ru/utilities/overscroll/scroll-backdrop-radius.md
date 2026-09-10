@@ -1,19 +1,26 @@
 ---
-title: "Радиус границы подложки прокрутки (scroll-backdrop-radius)"
+title: "Радиус границы подложки прокрутки"
 description: "Радиус границы подложки прокрутки (scroll-backdrop-radius)"
 tags: [scroll-backdrop-radius]
 ---
 
-# Радиус границы подложки прокрутки (scroll-backdrop-radius)
+# Радиус границы подложки прокрутки
+
+:badge[scroll-backdrop-radius]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-backdrop-radius" label="Радиус границы подложки прокрутки"}
+:::
 
 ## Классы и их значения
 
 | Класс               | Значение переменной                   |
 |:--------------------|:--------------------------------------|
-| .scroll-bg-radius-1 | `--sf-scroll-radius`: var(`--sf-a1`); |
-| .scroll-bg-radius-2 | `--sf-scroll-radius`: var(`--sf-a2`); |
-| .scroll-bg-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`); |
-| .scroll-bg-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`); |
+| `scroll-bg-radius-1` | `--sf-scroll-radius`: var(`--sf-a1`); |
+| `scroll-bg-radius-2` | `--sf-scroll-radius`: var(`--sf-a2`); |
+| `scroll-bg-radius-3` | `--sf-scroll-radius`: var(`--sf-a4`); |
+| `scroll-bg-radius-4` | `--sf-scroll-radius`: var(`--sf-a8`); |
 
 ## Описание
 
@@ -27,7 +34,3 @@ tags: [scroll-backdrop-radius]
 - `scroll-bg-radius-{1|2|3|4}` – задать степень закругления подложки полосы прокрутки.
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/scroll-backdrop-radius" label="Результат"}
-:::
-

@@ -6,17 +6,24 @@ tags: [background-clip, sm, md, lg, xl]
 
 # Обрезка фона
 
+:badge[background-clip]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов `background-clip` вы можете управлять тем, как фон распределяется под границами элемента и его
 содержимым.
+
+## Наглядный пример
+
+:::example {id="utilities/background/background-clip" label="Обрезка фона"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                      |
 |:-----------------|:------------------------------|
-| .bg-clip-border  | background-clip: border-box;  |
-| .bg-clip-padding | background-clip: padding-box; |
-| .bg-clip-content | background-clip: content-box; |
-| .bg-clip-text    | background-clip: text;        |
+| `bg-clip-border` | `background-clip: border-box;` |
+| `bg-clip-padding` | `background-clip: padding-box;` |
+| `bg-clip-content` | `background-clip: content-box;` |
+| `bg-clip-text` | `background-clip: text;` |
 
 ## Описание
 
@@ -77,7 +84,3 @@ tags: [background-clip, sm, md, lg, xl]
     <span>Адаптивный пример</span>
 </div>
 ```
-## Пример
-:::example {id="utilities/background/background-clip" label="Результат"}
-:::
-

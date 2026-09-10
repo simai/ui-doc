@@ -1,14 +1,21 @@
 ---
-title: "Тип привязки прокрутки (scroll-snap-type)"
+title: "Тип привязки прокрутки"
 description: "Тип привязки прокрутки (scroll-snap-type)"
 tags: [scroll-snap-type]
 ---
 
-# Тип привязки прокрутки (scroll-snap-type)
+# Тип привязки прокрутки
+
+:badge[scroll-snap-type]{type=main scheme=on-surface size=1}
 
 Данные модификаторы позволяют определять, как именно точки привязки прокрутки будут влиять на поведение контейнера. Вы
 можете указать направление привязки (горизонтальное, вертикальное или обе оси) и степень строгости, с которой контейнер
 будет "цепляться" за эти точки (mandatory или proximity).
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-snap-type" label="Тип привязки прокрутки"}
+:::
 
 ## Краткое описание
 
@@ -20,13 +27,13 @@ tags: [scroll-snap-type]
 
 | Класс           | Значение                            |
 |:----------------|:--------------------------------------------------------|
-| .snap-none      | scroll-snap-type: none;                                 |
-| .snap-x         | scroll-snap-type: x var(`--sf-scroll-snap-strictness`); |
-| .snap-y         | scroll-snap-type: y var(`--sf-scroll-snap-strictness`); |
-| .snap-both      | scroll-snap-type: both mandatory;                       |
-| .snap-example   | scroll-snap-type: Array; *(пример, не использовать)*    |
-| .snap-mandatory | `--sf-scroll-snap-strictness`: mandatory;               |
-| .snap-proximity | `--sf-scroll-snap-strictness`: proximity;               |
+| `snap-none` | `scroll-snap-type: none;` |
+| `snap-x` | `scroll-snap-type: x var(--sf-scroll-snap-strictness);` |
+| `snap-y` | `scroll-snap-type: y var(--sf-scroll-snap-strictness);` |
+| `snap-both` | `scroll-snap-type: both mandatory;` |
+| `snap-example` | scroll-snap-type: Array; *(пример, не использовать)*    |
+| `snap-mandatory` | `--sf-scroll-snap-strictness`: mandatory;               |
+| `snap-proximity` | `--sf-scroll-snap-strictness`: proximity;               |
 
 ## Описание
 
@@ -56,7 +63,3 @@ tags: [scroll-snap-type]
 ```
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/scroll-snap-type" label="Результат"}
-:::
-

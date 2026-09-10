@@ -1,85 +1,50 @@
 ---
-title: "Slider"
-description: "API и runtime-контракт Smart-компонента slider в SIMAI Framework 5.4.0."
+title: "Smart-слайдер"
+description: "Управляемая последовательность слайдов на общем компоненте Slider."
+profile: reference
 ---
 
-# Slider
+# Smart-слайдер
 
-Идентификатор: `smart.slider`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+`<sf-slider>` создаёт полную разметку Slider, подключает общий runtime и
+принимает каждый значимый элемент `slot="slide"` как один слайд.
 
-## Теги и подключение
+## Пример
 
-Custom Elements: `<sf-slider>`.
+:::example {id="components/slider/smart-overview" label="Результат"}
+:::
 
-Loader-статус: `registered`. Loader-правило: `cl-slider`.
+## Особенности применения
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/slider/js/slider.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/slider/template/default/index.html`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/slider/template/default.js`
+Объединяйте заголовок, текст и действие одной карточки внутри одного
+атрибутированного элемента `slot="slide"`. Пробельный текст и комментарии не
+становятся слайдами. `slideNext()`, `slidePrev()` и `getSlider()` доступны для
+управления из приложения; смена слайда сообщает событие `sf-slide-change`.
 
-## Зависимости
+Без `space-between` и `speed` компонент наследует адаптивные токены обычного
+Slider. Явные числа сохраняются как совместимые переопределения. Reduced motion
+отключает переход и autoplay; при обычном движении явно включённый autoplay
+останавливается на время фокуса внутри компонента и скрытия документа.
 
-- `component.icon-buttons`
-- `component.icons`
-- `component.slider`
+## Контент и медиа
 
-## Атрибуты и свойства
+Для текста и карточек задайте `root-class="sf-slider--content"`: навигация
+окажется в потоке. Без модификатора она располагается поверх изображений.
+Пример выше показывает контентный режим.
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `button-type` | `buttonType` | `String` | `'primary'` | `—` |
-| `button-size` | `buttonSize` | `String` | `'1'` | `—` |
-| `dots` | `dots` | `Boolean` | `true` | `—` |
-| `dots-type` | `dotsType` | `String` | `'primary-dark'` | `—` |
-| `dots-size` | `dotsSize` | `String` | `'2'` | `—` |
-| `thumbs` | `thumbs` | `Boolean` | `false` | `—` |
-| `thumbs-class` | `thumbsClass` | `String` | `''` | `—` |
-| `thumb-class` | `thumbClass` | `String` | `''` | `—` |
-| `arrows` | `arrows` | `Boolean` | `true` | `—` |
-| `loop` | `loop` | `Boolean` | `false` | `—` |
-| `space-between` | `spaceBetween` | `Number` | `12` | `—` |
-| `speed` | `speed` | `Number` | `450` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `slide-class` | `slideClass` | `String` | `''` | `—` |
+## Миниатюры
 
-Общие атрибуты базового Smart-элемента:
+Атрибут `thumbs="true"` добавляет связанную полосу миниатюр. `dots` и `arrows`
+можно включать независимо; `loop="true"` замыкает последовательность.
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+:::example {id="components/slider/smart-thumbnails" label="Результат"}
+:::
 
-## Методы
+## Оформление
 
-`attachSliderEvents()`, `detachSliderEvents()`, `forwardSliderDataAttributes()`, `get arrows()`, `get buttonSize()`, `get buttonType()`, `get dots()`, `get dotsSize()`, `get dotsType()`, `get loop()`, `get slideClass()`, `get slides()`, `get spaceBetween()`, `get speed()`, `get state()`, `get thumbClass()`, `get thumbs()`, `get thumbsClass()`, `getSlider()`, `refresh()`, `slideNext()`, `slidePrev()`, `waitForSliderControls()`.
+`root-class`, `slide-class`, `thumbs-class` и `thumb-class` принимают утилиты
+Framework. Цветовые роли, отступы и радиусы задавайте ими, не копируя внутренние
+стили и не вводя абсолютные размеры.
 
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `sf-slide-change` | Компонент-специфичное событие из source-класса |
-
-## Минимальная разметка
-
-```html
-<sf-slider></sf-slider>
-```
-
-## Доступность
-
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
-
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/slider`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-slider`
+:::example {id="components/slider/smart-customization" label="Результат"}
+:::

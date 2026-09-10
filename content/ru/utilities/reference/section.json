@@ -1,4 +1,7 @@
 {
-  "schema": "docara.section.v1",
-  "title": "Точный справочник"
+    "schema": "docara.section.v1",
+    "title": "Точный справочник",
+    "navigation": {
+        "order": 290
+    }
 }

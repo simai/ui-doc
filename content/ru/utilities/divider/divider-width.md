@@ -6,21 +6,24 @@ tags: [divider-width]
 
 # Толщина разделителя
 
+:badge[divider-width]{type=main scheme=on-surface size=1}
+
 Утилиты толщины задают ширину линии между соседними элементами по оси `x` или `y`.
+
+## Наглядный пример
+
+:::example {id="utilities/divider/divider-width" label="Толщина разделителя"}
+:::
 
 ## Таблица классов
 
 | Класс | Значение |
 |:--|:--|
-| `.divider-x-{0..4}` / `.divide-x-{0..4}` | Толщина разделителя по горизонтали |
-| `.divider-y-{0..4}` / `.divide-y-{0..4}` | Толщина разделителя по вертикали |
-| `.divider-x-reverse` / `.divide-x-reverse` | Реверс распределения линии по оси `x` |
-| `.divider-y-reverse` / `.divide-y-reverse` | Реверс распределения линии по оси `y` |
+| `divider-x-{0..4} / divide-x-{0..4}` | Толщина разделителя по горизонтали |
+| `divider-y-{0..4} / divide-y-{0..4}` | Толщина разделителя по вертикали |
+| `divider-x-reverse / divide-x-reverse` | Реверс распределения линии по оси `x` |
+| `divider-y-reverse / divide-y-reverse` | Реверс распределения линии по оси `y` |
 
 Значения толщины: `0`, `1`, `2`, `3`, `4`.
 
 ## Пример
-
-:::example {id="utilities/divider/divider-width" label="Результат"}
-:::
-

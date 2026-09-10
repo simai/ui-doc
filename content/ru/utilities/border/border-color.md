@@ -6,23 +6,29 @@ tags: [border-color, hover, focus, active]
 
 # Цвет границы
 
+:badge[border-color]{type=main scheme=on-surface size=1}
+
 Утилиты цвета границы позволяют быстро назначать цвет рамки через токены SIMAI.
+
+## Наглядный пример
+
+:::example {id="utilities/border/border-color" label="Цвет границы"}
+:::
 
 ## Ролевые классы
 
 | Класс | Значение |
 |:--|:--|
-| `.border-transparent` | `border-color: var(--sf-transparent)` |
-| `.border-current` | `border-color: currentColor` |
-| `.border-outline` | `border-color: var(--sf-outline)` |
-| `.border-outline-variant` | `border-color: var(--sf-outline-variant)` |
-| `.border-primary` | `border-color: var(--sf-outline-primary)` |
-| `.border-secondary` | `border-color: var(--sf-outline-secondary)` |
-| `.border-tertiary` | `border-color: var(--sf-outline-tertiary)` |
-| `.border-error` | `border-color: var(--sf-outline-error)` |
-| `.border-warning` | `border-color: var(--sf-outline-warning)` |
-| `.border-success` | `border-color: var(--sf-outline-success)` |
-
+| `border-transparent` | `border-color: var(--sf-transparent)` |
+| `border-current` | `border-color: currentColor` |
+| `border-outline` | `border-color: var(--sf-outline)` |
+| `border-outline-variant` | `border-color: var(--sf-outline-variant)` |
+| `border-primary` | `border-color: var(--sf-outline-primary)` |
+| `border-secondary` | `border-color: var(--sf-outline-secondary)` |
+| `border-tertiary` | `border-color: var(--sf-outline-tertiary)` |
+| `border-error` | `border-color: var(--sf-outline-error)` |
+| `border-warning` | `border-color: var(--sf-outline-warning)` |
+| `border-success` | `border-color: var(--sf-outline-success)` |
 
 Также поддерживаются palette-классы вида `.border-red-5`, `.border-blue-700`, и т.д.
 
@@ -34,7 +40,3 @@ tags: [border-color, hover, focus, active]
 - `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`).
 
 ## Примеры
-
-:::example {id="utilities/border/border-color" label="Результат"}
-:::
-

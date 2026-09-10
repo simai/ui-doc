@@ -1,14 +1,23 @@
 ---
-title: "Разрыв внутри элемента (break-inside)"
-description: "Разрыв внутри элемента (break-inside)"
+title: "Разрыв внутри элемента"
+description: "Разрешает или запрещает разрыв содержимого внутри элемента."
 tags: [break-inside, sm, md, lg, xl]
 ---
 
-# Разрыв внутри элемента (break-inside)
+# Разрыв внутри элемента
+
+:badge[break-inside]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификатор `break-inside` в SIMAI Framework позволяет контролировать разрывы столбца или страницы внутри элемента. Это
 особенно полезно при работе со сложными макетами или документами, где требуется точный контроль над тем, как контент
 распределяется по колонкам или страницам.
+
+## Пример
+
+Слева карточки сохраняются целиком, справа обычный поток может разделить их между колонками.
+
+:::example {id="utilities/layout-break/break-inside" label="Сохранение целого блока"}
+:::
 
 ## Синтаксис
 
@@ -53,7 +62,3 @@ tags: [break-inside, sm, md, lg, xl]
 
 Таким образом, модификатор `break-inside` позволяет точно управлять разрывами внутри элементов, что упрощает адаптивную
 верстку и улучшает читаемость контента.
-## Пример
-:::example {id="utilities/layout-break/break-inside" label="Результат"}
-:::
-

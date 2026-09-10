@@ -1,12 +1,19 @@
 ---
-title: "Смещение (transform-translate)"
+title: "Смещение"
 description: "Классы смещения transform-translate"
 tags: [transform-translate, hover]
 ---
 
-# Смещение (transform-translate)
+# Смещение
+
+:badge[transform-translate]{type=main scheme=on-surface size=1}
 
 `transform-translate` сдвигает элемент по оси `x` и/или `y`.
+
+## Наглядный пример
+
+:::example {id="utilities/transform/transform-translate" label="Смещение"}
+:::
 
 Классы по X и Y можно комбинировать на одном элементе. Утилита хранит значения в CSS-переменных `--sf-translate-x` и `--sf-translate-y`, а итоговый `transform` собирается как `translate(var(--sf-translate-x, 0), var(--sf-translate-y, 0))`.
 
@@ -14,19 +21,18 @@ tags: [transform-translate, hover]
 
 | Класс                                 | Значение переменной            |
 | :------------------------------------ | :----------------------------- |
-| `.translate-x-0 ... .translate-x-9`   | `--sf-translate-x`             |
-| `.translate-y-0 ... .translate-y-9`   | `--sf-translate-y`             |
-| `.-translate-x-0 ... .-translate-x-9` | отрицательное `--sf-translate-x` |
-| `.-translate-y-0 ... .-translate-y-9` | отрицательное `--sf-translate-y` |
-| `.translate-x-half`                   | `--sf-translate-x: 50%`        |
-| `.translate-y-half`                   | `--sf-translate-y: 50%`        |
-| `.-translate-x-half`                  | `--sf-translate-x: -50%`       |
-| `.-translate-y-half`                  | `--sf-translate-y: -50%`       |
-| `.translate-x-full`                   | `--sf-translate-x: 100%`       |
-| `.translate-y-full`                   | `--sf-translate-y: 100%`       |
-| `.-translate-x-full`                  | `--sf-translate-x: -100%`      |
-| `.-translate-y-full`                  | `--sf-translate-y: -100%`      |
-
+| `translate-x-0 ... translate-x-9` | `--sf-translate-x`             |
+| `translate-y-0 ... translate-y-9` | `--sf-translate-y`             |
+| `-translate-x-0 ... -translate-x-9` | отрицательное `--sf-translate-x` |
+| `-translate-y-0 ... -translate-y-9` | отрицательное `--sf-translate-y` |
+| `translate-x-half` | `--sf-translate-x: 50%`        |
+| `translate-y-half` | `--sf-translate-y: 50%`        |
+| `-translate-x-half` | `--sf-translate-x: -50%`       |
+| `-translate-y-half` | `--sf-translate-y: -50%`       |
+| `translate-x-full` | `--sf-translate-x: 100%`       |
+| `translate-y-full` | `--sf-translate-y: 100%`       |
+| `-translate-x-full` | `--sf-translate-x: -100%`      |
+| `-translate-y-full` | `--sf-translate-y: -100%`      |
 
 ## Синтаксис
 
@@ -63,8 +69,3 @@ transform: translate(var(--sf-translate-x, 0), var(--sf-translate-y, 0));
 - `-hover:translate-x-half`, `-hover:translate-y-half`
 - `hover:translate-x-full`, `hover:translate-y-full`
 - `-hover:translate-x-full`, `-hover:translate-y-full`
-
-## Пример
-:::example {id="utilities/transform/transform-translate" label="Результат"}
-:::
-

@@ -1,27 +1,34 @@
 ---
-title: "Одновременное выравнивание по двум осям (flex-align)"
+title: "Одновременное выравнивание по двум осям"
 description: "Одновременное выравнивание по двум осям (flex-align)"
 tags: [flex-align, sm, md, lg, xl]
 ---
 
-# Одновременное выравнивание по двум осям (flex-align)
+# Одновременное выравнивание по двум осям
+
+:badge[flex-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы позволяют задать одновременное выравнивание содержимого флексбокса сразу по основной и поперечной
 оси, фактически комбинируя свойства `justify-content` и `align-items`.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/flex-align" label="Одновременное выравнивание по двум осям"}
+:::
 
 ## Таблица классов
 
 | Класс          | Значение                          |
 |:---------------|:------------------------------------------------------|
-| .start-start   | justify-content: flex-start; align-items: flex-start; |
-| .start-center  | justify-content: flex-start; align-items: center;     |
-| .start-end     | justify-content: flex-start; align-items: flex-end;   |
-| .center-start  | justify-content: center; align-items: flex-start;     |
-| .center-center | justify-content: center; align-items: center;         |
-| .center-end    | justify-content: center; align-items: flex-end;       |
-| .end-start     | justify-content: flex-end; align-items: flex-start;   |
-| .end-center    | justify-content: flex-end; align-items: center;       |
-| .end-end       | justify-content: flex-end; align-items: flex-end;     |
+| `start-start` | `justify-content: flex-start; align-items: flex-start;` |
+| `start-center` | `justify-content: flex-start; align-items: center;` |
+| `start-end` | `justify-content: flex-start; align-items: flex-end;` |
+| `center-start` | `justify-content: center; align-items: flex-start;` |
+| `center-center` | `justify-content: center; align-items: center;` |
+| `center-end` | `justify-content: center; align-items: flex-end;` |
+| `end-start` | `justify-content: flex-end; align-items: flex-start;` |
+| `end-center` | `justify-content: flex-end; align-items: center;` |
+| `end-end` | `justify-content: flex-end; align-items: flex-end;` |
 
 ## Синтаксис
 
@@ -57,7 +64,3 @@ tags: [flex-align, sm, md, lg, xl]
   <!-- Начиная с md элементы будут по центру по обеим осям -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/flex-align" label="Результат"}
-:::
-

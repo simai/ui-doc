@@ -1,0 +1,25 @@
+<sf-admin-menu
+  aria-label="Разделы администрирования"
+  brand="Управление сайтом"
+  searchable
+  collapsible
+>
+  <sf-admin-menu-item item-id="overview" href="#overview" left-icon="dashboard" active>
+    Обзор
+  </sf-admin-menu-item>
+  <sf-admin-menu-item item-id="content" left-icon="article">
+    Контент
+    <sf-admin-menu-item item-id="pages" href="#pages" left-icon="description">
+      Страницы
+    </sf-admin-menu-item>
+    <sf-admin-menu-item item-id="files" href="#files" left-icon="folder">
+      Файлы
+    </sf-admin-menu-item>
+  </sf-admin-menu-item>
+  <sf-admin-menu-item item-id="orders" href="#orders" left-icon="shopping_cart" badge="12">
+    Заказы
+  </sf-admin-menu-item>
+  <sf-admin-menu-item item-id="settings" href="#settings" left-icon="settings" slot="bottom">
+    Настройки
+  </sf-admin-menu-item>
+</sf-admin-menu>

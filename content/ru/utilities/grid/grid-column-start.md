@@ -1,32 +1,39 @@
 ---
-title: "Начальное положение колонки сетки (grid-column-start)"
+title: "Начальное положение колонки сетки"
 description: "Начальное положение колонки сетки (grid-column-start)"
 tags: [grid-column-start, sm, md, lg, xl]
 ---
 
-# Начальное положение колонки сетки (grid-column-start)
+# Начальное положение колонки сетки
+
+:badge[grid-column-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять начальным положением столбцов в сетке, задавая от какой линии
 сетки элемент должен начинаться.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-column-start" label="Начальное положение колонки сетки"}
+:::
 
 ## Таблица классов
 
 | Класс           | Значение                 |
 |:----------------|:-------------------------|
-| .col-start-1    | grid-column-start: 1;    |
-| .col-start-2    | grid-column-start: 2;    |
-| .col-start-3    | grid-column-start: 3;    |
-| .col-start-4    | grid-column-start: 4;    |
-| .col-start-5    | grid-column-start: 5;    |
-| .col-start-6    | grid-column-start: 6;    |
-| .col-start-7    | grid-column-start: 7;    |
-| .col-start-8    | grid-column-start: 8;    |
-| .col-start-9    | grid-column-start: 9;    |
-| .col-start-10   | grid-column-start: 10;   |
-| .col-start-11   | grid-column-start: 11;   |
-| .col-start-12   | grid-column-start: 12;   |
-| .col-start-13   | grid-column-start: 13;   |
-| .col-start-auto | grid-column-start: auto; |
+| `col-start-1` | `grid-column-start: 1;` |
+| `col-start-2` | `grid-column-start: 2;` |
+| `col-start-3` | `grid-column-start: 3;` |
+| `col-start-4` | `grid-column-start: 4;` |
+| `col-start-5` | `grid-column-start: 5;` |
+| `col-start-6` | `grid-column-start: 6;` |
+| `col-start-7` | `grid-column-start: 7;` |
+| `col-start-8` | `grid-column-start: 8;` |
+| `col-start-9` | `grid-column-start: 9;` |
+| `col-start-10` | `grid-column-start: 10;` |
+| `col-start-11` | `grid-column-start: 11;` |
+| `col-start-12` | `grid-column-start: 12;` |
+| `col-start-13` | `grid-column-start: 13;` |
+| `col-start-auto` | `grid-column-start: auto;` |
 
 ## Синтаксис
 
@@ -67,7 +74,3 @@ tags: [grid-column-start, sm, md, lg, xl]
     <!-- Начиная с размера экрана md и больше элемент будет начинаться с 4-й линии сетки -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-column-start" label="Результат"}
-:::
-

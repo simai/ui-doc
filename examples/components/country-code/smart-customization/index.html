@@ -1,0 +1,17 @@
+<div class="grid gap-3">
+  <sf-country-code label="Телефон" hint="Оформление задано утилитами Framework." iso2="RU" root-class="p-2 bg-surface-container radius-default"></sf-country-code>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1"><span class="sf-button-text-container">Сменить поверхность</span></button>
+</div>
+<script>
+(() => {
+  const example = document.currentScript.previousElementSibling;
+  const field = example.querySelector('sf-country-code');
+  let elevated = false;
+  example.querySelector('button').addEventListener('click', () => {
+    elevated = !elevated;
+    field.setAttribute('root-class', elevated
+      ? 'p-3 bg-surface-2 radius-default'
+      : 'p-2 bg-surface-container radius-default');
+  });
+})();
+</script>

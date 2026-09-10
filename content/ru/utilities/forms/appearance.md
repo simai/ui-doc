@@ -1,19 +1,26 @@
 ---
-title: "Сброс стиля (appearance)"
+title: "Сброс стиля"
 description: "Сброс стиля (appearance)"
 tags: [appearance]
 ---
 
-# Сброс стиля (appearance)
+# Сброс стиля
+
+:badge[appearance]{type=main scheme=on-surface size=1}
 
 С помощью модификатора сброса стиля в SIMAI Framework вы можете отменять стандартные стили элементов управления формами,
 таких как выпадающие списки или поля ввода, и применять собственные стили.
+
+## Наглядный пример
+
+:::example {id="utilities/forms/appearance" label="Сброс стиля"}
+:::
 
 ## Классы и их значения
 
 | Класс            | Значение          |
 |:-----------------|:------------------|
-| .appearance-none | appearance: none; |
+| `appearance-none` | `appearance: none;` |
 
 ## Описание
 
@@ -25,7 +32,3 @@ tags: [appearance]
 - `appearance-none` – убрать стандартные стили у элемента формы.
 
 ## Пример использования
-
-:::example {id="utilities/forms/appearance" label="Результат"}
-:::
-

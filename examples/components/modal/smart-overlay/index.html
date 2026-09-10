@@ -1,0 +1,9 @@
+<div class="flex flex-wrap gap-2">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-open="modal-overlay-default"><span class="sf-button-text-container">Обычный фон</span></button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-overlay-focus"><span class="sf-button-text-container">Фокус с размытием</span></button>
+  <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-fullscreen"><span class="sf-button-text-container">На весь экран</span></button>
+</div>
+
+<sf-modal modal-id="modal-overlay-default" title="Обычный фон" overlay-preset="default" show-footer="false"><p slot="content" class="m-0">Стабильное затемнение без blur.</p></sf-modal>
+<sf-modal modal-id="modal-overlay-focus" title="Фокус" overlay-preset="focus" show-footer="false"><p slot="content" class="m-0">Затемнение сохраняется, а фон дополнительно размывается.</p></sf-modal>
+<sf-modal modal-id="modal-fullscreen" title="Полноэкранная задача" fullscreen="true" show-footer="false"><p slot="content" class="m-0">Используйте для ограниченной задачи, которой действительно нужна вся область.</p></sf-modal>

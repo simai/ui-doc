@@ -1,21 +1,28 @@
 ---
-title: "Трансформация текста (text-transform)"
+title: "Трансформация текста"
 description: "Трансформация текста (text-transform)"
 tags: [font-transform]
 ---
 
-# Трансформация текста (text-transform)
+# Трансформация текста
+
+:badge[font-transform]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов трансформации текста можно управлять регистром символов текста.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/text-transform" label="Трансформация текста"}
+:::
 
 ## Таблица классов
 
 | Класс       | Значение                    |
 |:------------|:----------------------------|
-| .uppercase  | text-transform: uppercase;  |
-| .lowercase  | text-transform: lowercase;  |
-| .capitalize | text-transform: capitalize; |
-| .normalcase | text-transform: none;       |
+| `uppercase` | `text-transform: uppercase;` |
+| `lowercase` | `text-transform: lowercase;` |
+| `capitalize` | `text-transform: capitalize;` |
+| `normalcase` | `text-transform: none;` |
 
 ## Синтаксис
 
@@ -33,7 +40,3 @@ tags: [font-transform]
     - `normalcase` — регистр символов не меняется
 
 ## Пример использования
-
-:::example {id="utilities/typography/text-transform" label="Результат"}
-:::
-

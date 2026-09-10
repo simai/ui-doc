@@ -1,0 +1,7 @@
+<div class="sf-hide-show" id="protected-details">
+  <button class="sf-button sf-button--outline" type="button" data-action="toggle">Попробовать скрыть</button>
+  <div class="surface-container p-2 radius-default" data-content>Изменение отменяется обработчиком.</div>
+</div>
+<script>
+  document.querySelector('#protected-details').addEventListener('sf-hide-show:change', event => event.preventDefault());
+</script>

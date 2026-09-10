@@ -1,4 +1,20 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-3">
-  <div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--outlined sf-dropdown--text flex flex-col" data-selected-value="ready"><span class="sf-dropdown-label"><span class="sf-dropdown-text">Выбрано</span></span><div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative" tabindex="0"><input type="text"><button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть"><i class="sf-icon">keyboard_arrow_down</i></button></div><div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col"><div class="sf-list-item sf-list-item--text sf-list-item--size-1 selected" data-value="ready"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Готово</div></div><div class="sf-list-item-selected-item flex"><i class="sf-icon">check</i></div></div></div></div></div></div>
-  <div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--filled sf-dropdown--text disabled flex flex-col" disabled><span class="sf-dropdown-label"><span class="sf-dropdown-text">Недоступно</span></span><div class="sf-dropdown-field items-cross-center transition flex relative"><input type="text" value="Недоступный список" disabled><button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" disabled aria-label="Недоступно"><i class="sf-icon">keyboard_arrow_down</i></button></div><div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col"></div></div></div></div>
+<form class="grid grid-col-1 md:grid-col-2 gap-3">
+<div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--outlined sf-dropdown--text flex flex-col" required value="ready">
+  <span class="sf-dropdown-label"><span class="sf-dropdown-text">Статус *</span></span>
+  <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative"><input class="sf-dropdown-hidden-input" type="hidden" name="status"><input type="text" placeholder="Выберите значение"><button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть: Статус *"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button></div>
+  <div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col">
+    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer" role="option" tabindex="-1" data-value="draft"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Черновик</div></div></div>
+    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer selected" role="option" tabindex="-1" data-value="ready"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Готово</div></div></div>
+    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer disabled" role="option" tabindex="-1" data-value="archive"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Архив</div></div></div>
+  </div></div></div>
 </div>
+<div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--filled sf-dropdown--text flex flex-col" disabled value="blocked">
+  <span class="sf-dropdown-label"><span class="sf-dropdown-text">Недоступный список</span></span>
+  <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative"><input type="text" placeholder="Выберите значение"><button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть: Недоступный список"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button></div>
+  <div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col">
+    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer selected" role="option" tabindex="-1" data-value="blocked"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Недоступно</div></div></div>
+    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer" role="option" tabindex="-1" data-value="other"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Другой вариант</div></div></div>
+  </div></div></div>
+</div>
+<div><button type="reset" class="sf-button sf-button--primary sf-button--default sf-button--size-1"><span class="sf-button-text-container">Вернуть исходный статус</span></button></div>
+</form>

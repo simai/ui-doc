@@ -1,24 +1,31 @@
 ---
-title: "Внутренний отступ (padding)"
+title: "Внутренний отступ"
 description: "Внутренний отступ (padding)"
 tags: [padding, sm, md, lg, xl]
 ---
 
-# Внутренний отступ (padding)
+# Внутренний отступ
+
+:badge[padding]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 `padding` управляет расстоянием от контента до границ элемента. Размеры привязаны к токенам `--sf-space-*`.
+
+## Наглядный пример
+
+:::example {id="utilities/indents/padding" label="Внутренний отступ"}
+:::
 
 ## Таблица классов
 
 | Класс               | Значение                                   |
 |:--------------------|:-------------------------------------------|
-| .p-{n}              | padding: var(`--sf-space-{n}`);            |
-| .p-top-{n}          | padding-top: var(`--sf-space-{n}`);        |
-| .p-bottom-{n}       | padding-bottom: var(`--sf-space-{n}`);     |
-| .p-inline-start-{n} | padding-inline-start: var(`--sf-space-{n}`); |
-| .p-inline-end-{n}   | padding-inline-end: var(`--sf-space-{n}`);   |
-| .p-x-{n}            | padding-inline: var(`--sf-space-{n}`);     |
-| .p-y-{n}            | padding-block: var(`--sf-space-{n}`);      |
+| `p-{n}` | `padding: var(--sf-space-{n});` |
+| `p-top-{n}` | `padding-top: var(--sf-space-{n});` |
+| `p-bottom-{n}` | `padding-bottom: var(--sf-space-{n});` |
+| `p-inline-start-{n}` | `padding-inline-start: var(--sf-space-{n});` |
+| `p-inline-end-{n}` | `padding-inline-end: var(--sf-space-{n});` |
+| `p-x-{n}` | `padding-inline: var(--sf-space-{n});` |
+| `p-y-{n}` | `padding-block: var(--sf-space-{n});` |
 
 Где `{n}` ∈ `0, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, 6, 7, 8`. Логические стороны (`inline-start/end`) используются вместо left/right.
 
@@ -44,7 +51,3 @@ tags: [padding, sm, md, lg, xl]
   <!-- Начиная с md padding увеличится до var(--sf-space-4) -->
 </div>
 ```
-## Пример
-:::example {id="utilities/indents/padding" label="Результат"}
-:::
-

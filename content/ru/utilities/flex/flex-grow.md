@@ -1,20 +1,27 @@
 ---
-title: "Растяжимость элементов (flex-grow)"
+title: "Растяжимость элементов"
 description: "Растяжимость элементов (flex-grow)"
 tags: [flex-grow, sm, md, lg, xl]
 ---
 
-# Растяжимость элементов (flex-grow)
+# Растяжимость элементов
+
+:badge[flex-grow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, насколько элементы флексбокса могут растягиваться,
 заполняя доступное пространство.
+
+## Наглядный пример
+
+:::example {id="utilities/flex/flex-grow" label="Растяжимость элементов"}
+:::
 
 ## Таблица классов
 
 | Класс      | Значение      |
 |:-----------|:--------------|
-| .grow      | flex-grow: 1; |
-| .grow-none | flex-grow: 0; |
+| `grow` | `flex-grow: 1;` |
+| `grow-none` | `flex-grow: 0;` |
 
 ## Синтаксис
 
@@ -59,7 +66,3 @@ tags: [flex-grow, sm, md, lg, xl]
   <!-- Начиная с md элемент будет растягиваться, заполняя доступное пространство -->
 </div>
 ```
-## Пример
-:::example {id="utilities/flex/flex-grow" label="Результат"}
-:::
-

@@ -1,20 +1,27 @@
 ---
-title: "Длина строки (text-max-width)"
+title: "Длина строки"
 description: "Длина строки (text-max-width)"
 tags: [text-max-width, sm, md, lg, xl]
 ---
 
-# Длина строки (text-max-width)
+# Длина строки
+
+:badge[text-max-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов можно задать максимальную длину строки текста.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/text-max-width" label="Длина строки"}
+:::
 
 ## Таблица классов
 
 | Класс           | Значение                                     |
 |:----------------|:---------------------------------------------|
-| .measure        | max-width: var(`--sf-text--measure`);        |
-| .measure-wide   | max-width: var(`--sf-text--measure-wide`);   |
-| .measure-narrow | max-width: var(`--sf-text--measure-narrow`); |
+| `measure` | `max-width: var(--sf-text--measure);` |
+| `measure-wide` | `max-width: var(--sf-text--measure-wide);` |
+| `measure-narrow` | `max-width: var(--sf-text--measure-narrow);` |
 
 ## Синтаксис
 
@@ -64,7 +71,3 @@ tags: [text-max-width, sm, md, lg, xl]
 | `--sf-text--measure`        | 65ch;    |
 | `--sf-text--measure-wide`   | 80ch;    |
 | `--sf-text--measure-narrow` | 45ch;    |
-## Пример
-:::example {id="utilities/typography/text-max-width" label="Результат"}
-:::
-

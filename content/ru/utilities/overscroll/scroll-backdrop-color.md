@@ -1,23 +1,30 @@
 ---
-title: "Цвет подложки прокрутки (scroll-backdrop-color)"
+title: "Цвет подложки прокрутки"
 description: "Цвет подложки прокрутки (scroll-backdrop-color)"
 tags: [scroll-backdrop-color]
 ---
 
-# Цвет подложки прокрутки (scroll-backdrop-color)
+# Цвет подложки прокрутки
+
+:badge[scroll-backdrop-color]{type=main scheme=on-surface size=1}
 
 Используя данные модификаторы, вы можете изменить цвет фоновой подложки ползунка прокрутки.
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-backdrop-color" label="Цвет подложки прокрутки"}
+:::
 
 ## Классы и их значения
 
 | Класс                  | Значение переменной (`--sf-scroll-bg-track`)  |
 |:-----------------------|:------------------------------------------------------------------|
-| .scroll-bg-transparent | var(`--sf-transparent`)                                           |
-| .scroll-bg-current     | currentColor                                                      |
-| .scroll-bg-surface     | var(`--sf-surface-transparent-overlay`)                           |
-| .scroll-bg-primary     | var(`--sf-primary-transparent-overlay`)                           |
-| .scroll-bg-secondary   | var(`--sf-secondary-transparent-overlay`)                         |
-| .scroll-bg-tertiary    | var(`--sf-tertiary-transparent-overlay`)                          |
+| `scroll-bg-transparent` | var(`--sf-transparent`)                                           |
+| `scroll-bg-current` | currentColor                                                      |
+| `scroll-bg-surface` | var(`--sf-surface-transparent-overlay`)                           |
+| `scroll-bg-primary` | var(`--sf-primary-transparent-overlay`)                           |
+| `scroll-bg-secondary` | var(`--sf-secondary-transparent-overlay`)                         |
+| `scroll-bg-tertiary` | var(`--sf-tertiary-transparent-overlay`)                          |
 
 ## Описание
 
@@ -56,7 +63,3 @@ abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzab
 
 Обратите внимание, что этот стиль может не работать во всех браузерах. Поддержку можно проверить
 здесь: [MDN scrollbar-color](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color).
-
-:::example {id="utilities/overscroll/scroll-backdrop-color" label="Результат"}
-:::
-

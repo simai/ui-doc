@@ -1,27 +1,34 @@
 ---
-title: "Внешний отступ (margin)"
+title: "Внешний отступ"
 description: "Внешний отступ (margin)"
 tags: [margin, sm, md, lg, xl]
 ---
 
-# Внешний отступ (margin)
+# Внешний отступ
+
+:badge[margin]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `margin` управляют пространством вокруг элемента: задают расстояние до соседних блоков и контейнера.
+
+## Наглядный пример
+
+:::example {id="utilities/indents/margin" label="Внешний отступ"}
+:::
 
 ## Таблица классов
 
 | Класс                 | Значение                                |
 |:----------------------|:----------------------------------------|
-| .m-{n}                | margin: var(`--sf-space-{n}`);          |
-| .-m-{n}               | margin: `-var(--sf-space-{n})`;         |
-| .m-top-{n}            | margin-top: var(`--sf-space-{n}`);      |
-| .m-bottom-{n}         | margin-bottom: var(`--sf-space-{n}`);   |
-| .m-inline-{n}         | margin-inline: var(`--sf-space-{n}`);      |
-| .m-block-{n}          | margin-block: var(`--sf-space-{n}`);       |
-| .m-inline-start-{n}   | margin-inline-start: var(`--sf-space-{n}`);|
-| .m-inline-end-{n}     | margin-inline-end: var(`--sf-space-{n}`);  |
-| .m-top-{n}            | margin-top: var(`--sf-space-{n}`);         |
-| .m-bottom-{n}         | margin-bottom: var(`--sf-space-{n}`);      |
+| `m-{n}` | `margin: var(--sf-space-{n});` |
+| `-m-{n}` | `margin: -var(--sf-space-{n});` |
+| `m-top-{n}` | `margin-top: var(--sf-space-{n});` |
+| `m-bottom-{n}` | `margin-bottom: var(--sf-space-{n});` |
+| `m-inline-{n}` | `margin-inline: var(--sf-space-{n});` |
+| `m-block-{n}` | `margin-block: var(--sf-space-{n});` |
+| `m-inline-start-{n}` | `margin-inline-start: var(--sf-space-{n});` |
+| `m-inline-end-{n}` | `margin-inline-end: var(--sf-space-{n});` |
+| `m-top-{n}` | `margin-top: var(--sf-space-{n});` |
+| `m-bottom-{n}` | `margin-bottom: var(--sf-space-{n});` |
 | отрицательные варианты| те же классы с префиксом `-`               |
 
 Где `{n}` ∈ `0, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, 6, 7, 8`. Используются логические стороны (`inline-start/end`) вместо left/right для поддержки LTR/RTL.
@@ -52,7 +59,3 @@ tags: [margin, sm, md, lg, xl]
   <!-- Начиная с md отступ var(--sf-space-4) -->
 </div>
 ```
-## Пример
-:::example {id="utilities/indents/margin" label="Результат"}
-:::
-

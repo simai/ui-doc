@@ -1,4 +1,10 @@
 <div class="grid grid-col-1 sm:grid-col-2 gap-3">
-  <div class="sf-verification-form sf-verification-form--size-1 flex flex-col"><div class="sf-verification-form-wrap flex"><div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input value="1" aria-label="Первая цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input value="2" aria-label="Вторая цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input value="3" aria-label="Третья цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input value="4" aria-label="Четвёртая цифра"></div></div><div class="sf-verification-form-hint">Bordered</div></div>
-  <div class="sf-verification-form sf-verification-form--size-1 flex flex-col"><div class="sf-verification-form-wrap flex"><div class="sf-verification sf-verification--size-1 sf-verification--filled flex"><input value="1" aria-label="Первая цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--filled flex"><input value="2" aria-label="Вторая цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--filled flex"><input value="3" aria-label="Третья цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--filled flex"><input value="4" aria-label="Четвёртая цифра"></div></div><div class="sf-verification-form-hint">Filled</div></div>
+  <label class="sf-verification-form sf-verification-form--size-1" data-length="4" data-mode="numeric">
+    <span class="sf-verification-form-label">Контурный</span>
+    <span class="sf-verification sf-verification--size-1 sf-verification--bordered"><input class="sf-verification-input" type="text" inputmode="numeric" autocomplete="one-time-code" value="1234" aria-label="Контурный код"></span>
+  </label>
+  <label class="sf-verification-form sf-verification-form--size-1" data-length="4" data-mode="alphanumeric">
+    <span class="sf-verification-form-label">С заливкой</span>
+    <span class="sf-verification sf-verification--size-1 sf-verification--filled"><input class="sf-verification-input" type="text" autocomplete="one-time-code" value="A7B2" aria-label="Буквенно-цифровой код"></span>
+  </label>
 </div>

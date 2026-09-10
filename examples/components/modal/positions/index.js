@@ -11,7 +11,6 @@ const initializeModalPositions = () => {
     return;
   }
 
-  modalPositionsInitialized = true;
   document.querySelectorAll('[data-modal-position]').forEach((button) => {
     const position = button.dataset.modalPosition;
     const id = `modal-position-${position}`;
@@ -27,6 +26,7 @@ const initializeModalPositions = () => {
     modal.render();
     button.addEventListener('click', () => modal.open());
   });
+  modalPositionsInitialized = true;
 };
 
 window.addEventListener('Modal:ready', initializeModalPositions);

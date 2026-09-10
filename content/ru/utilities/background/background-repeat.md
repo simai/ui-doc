@@ -6,19 +6,26 @@ tags: [background-repeat, sm, md, lg, xl]
 
 # Повтор фона
 
+:badge[background-repeat]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов `background-repeat` вы можете управлять тем, как будет повторяться фоновое изображение внутри
 элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/background/background-repeat" label="Повтор фона"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                      |
 |:-----------------|:------------------------------|
-| .bg-repeat       | background-repeat: repeat;    |
-| .bg-repeat-none  | background-repeat: no-repeat; |
-| .bg-repeat-x     | background-repeat: repeat-x;  |
-| .bg-repeat-y     | background-repeat: repeat-y;  |
-| .bg-repeat-round | background-repeat: round;     |
-| .bg-repeat-space | background-repeat: space;     |
+| `bg-repeat` | `background-repeat: repeat;` |
+| `bg-repeat-none` | `background-repeat: no-repeat;` |
+| `bg-repeat-x` | `background-repeat: repeat-x;` |
+| `bg-repeat-y` | `background-repeat: repeat-y;` |
+| `bg-repeat-round` | `background-repeat: round;` |
+| `bg-repeat-space` | `background-repeat: space;` |
 
 ## Описание
 
@@ -67,7 +74,3 @@ tags: [background-repeat, sm, md, lg, xl]
     <div class="h-f8"></div>
 </div>
 ```
-## Пример
-:::example {id="utilities/background/background-repeat" label="Результат"}
-:::
-

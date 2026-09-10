@@ -1,4 +1,12 @@
 <div class="grid grid-col-1 sm:grid-col-2 gap-3">
-  <div class="sf-verification-form sf-verification-form--size-1 flex flex-col"><div class="sf-verification-form-wrap flex"><div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input value="1" disabled aria-label="Недоступная цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input value="2" disabled aria-label="Недоступная цифра"></div></div><div class="sf-verification-form-hint">Недоступно</div></div>
-  <div class="sf-verification-form sf-verification-form--size-1 flex flex-col"><div class="sf-verification-form-wrap flex"><div class="sf-verification sf-verification--size-1 sf-verification--bordered error flex"><input value="0" aria-invalid="true" aria-label="Неверная цифра"></div><div class="sf-verification sf-verification--size-1 sf-verification--bordered error flex"><input value="0" aria-invalid="true" aria-label="Неверная цифра"></div></div><div class="sf-verification-form-hint">Код не подошёл</div></div>
+  <label class="sf-verification-form sf-verification-form--size-1" data-length="4">
+    <span class="sf-verification-form-label">Недоступный код</span>
+    <span class="sf-verification sf-verification--size-1 sf-verification--bordered"><input class="sf-verification-input" type="text" value="1234" disabled aria-label="Недоступный код"></span>
+    <span class="sf-verification-form-hint">Недоступно</span>
+  </label>
+  <label class="sf-verification-form sf-verification-form--size-1 error" data-length="4">
+    <span class="sf-verification-form-label">Код с ошибкой</span>
+    <span class="sf-verification sf-verification--size-1 sf-verification--bordered"><input class="sf-verification-input" type="text" value="0000" aria-invalid="true" aria-describedby="verification-error"></span>
+    <span class="sf-verification-form-hint" id="verification-error">Код не подошёл</span>
+  </label>
 </div>

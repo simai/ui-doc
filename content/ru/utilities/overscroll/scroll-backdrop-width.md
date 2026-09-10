@@ -1,21 +1,28 @@
 ---
-title: "Толщина подложки прокрутки (scroll-backdrop-width)"
+title: "Толщина подложки прокрутки"
 description: "Толщина подложки прокрутки (scroll-backdrop-width)"
 tags: [scroll-backdrop-width]
 ---
 
-# Толщина подложки прокрутки (scroll-backdrop-width)
+# Толщина подложки прокрутки
+
+:badge[scroll-backdrop-width]{type=main scheme=on-surface size=1}
 
 С помощью данных модификаторов вы можете изменить ширину подложки полосы прокрутки, используя предопределённые размеры.
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-backdrop-width" label="Толщина подложки прокрутки"}
+:::
 
 ## Классы и их значения
 
 | Класс        | Значение               |
 |:-------------|:-----------------------|
-| .scroll-bg-1 | width: var(`--sf-a1`); |
-| .scroll-bg-2 | width: var(`--sf-a2`); |
-| .scroll-bg-3 | width: var(`--sf-a4`); |
-| .scroll-bg-4 | width: var(`--sf-a8`); |
+| `scroll-bg-1` | `width: var(--sf-a1);` |
+| `scroll-bg-2` | `width: var(--sf-a2);` |
+| `scroll-bg-3` | `width: var(--sf-a4);` |
+| `scroll-bg-4` | `width: var(--sf-a8);` |
 
 ## Описание
 
@@ -36,7 +43,3 @@ tags: [scroll-backdrop-width]
 ## Пример использования
 
 Ниже пример с очень длинным текстом для демонстрации полосы прокрутки.
-
-:::example {id="utilities/overscroll/scroll-backdrop-width" label="Результат"}
-:::
-

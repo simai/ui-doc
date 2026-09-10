@@ -1,13 +1,22 @@
 ---
-title: "Переполнение элемента (overflow)"
-description: "Переполнение элемента (overflow)"
+title: "Переполнение элемента"
+description: "Показывает, скрывает или прокручивает содержимое за границами элемента."
 tags: [overflow, sm, md, lg, xl]
 ---
 
-# Переполнение элемента (overflow)
+# Переполнение элемента
+
+:badge[overflow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `overflow` управляют тем, как содержимое элемента отображается при его переполнении. Вы можете управлять
 вертикальной (`overflow-y`), горизонтальной (`overflow-x`) или обеими осями одновременно.
+
+## Пример
+
+Фиксированные области показывают различие между автоматической прокруткой, скрытием и прокруткой по отдельной оси.
+
+:::example {id="utilities/layout/overflow" label="Поведение переполнения"}
+:::
 
 ## Синтаксис
 
@@ -147,7 +156,3 @@ tags: [overflow, sm, md, lg, xl]
 ```html
 <div class="md:overflow-hidden"></div>
 ```
-## Пример
-:::example {id="utilities/layout/overflow" label="Результат"}
-:::
-

@@ -1,14 +1,23 @@
 ---
-title: "Разрыв после колонки (break-after)"
-description: "Разрыв после колонки (break-after)"
+title: "Разрыв после колонки"
+description: "Управляет разрывом колонки или страницы после выбранного элемента."
 tags: [break-after, sm, md, lg, xl]
 ---
 
-# Разрыв после колонки (break-after)
+# Разрыв после колонки
+
+:badge[break-after]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификатор `break-after` в SIMAI Framework позволяет контролировать разрывы столбцов или страниц после определённых
 элементов. Это особенно полезно при работе с многостраничными документами или макетами, где требуется точное управление
 расстановкой колонок и страниц.
+
+## Пример
+
+После второго элемента начинается новая колонка, поэтому третий элемент переносится целиком.
+
+:::example {id="utilities/layout-break/break-after" label="Разрыв после элемента"}
+:::
 
 ## Синтаксис
 
@@ -58,7 +67,3 @@ tags: [break-after, sm, md, lg, xl]
 
 Таким образом, модификатор `break-after` обеспечивает гибкий контроль над разрывами после элементов, что упрощает
 настройку адаптивных макетов и многостраничных документов.
-## Пример
-:::example {id="utilities/layout-break/break-after" label="Результат"}
-:::
-

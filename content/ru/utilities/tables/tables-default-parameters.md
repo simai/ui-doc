@@ -6,6 +6,8 @@ tags: [table]
 
 # Параметры по умолчанию для таблиц
 
+:badge[table]{type=main scheme=on-surface size=1}
+
 Базовый класс `.table` задаёт стандартный внешний вид таблицы и использует токены темы:
 - `--sf-outline-variant` для границ,
 - `--sf-surface-transparent-select` для полос,
@@ -14,6 +16,5 @@ tags: [table]
 
 ## Пример
 
-:::example {id="utilities/tables/tables-default-parameters" label="Результат"}
+:::example {id="utilities/tables/tables-default-parameters" label="Параметры по умолчанию для таблиц"}
 :::
-

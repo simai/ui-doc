@@ -1,19 +1,26 @@
 ---
-title: "Сепия элемента (filter-sepia)"
+title: "Сепия элемента"
 description: "Сепия элемента (filter-sepia)"
 tags: [filter-sepia, hover]
 ---
 
-# Сепия элемента (filter-sepia)
+# Сепия элемента
+
+:badge[filter-sepia]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет отображать элемент с эффектом сепии, придавая ему теплый, коричневатый оттенок.
+
+## Наглядный пример
+
+:::example {id="utilities/filters/filter-sepia" label="Сепия элемента"}
+:::
 
 ## Классы и их значения
 
 | Класс       | Значение         |
 |:------------|:-----------------|
-| .sepia-none | filter: sepia(0) |
-| .sepia      | filter: sepia(1) |
+| `sepia-none` | filter: sepia(0) |
+| `sepia` | filter: sepia(1) |
 
 ## Описание
 
@@ -31,7 +38,3 @@ tags: [filter-sepia, hover]
 - Можно использовать `hover:sepia` для сепии при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/filters/filter-sepia" label="Результат"}
-:::
-

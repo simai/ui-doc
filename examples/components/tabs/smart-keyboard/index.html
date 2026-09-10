@@ -1,0 +1,14 @@
+<div class="grid gap-4">
+  <sf-tabs aria-label="Материалы проекта" items="Обзор|Недоступно::disabled|История">
+    <p slot="panel-0">Основные сведения о проекте. Переключайте вкладки стрелками или мышью.</p>
+    <p slot="panel-2">История изменений проекта.</p>
+  </sf-tabs>
+  <sf-tabs variant="icons" aria-label="Представление материалов" items="Обзор::icon=home|История::icon=history">
+    <p slot="panel-0">Обзор материалов.</p>
+    <p slot="panel-1">История материалов.</p>
+  </sf-tabs>
+  <sf-tabs type="vertical" aria-label="Параметры проекта" items="Данные|Доступ">
+    <p slot="panel-0">Основные данные проекта.</p>
+    <p slot="panel-1">Параметры доступа к проекту.</p>
+  </sf-tabs>
+</div>

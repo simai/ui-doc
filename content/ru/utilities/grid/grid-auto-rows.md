@@ -1,22 +1,29 @@
 ---
-title: "Автоматический размер строк сетки (grid-auto-rows)"
+title: "Автоматический размер строк сетки"
 description: "Автоматический размер строк сетки (grid-auto-rows)"
 tags: [grid-auto-rows, sm, md, lg, xl]
 ---
 
-# Автоматический размер строк сетки (grid-auto-rows)
+# Автоматический размер строк сетки
+
+:badge[grid-auto-rows]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять размером строк для тех, у которых явно не указаны размеры. Это
 позволяет гибко настраивать сетку, учитывая особенности содержимого.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-auto-rows" label="Автоматический размер строк сетки"}
+:::
 
 ## Таблица классов
 
 | Класс          | Значение                        |
 |:---------------|:--------------------------------|
-| .auto-rows     | grid-auto-rows: auto;           |
-| .auto-rows-min | grid-auto-rows: min-content;    |
-| .auto-rows-max | grid-auto-rows: max-content;    |
-| .auto-rows-fr  | grid-auto-rows: minmax(0, 1fr); |
+| `auto-rows` | `grid-auto-rows: auto;` |
+| `auto-rows-min` | `grid-auto-rows: min-content;` |
+| `auto-rows-max` | `grid-auto-rows: max-content;` |
+| `auto-rows-fr` | `grid-auto-rows: minmax(0, 1fr);` |
 
 ## Синтаксис
 
@@ -55,7 +62,3 @@ tags: [grid-auto-rows, sm, md, lg, xl]
     <!-- Начиная с md строки будут ориентироваться на минимальный размер содержимого -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-auto-rows" label="Результат"}
-:::
-

@@ -1,25 +1,32 @@
 ---
-title: "Контрастность элемента (filter-contrast)"
+title: "Контрастность элемента"
 description: "Контрастность элемента (filter-contrast)"
 tags: [filter-contrast, hover]
 ---
 
-# Контрастность элемента (filter-contrast)
+# Контрастность элемента
+
+:badge[filter-contrast]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять контрастностью элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/filters/filter-contrast" label="Контрастность элемента"}
+:::
 
 ## Классы и их значения
 
 | Класс         | Значение                |
 |:--------------|:------------------------|
-| .contrast-0   | filter: contrast(0);    |
-| .contrast-1/4 | filter: contrast(0.8);  |
-| .contrast-1/3 | filter: contrast(0.9);  |
-| .contrast-1/2 | filter: contrast(0.95); |
-| .contrast-1   | filter: contrast(1);    |
-| .contrast-2   | filter: contrast(1.05); |
-| .contrast-3   | filter: contrast(1.1);  |
-| .contrast-4   | filter: contrast(1.2);  |
+| `contrast-0` | `filter: contrast(0);` |
+| `contrast-1/4` | `filter: contrast(0.8);` |
+| `contrast-1/3` | `filter: contrast(0.9);` |
+| `contrast-1/2` | `filter: contrast(0.95);` |
+| `contrast-1` | `filter: contrast(1);` |
+| `contrast-2` | `filter: contrast(1.05);` |
+| `contrast-3` | `filter: contrast(1.1);` |
+| `contrast-4` | `filter: contrast(1.2);` |
 
 ## Описание
 
@@ -37,7 +44,3 @@ tags: [filter-contrast, hover]
 - `hover:contrast-*` — изменение контрастности при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/filters/filter-contrast" label="Результат"}
-:::
-

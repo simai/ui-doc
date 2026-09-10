@@ -6,23 +6,30 @@ tags: [overscroll-behavior]
 
 # Поведение при прокрутке
 
+:badge[overscroll-behavior]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов из пакета `overscroll-behavior` вы можете управлять поведением браузера при достижении границы
 области прокрутки элемента. Это позволяет контролировать возможность «прокрутки за пределы» контейнера и включать или
 отключать эффекты «отскока».
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/overscroll-behavior" label="Поведение при прокрутке"}
+:::
 
 ## Классы и их значения
 
 | Класс                  | Значение                        |
 |:-----------------------|:--------------------------------|
-| .scroll-over-auto      | overscroll-behavior: auto;      |
-| .scroll-over-contain   | overscroll-behavior: contain;   |
-| .scroll-over-none      | overscroll-behavior: none;      |
-| .scroll-over-x-auto    | overscroll-behavior-x: auto;    |
-| .scroll-over-y-auto    | overscroll-behavior-y: auto;    |
-| .scroll-over-x-contain | overscroll-behavior-x: contain; |
-| .scroll-over-y-contain | overscroll-behavior-y: contain; |
-| .scroll-over-x-none    | overscroll-behavior-x: none;    |
-| .scroll-over-y-none    | overscroll-behavior-y: none;    |
+| `scroll-over-auto` | `overscroll-behavior: auto;` |
+| `scroll-over-contain` | `overscroll-behavior: contain;` |
+| `scroll-over-none` | `overscroll-behavior: none;` |
+| `scroll-over-x-auto` | `overscroll-behavior-x: auto;` |
+| `scroll-over-y-auto` | `overscroll-behavior-y: auto;` |
+| `scroll-over-x-contain` | `overscroll-behavior-x: contain;` |
+| `scroll-over-y-contain` | `overscroll-behavior-y: contain;` |
+| `scroll-over-x-none` | `overscroll-behavior-x: none;` |
+| `scroll-over-y-none` | `overscroll-behavior-y: none;` |
 
 ## Описание
 
@@ -42,7 +49,3 @@ tags: [overscroll-behavior]
 ```
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/overscroll-behavior" label="Результат"}
-:::
-

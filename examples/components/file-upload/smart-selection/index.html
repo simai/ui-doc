@@ -1,0 +1,12 @@
+<div class="grid grid-col-1 gap-2">
+  <sf-file-upload link-text="Выберите документы" text="или перетащите их сюда" accept=".pdf,.doc,.docx" multiple aria-label="Выбрать документы"></sf-file-upload>
+  <output class="color-on-surface-variant" aria-live="polite">Файлы не выбраны</output>
+</div>
+<script>
+  customElements.whenDefined('sf-file-upload').then(() => {
+    const upload = document.querySelector('sf-file-upload');
+    upload.addEventListener('sf-file-upload:select', (event) => {
+      document.querySelector('output').value = `Выбрано файлов: ${event.detail.files.length}`;
+    });
+  });
+</script>

@@ -1,31 +1,38 @@
 ---
-title: "Размер заголовков (title-size)"
+title: "Размер заголовков"
 description: "Размер заголовков (title-size)"
 tags: [title]
 ---
 
-# Размер заголовков (title-size)
+# Размер заголовков
+
+:badge[title]{type=main scheme=on-surface size=1}
 
 Обновлённый набор модификаторов для заголовков использует различные наборы переменных для размера шрифта и для высоты
 строки. При этом для размера шрифта применяются переменные из системы текста, а для высоты строки используются
 переменные из системы заголовков.
 
+## Наглядный пример
+
+:::example {id="utilities/typography/title-size" label="Размер заголовков"}
+:::
+
 ## Таблица классов
 
 | Класс     | Свойства                                                          |
 |:----------|:--------------------------------------------------------------------------------------|
-| .title-1  | font-size: var(`--sf-text-size-1`);&lt;br/&gt; line-height: var(`--sf-title-height-1`);   |
-| .title-2  | font-size: var(`--sf-text-size-2`);&lt;br/&gt; line-height: var(`--sf-title-height-2`);   |
-| .title-3  | font-size: var(`--sf-text-size-3`);&lt;br/&gt; line-height: var(`--sf-title-height-3`);   |
-| .title-4  | font-size: var(`--sf-text-size-4`);&lt;br/&gt; line-height: var(`--sf-title-height-4`);   |
-| .title-5  | font-size: var(`--sf-text-size-5`);&lt;br/&gt; line-height: var(`--sf-title-height-5`);   |
-| .title-6  | font-size: var(`--sf-text-size-6`);&lt;br/&gt; line-height: var(`--sf-title-height-6`);   |
-| .title-7  | font-size: var(`--sf-text-size-7`);&lt;br/&gt; line-height: var(`--sf-title-height-7`);   |
-| .title-8  | font-size: var(`--sf-text-size-8`);&lt;br/&gt; line-height: var(`--sf-title-height-8`);   |
-| .title-9  | font-size: var(`--sf-text-size-9`);&lt;br/&gt; line-height: var(`--sf-title-height-9`);   |
-| .title-10 | font-size: var(`--sf-text-size-10`);&lt;br/&gt; line-height: var(`--sf-title-height-10`); |
-| .title-11 | font-size: var(`--sf-text-size-11`);&lt;br/&gt; line-height: var(`--sf-title-height-11`); |
-| .title-12 | font-size: var(`--sf-text-size-12`);&lt;br/&gt; line-height: var(`--sf-title-height-12`); |
+| `title-1` | `font-size: var(--sf-text-size-1);&lt;br/&gt; line-height: var(--sf-title-height-1);` |
+| `title-2` | `font-size: var(--sf-text-size-2);&lt;br/&gt; line-height: var(--sf-title-height-2);` |
+| `title-3` | `font-size: var(--sf-text-size-3);&lt;br/&gt; line-height: var(--sf-title-height-3);` |
+| `title-4` | `font-size: var(--sf-text-size-4);&lt;br/&gt; line-height: var(--sf-title-height-4);` |
+| `title-5` | `font-size: var(--sf-text-size-5);&lt;br/&gt; line-height: var(--sf-title-height-5);` |
+| `title-6` | `font-size: var(--sf-text-size-6);&lt;br/&gt; line-height: var(--sf-title-height-6);` |
+| `title-7` | `font-size: var(--sf-text-size-7);&lt;br/&gt; line-height: var(--sf-title-height-7);` |
+| `title-8` | `font-size: var(--sf-text-size-8);&lt;br/&gt; line-height: var(--sf-title-height-8);` |
+| `title-9` | `font-size: var(--sf-text-size-9);&lt;br/&gt; line-height: var(--sf-title-height-9);` |
+| `title-10` | `font-size: var(--sf-text-size-10);&lt;br/&gt; line-height: var(--sf-title-height-10);` |
+| `title-11` | `font-size: var(--sf-text-size-11);&lt;br/&gt; line-height: var(--sf-title-height-11);` |
+| `title-12` | `font-size: var(--sf-text-size-12);&lt;br/&gt; line-height: var(--sf-title-height-12);` |
 
 ## Пример использования
 
@@ -45,7 +52,3 @@ tags: [title]
 ```
 
 Таким образом, можно гибко управлять размерами заголовков для различных разрешений экрана.
-## Пример
-:::example {id="utilities/typography/title-size" label="Результат"}
-:::
-

@@ -1,50 +1,57 @@
 ---
-title: "Базисный размер (flex-basis)"
+title: "Базисный размер"
 description: "Базисный размер (flex-basis)"
 tags: [flex-basis, sm, md, lg, xl]
 ---
 
-# Базисный размер (flex-basis)
+# Базисный размер
+
+:badge[flex-basis]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать начальный размер флекс-элемента, определяя, сколько места он
 займёт до распределения оставшегося пространства.
+
+## Наглядный пример
+
+:::example {id="utilities/flex/flex-basis" label="Базисный размер"}
+:::
 
 ## Таблица классов
 
 | Класс                   | Значение                |
 |:------------------------|:------------------------|
-| .basis-auto  | flex-basis: auto;         |
-| .basis-full  | flex-basis: 100%;         |
-| .basis-1/1   | flex-basis: 100%;         |
-| .basis-1/2   | flex-basis: 50%;          |
-| .basis-1/3   | flex-basis: 33.333333%;   |
-| .basis-2/3   | flex-basis: 66.666667%;   |
-| .basis-1/4   | flex-basis: 25%;          |
-| .basis-2/4   | flex-basis: 50%;          |
-| .basis-3/4   | flex-basis: 75%;          |
-| .basis-1/5   | flex-basis: 20%;          |
-| .basis-2/5   | flex-basis: 40%;          |
-| .basis-3/5   | flex-basis: 60%;          |
-| .basis-4/5   | flex-basis: 80%;          |
-| .basis-1/6   | flex-basis: 16.666667%;   |
-| .basis-2/6   | flex-basis: 33.333333%;   |
-| .basis-3/6   | flex-basis: 50%;          |
-| .basis-4/6   | flex-basis: 66.666667%;   |
-| .basis-5/6   | flex-basis: 83.333333%;   |
-| .basis-1/12  | flex-basis: 8.333333%;    |
-| .basis-2/12  | flex-basis: 16.666667%;   |
-| .basis-3/12  | flex-basis: 25%;          |
-| .basis-4/12  | flex-basis: 33.333333%;   |
-| .basis-5/12  | flex-basis: 41.666667%;   |
-| .basis-6/12  | flex-basis: 50%;          |
-| .basis-7/12  | flex-basis: 58.333333%;   |
-| .basis-8/12  | flex-basis: 66.666667%;   |
-| .basis-9/12  | flex-basis: 75%;          |
-| .basis-10/12 | flex-basis: 83.333333%;   |
-| .basis-11/12 | flex-basis: 91.666667%;   |
-| .basis-px    | flex-basis: 1px;          |
-| .basis-0     | flex-basis: 0;            |
-| .basis-1 ... .basis-100 | flex-basis: {1..100}%; |
+| `basis-auto` | `flex-basis: auto;` |
+| `basis-full` | `flex-basis: 100%;` |
+| `basis-1/1` | `flex-basis: 100%;` |
+| `basis-1/2` | `flex-basis: 50%;` |
+| `basis-1/3` | `flex-basis: 33.333333%;` |
+| `basis-2/3` | `flex-basis: 66.666667%;` |
+| `basis-1/4` | `flex-basis: 25%;` |
+| `basis-2/4` | `flex-basis: 50%;` |
+| `basis-3/4` | `flex-basis: 75%;` |
+| `basis-1/5` | `flex-basis: 20%;` |
+| `basis-2/5` | `flex-basis: 40%;` |
+| `basis-3/5` | `flex-basis: 60%;` |
+| `basis-4/5` | `flex-basis: 80%;` |
+| `basis-1/6` | `flex-basis: 16.666667%;` |
+| `basis-2/6` | `flex-basis: 33.333333%;` |
+| `basis-3/6` | `flex-basis: 50%;` |
+| `basis-4/6` | `flex-basis: 66.666667%;` |
+| `basis-5/6` | `flex-basis: 83.333333%;` |
+| `basis-1/12` | `flex-basis: 8.333333%;` |
+| `basis-2/12` | `flex-basis: 16.666667%;` |
+| `basis-3/12` | `flex-basis: 25%;` |
+| `basis-4/12` | `flex-basis: 33.333333%;` |
+| `basis-5/12` | `flex-basis: 41.666667%;` |
+| `basis-6/12` | `flex-basis: 50%;` |
+| `basis-7/12` | `flex-basis: 58.333333%;` |
+| `basis-8/12` | `flex-basis: 66.666667%;` |
+| `basis-9/12` | `flex-basis: 75%;` |
+| `basis-10/12` | `flex-basis: 83.333333%;` |
+| `basis-11/12` | `flex-basis: 91.666667%;` |
+| `basis-px` | `flex-basis: 1px;` |
+| `basis-0` | `flex-basis: 0;` |
+| `basis-1 ... basis-100` | `flex-basis: {1..100}%;` |
 
 ## Синтаксис
 
@@ -81,7 +88,3 @@ tags: [flex-basis, sm, md, lg, xl]
     <!-- Начиная с md элемент будет иметь начальный размер 50% -->
 </div>
 ```
-## Пример
-:::example {id="utilities/flex/flex-basis" label="Результат"}
-:::
-

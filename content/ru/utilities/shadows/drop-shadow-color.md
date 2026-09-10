@@ -1,20 +1,27 @@
 ---
-title: "Цвет падающей тени (drop-shadow-color)"
+title: "Цвет падающей тени"
 description: "Цвет падающей тени (drop-shadow-color)"
 tags: [drop-shadow-color, hover]
 ---
 
-# Цвет падающей тени (drop-shadow-color)
+# Цвет падающей тени
+
+:badge[drop-shadow-color]{type=main scheme=on-surface size=1}
 
 Данные модификаторы позволяют задать цвет падающей тени элемента, используя роли (переменные), без адаптивности.
 Также можно изменять цвет при наведении с помощью `hover:drop-shadow-{color}`.
+
+## Наглядный пример
+
+:::example {id="utilities/shadows/drop-shadow-color" label="Цвет падающей тени"}
+:::
 
 ## Классы
 
 | Класс | Значение |
 |:------|:---------|
-| `.drop-shadow-{color}` | `--sf-shadow--color: var(--sf-{token})` |
-| `.hover:drop-shadow-{color}` | Аналогично, но только в состоянии `:hover` |
+| `drop-shadow-{color}` | `--sf-shadow--color: var(--sf-{token})` |
+| `hover:drop-shadow-{color}` | Аналогично, но только в состоянии `:hover` |
 | Поддерживаемые `color` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `on-surface`, `on-surface-variant` |
 | Также поддерживаются | `surface`, `surface-0`, `surface-1`, `surface-2`, `surface-3`, `surface-4`, `surface-container`, `surface-inverse`, `surface-inverse-fixed` |
 | Дополнительно | `primary-container`, `secondary-container`, `tertiary-container`, `error-container`, `warning-container`, `success-container`, `transparent`, `current` |
@@ -35,7 +42,3 @@ tags: [drop-shadow-color, hover]
 - `hover:drop-shadow-{color}` — цвет падающей тени в `:hover`.
 
 ## Пример использования
-
-:::example {id="utilities/shadows/drop-shadow-color" label="Результат"}
-:::
-

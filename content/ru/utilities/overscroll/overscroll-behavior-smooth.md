@@ -6,15 +6,22 @@ tags: [scroll-behavior]
 
 # Плавность прокрутки
 
+:badge[scroll-behavior]{type=main scheme=on-surface size=1}
+
 Модификаторы из пакета `scroll-behavior` позволяют управлять тем, будет ли прокрутка происходить скачкообразно или
 плавно.
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/overscroll-behavior-smooth" label="Плавность прокрутки"}
+:::
 
 ## Классы и их значения
 
 | Класс          | Значение                 |
 |:---------------|:-------------------------|
-| .scroll-auto   | scroll-behavior: auto;   |
-| .scroll-smooth | scroll-behavior: smooth; |
+| `scroll-auto` | `scroll-behavior: auto;` |
+| `scroll-smooth` | `scroll-behavior: smooth;` |
 
 ## Описание
 
@@ -34,7 +41,3 @@ tags: [scroll-behavior]
 ```
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/overscroll-behavior-smooth" label="Результат"}
-:::
-

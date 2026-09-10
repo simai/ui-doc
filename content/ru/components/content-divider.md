@@ -32,3 +32,11 @@ profile: reference
 
 :::example {id="components/content-divider/buttons" label="Результат"}
 :::
+
+## Вертикальная граница
+
+`sf-divider-vertical` разделяет соседние элементы по вертикали. Для явной
+семантики укажите `role="separator"` и `aria-orientation="vertical"`.
+
+:::example {id="components/content-divider/vertical" label="Результат"}
+:::

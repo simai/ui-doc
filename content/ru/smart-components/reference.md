@@ -11,7 +11,7 @@ description: "Полный source-backed справочник Smart Components S
 
 | Имя | Статус | Жизненный цикл | Loader |
 |:---|:---|:---|:---|
-| [admin-menu](/ru/smart-components/reference/admin-menu/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-admin-menu` |
+| [admin-menu](/ru/smart-components/reference/admin-menu/) · комплексный | доступен, но ещё не прошёл полную продуктовую приёмку | экспериментальный | `cl-admin-menu` |
 | [alert](/ru/smart-components/reference/alert/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-alert` |
 | [avatar](/ru/smart-components/reference/avatar/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-avatar` |
 | [avatars](/ru/smart-components/reference/avatars/) | доступен, но ещё не прошёл полную продуктовую приёмку | стабильный | `cl-avatars` |

@@ -6,16 +6,26 @@ tags: [transition-duration]
 
 # Продолжительность перехода
 
+:badge[transition-duration]{type=main scheme=on-surface size=1}
+
 С помощью данных модификаторов можно задать длительность переходов CSS-свойств. Это позволяет контролировать, насколько
 быстро или медленно будут воспроизводиться анимации при взаимодействии с элементом.
+
+## Наглядный пример
+
+Наведите указатель на кнопки или перейдите к ним клавиатурой: расстояние
+одинаковое, меняется только продолжительность перехода.
+
+:::example {id="utilities/animation/animation-transition-duration" label="Продолжительность перехода"}
+:::
 
 ## Классы и их значения
 
 | Класс            | Значение                                             |
 |:-----------------|:-------------------------------------------------------------------------|
-| .duration-fast            | transition-duration: var(`--sf-duration-fast`); *(по умолчанию 100ms)*   |
-| .duration-normal | transition-duration: var(`--sf-duration-normal`); *(по умолчанию 300ms)* |
-| .duration-slow            | transition-duration: var(`--sf-duration-slow`); *(по умолчанию 500ms)*   |
+| `duration-fast` | transition-duration: var(`--sf-duration-fast`); *(по умолчанию 100ms)*   |
+| `duration-normal` | transition-duration: var(`--sf-duration-normal`); *(по умолчанию 300ms)* |
+| `duration-slow` | transition-duration: var(`--sf-duration-slow`); *(по умолчанию 500ms)*   |
 
 ## Описание
 

@@ -1,22 +1,29 @@
 ---
-title: "Выравнивание каждого элемента по основной оси внутри ячейки (justify-items)"
+title: "Выравнивание каждого элемента по основной оси внутри ячейки"
 description: "Выравнивание каждого элемента по основной оси внутри ячейки (justify-items)"
 tags: [justify-items, sm, md, lg, xl]
 ---
 
-# Выравнивание каждого элемента по основной оси внутри ячейки (justify-items)
+# Выравнивание каждого элемента по основной оси внутри ячейки
+
+:badge[justify-items]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данный модификатор определяет, как элементы внутри каждой ячейки сетки или флекс-контейнера будут выравниваться по
 основной оси.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/justify-items" label="Выравнивание каждого элемента по основной оси внутри ячейки"}
+:::
 
 ## Таблица классов
 
 | Класс               | Значение                |
 |:--------------------|:------------------------|
-| .items-main-start   | justify-items: start;   |
-| .items-main-end     | justify-items: end;     |
-| .items-main-center  | justify-items: center;  |
-| .items-main-stretch | justify-items: stretch; |
+| `items-main-start` | `justify-items: start;` |
+| `items-main-end` | `justify-items: end;` |
+| `items-main-center` | `justify-items: center;` |
+| `items-main-stretch` | `justify-items: stretch;` |
 
 ## Синтаксис
 
@@ -54,7 +61,3 @@ tags: [justify-items, sm, md, lg, xl]
     <!-- Начиная с md каждый элемент выравнивается по началу ячейки относительно основной оси -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/justify-items" label="Результат"}
-:::
-

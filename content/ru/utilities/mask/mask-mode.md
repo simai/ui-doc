@@ -6,16 +6,23 @@ tags: [mask-mode]
 
 # Режим маски
 
+:badge[mask-mode]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов режима маски можно указать, каким образом будет накладываться маска: через альфа-канал или по
 яркости, либо автоматически соответствует источнику.
+
+## Наглядный пример
+
+:::example {id="utilities/mask/mask-mode" label="Режим маски"}
+:::
 
 ## Таблица классов
 
 | Класс           | Значение                 |
 |:----------------|:-------------------------|
-| .mask-alpha     | mask-mode: alpha;        |
-| .mask-luminance | mask-mode: luminance;    |
-| .mask-source    | mask-mode: match-source; |
+| `mask-alpha` | `mask-mode: alpha;` |
+| `mask-luminance` | `mask-mode: luminance;` |
+| `mask-source` | `mask-mode: match-source;` |
 
 ## Описание
 
@@ -26,7 +33,3 @@ tags: [mask-mode]
 - **mask-source** – режим маски соответствует источнику (браузер сам определяет, какой использовать метод).
 
 ## Примеры использования
-
-:::example {id="utilities/mask/mask-mode" label="Результат"}
-:::
-

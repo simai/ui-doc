@@ -1,23 +1,30 @@
 ---
-title: "Выравнивание отдельного элемента в ячейке по основной оси (justify-self)"
+title: "Выравнивание отдельного элемента в ячейке по основной оси"
 description: "Выравнивание отдельного элемента в ячейке по основной оси (justify-self)"
 tags: [justify-self, sm, md, lg, xl]
 ---
 
-# Выравнивание отдельного элемента в ячейке по основной оси (justify-self)
+# Выравнивание отдельного элемента в ячейке по основной оси
+
+:badge[justify-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы определяют, как отдельный элемент будет выравниваться по основной оси внутри своей ячейки сетки или
 флекс-контейнера.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/justify-self" label="Выравнивание отдельного элемента в ячейке по основной оси"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение               |
 |:-------------------|:-----------------------|
-| .self-main-auto    | justify-self: auto;    |
-| .self-main-start   | justify-self: start;   |
-| .self-main-end     | justify-self: end;     |
-| .self-main-center  | justify-self: center;  |
-| .self-main-stretch | justify-self: stretch; |
+| `self-main-auto` | `justify-self: auto;` |
+| `self-main-start` | `justify-self: start;` |
+| `self-main-end` | `justify-self: end;` |
+| `self-main-center` | `justify-self: center;` |
+| `self-main-stretch` | `justify-self: stretch;` |
 
 ## Синтаксис
 
@@ -36,7 +43,3 @@ tags: [justify-self, sm, md, lg, xl]
     - `self-main-stretch` – элемент растягивается на всю доступную длину ячейки по основной оси.
 
 ## Пример использования
-
-:::example {id="utilities/grid-and-flexbox-utilities/justify-self" label="Результат"}
-:::
-

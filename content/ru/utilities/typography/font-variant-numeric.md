@@ -1,26 +1,33 @@
 ---
-title: "Начертание цифр (font-variant-numeric)"
+title: "Начертание цифр"
 description: "Начертание цифр (font-variant-numeric)"
 tags: [font-variant-numeric]
 ---
 
-# Начертание цифр (font-variant-numeric)
+# Начертание цифр
+
+:badge[font-variant-numeric]{type=main scheme=on-surface size=1}
 
 Модификаторы начертания цифр позволяют изменить отображение чисел и некоторых их особенностей (например, дробей).
+
+## Наглядный пример
+
+:::example {id="utilities/typography/font-variant-numeric" label="Начертание цифр"}
+:::
 
 ## Таблица классов
 
 | Класс                   | Значение              |
 |:------------------------|:------------------------------------------|
-| .num-normal             | font-variant-numeric: normal;             |
-| .num-ordinal            | font-variant-numeric: ordinal;            |
-| .num-slashed-zero       | font-variant-numeric: slashed-zero;       |
-| .num-lining             | font-variant-numeric: lining-nums;        |
-| .num-oldstyle           | font-variant-numeric: oldstyle-nums;      |
-| .num-proportional       | font-variant-numeric: proportional-nums;  |
-| .num-tabular            | font-variant-numeric: tabular-nums;       |
-| .num-diagonal | font-variant-numeric: diagonal-fractions; |
-| .num-stacked-fractions  | font-variant-numeric: stacked-fractions;  |
+| `num-normal` | `font-variant-numeric: normal;` |
+| `num-ordinal` | `font-variant-numeric: ordinal;` |
+| `num-slashed-zero` | `font-variant-numeric: slashed-zero;` |
+| `num-lining` | `font-variant-numeric: lining-nums;` |
+| `num-oldstyle` | `font-variant-numeric: oldstyle-nums;` |
+| `num-proportional` | `font-variant-numeric: proportional-nums;` |
+| `num-tabular` | `font-variant-numeric: tabular-nums;` |
+| `num-diagonal` | `font-variant-numeric: diagonal-fractions;` |
+| `num-stacked-fractions` | `font-variant-numeric: stacked-fractions;` |
 
 ## Пример использования
 
@@ -87,7 +94,3 @@ tags: [font-variant-numeric]
 ```html
 <p class="num-stacked-fractions">1/2 3/4 5/6</p>
 ```
-## Пример
-:::example {id="utilities/typography/font-variant-numeric" label="Результат"}
-:::
-

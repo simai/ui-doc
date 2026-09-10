@@ -1,21 +1,28 @@
 ---
-title: "Размытие элемента (filter-blur)"
+title: "Размытие элемента"
 description: "Размытие элемента (filter-blur)"
 tags: [filter-blur, hover]
 ---
 
-# Размытие элемента (filter-blur)
+# Размытие элемента
+
+:badge[filter-blur]{type=main scheme=on-surface size=1}
 
 Данные модификаторы позволяют задавать различную степень размытия элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/filters/filter-blur" label="Размытие элемента"}
+:::
 
 ## Классы
 
 | Класс               | Значение           |
 |:--------------------|:---------------------------------------|
-| .blur-none          | filter: blur(0);                       |
-| .blur-small         | filter: blur(var(`--sf-blur-small`));  |
-| .blur, .blur-medium | filter: blur(var(`--sf-blur-medium`)); |
-| .blur-large         | filter: blur(var(`--sf-blur-large`));  |
+| `blur-none` | `filter: blur(0);` |
+| `blur-small` | `filter: blur(var(--sf-blur-small));` |
+| `blur, blur-medium` | `filter: blur(var(--sf-blur-medium));` |
+| `blur-large` | `filter: blur(var(--sf-blur-large));` |
 
 ## Переменные
 
@@ -46,7 +53,3 @@ tags: [filter-blur, hover]
 Для изменения степени размытия при наведении можно использовать `hover:blur-*`.
 
 ## Пример использования
-
-:::example {id="utilities/filters/filter-blur" label="Результат"}
-:::
-

@@ -1,32 +1,38 @@
 ---
-title: "Толщина шрифта (font-weight)"
+title: "Толщина шрифта"
 description: "Толщина шрифта (font-weight)"
 tags: [font-weight, sm, md, lg, xl, hover]
 ---
 
-# Толщина шрифта (font-weight)
+# Толщина шрифта
+
+:badge[font-weight]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы для управления толщиной шрифта позволяют задать нужное начертание в диапазоне от очень тонкого (100) до
 очень жирного (900).
+
+## Наглядный пример
+
+:::example {id="utilities/typography/font-weight" label="Толщина шрифта"}
+:::
 
 ## Таблица классов
 
 | Класс     | Значение                   |
 |:----------|:---------------------------|
-| .regular  | font-weight: normal; (400) |
-| .bold     | font-weight: bold; (700)   |
-| .lighter  | font-weight: lighter;      |
-| .bolder   | font-weight: bolder;       |
-| .weight-1 | font-weight: 100;          |
-| .weight-2 | font-weight: 200;          |
-| .weight-3 | font-weight: 300;          |
-| .weight-4 | font-weight: 400;          |
-| .weight-5 | font-weight: 500;          |
-| .weight-6 | font-weight: 600;          |
-| .weight-7 | font-weight: 700;          |
-| .weight-8 | font-weight: 800;          |
-| .weight-9 | font-weight: 900;          |
-
+| `regular` | font-weight: normal; (400) |
+| `bold` | font-weight: bold; (700)   |
+| `lighter` | `font-weight: lighter;` |
+| `bolder` | `font-weight: bolder;` |
+| `weight-1` | `font-weight: 100;` |
+| `weight-2` | `font-weight: 200;` |
+| `weight-3` | `font-weight: 300;` |
+| `weight-4` | `font-weight: 400;` |
+| `weight-5` | `font-weight: 500;` |
+| `weight-6` | `font-weight: 600;` |
+| `weight-7` | `font-weight: 700;` |
+| `weight-8` | `font-weight: 800;` |
+| `weight-9` | `font-weight: 900;` |
 
 ## Пример использования
 
@@ -49,7 +55,3 @@ tags: [font-weight, sm, md, lg, xl, hover]
   Текст будет полужирным на экранах размером Medium и больше.
 </p>
 ```
-## Пример
-:::example {id="utilities/typography/font-weight" label="Результат"}
-:::
-

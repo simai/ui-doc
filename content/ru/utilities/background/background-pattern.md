@@ -6,22 +6,29 @@ tags: [pattern, sm, md, lg, xl]
 
 # Паттерн фона
 
+:badge[pattern]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов паттернов фона (`pattern-{номер}`) вы можете задать повторяющийся узор в качестве фонового
 изображения. Каждый паттерн задаётся встроенным (inline) SVG-кодом, который не требует дополнительных ресурсов.
+
+## Наглядный пример
+
+:::example {id="utilities/background/background-pattern" label="Паттерн фона"}
+:::
 
 ## Таблица классов
 
 | Класс      | Значение                                                                                                                                                                                                                                                                                                                            |
 |:-----------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| .pattern-1 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='1' height='2'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
-| .pattern-2 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='2' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
-| .pattern-3 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
-| .pattern-4 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='1' width='1' height='1' /&gt;&lt;rect x='1' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                      |
-| .pattern-5 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='1' height='1' /&gt;&lt;rect x='1' y='1' width='1' height='1' /&gt;&lt;rect x='2' y='2' width='1' height='1' /&gt;&lt;rect x='3' y='1' width='1' height='1' /&gt;&lt;rect x='1' y='3' width='1' height='1' /&gt;&lt;rect x='3' y='3' width='1' height='1' /&gt;&lt;/svg&gt;); |
-| .pattern-6 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='1' height='1' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
-| .pattern-7 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='2' height='2' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
-| .pattern-8 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='1'/&gt;&lt;rect x='0' y='2' width='3' height='1'/&gt;&lt;rect x='0' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                             |
-| .pattern-9 | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='3' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
+| `pattern-1` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='1' height='2'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
+| `pattern-2` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='2' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
+| `pattern-3` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
+| `pattern-4` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='1' width='1' height='1' /&gt;&lt;rect x='1' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                      |
+| `pattern-5` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='1' height='1' /&gt;&lt;rect x='1' y='1' width='1' height='1' /&gt;&lt;rect x='2' y='2' width='1' height='1' /&gt;&lt;rect x='3' y='1' width='1' height='1' /&gt;&lt;rect x='1' y='3' width='1' height='1' /&gt;&lt;rect x='3' y='3' width='1' height='1' /&gt;&lt;/svg&gt;); |
+| `pattern-6` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='1' height='1' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
+| `pattern-7` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='2' height='2' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
+| `pattern-8` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='1'/&gt;&lt;rect x='0' y='2' width='3' height='1'/&gt;&lt;rect x='0' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                             |
+| `pattern-9` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='3' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
 
 ## Описание
 
@@ -59,7 +66,3 @@ tags: [pattern, sm, md, lg, xl]
 
 Для изменения паттерна фона, начиная с определенного размера экрана, добавьте префикс контрольной точки. Например,
 `md:pattern-2` применит паттерн №2 только на экранах от размера Medium и больше.
-## Пример
-:::example {id="utilities/background/background-pattern" label="Результат"}
-:::
-

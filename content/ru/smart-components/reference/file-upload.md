@@ -1,81 +1,68 @@
 ---
-title: "File Upload"
-description: "API и runtime-контракт Smart-компонента file-upload в SIMAI Framework 5.4.0."
+title: "Smart-загрузка файлов"
+description: "Управляемый выбор файлов со списком, прогрессом и состояниями передачи."
+profile: reference
 ---
 
-# File Upload
+# Smart-загрузка файлов
 
-Идентификатор: `smart.file-upload`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+`<sf-file-upload>` создаёт зону выбора из атрибутов или данных JavaScript и
+использует оформление и поведение обычного компонента «Загрузка файлов».
 
-## Теги и подключение
+## Пример
 
-Custom Elements: `<sf-file-upload>`.
+:::example {id="components/file-upload/smart-overview" label="Результат"}
+:::
 
-Loader-статус: `registered`. Loader-правило: `cl-file-upload`.
+## Особенности применения
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/file-upload/js/file-upload.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/file-upload/template/default.js`
+Smart-компонент не загружает файлы и не добавляет их в нативный `FormData`.
+Читайте сохранённые объекты `File` через `getItems()` или обработчики
+`onFileAdd()` и `sf-file-upload:select`, проверяйте их в приложении и передавайте
+своим транспортом. `accept` управляет подсказкой системного окна, а `multiple`
+разрешает выбрать несколько файлов; серверная проверка остаётся обязательной.
 
-## Зависимости
+## Выбор файлов
 
-- `component.featured-icon`
-- `component.file-upload`
-- `component.icon-buttons`
-- `smart.progress-bar`
+Тексты зоны задаются атрибутами `link-text`, `text` и `supporting-text`.
+Если `supporting-text` не указан, компонент выводит `formats`, а при его
+отсутствии формирует подпись из `accept`. Иконку можно заменить атрибутом
+`icon`; нейтральное значение по умолчанию — `upload_file`.
 
-## Атрибуты и свойства
+:::example {id="components/file-upload/smart-selection" label="Результат"}
+:::
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `['1/3', '1/2', '1', '2', '3']` |
-| `icon` | `icon` | `String` | `'error'` | `—` |
-| `link-text` | `linkText` | `String` | `'Click to upload'` | `—` |
-| `text` | `text` | `String` | `'or drag and drop'` | `—` |
-| `formats` | `formats` | `String` | `''` | `—` |
-| `supporting-text` | `supportingText` | `String` | `''` | `—` |
-| `accept` | `accept` | `String` | `''` | `—` |
-| `multiple` | `multiple` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `''` | `—` |
+## Размеры
 
-Общие атрибуты базового Smart-элемента:
+Атрибут `size` принимает `1/3`, `1/2`, `1`, `2` и `3`. Размер меняет зону
+выбора и строки файлов как единую композицию, используя токены Framework.
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+:::example {id="components/file-upload/smart-sizes" label="Результат"}
+:::
 
-## Методы
+## Состояния и действия
 
-`beforeRender()`, `clear()`, `get accept()`, `get ariaLabel()`, `get componentName()`, `get disabled()`, `get formats()`, `get icon()`, `get items()`, `get linkText()`, `get multiple()`, `get size()`, `get state()`, `get supportingText()`, `get templateName()`, `get text()`, `getItems()`, `onComplete()`, `onFileAdd()`, `onFileComplete()`, `onFileError()`, `onFileRemove()`, `onFileRetry()`, `removeItem()`, `set items()`, `setItems()`, `setState()`, `syncRuntimeItems()`, `teardownRuntime()`.
+`setItems()` принимает элементы с именем, размером, прогрессом и состоянием
+`process`, `done` или `error`. Методы `removeItem()` и `clear()` управляют
+локальным списком. Действия пользователя отправляют события удаления и повтора,
+но не вмешиваются в запрос приложения.
 
-## События
+:::example {id="components/file-upload/smart-states" label="Результат"}
+:::
 
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
+## Недоступное состояние
 
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
+Атрибут `disabled` отключает системный выбор и перенос файлов, сохраняет список
+и синхронизирует доступность вложенных действий.
 
-## Минимальная разметка
+:::example {id="components/file-upload/smart-disabled" label="Результат"}
+:::
 
-```html
-<sf-file-upload></sf-file-upload>
-```
+## Оформление
 
-## Доступность
+`root-class` добавляет корню обычные утилиты Framework. Так можно менять
+поверхность, отступы и радиус зоны без копирования внутренних классов и без
+абсолютных CSS-размеров. Вложенные кнопки сохраняют системный UI-радиус.
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
-
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/file-upload`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-file-upload`
+:::example {id="components/file-upload/smart-customization" label="Результат"}
+:::

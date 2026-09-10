@@ -1,0 +1,7 @@
+{
+    "schema": "docara.section.v1",
+    "title": "Разрыв макета",
+    "navigation": {
+        "order": 20
+    }
+}

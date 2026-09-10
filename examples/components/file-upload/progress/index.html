@@ -1,5 +1,11 @@
-<div class="grid grid-col-1 gap-2">
-  <div class="sf-upload-progress sf-upload-progress--size-1 sf-upload-progress--process flex items-main-start items-cross-start"><i class="sf-icon" aria-hidden="true">cloud_upload</i><div class="sf-upload-progress-content flex flex-col"><div class="sf-upload-progress-top flex"><div class="sf-upload-progress-left flex flex-col"><span class="sf-upload-progress-name">presentation.pdf</span><span class="sf-upload-progress-text">2,4 МБ · 65%</span></div></div></div></div>
-  <div class="sf-upload-progress sf-upload-progress--size-1 sf-upload-progress--done flex items-main-start items-cross-start"><i class="sf-icon" aria-hidden="true">check_circle</i><div class="sf-upload-progress-content flex flex-col"><div class="sf-upload-progress-top flex"><div class="sf-upload-progress-left flex flex-col"><span class="sf-upload-progress-name">logo.svg</span><span class="sf-upload-progress-text">84 КБ · загружен</span></div></div></div></div>
-  <div class="sf-upload-progress sf-upload-progress--size-1 sf-upload-progress--error flex items-main-start items-cross-start"><i class="sf-icon" aria-hidden="true">error</i><div class="sf-upload-progress-content flex flex-col"><div class="sf-upload-progress-top flex"><div class="sf-upload-progress-left flex flex-col"><span class="sf-upload-progress-name">archive.zip</span><span class="sf-upload-progress-text">Не удалось загрузить</span></div></div><button class="sf-upload-progress-repeat" type="button">Повторить</button></div></div>
-</div>
+<div class="sf-file-upload sf-file-upload--size-1 flex flex-col items-cross-center" aria-label="Добавить ещё файлы"><span class="sf-file-upload-link">Добавить файлы</span></div>
+<div class="sf-file-upload-files grid grid-col-1 gap-1 w-full"></div>
+<script>
+  addEventListener('docara:example-ready', () => {
+    SF.FileUpload.setItems(document.querySelector('.sf-file-upload'), [
+      { name: 'presentation.pdf', fileSize: '2,4 МБ', progress: 65, state: 'process' },
+      { name: 'logo.svg', fileSize: '84 КБ', progress: 100, state: 'done' },
+      { name: 'archive.zip', fileSize: '8,1 МБ', state: 'error', errorMessage: 'Повторить' },
+    ]);
+  }, { once: true });
+</script>

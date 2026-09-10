@@ -1,25 +1,32 @@
 ---
-title: "Яркость фона элемента (backdrop-brightness)"
+title: "Яркость фона элемента"
 description: "Яркость фона элемента (backdrop-brightness)"
 tags: [backdrop-filter-brightness, hover]
 ---
 
-# Яркость фона элемента (backdrop-brightness)
+# Яркость фона элемента
+
+:badge[backdrop-filter-brightness]{type=main scheme=on-surface size=1}
 
 Утилита управляет яркостью фона за элементом через `backdrop-filter`.
+
+## Наглядный пример
+
+:::example {id="utilities/backdrop-filter/backdrop-brightness" label="Яркость фона элемента"}
+:::
 
 ## Классы и их значения
 
 | Класс                    | Значение                          |
 |:-------------------------|:----------------------------------|
-| `.backdrop-brightness-0`   | `backdrop-filter: brightness(0)`    |
-| `.backdrop-brightness-1/4` | `backdrop-filter: brightness(0.8)`  |
-| `.backdrop-brightness-1/3` | `backdrop-filter: brightness(0.9)`  |
-| `.backdrop-brightness-1/2` | `backdrop-filter: brightness(0.95)` |
-| `.backdrop-brightness-1`   | `backdrop-filter: brightness(1)`    |
-| `.backdrop-brightness-2`   | `backdrop-filter: brightness(1.05)` |
-| `.backdrop-brightness-3`   | `backdrop-filter: brightness(1.1)`  |
-| `.backdrop-brightness-4`   | `backdrop-filter: brightness(1.2)`  |
+| `backdrop-brightness-0` | `backdrop-filter: brightness(0)`    |
+| `backdrop-brightness-1/4` | `backdrop-filter: brightness(0.8)`  |
+| `backdrop-brightness-1/3` | `backdrop-filter: brightness(0.9)`  |
+| `backdrop-brightness-1/2` | `backdrop-filter: brightness(0.95)` |
+| `backdrop-brightness-1` | `backdrop-filter: brightness(1)`    |
+| `backdrop-brightness-2` | `backdrop-filter: brightness(1.05)` |
+| `backdrop-brightness-3` | `backdrop-filter: brightness(1.1)`  |
+| `backdrop-brightness-4` | `backdrop-filter: brightness(1.2)`  |
 
 ## Описание
 
@@ -41,7 +48,3 @@ tags: [backdrop-filter-brightness, hover]
   `backdrop-brightness-{0|1/4|1/3|1/2|1|2|3|4}`
 
 ## Пример использования
-
-:::example {id="utilities/backdrop-filter/backdrop-brightness" label="Результат"}
-:::
-

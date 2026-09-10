@@ -6,20 +6,27 @@ tags: [mask-origin]
 
 # Вложение маски
 
+:badge[mask-origin]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов вложения маски можно указать, относительно какого элемента или области будет рассчитываться
 позиция маски.
+
+## Наглядный пример
+
+:::example {id="utilities/mask/mask-origin" label="Вложение маски"}
+:::
 
 ## Таблица классов
 
 | Класс                | Значение                  |
 |:---------------------|:--------------------------|
-| .mask-origin-content | mask-origin: content-box; |
-| .mask-origin-padding | mask-origin: padding-box; |
-| .mask-origin-margin  | mask-origin: margin-box;  |
-| .mask-origin-border  | mask-origin: border-box;  |
-| .mask-origin-fill    | mask-origin: fill-box;    |
-| .mask-origin-stroke  | mask-origin: stroke-box;  |
-| .mask-origin-viewbox | mask-origin: view-box;    |
+| `mask-origin-content` | `mask-origin: content-box;` |
+| `mask-origin-padding` | `mask-origin: padding-box;` |
+| `mask-origin-margin` | `mask-origin: margin-box;` |
+| `mask-origin-border` | `mask-origin: border-box;` |
+| `mask-origin-fill` | `mask-origin: fill-box;` |
+| `mask-origin-stroke` | `mask-origin: stroke-box;` |
+| `mask-origin-viewbox` | `mask-origin: view-box;` |
 
 ## Описание
 
@@ -34,7 +41,3 @@ tags: [mask-origin]
 - **mask-origin-viewbox** – маска относительно view-box SVG-элемента.
 
 ## Примеры использования
-
-:::example {id="utilities/mask/mask-origin" label="Результат"}
-:::
-

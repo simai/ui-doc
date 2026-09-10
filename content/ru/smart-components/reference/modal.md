@@ -1,106 +1,101 @@
 ---
-title: "Modal"
-description: "API и runtime-контракт Smart-компонента modal в SIMAI Framework 5.4.0."
+title: "Модальное окно"
+description: "Фокусированная задача в отдельном Smart-слое с управлением фокусом, стеком и содержимым."
+profile: reference
 ---
 
-# Modal
+# Модальное окно
 
-Идентификатор: `smart.modal`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+`<sf-modal>` показывает одну ограниченную задачу поверх страницы. Компонент
+управляет верхним слоем, клавиатурной границей, блокировкой страницы и возвратом
+фокуса; приложение отвечает за смысл действий и данные внутри.
 
-## Теги и подключение
+## Пример
 
-Custom Elements: `<sf-modal>`.
+Открывающее действие связывается с окном через короткий
+`data-sf-modal-open`. Кнопки внутри закрывают конкретный экземпляр через
+`data-sf-modal-close`.
 
-Loader-статус: `registered`. Loader-правило: `cl-modal`.
+:::example {id="components/modal/smart-overview" label="Результат"}
+:::
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/modal/js/modal.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/modal/template/default.js`
+## Особенности применения
 
-## Зависимости
+Используйте Modal для подтверждения, короткой формы или подробностей, после
+которых пользователь возвращается к прежнему контексту. Самостоятельный долгий
+процесс лучше открыть отдельной страницей. Заголовок либо `aria-label` обязан
+давать окну доступное имя.
 
-- `component.icon-buttons`
-- `component.modal`
+По умолчанию окно закрывается по Escape, клику по затемнению и кнопке Close.
+`unclose` отключает эти пути для обязательного решения; в таком сценарии внутри
+всегда должны оставаться понятные доступные действия. При нескольких окнах
+только верхнее владеет Escape, Tab и блокировкой страницы.
 
-## Атрибуты и свойства
+Поверхность использует системный радиус крупных блоков
+`--sf-radius-default`. Close и Minimize — компактные Icon Button и наследуют
+отдельный `--sf-radius--ui`. Отступы, размеры и движение меняйте токенами либо
+предусмотренными Framework utilities.
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `"default"` | `—` |
-| `modal-id` | `modalId` | `String` | `""` | `—` |
-| `title` | `title` | `String` | `"Modal"` | `—` |
-| `text` | `text` | `String` | `""` | `—` |
-| `open` | `open` | `Boolean` | `false` | `—` |
-| `autoload` | `autoload` | `Boolean` | `false` | `—` |
-| `unclose` | `unclose` | `Boolean` | `false` | `—` |
-| `hide` | `hide` | `Boolean` | `false` | `—` |
-| `hide-modifier` | `hideModifier` | `String` | `""` | `—` |
-| `minimized` | `minimized` | `Boolean` | `false` | `—` |
-| `overlay` | `overlay` | `Boolean` | `true` | `—` |
-| `show-header` | `showHeader` | `Boolean` | `true` | `—` |
-| `show-close` | `showClose` | `Boolean` | `true` | `—` |
-| `show-footer` | `showFooter` | `Boolean` | `true` | `—` |
-| `close-on-esc` | `closeOnEsc` | `Boolean` | `true` | `—` |
-| `close-on-overlay` | `closeOnOverlay` | `Boolean` | `true` | `—` |
-| `preserve-scroll-gap` | `preserveScrollGap` | `Boolean` | `true` | `—` |
-| `position` | `position` | `String` | `"center"` | `["center", "left", "right", "inline-start", "inline-end", "top", "bottom"]` |
-| `mode` | `mode` | `String` | `"inline"` | `["inline", "ajax", "iframe"]` |
-| `display` | `display` | `String` | `"modal"` | `["modal", "inline"]` |
-| `src` | `src` | `String` | `""` | `—` |
-| `root-class` | `rootClass` | `String` | `""` | `—` |
-| `preload` | `preload` | `Boolean` | `true` | `—` |
-| `fullscreen` | `fullscreen` | `Boolean` | `false` | `—` |
-| `width` | `width` | `String` | `""` | `—` |
-| `height` | `height` | `String` | `""` | `—` |
-| `blur` | `blur` | `String` | `""` | `—` |
-| `blur-type` | `blurType` | `String` | `"medium"` | `["none", "small", "medium", "large"]` |
-| `overlay-preset` | `overlayPreset` | `String` | `"default"` | `["default", "focus"]` |
-| `overlay-class` | `overlayClass` | `String` | `""` | `—` |
-| `close-class` | `closeClass` | `String` | `""` | `—` |
-| `surface-class` | `surfaceClass` | `String` | `""` | `—` |
-| `surface-padding` | `surfacePadding` | `String` | `""` | `—` |
-| `panel-class` | `panelClass` | `String` | `""` | `—` |
-| `header-class` | `headerClass` | `String` | `""` | `—` |
-| `body-class` | `bodyClass` | `String` | `""` | `—` |
-| `content-class` | `contentClass` | `String` | `""` | `—` |
-| `footer-class` | `footerClass` | `String` | `""` | `—` |
+## Положение
 
-Общие атрибуты базового Smart-элемента:
+`center`, `inline-start`, `inline-end`, `top` и `bottom` меняют положение, но
+не поведение окна. Логические направления автоматически учитывают LTR и RTL;
+физические `left` и `right` остаются только совместимыми aliases.
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+:::example {id="components/modal/smart-positions" label="Результат"}
+:::
 
-## Методы
+## Затемнение и полноэкранный режим
 
-`abortRemoteContent()`, `applyStackPosition()`, `assignSlotEventIds()`, `attributeChangedCallback()`, `bindRenderedEvents()`, `bindSlotEventHandlers()`, `cancelCloseTransition()`, `cleanNestedSmartComponentRender()`, `clearPortal()`, `close()`, `connectedCallback()`, `dedupePortalRoots()`, `disconnectedCallback()`, `emitAfterClose()`, `emitAfterHide()`, `emitAfterOpen()`, `emitAfterShow()`, `emitBeforeClose()`, `emitBeforeHide()`, `emitBeforeOpen()`, `emitBeforeShow()`, `emitContentEvent()`, `emitModalEvent()`, `finishClose()`, `focusFirst()`, `get autoload()`, `get blur()`, `get blurType()`, `get bodyClass()`, `get closeClass()`, `get closeOnEsc()`, `get closeOnOverlay()`, `get contentClass()`, `get display()`, `get footerClass()`, `get fullscreen()`, `get hasCustomBlurType()`, `get headerClass()`, `get height()`, `get hiddenState()`, `get hideButton()`, `get hideModifier()`, `get modalId()`, `get modalRoot()`, `get modalZIndex()`, `get mode()`, `get openState()`, `get overlay()`, `get overlayClass()`, `get overlayPreset()`, `get panelClass()`, `get position()`, `get preload()`, `get preserveScrollGap()`, `get remoteContent()`, `get renderModalState()`, `get renderOpenState()`, `get showClose()`, `get showFooter()`, `get showHeader()`, `get src()`, `get state()`, `get surfaceClass()`, `get surfacePadding()`, `get templateName()`, `get text()`, `get title()`, `get unclose()`, `get width()`, `getModalRoot()`, `getSlotHtml()`, `handleCloseClick()`, `handleHideClick()`, `handleOverlayClick()`, `hide()`, `loadAjaxContent()`, `loadRemoteContentIfNeeded()`, `onAfterClose()`, `onAfterHide()`, `onAfterOpen()`, `onAfterShow()`, `onBeforeClose()`, `onBeforeHide()`, `onBeforeOpen()`, `onBeforeShow()`, `onKeyDown()`, `onModalReady()`, `onModalUpdate()`, `open()`, `reloadContent()`, `renderComponent()`, `resetRemoteContent()`, `resolvePortalRoot()`, `resolveRenderTarget()`, `setSrc()`, `show()`, `syncOpenAttribute()`, `teardownModal()`, `toggle()`, `trapFocus()`.
+`overlay-preset="default"` сохраняет стабильное затемнение. Вариант `focus`
+добавляет размытие фона, не заменяя scrim. `fullscreen` используйте только для
+ограниченной задачи, которой действительно нужна вся область просмотра.
 
-## События
+:::example {id="components/modal/smart-overlay" label="Результат"}
+:::
 
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
+## Inline-вариант
 
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
+`display="inline"` оставляет поверхность в обычном потоке. Она не создаёт
+portal, не блокирует страницу, не захватывает и не возвращает фокус.
 
-## Минимальная разметка
+:::example {id="components/modal/smart-inline" label="Результат"}
+:::
 
-```html
-<sf-modal></sf-modal>
-```
+## Сворачивание и восстановление
 
-## Доступность
+`hide="true"` добавляет действие сворачивания. Свёрнутое окно остаётся открытым
+экземпляром, но перестаёт быть видимым интерактивным слоем. Для восстановления
+нужна внешняя кнопка с `data-sf-modal-show`, потому что содержимое свёрнутого
+окна недоступно.
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+:::example {id="components/modal/smart-minimized" label="Результат"}
+:::
 
-## Источник
+## Источник содержимого
 
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/modal`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-modal`
+Обычный `mode="inline"` использует слоты `header`, `content` и `footer`.
+`mode="ajax"` принимает URL либо локальный DOM-селектор; `mode="iframe"`
+создаёт отдельный документ. Для локального селектора сетевой запрос не нужен.
+
+:::example {id="components/modal/smart-local-content" label="Результат"}
+:::
+
+Для удалённых источников приложение определяет разрешения, CSP, обработку
+ошибки и доверие к содержимому. Встроенный документ является одной нативной
+Tab-границей; Modal не читает чужой document и сохраняет доступную родительскую
+кнопку закрытия.
+
+## Настройка поверхности
+
+`show-header`, `show-close`, `show-footer`, `close-on-esc`,
+`close-on-overlay`, `overlay`, `position`, `fullscreen`, `width` и `height`
+меняют независимые части контракта. Для внешнего оформления используйте
+`root-class`, `overlay-class`, `surface-class`, `panel-class`, `header-class`,
+`body-class`, `content-class` и `footer-class`. Значения геометрии задавайте
+через токены Framework, а не абсолютные размеры.
+
+Публичные методы `open()`, `close()`, `toggle()`, `hide()`, `show()`,
+`setSrc()` и `reloadContent()` возвращают управление тому же экземпляру.
+События `modal:before-*` можно отменить; соответствующее `modal:after-*`
+возникает только после принятого и завершённого перехода.

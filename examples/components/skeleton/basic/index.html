@@ -1,5 +1,13 @@
-<div class="sf-skeleton sf-skeleton--animation-wave flex flex-1" aria-hidden="true">
-  <div class="sf-skeleton-text sf-skeleton-text--size-2 sf-skeleton-rounded"></div>
-  <div class="sf-skeleton-text sf-skeleton-text--size-1"></div>
-  <div class="sf-skeleton-text sf-skeleton-text--size-1"></div>
-</div>
+<section class="flex flex-col gap-2" aria-busy="true" aria-labelledby="profile-loading-title">
+  <h3 id="profile-loading-title" class="sr-only">Загружается профиль</h3>
+  <div class="flex gap-2 items-start" aria-hidden="true">
+    <div class="sf-skeleton sf-skeleton--animation-wave flex">
+      <div class="sf-skeleton-text sf-skeleton-text--size-7 sf-skeleton-icon sf-skeleton-circle"></div>
+    </div>
+    <div class="sf-skeleton sf-skeleton--animation-wave flex flex-1">
+      <div class="sf-skeleton-text sf-skeleton-text--size-2 w-1/2"></div>
+      <div class="sf-skeleton-text sf-skeleton-text--size-1 w-full"></div>
+      <div class="sf-skeleton-text sf-skeleton-text--size-1 w-3/4"></div>
+    </div>
+  </div>
+</section>

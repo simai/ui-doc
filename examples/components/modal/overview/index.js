@@ -11,7 +11,6 @@ const initializeModalExample = () => {
     return;
   }
 
-  modalExampleInitialized = true;
   const modal = new Modal({
     id: 'modal-example',
     param: {
@@ -35,6 +34,7 @@ const initializeModalExample = () => {
 
   modal.render();
   document.querySelector('#modal-example-open')?.addEventListener('click', () => modal.open());
+  modalExampleInitialized = true;
 };
 
 window.addEventListener('Modal:ready', initializeModalExample);

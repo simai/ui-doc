@@ -1,0 +1,52 @@
+<section class="grid grid-col-1 gap-2" aria-label="Интерактивный пример уведомления" data-alert-demo>
+  <div data-alert-demo-slot>
+    <div class="sf-alert sf-alert--success sf-alert--default flex items-start">
+      <i class="sf-icon" style="--sf-icon--color: var(--sf-success)" aria-hidden="true">check_circle</i>
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">Файл готов</div>
+          <div class="sf-alert-supporting-text">Отчёт сформирован и доступен для скачивания.</div>
+        </div>
+        <div class="sf-alert-buttons flex flex-wrap items-center">
+          <button type="button" class="sf-button sf-button--default sf-button--on-surface sf-button--size-1/2" data-action="download">
+            <span class="sf-button-text-container">Скачать</span>
+          </button>
+        </div>
+      </div>
+      <button type="button" class="sf-icon-button sf-icon-button--close sf-icon-button--link sf-icon-button--on-surface sf-icon-button--size-1" data-close aria-label="Закрыть уведомление">
+        <span class="sf-close sf-close--size-1" aria-hidden="true"><span class="sf-close-icon"></span></span>
+      </button>
+    </div>
+  </div>
+
+  <div data-alert-demo-result hidden>
+    <div class="flex flex-wrap items-center gap-1">
+      <p class="m-0" role="status" data-alert-demo-status>Уведомление закрыто.</p>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-alert-demo-restore>
+        <span class="sf-button-text-container">Показать снова</span>
+      </button>
+    </div>
+  </div>
+
+  <p class="m-0" role="status" data-alert-demo-action-result hidden></p>
+
+  <template data-alert-demo-template>
+    <div class="sf-alert sf-alert--success sf-alert--default flex items-start">
+      <i class="sf-icon" style="--sf-icon--color: var(--sf-success)" aria-hidden="true">check_circle</i>
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">Файл готов</div>
+          <div class="sf-alert-supporting-text">Отчёт сформирован и доступен для скачивания.</div>
+        </div>
+        <div class="sf-alert-buttons flex flex-wrap items-center">
+          <button type="button" class="sf-button sf-button--default sf-button--on-surface sf-button--size-1/2" data-action="download">
+            <span class="sf-button-text-container">Скачать</span>
+          </button>
+        </div>
+      </div>
+      <button type="button" class="sf-icon-button sf-icon-button--close sf-icon-button--link sf-icon-button--on-surface sf-icon-button--size-1" data-close aria-label="Закрыть уведомление">
+        <span class="sf-close sf-close--size-1" aria-hidden="true"><span class="sf-close-icon"></span></span>
+      </button>
+    </div>
+  </template>
+</section>

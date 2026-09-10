@@ -1,18 +1,27 @@
 ---
-title: "Максимальный размер контейнера (max-container)"
-description: "Максимальный размер контейнера (max-container)"
+title: "Максимальный размер контейнера"
+description: "Ограничивает максимальную ширину адаптивного контейнера выбранной контрольной точкой."
 tags: [max-container]
 ---
 
-# Максимальный размер контейнера (max-container)
+# Максимальный размер контейнера
+
+:badge[max-container]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет изменить максимальную ширину контейнера при достижении определённой контрольной точки. В
 новой версии фреймворка размеры привязаны к переменным масштабирования из системы размеров. По умолчанию, данные
 модификаторы начинают действовать начиная с контрольной точки `desktop` (≥ var(--sf-breakpoint-lg)).
 
+## Пример
+
+Два контейнера занимают доступную ширину, пока не достигнут разных максимальных ограничений.
+
+:::example {id="utilities/layout/max-container" label="Ограничение ширины"}
+:::
+
 ## Переменные максимальной ширины контейнера
 
-| Переменная     {.wrap-normal} | Значение  | Размер |
+| `Переменная     {wrap-normal}` | Значение  | Размер |
 |:------------------------------|:----------|:-------|
 | `--sf-container-1--size-max`  | `--sf-h5` | 960px  |
 | `--sf-container-2--size-max`  | `--sf-h6` | 1024px |
@@ -27,14 +36,14 @@ tags: [max-container]
 
 | Класс            | Контрольная точка | Значение    {.wrap-normal}                    |
 |:-----------------|:------------------|:----------------------------------------------|
-| .max-container-1 | desktop           | max-width: var(`--sf-container-1--size-max`); |
-| .max-container-2 | desktop           | max-width: var(`--sf-container-2--size-max`); |
-| .max-container-3 | desktop           | max-width: var(`--sf-container-3--size-max`); |
-| .max-container-4 | desktop           | max-width: var(`--sf-container-4--size-max`); |
-| .max-container-5 | desktop           | max-width: var(`--sf-container-5--size-max`); |
-| .max-container-6 | desktop           | max-width: var(`--sf-container-6--size-max`); |
-| .max-container-7 | desktop           | max-width: var(`--sf-container-7--size-max`); |
-| .max-container-8 | desktop           | max-width: var(`--sf-container-8--size-max`); |
+| `max-container-1` | desktop           | max-width: var(`--sf-container-1--size-max`); |
+| `max-container-2` | desktop           | max-width: var(`--sf-container-2--size-max`); |
+| `max-container-3` | desktop           | max-width: var(`--sf-container-3--size-max`); |
+| `max-container-4` | desktop           | max-width: var(`--sf-container-4--size-max`); |
+| `max-container-5` | desktop           | max-width: var(`--sf-container-5--size-max`); |
+| `max-container-6` | desktop           | max-width: var(`--sf-container-6--size-max`); |
+| `max-container-7` | desktop           | max-width: var(`--sf-container-7--size-max`); |
+| `max-container-8` | desktop           | max-width: var(`--sf-container-8--size-max`); |
 
 ## Пример использования
 
@@ -44,7 +53,3 @@ tags: [max-container]
 
 Это позволяет создавать более сложные, адаптивные сетки с чётко заданными максимальными размерами, что особенно полезно
 для крупноформатных дисплеев и высоких разрешений.
-
-:::example {id="utilities/layout/max-container" label="Результат"}
-:::
-

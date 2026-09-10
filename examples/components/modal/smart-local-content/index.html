@@ -1,0 +1,13 @@
+<div id="modal-local-source" class="hidden">
+  <div class="flex flex-col gap-1">
+    <p class="m-0">Содержимое клонировано из уже доступного узла страницы.</p>
+    <a class="sf-link" href="#modal-local-result">Проверить результат</a>
+  </div>
+</div>
+
+<button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-open="modal-local-content">
+  <span class="sf-button-text-container">Открыть локальное содержимое</span>
+</button>
+
+<sf-modal modal-id="modal-local-content" mode="ajax" src="#modal-local-source" title="Локальные данные" show-footer="false"></sf-modal>
+<span id="modal-local-result" class="hidden">Результат</span>

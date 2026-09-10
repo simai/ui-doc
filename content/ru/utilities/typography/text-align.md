@@ -1,22 +1,28 @@
 ---
-title: "Выравнивание текста (text-align)"
+title: "Выравнивание текста"
 description: "Выравнивание текста (text-align)"
 tags: [text-align, sm, md, lg, xl]
 ---
 
-# Выравнивание текста (text-align)
+# Выравнивание текста
+
+:badge[text-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов вы можете задать выравнивание текста.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/text-align" label="Выравнивание текста"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение             |
 |:--------------|:---------------------|
-| .text-start    | text-align: left;    |
-| .text-center  | text-align: center;  |
-| .text-end   | text-align: right;   |
-| .text-justify | text-align: justify; |
-
+| `text-start` | `text-align: left;` |
+| `text-center` | `text-align: center;` |
+| `text-end` | `text-align: right;` |
+| `text-justify` | `text-align: justify;` |
 
 ## Синтаксис
 
@@ -52,7 +58,3 @@ tags: [text-align, sm, md, lg, xl]
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```
-## Пример
-:::example {id="utilities/typography/text-align" label="Результат"}
-:::
-

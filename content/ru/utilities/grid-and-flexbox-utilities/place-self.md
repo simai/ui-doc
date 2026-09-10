@@ -1,23 +1,30 @@
 ---
-title: "Размещение отдельного элемента (place-self)"
+title: "Размещение отдельного элемента"
 description: "Размещение отдельного элемента (place-self)"
 tags: [place-self, sm, md, lg, xl]
 ---
 
-# Размещение отдельного элемента (place-self)
+# Размещение отдельного элемента
+
+:badge[place-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы из этого раздела задают одновременное выравнивание отдельного элемента сетки или флексбокса в ячейке
 относительно обеих осей сразу.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/place-self" label="Размещение отдельного элемента"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение             |
 |:--------------|:---------------------|
-| .self-auto    | place-self: auto;    |
-| .self-start   | place-self: start;   |
-| .self-end     | place-self: end;     |
-| .self-center  | place-self: center;  |
-| .self-stretch | place-self: stretch; |
+| `self-auto` | `place-self: auto;` |
+| `self-start` | `place-self: start;` |
+| `self-end` | `place-self: end;` |
+| `self-center` | `place-self: center;` |
+| `self-stretch` | `place-self: stretch;` |
 
 *(Обратите внимание, что в исходном коде был класс `self-text-center`, но по описанию это `self-center`.)*
 
@@ -62,7 +69,3 @@ tags: [place-self, sm, md, lg, xl]
   <!-- Начиная с md элемент будет прижат к началу ячейки по обеим осям -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/place-self" label="Результат"}
-:::
-

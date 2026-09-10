@@ -1,20 +1,26 @@
 ---
-title: "Начертание шрифта (капитель) (font-variant)"
+title: "Начертание шрифта (капитель)"
 description: "Начертание шрифта (капитель) (font-variant)"
 tags: [font-variant]
 ---
 
-# Начертание шрифта (капитель) (font-variant)
+# Начертание шрифта (капитель)
+
+:badge[font-variant]{type=main scheme=on-surface size=1}
 
 Модификаторы для отображения строчных символов в виде уменьшенных заглавных (капитель).
+
+## Наглядный пример
+
+:::example {id="utilities/typography/font-variant" label="Начертание шрифта (капитель)"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                  |
 |:-----------------|:--------------------------|
-| .small-caps      | font-variant: small-caps; |
-| .small-caps-none | font-variant: none;       |
-
+| `small-caps` | `font-variant: small-caps;` |
+| `small-caps-none` | `font-variant: none;` |
 
 ## Пример использования
 
@@ -36,7 +42,3 @@ tags: [font-variant]
   На экранах Medium и больше текст будет в стиле капитель.
 </p>
 ```
-## Пример
-:::example {id="utilities/typography/font-variant" label="Результат"}
-:::
-

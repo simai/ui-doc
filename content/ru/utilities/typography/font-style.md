@@ -1,20 +1,26 @@
 ---
-title: "Стиль шрифта (font-style)"
+title: "Стиль шрифта"
 description: "Стиль шрифта (font-style)"
 tags: [font-style]
 ---
 
-# Стиль шрифта (font-style)
+# Стиль шрифта
+
+:badge[font-style]{type=main scheme=on-surface size=1}
 
 Модификаторы для управления стилем шрифта позволяют задать наклонный (italic) или нормальный стиль.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/font-style" label="Стиль шрифта"}
+:::
 
 ## Таблица классов
 
 | Класс        | Значение            |
 |:-------------|:--------------------|
-| .italic      | font-style: italic; |
-| .italic-none | font-style: normal; |
-
+| `italic` | `font-style: italic;` |
+| `italic-none` | `font-style: normal;` |
 
 ## Пример использования
 
@@ -35,7 +41,3 @@ tags: [font-style]
 ```html
 <p class="italic">На экранах md и больше текст будет отображаться наклонным шрифтом.</p>
 ```
-## Пример
-:::example {id="utilities/typography/font-style" label="Результат"}
-:::
-

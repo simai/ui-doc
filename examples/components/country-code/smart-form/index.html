@@ -1,0 +1,17 @@
+<form class="grid gap-3">
+  <sf-country-code label="Телефон" name="phone" required="true" iso2="RU" value="+7 9991234567" hint="Измените номер или страну, затем восстановите исходное значение."></sf-country-code>
+  <div class="flex flex-wrap gap-2">
+    <button class="sf-button sf-button--default sf-button--primary sf-button--size-1" type="submit"><span class="sf-button-text-container">Проверить значение</span></button>
+    <button class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" type="reset"><span class="sf-button-text-container">Сбросить</span></button>
+  </div>
+  <output aria-live="polite"></output>
+</form>
+<script>
+(() => {
+  const form = document.currentScript.previousElementSibling;
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    form.querySelector('output').value = String(new FormData(form).get('phone') || '');
+  });
+})();
+</script>

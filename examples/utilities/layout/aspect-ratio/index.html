@@ -1,11 +1,31 @@
-<div class="wrap grid grid-col-1 gap-3 content-main-start">
-  <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6">square / portrait / landscape</div>
-    <div class="demo m-0 bg-surface-0 border border-outline-variant radius-2 p-3 grid grid-col-2 gap-3 items-start">
-      <div class="sf-card bg-primary color-on-primary p-2 aspect-1x1 w-32" aria-label="1x1">aspect-1x1</div>
-      <div class="sf-card bg-secondary color-on-secondary p-2 aspect-2x3 w-32" aria-label="2x3">aspect-2x3</div>
-       <div class="sf-card bg-tertiary color-on-tertiary p-2 aspect-16x9 w-40" aria-label="16x9">aspect-16x9</div>
-      <div class="sf-card bg-success color-on-success p-2 aspect-4x3 w-36" aria-label="4x3">aspect-4x3</div>
+<div class="wrap grid grid-col-1 sm:grid-col-3 gap-3 items-start">
+  <figure class="m-0 w-full flex flex-col gap-1 items-center text-center">
+    <div class="w-full max-w-f4 aspect-1x1 radius-2 bg-primary-container color-on-primary-container flex items-center justify-center p-2 text-center">
+      <span class="weight-6">1 : 1</span>
     </div>
-  </div>
+    <figcaption>
+      <span class="weight-6">Квадрат</span><br>
+      <code>aspect-1x1</code>
+    </figcaption>
+  </figure>
+
+  <figure class="m-0 w-full flex flex-col gap-1 items-center text-center">
+    <div class="w-full max-w-f4 aspect-2x3 radius-2 bg-secondary-container color-on-secondary-container flex items-center justify-center p-2 text-center">
+      <span class="weight-6">2 : 3</span>
+    </div>
+    <figcaption>
+      <span class="weight-6">Книжная</span><br>
+      <code>aspect-2x3</code>
+    </figcaption>
+  </figure>
+
+  <figure class="m-0 w-full flex flex-col gap-1 items-center text-center">
+    <div class="w-full max-w-f4 aspect-16x9 radius-2 bg-tertiary-container color-on-tertiary-container flex items-center justify-center p-2 text-center">
+      <span class="weight-6">16 : 9</span>
+    </div>
+    <figcaption>
+      <span class="weight-6">Альбомная</span><br>
+      <code>aspect-16x9</code>
+    </figcaption>
+  </figure>
 </div>

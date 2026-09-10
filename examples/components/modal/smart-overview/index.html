@@ -1,0 +1,23 @@
+<div class="flex flex-wrap gap-2">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-open="smart-modal-overview">
+    <span class="sf-button-text-container">Открыть настройки</span>
+  </button>
+</div>
+
+<sf-modal modal-id="smart-modal-overview" title="Настройки уведомлений">
+  <div slot="content" class="flex flex-col gap-2">
+    <p class="m-0">Выберите, когда присылать уведомления по проекту.</p>
+    <label class="sf-checkbox sf-checkbox--size-1 flex">
+      <span class="sf-checkbox-box transition flex"><input type="checkbox" checked><span class="sf-icon" aria-hidden="true"></span></span>
+      <span class="sf-checkbox-container"><span class="sf-checkbox-label">Только при важных изменениях</span></span>
+    </label>
+  </div>
+  <div slot="footer" class="flex flex-wrap gap-2">
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-close="smart-modal-overview">
+      <span class="sf-button-text-container">Сохранить</span>
+    </button>
+    <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1" data-sf-modal-close="smart-modal-overview">
+      <span class="sf-button-text-container">Отмена</span>
+    </button>
+  </div>
+</sf-modal>

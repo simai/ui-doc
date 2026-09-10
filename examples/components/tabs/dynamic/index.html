@@ -1,0 +1,34 @@
+<div class="grid gap-4">
+  <div class="sf-tabs flex flex-col">
+    <div class="sf-tabs-top-container">
+      <nav class="sf-tabs-top flex flex-wrap" aria-label="Рабочие разделы">
+        <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 selected"><span class="sf-button-text-container">Первый</span></button>
+      </nav>
+    </div>
+    <div class="sf-tabs-main-container"><section class="sf-tabs-main-tab selected">Первый рабочий раздел.</section></div>
+  </div>
+  <button type="button" class="sf-button sf-button--outline sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Добавить вкладку</span></button>
+</div>
+<script>
+(() => {
+  const example = document.currentScript.previousElementSibling;
+  const tabs = example.querySelector('.sf-tabs');
+  const add = example.querySelector(':scope > button');
+  let count = 1;
+  add.addEventListener('click', () => {
+    count += 1;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'sf-button sf-button--default sf-button--primary sf-button--size-1';
+    const label = document.createElement('span');
+    label.className = 'sf-button-text-container';
+    label.textContent = `Раздел ${count}`;
+    button.append(label);
+    const panel = document.createElement('section');
+    panel.className = 'sf-tabs-main-tab';
+    panel.textContent = `Содержимое раздела ${count}.`;
+    tabs.querySelector('.sf-tabs-top').append(button);
+    tabs.querySelector('.sf-tabs-main-container').append(panel);
+  });
+})();
+</script>

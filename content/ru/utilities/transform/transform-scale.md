@@ -1,28 +1,34 @@
 ---
-title: "Масштабирование (transform-scale)"
+title: "Масштабирование"
 description: "Классы масштабирования transform-scale"
 tags: [transform-scale, hover]
 ---
 
-# Масштабирование (transform-scale)
+# Масштабирование
+
+:badge[transform-scale]{type=main scheme=on-surface size=1}
 
 `transform-scale` изменяет размер элемента по обеим осям или отдельно по `x`/`y`.
+
+## Наглядный пример
+
+:::example {id="utilities/transform/transform-scale" label="Масштабирование"}
+:::
 
 ## Классы
 
 | Класс | Значение |
 |:--|:--|
-| `.scale-0` | `transform: scale(0)` |
-| `.scale-1/4` | `transform: scale(.8)` |
-| `.scale-1/3` | `transform: scale(.9)` |
-| `.scale-1/2` | `transform: scale(.95)` |
-| `.scale-1` | `transform: scale(1)` |
-| `.scale-2` | `transform: scale(1.05)` |
-| `.scale-3` | `transform: scale(1.1)` |
-| `.scale-4` | `transform: scale(1.2)` |
-| `.scale-x-*` | масштаб только по оси X |
-| `.scale-y-*` | масштаб только по оси Y |
-
+| `scale-0` | `transform: scale(0)` |
+| `scale-1/4` | `transform: scale(.8)` |
+| `scale-1/3` | `transform: scale(.9)` |
+| `scale-1/2` | `transform: scale(.95)` |
+| `scale-1` | `transform: scale(1)` |
+| `scale-2` | `transform: scale(1.05)` |
+| `scale-3` | `transform: scale(1.1)` |
+| `scale-4` | `transform: scale(1.2)` |
+| `scale-x-*` | масштаб только по оси X |
+| `scale-y-*` | масштаб только по оси Y |
 
 ## Синтаксис
 
@@ -32,7 +38,3 @@ tags: [transform-scale, hover]
 - `hover:scale-{value}`
 
 Где `value`: `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`.
-## Пример
-:::example {id="utilities/transform/transform-scale" label="Результат"}
-:::
-

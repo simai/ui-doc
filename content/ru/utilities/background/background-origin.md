@@ -6,16 +6,23 @@ tags: [background-origin, sm, md, lg, xl]
 
 # Вложение фона
 
+:badge[background-origin]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов `background-origin` вы можете управлять тем, относительно какой области будет позиционироваться
 фоновое изображение.
+
+## Наглядный пример
+
+:::example {id="utilities/background/background-origin" label="Вложение фона"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение                        |
 |:-------------------|:--------------------------------|
-| .bg-origin-border  | background-origin: border-box;  |
-| .bg-origin-padding | background-origin: padding-box; |
-| .bg-origin-content | background-origin: content-box; |
+| `bg-origin-border` | `background-origin: border-box;` |
+| `bg-origin-padding` | `background-origin: padding-box;` |
+| `bg-origin-content` | `background-origin: content-box;` |
 
 ## Описание
 
@@ -66,7 +73,3 @@ tags: [background-origin, sm, md, lg, xl]
     <div class="h-f8"></div>
 </div>
 ```
-## Пример
-:::example {id="utilities/background/background-origin" label="Результат"}
-:::
-

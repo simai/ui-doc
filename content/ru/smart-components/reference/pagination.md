@@ -1,11 +1,15 @@
 ---
 title: "Pagination"
-description: "API и runtime-контракт Smart-компонента pagination в SIMAI Framework 5.4.0."
+description: "Навигация по страницам с source-driven состоянием и событиями приложения."
 ---
 
 # Pagination
 
-Идентификатор: `smart.pagination`. Smart-компонент готов к использованию; жизненный цикл — стабильный.
+Идентификатор: `smart.pagination`. Жизненный цикл — экспериментальный.
+
+Компонент отображает именованную навигацию по страницам, но не загружает данные и
+не придумывает URL. Приложение передаёт `current`, `total` и `page-size`, слушает
+события и обновляет свой источник данных.
 
 ## Теги и подключение
 
@@ -32,11 +36,20 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 | `top-class` | `topClass` | `String` | `""` | `—` |
 | `main-class` | `mainClass` | `String` | `""` | `—` |
 | `bottom-class` | `bottomClass` | `String` | `""` | `—` |
-| `show-more-text` | `showMoreText` | `String` | `"Показать еще"` | `—` |
+| `aria-label` | `ariaLabel` | `String` | `"Страницы результатов"` | `—` |
+| `pages-label` | `pagesLabel` | `String` | `"Страницы:"` | `—` |
+| `page-label` | `pageLabel` | `String` | `"Страница"` | `—` |
+| `previous-label` | `previousLabel` | `String` | `"Предыдущая страница"` | `—` |
+| `next-label` | `nextLabel` | `String` | `"Следующая страница"` | `—` |
+| `last-label` | `lastLabel` | `String` | `"Последняя"` | `—` |
+| `total-label` | `totalLabel` | `String` | `"Всего:"` | `—` |
+| `selected-label` | `selectedLabel` | `String` | `"Отмечено:"` | `—` |
+| `selected-count` | `selectedCount` | `Number` | `0` | целое число от 0 до `total` |
+| `show-more-text` | `showMoreText` | `String` | `"Показать ещё"` | `—` |
 | `current` | `current` | `Number` | `1` | `—` |
 | `total` | `total` | `Number` | `10` | `—` |
 | `page-size` | `pageSize` | `Number` | `10` | `—` |
-| `page-sizes` | `pageSizes` | `String` | `[10` | `—` |
+| `page-sizes` | `pageSizes` | `String` | `"10,20,30,40"` | положительные числа через запятую |
 | `show-page-size` | `showPageSize` | `Boolean` | `true` | `—` |
 | `page-size-label` | `pageSizeLabel` | `String` | `"На странице:"` | `—` |
 | `show-actions` | `showActions` | `Boolean` | `true` | `—` |
@@ -46,6 +59,7 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 | `show-action-for-all` | `showActionForAll` | `Boolean` | `false` | `—` |
 | `action-for-all` | `actionForAll` | `Boolean` | `false` | `—` |
 | `action-for-all-label` | `actionForAllLabel` | `String` | `"Для всех"` | `—` |
+| `actions-label` | `actionsLabel` | `String` | `"Действие с выбранными элементами"` | `—` |
 
 Общие атрибуты базового Smart-элемента:
 
@@ -57,7 +71,18 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 
 ## Методы
 
-`applyAction()`, `get action()`, `get actionApplyText()`, `get actionForAll()`, `get actionForAllLabel()`, `get actions()`, `get bottom()`, `get bottomClass()`, `get current()`, `get mainClass()`, `get middle()`, `get pageCount()`, `get pageItems()`, `get pageSize()`, `get pageSizeLabel()`, `get pageSizes()`, `get showActionForAll()`, `get showActions()`, `get showMoreText()`, `get showPageSize()`, `get state()`, `get top()`, `get topClass()`, `get total()`, `getBottomSection()`, `getMainSection()`, `getTopSection()`, `goToPage()`, `lastPage()`, `onPageChange()`, `onShowMore()`, `setAction()`, `setActionForAll()`, `setPageSize()`, `setState()`, `showMore()`.
+`applyAction()`, `get action()`, `get actionApplyText()`, `get actionForAll()`,
+`get actionForAllLabel()`, `get actions()`, `get actionsLabel()`, `get ariaLabel()`,
+`get bottom()`, `get bottomClass()`, `get current()`, `get lastLabel()`,
+`get mainClass()`, `get middle()`, `get nextLabel()`, `get pageCount()`,
+`get pageItems()`, `get pageLabel()`, `get pageSize()`, `get pageSizeLabel()`,
+`get pageSizes()`, `get pagesLabel()`, `get previousLabel()`,
+`get selectedCount()`, `get selectedLabel()`, `get showActionForAll()`,
+`get showActions()`, `get showMoreText()`, `get showPageSize()`, `get state()`,
+`get top()`, `get topClass()`, `get total()`, `get totalLabel()`,
+`getBottomSection()`, `getMainSection()`, `getTopSection()`, `goToPage()`,
+`lastPage()`, `onPageChange()`, `onShowMore()`, `setAction()`,
+`setActionForAll()`, `setPageSize()`, `setState()`, `showMore()`.
 
 ## События
 
@@ -81,12 +106,30 @@ Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 ## Минимальная разметка
 
 ```html
-<sf-pagination></sf-pagination>
+<sf-pagination
+  aria-label="Страницы результатов поиска"
+  current="2"
+  total="96"
+  page-size="10"
+  top="false"
+  bottom="false"
+  show-page-size="false"
+></sf-pagination>
 ```
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Видимый корень — `nav` с доступным именем. Номера образуют список, текущая
+страница одна и получает `aria-current="page"`. Многоточие не является кнопкой.
+Tab достигает только доступных действий, а общий `focus-visible` контракт
+Framework показывает фокус при клавиатурной навигации и в forced-colors.
+
+## Границы композиции
+
+Верхнее «Показать ещё», выбор размера страницы и нижние пакетные действия
+сохранены для совместимости и включаются отдельными параметрами. Они не входят в
+минимальный контракт пагинации. Количество выбранных строк всегда передаёт
+приложение через `selected-count`; компонент не читает состояние соседней таблицы.
 
 ## Источник
 

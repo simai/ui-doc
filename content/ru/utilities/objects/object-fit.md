@@ -1,14 +1,23 @@
 ---
-title: "Заполнение объектом (object-fit)"
-description: "Заполнение объектом (object-fit)"
+title: "Заполнение объектом"
+description: "Управляет масштабированием изображения или видео внутри заданной области."
 tags: [object-fit, sm, md, lg, xl]
 ---
 
-# Заполнение объектом (object-fit)
+# Заполнение объектом
+
+:badge[object-fit]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификатор `object-fit` в SIMAI Framework позволяет управлять тем, как элемент (например, изображение или видео)
 масштабируется и вписывается в контейнер. Это особенно полезно для адаптивных макетов, где контент должен корректно
 отображаться на различных размерах экрана.
+
+## Пример
+
+Одинаковое изображение помещено в одинаковые области; меняется только способ масштабирования содержимого.
+
+:::example {id="utilities/objects/object-fit" label="Варианты заполнения"}
+:::
 
 ## Синтаксис
 
@@ -81,7 +90,3 @@ tags: [object-fit, sm, md, lg, xl]
 
 Таким образом, модификаторы `object-fit` упрощают работу с различными типами медиа, обеспечивая корректное и эстетичное
 масштабирование содержимого под контейнеры любого размера.
-## Пример
-:::example {id="utilities/objects/object-fit" label="Результат"}
-:::
-

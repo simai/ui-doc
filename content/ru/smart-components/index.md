@@ -10,6 +10,11 @@ description: "Документация 50 Smart Components SIMAI Framework 5.4.0
 50 сформированы страницы с тегами, зависимостями, атрибутами, свойствами,
 методами, событиями и исходными путями.
 
+Smart Components различаются по роли: обычный Smart-компонент добавляет
+интерактивность базовому компоненту, а комплексный объединяет несколько
+компонентов и Smart-компонентов в законченный пользовательский сценарий.
+[Admin Menu](/ru/smart-components/reference/admin-menu/) относится к комплексным.
+
 - [Архитектура и выбор](/ru/smart-components/introduction/)
 - [Подключение](/ru/smart-components/connection/)
 - [Загрузка и зависимости](/ru/smart-components/lifecycle/)

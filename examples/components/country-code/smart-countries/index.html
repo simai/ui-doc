@@ -1,0 +1,13 @@
+<sf-country-code label="Телефон" hint="Выберите страну: формат номера изменится." iso2="DE" value="+49 1511234567"></sf-country-code>
+<script>
+(() => {
+  const field = document.currentScript.previousElementSibling;
+  customElements.whenDefined('sf-country-code').then(() => {
+    field.countries = [
+      {iso2: 'DE', code: '+49', label: 'Германия (+49)', maskPattern: '+49 000 0000000'},
+      {iso2: 'RU', code: '+7', label: 'Россия (+7)', maskPattern: '+7 000 000-00-00'},
+    ];
+    field.setAttribute('use-mask', 'true');
+  });
+})();
+</script>

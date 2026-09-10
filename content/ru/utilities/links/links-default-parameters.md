@@ -6,7 +6,14 @@ tags: [text-color, hover, focus, active]
 
 # Параметры по умолчанию
 
+:badge[text-color]{type=main scheme=on-surface size=1}
+
 Ссылки по умолчанию используют токены темы и меняют цвет в состояниях `:hover`, `:active`, `:visited`.
+
+## Наглядный пример
+
+:::example {id="utilities/links/links-default-parameters" label="Параметры по умолчанию"}
+:::
 
 ## Базовое поведение
 
@@ -18,7 +25,3 @@ tags: [text-color, hover, focus, active]
 | `a:visited` | `color: var(--sf-link-visited)` |
 
 ## Пример
-
-:::example {id="utilities/links/links-default-parameters" label="Результат"}
-:::
-

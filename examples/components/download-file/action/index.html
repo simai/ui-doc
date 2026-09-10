@@ -1,0 +1,20 @@
+<div class="grid gap-1 max-w-md">
+  <button type="button" class="sf-download-file sf-download-file--size-1" data-file-name="Отчёт.pdf">
+    <span class="sf-download-file__body sf-download-file-wrap flex items-cross-center">
+      <span class="sf-download-file__main sf-download-file-container flex flex-1 items-cross-center">
+        <i class="sf-download-file__icon sf-icon" aria-hidden="true">download</i>
+        <span class="sf-download-file__name sf-download-file-file-name">Подготовить отчёт</span>
+      </span>
+      <span class="sf-download-file__size sf-download-file-file-size">PDF</span>
+    </span>
+  </button>
+  <span id="download-file-result" aria-live="polite">Файл ещё не запрошен.</span>
+</div>
+<script>
+  document.currentScript.previousElementSibling
+    .querySelector('.sf-download-file')
+    .addEventListener('sf-download-file:click', event => {
+      event.currentTarget.parentElement.querySelector('#download-file-result').textContent =
+        `Приложение готовит ${event.detail.fileName}.`;
+    });
+</script>

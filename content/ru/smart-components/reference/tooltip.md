@@ -5,7 +5,15 @@ description: "API и runtime-контракт Smart-компонента tooltip
 
 # Tooltip
 
-Идентификатор: `smart.tooltip`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+Идентификатор: `smart.tooltip`. Текущий source-кандидат прошёл сценарную
+проверку; опубликованная ниже asset projection остаётся закреплённой за
+выпущенной версией Framework до следующего совместимого релиза.
+
+`<sf-tooltip>` создаёт поверхность подсказки. Самостоятельно она остаётся
+видимой и не управляет триггером — это сохраняет совместимость с Range Slider и
+другими владельцами позиционирования. Для обычного hover/focus-сценария
+поместите Smart surface рядом с нативным триггером в
+`.sf-tooltip-anchor` и свяжите коротким `data-tooltip`.
 
 ## Теги и подключение
 
@@ -26,9 +34,9 @@ Loader-статус: `registered`. Loader-правило: `cl-tooltip`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `type` | `type` | `String` | `'light'` | `—` |
-| `size` | `size` | `String` | `'1'` | `—` |
-| `arrow` | `arrow` | `String` | `'none'` | `—` |
+| `type` | `type` | `String` | `'light'` | `light`, `dark` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `arrow` | `arrow` | `String` | `'none'` | `none`, `top-center`, `bottom-center`, `inline-start`, `inline-end`, `bottom-inline-start`, `bottom-inline-end` |
 | `text` | `text` | `String` | `''` | `—` |
 | `supporting-text` | `supportingText` | `String` | `''` | `—` |
 
@@ -60,12 +68,21 @@ Loader-статус: `registered`. Loader-правило: `cl-tooltip`.
 ## Минимальная разметка
 
 ```html
-<sf-tooltip></sf-tooltip>
+<span class="sf-tooltip-anchor">
+  <button type="button" data-tooltip="help-tooltip"
+    aria-describedby="help-tooltip">Справка</button>
+  <sf-tooltip id="help-tooltip" text="Короткое пояснение"
+    type="dark" arrow="bottom-center" hidden></sf-tooltip>
+</span>
 ```
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Поверхность получает `role="tooltip"`, а Framework сохраняет и дополняет
+`aria-describedby` триггера. Tooltip не получает фокус, не использует
+`aria-expanded` или `aria-haspopup`, открывается при hover/focus и
+закрывается по Escape без переноса фокуса. Интерактивное содержимое требует
+диалога или popover.
 
 ## Источник
 

@@ -1,19 +1,26 @@
 ---
-title: "Толщина ползунка прокрутки (scroll / scroll-thumb-size)"
+title: "Толщина ползунка прокрутки"
 description: "Управление минимальным размером ползунка прокрутки"
 tags: [scroll-slider-width]
 ---
 
-# Толщина ползунка прокрутки (scroll / scroll-thumb-size)
+# Толщина ползунка прокрутки
+
+:badge[scroll-slider-width]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll" label="Толщина ползунка прокрутки"}
+:::
 
 ## Классы и значения
 
 | Класс | Значение переменной |
 |:--|:--|
-| `.scroll-1` / `.scroll-thumb-1` | `--sf-scroll-thumb-size: var(--sf-a4);` |
-| `.scroll-2` / `.scroll-thumb-2` | `--sf-scroll-thumb-size: var(--sf-a3);` |
-| `.scroll-3` / `.scroll-thumb-3` | `--sf-scroll-thumb-size: var(--sf-a2);` |
-| `.scroll-4` / `.scroll-thumb-4` | `--sf-scroll-thumb-size: var(--sf-a1);` |
+| `scroll-1 / scroll-thumb-1` | `--sf-scroll-thumb-size: var(--sf-a4);` |
+| `scroll-2 / scroll-thumb-2` | `--sf-scroll-thumb-size: var(--sf-a3);` |
+| `scroll-3 / scroll-thumb-3` | `--sf-scroll-thumb-size: var(--sf-a2);` |
+| `scroll-4 / scroll-thumb-4` | `--sf-scroll-thumb-size: var(--sf-a1);` |
 
 ## Описание
 
@@ -28,7 +35,3 @@ tags: [scroll-slider-width]
 - `scroll-thumb-{1...4}`
 
 ## Пример
-
-:::example {id="utilities/overscroll/scroll" label="Результат"}
-:::
-

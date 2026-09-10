@@ -1,88 +1,71 @@
 ---
 title: "Tags"
-description: "API и runtime-контракт Smart-компонента tags в SIMAI Framework 5.4.0."
+description: "Публичный контракт Smart-компонента sf-tag."
+profile: reference
 ---
 
 # Tags
 
-Идентификатор: `smart.tags`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+`<sf-tag>` — декларативная проекция обычного компонента «Теги». Компонент
+сохраняет его классы, токены и семантику, а также управляет выбранным состоянием
+и намерением удалить значение. Жизненный цикл — экспериментальный.
 
-## Теги и подключение
+## Особенности применения
 
-Custom Elements: `<sf-tag>`.
+Статический тег только сообщает данные. Тип `checkbox` создаёт одну нативную
+кнопку-переключатель; остальные типы создают статическую поверхность и при
+необходимости отдельную кнопку удаления. Переключение и удаление не совмещаются
+в одном экземпляре. Компонент не обращается к сети и не принимает решений за
+приложение.
 
-Loader-статус: `registered`. Loader-правило: `cl-tags`.
+Живой пример появится после включения точного runtime Tags в закреплённую
+проекцию ассетов `ui-doc`. До этого страница описывает проверенный исходный
+контракт и не подменяет его незакреплённым скриптом.
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tags/css/tags.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tags/js/tags.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tags/template/default.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tags/template/default.js`
+## Типы и размеры
 
-## Зависимости
+Атрибут `type` принимает `checkbox`, `icon`, `default`, `color`, `avatar`,
+`success`, `error` или `warning`. Размер задаётся атрибутом `size` со значением
+`1/2` или `1`. Старое значение `quantity` читается как `default` только для
+совместимости и не должно использоваться в новой разметке.
 
-- `component.avatars`
-- `component.checkbox`
-- `component.dot`
-- `component.icon-buttons`
-- `component.tags`
+## Содержимое
 
-## Атрибуты и свойства
+- `text` — видимая подпись;
+- `count` — вспомогательное число для типа `default`;
+- `icon` — имя декоративной иконки Framework;
+- `color-class` — семантическая цветовая утилита маркера;
+- `avatar-image-url`, `avatar-text`, `avatar-status` — данные аватара;
+- `root-class` — дополнительные утилиты Framework на видимом корне.
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `type` | `type` | `String` | `'checkbox'` | `['checkbox', 'icon', 'default', 'color', 'avatar', 'success', 'error', 'warning']` |
-| `size` | `size` | `String` | `'1/2'` | `['1/2', '1']` |
-| `text` | `text` | `String` | `''` | `—` |
-| `count` | `count` | `String` | `''` | `—` |
-| `icon` | `icon` | `String` | `''` | `—` |
-| `color-class` | `colorClass` | `String` | `''` | `—` |
-| `avatar-image-url` | `avatarImageUrl` | `String` | `''` | `—` |
-| `avatar-text` | `avatarText` | `String` | `''` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `avatar-status` | `avatarStatus` | `String` | `''` | `—` |
-| `active` | `active` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `closable` | `closable` | `Boolean` | `true` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `''` | `—` |
+Слоты `leading`, `text`, `count`, `avatar` и `close` позволяют заменить
+соответствующую часть шаблона. Замена должна сохранять владельца действия:
+декоративный маркер не входит в Tab-порядок, а слот удаления содержит ровно одну
+нативную кнопку с доступным именем.
 
-Общие атрибуты базового Smart-элемента:
+## Выбор
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+У типа `checkbox` атрибут `active` отражается в `aria-pressed`. Нажатие меняет
+состояние и создаёт всплывающее событие `change` с `detail.active` и
+`detail.component`. Атрибут `disabled` запрещает действие и его событие.
 
-## Методы
+## Удаление
 
-`get active()`, `get ariaLabel()`, `get avatarImageUrl()`, `get avatarStatus()`, `get avatarText()`, `get closable()`, `get colorClass()`, `get componentName()`, `get count()`, `get disabled()`, `get icon()`, `get rootClass()`, `get size()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `onClose()`, `set value()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
-
-```html
-<sf-tag></sf-tag>
-```
+Атрибут `closable` включает отдельную кнопку удаления у статического тега; для
+типов `icon`, `color` и `avatar` она включена по умолчанию. `close-label` задаёт
+её доступное имя. Успешное действие создаёт всплывающее событие `close` с
+владельцем в `detail.component`. Для `checkbox` удаление всегда отключено.
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Видимый текст именует статическую подпись. Для переключателя можно уточнить имя
+через `aria-label`, для удаления обязательно конкретное `close-label`. В
+Tab-порядок входят только нативные действия. Фокус показывается при клавиатурной
+навигации и остаётся различимым в режиме принудительных цветов.
 
 ## Источник
 
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tags`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-tags`
+- обычный компонент: `src/component/tags`;
+- Smart runtime: `src/smart/tags`;
+- Custom Element: `sf-tag`;
+- Loader bundle: `cl-tags`.

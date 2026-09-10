@@ -6,14 +6,21 @@ tags: [outline-style]
 
 # Стиль внешней границы
 
+:badge[outline-style]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/outline/outline-style" label="Стиль внешней границы"}
+:::
+
 | Класс | Значение |
 |:--|:--|
-| `.outline-solid` | `outline-style: solid;` |
-| `.outline-dashed` | `outline-style: dashed;` |
-| `.outline-dotted` | `outline-style: dotted;` |
-| `.outline-double` | `outline-style: double;` |
-| `.outline-hidden` | `outline-style: hidden;` |
-| `.outline-none` | `outline-style: none;` |
+| `outline-solid` | `outline-style: solid;` |
+| `outline-dashed` | `outline-style: dashed;` |
+| `outline-dotted` | `outline-style: dotted;` |
+| `outline-double` | `outline-style: double;` |
+| `outline-hidden` | `outline-style: hidden;` |
+| `outline-none` | `outline-style: none;` |
 
 ## Описание
 
@@ -27,7 +34,3 @@ tags: [outline-style]
 - Модификатор: `outline-{solid|dashed|dotted|double|hidden|none}`.
 
 ## Пример
-
-:::example {id="utilities/outline/outline-style" label="Результат"}
-:::
-

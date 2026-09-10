@@ -8,6 +8,7 @@
 /source/
 /vendor/
 /.phpunit.cache/
+/.playwright-cli/
 /.DS_Store
 *.bak
 *.bak_*

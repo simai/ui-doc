@@ -6,16 +6,23 @@ tags: [mask-size]
 
 # Размер маски
 
+:badge[mask-size]{type=main scheme=on-surface size=1}
+
 Утилиты `mask-size` управляют масштабом изображения маски внутри элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/mask/mask-size" label="Размер маски"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение              |
 |:--------------|:----------------------|
-| .mask-auto    | mask-size: auto;      |
-| .mask-cover   | mask-size: cover;     |
-| .mask-contain | mask-size: contain;   |
-| .mask-full    | mask-size: 100% 100%; |
+| `mask-auto` | `mask-size: auto;` |
+| `mask-cover` | `mask-size: cover;` |
+| `mask-contain` | `mask-size: contain;` |
+| `mask-full` | `mask-size: 100% 100%;` |
 
 ## Описание
 
@@ -25,7 +32,3 @@ tags: [mask-size]
 - `mask-full` — маска растягивается ровно на ширину и высоту блока.
 
 ## Примеры
-
-:::example {id="utilities/mask/mask-size" label="Результат"}
-:::
-

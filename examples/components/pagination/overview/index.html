@@ -2,11 +2,17 @@
   <div class="sf-pagination-main flex items-cross-center content-main-between">
     <div class="sf-pagination-total flex items-cross-center">Найдено: 96</div>
     <div class="sf-pagination-container flex items-cross-center">
-      <button type="button" class="sf-icon-button sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1" disabled aria-label="Предыдущая страница"><i class="sf-icon" aria-hidden="true">keyboard_arrow_left</i></button>
-      <button type="button" class="sf-page-number sf-page-number--square selected transition" aria-current="page">1</button>
-      <button type="button" class="sf-page-number sf-page-number--square transition">2</button>
-      <button type="button" class="sf-page-number sf-page-number--square transition">3</button>
-      <button type="button" class="sf-icon-button sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1" aria-label="Следующая страница"><i class="sf-icon" aria-hidden="true">keyboard_arrow_right</i></button>
+      <ol class="sf-pagination-list flex items-cross-center list-none m-0 p-0">
+        <li class="sf-pagination-item">
+          <button type="button" class="sf-icon-button sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1 sf-pagination-direction" disabled aria-label="Предыдущая страница"><i class="sf-icon" aria-hidden="true">keyboard_arrow_left</i></button>
+        </li>
+        <li class="sf-pagination-item"><button type="button" class="sf-page-number sf-page-number--square selected" aria-current="page" aria-label="Страница 1">1</button></li>
+        <li class="sf-pagination-item"><button type="button" class="sf-page-number sf-page-number--square" aria-label="Страница 2">2</button></li>
+        <li class="sf-pagination-item"><button type="button" class="sf-page-number sf-page-number--square" aria-label="Страница 3">3</button></li>
+        <li class="sf-pagination-item">
+          <button type="button" class="sf-icon-button sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1 sf-pagination-direction" aria-label="Следующая страница"><i class="sf-icon" aria-hidden="true">keyboard_arrow_right</i></button>
+        </li>
+      </ol>
     </div>
   </div>
 </nav>

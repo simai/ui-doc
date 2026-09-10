@@ -1,26 +1,33 @@
 ---
-title: "Начальное положение строки сетки (grid-row-start)"
+title: "Начальное положение строки сетки"
 description: "Начальное положение строки сетки (grid-row-start)"
 tags: [grid-row-start, sm, md, lg, xl]
 ---
 
-# Начальное положение строки сетки (grid-row-start)
+# Начальное положение строки сетки
+
+:badge[grid-row-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, с какой строки начинается элемент в сетке, задавая его
 положение относительно строк.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-row-start" label="Начальное положение строки сетки"}
+:::
 
 ## Таблица классов
 
 | Класс                | Значение              |
 |:---------------------|:----------------------|
-| .grid-row-start-1    | grid-row-start: 1;    |
-| .grid-row-start-2    | grid-row-start: 2;    |
-| .grid-row-start-3    | grid-row-start: 3;    |
-| .grid-row-start-4    | grid-row-start: 4;    |
-| .grid-row-start-5    | grid-row-start: 5;    |
-| .grid-row-start-6    | grid-row-start: 6;    |
-| .grid-row-start-7    | grid-row-start: 7;    |
-| .grid-row-start-auto | grid-row-start: auto; |
+| `grid-row-start-1` | `grid-row-start: 1;` |
+| `grid-row-start-2` | `grid-row-start: 2;` |
+| `grid-row-start-3` | `grid-row-start: 3;` |
+| `grid-row-start-4` | `grid-row-start: 4;` |
+| `grid-row-start-5` | `grid-row-start: 5;` |
+| `grid-row-start-6` | `grid-row-start: 6;` |
+| `grid-row-start-7` | `grid-row-start: 7;` |
+| `grid-row-start-auto` | `grid-row-start: auto;` |
 
 ## Синтаксис
 
@@ -58,7 +65,3 @@ tags: [grid-row-start, sm, md, lg, xl]
     <!-- Начиная с md элемент будет начинаться со 2-й строки -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-row-start" label="Результат"}
-:::
-

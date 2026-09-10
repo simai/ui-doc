@@ -1,20 +1,27 @@
 ---
-title: "Перенос строк (word-break)"
+title: "Перенос строк"
 description: "Перенос строк (word-break)"
 tags: [word-break]
 ---
 
-# Перенос строк (word-break)
+# Перенос строк
+
+:badge[word-break]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно управлять переносом строк, когда слова не помещаются в отведённую ширину.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/word-break" label="Перенос строк"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение                                        |
 |:-------------------|:------------------------------------------------|
-| .text-break-normal | overflow-wrap: normal;&lt;br/&gt; word-break: normal; |
-| .text-break-word   | overflow-wrap: break-word;                      |
-| .text-break-all    | word-break: break-all;                          |
+| `text-break-normal` | `overflow-wrap: normal;&lt;br/&gt; word-break: normal;` |
+| `text-break-word` | `overflow-wrap: break-word;` |
+| `text-break-all` | `word-break: break-all;` |
 
 ## Синтаксис
 
@@ -69,7 +76,3 @@ tags: [word-break]
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
 ```
-## Пример
-:::example {id="utilities/typography/word-break" label="Результат"}
-:::
-

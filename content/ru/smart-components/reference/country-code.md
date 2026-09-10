@@ -1,89 +1,70 @@
 ---
-title: "Country Code"
-description: "API и runtime-контракт Smart-компонента country-code в SIMAI Framework 5.4.0."
+title: "Smart-код страны"
+description: "Управляемое телефонное поле с кодом, флагом, маской и нативным поведением формы."
+profile: reference
 ---
 
-# Country Code
+# Smart-код страны
 
-Идентификатор: `smart.country-code`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+`<sf-country-code>` создаёт телефонное поле из атрибутов или данных JavaScript
+и использует оформление и поведение обычного компонента «Код страны».
 
-## Теги и подключение
+## Пример
 
-Custom Elements: `<sf-country-code>`.
+:::example {id="components/country-code/smart-overview" label="Результат"}
+:::
 
-Loader-статус: `registered`. Loader-правило: `cl-country-code`.
+## Особенности применения
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/country-code/js/country-code.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/country-code/template/default.js`
+Всегда задавайте понятную видимую подпись через `label`. Компонент сам связывает
+её с нативным `input[type="tel"]`, создаёт кнопку выбора и одиночный `listbox`,
+поддерживает клавиатуру и возвращает фокус после подтверждения или отмены.
+Атрибуты `name`, `form` и `required` сохраняют нативную семантику формы.
 
-## Зависимости
+## Выбор и фиксированный код
 
-- `component.country-code`
+По умолчанию пользователь может менять страну. `multi-country="false"`
+оставляет заданный `iso2` или `dial-code` фиксированным и не создаёт список.
+Текущее значение, страну, код, открытое и недоступное состояния можно прочитать
+через свойство `state` и изменить методом `setState()`.
 
-## Атрибуты и свойства
+:::example {id="components/country-code/smart-modes" label="Результат"}
+:::
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
-| `label` | `label` | `String` | `'Label'` | `—` |
-| `required` | `required` | `Boolean` | `false` | `—` |
-| `hint` | `hint` | `String` | `''` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-| `placeholder` | `placeholder` | `String` | `'+7(___)___-__-__'` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `open` | `open` | `Boolean` | `false` | `—` |
-| `locale` | `locale` | `String` | `'ru'` | `—` |
-| `use-mask` | `useMask` | `Boolean` | `false` | `—` |
-| `use-country-masks` | `useCountryMasks` | `Boolean` | `true` | `—` |
-| `show-code` | `showCode` | `Boolean` | `true` | `—` |
-| `mask-style` | `maskStyle` | `String` | `'native'` | `—` |
-| `multi-country` | `multiCountry` | `Boolean` | `true` | `—` |
-| `iso2` | `iso2` | `String` | `''` | `—` |
-| `dial-code` | `dialCode` | `String` | `''` | `—` |
-| `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
-| `flag-base` | `flagBase` | `String` | `''` | `—` |
-| `lazy-flags` | `lazyFlags` | `Boolean` | `true` | `—` |
-| `show-mask-placeholder` | `showMaskPlaceholder` | `Boolean` | `false` | `—` |
-| `mask-placeholder-char` | `maskPlaceholderChar` | `String` | `'_'` | `—` |
-| `max-items` | `maxItems` | `Number` | `0` | `—` |
+## Размеры
 
-Общие атрибуты базового Smart-элемента:
+Атрибут `size` принимает `1/3`, `1/2`, `1`, `2` и `3`. Все варианты используют
+типографические токены Framework и сохраняют одинаковую структуру подписи,
+поля и подсказки.
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+:::example {id="components/country-code/smart-sizes" label="Результат"}
+:::
 
-## Методы
+## Работа в форме
 
-`get countries()`, `get dialCode()`, `get disabled()`, `get flagBase()`, `get hint()`, `get iso2()`, `get label()`, `get lazyFlags()`, `get locale()`, `get maskPattern()`, `get maskPlaceholderChar()`, `get maskStyle()`, `get maxItems()`, `get multiCountry()`, `get open()`, `get placeholder()`, `get required()`, `get showCode()`, `get showMaskPlaceholder()`, `get size()`, `get state()`, `get useCountryMasks()`, `get useMask()`, `get value()`, `set countries()`, `setState()`.
+Значение участвует в `FormData`, нативной проверке и reset. Сброс возвращает
+исходные номер и страну. Компонент не проверяет существование международного
+номера: серверная проверка и бизнес-валидация остаются задачей приложения.
 
-## События
+:::example {id="components/country-code/smart-form" label="Результат"}
+:::
 
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
+## Собственный набор стран
 
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
+Свойство `countries` принимает локальный массив объектов с `iso2`, `code` или
+`dialCode`, `label` и необязательным `maskPattern`. Для известных ISO пропущенные
+данные дополняются встроенным справочником. Перед присваиванием дождитесь
+регистрации элемента через `customElements.whenDefined()`.
 
-## Минимальная разметка
+:::example {id="components/country-code/smart-countries" label="Результат"}
+:::
 
-```html
-<sf-country-code></sf-country-code>
-```
+## Оформление
 
-## Доступность
+`root-class` добавляет корню обычные утилиты Framework. Так можно менять
+поверхность, отступы и общий радиус без копирования внутренних классов и без
+абсолютных CSS-размеров; геометрия самого поля продолжает использовать
+системный UI-радиус.
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
-
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/country-code`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-country-code`
+:::example {id="components/country-code/smart-customization" label="Результат"}
+:::

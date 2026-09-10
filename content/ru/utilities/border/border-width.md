@@ -6,20 +6,26 @@ tags: [border-width, sm, md, lg, xl]
 
 # Толщина границы
 
+:badge[border-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов толщины границы в SIMAI Framework вы можете задавать толщину для всех сторон, по осям или для отдельных сторон.
+
+## Наглядный пример
+
+:::example {id="utilities/border/border-width" label="Толщина границы"}
+:::
 
 ## Классы и значения
 
 | Класс | Значение |
 |:--|:--|
-| `.border-{n}` | `border-width: var(--sf-*)` |
-| `.border-x-{n}` | `border-inline-start-width` + `border-inline-end-width` |
-| `.border-y-{n}` | `border-top-width` + `border-bottom-width` |
-| `.border-inline-start-{n}` | `border-inline-start-width` |
-| `.border-inline-end-{n}` | `border-inline-end-width` |
-| `.border-top-{n}` | `border-top-width` |
-| `.border-bottom-{n}` | `border-bottom-width` |
-
+| `border-{n}` | `border-width: var(--sf-*)` |
+| `border-x-{n}` | `border-inline-start-width` + `border-inline-end-width` |
+| `border-y-{n}` | `border-top-width` + `border-bottom-width` |
+| `border-inline-start-{n}` | `border-inline-start-width` |
+| `border-inline-end-{n}` | `border-inline-end-width` |
+| `border-top-{n}` | `border-top-width` |
+| `border-bottom-{n}` | `border-bottom-width` |
 
 `n`: `0..10`
 
@@ -37,7 +43,3 @@ tags: [border-width, sm, md, lg, xl]
 - `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`), например `md:border-4`.
 
 ## Примеры
-
-:::example {id="utilities/border/border-width" label="Результат"}
-:::
-

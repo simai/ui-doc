@@ -6,24 +6,31 @@ tags: [transition-delay, sm, md, lg, xl]
 
 # Задержка перехода
 
+:badge[transition-delay]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 В SIMAI Framework с помощью модификаторов можно задавать задержку при выполнении переходов CSS.
 Управление задержкой позволяет более точно настроить моменты начала анимации, делая интерфейс более отзывчивым или
 выразительным.
+
+## Наглядный пример
+
+:::example {id="utilities/animation/animation-transition-delay" label="Задержка перехода"}
+:::
 
 ## Классы и их значения
 
 | Класс    | Значение                 |
 |:---------|:-------------------------|
-| .delay-0 | transition-delay: 0s;    |
-| .delay-1 | transition-delay: 75ms;  |
-| .delay-2 | transition-delay: 100ms; |
-| .delay-3 | transition-delay: 150ms; |
-| .delay-4 | transition-delay: 200ms; |
-| .delay-5 | transition-delay: 300ms; |
-| .delay-6 | transition-delay: 500ms; |
-| .delay-7 | transition-delay: 700ms; |
-| .delay-8 | transition-delay: 1s;    |
-| .delay-9 | transition-delay: 2s;    |
+| `delay-0` | `transition-delay: 0s;` |
+| `delay-1` | `transition-delay: 75ms;` |
+| `delay-2` | `transition-delay: 100ms;` |
+| `delay-3` | `transition-delay: 150ms;` |
+| `delay-4` | `transition-delay: 200ms;` |
+| `delay-5` | `transition-delay: 300ms;` |
+| `delay-6` | `transition-delay: 500ms;` |
+| `delay-7` | `transition-delay: 700ms;` |
+| `delay-8` | `transition-delay: 1s;` |
+| `delay-9` | `transition-delay: 2s;` |
 
 ## Описание
 
@@ -43,7 +50,3 @@ tags: [transition-delay, sm, md, lg, xl]
 ```
 
 ## Пример использования
-
-:::example {id="utilities/animation/animation-transition-delay" label="Результат"}
-:::
-

@@ -1,29 +1,35 @@
 ---
-title: "Акцентный цвет (accent-color)"
+title: "Акцентный цвет"
 description: "Акцентный цвет (accent-color)"
 tags: [accent-color, hover]
 ---
 
-# Акцентный цвет (accent-color)
+# Акцентный цвет
+
+:badge[accent-color]{type=main scheme=on-surface size=1}
 
 Используя модификаторы акцентного цвета `accent-color` в SIMAI Framework, вы можете задавать цвет акцентирования для
 элементов управления формы, таких как чекбоксы и радиокнопки. Это позволяет легко стилизовать акцентные элементы,
 отражая выбранную цветовую палитру и улучшая визуальную согласованность интерфейса.
 
+## Наглядный пример
+
+:::example {id="utilities/forms/accent-color" label="Акцентный цвет"}
+:::
+
 ## Классы и их значения
 
 | Класс               | Значение                               |
 |:--------------------|:---------------------------------------|
-| .accent-transparent | accent-color: var(`--sf-transparent`); |
-| .accent-current     | accent-color: currentColor;            |
-| .accent-on-surface  | accent-color: var(`--sf-on-surface`);  |
-| .accent-primary     | accent-color: var(`--sf-primary`);     |
-| .accent-secondary   | accent-color: var(`--sf-secondary`);   |
-| .accent-tertiary    | accent-color: var(`--sf-tertiary`);    |
-| .accent-error       | accent-color: var(`--sf-error`);       |
-| .accent-warning     | accent-color: var(`--sf-warning`);     |
-| .accent-success     | accent-color: var(`--sf-success`);     |
-
+| `accent-transparent` | `accent-color: var(--sf-transparent);` |
+| `accent-current` | `accent-color: currentColor;` |
+| `accent-on-surface` | `accent-color: var(--sf-on-surface);` |
+| `accent-primary` | `accent-color: var(--sf-primary);` |
+| `accent-secondary` | `accent-color: var(--sf-secondary);` |
+| `accent-tertiary` | `accent-color: var(--sf-tertiary);` |
+| `accent-error` | `accent-color: var(--sf-error);` |
+| `accent-warning` | `accent-color: var(--sf-warning);` |
+| `accent-success` | `accent-color: var(--sf-success);` |
 
 ## Описание
 
@@ -37,7 +43,3 @@ tags: [accent-color, hover]
 - `hover:accent-{color}` – установить акцентный цвет при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/forms/accent-color" label="Результат"}
-:::
-

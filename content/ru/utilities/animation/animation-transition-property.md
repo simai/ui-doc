@@ -6,30 +6,37 @@ tags: [transition-property, sm, md, lg, xl]
 
 # Общее свойство перехода
 
+:badge[transition-property]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 Данные модификаторы позволяют задать, какие именно CSS-свойства будут плавно изменяться при взаимодействии с элементом.
 Применяя соответствующий модификатор, вы контролируете, для каких свойств будет выполняться переход, а также можете
 комбинировать его с другими модификаторами (например, для изменения цвета, фона или тени).
+
+## Наглядный пример
+
+:::example {id="utilities/animation/animation-transition-property" label="Общее свойство перехода"}
+:::
 
 ## Классы и их значения
 
 | Класс                 | Значение                                                                                                                                                                                                                                      |
 |:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| .transition-none      | transition-property: none;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                                  |
-| .transition-all       | transition-property: all;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                                   |
-| .transition           | transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                   |
-| .transition-colors    | transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                            |
-| .transition-opacity   | transition-property: opacity;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                               |
-| .transition-shadow    | transition-property: box-shadow;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                             |
-| .transition-transform | transition-property: transform;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                             |
-| .transition-width     | transition-property: width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                                 |
-| .transition-height    | transition-property: height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                                |
-| .transition-size      | transition-property: width, height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                         |
-| .transition-max-width | transition-property: max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                             |
-| .transition-max-height | transition-property: max-height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                            |
-| .transition-max-size  | transition-property: max-width, max-height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                 |
-| .transition-flex      | transition-property: flex, flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                      |
-| .transition-flex-basis | transition-property: flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                                                                            |
-| .transition-layout    | transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;                                                                                      |
+| `transition-none` | `transition-property: none;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-all` | `transition-property: all;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-colors` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-opacity` | `transition-property: opacity;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-shadow` | `transition-property: box-shadow;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-transform` | `transition-property: transform;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-width` | `transition-property: width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-height` | `transition-property: height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-size` | `transition-property: width, height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-max-width` | `transition-property: max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-max-height` | `transition-property: max-height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-max-size` | `transition-property: max-width, max-height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-flex` | `transition-property: flex, flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-flex-basis` | `transition-property: flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-layout` | `transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
 
 ## Описание
 
@@ -65,7 +72,3 @@ tags: [transition-property, sm, md, lg, xl]
 
 При наведении курсора на кнопку цвет текста плавно сменится на основной (`text-primary`), так как все свойства с
 переходом (`transition-all`) будут изменяться плавно.
-
-:::example {id="utilities/animation/animation-transition-property" label="Результат"}
-:::
-

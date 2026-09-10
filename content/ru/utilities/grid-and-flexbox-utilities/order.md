@@ -1,33 +1,40 @@
 ---
-title: "Сортировка (order)"
+title: "Сортировка"
 description: "Сортировка (order)"
 tags: [order, sm, md, lg, xl]
 ---
 
-# Сортировка (order)
+# Сортировка
+
+:badge[order]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данный модификатор управляет порядком отображения элементов в потоке раскладки, не изменяя их логический порядок в
 документе.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/order" label="Сортировка"}
+:::
 
 ## Таблица классов
 
 | Класс        | Значение       |
 |:-------------|:---------------|
-| .order-1     | order: 1;      |
-| .order-2     | order: 2;      |
-| .order-3     | order: 3;      |
-| .order-4     | order: 4;      |
-| .order-5     | order: 5;      |
-| .order-6     | order: 6;      |
-| .order-7     | order: 7;      |
-| .order-8     | order: 8;      |
-| .order-9     | order: 9;      |
-| .order-10    | order: 10;     |
-| .order-11    | order: 11;     |
-| .order-12    | order: 12;     |
-| .order-first | order: \-9999; |
-| .order-last  | order: 9999;   |
-| .order-none  | order: 0;      |
+| `order-1` | `order: 1;` |
+| `order-2` | `order: 2;` |
+| `order-3` | `order: 3;` |
+| `order-4` | `order: 4;` |
+| `order-5` | `order: 5;` |
+| `order-6` | `order: 6;` |
+| `order-7` | `order: 7;` |
+| `order-8` | `order: 8;` |
+| `order-9` | `order: 9;` |
+| `order-10` | `order: 10;` |
+| `order-11` | `order: 11;` |
+| `order-12` | `order: 12;` |
+| `order-first` | `order: \-9999;` |
+| `order-last` | `order: 9999;` |
+| `order-none` | `order: 0;` |
 
 ## Синтаксис
 
@@ -65,7 +72,3 @@ tags: [order, sm, md, lg, xl]
     <!-- Начиная с md элемент будет отображаться последним -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/order" label="Результат"}
-:::
-

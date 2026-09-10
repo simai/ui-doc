@@ -1,23 +1,29 @@
 ---
-title: "Семейство шрифтов (font-family)"
+title: "Семейство шрифтов"
 description: "Семейство шрифтов (font-family)"
 tags: [font-family]
 ---
 
-# Семейство шрифтов (font-family)
+# Семейство шрифтов
+
+:badge[font-family]{type=main scheme=on-surface size=1}
 
 В текущей версии для изменения семейства шрифтов используется система переменных. Значения переменных задаются в ядре
 фреймворка. Использование классов семейства шрифтов позволяет гибко переключать стили текста без необходимости
 переопределять стили вручную.
 
+## Наглядный пример
+
+:::example {id="utilities/typography/font-family" label="Семейство шрифтов"}
+:::
+
 ## Таблица классов
 
 | Класс  | Значение                        |
 |:-------|:--------------------------------|
-| .sans  | font-family: var(`--sf-sans`);  |
-| .serif | font-family: var(`--sf-serif`); |
-| .mono  | font-family: var(`--sf-mono`);  |
-
+| `sans` | `font-family: var(--sf-sans);` |
+| `serif` | `font-family: var(--sf-serif);` |
+| `mono` | `font-family: var(--sf-mono);` |
 
 ## Пример использования
 
@@ -35,7 +41,3 @@ tags: [font-family]
 ```html
 <p class="serif">На экранах md и больше текст будет шрифтом serif.</p>
 ```
-## Пример
-:::example {id="utilities/typography/font-family" label="Результат"}
-:::
-

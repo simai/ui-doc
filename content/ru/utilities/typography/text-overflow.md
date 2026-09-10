@@ -1,21 +1,28 @@
 ---
-title: "Обрезка текста (text-overflow)"
+title: "Обрезка текста"
 description: "Обрезка текста (text-overflow)"
 tags: [text-overflow]
 ---
 
-# Обрезка текста (text-overflow)
+# Обрезка текста
+
+:badge[text-overflow]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно обрезать текст, который не помещается в родительский элемент, добавляя многоточие или
 полностью скрывая лишние символы.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/text-overflow" label="Обрезка текста"}
+:::
 
 ## Таблица классов
 
 | Класс       | Значение                                                                  |
 |:------------|:--------------------------------------------------------------------------|
-| .truncate   | overflow: hidden;&lt;br/&gt; white-space: nowrap;&lt;br/&gt; text-overflow: ellipsis; |
-| .t-ellipsis | text-overflow: ellipsis;                                                  |
-| .t-clip     | text-overflow: clip;                                                      |
+| `truncate` | `overflow: hidden;&lt;br/&gt; white-space: nowrap;&lt;br/&gt; text-overflow: ellipsis;` |
+| `t-ellipsis` | `text-overflow: ellipsis;` |
+| `t-clip` | `text-overflow: clip;` |
 
 ## Синтаксис
 
@@ -33,7 +40,3 @@ tags: [text-overflow]
     - `t-clip` – текст обрезается без многоточия, необходимо вручную указать `overflow-hidden` и `white-space: nowrap`.
 
 ## Пример использования
-
-:::example {id="utilities/typography/text-overflow" label="Результат"}
-:::
-

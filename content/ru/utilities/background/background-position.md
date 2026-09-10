@@ -6,21 +6,28 @@ tags: [background-position, sm, md, lg, xl]
 
 # Положение фона
 
+:badge[background-position]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов `background-position` вы можете управлять положением фонового изображения в пределах элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/background/background-position" label="Положение фона"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                           |
 |:-----------------|:-----------------------------------|
-| .bg-bottom       | background-position: bottom;       |
-| .bg-center       | background-position: center;       |
-| .bg-left         | background-position: left;         |
-| .bg-left-bottom  | background-position: left bottom;  |
-| .bg-left-top     | background-position: left top;     |
-| .bg-right        | background-position: right;        |
-| .bg-right-bottom | background-position: right bottom; |
-| .bg-right-top    | background-position: right top;    |
-| .bg-top          | background-position: top;          |
+| `bg-bottom` | `background-position: bottom;` |
+| `bg-center` | `background-position: center;` |
+| `bg-left` | `background-position: left;` |
+| `bg-left-bottom` | `background-position: left bottom;` |
+| `bg-left-top` | `background-position: left top;` |
+| `bg-right` | `background-position: right;` |
+| `bg-right-bottom` | `background-position: right bottom;` |
+| `bg-right-top` | `background-position: right top;` |
+| `bg-top` | `background-position: top;` |
 
 ## Описание
 
@@ -78,7 +85,3 @@ tags: [background-position, sm, md, lg, xl]
     <div class="h-f8"></div>
 </div>
 ```
-## Пример
-:::example {id="utilities/background/background-position" label="Результат"}
-:::
-

@@ -1,20 +1,27 @@
 ---
-title: "Инвертирование цвета элемента (filter-invert)"
+title: "Инвертирование цвета элемента"
 description: "Инвертирование цвета элемента (filter-invert)"
 tags: [filter-invert, hover]
 ---
 
-# Инвертирование цвета элемента (filter-invert)
+# Инвертирование цвета элемента
+
+:badge[filter-invert]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять инвертированием цвета элемента, превращая светлые тона в темные и наоборот.
 Убираем адаптивность (`sm`, `md`, `lg`, `xl`), оставляем поддержку `hover`.
+
+## Наглядный пример
+
+:::example {id="utilities/filters/filter-invert" label="Инвертирование цвета элемента"}
+:::
 
 ## Классы и их значения
 
 | Класс        | Значение          |
 |:-------------|:------------------|
-| .invert-none | filter: invert(0) |
-| .invert      | filter: invert(1) |
+| `invert-none` | filter: invert(0) |
+| `invert` | filter: invert(1) |
 
 ## Описание
 
@@ -28,7 +35,3 @@ tags: [filter-invert, hover]
 - Можно использовать `hover:invert` для инвертирования при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/filters/filter-invert" label="Результат"}
-:::
-

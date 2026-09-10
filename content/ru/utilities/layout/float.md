@@ -1,12 +1,21 @@
 ---
-title: "Плавающий элемент (float)"
-description: "Плавающий элемент (float)"
+title: "Плавающий элемент"
+description: "Размещает элемент у логического края и позволяет тексту обтекать его."
 tags: [float, sm, md, lg, xl]
 ---
 
-# Плавающий элемент (float)
+# Плавающий элемент
+
+:badge[float]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `float` управляют обтеканием и используют логические стороны (`inline-start`, `inline-end`), чтобы работать в LTR/RTL.
+
+## Пример
+
+Одинаковое изображение размещено у начала и конца строки, чтобы направление обтекания было видно без дополнительных пояснений.
+
+:::example {id="utilities/layout/float" label="Обтекание изображения"}
+:::
 
 ## Синтаксис
 
@@ -65,7 +74,3 @@ tags: [float, sm, md, lg, xl]
 ```html
 <div class="md:float-inline-end"></div>
 ```
-## Пример
-:::example {id="utilities/layout/float" label="Результат"}
-:::
-

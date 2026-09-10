@@ -1,13 +1,22 @@
 ---
-title: "Видимость элемента (visibility)"
-description: "Видимость элемента (visibility)"
+title: "Видимость элемента"
+description: "Скрывает элемент визуально, сохраняя занимаемое им место в макете."
 tags: [visibility, sm, md, lg, xl]
 ---
 
-# Видимость элемента (visibility)
+# Видимость элемента
+
+:badge[visibility]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 С помощью данных модификаторов можно управлять видимостью элементов, сохраняя их место в DOM. Это позволяет, например,
 скрыть элемент визуально, но при этом не нарушать поток документа.
+
+## Пример
+
+Во втором столбце скрытый элемент остаётся в потоке, поэтому следующий блок не поднимается на его место.
+
+:::example {id="utilities/layout/visibility" label="Видимый и скрытый элемент"}
+:::
 
 ## Синтаксис
 
@@ -59,7 +68,3 @@ tags: [visibility, sm, md, lg, xl]
 ```html
 <div class="md:visible"></div>
 ```
-## Пример
-:::example {id="utilities/layout/visibility" label="Результат"}
-:::
-

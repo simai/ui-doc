@@ -6,15 +6,18 @@ tags: [text-decoration-offset]
 
 # Смещение подчеркивания текста
 
+:badge[text-decoration-offset]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/text-formatting/text-underline-offset" label="Смещение подчеркивания текста"}
+:::
+
 ## Таблица классов
 
 | Класс | Значение |
 |:--|:--|
-| `.decoration-offset-auto` | Автоматическое смещение |
-| `.decoration-offset-0` ... `.decoration-offset-4` | Смещение по токенам `--sf-a0..--sf-a4` |
+| `decoration-offset-auto` | Автоматическое смещение |
+| `decoration-offset-0 ... decoration-offset-4` | Смещение по токенам `--sf-a0..--sf-a4` |
 
 ## Пример
-
-:::example {id="utilities/text-formatting/text-underline-offset" label="Результат"}
-:::
-

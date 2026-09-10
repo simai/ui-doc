@@ -1,24 +1,31 @@
 ---
-title: "Размер колонки сетки (grid-column)"
+title: "Размер колонки сетки"
 description: "Размер колонки сетки (grid-column)"
 tags: [grid-column, sm, md, lg, xl]
 ---
 
-# Размер колонки сетки (grid-column)
+# Размер колонки сетки
+
+:badge[grid-column]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-column` позволяют задавать колонки и их интервалы в сетке, управляя шириной и расположением элементов по горизонтали.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-column" label="Размер колонки сетки"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение                  |
 |:-------------------|:--------------------------|
-| .col-span-{n}      | grid-column: span {n};    |
-| .col-span-full     | grid-column: 1 / -1;      |
-| .col-span-none     | grid-column: auto;        |
-| .col-start-{n}     | grid-column-start: {n};   |
-| .col-start-auto    | grid-column-start: auto;  |
-| .col-end-{n}       | grid-column-end: {n};     |
-| .col-end-auto      | grid-column-end: auto;    |
+| `col-span-{n}` | `grid-column: span {n};` |
+| `col-span-full` | `grid-column: 1 / -1;` |
+| `col-span-none` | `grid-column: auto;` |
+| `col-start-{n}` | `grid-column-start: {n};` |
+| `col-start-auto` | `grid-column-start: auto;` |
+| `col-end-{n}` | `grid-column-end: {n};` |
+| `col-end-auto` | `grid-column-end: auto;` |
 
 Диапазон `n` соответствует объявленным утилитам в SCSS (`col-span` от 1 до 12, `col-start`/`col-end` от 1 до 13).
 
@@ -55,7 +62,3 @@ tags: [grid-column, sm, md, lg, xl]
   <!-- элемент занимает разную ширину на разных экранах -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-column" label="Результат"}
-:::
-

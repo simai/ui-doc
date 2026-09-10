@@ -6,19 +6,22 @@ tags: [text-decoration-color, hover, focus, active]
 
 # Цвет оформления текста
 
+:badge[text-decoration-color]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/text-formatting/text-formatting-color" label="Цвет оформления текста"}
+:::
+
 ## Таблица классов
 
 | Класс | Значение |
 |:--|:--|
-| `.decoration-primary` | `text-decoration-color: var(--sf-outline-primary);` |
-| `.decoration-secondary` | `text-decoration-color: var(--sf-outline-secondary);` |
-| `.decoration-tertiary` | `text-decoration-color: var(--sf-outline-tertiary);` |
-| `.decoration-error` | `text-decoration-color: var(--sf-outline-error);` |
-| `.decoration-warning` | `text-decoration-color: var(--sf-outline-warning);` |
-| `.decoration-success` | `text-decoration-color: var(--sf-outline-success);` |
+| `decoration-primary` | `text-decoration-color: var(--sf-outline-primary);` |
+| `decoration-secondary` | `text-decoration-color: var(--sf-outline-secondary);` |
+| `decoration-tertiary` | `text-decoration-color: var(--sf-outline-tertiary);` |
+| `decoration-error` | `text-decoration-color: var(--sf-outline-error);` |
+| `decoration-warning` | `text-decoration-color: var(--sf-outline-warning);` |
+| `decoration-success` | `text-decoration-color: var(--sf-outline-success);` |
 
 ## Пример
-
-:::example {id="utilities/text-formatting/text-formatting-color" label="Результат"}
-:::
-

@@ -16,19 +16,23 @@ profile: reference
 ## Особенности применения
 
 Подбирайте символ и цвет по смыслу. Декоративную иконку скрывайте через
-`aria-hidden="true"`; значимая иконка должна сопровождаться текстом.
+`aria-hidden="true"`; самостоятельная значимая иконка получает `role="img"` и
+короткое доступное имя.
+
+:::example {id="components/featured-icon/accessibility" label="Результат"}
+:::
 
 ## Интенсивность
 
-Доступны светлый и тёмный варианты. `mid` и `modern` применяются к квадратной
-акцентной иконке основной цветовой роли.
+`soft` используется по умолчанию. Дополнительно доступны `medium`, `solid` и
+`elevated`; они меняют интенсивность, не меняя смысловую цветовую роль.
 
 :::example {id="components/featured-icon/tones" label="Результат"}
 :::
 
 ## Цвет
 
-Цветовые роли: `primary`, `clear`, `success`, `warning` и `error`.
+Цветовые роли: `primary`, `neutral`, `info`, `success`, `warning` и `error`.
 
 :::example {id="components/featured-icon/colors" label="Результат"}
 :::
@@ -42,7 +46,7 @@ profile: reference
 
 ## Размеры
 
-Доступны размеры `1`, `2` и `3`.
+Доступны размеры `1/3`, `1/2`, `1`, `2` и `3`.
 
 :::example {id="components/featured-icon/sizes" label="Результат"}
 :::

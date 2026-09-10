@@ -17,11 +17,13 @@ profile: reference
 ## Особенности применения
 
 Декоративную иконку скрывайте через `aria-hidden="true"`. Иконка без видимой
-подписи должна находиться внутри элемента с доступным именем.
+подписи получает `role="img"` и короткий `aria-label` либо находится внутри
+элемента с доступным именем. `sf-icon-loaded` — внутреннее состояние Loader, его
+не добавляют вручную.
 
 ## Семейства
 
-По умолчанию используется outlined. Классы `sf-icon-rounded` и `sf-icon-shape`
+По умолчанию используется outlined. Классы `sf-icon--rounded` и `sf-icon--sharp`
 выбирают Rounded и Sharp.
 
 :::example {id="components/icons/families" label="Результат"}
@@ -29,17 +31,25 @@ profile: reference
 
 ## Начертание и заливка
 
-Доступны extra light, light, regular, medium, semi bold и bold. `filled` и
-`solid` включают заливку символа.
+Доступны thin, extra light, light, regular, medium, semi bold и bold.
+`sf-icon--filled` включает заливку символа.
 
 :::example {id="components/icons/weights" label="Результат"}
 :::
 
 ## Размеры
 
-Размеры `1`–`7` следуют шкале Framework.
+Размеры `1/4`, `1/3`, `1/2` и `1`–`7` следуют шкале Framework.
 
 :::example {id="components/icons/sizes" label="Результат"}
+:::
+
+## Цвет
+
+Иконка наследует `currentColor`; применяйте смысловые цветовые утилиты к ней
+или родительскому элементу.
+
+:::example {id="components/icons/color" label="Результат"}
 :::
 
 ## Поворот

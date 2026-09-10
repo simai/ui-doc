@@ -1,13 +1,20 @@
 ---
-title: "Выравнивание привязки прокрутки (scroll-snap-align)"
+title: "Выравнивание привязки прокрутки"
 description: "Выравнивание привязки прокрутки (scroll-snap-align)"
 tags: [scroll-snap-align]
 ---
 
-# Выравнивание привязки прокрутки (scroll-snap-align)
+# Выравнивание привязки прокрутки
+
+:badge[scroll-snap-align]{type=main scheme=on-surface size=1}
 
 Модификаторы из пакета `scroll-snap-align` позволяют управлять тем, как элементы выравниваются при остановке прокрутки
 внутри контейнера с привязкой прокрутки.
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-snap-align" label="Выравнивание привязки прокрутки"}
+:::
 
 ## Краткое описание
 
@@ -19,10 +26,10 @@ tags: [scroll-snap-align]
 
 | Класс            | Значение                   |
 |:-----------------|:---------------------------|
-| .snap-start      | scroll-snap-align: start;  |
-| .snap-end        | scroll-snap-align: end;    |
-| .snap-center     | scroll-snap-align: center; |
-| .snap-align-none | scroll-snap-align: none;   |
+| `snap-start` | `scroll-snap-align: start;` |
+| `snap-end` | `scroll-snap-align: end;` |
+| `snap-center` | `scroll-snap-align: center;` |
+| `snap-align-none` | `scroll-snap-align: none;` |
 
 ## Описание
 
@@ -45,7 +52,3 @@ tags: [scroll-snap-align]
 ```
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/scroll-snap-align" label="Результат"}
-:::
-

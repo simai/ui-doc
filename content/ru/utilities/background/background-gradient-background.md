@@ -6,9 +6,16 @@ tags: [gradient-color]
 
 # Градиент фона
 
+:badge[gradient-color]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов цвета градиента можно задать цвета для градиентного фона элемента. В сочетании с модификаторами
 вида градиента (`gr-line-2`, `gr-line-3`, `gr-radial-2`, `gr-radial-3`, `gr-conic-2`, `gr-conic-3`) эти классы
 определяют цвета, используемые в градиенте.
+
+## Наглядный пример
+
+:::example {id="utilities/background/background-gradient-background" label="Градиент фона"}
+:::
 
 ## Таблица классов
 
@@ -17,21 +24,21 @@ tags: [gradient-color]
 
 | Класс цвета                                              | Переменная                   | Значение цвета                  |
 |:-----------------------------------------------------------------------------|:-----------------------------|:--------------------------------|
-| .gr1-transparent, .gr2-transparent, .gr3-transparent                         | `--sf-gradient--color-1/2/3` | var(`--sf-transparent`)         |
-| .gr1-current, .gr2-current, .gr3-current                                     | `--sf-gradient--color-1/2/3` | currentColor                    |
-| .gr1-inherit, .gr2-inherit, .gr3-inherit                                     | `--sf-gradient--color-1/2/3` | inherit                         |
-| .gr1-surface-0, .gr2-surface-0, .gr3-surface-0                               | `--sf-gradient--color-1/2/3` | var(`--sf-surface-0`)           |
-| .gr1-surface-1, .gr2-surface-1, .gr3-surface-1                               | `--sf-gradient--color-1/2/3` | var(`--sf-surface-1`)           |
-| .gr1-surface-2, .gr2-surface-2, .gr3-surface-2                               | `--sf-gradient--color-1/2/3` | var(`--sf-surface-2`)           |
-| .gr1-on-surface, .gr2-on-surface, .gr3-on-surface                            | `--sf-gradient--color-1/2/3` | var(`--sf-on-surface`)          |
-| .gr1-primary, .gr2-primary, .gr3-primary                                     | `--sf-gradient--color-1/2/3` | var(`--sf-primary`)             |
-| .gr1-primary-container, .gr2-primary-container, .gr3-primary-container       | `--sf-gradient--color-1/2/3` | var(`--sf-primary-container`)   |
-| .gr1-secondary, .gr2-secondary, .gr3-secondary                               | `--sf-gradient--color-1/2/3` | var(`--sf-secondary`)           |
-| .gr1-secondary-container, .gr2-secondary-container, .gr3-secondary-container | `--sf-gradient--color-1/2/3` | var(`--sf-secondary-container`) |
-| .gr1-tertiary, .gr2-tertiary, .gr3-tertiary                                  | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary`)            |
-| .gr1-tertiary-container, .gr2-tertiary-container, .gr3-tertiary-container    | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary-container`)  |
-| .gr1-success, .gr2-success, .gr3-success                                     | `--sf-gradient--color-1/2/3` | var(`--sf-success`)             |
-| .gr1-warning, .gr2-warning, .gr3-warning                                     | `--sf-gradient--color-1/2/3` | var(`--sf-warning`)             |
+| `gr1-transparent, gr2-transparent, gr3-transparent` | `--sf-gradient--color-1/2/3` | var(`--sf-transparent`)         |
+| `gr1-current, gr2-current, gr3-current` | `--sf-gradient--color-1/2/3` | currentColor                    |
+| `gr1-inherit, gr2-inherit, gr3-inherit` | `--sf-gradient--color-1/2/3` | inherit                         |
+| `gr1-surface-0, gr2-surface-0, gr3-surface-0` | `--sf-gradient--color-1/2/3` | var(`--sf-surface-0`)           |
+| `gr1-surface-1, gr2-surface-1, gr3-surface-1` | `--sf-gradient--color-1/2/3` | var(`--sf-surface-1`)           |
+| `gr1-surface-2, gr2-surface-2, gr3-surface-2` | `--sf-gradient--color-1/2/3` | var(`--sf-surface-2`)           |
+| `gr1-on-surface, gr2-on-surface, gr3-on-surface` | `--sf-gradient--color-1/2/3` | var(`--sf-on-surface`)          |
+| `gr1-primary, gr2-primary, gr3-primary` | `--sf-gradient--color-1/2/3` | var(`--sf-primary`)             |
+| `gr1-primary-container, gr2-primary-container, gr3-primary-container` | `--sf-gradient--color-1/2/3` | var(`--sf-primary-container`)   |
+| `gr1-secondary, gr2-secondary, gr3-secondary` | `--sf-gradient--color-1/2/3` | var(`--sf-secondary`)           |
+| `gr1-secondary-container, gr2-secondary-container, gr3-secondary-container` | `--sf-gradient--color-1/2/3` | var(`--sf-secondary-container`) |
+| `gr1-tertiary, gr2-tertiary, gr3-tertiary` | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary`)            |
+| `gr1-tertiary-container, gr2-tertiary-container, gr3-tertiary-container` | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary-container`)  |
+| `gr1-success, gr2-success, gr3-success` | `--sf-gradient--color-1/2/3` | var(`--sf-success`)             |
+| `gr1-warning, gr2-warning, gr3-warning` | `--sf-gradient--color-1/2/3` | var(`--sf-warning`)             |
 
 *(Прежние классы цветов заменяются по аналогии с заменой для цвета фона. Например, вместо `gr1-blue-4`
 использовать `gr1-primary`, вместо `gr1-gray-6` использовать `gr1-surface-inverse`, и т.д.)*
@@ -47,7 +54,3 @@ tags: [gradient-color]
 
 Используйте подходящие классы для каждого шага градиента и модификатор вида градиента для создания нужного визуального
 эффекта.
-
-:::example {id="utilities/background/background-gradient-background" label="Результат"}
-:::
-

@@ -1,0 +1,17 @@
+<div class="flex flex-wrap gap-2">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-open="smart-modal-minimized">
+    <span class="sf-button-text-container">Открыть задачу</span>
+  </button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-show="smart-modal-minimized">
+    <span class="sf-button-text-container">Восстановить задачу</span>
+  </button>
+</div>
+
+<sf-modal modal-id="smart-modal-minimized" title="Черновик сообщения" hide="true" show-footer="false">
+  <div slot="content" class="flex flex-col gap-2">
+    <p class="m-0">Свёрнутое окно остаётся экземпляром, но перестаёт быть активным слоем.</p>
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-close="smart-modal-minimized">
+      <span class="sf-button-text-container">Завершить</span>
+    </button>
+  </div>
+</sf-modal>

@@ -1,25 +1,32 @@
 ---
-title: "Размещение содержимого по обеим осям (place-content)"
+title: "Размещение содержимого по обеим осям"
 description: "Размещение содержимого по обеим осям (place-content)"
 tags: [place-content, sm, md, lg, xl]
 ---
 
-# Размещение содержимого по обеим осям (place-content)
+# Размещение содержимого по обеим осям
+
+:badge[place-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы из этого раздела задают одновременное выравнивание содержимого сетки или флексбокса сразу по двум осям (
 основной и поперечной).
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/place-content" label="Размещение содержимого по обеим осям"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                      |
 |:-----------------|:------------------------------|
-| .content-center  | place-content: center;        |
-| .content-start   | place-content: start;         |
-| .content-end     | place-content: end;           |
-| .content-between | place-content: space-between; |
-| .content-around  | place-content: space-around;  |
-| .content-evenly  | place-content: space-evenly;  |
-| .content-stretch | place-content: stretch;       |
+| `content-center` | `place-content: center;` |
+| `content-start` | `place-content: start;` |
+| `content-end` | `place-content: end;` |
+| `content-between` | `place-content: space-between;` |
+| `content-around` | `place-content: space-around;` |
+| `content-evenly` | `place-content: space-evenly;` |
+| `content-stretch` | `place-content: stretch;` |
 
 ## Синтаксис
 
@@ -64,7 +71,3 @@ tags: [place-content, sm, md, lg, xl]
   <!-- Начиная с md элементы будут прижаты к началу по обеим осям -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/place-content" label="Результат"}
-:::
-

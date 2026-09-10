@@ -6,18 +6,25 @@ tags: [mask-repeat]
 
 # Повтор маски
 
+:badge[mask-repeat]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов повтора маски можно управлять тем, как будет повторяться маска внутри элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/mask/mask-repeat" label="Повтор маски"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение                |
 |:-------------------|:------------------------|
-| .mask-repeat       | mask-repeat: repeat;    |
-| .mask-repeat-none  | mask-repeat: no-repeat; |
-| .mask-repeat-x     | mask-repeat: repeat-x;  |
-| .mask-repeat-y     | mask-repeat: repeat-y;  |
-| .mask-repeat-round | mask-repeat: round;     |
-| .mask-repeat-space | mask-repeat: space;     |
+| `mask-repeat` | `mask-repeat: repeat;` |
+| `mask-repeat-none` | `mask-repeat: no-repeat;` |
+| `mask-repeat-x` | `mask-repeat: repeat-x;` |
+| `mask-repeat-y` | `mask-repeat: repeat-y;` |
+| `mask-repeat-round` | `mask-repeat: round;` |
+| `mask-repeat-space` | `mask-repeat: space;` |
 
 ## Описание
 
@@ -31,7 +38,3 @@ tags: [mask-repeat]
 - **mask-repeat-space** – маска повторяется целыми изображениями без искажения, возможны промежутки между ними.
 
 ## Примеры использования
-
-:::example {id="utilities/mask/mask-repeat" label="Результат"}
-:::
-

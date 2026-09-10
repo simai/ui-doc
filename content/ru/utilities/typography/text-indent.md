@@ -1,23 +1,30 @@
 ---
-title: "Отступ текста (text-indent)"
+title: "Отступ текста"
 description: "Отступ текста (text-indent)"
 tags: [text-indent]
 ---
 
-# Отступ текста (text-indent)
+# Отступ текста
+
+:badge[text-indent]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно задать отступ для первой строки текста.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/text-indent" label="Отступ текста"}
+:::
 
 ## Таблица классов
 
 | Класс     | Значение                          |
 |:----------|:----------------------------------|
-| .indent-0 | text-indent: var(`--sf-0`);       |
-| .indent-1 | text-indent: var(`--sf-space-1`); |
-| .indent-2 | text-indent: var(`--sf-space-2`); |
-| .indent-3 | text-indent: var(`--sf-space-3`); |
-| .indent-4 | text-indent: var(`--sf-space-4`); |
-| .indent-5 | text-indent: var(`--sf-space-5`); |
+| `indent-0` | `text-indent: var(--sf-0);` |
+| `indent-1` | `text-indent: var(--sf-space-1);` |
+| `indent-2` | `text-indent: var(--sf-space-2);` |
+| `indent-3` | `text-indent: var(--sf-space-3);` |
+| `indent-4` | `text-indent: var(--sf-space-4);` |
+| `indent-5` | `text-indent: var(--sf-space-5);` |
 
 ## Синтаксис
 
@@ -52,7 +59,3 @@ tags: [text-indent]
 ```html
 <p class="indent-3">Начиная с размера экрана md, отступ будет средний.</p>
 ```
-## Пример
-:::example {id="utilities/typography/text-indent" label="Результат"}
-:::
-

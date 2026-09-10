@@ -1,11 +1,27 @@
 ---
 title: "List Item"
-description: "API и runtime-контракт Smart-компонента list-item в SIMAI Framework 5.4.0."
+description: "Декларативное описание пункта Dropdown и его runtime-контракт."
 ---
 
 # List Item
 
-Идентификатор: `smart.list-item`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+Идентификатор: `smart.list-item`. Компонент описывает option для Dropdown и
+использует те же стили строки, что обычная разметка Framework.
+
+## Применение
+
+`sf-list-item` предназначен для прямого вложения в `sf-dropdown`. Родитель
+считывает его параметры до отрисовки и становится единственным владельцем
+`listbox`, `option`, фокуса, выбора, формы и событий. Самостоятельно размещённый
+List Item остаётся статическим визуальным представлением без `role="button"`,
+Tab-фокуса и ложного click-поведения.
+
+Все пять вариантов — text, icon, checkbox, avatar и color — показаны в рабочем
+[примере типов пунктов Dropdown](/ru/components/dropdown/#типы-пунктов). Ниже
+показаны их статические представления без ложного интерактивного поведения.
+
+:::example {id="components/list-item/overview" label="Результат"}
+:::
 
 ## Теги и подключение
 
@@ -30,6 +46,7 @@ Loader-статус: `registered`. Loader-правило: `cl-list-item`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
+| `value` | `itemValue` | `String` | `''` | `—` |
 | `type` | `type` | `String` | `'text'` | `['text', 'icon', 'checkbox', 'avatar', 'color']` |
 | `size` | `size` | `String` | `'1'` | `['1/3', '1/2', '1', '2', '3']` |
 | `text` | `text` | `String` | `''` | `—` |
@@ -52,7 +69,7 @@ Loader-статус: `registered`. Loader-правило: `cl-list-item`.
 
 ## Методы
 
-`get ariaLabel()`, `get avatarImageUrl()`, `get avatarTitle()`, `get checked()`, `get colorClass()`, `get componentName()`, `get disabled()`, `get icon()`, `get selected()`, `get size()`, `get sizeGroup()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `set value()`, `updateDom()`.
+`get ariaLabel()`, `get avatarImageUrl()`, `get avatarTitle()`, `get checked()`, `get colorClass()`, `get componentName()`, `get disabled()`, `get icon()`, `get itemValue()`, `get selected()`, `get size()`, `get sizeGroup()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `set value()`, `updateDom()`.
 
 ## События
 
@@ -70,12 +87,23 @@ Loader-статус: `registered`. Loader-правило: `cl-list-item`.
 ## Минимальная разметка
 
 ```html
-<sf-list-item></sf-list-item>
+<sf-dropdown label="Статус" name="status" placeholder="Выберите статус">
+  <sf-list-item value="open" text="Открыт"></sf-list-item>
+  <sf-list-item value="done" text="Готов"></sf-list-item>
+</sf-dropdown>
 ```
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Внутри Dropdown общий renderer добавляет `role="option"`, `aria-selected`,
+`aria-disabled` и машинное значение. Видимый текст становится доступным именем,
+если `aria-label` явно его не переопределяет. Arrow Up/Down, Home, End, Enter,
+Space и Escape принадлежат родительскому Dropdown.
+
+Иконки, изображение аватара, цветовой образец и checkbox-индикатор декоративны:
+они не создают ещё одну Tab-цель внутри option. Не помещайте в option независимые
+ссылки, кнопки или поля; для такой коллекции нужен компонент с другим составным
+контрактом.
 
 ## Источник
 

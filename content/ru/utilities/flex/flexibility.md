@@ -1,22 +1,29 @@
 ---
-title: "Гибкость элементов (flex)"
+title: "Гибкость элементов"
 description: "Гибкость элементов (flex)"
 tags: [flex, sm, md, lg, xl]
 ---
 
-# Гибкость элементов (flex)
+# Гибкость элементов
+
+:badge[flex]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять степенью растяжения и сжатия элементов во флексбоксе.
+
+## Наглядный пример
+
+:::example {id="utilities/flex/flexibility" label="Гибкость элементов"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение        |
 |:--------------|:----------------|
-| .flex-1       | flex: 1 1 0%;   |
-| .flex-auto    | flex: 1 1 auto; |
-| .flex-content | flex: 1 0 auto; |
-| .flex-initial | flex: 0 1 auto; |
-| .flex-none    | flex: none;     |
+| `flex-1` | `flex: 1 1 0%;` |
+| `flex-auto` | `flex: 1 1 auto;` |
+| `flex-content` | `flex: 1 0 auto;` |
+| `flex-initial` | `flex: 0 1 auto;` |
+| `flex-none` | `flex: none;` |
 
 ## Синтаксис
 
@@ -35,7 +42,3 @@ tags: [flex, sm, md, lg, xl]
     - `flex-none` — элемент не сжимается и не растягивается.
 
 ## Примеры использования
-
-:::example {id="utilities/flex/flexibility" label="Результат"}
-:::
-

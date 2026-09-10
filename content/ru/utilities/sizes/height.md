@@ -1,50 +1,57 @@
 ---
-title: "Высота (height)"
+title: "Высота"
 description: "Высота (height)"
 tags: [height, sm, md, lg, xl]
 ---
 
-# Высота (height)
+# Высота
+
+:badge[height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать высоту элемента, адаптируя её под различные размеры экрана или
 особенности дизайна.
 Вы можете использовать фиксированные значения из системы размеров, относительные пропорции, высоту экрана или
 автоматическую высоту, зависящую от контента.
 
+## Наглядный пример
+
+:::example {id="utilities/sizes/height" label="Высота"}
+:::
+
 ## Таблица классов
 
 | Класс           | Значение                                      |
 |:----------------|:------------------------------------------------------------------|
-| .h-auto         | height: auto;                                                     |
-| .h-1/2          | height: 50%;                                                      |
-| .h-1/3          | height: 33.333333%;                                               |
-| .h-2/3          | height: 66.666667%;                                               |
-| .h-1/4          | height: 25%;                                                      |
-| .h-2/4         | height: 50%;                                                      |
-| .h-3/4          | height: 75%;                                                      |
-| .h-1/5          | height: 20%;                                                      |
-| .h-2/5          | height: 40%;                                                      |
-| .h-3/5          | height: 60%;                                                      |
-| .h-4/5          | height: 80%;                                                      |
-| .h-1/6          | height: 16.666667%;                                               |
-| .h-2/6          | height: 33.333333%;                                               |
-| .h-3/6          | height: 50%;                                                      |
-| .h-4/6          | height: 66.666667%;                                               |
-| .h-5/6          | height: 83.333333%;                                               |
-| .h-full         | height: 100%;                                                     |
-| .h-screen       | height: 100vh;                                                    |
-| .h-screen-1/2   | height: 50vh;                                                     |
-| .h-screen-1/3   | height: 33.333333vh;                                              |
-| .h-screen-2/3   | height: 66.666667vh;                                              |
-| .h-screen-1/4   | height: 25vh;                                                     |
-| .h-screen-2/4   | height: 50vh;                                                     |
-| .h-screen-3/4   | height: 75vh;                                                     |
-| .h-min          | height: min-content;                                              |
-| .h-max          | height: max-content;                                              |
-| .h-fit          | height: fit-content;                                              |
-| .h-px           | height: 1px;                                                      |
-| .h-0            | height: 0;                                                        |
-| .h-a0 ... .h-i9 | height: var(--sf-\*); фиксированные размеры по системе фреймворка |
+| `h-auto` | `height: auto;` |
+| `h-1/2` | `height: 50%;` |
+| `h-1/3` | `height: 33.333333%;` |
+| `h-2/3` | `height: 66.666667%;` |
+| `h-1/4` | `height: 25%;` |
+| `h-2/4` | `height: 50%;` |
+| `h-3/4` | `height: 75%;` |
+| `h-1/5` | `height: 20%;` |
+| `h-2/5` | `height: 40%;` |
+| `h-3/5` | `height: 60%;` |
+| `h-4/5` | `height: 80%;` |
+| `h-1/6` | `height: 16.666667%;` |
+| `h-2/6` | `height: 33.333333%;` |
+| `h-3/6` | `height: 50%;` |
+| `h-4/6` | `height: 66.666667%;` |
+| `h-5/6` | `height: 83.333333%;` |
+| `h-full` | `height: 100%;` |
+| `h-screen` | `height: 100vh;` |
+| `h-screen-1/2` | `height: 50vh;` |
+| `h-screen-1/3` | `height: 33.333333vh;` |
+| `h-screen-2/3` | `height: 66.666667vh;` |
+| `h-screen-1/4` | `height: 25vh;` |
+| `h-screen-2/4` | `height: 50vh;` |
+| `h-screen-3/4` | `height: 75vh;` |
+| `h-min` | `height: min-content;` |
+| `h-max` | `height: max-content;` |
+| `h-fit` | `height: fit-content;` |
+| `h-px` | `height: 1px;` |
+| `h-0` | `height: 0;` |
+| `h-a0 ... h-i9` | height: var(--sf-\*); фиксированные размеры по системе фреймворка |
 
 (Пример фиксированных размеров: h-c4, h-d4, h-e4 и т.д.)
 
@@ -120,7 +127,3 @@ tags: [height, sm, md, lg, xl]
 ```
 
 В этом примере высота будет 50% (`h-1/2`) при `md` и больше.
-## Пример
-:::example {id="utilities/sizes/height" label="Результат"}
-:::
-

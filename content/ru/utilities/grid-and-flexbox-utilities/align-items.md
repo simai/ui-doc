@@ -1,23 +1,30 @@
 ---
-title: "Выравнивание каждого элемента в ячейках по поперечной оси (align-items)"
+title: "Выравнивание каждого элемента в ячейках по поперечной оси"
 description: "Выравнивание каждого элемента в ячейках по поперечной оси (align-items)"
 tags: [align-items, sm, md, lg, xl]
 ---
 
-# Выравнивание каждого элемента в ячейках по поперечной оси (align-items)
+# Выравнивание каждого элемента в ячейках по поперечной оси
+
+:badge[align-items]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы определяют, как каждый элемент внутри ячейки сетки или флексбокса будет выравниваться относительно
 поперечной оси.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/align-items" label="Выравнивание каждого элемента в ячейках по поперечной оси"}
+:::
 
 ## Таблица классов
 
 | Класс                | Значение              |
 |:---------------------|:----------------------|
-| .items-cross-start   | align-items: start;   |
-| .items-cross-end     | align-items: end;     |
-| .items-cross-center  | align-items: center;  |
-| .items-cross-baseline| align-items: baseline;|
-| .items-cross-stretch | align-items: stretch; |
+| `items-cross-start` | `align-items: start;` |
+| `items-cross-end` | `align-items: end;` |
+| `items-cross-center` | `align-items: center;` |
+| `items-cross-baseline` | `align-items: baseline;` |
+| `items-cross-stretch` | `align-items: stretch;` |
 
 ## Синтаксис
 
@@ -56,7 +63,3 @@ tags: [align-items, sm, md, lg, xl]
   <!-- Начиная с md каждый элемент будет прижат к началу ячейки по поперечной оси -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/align-items" label="Результат"}
-:::
-

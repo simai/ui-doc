@@ -1,22 +1,29 @@
 ---
-title: "Выделение текста (user-select)"
+title: "Выделение текста"
 description: "Выделение текста (user-select)"
 tags: [user-select]
 ---
 
-# Выделение текста (user-select)
+# Выделение текста
+
+:badge[user-select]{type=main scheme=on-surface size=1}
 
 Данные модификаторы позволяют управлять поведением выделения текста пользователем в элементе. Вы можете запретить
 выделение, автоматически выделять весь текст или использовать настройки по умолчанию.
+
+## Наглядный пример
+
+:::example {id="utilities/interactivity/user-select" label="Выделение текста"}
+:::
 
 ## Классы и их значения
 
 | Класс        | Значение           |
 |:-------------|:-------------------|
-| .select-none | user-select: none; |
-| .select-text | user-select: text; |
-| .select-all  | user-select: all;  |
-| .select-auto | user-select: auto; |
+| `select-none` | `user-select: none;` |
+| `select-text` | `user-select: text;` |
+| `select-all` | `user-select: all;` |
+| `select-auto` | `user-select: auto;` |
 
 ## Описание
 
@@ -32,7 +39,3 @@ tags: [user-select]
 - `select-auto` – использовать поведение выделения текста по умолчанию.
 
 ## Пример использования
-
-:::example {id="utilities/interactivity/user-select" label="Результат"}
-:::
-

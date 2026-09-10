@@ -1,23 +1,30 @@
 ---
-title: "Трекинг текста (letter-spacing)"
+title: "Трекинг текста"
 description: "Трекинг текста (letter-spacing)"
 tags: [letter-spacing]
 ---
 
-# Трекинг текста (letter-spacing)
+# Трекинг текста
+
+:badge[letter-spacing]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно регулировать межбуквенные интервалы (трекинг).
+
+## Наглядный пример
+
+:::example {id="utilities/typography/letter-spacing" label="Трекинг текста"}
+:::
 
 ## Таблица классов
 
 | Класс                 | Значение                            |
 |:----------------------|:--------------------------------------------------------|
-| .tracking-tighter     | letter-spacing: var(`--sf-text--tracking-tighter`);     |
-| .tracking-tight       | letter-spacing: var(`--sf-text--tracking-tight`);       |
-| .tracking-no-tracking | letter-spacing: var(`--sf-text--tracking-no-tracking`); |
-| .tracking-wide        | letter-spacing: var(`--sf-text--tracking-wide`);        |
-| .tracking-wider       | letter-spacing: var(`--sf-text--tracking-wider`);       |
-| .tracking-widest      | letter-spacing: var(`--sf-text--tracking-widest`);      |
+| `tracking-tighter` | `letter-spacing: var(--sf-text--tracking-tighter);` |
+| `tracking-tight` | `letter-spacing: var(--sf-text--tracking-tight);` |
+| `tracking-no-tracking` | `letter-spacing: var(--sf-text--tracking-no-tracking);` |
+| `tracking-wide` | `letter-spacing: var(--sf-text--tracking-wide);` |
+| `tracking-wider` | `letter-spacing: var(--sf-text--tracking-wider);` |
+| `tracking-widest` | `letter-spacing: var(--sf-text--tracking-widest);` |
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -64,7 +71,3 @@ tags: [letter-spacing]
 ```html
 <p class="tracking-wide">Начиная с размера md, трекинг станет шире.</p>
 ```
-## Пример
-:::example {id="utilities/typography/letter-spacing" label="Результат"}
-:::
-

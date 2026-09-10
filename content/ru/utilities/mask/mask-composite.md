@@ -6,17 +6,24 @@ tags: [mask-composite]
 
 # Композиция маски
 
+:badge[mask-composite]{type=main scheme=on-surface size=1}
+
 С помощью модификаторов композиции маски можно комбинировать несколько слоев маски, определяя логику их взаимодействия
 друг с другом.
+
+## Наглядный пример
+
+:::example {id="utilities/mask/mask-composite" label="Композиция маски"}
+:::
 
 ## Таблица классов
 
 | Класс           | Значение                   |
 |:----------------|:---------------------------|
-| .mask-add       | mask-composite: add;       |
-| .mask-subtract  | mask-composite: subtract;  |
-| .mask-intersect | mask-composite: intersect; |
-| .mask-exclude   | mask-composite: exclude;   |
+| `mask-add` | `mask-composite: add;` |
+| `mask-subtract` | `mask-composite: subtract;` |
+| `mask-intersect` | `mask-composite: intersect;` |
+| `mask-exclude` | `mask-composite: exclude;` |
 
 ## Описание
 
@@ -28,7 +35,3 @@ tags: [mask-composite]
 - **mask-exclude** – отображаются только непересекающиеся части текущего и нижнего слоя, исключая пересечения.
 
 ## Примеры использования
-
-:::example {id="utilities/mask/mask-composite" label="Результат"}
-:::
-

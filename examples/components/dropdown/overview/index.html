@@ -1,14 +1,15 @@
-<div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--outlined sf-dropdown--text flex flex-col max-w-sm">
+<div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--outlined sf-dropdown--text flex flex-col max-w-sm" value="kazan">
   <span class="sf-dropdown-label"><span class="sf-dropdown-text">Город</span></span>
-  <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative" tabindex="0">
-    <input type="text" name="city" placeholder="Выберите город">
-    <button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть список"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button>
+  <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative">
+    <input class="sf-dropdown-hidden-input" type="hidden" name="city">
+    <input type="text" placeholder="Выберите город">
+    <button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть список городов"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button>
   </div>
   <div class="sf-list flex flex-col">
     <div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col">
-      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 transition cursor-pointer" role="option" tabindex="0" data-value="kazan"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Казань</div></div></div>
-      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 transition cursor-pointer" role="option" tabindex="0" data-value="moscow"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Москва</div></div></div>
-      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 transition cursor-pointer" role="option" tabindex="0" data-value="ufa"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Уфа</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer selected" role="option" tabindex="-1" data-value="kazan"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Казань</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer" role="option" tabindex="-1" data-value="moscow"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Москва</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer" role="option" tabindex="-1" data-value="ufa"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Уфа</div></div></div>
     </div></div>
   </div>
 </div>

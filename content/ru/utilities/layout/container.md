@@ -1,49 +1,51 @@
 ---
-title: "Контейнер (container)"
-description: "Контейнер (container)"
+title: "Контейнер"
+description: "Ограничивает ширину страницы и задаёт адаптивные горизонтальные отступы."
 tags: [container, sm, md, lg, xl]
 ---
 
-# Контейнер (container)
+# Контейнер
+
+:badge[container]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Контейнер используется для ограничения ширины и добавления горизонтальных отступов в зависимости от размера области
 просмотра. По умолчанию ширина контейнера устанавливается в 100%, а также добавляется внутренний отступ, чтобы контент
 не прилегал плотно к краям.
 
-**Размеры и отступы контейнера зависят от контрольной точки:**
+## Пример
 
-| Класс     | Контрольная точка | Значение                                                                                        |
-|-----------|:-----------------:|---------------------------------------------------------------------------------------------------------------------|
-| container |        нет        | width: 100%;&lt;br/&gt; padding-left: var(`--sf-space-1`);&lt;br/&gt; padding-right: var(`--sf-space-1`);                       |
-|           |        sm         | width: var(`--sf-breakpoint-sm`);&lt;br/&gt; padding-left: var(`--sf-space-2`);&lt;br/&gt; padding-right: var(`--sf-space-2`);  |
-|           |        md         | width: var(`--sf-breakpoint-md`);&lt;br/&gt; padding-left: var(`--sf-space-3`);&lt;br/&gt; padding-right: var(`--sf-space-3`);  |
-|           |        lg         | width: var(`--sf-breakpoint-lg`);&lt;br/&gt; padding-left: var(`--sf-space-4`);&lt;br/&gt; padding-right: var(`--sf-space-4`);  |
-|           |        xl         | width: var(`--sf-breakpoint-xl`);&lt;br/&gt; padding-left: var(`--sf-space-5`);&lt;br/&gt; padding-right: var(`--sf-space-5`);  |
-|           |        xxl        | width: var(`--sf-breakpoint-xxl`);&lt;br/&gt; padding-left: var(`--sf-space-6`);&lt;br/&gt; padding-right: var(`--sf-space-6`); |
+Внешняя рамка показывает доступную область, а цветная поверхность — ширину и внутренние отступы `container`.
+
+:::example {id="utilities/layout/container" label="Адаптивный контейнер"}
+:::
+
+## Как меняется контейнер
+
+Контейнер всегда остаётся не шире доступной области. На контрольных точках меняются только максимальная ширина и
+горизонтальные отступы.
+
+::::table {columns="regular compact wide fill"}
+| Класс | От ширины | Максимальная ширина | Горизонтальный отступ |
+| --- | --- | --- | --- |
+| `container` | всегда | `100%` | `--sf-space-1` |
+| `container` | `sm` | `--sf-breakpoint-sm` | `--sf-space-2` |
+| `container` | `md` | `--sf-breakpoint-md` | `--sf-space-3` |
+| `container` | `lg` | `--sf-breakpoint-lg` | `--sf-space-4` |
+| `container` | `xl` | `--sf-breakpoint-xl` | `--sf-space-5` |
+| `container` | `xxl` | `--sf-breakpoint-xxl` | `--sf-space-6` |
+::::
 
 Контрольные точки (`--sf-breakpoint-sm`, `--sf-breakpoint-md`, `--sf-breakpoint-lg`, `--sf-breakpoint-xl`,
 `--sf-breakpoint-xxl`) определены в ядре фреймворка, а размеры отступов (`--sf-space-*`) соответствуют новой системе
 размеров отступов.
 
-## Пример использования
+## Адаптивный модификатор
 
-В данном примере при любой ширине окна контейнер будет занимать 100% и иметь горизонтальные отступы равные
-`var(--sf-space-1)`.
+Класс `container` сразу включает всю адаптивную шкалу. Модификатор `md:container` нужен, когда поведение контейнера
+должно начаться только с контрольной точки `md`: до неё элемент сохраняет исходную разметку, после неё получает ширину
+`100%`, ограничение `--sf-breakpoint-md` и отступ `--sf-space-3`.
 
-Чтобы при увеличении размера окна контейнер принимал соответствующее ограничение ширины и отступы, используйте
-адаптивный модификатор, например `md:container` для включения контейнера начиная с контрольной точки
-`--sf-breakpoint-md`:
-
-В этом случае до достижения ширины `--sf-breakpoint-md` элемент будет на всю ширину без отступов по умолчанию (или
-использоваться базовый вариант container), а после `--sf-breakpoint-md` контейнер автоматически применит ограничения и
-отступы для этой контрольной точки.
-
-Для центрирования контейнера можно добавить классы отступов с отрицательными значениями или класс
-`m-inline-end-auto m-inline-start-auto` (автоматические отступы справа и слева):
+Для центрирования ограниченного контейнера добавьте `m-inline-auto`.
 
 Таким образом, контейнер помогает поддерживать адаптивный и аккуратный макет сайта, изменяя свои размеры и отступы в
 зависимости от ширины области просмотра.
-
-:::example {id="utilities/layout/container" label="Результат"}
-:::
-

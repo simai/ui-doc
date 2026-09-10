@@ -1,22 +1,29 @@
 ---
-title: "Изменение размера (resize)"
+title: "Изменение размера"
 description: "Изменение размера (resize)"
 tags: [resize]
 ---
 
-# Изменение размера (resize)
+# Изменение размера
+
+:badge[resize]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов resize вы можете управлять тем, может ли элемент быть изменён в размерах пользователем, и в
 каком направлении.
+
+## Наглядный пример
+
+:::example {id="utilities/forms/resize" label="Изменение размера"}
+:::
 
 ## Классы и их значения
 
 | Класс        | Значение            |
 |:-------------|:--------------------|
-| .resize-none | resize: none;       |
-| .resize-y    | resize: vertical;   |
-| .resize-x    | resize: horizontal; |
-| .resize      | resize: both;       |
+| `resize-none` | `resize: none;` |
+| `resize-y` | `resize: vertical;` |
+| `resize-x` | `resize: horizontal;` |
+| `resize` | `resize: both;` |
 
 ## Описание
 
@@ -31,7 +38,3 @@ tags: [resize]
 - `resize` – разрешить изменение размера по обеим осям.
 
 ## Пример использования
-
-:::example {id="utilities/forms/resize" label="Результат"}
-:::
-

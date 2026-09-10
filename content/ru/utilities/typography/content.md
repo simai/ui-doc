@@ -1,21 +1,28 @@
 ---
-title: "Содержимое (content)"
+title: "Содержимое"
 description: "Содержимое (content)"
 tags: [content]
 ---
 
-# Содержимое (content)
+# Содержимое
+
+:badge[content]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно управлять содержимым псевдоэлементов `::before` и `::after`.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/content" label="Содержимое"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение      |
 |:--------------|:--------------|
-| .after-empty  | content: ''   |
-| .before-empty | content: ''   |
-| .after-none   | content: none |
-| .before-none  | content: none |
+| `after-empty` | content: ''   |
+| `before-empty` | content: ''   |
+| `after-none` | content: none |
+| `before-none` | content: none |
 
 ## Описание
 
@@ -23,7 +30,3 @@ tags: [content]
 их помощью можно добавлять или скрывать пустое содержимое.
 
 ## Пример
-
-:::example {id="utilities/typography/content" label="Результат"}
-:::
-

@@ -1,14 +1,21 @@
 ---
-title: "Ограничитель прокрутки (scroll-snap-stop)"
+title: "Ограничитель прокрутки"
 description: "Ограничитель прокрутки (scroll-snap-stop)"
 tags: [scroll-snap-stop]
 ---
 
-# Ограничитель прокрутки (scroll-snap-stop)
+# Ограничитель прокрутки
+
+:badge[scroll-snap-stop]{type=main scheme=on-surface size=1}
 
 Данные модификаторы из пакета `scroll-snap-stop` позволяют управлять тем, как контейнер прокрутки будет останавливаться
 на элементах, имеющих привязку прокрутки. Они задают, возможно ли "проскочить" мимо возможных позиций привязки или
 контейнер будет всегда останавливаться на каждом элементе.
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-snap-stop" label="Ограничитель прокрутки"}
+:::
 
 ## Краткое описание
 
@@ -19,8 +26,8 @@ snap-always) или сможет "проскользнуть" мимо опре�
 
 | Класс        | Значение                  |
 |:-------------|:--------------------------|
-| .snap-normal | scroll-snap-stop: normal; |
-| .snap-always | scroll-snap-stop: always; |
+| `snap-normal` | `scroll-snap-stop: normal;` |
+| `snap-always` | `scroll-snap-stop: always;` |
 
 ## Описание
 
@@ -47,7 +54,3 @@ snap-always) или сможет "проскользнуть" мимо опре�
 ```
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/scroll-snap-stop" label="Результат"}
-:::
-

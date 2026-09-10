@@ -1,21 +1,28 @@
 ---
-title: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
+title: "Цвет ползунка прокрутки"
 description: "Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)"
 tags: [scroll-slider-color]
 ---
 
-# Цвет ползунка прокрутки (scroll-slider-color / scroll-thumb-color)
+# Цвет ползунка прокрутки
+
+:badge[scroll-slider-color]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-slider-color" label="Цвет ползунка прокрутки"}
+:::
 
 ## Классы и их значения
 
 | Класс               | Значение переменной           |
 |:--------------------|:--------------------------------------------------|
-| .scroll-transparent / .scroll-thumb-transparent | `--sf-scroll-bg-thumb`: var(`--sf-transparent`);  |
-| .scroll-current / .scroll-thumb-current     | `--sf-scroll-bg-thumb`: currentColor;             |
-| .scroll-surface / .scroll-thumb-surface     | `--sf-scroll-bg-thumb`: var(`--sf-on-surface`);   |
-| .scroll-primary / .scroll-thumb-primary     | `--sf-scroll-bg-thumb`: var(`--sf-on-primary`);   |
-| .scroll-secondary / .scroll-thumb-secondary | `--sf-scroll-bg-thumb`: var(`--sf-on-secondary`); |
-| .scroll-tertiary / .scroll-thumb-tertiary   | `--sf-scroll-bg-thumb`: var(`--sf-on-tertiary`);  |
+| `scroll-transparent / scroll-thumb-transparent` | `--sf-scroll-bg-thumb`: var(`--sf-transparent`);  |
+| `scroll-current / scroll-thumb-current` | `--sf-scroll-bg-thumb`: currentColor;             |
+| `scroll-surface / scroll-thumb-surface` | `--sf-scroll-bg-thumb`: var(`--sf-on-surface`);   |
+| `scroll-primary / scroll-thumb-primary` | `--sf-scroll-bg-thumb`: var(`--sf-on-primary`);   |
+| `scroll-secondary / scroll-thumb-secondary` | `--sf-scroll-bg-thumb`: var(`--sf-on-secondary`); |
+| `scroll-tertiary / scroll-thumb-tertiary` | `--sf-scroll-bg-thumb`: var(`--sf-on-tertiary`);  |
 
 ## Описание
 
@@ -28,7 +35,3 @@ tags: [scroll-slider-color]
 - scroll-{transparent|current|surface|primary|secondary|tertiary} / scroll-thumb-{transparent|current|surface|primary|secondary|tertiary} – задать цвет ползунка прокрутки.
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/scroll-slider-color" label="Результат"}
-:::
-

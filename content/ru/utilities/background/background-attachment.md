@@ -11,13 +11,18 @@ tags: [background-attachment, sm, md, lg, xl]
 С помощью модификаторов вложения фона (`background-attachment`) вы можете управлять поведением фонового изображения при
 прокрутке страницы или контейнера.
 
+## Наглядный пример
+
+:::example {id="utilities/background/background-attachment" label="Вложение фона"}
+:::
+
 ## Таблица классов
 
 | Класс      | Значение                       |
 |:-----------|:-------------------------------|
-| .bg-fixed  | background-attachment: fixed;  |
-| .bg-local  | background-attachment: local;  |
-| .bg-scroll | background-attachment: scroll; |
+| `bg-fixed` | `background-attachment: fixed;` |
+| `bg-local` | `background-attachment: local;` |
+| `bg-scroll` | `background-attachment: scroll;` |
 
 ## Описание
 
@@ -72,6 +77,3 @@ tags: [background-attachment, sm, md, lg, xl]
     <div class="h-f8"></div>
 </div>
 ```
-## Пример
-:::example {id="utilities/background/background-attachment" label="Результат"}
-:::

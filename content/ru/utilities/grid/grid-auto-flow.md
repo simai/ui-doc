@@ -1,21 +1,28 @@
 ---
-title: "Автоматическое формирование сетки (grid-auto-flow)"
+title: "Автоматическое формирование сетки"
 description: "Автоматическое формирование сетки (grid-auto-flow)"
 tags: [grid-auto-flow, sm, md, lg, xl]
 ---
 
-# Автоматическое формирование сетки (grid-auto-flow)
+# Автоматическое формирование сетки
+
+:badge[grid-auto-flow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять автоматическим размещением элементов в сетке. Это позволяет гибко адаптировать отображение контента, сохраняя порядок либо оптимизируя использование доступного пространства.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-auto-flow" label="Автоматическое формирование сетки"}
+:::
 
 ## Таблица классов
 
 | Класс                | Значение                      |
 |:---------------------|:------------------------------|
-| .grid-flow-row       | grid-auto-flow: row;          |
-| .grid-flow-col       | grid-auto-flow: column;       |
-| .grid-flow-row-dense | grid-auto-flow: row dense;    |
-| .grid-flow-col-dense | grid-auto-flow: column dense; |
+| `grid-flow-row` | `grid-auto-flow: row;` |
+| `grid-flow-col` | `grid-auto-flow: column;` |
+| `grid-flow-row-dense` | `grid-auto-flow: row dense;` |
+| `grid-flow-col-dense` | `grid-auto-flow: column dense;` |
 
 ## Синтаксис
 
@@ -50,7 +57,3 @@ tags: [grid-auto-flow, sm, md, lg, xl]
   <!-- Начиная с md элементы будут размещаться плотнее по строкам -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-auto-flow" label="Результат"}
-:::
-

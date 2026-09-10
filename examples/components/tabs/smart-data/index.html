@@ -1,0 +1,19 @@
+<sf-tabs id="project-tabs" type="full" aria-label="Динамические разделы"></sf-tabs>
+<script>
+(() => {
+  const tabs = document.currentScript.previousElementSibling;
+  customElements.whenDefined('sf-tabs').then(async () => {
+    await tabs.updateComplete;
+    tabs.setData({
+      tabs: [
+        { label: 'Обзор', component: { type: 'sf-button', props: { text: 'Обзор' } } },
+        { label: 'История' },
+      ],
+      panels: [
+        { text: 'Данные переданы через setData().' },
+        { text: 'Обычная вкладка может соседствовать с пользовательским представлением.' },
+      ],
+    });
+  });
+})();
+</script>

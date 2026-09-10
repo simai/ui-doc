@@ -1,12 +1,19 @@
 ---
-title: "Высота строки (line-height)"
+title: "Высота строки"
 description: "Высота строки (line-height)"
 tags: [line-height, sm, md, lg, xl]
 ---
 
-# Высота строки (line-height)
+# Высота строки
+
+:badge[line-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов вы можете задать фиксированную или относительную высоту строки.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/line-height" label="Высота строки"}
+:::
 
 ## Таблица классов
 
@@ -14,33 +21,32 @@ tags: [line-height, sm, md, lg, xl]
 
 | Класс     | Значение               |
 |:----------|:-------------------------------------------|
-| .line-1/4 | line-height: var(`--sf-text-height-1/4`); |
-| .line-1/3 | line-height: var(`--sf-text-height-1/3`); |
-| .line-1/2 | line-height: var(`--sf-text-height-1/2`); |
-| .line-1   | line-height: var(`--sf-text-height-1`);   |
-| .line-2   | line-height: var(`--sf-text-height-2`);   |
-| .line-3   | line-height: var(`--sf-text-height-3`);   |
-| .line-4   | line-height: var(`--sf-text-height-4`);   |
-| .line-5   | line-height: var(`--sf-text-height-5`);   |
-| .line-6   | line-height: var(`--sf-text-height-6`);   |
-| .line-7   | line-height: var(`--sf-text-height-7`);   |
-| .line-8   | line-height: var(`--sf-text-height-8`);   |
-| .line-9   | line-height: var(`--sf-text-height-9`);   |
-| .line-10  | line-height: var(`--sf-text-height-10`);  |
-| .line-11  | line-height: var(`--sf-text-height-11`);  |
-| .line-12  | line-height: var(`--sf-text-height-12`);  |
+| `line-1/4` | `line-height: var(--sf-text-height-1/4);` |
+| `line-1/3` | `line-height: var(--sf-text-height-1/3);` |
+| `line-1/2` | `line-height: var(--sf-text-height-1/2);` |
+| `line-1` | `line-height: var(--sf-text-height-1);` |
+| `line-2` | `line-height: var(--sf-text-height-2);` |
+| `line-3` | `line-height: var(--sf-text-height-3);` |
+| `line-4` | `line-height: var(--sf-text-height-4);` |
+| `line-5` | `line-height: var(--sf-text-height-5);` |
+| `line-6` | `line-height: var(--sf-text-height-6);` |
+| `line-7` | `line-height: var(--sf-text-height-7);` |
+| `line-8` | `line-height: var(--sf-text-height-8);` |
+| `line-9` | `line-height: var(--sf-text-height-9);` |
+| `line-10` | `line-height: var(--sf-text-height-10);` |
+| `line-11` | `line-height: var(--sf-text-height-11);` |
+| `line-12` | `line-height: var(--sf-text-height-12);` |
 
 Относительная высота строки:
 
 | Класс         | Значение            |
 |:--------------|:--------------------|
-| .line-none    | line-height: 1;     |
-| .line-tight   | line-height: 1.25;  |
-| .line-snug    | line-height: 1.375; |
-| .line-normal  | line-height: 1.5;   |
-| .line-relaxed | line-height: 1.625; |
-| .line-loose   | line-height: 2;     |
-
+| `line-none` | `line-height: 1;` |
+| `line-tight` | `line-height: 1.25;` |
+| `line-snug` | `line-height: 1.375;` |
+| `line-normal` | `line-height: 1.5;` |
+| `line-relaxed` | `line-height: 1.625;` |
+| `line-loose` | `line-height: 2;` |
 
 ## Синтаксис
 
@@ -85,7 +91,3 @@ tags: [line-height, sm, md, lg, xl]
 ```html
 <p class="md:line-2">Текст, который при ширине экрана medium и больше будет с высотой строки, соответствующей переменной line-2.</p>
 ```
-## Пример
-:::example {id="utilities/typography/line-height" label="Результат"}
-:::
-

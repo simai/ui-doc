@@ -1,18 +1,27 @@
 ---
-title: "Межколоночный интервал (column-gap)"
+title: "Межколоночный интервал"
 description: "Утилита col-gap-* задаёт расстояние между колонками многоколоночного макета."
 tags: [column-gap, sm, md, lg, xl]
 ---
 
-# Межколоночный интервал (column-gap)
+# Межколоночный интервал
+
+:badge[column-gap]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификатор `col-gap-*` задаёт расстояние между колонками в многоколоночном макете (`layout-col-*`). Используются те же размерные токены, что и для отступов (`--sf-space-*`).
+
+## Пример
+
+Два одинаковых многоколоночных набора отличаются только величиной интервала между колонками.
+
+:::example {id="utilities/layout-break/column-gap" label="Сравнение интервалов"}
+:::
 
 ## Таблица классов
 
 | Класс        | Значение                             |
 |:-------------|:-------------------------------------|
-| .col-gap-{n} | column-gap: var(--sf-space-{n});     |
+| `col-gap-{n}` | `column-gap: var(--sf-space-{n});` |
 
 Где `{n}` ∈ `0, 1/4, 1/3, 1/2, 1, 2, 3, 4, 5, 6, 7, 8`.
 
@@ -24,9 +33,3 @@ tags: [column-gap, sm, md, lg, xl]
 - **Модификатор** *(обязательный параметр)*: `col-gap-{n}`.
 
 > Примечание: брейкпоинтные префиксы работают так же, как у утилиты `gap` (`sm:col-gap-2`, `md:col-gap-4` и т.д.).
-
-## Пример
-
-:::example {id="utilities/layout-break/column-gap" label="Результат"}
-:::
-

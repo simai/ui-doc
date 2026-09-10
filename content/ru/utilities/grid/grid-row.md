@@ -1,24 +1,31 @@
 ---
-title: "Размер строки сетки (grid-row)"
+title: "Размер строки сетки"
 description: "Размер строки сетки (grid-row)"
 tags: [grid-row, sm, md, lg, xl]
 ---
 
-# Размер строки сетки (grid-row)
+# Размер строки сетки
+
+:badge[grid-row]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-row` управляют высотой и позиционированием элементов по вертикали в grid-сетке.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-row" label="Размер строки сетки"}
+:::
 
 ## Таблица классов
 
 | Класс            | Значение                 |
 |:-----------------|:-------------------------|
-| .row-span-{n}    | grid-row: span {n};      |
-| .row-span-full   | grid-row: 1 / -1;        |
-| .row-span-none   | grid-row: auto;          |
-| .row-start-{n}   | grid-row-start: {n};     |
-| .row-start-auto  | grid-row-start: auto;    |
-| .row-end-{n}     | grid-row-end: {n};       |
-| .row-end-auto    | grid-row-end: auto;      |
+| `row-span-{n}` | `grid-row: span {n};` |
+| `row-span-full` | `grid-row: 1 / -1;` |
+| `row-span-none` | `grid-row: auto;` |
+| `row-start-{n}` | `grid-row-start: {n};` |
+| `row-start-auto` | `grid-row-start: auto;` |
+| `row-end-{n}` | `grid-row-end: {n};` |
+| `row-end-auto` | `grid-row-end: auto;` |
 
 Диапазон `n` соответствует утилитам в SCSS (`row-span` от 1 до 6, `row-start`/`row-end` от 1 до 7).
 
@@ -54,7 +61,3 @@ tags: [grid-row, sm, md, lg, xl]
   <!-- Высота строки увеличится на брейкпоинте md -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-row" label="Результат"}
-:::
-

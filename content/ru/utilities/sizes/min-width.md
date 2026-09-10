@@ -1,24 +1,31 @@
 ---
-title: "Минимальная ширина (min-width)"
+title: "Минимальная ширина"
 description: "Минимальная ширина (min-width)"
 tags: [min-width, sm, md, lg, xl]
 ---
 
-# Минимальная ширина (min-width)
+# Минимальная ширина
+
+:badge[min-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать минимальную ширину элемента. Это особенно полезно при создании
 адаптивных макетов, когда необходимо гарантировать, что элемент не станет уже заданного порога ширины даже при
 ограничениях окружающего контейнера или содержимого.
 
+## Наглядный пример
+
+:::example {id="utilities/sizes/min-width" label="Минимальная ширина"}
+:::
+
 ## Таблица классов
 
 | Класс       | Значение                |
 |:------------|:------------------------|
-| .min-w-min  | min-width: min-content; |
-| .min-w-max  | min-width: max-content; |
-| .min-w-fit  | min-width: fit-content; |
-| .min-w-full | min-width: 100%;        |
-| .min-w-0    | min-width: 0;           |
+| `min-w-min` | `min-width: min-content;` |
+| `min-w-max` | `min-width: max-content;` |
+| `min-w-fit` | `min-width: fit-content;` |
+| `min-w-full` | `min-width: 100%;` |
+| `min-w-0` | `min-width: 0;` |
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
@@ -77,7 +84,3 @@ tags: [min-width, sm, md, lg, xl]
 ```
 
 В этом примере минимальная ширина будет 100% (`min-w-full`) только при размерах экрана `md` и больше.
-## Пример
-:::example {id="utilities/sizes/min-width" label="Результат"}
-:::
-

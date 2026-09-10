@@ -6,13 +6,20 @@ tags: [outline-width, focus]
 
 # Толщина внешней границы
 
+:badge[outline-width]{type=main scheme=on-surface size=1}
+
+## Наглядный пример
+
+:::example {id="utilities/outline/outline-width" label="Толщина внешней границы"}
+:::
+
 | Класс | Значение |
 |:--|:--|
-| `.outline-0` | `outline-width: var(--sf-0);` |
-| `.outline-1` | `outline-width: var(--sf-a1);` |
-| `.outline-2` | `outline-width: var(--sf-a2);` |
-| `.outline-3` | `outline-width: var(--sf-a3);` |
-| `.outline-4` | `outline-width: var(--sf-a4);` |
+| `outline-0` | `outline-width: var(--sf-0);` |
+| `outline-1` | `outline-width: var(--sf-a1);` |
+| `outline-2` | `outline-width: var(--sf-a2);` |
+| `outline-3` | `outline-width: var(--sf-a3);` |
+| `outline-4` | `outline-width: var(--sf-a4);` |
 
 ## Описание
 
@@ -27,7 +34,3 @@ tags: [outline-width, focus]
 - Модификатор: `outline-{0...4}`.
 
 ## Пример
-
-:::example {id="utilities/outline/outline-width" label="Результат"}
-:::
-

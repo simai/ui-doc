@@ -1,20 +1,27 @@
 ---
-title: "События указателя (pointer-events)"
+title: "События указателя"
 description: "События указателя (pointer-events)"
 tags: [pointer-events]
 ---
 
-# События указателя (pointer-events)
+# События указателя
+
+:badge[pointer-events]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов pointer-events вы можете управлять тем, будет ли элемент реагировать на события указателя (
 например, клики мыши или касания).
+
+## Наглядный пример
+
+:::example {id="utilities/forms/pointer-events" label="События указателя"}
+:::
 
 ## Классы и их значения
 
 | Класс               | Значение              |
 |:--------------------|:----------------------|
-| .pointer-event-none | pointer-events: none; |
-| .pointer-event-auto | pointer-events: auto; |
+| `pointer-event-none` | `pointer-events: none;` |
+| `pointer-event-auto` | `pointer-events: auto;` |
 
 ## Описание
 
@@ -28,7 +35,3 @@ tags: [pointer-events]
 - `pointer-event-auto` – вернуть стандартное поведение и включить события указателя для элемента.
 
 ## Пример использования
-
-:::example {id="utilities/forms/pointer-events" label="Результат"}
-:::
-

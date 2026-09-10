@@ -1,19 +1,26 @@
 ---
-title: "Сепия подложки (backdrop-sepia)"
+title: "Сепия подложки"
 description: "Сепия подложки (backdrop-sepia)"
 tags: [backdrop-filter-sepia, hover]
 ---
 
-# Сепия подложки (backdrop-sepia)
+# Сепия подложки
+
+:badge[backdrop-filter-sepia]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять отображением фона элемента как сепия.
+
+## Наглядный пример
+
+:::example {id="utilities/backdrop-filter/backdrop-sepia" label="Сепия подложки"}
+:::
 
 ## Классы и их значения
 
 | Класс                | Значение                  |
 |:---------------------|:--------------------------|
-| .backdrop-sepia-none | backdrop-filter: sepia(0) |
-| .backdrop-sepia      | backdrop-filter: sepia(1) |
+| `backdrop-sepia-none` | backdrop-filter: sepia(0) |
+| `backdrop-sepia` | backdrop-filter: sepia(1) |
 
 ## Описание
 
@@ -29,7 +36,3 @@ tags: [backdrop-filter-sepia, hover]
 - Без адаптивности, поддержка `hover:` доступна.
 
 ## Пример использования
-
-:::example {id="utilities/backdrop-filter/backdrop-sepia" label="Результат"}
-:::
-

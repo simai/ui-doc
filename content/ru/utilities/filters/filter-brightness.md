@@ -1,37 +1,44 @@
 ---
-title: "Яркость элемента (filter-brightness)"
+title: "Яркость элемента"
 description: "Яркость элемента (filter-brightness)"
 tags: [filter-brightness, hover]
 ---
 
-# Яркость элемента (filter-brightness)
+# Яркость элемента
+
+:badge[filter-brightness]{type=main scheme=on-surface size=1}
 
 Данные модификаторы позволяют управлять яркостью элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/filters/filter-brightness" label="Яркость элемента"}
+:::
 
 ## Классы
 
 | Старый класс                 | Новый класс    |
 |:-----------------------------|:---------------|
-| .brightness-1, .brightness-2 | brightness-1/4 |
-| .brightness-3                | brightness-1/3 |
-| .brightness-4                | brightness-1/2 |
-| .brightness-5                | brightness-1   |
-| .brightness-6                | brightness-2   |
-| .brightness-7                | brightness-3   |
-| .brightness-8, .brightness-9 | brightness-4   |
+| `brightness-1, brightness-2` | brightness-1/4 |
+| `brightness-3` | brightness-1/3 |
+| `brightness-4` | brightness-1/2 |
+| `brightness-5` | brightness-1   |
+| `brightness-6` | brightness-2   |
+| `brightness-7` | brightness-3   |
+| `brightness-8, brightness-9` | brightness-4   |
 
 ## Новые классы и их значения
 
 | Класс           | Значение                  |
 |:----------------|:--------------------------|
-| .brightness-0   | filter: brightness(0);    |
-| .brightness-1/4 | filter: brightness(0.8);  |
-| .brightness-1/3 | filter: brightness(0.9);  |
-| .brightness-1/2 | filter: brightness(0.95); |
-| .brightness-1   | filter: brightness(1);    |
-| .brightness-2   | filter: brightness(1.05); |
-| .brightness-3   | filter: brightness(1.1);  |
-| .brightness-4   | filter: brightness(1.2);  |
+| `brightness-0` | `filter: brightness(0);` |
+| `brightness-1/4` | `filter: brightness(0.8);` |
+| `brightness-1/3` | `filter: brightness(0.9);` |
+| `brightness-1/2` | `filter: brightness(0.95);` |
+| `brightness-1` | `filter: brightness(1);` |
+| `brightness-2` | `filter: brightness(1.05);` |
+| `brightness-3` | `filter: brightness(1.1);` |
+| `brightness-4` | `filter: brightness(1.2);` |
 
 ## Описание
 
@@ -49,7 +56,3 @@ tags: [filter-brightness, hover]
 - `hover:brightness-*` позволяет изменять яркость при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/filters/filter-brightness" label="Результат"}
-:::
-

@@ -1,12 +1,20 @@
-<div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--outlined sf-dropdown--tag flex flex-col max-w-sm" data-multiple="true">
-  <span class="sf-dropdown-label"><span class="sf-dropdown-text">Участники</span></span>
-  <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative" tabindex="0">
-    <div class="sf-dropdown-tag-container flex flex-wrap gap-1"></div>
-    <input type="text" name="members" placeholder="Выберите участников">
-    <button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть список"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button>
+<div class="grid grid-col-1 md:grid-col-2 gap-3">
+  <div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--outlined sf-dropdown--text flex flex-col" multiple value="anna,ivan">
+    <span class="sf-dropdown-label"><span class="sf-dropdown-text">Несколько подписей</span></span>
+    <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative"><input class="sf-dropdown-hidden-input" type="hidden" name="reviewers"><input type="text" placeholder="Выберите участников"><button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1 absolute" aria-label="Открыть список участников"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button></div>
+    <div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col">
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 selected cursor-pointer" role="option" tabindex="-1" data-value="anna"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Анна</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 selected cursor-pointer" role="option" tabindex="-1" data-value="ivan"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Иван</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer" role="option" tabindex="-1" data-value="olga"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Ольга</div></div></div>
+    </div></div></div>
   </div>
-  <div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col">
-    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 selected transition cursor-pointer" role="option" tabindex="0" data-value="anna"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Анна</div></div><div class="sf-list-item-selected-item flex"><i class="sf-icon">check</i></div></div>
-    <div class="sf-list-item sf-list-item--text sf-list-item--size-1 transition cursor-pointer" role="option" tabindex="0" data-value="ivan"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Иван</div></div></div>
-  </div></div></div>
+  <div class="sf-dropdown sf-dropdown--size-1 sf-dropdown--filled sf-dropdown--tag flex flex-col" multiple value="anna,ivan">
+    <span class="sf-dropdown-label"><span class="sf-dropdown-text">Выбор тегами</span></span>
+    <div class="sf-dropdown-field cursor-pointer items-cross-center transition flex relative"><input class="sf-dropdown-hidden-input" type="hidden" name="members"><div class="sf-dropdown-tag-container flex flex-wrap flex-1"></div><button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--size-1" aria-label="Открыть список участников"><i class="sf-icon" aria-hidden="true">keyboard_arrow_down</i></button></div>
+    <div class="sf-list flex flex-col"><div class="sf-list-container-wrap"><div class="sf-list-container flex flex-col">
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 selected cursor-pointer" role="option" tabindex="-1" data-value="anna"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Анна</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 selected cursor-pointer" role="option" tabindex="-1" data-value="ivan"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Иван</div></div></div>
+      <div class="sf-list-item sf-list-item--text sf-list-item--size-1 cursor-pointer" role="option" tabindex="-1" data-value="olga"><div class="sf-list-item-wrap flex flex-1"><div class="sf-list-item-container">Ольга</div></div></div>
+    </div></div></div>
+  </div>
 </div>

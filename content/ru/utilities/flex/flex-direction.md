@@ -1,22 +1,29 @@
 ---
-title: "Направление размещения (flex-direction)"
+title: "Направление размещения"
 description: "Направление размещения (flex-direction)"
 tags: [flex-direction, sm, md, lg, xl]
 ---
 
-# Направление размещения (flex-direction)
+# Направление размещения
+
+:badge[flex-direction]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать направление размещения элементов флексбокса, определяя ориентацию
 и порядок элементов внутри контейнера.
+
+## Наглядный пример
+
+:::example {id="utilities/flex/flex-direction" label="Направление размещения"}
+:::
 
 ## Таблица классов
 
 | Класс             | Значение                        |
 |:------------------|:--------------------------------|
-| .flex-row         | flex-direction: row;            |
-| .flex-col         | flex-direction: column;         |
-| .flex-row-reverse | flex-direction: row-reverse;    |
-| .flex-col-reverse | flex-direction: column-reverse; |
+| `flex-row` | `flex-direction: row;` |
+| `flex-col` | `flex-direction: column;` |
+| `flex-row-reverse` | `flex-direction: row-reverse;` |
+| `flex-col-reverse` | `flex-direction: column-reverse;` |
 
 ## Синтаксис
 
@@ -85,7 +92,3 @@ tags: [flex-direction, sm, md, lg, xl]
     <!-- Начиная с md элементы будут расположены в строку слева направо -->
 </div>
 ```
-## Пример
-:::example {id="utilities/flex/flex-direction" label="Результат"}
-:::
-

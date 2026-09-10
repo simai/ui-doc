@@ -1,22 +1,29 @@
 ---
-title: "Подготовка к изменениям (will-change)"
+title: "Подготовка к изменениям"
 description: "Подготовка к изменениям (will-change)"
 tags: [will-change]
 ---
 
-# Подготовка к изменениям (will-change)
+# Подготовка к изменениям
+
+:badge[will-change]{type=main scheme=on-surface size=1}
 
 Модификаторы позволяют оптимизировать предстоящую анимацию элементов, предупреждая браузер о будущих изменениях. Это
 может улучшить производительность анимаций и переходов.
+
+## Наглядный пример
+
+:::example {id="utilities/interactivity/will-change" label="Подготовка к изменениям"}
+:::
 
 ## Классы и их значения
 
 | Класс                        | Значение                      |
 |:-----------------------------|:------------------------------|
-| .will-change-auto            | will-change: auto;            |
-| .will-change-scroll-position | will-change: scroll-position; |
-| .will-change-contents        | will-change: contents;        |
-| .will-change-transform       | will-change: transform;       |
+| `will-change-auto` | `will-change: auto;` |
+| `will-change-scroll-position` | `will-change: scroll-position;` |
+| `will-change-contents` | `will-change: contents;` |
+| `will-change-transform` | `will-change: transform;` |
 
 ## Описание
 
@@ -32,7 +39,3 @@ tags: [will-change]
 - `will-change-transform` – подготовиться к изменению параметров трансформации.
 
 ## Пример использования
-
-:::example {id="utilities/interactivity/will-change" label="Результат"}
-:::
-

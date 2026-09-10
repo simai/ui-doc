@@ -1,24 +1,31 @@
 ---
-title: "Выравнивание отдельного элемента по поперечной оси (align-self)"
+title: "Выравнивание отдельного элемента по поперечной оси"
 description: "Выравнивание отдельного элемента по поперечной оси (align-self)"
 tags: [align-self, sm, md, lg, xl]
 ---
 
-# Выравнивание отдельного элемента по поперечной оси (align-self)
+# Выравнивание отдельного элемента по поперечной оси
+
+:badge[align-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы определяют, как отдельно взятый элемент в сетке или флексбоксе будет выравнен внутри своей ячейки
 относительно поперечной оси.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/align-self" label="Выравнивание отдельного элемента по поперечной оси"}
+:::
 
 ## Таблица классов
 
 | Класс               | Значение             |
 |:--------------------|:---------------------|
-| .self-cross-auto    | align-self: auto;    |
-| .self-cross-start   | align-self: start;   |
-| .self-cross-end     | align-self: end;     |
-| .self-cross-center  | align-self: center;  |
-| .self-cross-stretch | align-self: stretch; |
-| .self-cross-baseline| align-self: baseline;|
+| `self-cross-auto` | `align-self: auto;` |
+| `self-cross-start` | `align-self: start;` |
+| `self-cross-end` | `align-self: end;` |
+| `self-cross-center` | `align-self: center;` |
+| `self-cross-stretch` | `align-self: stretch;` |
+| `self-cross-baseline` | `align-self: baseline;` |
 
 ## Синтаксис
 
@@ -59,7 +66,3 @@ tags: [align-self, sm, md, lg, xl]
   <!-- Начиная с md элемент будет прижат к началу ячейки по поперечной оси -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/align-self" label="Результат"}
-:::
-

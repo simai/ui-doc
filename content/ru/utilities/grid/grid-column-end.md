@@ -1,32 +1,39 @@
 ---
-title: "Конечное положение колонки сетки (grid-column-end)"
+title: "Конечное положение колонки сетки"
 description: "Конечное положение колонки сетки (grid-column-end)"
 tags: [grid-column-end, sm, md, lg, xl]
 ---
 
-# Конечное положение колонки сетки (grid-column-end)
+# Конечное положение колонки сетки
+
+:badge[grid-column-end]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять конечным положением столбцов в сетке, задавая на какой линии
 сетки элемент должен заканчиваться.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-column-end" label="Конечное положение колонки сетки"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение               |
 |:--------------|:-----------------------|
-| .col-end-1    | grid-column-end: 1;    |
-| .col-end-2    | grid-column-end: 2;    |
-| .col-end-3    | grid-column-end: 3;    |
-| .col-end-4    | grid-column-end: 4;    |
-| .col-end-5    | grid-column-end: 5;    |
-| .col-end-6    | grid-column-end: 6;    |
-| .col-end-7    | grid-column-end: 7;    |
-| .col-end-8    | grid-column-end: 8;    |
-| .col-end-9    | grid-column-end: 9;    |
-| .col-end-10   | grid-column-end: 10;   |
-| .col-end-11   | grid-column-end: 11;   |
-| .col-end-12   | grid-column-end: 12;   |
-| .col-end-13   | grid-column-end: 13;   |
-| .col-end-auto | grid-column-end: auto; |
+| `col-end-1` | `grid-column-end: 1;` |
+| `col-end-2` | `grid-column-end: 2;` |
+| `col-end-3` | `grid-column-end: 3;` |
+| `col-end-4` | `grid-column-end: 4;` |
+| `col-end-5` | `grid-column-end: 5;` |
+| `col-end-6` | `grid-column-end: 6;` |
+| `col-end-7` | `grid-column-end: 7;` |
+| `col-end-8` | `grid-column-end: 8;` |
+| `col-end-9` | `grid-column-end: 9;` |
+| `col-end-10` | `grid-column-end: 10;` |
+| `col-end-11` | `grid-column-end: 11;` |
+| `col-end-12` | `grid-column-end: 12;` |
+| `col-end-13` | `grid-column-end: 13;` |
+| `col-end-auto` | `grid-column-end: auto;` |
 
 ## Синтаксис
 
@@ -65,7 +72,3 @@ tags: [grid-column-end, sm, md, lg, xl]
     <!-- Начиная с размера экрана md и больше элемент будет заканчиваться на 4-й линии сетки -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-column-end" label="Результат"}
-:::
-

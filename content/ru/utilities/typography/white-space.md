@@ -1,22 +1,29 @@
 ---
-title: "Обработка пробелов (white-space)"
+title: "Обработка пробелов"
 description: "Обработка пробелов (white-space)"
 tags: [white-space]
 ---
 
-# Обработка пробелов (white-space)
+# Обработка пробелов
+
+:badge[white-space]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно управлять тем, как обрабатываются пробельные символы при отображении текста.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/white-space" label="Обработка пробелов"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение               |
 |:-------------------|:-----------------------|
-| .wrap-none         | white-space: nowrap;   |
-| .pre               | white-space: pre;      |
-| .pre-line          | white-space: pre-line; |
-| .pre-wrap          | white-space: pre-wrap; |
-| .whitespace-normal | white-space: normal;   |
+| `wrap-none` | `white-space: nowrap;` |
+| `pre` | `white-space: pre;` |
+| `pre-line` | `white-space: pre-line;` |
+| `pre-wrap` | `white-space: pre-wrap;` |
+| `whitespace-normal` | `white-space: normal;` |
 
 ## Синтаксис
 
@@ -103,7 +110,3 @@ tags: [white-space]
 							a galley of type and scrambled it to make a type specimen book.
 </p>
 ```
-## Пример
-:::example {id="utilities/typography/white-space" label="Результат"}
-:::
-

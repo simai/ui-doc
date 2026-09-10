@@ -1,27 +1,34 @@
 ---
-title: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
+title: "Вращение оттенка фона элемента"
 description: "Вращение оттенка фона элемента (backdrop-hue-rotate)"
 tags: [backdrop-filter-hue-rotate, hover]
 ---
 
-# Вращение оттенка фона элемента (backdrop-hue-rotate)
+# Вращение оттенка фона элемента
+
+:badge[backdrop-filter-hue-rotate]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять вращением оттенка фона элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/backdrop-filter/backdrop-hue-rotate" label="Вращение оттенка фона элемента"}
+:::
 
 ## Классы и их значения
 
 | Класс                    | Значение                          |
 |:-------------------------|:------------------------------------------------------|
-| .backdrop-hue-rotate-0   | backdrop-filter: hue-rotate(0deg)                     |
-| .backdrop-hue-rotate-15  | backdrop-filter: hue-rotate(15deg)                    |
-| .backdrop-hue-rotate-30  | backdrop-filter: hue-rotate(30deg)                    |
-| .backdrop-hue-rotate-60  | backdrop-filter: hue-rotate(60deg)                    |
-| .backdrop-hue-rotate-90  | backdrop-filter: hue-rotate(90deg)                    |
-| .backdrop-hue-rotate-180 | backdrop-filter: hue-rotate(180deg)                   |
-| .-backdrop-hue-rotate-15 | backdrop-filter: hue-rotate(-15deg)                   |
-| .-backdrop-hue-rotate-30 | backdrop-filter: hue-rotate(-30deg)                   |
-| .-backdrop-hue-rotate-60 | backdrop-filter: hue-rotate(-60deg)                   |
-| .-backdrop-hue-rotate-90 | backdrop-filter: hue-rotate(-90deg)                   |
+| `backdrop-hue-rotate-0` | backdrop-filter: hue-rotate(0deg)                     |
+| `backdrop-hue-rotate-15` | backdrop-filter: hue-rotate(15deg)                    |
+| `backdrop-hue-rotate-30` | backdrop-filter: hue-rotate(30deg)                    |
+| `backdrop-hue-rotate-60` | backdrop-filter: hue-rotate(60deg)                    |
+| `backdrop-hue-rotate-90` | backdrop-filter: hue-rotate(90deg)                    |
+| `backdrop-hue-rotate-180` | backdrop-filter: hue-rotate(180deg)                   |
+| `-backdrop-hue-rotate-15` | backdrop-filter: hue-rotate(-15deg)                   |
+| `-backdrop-hue-rotate-30` | backdrop-filter: hue-rotate(-30deg)                   |
+| `-backdrop-hue-rotate-60` | backdrop-filter: hue-rotate(-60deg)                   |
+| `-backdrop-hue-rotate-90` | backdrop-filter: hue-rotate(-90deg)                   |
 
 ## Описание
 
@@ -35,7 +42,3 @@ tags: [backdrop-filter-hue-rotate, hover]
 - Без адаптивности, поддержка `hover:` доступна.
 
 ## Пример использования
-
-:::example {id="utilities/backdrop-filter/backdrop-hue-rotate" label="Результат"}
-:::
-

@@ -1,13 +1,20 @@
 ---
-title: "Параметры по умолчанию (text-default)"
+title: "Параметры по умолчанию"
 description: "Параметры по умолчанию (text-default)"
 tags: [title]
 ---
 
-# Параметры по умолчанию (text-default)
+# Параметры по умолчанию
+
+:badge[title]{type=main scheme=on-surface size=1}
 
 В новой версии настройки типографики упрощены и используют обновлённые переменные. Базовые параметры (размер шрифта,
 высота строки и т.д.) теперь управляются через более понятные и краткие наименования переменных.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/text-default" label="Параметры по умолчанию"}
+:::
 
 ## Значения по умолчанию
 
@@ -40,12 +47,8 @@ tags: [title]
 
 | Селектор                                                                                                                     | Значение                                                                                                                                                                                                                                                          |
 |:-----------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| root                                                                                                                         | font-style: var(`--sf-text--style`);&lt;br/&gt; font-size: var(`--sf-text--size`);&lt;br/&gt; line-height: var(`--sf-text--height`);&lt;br/&gt; font-weight: var(`--sf-text--weight`);&lt;br/&gt; font-family: var(`--sf-text--family`);&lt;br/&gt; letter-spacing: var(`--sf-text--tracking`); |
-| h1, h2, h3, h4, h5, h6, .sf-h-1, .sf-h-2, .sf-h-3, .sf-h-4, .sf-h-5, .sf-h-6                                                  | font-family: var(`--sf-heading--family`);&lt;br/&gt; font-weight: var(`--sf-heading--weight`);                                                                                                                                                                          |
-| .sf-display-1..6, .d1..6, .display1..6                                                                                       | font-family: var(`--sf-display--family`);&lt;br/&gt; font-weight: var(`--sf-display--weight`);                                                                                                                                                                          |
+| `root` | `font-style: var(--sf-text--style);&lt;br/&gt; font-size: var(--sf-text--size);&lt;br/&gt; line-height: var(--sf-text--height);&lt;br/&gt; font-weight: var(--sf-text--weight);&lt;br/&gt; font-family: var(--sf-text--family);&lt;br/&gt; letter-spacing: var(--sf-text--tracking);` |
+| `h1, h2, h3, h4, h5, h6, sf-h-1, sf-h-2, sf-h-3, sf-h-4, sf-h-5, sf-h-6` | `font-family: var(--sf-heading--family);&lt;br/&gt; font-weight: var(--sf-heading--weight);` |
+| `sf-display-1..6, d1..6, display1..6` | `font-family: var(--sf-display--family);&lt;br/&gt; font-weight: var(--sf-display--weight);` |
 
 ## Пример применённых стилей
-
-:::example {id="utilities/typography/text-default" label="Результат"}
-:::
-

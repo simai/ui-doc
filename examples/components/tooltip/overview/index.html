@@ -1,9 +1,22 @@
-<div class="sf-tooltip sf-tooltip--dark sf-tooltip--size-1 sf-tooltip--arrow-top-center">
-  <div class="sf-tooltip-content">
-    <div class="sf-tooltip-wrap flex flex-col">
-      <span class="sf-tooltip-text">Сохранить изменения</span>
-      <span class="sf-tooltip-supporting-text">Ctrl + S</span>
-    </div>
-    <span class="sf-tooltip-tail" aria-hidden="true"></span>
+<div class="p-8">
+  <div class="flex justify-center p-top-8">
+    <span class="sf-tooltip-anchor">
+    <button type="button"
+      class="sf-button sf-button--default sf-button--primary sf-button--size-1"
+      data-tooltip="save-tooltip" aria-describedby="save-tooltip">
+      <span class="sf-button-text-container">Сохранить</span>
+    </button>
+    <span id="save-tooltip"
+      class="sf-tooltip sf-tooltip--dark sf-tooltip--size-1 sf-tooltip--arrow-bottom-center"
+      hidden>
+      <span class="sf-tooltip-content flex flex-col">
+        <span class="sf-tooltip-wrap flex flex-col">
+          <span class="sf-tooltip-text">Сохранить изменения</span>
+          <span class="sf-tooltip-supporting-text">Ctrl + S</span>
+        </span>
+        <span class="sf-tooltip-tail" aria-hidden="true"></span>
+      </span>
+    </span>
+    </span>
   </div>
 </div>

@@ -1,25 +1,32 @@
 ---
-title: "Выравнивание содержимого по основной оси (justify-content)"
+title: "Выравнивание содержимого по основной оси"
 description: "Выравнивание содержимого по основной оси (justify-content)"
 tags: [justify-content, sm, md, lg, xl]
 ---
 
-# Выравнивание содержимого по основной оси (justify-content)
+# Выравнивание содержимого по основной оси
+
+:badge[justify-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Этот модификатор определяет, как именно элементы внутри контейнера (флексбокса или сетки) выравниваются вдоль основной
 оси. Основная ось зависит от направления (`flex-direction`). Если `row` (строка) — основная ось горизонтальная. Если
 `column` (столбец) — вертикальная.
 
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="Выравнивание содержимого по основной оси"}
+:::
+
 ## Таблица классов
 
 | Класс                 | Значение                        |
 |:----------------------|:--------------------------------|
-| .content-main-start   | justify-content: flex-start;    |
-| .content-main-end     | justify-content: flex-end;      |
-| .content-main-center  | justify-content: center;        |
-| .content-main-between | justify-content: space-between; |
-| .content-main-around  | justify-content: space-around;  |
-| .content-main-evenly  | justify-content: space-evenly;  |
+| `content-main-start` | `justify-content: flex-start;` |
+| `content-main-end` | `justify-content: flex-end;` |
+| `content-main-center` | `justify-content: center;` |
+| `content-main-between` | `justify-content: space-between;` |
+| `content-main-around` | `justify-content: space-around;` |
+| `content-main-evenly` | `justify-content: space-evenly;` |
 
 ## Синтаксис
 
@@ -60,7 +67,3 @@ tags: [justify-content, sm, md, lg, xl]
     <!-- Начиная с md выравнивание элементов будет flex-start -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="Результат"}
-:::
-

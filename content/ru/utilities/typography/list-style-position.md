@@ -1,20 +1,26 @@
 ---
-title: "Положение маркера списка (list-style-position)"
+title: "Положение маркера списка"
 description: "Положение маркера списка (list-style-position)"
 tags: [list-style-position]
 ---
 
-# Положение маркера списка (list-style-position)
+# Положение маркера списка
+
+:badge[list-style-position]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно изменить положение маркера списка.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/list-style-position" label="Положение маркера списка"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение                      |
 |:--------------|:------------------------------|
-| .list-inside  | list-style-position: inside;  |
-| .list-outside | list-style-position: outside; |
-
+| `list-inside` | `list-style-position: inside;` |
+| `list-outside` | `list-style-position: outside;` |
 
 ## Синтаксис
 
@@ -30,7 +36,3 @@ tags: [list-style-position]
     - `list-outside` – маркер располагается снаружи области содержимого списка.
 
 ## Пример использования
-
-:::example {id="utilities/typography/list-style-position" label="Результат"}
-:::
-

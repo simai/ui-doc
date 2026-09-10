@@ -6,21 +6,22 @@ tags: [placeholder-color, hover, focus]
 
 # Цвет placeholder
 
+:badge[placeholder-color]{type=main scheme=on-surface size=1}
+
 Утилиты `placeholder-*` задают цвет текста placeholder у полей ввода.
 
 ## Классы
 
 | Класс | Значение |
 |:--|:--|
-| `.placeholder-transparent` | `color: var(--sf-transparent)` |
-| `.placeholder-current` | `color: currentColor` |
-| `.placeholder-primary` | `color: var(--sf-primary)` |
-| `.placeholder-secondary` | `color: var(--sf-secondary)` |
-| `.placeholder-tertiary` | `color: var(--sf-tertiary)` |
-| `.placeholder-error` | `color: var(--sf-error)` |
-| `.placeholder-warning` | `color: var(--sf-warning)` |
-| `.placeholder-success` | `color: var(--sf-success)` |
+| `placeholder-transparent` | `color: var(--sf-transparent)` |
+| `placeholder-current` | `color: currentColor` |
+| `placeholder-primary` | `color: var(--sf-primary)` |
+| `placeholder-secondary` | `color: var(--sf-secondary)` |
+| `placeholder-tertiary` | `color: var(--sf-tertiary)` |
+| `placeholder-error` | `color: var(--sf-error)` |
+| `placeholder-warning` | `color: var(--sf-warning)` |
+| `placeholder-success` | `color: var(--sf-success)` |
 ## Пример
-:::example {id="utilities/forms/placeholder-color" label="Результат"}
+:::example {id="utilities/forms/placeholder-color" label="Цвет placeholder"}
 :::
-

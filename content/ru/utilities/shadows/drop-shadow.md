@@ -1,25 +1,32 @@
 ---
-title: "Падающая тень (drop-shadow)"
+title: "Падающая тень"
 description: "Падающая тень (drop-shadow)"
 tags: [drop-shadow, hover]
 ---
 
-# Падающая тень (drop-shadow)
+# Падающая тень
+
+:badge[drop-shadow]{type=main scheme=on-surface size=1}
 
 Данные модификаторы позволяют задать уровень падающей тени для элемента, используя переменную
 `--sf-shadow--level-ratio`. От традиционного `box-shadow` падающая тень отличается тем, что отбрасывается только от
 элементов, имеющих контур или заливку. Поэтому во многих случаях удобнее использовать обычную тень (`box-shadow`).
 
+## Наглядный пример
+
+:::example {id="utilities/shadows/drop-shadow" label="Падающая тень"}
+:::
+
 ## Классы
 
 | Класс          | Значение                       |
 |:---------------|:-------------------------------|
-| .drop-shadow-0 | `--sf-shadow--level-ratio`: 0  |
-| .drop-shadow-1 | `--sf-shadow--level-ratio`: 1  |
-| .drop-shadow-2 | `--sf-shadow--level-ratio`: 2  |
-| .drop-shadow-3 | `--sf-shadow--level-ratio`: 4  |
-| .drop-shadow-4 | `--sf-shadow--level-ratio`: 8  |
-| .drop-shadow-5 | `--sf-shadow--level-ratio`: 16 |
+| `drop-shadow-0` | `--sf-shadow--level-ratio`: 0  |
+| `drop-shadow-1` | `--sf-shadow--level-ratio`: 1  |
+| `drop-shadow-2` | `--sf-shadow--level-ratio`: 2  |
+| `drop-shadow-3` | `--sf-shadow--level-ratio`: 4  |
+| `drop-shadow-4` | `--sf-shadow--level-ratio`: 8  |
+| `drop-shadow-5` | `--sf-shadow--level-ratio`: 16 |
 
 ## Описание
 
@@ -36,7 +43,3 @@ tags: [drop-shadow, hover]
 - `hover:drop-shadow-{0...5}` — задать уровень падающей тени при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/shadows/drop-shadow" label="Результат"}
-:::
-

@@ -6,17 +6,24 @@ tags: [transition-timing-function]
 
 # Функция времени перехода
 
+:badge[transition-timing-function]{type=main scheme=on-surface size=1}
+
 Для настройки плавности переходов в SIMAI Framework доступны модификаторы, позволяющие изменять функцию времени. Это
 определяет, с какой скоростью будут происходить изменения CSS-свойств в ходе анимации.
+
+## Наглядный пример
+
+:::example {id="utilities/animation/animation-transition-timing-function" label="Функция времени перехода"}
+:::
 
 ## Классы и их значения:
 
 | Класс        | Значение                                                |
 |:-------------|:----------------------------------------------------------------------------|
-| .ease-linear | transition-timing-function: linear;                                         |
-| .ease-in     | transition-timing-function: cubic-bezier(0.4, 0, 1, 1);                     |
-| .ease-out    | transition-timing-function: cubic-bezier(0, 0, 0.2, 1);                     |
-| .ease-in-out | transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);                   |
+| `ease-linear` | `transition-timing-function: linear;` |
+| `ease-in` | `transition-timing-function: cubic-bezier(0.4, 0, 1, 1);` |
+| `ease-out` | `transition-timing-function: cubic-bezier(0, 0, 0.2, 1);` |
+| `ease-in-out` | `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` |
 
 ## Описание:
 
@@ -38,7 +45,3 @@ tags: [transition-timing-function]
 ```
 
 ## Пример использования:
-
-:::example {id="utilities/animation/animation-transition-timing-function" label="Результат"}
-:::
-

@@ -1,21 +1,28 @@
 ---
-title: "Автоматическая ширина столбцов сетки (grid-auto-columns)"
+title: "Автоматическая ширина столбцов сетки"
 description: "Автоматическая ширина столбцов сетки (grid-auto-columns)"
 tags: [grid-auto-columns, sm, md, lg, xl]
 ---
 
-# Автоматическая ширина столбцов сетки (grid-auto-columns)
+# Автоматическая ширина столбцов сетки
+
+:badge[grid-auto-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять размером автоматически создаваемых столбцов сетки, для которых не задана явная ширина. Это помогает гибко адаптировать макет под разные сценарии и размеры экрана.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-auto-columns" label="Автоматическая ширина столбцов сетки"}
+:::
 
 ## Таблица классов
 
 | Класс          | Значение                           |
 |:---------------|:-----------------------------------|
-| .auto-cols     | grid-auto-columns: auto;           |
-| .auto-cols-min | grid-auto-columns: min-content;    |
-| .auto-cols-max | grid-auto-columns: max-content;    |
-| .auto-cols-fr  | grid-auto-columns: minmax(0, 1fr); |
+| `auto-cols` | `grid-auto-columns: auto;` |
+| `auto-cols-min` | `grid-auto-columns: min-content;` |
+| `auto-cols-max` | `grid-auto-columns: max-content;` |
+| `auto-cols-fr` | `grid-auto-columns: minmax(0, 1fr);` |
 
 ## Синтаксис
 
@@ -63,7 +70,3 @@ tags: [grid-auto-columns, sm, md, lg, xl]
   <!-- Начиная с ширины md и выше столбцы используют минимальный размер содержимого -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-auto-columns" label="Результат"}
-:::
-

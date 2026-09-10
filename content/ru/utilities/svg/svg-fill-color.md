@@ -6,7 +6,14 @@ tags: [fill]
 
 # Цвет заливки
 
+:badge[fill]{type=main scheme=on-surface size=1}
+
 Классы `fill-*` задают `fill` для SVG.
+
+## Наглядный пример
+
+:::example {id="utilities/svg/svg-fill-color" label="Цвет заливки"}
+:::
 
 Примеры поддерживаемых модификаторов:
 - `fill-transparent`, `fill-current`
@@ -23,7 +30,3 @@ tags: [fill]
 `hover:fill-{modifier}`
 
 ## Пример
-
-:::example {id="utilities/svg/svg-fill-color" label="Результат"}
-:::
-

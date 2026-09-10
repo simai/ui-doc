@@ -1,20 +1,27 @@
 ---
-title: "Сглаживание шрифтов (font-smoothing)"
+title: "Сглаживание шрифтов"
 description: "Сглаживание шрифтов (font-smoothing)"
 tags: [font-smoothing]
 ---
 
-# Сглаживание шрифтов (font-smoothing)
+# Сглаживание шрифтов
+
+:badge[font-smoothing]{type=main scheme=on-surface size=1}
 
 Модификаторы для управления сглаживанием шрифта позволяют выбрать между субпиксельным сглаживанием и сглаживанием
 оттенков серого.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/font-smoothing" label="Сглаживание шрифтов"}
+:::
 
 ## Таблица классов
 
 | Класс        | Значение                                                 |
 |:-------------|:-----------------------------------------------------------------------------|
-| .antialiased | -webkit-font-smoothing: antialiased;&lt;br/&gt;-moz-osx-font-smoothing: grayscale; |
-| .smoothing   | -webkit-font-smoothing: auto;&lt;br/&gt;-moz-osx-font-smoothing: auto;             |
+| `antialiased` | `-webkit-font-smoothing: antialiased;&lt;br/&gt;-moz-osx-font-smoothing: grayscale;` |
+| `smoothing` | `-webkit-font-smoothing: auto;&lt;br/&gt;-moz-osx-font-smoothing: auto;` |
 
 ## Пример использования
 
@@ -36,7 +43,3 @@ tags: [font-smoothing]
 ```html
 <p class="antialiased">На экранах md и больше текст будет отображаться с сглаживанием оттенков серого.</p>
 ```
-## Пример
-:::example {id="utilities/typography/font-smoothing" label="Результат"}
-:::
-

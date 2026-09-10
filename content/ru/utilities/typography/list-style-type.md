@@ -1,21 +1,27 @@
 ---
-title: "Стиль маркера списка (list-style-type)"
+title: "Стиль маркера списка"
 description: "Стиль маркера списка (list-style-type)"
 tags: [list-style-type]
 ---
 
-# Стиль маркера списка (list-style-type)
+# Стиль маркера списка
+
+:badge[list-style-type]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов можно изменить вид маркера списка.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/list-style-type" label="Стиль маркера списка"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение                  |
 |:--------------|:--------------------------|
-| .list-none    | list-style-type: none;    |
-| .list-disc    | list-style-type: disc;    |
-| .list-decimal | list-style-type: decimal; |
-
+| `list-none` | `list-style-type: none;` |
+| `list-disc` | `list-style-type: disc;` |
+| `list-decimal` | `list-style-type: decimal;` |
 
 ## Синтаксис
 
@@ -32,7 +38,3 @@ tags: [list-style-type]
     - `list-decimal` – нумерованный список с числовыми маркерами
 
 ## Пример использования
-
-:::example {id="utilities/typography/list-style-type" label="Результат"}
-:::
-

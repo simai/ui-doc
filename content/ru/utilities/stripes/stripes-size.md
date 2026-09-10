@@ -6,17 +6,24 @@ tags: [stripe-width, sm, md, lg, xl]
 
 # Размер полосок
 
+:badge[stripe-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+
 С помощью модификаторов `stripe-size-{1...4}` можно изменить размер полосок в паттерне фона. Каждый модификатор
 устанавливает переменную `--sf-stripe--size` в определенное значение, что влияет на размер повторяющихся полос.
+
+## Наглядный пример
+
+:::example {id="utilities/stripes/stripes-size" label="Размер полосок"}
+:::
 
 ## Таблица классов
 
 | Класс          | Значение                           |
 |:---------------|:-----------------------------------|
-| .stripe-size-1 | `--sf-stripe--size: var(--sf-a1);` |
-| .stripe-size-2 | `--sf-stripe--size: var(--sf-a2);` |
-| .stripe-size-3 | `--sf-stripe--size: var(--sf-a3);` |
-| .stripe-size-4 | `--sf-stripe--size: var(--sf-a4);` |
+| `stripe-size-1` | `--sf-stripe--size: var(--sf-a1);` |
+| `stripe-size-2` | `--sf-stripe--size: var(--sf-a2);` |
+| `stripe-size-3` | `--sf-stripe--size: var(--sf-a3);` |
+| `stripe-size-4` | `--sf-stripe--size: var(--sf-a4);` |
 
 ## Описание
 
@@ -25,7 +32,3 @@ tags: [stripe-width, sm, md, lg, xl]
 Изменение размера полосок позволяет подобрать необходимый визуальный эффект.
 
 ## Пример использования
-
-:::example {id="utilities/stripes/stripes-size" label="Результат"}
-:::
-

@@ -1,82 +1,59 @@
 ---
-title: "Tabs"
-description: "API и runtime-контракт Smart-компонента tabs в SIMAI Framework 5.4.0."
+title: "Smart-вкладки"
+description: "Управляемые вкладки с данными, слотами и единым клавиатурным поведением."
+profile: reference
 ---
 
-# Tabs
+# Smart-вкладки
 
-Идентификатор: `smart.tabs`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+`<sf-tabs>` создаёт доступную группу вкладок из краткой строки, слотов или
+структурированных данных и использует оформление обычного компонента «Вкладки».
 
-## Теги и подключение
+## Пример
 
-Custom Elements: `<sf-tabs>`.
+:::example {id="components/tabs/smart-overview" label="Результат"}
+:::
 
-Loader-статус: `registered`. Loader-правило: `cl-tabs`.
+## Особенности применения
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tabs/css/tabs.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tabs/js/tabs.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tabs/template/default.css`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tabs/template/default.js`
+У каждой группы должно быть доступное имя через `aria-label` или
+`aria-labelledby`. Пункты задают строкой `items`, разделяя их символом `|`, либо
+методом `setData()`. Содержимое связывают с пунктами слотами `panel-0`,
+`panel-1` и далее. Компонент сам поддерживает `role`, `aria-selected`,
+`aria-controls`, единственную позицию в Tab-порядке и переключение стрелками.
 
-## Зависимости
+## Недоступные, иконочные и вертикальные вкладки
 
-- `component.tabs`
-- `smart.buttons`
+Флаг `disabled` в строке пункта исключает его из навигации. `variant="icons"`
+создаёт компактные пункты с доступными именами, а `type="vertical"` меняет
+ориентацию вместе с направлением клавиатурного управления.
 
-## Атрибуты и свойства
+:::example {id="components/tabs/smart-keyboard" label="Результат"}
+:::
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `type` | `type` | `String` | `null` | `—` |
-| `size` | `size` | `String` | `'1'` | `—` |
-| `variant` | `variant` | `String` | `'buttons'` | `—` |
-| `scheme` | `scheme` | `String` | `'default'` | `—` |
-| `top-position` | `topPosition` | `String` | `'start'` | `—` |
-| `active-index` | `activeIndex` | `Number` | `0` | `—` |
-| `items` | `items` | `String` | `[]` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `top-class` | `topClass` | `String` | `''` | `—` |
-| `panel-class` | `panelClass` | `String` | `''` | `—` |
+## Оформление
 
-Общие атрибуты базового Smart-элемента:
+`type="underline"`, `type="pills"` и `type="full"` выбирают ту же геометрию,
+что соответствующие классы обычных вкладок. `scheme` меняет оформление кнопок;
+доступны, в частности, `default`, `outline` и `link`.
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+:::example {id="components/tabs/smart-appearance" label="Результат"}
+:::
 
-## Методы
+## Вложенные вкладки
 
-`addItems()`, `addPanels()`, `get activeIndex()`, `get computedItems()`, `get dataPanels()`, `get dataTabs()`, `get items()`, `get panelSlotNames()`, `get state()`, `get tabCount()`, `getData()`, `goTo()`, `normalizeData()`, `onTabChange()`, `setData()`, `setItems()`, `setPanels()`, `setState()`.
+Каждый `<sf-tabs>` управляет только собственными непосредственными пунктами.
+Поэтому вложенная группа сохраняет независимые выбор, фокус и панели.
 
-## События
+:::example {id="components/tabs/smart-nested" label="Результат"}
+:::
 
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
+## Данные и пользовательское представление пункта
 
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `sf-tab-change` | Компонент-специфичное событие из source-класса |
+`setData()` принимает массивы `tabs` и `panels`. У пункта можно задать
+дескриптор Smart-компонента; внешняя обёртка вкладки остаётся единственным
+владельцем доступного имени и клавиатурного фокуса, а вложенное представление
+работает как декоративное содержимое.
 
-## Минимальная разметка
-
-```html
-<sf-tabs></sf-tabs>
-```
-
-## Доступность
-
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
-
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/tabs`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-tabs`
+:::example {id="components/tabs/smart-data" label="Результат"}
+:::

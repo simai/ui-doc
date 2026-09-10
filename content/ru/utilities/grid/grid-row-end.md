@@ -1,27 +1,33 @@
 ---
-title: 'Конечное положение строки сетки (grid-row-end)'
+title: 'Конечное положение строки сетки'
 description: 'Конечное положение строки сетки (grid-row-end)'
 tags: [grid-row-end, sm, md, lg, xl]
 ---
 
-# Конечное положение строки сетки (grid-row-end)
+# Конечное положение строки сетки
+
+:badge[grid-row-end]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, на какой строке заканчивается элемент в сетке, определяя
 его конечное положение относительно строк.
+
+## Наглядный пример
+
+:::example {id="utilities/grid/grid-row-end" label="Конечное положение строки сетки"}
+:::
 
 ## Таблица классов
 
 | Класс         | Значение    |
 | :----------------- | :------------------ |
-| .grid-row-end-1    | grid-row-end: 1;    |
-| .grid-row-end-2    | grid-row-end: 2;    |
-| .grid-row-end-3    | grid-row-end: 3;    |
-| .grid-row-end-4    | grid-row-end: 4;    |
-| .grid-row-end-5    | grid-row-end: 5;    |
-| .grid-row-end-6    | grid-row-end: 6;    |
-| .grid-row-end-7    | grid-row-end: 7;    |
-| .grid-row-end-auto | grid-row-end: auto; |
-
+| `grid-row-end-1` | `grid-row-end: 1;` |
+| `grid-row-end-2` | `grid-row-end: 2;` |
+| `grid-row-end-3` | `grid-row-end: 3;` |
+| `grid-row-end-4` | `grid-row-end: 4;` |
+| `grid-row-end-5` | `grid-row-end: 5;` |
+| `grid-row-end-6` | `grid-row-end: 6;` |
+| `grid-row-end-7` | `grid-row-end: 7;` |
+| `grid-row-end-auto` | `grid-row-end: auto;` |
 
 ## Синтаксис
 
@@ -63,7 +69,3 @@ tags: [grid-row-end, sm, md, lg, xl]
   <!-- Начиная с md элемент будет заканчиваться на 4-й строке -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid/grid-row-end" label="Результат"}
-:::
-

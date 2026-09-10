@@ -1,28 +1,35 @@
 ---
-title: "Прозрачность фона элемента (backdrop-opacity)"
+title: "Прозрачность фона элемента"
 description: "Прозрачность фона элемента (backdrop-opacity)"
 tags: [backdrop-filter-opacity, hover]
 ---
 
-# Прозрачность фона элемента (backdrop-opacity)
+# Прозрачность фона элемента
+
+:badge[backdrop-filter-opacity]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять прозрачностью фона элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/backdrop-filter/backdrop-opacity" label="Прозрачность фона элемента"}
+:::
 
 ## Классы и их значения:
 
 | Класс                  | Значение                      |
 |:-----------------------|:------------------------------|
-| .backdrop-opacity-0    | backdrop-filter: opacity(0)   |
-| .backdrop-opacity-1    | backdrop-filter: opacity(0.1) |
-| .backdrop-opacity-2    | backdrop-filter: opacity(0.2) |
-| .backdrop-opacity-3    | backdrop-filter: opacity(0.3) |
-| .backdrop-opacity-4    | backdrop-filter: opacity(0.4) |
-| .backdrop-opacity-5    | backdrop-filter: opacity(0.5) |
-| .backdrop-opacity-6    | backdrop-filter: opacity(0.6) |
-| .backdrop-opacity-7    | backdrop-filter: opacity(0.7) |
-| .backdrop-opacity-8    | backdrop-filter: opacity(0.8) |
-| .backdrop-opacity-9    | backdrop-filter: opacity(0.9) |
-| .backdrop-opacity-full | backdrop-filter: opacity(1)   |
+| `backdrop-opacity-0` | backdrop-filter: opacity(0)   |
+| `backdrop-opacity-1` | backdrop-filter: opacity(0.1) |
+| `backdrop-opacity-2` | backdrop-filter: opacity(0.2) |
+| `backdrop-opacity-3` | backdrop-filter: opacity(0.3) |
+| `backdrop-opacity-4` | backdrop-filter: opacity(0.4) |
+| `backdrop-opacity-5` | backdrop-filter: opacity(0.5) |
+| `backdrop-opacity-6` | backdrop-filter: opacity(0.6) |
+| `backdrop-opacity-7` | backdrop-filter: opacity(0.7) |
+| `backdrop-opacity-8` | backdrop-filter: opacity(0.8) |
+| `backdrop-opacity-9` | backdrop-filter: opacity(0.9) |
+| `backdrop-opacity-full` | backdrop-filter: opacity(1)   |
 
 ## Описание
 
@@ -39,7 +46,3 @@ tags: [backdrop-filter-opacity, hover]
 - `backdrop-opacity-{0|1|2|...|9|full}` для установки нужного уровня прозрачности фона.
 
 ## Пример использования
-
-:::example {id="utilities/backdrop-filter/backdrop-opacity" label="Результат"}
-:::
-

@@ -1,20 +1,29 @@
 ---
-title: "Контекст наложения (isolation)"
+title: "Контекст наложения"
 description: "Управление контекстом наложения и смешиванием слоёв"
 tags: [isolate]
 ---
 
-# Контекст наложения (isolation)
+# Контекст наложения
+
+:badge[isolate]{type=main scheme=on-surface size=1}
 
 `isolate` управляет созданием отдельного stacking context. Это важно, когда используются `mix-blend-*` и нужно ограничить их влияние пределами контейнера.
+
+## Пример
+
+Сравнение показывает, как отдельный контекст наложения ограничивает смешивание цветных слоёв пределами контейнера.
+
+:::example {id="utilities/layout/isolation" label="Изоляция смешивания"}
+:::
 
 ## Таблица классов
 
 | Класс | Значение |
 |:--|:--|
-| `.isolate` | `isolation: isolate;` |
-| `.auto` | `isolation: auto;` |
-| `.mix-blend-{mode}` | `mix-blend-mode: ...;` |
+| `isolate` | `isolation: isolate;` |
+| `auto` | `isolation: auto;` |
+| `mix-blend-{mode}` | `mix-blend-mode: ...;` |
 
 Поддерживаемые `mode`: `normal`, `multiply`, `screen`, `overlay`, `darken`, `lighten`, `color-dodge`, `color-burn`, `hard-light`, `soft-light`, `difference`, `exclusion`, `hue`, `saturation`, `color`, `luminosity`.
 
@@ -45,7 +54,3 @@ tags: [isolate]
   </div>
 </div>
 ```
-## Пример
-:::example {id="utilities/layout/isolation" label="Результат"}
-:::
-

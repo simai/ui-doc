@@ -1,9 +1,7 @@
-<div class="sf-verification-form sf-verification-form--size-1 flex flex-col" aria-label="Код из четырёх цифр">
-  <div class="sf-verification-form-wrap flex">
-    <div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input type="text" inputmode="numeric" autocomplete="one-time-code" aria-label="Первая цифра"></div>
-    <div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input type="text" inputmode="numeric" aria-label="Вторая цифра"></div>
-    <div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input type="text" inputmode="numeric" aria-label="Третья цифра"></div>
-    <div class="sf-verification sf-verification--size-1 sf-verification--bordered flex"><input type="text" inputmode="numeric" aria-label="Четвёртая цифра"></div>
-  </div>
-  <div class="sf-verification-form-hint">Введите код из сообщения</div>
-</div>
+<label class="sf-verification-form sf-verification-form--size-1" data-length="6" data-mode="numeric">
+  <span class="sf-verification-form-label">Код из сообщения</span>
+  <span class="sf-verification sf-verification--size-1 sf-verification--bordered">
+    <input class="sf-verification-input" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" aria-describedby="verification-hint">
+  </span>
+  <span class="sf-verification-form-hint" id="verification-hint">Введите шесть цифр</span>
+</label>

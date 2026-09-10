@@ -1,29 +1,36 @@
 ---
-title: "Сенсорное действие (touch-action)"
+title: "Сенсорное действие"
 description: "Сенсорное действие (touch-action)"
 tags: [touch-action]
 ---
 
-# Сенсорное действие (touch-action)
+# Сенсорное действие
+
+:badge[touch-action]{type=main scheme=on-surface size=1}
 
 С помощью данных модификаторов вы можете управлять поведением прокрутки и масштабирования элемента на сенсорных экранах.
 Это может оказаться полезным, если вы хотите ограничить или изменить направление прокрутки, либо отключить определённые
 жесты, такие как сдвиг или масштабирование.
 
+## Наглядный пример
+
+:::example {id="utilities/interactivity/touch-action" label="Сенсорное действие"}
+:::
+
 ## Классы и их значения
 
 | Класс               | Значение                    |
 |:--------------------|:----------------------------|
-| .touch-auto         | touch-action: auto;         |
-| .touch-none         | touch-action: none;         |
-| .touch-pan-x        | touch-action: pan-x;        |
-| .touch-pan-left     | touch-action: pan-left;     |
-| .touch-pan-right    | touch-action: pan-right;    |
-| .touch-pan-y        | touch-action: pan-y;        |
-| .touch-pan-up       | touch-action: pan-up;       |
-| .touch-pan-down     | touch-action: pan-down;     |
-| .touch-pinch-zoom   | touch-action: pinch-zoom;   |
-| .touch-manipulation | touch-action: manipulation; |
+| `touch-auto` | `touch-action: auto;` |
+| `touch-none` | `touch-action: none;` |
+| `touch-pan-x` | `touch-action: pan-x;` |
+| `touch-pan-left` | `touch-action: pan-left;` |
+| `touch-pan-right` | `touch-action: pan-right;` |
+| `touch-pan-y` | `touch-action: pan-y;` |
+| `touch-pan-up` | `touch-action: pan-up;` |
+| `touch-pan-down` | `touch-action: pan-down;` |
+| `touch-pinch-zoom` | `touch-action: pinch-zoom;` |
+| `touch-manipulation` | `touch-action: manipulation;` |
 
 ## Описание
 
@@ -36,7 +43,3 @@ tags: [touch-action]
 - `touch-{action}` – задает действие на сенсорный ввод, например `touch-none`, `touch-pan-x`.
 
 ## Пример использования
-
-:::example {id="utilities/interactivity/touch-action" label="Результат"}
-:::
-

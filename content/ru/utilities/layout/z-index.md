@@ -1,13 +1,22 @@
 ---
-title: "Положение элемента по оси Z (z-index)"
-description: "Положение элемента по оси Z (z-index)"
+title: "Положение элемента по оси Z"
+description: "Задаёт порядок перекрытия позиционированных элементов внутри контекста наложения."
 tags: [z-index, sm, md, lg, xl]
 ---
 
-# Положение элемента по оси Z (z-index)
+# Положение элемента по оси Z
+
+:badge[z-index]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Вы можете управлять положением элемента по оси Z, используя модификаторы z-index. Значения z-index задаются через
 переменные, что позволяет гибко настраивать слойность элементов.
+
+## Пример
+
+Перекрывающиеся поверхности делают порядок слоёв заметным: элемент с большим значением располагается выше.
+
+:::example {id="utilities/layout/z-index" label="Порядок слоёв"}
+:::
 
 ## Переменные z-index
 
@@ -75,7 +84,3 @@ tags: [z-index, sm, md, lg, xl]
 ```html
 <div class="md:z-1">Элемент со z-index:10 на больших экранах</div>
 ```
-## Пример
-:::example {id="utilities/layout/z-index" label="Результат"}
-:::
-

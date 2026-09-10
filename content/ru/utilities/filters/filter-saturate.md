@@ -1,25 +1,32 @@
 ---
-title: "Насыщенность элемента (filter-saturate)"
+title: "Насыщенность элемента"
 description: "Насыщенность элемента (filter-saturate)"
 tags: [filter-saturate, hover]
 ---
 
-# Насыщенность элемента (filter-saturate)
+# Насыщенность элемента
+
+:badge[filter-saturate]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять насыщенностью элемента, делая цвета более или менее интенсивными.
+
+## Наглядный пример
+
+:::example {id="utilities/filters/filter-saturate" label="Насыщенность элемента"}
+:::
 
 ## Классы и их значения
 
 | Класс         | Значение               |
 |:--------------|:-----------------------|
-| .saturate-0   | filter: saturate(0)    |
-| .saturate-1/4 | filter: saturate(0.25) |
-| .saturate-1/3 | filter: saturate(0.5)  |
-| .saturate-1/2 | filter: saturate(0.75) |
-| .saturate-1   | filter: saturate(1)    |
-| .saturate-2   | filter: saturate(1.25) |
-| .saturate-3   | filter: saturate(1.5)  |
-| .saturate-4   | filter: saturate(1.75) |
+| `saturate-0` | filter: saturate(0)    |
+| `saturate-1/4` | filter: saturate(0.25) |
+| `saturate-1/3` | filter: saturate(0.5)  |
+| `saturate-1/2` | filter: saturate(0.75) |
+| `saturate-1` | filter: saturate(1)    |
+| `saturate-2` | filter: saturate(1.25) |
+| `saturate-3` | filter: saturate(1.5)  |
+| `saturate-4` | filter: saturate(1.75) |
 
 ## Описание
 
@@ -40,7 +47,3 @@ tags: [filter-saturate, hover]
 - Можно использовать `hover:saturate-...` для изменения насыщенности при наведении.
 
 ## Пример использования
-
-:::example {id="utilities/filters/filter-saturate" label="Результат"}
-:::
-

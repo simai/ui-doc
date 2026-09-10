@@ -1,22 +1,29 @@
 ---
-title: "Размещение элементов по обеим осям (place-items)"
+title: "Размещение элементов по обеим осям"
 description: "Размещение элементов по обеим осям (place-items)"
 tags: [place-items, sm, md, lg, xl]
 ---
 
-# Размещение элементов по обеим осям (place-items)
+# Размещение элементов по обеим осям
+
+:badge[place-items]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 Модификаторы из этого раздела задают одновременное выравнивание элементов сетки или флексбокса в ячейках относительно
 обеих осей одновременно.
+
+## Наглядный пример
+
+:::example {id="utilities/grid-and-flexbox-utilities/place-items" label="Размещение элементов по обеим осям"}
+:::
 
 ## Таблица классов
 
 | Класс          | Значение              |
 |:---------------|:----------------------|
-| .items-start   | place-items: start;   |
-| .items-end     | place-items: end;     |
-| .items-center  | place-items: center;  |
-| .items-stretch | place-items: stretch; |
+| `items-start` | `place-items: start;` |
+| `items-end` | `place-items: end;` |
+| `items-center` | `place-items: center;` |
+| `items-stretch` | `place-items: stretch;` |
 
 *(Обратите внимание, что в исходном коде был класс `items-text-center`, но по описанию это `items-center`.)*
 
@@ -59,7 +66,3 @@ tags: [place-items, sm, md, lg, xl]
   <!-- Начиная с md элементы будут прижаты к началу ячеек по обеим осям -->
 </div>
 ```
-## Пример
-:::example {id="utilities/grid-and-flexbox-utilities/place-items" label="Результат"}
-:::
-

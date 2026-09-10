@@ -1,0 +1,7 @@
+{
+    "schema": "docara.section.v1",
+    "title": "Утилиты для сетки и флексбоксов",
+    "navigation": {
+        "order": 80
+    }
+}

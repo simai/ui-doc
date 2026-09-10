@@ -1,25 +1,32 @@
 ---
-title: "Насыщенность подложки (backdrop-saturate)"
+title: "Насыщенность подложки"
 description: "Насыщенность подложки (backdrop-saturate)"
 tags: [backdrop-filter-saturate, hover]
 ---
 
-# Насыщенность подложки (backdrop-saturate)
+# Насыщенность подложки
+
+:badge[backdrop-filter-saturate]{type=main scheme=on-surface size=1}
 
 Данный модификатор позволяет управлять насыщенностью фона элемента.
+
+## Наглядный пример
+
+:::example {id="utilities/backdrop-filter/backdrop-saturate" label="Насыщенность подложки"}
+:::
 
 ## Классы и их значения
 
 | Класс                  | Значение                        |
 |:-----------------------|:--------------------------------|
-| .backdrop-saturate-0   | backdrop-filter: saturate(0)    |
-| .backdrop-saturate-1/4 | backdrop-filter: saturate(0.25) |
-| .backdrop-saturate-1/3 | backdrop-filter: saturate(0.5)  |
-| .backdrop-saturate-1/2 | backdrop-filter: saturate(0.75) |
-| .backdrop-saturate-1   | backdrop-filter: saturate(1)    |
-| .backdrop-saturate-2   | backdrop-filter: saturate(1.25) |
-| .backdrop-saturate-3   | backdrop-filter: saturate(1.5)  |
-| .backdrop-saturate-4   | backdrop-filter: saturate(1.75) |
+| `backdrop-saturate-0` | backdrop-filter: saturate(0)    |
+| `backdrop-saturate-1/4` | backdrop-filter: saturate(0.25) |
+| `backdrop-saturate-1/3` | backdrop-filter: saturate(0.5)  |
+| `backdrop-saturate-1/2` | backdrop-filter: saturate(0.75) |
+| `backdrop-saturate-1` | backdrop-filter: saturate(1)    |
+| `backdrop-saturate-2` | backdrop-filter: saturate(1.25) |
+| `backdrop-saturate-3` | backdrop-filter: saturate(1.5)  |
+| `backdrop-saturate-4` | backdrop-filter: saturate(1.75) |
 
 ## Описание
 
@@ -38,7 +45,3 @@ tags: [backdrop-filter-saturate, hover]
 - Без адаптивности, поддержка `hover:` доступна.
 
 ## Пример использования
-
-:::example {id="utilities/backdrop-filter/backdrop-saturate" label="Результат"}
-:::
-

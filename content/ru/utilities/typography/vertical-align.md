@@ -1,23 +1,30 @@
 ---
-title: "Выравнивание по вертикали (vertical-align)"
+title: "Выравнивание по вертикали"
 description: "Выравнивание по вертикали (vertical-align)"
 tags: [vertical-align]
 ---
 
-# Выравнивание по вертикали (vertical-align)
+# Выравнивание по вертикали
+
+:badge[vertical-align]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов вы можете выровнять строчные элементы (inline elements) по вертикали.
+
+## Наглядный пример
+
+:::example {id="utilities/typography/vertical-align" label="Выравнивание по вертикали"}
+:::
 
 ## Таблица классов
 
 | Класс          | Значение                  |
 |:---------------|:--------------------------|
-| .text-baseline | vertical-align: baseline; |
-| .text-top      | vertical-align: top;      |
-| .text-middle   | vertical-align: middle;   |
-| .text-bottom   | vertical-align: bottom;   |
-| .text-sup      | vertical-align: super;    |
-| .text-sub      | vertical-align: sub;      |
+| `text-baseline` | `vertical-align: baseline;` |
+| `text-top` | `vertical-align: top;` |
+| `text-middle` | `vertical-align: middle;` |
+| `text-bottom` | `vertical-align: bottom;` |
+| `text-sup` | `vertical-align: super;` |
+| `text-sub` | `vertical-align: sub;` |
 
 ## Синтаксис
 
@@ -37,7 +44,3 @@ tags: [vertical-align]
     - `text-sub` – отображение элемента как подстрочного индекса
 
 ## Пример использования
-
-:::example {id="utilities/typography/vertical-align" label="Результат"}
-:::
-

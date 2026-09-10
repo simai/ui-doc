@@ -1,0 +1,7 @@
+{
+    "schema": "docara.section.v1",
+    "title": "Макет",
+    "navigation": {
+        "order": 10
+    }
+}

@@ -1,21 +1,28 @@
 ---
-title: "Перенос элементов (flex-wrap)"
+title: "Перенос элементов"
 description: "Перенос элементов (flex-wrap)"
 tags: [flex-wrap, sm, md, lg, xl]
 ---
 
-# Перенос элементов (flex-wrap)
+# Перенос элементов
+
+:badge[flex-wrap]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, переносятся ли элементы флексбокса на новую линию или
 продолжаются в одной.
+
+## Наглядный пример
+
+:::example {id="utilities/flex/flex-wrap" label="Перенос элементов"}
+:::
 
 ## Таблица классов
 
 | Класс              | Значение                 |
 |:-------------------|:-------------------------|
-| .flex-wrap         | flex-wrap: wrap;         |
-| .flex-wrap-reverse | flex-wrap: wrap-reverse; |
-| .flex-nowrap       | flex-wrap: nowrap;       |
+| `flex-wrap` | `flex-wrap: wrap;` |
+| `flex-wrap-reverse` | `flex-wrap: wrap-reverse;` |
+| `flex-nowrap` | `flex-wrap: nowrap;` |
 
 ## Синтаксис
 
@@ -85,7 +92,3 @@ tags: [flex-wrap, sm, md, lg, xl]
     <!-- Начиная с md элементы будут переноситься на новую строку -->
 </div>
 ```
-## Пример
-:::example {id="utilities/flex/flex-wrap" label="Результат"}
-:::
-

@@ -1,22 +1,28 @@
 ---
-title: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
+title: "Радиус границы ползунка прокрутки"
 description: "Радиус границы ползунка прокрутки (scroll-thumb-radius)"
 tags: [scroll-slider-radius]
 ---
 
-# Радиус границы ползунка прокрутки (scroll-thumb-radius)
+# Радиус границы ползунка прокрутки
+
+:badge[scroll-slider-radius]{type=main scheme=on-surface size=1}
 
 С помощью данных модификаторов вы можете изменить радиус скругления ползунка прокрутки.
+
+## Наглядный пример
+
+:::example {id="utilities/overscroll/scroll-slider-radius" label="Радиус границы ползунка прокрутки"}
+:::
 
 ## Классы и их значения
 
 | Класс               | Значение переменной                  |
 |:--------------------|:-------------------------------------|
-| .scroll-thumb-radius-1 | `--sf-scroll-radius`: var(`--sf-a1`) |
-| .scroll-thumb-radius-2 | `--sf-scroll-radius`: var(`--sf-a2`) |
-| .scroll-thumb-radius-3 | `--sf-scroll-radius`: var(`--sf-a4`) |
-| .scroll-thumb-radius-4 | `--sf-scroll-radius`: var(`--sf-a8`) |
-
+| `scroll-thumb-radius-1` | `--sf-scroll-radius`: var(`--sf-a1`) |
+| `scroll-thumb-radius-2` | `--sf-scroll-radius`: var(`--sf-a2`) |
+| `scroll-thumb-radius-3` | `--sf-scroll-radius`: var(`--sf-a4`) |
+| `scroll-thumb-radius-4` | `--sf-scroll-radius`: var(`--sf-a8`) |
 
 ## Описание
 
@@ -30,7 +36,3 @@ tags: [scroll-slider-radius]
 - scroll-radius-{1...4} – устаревший алиас (поддерживается для совместимости).
 
 ## Пример использования
-
-:::example {id="utilities/overscroll/scroll-slider-radius" label="Результат"}
-:::
-

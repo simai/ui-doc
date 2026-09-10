@@ -1,0 +1,18 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-3">
+  <label class="sf-quantity sf-quantity--size-1 flex flex-col">
+    <span class="sf-quantity-label flex"><span class="sf-quantity-text">Участники: от 1 до 8</span></span>
+    <span class="sf-quantity-wrap flex content-main-center items-cross-center">
+      <button type="button" class="sf-quantity-count sf-icon-button sf-icon-button--secondary sf-icon-button--tonal sf-icon-button--size-1/3 flex" aria-label="Уменьшить число участников"><i class="sf-icon" aria-hidden="true">remove</i></button>
+      <input type="text" name="participants" value="1" inputmode="numeric" min="1" max="8" step="1">
+      <button type="button" class="sf-quantity-count sf-icon-button sf-icon-button--secondary sf-icon-button--tonal sf-icon-button--size-1/3 flex" aria-label="Увеличить число участников"><i class="sf-icon" aria-hidden="true">add</i></button>
+    </span>
+  </label>
+  <label class="sf-quantity sf-quantity--size-1 flex flex-col">
+    <span class="sf-quantity-label flex"><span class="sf-quantity-text">Длина шага 0,25</span></span>
+    <span class="sf-quantity-wrap flex content-main-center items-cross-center">
+      <button type="button" class="sf-quantity-count sf-icon-button sf-icon-button--secondary sf-icon-button--tonal sf-icon-button--size-1/3 flex" aria-label="Уменьшить длину"><i class="sf-icon" aria-hidden="true">remove</i></button>
+      <input type="text" name="length" value="1.5" inputmode="decimal" min="0" max="5" step="0.25" data-locale="ru-RU" data-precision="2" data-allow-decimal="true">
+      <button type="button" class="sf-quantity-count sf-icon-button sf-icon-button--secondary sf-icon-button--tonal sf-icon-button--size-1/3 flex" aria-label="Увеличить длину"><i class="sf-icon" aria-hidden="true">add</i></button>
+    </span>
+  </label>
+</div>
