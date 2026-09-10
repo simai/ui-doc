@@ -1,13 +1,13 @@
 ---
 title: "Реестр утилит"
-description: "Все семейства утилит SIMAI Framework 5.4.0 и их точные Loader-правила."
+description: "Все семейства утилит SIMAI Framework 5.7.0 и их точные Loader-правила."
 ---
 
 # Реестр утилит
 
 Этот реестр формируется из закреплённого контракта поставки. Он гарантирует, что ни одно семейство Loader не потеряно. Подробная авторская страница дополняет реестр примерами, но не заменяет runtime-контракт.
 
-Всего семейств: **225**.
+Всего публичных семейств: **228**.
 
 | Семейство | Loader-правила | Ассеты | Подробности |
 |:---|:---|:---|:---|
@@ -165,6 +165,8 @@ description: "Все семейства утилит SIMAI Framework 5.4.0 и и
 | `placeholder-opacity` | `placeholder-opacity/default`&lt;br&gt;`placeholder-opacity/focus`&lt;br&gt;`placeholder-opacity/hover` | `distr/utility/placeholder-opacity` | [Открыть](/ru/utilities/forms/placeholder-opacity/) |
 | `pointer-events` | `pointer-events/default` | `distr/utility/pointer-events` | [Открыть](/ru/utilities/forms/pointer-events/) |
 | `position` | `position/default`&lt;br&gt;`position/lg`&lt;br&gt;`position/md`&lt;br&gt;`position/sm`&lt;br&gt;`position/xl` | `distr/utility/position` | [Точный reference](/ru/utilities/reference/position/) |
+| `query-container` | `query-container/default` | `distr/utility/query-container` | [Открыть](/ru/utilities/layout/query-container/) |
+| `query-layout` | `query-layout/default` | `distr/utility/query-layout` | [Открыть](/ru/utilities/layout/query-layout/) |
 | `resize` | `resize/default` | `distr/utility/resize` | [Открыть](/ru/utilities/forms/resize/) |
 | `ring-color` | `ring-color/default`&lt;br&gt;`ring-color/focus`&lt;br&gt;`ring-color/hover` | `distr/utility/ring-color` | [Точный reference](/ru/utilities/reference/ring-color/) |
 | `ring-inset` | `ring-inset/default`&lt;br&gt;`ring-inset/focus`&lt;br&gt;`ring-inset/hover` | `distr/utility/ring-inset` | [Открыть](/ru/utilities/outline/ring-inset/) |
@@ -214,6 +216,7 @@ description: "Все семейства утилит SIMAI Framework 5.4.0 и и
 | `text-indent` | `text-indent/default` | `distr/utility/text-indent` | [Открыть](/ru/utilities/typography/text-indent/) |
 | `text-max-width` | `text-max-width/default`&lt;br&gt;`text-max-width/lg`&lt;br&gt;`text-max-width/md`&lt;br&gt;`text-max-width/sm`&lt;br&gt;`text-max-width/xl` | `distr/utility/text-max-width` | [Открыть](/ru/utilities/typography/text-max-width/) |
 | `text-overflow` | `text-overflow/default` | `distr/utility/text-overflow` | [Открыть](/ru/utilities/text-formatting/text-code/) |
+| `text-wrap` | `text-wrap/default` | `distr/utility/text-wrap` | [Открыть](/ru/utilities/typography/text-wrap/) |
 | `theme` | `theme/default` | `distr/utility/theme` | [Точный reference](/ru/utilities/reference/theme/) |
 | `title` | `title/default` | `distr/utility/title` | [Открыть](/ru/utilities/typography/text-default/) |
 | `touch-action` | `touch-action/default` | `distr/utility/touch-action` | [Открыть](/ru/utilities/interactivity/touch-action/) |

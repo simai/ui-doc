@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-3">
+  <section class="query-container border border-outline-variant radius-2 p-3">
+    <div class="flex flex-col gap-1 m-b-2">
+      <span class="weight-6">Обычный контейнер</span>
+      <code>grid-col-1 cq-sm:grid-col-2</code>
+    </div>
+    <div class="grid grid-col-1 cq-sm:grid-col-2 gap-2">
+      <div class="bg-primary-container color-on-primary-container radius-1 p-3 text-center">Карточка 1</div>
+      <div class="bg-secondary-container color-on-secondary-container radius-1 p-3 text-center">Карточка 2</div>
+    </div>
+  </section>
+
+  <section class="query-container/sidebar border border-outline-variant radius-2 p-3">
+    <div class="flex flex-col gap-1 m-b-2">
+      <span class="weight-6">Именованный контейнер</span>
+      <code>flex-col cq-sm/sidebar:flex-row</code>
+    </div>
+    <div class="flex flex-col cq-sm/sidebar:flex-row gap-2">
+      <div class="bg-surface-container radius-1 p-2 flex-1 text-center">Фильтры</div>
+      <div class="bg-tertiary-container color-on-tertiary-container radius-1 p-2 flex-1 text-center">Результат</div>
+    </div>
+  </section>
+</div>
