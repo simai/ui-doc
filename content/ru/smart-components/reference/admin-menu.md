@@ -1,85 +1,78 @@
 ---
-title: "Admin Menu"
-description: "API и runtime-контракт Smart-компонента admin-menu в SIMAI Framework 5.4.0."
+title: "Умная административная навигация"
+description: "Многоуровневая навигация с поиском, компактным режимом и сохраняемыми пользовательскими настройками."
+profile: reference
 ---
 
-# Admin Menu
+# Умная административная навигация
 
-Идентификатор: `smart.admin-menu`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+:badge[smart.admin-menu]{type=main scheme=on-surface size=1} :badge[complex]{type=tonal scheme=neutral size=1} :badge[experimental]{type=tonal scheme=warning size=1}
 
-## Теги и подключение
+`<sf-admin-menu>` превращает декларативное дерево пунктов в навигацию административного приложения. Компонент поддерживает вложенные уровни, поиск, компактный режим и пользовательские либо системные настройки. Обычный компонент Admin Menu отвечает только за представление; Smart-компонент добавляет состояние и взаимодействие.
 
-Custom Elements: `<sf-admin-menu>`.
+## Пример
 
-Loader-статус: `registered`. Loader-правило: `cl-admin-menu`.
+:::example {id="smart-components/admin-menu/overview" label="Навигация с четырьмя уровнями"}
+:::
 
-Поставляемые ассеты:
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/admin-menu/js/admin-menu.js`
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/admin-menu/template/default.js`
+Стрелка раскрытия находится у логического конца строки, а каждый следующий уровень визуально отделён от родительского. Направление и отступы автоматически учитывают LTR и RTL.
 
-## Зависимости
+## Разметка пунктов
 
-- `component.admin-menu`
-- `component.badges`
-- `component.icons`
-- `component.inputs`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `"default"` | `—` |
-| `brand` | `brand` | `String` | `""` | `—` |
-| `logo` | `logo` | `String` | `""` | `—` |
-| `logo-href` | `logoHref` | `String` | `"#"` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `"Admin menu"` | `—` |
-| `searchable` | `searchable` | `Boolean` | `false` | `—` |
-| `collapsible` | `collapsible` | `Boolean` | `false` | `—` |
-| `settings` | `settings` | `Boolean` | `true` | `—` |
-| `settings-title` | `settingsTitle` | `String` | `"Настройки меню"` | `—` |
-| `compact` | `compact` | `Boolean` | `false` | `—` |
-| `search-placeholder` | `searchPlaceholder` | `String` | `"Поиск по разделам"` | `—` |
-| `count` | `count` | `Number` | `0` | `—` |
-| `toggle-label` | `toggleLabel` | `String` | `"Меню"` | `—` |
-| `panel-class` | `panelClass` | `String` | `""` | `—` |
-| `root-class` | `rootClass` | `String` | `""` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`applyMenuItemSettings()`, `beforeRender()`, `bindContextEvent()`, `buildPanels()`, `captureInitialItems()`, `closeContextMenu()`, `connectedCallback()`, `contextEvent()`, `createDivider()`, `deleteItem()`, `disconnectItemObserver()`, `disconnectedCallback()`, `findItemByPanelId()`, `flattenMenuItems()`, `get bottomItems()`, `get items()`, `getDragAfterElement()`, `getItemRef()`, `getMainMenuSettings()`, `getMenuItemSettings()`, `getPortalContainer()`, `getSearchResults()`, `isContextMenuEvent()`, `isSameVisibleState()`, `itemNodeToData()`, `makeDraggable()`, `mapItems()`, `normalizeSearchText()`, `observeItemChildren()`, `observeMainResize()`, `openContextMenu()`, `openSearchResult()`, `patchMenuItemSettings()`, `persistMenuSettings()`, `pruneItemRefs()`, `removeMenuItemSettings()`, `renderContextMenu()`, `saveMenuSettings()`, `saveNewItemsData()`, `scheduleOverflowUpdate()`, `scoreSearchItem()`, `startSearch()`, `syncItemsOrderFromContainer()`, `toggleCompact()`, `toggleHidden()`, `toggleItemVisibility()`, `toggleMenuSettings()`, `toggleOpen()`, `togglePanel()`, `unbindContextEvent()`, `updateItemByPanelId()`, `updateMenuItemHeight()`, `updateOverflow()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
+Внутри `<sf-admin-menu>` размещаются `<sf-admin-menu-item>`. У каждого пункта должен быть стабильный `item-id`: по нему приложение связывает системную структуру с пользовательскими настройками.
 
 ```html
-<sf-admin-menu></sf-admin-menu>
+<sf-admin-menu aria-label="Разделы проекта" searchable collapsible>
+  <sf-admin-menu-item item-id="content" label="Контент" icon-start="description">
+    <sf-admin-menu-item item-id="content.pages" label="Страницы" href="/pages/">
+    </sf-admin-menu-item>
+  </sf-admin-menu-item>
+</sf-admin-menu>
 ```
+
+| Атрибут пункта | Назначение |
+|:---|:---|
+| `item-id` | Стабильный идентификатор из пакета или приложения |
+| `label` | Название пункта |
+| `href` | Адрес перехода |
+| `icon-start` | Иконка у логического начала строки |
+| `icon-end` | Иконка у логического конца строки |
+| `badge` | Короткий счётчик или статус |
+| `order` | Пользовательский порядок |
+| `slot="bottom"` | Размещение в нижней служебной группе |
+| `active`, `current` | Текущее состояние навигации |
+| `disabled`, `hidden` | Ограничение доступности или видимости |
+
+`left-icon` и `right-icon` остаются совместимыми псевдонимами. В новом коде используйте `icon-start` и `icon-end`.
+
+## Настройки и ответственность приложения
+
+При `persistence-mode="local"` компонент хранит предпочтения локально. В режиме `external` приложение принимает события сохранения, сброса, смены режима и обновления, выполняет проверку доступа на сервере и возвращает подтверждённое состояние через:
+
+- `applyExternalSettingsState(state, target)`;
+- `applySettingsResult(result)`;
+- `applySettingsError(error)`.
+
+Компонент не должен самостоятельно придумывать права, маршруты или серверные значения. Поля `item-id`, `label`, `href`, `icon-start`, `icon-end`, `badge` и `access` принадлежат пакету или приложению; пользовательские предпочтения меняют только порядок, видимость и закрепление.
+
+## Публичные события
+
+| Событие | Назначение |
+|:---|:---|
+| `sf-admin-menu-settings-save` | Запросить сохранение текущего набора предпочтений |
+| `sf-admin-menu-settings-reset` | Запросить сброс выбранного уровня настроек |
+| `sf-admin-menu-settings-cancel` | Отменить локальный черновик |
+| `sf-admin-menu-settings-mode-change` | Запросить пользовательский или системный уровень |
+| `sf-admin-menu-settings-refresh` | Обновить состояние после конфликта ревизий |
+| `sf-admin-menu-compact-change` | Сообщить оболочке о смене ширины меню |
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Всегда задавайте `aria-label`. Вложенные панели управляются с клавиатуры: `Enter` и `Space` открывают действие, `Escape` возвращает фокус, `Tab` продолжает естественную навигацию. Неактивные уровни становятся inert, а открытая страница автоматически приводится в видимую область меню.
 
-## Источник
+## Контракт
 
-- `simai/ui-smart@b57afb30c9b790212afcf451e16ae6e27a5ab6af:smart/admin-menu`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-admin-menu`
+- Smart-компонент: `smart.admin-menu`, версия `1.0.0`.
+- Custom Element: `<sf-admin-menu>`.
+- Loader-правило: `cl-admin-menu`.
+- Жизненный цикл: экспериментальный.

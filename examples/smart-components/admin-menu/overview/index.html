@@ -1,0 +1,21 @@
+<sf-admin-menu
+  aria-label="Разделы администрирования"
+  brand="SIMAI"
+  persistence-mode="external"
+  searchable
+  collapsible>
+  <sf-admin-menu-item item-id="dashboard" label="Обзор" href="#dashboard" icon-start="dashboard" current>
+  </sf-admin-menu-item>
+  <sf-admin-menu-item item-id="content" label="Контент" icon-start="description">
+    <sf-admin-menu-item item-id="content.pages" label="Страницы">
+      <sf-admin-menu-item item-id="content.pages.catalog" label="Каталог">
+        <sf-admin-menu-item item-id="content.pages.catalog.products" label="Товары" href="#products" badge="12">
+        </sf-admin-menu-item>
+      </sf-admin-menu-item>
+    </sf-admin-menu-item>
+    <sf-admin-menu-item item-id="content.media" label="Медиафайлы" href="#media">
+    </sf-admin-menu-item>
+  </sf-admin-menu-item>
+  <sf-admin-menu-item item-id="settings" label="Настройки" href="#settings" icon-start="settings" slot="bottom">
+  </sf-admin-menu-item>
+</sf-admin-menu>

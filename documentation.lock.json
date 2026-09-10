@@ -896,6 +896,48 @@
         },
         {
             "examples": {
+                "default": "smart-components/admin-menu/overview"
+            },
+            "examples_sha256": "276ddd67330bb1da517f72ed518d32d00474b6b24a5e9440a0b2c4fbc17fd7bc",
+            "key": "smart.admin-menu",
+            "kind": "smart_component",
+            "page_path": "content/ru/smart-components/reference/admin-menu.md",
+            "page_sha256": "c9f0d65acc308ab963c6c4c81e1e94ba6a6f96a6541a38607286ba8e9d57b6fb",
+            "review": "ai_verified",
+            "route": "/ru/smart-components/reference/admin-menu/",
+            "source": "simai-framework",
+            "source_sha256": "443dceeeca46007b89752898c2d9e850a57ac774164d29387cbd093cbaa14e70"
+        },
+        {
+            "examples": {
+                "default": "smart-components/inputs/overview"
+            },
+            "examples_sha256": "055d533d20e18bd6060b4e09adae604f5e0da05f2d27cd398083f0fceb438ff9",
+            "key": "smart.inputs",
+            "kind": "smart_component",
+            "page_path": "content/ru/smart-components/reference/inputs.md",
+            "page_sha256": "be34aae230568c475e7dc5ac9022aac980d15e662cb77a9ad6d254a88772b9d3",
+            "review": "ai_verified",
+            "route": "/ru/smart-components/reference/inputs/",
+            "source": "simai-framework",
+            "source_sha256": "3655a4913c5d2c198c97613f98bf293dcb53b451b78ae8193cb38445b13360fe"
+        },
+        {
+            "examples": {
+                "default": "smart-components/table/overview"
+            },
+            "examples_sha256": "990b8f092237fb2927e059a063f27b7d421ba90683a683df00706770ca6dcfcc",
+            "key": "smart.table",
+            "kind": "smart_component",
+            "page_path": "content/ru/smart-components/reference/table.md",
+            "page_sha256": "39ca98668eb4221dd8b613851c52406e9b6eb16ba8b7065348399242eaa53634",
+            "review": "ai_verified",
+            "route": "/ru/smart-components/reference/table/",
+            "source": "simai-framework",
+            "source_sha256": "7391102df5cff847403ea712f9f5432ffcbe5d5fb09a82de328791517dea7bae"
+        },
+        {
+            "examples": {
                 "default": "utilities/forms/accent-color"
             },
             "examples_sha256": "796cd0b7ca74526446c8a10d9f5bec36d0be9c51929c21addab9fe9e093d4188",
