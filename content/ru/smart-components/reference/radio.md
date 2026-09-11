@@ -67,6 +67,21 @@ Loader-статус: `registered`. Loader-правило: `cl-radio`.
 <sf-radio></sf-radio>
 ```
 
+## Название варианта и группы
+
+`name` объединяет варианты в одну машинную группу, `value` задаёт значение
+варианта, `label` — его видимое название, `description` — пояснение. Общее
+название вопроса не повторяйте в каждом Radio: размещайте группу внутри
+`<fieldset>` с `<legend>`.
+
+```html
+<fieldset>
+  <legend>Способ публикации</legend>
+  <sf-radio name="publish" value="now" label="Сейчас" checked></sf-radio>
+  <sf-radio name="publish" value="later" label="По расписанию"></sf-radio>
+</fieldset>
+```
+
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.

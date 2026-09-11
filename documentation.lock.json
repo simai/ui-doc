@@ -270,15 +270,15 @@
             "examples": {
                 "default": "components/dropdown/overview"
             },
-            "examples_sha256": "5ffa731890c1020143d3c8a7ad05ab26b7610b47f3fcddaaea1e1cb6cd32ea64",
+            "examples_sha256": "301772c83c92c623a7c02de06ddab6f2d1dd65fcf94d16617392d4b58283cc27",
             "key": "component.dropdown",
             "kind": "component",
             "page_path": "content/ru/components/dropdown.md",
-            "page_sha256": "8abadccf8d4b66c2bf4dc3e04a3da7bbf916043382f792535924bd2f1dd4084a",
+            "page_sha256": "daea194fe1ce43e5048c8a1f5902f291bbe511165a0485f620f009e3b0ee994e",
             "review": "ai_verified",
             "route": "/ru/components/dropdown/",
             "source": "simai-framework",
-            "source_sha256": "782e2bffd24727f48ca67776e439e88e9ec5d49d9eaaae492b33bd53b42fd9a1"
+            "source_sha256": "060c1189eb38a17ecd8acb5c09f68640f38c43bd1122be88cfa3a2b739509baf"
         },
         {
             "examples": {
@@ -414,7 +414,7 @@
             "key": "component.inputs",
             "kind": "component",
             "page_path": "content/ru/components/inputs.md",
-            "page_sha256": "4c4e485de007c32fad5a3ba55c1a0dc9fb5a66d064558e7fca4788c14b59a469",
+            "page_sha256": "88a9f1d2963b3f072ad628e92b61e72a9cbdc23b4ba453ca60815ee87ddae57a",
             "review": "ai_verified",
             "route": "/ru/components/inputs/",
             "source": "simai-framework",
@@ -760,11 +760,11 @@
             "examples": {
                 "default": "components/textarea/overview"
             },
-            "examples_sha256": "f9d5251e6c85a1a23ec70ef92ec164f42b2d71094d0133ae33c487382dbf83d8",
+            "examples_sha256": "833296d0d840e4ee00ecbf96d99e40d038952f23622cec36f3362fc57c53741d",
             "key": "component.textarea",
             "kind": "component",
             "page_path": "content/ru/components/textarea.md",
-            "page_sha256": "e1906c447e1df6d4ce1241dd5ce5258131404d4fa3a71d9772211f060f2c9775",
+            "page_sha256": "157d3c2a62538bb0b8244e36da5b930402bdf8e3aad8789472fea287bbf7d50b",
             "review": "ai_verified",
             "route": "/ru/components/textarea/",
             "source": "simai-framework",
