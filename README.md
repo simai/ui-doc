@@ -27,8 +27,8 @@ The migration command is deterministic and must report zero changed Markdown
 files on committed content. It remains in the repository so historical source
 material can be normalized through the same documented path.
 
-Composer keeps the published Docara `v2.9.0` revision in `composer.lock` and
-then applies the project-owned compatibility patch registered in `composer.json`.
+Composer keeps the exact published Docara revision pinned in `composer.lock`
+and then applies the project-owned compatibility patch registered in `composer.json`.
 The check command verifies the exact patched file hashes and fails closed if the
 locked package or vendor sources drift.
 
@@ -40,7 +40,7 @@ local checkout is not an equivalent input.
 
 - One physical Markdown file owns each public page.
 - UI strings belong to `content/<locale>/lang.json`.
-- Stable Docara `2.9.0` is pinned to its exact published source revision in
+- Stable Docara is pinned to its exact published source revision in
   `composer.lock`. The bounded Framework pair recorded in
   `simai-framework.lock.json` is materialized after install from immutable Git
   objects by `scripts/materialize-framework-runtime.php`; never substitute
