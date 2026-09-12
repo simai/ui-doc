@@ -1,0 +1,17 @@
+{
+  "schema": "ui-doc.tester_verdict.v1",
+  "status": "pass",
+  "review_scope": "Foundation Documentation Sync delta only",
+  "evidence": {
+    "source_contract_audit": "foundation-docs-audit.json",
+    "static_build": "918 pages built; 1806 HTML files and 376869 local references checked; 0 broken",
+    "browser_smoke": "browser-smoke.json",
+    "example_audit": "918 Markdown pages; 502 shared examples; 0 blockers; 2 pre-existing advisories outside the delta",
+    "russian_content_audit": "72 pre-existing escaped-inline-code findings, all under content/ru/utilities and outside the delta"
+  },
+  "blocking_findings": [],
+  "known_out_of_scope_debt": [
+    "The repository-wide Russian-content audit remains needs_revision because of 72 findings in utility pages not changed by this batch.",
+    "The terminal Playwright runner is unavailable because the local Node installation has a missing dynamic library; browser QA used the in-app browser instead."
+  ]
+}

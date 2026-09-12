@@ -1,0 +1,31 @@
+{
+  "schema": "ui-doc.component_browser_smoke.v2",
+  "status": "pass",
+  "runner": "Playwright CLI",
+  "base_url": "http://127.0.0.1:4178",
+  "pages": [
+    {"path": "/ru/components/buttons/", "h1": "Кнопки", "examples": 7, "horizontal_overflow": false},
+    {"path": "/ru/components/inputs/", "h1": "Текстовые поля", "examples": 6, "horizontal_overflow": false},
+    {"path": "/ru/components/checkbox/", "h1": "Флажок", "examples": 5, "horizontal_overflow": false},
+    {"path": "/ru/components/modal/", "h1": "Модальное окно", "examples": 8, "horizontal_overflow": false}
+  ],
+  "ordinary_modal_logical_positions": [
+    {"direction": "ltr", "position": "inline-start", "side": "left", "left_gap": 0, "right_gap": 155},
+    {"direction": "ltr", "position": "inline-end", "side": "right", "left_gap": 155, "right_gap": 0},
+    {"direction": "rtl", "position": "inline-start", "side": "right", "left_gap": 155, "right_gap": 0},
+    {"direction": "rtl", "position": "inline-end", "side": "left", "left_gap": 0, "right_gap": 155}
+  ],
+  "smart_modal_logical_positions": [
+    {"direction": "ltr", "position": "inline-start", "side": "left", "left_gap": 0, "right_gap": 262},
+    {"direction": "ltr", "position": "inline-end", "side": "right", "left_gap": 262, "right_gap": 0},
+    {"direction": "rtl", "position": "inline-start", "side": "right", "left_gap": 262, "right_gap": 0},
+    {"direction": "rtl", "position": "inline-end", "side": "left", "left_gap": 0, "right_gap": 262}
+  ],
+  "responsive_theme_direction": {
+    "viewport": [390, 844],
+    "direction": "rtl",
+    "theme_class": "theme-dark",
+    "horizontal_overflow": false
+  },
+  "console_errors": 0
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "ui-doc.browser_smoke.v1",
+  "status": "pass",
+  "base_url": "http://127.0.0.1:8998",
+  "pages_checked": [
+    "/ru/start/vision/",
+    "/ru/start/ai/",
+    "/ru/fundamentals/",
+    "/ru/fundamentals/architecture/",
+    "/ru/fundamentals/adaptive-sizing-system/",
+    "/ru/fundamentals/modifiers/",
+    "/ru/fundamentals/values-and-scales/",
+    "/ru/fundamentals/sizes/sizes/",
+    "/ru/fundamentals/sizes/size-scale/"
+  ],
+  "desktop": {
+    "pages_with_expected_h1": 9,
+    "pages_with_main_landmark": 9,
+    "pages_with_horizontal_overflow": 0,
+    "missing_images": 0
+  },
+  "mobile": {
+    "viewport": "390x844",
+    "page": "/ru/fundamentals/adaptive-sizing-system/",
+    "tables": 2,
+    "horizontal_overflow": false,
+    "missing_images": 0
+  },
+  "console_warnings_or_errors": 0,
+  "runner_note": "The terminal Playwright wrapper was unavailable because the installed Node binary could not load libsimdjson.30.dylib. The same read-only checks were completed with the Codex in-app browser; the Node environment was not modified."
+}

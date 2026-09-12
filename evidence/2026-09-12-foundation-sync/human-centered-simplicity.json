@@ -1,0 +1,19 @@
+{
+  "schema": "simai.human_centered_simplicity.v1",
+  "verdict": "pass",
+  "primary_user_outcome": "A reader can understand the Framework layers and use the exact current sizing contract without confusing architectural direction with shipped runtime.",
+  "ideality_review": "The change improves orientation and contract accuracy without adding a new documentation subsystem.",
+  "reuse_review": "Existing Docara pages, navigation metadata, build, static verifier and repository audits are reused.",
+  "changed_surface_inventory": "One new fundamentals page, navigation metadata for three pages, focused corrections to eight existing pages, one source-backed audit and evidence.",
+  "necessity_map": "Every edited page closes a confirmed gap in architecture, sizing units, current control roles, directionality, alias semantics or AI boundaries.",
+  "removal_review": "No current public contract was removed; only ambiguous wording was replaced.",
+  "simplest_complete_alternative": "A single architecture page plus focused edits was smaller and clearer than duplicating contracts across multiple sections.",
+  "progressive_disclosure": "The fundamentals index links the architecture overview first; exact size tables remain on dedicated pages.",
+  "complexity_delta": "One new reader-facing concept page and one narrow automated audit; no runtime complexity.",
+  "protected_complexity_review": "Exact registry, Loader, Core and Smart contracts remain unchanged.",
+  "tester_evidence_review": "tester-verdict.json",
+  "scenario_evidence": "browser-smoke.json",
+  "automation_review": "scripts/audit-foundation-docs.php validates the exact locked Git objects instead of a mutable checkout.",
+  "residual_complexity": "English technical terms remain where they are public names or useful search terms.",
+  "blocking_findings": []
+}

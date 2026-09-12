@@ -1,0 +1,25 @@
+{
+  "schema": "ui-doc.exact_candidate_identity.v1",
+  "candidate": {
+    "source": {
+      "commit": "89bc310aae06480c797aee9fbd067b5f64eff6c0",
+      "tree": "03509e189250ecac40fcf1ecc8b4bdadb6904a04"
+    },
+    "builder": {
+      "commit": "0d1038fb6037fedf02d641468cf140dd2d35246f",
+      "tree": "16433bdede868589ee408ee80283840ff679de0a"
+    },
+    "core": {
+      "commit": "4ded118dcadeaea990ef4fca7d060e4b732ef8c8",
+      "tree": "7f6a94dec9e1e9a1896934ac6a0c7e05d25a7963"
+    },
+    "smart": {
+      "commit": "7cb994aaba9af69105a8f8b1eb53ae57ee713f1b",
+      "tree": "7ccc1ee9b1d6d3eae4b588b9a7a5eb316cc15f6f"
+    }
+  },
+  "extraction": "git archive of each exact commit into an external temporary directory",
+  "owner_source_modified": false,
+  "lock_modified": false,
+  "published": false
+}

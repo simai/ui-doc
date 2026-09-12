@@ -1,0 +1,38 @@
+{
+    "schema": "ui-doc.example_quality_audit.v1",
+    "summary": {
+        "status": "pass",
+        "markdown_pages": 917,
+        "shared_examples": 502,
+        "shared_example_consumers": 515,
+        "table_markers": 0,
+        "redundant_demonstration_fences": 0,
+        "duplicate_example_headings": 0,
+        "escaped_anchor_links": 0,
+        "blocker_count": 0,
+        "advisory_count": 2
+    },
+    "metrics": {
+        "with_javascript": 22,
+        "with_assets": 31,
+        "with_inline_style": 16,
+        "with_fixed_pixel_size": 0,
+        "with_interactive_controls": 173,
+        "multi_column_without_responsive_variant": 2,
+        "buttons_without_type": 0,
+        "images_without_alt": 0,
+        "known_class_typos": 0,
+        "duplicate_attributes": 0
+    },
+    "blockers": [],
+    "advisories": [
+        {
+            "code": "responsive_grid_review",
+            "id": "components/datepicker/text-states"
+        },
+        {
+            "code": "responsive_grid_review",
+            "id": "components/gallery/delegated"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "ui-doc.framework_materialization.v1",
+  "status": "pass",
+  "release_lock": "5de65ca80b405ff285a3770a21042e9f2b99d11c:contracts/releases/ui-e2e5d0fec53d-smart-839ca74ae47e.lock.json",
+  "candidate": {
+    "ui_metadata": "5de65ca80b405ff285a3770a21042e9f2b99d11c",
+    "ui_runtime": "e2e5d0fec53dbd40d298299c8c3be0f038c3deb5",
+    "smart_metadata": "2a02ece381a9c86956d7783bca581ee89b424961",
+    "smart_runtime": "839ca74ae47e50b69ddde46b8995c48031303bae",
+    "source": "cfd4ef24e4460339a84beeb161d5686d9991bf8f",
+    "builder": "0d1038fb6037fedf02d641468cf140dd2d35246f"
+  },
+  "docara_identity": {
+    "pair_id": "sf-v5.7.0-e2e5d0fe-839ca74a",
+    "publication_profile": "verified-commit-candidate-v1",
+    "release_lock_compatibility_id": "ui-e2e5d0fec53d-smart-839ca74ae47e",
+    "note": "Docara 2.9.0 derives pair_id from semantic version and runtime commit prefixes; release_lock is the canonical trace to the accepted bounded pair."
+  },
+  "projection": {
+    "core_files": 843,
+    "core_packet_sha256": "30e37cd9502ccb6f739451044baa9bb251b4aff49d1c2a7bfe81c175c7ae7bda",
+    "smart_static_files": 5,
+    "smart_dynamic_files": 59,
+    "smart_total_files": 64,
+    "runtime_components": 43,
+    "smart_attribute_count_before": 200,
+    "smart_attribute_count_after": 200
+  },
+  "hashes": {
+    "project_lock_sha256": "273894696a636e7ded0b95c2567433d7a0c31da0bc9837e52ad47e032d9f6e93",
+    "registry_sha256": "d719f428d261ed5b269a3bb9ce9db334a432b1cfa16f4b69fcecbd28c238147f",
+    "documentation_source_sha256": "3ec61cae6af51bc8710b06c8604b73d0420dcac760862dfdc816c514cc3ca1f4",
+    "core_modal_css_sha256": "5e026aba0bc67fe9477b5944acb15593a1a3b0f0b0fbd42a92a54ef71ed9d90a",
+    "core_modal_js_sha256": "aabb7345a9e2c87e6fe5723e9f068653ffee3a93e8b5b55bd61d726cf1ce7f70",
+    "smart_modal_js_sha256": "2f418e3fe3ce4607ae9df84c29425c67d6a564eb6d85bcbeaa16b4ae82c314a6"
+  },
+  "owner_source_modified": false
+}
