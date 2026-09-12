@@ -17,6 +17,9 @@ composer install
 composer docara:compatibility:check
 php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
 php scripts/migrate-legacy-content.php content redirects.json
+php scripts/audit-guide-information-architecture.php
+php scripts/audit-guide-redirects.php
+php scripts/audit-foundation-docs.php /absolute/path/to/ui
 php -d memory_limit=512M vendor/bin/docara build production
 php -d memory_limit=512M vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \

@@ -1287,104 +1287,152 @@
             "to": "ru/components/verification"
         },
         {
+            "from": "ru/fundamentals",
+            "to": "ru/guide/fundamentals"
+        },
+        {
             "from": "ru/fundamentals/abbreviations-of-properties",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/adaptive-sizing-system",
+            "to": "ru/guide/fundamentals/adaptive-sizing"
         },
         {
             "from": "ru/fundamentals/alignment",
-            "to": "ru/fundamentals/values-and-scales"
+            "to": "ru/guide/fundamentals/values-and-scales"
         },
         {
             "from": "ru/fundamentals/alignment/alignment",
-            "to": "ru/fundamentals/values-and-scales"
+            "to": "ru/guide/fundamentals/values-and-scales"
+        },
+        {
+            "from": "ru/fundamentals/architecture",
+            "to": "ru/guide/architecture/overview"
         },
         {
             "from": "ru/fundamentals/best-practices",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/breakpoints",
-            "to": "ru/fundamentals/conditions"
+            "to": "ru/guide/fundamentals/conditions"
+        },
+        {
+            "from": "ru/fundamentals/colors-and-themes",
+            "to": "ru/guide/fundamentals/colors-and-themes"
+        },
+        {
+            "from": "ru/fundamentals/conditions",
+            "to": "ru/guide/fundamentals/conditions"
+        },
+        {
+            "from": "ru/fundamentals/content-spacing",
+            "to": "ru/guide/fundamentals/spacing"
+        },
+        {
+            "from": "ru/fundamentals/design-tokens",
+            "to": "ru/guide/fundamentals/design-tokens"
         },
         {
             "from": "ru/fundamentals/directions",
-            "to": "ru/fundamentals/values-and-scales"
+            "to": "ru/guide/fundamentals/values-and-scales"
         },
         {
             "from": "ru/fundamentals/directions/directions",
-            "to": "ru/fundamentals/values-and-scales"
+            "to": "ru/guide/fundamentals/values-and-scales"
         },
         {
             "from": "ru/fundamentals/modifier-parameters",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/modifier-parameters/angle-parameter",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/modifier-parameters/axle-designations",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/modifier-parameters/examples-of-parameters-in-modifiers",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/modifier-parameters/modifier-parameters",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/modifier-parameters/side-parameter",
-            "to": "ru/fundamentals/modifiers"
+            "to": "ru/guide/fundamentals/modifiers"
+        },
+        {
+            "from": "ru/fundamentals/modifiers",
+            "to": "ru/guide/fundamentals/modifiers"
         },
         {
             "from": "ru/fundamentals/sizes",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/direct-translation",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/from-old-to-new",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/indents",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/mnemonic",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/relationship-between-letters-and-multipliers",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/reverse-conversion",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/reverse-translation",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/sizes/size-conversion",
-            "to": "ru/fundamentals/sizes/sizes"
+            "to": "ru/guide/fundamentals/sizes"
+        },
+        {
+            "from": "ru/fundamentals/sizes/size-scale",
+            "to": "ru/guide/fundamentals/size-scale"
+        },
+        {
+            "from": "ru/fundamentals/sizes/sizes",
+            "to": "ru/guide/fundamentals/sizes"
         },
         {
             "from": "ru/fundamentals/states",
-            "to": "ru/fundamentals/conditions"
+            "to": "ru/guide/fundamentals/conditions"
+        },
+        {
+            "from": "ru/fundamentals/typography-system",
+            "to": "ru/guide/fundamentals/typography"
         },
         {
             "from": "ru/fundamentals/values",
-            "to": "ru/fundamentals/values-and-scales"
+            "to": "ru/guide/fundamentals/values-and-scales"
+        },
+        {
+            "from": "ru/fundamentals/values-and-scales",
+            "to": "ru/guide/fundamentals/values-and-scales"
         },
         {
             "from": "ru/reference/color-primitives",
@@ -1575,32 +1623,52 @@
             "to": "ru/reference/properties-of-modifiers/property-structure-typography"
         },
         {
+            "from": "ru/start",
+            "to": "ru/guide/introduction/quick-start"
+        },
+        {
+            "from": "ru/start/ai",
+            "to": "ru/guide/practical/ai"
+        },
+        {
+            "from": "ru/start/compatibility",
+            "to": "ru/guide/connection/versions-and-updates"
+        },
+        {
             "from": "ru/start/glossary",
-            "to": "ru/start"
+            "to": "ru/guide/introduction/quick-start"
+        },
+        {
+            "from": "ru/start/installation",
+            "to": "ru/guide/connection/project-setup"
         },
         {
             "from": "ru/start/integration-patterns",
-            "to": "ru/start/installation"
+            "to": "ru/guide/connection/project-setup"
         },
         {
             "from": "ru/start/introduction",
-            "to": "ru/start"
+            "to": "ru/guide/introduction/quick-start"
         },
         {
             "from": "ru/start/loader",
-            "to": "ru/start/installation"
+            "to": "ru/guide/connection/project-setup"
         },
         {
             "from": "ru/start/playground",
-            "to": "ru/start"
+            "to": "ru/guide/introduction/quick-start"
         },
         {
             "from": "ru/start/project-setup",
-            "to": "ru/start/installation"
+            "to": "ru/guide/connection/project-setup"
         },
         {
             "from": "ru/start/quickstart",
-            "to": "ru/start"
+            "to": "ru/guide/introduction/quick-start"
+        },
+        {
+            "from": "ru/start/vision",
+            "to": "ru/guide/introduction/what-is-simai-framework"
         }
     ]
 }

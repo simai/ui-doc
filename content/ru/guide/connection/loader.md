@@ -1,0 +1,29 @@
+---
+title: "Как работает Loader"
+description: "Как Loader подключает Core, утилиты и обычные компоненты SIMAI Framework."
+---
+
+# Как работает Loader
+
+Loader просматривает разметку страницы, распознаёт используемые классы и обычные компоненты и подключает для них необходимые CSS- и JavaScript-модули. Core загружается первым и создаёт общую основу.
+
+## Когда применять
+
+Обычно Loader не требует ручного управления. Достаточно сохранить структуру каталога `distr`, правильно задать `window.sfPath` и писать классы Framework в итоговой HTML-разметке.
+
+## Пример
+
+```html
+<script>
+  window.sfPath = '/assets/simai-framework/distr/';
+</script>
+<script src="/assets/simai-framework/distr/core/js/core.js"></script>
+
+<button class="button p-x-3">Сохранить</button>
+```
+
+После загрузки Core Loader находит классы и обычный компонент кнопки и подключает доступные для них модули. Подключение и жизненный цикл Smart-компонентов описываются отдельно.
+
+## Что дальше
+
+Изучите [версии и обновление](/ru/guide/connection/versions-and-updates/) или перейдите к [Smart-компонентам](/ru/guide/architecture/smart-components/).

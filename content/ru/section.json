@@ -11,8 +11,7 @@
   "header_navigation": {
     "enabled": true,
     "items": [
-      {"id": "start", "label": "Старт", "href": "/ru/start/"},
-      {"id": "fundamentals", "label": "Основы", "href": "/ru/fundamentals/"},
+      {"id": "guide", "label": "Руководство", "href": "/ru/guide/"},
       {"id": "utilities", "label": "Утилиты", "href": "/ru/utilities/"},
       {"id": "components", "label": "Компоненты", "href": "/ru/components/"},
       {"id": "smart-components", "label": "Смарт-компоненты", "href": "/ru/smart-components/"}
