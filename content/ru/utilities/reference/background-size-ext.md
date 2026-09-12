@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `background-size-ext/md`
 - `background-size-ext/sm`
 - `background-size-ext/xl`
+- `background-size-ext/xxl`
 
 Корень ассетов: `distr/utility/background-size-ext`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **956**.
+Всего уникальных классов в readable CSS: **1147**.
 
 ```text
 bg-size-0
@@ -978,9 +979,200 @@ xl:bg-size-i6
 xl:bg-size-i7
 xl:bg-size-i8
 xl:bg-size-i9
+xxl:bg-size-0
+xxl:bg-size-1
+xxl:bg-size-10
+xxl:bg-size-100
+xxl:bg-size-11
+xxl:bg-size-12
+xxl:bg-size-13
+xxl:bg-size-14
+xxl:bg-size-15
+xxl:bg-size-16
+xxl:bg-size-17
+xxl:bg-size-18
+xxl:bg-size-19
+xxl:bg-size-2
+xxl:bg-size-20
+xxl:bg-size-21
+xxl:bg-size-22
+xxl:bg-size-23
+xxl:bg-size-24
+xxl:bg-size-25
+xxl:bg-size-26
+xxl:bg-size-27
+xxl:bg-size-28
+xxl:bg-size-29
+xxl:bg-size-3
+xxl:bg-size-30
+xxl:bg-size-31
+xxl:bg-size-32
+xxl:bg-size-33
+xxl:bg-size-34
+xxl:bg-size-35
+xxl:bg-size-36
+xxl:bg-size-37
+xxl:bg-size-38
+xxl:bg-size-39
+xxl:bg-size-4
+xxl:bg-size-40
+xxl:bg-size-41
+xxl:bg-size-42
+xxl:bg-size-43
+xxl:bg-size-44
+xxl:bg-size-45
+xxl:bg-size-46
+xxl:bg-size-47
+xxl:bg-size-48
+xxl:bg-size-49
+xxl:bg-size-5
+xxl:bg-size-50
+xxl:bg-size-51
+xxl:bg-size-52
+xxl:bg-size-53
+xxl:bg-size-54
+xxl:bg-size-55
+xxl:bg-size-56
+xxl:bg-size-57
+xxl:bg-size-58
+xxl:bg-size-59
+xxl:bg-size-6
+xxl:bg-size-60
+xxl:bg-size-61
+xxl:bg-size-62
+xxl:bg-size-63
+xxl:bg-size-64
+xxl:bg-size-65
+xxl:bg-size-66
+xxl:bg-size-67
+xxl:bg-size-68
+xxl:bg-size-69
+xxl:bg-size-7
+xxl:bg-size-70
+xxl:bg-size-71
+xxl:bg-size-72
+xxl:bg-size-73
+xxl:bg-size-74
+xxl:bg-size-75
+xxl:bg-size-76
+xxl:bg-size-77
+xxl:bg-size-78
+xxl:bg-size-79
+xxl:bg-size-8
+xxl:bg-size-80
+xxl:bg-size-81
+xxl:bg-size-82
+xxl:bg-size-83
+xxl:bg-size-84
+xxl:bg-size-85
+xxl:bg-size-86
+xxl:bg-size-87
+xxl:bg-size-88
+xxl:bg-size-89
+xxl:bg-size-9
+xxl:bg-size-90
+xxl:bg-size-91
+xxl:bg-size-92
+xxl:bg-size-93
+xxl:bg-size-94
+xxl:bg-size-95
+xxl:bg-size-96
+xxl:bg-size-97
+xxl:bg-size-98
+xxl:bg-size-99
+xxl:bg-size-a0
+xxl:bg-size-a1
+xxl:bg-size-a2
+xxl:bg-size-a3
+xxl:bg-size-a4
+xxl:bg-size-a5
+xxl:bg-size-a6
+xxl:bg-size-a7
+xxl:bg-size-a8
+xxl:bg-size-a9
+xxl:bg-size-b0
+xxl:bg-size-b1
+xxl:bg-size-b2
+xxl:bg-size-b3
+xxl:bg-size-b4
+xxl:bg-size-b5
+xxl:bg-size-b6
+xxl:bg-size-b7
+xxl:bg-size-b8
+xxl:bg-size-b9
+xxl:bg-size-c0
+xxl:bg-size-c1
+xxl:bg-size-c2
+xxl:bg-size-c3
+xxl:bg-size-c4
+xxl:bg-size-c5
+xxl:bg-size-c6
+xxl:bg-size-c7
+xxl:bg-size-c8
+xxl:bg-size-c9
+xxl:bg-size-d0
+xxl:bg-size-d1
+xxl:bg-size-d2
+xxl:bg-size-d3
+xxl:bg-size-d4
+xxl:bg-size-d5
+xxl:bg-size-d6
+xxl:bg-size-d7
+xxl:bg-size-d8
+xxl:bg-size-d9
+xxl:bg-size-e0
+xxl:bg-size-e1
+xxl:bg-size-e2
+xxl:bg-size-e3
+xxl:bg-size-e4
+xxl:bg-size-e5
+xxl:bg-size-e6
+xxl:bg-size-e7
+xxl:bg-size-e8
+xxl:bg-size-e9
+xxl:bg-size-f0
+xxl:bg-size-f1
+xxl:bg-size-f2
+xxl:bg-size-f3
+xxl:bg-size-f4
+xxl:bg-size-f5
+xxl:bg-size-f6
+xxl:bg-size-f7
+xxl:bg-size-f8
+xxl:bg-size-f9
+xxl:bg-size-g0
+xxl:bg-size-g1
+xxl:bg-size-g2
+xxl:bg-size-g3
+xxl:bg-size-g4
+xxl:bg-size-g5
+xxl:bg-size-g6
+xxl:bg-size-g7
+xxl:bg-size-g8
+xxl:bg-size-g9
+xxl:bg-size-h0
+xxl:bg-size-h1
+xxl:bg-size-h2
+xxl:bg-size-h3
+xxl:bg-size-h4
+xxl:bg-size-h5
+xxl:bg-size-h6
+xxl:bg-size-h7
+xxl:bg-size-h8
+xxl:bg-size-h9
+xxl:bg-size-i0
+xxl:bg-size-i1
+xxl:bg-size-i2
+xxl:bg-size-i3
+xxl:bg-size-i4
+xxl:bg-size-i5
+xxl:bg-size-i6
+xxl:bg-size-i7
+xxl:bg-size-i8
+xxl:bg-size-i9
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=background-size-ext`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/background-size-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=background-size-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/background-size-ext`

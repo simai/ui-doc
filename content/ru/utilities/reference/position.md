@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `position/md`
 - `position/sm`
 - `position/xl`
+- `position/xxl`
 
 Корень ассетов: `distr/utility/position`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **26**.
+Всего уникальных классов в readable CSS: **31**.
 
 ```text
 absolute
@@ -48,9 +49,14 @@ xl:fixed
 xl:relative
 xl:static
 xl:sticky
+xxl:absolute
+xxl:fixed
+xxl:relative
+xxl:static
+xxl:sticky
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=position`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/position`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=position`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/position`

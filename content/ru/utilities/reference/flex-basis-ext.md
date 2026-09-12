@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `flex-basis-ext/md`
 - `flex-basis-ext/sm`
 - `flex-basis-ext/xl`
+- `flex-basis-ext/xxl`
 
 Корень ассетов: `distr/utility/flex-basis-ext`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **501**.
+Всего уникальных классов в readable CSS: **601**.
 
 ```text
 basis-1
@@ -523,9 +524,109 @@ xl:basis-96
 xl:basis-97
 xl:basis-98
 xl:basis-99
+xxl:basis-1
+xxl:basis-10
+xxl:basis-100
+xxl:basis-11
+xxl:basis-12
+xxl:basis-13
+xxl:basis-14
+xxl:basis-15
+xxl:basis-16
+xxl:basis-17
+xxl:basis-18
+xxl:basis-19
+xxl:basis-2
+xxl:basis-20
+xxl:basis-21
+xxl:basis-22
+xxl:basis-23
+xxl:basis-24
+xxl:basis-25
+xxl:basis-26
+xxl:basis-27
+xxl:basis-28
+xxl:basis-29
+xxl:basis-3
+xxl:basis-30
+xxl:basis-31
+xxl:basis-32
+xxl:basis-33
+xxl:basis-34
+xxl:basis-35
+xxl:basis-36
+xxl:basis-37
+xxl:basis-38
+xxl:basis-39
+xxl:basis-4
+xxl:basis-40
+xxl:basis-41
+xxl:basis-42
+xxl:basis-43
+xxl:basis-44
+xxl:basis-45
+xxl:basis-46
+xxl:basis-47
+xxl:basis-48
+xxl:basis-49
+xxl:basis-5
+xxl:basis-50
+xxl:basis-51
+xxl:basis-52
+xxl:basis-53
+xxl:basis-54
+xxl:basis-55
+xxl:basis-56
+xxl:basis-57
+xxl:basis-58
+xxl:basis-59
+xxl:basis-6
+xxl:basis-60
+xxl:basis-61
+xxl:basis-62
+xxl:basis-63
+xxl:basis-64
+xxl:basis-65
+xxl:basis-66
+xxl:basis-67
+xxl:basis-68
+xxl:basis-69
+xxl:basis-7
+xxl:basis-70
+xxl:basis-71
+xxl:basis-72
+xxl:basis-73
+xxl:basis-74
+xxl:basis-75
+xxl:basis-76
+xxl:basis-77
+xxl:basis-78
+xxl:basis-79
+xxl:basis-8
+xxl:basis-80
+xxl:basis-81
+xxl:basis-82
+xxl:basis-83
+xxl:basis-84
+xxl:basis-85
+xxl:basis-86
+xxl:basis-87
+xxl:basis-88
+xxl:basis-89
+xxl:basis-9
+xxl:basis-90
+xxl:basis-91
+xxl:basis-92
+xxl:basis-93
+xxl:basis-94
+xxl:basis-95
+xxl:basis-96
+xxl:basis-97
+xxl:basis-98
+xxl:basis-99
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=flex-basis-ext`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/flex-basis-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=flex-basis-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/flex-basis-ext`

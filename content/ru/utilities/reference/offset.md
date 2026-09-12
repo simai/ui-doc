@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `offset/md`
 - `offset/sm`
 - `offset/xl`
+- `offset/xxl`
 
 Корень ассетов: `distr/utility/offset`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **58**.
+Всего уникальных классов в readable CSS: **69**.
 
 ```text
 333333
@@ -80,9 +81,20 @@ xl:offset-6/12
 xl:offset-7/12
 xl:offset-8/12
 xl:offset-9/12
+xxl:offset-1/12
+xxl:offset-10/12
+xxl:offset-11/12
+xxl:offset-2/12
+xxl:offset-3/12
+xxl:offset-4/12
+xxl:offset-5/12
+xxl:offset-6/12
+xxl:offset-7/12
+xxl:offset-8/12
+xxl:offset-9/12
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=offset`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/offset`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=offset`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/offset`

@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `width-ext/md`
 - `width-ext/sm`
 - `width-ext/xl`
+- `width-ext/xxl`
 
 Корень ассетов: `distr/utility/width-ext`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **946**.
+Всего уникальных классов в readable CSS: **1135**.
 
 ```text
 lg:w-1
@@ -968,9 +969,198 @@ xl:w-i6
 xl:w-i7
 xl:w-i8
 xl:w-i9
+xxl:w-1
+xxl:w-10
+xxl:w-11
+xxl:w-12
+xxl:w-13
+xxl:w-14
+xxl:w-15
+xxl:w-16
+xxl:w-17
+xxl:w-18
+xxl:w-19
+xxl:w-2
+xxl:w-20
+xxl:w-21
+xxl:w-22
+xxl:w-23
+xxl:w-24
+xxl:w-25
+xxl:w-26
+xxl:w-27
+xxl:w-28
+xxl:w-29
+xxl:w-3
+xxl:w-30
+xxl:w-31
+xxl:w-32
+xxl:w-33
+xxl:w-34
+xxl:w-35
+xxl:w-36
+xxl:w-37
+xxl:w-38
+xxl:w-39
+xxl:w-4
+xxl:w-40
+xxl:w-41
+xxl:w-42
+xxl:w-43
+xxl:w-44
+xxl:w-45
+xxl:w-46
+xxl:w-47
+xxl:w-48
+xxl:w-49
+xxl:w-5
+xxl:w-50
+xxl:w-51
+xxl:w-52
+xxl:w-53
+xxl:w-54
+xxl:w-55
+xxl:w-56
+xxl:w-57
+xxl:w-58
+xxl:w-59
+xxl:w-6
+xxl:w-60
+xxl:w-61
+xxl:w-62
+xxl:w-63
+xxl:w-64
+xxl:w-65
+xxl:w-66
+xxl:w-67
+xxl:w-68
+xxl:w-69
+xxl:w-7
+xxl:w-70
+xxl:w-71
+xxl:w-72
+xxl:w-73
+xxl:w-74
+xxl:w-75
+xxl:w-76
+xxl:w-77
+xxl:w-78
+xxl:w-79
+xxl:w-8
+xxl:w-80
+xxl:w-81
+xxl:w-82
+xxl:w-83
+xxl:w-84
+xxl:w-85
+xxl:w-86
+xxl:w-87
+xxl:w-88
+xxl:w-89
+xxl:w-9
+xxl:w-90
+xxl:w-91
+xxl:w-92
+xxl:w-93
+xxl:w-94
+xxl:w-95
+xxl:w-96
+xxl:w-97
+xxl:w-98
+xxl:w-99
+xxl:w-a0
+xxl:w-a1
+xxl:w-a2
+xxl:w-a3
+xxl:w-a4
+xxl:w-a5
+xxl:w-a6
+xxl:w-a7
+xxl:w-a8
+xxl:w-a9
+xxl:w-b0
+xxl:w-b1
+xxl:w-b2
+xxl:w-b3
+xxl:w-b4
+xxl:w-b5
+xxl:w-b6
+xxl:w-b7
+xxl:w-b8
+xxl:w-b9
+xxl:w-c0
+xxl:w-c1
+xxl:w-c2
+xxl:w-c3
+xxl:w-c4
+xxl:w-c5
+xxl:w-c6
+xxl:w-c7
+xxl:w-c8
+xxl:w-c9
+xxl:w-d0
+xxl:w-d1
+xxl:w-d2
+xxl:w-d3
+xxl:w-d4
+xxl:w-d5
+xxl:w-d6
+xxl:w-d7
+xxl:w-d8
+xxl:w-d9
+xxl:w-e0
+xxl:w-e1
+xxl:w-e2
+xxl:w-e3
+xxl:w-e4
+xxl:w-e5
+xxl:w-e6
+xxl:w-e7
+xxl:w-e8
+xxl:w-e9
+xxl:w-f0
+xxl:w-f1
+xxl:w-f2
+xxl:w-f3
+xxl:w-f4
+xxl:w-f5
+xxl:w-f6
+xxl:w-f7
+xxl:w-f8
+xxl:w-f9
+xxl:w-g0
+xxl:w-g1
+xxl:w-g2
+xxl:w-g3
+xxl:w-g4
+xxl:w-g5
+xxl:w-g6
+xxl:w-g7
+xxl:w-g8
+xxl:w-g9
+xxl:w-h0
+xxl:w-h1
+xxl:w-h2
+xxl:w-h3
+xxl:w-h4
+xxl:w-h5
+xxl:w-h6
+xxl:w-h7
+xxl:w-h8
+xxl:w-h9
+xxl:w-i0
+xxl:w-i1
+xxl:w-i2
+xxl:w-i3
+xxl:w-i4
+xxl:w-i5
+xxl:w-i6
+xxl:w-i7
+xxl:w-i8
+xxl:w-i9
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=width-ext`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/width-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=width-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/width-ext`

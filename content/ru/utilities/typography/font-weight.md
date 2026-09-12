@@ -1,7 +1,7 @@
 ---
 title: "Толщина шрифта"
 description: "Толщина шрифта (font-weight)"
-tags: [font-weight, sm, md, lg, xl, hover]
+tags: [font-weight, sm, md, lg, xl, xxl, hover]
 ---
 
 # Толщина шрифта

@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `height-ext/md`
 - `height-ext/sm`
 - `height-ext/xl`
+- `height-ext/xxl`
 
 Корень ассетов: `distr/utility/height-ext`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **451**.
+Всего уникальных классов в readable CSS: **541**.
 
 ```text
 h-a0
@@ -473,9 +474,99 @@ xl:h-i6
 xl:h-i7
 xl:h-i8
 xl:h-i9
+xxl:h-a0
+xxl:h-a1
+xxl:h-a2
+xxl:h-a3
+xxl:h-a4
+xxl:h-a5
+xxl:h-a6
+xxl:h-a7
+xxl:h-a8
+xxl:h-a9
+xxl:h-b0
+xxl:h-b1
+xxl:h-b2
+xxl:h-b3
+xxl:h-b4
+xxl:h-b5
+xxl:h-b6
+xxl:h-b7
+xxl:h-b8
+xxl:h-b9
+xxl:h-c0
+xxl:h-c1
+xxl:h-c2
+xxl:h-c3
+xxl:h-c4
+xxl:h-c5
+xxl:h-c6
+xxl:h-c7
+xxl:h-c8
+xxl:h-c9
+xxl:h-d0
+xxl:h-d1
+xxl:h-d2
+xxl:h-d3
+xxl:h-d4
+xxl:h-d5
+xxl:h-d6
+xxl:h-d7
+xxl:h-d8
+xxl:h-d9
+xxl:h-e0
+xxl:h-e1
+xxl:h-e2
+xxl:h-e3
+xxl:h-e4
+xxl:h-e5
+xxl:h-e6
+xxl:h-e7
+xxl:h-e8
+xxl:h-e9
+xxl:h-f0
+xxl:h-f1
+xxl:h-f2
+xxl:h-f3
+xxl:h-f4
+xxl:h-f5
+xxl:h-f6
+xxl:h-f7
+xxl:h-f8
+xxl:h-f9
+xxl:h-g0
+xxl:h-g1
+xxl:h-g2
+xxl:h-g3
+xxl:h-g4
+xxl:h-g5
+xxl:h-g6
+xxl:h-g7
+xxl:h-g8
+xxl:h-g9
+xxl:h-h0
+xxl:h-h1
+xxl:h-h2
+xxl:h-h3
+xxl:h-h4
+xxl:h-h5
+xxl:h-h6
+xxl:h-h7
+xxl:h-h8
+xxl:h-h9
+xxl:h-i0
+xxl:h-i1
+xxl:h-i2
+xxl:h-i3
+xxl:h-i4
+xxl:h-i5
+xxl:h-i6
+xxl:h-i7
+xxl:h-i8
+xxl:h-i9
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=height-ext`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/height-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=height-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/height-ext`

@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `max-width-ext/md`
 - `max-width-ext/sm`
 - `max-width-ext/xl`
+- `max-width-ext/xxl`
 
 Корень ассетов: `distr/utility/max-width-ext`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **451**.
+Всего уникальных классов в readable CSS: **541**.
 
 ```text
 lg:max-w-a0
@@ -473,9 +474,99 @@ xl:max-w-i6
 xl:max-w-i7
 xl:max-w-i8
 xl:max-w-i9
+xxl:max-w-a0
+xxl:max-w-a1
+xxl:max-w-a2
+xxl:max-w-a3
+xxl:max-w-a4
+xxl:max-w-a5
+xxl:max-w-a6
+xxl:max-w-a7
+xxl:max-w-a8
+xxl:max-w-a9
+xxl:max-w-b0
+xxl:max-w-b1
+xxl:max-w-b2
+xxl:max-w-b3
+xxl:max-w-b4
+xxl:max-w-b5
+xxl:max-w-b6
+xxl:max-w-b7
+xxl:max-w-b8
+xxl:max-w-b9
+xxl:max-w-c0
+xxl:max-w-c1
+xxl:max-w-c2
+xxl:max-w-c3
+xxl:max-w-c4
+xxl:max-w-c5
+xxl:max-w-c6
+xxl:max-w-c7
+xxl:max-w-c8
+xxl:max-w-c9
+xxl:max-w-d0
+xxl:max-w-d1
+xxl:max-w-d2
+xxl:max-w-d3
+xxl:max-w-d4
+xxl:max-w-d5
+xxl:max-w-d6
+xxl:max-w-d7
+xxl:max-w-d8
+xxl:max-w-d9
+xxl:max-w-e0
+xxl:max-w-e1
+xxl:max-w-e2
+xxl:max-w-e3
+xxl:max-w-e4
+xxl:max-w-e5
+xxl:max-w-e6
+xxl:max-w-e7
+xxl:max-w-e8
+xxl:max-w-e9
+xxl:max-w-f0
+xxl:max-w-f1
+xxl:max-w-f2
+xxl:max-w-f3
+xxl:max-w-f4
+xxl:max-w-f5
+xxl:max-w-f6
+xxl:max-w-f7
+xxl:max-w-f8
+xxl:max-w-f9
+xxl:max-w-g0
+xxl:max-w-g1
+xxl:max-w-g2
+xxl:max-w-g3
+xxl:max-w-g4
+xxl:max-w-g5
+xxl:max-w-g6
+xxl:max-w-g7
+xxl:max-w-g8
+xxl:max-w-g9
+xxl:max-w-h0
+xxl:max-w-h1
+xxl:max-w-h2
+xxl:max-w-h3
+xxl:max-w-h4
+xxl:max-w-h5
+xxl:max-w-h6
+xxl:max-w-h7
+xxl:max-w-h8
+xxl:max-w-h9
+xxl:max-w-i0
+xxl:max-w-i1
+xxl:max-w-i2
+xxl:max-w-i3
+xxl:max-w-i4
+xxl:max-w-i5
+xxl:max-w-i6
+xxl:max-w-i7
+xxl:max-w-i8
+xxl:max-w-i9
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=max-width-ext`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/max-width-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=max-width-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/max-width-ext`

@@ -14,12 +14,13 @@ description: "Классы, значения и подключение утил�
 - `max-height-ext/md`
 - `max-height-ext/sm`
 - `max-height-ext/xl`
+- `max-height-ext/xxl`
 
 Корень ассетов: `distr/utility/max-height-ext`.
 
 ## Поставляемые классы
 
-Всего уникальных классов в readable CSS: **451**.
+Всего уникальных классов в readable CSS: **541**.
 
 ```text
 lg:max-h-a0
@@ -473,9 +474,99 @@ xl:max-h-i6
 xl:max-h-i7
 xl:max-h-i8
 xl:max-h-i9
+xxl:max-h-a0
+xxl:max-h-a1
+xxl:max-h-a2
+xxl:max-h-a3
+xxl:max-h-a4
+xxl:max-h-a5
+xxl:max-h-a6
+xxl:max-h-a7
+xxl:max-h-a8
+xxl:max-h-a9
+xxl:max-h-b0
+xxl:max-h-b1
+xxl:max-h-b2
+xxl:max-h-b3
+xxl:max-h-b4
+xxl:max-h-b5
+xxl:max-h-b6
+xxl:max-h-b7
+xxl:max-h-b8
+xxl:max-h-b9
+xxl:max-h-c0
+xxl:max-h-c1
+xxl:max-h-c2
+xxl:max-h-c3
+xxl:max-h-c4
+xxl:max-h-c5
+xxl:max-h-c6
+xxl:max-h-c7
+xxl:max-h-c8
+xxl:max-h-c9
+xxl:max-h-d0
+xxl:max-h-d1
+xxl:max-h-d2
+xxl:max-h-d3
+xxl:max-h-d4
+xxl:max-h-d5
+xxl:max-h-d6
+xxl:max-h-d7
+xxl:max-h-d8
+xxl:max-h-d9
+xxl:max-h-e0
+xxl:max-h-e1
+xxl:max-h-e2
+xxl:max-h-e3
+xxl:max-h-e4
+xxl:max-h-e5
+xxl:max-h-e6
+xxl:max-h-e7
+xxl:max-h-e8
+xxl:max-h-e9
+xxl:max-h-f0
+xxl:max-h-f1
+xxl:max-h-f2
+xxl:max-h-f3
+xxl:max-h-f4
+xxl:max-h-f5
+xxl:max-h-f6
+xxl:max-h-f7
+xxl:max-h-f8
+xxl:max-h-f9
+xxl:max-h-g0
+xxl:max-h-g1
+xxl:max-h-g2
+xxl:max-h-g3
+xxl:max-h-g4
+xxl:max-h-g5
+xxl:max-h-g6
+xxl:max-h-g7
+xxl:max-h-g8
+xxl:max-h-g9
+xxl:max-h-h0
+xxl:max-h-h1
+xxl:max-h-h2
+xxl:max-h-h3
+xxl:max-h-h4
+xxl:max-h-h5
+xxl:max-h-h6
+xxl:max-h-h7
+xxl:max-h-h8
+xxl:max-h-h9
+xxl:max-h-i0
+xxl:max-h-i1
+xxl:max-h-i2
+xxl:max-h-i3
+xxl:max-h-i4
+xxl:max-h-i5
+xxl:max-h-i6
+xxl:max-h-i7
+xxl:max-h-i8
+xxl:max-h-i9
 ```
 
 ## Источник
 
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#family=max-height-ext`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/utility/max-height-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/rule/rule.json#family=max-height-ext`
+- `simai/ui@f25621cdd37387c44a8d27ee425cec4c4d543c7d:distr/utility/max-height-ext`
