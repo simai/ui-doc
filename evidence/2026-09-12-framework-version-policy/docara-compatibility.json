@@ -1,0 +1,7 @@
+{
+    "schema": "ui-doc.docara_compatibility_patch_result.v1",
+    "status": "pass",
+    "result": "already_applied",
+    "candidate_reference": "00032adc74fb490083b86fad89ab654bd56da0af",
+    "files_verified": 7
+}

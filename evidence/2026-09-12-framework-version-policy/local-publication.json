@@ -1,0 +1,16 @@
+{
+  "schema": "ui-doc.local_publication_evidence.v1",
+  "status": "pass",
+  "previous_target": "/Users/rim/Sites/.ui-doc-releases/20260912-230705-main-645fe40",
+  "release_target": "/Users/rim/Sites/.ui-doc-releases/20260912-framework-version-policy-r2-88b926a",
+  "docroot": "/Users/rim/Sites/ui-doc.test",
+  "rollback_script": "/tmp/ui-doc-framework-version-policy-rollback.sh",
+  "rollback_tested": true,
+  "final_target": "/Users/rim/Sites/.ui-doc-releases/20260912-framework-version-policy-r2-88b926a",
+  "docara_compatibility_patch": "00032adc74fb490083b86fad89ab654bd56da0af",
+  "routes": [
+    "/ru/",
+    "/ru/guide/connection/versions-and-updates/",
+    "/ru/guide/introduction/quick-start/"
+  ]
+}

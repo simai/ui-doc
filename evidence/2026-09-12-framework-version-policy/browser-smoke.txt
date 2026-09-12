@@ -1,0 +1,175 @@
+### Browser `framework-version-policy-final` opened with pid 34196.
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/guide/connection/versions-and-updates/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/guide/connection/versions-and-updates/
+- Page Title: Версии и обновление — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-06-549Z.yml)
+### Ran Playwright code
+```js
+await page.setViewportSize({ width: 1440, height: 1000 });
+```
+### Result
+{
+  "h1Count": 1,
+  "hasPublicCore": true,
+  "hasCandidate": true,
+  "overflow": 0,
+  "arrowFound": true,
+  "arrowIsRight": true,
+  "arrowOrder": "0"
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const b=[...document.querySelectorAll(\'button\')].find(x=>x.getAttribute(\'aria-label\')?.startsWith(\'Свернуть: Подключение\')); const label=b?.previousElementSibling || b?.nextElementSibling; const br=b?.getBoundingClientRect(), lr=label?.getBoundingClientRect(); return {h1Count:document.querySelectorAll(\'h1\').length,hasPublicCore:document.body.innerText.includes(\'v5.6.4\'),hasCandidate:document.body.innerText.includes(\'v5.7.0\'),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,arrowFound:!!b,arrowIsRight:!!(br&&lr&&br.left>lr.left),arrowOrder:b?getComputedStyle(b).order:null}; }');
+```
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/guide/introduction/quick-start/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/guide/introduction/quick-start/
+- Page Title: Быстрый старт — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-09-485Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "hasPublicCore": true,
+  "hasLegacy": false,
+  "overflow": 0,
+  "codeHeaderHeight": 57,
+  "labelActionCenterDelta": 0
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const h=document.querySelector(\'.docara-code-header\'), label=h?.querySelector(\':scope > span\'), actions=h?.querySelector(\'[data-docara-code-actions]\'); const r=h?.getBoundingClientRect(), lr=label?.getBoundingClientRect(), ar=actions?.getBoundingClientRect(); return {h1Count:document.querySelectorAll(\'h1\').length,hasPublicCore:document.body.innerText.includes(\'v5.6.4\'),hasLegacy:document.body.innerText.includes(\'v5.4.0\'),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,codeHeaderHeight:r?.height,labelActionCenterDelta:lr&&ar?Math.abs((lr.top+lr.height/2)-(ar.top+ar.height/2)):null}; }');
+```
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/components/buttons/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/components/buttons/
+- Page Title: Кнопки — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-11-996Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "overflow": 0,
+  "codeHeaderHeight": 0,
+  "exampleHeaderHeight": 57,
+  "heightDelta": 57
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => { const code=document.querySelector(\'.docara-code-header\')?.getBoundingClientRect(), example=document.querySelector(\'.docara-example-preview__header\')?.getBoundingClientRect(); return {h1Count:document.querySelectorAll(\'h1\').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,codeHeaderHeight:code?.height,exampleHeaderHeight:example?.height,heightDelta:code&&example?Math.abs(code.height-example.height):null}; }');
+```
+### Ran Playwright code
+```js
+await page.setViewportSize({ width: 390, height: 844 });
+```
+MOBILE /ru/guide/connection/versions-and-updates/
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/guide/connection/versions-and-updates/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/guide/connection/versions-and-updates/
+- Page Title: Версии и обновление — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-15-150Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "overflow": 0
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({h1Count:document.querySelectorAll(\'h1\').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth})');
+```
+MOBILE /ru/guide/introduction/quick-start/
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/guide/introduction/quick-start/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/guide/introduction/quick-start/
+- Page Title: Быстрый старт — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-17-050Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "overflow": 0
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({h1Count:document.querySelectorAll(\'h1\').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth})');
+```
+MOBILE /ru/utilities/reference/width-ext/
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/utilities/reference/width-ext/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/utilities/reference/width-ext/
+- Page Title: Width Ext — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-19-032Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "overflow": 0
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({h1Count:document.querySelectorAll(\'h1\').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth})');
+```
+MOBILE /ru/components/buttons/
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/components/buttons/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/components/buttons/
+- Page Title: Кнопки — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-21-976Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "overflow": 0
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({h1Count:document.querySelectorAll(\'h1\').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth})');
+```
+MOBILE /ru/smart-components/reference/buttons/
+### Ran Playwright code
+```js
+await page.goto('https://ui-doc.test/ru/smart-components/reference/buttons/');
+```
+### Page
+- Page URL: https://ui-doc.test/ru/smart-components/reference/buttons/
+- Page Title: Buttons — SIMAI Framework
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-09-12T20-45-24-546Z.yml)
+### Result
+{
+  "h1Count": 1,
+  "overflow": 0
+}
+### Ran Playwright code
+```js
+await page.evaluate('() => ({h1Count:document.querySelectorAll(\'h1\').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth})');
+```
+### Result
+Total messages: 0 (Errors: 0, Warnings: 0)
+
+Browser 'framework-version-policy-final' closed
+

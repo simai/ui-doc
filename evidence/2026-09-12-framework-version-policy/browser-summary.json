@@ -1,0 +1,27 @@
+{
+  "schema": "ui-doc.browser_acceptance.v1",
+  "status": "pass",
+  "base_url": "https://ui-doc.test",
+  "viewports": [
+    {"width": 1440, "height": 1000},
+    {"width": 390, "height": 844}
+  ],
+  "routes": [
+    "/ru/guide/connection/versions-and-updates/",
+    "/ru/guide/introduction/quick-start/",
+    "/ru/utilities/reference/width-ext/",
+    "/ru/components/buttons/",
+    "/ru/smart-components/reference/buttons/"
+  ],
+  "assertions": {
+    "single_h1": true,
+    "horizontal_overflow_px": 0,
+    "menu_disclosure_arrow_on_right": true,
+    "menu_disclosure_order": 0,
+    "code_header_height_px": 57,
+    "example_header_height_px": 57,
+    "code_label_action_center_delta_px": 0,
+    "console_errors": 0,
+    "console_warnings": 0
+  }
+}
