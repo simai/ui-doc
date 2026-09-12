@@ -1,0 +1,83 @@
+{
+  "schema": "ui-doc.utility_browser_smoke.v1",
+  "status": "pass_with_source_note",
+  "build_root": "/Users/rim/Documents/GitHub/ui-doc/build_utilities_20260911_r4",
+  "server_url": "http://127.0.0.1:8147",
+  "browser": "Codex in-app Chromium browser",
+  "console": {
+    "warnings_and_errors": []
+  },
+  "themes": {
+    "light": {
+      "page_background": "rgb(255, 255, 255)",
+      "page_color": "rgb(26, 27, 31)",
+      "example_background": "rgb(255, 255, 255)",
+      "example_color": "rgb(26, 27, 31)",
+      "color_scheme": "light"
+    },
+    "dark": {
+      "page_background": "rgb(15, 17, 21)",
+      "page_color": "rgb(227, 226, 231)",
+      "example_background": "rgb(15, 17, 21)",
+      "example_color": "rgb(227, 226, 231)",
+      "color_scheme": "dark"
+    }
+  },
+  "responsive": {
+    "margin": {
+      "class": "m-inline-start-1 md:m-inline-start-3",
+      "mobile_viewport_width": 344,
+      "mobile_margin_inline_start": "12px",
+      "desktop_viewport_width": 1386,
+      "desktop_margin_inline_start": "24px"
+    },
+    "padding": {
+      "class": "p-1 md:p-4",
+      "mobile_viewport_width": 358,
+      "mobile_padding": "12px",
+      "desktop_viewport_width": 1400,
+      "desktop_padding": "32px"
+    },
+    "gap": {
+      "class": "gap-1 md:gap-4",
+      "mobile_viewport_width": 358,
+      "mobile_gap": "12px",
+      "desktop_viewport_width": 1400,
+      "desktop_gap": "32px"
+    },
+    "width": {
+      "class": "w-full md:w-1/2",
+      "mobile_viewport_width": 358,
+      "mobile_parent_ratio": 1,
+      "desktop_viewport_width": 1400,
+      "desktop_parent_ratio": 0.5
+    }
+  },
+  "text_wrap": {
+    "text-wrap": "wrap",
+    "text-nowrap": "nowrap",
+    "text-balance": "balance",
+    "text-pretty": "pretty"
+  },
+  "direction": {
+    "ltr_margin_inline_start": {
+      "margin_left": "24px",
+      "margin_right": "0px"
+    },
+    "nested_rtl_margin_inline_start": {
+      "margin_left": "24px",
+      "margin_right": "24px",
+      "result": "source_defect"
+    },
+    "ltr_padding_inline_start": {
+      "padding_left": "32px",
+      "padding_right": "20px"
+    },
+    "nested_rtl_padding_inline_start": {
+      "padding_left": "32px",
+      "padding_right": "32px",
+      "result": "source_defect"
+    },
+    "fault_report": "evidence/2026-09-11-utilities/source-fault-logical-direction.md"
+  }
+}

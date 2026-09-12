@@ -1,0 +1,130 @@
+{
+  "schema": "ui-doc.utility_executable_examples.v1",
+  "status": "pass",
+  "foundation": {
+    "core_revision": "d328491bc805439f200866f7e04c0e5e853a4998",
+    "registry_sha256": "2ddbcd7077c6fa2b2f1918726f16c9c213f3a6db5d717539244bcad01abd83b3",
+    "lock_pair_id": "sf-v5.7.0-d328491b-9e94abc6",
+    "registry_internal_compatibility_id": "ui-ad7f6bfaf355-smart-577bd99f8c6d"
+  },
+  "scope": {
+    "cases": 5,
+    "registry_families": 8,
+    "classes": 20,
+    "build_checked": true
+  },
+  "observations": [
+    {
+      "id": "margin",
+      "page": "content/ru/utilities/indents/margin.md",
+      "example": "examples/utilities/indents/margin/index.html",
+      "registry_families": [
+        "margin",
+        "margin-ext"
+      ],
+      "checked_classes": [
+        "m-3",
+        "-m-inline-start-2",
+        "md:m-inline-start-3",
+        "m-a2"
+      ],
+      "expected_loader_modules": [
+        "margin/default",
+        "margin/md",
+        "margin-ext/default"
+      ],
+      "built_loader_module_count": 60,
+      "status": "pass",
+      "blockers": []
+    },
+    {
+      "id": "padding",
+      "page": "content/ru/utilities/indents/padding.md",
+      "example": "examples/utilities/indents/padding/index.html",
+      "registry_families": [
+        "padding",
+        "padding-ext"
+      ],
+      "checked_classes": [
+        "p-4",
+        "p-inline-start-4",
+        "md:p-4",
+        "p-a2"
+      ],
+      "expected_loader_modules": [
+        "padding/default",
+        "padding/md",
+        "padding-ext/default"
+      ],
+      "built_loader_module_count": 60,
+      "status": "pass",
+      "blockers": []
+    },
+    {
+      "id": "gap",
+      "page": "content/ru/utilities/grid-and-flexbox-utilities/gap.md",
+      "example": "examples/utilities/grid-and-flexbox-utilities/gap/index.html",
+      "registry_families": [
+        "gap"
+      ],
+      "checked_classes": [
+        "gap-1",
+        "col-gap-4",
+        "row-gap-2",
+        "md:gap-4"
+      ],
+      "expected_loader_modules": [
+        "gap/default",
+        "gap/md"
+      ],
+      "built_loader_module_count": 60,
+      "status": "pass",
+      "blockers": []
+    },
+    {
+      "id": "width",
+      "page": "content/ru/utilities/sizes/width.md",
+      "example": "examples/utilities/sizes/width/index.html",
+      "registry_families": [
+        "width",
+        "width-ext"
+      ],
+      "checked_classes": [
+        "w-full",
+        "md:w-1/2",
+        "w-25",
+        "w-e4"
+      ],
+      "expected_loader_modules": [
+        "width/default",
+        "width/md",
+        "width-ext/default"
+      ],
+      "built_loader_module_count": 60,
+      "status": "pass",
+      "blockers": []
+    },
+    {
+      "id": "text-wrap",
+      "page": "content/ru/utilities/typography/text-wrap.md",
+      "example": "examples/utilities/typography/text-wrap/index.html",
+      "registry_families": [
+        "text-wrap"
+      ],
+      "checked_classes": [
+        "text-wrap",
+        "text-nowrap",
+        "text-balance",
+        "text-pretty"
+      ],
+      "expected_loader_modules": [
+        "text-wrap/default"
+      ],
+      "built_loader_module_count": 58,
+      "status": "pass",
+      "blockers": []
+    }
+  ],
+  "blocker_count": 0,
+  "blockers": []
+}

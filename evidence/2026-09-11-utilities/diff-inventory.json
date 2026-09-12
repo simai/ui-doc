@@ -1,0 +1,26 @@
+{
+  "schema": "ui-doc.worktree_diff_inventory.v1",
+  "repository": "/Users/rim/Documents/GitHub/ui-doc",
+  "branch": "codex/utilities-executable-examples",
+  "baseline": "f264f20974c59fde31277e2f206eb826aaec2bcb",
+  "remote_main_observed": "1beff651dfa24595b3afeb9ab0b284b73a42b12d",
+  "commit_created": false,
+  "files": [
+    {"path": "README.md", "sha256": "d2b5a80f7d20c6e89ecad5ae4b6ebcd310426568cd1e11ff066ae87c2be1bfd7"},
+    {"path": "content/ru/utilities/grid-and-flexbox-utilities/gap.md", "sha256": "1c43afe426208a74f8f91d1a19efa65de4787d523599a590fcc5cf60ed542a56"},
+    {"path": "content/ru/utilities/indents/margin.md", "sha256": "f9051877cf7e4b42919b77ac3976f5d3933a0d0dbaeb97809429979be38a6e45"},
+    {"path": "content/ru/utilities/indents/padding.md", "sha256": "27c20a665f5bd3870153e371551cfa1b6d18bd7e47ffb3680459301de415cb98"},
+    {"path": "content/ru/utilities/sizes/width.md", "sha256": "187512a195bd96b232c572eb81b0702490fd972a9c12fc6645c10a9220178b06"},
+    {"path": "content/ru/utilities/typography/text-wrap.md", "sha256": "e9ab4762dff8ac08c80b9368e8b1799e4d2709bf9844de3b765874da26e0aca8"},
+    {"path": "examples/utilities/grid-and-flexbox-utilities/gap/index.html", "sha256": "d7a4fb1d836c32212cc41bab6e54320bad40435282c35959a8f7b3b761a80d57"},
+    {"path": "examples/utilities/indents/margin/index.html", "sha256": "5ec63ae4bb9544163f1c77d830dad17e95bd290399117e754dd8919b7f72b83d"},
+    {"path": "examples/utilities/indents/padding/index.html", "sha256": "1b735f134261e5863c999d3b34f417d704b82146c24e1f93de3272a1ed6becc3"},
+    {"path": "examples/utilities/sizes/width/index.html", "sha256": "a4f2e4f5d9479efb8d4e8779ff317f8d881345fedb15a57d7a29c18b458a4384"},
+    {"path": "docs/developer/utility-page-reference.md", "sha256": "b80e78f1fceaeaa93391828642ae6a7ba726620ff5525c09fe545dfd1925c3ef"},
+    {"path": "scripts/audit-utility-executable-examples.mjs", "sha256": "eb32014fc310ab55234877f093b4c93c6bee0868e7bb43c888058b21a7118fd6"},
+    {"path": "evidence/2026-09-11-utilities/browser-smoke.json", "sha256": "74e78533d0d0ae736d7f078afaabd0fc7732cd02689a4ab75de76037741ddb5e"},
+    {"path": "evidence/2026-09-11-utilities/executable-examples.json", "sha256": "39d9b185f52c99688151233fd2de295a330229436bf3ec5d4bf0371755f66c36"},
+    {"path": "evidence/2026-09-11-utilities/source-fault-logical-direction.md", "sha256": "1e6059ef8226416ecec13353b3a341537d06645a56d743e23d7c71f4bbb9f37b"},
+    {"path": "evidence/2026-09-11-utilities/verification-summary.md", "sha256": "f3677b0dc8f8d1ebd9d310c7c8c78f177d49b8672eb0a936333db087983b2ed9"}
+  ]
+}

@@ -10,6 +10,8 @@
 
             <div class="sf-card bg-secondary color-on-secondary p-2 m-3" aria-label="m-3">m-3</div>
 
+            <div class="sf-card bg-tertiary color-on-tertiary p-2 m-a2" aria-label="m-a2">m-a2</div>
+
         </div>
 
     </div>
@@ -24,11 +26,11 @@
 
                 <div class="sf-card bg-primary color-on-primary p-2 m-0" aria-label="m-0">m-0</div>
 
-                <div class="sf-card bg-tertiary color-on-tertiary p-2 m-inline-start-3"
-                     aria-label="m-inline-start-3">m-inline-start-3
+                <div class="sf-card bg-tertiary color-on-tertiary p-2 m-inline-start-1 md:m-inline-start-3"
+                     aria-label="m-inline-start-1 md:m-inline-start-3">m-inline-start-1 md:m-inline-start-3
                 </div>
 
-                <div class="sf-card bg-success color-on-success p-2 -m-inline-start-2" aria-label="-m-inline-end-2">
+                <div class="sf-card bg-success color-on-success p-2 -m-inline-start-2" aria-label="-m-inline-start-2">
                     -m-inline-start-2
                 </div>
 
@@ -103,6 +105,23 @@
 
     </div>
 
-</div>
+    <div class="flex flex-col gap-1">
+
+        <div class="weight-6 m-b-2 text-center">logical direction</div>
+
+        <div class="demo m-0 bg-surface border border-outline-variant radius-2 p-3 grid gap-1">
+            <div dir="ltr" class="border border-outline-variant">
+                <div data-logical-direction="ltr" class="sf-card bg-primary color-on-primary p-2 m-inline-start-3">
+                    LTR: inline-start
+                </div>
+            </div>
+            <div dir="rtl" class="border border-outline-variant">
+                <div data-logical-direction="rtl" class="sf-card bg-secondary color-on-secondary p-2 m-inline-start-3">
+                    RTL: inline-start
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </div>

@@ -25,6 +25,9 @@ tags: [width, sm, md, lg, xl]
 | `w-auto` | `width: auto;` |
 | `w-full` | `width: 100%;` |
 | `w-screen` | `width: 100vw;` |
+| `w-screen-small` | `width: var(--sf-viewport-width-small);` |
+| `w-screen-large` | `width: var(--sf-viewport-width-large);` |
+| `w-screen-dynamic` | `width: var(--sf-viewport-width-dynamic);` |
 | `w-min` | `width: min-content;` |
 | `w-max` | `width: max-content;` |
 | `w-fit` | `width: fit-content;` |
@@ -57,7 +60,7 @@ tags: [width, sm, md, lg, xl]
 | `w-px` | `width: 1px;` |
 | `w-0` | `width: 0;` |
 | `w-1 … w-99` | `width: 1% … 99% (шаг 1%);` |
-| `w-a0 ... w-i9` | width: var(--sf-\[a-i\]\[0-9\]); (фиксированные размеры фреймворка) |
+| `w-a0 ... w-i9` | `width: var(--sf-[a-i][0-9]);` — фиксированная шкала размеров |
 
 ## Синтаксис
 
@@ -77,6 +80,8 @@ tags: [width, sm, md, lg, xl]
     - `w-auto` — автоматическая ширина
     - `w-full` — ширина 100% родительского элемента
     - `w-screen` — ширина окна просмотра (viewport)
+    - `w-screen-small`, `w-screen-large`, `w-screen-dynamic` — безопасные
+      варианты ширины viewport для мобильных браузеров
     - `w-min` — ширина по минимально необходимой для контента
     - `w-max` — ширина по длине всего контента без учёта ограничений родителя
     - `w-fit` — вычисляемая ширина fit-content
@@ -150,3 +155,11 @@ tags: [width, sm, md, lg, xl]
 ```
 
 В этом примере ширина будет 50% (`w-1/2`) только при размерах экрана `md` и больше.
+
+## Направление, варианты и ограничения
+
+- Ширина не зависит от LTR/RTL.
+- Семейства `width` и `width-ext` выпускаются для `sm`, `md`, `lg`, `xl`.
+  Варианты состояния и отрицательные значения не поддерживаются.
+- Публичных псевдонимов у классов нет. Процентная шкала ограничена значениями
+  `w-1` … `w-99`; `w-full` используйте для 100%.
