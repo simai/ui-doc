@@ -129,7 +129,18 @@ $adaptivePage = $read('content/ru/fundamentals/adaptive-sizing-system.md');
 $valuesPage = $read('content/ru/fundamentals/values-and-scales.md');
 $modifiersPage = $read('content/ru/fundamentals/modifiers.md');
 $aiPage = $read('content/ru/start/ai.md');
+$visionPage = $read('content/ru/start/vision.md');
 $fundamentalsIndex = $read('content/ru/fundamentals/index.md');
+
+$check(str_contains($architecture, 'title: "Архитектура"'), 'architecture_title_mismatch');
+$check(str_contains($architecture, '# Архитектура'), 'architecture_h1_mismatch');
+$check(
+    str_contains(
+        $architecture,
+        'description: "Уровни SIMAI Framework: от токенов и утилит до Smart-компонентов и блоков."',
+    ),
+    'architecture_description_mismatch',
+);
 
 foreach ([
     'Токены и Core',
@@ -138,15 +149,26 @@ foreach ([
     '→ Smart-компоненты',
     '→ комплексные Smart-компоненты',
     '→ блоки',
-    '→ секции и Layout',
-    '→ страницы',
-    '→ backend и Larena',
 ] as $snippet) {
     $check(str_contains($architecture, $snippet), 'architecture_path_missing', ['snippet' => $snippet]);
 }
-foreach (['SIMAI Framework', 'Docara', 'Larena', 'Bitrix', 'AI First'] as $product) {
-    $check(str_contains($architecture, $product), 'product_boundary_missing', ['product' => $product]);
+foreach (['Docara', 'Larena', 'Bitrix', 'AI First', 'Секции и Layout', 'Backend →'] as $externalLevel) {
+    $check(! str_contains($architecture, $externalLevel), 'external_level_leaked_into_architecture', [
+        'value' => $externalLevel,
+    ]);
 }
+$check(str_contains($architecture, '## Где заканчивается Framework'), 'framework_boundary_heading_missing');
+$check(
+    str_contains($architecture, 'SIMAI Framework отвечает за фронтенд-представление и поведение блока'),
+    'framework_responsibility_missing',
+);
+$check(
+    str_contains($architecture, 'принадлежат приложению, CMS или другому'),
+    'consumer_responsibility_missing',
+);
+$check(! str_contains($visionPage, 'Секции и Layout'), 'vision_external_levels_not_removed');
+$check(! str_contains($visionPage, 'Backend или Larena'), 'vision_backend_chain_not_removed');
+$check(! str_contains($aiPage, 'backend-адаптеру или Larena'), 'ai_backend_chain_not_removed');
 
 $check(str_contains($coreCss, '--sf-px: 1px'), 'hairline_token_missing_from_core');
 $check(str_contains($valuesPage, '--sf-px'), 'hairline_rule_missing_from_docs');
@@ -201,7 +223,7 @@ $report = [
         'adaptive_contract_version' => $adaptive['meta']['version'] ?? null,
     ],
     'verified' => [
-        'architecture_levels' => 9,
+        'architecture_levels' => 6,
         'current_control_roles' => $actualRoles,
         'current_control_heights_px' => $computedHeights,
         'platform_scale_roles_documented' => 9,
