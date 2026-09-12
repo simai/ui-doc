@@ -1,0 +1,17 @@
+{
+  "schema": "ui-doc.tester_verdict.v1",
+  "status": "pass",
+  "review_scope": "Russian architecture page plain-language delta and nearest Docara UI regression",
+  "evidence": {
+    "source_contract_audit": "Foundation audit passes with six levels and zero blockers.",
+    "static_build": "918 pages built; 1806 HTML pages and 376878 local references checked; 0 broken.",
+    "browser_smoke": "browser-smoke.json",
+    "example_audit": "918 Markdown pages; 502 shared examples; 0 blockers; 2 pre-existing advisories outside the delta.",
+    "protected_sources": "composer.lock, simai-framework.lock.json and the Docara compatibility patch are unchanged."
+  },
+  "blocking_findings": [],
+  "known_out_of_scope_debt": [
+    "Translation and documentation tracking remain in report mode and contain pre-existing work queues outside this Russian-page batch.",
+    "Chrome headless emits host display and updater diagnostics, but no page JavaScript exception was observed; interactive verification also passed in the in-app browser."
+  ]
+}

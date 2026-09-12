@@ -1,0 +1,32 @@
+{
+  "schema": "ui-doc.browser_smoke.v1",
+  "status": "pass",
+  "url": "http://127.0.0.1:8997/ru/fundamentals/architecture/",
+  "checks": {
+    "desktop": {
+      "viewport_width": 1440,
+      "required_headings_present": true,
+      "forbidden_internal_terms": [],
+      "architecture_table_rows": 7,
+      "menu_order": ["label", "disclosure"],
+      "menu_trailing": true,
+      "code_header_height_px": 57,
+      "horizontal_overflow": false
+    },
+    "mobile": {
+      "viewport_width": 390,
+      "required_headings_present": true,
+      "forbidden_internal_terms": [],
+      "architecture_table_rows": 7,
+      "menu_order": ["label", "disclosure"],
+      "menu_trailing": true,
+      "horizontal_overflow": false
+    },
+    "keyboard": {
+      "control": "Развернуть: Система размеров",
+      "input": "Enter",
+      "expanded_after": true,
+      "icon_after": "keyboard_arrow_down"
+    }
+  }
+}

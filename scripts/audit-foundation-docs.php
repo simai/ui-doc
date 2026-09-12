@@ -125,6 +125,7 @@ $check($computedHeights === $expectedHeights, 'control_height_values_mismatch', 
 ]);
 
 $architecture = $read('content/ru/fundamentals/architecture.md');
+$architectureText = preg_replace('/\s+/u', ' ', $architecture) ?? $architecture;
 $adaptivePage = $read('content/ru/fundamentals/adaptive-sizing-system.md');
 $valuesPage = $read('content/ru/fundamentals/values-and-scales.md');
 $modifiersPage = $read('content/ru/fundamentals/modifiers.md');
@@ -147,7 +148,7 @@ foreach ([
     '→ утилиты',
     '→ компоненты',
     '→ Smart-компоненты',
-    '→ комплексные Smart-компоненты',
+    '→ сложные Smart-компоненты',
     '→ блоки',
 ] as $snippet) {
     $check(str_contains($architecture, $snippet), 'architecture_path_missing', ['snippet' => $snippet]);
@@ -157,13 +158,16 @@ foreach (['Docara', 'Larena', 'Bitrix', 'AI First', 'Секции и Layout', 'B
         'value' => $externalLevel,
     ]);
 }
-$check(str_contains($architecture, '## Где заканчивается Framework'), 'framework_boundary_heading_missing');
 $check(
-    str_contains($architecture, 'SIMAI Framework отвечает за фронтенд-представление и поведение блока'),
+    str_contains($architecture, '## Где заканчивается SIMAI Framework'),
+    'framework_boundary_heading_missing',
+);
+$check(
+    str_contains($architectureText, 'SIMAI Framework отвечает за внешний вид и поведение интерфейса'),
     'framework_responsibility_missing',
 );
 $check(
-    str_contains($architecture, 'принадлежат приложению, CMS или другому'),
+    str_contains($architectureText, 'Приложение отвечает за страницы, данные, права доступа и бизнес-операции'),
     'consumer_responsibility_missing',
 );
 $check(! str_contains($visionPage, 'Секции и Layout'), 'vision_external_levels_not_removed');
@@ -194,7 +198,23 @@ $check(str_contains($modifiersPage, 'Физические'), 'physical_direction
 $check(str_contains($modifiersPage, 'канонические модули `gap/*`'), 'canonical_name_rule_missing');
 $check(str_contains($smartBase, 'class SfBaseElement extends HTMLElement'), 'smart_base_element_missing');
 $check(str_contains($smartBase, 'customElements.define'), 'smart_custom_element_registration_missing');
-$check(str_contains($architecture, 'не новый аналог React или'), 'smart_runtime_boundary_missing');
+$check(
+    str_contains($architecture, '## Как работают Smart-компоненты'),
+    'smart_component_heading_missing',
+);
+$check(
+    str_contains($architectureText, 'Smart-компонент — готовый интерактивный элемент'),
+    'smart_component_explanation_missing',
+);
+$check(
+    str_contains($architectureText, 'Loader — встроенный загрузчик SIMAI Framework'),
+    'loader_explanation_missing',
+);
+foreach (['smart-base.js', 'Custom Elements', 'React', 'Vue', 'manifest', 'runtime', 'registry'] as $internalTerm) {
+    $check(! str_contains($architecture, $internalTerm), 'internal_term_leaked_into_architecture', [
+        'value' => $internalTerm,
+    ]);
+}
 $check(str_contains($aiPage, 'Кандидат ещё не является'), 'ai_first_candidate_boundary_missing');
 $check(str_contains($fundamentalsIndex, '/ru/fundamentals/architecture/'), 'architecture_entrypoint_missing');
 
