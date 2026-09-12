@@ -5,6 +5,8 @@ SIMAI Framework. It is a content-only Docara 2 project: authored pages live in
 `content/<locale>/`, site configuration lives in `docara.json`, and local
 assets live in `assets/`.
 
+Developer reference: [Эталон страницы компонента](docs/developer/component-page-reference.md).
+
 ## Local checks
 
 ```bash

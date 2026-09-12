@@ -1,0 +1,54 @@
+{
+  "schema": "ui-doc.component_browser_smoke.v1",
+  "status": "pass",
+  "runner": "Playwright CLI",
+  "served_build": "build_components_reference_20260912",
+  "candidate_overlay": {
+    "core": "4ded118dcadeaea990ef4fca7d060e4b732ef8c8",
+    "smart": "7cb994aaba9af69105a8f8b1eb53ae57ee713f1b",
+    "method": "Exact Core JS and selected component directories plus exact Smart Modal were copied over the isolated generated build; cmp returned 0 for checkbox and Smart Modal runtime files."
+  },
+  "pages": [
+    {
+      "path": "/ru/components/buttons/",
+      "h1": "Кнопки",
+      "examples": 7,
+      "horizontal_overflow": false
+    },
+    {
+      "path": "/ru/components/inputs/",
+      "h1": "Текстовые поля",
+      "examples": 6,
+      "horizontal_overflow": false
+    },
+    {
+      "path": "/ru/components/checkbox/",
+      "h1": "Флажок",
+      "examples": 5,
+      "horizontal_overflow": false,
+      "mixed_state": {
+        "checked": false,
+        "indeterminate": true,
+        "disabled": false,
+        "public_api": "function"
+      }
+    },
+    {
+      "path": "/ru/components/modal/",
+      "h1": "Модальное окно",
+      "examples": 8,
+      "horizontal_overflow": false,
+      "dialog_opened": true,
+      "escape_closed": true,
+      "focus_returned_to_trigger": true
+    }
+  ],
+  "responsive_theme_direction": {
+    "viewport": [390, 844],
+    "direction": "rtl",
+    "theme_class": "theme-dark",
+    "computed_surface": "rgb(15, 17, 21)",
+    "horizontal_overflow": false
+  },
+  "console_errors": 0
+}

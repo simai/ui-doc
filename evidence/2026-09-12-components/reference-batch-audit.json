@@ -1,0 +1,86 @@
+{
+  "schema": "ui-doc.component_reference_batch.v1",
+  "status": "pass_with_source_defects",
+  "candidate": {
+    "source": "89bc310aae06480c797aee9fbd067b5f64eff6c0",
+    "builder": "0d1038fb6037fedf02d641468cf140dd2d35246f",
+    "core": "4ded118dcadeaea990ef4fca7d060e4b732ef8c8",
+    "smart": "7cb994aaba9af69105a8f8b1eb53ae57ee713f1b"
+  },
+  "scope": {
+    "selected_components": 4,
+    "examples": 26,
+    "registry_components": 63,
+    "remaining_components_classified": 59
+  },
+  "observations": [
+    {
+      "component": "buttons",
+      "readiness": "ready",
+      "examples": 7,
+      "rule": "/class\\s*=\\s*[\"'][^\"']*\\bsf-button\\b/i",
+      "asset_root": "distr/component/buttons",
+      "status": "verified",
+      "blockers": []
+    },
+    {
+      "component": "inputs",
+      "readiness": "ready",
+      "examples": 6,
+      "rule": "/class\\s*=\\s*[\"'][^\"']*\\bsf-input\\b/i",
+      "asset_root": "distr/component/inputs",
+      "status": "verified",
+      "blockers": []
+    },
+    {
+      "component": "checkbox",
+      "readiness": "ready",
+      "examples": 5,
+      "rule": "/sf-checkbox/",
+      "asset_root": "distr/component/checkbox",
+      "status": "verified",
+      "blockers": []
+    },
+    {
+      "component": "modal",
+      "readiness": "discoverable",
+      "examples": 8,
+      "rule": "/(data-sf-modal-(open|close)|sf-modal)/",
+      "asset_root": "distr/component/modal",
+      "status": "source_defect",
+      "blockers": []
+    }
+  ],
+  "source_defects": [
+    {
+      "code": "registry_candidate_lineage_stale",
+      "owner": "framework_registry_generation",
+      "mismatches": [
+        {
+          "name": "builder",
+          "expected": "0d1038fb6037fedf02d641468cf140dd2d35246f",
+          "actual": "e302a1c8816ecd5668c31f69f81dc7f378ae87fc"
+        },
+        {
+          "name": "core",
+          "expected": "4ded118dcadeaea990ef4fca7d060e4b732ef8c8",
+          "actual": "ad7f6bfaf35560f8b3977dab71c0756f4f55474f"
+        },
+        {
+          "name": "smart",
+          "expected": "7cb994aaba9af69105a8f8b1eb53ae57ee713f1b",
+          "actual": "577bd99f8c6da41c5df08eb55957db8ef4df1005"
+        }
+      ]
+    },
+    {
+      "code": "modal_logical_position_normalized_to_center",
+      "owner": "simai/ui-loader",
+      "ordinary_runtime_allows_logical": false,
+      "smart_manifest_declares_logical": true,
+      "smart_runtime_allows_logical": false
+    }
+  ],
+  "blocker_count": 0,
+  "blockers": []
+}
