@@ -2,11 +2,28 @@
   "schema": "ui-doc.component_browser_smoke.v1",
   "status": "pass",
   "runner": "Playwright CLI",
-  "served_build": "build_components_reference_20260912",
+  "base_static_build": {
+    "directory": "build_components_reference_base_20260912",
+    "lock_consistent": true,
+    "build_pages": 917,
+    "static_verification": {
+      "html_pages": 1804,
+      "local_references_checked": 376747,
+      "broken": 0,
+      "exit_code": 0
+    }
+  },
+  "browser_overlay_build": {
+    "directory": "build_components_reference_overlay_20260912_correction",
+    "copied_from": "build_components_reference_base_20260912",
+    "lock_consistent": false,
+    "static_verification": "not_run_and_not_claimed",
+    "purpose": "Browser smoke against the exact candidate only."
+  },
   "candidate_overlay": {
     "core": "4ded118dcadeaea990ef4fca7d060e4b732ef8c8",
     "smart": "7cb994aaba9af69105a8f8b1eb53ae57ee713f1b",
-    "method": "Exact Core JS and selected component directories plus exact Smart Modal were copied over the isolated generated build; cmp returned 0 for checkbox and Smart Modal runtime files."
+    "method": "Exact Core JS and selected component directories plus exact Smart Modal were copied only into the separate browser overlay; cmp returned 0 for checkbox and Smart Modal runtime files."
   },
   "pages": [
     {
