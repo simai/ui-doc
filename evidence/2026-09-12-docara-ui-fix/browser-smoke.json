@@ -1,0 +1,54 @@
+{
+  "schema": "ui-doc.browser_smoke.v1",
+  "status": "pass",
+  "candidate": "00032adc74fb490083b86fad89ab654bd56da0af",
+  "base_url": "http://127.0.0.1:8998",
+  "checks": {
+    "navigation_desktop_ltr": {
+      "viewport_width": 1440,
+      "dom_order": ["label", "disclosure"],
+      "label_right": 271,
+      "disclosure_left": 279,
+      "trailing": true,
+      "overflow": false
+    },
+    "navigation_mobile_rtl": {
+      "viewport_width": 390,
+      "dom_order": ["label", "disclosure"],
+      "label_left": 123,
+      "disclosure_right": 115,
+      "trailing": true,
+      "overflow": false
+    },
+    "navigation_keyboard": {
+      "control": "Развернуть: Система размеров",
+      "input": "Enter",
+      "aria_expanded_before": "false",
+      "aria_expanded_after": "true",
+      "icon_after": "keyboard_arrow_down"
+    },
+    "code_header": {
+      "desktop_height_px": 57,
+      "mobile_height_px": 53,
+      "desktop_center_delta_px": 0.5,
+      "mobile_center_delta_px": 0.5,
+      "overflow": false
+    },
+    "example_header": {
+      "desktop_height_px": 57,
+      "mobile_height_px": 53,
+      "desktop_center_delta_px": 0.5,
+      "mobile_center_delta_px": 0.5,
+      "overflow": false
+    },
+    "buttons_reference": {
+      "url": "/ru/components/buttons/",
+      "h1": "Кнопки",
+      "examples": 7,
+      "example_headers": 7,
+      "code_headers": 7,
+      "broken_images": 0,
+      "overflow": false
+    }
+  }
+}

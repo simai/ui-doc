@@ -14,6 +14,12 @@
         "php": "^8.2",
         "simai/docara": "^2.6"
     },
+    "scripts": {
+        "docara:compatibility:apply": "@php scripts/apply-docara-compatibility-patch.php --apply",
+        "docara:compatibility:check": "@php scripts/apply-docara-compatibility-patch.php --check",
+        "post-install-cmd": "@docara:compatibility:apply",
+        "post-update-cmd": "@docara:compatibility:apply"
+    },
     "config": {
         "allow-plugins": false,
         "optimize-autoloader": true,

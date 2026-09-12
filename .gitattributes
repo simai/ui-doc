@@ -1,2 +1,4 @@
 # Two trailing spaces are valid Markdown hard-break syntax.
 *.md whitespace=-trailing-space
+# Compatibility patches preserve upstream bytes, including intentional blanks.
+patches/docara/*.patch whitespace=-trailing-space

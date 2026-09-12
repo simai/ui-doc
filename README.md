@@ -14,6 +14,7 @@ Developer references:
 
 ```bash
 composer install
+composer docara:compatibility:check
 php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
 php scripts/migrate-legacy-content.php content redirects.json
 php -d memory_limit=512M vendor/bin/docara build production
@@ -25,6 +26,11 @@ node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core 
 The migration command is deterministic and must report zero changed Markdown
 files on committed content. It remains in the repository so historical source
 material can be normalized through the same documented path.
+
+Composer keeps the published Docara `v2.9.0` revision in `composer.lock` and
+then applies the project-owned compatibility patch registered in `composer.json`.
+The check command verifies the exact patched file hashes and fails closed if the
+locked package or vendor sources drift.
 
 The utility example audit must receive the absolute path to the exact Core
 archive pinned by `simai-framework.lock.json`; a moving branch or an arbitrary

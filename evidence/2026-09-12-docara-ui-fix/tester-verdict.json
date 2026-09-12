@@ -1,0 +1,19 @@
+{
+  "schema": "ui-doc.tester_verdict.v1",
+  "status": "pass",
+  "scope": "Docara navigation disclosure and code/example header compatibility patch",
+  "blockers": [],
+  "advisories": [
+    "Docara patch can be removed after the accepted candidate is published and composer.lock is intentionally updated."
+  ],
+  "acceptance": {
+    "portable_install": true,
+    "locked_dependency_preserved": true,
+    "framework_lock_preserved": true,
+    "static_build_valid": true,
+    "desktop_ltr_valid": true,
+    "mobile_rtl_valid": true,
+    "keyboard_toggle_valid": true,
+    "buttons_reference_valid": true
+  }
+}
