@@ -43,7 +43,7 @@
       "source": {
         "archive_sha256": "5a1a70b5931723be715ac828a477547f123d07bdbe15b768471b1b3865be5d4d",
         "commit": "89026b5c44fba10b51762fb5b6201163b2e6dcb2",
-        "owner": "simai/ui-loader",
+        "owner": "simai/ui-source",
         "tree": "476bdc280c00f1cf5024252f27dbbd0f3f5b7115"
       }
     },

@@ -264,7 +264,7 @@ if (
 ) {
   sourceDefects.push({
     code: 'modal_logical_position_normalized_to_center',
-    owner: 'simai/ui-loader',
+    owner: 'simai/ui-source',
     ordinary_runtime_allows_logical: ordinaryAllowsLogical,
     smart_manifest_declares_logical: true,
     smart_runtime_allows_logical: smartGetterAllowsLogical,
