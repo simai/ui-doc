@@ -1,6 +1,6 @@
 ---
 title: "Radio"
-description: "API и runtime-контракт Smart-компонента radio в SIMAI Framework 5.4.0."
+description: "Атрибуты, события и примеры Smart-компонента radio."
 ---
 
 # Radio

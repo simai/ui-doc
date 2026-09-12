@@ -1,6 +1,6 @@
 ---
 title: "Skeleton"
-description: "API и runtime-контракт Smart-компонента skeleton в SIMAI Framework 5.4.0."
+description: "Атрибуты, события и примеры Smart-компонента skeleton."
 ---
 
 # Skeleton

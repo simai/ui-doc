@@ -1,6 +1,6 @@
 ---
 title: "Каталог Smart Components"
-description: "Состав, готовность и Loader-статусы Smart Components SIMAI Framework 5.4.0."
+description: "Состав и готовность Smart Components SIMAI Framework."
 ---
 
 # Каталог Smart Components

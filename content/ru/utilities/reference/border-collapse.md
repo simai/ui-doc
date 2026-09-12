@@ -1,6 +1,6 @@
 ---
 title: "Border Collapse"
-description: "Точный Loader- и CSS-контракт утилиты border-collapse в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты border-collapse."
 ---
 
 # Border Collapse

@@ -1,6 +1,6 @@
 ---
 title: "Ring Color"
-description: "Точный Loader- и CSS-контракт утилиты ring-color в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты ring-color."
 ---
 
 # Ring Color

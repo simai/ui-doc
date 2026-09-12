@@ -1,11 +1,11 @@
 ---
 title: "Smart Components SIMAI Framework"
-description: "Документация 50 Smart Components SIMAI Framework 5.4.0."
+description: "Назначение и состав Smart Components SIMAI Framework."
 ---
 
 # Smart Components
 
-Реестр `5.4.0` содержит **50 Smart Components**: 41 зарегистрирован в Loader,
+В закреплённой поставке описаны **50 Smart Components**: 41 зарегистрирован в Loader,
 ещё 9 экспериментальных записей честно отмечены как заблокированные. Для всех
 50 сформированы страницы с тегами, зависимостями, атрибутами, свойствами,
 методами, событиями и исходными путями.

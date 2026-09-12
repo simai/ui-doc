@@ -1,0 +1,55 @@
+{
+    "schema": "ui-doc.foundation_documentation_audit.v2",
+    "status": "pass",
+    "candidate": {
+        "core": "e2e5d0fec53dbd40d298299c8c3be0f038c3deb5",
+        "smart": "839ca74ae47e50b69ddde46b8995c48031303bae"
+    },
+    "verified": {
+        "architecture_levels": 6,
+        "current_control_roles": [
+            "1/3",
+            "1/2",
+            "1",
+            "2",
+            "3"
+        ],
+        "current_control_heights_px": {
+            "1/3": {
+                "mobile": 24,
+                "desktop": 28
+            },
+            "1/2": {
+                "mobile": 28,
+                "desktop": 32
+            },
+            "1": {
+                "mobile": 36,
+                "desktop": 40
+            },
+            "2": {
+                "mobile": 44,
+                "desktop": 48
+            },
+            "3": {
+                "mobile": 52,
+                "desktop": 56
+            }
+        },
+        "working_unit": "rem",
+        "hairline_token": "--sf-px",
+        "loader_alias": {
+            "column-gap/default": "gap/default"
+        },
+        "registry_counts": {
+            "component": 63,
+            "recipe": 1,
+            "smart-component": 43,
+            "total": 335,
+            "utility": 228
+        },
+        "guide_root": "/ru/guide/"
+    },
+    "blocker_count": 0,
+    "blockers": []
+}

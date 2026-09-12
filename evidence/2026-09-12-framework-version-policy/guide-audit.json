@@ -1,0 +1,12 @@
+{
+    "schema": "ui-doc.guide_information_architecture_audit.v1",
+    "status": "pass",
+    "verified": {
+        "groups": 5,
+        "pages": 26,
+        "required_redirects": 17,
+        "header_items": 4
+    },
+    "blocker_count": 0,
+    "blockers": []
+}

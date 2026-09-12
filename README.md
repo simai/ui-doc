@@ -17,11 +17,13 @@ composer install
 composer docara:compatibility:check
 php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
 php scripts/migrate-legacy-content.php content redirects.json
+composer docs:versions:check
+php scripts/audit-framework-documentation-versions.php --check-remote
 php scripts/audit-guide-information-architecture.php
 php scripts/audit-guide-redirects.php
 php scripts/audit-foundation-docs.php /absolute/path/to/ui
-php -d memory_limit=512M vendor/bin/docara build production
-php -d memory_limit=512M vendor/bin/docara verify-static build_production
+php -d memory_limit=2G vendor/bin/docara build production
+php -d memory_limit=2G vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \
   --build-root="$(pwd)/build_production"
 ```
@@ -29,6 +31,14 @@ node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core 
 The migration command is deterministic and must report zero changed Markdown
 files on committed content. It remains in the repository so historical source
 material can be normalized through the same documented path.
+
+`config/framework-documentation-versions.json` is the only hand-maintained
+source for the public Core tag used by installation examples. Run
+`composer docs:versions:sync` after changing it. The candidate pair shown on
+the versions page comes directly from `simai-framework.lock.json`; the audit
+prevents a candidate tag from entering public CDN examples. Use
+`--check-remote` when network access is available to verify the configured tag
+object and commit against GitHub.
 
 Composer keeps the exact published Docara revision pinned in `composer.lock`
 and then applies the project-owned compatibility patch registered in `composer.json`.

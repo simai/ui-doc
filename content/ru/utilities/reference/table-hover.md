@@ -1,6 +1,6 @@
 ---
 title: "Table Hover"
-description: "Точный Loader- и CSS-контракт утилиты table-hover в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты table-hover."
 ---
 
 # Table Hover

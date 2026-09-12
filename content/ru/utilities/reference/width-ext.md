@@ -1,6 +1,6 @@
 ---
 title: "Width Ext"
-description: "Точный Loader- и CSS-контракт утилиты width-ext в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты width-ext."
 ---
 
 # Width Ext

@@ -10,7 +10,7 @@ description: "Первая рабочая страница на SIMAI Framework 
 
 ## Когда применять
 
-Используйте этот способ для первого знакомства и быстрой проверки версии `v5.4.0` без сборщика и серверной части проекта.
+Используйте этот способ для первого знакомства и быстрой проверки версии `v5.6.4` без сборщика и серверной части проекта.
 
 Вам понадобятся:
 
@@ -33,7 +33,7 @@ description: "Первая рабочая страница на SIMAI Framework 
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/core/css/core.css">
+        href="https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/core/css/core.css">
 </head>
 <body>
   <main class="p-4">
@@ -46,15 +46,15 @@ description: "Первая рабочая страница на SIMAI Framework 
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.4.0/distr/core/js/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/core/js/core.js"></script>
 </body>
 </html>
 ```
 
-В примере используется опубликованная и неизменяемая версия `v5.4.0`.
+В примере используется опубликованная и неизменяемая версия `v5.6.4`.
 Фиксированная версия защищает проект от неожиданных изменений.
 
 ### 2. Запустите локальный сервер

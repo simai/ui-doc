@@ -1,6 +1,6 @@
 ---
 title: "Flex Basis Ext"
-description: "Точный Loader- и CSS-контракт утилиты flex-basis-ext в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты flex-basis-ext."
 ---
 
 # Flex Basis Ext

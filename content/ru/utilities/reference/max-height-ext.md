@@ -1,6 +1,6 @@
 ---
 title: "Max Height Ext"
-description: "Точный Loader- и CSS-контракт утилиты max-height-ext в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты max-height-ext."
 ---
 
 # Max Height Ext

@@ -1,6 +1,6 @@
 ---
 title: "Scroll Padding Ext"
-description: "Точный Loader- и CSS-контракт утилиты scroll-padding-ext в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты scroll-padding-ext."
 ---
 
 # Scroll Padding Ext

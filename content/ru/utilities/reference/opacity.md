@@ -1,6 +1,6 @@
 ---
 title: "Opacity"
-description: "Точный Loader- и CSS-контракт утилиты opacity в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты opacity."
 ---
 
 # Opacity

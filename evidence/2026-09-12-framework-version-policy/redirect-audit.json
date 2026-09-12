@@ -1,0 +1,11 @@
+{
+    "schema": "ui-doc.guide_redirect_audit.v1",
+    "status": "pass",
+    "verified": {
+        "required": 18,
+        "all_redirects": 417,
+        "direct_only": true
+    },
+    "blocker_count": 0,
+    "blockers": []
+}

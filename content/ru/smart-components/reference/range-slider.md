@@ -1,6 +1,6 @@
 ---
 title: "Range Slider"
-description: "API и runtime-контракт Smart-компонента range-slider в SIMAI Framework 5.4.0."
+description: "Атрибуты, события и примеры Smart-компонента range-slider."
 ---
 
 # Range Slider

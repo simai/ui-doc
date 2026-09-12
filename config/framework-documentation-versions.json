@@ -1,0 +1,14 @@
+{
+  "schema": "ui-doc.framework_documentation_versions.v1",
+  "public_core": {
+    "repository": "simai/ui",
+    "tag": "v5.6.4",
+    "tag_object": "192d691acf711cd8277aac93c6957548eb0fe36c",
+    "commit": "833b9ab11ed59c8ee3443ce365faf00e2d9fcaea",
+    "use": "core-only-cdn-examples"
+  },
+  "documentation_candidate": {
+    "source": "simai-framework.lock.json",
+    "required_publication_profile": "verified-commit-candidate-v1"
+  }
+}

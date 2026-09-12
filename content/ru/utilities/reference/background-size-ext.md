@@ -1,6 +1,6 @@
 ---
 title: "Background Size Ext"
-description: "Точный Loader- и CSS-контракт утилиты background-size-ext в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты background-size-ext."
 ---
 
 # Background Size Ext

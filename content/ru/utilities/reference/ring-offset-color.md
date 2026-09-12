@@ -1,6 +1,6 @@
 ---
 title: "Ring Offset Color"
-description: "Точный Loader- и CSS-контракт утилиты ring-offset-color в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты ring-offset-color."
 ---
 
 # Ring Offset Color

@@ -1,0 +1,26 @@
+{
+    "schema": "ui-doc.framework_documentation_version_audit.v1",
+    "status": "pass",
+    "public_core": {
+        "repository": "simai/ui",
+        "tag": "v5.6.4",
+        "tag_object": "192d691acf711cd8277aac93c6957548eb0fe36c",
+        "commit": "833b9ab11ed59c8ee3443ce365faf00e2d9fcaea",
+        "use": "core-only-cdn-examples"
+    },
+    "documentation_candidate": {
+        "pair_id": "sf-v5.7.0-e2e5d0fe-839ca74a",
+        "framework": "v5.7.0",
+        "core": "v5.7.0",
+        "smart": "v5.5.0",
+        "publication_profile": "verified-commit-candidate-v1"
+    },
+    "checked_ru_pages": 497,
+    "cdn_example_pages": [
+        "content/ru/guide/connection/project-setup.md",
+        "content/ru/guide/introduction/quick-start.md"
+    ],
+    "remote_checked": true,
+    "failure_count": 0,
+    "failures": []
+}

@@ -1,6 +1,6 @@
 ---
 title: "Headers"
-description: "Точный Loader- и CSS-контракт утилиты headers в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты headers."
 ---
 
 # Headers

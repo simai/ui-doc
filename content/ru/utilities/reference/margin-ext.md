@@ -1,6 +1,6 @@
 ---
 title: "Margin Ext"
-description: "Точный Loader- и CSS-контракт утилиты margin-ext в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты margin-ext."
 ---
 
 # Margin Ext

@@ -1,6 +1,6 @@
 ---
 title: "Scroll Subtle"
-description: "Точный Loader- и CSS-контракт утилиты scroll-subtle в SIMAI Framework 5.4.0."
+description: "Классы, значения и подключение утилиты scroll-subtle."
 ---
 
 # Scroll Subtle
