@@ -1,0 +1,15 @@
+{
+  "schema": "ui-doc.documentation_status_receipt.v1",
+  "status": "pass",
+  "component_counts": {
+    "current": 17,
+    "changed": 4,
+    "unverified": 42
+  },
+  "selected": [
+    {"key": "component.buttons", "status": "current"},
+    {"key": "component.inputs", "status": "current"},
+    {"key": "component.checkbox", "status": "current"},
+    {"key": "component.modal", "status": "current"}
+  ]
+}

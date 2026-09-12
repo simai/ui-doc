@@ -222,7 +222,7 @@ for (const definition of cases) {
     examples: definition.examples.length,
     rule: rule?.regex ?? null,
     asset_root: entry?.runtime?.asset_root ?? null,
-    status: caseBlockers.length ? 'fail' : definition.name === 'modal' ? 'source_defect' : 'verified',
+    status: caseBlockers.length ? 'fail' : 'verified',
     blockers: caseBlockers,
   });
   blockers.push(...caseBlockers.map((item) => ({ component: definition.name, ...item })));
@@ -251,11 +251,11 @@ if (lineageMismatches.length) {
   });
 }
 
-const modalSource = read(path.join(sourceRoot, 'src/component/modal/js/_modal.js'));
+const modalRuntime = read(path.join(coreRoot, 'distr/component/modal/js/modal.js'));
 const smartModalManifest = readJson(path.join(smartRoot, 'smart/modal/smart.manifest.json'));
 const smartModalRuntime = read(path.join(smartRoot, 'smart/modal/js/modal.js'));
 const manifestPositions = smartModalManifest.inputs?.properties?.position?.enum ?? [];
-const ordinaryAllowsLogical = /\['center',\s*'left',\s*'right',\s*'inline-start'/u.test(modalSource);
+const ordinaryAllowsLogical = /\['center',\s*'left',\s*'right',\s*'inline-start'/u.test(modalRuntime);
 const smartGetterAllowsLogical = /getEnumAttr\("position",\s*\["center",\s*"left",\s*"right",\s*"inline-start"/u.test(smartModalRuntime);
 if (
   manifestPositions.includes('inline-start') &&
@@ -269,11 +269,15 @@ if (
     smart_manifest_declares_logical: true,
     smart_runtime_allows_logical: smartGetterAllowsLogical,
   });
+  const modalObservation = observations.find((item) => item.component === 'modal');
+  if (modalObservation) modalObservation.status = 'source_defect';
 }
 
 const selectedKeys = new Set(cases.map((item) => `component.${item.name}`));
 const statusItems = Array.isArray(documentationStatus.items) ? documentationStatus.items : [];
-const remainingItems = statusItems.filter((item) => !selectedKeys.has(item.key));
+const remainingItems = statusItems.filter(
+  (item) => typeof item.key === 'string' && item.key.startsWith('component.') && !selectedKeys.has(item.key),
+);
 const categoryMap = {
   current: 'already_matches',
   changed: 'differs',

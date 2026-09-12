@@ -1,11 +1,15 @@
 <div class="flex flex-wrap gap-2">
   <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-left"><span class="sf-button-text-container">Слева</span></button>
   <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-right"><span class="sf-button-text-container">Справа</span></button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-inline-start"><span class="sf-button-text-container">В начале строки</span></button>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-inline-end"><span class="sf-button-text-container">В конце строки</span></button>
   <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-top"><span class="sf-button-text-container">Сверху</span></button>
   <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-modal-open="modal-bottom"><span class="sf-button-text-container">Снизу</span></button>
 </div>
 
 <sf-modal modal-id="modal-left" title="Слева" position="left" show-footer="false"><p slot="content" class="m-0">Физическая левая сторона не меняется в RTL.</p></sf-modal>
 <sf-modal modal-id="modal-right" title="Справа" position="right" show-footer="false"><p slot="content" class="m-0">Физическая правая сторона не меняется в RTL.</p></sf-modal>
+<sf-modal modal-id="modal-inline-start" title="В начале строки" position="inline-start" show-footer="false"><p slot="content" class="m-0">В LTR это левая сторона, в RTL — правая.</p></sf-modal>
+<sf-modal modal-id="modal-inline-end" title="В конце строки" position="inline-end" show-footer="false"><p slot="content" class="m-0">В LTR это правая сторона, в RTL — левая.</p></sf-modal>
 <sf-modal modal-id="modal-top" title="Верхняя поверхность" position="top" show-footer="false"><p slot="content" class="m-0">Короткая задача у верхней границы.</p></sf-modal>
 <sf-modal modal-id="modal-bottom" title="Нижняя поверхность" position="bottom" show-footer="false"><p slot="content" class="m-0">Короткая задача у нижней границы.</p></sf-modal>

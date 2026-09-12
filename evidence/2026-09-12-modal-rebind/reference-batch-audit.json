@@ -1,0 +1,57 @@
+{
+  "schema": "ui-doc.component_reference_batch.v1",
+  "status": "pass",
+  "candidate": {
+    "source": "cfd4ef24e4460339a84beeb161d5686d9991bf8f",
+    "builder": "0d1038fb6037fedf02d641468cf140dd2d35246f",
+    "core": "e2e5d0fec53dbd40d298299c8c3be0f038c3deb5",
+    "smart": "839ca74ae47e50b69ddde46b8995c48031303bae"
+  },
+  "scope": {
+    "selected_components": 4,
+    "examples": 26,
+    "registry_components": 63,
+    "remaining_components_classified": 59
+  },
+  "observations": [
+    {
+      "component": "buttons",
+      "readiness": "ready",
+      "examples": 7,
+      "rule": "/class\\s*=\\s*[\"'][^\"']*\\bsf-button\\b/i",
+      "asset_root": "distr/component/buttons",
+      "status": "verified",
+      "blockers": []
+    },
+    {
+      "component": "inputs",
+      "readiness": "ready",
+      "examples": 6,
+      "rule": "/class\\s*=\\s*[\"'][^\"']*\\bsf-input\\b/i",
+      "asset_root": "distr/component/inputs",
+      "status": "verified",
+      "blockers": []
+    },
+    {
+      "component": "checkbox",
+      "readiness": "ready",
+      "examples": 5,
+      "rule": "/sf-checkbox/",
+      "asset_root": "distr/component/checkbox",
+      "status": "verified",
+      "blockers": []
+    },
+    {
+      "component": "modal",
+      "readiness": "discoverable",
+      "examples": 8,
+      "rule": "/(data-sf-modal-(open|close)|sf-modal)/",
+      "asset_root": "distr/component/modal",
+      "status": "verified",
+      "blockers": []
+    }
+  ],
+  "source_defects": [],
+  "blocker_count": 0,
+  "blockers": []
+}

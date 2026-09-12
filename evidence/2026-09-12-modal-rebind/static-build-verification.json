@@ -1,0 +1,17 @@
+{
+  "schema": "ui-doc.static_build_receipt.v1",
+  "status": "pass",
+  "directory": "build_components_reference_rebind_20260912",
+  "build": {
+    "pages": 917,
+    "memory_limit": "2G",
+    "seconds": 235.46,
+    "exit_code": 0
+  },
+  "verify_static": {
+    "html_pages": 1804,
+    "local_references_checked": 376747,
+    "broken": [],
+    "exit_code": 0
+  }
+}

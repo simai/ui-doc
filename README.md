@@ -11,6 +11,7 @@ Developer reference: [Эталон страницы компонента](docs/d
 
 ```bash
 composer install
+php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
 php scripts/migrate-legacy-content.php content redirects.json
 php -d memory_limit=512M vendor/bin/docara build production
 php -d memory_limit=512M vendor/bin/docara verify-static build_production
@@ -25,7 +26,10 @@ material can be normalized through the same documented path.
 - One physical Markdown file owns each public page.
 - UI strings belong to `content/<locale>/lang.json`.
 - Stable Docara `2.9.0` is pinned to its exact published source revision in
-  `composer.lock`; do not copy or substitute its runtime here.
+  `composer.lock`. The bounded Framework pair recorded in
+  `simai-framework.lock.json` is materialized after install from immutable Git
+  objects by `scripts/materialize-framework-runtime.php`; never substitute
+  working-tree or moving-branch bytes.
 - GitHub Actions validates builds only. Publication and deployment are separate
   explicitly authorized operations.
 - Generated `build_*`, `vendor/`, `.docara/`, `.env`, and working `source/`

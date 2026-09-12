@@ -106,11 +106,11 @@
             "key": "component.buttons",
             "kind": "component",
             "page_path": "content/ru/components/buttons.md",
-            "page_sha256": "cd8aa32d9687e876bfc23634a57b21ac5df70a969bdfc5084cd180447972de9c",
+            "page_sha256": "b777265d27721b22bd0af31545fefcad5924057db32937799f283d515db1c1e4",
             "review": "ai_verified",
             "route": "/ru/components/buttons/",
             "source": "simai-framework",
-            "source_sha256": "5ddbc8f5ccfe39954905824148908951728c4cd457c96c7a19c965aa837a8d65"
+            "source_sha256": "62824c0f80325d464e4f56f799093cbf25da2073df65f1b193cdcfa6284e468a"
         },
         {
             "examples": {
@@ -134,7 +134,7 @@
             "key": "component.checkbox",
             "kind": "component",
             "page_path": "content/ru/components/checkbox.md",
-            "page_sha256": "0da29d1412433b269d4fdde3c0b4b342ffc4ea5ffb247592de61ca487ff33016",
+            "page_sha256": "8b51edb9a50393f8baf3357f74d9bead0d8044d60249b3a087358d0be181d417",
             "review": "ai_verified",
             "route": "/ru/components/checkbox/",
             "source": "simai-framework",
@@ -414,7 +414,7 @@
             "key": "component.inputs",
             "kind": "component",
             "page_path": "content/ru/components/inputs.md",
-            "page_sha256": "88a9f1d2963b3f072ad628e92b61e72a9cbdc23b4ba453ca60815ee87ddae57a",
+            "page_sha256": "0a2e9ed68468dbb924aeb6f15c7ab0e78e90730c5b0c905302882d99af8b4801",
             "review": "ai_verified",
             "route": "/ru/components/inputs/",
             "source": "simai-framework",
@@ -466,15 +466,15 @@
             "examples": {
                 "default": "components/modal/overview"
             },
-            "examples_sha256": "3ca118a1b375ad619d5914f8a316270196657422bc431b90d164163049f2a0a0",
+            "examples_sha256": "51992eb296d91d2f45b2bde365042799bd11bd937dccc699c3b92cf655ccf4e8",
             "key": "component.modal",
             "kind": "component",
             "page_path": "content/ru/components/modal.md",
-            "page_sha256": "d053803117bd370117e7e40f34abe388ef76fc0caa08166b1e8ef0b5c3edb874",
+            "page_sha256": "2c4c2f4e06cb9b0ab8bd2cb47aa3159f88e94d9122fe1dfeed7400b083767362",
             "review": "ai_verified",
             "route": "/ru/components/modal/",
             "source": "simai-framework",
-            "source_sha256": "276ffcd8f705004504996a637b8c2fcdd02e4987c9a4a9de1126e3db13fb72d5"
+            "source_sha256": "56c4beca22b67da3bfacdda4f5257c2faef4c184e976a5de61a781f89ce30ce8"
         },
         {
             "examples": {

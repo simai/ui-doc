@@ -1,0 +1,438 @@
+{
+  "schema": "ui-doc.component_catalog_classification.v1",
+  "source_revision": "ui-e2e5d0fec53d-smart-839ca74ae47e",
+  "exact_candidate": {
+    "source": "cfd4ef24e4460339a84beeb161d5686d9991bf8f",
+    "builder": "0d1038fb6037fedf02d641468cf140dd2d35246f",
+    "core": "e2e5d0fec53dbd40d298299c8c3be0f038c3deb5",
+    "smart": "839ca74ae47e50b69ddde46b8995c48031303bae"
+  },
+  "selected_components": [
+    "buttons",
+    "inputs",
+    "checkbox",
+    "modal"
+  ],
+  "remaining_count": 59,
+  "counts": {
+    "already_matches": 13,
+    "not_confirmed": 42,
+    "differs": 4
+  },
+  "note": "Hash status does not prove keyboard, responsive, accessibility or LTR/RTL behavior.",
+  "items": [
+    {
+      "component": "accordion",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/accordion.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "admin-menu",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/admin-menu.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "alerts",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/alerts.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "avatars",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/avatars.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "badges",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/badges.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "breadcrumbs",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/breadcrumbs.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "button-group",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/button-group.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "carousel",
+      "category": "differs",
+      "documentation_status": "changed",
+      "page_path": "content/ru/components/carousel.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "clipboard",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/clipboard.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "close",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/close.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "content-divider",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/content-divider.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "context-menu",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/context-menu.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "country-code",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/country-code.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "datepicker",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/datepicker.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "doc",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/doc.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "dot",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/dot.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "download-file",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/download-file.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "dropdown",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/dropdown.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "emoji",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/emoji.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "fab",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/fab.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "featured-icon",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/featured-icon.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "file-preview",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/file-preview.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "file-upload",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/file-upload.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "hide-show",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/hide-show.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "highlight",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/highlight.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "icon-buttons",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/icon-buttons.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "icons",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/icons.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "kbd",
+      "category": "differs",
+      "documentation_status": "changed",
+      "page_path": "content/ru/components/kbd.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "link",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/link.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "menu",
+      "category": "differs",
+      "documentation_status": "changed",
+      "page_path": "content/ru/components/menu.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "monaco",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/monaco.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "outline",
+      "category": "differs",
+      "documentation_status": "changed",
+      "page_path": "content/ru/components/outline.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "pagination",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/pagination.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "placeholder",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/placeholder.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "progress-bar",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/progress-bar.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "progress-scale",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/progress-scale.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "quantity",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/quantity.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "radio",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/radio.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "range-slider",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/range-slider.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "reference-link",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/reference-link.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "scrollbar",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/scrollbar.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "skeleton",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/skeleton.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "slider",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/slider.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "spinner",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/spinner.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "step",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/step.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "swiper",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/swiper.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "switch",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/switch.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "tab",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/tab.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "tabs",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/tabs.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "tags",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/tags.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "textarea",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/textarea.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "theme",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/theme.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "theme-builder",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/theme-builder.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "toast",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/toast.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "toggle",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/toggle.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "tooltip",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/tooltip.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "tree",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/tree.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "tree-item",
+      "category": "already_matches",
+      "documentation_status": "current",
+      "page_path": "content/ru/components/tree-item.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    },
+    {
+      "component": "verification",
+      "category": "not_confirmed",
+      "documentation_status": "unverified",
+      "page_path": "content/ru/components/verification.md",
+      "scenario_evidence": "not_assessed_by_hash_status"
+    }
+  ]
+}
