@@ -106,7 +106,7 @@
             "key": "component.buttons",
             "kind": "component",
             "page_path": "content/ru/components/buttons.md",
-            "page_sha256": "b777265d27721b22bd0af31545fefcad5924057db32937799f283d515db1c1e4",
+            "page_sha256": "d35b559d9b787eda320ba0c1f3e8885f28f25615f47fe5b573720dc975f07d4a",
             "review": "ai_verified",
             "route": "/ru/components/buttons/",
             "source": "simai-framework",

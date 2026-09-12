@@ -76,11 +76,11 @@ const cases = [
   {
     name: 'buttons',
     page: 'content/ru/components/buttons.md',
-    examples: ['basic', 'variants', 'sizes', 'icons', 'states', 'tightness', 'radius'],
+    examples: ['basic', 'variants', 'sizes', 'icons', 'states', 'tightness', 'radius', 'segments'],
     selector: '.sf-button',
     sourceJs: 'src/component/buttons/js/_buttons.js',
     sourceSnippets: ["registerComponent('Buttons'", "this.button.setAttribute('type', 'button')"],
-    pageSnippets: ['## Быстрый старт', '## Публичные классы', '## Состояния', '## Формы и доступность', '## Responsive и LTR/RTL', '## Ограничения и проверка'],
+    pageSnippets: ['## Когда использовать', '## Быстрый старт', '## Состав кнопки', '## Публичные классы', '## Состояния', '## Формы и доступность', '## Узкие экраны и направление текста', '## Ограничения и проверка'],
   },
   {
     name: 'inputs',
