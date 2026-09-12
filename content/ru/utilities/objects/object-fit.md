@@ -1,12 +1,12 @@
 ---
 title: "Заполнение объектом"
 description: "Управляет масштабированием изображения или видео внутри заданной области."
-tags: [object-fit, sm, md, lg, xl]
+tags: [object-fit, sm, md, lg, xl, xxl]
 ---
 
 # Заполнение объектом
 
-:badge[object-fit]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[object-fit]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификатор `object-fit` в SIMAI Framework позволяет управлять тем, как элемент (например, изображение или видео)
 масштабируется и вписывается в контейнер. Это особенно полезно для адаптивных макетов, где контент должен корректно
@@ -24,7 +24,7 @@ tags: [object-fit, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера области просмотра (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера области просмотра (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор действует для всех размеров области просмотра.
 
 - Модификатор (обязательный параметр):

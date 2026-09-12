@@ -6,7 +6,7 @@ tags: [font-weight, sm, md, lg, xl, hover]
 
 # Толщина шрифта
 
-:badge[font-weight]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[font-weight]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы для управления толщиной шрифта позволяют задать нужное начертание в диапазоне от очень тонкого (100) до
 очень жирного (900).

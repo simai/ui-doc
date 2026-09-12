@@ -1,12 +1,12 @@
 ---
 title: "Автоматическая ширина столбцов сетки"
 description: "Автоматическая ширина столбцов сетки (grid-auto-columns)"
-tags: [grid-auto-columns, sm, md, lg, xl]
+tags: [grid-auto-columns, sm, md, lg, xl, xxl]
 ---
 
 # Автоматическая ширина столбцов сетки
 
-:badge[grid-auto-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-auto-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять размером автоматически создаваемых столбцов сетки, для которых не задана явная ширина. Это помогает гибко адаптировать макет под разные сценарии и размеры экрана.
 
@@ -28,7 +28,7 @@ tags: [grid-auto-columns, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`). Если не указана, модификатор действует на все размеры.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, модификатор действует на все размеры.
 - Модификатор *(обязательный параметр)*:
   - `auto-cols` — столбцы имеют автоматическую ширину (значение по умолчанию);
   - `auto-cols-min` — ширина определяется минимальным размером содержимого (min-content);

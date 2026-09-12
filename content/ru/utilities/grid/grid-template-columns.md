@@ -1,12 +1,12 @@
 ---
 title: "Шаблон колонок сетки"
 description: "Шаблон колонок сетки (grid-template-columns)"
-tags: [grid-template-columns, sm, md, lg, xl]
+tags: [grid-template-columns, sm, md, lg, xl, xxl]
 ---
 
 # Шаблон колонок сетки
 
-:badge[grid-template-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-template-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-col-*` задают количество колонок и их размер, формируя базовый шаблон сетки.
 
@@ -26,7 +26,7 @@ tags: [grid-template-columns, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Если не указана, действует всегда.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, действует всегда.
 - Модификатор *(обязательный параметр)*: `grid-col-{n}` или `grid-col-none`.
 
 ## Пример

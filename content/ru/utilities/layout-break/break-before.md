@@ -1,12 +1,12 @@
 ---
 title: "Разрыв до элемента"
 description: "Управляет разрывом колонки или страницы перед выбранным элементом."
-tags: [break-before, sm, md, lg, xl]
+tags: [break-before, sm, md, lg, xl, xxl]
 ---
 
 # Разрыв до элемента
 
-:badge[break-before]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[break-before]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификатор `break-before` в SIMAI Framework позволяет контролировать разрывы столбца или страницы до определённого
 элемента. Это полезно при работе с многостраничными документами или макетами, где требуется точное управление разбиением

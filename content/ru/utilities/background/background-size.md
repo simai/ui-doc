@@ -1,12 +1,12 @@
 ---
 title: "Размер фона"
 description: "Управление размером фонового изображения"
-tags: [background-size, sm, md, lg, xl]
+tags: [background-size, sm, md, lg, xl, xxl]
 ---
 
 # Размер фона
 
-:badge[background-size]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[background-size]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Утилиты `background-size` управляют масштабированием фонового изображения внутри элемента.
 
@@ -41,7 +41,7 @@ tags: [background-size, sm, md, lg, xl]
 
 Использование: `{контрольная_точка}:{модификатор}` или `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: `sm`, `md`, `lg`, `xl`.
+- Контрольная точка *(необязательный параметр)*: `sm`, `md`, `lg`, `xl`, `xxl`.
 - Модификатор *(обязательный параметр)*: один из классов из таблиц выше.
 
 ## Примеры использования

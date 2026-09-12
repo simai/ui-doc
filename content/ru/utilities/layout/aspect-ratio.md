@@ -1,12 +1,12 @@
 ---
 title: "Соотношение сторон"
 description: "Задаёт стабильные пропорции изображений, видео и других элементов."
-tags: [aspect-ratio, sm, md, lg, xl]
+tags: [aspect-ratio, sm, md, lg, xl, xxl]
 ---
 
 # Соотношение сторон
 
-:badge[aspect-ratio]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[aspect-ratio]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Утилиты `aspect-{width}x{height}` задают пропорции элемента. Они помогают сохранять форму изображений, видео,
 карточек и других областей при изменении доступной ширины.
@@ -50,7 +50,7 @@ tags: [aspect-ratio, sm, md, lg, xl]
 
 ## Адаптивность
 
-Префиксы `sm:`, `md:`, `lg:` и `xl:` изменяют пропорцию начиная с соответствующей контрольной точки. Например,
+Префиксы `sm:`, `md:`, `lg:`, `xl:` и `xxl:` изменяют пропорцию начиная с соответствующей контрольной точки. Например,
 `aspect-1x1 sm:aspect-16x9` показывает квадрат на узком экране и широкоформатную область начиная с `sm`.
 
 ## Адаптивный пример

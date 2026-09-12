@@ -1,12 +1,12 @@
 ---
 title: "Промежутки"
 description: "Промежутки (space)"
-tags: [space, sm, md, lg, xl]
+tags: [space, sm, md, lg, xl, xxl]
 ---
 
 # Промежутки
 
-:badge[space]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[space]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 `space` добавляет равномерные отступы между соседними дочерними элементами, не затрагивая крайние.
 
@@ -30,7 +30,7 @@ tags: [space, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: `sm`, `md`, `lg`, `xl` — применяет интервал с указанного брейкпоинта.
+- Контрольная точка *(необязательный параметр)*: `sm`, `md`, `lg`, `xl`, `xxl` — применяет интервал с указанного брейкпоинта.
 - Модификатор *(обязательный параметр)*: `space-x-{n}`, `space-y-{n}`, опционально с `space-*-reverse`.
 
 ## Пример использования

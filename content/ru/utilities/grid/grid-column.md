@@ -1,12 +1,12 @@
 ---
 title: "Размер колонки сетки"
 description: "Размер колонки сетки (grid-column)"
-tags: [grid-column, sm, md, lg, xl]
+tags: [grid-column, sm, md, lg, xl, xxl]
 ---
 
 # Размер колонки сетки
 
-:badge[grid-column]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-column]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-column` позволяют задавать колонки и их интервалы в сетке, управляя шириной и расположением элементов по горизонтали.
 
@@ -33,7 +33,7 @@ tags: [grid-column, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Если не указана — действует для всех размеров.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана — действует для всех размеров.
 - Модификатор *(обязательный параметр)*: указывает нужный `col-span`, `col-start` или `col-end`.
 
 ## Примеры

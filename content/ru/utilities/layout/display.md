@@ -1,12 +1,12 @@
 ---
 title: "Метод отображения элемента"
 description: "Задаёт тип области элемента и его участие в потоке документа."
-tags: [display, sm, md, lg, xl]
+tags: [display, sm, md, lg, xl, xxl]
 ---
 
 # Метод отображения элемента
 
-:badge[display]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[display]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификатор `display` управляет методом отображения элемента и может применяться как самостоятельно, так и в сочетании с
 адаптивными префиксами, определяющими область применения на определённых размерах экранов.
@@ -165,7 +165,7 @@ tags: [display, sm, md, lg, xl]
 
 ## Адаптивность
 
-Адаптивность доступна с помощью префиксов `sm:`, `md:`, `lg:`, `xl:`, `xxl:`. Например, чтобы скрыть элемент только на
+Адаптивность доступна с помощью префиксов `sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`. Например, чтобы скрыть элемент только на
 экранах от Medium (768px) и больше, используйте:
 
 ```html

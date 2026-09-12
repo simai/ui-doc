@@ -1,12 +1,12 @@
 ---
 title: "Задержка перехода"
 description: "Задержка перехода"
-tags: [transition-delay, sm, md, lg, xl]
+tags: [transition-delay, sm, md, lg, xl, xxl]
 ---
 
 # Задержка перехода
 
-:badge[transition-delay]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[transition-delay]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задавать задержку при выполнении переходов CSS.
 Управление задержкой позволяет более точно настроить моменты начала анимации, делая интерфейс более отзывчивым или

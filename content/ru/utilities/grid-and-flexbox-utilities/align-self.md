@@ -1,12 +1,12 @@
 ---
 title: "Выравнивание отдельного элемента по поперечной оси"
 description: "Выравнивание отдельного элемента по поперечной оси (align-self)"
-tags: [align-self, sm, md, lg, xl]
+tags: [align-self, sm, md, lg, xl, xxl]
 ---
 
 # Выравнивание отдельного элемента по поперечной оси
 
-:badge[align-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[align-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы определяют, как отдельно взятый элемент в сетке или флексбоксе будет выравнен внутри своей ячейки
 относительно поперечной оси.
@@ -32,7 +32,7 @@ tags: [align-self, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:

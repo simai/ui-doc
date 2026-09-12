@@ -1,12 +1,12 @@
 ---
 title: "Плавающий элемент"
 description: "Размещает элемент у логического края и позволяет тексту обтекать его."
-tags: [float, sm, md, lg, xl]
+tags: [float, sm, md, lg, xl, xxl]
 ---
 
 # Плавающий элемент
 
-:badge[float]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[float]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `float` управляют обтеканием и используют логические стороны (`inline-start`, `inline-end`), чтобы работать в LTR/RTL.
 
@@ -66,7 +66,7 @@ tags: [float, sm, md, lg, xl]
 
 ## Адаптивность
 
-Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`) к
+Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`) к
 модификатору.
 
 Например, чтобы элемент «плавал» справа только на экранах размера Medium и больше:

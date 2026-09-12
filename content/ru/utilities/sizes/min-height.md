@@ -1,12 +1,12 @@
 ---
 title: "Минимальная высота"
 description: "Минимальная высота (min-height)"
-tags: [min-height, sm, md, lg, xl]
+tags: [min-height, sm, md, lg, xl, xxl]
 ---
 
 # Минимальная высота
 
-:badge[min-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[min-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать минимальную высоту элемента, что позволяет контролировать
 начальную высоту блока и предотвратить его сжатие ниже определенного значения. Это удобно, когда необходимо, чтобы
@@ -33,7 +33,7 @@ tags: [min-height, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор действует для всех размеров экрана.
 
 - Модификатор (обязательный параметр):

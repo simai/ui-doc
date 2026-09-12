@@ -1,12 +1,12 @@
 ---
 title: "Размещение содержимого по обеим осям"
 description: "Размещение содержимого по обеим осям (place-content)"
-tags: [place-content, sm, md, lg, xl]
+tags: [place-content, sm, md, lg, xl, xxl]
 ---
 
 # Размещение содержимого по обеим осям
 
-:badge[place-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[place-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы из этого раздела задают одновременное выравнивание содержимого сетки или флексбокса сразу по двум осям (
 основной и поперечной).
@@ -33,7 +33,7 @@ tags: [place-content, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:

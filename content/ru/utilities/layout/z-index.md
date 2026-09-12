@@ -1,12 +1,12 @@
 ---
 title: "Положение элемента по оси Z"
 description: "Задаёт порядок перекрытия позиционированных элементов внутри контекста наложения."
-tags: [z-index, sm, md, lg, xl]
+tags: [z-index, sm, md, lg, xl, xxl]
 ---
 
 # Положение элемента по оси Z
 
-:badge[z-index]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[z-index]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Вы можете управлять положением элемента по оси Z, используя модификаторы z-index. Значения z-index задаются через
 переменные, что позволяет гибко настраивать слойность элементов.
@@ -76,7 +76,7 @@ tags: [z-index, sm, md, lg, xl]
 
 ## Адаптивность
 
-Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`) к
+Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`) к
 модификатору.
 
 Например, чтобы установить `z-index:10` только для экранов среднего размера и больше:

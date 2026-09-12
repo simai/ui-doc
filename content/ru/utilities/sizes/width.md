@@ -1,12 +1,12 @@
 ---
 title: "Ширина"
 description: "Ширина (width)"
-tags: [width, sm, md, lg, xl]
+tags: [width, sm, md, lg, xl, xxl]
 ---
 
 # Ширина
 
-:badge[width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать ширину элемента. С помощью данных классов можно быстро определить
 ширину блока, используя как фиксированные размеры, так и пропорциональные величины, зависящие от родительского элемента
@@ -67,7 +67,7 @@ tags: [width, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор действует для всех размеров экрана.
 
 - Модификатор (обязательный параметр):
@@ -159,7 +159,7 @@ tags: [width, sm, md, lg, xl]
 ## Направление, варианты и ограничения
 
 - Ширина не зависит от LTR/RTL.
-- Семейства `width` и `width-ext` выпускаются для `sm`, `md`, `lg`, `xl`.
+- Семейства `width` и `width-ext` выпускаются для `sm`, `md`, `lg`, `xl`, `xxl`.
   Варианты состояния и отрицательные значения не поддерживаются.
 - Публичных псевдонимов у классов нет. Процентная шкала ограничена значениями
   `w-1` … `w-99`; `w-full` используйте для 100%.

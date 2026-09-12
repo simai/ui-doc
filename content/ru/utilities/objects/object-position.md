@@ -1,12 +1,12 @@
 ---
 title: "Позиционирование объекта"
 description: "Утилиты object-position управляют тем, какую часть заменяемого элемента (img/video) показывать внутри контейнера."
-tags: [object-position, sm, md, lg, xl]
+tags: [object-position, sm, md, lg, xl, xxl]
 ---
 
 # Позиционирование объекта
 
-:badge[object-position]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[object-position]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `object-*` задают точку привязки содержимого внутри контейнера. Утилиты используют логические направления (`inline-start/end`, `top/bottom`) — поэтому корректно работают в LTR/RTL.
 
@@ -35,7 +35,7 @@ tags: [object-position, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`.
 
-- **Контрольная точка** *(опционально)*: `sm`, `md`, `lg`, `xl` — применяет модификатор, начиная с указанного брейкпоинта.
+- **Контрольная точка** *(опционально)*: `sm`, `md`, `lg`, `xl`, `xxl` — применяет модификатор, начиная с указанного брейкпоинта.
 - **Модификатор** *(обязательно)*: один из классов таблицы выше.
 
 Пример с брейкпоинтом: `md:object-inline-end-bottom`.

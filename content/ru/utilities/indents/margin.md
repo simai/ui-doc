@@ -1,12 +1,12 @@
 ---
 title: "Внешний отступ"
 description: "Внешний отступ (margin)"
-tags: [margin, sm, md, lg, xl]
+tags: [margin, sm, md, lg, xl, xxl]
 ---
 
 # Внешний отступ
 
-:badge[margin]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[margin]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `margin` управляют пространством вокруг элемента. Базовая шкала
 использует токены шага `--sf-space-*`, а расширенная — фиксированные токены
@@ -52,7 +52,7 @@ tags: [margin, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`). Если не указана, действует для всех размеров.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, действует для всех размеров.
 - Модификатор *(обязательный параметр)*: классы базовой или фиксированной шкалы,
   перечисленные выше, а также поддерживаемые отрицательные варианты.
 

@@ -1,12 +1,12 @@
 ---
 title: "Промежутки между элементами"
 description: "Промежутки между элементами (gap)"
-tags: [gap, sm, md, lg, xl]
+tags: [gap, sm, md, lg, xl, xxl]
 ---
 
 # Промежутки между элементами
 
-:badge[gap]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[gap]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Этот модификатор задает расстояние между элементами внутри сетки (grid) или флексбокса (flex), упрощая управление
 горизонтальными и вертикальными промежутками.
@@ -81,7 +81,7 @@ tags: [gap, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:
@@ -127,5 +127,5 @@ tags: [gap, sm, md, lg, xl]
   задают промежуток между элементами, а не физическую сторону.
 - `g-*`, `gap-x-*`, `gap-y-*`, `g-x-*` и `g-y-*` — совместимые устаревающие
   псевдонимы. Для нового кода используйте канонические имена из таблицы.
-- Доступны responsive-варианты `sm`, `md`, `lg`, `xl`. Отрицательные значения
+- Доступны responsive-варианты `sm`, `md`, `lg`, `xl`, `xxl`. Отрицательные значения
   и варианты состояния не выпускаются.

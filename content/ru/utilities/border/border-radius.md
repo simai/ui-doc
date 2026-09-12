@@ -1,12 +1,12 @@
 ---
 title: "Скругление границы"
 description: "Скругление границы"
-tags: [border-radius, sm, md, lg, xl]
+tags: [border-radius, sm, md, lg, xl, xxl]
 ---
 
 # Скругление границы
 
-:badge[border-radius]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[border-radius]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов радиуса вы можете задавать скругление для всего элемента,
 отдельных сторон и отдельных углов.
@@ -46,6 +46,6 @@ tags: [border-radius, sm, md, lg, xl]
 ## Синтаксис
 
 - `{модификатор}` — применяет стиль для всех размеров экрана.
-- `{контрольная точка}:{модификатор}` — применяет стиль с брейкпоинта (`sm`, `md`, `lg`, `xl`), например: `md:radius-2`.
+- `{контрольная точка}:{модификатор}` — применяет стиль с брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`), например: `md:radius-2`.
 
 ## Пример

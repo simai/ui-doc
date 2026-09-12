@@ -1,12 +1,12 @@
 ---
 title: "Выравнивание текста"
 description: "Выравнивание текста (text-align)"
-tags: [text-align, sm, md, lg, xl]
+tags: [text-align, sm, md, lg, xl, xxl]
 ---
 
 # Выравнивание текста
 
-:badge[text-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[text-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов вы можете задать выравнивание текста.
 
@@ -29,7 +29,7 @@ tags: [text-align, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:

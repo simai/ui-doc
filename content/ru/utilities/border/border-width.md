@@ -1,12 +1,12 @@
 ---
 title: "Толщина границы"
 description: "Толщина границы"
-tags: [border-width, sm, md, lg, xl]
+tags: [border-width, sm, md, lg, xl, xxl]
 ---
 
 # Толщина границы
 
-:badge[border-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[border-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 ## Наглядный пример
 
@@ -40,7 +40,7 @@ tags: [border-width, sm, md, lg, xl]
 ## Синтаксис
 
 - `{модификатор}` — для всех размеров экрана.
-- `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`), например `md:border-4`.
+- `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`, `xxl`), например `md:border-4`.
 
 ## Примеры
 

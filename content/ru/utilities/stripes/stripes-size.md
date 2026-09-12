@@ -1,12 +1,12 @@
 ---
 title: "Размер полосок"
 description: "Размер полосок"
-tags: [stripe-width, sm, md, lg, xl]
+tags: [stripe-width, sm, md, lg, xl, xxl]
 ---
 
 # Размер полосок
 
-:badge[stripe-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[stripe-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов `stripe-size-{1...4}` можно изменить размер полосок в паттерне фона. Каждый модификатор
 устанавливает переменную `--sf-stripe--size` в определенное значение, что влияет на размер повторяющихся полос.

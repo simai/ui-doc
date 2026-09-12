@@ -1,12 +1,12 @@
 ---
 title: "Повтор фона"
 description: "Повтор фона"
-tags: [background-repeat, sm, md, lg, xl]
+tags: [background-repeat, sm, md, lg, xl, xxl]
 ---
 
 # Повтор фона
 
-:badge[background-repeat]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[background-repeat]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов `background-repeat` вы можете управлять тем, как будет повторяться фоновое изображение внутри
 элемента.

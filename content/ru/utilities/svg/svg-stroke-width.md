@@ -1,12 +1,12 @@
 ---
 title: "Толщина обводки"
 description: "Толщина обводки"
-tags: [stroke-width, sm, md, lg, xl]
+tags: [stroke-width, sm, md, lg, xl, xxl]
 ---
 
 # Толщина обводки
 
-:badge[stroke-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[stroke-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Классы `stroke-N` задают `stroke-width`.
 

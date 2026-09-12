@@ -1,12 +1,12 @@
 ---
 title: "Размер строки сетки"
 description: "Размер строки сетки (grid-row)"
-tags: [grid-row, sm, md, lg, xl]
+tags: [grid-row, sm, md, lg, xl, xxl]
 ---
 
 # Размер строки сетки
 
-:badge[grid-row]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-row]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-row` управляют высотой и позиционированием элементов по вертикали в grid-сетке.
 
@@ -33,7 +33,7 @@ tags: [grid-row, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Без указания действует везде.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`). Без указания действует везде.
 - Модификатор *(обязательный параметр)*: указывает нужный `row-span`, `row-start` или `row-end`.
 
 ## Примеры

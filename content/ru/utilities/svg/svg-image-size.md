@@ -1,12 +1,12 @@
 ---
 title: "Размер SVG-изображений"
 description: "Размер SVG-изображений"
-tags: [svg-size, sm, md, lg, xl]
+tags: [svg-size, sm, md, lg, xl, xxl]
 ---
 
 # Размер SVG-изображений
 
-:badge[svg-size]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[svg-size]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Классы `svg-*` задают `width` и `height` по текстовой шкале токенов.
 

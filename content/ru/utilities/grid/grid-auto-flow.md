@@ -1,12 +1,12 @@
 ---
 title: "Автоматическое формирование сетки"
 description: "Автоматическое формирование сетки (grid-auto-flow)"
-tags: [grid-auto-flow, sm, md, lg, xl]
+tags: [grid-auto-flow, sm, md, lg, xl, xxl]
 ---
 
 # Автоматическое формирование сетки
 
-:badge[grid-auto-flow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-auto-flow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять автоматическим размещением элементов в сетке. Это позволяет гибко адаптировать отображение контента, сохраняя порядок либо оптимизируя использование доступного пространства.
 
@@ -28,7 +28,7 @@ tags: [grid-auto-flow, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`). Если не указана, модификатор действует для всех размеров.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, модификатор действует для всех размеров.
 - Модификатор *(обязательный параметр)*:
   - `grid-flow-row` — элементы заполняют строки последовательно.
   - `grid-flow-col` — элементы заполняют столбцы последовательно.

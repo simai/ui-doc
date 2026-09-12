@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = '5de65ca80b405ff285a3770a21042e9f2b99d11c';
-const UI_RUNTIME_REVISION = 'e2e5d0fec53dbd40d298299c8c3be0f038c3deb5';
+const UI_METADATA_REVISION = 'a866210d54af3e7b54f4126e63dcd79550450acb';
+const UI_RUNTIME_REVISION = 'f25621cdd37387c44a8d27ee425cec4c4d543c7d';
 const SMART_METADATA_REVISION = '2a02ece381a9c86956d7783bca581ee89b424961';
 const SMART_RUNTIME_REVISION = '839ca74ae47e50b69ddde46b8995c48031303bae';
-const SOURCE_REVISION = 'cfd4ef24e4460339a84beeb161d5686d9991bf8f';
-const BUILDER_REVISION = '0d1038fb6037fedf02d641468cf140dd2d35246f';
-const RELEASE_LOCK = 'contracts/releases/ui-e2e5d0fec53d-smart-839ca74ae47e.lock.json';
+const SOURCE_REVISION = '89026b5c44fba10b51762fb5b6201163b2e6dcb2';
+const BUILDER_REVISION = '96b56d2a4e5bd4e3be3f839ffebf205ba7fa77c2';
+const RELEASE_LOCK = 'contracts/releases/ui-f25621cdd373-smart-839ca74ae47e.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
@@ -90,7 +90,7 @@ $release = json_decode(
     JSON_THROW_ON_ERROR,
 );
 $expected = [
-    'compatibility_id' => 'ui-e2e5d0fec53d-smart-839ca74ae47e',
+    'compatibility_id' => 'ui-f25621cdd373-smart-839ca74ae47e',
     'ui' => UI_RUNTIME_REVISION,
     'smart' => SMART_RUNTIME_REVISION,
     'source' => SOURCE_REVISION,
@@ -119,7 +119,7 @@ $registry = json_decode($registryBytes, true, 512, JSON_THROW_ON_ERROR);
 if (($registry['compatibility']['id'] ?? null) !== $expected['compatibility_id']) {
     throw new RuntimeException('FRAMEWORK_REGISTRY_COMPATIBILITY_MISMATCH');
 }
-$docaraPair = 'sf-v5.7.0-e2e5d0fe-839ca74a';
+$docaraPair = 'sf-v5.7.0-f25621cd-839ca74a';
 
 $projectLockPath = $projectRoot . '/simai-framework.lock.json';
 $packageLockPath = $packageRoot . '/docs/site/simai-framework.lock.json';
@@ -170,7 +170,7 @@ $lock['runtime']['framework_registry'] = [
         'tree' => 'contracts/generated',
         'tree_oid' => trim($git($uiRoot, ['rev-parse', UI_METADATA_REVISION . ':contracts/generated'])),
         'mount' => 'contract',
-        'sha256' => 'e950100c427088ed23b7ff773299194a8e262aae1d9e3bd0f3ee2c099afb7df6',
+        'sha256' => '226bd2d6de7c08e8026a308055113eef713eca9b80f017b85a8ec521252055da',
         'files' => 2,
     ],
     'documentation_source' => [

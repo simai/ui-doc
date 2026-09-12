@@ -1,12 +1,12 @@
 ---
 title: "Общее свойство перехода"
 description: "Общее свойство перехода"
-tags: [transition-property, sm, md, lg, xl]
+tags: [transition-property, sm, md, lg, xl, xxl]
 ---
 
 # Общее свойство перехода
 
-:badge[transition-property]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[transition-property]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы позволяют задать, какие именно CSS-свойства будут плавно изменяться при взаимодействии с элементом.
 Применяя соответствующий модификатор, вы контролируете, для каких свойств будет выполняться переход, а также можете

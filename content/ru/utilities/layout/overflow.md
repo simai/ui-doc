@@ -1,12 +1,12 @@
 ---
 title: "Переполнение элемента"
 description: "Показывает, скрывает или прокручивает содержимое за границами элемента."
-tags: [overflow, sm, md, lg, xl]
+tags: [overflow, sm, md, lg, xl, xxl]
 ---
 
 # Переполнение элемента
 
-:badge[overflow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[overflow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `overflow` управляют тем, как содержимое элемента отображается при его переполнении. Вы можете управлять
 вертикальной (`overflow-y`), горизонтальной (`overflow-x`) или обеими осями одновременно.
@@ -148,7 +148,7 @@ tags: [overflow, sm, md, lg, xl]
 
 ## Адаптивность
 
-Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`) к
+Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`) к
 модификатору.
 
 Например, чтобы обрезать контент без прокрутки только на экранах medium и больше:

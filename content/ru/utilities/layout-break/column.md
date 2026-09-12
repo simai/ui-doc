@@ -1,12 +1,12 @@
 ---
 title: "Колонки"
 description: "Распределяет содержимое по заданному числу текстовых колонок."
-tags: [column, sm, md, lg, xl]
+tags: [column, sm, md, lg, xl, xxl]
 ---
 
 # Колонки
 
-:badge[column]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[column]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификатор `column` в SIMAI Framework позволяет управлять количеством столбцов в элементе. Это полезно при создании
 адаптивных макетов, где количество колонок может меняться в зависимости от размера области просмотра.

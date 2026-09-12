@@ -1,12 +1,12 @@
 ---
 title: "Паттерн фона"
 description: "Паттерн фона"
-tags: [pattern, sm, md, lg, xl]
+tags: [pattern, sm, md, lg, xl, xxl]
 ---
 
 # Паттерн фона
 
-:badge[pattern]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[pattern]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов паттернов фона (`pattern-{номер}`) вы можете задать повторяющийся узор в качестве фонового
 изображения. Каждый паттерн задаётся встроенным (inline) SVG-кодом, который не требует дополнительных ресурсов.

@@ -1,12 +1,12 @@
 ---
 title: "Максимальная ширина"
 description: "Максимальная ширина (max-width)"
-tags: [max-width, sm, md, lg, xl]
+tags: [max-width, sm, md, lg, xl, xxl]
 ---
 
 # Максимальная ширина
 
-:badge[max-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[max-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
 
@@ -37,7 +37,7 @@ tags: [max-width, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор действует для всех размеров экрана.
 
 - Модификатор *(обязательный параметр)*: `max-w-full`, `max-w-screen`, `max-w-min`, `max-w-max`, `max-w-fit`, `max-w-prose`, `max-w-none`, `max-w-0`, `max-w-(sm|md|lg|xl)`, `max-w-a0 ... max-w-i9`.

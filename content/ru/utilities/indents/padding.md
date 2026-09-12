@@ -1,12 +1,12 @@
 ---
 title: "Внутренний отступ"
 description: "Внутренний отступ (padding)"
-tags: [padding, sm, md, lg, xl]
+tags: [padding, sm, md, lg, xl, xxl]
 ---
 
 # Внутренний отступ
 
-:badge[padding]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[padding]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 `padding` управляет расстоянием от контента до границ элемента. Базовая шкала
 использует `--sf-space-*`, а расширенная фиксированная шкала — токены
@@ -47,7 +47,7 @@ tags: [padding, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: `sm`, `md`, `lg`, `xl` — применяют модификатор с заданного брейкпоинта.
+- Контрольная точка *(необязательный параметр)*: `sm`, `md`, `lg`, `xl`, `xxl` — применяют модификатор с заданного брейкпоинта.
 - Модификатор *(обязательный параметр)*: любой из классов таблицы.
 
 ## Пример использования

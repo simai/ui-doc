@@ -1,12 +1,12 @@
 ---
 title: "Шаблон строк сетки"
 description: "Шаблон строк сетки (grid-template-rows)"
-tags: [grid-template-rows, sm, md, lg, xl]
+tags: [grid-template-rows, sm, md, lg, xl, xxl]
 ---
 
 # Шаблон строк сетки
 
-:badge[grid-template-rows]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-template-rows]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `grid-row-*` задают количество строк в сетке и их базовый размер.
 
@@ -26,7 +26,7 @@ tags: [grid-template-rows, sm, md, lg, xl]
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`). Если не указана, действует для всех размеров.
+- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, действует для всех размеров.
 - Модификатор *(обязательный параметр)*: `grid-row-{n}` или `grid-row-none`.
 
 ## Пример

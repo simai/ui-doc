@@ -1,12 +1,12 @@
 ---
 title: "Видимость элемента"
 description: "Скрывает элемент визуально, сохраняя занимаемое им место в макете."
-tags: [visibility, sm, md, lg, xl]
+tags: [visibility, sm, md, lg, xl, xxl]
 ---
 
 # Видимость элемента
 
-:badge[visibility]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[visibility]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью данных модификаторов можно управлять видимостью элементов, сохраняя их место в DOM. Это позволяет, например,
 скрыть элемент визуально, но при этом не нарушать поток документа.
@@ -60,7 +60,7 @@ tags: [visibility, sm, md, lg, xl]
 
 ## Адаптивность
 
-Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`) к
+Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`) к
 модификатору.
 
 Например, чтобы сделать элемент видимым только на экранах размера Medium и больше:

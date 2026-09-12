@@ -1,12 +1,12 @@
 ---
 title: "Вложение фона"
 description: "Вложение фона"
-tags: [background-attachment, sm, md, lg, xl]
+tags: [background-attachment, sm, md, lg, xl, xxl]
 ---
 
 # Вложение фона
 
-:badge[background-attachment]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[background-attachment]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов вложения фона (`background-attachment`) вы можете управлять поведением фонового изображения при
 прокрутке страницы или контейнера.
@@ -38,7 +38,7 @@ tags: [background-attachment, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*: Применяет модификатор, начиная с определенного размера области
-  просмотра (sm, md, lg, xl).
+  просмотра (sm, md, lg, xl, xxl).
 - Модификатор *(обязательный параметр)*: `bg-fixed`, `bg-local` или `bg-scroll`.
 
 ## Пример использования

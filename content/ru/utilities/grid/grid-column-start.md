@@ -1,12 +1,12 @@
 ---
 title: "Начальное положение колонки сетки"
 description: "Начальное положение колонки сетки (grid-column-start)"
-tags: [grid-column-start, sm, md, lg, xl]
+tags: [grid-column-start, sm, md, lg, xl, xxl]
 ---
 
 # Начальное положение колонки сетки
 
-:badge[grid-column-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-column-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять начальным положением столбцов в сетке, задавая от какой линии
 сетки элемент должен начинаться.
@@ -40,7 +40,7 @@ tags: [grid-column-start, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:

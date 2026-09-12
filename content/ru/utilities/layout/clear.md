@@ -1,12 +1,12 @@
 ---
 title: "Перенос после плавающих элементов"
 description: "Переносит следующий блок ниже плавающих элементов с выбранной логической стороны."
-tags: [clear, sm, md, lg, xl]
+tags: [clear, sm, md, lg, xl, xxl]
 ---
 
 # Перенос после плавающих элементов
 
-:badge[clear]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[clear]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `clear` управляют тем, как контент располагается относительно плавающих элементов. Используются логические стороны (`inline-start`, `inline-end`), чтобы корректно работать в LTR/RTL.
 
@@ -75,7 +75,7 @@ tags: [clear, sm, md, lg, xl]
 
 ## Адаптивность
 
-Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`) к
+Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`) к
 модификатору.
 
 Например, чтобы смещать элемент вниз под плавающими справа элементами только на экранах размера Medium и больше:

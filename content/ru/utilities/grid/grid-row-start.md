@@ -1,12 +1,12 @@
 ---
 title: "Начальное положение строки сетки"
 description: "Начальное положение строки сетки (grid-row-start)"
-tags: [grid-row-start, sm, md, lg, xl]
+tags: [grid-row-start, sm, md, lg, xl, xxl]
 ---
 
 # Начальное положение строки сетки
 
-:badge[grid-row-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[grid-row-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно управлять тем, с какой строки начинается элемент в сетке, задавая его
 положение относительно строк.
@@ -34,7 +34,7 @@ tags: [grid-row-start, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор, начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор, начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:

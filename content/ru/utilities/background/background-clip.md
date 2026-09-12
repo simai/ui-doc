@@ -1,12 +1,12 @@
 ---
 title: "Обрезка фона"
 description: "Обрезка фона"
-tags: [background-clip, sm, md, lg, xl]
+tags: [background-clip, sm, md, lg, xl, xxl]
 ---
 
 # Обрезка фона
 
-:badge[background-clip]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[background-clip]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 С помощью модификаторов `background-clip` вы можете управлять тем, как фон распределяется под границами элемента и его
 содержимым.
@@ -39,7 +39,7 @@ tags: [background-clip, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор, начиная с определенного размера области просмотра (sm, md, lg, xl).
+  Применяет модификатор, начиная с определенного размера области просмотра (sm, md, lg, xl, xxl).
 - Модификатор *(обязательный параметр)*: `bg-clip-border`, `bg-clip-padding`, `bg-clip-content`, или `bg-clip-text`.
 
 ## Примеры использования

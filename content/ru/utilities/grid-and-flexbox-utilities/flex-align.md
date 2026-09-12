@@ -1,12 +1,12 @@
 ---
 title: "Одновременное выравнивание по двум осям"
 description: "Одновременное выравнивание по двум осям (flex-align)"
-tags: [flex-align, sm, md, lg, xl]
+tags: [flex-align, sm, md, lg, xl, xxl]
 ---
 
 # Одновременное выравнивание по двум осям
 
-:badge[flex-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[flex-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы позволяют задать одновременное выравнивание содержимого флексбокса сразу по основной и поперечной
 оси, фактически комбинируя свойства `justify-content` и `align-items`.
@@ -35,7 +35,7 @@ tags: [flex-align, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор, начиная с определённой ширины экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор, начиная с определённой ширины экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*: Направления `start`, `center`, `end` применяются по обеим осям.

@@ -1,12 +1,12 @@
 ---
 title: "Выравнивание отдельного элемента в ячейке по основной оси"
 description: "Выравнивание отдельного элемента в ячейке по основной оси (justify-self)"
-tags: [justify-self, sm, md, lg, xl]
+tags: [justify-self, sm, md, lg, xl, xxl]
 ---
 
 # Выравнивание отдельного элемента в ячейке по основной оси
 
-:badge[justify-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1}
+:badge[justify-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Данные модификаторы определяют, как отдельный элемент будет выравниваться по основной оси внутри своей ячейки сетки или
 флекс-контейнера.
@@ -31,7 +31,7 @@ tags: [justify-self, sm, md, lg, xl]
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
 
 - Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
+  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
   Если не указана, модификатор применяется для всех размеров.
 
 - Модификатор *(обязательный параметр)*:
