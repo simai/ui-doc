@@ -126,13 +126,13 @@ foreach (['Core', 'Утилиты', 'Компоненты', 'Smart-компон�
     $check(str_contains($pages['overview'], '| ' . $level . ' |'), 'architecture_level_missing', ['level' => $level]);
 }
 $check(str_contains($pages['boundary'], 'проверяет права'), 'project_rights_boundary_missing');
-$check(str_contains($pages['boundary'], 'выполняет добавление в корзину'), 'project_operation_boundary_missing');
+$check(str_contains($pages['boundary'], 'добавляет товар в корзину'), 'project_operation_boundary_missing');
 $check(str_contains($pages['loader'], 'Core, утилиты и обычные компоненты'), 'loader_scope_missing');
 $check(str_contains($pages['loader'], '/ru/guide/architecture/smart-components/'), 'loader_smart_link_missing');
 $check(str_contains($pages['values'], '--sf-px'), 'hairline_rule_missing_from_docs');
 $check(str_contains($pages['values'], 'Рабочая единица размерной системы — `rem`'), 'rem_rule_missing');
 $check(str_contains($pages['modifiers'], 'column-gap/*'), 'loader_alias_not_explained');
-$check(str_contains($pages['modifiers'], 'канонические модули `gap/*`'), 'canonical_name_rule_missing');
+$check(str_contains($pages['modifiers'], 'основные модули `gap/*`'), 'primary_name_rule_missing');
 $check(str_contains($pages['colors'], 'color-on-surface-variant'), 'secondary_text_role_missing');
 $check(str_contains($pages['colors'], '## Палитры'), 'palette_section_missing');
 $check(str_contains($pages['sizes'], '| `--sf-a0`'), 'size_scale_start_missing');

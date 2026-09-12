@@ -115,15 +115,35 @@ foreach ($paragraphs as $paragraph => $files) {
     }
 }
 
-$forbidden = ['Docara', 'Larena', 'Bitrix', 'UI Studio', 'Custom Elements', 'registry', 'manifest', 'runtime', 'направление развития'];
+$forbidden = [
+    'Docara',
+    'Larena',
+    'Bitrix',
+    'UI Studio',
+    'Custom Elements',
+    'registry',
+    'manifest',
+    'runtime',
+    'API',
+    'backend',
+    'уровень абстракции',
+    'жизненный цикл',
+    'синхронизировать состояние',
+    'проектирование интеграции',
+    'проектирования интеграции',
+    'бизнес-логик',
+    'бизнес-операц',
+    'направление развития',
+];
 $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide'));
 foreach ($iterator as $file) {
     if (! $file->isFile() || $file->getExtension() !== 'md') {
         continue;
     }
     $contents = (string) file_get_contents($file->getPathname());
+    $prose = preg_replace('/```.*?```/s', '', $contents) ?? $contents;
     foreach ($forbidden as $term) {
-        $check(! str_contains($contents, $term), 'forbidden_term', ['page' => str_replace($root . '/', '', $file->getPathname()), 'term' => $term]);
+        $check(! str_contains($prose, $term), 'forbidden_term', ['page' => str_replace($root . '/', '', $file->getPathname()), 'term' => $term]);
     }
 }
 
