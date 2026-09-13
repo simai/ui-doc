@@ -29,9 +29,11 @@
             "@php scripts/audit-framework-documentation-versions.php"
         ],
         "docs:components:check": "node scripts/audit-component-documentation-contracts.mjs",
+        "docs:composition:check": "node scripts/audit-composition-documentation-contract.mjs",
         "docs:check": [
             "@docs:versions:check",
             "@docs:components:check",
+            "@docs:composition:check",
             "@php scripts/audit-examples.php",
             "@php scripts/audit-russian-content.php"
         ],

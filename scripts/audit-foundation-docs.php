@@ -14,7 +14,7 @@ foreach ($argv as $argument) {
     }
 }
 $uiRoot = is_string($uiRoot) ? realpath($uiRoot) : false;
-if ($uiRoot === false || ! is_dir($uiRoot . '/.git')) {
+if ($uiRoot === false || ! is_file($uiRoot . '/.git') && ! is_dir($uiRoot . '/.git')) {
     fwrite(STDERR, "Usage: php scripts/audit-foundation-docs.php /absolute/path/to/ui [--output=... ]\n");
     exit(2);
 }
@@ -64,7 +64,7 @@ $check = static function (bool $condition, string $code, array $details = []) us
     }
 };
 
-$check($coreRevision === '7474e19cb34ce1189a0daaaeef8bfc002365825a', 'core_revision_mismatch');
+$check($coreRevision === '803b6e27c4554cb7d3b4dec185e4935d10659e44', 'core_revision_mismatch');
 $check($smartRevision === '548c11cd6ec071d171ca8da4fb5bc66c6d9552c0', 'smart_revision_mismatch');
 $check(($adaptive['meta']['unit'] ?? null) === 'rem', 'adaptive_unit_is_not_rem');
 $check(($adaptive['meta']['rootPolicy'] ?? null) === 'preserve-user-agent-default', 'root_policy_mismatch');

@@ -45,7 +45,17 @@ $structure = [
         'blocks' => ['Блоки', 70],
         'framework-and-project' => ['Framework и проект', 80],
     ]],
-    'fundamentals' => ['title' => 'Основы оформления', 'order' => 40, 'pages' => [
+    'composition' => ['title' => 'Декларативная композиция', 'order' => 40, 'pages' => [
+        'what-is-composition' => ['Что такое декларативная композиция', 10],
+        'document-and-tree' => ['Документ и дерево элементов', 20],
+        'types-and-slots' => ['Типы и области содержимого', 30],
+        'structured-text' => ['Структурированный текст без HTML', 40],
+        'data-and-sources' => ['Данные и внешние источники', 50],
+        'rendering-and-project' => ['От документа к странице', 60],
+        'versions-and-compatibility' => ['Версии и совместимость', 70],
+        'custom-type' => ['Создание собственного типа', 80],
+    ]],
+    'fundamentals' => ['title' => 'Основы оформления', 'order' => 50, 'pages' => [
         'index' => ['Основы оформления', 40],
         'modifiers' => ['Модификаторы', 10],
         'conditions' => ['Условия действия', 20],
@@ -58,7 +68,7 @@ $structure = [
         'typography' => ['Типографика', 90],
         'adaptive-sizing' => ['Адаптивные размеры', 100],
     ]],
-    'practical' => ['title' => 'Практическое использование', 'order' => 50, 'pages' => [
+    'practical' => ['title' => 'Практическое использование', 'order' => 60, 'pages' => [
         'ai' => ['Работа с ИИ', 10],
     ]],
 ];

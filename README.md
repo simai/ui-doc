@@ -66,6 +66,21 @@ node scripts/audit-component-documentation-contracts.mjs \
 содержание обновляет автор или исполнитель, потому что механическая замена
 текста не может надёжно объяснить новое поведение пользователю.
 
+Страницы декларативной композиции защищены отдельным контрактом. Обычный
+`composer docs:check` сравнивает зафиксированные ревизии, а глубокая проверка
+читает точные схемы, встроенные типы, публичные функции, собранный Core и
+эталонный JSON-пример:
+
+```bash
+node scripts/audit-composition-documentation-contract.mjs \
+  --source-root=/absolute/path/to/ui-source \
+  --core-root=/absolute/path/to/ui
+```
+
+После осмысленного обновления восьми страниц новые хеши принимаются только
+явной командой с `--refresh`. Поэтому изменение контракта Framework делает
+устаревшую документацию ошибкой CI, а не скрытым расхождением.
+
 The migration command is deterministic and must report zero changed Markdown
 files on committed content. It remains in the repository so historical source
 material can be normalized through the same documented path.

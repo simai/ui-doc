@@ -1,0 +1,116 @@
+{
+  "schema": "ui-doc.composition_documentation_contract.v1",
+  "reviewed": {
+    "source_revision": "1af5fbc6e1aba7eedefdc5d388aded900c07b3e2",
+    "core_revision": "803b6e27c4554cb7d3b4dec185e4935d10659e44",
+    "source_files": {
+      "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
+      "src/core/contracts/composition-type-manifest.v1.schema.json": "31c69a8f36f6a1285531588d1ca00883ebe503b04361718afb300d1b05a114d6",
+      "src/core/contracts/composition-types.v1.json": "45fe7cf7209f1063d0f0c49904d6329943ab58107b568d61bf8f7e11aaf83fbf",
+      "src/core/js/composition/index.mjs": "7ef095ba699e042319e37105d764aeb371132fc9f6eb96de8eb801a08fa28ee3",
+      "src/core/js/composition/builtins.mjs": "999b7b49f6e5aec5418be1119b8cd634ead6f317154bc771971bbda3fd82355b",
+      "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f"
+    },
+    "generated_files": {
+      "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
+      "distr/core/contracts/composition-type-manifest.v1.schema.json": "31c69a8f36f6a1285531588d1ca00883ebe503b04361718afb300d1b05a114d6",
+      "distr/core/contracts/composition-types.v1.json": "45fe7cf7209f1063d0f0c49904d6329943ab58107b568d61bf8f7e11aaf83fbf",
+      "distr/core/js/core.js": "984e8cb242e27ad46135fd87bc240ddd9c3fd02441a0cabb3deb01a0ffdd13c9"
+    }
+  },
+  "source_files": [
+    "src/core/contracts/composition-document.v1.schema.json",
+    "src/core/contracts/composition-type-manifest.v1.schema.json",
+    "src/core/contracts/composition-types.v1.json",
+    "src/core/js/composition/index.mjs",
+    "src/core/js/composition/builtins.mjs",
+    "tests/fixtures/composition/catalog-page.json"
+  ],
+  "generated_files": [
+    "distr/core/contracts/composition-document.v1.schema.json",
+    "distr/core/contracts/composition-type-manifest.v1.schema.json",
+    "distr/core/contracts/composition-types.v1.json",
+    "distr/core/js/core.js"
+  ],
+  "source_snippets": {
+    "src/core/js/composition/index.mjs": [
+      "export function validate",
+      "export async function normalize",
+      "export async function render",
+      "globalThis.SF.Composition"
+    ],
+    "src/core/js/composition/builtins.mjs": [
+      "layout.page",
+      "layout.columns",
+      "content.paragraph"
+    ]
+  },
+  "generated_snippets": {
+    "distr/core/js/core.js": [
+      "SF.Composition",
+      "simai.composition.document.v1"
+    ]
+  },
+  "fixture": {
+    "source": "tests/fixtures/composition/catalog-page.json",
+    "public_copy": "assets/examples/composition/catalog-page.json"
+  },
+  "pages": [
+    {
+      "path": "content/ru/guide/composition/what-is-composition.md",
+      "snippets": [
+        "simai.composition.document.v1",
+        "Framework проверяет это описание"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/document-and-tree.md",
+      "snippets": [
+        "root",
+        "порядок уже задан массивом"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/types-and-slots.md",
+      "snippets": [
+        "layout.columns",
+        "область `columns`"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/structured-text.md",
+      "snippets": [
+        "strong",
+        "Опасные и файловые адреса отклоняются"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/data-and-sources.md",
+      "snippets": [
+        "owner",
+        "project/catalog"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/rendering-and-project.md",
+      "snippets": [
+        "SF.Composition.render",
+        "Проект загружает товары"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/versions-and-compatibility.md",
+      "snippets": [
+        "SHA-256",
+        "normalize"
+      ]
+    },
+    {
+      "path": "content/ru/guide/composition/custom-type.md",
+      "snippets": [
+        "simai.composition.type-manifest.v1",
+        "project.product-grid"
+      ]
+    }
+  ]
+}
