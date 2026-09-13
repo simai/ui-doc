@@ -18,6 +18,7 @@ composer docara:compatibility:check
 php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
 php scripts/migrate-legacy-content.php content redirects.json
 composer docs:versions:check
+composer docs:components:check
 php scripts/audit-framework-documentation-versions.php --check-remote
 php scripts/audit-guide-information-architecture.php
 php scripts/audit-guide-redirects.php
@@ -27,6 +28,43 @@ php -d memory_limit=2G vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \
   --build-root="$(pwd)/build_production"
 ```
+
+## Синхронизация компонентов и документации
+
+Контракты в `contracts/documentation/components/` связывают страницу компонента
+с точными исходными и собранными файлами Framework. Обычная проверка работает в
+CI без соседних репозиториев и останавливает сборку, если зафиксированные в
+`simai-framework.lock.json` ревизии ещё не были проверены документацией:
+
+```bash
+composer docs:components:check
+```
+
+Перед включением новой сборки Framework выполните глубокую проверку по точным
+Git-объектам. Она обнаруживает изменение поведения, стилей, Loader rule и
+зависимостей, а в ошибке называет компонент, файл и страницу для пересмотра:
+
+```bash
+node scripts/audit-component-documentation-contracts.mjs \
+  --source-root=/absolute/path/to/ui-source \
+  --core-root=/absolute/path/to/ui
+```
+
+После обновления текста и примеров явно подтвердите, что новая реализация
+проверена. Команда запишет новые хеши только после прохождения остальных
+проверок контракта:
+
+```bash
+node scripts/audit-component-documentation-contracts.mjs \
+  --source-root=/absolute/path/to/ui-source \
+  --core-root=/absolute/path/to/ui \
+  --refresh
+```
+
+Такое подтверждение должно входить в каждый батч, который меняет публичное
+поведение компонента. Автоматическая проверка определяет устаревшую страницу;
+содержание обновляет автор или исполнитель, потому что механическая замена
+текста не может надёжно объяснить новое поведение пользователю.
 
 The migration command is deterministic and must report zero changed Markdown
 files on committed content. It remains in the repository so historical source

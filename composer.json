@@ -28,6 +28,13 @@
             "@php scripts/sync-framework-documentation-versions.php --check",
             "@php scripts/audit-framework-documentation-versions.php"
         ],
+        "docs:components:check": "node scripts/audit-component-documentation-contracts.mjs",
+        "docs:check": [
+            "@docs:versions:check",
+            "@docs:components:check",
+            "@php scripts/audit-examples.php",
+            "@php scripts/audit-russian-content.php"
+        ],
         "post-install-cmd": "@docara:compatibility:apply",
         "post-update-cmd": "@docara:compatibility:apply"
     },

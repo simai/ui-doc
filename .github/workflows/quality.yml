@@ -23,6 +23,7 @@ jobs:
       - run: composer validate --no-check-publish
       - run: composer install --no-interaction --prefer-source
       - run: composer docs:versions:check
+      - run: composer docs:components:check
       - run: php scripts/test-migrate-legacy-content.php
       - name: Verify committed migration is idempotent
         run: |

@@ -1,0 +1,94 @@
+{
+  "schema": "ui-doc.component_documentation_contract.v1",
+  "component": "menu",
+  "page": "content/ru/components/menu.md",
+  "reviewed": {
+    "source_revision": "6a16f0534ceb0fb1694a44899ade4c2bf8ef99b9",
+    "core_revision": "7474e19cb34ce1189a0daaaeef8bfc002365825a",
+    "source_files": {
+      "src/component/menu/js/_menu.js": "ace38eda94058347b171a7880e16cfe18d482d328b1945aae4d2d8074b1a4de9",
+      "src/component/menu/scss/_css__menu.scss": "51422da252af19a47d9c0ee4cd8305d3ef0f3f9ce0eb903977706dea0de2287a",
+      "src/component/menu/docs/docs.md": "3dde35b3194ad20c1785fcf82b01e2b9335ce9a68cbe22e956f201b9d1798b08"
+    },
+    "generated_files": {
+      "distr/component/menu/css/menu.css": "640db8c1fd3a0718bdc905c9afa87f9dfe3d1e599c83a250fcc2d9f1144d2dc7",
+      "distr/component/menu/js/menu.js": "3122fb3b7f2a5c479cf130441a4a957615f92608ce6658a4749c80a0c304a8b9"
+    }
+  },
+  "source_files": [
+    "src/component/menu/js/_menu.js",
+    "src/component/menu/scss/_css__menu.scss",
+    "src/component/menu/docs/docs.md"
+  ],
+  "generated_files": [
+    "distr/component/menu/css/menu.css",
+    "distr/component/menu/js/menu.js"
+  ],
+  "source_snippets": {
+    "src/component/menu/js/_menu.js": [
+      "closeHorizontalSiblings",
+      "positionHorizontalSubmenu",
+      "event.key === 'Escape'",
+      "event.key !== 'Enter' && event.key !== ' '",
+      "aria-expanded",
+      "disabled"
+    ],
+    "src/component/menu/scss/_css__menu.scss": [
+      ".sf-menu.sf-menu--horizontal",
+      ".sf-menu.sf-menu--documentation-tree",
+      "sf-menu-element--level-4",
+      "inset-inline-start: 100%"
+    ]
+  },
+  "generated_snippets": {
+    "distr/component/menu/css/menu.css": [
+      ".sf-menu.sf-menu--horizontal",
+      ".sf-menu.sf-menu--documentation-tree",
+      "inset-inline-start: 100%"
+    ],
+    "distr/component/menu/js/menu.js": [
+      "closeHorizontalSiblings",
+      "positionHorizontalSubmenu",
+      "aria-expanded"
+    ]
+  },
+  "page_sections": [
+    "# Меню",
+    "## Когда использовать",
+    "## Быстрый старт",
+    "## Как выбрать вид меню",
+    "## Горизонтальное меню и подменю",
+    "## Вложенные уровни",
+    "## Публичные классы и атрибуты",
+    "## Клавиатура и доступность",
+    "## Узкие экраны и направление текста",
+    "## Ограничения и проверка"
+  ],
+  "page_snippets": [
+    "sf-menu--horizontal",
+    "sf-menu--documentation-tree",
+    "aria-current=\"page\"",
+    "Enter",
+    "Пробел",
+    "Escape",
+    "направление раскрытия"
+  ],
+  "examples": {
+    "components/menu/overview": [
+      "class=\"sf-menu",
+      "aria-current=\"page\""
+    ],
+    "components/menu/horizontal": [
+      "sf-menu--horizontal",
+      "<ul class=\"sf-menu\">"
+    ],
+    "components/menu/nesting": [
+      "expanded",
+      "Начало работы"
+    ],
+    "components/menu/states": [
+      "aria-current=\"page\"",
+      "disabled"
+    ]
+  }
+}

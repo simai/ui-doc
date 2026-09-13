@@ -85,3 +85,19 @@ node scripts/audit-component-reference-batch.mjs \
 Успех component audit, сборки, static verification и browser acceptance —
 разные состояния. Ни одно из них не заменяет остальные.
 
+## Контракт актуальности страницы
+
+Для компонента с файлом в `contracts/documentation/components/` действует ещё
+одна проверка. Контракт хранит хеши просмотренных source и generated файлов и
+ссылки на обязательные примеры. Изменение этих файлов останавливает CI до того,
+как автор пересмотрит текст, примеры и явно обновит хеши через `--refresh`.
+
+```bash
+node scripts/audit-component-documentation-contracts.mjs \
+  --source-root=/absolute/path/to/ui-source \
+  --core-root=/absolute/path/to/ui
+```
+
+Новый компонент подключается добавлением одного JSON-контракта. Поэтому этот
+же механизм можно постепенно распространить на весь каталог компонентов без
+создания отдельного проверочного скрипта для каждой страницы.
