@@ -100,6 +100,31 @@ for (const [relative, snippets] of Object.entries(requiredSnippets)) {
   }
 }
 
+// Documentation examples are executable contracts. Checking the prose alone
+// allowed a public class to remain documented after it disappeared from the
+// generated CSS. Keep a small set of representative aliases bound to the
+// actual distribution used by the documentation build.
+const runtimeSelectors = {
+  'justify-content/default/css/default.css': [
+    '.justify-center',
+    '.content-main-center',
+  ],
+  'justify-content/xxl/css/xxl.css': [
+    '.xxl\\:justify-center',
+    '.xxl\\:content-main-center',
+  ],
+};
+
+for (const [relative, selectors] of Object.entries(runtimeSelectors)) {
+  const absolute = path.join(utilityRoot, relative);
+  const source = fs.existsSync(absolute) ? fs.readFileSync(absolute, 'utf8') : '';
+  for (const selector of selectors) {
+    if (!source.includes(selector)) {
+      snippetFailures.push(`runtime ${relative}: missing ${selector}`);
+    }
+  }
+}
+
 const forbiddenPatterns = [
   {
     file: 'content/ru/utilities/layout/isolation.md',
