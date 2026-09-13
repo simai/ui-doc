@@ -81,7 +81,3 @@ public/
 Smart Components имеют отдельное подключение, описанное в
 [их разделе](/ru/guide/smart-components/connection/). Core автоматически находит
 используемые на странице утилиты и компоненты и загружает их из `window.sfPath`.
-
-## Что дальше
-
-Разберитесь, [как работает Loader](/ru/guide/connection/loader/), и зафиксируйте [порядок обновления](/ru/guide/connection/versions-and-updates/).

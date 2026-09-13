@@ -14,7 +14,3 @@ description: "Manifest собственного типа использует ф
 ## Пример
 
 Для `project.product-grid` можно разрешить слот `items`, пресет `cards` и ресурс `project/product-grid`. Renderer получает уже проверенный узел и возвращает HTML. Контрольный пример доказывает порядок карточек, а отрицательный — что неизвестный слот и опасная ссылка отклоняются.
-
-## Что дальше
-
-[Проверьте тип в Studio](/ru/guide/layouts/reference/studio-inspector/).

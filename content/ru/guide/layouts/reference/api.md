@@ -20,7 +20,3 @@ const normalized = await SF.Composition.normalize(document);
 const result = await SF.Composition.render(normalized.document, context);
 ```
 `render()` возвращает HTML, ресурсы, сведения для подключения поведения, digest и диагностику. Неизвестный тип или отсутствующий renderer дают ошибку.
-
-## Что дальше
-
-[Научитесь читать диагностику](/ru/guide/layouts/reference/diagnostics/).

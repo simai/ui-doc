@@ -41,7 +41,7 @@ $structure = [
         'utilities' => ['Утилиты', 30],
         'components' => ['Компоненты', 40],
         'smart-components' => ['Smart-компоненты', 50],
-        'complex-smart-components' => ['Сложные Smart-компоненты', 60],
+        'complex-smart-components' => ['Комплексные Smart-компоненты', 60],
         'blocks' => ['Блоки', 70],
         'framework-and-project' => ['Framework и проект', 80],
     ]],
@@ -70,6 +70,14 @@ $structure = [
         'catalog-and-readiness' => ['Статусы готовности', 40],
         'templates-and-assets' => ['Шаблоны Smart-компонентов', 50],
         'examples' => ['Проверка примера Smart-компонента', 60],
+        'creating' => ['Создание Smart-компонента', 65],
+        'properties' => ['Атрибуты, свойства и состояние', 70],
+        'events' => ['События и связь с проектом', 80],
+        'nesting' => ['Вложенность и комплексные компоненты', 90],
+        'local-components' => ['Локальные компоненты проекта', 100],
+        'slots' => ['Слоты и передача содержимого', 110],
+        'cleanup' => ['Обновление и освобождение ресурсов', 120],
+
     ]],
     'practical' => ['title' => 'Практическое использование', 'order' => 80, 'pages' => [
         'ai' => ['Работа с ИИ', 10],
@@ -106,7 +114,7 @@ foreach ($structure as $directory => $group) {
         $check(count($h1[1]) === 1 && ($h1[1][0] ?? null) === $title, 'page_h1_mismatch', ['page' => $base, 'actual' => $h1[1]]);
         $check(str_contains($markdown, 'title: "' . $title . '"'), 'page_title_mismatch', ['page' => $base]);
         $check(($sidecar['navigation']['order'] ?? null) === $order, 'page_order_mismatch', ['page' => $base]);
-        foreach (['## Когда применять', '## Пример', '## Что дальше'] as $heading) {
+        foreach (['## Когда применять', '## Пример'] as $heading) {
             $check(str_contains($markdown, $heading), 'editorial_section_missing', ['page' => $base, 'heading' => $heading]);
         }
         $body = preg_replace('/^---.*?---\s*/s', '', $markdown) ?? $markdown;
@@ -114,7 +122,7 @@ foreach ($structure as $directory => $group) {
         $check(mb_strlen(trim(preg_replace('/^# .*$/m', '', $intro) ?? '')) >= 40, 'introduction_too_short', ['page' => $base]);
         foreach (preg_split('/\R\s*\R/u', $body) ?: [] as $paragraph) {
             $normalized = mb_strtolower(trim(preg_replace('/\s+/u', ' ', $paragraph) ?? ''));
-            if (mb_strlen($normalized) >= 100 && ! str_starts_with($normalized, '```') && ! str_contains($normalized, '|')) {
+            if (mb_strlen($normalized) >= 100 && ! str_starts_with($normalized, '```') && ! str_starts_with($normalized, ':::') && ! str_contains($normalized, '|')) {
                 $paragraphs[$normalized][] = $base;
             }
         }
@@ -122,7 +130,7 @@ foreach ($structure as $directory => $group) {
 }
 
 $guideIndex = $read('content/ru/guide/index.md');
-foreach (['## Когда применять', '## Пример', '## Что дальше'] as $heading) {
+foreach (['## Когда применять', '## Пример'] as $heading) {
     $check(str_contains($guideIndex, $heading), 'guide_index_section_missing', ['heading' => $heading]);
 }
 foreach ($paragraphs as $paragraph => $files) {

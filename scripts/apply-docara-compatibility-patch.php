@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $apply = in_array('--apply', $argv, true);
-$manifestPath = $root . '/patches/docara/61964e928b281ae9e86cab6cf7bc613da303b559.json';
+$manifestPath = $root . '/patches/docara/1af9ff750a1ab3c479ec42f19860317c8c6917aa.json';
 $manifest = json_decode((string) file_get_contents($manifestPath), true, 512, JSON_THROW_ON_ERROR);
 $lock = json_decode((string) file_get_contents($root . '/composer.lock'), true, 512, JSON_THROW_ON_ERROR);
 $package = null;
@@ -48,6 +48,7 @@ foreach ($manifest['files'] as $file) {
     $state = match ($actual) {
         $file['base_sha256'] => 'base',
         $file['target_sha256'] => 'target',
+        $file['upgrade_sha256'] ?? '__no_upgrade__' => 'upgrade',
         default => 'drift',
     };
     $states[] = ['path' => $file['path'], 'state' => $state, 'actual_sha256' => $actual];
@@ -62,7 +63,7 @@ if ($drifted !== []) {
 }
 $baseFiles = array_values(array_filter(
     $states,
-    static fn (array $state): bool => $state['state'] === 'base',
+    static fn (array $state): bool => in_array($state['state'], ['base', 'upgrade'], true),
 ));
 if ($baseFiles === []) {
     echo json_encode([
@@ -99,6 +100,7 @@ $run = static function (array $command) use ($root): array {
 };
 
 foreach ($baseFiles as $file) {
+    $selectedPatch = $file['state'] === 'upgrade' ? dirname($manifestPath) . '/' . $manifest['upgrade_patch'] : $patchPath;
     $baseCommand = [
         'git',
         'apply',
@@ -106,14 +108,14 @@ foreach ($baseFiles as $file) {
         '--directory=vendor/simai/docara',
         '--include=vendor/simai/docara/' . $file['path'],
     ];
-    [$checkCode, , $checkError] = $run([...$baseCommand, '--check', $patchPath]);
+    [$checkCode, , $checkError] = $run([...$baseCommand, '--check', $selectedPatch]);
     if ($checkCode !== 0) {
         $fail('patch_check_failed', [
             'path' => $file['path'],
             'error' => trim($checkError),
         ]);
     }
-    [$applyCode, , $applyError] = $run([...$baseCommand, $patchPath]);
+    [$applyCode, , $applyError] = $run([...$baseCommand, $selectedPatch]);
     if ($applyCode !== 0) {
         $fail('patch_apply_failed', [
             'path' => $file['path'],

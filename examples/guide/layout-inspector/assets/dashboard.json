@@ -1,0 +1,80 @@
+{
+  "schema": "simai.composition.document.v1",
+  "id": "dashboard",
+  "profile": "ui-layout",
+  "locale": "ru",
+  "root": {
+    "id": "page",
+    "type": "layout.page",
+    "slots": {
+      "default": [
+        {
+          "id": "summary",
+          "type": "layout.section",
+          "slots": {
+            "default": [
+              {
+                "id": "summary-title",
+                "type": "content.heading",
+                "data": {
+                  "level": 2,
+                  "content": [
+                    {
+                      "type": "text",
+                      "value": "Сводка"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "orders",
+                "type": "content.paragraph",
+                "data": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "value": "Заказы: 12. Пример статичных данных."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "activity",
+          "type": "layout.section",
+          "slots": {
+            "default": [
+              {
+                "id": "activity-title",
+                "type": "content.heading",
+                "data": {
+                  "level": 2,
+                  "content": [
+                    {
+                      "type": "text",
+                      "value": "Последние действия"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "activity-text",
+                "type": "content.paragraph",
+                "data": {
+                  "content": [
+                    {
+                      "type": "text",
+                      "value": "Новый заказ получен. Данные задаёт проект."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

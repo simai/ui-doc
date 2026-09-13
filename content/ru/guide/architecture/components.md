@@ -13,12 +13,9 @@ description: "Готовая структура и оформление повт
 
 ## Пример
 
-```html
-<button class="button button--primary" type="button">Сохранить</button>
-```
+
 
 Точное имя класса, варианты и состояния всегда проверяйте на странице компонента.
 
-## Что дальше
-
-Откройте [каталог компонентов](/ru/components/) или узнайте, когда нужен [Smart-компонент](/ru/guide/architecture/smart-components/).
+:::example {id="components/buttons/basic" label="Работающий пример"}
+:::

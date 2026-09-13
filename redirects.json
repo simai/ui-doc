@@ -1,1830 +1,2286 @@
 {
-    "schema": "docara.redirects.v1",
-    "version": 1,
-    "redirects": [
-        {
-            "from": "en/components/introduction",
-            "to": "en/framework-components/introduction"
-        },
-        {
-            "from": "en/fundamentals/abbreviations-of-properties",
-            "to": "en/fundamentals/abbreviations-of-properties/abbreviations-of-properties"
-        },
-        {
-            "from": "en/fundamentals/alignment",
-            "to": "en/fundamentals/alignment/alignment"
-        },
-        {
-            "from": "en/fundamentals/color",
-            "to": "en/fundamentals/color/color"
-        },
-        {
-            "from": "en/fundamentals/concept/abbreviations-of-properties/abbreviations-of-properties",
-            "to": "en/fundamentals/concept/abbreviations-of-properties-abbreviations-of-properties"
-        },
-        {
-            "from": "en/fundamentals/concept/alignment/alignment",
-            "to": "en/fundamentals/concept/alignment-alignment"
-        },
-        {
-            "from": "en/fundamentals/concept/break-points/break-points-description",
-            "to": "en/fundamentals/concept/break-points-break-points-description"
-        },
-        {
-            "from": "en/fundamentals/concept/break-points/break-points-mobile-and-desktop",
-            "to": "en/fundamentals/concept/break-points-break-points-mobile-and-desktop"
-        },
-        {
-            "from": "en/fundamentals/concept/break-points/break-points-prefixes",
-            "to": "en/fundamentals/concept/break-points-break-points-prefixes"
-        },
-        {
-            "from": "en/fundamentals/concept/break-points/break-points-relationship",
-            "to": "en/fundamentals/concept/break-points-break-points-relationship"
-        },
-        {
-            "from": "en/fundamentals/concept/break-points/break-points-variables",
-            "to": "en/fundamentals/concept/break-points-break-points-variables"
-        },
-        {
-            "from": "en/fundamentals/concept/color/color",
-            "to": "en/fundamentals/concept/color-color"
-        },
-        {
-            "from": "en/fundamentals/concept/color/color-generator",
-            "to": "en/fundamentals/concept/color-color-generator"
-        },
-        {
-            "from": "en/fundamentals/concept/color/color-palette",
-            "to": "en/fundamentals/concept/color-color-palette"
-        },
-        {
-            "from": "en/fundamentals/concept/color/new-approach-to-using-color",
-            "to": "en/fundamentals/concept/color-new-approach-to-using-color"
-        },
-        {
-            "from": "en/fundamentals/concept/directions/directions",
-            "to": "en/fundamentals/concept/directions-directions"
-        },
-        {
-            "from": "en/fundamentals/concept/modifier-parameters/angle-parameter",
-            "to": "en/fundamentals/concept/modifier-parameters-angle-parameter"
-        },
-        {
-            "from": "en/fundamentals/concept/modifier-parameters/axle-designations",
-            "to": "en/fundamentals/concept/modifier-parameters-axle-designations"
-        },
-        {
-            "from": "en/fundamentals/concept/modifier-parameters/examples-of-parameters-in-modifiers",
-            "to": "en/fundamentals/concept/modifier-parameters-examples-of-parameters-in-modifiers"
-        },
-        {
-            "from": "en/fundamentals/concept/modifier-parameters/modifier-parameters",
-            "to": "en/fundamentals/concept/modifier-parameters-modifier-parameters"
-        },
-        {
-            "from": "en/fundamentals/concept/modifier-parameters/side-parameter",
-            "to": "en/fundamentals/concept/modifier-parameters-side-parameter"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/direct-translation",
-            "to": "en/fundamentals/concept/sizes-direct-translation"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/from-old-to-new",
-            "to": "en/fundamentals/concept/sizes-from-old-to-new"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/indents",
-            "to": "en/fundamentals/concept/sizes-indents"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/mnemonic",
-            "to": "en/fundamentals/concept/sizes-mnemonic"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/relationship-between-letters-and-multipliers",
-            "to": "en/fundamentals/concept/sizes-relationship-between-letters-and-multipliers"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/reverse-conversion",
-            "to": "en/fundamentals/concept/sizes-reverse-conversion"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/reverse-translation",
-            "to": "en/fundamentals/concept/sizes-reverse-translation"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/size-conversion",
-            "to": "en/fundamentals/concept/sizes-size-conversion"
-        },
-        {
-            "from": "en/fundamentals/concept/sizes/sizes",
-            "to": "en/fundamentals/concept/sizes-sizes"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/border-radius",
-            "to": "en/fundamentals/concept/typography-border-radius"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/categories-font-sizes",
-            "to": "en/fundamentals/concept/typography-categories-font-sizes"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/changing-font-sizes",
-            "to": "en/fundamentals/concept/typography-changing-font-sizes"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/focus",
-            "to": "en/fundamentals/concept/typography-focus"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/font-family",
-            "to": "en/fundamentals/concept/typography-font-family"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/line-height",
-            "to": "en/fundamentals/concept/typography-line-height"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/links",
-            "to": "en/fundamentals/concept/typography-links"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/roles-of-text",
-            "to": "en/fundamentals/concept/typography-roles-of-text"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/shadows",
-            "to": "en/fundamentals/concept/typography-shadows"
-        },
-        {
-            "from": "en/fundamentals/concept/typography/text-indents",
-            "to": "en/fundamentals/concept/typography-text-indents"
-        },
-        {
-            "from": "en/fundamentals/concept/values/absolute-dimensions",
-            "to": "en/fundamentals/concept/values-absolute-dimensions"
-        },
-        {
-            "from": "en/fundamentals/concept/values/binary-values",
-            "to": "en/fundamentals/concept/values-binary-values"
-        },
-        {
-            "from": "en/fundamentals/concept/values/degrees",
-            "to": "en/fundamentals/concept/values-degrees"
-        },
-        {
-            "from": "en/fundamentals/concept/values/percents",
-            "to": "en/fundamentals/concept/values-percents"
-        },
-        {
-            "from": "en/fundamentals/concept/values/proportional-values",
-            "to": "en/fundamentals/concept/values-proportional-values"
-        },
-        {
-            "from": "en/fundamentals/concept/values/relative-sizes",
-            "to": "en/fundamentals/concept/values-relative-sizes"
-        },
-        {
-            "from": "en/fundamentals/concept/variables/variables",
-            "to": "en/fundamentals/concept/variables-variables"
-        },
-        {
-            "from": "en/fundamentals/concept/variables/variables-default",
-            "to": "en/fundamentals/concept/variables-variables-default"
-        },
-        {
-            "from": "en/fundamentals/concept/variables/variables-global",
-            "to": "en/fundamentals/concept/variables-variables-global"
-        },
-        {
-            "from": "en/fundamentals/concept/variables/variables-local",
-            "to": "en/fundamentals/concept/variables-variables-local"
-        },
-        {
-            "from": "en/fundamentals/concept/variables/variables-types",
-            "to": "en/fundamentals/concept/variables-variables-types"
-        },
-        {
-            "from": "en/fundamentals/directions",
-            "to": "en/fundamentals/directions/directions"
-        },
-        {
-            "from": "en/fundamentals/modifier-parameters",
-            "to": "en/fundamentals/modifier-parameters/modifier-parameters"
-        },
-        {
-            "from": "en/fundamentals/sizes",
-            "to": "en/fundamentals/sizes/sizes"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/change-background-on-hover",
-            "to": "en/fundamentals/themes/design-themes-change-background-on-hover"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/color-and-theme",
-            "to": "en/fundamentals/themes/design-themes-color-and-theme"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/design-themes",
-            "to": "en/fundamentals/themes/design-themes-design-themes"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/examples",
-            "to": "en/fundamentals/themes/design-themes-examples"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/named-colors",
-            "to": "en/fundamentals/themes/design-themes-named-colors"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/theme-color-palette/dark-theme-palette",
-            "to": "en/fundamentals/themes/design-themes-theme-color-palette-dark-theme-palette"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/theme-color-palette/light-theme-palette",
-            "to": "en/fundamentals/themes/design-themes-theme-color-palette-light-theme-palette"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/theme-color-palette/theme-color-palette",
-            "to": "en/fundamentals/themes/design-themes-theme-color-palette-theme-color-palette"
-        },
-        {
-            "from": "en/fundamentals/themes/design-themes/using-themes",
-            "to": "en/fundamentals/themes/design-themes-using-themes"
-        },
-        {
-            "from": "en/fundamentals/variables",
-            "to": "en/fundamentals/variables/variables"
-        },
-        {
-            "from": "en/reference/color-primitives",
-            "to": "en/reference/color-primitives/color-primitives"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/color-palette",
-            "to": "en/reference/color-primitives/color-palette-color-palette"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/error",
-            "to": "en/reference/color-primitives/color-palette-error"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/neutral",
-            "to": "en/reference/color-primitives/color-palette-neutral"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/primary",
-            "to": "en/reference/color-primitives/color-palette-primary"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/secondary",
-            "to": "en/reference/color-primitives/color-palette-secondary"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/success",
-            "to": "en/reference/color-primitives/color-palette-success"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/tertiary",
-            "to": "en/reference/color-primitives/color-palette-tertiary"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/transparent-white-black",
-            "to": "en/reference/color-primitives/color-palette-transparent-white-black"
-        },
-        {
-            "from": "en/reference/color-primitives/color-palette/warning",
-            "to": "en/reference/color-primitives/color-palette-warning"
-        },
-        {
-            "from": "en/reference/color-primitives/disable/disable",
-            "to": "en/reference/color-primitives/disable-disable"
-        },
-        {
-            "from": "en/reference/color-primitives/disable/features-of-use",
-            "to": "en/reference/color-primitives/disable-features-of-use"
-        },
-        {
-            "from": "en/reference/color-primitives/outline/features-of-use",
-            "to": "en/reference/color-primitives/outline-features-of-use"
-        },
-        {
-            "from": "en/reference/color-primitives/outline/outline",
-            "to": "en/reference/color-primitives/outline-outline"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers",
-            "to": "en/reference/properties-of-modifiers/properties-of-modifiers"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/animation",
-            "to": "en/reference/properties-of-modifiers/property-structure-animation"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/backdrop-filter",
-            "to": "en/reference/properties-of-modifiers/property-structure-backdrop-filter"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/background-color",
-            "to": "en/reference/properties-of-modifiers/property-structure-background-color"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/background-image",
-            "to": "en/reference/properties-of-modifiers/property-structure-background-image"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/border",
-            "to": "en/reference/properties-of-modifiers/property-structure-border"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/divider",
-            "to": "en/reference/properties-of-modifiers/property-structure-divider"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/filter",
-            "to": "en/reference/properties-of-modifiers/property-structure-filter"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/flex",
-            "to": "en/reference/properties-of-modifiers/property-structure-flex"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/form",
-            "to": "en/reference/properties-of-modifiers/property-structure-form"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/gradient",
-            "to": "en/reference/properties-of-modifiers/property-structure-gradient"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/grid",
-            "to": "en/reference/properties-of-modifiers/property-structure-grid"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/grid-flex",
-            "to": "en/reference/properties-of-modifiers/property-structure-grid-flex"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/interactivity",
-            "to": "en/reference/properties-of-modifiers/property-structure-interactivity"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/layout",
-            "to": "en/reference/properties-of-modifiers/property-structure-layout"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/layout-break",
-            "to": "en/reference/properties-of-modifiers/property-structure-layout-break"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/link",
-            "to": "en/reference/properties-of-modifiers/property-structure-link"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/object",
-            "to": "en/reference/properties-of-modifiers/property-structure-object"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/outline",
-            "to": "en/reference/properties-of-modifiers/property-structure-outline"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/print",
-            "to": "en/reference/properties-of-modifiers/property-structure-print"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/ring",
-            "to": "en/reference/properties-of-modifiers/property-structure-ring"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/scroll",
-            "to": "en/reference/properties-of-modifiers/property-structure-scroll"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/shadow",
-            "to": "en/reference/properties-of-modifiers/property-structure-shadow"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/size",
-            "to": "en/reference/properties-of-modifiers/property-structure-size"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/space",
-            "to": "en/reference/properties-of-modifiers/property-structure-space"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/stripe",
-            "to": "en/reference/properties-of-modifiers/property-structure-stripe"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/svg",
-            "to": "en/reference/properties-of-modifiers/property-structure-svg"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/table",
-            "to": "en/reference/properties-of-modifiers/property-structure-table"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/text-color",
-            "to": "en/reference/properties-of-modifiers/property-structure-text-color"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/text-decoration",
-            "to": "en/reference/properties-of-modifiers/property-structure-text-decoration"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/theme",
-            "to": "en/reference/properties-of-modifiers/property-structure-theme"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/transform",
-            "to": "en/reference/properties-of-modifiers/property-structure-transform"
-        },
-        {
-            "from": "en/reference/properties-of-modifiers/property-structure/typography",
-            "to": "en/reference/properties-of-modifiers/property-structure-typography"
-        },
-        {
-            "from": "en/start/loader/api",
-            "to": "en/start/loader/api-index"
-        },
-        {
-            "from": "en/start/loader/api/events",
-            "to": "en/start/loader/api-events"
-        },
-        {
-            "from": "en/start/loader/api/methods",
-            "to": "en/start/loader/api-methods"
-        },
-        {
-            "from": "en/start/loader/backend",
-            "to": "en/start/loader/backend-index"
-        },
-        {
-            "from": "en/start/loader/backend/caching",
-            "to": "en/start/loader/backend-caching"
-        },
-        {
-            "from": "en/start/loader/backend/integration",
-            "to": "en/start/loader/backend-integration"
-        },
-        {
-            "from": "en/start/loader/backend/server-interaction",
-            "to": "en/start/loader/backend-server-interaction"
-        },
-        {
-            "from": "en/start/loader/frontend",
-            "to": "en/start/loader/frontend-index"
-        },
-        {
-            "from": "en/start/loader/frontend/cache-control",
-            "to": "en/start/loader/frontend-cache-control"
-        },
-        {
-            "from": "en/start/loader/frontend/caching",
-            "to": "en/start/loader/frontend-caching"
-        },
-        {
-            "from": "en/start/loader/frontend/dependencies",
-            "to": "en/start/loader/frontend-dependencies"
-        },
-        {
-            "from": "en/start/loader/frontend/dynamic-js-css",
-            "to": "en/start/loader/frontend-dynamic-js-css"
-        },
-        {
-            "from": "en/start/loader/frontend/plugin-discovery",
-            "to": "en/start/loader/frontend-plugin-discovery"
-        },
-        {
-            "from": "en/start/loader/frontend/preloader",
-            "to": "en/start/loader/frontend-preloader"
-        },
-        {
-            "from": "en/start/loader/frontend/smart-components",
-            "to": "en/start/loader/frontend-smart-components"
-        },
-        {
-            "from": "en/start/loader/frontend/standalone",
-            "to": "en/start/loader/frontend-standalone"
-        },
-        {
-            "from": "ru/components/catalog",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/components/connection",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/components/examples",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/components/introduction",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/components/reference",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/components/reference/accordion",
-            "to": "ru/components/accordion"
-        },
-        {
-            "from": "ru/components/reference/admin-menu",
-            "to": "ru/components/admin-menu"
-        },
-        {
-            "from": "ru/components/reference/alerts",
-            "to": "ru/components/alerts"
-        },
-        {
-            "from": "ru/components/reference/avatars",
-            "to": "ru/components/avatars"
-        },
-        {
-            "from": "ru/components/reference/badges",
-            "to": "ru/components/badges"
-        },
-        {
-            "from": "ru/components/reference/breadcrumbs",
-            "to": "ru/components/breadcrumbs"
-        },
-        {
-            "from": "ru/components/reference/button-group",
-            "to": "ru/components/button-group"
-        },
-        {
-            "from": "ru/components/reference/buttons",
-            "to": "ru/components/buttons"
-        },
-        {
-            "from": "ru/components/reference/carousel",
-            "to": "ru/components/carousel"
-        },
-        {
-            "from": "ru/components/reference/checkbox",
-            "to": "ru/components/checkbox"
-        },
-        {
-            "from": "ru/components/reference/clipboard",
-            "to": "ru/components/clipboard"
-        },
-        {
-            "from": "ru/components/reference/close",
-            "to": "ru/components/close"
-        },
-        {
-            "from": "ru/components/reference/content-divider",
-            "to": "ru/components/content-divider"
-        },
-        {
-            "from": "ru/components/reference/context-menu",
-            "to": "ru/components/context-menu"
-        },
-        {
-            "from": "ru/components/reference/country-code",
-            "to": "ru/components/country-code"
-        },
-        {
-            "from": "ru/components/reference/datepicker",
-            "to": "ru/components/datepicker"
-        },
-        {
-            "from": "ru/components/reference/doc",
-            "to": "ru/components/doc"
-        },
-        {
-            "from": "ru/components/reference/dot",
-            "to": "ru/components/dot"
-        },
-        {
-            "from": "ru/components/reference/download-file",
-            "to": "ru/components/download-file"
-        },
-        {
-            "from": "ru/components/reference/dropdown",
-            "to": "ru/components/dropdown"
-        },
-        {
-            "from": "ru/components/reference/emoji",
-            "to": "ru/components/emoji"
-        },
-        {
-            "from": "ru/components/reference/fab",
-            "to": "ru/components/fab"
-        },
-        {
-            "from": "ru/components/reference/featured-icon",
-            "to": "ru/components/featured-icon"
-        },
-        {
-            "from": "ru/components/reference/file-upload",
-            "to": "ru/components/file-upload"
-        },
-        {
-            "from": "ru/components/reference/hide-show",
-            "to": "ru/components/hide-show"
-        },
-        {
-            "from": "ru/components/reference/highlight",
-            "to": "ru/components/highlight"
-        },
-        {
-            "from": "ru/components/reference/icon-buttons",
-            "to": "ru/components/icon-buttons"
-        },
-        {
-            "from": "ru/components/reference/icons",
-            "to": "ru/components/icons"
-        },
-        {
-            "from": "ru/components/reference/inputs",
-            "to": "ru/components/inputs"
-        },
-        {
-            "from": "ru/components/reference/kbd",
-            "to": "ru/components/kbd"
-        },
-        {
-            "from": "ru/components/reference/menu",
-            "to": "ru/components/menu"
-        },
-        {
-            "from": "ru/components/reference/modal",
-            "to": "ru/components/modal"
-        },
-        {
-            "from": "ru/components/reference/monaco",
-            "to": "ru/components/monaco"
-        },
-        {
-            "from": "ru/components/reference/outline",
-            "to": "ru/components/outline"
-        },
-        {
-            "from": "ru/components/reference/pagination",
-            "to": "ru/components/pagination"
-        },
-        {
-            "from": "ru/components/reference/placeholder",
-            "to": "ru/components/placeholder"
-        },
-        {
-            "from": "ru/components/reference/progress-bar",
-            "to": "ru/components/progress-bar"
-        },
-        {
-            "from": "ru/components/reference/progress-scale",
-            "to": "ru/components/progress-scale"
-        },
-        {
-            "from": "ru/components/reference/quantity",
-            "to": "ru/components/quantity"
-        },
-        {
-            "from": "ru/components/reference/radio",
-            "to": "ru/components/radio"
-        },
-        {
-            "from": "ru/components/reference/range-slider",
-            "to": "ru/components/range-slider"
-        },
-        {
-            "from": "ru/components/reference/reference-link",
-            "to": "ru/components/reference-link"
-        },
-        {
-            "from": "ru/components/reference/scrollbar",
-            "to": "ru/components/scrollbar"
-        },
-        {
-            "from": "ru/components/reference/skeleton",
-            "to": "ru/components/skeleton"
-        },
-        {
-            "from": "ru/components/reference/slider",
-            "to": "ru/components/slider"
-        },
-        {
-            "from": "ru/components/reference/spinner",
-            "to": "ru/components/spinner"
-        },
-        {
-            "from": "ru/components/reference/step",
-            "to": "ru/components/step"
-        },
-        {
-            "from": "ru/components/reference/swiper",
-            "to": "ru/components/swiper"
-        },
-        {
-            "from": "ru/components/reference/switch",
-            "to": "ru/components/switch"
-        },
-        {
-            "from": "ru/components/reference/tab",
-            "to": "ru/components/tab"
-        },
-        {
-            "from": "ru/components/reference/tabs",
-            "to": "ru/components/tabs"
-        },
-        {
-            "from": "ru/components/reference/tags",
-            "to": "ru/components/tags"
-        },
-        {
-            "from": "ru/components/reference/textarea",
-            "to": "ru/components/textarea"
-        },
-        {
-            "from": "ru/components/reference/theme",
-            "to": "ru/components/theme"
-        },
-        {
-            "from": "ru/components/reference/theme-builder",
-            "to": "ru/components/theme-builder"
-        },
-        {
-            "from": "ru/components/reference/toast",
-            "to": "ru/components/toast"
-        },
-        {
-            "from": "ru/components/reference/toggle",
-            "to": "ru/components/toggle"
-        },
-        {
-            "from": "ru/components/reference/tooltip",
-            "to": "ru/components/tooltip"
-        },
-        {
-            "from": "ru/components/reference/tree",
-            "to": "ru/components/tree"
-        },
-        {
-            "from": "ru/components/reference/tree-item",
-            "to": "ru/components/tree-item"
-        },
-        {
-            "from": "ru/components/reference/verification",
-            "to": "ru/components/verification"
-        },
-        {
-            "from": "ru/framework-components",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/framework-components/accordion",
-            "to": "ru/components/accordion"
-        },
-        {
-            "from": "ru/framework-components/admin-menu",
-            "to": "ru/components/admin-menu"
-        },
-        {
-            "from": "ru/framework-components/alerts",
-            "to": "ru/components/alerts"
-        },
-        {
-            "from": "ru/framework-components/avatars",
-            "to": "ru/components/avatars"
-        },
-        {
-            "from": "ru/framework-components/badges",
-            "to": "ru/components/badges"
-        },
-        {
-            "from": "ru/framework-components/breadcrumbs",
-            "to": "ru/components/breadcrumbs"
-        },
-        {
-            "from": "ru/framework-components/button-group",
-            "to": "ru/components/button-group"
-        },
-        {
-            "from": "ru/framework-components/buttons",
-            "to": "ru/components/buttons"
-        },
-        {
-            "from": "ru/framework-components/carousel",
-            "to": "ru/components/carousel"
-        },
-        {
-            "from": "ru/framework-components/catalog",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/framework-components/checkbox",
-            "to": "ru/components/checkbox"
-        },
-        {
-            "from": "ru/framework-components/clipboard",
-            "to": "ru/components/clipboard"
-        },
-        {
-            "from": "ru/framework-components/close",
-            "to": "ru/components/close"
-        },
-        {
-            "from": "ru/framework-components/connection",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/framework-components/content-divider",
-            "to": "ru/components/content-divider"
-        },
-        {
-            "from": "ru/framework-components/context-menu",
-            "to": "ru/components/context-menu"
-        },
-        {
-            "from": "ru/framework-components/country-code",
-            "to": "ru/components/country-code"
-        },
-        {
-            "from": "ru/framework-components/datepicker",
-            "to": "ru/components/datepicker"
-        },
-        {
-            "from": "ru/framework-components/doc",
-            "to": "ru/components/doc"
-        },
-        {
-            "from": "ru/framework-components/dot",
-            "to": "ru/components/dot"
-        },
-        {
-            "from": "ru/framework-components/download-file",
-            "to": "ru/components/download-file"
-        },
-        {
-            "from": "ru/framework-components/dropdown",
-            "to": "ru/components/dropdown"
-        },
-        {
-            "from": "ru/framework-components/emoji",
-            "to": "ru/components/emoji"
-        },
-        {
-            "from": "ru/framework-components/examples",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/framework-components/fab",
-            "to": "ru/components/fab"
-        },
-        {
-            "from": "ru/framework-components/featured-icon",
-            "to": "ru/components/featured-icon"
-        },
-        {
-            "from": "ru/framework-components/file-upload",
-            "to": "ru/components/file-upload"
-        },
-        {
-            "from": "ru/framework-components/hide-show",
-            "to": "ru/components/hide-show"
-        },
-        {
-            "from": "ru/framework-components/highlight",
-            "to": "ru/components/highlight"
-        },
-        {
-            "from": "ru/framework-components/icon-buttons",
-            "to": "ru/components/icon-buttons"
-        },
-        {
-            "from": "ru/framework-components/icons",
-            "to": "ru/components/icons"
-        },
-        {
-            "from": "ru/framework-components/inputs",
-            "to": "ru/components/inputs"
-        },
-        {
-            "from": "ru/framework-components/introduction",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/framework-components/kbd",
-            "to": "ru/components/kbd"
-        },
-        {
-            "from": "ru/framework-components/menu",
-            "to": "ru/components/menu"
-        },
-        {
-            "from": "ru/framework-components/modal",
-            "to": "ru/components/modal"
-        },
-        {
-            "from": "ru/framework-components/monaco",
-            "to": "ru/components/monaco"
-        },
-        {
-            "from": "ru/framework-components/outline",
-            "to": "ru/components/outline"
-        },
-        {
-            "from": "ru/framework-components/pagination",
-            "to": "ru/components/pagination"
-        },
-        {
-            "from": "ru/framework-components/placeholder",
-            "to": "ru/components/placeholder"
-        },
-        {
-            "from": "ru/framework-components/progress-bar",
-            "to": "ru/components/progress-bar"
-        },
-        {
-            "from": "ru/framework-components/progress-scale",
-            "to": "ru/components/progress-scale"
-        },
-        {
-            "from": "ru/framework-components/quantity",
-            "to": "ru/components/quantity"
-        },
-        {
-            "from": "ru/framework-components/radio",
-            "to": "ru/components/radio"
-        },
-        {
-            "from": "ru/framework-components/range-slider",
-            "to": "ru/components/range-slider"
-        },
-        {
-            "from": "ru/framework-components/reference",
-            "to": "ru/components"
-        },
-        {
-            "from": "ru/framework-components/reference-link",
-            "to": "ru/components/reference-link"
-        },
-        {
-            "from": "ru/framework-components/reference/accordion",
-            "to": "ru/components/accordion"
-        },
-        {
-            "from": "ru/framework-components/reference/admin-menu",
-            "to": "ru/components/admin-menu"
-        },
-        {
-            "from": "ru/framework-components/reference/alerts",
-            "to": "ru/components/alerts"
-        },
-        {
-            "from": "ru/framework-components/reference/avatars",
-            "to": "ru/components/avatars"
-        },
-        {
-            "from": "ru/framework-components/reference/badges",
-            "to": "ru/components/badges"
-        },
-        {
-            "from": "ru/framework-components/reference/breadcrumbs",
-            "to": "ru/components/breadcrumbs"
-        },
-        {
-            "from": "ru/framework-components/reference/button-group",
-            "to": "ru/components/button-group"
-        },
-        {
-            "from": "ru/framework-components/reference/buttons",
-            "to": "ru/components/buttons"
-        },
-        {
-            "from": "ru/framework-components/reference/carousel",
-            "to": "ru/components/carousel"
-        },
-        {
-            "from": "ru/framework-components/reference/checkbox",
-            "to": "ru/components/checkbox"
-        },
-        {
-            "from": "ru/framework-components/reference/clipboard",
-            "to": "ru/components/clipboard"
-        },
-        {
-            "from": "ru/framework-components/reference/close",
-            "to": "ru/components/close"
-        },
-        {
-            "from": "ru/framework-components/reference/content-divider",
-            "to": "ru/components/content-divider"
-        },
-        {
-            "from": "ru/framework-components/reference/context-menu",
-            "to": "ru/components/context-menu"
-        },
-        {
-            "from": "ru/framework-components/reference/country-code",
-            "to": "ru/components/country-code"
-        },
-        {
-            "from": "ru/framework-components/reference/datepicker",
-            "to": "ru/components/datepicker"
-        },
-        {
-            "from": "ru/framework-components/reference/doc",
-            "to": "ru/components/doc"
-        },
-        {
-            "from": "ru/framework-components/reference/dot",
-            "to": "ru/components/dot"
-        },
-        {
-            "from": "ru/framework-components/reference/download-file",
-            "to": "ru/components/download-file"
-        },
-        {
-            "from": "ru/framework-components/reference/dropdown",
-            "to": "ru/components/dropdown"
-        },
-        {
-            "from": "ru/framework-components/reference/emoji",
-            "to": "ru/components/emoji"
-        },
-        {
-            "from": "ru/framework-components/reference/fab",
-            "to": "ru/components/fab"
-        },
-        {
-            "from": "ru/framework-components/reference/featured-icon",
-            "to": "ru/components/featured-icon"
-        },
-        {
-            "from": "ru/framework-components/reference/file-upload",
-            "to": "ru/components/file-upload"
-        },
-        {
-            "from": "ru/framework-components/reference/hide-show",
-            "to": "ru/components/hide-show"
-        },
-        {
-            "from": "ru/framework-components/reference/highlight",
-            "to": "ru/components/highlight"
-        },
-        {
-            "from": "ru/framework-components/reference/icon-buttons",
-            "to": "ru/components/icon-buttons"
-        },
-        {
-            "from": "ru/framework-components/reference/icons",
-            "to": "ru/components/icons"
-        },
-        {
-            "from": "ru/framework-components/reference/inputs",
-            "to": "ru/components/inputs"
-        },
-        {
-            "from": "ru/framework-components/reference/kbd",
-            "to": "ru/components/kbd"
-        },
-        {
-            "from": "ru/framework-components/reference/menu",
-            "to": "ru/components/menu"
-        },
-        {
-            "from": "ru/framework-components/reference/modal",
-            "to": "ru/components/modal"
-        },
-        {
-            "from": "ru/framework-components/reference/monaco",
-            "to": "ru/components/monaco"
-        },
-        {
-            "from": "ru/framework-components/reference/outline",
-            "to": "ru/components/outline"
-        },
-        {
-            "from": "ru/framework-components/reference/pagination",
-            "to": "ru/components/pagination"
-        },
-        {
-            "from": "ru/framework-components/reference/placeholder",
-            "to": "ru/components/placeholder"
-        },
-        {
-            "from": "ru/framework-components/reference/progress-bar",
-            "to": "ru/components/progress-bar"
-        },
-        {
-            "from": "ru/framework-components/reference/progress-scale",
-            "to": "ru/components/progress-scale"
-        },
-        {
-            "from": "ru/framework-components/reference/quantity",
-            "to": "ru/components/quantity"
-        },
-        {
-            "from": "ru/framework-components/reference/radio",
-            "to": "ru/components/radio"
-        },
-        {
-            "from": "ru/framework-components/reference/range-slider",
-            "to": "ru/components/range-slider"
-        },
-        {
-            "from": "ru/framework-components/reference/reference-link",
-            "to": "ru/components/reference-link"
-        },
-        {
-            "from": "ru/framework-components/reference/scrollbar",
-            "to": "ru/components/scrollbar"
-        },
-        {
-            "from": "ru/framework-components/reference/skeleton",
-            "to": "ru/components/skeleton"
-        },
-        {
-            "from": "ru/framework-components/reference/slider",
-            "to": "ru/components/slider"
-        },
-        {
-            "from": "ru/framework-components/reference/spinner",
-            "to": "ru/components/spinner"
-        },
-        {
-            "from": "ru/framework-components/reference/step",
-            "to": "ru/components/step"
-        },
-        {
-            "from": "ru/framework-components/reference/swiper",
-            "to": "ru/components/swiper"
-        },
-        {
-            "from": "ru/framework-components/reference/switch",
-            "to": "ru/components/switch"
-        },
-        {
-            "from": "ru/framework-components/reference/tab",
-            "to": "ru/components/tab"
-        },
-        {
-            "from": "ru/framework-components/reference/tabs",
-            "to": "ru/components/tabs"
-        },
-        {
-            "from": "ru/framework-components/reference/tags",
-            "to": "ru/components/tags"
-        },
-        {
-            "from": "ru/framework-components/reference/textarea",
-            "to": "ru/components/textarea"
-        },
-        {
-            "from": "ru/framework-components/reference/theme",
-            "to": "ru/components/theme"
-        },
-        {
-            "from": "ru/framework-components/reference/theme-builder",
-            "to": "ru/components/theme-builder"
-        },
-        {
-            "from": "ru/framework-components/reference/toast",
-            "to": "ru/components/toast"
-        },
-        {
-            "from": "ru/framework-components/reference/toggle",
-            "to": "ru/components/toggle"
-        },
-        {
-            "from": "ru/framework-components/reference/tooltip",
-            "to": "ru/components/tooltip"
-        },
-        {
-            "from": "ru/framework-components/reference/tree",
-            "to": "ru/components/tree"
-        },
-        {
-            "from": "ru/framework-components/reference/tree-item",
-            "to": "ru/components/tree-item"
-        },
-        {
-            "from": "ru/framework-components/reference/verification",
-            "to": "ru/components/verification"
-        },
-        {
-            "from": "ru/framework-components/scrollbar",
-            "to": "ru/components/scrollbar"
-        },
-        {
-            "from": "ru/framework-components/skeleton",
-            "to": "ru/components/skeleton"
-        },
-        {
-            "from": "ru/framework-components/slider",
-            "to": "ru/components/slider"
-        },
-        {
-            "from": "ru/framework-components/spinner",
-            "to": "ru/components/spinner"
-        },
-        {
-            "from": "ru/framework-components/step",
-            "to": "ru/components/step"
-        },
-        {
-            "from": "ru/framework-components/swiper",
-            "to": "ru/components/swiper"
-        },
-        {
-            "from": "ru/framework-components/switch",
-            "to": "ru/components/switch"
-        },
-        {
-            "from": "ru/framework-components/tab",
-            "to": "ru/components/tab"
-        },
-        {
-            "from": "ru/framework-components/tabs",
-            "to": "ru/components/tabs"
-        },
-        {
-            "from": "ru/framework-components/tags",
-            "to": "ru/components/tags"
-        },
-        {
-            "from": "ru/framework-components/textarea",
-            "to": "ru/components/textarea"
-        },
-        {
-            "from": "ru/framework-components/theme",
-            "to": "ru/components/theme"
-        },
-        {
-            "from": "ru/framework-components/theme-builder",
-            "to": "ru/components/theme-builder"
-        },
-        {
-            "from": "ru/framework-components/toast",
-            "to": "ru/components/toast"
-        },
-        {
-            "from": "ru/framework-components/toggle",
-            "to": "ru/components/toggle"
-        },
-        {
-            "from": "ru/framework-components/tooltip",
-            "to": "ru/components/tooltip"
-        },
-        {
-            "from": "ru/framework-components/tree",
-            "to": "ru/components/tree"
-        },
-        {
-            "from": "ru/framework-components/tree-item",
-            "to": "ru/components/tree-item"
-        },
-        {
-            "from": "ru/framework-components/verification",
-            "to": "ru/components/verification"
-        },
-        {
-            "from": "ru/fundamentals",
-            "to": "ru/guide/fundamentals"
-        },
-        {
-            "from": "ru/fundamentals/abbreviations-of-properties",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/adaptive-sizing-system",
-            "to": "ru/guide/fundamentals/adaptive-sizing"
-        },
-        {
-            "from": "ru/fundamentals/alignment",
-            "to": "ru/guide/fundamentals/values-and-scales"
-        },
-        {
-            "from": "ru/fundamentals/alignment/alignment",
-            "to": "ru/guide/fundamentals/values-and-scales"
-        },
-        {
-            "from": "ru/fundamentals/architecture",
-            "to": "ru/guide/architecture/overview"
-        },
-        {
-            "from": "ru/fundamentals/best-practices",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/breakpoints",
-            "to": "ru/guide/fundamentals/conditions"
-        },
-        {
-            "from": "ru/fundamentals/colors-and-themes",
-            "to": "ru/guide/fundamentals/colors-and-themes"
-        },
-        {
-            "from": "ru/fundamentals/conditions",
-            "to": "ru/guide/fundamentals/conditions"
-        },
-        {
-            "from": "ru/fundamentals/content-spacing",
-            "to": "ru/guide/fundamentals/spacing"
-        },
-        {
-            "from": "ru/fundamentals/design-tokens",
-            "to": "ru/guide/fundamentals/design-tokens"
-        },
-        {
-            "from": "ru/fundamentals/directions",
-            "to": "ru/guide/fundamentals/values-and-scales"
-        },
-        {
-            "from": "ru/fundamentals/directions/directions",
-            "to": "ru/guide/fundamentals/values-and-scales"
-        },
-        {
-            "from": "ru/fundamentals/modifier-parameters",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/modifier-parameters/angle-parameter",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/modifier-parameters/axle-designations",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/modifier-parameters/examples-of-parameters-in-modifiers",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/modifier-parameters/modifier-parameters",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/modifier-parameters/side-parameter",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/modifiers",
-            "to": "ru/guide/fundamentals/modifiers"
-        },
-        {
-            "from": "ru/fundamentals/sizes",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/direct-translation",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/from-old-to-new",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/indents",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/mnemonic",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/relationship-between-letters-and-multipliers",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/reverse-conversion",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/reverse-translation",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/size-conversion",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/sizes/size-scale",
-            "to": "ru/guide/fundamentals/size-scale"
-        },
-        {
-            "from": "ru/fundamentals/sizes/sizes",
-            "to": "ru/guide/fundamentals/sizes"
-        },
-        {
-            "from": "ru/fundamentals/states",
-            "to": "ru/guide/fundamentals/conditions"
-        },
-        {
-            "from": "ru/fundamentals/typography-system",
-            "to": "ru/guide/fundamentals/typography"
-        },
-        {
-            "from": "ru/fundamentals/values",
-            "to": "ru/guide/fundamentals/values-and-scales"
-        },
-        {
-            "from": "ru/fundamentals/values-and-scales",
-            "to": "ru/guide/fundamentals/values-and-scales"
-        },
-        {
-            "from": "ru/guide/composition",
-            "to": "ru/guide/layouts"
-        },
-        {
-            "from": "ru/guide/composition/custom-type",
-            "to": "ru/guide/layouts/reference/custom-type"
-        },
-        {
-            "from": "ru/guide/composition/data-and-sources",
-            "to": "ru/guide/layouts/content-and-data/data-sources"
-        },
-        {
-            "from": "ru/guide/composition/document-and-tree",
-            "to": "ru/guide/layouts/reference/document"
-        },
-        {
-            "from": "ru/guide/composition/rendering-and-project",
-            "to": "ru/guide/layouts/content-and-data/rendering-boundary"
-        },
-        {
-            "from": "ru/guide/composition/structured-text",
-            "to": "ru/guide/layouts/content-and-data/structured-text"
-        },
-        {
-            "from": "ru/guide/composition/types-and-slots",
-            "to": "ru/guide/layouts/building/slots"
-        },
-        {
-            "from": "ru/guide/composition/versions-and-compatibility",
-            "to": "ru/guide/layouts/reference/versions"
-        },
-        {
-            "from": "ru/guide/composition/what-is-composition",
-            "to": "ru/guide/layouts/introduction/what-is-layout"
-        },
-        {
-            "from": "ru/layout",
-            "to": "ru/guide/layouts"
-        },
-        {
-            "from": "ru/layout/building/block",
-            "to": "ru/guide/layouts/building/block"
-        },
-        {
-            "from": "ru/layout/building/complex-smart-component",
-            "to": "ru/guide/layouts/building/complex-smart-component"
-        },
-        {
-            "from": "ru/layout/building/component",
-            "to": "ru/guide/layouts/building/component"
-        },
-        {
-            "from": "ru/layout/building/page",
-            "to": "ru/guide/layouts/building/page"
-        },
-        {
-            "from": "ru/layout/building/section",
-            "to": "ru/guide/layouts/building/section"
-        },
-        {
-            "from": "ru/layout/building/slots",
-            "to": "ru/guide/layouts/building/slots"
-        },
-        {
-            "from": "ru/layout/building/smart-component",
-            "to": "ru/guide/layouts/building/smart-component"
-        },
-        {
-            "from": "ru/layout/content-and-data/data-sources",
-            "to": "ru/guide/layouts/content-and-data/data-sources"
-        },
-        {
-            "from": "ru/layout/content-and-data/rendering-boundary",
-            "to": "ru/guide/layouts/content-and-data/rendering-boundary"
-        },
-        {
-            "from": "ru/layout/content-and-data/structured-text",
-            "to": "ru/guide/layouts/content-and-data/structured-text"
-        },
-        {
-            "from": "ru/layout/examples/catalog",
-            "to": "ru/guide/layouts/examples/catalog"
-        },
-        {
-            "from": "ru/layout/examples/dashboard",
-            "to": "ru/guide/layouts/examples/dashboard"
-        },
-        {
-            "from": "ru/layout/examples/information-page",
-            "to": "ru/guide/layouts/examples/information-page"
-        },
-        {
-            "from": "ru/layout/introduction/document-flow",
-            "to": "ru/guide/layouts/introduction/document-flow"
-        },
-        {
-            "from": "ru/layout/introduction/levels",
-            "to": "ru/guide/layouts/introduction/levels"
-        },
-        {
-            "from": "ru/layout/introduction/what-is-layout",
-            "to": "ru/guide/layouts/introduction/what-is-layout"
-        },
-        {
-            "from": "ru/layout/reference/api",
-            "to": "ru/guide/layouts/reference/api"
-        },
-        {
-            "from": "ru/layout/reference/custom-type",
-            "to": "ru/guide/layouts/reference/custom-type"
-        },
-        {
-            "from": "ru/layout/reference/diagnostics",
-            "to": "ru/guide/layouts/reference/diagnostics"
-        },
-        {
-            "from": "ru/layout/reference/document",
-            "to": "ru/guide/layouts/reference/document"
-        },
-        {
-            "from": "ru/layout/reference/studio-inspector",
-            "to": "ru/guide/layouts/reference/studio-inspector"
-        },
-        {
-            "from": "ru/layout/reference/type-manifest",
-            "to": "ru/guide/layouts/reference/type-manifest"
-        },
-        {
-            "from": "ru/layout/reference/versions",
-            "to": "ru/guide/layouts/reference/versions"
-        },
-        {
-            "from": "ru/reference/color-primitives",
-            "to": "ru/reference/color-primitives/color-primitives"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/color-palette",
-            "to": "ru/reference/color-primitives/color-palette-color-palette"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/error",
-            "to": "ru/reference/color-primitives/color-palette-error"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/neutral",
-            "to": "ru/reference/color-primitives/color-palette-neutral"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/primary",
-            "to": "ru/reference/color-primitives/color-palette-primary"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/secondary",
-            "to": "ru/reference/color-primitives/color-palette-secondary"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/success",
-            "to": "ru/reference/color-primitives/color-palette-success"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/tertiary",
-            "to": "ru/reference/color-primitives/color-palette-tertiary"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/transparent-white-black",
-            "to": "ru/reference/color-primitives/color-palette-transparent-white-black"
-        },
-        {
-            "from": "ru/reference/color-primitives/color-palette/warning",
-            "to": "ru/reference/color-primitives/color-palette-warning"
-        },
-        {
-            "from": "ru/reference/color-primitives/disable/disable",
-            "to": "ru/reference/color-primitives/disable-disable"
-        },
-        {
-            "from": "ru/reference/color-primitives/disable/features-of-use",
-            "to": "ru/reference/color-primitives/disable-features-of-use"
-        },
-        {
-            "from": "ru/reference/color-primitives/outline/features-of-use",
-            "to": "ru/reference/color-primitives/outline-features-of-use"
-        },
-        {
-            "from": "ru/reference/color-primitives/outline/outline",
-            "to": "ru/reference/color-primitives/outline-outline"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers",
-            "to": "ru/reference/properties-of-modifiers/properties-of-modifiers"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/animation",
-            "to": "ru/reference/properties-of-modifiers/property-structure-animation"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/backdrop-filter",
-            "to": "ru/reference/properties-of-modifiers/property-structure-backdrop-filter"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/background-color",
-            "to": "ru/reference/properties-of-modifiers/property-structure-background-color"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/background-image",
-            "to": "ru/reference/properties-of-modifiers/property-structure-background-image"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/border",
-            "to": "ru/reference/properties-of-modifiers/property-structure-border"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/divider",
-            "to": "ru/reference/properties-of-modifiers/property-structure-divider"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/filter",
-            "to": "ru/reference/properties-of-modifiers/property-structure-filter"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/flex",
-            "to": "ru/reference/properties-of-modifiers/property-structure-flex"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/form",
-            "to": "ru/reference/properties-of-modifiers/property-structure-form"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/gradient",
-            "to": "ru/reference/properties-of-modifiers/property-structure-gradient"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/grid",
-            "to": "ru/reference/properties-of-modifiers/property-structure-grid"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/grid-flex",
-            "to": "ru/reference/properties-of-modifiers/property-structure-grid-flex"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/interactivity",
-            "to": "ru/reference/properties-of-modifiers/property-structure-interactivity"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/layout",
-            "to": "ru/reference/properties-of-modifiers/property-structure-layout"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/layout-break",
-            "to": "ru/reference/properties-of-modifiers/property-structure-layout-break"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/link",
-            "to": "ru/reference/properties-of-modifiers/property-structure-link"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/object",
-            "to": "ru/reference/properties-of-modifiers/property-structure-object"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/outline",
-            "to": "ru/reference/properties-of-modifiers/property-structure-outline"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/print",
-            "to": "ru/reference/properties-of-modifiers/property-structure-print"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/ring",
-            "to": "ru/reference/properties-of-modifiers/property-structure-ring"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/scroll",
-            "to": "ru/reference/properties-of-modifiers/property-structure-scroll"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/shadow",
-            "to": "ru/reference/properties-of-modifiers/property-structure-shadow"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/size",
-            "to": "ru/reference/properties-of-modifiers/property-structure-size"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/space",
-            "to": "ru/reference/properties-of-modifiers/property-structure-space"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/stripe",
-            "to": "ru/reference/properties-of-modifiers/property-structure-stripe"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/svg",
-            "to": "ru/reference/properties-of-modifiers/property-structure-svg"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/table",
-            "to": "ru/reference/properties-of-modifiers/property-structure-table"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/text-color",
-            "to": "ru/reference/properties-of-modifiers/property-structure-text-color"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/text-decoration",
-            "to": "ru/reference/properties-of-modifiers/property-structure-text-decoration"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/theme",
-            "to": "ru/reference/properties-of-modifiers/property-structure-theme"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/transform",
-            "to": "ru/reference/properties-of-modifiers/property-structure-transform"
-        },
-        {
-            "from": "ru/reference/properties-of-modifiers/property-structure/typography",
-            "to": "ru/reference/properties-of-modifiers/property-structure-typography"
-        },
-        {
-            "from": "ru/smart-components/catalog",
-            "to": "ru/guide/smart-components/catalog-and-readiness"
-        },
-        {
-            "from": "ru/smart-components/connection",
-            "to": "ru/guide/smart-components/connection"
-        },
-        {
-            "from": "ru/smart-components/examples",
-            "to": "ru/guide/smart-components/examples"
-        },
-        {
-            "from": "ru/smart-components/introduction",
-            "to": "ru/guide/smart-components/introduction"
-        },
-        {
-            "from": "ru/smart-components/lifecycle",
-            "to": "ru/guide/smart-components/lifecycle"
-        },
-        {
-            "from": "ru/smart-components/templates-and-assets",
-            "to": "ru/guide/smart-components/templates-and-assets"
-        },
-        {
-            "from": "ru/start",
-            "to": "ru/guide/introduction/quick-start"
-        },
-        {
-            "from": "ru/start/ai",
-            "to": "ru/guide/practical/ai"
-        },
-        {
-            "from": "ru/start/compatibility",
-            "to": "ru/guide/connection/versions-and-updates"
-        },
-        {
-            "from": "ru/start/glossary",
-            "to": "ru/guide/introduction/quick-start"
-        },
-        {
-            "from": "ru/start/installation",
-            "to": "ru/guide/connection/project-setup"
-        },
-        {
-            "from": "ru/start/integration-patterns",
-            "to": "ru/guide/connection/project-setup"
-        },
-        {
-            "from": "ru/start/introduction",
-            "to": "ru/guide/introduction/quick-start"
-        },
-        {
-            "from": "ru/start/loader",
-            "to": "ru/guide/connection/project-setup"
-        },
-        {
-            "from": "ru/start/playground",
-            "to": "ru/guide/introduction/quick-start"
-        },
-        {
-            "from": "ru/start/project-setup",
-            "to": "ru/guide/connection/project-setup"
-        },
-        {
-            "from": "ru/start/quickstart",
-            "to": "ru/guide/introduction/quick-start"
-        },
-        {
-            "from": "ru/start/vision",
-            "to": "ru/guide/introduction/what-is-simai-framework"
-        }
-    ]
+  "schema": "docara.redirects.v1",
+  "version": 1,
+  "redirects": [
+    {
+      "from": "en/components/introduction",
+      "to": "en/framework-components/introduction"
+    },
+    {
+      "from": "en/fundamentals/abbreviations-of-properties",
+      "to": "en/fundamentals/abbreviations-of-properties/abbreviations-of-properties"
+    },
+    {
+      "from": "en/fundamentals/alignment",
+      "to": "en/fundamentals/alignment/alignment"
+    },
+    {
+      "from": "en/fundamentals/color",
+      "to": "en/fundamentals/color/color"
+    },
+    {
+      "from": "en/fundamentals/concept/abbreviations-of-properties/abbreviations-of-properties",
+      "to": "en/fundamentals/concept/abbreviations-of-properties-abbreviations-of-properties"
+    },
+    {
+      "from": "en/fundamentals/concept/alignment/alignment",
+      "to": "en/fundamentals/concept/alignment-alignment"
+    },
+    {
+      "from": "en/fundamentals/concept/break-points/break-points-description",
+      "to": "en/fundamentals/concept/break-points-break-points-description"
+    },
+    {
+      "from": "en/fundamentals/concept/break-points/break-points-mobile-and-desktop",
+      "to": "en/fundamentals/concept/break-points-break-points-mobile-and-desktop"
+    },
+    {
+      "from": "en/fundamentals/concept/break-points/break-points-prefixes",
+      "to": "en/fundamentals/concept/break-points-break-points-prefixes"
+    },
+    {
+      "from": "en/fundamentals/concept/break-points/break-points-relationship",
+      "to": "en/fundamentals/concept/break-points-break-points-relationship"
+    },
+    {
+      "from": "en/fundamentals/concept/break-points/break-points-variables",
+      "to": "en/fundamentals/concept/break-points-break-points-variables"
+    },
+    {
+      "from": "en/fundamentals/concept/color/color",
+      "to": "en/fundamentals/concept/color-color"
+    },
+    {
+      "from": "en/fundamentals/concept/color/color-generator",
+      "to": "en/fundamentals/concept/color-color-generator"
+    },
+    {
+      "from": "en/fundamentals/concept/color/color-palette",
+      "to": "en/fundamentals/concept/color-color-palette"
+    },
+    {
+      "from": "en/fundamentals/concept/color/new-approach-to-using-color",
+      "to": "en/fundamentals/concept/color-new-approach-to-using-color"
+    },
+    {
+      "from": "en/fundamentals/concept/directions/directions",
+      "to": "en/fundamentals/concept/directions-directions"
+    },
+    {
+      "from": "en/fundamentals/concept/modifier-parameters/angle-parameter",
+      "to": "en/fundamentals/concept/modifier-parameters-angle-parameter"
+    },
+    {
+      "from": "en/fundamentals/concept/modifier-parameters/axle-designations",
+      "to": "en/fundamentals/concept/modifier-parameters-axle-designations"
+    },
+    {
+      "from": "en/fundamentals/concept/modifier-parameters/examples-of-parameters-in-modifiers",
+      "to": "en/fundamentals/concept/modifier-parameters-examples-of-parameters-in-modifiers"
+    },
+    {
+      "from": "en/fundamentals/concept/modifier-parameters/modifier-parameters",
+      "to": "en/fundamentals/concept/modifier-parameters-modifier-parameters"
+    },
+    {
+      "from": "en/fundamentals/concept/modifier-parameters/side-parameter",
+      "to": "en/fundamentals/concept/modifier-parameters-side-parameter"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/direct-translation",
+      "to": "en/fundamentals/concept/sizes-direct-translation"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/from-old-to-new",
+      "to": "en/fundamentals/concept/sizes-from-old-to-new"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/indents",
+      "to": "en/fundamentals/concept/sizes-indents"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/mnemonic",
+      "to": "en/fundamentals/concept/sizes-mnemonic"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/relationship-between-letters-and-multipliers",
+      "to": "en/fundamentals/concept/sizes-relationship-between-letters-and-multipliers"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/reverse-conversion",
+      "to": "en/fundamentals/concept/sizes-reverse-conversion"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/reverse-translation",
+      "to": "en/fundamentals/concept/sizes-reverse-translation"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/size-conversion",
+      "to": "en/fundamentals/concept/sizes-size-conversion"
+    },
+    {
+      "from": "en/fundamentals/concept/sizes/sizes",
+      "to": "en/fundamentals/concept/sizes-sizes"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/border-radius",
+      "to": "en/fundamentals/concept/typography-border-radius"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/categories-font-sizes",
+      "to": "en/fundamentals/concept/typography-categories-font-sizes"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/changing-font-sizes",
+      "to": "en/fundamentals/concept/typography-changing-font-sizes"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/focus",
+      "to": "en/fundamentals/concept/typography-focus"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/font-family",
+      "to": "en/fundamentals/concept/typography-font-family"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/line-height",
+      "to": "en/fundamentals/concept/typography-line-height"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/links",
+      "to": "en/fundamentals/concept/typography-links"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/roles-of-text",
+      "to": "en/fundamentals/concept/typography-roles-of-text"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/shadows",
+      "to": "en/fundamentals/concept/typography-shadows"
+    },
+    {
+      "from": "en/fundamentals/concept/typography/text-indents",
+      "to": "en/fundamentals/concept/typography-text-indents"
+    },
+    {
+      "from": "en/fundamentals/concept/values/absolute-dimensions",
+      "to": "en/fundamentals/concept/values-absolute-dimensions"
+    },
+    {
+      "from": "en/fundamentals/concept/values/binary-values",
+      "to": "en/fundamentals/concept/values-binary-values"
+    },
+    {
+      "from": "en/fundamentals/concept/values/degrees",
+      "to": "en/fundamentals/concept/values-degrees"
+    },
+    {
+      "from": "en/fundamentals/concept/values/percents",
+      "to": "en/fundamentals/concept/values-percents"
+    },
+    {
+      "from": "en/fundamentals/concept/values/proportional-values",
+      "to": "en/fundamentals/concept/values-proportional-values"
+    },
+    {
+      "from": "en/fundamentals/concept/values/relative-sizes",
+      "to": "en/fundamentals/concept/values-relative-sizes"
+    },
+    {
+      "from": "en/fundamentals/concept/variables/variables",
+      "to": "en/fundamentals/concept/variables-variables"
+    },
+    {
+      "from": "en/fundamentals/concept/variables/variables-default",
+      "to": "en/fundamentals/concept/variables-variables-default"
+    },
+    {
+      "from": "en/fundamentals/concept/variables/variables-global",
+      "to": "en/fundamentals/concept/variables-variables-global"
+    },
+    {
+      "from": "en/fundamentals/concept/variables/variables-local",
+      "to": "en/fundamentals/concept/variables-variables-local"
+    },
+    {
+      "from": "en/fundamentals/concept/variables/variables-types",
+      "to": "en/fundamentals/concept/variables-variables-types"
+    },
+    {
+      "from": "en/fundamentals/directions",
+      "to": "en/fundamentals/directions/directions"
+    },
+    {
+      "from": "en/fundamentals/modifier-parameters",
+      "to": "en/fundamentals/modifier-parameters/modifier-parameters"
+    },
+    {
+      "from": "en/fundamentals/sizes",
+      "to": "en/fundamentals/sizes/sizes"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/change-background-on-hover",
+      "to": "en/fundamentals/themes/design-themes-change-background-on-hover"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/color-and-theme",
+      "to": "en/fundamentals/themes/design-themes-color-and-theme"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/design-themes",
+      "to": "en/fundamentals/themes/design-themes-design-themes"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/examples",
+      "to": "en/fundamentals/themes/design-themes-examples"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/named-colors",
+      "to": "en/fundamentals/themes/design-themes-named-colors"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/theme-color-palette/dark-theme-palette",
+      "to": "en/fundamentals/themes/design-themes-theme-color-palette-dark-theme-palette"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/theme-color-palette/light-theme-palette",
+      "to": "en/fundamentals/themes/design-themes-theme-color-palette-light-theme-palette"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/theme-color-palette/theme-color-palette",
+      "to": "en/fundamentals/themes/design-themes-theme-color-palette-theme-color-palette"
+    },
+    {
+      "from": "en/fundamentals/themes/design-themes/using-themes",
+      "to": "en/fundamentals/themes/design-themes-using-themes"
+    },
+    {
+      "from": "en/fundamentals/variables",
+      "to": "en/fundamentals/variables/variables"
+    },
+    {
+      "from": "en/reference/color-primitives",
+      "to": "en/reference/color-primitives/color-primitives"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/color-palette",
+      "to": "en/reference/color-primitives/color-palette-color-palette"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/error",
+      "to": "en/reference/color-primitives/color-palette-error"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/neutral",
+      "to": "en/reference/color-primitives/color-palette-neutral"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/primary",
+      "to": "en/reference/color-primitives/color-palette-primary"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/secondary",
+      "to": "en/reference/color-primitives/color-palette-secondary"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/success",
+      "to": "en/reference/color-primitives/color-palette-success"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/tertiary",
+      "to": "en/reference/color-primitives/color-palette-tertiary"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/transparent-white-black",
+      "to": "en/reference/color-primitives/color-palette-transparent-white-black"
+    },
+    {
+      "from": "en/reference/color-primitives/color-palette/warning",
+      "to": "en/reference/color-primitives/color-palette-warning"
+    },
+    {
+      "from": "en/reference/color-primitives/disable/disable",
+      "to": "en/reference/color-primitives/disable-disable"
+    },
+    {
+      "from": "en/reference/color-primitives/disable/features-of-use",
+      "to": "en/reference/color-primitives/disable-features-of-use"
+    },
+    {
+      "from": "en/reference/color-primitives/outline/features-of-use",
+      "to": "en/reference/color-primitives/outline-features-of-use"
+    },
+    {
+      "from": "en/reference/color-primitives/outline/outline",
+      "to": "en/reference/color-primitives/outline-outline"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers",
+      "to": "en/reference/properties-of-modifiers/properties-of-modifiers"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/animation",
+      "to": "en/reference/properties-of-modifiers/property-structure-animation"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/backdrop-filter",
+      "to": "en/reference/properties-of-modifiers/property-structure-backdrop-filter"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/background-color",
+      "to": "en/reference/properties-of-modifiers/property-structure-background-color"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/background-image",
+      "to": "en/reference/properties-of-modifiers/property-structure-background-image"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/border",
+      "to": "en/reference/properties-of-modifiers/property-structure-border"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/divider",
+      "to": "en/reference/properties-of-modifiers/property-structure-divider"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/filter",
+      "to": "en/reference/properties-of-modifiers/property-structure-filter"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/flex",
+      "to": "en/reference/properties-of-modifiers/property-structure-flex"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/form",
+      "to": "en/reference/properties-of-modifiers/property-structure-form"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/gradient",
+      "to": "en/reference/properties-of-modifiers/property-structure-gradient"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/grid",
+      "to": "en/reference/properties-of-modifiers/property-structure-grid"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/grid-flex",
+      "to": "en/reference/properties-of-modifiers/property-structure-grid-flex"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/interactivity",
+      "to": "en/reference/properties-of-modifiers/property-structure-interactivity"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/layout",
+      "to": "en/reference/properties-of-modifiers/property-structure-layout"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/layout-break",
+      "to": "en/reference/properties-of-modifiers/property-structure-layout-break"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/link",
+      "to": "en/reference/properties-of-modifiers/property-structure-link"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/object",
+      "to": "en/reference/properties-of-modifiers/property-structure-object"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/outline",
+      "to": "en/reference/properties-of-modifiers/property-structure-outline"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/print",
+      "to": "en/reference/properties-of-modifiers/property-structure-print"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/ring",
+      "to": "en/reference/properties-of-modifiers/property-structure-ring"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/scroll",
+      "to": "en/reference/properties-of-modifiers/property-structure-scroll"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/shadow",
+      "to": "en/reference/properties-of-modifiers/property-structure-shadow"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/size",
+      "to": "en/reference/properties-of-modifiers/property-structure-size"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/space",
+      "to": "en/reference/properties-of-modifiers/property-structure-space"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/stripe",
+      "to": "en/reference/properties-of-modifiers/property-structure-stripe"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/svg",
+      "to": "en/reference/properties-of-modifiers/property-structure-svg"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/table",
+      "to": "en/reference/properties-of-modifiers/property-structure-table"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/text-color",
+      "to": "en/reference/properties-of-modifiers/property-structure-text-color"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/text-decoration",
+      "to": "en/reference/properties-of-modifiers/property-structure-text-decoration"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/theme",
+      "to": "en/reference/properties-of-modifiers/property-structure-theme"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/transform",
+      "to": "en/reference/properties-of-modifiers/property-structure-transform"
+    },
+    {
+      "from": "en/reference/properties-of-modifiers/property-structure/typography",
+      "to": "en/reference/properties-of-modifiers/property-structure-typography"
+    },
+    {
+      "from": "en/start/loader/api",
+      "to": "en/start/loader/api-index"
+    },
+    {
+      "from": "en/start/loader/api/events",
+      "to": "en/start/loader/api-events"
+    },
+    {
+      "from": "en/start/loader/api/methods",
+      "to": "en/start/loader/api-methods"
+    },
+    {
+      "from": "en/start/loader/backend",
+      "to": "en/start/loader/backend-index"
+    },
+    {
+      "from": "en/start/loader/backend/caching",
+      "to": "en/start/loader/backend-caching"
+    },
+    {
+      "from": "en/start/loader/backend/integration",
+      "to": "en/start/loader/backend-integration"
+    },
+    {
+      "from": "en/start/loader/backend/server-interaction",
+      "to": "en/start/loader/backend-server-interaction"
+    },
+    {
+      "from": "en/start/loader/frontend",
+      "to": "en/start/loader/frontend-index"
+    },
+    {
+      "from": "en/start/loader/frontend/cache-control",
+      "to": "en/start/loader/frontend-cache-control"
+    },
+    {
+      "from": "en/start/loader/frontend/caching",
+      "to": "en/start/loader/frontend-caching"
+    },
+    {
+      "from": "en/start/loader/frontend/dependencies",
+      "to": "en/start/loader/frontend-dependencies"
+    },
+    {
+      "from": "en/start/loader/frontend/dynamic-js-css",
+      "to": "en/start/loader/frontend-dynamic-js-css"
+    },
+    {
+      "from": "en/start/loader/frontend/plugin-discovery",
+      "to": "en/start/loader/frontend-plugin-discovery"
+    },
+    {
+      "from": "en/start/loader/frontend/preloader",
+      "to": "en/start/loader/frontend-preloader"
+    },
+    {
+      "from": "en/start/loader/frontend/smart-components",
+      "to": "en/start/loader/frontend-smart-components"
+    },
+    {
+      "from": "en/start/loader/frontend/standalone",
+      "to": "en/start/loader/frontend-standalone"
+    },
+    {
+      "from": "ru/components/accordion",
+      "to": "ru/components/content/accordion"
+    },
+    {
+      "from": "ru/components/admin-menu",
+      "to": "ru/components/internal/admin-menu"
+    },
+    {
+      "from": "ru/components/alerts",
+      "to": "ru/components/feedback/alerts"
+    },
+    {
+      "from": "ru/components/avatars",
+      "to": "ru/components/content/avatars"
+    },
+    {
+      "from": "ru/components/badges",
+      "to": "ru/components/feedback/badges"
+    },
+    {
+      "from": "ru/components/breadcrumbs",
+      "to": "ru/components/navigation/breadcrumbs"
+    },
+    {
+      "from": "ru/components/button-group",
+      "to": "ru/components/actions/button-group"
+    },
+    {
+      "from": "ru/components/buttons",
+      "to": "ru/components/actions/buttons"
+    },
+    {
+      "from": "ru/components/carousel",
+      "to": "ru/components/overlays-media/carousel"
+    },
+    {
+      "from": "ru/components/catalog",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/components/checkbox",
+      "to": "ru/components/forms/checkbox"
+    },
+    {
+      "from": "ru/components/clipboard",
+      "to": "ru/components/actions/clipboard"
+    },
+    {
+      "from": "ru/components/close",
+      "to": "ru/components/actions/close"
+    },
+    {
+      "from": "ru/components/connection",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/components/content-divider",
+      "to": "ru/components/content/content-divider"
+    },
+    {
+      "from": "ru/components/context-menu",
+      "to": "ru/components/navigation/context-menu"
+    },
+    {
+      "from": "ru/components/country-code",
+      "to": "ru/components/forms/country-code"
+    },
+    {
+      "from": "ru/components/datepicker",
+      "to": "ru/components/forms/datepicker"
+    },
+    {
+      "from": "ru/components/doc",
+      "to": "ru/components/content/doc"
+    },
+    {
+      "from": "ru/components/dot",
+      "to": "ru/components/feedback/dot"
+    },
+    {
+      "from": "ru/components/download-file",
+      "to": "ru/components/actions/download-file"
+    },
+    {
+      "from": "ru/components/dropdown",
+      "to": "ru/components/navigation/dropdown"
+    },
+    {
+      "from": "ru/components/emoji",
+      "to": "ru/components/content/emoji"
+    },
+    {
+      "from": "ru/components/examples",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/components/fab",
+      "to": "ru/components/actions/fab"
+    },
+    {
+      "from": "ru/components/featured-icon",
+      "to": "ru/components/content/featured-icon"
+    },
+    {
+      "from": "ru/components/file-preview",
+      "to": "ru/components/content/file-preview"
+    },
+    {
+      "from": "ru/components/file-upload",
+      "to": "ru/components/forms/file-upload"
+    },
+    {
+      "from": "ru/components/hide-show",
+      "to": "ru/components/tools/hide-show"
+    },
+    {
+      "from": "ru/components/highlight",
+      "to": "ru/components/content/highlight"
+    },
+    {
+      "from": "ru/components/icon-buttons",
+      "to": "ru/components/actions/icon-buttons"
+    },
+    {
+      "from": "ru/components/icons",
+      "to": "ru/components/content/icons"
+    },
+    {
+      "from": "ru/components/inputs",
+      "to": "ru/components/forms/inputs"
+    },
+    {
+      "from": "ru/components/introduction",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/components/kbd",
+      "to": "ru/components/content/kbd"
+    },
+    {
+      "from": "ru/components/link",
+      "to": "ru/components/navigation/link"
+    },
+    {
+      "from": "ru/components/menu",
+      "to": "ru/components/navigation/menu"
+    },
+    {
+      "from": "ru/components/modal",
+      "to": "ru/components/overlays-media/modal"
+    },
+    {
+      "from": "ru/components/monaco",
+      "to": "ru/components/tools/monaco"
+    },
+    {
+      "from": "ru/components/outline",
+      "to": "ru/components/tools/outline"
+    },
+    {
+      "from": "ru/components/pagination",
+      "to": "ru/components/navigation/pagination"
+    },
+    {
+      "from": "ru/components/placeholder",
+      "to": "ru/components/feedback/placeholder"
+    },
+    {
+      "from": "ru/components/progress-bar",
+      "to": "ru/components/feedback/progress-bar"
+    },
+    {
+      "from": "ru/components/progress-scale",
+      "to": "ru/components/feedback/progress-scale"
+    },
+    {
+      "from": "ru/components/quantity",
+      "to": "ru/components/forms/quantity"
+    },
+    {
+      "from": "ru/components/radio",
+      "to": "ru/components/forms/radio"
+    },
+    {
+      "from": "ru/components/range-slider",
+      "to": "ru/components/forms/range-slider"
+    },
+    {
+      "from": "ru/components/reference",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/components/reference-link",
+      "to": "ru/components/content/reference-link"
+    },
+    {
+      "from": "ru/components/reference/accordion",
+      "to": "ru/components/content/accordion"
+    },
+    {
+      "from": "ru/components/reference/admin-menu",
+      "to": "ru/components/internal/admin-menu"
+    },
+    {
+      "from": "ru/components/reference/alerts",
+      "to": "ru/components/feedback/alerts"
+    },
+    {
+      "from": "ru/components/reference/avatars",
+      "to": "ru/components/content/avatars"
+    },
+    {
+      "from": "ru/components/reference/badges",
+      "to": "ru/components/feedback/badges"
+    },
+    {
+      "from": "ru/components/reference/breadcrumbs",
+      "to": "ru/components/navigation/breadcrumbs"
+    },
+    {
+      "from": "ru/components/reference/button-group",
+      "to": "ru/components/actions/button-group"
+    },
+    {
+      "from": "ru/components/reference/buttons",
+      "to": "ru/components/actions/buttons"
+    },
+    {
+      "from": "ru/components/reference/carousel",
+      "to": "ru/components/overlays-media/carousel"
+    },
+    {
+      "from": "ru/components/reference/checkbox",
+      "to": "ru/components/forms/checkbox"
+    },
+    {
+      "from": "ru/components/reference/clipboard",
+      "to": "ru/components/actions/clipboard"
+    },
+    {
+      "from": "ru/components/reference/close",
+      "to": "ru/components/actions/close"
+    },
+    {
+      "from": "ru/components/reference/content-divider",
+      "to": "ru/components/content/content-divider"
+    },
+    {
+      "from": "ru/components/reference/context-menu",
+      "to": "ru/components/navigation/context-menu"
+    },
+    {
+      "from": "ru/components/reference/country-code",
+      "to": "ru/components/forms/country-code"
+    },
+    {
+      "from": "ru/components/reference/datepicker",
+      "to": "ru/components/forms/datepicker"
+    },
+    {
+      "from": "ru/components/reference/doc",
+      "to": "ru/components/content/doc"
+    },
+    {
+      "from": "ru/components/reference/dot",
+      "to": "ru/components/feedback/dot"
+    },
+    {
+      "from": "ru/components/reference/download-file",
+      "to": "ru/components/actions/download-file"
+    },
+    {
+      "from": "ru/components/reference/dropdown",
+      "to": "ru/components/navigation/dropdown"
+    },
+    {
+      "from": "ru/components/reference/emoji",
+      "to": "ru/components/content/emoji"
+    },
+    {
+      "from": "ru/components/reference/fab",
+      "to": "ru/components/actions/fab"
+    },
+    {
+      "from": "ru/components/reference/featured-icon",
+      "to": "ru/components/content/featured-icon"
+    },
+    {
+      "from": "ru/components/reference/file-upload",
+      "to": "ru/components/forms/file-upload"
+    },
+    {
+      "from": "ru/components/reference/hide-show",
+      "to": "ru/components/tools/hide-show"
+    },
+    {
+      "from": "ru/components/reference/highlight",
+      "to": "ru/components/content/highlight"
+    },
+    {
+      "from": "ru/components/reference/icon-buttons",
+      "to": "ru/components/actions/icon-buttons"
+    },
+    {
+      "from": "ru/components/reference/icons",
+      "to": "ru/components/content/icons"
+    },
+    {
+      "from": "ru/components/reference/inputs",
+      "to": "ru/components/forms/inputs"
+    },
+    {
+      "from": "ru/components/reference/kbd",
+      "to": "ru/components/content/kbd"
+    },
+    {
+      "from": "ru/components/reference/menu",
+      "to": "ru/components/navigation/menu"
+    },
+    {
+      "from": "ru/components/reference/modal",
+      "to": "ru/components/overlays-media/modal"
+    },
+    {
+      "from": "ru/components/reference/monaco",
+      "to": "ru/components/tools/monaco"
+    },
+    {
+      "from": "ru/components/reference/outline",
+      "to": "ru/components/tools/outline"
+    },
+    {
+      "from": "ru/components/reference/pagination",
+      "to": "ru/components/navigation/pagination"
+    },
+    {
+      "from": "ru/components/reference/placeholder",
+      "to": "ru/components/feedback/placeholder"
+    },
+    {
+      "from": "ru/components/reference/progress-bar",
+      "to": "ru/components/feedback/progress-bar"
+    },
+    {
+      "from": "ru/components/reference/progress-scale",
+      "to": "ru/components/feedback/progress-scale"
+    },
+    {
+      "from": "ru/components/reference/quantity",
+      "to": "ru/components/forms/quantity"
+    },
+    {
+      "from": "ru/components/reference/radio",
+      "to": "ru/components/forms/radio"
+    },
+    {
+      "from": "ru/components/reference/range-slider",
+      "to": "ru/components/forms/range-slider"
+    },
+    {
+      "from": "ru/components/reference/reference-link",
+      "to": "ru/components/content/reference-link"
+    },
+    {
+      "from": "ru/components/reference/scrollbar",
+      "to": "ru/components/tools/scrollbar"
+    },
+    {
+      "from": "ru/components/reference/skeleton",
+      "to": "ru/components/feedback/skeleton"
+    },
+    {
+      "from": "ru/components/reference/slider",
+      "to": "ru/components/forms/slider"
+    },
+    {
+      "from": "ru/components/reference/spinner",
+      "to": "ru/components/feedback/spinner"
+    },
+    {
+      "from": "ru/components/reference/step",
+      "to": "ru/components/navigation/step"
+    },
+    {
+      "from": "ru/components/reference/swiper",
+      "to": "ru/components/overlays-media/swiper"
+    },
+    {
+      "from": "ru/components/reference/switch",
+      "to": "ru/components/forms/switch"
+    },
+    {
+      "from": "ru/components/reference/tab",
+      "to": "ru/components/navigation/tab"
+    },
+    {
+      "from": "ru/components/reference/tabs",
+      "to": "ru/components/navigation/tabs"
+    },
+    {
+      "from": "ru/components/reference/tags",
+      "to": "ru/components/content/tags"
+    },
+    {
+      "from": "ru/components/reference/textarea",
+      "to": "ru/components/forms/textarea"
+    },
+    {
+      "from": "ru/components/reference/theme",
+      "to": "ru/components/tools/theme"
+    },
+    {
+      "from": "ru/components/reference/theme-builder",
+      "to": "ru/components/tools/theme-builder"
+    },
+    {
+      "from": "ru/components/reference/toast",
+      "to": "ru/components/feedback/toast"
+    },
+    {
+      "from": "ru/components/reference/toggle",
+      "to": "ru/components/forms/toggle"
+    },
+    {
+      "from": "ru/components/reference/tooltip",
+      "to": "ru/components/overlays-media/tooltip"
+    },
+    {
+      "from": "ru/components/reference/tree",
+      "to": "ru/components/navigation/tree"
+    },
+    {
+      "from": "ru/components/reference/tree-item",
+      "to": "ru/components/navigation/tree-item"
+    },
+    {
+      "from": "ru/components/reference/verification",
+      "to": "ru/components/forms/verification"
+    },
+    {
+      "from": "ru/components/scrollbar",
+      "to": "ru/components/tools/scrollbar"
+    },
+    {
+      "from": "ru/components/skeleton",
+      "to": "ru/components/feedback/skeleton"
+    },
+    {
+      "from": "ru/components/slider",
+      "to": "ru/components/forms/slider"
+    },
+    {
+      "from": "ru/components/spinner",
+      "to": "ru/components/feedback/spinner"
+    },
+    {
+      "from": "ru/components/step",
+      "to": "ru/components/navigation/step"
+    },
+    {
+      "from": "ru/components/swiper",
+      "to": "ru/components/overlays-media/swiper"
+    },
+    {
+      "from": "ru/components/switch",
+      "to": "ru/components/forms/switch"
+    },
+    {
+      "from": "ru/components/tab",
+      "to": "ru/components/navigation/tab"
+    },
+    {
+      "from": "ru/components/tabs",
+      "to": "ru/components/navigation/tabs"
+    },
+    {
+      "from": "ru/components/tags",
+      "to": "ru/components/content/tags"
+    },
+    {
+      "from": "ru/components/textarea",
+      "to": "ru/components/forms/textarea"
+    },
+    {
+      "from": "ru/components/theme",
+      "to": "ru/components/tools/theme"
+    },
+    {
+      "from": "ru/components/theme-builder",
+      "to": "ru/components/tools/theme-builder"
+    },
+    {
+      "from": "ru/components/toast",
+      "to": "ru/components/feedback/toast"
+    },
+    {
+      "from": "ru/components/toggle",
+      "to": "ru/components/forms/toggle"
+    },
+    {
+      "from": "ru/components/tooltip",
+      "to": "ru/components/overlays-media/tooltip"
+    },
+    {
+      "from": "ru/components/tree",
+      "to": "ru/components/navigation/tree"
+    },
+    {
+      "from": "ru/components/tree-item",
+      "to": "ru/components/navigation/tree-item"
+    },
+    {
+      "from": "ru/components/verification",
+      "to": "ru/components/forms/verification"
+    },
+    {
+      "from": "ru/framework-components",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/framework-components/accordion",
+      "to": "ru/components/content/accordion"
+    },
+    {
+      "from": "ru/framework-components/admin-menu",
+      "to": "ru/components/internal/admin-menu"
+    },
+    {
+      "from": "ru/framework-components/alerts",
+      "to": "ru/components/feedback/alerts"
+    },
+    {
+      "from": "ru/framework-components/avatars",
+      "to": "ru/components/content/avatars"
+    },
+    {
+      "from": "ru/framework-components/badges",
+      "to": "ru/components/feedback/badges"
+    },
+    {
+      "from": "ru/framework-components/breadcrumbs",
+      "to": "ru/components/navigation/breadcrumbs"
+    },
+    {
+      "from": "ru/framework-components/button-group",
+      "to": "ru/components/actions/button-group"
+    },
+    {
+      "from": "ru/framework-components/buttons",
+      "to": "ru/components/actions/buttons"
+    },
+    {
+      "from": "ru/framework-components/carousel",
+      "to": "ru/components/overlays-media/carousel"
+    },
+    {
+      "from": "ru/framework-components/catalog",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/framework-components/checkbox",
+      "to": "ru/components/forms/checkbox"
+    },
+    {
+      "from": "ru/framework-components/clipboard",
+      "to": "ru/components/actions/clipboard"
+    },
+    {
+      "from": "ru/framework-components/close",
+      "to": "ru/components/actions/close"
+    },
+    {
+      "from": "ru/framework-components/connection",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/framework-components/content-divider",
+      "to": "ru/components/content/content-divider"
+    },
+    {
+      "from": "ru/framework-components/context-menu",
+      "to": "ru/components/navigation/context-menu"
+    },
+    {
+      "from": "ru/framework-components/country-code",
+      "to": "ru/components/forms/country-code"
+    },
+    {
+      "from": "ru/framework-components/datepicker",
+      "to": "ru/components/forms/datepicker"
+    },
+    {
+      "from": "ru/framework-components/doc",
+      "to": "ru/components/content/doc"
+    },
+    {
+      "from": "ru/framework-components/dot",
+      "to": "ru/components/feedback/dot"
+    },
+    {
+      "from": "ru/framework-components/download-file",
+      "to": "ru/components/actions/download-file"
+    },
+    {
+      "from": "ru/framework-components/dropdown",
+      "to": "ru/components/navigation/dropdown"
+    },
+    {
+      "from": "ru/framework-components/emoji",
+      "to": "ru/components/content/emoji"
+    },
+    {
+      "from": "ru/framework-components/examples",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/framework-components/fab",
+      "to": "ru/components/actions/fab"
+    },
+    {
+      "from": "ru/framework-components/featured-icon",
+      "to": "ru/components/content/featured-icon"
+    },
+    {
+      "from": "ru/framework-components/file-upload",
+      "to": "ru/components/forms/file-upload"
+    },
+    {
+      "from": "ru/framework-components/hide-show",
+      "to": "ru/components/tools/hide-show"
+    },
+    {
+      "from": "ru/framework-components/highlight",
+      "to": "ru/components/content/highlight"
+    },
+    {
+      "from": "ru/framework-components/icon-buttons",
+      "to": "ru/components/actions/icon-buttons"
+    },
+    {
+      "from": "ru/framework-components/icons",
+      "to": "ru/components/content/icons"
+    },
+    {
+      "from": "ru/framework-components/inputs",
+      "to": "ru/components/forms/inputs"
+    },
+    {
+      "from": "ru/framework-components/introduction",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/framework-components/kbd",
+      "to": "ru/components/content/kbd"
+    },
+    {
+      "from": "ru/framework-components/menu",
+      "to": "ru/components/navigation/menu"
+    },
+    {
+      "from": "ru/framework-components/modal",
+      "to": "ru/components/overlays-media/modal"
+    },
+    {
+      "from": "ru/framework-components/monaco",
+      "to": "ru/components/tools/monaco"
+    },
+    {
+      "from": "ru/framework-components/outline",
+      "to": "ru/components/tools/outline"
+    },
+    {
+      "from": "ru/framework-components/pagination",
+      "to": "ru/components/navigation/pagination"
+    },
+    {
+      "from": "ru/framework-components/placeholder",
+      "to": "ru/components/feedback/placeholder"
+    },
+    {
+      "from": "ru/framework-components/progress-bar",
+      "to": "ru/components/feedback/progress-bar"
+    },
+    {
+      "from": "ru/framework-components/progress-scale",
+      "to": "ru/components/feedback/progress-scale"
+    },
+    {
+      "from": "ru/framework-components/quantity",
+      "to": "ru/components/forms/quantity"
+    },
+    {
+      "from": "ru/framework-components/radio",
+      "to": "ru/components/forms/radio"
+    },
+    {
+      "from": "ru/framework-components/range-slider",
+      "to": "ru/components/forms/range-slider"
+    },
+    {
+      "from": "ru/framework-components/reference",
+      "to": "ru/components"
+    },
+    {
+      "from": "ru/framework-components/reference-link",
+      "to": "ru/components/content/reference-link"
+    },
+    {
+      "from": "ru/framework-components/reference/accordion",
+      "to": "ru/components/content/accordion"
+    },
+    {
+      "from": "ru/framework-components/reference/admin-menu",
+      "to": "ru/components/internal/admin-menu"
+    },
+    {
+      "from": "ru/framework-components/reference/alerts",
+      "to": "ru/components/feedback/alerts"
+    },
+    {
+      "from": "ru/framework-components/reference/avatars",
+      "to": "ru/components/content/avatars"
+    },
+    {
+      "from": "ru/framework-components/reference/badges",
+      "to": "ru/components/feedback/badges"
+    },
+    {
+      "from": "ru/framework-components/reference/breadcrumbs",
+      "to": "ru/components/navigation/breadcrumbs"
+    },
+    {
+      "from": "ru/framework-components/reference/button-group",
+      "to": "ru/components/actions/button-group"
+    },
+    {
+      "from": "ru/framework-components/reference/buttons",
+      "to": "ru/components/actions/buttons"
+    },
+    {
+      "from": "ru/framework-components/reference/carousel",
+      "to": "ru/components/overlays-media/carousel"
+    },
+    {
+      "from": "ru/framework-components/reference/checkbox",
+      "to": "ru/components/forms/checkbox"
+    },
+    {
+      "from": "ru/framework-components/reference/clipboard",
+      "to": "ru/components/actions/clipboard"
+    },
+    {
+      "from": "ru/framework-components/reference/close",
+      "to": "ru/components/actions/close"
+    },
+    {
+      "from": "ru/framework-components/reference/content-divider",
+      "to": "ru/components/content/content-divider"
+    },
+    {
+      "from": "ru/framework-components/reference/context-menu",
+      "to": "ru/components/navigation/context-menu"
+    },
+    {
+      "from": "ru/framework-components/reference/country-code",
+      "to": "ru/components/forms/country-code"
+    },
+    {
+      "from": "ru/framework-components/reference/datepicker",
+      "to": "ru/components/forms/datepicker"
+    },
+    {
+      "from": "ru/framework-components/reference/doc",
+      "to": "ru/components/content/doc"
+    },
+    {
+      "from": "ru/framework-components/reference/dot",
+      "to": "ru/components/feedback/dot"
+    },
+    {
+      "from": "ru/framework-components/reference/download-file",
+      "to": "ru/components/actions/download-file"
+    },
+    {
+      "from": "ru/framework-components/reference/dropdown",
+      "to": "ru/components/navigation/dropdown"
+    },
+    {
+      "from": "ru/framework-components/reference/emoji",
+      "to": "ru/components/content/emoji"
+    },
+    {
+      "from": "ru/framework-components/reference/fab",
+      "to": "ru/components/actions/fab"
+    },
+    {
+      "from": "ru/framework-components/reference/featured-icon",
+      "to": "ru/components/content/featured-icon"
+    },
+    {
+      "from": "ru/framework-components/reference/file-upload",
+      "to": "ru/components/forms/file-upload"
+    },
+    {
+      "from": "ru/framework-components/reference/hide-show",
+      "to": "ru/components/tools/hide-show"
+    },
+    {
+      "from": "ru/framework-components/reference/highlight",
+      "to": "ru/components/content/highlight"
+    },
+    {
+      "from": "ru/framework-components/reference/icon-buttons",
+      "to": "ru/components/actions/icon-buttons"
+    },
+    {
+      "from": "ru/framework-components/reference/icons",
+      "to": "ru/components/content/icons"
+    },
+    {
+      "from": "ru/framework-components/reference/inputs",
+      "to": "ru/components/forms/inputs"
+    },
+    {
+      "from": "ru/framework-components/reference/kbd",
+      "to": "ru/components/content/kbd"
+    },
+    {
+      "from": "ru/framework-components/reference/menu",
+      "to": "ru/components/navigation/menu"
+    },
+    {
+      "from": "ru/framework-components/reference/modal",
+      "to": "ru/components/overlays-media/modal"
+    },
+    {
+      "from": "ru/framework-components/reference/monaco",
+      "to": "ru/components/tools/monaco"
+    },
+    {
+      "from": "ru/framework-components/reference/outline",
+      "to": "ru/components/tools/outline"
+    },
+    {
+      "from": "ru/framework-components/reference/pagination",
+      "to": "ru/components/navigation/pagination"
+    },
+    {
+      "from": "ru/framework-components/reference/placeholder",
+      "to": "ru/components/feedback/placeholder"
+    },
+    {
+      "from": "ru/framework-components/reference/progress-bar",
+      "to": "ru/components/feedback/progress-bar"
+    },
+    {
+      "from": "ru/framework-components/reference/progress-scale",
+      "to": "ru/components/feedback/progress-scale"
+    },
+    {
+      "from": "ru/framework-components/reference/quantity",
+      "to": "ru/components/forms/quantity"
+    },
+    {
+      "from": "ru/framework-components/reference/radio",
+      "to": "ru/components/forms/radio"
+    },
+    {
+      "from": "ru/framework-components/reference/range-slider",
+      "to": "ru/components/forms/range-slider"
+    },
+    {
+      "from": "ru/framework-components/reference/reference-link",
+      "to": "ru/components/content/reference-link"
+    },
+    {
+      "from": "ru/framework-components/reference/scrollbar",
+      "to": "ru/components/tools/scrollbar"
+    },
+    {
+      "from": "ru/framework-components/reference/skeleton",
+      "to": "ru/components/feedback/skeleton"
+    },
+    {
+      "from": "ru/framework-components/reference/slider",
+      "to": "ru/components/forms/slider"
+    },
+    {
+      "from": "ru/framework-components/reference/spinner",
+      "to": "ru/components/feedback/spinner"
+    },
+    {
+      "from": "ru/framework-components/reference/step",
+      "to": "ru/components/navigation/step"
+    },
+    {
+      "from": "ru/framework-components/reference/swiper",
+      "to": "ru/components/overlays-media/swiper"
+    },
+    {
+      "from": "ru/framework-components/reference/switch",
+      "to": "ru/components/forms/switch"
+    },
+    {
+      "from": "ru/framework-components/reference/tab",
+      "to": "ru/components/navigation/tab"
+    },
+    {
+      "from": "ru/framework-components/reference/tabs",
+      "to": "ru/components/navigation/tabs"
+    },
+    {
+      "from": "ru/framework-components/reference/tags",
+      "to": "ru/components/content/tags"
+    },
+    {
+      "from": "ru/framework-components/reference/textarea",
+      "to": "ru/components/forms/textarea"
+    },
+    {
+      "from": "ru/framework-components/reference/theme",
+      "to": "ru/components/tools/theme"
+    },
+    {
+      "from": "ru/framework-components/reference/theme-builder",
+      "to": "ru/components/tools/theme-builder"
+    },
+    {
+      "from": "ru/framework-components/reference/toast",
+      "to": "ru/components/feedback/toast"
+    },
+    {
+      "from": "ru/framework-components/reference/toggle",
+      "to": "ru/components/forms/toggle"
+    },
+    {
+      "from": "ru/framework-components/reference/tooltip",
+      "to": "ru/components/overlays-media/tooltip"
+    },
+    {
+      "from": "ru/framework-components/reference/tree",
+      "to": "ru/components/navigation/tree"
+    },
+    {
+      "from": "ru/framework-components/reference/tree-item",
+      "to": "ru/components/navigation/tree-item"
+    },
+    {
+      "from": "ru/framework-components/reference/verification",
+      "to": "ru/components/forms/verification"
+    },
+    {
+      "from": "ru/framework-components/scrollbar",
+      "to": "ru/components/tools/scrollbar"
+    },
+    {
+      "from": "ru/framework-components/skeleton",
+      "to": "ru/components/feedback/skeleton"
+    },
+    {
+      "from": "ru/framework-components/slider",
+      "to": "ru/components/forms/slider"
+    },
+    {
+      "from": "ru/framework-components/spinner",
+      "to": "ru/components/feedback/spinner"
+    },
+    {
+      "from": "ru/framework-components/step",
+      "to": "ru/components/navigation/step"
+    },
+    {
+      "from": "ru/framework-components/swiper",
+      "to": "ru/components/overlays-media/swiper"
+    },
+    {
+      "from": "ru/framework-components/switch",
+      "to": "ru/components/forms/switch"
+    },
+    {
+      "from": "ru/framework-components/tab",
+      "to": "ru/components/navigation/tab"
+    },
+    {
+      "from": "ru/framework-components/tabs",
+      "to": "ru/components/navigation/tabs"
+    },
+    {
+      "from": "ru/framework-components/tags",
+      "to": "ru/components/content/tags"
+    },
+    {
+      "from": "ru/framework-components/textarea",
+      "to": "ru/components/forms/textarea"
+    },
+    {
+      "from": "ru/framework-components/theme",
+      "to": "ru/components/tools/theme"
+    },
+    {
+      "from": "ru/framework-components/theme-builder",
+      "to": "ru/components/tools/theme-builder"
+    },
+    {
+      "from": "ru/framework-components/toast",
+      "to": "ru/components/feedback/toast"
+    },
+    {
+      "from": "ru/framework-components/toggle",
+      "to": "ru/components/forms/toggle"
+    },
+    {
+      "from": "ru/framework-components/tooltip",
+      "to": "ru/components/overlays-media/tooltip"
+    },
+    {
+      "from": "ru/framework-components/tree",
+      "to": "ru/components/navigation/tree"
+    },
+    {
+      "from": "ru/framework-components/tree-item",
+      "to": "ru/components/navigation/tree-item"
+    },
+    {
+      "from": "ru/framework-components/verification",
+      "to": "ru/components/forms/verification"
+    },
+    {
+      "from": "ru/fundamentals",
+      "to": "ru/guide/fundamentals"
+    },
+    {
+      "from": "ru/fundamentals/abbreviations-of-properties",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/adaptive-sizing-system",
+      "to": "ru/guide/fundamentals/adaptive-sizing"
+    },
+    {
+      "from": "ru/fundamentals/alignment",
+      "to": "ru/guide/fundamentals/values-and-scales"
+    },
+    {
+      "from": "ru/fundamentals/alignment/alignment",
+      "to": "ru/guide/fundamentals/values-and-scales"
+    },
+    {
+      "from": "ru/fundamentals/architecture",
+      "to": "ru/guide/architecture/overview"
+    },
+    {
+      "from": "ru/fundamentals/best-practices",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/breakpoints",
+      "to": "ru/guide/fundamentals/conditions"
+    },
+    {
+      "from": "ru/fundamentals/colors-and-themes",
+      "to": "ru/guide/fundamentals/colors-and-themes"
+    },
+    {
+      "from": "ru/fundamentals/conditions",
+      "to": "ru/guide/fundamentals/conditions"
+    },
+    {
+      "from": "ru/fundamentals/content-spacing",
+      "to": "ru/guide/fundamentals/spacing"
+    },
+    {
+      "from": "ru/fundamentals/design-tokens",
+      "to": "ru/guide/fundamentals/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/directions",
+      "to": "ru/guide/fundamentals/values-and-scales"
+    },
+    {
+      "from": "ru/fundamentals/directions/directions",
+      "to": "ru/guide/fundamentals/values-and-scales"
+    },
+    {
+      "from": "ru/fundamentals/modifier-parameters",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/modifier-parameters/angle-parameter",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/modifier-parameters/axle-designations",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/modifier-parameters/examples-of-parameters-in-modifiers",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/modifier-parameters/modifier-parameters",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/modifier-parameters/side-parameter",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/modifiers",
+      "to": "ru/guide/fundamentals/modifiers"
+    },
+    {
+      "from": "ru/fundamentals/sizes",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/direct-translation",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/from-old-to-new",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/indents",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/mnemonic",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/relationship-between-letters-and-multipliers",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/reverse-conversion",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/reverse-translation",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/size-conversion",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/sizes/size-scale",
+      "to": "ru/guide/fundamentals/size-scale"
+    },
+    {
+      "from": "ru/fundamentals/sizes/sizes",
+      "to": "ru/guide/fundamentals/sizes"
+    },
+    {
+      "from": "ru/fundamentals/states",
+      "to": "ru/guide/fundamentals/conditions"
+    },
+    {
+      "from": "ru/fundamentals/typography-system",
+      "to": "ru/guide/fundamentals/typography"
+    },
+    {
+      "from": "ru/fundamentals/values",
+      "to": "ru/guide/fundamentals/values-and-scales"
+    },
+    {
+      "from": "ru/fundamentals/values-and-scales",
+      "to": "ru/guide/fundamentals/values-and-scales"
+    },
+    {
+      "from": "ru/guide/composition",
+      "to": "ru/guide/layouts"
+    },
+    {
+      "from": "ru/guide/composition/custom-type",
+      "to": "ru/guide/layouts/reference/custom-type"
+    },
+    {
+      "from": "ru/guide/composition/data-and-sources",
+      "to": "ru/guide/layouts/content-and-data/data-sources"
+    },
+    {
+      "from": "ru/guide/composition/document-and-tree",
+      "to": "ru/guide/layouts/reference/document"
+    },
+    {
+      "from": "ru/guide/composition/rendering-and-project",
+      "to": "ru/guide/layouts/content-and-data/rendering-boundary"
+    },
+    {
+      "from": "ru/guide/composition/structured-text",
+      "to": "ru/guide/layouts/content-and-data/structured-text"
+    },
+    {
+      "from": "ru/guide/composition/types-and-slots",
+      "to": "ru/guide/layouts/building/slots"
+    },
+    {
+      "from": "ru/guide/composition/versions-and-compatibility",
+      "to": "ru/guide/layouts/reference/versions"
+    },
+    {
+      "from": "ru/guide/composition/what-is-composition",
+      "to": "ru/guide/layouts/introduction/what-is-layout"
+    },
+    {
+      "from": "ru/layout",
+      "to": "ru/guide/layouts"
+    },
+    {
+      "from": "ru/layout/building/block",
+      "to": "ru/guide/layouts/building/block"
+    },
+    {
+      "from": "ru/layout/building/complex-smart-component",
+      "to": "ru/guide/layouts/building/complex-smart-component"
+    },
+    {
+      "from": "ru/layout/building/component",
+      "to": "ru/guide/layouts/building/component"
+    },
+    {
+      "from": "ru/layout/building/page",
+      "to": "ru/guide/layouts/building/page"
+    },
+    {
+      "from": "ru/layout/building/section",
+      "to": "ru/guide/layouts/building/section"
+    },
+    {
+      "from": "ru/layout/building/slots",
+      "to": "ru/guide/layouts/building/slots"
+    },
+    {
+      "from": "ru/layout/building/smart-component",
+      "to": "ru/guide/layouts/building/smart-component"
+    },
+    {
+      "from": "ru/layout/content-and-data/data-sources",
+      "to": "ru/guide/layouts/content-and-data/data-sources"
+    },
+    {
+      "from": "ru/layout/content-and-data/rendering-boundary",
+      "to": "ru/guide/layouts/content-and-data/rendering-boundary"
+    },
+    {
+      "from": "ru/layout/content-and-data/structured-text",
+      "to": "ru/guide/layouts/content-and-data/structured-text"
+    },
+    {
+      "from": "ru/layout/examples/catalog",
+      "to": "ru/guide/layouts/examples/catalog"
+    },
+    {
+      "from": "ru/layout/examples/dashboard",
+      "to": "ru/guide/layouts/examples/dashboard"
+    },
+    {
+      "from": "ru/layout/examples/information-page",
+      "to": "ru/guide/layouts/examples/information-page"
+    },
+    {
+      "from": "ru/layout/introduction/document-flow",
+      "to": "ru/guide/layouts/introduction/document-flow"
+    },
+    {
+      "from": "ru/layout/introduction/levels",
+      "to": "ru/guide/layouts/introduction/levels"
+    },
+    {
+      "from": "ru/layout/introduction/what-is-layout",
+      "to": "ru/guide/layouts/introduction/what-is-layout"
+    },
+    {
+      "from": "ru/layout/reference/api",
+      "to": "ru/guide/layouts/reference/api"
+    },
+    {
+      "from": "ru/layout/reference/custom-type",
+      "to": "ru/guide/layouts/reference/custom-type"
+    },
+    {
+      "from": "ru/layout/reference/diagnostics",
+      "to": "ru/guide/layouts/reference/diagnostics"
+    },
+    {
+      "from": "ru/layout/reference/document",
+      "to": "ru/guide/layouts/reference/document"
+    },
+    {
+      "from": "ru/layout/reference/studio-inspector",
+      "to": "ru/guide/layouts/reference/studio-inspector"
+    },
+    {
+      "from": "ru/layout/reference/type-manifest",
+      "to": "ru/guide/layouts/reference/type-manifest"
+    },
+    {
+      "from": "ru/layout/reference/versions",
+      "to": "ru/guide/layouts/reference/versions"
+    },
+    {
+      "from": "ru/reference/color-primitives",
+      "to": "ru/reference/color-primitives/color-primitives"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/color-palette",
+      "to": "ru/reference/color-primitives/color-palette-color-palette"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/error",
+      "to": "ru/reference/color-primitives/color-palette-error"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/neutral",
+      "to": "ru/reference/color-primitives/color-palette-neutral"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/primary",
+      "to": "ru/reference/color-primitives/color-palette-primary"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/secondary",
+      "to": "ru/reference/color-primitives/color-palette-secondary"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/success",
+      "to": "ru/reference/color-primitives/color-palette-success"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/tertiary",
+      "to": "ru/reference/color-primitives/color-palette-tertiary"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/transparent-white-black",
+      "to": "ru/reference/color-primitives/color-palette-transparent-white-black"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette/warning",
+      "to": "ru/reference/color-primitives/color-palette-warning"
+    },
+    {
+      "from": "ru/reference/color-primitives/disable/disable",
+      "to": "ru/reference/color-primitives/disable-disable"
+    },
+    {
+      "from": "ru/reference/color-primitives/disable/features-of-use",
+      "to": "ru/reference/color-primitives/disable-features-of-use"
+    },
+    {
+      "from": "ru/reference/color-primitives/outline/features-of-use",
+      "to": "ru/reference/color-primitives/outline-features-of-use"
+    },
+    {
+      "from": "ru/reference/color-primitives/outline/outline",
+      "to": "ru/reference/color-primitives/outline-outline"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers",
+      "to": "ru/reference/properties-of-modifiers/properties-of-modifiers"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/animation",
+      "to": "ru/reference/properties-of-modifiers/property-structure-animation"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/backdrop-filter",
+      "to": "ru/reference/properties-of-modifiers/property-structure-backdrop-filter"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/background-color",
+      "to": "ru/reference/properties-of-modifiers/property-structure-background-color"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/background-image",
+      "to": "ru/reference/properties-of-modifiers/property-structure-background-image"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/border",
+      "to": "ru/reference/properties-of-modifiers/property-structure-border"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/divider",
+      "to": "ru/reference/properties-of-modifiers/property-structure-divider"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/filter",
+      "to": "ru/reference/properties-of-modifiers/property-structure-filter"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/flex",
+      "to": "ru/reference/properties-of-modifiers/property-structure-flex"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/form",
+      "to": "ru/reference/properties-of-modifiers/property-structure-form"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/gradient",
+      "to": "ru/reference/properties-of-modifiers/property-structure-gradient"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/grid",
+      "to": "ru/reference/properties-of-modifiers/property-structure-grid"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/grid-flex",
+      "to": "ru/reference/properties-of-modifiers/property-structure-grid-flex"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/interactivity",
+      "to": "ru/reference/properties-of-modifiers/property-structure-interactivity"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/layout",
+      "to": "ru/reference/properties-of-modifiers/property-structure-layout"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/layout-break",
+      "to": "ru/reference/properties-of-modifiers/property-structure-layout-break"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/link",
+      "to": "ru/reference/properties-of-modifiers/property-structure-link"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/object",
+      "to": "ru/reference/properties-of-modifiers/property-structure-object"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/outline",
+      "to": "ru/reference/properties-of-modifiers/property-structure-outline"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/print",
+      "to": "ru/reference/properties-of-modifiers/property-structure-print"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/ring",
+      "to": "ru/reference/properties-of-modifiers/property-structure-ring"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/scroll",
+      "to": "ru/reference/properties-of-modifiers/property-structure-scroll"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/shadow",
+      "to": "ru/reference/properties-of-modifiers/property-structure-shadow"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/size",
+      "to": "ru/reference/properties-of-modifiers/property-structure-size"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/space",
+      "to": "ru/reference/properties-of-modifiers/property-structure-space"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/stripe",
+      "to": "ru/reference/properties-of-modifiers/property-structure-stripe"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/svg",
+      "to": "ru/reference/properties-of-modifiers/property-structure-svg"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/table",
+      "to": "ru/reference/properties-of-modifiers/property-structure-table"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/text-color",
+      "to": "ru/reference/properties-of-modifiers/property-structure-text-color"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/text-decoration",
+      "to": "ru/reference/properties-of-modifiers/property-structure-text-decoration"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/theme",
+      "to": "ru/reference/properties-of-modifiers/property-structure-theme"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/transform",
+      "to": "ru/reference/properties-of-modifiers/property-structure-transform"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure/typography",
+      "to": "ru/reference/properties-of-modifiers/property-structure-typography"
+    },
+    {
+      "from": "ru/smart-components/catalog",
+      "to": "ru/guide/smart-components/catalog-and-readiness"
+    },
+    {
+      "from": "ru/smart-components/connection",
+      "to": "ru/guide/smart-components/connection"
+    },
+    {
+      "from": "ru/smart-components/examples",
+      "to": "ru/guide/smart-components/examples"
+    },
+    {
+      "from": "ru/smart-components/introduction",
+      "to": "ru/guide/smart-components/introduction"
+    },
+    {
+      "from": "ru/smart-components/lifecycle",
+      "to": "ru/guide/smart-components/lifecycle"
+    },
+    {
+      "from": "ru/smart-components/reference",
+      "to": "ru/smart-components"
+    },
+    {
+      "from": "ru/smart-components/reference/admin-menu",
+      "to": "ru/smart-components/complex/admin-menu"
+    },
+    {
+      "from": "ru/smart-components/reference/alert",
+      "to": "ru/smart-components/feedback/alert"
+    },
+    {
+      "from": "ru/smart-components/reference/avatar",
+      "to": "ru/smart-components/content/avatar"
+    },
+    {
+      "from": "ru/smart-components/reference/avatars",
+      "to": "ru/smart-components/content/avatars"
+    },
+    {
+      "from": "ru/smart-components/reference/badges",
+      "to": "ru/smart-components/feedback/badges"
+    },
+    {
+      "from": "ru/smart-components/reference/breadcrumbs",
+      "to": "ru/smart-components/navigation/breadcrumbs"
+    },
+    {
+      "from": "ru/smart-components/reference/buttons",
+      "to": "ru/smart-components/actions/buttons"
+    },
+    {
+      "from": "ru/smart-components/reference/checkbox",
+      "to": "ru/smart-components/forms/checkbox"
+    },
+    {
+      "from": "ru/smart-components/reference/close",
+      "to": "ru/smart-components/actions/close"
+    },
+    {
+      "from": "ru/smart-components/reference/context-menu",
+      "to": "ru/smart-components/navigation/context-menu"
+    },
+    {
+      "from": "ru/smart-components/reference/country-code",
+      "to": "ru/smart-components/forms/country-code"
+    },
+    {
+      "from": "ru/smart-components/reference/datepicker",
+      "to": "ru/smart-components/forms/datepicker"
+    },
+    {
+      "from": "ru/smart-components/reference/download-file",
+      "to": "ru/smart-components/actions/download-file"
+    },
+    {
+      "from": "ru/smart-components/reference/drawer",
+      "to": "ru/smart-components/overlays/drawer"
+    },
+    {
+      "from": "ru/smart-components/reference/dropdown",
+      "to": "ru/smart-components/navigation/dropdown"
+    },
+    {
+      "from": "ru/smart-components/reference/editor",
+      "to": "ru/smart-components/content/editor"
+    },
+    {
+      "from": "ru/smart-components/reference/fab",
+      "to": "ru/smart-components/actions/fab"
+    },
+    {
+      "from": "ru/smart-components/reference/file-preview",
+      "to": "ru/smart-components/content/file-preview"
+    },
+    {
+      "from": "ru/smart-components/reference/file-upload",
+      "to": "ru/smart-components/forms/file-upload"
+    },
+    {
+      "from": "ru/smart-components/reference/flags",
+      "to": "ru/smart-components/content/flags"
+    },
+    {
+      "from": "ru/smart-components/reference/form",
+      "to": "ru/smart-components/forms/form"
+    },
+    {
+      "from": "ru/smart-components/reference/gallery",
+      "to": "ru/smart-components/content/gallery"
+    },
+    {
+      "from": "ru/smart-components/reference/icon-buttons",
+      "to": "ru/smart-components/actions/icon-buttons"
+    },
+    {
+      "from": "ru/smart-components/reference/icons",
+      "to": "ru/smart-components/content/icons"
+    },
+    {
+      "from": "ru/smart-components/reference/inputs",
+      "to": "ru/smart-components/forms/inputs"
+    },
+    {
+      "from": "ru/smart-components/reference/link",
+      "to": "ru/smart-components/actions/link"
+    },
+    {
+      "from": "ru/smart-components/reference/list",
+      "to": "ru/smart-components/content/list"
+    },
+    {
+      "from": "ru/smart-components/reference/list-item",
+      "to": "ru/smart-components/content/list-item"
+    },
+    {
+      "from": "ru/smart-components/reference/modal",
+      "to": "ru/smart-components/overlays/modal"
+    },
+    {
+      "from": "ru/smart-components/reference/pagination",
+      "to": "ru/smart-components/navigation/pagination"
+    },
+    {
+      "from": "ru/smart-components/reference/progress-bar",
+      "to": "ru/smart-components/feedback/progress-bar"
+    },
+    {
+      "from": "ru/smart-components/reference/progress-scale",
+      "to": "ru/smart-components/feedback/progress-scale"
+    },
+    {
+      "from": "ru/smart-components/reference/radio",
+      "to": "ru/smart-components/forms/radio"
+    },
+    {
+      "from": "ru/smart-components/reference/range-slider",
+      "to": "ru/smart-components/forms/range-slider"
+    },
+    {
+      "from": "ru/smart-components/reference/rating",
+      "to": "ru/smart-components/forms/rating"
+    },
+    {
+      "from": "ru/smart-components/reference/reference-link",
+      "to": "ru/smart-components/content/reference-link"
+    },
+    {
+      "from": "ru/smart-components/reference/skeleton",
+      "to": "ru/smart-components/feedback/skeleton"
+    },
+    {
+      "from": "ru/smart-components/reference/slider",
+      "to": "ru/smart-components/forms/slider"
+    },
+    {
+      "from": "ru/smart-components/reference/spinner",
+      "to": "ru/smart-components/feedback/spinner"
+    },
+    {
+      "from": "ru/smart-components/reference/steps",
+      "to": "ru/smart-components/navigation/steps"
+    },
+    {
+      "from": "ru/smart-components/reference/switch",
+      "to": "ru/smart-components/forms/switch"
+    },
+    {
+      "from": "ru/smart-components/reference/table",
+      "to": "ru/smart-components/content/table"
+    },
+    {
+      "from": "ru/smart-components/reference/tabs",
+      "to": "ru/smart-components/navigation/tabs"
+    },
+    {
+      "from": "ru/smart-components/reference/tags",
+      "to": "ru/smart-components/content/tags"
+    },
+    {
+      "from": "ru/smart-components/reference/textarea",
+      "to": "ru/smart-components/forms/textarea"
+    },
+    {
+      "from": "ru/smart-components/reference/toast",
+      "to": "ru/smart-components/feedback/toast"
+    },
+    {
+      "from": "ru/smart-components/reference/toggle",
+      "to": "ru/smart-components/forms/toggle"
+    },
+    {
+      "from": "ru/smart-components/reference/tooltip",
+      "to": "ru/smart-components/feedback/tooltip"
+    },
+    {
+      "from": "ru/smart-components/reference/tree",
+      "to": "ru/smart-components/navigation/tree"
+    },
+    {
+      "from": "ru/smart-components/reference/tree-item",
+      "to": "ru/smart-components/navigation/tree-item"
+    },
+    {
+      "from": "ru/smart-components/templates-and-assets",
+      "to": "ru/guide/smart-components/templates-and-assets"
+    },
+    {
+      "from": "ru/start",
+      "to": "ru/guide/introduction/quick-start"
+    },
+    {
+      "from": "ru/start/ai",
+      "to": "ru/guide/practical/ai"
+    },
+    {
+      "from": "ru/start/compatibility",
+      "to": "ru/guide/connection/versions-and-updates"
+    },
+    {
+      "from": "ru/start/glossary",
+      "to": "ru/guide/introduction/quick-start"
+    },
+    {
+      "from": "ru/start/installation",
+      "to": "ru/guide/connection/project-setup"
+    },
+    {
+      "from": "ru/start/integration-patterns",
+      "to": "ru/guide/connection/project-setup"
+    },
+    {
+      "from": "ru/start/introduction",
+      "to": "ru/guide/introduction/quick-start"
+    },
+    {
+      "from": "ru/start/loader",
+      "to": "ru/guide/connection/project-setup"
+    },
+    {
+      "from": "ru/start/playground",
+      "to": "ru/guide/introduction/quick-start"
+    },
+    {
+      "from": "ru/start/project-setup",
+      "to": "ru/guide/connection/project-setup"
+    },
+    {
+      "from": "ru/start/quickstart",
+      "to": "ru/guide/introduction/quick-start"
+    },
+    {
+      "from": "ru/start/vision",
+      "to": "ru/guide/introduction/what-is-simai-framework"
+    }
+  ]
 }

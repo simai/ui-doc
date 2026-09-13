@@ -1,0 +1,583 @@
+diff --git a/resources/portable/declarative-shell.css b/resources/portable/declarative-shell.css
+index 3df52013..19ee63ac 100644
+--- a/resources/portable/declarative-shell.css
++++ b/resources/portable/declarative-shell.css
+@@ -57,9 +57,10 @@ html[dir="rtl"] .docara-outline-scroll>.sf-scrollbar__viewport>[data-docara-sect
+ .docara-outline-dialog{inset-inline-start:auto;inset-inline-end:0;border-inline-start:1px solid var(--sf-outline-variant);border-inline-end:0}
+ .docara-code-block.bg-surface-container{background:var(--sf-surface-0)}
+ .docara-code-block>.sf--highlight-head{margin:0;border-bottom:1px solid var(--sf-outline-variant)}
+-.docara-code-header,.docara-code-block>.sf--highlight-head{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--sf-space-1);min-block-size:calc(var(--sf-ui-1--control-height) + 2 * var(--sf-space-1\/3));padding:var(--sf-space-1\/3) var(--sf-space-1);background:var(--sf-surface-0)}
+-.docara-code-header>span,.docara-code-block>.sf--highlight-head>span{display:inline-flex;inline-size:max-content;max-inline-size:100%;min-block-size:var(--sf-ui-1--control-height);align-items:center;padding-inline:var(--sf-space-1);color:var(--sf-on-surface);font-size:var(--sf-text-size-1);line-height:var(--sf-text-height-1)}
+-.docara-code-header>[data-docara-code-actions],.docara-code-block>.sf--highlight-head>[data-docara-code-actions]{display:flex;align-items:center;justify-self:end;gap:var(--sf-space-1\/3)}
++.docara-code-header,.docara-code-block>.sf--highlight-head,.docara-example-preview__header{position:relative;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;align-content:center;gap:var(--sf-space-1);min-block-size:calc(var(--sf-ui-1--control-height) + 2 * var(--sf-space-1\/3));padding:var(--sf-space-1\/3) var(--sf-space-1);background:var(--sf-surface-0)}
++.docara-code-header>span,.docara-code-block>.sf--highlight-head>span{display:inline-flex;align-self:center;inline-size:max-content;max-inline-size:100%;min-block-size:var(--sf-ui-1--control-height);align-items:center;padding-inline:var(--sf-space-1);color:var(--sf-on-surface);font-size:var(--sf-text-size-1);line-height:var(--sf-text-height-1)}
++.docara-code-header>[data-docara-code-actions],.docara-code-block>.sf--highlight-head>[data-docara-code-actions],.docara-example-preview__actions{display:flex;align-self:center;align-items:center;justify-self:end;gap:var(--sf-space-1\/3)}
++.docara-code-header>[data-docara-code-actions],.docara-code-block>.sf--highlight-head>[data-docara-code-actions]{margin:0}
+ .docara-code-header>[data-docara-code-actions]>button,.docara-code-block>.sf--highlight-head>[data-docara-code-actions]>button{margin:0;color:var(--sf-on-surface-variant)}
+ .docara-code-header>[data-docara-code-actions]>button .sf-button-text-container,.docara-code-block>.sf--highlight-head>[data-docara-code-actions]>button .sf-button-text-container{display:none}
+ .docara-code-header>[data-docara-code-actions]>button:hover,.docara-code-header>[data-docara-code-actions]>button:focus-visible,.docara-code-block>.sf--highlight-head>[data-docara-code-actions]>button:hover,.docara-code-block>.sf--highlight-head>[data-docara-code-actions]>button:focus-visible{color:var(--sf-on-surface)}
+@@ -121,13 +122,13 @@ sf-alert,sf-button{display:block}
+ .docara-example-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+ .docara-example-grid .sf-button{margin-block-start:auto;align-self:flex-start}
+ .docara-example-preview{overflow:hidden;margin-block-end:var(--sf-space-1);border:1px solid var(--sf-outline-variant);border-radius:var(--sf-radius-2,var(--sf-radius-default));background:var(--sf-surface-0)}
+-.docara-example-preview__header{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--sf-space-1);min-block-size:calc(var(--sf-ui-1--control-height) + 2 * var(--sf-space-1\/3));padding:var(--sf-space-1\/3) var(--sf-space-1);border-block-end:1px solid var(--sf-outline-variant);background:var(--sf-surface-0)}
++.docara-example-preview__header{border-block-end:1px solid var(--sf-outline-variant)}
+ .docara-example-preview__tabs{display:inline-flex;inline-size:max-content;max-inline-size:100%;align-items:center;gap:0;overflow-x:auto}
+ .docara-example-preview__tab{display:inline-flex;align-items:center;justify-content:center;min-block-size:var(--sf-ui-1--control-height);margin:0;padding-inline:var(--sf-space-1);border:0;border-radius:0;background:transparent;color:var(--sf-on-surface-variant);font-size:var(--sf-text-size-1);line-height:var(--sf-text-height-1);cursor:pointer}
+ .docara-example-preview__tab[aria-selected="true"]{color:var(--sf-on-surface)}
+ .docara-example-preview__tab:focus-visible{outline:2px solid var(--sf-primary);outline-offset:-2px}
+ .docara-example-preview__indicator{position:absolute;inset-block-end:-1px;inset-inline-start:0;z-index:1;inline-size:0;block-size:2px;background:var(--sf-outline);pointer-events:none;transition:inset-inline-start 180ms ease,inline-size 180ms ease}
+-.docara-example-preview__actions{display:flex;align-items:center;justify-content:flex-end;gap:var(--sf-space-1\/3)}
++.docara-example-preview__actions{justify-content:flex-end}
+ .docara-example-preview__action,.docara-example-preview__copy{margin:0;color:var(--sf-on-surface-variant)}
+ .docara-example-preview__action .sf-icon,.docara-example-preview__copy .sf-icon{--sf-icon--color:var(--sf-on-surface-variant)}
+ .docara-example-preview__action:hover,.docara-example-preview__action:focus-visible,.docara-example-preview__copy:hover,.docara-example-preview__copy:focus-visible{color:var(--sf-on-surface)}
+@@ -243,3 +244,14 @@ sf-alert,sf-button{display:block}
+ .docara-icon[data-docara-icon-size="1/2"]:not([data-docara-icon-container="none"]) { padding: var(--sf-space-1\/3); }
+ .docara-icon[data-docara-icon-size="2"]:not([data-docara-icon-container="none"]),
+ .docara-icon[data-docara-icon-size="3"]:not([data-docara-icon-container="none"]) { padding: var(--sf-space-1); }
++
++/* Breadcrumbs describe location; use the secondary text tone in the docs shell. */
++[data-docara-breadcrumbs] .sf-breadcrumbs-item--link .sf-breadcrumbs-item-container {
++    --sf-breadcrumbs-item-container--color: var(--sf-on-surface-variant);
++}
++[data-docara-breadcrumbs] .sf-breadcrumbs-item--link:hover .sf-breadcrumbs-item-container,
++[data-docara-breadcrumbs] .sf-breadcrumbs-item--link:focus-visible .sf-breadcrumbs-item-container {
++    --sf-breadcrumbs-item-container--color: var(--sf-on-surface);
++    text-decoration: underline;
++    text-underline-offset: .2em;
++}
+diff --git a/resources/schemas/framework-lock.schema.json b/resources/schemas/framework-lock.schema.json
+index effe7e44..1a2c8094 100644
+--- a/resources/schemas/framework-lock.schema.json
++++ b/resources/schemas/framework-lock.schema.json
+@@ -272,7 +272,7 @@
+             "type": "object",
+             "required": ["provider", "revision", "rollback_parent"],
+             "properties": {
+-                "provider": {"type": "string", "const": "simai/ui-loader"},
++                "provider": {"type": "string", "enum": ["simai/ui-source", "simai/ui-loader"]},
+                 "revision": {"type": "string", "format": "docara-immutable-revision"},
+                 "rollback_parent": {"type": "string", "format": "docara-immutable-revision"}
+             },
+diff --git a/resources/smart/assets/navigation.css b/resources/smart/assets/navigation.css
+index f18dc2b6..d440ec90 100644
+--- a/resources/smart/assets/navigation.css
++++ b/resources/smart/assets/navigation.css
+@@ -7,7 +7,7 @@
+ .docara-navigation-link,.docara-navigation-label{min-width:0;color:var(--sf-on-surface)}
+ .docara-navigation-link{align-self:stretch;margin-block:calc(var(--sf-space-1\/3) * -1);padding-block:calc(var(--sf-space-1\/3) + var(--sf-space-1\/4));text-decoration:none}
+ .docara-navigation-link .sf-menu-element-text,.docara-navigation-label .sf-menu-element-text{overflow-wrap:anywhere}
+-.docara-navigation [data-docara-disclosure]{order:-1;flex:0 0 auto;}
++.docara-navigation [data-docara-disclosure]{flex:0 0 auto;}
+ .docara-navigation [data-docara-active-role="ancestor"]>.sf-menu-element,.docara-navigation [data-docara-active-role="section"]>.sf-menu-element{--sf-menu-element--background-color:transparent;--sf-menu-element--border-color:transparent}
+ .docara-navigation [data-docara-active-role="page"]>.sf-menu-element{--sf-menu-element--background-color:var(--sf-surface-container-active);--sf-menu-element--border-color:var(--sf-surface-container-active)}
+ .docara-navigation [data-docara-active-role="page"]>.sf-menu-element>.docara-navigation-link,.docara-navigation [data-docara-active-role="page"]>.sf-menu-element>.docara-navigation-label{color:var(--sf-on-surface)}
+@@ -18,7 +18,7 @@
+ .docara-navigation-link:focus-visible,.docara-header-navigation-link:focus-visible,[data-docara-disclosure]:focus-visible{outline:var(--sf-focus-outline-width,var(--sf-a4)) solid var(--sf-primary,Highlight);outline-offset:var(--sf-a2)}
+ .docara-navigation [data-docara-disclosure]:focus{box-shadow:none}
+ .docara-header-navigation{min-inline-size:0;flex:1 1 auto}
+-.docara-header-navigation-list{justify-content:center;white-space:nowrap}
++.docara-header-navigation-list{flex-direction:row;justify-content:center;white-space:nowrap}
+ .docara-header-navigation-item{flex:0 0 auto}
+ .docara-header-navigation .docara-header-navigation-link{box-sizing:border-box;min-block-size:var(--sf-d0);inline-size:auto;padding-inline:var(--sf-space-1);color:var(--sf-on-surface);text-decoration:none}
+ .docara-header-navigation .docara-header-navigation-link[aria-current="page"]{background:var(--sf-surface-container-active)}
+diff --git a/resources/smart/assets/navigation.js b/resources/smart/assets/navigation.js
+index 40050474..7875bbdc 100644
+--- a/resources/smart/assets/navigation.js
++++ b/resources/smart/assets/navigation.js
+@@ -1,7 +1,7 @@
+ (function(){
+   function protect(link){if(link.dataset.docaraNavigationBound)return;link.dataset.docaraNavigationBound='1';link.addEventListener('click',function(event){event.stopPropagation()});link.addEventListener('keydown',function(event){if(event.key==='Enter')event.stopPropagation()})}
+   function labels(component){return{expand:component.dataset.docaraExpandLabel||'Expand: ',collapse:component.dataset.docaraCollapseLabel||'Collapse: ',containsCurrent:component.dataset.docaraContainsCurrentLabel||', contains the current page'}}
+-  function sync(item,copy){var button=item.querySelector(':scope > .sf-menu-element > [data-docara-disclosure]');if(!button)return;var open=item.classList.contains('open')||item.hasAttribute('expanded')||item.getAttribute('aria-expanded')==='true',iconName=open?'keyboard_arrow_down':'chevron_right';item.setAttribute('trailing-icon',iconName);button.setAttribute('aria-expanded',String(open));var icon=button.querySelector('sf-icon');if(icon)icon.setAttribute('icon',iconName);var title=(item.querySelector(':scope > .sf-menu-element .sf-menu-element-text')||{}).textContent||'';var current=button.dataset.docaraContainsCurrent==='true';button.setAttribute('aria-label',(open?copy.collapse:copy.expand)+title.trim()+(current?copy.containsCurrent:''))}
++  function sync(item,copy){var button=item.querySelector(':scope > .sf-menu-element > [data-docara-disclosure]');if(!button)return;var open=item.classList.contains('open')||item.hasAttribute('expanded')||item.getAttribute('aria-expanded')==='true',iconName=open?'keyboard_arrow_down':'chevron_right';item.setAttribute('trailing-icon',iconName);button.setAttribute('aria-expanded',String(open));var icon=button.querySelector('sf-icon');if(icon&&icon.getAttribute('icon')!==iconName){var nextIcon=icon.cloneNode(false);nextIcon.setAttribute('icon',iconName);icon.replaceWith(nextIcon)}var title=(item.querySelector(':scope > .sf-menu-element .sf-menu-element-text')||{}).textContent||'';var current=button.dataset.docaraContainsCurrent==='true';button.setAttribute('aria-label',(open?copy.collapse:copy.expand)+title.trim()+(current?copy.containsCurrent:''))}
+   function bindDisclosure(button,copy){if(button.dataset.docaraDisclosureBound)return;button.dataset.docaraDisclosureBound='1';button.addEventListener('keydown',function(event){if(event.key==='Enter'||event.key===' ')event.stopPropagation()});button.addEventListener('click',function(){var item=button.closest('.sf-menu-item'),component=button.closest('[data-docara-smart="docara.navigation"]');setTimeout(function(){if(!item||!component)return;sync(item,copy);component.dispatchEvent(new CustomEvent('docara-navigation-toggle',{bubbles:true,detail:{key:item.dataset.docaraNavigationKey||'',expanded:button.getAttribute('aria-expanded')==='true'}}))},0)})}
+   function bind(root){(root||document).querySelectorAll('[data-docara-smart="docara.navigation"]').forEach(function(component){var copy=labels(component);component.querySelectorAll('[data-docara-menu-link]').forEach(protect);component.querySelectorAll('.sf-menu-item').forEach(function(item){sync(item,copy);var button=item.querySelector(':scope > .sf-menu-element > [data-docara-disclosure]');if(button)bindDisclosure(button,copy)})})}
+   function reveal(){var rail=document.querySelector('.docara-sidebar'),active=rail&&rail.querySelector('[data-docara-smart="docara.navigation"] [aria-current="page"]');if(!rail||!active||rail.dataset.docaraActiveRevealed)return;var railRect=rail.getBoundingClientRect(),activeRect=active.getBoundingClientRect();if(railRect.width<=0||railRect.height<=0||activeRect.width<=0||activeRect.height<=0)return;rail.dataset.docaraActiveRevealed='1';var inset=8;if(activeRect.bottom>railRect.bottom-inset)rail.scrollTop+=activeRect.bottom-(railRect.bottom-inset);else if(activeRect.top<railRect.top+inset)rail.scrollTop+=activeRect.top-(railRect.top+inset)}
+diff --git a/resources/smart/docara.navigation/templates/header.php b/resources/smart/docara.navigation/templates/header.php
+index 44451c8d..8f044187 100644
+--- a/resources/smart/docara.navigation/templates/header.php
++++ b/resources/smart/docara.navigation/templates/header.php
+@@ -1,6 +1,6 @@
+ <?php if ($view->hasItems) { ?>
+ <nav class="docara-navigation docara-header-navigation" aria-label="<?= $view->label ?>" data-docara-smart="docara.navigation" data-docara-view="header" data-docara-maximum-depth="<?= $view->maximumDepth ?>">
+-    <ul class="sf-menu docara-header-navigation-list flex items-cross-center gap-1"><?= $view->itemsHtml ?></ul>
++    <ul class="sf-menu sf-menu--horizontal docara-header-navigation-list flex items-cross-center gap-1"><?= $view->itemsHtml ?></ul>
+ </nav>
+ <?php } else { ?>
+ <!-- docara:header-navigation disabled -->
+diff --git a/resources/smart/docara.navigation/templates/item.php b/resources/smart/docara.navigation/templates/item.php
+index c456d3d0..7d383952 100644
+--- a/resources/smart/docara.navigation/templates/item.php
++++ b/resources/smart/docara.navigation/templates/item.php
+@@ -1,13 +1,13 @@
+ <?php $item = $view->item; ?>
+ <li class="sf-menu-item flex flex-col<?= $item->open ? ' open' : '' ?>" data-docara-navigation-key="<?= $item->key ?>" data-docara-navigation-depth="<?= $item->depth ?>"<?php if ($item->hasChildren) { ?> trailing-icon="<?= $item->open ? 'keyboard_arrow_down' : 'chevron_right' ?>"<?php } ?><?php if ($item->open) { ?> expanded aria-expanded="true"<?php } elseif ($item->hasChildren) { ?> aria-expanded="false"<?php } ?><?php if ($view->activeRole !== null) { ?> data-docara-active-role="<?= $view->activeRole ?>"<?php } ?>>
+     <div role="presentation" tabindex="-1" class="sf-menu-element sf-menu-element--level-<?= $view->frameworkLevel ?> flex items-cross-center transition<?= $item->open ? ' open' : '' ?>">
+-<?php if ($item->hasChildren) { ?>
+-        <button type="button" data-docara-disclosure<?= $item->activeAncestor ? ' data-docara-contains-current="true"' : '' ?> aria-expanded="<?= $item->open ? 'true' : 'false' ?>" aria-label="<?= $item->open ? $view->collapseLabel : $view->expandLabel ?><?= $item->title ?><?= $item->activeAncestor ? $view->containsCurrentLabel : '' ?>" class="sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link radius-default sf-icon-button--size-1/3"><sf-icon icon="<?= $item->open ? 'keyboard_arrow_down' : 'chevron_right' ?>" aria-hidden="true"></sf-icon></button>
+-<?php } ?>
+ <?php if ($item->url !== null) { ?>
+         <a class="sf-menu-element-wrap docara-navigation-link flex flex-1 items-cross-center radius-1<?= $view->weightClass ?>" data-docara-menu-link href="<?= $item->url ?>"<?php if ($item->active) { ?> aria-current="page"<?php } ?>><span class="sf-menu-element-text"><?= $item->title ?></span></a>
+ <?php } else { ?>
+         <span class="sf-menu-element-wrap docara-navigation-label flex flex-1 items-cross-center<?= $view->weightClass ?>"><span class="sf-menu-element-text"><?= $item->title ?></span></span>
++<?php } ?>
++<?php if ($item->hasChildren) { ?>
++        <button type="button" data-docara-disclosure<?= $item->activeAncestor ? ' data-docara-contains-current="true"' : '' ?> aria-expanded="<?= $item->open ? 'true' : 'false' ?>" aria-label="<?= $item->open ? $view->collapseLabel : $view->expandLabel ?><?= $item->title ?><?= $item->activeAncestor ? $view->containsCurrentLabel : '' ?>" class="sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link radius-default sf-icon-button--size-1/3"><sf-icon icon="<?= $item->open ? 'keyboard_arrow_down' : 'chevron_right' ?>" aria-hidden="true"></sf-icon></button>
+ <?php } ?>
+     </div>
+ <?php if ($item->hasChildren) { ?>
+diff --git a/scripts/sync-framework-rule-registry.php b/scripts/sync-framework-rule-registry.php
+index 3fa5aa4c..3c6d2f71 100644
+--- a/scripts/sync-framework-rule-registry.php
++++ b/scripts/sync-framework-rule-registry.php
+@@ -225,16 +225,18 @@ $readRuntime = static function (string $runtimeFile) use (
+ // chunk ids in this repository.
+ $highlightEntrypoint = $readRuntime('component/highlight/js/highlight.js');
+ $highlightChunkFiles = [];
+-foreach (['javascript', 'markdown', 'bash', 'xml', 'css', 'plaintext', 'json', 'php'] as $language) {
+-    if (preg_match(
+-        '#(?:^|\R)\s*[\'\"]?' . preg_quote($language, '#')
+-            . '[\'\"]?\s*:\s*\(\)\s*=>\s*__webpack_require__\.e\([^0-9]*([0-9]+)\)#',
+-        $highlightEntrypoint,
+-        $chunkMatch,
+-    ) !== 1) {
+-        throw new RuntimeException('FRAMEWORK_HIGHLIGHT_LANGUAGE_CHUNK_MISSING: ' . $language);
++if (str_contains($highlightEntrypoint, '__webpack_require__.e')) {
++    foreach (['javascript', 'markdown', 'bash', 'xml', 'css', 'plaintext', 'json', 'php'] as $language) {
++        if (preg_match(
++            '#(?:^|\R)\s*[\'\"]?' . preg_quote($language, '#')
++                . '[\'\"]?\s*:\s*\(\)\s*=>\s*__webpack_require__\.e\([^0-9]*([0-9]+)\)#',
++            $highlightEntrypoint,
++            $chunkMatch,
++        ) !== 1) {
++            throw new RuntimeException('FRAMEWORK_HIGHLIGHT_LANGUAGE_CHUNK_MISSING: ' . $language);
++        }
++        $highlightChunkFiles[] = 'component/highlight/js/' . $chunkMatch[1] . '.js';
+     }
+-    $highlightChunkFiles[] = 'component/highlight/js/' . $chunkMatch[1] . '.js';
+ }
+ $highlightChunkFiles = array_values(array_unique($highlightChunkFiles));
+ sort($highlightChunkFiles, SORT_STRING);
+@@ -405,6 +407,24 @@ $runtimeLockBytes = json_encode(
+ ) . "\n";
+ file_put_contents($runtimeLockPath, $runtimeLockBytes, LOCK_EX);
+ 
++$viewUtilitiesPath = $root . '/resources/framework/view-utilities.json';
++$viewUtilities = json_decode((string) file_get_contents($viewUtilitiesPath), true, 512, JSON_THROW_ON_ERROR);
++$compatibilityId = $lock['runtime']['pair_id'] ?? null;
++$contractRegistrySha256 = $lock['runtime']['framework_registry']['file_sha256'] ?? null;
++if (! is_string($compatibilityId)
++    || ! is_string($contractRegistrySha256)
++    || preg_match('/^[a-f0-9]{64}$/D', $contractRegistrySha256) !== 1
++) {
++    throw new RuntimeException('FRAMEWORK_VIEW_UTILITY_PROVENANCE_INVALID');
++}
++$viewUtilities['compatibility_id'] = $compatibilityId;
++$viewUtilities['registry_sha256'] = $contractRegistrySha256;
++file_put_contents(
++    $viewUtilitiesPath,
++    json_encode($viewUtilities, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n",
++    LOCK_EX,
++);
++
+ fwrite(STDOUT, json_encode([
+     'schema' => 'docara.framework_rule_projection.v1',
+     'revision' => $revision,
+diff --git a/scripts/verify-static-build.php b/scripts/verify-static-build.php
+index db2364ea..a3a2c7b6 100644
+--- a/scripts/verify-static-build.php
++++ b/scripts/verify-static-build.php
+@@ -2202,6 +2202,33 @@ if ($manifestError !== null) {
+     $expectedHtmlOutputs = array_values(array_unique([
+         ...$manifestOutputs,
+     ]));
++    // Supplementary, source-generated examples remain part of the full link audit.
++    // Every file is declared and hashed; an unlisted HTML output still fails.
++    $examplesReceipt = $root . '/.docara/standalone-examples.json';
++    if (is_file($examplesReceipt)) {
++        try {
++            $receipt = json_decode((string) file_get_contents($examplesReceipt), true, 64, JSON_THROW_ON_ERROR);
++            if (($receipt['schema'] ?? null) !== 'docara.standalone_examples.v1'
++                || !is_array($receipt['files'] ?? null) || count($receipt['files']) > 1000
++                || !preg_match('/^[a-f0-9]{64}$/D', $receipt['generator_sha256'] ?? '')
++                || !preg_match('/^[a-f0-9]{64}$/D', $receipt['inputs_sha256'] ?? '')) {
++                throw new RuntimeException('Invalid standalone example receipt');
++            }
++            foreach ($receipt['files'] as $entry) {
++                $relative = $entry['path'] ?? '';
++                if (!preg_match('#^demos/[a-z0-9/_-]+\.(html|js|css|json)$#D', $relative)
++                    || !preg_match('/^[a-f0-9]{64}$/D', $entry['sha256'] ?? '')
++                    || !is_file($root . '/' . $relative)
++                    || hash_file('sha256', $root . '/' . $relative) !== $entry['sha256']) {
++                    throw new RuntimeException('Standalone example missing or changed: ' . $relative);
++                }
++                if (str_ends_with($relative, '.html')) $expectedHtmlOutputs[] = $relative;
++            }
++            $expectedHtmlOutputs = array_values(array_unique($expectedHtmlOutputs));
++        } catch (Throwable $error) {
++            $broken[] = ['page' => '@build', 'reference' => '@standalone-examples', 'target' => $error->getMessage()];
++        }
++    }
+     sort($expectedHtmlOutputs, SORT_STRING);
+     if ($actualHtmlOutputs !== $expectedHtmlOutputs) {
+         $missing = array_values(array_diff($expectedHtmlOutputs, $actualHtmlOutputs));
+diff --git a/src/Declarative/Rendering/FrameworkUtilityRegistry.php b/src/Declarative/Rendering/FrameworkUtilityRegistry.php
+index cf42eb26..01c2f9a1 100644
+--- a/src/Declarative/Rendering/FrameworkUtilityRegistry.php
++++ b/src/Declarative/Rendering/FrameworkUtilityRegistry.php
+@@ -13,6 +13,7 @@ final class FrameworkUtilityRegistry
+ 
+     public function __construct(
+         private readonly string $path = __DIR__ . '/../../../resources/framework/view-utilities.json',
++        private readonly string $runtimeLockPath = __DIR__ . '/../../../resources/framework/runtime-lock.json',
+     ) {}
+ 
+     /** @param list<string> $utilities */
+@@ -70,6 +71,7 @@ final class FrameworkUtilityRegistry
+         }
+         try {
+             $document = json_decode((string) file_get_contents($this->path), true, 512, JSON_THROW_ON_ERROR);
++            $runtime = json_decode((string) file_get_contents($this->runtimeLockPath), true, 512, JSON_THROW_ON_ERROR);
+         } catch (\JsonException $exception) {
+             throw new PortableConfigurationException(
+                 'DECLARATIVE_VIEW_UTILITY_REGISTRY_INVALID',
+@@ -78,9 +80,10 @@ final class FrameworkUtilityRegistry
+             );
+         }
+         if (! is_array($document)
++            || ! is_array($runtime)
+             || ($document['schema'] ?? null) !== 'docara.framework_view_utilities.v1'
+-            || ($document['compatibility_id'] ?? null) !== 'sf-v5.7.0-d328491b-9e94abc6'
+-            || ($document['registry_sha256'] ?? null) !== '2ddbcd7077c6fa2b2f1918726f16c9c213f3a6db5d717539244bcad01abd83b3'
++            || ($document['compatibility_id'] ?? null) !== ($runtime['pair_id'] ?? null)
++            || ($document['registry_sha256'] ?? null) !== ($runtime['framework_registry']['file_sha256'] ?? null)
+         ) {
+             throw new PortableConfigurationException(
+                 'DECLARATIVE_VIEW_UTILITY_REGISTRY_INVALID',
+diff --git a/src/Framework/FrameworkAssetPlan.php b/src/Framework/FrameworkAssetPlan.php
+index 255d9a47..123cb902 100644
+--- a/src/Framework/FrameworkAssetPlan.php
++++ b/src/Framework/FrameworkAssetPlan.php
+@@ -87,6 +87,17 @@ final readonly class FrameworkAssetPlan
+         return null;
+     }
+ 
++    public function withoutGeneratedAssetContent(): self
++    {
++        return new self(
++            $this->runtimePair,
++            $this->assets,
++            array_map($this->generatedAssetMetadata(...), $this->generatedAssets),
++            $this->preload,
++            $this->diagnostics,
++        );
++    }
++
+     /** @return array<string, mixed> */
+     public function receipt(): array
+     {
+diff --git a/src/Framework/FrameworkLock.php b/src/Framework/FrameworkLock.php
+index ea7127a2..451a2ccc 100644
+--- a/src/Framework/FrameworkLock.php
++++ b/src/Framework/FrameworkLock.php
+@@ -247,7 +247,7 @@ final readonly class FrameworkLock
+             if (! is_array($typography)
+                 || ($typography['schema'] ?? null) !== 'docara.framework_typography_projection.v1'
+                 || ! in_array($typography['candidate'] ?? null, ['5.4.0-rc.1', '5.4.0'], true)
+-                || ($typography['source']['provider'] ?? null) !== 'simai/ui-loader'
++                || ! in_array($typography['source']['provider'] ?? null, ['simai/ui-source', 'simai/ui-loader'], true)
+                 || ! $this->isCommit($typography['source']['revision'] ?? null)
+                 || ! $this->isCommit($typography['source']['rollback_parent'] ?? null)
+                 || ($typography['builder']['provider'] ?? null) !== 'simai/ui-builder'
+diff --git a/src/Portable/CanonicalJson.php b/src/Portable/CanonicalJson.php
+index d5deabc3..c82cc4c4 100644
+--- a/src/Portable/CanonicalJson.php
++++ b/src/Portable/CanonicalJson.php
+@@ -4,11 +4,16 @@ namespace Simai\Docara\Portable;
+ 
+ final class CanonicalJson
+ {
++    private const FLAGS = JSON_THROW_ON_ERROR
++        | JSON_UNESCAPED_SLASHES
++        | JSON_UNESCAPED_UNICODE
++        | JSON_PRESERVE_ZERO_FRACTION;
++
+     public static function encode(mixed $value): string
+     {
+         return json_encode(
+             self::normalize($value),
+-            JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION,
++            self::FLAGS,
+         );
+     }
+ 
+@@ -24,6 +29,84 @@ final class CanonicalJson
+         ) . "\n";
+     }
+ 
++    /** @param resource $stream */
++    public static function writePretty($stream, mixed $value): void
++    {
++        if (! is_resource($stream)) {
++            throw new \InvalidArgumentException('Canonical JSON output requires a writable stream.');
++        }
++
++        self::writePrettyValue($stream, $value, 0);
++        self::write($stream, "\n");
++    }
++
++    /** @param resource $stream */
++    private static function writePrettyValue($stream, mixed $value, int $depth): void
++    {
++        if ($depth > 512) {
++            throw new \JsonException('Maximum stack depth exceeded');
++        }
++        if ($value instanceof \stdClass) {
++            $value = get_object_vars($value);
++            self::writePrettyObject($stream, $value, $depth);
++
++            return;
++        }
++        if (! is_array($value)) {
++            self::write($stream, json_encode($value, self::FLAGS));
++
++            return;
++        }
++        if (! array_is_list($value)) {
++            self::writePrettyObject($stream, $value, $depth);
++
++            return;
++        }
++        if ($value === []) {
++            self::write($stream, '[]');
++
++            return;
++        }
++
++        self::write($stream, "[\n");
++        $last = count($value) - 1;
++        foreach ($value as $index => $item) {
++            self::write($stream, str_repeat(' ', ($depth + 1) * 4));
++            self::writePrettyValue($stream, $item, $depth + 1);
++            self::write($stream, $index === $last ? "\n" : ",\n");
++        }
++        self::write($stream, str_repeat(' ', $depth * 4) . ']');
++    }
++
++    /** @param resource $stream @param array<string, mixed> $value */
++    private static function writePrettyObject($stream, array $value, int $depth): void
++    {
++        if ($value === []) {
++            self::write($stream, '{}');
++
++            return;
++        }
++        $keys = array_keys($value);
++        sort($keys, SORT_STRING);
++        self::write($stream, "{\n");
++        $last = count($keys) - 1;
++        foreach ($keys as $index => $key) {
++            self::write($stream, str_repeat(' ', ($depth + 1) * 4));
++            self::write($stream, json_encode((string) $key, self::FLAGS) . ': ');
++            self::writePrettyValue($stream, $value[$key], $depth + 1);
++            self::write($stream, $index === $last ? "\n" : ",\n");
++        }
++        self::write($stream, str_repeat(' ', $depth * 4) . '}');
++    }
++
++    /** @param resource $stream */
++    private static function write($stream, string $bytes): void
++    {
++        if (fwrite($stream, $bytes) !== strlen($bytes)) {
++            throw new \RuntimeException('Canonical JSON output could not be written completely.');
++        }
++    }
++
+     private static function normalize(mixed $value): mixed
+     {
+         if ($value instanceof \stdClass) {
+diff --git a/src/PortableSite/PortableSiteBuilder.php b/src/PortableSite/PortableSiteBuilder.php
+index b5d5f94e..0100eee5 100644
+--- a/src/PortableSite/PortableSiteBuilder.php
++++ b/src/PortableSite/PortableSiteBuilder.php
+@@ -359,7 +359,6 @@ final readonly class PortableSiteBuilder
+                 'The build requires at least one authored page and an initialized component runtime.',
+             );
+         }
+-        $frameworkAssetPlans = [];
+         $frameworkAssetPlanReceipts = $existingFrameworkAssetPlanReceipts;
+         $effectiveComponentCatalog = EffectiveComponentCatalogBuilder::bundled(
+             FrameworkLock::fromArray($buildBasePlan->frameworkLock),
+@@ -688,6 +687,7 @@ final readonly class PortableSiteBuilder
+             (string) ($site['base_url'] ?? '/'),
+             $siteTitle,
+         );
++        $initialFrameworkPlans = [];
+         foreach ($pages as &$page) {
+             $componentKeys = array_values(array_unique(array_map(
+                 static fn (array $call): string => (string) ($call['id'] ?? ''),
+@@ -697,8 +697,15 @@ final readonly class PortableSiteBuilder
+             if ($page['search_enabled'] === true) {
+                 array_push($shellRuntimeTags, 'sf-button', 'sf-modal');
+             }
++            $initialPlanKey = hash('sha256', CanonicalJson::encode([
++                'components' => $componentKeys,
++                'shell_runtime_tags' => $shellRuntimeTags,
++            ]));
++            $initialFrameworkPlans[$initialPlanKey] ??= $runtime
++                ->planAssets($componentKeys, $shellRuntimeTags)
++                ->withoutGeneratedAssetContent();
+             $page['components'] = $page['components']->withAssetPlan(
+-                $runtime->planAssets($componentKeys, $shellRuntimeTags),
++                $initialFrameworkPlans[$initialPlanKey],
+             );
+         }
+         unset($page);
+@@ -849,6 +856,7 @@ final readonly class PortableSiteBuilder
+             }
+ 
+             $requiredSmartAssets = [];
++            $publishedFrameworkAssetPlans = [];
+             foreach ($pagesToRender as $pageIndex => $page) {
+                 $declarative = null;
+                 $pageLocale = (string) $page['locale'];
+@@ -1032,7 +1040,22 @@ final readonly class PortableSiteBuilder
+                     }
+                     $finalFrameworkPlan = $verifiedFrameworkPlan;
+                 }
+-                $frameworkAssetPlans[$finalFrameworkPlan->generatedAssets[0]['sha256']] = $finalFrameworkPlan;
++                $generatedAssetSha256 = $finalFrameworkPlan->generatedAssets[0]['sha256'] ?? null;
++                if (! is_string($generatedAssetSha256)
++                    || preg_match('/^[a-f0-9]{64}$/D', $generatedAssetSha256) !== 1
++                ) {
++                    throw new PortableConfigurationException(
++                        'DECLARATIVE_GENERATED_ASSET_INVALID',
++                        "Framework assets for [{$page['output']}] have no immutable generated asset identity.",
++                    );
++                }
++                if (! isset($publishedFrameworkAssetPlans[$generatedAssetSha256])) {
++                    foreach ($localeDestinations as $localeDestination) {
++                        (new PortablePublisherAssetPublisher($this->files, $smartRegistry))
++                            ->publishFrameworkAssetPlans($localeDestination, [$finalFrameworkPlan]);
++                    }
++                    $publishedFrameworkAssetPlans[$generatedAssetSha256] = true;
++                }
+                 $frameworkAssetPlanReceipts[(string) $page['output']] = $finalFrameworkPlan->receipt();
+                 $this->files->put($outputPath, $rendered);
+ 
+@@ -1067,6 +1090,9 @@ final readonly class PortableSiteBuilder
+                 $diagnosticsByUrl[(string) $page['url']] = $record;
+                 $result->put((string) $page['url'], $record);
+             }
++            $orderedDiagnostics = $this->orderedDiagnostics($contextPages, $diagnosticsByUrl);
++            unset($pagesToRender, $pages, $contextPages, $initialFrameworkPlans);
++            gc_collect_cycles();
+             foreach ($diagnosticsByUrl as $diagnosticRecord) {
+                 foreach (($diagnosticRecord['declarative_pipeline']['assets'] ?? []) as $assetKey) {
+                     if (is_string($assetKey)) {
+@@ -1080,7 +1106,6 @@ final readonly class PortableSiteBuilder
+             $this->copyContentAssets($contentAssets, $destination);
+             $brandPublisher->publish($brandPlan['assets'], $destination);
+             ksort($frameworkAssetPlanReceipts, SORT_STRING);
+-            $frameworkAssetPlans = array_values($frameworkAssetPlans);
+             foreach ($localeDestinations as $localeDestination) {
+                 $this->publishFrameworkAssets($buildBasePlan->frameworkLock, $localeDestination);
+                 $assetPublisher = new PortablePublisherAssetPublisher($this->files, $smartRegistry);
+@@ -1088,9 +1113,7 @@ final readonly class PortableSiteBuilder
+                     $localeDestination,
+                     $requiredSmartAssets,
+                 );
+-                $assetPublisher->publishFrameworkAssetPlans($localeDestination, $frameworkAssetPlans);
+             }
+-            $orderedDiagnostics = $this->orderedDiagnostics($contextPages, $diagnosticsByUrl);
+             $performanceReceipt = (new PortablePerformanceReceipt($this->files))->publish(
+                 $destination,
+                 (string) ($site['base_url'] ?? '/'),
+@@ -1098,41 +1121,52 @@ final readonly class PortableSiteBuilder
+             );
+             $diagnosticPath = rtrim($destination, '/\\') . '/.docara/resolved-page-plans.json';
+             $this->files->ensureDirectoryExists(dirname($diagnosticPath));
+-            $this->files->put($diagnosticPath, $this->prettyCanonicalJson([
+-                'schema' => 'docara.resolved_page_plans.v1',
+-                'build' => [
+-                    'purpose' => $purpose->value,
+-                    'locale' => $buildLocale,
+-                    'documentation_version' => $documentationVersion,
+-                    'engine' => $engineRevision,
+-                    'dependencies' => $dependencyLock,
+-                    'framework' => [
+-                        'lock_sha256' => hash('sha256', CanonicalJson::encode($buildBasePlan->frameworkLock)),
+-                        'runtime' => $buildBasePlan->frameworkLock['runtime'],
+-                        'manifests' => $buildBasePlan->frameworkLock['manifests'],
+-                        'asset_projection' => $buildBasePlan->frameworkLock['asset_projection'],
+-                        'dynamic_asset_projection' => $buildBasePlan->frameworkLock['dynamic_asset_projection'] ?? null,
+-                        'shell' => [
+-                            'schema' => 'docara.framework_asset_plans.v1',
+-                            'mode' => 'production_exact',
+-                            'plans' => $frameworkAssetPlanReceipts,
++            $diagnosticStream = @fopen($diagnosticPath, 'wb');
++            if (! is_resource($diagnosticStream)) {
++                throw new PortableConfigurationException(
++                    'PORTABLE_DIAGNOSTIC_WRITE_FAILED',
++                    'The resolved page plans could not be opened for writing.',
++                );
++            }
++            try {
++                CanonicalJson::writePretty($diagnosticStream, [
++                    'schema' => 'docara.resolved_page_plans.v1',
++                    'build' => [
++                        'purpose' => $purpose->value,
++                        'locale' => $buildLocale,
++                        'documentation_version' => $documentationVersion,
++                        'engine' => $engineRevision,
++                        'dependencies' => $dependencyLock,
++                        'framework' => [
++                            'lock_sha256' => hash('sha256', CanonicalJson::encode($buildBasePlan->frameworkLock)),
++                            'runtime' => $buildBasePlan->frameworkLock['runtime'],
++                            'manifests' => $buildBasePlan->frameworkLock['manifests'],
++                            'asset_projection' => $buildBasePlan->frameworkLock['asset_projection'],
++                            'dynamic_asset_projection' => $buildBasePlan->frameworkLock['dynamic_asset_projection'] ?? null,
++                            'shell' => [
++                                'schema' => 'docara.framework_asset_plans.v1',
++                                'mode' => 'production_exact',
++                                'plans' => $frameworkAssetPlanReceipts,
++                            ],
++                            'portable_smart_asset_projection' => (new FrameworkPortableAssetProjection($smartRegistry))
++                                ->forKeys($requiredSmartAssets),
+                         ],
+-                        'portable_smart_asset_projection' => (new FrameworkPortableAssetProjection($smartRegistry))
+-                            ->forKeys($requiredSmartAssets),
+-                    ],
+-                    'production_inputs' => $runtimeMetadata->productionInputGroups(),
+-                    'public_projections' => [
+-                        'design_atlas_sha256' => $atlasReceipt['content_sha256'],
+-                        'schema_reference_sha256' => $schemaReferenceReceipt['content_sha256'],
+-                        'examples_sha256' => $exampleReceipt['content_sha256'],
+-                        'performance_sha256' => $performanceReceipt['content_sha256'],
++                        'production_inputs' => $runtimeMetadata->productionInputGroups(),
++                        'public_projections' => [
++                            'design_atlas_sha256' => $atlasReceipt['content_sha256'],
++                            'schema_reference_sha256' => $schemaReferenceReceipt['content_sha256'],
++                            'examples_sha256' => $exampleReceipt['content_sha256'],
++                            'performance_sha256' => $performanceReceipt['content_sha256'],
++                        ],
++                        'component_catalog_sha256' => hash('sha256', CanonicalJson::encode($effectiveComponentCatalog)),
++                        'publisher' => $publisher->id(),
++                        'locale_sources' => $this->localeSourceHashes($root, $contentContexts),
+                     ],
+-                    'component_catalog_sha256' => hash('sha256', CanonicalJson::encode($effectiveComponentCatalog)),
+-                    'publisher' => $publisher->id(),
+-                    'locale_sources' => $this->localeSourceHashes($root, $contentContexts),
+-                ],
+-                'pages' => $orderedDiagnostics,
+-            ]));
++                    'pages' => $orderedDiagnostics,
++                ]);
++            } finally {
++                fclose($diagnosticStream);
++            }
+             $this->promoteCandidate($root, $destination, $finalDestination);
+         } catch (\Throwable $exception) {
+             if ($this->files->isDirectory($destination) && ! is_link($destination)) {

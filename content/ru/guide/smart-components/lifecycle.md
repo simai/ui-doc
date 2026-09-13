@@ -9,20 +9,31 @@ description: "Что происходит после появления Smart-к
 
 ## Когда применять
 
-Ждите событие готовности, если проект должен обращаться к компоненту сразу после добавления на страницу. Проверяйте собственные события на странице конкретного компонента: общий набор описывает только основные этапы.
+Дождитесь регистрации тега и первого отображения, если проект должен обращаться к компоненту сразу после добавления на страницу. Проверяйте собственные события на странице конкретного компонента: общий набор описывает только основные этапы.
 
-## Пример
+## Ожидание готовности
 
 ```js
 const button = document.querySelector('sf-button');
 
-button.addEventListener('sf-after-render', () => {
-  console.log('Кнопка готова');
-});
+await customElements.whenDefined('sf-button');
+await button.whenRendered();
+console.log('Кнопка готова');
 ```
 
 Общие события включают `sf-connected`, `sf-disconnected`, `sf-before-render`, `sf-after-render`, `sf-updated` и `sf-props-change`.
 
-## Что дальше
+`whenRendered()` работает и после первого отображения: вы не пропустите событие, которое уже произошло. Для последующих изменений можно слушать `sf-after-render`. В составном компоненте проверяйте `event.target`: события вложенных элементов тоже поднимаются к родителю.
 
-Узнайте, [как читать статус готовности](/ru/guide/smart-components/catalog-and-readiness/) или откройте события нужного элемента в [справочнике](/ru/smart-components/reference/).
+## Пример готового элемента
+
+:::internal_preview {size="tall" title="Работающий пример"}
+[Открыть демонстрацию](/demos/guide/smart-counter/)
+:::
+
+:::code {src="../../../../examples/guide/smart-counter/index.html" lang="html" title="index.html"}
+:::
+
+:::code {src="../../../../examples/guide/smart-counter/index.js" lang="javascript" title="index.js"}
+:::
+

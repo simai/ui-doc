@@ -4,10 +4,10 @@ declare(strict_types=1);
 $root = dirname(__DIR__);
 $groups = [
  'introduction' => ['Знакомство', 10, ['what-is-layout'=>['Что такое макет',10], 'document-flow'=>['Как макет превращается в HTML',20], 'levels'=>['Страница, секция, блок и компонент',30]]],
- 'building' => ['Устройство макета', 20, ['page'=>['Страница',10], 'section'=>['Секция',20], 'block'=>['Блок',30], 'component'=>['Компонент в макете',40], 'smart-component'=>['Smart-компонент в макете',50], 'complex-smart-component'=>['Сложный Smart-компонент',60], 'slots'=>['Слоты и порядок элементов',70]]],
+ 'building' => ['Устройство макета', 20, ['page'=>['Страница',10], 'section'=>['Секция',20], 'block'=>['Блок',30], 'component'=>['Компонент в макете',40], 'smart-component'=>['Smart-компонент в макете',50], 'complex-smart-component'=>['Комплексный Smart-компонент',60], 'slots'=>['Слоты и порядок элементов',70]]],
  'content-and-data' => ['Содержимое и данные', 30, ['structured-text'=>['Структурированный текст без HTML',10], 'data-sources'=>['Данные и внешние источники',20], 'rendering-boundary'=>['Рендеринг и граница проекта',30]]],
  'examples' => ['Готовые примеры', 40, ['information-page'=>['Пример: информационная страница',10], 'catalog'=>['Пример: каталог товаров',20], 'dashboard'=>['Пример: составной интерфейс',30]]],
- 'reference' => ['Справочник', 50, ['document'=>['Документ макета',10], 'type-manifest'=>['Manifest типа',20], 'api'=>['API проверки и рендеринга',30], 'diagnostics'=>['Ошибки и диагностика',40], 'versions'=>['Версии и совместимость',50], 'custom-type'=>['Создание собственного типа',60], 'studio-inspector'=>['Инспектор макета в Studio',70]]],
+ 'reference' => ['Справочник', 50, ['document'=>['Документ макета',10], 'type-manifest'=>['Manifest типа',20], 'api'=>['API проверки и рендеринга',30], 'diagnostics'=>['Ошибки и диагностика',40], 'versions'=>['Версии и совместимость',50], 'custom-type'=>['Создание собственного типа',60], 'studio-inspector'=>['Инспектор макета',70]]],
 ];
 $errors=[]; $paragraphs=[]; $count=0;
 $read=function(string $path)use($root){$file="$root/$path";if(!is_file($file))throw new RuntimeException("Missing $path");return (string)file_get_contents($file);};
@@ -18,7 +18,7 @@ $checkPage=function(string $base,string $title,int $order)use(&$errors,&$paragra
  $count++;$md=$read($base.'.md');$side=$json($base.'.page.json');preg_match_all('/^# (.+)$/m',$md,$h);
  if(count($h[1])!==1||($h[1][0]??'')!==$title)$errors[]=['code'=>'h1','page'=>$base];
  if(($side['navigation']['order']??null)!==$order)$errors[]=['code'=>'order','page'=>$base];
- foreach(['## Когда применять','## Пример','## Что дальше'] as $heading)if(!str_contains($md,$heading))$errors[]=['code'=>'section_missing','page'=>$base,'heading'=>$heading];
+ foreach(['## Когда применять','## Пример'] as $heading)if(!str_contains($md,$heading))$errors[]=['code'=>'section_missing','page'=>$base,'heading'=>$heading];
  $plain=preg_replace('/```.*?```/s','',$md)??$md;$words=preg_split('/\s+/u',trim(strip_tags($plain)))?:[];
  if(count($words)<75)$errors[]=['code'=>'too_short','page'=>$base,'words'=>count($words)];
  foreach(preg_split('/\R\s*\R/u',$plain)?:[] as $para){$n=mb_strtolower(trim(preg_replace('/\s+/u',' ',$para)??''));if(mb_strlen($n)>120)$paragraphs[$n][]=$base;}

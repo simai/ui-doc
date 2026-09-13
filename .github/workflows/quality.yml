@@ -22,8 +22,10 @@ jobs:
       # documentation build remains reproducible.
       - run: composer validate --no-check-publish
       - run: composer install --no-interaction --prefer-source
-      - run: composer docs:versions:check
-      - run: composer docs:components:check
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: composer docs:check
       - run: php scripts/test-migrate-legacy-content.php
       - name: Verify committed migration is idempotent
         run: |
@@ -32,16 +34,21 @@ jobs:
           git diff --exit-code
       - name: Build twice with identical output
         run: |
-          php vendor/bin/docara build production
+          composer docs:build
           find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
             printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
           done > /tmp/build-first.sha256
           rm -rf build_production
-          php vendor/bin/docara build production
+          composer docs:build
           find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
             printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
           done > /tmp/build-second.sha256
           diff -u /tmp/build-first.sha256 /tmp/build-second.sha256
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r scripts/requirements-docs.txt
+      - run: python scripts/check-ai-schema.py
       - name: Verify all generated local references
         env:
           DOCARA_COMPOSER_AUTOLOAD: ${{ github.workspace }}/vendor/autoload.php

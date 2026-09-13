@@ -32,6 +32,8 @@ foreach ($markdownPaths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
     $tableMarkers += preg_match_all('/^\h*\{\.table\}\h*$/m', $markdown);
+    preg_match_all('#/demos/(guide/[a-z0-9-]+)/#', $markdown, $demoIds);
+    foreach ($demoIds[1] as $demoId) $consumers[$demoId][] = $relative;
     $escapedAnchorLinks += preg_match_all('/^\h*-\h+&lt;a\h+href=/mi', $markdown);
     preg_match_all(
         '/^:::example\s+\{[^}]*\bid="([^"]+)"[^}]*}\s*$.*?^:::\s*$/ms',
@@ -78,7 +80,10 @@ foreach ($markdownPaths as $path) {
     }
 }
 
-$examplePaths = glob($root . '/examples/*/*/*/index.html') ?: [];
+$examplePaths = [];
+foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/examples')) as $file) {
+    if ($file->isFile() && $file->getFilename() === 'index.html') $examplePaths[] = $file->getPathname();
+}
 sort($examplePaths, SORT_STRING);
 $hashes = [];
 $exampleIds = [];

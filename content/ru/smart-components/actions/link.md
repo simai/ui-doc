@@ -1,0 +1,75 @@
+---
+title: "Link"
+description: "Атрибуты, события и примеры Smart-компонента link."
+---
+
+# Link
+
+Идентификатор: `smart.link`. Smart-компонент заблокирован; жизненный цикл — экспериментальный.
+
+## Блокирующее ограничение
+
+Компонент нельзя рекомендовать для нового проекта: `loader_rule_missing`. До появления Loader-правила подключение не считается публичным контрактом.
+
+## Теги и подключение
+
+Публичный Custom Element в текущем манифесте не подтверждён.
+
+Loader-статус: `unregistered`.
+
+Поставляемые ассеты:
+Не поставляется в текущем пакете: `smart/link/js/link.js`.
+
+## Атрибуты и свойства
+
+| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
+|:---|:---|:---|:---|:---|
+| `template` | `templateName` | `String` | `"default"` | `—` |
+| `link` | `link` | `String` | `""` | `—` |
+| `href` | `href` | `String` | `""` | `—` |
+| `text` | `text` | `String` | `""` | `—` |
+| `label` | `label` | `String` | `""` | `—` |
+| `no-wrap` | `noWrap` | `Boolean` | `!1` | `—` |
+| `target` | `target` | `String` | `"_blank"` | `—` |
+| `rel` | `rel` | `String` | `"noopener noreferrer"` | `—` |
+| `icon` | `icon` | `String` | `"link"` | `—` |
+| `favicon` | `favicon` | `Boolean` | `!0` | `—` |
+| `favicon-provider` | `faviconProvider` | `String` | `"direct"` | `—` |
+| `favicon-url` | `faviconUrl` | `String` | `""` | `—` |
+| `favicon-size` | `faviconSize` | `Number` | `32` | `—` |
+| `disabled` | `disabled` | `Boolean` | `!1` | `—` |
+| `aria-label` | `ariaLabel` | `String` | `""` | `—` |
+| `root-class` | `rootClass` | `String` | `""` | `—` |
+
+Общие атрибуты базового Smart-элемента:
+
+| Атрибут | Тип | Назначение |
+|:---|:---|:---|
+| `root-class` | `String` | Классы корневого элемента шаблона |
+| `root-style` | `String` | Inline-стили корневого элемента шаблона |
+| `style` | `String` | Стили host-элемента |
+
+## Методы
+
+Отдельный публичный метод в source-классе не подтверждён; используйте атрибуты и DOM events.
+
+## События
+
+Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
+
+| Событие | Когда возникает |
+|:---|:---|
+| `sf-connected` | Элемент подключён к DOM |
+| `sf-disconnected` | Элемент отключён от DOM |
+| `sf-before-render` | Начало цикла отрисовки |
+| `sf-after-render` | Цикл отрисовки завершён |
+| `sf-updated` | Свойства или разметка обновлены |
+| `sf-props-change` | Изменились наблюдаемые свойства |
+
+## Доступность
+
+Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+
+## Источник
+
+Не поставляется в текущем пакете: `smart/link`.

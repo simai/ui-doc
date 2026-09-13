@@ -18,8 +18,4 @@ description: "Как описывать страницы, секции, блок
 1. [Что такое макет](/ru/guide/layouts/introduction/what-is-layout/)
 2. [Как макет превращается в HTML](/ru/guide/layouts/introduction/document-flow/)
 3. [Страница, секция, блок и компонент](/ru/guide/layouts/introduction/levels/)
-4. [Открыть Инспектор макета](https://ui-studio.test/?mode=layout&example=catalog)
-
-## Что дальше
-
-Начните со страницы [«Что такое макет»](/ru/guide/layouts/introduction/what-is-layout/), затем двигайтесь по меню сверху вниз.
+4. [инспекторе в документации](/ru/guide/layouts/reference/studio-inspector/)

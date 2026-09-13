@@ -1,0 +1,7 @@
+{
+  "schema": "docara.section.v1",
+  "title": "Окна и панели",
+  "navigation": {
+    "order": 60
+  }
+}

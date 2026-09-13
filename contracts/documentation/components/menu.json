@@ -1,7 +1,7 @@
 {
   "schema": "ui-doc.component_documentation_contract.v1",
   "component": "menu",
-  "page": "content/ru/components/menu.md",
+  "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
     "source_revision": "1af5fbc6e1aba7eedefdc5d388aded900c07b3e2",
     "core_revision": "803b6e27c4554cb7d3b4dec185e4935d10659e44",

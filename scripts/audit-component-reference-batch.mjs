@@ -75,7 +75,7 @@ if (!exists(readmePath) || !read(readmePath).includes('(docs/developer/component
 const cases = [
   {
     name: 'buttons',
-    page: 'content/ru/components/buttons.md',
+    page: 'content/ru/components/actions/buttons.md',
     examples: ['basic', 'variants', 'sizes', 'icons', 'states', 'tightness', 'radius', 'segments'],
     selector: '.sf-button',
     sourceJs: 'src/component/buttons/js/_buttons.js',
@@ -84,7 +84,7 @@ const cases = [
   },
   {
     name: 'inputs',
-    page: 'content/ru/components/inputs.md',
+    page: 'content/ru/components/forms/inputs.md',
     examples: ['overview', 'types', 'variants', 'sizes', 'states', 'mask'],
     selector: '.sf-input',
     sourceJs: 'src/component/inputs/js/_inputs.js',
@@ -93,7 +93,7 @@ const cases = [
   },
   {
     name: 'checkbox',
-    page: 'content/ru/components/checkbox.md',
+    page: 'content/ru/components/forms/checkbox.md',
     examples: ['overview', 'group', 'states', 'sizes', 'position'],
     selector: '.sf-checkbox',
     sourceJs: 'src/component/checkbox/js/_checkbox.js',
@@ -102,7 +102,7 @@ const cases = [
   },
   {
     name: 'modal',
-    page: 'content/ru/components/modal.md',
+    page: 'content/ru/components/overlays-media/modal.md',
     examples: ['overview', 'positions', 'smart-overview', 'smart-positions', 'smart-overlay', 'smart-minimized', 'smart-local-content', 'smart-inline'],
     selector: '.sf-modal',
     sourceJs: 'src/component/modal/js/_modal.js',

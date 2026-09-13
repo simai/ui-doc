@@ -1,0 +1,195 @@
+{
+  "schema": "ui-doc.catalog-groups.v1",
+  "components": {
+    "actions": {
+      "title": "Действия",
+      "items": [
+        "buttons",
+        "button-group",
+        "icon-buttons",
+        "fab",
+        "close",
+        "clipboard",
+        "download-file"
+      ]
+    },
+    "forms": {
+      "title": "Формы и ввод",
+      "items": [
+        "inputs",
+        "textarea",
+        "checkbox",
+        "radio",
+        "switch",
+        "toggle",
+        "quantity",
+        "range-slider",
+        "slider",
+        "datepicker",
+        "country-code",
+        "file-upload",
+        "verification"
+      ]
+    },
+    "navigation": {
+      "title": "Навигация и процесс",
+      "items": [
+        "link",
+        "breadcrumbs",
+        "menu",
+        "pagination",
+        "tabs",
+        "tab",
+        "dropdown",
+        "context-menu",
+        "tree",
+        "tree-item",
+        "step"
+      ]
+    },
+    "feedback": {
+      "title": "Обратная связь и состояние",
+      "items": [
+        "alerts",
+        "toast",
+        "badges",
+        "dot",
+        "progress-bar",
+        "progress-scale",
+        "spinner",
+        "skeleton",
+        "placeholder"
+      ]
+    },
+    "content": {
+      "title": "Содержимое и представление",
+      "items": [
+        "file-preview",
+        "accordion",
+        "avatars",
+        "content-divider",
+        "doc",
+        "highlight",
+        "icons",
+        "emoji",
+        "kbd",
+        "featured-icon",
+        "tags",
+        "reference-link"
+      ]
+    },
+    "overlays-media": {
+      "title": "Слои и медиаконтент",
+      "items": [
+        "modal",
+        "tooltip",
+        "carousel",
+        "swiper"
+      ]
+    },
+    "tools": {
+      "title": "Системные и расширенные",
+      "items": [
+        "scrollbar",
+        "hide-show",
+        "outline",
+        "theme",
+        "theme-builder",
+        "monaco"
+      ]
+    },
+    "internal": {
+      "title": "Технические контракты",
+      "items": [
+        "admin-menu"
+      ]
+    }
+  },
+  "smart-components": {
+    "actions": {
+      "title": "Действия",
+      "items": [
+        "buttons",
+        "icon-buttons",
+        "close",
+        "download-file",
+        "fab",
+        "link"
+      ]
+    },
+    "forms": {
+      "title": "Формы и ввод",
+      "items": [
+        "inputs",
+        "textarea",
+        "checkbox",
+        "radio",
+        "switch",
+        "toggle",
+        "slider",
+        "range-slider",
+        "datepicker",
+        "country-code",
+        "file-upload",
+        "rating",
+        "form"
+      ]
+    },
+    "navigation": {
+      "title": "Навигация",
+      "items": [
+        "breadcrumbs",
+        "pagination",
+        "tabs",
+        "steps",
+        "tree",
+        "tree-item",
+        "dropdown",
+        "context-menu"
+      ]
+    },
+    "feedback": {
+      "title": "Уведомления и состояния",
+      "items": [
+        "alert",
+        "toast",
+        "badges",
+        "progress-bar",
+        "progress-scale",
+        "skeleton",
+        "spinner",
+        "tooltip"
+      ]
+    },
+    "content": {
+      "title": "Содержимое и медиа",
+      "items": [
+        "avatar",
+        "avatars",
+        "icons",
+        "flags",
+        "tags",
+        "list",
+        "list-item",
+        "table",
+        "gallery",
+        "editor",
+        "file-preview",
+        "reference-link"
+      ]
+    },
+    "overlays": {
+      "title": "Окна и панели",
+      "items": [
+        "modal",
+        "drawer"
+      ]
+    },
+    "complex": {
+      "title": "Комплексные компоненты",
+      "items": [
+        "admin-menu"
+      ]
+    }
+  }
+}

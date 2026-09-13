@@ -24,7 +24,3 @@ description: "Слот — именованное место внутри эле
   ]}
 }
 ```
-
-## Что дальше
-
-[Добавьте безопасный текст](/ru/guide/layouts/content-and-data/structured-text/).

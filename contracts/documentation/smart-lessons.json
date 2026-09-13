@@ -1,0 +1,21 @@
+{
+  "schema": "ui-doc.smart-lessons-review.v1",
+  "source": "1af5fbc6e1aba7eedefdc5d388aded900c07b3e2",
+  "core": "803b6e27c4554cb7d3b4dec185e4935d10659e44",
+  "smart": "548c11cd6ec071d171ca8da4fb5bc66c6d9552c0",
+  "source_files": {
+    "src/core/js/smart-base.js": "eebf6df602e123db78fd146deb6878bbbd2de186986214efb40e01ab030f49ec",
+    "src/core/js/loader.js": "c21dba6ee584def37d825ea418404634f2577397371130018984585fc1a74193"
+  },
+  "lessons": [
+    "creating",
+    "properties",
+    "events",
+    "nesting",
+    "local-components",
+    "slots",
+    "cleanup",
+    "templates-and-assets"
+  ],
+  "review": "Browser examples run against this pair; a new pair requires a new semantic review."
+}

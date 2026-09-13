@@ -1,0 +1,57 @@
+diff --git a/resources/portable/declarative-shell.css b/resources/portable/declarative-shell.css
+index 87fb4250..19ee63ac 100644
+--- a/resources/portable/declarative-shell.css
++++ b/resources/portable/declarative-shell.css
+@@ -244,3 +244,14 @@ sf-alert,sf-button{display:block}
+ .docara-icon[data-docara-icon-size="1/2"]:not([data-docara-icon-container="none"]) { padding: var(--sf-space-1\/3); }
+ .docara-icon[data-docara-icon-size="2"]:not([data-docara-icon-container="none"]),
+ .docara-icon[data-docara-icon-size="3"]:not([data-docara-icon-container="none"]) { padding: var(--sf-space-1); }
++
++/* Breadcrumbs describe location; use the secondary text tone in the docs shell. */
++[data-docara-breadcrumbs] .sf-breadcrumbs-item--link .sf-breadcrumbs-item-container {
++    --sf-breadcrumbs-item-container--color: var(--sf-on-surface-variant);
++}
++[data-docara-breadcrumbs] .sf-breadcrumbs-item--link:hover .sf-breadcrumbs-item-container,
++[data-docara-breadcrumbs] .sf-breadcrumbs-item--link:focus-visible .sf-breadcrumbs-item-container {
++    --sf-breadcrumbs-item-container--color: var(--sf-on-surface);
++    text-decoration: underline;
++    text-underline-offset: .2em;
++}
+diff --git a/scripts/verify-static-build.php b/scripts/verify-static-build.php
+index db2364ea..a3a2c7b6 100644
+--- a/scripts/verify-static-build.php
++++ b/scripts/verify-static-build.php
+@@ -2202,6 +2202,33 @@ if ($manifestError !== null) {
+     $expectedHtmlOutputs = array_values(array_unique([
+         ...$manifestOutputs,
+     ]));
++    // Supplementary, source-generated examples remain part of the full link audit.
++    // Every file is declared and hashed; an unlisted HTML output still fails.
++    $examplesReceipt = $root . '/.docara/standalone-examples.json';
++    if (is_file($examplesReceipt)) {
++        try {
++            $receipt = json_decode((string) file_get_contents($examplesReceipt), true, 64, JSON_THROW_ON_ERROR);
++            if (($receipt['schema'] ?? null) !== 'docara.standalone_examples.v1'
++                || !is_array($receipt['files'] ?? null) || count($receipt['files']) > 1000
++                || !preg_match('/^[a-f0-9]{64}$/D', $receipt['generator_sha256'] ?? '')
++                || !preg_match('/^[a-f0-9]{64}$/D', $receipt['inputs_sha256'] ?? '')) {
++                throw new RuntimeException('Invalid standalone example receipt');
++            }
++            foreach ($receipt['files'] as $entry) {
++                $relative = $entry['path'] ?? '';
++                if (!preg_match('#^demos/[a-z0-9/_-]+\.(html|js|css|json)$#D', $relative)
++                    || !preg_match('/^[a-f0-9]{64}$/D', $entry['sha256'] ?? '')
++                    || !is_file($root . '/' . $relative)
++                    || hash_file('sha256', $root . '/' . $relative) !== $entry['sha256']) {
++                    throw new RuntimeException('Standalone example missing or changed: ' . $relative);
++                }
++                if (str_ends_with($relative, '.html')) $expectedHtmlOutputs[] = $relative;
++            }
++            $expectedHtmlOutputs = array_values(array_unique($expectedHtmlOutputs));
++        } catch (Throwable $error) {
++            $broken[] = ['page' => '@build', 'reference' => '@standalone-examples', 'target' => $error->getMessage()];
++        }
++    }
+     sort($expectedHtmlOutputs, SORT_STRING);
+     if ($actualHtmlOutputs !== $expectedHtmlOutputs) {
+         $missing = array_values(array_diff($expectedHtmlOutputs, $actualHtmlOutputs));

@@ -13,12 +13,12 @@ Smart-компонент — готовый элемент интерфейса,
 
 ## Пример
 
-```html
-<sf-button text="Сохранить" scheme="primary"></sf-button>
-```
+:::internal_preview {size="tall" title="Работающий пример"}
+[Открыть демонстрацию](/demos/guide/smart-button/)
+:::
+
+:::code {src="../../../../examples/guide/smart-button/index.html" lang="html" title="index.html"}
+:::
+
 
 Элемент сам управляет своим внутренним отображением. Проект решает, что именно нужно сохранить, и передаёт результат обратно компоненту.
-
-## Что дальше
-
-Перейдите к [подключению Smart-компонентов](/ru/guide/smart-components/connection/) или откройте их [точный справочник](/ru/smart-components/reference/).

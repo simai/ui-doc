@@ -13,13 +13,5 @@ description: "Небольшие CSS-классы для точечной нас
 
 ## Пример
 
-```html
-<div class="display-flex gap-3 p-4 bg-surface-container radius-2">
-  <span>Название</span>
-  <strong>Значение</strong>
-</div>
-```
-
-## Что дальше
-
-Правила чтения классов объясняются в [модификаторах](/ru/guide/fundamentals/modifiers/), а точные классы перечислены в [каталоге утилит](/ru/utilities/).
+:::example {id="guide/utility-panel" label="Отступы и расположение"}
+:::

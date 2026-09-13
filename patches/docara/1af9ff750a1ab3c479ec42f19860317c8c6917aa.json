@@ -1,0 +1,91 @@
+{
+  "schema": "ui-doc.docara_compatibility_patch.v1",
+  "package": "simai/docara",
+  "locked_version": "v2.9.0",
+  "locked_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
+  "candidate_reference": "1af9ff750a1ab3c479ec42f19860317c8c6917aa",
+  "candidate_base_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
+  "patch": "1af9ff750a1ab3c479ec42f19860317c8c6917aa.patch",
+  "files": [
+    {
+      "path": "resources/portable/declarative-shell.css",
+      "base_sha256": "b12f53c6db6f87c6b93ea974cb8b0b5e1714a7e5dc93d31c9ba6e1b0bcf096d8",
+      "target_sha256": "59fa9ec0f99f8cc8b5025af846e95ada99749af512a7e7081d714a0feaf29b18",
+      "upgrade_sha256": "0eacdd0dd94a8f295f835f171d3b28c57fb39b1d0df7684cbb6a5b1832660d34"
+    },
+    {
+      "path": "resources/schemas/framework-lock.schema.json",
+      "base_sha256": "6c8a57ae75d5ff7353bf37aa5468721a4bdbaf15194a67f13c45e11696a289b0",
+      "target_sha256": "6d8e150f001b10e7db2a0d52e6524c09ea4ac5275c13791f75b584f8a2dc3879",
+      "upgrade_sha256": "6d8e150f001b10e7db2a0d52e6524c09ea4ac5275c13791f75b584f8a2dc3879"
+    },
+    {
+      "path": "resources/smart/assets/navigation.css",
+      "base_sha256": "e7d4cf8e4e07c8f937777b834b1e053a13d30961ad268b34809cd1c5f685e073",
+      "target_sha256": "51e4031a7f9c166914eff982a808df0c1c04e872add0ca4531c367bd0a04c3c6",
+      "upgrade_sha256": "51e4031a7f9c166914eff982a808df0c1c04e872add0ca4531c367bd0a04c3c6"
+    },
+    {
+      "path": "resources/smart/assets/navigation.js",
+      "base_sha256": "0b38bf7391535ef49fd2f78e2471e379b9a6b7af117156ccded50fd4608dd647",
+      "target_sha256": "61f94b489350c7775ff72a62c6a357c9e73ead16a1d51571b3b32a94d6a8c6b1",
+      "upgrade_sha256": "61f94b489350c7775ff72a62c6a357c9e73ead16a1d51571b3b32a94d6a8c6b1"
+    },
+    {
+      "path": "resources/smart/docara.navigation/templates/header.php",
+      "base_sha256": "8c664a2ff8066f774c0eb12179b72e6d16aae94c80cf8bbaac096dc18d70dd39",
+      "target_sha256": "643c92f61cc81860b8dac5ea7b26701f270d082f54dff6928f783ac20f44fa3c",
+      "upgrade_sha256": "643c92f61cc81860b8dac5ea7b26701f270d082f54dff6928f783ac20f44fa3c"
+    },
+    {
+      "path": "resources/smart/docara.navigation/templates/item.php",
+      "base_sha256": "cd16e8be9dc8a660e9258efc4e5ae6e6c9fb523b7ea96ca407bf1aa53fc3b6a3",
+      "target_sha256": "7a2db7745e266880255cd3ccc9dc2c69846551e1584aa6a12e7801044ebf4bc2",
+      "upgrade_sha256": "7a2db7745e266880255cd3ccc9dc2c69846551e1584aa6a12e7801044ebf4bc2"
+    },
+    {
+      "path": "scripts/sync-framework-rule-registry.php",
+      "base_sha256": "072ee85cd1f89b69c85dae98c0cd50fb6edbbf1e4bd35b585017374020b8c1c8",
+      "target_sha256": "3c22733a8839417150db341f0c1efb3775df99ba4e31119e8b433fa1e06afe05",
+      "upgrade_sha256": "3c22733a8839417150db341f0c1efb3775df99ba4e31119e8b433fa1e06afe05"
+    },
+    {
+      "path": "src/Declarative/Rendering/FrameworkUtilityRegistry.php",
+      "base_sha256": "0234f50edd07a4362baa403079d69bc28f26729ce6d63bcffc5df9117a6c43f4",
+      "target_sha256": "8c0e6a70ca8b48c9d75216f6985b3d84a2ab5ffe683e0a6f3f17e44b6ba19899",
+      "upgrade_sha256": "8c0e6a70ca8b48c9d75216f6985b3d84a2ab5ffe683e0a6f3f17e44b6ba19899"
+    },
+    {
+      "path": "src/Framework/FrameworkAssetPlan.php",
+      "base_sha256": "47e908542a57d801a9529ff74f3754eeecce59d4a2f864aa7952655a73fdc784",
+      "target_sha256": "50af3ae17e8da2912e45c593266ebbe3e940f1d3ded08847165982bd78fef4bd",
+      "upgrade_sha256": "50af3ae17e8da2912e45c593266ebbe3e940f1d3ded08847165982bd78fef4bd"
+    },
+    {
+      "path": "src/Framework/FrameworkLock.php",
+      "base_sha256": "2f719d81f446938e18a464e9d03119b4ff9f700ac8274f3d46055efb551b40e2",
+      "target_sha256": "aa10338e5063ccc964f5b7d4120d79bddfd2dbc698067aabb7816051bed874e5",
+      "upgrade_sha256": "aa10338e5063ccc964f5b7d4120d79bddfd2dbc698067aabb7816051bed874e5"
+    },
+    {
+      "path": "src/Portable/CanonicalJson.php",
+      "base_sha256": "8092f1a8e10c0ee79b9d797cc24d7ff65b9b98953b4bb5e07d0bf97d4ec3a27c",
+      "target_sha256": "57a203d6172833d044519409972fc008115c006e9edfd3636467649cf0bf8295",
+      "upgrade_sha256": "57a203d6172833d044519409972fc008115c006e9edfd3636467649cf0bf8295"
+    },
+    {
+      "path": "src/PortableSite/PortableSiteBuilder.php",
+      "base_sha256": "683144674c18c926fced9d3717081fb422e610023173c203a18bcc52f04a960c",
+      "target_sha256": "205e869224f669826140224cd2cc3dc0d217509614add2511a851493e73a3f14",
+      "upgrade_sha256": "205e869224f669826140224cd2cc3dc0d217509614add2511a851493e73a3f14"
+    },
+    {
+      "path": "scripts/verify-static-build.php",
+      "base_sha256": "f90e8c28388778463728025909ee4e5cc02cbd6eb5288ac0be956745b6939552",
+      "target_sha256": "45848a067c297bbef27e9402fb4278e3891856f667de4a7594d27bae440ea580",
+      "upgrade_sha256": "f90e8c28388778463728025909ee4e5cc02cbd6eb5288ac0be956745b6939552"
+    }
+  ],
+  "upgrade_patch": "1af9ff750a1ab3c479ec42f19860317c8c6917aa-upgrade.patch",
+  "upgrade_reference": "61964e928b281ae9e86cab6cf7bc613da303b559"
+}

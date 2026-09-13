@@ -11,10 +11,21 @@ description: "Информационная страница показывает
 
 Возьмите пример за основу для страницы «О компании», условия услуги или простого поясняющего материала. Затем добавляйте секции по одной, каждый раз проверяя документ.
 
-## Пример
+## Как читать документ
 
-Откройте пример «Информационная страница» в [Инспекторе макета](https://ui-studio.test/?mode=layout&example=page). Слева находится JSON, справа — HTML-предпросмотр. Ниже видно дерево `layout.page → layout.section → content.heading/content.paragraph`, нормализованный документ и digest. Измените текст и нажмите «Проверить и показать».
+Откройте пример «Информационная страница» в [инспекторе в документации](/ru/guide/layouts/reference/studio-inspector/). Документ содержит дерево `layout.page → layout.section → content.heading/content.paragraph`. После проверки видны контрольная сумма и HTML-предпросмотр. Измените текст и нажмите «Проверить и показать».
 
-## Что дальше
+## Пример в браузере
 
-[Перейдите к каталогу с данными](/ru/guide/layouts/examples/catalog/).
+:::internal_preview {size="tall" title="Работающий пример"}
+[Открыть демонстрацию](/demos/guide/layout-inspector/)
+:::
+
+:::code {src="../../../../../examples/guide/layout-inspector/index.html" lang="html" title="index.html"}
+:::
+
+:::code {src="../../../../../examples/guide/layout-inspector/index.js" lang="javascript" title="index.js"}
+:::
+
+
+Выберите «Информационная страница» в списке примеров. Измените текст «О компании» и снова покажите результат. JSON находится над предпросмотром, а полученный HTML раскрывается под ним.

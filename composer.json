@@ -37,7 +37,9 @@
             "@docs:architecture:check",
             "@docs:composition:check",
             "@php scripts/audit-examples.php",
-            "@php scripts/audit-russian-content.php"
+            "@php scripts/audit-russian-content.php",
+            "@php scripts/audit-catalog-groups.php",
+            "@php scripts/audit-smart-lessons.php"
         ],
         "post-install-cmd": "@docara:compatibility:apply",
         "post-update-cmd": "@docara:compatibility:apply",
@@ -46,7 +48,9 @@
             "@php scripts/audit-guide-information-architecture.php",
             "@php scripts/audit-guide-redirects.php",
             "@php scripts/audit-reference-separation.php"
-        ]
+        ],
+        "docs:build": "@php scripts/build-documentation.php",
+        "docs:ai:check": "@php scripts/export-ai-documentation.php --check"
     },
     "config": {
         "allow-plugins": false,

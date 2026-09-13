@@ -80,9 +80,3 @@ control-height = line-height + 2 × block-padding
 
 Эти значения можно выбирать из той же шкалы примитивов, но система не требует,
 чтобы они совпадали у разных компонентов.
-
-## Что дальше
-
-- Точные значения: `/ru/reference/adaptive-sizing/generated-contract/`.
-- Правила обновления: `/ru/migration/adaptive-sizing-v1/`.
-- [Версии и порядок обновления](/ru/guide/connection/versions-and-updates/).
