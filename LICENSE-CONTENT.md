@@ -1,6 +1,6 @@
 # Documentation content license
 
-Copyright (c) 2024-2026 Rim Rashitovich Zabarov and contributors.
+Copyright (c) 2024-2026 Rim Zabarov and contributors.
 
 Unless a file states otherwise, original prose and original documentation
 images in `content/` are licensed under the Creative Commons Attribution 4.0
