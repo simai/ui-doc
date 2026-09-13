@@ -275,6 +275,11 @@ $runPhp = static function (array $arguments) use ($packageRoot): array {
 
 $coreReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-rule-registry.php', $uiRoot]);
 $smartReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-smart-runtime.php', $smartRoot]);
+$viewUtilitiesPath = $packageRoot . '/resources/framework/view-utilities.json';
+$viewUtilities = json_decode((string) file_get_contents($viewUtilitiesPath), true, 512, JSON_THROW_ON_ERROR);
+$viewUtilities['compatibility_id'] = $docaraPair;
+$viewUtilities['registry_sha256'] = $registryHash;
+$writeJson($viewUtilitiesPath, $viewUtilities);
 copy($packageLockPath, $projectLockPath);
 
 fwrite(STDOUT, json_encode([
