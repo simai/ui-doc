@@ -46,7 +46,7 @@ index effe7e44..1a2c8094 100644
                  "rollback_parent": {"type": "string", "format": "docara-immutable-revision"}
              },
 diff --git a/resources/smart/assets/navigation.css b/resources/smart/assets/navigation.css
-index f18dc2b6..e7480cdc 100644
+index f18dc2b6..d440ec90 100644
 --- a/resources/smart/assets/navigation.css
 +++ b/resources/smart/assets/navigation.css
 @@ -7,7 +7,7 @@
@@ -58,6 +58,15 @@ index f18dc2b6..e7480cdc 100644
  .docara-navigation [data-docara-active-role="ancestor"]>.sf-menu-element,.docara-navigation [data-docara-active-role="section"]>.sf-menu-element{--sf-menu-element--background-color:transparent;--sf-menu-element--border-color:transparent}
  .docara-navigation [data-docara-active-role="page"]>.sf-menu-element{--sf-menu-element--background-color:var(--sf-surface-container-active);--sf-menu-element--border-color:var(--sf-surface-container-active)}
  .docara-navigation [data-docara-active-role="page"]>.sf-menu-element>.docara-navigation-link,.docara-navigation [data-docara-active-role="page"]>.sf-menu-element>.docara-navigation-label{color:var(--sf-on-surface)}
+@@ -18,7 +18,7 @@
+ .docara-navigation-link:focus-visible,.docara-header-navigation-link:focus-visible,[data-docara-disclosure]:focus-visible{outline:var(--sf-focus-outline-width,var(--sf-a4)) solid var(--sf-primary,Highlight);outline-offset:var(--sf-a2)}
+ .docara-navigation [data-docara-disclosure]:focus{box-shadow:none}
+ .docara-header-navigation{min-inline-size:0;flex:1 1 auto}
+-.docara-header-navigation-list{justify-content:center;white-space:nowrap}
++.docara-header-navigation-list{flex-direction:row;justify-content:center;white-space:nowrap}
+ .docara-header-navigation-item{flex:0 0 auto}
+ .docara-header-navigation .docara-header-navigation-link{box-sizing:border-box;min-block-size:var(--sf-d0);inline-size:auto;padding-inline:var(--sf-space-1);color:var(--sf-on-surface);text-decoration:none}
+ .docara-header-navigation .docara-header-navigation-link[aria-current="page"]{background:var(--sf-surface-container-active)}
 diff --git a/resources/smart/assets/navigation.js b/resources/smart/assets/navigation.js
 index 40050474..7875bbdc 100644
 --- a/resources/smart/assets/navigation.js
@@ -71,6 +80,18 @@ index 40050474..7875bbdc 100644
    function bindDisclosure(button,copy){if(button.dataset.docaraDisclosureBound)return;button.dataset.docaraDisclosureBound='1';button.addEventListener('keydown',function(event){if(event.key==='Enter'||event.key===' ')event.stopPropagation()});button.addEventListener('click',function(){var item=button.closest('.sf-menu-item'),component=button.closest('[data-docara-smart="docara.navigation"]');setTimeout(function(){if(!item||!component)return;sync(item,copy);component.dispatchEvent(new CustomEvent('docara-navigation-toggle',{bubbles:true,detail:{key:item.dataset.docaraNavigationKey||'',expanded:button.getAttribute('aria-expanded')==='true'}}))},0)})}
    function bind(root){(root||document).querySelectorAll('[data-docara-smart="docara.navigation"]').forEach(function(component){var copy=labels(component);component.querySelectorAll('[data-docara-menu-link]').forEach(protect);component.querySelectorAll('.sf-menu-item').forEach(function(item){sync(item,copy);var button=item.querySelector(':scope > .sf-menu-element > [data-docara-disclosure]');if(button)bindDisclosure(button,copy)})})}
    function reveal(){var rail=document.querySelector('.docara-sidebar'),active=rail&&rail.querySelector('[data-docara-smart="docara.navigation"] [aria-current="page"]');if(!rail||!active||rail.dataset.docaraActiveRevealed)return;var railRect=rail.getBoundingClientRect(),activeRect=active.getBoundingClientRect();if(railRect.width<=0||railRect.height<=0||activeRect.width<=0||activeRect.height<=0)return;rail.dataset.docaraActiveRevealed='1';var inset=8;if(activeRect.bottom>railRect.bottom-inset)rail.scrollTop+=activeRect.bottom-(railRect.bottom-inset);else if(activeRect.top<railRect.top+inset)rail.scrollTop+=activeRect.top-(railRect.top+inset)}
+diff --git a/resources/smart/docara.navigation/templates/header.php b/resources/smart/docara.navigation/templates/header.php
+index 44451c8d..8f044187 100644
+--- a/resources/smart/docara.navigation/templates/header.php
++++ b/resources/smart/docara.navigation/templates/header.php
+@@ -1,6 +1,6 @@
+ <?php if ($view->hasItems) { ?>
+ <nav class="docara-navigation docara-header-navigation" aria-label="<?= $view->label ?>" data-docara-smart="docara.navigation" data-docara-view="header" data-docara-maximum-depth="<?= $view->maximumDepth ?>">
+-    <ul class="sf-menu docara-header-navigation-list flex items-cross-center gap-1"><?= $view->itemsHtml ?></ul>
++    <ul class="sf-menu sf-menu--horizontal docara-header-navigation-list flex items-cross-center gap-1"><?= $view->itemsHtml ?></ul>
+ </nav>
+ <?php } else { ?>
+ <!-- docara:header-navigation disabled -->
 diff --git a/resources/smart/docara.navigation/templates/item.php b/resources/smart/docara.navigation/templates/item.php
 index c456d3d0..7d383952 100644
 --- a/resources/smart/docara.navigation/templates/item.php

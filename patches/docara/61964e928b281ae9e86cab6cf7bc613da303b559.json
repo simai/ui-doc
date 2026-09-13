@@ -3,9 +3,9 @@
   "package": "simai/docara",
   "locked_version": "v2.9.0",
   "locked_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
-  "candidate_reference": "d6a29cfabaa3c68ba76a9f13cf9877bf6d3ad924",
+  "candidate_reference": "61964e928b281ae9e86cab6cf7bc613da303b559",
   "candidate_base_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
-  "patch": "d6a29cfabaa3c68ba76a9f13cf9877bf6d3ad924.patch",
+  "patch": "61964e928b281ae9e86cab6cf7bc613da303b559.patch",
   "files": [
     {
       "path": "resources/portable/declarative-shell.css",
@@ -20,7 +20,7 @@
     {
       "path": "resources/smart/assets/navigation.css",
       "base_sha256": "e7d4cf8e4e07c8f937777b834b1e053a13d30961ad268b34809cd1c5f685e073",
-      "target_sha256": "7a7d6d1a5356b39b97a7ea17a4fbddfacff038bd6fbc76c26eec0c9b6a860a9f"
+      "target_sha256": "51e4031a7f9c166914eff982a808df0c1c04e872add0ca4531c367bd0a04c3c6"
     },
     {
       "path": "resources/smart/assets/navigation.js",
@@ -28,9 +28,24 @@
       "target_sha256": "61f94b489350c7775ff72a62c6a357c9e73ead16a1d51571b3b32a94d6a8c6b1"
     },
     {
+      "path": "resources/smart/docara.navigation/templates/header.php",
+      "base_sha256": "8c664a2ff8066f774c0eb12179b72e6d16aae94c80cf8bbaac096dc18d70dd39",
+      "target_sha256": "643c92f61cc81860b8dac5ea7b26701f270d082f54dff6928f783ac20f44fa3c"
+    },
+    {
       "path": "resources/smart/docara.navigation/templates/item.php",
       "base_sha256": "cd16e8be9dc8a660e9258efc4e5ae6e6c9fb523b7ea96ca407bf1aa53fc3b6a3",
       "target_sha256": "7a2db7745e266880255cd3ccc9dc2c69846551e1584aa6a12e7801044ebf4bc2"
+    },
+    {
+      "path": "scripts/sync-framework-rule-registry.php",
+      "base_sha256": "072ee85cd1f89b69c85dae98c0cd50fb6edbbf1e4bd35b585017374020b8c1c8",
+      "target_sha256": "3c22733a8839417150db341f0c1efb3775df99ba4e31119e8b433fa1e06afe05"
+    },
+    {
+      "path": "src/Declarative/Rendering/FrameworkUtilityRegistry.php",
+      "base_sha256": "0234f50edd07a4362baa403079d69bc28f26729ce6d63bcffc5df9117a6c43f4",
+      "target_sha256": "8c0e6a70ca8b48c9d75216f6985b3d84a2ab5ffe683e0a6f3f17e44b6ba19899"
     },
     {
       "path": "src/Framework/FrameworkAssetPlan.php",
@@ -51,16 +66,6 @@
       "path": "src/PortableSite/PortableSiteBuilder.php",
       "base_sha256": "683144674c18c926fced9d3717081fb422e610023173c203a18bcc52f04a960c",
       "target_sha256": "205e869224f669826140224cd2cc3dc0d217509614add2511a851493e73a3f14"
-    },
-    {
-      "path": "src/Declarative/Rendering/FrameworkUtilityRegistry.php",
-      "base_sha256": "0234f50edd07a4362baa403079d69bc28f26729ce6d63bcffc5df9117a6c43f4",
-      "target_sha256": "8c0e6a70ca8b48c9d75216f6985b3d84a2ab5ffe683e0a6f3f17e44b6ba19899"
-    },
-    {
-      "path": "scripts/sync-framework-rule-registry.php",
-      "base_sha256": "072ee85cd1f89b69c85dae98c0cd50fb6edbbf1e4bd35b585017374020b8c1c8",
-      "target_sha256": "3c22733a8839417150db341f0c1efb3775df99ba4e31119e8b433fa1e06afe05"
     }
   ]
 }

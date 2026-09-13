@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $apply = in_array('--apply', $argv, true);
-$manifestPath = $root . '/patches/docara/d6a29cfabaa3c68ba76a9f13cf9877bf6d3ad924.json';
+$manifestPath = $root . '/patches/docara/61964e928b281ae9e86cab6cf7bc613da303b559.json';
 $manifest = json_decode((string) file_get_contents($manifestPath), true, 512, JSON_THROW_ON_ERROR);
 $lock = json_decode((string) file_get_contents($root . '/composer.lock'), true, 512, JSON_THROW_ON_ERROR);
 $package = null;
