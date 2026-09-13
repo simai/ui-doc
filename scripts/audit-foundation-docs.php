@@ -64,7 +64,7 @@ $check = static function (bool $condition, string $code, array $details = []) us
     }
 };
 
-$check($coreRevision === '73bd250f1d8e2435bd2cbd57d6fe2080ade92f01', 'core_revision_mismatch');
+$check($coreRevision === '122b478ab68d8d7be02febe4a87016eb677a69e8', 'core_revision_mismatch');
 $check($smartRevision === '1de6c70ed455fa2d4d568795452b63431fdd73a1', 'smart_revision_mismatch');
 $check(($adaptive['meta']['unit'] ?? null) === 'rem', 'adaptive_unit_is_not_rem');
 $check(($adaptive['meta']['rootPolicy'] ?? null) === 'preserve-user-agent-default', 'root_policy_mismatch');
