@@ -14,8 +14,8 @@ Custom Elements: `<sf-datepicker>`.
 Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/datepicker/js/datepicker.js`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/datepicker/template/default.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/datepicker/js/datepicker.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/datepicker/template/default.js`
 
 ## Зависимости
 
@@ -51,7 +51,7 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `input-size` | `inputSize` | `String` | `'1'` | `—` |
 | `input-name` | `inputName` | `String` | `''` | `—` |
 | `placeholder` | `placeholder` | `String` | `''` | `—` |
-| `left-icon` | `leftIcon` | `String` | `'calendar_today'` | `—` |
+| `icon-start` | `iconStart` | `String` | `'calendar_today'` | `—` |
 | `input-root-class` | `inputRootClass` | `String` | `''` | `—` |
 | `mask` | `mask` | `Boolean` | `false` | `—` |
 | `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
@@ -69,7 +69,10 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 ## Методы
 
-`closePanel()`, `connectedCallback()`, `emitChange()`, `get componentName()`, `get contextMode()`, `get data()`, `get date()`, `get days()`, `get displayDate()`, `get displayValue()`, `get endDate()`, `get endValue()`, `get format()`, `get formattedEndValue()`, `get formattedStartValue()`, `get formattedValue()`, `get input()`, `get inputName()`, `get inputRootClass()`, `get inputSize()`, `get inputType()`, `get leftIcon()`, `get locale()`, `get mask()`, `get maskLazy()`, `get maskOptions()`, `get maskPattern()`, `get maskPlaceholderChar()`, `get maxDate()`, `get minDate()`, `get month()`, `get months()`, `get normalizedRange()`, `get open()`, `get placeholder()`, `get portal()`, `get primaryDate()`, `get range()`, `get selectedDate()`, `get startDate()`, `get startValue()`, `get templateName()`, `get value()`, `get weekStart()`, `get year()`, `get yearPageEnd()`, `get yearPageStart()`, `get years()`, `getClosestEnabledMonth()`, `getYearPageStart()`, `handleDocumentClick()`, `handleDocumentKeydown()`, `handleInputClick()`, `handlePanelClick()`, `openPanel()`, `positionPanel()`, `removeOverlayListeners()`, `selectDate()`, `selectMonth()`, `selectRangeDate()`, `selectYear()`, `set date()`, `set endValue()`, `set month()`, `set startValue()`, `set value()`, `set year()`, `setContext()`, `setMaxDate()`, `setMinDate()`, `shiftYearPage()`, `syncOverlayListeners()`, `toggleContext()`, `togglePanel()`, `upgradeProperty()`.
+`closePanel()`, `connectedCallback()`, `emitChange()`, `get componentName()`, `get contextMode()`, `get data()`, `get date()`, `get days()`, `get displayDate()`, `get displayValue()`, `get endDate()`, `get endValue()`, `get format()`, `get formattedEndValue()`, `get formattedStartValue()`, `get formattedValue()`, `get iconStart()`, `get input()`, `get inputName()`, `get inputRootClass()`, `get inputSize()`, `get inputType()`, `get locale()`, `get mask()`, `get maskLazy()`, `get maskOptions()`, `get maskPattern()`, `get maskPlaceholderChar()`, `get maxDate()`, `get minDate()`, `get month()`, `get months()`, `get normalizedRange()`, `get open()`, `get placeholder()`, `get portal()`, `get primaryDate()`, `get range()`, `get selectedDate()`, `get startDate()`, `get startValue()`, `get templateName()`, `get value()`, `get weekStart()`, `get year()`, `get yearPageEnd()`, `get yearPageStart()`, `get years()`, `getClosestEnabledMonth()`, `getYearPageStart()`, `handleDocumentClick()`, `handleDocumentKeydown()`, `handleInputClick()`, `handlePanelClick()`, `openPanel()`, `positionPanel()`, `removeOverlayListeners()`, `selectDate()`, `selectMonth()`, `selectRangeDate()`, `selectYear()`, `set date()`, `set endValue()`, `set month()`, `set startValue()`, `set value()`, `set year()`, `setContext()`, `setMaxDate()`, `setMinDate()`, `shiftYearPage()`, `syncOverlayListeners()`, `toggleContext()`, `togglePanel()`, `upgradeProperty()`.
+
+`left-icon` поддерживается как прежнее имя. В новой разметке используйте
+`icon-start`: положение календаря тогда остаётся правильным и в LTR, и в RTL.
 
 ## События
 
@@ -97,5 +100,5 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 ## Источник
 
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/datepicker`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-datepicker`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/datepicker`
+- `simai/ui@1e886550a147bf63d7c3a4440af5e5855aaee485:distr/rule/rule.json#name=cl-datepicker`

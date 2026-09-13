@@ -14,8 +14,8 @@ Custom Elements: `<sf-badge>`.
 Loader-статус: `registered`. Loader-правило: `cl-badges`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/badges/js/badges.js`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/badges/template/default.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/badges/js/badges.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/badges/template/default.js`
 
 ## Зависимости
 
@@ -31,8 +31,8 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 | `scheme` | `scheme` | `String` | `'neutral'` | `—` |
 | `text` | `text` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `''` | `—` |
-| `icon-left` | `iconLeft` | `String` | `''` | `—` |
-| `icon-right` | `iconRight` | `String` | `''` | `—` |
+| `icon-start` | `iconStart` | `String` | `''` | `—` |
+| `icon-end` | `iconEnd` | `String` | `''` | `—` |
 | `icon-position` | `iconPosition` | `String` | `'start'` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `''` | `—` |
 
@@ -46,7 +46,10 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 
 ## Методы
 
-`get ariaLabel()`, `get icon()`, `get iconLeft()`, `get iconPosition()`, `get iconRight()`, `get scheme()`, `get size()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `set value()`, `updateDom()`.
+`get ariaLabel()`, `get icon()`, `get iconStart()`, `get iconPosition()`, `get iconEnd()`, `get scheme()`, `get size()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `set value()`, `updateDom()`.
+
+Логические имена `icon-start` и `icon-end` автоматически учитывают LTR и RTL.
+Прежние `icon-left` и `icon-right` остаются совместимыми псевдонимами.
 
 ## События
 
@@ -73,5 +76,5 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 
 ## Источник
 
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/badges`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-badges`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/badges`
+- `simai/ui@1e886550a147bf63d7c3a4440af5e5855aaee485:distr/rule/rule.json#name=cl-badges`

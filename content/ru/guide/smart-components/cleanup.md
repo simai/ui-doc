@@ -14,8 +14,7 @@ description: "Обновление и освобождение ресурсов:
 ## Пример
 
 ```js
-connectedCallback() {
-  super.connectedCallback();
+onConnected() {
   this.abort = new AbortController();
   window.addEventListener('resize', this.handleResize, {
     signal: this.abort.signal
@@ -33,4 +32,8 @@ onDisconnected() {
 
 Добавьте элемент, выполните действие, удалите его и добавьте снова. Одно действие должно приводить к одному событию. Для асинхронного запроса дополнительно исключите применение устаревшего результата после удаления или нового запроса.
 
-Базовый класс имеет `beforeRender`, `afterRender`, `afterUpdate` и `onDisconnected`. Это точки расширения, а не инструкция вручную вызывать весь цикл. Сохраняйте вызов родительского метода там, где переопределяете подключение и очистку.
+Базовый класс вызывает `onConnected()` после подключения и `onDisconnected()`
+перед окончательным освобождением внешнего шаблона. Для обычной настройки не
+переопределяйте `connectedCallback()` и `disconnectedCallback()` целиком.
+Также доступны `beforeRender`, `afterRender` и `afterUpdate`. Если вы
+переопределяете очистку, сохраняйте вызов `super.onDisconnected()`.

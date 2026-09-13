@@ -18,8 +18,8 @@ description: "Атрибуты, события и примеры Smart-комп�
 Loader-статус: `unregistered`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/drawer/css/drawer.css`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/drawer/js/drawer.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/drawer/css/drawer.css`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/drawer/js/drawer.js`
 
 ## Атрибуты и свойства
 
@@ -76,4 +76,4 @@ Loader-статус: `unregistered`.
 
 ## Источник
 
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/drawer`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/drawer`

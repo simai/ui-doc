@@ -32,9 +32,16 @@ $candidateFramework = (string) ($runtime['tag'] ?? '');
 $candidateCore = (string) ($runtime['ui']['tag'] ?? '');
 $candidateSmart = (string) ($runtime['ui_smart']['tag'] ?? '');
 $candidatePair = (string) ($runtime['pair_id'] ?? '');
+$candidateCoreRevision = (string) ($runtime['ui']['commit'] ?? '');
+$candidateSmartRevision = (string) ($runtime['ui_smart']['commit'] ?? '');
 foreach ([$candidateFramework, $candidateCore, $candidateSmart] as $tag) {
     if (preg_match('/^v\d+\.\d+\.\d+$/', $tag) !== 1) {
         throw new RuntimeException('FRAMEWORK_CANDIDATE_TAG_INVALID');
+    }
+}
+foreach ([$candidateCoreRevision, $candidateSmartRevision] as $revision) {
+    if (preg_match('/^[a-f0-9]{40}$/D', $revision) !== 1) {
+        throw new RuntimeException('FRAMEWORK_CANDIDATE_REVISION_INVALID');
     }
 }
 
@@ -103,11 +110,43 @@ foreach ($targets as $relative => $render) {
     }
 }
 
+$smartDocumentationRoot = $root . '/content/ru/smart-components';
+$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($smartDocumentationRoot, FilesystemIterator::SKIP_DOTS));
+foreach ($iterator as $file) {
+    if (! $file->isFile() || strtolower($file->getExtension()) !== 'md') {
+        continue;
+    }
+    $path = $file->getPathname();
+    $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
+    $current = (string) file_get_contents($path);
+    $expected = preg_replace(
+        '/simai\/ui-smart@[a-f0-9]{40}(?=:smart\/)/',
+        'simai/ui-smart@' . $candidateSmartRevision,
+        $current,
+    );
+    $expected = preg_replace(
+        '/simai\/ui@[a-f0-9]{40}(?=:distr\/rule\/rule\.json)/',
+        'simai/ui@' . $candidateCoreRevision,
+        (string) $expected,
+    );
+    if ($expected === $current) {
+        continue;
+    }
+    $changed[] = $relative;
+    if (! $checkOnly) {
+        file_put_contents($path, $expected, LOCK_EX);
+    }
+}
+$changed = array_values(array_unique($changed));
+sort($changed, SORT_STRING);
+
 echo json_encode([
     'schema' => 'ui-doc.framework_documentation_version_sync.v1',
     'status' => $changed === [] ? 'synchronized' : ($checkOnly ? 'drift' : 'updated'),
     'public_core_tag' => $publicCoreTag,
     'candidate_pair' => $candidatePair,
+    'candidate_core_revision' => $candidateCoreRevision,
+    'candidate_smart_revision' => $candidateSmartRevision,
     'changed' => $changed,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . "\n";
 

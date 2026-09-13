@@ -64,7 +64,7 @@ const cases = [
     families: ['margin', 'margin-ext'],
     classes: [
       ['m-3', 'margin/default', 'margin: var(--sf-space-3);'],
-      ['-m-inline-start-2', 'margin/default', 'margin-inline-start: calc(-1 * var(--sf-space-2));'],
+      ['-m-inline-start-2', 'margin/default', 'margin-inline-start: calc(0rem - var(--sf-space-2));'],
       ['md:m-inline-start-3', 'margin/md', 'margin-inline-start: var(--sf-space-3);'],
       ['m-a2', 'margin-ext/default', 'margin: var(--sf-a2);'],
     ],

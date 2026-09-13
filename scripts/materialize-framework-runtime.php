@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = 'a661328c4d61af8b3e9f7f6a9cfb6f36509b516a';
-const UI_RUNTIME_REVISION = '803b6e27c4554cb7d3b4dec185e4935d10659e44';
-const SMART_METADATA_REVISION = 'ba93108cc05a50375ecd9374e88ff104b44c9cc7';
-const SMART_RUNTIME_REVISION = '548c11cd6ec071d171ca8da4fb5bc66c6d9552c0';
-const SOURCE_REVISION = '1af5fbc6e1aba7eedefdc5d388aded900c07b3e2';
+const UI_METADATA_REVISION = '30f21e7d5964219152af63cbda9e9d3e4e347164';
+const UI_RUNTIME_REVISION = '1e886550a147bf63d7c3a4440af5e5855aaee485';
+const SMART_METADATA_REVISION = 'ee516ca2eb8323bb20cd6214798b3f54295ae3d9';
+const SMART_RUNTIME_REVISION = '77feccf8867a5676bad2cd78fbb3497d25816fac';
+const SOURCE_REVISION = 'b713a5228eef710b208582b31ee0393bda47fbeb';
 const BUILDER_REVISION = '13ad31ae75e75fbdabe6f1a1e09ce94b745fe118';
-const RELEASE_LOCK = 'contracts/releases/ui-803b6e27c455-smart-548c11cd6ec0.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-1e886550a147-smart-77feccf8867a.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
@@ -90,7 +90,7 @@ $release = json_decode(
     JSON_THROW_ON_ERROR,
 );
 $expected = [
-    'compatibility_id' => 'ui-803b6e27c455-smart-548c11cd6ec0',
+    'compatibility_id' => 'ui-1e886550a147-smart-77feccf8867a',
     'ui' => UI_RUNTIME_REVISION,
     'smart' => SMART_RUNTIME_REVISION,
     'source' => SOURCE_REVISION,
@@ -119,7 +119,7 @@ $registry = json_decode($registryBytes, true, 512, JSON_THROW_ON_ERROR);
 if (($registry['compatibility']['id'] ?? null) !== $expected['compatibility_id']) {
     throw new RuntimeException('FRAMEWORK_REGISTRY_COMPATIBILITY_MISMATCH');
 }
-$docaraPair = 'sf-v5.9.0-803b6e27-548c11cd';
+$docaraPair = 'sf-v5.9.0-1e886550-77feccf8';
 
 $projectLockPath = $projectRoot . '/simai-framework.lock.json';
 $packageLockPath = $packageRoot . '/docs/site/simai-framework.lock.json';

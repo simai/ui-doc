@@ -14,8 +14,8 @@ Custom Elements: `<sf-button>`.
 Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/buttons/js/buttons.js`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/buttons/template/default.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/buttons/js/buttons.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/buttons/template/default.js`
 
 ## Зависимости
 
@@ -33,10 +33,10 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 | `text` | `text` | `String` | `""` | `—` |
 | `segment` | `segment` | `String` | `""` | `—` |
 | `icon` | `icon` | `String` | `""` | `—` |
-| `icon-left` | `iconLeft` | `String` | `""` | `—` |
-| `icon-right` | `iconRight` | `String` | `""` | `—` |
+| `icon-start` | `iconStart` | `String` | `""` | `—` |
+| `icon-end` | `iconEnd` | `String` | `""` | `—` |
 | `icon-position` | `iconPosition` | `String` | `"start"` | `—` |
-| `tightness` | `tightness` | `String` | `""` | `["", "low", "high", "highest"]` |
+| `spacing` | `spacing` | `String` | `"normal"` | `["compact", "normal", "comfortable", "spacious"]` |
 | `radius` | `radius` | `String` | `""` | `["", "default", "square", "rounded"]` |
 | `root-class` | `rootClass` | `String` | `""` | `—` |
 | `loading` | `loading` | `Boolean` | `false` | `—` |
@@ -54,7 +54,11 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 ## Методы
 
-`createIcon()`, `get ariaLabel()`, `get disabled()`, `get icon()`, `get iconLeft()`, `get iconPosition()`, `get iconRight()`, `get loading()`, `get nativeType()`, `get radius()`, `get rootClass()`, `get scheme()`, `get size()`, `get templateName()`, `get text()`, `get tightness()`, `get type()`, `get value()`, `onBlur()`, `onClick()`, `onFocus()`, `onMouseEnter()`, `onMouseLeave()`, `set value()`, `setDisabled()`.
+`createIcon()`, `get ariaLabel()`, `get disabled()`, `get icon()`, `get iconStart()`, `get iconEnd()`, `get iconPosition()`, `get loading()`, `get nativeType()`, `get radius()`, `get rootClass()`, `get scheme()`, `get size()`, `get spacing()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `onBlur()`, `onClick()`, `onFocus()`, `onMouseEnter()`, `onMouseLeave()`, `set value()`, `setDisabled()`.
+
+Для новой разметки используйте логические имена `icon-start`, `icon-end` и
+`spacing`. Они корректно работают в LTR и RTL. Прежние `icon-left`,
+`icon-right` и `tightness` поддерживаются для совместимости.
 
 ## События
 
@@ -81,5 +85,5 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 ## Источник
 
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/buttons`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-buttons`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/buttons`
+- `simai/ui@1e886550a147bf63d7c3a4440af5e5855aaee485:distr/rule/rule.json#name=cl-buttons`

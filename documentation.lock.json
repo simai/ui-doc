@@ -958,11 +958,11 @@
             "key": "utility.align-content",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/align-content.md",
-            "page_sha256": "9d9b275672143aa923a372851527b46b9446458b3e8bd1b9ad957feb29c11064",
+            "page_sha256": "aa7e6cb0e0c3b94422a30ee36df977d05b0110894f37cce27ba59de8eed55948",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/align-content/",
             "source": "simai-framework",
-            "source_sha256": "ee19ce911d46e2c050112804204d1a2204f82ad35bfc0955f86e19274cb95873"
+            "source_sha256": "e3b04105101a1c2262b7d719e50ee3c9f5fdaa1ca247daeeb4ff20a3c96312ff"
         },
         {
             "examples": {
@@ -972,11 +972,11 @@
             "key": "utility.align-items",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/align-items.md",
-            "page_sha256": "1c83ceebedb69c126ea17bb03eeb06283ae3b7280164e8cffa6773a3664e4da9",
+            "page_sha256": "0303afc9f9b2dfd633cc4bc1c243384b9db748ffe723890f22937e9303c4a9a5",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/align-items/",
             "source": "simai-framework",
-            "source_sha256": "1740d6aec092705403ee5ec122789300a5f0d398a35ac86da4fbbfd8e535f25e"
+            "source_sha256": "871238c17e26aa6b53c7263d748b18fe182ce2a969146b4e39374614be451b22"
         },
         {
             "examples": {
@@ -986,11 +986,11 @@
             "key": "utility.align-self",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/align-self.md",
-            "page_sha256": "eee806b80b8966d7677957b51b2f697b8d9edc9faebad4a30524c684a81391a2",
+            "page_sha256": "25862b40c6ab80b2e5378ee87284c1faf3984763f0332d2519c35b4e123a6e64",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/align-self/",
             "source": "simai-framework",
-            "source_sha256": "16e9e38a25f2f42952ca194f9bde1ea6cc554be43aeb7b5a1d447f6d4f365cf3"
+            "source_sha256": "5ad9004d48592b37683375c2fd5af1d2ef95d920ced7983002d789347f832cc8"
         },
         {
             "examples": {
@@ -1042,11 +1042,11 @@
             "key": "utility.aspect-ratio",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/aspect-ratio.md",
-            "page_sha256": "7229fb75c64f41cb6c33c3941614c33588d58eb677331036db55f14736080338",
+            "page_sha256": "568e6cb6c90ab8256f884bb6f0aa745c49b883e06d517797975651b010c1d05e",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/aspect-ratio/",
             "source": "simai-framework",
-            "source_sha256": "59fd27eb71df495033d4124126220989375caafb387b05b1dacd6e0e465906ee"
+            "source_sha256": "7a94246aa1c684b78b631a04433613fcf4f59b69823c6d38eb39f3777f9deffb"
         },
         {
             "examples": {
@@ -1182,11 +1182,11 @@
             "key": "utility.background-attachment",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-attachment.md",
-            "page_sha256": "7af068f654038aa4e89dcfa8489cbaac02460576d358da44f018a9286e1e54d1",
+            "page_sha256": "e2c0e0f0e0a9606a164aa4e5cec8ccb57cf936009950b59cba9049abaf1d0472",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-attachment/",
             "source": "simai-framework",
-            "source_sha256": "dff43539abfeb99728c268c118408dffe2946b175e550d34535dca488207c2a6"
+            "source_sha256": "16ed4df7b1e97720f6c7919623c4ecc2ce256540c59bb4d15f666fbf8df85616"
         },
         {
             "examples": {
@@ -1196,11 +1196,11 @@
             "key": "utility.background-clip",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-clip.md",
-            "page_sha256": "b4d3f6fe30f86e3958d311c4b76dd3ef29785aea5c2a0a046a93f89cb73f8b28",
+            "page_sha256": "43842fbcd7d81a3b0a2ec8d70f1a633782e3060d9fdae36c7fda260b0b95bb40",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-clip/",
             "source": "simai-framework",
-            "source_sha256": "4de533c4d8e9b7b61b5289a7267c0997f4b77ef76f4f6594d0d7cb39bd496b24"
+            "source_sha256": "e7b24261ca78fa99d63bf114914f5f207c02e33c0cbefebca1b15466899c22cd"
         },
         {
             "examples": {
@@ -1238,7 +1238,7 @@
             "key": "utility.background-fake",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/background-fake.md",
-            "page_sha256": "504ff6b14ddd64477669b955c5d3837ad28c03192fd90caac7fdcec7f24956df",
+            "page_sha256": "f66d2f54d360642220b3b36279c5a230daf7fe2e149753a753cb2dc9d350e288",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/background-fake/",
             "source": "simai-framework",
@@ -1252,7 +1252,7 @@
             "key": "utility.background-gradient",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/background-gradient.md",
-            "page_sha256": "6a95936180a943667b31dbfd82f494d1239d1b284c05b54bec1ad773af8b5ad8",
+            "page_sha256": "57e0de8c9fd6e1ae3af77400c512439cdcb1dcdeea49fbe41825c34d00b77981",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/background-gradient/",
             "source": "simai-framework",
@@ -1266,11 +1266,11 @@
             "key": "utility.background-origin",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-origin.md",
-            "page_sha256": "30f796f027363cdfe358b589e7e38a12428066c204e7b6b8b3071946c190362e",
+            "page_sha256": "bd213bbe47cc16321712f78fc41d3725b7adbd89ffce333291035b026f00545f",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-origin/",
             "source": "simai-framework",
-            "source_sha256": "a173a68f145d0cdd240a5723cefdca1e23660ee30499445825c11f98215165fc"
+            "source_sha256": "75848e32aa0d138ff33f655952f58df626ea9a5ce137d7dde3dd41b4ac2ec97c"
         },
         {
             "examples": {
@@ -1280,11 +1280,11 @@
             "key": "utility.background-position",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-position.md",
-            "page_sha256": "ed1d4e339209fd80b52a62a45c8d274ea845465119c662a8f455577135951a52",
+            "page_sha256": "8f0617daef193b6cf1676163f32b48029595984c826d768702d3b6f5ec04bc44",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-position/",
             "source": "simai-framework",
-            "source_sha256": "675d3ef902017aafec476fa9f311c3e5a77d2cdc74338af7554ffad8c4be7e82"
+            "source_sha256": "3061b643365e1e82a2f30d11573dc76d9dec896f322bd80711e58bc63df6a4a0"
         },
         {
             "examples": {
@@ -1294,11 +1294,11 @@
             "key": "utility.background-repeat",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-repeat.md",
-            "page_sha256": "74e88b9ee136217eace2b3c939fa55f4bcba85a47ddb0977ea1745376f862c4b",
+            "page_sha256": "31f2730a747976344e3d0fa3bd52f222ad79493cb239c4aae9a56853eeb4ad24",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-repeat/",
             "source": "simai-framework",
-            "source_sha256": "97c95d87b762cc4c8de9198fa5f9204ed282d21ad9b939a998efbced06809bdd"
+            "source_sha256": "799e0e32ea734773c3efeeb1ed35a255118ae168f7229f42b0c5ae1b6376774d"
         },
         {
             "examples": {
@@ -1308,11 +1308,11 @@
             "key": "utility.background-size",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-size.md",
-            "page_sha256": "3f081041c9d23efed7b32280eaedb363303dc8fa46698e335ea49d226a21302c",
+            "page_sha256": "8fb9e08e9ed42d970e82e7b143de31845ffc517c6c686ca2bbf65cee08a57985",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-size/",
             "source": "simai-framework",
-            "source_sha256": "f7067517f16f6cdd0a74b5576dafa6bcb09ba3e848f2090712fdcc5ca09cd13b"
+            "source_sha256": "a63565ae6854dbedb8fd46a41339effab24349661b25732c5fa30ad33abf4360"
         },
         {
             "examples": {
@@ -1322,11 +1322,11 @@
             "key": "utility.background-size-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/background-size-ext.md",
-            "page_sha256": "36930986d093870760fd48a2ee697824ee13f9de1091ab91a76a80f7fd72ee34",
+            "page_sha256": "c0534e56e4244f3002b0b4a0a6547eb9eba2c3fc2c21ba84a8c5952b11e5fa17",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/background-size-ext/",
             "source": "simai-framework",
-            "source_sha256": "31ca2f43abcaed069001a2753dc6fd11e940256bda427486a0d3d4662ffeb9cb"
+            "source_sha256": "d3a272fb3d977082e7d58d92d2f6c73b959b42b37d2be3d19b13ec5f9d49ecfd"
         },
         {
             "examples": {
@@ -1336,7 +1336,7 @@
             "key": "utility.border-collapse",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/border-collapse.md",
-            "page_sha256": "5857d3c0ed554d0269ae98265fcb3fe4808d449251b2af0aa738530c3159f55e",
+            "page_sha256": "948a5a6597723432dff41c4524fe2edd7c87b254ac1f24e9187d48ca7502c86c",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/border-collapse/",
             "source": "simai-framework",
@@ -1364,11 +1364,11 @@
             "key": "utility.border-radius",
             "kind": "utility",
             "page_path": "content/ru/utilities/border/border-radius.md",
-            "page_sha256": "0530f44e38026de724d07aba6bc1d47f5d4ef8083a8dacb1d2207cd330fb578d",
+            "page_sha256": "7a5c27bc47886c131219279c5ce3ce66ffb1bca6375af0cef15f463c8840a25a",
             "review": "ai_verified",
             "route": "/ru/utilities/border/border-radius/",
             "source": "simai-framework",
-            "source_sha256": "1afea64b89256c300ef9531fd28a585a5b3a6020408b31a4f0d5960e9982aaa6"
+            "source_sha256": "1f8360c814b2d67d15940fb0182ff6f469ed7e75e364e12407e2d6256007e002"
         },
         {
             "examples": {
@@ -1378,7 +1378,7 @@
             "key": "utility.border-spacing",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/border-spacing.md",
-            "page_sha256": "7bf28b69a43f52c8e9abd4815cbc1a6677b0e2658e0f0441da6b13e53cd660c4",
+            "page_sha256": "c7854ce368221656d2033d694ba506ab3b899c19b4638b381d8f3c6254af4209",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/border-spacing/",
             "source": "simai-framework",
@@ -1406,11 +1406,11 @@
             "key": "utility.border-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/border/border-width.md",
-            "page_sha256": "8add6db70b7cfe6af4a3f01d4f62b46125ca9292cc49cd8d07d3e5b206bb07fc",
+            "page_sha256": "a5922002f9e9e7a3f7bc4b90a701dd4d44cec770fe4cffa1853b2284393e9a74",
             "review": "ai_verified",
             "route": "/ru/utilities/border/border-width/",
             "source": "simai-framework",
-            "source_sha256": "f48c98d69b1c11919ab8326e4fd15299c4ec0f90b97b7a64f6d58fcb89fa7f5f"
+            "source_sha256": "e5dbc390bad5b4ef07c98fb32645c1a62da0aab214f680b05c8c7e140acffa20"
         },
         {
             "examples": {
@@ -1476,11 +1476,11 @@
             "key": "utility.break-after",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout-break/break-after.md",
-            "page_sha256": "e9fe923c32971757ac9a767a3d7058c5d00e210b404d0f7d3f7da85a67d157df",
+            "page_sha256": "c96eacbc8716f36f5590d764d719e899e3bf63c067679948170512e81eed0ad0",
             "review": "ai_verified",
             "route": "/ru/utilities/layout-break/break-after/",
             "source": "simai-framework",
-            "source_sha256": "8ba2507c875d772e10de4fbcaf9c21c3b51c5ff082781c6e22fb7daecf359888"
+            "source_sha256": "dd2b3badda96dae6f4116cbc491c317cf0fe580cd2c4304e516f9d508ea8939d"
         },
         {
             "examples": {
@@ -1490,11 +1490,11 @@
             "key": "utility.break-before",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout-break/break-before.md",
-            "page_sha256": "5fb0085ee1a9b1ba5668b866854bc14f0458a04f652465b536a985b779177fe5",
+            "page_sha256": "084848e31bd2633c3992bb687da8f0b404c2007daaa45011b253346031e64190",
             "review": "ai_verified",
             "route": "/ru/utilities/layout-break/break-before/",
             "source": "simai-framework",
-            "source_sha256": "d69ca3142e726861780ef6a00fb0030b809f9bfb17ee36404d1f88cf1a970d1c"
+            "source_sha256": "b00e3509c77ba4bc7e71222f10a782aa32a002aa4bdb7cca896334110a1ae4c7"
         },
         {
             "examples": {
@@ -1504,11 +1504,11 @@
             "key": "utility.break-inside",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout-break/break-inside.md",
-            "page_sha256": "1a143d24faf8fbf34a384b4c5123c01ede0fe5a6530ae8469bf3895beb6c5f98",
+            "page_sha256": "6654d1bd2973d847f8efde1e7c39cda23ddd3cb332520f9fa7e7cb556632016b",
             "review": "ai_verified",
             "route": "/ru/utilities/layout-break/break-inside/",
             "source": "simai-framework",
-            "source_sha256": "652f93bc61592e0a6f6ba560adda874d2c274a4ad871966cb8bb7611f7918e33"
+            "source_sha256": "79f6956eaf7799a0aaf7228838e5408b85711ddd32e6eaa001e659e48f328564"
         },
         {
             "examples": {
@@ -1532,11 +1532,11 @@
             "key": "utility.clear",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/clear.md",
-            "page_sha256": "25afc41855fd84bd8a0b3a131a44e3a8d26b4bbec91a0aafd8a2055ea5e5faf7",
+            "page_sha256": "a4376b6499b912d244a57474b52bdac7ab118fdeeee5b0ff946cafb4a44b5b86",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/clear/",
             "source": "simai-framework",
-            "source_sha256": "540e040f34f1676ad76871d426ee13016a92f84efc89ab57d475d382862f29dc"
+            "source_sha256": "829a0bca8f2e6060827c97eee76bdea451ca989fb1b1787b8dcfc3b26c961545"
         },
         {
             "examples": {
@@ -1546,11 +1546,11 @@
             "key": "utility.column",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout-break/column.md",
-            "page_sha256": "721ca88e2d3130f905f91ea332e49168c296eb6211ee0eeea74c740796ff777a",
+            "page_sha256": "03e264e8f075a2794bdde509d6401aa9b00e0bf101ed654e51a5ec92137155e2",
             "review": "ai_verified",
             "route": "/ru/utilities/layout-break/column/",
             "source": "simai-framework",
-            "source_sha256": "1d714079802e7e83caaf6913514558698c5d45d39cd00f0a814ed88cb5e0c314"
+            "source_sha256": "8e363906e139f4cd52b517c7b83f197e0afd1da8af7dcefa3bbc70dd82e26458"
         },
         {
             "examples": {
@@ -1560,11 +1560,11 @@
             "key": "utility.column-gap",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout-break/column-gap.md",
-            "page_sha256": "da95d5f710fa2de02f345ccb0c59ccc346862f021a00e5e001ee15c2b152be0e",
+            "page_sha256": "6267c25affca7f68d1483729c144ddcb08b9a5fdd13eb38d625477c369eb8b13",
             "review": "ai_verified",
             "route": "/ru/utilities/layout-break/column-gap/",
             "source": "simai-framework",
-            "source_sha256": "1d4abcb2cfba00f4f4e38b45aac5acb11e2dcffa511d4d82db07ad13b9d495a9"
+            "source_sha256": "9135aea88219e010c27fd2a80c850424a05bb88754c0bb83d411b9a8267b9f96"
         },
         {
             "examples": {
@@ -1574,11 +1574,11 @@
             "key": "utility.container",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/container.md",
-            "page_sha256": "b092df72ef60709226cd4d57ea57e281ad3f14cf212888ee8dd5bab9358a66b8",
+            "page_sha256": "e627945ccc5377ca5555ccc39ef0f3beeb3d12c6bae1ca824818964dbdbfe728",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/container/",
             "source": "simai-framework",
-            "source_sha256": "ebea2df5a02ae102e6a64931023998c40948f7dbfc6c74be1ee7e6d06d0fff83"
+            "source_sha256": "26d68c23b133ccf1ce5fa650eb2bf163f973aa7167e827da20228a4c016eb0b3"
         },
         {
             "examples": {
@@ -1616,11 +1616,11 @@
             "key": "utility.display",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/display.md",
-            "page_sha256": "50fde8fc92fd287dec3906023e0be8627700eee580b26e430913140886bac672",
+            "page_sha256": "6fdcd9a88a1c5668e2ba5fd0ab1e1225a3594d809d2c2d171fb9d10ff6e12680",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/display/",
             "source": "simai-framework",
-            "source_sha256": "5c3b7cd12b3700a6094b913f6000cfe8e53a843d1303f81bbb86e904bc9d50b4"
+            "source_sha256": "e28e5eabea93863431c95958a9699034a94d330b68b385d2a88afd313225c894"
         },
         {
             "examples": {
@@ -1728,11 +1728,11 @@
             "key": "utility.element-position",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/element-position.md",
-            "page_sha256": "f20741ec8b8c40dfcb87b71d8c3f5db6852fbc1342caa584223be0747fd2f95d",
+            "page_sha256": "e42f62bebafcebc35711cfa0ddb3e65d4316bbcca6c270425faf9d7e2b3c4e27",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/element-position/",
             "source": "simai-framework",
-            "source_sha256": "a5051b5a1c36016df2e2e4cae374ffabc6be9a3cc8f874e0fdd1fc63000d6b9a"
+            "source_sha256": "b304b447d21548e6b2561d36861d79937de8419fabf3f1389eb613e22f7a0f0b"
         },
         {
             "examples": {
@@ -1742,11 +1742,11 @@
             "key": "utility.element-position-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/element-position-ext.md",
-            "page_sha256": "bf93c3c5d846a626597ea40a7810d03af77aa50b24162e772c0d2171cdeb7cf7",
+            "page_sha256": "91e70606ea11f9f49813b68159bbe12bf9dcd79c00f0d0f7557dc08036d18220",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/element-position-ext/",
             "source": "simai-framework",
-            "source_sha256": "ecf0e7a55c7badc513bcd47caef03c117a81fe710d9dfe81706ac0eb90518df7"
+            "source_sha256": "b105bed97c91ead4c37e1c64eccc08a1c4b92a0d02c8c57f518b9d989f9b3964"
         },
         {
             "examples": {
@@ -1924,11 +1924,11 @@
             "key": "utility.flex",
             "kind": "utility",
             "page_path": "content/ru/utilities/flex/flexibility.md",
-            "page_sha256": "91d246df7beaa7c88b8b3ba75433912ffaf953b64b0d7e3a8d6015d4a8483226",
+            "page_sha256": "3b7f01198d4de19cbe0767c811cb979f33927b01a49e26bcee6487341442f2de",
             "review": "ai_verified",
             "route": "/ru/utilities/flex/flexibility/",
             "source": "simai-framework",
-            "source_sha256": "289e078c13dd2e548523f8bf6c16f7cb99a0c9aa65fc9c7ae10b33963e4463a1"
+            "source_sha256": "65f88ee9470ed5d7a57a31420d7642844783be6804060ee85f00efbdee2e0c78"
         },
         {
             "examples": {
@@ -1938,11 +1938,11 @@
             "key": "utility.flex-align",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/flex-align.md",
-            "page_sha256": "8f48275ba696d9d18197e0587e4cf9488acede694841e6d66301f82135102534",
+            "page_sha256": "33b1c7cf58f40c96eced75e7dacbd8129e1df02996f57ebe6b7a648118beb5c1",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/flex-align/",
             "source": "simai-framework",
-            "source_sha256": "4042a5919dc38ea17c72cc666d541ea0c2206632eafdf3a14b3ddcacaa5e5d23"
+            "source_sha256": "0346756c94bb7c864c1d740cc280f8d0b3f8fe52ad41a693e4b1670114dd67d4"
         },
         {
             "examples": {
@@ -1952,11 +1952,11 @@
             "key": "utility.flex-basis",
             "kind": "utility",
             "page_path": "content/ru/utilities/flex/flex-basis.md",
-            "page_sha256": "ab3a7f138c348328ee6ae71cccbd0ef230c4484816b611f8eaeec98bb3fc5716",
+            "page_sha256": "00fa3254a37135cf0ba234839b768902948cef57c5e0d07dce959655c9709a8f",
             "review": "ai_verified",
             "route": "/ru/utilities/flex/flex-basis/",
             "source": "simai-framework",
-            "source_sha256": "034c96f0fb897683a4d8fa39820c96e0c550f2f89ff7d7148069940c79c67fd2"
+            "source_sha256": "e20894e29a47fa9ee865bff9580b117b40b08120726015ea355e4702185d7f74"
         },
         {
             "examples": {
@@ -1966,11 +1966,11 @@
             "key": "utility.flex-basis-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/flex-basis-ext.md",
-            "page_sha256": "3dc59b22b5018ca34e38a9163da455ff21ebfe7441dc9cacd9949beaa01caa94",
+            "page_sha256": "c4d4ec2ef0d505e008c92c46a8ed284725706ab00be9069d9769f2d0c2df9b9f",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/flex-basis-ext/",
             "source": "simai-framework",
-            "source_sha256": "49b7378386d071ba350836809903169ef93d686085587451c24c526aabb126e2"
+            "source_sha256": "b729e39bfb3888413d7ab26ed593d7bbb99453ca56aa4b3f073ae02101a6b40b"
         },
         {
             "examples": {
@@ -1980,11 +1980,11 @@
             "key": "utility.flex-direction",
             "kind": "utility",
             "page_path": "content/ru/utilities/flex/flex-direction.md",
-            "page_sha256": "3f731a48eb5f9acb6313ed364ee2008f540ff6eaf9d4057163e68ada5e712642",
+            "page_sha256": "e758080a34902c19862ff2233ddc5c7f39866e2d920578e7ce9d21c39ed79570",
             "review": "ai_verified",
             "route": "/ru/utilities/flex/flex-direction/",
             "source": "simai-framework",
-            "source_sha256": "a21b3c03e199b5ea8796376df6483aaa6f09e7b80d00180902007c8fb19e35b5"
+            "source_sha256": "dfbbc371cc955ed2268887c8c1823bde37ff16976005b07d89a9b69862d1276e"
         },
         {
             "examples": {
@@ -1994,11 +1994,11 @@
             "key": "utility.flex-grow",
             "kind": "utility",
             "page_path": "content/ru/utilities/flex/flex-grow.md",
-            "page_sha256": "ae68a878f9801af4cc500b65248ec8d33f00e51acebb1b1edf5877ba1925dfb6",
+            "page_sha256": "d622290c553d8d3e5af9752edf293da9d78cf83a2b590d2b921e3cba35872154",
             "review": "ai_verified",
             "route": "/ru/utilities/flex/flex-grow/",
             "source": "simai-framework",
-            "source_sha256": "184735b96d120a068fdf70fef524b03a366064b76d9c2af32708a8ed5efa4573"
+            "source_sha256": "50729a9681535fd2069f8bc91cba3fe98862eeeb75e3937534ab8f3d35a5758e"
         },
         {
             "examples": {
@@ -2008,11 +2008,11 @@
             "key": "utility.flex-shrink",
             "kind": "utility",
             "page_path": "content/ru/utilities/flex/flex-shrink.md",
-            "page_sha256": "0d563b3c78569c87014aa1f0ddec2722c497cd8aaba68a81090ada71562070a1",
+            "page_sha256": "199d5eec6a3234cc1fae6655f8093cf87acf6dae69708135df93f78627efd66d",
             "review": "ai_verified",
             "route": "/ru/utilities/flex/flex-shrink/",
             "source": "simai-framework",
-            "source_sha256": "760c7182fcce5acf12c5b8fcdf990170d793319f1fbce474f05596d9f2f8ca99"
+            "source_sha256": "cbfa1e4cca2509b4ff632df1d924e96d376d677cc9e93add01bb63f125e8495b"
         },
         {
             "examples": {
@@ -2022,11 +2022,11 @@
             "key": "utility.flex-wrap",
             "kind": "utility",
             "page_path": "content/ru/utilities/flex/flex-wrap.md",
-            "page_sha256": "bb2005e1651ceb0c59cdf4786011539ff32fb9eacdaaea40b5cffeeaed9188ab",
+            "page_sha256": "77ade1d67a343b0388831bfae51abb06ae164f8daae7b6de6bc8621cdfa421aa",
             "review": "ai_verified",
             "route": "/ru/utilities/flex/flex-wrap/",
             "source": "simai-framework",
-            "source_sha256": "79fd4b465d73fc95e117bd0c7d253adf9e909d2574d6d86bcaaab94c6502e122"
+            "source_sha256": "af52769eaf9d9746f080fa7dc823b882f758c46be2529d14beacf97ea74fa5b9"
         },
         {
             "examples": {
@@ -2036,11 +2036,11 @@
             "key": "utility.float",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/float.md",
-            "page_sha256": "b4d7a231d3c0729ccd21c3cc4b8a864138e45769af0c88f40b53ea64cbc04c3b",
+            "page_sha256": "89a41aa4804d078bb7c33ec7d56f9e62eaf0f36e2f3a2b8c21c336ac68ac7d4e",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/float/",
             "source": "simai-framework",
-            "source_sha256": "32004200a15bc20cf78befd876f0cfd3cbea1bd5aa171be40b966fab84765113"
+            "source_sha256": "accdc6ffb6e7326eb8da7fdcd36a59e7e91259ed4c79b46c9b9ee888da78c35f"
         },
         {
             "examples": {
@@ -2064,7 +2064,7 @@
             "key": "utility.font-size",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/font-size.md",
-            "page_sha256": "0bb9f1ed608b2d05949545ae53ef0d639742595e0f39177e5f229a74d2ae28fa",
+            "page_sha256": "232ae60f49cde7fe02917ebb012d84a7d9335798fbc4f0cdc73c3cb2bb8ac84d",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/font-size/",
             "source": "simai-framework",
@@ -2078,11 +2078,11 @@
             "key": "utility.font-size-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/font-size.md",
-            "page_sha256": "0bb9f1ed608b2d05949545ae53ef0d639742595e0f39177e5f229a74d2ae28fa",
+            "page_sha256": "232ae60f49cde7fe02917ebb012d84a7d9335798fbc4f0cdc73c3cb2bb8ac84d",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/font-size/",
             "source": "simai-framework",
-            "source_sha256": "37a390da40537ea2022783aadc3b091bae6a72ceb2ae87f3dc3febc816388785"
+            "source_sha256": "567e5f6f89dfeb19eb78a29efad203322b37beaa8afbefcb75bc77bef5a33244"
         },
         {
             "examples": {
@@ -2092,7 +2092,7 @@
             "key": "utility.font-smoothing",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/font-smoothing.md",
-            "page_sha256": "c8fc8c29b04e234a61b30e40d1627a9cabba25692bedb484dece7579ec77e5f7",
+            "page_sha256": "30c734e5de8394161b81e89e4c36ea6dc65d3c572aa9a263169c078e8bf57111",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/font-smoothing/",
             "source": "simai-framework",
@@ -2120,7 +2120,7 @@
             "key": "utility.font-transform",
             "kind": "utility",
             "page_path": "content/ru/utilities/text-formatting/text-formatting-text.md",
-            "page_sha256": "797f11750a397d9a295f437a7b8b3469104c0a33be2c23db2da8aafca0a5d8ea",
+            "page_sha256": "11431d70b97294ef738df89ab483dbb6fda3c8410d7ae7d4af9181fc42f2f632",
             "review": "ai_verified",
             "route": "/ru/utilities/text-formatting/text-formatting-text/",
             "source": "simai-framework",
@@ -2162,25 +2162,25 @@
             "key": "utility.font-weight",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/font-weight.md",
-            "page_sha256": "c4ed05b9c062302797e4a67d37bfc03b6c4733784885d39ce5ce619c974ce21c",
+            "page_sha256": "c9574fbc5882f28322fef78278a8cdd2b52816ffa8613775b6940c024da3a8c1",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/font-weight/",
             "source": "simai-framework",
-            "source_sha256": "e3ec2e3eed8b67170d94c4bec21a3965e5babfc053ec2ee353e51cb6631e1719"
+            "source_sha256": "61ee597a4cc57b40d08035bd17a116249b8fb01eeca4e07f74325786ea47e09a"
         },
         {
             "examples": {
                 "default": "utilities/grid-and-flexbox-utilities/gap"
             },
-            "examples_sha256": "56ba8e494a30100913b2be8680647ae14c3b80f594d06ffdab0938952f13036c",
+            "examples_sha256": "6270f628a997e1ce8fe39dbea0942b7a9eabbbc8bc4319a48de2fdbf4421a034",
             "key": "utility.gap",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/gap.md",
-            "page_sha256": "1addae880ae6adcbf641168b131642aff29cb40399e918af1dce68069311b7ce",
+            "page_sha256": "5a46c51797ae64719ea9aaf86e33b66e4728f16e4e5cfd4268e1a7db9e2096cd",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/gap/",
             "source": "simai-framework",
-            "source_sha256": "1266ac25cd51da88eb5a3f99a7294c04ce3830807648e7c07c36dbee0450b1e0"
+            "source_sha256": "992ceeaf2dceca4c5c44adbd6cff0975d7c7aec812a3167bb490c5b1049831b9"
         },
         {
             "examples": {
@@ -2218,11 +2218,11 @@
             "key": "utility.gradient-type",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-gradient-type.md",
-            "page_sha256": "8c2bd398d7f38b10b4ba13221bc6da34307a9f21873b53f5759b06a968a9fae0",
+            "page_sha256": "8d95a9c6d5947a72d27b2818790cca56bbc9c11e525da822170ed5182c1304b6",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-gradient-type/",
             "source": "simai-framework",
-            "source_sha256": "3991983770174fa2d6d75cc137be6f074b1e1c96993498289488c979ae54710c"
+            "source_sha256": "6093fe605e64c6067ce6aad765e5560f08cf08c2fb3c8b7690672feb8ace8b70"
         },
         {
             "examples": {
@@ -2232,11 +2232,11 @@
             "key": "utility.grid-auto-columns",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-auto-columns.md",
-            "page_sha256": "24a60e1126fcad9a54020159cc56e9f4982d4ba369e3fd25617ae070641cb80a",
+            "page_sha256": "1cd339efc325bf4052b2c17ad96eef394b2e9c80ae68230f3ed140469fb704f2",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-auto-columns/",
             "source": "simai-framework",
-            "source_sha256": "78714ac255022d5bf0002d64346062489fd2be1ab7c1175836912ab7c757d9aa"
+            "source_sha256": "dc30bc9052805cf06be261960b7054a35d9c99ede3c017ef486731468ea0b826"
         },
         {
             "examples": {
@@ -2246,11 +2246,11 @@
             "key": "utility.grid-auto-flow",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-auto-flow.md",
-            "page_sha256": "6e91850bf6064fa7ae068f4f4a529da7a3b467ea4c152aea2e46476e005eac7f",
+            "page_sha256": "8e15fbf52e4d4d0fb322757225de5126792690900673e0d7eb42855f761c7fc2",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-auto-flow/",
             "source": "simai-framework",
-            "source_sha256": "3c9a1175880a091c4e14b54c60b22ead7d2d0070f713442deb605fe18bdc4d01"
+            "source_sha256": "8ae56d898b3e4220418e6a00ce2b1d4b834b87c60232019e3c2854e7288eb43f"
         },
         {
             "examples": {
@@ -2260,11 +2260,11 @@
             "key": "utility.grid-auto-rows",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-auto-rows.md",
-            "page_sha256": "59aca2ebc21b6bf2ff56b88d9140fb1d5e13162b9829c7fb827b53d1839e7116",
+            "page_sha256": "df2df8f1e3a5b8c6f60e3613d2e4cade87d011766213bfad77ddaa1b53981ba8",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-auto-rows/",
             "source": "simai-framework",
-            "source_sha256": "466bd688938865302363bc1183adb356986b904f60c44d9a59470a5dae407be4"
+            "source_sha256": "b6f51c14888c9388efe54f7c037fc7a1750ff4ecacc75e059b72a70ba588fe9f"
         },
         {
             "examples": {
@@ -2274,11 +2274,11 @@
             "key": "utility.grid-column",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-column.md",
-            "page_sha256": "f1948b4b9855ba14b3ed81587135530d0550c4fcb9b6974bc4654b644a2a5e99",
+            "page_sha256": "7c4e99ce8ef3f26ce603680806208a8893bc21805db8dbfc5397286e5ccc9dc5",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-column/",
             "source": "simai-framework",
-            "source_sha256": "a287844c8d72e5195de9ce5fcba08a02e0d16f7806cde5d56438f7706323f372"
+            "source_sha256": "21780998b38d483943d209eae2997469fa48584ca24cc09b51af234397e4c38f"
         },
         {
             "examples": {
@@ -2288,11 +2288,11 @@
             "key": "utility.grid-column-end",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-column-end.md",
-            "page_sha256": "c175d5d8da0ea8a5a0c7cc8807c2ac8af015adea536d0b942498e2db6869687d",
+            "page_sha256": "7587e4bbebca0375011b8f1917cbb1abb8beadf11d17a683551c2798e53799df",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-column-end/",
             "source": "simai-framework",
-            "source_sha256": "b4a574e4c6179c3e938edf4cf54a17928b81c97ec0a7b43e602f949aa2d84009"
+            "source_sha256": "234e8f7213b30f0c44b4dd27ec6506ed5c4c13f408215fdd107423eaea9cafd0"
         },
         {
             "examples": {
@@ -2302,11 +2302,11 @@
             "key": "utility.grid-column-start",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-column-start.md",
-            "page_sha256": "aac08c7e2724c2c84b08bf4618ed484d280407bb3bd824aab1ae68c0b9e61478",
+            "page_sha256": "7adf2e189931a4ec18c6b9d40d9a215fac14984917af6a3e26361621e6f771ed",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-column-start/",
             "source": "simai-framework",
-            "source_sha256": "2c02355b93afe2afeab8844a4c18511b9099940ec088c2096b03d4f5ff936b48"
+            "source_sha256": "c9189082ee19e88c14c284dc603974dde7ff842ff5ed84f74994079a6cb2fd8f"
         },
         {
             "examples": {
@@ -2316,11 +2316,11 @@
             "key": "utility.grid-row",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-row.md",
-            "page_sha256": "e6d47f4f21d5a6d9e64af418aa690a50b9c7919de56d4fdfb46d940c52d5ea86",
+            "page_sha256": "a5480b37baa665e507d1347789eb368445235e8ac11f26c1da9548cffc21bc36",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-row/",
             "source": "simai-framework",
-            "source_sha256": "89bb9a3a5fe0940e007897cfd4569a7f788dddd7d8e85aefb75cdd43b084e75c"
+            "source_sha256": "f7181c66595f1cf8eb80cd18f00d0e29a4f66ed8f2da913cd266141ab4107d3f"
         },
         {
             "examples": {
@@ -2330,11 +2330,11 @@
             "key": "utility.grid-row-end",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-row-end.md",
-            "page_sha256": "ed3565488b3786047d3ffaf1dede111c924d9c728d78e479779c34263263f23b",
+            "page_sha256": "dd4437ec63141a42bdb8fe2aaca074fa15a41ba16a1834f4ac00006aad6acc53",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-row-end/",
             "source": "simai-framework",
-            "source_sha256": "b74a400833a73805dab006f87285803ec4f8ef161823e034106cf8b001b59bce"
+            "source_sha256": "2c5f7ef3d72617bccb48ea5fc506ae5f13510ca56a2a821bdf61510baeeeb355"
         },
         {
             "examples": {
@@ -2344,11 +2344,11 @@
             "key": "utility.grid-row-start",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-row-start.md",
-            "page_sha256": "dadced7d3918eb364ecb8cc35fa8eb988ccfde11314b81c67e2272cfbf1c59ea",
+            "page_sha256": "bb34fb6bf542dd30614bad267437d15b137ef0b266614510aaa96fed760ffb3e",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-row-start/",
             "source": "simai-framework",
-            "source_sha256": "c0168cf6edba881036ca364e5db8d19f91dbde1241f1cd4099473080fb1140c6"
+            "source_sha256": "6939a6794a10e7e151ca500dc8c554974c130293adad2bb246bb022327b5e6a8"
         },
         {
             "examples": {
@@ -2358,11 +2358,11 @@
             "key": "utility.grid-template-columns",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-template-columns.md",
-            "page_sha256": "9537e738afd1f94ccfdc91038f651c40878193a9dd5d72cc6ebe427830712bc1",
+            "page_sha256": "77f818b05ecc59aff34e2467052f9c945b6a543c04601642b5465e0d644718da",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-template-columns/",
             "source": "simai-framework",
-            "source_sha256": "02a0418d91b627943be2ea2a1b779c66996897f4d5c3225527631944d8b672e6"
+            "source_sha256": "3e9e408d7adbb258f573c9b38760f1e100b3f0a5ffe276d5cc7f3037c33c131d"
         },
         {
             "examples": {
@@ -2372,11 +2372,11 @@
             "key": "utility.grid-template-rows",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid/grid-template-rows.md",
-            "page_sha256": "aa7207d04d8f49ef3d965b36c6c1e9ec310898de12d5a31d7c98b09812a514d8",
+            "page_sha256": "7e8cdb7d00a01655fbdef18f5e8410551f1a4e77981319714778f0eecf51d714",
             "review": "ai_verified",
             "route": "/ru/utilities/grid/grid-template-rows/",
             "source": "simai-framework",
-            "source_sha256": "8b62f05d5017569224c4086a9bbe75a7ebee07c2d6c693bdc3a78a2434ead0b4"
+            "source_sha256": "61ece63a37d7c6be5a69fc4892b1b48fcf269fd701af95b0cb3b522b9623ff21"
         },
         {
             "examples": {
@@ -2386,7 +2386,7 @@
             "key": "utility.headers",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/headers.md",
-            "page_sha256": "3e12a04b6fa1620343b011fc8c9329075d08f896411138e0914213d8409d2507",
+            "page_sha256": "e762016037e97def86739da97f8e60da2babdb18bee8a821ed9d2d080eb477c5",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/headers/",
             "source": "simai-framework",
@@ -2400,11 +2400,11 @@
             "key": "utility.height",
             "kind": "utility",
             "page_path": "content/ru/utilities/sizes/height.md",
-            "page_sha256": "daeb7d0731994a0316eaed05004d59b1e3e7fb4751c8ca35a02cb2e801a6029d",
+            "page_sha256": "f96dcf6200d3f0bc220dd816d4d006a60adf27dfc9b4125a9180f52612c72da8",
             "review": "ai_verified",
             "route": "/ru/utilities/sizes/height/",
             "source": "simai-framework",
-            "source_sha256": "fa41d2f310ebf3974106e90088cdb69a52539c455a51c80d6298b4614f2c8ccf"
+            "source_sha256": "2dc7d1103d72b3f826baec440888cd092ebe2eb04a6f40aad2b222c139a833a8"
         },
         {
             "examples": {
@@ -2414,11 +2414,11 @@
             "key": "utility.height-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/height-ext.md",
-            "page_sha256": "9995566cc18b4fccedbbd9fee7b5a76f022b9b2aaa40a752ede4f0f174377d44",
+            "page_sha256": "a6af8994fd584b2b2286080687b4db9cb0674e342364f4be9d4f232517885b0d",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/height-ext/",
             "source": "simai-framework",
-            "source_sha256": "2bfb93c7c39e257b00045653046c12d5d240d6fb18cbf640ff0a206af3c36c51"
+            "source_sha256": "17cb7f56fff8fcd3ff0d8219dc7e03fd840e3544c4d168ed9b2684135023e04a"
         },
         {
             "examples": {
@@ -2428,11 +2428,11 @@
             "key": "utility.isolate",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/isolation.md",
-            "page_sha256": "201f9e99c0a1b9c549f4ce1ac0884486e946a74bb348d72dcc54200b63cef06e",
+            "page_sha256": "5bd7bc1333f9af8be7bcaabf957c696dc506d6d17a0642762ac38f2830ca3c57",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/isolation/",
             "source": "simai-framework",
-            "source_sha256": "cbef0a6e225c5d734fe220f843673716e26aeb30ac00ec4f4eec177590757e32"
+            "source_sha256": "d982b77780ff305b0cfe776f84576d0ad193b5768dc80b7fcfbb7384d7f88e85"
         },
         {
             "examples": {
@@ -2442,11 +2442,11 @@
             "key": "utility.justify-content",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/justify-content.md",
-            "page_sha256": "f098bad382f144e1f7877e0571a9df5b982e181fb8fc5e3d6c6ed6cc3f13e61f",
+            "page_sha256": "68286285a38cdcaa57d61bc28a02ec521caca8b7e3c8f456fe34d86d5b2317dd",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/justify-content/",
             "source": "simai-framework",
-            "source_sha256": "6f1d0d5cf9edc263332a03c354c357a835c1f998bbb31b0eea924c407ae6cd45"
+            "source_sha256": "80a596a40b48a4972bfdc3d31a972709f1d60ea2318aa8f28967b95ff8174e87"
         },
         {
             "examples": {
@@ -2456,11 +2456,11 @@
             "key": "utility.justify-items",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/justify-items.md",
-            "page_sha256": "91a70ab68152c0cfb896c5d8ca408948a5f9d052518c2e62a756ef7db5e622ad",
+            "page_sha256": "682d86665db465cb32ef03bca7d38be1a9a83116d00b61006334fd87031201e1",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/justify-items/",
             "source": "simai-framework",
-            "source_sha256": "c0e56e0a81b0d3e2d3e50bec8006f539d4607fbcac853a649df3a207c8347550"
+            "source_sha256": "aa89b499c46b7ff17bef566ef77d5f9b9297628cc87e2c2ee3bb470c2b1aaf29"
         },
         {
             "examples": {
@@ -2470,11 +2470,11 @@
             "key": "utility.justify-self",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/justify-self.md",
-            "page_sha256": "69449d23e7aa399677f3180433207d55fe3bf6500db28fa60ab0f345c749d2f9",
+            "page_sha256": "123e129564504ae86f8321405b1973c312b8c5ef3be9c5fc7102c7bfba97f5d1",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/justify-self/",
             "source": "simai-framework",
-            "source_sha256": "a7eb148bd45d4952cbe871f1c0698feb0bd19b1ef54b443218db4d0f97731a4b"
+            "source_sha256": "1b7b29c576063687205dce99f230ccf4027c465e8eed1934c372297664510d25"
         },
         {
             "examples": {
@@ -2512,11 +2512,11 @@
             "key": "utility.line-height",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/line-height.md",
-            "page_sha256": "0abf299a1e079c1c54935acc01a09f28a2470cf398236971f9109eedf9d50c36",
+            "page_sha256": "de8c5ee73e43f27734e8ef877fc3ed5470e9699344878298678948e5fd3842eb",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/line-height/",
             "source": "simai-framework",
-            "source_sha256": "5610d1e56dc86e3b082443a8fe9deeda0ee9f9b91466192f3073a46daa7a8d33"
+            "source_sha256": "60c452870ef199a99a247a8cdec9320c49c83cef621b956d7fef601b96cb7919"
         },
         {
             "examples": {
@@ -2550,29 +2550,29 @@
             "examples": {
                 "default": "utilities/indents/margin"
             },
-            "examples_sha256": "c7bbb8c3e898e70d325524769048aa38cd44b02310f83376ad8777ac3e21927d",
+            "examples_sha256": "5fd61add6ec002d87d9c2ff44fcf17e99f1da9ea58b3c7ef14196cfaafc2b60d",
             "key": "utility.margin",
             "kind": "utility",
             "page_path": "content/ru/utilities/indents/margin.md",
-            "page_sha256": "633655313eee38074b18712d2f4193dbd83e8fc0bc3ab00de2cfa13b46a7213d",
+            "page_sha256": "9080fa7363e44eefecfb66168238e538b0ab0b431dcbb8a4e69b1080e06e2ea5",
             "review": "ai_verified",
             "route": "/ru/utilities/indents/margin/",
             "source": "simai-framework",
-            "source_sha256": "091ba89d3db6462897f3c32e869421d54254fe6f9265081320875b43439665bf"
+            "source_sha256": "bbea3e9eace0ac1ce774b28a8cb241ade5d0172dd8ebf93da1b3d41ebf663fff"
         },
         {
             "examples": {
                 "default": "utilities/indents/margin"
             },
-            "examples_sha256": "c7bbb8c3e898e70d325524769048aa38cd44b02310f83376ad8777ac3e21927d",
+            "examples_sha256": "5fd61add6ec002d87d9c2ff44fcf17e99f1da9ea58b3c7ef14196cfaafc2b60d",
             "key": "utility.margin-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/margin-ext.md",
-            "page_sha256": "b1ae371239c9b3a2fbeee018a85f6184db3262e516341e165a75806d0e70dd2b",
+            "page_sha256": "19cd6ce7d285b6f894b06d311e16e3a2fc24d6d32b6ad5b2803640d5be96c332",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/margin-ext/",
             "source": "simai-framework",
-            "source_sha256": "bb3cee19df08e86ba4b6aa751b0303db8f7f9c240fe181ba9f598127152c6b95"
+            "source_sha256": "99abfaba8caec5151c369afb8a9523376b82c5e64d39482d4499337b2d9fae5c"
         },
         {
             "examples": {
@@ -2708,11 +2708,11 @@
             "key": "utility.max-height",
             "kind": "utility",
             "page_path": "content/ru/utilities/sizes/max-height.md",
-            "page_sha256": "60f86af0825d61d5a404d21708b975ddc94072f680e5ca76e3deaa20523e1792",
+            "page_sha256": "14bd705cb4a02411bbdd365c0f5a6ee2c8d75cb171f6c8afcce5a41d79bc75c1",
             "review": "ai_verified",
             "route": "/ru/utilities/sizes/max-height/",
             "source": "simai-framework",
-            "source_sha256": "a1386253a7e69a76cf2923b246a8b041d81bc8251fe66db6f40727685791ef8f"
+            "source_sha256": "327c44a548e355525dd7a8e13332d0d7a1dab0e84f52ac355d9b5c381f9d132d"
         },
         {
             "examples": {
@@ -2722,11 +2722,11 @@
             "key": "utility.max-height-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/max-height-ext.md",
-            "page_sha256": "ccd7ff6f6239bf14fe4cbdcb3da584a541fa6ee03ad636b2b88b4815746f7e52",
+            "page_sha256": "caffd19e621709ac10f1b46df3ca9d82753fc7776745e4fa38c82161b4596a0a",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/max-height-ext/",
             "source": "simai-framework",
-            "source_sha256": "ef7e300c3a8c8a2dc2836d8dba7328942dd1946d8e55d6997a1fa129fbc3d34c"
+            "source_sha256": "538e7bd4c5976207d67c94f7dce589cc145935c928d013cafcda3cbf7d51721e"
         },
         {
             "examples": {
@@ -2736,11 +2736,11 @@
             "key": "utility.max-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/sizes/max-width.md",
-            "page_sha256": "7935441199cdbc6b527d9014df366c4667024c67069223cbdfdc87606f78a978",
+            "page_sha256": "5562f076d9f4d6ec80601cb9448e8062a287ba482933898a7cfdd5b6ed27ce3d",
             "review": "ai_verified",
             "route": "/ru/utilities/sizes/max-width/",
             "source": "simai-framework",
-            "source_sha256": "a7cfc6f86913d3fb2103ceb48b4b96a503b07c3884b98ce7e343ebf9226ceee4"
+            "source_sha256": "97b74da564307ca30eeda6d1a71fe2b10235ce5585f0963a34f25cbb546008d1"
         },
         {
             "examples": {
@@ -2750,11 +2750,11 @@
             "key": "utility.max-width-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/max-width-ext.md",
-            "page_sha256": "6862bc31f49212b0326604ba1d6cf0d2047e683c9751ca71a65270bb5bd369c1",
+            "page_sha256": "2f1e7db5a27fe686c5fdb34c8d48e729cc131e7e1b22dea0c563deb17dde43ac",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/max-width-ext/",
             "source": "simai-framework",
-            "source_sha256": "a2a8ec4fbf47c5a8f7b8a4715755ed67219000658db02d461c3d0001b2e7d84a"
+            "source_sha256": "7053295e256c33c274dbce75ffea4b2c024c181183eccfe1d651e9b81a713d32"
         },
         {
             "examples": {
@@ -2764,11 +2764,11 @@
             "key": "utility.min-height",
             "kind": "utility",
             "page_path": "content/ru/utilities/sizes/min-height.md",
-            "page_sha256": "41bcd7b568ac18790ef538112447ffd407fbd28a01b429d40c14e7f720533db2",
+            "page_sha256": "747b9b736d6d2cc25e04cb6d95014c655a18af78ad8719f5d9635307b99e4bef",
             "review": "ai_verified",
             "route": "/ru/utilities/sizes/min-height/",
             "source": "simai-framework",
-            "source_sha256": "6a1abb2579039b8fa99bd373c861b75db2d6d8be52a92a970bb502e50f8d38d7"
+            "source_sha256": "c56e966c40eee3a9e167cb7c1363476b73b687cc007fd28e0170844992080e0f"
         },
         {
             "examples": {
@@ -2778,11 +2778,11 @@
             "key": "utility.min-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/sizes/min-width.md",
-            "page_sha256": "c75867f6c5d918059185f3d90af21f1576c708bd49314c63c8e2cecd139cf86a",
+            "page_sha256": "cf6732259b227fb4c3fc9c4afaab887536a6ff1be14b2ed0e623b9ee959abb33",
             "review": "ai_verified",
             "route": "/ru/utilities/sizes/min-width/",
             "source": "simai-framework",
-            "source_sha256": "ccc90390ed58baa9b057dd05f605d3eefc2a6b258181c9b5251a31f30e28bf44"
+            "source_sha256": "e35e10c610b4ccbf45a7751827b2367e0731b601a3dad98f19575790458ed5c5"
         },
         {
             "examples": {
@@ -2792,7 +2792,7 @@
             "key": "utility.mix-blend-mode",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/mix-blend-mode.md",
-            "page_sha256": "c5db646ba373c11f346cae44bb64f03dc205d4f8369ef2959f1617220634d116",
+            "page_sha256": "5a7456b182d395851c2cc87102a9e1728217ebf59329440f18c1133f41612f53",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/mix-blend-mode/",
             "source": "simai-framework",
@@ -2806,11 +2806,11 @@
             "key": "utility.object-fit",
             "kind": "utility",
             "page_path": "content/ru/utilities/objects/object-fit.md",
-            "page_sha256": "73f539390d07c1b0c0af56f3dc76b712eadcf9ea98dc835055714f9a12f29772",
+            "page_sha256": "d644b24f3bc455e3d47a4238468c20fdcb7cf868a31e08c3ea771d4b01a54baf",
             "review": "ai_verified",
             "route": "/ru/utilities/objects/object-fit/",
             "source": "simai-framework",
-            "source_sha256": "cf763d5253540288fe9b466007d096a03dcd9744bf903d5c0da7b99a8b7d0910"
+            "source_sha256": "c7426ff638078aaa163bd55552a5ef1745cd5d131a3ca55a92069ab68b186733"
         },
         {
             "examples": {
@@ -2820,11 +2820,11 @@
             "key": "utility.object-position",
             "kind": "utility",
             "page_path": "content/ru/utilities/objects/object-position.md",
-            "page_sha256": "cef8c43fe56bc08d511612f1c769a713eb888fe9f1902c0c727d0507d33748cb",
+            "page_sha256": "20dcbd771a23f0b3a582522b2b0ec68a8d8a5303dd3114e4ca9a3b8d679bb691",
             "review": "ai_verified",
             "route": "/ru/utilities/objects/object-position/",
             "source": "simai-framework",
-            "source_sha256": "23075e0e789aab807d955872bf745ab57d3baacef9beb574f290e58dc4dd8d1b"
+            "source_sha256": "36282937a1781d28a894df7d87420ccbf749e9b887844a7ab91bd68c163829dc"
         },
         {
             "examples": {
@@ -2834,11 +2834,11 @@
             "key": "utility.offset",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/offset.md",
-            "page_sha256": "bcd6a79167d12d9dce71d24152bcd10f61ec2807675c233803492bcda0b83664",
+            "page_sha256": "359c7d891e845ff1a15019a49542290af08fec5346b682e23fe971f33d7d4f14",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/offset/",
             "source": "simai-framework",
-            "source_sha256": "c5586df25ad93f6ce7550f7811d5795c5804016612ed6a9587365231b2fc88e3"
+            "source_sha256": "1b6ebcb1b859167cfda672303c9af427b5a0d56a491f4622d435e297d42180b9"
         },
         {
             "examples": {
@@ -2848,7 +2848,7 @@
             "key": "utility.opacity",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/opacity.md",
-            "page_sha256": "0e3f0e87c548b80ace775fc16a37970d1347f8bf372adb67d2a976be2669604c",
+            "page_sha256": "bea1430671c35efb8dc0b61cafb3f7bcc0c2e4761c0ecb11b02fd0fa1a867d06",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/opacity/",
             "source": "simai-framework",
@@ -2862,11 +2862,11 @@
             "key": "utility.order",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/order.md",
-            "page_sha256": "eb9624906ec900f37bf71fe59caf100668a7cdfe9f30179dfa5f6d541989487f",
+            "page_sha256": "d1f1558d3760ca8012d5bf8d653187ebe45a5019df5c02e67f2ea300cb6335e8",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/order/",
             "source": "simai-framework",
-            "source_sha256": "73de52a05fa0c35b1ab9760729d51d34c2c88a4ceb3714992e905b73b8414136"
+            "source_sha256": "8a88038168028cd3272ac0387e4c9aa0ac2a2453070a4ed1c0b6df3c2e731cda"
         },
         {
             "examples": {
@@ -2932,11 +2932,11 @@
             "key": "utility.overflow",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/overflow.md",
-            "page_sha256": "e76c047d3d251d9038484312e67be124d816a38012826ef074bb7a3c47304548",
+            "page_sha256": "40571d6905aab723749c2d4ae639bc07e69608787d291d7fde422837767650b0",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/overflow/",
             "source": "simai-framework",
-            "source_sha256": "d11607f5f3cdaab339ca2ff01d55944c3bd08803c52224f0960d33a36b2b2499"
+            "source_sha256": "f5844123c16bde6f5485aff5dbca2eb8a00631642fd5f9c6e79c19ff9e55d6e3"
         },
         {
             "examples": {
@@ -2956,29 +2956,29 @@
             "examples": {
                 "default": "utilities/indents/padding"
             },
-            "examples_sha256": "b146f8badc782bfccd4da106ac106ffe7dce4fbf3f3485f6e65048e81113a79f",
+            "examples_sha256": "60c7812531af4cfd27ef26c65f51d0d1ba1ed04ed129270595802a0b01d5dd65",
             "key": "utility.padding",
             "kind": "utility",
             "page_path": "content/ru/utilities/indents/padding.md",
-            "page_sha256": "568bca3d29fdcd9bb10d8ce4e9fa3af471eb0e400d6d7e40736c68976ebf1108",
+            "page_sha256": "c91dd2f581fa23a1c4f89d20e20996fc981491cf5dfe61d01246d28d5d905040",
             "review": "ai_verified",
             "route": "/ru/utilities/indents/padding/",
             "source": "simai-framework",
-            "source_sha256": "5ba7e95e094893752aa48e9e120eb3c7011c7e92948b4084bc69f27c13eec260"
+            "source_sha256": "b618252bf53c01e257b5e9ea52527f4e1d16581f15d29abe64467215041a22da"
         },
         {
             "examples": {
                 "default": "utilities/indents/padding"
             },
-            "examples_sha256": "b146f8badc782bfccd4da106ac106ffe7dce4fbf3f3485f6e65048e81113a79f",
+            "examples_sha256": "60c7812531af4cfd27ef26c65f51d0d1ba1ed04ed129270595802a0b01d5dd65",
             "key": "utility.padding-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/padding-ext.md",
-            "page_sha256": "2db70c84e4d150845c5eb62b850a4c82e193d26fe75b8819eca52663462f021b",
+            "page_sha256": "86ba26c36a3e05d861a5eed09f04e3d62852e9ab45891a51b0dfde034338668b",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/padding-ext/",
             "source": "simai-framework",
-            "source_sha256": "fc57f02796b5604b9880305dcd42cbcb01dc91b79cc8010121f8e7483a1f4d4d"
+            "source_sha256": "a81e7b2b20981cf0370cdb76fdfbc2a6ae86b65a639a3a99d9c229cf21026176"
         },
         {
             "examples": {
@@ -2988,11 +2988,11 @@
             "key": "utility.pattern",
             "kind": "utility",
             "page_path": "content/ru/utilities/background/background-pattern.md",
-            "page_sha256": "e052101f754a435d5cdc924ab62352ded4c122890e9becdb23625d5927d7fb68",
+            "page_sha256": "2fd547c044d14e922abcfd5d64aa6b0dfc366e1ef3ee9c639210877d0aea2b1f",
             "review": "ai_verified",
             "route": "/ru/utilities/background/background-pattern/",
             "source": "simai-framework",
-            "source_sha256": "5b2f507032360304777617ecf76ec81773dd025f92f3fc3f24548c60647aff2c"
+            "source_sha256": "5c2b09599d85ca35f0964520328eaf126cd75521bdde6e0b35b190041df17483"
         },
         {
             "examples": {
@@ -3002,11 +3002,11 @@
             "key": "utility.place-content",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/place-content.md",
-            "page_sha256": "5f1b9d463d95dd6d89fddc2e641d766841db7232317221e46abc420d51f09fa8",
+            "page_sha256": "286c66db86aebc5c26d719329702f2bcca4a44cdef24795e4963db44cccefdf2",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/place-content/",
             "source": "simai-framework",
-            "source_sha256": "549ce90f6df9cda24fd2c986dfe21ea2ccc822a6a0b5f063ab60f1ceaae32e05"
+            "source_sha256": "a2cedc8d4b37c23f445d6f259b9d0c1a5b3550c7a0ff9b910b5d524a1726f5dc"
         },
         {
             "examples": {
@@ -3016,11 +3016,11 @@
             "key": "utility.place-items",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/place-items.md",
-            "page_sha256": "9a7cd2f6644ce4ee74cc8b582fa52a1b890a1067657d2d4d2c438ea6407972a8",
+            "page_sha256": "20978e0dc4cc14a727ad97629109fe9e6339707f24b9cb39d88e944d1d1cd0c8",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/place-items/",
             "source": "simai-framework",
-            "source_sha256": "9f52cf566cd0dd35755296575abf9c4649c19f0726c320efd552a21fdee3b0d5"
+            "source_sha256": "e9355394dab8dcb2977a4e2ca0d6666cd54e530fbbca6f6a635a9e19aaace09f"
         },
         {
             "examples": {
@@ -3030,11 +3030,11 @@
             "key": "utility.place-self",
             "kind": "utility",
             "page_path": "content/ru/utilities/grid-and-flexbox-utilities/place-self.md",
-            "page_sha256": "2b204a7c75a9c63adfdfba8e78fe1e4b6466324c5a03949b3190d4a2537b1d5e",
+            "page_sha256": "c3ea890d0a99d9ffaa16ea3bfffd85713aac7fd6e681718030658ce120356b7f",
             "review": "ai_verified",
             "route": "/ru/utilities/grid-and-flexbox-utilities/place-self/",
             "source": "simai-framework",
-            "source_sha256": "6c1e79848e75936fadc5cf74fa07f06ea466997e80d22a13653a47dcf24448c2"
+            "source_sha256": "185cc382e6bfc617369b09a7971fe73e535bf58a45560ea905d1251ada7ad3a1"
         },
         {
             "examples": {
@@ -3086,11 +3086,11 @@
             "key": "utility.position",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/position.md",
-            "page_sha256": "5a90aa88f6c9b508977102cc86afd5da31ef79a36d9f2e06cdb7290478bae232",
+            "page_sha256": "49bd3b70d9ba7b80886c13323540ff5b8e237dfd705af9d5406fad22286c4e00",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/position/",
             "source": "simai-framework",
-            "source_sha256": "9b48f961888d557205a775d3e7a201960e7a8b15226494e58307273edb899cdb"
+            "source_sha256": "dc5e5ee1322f59d3d2da8e631e1e9c707e49476a34cd94fce8310fad5b0708e0"
         },
         {
             "examples": {
@@ -3132,7 +3132,7 @@
             "review": "ai_verified",
             "route": "/ru/utilities/forms/resize/",
             "source": "simai-framework",
-            "source_sha256": "c253ee57ec403b2294f30e9ef07897b1732c2a8ec9cfcb4e81e8ad165811ab0f"
+            "source_sha256": "540d29e0363fefd3ce2f141d7a780f60d1f38780b7af6454fa3a623ea5db8cc3"
         },
         {
             "examples": {
@@ -3142,7 +3142,7 @@
             "key": "utility.ring-color",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/ring-color.md",
-            "page_sha256": "12910543ed2a385670ec8f131f39b96a508e279c7a4a0151855693fb3be243a9",
+            "page_sha256": "2ec4c6b211e81bd7365241bbb4e1eb64c8bbc61f72f9a6f971efc9ac0662e4ae",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/ring-color/",
             "source": "simai-framework",
@@ -3170,7 +3170,7 @@
             "key": "utility.ring-offset-color",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/ring-offset-color.md",
-            "page_sha256": "f4d8c2e253a1e288ffc3c4e46d17a9f67024e2500b31c1f4d70491d3636f7521",
+            "page_sha256": "6e213802c430d57a203e325173a90c083dddfb99f22c959e9b9beed13ae064cc",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/ring-offset-color/",
             "source": "simai-framework",
@@ -3184,7 +3184,7 @@
             "key": "utility.ring-offset-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/ring-offset-width.md",
-            "page_sha256": "2936c9b8e42ca6bc1d3a67501afb4672257f34a431e401f5fe2eb17414576c2d",
+            "page_sha256": "02c6c09e502b12e3eed4b61aba267ec861cb3d6797317b462c9f3228704011b2",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/ring-offset-width/",
             "source": "simai-framework",
@@ -3212,7 +3212,7 @@
             "key": "utility.ring-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/ring-width.md",
-            "page_sha256": "9c0d64aca4c6b8a57c016defdaf81d3041677036454f672f401212e5caa92c21",
+            "page_sha256": "48b21f2e52353a12df5522a70db6acfcc00a13f59b1b0c956a502e7b88ea3482",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/ring-width/",
             "source": "simai-framework",
@@ -3310,7 +3310,7 @@
             "key": "utility.scroll-margin-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/scroll-margin-ext.md",
-            "page_sha256": "f896bb9d4b6259890487251d6c7fd80705231a74154d7fb37513431187c4ea59",
+            "page_sha256": "3bf4c5735311958ddcda76cdfdf925b2754d2fbcd14aef641dc54cc7a9d997f5",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/scroll-margin-ext/",
             "source": "simai-framework",
@@ -3338,7 +3338,7 @@
             "key": "utility.scroll-padding-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/scroll-padding-ext.md",
-            "page_sha256": "9ba00e4fa73aaaa129b5fb57ea8485766af764ba5bb71d8be71308884c745534",
+            "page_sha256": "71f46058316f249e34171c6fea4752fd6f72de23e0f27daaff3d87a8950364c8",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/scroll-padding-ext/",
             "source": "simai-framework",
@@ -3436,7 +3436,7 @@
             "key": "utility.scroll-subtle",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/scroll-subtle.md",
-            "page_sha256": "623a5735a41d4ecf7d392495a653a7f4dfe29f003a3cafb9ff2f705b4e001551",
+            "page_sha256": "a3fde8682b6f382471a56448a5ede4a1a7f6ac5e4cf0799bf598807b6dd32683",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/scroll-subtle/",
             "source": "simai-framework",
@@ -3450,11 +3450,11 @@
             "key": "utility.space",
             "kind": "utility",
             "page_path": "content/ru/utilities/indents/space.md",
-            "page_sha256": "cf6da487d6154ea350e5846722cbb8db1ff422013af02286635fed1bf68150d0",
+            "page_sha256": "2c7b1a6478dbc50b4b69588e38ebe8e9843ed82a69995b16202e5764bfec5065",
             "review": "ai_verified",
             "route": "/ru/utilities/indents/space/",
             "source": "simai-framework",
-            "source_sha256": "70128e9bcb0462d6e6a97f0b5ebc1c518b2618ba53377037710b9928a4e627fd"
+            "source_sha256": "558de684f8b7fa6b4c632f7328ee43b29fb9aea7559c70aaeec4a2b9395944b9"
         },
         {
             "examples": {
@@ -3478,11 +3478,11 @@
             "key": "utility.stripe",
             "kind": "utility",
             "page_path": "content/ru/utilities/stripes/stripes.md",
-            "page_sha256": "7e156556636f7f1c25ce7a2a7eeb310f000d04cc0df314cd4ff0987158d3cdde",
+            "page_sha256": "d8df6288dd57330d3fd97e69ec0267bc26f6ddef570ccd93d10ada7efaa7018e",
             "review": "ai_verified",
             "route": "/ru/utilities/stripes/stripes/",
             "source": "simai-framework",
-            "source_sha256": "93cccc32c753374ed8c825f4d72544b7c9c27f66e4d07659b7943c4bd9913808"
+            "source_sha256": "ad069bf6aaf4c7fba89e5d69af6cf55a158448c5de9db7c2b054cef3c3a4d65f"
         },
         {
             "examples": {
@@ -3506,11 +3506,11 @@
             "key": "utility.stripe-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/stripes/stripes-size.md",
-            "page_sha256": "b7918b7b23cd6f1fc590b58ddf18fcfd5fca7c9a629ad1244220116aa6caf013",
+            "page_sha256": "fe92177f5153eb2579ede447406488162c9a5f4a062889b0f8f67fdddbfd1bff",
             "review": "ai_verified",
             "route": "/ru/utilities/stripes/stripes-size/",
             "source": "simai-framework",
-            "source_sha256": "fc7b1d7e2442fdae0a5fca156b50be7a287227f22f63dd0718f4544effa09310"
+            "source_sha256": "14db0e2854101919d76a0cf7f33b65e6d74a088ec5980824c99b699ff6929ec5"
         },
         {
             "examples": {
@@ -3562,11 +3562,11 @@
             "key": "utility.stroke-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/svg/svg-stroke-width.md",
-            "page_sha256": "30ace57dbbe3dfcc07b738923092f69a56dce3205d2078c8ec138684c66246b9",
+            "page_sha256": "8d75102ffe407bc0850d87158b6fb049326d489598d37cb0d69b65ee995dbe33",
             "review": "ai_verified",
             "route": "/ru/utilities/svg/svg-stroke-width/",
             "source": "simai-framework",
-            "source_sha256": "e866740ab98985a8134ab327ada954f6c5fcde1d29a88cf3ef6f0c8d51fc0d2f"
+            "source_sha256": "cc9839c9feb9fc9213e52fce6976886f71022bce8f03914c77073ee68e2b2622"
         },
         {
             "examples": {
@@ -3576,11 +3576,11 @@
             "key": "utility.svg-size",
             "kind": "utility",
             "page_path": "content/ru/utilities/svg/svg-image-size.md",
-            "page_sha256": "3845690291feae0593ae9ed5ab77ca2d2e7341995fd446a101f6f61ba1cda8ae",
+            "page_sha256": "a081cfd9ee0728a2cd989ff0c07cf618ecfde94e81e07fc574705db2da35aba5",
             "review": "ai_verified",
             "route": "/ru/utilities/svg/svg-image-size/",
             "source": "simai-framework",
-            "source_sha256": "15a06f5f4f13e8ac8dbc93ef75b9cba9a4e35b257ab0c40c6b7460ef3cf2e483"
+            "source_sha256": "c8bb2fa7983d37b044b0c6420bdb3d27385a2cd46129bba5a737b81c912e5bf8"
         },
         {
             "examples": {
@@ -3632,7 +3632,7 @@
             "key": "utility.table-hover",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/table-hover.md",
-            "page_sha256": "c1a8a9af44365871d49cca5761e23a5dc68d2810dbe053c7ab196fa2acd985d4",
+            "page_sha256": "10a2d421d5bcc8acda7b7c35d812136effbb7109711d6b75be415d78070e59d6",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/table-hover/",
             "source": "simai-framework",
@@ -3674,11 +3674,11 @@
             "key": "utility.text-align",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/text-align.md",
-            "page_sha256": "68fac1adf9217183acb3d48497ae927078b38172c146629eb1be472fe37e4859",
+            "page_sha256": "a3cf8973d8ebb7f8a9db1861adcd4bd6cae820df27e2b645bd6d85116dd30073",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/text-align/",
             "source": "simai-framework",
-            "source_sha256": "3bc32baa07281faf56563ba293e19a5b53fcb8c654ce9f4d8ba7ab813a45c7cd"
+            "source_sha256": "4cb8a33191a8d53804a062b267ab1d92ebb999c148cffe4a4757192a502d5fe8"
         },
         {
             "examples": {
@@ -3786,11 +3786,11 @@
             "key": "utility.text-max-width",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/text-max-width.md",
-            "page_sha256": "b610e630175fef64e58e7c2cac21344547502972e0727acccd362d1fbff97d38",
+            "page_sha256": "96916f39daf7a6c2e541c5f6c05030060b99ff07c2898ad709c111ee481704fa",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/text-max-width/",
             "source": "simai-framework",
-            "source_sha256": "76f073265027f3463dafef60e09d9b19db5d9df1f5ad860da927f0aa78181858"
+            "source_sha256": "5324e1d7e436947982ce52a7ae7af76c86253102cfa5e1a9568c97849f2ee66d"
         },
         {
             "examples": {
@@ -3800,7 +3800,7 @@
             "key": "utility.text-overflow",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/text-overflow.md",
-            "page_sha256": "66d1148d6f8af7a946a560a5995db95303e1a0d5ab9eec77b7b58b085a560ce8",
+            "page_sha256": "3636b020d9b6aa0309645570f6368767b48995b98956815176dacf53e296c4cf",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/text-overflow/",
             "source": "simai-framework",
@@ -3814,7 +3814,7 @@
             "key": "utility.text-wrap",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/text-wrap.md",
-            "page_sha256": "5d0caedfeb6fd1bc60253811a2953f151a74df934d672f7624d91ec21b550680",
+            "page_sha256": "e9ab4762dff8ac08c80b9368e8b1799e4d2709bf9844de3b765874da26e0aca8",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/text-wrap/",
             "source": "simai-framework",
@@ -3828,7 +3828,7 @@
             "key": "utility.theme",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/theme.md",
-            "page_sha256": "de425b827888441b60f1922e7d4e6c5088539534548ffe41022198a81036bdcf",
+            "page_sha256": "4f1e72d2636916589dc193fc4bbccdc0a1e3966fa058641d806eb4d10fc6e522",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/theme/",
             "source": "simai-framework",
@@ -3842,7 +3842,7 @@
             "key": "utility.title",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/headers.md",
-            "page_sha256": "3e12a04b6fa1620343b011fc8c9329075d08f896411138e0914213d8409d2507",
+            "page_sha256": "e762016037e97def86739da97f8e60da2babdb18bee8a821ed9d2d080eb477c5",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/headers/",
             "source": "simai-framework",
@@ -3930,7 +3930,7 @@
             "review": "ai_verified",
             "route": "/ru/utilities/transform/transform-translate/",
             "source": "simai-framework",
-            "source_sha256": "3d8939618cbad17369d45c51822d85cd10d4e37553adfb945afe87f12c5c301b"
+            "source_sha256": "4f0521e90f8422609b72bebe0b163e66bd201149f339bac84c4619a00fc4289c"
         },
         {
             "examples": {
@@ -3940,7 +3940,7 @@
             "key": "utility.transform-translate-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/transform-translate-ext.md",
-            "page_sha256": "6850f4e80c2a8a31e7ab80ad58ba7ee149966905540b753fd29eee241ec991b9",
+            "page_sha256": "60ef59dfefb022d452c5f7a735b88363c2d7aa35be5276dd3228a32d952c103a",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/transform-translate-ext/",
             "source": "simai-framework",
@@ -3954,11 +3954,11 @@
             "key": "utility.transition-delay",
             "kind": "utility",
             "page_path": "content/ru/utilities/animation/animation-transition-delay.md",
-            "page_sha256": "78d986daf5db0fbefe3cbefa5a8f0d6c557e19bbaf44e98003d39bc0778d42ba",
+            "page_sha256": "3ec58b92c50c5b13569b45534e2ddd8a4911bae327b0323ee89f93fbca626b62",
             "review": "ai_verified",
             "route": "/ru/utilities/animation/animation-transition-delay/",
             "source": "simai-framework",
-            "source_sha256": "bd77d3af89534df196e11b0e0e56ddb02bc331cc1f53222d82c8df0178823c03"
+            "source_sha256": "eaaef79c18057b361b4eacc920be0596dedb2190b0f8a19b2788ceebfdf9f954"
         },
         {
             "examples": {
@@ -3982,11 +3982,11 @@
             "key": "utility.transition-property",
             "kind": "utility",
             "page_path": "content/ru/utilities/animation/animation-transition-property.md",
-            "page_sha256": "5c2c2efccb2109491b8b8b73758834332c0cd62dbd599840a6c68bb45ae9c6f2",
+            "page_sha256": "e2efe423f02b3eb99eff0628526f831c10d4992c389b04f2869ad4553cab1eda",
             "review": "ai_verified",
             "route": "/ru/utilities/animation/animation-transition-property/",
             "source": "simai-framework",
-            "source_sha256": "cbaa06166b945512580374f90a7fc5ba10ff2a0c9d16afafcb3fd787aafd0024"
+            "source_sha256": "edd88b55027ede88a930ae6c84371fb3cfab0d999cecd03a3bb32de327e28da1"
         },
         {
             "examples": {
@@ -4038,11 +4038,11 @@
             "key": "utility.visibility",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/visibility.md",
-            "page_sha256": "564505f961fd0b542e39cb2229993cd4ad648541f2fa181c9a471cf8c6980a2b",
+            "page_sha256": "5ac2dc30114a65944b98b1d34828d169e8e3da820ca95622a81d5ef94cc65692",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/visibility/",
             "source": "simai-framework",
-            "source_sha256": "9a741d163137b3866d39badf9344fe9ff48de8ed461bdc381186c3a5f6341131"
+            "source_sha256": "337b29e42bf9c70c7189233f451587f65a8c8114cce7210b98696b1c7268539b"
         },
         {
             "examples": {
@@ -4062,29 +4062,29 @@
             "examples": {
                 "default": "utilities/sizes/width"
             },
-            "examples_sha256": "37c2be464493c1893949a116d45eaa63e2ff91992e313e5ca46ccd55ed08d41f",
+            "examples_sha256": "2f17770fe604516003aafbcf2507339cdf0984c36e76b8d7625bedd45e5f0394",
             "key": "utility.width",
             "kind": "utility",
             "page_path": "content/ru/utilities/sizes/width.md",
-            "page_sha256": "a1019e4b786508308a85e1ca259ae88033cfa26d3f22e7b3a82975e92c5b27b9",
+            "page_sha256": "69478fa58e7416fe86c22cd378c5f3c64aec36b45447c6c66e3fd2f30267bb65",
             "review": "ai_verified",
             "route": "/ru/utilities/sizes/width/",
             "source": "simai-framework",
-            "source_sha256": "4a200cfee5b06e405581e14d8d0be044ae4f718530cdd36c58dc4fdfe5d1dd2f"
+            "source_sha256": "0596b966e5db397785874a13617a365e5b0ed9d5fdc88a77e51acce0afeedabe"
         },
         {
             "examples": {
                 "default": "utilities/sizes/width"
             },
-            "examples_sha256": "37c2be464493c1893949a116d45eaa63e2ff91992e313e5ca46ccd55ed08d41f",
+            "examples_sha256": "2f17770fe604516003aafbcf2507339cdf0984c36e76b8d7625bedd45e5f0394",
             "key": "utility.width-ext",
             "kind": "utility",
             "page_path": "content/ru/utilities/reference/width-ext.md",
-            "page_sha256": "4b5bb818b1cb446151768db0abff6332f77b0fc256528f109fd4014d27031a8b",
+            "page_sha256": "907928e1be411cd0a2ee198dfedeab1bf08aa46533e608350ee262cfada19ed4",
             "review": "ai_verified",
             "route": "/ru/utilities/reference/width-ext/",
             "source": "simai-framework",
-            "source_sha256": "ba02d10bfabf6e3e84bb6f32ee3b032b28dc16572494f9cd3669904f312e7dc7"
+            "source_sha256": "0eeb3b60e6f1125d002cd9cf8a9506f27aab86a811408b3d0e1517d5a9e7bb55"
         },
         {
             "examples": {
@@ -4108,7 +4108,7 @@
             "key": "utility.word-break",
             "kind": "utility",
             "page_path": "content/ru/utilities/typography/word-break.md",
-            "page_sha256": "48e148dbe34effd1eb9af632f484abf1f19cafe8c1a371de799ae3b9def9d126",
+            "page_sha256": "ee1e9f2c33751d100354adf14282c13bc18f1088d0ac58ad660b8e0519daf643",
             "review": "ai_verified",
             "route": "/ru/utilities/typography/word-break/",
             "source": "simai-framework",
@@ -4122,11 +4122,11 @@
             "key": "utility.z-index",
             "kind": "utility",
             "page_path": "content/ru/utilities/layout/z-index.md",
-            "page_sha256": "00747acd1e62c2dc7d93a505fa19f821f5672635dcb4ad50073a80bd5ecab3f5",
+            "page_sha256": "a0c7fd29cc36b47f6b89c2fc78cb3df0c29f0c98923f1ee5b3e0e6f17dddae3b",
             "review": "ai_verified",
             "route": "/ru/utilities/layout/z-index/",
             "source": "simai-framework",
-            "source_sha256": "0f3b8da917140849b2b623287b4be39f8a389abe9c6c0a9a4902d03241c72731"
+            "source_sha256": "bf43fa9536ee15d7c0bcaa4ae4fc429a010b7a25026aada6f23103fda4e004ab"
         }
     ],
     "exclusions": [],

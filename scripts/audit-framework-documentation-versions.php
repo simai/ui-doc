@@ -38,6 +38,7 @@ sort($paths, SORT_STRING);
 $hardcodedReleaseMentions = [];
 $legacyMentions = [];
 $cdnTags = [];
+$staleSmartSourceReferences = [];
 foreach ($paths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
@@ -53,6 +54,20 @@ foreach ($paths as $path) {
     ) {
         $hardcodedReleaseMentions[] = $relative;
     }
+    if (str_starts_with($relative, 'content/ru/smart-components/')) {
+        preg_match_all('/simai\/ui-smart@([a-f0-9]{40})(?=:smart\/)/', $markdown, $smartMatches);
+        preg_match_all('/simai\/ui@([a-f0-9]{40})(?=:distr\/rule\/rule\.json)/', $markdown, $coreMatches);
+        foreach ($smartMatches[1] ?? [] as $revision) {
+            if ($revision !== ($runtime['ui_smart']['commit'] ?? null)) {
+                $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui-smart', 'actual' => $revision];
+            }
+        }
+        foreach ($coreMatches[1] ?? [] as $revision) {
+            if ($revision !== ($runtime['ui']['commit'] ?? null)) {
+                $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui', 'actual' => $revision];
+            }
+        }
+    }
 }
 
 $check($legacyMentions === [], 'legacy_5_4_mentions_remain', ['paths' => $legacyMentions]);
@@ -64,6 +79,7 @@ foreach ($cdnTags as $relative => $tags) {
     }
 }
 $check(count($cdnTags) === 1, 'unexpected_cdn_example_page_count', ['actual' => count($cdnTags)]);
+$check($staleSmartSourceReferences === [], 'stale_smart_source_references', ['references' => $staleSmartSourceReferences]);
 
 if ($checkRemote) {
     $url = 'https://github.com/' . ($public['repository'] ?? '') . '.git';

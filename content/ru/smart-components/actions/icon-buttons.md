@@ -14,10 +14,10 @@ Custom Elements: `<sf-icon-button>`.
 Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/icon-buttons/css/icon-buttons.css`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/icon-buttons/js/icon-buttons.js`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/icon-buttons/template/default.css`
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/icon-buttons/template/default.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/icon-buttons/css/icon-buttons.css`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/icon-buttons/js/icon-buttons.js`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/icon-buttons/template/default.css`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/icon-buttons/template/default.js`
 
 ## Зависимости
 
@@ -36,7 +36,7 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 | `segment` | `segment` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `'add'` | `—` |
 | `filled` | `filled` | `Boolean` | `false` | `—` |
-| `tightness` | `tightness` | `String` | `''` | `['', 'low', 'high', 'highest']` |
+| `spacing` | `spacing` | `String` | `'normal'` | `['compact', 'normal', 'comfortable', 'spacious']` |
 | `radius` | `radius` | `String` | `''` | `['', 'default', 'square', 'rounded']` |
 | `root-class` | `rootClass` | `String` | `''` | `—` |
 | `loading` | `loading` | `Boolean` | `false` | `—` |
@@ -54,7 +54,10 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 ## Методы
 
-`get ariaLabel()`, `get disabled()`, `get icon()`, `get loading()`, `get nativeType()`, `get radius()`, `get rootClass()`, `get scheme()`, `get size()`, `get templateName()`, `get tightness()`, `get type()`, `get value()`, `get variant()`, `onBlur()`, `onClick()`, `onFocus()`, `onMouseEnter()`, `onMouseLeave()`, `set value()`, `setButtonAttributes()`, `setDisabled()`, `updateDom()`.
+`get ariaLabel()`, `get disabled()`, `get icon()`, `get loading()`, `get nativeType()`, `get radius()`, `get rootClass()`, `get scheme()`, `get size()`, `get spacing()`, `get templateName()`, `get type()`, `get value()`, `get variant()`, `onBlur()`, `onClick()`, `onFocus()`, `onMouseEnter()`, `onMouseLeave()`, `set value()`, `setButtonAttributes()`, `setDisabled()`, `updateDom()`.
+
+`tightness` остаётся совместимым именем для старой разметки. В новом коде
+используйте `spacing`.
 
 ## События
 
@@ -81,5 +84,5 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 ## Источник
 
-- `simai/ui-smart@548c11cd6ec071d171ca8da4fb5bc66c6d9552c0:smart/icon-buttons`
-- `simai/ui@2742ed22730b3f37cd26ab72c03621637a464ee0:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/icon-buttons`
+- `simai/ui@1e886550a147bf63d7c3a4440af5e5855aaee485:distr/rule/rule.json#name=cl-icon-buttons`
