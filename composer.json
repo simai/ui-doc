@@ -2,7 +2,13 @@
     "name": "simai/ui-doc",
     "description": "Public SIMAI Framework documentation built with Docara v2.",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rim Rashitovich Zabarov",
+            "role": "Creator"
+        }
+    ],
     "repositories": [
         {
             "type": "vcs",

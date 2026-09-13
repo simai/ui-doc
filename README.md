@@ -62,3 +62,11 @@ local checkout is not an equivalent input.
   explicitly authorized operations.
 - Generated `build_*`, `vendor/`, `.docara/`, `.env`, and working `source/`
   directories are local-only.
+
+## License
+
+Source code, configuration, scripts, templates, and code examples are
+available under the [MIT License](LICENSE). Original documentation prose and
+images in `content/` are available under
+[CC BY 4.0](LICENSE-CONTENT.md). Third-party materials retain their original
+terms.
