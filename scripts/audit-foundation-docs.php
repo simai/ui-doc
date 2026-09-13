@@ -117,14 +117,14 @@ $pages = [
     'colors' => $read('content/ru/guide/fundamentals/colors-and-themes.md'),
     'sizes' => $read('content/ru/guide/fundamentals/size-scale.md'),
 ];
-$check(str_contains($pages['overview'], 'Правило выбора:'), 'level_selection_rule_missing');
-foreach (['Core', 'Утилиты', 'Компоненты', 'Smart-компоненты', 'Сложные Smart-компоненты', 'Блоки'] as $level) {
+$check(str_contains($pages['overview'], 'Правило выбора'), 'level_selection_rule_missing');
+foreach (['Core', 'Утилиты', 'Компоненты', 'Smart-компоненты', 'Комплексные Smart-компоненты', 'Блоки', 'Макеты'] as $level) {
     $check(str_contains($pages['overview'], '| ' . $level . ' |'), 'architecture_level_missing', ['level' => $level]);
 }
 $check(str_contains($pages['boundary'], 'проверяет права'), 'project_rights_boundary_missing');
-$check(str_contains($pages['boundary'], 'добавляет товар в корзину'), 'project_operation_boundary_missing');
+$check(str_contains($pages['boundary'], 'сохраняет корзину'), 'project_operation_boundary_missing');
 $check(str_contains($pages['loader'], 'Core, утилиты и обычные компоненты'), 'loader_scope_missing');
-$check(str_contains($pages['loader'], '/ru/guide/architecture/smart-components/'), 'loader_smart_link_missing');
+$check(str_contains($pages['loader'], '/ru/guide/smart-components/connection/'), 'loader_smart_link_missing');
 $check(str_contains($pages['values'], '--sf-px'), 'hairline_rule_missing_from_docs');
 $check(str_contains($pages['values'], 'Рабочая единица размерной системы — `rem`'), 'rem_rule_missing');
 $check(str_contains($pages['modifiers'], 'column-gap/*'), 'loader_alias_not_explained');
@@ -142,7 +142,7 @@ $report = [
     'status' => $blockers === [] ? 'pass' : 'fail',
     'candidate' => ['core' => $coreRevision, 'smart' => $smartRevision],
     'verified' => [
-        'architecture_levels' => 6,
+        'architecture_levels' => 7,
         'current_control_roles' => $roles,
         'current_control_heights_px' => $computedHeights,
         'working_unit' => $adaptive['meta']['unit'] ?? null,

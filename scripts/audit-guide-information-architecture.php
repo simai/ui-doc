@@ -43,7 +43,8 @@ $structure = [
         'smart-components' => ['Smart-компоненты', 50],
         'complex-smart-components' => ['Комплексные Smart-компоненты', 60],
         'blocks' => ['Блоки', 70],
-        'framework-and-project' => ['Framework и проект', 80],
+        'layouts' => ['Макеты', 80],
+        'framework-and-project' => ['Framework и проект', 90],
     ]],
     'fundamentals' => ['title' => 'Основы оформления', 'order' => 40, 'pages' => [
         'index' => ['Основы оформления', 40],
@@ -79,9 +80,10 @@ $structure = [
         'cleanup' => ['Обновление и освобождение ресурсов', 120],
 
     ]],
-    'practical' => ['title' => 'Практическое использование', 'order' => 80, 'pages' => [
-        'ai' => ['Работа с ИИ', 10],
-    ]],
+];
+
+$rootPages = [
+    'ai' => ['Работа с ИИ', 80],
 ];
 
 $guideSection = $readJson('content/ru/guide/section.json');
@@ -101,6 +103,13 @@ $check($headerActual === $headerExpected, 'header_navigation_mismatch', ['actual
 
 $pageCount = 0;
 $paragraphs = [];
+$hasConcreteExample = static function (string $markdown): bool {
+    if (preg_match('/^## Пример(?:[ \t]+[^\r\n]+)?[ \t]*$(.*?)(?=^## |\z)/msu', $markdown, $match) !== 1) {
+        return false;
+    }
+    $example = trim($match[1]);
+    return preg_match('/(?:^```|^:::(?:example|internal_preview|code)\b|^\|.+\|$|^(?:[-*]|\d+\.)\s+)/mu', $example) === 1;
+};
 foreach ($structure as $directory => $group) {
     $section = $readJson('content/ru/guide/' . $directory . '/section.json');
     $check(($section['title'] ?? null) === $group['title'], 'group_title_mismatch', ['group' => $directory]);
@@ -117,6 +126,7 @@ foreach ($structure as $directory => $group) {
         foreach (['## Когда применять', '## Пример'] as $heading) {
             $check(str_contains($markdown, $heading), 'editorial_section_missing', ['page' => $base, 'heading' => $heading]);
         }
+        $check($hasConcreteExample($markdown), 'concrete_example_missing', ['page' => $base]);
         $body = preg_replace('/^---.*?---\s*/s', '', $markdown) ?? $markdown;
         $intro = preg_split('/^## /m', $body, 2)[0] ?? '';
         $check(mb_strlen(trim(preg_replace('/^# .*$/m', '', $intro) ?? '')) >= 40, 'introduction_too_short', ['page' => $base]);
@@ -129,10 +139,25 @@ foreach ($structure as $directory => $group) {
     }
 }
 
+foreach ($rootPages as $slug => [$title, $order]) {
+    $pageCount++;
+    $base = 'content/ru/guide/' . $slug;
+    $markdown = $read($base . '.md');
+    $sidecar = $readJson($base . '.page.json');
+    preg_match_all('/^# (.+)$/m', $markdown, $h1);
+    $check(count($h1[1]) === 1 && ($h1[1][0] ?? null) === $title, 'page_h1_mismatch', ['page' => $base, 'actual' => $h1[1]]);
+    $check(($sidecar['navigation']['order'] ?? null) === $order, 'page_order_mismatch', ['page' => $base]);
+    foreach (['## Когда применять', '## Пример'] as $heading) {
+        $check(str_contains($markdown, $heading), 'editorial_section_missing', ['page' => $base, 'heading' => $heading]);
+    }
+    $check($hasConcreteExample($markdown), 'concrete_example_missing', ['page' => $base]);
+}
+
 $guideIndex = $read('content/ru/guide/index.md');
 foreach (['## Когда применять', '## Пример'] as $heading) {
     $check(str_contains($guideIndex, $heading), 'guide_index_section_missing', ['heading' => $heading]);
 }
+$check($hasConcreteExample($guideIndex), 'concrete_example_missing', ['page' => 'content/ru/guide/index']);
 foreach ($paragraphs as $paragraph => $files) {
     if (count(array_unique($files)) > 1) {
         $blockers[] = ['code' => 'duplicate_paragraph', 'pages' => array_values(array_unique($files)), 'sample' => mb_substr($paragraph, 0, 120)];
@@ -179,7 +204,8 @@ $expectedRedirects = [
     'ru/start/vision' => 'ru/guide/introduction/what-is-simai-framework',
     'ru/start/installation' => 'ru/guide/connection/project-setup',
     'ru/start/compatibility' => 'ru/guide/connection/versions-and-updates',
-    'ru/start/ai' => 'ru/guide/practical/ai',
+    'ru/start/ai' => 'ru/guide/ai',
+    'ru/guide/practical/ai' => 'ru/guide/ai',
     'ru/fundamentals' => 'ru/guide/fundamentals',
     'ru/fundamentals/architecture' => 'ru/guide/architecture/overview',
     'ru/fundamentals/modifiers' => 'ru/guide/fundamentals/modifiers',

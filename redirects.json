@@ -2235,12 +2235,16 @@
       "to": "ru/guide/smart-components/templates-and-assets"
     },
     {
+      "from": "ru/guide/practical/ai",
+      "to": "ru/guide/ai"
+    },
+    {
       "from": "ru/start",
       "to": "ru/guide/introduction/quick-start"
     },
     {
       "from": "ru/start/ai",
-      "to": "ru/guide/practical/ai"
+      "to": "ru/guide/ai"
     },
     {
       "from": "ru/start/compatibility",

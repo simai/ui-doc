@@ -14,3 +14,14 @@ description: "Обычный компонент даёт готовую разм
 ## Пример
 
 Тип `project.product-card` может принимать название, цену и изображение через данные, а вид карточки — через `presentation`. Проверка отклонит неизвестное свойство или вариант до рендеринга. Сама HTML-разметка карточки остаётся у renderer типа и не дублируется в JSON.
+
+```json
+{
+  "id": "product-42",
+  "type": "project.product-card",
+  "data": {"title": "Кресло", "price": "12 900 ₽"},
+  "presentation": {"preset": "catalog"}
+}
+```
+
+Такой узел станет допустимым только после регистрации manifest и renderer типа `project.product-card`.

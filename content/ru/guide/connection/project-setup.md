@@ -24,21 +24,7 @@ CDN подходит для знакомства и прототипа. Лока
 
 ### CDN
 
-Для опубликованной версии `v5.6.4` добавьте в общий шаблон страницы:
-
-```html
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/core/css/core.css">
-
-<script>
-  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/';
-  window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
-</script>
-<script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/core/js/core.js"></script>
-```
-
-`window.sfPath` задаётся до `core.js`. По этому адресу загрузчик находит
-утилиты и компоненты.
+Возьмите готовый HTML из [быстрого старта](/ru/guide/introduction/quick-start/). В нём CSS, `window.sfPath` и `core.js` уже ссылаются на один точный тег. При обновлении меняйте этот тег сразу во всех трёх адресах.
 
 ### Локальные файлы
 
@@ -76,7 +62,7 @@ public/
 1. Проверьте отсутствие `404` и ошибок Console.
 2. Откройте основные страницы на мобильной и десктопной ширине.
 3. Проверьте светлую и тёмную тему, если проект их поддерживает.
-4. Зафиксируйте версию Framework рядом с другими зависимостями проекта.
+4. Зафиксируйте выбранную сборку Framework рядом с другими зависимостями проекта.
 
 Smart Components имеют отдельное подключение, описанное в
 [их разделе](/ru/guide/smart-components/connection/). Core автоматически находит

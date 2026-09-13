@@ -13,7 +13,7 @@
 :::
 
 [Что такое SIMAI Framework](/ru/guide/introduction/what-is-simai-framework/) ·
-[Работать с ИИ](/ru/guide/practical/ai/)
+[Работать с ИИ](/ru/guide/ai/)
 
 ## Один язык интерфейса — четыре уровня
 

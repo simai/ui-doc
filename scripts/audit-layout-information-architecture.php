@@ -14,11 +14,13 @@ $read=function(string $path)use($root){$file="$root/$path";if(!is_file($file))th
 $json=fn(string $p)=>json_decode($read($p),true,512,JSON_THROW_ON_ERROR);
 $section=$json('content/ru/guide/layouts/section.json');
 if(($section['title']??'')!=='Макеты')$errors[]=['code'=>'section_title'];
-$checkPage=function(string $base,string $title,int $order)use(&$errors,&$paragraphs,&$count,$read,$json){
+$hasConcreteExample=static function(string $md):bool{if(preg_match('/^## Пример(?:[ \t]+[^\r\n]+)?[ \t]*$(.*?)(?=^## |\z)/msu',$md,$m)!==1)return false;return preg_match('/(?:^```|^:::(?:example|internal_preview|code)\b|^\|.+\|$|^(?:[-*]|\d+\.)\s+)/mu',trim($m[1]))===1;};
+$checkPage=function(string $base,string $title,int $order)use(&$errors,&$paragraphs,&$count,$read,$json,$hasConcreteExample){
  $count++;$md=$read($base.'.md');$side=$json($base.'.page.json');preg_match_all('/^# (.+)$/m',$md,$h);
  if(count($h[1])!==1||($h[1][0]??'')!==$title)$errors[]=['code'=>'h1','page'=>$base];
  if(($side['navigation']['order']??null)!==$order)$errors[]=['code'=>'order','page'=>$base];
  foreach(['## Когда применять','## Пример'] as $heading)if(!str_contains($md,$heading))$errors[]=['code'=>'section_missing','page'=>$base,'heading'=>$heading];
+ if(!$hasConcreteExample($md))$errors[]=['code'=>'concrete_example_missing','page'=>$base];
  $plain=preg_replace('/```.*?```/s','',$md)??$md;$words=preg_split('/\s+/u',trim(strip_tags($plain)))?:[];
  if(count($words)<75)$errors[]=['code'=>'too_short','page'=>$base,'words'=>count($words)];
  foreach(preg_split('/\R\s*\R/u',$plain)?:[] as $para){$n=mb_strtolower(trim(preg_replace('/\s+/u',' ',$para)??''));if(mb_strlen($n)>120)$paragraphs[$n][]=$base;}

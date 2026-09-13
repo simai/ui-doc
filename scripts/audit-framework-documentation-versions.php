@@ -24,8 +24,6 @@ $check(str_contains((string) ($runtime['publication_profile'] ?? ''), 'candidate
 
 $allowedReleasePages = [
     'content/ru/guide/introduction/quick-start.md',
-    'content/ru/guide/connection/project-setup.md',
-    'content/ru/guide/connection/versions-and-updates.md',
     'content/ru/migration/change-history.md',
 ];
 $paths = [];
@@ -65,7 +63,7 @@ foreach ($cdnTags as $relative => $tags) {
         $check($tag !== ($runtime['ui']['tag'] ?? null), 'candidate_tag_used_in_public_snippet', ['path' => $relative]);
     }
 }
-$check(count($cdnTags) === 2, 'unexpected_cdn_example_page_count', ['actual' => count($cdnTags)]);
+$check(count($cdnTags) === 1, 'unexpected_cdn_example_page_count', ['actual' => count($cdnTags)]);
 
 if ($checkRemote) {
     $url = 'https://github.com/' . ($public['repository'] ?? '') . '.git';

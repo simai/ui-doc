@@ -14,3 +14,10 @@ description: "Документ `simai.composition.document.v1` — это пон
 ## Пример
 
 Каталог можно представить как страницу, внутри которой находится секция с заголовком, фильтрами и областью товаров. JSON отвечает на вопрос «что показать», Framework — «как проверить и отрисовать», а проект загружает товары и решает, что доступно посетителю. Макет не содержит PHP, JavaScript, SQL-запросов и секретов.
+
+:::internal_preview {size="tall" title="Каталог из JSON-макета"}
+[Открыть демонстрацию](/demos/guide/layout-inspector/)
+:::
+
+:::code {src="../../../../../examples/guide/layout-inspector/assets/catalog.json" lang="json" title="Документ каталога"}
+:::
