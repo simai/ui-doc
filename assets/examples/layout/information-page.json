@@ -1,0 +1,24 @@
+{
+  "schema": "simai.composition.document.v1",
+  "id": "information-page",
+  "profile": "ui-layout",
+  "locale": "ru",
+  "root": {
+    "id": "page",
+    "type": "layout.page",
+    "slots": {
+      "default": [
+        {
+          "id": "intro",
+          "type": "layout.section",
+          "slots": {
+            "default": [
+              {"id": "title", "type": "content.heading", "data": {"level": 1, "content": [{"type": "text", "value": "О компании"}]}},
+              {"id": "lead", "type": "content.paragraph", "data": {"content": [{"type": "text", "value": "Страница описана данными и безопасно преобразована в HTML."}]}}
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

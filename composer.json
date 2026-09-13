@@ -33,12 +33,14 @@
         "docs:check": [
             "@docs:versions:check",
             "@docs:components:check",
+            "@docs:layout:check",
             "@docs:composition:check",
             "@php scripts/audit-examples.php",
             "@php scripts/audit-russian-content.php"
         ],
         "post-install-cmd": "@docara:compatibility:apply",
-        "post-update-cmd": "@docara:compatibility:apply"
+        "post-update-cmd": "@docara:compatibility:apply",
+        "docs:layout:check": "@php scripts/audit-layout-information-architecture.php"
     },
     "config": {
         "allow-plugins": false,

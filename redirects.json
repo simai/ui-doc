@@ -1435,6 +1435,42 @@
             "to": "ru/guide/fundamentals/values-and-scales"
         },
         {
+            "from": "ru/guide/composition",
+            "to": "ru/layout"
+        },
+        {
+            "from": "ru/guide/composition/custom-type",
+            "to": "ru/layout/reference/custom-type"
+        },
+        {
+            "from": "ru/guide/composition/data-and-sources",
+            "to": "ru/layout/content-and-data/data-sources"
+        },
+        {
+            "from": "ru/guide/composition/document-and-tree",
+            "to": "ru/layout/reference/document"
+        },
+        {
+            "from": "ru/guide/composition/rendering-and-project",
+            "to": "ru/layout/content-and-data/rendering-boundary"
+        },
+        {
+            "from": "ru/guide/composition/structured-text",
+            "to": "ru/layout/content-and-data/structured-text"
+        },
+        {
+            "from": "ru/guide/composition/types-and-slots",
+            "to": "ru/layout/building/slots"
+        },
+        {
+            "from": "ru/guide/composition/versions-and-compatibility",
+            "to": "ru/layout/reference/versions"
+        },
+        {
+            "from": "ru/guide/composition/what-is-composition",
+            "to": "ru/layout/introduction/what-is-layout"
+        },
+        {
             "from": "ru/reference/color-primitives",
             "to": "ru/reference/color-primitives/color-primitives"
         },

@@ -1,0 +1,18 @@
+{
+  "schema": "simai.composition.document.v1",
+  "id": "unsafe-link-example",
+  "profile": "ui-layout",
+  "root": {
+    "id": "page",
+    "type": "layout.page",
+    "slots": {
+      "default": [
+        {
+          "id": "warning",
+          "type": "content.paragraph",
+          "data": {"content": [{"type": "link", "href": "javascript:alert(1)", "children": [{"type": "text", "value": "Опасная ссылка"}]}]}
+        }
+      ]
+    }
+  }
+}

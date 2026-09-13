@@ -3,7 +3,9 @@
   "title": "Документация",
   "preset": "docs",
   "layout": {
-    "container": {"max": 7}
+    "container": {
+      "max": 7
+    }
   },
   "navigation": {
     "scope": "section"
@@ -11,10 +13,31 @@
   "header_navigation": {
     "enabled": true,
     "items": [
-      {"id": "guide", "label": "Руководство", "href": "/ru/guide/"},
-      {"id": "utilities", "label": "Утилиты", "href": "/ru/utilities/"},
-      {"id": "components", "label": "Компоненты", "href": "/ru/components/"},
-      {"id": "smart-components", "label": "Смарт-компоненты", "href": "/ru/smart-components/"}
+      {
+        "id": "guide",
+        "label": "Руководство",
+        "href": "/ru/guide/"
+      },
+      {
+        "id": "layout",
+        "label": "Макеты",
+        "href": "/ru/layout/"
+      },
+      {
+        "id": "utilities",
+        "label": "Утилиты",
+        "href": "/ru/utilities/"
+      },
+      {
+        "id": "components",
+        "label": "Компоненты",
+        "href": "/ru/components/"
+      },
+      {
+        "id": "smart-components",
+        "label": "Смарт-компоненты",
+        "href": "/ru/smart-components/"
+      }
     ]
   }
 }

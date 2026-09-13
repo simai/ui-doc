@@ -9,7 +9,8 @@
       "src/core/contracts/composition-types.v1.json": "45fe7cf7209f1063d0f0c49904d6329943ab58107b568d61bf8f7e11aaf83fbf",
       "src/core/js/composition/index.mjs": "7ef095ba699e042319e37105d764aeb371132fc9f6eb96de8eb801a08fa28ee3",
       "src/core/js/composition/builtins.mjs": "999b7b49f6e5aec5418be1119b8cd634ead6f317154bc771971bbda3fd82355b",
-      "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f"
+      "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
+      "src/smart/buttons/smart.manifest.json": "c82738c0971bff9679b9036fa59a638bddf6a4f35427de65cb37bad6f8bd7635"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -24,7 +25,8 @@
     "src/core/contracts/composition-types.v1.json",
     "src/core/js/composition/index.mjs",
     "src/core/js/composition/builtins.mjs",
-    "tests/fixtures/composition/catalog-page.json"
+    "tests/fixtures/composition/catalog-page.json",
+    "src/smart/buttons/smart.manifest.json"
   ],
   "generated_files": [
     "distr/core/contracts/composition-document.v1.schema.json",
@@ -43,6 +45,12 @@
       "layout.page",
       "layout.columns",
       "content.paragraph"
+    ],
+    "src/smart/buttons/smart.manifest.json": [
+      "simai.composition.document.v1",
+      "smart.buttons",
+      "custom-element",
+      "sf-button"
     ]
   },
   "generated_snippets": {
@@ -57,59 +65,66 @@
   },
   "pages": [
     {
-      "path": "content/ru/guide/composition/what-is-composition.md",
+      "path": "content/ru/layout/introduction/what-is-layout.md",
       "snippets": [
         "simai.composition.document.v1",
-        "Framework проверяет это описание"
+        "Framework проверяет документ"
       ]
     },
     {
-      "path": "content/ru/guide/composition/document-and-tree.md",
+      "path": "content/ru/layout/reference/document.md",
       "snippets": [
         "root",
-        "порядок уже задан массивом"
+        "2 000"
       ]
     },
     {
-      "path": "content/ru/guide/composition/types-and-slots.md",
+      "path": "content/ru/layout/building/slots.md",
       "snippets": [
         "layout.columns",
         "область `columns`"
       ]
     },
     {
-      "path": "content/ru/guide/composition/structured-text.md",
+      "path": "content/ru/layout/content-and-data/structured-text.md",
       "snippets": [
         "strong",
-        "Опасные и файловые адреса отклоняются"
+        "Исполняемые и файловые схемы отклоняются"
       ]
     },
     {
-      "path": "content/ru/guide/composition/data-and-sources.md",
+      "path": "content/ru/layout/content-and-data/data-sources.md",
       "snippets": [
         "owner",
         "project/catalog"
       ]
     },
     {
-      "path": "content/ru/guide/composition/rendering-and-project.md",
+      "path": "content/ru/layout/content-and-data/rendering-boundary.md",
       "snippets": [
-        "SF.Composition.render",
-        "Проект загружает товары"
+        "Framework отвечает",
+        "Проект получает товары"
       ]
     },
     {
-      "path": "content/ru/guide/composition/versions-and-compatibility.md",
+      "path": "content/ru/layout/reference/versions.md",
       "snippets": [
         "SHA-256",
-        "normalize"
+        "digest"
       ]
     },
     {
-      "path": "content/ru/guide/composition/custom-type.md",
+      "path": "content/ru/layout/reference/custom-type.md",
       "snippets": [
         "simai.composition.type-manifest.v1",
         "project.product-grid"
+      ]
+    },
+    {
+      "path": "content/ru/layout/reference/studio-inspector.md",
+      "snippets": [
+        "Инспектор",
+        "изолированном iframe"
       ]
     }
   ]

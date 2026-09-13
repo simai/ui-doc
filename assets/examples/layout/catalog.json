@@ -1,0 +1,36 @@
+{
+  "schema": "simai.composition.document.v1",
+  "id": "catalog-page",
+  "profile": "ui-layout",
+  "locale": "ru",
+  "root": {
+    "id": "page",
+    "type": "layout.page",
+    "slots": {
+      "default": [
+        {
+          "id": "catalog",
+          "type": "layout.section",
+          "presentation": {"preset": "surface", "modifiers": ["contained"]},
+          "bindings": [{"owner": "project/catalog", "ref": "products", "target": "items", "revision": "42"}],
+          "slots": {
+            "default": [
+              {"id": "title", "type": "content.heading", "data": {"level": 1, "content": [{"type": "text", "value": "Каталог товаров"}]}},
+              {"id": "lead", "type": "content.paragraph", "data": {"content": [{"type": "text", "value": "Framework показывает макет, а проект получает товары и проверяет права."}]}},
+              {
+                "id": "columns",
+                "type": "layout.columns",
+                "props": {"columns": 2},
+                "presentation": {"modifiers": ["responsive"]},
+                "slots": {"columns": [
+                  {"id": "filters", "type": "content.paragraph", "data": {"content": [{"type": "text", "value": "Фильтры"}]}},
+                  {"id": "products", "type": "content.paragraph", "data": {"content": [{"type": "text", "value": "Карточки товаров"}]}}
+                ]}
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
