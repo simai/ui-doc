@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $apply = in_array('--apply', $argv, true);
-$manifestPath = $root . '/patches/docara/74334d920f8164f528fbc79d02894b20822ca3e2.json';
+$manifestPath = $root . '/patches/docara/c7c8d575300d6a8778f67458d43560fc379f1641.json';
 $manifest = json_decode((string) file_get_contents($manifestPath), true, 512, JSON_THROW_ON_ERROR);
 $lock = json_decode((string) file_get_contents($root . '/composer.lock'), true, 512, JSON_THROW_ON_ERROR);
 $package = null;
@@ -53,8 +53,18 @@ foreach ($manifest['files'] as $file) {
     $states[] = ['path' => $file['path'], 'state' => $state, 'actual_sha256' => $actual];
 }
 
-$uniqueStates = array_values(array_unique(array_column($states, 'state')));
-if ($uniqueStates === ['target']) {
+$drifted = array_values(array_filter(
+    $states,
+    static fn (array $state): bool => $state['state'] === 'drift',
+));
+if ($drifted !== []) {
+    $fail('vendor_source_drift', ['files' => $drifted]);
+}
+$baseFiles = array_values(array_filter(
+    $states,
+    static fn (array $state): bool => $state['state'] === 'base',
+));
+if ($baseFiles === []) {
     echo json_encode([
         'schema' => 'ui-doc.docara_compatibility_patch_result.v1',
         'status' => 'pass',
@@ -63,9 +73,6 @@ if ($uniqueStates === ['target']) {
         'files_verified' => count($states),
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n";
     exit(0);
-}
-if ($uniqueStates !== ['base']) {
-    $fail('vendor_source_drift', ['files' => $states]);
 }
 if (! $apply) {
     $fail('patch_not_applied', ['hint' => 'Run composer docara:compatibility:apply.']);
@@ -91,19 +98,28 @@ $run = static function (array $command) use ($root): array {
     return [proc_close($process), (string) $stdout, (string) $stderr];
 };
 
-$baseCommand = [
-    'git',
-    'apply',
-    '--whitespace=nowarn',
-    '--directory=vendor/simai/docara',
-];
-[$checkCode, , $checkError] = $run([...$baseCommand, '--check', $patchPath]);
-if ($checkCode !== 0) {
-    $fail('patch_check_failed', ['error' => trim($checkError)]);
-}
-[$applyCode, , $applyError] = $run([...$baseCommand, $patchPath]);
-if ($applyCode !== 0) {
-    $fail('patch_apply_failed', ['error' => trim($applyError)]);
+foreach ($baseFiles as $file) {
+    $baseCommand = [
+        'git',
+        'apply',
+        '--whitespace=nowarn',
+        '--directory=vendor/simai/docara',
+        '--include=vendor/simai/docara/' . $file['path'],
+    ];
+    [$checkCode, , $checkError] = $run([...$baseCommand, '--check', $patchPath]);
+    if ($checkCode !== 0) {
+        $fail('patch_check_failed', [
+            'path' => $file['path'],
+            'error' => trim($checkError),
+        ]);
+    }
+    [$applyCode, , $applyError] = $run([...$baseCommand, $patchPath]);
+    if ($applyCode !== 0) {
+        $fail('patch_apply_failed', [
+            'path' => $file['path'],
+            'error' => trim($applyError),
+        ]);
+    }
 }
 
 foreach ($manifest['files'] as $file) {

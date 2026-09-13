@@ -3,9 +3,9 @@
   "package": "simai/docara",
   "locked_version": "v2.9.0",
   "locked_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
-  "candidate_reference": "74334d920f8164f528fbc79d02894b20822ca3e2",
+  "candidate_reference": "c7c8d575300d6a8778f67458d43560fc379f1641",
   "candidate_base_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
-  "patch": "74334d920f8164f528fbc79d02894b20822ca3e2.patch",
+  "patch": "c7c8d575300d6a8778f67458d43560fc379f1641.patch",
   "files": [
     {
       "path": "resources/portable/declarative-shell.css",
@@ -51,6 +51,11 @@
       "path": "src/PortableSite/PortableSiteBuilder.php",
       "base_sha256": "683144674c18c926fced9d3717081fb422e610023173c203a18bcc52f04a960c",
       "target_sha256": "205e869224f669826140224cd2cc3dc0d217509614add2511a851493e73a3f14"
+    },
+    {
+      "path": "src/Declarative/Rendering/FrameworkUtilityRegistry.php",
+      "base_sha256": "0234f50edd07a4362baa403079d69bc28f26729ce6d63bcffc5df9117a6c43f4",
+      "target_sha256": "8c0e6a70ca8b48c9d75216f6985b3d84a2ab5ffe683e0a6f3f17e44b6ba19899"
     }
   ]
 }
