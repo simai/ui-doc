@@ -49,6 +49,7 @@ $structure = [
         'index' => ['Основы оформления', 40],
         'modifiers' => ['Модификаторы', 10],
         'conditions' => ['Условия действия', 20],
+        'directions' => ['Направление текста', 25],
         'values-and-scales' => ['Значения и шкалы', 30],
         'sizes' => ['Система размеров', 40],
         'size-scale' => ['Шкала размеров', 50],
@@ -58,18 +59,32 @@ $structure = [
         'typography' => ['Типографика', 90],
         'adaptive-sizing' => ['Адаптивные размеры', 100],
     ]],
-    'practical' => ['title' => 'Практическое использование', 'order' => 50, 'pages' => [
+    'components' => ['title' => 'Работа с компонентами', 'order' => 60, 'pages' => [
+        'form-elements' => ['Поля формы', 10],
+        'examples' => ['Как работать с примерами', 20],
+    ]],
+    'smart-components' => ['title' => 'Работа со Smart-компонентами', 'order' => 70, 'pages' => [
+        'introduction' => ['Что такое Smart-компонент', 10],
+        'connection' => ['Подключение Smart-компонентов', 20],
+        'lifecycle' => ['Загрузка и готовность', 30],
+        'catalog-and-readiness' => ['Статусы готовности', 40],
+        'templates-and-assets' => ['Шаблоны Smart-компонентов', 50],
+        'examples' => ['Проверка примера Smart-компонента', 60],
+    ]],
+    'practical' => ['title' => 'Практическое использование', 'order' => 80, 'pages' => [
         'ai' => ['Работа с ИИ', 10],
     ]],
 ];
 
 $guideSection = $readJson('content/ru/guide/section.json');
 $check(($guideSection['title'] ?? null) === 'Руководство', 'guide_title_mismatch');
+$layoutsSection = $readJson('content/ru/guide/layouts/section.json');
+$check(($layoutsSection['title'] ?? null) === 'Макеты', 'layouts_title_mismatch');
+$check(($layoutsSection['navigation']['order'] ?? null) === 50, 'layouts_order_mismatch');
 $header = $readJson('content/ru/section.json')['header_navigation']['items'] ?? [];
 $headerActual = array_map(static fn (array $item): array => [$item['label'] ?? null, $item['href'] ?? null], $header);
 $headerExpected = [
     ['Руководство', '/ru/guide/'],
-    ['Макеты', '/ru/layout/'],
     ['Утилиты', '/ru/utilities/'],
     ['Компоненты', '/ru/components/'],
     ['Смарт-компоненты', '/ru/smart-components/'],
@@ -136,7 +151,9 @@ $forbidden = [
     'бизнес-операц',
     'направление развития',
 ];
-$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide'));
+$beginnerRoots = ['introduction', 'connection', 'architecture', 'fundamentals'];
+foreach ($beginnerRoots as $beginnerRoot) {
+$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide/' . $beginnerRoot));
 foreach ($iterator as $file) {
     if (! $file->isFile() || $file->getExtension() !== 'md') {
         continue;
@@ -146,6 +163,7 @@ foreach ($iterator as $file) {
     foreach ($forbidden as $term) {
         $check(! str_contains($prose, $term), 'forbidden_term', ['page' => str_replace($root . '/', '', $file->getPathname()), 'term' => $term]);
     }
+}
 }
 
 $expectedRedirects = [
@@ -166,6 +184,15 @@ $expectedRedirects = [
     'ru/fundamentals/design-tokens' => 'ru/guide/fundamentals/design-tokens',
     'ru/fundamentals/typography-system' => 'ru/guide/fundamentals/typography',
     'ru/fundamentals/adaptive-sizing-system' => 'ru/guide/fundamentals/adaptive-sizing',
+    'ru/layout' => 'ru/guide/layouts',
+    'ru/layout/introduction/what-is-layout' => 'ru/guide/layouts/introduction/what-is-layout',
+    'ru/layout/reference/studio-inspector' => 'ru/guide/layouts/reference/studio-inspector',
+    'ru/smart-components/introduction' => 'ru/guide/smart-components/introduction',
+    'ru/smart-components/connection' => 'ru/guide/smart-components/connection',
+    'ru/smart-components/lifecycle' => 'ru/guide/smart-components/lifecycle',
+    'ru/smart-components/catalog' => 'ru/guide/smart-components/catalog-and-readiness',
+    'ru/smart-components/templates-and-assets' => 'ru/guide/smart-components/templates-and-assets',
+    'ru/smart-components/examples' => 'ru/guide/smart-components/examples',
 ];
 $redirectRows = $readJson('redirects.json')['redirects'] ?? [];
 $redirects = [];

@@ -1436,39 +1436,135 @@
         },
         {
             "from": "ru/guide/composition",
-            "to": "ru/layout"
+            "to": "ru/guide/layouts"
         },
         {
             "from": "ru/guide/composition/custom-type",
-            "to": "ru/layout/reference/custom-type"
+            "to": "ru/guide/layouts/reference/custom-type"
         },
         {
             "from": "ru/guide/composition/data-and-sources",
-            "to": "ru/layout/content-and-data/data-sources"
+            "to": "ru/guide/layouts/content-and-data/data-sources"
         },
         {
             "from": "ru/guide/composition/document-and-tree",
-            "to": "ru/layout/reference/document"
+            "to": "ru/guide/layouts/reference/document"
         },
         {
             "from": "ru/guide/composition/rendering-and-project",
-            "to": "ru/layout/content-and-data/rendering-boundary"
+            "to": "ru/guide/layouts/content-and-data/rendering-boundary"
         },
         {
             "from": "ru/guide/composition/structured-text",
-            "to": "ru/layout/content-and-data/structured-text"
+            "to": "ru/guide/layouts/content-and-data/structured-text"
         },
         {
             "from": "ru/guide/composition/types-and-slots",
-            "to": "ru/layout/building/slots"
+            "to": "ru/guide/layouts/building/slots"
         },
         {
             "from": "ru/guide/composition/versions-and-compatibility",
-            "to": "ru/layout/reference/versions"
+            "to": "ru/guide/layouts/reference/versions"
         },
         {
             "from": "ru/guide/composition/what-is-composition",
-            "to": "ru/layout/introduction/what-is-layout"
+            "to": "ru/guide/layouts/introduction/what-is-layout"
+        },
+        {
+            "from": "ru/layout",
+            "to": "ru/guide/layouts"
+        },
+        {
+            "from": "ru/layout/building/block",
+            "to": "ru/guide/layouts/building/block"
+        },
+        {
+            "from": "ru/layout/building/complex-smart-component",
+            "to": "ru/guide/layouts/building/complex-smart-component"
+        },
+        {
+            "from": "ru/layout/building/component",
+            "to": "ru/guide/layouts/building/component"
+        },
+        {
+            "from": "ru/layout/building/page",
+            "to": "ru/guide/layouts/building/page"
+        },
+        {
+            "from": "ru/layout/building/section",
+            "to": "ru/guide/layouts/building/section"
+        },
+        {
+            "from": "ru/layout/building/slots",
+            "to": "ru/guide/layouts/building/slots"
+        },
+        {
+            "from": "ru/layout/building/smart-component",
+            "to": "ru/guide/layouts/building/smart-component"
+        },
+        {
+            "from": "ru/layout/content-and-data/data-sources",
+            "to": "ru/guide/layouts/content-and-data/data-sources"
+        },
+        {
+            "from": "ru/layout/content-and-data/rendering-boundary",
+            "to": "ru/guide/layouts/content-and-data/rendering-boundary"
+        },
+        {
+            "from": "ru/layout/content-and-data/structured-text",
+            "to": "ru/guide/layouts/content-and-data/structured-text"
+        },
+        {
+            "from": "ru/layout/examples/catalog",
+            "to": "ru/guide/layouts/examples/catalog"
+        },
+        {
+            "from": "ru/layout/examples/dashboard",
+            "to": "ru/guide/layouts/examples/dashboard"
+        },
+        {
+            "from": "ru/layout/examples/information-page",
+            "to": "ru/guide/layouts/examples/information-page"
+        },
+        {
+            "from": "ru/layout/introduction/document-flow",
+            "to": "ru/guide/layouts/introduction/document-flow"
+        },
+        {
+            "from": "ru/layout/introduction/levels",
+            "to": "ru/guide/layouts/introduction/levels"
+        },
+        {
+            "from": "ru/layout/introduction/what-is-layout",
+            "to": "ru/guide/layouts/introduction/what-is-layout"
+        },
+        {
+            "from": "ru/layout/reference/api",
+            "to": "ru/guide/layouts/reference/api"
+        },
+        {
+            "from": "ru/layout/reference/custom-type",
+            "to": "ru/guide/layouts/reference/custom-type"
+        },
+        {
+            "from": "ru/layout/reference/diagnostics",
+            "to": "ru/guide/layouts/reference/diagnostics"
+        },
+        {
+            "from": "ru/layout/reference/document",
+            "to": "ru/guide/layouts/reference/document"
+        },
+        {
+            "from": "ru/layout/reference/studio-inspector",
+            "to": "ru/guide/layouts/reference/studio-inspector"
+        },
+        {
+            "from": "ru/layout/reference/type-manifest",
+            "to": "ru/guide/layouts/reference/type-manifest"
+        },
+        {
+            "from": "ru/layout/reference/versions",
+            "to": "ru/guide/layouts/reference/versions"
         },
         {
             "from": "ru/reference/color-primitives",
@@ -1657,6 +1753,30 @@
         {
             "from": "ru/reference/properties-of-modifiers/property-structure/typography",
             "to": "ru/reference/properties-of-modifiers/property-structure-typography"
+        },
+        {
+            "from": "ru/smart-components/catalog",
+            "to": "ru/guide/smart-components/catalog-and-readiness"
+        },
+        {
+            "from": "ru/smart-components/connection",
+            "to": "ru/guide/smart-components/connection"
+        },
+        {
+            "from": "ru/smart-components/examples",
+            "to": "ru/guide/smart-components/examples"
+        },
+        {
+            "from": "ru/smart-components/introduction",
+            "to": "ru/guide/smart-components/introduction"
+        },
+        {
+            "from": "ru/smart-components/lifecycle",
+            "to": "ru/guide/smart-components/lifecycle"
+        },
+        {
+            "from": "ru/smart-components/templates-and-assets",
+            "to": "ru/guide/smart-components/templates-and-assets"
         },
         {
             "from": "ru/start",

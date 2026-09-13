@@ -22,12 +22,29 @@ composer docs:components:check
 php scripts/audit-framework-documentation-versions.php --check-remote
 php scripts/audit-guide-information-architecture.php
 php scripts/audit-guide-redirects.php
+php scripts/audit-reference-separation.php
 php scripts/audit-foundation-docs.php /absolute/path/to/ui
 php -d memory_limit=2G vendor/bin/docara build production
 php -d memory_limit=2G vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \
   --build-root="$(pwd)/build_production"
 ```
+
+## Структура русской документации
+
+Русская верхняя навигация состоит из четырёх разделов:
+
+- **Руководство** — вся теория и последовательное обучение: подключение,
+  устройство Framework, оформление, макеты, компоненты и Smart-компоненты;
+- **Утилиты** — каталог CSS-классов и их точных значений;
+- **Компоненты** — каталог готовых элементов, вариантов и примеров;
+- **Смарт-компоненты** — каталог атрибутов, свойств, методов, событий и статусов.
+
+Общие объяснения принадлежат `content/ru/guide/`. Корни трёх каталогов помогают
+найти сущность и ведут к точному справочнику. `composer docs:check` запускает
+`audit-reference-separation.php` и останавливается, если теория снова появляется
+в справочных деревьях, возвращается отдельный верхний раздел «Макеты» или в
+Markdown остаются ссылки на старые канонические адреса.
 
 ## Синхронизация компонентов и документации
 

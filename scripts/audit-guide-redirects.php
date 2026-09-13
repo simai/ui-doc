@@ -29,6 +29,15 @@ $required = [
     'ru/fundamentals/design-tokens' => 'ru/guide/fundamentals/design-tokens',
     'ru/fundamentals/typography-system' => 'ru/guide/fundamentals/typography',
     'ru/fundamentals/adaptive-sizing-system' => 'ru/guide/fundamentals/adaptive-sizing',
+    'ru/layout' => 'ru/guide/layouts',
+    'ru/layout/introduction/what-is-layout' => 'ru/guide/layouts/introduction/what-is-layout',
+    'ru/layout/reference/studio-inspector' => 'ru/guide/layouts/reference/studio-inspector',
+    'ru/smart-components/introduction' => 'ru/guide/smart-components/introduction',
+    'ru/smart-components/connection' => 'ru/guide/smart-components/connection',
+    'ru/smart-components/lifecycle' => 'ru/guide/smart-components/lifecycle',
+    'ru/smart-components/catalog' => 'ru/guide/smart-components/catalog-and-readiness',
+    'ru/smart-components/templates-and-assets' => 'ru/guide/smart-components/templates-and-assets',
+    'ru/smart-components/examples' => 'ru/guide/smart-components/examples',
 ];
 $data = json_decode((string) file_get_contents($root . '/redirects.json'), true, 512, JSON_THROW_ON_ERROR);
 $blockers = [];

@@ -19,11 +19,6 @@
         "href": "/ru/guide/"
       },
       {
-        "id": "layout",
-        "label": "Макеты",
-        "href": "/ru/layout/"
-      },
-      {
         "id": "utilities",
         "label": "Утилиты",
         "href": "/ru/utilities/"

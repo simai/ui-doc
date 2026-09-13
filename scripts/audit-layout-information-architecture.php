@@ -12,7 +12,7 @@ $groups = [
 $errors=[]; $paragraphs=[]; $count=0;
 $read=function(string $path)use($root){$file="$root/$path";if(!is_file($file))throw new RuntimeException("Missing $path");return (string)file_get_contents($file);};
 $json=fn(string $p)=>json_decode($read($p),true,512,JSON_THROW_ON_ERROR);
-$section=$json('content/ru/layout/section.json');
+$section=$json('content/ru/guide/layouts/section.json');
 if(($section['title']??'')!=='Макеты')$errors[]=['code'=>'section_title'];
 $checkPage=function(string $base,string $title,int $order)use(&$errors,&$paragraphs,&$count,$read,$json){
  $count++;$md=$read($base.'.md');$side=$json($base.'.page.json');preg_match_all('/^# (.+)$/m',$md,$h);
@@ -23,9 +23,9 @@ $checkPage=function(string $base,string $title,int $order)use(&$errors,&$paragra
  if(count($words)<75)$errors[]=['code'=>'too_short','page'=>$base,'words'=>count($words)];
  foreach(preg_split('/\R\s*\R/u',$plain)?:[] as $para){$n=mb_strtolower(trim(preg_replace('/\s+/u',' ',$para)??''));if(mb_strlen($n)>120)$paragraphs[$n][]=$base;}
 };
-$checkPage('content/ru/layout/index','Макеты',0);
-foreach($groups as $dir=>[$title,$order,$pages]){$s=$json("content/ru/layout/$dir/section.json");if(($s['title']??'')!==$title||($s['navigation']['order']??null)!==$order)$errors[]=['code'=>'group','group'=>$dir];foreach($pages as $slug=>[$pageTitle,$pageOrder])$checkPage("content/ru/layout/$dir/$slug",$pageTitle,$pageOrder);}
+$checkPage('content/ru/guide/layouts/index','Макеты',50);
+foreach($groups as $dir=>[$title,$order,$pages]){$s=$json("content/ru/guide/layouts/$dir/section.json");if(($s['title']??'')!==$title||($s['navigation']['order']??null)!==$order)$errors[]=['code'=>'group','group'=>$dir];foreach($pages as $slug=>[$pageTitle,$pageOrder])$checkPage("content/ru/guide/layouts/$dir/$slug",$pageTitle,$pageOrder);}
 foreach($paragraphs as $text=>$files)if(count(array_unique($files))>1)$errors[]=['code'=>'duplicate_paragraph','pages'=>array_values(array_unique($files))];
-$all='';foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator("$root/content/ru/layout")) as $f)if($f->isFile()&&$f->getExtension()==='md')$all.=file_get_contents($f->getPathname());
+$all='';foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator("$root/content/ru/guide/layouts")) as $f)if($f->isFile()&&$f->getExtension()==='md')$all.=file_get_contents($f->getPathname());
 $report=['schema'=>'ui-doc.layout_information_architecture_audit.v1','status'=>$errors?'fail':'pass','groups'=>count($groups),'pages'=>$count,'errors'=>$errors];
 echo json_encode($report,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)."\n";exit($errors?1:0);

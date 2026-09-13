@@ -65,63 +65,63 @@
   },
   "pages": [
     {
-      "path": "content/ru/layout/introduction/what-is-layout.md",
+      "path": "content/ru/guide/layouts/introduction/what-is-layout.md",
       "snippets": [
         "simai.composition.document.v1",
         "Framework проверяет документ"
       ]
     },
     {
-      "path": "content/ru/layout/reference/document.md",
+      "path": "content/ru/guide/layouts/reference/document.md",
       "snippets": [
         "root",
         "2 000"
       ]
     },
     {
-      "path": "content/ru/layout/building/slots.md",
+      "path": "content/ru/guide/layouts/building/slots.md",
       "snippets": [
         "layout.columns",
         "область `columns`"
       ]
     },
     {
-      "path": "content/ru/layout/content-and-data/structured-text.md",
+      "path": "content/ru/guide/layouts/content-and-data/structured-text.md",
       "snippets": [
         "strong",
         "Исполняемые и файловые схемы отклоняются"
       ]
     },
     {
-      "path": "content/ru/layout/content-and-data/data-sources.md",
+      "path": "content/ru/guide/layouts/content-and-data/data-sources.md",
       "snippets": [
         "owner",
         "project/catalog"
       ]
     },
     {
-      "path": "content/ru/layout/content-and-data/rendering-boundary.md",
+      "path": "content/ru/guide/layouts/content-and-data/rendering-boundary.md",
       "snippets": [
         "Framework отвечает",
         "Проект получает товары"
       ]
     },
     {
-      "path": "content/ru/layout/reference/versions.md",
+      "path": "content/ru/guide/layouts/reference/versions.md",
       "snippets": [
         "SHA-256",
         "digest"
       ]
     },
     {
-      "path": "content/ru/layout/reference/custom-type.md",
+      "path": "content/ru/guide/layouts/reference/custom-type.md",
       "snippets": [
         "simai.composition.type-manifest.v1",
         "project.product-grid"
       ]
     },
     {
-      "path": "content/ru/layout/reference/studio-inspector.md",
+      "path": "content/ru/guide/layouts/reference/studio-inspector.md",
       "snippets": [
         "Инспектор",
         "изолированном iframe"

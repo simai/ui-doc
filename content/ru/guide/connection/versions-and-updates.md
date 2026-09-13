@@ -43,6 +43,6 @@ Components берите Core и Smart-ассеты только из одног�
 ## Что дальше
 
 Перейдите к [общей схеме Framework](/ru/guide/architecture/overview/) или
-посмотрите [подключение Smart Components](/ru/smart-components/connection/).
+посмотрите [подключение Smart Components](/ru/guide/smart-components/connection/).
 История опубликованных Core-релизов находится в
 [репозитории simai/ui](https://github.com/simai/ui/releases).
