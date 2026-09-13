@@ -21,22 +21,22 @@ tags: [transition-property, sm, md, lg, xl, xxl]
 
 | Класс                 | Значение                                                                                                                                                                                                                                      |
 |:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `transition-none` | `transition-property: none;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-all` | `transition-property: all;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-colors` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-opacity` | `transition-property: opacity;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-shadow` | `transition-property: box-shadow;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-transform` | `transition-property: transform;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-width` | `transition-property: width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-height` | `transition-property: height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-size` | `transition-property: width, height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-max-width` | `transition-property: max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-max-height` | `transition-property: max-height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-max-size` | `transition-property: max-width, max-height;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-flex` | `transition-property: flex, flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-flex-basis` | `transition-property: flex-basis;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
-| `transition-layout` | `transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;&lt;br/&gt; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);&lt;br/&gt; transition-duration: 150ms;` |
+| `transition-none` | `transition-property: none;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-all` | `transition-property: all;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-colors` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-opacity` | `transition-property: opacity;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-shadow` | `transition-property: box-shadow;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-transform` | `transition-property: transform;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-width` | `transition-property: width;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-height` | `transition-property: height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-size` | `transition-property: width, height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-max-width` | `transition-property: max-width;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-max-height` | `transition-property: max-height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-max-size` | `transition-property: max-width, max-height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-flex` | `transition-property: flex, flex-basis;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-flex-basis` | `transition-property: flex-basis;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+| `transition-layout` | `transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
 
 ## Описание
 

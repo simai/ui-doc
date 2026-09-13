@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = 'a866210d54af3e7b54f4126e63dcd79550450acb';
-const UI_RUNTIME_REVISION = 'f25621cdd37387c44a8d27ee425cec4c4d543c7d';
-const SMART_METADATA_REVISION = '2a02ece381a9c86956d7783bca581ee89b424961';
-const SMART_RUNTIME_REVISION = '839ca74ae47e50b69ddde46b8995c48031303bae';
-const SOURCE_REVISION = '89026b5c44fba10b51762fb5b6201163b2e6dcb2';
-const BUILDER_REVISION = '96b56d2a4e5bd4e3be3f839ffebf205ba7fa77c2';
-const RELEASE_LOCK = 'contracts/releases/ui-f25621cdd373-smart-839ca74ae47e.lock.json';
+const UI_METADATA_REVISION = 'f32a7e060d541d96b4ce7d18056454b54eeb1a8b';
+const UI_RUNTIME_REVISION = '73bd250f1d8e2435bd2cbd57d6fe2080ade92f01';
+const SMART_METADATA_REVISION = '94bf00b744da5e541b5110138f2a01f902d2d03f';
+const SMART_RUNTIME_REVISION = '1de6c70ed455fa2d4d568795452b63431fdd73a1';
+const SOURCE_REVISION = 'b4c2d7c6e1fe0620058461803fa0a570dab2f96d';
+const BUILDER_REVISION = '13ad31ae75e75fbdabe6f1a1e09ce94b745fe118';
+const RELEASE_LOCK = 'contracts/releases/ui-73bd250f1d8e-smart-1de6c70ed455.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
@@ -90,7 +90,7 @@ $release = json_decode(
     JSON_THROW_ON_ERROR,
 );
 $expected = [
-    'compatibility_id' => 'ui-f25621cdd373-smart-839ca74ae47e',
+    'compatibility_id' => 'ui-73bd250f1d8e-smart-1de6c70ed455',
     'ui' => UI_RUNTIME_REVISION,
     'smart' => SMART_RUNTIME_REVISION,
     'source' => SOURCE_REVISION,
@@ -119,7 +119,7 @@ $registry = json_decode($registryBytes, true, 512, JSON_THROW_ON_ERROR);
 if (($registry['compatibility']['id'] ?? null) !== $expected['compatibility_id']) {
     throw new RuntimeException('FRAMEWORK_REGISTRY_COMPATIBILITY_MISMATCH');
 }
-$docaraPair = 'sf-v5.7.0-f25621cd-839ca74a';
+$docaraPair = 'sf-v5.7.0-73bd250f-1de6c70e';
 
 $projectLockPath = $projectRoot . '/simai-framework.lock.json';
 $packageLockPath = $packageRoot . '/docs/site/simai-framework.lock.json';
@@ -170,7 +170,7 @@ $lock['runtime']['framework_registry'] = [
         'tree' => 'contracts/generated',
         'tree_oid' => trim($git($uiRoot, ['rev-parse', UI_METADATA_REVISION . ':contracts/generated'])),
         'mount' => 'contract',
-        'sha256' => '226bd2d6de7c08e8026a308055113eef713eca9b80f017b85a8ec521252055da',
+        'sha256' => hash('sha256', $registryBytes . $documentationBytes),
         'files' => 2,
     ],
     'documentation_source' => [
@@ -180,14 +180,29 @@ $lock['runtime']['framework_registry'] = [
     ],
 ];
 $lock['asset_projection']['source']['revision'] = SMART_RUNTIME_REVISION;
-$lock['asset_projection']['files']['smart/alert/css/alert.css'] = [
-    'sha256' => hash('sha256', $git(
-        $smartRoot,
-        ['show', SMART_RUNTIME_REVISION . ':smart/alert/css/alert.css'],
-    )),
-];
-$lock['runtime']['components']['sf-alert']['css'] = 'smart/smart/alert/css/alert.css';
 $lock['dynamic_asset_projection']['source']['revision'] = SMART_RUNTIME_REVISION;
+$smartRuntimePaths = array_values(array_filter(
+    preg_split('/\R/', trim($git(
+        $smartRoot,
+        ['ls-tree', '-r', '--name-only', SMART_RUNTIME_REVISION, 'smart'],
+    ))) ?: [],
+    static fn (string $path): bool => preg_match('~/((?:css|js)/[^/]+\.(?:css|js))$~', $path) === 1
+        && ! str_contains($path, '.min.'),
+));
+$smartRuntimeFiles = [];
+foreach ($smartRuntimePaths as $path) {
+    $smartRuntimeFiles[$path] = [
+        'sha256' => hash('sha256', $git($smartRoot, ['show', SMART_RUNTIME_REVISION . ':' . $path])),
+    ];
+}
+$lock['dynamic_asset_projection']['files'] = $smartRuntimeFiles;
+$lock['asset_projection']['files'] = array_intersect_key($smartRuntimeFiles, array_flip([
+    'smart/alert/js/alert.js',
+    'smart/buttons/js/buttons.js',
+    'smart/icons/js/icons.js',
+    'smart/modal/js/modal.js',
+]));
+$lock['runtime']['components']['sf-alert']['css'] = null;
 $lock['runtime_projection']['mount'] = '_docara/vendor/simai-framework/runtime/' . UI_RUNTIME_REVISION . '/distr';
 $lock['runtime_projection']['source'] = [
     'provider' => 'simai/ui',

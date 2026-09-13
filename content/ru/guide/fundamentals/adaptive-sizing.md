@@ -58,7 +58,7 @@ control-height = line-height + 2 × block-padding
 
 | Роль | Mobile | Desktop | Токен |
 |:---|---:|---:|:---|
-| `1/3` | `1.5rem` | `1.75rem` | `--sf-ui-1/3--control-height` |
+| `1/3` | `1.5rem` | `1.5rem` | `--sf-ui-1/3--control-height` |
 | `1/2` | `1.75rem` | `2rem` | `--sf-ui-1/2--control-height` |
 | `1` | `2.25rem` | `2.5rem` | `--sf-ui-1--control-height` |
 | `2` | `2.75rem` | `3rem` | `--sf-ui-2--control-height` |

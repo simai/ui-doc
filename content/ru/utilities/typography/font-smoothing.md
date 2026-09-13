@@ -20,8 +20,8 @@ tags: [font-smoothing]
 
 | Класс        | Значение                                                 |
 |:-------------|:-----------------------------------------------------------------------------|
-| `antialiased` | `-webkit-font-smoothing: antialiased;&lt;br/&gt;-moz-osx-font-smoothing: grayscale;` |
-| `smoothing` | `-webkit-font-smoothing: auto;&lt;br/&gt;-moz-osx-font-smoothing: auto;` |
+| `antialiased` | `-webkit-font-smoothing: antialiased;` `-moz-osx-font-smoothing: grayscale;` |
+| `smoothing` | `-webkit-font-smoothing: auto;` `-moz-osx-font-smoothing: auto;` |
 
 ## Пример использования
 

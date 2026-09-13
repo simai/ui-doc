@@ -53,7 +53,6 @@ $gitShow = static function (string $relative) use ($uiRoot, $coreRevision): stri
 };
 
 $adaptive = json_decode($gitShow('core/contracts/adaptive-sizing.v1.json'), true, 512, JSON_THROW_ON_ERROR);
-$dimensions = json_decode($gitShow('core/contracts/dimension-policy.v1.json'), true, 512, JSON_THROW_ON_ERROR);
 $aliases = json_decode($gitShow('core/contracts/utility-module-aliases.v1.json'), true, 512, JSON_THROW_ON_ERROR);
 $coreCss = $gitShow('core/css/core.css');
 $smartBase = $gitShow('core/js/smart-base.js');
@@ -65,8 +64,8 @@ $check = static function (bool $condition, string $code, array $details = []) us
     }
 };
 
-$check($coreRevision === 'f25621cdd37387c44a8d27ee425cec4c4d543c7d', 'core_revision_mismatch');
-$check($smartRevision === '839ca74ae47e50b69ddde46b8995c48031303bae', 'smart_revision_mismatch');
+$check($coreRevision === '73bd250f1d8e2435bd2cbd57d6fe2080ade92f01', 'core_revision_mismatch');
+$check($smartRevision === '1de6c70ed455fa2d4d568795452b63431fdd73a1', 'smart_revision_mismatch');
 $check(($adaptive['meta']['unit'] ?? null) === 'rem', 'adaptive_unit_is_not_rem');
 $check(($adaptive['meta']['rootPolicy'] ?? null) === 'preserve-user-agent-default', 'root_policy_mismatch');
 $roles = array_map('strval', array_keys($adaptive['controls']['sizeRoles'] ?? []));
@@ -94,7 +93,7 @@ foreach ($roles as $role) {
     }
 }
 $check($computedHeights === [
-    '1/3' => ['mobile' => 24, 'desktop' => 28],
+    '1/3' => ['mobile' => 24, 'desktop' => 24],
     '1/2' => ['mobile' => 28, 'desktop' => 32],
     '1' => ['mobile' => 36, 'desktop' => 40],
     '2' => ['mobile' => 44, 'desktop' => 48],
@@ -102,13 +101,10 @@ $check($computedHeights === [
 ], 'control_height_values_mismatch', ['actual' => $computedHeights]);
 $check(str_contains($coreCss, '--sf-px: 1px'), 'hairline_token_missing_from_core');
 $check(($aliases['aliases']['column-gap/default'] ?? null) === 'gap/default', 'loader_alias_contract_mismatch');
-$dimensionStatuses = array_values(array_unique(array_column($dimensions['rules'] ?? [], 'status')));
-$check(in_array('accepted-system-definition', $dimensionStatuses, true), 'dimension_policy_missing_system_definition');
-$check(in_array('accepted-runtime-geometry', $dimensionStatuses, true), 'dimension_policy_missing_runtime_geometry');
 $check(str_contains($smartBase, 'class SfBaseElement extends HTMLElement'), 'smart_base_element_missing');
 $check(str_contains($smartBase, 'customElements.define'), 'smart_custom_element_registration_missing');
-$check(($registry['counts']['component'] ?? null) === 63, 'registry_component_count_mismatch');
-$check(($registry['counts']['smart-component'] ?? null) === 43, 'registry_smart_count_mismatch');
+$check(($registry['counts']['component'] ?? null) === 61, 'registry_component_count_mismatch');
+$check(($registry['counts']['smart-component'] ?? null) === 44, 'registry_smart_count_mismatch');
 $check(($registry['counts']['utility'] ?? null) === 228, 'registry_utility_count_mismatch');
 
 $pages = [

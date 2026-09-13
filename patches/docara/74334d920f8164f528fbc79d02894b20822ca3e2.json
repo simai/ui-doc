@@ -3,14 +3,19 @@
   "package": "simai/docara",
   "locked_version": "v2.9.0",
   "locked_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
-  "candidate_reference": "00032adc74fb490083b86fad89ab654bd56da0af",
-  "candidate_base_reference": "e2ff8cb62cbb855cf07e40981a1f8ef3f72bebb1",
-  "patch": "00032adc74fb490083b86fad89ab654bd56da0af.patch",
+  "candidate_reference": "74334d920f8164f528fbc79d02894b20822ca3e2",
+  "candidate_base_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
+  "patch": "74334d920f8164f528fbc79d02894b20822ca3e2.patch",
   "files": [
     {
       "path": "resources/portable/declarative-shell.css",
       "base_sha256": "b12f53c6db6f87c6b93ea974cb8b0b5e1714a7e5dc93d31c9ba6e1b0bcf096d8",
       "target_sha256": "0eacdd0dd94a8f295f835f171d3b28c57fb39b1d0df7684cbb6a5b1832660d34"
+    },
+    {
+      "path": "resources/schemas/framework-lock.schema.json",
+      "base_sha256": "6c8a57ae75d5ff7353bf37aa5468721a4bdbaf15194a67f13c45e11696a289b0",
+      "target_sha256": "6d8e150f001b10e7db2a0d52e6524c09ea4ac5275c13791f75b584f8a2dc3879"
     },
     {
       "path": "resources/smart/assets/navigation.css",
@@ -31,6 +36,11 @@
       "path": "src/Framework/FrameworkAssetPlan.php",
       "base_sha256": "47e908542a57d801a9529ff74f3754eeecce59d4a2f864aa7952655a73fdc784",
       "target_sha256": "50af3ae17e8da2912e45c593266ebbe3e940f1d3ded08847165982bd78fef4bd"
+    },
+    {
+      "path": "src/Framework/FrameworkLock.php",
+      "base_sha256": "2f719d81f446938e18a464e9d03119b4ff9f700ac8274f3d46055efb551b40e2",
+      "target_sha256": "aa10338e5063ccc964f5b7d4120d79bddfd2dbc698067aabb7816051bed874e5"
     },
     {
       "path": "src/Portable/CanonicalJson.php",

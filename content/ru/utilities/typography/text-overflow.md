@@ -20,7 +20,7 @@ tags: [text-overflow]
 
 | Класс       | Значение                                                                  |
 |:------------|:--------------------------------------------------------------------------|
-| `truncate` | `overflow: hidden;&lt;br/&gt; white-space: nowrap;&lt;br/&gt; text-overflow: ellipsis;` |
+| `truncate` | `overflow: hidden;` `white-space: nowrap;` `text-overflow: ellipsis;` |
 | `t-ellipsis` | `text-overflow: ellipsis;` |
 | `t-clip` | `text-overflow: clip;` |
 
