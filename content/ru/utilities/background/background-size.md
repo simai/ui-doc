@@ -1,12 +1,12 @@
 ---
 title: "Размер фона"
 description: "Управление размером фонового изображения"
-tags: [background-size, sm, md, lg, xl, xxl]
+tags: [background-size, background-size-ext, sm, md, lg, xl, xxl]
 ---
 
 # Размер фона
 
-:badge[background-size]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[background-size]{type=main scheme=on-surface size=1} :badge[background-size-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Утилиты `background-size` управляют масштабированием фонового изображения внутри элемента.
 

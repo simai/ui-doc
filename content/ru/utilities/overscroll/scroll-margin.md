@@ -1,12 +1,12 @@
 ---
 title: "Внешний отступ прокрутки"
 description: "Внешний отступ прокрутки"
-tags: [scroll-margin]
+tags: [scroll-margin, scroll-margin-ext]
 ---
 
 # Внешний отступ прокрутки
 
-:badge[scroll-margin]{type=main scheme=on-surface size=1}
+:badge[scroll-margin]{type=main scheme=on-surface size=1} :badge[scroll-margin-ext]{type=tonal scheme=neutral size=1}
 
 Модификаторы из пакета `scroll-margin` позволяют задать дополнительные отступы вокруг элементов при прокрутке, улучшая
 видимость и удобство навигации.

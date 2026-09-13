@@ -3,6 +3,7 @@
 Утилиты категории «Прокрутка» помогают настраивать поведение скролла, цвет/размер трека и ползунка, а также snap-механики.
 
 ## Материалы раздела
+- [Ненавязчивая полоса прокрутки](/ru/utilities/overscroll/scroll-subtle/)
 - [Плавность прокрутки](/ru/utilities/overscroll/overscroll-behavior-smooth/)
 - [Поведение при прокрутке](/ru/utilities/overscroll/overscroll-behavior/)
 - [Цвет подложки прокрутки (scroll-backdrop-color)](/ru/utilities/overscroll/scroll-backdrop-color/)

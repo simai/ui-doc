@@ -1,12 +1,12 @@
 ---
 title: "Максимальная ширина"
 description: "Максимальная ширина (max-width)"
-tags: [max-width, sm, md, lg, xl, xxl]
+tags: [max-width, max-width-ext, sm, md, lg, xl, xxl]
 ---
 
 # Максимальная ширина
 
-:badge[max-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[max-width]{type=main scheme=on-surface size=1} :badge[max-width-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
 

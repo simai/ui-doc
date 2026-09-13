@@ -1723,6 +1723,10 @@
       "to": "ru/guide/layouts/introduction/what-is-layout"
     },
     {
+      "from": "ru/guide/practical/ai",
+      "to": "ru/guide/ai"
+    },
+    {
       "from": "ru/layout",
       "to": "ru/guide/layouts"
     },
@@ -2235,10 +2239,6 @@
       "to": "ru/guide/smart-components/templates-and-assets"
     },
     {
-      "from": "ru/guide/practical/ai",
-      "to": "ru/guide/ai"
-    },
-    {
       "from": "ru/start",
       "to": "ru/guide/introduction/quick-start"
     },
@@ -2285,6 +2285,130 @@
     {
       "from": "ru/start/vision",
       "to": "ru/guide/introduction/what-is-simai-framework"
+    },
+    {
+      "from": "ru/utilities/reference",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "ru/utilities/reference/background-fake",
+      "to": "ru/utilities/background/background-color"
+    },
+    {
+      "from": "ru/utilities/reference/background-gradient",
+      "to": "ru/utilities/background/background-gradient-type"
+    },
+    {
+      "from": "ru/utilities/reference/background-size-ext",
+      "to": "ru/utilities/background/background-size"
+    },
+    {
+      "from": "ru/utilities/reference/border-collapse",
+      "to": "ru/utilities/tables/table-border-spacing"
+    },
+    {
+      "from": "ru/utilities/reference/border-spacing",
+      "to": "ru/utilities/tables/table-border-spacing"
+    },
+    {
+      "from": "ru/utilities/reference/element-position-ext",
+      "to": "ru/utilities/layout/element-position"
+    },
+    {
+      "from": "ru/utilities/reference/flex-basis-ext",
+      "to": "ru/utilities/flex/flex-basis"
+    },
+    {
+      "from": "ru/utilities/reference/font-size",
+      "to": "ru/utilities/typography/text-size"
+    },
+    {
+      "from": "ru/utilities/reference/headers",
+      "to": "ru/utilities/typography/title-size"
+    },
+    {
+      "from": "ru/utilities/reference/height-ext",
+      "to": "ru/utilities/sizes/height"
+    },
+    {
+      "from": "ru/utilities/reference/loader-contract",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/utilities/reference/margin-ext",
+      "to": "ru/utilities/indents/margin"
+    },
+    {
+      "from": "ru/utilities/reference/max-height-ext",
+      "to": "ru/utilities/sizes/max-height"
+    },
+    {
+      "from": "ru/utilities/reference/max-width-ext",
+      "to": "ru/utilities/sizes/max-width"
+    },
+    {
+      "from": "ru/utilities/reference/mix-blend-mode",
+      "to": "ru/utilities/filters/mix-blend-mode"
+    },
+    {
+      "from": "ru/utilities/reference/offset",
+      "to": "ru/utilities/layout/element-position"
+    },
+    {
+      "from": "ru/utilities/reference/opacity",
+      "to": "ru/utilities/filters/opacity"
+    },
+    {
+      "from": "ru/utilities/reference/padding-ext",
+      "to": "ru/utilities/indents/padding"
+    },
+    {
+      "from": "ru/utilities/reference/position",
+      "to": "ru/utilities/layout/element-position"
+    },
+    {
+      "from": "ru/utilities/reference/ring-color",
+      "to": "ru/utilities/outline/ring"
+    },
+    {
+      "from": "ru/utilities/reference/ring-offset-color",
+      "to": "ru/utilities/outline/ring"
+    },
+    {
+      "from": "ru/utilities/reference/ring-offset-width",
+      "to": "ru/utilities/outline/ring"
+    },
+    {
+      "from": "ru/utilities/reference/ring-width",
+      "to": "ru/utilities/outline/ring"
+    },
+    {
+      "from": "ru/utilities/reference/scroll-margin-ext",
+      "to": "ru/utilities/overscroll/scroll-margin"
+    },
+    {
+      "from": "ru/utilities/reference/scroll-padding-ext",
+      "to": "ru/utilities/overscroll/scroll-padding"
+    },
+    {
+      "from": "ru/utilities/reference/scroll-subtle",
+      "to": "ru/utilities/overscroll/scroll-subtle"
+    },
+    {
+      "from": "ru/utilities/reference/table-hover",
+      "to": "ru/utilities/tables/tables-active-rows-and-cells"
+    },
+    {
+      "from": "ru/utilities/reference/theme",
+      "to": "ru/guide/fundamentals/colors-and-themes"
+    },
+    {
+      "from": "ru/utilities/reference/transform-translate-ext",
+      "to": "ru/utilities/transform/transform-translate"
+    },
+    {
+      "from": "ru/utilities/reference/width-ext",
+      "to": "ru/utilities/sizes/width"
     }
   ]
 }

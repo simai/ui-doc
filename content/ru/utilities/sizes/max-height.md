@@ -1,12 +1,12 @@
 ---
 title: "Максимальная высота"
 description: "Максимальная высота (max-height)"
-tags: [max-height, sm, md, lg, xl, xxl]
+tags: [max-height, max-height-ext, sm, md, lg, xl, xxl]
 ---
 
 # Максимальная высота
 
-:badge[max-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[max-height]{type=main scheme=on-surface size=1} :badge[max-height-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно ограничить максимальную высоту элемента. Это позволяет избежать
 чрезмерного растягивания блока при большом объёме контента, сохранив при этом адаптивность интерфейса.

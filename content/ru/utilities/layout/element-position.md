@@ -1,15 +1,19 @@
 ---
 title: "Позиция элемента"
 description: "Управляет способом позиционирования и логическими координатами элемента."
-tags: [element-position, sm, md, lg, xl, xxl]
+tags: [position, element-position, element-position-ext, offset, sm, md, lg, xl, xxl]
 ---
 
 # Позиция элемента
 
-:badge[element-position]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[position]{type=main scheme=on-surface size=1} :badge[element-position]{type=main scheme=on-surface size=1} :badge[element-position-ext]{type=tonal scheme=neutral size=1} :badge[offset]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы позиционирования управляют расположением элемента внутри родительского контейнера. Работают в сочетании с
 `position: relative/absolute/fixed/sticky`.
+
+Сначала выберите способ позиционирования классом `relative`, `absolute`,
+`fixed`, `sticky` или `static`. Затем задайте координаты. `offset-*` добавляет
+логический внешний отступ в долях ширины и учитывает направление текста.
 
 ## Пример
 
@@ -134,3 +138,5 @@ c, d, e, f, g, h, i), что позволяет гибко управлять п
 ```html
 <div class="md:top-0"></div>
 ```
+
+Для отрицательного значения префикс также ставится первым: `md:-top-a0`.

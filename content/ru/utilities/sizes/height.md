@@ -1,12 +1,12 @@
 ---
 title: "Высота"
 description: "Высота (height)"
-tags: [height, sm, md, lg, xl, xxl]
+tags: [height, height-ext, sm, md, lg, xl, xxl]
 ---
 
 # Высота
 
-:badge[height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[height]{type=main scheme=on-surface size=1} :badge[height-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать высоту элемента, адаптируя её под различные размеры экрана или
 особенности дизайна.

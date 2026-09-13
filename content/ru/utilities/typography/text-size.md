@@ -1,12 +1,12 @@
 ---
 title: "Размер текста"
 description: "Размер текста (text-size)"
-tags: [font-size-ext, sm, md, lg, xl, xxl]
+tags: [font-size, font-size-ext, sm, md, lg, xl, xxl]
 ---
 
 # Размер текста
 
-:badge[font-size-ext]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[font-size]{type=main scheme=on-surface size=1} :badge[font-size-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Количество поддерживаемых размеров шрифта уменьшилось с 13 до 12, а также обновлены соответствующие переменные и классы.
 Данные модификаторы изменяют размер шрифта и высоту строки одновременно.

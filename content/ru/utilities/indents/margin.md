@@ -1,12 +1,12 @@
 ---
 title: "Внешний отступ"
 description: "Внешний отступ (margin)"
-tags: [margin, sm, md, lg, xl, xxl]
+tags: [margin, margin-ext, sm, md, lg, xl, xxl]
 ---
 
 # Внешний отступ
 
-:badge[margin]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[margin]{type=main scheme=on-surface size=1} :badge[margin-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 Модификаторы `margin` управляют пространством вокруг элемента. Базовая шкала
 использует токены шага `--sf-space-*`, а расширенная — фиксированные токены
@@ -86,7 +86,9 @@ tags: [margin, sm, md, lg, xl, xxl]
   селекторы совместимости могут применить обе inline-стороны. Для направления всей страницы
   логические классы работают ожидаемо; дефект вложенного направления передан в
   Core и не скрывается обходным примером.
-- У семей `margin` и `margin-ext` есть responsive-варианты `sm`, `md`, `lg` и
-  `xl`. Варианты состояния `hover`, `focus` и `active` не выпускаются.
+- У семей `margin` и `margin-ext` есть адаптивные варианты `sm`, `md`, `lg`,
+  `xl` и `xxl`. Префикс ставится перед отрицательным классом: `md:-m-1`.
+  Запись `-md:m-1` неверна. Варианты состояния `hover`, `focus` и `active`
+  не выпускаются.
 - Публичных псевдонимов у классов нет. Префикс `-` обозначает отрицательное
   значение, а не отдельный state-вариант.

@@ -126,6 +126,70 @@ const cases = [
     ],
     pageSnippets: ['Responsive- и state-варианты', 'LTR и RTL', 'поддержки браузером', 'публичные псевдонимы'],
   },
+  {
+    id: 'table-border-spacing',
+    page: 'content/ru/utilities/tables/table-border-spacing.md',
+    route: 'ru/utilities/tables/table-border-spacing/index.html',
+    example: 'examples/utilities/tables/table-border-spacing/index.html',
+    families: ['border-collapse', 'border-spacing'],
+    classes: [
+      ['border-collapse', 'border-collapse/default', 'border-collapse: collapse;'],
+      ['border-separate', 'border-collapse/default', 'border-collapse: separate;'],
+      ['border-spacing-2', 'border-spacing/default', 'border-spacing: var(--sf-space-2);'],
+    ],
+    pageSnippets: ['работают только с таблицами', 'border-spacing-x-*', 'border-spacing-y-*'],
+  },
+  {
+    id: 'mix-blend-mode',
+    page: 'content/ru/utilities/filters/mix-blend-mode.md',
+    route: 'ru/utilities/filters/mix-blend-mode/index.html',
+    example: 'examples/utilities/filters/mix-blend-mode/index.html',
+    families: ['mix-blend-mode'],
+    classes: [
+      ['mix-blend-normal', 'mix-blend-mode/default', 'mix-blend-mode: normal;'],
+      ['mix-blend-multiply', 'mix-blend-mode/default', 'mix-blend-mode: multiply;'],
+      ['mix-blend-screen', 'mix-blend-mode/default', 'mix-blend-mode: screen;'],
+    ],
+    pageSnippets: ['декоративных слоёв', 'mix-blend-difference', 'isolate'],
+  },
+  {
+    id: 'opacity',
+    page: 'content/ru/utilities/filters/opacity.md',
+    route: 'ru/utilities/filters/opacity/index.html',
+    example: 'examples/utilities/filters/opacity/index.html',
+    families: ['opacity'],
+    classes: [
+      ['opacity-3', 'opacity/default', 'opacity: 0.3;'],
+      ['opacity-5', 'opacity/default', 'opacity: 0.5;'],
+      ['opacity-full', 'opacity/default', 'opacity: 1;'],
+    ],
+    pageSnippets: ['весь элемент', 'pointer-events-none', 'filter-opacity-*'],
+  },
+  {
+    id: 'ring',
+    page: 'content/ru/utilities/outline/ring.md',
+    route: 'ru/utilities/outline/ring/index.html',
+    example: 'examples/utilities/outline/ring/index.html',
+    families: ['ring-width', 'ring-color', 'ring-offset-width', 'ring-offset-color'],
+    classes: [
+      ['ring-2', 'ring-width/default', '--sf-ring-width: var(--sf-a2);'],
+      ['ring-primary', 'ring-color/default', '--sf-ring-color: var(--sf-outline-primary);'],
+      ['ring-offset-2', 'ring-offset-width/default', '--sf-ring-offset-width: var(--sf-a2);'],
+      ['ring-offset-surface', 'ring-offset-color/default', '--sf-ring-offset-color: var(--sf-surface-1);'],
+    ],
+    pageSnippets: ['не меняет его размер', 'фокусе с клавиатуры', 'ring-inset'],
+  },
+  {
+    id: 'scroll-subtle',
+    page: 'content/ru/utilities/overscroll/scroll-subtle.md',
+    route: 'ru/utilities/overscroll/scroll-subtle/index.html',
+    example: 'examples/utilities/overscroll/scroll-subtle/index.html',
+    families: ['scroll-subtle'],
+    classes: [
+      ['scroll-subtle', 'scroll-subtle/default', 'scrollbar-width: thin;'],
+    ],
+    pageSnippets: ['текущей темы', 'overflow-auto', 'повышенной контрастности'],
+  },
 ];
 
 const parseRule = (source) => {

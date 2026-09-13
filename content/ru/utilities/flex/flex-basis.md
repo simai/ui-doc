@@ -1,12 +1,12 @@
 ---
 title: "Базисный размер"
 description: "Базисный размер (flex-basis)"
-tags: [flex-basis, sm, md, lg, xl, xxl]
+tags: [flex-basis, flex-basis-ext, sm, md, lg, xl, xxl]
 ---
 
 # Базисный размер
 
-:badge[flex-basis]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[flex-basis]{type=main scheme=on-surface size=1} :badge[flex-basis-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать начальный размер флекс-элемента, определяя, сколько места он
 займёт до распределения оставшегося пространства.

@@ -5,11 +5,9 @@ declare(strict_types=1);
 $root = dirname(__DIR__);
 $contentRoot = $root . '/content/ru/utilities';
 $pages = [];
-$referencePages = [];
 $blockers = [];
 $metrics = [
     'learning_pages' => 0,
-    'reference_pages' => 0,
     'reusable_examples' => 0,
     'pages_with_example' => 0,
     'pages_with_badges' => 0,
@@ -23,20 +21,21 @@ foreach ($iterator as $file) {
     }
     $path = $file->getPathname();
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
-    if (str_contains($relative, '/reference/') || $relative === 'content/ru/utilities/reference.md') {
-        $referencePages[] = $path;
-    } else {
-        $pages[] = $path;
-    }
+    $pages[] = $path;
 }
 sort($pages, SORT_STRING);
-sort($referencePages, SORT_STRING);
 $metrics['learning_pages'] = count($pages);
-$metrics['reference_pages'] = count($referencePages);
+
+if (is_file($contentRoot . '/reference.md') || is_dir($contentRoot . '/reference')) {
+    $blockers[] = ['code' => 'parallel_technical_reference_is_public'];
+}
 
 foreach ($pages as $path) {
     $markdown = (string) file_get_contents($path);
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
+    if (preg_match_all('/^#\s+[^#].*$/m', $markdown) !== 1) {
+        $blockers[] = ['code' => 'single_h1_required', 'path' => $relative];
+    }
     if (preg_match('/^title:\s*["\']?[^\n]+\([a-z][a-z0-9_.:\/ -]*\)["\']?\s*$/mi', $markdown) === 1) {
         $blockers[] = ['code' => 'technical_suffix_in_title', 'path' => $relative];
     }

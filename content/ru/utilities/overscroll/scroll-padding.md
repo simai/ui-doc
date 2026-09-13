@@ -1,12 +1,12 @@
 ---
 title: "Внутренний отступ прокрутки"
 description: "Внутренний отступ прокрутки (scroll-padding)"
-tags: [scroll-padding]
+tags: [scroll-padding, scroll-padding-ext]
 ---
 
 # Внутренний отступ прокрутки
 
-:badge[scroll-padding]{type=main scheme=on-surface size=1}
+:badge[scroll-padding]{type=main scheme=on-surface size=1} :badge[scroll-padding-ext]{type=tonal scheme=neutral size=1}
 
 Модификаторы из пакета `scroll-padding` позволяют задать внутренние отступы при прокрутке, чтобы элементы при переходе к
 ним оказывались с заданным отступом от края области просмотра.

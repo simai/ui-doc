@@ -1,8 +1,10 @@
-# Фильтры элемента
+# Эффекты и фильтры
 
-Утилиты категории Фильтры элемента помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
+Утилиты раздела меняют внешний вид элемента: прозрачность, размытие, цвет
+и смешивание с фоном.
 
 ## Материалы раздела
+- [Прозрачность](/ru/utilities/filters/opacity/)
 - [Размытие элемента (filter-blur)](/ru/utilities/filters/filter-blur/)
 - [Яркость элемента (filter-brightness)](/ru/utilities/filters/filter-brightness/)
 - [Контрастность элемента (filter-contrast)](/ru/utilities/filters/filter-contrast/)
@@ -12,6 +14,7 @@
 - [Прозрачность элемента (filter-opacity)](/ru/utilities/filters/filter-opacity/)
 - [Насыщенность элемента (filter-saturate)](/ru/utilities/filters/filter-saturate/)
 - [Сепия элемента (filter-sepia)](/ru/utilities/filters/filter-sepia/)
+- [Смешивание цветов](/ru/utilities/filters/mix-blend-mode/)
 
 ## Связанные категории
 - [Фильтры подложки](/ru/utilities/backdrop-filter/)

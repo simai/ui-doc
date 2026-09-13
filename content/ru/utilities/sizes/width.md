@@ -1,12 +1,12 @@
 ---
 title: "Ширина"
 description: "Ширина (width)"
-tags: [width, sm, md, lg, xl, xxl]
+tags: [width, width-ext, sm, md, lg, xl, xxl]
 ---
 
 # Ширина
 
-:badge[width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[width]{type=main scheme=on-surface size=1} :badge[width-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
 
 В SIMAI Framework с помощью модификаторов можно задать ширину элемента. С помощью данных классов можно быстро определить
 ширину блока, используя как фиксированные размеры, так и пропорциональные величины, зависящие от родительского элемента

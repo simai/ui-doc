@@ -1,12 +1,12 @@
 ---
 title: "Смещение"
 description: "Классы смещения transform-translate"
-tags: [transform-translate, hover]
+tags: [transform-translate, transform-translate-ext, hover]
 ---
 
 # Смещение
 
-:badge[transform-translate]{type=main scheme=on-surface size=1}
+:badge[transform-translate]{type=main scheme=on-surface size=1} :badge[transform-translate-ext]{type=tonal scheme=neutral size=1}
 
 `transform-translate` сдвигает элемент по оси `x` и/или `y`.
 

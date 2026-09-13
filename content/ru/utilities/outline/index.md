@@ -8,6 +8,9 @@
 - [Отступ внешней границы](/ru/utilities/outline/outline-offset/)
 - [Стиль внешней границы](/ru/utilities/outline/outline-style/)
 - [Цвет внешней границы](/ru/utilities/outline/outline-color/)
+- [Фокусное кольцо](/ru/utilities/outline/ring/)
+- [Внутреннее кольцо](/ru/utilities/outline/ring-inset/)
+- [Прозрачность кольца](/ru/utilities/outline/ring-opacity/)
 
 ## Связанные категории
 - [Граница](/ru/utilities/border/)

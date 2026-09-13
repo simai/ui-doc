@@ -47,6 +47,8 @@ const pageAliases = documentationMap.page_aliases;
 
 const internalFamilies = {
   js: 'runtime bundle, not a CSS utility family',
+  ...Object.fromEntries(Object.entries(documentationMap.non_visual_families ?? {})
+    .map(([family, value]) => [family, value.reason])),
 };
 
 const families = fs.readdirSync(utilityRoot, { withFileTypes: true })
@@ -88,7 +90,8 @@ const requiredSnippets = {
   'content/ru/utilities/sizes/height.md': ['h-min', 'h-content-min'],
   'content/ru/utilities/layout/isolation.md': ['isolation-auto'],
   'content/ru/utilities/transform/transform-translate.md': ['hover:-translate-x-1'],
-  'content/ru/utilities/reference/loader-contract.md': ['md:-m-1', 'md:-top-a0'],
+  'content/ru/utilities/indents/margin.md': ['md:-m-1'],
+  'content/ru/utilities/layout/element-position.md': ['md:-top-a0'],
 };
 
 const snippetFailures = [];
@@ -138,8 +141,7 @@ for (const check of forbiddenPatterns) {
   if (check.pattern.test(source)) snippetFailures.push(`${check.file}: ${check.message}`);
 }
 
-for (const page of pages.filter((candidate) => candidate.includes(`${path.sep}reference${path.sep}`))) {
-  if (path.basename(page) === 'loader-contract.md') continue;
+for (const page of pages) {
   const source = fs.readFileSync(page, 'utf8');
   if (/(?:^|\s)-(?:sm|md|lg|xl|hover|focus|active):/m.test(source)) {
     snippetFailures.push(`${path.relative(projectRoot, page)}: malformed negative modifier order`);

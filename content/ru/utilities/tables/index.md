@@ -10,3 +10,4 @@
 - [Границы таблицы](/ru/utilities/tables/table-border/)
 - [Границы вокруг ячеек](/ru/utilities/tables/table-border-cells/)
 - [Макет таблицы](/ru/utilities/tables/table-layout/)
+- [Границы и интервалы таблицы](/ru/utilities/tables/table-border-spacing/)
