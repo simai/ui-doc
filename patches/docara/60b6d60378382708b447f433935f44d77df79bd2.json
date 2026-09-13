@@ -1,0 +1,31 @@
+{
+  "schema": "ui-doc.docara_compatibility_patch.v1",
+  "package": "simai/docara",
+  "locked_version": "v2.9.0",
+  "locked_reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
+  "candidate_reference": "60b6d60378382708b447f433935f44d77df79bd2",
+  "candidate_base_reference": "1af9ff750a1ab3c479ec42f19860317c8c6917aa",
+  "patch": "60b6d60378382708b447f433935f44d77df79bd2.patch",
+  "files": [
+    {
+      "path": "resources/portable/declarative-shell.css",
+      "base_sha256": "59fa9ec0f99f8cc8b5025af846e95ada99749af512a7e7081d714a0feaf29b18",
+      "target_sha256": "0447bc10f5175f5a982a5a08a3a1efbb022befe5505ae2fe10cc88edf1851b36"
+    },
+    {
+      "path": "resources/portable/declarative-shell.js",
+      "base_sha256": "71f8e1a01d00e388d06c7168d879b358553ca620af113898d36b029872aca473",
+      "target_sha256": "f68618dfe8abf61ed934df7d5c0c1d11e69da81d4fe16ac298a465a858de5130"
+    },
+    {
+      "path": "src/I18n/UiCopy.php",
+      "base_sha256": "cdbb586559da03dafb8c3cf937b5c93a72c9115487f4bc64412df429d0be9fcb",
+      "target_sha256": "a6b57ebc73f6ae4f62a6037d78f7ef20c7e7f0ff0d1ac6523cd2fee18d283906"
+    },
+    {
+      "path": "src/PortableSite/PortableExampleRenderer.php",
+      "base_sha256": "7e73185feb3077207bf8dd0cd6ea8d1274470a7624436af7cbd439561b15cec3",
+      "target_sha256": "0de29e396637f89710eb7b06f54bb6e242653b3c8fa7d1d8b2455a9f63cca886"
+    }
+  ]
+}

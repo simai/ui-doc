@@ -1,0 +1,242 @@
+diff --git a/resources/portable/declarative-shell.css b/resources/portable/declarative-shell.css
+index 87fb4250..1d0a4fcd 100644
+--- a/resources/portable/declarative-shell.css
++++ b/resources/portable/declarative-shell.css
+@@ -159,9 +159,18 @@ sf-alert,sf-button{display:block}
+ [data-docara-example-wrap-active="true"] [data-docara-example-panel] .docara-code-scroll code{min-inline-size:0;white-space:pre-wrap;overflow-wrap:anywhere}
+ [data-docara-example-wrap-active="true"] [data-docara-example-panel] .docara-code-scroll .hljs-ln{inline-size:100%;table-layout:fixed}
+ [data-docara-example-wrap-active="true"] [data-docara-example-panel] .docara-code-scroll .hljs-ln-code{white-space:pre-wrap;overflow-wrap:anywhere}
+-[data-docara-example-copy][hidden],[data-docara-example-fullscreen][hidden],[data-docara-example-wrap][hidden]{display:none}
+-.docara-example-preview:fullscreen{display:flex;flex-direction:column;inline-size:100%;block-size:100%;margin:0;border:0;border-radius:0;background:var(--sf-surface-0)}
+-.docara-example-preview:fullscreen .docara-example-preview__panels{flex:1;min-block-size:0;overflow:auto}
++[data-docara-example-copy][hidden],[data-docara-example-viewer][hidden],[data-docara-example-viewports][hidden],[data-docara-example-wrap][hidden]{display:none}
++.docara-example-preview__viewports{display:flex;align-items:center;gap:var(--sf-space-1\/3)}
++.docara-example-preview__viewport{min-block-size:var(--sf-ui-1--control-height);margin:0;padding-inline:var(--sf-space-1);border:1px solid transparent;border-radius:var(--sf-radius-1);background:transparent;color:var(--sf-on-surface-variant);font:inherit;cursor:pointer}
++.docara-example-preview__viewport:hover,.docara-example-preview__viewport:focus-visible{color:var(--sf-on-surface);background:var(--sf-surface-container-hover)}
++.docara-example-preview__viewport:focus-visible{outline:2px solid var(--sf-primary);outline-offset:2px}
++.docara-example-preview__viewport[aria-pressed="true"]{border-color:var(--sf-outline);background:var(--sf-surface-container);color:var(--sf-on-surface)}
++.docara-example-viewer-dialog{box-sizing:border-box;inline-size:100vw;max-inline-size:none;block-size:100dvh;max-block-size:none;margin:0;padding:0;border:0;background:var(--sf-surface-0);color:var(--sf-on-surface)}
++.docara-example-viewer-dialog::backdrop{background:color-mix(in srgb,var(--sf-scrim,var(--sf-on-surface)) 48%,transparent)}
++.docara-example-preview[data-docara-example-viewer-active="true"]{display:flex;flex-direction:column;inline-size:100%;block-size:100%;margin:0;border:0;border-radius:0;background:var(--sf-surface-0)}
++.docara-example-preview[data-docara-example-viewer-active="true"] .docara-example-preview__panels{display:flex;flex:1;min-block-size:0;overflow:hidden}
++.docara-example-preview[data-docara-example-viewer-active="true"] [data-docara-example-panel="example"].is-active{box-sizing:border-box;display:flex;flex:1;min-inline-size:0;min-block-size:0;align-items:flex-start;justify-content:center;overflow:auto;background:var(--sf-surface-container-low)}
++.docara-example-preview[data-docara-example-viewer-active="true"] iframe[data-docara-example-frame]{flex:0 0 auto;max-inline-size:none;background:var(--sf-surface-0);box-shadow:var(--sf-ui-shadow-1)}
+ [data-docara-tree-toggle]+ul[hidden]{display:none}
+ .docara-step{position:relative;grid-template-columns:2.5rem minmax(0,1fr);column-gap:var(--sf-space-1);min-block-size:2.5rem;padding-block-end:var(--sf-space-2)}
+ .docara-step:last-child{padding-block-end:0}
+@@ -191,6 +200,7 @@ sf-alert,sf-button{display:block}
+   .docara-landing [data-docara-container]{padding:var(--sf-space-2)}
+ }
+ @media(max-width:600px){
++  [data-docara-example-viewer]{display:none!important}
+   .docara-previous-next{flex-direction:column}
+   .docara-document-link--next{order:-1;justify-content:flex-start;text-align:start}
+ }
+diff --git a/resources/portable/declarative-shell.js b/resources/portable/declarative-shell.js
+index c44705f7..61504cdb 100644
+--- a/resources/portable/declarative-shell.js
++++ b/resources/portable/declarative-shell.js
+@@ -322,6 +322,16 @@
+   }
+   var docaraExamples=Array.from(document.querySelectorAll('[data-docara-example]'));
+   var docaraExampleFrames=Array.from(document.querySelectorAll('iframe[data-docara-example-frame]'));
++  var exampleViewportStorageKey='docara.example.viewport';
++  var exampleViewportWidths={desktop:1280,tablet:768,mobile:390};
++  function storedExampleViewport(){
++    try{
++      var stored=sessionStorage.getItem(exampleViewportStorageKey);
++      if(Object.prototype.hasOwnProperty.call(exampleViewportWidths,stored)){return stored}
++    }catch(error){}
++    return'desktop';
++  }
++  var sharedExampleViewport=storedExampleViewport();
+   var sourceWrapStorageKey='docara.source.wrap';
+   function storedSourceWrap(){
+     try{
+@@ -490,21 +500,79 @@
+     var tabs=owned('[data-docara-example-tab]');
+     var panels=owned('[data-docara-example-panel]');
+     var copyButton=owned('[data-docara-example-copy]')[0]||null;
+-    var fullscreenButton=owned('[data-docara-example-fullscreen]')[0]||null;
++    var viewerButton=owned('[data-docara-example-viewer]')[0]||null;
++    var viewportControls=owned('[data-docara-example-viewports]')[0]||null;
++    var viewportButtons=owned('[data-docara-example-viewport]');
++    var previewFrame=owned('iframe[data-docara-example-frame]')[0]||null;
+     var wrapButton=owned('[data-docara-example-wrap]')[0]||null;
+     if(!tabs.length||!panels.length)return;
+-    function isFullscreen(){return document.fullscreenElement===example}
+-    function syncFullscreen(){
+-      if(!fullscreenButton)return;
+-      var active=isFullscreen();
++    var viewerDialog=null,viewerPlaceholder=null;
++    var activeViewport=sharedExampleViewport;
++    function isViewerOpen(){return Boolean(viewerDialog&&viewerDialog.open&&example.parentElement===viewerDialog)}
++    function setViewport(viewport,persist){
++      if(!previewFrame||!Object.prototype.hasOwnProperty.call(exampleViewportWidths,viewport))return;
++      activeViewport=viewport;
++      sharedExampleViewport=viewport;
++      example.dataset.docaraExampleViewport=viewport;
++      previewFrame.style.inlineSize=exampleViewportWidths[viewport]+'px';
++      previewFrame.style.maxInlineSize='none';
++      viewportButtons.forEach(function(button){
++        var active=button.dataset.docaraExampleViewport===viewport;
++        var label=message('examples.viewport_'+button.dataset.docaraExampleViewport);
++        if(button.textContent!==label){button.textContent=label}
++        button.setAttribute('aria-pressed',active?'true':'false');
++        button.setAttribute('aria-label',label+' · '+exampleViewportWidths[button.dataset.docaraExampleViewport]+' px');
++      });
++      if(persist){
++        try{sessionStorage.setItem(exampleViewportStorageKey,viewport)}catch(error){}
++        document.dispatchEvent(new CustomEvent('docara:example-viewport-change',{detail:{viewport:viewport}}));
++      }
++      requestExampleHeight(previewFrame);
++    }
++    function resetViewport(){
++      if(!previewFrame)return;
++      delete example.dataset.docaraExampleViewport;
++      previewFrame.style.removeProperty('inline-size');
++      previewFrame.style.removeProperty('max-inline-size');
++      requestExampleHeight(previewFrame);
++    }
++    function syncViewer(){
++      if(!viewerButton)return;
++      var active=isViewerOpen();
+       var selected=example.dataset.sourceActive!=='true';
+-      fullscreenButton.hidden=!active&&!selected;
+-      fullscreenButton.setAttribute('aria-pressed',active?'true':'false');
+-      fullscreenButton.setAttribute('aria-label',message(active?'examples.fullscreen_exit':'examples.fullscreen'));
+-      var icon=fullscreenButton.querySelector('sf-icon');
++      viewerButton.hidden=!active&&!selected;
++      viewerButton.setAttribute('aria-pressed',active?'true':'false');
++      viewerButton.setAttribute('aria-label',message(active?'examples.viewer_exit':'examples.viewer'));
++      if(viewportControls){
++        viewportControls.hidden=!active||!selected;
++        viewportControls.setAttribute('aria-label',message('examples.viewport_group'));
++      }
++      if(active){setViewport(activeViewport,false)}else{resetViewport()}
++      var icon=viewerButton.querySelector('sf-icon');
+       if(icon){icon.setAttribute('icon',active
+-        ?(fullscreenButton.dataset.fullscreenExitIcon||'fullscreen_exit')
+-        :(fullscreenButton.dataset.fullscreenIcon||'fullscreen'))}
++        ?(viewerButton.dataset.viewerExitIcon||'close')
++        :(viewerButton.dataset.viewerIcon||'devices'))}
++    }
++    function restoreViewer(){
++      delete example.dataset.docaraExampleViewerActive;
++      if(viewerPlaceholder&&viewerPlaceholder.parentNode){viewerPlaceholder.parentNode.insertBefore(example,viewerPlaceholder);viewerPlaceholder.remove()}
++      viewerPlaceholder=null;
++      if(viewerDialog&&viewerDialog.parentNode){viewerDialog.remove()}
++      syncViewer();
++      if(viewerButton){viewerButton.focus()}
++    }
++    function openViewer(){
++      if(!viewerDialog||isViewerOpen())return;
++      viewerPlaceholder=document.createComment('docara-example-viewer');
++      example.parentNode.insertBefore(viewerPlaceholder,example);
++      document.body.appendChild(viewerDialog);
++      viewerDialog.appendChild(example);
++      example.dataset.docaraExampleViewerActive='true';
++      viewerDialog.setAttribute('aria-label',message('examples.viewer_dialog'));
++      try{viewerDialog.showModal()}catch(error){restoreViewer();return}
++      syncViewer();
++      var selectedViewport=viewportButtons.find(function(button){return button.dataset.docaraExampleViewport===activeViewport});
++      if(selectedViewport){selectedViewport.focus()}
+     }
+     function syncWrap(active){
+       if(!wrapButton)return;
+@@ -528,7 +596,7 @@
+       });
+       example.dataset.sourceActive=key==='example'?'false':'true';
+       if(copyButton){copyButton.hidden=key==='example'}
+-      syncFullscreen();
++      syncViewer();
+       syncWrap(sourceWrapActive);
+       positionExampleIndicator(example,true);
+       if(moveFocus){tab.focus()}
+@@ -545,16 +613,27 @@
+         event.preventDefault();selectTab(tabs[next],true);
+       });
+     });
+-    if(fullscreenButton){
+-      if(typeof example.requestFullscreen!=='function'){
+-        fullscreenButton.remove();
+-        fullscreenButton=null;
++    viewportButtons.forEach(function(button){
++      button.addEventListener('click',function(){setViewport(button.dataset.docaraExampleViewport,true)});
++    });
++    document.addEventListener('docara:example-viewport-change',function(event){
++      var viewport=event.detail&&event.detail.viewport;
++      if(!Object.prototype.hasOwnProperty.call(exampleViewportWidths,viewport))return;
++      activeViewport=viewport;
++      if(isViewerOpen()){setViewport(viewport,false)}
++    });
++    if(viewerButton){
++      viewerDialog=document.createElement('dialog');
++      viewerDialog.className='docara-example-viewer-dialog';
++      if(typeof viewerDialog.showModal!=='function'){
++        if(viewportControls){viewportControls.remove();viewportControls=null}
++        viewerButton.remove();
++        viewerButton=null;
+       }else{
+-        fullscreenButton.addEventListener('click',function(){
+-          var operation=isFullscreen()?document.exitFullscreen():example.requestFullscreen();
+-          if(operation&&typeof operation.catch==='function'){operation.catch(syncFullscreen)}
++        viewerButton.addEventListener('click',function(){
++          if(isViewerOpen()){viewerDialog.close()}else{openViewer()}
+         });
+-        document.addEventListener('fullscreenchange',syncFullscreen);
++        viewerDialog.addEventListener('close',restoreViewer);
+       }
+     }
+     if(wrapButton){
+@@ -612,7 +691,7 @@
+         }).catch(function(){showCopyState(false)});
+       });
+     }
+-    syncFullscreen();
++    syncViewer();
+     syncWrap(sourceWrapActive);
+     positionExampleIndicator(example,false);
+   });
+diff --git a/src/I18n/UiCopy.php b/src/I18n/UiCopy.php
+index fbe95628..e01fdf46 100644
+--- a/src/I18n/UiCopy.php
++++ b/src/I18n/UiCopy.php
+@@ -85,8 +85,13 @@ final readonly class UiCopy
+         'code.copied' => 'Copied',
+         'code.wrap' => 'Wrap source lines',
+         'code.unwrap' => 'Keep original source lines',
+-        'examples.fullscreen' => 'Open example fullscreen',
+-        'examples.fullscreen_exit' => 'Exit fullscreen',
++        'examples.viewer' => 'Check responsive preview',
++        'examples.viewer_exit' => 'Exit responsive preview',
++        'examples.viewer_dialog' => 'Responsive example preview',
++        'examples.viewport_group' => 'Preview width',
++        'examples.viewport_desktop' => 'Desktop',
++        'examples.viewport_tablet' => 'Tablet',
++        'examples.viewport_mobile' => 'Mobile',
+     ];
+ 
+     public function __construct(private Translator $translator) {}
+diff --git a/src/PortableSite/PortableExampleRenderer.php b/src/PortableSite/PortableExampleRenderer.php
+index 75a39411..4d8d4254 100644
+--- a/src/PortableSite/PortableExampleRenderer.php
++++ b/src/PortableSite/PortableExampleRenderer.php
+@@ -68,10 +68,14 @@ final class PortableExampleRenderer
+             . '<div role="tablist" aria-label="' . $this->escape($exampleLabel)
+             . '" class="docara-example-preview__tabs">' . implode('', $tabs) . '</div>'
+             . '<div class="docara-example-preview__actions">'
+-            . ($fullscreen ? '<button type="button" data-docara-example-fullscreen hidden aria-pressed="false" aria-label="Open example fullscreen"'
+-                . ' data-fullscreen-icon="fullscreen" data-fullscreen-exit-icon="fullscreen_exit"'
++            . ($fullscreen && $resolvedPreview === 'sandbox' ? '<div data-docara-example-viewports hidden role="group" aria-label="Preview width" class="docara-example-preview__viewports">'
++                . '<button type="button" data-docara-example-viewport="desktop" aria-pressed="true" class="docara-example-preview__viewport">Desktop</button>'
++                . '<button type="button" data-docara-example-viewport="tablet" aria-pressed="false" class="docara-example-preview__viewport">Tablet</button>'
++                . '<button type="button" data-docara-example-viewport="mobile" aria-pressed="false" class="docara-example-preview__viewport">Mobile</button>'
++                . '</div><button type="button" data-docara-example-viewer hidden aria-pressed="false" aria-label="Check responsive preview"'
++                . ' data-viewer-icon="devices" data-viewer-exit-icon="close"'
+                 . ' class="docara-example-preview__action sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1 inline-grid items-cross-center content-main-center m-0">'
+-                . '<sf-icon icon="fullscreen" aria-hidden="true"></sf-icon></button>' : '')
++                . '<sf-icon icon="devices" aria-hidden="true"></sf-icon></button>' : '')
+             . ($wrap ? '<button type="button" data-docara-example-wrap hidden aria-pressed="false" aria-label="Wrap source lines"'
+                 . ' data-wrap-icon="wrap_text" data-unwrap-icon="format_text_overflow"'
+                 . ' class="docara-example-preview__action sf-icon-button sf-icon-button--icon sf-icon-button--on-surface sf-icon-button--link sf-icon-button--size-1 inline-grid items-cross-center content-main-center m-0">'

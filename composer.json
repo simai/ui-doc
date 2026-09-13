@@ -23,6 +23,7 @@
     "scripts": {
         "docara:compatibility:apply": "@php scripts/apply-docara-compatibility-patch.php --apply",
         "docara:compatibility:check": "@php scripts/apply-docara-compatibility-patch.php --check",
+        "docs:viewer:check": "@php scripts/audit-example-viewer.php",
         "docs:versions:sync": "@php scripts/sync-framework-documentation-versions.php",
         "docs:versions:check": [
             "@php scripts/sync-framework-documentation-versions.php --check",
