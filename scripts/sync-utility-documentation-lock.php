@@ -35,10 +35,17 @@ foreach ($source['entities'] ?? [] as $entity) {
 
     $key = (string) $entity['key'];
     $family = substr($key, strlen('utility.'));
-    $stem = isset($pagesByStem[$family])
-        ? $family
-        : ($map['page_aliases'][$family] ?? null);
-    $candidates = is_string($stem) ? ($pagesByStem[$stem] ?? []) : [];
+    $nonVisual = $map['non_visual_families'][$family] ?? null;
+    if (is_array($nonVisual) && isset($nonVisual['page'])) {
+        $stem = null;
+        $nonVisualPage = $root . '/' . $nonVisual['page'];
+        $candidates = is_file($nonVisualPage) ? [$nonVisualPage] : [];
+    } else {
+        $stem = isset($pagesByStem[$family])
+            ? $family
+            : ($map['page_aliases'][$family] ?? null);
+        $candidates = is_string($stem) ? ($pagesByStem[$stem] ?? []) : [];
+    }
     if (count($candidates) !== 1) {
         $errors[] = ['key' => $key, 'code' => 'page_not_unique', 'stem' => $stem];
         continue;

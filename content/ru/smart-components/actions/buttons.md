@@ -86,4 +86,4 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 ## Источник
 
 - `simai/ui-smart@77feccf8867a5676bad2cd78fbb3497d25816fac:smart/buttons`
-- `simai/ui@1e886550a147bf63d7c3a4440af5e5855aaee485:distr/rule/rule.json#name=cl-buttons`
+- `simai/ui@aa74f029c1b4aa7fbbed61844866ba0172bef0a6:distr/rule/rule.json#name=cl-buttons`

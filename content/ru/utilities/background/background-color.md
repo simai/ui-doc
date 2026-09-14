@@ -1,18 +1,17 @@
 ---
 title: "Цвет фона"
 description: "Цвет фона"
-tags: [background-color, background-fake]
+tags: [background-color]
 ---
 
 # Цвет фона
 
-:badge[background-color]{type=main scheme=on-surface size=1} :badge[background-fake]{type=tonal scheme=neutral size=1}
+:badge[background-color]{type=main scheme=on-surface size=1}
 
 С помощью модификаторов цвета фона можно задать фон элемента, включая состояния при наведении (`hover`) и при активном
 состоянии (`active`).
 
-`bg-fake` делает слой прозрачным, сохраняя единый класс для мест, где фон
-включается условиями или заменяется темой.
+Для прозрачного фона используйте `bg-transparent`.
 
 ## Наглядный пример
 

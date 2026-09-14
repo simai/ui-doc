@@ -17,7 +17,6 @@
     "fill-brand": "svg-fill-brand",
     "fill-rule": "svg-fill-rule",
     "flex": "flexibility",
-    "background-fake": "background-color",
     "background-gradient": "background-gradient-type",
     "background-size-ext": "background-size",
     "border-collapse": "table-border-spacing",
@@ -76,7 +75,6 @@
     }
   },
   "legacy_reference_families": [
-    "background-fake",
     "background-gradient",
     "background-size-ext",
     "border-collapse",
@@ -102,12 +100,10 @@
     "scroll-padding-ext",
     "scroll-subtle",
     "table-hover",
-    "theme",
     "transform-translate-ext",
     "width-ext"
   ],
   "example_fallbacks": {
-    "background-fake": "utilities/background/background-pattern",
     "background-gradient": "utilities/background/background-gradient-type",
     "background-size-ext": "utilities/background/background-size",
     "border-collapse": "utilities/tables/table-border-spacing",
