@@ -3,11 +3,11 @@
 declare(strict_types=1);
 $root = dirname(__DIR__);
 $groups = [
- 'introduction' => ['Знакомство', 10, ['what-is-layout'=>['Что такое макет',10], 'document-flow'=>['Как макет превращается в HTML',20], 'levels'=>['Страница, секция, блок и компонент',30]]],
- 'building' => ['Устройство макета', 20, ['page'=>['Страница',10], 'section'=>['Секция',20], 'block'=>['Блок',30], 'component'=>['Компонент в макете',40], 'smart-component'=>['Smart-компонент в макете',50], 'complex-smart-component'=>['Комплексный Smart-компонент',60], 'slots'=>['Слоты и порядок элементов',70]]],
- 'content-and-data' => ['Содержимое и данные', 30, ['structured-text'=>['Структурированный текст без HTML',10], 'data-sources'=>['Данные и внешние источники',20], 'rendering-boundary'=>['Рендеринг и граница проекта',30]]],
+ 'introduction' => ['Знакомство', 10, ['what-is-layout'=>['Что такое макет',10], 'recipe-document-html'=>['Recipe, Document и HTML',20], 'document-flow'=>['Как проходит сборка',30], 'levels'=>['Страница, секция, блок и компонент',40]]],
+ 'building' => ['Устройство макета', 20, ['recipe-templates-and-variants'=>['Шаблоны, вставки и варианты',10], 'page'=>['Страница',20], 'section'=>['Секция',30], 'block'=>['Блок',40], 'component'=>['Компонент в макете',50], 'smart-component'=>['Smart-компонент в макете',60], 'complex-smart-component'=>['Комплексный Smart-компонент',70], 'slots'=>['Слоты и порядок элементов',80]]],
+ 'content-and-data' => ['Содержимое и данные', 30, ['snapshots-and-cache'=>['Снимок данных и кеш',10], 'structured-text'=>['Структурированный текст без HTML',20], 'data-sources'=>['Данные и внешние источники',30], 'rendering-boundary'=>['Рендеринг и граница проекта',40]]],
  'examples' => ['Готовые примеры', 40, ['information-page'=>['Пример: информационная страница',10], 'catalog'=>['Пример: каталог товаров',20], 'dashboard'=>['Пример: составной интерфейс',30]]],
- 'reference' => ['Справочник', 50, ['document'=>['Документ макета',10], 'type-manifest'=>['Manifest типа',20], 'api'=>['API проверки и рендеринга',30], 'diagnostics'=>['Ошибки и диагностика',40], 'versions'=>['Версии и совместимость',50], 'custom-type'=>['Создание собственного типа',60], 'studio-inspector'=>['Инспектор макета',70]]],
+ 'reference' => ['Справочник', 50, ['document'=>['Документ макета',10], 'type-manifest'=>['Manifest типа',20], 'api'=>['API сборки и рендеринга',30], 'diagnostics'=>['Ошибки и диагностика',40], 'versions'=>['Версии и совместимость',50], 'custom-type'=>['Создание собственного типа',60], 'studio-inspector'=>['Инспектор макета',70]]],
 ];
 $errors=[]; $paragraphs=[]; $count=0;
 $read=function(string $path)use($root){$file="$root/$path";if(!is_file($file))throw new RuntimeException("Missing $path");return (string)file_get_contents($file);};

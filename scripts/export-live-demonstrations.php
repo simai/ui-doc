@@ -34,6 +34,12 @@ foreach ($ids as $id) {
     file_put_contents($target.'/index.html',$html);
     foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($target)) as $f) if($f->isFile()) $files[]=['path'=>substr($f->getPathname(),strlen($build)+1),'sha256'=>hash_file('sha256',$f->getPathname())];
 }
+$recipeFixture=$root.'/assets/examples/composition/header-switch.json';
+$recipeTarget=$build.'/demos/guide/composition-recipe/header-switch.json';
+if(!is_dir(dirname($recipeTarget)))mkdir(dirname($recipeTarget),0775,true);
+copy($recipeFixture,$recipeTarget);
+$inputs[substr($recipeFixture,strlen($root)+1)]=hash_file('sha256',$recipeFixture);
+$files[]=['path'=>substr($recipeTarget,strlen($build)+1),'sha256'=>hash_file('sha256',$recipeTarget)];
 usort($files,static fn($a,$b)=>strcmp($a['path'],$b['path']));ksort($inputs);
 file_put_contents($build.'/.docara/standalone-examples.json',json_encode(['schema'=>'docara.standalone_examples.v1','generator_sha256'=>hash_file('sha256',__FILE__),'inputs_sha256'=>hash('sha256',json_encode($inputs)),'files'=>$files],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)."\n");
-echo json_encode(['status'=>'pass','live_demonstrations'=>count($ids)])."\n";
+echo json_encode(['status'=>'pass','live_demonstrations'=>count($ids),'verified_fixtures'=>1])."\n";

@@ -10,8 +10,8 @@ const args = process.argv.slice(2);
 const arg = (name) => args.find((item) => item.startsWith(`${name}=`))?.slice(name.length + 1);
 const refresh = args.includes('--refresh');
 const jsonOutput = args.includes('--json');
-const sourceRoot = arg('--source-root');
-const coreRoot = arg('--core-root');
+const sourceRoot = arg('--source-root') || process.env.SIMAI_UI_SOURCE_ROOT;
+const coreRoot = arg('--core-root') || process.env.SIMAI_UI_CORE_ROOT;
 const contractPath = path.join(root, 'contracts/documentation/composition.json');
 const sha256 = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex');
 const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -74,6 +74,43 @@ if (sourceRoot) {
   if (!sourceFixture.equals(docsFixture)) add('public_fixture_drift', { source: contract.fixture.source, public_copy: contract.fixture.public_copy });
 }
 
+const recipeCandidate = contract.recipe_candidate;
+if (recipeCandidate) {
+  if (!/^[0-9a-f]{40}$/u.test(recipeCandidate.source_revision || '')) add('recipe_source_revision_invalid');
+  if (!/^[0-9a-f]{40}$/u.test(recipeCandidate.core_revision || '')) add('recipe_core_revision_invalid');
+
+  for (const pageContract of recipeCandidate.pages ?? []) {
+    const file = path.join(root, pageContract.path);
+    if (!fs.existsSync(file)) { add('recipe_page_missing', { path: pageContract.path }); continue; }
+    const text = fs.readFileSync(file, 'utf8');
+    for (const snippet of pageContract.snippets ?? []) if (!text.includes(snippet)) add('recipe_page_fact_missing', { path: pageContract.path, snippet });
+  }
+
+  for (const [kind, repo, revision] of [
+    ['source', sourceRoot, recipeCandidate.source_revision],
+    ['generated', coreRoot, recipeCandidate.core_revision],
+  ]) {
+    if (!repo) continue;
+    for (const [file, expectedDigest] of Object.entries(recipeCandidate[`${kind}_files`] ?? {})) {
+      try {
+        const bytes = gitShow(repo, revision, file);
+        if (sha256(bytes) !== expectedDigest) add(`recipe_${kind}_file_changed`, { file });
+        for (const snippet of recipeCandidate[`${kind}_snippets`]?.[file] ?? []) {
+          if (!bytes.toString('utf8').includes(snippet)) add(`recipe_${kind}_fact_missing`, { file, snippet });
+        }
+      } catch (error) { add(`recipe_${kind}_file_unreadable`, { file, message: error.message }); }
+    }
+  }
+
+  if (sourceRoot) {
+    for (const fixture of recipeCandidate.fixtures ?? []) {
+      const sourceFixture = gitShow(sourceRoot, recipeCandidate.source_revision, fixture.source);
+      const docsFixture = fs.readFileSync(path.join(root, fixture.public_copy));
+      if (!sourceFixture.equals(docsFixture)) add('recipe_public_fixture_drift', fixture);
+    }
+  }
+}
+
 if (refresh && findings.length === 0) {
   contract.reviewed = { source_revision: sourceRevision, core_revision: coreRevision, ...next };
   fs.writeFileSync(contractPath, `${JSON.stringify(contract, null, 2)}\n`);
@@ -85,6 +122,7 @@ const report = {
   core_revision: coreRevision,
   exact_source_checked: Boolean(sourceRoot),
   exact_core_checked: Boolean(coreRoot),
+  exact_recipe_checked: Boolean(recipeCandidate && sourceRoot && coreRoot),
   refreshed: refresh && findings.length === 0,
   pages: contract.pages?.length ?? 0,
   findings,

@@ -1,22 +1,33 @@
 ---
-title: "API проверки и рендеринга"
-description: "Браузерный API доступен как `SF."
+title: "API сборки и рендеринга"
+description: "SF.Composition собирает Recipe, проверяет Document и превращает готовое дерево в HTML."
 ---
 
-# API проверки и рендеринга
+# API сборки и рендеринга
 
-Браузерный API доступен как `SF.Composition`. Он состоит из трёх операций: `validate(document)`, `normalize(document)` и `render(document, context)`. Исходные ESM-функции имеют тот же смысл.
+Браузерный API доступен как `SF.Composition`. `resolveRecipe(recipe, context)` собирает готовый Document. Действующие операции `validate(document)`, `normalize(document)` и `render(document, context)` проверяют, нормализуют и показывают готовое дерево. Исходные ESM-функции имеют тот же смысл.
 
 ## Когда применять
 
-Используйте API в редакторе, серверной сборке и перед публикацией. Не пропускайте проверку и не вставляйте возвращённый HTML в привилегированный контекст, если проект добавил собственный небезопасный renderer.
+Используйте API в редакторе, серверной сборке и перед публикацией. `context.ports` реализует продукт: он читает входы и точные версии шаблонов после проверки доступа. Renderer не должен повторно получать данные.
 
 ## Пример
 
 ```js
-const checked = SF.Composition.validate(document);
+const assembled = await SF.Composition.resolveRecipe(recipe, {
+  scope: 'site-17',
+  ports,
+  registry,
+  executionContract
+});
+if (!assembled.document) throw new Error(assembled.diagnostics[0].message);
+
+const checked = SF.Composition.validate(assembled.document);
 if (!checked.valid) throw new Error(checked.diagnostics[0].message);
-const normalized = await SF.Composition.normalize(document);
+const normalized = await SF.Composition.normalize(assembled.document);
 const result = await SF.Composition.render(normalized.document, context);
 ```
-`render()` возвращает HTML, ресурсы, сведения для подключения поведения, digest и диагностику. Неизвестный тип или отсутствующий renderer дают ошибку.
+
+`resolveRecipe()` возвращает `document`, `dependencyReceipt`, трассировку и диагностику. При блокирующей ошибке `document` и перечень зависимостей равны `null`. `render()` возвращает HTML, ресурсы, сведения для подключения поведения, digest и диагностику.
+
+Далее: [ошибки и диагностика](/ru/guide/layouts/reference/diagnostics/).

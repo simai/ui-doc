@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "7ef095ba699e042319e37105d764aeb371132fc9f6eb96de8eb801a08fa28ee3",
       "src/core/js/composition/builtins.mjs": "999b7b49f6e5aec5418be1119b8cd634ead6f317154bc771971bbda3fd82355b",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "4509d41b2172610bc05eaff26713cf42ece5c28d3dd5abf48ca14d1709a1ce5c"
+      "src/smart/buttons/smart.manifest.json": "17cfc5bd917d5b803b9dafd0fdd665f20832df7367d646660d18e7bd3d40c991"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -127,5 +127,94 @@
         "изолированном iframe"
       ]
     }
-  ]
+  ],
+  "recipe_candidate": {
+    "source_revision": "f037d0ac05c5be3cb05af77b5351a63a1e2f0b3e",
+    "core_revision": "cb2756cdd72e95c3d8abaa44caf55bc475947efc",
+    "source_files": {
+      "src/core/contracts/composition-recipe-v1/recipe.schema.json": "63d2f7d506be22b3f4a6060306a4d3d08e562d3720d82f13c41e69bc6ce3ffb3",
+      "src/core/contracts/composition-recipe-v1/manifest.schema.json": "e897974dcdb1e2428f0f808a7fa9ad7a8eef6d79128d24016a5e21fc372b730c",
+      "src/core/contracts/composition-recipe-v1/inputs.schema.json": "e83e5c8ece50c4641b58256b852a3fecc33a786919279d85de5c7689d32d2af1",
+      "src/core/contracts/composition-recipe-v1/dependencies.schema.json": "a2f3f371ace795f22bf4fb293e0005dcecbbc6c340cb669ba8e274c6e0b745e8",
+      "src/core/contracts/composition-recipe-v1/contract.lock.json": "979c3a435a8002854c3505a5b54e875eaee185d28667320c74ac4591823b3c9d",
+      "src/core/contracts/composition-recipe-v1/fixtures/header-switch.json": "a5a3105d42e3403d5d4a99d86155b4a2d5609e54abc7c9638e56c2bb1f7e26eb",
+      "src/core/js/composition/canonical.mjs": "aa6b44b2b81fc71040a32c6d8521201b7b8f23881ba2844c5a749b2e6ba3587c",
+      "src/core/js/composition/recipe.mjs": "26663eecdbeed1e1950e7170b6bc00aa502a98bcd637c9bc388d146737bddfb6",
+      "src/core/js/composition/index.mjs": "ab7c520156e25a600caa9a1f168202f04d6c6689cefa666f6983b1ff5ec06cde"
+    },
+    "generated_files": {
+      "distr/core/contracts/composition-recipe-v1/recipe.schema.json": "63d2f7d506be22b3f4a6060306a4d3d08e562d3720d82f13c41e69bc6ce3ffb3",
+      "distr/core/contracts/composition-recipe-v1/manifest.schema.json": "e897974dcdb1e2428f0f808a7fa9ad7a8eef6d79128d24016a5e21fc372b730c",
+      "distr/core/contracts/composition-recipe-v1/inputs.schema.json": "e83e5c8ece50c4641b58256b852a3fecc33a786919279d85de5c7689d32d2af1",
+      "distr/core/contracts/composition-recipe-v1/dependencies.schema.json": "a2f3f371ace795f22bf4fb293e0005dcecbbc6c340cb669ba8e274c6e0b745e8",
+      "distr/core/contracts/composition-recipe-v1/contract.lock.json": "979c3a435a8002854c3505a5b54e875eaee185d28667320c74ac4591823b3c9d",
+      "distr/core/contracts/composition-recipe-v1/fixtures/header-switch.json": "a5a3105d42e3403d5d4a99d86155b4a2d5609e54abc7c9638e56c2bb1f7e26eb",
+      "distr/core/js/core.js": "1d5c249ba2e42a12d3e085679387eb2647c671579add9b847dfdffea357e790c"
+    },
+    "source_snippets": {
+      "src/core/js/composition/recipe.mjs": [
+        "export async function resolveRecipe",
+        "document: null",
+        "dependencyReceipt"
+      ],
+      "src/core/js/composition/index.mjs": [
+        "resolveRecipe",
+        "globalThis.SF.Composition"
+      ],
+      "src/core/contracts/composition-recipe-v1/recipe.schema.json": [
+        "simai.composition.recipe.v1"
+      ]
+    },
+    "generated_snippets": {
+      "distr/core/js/core.js": [
+        "resolveRecipe",
+        "SF.Composition",
+        "simai.composition.recipe.v1"
+      ]
+    },
+    "fixtures": [
+      {
+        "source": "src/core/contracts/composition-recipe-v1/fixtures/header-switch.json",
+        "public_copy": "assets/examples/composition/header-switch.json"
+      }
+    ],
+    "pages": [
+      {
+        "path": "content/ru/guide/layouts/introduction/recipe-document-html.md",
+        "snippets": [
+          "Recipe",
+          "Document",
+          "HTML"
+        ]
+      },
+      {
+        "path": "content/ru/guide/layouts/introduction/document-flow.md",
+        "snippets": [
+          "resolveRecipe()",
+          "document` имеет значение `null"
+        ]
+      },
+      {
+        "path": "content/ru/guide/layouts/building/recipe-templates-and-variants.md",
+        "snippets": [
+          "header.compact",
+          "загружает источник только активного варианта"
+        ]
+      },
+      {
+        "path": "content/ru/guide/layouts/content-and-data/snapshots-and-cache.md",
+        "snippets": [
+          "список зависимостей",
+          "header.expanded"
+        ]
+      },
+      {
+        "path": "content/ru/guide/layouts/reference/api.md",
+        "snippets": [
+          "resolveRecipe(recipe, context)",
+          "dependencyReceipt"
+        ]
+      }
+    ]
+  }
 }
