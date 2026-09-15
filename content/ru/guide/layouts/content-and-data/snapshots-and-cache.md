@@ -30,4 +30,4 @@ description: "Одна сборка использует согласованн�
 
 Ключ кеша продукта должен учитывать digest готового Document и execution contract. Framework сообщает зависимости, а решение о хранении, сроке жизни и активации кеша принимает продукт.
 
-Далее: [данные и внешние источники](/ru/guide/layouts/content-and-data/data-sources/).
+Далее: [публикация и откат](/ru/guide/layouts/content-and-data/publication-and-rollback/).

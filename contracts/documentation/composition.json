@@ -209,6 +209,14 @@
         ]
       },
       {
+        "path": "content/ru/guide/layouts/content-and-data/publication-and-rollback.md",
+        "snippets": [
+          "снимком результата",
+          "activation_revision",
+          "Ошибка сборки не создаёт активный снимок"
+        ]
+      },
+      {
         "path": "content/ru/guide/layouts/reference/api.md",
         "snippets": [
           "resolveRecipe(recipe, context)",

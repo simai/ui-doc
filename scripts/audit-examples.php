@@ -32,7 +32,7 @@ foreach ($markdownPaths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
     $tableMarkers += preg_match_all('/^\h*\{\.table\}\h*$/m', $markdown);
-    preg_match_all('#/demos/(guide/[a-z0-9-]+)/#', $markdown, $demoIds);
+    preg_match_all("~/demos/(guide/[a-z0-9-]+)/(?=[)\\s\"'?#]|$)~", $markdown, $demoIds);
     foreach ($demoIds[1] as $demoId) $consumers[$demoId][] = $relative;
     $escapedAnchorLinks += preg_match_all('/^\h*-\h+&lt;a\h+href=/mi', $markdown);
     preg_match_all(
