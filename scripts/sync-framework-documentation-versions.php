@@ -34,9 +34,16 @@ $candidateSmart = (string) ($runtime['ui_smart']['tag'] ?? '');
 $candidatePair = (string) ($runtime['pair_id'] ?? '');
 $candidateCoreRevision = (string) ($runtime['ui']['commit'] ?? '');
 $candidateSmartRevision = (string) ($runtime['ui_smart']['commit'] ?? '');
-foreach ([$candidateFramework, $candidateCore, $candidateSmart] as $tag) {
-    if (preg_match('/^v\d+\.\d+\.\d+$/', $tag) !== 1) {
-        throw new RuntimeException('FRAMEWORK_CANDIDATE_TAG_INVALID');
+$untaggedExactCandidate = $candidatePair === sprintf(
+    'ui-%s-smart-%s',
+    substr($candidateCoreRevision, 0, 12),
+    substr($candidateSmartRevision, 0, 12),
+) && $candidateFramework === '' && $candidateCore === '' && $candidateSmart === '';
+if (! $untaggedExactCandidate) {
+    foreach ([$candidateFramework, $candidateCore, $candidateSmart] as $tag) {
+        if (preg_match('/^v\d+\.\d+\.\d+$/', $tag) !== 1) {
+            throw new RuntimeException('FRAMEWORK_CANDIDATE_TAG_INVALID');
+        }
     }
 }
 foreach ([$candidateCoreRevision, $candidateSmartRevision] as $revision) {

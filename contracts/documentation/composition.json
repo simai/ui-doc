@@ -1,13 +1,13 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "f78cf8399c89d8091c2784d41f493cdb26620151",
-    "core_revision": "aa74f029c1b4aa7fbbed61844866ba0172bef0a6",
+    "source_revision": "f037d0ac05c5be3cb05af77b5351a63a1e2f0b3e",
+    "core_revision": "8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "31c69a8f36f6a1285531588d1ca00883ebe503b04361718afb300d1b05a114d6",
       "src/core/contracts/composition-types.v1.json": "45fe7cf7209f1063d0f0c49904d6329943ab58107b568d61bf8f7e11aaf83fbf",
-      "src/core/js/composition/index.mjs": "7ef095ba699e042319e37105d764aeb371132fc9f6eb96de8eb801a08fa28ee3",
+      "src/core/js/composition/index.mjs": "ab7c520156e25a600caa9a1f168202f04d6c6689cefa666f6983b1ff5ec06cde",
       "src/core/js/composition/builtins.mjs": "999b7b49f6e5aec5418be1119b8cd634ead6f317154bc771971bbda3fd82355b",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
       "src/smart/buttons/smart.manifest.json": "17cfc5bd917d5b803b9dafd0fdd665f20832df7367d646660d18e7bd3d40c991"
@@ -16,7 +16,7 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "31c69a8f36f6a1285531588d1ca00883ebe503b04361718afb300d1b05a114d6",
       "distr/core/contracts/composition-types.v1.json": "45fe7cf7209f1063d0f0c49904d6329943ab58107b568d61bf8f7e11aaf83fbf",
-      "distr/core/js/core.js": "984e8cb242e27ad46135fd87bc240ddd9c3fd02441a0cabb3deb01a0ffdd13c9"
+      "distr/core/js/core.js": "1d5c249ba2e42a12d3e085679387eb2647c671579add9b847dfdffea357e790c"
     }
   },
   "source_files": [
@@ -130,7 +130,7 @@
   ],
   "recipe_candidate": {
     "source_revision": "f037d0ac05c5be3cb05af77b5351a63a1e2f0b3e",
-    "core_revision": "cb2756cdd72e95c3d8abaa44caf55bc475947efc",
+    "core_revision": "8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2",
     "source_files": {
       "src/core/contracts/composition-recipe-v1/recipe.schema.json": "63d2f7d506be22b3f4a6060306a4d3d08e562d3720d82f13c41e69bc6ce3ffb3",
       "src/core/contracts/composition-recipe-v1/manifest.schema.json": "e897974dcdb1e2428f0f808a7fa9ad7a8eef6d79128d24016a5e21fc372b730c",

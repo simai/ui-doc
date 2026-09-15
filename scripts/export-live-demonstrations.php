@@ -8,7 +8,7 @@ $page=file_get_contents($build.'/ru/index.html');
 preg_match('/<link[^>]+href="([^"]+)"[^>]+data-docara-framework-asset="simai.framework.core.css"/', $page, $css);
 if (!isset($css[1])) throw new RuntimeException('Core CSS missing from built document');
 $files=[]; $inputs=[];
-$ids=['smart-counter','smart-composition','smart-template','layout-inspector','smart-button','product-block'];
+$ids=['smart-counter','smart-composition','smart-template','layout-inspector','smart-button','product-block','composition-recipe'];
 foreach ($ids as $id) {
     $source=$root.'/examples/guide/'.$id;
     foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($source)) as $input) if($input->isFile()) $inputs[substr($input->getPathname(),strlen($root)+1)]=hash_file('sha256',$input->getPathname());
@@ -19,6 +19,11 @@ foreach ($ids as $id) {
         $dest=$target.'/'.substr($f->getPathname(),strlen($source)+1);
         if(!is_dir(dirname($dest)))mkdir(dirname($dest),0775,true);
         copy($f->getPathname(),$dest);
+    }
+    if ($id === 'composition-recipe') {
+        $fixture=$root.'/assets/examples/composition/header-switch.json';
+        copy($fixture,$target.'/header-switch.json');
+        $inputs[substr($fixture,strlen($root)+1)]=hash_file('sha256',$fixture);
     }
     $body=file_get_contents($source.'/index.html');
     $js=is_file($source.'/index.js')?'<script src="index.js" defer></script>':'';
@@ -38,8 +43,11 @@ $recipeFixture=$root.'/assets/examples/composition/header-switch.json';
 $recipeTarget=$build.'/demos/guide/composition-recipe/header-switch.json';
 if(!is_dir(dirname($recipeTarget)))mkdir(dirname($recipeTarget),0775,true);
 copy($recipeFixture,$recipeTarget);
+$recipeRelative=substr($recipeTarget,strlen($build)+1);
+if (!in_array($recipeRelative,array_column($files,'path'),true)) {
+    $files[]=['path'=>substr($recipeTarget,strlen($build)+1),'sha256'=>hash_file('sha256',$recipeTarget)];
+}
 $inputs[substr($recipeFixture,strlen($root)+1)]=hash_file('sha256',$recipeFixture);
-$files[]=['path'=>substr($recipeTarget,strlen($build)+1),'sha256'=>hash_file('sha256',$recipeTarget)];
 usort($files,static fn($a,$b)=>strcmp($a['path'],$b['path']));ksort($inputs);
 file_put_contents($build.'/.docara/standalone-examples.json',json_encode(['schema'=>'docara.standalone_examples.v1','generator_sha256'=>hash_file('sha256',__FILE__),'inputs_sha256'=>hash('sha256',json_encode($inputs)),'files'=>$files],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)."\n");
 echo json_encode(['status'=>'pass','live_demonstrations'=>count($ids),'verified_fixtures'=>1])."\n";
