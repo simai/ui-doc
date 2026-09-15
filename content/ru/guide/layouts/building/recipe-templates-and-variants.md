@@ -34,4 +34,15 @@ Framework проверяет синтаксис обеих ветвей, но з
 
 Полный Recipe, источники и ожидаемые результаты: [проверяемый JSON](/demos/guide/composition-recipe/header-switch.json).
 
+В Docara такой Recipe можно сделать содержимым обычной страницы. Markdown-файл хранит только название страницы и путь к JSON-описанию:
+
+```markdown
+---
+title: Каталог товаров
+composition_recipe: composition/catalog/descriptor.json
+---
+```
+
+При сборке Docara получает HTML через модуль композиции из закреплённой поставки Framework, а затем добавляет обычную оболочку документации: меню, тему, поиск и навигацию. Исходный код `ui-source` продукту для этого не нужен.
+
 Далее: [снимок данных и кеш](/ru/guide/layouts/content-and-data/snapshots-and-cache/).

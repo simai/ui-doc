@@ -5,7 +5,7 @@ description: "SF.Composition собирает Recipe, проверяет Documen
 
 # API сборки и рендеринга
 
-Браузерный API доступен как `SF.Composition`. `resolveRecipe(recipe, context)` собирает готовый Document. Действующие операции `validate(document)`, `normalize(document)` и `render(document, context)` проверяют, нормализуют и показывают готовое дерево. Исходные ESM-функции имеют тот же смысл.
+Браузерный API доступен как `SF.Composition`. `resolveRecipe(recipe, context)` собирает готовый Document. Действующие операции `validate(document)`, `normalize(document)` и `render(document, context)` проверяют, нормализуют и показывают готовое дерево. Те же функции поставляются как ESM-модуль в готовом пакете `ui`, поэтому серверный продукт не должен подключать исходный репозиторий Framework.
 
 ## Когда применять
 
