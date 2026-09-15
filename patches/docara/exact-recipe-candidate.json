@@ -1,0 +1,79 @@
+{
+  "schema": "ui-doc.docara_exact_candidate_package.v1",
+  "package": "simai/docara",
+  "source_reference": "777cc34fd13920bb1dfad16a7aa60fdc3aff4b61",
+  "files": [
+    {
+      "path": "resources/portable/declarative-shell.css",
+      "sha256": "5a2cb7170c2094b2cfd38e6c9d5c5639ad80ace2797c826adce09ca16253b458"
+    },
+    {
+      "path": "resources/portable/declarative-shell.js",
+      "sha256": "f68618dfe8abf61ed934df7d5c0c1d11e69da81d4fe16ac298a465a858de5130"
+    },
+    {
+      "path": "resources/schemas/framework-lock.schema.json",
+      "sha256": "e46e1b559b1f65677f14c5e92068e82da38f09fff9f89ee1c32d21f730dcb35d"
+    },
+    {
+      "path": "resources/smart/assets/navigation.css",
+      "sha256": "51e4031a7f9c166914eff982a808df0c1c04e872add0ca4531c367bd0a04c3c6"
+    },
+    {
+      "path": "resources/smart/assets/navigation.js",
+      "sha256": "61f94b489350c7775ff72a62c6a357c9e73ead16a1d51571b3b32a94d6a8c6b1"
+    },
+    {
+      "path": "resources/smart/docara.navigation/templates/header.php",
+      "sha256": "643c92f61cc81860b8dac5ea7b26701f270d082f54dff6928f783ac20f44fa3c"
+    },
+    {
+      "path": "resources/smart/docara.navigation/templates/item.php",
+      "sha256": "7a2db7745e266880255cd3ccc9dc2c69846551e1584aa6a12e7801044ebf4bc2"
+    },
+    {
+      "path": "scripts/sync-framework-rule-registry.php",
+      "sha256": "3c22733a8839417150db341f0c1efb3775df99ba4e31119e8b433fa1e06afe05"
+    },
+    {
+      "path": "scripts/verify-static-build.php",
+      "sha256": "585fa5f036db09bbed30c0b601296818bf821dd70bc216bdcff0e5b32b65d65d"
+    },
+    {
+      "path": "src/Declarative/Composition/Recipe/FileRecipeCompiler.php",
+      "sha256": "7784c0088bb04e636260017977a7523ff0e4206a9e72ed21d6299acf034d6d3a"
+    },
+    {
+      "path": "src/Declarative/Composition/Recipe/FileRecipeSnapshotPublisher.php",
+      "sha256": "c46d87513f74f8c2367a8b6a10c9243101d5f5eb03ddff1b187d04f6654283a7"
+    },
+    {
+      "path": "src/Declarative/Rendering/FrameworkUtilityRegistry.php",
+      "sha256": "8c0e6a70ca8b48c9d75216f6985b3d84a2ab5ffe683e0a6f3f17e44b6ba19899"
+    },
+    {
+      "path": "src/Framework/FrameworkAssetPlan.php",
+      "sha256": "50af3ae17e8da2912e45c593266ebbe3e940f1d3ded08847165982bd78fef4bd"
+    },
+    {
+      "path": "src/Framework/FrameworkLock.php",
+      "sha256": "17816b6f19a108721f74f198c12cc795dcd958c2dfab42a68f74d8b77111b02e"
+    },
+    {
+      "path": "src/I18n/UiCopy.php",
+      "sha256": "a6b57ebc73f6ae4f62a6037d78f7ef20c7e7f0ff0d1ac6523cd2fee18d283906"
+    },
+    {
+      "path": "src/Portable/CanonicalJson.php",
+      "sha256": "57a203d6172833d044519409972fc008115c006e9edfd3636467649cf0bf8295"
+    },
+    {
+      "path": "src/PortableSite/PortableExampleRenderer.php",
+      "sha256": "0de29e396637f89710eb7b06f54bb6e242653b3c8fa7d1d8b2455a9f63cca886"
+    },
+    {
+      "path": "src/PortableSite/PortableSiteBuilder.php",
+      "sha256": "f1e0758be8bc1c9f61822c98a9f13e6dd7ba6d2fd53aa170dbf50ab5aaa37f7d"
+    }
+  ]
+}

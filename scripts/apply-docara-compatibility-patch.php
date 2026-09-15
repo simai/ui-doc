@@ -5,6 +5,16 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $apply = in_array('--apply', $argv, true);
+$lockFile = 'composer.lock';
+foreach ($argv as $argument) {
+    if (str_starts_with($argument, '--lock=')) {
+        $lockFile = substr($argument, strlen('--lock='));
+    }
+}
+if (preg_match('/\A[a-zA-Z0-9._-]+\.lock\z/D', $lockFile) !== 1) {
+    fwrite(STDERR, "Invalid Composer lock filename.\n");
+    exit(2);
+}
 $manifestPaths = [
     $root . '/patches/docara/1af9ff750a1ab3c479ec42f19860317c8c6917aa.json',
     $root . '/patches/docara/60b6d60378382708b447f433935f44d77df79bd2.json',
@@ -13,7 +23,7 @@ $manifests = array_map(
     static fn (string $path): array => json_decode((string) file_get_contents($path), true, 512, JSON_THROW_ON_ERROR),
     $manifestPaths,
 );
-$lock = json_decode((string) file_get_contents($root . '/composer.lock'), true, 512, JSON_THROW_ON_ERROR);
+$lock = json_decode((string) file_get_contents($root . '/' . $lockFile), true, 512, JSON_THROW_ON_ERROR);
 $package = null;
 foreach ($lock['packages'] ?? [] as $candidate) {
     if (($candidate['name'] ?? null) === $manifests[0]['package']) {
@@ -35,6 +45,61 @@ $fail = static function (string $code, array $details = []): never {
 if (! is_array($package)) {
     $fail('locked_package_missing');
 }
+$vendorRoot = $root . '/vendor/simai/docara';
+$exactManifest = json_decode(
+    (string) file_get_contents($root . '/patches/docara/exact-recipe-candidate.json'),
+    true,
+    512,
+    JSON_THROW_ON_ERROR,
+);
+if (($exactManifest['schema'] ?? null) !== 'ui-doc.docara_exact_candidate_package.v1'
+    || ($exactManifest['package'] ?? null) !== 'simai/docara'
+    || preg_match('/\A[a-f0-9]{40}\z/D', (string) ($exactManifest['source_reference'] ?? '')) !== 1
+    || ! is_array($exactManifest['files'] ?? null)
+    || ! array_is_list($exactManifest['files'])
+    || $exactManifest['files'] === []
+) {
+    $fail('exact_candidate_manifest_invalid');
+}
+if (($package['source']['reference'] ?? null) === ($exactManifest['source_reference'] ?? null)) {
+    if (! is_dir($vendorRoot) || is_link($vendorRoot)) {
+        $fail('vendor_package_missing_or_unsafe');
+    }
+    $verified = 0;
+    foreach ($exactManifest['files'] as $file) {
+        if (! is_array($file)
+            || preg_match('#\A(?:[A-Za-z0-9._-]+/)+[A-Za-z0-9._-]+\z#D', (string) ($file['path'] ?? '')) !== 1
+            || in_array('.', explode('/', (string) ($file['path'] ?? '')), true)
+            || in_array('..', explode('/', (string) ($file['path'] ?? '')), true)
+            || preg_match('/\A[a-f0-9]{64}\z/D', (string) ($file['sha256'] ?? '')) !== 1
+        ) {
+            $fail('exact_candidate_manifest_invalid');
+        }
+        $path = $vendorRoot . '/' . $file['path'];
+        $stat = @lstat($path);
+        $actual = is_array($stat)
+            && (($stat['mode'] ?? 0) & 0170000) === 0100000
+            && ($stat['nlink'] ?? 1) === 1
+            ? hash_file('sha256', $path)
+            : null;
+        if ($actual !== $file['sha256']) {
+            $fail('exact_candidate_vendor_drift', [
+                'path' => $file['path'],
+                'actual_sha256' => $actual,
+            ]);
+        }
+        $verified++;
+    }
+    echo json_encode([
+        'schema' => 'ui-doc.docara_compatibility_patch_result.v1',
+        'status' => 'pass',
+        'result' => 'exact_candidate_verified',
+        'locked_reference' => $exactManifest['source_reference'],
+        'files_verified' => $verified,
+        'patches' => [],
+    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n";
+    exit(0);
+}
 foreach ($manifests as $manifest) {
     if (($package['version'] ?? null) !== $manifest['locked_version']) {
         $fail('locked_version_drift', [
@@ -50,7 +115,6 @@ foreach ($manifests as $manifest) {
     }
 }
 
-$vendorRoot = $root . '/vendor/simai/docara';
 if (! is_dir($vendorRoot)) {
     $fail('vendor_package_missing', ['hint' => 'Run composer install first.']);
 }
