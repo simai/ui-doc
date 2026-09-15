@@ -271,6 +271,11 @@ foreach ($files as $file) {
         continue;
     }
 
+    // Guide groups are canonical page routes, not legacy directories to flatten.
+    if (($segments[1] ?? null) === 'guide') {
+        continue;
+    }
+
     $locale = array_shift($segments);
     $oldRoute = $canonicalRouteFromRelative($relative);
     $targetSegments = [array_shift($segments), array_shift($segments), implode('-', $segments)];
@@ -297,6 +302,7 @@ foreach ($files as $file) {
 
 $redirectsPath = $argv[2] ?? dirname(rtrim($root, DIRECTORY_SEPARATOR)) . DIRECTORY_SEPARATOR . 'redirects.json';
 $existingMap = [];
+$existing = null;
 if (is_file($redirectsPath)) {
     $existing = json_decode((string) file_get_contents($redirectsPath), true);
     if (is_array($existing['redirects'] ?? null)) {
@@ -383,7 +389,7 @@ foreach ($files as $file) {
                 }
             }
             if ($resolved === null) {
-                return $match[1];
+                return $match[0];
             }
 
             return '[' . $match[1] . '](/' . $resolved . '/' . ($fragment === null ? '' : '#' . $fragment) . ')';
@@ -397,7 +403,7 @@ foreach ($files as $file) {
             $route = trim($match[2], '/');
             $resolved = $routeMap[$route] ?? $route;
             if (! isset($currentRoutes[$resolved])) {
-                return $match[1];
+                return $match[0];
             }
 
             return '[' . $match[1] . '](/' . $resolved . '/' . ($match[3] ?? '') . ')';
@@ -417,11 +423,23 @@ foreach ($routeMap as $old => $new) {
         $redirects[] = ['from' => $old, 'to' => $new];
     }
 }
-file_put_contents($redirectsPath, json_encode([
-    'schema' => 'docara.redirects.v1',
-    'version' => 1,
-    'redirects' => $redirects,
-], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "\n");
+$newMap = [];
+foreach ($redirects as $redirect) {
+    $newMap[$redirect['from']] = $redirect['to'];
+}
+ksort($existingMap, SORT_STRING);
+ksort($newMap, SORT_STRING);
+if (! is_array($existing)
+    || ($existing['schema'] ?? null) !== 'docara.redirects.v1'
+    || ($existing['version'] ?? null) !== 1
+    || $existingMap !== $newMap
+) {
+    file_put_contents($redirectsPath, json_encode([
+        'schema' => 'docara.redirects.v1',
+        'version' => 1,
+        'redirects' => $redirects,
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "\n");
+}
 
 fwrite(STDOUT, json_encode([
     'status' => 'success',
