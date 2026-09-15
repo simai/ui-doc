@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e25a0c5c7c9312d0a7204276c15426d0",
+    "content-hash": "647d81398d5b46116a2031ef135cab6d",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v2.9.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac"
+                "reference": "f5a55d82c54c241f074d61fd369a743c9c4eb88d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/6eaccb10c8550e877e391f8d441e811bfcb693ac",
-                "reference": "6eaccb10c8550e877e391f8d441e811bfcb693ac",
+                "url": "https://api.github.com/repos/simai/docara/zipball/f5a55d82c54c241f074d61fd369a743c9c4eb88d",
+                "reference": "f5a55d82c54c241f074d61fd369a743c9c4eb88d",
                 "shasum": ""
             },
             "require": {
@@ -1596,6 +1596,7 @@
                 "mockery/mockery": "^1.6",
                 "phpunit/phpunit": "^11.0.6"
             },
+            "default-branch": true,
             "bin": [
                 "docara"
             ],
@@ -1656,7 +1657,7 @@
                 "site",
                 "static"
             ],
-            "time": "2026-09-10T05:37:33+00:00"
+            "time": "2026-09-15T11:07:01+00:00"
         },
         {
             "name": "symfony/clock",
@@ -3135,7 +3136,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "simai/docara": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

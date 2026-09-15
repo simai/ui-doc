@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "simai/docara": "^2.6"
+        "simai/docara": "dev-main"
     },
     "scripts": {
         "docara:compatibility:apply": "@php scripts/apply-docara-compatibility-patch.php --apply",

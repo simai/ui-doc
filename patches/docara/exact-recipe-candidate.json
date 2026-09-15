@@ -1,7 +1,7 @@
 {
   "schema": "ui-doc.docara_exact_candidate_package.v1",
   "package": "simai/docara",
-  "source_reference": "777cc34fd13920bb1dfad16a7aa60fdc3aff4b61",
+  "source_reference": "f5a55d82c54c241f074d61fd369a743c9c4eb88d",
   "files": [
     {
       "path": "resources/portable/declarative-shell.css",
@@ -73,7 +73,7 @@
     },
     {
       "path": "src/PortableSite/PortableSiteBuilder.php",
-      "sha256": "f1e0758be8bc1c9f61822c98a9f13e6dd7ba6d2fd53aa170dbf50ab5aaa37f7d"
+      "sha256": "d7a0e3cec931c54832ebf9e1c2db6957935968347a4ca1c9fc681c037c1a493a"
     }
   ]
 }
