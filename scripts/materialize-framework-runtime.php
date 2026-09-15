@@ -6,32 +6,33 @@ declare(strict_types=1);
 /**
  * Materialize the exact bounded SIMAI Framework pair accepted for this site.
  *
- * Docara 2.9.0 keeps its Framework projection inside the Composer package.
+ * Docara keeps its Framework projection inside the Composer package.
  * This project command replaces only that ignored installed projection from
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = 'e8d0c9e955382f47402bddf105b1a1de550000d2';
-const UI_RUNTIME_REVISION = 'aa74f029c1b4aa7fbbed61844866ba0172bef0a6';
-const SMART_METADATA_REVISION = 'ee516ca2eb8323bb20cd6214798b3f54295ae3d9';
-const SMART_RUNTIME_REVISION = '77feccf8867a5676bad2cd78fbb3497d25816fac';
-const SOURCE_REVISION = 'f78cf8399c89d8091c2784d41f493cdb26620151';
-const BUILDER_REVISION = '13ad31ae75e75fbdabe6f1a1e09ce94b745fe118';
-const RELEASE_LOCK = 'contracts/releases/ui-aa74f029c1b4-smart-77feccf8867a.lock.json';
+const UI_METADATA_REVISION = '4665ecb607b009eae88e77d41cfb46d05d8e4af0';
+const UI_RUNTIME_REVISION = '8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2';
+const SMART_METADATA_REVISION = 'a02e0392cfe2dd9dbf0b6b8be98689bd82b24643';
+const SMART_RUNTIME_REVISION = '400d80e501ca5e6816ba8f96b0ca18f01c0626c9';
+const SOURCE_REVISION = 'f037d0ac05c5be3cb05af77b5351a63a1e2f0b3e';
+const BUILDER_REVISION = 'c0fd48ced3e2c079ad9c8592467908a8c41a7cdf';
+const RELEASE_LOCK = 'contracts/releases/ui-8c22fe2b80bb-smart-400d80e501ca.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
 $smartRoot = $argv[2] ?? null;
-$packageRoot = $projectRoot . '/vendor/simai/docara';
+$packageRoot = $argv[3] ?? $projectRoot . '/vendor/simai/docara';
 
 if (! is_string($uiRoot) || ! is_string($smartRoot)) {
-    fwrite(STDERR, "Usage: php scripts/materialize-framework-runtime.php /absolute/ui /absolute/ui-smart\n");
+    fwrite(STDERR, "Usage: php scripts/materialize-framework-runtime.php /absolute/ui /absolute/ui-smart [/absolute/docara-package]\n");
     exit(2);
 }
 
 $uiRoot = realpath($uiRoot);
 $smartRoot = realpath($smartRoot);
-if ($uiRoot === false || $smartRoot === false || ! is_dir($packageRoot)) {
+$packageRoot = is_string($packageRoot) ? realpath($packageRoot) : false;
+if ($uiRoot === false || $smartRoot === false || $packageRoot === false || ! is_dir($packageRoot)) {
     throw new RuntimeException('FRAMEWORK_MATERIALIZATION_INPUT_MISSING');
 }
 
@@ -90,7 +91,7 @@ $release = json_decode(
     JSON_THROW_ON_ERROR,
 );
 $expected = [
-    'compatibility_id' => 'ui-aa74f029c1b4-smart-77feccf8867a',
+    'compatibility_id' => 'ui-8c22fe2b80bb-smart-400d80e501ca',
     'ui' => UI_RUNTIME_REVISION,
     'smart' => SMART_RUNTIME_REVISION,
     'source' => SOURCE_REVISION,
@@ -119,7 +120,7 @@ $registry = json_decode($registryBytes, true, 512, JSON_THROW_ON_ERROR);
 if (($registry['compatibility']['id'] ?? null) !== $expected['compatibility_id']) {
     throw new RuntimeException('FRAMEWORK_REGISTRY_COMPATIBILITY_MISMATCH');
 }
-$docaraPair = 'sf-v5.9.0-aa74f029-77feccf8';
+$docaraPair = $expected['compatibility_id'];
 
 $projectLockPath = $projectRoot . '/simai-framework.lock.json';
 $packageLockPath = $packageRoot . '/docs/site/simai-framework.lock.json';
@@ -130,6 +131,12 @@ $lock = json_decode(
     512,
     JSON_THROW_ON_ERROR,
 );
+if (($lock['runtime']['framework_registry']['source']['commit'] ?? null) !== UI_METADATA_REVISION
+    || preg_match('/\A[a-f0-9]{64}\z/D', (string) ($lock['runtime']['framework_registry']['source']['sha256'] ?? '')) !== 1
+) {
+    throw new RuntimeException('FRAMEWORK_REGISTRY_SOURCE_PIN_MISMATCH');
+}
+$contractArchiveHash = $lock['runtime']['framework_registry']['source']['sha256'];
 
 $uiSource = $release['runtime_sources']['ui'];
 $smartSource = $release['runtime_sources']['ui-smart'];
@@ -138,9 +145,9 @@ $lock['runtime']['pair_id'] = $docaraPair;
 $lock['runtime']['bundle_id'] = $docaraPair
     . '-registry-' . substr($registryHash, 0, 8) . '-verified-commit-candidate-v1';
 $lock['runtime']['publication_profile'] = 'verified-commit-candidate-v1';
-$lock['runtime']['tag'] = 'v5.9.0';
+$lock['runtime']['tag'] = null;
 $lock['runtime']['ui'] = [
-    'tag' => 'v5.9.0',
+    'tag' => null,
     'commit' => UI_RUNTIME_REVISION,
     'tree' => 'distr',
     'mount' => 'ui',
@@ -150,7 +157,7 @@ $lock['runtime']['ui'] = [
     )),
 ];
 $lock['runtime']['ui_smart'] = [
-    'tag' => 'v5.6.0',
+    'tag' => null,
     'commit' => SMART_RUNTIME_REVISION,
     'tree' => 'smart',
     'mount' => 'smart',
@@ -170,7 +177,7 @@ $lock['runtime']['framework_registry'] = [
         'tree' => 'contracts/generated',
         'tree_oid' => trim($git($uiRoot, ['rev-parse', UI_METADATA_REVISION . ':contracts/generated'])),
         'mount' => 'contract',
-        'sha256' => hash('sha256', $registryBytes . $documentationBytes),
+        'sha256' => $contractArchiveHash,
         'files' => 2,
     ],
     'documentation_source' => [
