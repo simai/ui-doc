@@ -25,6 +25,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
+      - name: Obtain pinned Composition Recipe runtime
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: simai/ui
+          ref: 4665ecb607b009eae88e77d41cfb46d05d8e4af0
+          path: .recipe-runtime
+      - name: Configure Composition Recipe runtime
+        run: echo "DOCARA_SIMAI_UI_ROOT=$GITHUB_WORKSPACE/.recipe-runtime" >> "$GITHUB_ENV"
       - run: composer docs:check
       - run: php scripts/test-migrate-legacy-content.php
       - name: Verify committed migration is idempotent
