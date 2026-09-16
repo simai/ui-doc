@@ -185,8 +185,8 @@
         "drawer"
       ]
     },
-    "complex": {
-      "title": "Комплексные компоненты",
+    "composite": {
+      "title": "Составные компоненты",
       "items": [
         "admin-menu"
       ]

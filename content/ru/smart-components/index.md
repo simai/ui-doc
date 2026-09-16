@@ -74,7 +74,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Модальное окно](/ru/smart-components/overlays/modal/)
 - [Drawer](/ru/smart-components/overlays/drawer/)
 
-## Комплексные компоненты
+## Составные компоненты
 
-- [Admin Menu](/ru/smart-components/complex/admin-menu/)
+- [Admin Menu](/ru/smart-components/composite/admin-menu/)
 

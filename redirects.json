@@ -1736,7 +1736,7 @@
     },
     {
       "from": "ru/layout/building/complex-smart-component",
-      "to": "ru/guide/layouts/building/complex-smart-component"
+      "to": "ru/guide/layouts/building/composite-smart-component"
     },
     {
       "from": "ru/layout/building/component",
@@ -2036,7 +2036,7 @@
     },
     {
       "from": "ru/smart-components/reference/admin-menu",
-      "to": "ru/smart-components/complex/admin-menu"
+      "to": "ru/smart-components/composite/admin-menu"
     },
     {
       "from": "ru/smart-components/reference/alert",
@@ -2409,6 +2409,22 @@
     {
       "from": "ru/utilities/reference/width-ext",
       "to": "ru/utilities/sizes/width"
+    },
+    {
+      "from": "ru/guide/architecture/complex-smart-components",
+      "to": "ru/guide/architecture/composite-smart-components"
+    },
+    {
+      "from": "ru/guide/layouts/building/complex-smart-component",
+      "to": "ru/guide/layouts/building/composite-smart-component"
+    },
+    {
+      "from": "ru/smart-components/complex/admin-menu",
+      "to": "ru/smart-components/composite/admin-menu"
+    },
+    {
+      "from": "ru/smart-components/complex",
+      "to": "ru/smart-components"
     }
   ]
 }

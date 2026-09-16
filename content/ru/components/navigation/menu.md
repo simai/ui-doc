@@ -16,7 +16,7 @@ profile: reference
 команд, которые выполняются рядом с выбранным объектом, используйте
 [Context Menu](/ru/smart-components/navigation/context-menu/). Сложное меню
 панели управления собирайте через
-[Admin Menu](/ru/smart-components/complex/admin-menu/).
+[Admin Menu](/ru/smart-components/composite/admin-menu/).
 
 ## Быстрый старт
 
