@@ -23,7 +23,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="smart-components/drawer/overview" label="Закреплённые панели"}
+:::example {id="smart-components/drawer/overview" label="Немодальная панель"}
 :::
 
 Кнопка связывается с панелью через `data-drawer="toggle|open|close"` и
@@ -36,11 +36,11 @@ profile: reference
 помечается `data-sf-drawer-dock-host`; Framework задаёт ему отступы по сумме
 ширин открытых закреплённых панелей слева и справа, обе стороны одновременно.
 
-```html
-<div class="page" data-sf-drawer-dock-host>…</div>
-<sf-drawer id="blocks" docked open placement="inline-start" size="small" title="Блоки">…</sf-drawer>
-<sf-drawer id="properties" docked open placement="inline-end" title="Свойства">…</sf-drawer>
-```
+:::example {id="smart-components/drawer/docked" label="Закреплённые панели"}
+:::
+
+На узкой области примера (уже 48rem) панели ложатся поверх страницы; чтобы
+увидеть, как страница сдвигается, откройте пример на весь экран.
 
 Ширины публикуются как `--sf-drawer-dock-inline-start` и
 `--sf-drawer-dock-inline-end`, высоту шапки над панелями задаёт

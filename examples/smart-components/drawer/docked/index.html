@@ -1,0 +1,20 @@
+<div class="flex flex-col gap-2 p-3 radius-2 bg-surface-container" data-sf-drawer-dock-host>
+  <div class="flex flex-wrap gap-2">
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-blocks">
+      <span class="sf-button-text-container">Блоки</span>
+    </button>
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-properties">
+      <span class="sf-button-text-container">Свойства</span>
+    </button>
+  </div>
+  <h3 class="m-0">Страница в редакторе</h3>
+  <p class="m-0">Откройте обе панели. На широком экране страница сдвигается и остаётся видна целиком; на узком панель ложится поверх.</p>
+  <p class="m-0">Затемнения нет, фокус не удерживается: страницей можно пользоваться, пока панели открыты.</p>
+  <p class="m-0">Чтобы увидеть сдвиг страницы, откройте пример на весь экран.</p>
+</div>
+<sf-drawer id="drawer-example-blocks" docked placement="inline-start" size="small" title="Блоки">
+  <p class="m-0">Библиотека блоков.</p>
+</sf-drawer>
+<sf-drawer id="drawer-example-properties" docked placement="inline-end" size="small" title="Свойства">
+  <p class="m-0">Свойства выбранного блока.</p>
+</sf-drawer>

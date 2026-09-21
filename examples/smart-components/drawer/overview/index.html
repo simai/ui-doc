@@ -1,20 +1,17 @@
-<div class="flex flex-col gap-2 p-3 radius-2 bg-surface-container" data-sf-drawer-dock-host>
+<div class="flex flex-col gap-2 p-3 radius-2 bg-surface-container">
   <div class="flex flex-wrap gap-2">
-    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-blocks">
-      <span class="sf-button-text-container">Блоки</span>
-    </button>
-    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-properties">
-      <span class="sf-button-text-container">Свойства</span>
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-help">
+      <span class="sf-button-text-container">Подсказка</span>
     </button>
   </div>
-  <h3 class="m-0">Страница в редакторе</h3>
-  <p class="m-0">Откройте обе панели. На широком экране страница сдвигается и остаётся видна целиком; на узком панель ложится поверх.</p>
-  <p class="m-0">Затемнения нет, фокус не удерживается: страницей можно пользоваться, пока панели открыты.</p>
-  <p class="m-0">Чтобы увидеть сдвиг страницы, откройте пример на весь экран.</p>
+  <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+    <span class="sf-input-label flex"><span class="sf-input-text">Название страницы</span></span>
+    <span class="sf-input-field items-cross-center transition flex">
+      <input type="text" name="title" value="Весенняя распродажа">
+    </span>
+  </label>
+  <p class="m-0">Откройте подсказку и продолжайте печатать: панель ложится поверх, но без затемнения, и поле остаётся доступным.</p>
 </div>
-<sf-drawer id="drawer-example-blocks" docked placement="inline-start" size="small" title="Блоки">
-  <p class="m-0">Библиотека блоков.</p>
-</sf-drawer>
-<sf-drawer id="drawer-example-properties" docked placement="inline-end" size="small" title="Свойства">
-  <p class="m-0">Свойства выбранного блока.</p>
+<sf-drawer id="drawer-example-help" modal="false" placement="inline-end" size="small" title="Подсказка">
+  <p class="m-0">Название показывается во вкладке браузера и в результатах поиска.</p>
 </sf-drawer>
