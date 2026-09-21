@@ -14,8 +14,8 @@ Custom Elements: `<sf-button>`.
 Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/buttons/js/buttons.js`
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/buttons/template/default.js`
+- `simai/ui-smart@bda8a0a903395d26533a354bee93e842b7f528f1:smart/buttons/js/buttons.js`
+- `simai/ui-smart@bda8a0a903395d26533a354bee93e842b7f528f1:smart/buttons/template/default.js`
 
 ## Зависимости
 
@@ -85,5 +85,5 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 ## Источник
 
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/buttons`
-- `simai/ui@8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2:distr/rule/rule.json#name=cl-buttons`
+- `simai/ui-smart@bda8a0a903395d26533a354bee93e842b7f528f1:smart/buttons`
+- `simai/ui@44c4ecc09ba0eea059ea47a644a330773e683790:distr/rule/rule.json#name=cl-buttons`

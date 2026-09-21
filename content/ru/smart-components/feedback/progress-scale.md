@@ -14,8 +14,8 @@ Custom Elements: `<sf-progress-scale>`.
 Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/progress-scale/js/progress-scale.js`
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/progress-scale/template/default.js`
+- `simai/ui-smart@bda8a0a903395d26533a354bee93e842b7f528f1:smart/progress-scale/js/progress-scale.js`
+- `simai/ui-smart@bda8a0a903395d26533a354bee93e842b7f528f1:smart/progress-scale/template/default.js`
 
 ## Зависимости
 
@@ -67,5 +67,5 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 
 ## Источник
 
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/progress-scale`
-- `simai/ui@8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2:distr/rule/rule.json#name=cl-progress-scale`
+- `simai/ui-smart@bda8a0a903395d26533a354bee93e842b7f528f1:smart/progress-scale`
+- `simai/ui@44c4ecc09ba0eea059ea47a644a330773e683790:distr/rule/rule.json#name=cl-progress-scale`
