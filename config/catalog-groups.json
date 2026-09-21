@@ -185,6 +185,14 @@
         "drawer"
       ]
     },
+    "editor": {
+      "title": "Редактор страниц",
+      "items": [
+        "composition-overlay",
+        "sortable",
+        "inline-editor"
+      ]
+    },
     "composite": {
       "title": "Составные компоненты",
       "items": [

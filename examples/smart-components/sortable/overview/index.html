@@ -1,0 +1,11 @@
+<div class="flex flex-wrap gap-2">
+  <sf-sortable id="sortable-todo" group="tasks" label="Нужно сделать" class="flex flex-col gap-1 p-2 radius-2 border border-outline-variant">
+    <div data-sf-sortable-item="brief" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Собрать требования</div>
+    <div data-sf-sortable-item="layout" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Нарисовать макет</div>
+    <div data-sf-sortable-item="texts" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Подготовить тексты</div>
+  </sf-sortable>
+  <sf-sortable id="sortable-done" group="tasks" label="Готово" class="flex flex-col gap-1 p-2 radius-2 border border-outline-variant">
+    <div data-sf-sortable-item="kickoff" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Провести встречу</div>
+  </sf-sortable>
+</div>
+<p id="sortable-status" role="status" class="m-0">Перетащите задачу за ручку или выберите её и нажмите Пробел.</p>

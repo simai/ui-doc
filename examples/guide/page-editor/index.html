@@ -1,0 +1,12 @@
+<p id="editor-status" role="status">Загружаем редактор…</p>
+<div class="flex flex-col gap-3">
+  <sf-sortable id="editor-library" class="flex flex-wrap gap-2 p-2 radius-2 bg-surface-container" group="blocks" mode="copy" orientation="horizontal" label="Библиотека блоков">
+    <div class="flex gap-1 p-1 radius-1 bg-surface" data-sf-sortable-item="content.heading"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Заголовок</div>
+    <div class="flex gap-1 p-1 radius-1 bg-surface" data-sf-sortable-item="content.paragraph"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Абзац</div>
+  </sf-sortable>
+  <sf-composition-overlay id="editor-overlay" for="editor-canvas" accepts="blocks" label="Структура страницы"></sf-composition-overlay>
+  <div id="editor-canvas" class="p-3 m-t-2 radius-2 bg-surface-container"></div>
+  <sf-inline-editor></sf-inline-editor>
+  <details><summary>Текущий Document</summary><pre id="editor-document"></pre></details>
+</div>
+<style>#editor-canvas [data-sf-composition-id] + [data-sf-composition-id] { margin-block-start: var(--sf-space-3, .75rem); } #editor-canvas h2, #editor-canvas p { margin-block: 0; }</style>
