@@ -39,8 +39,12 @@ profile: reference
 ## Положение
 
 `center`, `inline-start`, `inline-end`, `top` и `bottom` меняют положение, но
-не поведение окна. Логические направления автоматически учитывают LTR и RTL;
-физические `left` и `right` остаются только совместимыми aliases.
+не поведение окна. Положения `inline-start` и `inline-end` — это модальная
+боковая панель; для неё используйте Modal, а не модальный Drawer. Панели,
+рядом с которыми страница остаётся доступной, делает
+[Drawer](/ru/smart-components/overlays/drawer/). Логические направления
+автоматически учитывают LTR и RTL; физические `left` и `right` остаются только
+совместимыми aliases.
 
 :::example {id="components/modal/smart-positions" label="Результат"}
 :::
