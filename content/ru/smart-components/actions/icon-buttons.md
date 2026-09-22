@@ -14,10 +14,10 @@ Custom Elements: `<sf-icon-button>`.
 Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@89e4e531ea81bf9c5f03bed0b774ff3edeff29bb:smart/icon-buttons/css/icon-buttons.css`
-- `simai/ui-smart@89e4e531ea81bf9c5f03bed0b774ff3edeff29bb:smart/icon-buttons/js/icon-buttons.js`
-- `simai/ui-smart@89e4e531ea81bf9c5f03bed0b774ff3edeff29bb:smart/icon-buttons/template/default.css`
-- `simai/ui-smart@89e4e531ea81bf9c5f03bed0b774ff3edeff29bb:smart/icon-buttons/template/default.js`
+- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/icon-buttons/css/icon-buttons.css`
+- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/icon-buttons/js/icon-buttons.js`
+- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/icon-buttons/template/default.css`
+- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/icon-buttons/template/default.js`
 
 ## Зависимости
 
@@ -84,5 +84,5 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 ## Источник
 
-- `simai/ui-smart@89e4e531ea81bf9c5f03bed0b774ff3edeff29bb:smart/icon-buttons`
-- `simai/ui@5b4289bda9a9969ca2b28879883d794740d08ef6:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/icon-buttons`
+- `simai/ui@1f1c9d42d964321ba97c3bdfbea66048946886f7:distr/rule/rule.json#name=cl-icon-buttons`
