@@ -54,25 +54,26 @@ profile: reference
 | `settings` | `true` | Настройки колонок |
 | `actions` | `true` | Действия строки |
 | `pagin` | `false` | Встроенная пагинация |
-| `pagination-total` | `0` | Общее число страниц или записей по контракту приложения |
+| `pagination-total` | `10` | Общее число страниц или записей по контракту приложения |
 | `pagination-page-size` | `10` | Размер страницы |
 | `page-sizes` | `10,20,30,40` | Разрешённые размеры страницы |
 | `context-menu-columns` | `2` | Число колонок в меню настроек, от 1 до 4 |
 
 ## Серверные намерения
 
-Компонент сообщает о намерениях, но не выполняет сетевые запросы сам.
+Компонент сообщает о намерениях, но не выполняет сетевые запросы сам. Все
+события всплывают и доходят до `document`.
 
 | Событие | Что должно сделать приложение |
 |:---|:---|
-| `sf-data-view-query-change` | Проверить запрос и вернуть новый набор данных |
-| `sf-data-view-page-change` | Загрузить указанную страницу |
-| `sf-data-view-page-size-change` | Применить допустимый размер и вернуться на первую страницу |
-| `sf-data-view-show-more` | Добавить следующую страницу через `addRows()` |
-| `sf-data-view-row-action` | Проверить и выполнить действие над одной записью |
-| `sf-data-view-bulk-action` | Проверить и выполнить действие над выбранными записями |
-| `sf-data-view-column-settings-save` | Сохранить разрешённую дельту настроек |
-| `sf-data-view-template-save` | Сохранить разрешённое пользовательское представление |
+| `sf-table-search-change` | Выполнить поиск по строке из `event.detail` (после паузы ввода) |
+| `sf-table-filter-change` | Проверить фильтр из `event.detail.values` и вернуть новый набор данных |
+| `sf-table-template-save` | Сохранить изменённые шаблоны: порядок, закрепление, удаление, `default`, `selected` или данные |
+| `sf-table-column-settings-change` | Сохранить дельту настроек колонок (`reason`, `tableSettingsKey`, `columnSettings`) |
+| `sf-table-action-intent` | Проверить и выполнить действие `action_id` над записями `record_ids` (строка или выбранные) |
+| `sf-table-retry` | Повторить загрузку после состояния `error` |
+| `sf-table-query-intent` | Ответить на запрос по связанному контексту через `applyQueryResult(sequence, rows)` |
+| `sf-page-change`, `sf-page-size-change`, `sf-show-more` | Загрузить страницу, применить размер страницы или добавить строки через `addRows()` (события встроенной пагинации) |
 
 Сам `<sf-table>` с версии 1.3.0 также сообщает о намерениях пользователя:
 
@@ -95,7 +96,7 @@ profile: reference
 
 ## Контракт
 
-- Канонический Smart-компонент: `smart.data-view`, версия `1.0.0`.
+- Канонический Smart-компонент: `smart.data-view`, версия `1.3.0`.
 - Совместимое runtime-имя: `smart.table`.
 - Custom Element: `<sf-table>`.
 - Loader-правило: `cl-table`.
