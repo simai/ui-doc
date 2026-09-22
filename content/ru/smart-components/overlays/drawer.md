@@ -72,6 +72,12 @@ Escape, который уже обработал редактор или пер�
 можно отменить; `drawer:after-open` и `drawer:after-close` приходят после
 завершённого перехода, `drawer:ready` и `drawer:update` — после отрисовки.
 
+С версии 1.3.0 события `drawer:*` всплывают до `document`, как остальные
+события `sf-*`. Панель, которая их отправила, указана в `event.detail.drawer`.
+Помощники `onBeforeOpen()`, `onAfterOpen()`, `onBeforeClose()` и
+`onAfterClose()` получают только события своей панели; обычный слушатель на
+внешней панели услышит и вложенную, поэтому проверяйте `event.detail.drawer`.
+
 ## Доступность
 
 Закреплённая и немодальная панели не удерживают фокус и не блокируют
@@ -85,7 +91,7 @@ Custom Element: `<sf-drawer>`. Loader-правило: `cl-drawer`, статус
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/drawer/js/drawer.js`
-- `simai/ui-smart@121e8882d016263dfb455f5da103f618b0d4db65:smart/drawer/css/drawer.css`
+- `simai/ui-smart@6c5d313aca4dbc429765a5bc1176c66b2ef7d654:smart/drawer/js/drawer.js`
+- `simai/ui-smart@6c5d313aca4dbc429765a5bc1176c66b2ef7d654:smart/drawer/css/drawer.css`
 
 Правило загрузчика: `simai/ui@1f1c9d42d964321ba97c3bdfbea66048946886f7:distr/rule/rule.json`.
