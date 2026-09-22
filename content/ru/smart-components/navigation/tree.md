@@ -14,10 +14,10 @@ Custom Elements: `<sf-tree>`.
 Loader-статус: `registered`. Loader-правило: `cl-tree`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@b100a5faf6a2979018db0a1dbc59e97eea48a411:smart/tree/css/tree.css`
-- `simai/ui-smart@b100a5faf6a2979018db0a1dbc59e97eea48a411:smart/tree/js/tree.js`
-- `simai/ui-smart@b100a5faf6a2979018db0a1dbc59e97eea48a411:smart/tree/template/default.css`
-- `simai/ui-smart@b100a5faf6a2979018db0a1dbc59e97eea48a411:smart/tree/template/default.js`
+- `simai/ui-smart@d448fb5563ccaf472d2724bff24ff24460e5862c:smart/tree/css/tree.css`
+- `simai/ui-smart@d448fb5563ccaf472d2724bff24ff24460e5862c:smart/tree/js/tree.js`
+- `simai/ui-smart@d448fb5563ccaf472d2724bff24ff24460e5862c:smart/tree/template/default.css`
+- `simai/ui-smart@d448fb5563ccaf472d2724bff24ff24460e5862c:smart/tree/template/default.js`
 
 ## Зависимости
 
@@ -69,5 +69,5 @@ Loader-статус: `registered`. Loader-правило: `cl-tree`.
 
 ## Источник
 
-- `simai/ui-smart@b100a5faf6a2979018db0a1dbc59e97eea48a411:smart/tree`
+- `simai/ui-smart@d448fb5563ccaf472d2724bff24ff24460e5862c:smart/tree`
 - `simai/ui@d81ccde2bdd5230f20ca0811c0812d2eff1f6064:distr/rule/rule.json#name=cl-tree`
