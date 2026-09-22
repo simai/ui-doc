@@ -3,7 +3,7 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "f2fc0795e163017322874225ca2f30ccad74e1e6",
+    "source_revision": "b55991f670ba274d746944c38ff678fbc89c927c",
     "core_revision": "d81ccde2bdd5230f20ca0811c0812d2eff1f6064",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
