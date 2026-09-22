@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "c782928d11818ec01ebc41d40e8a7bfa3fa137e2",
-    "core_revision": "1f1c9d42d964321ba97c3bdfbea66048946886f7",
+    "source_revision": "cc41a0f51aa9bd98aa24ac36ea4fe087340fc30f",
+    "core_revision": "d81ccde2bdd5230f20ca0811c0812d2eff1f6064",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "9ade8a574ddc197ccbe3f30771b80b6caec011f8e162cebf467cb9c60018d9fb",
@@ -12,7 +12,7 @@
     },
     "generated_files": {
       "distr/component/menu/css/menu.css": "1347265ae1ddba99fe242111d703000f8bd0702d01e630e0cd3424f6f1bfc68c",
-      "distr/component/menu/js/menu.js": "f4672bcbb04e0ac0929ba895a896f74eda529d3c63f1ff12d56f7f0dcb7c53f2"
+      "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
     }
   },
   "source_files": [

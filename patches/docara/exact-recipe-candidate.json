@@ -1,7 +1,7 @@
 {
   "schema": "ui-doc.docara_exact_candidate_package.v1",
   "package": "simai/docara",
-  "source_reference": "a97d97604adbe5cd4cc009ea54492d2c312aa1ce",
+  "source_reference": "dc370cec1f4040191ca7921eadfd8af9d70fb55f",
   "files": [
     {
       "path": "resources/contracts/composition/docara-type-manifests.json",
