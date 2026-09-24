@@ -12,7 +12,7 @@ description: "Требования к компоненту, собранному
 стандарт описывает только внешнюю сторону: из чего компонент состоит, как он
 объявляет вид, что отдаёт сервер и что происходит без скриптов. Работа с данными
 и с сервером описана в соседнем стандарте [динамический композитный
-компонент](/ru/reference/standards/dynamic-composite-component/).
+компонент](/ru/standards/dynamic-composite-component/).
 
 Стандарт рамочный: в нём только то, что переживёт смену библиотеки, браузера и
 типа представления. Имена событий, классы и ширины колонок — это документация
@@ -52,7 +52,7 @@ description: "Требования к компоненту, собранному
 
 ## Машиночитаемая часть
 
-[Конверт `simai.composite-component` 1.0.0](/ru/assets/standards/simai.composite-component-1.0.0.json)
+[Конверт `simai.composite-component` 1.0.0](/ai/standards/simai.composite-component/1.0.0/standard.json)
 в формате `standard-contract` 1.0. Тот же файл лежит в источнике Framework:
 `contracts/standards/simai.composite-component/1.0.0/standard.json`.
 

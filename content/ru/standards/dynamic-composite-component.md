@@ -12,7 +12,7 @@ description: "Требования к композитному компонен�
 описывает границу между компонентом и приложением: кто чем владеет, как
 компонент просит, как приложение отвечает и что происходит при конфликте.
 
-Стандарт наследует [композитный компонент](/ru/reference/standards/composite-component/)
+Стандарт наследует [композитный компонент](/ru/standards/composite-component/)
 1.0.0: все его требования действуют и здесь, повторно они не перечисляются.
 Роли полей, типы представлений и модель запроса — это уже профиль поверх этого
 стандарта, а не он сам.
@@ -52,7 +52,7 @@ description: "Требования к композитному компонен�
 
 ## Машиночитаемая часть
 
-[Конверт `simai.dynamic-composite-component` 1.0.0](/ru/assets/standards/simai.dynamic-composite-component-1.0.0.json)
+[Конверт `simai.dynamic-composite-component` 1.0.0](/ai/standards/simai.dynamic-composite-component/1.0.0/standard.json)
 в формате `standard-contract` 1.0. Тот же файл лежит в источнике Framework:
 `contracts/standards/simai.dynamic-composite-component/1.0.0/standard.json`.
 
