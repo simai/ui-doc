@@ -1263,7 +1263,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "📐 Nette Schema: validating data structures against a given Schema.",
+            "description": "\ud83d\udcd0 Nette Schema: validating data structures against a given Schema.",
             "homepage": "https://nette.org",
             "keywords": [
                 "config",
@@ -1342,7 +1342,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "description": "\ud83d\udee0  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
             "homepage": "https://nette.org",
             "keywords": [
                 "array",
@@ -1574,12 +1574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "0e637178e0f186c4ca0eeceeaa6910cc2832ec8e"
+                "reference": "8d514732c1655721f63f6c2856c8ff676641a856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/0e637178e0f186c4ca0eeceeaa6910cc2832ec8e",
-                "reference": "0e637178e0f186c4ca0eeceeaa6910cc2832ec8e",
+                "url": "https://api.github.com/repos/simai/docara/zipball/8d514732c1655721f63f6c2856c8ff676641a856",
+                "reference": "8d514732c1655721f63f6c2856c8ff676641a856",
                 "shasum": ""
             },
             "require": {

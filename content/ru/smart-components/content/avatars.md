@@ -14,14 +14,14 @@ Custom Elements: `<sf-avatars>`.
 Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/css/avatars.css`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/js/avatars.js`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/template/default/index.html`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/template/default.js`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/template/group/index.html`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/template/label/index.html`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/template/profile/index.html`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars/template/user/index.html`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/css/avatars.css`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/js/avatars.js`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/template/default/index.html`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/template/default.js`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/template/group/index.html`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/template/label/index.html`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/template/profile/index.html`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars/template/user/index.html`
 
 ## Зависимости
 
@@ -88,5 +88,5 @@ Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 
 ## Источник
 
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/avatars`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/avatars`
 - `simai/ui@d81ccde2bdd5230f20ca0811c0812d2eff1f6064:distr/rule/rule.json#name=cl-avatars`

@@ -14,8 +14,8 @@ Custom Elements: `<sf-close>`.
 Loader-статус: `registered`. Loader-правило: `cl-close`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/close/js/close.js`
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/close/template/default.js`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/close/js/close.js`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/close/template/default.js`
 
 ## Зависимости
 
@@ -65,5 +65,5 @@ Loader-статус: `registered`. Loader-правило: `cl-close`.
 
 ## Источник
 
-- `simai/ui-smart@004424a4b2e92b9cf09347b205637b475e1d8ba3:smart/close`
+- `simai/ui-smart@a916bbadf3aa04ef04588bc4663574658df53fe2:smart/close`
 - `simai/ui@d81ccde2bdd5230f20ca0811c0812d2eff1f6064:distr/rule/rule.json#name=cl-close`
