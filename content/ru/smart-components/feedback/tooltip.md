@@ -22,8 +22,8 @@ Custom Elements: `<sf-tooltip>`.
 Loader-статус: `registered`. Loader-правило: `cl-tooltip`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/tooltip/js/tooltip.js`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/tooltip/template/default.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/tooltip/js/tooltip.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/tooltip/template/default.js`
 
 ## Зависимости
 
@@ -86,5 +86,5 @@ Loader-статус: `registered`. Loader-правило: `cl-tooltip`.
 
 ## Источник
 
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/tooltip`
-- `simai/ui@cb1cda3016487e6b2be8c36b60bba0eea062d6a1:distr/rule/rule.json#name=cl-tooltip`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/tooltip`
+- `simai/ui@56cd91e1d7a3dc19b32a2acfdaa1389744e174a7:distr/rule/rule.json#name=cl-tooltip`

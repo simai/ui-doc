@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "783063209aa01d824ba0b75817fd61e188d40426",
-  "core": "cb1cda3016487e6b2be8c36b60bba0eea062d6a1",
-  "smart": "81741eac168dad74db23beffe66342c5c5924af5",
+  "source": "58150ae0499a4160c78abb61204738f707bbdf22",
+  "core": "56cd91e1d7a3dc19b32a2acfdaa1389744e174a7",
+  "smart": "903ad66c4f4fd7b9674a537ddd315652b9c375c4",
   "source_files": {
     "src/core/js/smart-base.js": "cec5760253a9ef3e09d8ce914b1f402ff7a871ce45b9aa8489b2fe2212a5c605",
-    "src/core/js/loader.js": "b1e13e1e122130f74b5c236db332823680dd08ecbaea05b9dfa516e847799fcf"
+    "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
   },
   "lessons": [
     "creating",
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Browser examples run against this pair; a new pair requires a new semantic review."
+  "review": "Reviewed exact source/Core/Smart pair: smart-base and loader bytes are unchanged across reviewed and current revisions; Smart adds the table host port without changing the eight generic Smart lessons."
 }

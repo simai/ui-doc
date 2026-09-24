@@ -14,14 +14,14 @@ Custom Elements: `<sf-avatars>`.
 Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/css/avatars.css`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/js/avatars.js`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/template/default/index.html`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/template/default.js`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/template/group/index.html`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/template/label/index.html`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/template/profile/index.html`
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars/template/user/index.html`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/css/avatars.css`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/js/avatars.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/template/default/index.html`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/template/default.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/template/group/index.html`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/template/label/index.html`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/template/profile/index.html`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars/template/user/index.html`
 
 ## Зависимости
 
@@ -88,5 +88,5 @@ Loader-статус: `registered`. Loader-правило: `cl-avatars`.
 
 ## Источник
 
-- `simai/ui-smart@81741eac168dad74db23beffe66342c5c5924af5:smart/avatars`
-- `simai/ui@cb1cda3016487e6b2be8c36b60bba0eea062d6a1:distr/rule/rule.json#name=cl-avatars`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/avatars`
+- `simai/ui@56cd91e1d7a3dc19b32a2acfdaa1389744e174a7:distr/rule/rule.json#name=cl-avatars`

@@ -1263,7 +1263,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "\ud83d\udcd0 Nette Schema: validating data structures against a given Schema.",
+            "description": "📐 Nette Schema: validating data structures against a given Schema.",
             "homepage": "https://nette.org",
             "keywords": [
                 "config",
@@ -1342,7 +1342,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "\ud83d\udee0  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
             "homepage": "https://nette.org",
             "keywords": [
                 "array",
@@ -1574,12 +1574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "1b772d2def51e242abd739eb2f5b47f543fed5ec"
+                "reference": "e4f7abb88b4ddbcfdb89f485562eb89f551362bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/1b772d2def51e242abd739eb2f5b47f543fed5ec",
-                "reference": "1b772d2def51e242abd739eb2f5b47f543fed5ec",
+                "url": "https://api.github.com/repos/simai/docara/zipball/e4f7abb88b4ddbcfdb89f485562eb89f551362bd",
+                "reference": "e4f7abb88b4ddbcfdb89f485562eb89f551362bd",
                 "shasum": ""
             },
             "require": {
@@ -1657,7 +1657,7 @@
                 "site",
                 "static"
             ],
-            "time": "2026-09-22T12:08:47+00:00"
+            "time": "2026-09-24T09:40:40+00:00"
         },
         {
             "name": "symfony/clock",
