@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.composite-host-port",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "title": "SIMAI Composite Host Port",
   "appliesTo": [
     "simai.framework.composite-component"
@@ -141,19 +141,19 @@
   "extends": [
     {
       "id": "simai.dynamic-composite-component",
-      "version": "1.0.0",
-      "path": "../../simai.dynamic-composite-component/1.0.0/standard.json",
-      "sha256": "b8a9d9fdf8bd9a4d5fd893c1c9a7dc0ab79e95224590bfe5fa84c624866aa9d1",
+      "version": "1.0.2",
+      "path": "../../simai.dynamic-composite-component/1.0.2/standard.json",
+      "sha256": "901ee98862e443d34ccef0b5c231c5808b55bf30d18fcdc063d4d72700028511",
       "description": "Behaviour on the seam: intents, revisions, settings layers, instance lifecycle and data states. This standard declares and versions the seam itself."
     }
   ],
   "uses": [
     {
       "id": "simai.framework.smart-component-manifest",
-      "version": "2.0.0",
-      "path": "../../../schema/smart-component-manifest.v2.schema.json",
-      "sha256": "cb764fd2f37581362725be43cd7bd7a894766a0ab6f3fe15c33f78dd2088817e",
-      "description": "The manifest that carries the port declaration next to inputs, methods, events and provenance."
+      "version": "2.1.0",
+      "path": "../../pinned/smart-component-manifest.v2.schema.json",
+      "sha256": "86419a16b94596c2948878bc7eed0af7b7702e598b31228ebe2edae11af43ff0",
+      "description": "Framework leaf contract: inputs, methods, events, accessibility, presentation, provenance and the declarative projection of one Smart component."
     }
   ],
   "specification": {
@@ -174,7 +174,8 @@
         "larena dataview host and the minimal cms records list",
         "simai framework smart table"
       ],
-      "origin": "Drafted by simai/larena (larena-specs 0b1db2d0, proposal simai.composite-host-port 1.0.0) and authored for publication by the Framework owner."
+      "origin": "Drafted by simai/larena (larena-specs 0b1db2d0, proposal simai.composite-host-port 1.0.0) and authored for publication by the Framework owner.",
+      "reissue": "Re-issued as 1.0.2 after a report from Larena: 1.0.1 named the manifest schema as 2.0.0 while pinning the bytes it gained in the data view work. A pinned reference now names the version the target itself declares (x-simai-version), so one identity and version never covers two byte sets. Requirements are unchanged since 1.0.0."
     }
   }
 }

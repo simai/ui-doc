@@ -1,9 +1,9 @@
 ---
-title: "Манифест Smart-компонента 2.0.0"
+title: "Манифест Smart-компонента 2.1.0"
 description: "Контракт одного компонента: входные свойства, методы, события, состояния, доступность, владение и происхождение."
 ---
 
-# Манифест Smart-компонента 2.0.0
+# Манифест Smart-компонента 2.1.0
 
 Уровень 2. Владелец — Framework.
 
@@ -18,7 +18,10 @@ description: "Контракт одного компонента: входные
 Схема закрытая: поле, которого в ней нет, манифест не примет. Это и делает
 манифест пригодным для машинного чтения и для проверки в гейте владельца.
 
-Все 47 Smart-компонентов Framework описаны манифестом версии 2.
+Все 47 Smart-компонентов Framework описаны манифестом версии 2. Схема несёт
+собственную версию в поле `x-simai-version`: 2.1.0 с тех пор, как в
+декларативную часть добавились необязательные `data`, `events` и `persistence`.
+Добавление необязательных полей не ломает прежние манифесты.
 
 ## На что опирается
 
@@ -30,5 +33,5 @@ description: "Контракт одного компонента: входные
 ## Где взять
 
 - Схема для ИИ:
-  [`/ai/standards/smart-component-manifest/2.0.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.0.0/manifest.schema.json).
+  [`/ai/standards/smart-component-manifest/2.1.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.1.0/manifest.schema.json).
 - Источник: `ui-source:contracts/schema/smart-component-manifest.v2.schema.json`.

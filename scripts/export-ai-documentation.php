@@ -123,7 +123,7 @@ foreach (glob($standardsRoot . '/*', GLOB_ONLYDIR) as $identityDirectory) {
     }
 }
 $standards['standard-contract/1.0.0'] = [$standardsRoot . '/standard-contract-1.0.schema.json', null, 'standard.schema.json', 'Standard Contract 1.0.0', 'Схема конверта Standard Contract 1.0, закреплённая копия из ai-first.'];
-$standards['smart-component-manifest/2.0.0'] = [$standardsRoot . '/smart-component-manifest.v2.schema.json', null, 'manifest.schema.json', 'Манифест Smart-компонента 2.0.0', 'Схема манифеста Smart-компонента, версия 2.'];
+$standards['smart-component-manifest/2.1.0'] = [$standardsRoot . '/smart-component-manifest.v2.schema.json', null, 'manifest.schema.json', 'Манифест Smart-компонента 2.1.0', 'Схема манифеста Smart-компонента, версия 2.'];
 ksort($standards, SORT_STRING);
 foreach ($standards as $key => [$file, $standard, $name, $title, $description]) {
     $bytes = (string) file_get_contents($file);

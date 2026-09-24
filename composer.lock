@@ -1574,12 +1574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "db1ae4477b6ecea56f82989648674d9b722857f8"
+                "reference": "1b772d2def51e242abd739eb2f5b47f543fed5ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/db1ae4477b6ecea56f82989648674d9b722857f8",
-                "reference": "db1ae4477b6ecea56f82989648674d9b722857f8",
+                "url": "https://api.github.com/repos/simai/docara/zipball/1b772d2def51e242abd739eb2f5b47f543fed5ec",
+                "reference": "1b772d2def51e242abd739eb2f5b47f543fed5ec",
                 "shasum": ""
             },
             "require": {

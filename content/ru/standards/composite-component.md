@@ -5,7 +5,7 @@ description: "Требования к компоненту, собранному
 
 # Стандарт: композитный компонент
 
-`simai.composite-component`, версия 1.0.0.
+`simai.composite-component`, версия 1.0.2. Требования те же, что в 1.0.0: новые версии выходили, когда менялись только закреплённые байты опор.
 
 Композитный компонент — это компонент, собранный из других компонентов: таблица
 с панелью инструментов и меню, административное меню, редактор страницы. Этот
@@ -45,16 +45,16 @@ description: "Требования к компоненту, собранному
 
 - грамматика раскладки Framework (Composition Recipe 1.0.1) — документ, типы
   узлов и слоты;
-- манифест Smart-компонента (схема v2) — входные свойства, методы, события,
+- манифест Smart-компонента 2.1.0 (схема v2) — входные свойства, методы, события,
   доступность и происхождение отдельного компонента.
 
 Обе опоры закреплены в машиночитаемом конверте по точным байтам.
 
 ## Машиночитаемая часть
 
-[Конверт `simai.composite-component` 1.0.0](/ai/standards/simai.composite-component/1.0.0/standard.json)
+[Конверт `simai.composite-component` 1.0.2](/ai/standards/simai.composite-component/1.0.2/standard.json)
 в формате `standard-contract` 1.0. Тот же файл лежит в источнике Framework:
-`contracts/standards/simai.composite-component/1.0.0/standard.json`.
+`contracts/standards/simai.composite-component/1.0.2/standard.json`.
 
 ## Как проверяется
 

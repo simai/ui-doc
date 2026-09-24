@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.dynamic-composite-component",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "title": "SIMAI Dynamic Composite Component",
   "appliesTo": [
     "simai.framework.composite-component"
@@ -128,19 +128,19 @@
   "extends": [
     {
       "id": "simai.composite-component",
-      "version": "1.0.0",
-      "path": "../../simai.composite-component/1.0.0/standard.json",
-      "sha256": "6c5870bf5e160e41dcb64afe31736fd3c410eed48e9a5ac1032d0969cdbad1a3",
+      "version": "1.0.2",
+      "path": "../../simai.composite-component/1.0.2/standard.json",
+      "sha256": "a4cc1676dd75455baa6cc4182b409593b52b4c8d966acbfe2839e74b712809fc",
       "description": "Frontend composition, presentation, accessibility and no-JS behaviour. This standard adds the host relationship."
     }
   ],
   "uses": [
     {
       "id": "simai.framework.smart-component-manifest",
-      "version": "2.0.0",
-      "path": "../../../schema/smart-component-manifest.v2.schema.json",
-      "sha256": "cb764fd2f37581362725be43cd7bd7a894766a0ab6f3fe15c33f78dd2088817e",
-      "description": "Already declares persistence, ownership, security, readiness, events and state machines; this standard adds identity, lifecycle, ordering, settings layers and conflict behaviour."
+      "version": "2.1.0",
+      "path": "../../pinned/smart-component-manifest.v2.schema.json",
+      "sha256": "86419a16b94596c2948878bc7eed0af7b7702e598b31228ebe2edae11af43ff0",
+      "description": "Framework leaf contract: inputs, methods, events, accessibility, presentation, provenance and the declarative projection of one Smart component."
     }
   ],
   "specification": {
@@ -163,7 +163,8 @@
         "larena in-place page editor",
         "simai framework smart table"
       ],
-      "origin": "Drafted by simai/larena (larena-specs 5c458cf0) and authored for publication by the Framework owner."
+      "origin": "Drafted by simai/larena (larena-specs 5c458cf0) and authored for publication by the Framework owner.",
+      "reissue": "Re-issued as 1.0.2 after a report from Larena: 1.0.1 named the manifest schema as 2.0.0 while pinning the bytes it gained in the data view work. A pinned reference now names the version the target itself declares (x-simai-version), so one identity and version never covers two byte sets. Requirements are unchanged since 1.0.0."
     }
   }
 }

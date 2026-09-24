@@ -20,10 +20,16 @@ description: "Карта стандартов Framework: форма станда
 |:---|:---|:---|:---|:---|:---|
 | 1 | [Standard Contract](/ru/standards/standard-contract/) | 1.0.0 | ai-first, Framework публикует закреплённую копию | — | [схема](/ai/standards/standard-contract/1.0.0/standard.schema.json) |
 | 2 | [Composition Recipe](/ru/standards/composition-recipe/) | 1.0.1 | Framework | Standard Contract | [комплект](/ai/standards/composition-recipe/1.0.1/README.md) |
-| 2 | [Манифест Smart-компонента](/ru/standards/smart-component-manifest/) | 2.0.0 | Framework | Standard Contract | [схема](/ai/standards/smart-component-manifest/2.0.0/manifest.schema.json) |
-| 3 | [Композитный компонент](/ru/standards/composite-component/) | 1.0.0 | Framework | Composition Recipe, манифест Smart | [конверт](/ai/standards/simai.composite-component/1.0.0/standard.json) |
-| 4 | [Динамический композитный компонент](/ru/standards/dynamic-composite-component/) | 1.0.0 | Framework | композитный компонент | [конверт](/ai/standards/simai.dynamic-composite-component/1.0.0/standard.json) |
-| 4 | [Порт хоста](/ru/standards/composite-host-port/) | 1.0.0 | Framework | динамический композитный компонент | [конверт](/ai/standards/simai.composite-host-port/1.0.0/standard.json) |
+| 2 | [Манифест Smart-компонента](/ru/standards/smart-component-manifest/) | 2.1.0 | Framework | Standard Contract | [схема](/ai/standards/smart-component-manifest/2.1.0/manifest.schema.json) |
+| 3 | [Композитный компонент](/ru/standards/composite-component/) | 1.0.2 | Framework | Composition Recipe, манифест Smart | [конверт](/ai/standards/simai.composite-component/1.0.2/standard.json) |
+| 4 | [Динамический композитный компонент](/ru/standards/dynamic-composite-component/) | 1.0.2 | Framework | композитный компонент | [конверт](/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json) |
+| 4 | [Порт хоста](/ru/standards/composite-host-port/) | 1.0.2 | Framework | динамический композитный компонент | [конверт](/ai/standards/simai.composite-host-port/1.0.2/standard.json) |
+
+Версия стандарта меняется и тогда, когда меняются только закреплённые байты
+опоры: издание неизменно, поэтому вместо правки выходит новая версия. Так
+появились 1.0.1 и 1.0.2 — требования в них те же, что в 1.0.0. Каждый контракт
+объявляет свою версию (`x-simai-version` у схем, `version` у lock-файлов), и
+проверка Framework отклоняет закрепление, где версия не совпадает с объявленной.
 
 Уровни читаются снизу вверх: каждый следующий добавляет требования и не
 отменяет предыдущие. Наследование закреплено в самих конвертах по версии и
