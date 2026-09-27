@@ -56,7 +56,8 @@
             "@php scripts/audit-reference-separation.php"
         ],
         "docs:build": "@php scripts/build-documentation.php",
-        "docs:ai:check": "@php scripts/export-ai-documentation.php --check"
+        "docs:ai:check": "@php scripts/export-ai-documentation.php --check",
+        "docs:recipe:check": "@php scripts/audit-docara-recipe-primary.php"
     },
     "config": {
         "allow-plugins": false,

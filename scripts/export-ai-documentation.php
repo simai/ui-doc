@@ -20,7 +20,7 @@ $write = static function (string $relative, string $bytes) use ($build, $check, 
 };
 $json = static fn (array $value): string => json_encode($value, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR) . "\n";
 $manifest = static fn (array $records, string $revision): array => [
-    'format' => 'ai-first', 'formatVersion' => '0.1', 'document' => 'manifest', 'revision' => $revision,
+    'format' => 'ai-first', 'formatVersion' => '1.0', 'document' => 'manifest', 'revision' => $revision,
     'resource' => ['id' => 'urn:simai:framework:documentation', 'name' => 'Simai Framework documentation', 'description' => 'Version-bound documentation and executable example sources.', 'language' => 'ru', 'scope' => './', 'publisher' => ['name' => 'Rim Zabarov']],
     'items' => $records,
 ];
@@ -72,6 +72,41 @@ foreach ($files as $file) {
     $write($route . 'ai.json', $json($manifest([$local], $hash)));
 }
 if (count($items) < 100) throw new RuntimeException('AI export requires a complete documentation build');
+$specRoot = $root . '/contracts/composition-recipe-v1';
+$specLock = json_decode((string) file_get_contents($specRoot . '/contract.lock.json'), true, 512, JSON_THROW_ON_ERROR);
+if (($specLock['version'] ?? null) !== '1.0.1') throw new RuntimeException('Unexpected Recipe specification edition');
+$normative = $specLock['normativeFiles'] ?? throw new RuntimeException('Recipe normative file map is missing');
+ksort($normative, SORT_STRING);
+if ('sha256:' . hash('sha256', json_encode($normative, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR)) !== $specLock['contractDigest']) {
+    throw new RuntimeException('Recipe specification digest mismatch');
+}
+$specBase = 'ai/standards/composition-recipe/1.0.1/';
+foreach ([...array_keys($normative), 'contract.lock.json', 'fixtures/header-switch.json'] as $relative) {
+    if (!preg_match('#^[a-zA-Z0-9._/-]+$#', $relative) || str_contains($relative, '..')) throw new RuntimeException('Unsafe Recipe specification path');
+    $bytes = (string) file_get_contents($specRoot . '/' . $relative);
+    $hash = hash('sha256', $bytes);
+    if (isset($normative[$relative]) && 'sha256:' . $hash !== $normative[$relative]) throw new RuntimeException('Recipe source copy drift: ' . $relative);
+    if ($relative === 'fixtures/header-switch.json' && $bytes !== (string) file_get_contents($root . '/assets/examples/composition/header-switch.json')) {
+        throw new RuntimeException('Recipe checked example drift');
+    }
+    $public = $specBase . $relative;
+    $write($public, $bytes);
+    $id = $relative === 'README.md' ? 'urn:simai:framework:composition-recipe:specification' :
+        'urn:simai:framework:composition-recipe:' . str_replace(['/', '.'], ':', strtolower($relative));
+    $title = $relative === 'README.md' ? 'Composition Recipe: полная спецификация' : 'Composition Recipe: ' . $relative;
+    $items[] = [
+        'id' => $id, 'kind' => 'knowledge', 'title' => $title,
+        'description' => $relative === 'fixtures/header-switch.json' ?
+            'Проверенный пример двух вариантов шапки и ожидаемых результатов Recipe.' :
+            'Проверенный файл нормативного комплекта Composition Recipe 1.0.1.',
+        'language' => 'ru', 'revision' => $hash, 'status' => 'published',
+        'source' => './' . $public,
+        'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
+        'representations' => [['href' => './' . $public, 'mediaType' => str_ends_with($relative, '.md') ? 'text/markdown' : 'application/json', 'sha256' => $hash, 'role' => 'full']],
+        'x-simai-contractDigest' => $specLock['contractDigest'],
+        'x-simai-sourceRevision' => '8d3438aa9c2e054580fa1eab97916aed010ec545',
+    ];
+}
 $write('ai/framework-lock.json', $lockBytes);
 $main = $manifest([], hash('sha256', $json($items)));
 unset($main['items']); $main['catalogs'] = [];
@@ -82,10 +117,10 @@ foreach (array_chunk($items, 100) as $index => $chunk) {
     }
     unset($item);
     $name = 'ai/catalogs/' . sprintf('%02d', $index + 1) . '.json';
-    $catalog = ['format' => 'ai-first', 'formatVersion' => '0.1', 'document' => 'catalog', 'revision' => $main['revision'], 'resourceId' => 'urn:simai:framework:documentation', 'items' => $chunk];
+    $catalog = ['format' => 'ai-first', 'formatVersion' => '1.0', 'document' => 'catalog', 'revision' => $main['revision'], 'resourceId' => 'urn:simai:framework:documentation', 'items' => $chunk];
     $bytes = $json($catalog); $write($name, $bytes);
     $main['catalogs'][] = ['href' => './' . $name, 'description' => 'Documentation pages ' . ($index * 100 + 1) . '–' . ($index * 100 + count($chunk)), 'sha256' => hash('sha256', $bytes)];
 }
 $main['frameworkLock'] = ['href' => './ai/framework-lock.json', 'sha256' => hash('sha256', $lockBytes)];
 $write('ai.json', $json($main));
-echo $json(['status'=>'pass', 'mode'=>$check?'check':'export', 'formatVersion'=>'0.1', 'pages'=>count($items), 'files'=>count($expected)]);
+echo $json(['status'=>'pass', 'mode'=>$check?'check':'export', 'formatVersion'=>'1.0', 'knowledgeItems'=>count($items), 'files'=>count($expected)]);

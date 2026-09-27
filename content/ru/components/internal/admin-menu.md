@@ -1,13 +1,13 @@
 ---
 title: "Основа Admin Menu"
-description: "Низкоуровневая визуальная основа комплексного Smart-компонента Admin Menu."
+description: "Низкоуровневая визуальная основа составного смарт-компонента Admin Menu."
 profile: reference
 ---
 
 # Основа Admin Menu
 
-`component.admin-menu` — служебная визуальная основа комплексного
-[Smart Admin Menu](/ru/smart-components/complex/admin-menu/). Она сохраняется
+`component.admin-menu` — служебная визуальная основа составного
+[Smart Admin Menu](/ru/smart-components/composite/admin-menu/). Она сохраняется
 для совместимости и документирования низкоуровневого контракта, но не считается
 самостоятельным пользовательским компонентом. Для обычного списка команд или
 ссылок используйте компонент «Меню».

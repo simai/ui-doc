@@ -1,4 +1,6 @@
-AI First 0.1 manifest schema, copied without modification from `ai-first`
-revision `37e9f29eab422866e58838f7cd32b125b650d492`, `schemas/manifest.schema.json`.
-MIT notice preserved in LICENSE. This is a pinned interoperability contract,
-not an assertion that later candidate revisions are supported.
+AI First 1.0 manifest and catalog JSON schemas are exact copies of the stable
+`ai-first` release `8ed3d48efdb2435f1dd4142ab3339b00f5340fb1`, paths
+`schemas/1.0/manifest.schema.json` and `schemas/1.0/catalog.schema.json`.
+The MIT notice is preserved in `LICENSE`. `scripts/check-ai-schema.py` validates
+the published documentation and every representation against these schemas.
+This publication describes knowledge; it does not authorize product actions.

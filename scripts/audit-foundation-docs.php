@@ -118,7 +118,7 @@ $pages = [
     'sizes' => $read('content/ru/guide/fundamentals/size-scale.md'),
 ];
 $check(str_contains($pages['overview'], 'Правило выбора'), 'level_selection_rule_missing');
-foreach (['Core', 'Утилиты', 'Компоненты', 'Smart-компоненты', 'Комплексные Smart-компоненты', 'Блоки', 'Макеты'] as $level) {
+foreach (['Core', 'Утилиты', 'Компоненты', 'Smart-компоненты', 'Составные смарт-компоненты', 'Блоки', 'Макеты'] as $level) {
     $check(str_contains($pages['overview'], '| ' . $level . ' |'), 'architecture_level_missing', ['level' => $level]);
 }
 $check(str_contains($pages['boundary'], 'проверяет права'), 'project_rights_boundary_missing');

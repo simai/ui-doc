@@ -129,14 +129,14 @@
     }
   ],
   "recipe_candidate": {
-    "source_revision": "f037d0ac05c5be3cb05af77b5351a63a1e2f0b3e",
+    "source_revision": "8d3438aa9c2e054580fa1eab97916aed010ec545",
     "core_revision": "8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2",
     "source_files": {
       "src/core/contracts/composition-recipe-v1/recipe.schema.json": "63d2f7d506be22b3f4a6060306a4d3d08e562d3720d82f13c41e69bc6ce3ffb3",
       "src/core/contracts/composition-recipe-v1/manifest.schema.json": "e897974dcdb1e2428f0f808a7fa9ad7a8eef6d79128d24016a5e21fc372b730c",
       "src/core/contracts/composition-recipe-v1/inputs.schema.json": "e83e5c8ece50c4641b58256b852a3fecc33a786919279d85de5c7689d32d2af1",
       "src/core/contracts/composition-recipe-v1/dependencies.schema.json": "a2f3f371ace795f22bf4fb293e0005dcecbbc6c340cb669ba8e274c6e0b745e8",
-      "src/core/contracts/composition-recipe-v1/contract.lock.json": "979c3a435a8002854c3505a5b54e875eaee185d28667320c74ac4591823b3c9d",
+      "src/core/contracts/composition-recipe-v1/contract.lock.json": "73fbc4f16b5a1b9e23d517c9975db6dc51f18846c074b0dece1b326374b1f871",
       "src/core/contracts/composition-recipe-v1/fixtures/header-switch.json": "a5a3105d42e3403d5d4a99d86155b4a2d5609e54abc7c9638e56c2bb1f7e26eb",
       "src/core/js/composition/canonical.mjs": "aa6b44b2b81fc71040a32c6d8521201b7b8f23881ba2844c5a749b2e6ba3587c",
       "src/core/js/composition/recipe.mjs": "26663eecdbeed1e1950e7170b6bc00aa502a98bcd637c9bc388d146737bddfb6",

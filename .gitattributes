@@ -2,3 +2,5 @@
 *.md whitespace=-trailing-space
 # Compatibility patches preserve upstream bytes, including intentional blanks.
 patches/docara/*.patch whitespace=-trailing-space
+# Exact upstream AI First schemas retain their original final blank lines.
+contracts/ai-first/*.schema.json whitespace=-blank-at-eof
