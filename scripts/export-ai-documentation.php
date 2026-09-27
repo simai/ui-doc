@@ -107,6 +107,68 @@ foreach ([...array_keys($normative), 'contract.lock.json', 'fixtures/header-swit
         'x-simai-sourceRevision' => '8d3438aa9c2e054580fa1eab97916aed010ec545',
     ];
 }
+// Framework standards: the envelope of every published standard, plus the
+// contract bytes the envelopes pin, under one AI path per identity and version.
+$standardsRoot = $root . '/contracts/standards';
+$standards = [];
+foreach (glob($standardsRoot . '/*', GLOB_ONLYDIR) as $identityDirectory) {
+    foreach (glob($identityDirectory . '/*/standard.json') as $file) {
+        $standard = json_decode((string) file_get_contents($file), true, 512, JSON_THROW_ON_ERROR);
+        $identity = $standard['id'] ?? throw new RuntimeException('Standard without an identity: ' . $file);
+        $edition = $standard['version'] ?? throw new RuntimeException('Standard without a version: ' . $file);
+        if ($identity !== basename($identityDirectory) || $edition !== basename(dirname($file))) {
+            throw new RuntimeException('Standard does not live at its identity: ' . $file);
+        }
+        $standards[$identity . '/' . $edition] = [$file, $standard, 'standard.json', $standard['title'] ?? $identity, 'Конверт стандарта ' . $identity . ' ' . $edition . ' в формате standard-contract 1.0.'];
+    }
+}
+$standards['standard-contract/1.0.0'] = [$standardsRoot . '/standard-contract-1.0.schema.json', null, 'standard.schema.json', 'Standard Contract 1.0.0', 'Схема конверта Standard Contract 1.0, закреплённая копия из ai-first.'];
+$standards['smart-component-manifest/2.2.0'] = [$standardsRoot . '/smart-component-manifest.v2.schema.json', null, 'manifest.schema.json', 'Манифест Smart-компонента 2.2.0', 'Схема манифеста Smart-компонента, версия 2.'];
+$standards['composite-host-port-schema/1.0.0'] = [$standardsRoot . '/composite-host-port.v1.schema.json', null, 'port.schema.json', 'Схема порта хоста 1.0.0', 'Форма объявления порта: возможности, данные, намерения с ответами, слои настроек и набор проверок.'];
+ksort($standards, SORT_STRING);
+foreach ($standards as $key => [$file, $standard, $name, $title, $description]) {
+    $bytes = (string) file_get_contents($file);
+    $hash = hash('sha256', $bytes);
+    $public = 'ai/standards/' . $key . '/' . $name;
+    $write($public, $bytes);
+    $items[] = [
+        'id' => 'urn:simai:framework:standard:' . str_replace(['/', '.'], [':', '-'], $key),
+        'kind' => 'knowledge', 'title' => $title, 'description' => $description,
+        'language' => 'ru', 'revision' => $hash, 'status' => 'published',
+        'source' => './' . $public,
+        'htmlPage' => '/ru/standards/' . ($standard === null ? explode('/', $key)[0] : preg_replace('/^simai\./', '', explode('/', $key)[0])) . '/',
+        'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
+        'representations' => [['href' => './' . $public, 'mediaType' => 'application/json', 'sha256' => $hash, 'role' => 'full']],
+    ];
+}
+// Declared host ports and the conformance kits a host passes before claiming
+// one. Published whole, so a host on any transport can fetch and run them.
+$portsRoot = $root . '/contracts/ports';
+foreach (glob($portsRoot . '/*/*/port.json') as $file) {
+    $port = json_decode((string) file_get_contents($file), true, 512, JSON_THROW_ON_ERROR);
+    $identity = $port['port'] ?? throw new RuntimeException('Port without an identity: ' . $file);
+    $edition = $port['version'] ?? throw new RuntimeException('Port without a version: ' . $file);
+    if ($identity !== basename(dirname(dirname($file))) || $edition !== basename(dirname($file))) {
+        throw new RuntimeException('Port does not live at its identity: ' . $file);
+    }
+    $base = 'ai/ports/' . $identity . '/' . $edition . '/';
+    $bytes = (string) file_get_contents($file);
+    $hash = hash('sha256', $bytes);
+    $write($base . 'port.json', $bytes);
+    foreach (glob(dirname($file) . '/' . $port['conformance']['kit'] . '/{,*/}*.{json,md}', GLOB_BRACE) as $kitFile) {
+        $relative = substr($kitFile, strlen(dirname($file)) + 1);
+        $write($base . $relative, (string) file_get_contents($kitFile));
+    }
+    $items[] = [
+        'id' => 'urn:simai:framework:port:' . str_replace(['/', '.'], [':', '-'], $identity . '/' . $edition),
+        'kind' => 'contract', 'title' => $port['summary'] ?? $identity, 'description' => 'Порт ' . $identity . ' ' . $edition . ' и набор проверок из ' . $port['conformance']['cases'] . ' случаев.',
+        'language' => 'ru', 'revision' => $hash, 'status' => 'published',
+        'source' => './' . $base . 'port.json',
+        'htmlPage' => '/ru/standards/composite-host-port/',
+        'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
+        'representations' => [['href' => './' . $base . 'port.json', 'mediaType' => 'application/json', 'sha256' => $hash, 'role' => 'full']],
+    ];
+}
 $write('ai/framework-lock.json', $lockBytes);
 $main = $manifest([], hash('sha256', $json($items)));
 unset($main['items']); $main['catalogs'] = [];

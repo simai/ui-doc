@@ -1,79 +1,97 @@
 ---
 title: "Drawer"
-description: "Атрибуты, события и примеры Smart-компонента drawer."
+description: "Боковая панель рабочего места: закреплённая рядом со страницей или немодальная."
+profile: reference
 ---
 
 # Drawer
 
-Идентификатор: `smart.drawer`. Smart-компонент заблокирован; жизненный цикл — экспериментальный.
+`<sf-drawer>` — боковая панель рабочего места, рядом с которой страница
+остаётся доступной. Закреплённая панель (`docked`) становится колонкой и
+сдвигает содержимое страницы — так устроены панели редактора страниц.
+Немодальная панель (`modal="false"`) ложится поверх страницы без затемнения и
+удержания фокуса.
 
-## Блокирующее ограничение
+Для модальной боковой панели — с затемнением и удержанием фокуса — используйте
+[модальное окно](/ru/smart-components/overlays/modal/) с
+`position="inline-start"` или `position="inline-end"`. Модальный режим Drawer
+(режим по умолчанию) сохранён только для совместимости и помечен устаревшим в
+контракте 1.2.0.
 
-Компонент нельзя рекомендовать для нового проекта: `loader_rule_missing`. До появления Loader-правила подключение не считается публичным контрактом.
+Идентификатор: `smart.drawer`, жизненный цикл — экспериментальный. Код
+загружается по требованию, когда на странице есть `sf-drawer`.
 
-## Теги и подключение
+## Пример
 
-Публичный Custom Element в текущем манифесте не подтверждён.
+:::example {id="smart-components/drawer/overview" label="Немодальная панель"}
+:::
 
-Loader-статус: `unregistered`.
+Кнопка связывается с панелью через `data-drawer="toggle|open|close"` и
+`aria-controls` с id панели.
 
-Поставляемые ассеты:
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/drawer/css/drawer.css`
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/drawer/js/drawer.js`
+## Закреплённая панель
 
-## Атрибуты и свойства
+`docked` превращает панель в немодальную колонку `role="region"` с именем: без
+затемнения, блокировки прокрутки и удержания фокуса. Контейнер страницы
+помечается `data-sf-drawer-dock-host`; Framework задаёт ему отступы по сумме
+ширин открытых закреплённых панелей слева и справа, обе стороны одновременно.
 
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `open` | `opened` | `Boolean` | `false` | `—` |
-| `placement` | `placement` | `String` | `'right'` | `['left', 'right', 'inline-start', 'inline-end']` |
-| `overlay` | `overlay` | `Boolean` | `true` | `—` |
-| `close-on-esc` | `closeOnEsc` | `Boolean` | `true` | `—` |
-| `close-on-overlay` | `closeOnOverlay` | `Boolean` | `true` | `—` |
-| `preserve-scroll-gap` | `preserveScrollGap` | `Boolean` | `true` | `—` |
-| `show-close` | `showClose` | `Boolean` | `true` | `—` |
-| `close-placement` | `closePlacement` | `String` | `'inside'` | `['inside', 'outside']` |
-| `title` | `title` | `String` | `''` | `—` |
-| `label` | `label` | `String` | `''` | `—` |
-| `close-label` | `closeLabel` | `String` | `'Close drawer'` | `—` |
-| `width` | `width` | `String` | `''` | `—` |
-| `z-index` | `zIndex` | `String` | `''` | `—` |
-| `overlay-class` | `overlayClass` | `String` | `''` | `—` |
-| `panel-class` | `panelClass` | `String` | `''` | `—` |
-| `header-class` | `headerClass` | `String` | `''` | `—` |
-| `body-class` | `bodyClass` | `String` | `''` | `—` |
-| `close-class` | `closeClass` | `String` | `''` | `—` |
+:::example {id="smart-components/drawer/docked" label="Закреплённые панели"}
+:::
 
-Общие атрибуты базового Smart-элемента:
+На узкой области примера (уже 48rem) панели ложатся поверх страницы; чтобы
+увидеть, как страница сдвигается, откройте пример на весь экран.
 
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
+Ширины публикуются как `--sf-drawer-dock-inline-start` и
+`--sf-drawer-dock-inline-end`, высоту шапки над панелями задаёт
+`--sf-drawer-dock-block-start`. На экранах уже 48rem страница не сужается, и
+панель перекрывает её. Escape закрывает верхнюю панель, но не перехватывает
+Escape, который уже обработал редактор или перетаскивание.
 
-## Методы
+## Атрибуты
 
-`applyStackPosition()`, `attributeChangedCallback()`, `clearPortal()`, `close()`, `connectedCallback()`, `disconnectedCallback()`, `emitDrawerEvent()`, `focusFirst()`, `get closeOnEsc()`, `get closeOnOverlay()`, `get closePlacement()`, `get drawerZIndex()`, `get openState()`, `get overlay()`, `get placement()`, `get preserveScrollGap()`, `get showClose()`, `getDrawerRoot()`, `getState()`, `handleRootClick()`, `onAfterClose()`, `onAfterOpen()`, `onBeforeClose()`, `onBeforeOpen()`, `onKeyDown()`, `open()`, `renderComponent()`, `resolveDrawerId()`, `resolvePortalRoot()`, `setState()`, `syncExternalOpenState()`, `syncOpenAttribute()`, `toggle()`.
+| Атрибут | Значения и назначение |
+|---|---|
+| `open` | панель открыта |
+| `placement` | `inline-start`, `inline-end`; `left` и `right` — совместимые варианты |
+| `size` | `small`, `medium`, `large`, `full` |
+| `modal` | `false` — немодальная панель; модальный режим по умолчанию устарел |
+| `docked` | закреплённая колонка рядом со страницей |
+| `overlay` | затемнение модальной панели |
+| `close-on-esc`, `close-on-overlay` | способы закрытия |
+| `show-close`, `close-placement`, `close-label` | кнопка закрытия: `inside` или `outside` |
+| `title`, `label` | заголовок и доступное имя |
+| `preserve-scroll-gap` | сохраняет место полосы прокрутки при блокировке страницы |
+| `width`, `z-index` | точная ширина и слой, если стандартного размера мало |
+| `overlay-class`, `panel-class`, `header-class`, `body-class`, `close-class` | классы частей |
 
-## События
+## Методы и события
 
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
+Методы `open()`, `close()`, `toggle()`, `getState()`, `setState(state)`
+управляют тем же экземпляром. `drawer:before-open` и `drawer:before-close`
+можно отменить; `drawer:after-open` и `drawer:after-close` приходят после
+завершённого перехода, `drawer:ready` и `drawer:update` — после отрисовки.
 
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
+С версии 1.3.0 события `drawer:*` всплывают до `document`, как остальные
+события `sf-*`. Панель, которая их отправила, указана в `event.detail.drawer`.
+Помощники `onBeforeOpen()`, `onAfterOpen()`, `onBeforeClose()` и
+`onAfterClose()` получают только события своей панели; обычный слушатель на
+внешней панели услышит и вложенную, поэтому проверяйте `event.detail.drawer`.
 
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+Закреплённая и немодальная панели не удерживают фокус и не блокируют
+страницу. Положение учитывает направление текста (LTR и RTL), анимация
+отключается при `prefers-reduced-motion`.
 
-## Источник
+## Теги и подключение
 
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/drawer`
+Custom Element: `<sf-drawer>`. Loader-правило: `cl-drawer`, статус
+`registered`. Зависимости: `component.close`, `component.icon-buttons`.
+
+Поставляемые ассеты:
+
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/drawer/js/drawer.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/drawer/css/drawer.css`
+
+Правило загрузчика: `simai/ui@56cd91e1d7a3dc19b32a2acfdaa1389744e174a7:distr/rule/rule.json`.

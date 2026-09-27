@@ -1687,6 +1687,10 @@
       "to": "ru/guide/fundamentals/values-and-scales"
     },
     {
+      "from": "ru/guide/architecture/complex-smart-components",
+      "to": "ru/guide/architecture/composite-smart-components"
+    },
+    {
       "from": "ru/guide/composition",
       "to": "ru/guide/layouts"
     },
@@ -1721,6 +1725,10 @@
     {
       "from": "ru/guide/composition/what-is-composition",
       "to": "ru/guide/layouts/introduction/what-is-layout"
+    },
+    {
+      "from": "ru/guide/layouts/building/complex-smart-component",
+      "to": "ru/guide/layouts/building/composite-smart-component"
     },
     {
       "from": "ru/guide/practical/ai",
@@ -2011,8 +2019,24 @@
       "to": "ru/reference/properties-of-modifiers/property-structure-typography"
     },
     {
+      "from": "ru/reference/standards/composite-component",
+      "to": "ru/standards/composite-component"
+    },
+    {
+      "from": "ru/reference/standards/dynamic-composite-component",
+      "to": "ru/standards/dynamic-composite-component"
+    },
+    {
       "from": "ru/smart-components/catalog",
       "to": "ru/guide/smart-components/catalog-and-readiness"
+    },
+    {
+      "from": "ru/smart-components/complex",
+      "to": "ru/smart-components"
+    },
+    {
+      "from": "ru/smart-components/complex/admin-menu",
+      "to": "ru/smart-components/composite/admin-menu"
     },
     {
       "from": "ru/smart-components/connection",
@@ -2409,22 +2433,6 @@
     {
       "from": "ru/utilities/reference/width-ext",
       "to": "ru/utilities/sizes/width"
-    },
-    {
-      "from": "ru/guide/architecture/complex-smart-components",
-      "to": "ru/guide/architecture/composite-smart-components"
-    },
-    {
-      "from": "ru/guide/layouts/building/complex-smart-component",
-      "to": "ru/guide/layouts/building/composite-smart-component"
-    },
-    {
-      "from": "ru/smart-components/complex/admin-menu",
-      "to": "ru/smart-components/composite/admin-menu"
-    },
-    {
-      "from": "ru/smart-components/complex",
-      "to": "ru/smart-components"
     }
   ]
 }

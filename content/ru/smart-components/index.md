@@ -74,6 +74,12 @@ description: "Смарт-компоненты по задачам интерфе
 - [Модальное окно](/ru/smart-components/overlays/modal/)
 - [Drawer](/ru/smart-components/overlays/drawer/)
 
+## Редактор страниц
+
+- [Оверлей редактора](/ru/smart-components/editor/composition-overlay/)
+- [Перетаскивание](/ru/smart-components/editor/sortable/)
+- [Inline-редактор](/ru/smart-components/editor/inline-editor/)
+
 ## Составные компоненты
 
 - [Admin Menu](/ru/smart-components/composite/admin-menu/)

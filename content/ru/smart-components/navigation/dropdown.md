@@ -14,8 +14,8 @@ Custom Elements: `<sf-dropdown>`.
 Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/dropdown/js/dropdown.js`
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/dropdown/template/default.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/dropdown/js/dropdown.js`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/dropdown/template/default.js`
 
 ## Зависимости
 
@@ -32,7 +32,7 @@ Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 | `type` | `type` | `String` | `'outlined'` | `['filled', 'outlined']` |
 | `mode` | `mode` | `String` | `'select'` | `['tag', 'select']` |
 | `multiple` | `multiple` | `Boolean` | `false` | `—` |
-| `portal` | `portal` | `Boolean` | `false` | `—` |
+| `portal` | `portal` | `Boolean` | `true` | `—` |
 | `value` | `value` | `String` | `''` | `—` |
 | `name` | `name` | `String` | `''` | `—` |
 | `label` | `label` | `String` | `''` | `—` |
@@ -109,5 +109,5 @@ API-страница подтверждает source-контракт, но не
 
 ## Источник
 
-- `simai/ui-smart@400d80e501ca5e6816ba8f96b0ca18f01c0626c9:smart/dropdown`
-- `simai/ui@8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2:distr/rule/rule.json#name=cl-dropdown`
+- `simai/ui-smart@903ad66c4f4fd7b9674a537ddd315652b9c375c4:smart/dropdown`
+- `simai/ui@56cd91e1d7a3dc19b32a2acfdaa1389744e174a7:distr/rule/rule.json#name=cl-dropdown`

@@ -8,7 +8,7 @@ $page=file_get_contents($build.'/ru/index.html');
 preg_match('/<link[^>]+href="([^"]+)"[^>]+data-docara-framework-asset="simai.framework.core.css"/', $page, $css);
 if (!isset($css[1])) throw new RuntimeException('Core CSS missing from built document');
 $files=[]; $inputs=[];
-$ids=['smart-counter','smart-composition','smart-template','layout-inspector','smart-button','product-block','composition-recipe'];
+$ids=['smart-counter','smart-composition','smart-template','layout-inspector','smart-button','product-block','composition-recipe','page-editor'];
 foreach ($ids as $id) {
     $source=$root.'/examples/guide/'.$id;
     foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($source)) as $input) if($input->isFile()) $inputs[substr($input->getPathname(),strlen($root)+1)]=hash_file('sha256',$input->getPathname());

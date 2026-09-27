@@ -1,0 +1,17 @@
+<div class="flex flex-col gap-2 p-3 radius-2 bg-surface-container">
+  <div class="flex flex-wrap gap-2">
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-help">
+      <span class="sf-button-text-container">Подсказка</span>
+    </button>
+  </div>
+  <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+    <span class="sf-input-label flex"><span class="sf-input-text">Название страницы</span></span>
+    <span class="sf-input-field items-cross-center transition flex">
+      <input type="text" name="title" value="Весенняя распродажа">
+    </span>
+  </label>
+  <p class="m-0">Откройте подсказку и продолжайте печатать: панель ложится поверх, но без затемнения, и поле остаётся доступным.</p>
+</div>
+<sf-drawer id="drawer-example-help" modal="false" placement="inline-end" size="small" title="Подсказка">
+  <p class="m-0">Название показывается во вкладке браузера и в результатах поиска.</p>
+</sf-drawer>
