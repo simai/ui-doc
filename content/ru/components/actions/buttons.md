@@ -46,7 +46,7 @@ JavaScript только этого компонента.
 | Задача | Классы |
 |:---|:---|
 | Основа | `sf-button`, `sf-button-text-container` |
-| Вариант | `sf-button--default`, `sf-button--tonal`, `sf-button--outline`, `sf-button--link` |
+| Внешний вид | `sf-button--default`, `sf-button--tonal`, `sf-button--outline`, `sf-button--link`, `sf-button--surface`, `sf-button--ghost` |
 | Схема | `sf-button--primary`, `sf-button--secondary`, `sf-button--on-surface` |
 | Размер | `sf-button--size-1/3`, `sf-button--size-1/2`, `sf-button--size-1`, `sf-button--size-2`, `sf-button--size-3` |
 | Состояние | `active`, `loading`, `sf-button-state-loading` |
@@ -54,20 +54,36 @@ JavaScript только этого компонента.
 | Радиус | `radius-default`, `radius-square`, `radius-rounded` |
 | Сегмент | `segment-start`, `segment-middle`, `segment-end` |
 
-## Варианты оформления
+## Внешний вид
 
-SIMAI Framework поддерживает четыре варианта. Для каждого из них выпущены только
-указанные ниже цветовые схемы.
+Ось внешнего вида называется `appearance`. Прежнее имя `type` продолжает
+работать и считается устаревшим.
 
-| Вариант | Допустимые схемы | Когда применять |
+SIMAI Framework поддерживает шесть видов. Для каждого выпущены только указанные
+ниже цветовые схемы.
+
+| Вид | Допустимые схемы | Когда применять |
 |:---|:---|:---|
 | `default` | `primary`, `on-surface` | Главное или заметное действие |
 | `tonal` | `secondary`, `on-surface` | Второстепенное действие без контура |
 | `outline` | `primary`, `on-surface` | Второстепенное действие с контуром |
 | `link` | `primary`, `on-surface` | Малозаметное действие без заливки |
+| `surface` | `primary`, `on-surface` | Действие на неизвестном фоне: слабая заливка и граница |
+| `ghost` | `primary`, `on-surface` | Действие, которое проявляется только при наведении |
 
 Например, сочетание `sf-button--tonal sf-button--primary` не входит в
 поставляемые стили и не должно использоваться.
+
+### Surface и ghost
+
+Эти два вида не несут собственного цвета: они берут **степень контраста** из
+[нейтральной alpha-шкалы](/ru/guide/fundamentals/colors-and-themes/), поэтому
+одна и та же запись верна в светлой и в тёмной теме.
+
+`surface` держит слабую заливку и границу на ступень сильнее. `ghost` в покое не
+показывает ничего: заливка появляется при наведении и усиливается при нажатии.
+Оба вида берите, когда кнопка стоит на фоне, о котором вы ничего не знаете —
+внутри карточки, поверх изображения, в плотной панели инструментов.
 
 :::example {id="components/buttons/variants" label="Варианты кнопок"}
 :::
