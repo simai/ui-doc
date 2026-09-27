@@ -3,15 +3,15 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "58150ae0499a4160c78abb61204738f707bbdf22",
-    "core_revision": "56cd91e1d7a3dc19b32a2acfdaa1389744e174a7",
+    "source_revision": "68e888687a3198324edfa05b345f416008c814c9",
+    "core_revision": "ab4390bf5f487e397b04bd77b489784f6a9ef62d",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
-      "src/component/menu/scss/_css__menu.scss": "9ade8a574ddc197ccbe3f30771b80b6caec011f8e162cebf467cb9c60018d9fb",
+      "src/component/menu/scss/_css__menu.scss": "a7bfd9962cfae05dddcbfc5d3bf54dd0e7760a7052a3864a1c935a14e5bc44d6",
       "src/component/menu/docs/docs.md": "3dde35b3194ad20c1785fcf82b01e2b9335ce9a68cbe22e956f201b9d1798b08"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "1347265ae1ddba99fe242111d703000f8bd0702d01e630e0cd3424f6f1bfc68c",
+      "distr/component/menu/css/menu.css": "6dbf03204a5312350d10ec5542fe1e6b9e8e5d14d9fc25a46afc13f5bf1dc484",
       "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
     }
   },

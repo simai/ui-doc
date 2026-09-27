@@ -1,21 +1,21 @@
 {
-  "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "58150ae0499a4160c78abb61204738f707bbdf22",
-  "core": "56cd91e1d7a3dc19b32a2acfdaa1389744e174a7",
-  "smart": "903ad66c4f4fd7b9674a537ddd315652b9c375c4",
-  "source_files": {
-    "src/core/js/smart-base.js": "cec5760253a9ef3e09d8ce914b1f402ff7a871ce45b9aa8489b2fe2212a5c605",
-    "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
-  },
-  "lessons": [
-    "creating",
-    "properties",
-    "events",
-    "nesting",
-    "local-components",
-    "slots",
-    "cleanup",
-    "templates-and-assets"
-  ],
-  "review": "Reviewed exact source/Core/Smart pair: smart-base and loader bytes are unchanged across reviewed and current revisions; Smart adds the table host port without changing the eight generic Smart lessons."
+    "schema": "ui-doc.smart-lessons-review.v1",
+    "source": "68e888687a3198324edfa05b345f416008c814c9",
+    "core": "ab4390bf5f487e397b04bd77b489784f6a9ef62d",
+    "smart": "3ad71db0adeeae534844bc6676b2beb4f616ebac",
+    "source_files": {
+        "src/core/js/smart-base.js": "cec5760253a9ef3e09d8ce914b1f402ff7a871ce45b9aa8489b2fe2212a5c605",
+        "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
+    },
+    "lessons": [
+        "creating",
+        "properties",
+        "events",
+        "nesting",
+        "local-components",
+        "slots",
+        "cleanup",
+        "templates-and-assets"
+    ],
+    "review": "Reviewed exact source/Core/Smart pair: smart-base gained attribute and value aliasing (aliases, valueAliases) and a shared duplicate-registration guard, so the properties lesson now names both keys; the loader bytes are unchanged, and the other seven generic Smart lessons still hold."
 }
