@@ -645,12 +645,12 @@
             "tree_sha256": "1b2e66716c93334c26b2a5866c55891b8176d13bad1264de3b2e706f36a29c3b"
         },
         "icon_font": "component/icons/fonts/MaterialSymbols-Outlined.woff2",
-        "packet_sha256": "661a995041d7c99c9775447c029c849cb89417df027c0bc84b543352e98eb0bf",
-        "files": 905,
+        "packet_sha256": "d08ee37659e7b4927dd13bffbeaa601a5f9c58065bc3eba6735e3a02c6f35e64",
+        "files": 907,
         "manifest": {
             "path": "portable/vendor/simai-framework/runtime/2c0416aad502f58c8dca9225d27cdb488d084e4e/runtime-manifest.json",
             "public": "_docara/vendor/simai-framework/runtime/2c0416aad502f58c8dca9225d27cdb488d084e4e/runtime-manifest.json",
-            "sha256": "d620884ce13fa31ecabf7d1f7e2b20f0a0f5cb35a4b6bc69db49a6a2811f5e20"
+            "sha256": "326922ebf4f695d43dd591c98e7e3e8d65c3af6376c2af5548203f59f8c82ccb"
         }
     },
     "icon_projection": {
@@ -681,78 +681,6 @@
                 "path": "portable/vendor/google/material-symbols/50f0603134ce7b70b2d71b686cc13e8b57ccb74c/MaterialSymbolsSharp.woff2",
                 "public": "_docara/vendor/google/material-symbols/50f0603134ce7b70b2d71b686cc13e8b57ccb74c/MaterialSymbolsSharp.woff2",
                 "sha256": "07120b2acb649946dd277ffeaefc745c576ef5bee05b4f2f07bd1f98b31fb6d8"
-            }
-        }
-    },
-    "typography_projection": {
-        "schema": "docara.framework_typography_projection.v1",
-        "candidate": "5.9.0",
-        "source": {
-            "provider": "simai/ui-source",
-            "revision": "76fe7efb8259b15c2bc3871ff45267e8f5b6e40c",
-            "rollback_parent": "92adf6d805e1f9646179fa7af93eb84f27279e0a"
-        },
-        "builder": {
-            "provider": "simai/ui-builder",
-            "revision": "d805a72a6c9191a97d2ebd8b86899bf2f25a2e93"
-        },
-        "distribution": {
-            "provider": "simai/ui",
-            "revision": "2c0416aad502f58c8dca9225d27cdb488d084e4e",
-            "rollback_parent": "e5a1228a9d8ac6d74615ade3a17d8636ea9065f8",
-            "published": false
-        },
-        "packet_sha256": "740ac12cd6b61c45745bbf36efe70798cd65a3c84aa5639ec42db6eb68910736",
-        "files": {
-            "contract": {
-                "path": "portable/vendor/simai-framework/typography/5.9.0/adaptive-sizing.v1.json",
-                "public": "_docara/vendor/simai-framework/typography/5.9.0/adaptive-sizing.v1.json",
-                "sha256": "b70d02d6902345e17954eafb44f24052b7478439184286bed5a8df6c69c1fe45"
-            },
-            "core": {
-                "path": "portable/vendor/simai-framework/typography/5.9.0/core.css",
-                "public": "_docara/vendor/simai-framework/typography/5.9.0/core.css",
-                "sha256": "11dd0ef366fe6fd43a72d8e3c091f549ae4b15013e8d6555a6a2775c9d0a60c7"
-            },
-            "font_49594fb515ba00213fc3": {
-                "path": "portable/vendor/simai-framework/typography/49594fb515ba00213fc3.woff2",
-                "public": "_docara/vendor/simai-framework/typography/49594fb515ba00213fc3.woff2",
-                "sha256": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075"
-            },
-            "font_4f2981d82860061bca3e": {
-                "path": "portable/vendor/simai-framework/typography/4f2981d82860061bca3e.woff2",
-                "public": "_docara/vendor/simai-framework/typography/4f2981d82860061bca3e.woff2",
-                "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
-            },
-            "font_4f908aee8194b11d9c35": {
-                "path": "portable/vendor/simai-framework/typography/4f908aee8194b11d9c35.woff2",
-                "public": "_docara/vendor/simai-framework/typography/4f908aee8194b11d9c35.woff2",
-                "sha256": "1be3448e292fbf05ffe176fe1e43f135013d50b1e7d324ad1a558f623d3bb6f6"
-            },
-            "font_8bff79fbfaa8b8167a0b": {
-                "path": "portable/vendor/simai-framework/typography/8bff79fbfaa8b8167a0b.woff2",
-                "public": "_docara/vendor/simai-framework/typography/8bff79fbfaa8b8167a0b.woff2",
-                "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956"
-            },
-            "font_ab4bb8dcda024fe6eff2": {
-                "path": "portable/vendor/simai-framework/typography/ab4bb8dcda024fe6eff2.woff2",
-                "public": "_docara/vendor/simai-framework/typography/ab4bb8dcda024fe6eff2.woff2",
-                "sha256": "5c66f9e07e90c6d4ac4922cc68d60de26c17b1858e677fb5e603fce3952b3ff2"
-            },
-            "font_b5cdd4765614e027c252": {
-                "path": "portable/vendor/simai-framework/typography/b5cdd4765614e027c252.woff2",
-                "public": "_docara/vendor/simai-framework/typography/b5cdd4765614e027c252.woff2",
-                "sha256": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd"
-            },
-            "font_f4df85d151e5ee39bc2b": {
-                "path": "portable/vendor/simai-framework/typography/f4df85d151e5ee39bc2b.woff2",
-                "public": "_docara/vendor/simai-framework/typography/f4df85d151e5ee39bc2b.woff2",
-                "sha256": "6e9e020a25f9b56d418f2c085b1d3c09725a4da23fe693a5b463064606732190"
-            },
-            "utility": {
-                "path": "portable/vendor/simai-framework/typography/5.9.0/utility.full.css",
-                "public": "_docara/vendor/simai-framework/typography/5.9.0/utility.full.css",
-                "sha256": "b478891294e27c22d46e1db7be91eb05b6fe7097a76c60efafedd8a6f3cfec9b"
             }
         }
     },

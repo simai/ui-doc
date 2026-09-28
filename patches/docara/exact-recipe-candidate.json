@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.docara_exact_candidate_package.v1",
     "package": "simai/docara",
-    "source_reference": "a2d66e0e9bda12ef51b1ab4ffbadf2f3586d0c26",
+    "source_reference": "32f18bb8aef1b259304f294072bdb4f3815c09c8",
     "files": [
         {
             "path": "resources/contracts/composition/docara-type-manifests.json",
@@ -61,7 +61,7 @@
         },
         {
             "path": "scripts/sync-framework-rule-registry.php",
-            "sha256": "3c22733a8839417150db341f0c1efb3775df99ba4e31119e8b433fa1e06afe05"
+            "sha256": "298c6d607fb08562ff6a46b41d72456a1c9bf6f371e121ae93587e7d59b92a7e"
         },
         {
             "path": "scripts/sync-framework-smart-runtime.php",
@@ -757,7 +757,7 @@
         },
         {
             "path": "src/Framework/FrameworkAssetPlanner.php",
-            "sha256": "1ce35f9b35c4645d5b7b832e961e0941a576d697220cf6f876228a16c2092abe"
+            "sha256": "1648e7429c8e898aa6f9ca36b164d55a2495465a14fabf8a2f5a60da67b27534"
         },
         {
             "path": "src/Framework/FrameworkComponentException.php",
