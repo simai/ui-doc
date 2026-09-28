@@ -25,15 +25,16 @@ Loader-статус: `registered`. Loader-правило: `cl-skeleton`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
+| `size` | `size` | `String` | `'1'` | `1/7`, `1/6`, `1/5`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7` |
 | `width` | `width` | `String` | `'100%'` | `—` |
 | `height` | `height` | `String` | `''` | `—` |
 | `count` | `count` | `Number` | `1` | `—` |
 | `animation` | `animation` | `String` | `'pulse'` | `—` |
-| `variant` | `variant` | `String` | `'text'` | `—` |
-| `type` | `type` | `String` | `''` | `—` |
+| `kind` | `kind` | `String` | `'text'` | `text`, `circle`, `square`, `rounded` |
 | `items` | `items` | `String` | `''` | `—` |
 | `root-class` | `rootClass` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `variant` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

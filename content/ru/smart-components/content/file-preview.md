@@ -31,7 +31,7 @@ Loader-статус: `unregistered`.
 | `file-size` | `fileSize` | `String` | `""` | `—` |
 | `icon` | `icon` | `String` | `"save"` | `—` |
 | `href` | `href` | `String` | `""` | `—` |
-| `type` | `type` | `String` | `"default"` | `—` |
+| `kind` | `kind` | `String` | `'auto'` | `auto`, `icon`, `image` |
 | `mime-type` | `mimeType` | `String` | `""` | `—` |
 | `image-url` | `imageUrl` | `String` | `""` | `—` |
 | `avatar-size` | `avatarSize` | `String` | `"3"` | `—` |
@@ -43,6 +43,8 @@ Loader-статус: `unregistered`.
 | `remove-action` | `removeAction` | `Boolean` | `!0` | `—` |
 | `disabled` | `disabled` | `Boolean` | `!1` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `""` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

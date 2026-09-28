@@ -26,8 +26,8 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `"default"` | `—` |
-| `size` | `size` | `String` | `"1"` | `—` |
-| `type` | `type` | `String` | `"default"` | `—` |
+| `size` | `size` | `String` | `"1"` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `appearance` | `appearance` | `String` | `'default'` | `default`, `tonal`, `outline`, `link`, `surface`, `ghost` |
 | `scheme` | `scheme` | `String` | `"primary"` | `—` |
 | `text-position` | `textPosition` | `String` | `'center'` | `—` |
 | `text` | `text` | `String` | `""` | `—` |
@@ -43,6 +43,8 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 | `disabled` | `disabled` | `Boolean` | `false` | `—` |
 | `native-type` | `nativeType` | `String` | `"button"` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `""` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `appearance`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

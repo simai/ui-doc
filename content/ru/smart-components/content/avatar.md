@@ -29,12 +29,12 @@ Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `"default"` | `—` |
-| `size` | `size` | `String` | `"1"` | `—` |
+| `size` | `size` | `String` | `"1"` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3` |
 | `image-url` | `imageUrl` | `String` | `""` | `—` |
 | `image-alt` | `imageAlt` | `String` | `""` | `—` |
 | `no-wrap` | `noWrap` | `Boolean` | `false` | `—` |
 | `text` | `text` | `String` | `""` | `—` |
-| `status` | `status` | `String` | `"none"` | `—` |
+| `status` | `status` | `String` | `"none"` | `none`, `online`, `offline`, `company`, `verified` |
 | `aria-label` | `ariaLabel` | `String` | `"Avatar"` | `—` |
 | `title` | `title` | `String` | `""` | `—` |
 | `description` | `description` | `String` | `""` | `—` |

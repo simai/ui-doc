@@ -47,8 +47,8 @@ Loader-статус: `registered`. Loader-правило: `cl-list-item`.
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
 | `value` | `itemValue` | `String` | `''` | `—` |
-| `type` | `type` | `String` | `'text'` | `['text', 'icon', 'checkbox', 'avatar', 'color']` |
-| `size` | `size` | `String` | `'1'` | `['1/3', '1/2', '1', '2', '3']` |
+| `kind` | `kind` | `String` | `'text'` | `text`, `icon`, `checkbox`, `avatar`, `color` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
 | `text` | `text` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `'person'` | `—` |
 | `checked` | `checked` | `Boolean` | `false` | `—` |
@@ -58,6 +58,8 @@ Loader-статус: `registered`. Loader-правило: `cl-list-item`.
 | `avatar-image-url` | `avatarImageUrl` | `String` | `''` | `—` |
 | `avatar-title` | `avatarTitle` | `String` | `''` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

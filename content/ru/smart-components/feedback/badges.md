@@ -26,8 +26,9 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1/3'` | `—` |
-| `type` | `type` | `String` | `'main'` | `—` |
+| `size` | `size` | `String` | `'1/3'` | `1/3`, `1/2`, `1` |
+| `status` | `status` | `String` | `''` | пусто, `info`, `success`, `warning`, `error` |
+| `appearance` | `appearance` | `String` | `'main'` | `main`, `tonal`, `outline` |
 | `scheme` | `scheme` | `String` | `'neutral'` | `—` |
 | `text` | `text` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `''` | `—` |
@@ -35,6 +36,11 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 | `icon-end` | `iconEnd` | `String` | `''` | `—` |
 | `icon-position` | `iconPosition` | `String` | `'start'` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `''` | `—` |
+
+Прежнее имя `type` продолжает работать и считается устаревшим: оно читается как
+`appearance`. Атрибут `scheme` не устарел — он задаёт цвет; но статусное слово,
+данное в `scheme`, для совместимости доходит до `status`. В новой разметке
+статус задавайте атрибутом `status`.
 
 Общие атрибуты базового Smart-элемента:
 

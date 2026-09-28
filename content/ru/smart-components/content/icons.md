@@ -29,7 +29,7 @@ Loader-статус: `registered`. Loader-правило: `cl-icons`.
 | `loaded` | `loaded` | `Boolean` | `false` | `—` |
 | `filled` | `filled` | `Boolean` | `false` | `—` |
 | `weight` | `weight` | `Number` | `400` | `—` |
-| `size` | `size` | `String` | `""` | `—` |
+| `size` | `size` | `String` | `""` | пусто, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7` |
 
 Общие атрибуты базового Smart-элемента:
 

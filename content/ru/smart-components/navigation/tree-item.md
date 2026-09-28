@@ -33,7 +33,7 @@ Loader-статус: `registered`. Loader-правило: `cl-tree-item`.
 | `href` | `href` | `String` | `''` | `—` |
 | `target` | `target` | `String` | `''` | `—` |
 | `rel` | `rel` | `String` | `''` | `—` |
-| `type` | `type` | `String` | `'folder'` | `['folder', 'file']` |
+| `kind` | `kind` | `String` | `'folder'` | `folder`, `file` |
 | `value` | `value` | `String` | `''` | `—` |
 | `open` | `open` | `Boolean` | `false` | `—` |
 | `selected` | `selected` | `Boolean` | `false` | `—` |
@@ -51,6 +51,8 @@ Loader-статус: `registered`. Loader-правило: `cl-tree-item`.
 | `item-class` | `itemClass` | `String` | `''` | `—` |
 | `container-class` | `containerClass` | `String` | `''` | `—` |
 | `name-class` | `nameClass` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

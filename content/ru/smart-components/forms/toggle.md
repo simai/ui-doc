@@ -27,14 +27,16 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
-| `type` | `type` | `String` | `'simple'` | `—` |
+| `size` | `size` | `String` | `'1'` | `1`, `2` |
+| `kind` | `kind` | `String` | `'simple'` | `simple`, `icon`, `short` |
 | `label` | `label` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `''` | `—` |
 | `checked` | `checked` | `Boolean` | `false` | `—` |
 | `disabled` | `disabled` | `Boolean` | `false` | `—` |
 | `name` | `name` | `String` | `''` | `—` |
 | `value` | `value` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

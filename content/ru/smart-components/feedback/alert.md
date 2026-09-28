@@ -30,8 +30,8 @@ Loader-статус: `registered`. Loader-правило: `cl-alert`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `type` | `type` | `String` | `'clear'` | `—` |
-| `variant` | `variant` | `String` | `'default'` | `—` |
+| `status` | `status` | `String` | `'neutral'` | `neutral`, `info`, `success`, `warning`, `error` |
+| `appearance` | `appearance` | `String` | `'default'` | `default`, `outlined`, `flat` |
 | `icon` | `icon` | `String` | `''` | `—` |
 | `title` | `title` | `String` | `''` | `—` |
 | `supporting-text` | `supportingText` | `String` | `''` | `—` |
@@ -41,6 +41,8 @@ Loader-статус: `registered`. Loader-правило: `cl-alert`.
 | `secondary-action` | `secondaryAction` | `String` | `'secondary'` | `—` |
 | `closable` | `closable` | `Boolean` | `false` | `—` |
 | `root-class` | `rootClass` | `String` | `''` | `—` |
+
+Прежние имена продолжают работать и считаются устаревшими: `type` — как `status`, `variant` — как `appearance`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

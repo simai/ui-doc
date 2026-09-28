@@ -26,7 +26,7 @@ Loader-статус: `registered`. Loader-правило: `cl-download-file`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `—` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
 | `file-name` | `fileName` | `String` | `'File.pdf'` | `—` |
 | `file-size` | `fileSize` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `'download'` | `—` |

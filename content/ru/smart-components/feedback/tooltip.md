@@ -34,11 +34,13 @@ Loader-статус: `registered`. Loader-правило: `cl-tooltip`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `type` | `type` | `String` | `'light'` | `light`, `dark` |
+| `appearance` | `appearance` | `String` | `'light'` | `light`, `dark` |
 | `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
 | `arrow` | `arrow` | `String` | `'none'` | `none`, `top-center`, `bottom-center`, `inline-start`, `inline-end`, `bottom-inline-start`, `bottom-inline-end` |
 | `text` | `text` | `String` | `''` | `—` |
 | `supporting-text` | `supportingText` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `appearance`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

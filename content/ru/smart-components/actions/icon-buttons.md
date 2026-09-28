@@ -29,9 +29,9 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `variant` | `variant` | `String` | `'icon'` | `—` |
-| `size` | `size` | `String` | `'1'` | `—` |
-| `type` | `type` | `String` | `'default'` | `—` |
+| `appearance` | `appearance` | `String` | `'default'` | `default`, `tonal`, `outline`, `link`, `surface`, `ghost` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `kind` | `kind` | `String` | `'icon'` | `icon`, `close` |
 | `scheme` | `scheme` | `String` | `'primary'` | `—` |
 | `segment` | `segment` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `'add'` | `—` |
@@ -43,6 +43,8 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 | `disabled` | `disabled` | `Boolean` | `false` | `—` |
 | `native-type` | `nativeType` | `String` | `'button'` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `''` | `—` |
+
+Прежние имена продолжают работать и считаются устаревшими: `type` — как `appearance`, `variant` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

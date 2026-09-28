@@ -25,11 +25,11 @@ Loader-статус: `registered`. Loader-правило: `cl-spinner`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
+| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2`, `3` |
 | `width` | `width` | `String` | `''` | `—` |
 | `height` | `height` | `String` | `''` | `—` |
 | `label` | `label` | `String` | `'Loading...'` | `—` |
-| `variant` | `variant` | `String` | `'arc'` | `—` |
+| `kind` | `kind` | `String` | `'arc'` | `arc`, `dots` |
 | `dots` | `dots` | `String` | `'16'` | `—` |
 | `filled` | `filled` | `String` | `'6'` | `—` |
 | `stroke-width` | `strokeWidth` | `String` | `''` | `—` |
@@ -37,6 +37,8 @@ Loader-статус: `registered`. Loader-правило: `cl-spinner`.
 | `infinite` | `infinite` | `Boolean` | `false` | `—` |
 | `direction` | `direction` | `String` | `'clockwise'` | `—` |
 | `root-class` | `rootClass` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `variant` — как `kind`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

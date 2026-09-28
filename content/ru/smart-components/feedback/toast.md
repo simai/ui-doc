@@ -29,7 +29,7 @@ Loader-статус: `registered`. Loader-правило: `cl-toast`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `type` | `type` | `String` | `'default'` | `—` |
+| `status` | `status` | `String` | `'neutral'` | `neutral`, `info`, `success`, `warning`, `error` |
 | `icon` | `icon` | `String` | `''` | `—` |
 | `title` | `title` | `String` | `''` | `—` |
 | `supporting-text` | `supportingText` | `String` | `''` | `—` |
@@ -37,6 +37,8 @@ Loader-статус: `registered`. Loader-правило: `cl-toast`.
 | `action` | `action` | `String` | `'action'` | `—` |
 | `closable` | `closable` | `Boolean` | `true` | `—` |
 | `root-class` | `rootClass` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `status`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

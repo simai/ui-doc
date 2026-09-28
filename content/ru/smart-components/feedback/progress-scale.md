@@ -26,9 +26,12 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `—` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `status` | `status` | `String` | `'neutral'` | `neutral`, `info`, `success`, `warning`, `error` |
 | `value` | `value` | `String` | `'0'` | `—` |
 | `show-text` | `showText` | `Boolean` | `true` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `tone` — как `status`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

@@ -28,8 +28,8 @@ Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `—` |
-| `type` | `type` | `String` | `'outlined'` | `['filled', 'outlined']` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `appearance` | `appearance` | `String` | `'filled'` | `filled`, `outlined` |
 | `mode` | `mode` | `String` | `'select'` | `['tag', 'select']` |
 | `multiple` | `multiple` | `Boolean` | `false` | `—` |
 | `portal` | `portal` | `Boolean` | `true` | `—` |
@@ -42,6 +42,8 @@ Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 | `search` | `search` | `Boolean` | `true` | `—` |
 | `disabled` | `disabled` | `Boolean` | `false` | `—` |
 | `aria-label` | `ariaLabel` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `appearance`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 

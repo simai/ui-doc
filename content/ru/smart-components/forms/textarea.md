@@ -25,8 +25,8 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
-| `type` | `type` | `String` | `'bordered'` | `—` |
+| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `appearance` | `appearance` | `String` | `'bordered'` | `bordered`, `filled` |
 | `label` | `label` | `String` | `''` | `—` |
 | `required` | `required` | `Boolean` | `false` | `—` |
 | `placeholder` | `placeholder` | `String` | `''` | `—` |
@@ -39,6 +39,8 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 | `mask` | `mask` | `Boolean` | `false` | `—` |
 | `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
 | `mask-options` | `maskOptions` | `String` | `''` | `—` |
+
+Прежнее имя продолжает работать и считается устаревшим: `type` — как `appearance`. В новой разметке берите имена осей.
 
 Общие атрибуты базового Smart-элемента:
 
