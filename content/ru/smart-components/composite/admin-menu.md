@@ -28,8 +28,8 @@ Custom Elements: `<sf-admin-menu>`.
 Loader-статус: `registered`. Loader-правило: `cl-admin-menu`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@3ad71db0adeeae534844bc6676b2beb4f616ebac:smart/admin-menu/js/admin-menu.js`
-- `simai/ui-smart@3ad71db0adeeae534844bc6676b2beb4f616ebac:smart/admin-menu/template/default.js`
+- `simai/ui-smart@727a77d2a861c49f0db2acbf426af69175aef449:smart/admin-menu/js/admin-menu.js`
+- `simai/ui-smart@727a77d2a861c49f0db2acbf426af69175aef449:smart/admin-menu/template/default.js`
 
 ## Зависимости
 
@@ -100,5 +100,5 @@ Smart-компоненту.
 
 ## Источник
 
-- `simai/ui-smart@3ad71db0adeeae534844bc6676b2beb4f616ebac:smart/admin-menu`
-- `simai/ui@ab4390bf5f487e397b04bd77b489784f6a9ef62d:distr/rule/rule.json#name=cl-admin-menu`
+- `simai/ui-smart@727a77d2a861c49f0db2acbf426af69175aef449:smart/admin-menu`
+- `simai/ui@1e114f57a03845b7e2e0f5825122c2e64d9b7be7:distr/rule/rule.json#name=cl-admin-menu`
