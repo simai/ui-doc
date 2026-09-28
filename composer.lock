@@ -1574,12 +1574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "32f18bb8aef1b259304f294072bdb4f3815c09c8"
+                "reference": "1e1f216b2e0ca78f3d9c90583c463da8d3b5805f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/32f18bb8aef1b259304f294072bdb4f3815c09c8",
-                "reference": "32f18bb8aef1b259304f294072bdb4f3815c09c8",
+                "url": "https://api.github.com/repos/simai/docara/zipball/1e1f216b2e0ca78f3d9c90583c463da8d3b5805f",
+                "reference": "1e1f216b2e0ca78f3d9c90583c463da8d3b5805f",
                 "shasum": ""
             },
             "require": {
@@ -1657,7 +1657,7 @@
                 "site",
                 "static"
             ],
-            "time": "2026-09-28T20:27:14+00:00"
+            "time": "2026-09-28T21:45:13+00:00"
         },
         {
             "name": "symfony/clock",

@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.docara_exact_candidate_package.v1",
     "package": "simai/docara",
-    "source_reference": "32f18bb8aef1b259304f294072bdb4f3815c09c8",
+    "source_reference": "1e1f216b2e0ca78f3d9c90583c463da8d3b5805f",
     "files": [
         {
             "path": "resources/contracts/composition/docara-type-manifests.json",
@@ -1005,7 +1005,7 @@
         },
         {
             "path": "src/PortableSite/PortablePublisherAssetPublisher.php",
-            "sha256": "1ae76cf49ddcb9181d29868efb143bf02e0e11fe125f617700b8d15b4522fe9d"
+            "sha256": "9391df92d20a7c8caec086b40d4b4673dc9cbba156db89591af8e2f98f2b6ae0"
         },
         {
             "path": "src/PortableSite/PortableRedirectPublisher.php",
@@ -1037,7 +1037,7 @@
         },
         {
             "path": "src/PortableSite/PortableSiteBuilder.php",
-            "sha256": "d18dd66a1023139a3a6bb3faf509f988f1805a1b7281bed73b6838266a64a06d"
+            "sha256": "49b05d7cb3913f786c8ad686dca191b108e7c91339dc84e6ea6d20490b8b2891"
         },
         {
             "path": "src/PortableSite/ProjectExampleRepository.php",
