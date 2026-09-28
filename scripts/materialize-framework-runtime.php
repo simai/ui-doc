@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = '32e50c5fcf22218f98a7c57d4110d41b20dc350e';
-const UI_RUNTIME_REVISION = '1e114f57a03845b7e2e0f5825122c2e64d9b7be7';
-const SMART_METADATA_REVISION = '93f151f2a614cfaf1e3e0f8531b0d54a32d818ef';
+const UI_METADATA_REVISION = 'bf28fb4c327279f6c17cc368445b6580ebfddb6b';
+const UI_RUNTIME_REVISION = 'e5a1228a9d8ac6d74615ade3a17d8636ea9065f8';
+const SMART_METADATA_REVISION = 'ffc63a0bc4f1cd42632e3466dcc04bf758cbdb44';
 const SMART_RUNTIME_REVISION = '3942df63e58c8345271d28e4388ea575e5c7b8a3';
-const SOURCE_REVISION = 'ce53f6d4dace8b108efc999b6d2fffbf860d8749';
+const SOURCE_REVISION = '00a4d59489869bfddea1f8210e2e9a093edd2589';
 const BUILDER_REVISION = 'd805a72a6c9191a97d2ebd8b86899bf2f25a2e93';
-const RELEASE_LOCK = 'contracts/releases/ui-1e114f57a038-smart-3942df63e58c.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-e5a1228a9d8a-smart-3942df63e58c.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
@@ -90,8 +90,12 @@ $release = json_decode(
     512,
     JSON_THROW_ON_ERROR,
 );
+// The pair is named once, by the lock this site is pinned to; the identifier
+// inside that lock has to agree with its own file name, and both have to name
+// the runtime revisions pinned above. Repeating the identifier here only ever
+// meant one more constant to forget.
 $expected = [
-    'compatibility_id' => 'ui-1e114f57a038-smart-3942df63e58c',
+    'compatibility_id' => basename(RELEASE_LOCK, '.lock.json'),
     'ui' => UI_RUNTIME_REVISION,
     'smart' => SMART_RUNTIME_REVISION,
     'source' => SOURCE_REVISION,
