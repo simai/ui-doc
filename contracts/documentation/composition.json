@@ -1,7 +1,7 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "00a4d59489869bfddea1f8210e2e9a093edd2589",
+    "source_revision": "92adf6d805e1f9646179fa7af93eb84f27279e0a",
     "core_revision": "e5a1228a9d8ac6d74615ade3a17d8636ea9065f8",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",

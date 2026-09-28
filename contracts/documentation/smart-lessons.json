@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "00a4d59489869bfddea1f8210e2e9a093edd2589",
+    "source": "92adf6d805e1f9646179fa7af93eb84f27279e0a",
     "core": "e5a1228a9d8ac6d74615ade3a17d8636ea9065f8",
-    "smart": "3942df63e58c8345271d28e4388ea575e5c7b8a3",
+    "smart": "c184f5944ae60d68f3f34d54773c051b35b3d9f8",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core declares each theme role once with light-dark(), which is a colour concern and touches no lesson, so the eight generic Smart lessons still hold. The recorded smart-base hash was stale and never verified by anything; it now carries the real digest, and the audit checks both digests whenever it is given the source repository."
+    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Core runtime is unchanged. The only change is the Smart table (and the data view that bundles it), which gains a row-actions attribute to hide its row action column while actions keeps the create button; that is a property of one component and touches no lesson, so the eight generic Smart lessons still hold."
 }
