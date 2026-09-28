@@ -247,6 +247,63 @@ $copyBytes($documentationBytes, [
     $packageRoot . '/stubs/portable/contracts/generated/documentation-source.json',
 ]);
 
+// The foundation the site loads — core.css, the full utility sheet and the
+// adaptive-sizing contract — used to stay at whatever pair the shipped packet was
+// cut from, while every other asset moved with the pinned pair. It is now taken
+// from the pinned distribution on every repin, like the runtime projection beside
+// it. The fonts are left as the package ships them: nothing in the current
+// foundation declares them.
+$typography = $lock['typography_projection'] ?? null;
+if (! is_array($typography)) {
+    throw new RuntimeException('FRAMEWORK_TYPOGRAPHY_PROJECTION_MISSING');
+}
+$candidate = trim($git($uiRoot, ['show', UI_RUNTIME_REVISION . ':VERSION']));
+if (preg_match('/\A[0-9]+\.[0-9]+\.[0-9]+\z/D', $candidate) !== 1) {
+    throw new RuntimeException('FRAMEWORK_TYPOGRAPHY_CANDIDATE_INVALID');
+}
+$foundationDirectory = $packageRoot . '/resources/portable/vendor/simai-framework/typography/' . $candidate;
+if (! is_dir($foundationDirectory)
+    && ! mkdir($foundationDirectory, 0755, true)
+    && ! is_dir($foundationDirectory)
+) {
+    throw new RuntimeException('FRAMEWORK_TYPOGRAPHY_DIRECTORY_FAILED');
+}
+$foundationFiles = [
+    'core' => ['core.css', 'distr/core/css/core.css'],
+    'utility' => ['utility.full.css', 'distr/core/css/utility.full.css'],
+    'contract' => ['adaptive-sizing.v1.json', 'distr/core/contracts/adaptive-sizing.v1.json'],
+];
+foreach ($foundationFiles as $key => [$name, $distributionPath]) {
+    $bytes = $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':' . $distributionPath]);
+    $copyBytes($bytes, [$foundationDirectory . '/' . $name]);
+    $typography['files'][$key] = [
+        'path' => 'portable/vendor/simai-framework/typography/' . $candidate . '/' . $name,
+        'public' => '_docara/vendor/simai-framework/typography/' . $candidate . '/' . $name,
+        'sha256' => hash('sha256', $bytes),
+    ];
+}
+// Roll back to the pair this repin replaces, which is what a rollback means here.
+$typography['candidate'] = $candidate;
+$typography['source'] = [
+    'provider' => 'simai/ui-source',
+    'revision' => SOURCE_REVISION,
+    'rollback_parent' => (string) $typography['source']['revision'],
+];
+$typography['builder'] = ['provider' => 'simai/ui-builder', 'revision' => BUILDER_REVISION];
+$typography['distribution'] = [
+    'provider' => 'simai/ui',
+    'revision' => UI_RUNTIME_REVISION,
+    'rollback_parent' => (string) $typography['distribution']['revision'],
+    'published' => false,
+];
+ksort($typography['files']);
+// One digest over the packet: the file keys and their digests, in a fixed order.
+$typography['packet_sha256'] = hash('sha256', json_encode(
+    array_map(static fn (array $record): string => (string) $record['sha256'], $typography['files']),
+    JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES,
+));
+$lock['typography_projection'] = $typography;
+
 $writeJson($projectLockPath, $lock);
 $writeJson($packageLockPath, $lock);
 $writeJson($stubLockPath, $lock);
