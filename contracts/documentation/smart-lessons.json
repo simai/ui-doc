@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "152567c0f75ddc3e1452a9080ff464987db88dbb",
+    "source": "ce53f6d4dace8b108efc999b6d2fffbf860d8749",
     "core": "1e114f57a03845b7e2e0f5825122c2e64d9b7be7",
-    "smart": "727a77d2a861c49f0db2acbf426af69175aef449",
+    "smart": "3942df63e58c8345271d28e4388ea575e5c7b8a3",
     "source_files": {
         "src/core/js/smart-base.js": "cec5760253a9ef3e09d8ce914b1f402ff7a871ce45b9aa8489b2fe2212a5c605",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair: smart-base is unchanged since the previous review, and the loader too. The Smart inputs were renamed onto the named axes with every legacy name and value still answering, which the properties lesson already describes, so the eight generic lessons still hold."
+    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are unchanged since the previous review. The only change is the Smart table, which stops animating its search field while that field holds focus, so the eight generic Smart lessons still hold."
 }
