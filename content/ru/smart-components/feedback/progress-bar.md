@@ -71,4 +71,4 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-bar`.
 ## Источник
 
 - `simai/ui-smart@c184f5944ae60d68f3f34d54773c051b35b3d9f8:smart/progress-bar`
-- `simai/ui@92038d436c6d1b589ae9d2c0c759892cc02090d9:distr/rule/rule.json#name=cl-progress-bar`
+- `simai/ui@d804e81b837773764512b203ee5478990a33bbe8:distr/rule/rule.json#name=cl-progress-bar`

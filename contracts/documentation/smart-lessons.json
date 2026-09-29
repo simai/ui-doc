@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "0289eea87d3396728519d7135f6d8010dc7de56d",
-    "core": "92038d436c6d1b589ae9d2c0c759892cc02090d9",
+    "source": "07131aaf6acd852e485f5782db8b357160a50897",
+    "core": "d804e81b837773764512b203ee5478990a33bbe8",
     "smart": "c184f5944ae60d68f3f34d54773c051b35b3d9f8",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core declares the keyword tokens the utilities always read and points four old role names at roles that exist; none of it touches a lesson, so the eight generic Smart lessons still hold."
+    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core declares the roles the utilities were already offering and the alpha steps they stand on; none of it touches a lesson, so the eight generic Smart lessons still hold."
 }
