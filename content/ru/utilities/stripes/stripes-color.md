@@ -21,7 +21,6 @@ tags: [stripe-color]
 |:------|:---------|
 | `stripe-transparent` | `--sf-stripe--color: var(--sf-transparent)` |
 | `stripe-current` | `--sf-stripe--color: currentColor` |
-| `stripe-surface` | `--sf-stripe--color: var(--sf-surface)` |
 | `stripe-on-surface` | `--sf-stripe--color: var(--sf-on-surface)` |
 | `stripe-primary` | `--sf-stripe--color: var(--sf-primary)` |
 | `stripe-secondary` | `--sf-stripe--color: var(--sf-secondary)` |

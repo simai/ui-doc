@@ -28,13 +28,13 @@
             "compatibility_id": "ui-75cbee9193be-smart-c184f5944ae6",
             "profile": "plain-assets-v1",
             "relative_path": "contracts/generated/framework-contract-registry.json",
-            "file_sha256": "3dbd77e2db94fd06ce274b3050ac5dd15913c94b73fd37f67b52cecaf1582293",
+            "file_sha256": "0afedc63201acd377e7fb5081f7486e6810b75eb8b57c46cc39d978042ee81ca",
             "source": {
-                "commit": "48794a7a0a983ce53e7713a1280e1201e3a030e6",
+                "commit": "7abff0bc3eabb85a4714fc55c98c18fdb38121a2",
                 "tree": "contracts/generated",
-                "tree_oid": "73292f3ca31fc98de1cba1d9c8e7cebb5f227c75",
+                "tree_oid": "1a192eb16be2c19b8a7bbf8a33f680005d1bd6ea",
                 "mount": "contract",
-                "sha256": "fcc9f38fe4c77898aa9795b5e64e18e29d1202f4669a8fffdd26db660d7eb4f3",
+                "sha256": "0188b047ad192ef23aa10f6f43aaae20393297bcd0b94964a560cb1f876597a7",
                 "files": 2
             },
             "documentation_source": {

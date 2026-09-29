@@ -66,9 +66,21 @@ for (const page of walk(path.join(projectRoot, 'content')).sort()) {
   checked += 1;
   const text = fs.readFileSync(page, 'utf8');
   const named = new Set();
+  // A table headed "Старый класс" maps retired names onto current ones; its first
+  // column is history, not a promise. Tracking the last header row is enough to
+  // tell the two apart.
+  let migrationTable = false;
   for (const line of text.split('\n')) {
-    if (!line.startsWith('|')) continue;
+    if (!line.startsWith('|')) {
+      migrationTable = false;
+      continue;
+    }
     const first = line.split('|')[1]?.trim().replace(/`/gu, '') ?? '';
+    if (/^Стар/iu.test(first)) {
+      migrationTable = true;
+      continue;
+    }
+    if (migrationTable) continue;
     // A utility class carries a hyphen or a digit; a bare word in that column is
     // a family name or an element, not something a reader can write.
     if (/^[a-z][a-z0-9-]*(?:-[0-9]+(?:\/[0-9]+)?)?$/u.test(first) && /[-0-9]/u.test(first)) {

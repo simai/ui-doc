@@ -31,7 +31,6 @@ tags: [scroll-snap-type]
 | `snap-x` | `scroll-snap-type: x var(--sf-scroll-snap-strictness);` |
 | `snap-y` | `scroll-snap-type: y var(--sf-scroll-snap-strictness);` |
 | `snap-both` | `scroll-snap-type: both mandatory;` |
-| `snap-example` | scroll-snap-type: Array; *(пример, не использовать)*    |
 | `snap-mandatory` | `--sf-scroll-snap-strictness`: mandatory;               |
 | `snap-proximity` | `--sf-scroll-snap-strictness`: proximity;               |
 
