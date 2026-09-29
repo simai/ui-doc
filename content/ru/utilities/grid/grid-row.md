@@ -21,13 +21,17 @@ tags: [grid-row, sm, md, lg, xl, xxl]
 |:-----------------|:-------------------------|
 | `row-span-{n}` | `grid-row: span {n};` |
 | `row-span-full` | `grid-row: 1 / -1;` |
-| `row-span-none` | `grid-row: auto;` |
+| `row-auto` | `grid-row: auto;` |
 | `row-start-{n}` | `grid-row-start: {n};` |
 | `row-start-auto` | `grid-row-start: auto;` |
 | `row-end-{n}` | `grid-row-end: {n};` |
 | `row-end-auto` | `grid-row-end: auto;` |
 
 Диапазон `n` соответствует утилитам в SCSS (`row-span` от 1 до 6, `row-start`/`row-end` от 1 до 7).
+
+Строки называются так же, как колонки: `row-span-2` рядом с `col-span-2`. Прежние
+имена `row-span-2`, `row-start-2`, `row-end-2` продолжают работать
+и считаются устаревшими.
 
 ## Синтаксис
 
@@ -41,7 +45,7 @@ tags: [grid-row, sm, md, lg, xl, xxl]
 ### Span
 ```html
 <div class="grid grid-col-3 gap-2">
-  <div class="border radius-1 bg-primary color-on-primary p-2 grid-row-span-2">row span 2</div>
+  <div class="border radius-1 bg-primary color-on-primary p-2 row-span-2">row span 2</div>
   <div class="border radius-1 bg-secondary color-on-secondary p-2">row span 1</div>
   <div class="border radius-1 bg-tertiary color-on-tertiary p-2">row span 1</div>
 </div>
@@ -50,14 +54,14 @@ tags: [grid-row, sm, md, lg, xl, xxl]
 ### Start / End
 ```html
 <div class="grid grid-col-3 grid-row-4 gap-2">
-  <div class="border radius-1 bg-success color-on-success p-2 grid-row-start-2 grid-row-end-4">start 2 / end 4</div>
+  <div class="border radius-1 bg-success color-on-success p-2 row-start-2 row-end-4">start 2 / end 4</div>
 </div>
 ```
 
 ## Адаптивность
 
 ```html
-<div class="grid-row-span-2 md:grid-row-span-3">
+<div class="row-span-2 md:row-span-3">
   <!-- Высота строки увеличится на брейкпоинте md -->
 </div>
 ```

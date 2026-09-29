@@ -21,7 +21,7 @@ tags: [grid-column, sm, md, lg, xl, xxl]
 |:-------------------|:--------------------------|
 | `col-span-{n}` | `grid-column: span {n};` |
 | `col-span-full` | `grid-column: 1 / -1;` |
-| `col-span-none` | `grid-column: auto;` |
+| `col-auto` | `grid-column: auto;` |
 | `col-start-{n}` | `grid-column-start: {n};` |
 | `col-start-auto` | `grid-column-start: auto;` |
 | `col-end-{n}` | `grid-column-end: {n};` |
