@@ -1,0 +1,24 @@
+{
+    "schema": "ui-doc.known_missing_utility_classes.v1",
+    "recorded": "2026-09-29",
+    "why": "Классы, которые страницы называют, а собранные листы не содержат. Каждый ждёт решения владельца: дописать класс во фреймворк или убрать обещание со страницы. Пока запись здесь, проверка их не считает находками, но любой новый разрыв уронит docs:check.",
+    "entries": [
+        {"class": "brightness-5", "page": "ru/utilities/filters/filter-brightness.md", "note": "Шкала яркости сейчас 0, 1/4, 1/3, 1/2, 1..4 — ступеней 5..7 нет."},
+        {"class": "brightness-6", "page": "ru/utilities/filters/filter-brightness.md", "note": "То же."},
+        {"class": "brightness-7", "page": "ru/utilities/filters/filter-brightness.md", "note": "То же."},
+        {"class": "placeholder-current", "page": "ru/utilities/forms/placeholder-color.md", "note": "У семейства есть placeholder-inherit, но не -current; у соседних семейств -current встречается."},
+        {"class": "col-span-none", "page": "ru/utilities/grid/grid-column.md", "note": "Есть col-span-1..12; значения none нет."},
+        {"class": "row-span-full", "page": "ru/utilities/grid/grid-row.md", "note": "Колоночные классы есть, строковых нет ни одного — асимметрия сетки."},
+        {"class": "row-span-none", "page": "ru/utilities/grid/grid-row.md", "note": "То же."},
+        {"class": "row-start-auto", "page": "ru/utilities/grid/grid-row.md", "note": "То же."},
+        {"class": "row-end-auto", "page": "ru/utilities/grid/grid-row.md", "note": "То же."},
+        {"class": "cursor-ne-resize", "page": "ru/utilities/interactivity/cursor.md", "note": "Есть n/s/ns/nesw/nwse, но нет четырёх диагональных."},
+        {"class": "cursor-nw-resize", "page": "ru/utilities/interactivity/cursor.md", "note": "То же."},
+        {"class": "cursor-se-resize", "page": "ru/utilities/interactivity/cursor.md", "note": "То же."},
+        {"class": "cursor-sw-resize", "page": "ru/utilities/interactivity/cursor.md", "note": "То же."},
+        {"class": "will-change-scroll-position", "page": "ru/utilities/interactivity/will-change.md", "note": "В сборке класс называется will-change-scroll; значение CSS — scroll-position."},
+        {"class": "isolation-auto", "page": "ru/utilities/layout/isolation.md", "note": "Есть isolate; парного класса для значения auto нет."},
+        {"class": "snap-example", "page": "ru/utilities/overscroll/scroll-snap-type.md", "note": "Похоже на класс из примера страницы, а не на утилиту; проверить и убрать из таблицы."},
+        {"class": "stripe-surface", "page": "ru/utilities/stripes/stripes-color.md", "note": "Есть stripe-on-surface и stripe-surface-container, но не stripe-surface."}
+    ]
+}
