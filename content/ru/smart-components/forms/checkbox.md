@@ -14,10 +14,10 @@ Custom Elements: `<sf-checkbox>`.
 Loader-статус: `registered`. Loader-правило: `cl-checkbox`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@cb409217bbc267f42051852d1ab0bbcb9d68fc68:smart/checkbox/css/checkbox.css`
-- `simai/ui-smart@cb409217bbc267f42051852d1ab0bbcb9d68fc68:smart/checkbox/js/checkbox.js`
-- `simai/ui-smart@cb409217bbc267f42051852d1ab0bbcb9d68fc68:smart/checkbox/template/default.css`
-- `simai/ui-smart@cb409217bbc267f42051852d1ab0bbcb9d68fc68:smart/checkbox/template/default.js`
+- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/checkbox/css/checkbox.css`
+- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/checkbox/js/checkbox.js`
+- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/checkbox/template/default.css`
+- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/checkbox/template/default.js`
 
 ## Зависимости
 
@@ -97,5 +97,5 @@ Loader-статус: `registered`. Loader-правило: `cl-checkbox`.
 
 ## Источник
 
-- `simai/ui-smart@cb409217bbc267f42051852d1ab0bbcb9d68fc68:smart/checkbox`
-- `simai/ui@3bc4d241e31337ca38f5d23366c0bd221fc99e1b:distr/rule/rule.json#name=cl-checkbox`
+- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/checkbox`
+- `simai/ui@22c868ecf8c1de94320d61516cadf19ff3cd27c1:distr/rule/rule.json#name=cl-checkbox`
