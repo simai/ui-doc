@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "76fe7efb8259b15c2bc3871ff45267e8f5b6e40c",
-    "core": "2c0416aad502f58c8dca9225d27cdb488d084e4e",
+    "source": "ab729dd7fa93b444c4d375fe5efb19dae06f181b",
+    "core": "75cbee9193be4d59d85f5d635203932bd236dae4",
     "smart": "c184f5944ae60d68f3f34d54773c051b35b3d9f8",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review. Core drops --sf-outline-transparent-OLD, a token no file read, and the source lost five Sass partials nothing loaded; neither touches a lesson, so the eight generic Smart lessons still hold."
+    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core adds the short names for the grid rows beside the existing long ones, which is a utility naming concern and touches no lesson, so the eight generic Smart lessons still hold."
 }

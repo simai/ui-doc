@@ -78,4 +78,4 @@ Loader-статус: `registered`. Loader-правило: `cl-toast`.
 ## Источник
 
 - `simai/ui-smart@c184f5944ae60d68f3f34d54773c051b35b3d9f8:smart/toast`
-- `simai/ui@2c0416aad502f58c8dca9225d27cdb488d084e4e:distr/rule/rule.json#name=cl-toast`
+- `simai/ui@75cbee9193be4d59d85f5d635203932bd236dae4:distr/rule/rule.json#name=cl-toast`
