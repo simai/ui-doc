@@ -112,4 +112,4 @@ API-страница подтверждает source-контракт, но не
 ## Источник
 
 - `simai/ui-smart@c184f5944ae60d68f3f34d54773c051b35b3d9f8:smart/dropdown`
-- `simai/ui@d804e81b837773764512b203ee5478990a33bbe8:distr/rule/rule.json#name=cl-dropdown`
+- `simai/ui@92c1000b49b26ffe8c621b9de2bf561bc9d7bc89:distr/rule/rule.json#name=cl-dropdown`

@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "07131aaf6acd852e485f5782db8b357160a50897",
-    "core": "d804e81b837773764512b203ee5478990a33bbe8",
+    "source": "6d88febde810f0323d50952fa4110bc52dd74605",
+    "core": "92c1000b49b26ffe8c621b9de2bf561bc9d7bc89",
     "smart": "c184f5944ae60d68f3f34d54773c051b35b3d9f8",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core declares the roles the utilities were already offering and the alpha steps they stand on; none of it touches a lesson, so the eight generic Smart lessons still hold."
+    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core moves the last two focus rings — the tabs and the tree — onto the shared outline; the lessons do not describe rings, so the eight generic Smart lessons still hold."
 }
