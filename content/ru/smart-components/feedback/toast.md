@@ -14,8 +14,8 @@ Custom Elements: `<sf-toast>`.
 Loader-статус: `registered`. Loader-правило: `cl-toast`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@c184f5944ae60d68f3f34d54773c051b35b3d9f8:smart/toast/js/toast.js`
-- `simai/ui-smart@c184f5944ae60d68f3f34d54773c051b35b3d9f8:smart/toast/template/default.js`
+- `simai/ui-smart@fff46ec6a0dcf8b6fbc071eef86f689b2baeb9ef:smart/toast/js/toast.js`
+- `simai/ui-smart@fff46ec6a0dcf8b6fbc071eef86f689b2baeb9ef:smart/toast/template/default.js`
 
 ## Зависимости
 
@@ -77,5 +77,5 @@ Loader-статус: `registered`. Loader-правило: `cl-toast`.
 
 ## Источник
 
-- `simai/ui-smart@c184f5944ae60d68f3f34d54773c051b35b3d9f8:smart/toast`
-- `simai/ui@92c1000b49b26ffe8c621b9de2bf561bc9d7bc89:distr/rule/rule.json#name=cl-toast`
+- `simai/ui-smart@fff46ec6a0dcf8b6fbc071eef86f689b2baeb9ef:smart/toast`
+- `simai/ui@0a8566182f3865bb3f8081332f2deb6755a54b54:distr/rule/rule.json#name=cl-toast`

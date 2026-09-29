@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "6d88febde810f0323d50952fa4110bc52dd74605",
-    "core_revision": "92c1000b49b26ffe8c621b9de2bf561bc9d7bc89",
+    "source_revision": "6f0f8af8020fd94783c11dc15995a53c9944e292",
+    "core_revision": "0a8566182f3865bb3f8081332f2deb6755a54b54",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "a7bfd9962cfae05dddcbfc5d3bf54dd0e7760a7052a3864a1c935a14e5bc44d6",
