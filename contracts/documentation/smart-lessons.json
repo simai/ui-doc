@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "81b6f0cba35be62bb80992049deb07f6259975a1",
-    "core": "d533223d6e77b3d7a921f9af5d5ba909e004dc12",
-    "smart": "6f2ee779feb8979d1eb3f7a19cec8263e8f18887",
+    "source": "687460ae8c15f12eedb9d8f31c806a2cf87a4125",
+    "core": "f96a5546f75c66f6063ab0322be1e7cec3f67ec6",
+    "smart": "2eb98f0e62a390bc1a1d97344eb25b907178fc8d",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair: smart-base and the loader are byte-identical to the previous review, and the Smart runtime is unchanged. Core moves the last two focus rings — the tabs and the tree — onto the shared outline; the lessons do not describe rings, so the eight generic Smart lessons still hold."
+    "review": "Reviewed exact source/Core/Smart pair. smart-base and the loader are byte-identical to the previous review, so nothing in the Smart base or the loading path moved. The Smart runtime changed in one place only: the closed size list of the checkbox, the radio and the switch now reads 1 and 2, matching the two rungs their stylesheets draw; before, size=\"1/3\" passed the contract and produced a class no stylesheet defines, and size=\"2\" was refused. Core raises the two default radii by one step of the scale — a control to 4px and a block to 8px — which no lesson describes."
 }

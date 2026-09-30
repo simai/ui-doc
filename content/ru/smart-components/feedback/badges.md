@@ -14,8 +14,8 @@ Custom Elements: `<sf-badge>`.
 Loader-статус: `registered`. Loader-правило: `cl-badges`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@6f2ee779feb8979d1eb3f7a19cec8263e8f18887:smart/badges/js/badges.js`
-- `simai/ui-smart@6f2ee779feb8979d1eb3f7a19cec8263e8f18887:smart/badges/template/default.js`
+- `simai/ui-smart@2eb98f0e62a390bc1a1d97344eb25b907178fc8d:smart/badges/js/badges.js`
+- `simai/ui-smart@2eb98f0e62a390bc1a1d97344eb25b907178fc8d:smart/badges/template/default.js`
 
 ## Зависимости
 
@@ -82,5 +82,5 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 
 ## Источник
 
-- `simai/ui-smart@6f2ee779feb8979d1eb3f7a19cec8263e8f18887:smart/badges`
-- `simai/ui@d533223d6e77b3d7a921f9af5d5ba909e004dc12:distr/rule/rule.json#name=cl-badges`
+- `simai/ui-smart@2eb98f0e62a390bc1a1d97344eb25b907178fc8d:smart/badges`
+- `simai/ui@f96a5546f75c66f6063ab0322be1e7cec3f67ec6:distr/rule/rule.json#name=cl-badges`
