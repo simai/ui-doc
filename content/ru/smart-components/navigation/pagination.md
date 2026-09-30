@@ -134,4 +134,4 @@ Framework показывает фокус при клавиатурной нав
 ## Источник
 
 - `simai/ui-smart@6f2ee779feb8979d1eb3f7a19cec8263e8f18887:smart/pagination`
-- `simai/ui@134e0055da9f069240489af438e5efcf52d4b6b3:distr/rule/rule.json#name=cl-pagination`
+- `simai/ui@f92c9c211bb45f8d4312b3c3c9db70afa34a0910:distr/rule/rule.json#name=cl-pagination`
