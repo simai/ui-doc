@@ -25,16 +25,16 @@
         },
         "framework_registry": {
             "schema_id": "simai.framework.contract-registry",
-            "compatibility_id": "ui-2cdd679bb34a-smart-35216aac0ac1",
+            "compatibility_id": "ui-134e0055da9f-smart-6f2ee779feb8",
             "profile": "plain-assets-v1",
             "relative_path": "contracts/generated/framework-contract-registry.json",
-            "file_sha256": "bbcd29cfdd868525c068eaa2adb78e3344dbba1b27f463cdcd6c856360993cd4",
+            "file_sha256": "ba21041a4501b8050dc5031f6842afedccbd878b4fc22a2fe03aa66adfaf3ef8",
             "source": {
-                "commit": "5e64fa95d1993dc45656bef3d0e80b4a97c4bbd2",
+                "commit": "ae92a4517cae34cf1bb5fd1a07694a869cef7781",
                 "tree": "contracts/generated",
-                "tree_oid": "ea11ee19020da96cf102fe744b8fe256564022db",
+                "tree_oid": "05e76d42cc23642ac9c49a93c3a94aca5c558bf3",
                 "mount": "contract",
-                "sha256": "de73cd7985ff6a321c7b6eafed3ef824e105d4d2b6672db269ccebda76311158",
+                "sha256": "f27d9abd839d3cf0a646c6daf5a616a8807db0f51f7c553886828118881b29ca",
                 "files": 2
             },
             "documentation_source": {
