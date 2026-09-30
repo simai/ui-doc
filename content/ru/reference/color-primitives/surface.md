@@ -31,6 +31,7 @@ description: "Семантические роли поверхностей и к
 | `--sf-surface-2`                   | `--sf-neutral-95`          | `--sf-neutral-15`          |
 | `--sf-surface-3`                   | `--sf-neutral-90`          | `--sf-neutral-20`          |
 | `--sf-surface-4`                   | `--sf-neutral-85`          | `--sf-neutral-25`          |
+| `--sf-surface-5`                   | `--sf-neutral-80`          | `--sf-neutral-30`          |
 | `--sf-surface-inverse`             | `--sf-neutral-20`          | `--sf-neutral-90`          |
 | `--sf-surface-inverse-fixed`       | `--sf-neutral-20`          | `--sf-neutral-20`          |
 | `--sf-surface-container`           | `--sf-neutral-90`          | `--sf-neutral-30`          |
@@ -48,6 +49,24 @@ description: "Семантические роли поверхностей и к
 | `--sf-surface-transparent-select`  | `--sf-neutral-50--alfa-8`  | `--sf-neutral-90--alfa-8`  |
 | `--sf-surface-transparent-active`  | `--sf-neutral-50--alfa-12` | `--sf-neutral-90--alfa-12` |
 | `--sf-surface-transparent-overlay` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
+
+## Поверхность ступени высоты
+
+Поднятый элемент стоит на своей поверхности. В светлой теме это обычная
+поверхность страницы — там высоту несёт тень; в тёмной теме тень не работает, и
+подъём показывает ступень, которая светлеет.
+
+| Переменная                         | Значение (light)           | Значение (dark)            |
+|:-----------------------------------|:---------------------------|:---------------------------|
+| `--sf-elevation-1--surface`        | `--sf-surface-0`           | `--sf-surface-2`           |
+| `--sf-elevation-2--surface`        | `--sf-surface-0`           | `--sf-surface-3`           |
+| `--sf-elevation-3--surface`        | `--sf-surface-0`           | `--sf-surface-4`           |
+| `--sf-elevation-4--surface`        | `--sf-surface-0`           | `--sf-surface-5`           |
+| `--sf-elevation-5--surface`        | `--sf-surface-0`           | `--sf-surface-5`           |
+
+Брать их поодиночке нужно редко: утилита
+[`elevation-*`](/ru/utilities/shadows/elevation/) ставит поверхность и тень
+одним классом.
 
 [image20]: /ru/assets/reference/image-20.png
 [image21]: /ru/assets/reference/image-21.png
