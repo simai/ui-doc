@@ -61,11 +61,14 @@ description: "Две роли границы и работа каждой: ко�
 ```html
 <div class="border border-outline-variant radius-surface">…</div>
 <input class="border border-outline radius-ui">
-<ul class="divide-y divide-outline-variant">…</ul>
+<ul class="divide-y-1 divide-outline-variant">…</ul>
 ```
 
 `border` без цвета даёт полупрозрачную роль — она чаще нужна, потому что
 областей на экране больше, чем контролов с собственной рамкой.
+
+Толщину разделителя задают `divide-y-1` для горизонтальных линий и `divide-x-1`
+для вертикальных; цвет — отдельным классом, как выше.
 
 ## Чего не делать
 
