@@ -25,22 +25,22 @@
         },
         "framework_registry": {
             "schema_id": "simai.framework.contract-registry",
-            "compatibility_id": "ui-134e0055da9f-smart-6f2ee779feb8",
+            "compatibility_id": "ui-f92c9c211bb4-smart-6f2ee779feb8",
             "profile": "plain-assets-v1",
             "relative_path": "contracts/generated/framework-contract-registry.json",
-            "file_sha256": "ba21041a4501b8050dc5031f6842afedccbd878b4fc22a2fe03aa66adfaf3ef8",
+            "file_sha256": "2b8b93e22c7e50bab4954d69f8cc848d83558ba099288e0642beef73f4ad92a9",
             "source": {
-                "commit": "ae92a4517cae34cf1bb5fd1a07694a869cef7781",
+                "commit": "c682a6ee654a53f2f1dd36e400020c077f0dab89",
                 "tree": "contracts/generated",
-                "tree_oid": "05e76d42cc23642ac9c49a93c3a94aca5c558bf3",
+                "tree_oid": "2297788e0615e86631ed5df8431a1128b871c84b",
                 "mount": "contract",
-                "sha256": "f27d9abd839d3cf0a646c6daf5a616a8807db0f51f7c553886828118881b29ca",
+                "sha256": "05636c6a8b772724f5488dc20cefb860faff21e5a56b650f2d53d44ed4943736",
                 "files": 2
             },
             "documentation_source": {
                 "schema": "docara.documentation_source.v1",
                 "relative_path": "contracts/generated/documentation-source.json",
-                "file_sha256": "128edef235f0a62bc1c83ddeb4c113e6d304d3e556f34f6a5627b259fbb8d157"
+                "file_sha256": "ea2355cc794117fd29919d8799651b0b7de22022477d83f63c90b7358704aaf7"
             }
         },
         "boot": {
