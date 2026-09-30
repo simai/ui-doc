@@ -1,7 +1,7 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "b77263f878f23d027d8466c628aa1f54fe17a17a",
-    "core": "f92c9c211bb45f8d4312b3c3c9db70afa34a0910",
+    "source": "edfd4a229d42b2a6d05bd6768163195821918fbd",
+    "core": "c3ceb10e8459209232474b770bae87efa738cc3d",
     "smart": "6f2ee779feb8979d1eb3f7a19cec8263e8f18887",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
