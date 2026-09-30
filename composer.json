@@ -39,6 +39,7 @@
             "@docs:versions:check",
             "@docs:utilities:check",
             "@docs:utility-classes:check",
+            "@docs:utility-groups:check",
             "@docs:components:check",
             "@docs:smart-attributes:check",
             "@docs:layout:check",
@@ -61,7 +62,8 @@
         "docs:ai:check": "@php scripts/export-ai-documentation.php --check",
         "docs:recipe:check": "@php scripts/audit-docara-recipe-primary.php",
         "docs:smart-attributes:check": "node scripts/audit-smart-attribute-tables.mjs",
-        "docs:utility-classes:check": "node scripts/audit-utility-classes-exist.mjs"
+        "docs:utility-classes:check": "node scripts/audit-utility-classes-exist.mjs",
+        "docs:utility-groups:check": "node scripts/audit-utility-groups-documented.mjs"
     },
     "config": {
         "allow-plugins": false,
