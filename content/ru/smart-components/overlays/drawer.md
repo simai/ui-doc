@@ -91,7 +91,7 @@ Custom Element: `<sf-drawer>`. Loader-правило: `cl-drawer`, статус
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/drawer/js/drawer.js`
-- `simai/ui-smart@38b9244367b763fa90c57d5145a94cf975c0f486:smart/drawer/css/drawer.css`
+- `simai/ui-smart@67238a8121b3df17223f6e8dd54d2e301161a888:smart/drawer/js/drawer.js`
+- `simai/ui-smart@67238a8121b3df17223f6e8dd54d2e301161a888:smart/drawer/css/drawer.css`
 
-Правило загрузчика: `simai/ui@22c868ecf8c1de94320d61516cadf19ff3cd27c1:distr/rule/rule.json`.
+Правило загрузчика: `simai/ui@8a10db6eeadc7a6cd1f2af6c23d5574cf5af1149:distr/rule/rule.json`.
