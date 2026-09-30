@@ -102,4 +102,4 @@ source-контракт, но не заменяет сценарную пров�
 ## Источник
 
 - `simai/ui-smart@6f2ee779feb8979d1eb3f7a19cec8263e8f18887:smart/textarea`
-- `simai/ui@daa11dce96a46f322b05b99fc0a69fd16855b674:distr/rule/rule.json#name=cl-textarea`
+- `simai/ui@d533223d6e77b3d7a921f9af5d5ba909e004dc12:distr/rule/rule.json#name=cl-textarea`
