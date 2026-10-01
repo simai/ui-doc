@@ -18,7 +18,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 Loader-статус: `unregistered`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/file-preview/js/file-preview.js`
+- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/file-preview/js/file-preview.js`
 
 ## Атрибуты и свойства
 
@@ -77,4 +77,4 @@ Loader-статус: `unregistered`.
 
 ## Источник
 
-- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/file-preview`
+- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/file-preview`

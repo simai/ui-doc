@@ -14,8 +14,8 @@ Custom Elements: `<sf-range-slider>`.
 Loader-статус: `registered`. Loader-правило: `cl-range-slider`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/range-slider/js/range-slider.js`
-- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/range-slider/template/default.js`
+- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/range-slider/js/range-slider.js`
+- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/range-slider/template/default.js`
 
 ## Зависимости
 
@@ -82,5 +82,5 @@ Loader-статус: `registered`. Loader-правило: `cl-range-slider`.
 
 ## Источник
 
-- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/range-slider`
-- `simai/ui@209ef31ec294f86c6ae670f4d2169ec265f673ce:distr/rule/rule.json#name=cl-range-slider`
+- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/range-slider`
+- `simai/ui@a4f5a5e7487bb7fe4e01ca190d511ff59ceb3288:distr/rule/rule.json#name=cl-range-slider`
