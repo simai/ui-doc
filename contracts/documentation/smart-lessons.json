@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "7817d4b5e82f320876b9cc9baee5d1370c347e19",
-    "core": "0315c0ffebb698536fc69036f9fee68a73c27c92",
-    "smart": "41fd1892b345287f6a75f55080a4a3552b865037",
+    "source": "71cf327e187bec6461ae03fdccd5be1c69569f30",
+    "core": "51db1e4f9ba7977959269ad9ad65ac333ae4840d",
+    "smart": "800b1a9898a87157c075ad5b6653087fcde69a2e",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. smart-base and the loader are byte-identical to the previous review, so the Smart base and the loading path did not move. The Smart runtime changed in two places, both the same edit: the drawer and the context menu, which paint themselves with a raised surface, now carry the dimmed text role for that surface beside it (--sf-on-elevation-4--variant and -2--variant). Without it the dimmed text inside a drawer measured 2.93:1 against its own panel, under the 4.5:1 text needs. No attribute, event, template or keyboard behaviour is touched."
+    "review": "Reviewed exact source/Core/Smart pair. smart-base and the loader are byte-identical to the previous review, so the Smart base and the loading path did not move. The Smart runtime changed in one place: the checkbox template. Its disabled glyph took --sf-disable, the twelve-per-cent wash that belongs to a fill, and now takes --sf-on-disable; and its checked glyph rule, which painted --sf-on-primary, is now guarded with :not(:has(input:disabled)) so a locked ticked box stops looking like an editable one. Both are declarations inside the template's own stylesheet. No attribute, property, event, slot, nesting rule, cleanup path or asset reference is touched, so none of the eight lessons changes; the templates-and-assets lesson still describes the same template file and the same single asset."
 }

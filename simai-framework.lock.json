@@ -3,24 +3,24 @@
     "runtime": {
         "schema": "larena.ui.frontend_runtime_lock.v3",
         "runtime": "simai-framework",
-        "pair_id": "ui-0315c0ffebb6-smart-41fd1892b345",
-        "bundle_id": "ui-0315c0ffebb6-smart-41fd1892b345-registry-c66d7212-verified-commit-candidate-v1",
+        "pair_id": "ui-51db1e4f9ba7-smart-800b1a9898a8",
+        "bundle_id": "ui-51db1e4f9ba7-smart-800b1a9898a8-registry-52e589c4-verified-commit-candidate-v1",
         "publication_profile": "verified-commit-candidate-v1",
         "tag": null,
         "ui": {
             "tag": null,
-            "commit": "0315c0ffebb698536fc69036f9fee68a73c27c92",
+            "commit": "51db1e4f9ba7977959269ad9ad65ac333ae4840d",
             "tree": "distr",
             "mount": "ui",
-            "sha256": "a2ab3aac9deca9ab6fee68c6d175a35e8b38e373d86f9ab4ab8bcc8c4f81944f",
+            "sha256": "50db0b97f9b2d053dff9c5eb7e62f82eb4125d213281bd4ef06f9987c346b6c3",
             "files": 5187
         },
         "ui_smart": {
             "tag": null,
-            "commit": "41fd1892b345287f6a75f55080a4a3552b865037",
+            "commit": "800b1a9898a87157c075ad5b6653087fcde69a2e",
             "tree": "smart",
             "mount": "smart",
-            "sha256": "0ab47651e0faa60c78145592248eaf5f226ab4d2082f7d823315f3e02f0490c1",
+            "sha256": "2cc1da86dc2eb6d88a80420851c975290d502048f09c97c21409177f9f820543",
             "files": 785
         },
         "framework_registry": {
@@ -638,19 +638,19 @@
     },
     "runtime_projection": {
         "schema": "docara.framework_runtime_projection.v1",
-        "mount": "_docara/vendor/simai-framework/runtime/0315c0ffebb698536fc69036f9fee68a73c27c92/distr",
+        "mount": "_docara/vendor/simai-framework/runtime/51db1e4f9ba7977959269ad9ad65ac333ae4840d/distr",
         "source": {
             "provider": "simai/ui",
-            "revision": "0315c0ffebb698536fc69036f9fee68a73c27c92",
-            "tree_sha256": "a2ab3aac9deca9ab6fee68c6d175a35e8b38e373d86f9ab4ab8bcc8c4f81944f"
+            "revision": "51db1e4f9ba7977959269ad9ad65ac333ae4840d",
+            "tree_sha256": "50db0b97f9b2d053dff9c5eb7e62f82eb4125d213281bd4ef06f9987c346b6c3"
         },
         "icon_font": "component/icons/fonts/MaterialSymbols-Outlined.woff2",
-        "packet_sha256": "68529520f31eec57fd879ba71cdba8be18ddfb98337695cee5a40c734f31cee0",
+        "packet_sha256": "575c7e642ab517a75db42f9772c99737be6388b97485dcec707bb45777fd4139",
         "files": 908,
         "manifest": {
-            "path": "portable/vendor/simai-framework/runtime/0315c0ffebb698536fc69036f9fee68a73c27c92/runtime-manifest.json",
-            "public": "_docara/vendor/simai-framework/runtime/0315c0ffebb698536fc69036f9fee68a73c27c92/runtime-manifest.json",
-            "sha256": "cf8e987c46e653c4f22e2d8f45f92dcba688d7aeb42901b671299b7d8acf5a66"
+            "path": "portable/vendor/simai-framework/runtime/51db1e4f9ba7977959269ad9ad65ac333ae4840d/runtime-manifest.json",
+            "public": "_docara/vendor/simai-framework/runtime/51db1e4f9ba7977959269ad9ad65ac333ae4840d/runtime-manifest.json",
+            "sha256": "288992e86a33196a50e30559f9acd402dd6030668a05d6da3bc976c3fddd085d"
         }
     },
     "icon_projection": {
@@ -688,7 +688,7 @@
         "ui.button": {
             "provider": "larena/ui",
             "provider_revision": "4b055d09926fec4c32f2ae43b2e7e0a6f64d7663",
-            "sha256": "c6ab88b333b1d7cc3479d66d7651a34d682ac8f8132ca83448d82d56d00a8617",
+            "sha256": "8d40700a0e3e4bf92180baf24ba6a2c99458aef507d8e535ff787e8b2c93e2fd",
             "consumer_policy": {
                 "managed": [],
                 "blocked": [],
@@ -701,7 +701,7 @@
         "ui.alert": {
             "provider": "larena/ui",
             "provider_revision": "4b055d09926fec4c32f2ae43b2e7e0a6f64d7663",
-            "sha256": "2cdd246eb2f9245a6f16fde6b8cafd1b1f34bd785311375ae51ee249054b300b",
+            "sha256": "af5ac7aa572797321977f93bd5884746df608cf4f4be598fa60000cb1ce0ecd9",
             "consumer_policy": {
                 "managed": {
                     "id": "deterministic_id"
@@ -739,7 +739,7 @@
         "mount": "_docara/framework-runtime",
         "source": {
             "provider": "simai/ui-smart",
-            "revision": "41fd1892b345287f6a75f55080a4a3552b865037"
+            "revision": "800b1a9898a87157c075ad5b6653087fcde69a2e"
         },
         "files": {
             "smart/alert/js/alert.js": {
@@ -765,7 +765,7 @@
         "mount": "_docara/framework-runtime",
         "source": {
             "provider": "simai/ui-smart",
-            "revision": "41fd1892b345287f6a75f55080a4a3552b865037"
+            "revision": "800b1a9898a87157c075ad5b6653087fcde69a2e"
         },
         "files": {
             "smart/admin-menu/js/admin-menu.js": {
@@ -790,7 +790,7 @@
                 "sha256": "a046e0608b99227550ddc5cf626fac0717faaa08df294119dcf032b3f61b977c"
             },
             "smart/checkbox/css/checkbox.css": {
-                "sha256": "30c88ea7749c26fde836b2372b7085b4c35a24e9a0f92572e8cce02e6e293715"
+                "sha256": "30f55eb114163e8c5ef5135fddac397ace23f1e1887da4330f44431d0d226995"
             },
             "smart/checkbox/js/checkbox.js": {
                 "sha256": "299d6cc835468fdd5bb04b61b1714838b40d60402f43a901955bdd0944dba16b"
