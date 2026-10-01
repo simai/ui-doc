@@ -27,8 +27,9 @@ tags: [border-radius, sm, md, lg, xl, xxl]
 | `radius-1/3` | `--sf-radius-1\/3` | 2px | 2px |
 | `radius-1/2` | `--sf-radius-1\/2` | 4px | 4px |
 | `radius-1` | `--sf-radius-1` | 8px | 8px |
-| `radius-2` | `--sf-radius-2` | 10px | 12px |
-| `radius-3` | `--sf-radius-3` | 20px | 24px |
+| `radius-2` | `--sf-radius-2` | 12px | 16px |
+| `radius-3` | `--sf-radius-3` | 16px | 24px |
+| `radius-4` | `--sf-radius-4` | 24px | 32px |
 | `radius-rounded` | `--sf-radius-rounded` | 1000px | 1000px |
 
 Значения приведены при `1rem = 16px`. Шкала задана в `rem`, поэтому углы
