@@ -14,11 +14,11 @@ Custom Elements: `<sf-avatar>`.
 Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/avatar/js/avatar.js`
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/avatar/template/card.js`
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/avatar/template/default.js`
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/avatar/template/label.js`
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/avatar/template/shared.js`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/avatar/js/avatar.js`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/avatar/template/card.js`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/avatar/template/default.js`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/avatar/template/label.js`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/avatar/template/shared.js`
 
 ## Зависимости
 
@@ -80,5 +80,5 @@ Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 
 ## Источник
 
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/avatar`
-- `simai/ui@efefecab18689a77f607c2941a286d773bc1fd28:distr/rule/rule.json#name=cl-avatar`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/avatar`
+- `simai/ui@209ef31ec294f86c6ae670f4d2169ec265f673ce:distr/rule/rule.json#name=cl-avatar`

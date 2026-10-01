@@ -69,7 +69,7 @@ Custom Element: `<sf-sortable>`. Loader-правило: `cl-sortable`, стат�
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/sortable/js/sortable.js`
-- `simai/ui-smart@6bcb10a9190f803c661215495f6daa650d83d885:smart/sortable/css/sortable.css`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/sortable/js/sortable.js`
+- `simai/ui-smart@0fa2e18868ff08666e87185f49ddf60d192da747:smart/sortable/css/sortable.css`
 
-Правило загрузчика: `simai/ui@efefecab18689a77f607c2941a286d773bc1fd28:distr/rule/rule.json`.
+Правило загрузчика: `simai/ui@209ef31ec294f86c6ae670f4d2169ec265f673ce:distr/rule/rule.json`.
