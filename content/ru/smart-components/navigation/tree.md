@@ -70,4 +70,4 @@ Loader-статус: `registered`. Loader-правило: `cl-tree`.
 ## Источник
 
 - `simai/ui-smart@2eb98f0e62a390bc1a1d97344eb25b907178fc8d:smart/tree`
-- `simai/ui@28fe9a37ae55106fa8285ec09629b3f4bc2fe203:distr/rule/rule.json#name=cl-tree`
+- `simai/ui@9ff97727aaa33a589c415de44dd5ae755fd90118:distr/rule/rule.json#name=cl-tree`
