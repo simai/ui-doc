@@ -74,4 +74,4 @@ Loader-статус: `registered`. Loader-правило: `cl-download-file`.
 ## Источник
 
 - `simai/ui-smart@41fd1892b345287f6a75f55080a4a3552b865037:smart/download-file`
-- `simai/ui@bf47a786734b5bba69f17e93d121aa86c4b25c32:distr/rule/rule.json#name=cl-download-file`
+- `simai/ui@09fb1716e7077b17ac0be1c322916188de77c508:distr/rule/rule.json#name=cl-download-file`
