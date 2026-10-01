@@ -49,7 +49,7 @@ Smart-компоненты собирают разметку сами и так 
 и `:where()`. Итог знает только браузер, поэтому проверка работает в странице.
 
 ```html
-<script src="/assets/tools/layout-check.js"></script>
+<script src="/ru/assets/tools/layout-check.js"></script>
 ```
 
 Можно и вставить содержимое файла в консоль. Проверка ничего не меняет на

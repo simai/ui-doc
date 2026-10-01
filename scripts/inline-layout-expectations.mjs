@@ -8,7 +8,7 @@ import process from 'node:process';
 
 const projectRoot = path.resolve(import.meta.dirname, '..');
 const mapPath = path.join(projectRoot, 'contracts/documentation/layout-expectations.json');
-const toolPath = path.join(projectRoot, 'assets/tools/layout-check.js');
+const toolPath = path.join(projectRoot, 'content/ru/assets/tools/layout-check.js');
 
 const map = JSON.parse(fs.readFileSync(mapPath, 'utf8')).targets;
 const serialised = JSON.stringify(map, null, 2).split('\n').map((line, i) => (i ? `  ${line}` : line)).join('\n');
@@ -30,6 +30,6 @@ console.log(JSON.stringify({
   schema: 'ui-doc.layout_checker_copy.v1',
   status: same ? 'pass' : 'needs_revision',
   elements: Object.keys(map).length,
-  reason: same ? undefined : 'assets/tools/layout-check.js carries a stale copy of the map',
+  reason: same ? undefined : 'content/ru/assets/tools/layout-check.js carries a stale copy of the map',
 }, null, 2));
 process.exit(same ? 0 : 1);
