@@ -3,17 +3,18 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "757d546125d8c5a7482feeb41245f4e9aec25e37",
-    "core_revision": "9ff97727aaa33a589c415de44dd5ae755fd90118",
+    "source_revision": "10101c6bb691a4a0ca7c1cb19c15eca8db9f96b4",
+    "core_revision": "bf47a786734b5bba69f17e93d121aa86c4b25c32",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
-      "src/component/menu/scss/_css__menu.scss": "a7bfd9962cfae05dddcbfc5d3bf54dd0e7760a7052a3864a1c935a14e5bc44d6",
+      "src/component/menu/scss/_css__menu.scss": "13bb306da51165086ef0d1629fa154806f70cc38b0c74e5db4d1550f1bca7cd4",
       "src/component/menu/docs/docs.md": "3dde35b3194ad20c1785fcf82b01e2b9335ce9a68cbe22e956f201b9d1798b08"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "6dbf03204a5312350d10ec5542fe1e6b9e8e5d14d9fc25a46afc13f5bf1dc484",
+      "distr/component/menu/css/menu.css": "a95e6c06bc41cb6c695cac1d9b20c62df34ed9c94a85b899da3d3922d4bdcecd",
       "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
-    }
+    },
+    "note": "Единственное изменение в источнике — одна строка в _css__menu.scss: у подменю, которое красится поверхностью второй ступени высоты, рядом встал парный --sf-on-elevation-2--variant. Приглушённый текст в подменю получал 4.14:1 при требуемых 4.5. Разметка, атрибуты, клавиатура и события не затронуты, страница документации не меняется."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",
