@@ -110,4 +110,4 @@ Space и Escape принадлежат родительскому Dropdown.
 ## Источник
 
 - `simai/ui-smart@41fd1892b345287f6a75f55080a4a3552b865037:smart/list-item`
-- `simai/ui@09fb1716e7077b17ac0be1c322916188de77c508:distr/rule/rule.json#name=cl-list-item`
+- `simai/ui@0315c0ffebb698536fc69036f9fee68a73c27c92:distr/rule/rule.json#name=cl-list-item`

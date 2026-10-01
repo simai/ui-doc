@@ -3,16 +3,16 @@
     "runtime": {
         "schema": "larena.ui.frontend_runtime_lock.v3",
         "runtime": "simai-framework",
-        "pair_id": "ui-09fb1716e707-smart-41fd1892b345",
-        "bundle_id": "ui-09fb1716e707-smart-41fd1892b345-registry-cff1c6a3-verified-commit-candidate-v1",
+        "pair_id": "ui-0315c0ffebb6-smart-41fd1892b345",
+        "bundle_id": "ui-0315c0ffebb6-smart-41fd1892b345-registry-c66d7212-verified-commit-candidate-v1",
         "publication_profile": "verified-commit-candidate-v1",
         "tag": null,
         "ui": {
             "tag": null,
-            "commit": "09fb1716e7077b17ac0be1c322916188de77c508",
+            "commit": "0315c0ffebb698536fc69036f9fee68a73c27c92",
             "tree": "distr",
             "mount": "ui",
-            "sha256": "2807aeab55542fa5f68a88f3f851efd8cc30c54dfca7f7f4ecfdb76c141991c1",
+            "sha256": "a2ab3aac9deca9ab6fee68c6d175a35e8b38e373d86f9ab4ab8bcc8c4f81944f",
             "files": 5187
         },
         "ui_smart": {
@@ -638,19 +638,19 @@
     },
     "runtime_projection": {
         "schema": "docara.framework_runtime_projection.v1",
-        "mount": "_docara/vendor/simai-framework/runtime/09fb1716e7077b17ac0be1c322916188de77c508/distr",
+        "mount": "_docara/vendor/simai-framework/runtime/0315c0ffebb698536fc69036f9fee68a73c27c92/distr",
         "source": {
             "provider": "simai/ui",
-            "revision": "09fb1716e7077b17ac0be1c322916188de77c508",
-            "tree_sha256": "2807aeab55542fa5f68a88f3f851efd8cc30c54dfca7f7f4ecfdb76c141991c1"
+            "revision": "0315c0ffebb698536fc69036f9fee68a73c27c92",
+            "tree_sha256": "a2ab3aac9deca9ab6fee68c6d175a35e8b38e373d86f9ab4ab8bcc8c4f81944f"
         },
         "icon_font": "component/icons/fonts/MaterialSymbols-Outlined.woff2",
-        "packet_sha256": "31f85f13854e0fda7486adbf6040323e8b3140a299d18e9385e11b9eb1e1b30a",
+        "packet_sha256": "68529520f31eec57fd879ba71cdba8be18ddfb98337695cee5a40c734f31cee0",
         "files": 908,
         "manifest": {
-            "path": "portable/vendor/simai-framework/runtime/09fb1716e7077b17ac0be1c322916188de77c508/runtime-manifest.json",
-            "public": "_docara/vendor/simai-framework/runtime/09fb1716e7077b17ac0be1c322916188de77c508/runtime-manifest.json",
-            "sha256": "b3dd550583e60c876b8535fe1034c6b71db1e5f4cfc1efe921dfb484505b65d7"
+            "path": "portable/vendor/simai-framework/runtime/0315c0ffebb698536fc69036f9fee68a73c27c92/runtime-manifest.json",
+            "public": "_docara/vendor/simai-framework/runtime/0315c0ffebb698536fc69036f9fee68a73c27c92/runtime-manifest.json",
+            "sha256": "cf8e987c46e653c4f22e2d8f45f92dcba688d7aeb42901b671299b7d8acf5a66"
         }
     },
     "icon_projection": {
