@@ -6,6 +6,9 @@
  * контейнером, а части сваливаются в угол. Радиокнопка, написанная руками без
  * них, рисует точку в левом верхнем углу кольца вместо середины.
  *
+ * Модификатор компонента считается решением: если снять .часть--что-то и
+ * значение станет ожидаемым, его поставил модификатор, и это не находка.
+ *
  * Сообщается только то, что доказуемо. Если элемент — контейнер, а
  * выравнивание в нём осталось по умолчанию, решение из макета до страницы не
  * дошло. Если элемент контейнером не стал, но ему объявлен gap, расстояние
@@ -379,6 +382,23 @@
     return false;
   }
 
+  // Модификатор — это решение, а не упущение: .sf-menu--horizontal именно
+  // затем и написан, чтобы меню шло строкой. Отличить решение от забытого класса
+  // можно одним способом — снять модификаторы этой части и посмотреть, изменится
+  // ли значение. Изменилось — значит его поставил модификатор, и спорить не с
+  // чем. Не изменилось — значит его не поставил никто.
+  function decidedByModifier(element, part, property, wanted) {
+    var original = element.getAttribute('class') || '';
+    var kept = original.split(/\s+/).filter(function (name) {
+      return name.indexOf(part + '--') !== 0;
+    });
+    if (kept.length === original.split(/\s+/).length) return false;
+    element.setAttribute('class', kept.join(' '));
+    var without = global.getComputedStyle(element)[property];
+    element.setAttribute('class', original);
+    return matches(without, wanted);
+  }
+
   function describe(element) {
     var name = element.tagName.toLowerCase();
     var classes = String(element.className || '').trim();
@@ -419,6 +439,7 @@
           for (var property in wanted) {
             if (!Object.prototype.hasOwnProperty.call(wanted, property)) continue;
             if (matches(style[property], wanted[property])) continue;
+            if (decidedByModifier(element, classes[j], property, wanted[property])) continue;
             missing.push({ property: property, want: wanted[property], got: style[property],
               suggest: CLASS_FOR[property + ':' + wanted[property]] });
           }
