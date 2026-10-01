@@ -1,0 +1,327 @@
+{
+    "schema": "ui-doc.layout_expectations.v1",
+    "note": "Built from the utility-hint comments of the pinned Core runtime by scripts/build-layout-expectations.mjs --write.",
+    "elements": 92,
+    "targets": {
+        "sf-alert-buttons": {
+            "alignItems": "center"
+        },
+        "sf-alert-content": {
+            "flexDirection": "column"
+        },
+        "sf-alert-wrap": {
+            "flexDirection": "column"
+        },
+        "sf-avatar-card": {
+            "flexDirection": "column"
+        },
+        "sf-avatar-card-content": {
+            "flexDirection": "column"
+        },
+        "sf-avatar-card-row": {
+            "alignItems": "center"
+        },
+        "sf-avatar-label-group": {
+            "alignItems": "center"
+        },
+        "sf-avatar-label-group-container": {
+            "flexDirection": "column"
+        },
+        "sf-badge": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-badge-icon-container": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-badge-text-container": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-breadcrumbs": {
+            "flexWrap": "wrap",
+            "alignItems": "center"
+        },
+        "sf-breadcrumbs-item": {
+            "alignItems": "center"
+        },
+        "sf-breadcrumbs-item-container": {
+            "alignItems": "center"
+        },
+        "sf-button": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-button-text-container": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-checkbox-box": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-checkbox-container": {
+            "flexDirection": "column"
+        },
+        "sf-checkbox-label": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-close": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-context-menu-content": {
+            "flexDirection": "column"
+        },
+        "sf-country-code": {
+            "flexDirection": "column"
+        },
+        "sf-country-code-field": {
+            "alignItems": "center"
+        },
+        "sf-country-code-item": {
+            "alignItems": "center"
+        },
+        "sf-country-code-left": {
+            "alignItems": "center"
+        },
+        "sf-datepicker": {
+            "flexDirection": "column"
+        },
+        "sf-datepicker-day": {
+            "flexDirection": "column",
+            "alignItems": "center"
+        },
+        "sf-datepicker-text": {
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-dropdown": {
+            "flexDirection": "column"
+        },
+        "sf-dropdown-field": {
+            "alignItems": "center"
+        },
+        "sf-dropdown-tag-container": {
+            "alignItems": "center"
+        },
+        "sf-fab": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-file-upload": {
+            "flexDirection": "column",
+            "alignItems": "center"
+        },
+        "sf-file-upload-block": {
+            "alignItems": "center"
+        },
+        "sf-file-upload-bottom": {
+            "flexDirection": "column",
+            "alignItems": "center"
+        },
+        "sf-icon-button": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-input": {
+            "flexDirection": "column"
+        },
+        "sf-input-field": {
+            "alignItems": "center"
+        },
+        "sf-input-hint-text-wrap": {
+            "alignItems": "center"
+        },
+        "sf-input-right": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-link": {
+            "alignItems": "center"
+        },
+        "sf-list": {
+            "flexDirection": "column",
+            "alignItems": "end"
+        },
+        "sf-list-container": {
+            "flexDirection": "column"
+        },
+        "sf-list-item": {
+            "alignItems": "center"
+        },
+        "sf-list-item-container": {
+            "alignItems": "center"
+        },
+        "sf-list-item-wrap": {
+            "justifyContent": "space-between",
+            "alignItems": "center"
+        },
+        "sf-loader-container": {
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-menu": {
+            "flexDirection": "column"
+        },
+        "sf-menu-item": {
+            "flexDirection": "column"
+        },
+        "sf-page-number": {
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-pagination": {
+            "flexDirection": "column",
+            "alignItems": "center"
+        },
+        "sf-pagination-bottom": {
+            "alignItems": "center"
+        },
+        "sf-pagination-container": {
+            "alignItems": "center"
+        },
+        "sf-pagination-count": {
+            "justifyContent": "flex-end",
+            "alignItems": "center"
+        },
+        "sf-pagination-left": {
+            "alignItems": "center"
+        },
+        "sf-pagination-main": {
+            "justifyContent": "space-between",
+            "alignItems": "center"
+        },
+        "sf-pagination-marked": {
+            "alignItems": "center"
+        },
+        "sf-pagination-top": {
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-pagination-total": {
+            "alignItems": "center"
+        },
+        "sf-progress-bar--size-1": {
+            "alignItems": "end"
+        },
+        "sf-quantity": {
+            "flexDirection": "column"
+        },
+        "sf-quantity-wrap": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-radio-button-box": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-radio-button-container": {
+            "flexDirection": "column"
+        },
+        "sf-radio-button-text": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-slider-arrows": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-slider-dots": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-step": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-step-container": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-steps": {
+            "flexDirection": "column"
+        },
+        "sf-steps-container": {
+            "alignItems": "center"
+        },
+        "sf-switch-container": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-switch-container-wrap": {
+            "flexDirection": "column"
+        },
+        "sf-switch-toggler": {
+            "alignItems": "center",
+            "justifyContent": "flex-end"
+        },
+        "sf-tag": {
+            "alignItems": "center"
+        },
+        "sf-tag-container": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-tag-count": {
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-textarea": {
+            "flexDirection": "column"
+        },
+        "sf-textarea-hint-text-wrap": {
+            "alignItems": "center"
+        },
+        "sf-thumb": {
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-thumb-handle": {
+            "justifyContent": "center",
+            "alignItems": "center"
+        },
+        "sf-toast-bottom": {
+            "alignItems": "center"
+        },
+        "sf-toast-container": {
+            "flexDirection": "column"
+        },
+        "sf-toast-wrap": {
+            "flexDirection": "column"
+        },
+        "sf-toggle": {
+            "alignItems": "center"
+        },
+        "sf-toggle-container": {
+            "alignItems": "center"
+        },
+        "sf-toggle-inner": {
+            "alignItems": "center"
+        },
+        "sf-toggle-inner-wrap": {
+            "alignItems": "center",
+            "justifyContent": "center"
+        },
+        "sf-tooltip-content": {
+            "flexDirection": "column"
+        },
+        "sf-tooltip-wrap": {
+            "flexDirection": "column"
+        },
+        "sf-upload-progress-content": {
+            "flexDirection": "column"
+        },
+        "sf-upload-progress-left": {
+            "flexDirection": "column"
+        }
+    }
+}

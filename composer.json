@@ -43,6 +43,7 @@
             "@docs:nesting:check",
             "@docs:components:check",
             "@docs:smart-attributes:check",
+            "@docs:layout-classes:check",
             "@docs:layout:check",
             "@docs:architecture:check",
             "@docs:composition:check",
@@ -65,7 +66,11 @@
         "docs:smart-attributes:check": "node scripts/audit-smart-attribute-tables.mjs",
         "docs:utility-classes:check": "node scripts/audit-utility-classes-exist.mjs",
         "docs:utility-groups:check": "node scripts/audit-utility-groups-documented.mjs",
-        "docs:nesting:check": "node scripts/audit-nesting-steps.mjs"
+        "docs:nesting:check": "node scripts/audit-nesting-steps.mjs",
+        "docs:layout-classes:check": [
+            "node scripts/build-layout-expectations.mjs",
+            "node scripts/inline-layout-expectations.mjs"
+        ]
     },
     "config": {
         "allow-plugins": false,
