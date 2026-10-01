@@ -68,5 +68,22 @@ description: "Семантические роли поверхностей и к
 [`elevation-*`](/ru/utilities/shadows/elevation/) ставит поверхность и тень
 одним классом.
 
+## Приглушённый текст на ступени
+
+Поверхность в тёмной теме светлеет со ступенью, поэтому приглушённый текст
+светлеет вместе с ней: одно значение не проходит на всех ступенях.
+
+| Переменная                         | Значение (light)           | Значение (dark)            |
+|:-----------------------------------|:---------------------------|:---------------------------|
+| `--sf-on-elevation-1--variant`     | `--sf-neutral-40`          | `--sf-neutral-60`          |
+| `--sf-on-elevation-2--variant`     | `--sf-neutral-40`          | `--sf-neutral-70`          |
+| `--sf-on-elevation-3--variant`     | `--sf-neutral-40`          | `--sf-neutral-70`          |
+| `--sf-on-elevation-4--variant`     | `--sf-neutral-40`          | `--sf-neutral-80`          |
+| `--sf-on-elevation-5--variant`     | `--sf-neutral-40`          | `--sf-neutral-80`          |
+
+Класс `elevation-N` подставляет нужную пару сам, переопределяя
+`--sf-on-surface-variant` у себя. Правило целиком —
+[Границы и высота](/ru/guide/fundamentals/borders/).
+
 [image20]: /ru/assets/reference/image-20.png
 [image21]: /ru/assets/reference/image-21.png
