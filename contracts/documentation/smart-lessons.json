@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "b0d5ade4823e84db0860d15ffba13b14cc8f7b58",
-    "core": "efefecab18689a77f607c2941a286d773bc1fd28",
-    "smart": "6bcb10a9190f803c661215495f6daa650d83d885",
+    "source": "9a6e122e53a816b0be26e2284a11e13e5287733d",
+    "core": "209ef31ec294f86c6ae670f4d2169ec265f673ce",
+    "smart": "0fa2e18868ff08666e87185f49ddf60d192da747",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. The Smart runtime is byte-identical to the previous review: the only change in this pair is a checkbox selector in Core, where three disabled-label branches that had been collapsed into one are separated again so the rule keeps the weight it needs to beat the resting rule. smart-base and the loader are unchanged, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference is touched, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. The Smart runtime is byte-identical to the previous review. The only change in this pair is one Core token: the light branch of --sf-on-disable moves from 24% to 80% of neutral-50, so disabled text in the light theme measures 3.10:1 instead of 1.34:1, level with the 4.12:1 the dark theme already had. smart-base and the loader are unchanged, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference is touched, so none of the eight lessons changes."
 }
