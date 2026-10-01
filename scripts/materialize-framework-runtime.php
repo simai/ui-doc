@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = '89782d105400d3ab52e73966e1609d9a195674be';
-const UI_RUNTIME_REVISION = '09fb1716e7077b17ac0be1c322916188de77c508';
-const SMART_METADATA_REVISION = 'f8b2ceb6529dcd609853719660ebc01ac30ba62c';
+const UI_METADATA_REVISION = '0c7a19af148b9f9b8ed9edbffd0de8fd0e286b8c';
+const UI_RUNTIME_REVISION = '0315c0ffebb698536fc69036f9fee68a73c27c92';
+const SMART_METADATA_REVISION = '44d05c86217aeec1eec87dd9e40d7fe5b772aeae';
 const SMART_RUNTIME_REVISION = '41fd1892b345287f6a75f55080a4a3552b865037';
-const SOURCE_REVISION = 'c6dea956e569f696751cdf47f5bbc24056b1e0dc';
+const SOURCE_REVISION = '7817d4b5e82f320876b9cc9baee5d1370c347e19';
 const BUILDER_REVISION = 'd805a72a6c9191a97d2ebd8b86899bf2f25a2e93';
-const RELEASE_LOCK = 'contracts/releases/ui-09fb1716e707-smart-41fd1892b345.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-0315c0ffebb6-smart-41fd1892b345.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
