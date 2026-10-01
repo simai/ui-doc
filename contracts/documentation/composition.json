@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "757d546125d8c5a7482feeb41245f4e9aec25e37",
-    "core_revision": "9ff97727aaa33a589c415de44dd5ae755fd90118",
+    "source_revision": "10101c6bb691a4a0ca7c1cb19c15eca8db9f96b4",
+    "core_revision": "bf47a786734b5bba69f17e93d121aa86c4b25c32",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,8 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "70e6f3b360f1a52aeecfe6df4db052fd55650ae568d7e75000cdf37d7f0b0f74"
-    }
+      "distr/core/js/core.js": "764986da998f2bfed710aae00db772ba5255e774fc3986c8f818d17c465c67d1"
+    },
+    "note": "Поверхность композиции не менялась: все семь источников и три контракта в distr совпадают с проверенными байт в байт, а core.js на текущей ревизии побайтно равен себе же на проверенной 9ff97727. Записанный digest core.js (70e6f3b3…) не совпадал ни с одной из них — он устарел ещё до этой работы и здесь обновлён. Изменения пары, из-за которых поднялись номера ревизий, лежат в теме и в стилях компонентов: приглушённый текст на поднятой поверхности."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
