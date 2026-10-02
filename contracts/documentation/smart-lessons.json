@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "5ddfd6dc037131a0b7ac15ec44314c51e5b8ef37",
-    "core": "deeede8b5816c677302e367d0484187c4d659ce7",
-    "smart": "c3ed3e10b21531988fbae23be49377dce6b133e6",
+    "source": "c8c8e4c9cfa5476d0c3f8abf454f539a1a09668f",
+    "core": "227b90a6355af29b168bde953810265ba82e5ef2",
+    "smart": "5c48c415d04d1443d6d6ad6c574caaa3020a3ae6",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. The Smart runtime is byte-identical to the previous review. Core changed in two places, both CSS. The progress bar now names a duration that exists, so its width animates at all; the icon, the swiper and the viewbox stop when prefers-reduced-motion asks; and the field, the multiline field and the quantity control no longer let a mouse click move the focus ring onto the bare input inside them. No attribute, property, event, slot, nesting rule, cleanup path or asset reference is touched, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. Core gained one component, sf-flag, which ships the country flag set in two shapes -- 28x20 rectangles and 24x24 circles, the circle redrawn rather than cropped -- and the country code field now resolves its flag base to that set instead of falling through to the system emoji font. Smart runtime is unchanged apart from the rebuild. No attribute, property, event, slot, nesting rule, cleanup path or asset reference of a Smart component is touched, so none of the eight lessons changes."
 }

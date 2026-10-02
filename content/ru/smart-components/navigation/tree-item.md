@@ -14,8 +14,8 @@ Custom Elements: `<sf-tree-item>`.
 Loader-статус: `registered`. Loader-правило: `cl-tree-item`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/tree-item/js/tree-item.js`
-- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/tree-item/template/default.js`
+- `simai/ui-smart@c3ed3e10b21531988fbae23be49377dce6b133e6:smart/tree-item/js/tree-item.js`
+- `simai/ui-smart@c3ed3e10b21531988fbae23be49377dce6b133e6:smart/tree-item/template/default.js`
 
 ## Зависимости
 
@@ -93,5 +93,5 @@ Loader-статус: `registered`. Loader-правило: `cl-tree-item`.
 
 ## Источник
 
-- `simai/ui-smart@0b446c7649833bb9eed3366ddcedf32854669db0:smart/tree-item`
-- `simai/ui@a4f5a5e7487bb7fe4e01ca190d511ff59ceb3288:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui-smart@c3ed3e10b21531988fbae23be49377dce6b133e6:smart/tree-item`
+- `simai/ui@deeede8b5816c677302e367d0484187c4d659ce7:distr/rule/rule.json#name=cl-tree-item`
