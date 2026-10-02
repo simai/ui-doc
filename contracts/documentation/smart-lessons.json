@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "c18b4b4a8e2d0667546b5a82262c54e8cf18e166",
-    "core": "c6f98eb4cb29bdc892d4df6ce31c014479eb37fb",
-    "smart": "bb8f3cc5c329f59fae2dab33ac63f5012821dcd5",
+    "source": "60451d8e60a27f03e1cb59cd18fb6e98191bff2c",
+    "core": "672392792f729d8d9863500c7735e774dd29bf7e",
+    "smart": "edd18da8bb08c026227e4af510d32552e5927cad",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js, the two files the lessons are read against, are byte-identical to the last review. What moved in Smart is styling and wording: the drawer, context menu, modal and datepicker read the surface radius role instead of the old default name, the slider fallback template writes radius-surface, and the country code field gives the mask its digits through a setter that now exists. No attribute, property, event, slot, nesting rule, cleanup path or asset reference changes, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js, the two files the lessons are read against, are byte-identical to the last review. Smart moved for the neighbouring session's pair: a dropdown can take its options as data, and component rules now load the components their templates render. Neither changes an attribute, property, event, slot, nesting rule, cleanup path or asset reference the lessons teach, so none of the eight lessons changes."
 }

@@ -30,8 +30,8 @@ Custom Elements: `<sf-list-item>`.
 Loader-статус: `registered`. Loader-правило: `cl-list-item`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@bb8f3cc5c329f59fae2dab33ac63f5012821dcd5:smart/list-item/js/list-item.js`
-- `simai/ui-smart@bb8f3cc5c329f59fae2dab33ac63f5012821dcd5:smart/list-item/template/default.js`
+- `simai/ui-smart@edd18da8bb08c026227e4af510d32552e5927cad:smart/list-item/js/list-item.js`
+- `simai/ui-smart@edd18da8bb08c026227e4af510d32552e5927cad:smart/list-item/template/default.js`
 
 ## Зависимости
 
@@ -109,5 +109,5 @@ Space и Escape принадлежат родительскому Dropdown.
 
 ## Источник
 
-- `simai/ui-smart@bb8f3cc5c329f59fae2dab33ac63f5012821dcd5:smart/list-item`
-- `simai/ui@c6f98eb4cb29bdc892d4df6ce31c014479eb37fb:distr/rule/rule.json#name=cl-list-item`
+- `simai/ui-smart@edd18da8bb08c026227e4af510d32552e5927cad:smart/list-item`
+- `simai/ui@672392792f729d8d9863500c7735e774dd29bf7e:distr/rule/rule.json#name=cl-list-item`

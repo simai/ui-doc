@@ -1,9 +1,18 @@
+<style>
+/* The mask is inline on purpose. An example renders in a sandboxed frame with an
+   opaque origin, and a mask image is fetched in CORS mode: a file from the site
+   is refused there, and the element it masks disappears with it. */
+:root {
+  --demo-organic-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M252 468c-13-93-9-155-37-206-18-33-47-56-88-70 8 63 34 106 82 130-19-85-8-158 35-218 50 69 57 149 18 239 17-70 57-116 121-137-5 74-42 123-111 148-10 37-12 75-8 114h-12Z'/%3E%3C/svg%3E");
+}
+</style>
+
 <div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
   <div class="sf-card p-3 radius-3 border border-outline-variant">
     <div class="text-subtitle-2 m-b-2 color-on-surface">mask-auto</div>
     <div
       class="h-f4 radius-2 bg-primary mask-auto"
-      style="-webkit-mask-image:url('/assets/demo/mask.svg');mask-image:url('/assets/demo/mask.svg');"
+      style="-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;"
     ></div>
   </div>
 
@@ -11,7 +20,7 @@
     <div class="text-subtitle-2 m-b-2 color-on-surface">mask-cover</div>
     <div
       class="h-f4 radius-2 bg-secondary mask-cover"
-      style="-webkit-mask-image:url('/assets/demo/mask.svg');mask-image:url('/assets/demo/mask.svg');"
+      style="-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;"
     ></div>
   </div>
 
@@ -19,7 +28,7 @@
     <div class="text-subtitle-2 m-b-2 color-on-surface">mask-contain</div>
     <div
       class="h-f4 radius-2 bg-tertiary mask-contain"
-      style="-webkit-mask-image:url('/assets/demo/mask.svg');mask-image:url('/assets/demo/mask.svg');"
+      style="-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;"
     ></div>
   </div>
 
@@ -27,7 +36,7 @@
     <div class="text-subtitle-2 m-b-2 color-on-surface">mask-full</div>
     <div
       class="h-f4 radius-2 bg-success mask-full"
-      style="-webkit-mask-image:url('/assets/demo/mask.svg');mask-image:url('/assets/demo/mask.svg');"
+      style="-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;"
     ></div>
   </div>
 </div>
