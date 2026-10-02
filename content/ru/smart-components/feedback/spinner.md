@@ -14,8 +14,8 @@ Custom Elements: `<sf-spinner>`.
 Loader-статус: `registered`. Loader-правило: `cl-spinner`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@5c48c415d04d1443d6d6ad6c574caaa3020a3ae6:smart/spinner/js/spinner.js`
-- `simai/ui-smart@5c48c415d04d1443d6d6ad6c574caaa3020a3ae6:smart/spinner/template/default.js`
+- `simai/ui-smart@12ee3ab892a3086a1b0f309019ce7adb179c5699:smart/spinner/js/spinner.js`
+- `simai/ui-smart@12ee3ab892a3086a1b0f309019ce7adb179c5699:smart/spinner/template/default.js`
 
 ## Зависимости
 
@@ -77,5 +77,5 @@ Loader-статус: `registered`. Loader-правило: `cl-spinner`.
 
 ## Источник
 
-- `simai/ui-smart@5c48c415d04d1443d6d6ad6c574caaa3020a3ae6:smart/spinner`
-- `simai/ui@227b90a6355af29b168bde953810265ba82e5ef2:distr/rule/rule.json#name=cl-spinner`
+- `simai/ui-smart@12ee3ab892a3086a1b0f309019ce7adb179c5699:smart/spinner`
+- `simai/ui@a284e95b6c78c81a2ef50d8a44a040afebf51a8f:distr/rule/rule.json#name=cl-spinner`
