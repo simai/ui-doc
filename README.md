@@ -14,7 +14,6 @@ Developer references:
 
 ```bash
 composer install
-composer docara:compatibility:check
 php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
 php scripts/migrate-legacy-content.php content redirects.json
 composer docs:versions:check

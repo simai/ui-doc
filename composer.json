@@ -21,8 +21,6 @@
         "simai/docara": "dev-main"
     },
     "scripts": {
-        "docara:compatibility:apply": "@php scripts/apply-docara-compatibility-patch.php --apply",
-        "docara:compatibility:check": "@php scripts/apply-docara-compatibility-patch.php --check",
         "docs:viewer:check": "@php scripts/audit-example-viewer.php",
         "docs:versions:sync": "@php scripts/sync-framework-documentation-versions.php",
         "docs:versions:check": [
@@ -52,8 +50,6 @@
             "@php scripts/audit-catalog-groups.php",
             "@php scripts/audit-smart-lessons.php"
         ],
-        "post-install-cmd": "@docara:compatibility:apply",
-        "post-update-cmd": "@docara:compatibility:apply",
         "docs:layout:check": "@php scripts/audit-layout-information-architecture.php",
         "docs:architecture:check": [
             "@php scripts/audit-guide-information-architecture.php",
