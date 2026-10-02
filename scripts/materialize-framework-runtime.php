@@ -285,6 +285,35 @@ $runPhp = static function (array $arguments) use ($packageRoot): array {
 };
 
 $coreReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-rule-registry.php', $uiRoot]);
+
+/* Docara projects a component as its css and js entrypoint plus whatever the
+   stylesheet references. A component that ships data files -- the flag sets are
+   fetched by the component at runtime, by a URL it builds itself -- has nothing
+   pointing at them from CSS, so the projection leaves them behind and the site
+   falls back to emoji while the pair itself carries the files.
+
+   Until the projection learns about declared asset directories, this build
+   carries them itself. The list is explicit on purpose: a directory appears here
+   because a component was read and found to need it, not because a glob matched.
+   Generalising this belongs in Docara, and is written up in the handoff. */
+$componentAssetDirectories = ['component/flag/flags'];
+$runtimeDistribution = $runtimeBase . '/distr';
+$carried = 0;
+foreach ($componentAssetDirectories as $directory) {
+    $listing = trim($git($uiRoot, ['ls-tree', '-r', '--name-only', UI_RUNTIME_REVISION, 'distr/' . $directory]));
+    foreach (preg_split('/\R/', $listing) ?: [] as $sourcePath) {
+        if ($sourcePath === '' || str_ends_with($sourcePath, '.gz')) {
+            continue;
+        }
+        $target = $runtimeDistribution . '/' . substr($sourcePath, strlen('distr/'));
+        if (! is_dir(dirname($target)) && ! mkdir(dirname($target), 0755, true) && ! is_dir(dirname($target))) {
+            throw new RuntimeException('FRAMEWORK_ASSET_DIRECTORY_FAILED: ' . $sourcePath);
+        }
+        file_put_contents($target, $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':' . $sourcePath]), LOCK_EX);
+        chmod($target, 0644);
+        $carried += 1;
+    }
+}
 $smartReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-smart-runtime.php', $smartRoot]);
 $viewUtilitiesPath = $packageRoot . '/resources/framework/view-utilities.json';
 $viewUtilities = json_decode((string) file_get_contents($viewUtilitiesPath), true, 512, JSON_THROW_ON_ERROR);
