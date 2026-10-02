@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "c8c8e4c9cfa5476d0c3f8abf454f539a1a09668f",
-    "core": "227b90a6355af29b168bde953810265ba82e5ef2",
-    "smart": "5c48c415d04d1443d6d6ad6c574caaa3020a3ae6",
+    "source": "c18b4b4a8e2d0667546b5a82262c54e8cf18e166",
+    "core": "c6f98eb4cb29bdc892d4df6ce31c014479eb37fb",
+    "smart": "bb8f3cc5c329f59fae2dab33ac63f5012821dcd5",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. Core gained one component, sf-flag, which ships the country flag set in two shapes -- 28x20 rectangles and 24x24 circles, the circle redrawn rather than cropped -- and the country code field now resolves its flag base to that set instead of falling through to the system emoji font. Smart runtime is unchanged apart from the rebuild. No attribute, property, event, slot, nesting rule, cleanup path or asset reference of a Smart component is touched, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js, the two files the lessons are read against, are byte-identical to the last review. What moved in Smart is styling and wording: the drawer, context menu, modal and datepicker read the surface radius role instead of the old default name, the slider fallback template writes radius-surface, and the country code field gives the mask its digits through a setter that now exists. No attribute, property, event, slot, nesting rule, cleanup path or asset reference changes, so none of the eight lessons changes."
 }

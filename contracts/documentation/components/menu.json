@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "c8c8e4c9cfa5476d0c3f8abf454f539a1a09668f",
-    "core_revision": "227b90a6355af29b168bde953810265ba82e5ef2",
+    "source_revision": "c18b4b4a8e2d0667546b5a82262c54e8cf18e166",
+    "core_revision": "c6f98eb4cb29bdc892d4df6ce31c014479eb37fb",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "13bb306da51165086ef0d1629fa154806f70cc38b0c74e5db4d1550f1bca7cd4",
@@ -14,7 +14,7 @@
       "distr/component/menu/css/menu.css": "a95e6c06bc41cb6c695cac1d9b20c62df34ed9c94a85b899da3d3922d4bdcecd",
       "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
     },
-    "note": "Единственное изменение в источнике — одна строка в _css__menu.scss: у подменю, которое красится поверхностью второй ступени высоты, рядом встал парный --sf-on-elevation-2--variant. Приглушённый текст в подменю получал 4.14:1 при требуемых 4.5. Разметка, атрибуты, клавиатура и события не затронуты, страница документации не меняется."
+    "note": "Меню не менялось: три исходных файла и два собранных совпадают с проверенными байт в байт. Ревизии поднялись из-за изменений рядом — полный набор флагов, сеттер маски, роль угла поверхности, утилита transition на шкале движения, уведомления о стороннем коде и лицензия поставки. Ни одно не трогает разметку, поведение или документацию меню."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

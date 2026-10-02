@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "c8c8e4c9cfa5476d0c3f8abf454f539a1a09668f",
-    "core_revision": "227b90a6355af29b168bde953810265ba82e5ef2",
+    "source_revision": "c18b4b4a8e2d0667546b5a82262c54e8cf18e166",
+    "core_revision": "c6f98eb4cb29bdc892d4df6ce31c014479eb37fb",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "764986da998f2bfed710aae00db772ba5255e774fc3986c8f818d17c465c67d1"
+      "distr/core/js/core.js": "71f697b3836fe08a043e8b54d00b7f1156d2ace49340bb0472119c4720e417b9"
     },
-    "note": "Поверхность композиции не менялась: все семь источников и три контракта в distr совпадают с проверенными байт в байт, а core.js на текущей ревизии побайтно равен себе же на проверенной 9ff97727. Записанный digest core.js (70e6f3b3…) не совпадал ни с одной из них — он устарел ещё до этой работы и здесь обновлён. Изменения пары, из-за которых поднялись номера ревизий, лежат в теме и в стилях компонентов: приглушённый текст на поднятой поверхности."
+    "note": "Поверхность композиции не менялась: семь источников и три контракта в distr совпадают с проверенными байт в байт. core.js сменил хэш из-за одного файла — src/core/js/mask.js, где у unmaskedValue появился сеттер; модули композиции (index.mjs, builtins.mjs) не тронуты. Хэш core.js обновлён на текущий."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
