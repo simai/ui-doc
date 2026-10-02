@@ -314,6 +314,21 @@ foreach ($componentAssetDirectories as $directory) {
         $carried += 1;
     }
 }
+/* The site serves the runtime to whoever opens it, so it redistributes the
+   third-party code inside those files. Lit, Floating UI and the Material fonts
+   ask for their notice to travel with them, and the pair carries that notice as
+   a contract file; the projection takes css and js, so it has to be named. */
+$runtimeNoticeFiles = ['core/contracts/third-party-notices.v1.json'];
+foreach ($runtimeNoticeFiles as $noticePath) {
+    $target = $runtimeDistribution . '/' . $noticePath;
+    if (! is_dir(dirname($target)) && ! mkdir(dirname($target), 0755, true) && ! is_dir(dirname($target))) {
+        throw new RuntimeException('FRAMEWORK_NOTICE_DIRECTORY_FAILED: ' . $noticePath);
+    }
+    file_put_contents($target, $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':distr/' . $noticePath]), LOCK_EX);
+    chmod($target, 0644);
+    $carried += 1;
+}
+
 $smartReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-smart-runtime.php', $smartRoot]);
 $viewUtilitiesPath = $packageRoot . '/resources/framework/view-utilities.json';
 $viewUtilities = json_decode((string) file_get_contents($viewUtilitiesPath), true, 512, JSON_THROW_ON_ERROR);
