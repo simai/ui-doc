@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "e074698b3a0879413885d799254d3af6e0f6089a",
-    "core": "a4f5a5e7487bb7fe4e01ca190d511ff59ceb3288",
-    "smart": "0b446c7649833bb9eed3366ddcedf32854669db0",
+    "source": "5ddfd6dc037131a0b7ac15ec44314c51e5b8ef37",
+    "core": "deeede8b5816c677302e367d0484187c4d659ce7",
+    "smart": "c3ed3e10b21531988fbae23be49377dce6b133e6",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. The Smart runtime is byte-identical to the previous review. The only change in this pair is one Core token: the light branch of --sf-outline-disable moves from 24% to 80% of neutral-50, matching --sf-on-disable, so a disabled outlined control keeps a visible edge instead of the faintest line on itself. smart-base and the loader are unchanged, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference is touched, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. The Smart runtime is byte-identical to the previous review. Core changed in two places, both CSS. The progress bar now names a duration that exists, so its width animates at all; the icon, the swiper and the viewbox stop when prefers-reduced-motion asks; and the field, the multiline field and the quantity control no longer let a mouse click move the focus ring onto the bare input inside them. No attribute, property, event, slot, nesting rule, cleanup path or asset reference is touched, so none of the eight lessons changes."
 }

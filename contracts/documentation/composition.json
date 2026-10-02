@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "e074698b3a0879413885d799254d3af6e0f6089a",
-    "core_revision": "a4f5a5e7487bb7fe4e01ca190d511ff59ceb3288",
+    "source_revision": "5ddfd6dc037131a0b7ac15ec44314c51e5b8ef37",
+    "core_revision": "deeede8b5816c677302e367d0484187c4d659ce7",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
