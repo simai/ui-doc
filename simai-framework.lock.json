@@ -30,11 +30,11 @@
             "relative_path": "contracts/generated/framework-contract-registry.json",
             "file_sha256": "076151de671abc379fbc179f0b7d996236827cb13010c07a6bb35e2be3ac3c03",
             "source": {
-                "commit": "06a0a13a6e7323d980e6ee8f0155a9708e118903",
+                "commit": "1cd2d80363b8d3a66512de9b94bb65ce1befec5e",
                 "tree": "contracts/generated",
                 "tree_oid": "e70fd17d73f84e30b709cd28eae4576786f9d69d",
                 "mount": "contract",
-                "sha256": "07191edc4849bf59165d2be0f35bf6dc5e2bc28125f395012e1da493b68d607f",
+                "sha256": "ab943bf9538c4940a3a6bf4cf0f752178f889419138da75467ff25ea8a0a8cfc",
                 "files": 2
             },
             "documentation_source": {
