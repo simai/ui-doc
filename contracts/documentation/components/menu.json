@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "e1ccce204a0b960703a76c8a857548479796ddf4",
-    "core_revision": "0bb3f482b292cac07bc0177b7b57adcb5fd1241a",
+    "source_revision": "0ced9ac9d883035996365b3519a6dc239e95a94e",
+    "core_revision": "87ffb111c99181197ce77c169c768109efc2fcf6",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "13bb306da51165086ef0d1629fa154806f70cc38b0c74e5db4d1550f1bca7cd4",
@@ -14,7 +14,7 @@
       "distr/component/menu/css/menu.css": "a95e6c06bc41cb6c695cac1d9b20c62df34ed9c94a85b899da3d3922d4bdcecd",
       "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
     },
-    "note": "Меню не менялось: три исходных и два собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за правок доступности в doc, календаре и полосе прокрутки; меню они не касаются."
+    "note": "Меню не менялось: три исходных и два собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за нового вида всплывающего списка выпадающего меню (стили .sf-dropdown); компонент меню они не касаются."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",
