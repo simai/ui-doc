@@ -645,12 +645,12 @@
             "tree_sha256": "43456379d1ad1537a35cf7d2e585a822f5849eb34dadecf080ffa01e4622b6e9"
         },
         "icon_font": "component/icons/fonts/MaterialSymbols-Outlined.woff2",
-        "packet_sha256": "3b99b09e9ee02653d367dc6b59e9aadd1f5e416f34500d243153a74fea765835",
-        "files": 883,
+        "packet_sha256": "061f318989a1b264f49d7325073b6d754b465365ee7d8b19b0999dca6ce4ac40",
+        "files": 884,
         "manifest": {
             "path": "portable/vendor/simai-framework/runtime/0bb3f482b292cac07bc0177b7b57adcb5fd1241a/runtime-manifest.json",
             "public": "_docara/vendor/simai-framework/runtime/0bb3f482b292cac07bc0177b7b57adcb5fd1241a/runtime-manifest.json",
-            "sha256": "1b2ec2de9f2fa54a93f4120a56daf30744df96769a741db91ed81133b8ddff7a"
+            "sha256": "50cf3a0565fcdc1ba5b5e36c341e58b906be537ff56483b1ac6654f6b7cf00a9"
         }
     },
     "icon_projection": {
