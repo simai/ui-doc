@@ -1,7 +1,7 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "25f39da409313e113865142de1daa72ff2d19fa6",
+    "source_revision": "534d9d266a9b35fa9dd0ed96d09076c4797d73f8",
     "core_revision": "5e466412cac0b202a9965f0b228938964690916a",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "964f8f158f34135bc3f2a4760f35e40bdfded238672d52352bff1fec5687bf86",
       "src/core/js/composition/builtins.mjs": "35949f3813049cfa5f216489f14bc18866dbf8582f6fec106c34b187fbf57e3a",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "1ab911b11ed938950646b24bd048e758d5b9b10191240c475585d6418d18997f"
+      "src/smart/buttons/smart.manifest.json": "dbbac399cc64826c264e58869d3ae5ea57eb395e5a4830fdd77a273eaf36e8fe"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "a646dcd4240eb2596ccd26fa852b768262869791b00d74967e0c5cf0a35d0d04"
     },
-    "note": "The composition surface did not change: the seven sources and three contracts in distr are byte-identical to the last review. core.js changed only for src/core/js/position.js, the edge-aware anchored positioning; the composition modules are untouched."
+    "note": "The composition surface did not change: the six composition sources and the three contracts in distr are byte-identical to the last review, and core.js is unchanged at 5e466412. Only src/smart/buttons/smart.manifest.json changed, and only in its provenance block: runtime_pair, source_revision and the generated_runtime revision were refreshed. Its composition declaration is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
