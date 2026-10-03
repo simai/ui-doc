@@ -14,8 +14,8 @@ Custom Elements: `<sf-skeleton>`.
 Loader-статус: `registered`. Loader-правило: `cl-skeleton`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@ae07ed40d5dca32da028232e8216525ce2fad3d5:smart/skeleton/js/skeleton.js`
-- `simai/ui-smart@ae07ed40d5dca32da028232e8216525ce2fad3d5:smart/skeleton/template/default.js`
+- `simai/ui-smart@f6fb81226cdd183391897c1bae760fe76e97964f:smart/skeleton/js/skeleton.js`
+- `simai/ui-smart@f6fb81226cdd183391897c1bae760fe76e97964f:smart/skeleton/template/default.js`
 
 ## Зависимости
 
@@ -73,5 +73,5 @@ Loader-статус: `registered`. Loader-правило: `cl-skeleton`.
 
 ## Источник
 
-- `simai/ui-smart@ae07ed40d5dca32da028232e8216525ce2fad3d5:smart/skeleton`
-- `simai/ui@db30610d479d3f8c3627b139eacbb49d35ab2e54:distr/rule/rule.json#name=cl-skeleton`
+- `simai/ui-smart@f6fb81226cdd183391897c1bae760fe76e97964f:smart/skeleton`
+- `simai/ui@4604457b0a87cb17fcb56a591afb5ad1ae2ff5ac:distr/rule/rule.json#name=cl-skeleton`

@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "0199842fd692885d766eaed89600216a5e3c963c",
-    "core": "db30610d479d3f8c3627b139eacbb49d35ab2e54",
-    "smart": "ae07ed40d5dca32da028232e8216525ce2fad3d5",
+    "source": "fb422aa377afb79e99b51f4bc29122a244149b47",
+    "core": "4604457b0a87cb17fcb56a591afb5ad1ae2ff5ac",
+    "smart": "f6fb81226cdd183391897c1bae760fe76e97964f",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js, the two files the lessons are read against, are byte-identical to the last review. Smart moved for two reasons: component rules now load every Smart element their templates render, and ARIA moved to where it is read -- named select boxes, icon tabs named on the inner button, sf-checkbox gaining ariaLabel. Neither changes an attribute, property, event, slot, nesting rule, cleanup path or asset reference the lessons teach, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js are byte-identical to the last review, and Smart did not change: the pair moved for the tree and tree-item loader rules, which now match their class as the first one in the attribute. None of the eight lessons changes."
 }
