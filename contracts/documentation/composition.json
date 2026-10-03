@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "fb422aa377afb79e99b51f4bc29122a244149b47",
-    "core_revision": "4604457b0a87cb17fcb56a591afb5ad1ae2ff5ac",
+    "source_revision": "e1ccce204a0b960703a76c8a857548479796ddf4",
+    "core_revision": "0bb3f482b292cac07bc0177b7b57adcb5fd1241a",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "71f697b3836fe08a043e8b54d00b7f1156d2ace49340bb0472119c4720e417b9"
     },
-    "note": "Поверхность композиции не менялась: семь источников и четыре собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за исправленных правил загрузчика tree и tree-item."
+    "note": "Поверхность композиции не менялась: семь источников и четыре собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за правок доступности в doc, календаре и полосе прокрутки."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

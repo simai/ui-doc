@@ -1,8 +1,8 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "fb422aa377afb79e99b51f4bc29122a244149b47",
-    "core": "4604457b0a87cb17fcb56a591afb5ad1ae2ff5ac",
-    "smart": "f6fb81226cdd183391897c1bae760fe76e97964f",
+    "source": "e1ccce204a0b960703a76c8a857548479796ddf4",
+    "core": "0bb3f482b292cac07bc0177b7b57adcb5fd1241a",
+    "smart": "a7e12142bd607663a03c9ac2b8112e73091162be",
     "source_files": {
         "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js are byte-identical to the last review, and Smart did not change: the pair moved for the tree and tree-item loader rules, which now match their class as the first one in the attribute. None of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js are byte-identical to the last review, and Smart did not change: the pair moved for the doc code colour, the datepicker other-month days and the scrollbar keyboard stop. None of the eight lessons changes."
 }
