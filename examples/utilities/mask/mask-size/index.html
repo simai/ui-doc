@@ -2,7 +2,7 @@
 /* The mask is inline on purpose. An example renders in a sandboxed frame with an
    opaque origin, and a mask image is fetched in CORS mode: a file from the site
    is refused there, and the element it masks disappears with it.
-   The SVG carries its own size, so auto shows it at 96px and cover and contain
+   The SVG carries its own size, so auto shows it at its own small size and cover and contain
    keep its square proportion; preserveAspectRatio='none' lets mask-full stretch
    it to the box. Without the size all four fill the box alike; without 'none'
    full looks exactly like contain. */

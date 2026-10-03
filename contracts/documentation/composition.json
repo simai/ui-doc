@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "60451d8e60a27f03e1cb59cd18fb6e98191bff2c",
-    "core_revision": "672392792f729d8d9863500c7735e774dd29bf7e",
+    "source_revision": "0199842fd692885d766eaed89600216a5e3c963c",
+    "core_revision": "db30610d479d3f8c3627b139eacbb49d35ab2e54",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "964f8f158f34135bc3f2a4760f35e40bdfded238672d52352bff1fec5687bf86",
       "src/core/js/composition/builtins.mjs": "35949f3813049cfa5f216489f14bc18866dbf8582f6fec106c34b187fbf57e3a",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "05b85b1b89c51fad31791e9fa87e656a02e8ec8f63db5558311b7fb7ceaa6881"
+      "src/smart/buttons/smart.manifest.json": "1ab911b11ed938950646b24bd048e758d5b9b10191240c475585d6418d18997f"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "71f697b3836fe08a043e8b54d00b7f1156d2ace49340bb0472119c4720e417b9"
     },
-    "note": "Поверхность композиции не менялась. Из проверенных файлов сменил хэш один — src/smart/buttons/smart.manifest.json, и только в полях происхождения: ui_revision, ui_smart_revision, source_revision и хэш рантайма. Атрибуты, слоты, события и состав кнопки те же. Остальные шесть источников и четыре собранных файла совпадают байт в байт."
+    "note": "Поверхность композиции не менялась. Из проверенных файлов сменил хэш один — src/smart/buttons/smart.manifest.json: composition.uses теперь называет smart.icons (кнопка действительно рисует sf-icon, это объявление полноты зависимостей), плюс поля происхождения. Атрибуты, слоты, события и состав кнопки те же. Остальные шесть источников и четыре собранных файла совпадают байт в байт."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "60451d8e60a27f03e1cb59cd18fb6e98191bff2c",
-    "core_revision": "672392792f729d8d9863500c7735e774dd29bf7e",
+    "source_revision": "0199842fd692885d766eaed89600216a5e3c963c",
+    "core_revision": "db30610d479d3f8c3627b139eacbb49d35ab2e54",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "13bb306da51165086ef0d1629fa154806f70cc38b0c74e5db4d1550f1bca7cd4",
@@ -14,7 +14,7 @@
       "distr/component/menu/css/menu.css": "a95e6c06bc41cb6c695cac1d9b20c62df34ed9c94a85b899da3d3922d4bdcecd",
       "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
     },
-    "note": "Меню не менялось: три исходных и два собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за пары соседней сессии (данные опций выпадающего списка, зависимости правил загрузчика) и из-за снятой висящей зависимости правила gradient-type; ни одно не касается меню."
+    "note": "Меню не менялось: три исходных и два собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за пары соседней сессии (полнота зависимостей загрузчика) и правок ARIA в выпадающем списке, поле кода страны, загрузке файлов, таблице, вкладках и дереве; меню среди них нет."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

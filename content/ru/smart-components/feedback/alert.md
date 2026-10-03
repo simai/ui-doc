@@ -15,8 +15,8 @@ Loader-статус: `registered`. Loader-правило: `cl-alert`.
 
 Поставляемые ассеты:
 Не поставляется в текущем пакете: `smart/alert/css/alert.css`.
-- `simai/ui-smart@edd18da8bb08c026227e4af510d32552e5927cad:smart/alert/js/alert.js`
-- `simai/ui-smart@edd18da8bb08c026227e4af510d32552e5927cad:smart/alert/template/default.js`
+- `simai/ui-smart@ae07ed40d5dca32da028232e8216525ce2fad3d5:smart/alert/js/alert.js`
+- `simai/ui-smart@ae07ed40d5dca32da028232e8216525ce2fad3d5:smart/alert/template/default.js`
 
 ## Зависимости
 
@@ -81,5 +81,5 @@ Loader-статус: `registered`. Loader-правило: `cl-alert`.
 
 ## Источник
 
-- `simai/ui-smart@edd18da8bb08c026227e4af510d32552e5927cad:smart/alert`
-- `simai/ui@672392792f729d8d9863500c7735e774dd29bf7e:distr/rule/rule.json#name=cl-alert`
+- `simai/ui-smart@ae07ed40d5dca32da028232e8216525ce2fad3d5:smart/alert`
+- `simai/ui@db30610d479d3f8c3627b139eacbb49d35ab2e54:distr/rule/rule.json#name=cl-alert`
