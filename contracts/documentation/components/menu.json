@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "29fd94730d7e0a66eac8eacc9488c36c06bbd0b7",
-    "core_revision": "71cfe68008f6e0543f5a5c4c83e4128960c95646",
+    "source_revision": "25f39da409313e113865142de1daa72ff2d19fa6",
+    "core_revision": "5e466412cac0b202a9965f0b228938964690916a",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "13bb306da51165086ef0d1629fa154806f70cc38b0c74e5db4d1550f1bca7cd4",
@@ -12,9 +12,9 @@
     },
     "generated_files": {
       "distr/component/menu/css/menu.css": "a95e6c06bc41cb6c695cac1d9b20c62df34ed9c94a85b899da3d3922d4bdcecd",
-      "distr/component/menu/js/menu.js": "aea5d92c85806880a85d8c99d03fd1a7aa40bd7e1a3eb93553321b27a56deeb8"
+      "distr/component/menu/js/menu.js": "bf8ce8f8df61c64c2b4b8d058803417fc134d303de40254bbbe97bdfeac8bb1d"
     },
-    "note": "Меню не менялось: три исходных и два собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за нового вида всплывающего списка выпадающего меню (стили .sf-dropdown); компонент меню они не касаются."
+    "note": "The menu's three source files are byte-identical to the last review. Its built menu.js changed only because it bundles the anchored positioning helper, src/core/js/position.js, the one source file this pair changed: a floating panel may now reach the viewport edge its anchor reaches instead of being pushed inward. The menu's markup, behaviour and documentation are unchanged."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

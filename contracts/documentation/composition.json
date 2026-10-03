@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "29fd94730d7e0a66eac8eacc9488c36c06bbd0b7",
-    "core_revision": "71cfe68008f6e0543f5a5c4c83e4128960c95646",
+    "source_revision": "25f39da409313e113865142de1daa72ff2d19fa6",
+    "core_revision": "5e466412cac0b202a9965f0b228938964690916a",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "71f697b3836fe08a043e8b54d00b7f1156d2ace49340bb0472119c4720e417b9"
+      "distr/core/js/core.js": "a646dcd4240eb2596ccd26fa852b768262869791b00d74967e0c5cf0a35d0d04"
     },
-    "note": "Поверхность композиции не менялась: семь источников и четыре собранных файла совпадают с проверенными байт в байт. Ревизии поднялись из-за нового вида всплывающего списка выпадающего меню."
+    "note": "The composition surface did not change: the seven sources and three contracts in distr are byte-identical to the last review. core.js changed only for src/core/js/position.js, the edge-aware anchored positioning; the composition modules are untouched."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

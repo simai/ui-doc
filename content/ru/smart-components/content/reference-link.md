@@ -14,8 +14,8 @@ Custom Elements: `<sf-reference-link>`.
 Loader-статус: `registered`. Loader-правило: `cl-reference-link`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@2bac0dbb144dfbacbb5908f6983bae6a5eda9997:smart/reference-link/js/reference-link.js`
-- `simai/ui-smart@2bac0dbb144dfbacbb5908f6983bae6a5eda9997:smart/reference-link/template/default.js`
+- `simai/ui-smart@9e6d868401d65508a5416e695284f0f850d4052d:smart/reference-link/js/reference-link.js`
+- `simai/ui-smart@9e6d868401d65508a5416e695284f0f850d4052d:smart/reference-link/template/default.js`
 
 ## Зависимости
 
@@ -72,5 +72,5 @@ Loader-статус: `registered`. Loader-правило: `cl-reference-link`.
 
 ## Источник
 
-- `simai/ui-smart@2bac0dbb144dfbacbb5908f6983bae6a5eda9997:smart/reference-link`
-- `simai/ui@71cfe68008f6e0543f5a5c4c83e4128960c95646:distr/rule/rule.json#name=cl-reference-link`
+- `simai/ui-smart@9e6d868401d65508a5416e695284f0f850d4052d:smart/reference-link`
+- `simai/ui@5e466412cac0b202a9965f0b228938964690916a:distr/rule/rule.json#name=cl-reference-link`
