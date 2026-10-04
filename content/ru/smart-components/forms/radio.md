@@ -14,8 +14,8 @@ Custom Elements: `<sf-radio>`.
 Loader-статус: `registered`. Loader-правило: `cl-radio`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@9b6f2eb823c3d63d2c2a4fc858fba1a81acfe603:smart/radio/js/radio.js`
-- `simai/ui-smart@9b6f2eb823c3d63d2c2a4fc858fba1a81acfe603:smart/radio/template/default.js`
+- `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/radio/js/radio.js`
+- `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/radio/template/default.js`
 
 ## Зависимости
 
@@ -88,5 +88,5 @@ Loader-статус: `registered`. Loader-правило: `cl-radio`.
 
 ## Источник
 
-- `simai/ui-smart@9b6f2eb823c3d63d2c2a4fc858fba1a81acfe603:smart/radio`
-- `simai/ui@ffa63dadbafe48cc3ccee28ed0095b1adb53e3cb:distr/rule/rule.json#name=cl-radio`
+- `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/radio`
+- `simai/ui@a928c76c79da09206fb3bf444fdad7ab4d447bb0:distr/rule/rule.json#name=cl-radio`

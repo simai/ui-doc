@@ -1,10 +1,10 @@
 {
     "schema": "ui-doc.smart-lessons-review.v1",
-    "source": "55fd68a5c0285c8d54e7f7004966726ec9b64648",
-    "core": "ffa63dadbafe48cc3ccee28ed0095b1adb53e3cb",
-    "smart": "9b6f2eb823c3d63d2c2a4fc858fba1a81acfe603",
+    "source": "4cf3200f941645818c8be30fadc85ae738e9527f",
+    "core": "a928c76c79da09206fb3bf444fdad7ab4d447bb0",
+    "smart": "8e60c9cdbf325ae390e63384700cb06674b2aa51",
     "source_files": {
-        "src/core/js/smart-base.js": "20074d94a3b719ebec8cfc3088d64f9b63578e97c33f9626142760c9dec8652c",
+        "src/core/js/smart-base.js": "d1fa8cb9970d03435607fc4b9e3cdd47737d58e9731251b5d3efb19273e05fc8",
         "src/core/js/loader.js": "69d1f596ca71fd38e981e2542a3745ac7555f184c304c5e1cdbda7e42790d1c2"
     },
     "lessons": [
@@ -17,5 +17,5 @@
         "cleanup",
         "templates-and-assets"
     ],
-    "review": "Reviewed exact source/Core/Smart pair. smart-base.js and loader.js are byte-identical to the last review. Smart changed only because its bundles carry the anchored positioning helper, which now lets a panel reach the edge its anchor reaches. No attribute, property, event, slot, nesting rule, cleanup path or asset reference changes, so none of the eight lessons changes."
+    "review": "Reviewed exact source/Core/Smart pair. loader.js is byte-identical to the last review. smart-base.js changed in 1d7a2d3e: a Framework element inside a template is now kept by its template position and re-rendered by writing the changed props onto it, instead of being created anew on every render; templates keep calling renderSmartElement, and createSmartElement is added for callers that want the element itself. No lesson describes element recreation or these helpers, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference the lessons teach changes, so none of the eight lessons changes."
 }
