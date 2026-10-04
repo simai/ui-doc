@@ -65,11 +65,11 @@ profile: reference
 
 ## Плотность
 
-Модификаторы меняют внутренние отступы выбранного размера: `tightness-low` —
-компактная кнопка, `tightness-high` — свободная, `tightness-highest` —
-просторная. Smart-атрибут `spacing` принимает те же ступени под понятными
-именами `compact`, `normal`, `comfortable` и `spacious`; подробнее — на странице
-[кнопки](/ru/components/actions/buttons/).
+Классы `spacing-compact`, `spacing-comfortable` и `spacing-spacious` меняют
+внутренние отступы выбранного размера: компактная, свободная и просторная
+кнопка. Smart-атрибут `spacing` принимает те же ступени. Прежние классы
+`tightness-low`, `tightness-high` и `tightness-highest` работают так же;
+подробнее — на странице [кнопки](/ru/components/actions/buttons/).
 
 :::example {id="components/icon-buttons/tightness" label="Результат"}
 :::

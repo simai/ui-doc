@@ -83,4 +83,4 @@ Loader-статус: `registered`. Loader-правило: `cl-range-slider`.
 ## Источник
 
 - `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/range-slider`
-- `simai/ui@a928c76c79da09206fb3bf444fdad7ab4d447bb0:distr/rule/rule.json#name=cl-range-slider`
+- `simai/ui@f084c74f662d2e37b5308d1dcbba91d404016935:distr/rule/rule.json#name=cl-range-slider`

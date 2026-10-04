@@ -50,7 +50,7 @@ JavaScript только этого компонента.
 | Схема | `sf-button--primary`, `sf-button--secondary`, `sf-button--on-surface` |
 | Размер | `sf-button--size-1/3`, `sf-button--size-1/2`, `sf-button--size-1`, `sf-button--size-2`, `sf-button--size-3` |
 | Состояние | `active`, `loading`, `sf-button-state-loading` |
-| Плотность | `tightness-low`, `tightness-high`, `tightness-highest` |
+| Плотность | `spacing-compact`, `spacing-comfortable`, `spacing-spacious` |
 | Радиус | `radius-default`, `radius-square`, `radius-rounded` |
 | Сегмент | `segment-start`, `segment-middle`, `segment-end` |
 
@@ -132,16 +132,18 @@ SIMAI Framework поддерживает пять видов, и у каждог
 
 Плотность меняет вертикальные отступы, не подменяя выбранный размер:
 
-| Класс | Smart-атрибут `spacing` | Отступы |
-|:---|:---|:---|
-| `tightness-low` | `compact` | Компактная — меньше обычного |
-| — | `normal` | Обычная |
-| `tightness-high` | `comfortable` | Свободная — больше обычного |
-| `tightness-highest` | `spacious` | Просторная — самые большие |
+| Класс | Smart-атрибут `spacing` | Прежний класс | Отступы |
+|:---|:---|:---|:---|
+| `spacing-compact` | `compact` | `tightness-low` | Компактная — меньше обычного |
+| — | `normal` | — | Обычная |
+| `spacing-comfortable` | `comfortable` | `tightness-high` | Свободная — больше обычного |
+| `spacing-spacious` | `spacious` | `tightness-highest` | Просторная — самые большие |
 
-Имена классов `tightness-*` исторически читаются наоборот: «low» здесь значит
-«мало места», а не «слабая плотность». Для Smart-компонентов используйте
-понятный атрибут `spacing`, он сам выставит нужный класс.
+Прежние классы `tightness-*` продолжают работать, но их имена читаются
+наоборот: «low» в них значит «мало места». В новой разметке используйте
+`spacing-*`, а в Smart-компонентах — атрибут `spacing`. Ставьте на кнопку один
+класс плотности; если конструктору переданы и `spacing`, и `tightness`,
+применяется `spacing`.
 
 Обычная кнопка использует системный UI-радиус; `radius-square` убирает скругление, а
 `radius-rounded` делает края полностью округлыми.

@@ -73,4 +73,4 @@ Loader-статус: `registered`. Loader-правило: `cl-reference-link`.
 ## Источник
 
 - `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/reference-link`
-- `simai/ui@a928c76c79da09206fb3bf444fdad7ab4d447bb0:distr/rule/rule.json#name=cl-reference-link`
+- `simai/ui@f084c74f662d2e37b5308d1dcbba91d404016935:distr/rule/rule.json#name=cl-reference-link`
