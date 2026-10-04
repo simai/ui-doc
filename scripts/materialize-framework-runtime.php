@@ -207,9 +207,17 @@ foreach ($smartRuntimePaths as $path) {
     ];
 }
 $lock['dynamic_asset_projection']['files'] = $smartRuntimeFiles;
+/* The eager set is what the shell loads before any page asks: the Smart
+   components Docara's own chrome uses and everything they require. Since Docara
+   2.13.0 `requires` comes from the registry, so sf-alert brings sf-icon-button
+   and that brings sf-close; Docara's closure guard rejects a lock that omits
+   them. This list mirrors Docara's own locks until Docara derives it. */
 $lock['asset_projection']['files'] = array_intersect_key($smartRuntimeFiles, array_flip([
     'smart/alert/js/alert.js',
     'smart/buttons/js/buttons.js',
+    'smart/close/js/close.js',
+    'smart/icon-buttons/css/icon-buttons.css',
+    'smart/icon-buttons/js/icon-buttons.js',
     'smart/icons/js/icons.js',
     'smart/modal/js/modal.js',
 ]));

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "647d81398d5b46116a2031ef135cab6d",
+    "content-hash": "1d1b7574af37f9d72eed777d57814efb",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "dev-main",
+            "version": "v2.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "9850d994c78e8b54ec6b9cd7d2b98f1d0b7cdb73"
+                "reference": "93ec831d5ef134035f5f840e269968540d0ffaa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/9850d994c78e8b54ec6b9cd7d2b98f1d0b7cdb73",
-                "reference": "9850d994c78e8b54ec6b9cd7d2b98f1d0b7cdb73",
+                "url": "https://api.github.com/repos/simai/docara/zipball/93ec831d5ef134035f5f840e269968540d0ffaa4",
+                "reference": "93ec831d5ef134035f5f840e269968540d0ffaa4",
                 "shasum": ""
             },
             "require": {
@@ -1596,7 +1596,6 @@
                 "mockery/mockery": "^1.6",
                 "phpunit/phpunit": "^11.0.6"
             },
-            "default-branch": true,
             "bin": [
                 "docara"
             ],
@@ -1657,7 +1656,7 @@
                 "site",
                 "static"
             ],
-            "time": "2026-10-03T23:06:40+00:00"
+            "time": "2026-10-04T12:26:11+00:00"
         },
         {
             "name": "symfony/clock",
@@ -3136,9 +3135,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "simai/docara": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
