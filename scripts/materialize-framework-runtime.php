@@ -314,6 +314,24 @@ foreach ($componentAssetDirectories as $directory) {
         $carried += 1;
     }
 }
+/* Core declares its text font with url(../<hash>.woff2) next to css/, and the
+   core projection takes css and js only, so the faces would point at nothing and
+   the site would fall back to the metric Arial. Carry the files core.css names --
+   the hashed woff2 at the top of distr/core, not the verbatim copies the builder
+   also leaves in distr/core/fonts. Docara will project these itself once it
+   repins to a pair with Inter; until then this build carries them. */
+$coreCss = $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':distr/core/css/core.css']);
+preg_match_all('/url\(\.\.\/([0-9a-f]{20}\.woff2)\)/', $coreCss, $coreFontMatches);
+$coreFonts = array_values(array_unique($coreFontMatches[1]));
+if ($coreFonts === []) {
+    throw new RuntimeException('FRAMEWORK_CORE_FONTS_MISSING');
+}
+foreach ($coreFonts as $fontFile) {
+    $target = $runtimeDistribution . '/core/' . $fontFile;
+    file_put_contents($target, $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':distr/core/' . $fontFile]), LOCK_EX);
+    chmod($target, 0644);
+    $carried += 1;
+}
 /* The site serves the runtime to whoever opens it, so it redistributes the
    third-party code inside those files. Lit, Floating UI and the Material fonts
    ask for their notice to travel with them, and the pair carries that notice as
