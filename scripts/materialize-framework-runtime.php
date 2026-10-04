@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = '7c07637ad2db61cff3c967a911b7dca97bae682a';
-const UI_RUNTIME_REVISION = 'a928c76c79da09206fb3bf444fdad7ab4d447bb0';
-const SMART_METADATA_REVISION = '50138e383cee0eb70a397b87ece5068c87acfc73';
+const UI_METADATA_REVISION = 'e6a37a4df921528f15450852be0622fafac84f68';
+const UI_RUNTIME_REVISION = 'f084c74f662d2e37b5308d1dcbba91d404016935';
+const SMART_METADATA_REVISION = 'c4a0fafdbc7376eb941eae6cb1672358b1c426b2';
 const SMART_RUNTIME_REVISION = '8e60c9cdbf325ae390e63384700cb06674b2aa51';
-const SOURCE_REVISION = '4cf3200f941645818c8be30fadc85ae738e9527f';
+const SOURCE_REVISION = '8ecda003da24af260b8103634c4c2d6352cc307a';
 const BUILDER_REVISION = 'd805a72a6c9191a97d2ebd8b86899bf2f25a2e93';
-const RELEASE_LOCK = 'contracts/releases/ui-a928c76c79da-smart-8e60c9cdbf32.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-f084c74f662d-smart-8e60c9cdbf32.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
@@ -207,20 +207,6 @@ foreach ($smartRuntimePaths as $path) {
     ];
 }
 $lock['dynamic_asset_projection']['files'] = $smartRuntimeFiles;
-/* The eager set is what the shell loads before any page asks: the Smart
-   components Docara's own chrome uses and everything they require. Since Docara
-   2.13.0 `requires` comes from the registry, so sf-alert brings sf-icon-button
-   and that brings sf-close; Docara's closure guard rejects a lock that omits
-   them. This list mirrors Docara's own locks until Docara derives it. */
-$lock['asset_projection']['files'] = array_intersect_key($smartRuntimeFiles, array_flip([
-    'smart/alert/js/alert.js',
-    'smart/buttons/js/buttons.js',
-    'smart/close/js/close.js',
-    'smart/icon-buttons/css/icon-buttons.css',
-    'smart/icon-buttons/js/icon-buttons.js',
-    'smart/icons/js/icons.js',
-    'smart/modal/js/modal.js',
-]));
 $lock['runtime']['components']['sf-alert']['css'] = null;
 $lock['runtime_projection']['mount'] = '_docara/vendor/simai-framework/runtime/' . UI_RUNTIME_REVISION . '/distr';
 $lock['runtime_projection']['source'] = [
@@ -321,24 +307,6 @@ foreach ($componentAssetDirectories as $directory) {
         chmod($target, 0644);
         $carried += 1;
     }
-}
-/* Core declares its text font with url(../<hash>.woff2) next to css/, and the
-   core projection takes css and js only, so the faces would point at nothing and
-   the site would fall back to the metric Arial. Carry the files core.css names --
-   the hashed woff2 at the top of distr/core, not the verbatim copies the builder
-   also leaves in distr/core/fonts. Docara will project these itself once it
-   repins to a pair with Inter; until then this build carries them. */
-$coreCss = $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':distr/core/css/core.css']);
-preg_match_all('/url\(\.\.\/([0-9a-f]{20}\.woff2)\)/', $coreCss, $coreFontMatches);
-$coreFonts = array_values(array_unique($coreFontMatches[1]));
-if ($coreFonts === []) {
-    throw new RuntimeException('FRAMEWORK_CORE_FONTS_MISSING');
-}
-foreach ($coreFonts as $fontFile) {
-    $target = $runtimeDistribution . '/core/' . $fontFile;
-    file_put_contents($target, $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':distr/core/' . $fontFile]), LOCK_EX);
-    chmod($target, 0644);
-    $carried += 1;
 }
 /* The site serves the runtime to whoever opens it, so it redistributes the
    third-party code inside those files. Lit, Floating UI and the Material fonts
