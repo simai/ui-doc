@@ -73,4 +73,4 @@ Loader-статус: `registered`. Loader-правило: `cl-context-menu`.
 ## Источник
 
 - `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/context-menu`
-- `simai/ui@91638d467ec7b3dabf87e1064349128489ef1701:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@f1bd4e21c72e5f7eea043ccbc6bf413a659c217a:distr/rule/rule.json#name=cl-context-menu`
