@@ -14,8 +14,8 @@ Custom Elements: `<sf-progress-bar>`.
 Loader-статус: `registered`. Loader-правило: `cl-progress-bar`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/progress-bar/js/progress-bar.js`
-- `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/progress-bar/template/default.js`
+- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/progress-bar/js/progress-bar.js`
+- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/progress-bar/template/default.js`
 
 ## Зависимости
 
@@ -70,5 +70,5 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-bar`.
 
 ## Источник
 
-- `simai/ui-smart@8e60c9cdbf325ae390e63384700cb06674b2aa51:smart/progress-bar`
-- `simai/ui@f084c74f662d2e37b5308d1dcbba91d404016935:distr/rule/rule.json#name=cl-progress-bar`
+- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/progress-bar`
+- `simai/ui@4f5e5067afeba3b5206fef83469b668cc2af6a34:distr/rule/rule.json#name=cl-progress-bar`
