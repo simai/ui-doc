@@ -88,4 +88,4 @@ Loader-статус: `registered`. Loader-правило: `cl-steps`.
 ## Источник
 
 - `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/steps`
-- `simai/ui@4f5e5067afeba3b5206fef83469b668cc2af6a34:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@91638d467ec7b3dabf87e1064349128489ef1701:distr/rule/rule.json#name=cl-steps`

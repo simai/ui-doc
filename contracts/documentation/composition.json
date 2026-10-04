@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "2284e9c5ff503eb26cceeef18ffbbd3efd046913",
-    "core_revision": "4f5e5067afeba3b5206fef83469b668cc2af6a34",
+    "source_revision": "656d36c07b0c2c3bb52aa501d83128ab6e16dff2",
+    "core_revision": "91638d467ec7b3dabf87e1064349128489ef1701",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "a646dcd4240eb2596ccd26fa852b768262869791b00d74967e0c5cf0a35d0d04"
     },
-    "note": "The composition surface did not change at source 2284e9c5 and core 4f5e5067: the six composition sources, the three contracts in distr and core.js are byte-identical to the last review. Only src/smart/buttons/smart.manifest.json changed, and only in its provenance revisions; its composition declaration is unchanged."
+    "note": "The composition surface did not change at source 656d36c0 and core 91638d46: the six composition sources, the three contracts in distr and core.js are byte-identical to the last review."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
