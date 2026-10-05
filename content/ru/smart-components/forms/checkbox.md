@@ -28,7 +28,7 @@ Loader-статус: `registered`. Loader-правило: `cl-checkbox`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `1/3`, `1` |
+| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
 | `label` | `label` | `String` | `''` | `—` |
 | `description` | `description` | `String` | `''` | `—` |
 | `help` | `help` | `String` | `''` | `—` |
