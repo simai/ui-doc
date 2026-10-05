@@ -25,7 +25,7 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
 | `appearance` | `appearance` | `String` | `'bordered'` | `bordered`, `filled` |
 | `label` | `label` | `String` | `''` | `—` |
 | `required` | `required` | `Boolean` | `false` | `—` |

@@ -48,7 +48,7 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `open` | `open` | `Boolean` | `false` | `—` |
 | `portal` | `portal` | `Boolean` | `true` | `—` |
 | `input-type` | `inputType` | `String` | `'bordered'` | `—` |
-| `input-size` | `inputSize` | `String` | `'1'` | `—` |
+| `input-size` | `inputSize` | `String` | `'1'` | `1/2`, `1`, `2` |
 | `input-name` | `inputName` | `String` | `''` | `—` |
 | `placeholder` | `placeholder` | `String` | `''` | `—` |
 | `icon-start` | `iconStart` | `String` | `'calendar_today'` | `—` |

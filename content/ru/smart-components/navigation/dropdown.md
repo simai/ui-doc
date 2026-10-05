@@ -28,7 +28,7 @@ Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
 | `appearance` | `appearance` | `String` | `'filled'` | `filled`, `outlined` |
 | `mode` | `mode` | `String` | `'select'` | `['tag', 'select']` |
 | `multiple` | `multiple` | `Boolean` | `false` | `—` |

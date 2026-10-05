@@ -35,7 +35,7 @@ Placeholder показывает пример формата, но не заме
 |:---|:---|
 | Основа | `sf-input`, `sf-input-label`, `sf-input-text`, `sf-input-field` |
 | Вариант | `sf-input--bordered`, `sf-input--filled` |
-| Размер | `sf-input--size-1/3`, `sf-input--size-1/2`, `sf-input--size-1`, `sf-input--size-2`, `sf-input--size-3` |
+| Размер | `sf-input--size-1/2`, `sf-input--size-1`, `sf-input--size-2` |
 | Дополнение | `sf-input-left`, `sf-input-right`, `sf-input-required`, `sf-input-hint-text-wrap` |
 | Ошибка | `error` на оболочке и контроле |
 
@@ -63,7 +63,8 @@ Loader обнаруживает компонент по классу `sf-input`.
 :::example {id="components/inputs/variants" label="Варианты текстовых полей"}
 :::
 
-Размеры `1/3`, `1/2`, `1`, `2` и `3` согласованы с другими контролами.
+Поля форм имеют три размера: `1/2`, `1` и `2`. Высоты согласованы с кнопками тех же ступеней.
+Старые значения `1/3` и `3` отображаются как `1/2` и `2` и выводят предупреждение в консоль.
 
 :::example {id="components/inputs/sizes" label="Размеры текстовых полей"}
 :::
