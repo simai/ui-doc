@@ -98,4 +98,4 @@ Loader-статус: `registered`. Loader-правило: `cl-checkbox`.
 ## Источник
 
 - `simai/ui-smart@9aacd94f40beda9df4ce0717b36e3adc2f6deb17:smart/checkbox`
-- `simai/ui@60ad90091c15f031aa0026c1ac03a4d025ed1345:distr/rule/rule.json#name=cl-checkbox`
+- `simai/ui@a07b5100fdee160b2d14d4879abece0d1fac858b:distr/rule/rule.json#name=cl-checkbox`
