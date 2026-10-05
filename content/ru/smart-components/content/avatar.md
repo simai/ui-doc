@@ -30,6 +30,7 @@ Loader-статус: `registered`. Loader-правило: `cl-avatar`.
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `"default"` | `—` |
 | `size` | `size` | `String` | `"1"` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3` |
+| `line` | `line` | `String` | `""` | `1/2`, `1`, `2`: высота строки текста рядом с подписью |
 | `image-url` | `imageUrl` | `String` | `""` | `—` |
 | `image-alt` | `imageAlt` | `String` | `""` | `—` |
 | `no-wrap` | `noWrap` | `Boolean` | `false` | `—` |
