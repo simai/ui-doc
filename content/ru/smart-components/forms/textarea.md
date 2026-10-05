@@ -14,8 +14,8 @@ Custom Elements: `<sf-textarea>`.
 Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@88dfab91c287f8d60004a647392bbc23f9ea5a5a:smart/textarea/js/textarea.js`
-- `simai/ui-smart@88dfab91c287f8d60004a647392bbc23f9ea5a5a:smart/textarea/template/default.js`
+- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/textarea/js/textarea.js`
+- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/textarea/template/default.js`
 
 ## Зависимости
 
@@ -101,5 +101,5 @@ source-контракт, но не заменяет сценарную пров�
 
 ## Источник
 
-- `simai/ui-smart@88dfab91c287f8d60004a647392bbc23f9ea5a5a:smart/textarea`
-- `simai/ui@df68861d423870abf64fc495433a40639a253927:distr/rule/rule.json#name=cl-textarea`
+- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/textarea`
+- `simai/ui@d7844bb368bc327df699dbd100601f4eb7a53f77:distr/rule/rule.json#name=cl-textarea`
