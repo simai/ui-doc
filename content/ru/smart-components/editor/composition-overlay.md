@@ -79,10 +79,10 @@ Custom Element: `<sf-composition-overlay>`. Loader-правило:
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@a3c8ee1d4062ae9690897f061b413cc8077c67b7:smart/composition-overlay/js/composition-overlay.js`
-- `simai/ui-smart@a3c8ee1d4062ae9690897f061b413cc8077c67b7:smart/composition-overlay/css/composition-overlay.css`
+- `simai/ui-smart@d30fb5ab7ebbb0dd5805596ce2d687dd6ddba26f:smart/composition-overlay/js/composition-overlay.js`
+- `simai/ui-smart@d30fb5ab7ebbb0dd5805596ce2d687dd6ddba26f:smart/composition-overlay/css/composition-overlay.css`
 
-Правило загрузчика: `simai/ui@6e4eae45efcb8e9a7df5300bcc4f9eca8dc0a09e:distr/rule/rule.json`.
+Правило загрузчика: `simai/ui@91ea01a7333996bed715b637b4564a34cbfb8c02:distr/rule/rule.json`.
 Связанные страницы: [Перетаскивание](/ru/smart-components/editor/sortable/),
 [Inline-редактор](/ru/smart-components/editor/inline-editor/),
 [руководство по редактору страниц](/ru/guide/layouts/editor/overview/).
