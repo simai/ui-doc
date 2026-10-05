@@ -14,8 +14,8 @@ Custom Elements: `<sf-context-menu>`.
 Loader-статус: `registered`. Loader-правило: `cl-context-menu`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/context-menu/js/context-menu.js`
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/context-menu/template/default.js`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/context-menu/js/context-menu.js`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/context-menu/template/default.js`
 
 ## Зависимости
 
@@ -72,5 +72,5 @@ Loader-статус: `registered`. Loader-правило: `cl-context-menu`.
 
 ## Источник
 
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/context-menu`
-- `simai/ui@fa02a3580896a3f9b96bb1d1da2eb87208efeaff:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/context-menu`
+- `simai/ui@6265a47e91f7cb0febce53368b9dbfabc2a9721f:distr/rule/rule.json#name=cl-context-menu`

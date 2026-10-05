@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "221b53004e3e13fbde80251ebc7a02ea23681af3",
-    "core_revision": "fa02a3580896a3f9b96bb1d1da2eb87208efeaff",
+    "source_revision": "cc28d57d171c5fd0733094cb56bb031b9ec29f4d",
+    "core_revision": "6265a47e91f7cb0febce53368b9dbfabc2a9721f",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "964f8f158f34135bc3f2a4760f35e40bdfded238672d52352bff1fec5687bf86",
       "src/core/js/composition/builtins.mjs": "35949f3813049cfa5f216489f14bc18866dbf8582f6fec106c34b187fbf57e3a",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "bd3c6deacc429074fd016903ca3f51d2687c26a358487824b1e2c04682c0de89"
+      "src/smart/buttons/smart.manifest.json": "b96863db60ba5bbe85f8e3a39d9dce805817ba7487fe7b048607ff6c3817f0c9"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "a646dcd4240eb2596ccd26fa852b768262869791b00d74967e0c5cf0a35d0d04"
     },
-    "note": "The composition surface did not change at source 221b5300 and core fa02a358: the six composition sources, the three contracts in distr and core.js are byte-identical to the last review. Only src/smart/buttons/smart.manifest.json changed, and only in its provenance revisions; its composition declaration is unchanged."
+    "note": "The composition surface did not change at source cc28d57d and core 6265a47e: the six composition sources, the three contracts in distr and core.js are byte-identical to the last review. Only src/smart/buttons/smart.manifest.json changed, and only in its provenance revisions; its composition declaration is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

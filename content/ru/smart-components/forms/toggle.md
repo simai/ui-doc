@@ -18,9 +18,9 @@ Custom Elements: `<sf-toggle>`.
 Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/toggle/js/toggle.js`
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/toggle/template/default/index.html`
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/toggle/template/default.js`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/toggle/js/toggle.js`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/toggle/template/default/index.html`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/toggle/template/default.js`
 
 ## Зависимости
 
@@ -79,5 +79,5 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 
 ## Источник
 
-- `simai/ui-smart@709bd2b2b7a324f5589e301f3144411f574ac2dd:smart/toggle`
-- `simai/ui@fa02a3580896a3f9b96bb1d1da2eb87208efeaff:distr/rule/rule.json#name=cl-toggle`
+- `simai/ui-smart@31b71cdc8dc4273625748f7d92baa5a5624ad37d:smart/toggle`
+- `simai/ui@6265a47e91f7cb0febce53368b9dbfabc2a9721f:distr/rule/rule.json#name=cl-toggle`
