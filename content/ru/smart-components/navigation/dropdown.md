@@ -14,8 +14,8 @@ Custom Elements: `<sf-dropdown>`.
 Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@6445985e02f6907182999ffa984a36e354932123:smart/dropdown/js/dropdown.js`
-- `simai/ui-smart@6445985e02f6907182999ffa984a36e354932123:smart/dropdown/template/default.js`
+- `simai/ui-smart@a8c44c8e30d07836df80b3f54630cae32f52b9ba:smart/dropdown/js/dropdown.js`
+- `simai/ui-smart@a8c44c8e30d07836df80b3f54630cae32f52b9ba:smart/dropdown/template/default.js`
 
 ## Зависимости
 
@@ -111,5 +111,5 @@ API-страница подтверждает source-контракт, но не
 
 ## Источник
 
-- `simai/ui-smart@6445985e02f6907182999ffa984a36e354932123:smart/dropdown`
-- `simai/ui@fddd7ca843e8d14c3059d83ed7b57927370fd2ff:distr/rule/rule.json#name=cl-dropdown`
+- `simai/ui-smart@a8c44c8e30d07836df80b3f54630cae32f52b9ba:smart/dropdown`
+- `simai/ui@6f9137222dbd72b4e23752139f79502c26d29675:distr/rule/rule.json#name=cl-dropdown`
