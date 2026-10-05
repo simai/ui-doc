@@ -14,8 +14,8 @@ Custom Elements: `<sf-icon>`.
 Loader-статус: `registered`. Loader-правило: `cl-icons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/icons/js/icons.js`
-- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/icons/template/default.js`
+- `simai/ui-smart@59e6c42332be37b705a35249fa023b2559931d33:smart/icons/js/icons.js`
+- `simai/ui-smart@59e6c42332be37b705a35249fa023b2559931d33:smart/icons/template/default.js`
 
 ## Зависимости
 
@@ -68,5 +68,5 @@ Loader-статус: `registered`. Loader-правило: `cl-icons`.
 
 ## Источник
 
-- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/icons`
-- `simai/ui@f1bd4e21c72e5f7eea043ccbc6bf413a659c217a:distr/rule/rule.json#name=cl-icons`
+- `simai/ui-smart@59e6c42332be37b705a35249fa023b2559931d33:smart/icons`
+- `simai/ui@0edc0a21b7b3658218413548a777109a63f2b0ea:distr/rule/rule.json#name=cl-icons`

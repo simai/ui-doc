@@ -18,8 +18,8 @@ Custom Elements: `<sf-pagination>`.
 Loader-статус: `registered`. Loader-правило: `cl-pagination`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/pagination/js/pagination.js`
-- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/pagination/template/default.js`
+- `simai/ui-smart@59e6c42332be37b705a35249fa023b2559931d33:smart/pagination/js/pagination.js`
+- `simai/ui-smart@59e6c42332be37b705a35249fa023b2559931d33:smart/pagination/template/default.js`
 
 ## Зависимости
 
@@ -133,5 +133,5 @@ Framework показывает фокус при клавиатурной нав
 
 ## Источник
 
-- `simai/ui-smart@7d932ed5140813806a601db3f3ddc6f3840e4638:smart/pagination`
-- `simai/ui@f1bd4e21c72e5f7eea043ccbc6bf413a659c217a:distr/rule/rule.json#name=cl-pagination`
+- `simai/ui-smart@59e6c42332be37b705a35249fa023b2559931d33:smart/pagination`
+- `simai/ui@0edc0a21b7b3658218413548a777109a63f2b0ea:distr/rule/rule.json#name=cl-pagination`
