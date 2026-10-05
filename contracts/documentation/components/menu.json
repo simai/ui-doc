@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "b2acb0f08043acb0661d21d01096d78f94b355ea",
-    "core_revision": "91ea01a7333996bed715b637b4564a34cbfb8c02",
+    "source_revision": "36e7e55be3b003eab08ab1148a3d73616e3f80fb",
+    "core_revision": "df68861d423870abf64fc495433a40639a253927",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "13bb306da51165086ef0d1629fa154806f70cc38b0c74e5db4d1550f1bca7cd4",
@@ -14,7 +14,7 @@
       "distr/component/menu/css/menu.css": "2043a1be88fce7d0dc7df0da619f1bf61298d3e3c09143bde8210b077d982d9c",
       "distr/component/menu/js/menu.js": "bf8ce8f8df61c64c2b4b8d058803417fc134d303de40254bbbe97bdfeac8bb1d"
     },
-    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical to the last review at source b2acb0f0 and core 91ea01a7; the menu's markup, behaviour and documentation are unchanged."
+    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical to the last review at source 36e7e55b and core df68861d; the menu's markup, behaviour and documentation are unchanged."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

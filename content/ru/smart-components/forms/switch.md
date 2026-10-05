@@ -14,8 +14,8 @@ Custom Elements: `<sf-switch>`.
 Loader-статус: `registered`. Loader-правило: `cl-switch`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@d30fb5ab7ebbb0dd5805596ce2d687dd6ddba26f:smart/switch/js/switch.js`
-- `simai/ui-smart@d30fb5ab7ebbb0dd5805596ce2d687dd6ddba26f:smart/switch/template/default.js`
+- `simai/ui-smart@88dfab91c287f8d60004a647392bbc23f9ea5a5a:smart/switch/js/switch.js`
+- `simai/ui-smart@88dfab91c287f8d60004a647392bbc23f9ea5a5a:smart/switch/template/default.js`
 
 ## Зависимости
 
@@ -88,5 +88,5 @@ Loader-статус: `registered`. Loader-правило: `cl-switch`.
 
 ## Источник
 
-- `simai/ui-smart@d30fb5ab7ebbb0dd5805596ce2d687dd6ddba26f:smart/switch`
-- `simai/ui@91ea01a7333996bed715b637b4564a34cbfb8c02:distr/rule/rule.json#name=cl-switch`
+- `simai/ui-smart@88dfab91c287f8d60004a647392bbc23f9ea5a5a:smart/switch`
+- `simai/ui@df68861d423870abf64fc495433a40639a253927:distr/rule/rule.json#name=cl-switch`
