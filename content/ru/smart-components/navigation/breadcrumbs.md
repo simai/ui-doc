@@ -14,8 +14,8 @@ Custom Elements: `<sf-breadcrumbs>`.
 Loader-статус: `registered`. Loader-правило: `cl-breadcrumbs`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/breadcrumbs/js/breadcrumbs.js`
-- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/breadcrumbs/template/default.js`
+- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/breadcrumbs/js/breadcrumbs.js`
+- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/breadcrumbs/template/default.js`
 
 ## Зависимости
 
@@ -78,5 +78,5 @@ Loader-статус: `registered`. Loader-правило: `cl-breadcrumbs`.
 
 ## Источник
 
-- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/breadcrumbs`
-- `simai/ui@d7844bb368bc327df699dbd100601f4eb7a53f77:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/breadcrumbs`
+- `simai/ui@af6287f59202f5a5faca94a571b9d7f69e2f7262:distr/rule/rule.json#name=cl-breadcrumbs`

@@ -72,7 +72,7 @@ Custom Element: `<sf-inline-editor>`. Loader-правило: `cl-inline-editor`,
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/inline-editor/js/inline-editor.js`
-- `simai/ui-smart@72bfb352642fc2d66471761755c5cd670d336a32:smart/inline-editor/css/inline-editor.css`
+- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/inline-editor/js/inline-editor.js`
+- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/inline-editor/css/inline-editor.css`
 
-Правило загрузчика: `simai/ui@d7844bb368bc327df699dbd100601f4eb7a53f77:distr/rule/rule.json`.
+Правило загрузчика: `simai/ui@af6287f59202f5a5faca94a571b9d7f69e2f7262:distr/rule/rule.json`.
