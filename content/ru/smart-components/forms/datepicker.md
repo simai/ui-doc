@@ -14,8 +14,8 @@ Custom Elements: `<sf-datepicker>`.
 Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/datepicker/js/datepicker.js`
-- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/datepicker/template/default.js`
+- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/datepicker/js/datepicker.js`
+- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/datepicker/template/default.js`
 
 ## Зависимости
 
@@ -101,5 +101,5 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 ## Источник
 
-- `simai/ui-smart@04000997b4467e13d66ef3bde8a57cc4ef3c0f3d:smart/datepicker`
-- `simai/ui@af6287f59202f5a5faca94a571b9d7f69e2f7262:distr/rule/rule.json#name=cl-datepicker`
+- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/datepicker`
+- `simai/ui@77bea694a72049b6477e58aeba53dc496126bb69:distr/rule/rule.json#name=cl-datepicker`
