@@ -28,6 +28,10 @@ description: "Особенности использования"
 |:-----------------------|:---------------------------|:---------------------------|
 | `--sf-outline`         | `--sf-neutral-50`          | `--sf-neutral-60`          |
 | `--sf-outline-variant` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
+| `--sf-outline-control` | `--sf-neutral-50` при 80% | `--sf-neutral-60` при 64% |
+
+`--sf-outline-control` — граница контрола в покое: ровно 3:1 к `surface-0` в
+обеих темах. Подробнее — в руководстве [Границы](/ru/guide/fundamentals/borders/).
 
 [image24]: /ru/assets/reference/image-24.png
 [image25]: /ru/assets/reference/image-25.png
