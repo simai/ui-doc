@@ -14,8 +14,8 @@ Custom Elements: `<sf-datepicker>`.
 Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@23600df5578f0873d940a7772ab3293fd0e04e8d:smart/datepicker/js/datepicker.js`
-- `simai/ui-smart@23600df5578f0873d940a7772ab3293fd0e04e8d:smart/datepicker/template/default.js`
+- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/datepicker/js/datepicker.js`
+- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/datepicker/template/default.js`
 
 ## Зависимости
 
@@ -55,7 +55,7 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `icon-start` | `iconStart` | `String` | `'calendar_today'` | `—` |
 | `input-root-class` | `inputRootClass` | `String` | `''` | `—` |
 | `mask` | `mask` | `Boolean` | `false` | `—` |
-| `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
+| `mask-pattern` | `maskPattern` | `String` | `'00.00.0000'` (из `format`) | `—` |
 | `mask-lazy` | `maskLazy` | `String` | `false` | `—` |
 | `mask-placeholder-char` | `maskPlaceholderChar` | `String` | `'_'` | `—` |
 | `mask-options` | `maskOptions` | `String` | `''` | `—` |
@@ -103,5 +103,5 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 ## Источник
 
-- `simai/ui-smart@23600df5578f0873d940a7772ab3293fd0e04e8d:smart/datepicker`
-- `simai/ui@ca76294d890a2bba2dde6edd3034e8d063c7d27b:distr/rule/rule.json#name=cl-datepicker`
+- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/datepicker`
+- `simai/ui@365238d85a8a4db052592aca2eb3d44f0af651da:distr/rule/rule.json#name=cl-datepicker`

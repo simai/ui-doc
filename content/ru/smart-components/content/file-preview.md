@@ -18,7 +18,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 Loader-статус: `unregistered`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@23600df5578f0873d940a7772ab3293fd0e04e8d:smart/file-preview/js/file-preview.js`
+- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/file-preview/js/file-preview.js`
 
 ## Атрибуты и свойства
 
@@ -42,7 +42,7 @@ Loader-статус: `unregistered`.
 | `download-action` | `downloadAction` | `Boolean` | `!0` | `—` |
 | `remove-action` | `removeAction` | `Boolean` | `!0` | `—` |
 | `disabled` | `disabled` | `Boolean` | `!1` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `""` | `—` |
+| `aria-label` | `ariaLabel` | `String` | `"File"` | `—` |
 
 Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
 
@@ -77,4 +77,4 @@ Loader-статус: `unregistered`.
 
 ## Источник
 
-- `simai/ui-smart@23600df5578f0873d940a7772ab3293fd0e04e8d:smart/file-preview`
+- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/file-preview`
