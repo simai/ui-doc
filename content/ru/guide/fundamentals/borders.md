@@ -127,12 +127,13 @@ description: "Две роли границы и работа каждой: ко�
 <div class="elevation-2">Контекстное меню</div>
 ```
 
-В своём CSS то же самое двумя переменными:
+В своём CSS то же самое парой переменных одной ступени:
 
 ```css
 .project-panel {
     background: var(--sf-elevation-2--surface);
-    box-shadow: var(--sf-ui-shadow-2);
+    --sf-on-surface-variant: var(--sf-on-elevation-2--variant);
+    box-shadow: var(--sf-elevation-2--shadow);
 }
 ```
 

@@ -22,11 +22,11 @@ tags: [box-shadow, background-color, elevation]
 | Класс | Куда | Что ставит |
 |:---|:---|:---|
 | `elevation-0` | на уровне страницы | `--sf-surface-0`, тень снята |
-| `elevation-1` | приподнятый элемент в потоке: пункт списка, ручка ползунка | `--sf-elevation-1--surface` и `--sf-ui-shadow-1` |
-| `elevation-2` | всплывающее меню, контекстное меню, подсказка | `--sf-elevation-2--surface` и `--sf-ui-shadow-2` |
-| `elevation-3` | модальное окно, календарь, выпадающий список | `--sf-elevation-3--surface` и `--sf-ui-shadow-3` |
-| `elevation-4` | выдвижная панель | `--sf-elevation-4--surface` и `--sf-ui-shadow-4` |
-| `elevation-5` | верх лестницы, делит поверхность с четвёртым | `--sf-elevation-5--surface` и `--sf-ui-shadow-5` |
+| `elevation-1` | приподнятый элемент в потоке: пункт списка, ручка ползунка | `--sf-elevation-1--surface` и `--sf-elevation-1--shadow` |
+| `elevation-2` | всплывающее меню, контекстное меню, подсказка | `--sf-elevation-2--surface` и `--sf-elevation-2--shadow` |
+| `elevation-3` | модальное окно, календарь, выпадающий список | `--sf-elevation-3--surface` и `--sf-elevation-3--shadow` |
+| `elevation-4` | выдвижная панель | `--sf-elevation-4--surface` и `--sf-elevation-4--shadow` |
+| `elevation-5` | верх лестницы, делит поверхность с четвёртым | `--sf-elevation-5--surface` и `--sf-elevation-5--shadow` |
 
 ## Синтаксис
 
@@ -41,12 +41,40 @@ tags: [box-shadow, background-color, elevation]
 Поэтому для высоты берите `elevation-2`, а `shadow-2` оставьте для случая,
 когда нужна именно тень и ничего больше.
 
-В своём CSS то же самое двумя переменными:
+В своём CSS ступень — это пара переменных одного номера, поверхность и тень:
 
 ```css
 .project-panel {
     background: var(--sf-elevation-2--surface);
-    box-shadow: var(--sf-ui-shadow-2);
+    --sf-on-surface-variant: var(--sf-on-elevation-2--variant);
+    box-shadow: var(--sf-elevation-2--shadow);
+}
+```
+
+Берите их всегда вместе. Тень ступени `--sf-elevation-N--shadow` без её
+поверхности — та же ошибка, что `shadow-2` вместо `elevation-2`: в тёмной теме
+панель пропадает. Компоненты Framework проверяются на это правило
+автоматически.
+
+## Настройка высоты в теме
+
+Высоту можно перенастроить, не трогая компоненты: достаточно переопределить
+переменные ступени. Например, в тёмной теме оставить только светлеющую
+поверхность и убрать тень:
+
+```css
+.theme-dark {
+    --sf-elevation-2--shadow: none;
+}
+```
+
+Последний слой каждой тени — `--sf-shadow--rim`. По умолчанию он выключен
+(`0 0 0 0 transparent`). Тема может включить его, чтобы обвести поднятые
+панели тонким светлым краем в тёмной теме:
+
+```css
+.theme-dark {
+    --sf-shadow--rim: 0 0 0 var(--sf-px) var(--sf-white--alfa-12);
 }
 ```
 

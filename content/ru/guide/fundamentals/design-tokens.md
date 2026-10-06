@@ -130,9 +130,14 @@ var(--sf-z-index-8)`.
 
 ## Тени и фокус
 
-Доступны уровни `--sf-ui-shadow-1` — `--sf-ui-shadow-5` и верхняя тень
-`--sf-ui-shadow-top`. Цвета теней берутся из текущей темы, поэтому эти токены
-работают и на светлой, и на тёмной поверхности.
+Высота задаётся парой переменных одной ступени: поверхность
+`--sf-elevation-1--surface` — `--sf-elevation-5--surface` и тень
+`--sf-elevation-1--shadow` — `--sf-elevation-5--shadow`. Берите их вместе: в
+тёмной теме тень почти не видна, и высоту показывает светлеющая поверхность.
+Голые тени `--sf-ui-shadow-1` — `--sf-ui-shadow-5` и верхняя тень
+`--sf-ui-shadow-top` остаются для элемента со своим смысловым фоном (кнопка,
+цветная плашка). Как перенастроить высоту в теме — на странице
+[Высота](/ru/utilities/shadows/elevation/).
 
 Фокусное кольцо — это **не тень**. Оно рисуется как `outline` из тройки
 `--sf-focus--width`, `--sf-focus--style`, `--sf-focus--color` со смещением
@@ -146,7 +151,9 @@ var(--sf-z-index-8)`.
 ```css
 .project-dialog {
     border-radius: var(--sf-radius-2);
-    box-shadow: var(--sf-ui-shadow-4);
+    background: var(--sf-elevation-4--surface);
+    --sf-on-surface-variant: var(--sf-on-elevation-4--variant);
+    box-shadow: var(--sf-elevation-4--shadow);
     padding: var(--sf-space-4);
     z-index: var(--sf-z-index-8);
 }
