@@ -61,7 +61,7 @@ profile: reference
 
 ## Выбор
 
-У типа `checkbox` атрибут `active` отражается в `aria-pressed`. Нажатие меняет
+У тега `kind="checkbox"` (прежняя запись — `type="checkbox"`) атрибут `active` отражается в `aria-pressed`. Нажатие меняет
 состояние и создаёт всплывающее событие `change` с `detail.active` и
 `detail.component`. Атрибут `disabled` запрещает действие и его событие.
 

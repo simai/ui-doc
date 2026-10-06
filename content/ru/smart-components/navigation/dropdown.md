@@ -14,8 +14,8 @@ Custom Elements: `<sf-dropdown>`.
 Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/dropdown/js/dropdown.js`
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/dropdown/template/default.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/dropdown/js/dropdown.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/dropdown/template/default.js`
 
 ## Зависимости
 
@@ -69,6 +69,8 @@ Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
+| `change` | Изменился выбор. Имя для подписки |
+| `sf-dropdown:change` | Прежнее имя `change`, приходит с тем же detail |
 
 ## Минимальная разметка
 
@@ -111,5 +113,5 @@ API-страница подтверждает source-контракт, но не
 
 ## Источник
 
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/dropdown`
-- `simai/ui@77bea694a72049b6477e58aeba53dc496126bb69:distr/rule/rule.json#name=cl-dropdown`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/dropdown`
+- `simai/ui@5a1c51b069aea4d95a442c6e7b482f100c021177:distr/rule/rule.json#name=cl-dropdown`

@@ -14,8 +14,8 @@ Custom Elements: `<sf-range-slider>`.
 Loader-статус: `registered`. Loader-правило: `cl-range-slider`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/range-slider/js/range-slider.js`
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/range-slider/template/default.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/range-slider/js/range-slider.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/range-slider/template/default.js`
 
 ## Зависимости
 
@@ -69,6 +69,8 @@ Loader-статус: `registered`. Loader-правило: `cl-range-slider`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
+| `change` | Пользователь зафиксировал значение. Значение, заданное из кода, событие не вызывает. Имя для подписки |
+| `sf-range-slider-change` | Прежнее имя `change`, приходит с тем же detail, в том числе при установке значения из кода |
 
 ## Минимальная разметка
 
@@ -82,5 +84,5 @@ Loader-статус: `registered`. Loader-правило: `cl-range-slider`.
 
 ## Источник
 
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/range-slider`
-- `simai/ui@77bea694a72049b6477e58aeba53dc496126bb69:distr/rule/rule.json#name=cl-range-slider`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/range-slider`
+- `simai/ui@5a1c51b069aea4d95a442c6e7b482f100c021177:distr/rule/rule.json#name=cl-range-slider`

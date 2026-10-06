@@ -14,8 +14,8 @@ Custom Elements: `<sf-download-file>`.
 Loader-статус: `registered`. Loader-правило: `cl-download-file`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/download-file/js/download-file.js`
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/download-file/template/default.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/download-file/js/download-file.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/download-file/template/default.js`
 
 ## Зависимости
 
@@ -73,5 +73,5 @@ Loader-статус: `registered`. Loader-правило: `cl-download-file`.
 
 ## Источник
 
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/download-file`
-- `simai/ui@77bea694a72049b6477e58aeba53dc496126bb69:distr/rule/rule.json#name=cl-download-file`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/download-file`
+- `simai/ui@5a1c51b069aea4d95a442c6e7b482f100c021177:distr/rule/rule.json#name=cl-download-file`

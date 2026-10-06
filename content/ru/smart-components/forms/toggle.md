@@ -18,9 +18,9 @@ Custom Elements: `<sf-toggle>`.
 Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/toggle/js/toggle.js`
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/toggle/template/default/index.html`
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/toggle/template/default.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/toggle/js/toggle.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/toggle/template/default/index.html`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/toggle/template/default.js`
 
 ## Зависимости
 
@@ -66,6 +66,7 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
+| `change` | Изменилось нажатое состояние; нативное событие всплывает от внутреннего поля. Имя для подписки |
 
 ## Минимальная разметка
 
@@ -79,5 +80,5 @@ Loader-статус: `registered`. Loader-правило: `cl-toggle`.
 
 ## Источник
 
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/toggle`
-- `simai/ui@77bea694a72049b6477e58aeba53dc496126bb69:distr/rule/rule.json#name=cl-toggle`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/toggle`
+- `simai/ui@5a1c51b069aea4d95a442c6e7b482f100c021177:distr/rule/rule.json#name=cl-toggle`

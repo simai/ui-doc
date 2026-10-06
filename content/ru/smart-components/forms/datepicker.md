@@ -14,8 +14,8 @@ Custom Elements: `<sf-datepicker>`.
 Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/datepicker/js/datepicker.js`
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/datepicker/template/default.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/datepicker/js/datepicker.js`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/datepicker/template/default.js`
 
 ## Зависимости
 
@@ -87,7 +87,9 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 | `sf-after-render` | Цикл отрисовки завершён |
 | `sf-updated` | Свойства или разметка обновлены |
 | `sf-props-change` | Изменились наблюдаемые свойства |
-| `sf-change` | Компонент-специфичное событие из source-класса |
+| `change` | Выбрана дата или граница диапазона. Имя для подписки |
+| `sf-datepicker-change` | Прежнее имя `change`, приходит с тем же detail |
+| `sf-change` | Прежнее имя `change`, приходит с тем же detail |
 
 ## Минимальная разметка
 
@@ -101,5 +103,5 @@ Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
 
 ## Источник
 
-- `simai/ui-smart@50d9eecbefc9ec9b6b61a8ca5a3d390aa033fd51:smart/datepicker`
-- `simai/ui@77bea694a72049b6477e58aeba53dc496126bb69:distr/rule/rule.json#name=cl-datepicker`
+- `simai/ui-smart@e9a47b4ba34a1a0280a68be4b9f565a41fb4c739:smart/datepicker`
+- `simai/ui@5a1c51b069aea4d95a442c6e7b482f100c021177:distr/rule/rule.json#name=cl-datepicker`
