@@ -29,6 +29,15 @@ profile: reference
 Кнопка связывается с панелью через `data-drawer="toggle|open|close"` и
 `aria-controls` с id панели.
 
+## Стопка панелей
+
+Если у одного края открыто несколько панелей, по умолчанию они лежат вплотную
+и верхняя закрывает нижнюю. Атрибут `stack-offset` задаёт, насколько каждая
+нижняя панель выглядывает: верхняя отступает от края на глубину стопки,
+умноженную на `stack-offset`, и сохраняет свою ширину. Глубину панель считает
+сама по открытым незакреплённым панелям у того же края. Задайте одно значение
+на всех панелях стопки, например `stack-offset="var(--sf-space-4)"`.
+
 ## Закреплённая панель
 
 `docked` превращает панель в немодальную колонку `role="region"` с именем: без
@@ -63,6 +72,7 @@ Escape, который уже обработал редактор или пер�
 | `title`, `label` | заголовок и доступное имя |
 | `preserve-scroll-gap` | сохраняет место полосы прокрутки при блокировке страницы |
 | `width`, `z-index` | точная ширина и слой, если стандартного размера мало |
+| `stack-offset` | насколько нижняя панель стопки выглядывает из-под верхней |
 | `overlay-class`, `panel-class`, `header-class`, `body-class`, `close-class` | классы частей |
 
 ## Методы и события
@@ -91,7 +101,7 @@ Custom Element: `<sf-drawer>`. Loader-правило: `cl-drawer`, статус
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@8a3742c920ff89553ee26486efb98bd7bfc36a96:smart/drawer/js/drawer.js`
-- `simai/ui-smart@8a3742c920ff89553ee26486efb98bd7bfc36a96:smart/drawer/css/drawer.css`
+- `simai/ui-smart@fa27e7961a593ae8d5ae28f94693a84c649bf3b8:smart/drawer/js/drawer.js`
+- `simai/ui-smart@fa27e7961a593ae8d5ae28f94693a84c649bf3b8:smart/drawer/css/drawer.css`
 
-Правило загрузчика: `simai/ui@01e5e71a1bfa562e8252eb8b6547c6cc546ba0da:distr/rule/rule.json`.
+Правило загрузчика: `simai/ui@781c13930394a6ac4b57fec307f83037f15b11e1:distr/rule/rule.json`.
