@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "2396a1ebe597d7e04f284636c1e4efeefa2482fa",
-  "core": "365238d85a8a4db052592aca2eb3d44f0af651da",
-  "smart": "ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35",
+  "source": "e78c8e9e44e4e16e05793983103f2309c6e22898",
+  "core": "01e5e71a1bfa562e8252eb8b6547c6cc546ba0da",
+  "smart": "8a3742c920ff89553ee26486efb98bd7bfc36a96",
   "source_files": {
     "src/core/js/smart-base.js": "d1fa8cb9970d03435607fc4b9e3cdd47737d58e9731251b5d3efb19273e05fc8",
-    "src/core/js/loader.js": "645df7c6a526d5c951812e4e9d81b238ddbc84d086e9767aff9dfbc5a960e275"
+    "src/core/js/loader.js": "404046ead27fc20dbb674f48af451e0bd37f32c89feccc9d5a7db13726a2e2fd"
   },
   "lessons": [
     "creating",
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Reviewed exact source/Core/Smart pair. smart-base.js is byte-identical to the last review. loader.js changed in f4743150: one scheduler decides for the loader's callers, a timer while the document is hidden and an animation frame otherwise, so a module asked for in a tab that is never shown still arrives; the shortcode pass goes through it too. The lessons teach that the Loader starts asynchronously and that a page waits for sf-loader-init before SF.loadSmartBase, which still holds; none describes how the Loader schedules its work, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference they teach changes, so none of the eight lessons changes."
+  "review": "Reviewed exact source/Core/Smart pair. smart-base.js is byte-identical to the last review. loader.js changed at e78c8e9e only in its console and error message texts, now English (Failed to load styles/script, the plugin checks, All components loaded). The lessons teach that the Loader starts asynchronously and that a page waits for sf-loader-init before SF.loadSmartBase, which still holds; none quotes a loader message, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference they teach changes, so none of the eight lessons changes."
 }

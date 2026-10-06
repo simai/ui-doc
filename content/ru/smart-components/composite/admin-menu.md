@@ -28,8 +28,8 @@ Custom Elements: `<sf-admin-menu>`.
 Loader-статус: `registered`. Loader-правило: `cl-admin-menu`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/admin-menu/js/admin-menu.js`
-- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/admin-menu/template/default.js`
+- `simai/ui-smart@8a3742c920ff89553ee26486efb98bd7bfc36a96:smart/admin-menu/js/admin-menu.js`
+- `simai/ui-smart@8a3742c920ff89553ee26486efb98bd7bfc36a96:smart/admin-menu/template/default.js`
 
 ## Зависимости
 
@@ -55,11 +55,11 @@ Smart-компоненту.
 | `searchable` | `searchable` | `Boolean` | `false` | `—` |
 | `collapsible` | `collapsible` | `Boolean` | `false` | `—` |
 | `settings` | `settings` | `Boolean` | `true` | `—` |
-| `settings-title` | `settingsTitle` | `String` | `"Настройки меню"` | `—` |
+| `settings-title` | `settingsTitle` | `String` | `"Menu settings"` (на русской странице — «Настройки меню») | `—` |
 | `compact` | `compact` | `Boolean` | `false` | `—` |
-| `search-placeholder` | `searchPlaceholder` | `String` | `"Поиск по разделам"` | `—` |
+| `search-placeholder` | `searchPlaceholder` | `String` | `"Search sections"` (на русской странице — «Поиск по разделам») | `—` |
 | `count` | `count` | `Number` | `0` | `—` |
-| `toggle-label` | `toggleLabel` | `String` | `"Меню"` | `—` |
+| `toggle-label` | `toggleLabel` | `String` | `"Menu"` (на русской странице — «Меню») | `—` |
 | `panel-class` | `panelClass` | `String` | `""` | `—` |
 | `root-class` | `rootClass` | `String` | `""` | `—` |
 
@@ -100,5 +100,5 @@ Smart-компоненту.
 
 ## Источник
 
-- `simai/ui-smart@ee8ee1cc14d9c4cb019ba418a4f79fc4a48a8f35:smart/admin-menu`
-- `simai/ui@365238d85a8a4db052592aca2eb3d44f0af651da:distr/rule/rule.json#name=cl-admin-menu`
+- `simai/ui-smart@8a3742c920ff89553ee26486efb98bd7bfc36a96:smart/admin-menu`
+- `simai/ui@01e5e71a1bfa562e8252eb8b6547c6cc546ba0da:distr/rule/rule.json#name=cl-admin-menu`
