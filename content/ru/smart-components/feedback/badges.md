@@ -27,6 +27,7 @@ Loader-статус: `registered`. Loader-правило: `cl-badges`.
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
 | `size` | `size` | `String` | `'1/3'` | `1/3`, `1/2`, `1` |
+| `line` | `line` | `String` | `''` | `1/2`, `1`, `2`: высота строки текста, для ячейки таблицы |
 | `status` | `status` | `String` | `''` | пусто, `info`, `success`, `warning`, `error` |
 | `appearance` | `appearance` | `String` | `'main'` | `main`, `tonal`, `outline` |
 | `scheme` | `scheme` | `String` | `'neutral'` | `—` |

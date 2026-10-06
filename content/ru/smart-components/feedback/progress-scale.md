@@ -27,6 +27,7 @@ Loader-статус: `registered`. Loader-правило: `cl-progress-scale`.
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
 | `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
+| `line` | `line` | `String` | `''` | `1/2`, `1`, `2`: шкала и значение в строке текста, для ячейки таблицы |
 | `status` | `status` | `String` | `'neutral'` | `neutral`, `info`, `success`, `warning`, `error` |
 | `value` | `value` | `String` | `'0'` | `—` |
 | `show-text` | `showText` | `Boolean` | `true` | `—` |

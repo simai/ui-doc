@@ -29,6 +29,7 @@ Loader-статус: `registered`. Loader-правило: `cl-reference-link`.
 | `template` | `templateName` | `String` | `'default'` | `—` |
 | `icon` | `icon` | `String` | `'arrow_forward'` | `—` |
 | `size` | `size` | `String` | `''` | `1/2`, `1`, `2`; без размера — карточка |
+| `line` | `line` | `String` | `''` | `1/2`, `1`, `2`: ссылка в строке текста, без карточки, для ячейки таблицы |
 | `label` | `label` | `String` | `''` | `—` |
 | `text` | `text` | `String` | `''` | `—` |
 | `href` | `href` | `String` | `''` | `—` |
