@@ -11,13 +11,13 @@ declare(strict_types=1);
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
  */
 
-const UI_METADATA_REVISION = '42cc2fa33516f1888208f27c1afd00e0c44fcd78';
-const UI_RUNTIME_REVISION = 'd7844bb368bc327df699dbd100601f4eb7a53f77';
-const SMART_METADATA_REVISION = '9c3343f6d46e6aa6b4fd66bc9d46a46c4636e72d';
-const SMART_RUNTIME_REVISION = '72bfb352642fc2d66471761755c5cd670d336a32';
-const SOURCE_REVISION = 'a2d6f51d0047d81494c73341273b43326d2a36b3';
+const UI_METADATA_REVISION = 'a050c0ee13700786471b25e471e0b50ea850ea0f';
+const UI_RUNTIME_REVISION = 'af6287f59202f5a5faca94a571b9d7f69e2f7262';
+const SMART_METADATA_REVISION = '6f160ebb1dcca218cf445e9ae4c9edef72ec01d0';
+const SMART_RUNTIME_REVISION = '04000997b4467e13d66ef3bde8a57cc4ef3c0f3d';
+const SOURCE_REVISION = '3372ccf096a349f70668641684f0fd6e47b7fd4b';
 const BUILDER_REVISION = 'd805a72a6c9191a97d2ebd8b86899bf2f25a2e93';
-const RELEASE_LOCK = 'contracts/releases/ui-d7844bb368bc-smart-72bfb352642f.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-af6287f59202-smart-04000997b446.lock.json';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = $argv[1] ?? null;
