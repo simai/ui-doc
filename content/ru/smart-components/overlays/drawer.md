@@ -38,6 +38,14 @@ profile: reference
 сама по открытым незакреплённым панелям у того же края. Задайте одно значение
 на всех панелях стопки, например `stack-offset="var(--sf-space-4)"`.
 
+## Отступ шапки и содержимого
+
+Заголовок и содержимое панели стоят на одной вертикальной оси: у шапки и тела
+один внутренний отступ. Чтобы сделать его шире, задайте атрибут `gutter`,
+например `gutter="var(--sf-space-3)"`, или переменную `--sf-drawer-gutter` в
+теме. Не добавляйте собственный отступ внутри тела: заголовок останется на
+прежней оси, и части разъедутся.
+
 ## Закреплённая панель
 
 `docked` превращает панель в немодальную колонку `role="region"` с именем: без
@@ -73,6 +81,7 @@ Escape, который уже обработал редактор или пер�
 | `preserve-scroll-gap` | сохраняет место полосы прокрутки при блокировке страницы |
 | `width`, `z-index` | точная ширина и слой, если стандартного размера мало |
 | `stack-offset` | насколько нижняя панель стопки выглядывает из-под верхней |
+| `gutter` | общий внутренний отступ шапки и содержимого |
 | `overlay-class`, `panel-class`, `header-class`, `body-class`, `close-class` | классы частей |
 
 ## Методы и события
@@ -101,7 +110,7 @@ Custom Element: `<sf-drawer>`. Loader-правило: `cl-drawer`, статус
 
 Поставляемые ассеты:
 
-- `simai/ui-smart@fa27e7961a593ae8d5ae28f94693a84c649bf3b8:smart/drawer/js/drawer.js`
-- `simai/ui-smart@fa27e7961a593ae8d5ae28f94693a84c649bf3b8:smart/drawer/css/drawer.css`
+- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/drawer/js/drawer.js`
+- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/drawer/css/drawer.css`
 
-Правило загрузчика: `simai/ui@781c13930394a6ac4b57fec307f83037f15b11e1:distr/rule/rule.json`.
+Правило загрузчика: `simai/ui@38ee6d71029abce8b460ec10a19aa0d3cdab23ff:distr/rule/rule.json`.
