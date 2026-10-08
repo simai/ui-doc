@@ -34,9 +34,9 @@ description: "Семантические роли поверхностей и к
 | `--sf-surface-5`                   | `--sf-neutral-80`          | `--sf-neutral-30`          |
 | `--sf-surface-inverse`             | `--sf-neutral-20`          | `--sf-neutral-90`          |
 | `--sf-surface-inverse-fixed`       | `--sf-neutral-20`          | `--sf-neutral-20`          |
-| `--sf-surface-container`           | `--sf-neutral-90`          | `--sf-neutral-30`          |
-| `--sf-surface-container-hover`     | `--sf-neutral-85`          | `--sf-neutral-35`          |
-| `--sf-surface-container-active`    | `--sf-neutral-80`          | `--sf-neutral-40`          |
+| `--sf-surface-container`           | `--sf-neutral-50--alfa-16` | `--sf-neutral-90--alfa-16` |
+| `--sf-surface-container-hover`     | `--sf-neutral-50--alfa-20` | `--sf-neutral-90--alfa-20` |
+| `--sf-surface-container-active`    | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
 | `--sf-on-surface`                  | `--sf-neutral-10`          | `--sf-neutral-90`          |
 | `--sf-on-surface-fixed`            | `--sf-neutral-10`          | `--sf-neutral-10`          |
 | `--sf-on-surface-hover`            | `--sf-neutral-15`          | `--sf-neutral-85`          |
@@ -47,8 +47,21 @@ description: "Семантические роли поверхностей и к
 | `--sf-on-surface-inverse-fixed`    | `--sf-neutral-90`          | `--sf-neutral-90`          |
 | `--sf-surface-transparent-hover`   | `--sf-neutral-50--alfa-4`  | `--sf-neutral-90--alfa-4`  |
 | `--sf-surface-transparent-select`  | `--sf-neutral-50--alfa-8`  | `--sf-neutral-90--alfa-8`  |
-| `--sf-surface-transparent-active`  | `--sf-neutral-50--alfa-12` | `--sf-neutral-90--alfa-12` |
-| `--sf-surface-transparent-overlay` | `--sf-neutral-50--alfa-24` | `--sf-neutral-90--alfa-24` |
+| `--sf-surface-transparent-overlay` | `--sf-neutral-50--alfa-32` | `--sf-neutral-90--alfa-32` |
+| `--sf-surface-overlay`             | `--sf-black--alfa-8`       | `--sf-white--alfa-8`       |
+
+Плашка (`container`) и слой состояния (`transparent`) полупрозрачны и замешаны
+из одного нейтрального тона: `neutral-50` в светлой теме, `neutral-90` в
+тёмной. Поэтому ступени у них одинаковы в обеих темах. Исключение —
+`--sf-surface-overlay`, вуаль под модальным окном: она замешана из чистого
+чёрного и белого, потому что её работа — притушить сцену, а не подкрасить
+поверхность.
+
+До 8 октября 2026 года плашка была непрозрачной ступенью палитры, слой
+состояния имел ещё и `--sf-surface-transparent-active`, а вуаль поверхности
+стояла на 24 — там же, где нажатая плашка. Подробнее о шкале и о том, как
+выбрать ступень, — в руководстве
+[«Прозрачность»](/ru/guide/fundamentals/transparency/).
 
 ## Поверхность ступени высоты
 
