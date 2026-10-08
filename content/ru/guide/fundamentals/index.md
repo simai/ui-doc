@@ -36,7 +36,7 @@ description: "Как читать классы и выбирать размер�
 - [Значения и шкалы](/ru/guide/fundamentals/values-and-scales/) — откуда берутся числа.
 - [Система размеров](/ru/guide/fundamentals/sizes/) — размер как роль, а не как пиксели.
 - [Шкала размеров](/ru/guide/fundamentals/size-scale/) — ступени и их шаг, с [переводом в пиксели](/ru/guide/fundamentals/size-scale/pixels/).
-- [Интервалы](/ru/guide/fundamentals/spacing/) — отступы между частями.
+- [Интервалы](/ru/guide/fundamentals/spacing/) — отступы между частями, со [значениями ступеней](/ru/guide/fundamentals/spacing/scale/).
 - [Адаптивные размеры](/ru/guide/fundamentals/adaptive-sizing/) — мобильная и настольная пара, со [значениями](/ru/guide/fundamentals/adaptive-sizing/vertical-sizing/).
 
 **Оформление**

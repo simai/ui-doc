@@ -66,6 +66,11 @@ $structure = [
         // had lost.
         'size-scale/pixels' => ['Перевод в пиксели', 10],
         'spacing' => ['Интервалы', 60],
+        // What each step of --sf-space-* gives on a narrow and on a wide
+        // screen. The old full description carried this table and this
+        // documentation described the rule without ever giving the numbers
+        // (owner, 2026-10-09).
+        'spacing/scale' => ['Значения интервалов', 10],
         'colors-and-themes' => ['Цвета и темы', 70],
         'design-tokens' => ['Дизайн-токены', 80],
         'typography' => ['Типографика', 90],
