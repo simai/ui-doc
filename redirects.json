@@ -1892,135 +1892,267 @@
     },
     {
       "from": "ru/reference/properties-of-modifiers",
-      "to": "ru/reference/properties-of-modifiers/properties-of-modifiers"
+      "to": "ru/utilities"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/properties-of-modifiers",
+      "to": "ru/utilities"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-animation",
+      "to": "ru/utilities/animation"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-backdrop-filter",
+      "to": "ru/utilities/backdrop-filter"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-background-color",
+      "to": "ru/utilities/background"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-background-image",
+      "to": "ru/utilities/background"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-border",
+      "to": "ru/utilities/border"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-divider",
+      "to": "ru/utilities/divider"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-filter",
+      "to": "ru/utilities/filters"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-flex",
+      "to": "ru/utilities/flex"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-form",
+      "to": "ru/utilities/forms"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-gradient",
+      "to": "ru/utilities/background"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-grid",
+      "to": "ru/utilities/grid"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-grid-flex",
+      "to": "ru/utilities/grid-and-flexbox-utilities"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-interactivity",
+      "to": "ru/utilities/interactivity"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-layout",
+      "to": "ru/utilities/layout"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-layout-break",
+      "to": "ru/utilities/layout-break"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-link",
+      "to": "ru/utilities/links"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-object",
+      "to": "ru/utilities/objects"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-outline",
+      "to": "ru/utilities/outline"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-print",
+      "to": "ru/utilities/print"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-ring",
+      "to": "ru/utilities/outline"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-scroll",
+      "to": "ru/utilities/overscroll"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-shadow",
+      "to": "ru/utilities/shadows"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-size",
+      "to": "ru/utilities/sizes"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-space",
+      "to": "ru/utilities/indents"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-stripe",
+      "to": "ru/utilities/stripes"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-svg",
+      "to": "ru/utilities/svg"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-table",
+      "to": "ru/utilities/tables"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-text-color",
+      "to": "ru/utilities/text-formatting"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-text-decoration",
+      "to": "ru/utilities/text-formatting"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-theme",
+      "to": "ru/guide/fundamentals/colors-and-themes"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-transform",
+      "to": "ru/utilities/transform"
+    },
+    {
+      "from": "ru/reference/properties-of-modifiers/property-structure-typography",
+      "to": "ru/utilities/typography"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/animation",
-      "to": "ru/reference/properties-of-modifiers/property-structure-animation"
+      "to": "ru/utilities/animation"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/backdrop-filter",
-      "to": "ru/reference/properties-of-modifiers/property-structure-backdrop-filter"
+      "to": "ru/utilities/backdrop-filter"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/background-color",
-      "to": "ru/reference/properties-of-modifiers/property-structure-background-color"
+      "to": "ru/utilities/background"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/background-image",
-      "to": "ru/reference/properties-of-modifiers/property-structure-background-image"
+      "to": "ru/utilities/background"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/border",
-      "to": "ru/reference/properties-of-modifiers/property-structure-border"
+      "to": "ru/utilities/border"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/divider",
-      "to": "ru/reference/properties-of-modifiers/property-structure-divider"
+      "to": "ru/utilities/divider"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/filter",
-      "to": "ru/reference/properties-of-modifiers/property-structure-filter"
+      "to": "ru/utilities/filters"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/flex",
-      "to": "ru/reference/properties-of-modifiers/property-structure-flex"
+      "to": "ru/utilities/flex"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/form",
-      "to": "ru/reference/properties-of-modifiers/property-structure-form"
+      "to": "ru/utilities/forms"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/gradient",
-      "to": "ru/reference/properties-of-modifiers/property-structure-gradient"
+      "to": "ru/utilities/background"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/grid",
-      "to": "ru/reference/properties-of-modifiers/property-structure-grid"
+      "to": "ru/utilities/grid"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/grid-flex",
-      "to": "ru/reference/properties-of-modifiers/property-structure-grid-flex"
+      "to": "ru/utilities/grid-and-flexbox-utilities"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/interactivity",
-      "to": "ru/reference/properties-of-modifiers/property-structure-interactivity"
+      "to": "ru/utilities/interactivity"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/layout",
-      "to": "ru/reference/properties-of-modifiers/property-structure-layout"
+      "to": "ru/utilities/layout"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/layout-break",
-      "to": "ru/reference/properties-of-modifiers/property-structure-layout-break"
+      "to": "ru/utilities/layout-break"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/link",
-      "to": "ru/reference/properties-of-modifiers/property-structure-link"
+      "to": "ru/utilities/links"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/object",
-      "to": "ru/reference/properties-of-modifiers/property-structure-object"
+      "to": "ru/utilities/objects"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/outline",
-      "to": "ru/reference/properties-of-modifiers/property-structure-outline"
+      "to": "ru/utilities/outline"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/print",
-      "to": "ru/reference/properties-of-modifiers/property-structure-print"
+      "to": "ru/utilities/print"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/ring",
-      "to": "ru/reference/properties-of-modifiers/property-structure-ring"
+      "to": "ru/utilities/outline"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/scroll",
-      "to": "ru/reference/properties-of-modifiers/property-structure-scroll"
+      "to": "ru/utilities/overscroll"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/shadow",
-      "to": "ru/reference/properties-of-modifiers/property-structure-shadow"
+      "to": "ru/utilities/shadows"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/size",
-      "to": "ru/reference/properties-of-modifiers/property-structure-size"
+      "to": "ru/utilities/sizes"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/space",
-      "to": "ru/reference/properties-of-modifiers/property-structure-space"
+      "to": "ru/utilities/indents"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/stripe",
-      "to": "ru/reference/properties-of-modifiers/property-structure-stripe"
+      "to": "ru/utilities/stripes"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/svg",
-      "to": "ru/reference/properties-of-modifiers/property-structure-svg"
+      "to": "ru/utilities/svg"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/table",
-      "to": "ru/reference/properties-of-modifiers/property-structure-table"
+      "to": "ru/utilities/tables"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/text-color",
-      "to": "ru/reference/properties-of-modifiers/property-structure-text-color"
+      "to": "ru/utilities/text-formatting"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/text-decoration",
-      "to": "ru/reference/properties-of-modifiers/property-structure-text-decoration"
+      "to": "ru/utilities/text-formatting"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/theme",
-      "to": "ru/reference/properties-of-modifiers/property-structure-theme"
+      "to": "ru/guide/fundamentals/colors-and-themes"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/transform",
-      "to": "ru/reference/properties-of-modifiers/property-structure-transform"
+      "to": "ru/utilities/transform"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/typography",
-      "to": "ru/reference/properties-of-modifiers/property-structure-typography"
+      "to": "ru/utilities/typography"
     },
     {
       "from": "ru/reference/standards/composite-component",
