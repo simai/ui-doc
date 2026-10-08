@@ -35,6 +35,11 @@ $pageBase = static function (string $base) use ($root): string {
 $structure = [
     'introduction' => ['title' => 'Знакомство', 'order' => 10, 'pages' => [
         'what-is-simai-framework' => ['Что такое SIMAI Framework', 10],
+        // The words the rest of the guide is written in. The old full
+        // description carried a glossary and this documentation had none:
+        // «утилита» and «модификатор» are one thing, «примитив» and «токен»
+        // are not, and nothing said so (owner, 2026-10-09).
+        'glossary' => ['Глоссарий', 30],
         'quick-start' => ['Быстрый старт', 20],
     ]],
     'connection' => ['title' => 'Подключение', 'order' => 20, 'pages' => [
@@ -61,6 +66,10 @@ $structure = [
         'values-and-scales' => ['Значения и шкалы', 30],
         'sizes' => ['Система размеров', 40],
         'size-scale' => ['Шкала размеров', 50],
+        // Its own values: the thresholds, the multipliers and how to do the
+        // arithmetic in your head, which the old description had and this one
+        // had lost.
+        'size-scale/pixels' => ['Перевод в пиксели', 10],
         'spacing' => ['Интервалы', 60],
         'colors-and-themes' => ['Цвета и темы', 70],
         'design-tokens' => ['Дизайн-токены', 80],
