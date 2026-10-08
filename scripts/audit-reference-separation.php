@@ -20,7 +20,12 @@ $check($actualHeader === [
     ['Смарт-компоненты', '/ru/smart-components/'],
 ], 'header_is_not_guide_plus_references', ['actual' => $actualHeader]);
 
-foreach (['content/ru/layout', 'content/ru/smart-components/introduction.md', 'content/ru/smart-components/connection.md', 'content/ru/smart-components/lifecycle.md', 'content/ru/smart-components/catalog.md', 'content/ru/smart-components/templates-and-assets.md', 'content/ru/smart-components/examples.md'] as $removedOwner) {
+// content/ru/reference is on this list from 2026-10-09. It held 66 pages of
+// values with no index, no entry in the header, 404 at its root and three
+// inbound links in the whole site: a rule and its numbers in separate trees
+// drift, and nobody sees the drift because nobody can reach the second tree.
+// Values live under the rule they belong to now, inside the guide.
+foreach (['content/ru/reference', 'content/ru/layout', 'content/ru/smart-components/introduction.md', 'content/ru/smart-components/connection.md', 'content/ru/smart-components/lifecycle.md', 'content/ru/smart-components/catalog.md', 'content/ru/smart-components/templates-and-assets.md', 'content/ru/smart-components/examples.md'] as $removedOwner) {
     $check(! file_exists($root . '/' . $removedOwner), 'theory_remains_in_reference_tree', ['path' => $removedOwner]);
 }
 
