@@ -22,7 +22,7 @@ description: "Как в SIMAI Framework выглядит клавиатурны�
 ```
 
 Четыре переменные, и ничего больше. Значения и замеры, которые за ними стоят, —
-на странице [Focus](/ru/guide/fundamentals/colors-and-themes/roles/focus/).
+на странице [Focus](/ru/guide/fundamentals/colour-roles/focus/).
 
 Три вещи в этих значениях стоит понимать, потому что каждая появилась из
 измерения, а не из вкуса.

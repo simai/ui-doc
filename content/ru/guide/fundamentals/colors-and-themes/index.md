@@ -419,9 +419,9 @@ description: "Полная базовая палитра, семантическ
 подстраницы — чтобы правило читалось подряд, а значение находилось там, где его
 ищут.
 
-- [Палитры](/ru/guide/fundamentals/colors-and-themes/palettes/) — девять
+- [Палитры](/ru/guide/fundamentals/colour-palettes/) — девять
   палитр по тонам, от нейтральной до статусных.
-- [Роли цвета](/ru/guide/fundamentals/colors-and-themes/roles/) — что какая
+- [Роли цвета](/ru/guide/fundamentals/colour-roles/) — что какая
   роль означает и из какого примитива собрана в каждой теме.
 - [Правила именования](/ru/guide/fundamentals/colors-and-themes/naming-rules/) —
   как читается имя примитива и как назвать новый.

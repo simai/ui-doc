@@ -12,7 +12,7 @@ tags: [ring-width, ring-color, ring-offset-width, ring-offset-color, focus]
 фокусе с клавиатуры — для этого есть вариант `focus-visible:`.
 
 Сами компоненты Framework рисуют фокус иначе — как `outline` из токенов
-`--sf-focus--*`, см. [Focus](/ru/guide/fundamentals/colors-and-themes/roles/focus/). Кольцо на
+`--sf-focus--*`, см. [Focus](/ru/guide/fundamentals/colour-roles/focus/). Кольцо на
 утилитах нужно для собственной разметки проекта; если рядом стоит компонент
 Framework, берите токены, чтобы фокус выглядел одинаково.
 

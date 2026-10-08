@@ -41,7 +41,9 @@ description: "Как читать классы и выбирать размер�
 
 **Оформление**
 
-- [Цвета и темы](/ru/guide/fundamentals/colors-and-themes/) — роли, темы и их [палитры](/ru/guide/fundamentals/colors-and-themes/palettes/) и [роли](/ru/guide/fundamentals/colors-and-themes/roles/).
+- [Цвета и темы](/ru/guide/fundamentals/colors-and-themes/) — как устроен цвет.
+- [Палитры](/ru/guide/fundamentals/colour-palettes/) — девять палитр по тонам.
+- [Роли цвета](/ru/guide/fundamentals/colour-roles/) — что какая роль означает.
 - [Прозрачность](/ru/guide/fundamentals/transparency/) — одна шкала на три семейства.
 - [Границы](/ru/guide/fundamentals/borders/) — две роли и работа каждой.
 - [Фокус](/ru/guide/fundamentals/focus/) — кольцо и его токены.

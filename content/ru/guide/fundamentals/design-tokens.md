@@ -144,7 +144,7 @@ var(--sf-z-index-8)`.
 `--sf-focus--offset` и появляется только при работе с клавиатуры. Как оно устроено
 и что делать у залитого или примыкающего элемента — на странице
 [Фокус](/ru/guide/fundamentals/focus/); значения переменных — в справочнике
-[Focus](/ru/guide/fundamentals/colors-and-themes/roles/focus/). Токен
+[Focus](/ru/guide/fundamentals/colour-roles/focus/). Токен
 `--sf-ui-focus` остался от прежнего теневого кольца и сохранён только для
 совместимости.
 
