@@ -24,6 +24,13 @@ $read = static function (string $relative) use ($root): string {
     return (string) file_get_contents($path);
 };
 $readJson = static fn (string $relative): array => json_decode($read($relative), true, 512, JSON_THROW_ON_ERROR);
+// A page of the guide is either a file or a section with an index: a rule that
+// carries its own values -- the adaptive sizing table, the colour palettes --
+// is a directory, and the rule itself is its index. Both are the same page to
+// a reader, so both are the same page here.
+$pageBase = static function (string $base) use ($root): string {
+    return is_file($root . '/' . $base . '.md') ? $base : $base . '/index';
+};
 
 $structure = [
     'introduction' => ['title' => 'Знакомство', 'order' => 10, 'pages' => [
@@ -116,7 +123,7 @@ foreach ($structure as $directory => $group) {
     $check(($section['navigation']['order'] ?? null) === $group['order'], 'group_order_mismatch', ['group' => $directory]);
     foreach ($group['pages'] as $slug => [$title, $order]) {
         $pageCount++;
-        $base = 'content/ru/guide/' . $directory . '/' . $slug;
+        $base = $pageBase('content/ru/guide/' . $directory . '/' . $slug);
         $markdown = $read($base . '.md');
         $sidecar = $readJson($base . '.page.json');
         preg_match_all('/^# (.+)$/m', $markdown, $h1);

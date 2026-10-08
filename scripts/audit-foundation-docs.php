@@ -111,7 +111,9 @@ $pages = [
     'overview' => $read('content/ru/guide/architecture/overview.md'),
     'boundary' => $read('content/ru/guide/architecture/framework-and-project.md'),
     'loader' => $read('content/ru/guide/connection/loader.md'),
-    'adaptive' => $read('content/ru/guide/fundamentals/adaptive-sizing.md'),
+    // The rule is the index of its own section now: the generated table of
+    // values sits beside it as a subpage instead of in a tree with no way in.
+    'adaptive' => $read('content/ru/guide/fundamentals/adaptive-sizing/index.md'),
     'values' => $read('content/ru/guide/fundamentals/values-and-scales.md'),
     'modifiers' => $read('content/ru/guide/fundamentals/modifiers.md'),
     'colors' => $read('content/ru/guide/fundamentals/colors-and-themes.md'),

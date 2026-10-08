@@ -1831,6 +1831,10 @@
       "to": "ru/guide/layouts/reference/versions"
     },
     {
+      "from": "ru/reference/adaptive-sizing/generated-contract",
+      "to": "ru/guide/fundamentals/adaptive-sizing/vertical-sizing"
+    },
+    {
       "from": "ru/reference/color-primitives",
       "to": "ru/reference/color-primitives/color-primitives"
     },
