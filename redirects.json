@@ -1831,6 +1831,22 @@
       "to": "ru/guide/layouts/reference/versions"
     },
     {
+      "from": "ru/migration",
+      "to": "ru/guide/connection/versions-and-updates"
+    },
+    {
+      "from": "ru/migration/adaptive-sizing-v1",
+      "to": "ru/guide/connection/versions-and-updates/adaptive-sizing-v1"
+    },
+    {
+      "from": "ru/migration/change-event",
+      "to": "ru/guide/connection/versions-and-updates/change-event"
+    },
+    {
+      "from": "ru/migration/change-history",
+      "to": "ru/guide/connection/versions-and-updates/change-history"
+    },
+    {
       "from": "ru/reference/adaptive-sizing/generated-contract",
       "to": "ru/guide/fundamentals/adaptive-sizing/vertical-sizing"
     },
@@ -2284,11 +2300,11 @@
     },
     {
       "from": "ru/reference/standards/composite-component",
-      "to": "ru/standards/composite-component"
+      "to": "ru/guide/architecture/standards/composite-component"
     },
     {
       "from": "ru/reference/standards/dynamic-composite-component",
-      "to": "ru/standards/dynamic-composite-component"
+      "to": "ru/guide/architecture/standards/dynamic-composite-component"
     },
     {
       "from": "ru/smart-components/catalog",
@@ -2525,6 +2541,34 @@
     {
       "from": "ru/smart-components/templates-and-assets",
       "to": "ru/guide/smart-components/templates-and-assets"
+    },
+    {
+      "from": "ru/standards",
+      "to": "ru/guide/architecture/standards"
+    },
+    {
+      "from": "ru/standards/composite-component",
+      "to": "ru/guide/architecture/standards/composite-component"
+    },
+    {
+      "from": "ru/standards/composite-host-port",
+      "to": "ru/guide/architecture/standards/composite-host-port"
+    },
+    {
+      "from": "ru/standards/composition-recipe",
+      "to": "ru/guide/architecture/standards/composition-recipe"
+    },
+    {
+      "from": "ru/standards/dynamic-composite-component",
+      "to": "ru/guide/architecture/standards/dynamic-composite-component"
+    },
+    {
+      "from": "ru/standards/smart-component-manifest",
+      "to": "ru/guide/architecture/standards/smart-component-manifest"
+    },
+    {
+      "from": "ru/standards/standard-contract",
+      "to": "ru/guide/architecture/standards/standard-contract"
     },
     {
       "from": "ru/start",

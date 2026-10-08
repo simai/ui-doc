@@ -24,7 +24,7 @@ $check(str_contains((string) ($runtime['publication_profile'] ?? ''), 'candidate
 
 $allowedReleasePages = [
     'content/ru/guide/introduction/quick-start.md',
-    'content/ru/migration/change-history.md',
+    'content/ru/guide/connection/versions-and-updates/change-history.md',
 ];
 $paths = [];
 $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru', FilesystemIterator::SKIP_DOTS));
@@ -42,7 +42,7 @@ $staleSmartSourceReferences = [];
 foreach ($paths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
-    if ($relative !== 'content/ru/migration/change-history.md' && preg_match('/(?<![\d.])v?5\.4(?:\.0)?(?![\d.])/', $markdown) === 1) {
+    if ($relative !== 'content/ru/guide/connection/versions-and-updates/change-history.md' && preg_match('/(?<![\d.])v?5\.4(?:\.0)?(?![\d.])/', $markdown) === 1) {
         $legacyMentions[] = $relative;
     }
     preg_match_all('/cdn\.jsdelivr\.net\/gh\/simai\/ui@(v\d+\.\d+\.\d+)\//', $markdown, $matches);

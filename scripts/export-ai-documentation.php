@@ -136,7 +136,7 @@ foreach ($standards as $key => [$file, $standard, $name, $title, $description]) 
         'kind' => 'knowledge', 'title' => $title, 'description' => $description,
         'language' => 'ru', 'revision' => $hash, 'status' => 'published',
         'source' => './' . $public,
-        'htmlPage' => '/ru/standards/' . ($standard === null ? explode('/', $key)[0] : preg_replace('/^simai\./', '', explode('/', $key)[0])) . '/',
+        'htmlPage' => '/ru/guide/architecture/standards/' . ($standard === null ? explode('/', $key)[0] : preg_replace('/^simai\./', '', explode('/', $key)[0])) . '/',
         'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
         'representations' => [['href' => './' . $public, 'mediaType' => 'application/json', 'sha256' => $hash, 'role' => 'full']],
     ];
@@ -164,7 +164,7 @@ foreach (glob($portsRoot . '/*/*/port.json') as $file) {
         'kind' => 'contract', 'title' => $port['summary'] ?? $identity, 'description' => 'Порт ' . $identity . ' ' . $edition . ' и набор проверок из ' . $port['conformance']['cases'] . ' случаев.',
         'language' => 'ru', 'revision' => $hash, 'status' => 'published',
         'source' => './' . $base . 'port.json',
-        'htmlPage' => '/ru/standards/composite-host-port/',
+        'htmlPage' => '/ru/guide/architecture/standards/composite-host-port/',
         'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
         'representations' => [['href' => './' . $base . 'port.json', 'mediaType' => 'application/json', 'sha256' => $hash, 'role' => 'full']],
     ];

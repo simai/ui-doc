@@ -23,15 +23,12 @@ $content = $root . '/content/ru';
 // Trees that are outside the header and known to be so. The list is a debt,
 // not a permission: it should end up empty. Each entry says what has to be
 // decided before it can go.
-$known = [
-    // Four standard documents a consumer is sent to by name from ui-source.
-    // Whether they belong in the guide or in a section of their own is the
-    // owner's to decide.
-    'standards',
-    // Three migration notes, each tied to one change of the Framework. They
-    // may belong beside the rule each one migrates.
-    'migration',
-];
+// Empty, and meant to stay empty. It held 'standards' and 'migration' for one
+// commit: the standards are under «Устройство Framework», where they say what
+// must be true of what those pages describe, and the migration notes are under
+// «Версии и обновления», which is the page a reader arrives at with exactly
+// that question (owner, 2026-10-09).
+$known = [];
 
 $header = json_decode((string) file_get_contents($content . '/section.json'), true, 512, JSON_THROW_ON_ERROR);
 $entries = [];

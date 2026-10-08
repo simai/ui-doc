@@ -36,3 +36,12 @@ Framework выпускается несколькими пакетами. Ном
 Если проект использует только Core, всё равно фиксируйте точный тег или ревизию. Перед добавлением Smart Components переходите на опубликованную совместимую сборку целиком.
 
 
+
+## Переходы
+
+- [История версий](/ru/guide/connection/versions-and-updates/change-history/) —
+  что менялось от версии к версии.
+- [Единое событие change](/ru/guide/connection/versions-and-updates/change-event/) —
+  переход на общее событие изменения.
+- [Вертикальный sizing](/ru/guide/connection/versions-and-updates/adaptive-sizing-v1/) —
+  переход на адаптивную пару размеров.

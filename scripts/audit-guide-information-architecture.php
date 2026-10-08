@@ -201,10 +201,19 @@ $forbidden = [
     'направление развития',
 ];
 $beginnerRoots = ['introduction', 'connection', 'architecture', 'fundamentals'];
+// The standards are inside «Устройство Framework» and are not on the beginner's
+// path: they say what must be true of a component to a person building one, and
+// they name the manifest, the host port and the consumers by name because that
+// is what they are about. Writing them in the beginner's vocabulary would cost
+// the precision that makes them standards (owner, 2026-10-09).
+$plainLanguageExempt = 'content/ru/guide/architecture/standards/';
 foreach ($beginnerRoots as $beginnerRoot) {
 $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide/' . $beginnerRoot));
 foreach ($iterator as $file) {
     if (! $file->isFile() || $file->getExtension() !== 'md') {
+        continue;
+    }
+    if (str_contains(str_replace($root . '/', '', $file->getPathname()), $plainLanguageExempt)) {
         continue;
     }
     $contents = (string) file_get_contents($file->getPathname());

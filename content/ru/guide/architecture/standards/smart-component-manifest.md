@@ -27,8 +27,8 @@ description: "Контракт одного компонента: входные
 ## На что опирается
 
 Манифест — вторая опора [композитного
-компонента](/ru/standards/composite-component/) и место, где
-[порт хоста](/ru/standards/composite-host-port/) объявляет свой стык с
+компонента](/ru/guide/architecture/standards/composite-component/) и место, где
+[порт хоста](/ru/guide/architecture/standards/composite-host-port/) объявляет свой стык с
 приложением.
 
 ## Где взять
