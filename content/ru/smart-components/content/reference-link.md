@@ -27,7 +27,8 @@ Loader-статус: `registered`. Loader-правило: `cl-reference-link`.
 | Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
 |:---|:---|:---|:---|:---|
 | `template` | `templateName` | `String` | `'default'` | `—` |
-| `icon` | `icon` | `String` | `'arrow_forward'` | `—` |
+| `appearance` | `appearance` | `String` | `'card'` | `card`, `plain`: `plain` — ссылка без рамки, фона и отступов, по ширине текста, для ссылки внутри поля записи или ячейки |
+| `icon` | `icon` | `String` | `'arrow_forward'` | Пустое значение (`icon=""`) — без иконки |
 | `size` | `size` | `String` | `''` | `1/2`, `1`, `2`; без размера — карточка |
 | `line` | `line` | `String` | `''` | `1/2`, `1`, `2`: ссылка в строке текста, без карточки, для ячейки таблицы |
 | `label` | `label` | `String` | `''` | `—` |
