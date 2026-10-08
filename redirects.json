@@ -1836,59 +1836,187 @@
     },
     {
       "from": "ru/reference/color-primitives",
-      "to": "ru/reference/color-primitives/color-primitives"
+      "to": "ru/guide/fundamentals/colors-and-themes"
+    },
+    {
+      "from": "ru/reference/color-primitives/additional-themes",
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-color-palette",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-error",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/error"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-neutral",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/neutral"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-primary",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/primary"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-secondary",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/secondary"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-success",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/success"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-tertiary",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/tertiary"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-transparent-white-black",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/transparent-white-black"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-palette-warning",
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/warning"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/color-palette",
-      "to": "ru/reference/color-primitives/color-palette-color-palette"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/error",
-      "to": "ru/reference/color-primitives/color-palette-error"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/error"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/neutral",
-      "to": "ru/reference/color-primitives/color-palette-neutral"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/neutral"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/primary",
-      "to": "ru/reference/color-primitives/color-palette-primary"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/primary"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/secondary",
-      "to": "ru/reference/color-primitives/color-palette-secondary"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/secondary"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/success",
-      "to": "ru/reference/color-primitives/color-palette-success"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/success"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/tertiary",
-      "to": "ru/reference/color-primitives/color-palette-tertiary"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/tertiary"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/transparent-white-black",
-      "to": "ru/reference/color-primitives/color-palette-transparent-white-black"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/transparent-white-black"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/warning",
-      "to": "ru/reference/color-primitives/color-palette-warning"
+      "to": "ru/guide/fundamentals/colors-and-themes/palettes/warning"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-primitives",
+      "to": "ru/guide/fundamentals/colors-and-themes"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-primitives-naming-rules",
+      "to": "ru/guide/fundamentals/colors-and-themes/naming-rules"
+    },
+    {
+      "from": "ru/reference/color-primitives/color-roles",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles"
+    },
+    {
+      "from": "ru/reference/color-primitives/disable-disable",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/disable"
+    },
+    {
+      "from": "ru/reference/color-primitives/disable-features-of-use",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/disable"
     },
     {
       "from": "ru/reference/color-primitives/disable/disable",
-      "to": "ru/reference/color-primitives/disable-disable"
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/disable"
     },
     {
       "from": "ru/reference/color-primitives/disable/features-of-use",
-      "to": "ru/reference/color-primitives/disable-features-of-use"
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/disable"
+    },
+    {
+      "from": "ru/reference/color-primitives/error",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/error"
+    },
+    {
+      "from": "ru/reference/color-primitives/focus",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/focus"
+    },
+    {
+      "from": "ru/reference/color-primitives/interactive-roles",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/interactive"
+    },
+    {
+      "from": "ru/reference/color-primitives/light-and-dark-theme",
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+    },
+    {
+      "from": "ru/reference/color-primitives/link",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/link"
+    },
+    {
+      "from": "ru/reference/color-primitives/main-roles",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/main"
+    },
+    {
+      "from": "ru/reference/color-primitives/mark",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/mark"
+    },
+    {
+      "from": "ru/reference/color-primitives/outline-features-of-use",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/outline"
+    },
+    {
+      "from": "ru/reference/color-primitives/outline-outline",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/outline"
     },
     {
       "from": "ru/reference/color-primitives/outline/features-of-use",
-      "to": "ru/reference/color-primitives/outline-features-of-use"
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/outline"
     },
     {
       "from": "ru/reference/color-primitives/outline/outline",
-      "to": "ru/reference/color-primitives/outline-outline"
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/outline"
+    },
+    {
+      "from": "ru/reference/color-primitives/primary",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/primary"
+    },
+    {
+      "from": "ru/reference/color-primitives/secondary",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/secondary"
+    },
+    {
+      "from": "ru/reference/color-primitives/special-roles",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/special"
+    },
+    {
+      "from": "ru/reference/color-primitives/success",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/success"
+    },
+    {
+      "from": "ru/reference/color-primitives/supporting-roles",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/supporting"
+    },
+    {
+      "from": "ru/reference/color-primitives/surface",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/surface"
+    },
+    {
+      "from": "ru/reference/color-primitives/tertiary",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/tertiary"
+    },
+    {
+      "from": "ru/reference/color-primitives/warning",
+      "to": "ru/guide/fundamentals/colors-and-themes/roles/warning"
     },
     {
       "from": "ru/reference/properties-of-modifiers",

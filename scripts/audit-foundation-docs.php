@@ -116,7 +116,9 @@ $pages = [
     'adaptive' => $read('content/ru/guide/fundamentals/adaptive-sizing/index.md'),
     'values' => $read('content/ru/guide/fundamentals/values-and-scales.md'),
     'modifiers' => $read('content/ru/guide/fundamentals/modifiers.md'),
-    'colors' => $read('content/ru/guide/fundamentals/colors-and-themes.md'),
+    // The rule is the index of its own section: the palettes and the roles are
+    // pages under it rather than a tree of their own.
+    'colors' => $read('content/ru/guide/fundamentals/colors-and-themes/index.md'),
     'sizes' => $read('content/ru/guide/fundamentals/size-scale.md'),
 ];
 $check(str_contains($pages['overview'], 'Правило выбора'), 'level_selection_rule_missing');
