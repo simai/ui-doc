@@ -23,6 +23,23 @@ php vendor/bin/docara verify-static build_production
 `DOCARA_NODE_BINARY` is optional when Node.js is on `PATH`. `SIMAI_UI_ROOT` is
 the fallback name for the Framework root in package checks and CI.
 
+`composer docs:build` runs the same script but kills it at 300 seconds, which a
+full build exceeds -- call php directly, as above.
+
+To build and serve the result as the local preview:
+
+```bash
+export DOCARA_SIMAI_UI_ROOT=/path/to/exact/ui
+scripts/publish-local-preview.sh 20261008-transparency
+```
+
+It builds, copies the tree into `~/Sites/.ui-doc-releases/<name>`, points
+`~/Sites/ui-doc.test` at it and then keeps only the last few builds, the live
+one always among them. Each release is a complete copy of the site, about
+1.3 GB: 107 of them had collected before this was automated, holding 136 GB
+with 17 GB left on the disk. `PUBLISH_KEEP`, `PUBLISH_RELEASES` and
+`PUBLISH_LINK` override how many are kept and where they go.
+
 Each page's build diagnostics contain `composition_recipe_primary` with the
 Recipe digest, Document digest and dependency receipt. A mismatch or failed
 resolution stops the candidate build before replacing a previously accepted
