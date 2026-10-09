@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-562 переменных, которые объявляет ядро, со значениями по умолчанию.
+555 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -68,16 +68,15 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-3` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
 | `--sf-surface-4` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-25))` |
 | `--sf-surface-5` | `light-dark(var(--sf-neutral-80), var(--sf-neutral-30))` |
-| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-50--alfa-24))` |
-| `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-50--alfa-32))` |
-| `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-50--alfa-28))` |
+| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
+| `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
+| `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-overlay` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` |
-| `--sf-surface-transparent-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
 | `--sf-surface-transparent-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
-| `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
+| `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
 | `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 
 ### Цвет: акцентные роли
@@ -175,15 +174,11 @@ description: "Полный список переменных, которые о�
 | `--sf-focus--offset` | `var(--sf-a1)` |
 | `--sf-focus--style` | `solid` |
 | `--sf-focus--width` | `var(--sf-focus-outline-width)` |
-| `--sf-focus-on-neutral` | `light-dark(rgba(255,255,255,0.25098), rgba(0,0,0,0.2))` |
-| `--sf-focus-on-primary` | `light-dark(rgba(255,255,255,0.25098), rgba(0,0,0,0.2))` |
-| `--sf-focus-on-transparency` | `light-dark(rgba(0,0,0,0.50196), rgba(255,255,255,0.50196))` |
 | `--sf-focus-outline-width` | `var(--sf-a2)` |
 | `--sf-on-disable` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50), var(--sf-neutral-60))` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
 | `--sf-outline--alfa` | `1` |
-| `--sf-outline-control` | `light-dark(color-mix(in srgb, var(--sf-neutral-50) 80%, transparent), color-mix(in srgb, var(--sf-neutral-60) 64%, transparent))` |
-| `--sf-outline-disable` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
+| `--sf-outline-disable` | `light-dark(var(--sf-neutral-50--alfa-48), var(--sf-neutral-60--alfa-48))` |
 | `--sf-outline-error` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
 | `--sf-outline-info` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-outline-primary` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
@@ -398,16 +393,16 @@ description: "Полный список переменных, которые о�
 | `--sf-container-6--size-max` | `var(--sf-i2)` |
 | `--sf-container-7--size-max` | `var(--sf-i3)` |
 | `--sf-container-8--size-max` | `var(--sf-i4)` |
-| `--sf-icon-size-1` | `1rem` |
-| `--sf-icon-size-1/2` | `0.875rem` |
-| `--sf-icon-size-1/3` | `0.75rem` |
-| `--sf-icon-size-1/4` | `0.625rem` |
-| `--sf-icon-size-2` | `1.25rem` |
-| `--sf-icon-size-3` | `1.5rem` |
-| `--sf-icon-size-4` | `1.75rem` |
-| `--sf-icon-size-5` | `2rem` |
-| `--sf-icon-size-6` | `2.25rem` |
-| `--sf-icon-size-7` | `2.5rem` |
+| `--sf-icon-size-1` | `var(--sf-b6)` |
+| `--sf-icon-size-1/2` | `0.875rem` · `var(--sf-b4)` |
+| `--sf-icon-size-1/3` | `0.75rem` · `var(--sf-b2)` |
+| `--sf-icon-size-1/4` | `0.625rem` · `var(--sf-b0)` |
+| `--sf-icon-size-2` | `var(--sf-c0)` |
+| `--sf-icon-size-3` | `var(--sf-c2)` |
+| `--sf-icon-size-4` | `var(--sf-c4)` |
+| `--sf-icon-size-5` | `var(--sf-c6)` |
+| `--sf-icon-size-6` | `var(--sf-c8)` |
+| `--sf-icon-size-7` | `var(--sf-d0)` |
 | `--sf-space-0` | `0` |
 | `--sf-space-1` | `var(--sf-b2)` · `var(--sf-b6)` |
 | `--sf-space-1/2` | `0.5rem` · `var(--sf-a8)` · `0.75rem` · `var(--sf-b2)` |
@@ -574,18 +569,16 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-blur-medium` | `blur(var(--sf-blur-medium))` |
 | `--sf-ui-blur-small` | `blur(var(--sf-blur-small))` |
 | `--sf-ui-blur-surface-overlay` | `blur(var(--sf-surface-overlay--blur))` |
-| `--sf-ui-focus` | `0px 0px 0px var(--sf-focus-outline-width) var(--sf-focus)` |
+| `--sf-ui-focus` | `0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
 | `--sf-ui-focus-inset` | `inset 0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
-| `--sf-ui-gradient-dark` | `linear-gradient(0deg, rgba(58, 59, 64, 1) 0%, rgba(36, 38, 42, 1) 100%)` |
-| `--sf-ui-gradient-light` | `linear-gradient(0deg, rgba(212, 212, 217, 1) 0%, rgba(241, 240, 246, 1) 100%)` |
 | `--sf-ui-radius-default` | `var(--sf-radius--ui)` |
-| `--sf-ui-shadow-1` | `0px 2px 4px 1px var(--sf-shadow--color-shading), 0px 1px 3px 0px var(--sf-shadow--color-outline), 0px 2px 2px -1px var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-2` | `0px 4px 8px 2px var(--sf-shadow--color-shading), 0px 2px 6px 0px var(--sf-shadow--color-outline), 0px 4px 4px -2px var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-3` | `0px 8px 16px 4px var(--sf-shadow--color-shading), 0px 4px 12px 0px var(--sf-shadow--color-outline), 0px 8px 8px -4px var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-4` | `0px 16px 32px 4px var(--sf-shadow--color-shading), 0px 8px 24px 0px var(--sf-shadow--color-outline), 0px 16px 16px -8px var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-5` | `0px 32px 64px 8px var(--sf-shadow--color-shading), 0px 16px 48px 0px var(--sf-shadow--color-outline), 0px 32px 32px -16px var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-top` | `0px 0px 0.5px 0px var(--sf-shadow--color-fill), 0px -4px 10px 4px var(--sf-shadow--color-outline), 0px -2px 3px 1px var(--sf-shadow--color-shading)` |
-| `--sf-ui-skeleton` | `linear-gradient(179.99999990539914deg, rgba(204, 204, 204, 0.5) 0%, rgba(136, 136, 136, 0.5) 100%)` |
+| `--sf-ui-shadow-1` | `0 var(--sf-a2) var(--sf-a4) var(--sf-px) var(--sf-shadow--color-shading), 0 var(--sf-px) var(--sf-a3) 0 var(--sf-shadow--color-outline), 0 var(--sf-a2) var(--sf-a2) calc(-1 * var(--sf-px)) var(--sf-shadow--color-fill)` |
+| `--sf-ui-shadow-2` | `0 var(--sf-a4) var(--sf-a8) var(--sf-a2) var(--sf-shadow--color-shading), 0 var(--sf-a2) var(--sf-a6) 0 var(--sf-shadow--color-outline), 0 var(--sf-a4) var(--sf-a4) calc(-1 * var(--sf-a2)) var(--sf-shadow--color-fill)` |
+| `--sf-ui-shadow-3` | `0 var(--sf-a8) var(--sf-b6) var(--sf-a4) var(--sf-shadow--color-shading), 0 var(--sf-a4) var(--sf-b2) 0 var(--sf-shadow--color-outline), 0 var(--sf-a8) var(--sf-a8) calc(-1 * var(--sf-a4)) var(--sf-shadow--color-fill)` |
+| `--sf-ui-shadow-4` | `0 var(--sf-b6) var(--sf-c6) var(--sf-a4) var(--sf-shadow--color-shading), 0 var(--sf-a8) var(--sf-c2) 0 var(--sf-shadow--color-outline), 0 var(--sf-b6) var(--sf-b6) calc(-1 * var(--sf-a8)) var(--sf-shadow--color-fill)` |
+| `--sf-ui-shadow-5` | `0 var(--sf-c6) var(--sf-d6) var(--sf-a8) var(--sf-shadow--color-shading), 0 var(--sf-b6) var(--sf-d2) 0 var(--sf-shadow--color-outline), 0 var(--sf-c6) var(--sf-c6) calc(-1 * var(--sf-b6)) var(--sf-shadow--color-fill)` |
+| `--sf-ui-shadow-top` | `0 0 var(--sf-px) 0 var(--sf-shadow--color-fill), 0 calc(-1 * var(--sf-a4)) var(--sf-b0) var(--sf-a4) var(--sf-shadow--color-outline), 0 calc(-1 * var(--sf-a2)) var(--sf-a3) var(--sf-px) var(--sf-shadow--color-shading)` |
+| `--sf-ui-skeleton` | `linear-gradient(180deg, var(--sf-neutral-80--alfa-48) 0%, var(--sf-neutral-60--alfa-48) 100%)` |
 
 ### Поток содержимого
 
@@ -596,7 +589,7 @@ description: "Полный список переменных, которые о�
 | `--sf-bg--alfa` | `1` |
 | `--sf-caret--alfa` | `1` |
 | `--sf-composition-region-gap` | `var(--sf-space-4, 1rem)` |
-| `--sf-composition-region-side` | `minmax(0, 16rem)` |
+| `--sf-composition-region-side` | `minmax(0, var(--sf-f6))` |
 | `--sf-content--space-block` | `var(--sf-space-3)` |
 | `--sf-content--space-related` | `var(--sf-space-2)` |
 | `--sf-content--space-section` | `var(--sf-space-4)` |
@@ -652,4 +645,4 @@ description: "Полный список переменных, которые о�
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
-| `--sf-transparent-for-focus` | `rgba(255,255,255,0)` |
+| `--sf-transparent-for-focus` | `var(--sf-transparent)` |
