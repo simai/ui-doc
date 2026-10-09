@@ -70,13 +70,15 @@ for (const name of [...values.keys()].sort()) {
 if (other.length) grouped.set('Прочее', other);
 
 // A token declared twice carries one value per theme or per screen width; both
-// are shown, because either one alone would read as the whole answer.
+// are shown, because either one alone would read as the whole answer. Joined
+// with a middle dot rather than a line break: Docara refuses raw HTML in
+// Markdown, and a table cell has no other way to hold two lines.
 // The core escapes the slash in a name like --sf-radius-1\/2 because CSS needs
 // it; a reader does not, and a table cell is not CSS.
 const readable = (text) => text.replace(/\\\//gu, '/');
 const shown = (name) => values.get(name)
   .map((value) => `\`${readable(value).replace(/\|/gu, '\\|')}\``)
-  .join('<br>');
+  .join(' · ');
 
 const total = values.size;
 const sections = [...grouped.entries()]
@@ -98,7 +100,7 @@ ${total} переменных, которые объявляет ядро, со 
 держать вторую копию.
 
 Переменная, объявленная дважды, несёт по значению на тему или на ширину
-экрана; показаны оба.
+экрана; показаны оба, через точку — сначала первое объявление, затем второе.
 
 ## Когда применять
 

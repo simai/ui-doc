@@ -11,7 +11,7 @@ description: "Полный список переменных, которые о�
 держать вторую копию.
 
 Переменная, объявленная дважды, несёт по значению на тему или на ширину
-экрана; показаны оба.
+экрана; показаны оба, через точку — сначала первое объявление, затем второе.
 
 ## Когда применять
 
@@ -198,7 +198,7 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-display--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
-| `--sf-display--weight` | `var(--sf-weight--light)`<br>`300` |
+| `--sf-display--weight` | `var(--sf-weight--light)` · `300` |
 | `--sf-display-1--height` | `var(--sf-title--height-12)` |
 | `--sf-display-1--size` | `var(--sf-text--size-12)` |
 | `--sf-display-2--height` | `var(--sf-title--height-11)` |
@@ -222,7 +222,7 @@ description: "Полный список переменных, которые о�
 | `--sf-heading--margin` | `var(--sf-heading--space-top)` |
 | `--sf-heading--space-bottom` | `var(--sf-content--space-text)` |
 | `--sf-heading--space-top` | `var(--sf-content--space-section)` |
-| `--sf-heading--weight` | `var(--sf-weight--bold)`<br>`700` |
+| `--sf-heading--weight` | `var(--sf-weight--bold)` · `700` |
 | `--sf-heading-1--height` | `var(--sf-title--height-6)` |
 | `--sf-heading-1--size` | `var(--sf-text--size-6)` |
 | `--sf-heading-2--height` | `var(--sf-title--height-5)` |
@@ -254,21 +254,21 @@ description: "Полный список переменных, которые о�
 | `--sf-text--font-weight-8` | `800` |
 | `--sf-text--font-weight-9` | `900` |
 | `--sf-text--height` | `var(--sf-text--height-1)` |
-| `--sf-text--height-1` | `var(--sf-c0)`<br>`var(--sf-c2)` |
-| `--sf-text--height-10` | `var(--sf-d5)`<br>`var(--sf-e2)` |
-| `--sf-text--height-11` | `var(--sf-d6)`<br>`var(--sf-e3)` |
-| `--sf-text--height-12` | `var(--sf-d8)`<br>`var(--sf-e5)` |
-| `--sf-text--height-1/2` | `1rem`<br>`var(--sf-b6)`<br>`1.25rem`<br>`var(--sf-c0)` |
-| `--sf-text--height-1/3` | `1rem`<br>`var(--sf-b6)` |
-| `--sf-text--height-1/4` | `0.75rem`<br>`var(--sf-b2)` |
-| `--sf-text--height-2` | `var(--sf-c2)`<br>`var(--sf-c4)` |
-| `--sf-text--height-3` | `var(--sf-c2)`<br>`var(--sf-c8)` |
-| `--sf-text--height-4` | `var(--sf-c4)`<br>`var(--sf-d0)` |
-| `--sf-text--height-5` | `var(--sf-c6)`<br>`var(--sf-d2)` |
-| `--sf-text--height-6` | `var(--sf-c8)`<br>`var(--sf-d3)` |
-| `--sf-text--height-7` | `var(--sf-d0)`<br>`var(--sf-d5)` |
-| `--sf-text--height-8` | `var(--sf-d2)`<br>`var(--sf-d8)` |
-| `--sf-text--height-9` | `var(--sf-d3)`<br>`var(--sf-e0)` |
+| `--sf-text--height-1` | `var(--sf-c0)` · `var(--sf-c2)` |
+| `--sf-text--height-10` | `var(--sf-d5)` · `var(--sf-e2)` |
+| `--sf-text--height-11` | `var(--sf-d6)` · `var(--sf-e3)` |
+| `--sf-text--height-12` | `var(--sf-d8)` · `var(--sf-e5)` |
+| `--sf-text--height-1/2` | `1rem` · `var(--sf-b6)` · `1.25rem` · `var(--sf-c0)` |
+| `--sf-text--height-1/3` | `1rem` · `var(--sf-b6)` |
+| `--sf-text--height-1/4` | `0.75rem` · `var(--sf-b2)` |
+| `--sf-text--height-2` | `var(--sf-c2)` · `var(--sf-c4)` |
+| `--sf-text--height-3` | `var(--sf-c2)` · `var(--sf-c8)` |
+| `--sf-text--height-4` | `var(--sf-c4)` · `var(--sf-d0)` |
+| `--sf-text--height-5` | `var(--sf-c6)` · `var(--sf-d2)` |
+| `--sf-text--height-6` | `var(--sf-c8)` · `var(--sf-d3)` |
+| `--sf-text--height-7` | `var(--sf-d0)` · `var(--sf-d5)` |
+| `--sf-text--height-8` | `var(--sf-d2)` · `var(--sf-d8)` |
+| `--sf-text--height-9` | `var(--sf-d3)` · `var(--sf-e0)` |
 | `--sf-text--line-height-loose` | `2` |
 | `--sf-text--line-height-none` | `1` |
 | `--sf-text--line-height-normal` | `1.5` |
@@ -280,24 +280,24 @@ description: "Полный список переменных, которые о�
 | `--sf-text--measure-narrow` | `45ch` |
 | `--sf-text--measure-wide` | `80ch` |
 | `--sf-text--size` | `var(--sf-text--size-1)` |
-| `--sf-text--size-1` | `var(--sf-b4)`<br>`var(--sf-b6)` |
-| `--sf-text--size-10` | `var(--sf-d0)`<br>`var(--sf-d6)` |
-| `--sf-text--size-11` | `var(--sf-d1)`<br>`var(--sf-d8)` |
-| `--sf-text--size-12` | `var(--sf-d2)`<br>`var(--sf-e0)` |
-| `--sf-text--size-1/2` | `0.75rem`<br>`var(--sf-b2)`<br>`0.875rem`<br>`var(--sf-b4)` |
-| `--sf-text--size-1/3` | `0.75rem`<br>`var(--sf-b2)` |
-| `--sf-text--size-1/4` | `0.625rem`<br>`var(--sf-b0)` |
-| `--sf-text--size-1/5` | `0.5rem`<br>`var(--sf-a8)` |
-| `--sf-text--size-1/6` | `0.375rem`<br>`var(--sf-a6)` |
-| `--sf-text--size-1/7` | `0.25rem`<br>`var(--sf-a4)` |
-| `--sf-text--size-2` | `var(--sf-b6)`<br>`var(--sf-c0)` |
-| `--sf-text--size-3` | `var(--sf-b8)`<br>`var(--sf-c2)` |
-| `--sf-text--size-4` | `var(--sf-c0)`<br>`var(--sf-c4)` |
-| `--sf-text--size-5` | `var(--sf-c1)`<br>`var(--sf-c6)` |
-| `--sf-text--size-6` | `var(--sf-c2)`<br>`var(--sf-c8)` |
-| `--sf-text--size-7` | `var(--sf-c4)`<br>`var(--sf-d0)` |
-| `--sf-text--size-8` | `var(--sf-c6)`<br>`var(--sf-d2)` |
-| `--sf-text--size-9` | `var(--sf-c8)`<br>`var(--sf-d4)` |
+| `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
+| `--sf-text--size-10` | `var(--sf-d0)` · `var(--sf-d6)` |
+| `--sf-text--size-11` | `var(--sf-d1)` · `var(--sf-d8)` |
+| `--sf-text--size-12` | `var(--sf-d2)` · `var(--sf-e0)` |
+| `--sf-text--size-1/2` | `0.75rem` · `var(--sf-b2)` · `0.875rem` · `var(--sf-b4)` |
+| `--sf-text--size-1/3` | `0.75rem` · `var(--sf-b2)` |
+| `--sf-text--size-1/4` | `0.625rem` · `var(--sf-b0)` |
+| `--sf-text--size-1/5` | `0.5rem` · `var(--sf-a8)` |
+| `--sf-text--size-1/6` | `0.375rem` · `var(--sf-a6)` |
+| `--sf-text--size-1/7` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-text--size-2` | `var(--sf-b6)` · `var(--sf-c0)` |
+| `--sf-text--size-3` | `var(--sf-b8)` · `var(--sf-c2)` |
+| `--sf-text--size-4` | `var(--sf-c0)` · `var(--sf-c4)` |
+| `--sf-text--size-5` | `var(--sf-c1)` · `var(--sf-c6)` |
+| `--sf-text--size-6` | `var(--sf-c2)` · `var(--sf-c8)` |
+| `--sf-text--size-7` | `var(--sf-c4)` · `var(--sf-d0)` |
+| `--sf-text--size-8` | `var(--sf-c6)` · `var(--sf-d2)` |
+| `--sf-text--size-9` | `var(--sf-c8)` · `var(--sf-d4)` |
 | `--sf-text--space-bottom` | `var(--sf-content--space-text)` |
 | `--sf-text--style` | `inherit` |
 | `--sf-text--tracking` | `inherit` |
@@ -307,7 +307,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--tracking-wide` | `0.025em` |
 | `--sf-text--tracking-wider` | `0.05em` |
 | `--sf-text--tracking-widest` | `0.1em` |
-| `--sf-text--weight` | `var(--sf-font-weight-regular)`<br>`400` |
+| `--sf-text--weight` | `var(--sf-font-weight-regular)` · `400` |
 | `--sf-text-height-1` | `var(--sf-text--height-1)` |
 | `--sf-text-height-10` | `var(--sf-text--height-10)` |
 | `--sf-text-height-11` | `var(--sf-text--height-11)` |
@@ -347,18 +347,18 @@ description: "Полный список переменных, которые о�
 | `--sf-text-size-9` | `var(--sf-text--size-9)` |
 | `--sf-text-small--height` | `var(--sf-text--height-1/2)` |
 | `--sf-text-small--size` | `var(--sf-text--size-1/2)` |
-| `--sf-title--height-1` | `var(--sf-b6)`<br>`var(--sf-b8)` |
-| `--sf-title--height-10` | `var(--sf-d2)`<br>`var(--sf-d9)` |
-| `--sf-title--height-11` | `var(--sf-d3)`<br>`var(--sf-e0)` |
-| `--sf-title--height-12` | `var(--sf-d4)`<br>`var(--sf-e2)` |
-| `--sf-title--height-2` | `var(--sf-b8)`<br>`var(--sf-c2)` |
-| `--sf-title--height-3` | `var(--sf-c0)`<br>`var(--sf-c4)` |
-| `--sf-title--height-4` | `var(--sf-c2)`<br>`var(--sf-c6)` |
-| `--sf-title--height-5` | `var(--sf-c3)`<br>`var(--sf-c8)` |
-| `--sf-title--height-6` | `var(--sf-c4)`<br>`var(--sf-d0)` |
-| `--sf-title--height-7` | `var(--sf-c6)`<br>`var(--sf-d2)` |
-| `--sf-title--height-8` | `var(--sf-c8)`<br>`var(--sf-d4)` |
-| `--sf-title--height-9` | `var(--sf-d0)`<br>`var(--sf-d6)` |
+| `--sf-title--height-1` | `var(--sf-b6)` · `var(--sf-b8)` |
+| `--sf-title--height-10` | `var(--sf-d2)` · `var(--sf-d9)` |
+| `--sf-title--height-11` | `var(--sf-d3)` · `var(--sf-e0)` |
+| `--sf-title--height-12` | `var(--sf-d4)` · `var(--sf-e2)` |
+| `--sf-title--height-2` | `var(--sf-b8)` · `var(--sf-c2)` |
+| `--sf-title--height-3` | `var(--sf-c0)` · `var(--sf-c4)` |
+| `--sf-title--height-4` | `var(--sf-c2)` · `var(--sf-c6)` |
+| `--sf-title--height-5` | `var(--sf-c3)` · `var(--sf-c8)` |
+| `--sf-title--height-6` | `var(--sf-c4)` · `var(--sf-d0)` |
+| `--sf-title--height-7` | `var(--sf-c6)` · `var(--sf-d2)` |
+| `--sf-title--height-8` | `var(--sf-c8)` · `var(--sf-d4)` |
+| `--sf-title--height-9` | `var(--sf-d0)` · `var(--sf-d6)` |
 | `--sf-title-height-1` | `var(--sf-title--height-1)` |
 | `--sf-title-height-10` | `var(--sf-title--height-10)` |
 | `--sf-title-height-11` | `var(--sf-title--height-11)` |
@@ -409,17 +409,17 @@ description: "Полный список переменных, которые о�
 | `--sf-icon-size-6` | `2.25rem` |
 | `--sf-icon-size-7` | `2.5rem` |
 | `--sf-space-0` | `0` |
-| `--sf-space-1` | `var(--sf-b2)`<br>`var(--sf-b6)` |
-| `--sf-space-1/2` | `0.5rem`<br>`var(--sf-a8)`<br>`0.75rem`<br>`var(--sf-b2)` |
-| `--sf-space-1/3` | `0.5rem`<br>`var(--sf-a8)` |
-| `--sf-space-1/4` | `0.25rem`<br>`var(--sf-a4)` |
-| `--sf-space-2` | `var(--sf-b6)`<br>`var(--sf-c0)` |
-| `--sf-space-3` | `var(--sf-b6)`<br>`var(--sf-c2)` |
-| `--sf-space-4` | `var(--sf-c2)`<br>`var(--sf-c6)` |
-| `--sf-space-5` | `var(--sf-c6)`<br>`var(--sf-d0)` |
-| `--sf-space-6` | `var(--sf-c6)`<br>`var(--sf-d2)` |
-| `--sf-space-7` | `var(--sf-d0)`<br>`var(--sf-d6)` |
-| `--sf-space-8` | `var(--sf-d2)`<br>`var(--sf-e0)` |
+| `--sf-space-1` | `var(--sf-b2)` · `var(--sf-b6)` |
+| `--sf-space-1/2` | `0.5rem` · `var(--sf-a8)` · `0.75rem` · `var(--sf-b2)` |
+| `--sf-space-1/3` | `0.5rem` · `var(--sf-a8)` |
+| `--sf-space-1/4` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-space-2` | `var(--sf-b6)` · `var(--sf-c0)` |
+| `--sf-space-3` | `var(--sf-b6)` · `var(--sf-c2)` |
+| `--sf-space-4` | `var(--sf-c2)` · `var(--sf-c6)` |
+| `--sf-space-5` | `var(--sf-c6)` · `var(--sf-d0)` |
+| `--sf-space-6` | `var(--sf-c6)` · `var(--sf-d2)` |
+| `--sf-space-7` | `var(--sf-d0)` · `var(--sf-d6)` |
+| `--sf-space-8` | `var(--sf-d2)` · `var(--sf-e0)` |
 | `--sf-space-auto` | `auto` |
 
 ### Границы, радиусы и тени
@@ -445,21 +445,21 @@ description: "Полный список переменных, которые о�
 | `--sf-radius--ui` | `var(--sf-radius-1/2)` |
 | `--sf-radius-0` | `var(--sf-a0)` |
 | `--sf-radius-1` | `var(--sf-a8)` |
-| `--sf-radius-1/2` | `0.25rem`<br>`var(--sf-a4)` |
-| `--sf-radius-1/3` | `0.125rem`<br>`var(--sf-a2)` |
-| `--sf-radius-2` | `var(--sf-b2)`<br>`var(--sf-b6)` |
-| `--sf-radius-3` | `var(--sf-b6)`<br>`var(--sf-c2)` |
-| `--sf-radius-4` | `var(--sf-c2)`<br>`var(--sf-c6)` |
+| `--sf-radius-1/2` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-radius-1/3` | `0.125rem` · `var(--sf-a2)` |
+| `--sf-radius-2` | `var(--sf-b2)` · `var(--sf-b6)` |
+| `--sf-radius-3` | `var(--sf-b6)` · `var(--sf-c2)` |
+| `--sf-radius-4` | `var(--sf-c2)` · `var(--sf-c6)` |
 | `--sf-radius-circle` | `1000px` |
 | `--sf-radius-default` | `var(--sf-a4)` |
 | `--sf-radius-round` | `var(--sf-radius-rounded)` |
 | `--sf-radius-rounded` | `1000px` |
 | `--sf-radius-square` | `0` |
 | `--sf-shadow--alfa` | `1` |
-| `--sf-shadow--color-fill` | `var(--sf-black--alfa-12)`<br>`color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-fill))` |
-| `--sf-shadow--color-outline` | `var(--sf-black--alfa-8)`<br>`color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-outline))` |
+| `--sf-shadow--color-fill` | `var(--sf-black--alfa-12)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-fill))` |
+| `--sf-shadow--color-outline` | `var(--sf-black--alfa-8)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-outline))` |
 | `--sf-shadow--color-shade` | `var(--sf-shadow--color-shading)` |
-| `--sf-shadow--color-shading` | `var(--sf-black--alfa-4)`<br>`color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-shade))` |
+| `--sf-shadow--color-shading` | `var(--sf-black--alfa-4)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-shade))` |
 | `--sf-shadow--level-ratio` | `1` |
 | `--sf-shadow--rim` | `0 0 0 0 transparent` |
 
@@ -485,16 +485,16 @@ description: "Полный список переменных, которые о�
 | `--sf-blur-medium` | `var(--sf-a4)` |
 | `--sf-blur-none` | `var(--sf-a0)` |
 | `--sf-blur-small` | `var(--sf-a2)` |
-| `--sf-floating-active-1-space-y` | `var(--sf-a8)`<br>`var(--sf-a6)` |
-| `--sf-floating-active-1/2-space-y` | `0.5rem`<br>`var(--sf-a8)`<br>`0.375rem`<br>`var(--sf-a6)` |
-| `--sf-floating-active-1/3-space-y` | `0.25rem`<br>`var(--sf-a4)`<br>`0.375rem`<br>`var(--sf-a6)` |
-| `--sf-floating-active-2-space-y` | `var(--sf-b2)`<br>`var(--sf-a8)` |
-| `--sf-floating-active-3-space-y` | `var(--sf-c1)`<br>`var(--sf-b0)` |
+| `--sf-floating-active-1-space-y` | `var(--sf-a8)` · `var(--sf-a6)` |
+| `--sf-floating-active-1/2-space-y` | `0.5rem` · `var(--sf-a8)` · `0.375rem` · `var(--sf-a6)` |
+| `--sf-floating-active-1/3-space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
+| `--sf-floating-active-2-space-y` | `var(--sf-b2)` · `var(--sf-a8)` |
+| `--sf-floating-active-3-space-y` | `var(--sf-c1)` · `var(--sf-b0)` |
 | `--sf-floating-the-others-1-space-y` | `var(--sf-b6)` |
-| `--sf-floating-the-others-1/2-space-y` | `1rem`<br>`var(--sf-b6)`<br>`0.875rem`<br>`var(--sf-b4)` |
-| `--sf-floating-the-others-1/3-space-y` | `0.625rem`<br>`var(--sf-b0)`<br>`0.75rem`<br>`var(--sf-b2)` |
-| `--sf-floating-the-others-2-space-y` | `var(--sf-c1)`<br>`var(--sf-c0)` |
-| `--sf-floating-the-others-3-space-y` | `var(--sf-c6)`<br>`var(--sf-c1)` |
+| `--sf-floating-the-others-1/2-space-y` | `1rem` · `var(--sf-b6)` · `0.875rem` · `var(--sf-b4)` |
+| `--sf-floating-the-others-1/3-space-y` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` |
+| `--sf-floating-the-others-2-space-y` | `var(--sf-c1)` · `var(--sf-c0)` |
+| `--sf-floating-the-others-3-space-y` | `var(--sf-c6)` · `var(--sf-c1)` |
 | `--sf-opacity-10` | `10%` |
 | `--sf-opacity-20` | `20%` |
 | `--sf-opacity-30` | `30%` |
@@ -531,45 +531,45 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-ui-1--control-height` | `calc(var(--sf-text--height-1) + 2 * var(--sf-ui-1--space-y-tightness-default))` |
-| `--sf-ui-1--space-x` | `var(--sf-b4)`<br>`var(--sf-b6)` |
-| `--sf-ui-1--space-y` | `var(--sf-a4)`<br>`var(--sf-a8)` |
+| `--sf-ui-1--space-x` | `var(--sf-b4)` · `var(--sf-b6)` |
+| `--sf-ui-1--space-y` | `var(--sf-a4)` · `var(--sf-a8)` |
 | `--sf-ui-1--space-y-tightness-default` | `var(--sf-a8)` |
 | `--sf-ui-1--space-y-tightness-high` | `var(--sf-b2)` |
 | `--sf-ui-1--space-y-tightness-highest` | `var(--sf-b6)` |
 | `--sf-ui-1--space-y-tightness-low` | `var(--sf-a4)` |
-| `--sf-ui-1--text-space-x` | `var(--sf-a6)`<br>`var(--sf-a8)` |
+| `--sf-ui-1--text-space-x` | `var(--sf-a6)` · `var(--sf-a8)` |
 | `--sf-ui-1/2--control-height` | `calc(var(--sf-text--height-1/2) + 2 * var(--sf-ui-1/2--space-y-tightness-default))` |
-| `--sf-ui-1/2--space-x` | `0.75rem`<br>`var(--sf-b2)`<br>`0.875rem`<br>`var(--sf-b4)` |
-| `--sf-ui-1/2--space-y` | `0.25rem`<br>`var(--sf-a4)`<br>`0.375rem`<br>`var(--sf-a6)` |
-| `--sf-ui-1/2--space-y-tightness-default` | `0.375rem`<br>`var(--sf-a6)` |
-| `--sf-ui-1/2--space-y-tightness-high` | `0.625rem`<br>`var(--sf-b0)` |
-| `--sf-ui-1/2--space-y-tightness-highest` | `0.875rem`<br>`var(--sf-b4)` |
-| `--sf-ui-1/2--space-y-tightness-low` | `0.25rem`<br>`var(--sf-a4)` |
-| `--sf-ui-1/2--text-space-x` | `0.375rem`<br>`var(--sf-a6)`<br>`0.4375rem`<br>`var(--sf-a7)` |
+| `--sf-ui-1/2--space-x` | `0.75rem` · `var(--sf-b2)` · `0.875rem` · `var(--sf-b4)` |
+| `--sf-ui-1/2--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
+| `--sf-ui-1/2--space-y-tightness-default` | `0.375rem` · `var(--sf-a6)` |
+| `--sf-ui-1/2--space-y-tightness-high` | `0.625rem` · `var(--sf-b0)` |
+| `--sf-ui-1/2--space-y-tightness-highest` | `0.875rem` · `var(--sf-b4)` |
+| `--sf-ui-1/2--space-y-tightness-low` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-ui-1/2--text-space-x` | `0.375rem` · `var(--sf-a6)` · `0.4375rem` · `var(--sf-a7)` |
 | `--sf-ui-1/3--control-height` | `calc(var(--sf-text--height-1/3) + 2 * var(--sf-ui-1/3--space-y-tightness-default))` |
-| `--sf-ui-1/3--space-x` | `0.625rem`<br>`var(--sf-b0)`<br>`0.75rem`<br>`var(--sf-b2)` |
-| `--sf-ui-1/3--space-y` | `0.25rem`<br>`var(--sf-a4)`<br>`0.375rem`<br>`var(--sf-a6)` |
-| `--sf-ui-1/3--space-y-tightness-default` | `0.25rem`<br>`var(--sf-a4)` |
-| `--sf-ui-1/3--space-y-tightness-high` | `0.375rem`<br>`var(--sf-a6)`<br>`0.5rem`<br>`var(--sf-a8)` |
-| `--sf-ui-1/3--space-y-tightness-highest` | `0.625rem`<br>`var(--sf-b0)`<br>`0.75rem`<br>`var(--sf-b2)` |
-| `--sf-ui-1/3--space-y-tightness-low` | `0.125rem`<br>`var(--sf-a2)`<br>`0.25rem`<br>`var(--sf-a4)` |
-| `--sf-ui-1/3--text-space-x` | `0.3125rem`<br>`var(--sf-a5)`<br>`0.375rem`<br>`var(--sf-a6)` |
+| `--sf-ui-1/3--space-x` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` |
+| `--sf-ui-1/3--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
+| `--sf-ui-1/3--space-y-tightness-default` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-ui-1/3--space-y-tightness-high` | `0.375rem` · `var(--sf-a6)` · `0.5rem` · `var(--sf-a8)` |
+| `--sf-ui-1/3--space-y-tightness-highest` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` |
+| `--sf-ui-1/3--space-y-tightness-low` | `0.125rem` · `var(--sf-a2)` · `0.25rem` · `var(--sf-a4)` |
+| `--sf-ui-1/3--text-space-x` | `0.3125rem` · `var(--sf-a5)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-2--control-height` | `calc(var(--sf-text--height-2) + 2 * var(--sf-ui-2--space-y-tightness-default))` |
-| `--sf-ui-2--space-x` | `var(--sf-b8)`<br>`var(--sf-c0)` |
-| `--sf-ui-2--space-y` | `var(--sf-a6)`<br>`var(--sf-b0)` |
+| `--sf-ui-2--space-x` | `var(--sf-b8)` · `var(--sf-c0)` |
+| `--sf-ui-2--space-y` | `var(--sf-a6)` · `var(--sf-b0)` |
 | `--sf-ui-2--space-y-tightness-default` | `var(--sf-b0)` |
 | `--sf-ui-2--space-y-tightness-high` | `var(--sf-b4)` |
 | `--sf-ui-2--space-y-tightness-highest` | `var(--sf-c0)` |
 | `--sf-ui-2--space-y-tightness-low` | `var(--sf-a6)` |
-| `--sf-ui-2--text-space-x` | `var(--sf-a8)`<br>`var(--sf-b0)` |
+| `--sf-ui-2--text-space-x` | `var(--sf-a8)` · `var(--sf-b0)` |
 | `--sf-ui-3--control-height` | `calc(var(--sf-text--height-3) + 2 * var(--sf-ui-3--space-y-tightness-default))` |
-| `--sf-ui-3--space-x` | `var(--sf-c1)`<br>`var(--sf-c2)` |
-| `--sf-ui-3--space-y` | `var(--sf-a6)`<br>`var(--sf-b0)` |
-| `--sf-ui-3--space-y-tightness-default` | `var(--sf-b4)`<br>`var(--sf-b0)` |
-| `--sf-ui-3--space-y-tightness-high` | `var(--sf-c0)`<br>`var(--sf-b6)` |
-| `--sf-ui-3--space-y-tightness-highest` | `var(--sf-c3)`<br>`var(--sf-c1)` |
-| `--sf-ui-3--space-y-tightness-low` | `var(--sf-b0)`<br>`var(--sf-a6)` |
-| `--sf-ui-3--text-space-x` | `var(--sf-b0)`<br>`var(--sf-b2)` |
+| `--sf-ui-3--space-x` | `var(--sf-c1)` · `var(--sf-c2)` |
+| `--sf-ui-3--space-y` | `var(--sf-a6)` · `var(--sf-b0)` |
+| `--sf-ui-3--space-y-tightness-default` | `var(--sf-b4)` · `var(--sf-b0)` |
+| `--sf-ui-3--space-y-tightness-high` | `var(--sf-c0)` · `var(--sf-b6)` |
+| `--sf-ui-3--space-y-tightness-highest` | `var(--sf-c3)` · `var(--sf-c1)` |
+| `--sf-ui-3--space-y-tightness-low` | `var(--sf-b0)` · `var(--sf-a6)` |
+| `--sf-ui-3--text-space-x` | `var(--sf-b0)` · `var(--sf-b2)` |
 | `--sf-ui-blur-large` | `blur(var(--sf-blur-large))` |
 | `--sf-ui-blur-medium` | `blur(var(--sf-blur-medium))` |
 | `--sf-ui-blur-small` | `blur(var(--sf-blur-small))` |
@@ -609,12 +609,12 @@ description: "Полный список переменных, которые о�
 | `--sf-stripe--alfa` | `1` |
 | `--sf-stripe--color` | `var(--sf-surface-inverse)` |
 | `--sf-stripe--size` | `var(--sf-a1, 1px)` |
-| `--sf-viewport-height-dynamic` | `100vh`<br>`100dvh` |
-| `--sf-viewport-height-large` | `100vh`<br>`100lvh` |
-| `--sf-viewport-height-small` | `100vh`<br>`100svh` |
-| `--sf-viewport-width-dynamic` | `100vw`<br>`100dvw` |
-| `--sf-viewport-width-large` | `100vw`<br>`100lvw` |
-| `--sf-viewport-width-small` | `100vw`<br>`100svw` |
+| `--sf-viewport-height-dynamic` | `100vh` · `100dvh` |
+| `--sf-viewport-height-large` | `100vh` · `100lvh` |
+| `--sf-viewport-height-small` | `100vh` · `100svh` |
+| `--sf-viewport-width-dynamic` | `100vw` · `100dvw` |
+| `--sf-viewport-width-large` | `100vw` · `100lvw` |
+| `--sf-viewport-width-small` | `100vw` · `100svw` |
 
 ### Прочее
 
