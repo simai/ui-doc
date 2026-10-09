@@ -50,6 +50,7 @@
             "@php scripts/audit-catalog-groups.php",
             "@docs:reachable:check",
             "@docs:tokens:check",
+            "@docs:catalogue-indexes:check",
             "@php scripts/audit-smart-lessons.php"
         ],
         "docs:layout:check": "@php scripts/audit-layout-information-architecture.php",
@@ -71,7 +72,9 @@
         "docs:layout-classes:check": [
             "node scripts/build-layout-expectations.mjs",
             "node scripts/inline-layout-expectations.mjs"
-        ]
+        ],
+        "docs:catalogue-indexes:build": "node scripts/build-catalogue-group-indexes.mjs",
+        "docs:catalogue-indexes:check": "node scripts/build-catalogue-group-indexes.mjs --check"
     },
     "config": {
         "allow-plugins": false,

@@ -30,8 +30,10 @@ $content = $root . '/content/ru';
 // that question (owner, 2026-10-09).
 $known = [];
 // Sections whose own address answers 404 because they have no index. The
-// guide's are fixed; these sixteen belong to the catalogues.
-$indexlessDebt = 16;
+// guide's were fixed first and the catalogues' sixteen were carried here as
+// named debt; they were generated from each catalogue index's own slice on
+// 2026-10-09, so the allowance is gone and every section is held to the rule.
+$indexlessDebt = 0;
 
 $header = json_decode((string) file_get_contents($content . '/section.json'), true, 512, JSON_THROW_ON_ERROR);
 $entries = [];
@@ -75,14 +77,8 @@ foreach ($sections as $directory) {
         continue;
     }
     $relative = substr($directory->getPathname(), strlen($content) + 1);
-    // The catalogues' own groups are the same fault and are not the guide:
-    // sixteen of them -- eight under «Компоненты», eight under
-    // «Смарт-компоненты» -- answer 404 at their address too. They are listed
-    // as debt rather than quietly passed, and go when the catalogues are the
-    // subject (owner, 2026-10-09).
-    $catalogueGroup = preg_match('#^(components|smart-components)/[a-z-]+$#', $relative) === 1;
     $holdsPages = glob($directory->getPathname() . '/*.md') !== [];
-    if ($holdsPages && ! is_file($directory->getPathname() . '/index.md') && ! $catalogueGroup) {
+    if ($holdsPages && ! is_file($directory->getPathname() . '/index.md')) {
         $indexless[] = $relative;
     }
 }
