@@ -54,7 +54,24 @@ const record = {
   },
 };
 
+// The named views this example keeps. Ids are permanent, which is what makes a
+// rename a rename; `shared` says whose the view is.
+const profiles = [
+  { id: 'default', label: 'Обычный', shared: true },
+  { id: 'expert', label: 'Экспертный', shared: true },
+  { id: 'mine', label: 'Персональный', shared: false },
+];
+let current = 'default';
+
 const copy = (value) => JSON.parse(JSON.stringify(value));
+
+// Every read answers with the list this example is keeping and the view it
+// resolved to, because the list is the host's.
+const answer = () => {
+  const next = copy(record);
+  next.record.view = { ...(next.record.view ?? {}), profiles: copy(profiles), profile: current, editable: ['personal'] };
+  return next;
+};
 
 const initializeSolutionPropertyView = async () => {
   await customElements.whenDefined('sf-property-view');
@@ -67,9 +84,9 @@ const initializeSolutionPropertyView = async () => {
   // controls whose capability the host claims.
   panel.setHostPort({
     version: '1.7.0',
-    capabilities: [],
+    capabilities: ['view-settings'],
     async raise(intent, payload) {
-      if (intent === 'record.load') return copy(record);
+      if (intent === 'record.load') return answer();
       if (intent === 'group.save') {
         // A real host validates and returns the record it stored. This one
         // takes the values as given and answers with the next revision, which
@@ -83,7 +100,32 @@ const initializeSolutionPropertyView = async () => {
           if (payload?.values && field.key in payload.values) field.value = payload.values[field.key];
         }
         record.record.revision += 1;
-        return copy(record);
+        return answer();
+      }
+      if (intent === 'view.profile') {
+        if (!profiles.some((profile) => profile.id === payload?.profile)) {
+          return { answer: 'refused', reason: 'unknown-view' };
+        }
+        current = payload.profile;
+        return answer();
+      }
+      if (intent === 'view.rename') {
+        const found = profiles.find((profile) => profile.id === payload?.profile);
+        if (!found) return { answer: 'refused', reason: 'unknown-view' };
+        found.label = String(payload.label ?? found.label);
+        return answer();
+      }
+      if (intent === 'view.delete') {
+        const found = profiles.find((profile) => profile.id === payload?.profile);
+        if (!found) return { answer: 'refused', reason: 'unknown-view' };
+        // The last shared view stays: a scope with none has nothing for a
+        // person who has made none of their own.
+        if (found.shared && profiles.filter((profile) => profile.shared).length < 2) {
+          return { answer: 'refused', reason: 'last-shared-view' };
+        }
+        profiles.splice(profiles.indexOf(found), 1);
+        if (current === found.id) current = profiles[0]?.id ?? null;
+        return answer();
       }
       return { answer: 'unavailable', reason: 'unknown-intent' };
     },
