@@ -73,6 +73,11 @@ $structure = [
         'spacing/scale' => ['Значения интервалов', 10],
         'colors-and-themes' => ['Цвета и темы', 70],
         'design-tokens' => ['Дизайн-токены', 80],
+        // The whole list, generated from the built core. The old full
+        // description carried one and this documentation had the values spread
+        // across the pages that use them, with nothing answering «what tokens
+        // are there» (owner, 2026-10-09).
+        'design-tokens/all-tokens' => ['Все переменные', 10],
         'typography' => ['Типографика', 90],
         'adaptive-sizing' => ['Адаптивные размеры', 100],
     ]],

@@ -49,6 +49,7 @@
             "@php scripts/audit-russian-content.php",
             "@php scripts/audit-catalog-groups.php",
             "@docs:reachable:check",
+            "@docs:tokens:check",
             "@php scripts/audit-smart-lessons.php"
         ],
         "docs:layout:check": "@php scripts/audit-layout-information-architecture.php",
@@ -60,6 +61,8 @@
         "docs:build": "@php scripts/build-documentation.php",
         "docs:ai:check": "@php scripts/export-ai-documentation.php --check",
         "docs:reachable:check": "@php scripts/audit-every-page-is-reachable.php",
+        "docs:tokens:build": "node scripts/build-token-reference.mjs",
+        "docs:tokens:check": "node scripts/build-token-reference.mjs --check",
         "docs:recipe:check": "@php scripts/audit-docara-recipe-primary.php",
         "docs:smart-attributes:check": "node scripts/audit-smart-attribute-tables.mjs",
         "docs:utility-classes:check": "node scripts/audit-utility-classes-exist.mjs",

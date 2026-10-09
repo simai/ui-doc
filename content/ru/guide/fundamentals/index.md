@@ -48,4 +48,4 @@ description: "Как читать классы и выбирать размер�
 - [Границы](/ru/guide/fundamentals/borders/) — две роли и работа каждой.
 - [Фокус](/ru/guide/fundamentals/focus/) — кольцо и его токены.
 - [Типографика](/ru/guide/fundamentals/typography/) — роли текста.
-- [Токены оформления](/ru/guide/fundamentals/design-tokens/) — как устроены имена.
+- [Токены оформления](/ru/guide/fundamentals/design-tokens/) — как устроены имена, и [весь список переменных](/ru/guide/fundamentals/design-tokens/all-tokens/).
