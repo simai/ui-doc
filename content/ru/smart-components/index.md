@@ -83,4 +83,5 @@ description: "Смарт-компоненты по задачам интерфе
 ## Составные компоненты
 
 - [Admin Menu](/ru/smart-components/composite/admin-menu/)
+- [Представление свойств](/ru/smart-components/composite/property-view/)
 
