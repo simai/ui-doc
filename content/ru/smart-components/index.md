@@ -28,6 +28,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Range Slider](/ru/smart-components/forms/range-slider/)
 - [Datepicker](/ru/smart-components/forms/datepicker/)
 - [Smart-код страны](/ru/smart-components/forms/country-code/)
+- [Цвет](/ru/smart-components/forms/color/)
 - [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/)
 - [Rating](/ru/smart-components/forms/rating/)
 - [Form](/ru/smart-components/forms/form/)

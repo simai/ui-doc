@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-555 переменных, которые объявляет ядро, со значениями по умолчанию.
+556 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -75,6 +75,7 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-overlay` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` |
+| `--sf-surface-transparent-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
 | `--sf-surface-transparent-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
 | `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
 | `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |

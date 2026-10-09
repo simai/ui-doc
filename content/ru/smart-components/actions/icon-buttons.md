@@ -14,10 +14,10 @@ Custom Elements: `<sf-icon-button>`.
 Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/icon-buttons/css/icon-buttons.css`
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/icon-buttons/js/icon-buttons.js`
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/icon-buttons/template/default.css`
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/icon-buttons/template/default.js`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/icon-buttons/css/icon-buttons.css`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/icon-buttons/js/icon-buttons.js`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/icon-buttons/template/default.css`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/icon-buttons/template/default.js`
 
 ## Зависимости
 
@@ -33,6 +33,7 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 | `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
 | `kind` | `kind` | `String` | `'icon'` | `icon`, `close` |
 | `scheme` | `scheme` | `String` | `'primary'` | `—` |
+| `status` | `status` | `String` | `''` | `error` — разрушающее действие: удалить, отменить, сбросить |
 | `segment` | `segment` | `String` | `''` | `—` |
 | `icon` | `icon` | `String` | `'add'` | `—` |
 | `filled` | `filled` | `Boolean` | `false` | `—` |
@@ -86,5 +87,5 @@ Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
 
 ## Источник
 
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/icon-buttons`
-- `simai/ui@38ee6d71029abce8b460ec10a19aa0d3cdab23ff:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/icon-buttons`
+- `simai/ui@8ffcc2ec8bf94fd828517b2cc25b135d9991ab5c:distr/rule/rule.json#name=cl-icon-buttons`

@@ -39,6 +39,9 @@ Framework выпускается несколькими пакетами. Ном
 
 ## Переходы
 
+- [Обновление и наследие](/ru/guide/connection/versions-and-updates/framework-updates/) —
+  как старые имена уходят по календарю и как обновить продукт по журналу
+  изменений, в том числе с помощью ИИ.
 - [История версий](/ru/guide/connection/versions-and-updates/change-history/) —
   что менялось от версии к версии.
 - [Единое событие change](/ru/guide/connection/versions-and-updates/change-event/) —

@@ -91,10 +91,23 @@ Framework выпускается несколькими пакетами. Ном
 Если проект использует только Core, всё равно фиксируйте точный тег или ревизию. Перед добавлением Smart Components переходите на опубликованную совместимую сборку целиком.
 
 
+
+## Переходы
+
+- [Обновление и наследие](/ru/guide/connection/versions-and-updates/framework-updates/) —
+  как старые имена уходят по календарю и как обновить продукт по журналу
+  изменений, в том числе с помощью ИИ.
+- [История версий](/ru/guide/connection/versions-and-updates/change-history/) —
+  что менялось от версии к версии.
+- [Единое событие change](/ru/guide/connection/versions-and-updates/change-event/) —
+  переход на общее событие изменения.
+- [Вертикальный sizing](/ru/guide/connection/versions-and-updates/adaptive-sizing-v1/) —
+  переход на адаптивную пару размеров.
 MARKDOWN;
 
 $targets = [
-    'content/ru/guide/connection/versions-and-updates.md' => static fn (string $current): string => $versionPage . "\n",
+    // The page became a section on 2026-10-09; its index carries the version text.
+    'content/ru/guide/connection/versions-and-updates/index.md' => static fn (string $current): string => $versionPage . "\n",
     'content/ru/guide/introduction/quick-start.md' => static function (string $current) use ($publicCoreTag): string {
         $current = preg_replace('/simai\/ui@v\d+\.\d+\.\d+/', 'simai/ui@' . $publicCoreTag, $current);
         $current = preg_replace('/версии `v\d+\.\d+\.\d+`/', 'версии `' . $publicCoreTag . '`', (string) $current);

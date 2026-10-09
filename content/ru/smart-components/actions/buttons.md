@@ -14,8 +14,8 @@ Custom Elements: `<sf-button>`.
 Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 Поставляемые ассеты:
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/buttons/js/buttons.js`
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/buttons/template/default.js`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/buttons/js/buttons.js`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/buttons/template/default.js`
 
 ## Зависимости
 
@@ -29,6 +29,7 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 | `size` | `size` | `String` | `"1"` | `1/3`, `1/2`, `1`, `2`, `3` |
 | `appearance` | `appearance` | `String` | `'default'` | `default`, `tonal`, `outline`, `link`, `surface`, `ghost` |
 | `scheme` | `scheme` | `String` | `"primary"` | `—` |
+| `status` | `status` | `String` | `''` | `error` — разрушающее действие: удалить, отменить, сбросить |
 | `text-position` | `textPosition` | `String` | `'center'` | `—` |
 | `text` | `text` | `String` | `""` | `—` |
 | `segment` | `segment` | `String` | `""` | `—` |
@@ -87,5 +88,5 @@ Loader-статус: `registered`. Loader-правило: `cl-buttons`.
 
 ## Источник
 
-- `simai/ui-smart@4ae62b519370f64269a9584715beae1dc989d3a9:smart/buttons`
-- `simai/ui@38ee6d71029abce8b460ec10a19aa0d3cdab23ff:distr/rule/rule.json#name=cl-buttons`
+- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/buttons`
+- `simai/ui@8ffcc2ec8bf94fd828517b2cc25b135d9991ab5c:distr/rule/rule.json#name=cl-buttons`

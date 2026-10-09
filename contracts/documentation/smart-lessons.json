@@ -1,10 +1,10 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "cb14fac7dc7a5c8a72a1f0dbbcfd00a4a70d4755",
-  "core": "38ee6d71029abce8b460ec10a19aa0d3cdab23ff",
-  "smart": "4ae62b519370f64269a9584715beae1dc989d3a9",
+  "source": "83299094ae8825c48905a1a20d56371dc452e22e",
+  "core": "8ffcc2ec8bf94fd828517b2cc25b135d9991ab5c",
+  "smart": "27c513ade9223dc8b8411542895c26e4e8be8c79",
   "source_files": {
-    "src/core/js/smart-base.js": "d1fa8cb9970d03435607fc4b9e3cdd47737d58e9731251b5d3efb19273e05fc8",
+    "src/core/js/smart-base.js": "cf41e843d51df4462e5b7076ba41d157cdf023f04112b464523be0454e037adb",
     "src/core/js/loader.js": "404046ead27fc20dbb674f48af451e0bd37f32c89feccc9d5a7db13726a2e2fd"
   },
   "lessons": [
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Reviewed exact source/Core/Smart pair. smart-base.js is byte-identical to the last review. loader.js changed at e78c8e9e only in its console and error message texts, now English (Failed to load styles/script, the plugin checks, All components loaded). The lessons teach that the Loader starts asynchronously and that a page waits for sf-loader-init before SF.loadSmartBase, which still holds; none quotes a loader message, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference they teach changes, so none of the eight lessons changes."
+  "review": "Reviewed exact source/Core/Smart pair. smart-base.js changed at 83299094: resolveAttributeName and normalizeEnum now note a legacy attribute or value in SF.deprecations (src/core/js/deprecations.js), silently unless the page opts in to warnings; the name a component resolves is unchanged. loader.js is byte-identical to the last review. No lesson teaches a legacy name, an alias or the resolution order, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference they teach changes, so none of the eight lessons changes."
 }

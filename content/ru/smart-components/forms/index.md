@@ -1,6 +1,6 @@
 ---
 title: "Формы и ввод"
-description: "Формы и ввод — 13 смарт-компонентов SIMAI Framework."
+description: "Формы и ввод — 14 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -16,6 +16,7 @@ profile: reference
 - [Range Slider](/ru/smart-components/forms/range-slider/)
 - [Datepicker](/ru/smart-components/forms/datepicker/)
 - [Smart-код страны](/ru/smart-components/forms/country-code/) — Управляемое телефонное поле с кодом, флагом, маской и нативным поведением формы.
+- [Цвет](/ru/smart-components/forms/color/) — Выбор цвета: образец, палитра продукта и возврат к унаследованному значению.
 - [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/) — Управляемый выбор файлов со списком, прогрессом и состояниями передачи.
 - [Rating](/ru/smart-components/forms/rating/)
 - [Form](/ru/smart-components/forms/form/)

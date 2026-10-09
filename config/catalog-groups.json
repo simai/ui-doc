@@ -133,7 +133,8 @@
         "country-code",
         "file-upload",
         "rating",
-        "form"
+        "form",
+        "color"
       ]
     },
     "navigation": {

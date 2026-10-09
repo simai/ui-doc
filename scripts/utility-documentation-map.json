@@ -71,7 +71,7 @@
   "non_visual_families": {
     "theme": {
       "reason": "Тема задаётся дизайн-токенами и не публикует CSS-классы.",
-      "page": "content/ru/guide/fundamentals/colors-and-themes.md"
+      "page": "content/ru/guide/fundamentals/colors-and-themes/index.md"
     }
   },
   "legacy_reference_families": [

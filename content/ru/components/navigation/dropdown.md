@@ -163,12 +163,5 @@ Dropdown. В Smart-разметке используйте `<sf-list-item>` то
 триггеру только нажатие, которое открывает список: как он выглядит, решает тот,
 кто его передал. Список в этом случае берёт свою ширину, а не ширину кнопки.
 
-```html
-<sf-dropdown multiple search="true" aria-label="Значок раздела">
-  <sf-icon-button slot="trigger" icon="add" appearance="link"
-                  aria-label="Добавить поле"></sf-icon-button>
-</sf-dropdown>
-```
-
 :::example {id="components/dropdown/trigger" label="Результат"}
 :::
