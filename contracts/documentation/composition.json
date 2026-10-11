@@ -1,24 +1,24 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "4cf45804252fcbf3ce8133ec2e2d6fa517ea3c11",
-    "core_revision": "09bc6b371eca0ea27723d4a6ace756526c34851d",
+    "source_revision": "d96e8c8b8267a2e47313c97d5a40adf88886cc8d",
+    "core_revision": "760be10c84f758235bfbecf2c07dfa098da083d6",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "src/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "src/core/js/composition/index.mjs": "964f8f158f34135bc3f2a4760f35e40bdfded238672d52352bff1fec5687bf86",
-      "src/core/js/composition/builtins.mjs": "35949f3813049cfa5f216489f14bc18866dbf8582f6fec106c34b187fbf57e3a",
+      "src/core/js/composition/builtins.mjs": "4d05c406e63c0281eb6f8558091c8656e801377dcc70c86f361d0c68ebac272c",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "6df441c4ff9ce081406304b44c434cc1a0776c78ea32368af5d6b714112e5344"
+      "src/smart/buttons/smart.manifest.json": "8afcb9f460e6d6ce0d9d4b4abfd2c56828900359876fa0a9b320a3a4b0ef4486"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "a646dcd4240eb2596ccd26fa852b768262869791b00d74967e0c5cf0a35d0d04"
+      "distr/core/js/core.js": "23b9a7cc9a5634327d4cb75501abdd81735fb61acc89ae294c0c71ae7cd903c0"
     },
-    "note": "Reviewed at source 4cf45804 and core 09bc6b37 (release ui-09bc6b371eca): the composition sources, the three contracts in distr and core.js are byte-identical to the last review; src/smart/buttons/smart.manifest.json changed only in its runtime_pair and provenance revisions, not in what the composition pages describe."
+    "note": "Reviewed at source d96e8c8b and core 760be10c (release ui-760be10c84f7): the composition contracts, index.mjs and the fixture are byte-identical to the last review; builtins.mjs gained only a comment saying sf-table is a SIMAI Framework Pro component and its port stays public; core.js was rebuilt for that comment and a comment example in page-language.js; src/smart/buttons/smart.manifest.json changed only in its runtime_pair and provenance revisions. Nothing the composition pages describe changed."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

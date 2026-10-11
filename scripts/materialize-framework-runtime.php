@@ -27,13 +27,13 @@ declare(strict_types=1);
  * into a Docara checkout, which must never carry Pro bytes.
  */
 
-const UI_METADATA_REVISION = 'ff24012d2a32712602d0f0fca11579acd77dfa8a';
-const UI_RUNTIME_REVISION = '09bc6b371eca0ea27723d4a6ace756526c34851d';
-const SOURCE_REVISION = '4cf45804252fcbf3ce8133ec2e2d6fa517ea3c11';
-const BUILDER_REVISION = '9c48b566c1e1b409733e716d24e93800f998c588';
-const RELEASE_LOCK = 'contracts/releases/ui-09bc6b371eca.lock.json';
-const PRO_METADATA_REVISION = 'f96ed86b4269e0354d67d1c9a9acf2c4b6eca631';
-const PRO_RELEASE = 'pro-1f894a46f488';
+const UI_METADATA_REVISION = 'a4210d7f8da00cc100fcce12a4be69bf38a84402';
+const UI_RUNTIME_REVISION = '760be10c84f758235bfbecf2c07dfa098da083d6';
+const SOURCE_REVISION = 'd96e8c8b8267a2e47313c97d5a40adf88886cc8d';
+const BUILDER_REVISION = '875b800681e37e333266a1dbff5e955dbfb6046d';
+const RELEASE_LOCK = 'contracts/releases/ui-760be10c84f7.lock.json';
+const PRO_METADATA_REVISION = 'b1d3eda6397255ca7f0de5ef8a86cbc5aea942cf';
+const PRO_RELEASE = 'pro-57f4aa1b9da1';
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = null;
