@@ -5,70 +5,71 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Progress Bar
 
-Идентификатор: `smart.progress-bar`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-progress-bar>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-progress-bar`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/progress-bar/js/progress-bar.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/progress-bar/template/default.js`
-
-## Зависимости
-
-- `component.progress-bar`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
-| `status` | `status` | `String` | `'neutral'` | `neutral`, `info`, `success`, `warning`, `error` |
-| `value` | `value` | `String` | `'0'` | `—` |
-| `text-position` | `textPosition` | `String` | `'none'` | `—` |
-
-Прежнее имя продолжает работать и считается устаревшим: `tone` — как `status`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get size()`, `get state()`, `get templateName()`, `get textPosition()`, `get value()`, `getProgress()`, `set textPosition()`, `set value()`, `setProgress()`, `setTextPosition()`, `updateDom()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
-
-```html
-<sf-progress-bar></sf-progress-bar>
-```
-
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-progress-bar>` |
+| Назначение | Непрерывный определённый прогресс с нормализованным значением, доступной семантикой диапазона и явным семантическим тоном. |
+| Контракт | `smart.progress-bar`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | — |
+| `value` | `string` | `0` | шаблон `^(?:100\|[1-9]?[0-9])(?:\.[0-9]+)?$` | — |
+| `text-position` | `string` | `none` | `none`, `inline-end`, `bottom`, `right` | — |
+| `status` | `string` | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | О чём сообщает индикатор прогресса, в общем словаре статусов. Также принимается значение primary; оно означает neutral. |
+| `label` | `string` | пусто | — | — |
+| `value-text` | `string` | пусто | — | — |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `status` | `tone` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
+| `status="neutral"` | `status="primary"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getProgress()` | — | не описано | — |
+| `setProgress()` | — | не описано | — |
+| `setTextPosition()` | — | не описано | — |
+
+### События
+
+Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+### Доступность
+
+- Роль: индикатор прогресса (`progressbar`).
+- Доступное имя: обязательно.
+- Фокус: Progress Bar не интерактивен и не входит в порядок фокуса.
+
+### Минимальная разметка
+
+```html
+<sf-progress-bar label="Загрузка файлов" value="40"></sf-progress-bar>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/progress-bar`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-progress-bar`

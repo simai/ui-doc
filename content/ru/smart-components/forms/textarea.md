@@ -5,76 +5,6 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Textarea
 
-Идентификатор: `smart.textarea`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-textarea>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-textarea`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/textarea/js/textarea.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/textarea/template/default.js`
-
-## Зависимости
-
-- `component.textarea`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
-| `appearance` | `appearance` | `String` | `'bordered'` | `bordered`, `filled` |
-| `label` | `label` | `String` | `''` | `—` |
-| `required` | `required` | `Boolean` | `false` | `—` |
-| `placeholder` | `placeholder` | `String` | `''` | `—` |
-| `hint` | `hint` | `String` | `''` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-| `name` | `name` | `String` | `''` | `—` |
-| `rows` | `rows` | `Number` | `3` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `error` | `error` | `Boolean` | `false` | `—` |
-| `mask` | `mask` | `Boolean` | `false` | `—` |
-| `mask-pattern` | `maskPattern` | `String` | `''` | `—` |
-| `mask-options` | `maskOptions` | `String` | `''` | `—` |
-
-Прежнее имя продолжает работать и считается устаревшим: `type` — как `appearance`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get disabled()`, `get error()`, `get hint()`, `get label()`, `get mask()`, `get maskOptions()`, `get maskPattern()`, `get name()`, `get placeholder()`, `get required()`, `get rows()`, `get size()`, `get state()`, `get type()`, `get value()`, `set value()`, `setState()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `input` | Значение меняется при вводе |
-| `change` | Значение зафиксировано. Имя для подписки |
-
-## Минимальная разметка
-
-```html
-<sf-textarea></sf-textarea>
-```
-
 ## Имя, подпись и пояснение
 
 `name` — машинное имя поля, `label` — его видимая подпись, `placeholder` —
@@ -101,7 +31,86 @@ Loader-статус: `registered`. Loader-правило: `cl-textarea`.
 клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает
 source-контракт, но не заменяет сценарную проверку доступности.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-textarea>` |
+| Назначение | Нативное многострочное поле формы с оформлением Framework, сообщениями валидации и безопасным изменением размера по вертикали. |
+| Контракт | `smart.textarea`, версия `1.1.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `size` | `string` | `1` | `1/2`, `1`, `2` | — |
+| `appearance` | `string` | `bordered` | `bordered`, `filled` | Вид поля: блок с рамкой или с заливкой. |
+| `label` | `string` | пусто | — | — |
+| `required` | `boolean` | `false` | — | — |
+| `placeholder` | `string` | пусто | — | — |
+| `autocomplete` | `string` | пусто | — | — |
+| `inputmode` | `string` | пусто | пусто, `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search` | — |
+| `minlength` | `number` | `null` | — | — |
+| `maxlength` | `number` | `null` | — | — |
+| `spellcheck` | `boolean` | `true` | — | — |
+| `wrap` | `string` | `soft` | `soft`, `hard` | — |
+| `hint` | `string` | пусто | — | — |
+| `value` | `string` | пусто | — | — |
+| `name` | `string` | пусто | — | — |
+| `rows` | `number` | `3` | — | — |
+| `disabled` | `boolean` | `false` | — | — |
+| `readonly` | `boolean` | `false` | — | — |
+| `error` | `boolean` | `false` | — | — |
+| `invalid` | `boolean` | `false` | — | — |
+| `error-message` | `string` | пусто | — | — |
+| `mask` | `boolean` | `false` | — | — |
+| `mask-pattern` | `string` | пусто | — | — |
+| `mask-options` | `string` | пусто | — | — |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `appearance` | `type` | работает и предупреждает | 2026-12-01 |
+| `size="1/2"` | `size="1/3"` | работает и предупреждает | 2026-12-01 |
+| `size="2"` | `size="3"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `setState()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `change` | не описан | Значение зафиксировано; нативное событие всплывает от внутреннего textarea, который является его целью. |
+| `input` | не описан | Значение изменилось при вводе; нативное событие всплывает от внутреннего textarea, который является его целью. |
+
+### Доступность
+
+- Роль: текстовое поле (`textbox`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `native multiline text editing`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
+
+```html
+<sf-textarea label="Comment" name="comment" rows="4" maxlength="500"></sf-textarea>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/textarea`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-textarea`

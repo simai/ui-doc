@@ -12,8 +12,7 @@ profile: reference
 не меняется, поэтому опубликованная страница и её digest одинаковы с открытым и
 закрытым редактором.
 
-Идентификатор: `smart.composition-overlay`, жизненный цикл —
-экспериментальный. Код загружается по требованию: загрузчик Framework
+Код загружается по требованию: загрузчик Framework
 подключает его только на странице с тегом `sf-composition-overlay`.
 
 ## Пример
@@ -72,17 +71,66 @@ id по шаблону `^[a-z][a-z0-9-]{0,63}$`, не больше 16 дейст
 перенос объявляются. Слой лежит ниже drawer и modal, цвета берутся из токенов
 темы, анимация отключается при `prefers-reduced-motion`.
 
-## Теги и подключение
+## Справочник API
 
-Custom Element: `<sf-composition-overlay>`. Loader-правило:
-`cl-composition-overlay`, статус `registered`.
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
-Поставляемые ассеты:
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/composition-overlay/js/composition-overlay.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/composition-overlay/css/composition-overlay.css`
+| | |
+|:---|:---|
+| Тег | `<sf-composition-overlay>` |
+| Назначение | Интерфейс редактора поверх отрисованного Composition Document: рамки, подписи, значки, панель действий, места вставки, перемещение перетаскиванием и с клавиатуры и дерево для клавиатуры — без изменения HTML холста. |
+| Контракт | `smart.composition-overlay`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
-Правило загрузчика: `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json`.
-Связанные страницы: [Перетаскивание](/ru/smart-components/editor/sortable/),
-[Inline-редактор](/ru/smart-components/editor/inline-editor/),
-[руководство по редактору страниц](/ru/guide/layouts/editor/overview/).
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `for` | `string` | пусто | — | id элемента canvas, в котором находится вывод SF.Composition.render |
+| `accepts` | `string` | пусто | — | группы sf-sortable, элементы которых можно отпускать в местах вставки |
+| `label` | `string` | пусто | — | — |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `attach()` | `canvas: Element` | не описано | Привязывает оверлей к элементу холста. |
+| `setDocument()` | `document: object, options: object` | не описано | Задаёт Document и describe(node) → {label, badges}. |
+| `setActions()` | `actions: array` | не описано | Задаёт действия панели инструментов {id, label}. |
+| `setMessages()` | `messages: object` | не описано | Переопределяет тексты интерфейса. |
+| `setDropFilter()` | `filter: function` | не описано | Скрывает места вставки, которые хост отклонил бы: `(place, item) => boolean`. |
+| `setInsertionTarget()` | `target: object\|null` | не описано | Отмечает место вставки или сбрасывает его значением `null`. |
+| `select()` | `id: string\|null, options: object` | не описано | Выбирает узел по id. |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-composition-overlay-select` | `{ node_id?: string\|null }` | Выбран узел. |
+| `sf-composition-overlay-action` | `{ action_id: string, node_id: string }` | Выбрано действие панели инструментов. |
+| `sf-composition-overlay-insert` | `{ parent_id: string, slot: string, index: integer, item?: string, from?: string, mode?: any }` | Запрошена вставка в место, при необходимости с элементом библиотеки. |
+| `sf-composition-overlay-move` | `{ node_id: string, parent_id: string, slot: string, index: integer }` | Узел холста перемещён в место. |
+
+### Доступность
+
+- Роль: дерево (`tree`).
+- Доступное имя: рекомендуется.
+- Клавиши: `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Home`, `End`, `Enter`, `Space`, `Escape`.
+- Фокус: У дерева по одному treeitem на узел; стрелки перемещают в порядке документа и между родителем и потомком, Enter открывает панель инструментов, Escape возвращает или сбрасывает. Space начинает перемещение с клавиатуры, стрелки выбирают место, Enter отпускает, Escape отменяет. Выбор и перемещения озвучиваются.
+
+### Минимальная разметка
+
+```html
+<sf-composition-overlay id="overlay" for="canvas" accepts="blocks"></sf-composition-overlay><div id="canvas"></div>
+```
+
+### Источник
+
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/composition-overlay`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-composition-overlay`

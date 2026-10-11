@@ -5,78 +5,76 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Breadcrumbs
 
-Идентификатор: `smart.breadcrumbs`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+## Доступность
 
-## Теги и подключение
+Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-Custom Elements: `<sf-breadcrumbs>`.
+## Справочник API
 
-Loader-статус: `registered`. Loader-правило: `cl-breadcrumbs`.
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/breadcrumbs/js/breadcrumbs.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/breadcrumbs/template/default.js`
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
-## Зависимости
-
-- `component.breadcrumbs`
-- `component.icons`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `items` | `items` | `String` | `[]` | `—` |
-| `separator-icon` | `separatorIcon` | `String` | `'chevron_right'` | `—` |
-| `home-icon` | `homeIcon` | `String` | `'home'` | `—` |
-| `home-label` | `homeLabel` | `String` | `''` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `item-class` | `itemClass` | `String` | `''` | `—` |
-| `link-class` | `linkClass` | `String` | `''` | `—` |
-| `current-class` | `currentClass` | `String` | `''` | `—` |
-| `separator-class` | `separatorClass` | `String` | `''` | `—` |
-| `container-class` | `containerClass` | `String` | `''` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `'Breadcrumb'` | `—` |
-| `expand-on-ellipsis` | `expandOnEllipsis` | `Boolean` | `true` | `—` |
-| `max-items` | `maxItems` | `Number` | `4` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`attributeChangedCallback()`, `cancelReadyCapture()`, `captureInitialItems()`, `connectedCallback()`, `disconnectItemObserver()`, `disconnectedCallback()`, `expandEllipsis()`, `get items()`, `get normalizedItems()`, `get sourceItems()`, `get state()`, `getCapturedItems()`, `getDisplayItems()`, `isItemNode()`, `mountComponent()`, `observeItemChildren()`, `onItemClick()`, `reindexItems()`, `scheduleReadyCapture()`, `setState()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
+| | |
 |:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
+| Тег | `<sf-breadcrumbs>` |
+| Назначение | Smart-компонент Breadcrumbs из SIMAI Framework. |
+| Контракт | `smart.breadcrumbs`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
-## Минимальная разметка
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `items` | `string` | `[]` | — | — |
+| `separator-icon` | `string` | `chevron_right` | — | — |
+| `home-icon` | `string` | `home` | — | — |
+| `home-label` | `string` | пусто | — | — |
+| `root-class` | `string` | пусто | — | — |
+| `item-class` | `string` | пусто | — | — |
+| `link-class` | `string` | пусто | — | — |
+| `current-class` | `string` | пусто | — | — |
+| `separator-class` | `string` | пусто | — | — |
+| `container-class` | `string` | пусто | — | — |
+| `aria-label` | `string` | `Breadcrumb` | — | — |
+| `expand-label` | `string` | `Show hidden breadcrumbs` | — | — |
+| `expand-on-ellipsis` | `boolean` | `true` | — | — |
+| `max-items` | `number` | `4` | — | — |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getCapturedItems()` | — | не описано | — |
+| `getDisplayItems()` | — | не описано | — |
+| `setState()` | — | не описано | — |
+| `onItemClick()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-breadcrumb-click` | не описан | — |
+
+### Доступность
+
+- Роль: навигация (`navigation`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Enter on links`, `Enter or Space on the ellipsis button`.
+- Фокус: Нативные ссылки и кнопка с многоточием используют `focus-visible` только для клавиатуры; текущая страница не входит в порядок табуляции.
+
+### Минимальная разметка
 
 ```html
 <sf-breadcrumbs></sf-breadcrumbs>
 ```
 
-## Доступность
-
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/breadcrumbs`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-breadcrumbs`

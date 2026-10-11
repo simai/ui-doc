@@ -12,10 +12,6 @@ Admin Menu объединяет навигацию, поиск, вложенны
 Его следует использовать целиком, а не собирать прикладное меню напрямую из
 низкоуровневого `component.admin-menu`.
 
-Идентификатор: `smart.admin-menu`. Компонент доступен для проверки, но ещё не
-прошёл полную продуктовую приёмку; жизненный цикл source manifest —
-экспериментальный.
-
 Компонент принадлежит Larena: он живёт в репозитории `simai/larena-ui` (папка
 `components/`, лицензия Apache-2.0), а не в выпуске Framework, и подключается
 как пакет компонентов Loader с именем `larena`. Чтобы элемент загрузился,
@@ -27,16 +23,6 @@ Admin Menu объединяет навигацию, поиск, вложенны
 
 :::example {id="smart-components/admin-menu/overview" label="Навигация с четырьмя уровнями"}
 :::
-
-## Теги и подключение
-
-Custom Elements: `<sf-admin-menu>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-admin-menu`, в файле правил пакета `larena` (`smart/rule.js`).
-
-Поставляемые ассеты пакета `larena` (он собирается из `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components`):
-- `smart/admin-menu/js/admin-menu.js`
-- `smart/admin-menu/template/default.js`
 
 ## Зависимости
 
@@ -50,62 +36,96 @@ Loader-статус: `registered`. Loader-правило: `cl-admin-menu`, в ф
 настройки и координация зависимостей принадлежат этому составному
 Smart-компоненту.
 
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `"default"` | `—` |
-| `brand` | `brand` | `String` | `""` | `—` |
-| `logo` | `logo` | `String` | `""` | `—` |
-| `logo-href` | `logoHref` | `String` | `"#"` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `"Admin menu"` | `—` |
-| `searchable` | `searchable` | `Boolean` | `false` | `—` |
-| `collapsible` | `collapsible` | `Boolean` | `false` | `—` |
-| `settings` | `settings` | `Boolean` | `true` | `—` |
-| `settings-title` | `settingsTitle` | `String` | `"Menu settings"` (на русской странице — «Настройки меню») | `—` |
-| `compact` | `compact` | `Boolean` | `false` | `—` |
-| `search-placeholder` | `searchPlaceholder` | `String` | `"Search sections"` (на русской странице — «Поиск по разделам») | `—` |
-| `count` | `count` | `Number` | `0` | `—` |
-| `toggle-label` | `toggleLabel` | `String` | `"Menu"` (на русской странице — «Меню») | `—` |
-| `panel-class` | `panelClass` | `String` | `""` | `—` |
-| `root-class` | `rootClass` | `String` | `""` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`applyMenuItemSettings()`, `beforeRender()`, `bindContextEvent()`, `buildPanels()`, `captureInitialItems()`, `closeContextMenu()`, `connectedCallback()`, `contextEvent()`, `createDivider()`, `deleteItem()`, `disconnectItemObserver()`, `disconnectedCallback()`, `findItemByPanelId()`, `flattenMenuItems()`, `get bottomItems()`, `get items()`, `getDragAfterElement()`, `getItemRef()`, `getMainMenuSettings()`, `getMenuItemSettings()`, `getPortalContainer()`, `getSearchResults()`, `isContextMenuEvent()`, `isSameVisibleState()`, `itemNodeToData()`, `makeDraggable()`, `mapItems()`, `normalizeSearchText()`, `observeItemChildren()`, `observeMainResize()`, `openContextMenu()`, `openSearchResult()`, `patchMenuItemSettings()`, `persistMenuSettings()`, `pruneItemRefs()`, `removeMenuItemSettings()`, `renderContextMenu()`, `saveMenuSettings()`, `saveNewItemsData()`, `scheduleOverflowUpdate()`, `scoreSearchItem()`, `startSearch()`, `syncItemsOrderFromContainer()`, `toggleCompact()`, `toggleHidden()`, `toggleItemVisibility()`, `toggleMenuSettings()`, `toggleOpen()`, `togglePanel()`, `unbindContextEvent()`, `updateItemByPanelId()`, `updateMenuItemHeight()`, `updateOverflow()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
-
-```html
-<sf-admin-menu></sf-admin-menu>
-```
-
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-admin-menu>` |
+| Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
+| Контракт | `smart.admin-menu`, версия `1.1.0` |
+| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | `host-required` |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `brand` | `string` | пусто | — | — |
+| `logo` | `string` | пусто | — | — |
+| `logo-href` | `string` | `#` | — | — |
+| `aria-label` | `string` | `Admin menu` | не короче 1 | — |
+| `searchable` | `boolean` | `false` | — | — |
+| `collapsible` | `boolean` | `false` | — | — |
+| `settings` | `boolean` | `true` | — | — |
+| `settings-title` | `string` | `Menu settings` | — | — |
+| `compact` | `boolean` | `false` | — | — |
+| `persistence-mode` | `string` | `local` | `local`, `external` | — |
+| `settings-mode` | `string` | `user` | `user`, `system` | — |
+| `settings-revision` | `integer` | `0` | от 0 | — |
+| `system-settings-revision` | `integer` | `0` | от 0 | — |
+| `allow-system-settings` | `boolean` | `false` | — | — |
+| `search-placeholder` | `string` | `Search sections` | — | — |
+| `toggle-label` | `string` | `Menu` | — | — |
+| `panel-class` | `string` | пусто | — | — |
+| `root-class` | `string` | пусто | — | — |
+| `search-mode` | `string` | `row` | `row`, `panel` | Расположение поиска: строка под шапкой или панель, открываемая значком лупы в шапке. |
+| `search-label` | `string` | `Search the admin (Ctrl+K)` | — | Доступное имя и подсказка лупы, открывающей панель поиска. |
+| `search-shortcut` | `string` | `mod+k` | — | Клавиша, которая открывает поиск из любого места страницы; пустое значение отключает её. |
+| `search-hint` | `string` | пусто | — | Короткая строка под пустым запросом, если она есть у хоста. |
+| `search-keys-hint` | `string` | `↑↓ select · Enter open · Esc close` | — | Строка подсказок по клавишам внизу панели поиска. |
+| `search-title` | `string` | пусто | — | Заголовок над полем поиска в панели навигации. |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `applyExternalSettingsState()` | `state: object, target: any` | `null` | Применяет состояние и дерево, вычисленные бэкендом. |
+| `applySettingsResult()` | `result: object` | `null` | Фиксирует успешный ответ внешнего сохранения. |
+| `applySettingsError()` | `error: object` | `null` | Сохраняет черновик и показывает состояние ошибки или конфликта. |
+| `setCompact()` | `compact: boolean` | `boolean` | Включает компактный режим навигации. |
+| `toggleMenuSettings()` | — | `null` | Входит в редактор настроек или выходит из него. |
+| `refresh()` | — | `object` | Повторно читает меню навигации у хоста после того, как что-то вне меню изменило его содержимое (звёздочка в заголовке страницы). На меню элементов не влияет. |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-admin-menu-compact-change` | `{ compact: boolean, source: string }` | Уведомляет оболочку хоста о режиме ширины. |
+| `sf-admin-menu-search` | не описан | — |
+| `sf-admin-menu-settings-cancel` | `{ target?: any }` | Отбрасывает локальный черновик. |
+| `sf-admin-menu-settings-mode-change` | `{ target: any }` | Запрашивает состояние для другого уровня настроек. |
+| `sf-admin-menu-settings-refresh` | `{ target: any, base_revision: integer, profile: object }` | Запрашивает актуальное состояние бэкенда после конфликта. |
+| `sf-admin-menu-settings-reset` | `{ target: any, base_revision: integer }` | Запрашивает сброс выбранного уровня настроек. |
+| `sf-admin-menu-settings-save` | `{ target: any, base_revision: integer, profile: object }` | Запрашивает сохранение текущих изменений. |
+| `sf-host-port-request` | `{ component: object, context: object }` | Запрашивает у страницы порт хоста при подключении. Страница, ответившая `simai.admin-navigation-port`, получает навигационную оболочку; если страница не отвечает, отображается меню элементов без изменений. |
+| `sf-admin-menu-navigate` | `{ key: string, href: string\|null }` | Хост подтвердил применение item.open: страница теперь принадлежит этой строке. Для хоста, который выполняет переход в собственном маршрутизаторе, а не по адресу из ответа. |
+
+### Доступность
+
+- Роль: навигация (`navigation`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Enter`, `Space`, `Escape`.
+- Фокус: Контекстные меню после отрисовки переносят фокус на первый доступный нативный пункт. Escape возвращает фокус на нативный элемент, открывший меню; Tab/Shift+Tab закрывают меню и продолжают от него. Фокус снаружи сохраняется. Если сохранение или отмена удаляет открывший элемент, потерянный фокус `body` возвращается на элемент управления настройками или другой доступный элемент управления в этом Admin Menu. Общее владение порталом и устаревшие колбэки защищены. Геометрия всплывающего окна следует за нативным открывающим элементом, включая Smart-элементы с `display: contents`, LTR/RTL, адаптивное перемещение, изменения содержимого, шрифта и окна просмотра; `--sf-context-menu-viewport-space` выводится из шкалы отступов. Внутренняя прокрутка сохраняет меню; прокрутка документа снаружи закрывает его. Слои поиска и вложенного перехода делают неактивные панели инертными. Открытие вложенного слоя переносит фокус на его локализованную кнопку «Назад»; «Назад» возвращает фокус на соответствующий триггер дерева. Компактный поиск переносит фокус на открывшееся поле ввода. Размещение поиска и направленные шевроны учитывают LTR или RTL.
+
+### Минимальная разметка
+
+```html
+<sf-admin-menu aria-label="Admin menu" searchable collapsible persistence-mode="external"></sf-admin-menu>
+```
+
+### Источник
 
 - `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components/src/smart/admin-menu`
 - `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`

@@ -5,81 +5,84 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Alert
 
-Идентификатор: `smart.alert`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-alert>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-alert`.
-
-Поставляемые ассеты:
-Не поставляется в текущем пакете: `smart/alert/css/alert.css`.
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/alert/js/alert.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/alert/template/default.js`
-
-## Зависимости
-
-- `component.alerts`
-- `component.buttons`
-- `component.icon-buttons`
-- `component.icons`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `status` | `status` | `String` | `'neutral'` | `neutral`, `info`, `success`, `warning`, `error` |
-| `appearance` | `appearance` | `String` | `'default'` | `default`, `outlined`, `flat` |
-| `icon` | `icon` | `String` | `''` | `—` |
-| `title` | `title` | `String` | `''` | `—` |
-| `supporting-text` | `supportingText` | `String` | `''` | `—` |
-| `action-text` | `actionText` | `String` | `''` | `—` |
-| `action` | `action` | `String` | `'action'` | `—` |
-| `secondary-action-text` | `secondaryActionText` | `String` | `''` | `—` |
-| `secondary-action` | `secondaryAction` | `String` | `'secondary'` | `—` |
-| `closable` | `closable` | `Boolean` | `false` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-
-Прежние имена продолжают работать и считаются устаревшими: `type` — как `status`, `variant` — как `appearance`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`addAlertListeners()`, `close()`, `dismiss()`, `get action()`, `get actionText()`, `get closable()`, `get icon()`, `get secondaryAction()`, `get secondaryActionText()`, `get supportingText()`, `get title()`, `get type()`, `get variant()`, `onAction()`, `onClose()`, `removeAlertListeners()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
-
-```html
-<sf-alert></sf-alert>
-```
-
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-alert>` |
+| Назначение | Постоянное встроенное уведомление с семантическими ролями, необязательными действиями и закрытием. |
+| Контракт | `smart.alert`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `status` | `string` | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | О чём сообщает уведомление, в общем словаре статусов. Также принимаются значения clear и danger; они означают neutral и error. |
+| `appearance` | `string` | `default` | `default`, `outlined`, `flat` | Вид уведомления: заливка, контур или плоский. |
+| `icon` | `string` | пусто | — | Необязательное переопределение иконки. Используйте `none`, чтобы скрыть семантическую иконку. |
+| `title` | `string` | пусто | — | Короткий заголовок сообщения. |
+| `supporting-text` | `string` | пусто | — | Дополнительный основной текст обычного размера. |
+| `action-text` | `string` | пусто | — | Видимая подпись основного необязательного действия. |
+| `action` | `string` | `action` | — | Стабильное значение действия, передаваемое в sf-alert-action. |
+| `secondary-action-text` | `string` | пусто | — | Видимая подпись вторичного необязательного действия. |
+| `secondary-action` | `string` | `secondary` | — | Стабильное значение вторичного действия, передаваемое в sf-alert-action. |
+| `closable` | `boolean` | `false` | — | Отображает явно названное действие закрытия. |
+| `close-label` | `string` | `Close alert` | — | Локализованное доступное имя действия закрытия. |
+| `root-class` | `string` | пусто | — | — |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `appearance` | `variant` | работает и предупреждает | 2026-12-01 |
+| `status` | `type` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
+| `status="neutral"` | `status="clear"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `close()` | — | не описано | — |
+| `onAction()` | — | не описано | — |
+| `onClose()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-alert-action` | не описан | — |
+| `sf-alert-close` | не описан | — |
+
+### Доступность
+
+- Доступное имя: внутренний.
+- Клавиши: `Tab`.
+- Фокус: Действия используют нативное поведение `focus-visible`; после закрытия приложение возвращает фокус, только если он был внутри удалённого уведомления.
+
+### Минимальная разметка
+
+```html
+<sf-alert type="info" title="Update available" supporting-text="Save your changes before refreshing."></sf-alert>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/alert`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-alert`

@@ -5,63 +5,6 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Steps
 
-Идентификатор: `smart.steps`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — экспериментальный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-steps>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-steps`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps/js/steps.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps/template/default.js`
-
-## Зависимости
-
-- `component.icons`
-- `component.step`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `—` |
-| `items` | `items` | `String` | `[]` | `—` |
-| `current` | `current` | `Number` | `0` | `—` |
-| `error-step` | `errorStep` | `String` | `''` | `—` |
-| `separator-icon` | `separatorIcon` | `String` | `'chevron_right'` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `'Steps'` | `—` |
-| `completed-label` | `completedLabel` | `String` | `'Completed'` | `—` |
-| `error-label` | `errorLabel` | `String` | `'Error'` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get computedItems()`, `get current()`, `get errorStep()`, `get items()`, `get separatorIcon()`, `get size()`, `get state()`, `goToStep()`, `onStepChange()`, `setState()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `sf-step-change` | Компонент-специфичное событие из source-класса |
-
 ## Минимальная разметка
 
 ```html
@@ -85,7 +28,65 @@ Loader-статус: `registered`. Loader-правило: `cl-steps`.
 Иконки и разделители декоративны и не заменяют текст состояния. Приложение
 остаётся владельцем перехода, валидации и основного управления «Назад/Далее».
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-steps>` |
+| Назначение | Smart-компонент Steps из SIMAI Framework. |
+| Контракт | `smart.steps`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `size` | `string` | `1` | — | — |
+| `items` | `string` | `[]` | — | — |
+| `current` | `number` | `0` | — | — |
+| `error-step` | `string` | пусто | — | — |
+| `separator-icon` | `string` | `chevron_right` | — | — |
+| `aria-label` | `string` | `Steps` | — | — |
+| `completed-label` | `string` | `Completed` | — | — |
+| `error-label` | `string` | `Error` | — | — |
+| `root-class` | `string` | пусто | — | — |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `setState()` | — | не описано | — |
+| `goToStep()` | — | не описано | — |
+| `onStepChange()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-step-change` | не описан | — |
+
+### Доступность
+
+- Роль: группа (`group`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Enter`, `Space`.
+- Фокус: Каждая доступная нативная кнопка шага остаётся доступной с клавиатуры и использует общий индикатор `focus-visible`. Текущий шаг передаёт `aria-current=step`; статусы завершения и ошибки включены в доступные имена.
+
+### Минимальная разметка
+
+```html
+<sf-steps></sf-steps>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-steps`

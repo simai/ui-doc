@@ -5,81 +5,6 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Dropdown
 
-Идентификатор: `smart.dropdown`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-dropdown>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/dropdown/js/dropdown.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/dropdown/template/default.js`
-
-## Зависимости
-
-- `component.dropdown`
-- `component.icon-buttons`
-- `component.inputs`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
-| `appearance` | `appearance` | `String` | `'outlined'` | `filled`, `outlined` |
-| `mode` | `mode` | `String` | `'select'` | `['tag', 'select']` |
-| `multiple` | `multiple` | `Boolean` | `false` | `—` |
-| `portal` | `portal` | `Boolean` | `true` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-| `name` | `name` | `String` | `''` | `—` |
-| `label` | `label` | `String` | `''` | `—` |
-| `required` | `required` | `Boolean` | `false` | `—` |
-| `placeholder` | `placeholder` | `String` | `''` | `—` |
-| `search-placeholder` | `searchPlaceholder` | `String` | `'Placeholder'` | `—` |
-| `search` | `search` | `Boolean` | `true` | `—` |
-| `layout` | `layout` | `String` | `'list'` | `list`, `grid` |
-| `columns` | `columns` | `String` | `'6'` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `''` | `—` |
-
-Прежнее имя продолжает работать и считается устаревшим: `type` — как `appearance`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`beforeRender()`, `captureOptions()`, `closeDropdown()`, `connectedCallback()`, `dispatchDropdownChange()`, `get ariaLabel()`, `get componentName()`, `get disabled()`, `get hiddenValue()`, `get label()`, `get mode()`, `get multiple()`, `get name()`, `get options()`, `get placeholder()`, `get portal()`, `get required()`, `get search()`, `get searchPlaceholder()`, `get selectedOptions()`, `get selectedValue()`, `get selectedValues()`, `get size()`, `get templateName()`, `get triggerText()`, `get type()`, `get value()`, `get visibleOptions()`, `handleDocumentClick()`, `handleOptionClick()`, `handleOptionKeydown()`, `handleSearchInput()`, `handleTriggerClick()`, `openDropdown()`, `positionPortalList()`, `removeDocumentListeners()`, `removePortalListeners()`, `removeSelectedValue()`, `selectValue()`, `set value()`, `syncDocumentListeners()`, `syncPortalListeners()`, `toggleDropdown()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `change` | Изменился выбор. Имя для подписки |
-| `sf-dropdown:change` | Прежнее имя `change`, приходит с тем же detail |
-
-## Минимальная разметка
-
-```html
-<sf-dropdown></sf-dropdown>
-```
-
 ## Имя, подпись и пояснение
 
 `name` — машинное имя отправляемого значения, а `label` — видимая подпись
@@ -143,7 +68,83 @@ Loader-статус: `registered`. Loader-правило: `cl-dropdown`.
 API-страница подтверждает source-контракт, но не заменяет сценарную проверку
 доступности.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-dropdown>` |
+| Назначение | Доступный элемент одиночного или множественного выбора с поиском по вариантам и необязательным выводом в портал. |
+| Контракт | `smart.dropdown`, версия `1.2.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `appearance` | `string` | `outlined` | `filled`, `outlined` | Вид выпадающего списка: поле с заливкой или с контуром. |
+| `aria-label` | `string` | пусто | — | — |
+| `columns` | `string` | `6` | — | Сколько вариантов помещается в строку в раскладке-сетке. В списке игнорируется. |
+| `disabled` | `boolean` | `false` | — | — |
+| `label` | `string` | пусто | — | — |
+| `layout` | `string` | `list` | `list`, `grid` | Раскладка вариантов. В списке — один вариант в строке; в сетке — несколько в строке, и только так можно просмотреть сотню символов: их столбец никто не прокручивает до конца. В сетке вариант показывает изображение, а текст сохраняется как имя для поиска и подсказки при наведении. |
+| `mode` | `string` | `select` | `tag`, `select` | — |
+| `multiple` | `boolean` | `false` | — | Разрешает несколько значений с сохранением порядка выбора при сериализации. В режиме тегов множественный выбор включён по умолчанию. |
+| `name` | `string` | пусто | — | Имя нативного поля формы для выбранного машинного значения. |
+| `options` | `array` | `[]` | — | Варианты, переданные данными вместо дочерних `sf-list-item`: `[{text, value, type?, size?, icon?, selected?, disabled?, colorClass?, avatarImageUrl?, avatarTitle?, ariaLabel?, group?}]`. Строка или число используется и как подпись, и как значение. Родитель, отрисовывающий этот выпадающий список из шаблона, передаёт варианты так, потому что захват дочерних элементов означает их удаление, и родитель уже не сможет вернуть изменённый список. Идущие подряд варианты с одинаковым `group` выводятся под одним заголовком, чтобы длинный список показывал, откуда взят каждый его фрагмент, а не повторял это в каждой строке. |
+| `placeholder` | `string` | пусто | — | — |
+| `portal` | `boolean` | `true` | — | Привязывает всплывающее окно с помощью общего позиционирования Framework (`SF.Position`): нативный верхний слой, переворот, сдвиг и высота, ограниченная окном просмотра. Включено по умолчанию; `portal="false"` оставляет список в потоке. |
+| `required` | `boolean` | `false` | — | — |
+| `search` | `boolean` | `true` | — | — |
+| `search-placeholder` | `string` | `Placeholder` | — | — |
+| `size` | `string` | `1` | `1/2`, `1`, `2` | — |
+| `template` | `string` | `default` | `default` | — |
+| `value` | `string` | пусто | — | Выбранное машинное значение или список значений через запятую при множественном выборе. |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `appearance` | `type` | работает и предупреждает | 2026-12-01 |
+| `size="1/2"` | `size="1/3"` | работает и предупреждает | 2026-12-01 |
+| `size="2"` | `size="3"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `openDropdown()` | — | не описано | — |
+| `closeDropdown()` | — | не описано | — |
+| `toggleDropdown()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `change` | не описан | Выбор изменился; событие отправляется на элементе. Имя для привязки. |
+| `sf-dropdown:change` | не описан | Прежнее имя `change`: приходит с тем же `detail`, подписывайтесь на `change` |
+
+### Доступность
+
+- Роль: кнопка (`button`) со всплывающим списком (`listbox`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `ArrowDown`, `ArrowUp`, `Home`, `End`, `Enter`, `Space`, `Escape`.
+- Фокус: Переключатель — основная остановка Tab. Клавиши со стрелками открывают список и перемещают по доступным вариантам; Home и End перемещают в пределах списка; Enter или Space выбирают; Escape закрывает список и возвращает фокус на переключатель; Tab закрывает список и продолжает нативный обход. Поле поиска сохраняет нативное поведение Home и End при редактировании текста.
+
+### Минимальная разметка
+
+```html
+<sf-dropdown label="Статус" name="status" placeholder="Выберите статус"><sf-list-item value="open" text="Открыт"></sf-list-item><sf-list-item value="done" text="Готов"></sf-list-item></sf-dropdown>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/dropdown`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-dropdown`

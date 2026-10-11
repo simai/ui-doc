@@ -5,74 +5,6 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Checkbox
 
-Идентификатор: `smart.checkbox`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-checkbox>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-checkbox`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/checkbox/css/checkbox.css`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/checkbox/js/checkbox.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/checkbox/template/default.css`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/checkbox/template/default.js`
-
-## Зависимости
-
-- `component.checkbox`
-- `smart.icons`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
-| `label` | `label` | `String` | `''` | `—` |
-| `description` | `description` | `String` | `''` | `—` |
-| `help` | `help` | `String` | `''` | `—` |
-| `position` | `position` | `String` | `'start'` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `checked` | `checked` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `indeterminate` | `indeterminate` | `Boolean` | `false` | `—` |
-| `name` | `name` | `String` | `''` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-| `error` | `error` | `Boolean` | `false` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get checked()`, `get description()`, `get disabled()`, `get error()`, `get help()`, `get indeterminate()`, `get label()`, `get name()`, `get size()`, `get state()`, `get stateIcon()`, `get value()`, `getInputElement()`, `isChecked()`, `onBlur()`, `onChange()`, `onFocus()`, `set checked()`, `set value()`, `setBooleanStateAttribute()`, `setChecked()`, `setDisabled()`, `setIndeterminate()`, `setState()`, `syncInputState()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `change` | Изменилось состояние отметки; нативное событие всплывает от внутреннего поля. Имя для подписки |
-
-## Минимальная разметка
-
-```html
-<sf-checkbox></sf-checkbox>
-```
-
 ## Название варианта и пояснение
 
 `name` — машинное имя отправляемого поля, `value` — его машинное значение,
@@ -96,7 +28,75 @@ Loader-статус: `registered`. Loader-правило: `cl-checkbox`.
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-checkbox>` |
+| Назначение | Smart-компонент Checkbox из SIMAI Framework. |
+| Контракт | `smart.checkbox`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `size` | `string` | `1` | `1/2`, `1`, `2` | Токен размера чекбокса. |
+| `label` | `string` | пусто | — | — |
+| `description` | `string` | пусто | — | — |
+| `help` | `string` | пусто | — | — |
+| `position` | `string` | `start` | `start`, `end` | Логическое расположение индикатора относительно текста. |
+| `root-class` | `string` | пусто | — | — |
+| `checked` | `boolean` | `false` | — | — |
+| `disabled` | `boolean` | `false` | — | — |
+| `indeterminate` | `boolean` | `false` | — | Смешанное визуальное состояние чекбокса, обобщающего связанные варианты. |
+| `name` | `string` | пусто | — | — |
+| `value` | `string` | пусто | — | — |
+| `error` | `boolean` | `false` | — | Недопустимое состояние; нативное поле ввода публикует `aria-invalid`. |
+| `aria-label` | `string` | пусто | — | Доступное имя чекбокса без видимой подписи. |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getInputElement()` | — | не описано | — |
+| `isChecked()` | — | `boolean` | Возвращает текущее нативное состояние checked. |
+| `setChecked()` | — | не описано | — |
+| `setIndeterminate()` | — | не описано | — |
+| `setDisabled()` | — | не описано | — |
+| `setBooleanStateAttribute()` | — | не описано | — |
+| `setState()` | — | не описано | — |
+| `onChange()` | — | не описано | — |
+| `onFocus()` | — | не описано | — |
+| `onBlur()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `change` | не описан | Изменилось состояние checked; нативное событие всплывает от внутреннего флажка, который является его целью. |
+
+### Доступность
+
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Space`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
+
+```html
+<sf-checkbox></sf-checkbox>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/checkbox`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-checkbox`

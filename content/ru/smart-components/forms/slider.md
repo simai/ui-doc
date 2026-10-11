@@ -48,3 +48,69 @@ Framework. Цветовые роли, отступы и радиусы зада�
 
 :::example {id="components/slider/smart-customization" label="Результат"}
 :::
+
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-slider>` |
+| Назначение | Smart-компонент Slider из SIMAI Framework. |
+| Контракт | `smart.slider`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `button-type` | `string` | `primary` | — | — |
+| `button-size` | `string` | `1` | — | — |
+| `dots` | `boolean` | `true` | — | — |
+| `dots-type` | `string` | `primary-dark` | — | — |
+| `dots-size` | `string` | `2` | — | — |
+| `thumbs` | `boolean` | `false` | — | — |
+| `thumbs-class` | `string` | пусто | — | — |
+| `thumb-class` | `string` | пусто | — | — |
+| `arrows` | `boolean` | `true` | — | — |
+| `loop` | `boolean` | `false` | — | — |
+| `space-between` | `number` | `12` | — | — |
+| `speed` | `number` | `450` | — | — |
+| `root-class` | `string` | пусто | — | — |
+| `slide-class` | `string` | пусто | — | — |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getSlider()` | — | не описано | — |
+| `refresh()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-slide-change` | не описан | — |
+
+### Доступность
+
+- Доступное имя: рекомендуется.
+- Клавиши: `Tab`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
+
+```html
+<sf-slider></sf-slider>
+```
+
+### Источник
+
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/slider`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-slider`

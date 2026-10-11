@@ -5,103 +5,9 @@ description: "Навигация по страницам с source-driven сос
 
 # Pagination
 
-Идентификатор: `smart.pagination`. Жизненный цикл — экспериментальный.
-
 Компонент отображает именованную навигацию по страницам, но не загружает данные и
 не придумывает URL. Приложение передаёт `current`, `total` и `page-size`, слушает
 события и обновляет свой источник данных.
-
-## Теги и подключение
-
-Custom Elements: `<sf-pagination>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-pagination`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/pagination/js/pagination.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/pagination/template/default.js`
-
-## Зависимости
-
-- `component.pagination`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `"default"` | `—` |
-| `top` | `top` | `Boolean` | `true` | `—` |
-| `middle` | `middle` | `Boolean` | `true` | `—` |
-| `bottom` | `bottom` | `Boolean` | `true` | `—` |
-| `top-class` | `topClass` | `String` | `""` | `—` |
-| `main-class` | `mainClass` | `String` | `""` | `—` |
-| `bottom-class` | `bottomClass` | `String` | `""` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `"Страницы результатов"` | `—` |
-| `pages-label` | `pagesLabel` | `String` | `"Страницы:"` | `—` |
-| `page-label` | `pageLabel` | `String` | `"Страница"` | `—` |
-| `previous-label` | `previousLabel` | `String` | `"Предыдущая страница"` | `—` |
-| `next-label` | `nextLabel` | `String` | `"Следующая страница"` | `—` |
-| `last-label` | `lastLabel` | `String` | `"Последняя"` | `—` |
-| `total-label` | `totalLabel` | `String` | `"Всего:"` | `—` |
-| `selected-label` | `selectedLabel` | `String` | `"Отмечено:"` | `—` |
-| `selected-count` | `selectedCount` | `Number` | `0` | целое число от 0 до `total` |
-| `show-more-text` | `showMoreText` | `String` | `"Показать ещё"` | `—` |
-| `current` | `current` | `Number` | `1` | `—` |
-| `total` | `total` | `Number` | `10` | `—` |
-| `page-size` | `pageSize` | `Number` | `10` | `—` |
-| `page-sizes` | `pageSizes` | `String` | `"10,20,30,40"` | положительные числа через запятую |
-| `show-page-size` | `showPageSize` | `Boolean` | `true` | `—` |
-| `page-size-label` | `pageSizeLabel` | `String` | `"На странице:"` | `—` |
-| `show-actions` | `showActions` | `Boolean` | `true` | `—` |
-| `actions` | `actions` | `String` | `[]` | `—` |
-| `action` | `action` | `String` | `""` | `—` |
-| `action-apply-text` | `actionApplyText` | `String` | `"Применить"` | `—` |
-| `show-action-for-all` | `showActionForAll` | `Boolean` | `false` | `—` |
-| `action-for-all` | `actionForAll` | `Boolean` | `false` | `—` |
-| `action-for-all-label` | `actionForAllLabel` | `String` | `"Для всех"` | `—` |
-| `actions-label` | `actionsLabel` | `String` | `"Действие с выбранными элементами"` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`applyAction()`, `get action()`, `get actionApplyText()`, `get actionForAll()`,
-`get actionForAllLabel()`, `get actions()`, `get actionsLabel()`, `get ariaLabel()`,
-`get bottom()`, `get bottomClass()`, `get current()`, `get lastLabel()`,
-`get mainClass()`, `get middle()`, `get nextLabel()`, `get pageCount()`,
-`get pageItems()`, `get pageLabel()`, `get pageSize()`, `get pageSizeLabel()`,
-`get pageSizes()`, `get pagesLabel()`, `get previousLabel()`,
-`get selectedCount()`, `get selectedLabel()`, `get showActionForAll()`,
-`get showActions()`, `get showMoreText()`, `get showPageSize()`, `get state()`,
-`get top()`, `get topClass()`, `get total()`, `get totalLabel()`,
-`getBottomSection()`, `getMainSection()`, `getTopSection()`, `goToPage()`,
-`lastPage()`, `onPageChange()`, `onShowMore()`, `setAction()`,
-`setActionForAll()`, `setPageSize()`, `setState()`, `showMore()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `sf-action-apply` | Компонент-специфичное событие из source-класса |
-| `sf-action-change` | Компонент-специфичное событие из source-класса |
-| `sf-action-for-all-change` | Компонент-специфичное событие из source-класса |
-| `sf-page-change` | Компонент-специфичное событие из source-класса |
-| `sf-page-size-change` | Компонент-специфичное событие из source-класса |
-| `sf-show-more` | Компонент-специфичное событие из source-класса |
 
 ## Минимальная разметка
 
@@ -131,7 +37,114 @@ Framework показывает фокус при клавиатурной нав
 минимальный контракт пагинации. Количество выбранных строк всегда передаёт
 приложение через `selected-count`; компонент не читает состояние соседней таблицы.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-pagination>` |
+| Назначение | Навигация по коллекции, разбитой на пронумерованные страницы, на основе источника данных. |
+| Контракт | `smart.pagination`, версия `1.0.1` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | принят в продукт |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | Имя шаблона. |
+| `top` | `boolean` | `true` | — | Показывает совместимый блок «показать ещё». |
+| `middle` | `boolean` | `true` | — | Показывает навигацию по страницам и сводку по коллекции. |
+| `bottom` | `boolean` | `true` | — | Разрешает совместимый раздел пакетных действий. |
+| `top-class` | `string` | пусто | — | Утилитарные классы Framework для раздела «показать ещё». |
+| `main-class` | `string` | пусто | — | Утилитарные классы Framework для раздела навигации. |
+| `bottom-class` | `string` | пусто | — | Утилитарные классы Framework для раздела пакетных действий. |
+| `aria-label` | `string` | `Result pages` | — | Доступное имя навигационного ориентира (landmark). |
+| `pages-label` | `string` | `Pages:` | — | Видимая подпись перед элементами управления страницами. |
+| `page-label` | `string` | `Page` | — | Доступный префикс для действия с номером страницы. |
+| `previous-label` | `string` | `Previous page` | — | Доступное имя действия перехода на предыдущую страницу. |
+| `next-label` | `string` | `Next page` | — | Доступное имя действия перехода на следующую страницу. |
+| `last-label` | `string` | `Last` | — | Видимая подпись совместимого действия перехода на последнюю страницу. |
+| `total-label` | `string` | `Total:` | — | Видимая подпись для общего количества элементов. |
+| `selected-label` | `string` | `Selected:` | — | Видимая подпись для количества выбранных элементов. |
+| `selected-count` | `integer` | `0` | от 0 | Количество выбранных элементов, ограниченное диапазоном от нуля до общего количества. |
+| `show-more-text` | `string` | `Show more` | — | Подпись совместимого действия «показать ещё». |
+| `current` | `integer` | `1` | от 1 | Текущий номер страницы, начиная с единицы. |
+| `total` | `integer` | `10` | от 0 | Неотрицательное общее число элементов. |
+| `page-size` | `integer` | `10` | от 1 | Положительное число элементов на странице. |
+| `page-sizes` | `string` | `10,20,30,40` | — | Варианты размера страницы — положительные числа через запятую. |
+| `show-page-size` | `boolean` | `true` | — | Показывает выбор размера страницы для непустой коллекции. |
+| `page-size-label` | `string` | `Per page:` | — | Видимая и доступная подпись выбора размера страницы. |
+| `show-actions` | `boolean` | `true` | — | Показывает групповые действия, если они переданы. |
+| `actions` | `string` | пусто | — | Определения совместимых пакетных действий, разделённые вертикальной чертой. |
+| `action` | `string` | пусто | — | Значение выбранного группового действия. |
+| `action-apply-text` | `string` | `Apply` | — | Подпись кнопки применения пакетного действия. |
+| `show-action-for-all` | `boolean` | `false` | — | Показывает совместимый переключатель «все элементы». |
+| `action-for-all` | `boolean` | `false` | — | Текущее значение переключателя «все элементы». |
+| `action-for-all-label` | `string` | `For all` | — | Подпись переключателя «все элементы». |
+| `actions-label` | `string` | `Action for the selected records` | — | Доступное имя селектора пакетного действия. |
+| `action-choose-label` | `string` | `Choose an action` | — | Placeholder селектора пакетного действия, отображаемый, пока действие не выбрано. |
+| `actions-region-label` | `string` | `Actions for the selected` | — | Доступное имя панели, которая появляется, пока строки отмечены. |
+| `clear-selection-label` | `string` | `Clear the selection` | — | Доступное имя и подсказка элемента управления, сбрасывающего выделение. |
+| `count-known` | `boolean` | `true` | — | Известно ли количество записей. Хост, который не считает каждый ответ, задаёт false, и представление предлагает подсчитать количество вместо того, чтобы показывать его. |
+| `can-count` | `boolean` | `false` | — | Может ли хост подсчитать количество по запросу. Без этого представление ничего не предлагает и ничего не запрашивает. |
+| `counting` | `boolean` | `false` | — | Счётчик загружается; вместо числа отображается короткое ожидание. |
+| `has-next` | `boolean` | `false` | — | Существует ли следующая страница. Определяет переход вперёд и «Показать ещё», когда общее количество не передано. |
+| `show-count-label` | `string` | `Show the number` | — | Текст элемента управления, который запрашивает у хоста количество. |
+| `counting-label` | `string` | `Counting` | — | Доступное имя короткого ожидания, которое отображается, пока загружается счётчик. |
+| `first-label` | `string` | `First` | — | Доступное имя и подсказка элемента управления, переходящего на первую страницу. |
+| `page-field-label` | `string` | `Page:` | — | Подпись поля для номера страницы. |
+| `show-more-busy` | `boolean` | `false` | — | Отмечает кнопку «Показать ещё» как занятую, пока хост загружает следующую порцию; она отключена и показывает индикатор загрузки. |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getTopSection()` | — | не описано | — |
+| `getMainSection()` | — | не описано | — |
+| `getBottomSection()` | — | не описано | — |
+| `goToPage()` | — | не описано | — |
+| `showMore()` | — | не описано | — |
+| `setPageSize()` | — | не описано | — |
+| `setAction()` | — | не описано | — |
+| `setActionForAll()` | — | не описано | — |
+| `setState()` | — | не описано | — |
+| `onPageChange()` | — | не описано | — |
+| `onShowMore()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-action-apply` | не описан | — |
+| `sf-action-change` | не описан | — |
+| `sf-action-for-all-change` | не описан | — |
+| `sf-count-request` | не описан | — |
+| `sf-page-change` | не описан | — |
+| `sf-page-size-change` | не описан | — |
+| `sf-selection-clear` | не описан | — |
+| `sf-show-more` | не описан | — |
+
+### Доступность
+
+- Роль: навигация (`navigation`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`.
+- Фокус: Tab переходит только к включённым нативным действиям. Фокус использует общее оформление focus-visible только для клавиатуры и остаётся видимым в режиме forced colors; пропущенные страницы не получают фокус.
+
+### Минимальная разметка
+
+```html
+<sf-pagination aria-label="Страницы результатов поиска" current="2" total="96" page-size="10" top="false" bottom="false" show-page-size="false"></sf-pagination>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/pagination`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-pagination`

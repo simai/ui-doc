@@ -5,103 +5,105 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Datepicker
 
-Идентификатор: `smart.datepicker`. Smart-компонент готов к использованию; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-datepicker>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-datepicker`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/datepicker/js/datepicker.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/datepicker/template/default.js`
-
-## Зависимости
-
-- `component.datepicker`
-- `smart.buttons`
-- `smart.icon-buttons`
-- `smart.inputs`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-| `date` | `date` | `String` | `''` | `—` |
-| `start-value` | `startValue` | `String` | `''` | `—` |
-| `end-value` | `endValue` | `String` | `''` | `—` |
-| `max-date` | `maxDate` | `String` | `''` | `—` |
-| `min-date` | `minDate` | `String` | `''` | `—` |
-| `range` | `range` | `Boolean` | `false` | `—` |
-| `month` | `month` | `Number` | `null` | `—` |
-| `year` | `year` | `Number` | `null` | `—` |
-| `context` | `context` | `String` | `''` | `—` |
-| `week-start` | `weekStart` | `Number` | `1` | `—` |
-| `locale` | `locale` | `String` | `''` | `—` |
-| `format` | `format` | `String` | `'DD.MM.YYYY'` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `close-on-select` | `closeOnSelect` | `Boolean` | `true` | `—` |
-| `input` | `input` | `Boolean` | `true` | `—` |
-| `open` | `open` | `Boolean` | `false` | `—` |
-| `portal` | `portal` | `Boolean` | `true` | `—` |
-| `input-type` | `inputType` | `String` | `'bordered'` | `—` |
-| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
-| `input-size` | `inputSize` | `String` | `'1'` | Прежнее имя `size`; работает, `size` важнее |
-| `input-name` | `inputName` | `String` | `''` | `—` |
-| `placeholder` | `placeholder` | `String` | `''` | `—` |
-| `icon-start` | `iconStart` | `String` | `'calendar_today'` | `—` |
-| `input-root-class` | `inputRootClass` | `String` | `''` | `—` |
-| `mask` | `mask` | `Boolean` | `false` | `—` |
-| `mask-pattern` | `maskPattern` | `String` | `'00.00.0000'` (из `format`) | `—` |
-| `mask-lazy` | `maskLazy` | `String` | `false` | `—` |
-| `mask-placeholder-char` | `maskPlaceholderChar` | `String` | `'_'` | `—` |
-| `mask-options` | `maskOptions` | `String` | `''` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`closePanel()`, `connectedCallback()`, `emitChange()`, `get componentName()`, `get contextMode()`, `get data()`, `get date()`, `get days()`, `get displayDate()`, `get displayValue()`, `get endDate()`, `get endValue()`, `get format()`, `get formattedEndValue()`, `get formattedStartValue()`, `get formattedValue()`, `get iconStart()`, `get input()`, `get inputName()`, `get inputRootClass()`, `get inputSize()`, `get inputType()`, `get locale()`, `get mask()`, `get maskLazy()`, `get maskOptions()`, `get maskPattern()`, `get maskPlaceholderChar()`, `get maxDate()`, `get minDate()`, `get month()`, `get months()`, `get normalizedRange()`, `get open()`, `get placeholder()`, `get portal()`, `get primaryDate()`, `get range()`, `get selectedDate()`, `get startDate()`, `get startValue()`, `get templateName()`, `get value()`, `get weekStart()`, `get year()`, `get yearPageEnd()`, `get yearPageStart()`, `get years()`, `getClosestEnabledMonth()`, `getYearPageStart()`, `handleDocumentClick()`, `handleDocumentKeydown()`, `handleInputClick()`, `handlePanelClick()`, `openPanel()`, `positionPanel()`, `removeOverlayListeners()`, `selectDate()`, `selectMonth()`, `selectRangeDate()`, `selectYear()`, `set date()`, `set endValue()`, `set month()`, `set startValue()`, `set value()`, `set year()`, `setContext()`, `setMaxDate()`, `setMinDate()`, `shiftYearPage()`, `syncOverlayListeners()`, `toggleContext()`, `togglePanel()`, `upgradeProperty()`.
-
-`left-icon` поддерживается как прежнее имя. В новой разметке используйте
-`icon-start`: положение календаря тогда остаётся правильным и в LTR, и в RTL.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `change` | Выбрана дата или граница диапазона. Имя для подписки |
-| `sf-datepicker-change` | Прежнее имя `change`, приходит с тем же detail |
-| `sf-change` | Прежнее имя `change`, приходит с тем же detail |
-
-## Минимальная разметка
-
-```html
-<sf-datepicker></sf-datepicker>
-```
-
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-datepicker>` |
+| Назначение | Доступный выбор даты и диапазона дат во всплывающем и встроенном режимах, с навигацией по календарю и значениями, которыми управляет элемент. |
+| Контракт | `smart.datepicker`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | принят в продукт |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `value` | `string` | пусто | — | — |
+| `date` | `string` | пусто | — | — |
+| `start-value` | `string` | пусто | — | — |
+| `end-value` | `string` | пусто | — | — |
+| `max-date` | `string` | пусто | — | — |
+| `min-date` | `string` | пусто | — | — |
+| `range` | `boolean` | `false` | — | — |
+| `month` | `number` | `null` | — | — |
+| `year` | `number` | `null` | — | — |
+| `context` | `string` | пусто | — | — |
+| `week-start` | `number` | `1` | — | — |
+| `locale` | `string` | пусто | — | — |
+| `format` | `string` | `DD.MM.YYYY` | — | — |
+| `root-class` | `string` | пусто | — | — |
+| `close-on-select` | `boolean` | `true` | — | — |
+| `input` | `boolean` | `true` | — | — |
+| `open` | `boolean` | `false` | — | — |
+| `portal` | `boolean` | `true` | — | — |
+| `input-type` | `string` | `bordered` | — | — |
+| `size` | `string` | `1` | `1/2`, `1`, `2` | Размер поля формы. |
+| `input-name` | `string` | пусто | — | — |
+| `placeholder` | `string` | пусто | — | — |
+| `label` | `string` | пусто | — | — |
+| `disabled` | `boolean` | `false` | — | — |
+| `required` | `boolean` | `false` | — | — |
+| `icon-start` | `string` | `calendar_today` | — | — |
+| `left-icon` | `string` | `calendar_today` | — | — |
+| `input-root-class` | `string` | пусто | — | — |
+| `mask` | `boolean` | `false` | — | — |
+| `mask-pattern` | `string` | `00.00.0000` | — | Маска ввода; если не задана, выводится из `format`, поэтому формат по умолчанию `DD.MM.YYYY` даёт `00.00.0000`. |
+| `mask-lazy` | `string` | `false` | — | — |
+| `mask-placeholder-char` | `string` | `_` | — | — |
+| `mask-options` | `string` | пусто | — | — |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `size` | `input-size` | работает и предупреждает | 2026-12-01 |
+| `size="1/2"` | `size="1/3"` | работает и предупреждает | 2026-12-01 |
+| `size="2"` | `size="3"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `setContext()` | `context: string` | `object` | Открывает контекст календаря: день, месяц или год. |
+| `openPanel()` | `options: object` | `object` | Открывает всплывающее окно; при необходимости переносит фокус в календарь. |
+| `closePanel()` | `options: object` | `object` | Закрывает всплывающее окно; при необходимости возвращает фокус в поле. |
+| `togglePanel()` | — | `object` | Открывает или закрывает всплывающий список, не меняя выбранное значение. |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `change` | `{ value: string\|array, range: boolean, format: string, formattedValue?: string }` | Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки. |
+| `sf-datepicker-change` | `{ value: string\|array, range: boolean, format: string, formattedValue?: string }` | Прежнее имя `change`: приходит с тем же `detail`, подписывайтесь на `change` |
+| `sf-change` | не описан | Прежнее имя `change`: приходит с тем же `detail`, подписывайтесь на `change` |
+
+### Доступность
+
+- Роль: `dialog` в режиме popup; `group` в режиме inline.
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Shift+Tab`, `Enter`, `Space`, `Escape`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `PageUp`, `PageDown`.
+- Фокус: ArrowDown открывает всплывающее окно и переносит фокус на активный день. В порядке табуляции находится только один день. Escape закрывает всплывающее окно и возвращает фокус в поле. В RTL физические горизонтальные стрелки меняются местами, а хронологическое перемещение сохраняется.
+
+### Минимальная разметка
+
+```html
+<sf-datepicker label="Дата" value="2026-09-03"></sf-datepicker>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/datepicker`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-datepicker`

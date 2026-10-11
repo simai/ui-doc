@@ -5,68 +5,6 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Switch
 
-Идентификатор: `smart.switch`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-switch>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-switch`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/switch/js/switch.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/switch/template/default.js`
-
-## Зависимости
-
-- `component.icons`
-- `component.switch`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `size` | `size` | `String` | `'1'` | `1/2`, `1`, `2` |
-| `label` | `label` | `String` | `''` | `—` |
-| `description` | `description` | `String` | `''` | `—` |
-| `help` | `help` | `String` | `''` | `—` |
-| `checked` | `checked` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `name` | `name` | `String` | `''` | `—` |
-| `value` | `value` | `String` | `''` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get checked()`, `get description()`, `get disabled()`, `get help()`, `get label()`, `get name()`, `get size()`, `get state()`, `get value()`, `getInputElement()`, `isChecked()`, `onBlur()`, `onChange()`, `onFocus()`, `set checked()`, `set disabled()`, `set value()`, `setChecked()`, `setDisabled()`, `setState()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `change` | Переключатель включён или выключен; нативное событие всплывает от внутреннего поля. Имя для подписки |
-
-## Минимальная разметка
-
-```html
-<sf-switch></sf-switch>
-```
-
 ## Название настройки и пояснение
 
 `name` — машинное имя настройки, `value` — отправляемое значение, `label` —
@@ -87,7 +25,68 @@ Loader-статус: `registered`. Loader-правило: `cl-switch`.
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-switch>` |
+| Назначение | Smart-компонент Switch из SIMAI Framework. |
+| Контракт | `smart.switch`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `size` | `string` | `1` | `1/2`, `1`, `2` | Токен размера переключателя. |
+| `label` | `string` | пусто | — | — |
+| `description` | `string` | пусто | — | — |
+| `help` | `string` | пусто | — | — |
+| `checked` | `boolean` | `false` | — | — |
+| `disabled` | `boolean` | `false` | — | — |
+| `name` | `string` | пусто | — | — |
+| `value` | `string` | пусто | — | — |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getInputElement()` | — | не описано | — |
+| `setChecked()` | — | не описано | — |
+| `setDisabled()` | — | не описано | — |
+| `setState()` | — | не описано | — |
+| `onChange()` | — | не описано | — |
+| `onFocus()` | — | не описано | — |
+| `onBlur()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `change` | не описан | Изменилось состояние «включено»; нативное событие всплывает от внутреннего флажка, который является его целью. |
+
+### Доступность
+
+- Роль: переключатель (`switch`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Space`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
+
+```html
+<sf-switch></sf-switch>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/switch`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-switch`

@@ -5,73 +5,65 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Download File
 
-Идентификатор: `smart.download-file`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-download-file>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-download-file`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/download-file/js/download-file.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/download-file/template/default.js`
-
-## Зависимости
-
-- `component.download-file`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
-| `file-name` | `fileName` | `String` | `'File.pdf'` | `—` |
-| `file-size` | `fileSize` | `String` | `''` | `—` |
-| `icon` | `icon` | `String` | `'download'` | `—` |
-| `href` | `href` | `String` | `''` | `—` |
-| `download` | `download` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `target` | `target` | `String` | `'_blank'` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `''` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get ariaLabel()`, `get disabled()`, `get download()`, `get fileName()`, `get fileSize()`, `get href()`, `get icon()`, `get size()`, `get target()`, `get templateName()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
-
-```html
-<sf-download-file></sf-download-file>
-```
-
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-download-file>` |
+| Назначение | Нативная загрузка файла или подготовка файла силами приложения. |
+| Контракт | `smart.download-file`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | Существующая шкала размеров компонентов от компактного до крупного. |
+| `file-name` | `string` | `File.pdf` | — | Видимое имя файла и нативное имя для скачивания по умолчанию. |
+| `file-size` | `string` | пусто | — | Известный размер в удобочитаемом виде. Передавайте, если он доступен, чтобы не определять его. |
+| `icon` | `string` | `download` | — | Имя декоративной иконки. |
+| `href` | `string` | пусто | — | Реальное место ресурса; в доступном состоянии отрисовывает нативную ссылку (`a`). |
+| `download` | `boolean` | `false` | — | Применяет к ссылке нативную семантику скачивания. |
+| `disabled` | `boolean` | `false` | — | Отображает отключённую кнопку без действующего адреса перехода. |
+| `target` | `string` | `_blank` | — | — |
+| `aria-label` | `string` | пусто | — | — |
+
+### Методы
+
+Публичных методов нет.
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-download-file:click` | не описан | Отправляется один раз для доступного нативного места назначения или действия, которым владеет приложение. |
+
+### Доступность
+
+- Доступное имя: рекомендуется.
+- Клавиши: `Tab`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
+
+```html
+<sf-download-file file-name="Report.pdf" file-size="2.4 MB" href="/files/report.pdf" download></sf-download-file>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/download-file`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-download-file`

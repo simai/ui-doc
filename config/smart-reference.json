@@ -1,0 +1,16 @@
+{
+  "schema": "ui-doc.smart-reference-config",
+  "schema_version": 1,
+  "pages": {
+    "data-view": "content/table.md"
+  },
+  "skip": [],
+  "suppress": {
+    "popover": {
+      "sections": [
+        "accessibility"
+      ],
+      "reason": "The ui-9fb0297bb5c2 manifest carries sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
+    }
+  }
+}

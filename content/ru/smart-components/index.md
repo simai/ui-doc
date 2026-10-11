@@ -11,6 +11,7 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Buttons](/ru/smart-components/actions/buttons/)
 - [Icon Buttons](/ru/smart-components/actions/icon-buttons/)
+- [Button Group](/ru/smart-components/actions/button-group/)
 - [Close](/ru/smart-components/actions/close/)
 - [Download File](/ru/smart-components/actions/download-file/)
 - [Fab](/ru/smart-components/actions/fab/)
@@ -74,6 +75,7 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Модальное окно](/ru/smart-components/overlays/modal/)
 - [Drawer](/ru/smart-components/overlays/drawer/)
+- [Popover](/ru/smart-components/overlays/popover/)
 
 ## Редактор страниц
 
@@ -85,4 +87,5 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Admin Menu](/ru/smart-components/composite/admin-menu/)
 - [Представление свойств](/ru/smart-components/composite/property-view/)
+- [Page Header](/ru/smart-components/composite/page-header/)
 

@@ -5,87 +5,86 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Icon Buttons
 
-Идентификатор: `smart.icon-buttons`. Smart-компонент готов к использованию; жизненный цикл — стабильный.
-
-## Теги и подключение
-
-Custom Elements: `<sf-icon-button>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-icon-buttons`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/icon-buttons/css/icon-buttons.css`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/icon-buttons/js/icon-buttons.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/icon-buttons/template/default.css`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/icon-buttons/template/default.js`
-
-## Зависимости
-
-- `component.icon-buttons`
-- `smart.icons`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `appearance` | `appearance` | `String` | `'default'` | `default`, `tonal`, `outline`, `link`, `surface`, `ghost` |
-| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
-| `kind` | `kind` | `String` | `'icon'` | `icon`, `close` |
-| `scheme` | `scheme` | `String` | `'primary'` | `—` |
-| `status` | `status` | `String` | `''` | `error` — разрушающее действие: удалить, отменить, сбросить |
-| `segment` | `segment` | `String` | `''` | `—` |
-| `icon` | `icon` | `String` | `'add'` | `—` |
-| `filled` | `filled` | `Boolean` | `false` | `—` |
-| `spacing` | `spacing` | `String` | `'normal'` | `['compact', 'normal', 'comfortable', 'spacious']` |
-| `radius` | `radius` | `String` | `''` | `['', 'default', 'square', 'rounded']` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `loading` | `loading` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `native-type` | `nativeType` | `String` | `'button'` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `''` | `—` |
-
-Прежние имена продолжают работать и считаются устаревшими: `type` — как `appearance`, `variant` — как `kind`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get ariaLabel()`, `get disabled()`, `get icon()`, `get loading()`, `get nativeType()`, `get radius()`, `get rootClass()`, `get scheme()`, `get size()`, `get spacing()`, `get templateName()`, `get type()`, `get value()`, `get variant()`, `onBlur()`, `onClick()`, `onFocus()`, `onMouseEnter()`, `onMouseLeave()`, `set value()`, `setButtonAttributes()`, `setDisabled()`, `updateDom()`.
-
-`tightness` остаётся совместимым именем для старой разметки. В новом коде
-используйте `spacing`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-
-## Минимальная разметка
-
-```html
-<sf-icon-button></sf-icon-button>
-```
-
 ## Доступность
 
 Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-icon-button>` |
+| Назначение | Нативная кнопка-иконка с геометрией из токенов, доступным именем и общей семантикой загрузки. |
+| Контракт | `smart.icon-buttons`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `kind` | `string` | `icon` | `icon`, `close` | Тип кнопки-иконки: обычное действие с иконкой или элемент закрытия. |
+| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | Токен размера кнопки-иконки. |
+| `appearance` | `string` | `default` | `default`, `tonal`, `outline`, `link`, `surface`, `ghost` | Вид кнопки-иконки. `surface` и `ghost` используют нейтральную шкалу прозрачности: `surface` сохраняет лёгкую заливку и рамку, `ghost` не имеет ничего, пока на него не наведут курсор или фокус. |
+| `scheme` | `string` | `primary` | `primary`, `secondary`, `on-surface` | Цветовое семейство элемента управления. Назначение элемента задаёт ось статуса; заданный там статус имеет приоритет. |
+| `status` | `string` | пусто | пусто, `error` | Назначение элемента управления в общем словаре статусов. Элемент управления окрашивает только `error` — деструктивный статус: элемент, который удаляет, отбрасывает или выполняет необратимое действие. |
+| `segment` | `string` | пусто | пусто, `start`, `middle`, `end` | Позиция в объединённой группе элементов управления, которой управляет композиция Button Group. |
+| `icon` | `string` | `add` | — | Имя иконки Material. |
+| `filled` | `boolean` | `false` | — | Использует ось filled шрифта иконок для стандартного варианта иконки. |
+| `spacing` | `string` | `normal` | `compact`, `normal`, `comfortable`, `spacious` | Семантический профиль внутренних отступов. |
+| `radius` | `string` | пусто | пусто, `default`, `square`, `rounded` | Модификатор скругления углов. |
+| `root-class` | `string` | пусто | — | Дополнительные классы внутреннего элемента кнопки-иконки. |
+| `loading` | `boolean` | `false` | — | Флаг состояния загрузки. |
+| `disabled` | `boolean` | `false` | — | Флаг отключённого состояния. |
+| `native-type` | `string` | `button` | `button`, `submit`, `reset` | Нативный атрибут `type` кнопки. |
+| `aria-label` | `string` | пусто | — | Доступная подпись. |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `appearance` | `type` | работает и предупреждает | 2026-12-01 |
+| `kind` | `variant` | работает и предупреждает | 2026-12-01 |
+| `spacing` | `tightness` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `setButtonAttributes()` | — | не описано | — |
+| `onClick()` | — | не описано | — |
+| `onFocus()` | — | не описано | — |
+| `onBlur()` | — | не описано | — |
+| `onMouseEnter()` | — | не описано | — |
+| `onMouseLeave()` | — | не описано | — |
+| `setDisabled()` | — | не описано | — |
+
+### События
+
+Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+### Доступность
+
+- Роль: кнопка (`button`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Enter`, `Space`.
+- Фокус: Внутренняя нативная кнопка — единственный владелец фокуса. При активации указателем кольцо не отображается; фокус с клавиатуры использует focus-visible, а в объединённых элементах управления кольцо рисуется внутри.
+
+### Минимальная разметка
+
+```html
+<sf-icon-button icon="add" aria-label="Add item"></sf-icon-button>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/icon-buttons`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-icon-buttons`

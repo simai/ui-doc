@@ -11,7 +11,6 @@ Inline-редактор меняет текст `content.heading` и `content.pa
 content. Списков нет, потому что их нет в модели. События несут нормализованную
 модель, а не HTML.
 
-Идентификатор: `smart.inline-editor`, жизненный цикл — экспериментальный.
 Код загружается по требованию: достаточно поставить на странице
 `<sf-inline-editor>`. Элемент ничего не показывает.
 
@@ -65,14 +64,54 @@ Ctrl/Cmd+B, I и E переключают жирный, курсив и код; 
 mailto, tel, относительные и якорные. Вставка из Word и веб-страниц оставляет
 только разрешённое оформление, ввод через IME не прерывается.
 
-## Теги и подключение
+## Справочник API
 
-Custom Element: `<sf-inline-editor>`. Loader-правило: `cl-inline-editor`,
-статус `registered`.
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
-Поставляемые ассеты:
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/inline-editor/js/inline-editor.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/inline-editor/css/inline-editor.css`
+| | |
+|:---|:---|
+| Тег | `<sf-inline-editor>` |
+| Назначение | Редактор текста content.heading и content.paragraph на месте: strong, em, code и безопасные ссылки, собственная история, безопасная вставка; возвращает нормализованное содержимое, а не HTML. |
+| Контракт | `smart.inline-editor`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
-Правило загрузчика: `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json`.
+### Атрибуты
+
+Атрибутов нет.
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `edit()` | `element: Element, options: object` | `object` | Начинает редактирование отображённого заголовка или абзаца; возвращает {element, commit, cancel, value}. |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-inline-edit-input` | `{ node_id: string\|null, content: array }` | Актуальное нормализованное содержимое после изменения. Отправляется на редактируемом элементе; всплывает до `document`. |
+| `sf-inline-edit-commit` | `{ node_id: string\|null, content: array }` | Редактирование завершено нажатием Enter или уходом фокуса; сохраняет хост. Отправляется на редактируемом элементе; всплывает до `document`. |
+| `sf-inline-edit-cancel` | `{ node_id?: string\|null }` | Редактирование отменено нажатием Escape; исходный HTML восстановлен. Отправляется на редактируемом элементе; всплывает до `document`. |
+
+### Доступность
+
+- Доступное имя: внутренний.
+- Клавиши: `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape`.
+- Фокус: Носитель sf-inline-editor скрыт и не имеет роли. Во время редактирования редактируемый элемент становится подписанным role=textbox с видимым контуром; панель форматирования имеет состояния aria-pressed и aria-keyshortcuts. Enter фиксирует, Escape отменяет, потеря фокуса фиксирует; ввод через IME никогда не прерывается.
+
+### Минимальная разметка
+
+```html
+<sf-inline-editor></sf-inline-editor><script>await customElements.whenDefined('sf-inline-editor'); SF.Composition.startInlineEdit(paragraph, {content, nodeId: 'p1', label: 'Paragraph'});</script>
+```
+
+### Источник
+
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/inline-editor`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-inline-editor`

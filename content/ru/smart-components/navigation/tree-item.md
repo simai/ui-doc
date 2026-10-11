@@ -5,93 +5,95 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Tree Item
 
-Идентификатор: `smart.tree-item`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+## Доступность
 
-## Теги и подключение
+Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-Custom Elements: `<sf-tree-item>`.
+## Справочник API
 
-Loader-статус: `registered`. Loader-правило: `cl-tree-item`.
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/tree-item/js/tree-item.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/tree-item/template/default.js`
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
-## Зависимости
-
-- `component.icon-buttons`
-- `component.tree-item`
-- `smart.icons`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `label` | `label` | `String` | `''` | `—` |
-| `text` | `text` | `String` | `''` | `—` |
-| `href` | `href` | `String` | `''` | `—` |
-| `target` | `target` | `String` | `''` | `—` |
-| `rel` | `rel` | `String` | `''` | `—` |
-| `kind` | `kind` | `String` | `'folder'` | `folder`, `file` |
-| `value` | `value` | `String` | `''` | `—` |
-| `open` | `open` | `Boolean` | `false` | `—` |
-| `selected` | `selected` | `Boolean` | `false` | `—` |
-| `active` | `active` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `items-data` | `itemsData` | `Array` | `[]` | `—` |
-| `open-icon` | `openIcon` | `String` | `'folder_open'` | `—` |
-| `closed-icon` | `closedIcon` | `String` | `'folder'` | `—` |
-| `icon` | `icon` | `Boolean` | `true` | `—` |
-| `chevron-open-icon` | `chevronOpenIcon` | `String` | `'keyboard_arrow_down'` | `—` |
-| `chevron-closed-icon` | `chevronClosedIcon` | `String` | `'chevron_right'` | `—` |
-| `open-label` | `openLabel` | `String` | `'Open item'` | `—` |
-| `close-label` | `closeLabel` | `String` | `'Close item'` | `—` |
-| `root-class` | `rootClass` | `String` | `''` | `—` |
-| `item-class` | `itemClass` | `String` | `''` | `—` |
-| `container-class` | `containerClass` | `String` | `''` | `—` |
-| `name-class` | `nameClass` | `String` | `''` | `—` |
-
-Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`captureInitialContent()`, `captureInitialItems()`, `captureSourceData()`, `close()`, `connectedCallback()`, `disconnectItemObserver()`, `disconnectedCallback()`, `get childItems()`, `get content()`, `get hasChildren()`, `get isFile()`, `get label()`, `get type()`, `isContentNode()`, `observeChildItems()`, `onToggle()`, `open()`, `setOpen()`, `toTreeItemData()`, `toggle()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
+| | |
 |:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
-| `sf-tree-item-click` | Компонент-специфичное событие из source-класса |
-| `sf-tree-item-toggle` | Компонент-специфичное событие из source-класса |
+| Тег | `<sf-tree-item>` |
+| Назначение | Один доступный узел иерархии Smart Tree. |
+| Контракт | `smart.tree-item`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
-## Минимальная разметка
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `label` | `string` | пусто | — | — |
+| `text` | `string` | пусто | — | — |
+| `href` | `string` | пусто | — | — |
+| `target` | `string` | пусто | — | — |
+| `rel` | `string` | пусто | — | — |
+| `kind` | `string` | `folder` | `folder`, `file` | Тип элемента дерева: папка или файл. |
+| `value` | `string` | пусто | — | — |
+| `open` | `boolean` | `false` | — | — |
+| `selected` | `boolean` | `false` | — | — |
+| `active` | `boolean` | `false` | — | — |
+| `disabled` | `boolean` | `false` | — | — |
+| `items-data` | `array` | `[]` | — | — |
+| `open-icon` | `string` | `folder_open` | — | — |
+| `closed-icon` | `string` | `folder` | — | — |
+| `icon` | `boolean` | `true` | — | — |
+| `chevron-open-icon` | `string` | `keyboard_arrow_down` | — | — |
+| `chevron-closed-icon` | `string` | `chevron_right` | — | — |
+| `open-label` | `string` | `Open item` | — | — |
+| `close-label` | `string` | `Close item` | — | — |
+| `root-class` | `string` | пусто | — | — |
+| `item-class` | `string` | пусто | — | — |
+| `container-class` | `string` | пусто | — | — |
+| `name-class` | `string` | пусто | — | — |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `kind` | `type` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `setOpen()` | — | не описано | — |
+| `open()` | — | не описано | — |
+| `close()` | — | не описано | — |
+| `focusItem()` | — | `object` | Переносит фокус DOM на этот элемент дерева. |
+| `activate()` | — | `object` | Активирует ссылку элемента или генерирует событие щелчка по элементу. |
+| `toggle()` | — | не описано | — |
+| `onToggle()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-tree-item-click` | не описан | — |
+| `sf-tree-item-toggle` | не описан | — |
+
+### Доступность
+
+- Роль: элемент дерева (`treeitem`).
+- Доступное имя: обязательно.
+- Клавиши: `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Home`, `End`, `Enter`, `Space`.
+- Фокус: Дерево управляет перемещаемым фокусом (roving focus); раскрытие, фокус и выбор независимы.
+
+### Минимальная разметка
 
 ```html
 <sf-tree-item></sf-tree-item>
 ```
 
-## Доступность
-
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/tree-item`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-tree-item`

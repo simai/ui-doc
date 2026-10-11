@@ -1,6 +1,6 @@
 ---
 title: "Окна и панели"
-description: "Окна и панели — 2 смарт-компонентов SIMAI Framework."
+description: "Окна и панели — 3 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -8,3 +8,4 @@ profile: reference
 
 - [Модальное окно](/ru/smart-components/overlays/modal/) — Фокусированная задача в отдельном Smart-слое с управлением фокусом, стеком и содержимым.
 - [Drawer](/ru/smart-components/overlays/drawer/) — Боковая панель рабочего места: закреплённая рядом со страницей или немодальная.
+- [Popover](/ru/smart-components/overlays/popover/) — Smart-компонент всплывающей поверхности у элемента управления: открытие, закрытие и возврат фокуса.

@@ -1,6 +1,6 @@
 ---
 title: "Составные компоненты"
-description: "Составные компоненты — 2 смарт-компонентов SIMAI Framework."
+description: "Составные компоненты — 3 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -8,3 +8,4 @@ profile: reference
 
 - [Admin Menu](/ru/smart-components/composite/admin-menu/) — составной смарт-компонент боковой навигации административного приложения.
 - [Представление свойств](/ru/smart-components/composite/property-view/) — составной смарт-компонент карточки одной записи: разделы, области, поля по типам и сохранение области одной ревизией.
+- [Page Header](/ru/smart-components/composite/page-header/) — Smart-компонент шапки страницы административного приложения: путь, заголовок, счётчик, избранное и главное действие.

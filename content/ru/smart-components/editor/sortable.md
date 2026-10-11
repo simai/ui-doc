@@ -11,7 +11,7 @@ profile: reference
 касанием и клавиатурой. Компонент только сообщает намерение событием
 `sf-sortable-intent`: DOM и данные меняет приложение.
 
-Идентификатор: `smart.sortable`, жизненный цикл — экспериментальный. Код
+Код
 загружается по требованию, когда на странице появляется `sf-sortable`.
 
 ## Пример
@@ -62,14 +62,57 @@ document.addEventListener('sf-sortable-intent', (event) => {
 Escape или Tab отменяют. Каждый шаг объявляется на языке страницы. У краёв
 прокручиваемой области включается автопрокрутка.
 
-## Теги и подключение
+## Справочник API
 
-Custom Element: `<sf-sortable>`. Loader-правило: `cl-sortable`, статус
-`registered`.
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
-Поставляемые ассеты:
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/sortable/js/sortable.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/sortable/css/sortable.css`
+| | |
+|:---|:---|
+| Тег | `<sf-sortable>` |
+| Назначение | Список с перетаскиванием для изменения порядка, переноса между списками и копирования из библиотеки мышью, пером, касанием и с клавиатуры; только сообщает о намерении. |
+| Контракт | `smart.sortable`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
-Правило загрузчика: `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json`.
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `group` | `string` | — | шаблон `^[a-z][a-z0-9-]{0,31}$` | — |
+| `accepts` | `string` | пусто | — | — |
+| `mode` | `string` | `move` | `move`, `copy` | — |
+| `orientation` | `string` | `vertical` | `vertical`, `horizontal` | — |
+| `label` | `string` | пусто | — | — |
+
+### Методы
+
+Публичных методов нет.
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `sf-sortable-intent` | `{ item: string, from: string, to: string, index: integer, mode: any }` | Пользователь отпустил перетаскиваемый элемент; хост применяет или отклоняет изменение. |
+| `sf-sortable-state` | `{ state?: any, item?: string }` | Сеанс перетаскивания начался (элемент взят) или закончился (отпущен, отменён). |
+
+### Доступность
+
+- Доступное имя: рекомендуется.
+- Клавиши: `Space`, `Enter`, `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Escape`, `Tab`.
+- Фокус: Элементы становятся фокусируемыми и описывают инструкции. Space или Enter берёт элемент, стрелки перемещают его внутри списка и в другие принимающие списки или внешние цели, Space или Enter отпускает, Escape или Tab отменяет. Каждый шаг объявляется в вежливой живой области на языке страницы.
+
+### Минимальная разметка
+
+```html
+<sf-sortable id="sections" group="sections" label="Sections"><div data-sf-sortable-item="s1">Section 1</div><div data-sf-sortable-item="s2">Section 2</div></sf-sortable>
+```
+
+### Источник
+
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/sortable`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-sortable`

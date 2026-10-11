@@ -5,81 +5,74 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 # Avatar
 
-Идентификатор: `smart.avatar`. Smart-компонент доступен, но ещё не прошёл полную продуктовую приёмку; жизненный цикл — стабильный.
+## Доступность
 
-## Теги и подключение
+Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
 
-Custom Elements: `<sf-avatar>`.
+## Справочник API
 
-Loader-статус: `registered`. Loader-правило: `cl-avatar`.
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar/js/avatar.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar/template/card.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar/template/default.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar/template/label.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar/template/shared.js`
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
-## Зависимости
-
-- `component.avatars`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `"default"` | `—` |
-| `size` | `size` | `String` | `"1"` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3` |
-| `line` | `line` | `String` | `""` | `1/2`, `1`, `2`: высота строки текста рядом с подписью |
-| `image-url` | `imageUrl` | `String` | `""` | `—` |
-| `image-alt` | `imageAlt` | `String` | `""` | `—` |
-| `no-wrap` | `noWrap` | `Boolean` | `false` | `—` |
-| `text` | `text` | `String` | `""` | `—` |
-| `status` | `status` | `String` | `"none"` | `none`, `online`, `offline`, `company`, `verified` |
-| `aria-label` | `ariaLabel` | `String` | `"Avatar"` | `—` |
-| `title` | `title` | `String` | `""` | `—` |
-| `description` | `description` | `String` | `""` | `—` |
-| `meta` | `meta` | `String` | `""` | `—` |
-| `meta-icon` | `metaIcon` | `String` | `""` | `—` |
-| `card-variant` | `cardVariant` | `String` | `"square"` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get ariaLabel()`, `get cardVariant()`, `get description()`, `get disabled()`, `get displayText()`, `get imageAlt()`, `get imageUrl()`, `get isImage()`, `get isText()`, `get meta()`, `get metaIcon()`, `get size()`, `get status()`, `get templateName()`, `get text()`, `get title()`, `get value()`, `hasBuiltInTemplate()`, `set ariaLabel()`, `set cardVariant()`, `set description()`, `set disabled()`, `set imageAlt()`, `set imageUrl()`, `set meta()`, `set metaIcon()`, `set size()`, `set status()`, `set templateName()`, `set text()`, `set title()`, `set value()`, `templateRenderer()`, `updateDom()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
+| | |
 |:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
+| Тег | `<sf-avatar>` |
+| Назначение | Smart-компонент Avatar из SIMAI Framework. |
+| Контракт | `smart.avatar`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
-## Минимальная разметка
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default`, `label`, `card` | — |
+| `size` | `string` | `1` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3` | — |
+| `line` | `string` | пусто | пусто, `1/2`, `1`, `2` | Занимает строку текста этого размера формы вместо высоты элемента управления — для аватара рядом с подписью в строке или ячейке таблицы. |
+| `shape` | `string` | `circle` | `circle`, `square` | — |
+| `image-url` | `string` | пусто | — | — |
+| `image-alt` | `string` | пусто | — | — |
+| `no-wrap` | `boolean` | `false` | — | — |
+| `text` | `string` | пусто | — | — |
+| `status` | `string` | `none` | `none`, `online`, `offline`, `company`, `verified` | — |
+| `aria-label` | `string` | `Avatar` | — | — |
+| `title` | `string` | пусто | — | — |
+| `description` | `string` | пусто | — | — |
+| `meta` | `string` | пусто | — | — |
+| `meta-icon` | `string` | пусто | — | — |
+| `card-variant` | `string` | `square` | `square`, `portrait` | — |
+| `disabled` | `boolean` | `false` | — | — |
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+Публичных методов нет.
+
+### События
+
+Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+### Доступность
+
+- Доступное имя: рекомендуется.
+- Клавиши: `Tab`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
 
 ```html
 <sf-avatar></sf-avatar>
 ```
 
-## Доступность
-
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
-
-## Источник
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-avatar`

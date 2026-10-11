@@ -5,7 +5,7 @@ description: "Декларативное описание пункта Dropdown 
 
 # List Item
 
-Идентификатор: `smart.list-item`. Компонент описывает option для Dropdown и
+Компонент описывает option для Dropdown и
 использует те же стили строки, что обычная разметка Framework.
 
 ## Применение
@@ -22,69 +22,6 @@ Tab-фокуса и ложного click-поведения.
 
 :::example {id="components/list-item/overview" label="Результат"}
 :::
-
-## Теги и подключение
-
-Custom Elements: `<sf-list-item>`.
-
-Loader-статус: `registered`. Loader-правило: `cl-list-item`.
-
-Поставляемые ассеты:
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/list-item/js/list-item.js`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/list-item/template/default.js`
-
-## Зависимости
-
-- `component.avatars`
-- `component.checkbox`
-- `component.dropdown`
-- `component.icons`
-- `component.tags`
-
-## Атрибуты и свойства
-
-| Атрибут | Свойство | Тип | По умолчанию | Допустимые значения |
-|:---|:---|:---|:---|:---|
-| `template` | `templateName` | `String` | `'default'` | `—` |
-| `value` | `itemValue` | `String` | `''` | `—` |
-| `kind` | `kind` | `String` | `'text'` | `text`, `icon`, `checkbox`, `avatar`, `color` |
-| `size` | `size` | `String` | `'1'` | `1/3`, `1/2`, `1`, `2`, `3` |
-| `text` | `text` | `String` | `''` | `—` |
-| `icon` | `icon` | `String` | `'person'` | `—` |
-| `checked` | `checked` | `Boolean` | `false` | `—` |
-| `selected` | `selected` | `Boolean` | `false` | `—` |
-| `disabled` | `disabled` | `Boolean` | `false` | `—` |
-| `color-class` | `colorClass` | `String` | `'bg-tertiary'` | `—` |
-| `avatar-image-url` | `avatarImageUrl` | `String` | `''` | `—` |
-| `avatar-title` | `avatarTitle` | `String` | `''` | `—` |
-| `aria-label` | `ariaLabel` | `String` | `''` | `—` |
-
-Прежнее имя продолжает работать и считается устаревшим: `type` — как `kind`. В новой разметке берите имена осей.
-
-Общие атрибуты базового Smart-элемента:
-
-| Атрибут | Тип | Назначение |
-|:---|:---|:---|
-| `root-class` | `String` | Классы корневого элемента шаблона |
-| `root-style` | `String` | Inline-стили корневого элемента шаблона |
-| `style` | `String` | Стили host-элемента |
-
-## Методы
-
-`get ariaLabel()`, `get avatarImageUrl()`, `get avatarTitle()`, `get checked()`, `get colorClass()`, `get componentName()`, `get disabled()`, `get icon()`, `get itemValue()`, `get selected()`, `get size()`, `get sizeGroup()`, `get templateName()`, `get text()`, `get type()`, `get value()`, `set value()`, `updateDom()`.
-
-## События
-
-Все события всплывают (`bubbles`) и проходят границу Shadow DOM (`composed`).
-
-| Событие | Когда возникает |
-|:---|:---|
-| `sf-connected` | Элемент подключён к DOM |
-| `sf-disconnected` | Элемент отключён от DOM |
-| `sf-before-render` | Начало цикла отрисовки |
-| `sf-after-render` | Цикл отрисовки завершён |
-| `sf-updated` | Свойства или разметка обновлены |
-| `sf-props-change` | Изменились наблюдаемые свойства |
 
 ## Минимальная разметка
 
@@ -107,7 +44,69 @@ Space и Escape принадлежат родительскому Dropdown.
 ссылки, кнопки или поля; для такой коллекции нужен компонент с другим составным
 контрактом.
 
-## Источник
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-list-item>` |
+| Назначение | Декларативное описание варианта и визуальная строка, которыми владеет Dropdown. |
+| Контракт | `smart.list-item`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | принят в продукт |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `value` | `string` | пусто | — | — |
+| `kind` | `string` | `text` | `text`, `icon`, `checkbox`, `avatar`, `color` | Содержимое элемента списка: простой текст, иконка, флажок, аватар или цвет. |
+| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | — |
+| `text` | `string` | пусто | — | — |
+| `icon` | `string` | `person` | — | — |
+| `checked` | `boolean` | `false` | — | — |
+| `selected` | `boolean` | `false` | — | — |
+| `disabled` | `boolean` | `false` | — | — |
+| `color-class` | `string` | `bg-tertiary` | — | — |
+| `avatar-image-url` | `string` | пусто | — | — |
+| `avatar-title` | `string` | пусто | — | — |
+| `aria-label` | `string` | пусто | — | — |
+
+Свойство атрибута `value` называется `itemValue`.
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `kind` | `type` | работает и предупреждает | 2026-12-01 |
+
+### Методы
+
+Публичных методов нет.
+
+### События
+
+Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+### Доступность
+
+- Роль: `option` при отображении внутри Dropdown; нет в автономном превью.
+- Доступное имя: обязательно.
+- Клавиши: `ArrowDown`, `ArrowUp`, `Home`, `End`, `Enter`, `Space`, `Escape`.
+- Фокус: Принадлежит родительскому составному компоненту Dropdown; отдельный предпросмотр не фокусируется.
+
+### Минимальная разметка
+
+```html
+<sf-dropdown label="Статус"><sf-list-item value="open" text="Открыт"></sf-list-item><sf-list-item value="done" text="Готов"></sf-list-item></sf-dropdown>
+```
+
+### Источник
 
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/list-item`
 - `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-list-item`

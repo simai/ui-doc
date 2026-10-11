@@ -110,3 +110,116 @@ Tab-границей; Modal не читает чужой document и сохра�
 переданные в `SF.create`, получают только события своего окна. Обычный
 слушатель на внешнем окне услышит и вложенное, поэтому проверяйте
 `event.detail.modal`.
+
+## Справочник API
+
+Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
+
+| | |
+|:---|:---|
+| Тег | `<sf-modal>` |
+| Назначение | Smart-компонент Modal из SIMAI Framework. |
+| Контракт | `smart.modal`, версия `1.1.0` |
+| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Жизненный цикл | экспериментальный: API может меняться между выпусками |
+| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Назначение |
+|:---|:---|:---|:---|:---|
+| `template` | `string` | `default` | `default` | — |
+| `modal-id` | `string` | пусто | — | — |
+| `title` | `string` | `Modal` | — | — |
+| `aria-label` | `string` | пусто | — | — |
+| `text` | `string` | пусто | — | — |
+| `open` | `boolean` | `false` | — | — |
+| `autoload` | `boolean` | `false` | — | — |
+| `unclose` | `boolean` | `false` | — | — |
+| `hide` | `boolean` | `false` | — | — |
+| `hide-modifier` | `string` | пусто | — | — |
+| `minimized` | `boolean` | `false` | — | — |
+| `overlay` | `boolean` | `true` | — | — |
+| `show-header` | `boolean` | `true` | — | — |
+| `show-close` | `boolean` | `true` | — | — |
+| `show-footer` | `boolean` | `true` | — | — |
+| `close-on-esc` | `boolean` | `true` | — | — |
+| `close-on-overlay` | `boolean` | `true` | — | — |
+| `preserve-scroll-gap` | `boolean` | `true` | — | — |
+| `position` | `string` | `center` | `center`, `left`, `right`, `inline-start`, `inline-end`, `top`, `bottom` | — |
+| `mode` | `string` | `inline` | `inline`, `ajax`, `iframe` | — |
+| `display` | `string` | `modal` | `modal`, `inline` | — |
+| `src` | `string` | пусто | — | — |
+| `root-class` | `string` | пусто | — | — |
+| `preload` | `boolean` | `true` | — | — |
+| `fullscreen` | `boolean` | `false` | — | — |
+| `width` | `string` | пусто | — | — |
+| `height` | `string` | пусто | — | — |
+| `blur` | `string` | пусто | — | — |
+| `blur-type` | `string` | `medium` | `none`, `small`, `medium`, `large` | — |
+| `overlay-preset` | `string` | `default` | `default`, `focus` | — |
+| `overlay-class` | `string` | пусто | — | — |
+| `close-class` | `string` | пусто | — | — |
+| `surface-class` | `string` | пусто | — | — |
+| `surface-padding` | `string` | пусто | — | — |
+| `panel-class` | `string` | пусто | — | — |
+| `header-class` | `string` | пусто | — | — |
+| `body-class` | `string` | пусто | — | — |
+| `content-class` | `string` | пусто | — | — |
+| `footer-class` | `string` | пусто | — | — |
+
+### Методы
+
+| Метод | Аргументы | Возвращает | Назначение |
+|:---|:---|:---|:---|
+| `getSlotHtml()` | — | не описано | — |
+| `open()` | — | не описано | — |
+| `close()` | — | не описано | — |
+| `hide()` | — | не описано | — |
+| `show()` | — | не описано | — |
+| `toggle()` | — | не описано | — |
+| `setSrc()` | — | не описано | — |
+| `getModalRoot()` | — | не описано | — |
+| `onKeyDown()` | — | не описано | — |
+| `resetRemoteContent()` | — | не описано | — |
+| `clearPortal()` | — | не описано | — |
+| `onBeforeOpen()` | — | не описано | — |
+| `onAfterOpen()` | — | не описано | — |
+| `onBeforeClose()` | — | не описано | — |
+| `onAfterClose()` | — | не описано | — |
+| `onBeforeHide()` | — | не описано | — |
+| `onAfterHide()` | — | не описано | — |
+| `onBeforeShow()` | — | не описано | — |
+| `onAfterShow()` | — | не описано | — |
+| `onModalReady()` | — | не описано | — |
+| `onModalUpdate()` | — | не описано | — |
+
+### События
+
+Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+
+| Событие | `detail` | Когда |
+|:---|:---|:---|
+| `modal:ready` | не описан | Событие среды выполнения modal:ready. Всплывает и является composed; detail.modal — модальное окно, отправившее событие. |
+| `modal:update` | не описан | Событие среды выполнения modal:update. Всплывает и является composed; detail.modal — модальное окно, отправившее событие. |
+| `sf-after-render` | не описан | — |
+| `sf-before-render` | не описан | — |
+
+### Доступность
+
+- Доступное имя: рекомендуется.
+- Клавиши: `Tab`.
+- Фокус: Сохраняет видимый фокус на активном элементе управления.
+
+### Минимальная разметка
+
+```html
+<sf-modal></sf-modal>
+```
+
+### Источник
+
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/modal`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-modal`
