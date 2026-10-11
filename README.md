@@ -14,7 +14,7 @@ Developer references:
 
 ```bash
 composer install
-php scripts/materialize-framework-runtime.php /absolute/path/to/ui /absolute/path/to/ui-smart
+php scripts/materialize-framework-runtime.php /absolute/path/to/ui --pro=/absolute/path/to/ui-pro
 php scripts/migrate-legacy-content.php content redirects.json
 composer docs:versions:check
 composer docs:components:check
@@ -28,6 +28,17 @@ php -d memory_limit=2G vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \
   --build-root="$(pwd)/build_production"
 ```
+
+The site is pinned to one Framework release (release lock v2, `ui-<12>`:
+Core and Smart from the same `simai/ui` commit, Smart in `distr/smart`) and
+to the SIMAI Framework Pro release built against it (`pro-<12>`, private
+`simai/ui-pro`); both revisions are named at the top of
+`scripts/materialize-framework-runtime.php`. Pro bytes are laid only into the
+installed Docara copy under `vendor/` and into the built site, never into this
+repository; `simai-framework.lock.json` records their hashes under
+`package_projections.pro`, and pages declare the package as
+`SF_BOOT_CONFIG.packages.pro`. Without access to `simai/ui-pro`, pass
+`--without-pro`: the site builds, and the four Pro components do not load.
 
 ## Структура русской документации
 

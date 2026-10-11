@@ -16,6 +16,12 @@ Admin Menu объединяет навигацию, поиск, вложенны
 прошёл полную продуктовую приёмку; жизненный цикл source manifest —
 экспериментальный.
 
+Компонент входит в SIMAI Framework Pro — отдельный пакет со своей лицензией
+SIMAI. Он поставляется из репозитория `simai/ui-pro`, а не в выпуске Framework.
+Чтобы элемент загрузился, объявите пакет до подключения Core:
+`window.SF_BOOT_CONFIG = {packages: {pro: {base: '<путь к ui-pro>/smart'}}}`.
+Подробнее — в разделе [Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
+
 ## Пример
 
 :::example {id="smart-components/admin-menu/overview" label="Навигация с четырьмя уровнями"}
@@ -25,11 +31,11 @@ Admin Menu объединяет навигацию, поиск, вложенны
 
 Custom Elements: `<sf-admin-menu>`.
 
-Loader-статус: `registered`. Loader-правило: `cl-admin-menu`.
+Loader-статус: `registered`. Loader-правило: `cl-admin-menu`, в файле правил пакета `pro` (`smart/rule.js`).
 
 Поставляемые ассеты:
-- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/admin-menu/js/admin-menu.js`
-- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/admin-menu/template/default.js`
+- `simai/ui-pro@1f894a46f48887b8f2874b4567ada7e6c36f473d:smart/admin-menu/js/admin-menu.js`
+- `simai/ui-pro@1f894a46f48887b8f2874b4567ada7e6c36f473d:smart/admin-menu/template/default.js`
 
 ## Зависимости
 
@@ -100,5 +106,5 @@ Smart-компоненту.
 
 ## Источник
 
-- `simai/ui-smart@27c513ade9223dc8b8411542895c26e4e8be8c79:smart/admin-menu`
-- `simai/ui@8ffcc2ec8bf94fd828517b2cc25b135d9991ab5c:distr/rule/rule.json#name=cl-admin-menu`
+- `simai/ui-pro@1f894a46f48887b8f2874b4567ada7e6c36f473d:smart/admin-menu`
+- `simai/ui-pro@1f894a46f48887b8f2874b4567ada7e6c36f473d:smart/rule.js#name=cl-admin-menu`

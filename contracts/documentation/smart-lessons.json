@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "83299094ae8825c48905a1a20d56371dc452e22e",
-  "core": "8ffcc2ec8bf94fd828517b2cc25b135d9991ab5c",
-  "smart": "27c513ade9223dc8b8411542895c26e4e8be8c79",
+  "source": "4cf45804252fcbf3ce8133ec2e2d6fa517ea3c11",
+  "core": "09bc6b371eca0ea27723d4a6ace756526c34851d",
+  "smart": "09bc6b371eca0ea27723d4a6ace756526c34851d",
   "source_files": {
-    "src/core/js/smart-base.js": "cf41e843d51df4462e5b7076ba41d157cdf023f04112b464523be0454e037adb",
-    "src/core/js/loader.js": "404046ead27fc20dbb674f48af451e0bd37f32c89feccc9d5a7db13726a2e2fd"
+    "src/core/js/smart-base.js": "a2c39bc50f2ffe01f6233eb96782315214465564397af6c28e335547492484c3",
+    "src/core/js/loader.js": "63122a4897039170a8df3ecbdcd70b8b33ffdc47feeb41c3e43216aec5ff829a"
   },
   "lessons": [
     "creating",
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Reviewed exact source/Core/Smart pair. smart-base.js changed at 83299094: resolveAttributeName and normalizeEnum now note a legacy attribute or value in SF.deprecations (src/core/js/deprecations.js), silently unless the page opts in to warnings; the name a component resolves is unchanged. loader.js is byte-identical to the last review. No lesson teaches a legacy name, an alias or the resolution order, and no attribute, property, event, slot, nesting rule, cleanup path or asset reference they teach changes, so none of the eight lessons changes."
+  "review": "Reviewed the release ui-09bc6b371eca (source 4cf45804; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js changed: a mounted element subscribes to SF.language changes in connectedCallback and re-renders on a change, and unsubscribes in disconnectedCallback before onDisconnected(); the cleanup lesson's rule (override onConnected/onDisconnected, keep super.onDisconnected()) is unchanged and still sufficient. loader.js changed: sfSmartPath is optional (Smart resolves to <sfPath>/smart), and component packages are declared in SF_BOOT_CONFIG.packages with their own rule file (SF.RuleLoader.registerPackage). No lesson sets sfSmartPath; local-components still registers its class by hand after SF.loadSmartBase() and the Loader still does not derive a path from a tag name, so that lesson stays true. No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
 }

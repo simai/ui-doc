@@ -5,8 +5,11 @@
 // public names, and listed no allowed values, so the docs pointed at deprecated
 // words while the component had moved to the named axes.
 //
-// This check compares the two. It needs the Smart repository, because that is where
-// the manifests live: --smart-root=/absolute/path, or SIMAI_UI_SMART_ROOT.
+// This check compares the two. It needs the manifests: since release lock v2 they
+// ship in the ui release's distr/smart (--ui-root=/absolute/path, or SIMAI_UI_ROOT /
+// DOCARA_SIMAI_UI_ROOT), and the SIMAI Framework Pro ones in ui-pro's smart/
+// (--pro-root=/absolute/path, or SIMAI_UI_PRO_ROOT). A separate ui-smart checkout
+// (--smart-root, SIMAI_UI_SMART_ROOT) is still read when named.
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
@@ -18,15 +21,23 @@ const projectRoot = path.resolve(import.meta.dirname, '..');
 // caller knows where it is, found beside this project when the repositories sit
 // side by side, and otherwise the check reports that it could not run rather than
 // failing a build that has no way to satisfy it.
-const sibling = path.resolve(projectRoot, '../ui-smart');
-const smartRoot = value('--smart-root')
-  || process.env.SIMAI_UI_SMART_ROOT
-  || (fs.existsSync(path.join(sibling, 'smart')) ? sibling : null);
-if (smartRoot !== null && !path.isAbsolute(smartRoot)) {
-  console.error('--smart-root must be an absolute path');
-  process.exit(2);
+const found = (candidate, inner) => (fs.existsSync(path.join(candidate, inner)) ? candidate : null);
+const smartRoot = value('--smart-root') || process.env.SIMAI_UI_SMART_ROOT || null;
+const uiRoot = value('--ui-root') || process.env.SIMAI_UI_ROOT || process.env.DOCARA_SIMAI_UI_ROOT
+  || found(path.resolve(projectRoot, '../ui'), 'distr/smart');
+const proRoot = value('--pro-root') || process.env.SIMAI_UI_PRO_ROOT
+  || found(path.resolve(projectRoot, '../ui-pro'), 'smart');
+for (const root of [smartRoot, uiRoot, proRoot]) {
+  if (root && !path.isAbsolute(root)) {
+    console.error('--smart-root, --ui-root and --pro-root must be absolute paths');
+    process.exit(2);
+  }
 }
-if (smartRoot === null) {
+const manifestRoots = smartRoot
+  ? [path.join(smartRoot, 'smart')]
+  : (uiRoot ? [path.join(uiRoot, 'distr/smart')] : []);
+if (manifestRoots.length > 0 && proRoot) manifestRoots.push(path.join(proRoot, 'smart'));
+if (manifestRoots.length === 0) {
   console.log(JSON.stringify({
     schema: 'ui-doc.smart_attribute_table_audit.v1',
     status: 'skipped_no_smart_root',
@@ -55,8 +66,10 @@ walk(path.join(projectRoot, 'content/ru/smart-components'));
 
 const findings = [];
 let checked = 0;
-const manifestRoot = path.join(smartRoot, 'smart');
-for (const name of fs.readdirSync(manifestRoot).sort()) {
+const manifestNames = manifestRoots
+  .flatMap((manifestRoot) => fs.readdirSync(manifestRoot).map((name) => [name, manifestRoot]))
+  .sort(([a], [b]) => a.localeCompare(b));
+for (const [name, manifestRoot] of manifestNames) {
   const manifestPath = path.join(manifestRoot, name, 'smart.manifest.json');
   if (!fs.existsSync(manifestPath)) continue;
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));

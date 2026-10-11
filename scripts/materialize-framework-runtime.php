@@ -4,35 +4,66 @@
 declare(strict_types=1);
 
 /**
- * Materialize the exact bounded SIMAI Framework pair accepted for this site.
+ * Materialize the exact SIMAI Framework release accepted for this site, and
+ * the SIMAI Framework Pro release built against it.
  *
- * Docara keeps its Framework projection inside the Composer package.
- * This project command replaces only that ignored installed projection from
+ * A Framework release is one `ui` commit (release lock v2, `ui-<12>`): Core in
+ * `distr/`, Smart in `distr/smart/`, the same revision. Pro is its own release
+ * (`pro-<12>`, simai/ui-pro, private) that names the `ui-<12>` it was built
+ * and tested against; the site serves it as the Loader package `pro`.
+ *
+ * Docara keeps its Framework projection inside the Composer package. This
+ * project command replaces only that ignored installed projection from
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
+ * Pro bytes land only in that ignored installed copy and in the built site;
+ * this repository records their hashes, never the files.
+ *
+ *   php scripts/materialize-framework-runtime.php /absolute/ui --pro=/absolute/ui-pro
+ *       [--package=/absolute/docara-package]
+ *   php scripts/materialize-framework-runtime.php /absolute/ui --without-pro [--package=...]
+ *
+ * `--without-pro` materializes the free release alone (the Pro pages then
+ * cannot load their components); it exists for bundling the free release
+ * into a Docara checkout, which must never carry Pro bytes.
  */
 
-const UI_METADATA_REVISION = '60346abcf723758b7ddab55f532e6dab89f6fef0';
-const UI_RUNTIME_REVISION = '8ffcc2ec8bf94fd828517b2cc25b135d9991ab5c';
-const SMART_METADATA_REVISION = '2f88acf064083d3c83d58438a9e68171c2c9d4ec';
-const SMART_RUNTIME_REVISION = '27c513ade9223dc8b8411542895c26e4e8be8c79';
-const SOURCE_REVISION = '83299094ae8825c48905a1a20d56371dc452e22e';
-const BUILDER_REVISION = 'd805a72a6c9191a97d2ebd8b86899bf2f25a2e93';
-const RELEASE_LOCK = 'contracts/releases/ui-8ffcc2ec8bf9-smart-27c513ade922.lock.json';
+const UI_METADATA_REVISION = 'ff24012d2a32712602d0f0fca11579acd77dfa8a';
+const UI_RUNTIME_REVISION = '09bc6b371eca0ea27723d4a6ace756526c34851d';
+const SOURCE_REVISION = '4cf45804252fcbf3ce8133ec2e2d6fa517ea3c11';
+const BUILDER_REVISION = '9c48b566c1e1b409733e716d24e93800f998c588';
+const RELEASE_LOCK = 'contracts/releases/ui-09bc6b371eca.lock.json';
+const PRO_METADATA_REVISION = 'f96ed86b4269e0354d67d1c9a9acf2c4b6eca631';
+const PRO_RELEASE = 'pro-1f894a46f488';
 
 $projectRoot = dirname(__DIR__);
-$uiRoot = $argv[1] ?? null;
-$smartRoot = $argv[2] ?? null;
-$packageRoot = $argv[3] ?? $projectRoot . '/vendor/simai/docara';
+$uiRoot = null;
+$proRoot = null;
+$withoutPro = false;
+$packageRoot = $projectRoot . '/vendor/simai/docara';
+foreach (array_slice($argv, 1) as $argument) {
+    if (str_starts_with($argument, '--pro=')) {
+        $proRoot = substr($argument, strlen('--pro='));
+    } elseif (str_starts_with($argument, '--package=')) {
+        $packageRoot = substr($argument, strlen('--package='));
+    } elseif ($argument === '--without-pro') {
+        $withoutPro = true;
+    } elseif (! str_starts_with($argument, '--') && $uiRoot === null) {
+        $uiRoot = $argument;
+    } else {
+        $uiRoot = null;
+        break;
+    }
+}
 
-if (! is_string($uiRoot) || ! is_string($smartRoot)) {
-    fwrite(STDERR, "Usage: php scripts/materialize-framework-runtime.php /absolute/ui /absolute/ui-smart [/absolute/docara-package]\n");
+if (! is_string($uiRoot) || ($proRoot === null) === ! $withoutPro) {
+    fwrite(STDERR, "Usage: php scripts/materialize-framework-runtime.php /absolute/ui (--pro=/absolute/ui-pro | --without-pro) [--package=/absolute/docara-package]\n");
     exit(2);
 }
 
 $uiRoot = realpath($uiRoot);
-$smartRoot = realpath($smartRoot);
-$packageRoot = is_string($packageRoot) ? realpath($packageRoot) : false;
-if ($uiRoot === false || $smartRoot === false || $packageRoot === false || ! is_dir($packageRoot)) {
+$proRoot = is_string($proRoot) ? realpath($proRoot) : null;
+$packageRoot = realpath($packageRoot);
+if ($uiRoot === false || $proRoot === false || $packageRoot === false || ! is_dir($packageRoot)) {
     throw new RuntimeException('FRAMEWORK_MATERIALIZATION_INPUT_MISSING');
 }
 
@@ -75,8 +106,7 @@ $copyBytes = static function (string $bytes, array $paths): void {
 foreach ([
     [$uiRoot, UI_METADATA_REVISION],
     [$uiRoot, UI_RUNTIME_REVISION],
-    [$smartRoot, SMART_METADATA_REVISION],
-    [$smartRoot, SMART_RUNTIME_REVISION],
+    ...($proRoot === null ? [] : [[$proRoot, PRO_METADATA_REVISION]]),
 ] as [$root, $revision]) {
     $actual = trim($git($root, ['rev-parse', $revision . '^{commit}']));
     if ($actual !== $revision) {
@@ -90,21 +120,25 @@ $release = json_decode(
     512,
     JSON_THROW_ON_ERROR,
 );
-// The pair is named once, by the lock this site is pinned to; the identifier
-// inside that lock has to agree with its own file name, and both have to name
-// the runtime revisions pinned above. Repeating the identifier here only ever
-// meant one more constant to forget.
+// The release is named once, by the lock this site is pinned to; the
+// identifier inside that lock has to agree with its own file name, and both
+// have to name the runtime revision pinned above. Release lock v2: Core and
+// Smart are the same `ui` revision, Smart under `distr/smart`.
 $expected = [
+    'schema_version' => 2,
     'compatibility_id' => basename(RELEASE_LOCK, '.lock.json'),
-    'ui' => UI_RUNTIME_REVISION,
-    'smart' => SMART_RUNTIME_REVISION,
+    'core' => UI_RUNTIME_REVISION,
+    'smart' => UI_RUNTIME_REVISION,
+    'smart_path' => 'distr/smart',
     'source' => SOURCE_REVISION,
     'builder' => BUILDER_REVISION,
 ];
 $actual = [
+    'schema_version' => $release['schema_version'] ?? null,
     'compatibility_id' => $release['compatibility_id'] ?? null,
-    'ui' => $release['runtime_sources']['ui']['commit'] ?? null,
-    'smart' => $release['runtime_sources']['ui-smart']['commit'] ?? null,
+    'core' => $release['runtime_sources']['core']['commit'] ?? null,
+    'smart' => $release['runtime_sources']['smart']['revision'] ?? null,
+    'smart_path' => $release['runtime_sources']['smart']['runtime_path'] ?? null,
     'source' => $release['build_inputs']['source']['commit'] ?? null,
     'builder' => $release['build_inputs']['builder']['commit'] ?? null,
 ];
@@ -135,15 +169,16 @@ $lock = json_decode(
     512,
     JSON_THROW_ON_ERROR,
 );
-if (($lock['runtime']['framework_registry']['source']['commit'] ?? null) !== UI_METADATA_REVISION
-    || preg_match('/\A[a-f0-9]{64}\z/D', (string) ($lock['runtime']['framework_registry']['source']['sha256'] ?? '')) !== 1
-) {
-    throw new RuntimeException('FRAMEWORK_REGISTRY_SOURCE_PIN_MISMATCH');
-}
-$contractArchiveHash = $lock['runtime']['framework_registry']['source']['sha256'];
+// The registry's source digest is the sha256 of `git archive --format=tar`
+// of contracts/generated at the metadata revision, as for every earlier pin.
+$contractArchiveHash = hash('sha256', $git($uiRoot, [
+    'archive', '--format=tar', UI_METADATA_REVISION, 'contracts/generated',
+]));
+// Packages are recomputed below from the pinned package release, or left out.
+unset($lock['package_projections']);
 
-$uiSource = $release['runtime_sources']['ui'];
-$smartSource = $release['runtime_sources']['ui-smart'];
+$uiSource = $release['runtime_sources']['core'];
+$smartSource = $release['runtime_sources']['smart'];
 $registryHash = hash('sha256', $registryBytes);
 $lock['runtime']['pair_id'] = $docaraPair;
 $lock['runtime']['bundle_id'] = $docaraPair
@@ -160,14 +195,15 @@ $lock['runtime']['ui'] = [
         preg_split('/\R/', trim($git($uiRoot, ['ls-tree', '-r', '--name-only', UI_RUNTIME_REVISION, 'distr']))) ?: [],
     )),
 ];
+// Smart is the same `ui` commit's distr/smart; Docara reads it from there.
 $lock['runtime']['ui_smart'] = [
     'tag' => null,
-    'commit' => SMART_RUNTIME_REVISION,
-    'tree' => 'smart',
-    'mount' => 'smart',
+    'commit' => UI_RUNTIME_REVISION,
+    'tree' => 'distr/smart',
+    'mount' => 'ui',
     'sha256' => $smartSource['archive_sha256'],
     'files' => count(array_filter(
-        preg_split('/\R/', trim($git($smartRoot, ['ls-tree', '-r', '--name-only', SMART_RUNTIME_REVISION, 'smart']))) ?: [],
+        preg_split('/\R/', trim($git($uiRoot, ['ls-tree', '-r', '--name-only', UI_RUNTIME_REVISION, 'distr/smart']))) ?: [],
     )),
 ];
 $lock['runtime']['framework_registry'] = [
@@ -190,20 +226,22 @@ $lock['runtime']['framework_registry'] = [
         'file_sha256' => hash('sha256', $documentationBytes),
     ],
 ];
-$lock['asset_projection']['source']['revision'] = SMART_RUNTIME_REVISION;
-$lock['dynamic_asset_projection']['source']['revision'] = SMART_RUNTIME_REVISION;
+$lock['asset_projection']['source'] = ['provider' => 'simai/ui', 'revision' => UI_RUNTIME_REVISION];
+$lock['dynamic_asset_projection']['source'] = ['provider' => 'simai/ui', 'revision' => UI_RUNTIME_REVISION];
+// A first approximation the Smart sync below replaces; Docara names Smart
+// files `smart/<component>/...` whichever repository carries them.
 $smartRuntimePaths = array_values(array_filter(
     preg_split('/\R/', trim($git(
-        $smartRoot,
-        ['ls-tree', '-r', '--name-only', SMART_RUNTIME_REVISION, 'smart'],
+        $uiRoot,
+        ['ls-tree', '-r', '--name-only', UI_RUNTIME_REVISION, 'distr/smart'],
     ))) ?: [],
     static fn (string $path): bool => preg_match('~/((?:css|js)/[^/]+\.(?:css|js))$~', $path) === 1
         && ! str_contains($path, '.min.'),
 ));
 $smartRuntimeFiles = [];
 foreach ($smartRuntimePaths as $path) {
-    $smartRuntimeFiles[$path] = [
-        'sha256' => hash('sha256', $git($smartRoot, ['show', SMART_RUNTIME_REVISION . ':' . $path])),
+    $smartRuntimeFiles[substr($path, strlen('distr/'))] = [
+        'sha256' => hash('sha256', $git($uiRoot, ['show', UI_RUNTIME_REVISION . ':' . $path])),
     ];
 }
 $lock['dynamic_asset_projection']['files'] = $smartRuntimeFiles;
@@ -222,7 +260,7 @@ $lock['runtime_projection']['manifest']['public'] = '_docara/vendor/simai-framew
 foreach (['ui-alert.json', 'ui-button.json'] as $manifestName) {
     $manifestPath = $packageRoot . '/resources/framework/manifests/' . $manifestName;
     $manifest = json_decode((string) file_get_contents($manifestPath), true, 512, JSON_THROW_ON_ERROR);
-    $manifest['provenance']['upstream_revision'] = SMART_RUNTIME_REVISION;
+    $manifest['provenance']['upstream_revision'] = UI_RUNTIME_REVISION;
     $writeJson($manifestPath, $manifest);
     $key = $manifestName === 'ui-alert.json' ? 'ui.alert' : 'ui.button';
     $lock['manifests'][$key]['sha256'] = hash_file('sha256', $manifestPath);
@@ -323,13 +361,25 @@ foreach ($runtimeNoticeFiles as $noticePath) {
     $carried += 1;
 }
 
-$smartReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-smart-runtime.php', $smartRoot]);
+$smartReceipt = $runPhp([$packageRoot . '/scripts/sync-framework-smart-runtime.php', $uiRoot]);
 $viewUtilitiesPath = $packageRoot . '/resources/framework/view-utilities.json';
 $viewUtilities = json_decode((string) file_get_contents($viewUtilitiesPath), true, 512, JSON_THROW_ON_ERROR);
 $viewUtilities['compatibility_id'] = $docaraPair;
 $viewUtilities['registry_sha256'] = $registryHash;
 $writeJson($viewUtilitiesPath, $viewUtilities);
 copy($packageLockPath, $projectLockPath);
+
+// SIMAI Framework Pro: the package release built against this Framework
+// release, recorded in this site's lock only. Its bytes go to the installed
+// Docara copy (ignored here) and from there into the built site.
+$proReceipt = $proRoot === null ? null : $runPhp([
+    $packageRoot . '/scripts/sync-framework-package-runtime.php',
+    '--package', 'pro',
+    '--source', $proRoot,
+    '--metadata', PRO_METADATA_REVISION,
+    '--release', PRO_RELEASE,
+    '--lock', $projectLockPath,
+]);
 
 fwrite(STDOUT, json_encode([
     'schema' => 'ui-doc.framework_materialization.v1',
@@ -338,13 +388,14 @@ fwrite(STDOUT, json_encode([
     'candidate' => [
         'ui_metadata' => UI_METADATA_REVISION,
         'ui_runtime' => UI_RUNTIME_REVISION,
-        'smart_metadata' => SMART_METADATA_REVISION,
-        'smart_runtime' => SMART_RUNTIME_REVISION,
         'source' => SOURCE_REVISION,
         'builder' => BUILDER_REVISION,
+        'pro_metadata' => $proRoot === null ? null : PRO_METADATA_REVISION,
+        'pro_release' => $proRoot === null ? null : PRO_RELEASE,
     ],
     'core_projection' => $coreReceipt,
     'smart_projection' => $smartReceipt,
+    'pro_projection' => $proReceipt,
     'project_lock_sha256' => hash_file('sha256', $projectLockPath),
     'owner_source_modified' => false,
 ], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");

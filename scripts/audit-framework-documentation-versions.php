@@ -9,6 +9,7 @@ $versions = json_decode((string) file_get_contents($root . '/config/framework-do
 $lock = json_decode((string) file_get_contents($root . '/simai-framework.lock.json'), true, 512, JSON_THROW_ON_ERROR);
 $public = $versions['public_core'] ?? [];
 $runtime = $lock['runtime'] ?? [];
+$smartInsideUi = ($runtime['ui_smart']['tree'] ?? null) === 'distr/smart';
 $failures = [];
 
 $check = static function (bool $condition, string $code, array $details = []) use (&$failures): void {
@@ -56,10 +57,18 @@ foreach ($paths as $path) {
     }
     if (str_starts_with($relative, 'content/ru/smart-components/')) {
         preg_match_all('/simai\/ui-smart@([a-f0-9]{40})(?=:smart\/)/', $markdown, $smartMatches);
-        preg_match_all('/simai\/ui@([a-f0-9]{40})(?=:distr\/rule\/rule\.json)/', $markdown, $coreMatches);
+        preg_match_all('/simai\/ui@([a-f0-9]{40})(?=:distr\/(?:rule\/rule\.json|smart\/))/', $markdown, $coreMatches);
+        preg_match_all('/simai\/ui-pro@([a-f0-9]{40})(?=:smart\/)/', $markdown, $proMatches);
         foreach ($smartMatches[1] ?? [] as $revision) {
-            if ($revision !== ($runtime['ui_smart']['commit'] ?? null)) {
+            // Release lock v2 carries Smart in ui's distr/smart: no page may
+            // still cite the separate ui-smart repository.
+            if ($smartInsideUi || $revision !== ($runtime['ui_smart']['commit'] ?? null)) {
                 $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui-smart', 'actual' => $revision];
+            }
+        }
+        foreach ($proMatches[1] ?? [] as $revision) {
+            if ($revision !== ($lock['package_projections']['pro']['source']['revision'] ?? null)) {
+                $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui-pro', 'actual' => $revision];
             }
         }
         foreach ($coreMatches[1] ?? [] as $revision) {

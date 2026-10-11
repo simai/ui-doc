@@ -34,10 +34,15 @@ $candidateSmart = (string) ($runtime['ui_smart']['tag'] ?? '');
 $candidatePair = (string) ($runtime['pair_id'] ?? '');
 $candidateCoreRevision = (string) ($runtime['ui']['commit'] ?? '');
 $candidateSmartRevision = (string) ($runtime['ui_smart']['commit'] ?? '');
-$untaggedExactCandidate = $candidatePair === sprintf(
-    'ui-%s-smart-%s',
-    substr($candidateCoreRevision, 0, 12),
-    substr($candidateSmartRevision, 0, 12),
+// Release lock v2 (`ui-<12>`): one ui commit, Smart in its distr/smart.
+// Release lock v1 (`ui-<12>-smart-<12>`): Smart from the ui-smart repository.
+$smartInsideUi = ($runtime['ui_smart']['tree'] ?? null) === 'distr/smart';
+if ($smartInsideUi && $candidateSmartRevision !== $candidateCoreRevision) {
+    throw new RuntimeException('FRAMEWORK_CANDIDATE_REVISION_INVALID');
+}
+$untaggedExactCandidate = $candidatePair === ($smartInsideUi
+    ? sprintf('ui-%s', substr($candidateCoreRevision, 0, 12))
+    : sprintf('ui-%s-smart-%s', substr($candidateCoreRevision, 0, 12), substr($candidateSmartRevision, 0, 12))
 ) && $candidateFramework === '' && $candidateCore === '' && $candidateSmart === '';
 if (! $untaggedExactCandidate) {
     foreach ([$candidateFramework, $candidateCore, $candidateSmart] as $tag) {
@@ -51,6 +56,31 @@ foreach ([$candidateCoreRevision, $candidateSmartRevision] as $revision) {
         throw new RuntimeException('FRAMEWORK_CANDIDATE_REVISION_INVALID');
     }
 }
+
+// Component packages (SIMAI Framework Pro): each component folder a package
+// ships is cited from that package's repository at its pinned revision.
+$packageFolders = [];
+foreach ($lock['package_projections'] ?? [] as $package) {
+    $provider = (string) ($package['source']['provider'] ?? '');
+    $revision = (string) ($package['source']['revision'] ?? '');
+    if (preg_match('~^[a-z0-9-]+/[a-z0-9._-]+$~D', $provider) !== 1 || preg_match('/^[a-f0-9]{40}$/D', $revision) !== 1) {
+        throw new RuntimeException('FRAMEWORK_PACKAGE_SOURCE_INVALID');
+    }
+    foreach (array_keys($package['files'] ?? []) as $path) {
+        if (preg_match('~^smart/([a-z][a-z0-9-]*)/~', (string) $path, $match) === 1) {
+            $packageFolders[$match[1]] = ['provider' => $provider, 'revision' => $revision];
+        }
+    }
+}
+$smartCitation = static function (string $folder) use ($packageFolders, $smartInsideUi, $candidateSmartRevision): string {
+    if (isset($packageFolders[$folder])) {
+        return $packageFolders[$folder]['provider'] . '@' . $packageFolders[$folder]['revision'] . ':smart/';
+    }
+
+    return $smartInsideUi
+        ? 'simai/ui@' . $candidateSmartRevision . ':distr/smart/'
+        : 'simai/ui-smart@' . $candidateSmartRevision . ':smart/';
+};
 
 $versionPage = <<<'MARKDOWN'
 ---
@@ -68,17 +98,19 @@ Framework выпускается несколькими пакетами. Ном
 
 ## Пример
 
-У документации есть один машиночитаемый [файл сборки](/ai/framework-lock.json). В нём записаны точные ревизии Core и Smart Components, которые проверялись вместе:
+У документации есть один машиночитаемый [файл сборки](/ai/framework-lock.json). Выпуск Framework — это одна ревизия репозитория `simai/ui`: Core лежит в `distr/`, Smart Components — в `distr/smart/` той же ревизии. Идентификатор выпуска — `ui-` и первые 12 знаков ревизии:
 
 ```json
 {
-  "pair_id": "идентификатор-проверенной-сборки",
-  "ui": {"commit": "точная-ревизия-core"},
-  "ui_smart": {"commit": "точная-ревизия-smart-components"}
+  "pair_id": "ui-идентификатор-выпуска",
+  "ui": {"commit": "точная-ревизия-ui", "tree": "distr"},
+  "ui_smart": {"commit": "та-же-ревизия-ui", "tree": "distr/smart"}
 }
 ```
 
-Человеку достаточно идентификатора сборки. Инструмент установки сверяет точные ревизии пакетов. Благодаря этому текущие номера не приходится повторять на каждой странице и исправлять после каждого выпуска.
+SIMAI Framework Pro выпускается отдельно, в `simai/ui-pro`, с идентификатором `pro-` и 12 знаками ревизии. Каждый выпуск Pro называет выпуск Framework, с которым его собрали и проверили; подключайте их вместе.
+
+Человеку достаточно идентификатора выпуска. Инструмент установки сверяет точные ревизии. Благодаря этому текущие номера не приходится повторять на каждой странице и исправлять после каждого выпуска.
 
 ## Как обновить проект
 
@@ -88,7 +120,7 @@ Framework выпускается несколькими пакетами. Ном
 4. Зафиксируйте идентификатор сборки и точные ревизии рядом с другими зависимостями.
 5. Перенесите в рабочее окружение те же проверенные файлы.
 
-Если проект использует только Core, всё равно фиксируйте точный тег или ревизию. Перед добавлением Smart Components переходите на опубликованную совместимую сборку целиком.
+Если проект использует только Core, всё равно фиксируйте точный тег или ревизию. Smart Components приходят в том же выпуске `ui`, отдельный репозиторий для них не нужен.
 
 
 
@@ -139,10 +171,22 @@ foreach ($iterator as $file) {
     $path = $file->getPathname();
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $current = (string) file_get_contents($path);
-    $expected = preg_replace(
-        '/simai\/ui-smart@[a-f0-9]{40}(?=:smart\/)/',
-        'simai/ui-smart@' . $candidateSmartRevision,
+    // A Smart source is cited where the pinned release carries it: the ui
+    // release's distr/smart, or the package that ships the component. Older
+    // citations of the separate ui-smart repository move with it.
+    $expected = preg_replace_callback(
+        '/simai\/(?:ui-smart@[a-f0-9]{40}:smart|ui@[a-f0-9]{40}:distr\/smart|ui-pro@[a-f0-9]{40}:smart)\/([a-z][a-z0-9-]*)(?![a-z0-9.-])/',
+        static fn (array $match): string => $smartCitation($match[1]) . $match[1],
         $current,
+    );
+    // A packaged component's rule is in its package's rule file, not in the
+    // Framework's rule list.
+    $expected = preg_replace_callback(
+        '/simai\/(?:ui@[a-f0-9]{40}:distr\/rule\/rule\.json|ui-pro@[a-f0-9]{40}:smart\/rule\.js)#name=cl-([a-z][a-z0-9-]*)/',
+        static fn (array $match): string => (isset($packageFolders[$match[1]])
+            ? $packageFolders[$match[1]]['provider'] . '@' . $packageFolders[$match[1]]['revision'] . ':smart/rule.js'
+            : 'simai/ui@' . $candidateCoreRevision . ':distr/rule/rule.json') . '#name=cl-' . $match[1],
+        (string) $expected,
     );
     $expected = preg_replace(
         '/simai\/ui@[a-f0-9]{40}(?=:distr\/rule\/rule\.json)/',
@@ -167,6 +211,7 @@ echo json_encode([
     'candidate_pair' => $candidatePair,
     'candidate_core_revision' => $candidateCoreRevision,
     'candidate_smart_revision' => $candidateSmartRevision,
+    'package_folders' => $packageFolders,
     'changed' => $changed,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . "\n";
 

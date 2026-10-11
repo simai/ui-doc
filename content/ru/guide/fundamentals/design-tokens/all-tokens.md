@@ -104,7 +104,7 @@ description: "Полный список переменных, которые о�
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
 | `--sf-info-container-active` | `light-dark(var(--sf-info-50--alfa-20), var(--sf-info-50--alfa-32))` |
 | `--sf-info-container-hover` | `light-dark(var(--sf-info-50--alfa-16), var(--sf-info-50--alfa-28))` |
-| `--sf-info-hover` | `light-dark(var(--sf-info-35), var(--sf-primary-85))` |
+| `--sf-info-hover` | `light-dark(var(--sf-info-35), var(--sf-info-85))` |
 | `--sf-link` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-link--underline-dashed` | `var(--sf-a6)` |
 | `--sf-link--underline-dotted` | `var(--sf-a3)` |
@@ -172,10 +172,10 @@ description: "Полный список переменных, которые о�
 | `--sf-disable` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
 | `--sf-focus` | `light-dark(var(--sf-primary-50), var(--sf-primary-90))` |
 | `--sf-focus--color` | `var(--sf-focus)` |
-| `--sf-focus--offset` | `var(--sf-a1)` |
+| `--sf-focus--offset` | `var(--sf-px)` |
 | `--sf-focus--style` | `solid` |
 | `--sf-focus--width` | `var(--sf-focus-outline-width)` |
-| `--sf-focus-outline-width` | `var(--sf-a2)` |
+| `--sf-focus-outline-width` | `calc(var(--sf-px) * 2)` |
 | `--sf-on-disable` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
 | `--sf-outline--alfa` | `1` |
