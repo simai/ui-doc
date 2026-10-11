@@ -66,7 +66,7 @@ mailto, tel, относительные и якорные. Вставка из W
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -75,7 +75,7 @@ mailto, tel, относительные и якорные. Вставка из W
 | Тег | `<sf-inline-editor>` |
 | Назначение | Редактор текста content.heading и content.paragraph на месте: strong, em, code и безопасные ссылки, собственная история, безопасная вставка; возвращает нормализованное содержимое, а не HTML. |
 | Контракт | `smart.inline-editor`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -85,19 +85,15 @@ mailto, tel, относительные и якорные. Вставка из W
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `edit()` | `element: Element, options: object` | `object` | Начинает редактирование отображённого заголовка или абзаца; возвращает {element, commit, cancel, value}. |
+- `edit(element: Element, options: object)` — возвращает `object`. Начинает редактирование отображённого заголовка или абзаца; возвращает {element, commit, cancel, value}.
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-inline-edit-input` | `{ node_id: string\|null, content: array }` | Актуальное нормализованное содержимое после изменения. Отправляется на редактируемом элементе; всплывает до `document`. |
-| `sf-inline-edit-commit` | `{ node_id: string\|null, content: array }` | Редактирование завершено нажатием Enter или уходом фокуса; сохраняет хост. Отправляется на редактируемом элементе; всплывает до `document`. |
-| `sf-inline-edit-cancel` | `{ node_id?: string\|null }` | Редактирование отменено нажатием Escape; исходный HTML восстановлен. Отправляется на редактируемом элементе; всплывает до `document`. |
+- `sf-inline-edit-input` — `detail`: `{ node_id: string|null, content: array }`. Актуальное нормализованное содержимое после изменения. Отправляется на редактируемом элементе; всплывает до `document`.
+- `sf-inline-edit-commit` — `detail`: `{ node_id: string|null, content: array }`. Редактирование завершено нажатием Enter или уходом фокуса; сохраняет хост. Отправляется на редактируемом элементе; всплывает до `document`.
+- `sf-inline-edit-cancel` — `detail`: `{ node_id?: string|null }`. Редактирование отменено нажатием Escape; исходный HTML восстановлен. Отправляется на редактируемом элементе; всплывает до `document`.
 
 ### Доступность
 
@@ -113,5 +109,5 @@ mailto, tel, относительные и якорные. Вставка из W
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/inline-editor`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-inline-editor`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/inline-editor`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-inline-editor`

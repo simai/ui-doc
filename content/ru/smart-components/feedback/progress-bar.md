@@ -11,7 +11,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -20,21 +20,19 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-progress-bar>` |
 | Назначение | Непрерывный определённый прогресс с нормализованным значением, доступной семантикой диапазона и явным семантическим тоном. |
 | Контракт | `smart.progress-bar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | — |
-| `value` | `string` | `0` | шаблон `^(?:100\|[1-9]?[0-9])(?:\.[0-9]+)?$` | — |
-| `text-position` | `string` | `none` | `none`, `inline-end`, `bottom`, `right` | — |
-| `status` | `string` | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | О чём сообщает индикатор прогресса, в общем словаре статусов. Также принимается значение primary; оно означает neutral. |
-| `label` | `string` | пусто | — | — |
-| `value-text` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`.
+- `value` — `string`, по умолчанию `0`, значения: шаблон `^(?:100|[1-9]?[0-9])(?:\.[0-9]+)?$`.
+- `text-position` — `string`, по умолчанию `none`, значения: `none`, `inline-end`, `bottom`, `right`.
+- `status` — `string`, по умолчанию `neutral`, значения: `neutral`, `info`, `success`, `warning`, `error`. О чём сообщает индикатор прогресса, в общем словаре статусов. Также принимается значение primary; оно означает neutral.
+- `label` — `string`, по умолчанию пусто.
+- `value-text` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -47,11 +45,9 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getProgress()` | — | не описано | — |
-| `setProgress()` | — | не описано | — |
-| `setTextPosition()` | — | не описано | — |
+- `getProgress()`
+- `setProgress()`
+- `setTextPosition()`
 
 ### События
 
@@ -71,5 +67,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/progress-bar`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-progress-bar`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/progress-bar`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-progress-bar`

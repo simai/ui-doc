@@ -53,7 +53,7 @@ profile: reference
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -62,58 +62,56 @@ profile: reference
 | Тег | `<sf-gallery>` |
 | Назначение | Smart-компонент Gallery из SIMAI Framework. |
 | Контракт | `smart.gallery`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `modal-id` | `string` | пусто | — | — |
-| `title` | `string` | `Gallery` | — | — |
-| `text` | `string` | пусто | — | — |
-| `open` | `boolean` | `false` | — | — |
-| `current` | `number` | `1` | — | — |
-| `inline` | `boolean` | `true` | — | — |
-| `lightbox` | `boolean` | `true` | — | — |
-| `arrows` | `boolean` | `true` | — | — |
-| `dots` | `boolean` | `false` | — | — |
-| `thumbs` | `boolean` | `true` | — | — |
-| `loop` | `boolean` | `false` | — | — |
-| `space-between` | `number` | `12` | — | — |
-| `speed` | `number` | `450` | — | — |
-| `button-type` | `string` | `primary` | — | — |
-| `button-size` | `string` | `1` | — | — |
-| `dots-type` | `string` | `primary-dark` | — | — |
-| `dots-size` | `string` | `2` | — | — |
-| `thumbs-class` | `string` | пусто | — | — |
-| `thumb-class` | `string` | пусто | — | — |
-| `slide-class` | `string` | пусто | — | — |
-| `inline-class` | `string` | пусто | — | — |
-| `lightbox-class` | `string` | пусто | — | — |
-| `overlay` | `boolean` | `true` | — | — |
-| `show-header` | `boolean` | `true` | — | — |
-| `show-close` | `boolean` | `true` | — | — |
-| `close-on-esc` | `boolean` | `true` | — | — |
-| `close-on-overlay` | `boolean` | `true` | — | — |
-| `preserve-scroll-gap` | `boolean` | `true` | — | — |
-| `position` | `string` | `center` | `center`, `left`, `right`, `top`, `bottom` | — |
-| `fullscreen` | `boolean` | `false` | — | — |
-| `width` | `string` | пусто | — | — |
-| `height` | `string` | пусто | — | — |
-| `blur` | `boolean` | `false` | — | — |
-| `blur-type` | `string` | `medium` | `none`, `small`, `medium`, `large` | — |
-| `overlay-class` | `string` | пусто | — | — |
-| `close-class` | `string` | пусто | — | — |
-| `surface-class` | `string` | пусто | — | — |
-| `surface-padding` | `string` | пусто | — | — |
-| `panel-class` | `string` | пусто | — | — |
-| `header-class` | `string` | пусто | — | — |
-| `body-class` | `string` | пусто | — | — |
-| `content-class` | `string` | пусто | — | — |
-| `footer-class` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `modal-id` — `string`, по умолчанию пусто.
+- `title` — `string`, по умолчанию `Gallery`.
+- `text` — `string`, по умолчанию пусто.
+- `open` — `boolean`, по умолчанию `false`.
+- `current` — `number`, по умолчанию `1`.
+- `inline` — `boolean`, по умолчанию `true`.
+- `lightbox` — `boolean`, по умолчанию `true`.
+- `arrows` — `boolean`, по умолчанию `true`.
+- `dots` — `boolean`, по умолчанию `false`.
+- `thumbs` — `boolean`, по умолчанию `true`.
+- `loop` — `boolean`, по умолчанию `false`.
+- `space-between` — `number`, по умолчанию `12`.
+- `speed` — `number`, по умолчанию `450`.
+- `button-type` — `string`, по умолчанию `primary`.
+- `button-size` — `string`, по умолчанию `1`.
+- `dots-type` — `string`, по умолчанию `primary-dark`.
+- `dots-size` — `string`, по умолчанию `2`.
+- `thumbs-class` — `string`, по умолчанию пусто.
+- `thumb-class` — `string`, по умолчанию пусто.
+- `slide-class` — `string`, по умолчанию пусто.
+- `inline-class` — `string`, по умолчанию пусто.
+- `lightbox-class` — `string`, по умолчанию пусто.
+- `overlay` — `boolean`, по умолчанию `true`.
+- `show-header` — `boolean`, по умолчанию `true`.
+- `show-close` — `boolean`, по умолчанию `true`.
+- `close-on-esc` — `boolean`, по умолчанию `true`.
+- `close-on-overlay` — `boolean`, по умолчанию `true`.
+- `preserve-scroll-gap` — `boolean`, по умолчанию `true`.
+- `position` — `string`, по умолчанию `center`, значения: `center`, `left`, `right`, `top`, `bottom`.
+- `fullscreen` — `boolean`, по умолчанию `false`.
+- `width` — `string`, по умолчанию пусто.
+- `height` — `string`, по умолчанию пусто.
+- `blur` — `boolean`, по умолчанию `false`.
+- `blur-type` — `string`, по умолчанию `medium`, значения: `none`, `small`, `medium`, `large`.
+- `overlay-class` — `string`, по умолчанию пусто.
+- `close-class` — `string`, по умолчанию пусто.
+- `surface-class` — `string`, по умолчанию пусто.
+- `surface-padding` — `string`, по умолчанию пусто.
+- `panel-class` — `string`, по умолчанию пусто.
+- `header-class` — `string`, по умолчанию пусто.
+- `body-class` — `string`, по умолчанию пусто.
+- `content-class` — `string`, по умолчанию пусто.
+- `footer-class` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -123,27 +121,23 @@ profile: reference
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getModal()` | — | не описано | — |
-| `getInlineSlider()` | — | не описано | — |
-| `getLightboxSlider()` | — | не описано | — |
-| `open()` | — | не описано | — |
-| `close()` | — | не описано | — |
-| `toggle()` | — | не описано | — |
-| `goTo()` | — | не описано | — |
-| `next()` | — | не описано | — |
-| `prev()` | — | не описано | — |
+- `getModal()`
+- `getInlineSlider()`
+- `getLightboxSlider()`
+- `open()`
+- `close()`
+- `toggle()`
+- `goTo()`
+- `next()`
+- `prev()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-change` | не описан | — |
-| `sf-close` | не описан | — |
-| `sf-open` | не описан | — |
+- `sf-change` — `detail` не описан.
+- `sf-close` — `detail` не описан.
+- `sf-open` — `detail` не описан.
 
 ### Доступность
 
@@ -159,5 +153,5 @@ profile: reference
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/gallery`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-gallery`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/gallery`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-gallery`

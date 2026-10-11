@@ -11,7 +11,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -20,27 +20,25 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-spinner>` |
 | Назначение | Индикатор неопределённого ожидания в виде дуги или точек с необязательным вежливым (polite) объявлением статуса и анимацией Framework. |
 | Контракт | `smart.spinner`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `size` | `string` | `1` | `1/2`, `1`, `2`, `3` | — |
-| `width` | `string` | пусто | — | — |
-| `height` | `string` | пусто | — | — |
-| `label` | `string` | `Loading...` | — | — |
-| `kind` | `string` | `arc` | `arc`, `dots` | Вид спиннера: дуга или ряд точек. |
-| `dots` | `string` | `16` | шаблон `^(?:[3-9]\|[12][0-9]\|3[0-2])$` | — |
-| `filled` | `string` | `6` | шаблон `^(?:[1-9]\|[12][0-9]\|3[0-2])$` | — |
-| `stroke-width` | `string` | пусто | — | — |
-| `dot-radius` | `string` | пусто | — | — |
-| `infinite` | `boolean` | `false` | — | — |
-| `announce` | `boolean` | `false` | — | — |
-| `direction` | `string` | `clockwise` | `clockwise`, `counterclockwise` | — |
-| `root-class` | `string` | пусто | — | — |
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`, `3`.
+- `width` — `string`, по умолчанию пусто.
+- `height` — `string`, по умолчанию пусто.
+- `label` — `string`, по умолчанию `Loading...`.
+- `kind` — `string`, по умолчанию `arc`, значения: `arc`, `dots`. Вид спиннера: дуга или ряд точек.
+- `dots` — `string`, по умолчанию `16`, значения: шаблон `^(?:[3-9]|[12][0-9]|3[0-2])$`.
+- `filled` — `string`, по умолчанию `6`, значения: шаблон `^(?:[1-9]|[12][0-9]|3[0-2])$`.
+- `stroke-width` — `string`, по умолчанию пусто.
+- `dot-radius` — `string`, по умолчанию пусто.
+- `infinite` — `boolean`, по умолчанию `false`.
+- `announce` — `boolean`, по умолчанию `false`.
+- `direction` — `string`, по умолчанию `clockwise`, значения: `clockwise`, `counterclockwise`.
+- `root-class` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -50,10 +48,8 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getSpinnerRoot()` | — | не описано | — |
-| `refreshSpinner()` | — | не описано | — |
+- `getSpinnerRoot()`
+- `refreshSpinner()`
 
 ### События
 
@@ -73,5 +69,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/spinner`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-spinner`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/spinner`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-spinner`

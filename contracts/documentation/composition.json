@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "253cb441daa9c0312c39e72e3e47378a1f13e14d",
-    "core_revision": "9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa",
+    "source_revision": "5d27921856a1b1e582634b77c92e13e3f0f56991",
+    "core_revision": "ec56cef08625058eaffe2050e1d79f8cbdd5c4f1",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "90747669f98b1b0f68b25604a200f46cc697b9c75a4e715f39767990482f5e3a"
     },
-    "note": "Reviewed at source 253cb441 and core 9fb0297b (release ui-9fb0297bb5c2): the composition contracts, index.mjs, the fixture and the buttons manifest are byte-identical to the last review; builtins.mjs changed only in a comment (sf-table lives with Larena, package larena, instead of SIMAI Framework Pro); core.js was rebuilt for that comment, a comment in loader.js and pageLanguage() returning the chosen language without its region. Nothing the composition pages describe changed."
+    "note": "Reviewed at source 5d279218 and core ec56cef0 (release ui-ec56cef08625): every source and generated file the contract names, core.js included, is byte-identical to the review at source 253cb441 and core 9fb0297b. Nothing the composition pages describe changed."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

@@ -46,7 +46,7 @@ Space и Escape принадлежат родительскому Dropdown.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -55,27 +55,25 @@ Space и Escape принадлежат родительскому Dropdown.
 | Тег | `<sf-list-item>` |
 | Назначение | Декларативное описание варианта и визуальная строка, которыми владеет Dropdown. |
 | Контракт | `smart.list-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `value` | `string` | пусто | — | — |
-| `kind` | `string` | `text` | `text`, `icon`, `checkbox`, `avatar`, `color` | Содержимое элемента списка: простой текст, иконка, флажок, аватар или цвет. |
-| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | — |
-| `text` | `string` | пусто | — | — |
-| `icon` | `string` | `person` | — | — |
-| `checked` | `boolean` | `false` | — | — |
-| `selected` | `boolean` | `false` | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `color-class` | `string` | `bg-tertiary` | — | — |
-| `avatar-image-url` | `string` | пусто | — | — |
-| `avatar-title` | `string` | пусто | — | — |
-| `aria-label` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `value` — `string`, по умолчанию пусто.
+- `kind` — `string`, по умолчанию `text`, значения: `text`, `icon`, `checkbox`, `avatar`, `color`. Содержимое элемента списка: простой текст, иконка, флажок, аватар или цвет.
+- `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`.
+- `text` — `string`, по умолчанию пусто.
+- `icon` — `string`, по умолчанию `person`.
+- `checked` — `boolean`, по умолчанию `false`.
+- `selected` — `boolean`, по умолчанию `false`.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `color-class` — `string`, по умолчанию `bg-tertiary`.
+- `avatar-image-url` — `string`, по умолчанию пусто.
+- `avatar-title` — `string`, по умолчанию пусто.
+- `aria-label` — `string`, по умолчанию пусто.
 
 Свойство атрибута `value` называется `itemValue`.
 
@@ -108,5 +106,5 @@ Space и Escape принадлежат родительскому Dropdown.
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/list-item`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-list-item`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/list-item`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-list-item`

@@ -33,7 +33,7 @@ source-контракт, но не заменяет сценарную пров�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -42,37 +42,35 @@ source-контракт, но не заменяет сценарную пров�
 | Тег | `<sf-textarea>` |
 | Назначение | Нативное многострочное поле формы с оформлением Framework, сообщениями валидации и безопасным изменением размера по вертикали. |
 | Контракт | `smart.textarea`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `size` | `string` | `1` | `1/2`, `1`, `2` | — |
-| `appearance` | `string` | `bordered` | `bordered`, `filled` | Вид поля: блок с рамкой или с заливкой. |
-| `label` | `string` | пусто | — | — |
-| `required` | `boolean` | `false` | — | — |
-| `placeholder` | `string` | пусто | — | — |
-| `autocomplete` | `string` | пусто | — | — |
-| `inputmode` | `string` | пусто | пусто, `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search` | — |
-| `minlength` | `number` | `null` | — | — |
-| `maxlength` | `number` | `null` | — | — |
-| `spellcheck` | `boolean` | `true` | — | — |
-| `wrap` | `string` | `soft` | `soft`, `hard` | — |
-| `hint` | `string` | пусто | — | — |
-| `value` | `string` | пусто | — | — |
-| `name` | `string` | пусто | — | — |
-| `rows` | `number` | `3` | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `readonly` | `boolean` | `false` | — | — |
-| `error` | `boolean` | `false` | — | — |
-| `invalid` | `boolean` | `false` | — | — |
-| `error-message` | `string` | пусто | — | — |
-| `mask` | `boolean` | `false` | — | — |
-| `mask-pattern` | `string` | пусто | — | — |
-| `mask-options` | `string` | пусто | — | — |
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`.
+- `appearance` — `string`, по умолчанию `bordered`, значения: `bordered`, `filled`. Вид поля: блок с рамкой или с заливкой.
+- `label` — `string`, по умолчанию пусто.
+- `required` — `boolean`, по умолчанию `false`.
+- `placeholder` — `string`, по умолчанию пусто.
+- `autocomplete` — `string`, по умолчанию пусто.
+- `inputmode` — `string`, по умолчанию пусто, значения: пусто, `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search`.
+- `minlength` — `number`, по умолчанию `null`.
+- `maxlength` — `number`, по умолчанию `null`.
+- `spellcheck` — `boolean`, по умолчанию `true`.
+- `wrap` — `string`, по умолчанию `soft`, значения: `soft`, `hard`.
+- `hint` — `string`, по умолчанию пусто.
+- `value` — `string`, по умолчанию пусто.
+- `name` — `string`, по умолчанию пусто.
+- `rows` — `number`, по умолчанию `3`.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `readonly` — `boolean`, по умолчанию `false`.
+- `error` — `boolean`, по умолчанию `false`.
+- `invalid` — `boolean`, по умолчанию `false`.
+- `error-message` — `string`, по умолчанию пусто.
+- `mask` — `boolean`, по умолчанию `false`.
+- `mask-pattern` — `string`, по умолчанию пусто.
+- `mask-options` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -84,18 +82,14 @@ source-контракт, но не заменяет сценарную пров�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `setState()` | — | не описано | — |
+- `setState()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `change` | не описан | Значение зафиксировано; нативное событие всплывает от внутреннего textarea, который является его целью. |
-| `input` | не описан | Значение изменилось при вводе; нативное событие всплывает от внутреннего textarea, который является его целью. |
+- `change` — `detail` не описан. Значение зафиксировано; нативное событие всплывает от внутреннего textarea, который является его целью.
+- `input` — `detail` не описан. Значение изменилось при вводе; нативное событие всплывает от внутреннего textarea, который является его целью.
 
 ### Доступность
 
@@ -112,5 +106,5 @@ source-контракт, но не заменяет сценарную пров�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/textarea`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-textarea`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/textarea`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-textarea`

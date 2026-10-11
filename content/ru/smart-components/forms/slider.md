@@ -51,7 +51,7 @@ Framework. Цветовые роли, отступы и радиусы зада�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -60,43 +60,37 @@ Framework. Цветовые роли, отступы и радиусы зада�
 | Тег | `<sf-slider>` |
 | Назначение | Smart-компонент Slider из SIMAI Framework. |
 | Контракт | `smart.slider`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `button-type` | `string` | `primary` | — | — |
-| `button-size` | `string` | `1` | — | — |
-| `dots` | `boolean` | `true` | — | — |
-| `dots-type` | `string` | `primary-dark` | — | — |
-| `dots-size` | `string` | `2` | — | — |
-| `thumbs` | `boolean` | `false` | — | — |
-| `thumbs-class` | `string` | пусто | — | — |
-| `thumb-class` | `string` | пусто | — | — |
-| `arrows` | `boolean` | `true` | — | — |
-| `loop` | `boolean` | `false` | — | — |
-| `space-between` | `number` | `12` | — | — |
-| `speed` | `number` | `450` | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `slide-class` | `string` | пусто | — | — |
+- `button-type` — `string`, по умолчанию `primary`.
+- `button-size` — `string`, по умолчанию `1`.
+- `dots` — `boolean`, по умолчанию `true`.
+- `dots-type` — `string`, по умолчанию `primary-dark`.
+- `dots-size` — `string`, по умолчанию `2`.
+- `thumbs` — `boolean`, по умолчанию `false`.
+- `thumbs-class` — `string`, по умолчанию пусто.
+- `thumb-class` — `string`, по умолчанию пусто.
+- `arrows` — `boolean`, по умолчанию `true`.
+- `loop` — `boolean`, по умолчанию `false`.
+- `space-between` — `number`, по умолчанию `12`.
+- `speed` — `number`, по умолчанию `450`.
+- `root-class` — `string`, по умолчанию пусто.
+- `slide-class` — `string`, по умолчанию пусто.
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getSlider()` | — | не описано | — |
-| `refresh()` | — | не описано | — |
+- `getSlider()`
+- `refresh()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-slide-change` | не описан | — |
+- `sf-slide-change` — `detail` не описан.
 
 ### Доступность
 
@@ -112,5 +106,5 @@ Framework. Цветовые роли, отступы и радиусы зада�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/slider`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-slider`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/slider`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-slider`

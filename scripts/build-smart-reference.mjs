@@ -159,6 +159,8 @@ const ru = (text) => {
   }
   return value;
 };
+// A list item is not a table cell: the pipe needs no escape there.
+const item = (text) => text.replace(/\\\|/gu, '|').replace(/\s*\n\s*/gu, ' ');
 const cell = (text) => String(text).replace(/\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
 const code = (text) => `\`${String(text).replace(/\|/gu, '\\|')}\``;
 const literal = (value) => {
@@ -177,7 +179,7 @@ const typeName = (schema) => {
   if (!schema) return '—';
   if (schema.$ref) return code(schema.$ref.split('/').pop());
   const types = [schema.type].flat().filter(Boolean);
-  if (schema.type === 'array' && schema.items) return `${types.join(' \\| ')} из ${typeName(schema.items)}`;
+  if (schema.type === 'array' && schema.items) return `${code('array')} из ${typeName(schema.items)}`;
   return types.length ? types.map((type) => code(type)).join(' \\| ') : '—';
 };
 const values = (schema) => {
@@ -188,7 +190,6 @@ const values = (schema) => {
   if (schema.maximum !== undefined) parts.push(`до ${schema.maximum}`);
   if (schema.minLength !== undefined) parts.push(`не короче ${schema.minLength}`);
   if (schema.pattern) parts.push(`шаблон ${code(schema.pattern)}`);
-  if (schema.examples) parts.push(`например ${schema.examples.map(literal).join(', ')}`);
   return parts.join('; ') || '—';
 };
 const resolveRef = (manifest, schema) => {
@@ -273,10 +274,15 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   if (current.length === 0) {
     lines.push('Атрибутов нет.', '');
   } else {
-    lines.push('| Атрибут | Тип | По умолчанию | Значения | Назначение |', '|:---|:---|:---|:---|:---|');
+    // A list, not a table: five columns squeeze a code value to a letter a
+    // line on any width a reader has; MDN lists attributes the same way.
     for (const [name, schema] of current) {
-      const fallback = schema.default === undefined ? '—' : literal(schema.default);
-      lines.push(`| ${code(name)} | ${typeName(schema)} | ${fallback} | ${values(schema)} | ${cell(ru(schema.description) || '—')} |`);
+      const facts = [typeName(schema)];
+      if (schema.default !== undefined) facts.push(`по умолчанию ${literal(schema.default)}`);
+      if (values(schema) !== '—') facts.push(`значения: ${values(schema)}`);
+      if (schema.examples) facts.push(`например ${schema.examples.map(literal).join(', ')}`);
+      const purpose = ru(schema.description);
+      lines.push(item(`- ${code(name)} — ${facts.join(', ')}.${purpose ? ` ${purpose}` : ''}`));
     }
     lines.push('');
     for (const [attribute, property] of Object.entries(PROPERTY_EXCEPTIONS[folder] ?? {})) {
@@ -303,16 +309,17 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   if (methods.length === 0) {
     lines.push('Публичных методов нет.', '');
   } else {
-    lines.push('| Метод | Аргументы | Возвращает | Назначение |', '|:---|:---|:---|:---|');
     for (const [name, method] of methods) {
       const argumentList = (method.arguments ?? []).map((argument) => (typeof argument === 'string'
         ? argument
         : `${argument.name}${argument.required === false ? '?' : ''}: ${[argument.type ?? argument.schema?.type].flat().filter(Boolean).join('|') || 'any'}`));
-      const summary = generic(method.summary) ? '—' : ru(method.summary);
       // The manifest generator writes object|boolean|null when the source does
-      // not say; that is «unknown», not three possibilities.
+      // not say; that is «unknown», not three possibilities, and is left out.
       const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
-      lines.push(`| ${code(`${name}()`)} | ${argumentList.length ? code(argumentList.join(', ')) : '—'} | ${unknown ? 'не описано' : typeName(method.returns)} | ${cell(summary)} |`);
+      const parts = [];
+      if (method.returns && !unknown) parts.push(`возвращает ${typeName(method.returns)}.`);
+      if (!generic(method.summary)) parts.push(ru(method.summary));
+      lines.push(item(`- ${code(`${name}(${argumentList.join(', ')})`)}${parts.length ? ` — ${parts.join(' ')}` : ''}`));
     }
     lines.push('');
   }
@@ -323,16 +330,16 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     lines.push('Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
   } else {
     lines.push('Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
-    lines.push('| Событие | `detail` | Когда |', '|:---|:---|:---|');
     for (const [name, event] of events) {
-      const when = event.alias_of
-        ? `Прежнее имя ${code(event.alias_of)}: приходит с тем же \`detail\`, подписывайтесь на ${code(event.alias_of)}`
-        : (generic(event.summary) ? '—' : ru(event.summary));
       // Both names carry one detail; when only the alias declares its shape,
       // the name to bind shows it too.
       const alias = events.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
       const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
-      lines.push(`| ${code(name)} | ${detail} | ${cell(when)} |`);
+      const when = event.alias_of
+        ? `прежнее имя ${code(event.alias_of)}, приходит с тем же \`detail\`; подписывайтесь на ${code(event.alias_of)}.`
+        : (generic(event.summary) ? '' : ru(event.summary));
+      const detailText = detail === 'не описан' ? '`detail` не описан.' : `\`detail\`: ${detail}.`;
+      lines.push(item(`- ${code(name)} — ${event.alias_of ? when : `${detailText}${when ? ` ${when}` : ''}`}`));
     }
     lines.push('');
   }

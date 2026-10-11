@@ -11,7 +11,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -20,30 +20,28 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-avatar>` |
 | Назначение | Smart-компонент Avatar из SIMAI Framework. |
 | Контракт | `smart.avatar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default`, `label`, `card` | — |
-| `size` | `string` | `1` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3` | — |
-| `line` | `string` | пусто | пусто, `1/2`, `1`, `2` | Занимает строку текста этого размера формы вместо высоты элемента управления — для аватара рядом с подписью в строке или ячейке таблицы. |
-| `shape` | `string` | `circle` | `circle`, `square` | — |
-| `image-url` | `string` | пусто | — | — |
-| `image-alt` | `string` | пусто | — | — |
-| `no-wrap` | `boolean` | `false` | — | — |
-| `text` | `string` | пусто | — | — |
-| `status` | `string` | `none` | `none`, `online`, `offline`, `company`, `verified` | — |
-| `aria-label` | `string` | `Avatar` | — | — |
-| `title` | `string` | пусто | — | — |
-| `description` | `string` | пусто | — | — |
-| `meta` | `string` | пусто | — | — |
-| `meta-icon` | `string` | пусто | — | — |
-| `card-variant` | `string` | `square` | `square`, `portrait` | — |
-| `disabled` | `boolean` | `false` | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`, `label`, `card`.
+- `size` — `string`, по умолчанию `1`, значения: `1/4`, `1/3`, `1/2`, `1`, `2`, `3`.
+- `line` — `string`, по умолчанию пусто, значения: пусто, `1/2`, `1`, `2`. Занимает строку текста этого размера формы вместо высоты элемента управления — для аватара рядом с подписью в строке или ячейке таблицы.
+- `shape` — `string`, по умолчанию `circle`, значения: `circle`, `square`.
+- `image-url` — `string`, по умолчанию пусто.
+- `image-alt` — `string`, по умолчанию пусто.
+- `no-wrap` — `boolean`, по умолчанию `false`.
+- `text` — `string`, по умолчанию пусто.
+- `status` — `string`, по умолчанию `none`, значения: `none`, `online`, `offline`, `company`, `verified`.
+- `aria-label` — `string`, по умолчанию `Avatar`.
+- `title` — `string`, по умолчанию пусто.
+- `description` — `string`, по умолчанию пусто.
+- `meta` — `string`, по умолчанию пусто.
+- `meta-icon` — `string`, по умолчанию пусто.
+- `card-variant` — `string`, по умолчанию `square`, значения: `square`, `portrait`.
+- `disabled` — `boolean`, по умолчанию `false`.
 
 Прежние имена:
 
@@ -74,5 +72,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/avatar`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-avatar`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/avatar`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-avatar`

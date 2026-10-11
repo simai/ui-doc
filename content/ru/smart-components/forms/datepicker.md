@@ -11,7 +11,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -20,48 +20,46 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-datepicker>` |
 | Назначение | Доступный выбор даты и диапазона дат во всплывающем и встроенном режимах, с навигацией по календарю и значениями, которыми управляет элемент. |
 | Контракт | `smart.datepicker`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `value` | `string` | пусто | — | — |
-| `date` | `string` | пусто | — | — |
-| `start-value` | `string` | пусто | — | — |
-| `end-value` | `string` | пусто | — | — |
-| `max-date` | `string` | пусто | — | — |
-| `min-date` | `string` | пусто | — | — |
-| `range` | `boolean` | `false` | — | — |
-| `month` | `number` | `null` | — | — |
-| `year` | `number` | `null` | — | — |
-| `context` | `string` | пусто | — | — |
-| `week-start` | `number` | `1` | — | — |
-| `locale` | `string` | пусто | — | — |
-| `format` | `string` | `DD.MM.YYYY` | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `close-on-select` | `boolean` | `true` | — | — |
-| `input` | `boolean` | `true` | — | — |
-| `open` | `boolean` | `false` | — | — |
-| `portal` | `boolean` | `true` | — | — |
-| `input-type` | `string` | `bordered` | — | — |
-| `size` | `string` | `1` | `1/2`, `1`, `2` | Размер поля формы. |
-| `input-name` | `string` | пусто | — | — |
-| `placeholder` | `string` | пусто | — | — |
-| `label` | `string` | пусто | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `required` | `boolean` | `false` | — | — |
-| `icon-start` | `string` | `calendar_today` | — | — |
-| `left-icon` | `string` | `calendar_today` | — | — |
-| `input-root-class` | `string` | пусто | — | — |
-| `mask` | `boolean` | `false` | — | — |
-| `mask-pattern` | `string` | `00.00.0000` | — | Маска ввода; если не задана, выводится из `format`, поэтому формат по умолчанию `DD.MM.YYYY` даёт `00.00.0000`. |
-| `mask-lazy` | `string` | `false` | — | — |
-| `mask-placeholder-char` | `string` | `_` | — | — |
-| `mask-options` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `value` — `string`, по умолчанию пусто.
+- `date` — `string`, по умолчанию пусто.
+- `start-value` — `string`, по умолчанию пусто.
+- `end-value` — `string`, по умолчанию пусто.
+- `max-date` — `string`, по умолчанию пусто.
+- `min-date` — `string`, по умолчанию пусто.
+- `range` — `boolean`, по умолчанию `false`.
+- `month` — `number`, по умолчанию `null`.
+- `year` — `number`, по умолчанию `null`.
+- `context` — `string`, по умолчанию пусто.
+- `week-start` — `number`, по умолчанию `1`.
+- `locale` — `string`, по умолчанию пусто.
+- `format` — `string`, по умолчанию `DD.MM.YYYY`.
+- `root-class` — `string`, по умолчанию пусто.
+- `close-on-select` — `boolean`, по умолчанию `true`.
+- `input` — `boolean`, по умолчанию `true`.
+- `open` — `boolean`, по умолчанию `false`.
+- `portal` — `boolean`, по умолчанию `true`.
+- `input-type` — `string`, по умолчанию `bordered`.
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`. Размер поля формы.
+- `input-name` — `string`, по умолчанию пусто.
+- `placeholder` — `string`, по умолчанию пусто.
+- `label` — `string`, по умолчанию пусто.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `required` — `boolean`, по умолчанию `false`.
+- `icon-start` — `string`, по умолчанию `calendar_today`.
+- `left-icon` — `string`, по умолчанию `calendar_today`.
+- `input-root-class` — `string`, по умолчанию пусто.
+- `mask` — `boolean`, по умолчанию `false`.
+- `mask-pattern` — `string`, по умолчанию `00.00.0000`. Маска ввода; если не задана, выводится из `format`, поэтому формат по умолчанию `DD.MM.YYYY` даёт `00.00.0000`.
+- `mask-lazy` — `string`, по умолчанию `false`.
+- `mask-placeholder-char` — `string`, по умолчанию `_`.
+- `mask-options` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -73,22 +71,18 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `setContext()` | `context: string` | `object` | Открывает контекст календаря: день, месяц или год. |
-| `openPanel()` | `options: object` | `object` | Открывает всплывающее окно; при необходимости переносит фокус в календарь. |
-| `closePanel()` | `options: object` | `object` | Закрывает всплывающее окно; при необходимости возвращает фокус в поле. |
-| `togglePanel()` | — | `object` | Открывает или закрывает всплывающий список, не меняя выбранное значение. |
+- `setContext(context: string)` — возвращает `object`. Открывает контекст календаря: день, месяц или год.
+- `openPanel(options: object)` — возвращает `object`. Открывает всплывающее окно; при необходимости переносит фокус в календарь.
+- `closePanel(options: object)` — возвращает `object`. Закрывает всплывающее окно; при необходимости возвращает фокус в поле.
+- `togglePanel()` — возвращает `object`. Открывает или закрывает всплывающий список, не меняя выбранное значение.
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `change` | `{ value: string\|array, range: boolean, format: string, formattedValue?: string }` | Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки. |
-| `sf-datepicker-change` | `{ value: string\|array, range: boolean, format: string, formattedValue?: string }` | Прежнее имя `change`: приходит с тем же `detail`, подписывайтесь на `change` |
-| `sf-change` | не описан | Прежнее имя `change`: приходит с тем же `detail`, подписывайтесь на `change` |
+- `change` — `detail`: `{ value: string|array, range: boolean, format: string, formattedValue?: string }`. Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки.
+- `sf-datepicker-change` — прежнее имя `change`, приходит с тем же `detail`; подписывайтесь на `change`.
+- `sf-change` — прежнее имя `change`, приходит с тем же `detail`; подписывайтесь на `change`.
 
 ### Доступность
 
@@ -105,5 +99,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/datepicker`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-datepicker`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/datepicker`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-datepicker`

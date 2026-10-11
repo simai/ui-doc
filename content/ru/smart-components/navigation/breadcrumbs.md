@@ -11,7 +11,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -20,46 +20,40 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-breadcrumbs>` |
 | Назначение | Smart-компонент Breadcrumbs из SIMAI Framework. |
 | Контракт | `smart.breadcrumbs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `items` | `string` | `[]` | — | — |
-| `separator-icon` | `string` | `chevron_right` | — | — |
-| `home-icon` | `string` | `home` | — | — |
-| `home-label` | `string` | пусто | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `item-class` | `string` | пусто | — | — |
-| `link-class` | `string` | пусто | — | — |
-| `current-class` | `string` | пусто | — | — |
-| `separator-class` | `string` | пусто | — | — |
-| `container-class` | `string` | пусто | — | — |
-| `aria-label` | `string` | `Breadcrumb` | — | — |
-| `expand-label` | `string` | `Show hidden breadcrumbs` | — | — |
-| `expand-on-ellipsis` | `boolean` | `true` | — | — |
-| `max-items` | `number` | `4` | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `items` — `string`, по умолчанию `[]`.
+- `separator-icon` — `string`, по умолчанию `chevron_right`.
+- `home-icon` — `string`, по умолчанию `home`.
+- `home-label` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто.
+- `item-class` — `string`, по умолчанию пусто.
+- `link-class` — `string`, по умолчанию пусто.
+- `current-class` — `string`, по умолчанию пусто.
+- `separator-class` — `string`, по умолчанию пусто.
+- `container-class` — `string`, по умолчанию пусто.
+- `aria-label` — `string`, по умолчанию `Breadcrumb`.
+- `expand-label` — `string`, по умолчанию `Show hidden breadcrumbs`.
+- `expand-on-ellipsis` — `boolean`, по умолчанию `true`.
+- `max-items` — `number`, по умолчанию `4`.
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getCapturedItems()` | — | не описано | — |
-| `getDisplayItems()` | — | не описано | — |
-| `setState()` | — | не описано | — |
-| `onItemClick()` | — | не описано | — |
+- `getCapturedItems()`
+- `getDisplayItems()`
+- `setState()`
+- `onItemClick()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-breadcrumb-click` | не описан | — |
+- `sf-breadcrumb-click` — `detail` не описан.
 
 ### Доступность
 
@@ -76,5 +70,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/breadcrumbs`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/breadcrumbs`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-breadcrumbs`

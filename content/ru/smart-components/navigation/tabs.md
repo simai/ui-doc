@@ -64,7 +64,7 @@ profile: reference
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -73,45 +73,39 @@ profile: reference
 | Тег | `<sf-tabs>` |
 | Назначение | Smart-компонент Tabs из SIMAI Framework. |
 | Контракт | `smart.tabs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `type` | `string` | `null` | — | — |
-| `size` | `string` | `1` | — | — |
-| `variant` | `string` | `buttons` | — | — |
-| `scheme` | `string` | `default` | — | Встроенный вид кнопки: `default`, `outline` или `link`. Это не выбор семантического цвета. Пользовательские шаблоны могут трактовать его по-своему. |
-| `top-position` | `string` | `start` | — | — |
-| `active-index` | `number` | `0` | — | — |
-| `items` | `string` | `[]` | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `top-class` | `string` | пусто | — | — |
-| `panel-class` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `type` — `string`, по умолчанию `null`.
+- `size` — `string`, по умолчанию `1`.
+- `variant` — `string`, по умолчанию `buttons`.
+- `scheme` — `string`, по умолчанию `default`. Встроенный вид кнопки: `default`, `outline` или `link`. Это не выбор семантического цвета. Пользовательские шаблоны могут трактовать его по-своему.
+- `top-position` — `string`, по умолчанию `start`.
+- `active-index` — `number`, по умолчанию `0`.
+- `items` — `string`, по умолчанию `[]`.
+- `root-class` — `string`, по умолчанию пусто.
+- `top-class` — `string`, по умолчанию пусто.
+- `panel-class` — `string`, по умолчанию пусто.
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getData()` | — | не описано | — |
-| `setData()` | — | не описано | — |
-| `setItems()` | — | не описано | — |
-| `setPanels()` | — | не описано | — |
-| `setState()` | — | не описано | — |
-| `goTo()` | — | не описано | — |
-| `onTabChange()` | — | не описано | — |
+- `getData()`
+- `setData()`
+- `setItems()`
+- `setPanels()`
+- `setState()`
+- `goTo()`
+- `onTabChange()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-tab-change` | не описан | — |
+- `sf-tab-change` — `detail` не описан.
 
 ### Доступность
 
@@ -128,5 +122,5 @@ profile: reference
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/tabs`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-tabs`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/tabs`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-tabs`

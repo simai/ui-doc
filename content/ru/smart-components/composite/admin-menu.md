@@ -42,7 +42,7 @@ Smart-компоненту.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -57,60 +57,58 @@ Smart-компоненту.
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `brand` | `string` | пусто | — | — |
-| `logo` | `string` | пусто | — | — |
-| `logo-href` | `string` | `#` | — | — |
-| `aria-label` | `string` | `Admin menu` | не короче 1 | — |
-| `searchable` | `boolean` | `false` | — | — |
-| `collapsible` | `boolean` | `false` | — | — |
-| `settings` | `boolean` | `true` | — | — |
-| `settings-title` | `string` | `Menu settings` | — | — |
-| `compact` | `boolean` | `false` | — | — |
-| `persistence-mode` | `string` | `local` | `local`, `external` | — |
-| `settings-mode` | `string` | `user` | `user`, `system` | — |
-| `settings-revision` | `integer` | `0` | от 0 | — |
-| `system-settings-revision` | `integer` | `0` | от 0 | — |
-| `allow-system-settings` | `boolean` | `false` | — | — |
-| `search-placeholder` | `string` | `Search sections` | — | — |
-| `toggle-label` | `string` | `Menu` | — | — |
-| `panel-class` | `string` | пусто | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `search-mode` | `string` | `row` | `row`, `panel` | Расположение поиска: строка под шапкой или панель, открываемая значком лупы в шапке. |
-| `search-label` | `string` | `Search the admin (Ctrl+K)` | — | Доступное имя и подсказка лупы, открывающей панель поиска. |
-| `search-shortcut` | `string` | `mod+k` | — | Клавиша, которая открывает поиск из любого места страницы; пустое значение отключает её. |
-| `search-hint` | `string` | пусто | — | Короткая строка под пустым запросом, если она есть у хоста. |
-| `search-keys-hint` | `string` | `↑↓ select · Enter open · Esc close` | — | Строка подсказок по клавишам внизу панели поиска. |
-| `search-title` | `string` | пусто | — | Заголовок над полем поиска в панели навигации. |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `brand` — `string`, по умолчанию пусто.
+- `logo` — `string`, по умолчанию пусто.
+- `logo-href` — `string`, по умолчанию `#`.
+- `aria-label` — `string`, по умолчанию `Admin menu`, значения: не короче 1.
+- `searchable` — `boolean`, по умолчанию `false`.
+- `collapsible` — `boolean`, по умолчанию `false`.
+- `settings` — `boolean`, по умолчанию `true`.
+- `settings-title` — `string`, по умолчанию `Menu settings`.
+- `compact` — `boolean`, по умолчанию `false`.
+- `persistence-mode` — `string`, по умолчанию `local`, значения: `local`, `external`.
+- `settings-mode` — `string`, по умолчанию `user`, значения: `user`, `system`.
+- `settings-revision` — `integer`, по умолчанию `0`, значения: от 0.
+- `system-settings-revision` — `integer`, по умолчанию `0`, значения: от 0.
+- `allow-system-settings` — `boolean`, по умолчанию `false`.
+- `search-placeholder` — `string`, по умолчанию `Search sections`.
+- `toggle-label` — `string`, по умолчанию `Menu`.
+- `panel-class` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто.
+- `search-mode` — `string`, по умолчанию `row`, значения: `row`, `panel`. Расположение поиска: строка под шапкой или панель, открываемая значком лупы в шапке.
+- `search-label` — `string`, по умолчанию `Search the admin (Ctrl+K)`. Доступное имя и подсказка лупы, открывающей панель поиска.
+- `search-shortcut` — `string`, по умолчанию `mod+k`. Клавиша, которая открывает поиск из любого места страницы; пустое значение отключает её.
+- `search-hint` — `string`, по умолчанию пусто. Короткая строка под пустым запросом, если она есть у хоста.
+- `search-keys-hint` — `string`, по умолчанию `↑↓ select · Enter open · Esc close`. Строка подсказок по клавишам внизу панели поиска.
+- `search-title` — `string`, по умолчанию пусто. Заголовок над полем поиска в панели навигации.
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `applyExternalSettingsState()` | `state: object, target: any` | `null` | Применяет состояние и дерево, вычисленные бэкендом. |
-| `applySettingsResult()` | `result: object` | `null` | Фиксирует успешный ответ внешнего сохранения. |
-| `applySettingsError()` | `error: object` | `null` | Сохраняет черновик и показывает состояние ошибки или конфликта. |
-| `setCompact()` | `compact: boolean` | `boolean` | Включает компактный режим навигации. |
-| `toggleMenuSettings()` | — | `null` | Входит в редактор настроек или выходит из него. |
-| `refresh()` | — | `object` | Повторно читает меню навигации у хоста после того, как что-то вне меню изменило его содержимое (звёздочка в заголовке страницы). На меню элементов не влияет. |
+- `applyExternalSettingsState(state: object, target: any)` — возвращает `null`. Применяет состояние и дерево, вычисленные бэкендом.
+- `applySettingsResult(result: object)` — возвращает `null`. Фиксирует успешный ответ внешнего сохранения.
+- `applySettingsError(error: object)` — возвращает `null`. Сохраняет черновик и показывает состояние ошибки или конфликта.
+- `setCompact(compact: boolean)` — возвращает `boolean`. Включает компактный режим навигации.
+- `toggleMenuSettings()` — возвращает `null`. Входит в редактор настроек или выходит из него.
+- `refresh()` — возвращает `object`. Повторно читает меню навигации у хоста после того, как что-то вне меню изменило его содержимое (звёздочка в заголовке страницы). На меню элементов не влияет.
+- `setHostPort(host: object)` — возвращает `object`. Подключает хост порта simai.admin-navigation-port; меню рисует оболочку навигации вместо меню из пунктов.
+- `setSearchResults(requestId: string, groups?: array)` — возвращает `boolean`. Хост отвечает на один поисковый запрос своими группами результатов. Ответ на запрос, который пользователь уже сменил, отбрасывается.
+- `setRecentResults(groups?: array)` — возвращает `boolean`. Что хост предлагает пустому полю поиска: список недавнего, который действует, пока хост не задаст другой.
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-admin-menu-compact-change` | `{ compact: boolean, source: string }` | Уведомляет оболочку хоста о режиме ширины. |
-| `sf-admin-menu-search` | не описан | — |
-| `sf-admin-menu-settings-cancel` | `{ target?: any }` | Отбрасывает локальный черновик. |
-| `sf-admin-menu-settings-mode-change` | `{ target: any }` | Запрашивает состояние для другого уровня настроек. |
-| `sf-admin-menu-settings-refresh` | `{ target: any, base_revision: integer, profile: object }` | Запрашивает актуальное состояние бэкенда после конфликта. |
-| `sf-admin-menu-settings-reset` | `{ target: any, base_revision: integer }` | Запрашивает сброс выбранного уровня настроек. |
-| `sf-admin-menu-settings-save` | `{ target: any, base_revision: integer, profile: object }` | Запрашивает сохранение текущих изменений. |
-| `sf-host-port-request` | `{ component: object, context: object }` | Запрашивает у страницы порт хоста при подключении. Страница, ответившая `simai.admin-navigation-port`, получает навигационную оболочку; если страница не отвечает, отображается меню элементов без изменений. |
-| `sf-admin-menu-navigate` | `{ key: string, href: string\|null }` | Хост подтвердил применение item.open: страница теперь принадлежит этой строке. Для хоста, который выполняет переход в собственном маршрутизаторе, а не по адресу из ответа. |
+- `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: string }`. Уведомляет оболочку хоста о режиме ширины.
+- `sf-admin-menu-search` — `detail` не описан.
+- `sf-admin-menu-settings-cancel` — `detail`: `{ target?: any }`. Отбрасывает локальный черновик.
+- `sf-admin-menu-settings-mode-change` — `detail`: `{ target: any }`. Запрашивает состояние для другого уровня настроек.
+- `sf-admin-menu-settings-refresh` — `detail`: `{ target: any, base_revision: integer, profile: object }`. Запрашивает актуальное состояние бэкенда после конфликта.
+- `sf-admin-menu-settings-reset` — `detail`: `{ target: any, base_revision: integer }`. Запрашивает сброс выбранного уровня настроек.
+- `sf-admin-menu-settings-save` — `detail`: `{ target: any, base_revision: integer, profile: object }`. Запрашивает сохранение текущих изменений.
+- `sf-host-port-request` — `detail`: `{ component: object, context: object }`. Запрашивает у страницы порт хоста при подключении. Страница, ответившая `simai.admin-navigation-port`, получает навигационную оболочку; если страница не отвечает, отображается меню элементов без изменений.
+- `sf-admin-menu-navigate` — `detail`: `{ key: string, href: string|null }`. Хост подтвердил применение item.open: страница теперь принадлежит этой строке. Для хоста, который выполняет переход в собственном маршрутизаторе, а не по адресу из ответа.
+- `sf-admin-menu-intent` — `detail`: `{ intent: string, payload: object }`. Что пользователь запросил у хоста: событие приходит для каждого намерения порта simai.admin-navigation-port, когда меню его поднимает. Хост отвечает через порт, а не через это событие.
 
 ### Доступность
 
@@ -127,5 +125,5 @@ Smart-компоненту.
 
 ### Источник
 
-- `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components/src/smart/admin-menu`
-- `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@97781825e5a24f37a11581f993799410f9e728a4:components/src/smart/admin-menu`
+- `simai/larena-ui@97781825e5a24f37a11581f993799410f9e728a4:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`

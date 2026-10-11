@@ -75,7 +75,7 @@ Smart-компонент не загружает файлы и не добавл
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -84,25 +84,23 @@ Smart-компонент не загружает файлы и не добавл
 | Тег | `<sf-file-upload>` |
 | Назначение | Smart-компонент File Upload из SIMAI Framework. |
 | Контракт | `smart.file-upload`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `size` | `string` | `1` | `1/2`, `1`, `2` | — |
-| `icon` | `string` | `upload_file` | — | — |
-| `link-text` | `string` | `Click to upload` | — | — |
-| `text` | `string` | `or drag and drop` | — | — |
-| `formats` | `string` | пусто | — | Строка форматов под действием. Если не задана, выводится из `accept`; пуста, если не задано ни то ни другое: компонент не называет форматы, которые не может знать. |
-| `supporting-text` | `string` | пусто | — | Вспомогательная строка; по умолчанию берётся из formats. |
-| `accept` | `string` | пусто | — | — |
-| `multiple` | `boolean` | `false` | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `aria-label` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`.
+- `icon` — `string`, по умолчанию `upload_file`.
+- `link-text` — `string`, по умолчанию `Click to upload`.
+- `text` — `string`, по умолчанию `or drag and drop`.
+- `formats` — `string`, по умолчанию пусто. Строка форматов под действием. Если не задана, выводится из `accept`; пуста, если не задано ни то ни другое: компонент не называет форматы, которые не может знать.
+- `supporting-text` — `string`, по умолчанию пусто. Вспомогательная строка; по умолчанию берётся из formats.
+- `accept` — `string`, по умолчанию пусто.
+- `multiple` — `boolean`, по умолчанию `false`.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `aria-label` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -113,33 +111,29 @@ Smart-компонент не загружает файлы и не добавл
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getItems()` | — | не описано | — |
-| `onFileAdd()` | — | не описано | — |
-| `onFileError()` | — | не описано | — |
-| `onFileComplete()` | — | не описано | — |
-| `onFileRemove()` | — | не описано | — |
-| `onFileRetry()` | — | не описано | — |
-| `onComplete()` | — | не описано | — |
-| `setItems()` | — | не описано | — |
-| `clear()` | — | не описано | — |
-| `setState()` | — | не описано | — |
+- `getItems()`
+- `onFileAdd()`
+- `onFileError()`
+- `onFileComplete()`
+- `onFileRemove()`
+- `onFileRetry()`
+- `onComplete()`
+- `setItems()`
+- `clear()`
+- `setState()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `change` | не описан | Файлы выбраны; нативное событие всплывает от внутреннего поля ввода файла. |
-| `sf-file-upload:select` | не описан | Выбраны файлы для загрузки. |
-| `sf-file-upload:file-add` | не описан | Файл добавлен в список. |
-| `sf-file-upload:file-error` | не описан | Ошибка загрузки файла. |
-| `sf-file-upload:file-complete` | не описан | Файл загружен. |
-| `sf-file-upload:complete` | не описан | Все файлы обработаны. |
-| `sf-file-upload:remove` | не описан | Файл удалён из списка. |
-| `sf-file-upload:retry` | не описан | Повторена загрузка файла с ошибкой. |
+- `change` — `detail` не описан. Файлы выбраны; нативное событие всплывает от внутреннего поля ввода файла.
+- `sf-file-upload:select` — `detail` не описан. Выбраны файлы для загрузки.
+- `sf-file-upload:file-add` — `detail` не описан. Файл добавлен в список.
+- `sf-file-upload:file-error` — `detail` не описан. Ошибка загрузки файла.
+- `sf-file-upload:file-complete` — `detail` не описан. Файл загружен.
+- `sf-file-upload:complete` — `detail` не описан. Все файлы обработаны.
+- `sf-file-upload:remove` — `detail` не описан. Файл удалён из списка.
+- `sf-file-upload:retry` — `detail` не описан. Повторена загрузка файла с ошибкой.
 
 ### Доступность
 
@@ -156,5 +150,5 @@ Smart-компонент не загружает файлы и не добавл
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/file-upload`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-file-upload`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/file-upload`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-file-upload`

@@ -11,7 +11,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -20,38 +20,36 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-tree-item>` |
 | Назначение | Один доступный узел иерархии Smart Tree. |
 | Контракт | `smart.tree-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `label` | `string` | пусто | — | — |
-| `text` | `string` | пусто | — | — |
-| `href` | `string` | пусто | — | — |
-| `target` | `string` | пусто | — | — |
-| `rel` | `string` | пусто | — | — |
-| `kind` | `string` | `folder` | `folder`, `file` | Тип элемента дерева: папка или файл. |
-| `value` | `string` | пусто | — | — |
-| `open` | `boolean` | `false` | — | — |
-| `selected` | `boolean` | `false` | — | — |
-| `active` | `boolean` | `false` | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `items-data` | `array` | `[]` | — | — |
-| `open-icon` | `string` | `folder_open` | — | — |
-| `closed-icon` | `string` | `folder` | — | — |
-| `icon` | `boolean` | `true` | — | — |
-| `chevron-open-icon` | `string` | `keyboard_arrow_down` | — | — |
-| `chevron-closed-icon` | `string` | `chevron_right` | — | — |
-| `open-label` | `string` | `Open item` | — | — |
-| `close-label` | `string` | `Close item` | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `item-class` | `string` | пусто | — | — |
-| `container-class` | `string` | пусто | — | — |
-| `name-class` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `label` — `string`, по умолчанию пусто.
+- `text` — `string`, по умолчанию пусто.
+- `href` — `string`, по умолчанию пусто.
+- `target` — `string`, по умолчанию пусто.
+- `rel` — `string`, по умолчанию пусто.
+- `kind` — `string`, по умолчанию `folder`, значения: `folder`, `file`. Тип элемента дерева: папка или файл.
+- `value` — `string`, по умолчанию пусто.
+- `open` — `boolean`, по умолчанию `false`.
+- `selected` — `boolean`, по умолчанию `false`.
+- `active` — `boolean`, по умолчанию `false`.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `items-data` — `array`, по умолчанию `[]`.
+- `open-icon` — `string`, по умолчанию `folder_open`.
+- `closed-icon` — `string`, по умолчанию `folder`.
+- `icon` — `boolean`, по умолчанию `true`.
+- `chevron-open-icon` — `string`, по умолчанию `keyboard_arrow_down`.
+- `chevron-closed-icon` — `string`, по умолчанию `chevron_right`.
+- `open-label` — `string`, по умолчанию `Open item`.
+- `close-label` — `string`, по умолчанию `Close item`.
+- `root-class` — `string`, по умолчанию пусто.
+- `item-class` — `string`, по умолчанию пусто.
+- `container-class` — `string`, по умолчанию пусто.
+- `name-class` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -61,24 +59,20 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `setOpen()` | — | не описано | — |
-| `open()` | — | не описано | — |
-| `close()` | — | не описано | — |
-| `focusItem()` | — | `object` | Переносит фокус DOM на этот элемент дерева. |
-| `activate()` | — | `object` | Активирует ссылку элемента или генерирует событие щелчка по элементу. |
-| `toggle()` | — | не описано | — |
-| `onToggle()` | — | не описано | — |
+- `setOpen()`
+- `open()`
+- `close()`
+- `focusItem()` — возвращает `object`. Переносит фокус DOM на этот элемент дерева.
+- `activate()` — возвращает `object`. Активирует ссылку элемента или генерирует событие щелчка по элементу.
+- `toggle()`
+- `onToggle()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-tree-item-click` | не описан | — |
-| `sf-tree-item-toggle` | не описан | — |
+- `sf-tree-item-click` — `detail` не описан.
+- `sf-tree-item-toggle` — `detail` не описан.
 
 ### Доступность
 
@@ -95,5 +89,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/tree-item`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/tree-item`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-tree-item`

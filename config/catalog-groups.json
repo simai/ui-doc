@@ -112,6 +112,7 @@
       "items": [
         "buttons",
         "icon-buttons",
+        "button-group",
         "close",
         "download-file",
         "fab",
@@ -184,7 +185,8 @@
       "title": "Окна и панели",
       "items": [
         "modal",
-        "drawer"
+        "drawer",
+        "popover"
       ]
     },
     "editor": {
@@ -199,7 +201,8 @@
       "title": "Составные компоненты",
       "items": [
         "admin-menu",
-        "property-view"
+        "property-view",
+        "page-header"
       ]
     }
   }

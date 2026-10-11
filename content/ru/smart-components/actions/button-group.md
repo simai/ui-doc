@@ -15,7 +15,7 @@ description: "Smart-компонент выбора одного вариант�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -24,24 +24,22 @@ description: "Smart-компонент выбора одного вариант�
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | Имя варианта шаблона. |
-| `items` | array из `object` | `[]` | например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]` | Выбираемые элементы со стабильными полями value, label, icon и disabled. |
-| `value` | `string` | пусто | — | Значение выбранного элемента. |
-| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | Общий токен размера кнопки. |
-| `spacing` | `string` | `normal` | `compact`, `normal`, `comfortable`, `spacious` | Общий семантический профиль внутренних отступов. |
-| `scheme` | `string` | `primary` | `primary`, `secondary`, `on-surface` | Цветовая схема выбранной кнопки. |
-| `orientation` | `string` | `horizontal` | `horizontal`, `vertical` | Ориентация раскладки и навигации с клавиатуры. |
-| `disabled` | `boolean` | `false` | — | Отключает всю группу. |
-| `aria-label` | `string` | пусто | — | Доступное имя группы. |
-| `root-class` | `string` | пусто | — | Дополнительные классы корневого элемента группы. |
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона.
+- `items` — `array` из `object`, по умолчанию `[]`, например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`. Выбираемые элементы со стабильными полями value, label, icon и disabled.
+- `value` — `string`, по умолчанию пусто. Значение выбранного элемента.
+- `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`. Общий токен размера кнопки.
+- `spacing` — `string`, по умолчанию `normal`, значения: `compact`, `normal`, `comfortable`, `spacious`. Общий семантический профиль внутренних отступов.
+- `scheme` — `string`, по умолчанию `primary`, значения: `primary`, `secondary`, `on-surface`. Цветовая схема выбранной кнопки.
+- `orientation` — `string`, по умолчанию `horizontal`, значения: `horizontal`, `vertical`. Ориентация раскладки и навигации с клавиатуры.
+- `disabled` — `boolean`, по умолчанию `false`. Отключает всю группу.
+- `aria-label` — `string`, по умолчанию пусто. Доступное имя группы.
+- `root-class` — `string`, по умолчанию пусто. Дополнительные классы корневого элемента группы.
 
 Прежние имена:
 
@@ -51,20 +49,16 @@ description: "Smart-компонент выбора одного вариант�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `select()` | `value: string` | `object` | Выбирает доступный элемент по значению. |
-| `clear()` | — | `object` | Сбрасывает текущий выбор. |
-| `focus()` | — | `object` \| `null` | Переводит фокус на выбранный или первый доступный элемент. |
+- `select(value: string)` — возвращает `object`. Выбирает доступный элемент по значению.
+- `clear()` — возвращает `object`. Сбрасывает текущий выбор.
+- `focus()` — возвращает `object` | `null`. Переводит фокус на выбранный или первый доступный элемент.
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `change` | `{ previous: string, value: string, item: object\|null }` | Выбранное значение изменилось; событие отправляется на элементе с previous, value и item. Используйте это имя для подписки. |
-| `sf-button-group-change` | `{ previous: string, value: string, item: object\|null }` | Прежнее имя `change`: приходит с тем же `detail`, подписывайтесь на `change` |
+- `change` — `detail`: `{ previous: string, value: string, item: object|null }`. Выбранное значение изменилось; событие отправляется на элементе с previous, value и item. Используйте это имя для подписки.
+- `sf-button-group-change` — прежнее имя `change`, приходит с тем же `detail`; подписывайтесь на `change`.
 
 ### Доступность
 
@@ -81,5 +75,5 @@ description: "Smart-компонент выбора одного вариант�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/button-group`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/button-group`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-button-group`

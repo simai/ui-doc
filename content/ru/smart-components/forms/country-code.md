@@ -82,7 +82,7 @@ profile: reference
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -91,38 +91,36 @@ profile: reference
 | Тег | `<sf-country-code>` |
 | Назначение | Smart-компонент Country Code из SIMAI Framework. |
 | Контракт | `smart.country-code`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `size` | `string` | `1` | `1/2`, `1`, `2` | — |
-| `label` | `string` | `Label` | — | — |
-| `required` | `boolean` | `false` | — | Нативное обязательное поле телефона; одного префикса страны недостаточно для выполнения требования. |
-| `name` | `string` | пусто | — | Нативное имя поля ввода, используемое `FormData` и отправкой формы. |
-| `form` | `string` | пусто | — | Необязательный id нативной формы-владельца, если поле находится вне её. |
-| `hint` | `string` | пусто | — | — |
-| `value` | `string` | пусто | — | — |
-| `placeholder` | `string` | `+7(___)___-__-__` | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `open` | `boolean` | `false` | — | — |
-| `locale` | `string` | пусто | — | Язык названий стран и собственных текстов поля: `ru` или `en`. Если не задан, следует языку страницы: русский на русской странице, иначе английский. |
-| `use-mask` | `boolean` | `false` | — | — |
-| `use-country-masks` | `boolean` | `true` | — | — |
-| `show-code` | `boolean` | `true` | — | — |
-| `mask-style` | `string` | `native` | — | — |
-| `multi-country` | `boolean` | `true` | — | — |
-| `iso2` | `string` | пусто | — | — |
-| `dial-code` | `string` | пусто | — | — |
-| `mask-pattern` | `string` | пусто | — | — |
-| `flag-base` | `string` | пусто | — | — |
-| `lazy-flags` | `boolean` | `true` | — | — |
-| `show-mask-placeholder` | `boolean` | `false` | — | — |
-| `mask-placeholder-char` | `string` | `_` | — | — |
-| `max-items` | `number` | `0` | — | — |
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`.
+- `label` — `string`, по умолчанию `Label`.
+- `required` — `boolean`, по умолчанию `false`. Нативное обязательное поле телефона; одного префикса страны недостаточно для выполнения требования.
+- `name` — `string`, по умолчанию пусто. Нативное имя поля ввода, используемое `FormData` и отправкой формы.
+- `form` — `string`, по умолчанию пусто. Необязательный id нативной формы-владельца, если поле находится вне её.
+- `hint` — `string`, по умолчанию пусто.
+- `value` — `string`, по умолчанию пусто.
+- `placeholder` — `string`, по умолчанию `+7(___)___-__-__`.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `open` — `boolean`, по умолчанию `false`.
+- `locale` — `string`, по умолчанию пусто. Язык названий стран и собственных текстов поля: `ru` или `en`. Если не задан, следует языку страницы: русский на русской странице, иначе английский.
+- `use-mask` — `boolean`, по умолчанию `false`.
+- `use-country-masks` — `boolean`, по умолчанию `true`.
+- `show-code` — `boolean`, по умолчанию `true`.
+- `mask-style` — `string`, по умолчанию `native`.
+- `multi-country` — `boolean`, по умолчанию `true`.
+- `iso2` — `string`, по умолчанию пусто.
+- `dial-code` — `string`, по умолчанию пусто.
+- `mask-pattern` — `string`, по умолчанию пусто.
+- `flag-base` — `string`, по умолчанию пусто.
+- `lazy-flags` — `boolean`, по умолчанию `true`.
+- `show-mask-placeholder` — `boolean`, по умолчанию `false`.
+- `mask-placeholder-char` — `string`, по умолчанию `_`.
+- `max-items` — `number`, по умолчанию `0`.
 
 Прежние имена:
 
@@ -133,17 +131,13 @@ profile: reference
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `setState()` | — | не описано | — |
+- `setState()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `change` | не описан | Значение телефона или страна зафиксированы; нативное событие всплывает от внутреннего поля ввода, которое является его целью. Имя для привязки. |
+- `change` — `detail` не описан. Значение телефона или страна зафиксированы; нативное событие всплывает от внутреннего поля ввода, которое является его целью. Имя для привязки.
 
 ### Доступность
 
@@ -159,5 +153,5 @@ profile: reference
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/country-code`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-country-code`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/country-code`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-country-code`

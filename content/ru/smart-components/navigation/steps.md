@@ -30,7 +30,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -39,39 +39,33 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-steps>` |
 | Назначение | Smart-компонент Steps из SIMAI Framework. |
 | Контракт | `smart.steps`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `size` | `string` | `1` | — | — |
-| `items` | `string` | `[]` | — | — |
-| `current` | `number` | `0` | — | — |
-| `error-step` | `string` | пусто | — | — |
-| `separator-icon` | `string` | `chevron_right` | — | — |
-| `aria-label` | `string` | `Steps` | — | — |
-| `completed-label` | `string` | `Completed` | — | — |
-| `error-label` | `string` | `Error` | — | — |
-| `root-class` | `string` | пусто | — | — |
+- `size` — `string`, по умолчанию `1`.
+- `items` — `string`, по умолчанию `[]`.
+- `current` — `number`, по умолчанию `0`.
+- `error-step` — `string`, по умолчанию пусто.
+- `separator-icon` — `string`, по умолчанию `chevron_right`.
+- `aria-label` — `string`, по умолчанию `Steps`.
+- `completed-label` — `string`, по умолчанию `Completed`.
+- `error-label` — `string`, по умолчанию `Error`.
+- `root-class` — `string`, по умолчанию пусто.
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `setState()` | — | не описано | — |
-| `goToStep()` | — | не описано | — |
-| `onStepChange()` | — | не описано | — |
+- `setState()`
+- `goToStep()`
+- `onStepChange()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `sf-step-change` | не описан | — |
+- `sf-step-change` — `detail` не описан.
 
 ### Доступность
 
@@ -88,5 +82,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/steps`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-steps`

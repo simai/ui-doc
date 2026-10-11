@@ -106,7 +106,10 @@ for (const [name, manifestRoot] of manifestNames) {
   // in code style, anywhere in a table row — pages lay their columns out
   // differently. A legacy word counts as presented as public only when a row is
   // *about* it: its first cell is that attribute and nothing else.
-  const tableRows = text.split('\n').filter((line) => line.startsWith('|'));
+  // The generated reference lists attributes as `- \`name\` — …` items; a
+  // list item counts as a row the same way.
+  const tableRows = text.split('\n').filter((line) => line.startsWith('|'))
+    .concat(text.split('\n').filter((line) => /^- `[a-z-]+` — /u.test(line)).map((line) => `| ${line.slice(2).replace(' — ', ' | ')}`));
   const mentioned = new Set(
     tableRows.flatMap((row) => [...row.matchAll(/`([a-z-]+)`/gu)].map(([, token]) => token)),
   );

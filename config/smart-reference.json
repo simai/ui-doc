@@ -10,7 +10,7 @@
       "sections": [
         "accessibility"
       ],
-      "reason": "The ui-9fb0297bb5c2 manifest carries sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
+      "reason": "The ui-9fb0297bb5c2 and ui-ec56cef08625 manifests carry sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
     }
   }
 }

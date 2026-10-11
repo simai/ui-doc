@@ -96,7 +96,7 @@ profile: reference
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,45 +105,43 @@ profile: reference
 | Тег | `<sf-input>` |
 | Назначение | Нативное однострочное поле формы с оформлением Framework, сообщениями валидации и необязательной поддержкой маски. |
 | Контракт | `smart.inputs`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `size` | `string` | `1` | `1/2`, `1`, `2` | — |
-| `appearance` | `string` | `bordered` | `bordered`, `filled`, `hidden` | Вид поля: блок с рамкой, с заливкой или скрытый. |
-| `label` | `string` | пусто | — | — |
-| `required` | `boolean` | `false` | — | — |
-| `placeholder` | `string` | пусто | — | — |
-| `input-type` | `string` | `text` | `text`, `email`, `password`, `search`, `tel`, `url` | — |
-| `autocomplete` | `string` | пусто | — | — |
-| `inputmode` | `string` | пусто | пусто, `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search` | — |
-| `minlength` | `string` | пусто | — | — |
-| `maxlength` | `string` | пусто | — | — |
-| `pattern` | `string` | пусто | — | — |
-| `hint` | `string` | пусто | — | — |
-| `value` | `string` | пусто | — | — |
-| `default-value` | `string` | пусто | — | — |
-| `name` | `string` | пусто | — | — |
-| `icon-start` | `string` | `null` | — | — |
-| `text-end` | `string` | `null` | — | — |
-| `left-icon` | `string` | пусто | — | — |
-| `right-text` | `string` | пусто | — | — |
-| `hint-icon` | `string` | пусто | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `disabled` | `boolean` | `false` | — | — |
-| `readonly` | `boolean` | `false` | — | — |
-| `error` | `boolean` | `false` | — | — |
-| `invalid` | `boolean` | `false` | — | — |
-| `error-message` | `string` | пусто | — | — |
-| `mask` | `boolean` | `false` | — | — |
-| `mask-pattern` | `string` | пусто | — | — |
-| `mask-lazy` | `string` | пусто | — | — |
-| `mask-placeholder-char` | `string` | пусто | — | — |
-| `mask-options` | `string` | пусто | — | — |
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`.
+- `appearance` — `string`, по умолчанию `bordered`, значения: `bordered`, `filled`, `hidden`. Вид поля: блок с рамкой, с заливкой или скрытый.
+- `label` — `string`, по умолчанию пусто.
+- `required` — `boolean`, по умолчанию `false`.
+- `placeholder` — `string`, по умолчанию пусто.
+- `input-type` — `string`, по умолчанию `text`, значения: `text`, `email`, `password`, `search`, `tel`, `url`.
+- `autocomplete` — `string`, по умолчанию пусто.
+- `inputmode` — `string`, по умолчанию пусто, значения: пусто, `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search`.
+- `minlength` — `string`, по умолчанию пусто.
+- `maxlength` — `string`, по умолчанию пусто.
+- `pattern` — `string`, по умолчанию пусто.
+- `hint` — `string`, по умолчанию пусто.
+- `value` — `string`, по умолчанию пусто.
+- `default-value` — `string`, по умолчанию пусто.
+- `name` — `string`, по умолчанию пусто.
+- `icon-start` — `string`, по умолчанию `null`.
+- `text-end` — `string`, по умолчанию `null`.
+- `left-icon` — `string`, по умолчанию пусто.
+- `right-text` — `string`, по умолчанию пусто.
+- `hint-icon` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто.
+- `disabled` — `boolean`, по умолчанию `false`.
+- `readonly` — `boolean`, по умолчанию `false`.
+- `error` — `boolean`, по умолчанию `false`.
+- `invalid` — `boolean`, по умолчанию `false`.
+- `error-message` — `string`, по умолчанию пусто.
+- `mask` — `boolean`, по умолчанию `false`.
+- `mask-pattern` — `string`, по умолчанию пусто.
+- `mask-lazy` — `string`, по умолчанию пусто.
+- `mask-placeholder-char` — `string`, по умолчанию пусто.
+- `mask-options` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -155,24 +153,20 @@ profile: reference
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getInputElement()` | — | не описано | — |
-| `onInput()` | — | не описано | — |
-| `onChange()` | — | не описано | — |
-| `onKeyUp()` | — | не описано | — |
-| `onKeyDown()` | — | не описано | — |
-| `onFocus()` | — | не описано | — |
-| `onBlur()` | — | не описано | — |
+- `getInputElement()`
+- `onInput()`
+- `onChange()`
+- `onKeyUp()`
+- `onKeyDown()`
+- `onFocus()`
+- `onBlur()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `change` | не описан | Значение зафиксировано; нативное событие всплывает от внутреннего поля ввода, которое является его целью. |
-| `input` | не описан | Значение изменилось при вводе; нативное событие всплывает от внутреннего поля ввода, которое является его целью. |
+- `change` — `detail` не описан. Значение зафиксировано; нативное событие всплывает от внутреннего поля ввода, которое является его целью.
+- `input` — `detail` не описан. Значение изменилось при вводе; нативное событие всплывает от внутреннего поля ввода, которое является его целью.
 
 ### Доступность
 
@@ -189,5 +183,5 @@ profile: reference
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/inputs`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-inputs`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/inputs`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-inputs`

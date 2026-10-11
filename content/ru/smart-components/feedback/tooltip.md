@@ -32,7 +32,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -41,21 +41,19 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-tooltip>` |
 | Назначение | Поверхность подсказки, которая может участвовать в обычной композиции триггера data-tooltip. |
 | Контракт | `smart.tooltip`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | `released` |
 | Готовность | принят в продукт |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | Имя шаблона. |
-| `appearance` | `string` | `light` | `light`, `dark` | Вид подсказки: светлый текст на тёмной поверхности или наоборот. |
-| `size` | `string` | `1` | `1/3`, `1/2`, `1`, `2`, `3` | Шкала типографики и отступов Framework. |
-| `arrow` | `string` | `none` | `none`, `top-center`, `bottom-center`, `inline-start`, `inline-end`, `bottom-inline-start`, `bottom-inline-end` | Логическое расположение хвоста. |
-| `text` | `string` | пусто | — | Короткое основное описание. |
-| `supporting-text` | `string` | пусто | — | Необязательное дополнительное описание. |
-| `root-class` | `string` | пусто | — | Утилитарные классы Framework для видимого корня поверхности. |
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона.
+- `appearance` — `string`, по умолчанию `light`, значения: `light`, `dark`. Вид подсказки: светлый текст на тёмной поверхности или наоборот.
+- `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`. Шкала типографики и отступов Framework.
+- `arrow` — `string`, по умолчанию `none`, значения: `none`, `top-center`, `bottom-center`, `inline-start`, `inline-end`, `bottom-inline-start`, `bottom-inline-end`. Логическое расположение хвоста.
+- `text` — `string`, по умолчанию пусто. Короткое основное описание.
+- `supporting-text` — `string`, по умолчанию пусто. Необязательное дополнительное описание.
+- `root-class` — `string`, по умолчанию пусто. Утилитарные классы Framework для видимого корня поверхности.
 
 Прежние имена:
 
@@ -86,5 +84,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/tooltip`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-tooltip`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/tooltip`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-tooltip`

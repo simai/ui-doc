@@ -105,7 +105,7 @@ Escape, который уже обработал редактор или пер�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -114,39 +114,37 @@ Escape, который уже обработал редактор или пер�
 | Тег | `<sf-drawer>` |
 | Назначение | Боковая панель рабочей области, при которой страница остаётся доступной: закреплённая колонка или немодальная панель. Модальные боковые панели относятся к sf-modal; модальный режим Drawer устарел. |
 | Контракт | `smart.drawer`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `open` | `boolean` | `false` | — | — |
-| `placement` | `string` | `right` | `left`, `right`, `inline-start`, `inline-end` | — |
-| `overlay` | `boolean` | `true` | — | — |
-| `modal` | `boolean` | `true` | — | — |
-| `docked` | `boolean` | `false` | — | — |
-| `size` | `string` | `1` | `1/2`, `1`, `2`, `full` | — |
-| `close-on-esc` | `boolean` | `true` | — | — |
-| `close-on-overlay` | `boolean` | `true` | — | — |
-| `preserve-scroll-gap` | `boolean` | `true` | — | — |
-| `show-close` | `boolean` | `true` | — | — |
-| `close-placement` | `string` | `inside` | `inside`, `outside` | — |
-| `title` | `string` | пусто | — | — |
-| `label` | `string` | пусто | — | — |
-| `close-label` | `string` | `Close drawer` | — | — |
-| `width` | `string` | пусто | — | — |
-| `stack-offset` | `string` | пусто | — | Насколько каждая нижняя панель выступает из-под верхней у того же края, в виде длины (например, `var(--sf-space-4)`). Панель отстоит от своего края на глубину × смещение, где глубина — число открытых незакреплённых панелей под ней у этого края. Пустое значение: панели лежат вровень. |
-| `gutter` | `string` | пусто | — | Общий горизонтальный отступ шапки и тела в виде длины (например, var(--sf-space-3)), чтобы заголовок и содержимое начинались на одной оси. Пусто — собственный отступ drawer, space-1. Тема может задать --sf-drawer-gutter. |
-| `z-index` | `string` | пусто | — | — |
-| `overlay-class` | `string` | пусто | — | — |
-| `panel-class` | `string` | пусто | — | — |
-| `panel-style` | `string` | пусто | — | Объявления, задаваемые на самой панели, для читаемых ею пользовательских свойств — фона, радиуса, тени. Если потребитель окрашивает содержимое в цвет, отличный от панели, заголовок и поля остаются другого цвета. |
-| `header-class` | `string` | пусто | — | — |
-| `body-class` | `string` | пусто | — | — |
-| `close-class` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `open` — `boolean`, по умолчанию `false`.
+- `placement` — `string`, по умолчанию `right`, значения: `left`, `right`, `inline-start`, `inline-end`.
+- `overlay` — `boolean`, по умолчанию `true`.
+- `modal` — `boolean`, по умолчанию `true`.
+- `docked` — `boolean`, по умолчанию `false`.
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`, `full`.
+- `close-on-esc` — `boolean`, по умолчанию `true`.
+- `close-on-overlay` — `boolean`, по умолчанию `true`.
+- `preserve-scroll-gap` — `boolean`, по умолчанию `true`.
+- `show-close` — `boolean`, по умолчанию `true`.
+- `close-placement` — `string`, по умолчанию `inside`, значения: `inside`, `outside`.
+- `title` — `string`, по умолчанию пусто.
+- `label` — `string`, по умолчанию пусто.
+- `close-label` — `string`, по умолчанию `Close drawer`.
+- `width` — `string`, по умолчанию пусто.
+- `stack-offset` — `string`, по умолчанию пусто. Насколько каждая нижняя панель выступает из-под верхней у того же края, в виде длины (например, `var(--sf-space-4)`). Панель отстоит от своего края на глубину × смещение, где глубина — число открытых незакреплённых панелей под ней у этого края. Пустое значение: панели лежат вровень.
+- `gutter` — `string`, по умолчанию пусто. Общий горизонтальный отступ шапки и тела в виде длины (например, var(--sf-space-3)), чтобы заголовок и содержимое начинались на одной оси. Пусто — собственный отступ drawer, space-1. Тема может задать --sf-drawer-gutter.
+- `z-index` — `string`, по умолчанию пусто.
+- `overlay-class` — `string`, по умолчанию пусто.
+- `panel-class` — `string`, по умолчанию пусто.
+- `panel-style` — `string`, по умолчанию пусто. Объявления, задаваемые на самой панели, для читаемых ею пользовательских свойств — фона, радиуса, тени. Если потребитель окрашивает содержимое в цвет, отличный от панели, заголовок и поля остаются другого цвета.
+- `header-class` — `string`, по умолчанию пусто.
+- `body-class` — `string`, по умолчанию пусто.
+- `close-class` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -160,30 +158,26 @@ Escape, который уже обработал редактор или пер�
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `open()` | — | не описано | — |
-| `close()` | — | не описано | — |
-| `toggle()` | — | не описано | — |
-| `setState()` | — | не описано | — |
-| `getState()` | — | не описано | — |
-| `onBeforeOpen()` | — | не описано | — |
-| `onAfterOpen()` | — | не описано | — |
-| `onBeforeClose()` | — | не описано | — |
-| `onAfterClose()` | — | не описано | — |
+- `open()`
+- `close()`
+- `toggle()`
+- `setState()`
+- `getState()`
+- `onBeforeOpen()`
+- `onAfterOpen()`
+- `onBeforeClose()`
+- `onAfterClose()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `drawer:ready` | не описан | Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
-| `drawer:update` | не описан | Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
-| `drawer:before-open` | не описан | Отменяемое намерение перед открытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие. |
-| `drawer:after-open` | не описан | Drawer открыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
-| `drawer:before-close` | не описан | Отменяемое намерение перед закрытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие. |
-| `drawer:after-close` | не описан | Drawer закрыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
+- `drawer:ready` — `detail` не описан. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:update` — `detail` не описан. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:before-open` — `detail` не описан. Отменяемое намерение перед открытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
+- `drawer:after-open` — `detail` не описан. Drawer открыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:before-close` — `detail` не описан. Отменяемое намерение перед закрытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
+- `drawer:after-close` — `detail` не описан. Drawer закрыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 
 ### Доступность
 
@@ -200,5 +194,5 @@ Escape, который уже обработал редактор или пер�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/drawer`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-drawer`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/drawer`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-drawer`

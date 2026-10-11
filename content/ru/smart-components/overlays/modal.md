@@ -113,7 +113,7 @@ Tab-границей; Modal не читает чужой document и сохра�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9fb0297bb5c2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -122,90 +122,84 @@ Tab-границей; Modal не читает чужой document и сохра�
 | Тег | `<sf-modal>` |
 | Назначение | Smart-компонент Modal из SIMAI Framework. |
 | Контракт | `smart.modal`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-9fb0297bb5c2` |
+| Поставка | выпуск Framework `ui-ec56cef08625` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-| Атрибут | Тип | По умолчанию | Значения | Назначение |
-|:---|:---|:---|:---|:---|
-| `template` | `string` | `default` | `default` | — |
-| `modal-id` | `string` | пусто | — | — |
-| `title` | `string` | `Modal` | — | — |
-| `aria-label` | `string` | пусто | — | — |
-| `text` | `string` | пусто | — | — |
-| `open` | `boolean` | `false` | — | — |
-| `autoload` | `boolean` | `false` | — | — |
-| `unclose` | `boolean` | `false` | — | — |
-| `hide` | `boolean` | `false` | — | — |
-| `hide-modifier` | `string` | пусто | — | — |
-| `minimized` | `boolean` | `false` | — | — |
-| `overlay` | `boolean` | `true` | — | — |
-| `show-header` | `boolean` | `true` | — | — |
-| `show-close` | `boolean` | `true` | — | — |
-| `show-footer` | `boolean` | `true` | — | — |
-| `close-on-esc` | `boolean` | `true` | — | — |
-| `close-on-overlay` | `boolean` | `true` | — | — |
-| `preserve-scroll-gap` | `boolean` | `true` | — | — |
-| `position` | `string` | `center` | `center`, `left`, `right`, `inline-start`, `inline-end`, `top`, `bottom` | — |
-| `mode` | `string` | `inline` | `inline`, `ajax`, `iframe` | — |
-| `display` | `string` | `modal` | `modal`, `inline` | — |
-| `src` | `string` | пусто | — | — |
-| `root-class` | `string` | пусто | — | — |
-| `preload` | `boolean` | `true` | — | — |
-| `fullscreen` | `boolean` | `false` | — | — |
-| `width` | `string` | пусто | — | — |
-| `height` | `string` | пусто | — | — |
-| `blur` | `string` | пусто | — | — |
-| `blur-type` | `string` | `medium` | `none`, `small`, `medium`, `large` | — |
-| `overlay-preset` | `string` | `default` | `default`, `focus` | — |
-| `overlay-class` | `string` | пусто | — | — |
-| `close-class` | `string` | пусто | — | — |
-| `surface-class` | `string` | пусто | — | — |
-| `surface-padding` | `string` | пусто | — | — |
-| `panel-class` | `string` | пусто | — | — |
-| `header-class` | `string` | пусто | — | — |
-| `body-class` | `string` | пусто | — | — |
-| `content-class` | `string` | пусто | — | — |
-| `footer-class` | `string` | пусто | — | — |
+- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `modal-id` — `string`, по умолчанию пусто.
+- `title` — `string`, по умолчанию `Modal`.
+- `aria-label` — `string`, по умолчанию пусто.
+- `text` — `string`, по умолчанию пусто.
+- `open` — `boolean`, по умолчанию `false`.
+- `autoload` — `boolean`, по умолчанию `false`.
+- `unclose` — `boolean`, по умолчанию `false`.
+- `hide` — `boolean`, по умолчанию `false`.
+- `hide-modifier` — `string`, по умолчанию пусто.
+- `minimized` — `boolean`, по умолчанию `false`.
+- `overlay` — `boolean`, по умолчанию `true`.
+- `show-header` — `boolean`, по умолчанию `true`.
+- `show-close` — `boolean`, по умолчанию `true`.
+- `show-footer` — `boolean`, по умолчанию `true`.
+- `close-on-esc` — `boolean`, по умолчанию `true`.
+- `close-on-overlay` — `boolean`, по умолчанию `true`.
+- `preserve-scroll-gap` — `boolean`, по умолчанию `true`.
+- `position` — `string`, по умолчанию `center`, значения: `center`, `left`, `right`, `inline-start`, `inline-end`, `top`, `bottom`.
+- `mode` — `string`, по умолчанию `inline`, значения: `inline`, `ajax`, `iframe`.
+- `display` — `string`, по умолчанию `modal`, значения: `modal`, `inline`.
+- `src` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто.
+- `preload` — `boolean`, по умолчанию `true`.
+- `fullscreen` — `boolean`, по умолчанию `false`.
+- `width` — `string`, по умолчанию пусто.
+- `height` — `string`, по умолчанию пусто.
+- `blur` — `string`, по умолчанию пусто.
+- `blur-type` — `string`, по умолчанию `medium`, значения: `none`, `small`, `medium`, `large`.
+- `overlay-preset` — `string`, по умолчанию `default`, значения: `default`, `focus`.
+- `overlay-class` — `string`, по умолчанию пусто.
+- `close-class` — `string`, по умолчанию пусто.
+- `surface-class` — `string`, по умолчанию пусто.
+- `surface-padding` — `string`, по умолчанию пусто.
+- `panel-class` — `string`, по умолчанию пусто.
+- `header-class` — `string`, по умолчанию пусто.
+- `body-class` — `string`, по умолчанию пусто.
+- `content-class` — `string`, по умолчанию пусто.
+- `footer-class` — `string`, по умолчанию пусто.
 
 ### Методы
 
-| Метод | Аргументы | Возвращает | Назначение |
-|:---|:---|:---|:---|
-| `getSlotHtml()` | — | не описано | — |
-| `open()` | — | не описано | — |
-| `close()` | — | не описано | — |
-| `hide()` | — | не описано | — |
-| `show()` | — | не описано | — |
-| `toggle()` | — | не описано | — |
-| `setSrc()` | — | не описано | — |
-| `getModalRoot()` | — | не описано | — |
-| `onKeyDown()` | — | не описано | — |
-| `resetRemoteContent()` | — | не описано | — |
-| `clearPortal()` | — | не описано | — |
-| `onBeforeOpen()` | — | не описано | — |
-| `onAfterOpen()` | — | не описано | — |
-| `onBeforeClose()` | — | не описано | — |
-| `onAfterClose()` | — | не описано | — |
-| `onBeforeHide()` | — | не описано | — |
-| `onAfterHide()` | — | не описано | — |
-| `onBeforeShow()` | — | не описано | — |
-| `onAfterShow()` | — | не описано | — |
-| `onModalReady()` | — | не описано | — |
-| `onModalUpdate()` | — | не описано | — |
+- `getSlotHtml()`
+- `open()`
+- `close()`
+- `hide()`
+- `show()`
+- `toggle()`
+- `setSrc()`
+- `getModalRoot()`
+- `onKeyDown()`
+- `resetRemoteContent()`
+- `clearPortal()`
+- `onBeforeOpen()`
+- `onAfterOpen()`
+- `onBeforeClose()`
+- `onAfterClose()`
+- `onBeforeHide()`
+- `onAfterHide()`
+- `onBeforeShow()`
+- `onAfterShow()`
+- `onModalReady()`
+- `onModalUpdate()`
 
 ### События
 
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-| Событие | `detail` | Когда |
-|:---|:---|:---|
-| `modal:ready` | не описан | Событие среды выполнения modal:ready. Всплывает и является composed; detail.modal — модальное окно, отправившее событие. |
-| `modal:update` | не описан | Событие среды выполнения modal:update. Всплывает и является composed; detail.modal — модальное окно, отправившее событие. |
-| `sf-after-render` | не описан | — |
-| `sf-before-render` | не описан | — |
+- `modal:ready` — `detail` не описан. Событие среды выполнения modal:ready. Всплывает и является composed; detail.modal — модальное окно, отправившее событие.
+- `modal:update` — `detail` не описан. Событие среды выполнения modal:update. Всплывает и является composed; detail.modal — модальное окно, отправившее событие.
+- `sf-after-render` — `detail` не описан.
+- `sf-before-render` — `detail` не описан.
 
 ### Доступность
 
@@ -221,5 +215,5 @@ Tab-границей; Modal не читает чужой document и сохра�
 
 ### Источник
 
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/modal`
-- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-modal`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/modal`
+- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-modal`
