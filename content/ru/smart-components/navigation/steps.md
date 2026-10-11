@@ -14,8 +14,8 @@ Custom Elements: `<sf-steps>`.
 Loader-статус: `registered`. Loader-правило: `cl-steps`.
 
 Поставляемые ассеты:
-- `simai/ui@760be10c84f758235bfbecf2c07dfa098da083d6:distr/smart/steps/js/steps.js`
-- `simai/ui@760be10c84f758235bfbecf2c07dfa098da083d6:distr/smart/steps/template/default.js`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps/js/steps.js`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps/template/default.js`
 
 ## Зависимости
 
@@ -87,5 +87,5 @@ Loader-статус: `registered`. Loader-правило: `cl-steps`.
 
 ## Источник
 
-- `simai/ui@760be10c84f758235bfbecf2c07dfa098da083d6:distr/smart/steps`
-- `simai/ui@760be10c84f758235bfbecf2c07dfa098da083d6:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/smart/steps`
+- `simai/ui@9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa:distr/rule/rule.json#name=cl-steps`

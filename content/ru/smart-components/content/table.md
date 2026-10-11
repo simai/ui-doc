@@ -12,10 +12,11 @@ profile: reference
 
 Каноническое имя контракта — `smart.data-view`. Имя `smart.table` остаётся совместимым идентификатором существующего runtime и Loader.
 
-Компонент входит в SIMAI Framework Pro — отдельный пакет со своей лицензией
-SIMAI. Он поставляется из репозитория `simai/ui-pro`, а не в выпуске Framework.
-Чтобы элемент загрузился, объявите пакет до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {pro: {base: '<путь к ui-pro>/smart'}}}`.
+Компонент принадлежит Larena: он живёт в репозитории `simai/larena-ui` (папка
+`components/`, лицензия Apache-2.0), а не в выпуске Framework, и подключается
+как пакет компонентов Loader с именем `larena`. Чтобы элемент загрузился,
+объявите пакет до подключения Core:
+`window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к собранному пакету>/smart'}}}`.
 Подробнее — в разделе [Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
 
 ## Пример
@@ -135,6 +136,6 @@ SIMAI. Он поставляется из репозитория `simai/ui-pro`,
 - Порт хоста: `simai.dataview-port` `1.0.0`.
 - Совместимое runtime-имя: `smart.table`.
 - Custom Element: `<sf-table>`.
-- Loader-правило: `cl-table`, в файле правил пакета `pro` (`smart/rule.js`).
-- Пакет: SIMAI Framework Pro (`simai/ui-pro`).
+- Loader-правило: `cl-table`, в файле правил пакета `larena` (`smart/rule.js`).
+- Пакет: `larena` из Larena (`simai/larena-ui`, лицензия Apache-2.0).
 - Жизненный цикл: экспериментальный.

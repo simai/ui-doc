@@ -14,7 +14,12 @@ Developer references:
 
 ```bash
 composer install
-php scripts/materialize-framework-runtime.php /absolute/path/to/ui --pro=/absolute/path/to/ui-pro
+node /absolute/path/to/ui-builder/bin/sf-build.js package --name larena \
+  --package-root /absolute/path/to/larena-ui/components --package-revision <pinned revision> \
+  --package-repository simai/larena-ui --ui-source /absolute/path/to/ui-source \
+  --ui /absolute/path/to/ui --out /absolute/path/to/larena-package
+php scripts/materialize-framework-runtime.php /absolute/path/to/ui \
+  --receipt=/absolute/path/to/larena-package/package-receipt.json
 php scripts/migrate-legacy-content.php content redirects.json
 composer docs:versions:check
 composer docs:components:check
@@ -31,14 +36,19 @@ node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core 
 
 The site is pinned to one Framework release (release lock v2, `ui-<12>`:
 Core and Smart from the same `simai/ui` commit, Smart in `distr/smart`) and
-to the SIMAI Framework Pro release built against it (`pro-<12>`, private
-`simai/ui-pro`); both revisions are named at the top of
-`scripts/materialize-framework-runtime.php`. Pro bytes are laid only into the
-installed Docara copy under `vendor/` and into the built site, never into this
-repository; `simai-framework.lock.json` records their hashes under
-`package_projections.pro`, and pages declare the package as
-`SF_BOOT_CONFIG.packages.pro`. Without access to `simai/ui-pro`, pass
-`--without-pro`: the site builds, and the four Pro components do not load.
+to Larena's component package `larena` built against it (`simai/larena-ui`,
+folder `components/`, Apache-2.0: `sf-table`, `sf-data-view`,
+`sf-property-view`, `sf-admin-menu`). The release revisions and the package's
+source revision and archive digest are named at the top of
+`scripts/materialize-framework-runtime.php`. The package is built with
+ui-builder (`sf-build package`) and taken by its package receipt: Docara
+checks the files against the receipt and that the receipt names this release.
+Package bytes are laid only into the installed Docara copy under `vendor/`
+and into the built site, never into this repository; `simai-framework.lock.json`
+records the receipt's identity and the files' hashes under
+`package_projections.larena`, and pages declare the package as
+`SF_BOOT_CONFIG.packages.larena`. With `--without-packages` the site builds
+and the four Larena components do not load.
 
 ## Структура русской документации
 

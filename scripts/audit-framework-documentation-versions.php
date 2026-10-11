@@ -58,7 +58,8 @@ foreach ($paths as $path) {
     if (str_starts_with($relative, 'content/ru/smart-components/')) {
         preg_match_all('/simai\/ui-smart@([a-f0-9]{40})(?=:smart\/)/', $markdown, $smartMatches);
         preg_match_all('/simai\/ui@([a-f0-9]{40})(?=:distr\/(?:rule\/rule\.json|smart\/))/', $markdown, $coreMatches);
-        preg_match_all('/simai\/ui-pro@([a-f0-9]{40})(?=:smart\/)/', $markdown, $proMatches);
+        // SIMAI Framework Pro is dropped: no page may cite its repository.
+        preg_match_all('/simai\/ui-pro@([a-f0-9]{40})/', $markdown, $droppedMatches);
         foreach ($smartMatches[1] ?? [] as $revision) {
             // Release lock v2 carries Smart in ui's distr/smart: no page may
             // still cite the separate ui-smart repository.
@@ -66,9 +67,18 @@ foreach ($paths as $path) {
                 $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui-smart', 'actual' => $revision];
             }
         }
-        foreach ($proMatches[1] ?? [] as $revision) {
-            if ($revision !== ($lock['package_projections']['pro']['source']['revision'] ?? null)) {
-                $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui-pro', 'actual' => $revision];
+        foreach ($droppedMatches[1] ?? [] as $revision) {
+            $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => 'simai/ui-pro', 'actual' => $revision];
+        }
+        // A product package's source is cited at the revision its receipt names.
+        foreach ($lock['package_projections'] ?? [] as $package) {
+            $source = $package['receipt']['package_source'] ?? [];
+            $repository = (string) ($source['repository'] ?? '');
+            preg_match_all('~' . preg_quote($repository, '~') . '@([a-f0-9]{40})~', $markdown, $packageMatches);
+            foreach ($packageMatches[1] ?? [] as $revision) {
+                if ($repository === '' || $revision !== ($source['revision'] ?? null)) {
+                    $staleSmartSourceReferences[] = ['path' => $relative, 'repository' => $repository, 'actual' => $revision];
+                }
             }
         }
         foreach ($coreMatches[1] ?? [] as $revision) {

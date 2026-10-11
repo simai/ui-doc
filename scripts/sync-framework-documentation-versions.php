@@ -57,29 +57,46 @@ foreach ([$candidateCoreRevision, $candidateSmartRevision] as $revision) {
     }
 }
 
-// Component packages (SIMAI Framework Pro): each component folder a package
-// ships is cited from that package's repository at its pinned revision.
+// Product component packages: each component folder a package ships is cited
+// from the package's source in its product repository, at the revision its
+// receipt names (`<repository>@<revision>:<path>/src/smart/<folder>`); its
+// rule is that folder's own rule.js.
+$packages = [];
 $packageFolders = [];
-foreach ($lock['package_projections'] ?? [] as $package) {
-    $provider = (string) ($package['source']['provider'] ?? '');
-    $revision = (string) ($package['source']['revision'] ?? '');
-    if (preg_match('~^[a-z0-9-]+/[a-z0-9._-]+$~D', $provider) !== 1 || preg_match('/^[a-f0-9]{40}$/D', $revision) !== 1) {
-        throw new RuntimeException('FRAMEWORK_PACKAGE_SOURCE_INVALID');
+foreach ($lock['package_projections'] ?? [] as $name => $package) {
+    $source = $package['receipt']['package_source'] ?? null;
+    $repository = (string) ($source['repository'] ?? '');
+    $revision = (string) ($source['revision'] ?? '');
+    $sourcePath = trim((string) ($source['path'] ?? ''), '/');
+    if (preg_match('~^[a-z0-9-]+/[a-z0-9._-]+$~D', $repository) !== 1
+        || preg_match('/^[a-f0-9]{40}$/D', $revision) !== 1
+        || preg_match('~^(?:[a-z0-9._-]+(?:/[a-z0-9._-]+)*)?$~D', $sourcePath) !== 1
+    ) {
+        throw new RuntimeException('FRAMEWORK_PACKAGE_SOURCE_INVALID: ' . (string) $name);
     }
+    $packages[$name] = [
+        'repository' => $repository,
+        'revision' => $revision,
+        'smart' => ($sourcePath === '' ? '' : $sourcePath . '/') . 'src/smart/',
+    ];
     foreach (array_keys($package['files'] ?? []) as $path) {
         if (preg_match('~^smart/([a-z][a-z0-9-]*)/~', (string) $path, $match) === 1) {
-            $packageFolders[$match[1]] = ['provider' => $provider, 'revision' => $revision];
+            $packageFolders[$match[1]] = $name;
         }
     }
 }
-$smartCitation = static function (string $folder) use ($packageFolders, $smartInsideUi, $candidateSmartRevision): string {
-    if (isset($packageFolders[$folder])) {
-        return $packageFolders[$folder]['provider'] . '@' . $packageFolders[$folder]['revision'] . ':smart/';
+$packageSource = static function (string $folder) use ($packages, $packageFolders): ?string {
+    if (! isset($packageFolders[$folder])) {
+        return null;
     }
+    $package = $packages[$packageFolders[$folder]];
 
-    return $smartInsideUi
-        ? 'simai/ui@' . $candidateSmartRevision . ':distr/smart/'
-        : 'simai/ui-smart@' . $candidateSmartRevision . ':smart/';
+    return $package['repository'] . '@' . $package['revision'] . ':' . $package['smart'] . $folder;
+};
+$smartCitation = static function (string $folder) use ($packageSource, $smartInsideUi, $candidateSmartRevision): string {
+    return $packageSource($folder) ?? ($smartInsideUi
+        ? 'simai/ui@' . $candidateSmartRevision . ':distr/smart/' . $folder
+        : 'simai/ui-smart@' . $candidateSmartRevision . ':smart/' . $folder);
 };
 
 $versionPage = <<<'MARKDOWN'
@@ -108,7 +125,7 @@ Framework выпускается несколькими пакетами. Ном
 }
 ```
 
-SIMAI Framework Pro выпускается отдельно, в `simai/ui-pro`, с идентификатором `pro-` и 12 знаками ревизии. Каждый выпуск Pro называет выпуск Framework, с которым его собрали и проверили; подключайте их вместе.
+Компоненты продукта поставляются в пакете самого продукта, а не в выпуске Framework. Так, `<sf-table>`, `<sf-data-view>`, `<sf-property-view>` и `<sf-admin-menu>` входят в пакет `larena` из репозитория `simai/larena-ui`. Пакет собирается из точной ревизии исходников Framework, и его квитанция называет выпуск Framework, с которым его собрали; подключайте их вместе.
 
 Человеку достаточно идентификатора выпуска. Инструмент установки сверяет точные ревизии. Благодаря этому текущие номера не приходится повторять на каждой странице и исправлять после каждого выпуска.
 
@@ -172,22 +189,31 @@ foreach ($iterator as $file) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $current = (string) file_get_contents($path);
     // A Smart source is cited where the pinned release carries it: the ui
-    // release's distr/smart, or the package that ships the component. Older
-    // citations of the separate ui-smart repository move with it.
+    // release's distr/smart, or the source of the product package that ships
+    // the component. Older citations of the separate ui-smart repository move
+    // with it; a path inside the folder keeps its tail.
     $expected = preg_replace_callback(
-        '/simai\/(?:ui-smart@[a-f0-9]{40}:smart|ui@[a-f0-9]{40}:distr\/smart|ui-pro@[a-f0-9]{40}:smart)\/([a-z][a-z0-9-]*)(?![a-z0-9.-])/',
-        static fn (array $match): string => $smartCitation($match[1]) . $match[1],
+        '~simai/(?:ui-smart@[a-f0-9]{40}:smart|ui@[a-f0-9]{40}:distr/smart|[a-z0-9._-]+@[a-f0-9]{40}:(?:[a-z0-9._-]+/)*src/smart)/([a-z][a-z0-9-]*)(?![a-z0-9.-])~',
+        static fn (array $match): string => $smartCitation($match[1]),
         $current,
     );
-    // A packaged component's rule is in its package's rule file, not in the
-    // Framework's rule list.
+    // A packaged component's rule is its folder's rule.js in the package
+    // source, not an entry of the Framework's rule list.
     $expected = preg_replace_callback(
-        '/simai\/(?:ui@[a-f0-9]{40}:distr\/rule\/rule\.json|ui-pro@[a-f0-9]{40}:smart\/rule\.js)#name=cl-([a-z][a-z0-9-]*)/',
-        static fn (array $match): string => (isset($packageFolders[$match[1]])
-            ? $packageFolders[$match[1]]['provider'] . '@' . $packageFolders[$match[1]]['revision'] . ':smart/rule.js'
+        '~simai/(?:ui@[a-f0-9]{40}:distr/rule/rule\.json|[a-z0-9._-]+@[a-f0-9]{40}:(?:[a-z0-9._-]+/)*src/smart/[a-z][a-z0-9-]*/rule\.js)#name=cl-([a-z][a-z0-9-]*)~',
+        static fn (array $match): string => ($packageSource($match[1]) !== null
+            ? $packageSource($match[1]) . '/rule.js'
             : 'simai/ui@' . $candidateCoreRevision . ':distr/rule/rule.json') . '#name=cl-' . $match[1],
         (string) $expected,
     );
+    // Any other citation of a package's source moves to its pinned revision.
+    foreach ($packages as $package) {
+        $expected = preg_replace(
+            '~' . preg_quote($package['repository'], '~') . '@[a-f0-9]{40}(?=:)~',
+            $package['repository'] . '@' . $package['revision'],
+            (string) $expected,
+        );
+    }
     $expected = preg_replace(
         '/simai\/ui@[a-f0-9]{40}(?=:distr\/rule\/rule\.json)/',
         'simai/ui@' . $candidateCoreRevision,
@@ -211,6 +237,7 @@ echo json_encode([
     'candidate_pair' => $candidatePair,
     'candidate_core_revision' => $candidateCoreRevision,
     'candidate_smart_revision' => $candidateSmartRevision,
+    'packages' => $packages,
     'package_folders' => $packageFolders,
     'changed' => $changed,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . "\n";

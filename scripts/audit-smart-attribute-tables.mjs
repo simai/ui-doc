@@ -7,9 +7,11 @@
 //
 // This check compares the two. It needs the manifests: since release lock v2 they
 // ship in the ui release's distr/smart (--ui-root=/absolute/path, or SIMAI_UI_ROOT /
-// DOCARA_SIMAI_UI_ROOT), and the SIMAI Framework Pro ones in ui-pro's smart/
-// (--pro-root=/absolute/path, or SIMAI_UI_PRO_ROOT). A separate ui-smart checkout
-// (--smart-root, SIMAI_UI_SMART_ROOT) is still read when named.
+// DOCARA_SIMAI_UI_ROOT), and those of a product component package in the package
+// itself (--package-root=/absolute/path, repeatable, or SIMAI_UI_PACKAGE_ROOTS
+// separated by `:`): a package output holding smart/ (sf-build --out) or a package
+// source folder holding src/smart/ (Larena's larena-ui/components). A separate
+// ui-smart checkout (--smart-root, SIMAI_UI_SMART_ROOT) is still read when named.
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
@@ -25,18 +27,33 @@ const found = (candidate, inner) => (fs.existsSync(path.join(candidate, inner)) 
 const smartRoot = value('--smart-root') || process.env.SIMAI_UI_SMART_ROOT || null;
 const uiRoot = value('--ui-root') || process.env.SIMAI_UI_ROOT || process.env.DOCARA_SIMAI_UI_ROOT
   || found(path.resolve(projectRoot, '../ui'), 'distr/smart');
-const proRoot = value('--pro-root') || process.env.SIMAI_UI_PRO_ROOT
-  || found(path.resolve(projectRoot, '../ui-pro'), 'smart');
-for (const root of [smartRoot, uiRoot, proRoot]) {
+const packageRoots = [
+  ...args.filter((a) => a.startsWith('--package-root=')).map((a) => a.slice('--package-root='.length)),
+  ...(process.env.SIMAI_UI_PACKAGE_ROOTS || '').split(':').filter(Boolean),
+];
+if (packageRoots.length === 0) {
+  const beside = found(path.resolve(projectRoot, '../larena-ui/components'), 'src/smart');
+  if (beside) packageRoots.push(beside);
+}
+for (const root of [smartRoot, uiRoot, ...packageRoots]) {
   if (root && !path.isAbsolute(root)) {
-    console.error('--smart-root, --ui-root and --pro-root must be absolute paths');
+    console.error('--smart-root, --ui-root and --package-root must be absolute paths');
     process.exit(2);
   }
 }
 const manifestRoots = smartRoot
   ? [path.join(smartRoot, 'smart')]
   : (uiRoot ? [path.join(uiRoot, 'distr/smart')] : []);
-if (manifestRoots.length > 0 && proRoot) manifestRoots.push(path.join(proRoot, 'smart'));
+if (manifestRoots.length > 0) {
+  for (const root of packageRoots) {
+    const smart = ['smart', 'src/smart'].map((inner) => path.join(root, inner)).find((dir) => fs.existsSync(dir));
+    if (!smart) {
+      console.error(`${root} holds neither smart/ nor src/smart/`);
+      process.exit(2);
+    }
+    manifestRoots.push(smart);
+  }
+}
 if (manifestRoots.length === 0) {
   console.log(JSON.stringify({
     schema: 'ui-doc.smart_attribute_table_audit.v1',

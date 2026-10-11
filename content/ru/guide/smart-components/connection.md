@@ -25,18 +25,18 @@ Smart-компоненты входят в тот же выпуск Framework, �
 
 Увидев `<sf-button>`, Loader подключит Smart-кнопку и обычный компонент кнопки, от которого зависит её оформление. Отдельный `window.sfSmartPath` не нужен: без него Smart-компоненты загружаются из `<sfPath>/smart`.
 
-## SIMAI Framework Pro
+## Компоненты продуктов
 
-`<sf-table>`, `<sf-data-view>`, `<sf-property-view>` и `<sf-admin-menu>` входят в SIMAI Framework Pro — отдельный пакет компонентов со своей лицензией SIMAI. Pro выпускается в репозитории `simai/ui-pro`; каждый выпуск `pro-…` называет выпуск Framework `ui-…`, с которым его собрали и проверили, поэтому подключайте их вместе.
+`<sf-table>`, `<sf-data-view>`, `<sf-property-view>` и `<sf-admin-menu>` — компоненты Larena. Они живут в репозитории `simai/larena-ui` (папка `components/`, лицензия Apache-2.0), а не в выпуске Framework, и подключаются как пакет компонентов Loader с именем `larena`. Отдельного выпуска у пакета нет: продукт собирает его с помощью ui-builder из точной ревизии исходников Framework и поставляет в своей поставке. Квитанция сборки называет выпуск Framework `ui-…`, с которым пакет собран, поэтому подключайте их вместе.
 
-Объявите пакет до подключения Core: укажите, где лежит каталог `smart/` выпуска Pro. Файл правил `smart/rule.js` Loader загрузит сам, отдельный `<script>` для него не нужен.
+Объявите пакет до подключения Core: укажите, где лежит каталог `smart/` собранного пакета. Файл правил `smart/rule.js` Loader загрузит сам, отдельный `<script>` для него не нужен.
 
 ```html
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
-      pro: {base: '/assets/simai-framework/ui-pro/smart'},
+      larena: {base: '/assets/larena-ui/smart'},
     },
   };
 </script>
@@ -45,4 +45,4 @@ Smart-компоненты входят в тот же выпуск Framework, �
 <sf-table aria-label="Проекты" table-settings-key="projects"></sf-table>
 ```
 
-Если пакет не объявлен, Loader не загрузит компонент Pro и сообщит в консоли, какой тег и почему не загружен.
+Если пакет не объявлен, Loader не загрузит компонент пакета и сообщит в консоли, какой тег и почему не загружен.

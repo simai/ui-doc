@@ -5,48 +5,65 @@ declare(strict_types=1);
 
 /**
  * Materialize the exact SIMAI Framework release accepted for this site, and
- * the SIMAI Framework Pro release built against it.
+ * the product component packages served beside it.
  *
  * A Framework release is one `ui` commit (release lock v2, `ui-<12>`): Core in
- * `distr/`, Smart in `distr/smart/`, the same revision. Pro is its own release
- * (`pro-<12>`, simai/ui-pro, private) that names the `ui-<12>` it was built
- * and tested against; the site serves it as the Loader package `pro`.
+ * `distr/`, Smart in `distr/smart/`, the same revision. A product component
+ * package lives in its product's own UI repository and is built by ui-builder
+ * over a pinned ui-source revision (`sf-build package`); the build writes a
+ * package receipt (`simai.framework.product-package-receipt` version 1) that
+ * names the free release the package must be served beside. Larena's package
+ * `larena` (simai/larena-ui, folder `components`, Apache-2.0) carries
+ * `sf-table`, `sf-data-view`, `sf-property-view` and `sf-admin-menu`; the site
+ * serves it as the Loader package `larena`.
  *
  * Docara keeps its Framework projection inside the Composer package. This
  * project command replaces only that ignored installed projection from
  * immutable Git objects, then copies the resulting wrapper lock to ui-doc.
- * Pro bytes land only in that ignored installed copy and in the built site;
- * this repository records their hashes, never the files.
+ * Package bytes land only in that ignored installed copy and in the built
+ * site; this repository records the receipt's identity and the files' hashes,
+ * never the files.
  *
- *   php scripts/materialize-framework-runtime.php /absolute/ui --pro=/absolute/ui-pro
- *       [--package=/absolute/docara-package]
- *   php scripts/materialize-framework-runtime.php /absolute/ui --without-pro [--package=...]
+ *   php scripts/materialize-framework-runtime.php /absolute/ui \
+ *       --receipt=/absolute/larena-package/package-receipt.json [--package=/absolute/docara-package]
+ *   php scripts/materialize-framework-runtime.php /absolute/ui --without-packages [--package=...]
  *
- * `--without-pro` materializes the free release alone (the Pro pages then
- * cannot load their components); it exists for bundling the free release
- * into a Docara checkout, which must never carry Pro bytes.
+ * A receipt is written by `sf-build package --out <dir>` beside the package
+ * output and its archive; it must name a package declared in PACKAGES below,
+ * at the pinned source revision and with the pinned archive digest.
+ * `--without-packages` materializes the free release alone (the package pages
+ * then cannot load their components); it exists for bundling the free release
+ * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = 'a4210d7f8da00cc100fcce12a4be69bf38a84402';
-const UI_RUNTIME_REVISION = '760be10c84f758235bfbecf2c07dfa098da083d6';
-const SOURCE_REVISION = 'd96e8c8b8267a2e47313c97d5a40adf88886cc8d';
-const BUILDER_REVISION = '875b800681e37e333266a1dbff5e955dbfb6046d';
-const RELEASE_LOCK = 'contracts/releases/ui-760be10c84f7.lock.json';
-const PRO_METADATA_REVISION = 'b1d3eda6397255ca7f0de5ef8a86cbc5aea942cf';
-const PRO_RELEASE = 'pro-57f4aa1b9da1';
+const UI_METADATA_REVISION = '19793312d701951eddc57204e44a441edbe95ec9';
+const UI_RUNTIME_REVISION = '9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa';
+const SOURCE_REVISION = '253cb441daa9c0312c39e72e3e47378a1f13e14d';
+const BUILDER_REVISION = 'ab866db522e02a180951f927bb996ea70f947e5c';
+const RELEASE_LOCK = 'contracts/releases/ui-9fb0297bb5c2.lock.json';
+// Product component packages, each taken by its package receipt. The build is
+// reproducible, so the archive digest names the exact bytes.
+const PACKAGES = [
+    'larena' => [
+        'repository' => 'simai/larena-ui',
+        'revision' => '98ad1a012a1750300a05cecef67ed2cbb91aa462',
+        'path' => 'components',
+        'archive_sha256' => 'dad5d594d6db103276692dfe57a979c94999d1e0e612938edd1fdd9119532f58',
+    ],
+];
 
 $projectRoot = dirname(__DIR__);
 $uiRoot = null;
-$proRoot = null;
-$withoutPro = false;
+$receiptPaths = [];
+$withoutPackages = false;
 $packageRoot = $projectRoot . '/vendor/simai/docara';
 foreach (array_slice($argv, 1) as $argument) {
-    if (str_starts_with($argument, '--pro=')) {
-        $proRoot = substr($argument, strlen('--pro='));
+    if (str_starts_with($argument, '--receipt=')) {
+        $receiptPaths[] = substr($argument, strlen('--receipt='));
     } elseif (str_starts_with($argument, '--package=')) {
         $packageRoot = substr($argument, strlen('--package='));
-    } elseif ($argument === '--without-pro') {
-        $withoutPro = true;
+    } elseif ($argument === '--without-packages') {
+        $withoutPackages = true;
     } elseif (! str_starts_with($argument, '--') && $uiRoot === null) {
         $uiRoot = $argument;
     } else {
@@ -55,15 +72,15 @@ foreach (array_slice($argv, 1) as $argument) {
     }
 }
 
-if (! is_string($uiRoot) || ($proRoot === null) === ! $withoutPro) {
-    fwrite(STDERR, "Usage: php scripts/materialize-framework-runtime.php /absolute/ui (--pro=/absolute/ui-pro | --without-pro) [--package=/absolute/docara-package]\n");
+if (! is_string($uiRoot) || ($receiptPaths === []) === ! $withoutPackages) {
+    fwrite(STDERR, "Usage: php scripts/materialize-framework-runtime.php /absolute/ui (--receipt=/absolute/package-receipt.json ... | --without-packages) [--package=/absolute/docara-package]\n");
     exit(2);
 }
 
 $uiRoot = realpath($uiRoot);
-$proRoot = is_string($proRoot) ? realpath($proRoot) : null;
+$receiptPaths = array_map(static fn (string $path): string|false => realpath($path), $receiptPaths);
 $packageRoot = realpath($packageRoot);
-if ($uiRoot === false || $proRoot === false || $packageRoot === false || ! is_dir($packageRoot)) {
+if ($uiRoot === false || in_array(false, $receiptPaths, true) || $packageRoot === false || ! is_dir($packageRoot)) {
     throw new RuntimeException('FRAMEWORK_MATERIALIZATION_INPUT_MISSING');
 }
 
@@ -106,7 +123,6 @@ $copyBytes = static function (string $bytes, array $paths): void {
 foreach ([
     [$uiRoot, UI_METADATA_REVISION],
     [$uiRoot, UI_RUNTIME_REVISION],
-    ...($proRoot === null ? [] : [[$proRoot, PRO_METADATA_REVISION]]),
 ] as [$root, $revision]) {
     $actual = trim($git($root, ['rev-parse', $revision . '^{commit}']));
     if ($actual !== $revision) {
@@ -160,6 +176,38 @@ if (($registry['compatibility']['id'] ?? null) !== $expected['compatibility_id']
 }
 $docaraPair = $expected['compatibility_id'];
 
+// Each receipt has to be the package this site pins, built from the pinned
+// source revision into the pinned archive, beside this release. Docara checks
+// the package files against the receipt when it lays them.
+$receipts = [];
+foreach ($receiptPaths as $receiptPath) {
+    $receipt = json_decode((string) file_get_contents($receiptPath), true, 512, JSON_THROW_ON_ERROR);
+    $name = is_array($receipt) ? ($receipt['package'] ?? null) : null;
+    $pinned = is_string($name) ? (PACKAGES[$name] ?? null) : null;
+    $actualPackage = [
+        'repository' => $receipt['package_source']['repository'] ?? null,
+        'revision' => $receipt['package_source']['revision'] ?? null,
+        'path' => $receipt['package_source']['path'] ?? null,
+        'archive_sha256' => $receipt['output']['archive_sha256'] ?? null,
+    ];
+    if ($pinned === null || isset($receipts[$name])) {
+        throw new RuntimeException('FRAMEWORK_PACKAGE_NOT_PINNED: ' . (string) $name);
+    }
+    if ($actualPackage !== $pinned) {
+        throw new RuntimeException('FRAMEWORK_PACKAGE_RECEIPT_MISMATCH: ' . $name);
+    }
+    if (($receipt['framework']['release'] ?? null) !== $docaraPair
+        || ($receipt['framework']['source']['revision'] ?? null) !== SOURCE_REVISION
+    ) {
+        throw new RuntimeException('FRAMEWORK_PACKAGE_RELEASE_MISMATCH: ' . $name . ' is built for '
+            . (string) ($receipt['framework']['release'] ?? 'no release'));
+    }
+    $receipts[$name] = $receiptPath;
+}
+if (! $withoutPackages && array_diff(array_keys(PACKAGES), array_keys($receipts)) !== []) {
+    throw new RuntimeException('FRAMEWORK_PACKAGE_RECEIPT_MISSING: ' . implode(', ', array_diff(array_keys(PACKAGES), array_keys($receipts))));
+}
+
 $projectLockPath = $projectRoot . '/simai-framework.lock.json';
 $packageLockPath = $packageRoot . '/docs/site/simai-framework.lock.json';
 $stubLockPath = $packageRoot . '/stubs/portable/simai-framework.lock.json';
@@ -174,7 +222,7 @@ $lock = json_decode(
 $contractArchiveHash = hash('sha256', $git($uiRoot, [
     'archive', '--format=tar', UI_METADATA_REVISION, 'contracts/generated',
 ]));
-// Packages are recomputed below from the pinned package release, or left out.
+// Packages are recomputed below from their receipts, or left out.
 unset($lock['package_projections']);
 
 $uiSource = $release['runtime_sources']['core'];
@@ -369,17 +417,17 @@ $viewUtilities['registry_sha256'] = $registryHash;
 $writeJson($viewUtilitiesPath, $viewUtilities);
 copy($packageLockPath, $projectLockPath);
 
-// SIMAI Framework Pro: the package release built against this Framework
-// release, recorded in this site's lock only. Its bytes go to the installed
-// Docara copy (ignored here) and from there into the built site.
-$proReceipt = $proRoot === null ? null : $runPhp([
-    $packageRoot . '/scripts/sync-framework-package-runtime.php',
-    '--package', 'pro',
-    '--source', $proRoot,
-    '--metadata', PRO_METADATA_REVISION,
-    '--release', PRO_RELEASE,
-    '--lock', $projectLockPath,
-]);
+// Product component packages, each from its receipt, recorded in this site's
+// lock only. Their bytes go to the installed Docara copy (ignored here) and
+// from there into the built site.
+$packageReceipts = [];
+foreach ($receipts as $name => $receiptPath) {
+    $packageReceipts[$name] = $runPhp([
+        $packageRoot . '/scripts/sync-framework-package-runtime.php',
+        '--receipt', $receiptPath,
+        '--lock', $projectLockPath,
+    ]);
+}
 
 fwrite(STDOUT, json_encode([
     'schema' => 'ui-doc.framework_materialization.v1',
@@ -390,12 +438,11 @@ fwrite(STDOUT, json_encode([
         'ui_runtime' => UI_RUNTIME_REVISION,
         'source' => SOURCE_REVISION,
         'builder' => BUILDER_REVISION,
-        'pro_metadata' => $proRoot === null ? null : PRO_METADATA_REVISION,
-        'pro_release' => $proRoot === null ? null : PRO_RELEASE,
+        'packages' => $withoutPackages ? [] : PACKAGES,
     ],
     'core_projection' => $coreReceipt,
     'smart_projection' => $smartReceipt,
-    'pro_projection' => $proReceipt,
+    'package_projections' => $packageReceipts,
     'project_lock_sha256' => hash_file('sha256', $projectLockPath),
     'owner_source_modified' => false,
 ], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");

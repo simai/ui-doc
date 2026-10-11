@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "d96e8c8b8267a2e47313c97d5a40adf88886cc8d",
-  "core": "760be10c84f758235bfbecf2c07dfa098da083d6",
-  "smart": "760be10c84f758235bfbecf2c07dfa098da083d6",
+  "source": "253cb441daa9c0312c39e72e3e47378a1f13e14d",
+  "core": "9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa",
+  "smart": "9fb0297bb5c21827f6cdfc5588ff9dfd6ccbb6fa",
   "source_files": {
     "src/core/js/smart-base.js": "a2c39bc50f2ffe01f6233eb96782315214465564397af6c28e335547492484c3",
-    "src/core/js/loader.js": "63122a4897039170a8df3ecbdcd70b8b33ffdc47feeb41c3e43216aec5ff829a"
+    "src/core/js/loader.js": "3c7c8cac0be79a3712c8eb88381533786b53e3767a95b984fc601b97c267b7f1"
   },
   "lessons": [
     "creating",
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Reviewed the release ui-09bc6b371eca (source 4cf45804; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js changed: a mounted element subscribes to SF.language changes in connectedCallback and re-renders on a change, and unsubscribes in disconnectedCallback before onDisconnected(); the cleanup lesson's rule (override onConnected/onDisconnected, keep super.onDisconnected()) is unchanged and still sufficient. loader.js changed: sfSmartPath is optional (Smart resolves to <sfPath>/smart), and component packages are declared in SF_BOOT_CONFIG.packages with their own rule file (SF.RuleLoader.registerPackage). No lesson sets sfSmartPath; local-components still registers its class by hand after SF.loadSmartBase() and the Loader still does not derive a path from a tag name, so that lesson stays true. No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
+  "review": "Reviewed the release ui-9fb0297bb5c2 (source 253cb441; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js is byte-identical to the last review; loader.js changed only in a comment (Larena's components are the first component package, standard simai.component-package). No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
 }

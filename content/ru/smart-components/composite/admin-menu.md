@@ -16,10 +16,11 @@ Admin Menu объединяет навигацию, поиск, вложенны
 прошёл полную продуктовую приёмку; жизненный цикл source manifest —
 экспериментальный.
 
-Компонент входит в SIMAI Framework Pro — отдельный пакет со своей лицензией
-SIMAI. Он поставляется из репозитория `simai/ui-pro`, а не в выпуске Framework.
-Чтобы элемент загрузился, объявите пакет до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {pro: {base: '<путь к ui-pro>/smart'}}}`.
+Компонент принадлежит Larena: он живёт в репозитории `simai/larena-ui` (папка
+`components/`, лицензия Apache-2.0), а не в выпуске Framework, и подключается
+как пакет компонентов Loader с именем `larena`. Чтобы элемент загрузился,
+объявите пакет до подключения Core:
+`window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к собранному пакету>/smart'}}}`.
 Подробнее — в разделе [Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
 
 ## Пример
@@ -31,11 +32,11 @@ SIMAI. Он поставляется из репозитория `simai/ui-pro`,
 
 Custom Elements: `<sf-admin-menu>`.
 
-Loader-статус: `registered`. Loader-правило: `cl-admin-menu`, в файле правил пакета `pro` (`smart/rule.js`).
+Loader-статус: `registered`. Loader-правило: `cl-admin-menu`, в файле правил пакета `larena` (`smart/rule.js`).
 
-Поставляемые ассеты:
-- `simai/ui-pro@57f4aa1b9da1d72f463414a7a4437ede8c0dc8c3:smart/admin-menu/js/admin-menu.js`
-- `simai/ui-pro@57f4aa1b9da1d72f463414a7a4437ede8c0dc8c3:smart/admin-menu/template/default.js`
+Поставляемые ассеты пакета `larena` (он собирается из `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components`):
+- `smart/admin-menu/js/admin-menu.js`
+- `smart/admin-menu/template/default.js`
 
 ## Зависимости
 
@@ -106,5 +107,5 @@ Smart-компоненту.
 
 ## Источник
 
-- `simai/ui-pro@57f4aa1b9da1d72f463414a7a4437ede8c0dc8c3:smart/admin-menu`
-- `simai/ui-pro@57f4aa1b9da1d72f463414a7a4437ede8c0dc8c3:smart/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components/src/smart/admin-menu`
+- `simai/larena-ui@98ad1a012a1750300a05cecef67ed2cbb91aa462:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
