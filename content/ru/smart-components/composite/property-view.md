@@ -18,6 +18,12 @@ profile: reference
 Компонент не владеет данными. Он поднимает намерение, а запись, права и
 проверку значений держит приложение через host port.
 
+Компонент входит в SIMAI Framework Pro — отдельный пакет со своей лицензией
+SIMAI. Он поставляется из репозитория `simai/ui-pro`, а не в выпуске Framework.
+Чтобы элемент загрузился, объявите пакет до подключения Core:
+`window.SF_BOOT_CONFIG = {packages: {pro: {base: '<путь к ui-pro>/smart'}}}`.
+Подробнее — в разделе [Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
+
 ## Пример
 
 :::example {id="smart-components/property-view/overview" label="Карточка решения"}

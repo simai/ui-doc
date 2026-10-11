@@ -12,6 +12,12 @@ profile: reference
 
 Каноническое имя контракта — `smart.data-view`. Имя `smart.table` остаётся совместимым идентификатором существующего runtime и Loader.
 
+Компонент входит в SIMAI Framework Pro — отдельный пакет со своей лицензией
+SIMAI. Он поставляется из репозитория `simai/ui-pro`, а не в выпуске Framework.
+Чтобы элемент загрузился, объявите пакет до подключения Core:
+`window.SF_BOOT_CONFIG = {packages: {pro: {base: '<путь к ui-pro>/smart'}}}`.
+Подробнее — в разделе [Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
+
 ## Пример
 
 :::example {id="smart-components/table/overview" label="Коллекция проектов"}
@@ -129,5 +135,6 @@ profile: reference
 - Порт хоста: `simai.dataview-port` `1.0.0`.
 - Совместимое runtime-имя: `smart.table`.
 - Custom Element: `<sf-table>`.
-- Loader-правило: `cl-table`.
+- Loader-правило: `cl-table`, в файле правил пакета `pro` (`smart/rule.js`).
+- Пакет: SIMAI Framework Pro (`simai/ui-pro`).
 - Жизненный цикл: экспериментальный.
