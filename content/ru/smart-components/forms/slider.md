@@ -94,7 +94,7 @@ slider.slideNext();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0d56174a4f42` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c82d49d62d28` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -103,7 +103,7 @@ slider.slideNext();
 | Тег | `<sf-slider>` |
 | Назначение | Smart-компонент Slider из SIMAI Framework. |
 | Контракт | `smart.slider`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-0d56174a4f42` |
+| Поставка | выпуск Framework `ui-c82d49d62d28` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -149,5 +149,5 @@ slider.slideNext();
 
 ### Источник
 
-- `simai/ui@0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda:distr/smart/slider`
-- `simai/ui@0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda:distr/rule/rule.json#name=cl-slider`
+- `simai/ui@c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3:distr/smart/slider`
+- `simai/ui@c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3:distr/rule/rule.json#name=cl-slider`

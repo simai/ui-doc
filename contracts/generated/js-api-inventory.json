@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-0d56174a4f42",
-  "ui_commit": "0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda",
+  "release": "ui-c82d49d62d28",
+  "ui_commit": "c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3",
   "stages": [
     "core",
     "dom",
@@ -440,7 +440,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "null"
+          "type": "object"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -663,6 +663,12 @@
           "type": "string"
         }
       }
+    },
+    "loadRuntime": {
+      "available": "core",
+      "type": "function",
+      "arity": 0,
+      "class": false
     },
     "loadSmartBase": {
       "available": "idle",
@@ -3363,6 +3369,63 @@
           "type": "object"
         }
       }
+    },
+    "runtimeArrived": {
+      "available": "components",
+      "type": "function",
+      "arity": 1,
+      "class": false
+    },
+    "runtimeLoading": {
+      "available": "components",
+      "type": "object",
+      "members": {}
+    },
+    "runtimeModule": {
+      "available": "core",
+      "type": "function",
+      "arity": 1,
+      "class": false
+    },
+    "runtimeModules": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "control-spacing": {
+          "type": "object"
+        },
+        "lit": {
+          "type": "object"
+        },
+        "lit/directive-helpers.js": {
+          "type": "object"
+        },
+        "lit/directive.js": {
+          "type": "object"
+        },
+        "lit/directives/keyed.js": {
+          "type": "object"
+        },
+        "lit/directives/ref.js": {
+          "type": "object"
+        },
+        "lit/directives/unsafe-html.js": {
+          "type": "object"
+        },
+        "page-language": {
+          "type": "object"
+        },
+        "position": {
+          "type": "object"
+        },
+        "smart-base": {
+          "type": "object"
+        }
+      }
+    },
+    "runtimeSettled": {
+      "available": "components",
+      "type": "boolean"
     },
     "Search": {
       "available": "components",

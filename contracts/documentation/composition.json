@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "ae3e85495e811d7a59fa65415c6de2375b9a3d4c",
-    "core_revision": "0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda",
+    "source_revision": "bf261abc724db55738602395c68418a97537a354",
+    "core_revision": "c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "f43595947d332284572428ad279a893ccaa9e565854b779331e3111b70988374"
+      "distr/core/js/core.js": "7d75424d6eeee3d2c81bf1fd190f8c9264dd8f0ba45701d6f9929dbb2a916552"
     },
-    "note": "Reviewed at source ae3e8549 and core 0d56174a (release ui-0d56174a4f42): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-6d2bf151e3c8."
+    "note": "Reviewed at source bf261abc and core c82d49d6 (release ui-c82d49d62d28): the composition sources, schemas, builtins, fixture and buttons manifest are byte-identical to the review at ui-6d2bf151e3c8; core.js gained only the fetch of the shared Smart runtime (core/js/smart-base.js), which the composition API does not use."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
