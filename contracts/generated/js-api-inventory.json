@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-e26fc47c16d6",
-  "ui_commit": "e26fc47c16d6d3e20746b3d519d08ec84d5b5168",
+  "release": "ui-0d56174a4f42",
+  "ui_commit": "0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda",
   "stages": [
     "core",
     "dom",
@@ -459,6 +459,9 @@
         },
         "lastLoadHash": {
           "type": "number"
+        },
+        "lazyRelations": {
+          "type": "object"
         },
         "loadPage": {
           "type": "boolean"

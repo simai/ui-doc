@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "5b045deccb4855c784e1b867d3220276c99a8c4f",
-  "core": "e26fc47c16d6d3e20746b3d519d08ec84d5b5168",
-  "smart": "e26fc47c16d6d3e20746b3d519d08ec84d5b5168",
+  "source": "ae3e85495e811d7a59fa65415c6de2375b9a3d4c",
+  "core": "0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda",
+  "smart": "0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda",
   "source_files": {
     "src/core/js/smart-base.js": "e388a42ec926da2f73a02cf828f9e8c9f9e3b15fdbf91efe1c857ff7c2b4cb3c",
-    "src/core/js/loader.js": "4d1ad4c77cc5cbd25e2d68e9d1f37fca09453ca6abdeecfa700009468c301f7a"
+    "src/core/js/loader.js": "c11575eba88672c16a4180ccdf98dd778e7f662ad4e2466ac12fede4a4bb221d"
   },
   "lessons": [
     "creating",
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Reviewed the release ui-e26fc47c16d6 (source 5b045dec; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js is byte-identical to the last review; loader.js now fetches the minified twin of each bundle (<name>.min.js, .min.css) and the readable files with SF_BOOT_CONFIG.minified = false, ?sf-debug or data-sf-debug. No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
+  "review": "Reviewed the release ui-0d56174a4f42 (source ae3e8549; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js is byte-identical to the last review; loader.js fetches minified bundles (readable with SF_BOOT_CONFIG.minified = false, ?sf-debug or data-sf-debug) and lets a rule mark a relation lazy, fetched after the page is ready. No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
 }

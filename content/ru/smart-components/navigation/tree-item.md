@@ -74,7 +74,7 @@ section.open();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e26fc47c16d6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0d56174a4f42` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -83,7 +83,7 @@ section.open();
 | Тег | `<sf-tree-item>` |
 | Назначение | Один доступный узел иерархии Smart Tree. |
 | Контракт | `smart.tree-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-e26fc47c16d6` |
+| Поставка | выпуск Framework `ui-0d56174a4f42` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -152,8 +152,8 @@ section.open();
 
 ### Источник
 
-- `simai/ui@e26fc47c16d6d3e20746b3d519d08ec84d5b5168:distr/smart/tree-item`
-- `simai/ui@e26fc47c16d6d3e20746b3d519d08ec84d5b5168:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui@0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda:distr/smart/tree-item`
+- `simai/ui@0d56174a4f42ac06dbe5d9f2c14432e9e9a49fda:distr/rule/rule.json#name=cl-tree-item`
 
 ## См. также
 
