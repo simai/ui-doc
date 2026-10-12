@@ -21,7 +21,7 @@ const initializeLifecycleSwiper = () => {
 
   document.querySelector('[data-action="add"]')?.addEventListener('click', () => {
     const slide = document.createElement('article');
-    slide.className = 'swiper-slide p-inline-1 p-bottom-2';
+    slide.className = 'swiper-slide p-x-1 p-bottom-2';
     const surface = document.createElement('div');
     surface.className = 'bg-surface-container color-on-surface border border-outline-variant p-3 radius-default';
     surface.textContent = `Слайд ${wrapper.children.length + 1}`;

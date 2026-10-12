@@ -21,7 +21,7 @@ profile: reference
 | `sf-toggle--size-1` | `sf-switch--size-1` |
 | `sf-toggle--size-2` | `sf-switch--size-2` |
 | `sf-toggle--simple` | без класса: это обычный переключатель |
-| `sf-toggle--icon` | `sf-switch--icon` |
+| `sf-toggle--icon` | без класса: значок кладётся в `sf-switch-inner` |
 | `sf-toggle--short` | `sf-switch--short` |
 | `sf-toggle-control` | `sf-switch-toggler` |
 | `sf-toggle-container` и `sf-toggle-inner-wrap` | не нужны: бегунок лежит прямо в дорожке |
