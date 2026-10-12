@@ -21,3 +21,4 @@
 source/logs/
 
 /.docara-preview/
+/node_modules/

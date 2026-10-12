@@ -1,0 +1,12 @@
+{
+  "name": "ui-doc-build",
+  "private": true,
+  "description": "Build-time tools of the documentation site; the site itself is built by Docara.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "shiki": "4.4.3"
+  }
+}

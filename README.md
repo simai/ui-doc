@@ -13,6 +13,7 @@ Developer references:
 
 ```bash
 composer install
+npm ci
 node /absolute/path/to/ui-builder/bin/sf-build.js package --name larena \
   --package-root /absolute/path/to/larena-ui/components --package-revision <pinned revision> \
   --package-repository simai/larena-ui --ui-source /absolute/path/to/ui-source \
@@ -32,6 +33,14 @@ php -d memory_limit=2G vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \
   --build-root="$(pwd)/build_production"
 ```
+
+`scripts/build-documentation.php` runs the build with every step in order.
+Code blocks are coloured at build time with Shiki (`page_transforms` in
+`docara.json` runs `scripts/highlight-code.mjs` before Docara measures the
+pages): GitHub's light and dark themes,
+the grammars VS Code uses; the Framework's Highlight component
+skips a block coloured that way. Shiki is the one npm dependency
+(`package.json`, exact version).
 
 The site is pinned to one Framework release (release lock v2, `ui-<12>`:
 Core and Smart from the same `simai/ui` commit, Smart in `distr/smart`) and

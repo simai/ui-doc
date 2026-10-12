@@ -49,6 +49,11 @@
   },
   "documentation_version": "current",
   "redirects_file": "redirects.json",
+  "page_transforms": [
+    {
+      "command": ["node", "scripts/highlight-code.mjs"]
+    }
+  ],
   "base_url": "/",
   "branding": {
     "title": "SIMAI Framework",
