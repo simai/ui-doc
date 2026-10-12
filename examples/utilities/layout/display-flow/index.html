@@ -1,0 +1,40 @@
+<div class="grid grid-col-1 sm:grid-col-2 gap-4 color-on-surface">
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">без flow-root</code>
+    <div>
+      <div class="p-1 border border-dashed border-outline radius-ui">
+        <div class="float-inline-start w-d8 h-d8 bg-primary-container border border-primary radius-ui"></div>
+        Рамка не охватывает плавающий блок
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">flow-root</code>
+    <div>
+      <div class="flow-root p-1 border border-dashed border-outline radius-ui">
+        <div class="float-inline-start w-d8 h-d8 bg-primary-container border border-primary radius-ui"></div>
+        Рамка охватывает плавающий блок
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">обёртка без класса</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui">1</span>
+      <div class="flex-1 p-1 border border-error radius-ui">
+        <span class="block p-1 bg-tertiary-container color-on-tertiary-container radius-ui">2</span>
+        <span class="block p-1 bg-tertiary-container color-on-tertiary-container radius-ui">3</span>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">content</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui">1</span>
+      <div class="content">
+        <span class="flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">2</span>
+        <span class="flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">3</span>
+      </div>
+    </div>
+  </div>
+</div>

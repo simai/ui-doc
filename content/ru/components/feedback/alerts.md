@@ -10,9 +10,17 @@ profile: reference
 предупреждение, ошибку или подтверждение результата. Для краткого сообщения
 поверх интерфейса берите [всплывающее сообщение](/ru/components/feedback/toast/).
 
+## Сводка
+
+- **Модуль:** `alerts`. Loader подгружает его сам, когда встречает на странице класс `sf-alert`.
+- **Поставка:** выпуск Framework, `distr/component/alerts`.
+- **Переменные:** 20, см. «Переменные».
+
+Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
 ## Пример
 
-:::example {id="components/alerts/basic" label="Результат"}
+:::example {id="components/alerts/basic" label="Информационное уведомление"}
 :::
 
 ## Разметка
@@ -32,26 +40,35 @@ profile: reference
 
 ### Статус
 
+Статус задаёт цвет заливки, границы, текста и иконки:
 `sf-alert--neutral`, `sf-alert--info`, `sf-alert--success`,
 `sf-alert--warning`, `sf-alert--error` — общий словарь статусов Framework.
 Для обычной подсказки берите `neutral`; остальные выбирайте по смыслу
 сообщения, а не по желаемому цвету. Классы `sf-alert--clear` и
 `sf-alert--danger` — другие имена `neutral` и `error`.
 
-:::example {id="components/alerts/overview" label="Результат"}
+:::example {id="components/alerts/overview" label="Статусы уведомления"}
 :::
 
 ### Вид
 
-| Класс | Когда применять |
-|:---|:---|
-| `sf-alert--default` | заполненное самостоятельное заметное сообщение |
-| `sf-alert--outlined` | контурное, спокойнее на фоне страницы |
-| `sf-alert--flat` | плоское, внутри поверхности, границы которой задаёт окружающий контейнер |
+Вид задаёт, чем уведомление отделено от окружения: `sf-alert--default` —
+заливкой и границей, для самостоятельного заметного сообщения;
+`sf-alert--outlined` — только границей, спокойнее на фоне страницы;
+`sf-alert--flat` — только заливкой, внутри поверхности, границы которой задаёт
+окружающий контейнер. В одном сценарии держите один вид.
 
-В одном сценарии держите один способ отделения уведомлений от окружения.
+:::example {id="components/alerts/appearance" label="Виды уведомления в каждом статусе"}
+:::
 
-:::example {id="components/alerts/appearance" label="Результат"}
+### Состав
+
+Обязателен только заголовок. Пояснение, иконка, кнопки действий и кнопка
+закрытия добавляются по задаче; иконка сама берёт цвет статуса, у `neutral` —
+вспомогательный цвет текста. Размеров у уведомления нет: текст набран основным
+размером.
+
+:::example {id="components/alerts/composition" label="Части уведомления"}
 :::
 
 ## Доступность
@@ -80,11 +97,12 @@ profile: reference
 Оба события всплывают. `sf-alert-action` несёт в `detail` поля `action`
 (значение атрибута), `alert` и `trigger`; `sf-alert-close` — `alert` и
 `trigger`. Недоступная кнопка (`disabled` или `aria-disabled="true"`) событий
-не вызывает. Удаление проходит с анимацией на токенах движения; при системной
-настройке уменьшения движения блок удаляется сразу. `data-alert-action`,
-`data-alert-close` и класс `sf-alert--close` — другие имена тех же атрибутов.
+не вызывает. На время удаления блок получает класс `closing` и плавно гаснет на
+токенах движения; при системной настройке уменьшения движения блок удаляется
+сразу. `data-alert-action`, `data-alert-close` и класс `sf-alert--close` —
+другие имена тех же атрибутов.
 
-:::example {id="components/alerts/actions" label="Результат"}
+:::example {id="components/alerts/actions" label="Действие и закрытие"}
 :::
 
 Подписка на действие:
@@ -97,14 +115,39 @@ document.addEventListener('sf-alert-action', (event) => {
 
 ## Классы
 
-Раздел собран из CSS выпуска и обновляется вместе с выпуском.
-
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-alert` |
 | Части | `sf-alert-buttons`, `sf-alert-content`, `sf-alert-supporting-text`, `sf-alert-text`, `sf-alert-wrap` |
 | Модификаторы | `sf-alert--default`, `sf-alert--error`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--neutral`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
 | Устаревшие | `sf-alert--clear` → `sf-alert--neutral`, `sf-alert--danger` → `sf-alert--error` |
+
+## Переменные
+
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила `.sf-alert`; переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-surface-container)` | `background-color` |
+| `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-outline)` | `border-color` |
+| `--sf-alert--color` | `var(--sf-on-surface)` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color` |
+| `--sf-alert--opacity` | не задана; задают модификаторы, например `.sf-alert.closing`: `0` | `opacity` |
+| `--sf-alert-buttons--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `transparent` | `background-color` |
+| `--sf-alert-buttons--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-alert-content--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `transparent` | `background-color` |
+| `--sf-alert-content--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `var(--sf-space-1/2)` | `gap` |
+| `--sf-alert-supporting-text--color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-alert--color)` | `color` |
+| `--sf-alert-supporting-text--font-family` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-text--family)` | `font-family` |
+| `--sf-alert-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-alert-supporting-text--font-weight` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-alert-supporting-text--line-height` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-alert-text--color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-alert--color)` | `color` |
+| `--sf-alert-text--font-family` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-text--family)` | `font-family` |
+| `--sf-alert-text--font-size` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-alert-text--font-weight` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-alert-text--line-height` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-alert-wrap--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-wrap`: `transparent` | `background-color` |
+| `--sf-alert-wrap--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-wrap`: `var(--sf-space-1)` | `gap` |
 
 ## См. также
 

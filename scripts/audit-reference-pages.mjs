@@ -17,12 +17,12 @@ const settings = JSON.parse(readFileSync(join(root, 'config/reference-pages.json
 
 const STANDARD = {
   utility: {
-    order: ['Пример', 'Классы', 'Адаптивность и состояния', 'Применение', 'Ограничения', 'См. также'],
-    required: ['Пример', 'Классы', 'Применение'],
+    order: ['Сводка', 'Пример', 'Классы', 'Переменные', 'Применение', 'Ограничения', 'См. также'],
+    required: ['Сводка', 'Пример', 'Классы', 'Применение'],
   },
   component: {
-    order: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Доступность', 'JavaScript', 'Классы', 'См. также'],
-    required: ['Пример', 'Разметка', 'Доступность', 'Классы'],
+    order: ['Сводка', 'Пример', 'Разметка', 'Варианты', 'Состояния', 'Доступность', 'JavaScript', 'Классы', 'Переменные', 'См. также'],
+    required: ['Сводка', 'Пример', 'Разметка', 'Доступность', 'Классы'],
   },
   smart: {
     order: ['Пример', 'Применение', 'Доступность', 'Справочник API', 'См. также'],
@@ -76,8 +76,20 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   for (const heading of standard.required) {
     if (!headings.includes(heading)) add('section_missing', {heading});
   }
-  const example = body.split(/^## /mu).find((section) => section.startsWith('Пример\n'));
+  const sections = body.split(/^## /mu);
+  const example = sections.find((section) => section.startsWith('Пример\n'));
   if (example && !/^:::example\b/mu.test(example)) add('live_example_missing');
+  // A component shows every modifier axis and state it describes: each H3
+  // under «Варианты» and «Состояния» carries its own live example.
+  if (entry.kind === 'component') {
+    for (const name of ['Варианты', 'Состояния']) {
+      const section = sections.find((item) => item.startsWith(`${name}\n`));
+      if (!section) continue;
+      for (const sub of section.split(/^### /mu).slice(1)) {
+        if (!/^:::example\b/mu.test(sub)) add('variant_example_missing', {section: name, heading: sub.split('\n')[0].trim()});
+      }
+    }
+  }
 
   const plain = prose(text);
   for (const pattern of FORBIDDEN) {

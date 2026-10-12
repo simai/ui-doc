@@ -1,0 +1,66 @@
+<div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">sf-alert-text</code>
+    <div class="sf-alert sf-alert--info sf-alert--default flex items-start">
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">Заголовок без пояснения</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">sf-alert-text + sf-alert-supporting-text</code>
+    <div class="sf-alert sf-alert--info sf-alert--default flex items-start">
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">Заголовок</div>
+          <div class="sf-alert-supporting-text">Пояснение под заголовком набрано тем же размером.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">sf-icon перед sf-alert-wrap</code>
+    <div class="sf-alert sf-alert--info sf-alert--default flex items-start">
+      <i class="sf-icon" aria-hidden="true">info</i>
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">С иконкой</div>
+          <div class="sf-alert-supporting-text">Иконка берёт цвет статуса.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">sf-alert-buttons внутри sf-alert-wrap</code>
+    <div class="sf-alert sf-alert--warning sf-alert--default flex items-start">
+      <i class="sf-icon" aria-hidden="true">warning</i>
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">Есть несохранённые изменения</div>
+          <div class="sf-alert-supporting-text">Сохраните их перед выходом.</div>
+        </div>
+        <div class="sf-alert-buttons flex flex-wrap items-center">
+          <button type="button" class="sf-button sf-button--default sf-button--on-surface sf-button--size-1/2" data-action="save"><span class="sf-button-text-container">Сохранить</span></button>
+          <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1/2" data-action="discard"><span class="sf-button-text-container">Не сохранять</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">кнопка закрытия — последний потомок блока</code>
+    <div class="sf-alert sf-alert--success sf-alert--default flex items-start">
+      <i class="sf-icon" aria-hidden="true">check_circle</i>
+      <div class="sf-alert-wrap flex flex-col flex-1">
+        <div class="sf-alert-content flex flex-col flex-1">
+          <div class="sf-alert-text">Файл загружен</div>
+          <div class="sf-alert-supporting-text">Кнопка закрытия удаляет уведомление.</div>
+        </div>
+      </div>
+      <button type="button" class="sf-icon-button sf-icon-button--close sf-icon-button--link sf-icon-button--on-surface sf-icon-button--size-1 flex items-cross-center" data-close aria-label="Закрыть уведомление">
+        <span class="sf-close sf-close--size-1 flex justify-center items-center" aria-hidden="true"><span class="sf-close-icon"></span></span>
+      </button>
+    </div>
+  </div>
+</div>

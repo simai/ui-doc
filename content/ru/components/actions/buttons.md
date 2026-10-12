@@ -10,6 +10,14 @@ profile: reference
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
 действия без подписи — [кнопку с иконкой](/ru/components/actions/icon-buttons/).
 
+## Сводка
+
+- **Модуль:** `buttons`. Loader подгружает его сам, когда встречает на странице класс `sf-button`.
+- **Поставка:** выпуск Framework, `distr/component/buttons`.
+- **Переменные:** 28, см. «Переменные».
+
+Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
 ## Пример
 
 :::example {id="components/buttons/basic" label="Базовая кнопка"}
@@ -45,37 +53,31 @@ profile: reference
 
 ## Варианты
 
-:::example {id="components/buttons/variants" label="Варианты кнопок"}
-:::
+Кнопку описывают независимые оси: вид, схема, размер, иконки, плотность,
+радиус и сегменты. На каждой оси кнопка берёт одно значение.
 
 ### Вид
 
-Вид задаёт класс `sf-button--{вид}`.
+Вид задаёт вес действия классом `sf-button--{вид}`: `default` — главное
+действие экрана, обычно одно; `tonal` — важное, но не главное; `outline` —
+второстепенное, например «Отмена»; `link` — самое лёгкое, в строке таблицы или
+рядом с текстом. `surface` нужен на цветном фоне или поверх изображения: его
+заливка и граница — полупрозрачные ступени
+[нейтральной шкалы](/ru/guide/fundamentals/colors-and-themes/), поэтому одна
+запись верна в обеих темах и на любом фоне.
 
-| Вид | Когда применять |
-|:---|:---|
-| `default` | главное действие экрана, обычно одно |
-| `tonal` | важное, но не главное действие рядом с основным |
-| `outline` | второстепенное действие: «Отмена», «Назад» |
-| `surface` | действие на цветном фоне или поверх изображения, где кнопке нужна своя подложка |
-| `link` | самое лёгкое действие: в строке таблицы, в карточке, рядом с текстом |
-
-`surface` не несёт собственного цвета: заливка и граница берутся из
-[нейтральной alpha-шкалы](/ru/guide/fundamentals/colors-and-themes/), поэтому
-одна запись верна в светлой и тёмной теме и на фоне, о котором ничего не
-известно. Граница на ступень сильнее заливки; при наведении и нажатии обе
-поднимаются на ступень.
+:::example {id="components/buttons/variants" label="Виды кнопки"}
+:::
 
 ### Схема
 
-Схема задаёт класс `sf-button--{схема}`.
+Схема задаёт цвет классом `sf-button--{схема}`: `primary` — акцентное действие,
+`on-surface` — нейтральное, `error` — необратимое или опасное, например
+«Удалить». `secondary` есть только у вида `tonal`, `error` нет у вида
+`surface`; прочерк в таблице — сочетание, которого нет.
 
-| Схема | Виды | Когда применять |
-|:---|:---|:---|
-| `primary` | все | акцентное действие |
-| `on-surface` | все | нейтральное действие |
-| `error` | `default`, `tonal`, `outline`, `link` | необратимое или опасное действие: «Удалить» |
-| `secondary` | `tonal` | мягкая кнопка вторичной палитры |
+:::example {id="components/buttons/schemes" label="Сочетания вида и схемы"}
+:::
 
 Вторичная палитра почти нейтральна, и рядом с `tonal on-surface` кнопка
 `tonal secondary` выглядит так же серой. Для мягкой цветной кнопки берите
@@ -84,78 +86,99 @@ profile: reference
 ### Размер
 
 Размеры `1/3`, `1/2`, `1`, `2` и `3` согласованно меняют высоту, внутренние
-отступы, текст и иконку. Размер `1` — основной для форм и панелей.
+отступы, текст и иконку. Размер `1` — основной для форм и панелей; размер
+кнопки совпадает с размером полей той же строки.
 
-:::example {id="components/buttons/sizes" label="Размеры кнопок"}
+:::example {id="components/buttons/sizes" label="Размеры кнопки"}
 :::
 
 ### Иконки
 
-Иконка стоит перед подписью или после неё; порядок задаёт HTML. Декоративной
-иконке задавайте `aria-hidden="true"`.
+Иконка стоит перед подписью, после неё или с двух сторон; порядок задаёт HTML.
+Её размер следует за размером кнопки. Декоративной иконке задавайте
+`aria-hidden="true"`.
 
-:::example {id="components/buttons/icons" label="Кнопки с иконками"}
+:::example {id="components/buttons/icons" label="Иконки в кнопке"}
 :::
 
 ### Плотность
 
-Плотность меняет вертикальные отступы, не меняя размер. Ставьте на кнопку
-один класс плотности.
+Плотность меняет вертикальные отступы, не меняя размер текста. Без класса
+отступы обычные; `spacing-compact` подходит плотным таблицам и панелям,
+`spacing-comfortable` и `spacing-spacious` — крупным одиночным действиям.
+Ставьте на кнопку один класс плотности.
 
-| Класс | Отступы | Другое имя |
-|:---|:---|:---|
-| `spacing-compact` | меньше обычного | `tightness-low` |
-| — | обычные | — |
-| `spacing-comfortable` | больше обычного | `tightness-high` |
-| `spacing-spacious` | самые большие | `tightness-highest` |
-
-Имена `tightness-*` работают так же, но читаются наоборот: «low» в них значит
-«мало места». В разметке пишите `spacing-*`.
-
-:::example {id="components/buttons/tightness" label="Плотность кнопок"}
+:::example {id="components/buttons/tightness" label="Плотность кнопки"}
 :::
+
+Имена `tightness-low`, `tightness-high` и `tightness-highest` работают так же,
+как `spacing-compact`, `spacing-comfortable` и `spacing-spacious`, но читаются
+наоборот: «low» в них значит «мало места». В разметке пишите `spacing-*`.
 
 ### Радиус
 
 Кнопка берёт смысловой радиус контрола (`radius-ui`). `radius-square` убирает
-скругление, `radius-rounded` делает края полностью круглыми.
+скругление, `radius-rounded` делает края полностью круглыми; `radius-default`
+равен радиусу по умолчанию. Другие классы `radius-*` на кнопку не действуют.
 
-:::example {id="components/buttons/radius" label="Радиус кнопок"}
+:::example {id="components/buttons/radius" label="Радиус кнопки"}
 :::
 
 ### Сегменты
 
 `segment-start`, `segment-middle` и `segment-end` соединяют соседние кнопки в
-один составной элемент: внутренние углы становятся прямыми. Группе нужна
-семантика: `role="group"` и общее доступное имя, как в примере.
+один составной элемент: внутренние углы становятся прямыми, общие границы
+рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `link`.
+Группе нужна семантика: `role="group"` и общее доступное имя.
 
 :::example {id="components/buttons/segments" label="Сегментированные кнопки"}
 :::
 
 ## Состояния
 
-| Состояние | Разметка | Правило |
-|:---|:---|:---|
-| Нажатая кнопка-переключатель | `active` и `aria-pressed="true"` | доступное имя не меняется при переключении |
-| Недоступная | нативный `disabled` | кнопка не получает фокус и не запускает действие |
-| Загрузка | `loading`, `aria-busy="true"`, `disabled` | повторный запуск заблокирован до завершения |
+Наведение и нажатие кнопка показывает сама. Остальные состояния задаёт
+разметка; классы показывают состояние, но не управляют запросом: приложение
+ставит их перед операцией, снимает после неё и сообщает результат.
 
-:::example {id="components/buttons/states" label="Состояния кнопок"}
+### Фокус
+
+При переходе клавишей Tab кнопка получает кольцо фокуса по `:focus-visible`;
+щелчок мышью кольца не показывает. В примере фокус показан классом
+`focus-visible`, который CSS компонента читает наравне с `:focus-visible`.
+
+:::example {id="components/buttons/state-focus" label="Кнопки в фокусе"}
 :::
 
-Вид недоступной кнопки задаёт нативное состояние `:disabled`. Класс `disabled`
-только отключает эффекты наведения, нажатия и фокуса; вид недоступной он даёт
-лишь варианту `sf-button--surface`. Атрибут `aria-disabled="true"` стилей не
-меняет и действие не блокирует.
+### Нажатая
 
-Кнопка в состоянии загрузки одновременно недоступна, поэтому любой вид на время
-работы выглядит как недоступная кнопка, а бегущие полоски показывают, что
-действие выполняется. Полоски — полупрозрачная ступень нейтральной шкалы,
-одинаковая для всех видов и обеих тем, поэтому подпись остаётся читаемой. При
-системной настройке уменьшения движения полоски не движутся.
+Класс `active` вместе с `aria-pressed="true"` оставляет кнопку-переключатель
+нажатой. Доступное имя при переключении не меняется: состояние сообщает
+`aria-pressed`.
 
-Классы показывают состояние, но не управляют запросом: приложение само ставит
-их перед началом операции, снимает после завершения и сообщает результат.
+:::example {id="components/buttons/state-active" label="Кнопки-переключатели"}
+:::
+
+### Недоступная
+
+Нативный `disabled` даёт любому виду серый вид недоступной кнопки: она не
+получает фокус и не запускает действие. Класс `disabled` только отключает
+эффекты наведения, нажатия и фокуса; вид недоступной он даёт лишь варианту
+`sf-button--surface`. Атрибут `aria-disabled="true"` стилей не меняет и
+действие не блокирует.
+
+:::example {id="components/buttons/state-disabled" label="Недоступные кнопки"}
+:::
+
+### Загрузка
+
+Класс `loading` вместе с `disabled` и `aria-busy="true"` блокирует повторный
+запуск и выводит поверх кнопки бегущие полоски. Кнопка в загрузке одновременно
+недоступна, поэтому любой вид выглядит как недоступная кнопка; полоски — ступень
+нейтральной шкалы, одинаковая для всех видов и обеих тем. При системной
+настройке уменьшения движения полоски не движутся.
+
+:::example {id="components/buttons/state-loading" label="Кнопки в загрузке"}
+:::
 
 ## Доступность
 
@@ -209,8 +232,6 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 
 ## Классы
 
-Раздел собран из CSS выпуска и обновляется вместе с выпуском.
-
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button` |
@@ -218,6 +239,41 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Модификаторы | `sf-button--default`, `sf-button--error`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--outline`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 | Устаревшие | `sf-button--ghost` → `sf-button--link` |
+
+## Переменные
+
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила `.sf-button`; переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-button--background-color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-primary)` | `background-color` |
+| `--sf-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
+| `--sf-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
+| `--sf-button--border-bottom-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-bottom`, `border-bottom-width` |
+| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--primary`: `var(--sf-outline)` | `border-color` |
+| `--sf-button--border-inline-end-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-inline-end`, `border-inline-end-width` |
+| `--sf-button--border-inline-start-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-inline-start`, `border-inline-start-width` |
+| `--sf-button--border-style` | не задана; задают модификаторы, например `.sf-button--outline`: `solid` | `border-style` |
+| `--sf-button--border-top-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-start-start-radius` |
+| `--sf-button--border-top-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-start-end-radius` |
+| `--sf-button--border-top-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-top`, `border-top-width` |
+| `--sf-button--border-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `border-width` |
+| `--sf-button--focus-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-on-primary)` | `--sf-button--focus-inset` |
+| `--sf-button--focus-inset` | не задана; задают модификаторы, например `.sf-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-button--focus-ink, transparent)` | `box-shadow` |
+| `--sf-button--padding-bottom` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
+| `--sf-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
+| `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
+| `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top` |
+| `--sf-button--radius` | `var(--sf-radius--ui)` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-button-loading-stripe` | `var(--sf-alpha-8)` | `background-image` |
+| `--sf-button-text-container--background-color` | не задана; задают модификаторы, например `.sf-button .sf-button-text-container`: `transparent` | `background-color` |
+| `--sf-button-text-container--color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-on-primary)` | `color` |
+| `--sf-button-text-container--font-family` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text--family)` | `font-family` |
+| `--sf-button-text-container--font-size` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-button-text-container--font-weight` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-button-text-container--line-height` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-button-text-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1 .sf-button-text-container`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
+| `--sf-button-text-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1 .sf-button-text-container`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
 
 ## См. также
 

@@ -1,11 +1,25 @@
-<div role="group" aria-label="Период отчёта" class="flex">
-  <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1 segment-start" aria-pressed="false">
-    <span class="sf-button-text-container">День</span>
-  </button>
-  <button type="button" class="sf-button sf-button--outline sf-button--primary sf-button--size-1 segment-middle active" aria-pressed="true">
-    <span class="sf-button-text-container">Неделя</span>
-  </button>
-  <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1 segment-end" aria-pressed="false">
-    <span class="sf-button-text-container">Месяц</span>
-  </button>
+<div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-1 items-start">
+    <div role="group" aria-label="Период отчёта" class="flex">
+      <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1 segment-start" aria-pressed="false"><span class="sf-button-text-container">День</span></button>
+      <button type="button" class="sf-button sf-button--outline sf-button--primary sf-button--size-1 segment-middle active" aria-pressed="true"><span class="sf-button-text-container">Неделя</span></button>
+      <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1 segment-end" aria-pressed="false"><span class="sf-button-text-container">Месяц</span></button>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">segment-start · segment-middle · segment-end: выбранный сегмент outline, остальные link</code>
+  </div>
+  <div class="flex flex-col gap-1 items-start">
+    <div role="group" aria-label="Выравнивание текста" class="flex">
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 segment-start"><span class="sf-button-text-container">Слева</span></button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 segment-middle"><span class="sf-button-text-container">По центру</span></button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 segment-end"><span class="sf-button-text-container">Справа</span></button>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">все сегменты sf-button--outline</code>
+  </div>
+  <div class="flex flex-col gap-1 items-start">
+    <div role="group" aria-label="Сохранение" class="flex">
+      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 segment-start"><span class="sf-button-text-container">Сохранить</span></button>
+      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 segment-end"><span class="sf-button-text-container">Сохранить как</span></button>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">segment-start · segment-end: два сегмента sf-button--default</code>
+  </div>
 </div>

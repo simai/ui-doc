@@ -1,0 +1,25 @@
+<div class="flex flex-col gap-3 color-on-surface">
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">hidden на элементе 2</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="p-1 bg-primary-container color-on-primary-container radius-ui">1</span>
+      <span class="hidden p-1 bg-error-container color-on-error-container radius-ui">2</span>
+      <span class="p-1 bg-primary-container color-on-primary-container radius-ui">3</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">hidden md:block</code>
+    <div class="hidden md:block p-1 bg-tertiary-container color-on-tertiary-container radius-ui">Виден от ширины md</div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">md:hidden</code>
+    <div class="md:hidden p-1 bg-secondary-container color-on-secondary-container radius-ui">Виден до ширины md</div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">block md:flex</code>
+    <div class="block md:flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="block p-1 bg-primary-container color-on-primary-container radius-ui">Столбиком на узком экране</span>
+      <span class="block p-1 bg-primary-container color-on-primary-container radius-ui">в строку от ширины md</span>
+    </div>
+  </div>
+</div>

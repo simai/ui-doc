@@ -11,9 +11,17 @@ profile: reference
 [радиокнопку](/ru/components/forms/radio/), для мгновенного включения
 настройки — [переключатель](/ru/components/forms/switch/).
 
+## Сводка
+
+- **Модуль:** `checkbox`. Loader подгружает его сам, когда встречает на странице класс `sf-checkbox`.
+- **Поставка:** выпуск Framework, `distr/component/checkbox`.
+- **Переменные:** 25, см. «Переменные».
+
+Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
 ## Пример
 
-:::example {id="components/checkbox/overview" label="Базовый флажок"}
+:::example {id="components/checkbox/overview" label="Флажок с подписью и пояснением"}
 :::
 
 ## Разметка
@@ -39,11 +47,20 @@ profile: reference
 ### Размер
 
 Три ступени — `sf-checkbox--size-1/2`, `sf-checkbox--size-1` и
-`sf-checkbox--size-2`, как у полей форм, радиокнопки и переключателя. Ступень
-нужна, чтобы совпадать с полями и кнопками той же формы; в списке флажок берёт
-размер списка.
+`sf-checkbox--size-2`, как у полей форм, радиокнопки и переключателя. Размер
+меняет индикатор, подпись и пояснение вместе. Берите ступень полей и кнопок
+той же формы; в списке флажок берёт размер списка.
 
 :::example {id="components/checkbox/sizes" label="Размеры флажка"}
+:::
+
+### Состав
+
+Подпись обязательна: она даёт флажку доступное имя. Пояснение добавляет
+`sf-checkbox-description`, значок подсказки — `sf-icon` в `sf-checkbox-top`
+рядом с подписью; размер значка следует за размером флажка.
+
+:::example {id="components/checkbox/composition" label="Подпись, пояснение и значок"}
 :::
 
 ### Положение индикатора
@@ -57,19 +74,52 @@ profile: reference
 
 ## Состояния
 
-| Состояние | Разметка |
-|:---|:---|
-| Отмечен | нативный `checked` |
-| Недоступен | нативный `disabled` |
-| Смешанный | свойство `input.indeterminate = true` или атрибут `data-indeterminate` |
-| Ошибка | класс `error` на оболочке, `aria-invalid="true"` на input и текст ошибки |
+Все состояния задаёт нативный input; класс на оболочке нужен только ошибке.
+Наведение и нажатие компонент показывает сам.
 
-Смешанное состояние означает, что выбрана часть дочерних вариантов. HTML-атрибута
-с таким поведением нет, и третьего отправляемого значения оно не создаёт.
-`data-indeterminate` скрипт компонента переносит в свойство `indeterminate`
-один раз при подключении; дальше меняйте состояние через JavaScript.
+### Отмечен
 
-:::example {id="components/checkbox/states" label="Состояния флажка"}
+Нативный `checked` заливает индикатор основным цветом и ставит отметку.
+
+:::example {id="components/checkbox/state-checked" label="Неотмеченный и отмеченный"}
+:::
+
+### Смешанное
+
+Смешанное состояние означает, что выбрана часть дочерних вариантов: индикатор
+показывает черту вместо отметки. HTML-атрибута с таким поведением нет, и
+третьего отправляемого значения оно не создаёт. Его задаёт свойство
+`input.indeterminate = true` или атрибут `data-indeterminate`, который скрипт
+компонента переносит в свойство один раз при подключении; дальше меняйте
+состояние через JavaScript.
+
+:::example {id="components/checkbox/state-indeterminate" label="Смешанное состояние"}
+:::
+
+### Недоступен
+
+Нативный `disabled` приглушает индикатор и текст в любом состоянии отметки, в том числе в смешанном;
+флажок не получает фокус и не отправляется с формой.
+
+:::example {id="components/checkbox/state-disabled" label="Недоступные флажки"}
+:::
+
+### Ошибка
+
+Класс `error` на оболочке окрашивает рамку индикатора цветом ошибки. Текст
+ошибки кладите в пояснение и связывайте с input через `aria-describedby`,
+сам input получает `aria-invalid="true"`.
+
+:::example {id="components/checkbox/state-error" label="Флажок с ошибкой"}
+:::
+
+### Фокус
+
+При переходе клавишей Tab индикатор получает кольцо фокуса по
+`:focus-visible`. В примере фокус показан классом `focus-visible` на input,
+который CSS компонента читает наравне с `:focus-visible`.
+
+:::example {id="components/checkbox/state-focus" label="Флажок в фокусе"}
 :::
 
 ## Доступность
@@ -118,19 +168,49 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 }));
 ```
 
-Параметры: `title`, `description`, `size` (`1/2`, `1`, `2`), `name`, `value`,
-`checked`, `disabled`, `indeterminate`. `attrs` переносятся на input, класс из
-`attrs.class` — на оболочку.
+Параметры: `title`, `description`, `help` (имя значка подсказки), `size`
+(`1/2`, `1`, `2`), `name`, `value`, `checked`, `disabled`, `indeterminate`.
+`attrs` переносятся на input, класс из `attrs.class` — на оболочку.
 
 ## Классы
-
-Раздел собран из CSS выпуска и обновляется вместе с выпуском.
 
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-checkbox` |
 | Части | `sf-checkbox-box`, `sf-checkbox-container`, `sf-checkbox-description`, `sf-checkbox-label`, `sf-checkbox-top` |
 | Размеры | `sf-checkbox--size-1`, `sf-checkbox--size-1/2`, `sf-checkbox--size-2` |
+
+## Переменные
+
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила `.sf-checkbox`; переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-ui-1/2--text-space-x)` | `gap` |
+| `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-surface-0)` | `background-color` |
+| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-outline)` | `border-color` |
+| `--sf-checkbox-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-end-end-radius` |
+| `--sf-checkbox-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-end-start-radius` |
+| `--sf-checkbox-box--border-start-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-start-end-radius` |
+| `--sf-checkbox-box--border-start-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-start-start-radius` |
+| `--sf-checkbox-box--box-shadow` | не задана; задают модификаторы, например `.sf-checkbox[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-checkbox-box`: `none` | `box-shadow` |
+| `--sf-checkbox-box--height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-text-height-1/2)` | `height` |
+| `--sf-checkbox-box--width` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-text-height-1/2)` | `width` |
+| `--sf-checkbox-container--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-container`: `transparent` | `background-color` |
+| `--sf-checkbox-description--color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-checkbox-description--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-text--family)` | `font-family` |
+| `--sf-checkbox-description--font-size` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-description`: `var(--sf-text-size-1/3)` | `font-size` |
+| `--sf-checkbox-description--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-checkbox-description--line-height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-description`: `var(--sf-text-height-1/3)` | `line-height` |
+| `--sf-checkbox-label--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `transparent` | `background-color` |
+| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox:not(.error)[:has(input:not(:checked))] .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
+| `--sf-checkbox-label--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-text--family)` | `font-family` |
+| `--sf-checkbox-label--font-size` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-checkbox-label--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-checkbox-label--line-height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-checkbox-top--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-top`: `transparent` | `background-color` |
+| `--sf-checkbox-top--gap` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-top`: `var(--sf-space-1/4)` | `gap` |
 
 ## См. также
 

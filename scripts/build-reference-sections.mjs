@@ -214,20 +214,60 @@ const utilityVariants = (families) => {
       const name = firstClass(first.selector);
       const prefix = name.includes(':') ? name.slice(0, name.lastIndexOf(':') + 1) : `${variant}:`;
       const width = first.media?.match(/min-width:\s*([0-9.]+(?:px|rem|em))/u)?.[1];
-      const meaning = width
-        ? `при ширине окна от ${width}`
-        : (STATES[prefix.slice(0, -1)] ?? `в состоянии ${code(prefix.slice(0, -1))}`);
-      if (!seen.has(prefix)) seen.set(prefix, {meaning, example: name, width: width ? parseFloat(width) : null});
+      if (!seen.has(prefix)) seen.set(prefix, {width: width ?? null, state: width ? null : prefix.slice(0, -1), example: name});
     }
   }
-  if (seen.size === 0) return null;
-  const ordered = [...seen].sort(([, a], [, b]) => (a.width ?? 1e9) - (b.width ?? 1e9));
+  return [...seen].map(([prefix, data]) => ({prefix, ...data}))
+    .sort((a, b) => (a.width ? parseFloat(a.width) : 1e9) - (b.width ? parseFloat(b.width) : 1e9));
+};
+
+// The theme tokens a family reads: what a project changes to restyle every
+// use of the utility at once.
+const utilityTokens = (families) => {
+  const names = new Set();
+  for (const family of families) {
+    for (const variant of tree(`distr/utility/${family}`)) {
+      const css = show(`distr/utility/${family}/${variant}/css/${variant}.css`) ?? '';
+      for (const [, name] of css.matchAll(/var\((--sf-[a-zA-Z0-9_\\/-]+)/gu)) names.add(unescape(name));
+    }
+  }
+  return [...names];
+};
+
+const coreCss = show('distr/core/css/core.css') ?? '';
+const tokenValue = (name) => {
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&').replace(/\//gu, '\\\\?/');
+  const match = coreCss.match(new RegExp(`${escaped}:\\s*([^;]+);`, 'u'));
+  return match ? unescape(match[1].trim()) : null;
+};
+
+const utilitySummary = (families) => {
+  const variants = utilityVariants(families);
+  const widths = variants.filter(({width}) => width);
+  const states = variants.filter(({state}) => state);
+  const tokens = utilityTokens(families);
+  // A list, not a two-column table: on a phone the table broke its labels
+  // mid-word and showed an empty header row.
   return [
-    'Префикс применяет класс только при условии; без префикса класс действует всегда. Префиксы ширины срабатывают от указанной ширины и шире.',
+    `- **Модуль:** ${families.map(code).join(', ')}. Loader подгружает его сам, когда встречает класс на странице.`,
+    `- **Ширина экрана:** ${widths.length ? `${widths.map(({prefix, width}) => `${code(prefix)} от ${width}`).join(', ')}.` : 'нет, класс действует на любой ширине.'}`,
+    `- **Состояния:** ${states.length ? `${states.map(({prefix, state}) => `${code(prefix)} ${STATES[state] ?? `в состоянии ${code(state)}`}`).join(', ')}.` : 'нет.'}`,
+    `- **Переменные:** ${tokens.length ? `${tokens.length}, см. «Переменные».` : 'нет, значения заданы прямо в классах.'}`,
     '',
-    '| Префикс | Когда действует | Пример |',
-    '|:---|:---|:---|',
-    ...ordered.map(([prefix, {meaning, example}]) => `| ${code(prefix)} | ${meaning} | ${code(example)} |`),
+    ...(variants.length ? [`Префикс пишется перед классом и применяет его только при условии: ${code(variants[0].example)}. Префиксы ширины действуют от указанной ширины и шире.`, ''] : []),
+    SOURCE_NOTE,
+  ];
+};
+
+const utilityVariables = (families) => {
+  const tokens = utilityTokens(families);
+  if (tokens.length === 0) return null;
+  return [
+    'Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).',
+    '',
+    '| Переменная | Значение по умолчанию |',
+    '|:---|:---|',
+    ...tokens.map((name) => `| ${code(name)} | ${tokenValue(name) ? code(tokenValue(name)) : 'задаётся темой'} |`),
   ];
 };
 
@@ -263,18 +303,79 @@ const componentClasses = (component, block) => {
   ];
 };
 
+// The component's own variables: every `--<block>…` custom property its sheet
+// declares. Most are set by modifiers rather than by the base rule (a button's
+// background comes from `.sf-button--default.sf-button--primary`), so a
+// variable's default is the base rule's value when it has one, else the value
+// the first rule that sets it gives, with that rule named.
+const componentVariables = (component, block) => {
+  const css = show(`distr/component/${component}/css/${component}.css`) ?? '';
+  const all = rules(css);
+  const declared = new Map();
+  for (const {selector, body, media} of all) {
+    for (const part of body.split(';')) {
+      const match = part.trim().match(/^(--[a-zA-Z0-9_-]+)\s*:\s*([\s\S]+)$/u);
+      if (!match || !match[1].startsWith(`--${block}`)) continue;
+      const base = !media && selector.split(',').map((item) => item.trim()).includes(`.${block}`);
+      const known = declared.get(match[1]);
+      const value = unescape(match[2].trim());
+      if (!known) declared.set(match[1], {value, from: base ? null : unescape(selector.split(',')[0].trim()), base});
+      else if (base && !known.base) declared.set(match[1], {value, from: null, base: true});
+    }
+  }
+  const used = (name) => {
+    const properties = new Set();
+    for (const {body} of all) {
+      for (const part of body.split(';')) {
+        const match = part.trim().match(/^([a-z-]+)\s*:/u);
+        if (match && part.includes(`var(${name}`)) properties.add(match[1]);
+      }
+    }
+    // A logical property and its physical fallbacks say one thing.
+    const list = [...properties].filter((property) => !property.startsWith('-webkit-'));
+    const logical = list.some((property) => /(inline|block)-(start|end)|(start|end)-(start|end)/u.test(property));
+    return logical ? list.filter((property) => !/(left|right)/u.test(property)) : list;
+  };
+  return [...declared].sort(([a], [b]) => a.localeCompare(b))
+    .map(([name, {value, from}]) => ({name, value, from, properties: used(name)}));
+};
+
+const componentSummary = (component, block) => {
+  const rule = (JSON.parse(show('distr/rule/rule.json') ?? '[]')).find((item) => item.name === component);
+  const variables = componentVariables(component, block);
+  return [
+    `- **Модуль:** ${code(component)}. Loader подгружает его сам${rule ? `, когда встречает на странице класс ${code(block)}` : ''}.`,
+    `- **Поставка:** выпуск Framework, ${code(`distr/component/${component}`)}.`,
+    `- **Переменные:** ${variables.length ? `${variables.length}, см. «Переменные».` : 'нет.'}`,
+    '',
+    SOURCE_NOTE,
+  ];
+};
+
+const componentVariablesSection = (component, block) => {
+  const variables = componentVariables(component, block);
+  if (variables.length === 0) return null;
+  return [
+    `Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила ${code(`.${block}`)}; переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.`,
+    '',
+    '| Переменная | По умолчанию | Задаёт |',
+    '|:---|:---|:---|',
+    ...variables.map(({name, value, from, properties}) => `| ${code(name)} | ${from ? `не задана; задают модификаторы, например ${code(from)}: ${code(value)}` : code(value)} | ${properties.length ? properties.map(code).join(', ') : '—'} |`),
+  ];
+};
+
 // ---- writing ----------------------------------------------------------------------
 
 const ORDER = {
-  utility: ['Пример', 'Классы', 'Адаптивность и состояния', 'Применение', 'Ограничения', 'См. также'],
-  component: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Доступность', 'JavaScript', 'Классы', 'См. также'],
+  utility: ['Сводка', 'Пример', 'Классы', 'Переменные', 'Применение', 'Ограничения', 'См. также'],
+  component: ['Сводка', 'Пример', 'Разметка', 'Варианты', 'Состояния', 'Доступность', 'JavaScript', 'Классы', 'Переменные', 'См. также'],
 };
-const NOTE = 'Раздел собран из CSS выпуска и обновляется вместе с выпуском.';
+const SOURCE_NOTE = 'Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.';
 
 const setSection = (text, kind, heading, body) => {
   const [head, ...sections] = text.split(/^(?=## )/mu);
   const titleOf = (section) => section.match(/^## (.+)$/mu)?.[1].trim();
-  const content = body === null ? null : `## ${heading}\n\n${NOTE}\n\n${body.join('\n')}\n\n`;
+  const content = body === null ? null : `## ${heading}\n\n${body.join('\n')}\n\n`;
   const index = sections.findIndex((section) => titleOf(section) === heading);
   if (index >= 0) {
     if (content === null) sections.splice(index, 1);
@@ -293,10 +394,14 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   const current = readFileSync(path, 'utf8');
   let next = current;
   if (entry.kind === 'utility') {
+    next = setSection(next, 'utility', 'Адаптивность и состояния', null);
+    next = setSection(next, 'utility', 'Сводка', utilitySummary(entry.families));
     next = setSection(next, 'utility', 'Классы', utilityClasses(entry.families));
-    next = setSection(next, 'utility', 'Адаптивность и состояния', utilityVariants(entry.families));
+    next = setSection(next, 'utility', 'Переменные', utilityVariables(entry.families));
   } else if (entry.kind === 'component') {
+    next = setSection(next, 'component', 'Сводка', componentSummary(entry.component, entry.block));
     next = setSection(next, 'component', 'Классы', componentClasses(entry.component, entry.block));
+    next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, entry.block));
   }
   if (next !== current) {
     changed.push(page);
