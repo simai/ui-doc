@@ -1,57 +1,87 @@
 ---
 title: "Толщина шрифта"
-description: "Толщина шрифта (font-weight)"
-tags: [font-weight, sm, md, lg, xl, xxl, hover]
+description: "Задаёт толщину начертания текста по шкале от 100 до 900 или относительно родителя."
 ---
 
 # Толщина шрифта
 
-:badge[font-weight]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы задают толщину начертания: `weight-1` … `weight-9` по шкале от 100 до
+900, `regular` и `bold` — обычное и жирное, `lighter` и `bolder` — на шаг
+тоньше или жирнее родителя. Берите их для заголовков, акцентов и подписей.
 
-Модификаторы для управления толщиной шрифта позволяют задать нужное начертание в диапазоне от очень тонкого (100) до
-очень жирного (900).
+## Пример
 
-## Наглядный пример
+### Шкала
 
-:::example {id="utilities/typography/font-weight" label="Толщина шрифта"}
+Подпись над образцом — класс, который на нём стоит. Начертание видно, если
+шрифт его поддерживает.
+
+:::example {id="utilities/typography/font-weight" label="weight-1 … weight-9"}
 :::
 
-## Таблица классов
+### Именованные и относительные
 
-| Класс     | Значение                   |
-|:----------|:---------------------------|
-| `regular` | font-weight: normal; (400) |
-| `bold` | font-weight: bold; (700)   |
-| `lighter` | `font-weight: lighter;` |
-| `bolder` | `font-weight: bolder;` |
-| `weight-1` | `font-weight: 100;` |
-| `weight-2` | `font-weight: 200;` |
-| `weight-3` | `font-weight: 300;` |
-| `weight-4` | `font-weight: 400;` |
-| `weight-5` | `font-weight: 500;` |
-| `weight-6` | `font-weight: 600;` |
-| `weight-7` | `font-weight: 700;` |
-| `weight-8` | `font-weight: 800;` |
-| `weight-9` | `font-weight: 900;` |
+`bolder` и `lighter` меняют толщину относительно родителя.
 
-## Пример использования
+:::example {id="utilities/typography/font-weight-relative" label="regular, bold, bolder, lighter"}
+:::
+
+### Ширина экрана и наведение
+
+Меняйте ширину окна просмотра: начиная с ширины `md` первый образец
+становится жирным. Наведите указатель на второй.
+
+:::example {id="utilities/typography/font-weight-conditions" label="md: и hover:"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `regular` | `font-weight: normal` | — |
+| `bold` | `font-weight: bold` | — |
+| `lighter` | `font-weight: lighter` | — |
+| `bolder` | `font-weight: bolder` | — |
+| `weight-1` | `font-weight: 100` | — |
+| `weight-2` | `font-weight: 200` | — |
+| `weight-3` | `font-weight: 300` | — |
+| `weight-4` | `font-weight: 400` | — |
+| `weight-5` | `font-weight: 500` | — |
+| `weight-6` | `font-weight: 600` | — |
+| `weight-7` | `font-weight: 700` | — |
+| `weight-8` | `font-weight: 800` | — |
+| `weight-9` | `font-weight: 900` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — `hover:`. Например: `sm:regular`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+| Класс | Толщина |
+|:---|:---|
+| `weight-3` | 300, тонкий — крупные цифры и заголовки |
+| `weight-4`, `regular` | 400, обычный текст |
+| `weight-5` | 500, средний — подписи, кнопки |
+| `weight-6` | 600, полужирный — подзаголовки |
+| `weight-7`, `bold` | 700, жирный — заголовки, акцент |
 
 ```html
-<p class="regular">Текст с нормальной толщиной шрифта (400)</p>
-<p class="bold">Текст с полужирным шрифтом (700)</p>
-<p class="lighter">Текст будет визуально тоньше относительно исходного</p>
-<p class="bolder">Текст будет визуально толще относительно исходного</p>
-<p class="weight-3">Текст с толщиной шрифта 300</p>
-<p class="weight-7">Текст с толщиной шрифта 700</p>
+<h2 class="weight-6">Подзаголовок</h2>
+<p>Итого: <span class="weight-7">12 400 ₽</span></p>
 ```
 
-## Адаптивность
+Для одной и той же роли держите одну ступень по всему интерфейсу:
+сочетание толщины и размера задаёт иерархию.
 
-Для изменения толщины шрифта начиная с определённого размера экрана используйте префикс контрольной точки. Например,
-чтобы сделать текст полужирным на экранах medium и больше:
+## Ограничения
 
-```html
-<p class="md:bold">
-  Текст будет полужирным на экранах размером Medium и больше.
-</p>
-```
+- Браузер показывает только начертания, которые есть у шрифта. Промежуточная
+  ступень, которой у шрифта нет, совпадает с ближайшей.
+- `hover:` меняет толщину и вместе с ней ширину текста: соседние элементы
+  могут сдвинуться.
+
+## См. также
+
+- [Типографика](/ru/guide/fundamentals/typography/)
+- [Размер текста](/ru/utilities/typography/text-size/)

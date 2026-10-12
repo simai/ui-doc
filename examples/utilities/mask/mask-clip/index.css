@@ -1,0 +1,16 @@
+/* Demo only. The Framework has no class for mask-image, so each example sets
+   its own. The mask is inline on purpose: an example renders in a sandboxed
+   frame with an opaque origin, and a mask image is fetched in CORS mode, so a
+   file from the site is refused and the masked element disappears with it. */
+.demo-mask-solid {
+  -webkit-mask-image: linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000);
+  border: 1rem solid transparent;
+  padding: 1rem;
+}
+.demo-mask-text {
+  -webkit-mask-image: linear-gradient(#000, #000);
+  mask-image: linear-gradient(#000, #000);
+  background-image: linear-gradient(90deg, var(--sf-primary), var(--sf-tertiary));
+}
+

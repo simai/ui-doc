@@ -1,72 +1,66 @@
 ---
 title: "Автоматическая ширина столбцов сетки"
-description: "Автоматическая ширина столбцов сетки (grid-auto-columns)"
-tags: [grid-auto-columns, sm, md, lg, xl, xxl]
+description: "Задаёт ширину колонок, которые сетка создаёт сама, без шаблона."
 ---
 
 # Автоматическая ширина столбцов сетки
 
-:badge[grid-auto-columns]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `auto-cols-*` задают `grid-auto-columns` — ширину колонок, которых нет
+в шаблоне и которые сетка создаёт сама. Берите их вместе с `grid-flow-col`,
+когда число колонок зависит от числа элементов: панель кнопок, ряд вкладок,
+лента карточек.
 
-В SIMAI Framework с помощью модификаторов можно управлять размером автоматически создаваемых столбцов сетки, для которых не задана явная ширина. Это помогает гибко адаптировать макет под разные сценарии и размеры экрана.
+## Пример
 
-## Наглядный пример
+### Ширина колонок
 
-:::example {id="utilities/grid/grid-auto-columns" label="Автоматическая ширина столбцов сетки"}
+Сетка с `grid-flow-col` без шаблона колонок: каждый элемент получает свою
+колонку. Подпись над образцом — класс контейнера.
+
+:::example {id="utilities/grid/grid-auto-columns" label="auto-cols, auto-cols-min, auto-cols-max, auto-cols-fr"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс          | Значение                           |
-|:---------------|:-----------------------------------|
-| `auto-cols` | `grid-auto-columns: auto;` |
-| `auto-cols-min` | `grid-auto-columns: min-content;` |
-| `auto-cols-max` | `grid-auto-columns: max-content;` |
-| `auto-cols-fr` | `grid-auto-columns: minmax(0, 1fr);` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `auto-cols` | `grid-auto-columns: auto` | — |
+| `auto-cols-min` | `grid-auto-columns: -webkit-min-content; grid-auto-columns: min-content` | — |
+| `auto-cols-max` | `grid-auto-columns: -webkit-max-content; grid-auto-columns: max-content` | — |
+| `auto-cols-fr` | `grid-auto-columns: minmax(0, 1fr)` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:auto-cols`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, модификатор действует на все размеры.
-- Модификатор *(обязательный параметр)*:
-  - `auto-cols` — столбцы имеют автоматическую ширину (значение по умолчанию);
-  - `auto-cols-min` — ширина определяется минимальным размером содержимого (min-content);
-  - `auto-cols-max` — ширина определяется максимальным размером содержимого (max-content);
-  - `auto-cols-fr` — ширина столбцов распределяется равномерно за счёт единиц измерения fr.
+## Применение
 
-## Пример использования
+### Как выбрать
+
+- `auto-cols` — по содержимому, а свободное место делится между колонками.
+  Это значение по умолчанию.
+- `auto-cols-min` — по самому длинному слову: текст переносится, колонки
+  самые узкие.
+- `auto-cols-max` — по тексту без переносов; свободное место остаётся.
+- `auto-cols-fr` — колонки равной ширины, сколько бы их ни было.
+
+### Кнопки равной ширины
 
 ```html
-<div class="grid gap-1 grid-flow-col auto-cols">
-  <div>1</div>
-  <div>Short</div>
-  <div>Medium length</div>
-  <div>Larger amount of content</div>
+<div class="grid grid-flow-col auto-cols-fr gap-1">
+  <button type="button">Назад</button>
+  <button type="button">Сохранить черновик</button>
+  <button type="button">Далее</button>
 </div>
 ```
 
-В этом примере используется класс `auto-cols`, и ширина столбцов определяется автоматически в зависимости от содержимого.
+## Ограничения
 
-Для равномерного распределения можно использовать `auto-cols-fr`:
+- Классы действуют только на колонки вне шаблона: при `grid-col-*` они
+  касаются колонок, которые элементы добавили справа от шаблона.
 
-```html
-<div class="grid gap-1 grid-flow-col auto-cols-fr">
-  <div>1</div>
-  <div>Short</div>
-  <div>Medium length</div>
-  <div>Larger amount of content</div>
-</div>
-```
+## См. также
 
-Здесь все столбцы будут занимать равные доли доступной ширины.
-
-## Адаптивность
-
-Чтобы настраивать размеры столбцов, начиная с определённого брейкпоинта, используйте контрольные точки. Например:
-
-```html
-<div class="md:auto-cols-min">
-  <!-- Начиная с ширины md и выше столбцы используют минимальный размер содержимого -->
-</div>
-```
+- [Автоматическое формирование сетки](/ru/utilities/grid/grid-auto-flow/)
+- [Автоматический размер строк сетки](/ru/utilities/grid/grid-auto-rows/)
+- [Шаблон колонок сетки](/ru/utilities/grid/grid-template-columns/)

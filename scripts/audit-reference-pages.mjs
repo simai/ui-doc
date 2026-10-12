@@ -13,7 +13,8 @@ import {dirname, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const settings = JSON.parse(readFileSync(join(root, 'config/reference-pages.json'), 'utf8'));
+// REFERENCE_PAGES_CONFIG names another enrolment list (a migration wave's).
+const settings = JSON.parse(readFileSync(process.env.REFERENCE_PAGES_CONFIG || join(root, 'config/reference-pages.json'), 'utf8'));
 
 const STANDARD = {
   utility: {

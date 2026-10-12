@@ -1,94 +1,84 @@
 ---
 title: "Направление размещения"
-description: "Направление размещения (flex-direction)"
-tags: [flex-direction, sm, md, lg, xl, xxl]
+description: "Выстраивает флекс-элементы в строку или в столбец, в прямом или обратном порядке."
 ---
 
 # Направление размещения
 
-:badge[flex-direction]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `flex-row` и `flex-col` задают `flex-direction` — основную ось
+флекс-контейнера: строку или столбец. Варианты с `-reverse` ставят элементы в
+обратном порядке. Берите их вместе с [`flex`](/ru/utilities/layout/display/),
+когда нужно выбрать, как идут элементы, или перестроить их на другой ширине
+экрана.
 
-В SIMAI Framework с помощью модификаторов можно задать направление размещения элементов флексбокса, определяя ориентацию
-и порядок элементов внутри контейнера.
+## Пример
 
-## Наглядный пример
+### Строка и столбец
 
-:::example {id="utilities/flex/flex-direction" label="Направление размещения"}
+Три элемента в одном порядке разметки. Подпись над образцом — класс
+контейнера.
+
+:::example {id="utilities/flex/flex-direction" label="flex-row, flex-row-reverse, flex-col, flex-col-reverse"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс             | Значение                        |
-|:------------------|:--------------------------------|
-| `flex-row` | `flex-direction: row;` |
-| `flex-col` | `flex-direction: column;` |
-| `flex-row-reverse` | `flex-direction: row-reverse;` |
-| `flex-col-reverse` | `flex-direction: column-reverse;` |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: на узком экране элементы стоят столбцом, с ширины `md` — в строку.
 
-## Синтаксис
+:::example {id="utilities/flex/flex-direction-responsive" label="flex-col md:flex-row"}
+:::
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Классы
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `flex-row` | `flex-direction: row` | — |
+| `flex-col` | `flex-direction: column` | — |
+| `flex-row-reverse` | `flex-direction: row-reverse` | — |
+| `flex-col-reverse` | `flex-direction: column-reverse` | — |
 
-- Модификатор *(обязательный параметр)*:
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:flex-row`.
 
-    - `flex-row` — элементы расположены в строку слева направо.
-    - `flex-col` — элементы расположены в столбец сверху вниз.
-    - `flex-row-reverse` — элементы расположены в строку справа налево.
-    - `flex-col-reverse` — элементы расположены в столбец снизу вверх.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Примеры использования
+## Применение
 
-### Прямое размещение в строке:
+### Как выбрать
+
+- `flex-row` — направление по умолчанию у флекс-контейнера; класс нужен, чтобы
+  вернуть строку после `flex-col` на другой ширине экрана.
+- `flex-col` — элементы друг под другом: форма, меню, список карточек на
+  телефоне.
+- `flex-row-reverse` и `flex-col-reverse` меняют только порядок показа; в
+  разметке элементы остаются в прежнем порядке.
+
+### Столбец на телефоне, строка на широком экране
 
 ```html
-<div class="flex flex-row ...">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
+<div class="flex flex-col md:flex-row gap-2">
+  <aside class="md:basis-1/4">Фильтры</aside>
+  <main class="md:basis-3/4">Список</main>
 </div>
 ```
 
-### Обратное размещение в строке:
+Направление меняет и смысл других классов: при `flex-col` классы
+[`justify-*`](/ru/utilities/grid-and-flexbox-utilities/justify-content/)
+выравнивают по вертикали, а
+[`items-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-items/) — по
+горизонтали.
 
-```html
-<div class="flex flex-row-reverse ...">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>
-```
+## Ограничения
 
-### Прямое размещение в столбце:
+- `flex-row` следует направлению письма: при `dir="rtl"` строка идёт справа
+  налево, а `flex-row-reverse` — слева направо.
+- Варианты с `-reverse` расходятся с порядком разметки, по которому идут фокус
+  клавиатуры и программы экранного доступа. Если порядок важен для смысла,
+  меняйте порядок в разметке, а не класс.
 
-```html
-<div class="flex flex-col ...">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>
-```
+## См. также
 
-### Обратное размещение в столбце:
-
-```html
-<div class="flex flex-col-reverse ...">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>
-```
-
-## Адаптивность
-
-Для изменения направления флексбокса при достижении определённой контрольной точки экрана просто добавьте её к
-модификатору:
-
-```html
-<div class="md:flex-row">
-    <!-- Начиная с md элементы будут расположены в строку слева направо -->
-</div>
-```
+- [Метод отображения элемента](/ru/utilities/layout/display/)
+- [Перенос элементов](/ru/utilities/flex/flex-wrap/)
+- [Сортировка](/ru/utilities/grid-and-flexbox-utilities/order/)
+- [Выравнивание содержимого по основной оси](/ru/utilities/grid-and-flexbox-utilities/justify-content/)

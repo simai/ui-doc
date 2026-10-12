@@ -1,14 +1,69 @@
 ---
 title: "Смещение линий оформления"
-description: "Смещение underline/overline/line-through"
-tags: [text-decoration-offset]
+description: "Отодвигает подчёркивание от текста, чтобы линия не задевала выносные элементы букв."
 ---
 
 # Смещение линий оформления
 
-:badge[text-decoration-offset]{type=main scheme=on-surface size=1}
+Классы `decoration-offset-*` задают расстояние от текста до линии
+подчёркивания. Берите их, когда подчёркивание пересекает выносные элементы
+букв или должно стоять заметно ниже текста.
 
-Классы: `decoration-offset-auto`, `decoration-offset-0...4`.
 ## Пример
-:::example {id="utilities/text-formatting/text-decoration-offset" label="Смещение линий оформления"}
+
+Подчёркнутый текст с разным смещением. Подпись над образцом — класс, который
+на нём стоит.
+
+:::example {id="utilities/text-formatting/text-decoration-offset" label="Шкала смещения"}
 :::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `decoration-offset-auto` | `text-underline-offset: auto` | — |
+| `decoration-offset-0` | `text-underline-offset: var(--sf-a0)` | — |
+| `decoration-offset-1` | `text-underline-offset: var(--sf-a1)` | — |
+| `decoration-offset-2` | `text-underline-offset: var(--sf-a2)` | — |
+| `decoration-offset-3` | `text-underline-offset: var(--sf-a3)` | — |
+| `decoration-offset-4` | `text-underline-offset: var(--sf-a4)` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-a0` | `0rem` |
+| `--sf-a1` | `0.0625rem` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-a3` | `0.1875rem` |
+| `--sf-a4` | `0.25rem` |
+
+## Применение
+
+Смещение действует только на подчёркивание: добавьте класс к элементу с
+`underline` или к ссылке. `decoration-offset-auto` возвращает смещение,
+которое выбирает браузер.
+
+```html
+<a class="underline decoration-offset-2" href="/ru/">Документация</a>
+```
+
+Вместе с толщиной `decoration-*` смещение делает подчёркивание заметным
+элементом оформления, например у активного пункта меню.
+
+## Ограничения
+
+- Линии `overline` и `line-through` смещение не двигает.
+- Значения шкалы заданы в `rem` и не растут вместе с размером шрифта: у очень
+  крупного текста то же смещение выглядит меньше.
+
+## См. также
+
+- [Линии оформления текста](/ru/utilities/text-formatting/text-decoration/)
+- [Толщина оформления текста](/ru/utilities/text-formatting/text-formatting-thickness/)

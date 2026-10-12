@@ -1,65 +1,92 @@
 ---
 title: "Продолжительность перехода"
-description: "Продолжительность перехода"
-tags: [transition-duration]
+description: "Задаёт, сколько длится плавный переход между состояниями элемента: быстро, обычно или медленно."
 ---
 
 # Продолжительность перехода
 
-:badge[transition-duration]{type=main scheme=on-surface size=1}
+Классы `duration-*` задают `transition-duration` по одному из трёх токенов
+времени. Берите их, когда элемент должен плавно менять вид при наведении,
+фокусе или смене класса, и скорость этого изменения важна.
 
-С помощью данных модификаторов можно задать длительность переходов CSS-свойств. Это позволяет контролировать, насколько
-быстро или медленно будут воспроизводиться анимации при взаимодействии с элементом.
+## Пример
 
-## Наглядный пример
+Наведите указатель на дорожку или перейдите на неё клавишей Tab: точка
+проходит одинаковый путь, меняется только длительность. Подпись — класс на
+точке.
 
-Наведите указатель на кнопки или перейдите к ним клавиатурой: расстояние
-одинаковое, меняется только продолжительность перехода.
-
-:::example {id="utilities/animation/animation-transition-duration" label="Продолжительность перехода"}
+:::example {id="utilities/animation/animation-transition-duration" label="Три длительности перехода"}
 :::
 
-## Классы и их значения
+## Классы
 
-| Класс            | Значение                                             |
-|:-----------------|:-------------------------------------------------------------------------|
-| `duration-fast` | transition-duration: var(`--sf-duration-fast`); *(по умолчанию 100ms)*   |
-| `duration-normal` | transition-duration: var(`--sf-duration-normal`); *(по умолчанию 300ms)* |
-| `duration-slow` | transition-duration: var(`--sf-duration-slow`); *(по умолчанию 500ms)*   |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `duration-fast` | `transition-duration: var(--sf-duration-fast)` | — |
+| `duration-normal` | `transition-duration: var(--sf-duration-normal)` | — |
+| `duration-slow` | `transition-duration: var(--sf-duration-slow)` | — |
 
-## Описание
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-Данные модификаторы позволяют выбрать одну из трех скоростей анимации (быстрая, нормальная и медленная) без
-необходимости указывать конкретное время вручную. При этом можно переопределить значения переменных
-`--sf-duration-fast`, `--sf-duration-normal` и `--sf-duration-slow` в вашей конфигурации.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Синтаксис
+## Переменные
 
-Использование модификатора: `{модификатор}`
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
 
-Примените один из модификаторов `duration-fast`, `duration-normal` или `duration-slow` к элементу, которому хотите задать конкретную
-длительность перехода. Например:
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-duration-fast` | `0.1S` |
+| `--sf-duration-normal` | `0.3S` |
+| `--sf-duration-slow` | `0.5S` |
+
+## Применение
+
+### Выбор длительности
+
+| Класс | Токен | Значение |
+| :--- | :--- | :--- |
+| `duration-fast` | `--sf-duration-fast` | 0,1 с |
+| `duration-normal` | `--sf-duration-normal` | 0,3 с |
+| `duration-slow` | `--sf-duration-slow` | 0,5 с |
+
+Быстрый переход подходит для отклика на наведение и нажатие, обычный — для
+смены цвета и тени, медленный — для крупных перемещений.
+
+### Сочетание с функцией времени и задержкой
+
+Без класса `transition-*` переход охватывает все свойства (значение
+`transition-property` по умолчанию — `all`). Кривую и задержку добавляют
+классы `ease-*` и `delay-*`:
 
 ```html
-<button class="transition duration-normal ease-in-out p-2 radius-1/3">
-    Нажми на меня
-</button>
+<a class="duration-fast ease-out hover:color-primary" href="#">Ссылка</a>
 ```
 
-В данном примере при наведении или фокусе переходы будут длиться 300ms.
+### Длительность у классов transition-*
 
-## Пример использования
+Классы [свойства перехода](/ru/utilities/animation/animation-transition-property/)
+сами задают длительность — токен `--sf-duration-normal`. Чтобы изменить её
+для такого элемента, переопределите токен на нём или на его предке:
 
-```html
-<div class="transition duration-fast hover:bg-primary p-2 radius-1/3">
-    Наведи на меня, анимация будет быстрой (100ms).
-</div>
-
-<div class="transition duration-normal hover:bg-secondary p-2 radius-1/3">
-    Наведи на меня, анимация будет нормальной (300ms).
-</div>
-
-<div class="transition duration-slow hover:bg-tertiary p-2 radius-1/3">
-    Наведи на меня, анимация будет медленной (500ms).
-</div>
+```css
+.my-panel {
+  --sf-duration-normal: var(--sf-duration-slow);
+}
 ```
+
+## Ограничения
+
+- `duration-*` и классы `transition-*` задают одно свойство с одинаковой
+  специфичностью. Какой класс победит, решает порядок таблиц стилей, поэтому
+  не ставьте их на один элемент — используйте токен, как показано выше.
+- Классы не учитывают системную настройку уменьшения движения
+  (`prefers-reduced-motion`).
+- У семейства нет префиксов ширины экрана и состояния.
+
+## См. также
+
+- [Общее свойство перехода](/ru/utilities/animation/animation-transition-property/)
+- [Функция времени перехода](/ru/utilities/animation/animation-transition-timing-function/)
+- [Задержка перехода](/ru/utilities/animation/animation-transition-delay/)
+- [Продолжительность анимации](/ru/utilities/animation/animation-duration/)

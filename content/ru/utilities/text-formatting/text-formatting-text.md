@@ -1,30 +1,59 @@
 ---
 title: "Оформление текста"
-description: "Оформление текста"
-tags: [text-align, sm, md, lg, xl, xxl]
+description: "Переводит текст в прописные, строчные буквы или делает прописной первую букву каждого слова."
 ---
 
 # Оформление текста
 
-:badge[text-align]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-## Наглядный пример
-
-:::example {id="utilities/text-formatting/text-formatting-text" label="Оформление текста"}
-:::
-
-## Таблица классов
-
-| Класс | Значение |
-|:---|:---|
-| `text-start` | `text-align: start;` |
-| `text-center` | `text-align: center;` |
-| `text-end` | `text-align: end;` |
-| `uppercase` | `text-transform: uppercase;` |
-| `lowercase` | `text-transform: lowercase;` |
-| `capitalize` | `text-transform: capitalize;` |
-| `truncate` | Обрезка строки с многоточием |
-| `line-clamp-2` | Ограничение текста до 2 строк |
+Классы задают регистр, в котором показан текст, не меняя сам текст в
+разметке. Берите их для подписей, кнопок и заголовков разделов, которые
+по дизайну набраны прописными.
 
 ## Пример
 
+Подпись над образцом — класс, который на нём стоит.
+
+:::example {id="utilities/text-formatting/text-formatting-text" label="uppercase, lowercase, capitalize, normalcase"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `lowercase` | `text-transform: lowercase` | — |
+| `uppercase` | `text-transform: uppercase` | — |
+| `capitalize` | `text-transform: capitalize` | — |
+| `normalcase` | `text-transform: none` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+Пишите текст в разметке в обычном регистре, а прописные задавайте классом:
+так текст правильно копируется и читается программами чтения с экрана.
+`normalcase` отменяет преобразование, заданное классом или унаследованное от
+родителя.
+
+```html
+<p class="uppercase tracking-wide text-1/2">Раздел</p>
+<h2 class="uppercase">Заголовок <span class="normalcase">iOS</span></h2>
+```
+
+Прописные буквы читаются плотнее: для коротких подписей добавляйте
+межбуквенный интервал `tracking-wide`.
+
+## Ограничения
+
+- `capitalize` делает прописной первую букву каждого слова, включая предлоги,
+  и не делает строчными остальные буквы.
+- Результат зависит от языка: задавайте `lang` у документа или блока, чтобы
+  браузер выбрал правила регистра.
+- Длинный текст прописными читается труднее: ограничьтесь подписями и
+  короткими заголовками.
+
+## См. также
+
+- [Трекинг текста](/ru/utilities/typography/letter-spacing/)
+- [Начертание шрифта (капитель)](/ru/utilities/typography/font-variant/)

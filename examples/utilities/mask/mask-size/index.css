@@ -1,0 +1,11 @@
+/* Demo only. The Framework has no class for mask-image, so each example sets
+   its own. The mask is inline on purpose: an example renders in a sandboxed
+   frame with an opaque origin, and a mask image is fetched in CORS mode, so a
+   file from the site is refused and the masked element disappears with it. */
+/* The SVG carries its own size, so mask-auto shows it at that size; with
+   preserveAspectRatio='none' mask-full stretches it to the box. */
+.demo-mask-leaf {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 512 512' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M252 468c-13-93-9-155-37-206-18-33-47-56-88-70 8 63 34 106 82 130-19-85-8-158 35-218 50 69 57 149 18 239 17-70 57-116 121-137-5 74-42 123-111 148-10 37-12 75-8 114h-12Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 512 512' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M252 468c-13-93-9-155-37-206-18-33-47-56-88-70 8 63 34 106 82 130-19-85-8-158 35-218 50 69 57 149 18 239 17-70 57-116 121-137-5 74-42 123-111 148-10 37-12 75-8 114h-12Z'/%3E%3C/svg%3E");
+}
+

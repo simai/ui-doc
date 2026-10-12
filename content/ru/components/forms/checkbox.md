@@ -73,7 +73,7 @@ profile: reference
 
 Нативный `checked` заливает индикатор основным цветом и ставит отметку.
 
-:::example {id="components/checkbox/state-checked" label="Неотмеченный и отмеченный"}
+:::example {id="components/checkbox/state-checked" label="Неотмеченный и отмеченный" preview=sandbox}
 :::
 
 ### Смешанное

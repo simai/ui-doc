@@ -1,86 +1,83 @@
 ---
 title: "Обрезка фона"
-description: "Обрезка фона"
-tags: [background-clip, sm, md, lg, xl, xxl]
+description: "Ограничивает фон элемента областью рамки, внутренних отступов, содержимого или формой букв текста."
 ---
 
 # Обрезка фона
 
-:badge[background-clip]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `bg-clip-*` задают `background-clip`: докуда рисуется фон — под
+рамкой, до внутренних отступов, только под содержимым или только внутри букв.
+Берите их, когда фон не должен заходить под полупрозрачную или прерывистую
+рамку, или для текста, залитого градиентом.
 
-С помощью модификаторов `background-clip` вы можете управлять тем, как фон распределяется под границами элемента и его
-содержимым.
+## Пример
 
-## Наглядный пример
+### Рамка, отступы, содержимое
 
-:::example {id="utilities/background/background-clip" label="Обрезка фона"}
+У всех трёх образцов прерывистая рамка и внутренние отступы. Цвет фона виден
+в промежутках рамки только у `bg-clip-border`; у `bg-clip-content` поля
+внутренних отступов остаются пустыми.
+
+:::example {id="utilities/background/background-clip" label="bg-clip-border, bg-clip-padding и bg-clip-content"}
 :::
 
-## Таблица классов
+### Фон в буквах
 
-| Класс            | Значение                      |
-|:-----------------|:------------------------------|
-| `bg-clip-border` | `background-clip: border-box;` |
-| `bg-clip-padding` | `background-clip: padding-box;` |
-| `bg-clip-content` | `background-clip: content-box;` |
-| `bg-clip-text` | `background-clip: text;` |
+`bg-clip-text` оставляет фон только под буквами; цвет текста делают
+прозрачным, чтобы фон стал виден.
 
-## Описание
+:::example {id="utilities/background/background-clip-text" label="bg-clip-text с градиентом"}
+:::
 
-Адаптивный модификатор `background-clip` определяет, до каких границ элемент будет "обрезаться" фон.
+## Классы
 
-- `bg-clip-border` — фон распространяется под границы. Фон "уходит" до внешнего края border-box.
-- `bg-clip-padding` — фон ограничивается полем отступа (padding-box). Под границей фон не рисуется.
-- `bg-clip-content` — фон ограничивается полем содержимого (content-box).
-- `bg-clip-text` — фон отображается только в границах текста, делая его "фон" внутри букв.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `bg-clip-border` | `background-clip: border-box` | — |
+| `bg-clip-padding` | `background-clip: padding-box` | — |
+| `bg-clip-content` | `background-clip: content-box` | — |
+| `bg-clip-text` | `background-clip: text` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-clip-border`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор, начиная с определенного размера области просмотра (sm, md, lg, xl, xxl).
-- Модификатор *(обязательный параметр)*: `bg-clip-border`, `bg-clip-padding`, `bg-clip-content`, или `bg-clip-text`.
+## Применение
 
-## Примеры использования
+### Как выбрать
 
-```html
-<!-- Фон под границей -->
-<div class="bg-clip-border p-3 radius-1/3 bg-primary border-4 border-error border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
-    <span class="p-top-1/2 p-bottom-1/2">bg-clip-border</span>
-</div>
-```
+| Класс | Где виден фон |
+| :--- | :--- |
+| `bg-clip-border` | до внешнего края рамки — значение браузера по умолчанию |
+| `bg-clip-padding` | до внутреннего края рамки, под рамкой фона нет |
+| `bg-clip-content` | только под содержимым, без внутренних отступов |
+| `bg-clip-text` | только внутри букв текста |
 
-```html
-<!-- Фон ограничен полем отступа -->
-<div class="bg-clip-padding p-3 radius-1/3 bg-primary border-4 border-error border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
-    <span class="p-top-1/2 p-bottom-1/2">bg-clip-padding</span>
-</div>
-```
+### Текст с градиентом
+
+`bg-clip-text` работает в паре с прозрачным цветом текста и фоновым
+изображением — градиентом или картинкой.
 
 ```html
-<!-- Фон ограничен полем содержимого -->
-<div class="bg-clip-content p-3 radius-1/3 bg-primary border-4 border-error border-dashed bold color-on-surface-inverse flex items-cross-center content-main-center">
-    <span class="p-top-1/2 p-bottom-1/2">bg-clip-content</span>
-</div>
+<h2 class="bg-clip-text color-transparent gr-line-2 gr1-primary gr2-tertiary">
+  Заголовок с градиентом
+</h2>
 ```
 
-```html
-<!-- Фон внутри текста -->
-<div class="text-center text-9 bold">
-    <span class="bg-clip-text color-transparent gr-line-2 bg-gradient-to-r gr1-warning gr2-tertiary">
-        Hello world
-    </span>
-</div>
-```
+### Ширина экрана
 
-## Адаптивность
+С префиксом ширины класс действует от указанной ширины и шире, например
+`md:bg-clip-padding`.
 
-Для изменения поведения обрезки фона на разных размерах экрана используйте префикс контрольной точки:
+## Ограничения
 
-```html
-<!-- Для экранов от Medium и больше фон будет, например, ограничен content-box -->
-<div class="md:bg-clip-content p-3 ...">
-    <span>Адаптивный пример</span>
-</div>
-```
+- При `bg-clip-text` вместе с `color-transparent` текст без фонового
+  изображения не виден. Проверьте контраст градиента с фоном страницы в
+  светлой и тёмной теме.
+- У семейства нет префиксов состояния.
+
+## См. также
+
+- [Исходная область фона](/ru/utilities/background/background-origin/)
+- [Вид градиента](/ru/utilities/background/background-gradient-type/)
+- [Цвет текста](/ru/utilities/text-formatting/text-color/)

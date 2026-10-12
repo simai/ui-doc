@@ -1,58 +1,26 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="flex flex-col gap-4">
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">table-auto</div>
-    <div
-      class="p-3 flex flex-col gap-1 radius-3 border border-outline-variant"
-    >
-      <table class="table table-auto m-bottom-0">
-        <thead>
-          <tr>
-            <th>Key</th>
-            <th>Value</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>ID</td>
-            <td>Long content defines natural width for this column</td>
-            <td>Ready</td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Короткий текст</td>
-            <td>Done</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table table-auto m-bottom-0">
+      <thead>
+        <tr><th>Ключ</th><th>Описание</th><th>Статус</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>id</td><td>Длинный текст забирает колонке почти всю ширину таблицы</td><td>Готово</td></tr>
+        <tr><td>name</td><td>Коротко</td><td>Черновик</td></tr>
+      </tbody>
+    </table>
+    <code class="text-1/2 color-on-surface-variant">table-auto</code>
   </div>
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">table-fixed</div>
-    <div
-      class="p-3 flex flex-col gap-1 radius-3 border border-outline-variant"
-    >
-      <table class="table table-fixed m-bottom-0">
-        <thead>
-          <tr>
-            <th>Key</th>
-            <th>Value</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>ID</td>
-            <td>Long content is constrained by fixed table layout behavior</td>
-            <td>Ready</td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Короткий текст</td>
-            <td>Done</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table table-fixed m-bottom-0">
+      <thead>
+        <tr><th>Ключ</th><th>Описание</th><th>Статус</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>id</td><td>Длинный текст переносится внутри колонки равной ширины</td><td>Готово</td></tr>
+        <tr><td>name</td><td>Коротко</td><td>Черновик</td></tr>
+      </tbody>
+    </table>
+    <code class="text-1/2 color-on-surface-variant">table-fixed</code>
   </div>
 </div>

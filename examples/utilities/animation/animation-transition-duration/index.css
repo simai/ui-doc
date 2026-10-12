@@ -1,0 +1,9 @@
+.demo-motion-track {
+  container-type: inline-size;
+  cursor: pointer;
+}
+
+.demo-motion-track:hover .demo-motion-dot,
+.demo-motion-track:focus-visible .demo-motion-dot {
+  transform: translateX(calc(100cqi - 100%));
+}

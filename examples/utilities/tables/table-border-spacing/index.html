@@ -1,20 +1,20 @@
 <div class="grid grid-col-1 md:grid-col-2 gap-4">
-  <figure class="m-0">
-    <figcaption class="m-bottom-2 font-bold">Объединённые границы</figcaption>
-    <table class="w-full border-collapse table-border">
+  <div class="flex flex-col gap-1">
+    <table class="w-full border-collapse">
       <tbody>
-        <tr><td class="p-2">A</td><td class="p-2">B</td></tr>
-        <tr><td class="p-2">C</td><td class="p-2">D</td></tr>
+        <tr><td class="p-2 border border-2 border-primary color-on-surface">A</td><td class="p-2 border border-2 border-primary color-on-surface">B</td><td class="p-2 border border-2 border-primary color-on-surface">C</td></tr>
+        <tr><td class="p-2 border border-2 border-primary color-on-surface">D</td><td class="p-2 border border-2 border-primary color-on-surface">E</td><td class="p-2 border border-2 border-primary color-on-surface">F</td></tr>
       </tbody>
     </table>
-  </figure>
-  <figure class="m-0">
-    <figcaption class="m-bottom-2 font-bold">Раздельные границы</figcaption>
-    <table class="w-full border-separate border-spacing-2 table-border">
+    <code class="text-1/2 color-on-surface-variant">border-collapse</code>
+  </div>
+  <div class="flex flex-col gap-1">
+    <table class="w-full border-separate">
       <tbody>
-        <tr><td class="p-2 bg-primary-container">A</td><td class="p-2 bg-secondary-container">B</td></tr>
-        <tr><td class="p-2 bg-tertiary-container">C</td><td class="p-2 bg-surface-container">D</td></tr>
+        <tr><td class="p-2 border border-2 border-primary color-on-surface">A</td><td class="p-2 border border-2 border-primary color-on-surface">B</td><td class="p-2 border border-2 border-primary color-on-surface">C</td></tr>
+        <tr><td class="p-2 border border-2 border-primary color-on-surface">D</td><td class="p-2 border border-2 border-primary color-on-surface">E</td><td class="p-2 border border-2 border-primary color-on-surface">F</td></tr>
       </tbody>
     </table>
-  </figure>
+    <code class="text-1/2 color-on-surface-variant">border-separate</code>
+  </div>
 </div>

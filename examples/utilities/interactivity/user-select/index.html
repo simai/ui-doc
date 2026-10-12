@@ -1,21 +1,20 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
-  <div class="p-3 radius-3 border border-outline-variant select-none">
-    <div class="weight-6 m-bottom-2 text-center">select-none</div>
-    <p>Try selecting this text. Selection is blocked.</p>
+<div class="grid grid-col-1 sm:grid-col-2 gap-4">
+  <div class="flex flex-col gap-1">
+    <p class="select-none m-0 p-2 border border-outline-variant radius-ui color-on-surface">Попробуйте выделить этот текст мышью.</p>
+    <code class="text-1/2 color-on-surface-variant">select-none</code>
   </div>
-
-  <div class="p-3 radius-3 border border-outline-variant select-text">
-    <div class="weight-6 m-bottom-2 text-center">select-text</div>
-    <p>Try selecting this text. Selection is allowed.</p>
+  <div class="flex flex-col gap-1">
+    <p class="select-all m-0 p-2 border border-outline-variant radius-ui color-on-surface">npm install simai-framework</p>
+    <code class="text-1/2 color-on-surface-variant">select-all</code>
   </div>
-
-  <div class="p-3 radius-3 border border-outline-variant select-all">
-    <div class="weight-6 m-bottom-2 text-center">select-all</div>
-    <p>Click inside: browser selects the whole text block.</p>
+  <div class="flex flex-col gap-1">
+    <div class="select-none p-2 border border-outline-variant radius-ui color-on-surface">
+      Кнопка-карточка. <span class="select-text color-primary">Номер заказа 4815-1623 выделяется.</span>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">select-none → select-text</code>
   </div>
-
-  <div class="p-3 radius-3 border border-outline-variant select-auto">
-    <div class="weight-6 m-bottom-2 text-center">select-auto</div>
-    <p>Обычное выделение текста браузером.</p>
+  <div class="flex flex-col gap-1">
+    <p class="select-auto m-0 p-2 border border-outline-variant radius-ui color-on-surface">Обычное выделение, как задано браузером.</p>
+    <code class="text-1/2 color-on-surface-variant">select-auto</code>
   </div>
 </div>

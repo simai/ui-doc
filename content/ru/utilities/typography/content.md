@@ -1,32 +1,68 @@
 ---
 title: "Содержимое"
-description: "Содержимое (content)"
-tags: [content]
+description: "Включает или убирает псевдоэлементы ::before и ::after, задавая им пустое содержимое или его отсутствие."
 ---
 
 # Содержимое
 
-:badge[content]{type=main scheme=on-surface size=1}
-
-С помощью модификаторов можно управлять содержимым псевдоэлементов `::before` и `::after`.
-
-## Наглядный пример
-
-:::example {id="utilities/typography/content" label="Содержимое"}
-:::
-
-## Таблица классов
-
-| Класс         | Значение      |
-|:--------------|:--------------|
-| `after-empty` | content: ''   |
-| `before-empty` | content: ''   |
-| `after-none` | content: none |
-| `before-none` | content: none |
-
-## Описание
-
-Модификаторы содержимого позволяют управлять тем, что отображается в псевдоэлементах `::before` и `::after`. Например, с
-их помощью можно добавлять или скрывать пустое содержимое.
+Классы задают свойство `content` псевдоэлементам `::before` и `::after`.
+Берите `*-none`, чтобы убрать декоративный псевдоэлемент компонента, и
+`*-empty`, чтобы включить псевдоэлемент, который рисуется только фоном,
+рамкой или размерами.
 
 ## Пример
+
+Стили `demo-badge` и `demo-dot` в примере рисуют псевдоэлемент `::before`.
+`before-none` убирает метку «Новое», а `before-empty` включает точку:
+без свойства `content` псевдоэлемент не появляется.
+
+:::example {id="utilities/typography/content" label="before-none и before-empty"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `before-none` (`.before-none::before`) | `content: none` | — |
+| `after-none` (`.after-none::after`) | `content: none` | — |
+| `before-empty` (`.before-empty::before`) | `content: ''` | — |
+| `after-empty` (`.after-empty::after`) | `content: ''` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+Псевдоэлемент появляется, только когда у него задано `content`. Пустое
+содержимое `''` создаёт его без текста — дальше вид задают ваши стили:
+
+```css
+.status::before {
+  display: inline-block;
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--sf-success);
+}
+```
+
+```html
+<span class="status before-empty">В сети</span>
+```
+
+`before-none` и `after-none` убирают псевдоэлемент, который добавил стиль
+компонента или проекта, не меняя этот стиль.
+
+## Ограничения
+
+- Классы задают только `content`: размеры, цвет и положение псевдоэлемента
+  задают ваши стили.
+- Текст в `content` программы чтения с экрана могут озвучивать. Смысловой
+  текст держите в разметке, а в псевдоэлементах — только оформление.
+- Стиль, который задаёт `content` вне слоёв каскада, перекрывает классы:
+  они лежат в слое утилит.
+
+## См. также
+
+- [Слои каскада](/ru/guide/fundamentals/cascade-layers/)

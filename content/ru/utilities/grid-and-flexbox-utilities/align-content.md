@@ -1,71 +1,74 @@
 ---
 title: "Выравнивание содержимого по поперечной оси"
-description: "Выравнивание содержимого по поперечной оси (align-content)"
-tags: [align-content, sm, md, lg, xl, xxl]
+description: "Располагает строки флекс-контейнера с переносом или строки сетки по поперечной оси, когда им хватает места с запасом."
 ---
 
 # Выравнивание содержимого по поперечной оси
 
-:badge[align-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `content-cross-*` задают `align-content`: где стоят строки
+флекс-контейнера с переносом или строки сетки, когда контейнер выше их, и как
+между ними делится свободное место. Берите их для блоков заданной высоты с
+переносящимися элементами.
 
-Данные модификаторы определяют, как содержимое сетки или флексбокса будет выравниваться относительно поперечной оси.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/align-content" label="Выравнивание содержимого по поперечной оси"}
+Флекс-контейнер с `flex-wrap` заданной высоты: пять элементов в две строки.
+Подпись над образцом — класс контейнера.
+
+:::example {id="utilities/grid-and-flexbox-utilities/align-content" label="content-cross-start … content-cross-stretch"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс                  | Значение                      |
-|:-----------------------|:------------------------------|
-| `content-cross-start` | `align-content: flex-start;` |
-| `content-cross-end` | `align-content: flex-end;` |
-| `content-cross-center` | `align-content: center;` |
-| `content-cross-between` | `align-content: space-between;` |
-| `content-cross-around` | `align-content: space-around;` |
-| `content-cross-evenly` | `align-content: space-evenly;` |
-| `content-cross-stretch` | `align-content: stretch;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `content-cross-start` | `align-content: flex-start` | — |
+| `content-cross-end` | `align-content: flex-end` | — |
+| `content-cross-center` | `align-content: center` | — |
+| `content-cross-between` | `align-content: space-between` | — |
+| `content-cross-around` | `align-content: space-around` | — |
+| `content-cross-evenly` | `align-content: space-evenly` | — |
+| `content-cross-stretch` | `align-content: stretch` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:content-cross-start`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `content-cross-start` – содержимое прижимается к началу по поперечной оси;
-    - `content-cross-end` – содержимое прижимается к концу по поперечной оси;
-    - `content-cross-center` – содержимое выравнивается по центру по поперечной оси;
-    - `content-cross-between` – содержимое распределяется с равными интервалами, первый элемент прижат к началу,
-      последний – к концу;
-    - `content-cross-around` – содержимое распределяется с равными интервалами, причём промежутки между крайними
-      элементами и границами контейнера вдвое меньше промежутков между элементами;
-    - `content-cross-evenly` – содержимое распределяется равномерно, интервалы одинаковы между всеми элементами и
-      границами контейнера;
-    - `content-cross-stretch` – содержимое растягивается, чтобы занять всё доступное пространство по поперечной оси.
+- `content-cross-start`, `content-cross-center`, `content-cross-end` — строки
+  вместе у начала, в центре или у конца.
+- `content-cross-between`, `content-cross-around`, `content-cross-evenly` —
+  свободное место между строками, как у
+  [`justify-between`, `justify-around`, `justify-evenly`](/ru/utilities/grid-and-flexbox-utilities/justify-content/).
+- `content-cross-stretch` — строки растягиваются и делят высоту; это значение
+  по умолчанию у флекс-контейнера.
 
-## Пример использования
+### Метки в блоке заданной высоты
 
 ```html
-<div class="flex content-cross-center">
-  <div>Элемент 1</div>
-  <div>Элемент 2</div>
-  <div>Элемент 3</div>
+<div class="flex flex-wrap content-cross-start gap-1 h-f0">
+  <span>Метка</span>
+  <span>Метка</span>
+  <span>Метка</span>
 </div>
 ```
 
-Здесь элементы будут выравнены по центру относительно поперечной оси.
+## Ограничения
 
-## Адаптивность
+- Во флекс-контейнере класс действует только вместе с
+  [`flex-wrap`](/ru/utilities/flex/flex-wrap/) или `flex-wrap-reverse`.
+- Нужна свободная высота: у контейнера без заданной высоты строки занимают её
+  целиком, и выравнивать нечего.
+- Классы `content-cross-*` двигают строки целиком. Элементы внутри строки
+  выравнивают классы [`items-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-items/).
 
-Для изменения выравнивания содержимого, начиная с определённого размера экрана, добавьте контрольную точку. Например:
+## См. также
 
-```html
-<div class="md:content-cross-start">
-  <!-- Начиная с md элементы будут прижаты к началу по поперечной оси -->
-</div>
-```
+- [Выравнивание каждого элемента в ячейках по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+- [Размещение содержимого по обеим осям](/ru/utilities/grid-and-flexbox-utilities/place-content/)
+- [Перенос элементов](/ru/utilities/flex/flex-wrap/)

@@ -5,7 +5,6 @@
 ## Материалы раздела
 - [Параметры по умолчанию для анимации](/ru/utilities/animation/animation-default-parameters/)
 - [Продолжительность анимации](/ru/utilities/animation/animation-duration/)
-- [Анимация при появлении](/ru/utilities/animation/animation-transition-appearing/)
 - [Задержка перехода](/ru/utilities/animation/animation-transition-delay/)
 - [Продолжительность перехода](/ru/utilities/animation/animation-transition-duration/)
 - [Общее свойство перехода](/ru/utilities/animation/animation-transition-property/)

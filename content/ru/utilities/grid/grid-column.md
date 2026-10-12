@@ -1,64 +1,89 @@
 ---
 title: "Размер колонки сетки"
-description: "Размер колонки сетки (grid-column)"
-tags: [grid-column, sm, md, lg, xl, xxl]
+description: "Задаёт, сколько колонок сетки занимает элемент."
 ---
 
 # Размер колонки сетки
 
-:badge[grid-column]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `col-span-*` задают `grid-column`: сколько колонок грид-контейнера
+занимает элемент. Берите их, чтобы растянуть карточку, поле формы или область
+страницы на несколько колонок.
 
-Модификаторы `grid-column` позволяют задавать колонки и их интервалы в сетке, управляя шириной и расположением элементов по горизонтали.
+## Пример
 
-## Наглядный пример
+### Число колонок
 
-:::example {id="utilities/grid/grid-column" label="Размер колонки сетки"}
+Сетка из шести колонок. На каждом элементе написан его класс.
+
+:::example {id="utilities/grid/grid-column" label="col-span-2 … col-span-full и col-auto"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс              | Значение                  |
-|:-------------------|:--------------------------|
-| `col-span-{n}` | `grid-column: span {n};` |
-| `col-span-full` | `grid-column: 1 / -1;` |
-| `col-auto` | `grid-column: auto;` |
-| `col-start-{n}` | `grid-column-start: {n};` |
-| `col-start-auto` | `grid-column-start: auto;` |
-| `col-end-{n}` | `grid-column-end: {n};` |
-| `col-end-auto` | `grid-column-end: auto;` |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: на узком экране каждый элемент занимает всю строку, с ширины `md`
+— две колонки из шести.
 
-Диапазон `n` соответствует объявленным утилитам в SCSS (`col-span` от 1 до 12, `col-start`/`col-end` от 1 до 13).
+:::example {id="utilities/grid/grid-column-responsive" label="col-span-full md:col-span-2"}
+:::
 
-## Синтаксис
+## Классы
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `col-auto` | `grid-column: auto` | — |
+| `col-span-1` | `grid-column: span 1 / span 1` | — |
+| `col-span-2` | `grid-column: span 2 / span 2` | — |
+| `col-span-3` | `grid-column: span 3 / span 3` | — |
+| `col-span-4` | `grid-column: span 4 / span 4` | — |
+| `col-span-5` | `grid-column: span 5 / span 5` | — |
+| `col-span-6` | `grid-column: span 6 / span 6` | — |
+| `col-span-7` | `grid-column: span 7 / span 7` | — |
+| `col-span-8` | `grid-column: span 8 / span 8` | — |
+| `col-span-9` | `grid-column: span 9 / span 9` | — |
+| `col-span-10` | `grid-column: span 10 / span 10` | — |
+| `col-span-11` | `grid-column: span 11 / span 11` | — |
+| `col-span-12` | `grid-column: span 12 / span 12` | — |
+| `col-span-full` | `grid-column: 1 / -1` | — |
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана — действует для всех размеров.
-- Модификатор *(обязательный параметр)*: указывает нужный `col-span`, `col-start` или `col-end`.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-auto`.
 
-## Примеры
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-### Span
+## Применение
+
+### Как выбрать
+
+- `col-span-1` … `col-span-12` — элемент занимает столько колонок, начиная с
+  места, куда его поставила раскладка.
+- `col-span-full` — от первой до последней колонки шаблона.
+- `col-auto` — снимает размер: элемент занимает одну колонку.
+
+Где элемент начинается и заканчивается, задают классы
+[`col-start-*`](/ru/utilities/grid/grid-column-start/) и
+[`col-end-*`](/ru/utilities/grid/grid-column-end/).
+
+### Поле формы на всю ширину
+
 ```html
-<div class="grid grid-col-6 gap-2">
-  <div class="border radius-1 bg-primary color-on-primary p-2 col-span-4">span 4</div>
-  <div class="border radius-1 bg-secondary color-on-secondary p-2 col-span-2">span 2</div>
-</div>
+<form class="grid grid-col-1 md:grid-col-2 gap-2">
+  <label>Имя <input type="text"></label>
+  <label>Фамилия <input type="text"></label>
+  <label class="md:col-span-full">Комментарий <textarea></textarea></label>
+</form>
 ```
 
-### Start / End
-```html
-<div class="grid grid-col-6 gap-2">
-  <div class="border radius-1 bg-tertiary color-on-tertiary p-2 col-start-2 col-end-5">start 2 / end 5</div>
-</div>
-```
+## Ограничения
 
-## Адаптивность
+- `col-span-*` больше числа колонок шаблона добавляет колонки справа от
+  шаблона, и сетка становится шире, чем задумано.
+- `col-span-full` охватывает только колонки, заданные шаблоном
+  [`grid-col-*`](/ru/utilities/grid/grid-template-columns/); в сетке без шаблона
+  элемент займёт одну колонку.
 
-Чтобы менять расположение на определённых брейкпоинтах, добавьте контрольную точку:
+## См. также
 
-```html
-<div class="col-span-6 md:col-span-3 lg:col-span-2">
-  <!-- элемент занимает разную ширину на разных экранах -->
-</div>
-```
+- [Шаблон колонок сетки](/ru/utilities/grid/grid-template-columns/)
+- [Начальное положение колонки сетки](/ru/utilities/grid/grid-column-start/)
+- [Конечное положение колонки сетки](/ru/utilities/grid/grid-column-end/)
+- [Размер строки сетки](/ru/utilities/grid/grid-row/)

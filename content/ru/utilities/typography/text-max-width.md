@@ -1,73 +1,79 @@
 ---
 title: "Длина строки"
-description: "Длина строки (text-max-width)"
-tags: [text-max-width, sm, md, lg, xl, xxl]
+description: "Ограничивает ширину текстового блока числом символов, удобным для чтения."
 ---
 
 # Длина строки
 
-:badge[text-max-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `measure-*` ограничивают наибольшую ширину блока в символах: около 45,
+65 или 80. Берите их для абзацев статей, описаний и форм, чтобы строка не
+растягивалась на всю ширину широкого экрана.
 
-С помощью модификаторов можно задать максимальную длину строки текста.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/typography/text-max-width" label="Длина строки"}
+Фон показывает ширину блока.
+
+:::example {id="utilities/typography/text-max-width" label="measure-narrow, measure, measure-wide"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс           | Значение                                     |
-|:----------------|:---------------------------------------------|
-| `measure` | `max-width: var(--sf-text--measure);` |
-| `measure-wide` | `max-width: var(--sf-text--measure-wide);` |
-| `measure-narrow` | `max-width: var(--sf-text--measure-narrow);` |
+Меняйте ширину окна просмотра: начиная с ширины `lg` строка становится
+длиннее.
 
-## Синтаксис
+:::example {id="utilities/typography/text-max-width-responsive" label="measure-narrow lg:measure-wide"}
+:::
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Классы
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `measure` | `max-width: var(--sf-text--measure)` | — |
+| `measure-wide` | `max-width: var(--sf-text--measure-wide)` | — |
+| `measure-narrow` | `max-width: var(--sf-text--measure-narrow)` | — |
 
-- Модификатор *(обязательный параметр)*:
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:measure`.
 
-    - `measure` – длина строки равна примерно 65 символам.
-    - `measure-wide` – длина строки равна примерно 80 символам.
-    - `measure-narrow` – длина строки равна примерно 45 символам.
-
-## Пример использования
-
-```html
-<p class="measure">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-
-<p class="measure-wide">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-
-<p class="measure-narrow">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-```
-
-## Адаптивность
-
-Для изменения длины строки, начиная с определённого размера экрана, добавьте префикс контрольной точки (`sm:`, `md:`,
-`lg:`, `xl:`):
-
-```html
-<p class="md:measure">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-```
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-| Переменная                  | Значение |
-|:----------------------------|:---------|
-| `--sf-text--measure`        | 65ch;    |
-| `--sf-text--measure-wide`   | 80ch;    |
-| `--sf-text--measure-narrow` | 45ch;    |
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-text--measure` | `65ch` |
+| `--sf-text--measure-wide` | `80ch` |
+| `--sf-text--measure-narrow` | `45ch` |
+
+## Применение
+
+Ширина задана в единицах `ch` — ширине символа «0» шрифта блока. Поэтому
+ограничение растёт вместе с размером шрифта, и в строке остаётся примерно
+то же число символов.
+
+| Класс | Ширина | Где |
+|:---|:---|:---|
+| `measure-narrow` | `45ch` | узкие колонки, подписи, текст рядом с изображением |
+| `measure` | `65ch` | основной текст |
+| `measure-wide` | `80ch` | справочный текст, таблицы в тексте |
+
+```html
+<article class="measure">
+  <p>Абзац статьи…</p>
+</article>
+```
+
+## Ограничения
+
+- Класс задаёт только `max-width`: блок не центрируется. Для центрирования
+  добавьте внешние отступы `m-inline-auto` или раскладку родителя.
+- В тексте с широкими буквами и в моноширинном шрифте в строку входит
+  меньше или больше символов, чем указано.
+
+## См. также
+
+- [Размер текста](/ru/utilities/typography/text-size/)
+- [Максимальная ширина](/ru/utilities/sizes/max-width/)

@@ -1,96 +1,84 @@
 ---
 title: "Начертание цифр"
-description: "Начертание цифр (font-variant-numeric)"
-tags: [font-variant-numeric]
+description: "Включает особые начертания цифр шрифта: моноширинные цифры, дроби, перечёркнутый ноль и другие."
 ---
 
 # Начертание цифр
 
-:badge[font-variant-numeric]{type=main scheme=on-surface size=1}
+Классы `num-*` включают OpenType-возможности шрифта для цифр. Берите
+`num-tabular` для чисел в таблицах и счётчиках, чтобы разряды стояли друг
+под другом, а остальные — для дробей, порядковых числительных и кода.
 
-Модификаторы начертания цифр позволяют изменить отображение чисел и некоторых их особенностей (например, дробей).
+## Пример
 
-## Наглядный пример
+### Начертания
 
-:::example {id="utilities/typography/font-variant-numeric" label="Начертание цифр"}
+Подпись над образцом — класс, который на нём стоит. Образец меняется, только
+если шрифт поддерживает эту возможность.
+
+:::example {id="utilities/typography/font-variant-numeric" label="Начертания цифр"}
 :::
 
-## Таблица классов
+### Пропорциональные и моноширинные цифры
 
-| Класс                   | Значение              |
-|:------------------------|:------------------------------------------|
-| `num-normal` | `font-variant-numeric: normal;` |
-| `num-ordinal` | `font-variant-numeric: ordinal;` |
-| `num-slashed-zero` | `font-variant-numeric: slashed-zero;` |
-| `num-lining` | `font-variant-numeric: lining-nums;` |
-| `num-oldstyle` | `font-variant-numeric: oldstyle-nums;` |
-| `num-proportional` | `font-variant-numeric: proportional-nums;` |
-| `num-tabular` | `font-variant-numeric: tabular-nums;` |
-| `num-diagonal` | `font-variant-numeric: diagonal-fractions;` |
-| `num-stacked-fractions` | `font-variant-numeric: stacked-fractions;` |
+У `num-tabular` все цифры одной ширины, и разряды в столбце совпадают.
 
-## Пример использования
+:::example {id="utilities/typography/font-variant-numeric-tabular" label="num-proportional и num-tabular"}
+:::
 
-Модификаторы начертания цифр можно комбинировать для одновременной активации нескольких стилей чисел:
+## Классы
 
-```html
-<p class="num-ordinal num-slashed-zero num-tabular">1234567890</p>
-```
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `num-ordinal` | `font-feature-settings: var(--sf-text-num-ordinal); font-variant-numeric: var(--sf-text-num-ordinal)` | — |
+| `num-slashed-zero` | `font-feature-settings: var(--sf-text-num-slashed-zero); font-variant-numeric: var(--sf-text-num-slashed-zero)` | — |
+| `num-lining` | `font-feature-settings: var(--sf-text-num-lining); font-variant-numeric: var(--sf-text-num-lining)` | — |
+| `num-oldstyle` | `font-feature-settings: var(--sf-text-num-oldstyle); font-variant-numeric: var(--sf-text-num-oldstyle)` | — |
+| `num-proportional` | `font-feature-settings: var(--sf-text-num-proportional); font-variant-numeric: var(--sf-text-num-proportional)` | — |
+| `num-tabular` | `font-feature-settings: var(--sf-text-num-tabular); font-variant-numeric: var(--sf-text-num-tabular)` | — |
+| `num-diagonal` | `font-feature-settings: var(--sf-text-num-diagonal); font-variant-numeric: var(--sf-text-num-diagonal)` | — |
+| `num-stacked-fractions` | `font-feature-settings: var(--sf-text-num-stacked-fractions); font-variant-numeric: var(--sf-text-num-stacked-fractions)` | — |
+| `num-normal` | `font-feature-settings: var(--sf-text-num-normal); font-variant-numeric: var(--sf-text-num-normal)` | — |
 
-### **Порядковый номер (num-ordinal)**
-Активирует специальные глифы для порядковых числительных (1st, 2nd и т.п.) в шрифтах, поддерживающих данную особенность:
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-```html
-<p class="num-ordinal">1st</p>
-```
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-### **Перечёркнутый ноль (num-slashed-zero)**
-Помогает чётко отличать цифру 0 от буквы O:
+## Применение
 
-```html
-<p class="num-slashed-zero">0</p>
-```
-
-### **Заглавные цифры (num-lining)**
-Равно высокие цифры, стоящие на опорной линии текста:
-
-```html
-<p class="num-lining">1234567890</p>
-```
-
-### **Строчные цифры (num-oldstyle)**
-Минускульные цифры с нижними выносными элементами:
+| Класс | Что включает |
+|:---|:---|
+| `num-tabular` | цифры одной ширины — для таблиц, цен, таймеров |
+| `num-proportional` | цифры своей ширины — для текста |
+| `num-lining` | цифры высотой с прописные буквы |
+| `num-oldstyle` | цифры высотой со строчные, с выносными элементами |
+| `num-slashed-zero` | ноль с чертой, отличимый от буквы O |
+| `num-ordinal` | надстрочные окончания порядковых числительных (1st) |
+| `num-diagonal` | дроби с косой чертой |
+| `num-stacked-fractions` | дроби с горизонтальной чертой |
+| `num-normal` | отключает особые начертания |
 
 ```html
-<p class="num-oldstyle">1234567890</p>
+<td class="text-end num-tabular">1 204,50</td>
 ```
 
-### **Пропорциональные цифры (num-proportional)**
-Цифры разной ширины:
+## Ограничения
 
-```html
-<p class="num-proportional">1111</p>
-<p class="num-proportional">0000</p>
-```
+- Классы не складываются: каждый задаёт `font-variant-numeric` целиком, и
+  действует последний по каскаду. Для сочетания, например моноширинных цифр с
+  перечёркнутым нулём, объявите свой класс:
 
-### **Моноширинные цифры (num-tabular)**
-Цифры одинаковой ширины, упрощающие выравнивание в таблицах:
+  ```css
+  .num-code {
+    font-variant-numeric: tabular-nums slashed-zero;
+  }
+  ```
 
-```html
-<p class="num-tabular">1111</p>
-<p class="num-tabular">0000</p>
-```
+- Начертание есть, только если оно есть в шрифте. Шрифт без нужной
+  возможности показывает обычные цифры.
+- У семейства нет префиксов ширины экрана и состояний.
 
-### **Диагональные дроби (num-diagonal)**
-Числитель и знаменатель уменьшены и разделены косой чертой:
+## См. также
 
-```html
-<p class="num-diagonal">1/2 3/4 5/6</p>
-```
-
-### **Вертикальные дроби (num-stacked-fractions)**
-Числитель и знаменатель уменьшены, расположены друг над другом и разделены горизонтальной линией:
-
-```html
-<p class="num-stacked-fractions">1/2 3/4 5/6</p>
-```
+- [Семейство шрифтов](/ru/utilities/typography/font-family/)
+- [Выравнивание текста](/ru/utilities/typography/text-align/)

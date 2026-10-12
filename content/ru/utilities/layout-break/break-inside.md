@@ -1,64 +1,80 @@
 ---
 title: "Разрыв внутри элемента"
-description: "Разрешает или запрещает разрыв содержимого внутри элемента."
-tags: [break-inside, sm, md, lg, xl, xxl]
+description: "Разрешает или запрещает делить элемент между колонками или страницами."
 ---
 
 # Разрыв внутри элемента
 
-:badge[break-inside]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Модификатор `break-inside` в SIMAI Framework позволяет контролировать разрывы столбца или страницы внутри элемента. Это
-особенно полезно при работе со сложными макетами или документами, где требуется точный контроль над тем, как контент
-распределяется по колонкам или страницам.
+Классы `break-inside-*` задают свойство `break-inside`: разрешают или
+запрещают делить элемент между колонками или страницами. Берите их для
+карточек, таблиц и рисунков в многоколоночном блоке
+([`layout-col-*`](/ru/utilities/layout-break/column/)) и при печати, чтобы
+блок оставался целым.
 
 ## Пример
 
-Слева карточки сохраняются целиком, справа обычный поток может разделить их между колонками.
+### Целая карточка
 
-:::example {id="utilities/layout-break/break-inside" label="Сохранение целого блока"}
+Без класса высокая карточка 2 разрезана между колонками. С
+`break-inside-avoid` или `break-inside-avoid-column` она переходит в
+следующую колонку целиком.
+
+:::example {id="utilities/layout-break/break-inside" label="break-inside-avoid и break-inside-avoid-column"}
 :::
 
-## Синтаксис
+## Классы
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `break-inside-auto` | `page-break-inside: auto; -webkit-column-break-inside: auto; -moz-column-break-inside: auto; break-inside: auto` | — |
+| `break-inside-avoid` | `page-break-inside: avoid; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid` | — |
+| `break-inside-avoid-page` | `page-break-inside: avoid; break-inside: avoid-page` | — |
+| `break-inside-avoid-column` | `-webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid-column` | — |
 
-- Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера области просмотра (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор действует для всех размеров области просмотра.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-inside-auto`.
 
-- Модификатор (обязательный параметр):
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-    - `break-inside-auto` — автоматический разрыв внутри элемента.
-    - `break-inside-avoid` — отмена разрыва внутри элемента.
-    - `break-inside-avoid-page` — отмена разрыва страницы внутри элемента.
-    - `break-inside-avoid-column` — отмена разрыва колонки внутри элемента.
+## Применение
 
-## Пример
+### Выбор значения
 
-Использование `break-inside-avoid-column` для предотвращения разрыва колонки внутри элемента:
+- `break-inside-avoid` — не делить элемент ни между колонками, ни между
+  страницами.
+- `break-inside-avoid-column` — не делить между колонками; при печати
+  страница может разрезать элемент.
+- `break-inside-avoid-page` — не делить между страницами при печати; в
+  колонках элемент может разрезаться.
+- `break-inside-auto` — решение за браузером; так элемент ведёт себя без
+  класса.
+
+### Карточки в колонках
 
 ```html
-<div class="layout-col-2">
-  <p>Что ж, позволь мне кое-что тебе сказать, ...</p>
-  <p class="break-inside-avoid-column">Конечно, смейтесь...</p>
-  <p>Может быть, мы сможем жить без...</p>
-  <p>Смотреть. Если вы думаете, что это...</p>
+<div class="layout-col-3">
+  <article class="break-inside-avoid">Карточка 1</article>
+  <article class="break-inside-avoid">Карточка 2</article>
+  <article class="break-inside-avoid">Карточка 3</article>
 </div>
 ```
 
-В этом примере абзац с `break-inside-avoid-column` не будет разрываться по колонкам, обеспечивая более целостное
-отображение содержимого.
-
-## Адаптивность
-
-Чтобы модификатор начал действовать только с определённого размера области просмотра, добавьте префикс контрольной
-точки. Например, `md:break-inside-avoid-column` заставит применять модификатор только на экранах с размером `Medium` и
-больше:
+### Таблица при печати
 
 ```html
-<div class="md:break-inside-avoid-column"></div>
+<table class="break-inside-avoid-page">
+  <!-- строки таблицы -->
+</table>
 ```
 
-Таким образом, модификатор `break-inside` позволяет точно управлять разрывами внутри элементов, что упрощает адаптивную
-верстку и улучшает читаемость контента.
+## Ограничения
+
+- Классы действуют только внутри многоколоночного блока или при печати.
+- Запрет разрыва — просьба к браузеру: элемент выше колонки или страницы всё
+  равно разрезается.
+- У семейства нет префиксов состояния.
+
+## См. также
+
+- [Разрыв до элемента](/ru/utilities/layout-break/break-before/)
+- [Разрыв после колонки](/ru/utilities/layout-break/break-after/)
+- [Колонки](/ru/utilities/layout-break/column/)

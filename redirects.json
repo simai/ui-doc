@@ -2731,6 +2731,10 @@
       "to": "ru/guide/introduction/what-is-simai-framework"
     },
     {
+      "from": "ru/utilities/animation/animation-transition-appearing",
+      "to": "ru/utilities/animation/animation-type"
+    },
+    {
       "from": "ru/utilities/reference",
       "to": "ru/utilities"
     },
@@ -2853,6 +2857,42 @@
     {
       "from": "ru/utilities/reference/width-ext",
       "to": "ru/utilities/sizes/width"
+    },
+    {
+      "from": "ru/utilities/svg/svg-fill-rule",
+      "to": "ru/utilities/svg/svg-fill-type"
+    },
+    {
+      "from": "ru/utilities/tables/table-border-cells",
+      "to": "ru/utilities/tables/table-border-spacing"
+    },
+    {
+      "from": "ru/utilities/tables/tables-formatting",
+      "to": "ru/utilities/tables/tables-default-parameters"
+    },
+    {
+      "from": "ru/utilities/text-formatting/text-code",
+      "to": "ru/utilities/typography/text-overflow"
+    },
+    {
+      "from": "ru/utilities/text-formatting/text-formatting-color",
+      "to": "ru/utilities/text-formatting/text-decoration-color"
+    },
+    {
+      "from": "ru/utilities/text-formatting/text-formatting-style",
+      "to": "ru/utilities/text-formatting/text-decoration-style"
+    },
+    {
+      "from": "ru/utilities/text-formatting/text-selecting",
+      "to": "ru/utilities/interactivity/user-select"
+    },
+    {
+      "from": "ru/utilities/text-formatting/text-underline-offset",
+      "to": "ru/utilities/text-formatting/text-decoration-offset"
+    },
+    {
+      "from": "ru/utilities/typography/text-transform",
+      "to": "ru/utilities/text-formatting/text-formatting-text"
     }
   ]
 }

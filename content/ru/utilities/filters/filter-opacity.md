@@ -1,49 +1,82 @@
 ---
 title: "Прозрачность элемента"
-description: "Прозрачность элемента (filter-opacity)"
-tags: [filter-opacity, hover]
+description: "Делает элемент полупрозрачным через функцию opacity() свойства filter."
 ---
 
 # Прозрачность элемента
 
-:badge[filter-opacity]{type=main scheme=on-surface size=1}
+Классы `filter-opacity-*` задают прозрачность элемента функцией `opacity()`
+свойства `filter`. Видимый результат тот же, что у
+[`opacity-*`](/ru/utilities/filters/opacity/); берите эти классы, только когда
+нужна именно функция фильтра.
 
-Данные модификаторы позволяют задавать степень прозрачности элемента через CSS filter.
+## Пример
 
-## Наглядный пример
+### Шкала
 
-:::example {id="utilities/filters/filter-opacity" label="Прозрачность элемента"}
+Номер ступени — десятки процентов непрозрачности: `filter-opacity-3` — 30%, `filter-opacity-full` — 100%.
+
+:::example {id="utilities/filters/filter-opacity" label="Ступени прозрачности"}
+:::
+
+### При наведении
+
+Наведите указатель на изображение: оно становится непрозрачным.
+
+:::example {id="utilities/filters/filter-opacity-hover" label="hover:filter-opacity-full"}
 :::
 
 ## Классы
 
-| Класс | Значение |
-|:------|:---------|
-| `filter-opacity-0` | `filter: opacity(0)` |
-| `filter-opacity-1` | `filter: opacity(0.1)` |
-| `filter-opacity-2` | `filter: opacity(0.2)` |
-| `filter-opacity-3` | `filter: opacity(0.3)` |
-| `filter-opacity-4` | `filter: opacity(0.4)` |
-| `filter-opacity-5` | `filter: opacity(0.5)` |
-| `filter-opacity-6` | `filter: opacity(0.6)` |
-| `filter-opacity-7` | `filter: opacity(0.7)` |
-| `filter-opacity-8` | `filter: opacity(0.8)` |
-| `filter-opacity-9` | `filter: opacity(0.9)` |
-| `filter-opacity-full` | `filter: opacity(1)` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `filter-opacity-1` | `filter: opacity(0.1)` | — |
+| `filter-opacity-2` | `filter: opacity(0.2)` | — |
+| `filter-opacity-3` | `filter: opacity(0.3)` | — |
+| `filter-opacity-4` | `filter: opacity(0.4)` | — |
+| `filter-opacity-5` | `filter: opacity(0.5)` | — |
+| `filter-opacity-6` | `filter: opacity(0.6)` | — |
+| `filter-opacity-7` | `filter: opacity(0.7)` | — |
+| `filter-opacity-8` | `filter: opacity(0.8)` | — |
+| `filter-opacity-9` | `filter: opacity(0.9)` | — |
+| `filter-opacity-full` | `filter: opacity(1)` | — |
+| `filter-opacity-0` | `filter: opacity(0)` | — |
 
-## Описание
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:filter-opacity-1`.
 
-Модификаторы `filter-opacity-{0...9,full}` устанавливают прозрачность элемента.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- `filter-opacity-0` делает элемент полностью прозрачным.
-- `filter-opacity-full` делает элемент полностью непрозрачным.
-- `filter-opacity-1...9` задают промежуточные значения от 10% до 90%.
+## Применение
 
-Также можно использовать `hover:filter-opacity-*` для изменения прозрачности при наведении.
+### Шкала
 
-## Синтаксис
+| Класс | Непрозрачность |
+| :--- | ---: |
+| `filter-opacity-0` | 0 |
+| `filter-opacity-1` … `filter-opacity-9` | 0.1 … 0.9 |
+| `filter-opacity-full` | 1 |
 
-- `filter-opacity-0 ... filter-opacity-9` и `filter-opacity-full` — задать степень прозрачности.
-- `hover:filter-opacity-*` — изменить прозрачность при наведении.
+### filter-opacity или opacity
 
-## Пример использования
+Для интерфейса берите [`opacity-*`](/ru/utilities/filters/opacity/): у этих
+классов те же ступени, они не занимают свойство `filter` и не мешают другим
+фильтрам. `filter-opacity-*` подходит, когда прозрачность должна меняться
+вместе с другими функциями фильтра в собственном CSS проекта.
+
+```html
+<img class="filter-opacity-3 hover:filter-opacity-full transition" src="photo.jpg" alt="Фотография">
+```
+
+## Ограничения
+
+- Класс задаёт свойство `filter` целиком: с классом другого фильтра на том же
+  элементе действует тот, чьё правило стоит в CSS позже.
+- Прозрачный элемент занимает место и принимает щелчки. Чтобы он их не
+  принимал, добавьте [`pointer-events-none`](/ru/utilities/forms/pointer-events/).
+- Любое значение, в том числе `filter-opacity-full`, создаёт у элемента новый
+  контекст наложения и содержащий блок для потомков с `position: fixed`.
+
+## См. также
+
+- [Прозрачность](/ru/utilities/filters/opacity/)
+- [Прозрачность фона элемента](/ru/utilities/backdrop-filter/backdrop-opacity/)

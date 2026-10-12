@@ -1,75 +1,64 @@
 ---
-title: "Вложение фона"
-description: "Вложение фона"
-tags: [background-origin, sm, md, lg, xl, xxl]
+title: "Исходная область фона"
+description: "Задаёт, от какого края — рамки, внутренних отступов или содержимого — отсчитывается положение фонового изображения."
 ---
 
-# Вложение фона
+# Исходная область фона
 
-:badge[background-origin]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `bg-origin-*` задают `background-origin`: от какой области элемента
+отсчитываются положение и размер фонового изображения. Берите их, когда
+картинка должна начинаться под рамкой или, наоборот, отступать вместе с
+содержимым.
 
-С помощью модификаторов `background-origin` вы можете управлять тем, относительно какой области будет позиционироваться
-фоновое изображение.
+## Пример
 
-## Наглядный пример
+У всех трёх образцов прерывистая рамка, внутренние отступы и картинка без
+повтора в левом верхнем углу. Меняется только точка отсчёта.
 
-:::example {id="utilities/background/background-origin" label="Вложение фона"}
+:::example {id="utilities/background/background-origin" label="bg-origin-border, bg-origin-padding и bg-origin-content"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс              | Значение                        |
-|:-------------------|:--------------------------------|
-| `bg-origin-border` | `background-origin: border-box;` |
-| `bg-origin-padding` | `background-origin: padding-box;` |
-| `bg-origin-content` | `background-origin: content-box;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `bg-origin-border` | `background-origin: border-box` | — |
+| `bg-origin-padding` | `background-origin: padding-box` | — |
+| `bg-origin-content` | `background-origin: content-box` | — |
 
-## Описание
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-origin-border`.
 
-Адаптивный модификатор `background-origin` определяет исходную область для позиционирования фона:
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- `bg-origin-border` — фон позиционируется относительно границ элемента (border-box).
-- `bg-origin-padding` — фон позиционируется относительно области отступов (padding-box).
-- `bg-origin-content` — фон позиционируется относительно области содержимого (content-box).
+## Применение
 
-## Синтаксис
+| Класс | От чего отсчитывается фон |
+| :--- | :--- |
+| `bg-origin-border` | от внешнего края рамки |
+| `bg-origin-padding` | от внутреннего края рамки — значение браузера по умолчанию |
+| `bg-origin-content` | от края содержимого |
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
-
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор, начиная с определенного размера области просмотра (sm, md, lg, xl, xxl).
-- Модификатор *(обязательный параметр)*: `bg-origin-border`, `bg-origin-padding`, `bg-origin-content`.
-
-## Примеры использования
+Класс влияет на фоновое изображение, а не на цвет фона. Заметен он, когда у
+картинки нет повтора или задан размер в процентах: `bg-size-100` вместе с
+`bg-origin-content` растягивает картинку на область содержимого.
 
 ```html
-<!-- Фон относительно границ -->
-<div class="bg-origin-border w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
+<div class="p-4 border-2 bg-origin-content bg-repeat-none bg-size-100"
+     style="background-image: url(/images/pattern.svg)">…</div>
 ```
 
-```html
-<!-- Фон относительно области отступов -->
-<div class="bg-origin-padding w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
-```
+С префиксом ширины класс действует от указанной ширины и шире, например
+`md:bg-origin-border`.
 
-```html
-<!-- Фон относительно области содержимого -->
-<div class="bg-origin-content w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
-```
+## Ограничения
 
-## Адаптивность
+- Под рамкой картинка видна, только если фон там не обрезан: при
+  `bg-clip-padding` или `bg-clip-content` класс `bg-origin-border` сдвигает
+  картинку, но часть её под рамкой не рисуется.
+- У семейства нет префиксов состояния.
 
-Для изменения области позиционирования фона на разных размерах экрана используйте префикс контрольной точки:
+## См. также
 
-```html
-<!-- Для экранов от Medium и больше фон будет, например, относиться к content-box -->
-<div class="md:bg-origin-content w-full h-e8 ...">
-    <div class="h-f8"></div>
-</div>
-```
+- [Обрезка фона](/ru/utilities/background/background-clip/)
+- [Положение фона](/ru/utilities/background/background-position/)
+- [Размер фона](/ru/utilities/background/background-size/)

@@ -1,86 +1,94 @@
 ---
 title: "Минимальная ширина"
-description: "Минимальная ширина (min-width)"
-tags: [min-width, sm, md, lg, xl, xxl]
+description: "Не даёт элементу стать уже родителя или своего содержимого и снимает автоматический минимум во флекс-раскладке."
 ---
 
 # Минимальная ширина
 
-:badge[min-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы минимальной ширины задают свойство `min-width`: элемент может быть
+шире, но не уже заданного значения. Чаще всего нужен `min-w-0`: он позволяет
+флекс-элементу сжиматься, чтобы длинный текст сокращался многоточием.
 
-В SIMAI Framework с помощью модификаторов можно задать минимальную ширину элемента. Это особенно полезно при создании
-адаптивных макетов, когда необходимо гарантировать, что элемент не станет уже заданного порога ширины даже при
-ограничениях окружающего контейнера или содержимого.
+## Пример
 
-## Наглядный пример
+### Сокращение текста во флекс-ряду
 
-:::example {id="utilities/sizes/min-width" label="Минимальная ширина"}
+Флекс-элемент по умолчанию не становится уже своего содержимого: длинное имя
+файла не сокращается и выталкивает метку за край. С `min-w-0` элемент
+сжимается, и текст сокращается многоточием.
+
+:::example {id="utilities/sizes/min-width" label="min-w-0 во флекс-ряду"}
 :::
 
-## Таблица классов
+### Ширина содержимого и родителя
 
-| Класс       | Значение                |
-|:------------|:------------------------|
-| `min-w-min` | `min-width: min-content;` |
-| `min-w-max` | `min-width: max-content;` |
-| `min-w-fit` | `min-width: fit-content;` |
-| `min-w-full` | `min-width: 100%;` |
-| `min-w-0` | `min-width: 0;` |
-## Синтаксис
+Пунктирная рамка — родитель. У всех образцов ширина `w-0`, и минимум задаёт
+их ширину: `min-w-min` — по самому длинному слову, `min-w-max` — по всей
+строке, даже если она шире родителя, `min-w-fit` — по строке, но не шире
+родителя, `min-w-full` — по ширине родителя.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+:::example {id="utilities/sizes/min-width-content" label="min-w-min, min-w-max, min-w-fit и min-w-full"}
+:::
 
-- Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор действует для всех размеров экрана.
+## Классы
 
-- Модификатор (обязательный параметр):
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `min-w-min` | `min-width: -webkit-min-content; min-width: -moz-min-content; min-width: min-content` | — |
+| `min-w-max` | `min-width: -webkit-max-content; min-width: -moz-max-content; min-width: max-content` | — |
+| `min-w-fit` | `min-width: -webkit-fit-content; min-width: -moz-fit-content; min-width: fit-content` | — |
+| `min-w-full` | `min-width: 100%` | — |
+| `min-w-0` | `min-width: 0` | — |
 
-    - `min-w-full` — минимальная ширина 100% родительского элемента
-    - `min-w-min` — минимальная ширина равна длине самого длинного слова (min-content)
-    - `min-w-max` — минимальная ширина равна длине всего контента без учёта ограничений родителя (max-content)
-    - `min-w-fit` — минимальная ширина определена как fit-content
-    - `min-w-0` — минимальная ширина 0
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:min-w-min`.
 
-## Примеры
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-### **На всю ширину (min-w-full):**
+## Применение
+
+### Как выбрать значение
+
+- Флекс- или грид-элемент с текстом, который должен сокращаться или
+  переноситься, — `min-w-0`.
+- Кнопка или метка, текст которой не должен переноситься, — `min-w-max`.
+- Элемент не уже родителя, например таблица в прокручиваемой обёртке, —
+  `min-w-full`.
 
 ```html
-<div class="min-w-full"></div>
-```
+<div class="flex items-center gap-2">
+  <img class="w-c0 h-c0" src="file.svg" alt="">
+  <div class="flex-1 min-w-0">
+    <p class="truncate">Очень длинное имя файла.pdf</p>
+  </div>
+  <span>PDF</span>
+</div>
 
-### **Минимальная ширина контента (min-w-min):**
-
-```html
-<div class="w-0">
-    <div class="min-w-min">Lorem ipsum dolor sit amet, consectetur</div>
+<div class="overflow-x-auto">
+  <table class="min-w-full">…</table>
 </div>
 ```
 
-### **Максимальная ширина контента (min-w-max):**
+### Минимум по ширине экрана
+
+С префиксом ширины класс действует от указанной ширины и шире.
 
 ```html
-<div class="w-0">
-	<div class="min-w-max">Lorem ipsum dolor sit amet, consectetur</div>
-</div>
+<div class="min-w-0 md:min-w-max">…</div>
 ```
 
-### **По содержимому (min-w-fit):**
+## Ограничения
 
-```html
-<div class="w-0">
-	<div class="min-w-fit">Lorem ipsum dolor sit amet, consectetur</div>
-</div>
-```
+- Шагов шкалы размеров у семейства нет: точную ширину задают классы
+  [ширины](/ru/utilities/sizes/width/).
+- Минимальная ширина сильнее ширины и максимальной ширины.
+- `min-w-max` и `min-w-full` могут вывести элемент за родителя; на узком
+  экране это даёт горизонтальную прокрутку.
+- У семейства нет префиксов состояния.
 
-## Адаптивность
+## См. также
 
-Для установки минимальной ширины, начиная с определенного размера области просмотра, добавьте префикс контрольной точки
-к модификатору:
-
-```html
-<div class="md:min-w-full"></div>
-```
-
-В этом примере минимальная ширина будет 100% (`min-w-full`) только при размерах экрана `md` и больше.
+- [Ширина](/ru/utilities/sizes/width/)
+- [Максимальная ширина](/ru/utilities/sizes/max-width/)
+- [Минимальная высота](/ru/utilities/sizes/min-height/)
+- [Обрезка текста](/ru/utilities/typography/text-overflow/)
+- [Гибкость элементов](/ru/utilities/flex/flexibility/)

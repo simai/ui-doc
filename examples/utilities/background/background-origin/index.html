@@ -1,41 +1,14 @@
-<div class="wrap grid grid-col-1 sm:grid-col-3 gap-3 content-main-start">
-    <div class="flex flex-col gap-1">
-            <div>bg-origin-border</div>
-  <div class="radius-3 p-3 color-on-surface border-1 border-outline">
-    <p >Background positioned from border-box.</p>
-
-    <div
-      class="h-e4 radius-2 bg-origin-border border-10 bg-no-repeat bg-left-top bg-size-75 p-2"
-      style="
-        background-image: url(assets/scenic-background.jpg);
-      "
-    ></div>
+<div class="flex flex-wrap gap-4 items-end">
+  <div class="flex flex-col gap-1 items-center">
+    <div class="w-e8 h-e8 p-4 border-8 border-dashed border-outline bg-surface-container demo-tile bg-repeat-none bg-left-top bg-origin-border"></div>
+    <code class="text-1/2 color-on-surface-variant">bg-origin-border</code>
   </div>
+  <div class="flex flex-col gap-1 items-center">
+    <div class="w-e8 h-e8 p-4 border-8 border-dashed border-outline bg-surface-container demo-tile bg-repeat-none bg-left-top bg-origin-padding"></div>
+    <code class="text-1/2 color-on-surface-variant">bg-origin-padding</code>
   </div>
-<div class="flex flex-col gap-1">
-        <div>bg-origin-padding</div>
-  <div class="radius-3 p-3 color-on-surface border-1 border-outline">
-    <p >Background starts at padding-box.</p>
-
-    <div
-      class="h-e4 radius-2 bg-origin-padding border-10 bg-no-repeat bg-left-top bg-size-75 p-2"
-      style="
-        background-image: url(assets/scenic-background.jpg);
-      "
-    ></div>
+  <div class="flex flex-col gap-1 items-center">
+    <div class="w-e8 h-e8 p-4 border-8 border-dashed border-outline bg-surface-container demo-tile bg-repeat-none bg-left-top bg-origin-content"></div>
+    <code class="text-1/2 color-on-surface-variant">bg-origin-content</code>
   </div>
-    </div>
-<div class="flex flex-col gap-1">
-        <div>bg-origin-content</div>
-  <div class="radius-3 p-3 color-on-surface border-1 border-outline">
-    <p>Background starts at content-box.</p>
-
-    <div
-      class="h-e4 radius-2 bg-origin-content border-10 bg-no-repeat bg-left-top bg-size-75 p-2"
-      style="
-        background-image: url(assets/scenic-background.jpg);
-      "
-    ></div>
-  </div>
-    </div>
 </div>

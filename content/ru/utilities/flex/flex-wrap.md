@@ -1,94 +1,80 @@
 ---
 title: "Перенос элементов"
-description: "Перенос элементов (flex-wrap)"
-tags: [flex-wrap, sm, md, lg, xl, xxl]
+description: "Разрешает флекс-элементам переходить на новую строку, когда они не помещаются в контейнер."
 ---
 
 # Перенос элементов
 
-:badge[flex-wrap]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `flex-wrap`, `flex-wrap-reverse` и `flex-nowrap` задают `flex-wrap`:
+остаются ли флекс-элементы в одной строке или переносятся на следующие.
+Берите `flex-wrap` для наборов меток, кнопок и карточек, число которых
+заранее неизвестно.
 
-В SIMAI Framework с помощью модификаторов можно управлять тем, переносятся ли элементы флексбокса на новую линию или
-продолжаются в одной.
+## Пример
 
-## Наглядный пример
+### Перенос и одна строка
 
-:::example {id="utilities/flex/flex-wrap" label="Перенос элементов"}
+Семь элементов одной ширины в узком контейнере. Подпись над образцом — класс
+контейнера. Без переноса элементы выходят за контейнер, и его можно
+прокрутить.
+
+:::example {id="utilities/flex/flex-wrap" label="flex-nowrap, flex-wrap, flex-wrap-reverse"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс              | Значение                 |
-|:-------------------|:-------------------------|
-| `flex-wrap` | `flex-wrap: wrap;` |
-| `flex-wrap-reverse` | `flex-wrap: wrap-reverse;` |
-| `flex-nowrap` | `flex-wrap: nowrap;` |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: на узком экране элементы переносятся, с ширины `md` стоят в одну
+строку.
 
-## Синтаксис
+:::example {id="utilities/flex/flex-wrap-responsive" label="flex-wrap md:flex-nowrap"}
+:::
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Классы
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `flex-wrap` | `flex-wrap: wrap` | — |
+| `flex-wrap-reverse` | `flex-wrap: wrap-reverse` | — |
+| `flex-nowrap` | `flex-wrap: nowrap` | — |
 
-- Модификатор *(обязательный параметр)*:
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:flex-wrap`.
 
-    - `flex-wrap` — элементы флексбокса могут переноситься на новую строку.
-    - `flex-wrap-reverse` — элементы флексбокса могут переноситься на новую строку в обратном порядке.
-    - `flex-nowrap` — элементы флексбокса не переносятся, все остаются в одной линии.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Примеры использования
+## Применение
 
-### Прямой перенос:
+### Как выбрать
 
-```html
-<div class="flex flex-wrap">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-</div>
-```
+- `flex-nowrap` — одна строка; значение по умолчанию у флекс-контейнера.
+  Элементы сжимаются, а если не могут — выходят за контейнер.
+- `flex-wrap` — новые строки идут ниже первой.
+- `flex-wrap-reverse` — новые строки идут выше первой.
 
-### Обратный перенос:
+### Набор меток
 
 ```html
-<div class="flex flex-wrap-reverse">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-</div>
+<ul class="flex flex-wrap gap-1">
+  <li>Дизайн</li>
+  <li>Разработка</li>
+  <li>Документация</li>
+</ul>
 ```
 
-### Без переноса:
+Промежутки между элементами и строками задают классы
+[`gap-*`](/ru/utilities/grid-and-flexbox-utilities/gap/), выравнивание строк
+в контейнере — [`content-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-content/).
 
-```html
-<div class="flex flex-nowrap">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-</div>
-```
+## Ограничения
 
-## Адаптивность
+- Перенос нужен, чтобы работали классы выравнивания строк
+  `content-cross-*`: у контейнера без переноса одна строка, и выравнивать её
+  нечем.
+- `flex-wrap-reverse` меняет только показ; фокус клавиатуры и программы
+  экранного доступа идут по порядку разметки.
 
-Для изменения поведения переноса флекс-элементов при достижении определённой контрольной точки экрана, просто добавьте
-её к модификатору:
+## См. также
 
-```html
-<div class="md:flex-wrap">
-    <!-- Начиная с md элементы будут переноситься на новую строку -->
-</div>
-```
+- [Направление размещения](/ru/utilities/flex/flex-direction/)
+- [Базисный размер](/ru/utilities/flex/flex-basis/)
+- [Промежутки между элементами](/ru/utilities/grid-and-flexbox-utilities/gap/)

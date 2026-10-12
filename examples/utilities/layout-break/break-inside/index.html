@@ -1,36 +1,26 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 items-start">
-<div class="flex flex-col gap-1">
-  <div class="sf-text-1/2 weight-6 text-center"><code>break-inside-avoid</code></div>
-  <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3 layout-col-2 gap-3 overflow-auto">
-    <div class="bg-primary color-on-primary p-2 radius-2 break-inside-avoid" aria-label="tall avoid 1">
-      Цельная карточка<br>Строка<br>Строка<br>Строка<br>Строка<br>Строка<br>Строка<br>Строка
-    </div>
-    <div class="bg-secondary color-on-secondary p-2 radius-2 break-inside-avoid" aria-label="tall avoid 2">
-      Цельная карточка<br>Строка<br>Строка
-    </div>
-    <div class="bg-tertiary color-on-tertiary p-2 radius-2 break-inside-avoid" aria-label="tall avoid 3">
-      Цельная карточка<br>Строка<br>Строка<br>Строка
-    </div>
-    <div class="bg-success color-on-success p-2 radius-2 break-inside-avoid" aria-label="tall avoid 4">
-      Цельная карточка<br>Строка<br>Строка
+<div class="grid grid-col-1 md:grid-col-3 gap-4 color-on-surface">
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">без класса</code>
+    <div class="layout-col-2 col-gap-2 p-1 border border-dashed border-outline radius-ui">
+      <div class="m-bottom-1 p-1 bg-primary-container color-on-primary-container radius-ui">Карточка 1<br>строка<br>строка</div>
+      <div class="m-bottom-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">Карточка 2<br>строка<br>строка<br>строка<br>строка<br>строка</div>
+      <div class="m-bottom-1 p-1 bg-primary-container color-on-primary-container radius-ui">Карточка 3<br>строка</div>
     </div>
   </div>
-</div>
-<div class="flex flex-col gap-1">
-  <div class="sf-text-1/2 weight-6 text-center">Без ограничения</div>
-  <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3 layout-col-2 gap-3 overflow-auto">
-    <div class="bg-primary color-on-primary p-2 radius-2" aria-label="tall avoid 1">
-      Обычная карточка<br>Строка<br>Строка<br>Строка<br>Строка<br>Строка<br>Строка<br>Строка
-    </div>
-    <div class="bg-secondary color-on-secondary p-2 radius-2" aria-label="tall avoid 2">
-      Обычная карточка<br>Строка<br>Строка
-    </div>
-    <div class="bg-tertiary color-on-tertiary p-2 radius-2" aria-label="tall avoid 3">
-      Обычная карточка<br>Строка<br>Строка<br>Строка
-    </div>
-    <div class="bg-success color-on-success p-2 radius-2" aria-label="tall avoid 4">
-      Обычная карточка<br>Строка<br>Строка
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">break-inside-avoid на карточке 2</code>
+    <div class="layout-col-2 col-gap-2 p-1 border border-dashed border-outline radius-ui">
+      <div class="m-bottom-1 p-1 bg-primary-container color-on-primary-container radius-ui">Карточка 1<br>строка<br>строка</div>
+      <div class="m-bottom-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui break-inside-avoid">Карточка 2<br>строка<br>строка<br>строка<br>строка<br>строка</div>
+      <div class="m-bottom-1 p-1 bg-primary-container color-on-primary-container radius-ui">Карточка 3<br>строка</div>
     </div>
   </div>
-</div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">break-inside-avoid-column на карточке 2</code>
+    <div class="layout-col-2 col-gap-2 p-1 border border-dashed border-outline radius-ui">
+      <div class="m-bottom-1 p-1 bg-primary-container color-on-primary-container radius-ui">Карточка 1<br>строка<br>строка</div>
+      <div class="m-bottom-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui break-inside-avoid-column">Карточка 2<br>строка<br>строка<br>строка<br>строка<br>строка</div>
+      <div class="m-bottom-1 p-1 bg-primary-container color-on-primary-container radius-ui">Карточка 3<br>строка</div>
+    </div>
+  </div>
 </div>

@@ -1,34 +1,79 @@
 ---
 title: "Размер полосок"
-description: "Размер полосок"
-tags: [stripe-width, sm, md, lg, xl, xxl]
+description: "Задаёт шаг между линиями полосатого фона — от 2 до 5 пикселей."
 ---
 
 # Размер полосок
 
-:badge[stripe-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `stripe-size-{n}` задают шаг узора, который рисуют классы
+[полос](/ru/utilities/stripes/stripes/): расстояние от линии до следующей
+линии. Толщина линии остаётся 1px. Берите крупный шаг для заметной сетки и
+мелкий — для плотной фактуры.
 
-С помощью модификаторов `stripe-size-{1...4}` можно изменить размер полосок в паттерне фона. Каждый модификатор
-устанавливает переменную `--sf-stripe--size` в определенное значение, что влияет на размер повторяющихся полос.
+## Пример
 
-## Наглядный пример
+### Шкала
 
-:::example {id="utilities/stripes/stripes-size" label="Размер полосок"}
+Под каждым образцом — класс шага; узор и цвет задают `stripe-1 stripe-primary`.
+
+:::example {id="utilities/stripes/stripes-size" label="stripe-size-1 … stripe-size-4"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс          | Значение                           |
-|:---------------|:-----------------------------------|
-| `stripe-size-1` | `--sf-stripe--size: var(--sf-a1);` |
-| `stripe-size-2` | `--sf-stripe--size: var(--sf-a2);` |
-| `stripe-size-3` | `--sf-stripe--size: var(--sf-a3);` |
-| `stripe-size-4` | `--sf-stripe--size: var(--sf-a4);` |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: с ширины `md` шаг сетки становится крупнее.
 
-## Описание
+:::example {id="utilities/stripes/stripes-size-responsive" label="Шаг по ширине экрана"}
+:::
 
-Модификаторы `stripe-size-1`, `stripe-size-2`, `stripe-size-3`, `stripe-size-4` задают величину полос, используемых в
-различных паттернах (например, `stripe-1`, `stripe-2` и т.д.).
-Изменение размера полосок позволяет подобрать необходимый визуальный эффект.
+## Классы
 
-## Пример использования
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `stripe-size-1` | `--sf-stripe--size: var(--sf-a2)` | — |
+| `stripe-size-2` | `--sf-stripe--size: var(--sf-a3)` | — |
+| `stripe-size-3` | `--sf-stripe--size: var(--sf-a4)` | — |
+| `stripe-size-4` | `--sf-stripe--size: var(--sf-a5)` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:stripe-size-1`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-a2` | `0.125rem` |
+| `--sf-a3` | `0.1875rem` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-a5` | `0.3125rem` |
+
+## Применение
+
+| Класс | Шаг при `1rem = 16px` |
+| :--- | :--- |
+| `stripe-size-1` | 2px |
+| `stripe-size-2` | 3px |
+| `stripe-size-3` | 4px |
+| `stripe-size-4` | 5px |
+
+Шаг задан в `rem` и растёт вместе с кеглем. Класс меняет переменную
+`--sf-stripe--size`.
+
+```html
+<div class="stripe-3 stripe-size-4 stripe-surface-transparent-overlay h-f0"></div>
+```
+
+## Ограничения
+
+- Без класса шаг равен толщине линии (1px), и полосы сливаются в сплошную
+  заливку.
+- У семейства нет префиксов состояния.
+
+## См. также
+
+- [Полосы](/ru/utilities/stripes/stripes/)
+- [Цвет полос](/ru/utilities/stripes/stripes-color/)

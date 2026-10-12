@@ -95,12 +95,12 @@ description: "Скругляет углы элемента целиком, по 
 | Переменная | Значение по умолчанию |
 |:---|:---|
 | `--sf-radius-0` | `var(--sf-a0)` |
-| `--sf-radius-1/3` | `0.125rem` |
-| `--sf-radius-1/2` | `0.25rem` |
+| `--sf-radius-1/3` | `0.125rem; от ширины lg: var(--sf-a2)` |
+| `--sf-radius-1/2` | `0.25rem; от ширины lg: var(--sf-a4)` |
 | `--sf-radius-1` | `var(--sf-a8)` |
-| `--sf-radius-2` | `var(--sf-b2)` |
-| `--sf-radius-3` | `var(--sf-b6)` |
-| `--sf-radius-4` | `var(--sf-c2)` |
+| `--sf-radius-2` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
+| `--sf-radius-3` | `var(--sf-b6); от ширины lg: var(--sf-c2)` |
+| `--sf-radius-4` | `var(--sf-c2); от ширины lg: var(--sf-c6)` |
 | `--sf-radius-default` | `var(--sf-a4)` |
 | `--sf-radius--ui` | `var(--sf-radius-1/2)` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |

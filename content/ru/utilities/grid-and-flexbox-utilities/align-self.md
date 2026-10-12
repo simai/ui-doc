@@ -1,68 +1,71 @@
 ---
 title: "Выравнивание отдельного элемента по поперечной оси"
-description: "Выравнивание отдельного элемента по поперечной оси (align-self)"
-tags: [align-self, sm, md, lg, xl, xxl]
+description: "Выравнивает один элемент флекс-контейнера или сетки по поперечной оси иначе, чем остальные."
 ---
 
 # Выравнивание отдельного элемента по поперечной оси
 
-:badge[align-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `self-cross-*` задают `align-self`: как один элемент стоит поперёк
+основной оси, независимо от
+[`items-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+контейнера. Берите их, когда один элемент строки должен стоять иначе:
+кнопка внизу карточки, значок в верхнем углу.
 
-Данные модификаторы определяют, как отдельно взятый элемент в сетке или флексбоксе будет выравнен внутри своей ячейки
-относительно поперечной оси.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/align-self" label="Выравнивание отдельного элемента по поперечной оси"}
+Контейнер с `items-cross-stretch`: крайние элементы растянуты на всю высоту, а
+средний выровнен своим классом.
+
+:::example {id="utilities/grid-and-flexbox-utilities/align-self" label="self-cross-auto … self-cross-baseline"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс               | Значение             |
-|:--------------------|:---------------------|
-| `self-cross-auto` | `align-self: auto;` |
-| `self-cross-start` | `align-self: start;` |
-| `self-cross-end` | `align-self: end;` |
-| `self-cross-center` | `align-self: center;` |
-| `self-cross-stretch` | `align-self: stretch;` |
-| `self-cross-baseline` | `align-self: baseline;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `self-cross-auto` | `align-self: auto` | — |
+| `self-cross-start` | `align-self: start` | — |
+| `self-cross-end` | `align-self: end` | — |
+| `self-cross-center` | `align-self: center` | — |
+| `self-cross-stretch` | `align-self: stretch` | — |
+| `self-cross-baseline` | `align-self: baseline` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:self-cross-auto`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `self-cross-auto` – элемент выравнивается согласно настройкам родительской области (например, `align-items`);
-    - `self-cross-start` – элемент прижимается к началу ячейки по поперечной оси;
-    - `self-cross-end` – элемент прижимается к концу ячейки по поперечной оси;
-    - `self-cross-center` – элемент выравнивается по центру ячейки по поперечной оси;
-    - `self-cross-stretch` – элемент растягивается, занимая всё доступное пространство по поперечной оси;
-    - `self-cross-baseline` – выравнивание по базовой линии текста элемента.
+- `self-cross-auto` — элемент следует классу контейнера; значение по
+  умолчанию. Класс нужен, чтобы отменить `self-cross-*` на другой ширине
+  экрана.
+- `self-cross-start`, `self-cross-center`, `self-cross-end` — элемент своей
+  высоты у начала, в центре или у конца.
+- `self-cross-stretch` — элемент на всю высоту строки.
+- `self-cross-baseline` — строка текста элемента на базовой линии соседей,
+  выровненных так же.
 
-## Пример использования
+### Кнопка, которая не растягивается
 
 ```html
-<div class="grid grid-col-3">
-  <div>Элемент 1</div>
-  <div class="self-cross-center">Элемент 2</div>
-  <div>Элемент 3</div>
+<div class="flex gap-2">
+  <p>Длинный текст описания в несколько строк.</p>
+  <button class="self-cross-start" type="button">Подробнее</button>
 </div>
 ```
 
-В данном примере второй элемент будет выравнен по центру ячейки относительно поперечной оси.
+## Ограничения
 
-## Адаптивность
+- Класс действует на прямого потомка флекс-контейнера или сетки.
+- При [`flex-col`](/ru/utilities/flex/flex-direction/) поперечная ось
+  горизонтальна: класс выравнивает по ширине.
 
-Для изменения выравнивания отдельного элемента, начиная с определённого размера экрана, добавьте контрольную точку.
-Например:
+## См. также
 
-```html
-<div class="md:self-cross-start">
-  <!-- Начиная с md элемент будет прижат к началу ячейки по поперечной оси -->
-</div>
-```
+- [Выравнивание каждого элемента в ячейках по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+- [Выравнивание отдельного элемента в ячейке по основной оси](/ru/utilities/grid-and-flexbox-utilities/justify-self/)
+- [Размещение отдельного элемента](/ru/utilities/grid-and-flexbox-utilities/place-self/)

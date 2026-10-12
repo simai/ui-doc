@@ -1,52 +1,86 @@
 ---
 title: "Задержка перехода"
-description: "Задержка перехода"
-tags: [transition-delay, sm, md, lg, xl, xxl]
+description: "Откладывает начало перехода на время от 75 мс до 2 с — для последовательного появления и защиты от случайного наведения."
 ---
 
 # Задержка перехода
 
-:badge[transition-delay]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `delay-*` задают `transition-delay` — паузу перед началом перехода.
+Берите их, чтобы элементы менялись по очереди или чтобы короткое случайное
+наведение указателя не запускало изменение.
 
-В SIMAI Framework с помощью модификаторов можно задавать задержку при выполнении переходов CSS.
-Управление задержкой позволяет более точно настроить моменты начала анимации, делая интерфейс более отзывчивым или
-выразительным.
+## Пример
 
-## Наглядный пример
+### Шкала
+
+Наведите указатель на дорожку или перейдите на неё клавишей Tab. Все точки
+идут 0,3 с (`duration-normal`); подпись — класс задержки.
 
 :::example {id="utilities/animation/animation-transition-delay" label="Задержка перехода"}
 :::
 
-## Классы и их значения
+### Ширина экрана
 
-| Класс    | Значение                 |
-|:---------|:-------------------------|
-| `delay-0` | `transition-delay: 0s;` |
-| `delay-1` | `transition-delay: 75ms;` |
-| `delay-2` | `transition-delay: 100ms;` |
-| `delay-3` | `transition-delay: 150ms;` |
-| `delay-4` | `transition-delay: 200ms;` |
-| `delay-5` | `transition-delay: 300ms;` |
-| `delay-6` | `transition-delay: 500ms;` |
-| `delay-7` | `transition-delay: 700ms;` |
-| `delay-8` | `transition-delay: 1s;` |
-| `delay-9` | `transition-delay: 2s;` |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте
+ширину окна просмотра: на узком экране точка трогается через секунду, начиная
+с ширины `md` — сразу.
 
-## Описание
+:::example {id="utilities/animation/animation-transition-delay-responsive" label="Задержка по ширине экрана"}
+:::
 
-Используя данные модификаторы, вы можете управлять задержкой анимации без адаптивных условий или состояний. Добавьте
-нужный класс к элементу, чтобы задать время ожидания перед началом перехода.
+## Классы
 
-## Синтаксис
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `delay-1` | `transition-delay: 75ms` | — |
+| `delay-2` | `transition-delay: 100ms` | — |
+| `delay-3` | `transition-delay: 150ms` | — |
+| `delay-4` | `transition-delay: 200ms` | — |
+| `delay-5` | `transition-delay: 300ms` | — |
+| `delay-6` | `transition-delay: 500ms` | — |
+| `delay-7` | `transition-delay: 700ms` | — |
+| `delay-8` | `transition-delay: 1s` | — |
+| `delay-9` | `transition-delay: 2s` | — |
+| `delay-0` | `transition-delay: 0s` | — |
 
-Использование модификатора: `{модификатор}`
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:delay-1`.
 
-Просто добавьте класс `delay-{номер}` к элементу с переходом, чтобы установить задержку начала перехода.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+### Выбор задержки
+
+Шкала идёт от `delay-1` (75 мс) до `delay-9` (2 с); `delay-0` убирает
+задержку — например, с префиксом ширины, как в примере выше. Значения заданы числами, а не
+токенами темы. Для отклика на наведение хватает `delay-1` … `delay-3`;
+`delay-6` и больше подходят для последовательностей и подсказок, которые не
+должны всплывать от случайного движения указателя.
+
+### Появление по очереди
+
+Одинаковый переход с растущей задержкой выстраивает элементы в
+последовательность:
 
 ```html
-<button class="transition duration-normal ease-in-out delay-3 p-2 radius-1/3">
-    Кнопка с задержкой 150ms
-</button>
+<li class="duration-normal delay-0">Первый</li>
+<li class="duration-normal delay-2">Второй</li>
+<li class="duration-normal delay-4">Третий</li>
 ```
 
-## Пример использования
+Задержка совместима с классами `transition-*`, `duration-*` и `ease-*`: она
+задаёт отдельное свойство.
+
+## Ограничения
+
+- Задержка действует в обе стороны: элемент с `delay-8` и начинает, и
+  отменяет изменение через секунду. Долгая задержка на отклике кнопки или
+  ссылки выглядит как зависание.
+- Классы меняют только переходы, а не CSS-анимацию класса `animation`.
+- Префиксов состояния у семейства нет.
+
+## См. также
+
+- [Продолжительность перехода](/ru/utilities/animation/animation-transition-duration/)
+- [Функция времени перехода](/ru/utilities/animation/animation-transition-timing-function/)
+- [Общее свойство перехода](/ru/utilities/animation/animation-transition-property/)

@@ -1,73 +1,75 @@
 ---
 title: "Размещение содержимого по обеим осям"
-description: "Размещение содержимого по обеим осям (place-content)"
-tags: [place-content, sm, md, lg, xl, xxl]
+description: "Одним классом располагает содержимое сетки или флекс-контейнера с переносом сразу по горизонтали и по вертикали."
 ---
 
 # Размещение содержимого по обеим осям
 
-:badge[place-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `content-*` задают `place-content` — `align-content` и
+`justify-content` одним значением. В сетке они располагают колонки и строки, во
+флекс-контейнере с переносом — элементы в строке и сами строки. Берите
+`content-center`, чтобы поставить содержимое в центр блока заданной высоты.
 
-Модификаторы из этого раздела задают одновременное выравнивание содержимого сетки или флексбокса сразу по двум осям (
-основной и поперечной).
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/place-content" label="Размещение содержимого по обеим осям"}
+Флекс-контейнер с `flex-wrap` заданной высоты. Подпись над образцом — класс
+контейнера.
+
+:::example {id="utilities/grid-and-flexbox-utilities/place-content" label="content-start … content-stretch"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс            | Значение                      |
-|:-----------------|:------------------------------|
-| `content-center` | `place-content: center;` |
-| `content-start` | `place-content: start;` |
-| `content-end` | `place-content: end;` |
-| `content-between` | `place-content: space-between;` |
-| `content-around` | `place-content: space-around;` |
-| `content-evenly` | `place-content: space-evenly;` |
-| `content-stretch` | `place-content: stretch;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `content-center` | `align-content: center; justify-content: center; place-content: center` | — |
+| `content-start` | `align-content: start; justify-content: start; place-content: start` | — |
+| `content-end` | `align-content: end; justify-content: end; place-content: end` | — |
+| `content-between` | `align-content: space-between; justify-content: space-between; place-content: space-between` | — |
+| `content-around` | `align-content: space-around; justify-content: space-around; place-content: space-around` | — |
+| `content-evenly` | `align-content: space-evenly; justify-content: space-evenly; place-content: space-evenly` | — |
+| `content-stretch` | `align-content: stretch; justify-content: stretch; place-content: stretch` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:content-center`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `content-center` – элементы располагаются по центру контейнера как по основной, так и по поперечной оси;
-    - `content-start` – элементы прижаты к началу обеих осей контейнера;
-    - `content-end` – элементы прижаты к концу обеих осей контейнера;
-    - `content-between` – элементы распределены так, что расстояние между соседними элементами одинаковое, первый
-      элемент прижат к началу, а последний – к концу осей;
-    - `content-around` – элементы распределены так, что свободное пространство есть и между элементами, и по краям осей,
-      причём пространство по краям вдвое меньше, чем между элементами;
-    - `content-evenly` – элементы распределены равномерно по обеим осям, расстояние одинаковое и между элементами, и от
-      краёв осей;
-    - `content-stretch` – элементы растянуты, занимая доступное пространство по обеим осям.
+- `content-start`, `content-center`, `content-end` — содержимое вместе у
+  начала, в центре или у конца по обеим осям.
+- `content-between`, `content-around`, `content-evenly` — свободное место
+  делится между элементами и строками по обеим осям.
+- `content-stretch` — строки делят высоту; по горизонтали во флекс-контейнере
+  элементы стоят у начала.
 
-## Пример использования
+### Содержимое в центре блока
 
 ```html
-<div class="grid grid-col-3 content-center">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
+<div class="grid content-center h-f0">
+  <p>По центру по обеим осям</p>
 </div>
 ```
 
-В данном примере элементы будут выровнены по центру контейнера сразу по обеим осям.
+По одной оси выравнивают классы
+[`justify-*`](/ru/utilities/grid-and-flexbox-utilities/justify-content/) и
+[`content-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-content/).
 
-## Адаптивность
+## Ограничения
 
-Для адаптивного изменения размещения содержимого, начиная с определённого размера экрана, добавьте контрольную точку:
+- Во флекс-контейнере без [`flex-wrap`](/ru/utilities/flex/flex-wrap/)
+  вертикальная часть класса не действует.
+- Нужна свободная высота: у блока без заданной высоты по вертикали двигать
+  нечего.
+- Не путайте `content-*` с `content`: последний задаёт `display: contents` и
+  описан на странице [Метод отображения элемента](/ru/utilities/layout/display/).
 
-```html
-<div class="md:content-start">
-  <!-- Начиная с md элементы будут прижаты к началу по обеим осям -->
-</div>
-```
+## См. также
+
+- [Выравнивание содержимого по основной оси](/ru/utilities/grid-and-flexbox-utilities/justify-content/)
+- [Выравнивание содержимого по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-content/)
+- [Размещение элементов по обеим осям](/ru/utilities/grid-and-flexbox-utilities/place-items/)

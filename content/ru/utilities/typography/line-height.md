@@ -1,93 +1,121 @@
 ---
 title: "Высота строки"
-description: "Высота строки (line-height)"
-tags: [line-height, sm, md, lg, xl, xxl]
+description: "Задаёт высоту строки текста множителем от размера шрифта или значением шкалы."
 ---
 
 # Высота строки
 
-:badge[line-height]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `line-*` задают высоту строки. Именованные значения (`line-tight`,
+`line-relaxed` …) — множитель от размера шрифта, числовые (`line-1` …
+`line-12`) — ступень шкалы текста. Берите их, чтобы сделать текст плотнее в
+заголовках и свободнее в длинных абзацах.
 
-С помощью модификаторов вы можете задать фиксированную или относительную высоту строки.
+## Пример
 
-## Наглядный пример
+### Множитель
 
-:::example {id="utilities/typography/line-height" label="Высота строки"}
+Множитель растёт вместе с размером шрифта. Фон показывает высоту строк.
+
+:::example {id="utilities/typography/line-height" label="line-none … line-loose"}
 :::
 
-## Таблица классов
+### Шкала
 
-Фиксированная высота строки:
+Ступень шкалы задаёт высоту строки, которая не зависит от размера шрифта.
 
-| Класс     | Значение               |
-|:----------|:-------------------------------------------|
-| `line-1/4` | `line-height: var(--sf-text-height-1/4);` |
-| `line-1/3` | `line-height: var(--sf-text-height-1/3);` |
-| `line-1/2` | `line-height: var(--sf-text-height-1/2);` |
-| `line-1` | `line-height: var(--sf-text-height-1);` |
-| `line-2` | `line-height: var(--sf-text-height-2);` |
-| `line-3` | `line-height: var(--sf-text-height-3);` |
-| `line-4` | `line-height: var(--sf-text-height-4);` |
-| `line-5` | `line-height: var(--sf-text-height-5);` |
-| `line-6` | `line-height: var(--sf-text-height-6);` |
-| `line-7` | `line-height: var(--sf-text-height-7);` |
-| `line-8` | `line-height: var(--sf-text-height-8);` |
-| `line-9` | `line-height: var(--sf-text-height-9);` |
-| `line-10` | `line-height: var(--sf-text-height-10);` |
-| `line-11` | `line-height: var(--sf-text-height-11);` |
-| `line-12` | `line-height: var(--sf-text-height-12);` |
+:::example {id="utilities/typography/line-height-scale" label="line-1/2 … line-8"}
+:::
 
-Относительная высота строки:
+### Ширина экрана
 
-| Класс         | Значение            |
-|:--------------|:--------------------|
-| `line-none` | `line-height: 1;` |
-| `line-tight` | `line-height: 1.25;` |
-| `line-snug` | `line-height: 1.375;` |
-| `line-normal` | `line-height: 1.5;` |
-| `line-relaxed` | `line-height: 1.625;` |
-| `line-loose` | `line-height: 2;` |
+Меняйте ширину окна просмотра: начиная с ширины `md` строки становятся
+свободнее.
 
-## Синтаксис
+:::example {id="utilities/typography/line-height-responsive" label="line-tight md:line-loose"}
+:::
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Классы
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `line-{значение}` | `line-height: var(--sf-text--height-{значение})` | `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
+| `line-tight` | `line-height: 1.25` | — |
+| `line-snug` | `line-height: 1.375` | — |
+| `line-relaxed` | `line-height: 1.625` | — |
+| `line-loose` | `line-height: 2` | — |
+| `line-none` | `line-height: 1` | — |
+| `line-normal` | `line-height: 1.5` | — |
 
-- Модификатор *(обязательный параметр)*:
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:line-1/4`.
 
-    - Фиксированные значения (`line-1/4`, `line-1/3`, `line-1/2`, `line-1` … `line-12`) используют предопределенные
-      переменные.
-    - Относительные значения (`line-none`, `line-tight`, `line-snug`, `line-normal`, `line-relaxed`, `line-loose`)
-      используют коэффициенты от высоты шрифта.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Пример использования
+## Переменные
 
-### Фиксированная высота строки
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-text--height-1/4` | `0.75rem; от ширины lg: var(--sf-b2)` |
+| `--sf-text--height-1/3` | `1rem; от ширины lg: var(--sf-b6)` |
+| `--sf-text--height-1/2` | `1rem; от ширины lg: 1.25rem` |
+| `--sf-text--height-1` | `var(--sf-c0); от ширины lg: var(--sf-c2)` |
+| `--sf-text--height-2` | `var(--sf-c2); от ширины lg: var(--sf-c4)` |
+| `--sf-text--height-3` | `var(--sf-c2); от ширины lg: var(--sf-c8)` |
+| `--sf-text--height-4` | `var(--sf-c4); от ширины lg: var(--sf-d0)` |
+| `--sf-text--height-5` | `var(--sf-c6); от ширины lg: var(--sf-d2)` |
+| `--sf-text--height-6` | `var(--sf-c8); от ширины lg: var(--sf-d3)` |
+| `--sf-text--height-7` | `var(--sf-d0); от ширины lg: var(--sf-d5)` |
+| `--sf-text--height-8` | `var(--sf-d2); от ширины lg: var(--sf-d8)` |
+| `--sf-text--height-9` | `var(--sf-d3); от ширины lg: var(--sf-e0)` |
+| `--sf-text--height-10` | `var(--sf-d5); от ширины lg: var(--sf-e2)` |
+| `--sf-text--height-11` | `var(--sf-d6); от ширины lg: var(--sf-e3)` |
+| `--sf-text--height-12` | `var(--sf-d8); от ширины lg: var(--sf-e5)` |
+| `--sf-text-height-1/4` | `var(--sf-text--height-1/4)` |
+| `--sf-text-height-1/3` | `var(--sf-text--height-1/3)` |
+| `--sf-text-height-1/2` | `var(--sf-text--height-1/2)` |
+| `--sf-text-height-1` | `var(--sf-text--height-1)` |
+| `--sf-text-height-2` | `var(--sf-text--height-2)` |
+| `--sf-text-height-3` | `var(--sf-text--height-3)` |
+| `--sf-text-height-4` | `var(--sf-text--height-4)` |
+| `--sf-text-height-5` | `var(--sf-text--height-5)` |
+| `--sf-text-height-6` | `var(--sf-text--height-6)` |
+| `--sf-text-height-7` | `var(--sf-text--height-7)` |
+| `--sf-text-height-8` | `var(--sf-text--height-8)` |
+| `--sf-text-height-9` | `var(--sf-text--height-9)` |
+| `--sf-text-height-10` | `var(--sf-text--height-10)` |
+| `--sf-text-height-11` | `var(--sf-text--height-11)` |
+| `--sf-text-height-12` | `var(--sf-text--height-12)` |
+
+## Применение
+
+| Класс | Множитель | Где |
+|:---|:---|:---|
+| `line-none` | 1 | одна строка: значки, цифры, кнопки |
+| `line-tight` | 1,25 | крупные заголовки |
+| `line-snug` | 1,375 | подзаголовки |
+| `line-normal` | 1,5 | обычный текст |
+| `line-relaxed` | 1,625 | длинные абзацы |
+| `line-loose` | 2 | редкий текст, подписи с запасом |
+
+Класс размера `text-*` задаёт высоту строки вместе с размером. Ступень
+`line-*` с тем же номером даёт ту же высоту строки, что у `text-*`.
 
 ```html
-<p class="line-1">Текст с базовой высотой строки</p>
-<p class="line-2">Текст с увеличенной высотой строки</p>
-<p class="line-1/2">Текст с уменьшенной высотой строки</p>
+<h1 class="text-10 line-tight">Заголовок в несколько строк</h1>
+<p class="line-relaxed measure">Длинный абзац статьи…</p>
 ```
 
-### Относительная высота строки
+## Ограничения
 
-```html
-<p class="line-none">Текст с высотой строки, равной размеру шрифта</p>
-<p class="line-tight">Текст с высотой строки 1.25 от размера шрифта</p>
-<p class="line-normal">Текст с высотой строки 1.5 (нормальная)</p>
-<p class="line-loose">Текст с высотой строки, в 2 раза больше размера шрифта</p>
-```
+- `text-*` и `line-*` задают `line-height` в одном слое каскада, и при
+  равной специфичности побеждает правило, которое подключено позже. Для
+  заголовков с плотной строкой надёжнее `title-*` или `text-* heading`.
+- У шкалы есть совпадающие ступени: `line-1/3` и `line-1/2`, `line-2` и
+  `line-3` дают одинаковую высоту строки.
 
-## Заметки
+## См. также
 
-- Если в предыдущих версиях использовался класс `line-13`, замените его на `line-12`.
-- При необходимости использовать адаптивность, например, увеличить высоту строки начиная со среднего размера экрана,
-  добавьте префикс `md:`:
-
-```html
-<p class="md:line-2">Текст, который при ширине экрана medium и больше будет с высотой строки, соответствующей переменной line-2.</p>
-```
+- [Размер текста](/ru/utilities/typography/text-size/)
+- [Размер заголовков](/ru/utilities/typography/title-size/)
+- [Типографика](/ru/guide/fundamentals/typography/)

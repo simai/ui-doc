@@ -1,67 +1,86 @@
 ---
 title: "Начальное положение строки сетки"
-description: "Начальное положение строки сетки (grid-row-start)"
-tags: [grid-row-start, sm, md, lg, xl, xxl]
+description: "Ставит элемент сетки в строку с заданным номером."
 ---
 
 # Начальное положение строки сетки
 
-:badge[grid-row-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `row-start-*` задают `grid-row-start` — линию сетки, с которой
+начинается элемент по вертикали. Берите их, чтобы поставить элемент в нужную
+строку независимо от порядка разметки.
 
-В SIMAI Framework с помощью модификаторов можно управлять тем, с какой строки начинается элемент в сетке, задавая его
-положение относительно строк.
+## Пример
 
-## Наглядный пример
+### Номер линии
 
-:::example {id="utilities/grid/grid-row-start" label="Начальное положение строки сетки"}
+Сетка из трёх колонок. Линия `1` — верхний край первой строки, поэтому
+`row-start-2` ставит элемент во вторую строку, а остальные элементы
+обходят его.
+
+:::example {id="utilities/grid/grid-row-start" label="row-start-2 и row-start-3 col-start-2"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс                | Значение              |
-|:---------------------|:----------------------|
-| `grid-row-start-1` | `grid-row-start: 1;` |
-| `grid-row-start-2` | `grid-row-start: 2;` |
-| `grid-row-start-3` | `grid-row-start: 3;` |
-| `grid-row-start-4` | `grid-row-start: 4;` |
-| `grid-row-start-5` | `grid-row-start: 5;` |
-| `grid-row-start-6` | `grid-row-start: 6;` |
-| `grid-row-start-7` | `grid-row-start: 7;` |
-| `grid-row-start-auto` | `grid-row-start: auto;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `row-start-1` | `grid-row-start: 1` | — |
+| `grid-row-start-1` | `grid-row-start: 1` | — |
+| `row-start-2` | `grid-row-start: 2` | — |
+| `grid-row-start-2` | `grid-row-start: 2` | — |
+| `row-start-3` | `grid-row-start: 3` | — |
+| `grid-row-start-3` | `grid-row-start: 3` | — |
+| `row-start-4` | `grid-row-start: 4` | — |
+| `grid-row-start-4` | `grid-row-start: 4` | — |
+| `row-start-5` | `grid-row-start: 5` | — |
+| `grid-row-start-5` | `grid-row-start: 5` | — |
+| `row-start-6` | `grid-row-start: 6` | — |
+| `grid-row-start-6` | `grid-row-start: 6` | — |
+| `row-start-7` | `grid-row-start: 7` | — |
+| `grid-row-start-7` | `grid-row-start: 7` | — |
+| `row-start-auto` | `grid-row-start: auto` | — |
+| `grid-row-start-auto` | `grid-row-start: auto` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-start-1`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор, начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `grid-row-start-{n}` (где n от 1 до 7) — элемент начинается с указанной строки.
-    - `grid-row-start-auto` — начало строки определяется автоматически.
+- `row-start-1` … `row-start-7` — номер линии, с которой начинается элемент.
+- `row-start-auto` — место выбирает раскладка; класс нужен, чтобы отменить
+  `row-start-*` на другой ширине экрана.
 
-## Пример использования
+С `row-span-*` класс задаёт начало и высоту; с
+[`row-end-*`](/ru/utilities/grid/grid-row-end/) — начало и конец. Вместе с
+[`col-start-*`](/ru/utilities/grid/grid-column-start/) он ставит элемент в
+конкретную ячейку.
+
+### Ячейка по номерам
 
 ```html
-<div class="grid grid-col-6 gap-1">
-    <div class="grid-row-start-2 col-span-4">1</div>
-    <div class="col-start-1 col-end-3">2</div>
-    <div class="col-end-7 col-span-2">3</div>
-    <div class="col-start-1 col-end-7">4</div>
+<div class="grid grid-col-3 gap-2">
+  <div class="row-start-2 col-start-3">Вторая строка, третья колонка</div>
 </div>
 ```
 
-В этом примере элемент с классом `grid-row-start-2` начнётся со второй строки сетки.
+### Второе имя
 
-## Адаптивность
+У каждого класса есть второе имя с приставкой `grid-`: `grid-row-start-2`,
+`grid-row-start-auto`. Значения те же. В разметке пишите короткие имена — они
+соответствуют колоночным `col-start-*`.
 
-Для изменения начального положения элемента по строкам, начиная с определённого размера экрана, добавьте контрольную
-точку:
+## Ограничения
 
-```html
-<div class="md:grid-row-start-2">
-    <!-- Начиная с md элемент будет начинаться со 2-й строки -->
-</div>
-```
+- Номер больше числа строк добавляет пустые строки до нужной линии.
+- Элемент с заданной строкой раскладка ставит раньше остальных, поэтому
+  видимый порядок может разойтись с порядком разметки, по которому идут фокус
+  клавиатуры и программы экранного доступа.
+
+## См. также
+
+- [Конечное положение строки сетки](/ru/utilities/grid/grid-row-end/)
+- [Размер строки сетки](/ru/utilities/grid/grid-row/)
+- [Начальное положение колонки сетки](/ru/utilities/grid/grid-column-start/)

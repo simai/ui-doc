@@ -1,11 +1,29 @@
-<div class="wrap grid grid-col-1 gap-3 content-main-start">
+<div class="flex flex-col gap-3 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center">col-span</div>
-    <div class="m-0 grid grid-col-6 gap-2 bg-surface border border-outline-variant radius-2 p-2">
-      <div class="bg-primary color-on-primary p-2 col-span-2" aria-label="1">span-2</div>
-      <div class="bg-secondary color-on-secondary p-2 col-span-3" aria-label="2">span-3</div>
-      <div class="bg-tertiary color-on-tertiary p-2 col-span-1" aria-label="3">span-1</div>
-      <div class="bg-success color-on-success p-2 col-span-full" aria-label="4">span-full</div>
+    <code class="text-1/2 color-on-surface-variant">col-span-2 · col-span-4</code>
+    <div class="grid grid-col-6 gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="col-span-2 p-1 bg-primary-container color-on-primary-container radius-ui">col-span-2</span>
+      <span class="col-span-4 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">col-span-4</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">col-span-3 · col-span-3</code>
+    <div class="grid grid-col-6 gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="col-span-3 p-1 bg-primary-container color-on-primary-container radius-ui">col-span-3</span>
+      <span class="col-span-3 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">col-span-3</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">col-span-5 · col-auto</code>
+    <div class="grid grid-col-6 gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="col-span-5 p-1 bg-primary-container color-on-primary-container radius-ui">col-span-5</span>
+      <span class="col-auto p-1 bg-tertiary-container color-on-tertiary-container radius-ui">col-auto</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">col-span-full</code>
+    <div class="grid grid-col-6 gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="col-span-full p-1 bg-tertiary-container color-on-tertiary-container radius-ui">col-span-full</span>
     </div>
   </div>
 </div>

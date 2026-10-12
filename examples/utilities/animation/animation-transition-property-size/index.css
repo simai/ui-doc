@@ -1,0 +1,10 @@
+.demo-resize {
+  inline-size: var(--sf-d8);
+  block-size: var(--sf-d2);
+}
+
+.demo-resize:hover,
+.demo-resize:focus-visible {
+  inline-size: 100%;
+  block-size: var(--sf-e4);
+}

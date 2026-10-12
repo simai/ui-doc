@@ -1,59 +1,78 @@
 ---
 title: "Автоматическое формирование сетки"
-description: "Автоматическое формирование сетки (grid-auto-flow)"
-tags: [grid-auto-flow, sm, md, lg, xl, xxl]
+description: "Задаёт, как сетка раскладывает элементы без заданного места: по строкам или по колонкам, с заполнением пропусков или без."
 ---
 
 # Автоматическое формирование сетки
 
-:badge[grid-auto-flow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `grid-flow-*` задают `grid-auto-flow`: в каком направлении
+грид-контейнер раскладывает элементы, которым не задано место, и заполняет ли
+он пропуски. Берите их, чтобы раскладывать элементы по колонкам или плотно
+упаковывать карточки разной ширины.
 
-В SIMAI Framework с помощью модификаторов можно управлять автоматическим размещением элементов в сетке. Это позволяет гибко адаптировать отображение контента, сохраняя порядок либо оптимизируя использование доступного пространства.
+## Пример
 
-## Наглядный пример
+### Строки и колонки
 
-:::example {id="utilities/grid/grid-auto-flow" label="Автоматическое формирование сетки"}
+С `grid-flow-row` элементы заполняют строку и переходят на следующую; с
+`grid-flow-col` заполняют колонку сверху вниз — здесь в сетке из двух строк.
+
+:::example {id="utilities/grid/grid-auto-flow" label="grid-flow-row и grid-flow-col"}
 :::
 
-## Таблица классов
+### Заполнение пропусков
 
-| Класс                | Значение                      |
-|:---------------------|:------------------------------|
-| `grid-flow-row` | `grid-auto-flow: row;` |
-| `grid-flow-col` | `grid-auto-flow: column;` |
-| `grid-flow-row-dense` | `grid-auto-flow: row dense;` |
-| `grid-flow-col-dense` | `grid-auto-flow: column dense;` |
+Элементы 2 и 3 широкие. Без уплотнения после них в строке остаются пустые
+ячейки; с `grid-flow-row-dense` в пропуски встают следующие элементы, и
+видимый порядок меняется.
 
-## Синтаксис
+:::example {id="utilities/grid/grid-auto-flow-dense" label="grid-flow-row и grid-flow-row-dense"}
+:::
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Классы
 
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, модификатор действует для всех размеров.
-- Модификатор *(обязательный параметр)*:
-  - `grid-flow-row` — элементы заполняют строки последовательно.
-  - `grid-flow-col` — элементы заполняют столбцы последовательно.
-  - `grid-flow-row-dense` — элементы размещаются по строкам, пытаясь занять свободные ячейки, даже если это нарушает исходный порядок.
-  - `grid-flow-col-dense` — элементы размещаются по столбцам с уплотнением аналогично row-dense.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `grid-flow-row` | `grid-auto-flow: row` | — |
+| `grid-flow-col` | `grid-auto-flow: column` | — |
+| `grid-flow-row-dense` | `grid-auto-flow: row dense` | — |
+| `grid-flow-col-dense` | `grid-auto-flow: column dense` | — |
 
-## Пример использования
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-flow-row`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+### Как выбрать
+
+- `grid-flow-row` — по строкам; значение по умолчанию у грид-контейнера.
+  Класс нужен, чтобы вернуть его на другой ширине экрана.
+- `grid-flow-col` — по колонкам. Число строк задайте шаблоном
+  [`grid-row-*`](/ru/utilities/grid/grid-template-rows/), иначе все элементы
+  встанут в одну строку.
+- `grid-flow-row-dense` и `grid-flow-col-dense` — то же, но элементы
+  заполняют пропуски, оставленные широкими соседями.
+
+### Плотная галерея
 
 ```html
-<div class="grid grid-col-6 gap-1 grid-flow-row">
-  <div class="col-span-4">1</div>
-  <div class="col-span-3">2</div>
-  <div class="col-span-2">3</div>
-  <div class="col-span-3">4</div>
+<div class="grid grid-col-4 grid-flow-row-dense gap-2">
+  <figure class="col-span-2">Широкое фото</figure>
+  <figure class="col-span-3">Панорама</figure>
+  <figure>Фото</figure>
+  <figure>Фото</figure>
 </div>
 ```
 
-В этом примере элементы заполняют строки по порядку.
+## Ограничения
 
-## Адаптивность
+- С уплотнением видимый порядок расходится с порядком разметки, по которому
+  идут фокус клавиатуры и программы экранного доступа. Не используйте его там,
+  где порядок важен: в списках ссылок, формах, шагах.
 
-Чтобы менять поведение начиная с определённой ширины, добавьте контрольную точку:
+## См. также
 
-```html
-<div class="md:grid-flow-row-dense">
-  <!-- Начиная с md элементы будут размещаться плотнее по строкам -->
-</div>
-```
+- [Шаблон колонок сетки](/ru/utilities/grid/grid-template-columns/)
+- [Шаблон строк сетки](/ru/utilities/grid/grid-template-rows/)
+- [Автоматическая ширина столбцов сетки](/ru/utilities/grid/grid-auto-columns/)

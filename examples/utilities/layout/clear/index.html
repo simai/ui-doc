@@ -1,18 +1,34 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 sm:grid-col-2 gap-4 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>clear-inline-start</code></div>
-    <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3">
-      <img src="assets/color-study.jpg" class="w-e4 aspect-4x3 object-cover float-inline-start radius-2 m-inline-end-2 m-bottom-2" alt="Цветная композиция">
-      <div class="bg-primary color-on-primary p-2 clear-inline-start" aria-label="Блок после плавающего элемента">Начинается ниже изображения</div>
+    <code class="text-1/2 color-on-surface-variant">clear-none</code>
+    <div class="flow-root p-1 border border-dashed border-outline radius-ui">
+      <div class="float-inline-start w-d8 h-d8 m-inline-end-1 bg-primary-container border border-primary radius-ui"></div>
+      <div class="float-inline-end w-d8 h-e6 m-inline-start-1 bg-tertiary-container border border-tertiary radius-ui"></div>
+      <div class="clear-none p-1 bg-secondary-container color-on-secondary-container radius-ui">Стоит между плавающими блоками</div>
     </div>
   </div>
-
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>clear-both</code></div>
-    <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3">
-      <img src="assets/color-study.jpg" class="w-e4 aspect-4x3 object-cover float-inline-start radius-2 m-inline-end-2 m-bottom-2" alt="Цветная композиция слева">
-      <img src="assets/color-study.jpg" class="w-e4 aspect-4x3 object-cover float-inline-end radius-2 m-inline-start-2 m-bottom-2" alt="Цветная композиция справа">
-      <div class="bg-secondary color-on-secondary p-2 clear-both" aria-label="Блок после двух плавающих элементов">Начинается ниже обоих изображений</div>
+    <code class="text-1/2 color-on-surface-variant">clear-inline-start</code>
+    <div class="flow-root p-1 border border-dashed border-outline radius-ui">
+      <div class="float-inline-start w-d8 h-d8 m-inline-end-1 bg-primary-container border border-primary radius-ui"></div>
+      <div class="float-inline-end w-d8 h-e6 m-inline-start-1 bg-tertiary-container border border-tertiary radius-ui"></div>
+      <div class="clear-inline-start p-1 bg-secondary-container color-on-secondary-container radius-ui">Ниже блока у начала строки</div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">clear-inline-end</code>
+    <div class="flow-root p-1 border border-dashed border-outline radius-ui">
+      <div class="float-inline-start w-d8 h-d8 m-inline-end-1 bg-primary-container border border-primary radius-ui"></div>
+      <div class="float-inline-end w-d8 h-e6 m-inline-start-1 bg-tertiary-container border border-tertiary radius-ui"></div>
+      <div class="clear-inline-end p-1 bg-secondary-container color-on-secondary-container radius-ui">Ниже блока у конца строки</div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">clear-both</code>
+    <div class="flow-root p-1 border border-dashed border-outline radius-ui">
+      <div class="float-inline-start w-d8 h-d8 m-inline-end-1 bg-primary-container border border-primary radius-ui"></div>
+      <div class="float-inline-end w-d8 h-e6 m-inline-start-1 bg-tertiary-container border border-tertiary radius-ui"></div>
+      <div class="clear-both p-1 bg-secondary-container color-on-secondary-container radius-ui">Ниже обоих блоков</div>
     </div>
   </div>
 </div>

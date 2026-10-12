@@ -1,36 +1,10 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
-  <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">will-change-transform</div>
-    <div
-      class="p-3 radius-3 border border-outline-variant will-change-transform transition-transform duration-slow hover:scale-3"
-    >
-      <p>При наведении: преобразование с подсказкой браузеру.</p>
-    </div>
+<div class="grid grid-col-1 sm:grid-col-2 gap-4">
+  <div class="flex flex-col gap-1 items-start">
+    <div class="will-change-transform transition-transform duration-slow hover:scale-3 p-3 radius-ui bg-primary-container color-on-primary-container">Наведите указатель</div>
+    <code class="text-1/2 color-on-surface-variant">will-change-transform</code>
   </div>
-  <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">will-change-auto</div>
-    <div
-      class="p-3 radius-3 border border-outline-variant will-change-auto transition-transform duration-slow hover:scale-3"
-    >
-      <p>При наведении: то же преобразование без подсказки.</p>
-    </div>
-  </div>
-  <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">will-change-scroll-position</div>
-    <div
-      class="p-3 radius-3 border border-outline-variant will-change-scroll-position overflow-auto h-e5"
-    >
-      <div class="h-e6 p-2 bg-surface-container radius-2">
-        Scrollable content area for scroll-position hint.
-      </div>
-    </div>
-  </div>
-  <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">will-change-contents</div>
-    <div
-      class="p-3 radius-3 border border-outline-variant will-change-contents"
-    >
-      <p>Hint that element content may change soon.</p>
-    </div>
+  <div class="flex flex-col gap-1 items-start">
+    <div class="will-change-auto transition-transform duration-slow hover:scale-3 p-3 radius-ui bg-surface-container color-on-surface">Наведите указатель</div>
+    <code class="text-1/2 color-on-surface-variant">will-change-auto</code>
   </div>
 </div>

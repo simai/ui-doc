@@ -1,43 +1,73 @@
 ---
 title: "Семейство шрифтов"
-description: "Семейство шрифтов (font-family)"
-tags: [font-family]
+description: "Переключает текст на набор шрифтов без засечек, с засечками или моноширинный."
 ---
 
 # Семейство шрифтов
 
-:badge[font-family]{type=main scheme=on-surface size=1}
+Классы `sans`, `serif` и `mono` задают семейство шрифтов через токены темы.
+Берите `mono` для кода, идентификаторов и чисел, которые сравнивают по
+разрядам, а `serif` — для текста, которому нужен книжный вид.
 
-В текущей версии для изменения семейства шрифтов используется система переменных. Значения переменных задаются в ядре
-фреймворка. Использование классов семейства шрифтов позволяет гибко переключать стили текста без необходимости
-переопределять стили вручную.
+## Пример
 
-## Наглядный пример
+Подпись над образцом — класс, который на нём стоит.
 
-:::example {id="utilities/typography/font-family" label="Семейство шрифтов"}
+:::example {id="utilities/typography/font-family" label="sans, serif, mono"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс  | Значение                        |
-|:-------|:--------------------------------|
-| `sans` | `font-family: var(--sf-sans);` |
-| `serif` | `font-family: var(--sf-serif);` |
-| `mono` | `font-family: var(--sf-mono);` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `sans` | `font-family: var(--sf-sans)` | — |
+| `serif` | `font-family: var(--sf-serif)` | — |
+| `mono` | `font-family: var(--sf-mono)` | — |
 
-## Пример использования
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
+| `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
+| `--sf-mono` | `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace` |
+
+## Применение
+
+Каждый класс читает свой токен: `--sf-sans`, `--sf-serif`, `--sf-mono`.
+Токен — это список шрифтов: браузер берёт первый установленный.
 
 ```html
-<p class="sans">Этот текст будет отображаться шрифтом из переменной var(--sf-sans).</p>
-<p class="serif">Этот текст будет отображаться шрифтом из переменной var(--sf-serif).</p>
-<p class="mono">Этот текст будет отображаться шрифтом из переменной var(--sf-mono).</p>
+<p>Команда сборки: <code class="mono">npm run build</code></p>
+<blockquote class="serif italic">Цитата с книжным начертанием.</blockquote>
 ```
 
-## Адаптивность
+Чтобы подключить фирменный шрифт для всех таких мест сразу, переопределите
+токен в теме проекта:
 
-Для изменения семейства шрифта начиная с определённой контрольной точки (например, `md`) просто добавьте префикс
-контрольной точки:
-
-```html
-<p class="serif">На экранах md и больше текст будет шрифтом serif.</p>
+```css
+:root {
+  --sf-serif: "PT Serif", ui-serif, Georgia, serif;
+}
 ```
+
+## Ограничения
+
+- Основной шрифт страницы задаёт тема (`--sf-text--family`), а не класс
+  `sans`: `sans` берёт системный набор и может отличаться от шрифта
+  остального текста.
+- У семейства нет префиксов ширины экрана и состояний.
+
+## См. также
+
+- [Типографика](/ru/guide/fundamentals/typography/)
+- [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/)

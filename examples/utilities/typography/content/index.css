@@ -1,0 +1,19 @@
+/* Demo only. The base layer keeps the utilities above these rules. */
+@layer sf.base {
+  .demo-badge::before {
+    content: "Новое";
+    margin-inline-end: var(--sf-a8);
+    padding-inline: var(--sf-a4);
+    border-radius: var(--sf-a2);
+    background-color: var(--sf-primary-container);
+    color: var(--sf-on-primary-container);
+  }
+  .demo-dot::before {
+    display: inline-block;
+    inline-size: var(--sf-a8);
+    block-size: var(--sf-a8);
+    margin-inline-end: var(--sf-a8);
+    border-radius: 50%;
+    background-color: var(--sf-primary);
+  }
+}

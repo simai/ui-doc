@@ -1,37 +1,84 @@
 ---
 title: "Вращение"
-description: "Классы вращения transform-rotate"
-tags: [transform-rotate, hover]
+description: "Поворачивает элемент на угол от 1° до 180° — для наклонных меток, стрелок и значков."
 ---
 
 # Вращение
 
-:badge[transform-rotate]{type=main scheme=on-surface size=1}
+Классы `rotate-*` поворачивают элемент по часовой стрелке на заданное число
+градусов. Берите их для стрелок и шевронов, которые меняют направление, для
+наклонных меток и для лёгкой «небрежности» карточек.
 
-`transform-rotate` поворачивает элемент на заданный угол.
+## Пример
 
-## Наглядный пример
+### Шкала
 
-:::example {id="utilities/transform/transform-rotate" label="Вращение"}
+Пунктир — место элемента без поворота. Поворот идёт вокруг центра; подпись —
+класс.
+
+:::example {id="utilities/transform/transform-rotate" label="Углы поворота"}
+:::
+
+### При наведении
+
+Префикс `hover:` поворачивает элемент, пока над ним указатель. Наведите
+указатель на образцы; плавность даёт класс `transition-transform`.
+
+:::example {id="utilities/transform/transform-rotate-hover" label="Поворот при наведении"}
 :::
 
 ## Классы
 
-| Класс | Значение |
-|:---|:---|
-| `rotate-0` | `transform: rotate(0deg)` |
-| `rotate-1` | `transform: rotate(1deg)` |
-| `rotate-2` | `transform: rotate(2deg)` |
-| `rotate-3` | `transform: rotate(3deg)` |
-| `rotate-5` | `transform: rotate(5deg)` |
-| `rotate-15` | `transform: rotate(15deg)` |
-| `rotate-45` | `transform: rotate(45deg)` |
-| `rotate-90` | `transform: rotate(90deg)` |
-| `rotate-180` | `transform: rotate(180deg)` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `rotate-0` | `transform: rotate(0deg)` | — |
+| `rotate-1` | `transform: rotate(1deg)` | — |
+| `rotate-2` | `transform: rotate(2deg)` | — |
+| `rotate-3` | `transform: rotate(3deg)` | — |
+| `rotate-5` | `transform: rotate(5deg)` | — |
+| `rotate-15` | `transform: rotate(15deg)` | — |
+| `rotate-45` | `transform: rotate(45deg)` | — |
+| `rotate-90` | `transform: rotate(90deg)` | — |
+| `rotate-180` | `transform: rotate(180deg)` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:rotate-0`.
 
-- `rotate-{value}`
-- `hover:rotate-{value}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-Где `value`: `0`, `1`, `2`, `3`, `5`, `15`, `45`, `90`, `180`.
+## Применение
+
+### Выбор угла
+
+Мелкие углы `rotate-1` … `rotate-5` дают лёгкий наклон, `rotate-15` и
+`rotate-45` — заметный, `rotate-90` и `rotate-180` разворачивают значок.
+Число в имени класса — угол в градусах.
+
+### Стрелка, которая разворачивается
+
+Шеврон раскрывающегося блока поворачивают при наведении или классом,
+который ставит скрипт:
+
+```html
+<span class="sf-icon transition-transform hover:rotate-180" aria-hidden="true">expand_more</span>
+```
+
+Точку, вокруг которой идёт поворот, задают классы
+[точки трансформации](/ru/utilities/transform/transform-origin/).
+
+## Ограничения
+
+- Классы поворота, масштаба, наклона и смещения задают одно свойство
+  `transform` целиком, поэтому на одном элементе действует только один из
+  них: `rotate-45 scale-2` не повернёт и не увеличит элемент одновременно.
+  Сочетаются только смещения по `x` и `y` между собой.
+- Трансформация не меняет раскладку: соседние элементы остаются на местах, а
+  увеличенный или повёрнутый элемент может перекрыть их.
+- Отрицательных углов нет: поворот против часовой стрелки задают в стилях
+  проекта.
+- Из префиксов есть только `hover:`; префиксов ширины экрана нет.
+
+## См. также
+
+- [Точка трансформации](/ru/utilities/transform/transform-origin/)
+- [Масштабирование](/ru/utilities/transform/transform-scale/)
+- [Общее свойство перехода](/ru/utilities/animation/animation-transition-property/)

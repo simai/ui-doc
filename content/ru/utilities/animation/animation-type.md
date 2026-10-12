@@ -1,36 +1,112 @@
 ---
 title: "Тип анимации"
-description: "animation-from-left/right/bottom"
-tags: [animation]
+description: "Проявляет элемент при отрисовке — из прозрачности или сдвигом с одной из сторон, один раз или по кругу."
 ---
 
 # Тип анимации
 
-:badge[animation]{type=main scheme=on-surface size=1}
-
-Классы типа задают направление анимации.
-
-## Наглядный пример
-
-:::example {id="utilities/animation/animation-type" label="Тип анимации"}
-:::
-
-## Классы и значения
-
-| Класс                    | Значение |
-|:-------------------------|:---------|
-| `animation-from-left` | Появление сдвигом слева. |
-| `animation-from-right` | Появление сдвигом справа. |
-| `animation-from-bottom` | Появление сдвигом снизу. |
-
-## Как использовать
-
-Рекомендуется использовать вместе с базовым классом `.animation`:
-
-```html
-<div class="animation animation-from-left">...</div>
-<div class="animation animation-from-right">...</div>
-<div class="animation animation-from-bottom">...</div>
-```
+Класс `animation` проявляет элемент из прозрачности, когда браузер его
+отрисовывает. Классы направления добавляют к проявлению короткий сдвиг слева,
+справа или снизу, а `infinite` повторяет анимацию без остановки. Берите их для
+появления карточек, уведомлений и других блоков, которые приходят на страницу.
 
 ## Пример
+
+### Направление
+
+Каждый образец повторяется по кругу, чтобы движение было видно. Подпись —
+класс, который задаёт направление.
+
+:::example {id="utilities/animation/animation-type" label="Проявление и сдвиг с трёх сторон"}
+:::
+
+### Один раз и по кругу
+
+Без `infinite` анимация идёт один раз — при отрисовке элемента. Кнопка
+«Повторить» снимает и снова ставит класс `animation` на левом образце.
+
+:::example {id="utilities/animation/animation-type-repeat" label="Однократная и бесконечная анимация"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `animation` | `animation-name: sf-animation-fade; animation-duration: var(--sf-duration-normal); animation-timing-function: var(--sf-animation); animation-fill-mode: both` | — |
+| `infinite` | `animation-iteration-count: infinite` | — |
+| `animation-from-left` | `animation-name: sf-animation-from-left` | — |
+| `animation-from-right` | `animation-name: sf-animation-from-right` | — |
+| `animation-from-bottom` | `animation-name: sf-animation-from-bottom` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-duration-normal` | `0.3S` |
+| `--sf-animation` | `cubic-bezier(.25, .8, .25, 1)` |
+| `--sf-b0` | `0.625rem` |
+
+## Применение
+
+### Базовый класс и направление
+
+`animation` задаёт имя, длительность, кривую и заполнение анимации; классы
+`animation-from-*` меняют только её имя. Поэтому направление всегда ставят
+вместе с базовым классом: без него длительность анимации нулевая и движения нет.
+
+```html
+<div class="animation">Проявляется</div>
+<div class="animation animation-from-bottom">Поднимается снизу</div>
+```
+
+Сдвиг небольшой — 10px при `1rem = 16px` (токен `--sf-b0`); элемент
+приходит на своё место из прозрачности.
+
+### Длительность
+
+По умолчанию анимация длится `--sf-duration-normal` (0,3 с). Другую
+длительность задают классы
+[продолжительности анимации](/ru/utilities/animation/animation-duration/):
+
+```html
+<div class="animation animation-from-left animation-duration-slow">Медленно</div>
+```
+
+### Повтор
+
+`infinite` повторяет анимацию бесконечно. Он подходит для индикаторов и
+образцов, но не для содержимого, которое человек читает: постоянное
+движение отвлекает.
+
+```html
+<div class="animation infinite">Повторяется</div>
+```
+
+### Запуск позже
+
+Анимация начинается, когда элемент с классом попадает в документ или когда
+класс появляется на элементе. Чтобы показать блок по действию, добавьте класс
+скриптом; чтобы повторить анимацию, снимите класс и поставьте его снова.
+
+## Ограничения
+
+- Анимация не ждёт, пока элемент окажется в области просмотра: блок ниже
+  первого экрана проявляется сразу при загрузке, и человек этого не видит.
+- Направления физические: `animation-from-left` приходит слева и при письме
+  справа налево.
+- Классы не учитывают системную настройку уменьшения движения
+  (`prefers-reduced-motion`). Если движение не несёт смысла, отключите его в
+  стилях проекта по медиазапросу `prefers-reduced-motion: reduce`.
+- У семейства нет префиксов ширины экрана и состояния.
+
+## См. также
+
+- [Продолжительность анимации](/ru/utilities/animation/animation-duration/)
+- [Общее свойство перехода](/ru/utilities/animation/animation-transition-property/)
+- [Смещение](/ru/utilities/transform/transform-translate/)

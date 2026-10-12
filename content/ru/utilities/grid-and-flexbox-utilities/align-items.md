@@ -1,65 +1,80 @@
 ---
 title: "Выравнивание каждого элемента в ячейках по поперечной оси"
-description: "Выравнивание каждого элемента в ячейках по поперечной оси (align-items)"
-tags: [align-items, sm, md, lg, xl, xxl]
+description: "Выравнивает все элементы флекс-контейнера или сетки по поперечной оси: к началу, центру, концу, по базовой линии или на всю высоту."
 ---
 
 # Выравнивание каждого элемента в ячейках по поперечной оси
 
-:badge[align-items]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `items-cross-*` задают `align-items`: как элементы стоят поперёк
+основной оси — в строке флекс-контейнера по вертикали, а в ячейках сетки по
+вертикали ячейки. Берите их, чтобы выровнять по центру иконку и подпись или
+не растягивать карточки на высоту соседей.
 
-Данные модификаторы определяют, как каждый элемент внутри ячейки сетки или флексбокса будет выравниваться относительно
-поперечной оси.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/align-items" label="Выравнивание каждого элемента в ячейках по поперечной оси"}
+Флекс-контейнер заданной высоты, во втором элементе две строки текста.
+Подпись над образцом — класс контейнера.
+
+:::example {id="utilities/grid-and-flexbox-utilities/align-items" label="items-cross-start, center, end, stretch"}
 :::
 
-## Таблица классов
+### Базовая линия
 
-| Класс                | Значение              |
-|:---------------------|:----------------------|
-| `items-cross-start` | `align-items: start;` |
-| `items-cross-end` | `align-items: end;` |
-| `items-cross-center` | `align-items: center;` |
-| `items-cross-baseline` | `align-items: baseline;` |
-| `items-cross-stretch` | `align-items: stretch;` |
+Текст разного размера. По центру выравниваются середины элементов, по базовой
+линии — строки текста в них.
 
-## Синтаксис
+:::example {id="utilities/grid-and-flexbox-utilities/align-items-baseline" label="items-cross-center и items-cross-baseline"}
+:::
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Классы
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `items-cross-start` | `align-items: start` | — |
+| `items-cross-end` | `align-items: end` | — |
+| `items-cross-center` | `align-items: center` | — |
+| `items-cross-baseline` | `align-items: baseline` | — |
+| `items-cross-stretch` | `align-items: stretch` | — |
 
-- Модификатор *(обязательный параметр)*:
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-cross-start`.
 
-    - `items-cross-start` – каждый элемент прижимается к началу ячейки по поперечной оси;
-    - `items-cross-end` – каждый элемент прижимается к концу ячейки по поперечной оси;
-    - `items-cross-center` – каждый элемент выравнивается по центру ячейки по поперечной оси;
-    - `items-cross-baseline` – выравнивание по базовой линии текста элементов;
-    - `items-cross-stretch` – каждый элемент растягивается, заполняя ячейку по поперечной оси.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Пример использования
+## Применение
 
-```html
-<div class="grid grid-col-3 items-cross-center">
-  <div>Элемент 1</div>
-  <div>Элемент 2</div>
-  <div>Элемент 3</div>
-</div>
-```
+### Как выбрать
 
-Здесь каждый элемент будет выравнен по центру ячейки относительно поперечной оси.
+- `items-cross-stretch` — элементы растягиваются на всю высоту строки; значение
+  по умолчанию. Класс нужен, чтобы вернуть его на другой ширине экрана.
+- `items-cross-start`, `items-cross-center`, `items-cross-end` — элементы
+  своей высоты у начала, в центре или у конца.
+- `items-cross-baseline` — строки текста на одной линии: подпись рядом с
+  крупным числом, поля формы с подписями разного размера.
 
-## Адаптивность
-
-Для изменения выравнивания элементов, начиная с определённого размера экрана, добавьте контрольную точку. Например:
+### Иконка и подпись
 
 ```html
-<div class="md:items-cross-start">
-  <!-- Начиная с md каждый элемент будет прижат к началу ячейки по поперечной оси -->
-</div>
+<a class="flex items-cross-center gap-1" href="/profile">
+  <img class="w-c0 h-c0" src="profile.svg" alt="">
+  Профиль
+</a>
 ```
+
+Отдельный элемент выравнивают классы
+[`self-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-self/).
+Выравнивание по обеим осям сразу задают классы
+[`items-*`](/ru/utilities/grid-and-flexbox-utilities/place-items/).
+
+## Ограничения
+
+- При [`flex-col`](/ru/utilities/flex/flex-direction/) поперечная ось
+  горизонтальна: классы выравнивают по ширине.
+- `items-cross-stretch` не растягивает элемент, у которого задана высота.
+
+## См. также
+
+- [Выравнивание отдельного элемента по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-self/)
+- [Выравнивание содержимого по основной оси](/ru/utilities/grid-and-flexbox-utilities/justify-content/)
+- [Размещение элементов по обеим осям](/ru/utilities/grid-and-flexbox-utilities/place-items/)

@@ -22,7 +22,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const checkOnly = process.argv.includes('--check');
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
 const lock = readJson(join(root, 'simai-framework.lock.json'));
-const settings = readJson(join(root, 'config/reference-pages.json'));
+// REFERENCE_PAGES_CONFIG names another enrolment list (a migration wave's).
+const settings = readJson(process.env.REFERENCE_PAGES_CONFIG || join(root, 'config/reference-pages.json'));
 const commit = lock.runtime.ui.commit;
 const uiRepo = process.env.SIMAI_UI_REPO || resolve(root, '../ui');
 if (!existsSync(join(uiRepo, '.git'))) {
@@ -108,7 +109,19 @@ const rules = (css) => {
   }
   return out;
 };
-const declarations = (body) => body.split(';').map((item) => item.trim()).filter(Boolean).join('; ');
+// A vendor-prefixed declaration (`-o-object-fit`) beside its standard one is
+// a fallback a reader does not write; it is left out.
+const declarations = (body) => {
+  const items = body.split(';').map((item) => item.trim()).filter(Boolean);
+  const standard = new Set(items.map((item) => item.split(':')[0].trim()).filter((property) => !property.startsWith('-')));
+  return items.filter((item) => {
+    const property = item.split(':')[0].trim();
+    const bare = property.replace(/^-(webkit|moz|ms|o)-/u, '');
+    // `-webkit-margin-start` is the old name of `margin-inline-start`.
+    const logical = bare.replace(/^(margin|padding|border)-(start|end)\b/u, '$1-inline-$2');
+    return property === bare || !(standard.has(bare) || standard.has(logical));
+  }).join('; ');
+};
 const firstClass = (selector) => {
   const match = selector.match(/\.((?:[a-zA-Z0-9_-]|\\.)+)/u);
   return match ? unescape(match[1]) : null;
@@ -135,16 +148,40 @@ const utilityClasses = (families) => {
   for (const family of families) {
     const css = show(`distr/utility/${family}/default/css/default.css`);
     if (!css) throw new Error(`no default variant for utility family ${family}`);
-    for (const {selector, body} of rules(css)) {
+    for (const {selector, body, media} of rules(css)) {
       for (const part of selector.split(',').map((item) => item.trim())) {
         const name = firstClass(part);
         if (!name) continue;
-        const plain = unescape(part) === `.${name}`;
+        const shownSelector = unescape(part);
+        // Physical LTR/RTL fallbacks (`html:not([dir="rtl"]) .x`, `.x:dir(ltr)`)
+        // repeat what the logical rule says; the logical one is the row.
+        const fallback = /\[dir|:dir\(|html:not\(/u.test(shownSelector);
+        const plain = shownSelector === `.${name}`;
+        const rank = plain ? 2 : (fallback ? 0 : 1);
+        const label = mediaLabel(media);
+        const css = `${label ? `${label}: ` : ''}${unescape(declarations(body))}`;
         const known = byClass.get(name);
-        const css = unescape(declarations(body));
-        if (!known) byClass.set(name, {css: plain ? css : css, selector: plain ? null : unescape(part), plain});
-        else if (plain && !known.plain) byClass.set(name, {css, selector: null, plain: true});
-        else if (plain && known.plain && !known.css.includes(css)) known.css = `${known.css}; ${css}`;
+        // A class may style more than itself (`.table-border tr` and
+        // `.table-border td`): such a rule is kept beside the main one,
+        // labelled with its selector.
+        if (known && rank === 1 && known.rank === 2) {
+          const extra = `${shownSelector} { ${css} }`;
+          if (!known.css.includes(extra)) known.css = `${known.css}; ${extra}`;
+          continue;
+        }
+        if (!known || rank > known.rank) {
+          const extras = known && known.rank === 1 && plain ? `; ${known.selector} { ${known.css} }` : '';
+          byClass.set(name, {css: `${css}${extras}`, selector: plain ? null : shownSelector, plain, rank});
+        } else if (rank === 1 && known.rank === 1 && known.selector !== shownSelector) {
+          // Two wider rules of one class: each keeps its selector.
+          if (!known.labelled) {
+            known.css = `${known.selector} { ${known.css} }`;
+            known.selector = null;
+            known.labelled = true;
+          }
+          const extra = `${shownSelector} { ${css} }`;
+          if (!known.css.includes(extra)) known.css = `${known.css}; ${extra}`;
+        } else if (rank === known.rank && !known.css.includes(css)) known.css = `${known.css}; ${css}`;
       }
     }
   }
@@ -157,7 +194,7 @@ const utilityClasses = (families) => {
   // A short family reads better class by class; folding pays off past twenty.
   const fold = byClass.size > 20;
   for (const [name, entry] of byClass) {
-    if (entry.selector || !fold) continue;
+    if (!fold) continue;
     const segments = name.split('-');
     const keys = [];
     for (let index = 1; index < segments.length; index += 1) {
@@ -165,8 +202,11 @@ const utilityClasses = (families) => {
       if (!value || !entry.css.includes(value)) continue;
       const nameTemplate = [...segments.slice(0, index), '{значение}', ...segments.slice(index + 1)].join('-');
       const cssTemplate = entry.css.split(value).join('{значение}');
-      const key = `${nameTemplate}\u0000${cssTemplate}`;
-      keys.push({key, value, nameTemplate, cssTemplate});
+      // A class shown by a wider selector (`.space-x-2 > * + *`) folds with
+      // the same selector shape.
+      const selectorTemplate = entry.selector ? entry.selector.split(value).join('{значение}') : null;
+      const key = `${nameTemplate}\u0000${cssTemplate}\u0000${selectorTemplate ?? ''}`;
+      keys.push({key, value, nameTemplate, cssTemplate, selectorTemplate});
       count.set(key, (count.get(key) ?? 0) + 1);
     }
     candidates.set(name, keys);
@@ -177,7 +217,7 @@ const utilityClasses = (families) => {
     const best = (candidates.get(name) ?? []).filter(({key}) => count.get(key) >= 3)
       .sort((a, b) => count.get(b.key) - count.get(a.key))[0];
     if (best) {
-      const group = groups.get(best.key) ?? {nameTemplate: best.nameTemplate, cssTemplate: best.cssTemplate, values: []};
+      const group = groups.get(best.key) ?? {nameTemplate: best.nameTemplate, cssTemplate: best.cssTemplate, selectorTemplate: best.selectorTemplate, values: []};
       group.values.push(best.value);
       if (!groups.has(best.key)) {
         groups.set(best.key, group);
@@ -190,10 +230,12 @@ const utilityClasses = (families) => {
   const lines = ['| Класс | CSS | Значения |', '|:---|:---|:---|'];
   for (const row of rows) {
     if (row.group && row.group.values.length >= 3) {
-      lines.push(`| ${code(row.group.nameTemplate)} | ${code(row.group.cssTemplate)} | ${row.group.values.map(code).join(', ')} |`);
+      const shown = row.group.selectorTemplate ? ` (${code(row.group.selectorTemplate)})` : '';
+      lines.push(`| ${code(row.group.nameTemplate)}${shown} | ${code(row.group.cssTemplate)} | ${row.group.values.map(code).join(', ')} |`);
     } else if (row.group) {
       for (const value of row.group.values) {
-        lines.push(`| ${code(row.group.nameTemplate.replace('{значение}', value))} | ${code(row.group.cssTemplate.split('{значение}').join(value))} | — |`);
+        const shown = row.group.selectorTemplate ? ` (${code(row.group.selectorTemplate.split('{значение}').join(value))})` : '';
+        lines.push(`| ${code(row.group.nameTemplate.replace('{значение}', value))}${shown} | ${code(row.group.cssTemplate.split('{значение}').join(value))} | — |`);
       }
     } else {
       const shown = row.entry.selector ? ` (${code(row.entry.selector)})` : '';
@@ -217,6 +259,16 @@ const utilityVariants = (families) => {
       if (!seen.has(prefix)) seen.set(prefix, {width: width ?? null, state: width ? null : prefix.slice(0, -1), example: name});
     }
   }
+  // A family may ship its state classes in the default sheet (`hover:fill-*`).
+  for (const family of families) {
+    const css = show(`distr/utility/${family}/default/css/default.css`) ?? '';
+    for (const {selector} of rules(css)) {
+      const name = firstClass(selector);
+      if (!name || !name.includes(':')) continue;
+      const prefix = name.slice(0, name.lastIndexOf(':') + 1);
+      if (!seen.has(prefix)) seen.set(prefix, {width: null, state: prefix.slice(0, -1), example: name});
+    }
+  }
   return [...seen].map(([prefix, data]) => ({prefix, ...data}))
     .sort((a, b) => (a.width ? parseFloat(a.width) : 1e9) - (b.width ? parseFloat(b.width) : 1e9));
 };
@@ -225,20 +277,60 @@ const utilityVariants = (families) => {
 // use of the utility at once.
 const utilityTokens = (families) => {
   const names = new Set();
+  const own = new Set();
   for (const family of families) {
     for (const variant of tree(`distr/utility/${family}`)) {
       const css = show(`distr/utility/${family}/${variant}/css/${variant}.css`) ?? '';
       for (const [, name] of css.matchAll(/var\((--sf-[a-zA-Z0-9_\\/-]+)/gu)) names.add(unescape(name));
+      // A variable the family sets on the element itself (`--sf-blur` for the
+      // filter chain) is its own plumbing, not a theme token.
+      for (const [, name] of css.matchAll(/(--sf-[a-zA-Z0-9_\\/-]+)\s*:/gu)) own.add(unescape(name));
     }
   }
-  return [...names];
+  return [...names].filter((name) => !own.has(name));
 };
 
 const coreCss = show('distr/core/css/core.css') ?? '';
+// Screen widths by prefix name, read from a family that has them all; pages
+// name widths only by prefix (the numbers are the guide's to state).
+const widthPrefixes = (() => {
+  const map = new Map();
+  for (const variant of tree('distr/utility/display')) {
+    const css = show(`distr/utility/display/${variant}/css/${variant}.css`) ?? '';
+    const width = css.match(/min-width:\s*([0-9.]+(?:px|rem|em))/u)?.[1];
+    if (width) map.set(width, variant);
+  }
+  return map;
+})();
+const mediaLabel = (media) => {
+  if (!media) return '';
+  if (/\bprint\b/u.test(media)) return 'при печати';
+  const width = media.match(/min-width:\s*([0-9.]+(?:px|rem|em))/u)?.[1];
+  if (width && widthPrefixes.has(width)) return `от ширины ${widthPrefixes.get(width)}`;
+  return unescape(media.replace(/^@media\s*/u, ''));
+};
+// A token's value at the root, and the values the core gives it at wider
+// screens (`--sf-space-2` grows from lg); theme-scoped values are left out.
+const coreRules = rules(coreCss);
 const tokenValue = (name) => {
-  const escaped = name.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&').replace(/\//gu, '\\\\?/');
-  const match = coreCss.match(new RegExp(`${escaped}:\\s*([^;]+);`, 'u'));
-  return match ? unescape(match[1].trim()) : null;
+  const values = [];
+  for (const {selector, body, media} of coreRules) {
+    // Tokens live on :root, and the theme roles on `.theme-light, .theme-dark`
+    // (one light-dark() value for both).
+    if (!/(^|,)\s*(:root|html|\.theme-light|\.theme-dark)\s*(,|$)/u.test(selector)) continue;
+    for (const part of body.split(';')) {
+      const index = part.indexOf(':');
+      if (index < 0 || unescape(part.slice(0, index).trim()) !== name) continue;
+      const value = unescape(part.slice(index + 1).trim());
+      const label = mediaLabel(media);
+      if (values.some((item) => item.label === label)) continue;
+      // A wider-screen value equal to the base one says nothing new.
+      if (label && values.find((item) => item.label === '')?.value === value) continue;
+      values.push({label, value});
+    }
+  }
+  if (values.length === 0) return null;
+  return values.map(({label, value}) => (label ? `${label}: ${value}` : value)).join('; ');
 };
 
 // The conditions a family supports, as one line under its classes. Prefix

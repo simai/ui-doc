@@ -1,48 +1,75 @@
 ---
 title: "Шаблон строк сетки"
-description: "Шаблон строк сетки (grid-template-rows)"
-tags: [grid-template-rows, sm, md, lg, xl, xxl]
+description: "Задаёт грид-контейнеру число строк равной высоты."
 ---
 
 # Шаблон строк сетки
 
-:badge[grid-template-rows]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Модификаторы `grid-row-*` задают количество строк в сетке и их базовый размер.
-
-## Наглядный пример
-
-:::example {id="utilities/grid/grid-template-rows" label="Шаблон строк сетки"}
-:::
-
-## Таблица классов
-
-| Класс           | Значение                                 |
-|:----------------|:-----------------------------------------|
-| `grid-row-1 … 12` | `grid-template-rows: repeat(n, minmax(0, 1fr));` |
-| `grid-row-none` | `grid-template-rows: none;` |
-
-## Синтаксис
-
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
-
-- Контрольная точка *(необязательный параметр)*: применяет модификатор начиная с указанного брейкпоинта (`sm`, `md`, `lg`, `xl`, `xxl`). Если не указана, действует для всех размеров.
-- Модификатор *(обязательный параметр)*: `grid-row-{n}` или `grid-row-none`.
+Классы `grid-row-*` задают `grid-template-rows`: сколько строк у
+грид-контейнера. Строки получаются равной высоты. Берите их, когда элементы
+раскладываются по колонкам (`grid-flow-col`) или когда блок фиксированной
+высоты нужно поделить на равные полосы.
 
 ## Пример
 
+### Число строк
+
+С `grid-flow-col` элементы заполняют колонку сверху вниз, и шаблон строк
+решает, когда начинается следующая колонка. На блоке заданной высоты строки
+делят высоту поровну, даже если в одной из них больше текста.
+
+:::example {id="utilities/grid/grid-template-rows" label="grid-row-2, grid-row-3"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `grid-row-1` | `grid-template-rows: repeat(1, minmax(0, 1fr))` | — |
+| `grid-row-2` | `grid-template-rows: repeat(2, minmax(0, 1fr))` | — |
+| `grid-row-3` | `grid-template-rows: repeat(3, minmax(0, 1fr))` | — |
+| `grid-row-4` | `grid-template-rows: repeat(4, minmax(0, 1fr))` | — |
+| `grid-row-5` | `grid-template-rows: repeat(5, minmax(0, 1fr))` | — |
+| `grid-row-6` | `grid-template-rows: repeat(6, minmax(0, 1fr))` | — |
+| `grid-row-none` | `grid-template-rows: none` | — |
+| `grid-row-subgrid` | `grid-template-rows: subgrid` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-row-1`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+### Как выбрать
+
+- `grid-row-1` … `grid-row-6` — строки равной высоты.
+- `grid-row-none` — снимает шаблон: строки создаются по содержимому, их
+  высоту задают классы [`auto-rows-*`](/ru/utilities/grid/grid-auto-rows/).
+- `grid-row-subgrid` — вложенный блок берёт строки у родительской сетки; блок
+  должен занимать в родителе несколько строк.
+
+### Список по колонкам
+
 ```html
-<div class="grid grid-row-3 gap-2 h-e8">
-  <div class="border radius-1 bg-primary color-on-primary p-2">Short</div>
-  <div class="border radius-1 bg-secondary color-on-secondary p-2">Two<br/>lines</div>
-  <div class="border radius-1 bg-tertiary color-on-tertiary p-2">Three<br/>lines<br/>here</div>
-</div>
+<ul class="grid grid-row-4 grid-flow-col gap-1">
+  <li>Пункт 1</li>
+  <li>Пункт 2</li>
+  <li>Пункт 3</li>
+  <li>Пункт 4</li>
+  <li>Пункт 5</li>
+</ul>
 ```
 
-## Адаптивность
+## Ограничения
 
-```html
-<div class="grid grid-row-2 md:grid-row-4">
-  <!-- 2 строки на мобильных, 4 на md и выше -->
-</div>
-```
+- Имена `grid-row-2` и `row-span-2` похожи, но делают разное: первый задаёт
+  шаблон строк контейнера, второй — сколько строк занимает элемент. См.
+  [Размер строки сетки](/ru/utilities/grid/grid-row/).
+- Строки задаются как `minmax(0, 1fr)`: если высота блока задана, содержимое,
+  которому мало места, выходит за строку.
+
+## См. также
+
+- [Шаблон колонок сетки](/ru/utilities/grid/grid-template-columns/)
+- [Размер строки сетки](/ru/utilities/grid/grid-row/)
+- [Автоматическое формирование сетки](/ru/utilities/grid/grid-auto-flow/)

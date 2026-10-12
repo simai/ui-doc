@@ -1,63 +1,70 @@
 ---
 title: "Выравнивание каждого элемента по основной оси внутри ячейки"
-description: "Выравнивание каждого элемента по основной оси внутри ячейки (justify-items)"
-tags: [justify-items, sm, md, lg, xl, xxl]
+description: "Выравнивает все элементы сетки по горизонтали внутри их ячеек."
 ---
 
 # Выравнивание каждого элемента по основной оси внутри ячейки
 
-:badge[justify-items]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `items-main-*` задают `justify-items`: где элемент сетки стоит в своей
+ячейке по горизонтали — у начала, в центре, у конца или на всю ширину. Берите
+их, когда элементы сетки уже своих колонок и не должны растягиваться.
 
-Данный модификатор определяет, как элементы внутри каждой ячейки сетки или флекс-контейнера будут выравниваться по
-основной оси.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/justify-items" label="Выравнивание каждого элемента по основной оси внутри ячейки"}
+Сетка из трёх колонок, элементы шириной по своему тексту. Подпись над
+образцом — класс контейнера.
+
+:::example {id="utilities/grid-and-flexbox-utilities/justify-items" label="items-main-start, center, end, stretch"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс               | Значение                |
-|:--------------------|:------------------------|
-| `items-main-start` | `justify-items: start;` |
-| `items-main-end` | `justify-items: end;` |
-| `items-main-center` | `justify-items: center;` |
-| `items-main-stretch` | `justify-items: stretch;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `items-main-start` | `justify-items: start` | — |
+| `items-main-end` | `justify-items: end` | — |
+| `items-main-center` | `justify-items: center` | — |
+| `items-main-stretch` | `justify-items: stretch` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-main-start`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `items-main-start` – каждый элемент прижимается к началу ячейки вдоль основной оси;
-    - `items-main-end` – каждый элемент прижимается к концу ячейки вдоль основной оси;
-    - `items-main-center` – каждый элемент выравнивается по центру ячейки вдоль основной оси;
-    - `items-main-stretch` – каждый элемент растягивается по всей доступной длине ячейки вдоль основной оси.
+- `items-main-stretch` — элементы на всю ширину ячейки; значение по умолчанию.
+  Класс нужен, чтобы вернуть его на другой ширине экрана.
+- `items-main-start`, `items-main-center`, `items-main-end` — элементы своей
+  ширины у начала, в центре или у конца ячейки.
 
-## Пример использования
+### Кнопки по центру колонок
 
 ```html
-<div class="grid grid-col-3 items-main-center">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
+<div class="grid grid-col-3 items-main-center gap-2">
+  <button type="button">Один</button>
+  <button type="button">Два</button>
+  <button type="button">Три</button>
 </div>
 ```
 
-В этом примере каждый элемент будет выровнен по центру ячейки относительно основной оси.
+Отдельный элемент выравнивают классы
+[`self-main-*`](/ru/utilities/grid-and-flexbox-utilities/justify-self/), обе
+оси сразу — [`items-*`](/ru/utilities/grid-and-flexbox-utilities/place-items/).
 
-## Адаптивность
+## Ограничения
 
-Для применения выравнивания, начиная с определённого размера экрана, добавьте контрольную точку. Например:
+- Классы работают только в сетке. Во флекс-контейнере `justify-items` не
+  действует; элементы по основной оси там располагают классы
+  [`justify-*`](/ru/utilities/grid-and-flexbox-utilities/justify-content/).
+- Начало ячейки следует направлению письма: при `dir="rtl"` `items-main-start`
+  прижимает к правому краю.
 
-```html
-<div class="md:items-main-start">
-    <!-- Начиная с md каждый элемент выравнивается по началу ячейки относительно основной оси -->
-</div>
-```
+## См. также
+
+- [Выравнивание отдельного элемента в ячейке по основной оси](/ru/utilities/grid-and-flexbox-utilities/justify-self/)
+- [Выравнивание каждого элемента в ячейках по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+- [Размещение элементов по обеим осям](/ru/utilities/grid-and-flexbox-utilities/place-items/)

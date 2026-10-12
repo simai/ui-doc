@@ -1,76 +1,76 @@
 ---
 title: "Начальное положение колонки сетки"
-description: "Начальное положение колонки сетки (grid-column-start)"
-tags: [grid-column-start, sm, md, lg, xl, xxl]
+description: "Ставит элемент сетки в колонку с заданным номером."
 ---
 
 # Начальное положение колонки сетки
 
-:badge[grid-column-start]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `col-start-*` задают `grid-column-start` — линию сетки, с которой
+начинается элемент. Берите их, чтобы сдвинуть элемент вправо, оставив пустые
+колонки слева, или поставить его в нужную колонку независимо от порядка
+разметки.
 
-В SIMAI Framework с помощью модификаторов можно управлять начальным положением столбцов в сетке, задавая от какой линии
-сетки элемент должен начинаться.
+## Пример
 
-## Наглядный пример
+### Номер линии
 
-:::example {id="utilities/grid/grid-column-start" label="Начальное положение колонки сетки"}
+Сетка из шести колонок; верхний ряд пронумерован. Линия `1` — левый край
+первой колонки, поэтому `col-start-3` ставит элемент в третью колонку.
+
+:::example {id="utilities/grid/grid-column-start" label="col-start-3, col-start-2 col-span-4, col-start-5 col-span-2"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс           | Значение                 |
-|:----------------|:-------------------------|
-| `col-start-1` | `grid-column-start: 1;` |
-| `col-start-2` | `grid-column-start: 2;` |
-| `col-start-3` | `grid-column-start: 3;` |
-| `col-start-4` | `grid-column-start: 4;` |
-| `col-start-5` | `grid-column-start: 5;` |
-| `col-start-6` | `grid-column-start: 6;` |
-| `col-start-7` | `grid-column-start: 7;` |
-| `col-start-8` | `grid-column-start: 8;` |
-| `col-start-9` | `grid-column-start: 9;` |
-| `col-start-10` | `grid-column-start: 10;` |
-| `col-start-11` | `grid-column-start: 11;` |
-| `col-start-12` | `grid-column-start: 12;` |
-| `col-start-13` | `grid-column-start: 13;` |
-| `col-start-auto` | `grid-column-start: auto;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `col-start-1` | `grid-column-start: 1` | — |
+| `col-start-2` | `grid-column-start: 2` | — |
+| `col-start-3` | `grid-column-start: 3` | — |
+| `col-start-4` | `grid-column-start: 4` | — |
+| `col-start-5` | `grid-column-start: 5` | — |
+| `col-start-6` | `grid-column-start: 6` | — |
+| `col-start-7` | `grid-column-start: 7` | — |
+| `col-start-8` | `grid-column-start: 8` | — |
+| `col-start-9` | `grid-column-start: 9` | — |
+| `col-start-10` | `grid-column-start: 10` | — |
+| `col-start-11` | `grid-column-start: 11` | — |
+| `col-start-12` | `grid-column-start: 12` | — |
+| `col-start-13` | `grid-column-start: 13` | — |
+| `col-start-auto` | `grid-column-start: auto` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-start-1`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `col-start-{1...12}` — элемент начинается с указанного столбца сетки;
-    - `col-start-auto` — начало столбца определяется автоматически.
+- `col-start-1` … `col-start-13` — номер линии, с которой начинается элемент.
+  В сетке из двенадцати колонок линий тринадцать.
+- `col-start-auto` — место выбирает раскладка; класс нужен, чтобы отменить
+  `col-start-*` на другой ширине экрана.
 
-## Пример использования
+С `col-span-*` класс задаёт начало и ширину; с
+[`col-end-*`](/ru/utilities/grid/grid-column-end/) — начало и конец.
+
+### Блок по центру сетки
 
 ```html
-<div class="grid grid-col-6 gap-1">
-    <div></div>
-    <div class="col-span-4 col-start-2">1</div>
-    <div></div>
+<div class="grid grid-col-12 gap-2">
+  <article class="col-span-12 md:col-start-3 md:col-span-8">Текст статьи</article>
 </div>
 ```
 
-В данном примере элемент с классом `col-span-4 col-start-2` начинается со второй линии сетки и занимает 4 столбца.
+## Ограничения
 
-Обратите внимание, что линии сетки CSS начинаются с 1\. Например, в сетке из 6 столбцов:
+- Номер больше числа линий шаблона добавляет колонки справа от шаблона.
+- Линии считаются по направлению письма: при `dir="rtl"` линия `1` — правый
+  край сетки.
 
-- Полная ширина элемента будет начинаться с 1 и заканчиваться на 7 (так как линии считаются по границам столбцов).
+## См. также
 
-## Адаптивность
-
-Для изменения начального положения столбца начиная с определённого размера экрана используйте префикс контрольной точки.
-Например:
-
-```html
-<div class="md:col-start-4">
-    <!-- Начиная с размера экрана md и больше элемент будет начинаться с 4-й линии сетки -->
-</div>
-```
+- [Конечное положение колонки сетки](/ru/utilities/grid/grid-column-end/)
+- [Размер колонки сетки](/ru/utilities/grid/grid-column/)
+- [Начальное положение строки сетки](/ru/utilities/grid/grid-row-start/)

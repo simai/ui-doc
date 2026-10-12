@@ -1,78 +1,58 @@
 ---
 title: "Перенос строк"
-description: "Перенос строк (word-break)"
-tags: [word-break]
+description: "Разрешает или запрещает разрывать длинные слова и ссылки, которые не помещаются в строку."
 ---
 
 # Перенос строк
 
-:badge[word-break]{type=main scheme=on-surface size=1}
+Классы задают, можно ли разорвать слово, которое не помещается в ширину
+блока. Берите их для ссылок, адресов почты, идентификаторов и других длинных
+строк без пробелов в узких колонках.
 
-С помощью модификаторов можно управлять переносом строк, когда слова не помещаются в отведённую ширину.
+## Пример
 
-## Наглядный пример
+Один и тот же текст с длинной ссылкой в блоке одинаковой ширины.
 
-:::example {id="utilities/typography/word-break" label="Перенос строк"}
+:::example {id="utilities/typography/word-break" label="text-break-normal, text-break-word, text-break-all"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс              | Значение                                        |
-|:-------------------|:------------------------------------------------|
-| `text-break-normal` | `overflow-wrap: normal;` `word-break: normal;` |
-| `text-break-word` | `overflow-wrap: break-word;` |
-| `text-break-all` | `word-break: break-all;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `text-break-normal` | `word-wrap: normal; word-break: normal` | — |
+| `text-break-word` | `word-wrap: break-word` | — |
+| `text-break-all` | `word-break: break-all` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+| Класс | Что делает |
+|:---|:---|
+| `text-break-word` | разрывает слово, только если оно не помещается в строку целиком |
+| `text-break-all` | разрывает любое слово в конце строки, чтобы заполнить её |
+| `text-break-normal` | не разрывает слова: длинное слово выходит за блок |
 
-    - `text-break-normal` – перенос строк происходит по обычным правилам переноса.
-    - `text-break-word` – слова могут быть разбиты в произвольных точках, если они не помещаются полностью.
-    - `text-break-all` – слова переносятся, чтобы поместиться в заданную ширину блока.
-
-## Примеры использования
-
-### **Обычный перенос**
-
-Модификатор `text-break-normal` отображает текст, как обычно, не перенося слова внутри себя, кроме обычных правил
-переноса (например, пробелов):
+Абзацы, списки, таблицы и цитаты уже разрывают слова, которые не помещаются:
+это задаёт базовый стиль Framework. `text-break-normal` отменяет такой
+разрыв, `text-break-word` включает его у других элементов:
 
 ```html
-<p class="text-break-normal ...">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
+<span class="text-break-word">https://example.com/catalog/products/super-long-identifier</span>
 ```
 
-### **Перенос в словах**
+## Ограничения
 
-Модификатор `text-break-word` позволяет переносить слишком длинные слова, разрывая их на части:
+- `text-break-all` разрывает и короткие слова, текст читается хуже. Берите
+  его для кода и идентификаторов, а не для обычного текста.
+- Классы не расставляют дефисы: для переноса по слогам нужно свойство
+  `hyphens` и атрибут `lang`.
+- У семейства нет префиксов ширины экрана и состояний.
 
-```html
-<p class="text-break-word ...">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-```
+## См. также
 
-### **Общий перенос**
-
-Модификатор `text-break-all` делает перенос слов в любом месте, чтобы текст полностью заполнял по ширине родительский
-элемент:
-
-```html
-<p class="text-break-all ...">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-```
+- [Перенос текста](/ru/utilities/typography/text-wrap/)
+- [Обработка пробелов](/ru/utilities/typography/white-space/)

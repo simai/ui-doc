@@ -3,14 +3,1280 @@
   "schema_version": 1,
   "why": "Pages that follow docs/developer/reference-page-standard.md. scripts/audit-reference-pages.mjs holds each to the standard and scripts/build-reference-sections.mjs writes their generated sections. The list only grows.",
   "pages": {
-    "utilities/layout/display.md": {"kind": "utility", "families": ["display"]},
-    "utilities/border/border-radius.md": {"kind": "utility", "families": ["border-radius"]},
-    "utilities/text-formatting/text-color.md": {"kind": "utility", "families": ["text-color"]},
-    "components/actions/buttons.md": {"kind": "component", "component": "buttons", "block": "sf-button"},
-    "components/feedback/alerts.md": {"kind": "component", "component": "alerts", "block": "sf-alert"},
-    "components/forms/checkbox.md": {"kind": "component", "component": "checkbox", "block": "sf-checkbox"},
-    "smart-components/navigation/dropdown.md": {"kind": "smart"},
-    "smart-components/navigation/tabs.md": {"kind": "smart"},
-    "smart-components/feedback/toast.md": {"kind": "smart"}
+    "components/actions/buttons.md": {
+      "kind": "component",
+      "component": "buttons",
+      "block": "sf-button"
+    },
+    "components/feedback/alerts.md": {
+      "kind": "component",
+      "component": "alerts",
+      "block": "sf-alert"
+    },
+    "components/forms/checkbox.md": {
+      "kind": "component",
+      "component": "checkbox",
+      "block": "sf-checkbox"
+    },
+    "smart-components/feedback/toast.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/dropdown.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/tabs.md": {
+      "kind": "smart"
+    },
+    "utilities/animation/animation-duration.md": {
+      "kind": "utility",
+      "families": [
+        "animation-duration"
+      ]
+    },
+    "utilities/animation/animation-transition-delay.md": {
+      "kind": "utility",
+      "families": [
+        "transition-delay"
+      ]
+    },
+    "utilities/animation/animation-transition-duration.md": {
+      "kind": "utility",
+      "families": [
+        "transition-duration"
+      ]
+    },
+    "utilities/animation/animation-transition-property.md": {
+      "kind": "utility",
+      "families": [
+        "transition-property"
+      ]
+    },
+    "utilities/animation/animation-transition-timing-function.md": {
+      "kind": "utility",
+      "families": [
+        "transition-timing-function"
+      ]
+    },
+    "utilities/animation/animation-type.md": {
+      "kind": "utility",
+      "families": [
+        "animation"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-blur.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-blur"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-brightness.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-brightness"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-contrast.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-contrast"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-grayscale.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-grayscale"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-hue-rotate.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filer-hue-rotate"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-invert.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-invert"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-opacity.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-opacity"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-saturate.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-saturate"
+      ]
+    },
+    "utilities/backdrop-filter/backdrop-sepia.md": {
+      "kind": "utility",
+      "families": [
+        "backdrop-filter-sepia"
+      ]
+    },
+    "utilities/background/background-attachment.md": {
+      "kind": "utility",
+      "families": [
+        "background-attachment"
+      ]
+    },
+    "utilities/background/background-clip.md": {
+      "kind": "utility",
+      "families": [
+        "background-clip"
+      ]
+    },
+    "utilities/background/background-color-brand.md": {
+      "kind": "utility",
+      "families": [
+        "background-color-brand"
+      ]
+    },
+    "utilities/background/background-color.md": {
+      "kind": "utility",
+      "families": [
+        "background-color"
+      ]
+    },
+    "utilities/background/background-gradient-background.md": {
+      "kind": "utility",
+      "families": [
+        "gradient-color"
+      ]
+    },
+    "utilities/background/background-gradient-stops.md": {
+      "kind": "utility",
+      "families": [
+        "gradient-stops"
+      ]
+    },
+    "utilities/background/background-gradient-type.md": {
+      "kind": "utility",
+      "families": [
+        "background-gradient",
+        "gradient-type"
+      ]
+    },
+    "utilities/background/background-origin.md": {
+      "kind": "utility",
+      "families": [
+        "background-origin"
+      ]
+    },
+    "utilities/background/background-pattern.md": {
+      "kind": "utility",
+      "families": [
+        "pattern"
+      ]
+    },
+    "utilities/background/background-position.md": {
+      "kind": "utility",
+      "families": [
+        "background-position"
+      ]
+    },
+    "utilities/background/background-repeat.md": {
+      "kind": "utility",
+      "families": [
+        "background-repeat"
+      ]
+    },
+    "utilities/background/background-size.md": {
+      "kind": "utility",
+      "families": [
+        "background-size",
+        "background-size-ext"
+      ]
+    },
+    "utilities/border/border-color.md": {
+      "kind": "utility",
+      "families": [
+        "border-color"
+      ]
+    },
+    "utilities/border/border-radius.md": {
+      "kind": "utility",
+      "families": [
+        "border-radius"
+      ]
+    },
+    "utilities/border/border-style.md": {
+      "kind": "utility",
+      "families": [
+        "border-style"
+      ]
+    },
+    "utilities/border/border-width.md": {
+      "kind": "utility",
+      "families": [
+        "border-width"
+      ]
+    },
+    "utilities/divider/divider-color.md": {
+      "kind": "utility",
+      "families": [
+        "divider-color"
+      ]
+    },
+    "utilities/divider/divider-opacity.md": {
+      "kind": "utility",
+      "families": [
+        "divider-opacity"
+      ]
+    },
+    "utilities/divider/divider-style.md": {
+      "kind": "utility",
+      "families": [
+        "divider-style"
+      ]
+    },
+    "utilities/divider/divider-width.md": {
+      "kind": "utility",
+      "families": [
+        "divider-width"
+      ]
+    },
+    "utilities/filters/filter-blur.md": {
+      "kind": "utility",
+      "families": [
+        "filter-blur"
+      ]
+    },
+    "utilities/filters/filter-brightness.md": {
+      "kind": "utility",
+      "families": [
+        "filter-brightness"
+      ]
+    },
+    "utilities/filters/filter-contrast.md": {
+      "kind": "utility",
+      "families": [
+        "filter-contrast"
+      ]
+    },
+    "utilities/filters/filter-grayscale.md": {
+      "kind": "utility",
+      "families": [
+        "filter-grayscale"
+      ]
+    },
+    "utilities/filters/filter-hue-rotate.md": {
+      "kind": "utility",
+      "families": [
+        "filter-hue-rotate"
+      ]
+    },
+    "utilities/filters/filter-invert.md": {
+      "kind": "utility",
+      "families": [
+        "filter-invert"
+      ]
+    },
+    "utilities/filters/filter-opacity.md": {
+      "kind": "utility",
+      "families": [
+        "filter-opacity"
+      ]
+    },
+    "utilities/filters/filter-saturate.md": {
+      "kind": "utility",
+      "families": [
+        "filter-saturate"
+      ]
+    },
+    "utilities/filters/filter-sepia.md": {
+      "kind": "utility",
+      "families": [
+        "filter-sepia"
+      ]
+    },
+    "utilities/filters/mix-blend-mode.md": {
+      "kind": "utility",
+      "families": [
+        "mix-blend-mode"
+      ]
+    },
+    "utilities/filters/opacity.md": {
+      "kind": "utility",
+      "families": [
+        "opacity"
+      ]
+    },
+    "utilities/flex/flex-basis.md": {
+      "kind": "utility",
+      "families": [
+        "flex-basis",
+        "flex-basis-ext"
+      ]
+    },
+    "utilities/flex/flex-direction.md": {
+      "kind": "utility",
+      "families": [
+        "flex-direction"
+      ]
+    },
+    "utilities/flex/flex-grow.md": {
+      "kind": "utility",
+      "families": [
+        "flex-grow"
+      ]
+    },
+    "utilities/flex/flex-shrink.md": {
+      "kind": "utility",
+      "families": [
+        "flex-shrink"
+      ]
+    },
+    "utilities/flex/flex-wrap.md": {
+      "kind": "utility",
+      "families": [
+        "flex-wrap"
+      ]
+    },
+    "utilities/flex/flexibility.md": {
+      "kind": "utility",
+      "families": [
+        "flex"
+      ]
+    },
+    "utilities/forms/accent-color.md": {
+      "kind": "utility",
+      "families": [
+        "accent-color"
+      ]
+    },
+    "utilities/forms/appearance.md": {
+      "kind": "utility",
+      "families": [
+        "appearance"
+      ]
+    },
+    "utilities/forms/caret-color.md": {
+      "kind": "utility",
+      "families": [
+        "caret-color"
+      ]
+    },
+    "utilities/forms/placeholder-color.md": {
+      "kind": "utility",
+      "families": [
+        "placeholder-color"
+      ]
+    },
+    "utilities/forms/placeholder-opacity.md": {
+      "kind": "utility",
+      "families": [
+        "placeholder-opacity"
+      ]
+    },
+    "utilities/forms/pointer-events.md": {
+      "kind": "utility",
+      "families": [
+        "pointer-events"
+      ]
+    },
+    "utilities/forms/resize.md": {
+      "kind": "utility",
+      "families": [
+        "resize"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/align-content.md": {
+      "kind": "utility",
+      "families": [
+        "align-content"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/align-items.md": {
+      "kind": "utility",
+      "families": [
+        "align-items"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/align-self.md": {
+      "kind": "utility",
+      "families": [
+        "align-self"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/flex-align.md": {
+      "kind": "utility",
+      "families": [
+        "flex-align"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/gap.md": {
+      "kind": "utility",
+      "families": [
+        "gap"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/justify-content.md": {
+      "kind": "utility",
+      "families": [
+        "justify-content"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/justify-items.md": {
+      "kind": "utility",
+      "families": [
+        "justify-items"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/justify-self.md": {
+      "kind": "utility",
+      "families": [
+        "justify-self"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/order.md": {
+      "kind": "utility",
+      "families": [
+        "order"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/place-content.md": {
+      "kind": "utility",
+      "families": [
+        "place-content"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/place-items.md": {
+      "kind": "utility",
+      "families": [
+        "place-items"
+      ]
+    },
+    "utilities/grid-and-flexbox-utilities/place-self.md": {
+      "kind": "utility",
+      "families": [
+        "place-self"
+      ]
+    },
+    "utilities/grid/grid-auto-columns.md": {
+      "kind": "utility",
+      "families": [
+        "grid-auto-columns"
+      ]
+    },
+    "utilities/grid/grid-auto-flow.md": {
+      "kind": "utility",
+      "families": [
+        "grid-auto-flow"
+      ]
+    },
+    "utilities/grid/grid-auto-rows.md": {
+      "kind": "utility",
+      "families": [
+        "grid-auto-rows"
+      ]
+    },
+    "utilities/grid/grid-column-end.md": {
+      "kind": "utility",
+      "families": [
+        "grid-column-end"
+      ]
+    },
+    "utilities/grid/grid-column-start.md": {
+      "kind": "utility",
+      "families": [
+        "grid-column-start"
+      ]
+    },
+    "utilities/grid/grid-column.md": {
+      "kind": "utility",
+      "families": [
+        "grid-column"
+      ]
+    },
+    "utilities/grid/grid-row-end.md": {
+      "kind": "utility",
+      "families": [
+        "grid-row-end"
+      ]
+    },
+    "utilities/grid/grid-row-start.md": {
+      "kind": "utility",
+      "families": [
+        "grid-row-start"
+      ]
+    },
+    "utilities/grid/grid-row.md": {
+      "kind": "utility",
+      "families": [
+        "grid-row"
+      ]
+    },
+    "utilities/grid/grid-template-columns.md": {
+      "kind": "utility",
+      "families": [
+        "grid-template-columns"
+      ]
+    },
+    "utilities/grid/grid-template-rows.md": {
+      "kind": "utility",
+      "families": [
+        "grid-template-rows"
+      ]
+    },
+    "utilities/indents/margin.md": {
+      "kind": "utility",
+      "families": [
+        "margin",
+        "margin-ext"
+      ]
+    },
+    "utilities/indents/padding.md": {
+      "kind": "utility",
+      "families": [
+        "padding",
+        "padding-ext"
+      ]
+    },
+    "utilities/indents/space.md": {
+      "kind": "utility",
+      "families": [
+        "space"
+      ]
+    },
+    "utilities/interactivity/cursor.md": {
+      "kind": "utility",
+      "families": [
+        "cursor"
+      ]
+    },
+    "utilities/interactivity/sr-only.md": {
+      "kind": "utility",
+      "families": [
+        "sr-only"
+      ]
+    },
+    "utilities/interactivity/touch-action.md": {
+      "kind": "utility",
+      "families": [
+        "touch-action"
+      ]
+    },
+    "utilities/interactivity/user-select.md": {
+      "kind": "utility",
+      "families": [
+        "user-select"
+      ]
+    },
+    "utilities/interactivity/will-change.md": {
+      "kind": "utility",
+      "families": [
+        "will-change"
+      ]
+    },
+    "utilities/layout-break/break-after.md": {
+      "kind": "utility",
+      "families": [
+        "break-after"
+      ]
+    },
+    "utilities/layout-break/break-before.md": {
+      "kind": "utility",
+      "families": [
+        "break-before"
+      ]
+    },
+    "utilities/layout-break/break-inside.md": {
+      "kind": "utility",
+      "families": [
+        "break-inside"
+      ]
+    },
+    "utilities/layout-break/column-gap.md": {
+      "kind": "utility",
+      "families": [
+        "column-gap"
+      ]
+    },
+    "utilities/layout-break/column.md": {
+      "kind": "utility",
+      "families": [
+        "column"
+      ]
+    },
+    "utilities/layout/aspect-ratio.md": {
+      "kind": "utility",
+      "families": [
+        "aspect-ratio"
+      ]
+    },
+    "utilities/layout/box-decoration-break.md": {
+      "kind": "utility",
+      "families": [
+        "box-decoration-break"
+      ]
+    },
+    "utilities/layout/box-sizing.md": {
+      "kind": "utility",
+      "families": [
+        "box-sizing"
+      ]
+    },
+    "utilities/layout/clear.md": {
+      "kind": "utility",
+      "families": [
+        "clear"
+      ]
+    },
+    "utilities/layout/container.md": {
+      "kind": "utility",
+      "families": [
+        "container"
+      ]
+    },
+    "utilities/layout/display.md": {
+      "kind": "utility",
+      "families": [
+        "display"
+      ]
+    },
+    "utilities/layout/element-position.md": {
+      "kind": "utility",
+      "families": [
+        "element-position",
+        "element-position-ext",
+        "offset",
+        "position"
+      ]
+    },
+    "utilities/layout/float.md": {
+      "kind": "utility",
+      "families": [
+        "float"
+      ]
+    },
+    "utilities/layout/isolation.md": {
+      "kind": "utility",
+      "families": [
+        "isolate"
+      ]
+    },
+    "utilities/layout/max-container.md": {
+      "kind": "utility",
+      "families": [
+        "max-container"
+      ]
+    },
+    "utilities/layout/overflow.md": {
+      "kind": "utility",
+      "families": [
+        "overflow"
+      ]
+    },
+    "utilities/layout/query-container.md": {
+      "kind": "utility",
+      "families": [
+        "query-container"
+      ]
+    },
+    "utilities/layout/query-layout.md": {
+      "kind": "utility",
+      "families": [
+        "query-layout"
+      ]
+    },
+    "utilities/layout/visibility.md": {
+      "kind": "utility",
+      "families": [
+        "visibility"
+      ]
+    },
+    "utilities/mask/mask-clip.md": {
+      "kind": "utility",
+      "families": [
+        "mask-clip"
+      ]
+    },
+    "utilities/mask/mask-composite.md": {
+      "kind": "utility",
+      "families": [
+        "mask-composite"
+      ]
+    },
+    "utilities/mask/mask-mode.md": {
+      "kind": "utility",
+      "families": [
+        "mask-mode"
+      ]
+    },
+    "utilities/mask/mask-origin.md": {
+      "kind": "utility",
+      "families": [
+        "mask-origin"
+      ]
+    },
+    "utilities/mask/mask-position.md": {
+      "kind": "utility",
+      "families": [
+        "mask-position"
+      ]
+    },
+    "utilities/mask/mask-repeat.md": {
+      "kind": "utility",
+      "families": [
+        "mask-repeat"
+      ]
+    },
+    "utilities/mask/mask-size.md": {
+      "kind": "utility",
+      "families": [
+        "mask-size"
+      ]
+    },
+    "utilities/mask/mask-type.md": {
+      "kind": "utility",
+      "families": [
+        "mask-type"
+      ]
+    },
+    "utilities/objects/object-fit.md": {
+      "kind": "utility",
+      "families": [
+        "object-fit"
+      ]
+    },
+    "utilities/objects/object-position.md": {
+      "kind": "utility",
+      "families": [
+        "object-position"
+      ]
+    },
+    "utilities/outline/outline-color.md": {
+      "kind": "utility",
+      "families": [
+        "outline-color"
+      ]
+    },
+    "utilities/outline/outline-offset.md": {
+      "kind": "utility",
+      "families": [
+        "outline-offset"
+      ]
+    },
+    "utilities/outline/outline-style.md": {
+      "kind": "utility",
+      "families": [
+        "outline-style"
+      ]
+    },
+    "utilities/outline/outline-width.md": {
+      "kind": "utility",
+      "families": [
+        "outline-width"
+      ]
+    },
+    "utilities/outline/ring-inset.md": {
+      "kind": "utility",
+      "families": [
+        "ring-inset"
+      ]
+    },
+    "utilities/outline/ring-opacity.md": {
+      "kind": "utility",
+      "families": [
+        "ring-opacity"
+      ]
+    },
+    "utilities/outline/ring.md": {
+      "kind": "utility",
+      "families": [
+        "ring-color",
+        "ring-offset-color",
+        "ring-offset-width",
+        "ring-width"
+      ]
+    },
+    "utilities/overscroll/overscroll-behavior-smooth.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-behavior"
+      ]
+    },
+    "utilities/overscroll/overscroll-behavior.md": {
+      "kind": "utility",
+      "families": [
+        "overscroll-behavior"
+      ]
+    },
+    "utilities/overscroll/scroll-backdrop-color.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-backdrop-color"
+      ]
+    },
+    "utilities/overscroll/scroll-backdrop-radius.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-backdrop-radius"
+      ]
+    },
+    "utilities/overscroll/scroll-backdrop-width.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-backdrop-width"
+      ]
+    },
+    "utilities/overscroll/scroll-hover.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-hover"
+      ]
+    },
+    "utilities/overscroll/scroll-margin.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-margin",
+        "scroll-margin-ext"
+      ]
+    },
+    "utilities/overscroll/scroll-padding.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-padding",
+        "scroll-padding-ext"
+      ]
+    },
+    "utilities/overscroll/scroll-slider-color.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-slider-color"
+      ]
+    },
+    "utilities/overscroll/scroll-slider-radius.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-slider-radius"
+      ]
+    },
+    "utilities/overscroll/scroll-snap-align.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-snap-align"
+      ]
+    },
+    "utilities/overscroll/scroll-snap-stop.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-snap-stop"
+      ]
+    },
+    "utilities/overscroll/scroll-snap-type.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-snap-type"
+      ]
+    },
+    "utilities/overscroll/scroll-subtle.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-subtle"
+      ]
+    },
+    "utilities/overscroll/scroll.md": {
+      "kind": "utility",
+      "families": [
+        "scroll-slider-width"
+      ]
+    },
+    "utilities/print/display-print.md": {
+      "kind": "utility",
+      "families": [
+        "display-print"
+      ]
+    },
+    "utilities/print/display-visibility.md": {
+      "kind": "utility",
+      "families": [
+        "display-print"
+      ]
+    },
+    "utilities/shadows/drop-shadow-color.md": {
+      "kind": "utility",
+      "families": [
+        "drop-shadow-color"
+      ]
+    },
+    "utilities/shadows/drop-shadow.md": {
+      "kind": "utility",
+      "families": [
+        "drop-shadow"
+      ]
+    },
+    "utilities/shadows/element-color.md": {
+      "kind": "utility",
+      "families": [
+        "box-shadow-color"
+      ]
+    },
+    "utilities/shadows/element-shadow.md": {
+      "kind": "utility",
+      "families": [
+        "box-shadow"
+      ]
+    },
+    "utilities/shadows/elevation.md": {
+      "kind": "utility",
+      "families": [
+        "elevation"
+      ]
+    },
+    "utilities/sizes/height.md": {
+      "kind": "utility",
+      "families": [
+        "height",
+        "height-ext"
+      ]
+    },
+    "utilities/sizes/max-height.md": {
+      "kind": "utility",
+      "families": [
+        "max-height",
+        "max-height-ext"
+      ]
+    },
+    "utilities/sizes/max-width.md": {
+      "kind": "utility",
+      "families": [
+        "max-width",
+        "max-width-ext"
+      ]
+    },
+    "utilities/sizes/min-height.md": {
+      "kind": "utility",
+      "families": [
+        "min-height"
+      ]
+    },
+    "utilities/sizes/min-width.md": {
+      "kind": "utility",
+      "families": [
+        "min-width"
+      ]
+    },
+    "utilities/sizes/width.md": {
+      "kind": "utility",
+      "families": [
+        "width",
+        "width-ext"
+      ]
+    },
+    "utilities/stripes/stripes-color.md": {
+      "kind": "utility",
+      "families": [
+        "stripe-color"
+      ]
+    },
+    "utilities/stripes/stripes-size.md": {
+      "kind": "utility",
+      "families": [
+        "stripe-width"
+      ]
+    },
+    "utilities/stripes/stripes.md": {
+      "kind": "utility",
+      "families": [
+        "stripe"
+      ]
+    },
+    "utilities/svg/svg-fill-brand.md": {
+      "kind": "utility",
+      "families": [
+        "fill-brand"
+      ]
+    },
+    "utilities/svg/svg-fill-color.md": {
+      "kind": "utility",
+      "families": [
+        "fill"
+      ]
+    },
+    "utilities/svg/svg-fill-type.md": {
+      "kind": "utility",
+      "families": [
+        "fill-rule"
+      ]
+    },
+    "utilities/svg/svg-image-size.md": {
+      "kind": "utility",
+      "families": [
+        "svg-size"
+      ]
+    },
+    "utilities/svg/svg-stroke-color.md": {
+      "kind": "utility",
+      "families": [
+        "stroke-color"
+      ]
+    },
+    "utilities/svg/svg-stroke-line-cap.md": {
+      "kind": "utility",
+      "families": [
+        "stroke-linecap"
+      ]
+    },
+    "utilities/svg/svg-stroke-line-join.md": {
+      "kind": "utility",
+      "families": [
+        "stroke-linejoin"
+      ]
+    },
+    "utilities/svg/svg-stroke-width.md": {
+      "kind": "utility",
+      "families": [
+        "stroke-width"
+      ]
+    },
+    "utilities/tables/table-border-spacing.md": {
+      "kind": "utility",
+      "families": [
+        "border-collapse",
+        "border-spacing"
+      ]
+    },
+    "utilities/tables/table-border.md": {
+      "kind": "utility",
+      "families": [
+        "table-border"
+      ]
+    },
+    "utilities/tables/table-layout.md": {
+      "kind": "utility",
+      "families": [
+        "table-layout"
+      ]
+    },
+    "utilities/tables/tables-active-rows-and-cells.md": {
+      "kind": "utility",
+      "families": [
+        "table-active",
+        "table-hover"
+      ]
+    },
+    "utilities/tables/tables-alternating-rows-and-columns.md": {
+      "kind": "utility",
+      "families": [
+        "table-stripe"
+      ]
+    },
+    "utilities/tables/tables-default-parameters.md": {
+      "kind": "utility",
+      "families": [
+        "table"
+      ]
+    },
+    "utilities/text-formatting/text-color.md": {
+      "kind": "utility",
+      "families": [
+        "text-color"
+      ]
+    },
+    "utilities/text-formatting/text-decoration-color.md": {
+      "kind": "utility",
+      "families": [
+        "text-decoration-color"
+      ]
+    },
+    "utilities/text-formatting/text-decoration-offset.md": {
+      "kind": "utility",
+      "families": [
+        "text-decoration-offset"
+      ]
+    },
+    "utilities/text-formatting/text-decoration-style.md": {
+      "kind": "utility",
+      "families": [
+        "text-decoration-style"
+      ]
+    },
+    "utilities/text-formatting/text-decoration.md": {
+      "kind": "utility",
+      "families": [
+        "text-decoration"
+      ]
+    },
+    "utilities/text-formatting/text-formatting-text.md": {
+      "kind": "utility",
+      "families": [
+        "font-transform"
+      ]
+    },
+    "utilities/text-formatting/text-formatting-thickness.md": {
+      "kind": "utility",
+      "families": [
+        "text-decoration-thickness"
+      ]
+    },
+    "utilities/transform/transform-origin.md": {
+      "kind": "utility",
+      "families": [
+        "transform-origin"
+      ]
+    },
+    "utilities/transform/transform-rotate.md": {
+      "kind": "utility",
+      "families": [
+        "transform-rotate"
+      ]
+    },
+    "utilities/transform/transform-scale.md": {
+      "kind": "utility",
+      "families": [
+        "transform-scale"
+      ]
+    },
+    "utilities/transform/transform-skew.md": {
+      "kind": "utility",
+      "families": [
+        "transform-skew"
+      ]
+    },
+    "utilities/transform/transform-translate.md": {
+      "kind": "utility",
+      "families": [
+        "transform-translate",
+        "transform-translate-ext"
+      ]
+    },
+    "utilities/typography/content.md": {
+      "kind": "utility",
+      "families": [
+        "content"
+      ]
+    },
+    "utilities/typography/font-family.md": {
+      "kind": "utility",
+      "families": [
+        "font-family"
+      ]
+    },
+    "utilities/typography/font-smoothing.md": {
+      "kind": "utility",
+      "families": [
+        "font-smoothing"
+      ]
+    },
+    "utilities/typography/font-style.md": {
+      "kind": "utility",
+      "families": [
+        "font-style"
+      ]
+    },
+    "utilities/typography/font-variant-numeric.md": {
+      "kind": "utility",
+      "families": [
+        "font-variant-numeric"
+      ]
+    },
+    "utilities/typography/font-variant.md": {
+      "kind": "utility",
+      "families": [
+        "font-variant"
+      ]
+    },
+    "utilities/typography/font-weight.md": {
+      "kind": "utility",
+      "families": [
+        "font-weight"
+      ]
+    },
+    "utilities/typography/letter-spacing.md": {
+      "kind": "utility",
+      "families": [
+        "letter-spacing"
+      ]
+    },
+    "utilities/typography/line-clamp.md": {
+      "kind": "utility",
+      "families": [
+        "line-clamp"
+      ]
+    },
+    "utilities/typography/line-height.md": {
+      "kind": "utility",
+      "families": [
+        "line-height"
+      ]
+    },
+    "utilities/typography/list-style-position.md": {
+      "kind": "utility",
+      "families": [
+        "list-style-position"
+      ]
+    },
+    "utilities/typography/list-style-type.md": {
+      "kind": "utility",
+      "families": [
+        "list-style-type"
+      ]
+    },
+    "utilities/typography/text-align.md": {
+      "kind": "utility",
+      "families": [
+        "text-align"
+      ]
+    },
+    "utilities/typography/text-indent.md": {
+      "kind": "utility",
+      "families": [
+        "text-indent"
+      ]
+    },
+    "utilities/typography/text-max-width.md": {
+      "kind": "utility",
+      "families": [
+        "text-max-width"
+      ]
+    },
+    "utilities/typography/text-overflow.md": {
+      "kind": "utility",
+      "families": [
+        "text-overflow"
+      ]
+    },
+    "utilities/typography/text-size.md": {
+      "kind": "utility",
+      "families": [
+        "font-size",
+        "font-size-ext"
+      ]
+    },
+    "utilities/typography/text-wrap.md": {
+      "kind": "utility",
+      "families": [
+        "text-wrap"
+      ]
+    },
+    "utilities/typography/title-size.md": {
+      "kind": "utility",
+      "families": [
+        "title"
+      ]
+    },
+    "utilities/typography/vertical-align.md": {
+      "kind": "utility",
+      "families": [
+        "vertical-align"
+      ]
+    },
+    "utilities/typography/white-space.md": {
+      "kind": "utility",
+      "families": [
+        "white-space"
+      ]
+    },
+    "utilities/typography/word-break.md": {
+      "kind": "utility",
+      "families": [
+        "word-break"
+      ]
+    }
   }
 }

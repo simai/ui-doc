@@ -1,68 +1,81 @@
 ---
 title: "Паттерн фона"
-description: "Паттерн фона"
-tags: [pattern, sm, md, lg, xl, xxl]
+description: "Заполняет фон элемента мелким узором из встроенного изображения — без отдельных файлов."
 ---
 
 # Паттерн фона
 
-:badge[pattern]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `pattern-1` … `pattern-9` заполняют фон элемента мелким узором:
+полосками, клеткой или точками. Узор встроен в CSS и не требует файлов. Берите
+эти классы для фактуры подложки, заглушки или декоративной полосы.
 
-С помощью модификаторов паттернов фона (`pattern-{номер}`) вы можете задать повторяющийся узор в качестве фонового
-изображения. Каждый паттерн задаётся встроенным (inline) SVG-кодом, который не требует дополнительных ресурсов.
+## Пример
 
-## Наглядный пример
+### Узоры
 
-:::example {id="utilities/background/background-pattern" label="Паттерн фона"}
+Девять узоров на светлой подложке. Под каждым образцом — класс узора.
+
+:::example {id="utilities/background/background-pattern" label="pattern-1 … pattern-9"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс      | Значение                                                                                                                                                                                                                                                                                                                            |
-|:-----------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `pattern-1` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='1' height='2'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
-| `pattern-2` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='2' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
-| `pattern-3` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                                                               |
-| `pattern-4` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='2' height='2'&gt;&lt;rect x='0' y='1' width='1' height='1' /&gt;&lt;rect x='1' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                                                                                                                                                      |
-| `pattern-5` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='1' height='1' /&gt;&lt;rect x='1' y='1' width='1' height='1' /&gt;&lt;rect x='2' y='2' width='1' height='1' /&gt;&lt;rect x='3' y='1' width='1' height='1' /&gt;&lt;rect x='1' y='3' width='1' height='1' /&gt;&lt;rect x='3' y='3' width='1' height='1' /&gt;&lt;/svg&gt;); |
-| `pattern-6` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='1' height='1' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
-| `pattern-7` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='2' height='2' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
-| `pattern-8` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='1'/&gt;&lt;rect x='0' y='2' width='3' height='1'/&gt;&lt;rect x='0' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='3'/&gt;>&lt;rect x='2' y='0' width='1' height='1'/&gt;&lt;/svg&gt;);                                             |
-| `pattern-9` | url(data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'&gt;&lt;rect x='0' y='0' width='3' height='3' /&gt;&lt;/svg&gt;);                                                                                                                                                                                                              |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: узор меняется с ширины `md` и с ширины `xl`.
 
-## Описание
+:::example {id="utilities/background/background-pattern-responsive" label="Узор по ширине экрана"}
+:::
 
-Адаптивный модификатор `pattern-{1...9}` задаёт определённый встроенный узор (паттерн) в качестве фонового изображения.
-Это позволяет быстро добавлять декоративные узоры для фона элемента без необходимости подключать внешние изображения.
+## Классы
 
-- `pattern-1`, `pattern-2`, `pattern-3` и т.д. — каждый из этих модификаторов устанавливает свой уникальный встроенный
-  SVG-паттерн.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `pattern-1` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%272%27 height=%272%27><rect x=%270%27 y=%270%27 width=%271%27 height=%272%27/></svg>")` | — |
+| `pattern-2` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%272%27 height=%272%27><rect x=%270%27 y=%270%27 width=%272%27 height=%271%27/></svg>")` | — |
+| `pattern-3` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%272%27 height=%272%27><rect x=%270%27 y=%270%27 width=%271%27 height=%271%27/></svg>")` | — |
+| `pattern-4` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%272%27 height=%272%27><rect x=%270%27 y=%271%27 width=%271%27 height=%271%27 /><rect x=%271%27 y=%270%27 width=%271%27 height=%271%27/></svg>")` | — |
+| `pattern-5` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%271%27 height=%271%27 /><rect x=%271%27 y=%271%27 width=%271%27 height=%271%27 /><rect x=%272%27 y=%272%27 width=%271%27 height=%271%27 /><rect x=%273%27 y=%271%27 width=%271%27 height=%271%27 /><rect x=%271%27 y=%273%27 width=%271%27 height=%271%27 /><rect x=%273%27 y=%273%27 width=%271%27 height=%271%27 /></svg>")` | — |
+| `pattern-6` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%271%27 height=%271%27 /></svg>")` | — |
+| `pattern-7` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%272%27 height=%272%27 /></svg>")` | — |
+| `pattern-8` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%273%27 height=%271%27/><rect x=%270%27 y=%272%27 width=%273%27 height=%271%27/><rect x=%270%27 y=%270%27 width=%271%27 height=%273%27/>><rect x=%272%27 y=%270%27 width=%271%27 height=%273%27/>><rect x=%272%27 y=%270%27 width=%271%27 height=%271%27/></svg>")` | — |
+| `pattern-9` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%273%27 height=%273%27 /></svg>")` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:pattern-1`.
 
-Использование: `{контрольная точка}:{модификатор}` или `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*: Применяет модификатор начиная с определенной ширины экрана (sm, md, lg,
-  xl).
-- Модификатор *(обязательный параметр)*: один из классов pattern-{1...9}, выбирающих конкретный паттерн.
+## Применение
 
-## Пример использования
+| Класс | Узор |
+| :--- | :--- |
+| `pattern-1` | вертикальные полоски через пиксель |
+| `pattern-2` | горизонтальные полоски через пиксель |
+| `pattern-3` | точки с шагом 2 пикселя |
+| `pattern-4` | шахматная клетка в пиксель |
+| `pattern-5` | шесть точек в плитке 4×4 пикселя |
+| `pattern-6` | редкие точки с шагом 4 пикселя |
+| `pattern-7` | квадраты 2×2 с шагом 4 пикселя |
+| `pattern-8` | фигуры 3×3 из линий с шагом 4 пикселя |
+| `pattern-9` | квадраты 3×3 с шагом 4 пикселя |
+
+Узор рисуется чёрным поверх того, что лежит под элементом. Подложку задавайте
+на родителе: класс узора сбрасывает цвет фона своего элемента.
 
 ```html
-<!-- Установить паттерн №1 в качестве фона -->
-<div class="pattern-1 w-full h-e8 bg-repeat">
-    <!-- Ваш контент -->
+<div class="bg-white radius-1 overflow-hidden">
+  <div class="pattern-4 h-e0"></div>
 </div>
 ```
 
-```html
-<!-- Установить паттерн №2 при ширине экрана md и более -->
-<div class="md:pattern-2 w-full h-e8 bg-repeat">
-    <!-- Ваш контент -->
-</div>
-```
+## Ограничения
 
-## Адаптивность
+- Цвет узора не настраивается и не меняется с темой; на тёмной подложке узор
+  не виден.
+- Класс задаёт свойство `background` целиком, поэтому цвет фона того же
+  элемента не виден.
+- У семейства нет префиксов состояния.
 
-Для изменения паттерна фона, начиная с определенного размера экрана, добавьте префикс контрольной точки. Например,
-`md:pattern-2` применит паттерн №2 только на экранах от размера Medium и больше.
+## См. также
+
+- [Полосы](/ru/utilities/stripes/stripes/)
+- [Повтор фона](/ru/utilities/background/background-repeat/)

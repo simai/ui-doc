@@ -1,36 +1,77 @@
 ---
 title: "Видимость элемента при печати"
-description: "Видимость элемента при печати (print-visibility)"
-tags: [visibility, sm, md, lg, xl, xxl]
+description: "Делает элемент невидимым или видимым только на печати, не меняя экран."
 ---
 
 # Видимость элемента при печати
 
-:badge[visibility]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Утилиты `print-visible` и `print-hidden` управляют `visibility` только внутри `@media print`.
-
-## Наглядный пример
-
-:::example {id="utilities/print/display-visibility" label="Видимость элемента при печати"}
-:::
-
-## Классы и значения
-
-| Класс | Значение в режиме печати |
-|:---|:---|
-| `print-visible` | `visibility: visible;` |
-| `print-hidden` | `visibility: hidden;` |
-| `print-visible-none` | alias для `print-hidden` |
-
-## Описание
-
-- На экране эти классы не меняют поведение элемента.
-- При печати можно скрывать или показывать элементы, не ломая поток разметки.
-
-## Синтаксис
-
-`print-visible` | `print-hidden` | `print-visible-none`
+Классы `print-hidden` и `print-visible` задают свойство `visibility` только
+при печати; на экране элемент не меняется. Берите их, чтобы убрать с бумаги
+меню, кнопки и пояснения, не сдвигая остальную раскладку.
 
 ## Пример
 
+### Скрытие с сохранением места
+
+На экране видно всё. Откройте предпросмотр печати
+(`Ctrl`+`P` или `Cmd`+`P`): элемент 2 с
+`print-hidden` исчезает, но его место остаётся пустым. Во втором образце рамка
+с `print-hidden` исчезает целиком, кроме потомка с `print-visible`.
+
+:::example {id="utilities/print/display-visibility" label="print-hidden и print-visible"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `print-block` | `display: none; при печати: display: block` | — |
+| `print-inline-block` | `display: none; при печати: display: inline-block` | — |
+| `print-inline` | `display: none; при печати: display: inline` | — |
+| `print-flex` | `display: none; при печати: display: flex` | — |
+| `print-inline-flex` | `display: none; при печати: display: inline-flex` | — |
+| `print-table` | `display: none; при печати: display: table` | — |
+| `print-visible` | `при печати: visibility: visible` | — |
+| `print-hidden` | `при печати: visibility: hidden` | — |
+| `print-visible-none` | `при печати: visibility: hidden` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Применение
+
+### Скрыть на печати
+
+`print-hidden` делает элемент и его потомков невидимыми на бумаге.
+`print-visible-none` — второе имя `print-hidden` с тем же значением.
+
+```html
+<header>
+  <nav class="print-hidden">Меню сайта</nav>
+</header>
+```
+
+### Показать потомка скрытого блока
+
+`print-visible` возвращает видимость потомку блока с `print-hidden`: на бумаге
+остаётся только он.
+
+```html
+<aside class="print-hidden">
+  <p>Пояснение для экрана</p>
+  <p class="print-visible">Реквизиты для печати</p>
+</aside>
+```
+
+## Ограничения
+
+- Невидимый элемент сохраняет своё место на странице. Классы семейства,
+  которые меняют `display` (`print-block` и другие), скрывают элемент на
+  экране — см. [Отображение элемента при печати](/ru/utilities/print/display-print/).
+- Префиксов ширины экрана и состояния у семейства нет.
+
+## См. также
+
+- [Отображение элемента при печати](/ru/utilities/print/display-print/)
+- [Видимость элемента](/ru/utilities/layout/visibility/)

@@ -1,0 +1,3 @@
+.column-gap-demo {
+  column-rule: 1px dashed var(--sf-outline);
+}

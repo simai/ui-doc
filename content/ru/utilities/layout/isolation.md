@@ -1,67 +1,76 @@
 ---
 title: "Контекст наложения"
-description: "Управление контекстом наложения и смешиванием слоёв"
-tags: [isolate, sm, md, lg, xl, xxl]
+description: "Создаёт для элемента отдельный контекст наложения, чтобы смешивание цветов внутри него не затрагивало фон снаружи."
 ---
 
 # Контекст наложения
 
-:badge[isolate]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-`isolate` управляет созданием отдельного stacking context. Это важно, когда используются `mix-blend-*` и нужно ограничить их влияние пределами контейнера.
-
-Для возврата к обычному поведению используется точное имя `isolation-auto`.
-Общий класс `auto` в публичный контракт не входит: он слишком легко вступает в
-конфликт с другими настройками.
+Класс `isolate` задаёт `isolation: isolate`: элемент создаёт свой контекст
+наложения, и его потомки смешиваются и упорядочиваются по оси `z` только
+внутри него. Берите его вместе с [`mix-blend-*`](/ru/utilities/filters/mix-blend-mode/),
+когда смешивание должно ограничиться группой, и когда `z-index` потомков не
+должен соперничать со слоями страницы.
 
 ## Пример
 
-Сравнение показывает, как отдельный контекст наложения ограничивает смешивание цветных слоёв пределами контейнера.
+В обоих образцах блок с `mix-blend-multiply` стоит внутри группы на цветном
+фоне. Подпись над образцом — класс, который стоит на группе: без отдельного
+контекста блок смешивается с фоном снаружи, с `isolate` — нет.
 
-:::example {id="utilities/layout/isolation" label="Изоляция смешивания"}
+:::example {id="utilities/layout/isolation" label="isolation-auto и isolate"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс | Значение |
-|:---|:---|
-| `isolate` | `isolation: isolate;` |
-| `isolation-auto` | `isolation: auto;` |
-| `mix-blend-{mode}` | `mix-blend-mode: ...;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `isolate` | `isolation: isolate` | — |
+| `isolation-auto` | `isolation: auto` | — |
+| `auto` | `isolation: auto` | — |
 
-Поддерживаемые `mode`: `normal`, `multiply`, `screen`, `overlay`, `darken`, `lighten`, `color-dodge`, `color-burn`, `hard-light`, `soft-light`, `difference`, `exclusion`, `hue`, `saturation`, `color`, `luminosity`.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:isolate`.
 
-## Синтаксис
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- `isolate`
-- `isolation-auto`
-- `mix-blend-{mode}`
+## Применение
 
-## Примеры
+### Ограничить смешивание
 
-### isolate
+Поставьте `isolate` на ближайшего общего родителя смешиваемых слоёв. Внутри
+группы слои смешиваются друг с другом, а фон за группой остаётся нетронутым.
 
 ```html
-<div class="bg-success-container">
+<div class="bg-primary color-on-primary p-3">
   <div class="isolate">
-    <div class="mix-blend-multiply bg-warning-container">...</div>
+    <div class="mix-blend-multiply bg-tertiary p-2">Смешивается только внутри группы</div>
   </div>
 </div>
 ```
 
-### auto
+### Ограничить z-index
+
+Внутри элемента с `isolate` значения [`z-index`](/ru/utilities/layout/z-index/)
+потомков сравниваются только между собой: слой внутри карточки с `isolate` не
+поднимется над позиционированной шапкой страницы, даже если его `z-index` больше.
+
+### Вернуть обычное поведение
+
+`isolation-auto` возвращает значение по умолчанию, например на части экранов:
 
 ```html
-<div class="bg-success-container">
-  <div class="isolation-auto">
-    <div class="mix-blend-multiply bg-warning-container">...</div>
-  </div>
-</div>
+<div class="isolate md:isolation-auto"></div>
 ```
 
+## Ограничения
 
-## Адаптивность
+- Контекст наложения создают и другие свойства: `opacity` меньше 1,
+  `transform`, `filter`, `position` с `z-index`. На таком элементе
+  `isolation-auto` контекст не убирает.
+- `auto` — второе имя `isolation-auto` с тем же значением. Пишите
+  `isolation-auto`: короткое имя не говорит, какое свойство оно меняет.
+- У семейства нет префиксов состояния.
 
-Добавьте `sm:`, `md:`, `lg:`, `xl:` или `xxl:`, если отдельный контекст
-наложения нужен только начиная с выбранной ширины. Например, `xxl:isolate`
-начинает действовать на экранах от `1320px`.
+## См. также
+
+- [Смешивание цветов](/ru/utilities/filters/mix-blend-mode/)
+- [Положение элемента по оси Z](/ru/utilities/layout/z-index/)

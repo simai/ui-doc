@@ -1,0 +1,11 @@
+/* Demo only. The Framework has no class for mask-image, so each example sets
+   its own. The mask is inline on purpose: an example renders in a sandboxed
+   frame with an opaque origin, and a mask image is fetched in CORS mode, so a
+   file from the site is refused and the masked element disappears with it. */
+.demo-mask-tile {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='white'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='5' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-size: 1.75rem 1.75rem;
+  mask-size: 1.75rem 1.75rem;
+}
+

@@ -1,66 +1,69 @@
 ---
 title: "Размещение элементов по обеим осям"
-description: "Размещение элементов по обеим осям (place-items)"
-tags: [place-items, sm, md, lg, xl, xxl]
+description: "Одним классом выравнивает элементы сетки в ячейках сразу по горизонтали и по вертикали."
 ---
 
 # Размещение элементов по обеим осям
 
-:badge[place-items]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `items-*` задают `place-items` — `align-items` и `justify-items` одним
+значением: где каждый элемент стоит в своей ячейке сетки. Берите
+`items-center`, чтобы поставить содержимое ячеек в центр.
 
-Модификаторы из этого раздела задают одновременное выравнивание элементов сетки или флексбокса в ячейках относительно
-обеих осей одновременно.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/place-items" label="Размещение элементов по обеим осям"}
+Сетка из трёх колонок заданной высоты. Подпись над образцом — класс
+контейнера.
+
+:::example {id="utilities/grid-and-flexbox-utilities/place-items" label="items-start, items-center, items-end, items-stretch"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс          | Значение              |
-|:---------------|:----------------------|
-| `items-start` | `place-items: start;` |
-| `items-end` | `place-items: end;` |
-| `items-center` | `place-items: center;` |
-| `items-stretch` | `place-items: stretch;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `items-start` | `align-items: start; justify-items: start; place-items: start` | — |
+| `items-end` | `align-items: end; justify-items: end; place-items: end` | — |
+| `items-center` | `align-items: center; justify-items: center; place-items: center` | — |
+| `items-stretch` | `align-items: stretch; justify-items: stretch; place-items: stretch` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-start`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `items-start` – элементы выравниваются в начале ячеек по обеим осям;
-    - `items-end` – элементы выравниваются в конце ячеек по обеим осям;
-    - `items-center` – элементы выравниваются по центру ячеек по обеим осям;
-    - `items-stretch` – элементы растягиваются, занимая всё доступное пространство ячеек по обеим осям.
+- `items-start`, `items-center`, `items-end` — элементы своего размера у начала,
+  в центре или у конца ячейки по обеим осям.
+- `items-stretch` — элементы на всю ячейку; значение по умолчанию у сетки.
 
-## Пример использования
+### Значки в центре ячеек
 
 ```html
-<div class="grid grid-col-3 items-center">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
+<div class="grid grid-col-4 auto-rows-fr items-center gap-1">
+  <img src="1.svg" alt="Первый">
+  <img src="2.svg" alt="Второй">
+  <img src="3.svg" alt="Третий">
+  <img src="4.svg" alt="Четвёртый">
 </div>
 ```
 
-В данном примере элементы будут выровнены по центру ячеек сразу по обеим осям.
+По одной оси выравнивают классы
+[`items-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-items/) и
+[`items-main-*`](/ru/utilities/grid-and-flexbox-utilities/justify-items/).
 
-## Адаптивность
+## Ограничения
 
-Для адаптивного изменения выравнивания элементов, начиная с определённого размера экрана, добавьте контрольную точку:
+- Во флекс-контейнере действует только вертикальная часть: `flex items-center`
+  выравнивает элементы по поперечной оси, как `items-cross-center`. По основной
+  оси элементы располагают классы
+  [`justify-*`](/ru/utilities/grid-and-flexbox-utilities/justify-content/).
 
-```html
-<div class="md:items-start">
-  <!-- Начиная с md элементы будут прижаты к началу ячеек по обеим осям -->
-</div>
-```
+## См. также
+
+- [Выравнивание каждого элемента в ячейках по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+- [Выравнивание каждого элемента по основной оси внутри ячейки](/ru/utilities/grid-and-flexbox-utilities/justify-items/)
+- [Размещение отдельного элемента](/ru/utilities/grid-and-flexbox-utilities/place-self/)

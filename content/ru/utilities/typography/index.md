@@ -21,7 +21,6 @@
 - [Обрезка текста (text-overflow)](/ru/utilities/typography/text-overflow/)
 - [Модификаторы ролей текста](/ru/utilities/typography/text-role-modifiers/)
 - [Размер текста (text-size)](/ru/utilities/typography/text-size/)
-- [Трансформация текста (text-transform)](/ru/utilities/typography/text-transform/)
 - [Размер заголовков (title-size)](/ru/utilities/typography/title-size/)
 - [Выравнивание по вертикали (vertical-align)](/ru/utilities/typography/vertical-align/)
 - [Обработка пробелов (white-space)](/ru/utilities/typography/white-space/)

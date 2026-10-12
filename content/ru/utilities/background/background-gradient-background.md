@@ -1,56 +1,114 @@
 ---
 title: "Градиент фона"
-description: "Градиент фона"
-tags: [gradient-color]
+description: "Задаёт цвета точек градиента классами gr1-, gr2- и gr3- из цветовых ролей темы."
 ---
 
 # Градиент фона
 
-:badge[gradient-color]{type=main scheme=on-surface size=1}
+Классы `gr1-*`, `gr2-*` и `gr3-*` задают цвета первой, второй и третьей
+точки фонового градиента. Сам градиент рисует класс вида —
+`gr-line-*`, `gr-radial-*`, `gr-conic-*` или `bg-gradient-to-*`. Берите эти
+классы, когда цвета градиента должны идти из ролей темы.
 
-С помощью модификаторов цвета градиента можно задать цвета для градиентного фона элемента. В сочетании с модификаторами
-вида градиента (`gr-line-2`, `gr-line-3`, `gr-radial-2`, `gr-radial-3`, `gr-conic-2`, `gr-conic-3`) эти классы
-определяют цвета, используемые в градиенте.
+## Пример
 
-## Наглядный пример
+### Две точки
 
-:::example {id="utilities/background/background-gradient-background" label="Градиент фона"}
+Линейный градиент `gr-line-2` с разными парами цветов. Под образцом — классы
+цвета.
+
+:::example {id="utilities/background/background-gradient-background" label="gr1- и gr2- с gr-line-2"}
 :::
 
-## Таблица классов
+### Три точки
 
-Используйте префикс `gr1-` или `gr2-` (для градиентов из двух цветов) либо `gr3-` (для градиентов из трех цветов) для
-указания цвета каждого шага градиента.
+Одни и те же три цвета в линейном, радиальном и коническом градиенте.
 
-| Класс цвета                                              | Переменная                   | Значение цвета                  |
-|:-----------------------------------------------------------------------------|:-----------------------------|:--------------------------------|
-| `gr1-transparent, gr2-transparent, gr3-transparent` | `--sf-gradient--color-1/2/3` | var(`--sf-transparent`)         |
-| `gr1-current, gr2-current, gr3-current` | `--sf-gradient--color-1/2/3` | currentColor                    |
-| `gr1-inherit, gr2-inherit, gr3-inherit` | `--sf-gradient--color-1/2/3` | inherit                         |
-| `gr1-surface-0, gr2-surface-0, gr3-surface-0` | `--sf-gradient--color-1/2/3` | var(`--sf-surface-0`)           |
-| `gr1-surface-1, gr2-surface-1, gr3-surface-1` | `--sf-gradient--color-1/2/3` | var(`--sf-surface-1`)           |
-| `gr1-surface-2, gr2-surface-2, gr3-surface-2` | `--sf-gradient--color-1/2/3` | var(`--sf-surface-2`)           |
-| `gr1-on-surface, gr2-on-surface, gr3-on-surface` | `--sf-gradient--color-1/2/3` | var(`--sf-on-surface`)          |
-| `gr1-primary, gr2-primary, gr3-primary` | `--sf-gradient--color-1/2/3` | var(`--sf-primary`)             |
-| `gr1-primary-container, gr2-primary-container, gr3-primary-container` | `--sf-gradient--color-1/2/3` | var(`--sf-primary-container`)   |
-| `gr1-secondary, gr2-secondary, gr3-secondary` | `--sf-gradient--color-1/2/3` | var(`--sf-secondary`)           |
-| `gr1-secondary-container, gr2-secondary-container, gr3-secondary-container` | `--sf-gradient--color-1/2/3` | var(`--sf-secondary-container`) |
-| `gr1-tertiary, gr2-tertiary, gr3-tertiary` | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary`)            |
-| `gr1-tertiary-container, gr2-tertiary-container, gr3-tertiary-container` | `--sf-gradient--color-1/2/3` | var(`--sf-tertiary-container`)  |
-| `gr1-success, gr2-success, gr3-success` | `--sf-gradient--color-1/2/3` | var(`--sf-success`)             |
-| `gr1-warning, gr2-warning, gr3-warning` | `--sf-gradient--color-1/2/3` | var(`--sf-warning`)             |
+:::example {id="utilities/background/background-gradient-background-three" label="gr1-, gr2- и gr3- с градиентами на три точки"}
+:::
 
-*(Прежние классы цветов заменяются по аналогии с заменой для цвета фона. Например, вместо `gr1-blue-4`
-использовать `gr1-primary`, вместо `gr1-gray-6` использовать `gr1-surface-inverse`, и т.д.)*
+## Классы
 
-## Описание
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `gr1-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `gr1-surface-0` | `--sf-gradient--color-1: var(--sf-surface-0)` | — |
+| `gr1-surface-1` | `--sf-gradient--color-1: var(--sf-surface-1)` | — |
+| `gr1-surface-2` | `--sf-gradient--color-1: var(--sf-surface-2)` | — |
+| `gr1-on-surface` | `--sf-gradient--color-1: var(--sf-on-surface)` | — |
+| `gr1-{значение}-container` | `--sf-gradient--color-1: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
+| `gr2-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `gr2-surface-0` | `--sf-gradient--color-2: var(--sf-surface-0)` | — |
+| `gr2-surface-1` | `--sf-gradient--color-2: var(--sf-surface-1)` | — |
+| `gr2-surface-2` | `--sf-gradient--color-2: var(--sf-surface-2)` | — |
+| `gr2-on-surface` | `--sf-gradient--color-2: var(--sf-on-surface)` | — |
+| `gr2-{значение}-container` | `--sf-gradient--color-2: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
+| `gr3-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `gr3-surface-{значение}` | `--sf-gradient--color-3: var(--sf-surface-{значение})` | `0`, `1`, `2` |
+| `gr3-on-surface` | `--sf-gradient--color-3: var(--sf-on-surface)` | — |
+| `gr3-{значение}-container` | `--sf-gradient--color-3: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
 
-Данные модификаторы задают значения переменных `--sf-gradient--color-1`, `--sf-gradient--color-2` и при необходимости
-`--sf-gradient--color-3`, которые затем используются вместе с модификаторами вида градиента.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-По умолчанию угол градиента `--sf-gradient--angle` равен `90deg`.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Пример использования
+## Переменные
 
-Используйте подходящие классы для каждого шага градиента и модификатор вида градиента для создания нужного визуального
-эффекта.
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-transparent` | `rgba(255,255,255,0)` |
+| `--sf-current` | `currentColor` |
+| `--sf-inherit` | `inherit` |
+| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-1` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-2` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-15))` |
+| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
+| `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
+| `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
+| `--sf-secondary` | `light-dark(var(--sf-secondary-40), var(--sf-secondary-80))` |
+| `--sf-secondary-container` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` |
+| `--sf-tertiary` | `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` |
+| `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
+| `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
+| `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
+
+## Применение
+
+### Как это работает
+
+Класс цвета записывает значение в переменную, класс вида читает её:
+
+| Класс цвета | Переменная | Какая точка |
+| :--- | :--- | :--- |
+| `gr1-*` | `--sf-gradient--color-1` | первая |
+| `gr2-*` | `--sf-gradient--color-2` | вторая |
+| `gr3-*` | `--sf-gradient--color-3` | третья |
+
+Классы `from-*`, `via-*` и `to-*` пишут в те же переменные; выберите одну
+запись и держитесь её на странице.
+
+```html
+<div class="gr-line-2 gr1-primary gr2-tertiary h-e0"></div>
+<div class="gr-radial-3 gr1-primary gr2-warning gr3-success h-e0"></div>
+```
+
+### Какие цвета есть
+
+`transparent`, `current`, `inherit`, поверхности `surface-0` … `surface-2`,
+`on-surface`, акценты `primary`, `secondary`, `tertiary` и их контейнеры,
+статусы `success` и `warning`.
+
+## Ограничения
+
+- Без класса вида класс цвета ничего не рисует.
+- Переменные градиента наследуются: вложенный элемент с классом вида без своих
+  цветов берёт цвета родителя.
+- Префиксов ширины экрана и состояния у семейства нет.
+
+## См. также
+
+- [Вид градиента](/ru/utilities/background/background-gradient-type/)
+- [Точки градиента](/ru/utilities/background/background-gradient-stops/)
+- [Обрезка фона](/ru/utilities/background/background-clip/)

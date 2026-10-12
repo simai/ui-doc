@@ -1,28 +1,36 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 sm:grid-col-2 gap-4 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">screen behavior</div>
-    <div class="p-3 radius-3 border border-outline-variant">
-      <div class="text-2">
-        These blocks are hidden on screen because each
-        <code>print-*</code> class sets <code>display:none</code> outside print
-        media.
-      </div>
-      <div class="m-top-2 hidden print-block p-2 bg-surface-container radius-2">
-        print-block
-      </div>
-      <div
-        class="m-top-2 hidden print-inline-flex p-2 bg-surface-container radius-2"
-      >
-        print-inline-flex
+    <code class="text-1/2 color-on-surface-variant">print-block</code>
+    <div class="p-1 border border-dashed border-outline radius-ui">
+      <span class="print-hidden color-on-surface-variant">На экране блок скрыт</span>
+      <div class="print-block p-1 bg-primary-container color-on-primary-container radius-ui">Блок только для печати</div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">print-inline</code>
+    <div class="p-1 border border-dashed border-outline radius-ui">
+      Адрес страницы<span class="print-inline color-primary">: https://example.com/order/42</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">print-flex</code>
+    <div class="p-1 border border-dashed border-outline radius-ui">
+      <span class="print-hidden color-on-surface-variant">На экране строка скрыта</span>
+      <div class="print-flex gap-1">
+        <span class="flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">Подпись</span>
+        <span class="flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui">Дата</span>
       </div>
     </div>
   </div>
   <div class="flex flex-col gap-1">
-          <div class="weight-6 m-bottom-2 text-center">how to test</div>
-    <div class="p-3 radius-3 border border-outline-variant">
-      <div class="text-2">
-        Open browser print preview (<code>Ctrl+P</code>). Elements with
-        <code>print-*</code> become visible only there.
+    <code class="text-1/2 color-on-surface-variant">print-table</code>
+    <div class="p-1 border border-dashed border-outline radius-ui">
+      <span class="print-hidden color-on-surface-variant">На экране таблица скрыта</span>
+      <div class="print-table">
+        <div class="table-row">
+          <span class="table-cell p-1">Итого</span>
+          <span class="table-cell p-1 weight-6">1 200 ₽</span>
+        </div>
       </div>
     </div>
   </div>

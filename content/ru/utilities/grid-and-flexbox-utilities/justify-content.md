@@ -1,76 +1,96 @@
 ---
 title: "Выравнивание содержимого по основной оси"
-description: "Выравнивание содержимого по основной оси (justify-content)"
-tags: [justify-content, sm, md, lg, xl, xxl]
+description: "Прижимает элементы флекс-контейнера или колонки сетки к началу, центру или концу и распределяет между ними свободное место."
 ---
 
 # Выравнивание содержимого по основной оси
 
-:badge[justify-content]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `justify-*` задают `justify-content`: куда флекс-контейнер сдвигает
+элементы вдоль основной оси и как делит между ними свободное место. В сетке
+они так же располагают колонки, если колонки уже контейнера. Берите их для
+панелей с кнопками, шапок и навигации.
 
-Этот модификатор определяет, как именно элементы внутри контейнера (флексбокса или сетки) выравниваются вдоль основной
-оси. Основная ось зависит от направления (`flex-direction`). Если `row` (строка) — основная ось горизонтальная. Если
-`column` (столбец) — вертикальная.
+## Пример
 
-Каноническая форма — `justify-*`. Ранее опубликованные классы
-`content-main-*` остаются совместимыми на протяжении линейки SF5, но в новом
-коде и примерах следует использовать `justify-*`.
+### Значения
 
-## Наглядный пример
+Три элемента во флекс-контейнере. Подпись над образцом — класс контейнера.
 
-:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="Выравнивание содержимого по основной оси"}
+:::example {id="utilities/grid-and-flexbox-utilities/justify-content" label="justify-start … justify-evenly"}
 :::
 
-## Таблица классов
+### Ширина экрана
 
-| Класс                 | Значение                        |
-|:----------------------|:--------------------------------|
-| `justify-start` | `justify-content: flex-start;` |
-| `justify-end` | `justify-content: flex-end;` |
-| `justify-center` | `justify-content: center;` |
-| `justify-between` | `justify-content: space-between;` |
-| `justify-around` | `justify-content: space-around;` |
-| `justify-evenly` | `justify-content: space-evenly;` |
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: на узком экране элементы по центру, с ширины `md` — по краям.
 
-Для каждой строки также доступен совместимый псевдоним, например
-`content-main-center` для `justify-center`.
+:::example {id="utilities/grid-and-flexbox-utilities/justify-content-responsive" label="justify-center md:justify-between"}
+:::
 
-## Синтаксис
+## Классы
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `justify-start` | `justify-content: flex-start` | — |
+| `content-main-start` | `justify-content: flex-start` | — |
+| `justify-end` | `justify-content: flex-end` | — |
+| `content-main-end` | `justify-content: flex-end` | — |
+| `justify-center` | `justify-content: center` | — |
+| `content-main-center` | `justify-content: center` | — |
+| `justify-between` | `justify-content: space-between` | — |
+| `content-main-between` | `justify-content: space-between` | — |
+| `justify-around` | `justify-content: space-around` | — |
+| `content-main-around` | `justify-content: space-around` | — |
+| `justify-evenly` | `justify-content: space-evenly` | — |
+| `content-main-evenly` | `justify-content: space-evenly` | — |
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:justify-start`.
 
-- Модификатор *(обязательный параметр)*:
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-    - `justify-start` – элементы прижаты к началу основной оси;
-    - `justify-end` – элементы прижаты к концу основной оси;
-    - `justify-center` – элементы выравнены по центру основной оси;
-    - `justify-between` – элементы распределены равномерно с первым и последним элементом прижатыми к краям;
-    - `justify-around` – элементы равномерно распределены так, что отступ от краёв вдвое меньше отступов между
-      элементами;
-    - `justify-evenly` – элементы распределены с равными отступами между собой и от краёв.
+## Применение
 
-## Пример использования
+### Как выбрать
 
-```html
-<div class="flex justify-center">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>
-```
+- `justify-start`, `justify-center`, `justify-end` — элементы вместе у начала,
+  в центре или у конца.
+- `justify-between` — крайние элементы у краёв, остальное место поровну между
+  элементами.
+- `justify-around` — у каждого элемента одинаковые поля с двух сторон, поэтому
+  у краёв место вдвое меньше, чем между элементами.
+- `justify-evenly` — место поровну между элементами и у краёв.
 
-В этом примере все элементы будут выровнены по центру основной оси.
-
-## Адаптивность
-
-Чтобы применить выравнивание, начиная с определённого размера экрана, добавьте контрольную точку. Например:
+### Шапка: логотип слева, меню справа
 
 ```html
-<div class="md:justify-start">
-    <!-- Начиная с md выравнивание элементов будет flex-start -->
-</div>
+<header class="flex justify-between items-cross-center">
+  <a href="/">Логотип</a>
+  <nav>Меню</nav>
+</header>
 ```
+
+Основная ось следует направлению: при
+[`flex-col`](/ru/utilities/flex/flex-direction/) классы выравнивают по
+вертикали. Выравнивание по второй оси задают классы
+[`items-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-items/), обе
+оси сразу — [`start-start` … `end-end`](/ru/utilities/grid-and-flexbox-utilities/flex-align/).
+
+### Второе имя
+
+У каждого класса есть второе имя: `content-main-start`, `content-main-center`,
+`content-main-end`, `content-main-between`, `content-main-around`,
+`content-main-evenly`. Значения те же. В разметке пишите `justify-*`.
+
+## Ограничения
+
+- Классы распределяют только свободное место. Если элемент растягивается
+  (`grow`, `flex-1`), свободного места нет и класс ничего не меняет.
+- `justify-start` и `justify-end` следуют направлению письма: при `dir="rtl"`
+  начало строки справа.
+
+## См. также
+
+- [Выравнивание каждого элемента в ячейках по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-items/)
+- [Одновременное выравнивание по двум осям](/ru/utilities/grid-and-flexbox-utilities/flex-align/)
+- [Размещение содержимого по обеим осям](/ru/utilities/grid-and-flexbox-utilities/place-content/)
+- [Направление размещения](/ru/utilities/flex/flex-direction/)

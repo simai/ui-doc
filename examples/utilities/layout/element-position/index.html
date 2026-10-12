@@ -1,17 +1,38 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 sm:grid-col-3 gap-4 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>absolute</code> и <code>inset-0</code></div>
-    <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3 relative h-e8">
-      <div class="bg-primary color-on-primary p-2 absolute inset-0" aria-label="inset-0">inset-0</div>
-      <div class="bg-secondary color-on-secondary p-2 absolute inset-0 m-2 radius-2" aria-label="Внутренняя область">Внутренняя область</div>
+    <code class="text-1/2 color-on-surface-variant">inset-0</code>
+    <div class="relative h-e8 border border-dashed border-outline radius-ui">
+      <div class="absolute inset-0 bg-primary-container border border-primary radius-ui"></div>
     </div>
   </div>
-
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center">Логические стороны</div>
-    <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3 relative h-e8">
-      <div class="bg-tertiary color-on-tertiary p-2 absolute top-0 inline-end-0" aria-label="Сверху в конце строки"><code>top-0 inline-end-0</code></div>
-      <div class="bg-success color-on-success p-2 absolute bottom-0 inline-start-0" aria-label="Снизу в начале строки"><code>bottom-0 inline-start-0</code></div>
+    <code class="text-1/2 color-on-surface-variant">inset-x-0 top-0</code>
+    <div class="relative h-e8 border border-dashed border-outline radius-ui">
+      <div class="absolute inset-x-0 top-0 h-c6 bg-primary-container border border-primary radius-ui"></div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">inset-y-0 inline-start-0</code>
+    <div class="relative h-e8 border border-dashed border-outline radius-ui">
+      <div class="absolute inset-y-0 inline-start-0 w-c6 bg-primary-container border border-primary radius-ui"></div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">top-0 inline-end-0</code>
+    <div class="relative h-e8 border border-dashed border-outline radius-ui">
+      <div class="absolute top-0 inline-end-0 w-c6 h-c6 bg-primary-container border border-primary radius-ui"></div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">bottom-0 inline-start-0</code>
+    <div class="relative h-e8 border border-dashed border-outline radius-ui">
+      <div class="absolute bottom-0 inline-start-0 w-c6 h-c6 bg-primary-container border border-primary radius-ui"></div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">inset-center -translate-x-half -translate-y-half</code>
+    <div class="relative h-e8 border border-dashed border-outline radius-ui">
+      <div class="absolute inset-center -translate-x-half -translate-y-half w-c6 h-c6 bg-primary-container border border-primary radius-ui"></div>
     </div>
   </div>
 </div>

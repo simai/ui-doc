@@ -1,131 +1,202 @@
 ---
 title: "Внешний отступ прокрутки"
-description: "Внешний отступ прокрутки"
-tags: [scroll-margin, scroll-margin-ext]
+description: "Оставляет зазор вокруг элемента, когда к нему прокручивают по якорю, скриптом или привязкой прокрутки."
 ---
 
 # Внешний отступ прокрутки
 
-:badge[scroll-margin]{type=main scheme=on-surface size=1} :badge[scroll-margin-ext]{type=tonal scheme=neutral size=1}
+Классы `scroll-m*` задают `scroll-margin` — зазор вокруг элемента, который
+браузер оставляет, когда прокручивает к нему: по якорной ссылке, через
+`scrollIntoView` или при привязке прокрутки. Сам элемент на странице не
+сдвигается. Берите их для разделов под закреплённой шапкой и для карточек
+ленты, которые должны останавливаться не вплотную к краю.
 
-Модификаторы из пакета `scroll-margin` позволяют задать дополнительные отступы вокруг элементов при прокрутке, улучшая
-видимость и удобство навигации.
+## Пример
 
-## Наглядный пример
+Прокрутите обе ленты вбок. Карточки привязываются к началу ленты: без
+отступа — вплотную к краю, с `scroll-m-inline-start-4` — с зазором, в котором
+видна предыдущая карточка.
 
-:::example {id="utilities/overscroll/scroll-margin" label="Внешний отступ прокрутки"}
+:::example {id="utilities/overscroll/scroll-margin" label="Зазор при привязке прокрутки"}
 :::
 
-## Классы и их значения
+## Классы
 
-| Класс | Значение |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `scroll-m-{значение}` | `scroll-margin: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-mt-{значение}` | `scroll-margin-top: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-m-inline-end-{значение}` | `scroll-margin-inline-end: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-mb-{значение}` | `scroll-margin-bottom: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-m-inline-start-{значение}` | `scroll-margin-inline-start: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-m-inline-{значение}` | `scroll-margin-inline-end: var(--sf-space-{значение}); scroll-margin-inline-start: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-my-{значение}` | `scroll-margin-top: var(--sf-space-{значение}); scroll-margin-bottom: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
+| `scroll-m-{значение}` | `scroll-margin: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `-scroll-m-{значение}` | `scroll-margin: calc(0rem - var(--sf-{значение}))` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `scroll-mt-{значение}` | `scroll-margin-top: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `-scroll-mt-{значение}` | `scroll-margin-top: calc(0rem - var(--sf-{значение}))` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `scroll-m-inline-end-{значение}` | `scroll-margin-inline-end: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `-scroll-m-inline-end-{значение}` | `scroll-margin-inline-end: calc(0rem - var(--sf-{значение}))` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `scroll-mb-{значение}` | `scroll-margin-bottom: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `-scroll-mb-{значение}` | `scroll-margin-bottom: calc(0rem - var(--sf-{значение}))` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `scroll-m-inline-start-{значение}` | `scroll-margin-inline-start: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `-scroll-m-inline-start-{значение}` | `scroll-margin-inline-start: calc(0rem - var(--sf-{значение}))` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
 |:---|:---|
-| `scroll-m-0` | `scroll-margin: var(--sf-space-0);` |
-| `scroll-m-1/4` | `scroll-margin: var(--sf-space-1/4);` |
-| `scroll-m-1/3` | `scroll-margin: var(--sf-space-1/3);` |
-| `scroll-m-1/2` | `scroll-margin: var(--sf-space-1/2);` |
-| `scroll-m-1` | `scroll-margin: var(--sf-space-1);` |
-| `scroll-m-2` | `scroll-margin: var(--sf-space-2);` |
-| `scroll-m-3` | `scroll-margin: var(--sf-space-3);` |
-| `scroll-m-4` | `scroll-margin: var(--sf-space-4);` |
-| `scroll-m-5` | `scroll-margin: var(--sf-space-5);` |
-| `scroll-m-6` | `scroll-margin: var(--sf-space-6);` |
-| `scroll-m-7` | `scroll-margin: var(--sf-space-7);` |
-| `scroll-m-8` | `scroll-margin: var(--sf-space-8);` |
-| `scroll-mt-0` | `scroll-margin-top: var(--sf-space-0);` |
-| `scroll-mt-1/4` | `scroll-margin-top: var(--sf-space-1/4);` |
-| `scroll-mt-1/3` | `scroll-margin-top: var(--sf-space-1/3);` |
-| `scroll-mt-1/2` | `scroll-margin-top: var(--sf-space-1/2);` |
-| `scroll-mt-1` | `scroll-margin-top: var(--sf-space-1);` |
-| `scroll-mt-2` | `scroll-margin-top: var(--sf-space-2);` |
-| `scroll-mt-3` | `scroll-margin-top: var(--sf-space-3);` |
-| `scroll-mt-4` | `scroll-margin-top: var(--sf-space-4);` |
-| `scroll-mt-5` | `scroll-margin-top: var(--sf-space-5);` |
-| `scroll-mt-6` | `scroll-margin-top: var(--sf-space-6);` |
-| `scroll-mt-7` | `scroll-margin-top: var(--sf-space-7);` |
-| `scroll-mt-8` | `scroll-margin-top: var(--sf-space-8);` |
-| `scroll-mb-0` | `scroll-margin-bottom: var(--sf-space-0);` |
-| `scroll-mb-1/4` | `scroll-margin-bottom: var(--sf-space-1/4);` |
-| `scroll-mb-1/3` | `scroll-margin-bottom: var(--sf-space-1/3);` |
-| `scroll-mb-1/2` | `scroll-margin-bottom: var(--sf-space-1/2);` |
-| `scroll-mb-1` | `scroll-margin-bottom: var(--sf-space-1);` |
-| `scroll-mb-2` | `scroll-margin-bottom: var(--sf-space-2);` |
-| `scroll-mb-3` | `scroll-margin-bottom: var(--sf-space-3);` |
-| `scroll-mb-4` | `scroll-margin-bottom: var(--sf-space-4);` |
-| `scroll-mb-5` | `scroll-margin-bottom: var(--sf-space-5);` |
-| `scroll-mb-6` | `scroll-margin-bottom: var(--sf-space-6);` |
-| `scroll-mb-7` | `scroll-margin-bottom: var(--sf-space-7);` |
-| `scroll-mb-8` | `scroll-margin-bottom: var(--sf-space-8);` |
-| `scroll-my-0` | `scroll-margin-top: var(--sf-space-0); scroll-margin-bottom: var(--sf-space-0);` |
-| `scroll-my-1/4` | `scroll-margin-top: var(--sf-space-1/4); scroll-margin-bottom: var(--sf-space-1/4);` |
-| `scroll-my-1/3` | `scroll-margin-top: var(--sf-space-1/3); scroll-margin-bottom: var(--sf-space-1/3);` |
-| `scroll-my-1/2` | `scroll-margin-top: var(--sf-space-1/2); scroll-margin-bottom: var(--sf-space-1/2);` |
-| `scroll-my-1` | `scroll-margin-top: var(--sf-space-1); scroll-margin-bottom: var(--sf-space-1);` |
-| `scroll-my-2` | `scroll-margin-top: var(--sf-space-2); scroll-margin-bottom: var(--sf-space-2);` |
-| `scroll-my-3` | `scroll-margin-top: var(--sf-space-3); scroll-margin-bottom: var(--sf-space-3);` |
-| `scroll-my-4` | `scroll-margin-top: var(--sf-space-4); scroll-margin-bottom: var(--sf-space-4);` |
-| `scroll-my-5` | `scroll-margin-top: var(--sf-space-5); scroll-margin-bottom: var(--sf-space-5);` |
-| `scroll-my-6` | `scroll-margin-top: var(--sf-space-6); scroll-margin-bottom: var(--sf-space-6);` |
-| `scroll-my-7` | `scroll-margin-top: var(--sf-space-7); scroll-margin-bottom: var(--sf-space-7);` |
-| `scroll-my-8` | `scroll-margin-top: var(--sf-space-8); scroll-margin-bottom: var(--sf-space-8);` |
-| `scroll-m-inline-0` | `scroll-margin-inline-end: var(--sf-space-0); scroll-margin-inline-start: var(--sf-space-0);` |
-| `scroll-m-inline-1/4` | `scroll-margin-inline-end: var(--sf-space-1/4); scroll-margin-inline-start: var(--sf-space-1/4);` |
-| `scroll-m-inline-1/3` | `scroll-margin-inline-end: var(--sf-space-1/3); scroll-margin-inline-start: var(--sf-space-1/3);` |
-| `scroll-m-inline-1/2` | `scroll-margin-inline-end: var(--sf-space-1/2); scroll-margin-inline-start: var(--sf-space-1/2);` |
-| `scroll-m-inline-1` | `scroll-margin-inline-end: var(--sf-space-1); scroll-margin-inline-start: var(--sf-space-1);` |
-| `scroll-m-inline-2` | `scroll-margin-inline-end: var(--sf-space-2); scroll-margin-inline-start: var(--sf-space-2);` |
-| `scroll-m-inline-3` | `scroll-margin-inline-end: var(--sf-space-3); scroll-margin-inline-start: var(--sf-space-3);` |
-| `scroll-m-inline-4` | `scroll-margin-inline-end: var(--sf-space-4); scroll-margin-inline-start: var(--sf-space-4);` |
-| `scroll-m-inline-5` | `scroll-margin-inline-end: var(--sf-space-5); scroll-margin-inline-start: var(--sf-space-5);` |
-| `scroll-m-inline-6` | `scroll-margin-inline-end: var(--sf-space-6); scroll-margin-inline-start: var(--sf-space-6);` |
-| `scroll-m-inline-7` | `scroll-margin-inline-end: var(--sf-space-7); scroll-margin-inline-start: var(--sf-space-7);` |
-| `scroll-m-inline-8` | `scroll-margin-inline-end: var(--sf-space-8); scroll-margin-inline-start: var(--sf-space-8);` |
-| `scroll-m-inline-start-0` | `scroll-margin-inline-start: var(--sf-space-0);` |
-| `scroll-m-inline-start-1/4` | `scroll-margin-inline-start: var(--sf-space-1/4);` |
-| `scroll-m-inline-start-1/3` | `scroll-margin-inline-start: var(--sf-space-1/3);` |
-| `scroll-m-inline-start-1/2` | `scroll-margin-inline-start: var(--sf-space-1/2);` |
-| `scroll-m-inline-start-1` | `scroll-margin-inline-start: var(--sf-space-1);` |
-| `scroll-m-inline-start-2` | `scroll-margin-inline-start: var(--sf-space-2);` |
-| `scroll-m-inline-start-3` | `scroll-margin-inline-start: var(--sf-space-3);` |
-| `scroll-m-inline-start-4` | `scroll-margin-inline-start: var(--sf-space-4);` |
-| `scroll-m-inline-start-5` | `scroll-margin-inline-start: var(--sf-space-5);` |
-| `scroll-m-inline-start-6` | `scroll-margin-inline-start: var(--sf-space-6);` |
-| `scroll-m-inline-start-7` | `scroll-margin-inline-start: var(--sf-space-7);` |
-| `scroll-m-inline-start-8` | `scroll-margin-inline-start: var(--sf-space-8);` |
-| `scroll-m-inline-end-0` | `scroll-margin-inline-end: var(--sf-space-0);` |
-| `scroll-m-inline-end-1/4` | `scroll-margin-inline-end: var(--sf-space-1/4);` |
-| `scroll-m-inline-end-1/3` | `scroll-margin-inline-end: var(--sf-space-1/3);` |
-| `scroll-m-inline-end-1/2` | `scroll-margin-inline-end: var(--sf-space-1/2);` |
-| `scroll-m-inline-end-1` | `scroll-margin-inline-end: var(--sf-space-1);` |
-| `scroll-m-inline-end-2` | `scroll-margin-inline-end: var(--sf-space-2);` |
-| `scroll-m-inline-end-3` | `scroll-margin-inline-end: var(--sf-space-3);` |
-| `scroll-m-inline-end-4` | `scroll-margin-inline-end: var(--sf-space-4);` |
-| `scroll-m-inline-end-5` | `scroll-margin-inline-end: var(--sf-space-5);` |
-| `scroll-m-inline-end-6` | `scroll-margin-inline-end: var(--sf-space-6);` |
-| `scroll-m-inline-end-7` | `scroll-margin-inline-end: var(--sf-space-7);` |
-| `scroll-m-inline-end-8` | `scroll-margin-inline-end: var(--sf-space-8);` |
+| `--sf-space-0` | `0` |
+| `--sf-space-1/4` | `0.25rem; от ширины lg: var(--sf-a4)` |
+| `--sf-space-1/3` | `0.5rem; от ширины lg: var(--sf-a8)` |
+| `--sf-space-1/2` | `0.5rem; от ширины lg: 0.75rem` |
+| `--sf-space-1` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
+| `--sf-space-2` | `var(--sf-b6); от ширины lg: var(--sf-c0)` |
+| `--sf-space-3` | `var(--sf-b6); от ширины lg: var(--sf-c2)` |
+| `--sf-space-4` | `var(--sf-c2); от ширины lg: var(--sf-c6)` |
+| `--sf-space-5` | `var(--sf-c6); от ширины lg: var(--sf-d0)` |
+| `--sf-space-6` | `var(--sf-c6); от ширины lg: var(--sf-d2)` |
+| `--sf-space-7` | `var(--sf-d0); от ширины lg: var(--sf-d6)` |
+| `--sf-space-8` | `var(--sf-d2); от ширины lg: var(--sf-e0)` |
+| `--sf-a0` | `0rem` |
+| `--sf-a1` | `0.0625rem` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-a3` | `0.1875rem` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-a5` | `0.3125rem` |
+| `--sf-a6` | `0.375rem` |
+| `--sf-a7` | `0.4375rem` |
+| `--sf-a8` | `0.5rem` |
+| `--sf-a9` | `0.5625rem` |
+| `--sf-b0` | `0.625rem` |
+| `--sf-b1` | `0.6875rem` |
+| `--sf-b2` | `0.75rem` |
+| `--sf-b3` | `0.8125rem` |
+| `--sf-b4` | `0.875rem` |
+| `--sf-b5` | `0.9375rem` |
+| `--sf-b6` | `1rem` |
+| `--sf-b7` | `1.0625rem` |
+| `--sf-b8` | `1.125rem` |
+| `--sf-b9` | `1.1875rem` |
+| `--sf-c0` | `1.25rem` |
+| `--sf-c1` | `1.375rem` |
+| `--sf-c2` | `1.5rem` |
+| `--sf-c3` | `1.625rem` |
+| `--sf-c4` | `1.75rem` |
+| `--sf-c5` | `1.875rem` |
+| `--sf-c6` | `2rem` |
+| `--sf-c7` | `2.125rem` |
+| `--sf-c8` | `2.25rem` |
+| `--sf-c9` | `2.375rem` |
+| `--sf-d0` | `2.5rem` |
+| `--sf-d1` | `2.75rem` |
+| `--sf-d2` | `3rem` |
+| `--sf-d3` | `3.25rem` |
+| `--sf-d4` | `3.5rem` |
+| `--sf-d5` | `3.75rem` |
+| `--sf-d6` | `4rem` |
+| `--sf-d7` | `4.25rem` |
+| `--sf-d8` | `4.5rem` |
+| `--sf-d9` | `4.75rem` |
+| `--sf-e0` | `5rem` |
+| `--sf-e1` | `5.5rem` |
+| `--sf-e2` | `6rem` |
+| `--sf-e3` | `6.5rem` |
+| `--sf-e4` | `7rem` |
+| `--sf-e5` | `7.5rem` |
+| `--sf-e6` | `8rem` |
+| `--sf-e7` | `8.5rem` |
+| `--sf-e8` | `9rem` |
+| `--sf-e9` | `9.5rem` |
+| `--sf-f0` | `10rem` |
+| `--sf-f1` | `11rem` |
+| `--sf-f2` | `12rem` |
+| `--sf-f3` | `13rem` |
+| `--sf-f4` | `14rem` |
+| `--sf-f5` | `15rem` |
+| `--sf-f6` | `16rem` |
+| `--sf-f7` | `17rem` |
+| `--sf-f8` | `18rem` |
+| `--sf-f9` | `19rem` |
+| `--sf-g0` | `20rem` |
+| `--sf-g1` | `22rem` |
+| `--sf-g2` | `24rem` |
+| `--sf-g3` | `26rem` |
+| `--sf-g4` | `28rem` |
+| `--sf-g5` | `30rem` |
+| `--sf-g6` | `32rem` |
+| `--sf-g7` | `34rem` |
+| `--sf-g8` | `36rem` |
+| `--sf-g9` | `38rem` |
+| `--sf-h0` | `40rem` |
+| `--sf-h1` | `44rem` |
+| `--sf-h2` | `48rem` |
+| `--sf-h3` | `52rem` |
+| `--sf-h4` | `56rem` |
+| `--sf-h5` | `60rem` |
+| `--sf-h6` | `64rem` |
+| `--sf-h7` | `68rem` |
+| `--sf-h8` | `72rem` |
+| `--sf-h9` | `76rem` |
+| `--sf-i0` | `80rem` |
+| `--sf-i1` | `88rem` |
+| `--sf-i2` | `96rem` |
+| `--sf-i3` | `104rem` |
+| `--sf-i4` | `112rem` |
+| `--sf-i5` | `120rem` |
+| `--sf-i6` | `128rem` |
+| `--sf-i7` | `136rem` |
+| `--sf-i8` | `144rem` |
+| `--sf-i9` | `152rem` |
 
-## Описание
+## Применение
 
-Модификаторы `scroll-margin` определяют отступы, которые учитываются при прокрутке до элемента. Это позволяет обеспечить
-более удобный просмотр контента, так как при переходе к элементу с помощью навигации или якорей он будет отображаться с
-заданным отступом.
+### Раздел под закреплённой шапкой
 
-## Синтаксис
-
-Использование модификаторов: `{scroll-модификатор}`
-
-Например:
+Закреплённая шапка закрывает начало раздела, к которому перешли по якорю.
+Отступ сверху опускает раздел под неё:
 
 ```html
-<div class="snap-x overflow-auto ...">
-  <div class="scroll-m-inline-3 snap-start ...">
-    <img src="./picture.svg" />
-  </div>
-  <div class="scroll-m-inline-3 snap-start ...">
-    <img src="./picture.svg" />
-  </div>
-</div>
+<header class="sticky top-0">…</header>
+<section id="price" class="scroll-mt-8">…</section>
 ```
 
-## Пример использования
+### Стороны и шкала
+
+| Шаблон | Сторона |
+| :--- | :--- |
+| `scroll-m-{значение}` | все стороны |
+| `scroll-mt-{значение}`, `scroll-mb-{значение}` | сверху, снизу |
+| `scroll-my-{значение}` | сверху и снизу |
+| `scroll-m-inline-start-{значение}`, `scroll-m-inline-end-{значение}` | в начале и в конце строки |
+| `scroll-m-inline-{значение}` | в начале и в конце строки |
+
+Основная шкала — шаги отступов `0`, `1/4`, `1/3`, `1/2`, `1` … `8`
+(токены `--sf-space-*`, они растут на широких экранах). Расширенная шкала —
+размерные токены `a0` … `i9` с точным значением, в том числе отрицательные
+классы `-scroll-m-*`; в ней нет классов `scroll-my-*` и `scroll-m-inline-*`.
+
+```html
+<div class="scroll-mt-c6">Отступ 2rem на любой ширине</div>
+```
+
+## Ограничения
+
+- Отступ работает только при прокрутке к элементу; на раскладку и соседей он
+  не влияет. Для промежутков между элементами берите
+  [внешние отступы](/ru/utilities/indents/margin/).
+- Классы `inline-start` и `inline-end` логические: при письме справа налево
+  стороны меняются местами.
+- У семейства нет префиксов ширины экрана и состояния.
+
+## См. также
+
+- [Внутренний отступ прокрутки](/ru/utilities/overscroll/scroll-padding/)
+- [Выравнивание привязки прокрутки](/ru/utilities/overscroll/scroll-snap-align/)
+- [Плавность прокрутки](/ru/utilities/overscroll/overscroll-behavior-smooth/)

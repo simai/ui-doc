@@ -1,44 +1,48 @@
 ---
 title: "Начертание шрифта (капитель)"
-description: "Начертание шрифта (капитель) (font-variant)"
-tags: [font-variant]
+description: "Показывает строчные буквы капителью — прописными уменьшенного размера."
 ---
 
 # Начертание шрифта (капитель)
 
-:badge[font-variant]{type=main scheme=on-surface size=1}
+Класс `small-caps` показывает строчные буквы капителью — прописными высотой
+со строчную. Берите его для аббревиатур в тексте, подписей и заголовков в
+книжной типографике. `small-caps-none` снимает капитель.
 
-Модификаторы для отображения строчных символов в виде уменьшенных заглавных (капитель).
+## Пример
 
-## Наглядный пример
+`small-caps-none` возвращает обычные строчные внутри текста с капителью.
 
-:::example {id="utilities/typography/font-variant" label="Начертание шрифта (капитель)"}
+:::example {id="utilities/typography/font-variant" label="small-caps и small-caps-none"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс            | Значение                  |
-|:-----------------|:--------------------------|
-| `small-caps` | `font-variant: small-caps;` |
-| `small-caps-none` | `font-variant: none;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `small-caps` | `font-feature-settings: "smcp"; font-variant: small-caps` | — |
+| `small-caps-none` | `font-feature-settings: "kern" off; font-variant: none` | — |
 
-## Пример использования
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-```html
-<p class="small-caps">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-<p class="small-caps-none">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-```
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Адаптивность
-
-Для применения начертания шрифта начиная с определённого размера экрана используйте префикс контрольной точки:
+## Применение
 
 ```html
-<p class="small-caps">
-  На экранах Medium и больше текст будет в стиле капитель.
-</p>
+<p>Документ согласован в <span class="small-caps">мвд</span> и Минфине.</p>
 ```
+
+Если у шрифта нет капители, браузер строит её из уменьшенных прописных —
+они выглядят тоньше остального текста.
+
+## Ограничения
+
+- `small-caps-none` кроме капители отключает кернинг (`font-feature-settings:
+  "kern" off`): пары букв у текста с этим классом стоят без поправок.
+- У семейства нет префиксов ширины экрана и состояний.
+
+## См. также
+
+- [Оформление текста](/ru/utilities/text-formatting/text-formatting-text/)
+- [Начертание цифр](/ru/utilities/typography/font-variant-numeric/)

@@ -1,9 +1,9 @@
-<div class="wrap grid grid-col-1 gap-3 content-main-start">
+<div class="grid grid-col-1 lg:grid-col-3 gap-3">
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">scroll-over-auto</div>
+    <code class="text-1/2 color-on-surface-variant">scroll-over-auto</code>
     <div class="text-1/2 color-on-surface-variant">Прокрутка родителя: <span id="auto-parent-value">0</span></div>
     <div class="text-1/2 color-on-surface-variant">Прокрутка дочерней области: <span id="auto-child-value">0</span></div>
-    <button type="button" class="m-bottom-2 p-2 radius-2 border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="auto-child">Set child to bottom</button>
+    <button type="button" class="p-1 radius-ui border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="auto-child">Внутренний блок — в конец</button>
     <div id="auto-parent" class="p-2 radius-2 border border-outline-variant h-f8 overflow-auto">
       <div class="h-f4 p-1 m-bottom-2 radius-1 bg-surface-container">Родительская область: начало</div>
       <div id="auto-child" class="h-f6 overflow-auto scroll-over-auto radius-1 border border-outline-variant p-1 bg-surface-0">
@@ -17,10 +17,10 @@
   </div>
 
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">scroll-over-contain</div>
+    <code class="text-1/2 color-on-surface-variant">scroll-over-contain</code>
     <div class="text-1/2 color-on-surface-variant">Прокрутка родителя: <span id="contain-parent-value">0</span></div>
     <div class="text-1/2 color-on-surface-variant">Прокрутка дочерней области: <span id="contain-child-value">0</span></div>
-    <button type="button" class="m-bottom-2 p-2 radius-2 border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="contain-child">Set child to bottom</button>
+    <button type="button" class="p-1 radius-ui border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="contain-child">Внутренний блок — в конец</button>
     <div id="contain-parent" class="p-2 radius-2 border border-outline-variant h-f8 overflow-auto">
       <div class="h-f4 p-1 m-bottom-2 radius-1 bg-surface-container">Родительская область: начало</div>
       <div id="contain-child" class="h-f6 overflow-auto scroll-over-contain radius-1 border border-outline-variant p-1 bg-surface-0">
@@ -34,10 +34,10 @@
   </div>
 
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">scroll-over-none</div>
+    <code class="text-1/2 color-on-surface-variant">scroll-over-none</code>
     <div class="text-1/2 color-on-surface-variant">Прокрутка родителя: <span id="none-parent-value">0</span></div>
     <div class="text-1/2 color-on-surface-variant">Прокрутка дочерней области: <span id="none-child-value">0</span></div>
-    <button type="button" class="m-bottom-2 p-2 radius-2 border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="none-child">Set child to bottom</button>
+    <button type="button" class="p-1 radius-ui border border-outline-variant bg-surface-0 color-on-surface js-set-child-bottom" data-target="none-child">Внутренний блок — в конец</button>
     <div id="none-parent" class="p-2 radius-2 border border-outline-variant h-f8 overflow-auto">
       <div class="h-f4 p-1 m-bottom-2 radius-1 bg-surface-container">Родительская область: начало</div>
       <div id="none-child" class="h-f6 overflow-auto scroll-over-none radius-1 border border-outline-variant p-1 bg-surface-0">

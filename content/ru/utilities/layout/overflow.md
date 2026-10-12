@@ -1,158 +1,107 @@
 ---
 title: "Переполнение элемента"
-description: "Показывает, скрывает или прокручивает содержимое за границами элемента."
-tags: [overflow, sm, md, lg, xl, xxl]
+description: "Задаёт, что происходит с содержимым, которое не помещается в элемент: оно видно, обрезается или прокручивается."
 ---
 
 # Переполнение элемента
 
-:badge[overflow]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Модификаторы `overflow` управляют тем, как содержимое элемента отображается при его переполнении. Вы можете управлять
-вертикальной (`overflow-y`), горизонтальной (`overflow-x`) или обеими осями одновременно.
+Классы `overflow-*` задают свойство `overflow` для обеих осей или
+`overflow-x` и `overflow-y` для одной. Берите их для областей с заданной
+высотой или шириной: списков, таблиц, панелей и карточек, содержимое которых
+может оказаться больше самой области.
 
 ## Пример
 
-Фиксированные области показывают различие между автоматической прокруткой, скрытием и прокруткой по отдельной оси.
+### Обе оси
 
-:::example {id="utilities/layout/overflow" label="Поведение переполнения"}
+У всех образцов одинаковая высота и одинаковый текст. Подпись над образцом —
+класс, который на нём стоит.
+
+:::example {id="utilities/layout/overflow" label="overflow-visible, overflow-hidden, overflow-auto и overflow-scroll"}
 :::
 
-## Синтаксис
+### Одна ось
 
-Использование: `{условие действия}:{модификатор}`
+Классы с `-x-` и `-y-` действуют на одну ось: горизонтальную прокрутку
+широкой строки и вертикальную прокрутку списка.
 
-- Условие действия (необязательный параметр):
-  Может принимать значения:
+:::example {id="utilities/layout/overflow-axis" label="overflow-x-* и overflow-y-*"}
+:::
 
-    - `sm` — для экранов шириной от 520px и больше;
-    - `md` — для экранов шириной от 720px и больше;
-    - `lg` — для экранов шириной от 960px и больше;
-    - `xl` — для экранов шириной от 1140px и больше;
-    - `xxl` — для экранов шириной от 1320px и больше.
+## Классы
 
-  Если условие действия не указано, модификатор применяется ко всем размерам.
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `overflow-auto` | `overflow: auto` | — |
+| `overflow-hidden` | `overflow: hidden` | — |
+| `overflow-visible` | `overflow: visible` | — |
+| `overflow-scroll` | `overflow: scroll` | — |
+| `overflow-x-auto` | `overflow-x: auto` | — |
+| `overflow-y-auto` | `overflow-y: auto` | — |
+| `overflow-x-hidden` | `overflow-x: hidden` | — |
+| `overflow-y-hidden` | `overflow-y: hidden` | — |
+| `overflow-x-visible` | `overflow-x: visible` | — |
+| `overflow-y-visible` | `overflow-y: visible` | — |
+| `overflow-x-scroll` | `overflow-x: scroll` | — |
+| `overflow-y-scroll` | `overflow-y: scroll` | — |
 
-- Модификатор (обязательный параметр):
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:overflow-auto`.
 
-    - `overflow-auto` — поведение определяется браузером автоматически;
-    - `overflow-hidden` — контент обрезается, без предоставления прокрутки;
-    - `overflow-visible` — содержимое не обрезается, может отображаться за пределами контейнера;
-    - `overflow-scroll` — содержимое обрезается и всегда появляется полоса прокрутки;
-    - `overflow-x-auto` — по оси X поведение определяется браузером автоматически;
-    - `overflow-y-auto` — по оси Y поведение определяется браузером автоматически;
-    - `overflow-x-hidden` — по оси X контент обрезается, без предоставления прокрутки;
-    - `overflow-y-hidden` — по оси Y контент обрезается, без предоставления прокрутки;
-    - `overflow-x-visible` — по оси X содержимое не обрезается;
-    - `overflow-y-visible` — по оси Y содержимое не обрезается;
-    - `overflow-x-scroll` — по оси X содержимое обрезается и всегда доступна прокрутка;
-    - `overflow-y-scroll` — по оси Y содержимое обрезается и всегда доступна прокрутка.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Примеры
+## Применение
 
-### **overflow-auto**
-Поведение определяется браузером автоматически.
+### Выбор значения
+
+- `overflow-visible` — значение по умолчанию: содержимое выходит за границы
+  элемента и может перекрыть соседей.
+- `overflow-hidden` — лишнее обрезается, прокрутки нет. Подходит для
+  скруглённых карточек с изображением и для обрезки декоративных слоёв.
+- `overflow-auto` — полоса прокрутки появляется, только когда содержимое не
+  помещается. Подходит для большинства прокручиваемых областей.
+- `overflow-scroll` — полоса прокрутки есть всегда, даже если всё помещается;
+  место под неё резервируется, и раскладка не сдвигается при изменении
+  содержимого. В системах с накладными полосами прокрутки, например в macOS
+  по умолчанию, полоса появляется только во время прокрутки.
+
+### Прокрутка широкой таблицы
 
 ```html
-<div class="h-d5 overflow-auto ...">
-  Lorem ipsum dolor sit amet, ...
+<div class="overflow-x-auto">
+  <table class="w-full">…</table>
 </div>
 ```
 
-### **overflow-hidden**
-Контент обрезается, без предоставления прокрутки.
+### Прокручиваемая панель фиксированной высоты
 
 ```html
-<div class="h-d5 overflow-hidden ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
+<ul class="h-f4 overflow-y-auto">…</ul>
 ```
 
-### **overflow-visible**
-Содержимое не обрезается, может отображаться снаружи блока.
+### Прокрутка на части экранов
+
+С префиксом ширины класс действует от указанной ширины и шире:
 
 ```html
-<div class="h-d5 overflow-visible ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
+<div class="overflow-x-auto md:overflow-visible"></div>
 ```
 
-### **overflow-scroll**
-Содержимое обрезается и всегда появляется полоса прокрутки.
+## Ограничения
 
-```html
-<div class="h-d5 overflow-scroll ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
+- Если одна ось не `visible`, браузер вычисляет `visible` на другой оси как
+  `auto`: сочетание `overflow-x-hidden overflow-y-visible` даёт вертикальную
+  прокрутку, а не выход содержимого за границы.
+- Обрезка и прокрутка видны только при ограниченном размере: задайте высоту
+  или ширину области.
+- Прокручиваемая область без фокусируемых элементов внутри должна быть
+  доступна с клавиатуры: добавьте ей `tabindex="0"` и подпись.
+- Любое значение, кроме `overflow-visible`, обрезает на границе элемента тени
+  и выступающие части потомков, в том числе абсолютно позиционированные
+  подсказки и меню.
+- У семейства нет префиксов состояния.
 
-### **overflow-x-auto / overflow-y-auto**
-По соответствующей оси поведение определяется браузером автоматически.
+## См. также
 
-```html
-<div class="h-d5 overflow-x-auto ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-```html
-<div class="h-d5 overflow-y-auto ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-### **overflow-x-hidden / overflow-y-hidden**
-Контент обрезается по соответствующей оси, без предоставления прокрутки.
-
-```html
-<div class="h-d5 overflow-x-hidden ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-```html
-<div class="h-d5 overflow-y-hidden ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-### **overflow-x-visible / overflow-y-visible**
-Содержимое не обрезается по соответствующей оси.
-
-```html
-<div class="h-d5 overflow-x-visible ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-```html
-<div class="h-d5 overflow-y-visible ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-### **overflow-x-scroll / overflow-y-scroll**
-Содержимое обрезается и всегда доступна полоса прокрутки по соответствующей оси.
-
-```html
-<div class="h-d5 overflow-x-scroll ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-```html
-<div class="h-d5 overflow-y-scroll ...">
-  Lorem ipsum dolor sit amet, ...
-</div>
-```
-
-## Адаптивность
-
-Для применения стилей, начиная с определённой контрольной точки, добавьте префикс (`sm:`, `md:`, `lg:`, `xl:`, `xxl:`, `xxl:`) к
-модификатору.
-
-Например, чтобы обрезать контент без прокрутки только на экранах medium и больше:
-
-```html
-<div class="md:overflow-hidden"></div>
-```
+- [Поведение при прокрутке](/ru/utilities/overscroll/overscroll-behavior/)
+- [Обрезка текста](/ru/utilities/typography/text-overflow/)
+- [Соотношение сторон](/ru/utilities/layout/aspect-ratio/)

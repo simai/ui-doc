@@ -1,19 +1,26 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="flex flex-col gap-3 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center">grow</div>
-    <div class="m-0 flex gap-2 bg-surface border border-outline-variant radius-2 p-2">
-      <div class="bg-primary color-on-primary p-2 flex items-center" aria-label="Элемент 1">short</div>
-      <div class="bg-tertiary color-on-tertiary p-2 flex items-center grow" aria-label="Элемент 2">grow</div>
-      <div class="bg-primary color-on-primary p-2 flex items-center" aria-label="Элемент 3">longer text</div>
+    <code class="text-1/2 color-on-surface-variant">grow на элементе 2</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="p-1 bg-primary-container color-on-primary-container radius-ui">1</span>
+      <span class="grow p-1 bg-tertiary-container color-on-tertiary-container radius-ui">grow</span>
+      <span class="p-1 bg-primary-container color-on-primary-container radius-ui">3</span>
     </div>
   </div>
-
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center">grow-none</div>
-    <div class="m-0 flex gap-2 bg-surface border border-outline-variant radius-2 p-2">
-      <div class="bg-primary color-on-primary p-2 flex items-center" aria-label="Элемент 1">short</div>
-      <div class="bg-tertiary color-on-tertiary p-2 flex items-center grow-none" aria-label="Элемент 2">grow-none</div>
-      <div class="bg-primary color-on-primary p-2 flex items-center" aria-label="Элемент 3">longer text</div>
+    <code class="text-1/2 color-on-surface-variant">grow на всех</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="grow p-1 bg-primary-container color-on-primary-container radius-ui">grow</span>
+      <span class="grow p-1 bg-tertiary-container color-on-tertiary-container radius-ui">grow</span>
+      <span class="grow p-1 bg-primary-container color-on-primary-container radius-ui">grow</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">grow-none на элементе 2, grow на остальных</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="grow p-1 bg-primary-container color-on-primary-container radius-ui">grow</span>
+      <span class="grow-none p-1 bg-tertiary-container color-on-tertiary-container radius-ui">grow-none</span>
+      <span class="grow p-1 bg-primary-container color-on-primary-container radius-ui">grow</span>
     </div>
   </div>
 </div>

@@ -1,0 +1,9 @@
+/* Demo only. The Framework has no class for mask-image, so each example sets
+   its own. The mask is inline on purpose: an example renders in a sandboxed
+   frame with an opaque origin, and a mask image is fetched in CORS mode, so a
+   file from the site is refused and the masked element disappears with it. */
+.demo-mask-two {
+  -webkit-mask-image: radial-gradient(circle at 38% 50%, #000 30%, transparent 31%), radial-gradient(circle at 62% 50%, #000 30%, transparent 31%);
+  mask-image: radial-gradient(circle at 38% 50%, #000 30%, transparent 31%), radial-gradient(circle at 62% 50%, #000 30%, transparent 31%);
+}
+

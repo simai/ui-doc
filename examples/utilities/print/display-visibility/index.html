@@ -1,20 +1,17 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 sm:grid-col-2 gap-4 color-on-surface">
   <div class="flex flex-col gap-1">
-       <div class="weight-6 m-bottom-2 text-center">print-hidden</div>
-    <div class="p-3 radius-3 border border-outline-variant">
-      <p>Visible on screen, hidden in print.</p>
-      <div class="p-2 radius-2 bg-surface-container print-hidden">
-        This block is hidden when printing
-      </div>
+    <code class="text-1/2 color-on-surface-variant">print-hidden на элементе 2</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <span class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui">1</span>
+      <span class="print-hidden flex-1 p-1 bg-error-container color-on-error-container radius-ui">2</span>
+      <span class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui">3</span>
     </div>
   </div>
   <div class="flex flex-col gap-1">
-       <div class="weight-6 m-bottom-2 text-center">print-visible</div>
-    <div class="p-3 radius-3 border border-outline-variant">
-      <p>Forced visible in print media.</p>
-      <div class="p-2 radius-2 bg-surface-container print-visible">
-        This block is visible when printing
-      </div>
+    <code class="text-1/2 color-on-surface-variant">print-hidden и print-visible внутри</code>
+    <div class="print-hidden p-1 border border-dashed border-outline radius-ui">
+      <span class="block p-1 color-on-surface-variant">Пояснение для экрана</span>
+      <span class="print-visible block p-1 bg-tertiary-container color-on-tertiary-container radius-ui">Остаётся на бумаге</span>
     </div>
   </div>
 </div>

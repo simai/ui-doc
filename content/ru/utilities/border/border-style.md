@@ -1,48 +1,91 @@
 ---
 title: "Стиль границы"
-description: "Стиль границы"
-tags: [border-style]
+description: "Задаёт вид линии рамки — сплошная, пунктир, точки, двойная — для всего элемента, оси или одной стороны."
 ---
 
 # Стиль границы
 
-:badge[border-style]{type=main scheme=on-surface size=1}
+Классы `border-{стиль}` задают `border-style`: сплошную, пунктирную,
+точечную, двойную или вдавленную линию рамки — для всех сторон, для оси или
+для одной стороны. Берите их, когда рамка должна отличаться от сплошной:
+зона перетаскивания, черновик, место для вставки.
 
-## Наглядный пример
+## Пример
 
-:::example {id="utilities/border/border-style" label="Стиль границы"}
+### Стили
+
+Под каждым образцом — класс стиля; толщину и цвет задают `border-4` и
+`border-outline`.
+
+:::example {id="utilities/border/border-style" label="Стили линии"}
 :::
 
-С помощью модификаторов стиля границы в SIMAI Framework вы можете задавать стиль для всех сторон, по осям или для отдельных сторон.
+### Стороны и оси
 
-## Поддерживаемые стили
+Класс стороны меняет стиль только своей стороны, остальные остаются
+сплошными.
 
-- `dotted`
-- `dashed`
-- `solid`
-- `double`
-- `hidden`
-- `inset`
-- `none`
+:::example {id="utilities/border/border-style-sides" label="Стиль стороны и оси"}
+:::
 
 ## Классы
 
-| Класс | Значение |
-|:---|:---|
-| `border-{style}` | `border-style: {style}` |
-| `border-x-{style}` | `border-inline-start-style` + `border-inline-end-style` |
-| `border-y-{style}` | `border-top-style` + `border-bottom-style` |
-| `border-inline-start-{style}` | `border-inline-start-style` |
-| `border-inline-end-{style}` | `border-inline-end-style` |
-| `border-top-{style}` | `border-top-style` |
-| `border-bottom-{style}` | `border-bottom-style` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `border-{значение}` | `border-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
+| `border-inline-start-{значение}` | `border-inline-start-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
+| `border-inline-end-{значение}` | `border-inline-end-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
+| `border-top-{значение}` | `border-top-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
+| `border-bottom-{значение}` | `border-bottom-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
+| `border-x-{значение}` | `border-inline-start-style: {значение}; border-inline-end-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
+| `border-y-{значение}` | `border-top-style: {значение}; border-bottom-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-- `{модификатор}` — для всех размеров экрана.
-- `{контрольная точка}:{модификатор}` — адаптивно (`sm`, `md`, `lg`, `xl`), например `lg:border-dashed`.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-> В текущей версии используются логические стороны (`inline-start` / `inline-end`) вместо `left` / `right`.
+## Применение
 
-## Примеры
+### Как выбрать
 
+| Класс | Линия |
+| :--- | :--- |
+| `border-solid` | сплошная — стиль по умолчанию для всех элементов |
+| `border-dashed` | штрихи |
+| `border-dotted` | точки |
+| `border-double` | две линии; заметна от толщины `border-3` |
+| `border-inset` | вдавленная рамка: верх и левая сторона темнее |
+| `border-hidden`, `border-none` | рамки нет |
+
+Ядро ставит всем элементам `border-style: solid`, поэтому для сплошной рамки
+хватает класса толщины. Класс стиля нужен для другой линии или чтобы вернуть
+сплошную после другого стиля.
+
+```html
+<div class="border-2 border-dashed border-outline radius-surface p-4">
+  Перетащите файлы сюда
+</div>
+```
+
+### Стороны
+
+| Шаблон | Что меняет |
+| :--- | :--- |
+| `border-top-{стиль}`, `border-bottom-{стиль}` | верхнюю или нижнюю сторону |
+| `border-inline-start-{стиль}`, `border-inline-end-{стиль}` | сторону в начале или в конце строки |
+| `border-x-{стиль}` | обе стороны по горизонтали |
+| `border-y-{стиль}` | верхнюю и нижнюю стороны |
+
+## Ограничения
+
+- Стороны по горизонтали названы логически: при письме справа налево
+  `inline-start` и `inline-end` меняются местами.
+- У `border-hidden` и `border-none` одна разница — в таблицах со слиянием
+  рамок `hidden` убирает и рамку соседней ячейки.
+- Префиксов ширины экрана и состояния у семейства нет.
+
+## См. также
+
+- [Толщина границы](/ru/utilities/border/border-width/)
+- [Цвет границы](/ru/utilities/border/border-color/)
+- [Стиль разделителя](/ru/utilities/divider/divider-style/)

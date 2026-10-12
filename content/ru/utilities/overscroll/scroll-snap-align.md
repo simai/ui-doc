@@ -1,54 +1,66 @@
 ---
 title: "Выравнивание привязки прокрутки"
-description: "Выравнивание привязки прокрутки (scroll-snap-align)"
-tags: [scroll-snap-align]
+description: "Задаёт, к какому краю или к центру контейнера прилипает элемент, когда прокрутка останавливается."
 ---
 
 # Выравнивание привязки прокрутки
 
-:badge[scroll-snap-align]{type=main scheme=on-surface size=1}
+Классы `snap-start`, `snap-center`, `snap-end` и `snap-align-none` задают
+`scroll-snap-align` — точку элемента, которую привязка прокрутки совмещает с
+контейнером. Ставьте их на элементы контейнера с
+[типом привязки](/ru/utilities/overscroll/scroll-snap-type/).
 
-Модификаторы из пакета `scroll-snap-align` позволяют управлять тем, как элементы выравниваются при остановке прокрутки
-внутри контейнера с привязкой прокрутки.
+## Пример
 
-## Наглядный пример
+Прокрутите ленты вбок и отпустите. Подпись — класс на карточках: карточка
+останавливается у начала ленты, по её центру или у конца.
 
-:::example {id="utilities/overscroll/scroll-snap-align" label="Выравнивание привязки прокрутки"}
+:::example {id="utilities/overscroll/scroll-snap-align" label="Начало, центр и конец"}
 :::
 
-## Краткое описание
+## Классы
 
-При использовании привязки прокрутки (`scroll-snap`), элементы могут "прилипать" к определенным позициям при завершении
-прокрутки. С помощью данных модификаторов вы можете указать, как элемент будет выравниваться (по началу, концу или
-центру).
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `snap-start` | `scroll-snap-align: start` | — |
+| `snap-end` | `scroll-snap-align: end` | — |
+| `snap-center` | `scroll-snap-align: center` | — |
+| `snap-align-none` | `scroll-snap-align: none` | — |
 
-## Классы и их значения
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
 
-| Класс            | Значение                   |
-|:-----------------|:---------------------------|
-| `snap-start` | `scroll-snap-align: start;` |
-| `snap-end` | `scroll-snap-align: end;` |
-| `snap-center` | `scroll-snap-align: center;` |
-| `snap-align-none` | `scroll-snap-align: none;` |
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-## Описание
+## Применение
 
-Модификаторы управляют тем, где будет находиться элемент после того, как пользователь закончит прокручивать область.
-Например, `snap-center` расположит элемент по центру области просмотра, `snap-start` выровняет элемент по началу (левому
-или верхнему краю), а `snap-end` — по концу (правому или нижнему краю).
+### Выбор выравнивания
 
-## Синтаксис
-
-Использование модификаторов: `{snap-модификатор}`
-
-Например:
+| Класс | Карточка останавливается |
+| :--- | :--- |
+| `snap-start` | у начала контейнера — для лент, которые читают слева направо |
+| `snap-center` | по центру — для каруселей с одной карточкой в фокусе |
+| `snap-end` | у конца контейнера |
+| `snap-align-none` | не привязывается — для отдельных элементов в ленте |
 
 ```html
-<div class="snap-x overflow-auto w-full ...">
-  <div class="snap-center inline-block w-... bg-surface-1 p-2 ...">Элемент 1</div>
-  <div class="snap-center inline-block w-... bg-surface-1 p-2 ...">Элемент 2</div>
-  <div class="snap-center inline-block w-... bg-surface-1 p-2 ...">Элемент 3</div>
+<div class="flex gap-2 overflow-auto snap-x snap-mandatory">
+  <figure class="snap-center shrink-none w-f6">…</figure>
+  <figure class="snap-center shrink-none w-f6">…</figure>
 </div>
 ```
 
-## Пример использования
+Зазор между краем контейнера и карточкой задают
+[внутренний](/ru/utilities/overscroll/scroll-padding/) и
+[внешний](/ru/utilities/overscroll/scroll-margin/) отступы прокрутки.
+
+## Ограничения
+
+- Без типа привязки на контейнере классы ничего не делают.
+- `start` и `end` — логические края: в горизонтальной ленте при письме справа
+  налево начало находится справа.
+- У семейства нет префиксов ширины экрана и состояния.
+
+## См. также
+
+- [Тип привязки прокрутки](/ru/utilities/overscroll/scroll-snap-type/)
+- [Ограничитель прокрутки](/ru/utilities/overscroll/scroll-snap-stop/)

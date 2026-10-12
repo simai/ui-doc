@@ -1,69 +1,95 @@
 ---
 title: "Разрыв до элемента"
-description: "Управляет разрывом колонки или страницы перед выбранным элементом."
-tags: [break-before, sm, md, lg, xl, xxl]
+description: "Задаёт, начинает ли элемент новую колонку или страницу."
 ---
 
 # Разрыв до элемента
 
-:badge[break-before]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Модификатор `break-before` в SIMAI Framework позволяет контролировать разрывы столбца или страницы до определённого
-элемента. Это полезно при работе с многостраничными документами или макетами, где требуется точное управление разбиением
-контента на колонки или страницы.
+Классы `break-before-*` задают свойство `break-before`: разрешают, запрещают
+или требуют разрыв колонки или страницы перед элементом. Берите их в
+многоколоночном блоке ([`layout-col-*`](/ru/utilities/layout-break/column/)) и
+при печати, когда раздел должен начинаться с новой колонки или страницы.
 
 ## Пример
 
-Третий элемент начинает новую колонку, хотя в предыдущей ещё осталось свободное место.
+### Разрыв колонки
 
-:::example {id="utilities/layout-break/break-before" label="Разрыв перед элементом"}
+Слева колонки заполняются сами; справа на элементе 2 стоит
+`break-before-column`, и он начинает вторую колонку вместе со всеми
+следующими элементами.
+
+:::example {id="utilities/layout-break/break-before" label="break-before-column"}
 :::
 
-## Синтаксис
+## Классы
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `break-before-auto` | `page-break-before: auto; -webkit-column-break-before: auto; -moz-column-break-before: auto; break-before: auto` | — |
+| `break-before-avoid` | `page-break-before: avoid; -webkit-column-break-before: avoid; -moz-column-break-before: avoid; break-before: avoid` | — |
+| `break-before-all` | `page-break-before: all; -webkit-column-break-before: all; -moz-column-break-before: all; break-before: all` | — |
+| `break-before-avoid-page` | `page-break-before: avoid; -webkit-column-break-before: avoid; -moz-column-break-before: avoid; break-before: avoid-page` | — |
+| `break-before-page` | `page-break-before: always; -webkit-column-break-before: page; -moz-column-break-before: page; break-before: page` | — |
+| `break-before-left` | `page-break-before: left; -webkit-column-break-before: left; -moz-column-break-before: left; break-before: left` | — |
+| `break-before-right` | `page-break-before: right; -webkit-column-break-before: right; -moz-column-break-before: right; break-before: right` | — |
+| `break-before-column` | `-webkit-column-break-before: column; -moz-column-break-before: column; break-before: column` | — |
 
-- Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера области просмотра. Может принимать значения `sm`, `md`, `lg`,
-  `xl`.
-  Если не указана, модификатор действует для всех размеров.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-before-auto`.
 
-- Модификатор (обязательный параметр):
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-    - `break-before-auto` — равномерное распределение.
-    - `break-before-avoid` — отмена разрыва страницы до текущего элемента.
-    - `break-before-all` — принудительный разрыв страницы до текущего элемента.
-    - `break-before-avoid-page` — отмена разрыва страницы до текущего элемента.
-    - `break-before-page` — обязательный разрыв и переход к новой странице до текущего элемента.
-    - `break-before-left` — принудительная расстановка разрывов, следующий элемент располагается слева.
-    - `break-before-right` — принудительная расстановка разрывов, следующий элемент располагается справа.
-    - `break-before-column` — принудительный разрыв и переход к новой колонке перед текущим элементом.
+## Применение
 
-## Пример
+### Колонки
 
-Использование `break-before-column` для принудительного разрыва столбца до элемента:
+`break-before-column` начинает с элемента новую колонку, даже если в
+предыдущей ещё есть место.
 
 ```html
 <div class="layout-col-2">
-  <p>Что ж, позволь мне кое-что тебе сказать, ...</p>
-  <p class="break-before-column">Конечно, смейтесь...</p>
-  <p>Может быть, мы сможем жить без...</p>
-  <p>Смотреть. Если вы думаете, что это...</p>
+  <section>Первая часть</section>
+  <section class="break-before-column">Вторая часть — с новой колонки</section>
 </div>
 ```
 
-В этом примере абзац с `break-before-column` начнёт новую колонку, а последующий контент будет идти уже в следующей
-колонке.
+### Печать
 
-## Адаптивность
-
-Чтобы модификатор начал действовать только с определённого размера области просмотра, добавьте префикс контрольной
-точки. Например, `md:break-before-column` заставит применять принудительный разрыв столбца только на экранах с размером
-`Medium` и больше:
+`break-before-page` начинает элемент с новой страницы. `break-before-left` и
+`break-before-right` добавляют одну или две страницы так, чтобы элемент начал
+левую или правую страницу — при двусторонней печати. `break-before-all`
+разрывает все вложенные области сразу: и колонку, и страницу. Действие видно в
+предпросмотре печати.
 
 ```html
-<div class="md:break-before-column"></div>
+<section>Глава 1</section>
+<section class="break-before-page">Глава 2 — с новой страницы</section>
 ```
 
-Таким образом, модификатор `break-before` позволяет точно управлять разрывами до элементов, улучшая контроль над
-адаптивными макетами и многостраничными документами.
+### Запрет разрыва
+
+`break-before-avoid` просит не разрывать ни колонку, ни страницу перед
+элементом — например, перед подписью к рисунку. `break-before-avoid-page`
+запрещает только разрыв страницы. `break-before-auto` возвращает решение
+браузеру.
+
+```html
+<figure>
+  <img src="chart.png" alt="График">
+  <figcaption class="break-before-avoid">Подпись к графику</figcaption>
+</figure>
+```
+
+## Ограничения
+
+- Классы действуют только внутри многоколоночного блока или при печати; во
+  флекс- и грид-контейнерах разрыва нет.
+- Запрет разрыва — просьба к браузеру: если элемент не помещается, разрыв всё
+  равно случится. Поддержка `avoid` в колонках у браузеров неполная.
+- У семейства нет префиксов состояния.
+
+## См. также
+
+- [Разрыв после колонки](/ru/utilities/layout-break/break-after/)
+- [Разрыв внутри элемента](/ru/utilities/layout-break/break-inside/)
+- [Колонки](/ru/utilities/layout-break/column/)
+- [Отображение элемента при печати](/ru/utilities/print/display-print/)

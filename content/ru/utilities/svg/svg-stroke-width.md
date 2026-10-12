@@ -1,24 +1,94 @@
 ---
 title: "Толщина обводки"
-description: "Толщина обводки"
-tags: [stroke-width, sm, md, lg, xl, xxl]
+description: "Задаёт толщину обводки фигур SVG по шкале от 0 до 10px."
 ---
 
 # Толщина обводки
 
-:badge[stroke-width]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Классы `stroke-N` задают `stroke-width`.
-
-## Наглядный пример
-
-:::example {id="utilities/svg/svg-stroke-width" label="Толщина обводки"}
-:::
-
-Поддерживаемые значения: `stroke-0` ... `stroke-10`.
-
-## Синтаксис
-
-`stroke-{0..10}`
+Классы `stroke-0` … `stroke-10` задают `stroke-width` — толщину обводки фигур
+SVG. Берите их для линейных значков, схем и графиков.
 
 ## Пример
+
+### Шкала
+
+Номер ступени — толщина в пикселях при `1rem = 16px`. В примере один пиксель рисунка равен пикселю экрана.
+
+:::example {id="utilities/svg/svg-stroke-width" label="Шкала толщины"}
+:::
+
+### Ширина экрана
+
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину окна просмотра: обводка толще с ширины `md` и ещё толще с ширины `xl`.
+
+:::example {id="utilities/svg/svg-stroke-width-responsive" label="Толщина по ширине экрана"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `stroke-1` | `stroke-width: var(--sf-a1)` | — |
+| `stroke-2` | `stroke-width: var(--sf-a2)` | — |
+| `stroke-3` | `stroke-width: var(--sf-a3)` | — |
+| `stroke-4` | `stroke-width: var(--sf-a4)` | — |
+| `stroke-5` | `stroke-width: var(--sf-a5)` | — |
+| `stroke-6` | `stroke-width: var(--sf-a6)` | — |
+| `stroke-7` | `stroke-width: var(--sf-a7)` | — |
+| `stroke-8` | `stroke-width: var(--sf-a8)` | — |
+| `stroke-9` | `stroke-width: var(--sf-a9)` | — |
+| `stroke-10` | `stroke-width: var(--sf-b0)` | — |
+| `stroke-0` | `stroke-width: var(--sf-0)` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:stroke-1`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-a1` | `0.0625rem` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-a3` | `0.1875rem` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-a5` | `0.3125rem` |
+| `--sf-a6` | `0.375rem` |
+| `--sf-a7` | `0.4375rem` |
+| `--sf-a8` | `0.5rem` |
+| `--sf-a9` | `0.5625rem` |
+| `--sf-b0` | `0.625rem` |
+| `--sf-0` | `0` |
+
+## Применение
+
+### Шкала
+
+| Класс | Токен | Толщина |
+| :--- | :--- | ---: |
+| `stroke-0` | `--sf-0` | 0 |
+| `stroke-1` … `stroke-9` | `--sf-a1` … `--sf-a9` | 1px … 9px |
+| `stroke-10` | `--sf-b0` | 10px |
+
+### Масштаб рисунка
+
+Толщина задана в единицах CSS, но рисуется в системе координат SVG: если
+`viewBox` в два раза меньше размера элемента, обводка тоже выглядит в два раза
+толще. Значок `viewBox="0 0 24 24"` размером 48px со `stroke-2` рисует линию
+толщиной 4px.
+
+```html
+<svg class="svg-3 fill-transparent stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">…</svg>
+```
+
+## Ограничения
+
+- Префиксов состояния у семейства нет.
+
+## См. также
+
+- [Цвет обводки](/ru/utilities/svg/svg-stroke-color/)
+- [Концы обводки](/ru/utilities/svg/svg-stroke-line-cap/)
+- [Углы обводки](/ru/utilities/svg/svg-stroke-line-join/)

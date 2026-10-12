@@ -1,21 +1,18 @@
-<div class="grid grid-col-1 sm:grid-col-2 gap-3 items-start">
-  <section class="border border-outline-variant radius-3 p-3 flex flex-col gap-1">
-    <code>text-balance</code>
-    <h3 class="m-0 text-balance">Документация, которую удобно писать и читать</h3>
-  </section>
-
-  <section class="border border-outline-variant radius-3 p-3 flex flex-col gap-1">
-    <code>text-pretty</code>
-    <p class="m-0 text-pretty">Браузер распределяет слова в абзаце так, чтобы последняя строка выглядела аккуратнее.</p>
-  </section>
-
-  <section class="border border-outline-variant radius-3 p-3 flex flex-col gap-1">
-    <code>text-wrap</code>
-    <p class="m-0 text-wrap">Очень_длинная_строка_может_переноситься_в_границах_доступной_области_просмотра.</p>
-  </section>
-
-  <section class="border border-outline-variant radius-3 p-3 flex flex-col gap-1 overflow-auto">
-    <code>text-nowrap</code>
-    <p class="m-0 text-nowrap">Эта строка остаётся на одной линии и при необходимости прокручивается горизонтально.</p>
-  </section>
+<div class="flex flex-col gap-3 color-on-surface">
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">text-wrap</code>
+    <p class="m-0 max-w-g4 text-4 weight-6 text-wrap">Как выбрать перенос для заголовка, который не помещается в одну строку</p>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">text-balance</code>
+    <p class="m-0 max-w-g4 text-4 weight-6 text-balance">Как выбрать перенос для заголовка, который не помещается в одну строку</p>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">text-pretty</code>
+    <p class="m-0 max-w-g4 text-2 text-pretty">Длина строки влияет на удобство чтения: глазу трудно найти начало следующей строки, если текущая слишком длинная, а слишком короткие строки заставляют часто переводить взгляд. Ограничение ширины в символах держит строку в удобных пределах при любом размере шрифта.</p>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">text-nowrap overflow-auto</code>
+    <p class="m-0 p-2 text-2 border border-dashed border-outline radius-ui text-nowrap overflow-auto">npm run build -- --configuration production --output-path dist/app</p>
+  </div>
 </div>

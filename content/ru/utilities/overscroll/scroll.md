@@ -1,38 +1,97 @@
 ---
 title: "Толщина ползунка прокрутки"
-description: "Управление минимальным размером ползунка прокрутки"
-tags: [scroll-slider-width]
+description: "Задаёт, насколько ползунок тоньше полосы прокрутки: от ползунка во всю толщину полосы до тонкой линии."
 ---
 
 # Толщина ползунка прокрутки
 
-:badge[scroll-slider-width]{type=main scheme=on-surface size=1}
-
-## Наглядный пример
-
-:::example {id="utilities/overscroll/scroll" label="Толщина ползунка прокрутки"}
-:::
-
-## Классы и значения
-
-| Класс | Значение переменной |
-|:---|:---|
-| `scroll-1 / scroll-thumb-1` | `--sf-scroll-thumb-size: var(--sf-a4);` |
-| `scroll-2 / scroll-thumb-2` | `--sf-scroll-thumb-size: var(--sf-a3);` |
-| `scroll-3 / scroll-thumb-3` | `--sf-scroll-thumb-size: var(--sf-a2);` |
-| `scroll-4 / scroll-thumb-4` | `--sf-scroll-thumb-size: var(--sf-a1);` |
-
-## Описание
-
-Эти модификаторы задают минимальный видимый размер ползунка (`thumb`) через переменную `--sf-scroll-thumb-size`.
-
-- `scroll-*` — историческое имя.
-- `scroll-thumb-*` — предпочтительное имя для новых примеров и документации.
-
-## Синтаксис
-
-- `scroll-{1...4}`
-- `scroll-thumb-{1...4}`
+Классы `scroll-thumb-0` … `scroll-thumb-4` задают прозрачный отступ между
+краем полосы прокрутки и ползунком, а значит — толщину ползунка. Берите их
+вместе с [толщиной подложки](/ru/utilities/overscroll/scroll-backdrop-width/),
+когда ползунок должен заполнять полосу или, наоборот, быть тонкой линией на
+широкой подложке.
 
 ## Пример
 
+Подпись — класс толщины ползунка. На всех образцах одна полоса
+(`scroll-bg-4`), окрашенные подложка и ползунок.
+
+:::example {id="utilities/overscroll/scroll" label="Толщина ползунка"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `scroll-0` | `--sf-scroll-thumb-inset: var(--sf-0)` | — |
+| `scroll-thumb-0` | `--sf-scroll-thumb-inset: var(--sf-0)` | — |
+| `scroll-1` | `--sf-scroll-thumb-inset: var(--sf-a4)` | — |
+| `scroll-thumb-1` | `--sf-scroll-thumb-inset: var(--sf-a4)` | — |
+| `scroll-2` | `--sf-scroll-thumb-inset: var(--sf-a3)` | — |
+| `scroll-thumb-2` | `--sf-scroll-thumb-inset: var(--sf-a3)` | — |
+| `scroll-3` | `--sf-scroll-thumb-inset: var(--sf-a2)` | — |
+| `scroll-thumb-3` | `--sf-scroll-thumb-inset: var(--sf-a2)` | — |
+| `scroll-4` | `--sf-scroll-thumb-inset: var(--sf-a1)` | — |
+| `scroll-thumb-4` | `--sf-scroll-thumb-inset: var(--sf-a1)` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-0` | `0` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-a3` | `0.1875rem` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-a1` | `0.0625rem` |
+
+## Применение
+
+### Шкала
+
+| Класс | Отступ от края полосы | Ползунок на полосе 22px |
+| :--- | :--- | ---: |
+| `scroll-thumb-0` | 0 | 22px |
+| `scroll-thumb-1` | `--sf-a4`, 4px | 14px |
+| `scroll-thumb-2` | `--sf-a3`, 3px | 16px |
+| `scroll-thumb-3` | `--sf-a2`, 2px | 18px |
+| `scroll-thumb-4` | `--sf-a1`, 1px | 20px |
+
+Значения приведены при `1rem = 16px`. Без класса отступ равен
+`scroll-thumb-1`. Ступени 1–4 утолщают ползунок, `scroll-thumb-0` убирает
+отступ совсем.
+
+Отступ действует и на подложку: окрашенная подложка тоже отступает от краёв
+полосы на ту же величину.
+
+```html
+<div class="overflow-auto scroll-bg-4 scroll-thumb-0">…</div>
+```
+
+### Другие имена
+
+`scroll-0` … `scroll-4` — вторые имена тех же классов с тем же действием.
+
+## Ограничения
+
+- Классы задают переменные, которые читают псевдоэлементы `::-webkit-scrollbar`.
+  Их поддерживают Chrome, Edge, Safari и другие браузеры на их движках;
+  Firefox рисует свою полосу прокрутки и классы не учитывает.
+- Если у элемента задано `scrollbar-color` или `scrollbar-width` (например,
+  классом `scroll-subtle`), Chrome и Edge рисуют стандартную полосу и
+  игнорируют эти классы.
+- Ставьте класс на сам прокручиваемый элемент. Базовые стили задают
+  переменные полосы каждому элементу заново, поэтому класс не переходит на
+  вложенные области. Для полосы страницы ставьте класс на `<html>`.
+- У семейства нет префиксов ширины экрана и состояния.
+
+## См. также
+
+- [Толщина подложки прокрутки](/ru/utilities/overscroll/scroll-backdrop-width/)
+- [Цвет ползунка прокрутки](/ru/utilities/overscroll/scroll-slider-color/)
+- [Радиус границы ползунка прокрутки](/ru/utilities/overscroll/scroll-slider-radius/)

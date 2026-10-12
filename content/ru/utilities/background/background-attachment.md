@@ -1,79 +1,81 @@
 ---
 title: "Вложение фона"
-description: "Вложение фона"
-tags: [background-attachment, sm, md, lg, xl, xxl]
+description: "Задаёт, движется ли фоновое изображение при прокрутке страницы и самого элемента."
 ---
 
 # Вложение фона
 
-:badge[background-attachment]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `bg-scroll`, `bg-local` и `bg-fixed` задают `background-attachment`:
+к чему привязан фон — к рамке элемента, к его содержимому или к окну
+браузера. Берите их для блоков с фоновой картинкой и собственной прокруткой
+или для эффекта неподвижного фона под прокручиваемой страницей.
 
-С помощью модификаторов вложения фона (`background-attachment`) вы можете управлять поведением фонового изображения при
-прокрутке страницы или контейнера.
+## Пример
 
-## Наглядный пример
+Прокрутите каждую панель колёсиком, жестом или клавишами после фокуса по Tab.
+`bg-scroll` держит фон на месте внутри панели, `bg-local` прокручивает его
+вместе с содержимым, `bg-fixed` привязывает его к окну браузера.
 
-:::example {id="utilities/background/background-attachment" label="Вложение фона"}
+:::example {id="utilities/background/background-attachment" label="bg-scroll, bg-local и bg-fixed"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс      | Значение                       |
-|:-----------|:-------------------------------|
-| `bg-fixed` | `background-attachment: fixed;` |
-| `bg-local` | `background-attachment: local;` |
-| `bg-scroll` | `background-attachment: scroll;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `bg-fixed` | `background-attachment: fixed` | — |
+| `bg-local` | `background-attachment: local` | — |
+| `bg-scroll` | `background-attachment: scroll` | — |
 
-## Описание
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-fixed`.
 
-Адаптивный модификатор `background-attachment` позволяет определять, как фоновое изображение будет реагировать на
-прокрутку страницы или элемента-контейнера.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- `bg-fixed` — фоновое изображение зафиксировано относительно области просмотра и не прокручивается вместе со страницей.
-- `bg-local` — фоновое изображение прокручивается вместе с контейнером (локально).
-- `bg-scroll` — фоновое изображение прокручивается вместе со страницей (по умолчанию).
+## Применение
 
-## Синтаксис
+### Как выбрать
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | Фон при прокрутке содержимого элемента | Фон при прокрутке страницы |
+| :--- | :--- | :--- |
+| `bg-scroll` | стоит на месте | движется вместе с элементом |
+| `bg-local` | движется вместе с содержимым | движется вместе с элементом |
+| `bg-fixed` | стоит на месте | стоит на месте относительно окна |
 
-- Контрольная точка *(необязательный параметр)*: Применяет модификатор, начиная с определенного размера области
-  просмотра (sm, md, lg, xl, xxl).
-- Модификатор *(обязательный параметр)*: `bg-fixed`, `bg-local` или `bg-scroll`.
+`bg-scroll` — значение браузера по умолчанию; класс нужен, чтобы вернуть его
+на более широком экране после другого класса.
 
-## Пример использования
+### Вместе с размером и положением
 
-```html
-<!-- Фоновое изображение зафиксировано относительно области просмотра -->
-<div class="bg-fixed w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
-
-```
+Классы вложения задают только привязку. Размер, положение и повтор задают
+классы своих разделов, картинку — свойство `background-image` в CSS проекта
+или в атрибуте `style`.
 
 ```html
-<!-- Фоновое изображение прокручивается вместе с контейнером -->
-<div class="bg-local w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
-
+<section class="bg-fixed bg-cover bg-center"
+         style="background-image: url(/images/hero.jpg)">
+  …
+</section>
 ```
+
+### Ширина экрана
+
+С префиксом ширины класс действует от указанной ширины и шире: `md:bg-fixed`
+включает неподвижный фон только на широких экранах.
 
 ```html
-<!-- Фоновое изображение прокручивается вместе с областью просмотра -->
-<div class="bg-scroll w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
+<section class="bg-scroll md:bg-fixed bg-cover">…</section>
 ```
 
-## Адаптивность
+## Ограничения
 
-Для изменения поведения фонового изображения при прокрутке на разных размерах экрана используйте префикс контрольной
-точки:
+- Мобильные браузеры часто игнорируют `bg-fixed` и рисуют фон как при
+  `bg-scroll`; включайте эффект префиксом ширины.
+- `bg-fixed` перерисовывает фон при каждом шаге прокрутки и может замедлять
+  длинные страницы.
+- У семейства нет префиксов состояния.
 
-```html
-<!-- Для экранов от Medium и больше фоновое изображение фиксировано -->
-<div class="md:bg-fixed w-full h-e8 bg-cover bg-top overflow-y-scroll" style="background-image:url('../../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
-```
+## См. также
+
+- [Размер фона](/ru/utilities/background/background-size/)
+- [Положение фона](/ru/utilities/background/background-position/)
+- [Переполнение](/ru/utilities/layout/overflow/)

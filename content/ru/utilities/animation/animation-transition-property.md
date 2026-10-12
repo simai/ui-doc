@@ -1,74 +1,139 @@
 ---
 title: "Общее свойство перехода"
-description: "Общее свойство перехода"
-tags: [transition-property, sm, md, lg, xl, xxl]
+description: "Включает плавный переход для выбранной группы свойств — цвета, тени, трансформации, размеров — с длительностью и кривой темы."
 ---
 
 # Общее свойство перехода
 
-:badge[transition-property]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `transition-*` выбирают, какие свойства элемента меняются плавно, и
+сразу задают переходу длительность и кривую темы. Берите их, когда элемент
+меняет цвет, тень, трансформацию или размер при наведении, фокусе или смене
+класса.
 
-Данные модификаторы позволяют задать, какие именно CSS-свойства будут плавно изменяться при взаимодействии с элементом.
-Применяя соответствующий модификатор, вы контролируете, для каких свойств будет выполняться переход, а также можете
-комбинировать его с другими модификаторами (например, для изменения цвета, фона или тени).
+## Пример
 
-## Наглядный пример
+### Группы свойств
 
-:::example {id="utilities/animation/animation-transition-property" label="Общее свойство перехода"}
+Наведите указатель на образцы: у всех при наведении меняются цвет текста,
+рамка, тень и масштаб. Подпись — класс; плавно меняется только то, что он
+включает, остальное — скачком.
+
+:::example {id="utilities/animation/animation-transition-property" label="Какие свойства меняются плавно"}
 :::
 
-## Классы и их значения
+### Размеры
 
-| Класс                 | Значение                                                                                                                                                                                                                                      |
-|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `transition-none` | `transition-property: none;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-all` | `transition-property: all;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-colors` | `transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-opacity` | `transition-property: opacity;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-shadow` | `transition-property: box-shadow;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-transform` | `transition-property: transform;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-width` | `transition-property: width;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-height` | `transition-property: height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-size` | `transition-property: width, height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-max-width` | `transition-property: max-width;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-max-height` | `transition-property: max-height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-max-size` | `transition-property: max-width, max-height;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-flex` | `transition-property: flex, flex-basis;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-flex-basis` | `transition-property: flex-basis;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
-| `transition-layout` | `transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width;` `transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);` `transition-duration: 150ms;` |
+Наведите указатель на полосу или перейдите на неё клавишей Tab: она растёт в
+ширину и в высоту. Плавно меняется только размер, который назван в классе.
 
-## Описание
+:::example {id="utilities/animation/animation-transition-property-size" label="Переход ширины и высоты"}
+:::
 
-Модификаторы плавных переходов позволяют задать, какие свойства будут изменяться плавно при взаимодействии (например,
-при наведении курсора или фокусе). Это помогает создавать более приятные визуальные эффекты.
+### Ширина экрана
 
-## Синтаксис
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте
+ширину окна просмотра: на узком экране цвет меняется скачком, начиная с
+ширины `md` — плавно.
 
-Использование модификатора: `{модификатор}`
-Модификатор указывается непосредственно в классе элемента. Например, чтобы применить плавный переход для цвета:
+:::example {id="utilities/animation/animation-transition-property-responsive" label="Переход по ширине экрана"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `transition-none` | `transition-property: none` | — |
+| `transition-all` | `transition-property: all; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition` | `transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, -webkit-text-decoration-color, -webkit-transform, -webkit-filter, -webkit-backdrop-filter; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-transform, -webkit-filter, -webkit-backdrop-filter; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-colors` | `transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-opacity` | `transition-property: opacity; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-shadow` | `transition-property: box-shadow; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-transform` | `transition-property: -webkit-transform; transition-property: transform; transition-property: transform, -webkit-transform; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-width` | `transition-property: width; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-height` | `transition-property: height; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-size` | `transition-property: width, height; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-max-width` | `transition-property: max-width; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-max-height` | `transition-property: max-height; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-max-size` | `transition-property: max-width, max-height; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-flex` | `transition-property: flex, flex-basis; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-flex-basis` | `transition-property: flex-basis; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+| `transition-layout` | `transition-property: flex-grow, flex-shrink, flex-basis, width, min-width, max-width; transition-timing-function: var(--sf-ease-move); transition-duration: var(--sf-duration-normal)` | — |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:transition-none`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-ease-move` | `cubic-bezier(.65, 0, .35, 1)` |
+| `--sf-duration-normal` | `0.3S` |
+
+## Применение
+
+### Выбор группы
+
+Кроме `transition-none`, каждый класс задаёт длительность
+`--sf-duration-normal` (0,3 с) и кривую `--sf-ease-move`.
+
+| Класс | Что меняется плавно |
+| :--- | :--- |
+| `transition` | цвета, прозрачность, тень, трансформация и фильтры |
+| `transition-colors` | цвет текста, фона, рамки, подчёркивания, заливки и обводки |
+| `transition-opacity` | прозрачность |
+| `transition-shadow` | тень |
+| `transition-transform` | трансформация |
+| `transition-all` | все свойства |
+| `transition-none` | ничего: отключает переход |
+
+Узкая группа дешевле для браузера и предсказуемее, чем `transition-all`:
+плавно меняется только то, что задумано.
 
 ```html
-<div class="transition-colors hover:bg-primary p-2 radius-1/3">
-    Наведи на меня
-</div>
+<button type="button" class="transition-colors hover:color-primary">Кнопка</button>
+<div class="transition hover:shadow-3 hover:scale-2">Карточка</div>
 ```
 
-В данном примере при наведении курсора на элемент изменится цвет фона с плавным переходом, так как задан модификатор
-`transition-colors`.
+### Размеры и флекс
 
-Для изменения размеров используйте модификаторы под конкретное свойство:
+| Класс | Что меняется плавно |
+| :--- | :--- |
+| `transition-width`, `transition-height`, `transition-size` | ширина, высота, обе |
+| `transition-max-width`, `transition-max-height`, `transition-max-size` | ограничения `max-*` |
+| `transition-flex`, `transition-flex-basis` | `flex` и `flex-basis` |
+| `transition-layout` | `flex-grow`, `flex-shrink`, `flex-basis`, `width`, `min-width`, `max-width` |
 
-- `transition-width` — если меняется `width`;
-- `transition-height` — если меняется `height`;
-- `transition-size` — если одновременно меняются `width` и `height`;
-- `transition-max-width`, `transition-max-height`, `transition-max-size` — если используется ограничение через `max-*`;
-- `transition-flex` или `transition-flex-basis` — если ширина элемента меняется через flex-свойства, например `flex-basis`.
-- `transition-layout` — если элемент переключается между обычным состоянием и `flex-1`, либо одновременно меняются flex-свойства и ограничения ширины.
+`transition-layout` подходит панелям, которые переключаются между
+фиксированной шириной и `flex-1`.
 
-Для плавного перехода нужны числовые начальное и конечное значения. Переходы между `auto`, `fit-content`, `max-content` и `100%` могут отрабатывать скачком, потому что браузер не всегда может интерполировать такие значения.
+### Другая длительность
 
-## Пример использования
+Длительность и кривую класса задают токены. Чтобы изменить их для одного
+блока, переопределите токен на нём:
 
-При наведении курсора на кнопку цвет текста плавно сменится на основной (`text-primary`), так как все свойства с
-переходом (`transition-all`) будут изменяться плавно.
+```css
+.my-panel {
+  --sf-duration-normal: var(--sf-duration-slow);
+}
+```
+
+## Ограничения
+
+- Классы `duration-*` и `ease-*` задают те же свойства, что и `transition-*`,
+  с одинаковой специфичностью; итог зависит от порядка таблиц стилей. На
+  одном элементе с `transition-*` меняйте длительность и кривую токенами.
+- Плавный переход нужен числам на обоих концах. Переход к `auto`,
+  `fit-content`, `max-content` и обратно идёт скачком.
+- Классы не учитывают системную настройку уменьшения движения
+  (`prefers-reduced-motion`).
+- Префиксов состояния у семейства нет.
+
+## См. также
+
+- [Продолжительность перехода](/ru/utilities/animation/animation-transition-duration/)
+- [Функция времени перехода](/ru/utilities/animation/animation-transition-timing-function/)
+- [Задержка перехода](/ru/utilities/animation/animation-transition-delay/)
+- [Масштабирование](/ru/utilities/transform/transform-scale/)

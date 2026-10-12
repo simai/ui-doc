@@ -1,74 +1,73 @@
 ---
 title: "Конечное положение колонки сетки"
-description: "Конечное положение колонки сетки (grid-column-end)"
-tags: [grid-column-end, sm, md, lg, xl, xxl]
+description: "Задаёт линию сетки, на которой заканчивается элемент."
 ---
 
 # Конечное положение колонки сетки
 
-:badge[grid-column-end]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `col-end-*` задают `grid-column-end` — линию сетки, на которой
+заканчивается элемент. Берите их вместе с
+[`col-start-*`](/ru/utilities/grid/grid-column-start/), когда удобнее назвать
+начало и конец элемента, чем его ширину.
 
-В SIMAI Framework с помощью модификаторов можно управлять конечным положением столбцов в сетке, задавая на какой линии
-сетки элемент должен заканчиваться.
+## Пример
 
-## Наглядный пример
+### Номер линии
 
-:::example {id="utilities/grid/grid-column-end" label="Конечное положение колонки сетки"}
+Сетка из шести колонок; верхний ряд пронумерован. Линия `7` — правый край
+шестой колонки, поэтому `col-start-1 col-end-7` занимает всю строку.
+
+:::example {id="utilities/grid/grid-column-end" label="col-end-4, col-start-2 col-end-6, col-start-1 col-end-7"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс         | Значение               |
-|:--------------|:-----------------------|
-| `col-end-1` | `grid-column-end: 1;` |
-| `col-end-2` | `grid-column-end: 2;` |
-| `col-end-3` | `grid-column-end: 3;` |
-| `col-end-4` | `grid-column-end: 4;` |
-| `col-end-5` | `grid-column-end: 5;` |
-| `col-end-6` | `grid-column-end: 6;` |
-| `col-end-7` | `grid-column-end: 7;` |
-| `col-end-8` | `grid-column-end: 8;` |
-| `col-end-9` | `grid-column-end: 9;` |
-| `col-end-10` | `grid-column-end: 10;` |
-| `col-end-11` | `grid-column-end: 11;` |
-| `col-end-12` | `grid-column-end: 12;` |
-| `col-end-13` | `grid-column-end: 13;` |
-| `col-end-auto` | `grid-column-end: auto;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `col-end-1` | `grid-column-end: 1` | — |
+| `col-end-2` | `grid-column-end: 2` | — |
+| `col-end-3` | `grid-column-end: 3` | — |
+| `col-end-4` | `grid-column-end: 4` | — |
+| `col-end-5` | `grid-column-end: 5` | — |
+| `col-end-6` | `grid-column-end: 6` | — |
+| `col-end-7` | `grid-column-end: 7` | — |
+| `col-end-8` | `grid-column-end: 8` | — |
+| `col-end-9` | `grid-column-end: 9` | — |
+| `col-end-10` | `grid-column-end: 10` | — |
+| `col-end-11` | `grid-column-end: 11` | — |
+| `col-end-12` | `grid-column-end: 12` | — |
+| `col-end-13` | `grid-column-end: 13` | — |
+| `col-end-auto` | `grid-column-end: auto` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-end-1`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определенного размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор *(обязательный параметр)*:
+### Как выбрать
 
-    - `col-end-{1...12}` — элемент заканчивается на указанной линии сетки;
-    - `col-end-auto` — конечное положение столбца определяется автоматически.
+- `col-end-1` … `col-end-13` — номер линии, на которой заканчивается элемент.
+  Без `col-start-*` элемент занимает одну колонку перед этой линией.
+- `col-end-auto` — конец выбирает раскладка; класс нужен, чтобы отменить
+  `col-end-*` на другой ширине экрана.
 
-## Пример использования
+### Начало и конец
 
 ```html
-<div class="grid grid-col-6 gap-1">
-    <div class="col-span-2 col-end-5">Элемент заканчивается на 5-й линии</div>
-    <div></div>
+<div class="grid grid-col-6 gap-2">
+  <div class="col-start-2 col-end-6">Колонки со второй по пятую</div>
 </div>
 ```
 
-В данном примере элемент с классом `col-span-2 col-end-5` занимает 2 столбца и заканчивается на 5-й линии сетки.
+## Ограничения
 
-Обратите внимание, что линии сетки CSS начинаются с 1\. Например, если нужно, чтобы элемент занимал последний столбец в
-6-колоночной сетке, можно использовать `col-end-7` (так как крайняя линия после 6 столбцов — это 7).
+- Номер больше числа линий шаблона добавляет колонки справа от шаблона.
+- Линии считаются по направлению письма: при `dir="rtl"` последняя линия —
+  левый край сетки.
 
-## Адаптивность
+## См. также
 
-Для изменения конечного положения столбца начиная с определённого размера экрана используйте префикс контрольной точки.
-Например:
-
-```html
-<div class="md:col-end-4">
-    <!-- Начиная с размера экрана md и больше элемент будет заканчиваться на 4-й линии сетки -->
-</div>
-```
+- [Начальное положение колонки сетки](/ru/utilities/grid/grid-column-start/)
+- [Размер колонки сетки](/ru/utilities/grid/grid-column/)
+- [Конечное положение строки сетки](/ru/utilities/grid/grid-row-end/)

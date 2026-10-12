@@ -15,7 +15,7 @@
     "box-shadow-color": "element-color",
     "fill": "svg-fill-type",
     "fill-brand": "svg-fill-brand",
-    "fill-rule": "svg-fill-rule",
+    "fill-rule": "svg-fill-type",
     "flex": "flexibility",
     "background-gradient": "background-gradient-type",
     "background-size-ext": "background-size",

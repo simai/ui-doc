@@ -1,71 +1,66 @@
 ---
 title: "Размещение отдельного элемента"
-description: "Размещение отдельного элемента (place-self)"
-tags: [place-self, sm, md, lg, xl, xxl]
+description: "Одним классом выравнивает один элемент сетки в его ячейке сразу по горизонтали и по вертикали."
 ---
 
 # Размещение отдельного элемента
 
-:badge[place-self]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `self-*` задают `place-self` — `align-self` и `justify-self` одним
+значением: где один элемент стоит в своей ячейке сетки, независимо от
+[`items-*`](/ru/utilities/grid-and-flexbox-utilities/place-items/) контейнера.
+Берите их, чтобы поставить один элемент в угол или в центр ячейки.
 
-Модификаторы из этого раздела задают одновременное выравнивание отдельного элемента сетки или флексбокса в ячейке
-относительно обеих осей сразу.
+## Пример
 
-## Наглядный пример
+### Значения
 
-:::example {id="utilities/grid-and-flexbox-utilities/place-self" label="Размещение отдельного элемента"}
+Сетка из одной ячейки заданной высоты. Подпись над образцом — класс элемента.
+
+:::example {id="utilities/grid-and-flexbox-utilities/place-self" label="self-auto … self-stretch"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс         | Значение             |
-|:--------------|:---------------------|
-| `self-auto` | `place-self: auto;` |
-| `self-start` | `place-self: start;` |
-| `self-end` | `place-self: end;` |
-| `self-center` | `place-self: center;` |
-| `self-stretch` | `place-self: stretch;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `self-auto` | `align-self: auto; justify-self: auto; place-self: auto` | — |
+| `self-start` | `align-self: start; justify-self: start; place-self: start` | — |
+| `self-end` | `align-self: end; justify-self: end; place-self: end` | — |
+| `self-center` | `align-self: center; justify-self: center; place-self: center` | — |
+| `self-stretch` | `align-self: stretch; justify-self: stretch; place-self: stretch` | — |
 
-*(Обратите внимание, что в исходном коде был класс `self-text-center`, но по описанию это `self-center`.)*
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:self-auto`.
 
-## Синтаксис
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+## Применение
 
-- Контрольная точка *(необязательный параметр)*:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+### Как выбрать
 
-- Модификатор *(обязательный параметр)*:
+- `self-auto` — элемент следует классу контейнера; значение по умолчанию.
+  Класс нужен, чтобы отменить `self-*` на другой ширине экрана.
+- `self-start`, `self-center`, `self-end` — элемент своего размера у начала, в
+  центре или у конца ячейки по обеим осям.
+- `self-stretch` — элемент на всю ячейку.
 
-    - `self-auto` – элемент выравнивается по обеим осям на основании свойства `place-items`;
-    - `self-start` – элемент размещается в начале ячейки по обеим осям;
-    - `self-end` – элемент размещается в конце ячейки по обеим осям;
-    - `self-center` – элемент размещается по центру ячейки по обеим осям;
-    - `self-stretch` – элемент растягивается, занимая всё доступное пространство ячейки по обеим осям.
-
-## Пример использования
+### Метка в углу карточки
 
 ```html
-<div class="grid grid-col-3 self-center">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
+<div class="grid">
+  <img class="row-start-1 col-start-1" src="photo.jpg" alt="Фото">
+  <span class="row-start-1 col-start-1 self-start">Новинка</span>
 </div>
 ```
 
-В данном примере элемент с классом `self-center` будет выровнен в центре ячейки сразу по обеим осям.
+## Ограничения
 
-## Адаптивность
+- Во флекс-контейнере действует только часть `align-self`: класс выравнивает
+  элемент по поперечной оси, как
+  [`self-cross-*`](/ru/utilities/grid-and-flexbox-utilities/align-self/).
+- Класс ставят на элемент, а не на контейнер.
 
-Для адаптивного изменения выравнивания отдельного элемента, начиная с определённого размера экрана, добавьте контрольную
-точку:
+## См. также
 
-```html
-<div class="md:self-start">
-  <!-- Начиная с md элемент будет прижат к началу ячейки по обеим осям -->
-</div>
-```
+- [Размещение элементов по обеим осям](/ru/utilities/grid-and-flexbox-utilities/place-items/)
+- [Выравнивание отдельного элемента по поперечной оси](/ru/utilities/grid-and-flexbox-utilities/align-self/)
+- [Выравнивание отдельного элемента в ячейке по основной оси](/ru/utilities/grid-and-flexbox-utilities/justify-self/)

@@ -1,96 +1,230 @@
 ---
 title: "Максимальная ширина"
-description: "Максимальная ширина (max-width)"
-tags: [max-width, max-width-ext, sm, md, lg, xl, xxl]
+description: "Ограничивает ширину элемента сверху: шагом шкалы размеров, шириной экрана, длиной строки текста или шириной родителя."
 ---
 
 # Максимальная ширина
 
-:badge[max-width]{type=main scheme=on-surface size=1} :badge[max-width-ext]{type=tonal scheme=neutral size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы максимальной ширины задают свойство `max-width`: элемент может быть
+уже, но не шире заданного значения. Берите их, чтобы ограничить ширину блока
+на широком экране, строку текста для удобного чтения или изображение шириной
+родителя.
 
-В SIMAI Framework модификаторы `max-width` ограничивают максимальную ширину элемента, чтобы избежать растягивания контента и сохранить удобочитаемость.
+## Пример
 
-## Наглядный пример
+### Шкала размеров
 
-:::example {id="utilities/sizes/max-width" label="Максимальная ширина"}
+Классы `max-w-a0` … `max-w-i9` берут предел из шкалы размеров. Полосы
+стремятся занять всю ширину (`w-full`) и останавливаются на пределе; полоса
+с пределом шире колонки занимает всю её ширину.
+
+:::example {id="utilities/sizes/max-width" label="Предел по шкале размеров"}
 :::
 
-## Таблица классов
+### Пределы по именам ширины экрана
 
-| Класс              | Значение                                          |
-|:-------------------|:--------------------------------------------------|
-| `max-w-full` | `max-width: 100%;` |
-| `max-w-screen` | `max-width: 100vw;` |
-| `max-w-min` | `max-width: min-content;` |
-| `max-w-max` | `max-width: max-content;` |
-| `max-w-fit` | `max-width: fit-content;` |
-| `max-w-prose` | `max-width: 65ch;` |
-| `max-w-none` | `max-width: none;` |
-| `max-w-0` | `max-width: 0;` |
-| `max-w-sm` | `max-width: 520px;` |
-| `max-w-md` | `max-width: 720px;` |
-| `max-w-lg` | `max-width: 960px;` |
-| `max-w-xl` | `max-width: 1140px;` |
-| `max-w-a0 ... i9` | max-width: var(--sf-...); фиксированные размеры из системы фреймворка |
-## Синтаксис
+`max-w-sm` … `max-w-xxl` — пределы, названные по ширинам экрана. Полоса
+с пределом шире колонки занимает всю её ширину; меняйте ширину окна
+просмотра, чтобы увидеть разницу между ними.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+:::example {id="utilities/sizes/max-width-container" label="max-w-sm … max-w-xxl"}
+:::
 
-- Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор действует для всех размеров экрана.
+### Длина строки
 
-- Модификатор *(обязательный параметр)*: `max-w-full`, `max-w-screen`, `max-w-min`, `max-w-max`, `max-w-fit`, `max-w-prose`, `max-w-none`, `max-w-0`, `max-w-(sm|md|lg|xl)`, `max-w-a0 ... max-w-i9`.
+`max-w-prose` ограничивает строку текста длиной, удобной для чтения.
+`max-w-none` снимает ограничение.
 
-## Примеры
+:::example {id="utilities/sizes/max-width-prose" label="max-w-prose и max-w-none"}
+:::
 
-**Фиксированная максимальная ширина:**
+### Ширина родителя и содержимого
+
+Пунктирная рамка — родитель. С `max-w-full` элемент заданной ширины не
+выходит за родителя. `max-w-min` сужает блок до самого длинного слова,
+`max-w-fit` — до длины текста.
+
+:::example {id="utilities/sizes/max-width-content" label="max-w-full, max-w-min и max-w-fit"}
+:::
+
+### Ширина экрана
+
+С префиксом ширины класс действует от указанной ширины и шире. Меняйте ширину
+окна просмотра: на узком экране полоса во всю ширину, с ширины `md` она
+ограничена.
+
+:::example {id="utilities/sizes/max-width-responsive" label="Предел по ширине экрана"}
+:::
+
+## Классы
+
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `max-w-full` | `max-width: 100%` | — |
+| `max-w-screen` | `max-width: 100vw` | — |
+| `max-w-min` | `max-width: -webkit-min-content; max-width: -moz-min-content; max-width: min-content` | — |
+| `max-w-max` | `max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content` | — |
+| `max-w-fit` | `max-width: -webkit-fit-content; max-width: -moz-fit-content; max-width: fit-content` | — |
+| `max-w-prose` | `max-width: 65ch` | — |
+| `max-w-0` | `max-width: 0` | — |
+| `max-w-none` | `max-width: none` | — |
+| `max-w-sm` | `max-width: 520px` | — |
+| `max-w-md` | `max-width: 720px` | — |
+| `max-w-lg` | `max-width: 960px` | — |
+| `max-w-xl` | `max-width: 1140px` | — |
+| `max-w-xxl` | `max-width: 1320px` | — |
+| `max-w-{значение}` | `max-width: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:max-w-full`.
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-a0` | `0rem` |
+| `--sf-a1` | `0.0625rem` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-a3` | `0.1875rem` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-a5` | `0.3125rem` |
+| `--sf-a6` | `0.375rem` |
+| `--sf-a7` | `0.4375rem` |
+| `--sf-a8` | `0.5rem` |
+| `--sf-a9` | `0.5625rem` |
+| `--sf-b0` | `0.625rem` |
+| `--sf-b1` | `0.6875rem` |
+| `--sf-b2` | `0.75rem` |
+| `--sf-b3` | `0.8125rem` |
+| `--sf-b4` | `0.875rem` |
+| `--sf-b5` | `0.9375rem` |
+| `--sf-b6` | `1rem` |
+| `--sf-b7` | `1.0625rem` |
+| `--sf-b8` | `1.125rem` |
+| `--sf-b9` | `1.1875rem` |
+| `--sf-c0` | `1.25rem` |
+| `--sf-c1` | `1.375rem` |
+| `--sf-c2` | `1.5rem` |
+| `--sf-c3` | `1.625rem` |
+| `--sf-c4` | `1.75rem` |
+| `--sf-c5` | `1.875rem` |
+| `--sf-c6` | `2rem` |
+| `--sf-c7` | `2.125rem` |
+| `--sf-c8` | `2.25rem` |
+| `--sf-c9` | `2.375rem` |
+| `--sf-d0` | `2.5rem` |
+| `--sf-d1` | `2.75rem` |
+| `--sf-d2` | `3rem` |
+| `--sf-d3` | `3.25rem` |
+| `--sf-d4` | `3.5rem` |
+| `--sf-d5` | `3.75rem` |
+| `--sf-d6` | `4rem` |
+| `--sf-d7` | `4.25rem` |
+| `--sf-d8` | `4.5rem` |
+| `--sf-d9` | `4.75rem` |
+| `--sf-e0` | `5rem` |
+| `--sf-e1` | `5.5rem` |
+| `--sf-e2` | `6rem` |
+| `--sf-e3` | `6.5rem` |
+| `--sf-e4` | `7rem` |
+| `--sf-e5` | `7.5rem` |
+| `--sf-e6` | `8rem` |
+| `--sf-e7` | `8.5rem` |
+| `--sf-e8` | `9rem` |
+| `--sf-e9` | `9.5rem` |
+| `--sf-f0` | `10rem` |
+| `--sf-f1` | `11rem` |
+| `--sf-f2` | `12rem` |
+| `--sf-f3` | `13rem` |
+| `--sf-f4` | `14rem` |
+| `--sf-f5` | `15rem` |
+| `--sf-f6` | `16rem` |
+| `--sf-f7` | `17rem` |
+| `--sf-f8` | `18rem` |
+| `--sf-f9` | `19rem` |
+| `--sf-g0` | `20rem` |
+| `--sf-g1` | `22rem` |
+| `--sf-g2` | `24rem` |
+| `--sf-g3` | `26rem` |
+| `--sf-g4` | `28rem` |
+| `--sf-g5` | `30rem` |
+| `--sf-g6` | `32rem` |
+| `--sf-g7` | `34rem` |
+| `--sf-g8` | `36rem` |
+| `--sf-g9` | `38rem` |
+| `--sf-h0` | `40rem` |
+| `--sf-h1` | `44rem` |
+| `--sf-h2` | `48rem` |
+| `--sf-h3` | `52rem` |
+| `--sf-h4` | `56rem` |
+| `--sf-h5` | `60rem` |
+| `--sf-h6` | `64rem` |
+| `--sf-h7` | `68rem` |
+| `--sf-h8` | `72rem` |
+| `--sf-h9` | `76rem` |
+| `--sf-i0` | `80rem` |
+| `--sf-i1` | `88rem` |
+| `--sf-i2` | `96rem` |
+| `--sf-i3` | `104rem` |
+| `--sf-i4` | `112rem` |
+| `--sf-i5` | `120rem` |
+| `--sf-i6` | `128rem` |
+| `--sf-i7` | `136rem` |
+| `--sf-i8` | `144rem` |
+| `--sf-i9` | `152rem` |
+
+## Применение
+
+### Как выбрать значение
+
+- Блок, который не должен растягиваться на широком экране, — форма, карточка,
+  диалог, — `w-full` с пределом из шкалы размеров, например `max-w-h0`, или
+  с пределом по имени ширины экрана, например `max-w-md`.
+- Текст статьи — `max-w-prose`.
+- Изображение и другой элемент с собственной шириной — `max-w-full`, чтобы он
+  уменьшался вместе с родителем.
+- `max-w-none` снимает предел, например на широком экране.
 
 ```html
-<div class="flex">
-	<div class="max-w-e4 grow"></div>
-	<div class="max-w-e8 grow"></div>
-	<div class="max-w-f2 grow"></div>
-	<div class="max-w-f6 grow"></div>
-</div>
+<form class="w-full max-w-g0">…</form>
+
+<article class="max-w-prose">…</article>
+
+<img class="max-w-full" src="photo.jpg" alt="">
 ```
 
-### **На всю ширину (max-w-full):**
+### Блок по центру
+
+Чтобы ограниченный блок стоял по центру, добавьте ему автоматические внешние
+отступы по горизонтали.
 
 ```html
-<div class="max-w-full"></div>
+<main class="w-full max-w-lg m-inline-auto">…</main>
 ```
 
-### **Минимальная ширина контента (max-w-min):**
+### Предел по ширине экрана
 
 ```html
-<div class="max-w-min">Lorem</div>
-<div class="max-w-min">Lorem ipsum dolor sit amet, consectetur</div>
+<div class="max-w-none md:max-w-f6">…</div>
 ```
 
-### **Максимальная ширина контента (max-w-max):**
+## Ограничения
 
-```html
-<div class="w-d0">
-	<div class="max-w-max">Lorem ipsum dolor sit amet, consectetur</div>
-</div>
-```
+- Пределы `max-w-sm` … `max-w-xxl` — фиксированные значения в пикселях из CSS
+  выпуска; переменные темы их не меняют.
+- `max-w-screen` равна ширине окна просмотра вместе с вертикальной полосой
+  прокрутки.
+- Предел сильнее ширины: при `w-full max-w-f6` элемент не шире `max-w-f6`.
+  Минимальная ширина сильнее предела.
+- У семейства нет префиксов состояния и отрицательных значений.
 
-### **Ширина экрана (max-w-screen):**
+## См. также
 
-```html
-<div class="w-full">
-	<div class="max-w-screen"></div>
-</div>
-```
-
-## Адаптивность
-
-Для установки максимальной ширины, начиная с определенного размера области просмотра, добавьте префикс контрольной точки
-к модификатору:
-
-```html
-<div class="md:max-w-full"></div>
-```
-
-В этом примере максимальная ширина будет 100% (`max-w-full`) только при размерах экрана `md` и больше.
+- [Ширина](/ru/utilities/sizes/width/)
+- [Минимальная ширина](/ru/utilities/sizes/min-width/)
+- [Контейнер](/ru/utilities/layout/container/)
+- [Максимальный размер контейнера](/ru/utilities/layout/max-container/)
+- [Шкала размеров](/ru/guide/fundamentals/size-scale/)

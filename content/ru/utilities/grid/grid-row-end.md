@@ -1,71 +1,85 @@
 ---
-title: 'Конечное положение строки сетки'
-description: 'Конечное положение строки сетки (grid-row-end)'
-tags: [grid-row-end, sm, md, lg, xl, xxl]
+title: "Конечное положение строки сетки"
+description: "Задаёт линию сетки, на которой элемент заканчивается по вертикали."
 ---
 
 # Конечное положение строки сетки
 
-:badge[grid-row-end]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `row-end-*` задают `grid-row-end` — линию сетки, на которой элемент
+заканчивается по вертикали. Берите их вместе с
+[`row-start-*`](/ru/utilities/grid/grid-row-start/), когда удобнее назвать
+начало и конец элемента, чем его высоту.
 
-В SIMAI Framework с помощью модификаторов можно управлять тем, на какой строке заканчивается элемент в сетке, определяя
-его конечное положение относительно строк.
+## Пример
 
-## Наглядный пример
+### Начало и конец
 
-:::example {id="utilities/grid/grid-row-end" label="Конечное положение строки сетки"}
+Сетка из трёх колонок. `row-start-1 row-end-3` занимает строки с первой по
+вторую: линия `3` — нижний край второй строки.
+
+:::example {id="utilities/grid/grid-row-end" label="row-start-1 row-end-3 и row-start-2 row-end-4"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс         | Значение    |
-| :----------------- | :------------------ |
-| `grid-row-end-1` | `grid-row-end: 1;` |
-| `grid-row-end-2` | `grid-row-end: 2;` |
-| `grid-row-end-3` | `grid-row-end: 3;` |
-| `grid-row-end-4` | `grid-row-end: 4;` |
-| `grid-row-end-5` | `grid-row-end: 5;` |
-| `grid-row-end-6` | `grid-row-end: 6;` |
-| `grid-row-end-7` | `grid-row-end: 7;` |
-| `grid-row-end-auto` | `grid-row-end: auto;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `row-end-1` | `grid-row-end: 1` | — |
+| `grid-row-end-1` | `grid-row-end: 1` | — |
+| `row-end-2` | `grid-row-end: 2` | — |
+| `grid-row-end-2` | `grid-row-end: 2` | — |
+| `row-end-3` | `grid-row-end: 3` | — |
+| `grid-row-end-3` | `grid-row-end: 3` | — |
+| `row-end-4` | `grid-row-end: 4` | — |
+| `grid-row-end-4` | `grid-row-end: 4` | — |
+| `row-end-5` | `grid-row-end: 5` | — |
+| `grid-row-end-5` | `grid-row-end: 5` | — |
+| `row-end-6` | `grid-row-end: 6` | — |
+| `grid-row-end-6` | `grid-row-end: 6` | — |
+| `row-end-7` | `grid-row-end: 7` | — |
+| `grid-row-end-7` | `grid-row-end: 7` | — |
+| `row-end-auto` | `grid-row-end: auto` | — |
+| `grid-row-end-auto` | `grid-row-end: auto` | — |
 
-## Синтаксис
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-end-1`.
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- Контрольная точка _(необязательный параметр)_:
-  Применяет модификатор начиная с определённого размера экрана (`sm`, `md`, `lg`, `xl`, `xxl`).
-  Если не указана, модификатор применяется для всех размеров.
+## Применение
 
-- Модификатор _(обязательный параметр)_:
-  - `grid-row-end-{n}` (где n от 1 до 7) — элемент заканчивается на указанной строке.
-  - `grid-row-end-auto` — конец строки определяется автоматически.
+### Как выбрать
 
-## Пример использования
+- `row-end-1` … `row-end-7` — номер линии, на которой заканчивается элемент.
+  Без `row-start-*` элемент занимает одну строку перед этой линией.
+- `row-end-auto` — конец выбирает раскладка; класс нужен, чтобы отменить
+  `row-end-*` на другой ширине экрана.
+
+### Боковой блок на три строки
 
 ```html
-<div class="grid grid-col-6 gap-1">
-  <!-- Элемент начнётся с первой строки и закончится на четвертой -->
-  <div class="grid-row-start-1 grid-row-end-4 col-span-2">1</div>
-
-  <!-- Элемент заканчивается на третьей строке -->
-  <div class="col-start-1 col-end-3 grid-row-end-3">2</div>
-
-  <!-- Элемент занимает все строки, если сетка, скажем, из 6 строк -->
-  <div class="col-end-7 col-span-2 grid-row-end-auto">3</div>
+<div class="grid grid-col-3 gap-2">
+  <aside class="row-start-1 row-end-4">Боковой блок</aside>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
 </div>
 ```
 
-Обратите внимание, что линии сетки в CSS начинаются с 1, а не с 0\. Например, в сетке из 6 строк последний элемент,
-занимающий всю высоту, будет заканчиваться на линии 7\.
+### Второе имя
 
-## Адаптивность
+У каждого класса есть второе имя с приставкой `grid-`: `grid-row-end-3`,
+`grid-row-end-auto`. Значения те же. В разметке пишите короткие имена — они
+соответствуют колоночным `col-end-*`.
 
-Для изменения конечного положения элемента по строкам, начиная с определённого размера экрана, добавьте контрольную
-точку:
+## Ограничения
 
-```html
-<div class="md:grid-row-end-4">
-  <!-- Начиная с md элемент будет заканчиваться на 4-й строке -->
-</div>
-```
+- Номер больше числа строк добавляет пустые строки до нужной линии.
+
+## См. также
+
+- [Начальное положение строки сетки](/ru/utilities/grid/grid-row-start/)
+- [Размер строки сетки](/ru/utilities/grid/grid-row/)
+- [Конечное положение колонки сетки](/ru/utilities/grid/grid-column-end/)

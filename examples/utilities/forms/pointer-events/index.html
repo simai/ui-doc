@@ -1,37 +1,18 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 sm:grid-col-2 gap-4">
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">pointer-event-auto</div>
-    <div class="p-3 radius-3 border border-outline-variant">
-      <button
-        type="button"
-        class="pointer-event-auto p-2 radius-2 border border-outline-variant bg-primary color-on-primary"
-      >
-        Clickable button
-      </button>
+    <div class="relative">
+      <button type="button" class="w-full p-x-3 p-y-1 border border-outline radius-ui bg-surface color-on-surface cursor-pointer hover:bg-primary-container hover:color-on-primary-container">Наведите указатель</button>
+      <div class="absolute inset-0 radius-ui bg-primary-transparent-overlay pointer-event-none"></div>
     </div>
+    <code class="text-1/2 color-on-surface-variant">слой сверху: pointer-event-none</code>
+    <span class="text-1/2 color-on-surface-variant">Указатель проходит сквозь слой — кнопка реагирует.</span>
   </div>
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">pointer-event-none (card)</div>
-    <div
-      class="p-3 radius-3 border border-outline-variant pointer-event-none"
-    >
-      <button
-        type="button"
-        class="p-2 radius-2 border border-outline-variant bg-warning color-on-warning"
-      >
-        Click blocked by parent
-      </button>
+    <div class="relative">
+      <button type="button" class="w-full p-x-3 p-y-1 border border-outline radius-ui bg-surface color-on-surface cursor-pointer hover:bg-primary-container hover:color-on-primary-container">Наведите указатель</button>
+      <div class="absolute inset-0 radius-ui bg-primary-transparent-overlay pointer-event-auto"></div>
     </div>
-  </div>
-  <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">pointer-event-none (element)</div>
-    <div class="p-3 radius-3 border border-outline-variant">
-      <button
-        type="button"
-        class="pointer-event-none p-2 radius-2 border border-outline-variant bg-error color-on-error"
-      >
-        This element ignores pointer
-      </button>
-    </div>
+    <code class="text-1/2 color-on-surface-variant">слой сверху: pointer-event-auto</code>
+    <span class="text-1/2 color-on-surface-variant">Слой перехватывает указатель — кнопка не реагирует.</span>
   </div>
 </div>

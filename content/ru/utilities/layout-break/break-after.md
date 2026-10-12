@@ -1,69 +1,92 @@
 ---
 title: "Разрыв после колонки"
-description: "Управляет разрывом колонки или страницы после выбранного элемента."
-tags: [break-after, sm, md, lg, xl, xxl]
+description: "Задаёт, начинается ли после элемента новая колонка или страница."
 ---
 
 # Разрыв после колонки
 
-:badge[break-after]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Модификатор `break-after` в SIMAI Framework позволяет контролировать разрывы столбцов или страниц после определённых
-элементов. Это особенно полезно при работе с многостраничными документами или макетами, где требуется точное управление
-расстановкой колонок и страниц.
+Классы `break-after-*` задают свойство `break-after`: разрешают, запрещают или
+требуют разрыв колонки или страницы сразу после элемента. Берите их в
+многоколоночном блоке ([`layout-col-*`](/ru/utilities/layout-break/column/)) и
+при печати, когда раздел должен заканчивать колонку или страницу.
 
 ## Пример
 
-После второго элемента начинается новая колонка, поэтому третий элемент переносится целиком.
+### Разрыв колонки
 
-:::example {id="utilities/layout-break/break-after" label="Разрыв после элемента"}
+Слева колонки заполняются сами; справа после элемента 2 стоит
+`break-after-column`, и элемент 3 начинает вторую колонку.
+
+:::example {id="utilities/layout-break/break-after" label="break-after-column"}
 :::
 
-## Синтаксис
+## Классы
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `break-after-auto` | `page-break-after: auto; -webkit-column-break-after: auto; -moz-column-break-after: auto; break-after: auto` | — |
+| `break-after-avoid` | `page-break-after: avoid; -webkit-column-break-after: avoid; -moz-column-break-after: avoid; break-after: avoid` | — |
+| `break-after-all` | `page-break-after: all; -webkit-column-break-after: all; -moz-column-break-after: all; break-after: all` | — |
+| `break-after-avoid-page` | `page-break-after: avoid; -webkit-column-break-after: avoid; -moz-column-break-after: avoid; break-after: avoid-page` | — |
+| `break-after-page` | `page-break-after: always; -webkit-column-break-after: page; -moz-column-break-after: page; break-after: page` | — |
+| `break-after-left` | `page-break-after: left; -webkit-column-break-after: left; -moz-column-break-after: left; break-after: left` | — |
+| `break-after-right` | `page-break-after: right; -webkit-column-break-after: right; -moz-column-break-after: right; break-after: right` | — |
+| `break-after-column` | `-webkit-column-break-after: column; -moz-column-break-after: column; break-after: column` | — |
 
-- Контрольная точка (необязательный параметр):
-  Применяет модификатор начиная с определённого размера области просмотра. Может принимать значения `sm`, `md`, `lg`,
-  `xl`.
-  Если не указана, модификатор действует на всех размерах.
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-after-auto`.
 
-- Модификатор (обязательный параметр):
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-    - `break-after-auto` — равномерное распределение.
-    - `break-after-avoid` — отменяет разрыв страницы.
-    - `break-after-all` — принудительный разрыв страницы.
-    - `break-after-avoid-page` — отменяет разрыв страницы после текущего элемента.
-    - `break-after-page` — обязательный разрыв и переход к новой странице после текущего элемента.
-    - `break-after-left` — принудительная расстановка разрывов, следующий элемент располагается слева.
-    - `break-after-right` — принудительная расстановка разрывов, следующий элемент располагается справа.
-    - `break-after-column` — принудительный разрыв колонок после текущего элемента.
+## Применение
 
-## Пример
+### Колонки
 
-Использование `break-after-column` для принудительного разрыва столбца:
+`break-after-column` заканчивает колонку после элемента: следующий элемент
+начинает новую колонку, даже если в текущей ещё есть место.
 
 ```html
 <div class="layout-col-2">
-  <p>Что ж, позволь мне кое-что тебе сказать, ...</p>
-  <p class="break-after-column">Конечно, смейтесь...</p>
-  <p>Может быть, мы сможем жить без...</p>
-  <p>Смотреть. Если вы думаете, что это...</p>
+  <section class="break-after-column">Первая часть</section>
+  <section>Вторая часть — с новой колонки</section>
 </div>
 ```
 
-В этом примере абзац с `break-after-column` гарантированно завершит текущую колонку, и последующий контент начнётся уже
-в следующей колонке.
+### Печать
 
-## Адаптивность
-
-Чтобы модификатор начал действовать только с определённого размера области просмотра, добавьте префикс контрольной
-точки. Например, `md:break-after-column` заставит применять принудительный разрыв колонок только на экранах с размером
-`Medium` и больше:
+`break-after-page` начинает новую страницу после элемента. `break-after-left`
+и `break-after-right` добавляют одну или две страницы так, чтобы следующая
+страница была левой или правой — при двусторонней печати. `break-after-all`
+разрывает все вложенные области сразу: и колонку, и страницу. Действие видно в
+предпросмотре печати.
 
 ```html
-<div class="md:break-after-column"></div>
+<section class="break-after-page">Глава 1</section>
+<section>Глава 2 — с новой страницы</section>
 ```
 
-Таким образом, модификатор `break-after` обеспечивает гибкий контроль над разрывами после элементов, что упрощает
-настройку адаптивных макетов и многостраничных документов.
+### Запрет разрыва
+
+`break-after-avoid` просит не разрывать ни колонку, ни страницу после
+элемента — например, после заголовка, чтобы он не остался без текста.
+`break-after-avoid-page` запрещает только разрыв страницы. `break-after-auto`
+возвращает решение браузеру.
+
+```html
+<h2 class="break-after-avoid">Заголовок раздела</h2>
+<p>Первый абзац раздела</p>
+```
+
+## Ограничения
+
+- Классы действуют только внутри многоколоночного блока или при печати; во
+  флекс- и грид-контейнерах разрыва нет.
+- Запрет разрыва — просьба к браузеру: если элемент не помещается, разрыв всё
+  равно случится. Поддержка `avoid` в колонках у браузеров неполная.
+- У семейства нет префиксов состояния.
+
+## См. также
+
+- [Разрыв до элемента](/ru/utilities/layout-break/break-before/)
+- [Разрыв внутри элемента](/ru/utilities/layout-break/break-inside/)
+- [Колонки](/ru/utilities/layout-break/column/)
+- [Отображение элемента при печати](/ru/utilities/print/display-print/)

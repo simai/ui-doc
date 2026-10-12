@@ -15,7 +15,7 @@ function demoScroll(boxId, labelId, ratio) {
     else stableFrames = 0;
 
     if (stableFrames >= 2) {
-      label.textContent = 'Duration: ' + Math.round(performance.now() - start) + ' ms';
+      label.textContent = 'Длительность: ' + Math.round(performance.now() - start) + ' мс';
       return;
     }
 

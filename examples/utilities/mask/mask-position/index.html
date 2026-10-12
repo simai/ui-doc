@@ -1,72 +1,56 @@
-<style>
-:root {
-  --demo-organic-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M252 468c-13-93-9-155-37-206-18-33-47-56-88-70 8 63 34 106 82 130-19-85-8-158 35-218 50 69 57 149 18 239 17-70 57-116 121-137-5 74-42 123-111 148-10 37-12 75-8 114h-12Z'/%3E%3C/svg%3E");
-}
-</style>
-
-<div class="wrap grid grid-col-1 sm:grid-col-3 max-w-xl gap-3 content-main-start">
-  <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-inline-start-top</div>
-    <div
-      class="h-f4 radius-2 bg-primary mask-inline-start-top mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+<div class="grid grid-col-2 sm:grid-col-3 gap-3">
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-inline-start-top"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-inline-start-top</code>
   </div>
-  <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-top</div>
-    <div
-      class="h-f4 radius-2 bg-secondary mask-top mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-top"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-top</code>
   </div>
-  <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-inline-end-top</div>
-    <div
-      class="h-f4 radius-2 bg-tertiary mask-inline-end-top mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-inline-end-top"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-inline-end-top</code>
   </div>
-  <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-inline-start</div>
-    <div
-      class="h-f4 radius-2 bg-success mask-inline-start mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-inline-start"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-inline-start</code>
   </div>
-  <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-center</div>
-    <div
-      class="h-f4 radius-2 bg-warning mask-center mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-center"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-center</code>
   </div>
-  <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-inline-end</div>
-    <div
-      class="h-f4 radius-2 bg-error mask-inline-end mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-inline-end"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-inline-end</code>
   </div>
-    <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-inline-start-bottom</div>
-    <div
-      class="h-f4 radius-2 bg-success mask-inline-start-bottom mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-inline-start-bottom"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-inline-start-bottom</code>
   </div>
-      <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-bottom</div>
-    <div
-      class="h-f4 radius-2 bg-success mask-bottom mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
-
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-bottom"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-bottom</code>
   </div>
-      <div class="p-3 radius-3 border border-outline-variant">
-    <div class="text-1/2 weight-6 m-bottom-2 color-on-surface">mask-inline-end-bottom</div>
-    <div
-      class="h-f4 radius-2 bg-success mask-inline-end-bottom mask-repeat-none"
-      style="background-color:var(--sf-primary);-webkit-mask-mode:alpha;mask-mode:alpha;-webkit-mask-image:var(--demo-organic-mask);mask-image:var(--demo-organic-mask);-webkit-mask-size:45% auto;mask-size:45% auto;"
-    ></div>
+  <div class="flex flex-col gap-1">
+    <div class="radius-1 border border-dashed border-outline-variant">
+      <div class="h-e4 bg-primary demo-mask-leaf mask-repeat-none mask-inline-end-bottom"></div>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">mask-inline-end-bottom</code>
   </div>
 </div>

@@ -1,22 +1,25 @@
-<div class="wrap grid grid-col-1 gap-3 content-main-start">
+<div class="flex flex-col gap-4 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>max-container-4</code></div>
-    <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3">
-      <div class="max-container-4">
-        <div class="container m-inline-auto bg-secondary color-on-secondary p-2 radius-2" aria-label="max-container-4">
-          Более узкое ограничение контейнера
-        </div>
+    <code class="text-1/2 color-on-surface-variant">container</code>
+    <div class="border border-dashed border-outline radius-ui">
+      <div class="container m-inline-auto bg-primary-container radius-ui">
+        <div class="p-1 bg-primary color-on-primary radius-ui text-center">Шаг контейнера</div>
       </div>
     </div>
   </div>
-
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>max-container-6</code></div>
-    <div class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3">
-      <div class="max-container-6">
-        <div class="container m-inline-auto bg-primary color-on-primary p-2 radius-2" aria-label="max-container-6">
-          Более широкое ограничение контейнера
-        </div>
+    <code class="text-1/2 color-on-surface-variant">max-container-1 → container</code>
+    <div class="max-container-1 border border-dashed border-outline radius-ui">
+      <div class="container m-inline-auto bg-secondary-container radius-ui">
+        <div class="p-1 bg-secondary color-on-secondary radius-ui text-center">Не шире max-container-1</div>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">max-container-8 → container</code>
+    <div class="max-container-8 border border-dashed border-outline radius-ui">
+      <div class="container m-inline-auto bg-tertiary-container radius-ui">
+        <div class="p-1 bg-tertiary color-on-tertiary radius-ui text-center">Не шире max-container-8</div>
       </div>
     </div>
   </div>

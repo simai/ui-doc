@@ -1,54 +1,28 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 md:grid-col-2 gap-4">
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">table-active</div>
-    <div
-      class="p-3 flex flex-col gap-1 radius-3 border border-outline-variant"
-    >
-      <table class="table m-bottom-0">
-        <tbody>
-          <tr class="table-active">
-            <td>Active row</td>
-            <td>Online</td>
-            <td>Now</td>
-          </tr>
-          <tr>
-            <td>Regular row</td>
-            <td>Offline</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Regular row</td>
-            <td>Offline</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table m-bottom-0">
+      <thead>
+        <tr><th>Город</th><th>Страна</th><th>Код</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Москва</td><td>Россия</td><td>RU</td></tr>
+        <tr class="table-active"><td>Берлин</td><td>Германия</td><td>DE</td></tr>
+        <tr><td>Мадрид</td><td>Испания</td><td>ES</td></tr>
+      </tbody>
+    </table>
+    <code class="text-1/2 color-on-surface-variant">tr class="table-active"</code>
   </div>
   <div class="flex flex-col gap-1">
-    <div class="weight-6 m-bottom-2 text-center">table-hover + active cell</div>
-    <div
-      class="p-3 flex flex-col gap-1 radius-3 border border-outline-variant"
-    >
-      <table class="table table-hover m-bottom-0">
-        <tbody>
-          <tr>
-            <td>Строка при наведении</td>
-            <td>Наведите указатель</td>
-            <td>State</td>
-          </tr>
-          <tr>
-            <td>Regular row</td>
-            <td class="table-active">Active cell</td>
-            <td>State</td>
-          </tr>
-          <tr>
-            <td>Regular row</td>
-            <td>Regular cell</td>
-            <td>State</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table m-bottom-0">
+      <thead>
+        <tr><th>Город</th><th>Страна</th><th>Код</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Москва</td><td>Россия</td><td>RU</td></tr>
+        <tr><td>Берлин</td><td class="table-active">Германия</td><td>DE</td></tr>
+        <tr><td>Мадрид</td><td>Испания</td><td>ES</td></tr>
+      </tbody>
+    </table>
+    <code class="text-1/2 color-on-surface-variant">td class="table-active"</code>
   </div>
 </div>

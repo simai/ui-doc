@@ -1,76 +1,73 @@
 ---
 title: "Повтор фона"
-description: "Повтор фона"
-tags: [background-repeat, sm, md, lg, xl, xxl]
+description: "Задаёт, повторяется ли фоновое изображение и по каким осям."
 ---
 
 # Повтор фона
 
-:badge[background-repeat]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+Классы `bg-repeat*` задают `background-repeat`: повторяется ли фоновое
+изображение по горизонтали, по вертикали, по обеим осям или стоит одно. Берите
+их для узоров из плитки и для одиночных картинок, которые не должны
+размножаться.
 
-С помощью модификаторов `background-repeat` вы можете управлять тем, как будет повторяться фоновое изображение внутри
-элемента.
+## Пример
 
-## Наглядный пример
+Одна и та же плитка с разными классами повтора. Ширина образца не кратна
+плитке: `bg-repeat` обрезает крайние плитки, `bg-repeat-space` раздвигает
+целые плитки, `bg-repeat-round` масштабирует их.
 
-:::example {id="utilities/background/background-repeat" label="Повтор фона"}
+:::example {id="utilities/background/background-repeat" label="Классы повтора"}
 :::
 
-## Таблица классов
+## Классы
 
-| Класс            | Значение                      |
-|:-----------------|:------------------------------|
-| `bg-repeat` | `background-repeat: repeat;` |
-| `bg-repeat-none` | `background-repeat: no-repeat;` |
-| `bg-repeat-x` | `background-repeat: repeat-x;` |
-| `bg-repeat-y` | `background-repeat: repeat-y;` |
-| `bg-repeat-round` | `background-repeat: round;` |
-| `bg-repeat-space` | `background-repeat: space;` |
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `bg-repeat` | `background-repeat: repeat` | — |
+| `bg-repeat-none` | `background-repeat: no-repeat` | — |
+| `bg-repeat-x` | `background-repeat: repeat-x` | — |
+| `bg-repeat-y` | `background-repeat: repeat-y` | — |
+| `bg-repeat-round` | `background-repeat: round` | — |
+| `bg-repeat-space` | `background-repeat: space` | — |
 
-## Описание
+Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-repeat`.
 
-Адаптивный модификатор `background-repeat` позволяет контролировать повтор фонового изображения в зависимости от размера
-области просмотра:
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-- `bg-repeat` — фон будет повторяться по обеим осям.
-- `bg-repeat-none` — фоновое изображение не будет повторяться.
-- `bg-repeat-x` — фон повторяется только по горизонтали.
-- `bg-repeat-y` — фон повторяется только по вертикали.
-- `bg-repeat-round` — фон повторяется, чтобы заполнить элемент целыми изображениями, масштабируя их при необходимости.
-- `bg-repeat-space` — фон повторяется так, чтобы изображения не деформировались, между ними могут оставаться промежутки.
+## Применение
 
-## Синтаксис
+### Как выбрать
 
-Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`
+| Класс | Как ложится картинка |
+| :--- | :--- |
+| `bg-repeat` | по обеим осям, крайние плитки обрезаются — значение браузера по умолчанию |
+| `bg-repeat-x` | одна строка по горизонтали |
+| `bg-repeat-y` | один столбец по вертикали |
+| `bg-repeat-none` | одна картинка без повтора |
+| `bg-repeat-space` | целые плитки с равными промежутками между ними |
+| `bg-repeat-round` | целые плитки, сжатые или растянутые, чтобы заполнить элемент |
 
-- Контрольная точка *(необязательный параметр)*: Применяет модификатор, начиная с определенной ширины экрана (sm, md,
-  lg, xl).
-- Модификатор *(обязательный параметр)*: один из классов, приведенных в таблице выше.
+### Одиночная картинка
 
-## Примеры использования
-
-```html
-<!-- Фон повторяется по всем осям -->
-<div class="bg-repeat w-full h-e8 bg-cover bg-top" style="background-image:url('../../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
-```
+Для иллюстрации или значка берите `bg-repeat-none` вместе с положением и
+размером:
 
 ```html
-<!-- Фон не повторяется -->
-<div class="bg-repeat-none w-full h-e8 bg-cover bg-top" style="background-image:url('../../../image/picture.svg');">
-    <div class="h-f8"></div>
-</div>
+<div class="bg-repeat-none bg-center bg-contain h-f0"
+     style="background-image: url(/images/empty-state.svg)"></div>
 ```
 
-## Адаптивность
+С префиксом ширины класс действует от указанной ширины и шире, например
+`md:bg-repeat-none`.
 
-Для установки поведения повторения фонового изображения, начиная с определенных размеров экрана, используйте префиксы
-контрольных точек:
+## Ограничения
 
-```html
-<!-- Для экранов от Medium и больше фон начнет повторяться -->
-<div class="md:bg-repeat w-full h-e8 ...">
-    <div class="h-f8"></div>
-</div>
-```
+- `bg-repeat` и `bg-repeat-space` для картинки больше элемента дают одну
+  обрезанную плитку.
+- У семейства нет префиксов состояния.
+
+## См. также
+
+- [Размер фона](/ru/utilities/background/background-size/)
+- [Положение фона](/ru/utilities/background/background-position/)
+- [Паттерн фона](/ru/utilities/background/background-pattern/)

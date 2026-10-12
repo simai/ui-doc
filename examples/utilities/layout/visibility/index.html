@@ -1,32 +1,26 @@
-<div class="wrap grid grid-col-1 sm:grid-col-2 gap-3 content-main-start">
+<div class="grid grid-col-1 sm:grid-col-3 gap-4 color-on-surface">
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>visible</code></div>
-    <div
-      class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3"
-    >
-      <div
-        class="bg-primary color-on-primary p-2 visible"
-        aria-label="visible"
-      >
-        Элемент виден
-      </div>
+    <code class="text-1/2 color-on-surface-variant">visible</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <div class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui text-center">1</div>
+      <div class="visible flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui text-center">2</div>
+      <div class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui text-center">3</div>
     </div>
   </div>
-
   <div class="flex flex-col gap-1">
-    <div class="sf-text-1/2 weight-6 text-center"><code>invisible</code> сохраняет место</div>
-    <div
-      class="m-0 bg-surface-0 border border-outline-variant radius-3 p-3"
-    >
-      <div
-        class="bg-secondary color-on-secondary p-2 invisible"
-        aria-label="invisible"
-      >
-        Невидимый элемент
-      </div>
-      <div class="bg-tertiary color-on-tertiary p-2" aria-label="next">
-        Следующий блок остаётся на прежнем месте
-      </div>
+    <code class="text-1/2 color-on-surface-variant">invisible</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <div class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui text-center">1</div>
+      <div class="invisible flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui text-center">2</div>
+      <div class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui text-center">3</div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1">
+    <code class="text-1/2 color-on-surface-variant">hidden</code>
+    <div class="flex gap-1 p-1 border border-dashed border-outline radius-ui">
+      <div class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui text-center">1</div>
+      <div class="hidden flex-1 p-1 bg-tertiary-container color-on-tertiary-container radius-ui text-center">2</div>
+      <div class="flex-1 p-1 bg-primary-container color-on-primary-container radius-ui text-center">3</div>
     </div>
   </div>
 </div>
