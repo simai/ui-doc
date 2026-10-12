@@ -7,7 +7,7 @@ profile: reference
 # Уведомления и состояния
 
 - [Alert](/ru/smart-components/feedback/alert/)
-- [Toast](/ru/smart-components/feedback/toast/)
+- [Toast](/ru/smart-components/feedback/toast/) — Кратко сообщает результат действия поверх интерфейса, не прерывая работу пользователя.
 - [Badges](/ru/smart-components/feedback/badges/)
 - [Progress Bar](/ru/smart-components/feedback/progress-bar/)
 - [Progress Scale](/ru/smart-components/feedback/progress-scale/)

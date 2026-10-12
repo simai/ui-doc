@@ -1,0 +1,16 @@
+{
+  "schema": "ui-doc.reference-pages",
+  "schema_version": 1,
+  "why": "Pages that follow docs/developer/reference-page-standard.md. scripts/audit-reference-pages.mjs holds each to the standard and scripts/build-reference-sections.mjs writes their generated sections. The list only grows.",
+  "pages": {
+    "utilities/layout/display.md": {"kind": "utility", "families": ["display"]},
+    "utilities/border/border-radius.md": {"kind": "utility", "families": ["border-radius"]},
+    "utilities/text-formatting/text-color.md": {"kind": "utility", "families": ["text-color"]},
+    "components/actions/buttons.md": {"kind": "component", "component": "buttons", "block": "sf-button"},
+    "components/feedback/alerts.md": {"kind": "component", "component": "alerts", "block": "sf-alert"},
+    "components/forms/checkbox.md": {"kind": "component", "component": "checkbox", "block": "sf-checkbox"},
+    "smart-components/navigation/dropdown.md": {"kind": "smart"},
+    "smart-components/navigation/tabs.md": {"kind": "smart"},
+    "smart-components/feedback/toast.md": {"kind": "smart"}
+  }
+}

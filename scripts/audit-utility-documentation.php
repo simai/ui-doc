@@ -14,6 +14,7 @@ $metrics = [
     'examples_with_inline_setup_style' => 0,
 ];
 
+$standardPages = json_decode((string) file_get_contents($root . '/config/reference-pages.json'), true, 512, JSON_THROW_ON_ERROR)['pages'];
 $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($contentRoot, FilesystemIterator::SKIP_DOTS));
 foreach ($iterator as $file) {
     if (!$file->isFile() || strtolower($file->getExtension()) !== 'md' || $file->getFilename() === 'index.md') {
@@ -39,9 +40,12 @@ foreach ($pages as $path) {
     if (preg_match('/^title:\s*["\']?[^\n]+\([a-z][a-z0-9_.:\/ -]*\)["\']?\s*$/mi', $markdown) === 1) {
         $blockers[] = ['code' => 'technical_suffix_in_title', 'path' => $relative];
     }
+    // Pages that follow docs/developer/reference-page-standard.md carry no
+    // badges: their generated sections hold the facts the badges repeated.
+    $standardPage = isset($standardPages[substr($relative, strlen('content/ru/'))]);
     if (str_contains($markdown, ':badge[')) {
         $metrics['pages_with_badges']++;
-    } else {
+    } elseif (! $standardPage) {
         $blockers[] = ['code' => 'badge_missing', 'path' => $relative];
     }
     if (!preg_match('/^:::example\s*\{[^}\n]*\bid=["\'][^"\']+["\'][^}\n]*\}\s*$/mu', $markdown, $match, PREG_OFFSET_CAPTURE)) {

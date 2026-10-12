@@ -403,6 +403,9 @@ const IDENTIFIER = /^Идентификатор: `[^`]+`\.[^\n]*\n\n/mu;
 const rewrite = (text, entries) => {
   const at = text.indexOf(`\n${HEADING}\n`);
   let body = at === -1 ? text : text.slice(0, at + 1);
+  // What follows the generated section (the standard's «См. также») stays.
+  const next = at === -1 ? -1 : text.indexOf('\n## ', at + HEADING.length + 1);
+  const tail = next === -1 ? '' : text.slice(next + 1);
   body = body.replace(IDENTIFIER, '');
   const parts = body.split(/^(?=## )/mu);
   const kept = parts.filter((part) => {
@@ -412,7 +415,7 @@ const rewrite = (text, entries) => {
     return !(test && test(match[2]));
   });
   body = kept.join('').replace(/\n+$/u, '');
-  return `${body}\n\n${renderSection(entries)}`;
+  return `${body}\n\n${renderSection(entries)}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
 };
 
 const changed = [];

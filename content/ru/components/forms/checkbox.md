@@ -1,127 +1,139 @@
 ---
 title: "Флажок"
-description: "Независимый выбор: разметка, группа, состояния, размеры и API управления."
+description: "Включает независимый параметр или выбирает несколько значений из списка."
 profile: reference
 ---
 
 # Флажок
 
-Флажок позволяет включить независимый параметр или выбрать несколько значений.
-Нативный `<input type="checkbox">` остаётся источником значения, фокуса и
-состояния; оболочка `sf-checkbox` показывает индикатор и текст.
+Флажок включает независимый параметр или выбирает несколько значений из
+списка. Для одного выбора из взаимоисключающих вариантов берите
+[радиокнопку](/ru/components/forms/radio/), для мгновенного включения
+настройки — [переключатель](/ru/components/forms/switch/).
 
-## Быстрый старт
+## Пример
 
 :::example {id="components/checkbox/overview" label="Базовый флажок"}
 :::
 
-## Control и field/group
+## Разметка
 
-| Часть | Отвечает за |
-|:---|:---|
-| Нативный checkbox | `name`, `value`, `checked`, `disabled`, фокус и отправку формы |
-| Связанный `<label>` | Доступное имя одного варианта и кликабельную область |
-| `<fieldset>` + `<legend>` | Общий вопрос для группы флажков |
-| Description/error | Пояснение или исправление ошибки для варианта либо группы |
+Минимальную разметку показывает пример выше. Части вложены так:
+`label.sf-checkbox` → `sf-checkbox-box` с `<input type="checkbox">` и
+`sf-icon` → `sf-checkbox-container` с подписью.
 
-Для единственного выбора из взаимоисключающих вариантов используйте Radio.
+- Оболочка — `<label class="sf-checkbox">`: она даёт доступное имя и
+  кликабельную область. Скрипт компонента находит флажки по `label.sf-checkbox`.
+- Нативный `<input type="checkbox">` — источник `name`, `value`, `checked`,
+  `disabled`, фокуса и отправки формы. Он лежит прямым потомком
+  `sf-checkbox-box`: CSS скрывает только такой input, в другом месте он
+  остаётся видимым браузерным флажком.
+- `sf-icon` после input рисует отметку: скрипт пишет в него `check` для
+  отмеченного и `remove` для смешанного состояния. Без него индикатор пуст.
+- Текст — в `sf-checkbox-container`: подпись `sf-checkbox-label` внутри
+  `sf-checkbox-top` или прямо в контейнере, пояснение —
+  `sf-checkbox-description`.
 
-## Публичные классы
+## Варианты
 
-| Задача | Классы |
-|:---|:---|
-| Основа | `sf-checkbox`, `sf-checkbox-box`, `sf-checkbox-container` |
-| Индикатор | `sf-icon` внутри `sf-checkbox-box`, после `<input>` |
-| Текст | `sf-checkbox-top`, `sf-checkbox-label`, `sf-checkbox-description` |
-| Размер | `sf-checkbox--size-1/2`, `sf-checkbox--size-1`, `sf-checkbox--size-2` |
-| Ошибка | `error` на оболочке |
+### Размер
 
-Loader обнаруживает компонент по классу `sf-checkbox`.
-
-Нативный `<input type="checkbox">` и элемент `sf-icon` обязательно лежат внутри
-`sf-checkbox-box`. CSS скрывает только input — прямой потомок `sf-checkbox-box`;
-input в другом месте остаётся видимым браузерным флажком. Отметку рисует `sf-icon`:
-без него индикатор не показывает ни отметку, ни смешанное состояние.
-
-```html
-<label class="sf-checkbox sf-checkbox--size-1 flex">
-  <span class="sf-checkbox-box flex">
-    <input name="updates" type="checkbox">
-    <span class="sf-icon" aria-hidden="true"></span>
-  </span>
-  <span class="sf-checkbox-container"><span class="sf-checkbox-label">Получать обновления</span></span>
-</label>
-```
-
-## Группа значений
-
-Каждый checkbox в группе отправляет собственное значение. Оборачивайте группу
-в `<fieldset>`, называйте вопрос через `<legend>` и сообщайте, что можно выбрать
-несколько вариантов.
-
-:::example {id="components/checkbox/group" label="Группа флажков"}
-:::
-
-## Состояния
-
-Используйте нативные `checked` и `disabled`. Смешанное состояние задаётся
-JavaScript-свойством `indeterminate`: HTML-атрибута с таким поведением нет.
-Оно означает, что выбрана часть дочерних вариантов, но не создаёт третьего
-отправляемого значения.
-
-Если компонент создаётся до запуска Loader, добавьте служебный атрибут
-`data-indeterminate`. Loader перенесёт его значение в нативное свойство
-`indeterminate`; дальше изменяйте состояние через JavaScript API.
-
-Для ошибки добавьте `error`, `aria-invalid="true"` и понятное текстовое
-сообщение. Одного цвета недостаточно.
-
-:::example {id="components/checkbox/states" label="Состояния флажка"}
-:::
-
-### JavaScript API
-
-```js
-const input = document.querySelector('input[name="mixed"]');
-SF.Checkbox.setState(input, {
-  checked: false,
-  indeterminate: true,
-  disabled: false,
-});
-```
-
-`SF.Checkbox.setState` принимает только нативный checkbox и поля `checked`,
-`indeterminate`, `disabled`. После изменения значения приложение само создаёт
-нужное событие и обновляет свою модель данных.
-
-## Размеры
-
-Три ступени — `1/2`, `1` и `2`, как у полей форм, радиокнопки и
-переключателя. Ступень здесь нужна не как своя шкала, а чтобы совпадать с
-полями и кнопками в той же форме. В списке флажок берёт размер списка.
+Три ступени — `sf-checkbox--size-1/2`, `sf-checkbox--size-1` и
+`sf-checkbox--size-2`, как у полей форм, радиокнопки и переключателя. Ступень
+нужна, чтобы совпадать с полями и кнопками той же формы; в списке флажок берёт
+размер списка.
 
 :::example {id="components/checkbox/sizes" label="Размеры флажка"}
 :::
 
-## Положение индикатора
+### Положение индикатора
 
-Положение индикатора задаётся порядком двух частей внутри `<label>`. В начале
-строки индикатор подходит обычным формам; в конце — строкам настроек, где такая
-композиция едина для всего интерфейса.
+Положение индикатора задаёт порядок двух частей внутри `<label>`. В начале
+строки индикатор подходит обычным формам; в конце — строкам настроек, где
+такая композиция едина для всего интерфейса.
 
 :::example {id="components/checkbox/position" label="Положение индикатора"}
 :::
 
-## Responsive и LTR/RTL
+## Состояния
 
-Responsive-модификаторов у компонента нет. Базовый пример использует логическое
-начало строки и зеркалится вместе с направлением flex-контейнера. Вариант с
-индикатором в конце сохраняйте структурно согласованным и отдельно проверяйте
-в LTR и RTL.
+| Состояние | Разметка |
+|:---|:---|
+| Отмечен | нативный `checked` |
+| Недоступен | нативный `disabled` |
+| Смешанный | свойство `input.indeterminate = true` или атрибут `data-indeterminate` |
+| Ошибка | класс `error` на оболочке, `aria-invalid="true"` на input и текст ошибки |
 
-## Доступность и проверка
+Смешанное состояние означает, что выбрана часть дочерних вариантов. HTML-атрибута
+с таким поведением нет, и третьего отправляемого значения оно не создаёт.
+`data-indeterminate` скрипт компонента переносит в свойство `indeterminate`
+один раз при подключении; дальше меняйте состояние через JavaScript.
 
-- Видимая подпись должна находиться внутри связанного `<label>`.
+:::example {id="components/checkbox/states" label="Состояния флажка"}
+:::
+
+## Доступность
+
+- Видимая подпись лежит внутри того же `<label>`, что и input.
+- Группу флажков оборачивайте в `<fieldset>` с `<legend>`: легенда называет
+  общий вопрос и сообщает, что можно выбрать несколько вариантов. Каждый флажок
+  группы отправляет собственное значение.
+- Ошибку сообщайте текстом: одного цвета недостаточно.
 - Не отмечайте варианты заранее без предметной причины.
-- Проверяйте Space, видимый фокус, checked/indeterminate/error/disabled,
-  область нажатия, мобильную ширину, обе темы и LTR/RTL.
+- Флажок переключается пробелом; видимый фокус рисует компонент.
+- Индикатор в начале строки стоит на логическом начале и зеркалится при
+  письме справа налево.
+
+:::example {id="components/checkbox/group" label="Группа флажков"}
+:::
+
+## JavaScript
+
+`SF.Checkbox.setState(input, state)` меняет состояние нативного флажка и
+перерисовывает индикатор:
+
+```js
+const input = document.querySelector('input[name="mixed"]');
+SF.Checkbox.setState(input, {checked: false, indeterminate: true, disabled: false});
+```
+
+Функция принимает только `<input type="checkbox">` и поля `checked`,
+`indeterminate`, `disabled`; для другого элемента она возвращает `false`.
+Событие `change` она не создаёт: после изменения значения приложение само
+отправляет нужное событие и обновляет свою модель данных.
+
+Компонент регистрирует класс `Checkbox`, который собирает флажок из
+параметров. `SF.Loader` появляется к событию `sf-loader-init` на `window`;
+`SF.Loader.ready('Checkbox', callback)` передаёт класс, когда он
+зарегистрирован.
+
+```js
+const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
+
+whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
+  const checkbox = new Checkbox({
+    param: {name: 'updates', value: 'yes', title: 'Получать обновления', size: '1'},
+  });
+  document.querySelector('#settings').append(checkbox.render());
+}));
+```
+
+Параметры: `title`, `description`, `size` (`1/2`, `1`, `2`), `name`, `value`,
+`checked`, `disabled`, `indeterminate`. `attrs` переносятся на input, класс из
+`attrs.class` — на оболочку.
+
+## Классы
+
+Раздел собран из CSS выпуска и обновляется вместе с выпуском.
+
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-checkbox` |
+| Части | `sf-checkbox-box`, `sf-checkbox-container`, `sf-checkbox-description`, `sf-checkbox-label`, `sf-checkbox-top` |
+| Размеры | `sf-checkbox--size-1`, `sf-checkbox--size-1/2`, `sf-checkbox--size-2` |
+
+## См. также
+
+- [Радиокнопки](/ru/components/forms/radio/)
+- [Переключатель](/ru/components/forms/switch/)
+- [Checkbox — Smart-компонент](/ru/smart-components/forms/checkbox/)

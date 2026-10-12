@@ -1,15 +1,14 @@
 ---
 title: "Метод отображения элемента"
-description: "Задаёт тип области элемента и его участие в потоке документа."
-tags: [display, sm, md, lg, xl, xxl]
+description: "Задаёт, как элемент участвует в потоке: блоком, в строке, флекс- или грид-контейнером, частью таблицы или не показывается вовсе."
 ---
 
 # Метод отображения элемента
 
-:badge[display]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
-
-Модификатор `display` управляет методом отображения элемента и может применяться как самостоятельно, так и в сочетании с
-адаптивными префиксами, определяющими область применения на определённых размерах экранов.
+Классы отображения задают свойство `display`: блок, строку, флекс- или
+грид-контейнер, часть таблицы или полное скрытие. Берите их, когда элементу
+нужен другой способ раскладки, чем у его тега, или когда элемент показывают
+и скрывают в зависимости от ширины экрана.
 
 ## Пример
 
@@ -18,156 +17,127 @@ tags: [display, sm, md, lg, xl, xxl]
 :::example {id="utilities/layout/display" label="Режимы отображения"}
 :::
 
-## Синтаксис
+## Классы
 
-Использование: `{условие действия}:{модификатор}`
+Раздел собран из CSS выпуска и обновляется вместе с выпуском.
 
-- Условие действия (необязательный параметр):
-  Может принимать значения:
+| Класс | CSS | Значения |
+|:---|:---|:---|
+| `block` | `display: block` | — |
+| `inline-{значение}` | `display: inline-{значение}` | `block`, `flex`, `table`, `grid` |
+| `inline` | `display: inline` | — |
+| `flex` | `display: flex` | — |
+| `table` | `display: table` | — |
+| `display-table` | `display: table` | — |
+| `table-{значение}` | `display: table-{значение}` | `caption`, `cell`, `column`, `row` |
+| `table-{значение}-group` | `display: table-{значение}-group` | `column`, `footer`, `header`, `row` |
+| `flow-root` | `display: flow-root` | — |
+| `grid` | `display: grid` | — |
+| `content` | `display: contents` | — |
+| `list-item` | `display: list-item` | — |
+| `hidden` | `display: none` | — |
 
-    - `sm` — для экранов шириной от 520px и больше;
-    - `md` — для экранов шириной от 720px и больше;
-    - `lg` — для экранов шириной от 960px и больше;
-    - `xl` — для экранов шириной от 1140px и больше;
-    - `xxl` — для экранов шириной от 1320px и больше.
+## Адаптивность и состояния
 
-  Если условие действия не указано, модификатор применяется ко всем размерам.
+Раздел собран из CSS выпуска и обновляется вместе с выпуском.
 
-- Модификатор (обязательный параметр): определяет способ отображения элемента.
+Префикс применяет класс только при условии; без префикса класс действует всегда. Префиксы ширины срабатывают от указанной ширины и шире.
 
-## Классы и значения
+| Префикс | Когда действует | Пример |
+|:---|:---|:---|
+| `sm:` | при ширине окна от 520px | `sm:block` |
+| `md:` | при ширине окна от 720px | `md:block` |
+| `lg:` | при ширине окна от 960px | `lg:block` |
+| `xl:` | при ширине окна от 1140px | `xl:block` |
+| `xxl:` | при ширине окна от 1320px | `xxl:block` |
 
-| Класс               | Значение                     |
-|:--------------------|:-----------------------------|
-| `block` | `display: block;` |
-| `inline-block` | `display: inline-block;` |
-| `inline` | `display: inline;` |
-| `flex` | `display: flex;` |
-| `inline-flex` | `display: inline-flex;` |
-| `table` | `display: table;` |
-| `inline-table` | `display: inline-table;` |
-| `table-caption` | `display: table-caption;` |
-| `table-cell` | `display: table-cell;` |
-| `table-column` | `display: table-column;` |
-| `table-column-group` | `display: table-column-group;` |
-| `table-footer-group` | `display: table-footer-group;` |
-| `table-header-group` | `display: table-header-group;` |
-| `table-row-group` | `display: table-row-group;` |
-| `table-row` | `display: table-row;` |
-| `flow-root` | `display: flow-root;` |
-| `grid` | `display: grid;` |
-| `inline-grid` | `display: inline-grid;` |
-| `content` | `display: contents;` |
-| `list-item` | `display: list-item;` |
-| `hidden` | `display: none;` |
+## Применение
 
-## Примеры использования
+### Блок и строка
 
-### **block**
-Отображение элемента как блочного контейнера.
+`block` занимает всю ширину строки и начинается с новой строки. `inline`
+встаёт в текст и не принимает ширину и высоту. `inline-block` стоит в строке,
+но принимает размеры и отступы, как блок.
 
 ```html
-<div class="block ...">Содержимое</div>
+<span class="inline-block p-1">В строке, но с отступами</span>
 ```
 
-### **inline-block**
-Отображение элемента как строчного блока.
+### Флекс и грид
+
+`flex` и `grid` делают элемент контейнером раскладки для его прямых потомков;
+`inline-flex` и `inline-grid` — то же, но сам контейнер стоит в строке.
+Направление, выравнивание и колонки задают классы соответствующих разделов.
 
 ```html
-<div class="inline-block ...">Содержимое</div>
-```
+<div class="flex gap-1">
+  <span class="flex-1">Элемент 1</span>
+  <span class="flex-1">Элемент 2</span>
+</div>
 
-### **inline**
-Отображение элемента как строчного элемента.
-
-```html
-<div class="inline ...">Содержимое</div>
-```
-
-### **flex**
-Отображение элемента как флекс-контейнер.
-
-```html
-<div class="flex ...">
-    <span class="flex-1 ...">Элемент 1</span>
-    <span class="flex-1 ...">Элемент 2</span>
-    <span class="flex-1 ...">Элемент 3</span>
+<div class="grid grid-col-3 gap-1">
+  <!-- элементы сетки -->
 </div>
 ```
 
-### **inline-flex**
-Отображение элемента как строчного флекс-контейнера.
+### Табличная раскладка
+
+`table`, `table-row-group`, `table-row`, `table-cell` и другие табличные
+классы раскладывают обычные элементы как таблицу. `display-table` — второе
+имя `table` с тем же значением. Для табличных данных используйте
+`<table>`: табличные классы меняют только вид, а не смысл разметки.
 
 ```html
-<div class="inline-flex ...">
-    <span class="flex-1 ...">Элемент 1</span>
-    <span class="flex-1 ...">Элемент 2</span>
-    <span class="flex-1 ...">Элемент 3</span>
-</div>
-```
-
-### **table, inline-table, table-cell и др.**
-Отображение элементов как частей таблицы.
-
-```html
-<div class="table w-full ...">
-    <div class="table-row-group">
-        <div class="table-row">
-            <div class="table-cell ...">Ячейка 1</div>
-            <div class="table-cell ...">Ячейка 2</div>
-        </div>
+<div class="table w-full">
+  <div class="table-row-group">
+    <div class="table-row">
+      <div class="table-cell">Ячейка 1</div>
+      <div class="table-cell">Ячейка 2</div>
     </div>
+  </div>
 </div>
 ```
 
-### **grid**
-Отображение элемента как контейнер сетки.
+### Обёртка без своей области
+
+`content` задаёт `display: contents`: обёртка перестаёт быть отдельной
+областью, и её потомки раскладываются как прямые потомки родителя.
 
 ```html
-<div class="grid gap-1 grid-col-3 ...">
-    <!-- Элементы сетки -->
+<div class="flex gap-1">
+  <div class="flex-1">1</div>
+  <div class="content">
+    <div class="flex-1">2</div>
+    <div class="flex-1">3</div>
+  </div>
+  <div class="flex-1">4</div>
 </div>
 ```
 
-### **inline-grid**
-Отображение элемента как строчной сетки.
+### Скрытие и показ по ширине экрана
+
+`hidden` задаёт `display: none`: элемент не занимает места и не участвует в
+раскладке. С префиксом ширины класс действует от указанной ширины и шире,
+поэтому показ и скрытие на разных экранах собираются из двух классов:
 
 ```html
-<div class="inline-grid gap-1 grid-col-3 ...">
-    <!-- Элементы сетки -->
-</div>
+<nav class="hidden md:block">Видна от 720px</nav>
+<button class="md:hidden">Видна до 720px</button>
 ```
 
-### **content (contents)**
-Отображение элемента как «фантомного» контейнера, в результате чего дочерние элементы становятся как бы прямыми
-дочерними родителя.
+## Ограничения
 
-```html
-<div class="flex gap-1 ...">
-    <div class="flex-1 ...">1</div>
-    <div class="content">
-        <div class="flex-1 ...">2</div>
-        <div class="flex-1 ...">3</div>
-    </div>
-    <div class="flex-1 ...">4</div>
-</div>
-```
+- У элемента с `content` нет своей области: его фон, рамка и внутренние
+  отступы не рисуются. Не ставьте этот класс на элементы со смыслом —
+  кнопки, списки, заголовки таблиц: вспомогательные технологии могут потерять
+  их роль.
+- `hidden` скрывает элемент и от программ экранного доступа. Текст, который
+  нужно скрыть только визуально, скрывайте классом
+  [`sr-only`](/ru/utilities/interactivity/sr-only/).
 
-### **hidden**
-Скрытие элемента (display: none), элемент не участвует в потоке документа.
+## См. также
 
-```html
-<div class="flex space-x-4 ...">
-    <div class="hidden">Элемент скрыт</div>
-    <div>Элемент видим</div>
-</div>
-```
-
-## Адаптивность
-
-Адаптивность доступна с помощью префиксов `sm:`, `md:`, `lg:`, `xl:`, `xxl:`. Например, чтобы скрыть элемент только на
-экранах от Medium (720px) и больше, используйте:
-
-```html
-<div class="md:hidden">Скрывается на экранах от md и больше</div>
-```
+- [Гибкость элементов](/ru/utilities/flex/flexibility/)
+- [Шаблон колонок сетки](/ru/utilities/grid/grid-template-columns/)
+- [Видимость элемента](/ru/utilities/layout/visibility/)
+- [Визуально скрытый контент](/ru/utilities/interactivity/sr-only/)
