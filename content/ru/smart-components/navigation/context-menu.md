@@ -45,7 +45,9 @@ description: "Показывает короткий список действи�
 - `submenu` — массив записей, который открывается сбоку от пункта;
 - `danger` отмечает опасное действие, `disabled` — недоступное, `current`
   — место, где человек находится;
-- `href` делает пункт ссылкой, `lang` — язык, на котором написана подпись.
+- `href` делает пункт ссылкой, `lang` — язык, на котором написана подпись;
+- `avatar` — адрес картинки в начале строки вместо иконки, например логотип
+  сайта или фото человека; без картинки там рисуются инициалы `initials`.
 
 Другие записи задаются полем `type`: `{type: 'separator'}` — разделитель,
 `{type: 'heading', text}` — заголовок группы пунктов. Если иконка есть хотя
@@ -56,10 +58,12 @@ description: "Показывает короткий список действи�
 
 `openFor(кнопка, options)` открывает меню в верхнем слое страницы: его не
 обрезает прокручиваемый блок и не перекрывает таблица. Меню встаёт под
-кнопкой по её началу, без хвоста, а у края окна переворачивается вверх или
+кнопкой по её началу, а у края окна переворачивается вверх или
 сдвигается; если окно ниже меню, его строки прокручиваются. Подменю
 открывается сбоку, и его первый пункт стоит на одной линии с пунктом,
-который его открыл.
+который его открыл. Ширина меню подстраивается под самый длинный пункт, от
+нижней границы `--sf-e8` до верхней `--sf-g2`; меню, которому нужно шире,
+задаёт переменную `--sf-context-menu--min-inline-size`.
 
 `options` уточняет открытие: `side` — сторона кнопки (`block-end` по
 умолчанию, `block-start`, `inline-start`, `inline-end`), `align` —
@@ -71,8 +75,11 @@ description: "Показывает короткий список действи�
 
 Меню, открытое через `openFor`, управляет собой само: `Escape` закрывает
 текущий уровень, а `Tab`, нажатие вне меню и выбор пункта закрывают всё
-меню и возвращают фокус туда, где он был до открытия. Открытие и закрытие
+меню и возвращают фокус туда, где он был до открытия, а если фокуса нигде
+не было — на кнопку, у которой меню открывалось. Открытие и закрытие
 сообщают события `sf-context-menu-open` и `sf-context-menu-close`.
+`openFor` и `toggleFor` возвращают `Promise<boolean>`: дождитесь его, если
+следующий шаг зависит от того, открылось ли меню.
 
 ### Выбор пункта
 
@@ -106,6 +113,23 @@ description: "Показывает короткий список действи�
 :::example {id="smart-components/context-menu/profile" label="Меню профиля с выбором темы и поиском языка"}
 :::
 
+### Поиск на стороне хоста
+
+Если пунктов слишком много, чтобы передать их все, на поиск отвечает хост.
+Свойство `search` самого меню ставит поле над строками, а
+`search: {remote: true}` отключает поиск по пунктам: на каждый запрос меню
+поднимает событие `sf-context-menu-search` с `detail.query`, а хост
+записывает найденные пункты в `entries`. Для подменю то же задаёт
+`search: {remote: true}` в записи пункта. Закрытие меню запроса не
+поднимает.
+
+```js
+menu.search = {placeholder: 'Найти сайт', empty: 'Ничего не найдено', remote: true};
+menu.addEventListener('sf-context-menu-search', async (event) => {
+  menu.entries = await findSites(event.detail.query);
+});
+```
+
 ### Пункты в разметке
 
 Меню без `entries` показывает пункты, переданные со `slot="content"`:
@@ -118,15 +142,6 @@ description: "Показывает короткий список действи�
 `text`, `type` (вид кнопки), `scheme`, `size`, `iconLeft`, `iconRight`,
 `ariaLabel`, `disabled` и обработчик `'@click'`. `text` без пунктов
 показывает в меню простой текст.
-
-### Хвост
-
-`position` ставит хвост на сторону панели, обращённую к объекту, например
-`top-inline-start` — хвост сверху у начала строки, для меню под объектом.
-Логические стороны `inline-start` и `inline-end` отражаются при письме
-справа налево. Без `position` меню рисуется без хвоста; `tooltip="false"`
-убирает хвост при заданной стороне. Свою разметку хвоста передаёт слот
-`tooltip`. Меню, открытому через `openFor`, хвост не нужен.
 
 ### Меню, которым управляет страница
 
@@ -178,13 +193,12 @@ layer.addEventListener('keydown', (event) => {
 - Кнопка, у которой открыто меню, получает `aria-haspopup="menu"` и
   `aria-expanded`. Меню, которым управляет страница, сообщает состояние
   через `aria-expanded` на кнопке силами страницы.
-- Хвост декоративен и скрыт от вспомогательных технологий.
 - Атрибут `role` со значением, отличным от `menu`, отключает клавиатурную
   модель меню: задавайте его, только если пункты — не команды.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-339e04ba0cf4` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-97eac0db8651` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -192,16 +206,16 @@ layer.addEventListener('keydown', (event) => {
 |:---|:---|
 | Тег | `<sf-context-menu>` |
 | Назначение | Меню действий Framework: пункты данными со значком, подписью, значением, сочетанием клавиш, отметкой, подменю, разделителем и заголовком; openFor() открывает его в верхнем слое с привязкой, клавиатурой, переходом по первой букве и возвратом фокуса. Хост может по-прежнему рисовать свои пункты и сам управлять жизненным циклом. |
-| Контракт | `smart.context-menu`, версия `1.2.0` |
-| Поставка | выпуск Framework `ui-339e04ba0cf4` |
+| Контракт | `smart.context-menu`, версия `1.3.0` |
+| Поставка | выпуск Framework `ui-97eac0db8651` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`.
-- `position` — `string`, по умолчанию пусто, значения: пусто, `inline-start`, `inline-start-top`, `inline-start-bottom`, `inline-end`, `inline-end-top`, `inline-end-bottom`, `top`, `top-inline-start`, `top-inline-end`, `bottom`, `bottom-inline-start`, `bottom-inline-end`, `start`, `end`, `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-start`, `left-end`, `right-start`, `right-end`, `inline-start-start`, `inline-start-end`, `inline-end-start`, `inline-end-end`.
-- `tooltip` — `boolean`, по умолчанию `true`.
+- `position` — `string`, по умолчанию пусто, значения: пусто, `inline-start`, `inline-start-top`, `inline-start-bottom`, `inline-end`, `inline-end-top`, `inline-end-bottom`, `top`, `top-inline-start`, `top-inline-end`, `bottom`, `bottom-inline-start`, `bottom-inline-end`, `start`, `end`, `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-start`, `left-end`, `right-start`, `right-end`, `inline-start-start`, `inline-start-end`, `inline-end-start`, `inline-end-end`. Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует.
+- `tooltip` — `boolean`, по умолчанию `true`. Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует.
 - `text` — `string`, по умолчанию пусто.
 - `aria-label` — `string`, по умолчанию пусто.
 - `items` — `array` из `object`, по умолчанию `[]`.
@@ -210,7 +224,7 @@ layer.addEventListener('keydown', (event) => {
 - `root-class` — `string`, по умолчанию пусто.
 - `entries` — `array` из `object`, по умолчанию `[]`. Меню данными (свойством или JSON в атрибуте). См. item_contract. Если задано, заменяет items и слот содержимого.
 - `popup` — `boolean`, по умолчанию `false`. Не рисуется, пока его не откроет openFor(). Меню без этого атрибута рисуется на месте.
-- `search` — `object`, по умолчанию `null`. {placeholder, empty}: поле поиска над строками (задаётся свойством). Пункт с подменю передаёт его через `search`.
+- `search` — `object`, по умолчанию `null`. {placeholder, empty, remote}: поле поиска над строками (задаётся свойством). По умолчанию поиск локальный; с remote: true меню поднимает sf-context-menu-search {query} и показывает пункты, которые задаёт хост. Пункт подменю передаёт его через `search`.
 
 Прежние имена:
 
@@ -234,8 +248,8 @@ layer.addEventListener('keydown', (event) => {
 ### Методы
 
 - `focus(options?: object)` — возвращает `null`. Переводит фокус на текущий доступный пункт. Хост, который рисует меню сам, ждёт отрисовки и сам отвечает за открытие и закрытие.
-- `openFor(anchor: Element, options?: object)` — возвращает `boolean`. Открывает меню рядом с элементом: в верхнем слое, привязанным через SF.Position с переворотом и сдвигом, фокус на первом пункте (или 'last', или 'none'). Дальше меню само управляет своим жизненным циклом: Escape, Tab, нажатие снаружи и выбор пункта закрывают его и возвращают фокус.
-- `toggleFor(anchor: Element, options?: object)` — возвращает `boolean`. Закрывает меню, если оно уже открыто у этого элемента, иначе вызывает openFor().
+- `openFor(anchor: Element, options?: object)` — возвращает `Promise<boolean>`. Открыть рядом с элементом: в верхнем слое, с привязкой через SF.Position с переворотом и сдвигом, фокус на первом пункте (или 'last', или 'none'). Дальше меню управляет собой само: Escape, Tab, нажатие снаружи и выбор пункта закрывают его и возвращают фокус — туда, где он был, или на элемент управления якоря, если фокуса нигде не было.
+- `toggleFor(anchor: Element, options?: object)` — возвращает `Promise<boolean>`. Закрывает меню, если оно уже открыто у этого элемента, иначе вызывает openFor().
 - `close(options?: object)` — возвращает `boolean`. Закрывает это меню и все подменю.
 
 ### События
@@ -245,6 +259,7 @@ layer.addEventListener('keydown', (event) => {
 - `sf-context-menu-select` — `detail`: `{ id?: string|null, entry?: object, checked?: boolean|null, group?: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
 - `sf-context-menu-open` — `detail` не описан. Открыто через openFor().
 - `sf-context-menu-close` — `detail` не описан. Закрыто.
+- `sf-context-menu-search` — `detail`: `{ query?: string }`. Запрос поиска, на который отвечает хост (search.remote).
 
 ### Доступность
 
@@ -261,8 +276,8 @@ layer.addEventListener('keydown', (event) => {
 
 ### Источник
 
-- `simai/ui@339e04ba0cf44f6eeec97db26f782979fc5460f4:distr/smart/context-menu`
-- `simai/ui@339e04ba0cf44f6eeec97db26f782979fc5460f4:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@97eac0db8651a1b79ce9b790a5b7425d93cb7c57:distr/smart/context-menu`
+- `simai/ui@97eac0db8651a1b79ce9b790a5b7425d93cb7c57:distr/rule/rule.json#name=cl-context-menu`
 
 ## См. также
 

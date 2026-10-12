@@ -80,7 +80,7 @@ file.onDownload((event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-339e04ba0cf4` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-97eac0db8651` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -89,7 +89,7 @@ file.onDownload((event) => {
 | Тег | `<sf-file-preview>` |
 | Назначение | Доступная Smart-проекция обычной строки File Preview. |
 | Контракт | `smart.file-preview`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-339e04ba0cf4` |
+| Поставка | выпуск Framework `ui-97eac0db8651` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -156,8 +156,8 @@ file.onDownload((event) => {
 
 ### Источник
 
-- `simai/ui@339e04ba0cf44f6eeec97db26f782979fc5460f4:distr/smart/file-preview`
-- `simai/ui@339e04ba0cf44f6eeec97db26f782979fc5460f4:distr/rule/rule.json#name=cl-file-preview`
+- `simai/ui@97eac0db8651a1b79ce9b790a5b7425d93cb7c57:distr/smart/file-preview`
+- `simai/ui@97eac0db8651a1b79ce9b790a5b7425d93cb7c57:distr/rule/rule.json#name=cl-file-preview`
 
 ## См. также
 
