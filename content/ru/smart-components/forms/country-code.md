@@ -82,7 +82,7 @@ profile: reference
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d34117c9f3f0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-6d2bf151e3c8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -91,7 +91,7 @@ profile: reference
 | Тег | `<sf-country-code>` |
 | Назначение | Smart-компонент Country Code из SIMAI Framework. |
 | Контракт | `smart.country-code`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-d34117c9f3f0` |
+| Поставка | выпуск Framework `ui-6d2bf151e3c8` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -153,5 +153,5 @@ profile: reference
 
 ### Источник
 
-- `simai/ui@d34117c9f3f00c677fb294ae77eef1a05422ee4c:distr/smart/country-code`
-- `simai/ui@d34117c9f3f00c677fb294ae77eef1a05422ee4c:distr/rule/rule.json#name=cl-country-code`
+- `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/country-code`
+- `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-country-code`

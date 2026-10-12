@@ -150,7 +150,7 @@ profile: reference
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-d34117c9f3f0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-6d2bf151e3c8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -222,8 +222,8 @@ profile: reference
 
 #### Источник
 
-- `simai/larena-ui@87d5854992fd912cf1a70f0e5cdf5806ea7869ad:components/src/smart/data-view`
-- `simai/larena-ui@87d5854992fd912cf1a70f0e5cdf5806ea7869ad:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@8c06fd71ec7df67ba2ae9259b416df3b1b100803:components/src/smart/data-view`
+- `simai/larena-ui@8c06fd71ec7df67ba2ae9259b416df3b1b100803:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -333,5 +333,5 @@ profile: reference
 
 #### Источник
 
-- `simai/larena-ui@87d5854992fd912cf1a70f0e5cdf5806ea7869ad:components/src/smart/table`
-- `simai/larena-ui@87d5854992fd912cf1a70f0e5cdf5806ea7869ad:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@8c06fd71ec7df67ba2ae9259b416df3b1b100803:components/src/smart/table`
+- `simai/larena-ui@8c06fd71ec7df67ba2ae9259b416df3b1b100803:components/src/smart/table/rule.js#name=cl-table`
