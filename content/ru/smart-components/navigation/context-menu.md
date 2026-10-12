@@ -254,7 +254,7 @@ layer.addEventListener('keydown', (event) => {
 
 ### События
 
-Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `sf-context-menu-select` — `detail`: `{ id?: string|null, entry?: object, checked?: boolean|null, group?: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
 - `sf-context-menu-open` — `detail` не описан. Открыто через openFor().

@@ -125,7 +125,6 @@ form.prepend(alert);
 | `status` | `type` | работает и предупреждает | 2026-12-01 |
 | `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
 | `status="neutral"` | `status="clear"` | работает и предупреждает | 2026-12-01 |
 
 ### Методы
@@ -136,7 +135,7 @@ form.prepend(alert);
 
 ### События
 
-Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `sf-alert-action` — `detail` не описан.
 - `sf-alert-close` — `detail` не описан.

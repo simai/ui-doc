@@ -293,11 +293,15 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   // as a public attribute.
   if (legacy.length || unlisted.length) {
     lines.push('Прежние имена:', '', '| Имя | Прежнее имя | Состояние | Убирается после |', '|:---|:---|:---|:---|');
+    // The journal can hold one rename twice (in a component's record and in
+    // the record for every component); the table names it once.
+    const rows = new Set();
     for (const {record, item} of legacy) {
       const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
       const to = item.attribute ? `${item.attribute}="${item.to}"` : item.to;
-      lines.push(`| ${code(to)} | ${code(from)} | ${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'} |`);
+      rows.add(`| ${code(to)} | ${code(from)} | ${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'} |`);
     }
+    lines.push(...rows);
     for (const name of unlisted) {
       lines.push(`| ${AXES.filter((axis) => inputs.some(([input]) => input === axis)).map(code).join(', ')} | ${code(name)} | принимается для совместимости | — |`);
     }
@@ -329,7 +333,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   if (events.length === 0) {
     lines.push('Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
   } else {
-    lines.push('Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
+    lines.push('Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
     for (const [name, event] of events) {
       // Both names carry one detail; when only the alias declares its shape,
       // the name to bind shows it too.

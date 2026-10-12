@@ -100,7 +100,7 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### События
 
-Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `sf-step-change` — `detail` не описан.
 

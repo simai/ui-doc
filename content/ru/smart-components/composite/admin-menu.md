@@ -253,7 +253,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### События
 
-Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: string }`. Уведомляет оболочку хоста о режиме ширины.
 - `sf-admin-menu-search` — `detail` не описан.

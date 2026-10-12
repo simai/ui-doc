@@ -183,7 +183,7 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### События
 
-Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `drawer:ready` — `detail` не описан. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 - `drawer:update` — `detail` не описан. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
