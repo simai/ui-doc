@@ -10,14 +10,6 @@ profile: reference
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
 действия без подписи — [кнопку с иконкой](/ru/components/actions/icon-buttons/).
 
-## Сводка
-
-- **Модуль:** `buttons`. Loader подгружает его сам, когда встречает на странице класс `sf-button`.
-- **Поставка:** выпуск Framework, `distr/component/buttons`.
-- **Переменные:** 28, см. «Переменные».
-
-Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
-
 ## Пример
 
 :::example {id="components/buttons/basic" label="Базовая кнопка"}
@@ -239,6 +231,8 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Модификаторы | `sf-button--default`, `sf-button--error`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--outline`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 | Устаревшие | `sf-button--ghost` → `sf-button--link` |
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 

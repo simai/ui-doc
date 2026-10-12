@@ -10,14 +10,6 @@ profile: reference
 предупреждение, ошибку или подтверждение результата. Для краткого сообщения
 поверх интерфейса берите [всплывающее сообщение](/ru/components/feedback/toast/).
 
-## Сводка
-
-- **Модуль:** `alerts`. Loader подгружает его сам, когда встречает на странице класс `sf-alert`.
-- **Поставка:** выпуск Framework, `distr/component/alerts`.
-- **Переменные:** 20, см. «Переменные».
-
-Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
-
 ## Пример
 
 :::example {id="components/alerts/basic" label="Информационное уведомление"}
@@ -121,6 +113,8 @@ document.addEventListener('sf-alert-action', (event) => {
 | Части | `sf-alert-buttons`, `sf-alert-content`, `sf-alert-supporting-text`, `sf-alert-text`, `sf-alert-wrap` |
 | Модификаторы | `sf-alert--default`, `sf-alert--error`, `sf-alert--flat`, `sf-alert--info`, `sf-alert--neutral`, `sf-alert--outlined`, `sf-alert--success`, `sf-alert--warning` |
 | Устаревшие | `sf-alert--clear` → `sf-alert--neutral`, `sf-alert--danger` → `sf-alert--error` |
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 

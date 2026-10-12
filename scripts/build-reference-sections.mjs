@@ -241,21 +241,17 @@ const tokenValue = (name) => {
   return match ? unescape(match[1].trim()) : null;
 };
 
-const utilitySummary = (families) => {
+// The conditions a family supports, as one line under its classes. Prefix
+// names only: the widths behind sm … xxl are the guide's to state, and may
+// still change (owner, 2026-10-12).
+const utilityConditions = (families) => {
   const variants = utilityVariants(families);
-  const widths = variants.filter(({width}) => width);
-  const states = variants.filter(({state}) => state);
-  const tokens = utilityTokens(families);
-  // A list, not a two-column table: on a phone the table broke its labels
-  // mid-word and showed an empty header row.
+  const widths = variants.filter(({width}) => width).map(({prefix}) => code(prefix));
+  const states = variants.filter(({state}) => state).map(({prefix}) => code(prefix));
+  const example = variants[0]?.example;
   return [
-    `- **Модуль:** ${families.map(code).join(', ')}. Loader подгружает его сам, когда встречает класс на странице.`,
-    `- **Ширина экрана:** ${widths.length ? `${widths.map(({prefix, width}) => `${code(prefix)} от ${width}`).join(', ')}.` : 'нет, класс действует на любой ширине.'}`,
-    `- **Состояния:** ${states.length ? `${states.map(({prefix, state}) => `${code(prefix)} ${STATES[state] ?? `в состоянии ${code(state)}`}`).join(', ')}.` : 'нет.'}`,
-    `- **Переменные:** ${tokens.length ? `${tokens.length}, см. «Переменные».` : 'нет, значения заданы прямо в классах.'}`,
     '',
-    ...(variants.length ? [`Префикс пишется перед классом и применяет его только при условии: ${code(variants[0].example)}. Префиксы ширины действуют от указанной ширины и шире.`, ''] : []),
-    SOURCE_NOTE,
+    `Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — ${widths.length ? widths.join(', ') : 'нет'}; состояния — ${states.length ? states.join(', ') : 'нет'}.${example ? ` Например: ${code(example)}.` : ''}`,
   ];
 };
 
@@ -340,18 +336,6 @@ const componentVariables = (component, block) => {
     .map(([name, {value, from}]) => ({name, value, from, properties: used(name)}));
 };
 
-const componentSummary = (component, block) => {
-  const rule = (JSON.parse(show('distr/rule/rule.json') ?? '[]')).find((item) => item.name === component);
-  const variables = componentVariables(component, block);
-  return [
-    `- **Модуль:** ${code(component)}. Loader подгружает его сам${rule ? `, когда встречает на странице класс ${code(block)}` : ''}.`,
-    `- **Поставка:** выпуск Framework, ${code(`distr/component/${component}`)}.`,
-    `- **Переменные:** ${variables.length ? `${variables.length}, см. «Переменные».` : 'нет.'}`,
-    '',
-    SOURCE_NOTE,
-  ];
-};
-
 const componentVariablesSection = (component, block) => {
   const variables = componentVariables(component, block);
   if (variables.length === 0) return null;
@@ -367,10 +351,10 @@ const componentVariablesSection = (component, block) => {
 // ---- writing ----------------------------------------------------------------------
 
 const ORDER = {
-  utility: ['Сводка', 'Пример', 'Классы', 'Переменные', 'Применение', 'Ограничения', 'См. также'],
-  component: ['Сводка', 'Пример', 'Разметка', 'Варианты', 'Состояния', 'Доступность', 'JavaScript', 'Классы', 'Переменные', 'См. также'],
+  utility: ['Пример', 'Классы', 'Переменные', 'Применение', 'Ограничения', 'См. также'],
+  component: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Доступность', 'JavaScript', 'Классы', 'Переменные', 'См. также'],
 };
-const SOURCE_NOTE = 'Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.';
+const SOURCE_NOTE = 'Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.';
 
 const setSection = (text, kind, heading, body) => {
   const [head, ...sections] = text.split(/^(?=## )/mu);
@@ -394,13 +378,12 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   const current = readFileSync(path, 'utf8');
   let next = current;
   if (entry.kind === 'utility') {
-    next = setSection(next, 'utility', 'Адаптивность и состояния', null);
-    next = setSection(next, 'utility', 'Сводка', utilitySummary(entry.families));
-    next = setSection(next, 'utility', 'Классы', utilityClasses(entry.families));
+    next = setSection(next, 'utility', 'Сводка', null);
+    next = setSection(next, 'utility', 'Классы', [...utilityClasses(entry.families), ...utilityConditions(entry.families), '', SOURCE_NOTE]);
     next = setSection(next, 'utility', 'Переменные', utilityVariables(entry.families));
   } else if (entry.kind === 'component') {
-    next = setSection(next, 'component', 'Сводка', componentSummary(entry.component, entry.block));
-    next = setSection(next, 'component', 'Классы', componentClasses(entry.component, entry.block));
+    next = setSection(next, 'component', 'Сводка', null);
+    next = setSection(next, 'component', 'Классы', [...componentClasses(entry.component, entry.block), '', SOURCE_NOTE]);
     next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, entry.block));
   }
   if (next !== current) {

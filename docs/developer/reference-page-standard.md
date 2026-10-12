@@ -39,21 +39,20 @@ here.
 
 | # | Section | Required | Written by |
 |:--|:---|:---|:---|
-| 1 | `## Сводка` | yes | generated: module, screen-width prefixes, state prefixes, variables |
-| 2 | `## Пример` | yes | hand: live `:::example` blocks, see below |
-| 3 | `## Классы` | yes | generated from `distr/utility/<family>/default/css` |
-| 4 | `## Переменные` | when the family reads tokens | generated: the theme tokens it reads and their default values |
-| 5 | `## Применение` | yes | hand: how to choose, common combinations, short snippets |
-| 6 | `## Ограничения` | no | hand: what does not work, direction (LTR/RTL), accessibility |
-| 7 | `## См. также` | no | hand: links |
+| 1 | `## Пример` | yes | hand: live `:::example` blocks, see below |
+| 2 | `## Классы` | yes | generated from `distr/utility/<family>/` |
+| 3 | `## Переменные` | when the family reads tokens | generated: the theme tokens it reads and their default values |
+| 4 | `## Применение` | yes | hand: how to choose, common combinations, short snippets |
+| 5 | `## Ограничения` | no | hand: what does not work, direction (LTR/RTL), accessibility |
+| 6 | `## См. также` | no | hand: links |
 
-`## Сводка` answers «what is it and how does it load»: the Loader module
-(the family), the screen-width prefixes (`sm:` … `xxl:` with widths) or
-«нет», the state prefixes (`hover:`, `focus:` …) or «нет», and how many
-variables the family reads. `## Классы` is a table
+`## Классы` is a table
 `| Класс | CSS | Значения |`, one row per class (the logical rule over its
 LTR/RTL fallbacks); a run of classes that differ in one value is one row
-`name-{значение}` once the family has more than twenty classes. The
+`name-{значение}` once the family has more than twenty classes. One line
+under the table names the conditions the family supports: screen-width
+prefixes (`sm:` … `xxl:`, by name only — the widths are the guide's to
+state) and state prefixes (`hover:`, `focus:` …), or «нет». The
 families a page documents are named in its `config/reference-pages.json`
 entry.
 
@@ -67,16 +66,15 @@ Every example labels each sample with the class it demonstrates.
 
 | # | Section | Required | Written by |
 |:--|:---|:---|:---|
-| 1 | `## Сводка` | yes | generated: module, delivery, variables |
-| 2 | `## Пример` | yes | hand: the component in its most common form |
-| 3 | `## Разметка` | yes | hand: the minimal correct markup and which parts are required |
-| 4 | `## Варианты` | when the component has them | hand: one H3 per modifier axis (вид, схема, статус, размер, иконки …), each a short description and a live example showing every value of that axis |
-| 5 | `## Состояния` | when it has them | hand: one H3 per state (недоступна, загрузка, активна …) with a description and a live example |
-| 6 | `## Доступность` | yes | hand |
-| 7 | `## JavaScript` | when it has a public runtime API | hand now; generated from `public-js-api.json` once the release ships it |
-| 8 | `## Классы` | yes | generated from `distr/component/<name>/css` |
-| 9 | `## Переменные` | when it has its own variables | generated: each `--<block>…` property, its default, what it sets |
-| 10 | `## См. также` | no | hand |
+| 1 | `## Пример` | yes | hand: the component in its most common form |
+| 2 | `## Разметка` | yes | hand: the minimal correct markup and which parts are required |
+| 3 | `## Варианты` | when the component has them | hand: one H3 per modifier axis (вид, схема, статус, размер, иконки …), each a short description and a live example showing every value of that axis |
+| 4 | `## Состояния` | when it has them | hand: one H3 per state (недоступна, загрузка, активна …) with a description and a live example |
+| 5 | `## Доступность` | yes | hand |
+| 6 | `## JavaScript` | when it has a public runtime API | hand now; generated from `public-js-api.json` once the release ships it |
+| 7 | `## Классы` | yes | generated from `distr/component/<name>/css` |
+| 8 | `## Переменные` | when it has its own variables | generated: each `--<block>…` property, its default, what it sets |
+| 9 | `## См. также` | no | hand |
 
 `## Классы` groups the component's public classes: the block, its parts
 (`sf-x-…`) and modifiers (`sf-x--…`), sizes apart, and the modifiers the

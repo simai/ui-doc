@@ -11,14 +11,6 @@ profile: reference
 [радиокнопку](/ru/components/forms/radio/), для мгновенного включения
 настройки — [переключатель](/ru/components/forms/switch/).
 
-## Сводка
-
-- **Модуль:** `checkbox`. Loader подгружает его сам, когда встречает на странице класс `sf-checkbox`.
-- **Поставка:** выпуск Framework, `distr/component/checkbox`.
-- **Переменные:** 25, см. «Переменные».
-
-Сводка, классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
-
 ## Пример
 
 :::example {id="components/checkbox/overview" label="Флажок с подписью и пояснением"}
@@ -179,6 +171,8 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | Блок | `sf-checkbox` |
 | Части | `sf-checkbox-box`, `sf-checkbox-container`, `sf-checkbox-description`, `sf-checkbox-label`, `sf-checkbox-top` |
 | Размеры | `sf-checkbox--size-1`, `sf-checkbox--size-1/2`, `sf-checkbox--size-2` |
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
