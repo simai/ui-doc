@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "4b460cd3bc6713cb422ac2415285b6ce6f408d2e",
-  "core": "257f66def2b88e315931db8b4e887979ea284b3e",
-  "smart": "257f66def2b88e315931db8b4e887979ea284b3e",
+  "source": "5297e514eb4b1b664f31327c670ccebc5efec94d",
+  "core": "d34117c9f3f00c677fb294ae77eef1a05422ee4c",
+  "smart": "d34117c9f3f00c677fb294ae77eef1a05422ee4c",
   "source_files": {
     "src/core/js/smart-base.js": "a2c39bc50f2ffe01f6233eb96782315214465564397af6c28e335547492484c3",
-    "src/core/js/loader.js": "3c7c8cac0be79a3712c8eb88381533786b53e3767a95b984fc601b97c267b7f1"
+    "src/core/js/loader.js": "75e6fdcd1678e237d57e6b691887771b8f2aa79f8ee5fe537d65d93d981fec79"
   },
   "lessons": [
     "creating",

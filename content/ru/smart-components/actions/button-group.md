@@ -15,7 +15,7 @@ description: "Smart-компонент выбора одного вариант�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-257f66def2b8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d34117c9f3f0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -24,7 +24,7 @@ description: "Smart-компонент выбора одного вариант�
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-257f66def2b8` |
+| Поставка | выпуск Framework `ui-d34117c9f3f0` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -75,5 +75,5 @@ description: "Smart-компонент выбора одного вариант�
 
 ### Источник
 
-- `simai/ui@257f66def2b88e315931db8b4e887979ea284b3e:distr/smart/button-group`
-- `simai/ui@257f66def2b88e315931db8b4e887979ea284b3e:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@d34117c9f3f00c677fb294ae77eef1a05422ee4c:distr/smart/button-group`
+- `simai/ui@d34117c9f3f00c677fb294ae77eef1a05422ee4c:distr/rule/rule.json#name=cl-button-group`

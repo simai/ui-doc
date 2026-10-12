@@ -42,7 +42,7 @@ Smart-компоненту.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-257f66def2b8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d34117c9f3f0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -125,5 +125,5 @@ Smart-компоненту.
 
 ### Источник
 
-- `simai/larena-ui@b66760820f984486942252a5571dbae5dff93774:components/src/smart/admin-menu`
-- `simai/larena-ui@b66760820f984486942252a5571dbae5dff93774:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@87d5854992fd912cf1a70f0e5cdf5806ea7869ad:components/src/smart/admin-menu`
+- `simai/larena-ui@87d5854992fd912cf1a70f0e5cdf5806ea7869ad:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`

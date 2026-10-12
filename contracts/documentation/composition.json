@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "4b460cd3bc6713cb422ac2415285b6ce6f408d2e",
-    "core_revision": "257f66def2b88e315931db8b4e887979ea284b3e",
+    "source_revision": "5297e514eb4b1b664f31327c670ccebc5efec94d",
+    "core_revision": "d34117c9f3f00c677fb294ae77eef1a05422ee4c",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "f43595947d332284572428ad279a893ccaa9e565854b779331e3111b70988374"
     },
-    "note": "Reviewed at source 4b460cd3 and core 257f66de (release ui-257f66def2b8): index.mjs adds extendRegistry (built-in types plus a product's own) and exports BUILTIN_TYPE_MANIFESTS; createRegistry is unchanged. reference/custom-type.md now shows registering a type with extendRegistry and says createRegistry takes its list as the whole registry. core.js changes by those fourteen lines alone; the schemas, builtins, fixture and buttons manifest are byte-identical."
+    "note": "Reviewed at source 5297e514 and core d34117c9 (release ui-d34117c9f3f0): the composition sources, schemas, builtins, fixture and buttons manifest are byte-identical to the review at ui-257f66def2b8 (which added extendRegistry); core.js is byte-identical too; the release changes core-loader.js alone. Nothing the composition pages describe changed."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

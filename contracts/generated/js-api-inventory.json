@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-ec56cef08625",
-  "ui_commit": "ec56cef08625058eaffe2050e1d79f8cbdd5c4f1",
+  "release": "ui-d34117c9f3f0",
+  "ui_commit": "d34117c9f3f00c677fb294ae77eef1a05422ee4c",
   "stages": [
     "core",
     "dom",
@@ -61,6 +61,9 @@
         "BUILTIN_PORT_MANIFESTS": {
           "type": "array"
         },
+        "BUILTIN_TYPE_MANIFESTS": {
+          "type": "array"
+        },
         "Recipe": {
           "type": "object"
         },
@@ -94,6 +97,10 @@
         "describeRegions": {
           "type": "function",
           "arity": 1
+        },
+        "extendRegistry": {
+          "type": "function",
+          "arity": 0
         },
         "inlineText": {
           "type": "function",
@@ -1589,6 +1596,9 @@
           "type": "object"
         },
         "element-position/xxl": {
+          "type": "object"
+        },
+        "elevation/default": {
           "type": "object"
         },
         "emoji": {
