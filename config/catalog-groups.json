@@ -94,9 +94,7 @@
         "scrollbar",
         "hide-show",
         "outline",
-        "theme",
-        "theme-builder",
-        "monaco"
+        "theme"
       ]
     },
     "internal": {

@@ -664,7 +664,7 @@
     },
     {
       "from": "ru/components/monaco",
-      "to": "ru/components/tools/monaco"
+      "to": "ru/components/forms/textarea"
     },
     {
       "from": "ru/components/outline",
@@ -836,7 +836,7 @@
     },
     {
       "from": "ru/components/reference/monaco",
-      "to": "ru/components/tools/monaco"
+      "to": "ru/components/forms/textarea"
     },
     {
       "from": "ru/components/reference/outline",
@@ -924,7 +924,7 @@
     },
     {
       "from": "ru/components/reference/theme-builder",
-      "to": "ru/components/tools/theme-builder"
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
     },
     {
       "from": "ru/components/reference/toast",
@@ -1000,7 +1000,7 @@
     },
     {
       "from": "ru/components/theme-builder",
-      "to": "ru/components/tools/theme-builder"
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
     },
     {
       "from": "ru/components/toast",
@@ -1009,6 +1009,14 @@
     {
       "from": "ru/components/toggle",
       "to": "ru/components/forms/toggle"
+    },
+    {
+      "from": "ru/components/tools/monaco",
+      "to": "ru/components/forms/textarea"
+    },
+    {
+      "from": "ru/components/tools/theme-builder",
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
     },
     {
       "from": "ru/components/tooltip",
@@ -1176,7 +1184,7 @@
     },
     {
       "from": "ru/framework-components/monaco",
-      "to": "ru/components/tools/monaco"
+      "to": "ru/components/forms/textarea"
     },
     {
       "from": "ru/framework-components/outline",
@@ -1348,7 +1356,7 @@
     },
     {
       "from": "ru/framework-components/reference/monaco",
-      "to": "ru/components/tools/monaco"
+      "to": "ru/components/forms/textarea"
     },
     {
       "from": "ru/framework-components/reference/outline",
@@ -1436,7 +1444,7 @@
     },
     {
       "from": "ru/framework-components/reference/theme-builder",
-      "to": "ru/components/tools/theme-builder"
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
     },
     {
       "from": "ru/framework-components/reference/toast",
@@ -1512,7 +1520,7 @@
     },
     {
       "from": "ru/framework-components/theme-builder",
-      "to": "ru/components/tools/theme-builder"
+      "to": "ru/guide/fundamentals/colors-and-themes/themes"
     },
     {
       "from": "ru/framework-components/toast",

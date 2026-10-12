@@ -1,6 +1,6 @@
 ---
 title: "Системные и расширенные"
-description: "Системные и расширенные — 6 компонентов SIMAI Framework."
+description: "Системные и расширенные — 4 компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -10,5 +10,3 @@ profile: reference
 - **[Показ и скрытие](/ru/components/tools/hide-show/)** — Управляемое раскрытие и скрытие содержимого.
 - **[Оглавление](/ru/components/tools/outline/)** — Навигация по заголовкам текущей длинной страницы.
 - **[Тема](/ru/components/tools/theme/)** — Переключение и применение цветовой темы интерфейса.
-- **[Конструктор темы](/ru/components/tools/theme-builder/)** — Настройка и предварительный просмотр темы.
-- **[Редактор Monaco](/ru/components/tools/monaco/)** — Полноценный редактор кода внутри интерфейса.

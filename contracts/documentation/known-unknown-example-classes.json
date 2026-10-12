@@ -3,8 +3,6 @@
   "schema_version": 1,
   "why": "Classes examples write that no release stylesheet and no example CSS declares; each is to be renamed to the real class or removed. The count is the number of example files.",
   "classes": {
-    "sf-monaco": 1,
-    "sf-theme-builder": 2,
     "swiper-pagination": 2
   }
 }
