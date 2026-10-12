@@ -428,11 +428,12 @@ const componentVariables = (component, block) => {
     .map(([name, {value, from}]) => ({name, value, from, properties: used(name)}));
 };
 
-const componentVariablesSection = (component, block) => {
-  const variables = componentVariables(component, block);
+const componentVariablesSection = (component, blocks) => {
+  const variables = blocks.flatMap((item) => componentVariables(component, item));
+  const block = blocks[0];
   if (variables.length === 0) return null;
   return [
-    `Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила ${code(`.${block}`)}; переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.`,
+    `Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила блока (${blocks.map((item) => code(`.${item}`)).join(', ')}); переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.`,
     '',
     '| Переменная | По умолчанию | Задаёт |',
     '|:---|:---|:---|',
@@ -475,8 +476,14 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     next = setSection(next, 'utility', 'Переменные', utilityVariables(entry.families));
   } else if (entry.kind === 'component') {
     next = setSection(next, 'component', 'Сводка', null);
-    next = setSection(next, 'component', 'Классы', [...componentClasses(entry.component, entry.block), '', SOURCE_NOTE]);
-    next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, entry.block));
+    // A component may own several blocks (pagination: the bar and its page
+    // numbers); each gets its own class table, and the variables are joined.
+    const blocks = entry.blocks ?? [entry.block];
+    const classes = blocks.length === 1
+      ? componentClasses(entry.component, blocks[0])
+      : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block)]);
+    next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE]);
+    next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, blocks));
   }
   if (next !== current) {
     changed.push(page);
