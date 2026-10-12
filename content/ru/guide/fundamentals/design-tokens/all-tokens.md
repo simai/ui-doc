@@ -249,7 +249,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--font-weight-7` | `700` |
 | `--sf-text--font-weight-8` | `800` |
 | `--sf-text--font-weight-9` | `900` |
-| `--sf-text--height` | `var(--sf-text--height-1)` |
+| `--sf-text--height` | `var(--sf-text--height-1)` · `var(--sf-text--height-1/2)` |
 | `--sf-text--height-1` | `var(--sf-c0)` · `var(--sf-c2)` |
 | `--sf-text--height-10` | `var(--sf-d5)` · `var(--sf-e2)` |
 | `--sf-text--height-11` | `var(--sf-d6)` · `var(--sf-e3)` |
@@ -275,7 +275,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--measure` | `65ch` |
 | `--sf-text--measure-narrow` | `45ch` |
 | `--sf-text--measure-wide` | `80ch` |
-| `--sf-text--size` | `var(--sf-text--size-1)` |
+| `--sf-text--size` | `var(--sf-text--size-1)` · `var(--sf-text--size-1/2)` |
 | `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
 | `--sf-text--size-10` | `var(--sf-d0)` · `var(--sf-d6)` |
 | `--sf-text--size-11` | `var(--sf-d1)` · `var(--sf-d8)` |

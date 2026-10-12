@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-6d2bf151e3c8",
-  "ui_commit": "6d2bf151e3c8ba14d210e97227a8d0dd1b493170",
+  "release": "ui-339e04ba0cf4",
+  "ui_commit": "339e04ba0cf44f6eeec97db26f782979fc5460f4",
   "stages": [
     "core",
     "dom",
@@ -440,7 +440,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "null"
+          "type": "object"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -3434,6 +3434,10 @@
           "arity": 1
         }
       }
+    },
+    "smartBaseAnnounced": {
+      "available": "components",
+      "type": "boolean"
     },
     "smartBaseReady": {
       "available": "idle",

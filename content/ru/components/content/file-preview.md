@@ -82,8 +82,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-file-preview` |
-| Части | `sf-file-preview-actions`, `sf-file-preview-holder`, `sf-file-preview-main`, `sf-file-preview-name`, `sf-file-preview-size`, `sf-file-preview-thumbnail` |
-| Модификаторы | `sf-file-preview--surface` |
+| Части | `sf-file-preview-actions`, `sf-file-preview-extension`, `sf-file-preview-holder`, `sf-file-preview-main`, `sf-file-preview-name`, `sf-file-preview-size`, `sf-file-preview-thumbnail` |
+| Модификаторы | `sf-file-preview--compact`, `sf-file-preview--surface` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
