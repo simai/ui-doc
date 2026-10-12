@@ -65,10 +65,10 @@ const documentationStatus = readJson(documentationStatusPath);
 const registryComponents = registry.entries.filter((entry) => entry.kind === 'component');
 const registryByName = new Map(registryComponents.map((entry) => [entry.name, entry]));
 const rulesByName = new Map(rules.map((rule) => [rule.name, rule]));
-const referencePath = path.join(projectRoot, 'docs/developer/component-page-reference.md');
+const referencePath = path.join(projectRoot, 'docs/developer/reference-page-standard.md');
 const readmePath = path.join(projectRoot, 'README.md');
 if (!exists(referencePath)) addBlocker('component_page_reference_missing');
-if (!exists(readmePath) || !read(readmePath).includes('(docs/developer/component-page-reference.md)')) {
+if (!exists(readmePath) || !read(readmePath).includes('(docs/developer/reference-page-standard.md)')) {
   addBlocker('component_page_reference_entrypoint_missing');
 }
 

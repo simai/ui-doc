@@ -7,8 +7,7 @@ assets live in `assets/`.
 
 Developer references:
 
-- [Эталон страницы утилиты](docs/developer/utility-page-reference.md);
-- [Эталон страницы компонента](docs/developer/component-page-reference.md).
+- [Reference page standard](docs/developer/reference-page-standard.md): utility, component and Smart component pages.
 
 ## Local checks
 
