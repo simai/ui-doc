@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "538becc2d6c70891f20604f3a9e2ee3f056ebaba",
-    "core_revision": "97eac0db8651a1b79ce9b790a5b7425d93cb7c57",
+    "source_revision": "5b045deccb4855c784e1b867d3220276c99a8c4f",
+    "core_revision": "e26fc47c16d6d3e20746b3d519d08ec84d5b5168",
     "source_files": {
       "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
       "src/component/menu/scss/_css__menu.scss": "d28696ca6820883010b36f6ec4872c143caff0bf33fa92cf4d66f63ea8e51bb6",
@@ -14,7 +14,7 @@
       "distr/component/menu/css/menu.css": "17439fe5369c0712d1a0fe1e6b5dfc9233974fc07328668b0b8150dee880f82c",
       "distr/component/menu/js/menu.js": "bf8ce8f8df61c64c2b4b8d058803417fc134d303de40254bbbe97bdfeac8bb1d"
     },
-    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical between source 8994ebf9 / core 6d2bf151 (release ui-6d2bf151e3c8) and source 538becc2 / core 97eac0db (release ui-97eac0db8651)."
+    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical between source 8994ebf9 / core 6d2bf151 (release ui-6d2bf151e3c8) and source 5b045dec / core e26fc47c (release ui-e26fc47c16d6)."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

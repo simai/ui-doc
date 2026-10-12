@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "538becc2d6c70891f20604f3a9e2ee3f056ebaba",
-  "core": "97eac0db8651a1b79ce9b790a5b7425d93cb7c57",
-  "smart": "97eac0db8651a1b79ce9b790a5b7425d93cb7c57",
+  "source": "5b045deccb4855c784e1b867d3220276c99a8c4f",
+  "core": "e26fc47c16d6d3e20746b3d519d08ec84d5b5168",
+  "smart": "e26fc47c16d6d3e20746b3d519d08ec84d5b5168",
   "source_files": {
     "src/core/js/smart-base.js": "e388a42ec926da2f73a02cf828f9e8c9f9e3b15fdbf91efe1c857ff7c2b4cb3c",
-    "src/core/js/loader.js": "07660520eec1654ca5a418f4410cd237decd9389fffa70fb8d2cfdbb2c51165a"
+    "src/core/js/loader.js": "4d1ad4c77cc5cbd25e2d68e9d1f37fca09453ca6abdeecfa700009468c301f7a"
   },
   "lessons": [
     "creating",
@@ -17,5 +17,5 @@
     "cleanup",
     "templates-and-assets"
   ],
-  "review": "Reviewed the release ui-9fb0297bb5c2 (source 253cb441; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js is byte-identical to the last review; loader.js changed only in a comment (Larena's components are the first component package, standard simai.component-package). No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
+  "review": "Reviewed the release ui-e26fc47c16d6 (source 5b045dec; Core and Smart are the same ui commit, Smart in distr/smart). smart-base.js is byte-identical to the last review; loader.js now fetches the minified twin of each bundle (<name>.min.js, .min.css) and the readable files with SF_BOOT_CONFIG.minified = false, ?sf-debug or data-sf-debug. No attribute, property, event, slot, nesting rule, cleanup path or asset reference the eight lessons teach changes, so none of them changes."
 }
