@@ -1,11 +1,6 @@
-<div class="relative p-3 radius-default border border-outline-variant">
-  <code id="install-command">npm install @simai/ui</code>
-  <button
-    type="button"
-    class="sf-clipboard sf-clipboard-1 sf-clipboard-surface btn-clipboard"
-    data-clipboard-target="#install-command"
-    aria-label="Копировать команду"
-  >
+<div class="relative p-2 radius-2 border border-outline-variant">
+  <code id="clipboard-install">npm install @simai/ui</code>
+  <button type="button" class="sf-clipboard sf-clipboard-surface sf-clipboard--overlay" data-clipboard-target="#clipboard-install" data-success="Команда скопирована" data-error="Не удалось скопировать" aria-label="Копировать команду">
     <i class="sf-icon" aria-hidden="true">content_copy</i>
   </button>
 </div>

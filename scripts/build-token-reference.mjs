@@ -12,7 +12,8 @@
 // Usage: node scripts/build-token-reference.mjs [--check]
 //   --check  fails when the page on disk differs from what the core says now.
 
-import {readFileSync, writeFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {existsSync, readFileSync, writeFileSync} from 'node:fs';
 import {resolve, dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -23,7 +24,18 @@ if (!uiRoot) {
   process.exit(2);
 }
 const corePath = resolve(uiRoot, 'distr/core/css/core.css');
-const css = readFileSync(corePath, 'utf8');
+// The core of the pinned release, read from git objects at the lock's commit
+// when the root is a checkout: a checkout moved to a newer release would
+// otherwise turn the check red for a site that has not moved.
+const lockCommit = JSON.parse(readFileSync(resolve(root, 'simai-framework.lock.json'), 'utf8')).runtime.ui.commit;
+const fromGit = () => {
+  try {
+    return execFileSync('git', ['-C', uiRoot, 'show', `${lockCommit}:distr/core/css/core.css`], {encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['ignore', 'pipe', 'ignore']});
+  } catch {
+    return null;
+  }
+};
+const css = (existsSync(resolve(uiRoot, '.git')) && fromGit()) || readFileSync(corePath, 'utf8');
 const page = 'content/ru/guide/fundamentals/design-tokens/all-tokens.md';
 
 // A primitive is a step of a ramp: it has no meaning of its own, only a value.

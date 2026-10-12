@@ -1,6 +1,14 @@
-<div class="grid grid-col-1 gap-4">
-  <div class="sf-range-slider" data-start="25" data-connect="lower" data-label="text" aria-label="Заполнение от минимума"></div>
-  <div class="sf-range-slider" data-start="75" data-connect="upper" data-label="text" aria-label="Заполнение до максимума"></div>
-  <div class="sf-range-slider" data-start="30,70" data-multiple="true" data-connect="true" data-lower-label="Начало заполненного диапазона" data-upper-label="Конец заполненного диапазона"></div>
-  <div class="sf-range-slider" data-start="30,70" data-multiple="true" data-connect="false" data-lower-label="Нижняя граница без заполнения" data-upper-label="Верхняя граница без заполнения"></div>
+<div class="grid grid-col-1 md:grid-col-3 gap-6">
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-start="25" data-connect="lower" data-label="text" aria-label="Заполнение от минимума"></div>
+    <code class="text-1/2 color-on-surface-variant">data-connect="lower"</code>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-start="75" data-connect="upper" data-label="text" aria-label="Заполнение до максимума"></div>
+    <code class="text-1/2 color-on-surface-variant">data-connect="upper"</code>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-start="30,70" data-multiple="true" data-label="text" aria-label="Заполнение между ручками" data-lower-label="Начало диапазона" data-upper-label="Конец диапазона"></div>
+    <code class="text-1/2 color-on-surface-variant">data-multiple="true"</code>
+  </div>
 </div>

@@ -74,7 +74,9 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   if (positions.some((position, index) => index > 0 && position <= positions[index - 1])) {
     add('section_order', {headings: known});
   }
-  for (const heading of standard.required) {
+  // A component with no stylesheet of its own (`css: false`) has no classes.
+  const required = entry.css === false ? standard.required.filter((heading) => heading !== 'Классы') : standard.required;
+  for (const heading of required) {
     if (!headings.includes(heading)) add('section_missing', {heading});
   }
   const sections = body.split(/^## /mu);

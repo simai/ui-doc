@@ -3,20 +3,438 @@
   "schema_version": 1,
   "why": "Pages that follow docs/developer/reference-page-standard.md. scripts/audit-reference-pages.mjs holds each to the standard and scripts/build-reference-sections.mjs writes their generated sections. The list only grows.",
   "pages": {
+    "components/actions/button-group.md": {
+      "kind": "component",
+      "component": "button-group",
+      "blocks": [
+        "sf-button-group"
+      ]
+    },
     "components/actions/buttons.md": {
       "kind": "component",
       "component": "buttons",
       "block": "sf-button"
+    },
+    "components/actions/clipboard.md": {
+      "kind": "component",
+      "component": "clipboard",
+      "blocks": [
+        "sf-clipboard"
+      ]
+    },
+    "components/actions/close.md": {
+      "kind": "component",
+      "component": "close",
+      "blocks": [
+        "sf-close"
+      ]
+    },
+    "components/actions/download-file.md": {
+      "kind": "component",
+      "component": "download-file",
+      "blocks": [
+        "sf-download-file"
+      ]
+    },
+    "components/actions/fab.md": {
+      "kind": "component",
+      "component": "fab",
+      "blocks": [
+        "sf-fab"
+      ]
+    },
+    "components/actions/icon-buttons.md": {
+      "kind": "component",
+      "component": "icon-buttons",
+      "blocks": [
+        "sf-icon-button"
+      ]
+    },
+    "components/content/accordion.md": {
+      "kind": "component",
+      "component": "accordion",
+      "blocks": [
+        "sf-accordion"
+      ]
+    },
+    "components/content/avatars.md": {
+      "kind": "component",
+      "component": "avatars",
+      "blocks": [
+        "sf-avatar",
+        "sf-online-indicator",
+        "sf-add-button"
+      ]
+    },
+    "components/content/content-divider.md": {
+      "kind": "component",
+      "component": "contentDivider",
+      "blocks": [
+        "sf-divider"
+      ]
+    },
+    "components/content/doc.md": {
+      "kind": "component",
+      "component": "doc",
+      "blocks": [
+        "sf-doc"
+      ]
+    },
+    "components/content/emoji.md": {
+      "kind": "component",
+      "component": "emoji",
+      "blocks": [
+        "sf-emoji"
+      ]
+    },
+    "components/content/featured-icon.md": {
+      "kind": "component",
+      "component": "featured-icon",
+      "blocks": [
+        "sf-featured-icon"
+      ]
+    },
+    "components/content/file-preview.md": {
+      "kind": "component",
+      "component": "file-preview",
+      "blocks": [
+        "sf-file-preview"
+      ]
+    },
+    "components/content/flag.md": {
+      "kind": "component",
+      "component": "flag",
+      "blocks": [
+        "sf-flag"
+      ]
+    },
+    "components/content/highlight.md": {
+      "kind": "component",
+      "component": "highlight",
+      "blocks": [
+        "sf-highlight",
+        "sf-code-surface"
+      ]
+    },
+    "components/content/icons.md": {
+      "kind": "component",
+      "component": "icons",
+      "blocks": [
+        "sf-icon"
+      ]
+    },
+    "components/content/kbd.md": {
+      "kind": "component",
+      "component": "kbd",
+      "blocks": [
+        "sf-kbd"
+      ]
+    },
+    "components/content/reference-link.md": {
+      "kind": "component",
+      "component": "reference-link",
+      "blocks": [
+        "sf-reference-link"
+      ]
+    },
+    "components/content/tags.md": {
+      "kind": "component",
+      "component": "tags",
+      "blocks": [
+        "sf-tag"
+      ]
     },
     "components/feedback/alerts.md": {
       "kind": "component",
       "component": "alerts",
       "block": "sf-alert"
     },
+    "components/feedback/badges.md": {
+      "kind": "component",
+      "component": "badges",
+      "blocks": [
+        "sf-badge"
+      ]
+    },
+    "components/feedback/dot.md": {
+      "kind": "component",
+      "component": "dot",
+      "blocks": [
+        "sf-dot"
+      ]
+    },
+    "components/feedback/placeholder.md": {
+      "kind": "component",
+      "component": "placeholder",
+      "blocks": [
+        "sf-placeholder"
+      ]
+    },
+    "components/feedback/progress-bar.md": {
+      "kind": "component",
+      "component": "progress-bar",
+      "blocks": [
+        "sf-progress-bar"
+      ]
+    },
+    "components/feedback/progress-scale.md": {
+      "kind": "component",
+      "component": "progress-scale",
+      "blocks": [
+        "sf-progress-scale"
+      ]
+    },
+    "components/feedback/skeleton.md": {
+      "kind": "component",
+      "component": "skeleton",
+      "blocks": [
+        "sf-skeleton"
+      ]
+    },
+    "components/feedback/spinner.md": {
+      "kind": "component",
+      "component": "spinner",
+      "blocks": [
+        "sf-loader"
+      ]
+    },
+    "components/feedback/toast.md": {
+      "kind": "component",
+      "component": "toast",
+      "blocks": [
+        "sf-toast"
+      ]
+    },
     "components/forms/checkbox.md": {
       "kind": "component",
       "component": "checkbox",
       "block": "sf-checkbox"
+    },
+    "components/forms/country-code.md": {
+      "kind": "component",
+      "component": "country-code",
+      "blocks": [
+        "sf-country-code"
+      ]
+    },
+    "components/forms/datepicker.md": {
+      "kind": "component",
+      "component": "datepicker",
+      "blocks": [
+        "sf-datepicker"
+      ]
+    },
+    "components/forms/file-upload.md": {
+      "kind": "component",
+      "component": "file-upload",
+      "blocks": [
+        "sf-file-upload",
+        "sf-upload-progress"
+      ]
+    },
+    "components/forms/inputs.md": {
+      "kind": "component",
+      "component": "inputs",
+      "blocks": [
+        "sf-input"
+      ]
+    },
+    "components/forms/quantity.md": {
+      "kind": "component",
+      "component": "quantity",
+      "blocks": [
+        "sf-quantity"
+      ]
+    },
+    "components/forms/radio.md": {
+      "kind": "component",
+      "component": "radio",
+      "blocks": [
+        "sf-radio-button",
+        "sf-radio-wrap",
+        "sf-radio-group",
+        "sf-radio-text"
+      ]
+    },
+    "components/forms/range-slider.md": {
+      "kind": "component",
+      "component": "range-slider",
+      "blocks": [
+        "sf-range-slider"
+      ]
+    },
+    "components/forms/slider.md": {
+      "kind": "component",
+      "component": "slider",
+      "blocks": [
+        "sf-slider"
+      ]
+    },
+    "components/forms/switch.md": {
+      "kind": "component",
+      "component": "switch",
+      "blocks": [
+        "sf-switch"
+      ]
+    },
+    "components/forms/textarea.md": {
+      "kind": "component",
+      "component": "textarea",
+      "blocks": [
+        "sf-textarea"
+      ]
+    },
+    "components/forms/toggle.md": {
+      "kind": "component",
+      "component": "toggle",
+      "blocks": [
+        "sf-toggle"
+      ]
+    },
+    "components/forms/verification.md": {
+      "kind": "component",
+      "component": "verification",
+      "blocks": [
+        "sf-verification"
+      ]
+    },
+    "components/internal/admin-menu.md": {
+      "kind": "component",
+      "component": "admin-menu",
+      "blocks": [
+        "sf-admin-menu"
+      ]
+    },
+    "components/navigation/breadcrumbs.md": {
+      "kind": "component",
+      "component": "breadcrumbs",
+      "blocks": [
+        "sf-breadcrumbs"
+      ]
+    },
+    "components/navigation/context-menu.md": {
+      "kind": "component",
+      "component": "context-menu",
+      "blocks": [
+        "sf-context-menu"
+      ]
+    },
+    "components/navigation/dropdown.md": {
+      "kind": "component",
+      "component": "dropdown",
+      "blocks": [
+        "sf-dropdown"
+      ]
+    },
+    "components/navigation/link.md": {
+      "kind": "component",
+      "component": "link",
+      "blocks": [
+        "sf-link"
+      ]
+    },
+    "components/navigation/menu.md": {
+      "kind": "component",
+      "component": "menu",
+      "blocks": [
+        "sf-menu"
+      ]
+    },
+    "components/navigation/pagination.md": {
+      "kind": "component",
+      "component": "pagination",
+      "blocks": [
+        "sf-pagination",
+        "sf-page-number"
+      ]
+    },
+    "components/navigation/step.md": {
+      "kind": "component",
+      "component": "step",
+      "blocks": [
+        "sf-steps",
+        "sf-step"
+      ]
+    },
+    "components/navigation/tab.md": {
+      "kind": "component",
+      "component": "tab",
+      "blocks": [
+        "sf-tab"
+      ]
+    },
+    "components/navigation/tabs.md": {
+      "kind": "component",
+      "component": "tabs",
+      "blocks": [
+        "sf-tabs"
+      ]
+    },
+    "components/navigation/tree-item.md": {
+      "kind": "component",
+      "component": "tree-item",
+      "blocks": [
+        "sf-tree-item"
+      ]
+    },
+    "components/navigation/tree.md": {
+      "kind": "component",
+      "component": "tree",
+      "blocks": [
+        "sf-tree"
+      ]
+    },
+    "components/overlays-media/carousel.md": {
+      "kind": "component",
+      "component": "carousel",
+      "blocks": [
+        "sf-carousel"
+      ]
+    },
+    "components/overlays-media/modal.md": {
+      "kind": "component",
+      "component": "modal",
+      "blocks": [
+        "sf-modal"
+      ]
+    },
+    "components/overlays-media/swiper.md": {
+      "kind": "component",
+      "component": "swiper",
+      "blocks": [
+        "swiper"
+      ]
+    },
+    "components/overlays-media/tooltip.md": {
+      "kind": "component",
+      "component": "tooltip",
+      "blocks": [
+        "sf-tooltip"
+      ]
+    },
+    "components/tools/hide-show.md": {
+      "kind": "component",
+      "component": "hideShow",
+      "css": false
+    },
+    "components/tools/outline.md": {
+      "kind": "component",
+      "component": "outline",
+      "blocks": [
+        "sf-outline"
+      ]
+    },
+    "components/tools/scrollbar.md": {
+      "kind": "component",
+      "component": "scrollbar",
+      "blocks": [
+        "sf-scrollbar"
+      ]
+    },
+    "components/tools/theme.md": {
+      "kind": "component",
+      "component": "theme",
+      "css": false
     },
     "smart-components/feedback/toast.md": {
       "kind": "smart"

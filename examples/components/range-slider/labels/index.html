@@ -1,4 +1,14 @@
-<div class="grid grid-col-1 gap-4">
-  <div class="sf-range-slider" data-min="0" data-max="100" data-start="40" data-label="text" data-text-position="bottom" data-suffix="%" aria-label="Готовность"></div>
-  <div class="sf-range-slider" data-min="0" data-max="100" data-start="49,51" data-multiple="true" data-label="tooltip" data-tooltip-position="top" data-suffix=" км/ч" aria-label="Диапазон скорости" data-lower-label="Минимальная скорость" data-upper-label="Максимальная скорость"></div>
+<div class="grid grid-col-1 md:grid-col-3 gap-6">
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-start="40" data-suffix="%" aria-label="Готовность без подписи"></div>
+    <code class="text-1/2 color-on-surface-variant">data-label="none"</code>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-start="40" data-label="text" data-suffix="%" aria-label="Готовность с подписью"></div>
+    <code class="text-1/2 color-on-surface-variant">data-label="text"</code>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-start="40" data-label="tooltip" data-suffix="%" aria-label="Готовность с подсказкой"></div>
+    <code class="text-1/2 color-on-surface-variant">data-label="tooltip"</code>
+  </div>
 </div>

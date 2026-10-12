@@ -1,21 +1,15 @@
-const initializeSwiperExample = () => {
-  const root = document.querySelector('.swiper');
-  if (!root || root.classList.contains('swiper-initialized')) return;
-  if (typeof window.Swiper !== 'function') {
-    window.setTimeout(initializeSwiperExample, 50);
-    return;
-  }
+document.querySelectorAll('[data-swiper-demo="overview"]').forEach((demo) => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  new window.Swiper(root, {
-    a11y: { enabled: true },
-    keyboard: { enabled: true, onlyInViewport: true },
-    ...(reducedMotion ? { speed: 0 } : {}),
-    pagination: {
-      el: root.querySelector('.swiper-pagination'),
-      clickable: true,
-      bulletElement: 'button',
-    },
-  });
-};
-
-initializeSwiperExample();
+  const start = () => {
+    if (typeof window.Swiper !== 'function') return window.setTimeout(start, 50);
+    new window.Swiper(demo.querySelector('.swiper'), {
+      keyboard: true,
+      speed: reducedMotion ? 0 : 300,
+      navigation: {
+        prevEl: demo.querySelector('[data-swiper-prev]'),
+        nextEl: demo.querySelector('[data-swiper-next]'),
+      },
+    });
+  };
+  start();
+});

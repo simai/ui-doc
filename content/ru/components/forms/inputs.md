@@ -1,140 +1,257 @@
 ---
 title: "Текстовые поля"
-description: "Однострочный ввод: разметка, подписи, состояния, маска и API управления."
+description: "Принимает короткое однострочное значение: имя, почту, пароль, поисковый запрос."
 profile: reference
 ---
 
 # Текстовые поля
 
-Текстовое поле используется для короткого значения: имени, адреса, поискового
-запроса или пароля. Нативный `<input>` владеет значением, фокусом, проверкой и
-отправкой формы; оболочка `sf-input` отвечает за представление поля.
+Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
+пароль или поисковый запрос. Для текста с переносами строк берите
+[многострочное поле](/ru/components/forms/textarea/), для числа с шагом —
+[поле количества](/ru/components/forms/quantity/).
 
-## Быстрый старт
+## Пример
 
-:::example {id="components/inputs/overview" label="Базовое текстовое поле"}
+:::example {id="components/inputs/overview" label="Поле почты с подсказкой"}
 :::
 
-## Control и field
+## Разметка
 
-Не смешивайте обязанности элементов:
+Минимальную разметку показывает пример выше. Части вложены так:
+`label.sf-input` → подпись `sf-input-label`, рамка `sf-input-field` с
+нативным `<input>` и подсказка `sf-input-hint-text-wrap`.
 
-| Часть | Отвечает за |
-|:---|:---|
-| Нативный `<input>` | `name`, значение, тип, фокус, отправку, нативные `required`, `readonly`, `disabled` |
-| `label.sf-input` | Связь подписи с контролом и визуальное состояние всего поля |
-| `sf-input-label` / `sf-input-text` | Видимую подпись |
-| `sf-input-hint-text-wrap` | Подсказку или сообщение проверки |
+- Оболочка — `<label class="sf-input">` с классом размера, классом вида
+  (`sf-input--bordered` или `sf-input--filled`) и утилитами `flex flex-col`.
+  Скрипт компонента находит поля по `label.sf-input`.
+- Подпись — `sf-input-text` внутри `sf-input-label`. Скрипт связывает её с
+  полем через `aria-labelledby`, подсказку — через `aria-describedby` и выдаёт
+  полю `id`, если его нет.
+- `sf-input-field` рисует рамку и держит всё, что стоит в одной строке с
+  input: значок в начале, текст `sf-input-right` в конце, значок подсказки.
+- Нативный `<input>` хранит значение, `name`, тип, `required`, `readonly`,
+  `disabled`, `autocomplete`, `inputmode`, `minlength`, `maxlength` и
+  `pattern`; браузер проверяет и отправляет его без отдельного кода.
+- Placeholder показывает пример формата, но не заменяет подпись.
 
-Placeholder показывает пример формата, но не заменяет подпись. В компактной
-панели подпись можно визуально скрыть, сохранив её в дереве доступности.
+## Варианты
 
-## Публичные классы
+### Вид
 
-| Задача | Классы |
-|:---|:---|
-| Основа | `sf-input`, `sf-input-label`, `sf-input-text`, `sf-input-field` |
-| Вариант | `sf-input--bordered`, `sf-input--filled` |
-| Размер | `sf-input--size-1/2`, `sf-input--size-1`, `sf-input--size-2` |
-| Дополнение | `sf-input-left`, `sf-input-right`, `sf-input-required`, `sf-input-hint-text-wrap` |
-| Ошибка | `error` на оболочке и контроле |
+`sf-input--bordered` отделяет поле тонкой границей — для форм на фоне
+страницы. `sf-input--filled` отделяет его тональной поверхностью — для плотных
+форм и панелей. Пока фокус внутри поля с заливкой, оно получает фон
+поверхности, как поле с границей. Поведение и состояния у видов одинаковы; в
+одной форме держите один вид.
 
-Loader обнаруживает компонент по классу `sf-input`.
-
-## Тип значения и способ ввода
-
-Используйте нативные типы `text`, `email`, `password`, `search`, `tel` и `url`.
-Передавайте браузеру подходящие `autocomplete`, `inputmode`, `minlength`,
-`maxlength` и `pattern`.
-
-:::example {id="components/inputs/types" label="Типы текстовых полей"}
+:::example {id="components/inputs/variants" label="Поле с границей и с заливкой"}
 :::
 
-## Варианты и размеры
+### Размер
 
-`sf-input--bordered` показывает границу, а `sf-input--filled` — тональную
-поверхность. Оба варианта поддерживают содержимое слева и справа.
+Три ступени — `sf-input--size-1/2`, `sf-input--size-1` и `sf-input--size-2`.
+Высота поля совпадает с кнопкой той же ступени; размер меняет подпись, текст,
+значки и подсказку вместе.
 
-Пока фокус внутри поля с заливкой, оно выглядит как поле с границей: фон
-поверхности и видимая рамка. Так понятно, что в поле можно вводить текст.
-Заливка возвращается, когда фокус уходит; поле с ошибкой, недоступное и только
-для чтения сохраняют свой вид.
-
-:::example {id="components/inputs/variants" label="Варианты текстовых полей"}
+:::example {id="components/inputs/sizes" label="Размеры текстового поля"}
 :::
 
-Поля форм имеют три размера: `1/2`, `1` и `2`. Высоты согласованы с кнопками тех же ступеней.
-Старые значения `1/3` и `3` отображаются как `1/2` и `2` и выводят предупреждение в консоль.
+### Тип значения
 
-:::example {id="components/inputs/sizes" label="Размеры текстовых полей"}
+Тип задаёт нативный атрибут `type`: `text`, `email`, `password`, `search`,
+`tel` или `url`. Вместе с `autocomplete` и `inputmode` он выбирает клавиатуру
+на телефоне и подсказки автозаполнения; вид поля от типа не меняется.
+
+:::example {id="components/inputs/types" label="Почта, пароль, поиск и телефон"}
 :::
 
-## Состояния и сообщения
+### Состав
 
-Обязательность задавайте `required`, режим чтения — `readonly`, недоступность —
-`disabled`. Для ошибки добавьте `error`, `aria-invalid="true"` и свяжите
-сообщение через `aria-describedby` и `aria-errormessage`. Сообщение должно
-объяснять, как исправить значение; одного красного контура недостаточно.
+Подпись обязательна. Звёздочка `sf-input-required` отмечает обязательное поле
+и скрыта от вспомогательных технологий: обязательность передаёт `required` на
+input, а при звёздочке скрипт ставит его сам. Значок `sf-icon` перед input
+поясняет назначение поля, `sf-input-right` после input — единицу или
+сочетание клавиш, `sf-icon sf-icon-hint` в конце рамки — значок подсказки.
+Постоянное пояснение под полем — `sf-input-hint-text-wrap`.
 
-:::example {id="components/inputs/states" label="Состояния текстовых полей"}
+:::example {id="components/inputs/composition" label="Обязательность, значок, текст справа и подсказка"}
 :::
 
-### JavaScript API
+### Маска
 
-После загрузки компонента доступен помощник:
+`data-mask="true"` и `data-mask-pattern` на input или оболочке включают маску:
+`0` в шаблоне — цифра, остальные символы маска вставляет сама. Вместо шаблона
+можно передать JSON с полем `mask` в `data-mask-options`. Маска оставляет в
+поле только цифры шаблона, поэтому постоянную часть с цифрами, например код
+страны, выносите из шаблона — в примере это `sf-input-left`. Маска не заменяет
+подходящий `type`, нативную и серверную проверку.
+
+:::example {id="components/inputs/mask" label="Телефон с маской"}
+:::
+
+## Состояния
+
+Состояния задают нативные атрибуты input; класс на оболочке нужен только
+ошибке. Наведение и нажатие компонент показывает сам.
+
+### Недоступно
+
+Нативный `disabled` приглушает рамку, текст и подпись; поле не получает фокус
+и не отправляется с формой.
+
+:::example {id="components/inputs/state-disabled" label="Недоступное поле обоих видов"}
+:::
+
+### Только чтение
+
+Нативный `readonly` оставляет поле в порядке фокуса и позволяет выделить и
+скопировать значение; оно отправляется с формой. Фон рамки становится
+приглушённым.
+
+:::example {id="components/inputs/state-readonly" label="Поле только для чтения обоих видов"}
+:::
+
+### Ошибка
+
+Класс `error` на оболочке и на input окрашивает рамку и подсказку цветом
+ошибки. Текст ошибки кладите в подсказку с `data-field-message="error"`:
+скрипт отметит поле `aria-invalid="true"` и свяжет сообщение через
+`aria-errormessage`.
+
+:::example {id="components/inputs/state-error" label="Поле с ошибкой обоих видов"}
+:::
+
+### Фокус
+
+При переходе клавишей Tab рамка получает кольцо фокуса по `:focus-visible`.
+При нажатии мышью скрипт ставит оболочке `sf-input--pointer-focus`, и кольцо
+не рисуется. В примере фокус показан классом `focus-visible` на input; смену
+заливки на фон поверхности даёт только настоящий фокус.
+
+:::example {id="components/inputs/state-focus" label="Поле в фокусе"}
+:::
+
+## Доступность
+
+- Видимая подпись обязательна: скрипт связывает её с полем. В компактной
+  панели без видимой подписи задайте `aria-label` на input.
+- Значки в рамке декоративные и получают `aria-hidden="true"`; смысл передают
+  подпись и подсказка.
+- Ошибку сообщайте текстом, который объясняет, как исправить значение: одного
+  цвета недостаточно.
+- Не кладите внутрь `<label>` кнопку, нажатие на которую не должно переводить
+  фокус в поле.
+- В режиме принудительных цветов кольцо фокуса рисуется системным цветом.
+  Значок в начале и текст в конце стоят по порядку разметки и при письме справа
+  налево меняются местами.
+
+## JavaScript
+
+`SF.Input.setState(target, state)` меняет состояние поля: `target` — оболочка
+или любой элемент внутри неё. Поля состояния: `value`, `disabled`, `error` (или
+`invalid`) и `errorMessage`. Текст ошибки скрипт пишет в подсказку и создаёт
+её, если подсказки нет; пустая строка очищает подсказку, и прежний текст
+подсказки возвращает приложение. После изменения `value` поле получает
+всплывающее событие `input`.
 
 ```js
-SF.Input.setState(inputOrRoot, {
-  value: 'SIMAI',
-  disabled: false,
-  invalid: true,
-  errorMessage: 'Введите значение без пробелов',
-});
+const field = document.querySelector('input[name="email"]');
+SF.Input.setState(field, {invalid: true, errorMessage: 'Укажите рабочую почту'});
 ```
 
-`target` может быть оболочкой `.sf-input` или вложенным `<input>`. Помощник
-меняет только перечисленное ниже и возвращает `true`, если нашёл поле.
+Функция возвращает `false`, если внутри оболочки нет input.
 
-| Поле | Что меняет |
+Компонент регистрирует класс `Inputs`. `SF.Loader` появляется к событию
+`sf-loader-init` на `window`; `SF.Loader.ready('Inputs', callback)` передаёт
+класс, когда он зарегистрирован.
+
+```js
+const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
+
+whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
+  const field = new Inputs({
+    param: {label: 'Рабочая почта', name: 'email', inputType: 'email', autocomplete: 'email', required: false, placeholder: '', leftIcon: 'mail'},
+  });
+  document.querySelector('#form').append(field.render());
+}));
+```
+
+Параметры: `label`, `name`, `value`, `placeholder`, `hint`, `size` (`1/2`, `1`,
+`2`), `type` (`bordered` или `filled`), `inputType`, `required`, `disabled`,
+`readonly`, `error` (или `invalid`) с `errorMessage`, `autocomplete`,
+`inputMode`, `minLength`, `maxLength`, `pattern`, `leftIcon`, `rightText`,
+`hintIcon`, `mask` с `maskPattern` или `maskOptions`. Класс по умолчанию делает
+поле обязательным и ставит подпись `Label` и placeholder `placeholder`:
+задавайте `label`, `required` и `placeholder` явно.
+
+## Классы
+
+| Что | Классы |
 |:---|:---|
-| `value` | значение нативного поля; затем создаёт всплывающее событие `input` |
-| `disabled` | нативное `disabled` |
-| `error` или `invalid` | класс `error` у оболочки и у `<input>` |
-| `errorMessage` | текст в `.sf-input-hint-text-wrap`; узел создаётся, если его нет |
+| Блок | `sf-input` |
+| Части | `sf-input-field`, `sf-input-hint`, `sf-input-hint-text-wrap`, `sf-input-label`, `sf-input-left`, `sf-input-required`, `sf-input-right`, `sf-input-text` |
+| Модификаторы | `sf-input--bordered`, `sf-input--filled`, `sf-input--pointer-focus` |
+| Размеры | `sf-input--size-1`, `sf-input--size-1/2`, `sf-input--size-2` |
 
-После изменения помощник заново связывает ARIA: ставит или снимает
-`aria-invalid`, связывает узел сообщения через `aria-describedby`, а при ошибке
-с текстом — через `aria-errormessage`.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-Подсказка и сообщение об ошибке занимают один узел. Непустой `errorMessage`
-заменяет текст подсказки, пустой очищает узел. Прежнюю подсказку помощник не
-хранит: после снятия ошибки верните её текст сами.
+## Переменные
 
-Серверная проверка остаётся обязанностью приложения.
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила блока (`.sf-input`); переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
 
-## Маска ввода
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-input--radius` | `var(--sf-radius--ui)` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
+| `--sf-input-field--background-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-transparent-for-focus)` | `background-color` |
+| `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-error)` | `border-color` |
+| `--sf-input-field--border-end-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-end-radius` |
+| `--sf-input-field--border-end-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-start-radius` |
+| `--sf-input-field--border-start-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-end-radius` |
+| `--sf-input-field--border-start-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-start-radius` |
+| `--sf-input-field--box-shadow` | не задана; задают модификаторы, например `.sf-input:not(.sf-input--pointer-focus)[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-input-field`: `none` | `box-shadow` |
+| `--sf-input-field--padding-bottom` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))` | `padding-bottom` |
+| `--sf-input-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
+| `--sf-input-field--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
+| `--sf-input-field--padding-top` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))` | `padding-top` |
+| `--sf-input-hint--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-hint`: `transparent` | `background-color` |
+| `--sf-input-hint-text-wrap--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-hint-text-wrap`: `transparent` | `background-color` |
+| `--sf-input-hint-text-wrap--color` | не задана; задают модификаторы, например `.sf-input.sf-input--bordered .sf-input-hint-text-wrap`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-input-hint-text-wrap--font-family` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-hint-text-wrap`: `var(--sf-text--family)` | `font-family` |
+| `--sf-input-hint-text-wrap--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-hint-text-wrap`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-input-hint-text-wrap--font-weight` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-hint-text-wrap`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-input-hint-text-wrap--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-hint-text-wrap`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-input-input--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-field input`: `transparent` | `background-color` |
+| `--sf-input-input--color` | не задана; задают модификаторы, например `.sf-input.sf-input--bordered input`: `var(--sf-on-surface)` | `color` |
+| `--sf-input-input--font-family` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 input`: `var(--sf-text--family)` | `font-family` |
+| `--sf-input-input--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 input`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-input-input--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 input`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-input-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
+| `--sf-input-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
+| `--sf-input-label--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `transparent` | `background-color` |
+| `--sf-input-label--gap` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-input-left--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-left`: `transparent` | `background-color` |
+| `--sf-input-placeholder--color` | не задана; задают модификаторы, например `.sf-input .sf-input-field input::-webkit-input-placeholder`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-input-placeholder--font-family` | не задана; задают модификаторы, например `.sf-input .sf-input-field input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
+| `--sf-input-placeholder--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field input::-webkit-input-placeholder`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-input-placeholder--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field input::-webkit-input-placeholder`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-input-required--color` | не задана; задают модификаторы, например `.sf-input .sf-input-required`: `var(--sf-error)` | `color` |
+| `--sf-input-required--font-family` | не задана; задают модификаторы, например `.sf-input .sf-input-required`: `var(--sf-text--family)` | `font-family` |
+| `--sf-input-required--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-required`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-input-required--font-weight` | не задана; задают модификаторы, например `.sf-input .sf-input-required`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-input-required--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-required`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-input-right--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-right`: `transparent` | `background-color` |
+| `--sf-input-right--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-right`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
+| `--sf-input-right--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-right`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
+| `--sf-input-text--color` | не задана; задают модификаторы, например `.sf-input .sf-input-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-input-text--font-family` | не задана; задают модификаторы, например `.sf-input .sf-input-text`: `var(--sf-text--family)` | `font-family` |
+| `--sf-input-text--font-size` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field .sf-input-right .sf-input-text`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-input-text--font-weight` | не задана; задают модификаторы, например `.sf-input .sf-input-text`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-input-text--line-height` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field .sf-input-right .sf-input-text`: `var(--sf-text-height-1)` | `line-height` |
 
-Маска загружается лениво через `SF.Mask`. Включите её атрибутом
-`data-mask="true"` на оболочке или контроле и задайте либо
-`data-mask-pattern`, либо JSON в `data-mask-options`. Дополнительно доступны
-`data-mask-lazy` и `data-mask-placeholder-char`.
+## См. также
 
-:::example {id="components/inputs/mask" label="Поле с маской"}
-:::
-
-Маска не заменяет подходящий `type`, нативную и серверную валидацию.
-
-## Responsive и LTR/RTL
-
-Responsive-модификаторов у самого поля нет. Ширину и расположение задавайте
-утилитами родителя. Встроенные области слева и справа сохраняют физический
-порядок разметки; для смысловых «начала» и «конца» используйте логические
-утилиты и проверяйте RTL.
-
-## Ограничения и проверка
-
-- Для длинного текста используйте Textarea, для числового шага — Quantity.
-- Не помещайте интерактивную кнопку внутрь `<label>`, если её нажатие не должно
-  переводить фокус в поле.
-- Проверьте Tab/Shift+Tab, видимый фокус, автозаполнение, ошибку, disabled,
-  мобильную клавиатуру, светлую и тёмную темы и LTR/RTL.
+- [Многострочное поле](/ru/components/forms/textarea/)
+- [Количество](/ru/components/forms/quantity/)
+- [Inputs — Smart-компонент](/ru/smart-components/forms/inputs/)

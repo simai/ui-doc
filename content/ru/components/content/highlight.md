@@ -1,50 +1,138 @@
 ---
 title: "Подсветка кода"
-description: "Автоматическое оформление исходного кода."
+description: "Подсвечивает синтаксис в блоках кода и добавляет панель с языком и копированием."
 profile: reference
 ---
 
 # Подсветка кода
 
-Компонент распознаёт блоки `pre code`, подсвечивает синтаксис и добавляет
-панель с языком и копированием.
+Подсветка кода раскрашивает синтаксис в блоках `pre code` и оформляет их
+поверхностью с панелью: название языка и кнопка копирования. Берите её для
+примеров кода в документации и интерфейсах разработчика; короткий
+идентификатор в тексте оставляйте обычным элементом `code`.
 
 ## Пример
 
-:::example {id="components/highlight/overview" label="Результат"}
+:::example {id="components/highlight/overview" label="Блок кода с подсветкой"}
 :::
 
-## Особенности применения
+## Разметка
 
-Указывайте язык коротким атрибутом `data-lang`, например `data-lang="js"`.
-Не используйте
-подсветку для обычного текста; короткие идентификаторы оставляйте в `code`.
+Минимальную разметку показывает пример выше: `<pre><code data-lang="html">`
+с текстом кода. Скрипт сам строит вокруг него оболочку
+`sf-highlight sf-code-surface`, панель и прокрутку; писать их вручную не
+нужно.
 
-## Номера строк
+- Язык задаёт `data-lang` или класс `language-*` на `code`. В наборе:
+  `xml` (он же `html`), `css`, `scss`, `javascript` (`js`), `typescript`
+  (`ts`), `json`, `bash` (`sh`, `shell`), `php`, `python`, `sql`, `yaml`
+  (`yml`), `markdown` (`md`), `blade`, `dotenv` (`env`), `1c` и
+  `plaintext` (`text`).
+- Пробелы и пустые строки в начале и в конце кода скрипт убирает.
+- Код внутри `code` экранируйте: `&lt;` вместо `<`.
+- Блок прокручивается по горизонтали и не переносит длинные строки; код
+  всегда идёт слева направо, даже на странице с письмом справа налево.
 
-Атрибут `data-lines` включает номера строк, а `data-start` задаёт первый номер.
+## Варианты
 
-:::example {id="components/highlight/line-numbers" label="Результат"}
+### Панель
+
+`data-chrome` на `code` или на оболочке задаёт панель над кодом: `auto` (по
+умолчанию) — название языка и кнопка копирования; `none` — только код, для
+коротких фрагментов внутри текста; `static` — без панели и без обёртки
+прокрутки, когда страница строит их сама.
+
+:::example {id="components/highlight/chrome" label="Блок с панелью и без неё"}
 :::
 
-## Панель
+### Язык
 
-`data-chrome="auto"` добавляет панель языка и копирования. Значение `none`
-оставляет только код, а `static` позволяет странице предоставить панель самой.
+Язык из набора подсвечивается его грамматикой. Если языка нет в наборе или
+он не указан, код выводится обычным текстом без подсветки, а панель
+показывает имя, которое указано в `data-lang`. Атрибут
+`data-highlight-state` на оболочке принимает значения `ready` и
+`unsupported`.
 
-:::example {id="components/highlight/chrome" label="Результат"}
+:::example {id="components/highlight/fallback" label="Известный и неизвестный язык"}
 :::
 
-## Неизвестный язык
+## Доступность
 
-Если грамматика не найдена, код остаётся читаемым как обычный текст.
+- Кнопка копирования получает имя «Копировать код» на языке страницы, а
+  результат зачитывает скрытая область статуса. Свои слова задают
+  `data-copy-label` и `data-copy-success` на `code` или на оболочке.
+- Область прокрутки получает фокус с клавиатуры: длинную строку можно
+  прочитать стрелками.
+- Не передавайте смысл только цветом подсветки: код читается и без неё.
+- В режиме высокой контрастности поверхность получает рамку системного
+  цвета текста.
 
-:::example {id="components/highlight/fallback" label="Результат"}
-:::
+## JavaScript
 
-## Цветовая схема
+Скрипт подсвечивает блоки `pre code` при загрузке страницы и блоки,
+добавленные позже. Объект `SF.Highlight` даёт две функции:
 
-Классы `theme-light` и `theme-dark` выбирают светлую или тёмную схему блока.
+- `SF.Highlight.highlight(code)` — подсвечивает один элемент `code`, если он
+  ещё не подсвечен; возвращает обещание с `true`.
+- `SF.Highlight.refresh(target, source)` — подсвечивает заново все блоки
+  внутри `target`; если передана строка `source`, она становится новым
+  текстом кода. Возвращает обещание со списком блоков.
 
-:::example {id="components/highlight/themes" label="Результат"}
-:::
+```js
+const block = document.querySelector('#snippet');
+await SF.Highlight.refresh(block, 'const total = price * count;');
+```
+
+Событий компонент не отправляет. Движок подсветки доступен как
+`window.hljs`; компонент регистрирует его под именем `hljs`, и
+`SF.Loader.ready('hljs', callback)` вызывает функцию, когда он
+зарегистрирован. `SF.Loader` появляется к событию `sf-loader-init` на
+`window`.
+
+## Классы
+
+**`sf-highlight`**
+
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-highlight` |
+| Части | `sf-highlight__head`, `sf-highlight__wrap` |
+
+**`sf-code-surface`**
+
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-code-surface` |
+| Части | `sf-code-surface__scroll` |
+
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила блока (`.sf-highlight`, `.sf-code-surface`); переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-highlight-addition` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-success-container)` | `color`, `background-color` |
+| `--sf-highlight-addition-background` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-success-container)` | `background-color` |
+| `--sf-highlight-attribute` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-primary)` | `color` |
+| `--sf-highlight-background` | не задана; задают модификаторы, например `.theme-light`: `transparent` | `background` |
+| `--sf-highlight-built-in` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-warning)` | `color` |
+| `--sf-highlight-bullet` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-warning)` | `color` |
+| `--sf-highlight-comment` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-highlight-deletion` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-error-container)` | `color`, `background-color` |
+| `--sf-highlight-deletion-background` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-error-container)` | `background-color` |
+| `--sf-highlight-keyword` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-error)` | `color` |
+| `--sf-highlight-line-divider` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-outline-variant)` | `border-inline-end` |
+| `--sf-highlight-line-number` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-highlight-punctuation` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-highlight-section` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-primary)` | `color` |
+| `--sf-highlight-string` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-info)` | `color` |
+| `--sf-highlight-tag` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-success)` | `color` |
+| `--sf-highlight-text` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-on-surface)` | `color` |
+| `--sf-highlight-title` | не задана; задают модификаторы, например `.theme-light`: `var(--sf-tertiary)` | `color` |
+
+## См. также
+
+- [Копирование](/ru/components/actions/clipboard/)
+- [Документ](/ru/components/content/doc/)

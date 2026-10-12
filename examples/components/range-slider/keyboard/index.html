@@ -1,10 +1,12 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-3">
-  <div>
-    <p id="range-keyboard-default" class="m-bottom-1/2">Стандартное клавиатурное управление</p>
+<div class="grid grid-col-1 md:grid-col-2 gap-6">
+  <div class="flex flex-col gap-2">
+    <p id="range-keyboard-default" class="m-0">Стандартное управление с клавиатуры</p>
     <div class="sf-range-slider" data-start="35" data-step="5" aria-labelledby="range-keyboard-default"></div>
+    <code class="text-1/2 color-on-surface-variant">без data-keyboard</code>
   </div>
-  <div>
-    <p id="range-keyboard-external" class="m-bottom-1/2">Клавиатурой управляет приложение</p>
+  <div class="flex flex-col gap-2">
+    <p id="range-keyboard-external" class="m-0">Клавиатурой управляет приложение</p>
     <div class="sf-range-slider" data-start="65" data-step="5" data-keyboard="false" aria-labelledby="range-keyboard-external"></div>
+    <code class="text-1/2 color-on-surface-variant">data-keyboard="false"</code>
   </div>
 </div>

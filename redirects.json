@@ -2731,8 +2731,36 @@
       "to": "ru/guide/introduction/what-is-simai-framework"
     },
     {
+      "from": "ru/utilities/animation/animation-default-parameters",
+      "to": "ru/guide/fundamentals/motion"
+    },
+    {
       "from": "ru/utilities/animation/animation-transition-appearing",
       "to": "ru/utilities/animation/animation-type"
+    },
+    {
+      "from": "ru/utilities/border/border-default-parameters",
+      "to": "ru/utilities/border/border-width"
+    },
+    {
+      "from": "ru/utilities/divider/divider-default-parameters",
+      "to": "ru/utilities/divider/divider-width"
+    },
+    {
+      "from": "ru/utilities/links/heritage-link-color",
+      "to": "ru/utilities/links/links-formatting"
+    },
+    {
+      "from": "ru/utilities/links/links-default-parameters",
+      "to": "ru/utilities/links/links-formatting"
+    },
+    {
+      "from": "ru/utilities/links/links-underlining",
+      "to": "ru/utilities/links/links-formatting"
+    },
+    {
+      "from": "ru/utilities/outline/outline-default-parameters",
+      "to": "ru/utilities/outline/outline-width"
     },
     {
       "from": "ru/utilities/reference",
@@ -2889,6 +2917,14 @@
     {
       "from": "ru/utilities/text-formatting/text-underline-offset",
       "to": "ru/utilities/text-formatting/text-decoration-offset"
+    },
+    {
+      "from": "ru/utilities/typography/text-default",
+      "to": "ru/guide/fundamentals/default-text"
+    },
+    {
+      "from": "ru/utilities/typography/text-role-modifiers",
+      "to": "ru/guide/fundamentals/default-text"
     },
     {
       "from": "ru/utilities/typography/text-transform",

@@ -1,167 +1,249 @@
 ---
 title: "Выпадающий список"
-description: "Доступный выбор одного или нескольких машинных значений из скрытого списка."
+description: "Даёт выбрать одно или несколько значений из скрытого списка вариантов."
 profile: reference
 ---
 
 # Выпадающий список
 
-Выпадающий список экономит место и позволяет выбрать одно или несколько
-значений из набора вариантов. Видимая подпись пункта отделена от его стабильного
-машинного значения.
+Выпадающий список экономит место и даёт выбрать одно или несколько значений
+из набора вариантов; видимая подпись пункта отделена от его машинного
+значения. Для небольшого набора, который помещается на экране, удобнее
+[радиокнопки](/ru/components/forms/radio/) или
+[флажки](/ru/components/forms/checkbox/).
 
 ## Пример
 
-:::example {id="components/dropdown/overview" label="Результат"}
+:::example {id="components/dropdown/overview" label="Выбор города"}
 :::
 
-## Особенности применения
+## Разметка
 
-Используйте понятную подпись и храните машинное значение в `data-value`.
-Кнопка раскрытия является основной точкой Tab, а Loader связывает её со списком,
-управляет `aria-expanded`, выбором и фокусом. `ArrowDown` и `ArrowUp` открывают
-список и перемещают фокус, `Home` и `End` переходят к краям списка, `Enter` или
-`Space` выбирают пункт, `Escape` закрывает список, а `Tab` продолжает обычный
-обход страницы. Для небольшого постоянно видимого набора лучше использовать
-radio или checkbox.
+Минимальную разметку показывает пример выше. Части вложены так:
+`sf-dropdown` → подпись `sf-dropdown-label`, поле `sf-dropdown-field` и
+список `sf-list`.
 
-`name` задаёт машинное имя отправляемого значения, текст в
-`sf-dropdown-label` — видимую подпись поля, а placeholder — только приглашение
-к выбору. Для компактной панели допустимо скрыть подпись визуально, сохранив её
-как доступное имя; это не меняет структуру или вызов Dropdown.
+- Корень `sf-dropdown` с размером `sf-dropdown--size-{размер}`, видом поля
+  (`sf-dropdown--outlined` или `sf-dropdown--filled`), отображением выбора
+  (`sf-dropdown--text` или `sf-dropdown--tag`) и утилитами `flex flex-col`.
+  Атрибут `value` задаёт начальный выбор — машинные значения через запятую.
+- Подпись поля — `sf-dropdown-label` с текстом в `sf-dropdown-text`.
+- Поле `sf-dropdown-field` с утилитами `cursor-pointer items-cross-center
+  transition flex relative` содержит скрытый `input` типа `hidden` с классом
+  `sf-dropdown-hidden-input` и атрибутом `name` — он отправляет выбор с
+  формой, — текстовый `input` с `placeholder` и кнопку раскрытия
+  `sf-icon-button … absolute` со стрелкой `keyboard_arrow_down`.
+- Список `sf-list` → `sf-list-container-wrap` → `sf-list-container` → пункты
+  `sf-list-item`. Машинное значение пункта — в `data-value`, подпись — в
+  `sf-list-item-container`.
+- Скрипт связывает кнопку со списком, ставит роли и состояния, выводит
+  выбранное в поле и отправляет события; ничего вызывать не нужно.
 
-## Варианты оформления
+## Варианты
 
-`sf-dropdown--outlined` показывает границу, а `sf-dropdown--filled` — тональную
-поверхность. Поле использует радиус компактных контролов `--sf-radius--ui`, а
-выпадающая панель — радиус крупных поверхностей `--sf-radius--surface`. Пока
-список с заливкой открыт или в нём фокус, поле выглядит как поле с границей, а
-после закрытия заливка возвращается.
+### Вид поля
 
-:::example {id="components/dropdown/variants" label="Результат"}
+`sf-dropdown--outlined` — поле с рамкой, `sf-dropdown--filled` — с тональной
+заливкой. Поле берёт радиус элементов управления (`--sf-radius--ui`), панель
+списка — радиус крупных поверхностей (`--sf-radius--surface`). Пока список
+с заливкой открыт или в нём фокус, поле выглядит как поле с рамкой. Берите
+вид, которым оформлены остальные поля формы.
+
+:::example {id="components/dropdown/variants" label="Поле с рамкой и с заливкой"}
 :::
 
-## Одиночный и множественный выбор
+### Отображение выбора
 
-`sf-dropdown--text` показывает выбранные подписи строкой. Для множественного
-выбора добавьте короткий поведенческий атрибут `multiple`. Вариант
-`sf-dropdown--tag` отображает выбранные значения отдельными тегами. Именованное
-скрытое поле отправляет машинные значения через форму; совместимый формат
-нескольких значений — строка через запятую.
+`sf-dropdown--text` показывает выбранные подписи строкой,
+`sf-dropdown--tag` — отдельными тегами. Множественный выбор включает
+атрибут `multiple` (у `sf-dropdown--tag` он включён по умолчанию); скрытое
+поле тогда отправляет значения строкой через запятую.
 
-:::example {id="components/dropdown/tags" label="Результат"}
+Тег снимается крестиком на самом теге или повторным выбором его пункта в
+списке. Длинная подпись тега сокращается многоточием, теги переносятся
+строками и не перекрывают кнопку раскрытия.
+
+:::example {id="components/dropdown/tags" label="Подписи строкой и теги"}
 :::
 
-Тег снимается двумя способами: крестиком на самом теге или повторным выбором
-его пункта в списке — мышью или клавишами со стрелками и Enter. В полях
-размеров `1` и `2` тег — компактная плашка размера поля, и область нажатия
-крестика — 24 и 28 пикселей: норма WCAG 2.2 (критерий 2.5.8) выполняется на
-самом крестике. В размере `1/2` крестик меньше — 18 пикселей, — и равноценным
-элементом служит список: поле, по которому он открывается, и пункты списка
-имеют высоту поля — 32 пикселя — и всю его ширину. Длинная подпись тега
-сокращается многоточием, и поле не растёт из-за неё.
+### Размер
 
-## Типы пунктов
+Три ступени, как у полей форм: `sf-dropdown--size-1/2`,
+`sf-dropdown--size-1` и `sf-dropdown--size-2`. Размер меняет высоту,
+отступы, текст, пункты списка и кнопку раскрытия вместе; пунктам ставьте
+размер списка `sf-list-item--size-…` той же ступени. Значения `1/3` и `3`
+выпуск читает как `1/2` и `2` и пишет предупреждение в консоль.
 
-Пункт списка может содержать только текст, иконку, индикатор checkbox, аватар
-или цветовую метку. Вложенная графика декоративна: фокус и выбор принадлежат
-всему пункту с `role="option"`.
-
-List Item не является самостоятельной кнопкой или checkbox. Его семантику,
-клавиатуру, `aria-selected`, машинное значение и события задаёт родительский
-Dropdown. В Smart-разметке используйте `<sf-list-item>` только прямым дочерним
-элементом `<sf-dropdown>`. Для отдельного действия используйте кнопку или
-ссылку, а для независимого выбора — checkbox или radio.
-
-:::example {id="components/dropdown/options" label="Результат"}
+:::example {id="components/dropdown/sizes" label="Размеры 1/2, 1 и 2"}
 :::
 
-## Выбор языка
+### Пункты списка
 
-Флаг из компонента [Flag](/ru/components/content/flag/) встаёт в пункт списка
-на место иконки: пункт `sf-list-item--icon`, внутри — элемент с классами
-`sf-flag sf-flag--rect` и кодом страны в `data-country`. Название языка пишите на самом этом языке — так человек
-найдёт свой язык, даже если интерфейс открыт на чужом, — и отметьте пункт
-атрибутом `lang`, чтобы экранный диктор прочитал его правильно. Флаг
-декоративен (`aria-hidden="true"`): язык называет подпись, а не картинка.
+Пункт содержит текст (`sf-list-item--text`), иконку (`sf-list-item--icon`),
+флажок (`sf-list-item--checkbox`), аватар (`sf-list-item--avatar`) или
+цветовую метку (`sf-list-item--color`). Вложенная графика декоративна:
+фокус и выбор принадлежат всему пункту. Пункт — не самостоятельная кнопка
+или флажок: роль, клавиатуру и `aria-selected` задаёт выпадающий список.
 
-Флаг обозначает страну, а не язык: у английского, испанского или арабского
-языка много стран. Выберите страну, которую ожидают ваши пользователи, или
-укажите вариант языка в подписи, например «English (UK)».
-
-:::example {id="components/dropdown/language" label="Результат"}
+:::example {id="components/dropdown/options" label="Типы пунктов"}
 :::
 
-## Размеры
+### Флаги в пунктах
 
-Поля форм имеют три размера: `1/2`, `1` и `2`. Размер меняет минимальную
-высоту, отступы, текст, пункт списка и кнопку раскрытия как единый контроль.
-Длинное значение заканчивается многоточием, набор тегов переносится строками,
-не перекрывая кнопку. Старые значения `1/3` и `3` отображаются как `1/2` и `2`
-и выводят предупреждение в консоль.
+Флаг [Flag](/ru/components/content/flag/) встаёт в пункт `sf-list-item--icon`
+на место иконки: элемент `sf-flag sf-flag--rect` с кодом страны в
+`data-country` и `aria-hidden="true"`. Выбранный флаг повторяется в поле.
+Название языка пишите на самом языке и отметьте пункт атрибутом `lang`.
+Флаг обозначает страну, а не язык: при нескольких странах одного языка
+уточните вариант в подписи, например «English (UK)».
 
-:::example {id="components/dropdown/sizes" label="Результат"}
+:::example {id="components/dropdown/language" label="Выбор языка"}
+:::
+
+### Поиск
+
+Поле поиска `sf-input` в начале `sf-list` фильтрует пункты по видимой
+подписи. Машинные значения поиск не меняет.
+
+:::example {id="components/dropdown/search" label="Список с поиском"}
+:::
+
+### Группы
+
+Строка `sf-list-heading` с текстом в `sf-list-heading-container` начинает
+группу: пункты под ней читаются вместе, и название группы не повторяется в
+каждом пункте. Заголовок не выбирается и не получает фокус.
+
+:::example {id="components/dropdown/groups" label="Пункты по группам"}
+:::
+
+### Свой триггер
+
+Вместо поля список может открывать другой элемент — кнопка-иконка в шапке
+группы, «+» на панели. Поставьте его в `sf-dropdown-trigger` на место
+`sf-dropdown-field`: компонент берёт у него только нажатие, вид остаётся
+вашим. `sf-list--free-width` даёт списку свою ширину вместо ширины
+триггера.
+
+В примере список ещё и разложен сеткой: `sf-list-container--grid` ставит
+пункты по шесть в ряд (число задаёт `--sf-list-container--columns`), а
+высоту прокручиваемой сетки — `--sf-dropdown--grid-height`. В сетке пункт
+показывает картинку, а подпись остаётся его именем для поиска и подсказкой
+`title`.
+
+:::example {id="components/dropdown/trigger" label="Список за кнопкой-иконкой, сеткой"}
+:::
+
+### Размещение списка
+
+Открытый список выходит в верхний слой страницы (native Popover), поэтому
+обрезающие контейнеры и модальные окна ему не мешают. Он открывается под
+полем, переворачивается вверх, если снизу не помещается, сдвигается внутрь
+экрана у края и ограничивает высоту видимой областью. Атрибут
+`portal="false"` оставляет список в потоке страницы.
+
+:::example {id="components/dropdown/portal" label="Список в обрезающем контейнере"}
 :::
 
 ## Состояния
 
-Выбранный пункт получает `selected`, недоступный пункт или весь список —
-`disabled`. Атрибут `required` обозначает обязательное поле. Нативный reset
-возвращает выбор, который был задан при первом подключении компонента.
+### Выбран, недоступен, обязателен
 
-:::example {id="components/dropdown/states" label="Результат"}
+Выбранный пункт получает класс `selected` и `aria-selected="true"`; скрипт
+ставит их сам по атрибуту `value` или по выбору. Атрибут `disabled` на
+корне (или класс `disabled`) выключает весь список, класс `disabled` на
+пункте — один пункт. Атрибут `required` отмечает обязательное поле;
+звёздочку в подписи оформляет `sf-dropdown-required`. Сброс формы
+возвращает выбор, заданный при подключении.
+
+:::example {id="components/dropdown/states" label="Обязательный и недоступный список"}
 :::
 
-## Поиск
+## Доступность
 
-Поисковое поле размещается внутри панели и фильтрует пункты по видимой подписи.
-Оно не меняет машинные значения и не становится причиной отключения списка при
-нулевом или одном совпадении.
+- Видимая подпись `sf-dropdown-label` — имя поля; скрипт связывает с ней
+  кнопку и список. `placeholder` — только приглашение к выбору, не подпись.
+- Кнопка раскрытия получает `aria-haspopup="listbox"`, `aria-expanded` и
+  `aria-controls`; список — `role="listbox"` и `aria-multiselectable`,
+  пункты — `role="option"`, `aria-selected` и `aria-disabled`.
+- Кнопка раскрытия — точка Tab. Стрелки вниз и вверх, Enter и пробел на ней
+  открывают список; в списке стрелки переходят по пунктам, Home и End — к
+  первому и последнему, Enter и пробел выбирают пункт, Escape закрывает
+  список, Tab закрывает его и продолжает обход страницы.
+- Иконки, флаги и флажки внутри пунктов скрыты через `aria-hidden="true"`.
 
-:::example {id="components/dropdown/search" label="Результат"}
-:::
+## JavaScript
 
-## Размещение списка
+Скрипт подключается сам и обслуживает каждый `.sf-dropdown`, в том числе
+добавленный позже. Корни, которые отрисовал Smart-компонент
+`<sf-dropdown>`, он пропускает.
 
-Список размещается общим механизмом Framework (`SF.Position` на Floating UI):
-открывается под полем, переворачивается вверх, если снизу не помещается, а
-сверху места больше, сдвигается внутрь экрана у края и ограничивает высоту
-видимой областью. Панель выходит в верхний слой через native Popover, поэтому
-обрезающие контейнеры и модальные окна ей не мешают; при отсутствии Popover
-используется временная обратимая проекция с теми же токенами, направлением и
-типографикой. Это поведение по умолчанию; `portal="false"` оставляет прежний
-список в потоке страницы.
+При выборе корень отправляет всплывающее событие `change`. В `detail`:
+`value` и `label` выбранного пункта, `values` — все выбранные значения,
+`item`, `root` и `multiple`. Снятие тега крестиком отправляет то же событие
+с пустыми `value`, `label` и `item: null`. Одновременно уходит
+`sf-dropdown:change` с тем же `detail` — его выпуск оставляет для
+совместимости, слушайте `change`.
 
-:::example {id="components/dropdown/portal" label="Результат"}
-:::
+```js
+document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
+  console.log(event.detail.values);
+});
+```
 
+## Классы
 
-## Группы в списке
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-dropdown` |
+| Части | `sf-dropdown-field`, `sf-dropdown-field-visual`, `sf-dropdown-label`, `sf-dropdown-placeholder`, `sf-dropdown-required`, `sf-dropdown-tag-container`, `sf-dropdown-text`, `sf-dropdown-trigger`, `sf-dropdown-value` |
+| Модификаторы | `sf-dropdown--filled`, `sf-dropdown--outlined`, `sf-dropdown--tag`, `sf-dropdown--text` |
+| Размеры | `sf-dropdown--size-1`, `sf-dropdown--size-1/2`, `sf-dropdown--size-2` |
 
-Пункт может сказать, откуда он: `group` в данных или атрибут `group` у
-`sf-list-item`. Пункты с одинаковым `group`, идущие подряд, рисуются под одним
-заголовком. Так длинный список читается кусками, а не строками, и название
-места не повторяется в каждой строке.
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-:::example {id="components/dropdown/groups" label="Результат"}
-:::
+## Переменные
 
-## Сетка пунктов
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила блока (`.sf-dropdown`); переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
 
-`layout="grid"` раскладывает пункты по нескольку в ряд, `columns` задаёт
-сколько. Сетка высотой в несколько рядов и дальше прокручивается — сто двадцать
-значков по шесть в ряд это двадцать рядов, а двадцать рядов — снова колонка;
-высоту меняет токен `--sf-dropdown--grid-height`. В сетке пункт показывает свою картинку, а его подпись остаётся именем
-для поиска и подсказкой при наведении. Это единственный способ смотреть сотню
-значков: колонкой их никто не долистает.
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text[:not-has(%3E%20.sf-dropdown-field%20%3E%20:disabled)] .sf-dropdown-field`: `var(--sf-surface-0)` | `background-color` |
+| `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-dropdown-field--border-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text[:not-has(%3E%20.sf-dropdown-field%20%3E%20:disabled)] .sf-dropdown-field`: `var(--sf-outline)` | `border-color` |
+| `--sf-dropdown-field--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-dropdown-field--padding-bottom` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `calc(var(--sf-ui-1/2--space-y-tightness-default) - var(--sf-px))` | `padding-bottom` |
+| `--sf-dropdown-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-ui-1/2--space-x)` | `padding-inline-end`, `inset-inline-end` |
+| `--sf-dropdown-field--padding-inline-start` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-ui-1/2--space-x)` | `padding-inline-start` |
+| `--sf-dropdown-field--padding-top` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `calc(var(--sf-ui-1/2--space-y-tightness-default) - var(--sf-px))` | `padding-top` |
+| `--sf-dropdown-input--color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text input`: `var(--sf-on-surface)` | `color` |
+| `--sf-dropdown-input--font-family` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text input`: `var(--sf-text--family)` | `font-family` |
+| `--sf-dropdown-input--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text input`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-dropdown-input--font-weight` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text input`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-dropdown-input--line-height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text input`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-dropdown-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input`: `var(--sf-text-size-4)` | `padding-inline-end` |
+| `--sf-dropdown-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
+| `--sf-dropdown-label--background-color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-label`: `transparent` | `background-color` |
+| `--sf-dropdown-label--gap` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-label`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-dropdown-placeholder--color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-dropdown-placeholder--font-family` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |
+| `--sf-dropdown-placeholder--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-dropdown-placeholder--line-height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1.sf-dropdown--outlined.sf-dropdown--text .sf-dropdown-field input::-webkit-input-placeholder`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-dropdown-required--color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-error)` | `color` |
+| `--sf-dropdown-required--font-family` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-text--family)` | `font-family` |
+| `--sf-dropdown-required--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-required`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-dropdown-required--font-weight` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-required`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-dropdown-required--line-height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-required`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-dropdown-tag-container--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--tag .sf-dropdown-tag-container`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-dropdown-tag-line--box` | `var(--sf-dropdown-tag-line--height)` | `--sf-tag--line`, `height`, `block-size`, `width`, `inline-size`, `max-height`, `max-block-size`, `--sf-flag--size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height`, `--sf-tag-color-icon--height`, `--sf-tag-color-icon--width` |
+| `--sf-dropdown-tag-line--height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2`: `var(--sf-text-height-1/2)` | `--sf-dropdown-tag-line--box` |
+| `--sf-dropdown-text--color` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-dropdown-text--font-family` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-text--family)` | `font-family` |
+| `--sf-dropdown-text--font-size` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-text`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-dropdown-text--font-weight` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-text`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-dropdown-text--line-height` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1 .sf-dropdown-text`: `var(--sf-text-height-1/2)` | `line-height` |
 
-## Свой триггер
+## См. также
 
-Собственный триггер Dropdown — это поле: рамка, текст выбранного, шеврон. Там,
-где список нужен за другим управляющим элементом — за «+» в шапке группы, за
-кнопкой со значком, — передайте его в `slot="trigger"`. Компонент отдаёт такому
-триггеру только нажатие, которое открывает список: как он выглядит, решает тот,
-кто его передал. Список в этом случае берёт свою ширину, а не ширину кнопки.
-
-:::example {id="components/dropdown/trigger" label="Результат"}
-:::
+- [Контекстное меню](/ru/components/navigation/context-menu/)
+- [Dropdown — Smart-компонент](/ru/smart-components/navigation/dropdown/)

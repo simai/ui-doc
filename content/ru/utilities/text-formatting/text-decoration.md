@@ -67,4 +67,4 @@ description: "Подчёркивает, надчёркивает или зачё
 - [Стиль линий оформления](/ru/utilities/text-formatting/text-decoration-style/)
 - [Толщина оформления текста](/ru/utilities/text-formatting/text-formatting-thickness/)
 - [Смещение линий оформления](/ru/utilities/text-formatting/text-decoration-offset/)
-- [Подчёркивание ссылок](/ru/utilities/links/links-underlining/)
+- [Ссылки](/ru/utilities/links/links-formatting/)

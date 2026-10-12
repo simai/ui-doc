@@ -1,0 +1,48 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-3 items-start">
+  <div class="flex flex-col gap-1">
+    <div class="grid gap-2">
+      <article class="sf-accordion">
+        <h3 class="sf-accordion-heading">
+          <button class="sf-accordion-trigger" type="button" aria-expanded="true">
+            <span class="sf-accordion-title">Раздел открыт</span>
+            <i class="sf-icon" aria-hidden="true">chevron_right</i>
+          </button>
+        </h3>
+        <div class="sf-accordion-content" role="region">Шеврон смотрит вниз.</div>
+      </article>
+      <article class="sf-accordion">
+        <h3 class="sf-accordion-heading">
+          <button class="sf-accordion-trigger" type="button" aria-expanded="false">
+            <span class="sf-accordion-title">Раздел закрыт</span>
+            <i class="sf-icon" aria-hidden="true">chevron_right</i>
+          </button>
+        </h3>
+        <div class="sf-accordion-content hidden" role="region">Шеврон смотрит в сторону.</div>
+      </article>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">шеврон</code>
+  </div>
+  <div class="flex flex-col gap-1">
+    <div class="grid gap-2">
+      <article class="sf-accordion sf-accordion--plus-minus">
+        <h3 class="sf-accordion-heading">
+          <button class="sf-accordion-trigger" type="button" aria-expanded="true">
+            <span class="sf-accordion-title">Раздел открыт</span>
+            <i class="sf-icon" aria-hidden="true">remove</i>
+          </button>
+        </h3>
+        <div class="sf-accordion-content" role="region">Минус закрывает раздел.</div>
+      </article>
+      <article class="sf-accordion sf-accordion--plus-minus">
+        <h3 class="sf-accordion-heading">
+          <button class="sf-accordion-trigger" type="button" aria-expanded="false">
+            <span class="sf-accordion-title">Раздел закрыт</span>
+            <i class="sf-icon" aria-hidden="true">add</i>
+          </button>
+        </h3>
+        <div class="sf-accordion-content hidden" role="region">Плюс открывает раздел.</div>
+      </article>
+    </div>
+    <code class="text-1/2 color-on-surface-variant">sf-accordion--plus-minus</code>
+  </div>
+</div>

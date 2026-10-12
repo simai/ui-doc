@@ -1,4 +1,14 @@
-<div class="grid grid-col-1 gap-3">
-  <div class="sf-range-slider" data-min="0" data-max="10" data-start="1.2345" data-decimals="2" data-label="text" data-suffix=" кг" aria-label="Масса"></div>
-  <div class="sf-range-slider" data-min="0" data-max="0.01" data-start="0.002" data-step="1e-3" data-label="text" data-suffix=" мг" aria-label="Доза"></div>
+<div class="grid grid-col-1 md:grid-col-3 gap-6">
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-min="0" data-max="100" data-step="10" data-start="30" data-label="text" aria-label="Шаг 10"></div>
+    <code class="text-1/2 color-on-surface-variant">data-step="10"</code>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-min="0" data-max="10" data-start="1.2345" data-decimals="2" data-label="text" data-suffix=" кг" aria-label="Масса"></div>
+    <code class="text-1/2 color-on-surface-variant">data-decimals="2" data-suffix=" кг"</code>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div class="sf-range-slider" data-min="0" data-max="0.01" data-start="0.002" data-step="1e-3" data-label="text" data-suffix=" мг" aria-label="Доза"></div>
+    <code class="text-1/2 color-on-surface-variant">data-step="1e-3"</code>
+  </div>
 </div>

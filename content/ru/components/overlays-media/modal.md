@@ -1,135 +1,173 @@
 ---
 title: "Модальное окно"
-description: "Модальное окно SIMAI Framework: создание, API, фокус, позиции и Smart-вариант."
+description: "Переводит пользователя к одной задаче поверх страницы и возвращает обратно после её завершения."
 profile: reference
 ---
 
 # Модальное окно
 
-Модальное окно временно переводит пользователя к одной важной задаче, не уводя
-с текущей страницы. Для длинного самостоятельного процесса используйте
-отдельную страницу.
+Модальное окно переводит пользователя к одной важной задаче поверх страницы:
+подтвердить действие, заполнить короткую форму. Страница за окном недоступна,
+пока оно открыто. Для длинного самостоятельного процесса берите отдельную
+страницу, для сообщения без выбора —
+[всплывающее сообщение](/ru/components/feedback/toast/).
 
-## Быстрый старт
+## Пример
 
-Разместите триггер и маркер `sf-asset="modal"`, затем создайте `Modal` после
-готовности компонента. Класс передаёт `SF.Loader.ready('Modal', callback)`:
-функция получает класс сразу, если компонент уже зарегистрирован, иначе после
-регистрации. `SF.Loader` появляется к событию `sf-loader-init` на `window`.
-Полный JavaScript показан во вкладке примера.
-
-:::example {id="components/modal/overview" label="Базовое модальное окно"}
+:::example {id="components/modal/overview" label="Окно подтверждения"}
 :::
 
-## Обычный Modal API
+## Разметка
 
-Экземпляр получает `id`, объект `param` и `attrs`. Метод `render()` добавляет
-окно в документ.
+Окно собирает скрипт компонента из параметров — в разметке страницы остаётся
+только кнопка, которая его открывает. Код примера — во вкладке JavaScript.
 
-| API | Назначение |
+- Кнопка с атрибутом `data-sf-modal-open="<id>"` открывает окно с этим `id`,
+  кнопка с `data-sf-modal-close="<id>"` внутри окна закрывает его.
+- Окно состоит из блока `sf-modal` с ролью `dialog`, затемнения фона, панели
+  и поверхности; в поверхности — шапка `sf-modal-header` с заголовком
+  `sf-modal-header-content` и кнопкой закрытия `sf-modal-close-button`, затем
+  тело `sf-modal-body` с прокручиваемой областью.
+- Содержимое передают параметром `html` или `text`, узлами `contentNodes`,
+  а кнопки внизу — узлами `footerNodes`.
+
+## Варианты
+
+### Положение
+
+Параметр `position` задаёт, где стоит окно: `center` (по умолчанию), `top`,
+`bottom`, `left`, `right`, `inline-start` и `inline-end`. Боковое окно у края
+подходит для настроек и подробностей объекта. `inline-start` и `inline-end`
+следуют направлению письма и зеркалятся при письме справа налево; `left` и
+`right` — физические стороны, берите их, только когда сторона экрана не
+зависит от языка.
+
+:::example {id="components/modal/positions" label="Положения окна"}
+:::
+
+### Фон
+
+По умолчанию фон за окном затемнён. `blur: true` заменяет затемнение
+полупрозрачной поверхностью, `blur: 'small'`, `'medium'` или `'large'`
+размывает страницу за окном с выбранной силой. `overlay: false` убирает фон:
+страница видна как есть, но по-прежнему недоступна.
+
+:::example {id="components/modal/backdrop" label="Фон за окном"}
+:::
+
+### Размер
+
+Без параметров окно занимает ширину своего содержимого в пределах экрана.
+`width` и `height` задают размеры панели любой длиной CSS, `fullscreen: true`
+раскрывает окно на весь экран.
+
+:::example {id="components/modal/size" label="Ширина и полноэкранный режим"}
+:::
+
+## Доступность
+
+- Окно получает `role="dialog"` и `aria-modal="true"`, а имя — из заголовка
+  `title` через `aria-labelledby`. Заголовок называет задачу.
+- При открытии фокус переходит в окно, Tab и Shift+Tab не выходят за его
+  пределы, а `aria-modal="true"` сообщает экранному диктору, что страница за
+  окном недоступна. После закрытия фокус возвращается на элемент, который
+  открыл окно.
+- Окно закрывается по Escape, щелчку по фону и кнопке закрытия. Escape
+  закрывает только верхнее окно, если открыто несколько.
+- Кнопка закрытия получает английское имя «Close modal». Переименуйте её после
+  создания: `modal.template.querySelector('.sf-modal-close-button').setAttribute('aria-label', 'Закрыть окно')`.
+- `unclose: true` отключает все три способа закрытия — только для
+  обязательного решения, и тогда внутри окна нужны кнопки, которые завершают
+  сценарий.
+- Пока окно открыто, страница не прокручивается; место полосы прокрутки
+  сохраняется, и содержимое не сдвигается.
+
+## JavaScript
+
+Компонент регистрирует класс `Modal`. `SF.Loader` появляется к событию
+`sf-loader-init` на `window`; `SF.Loader.ready('Modal', callback)` передаёт
+класс, когда он зарегистрирован. Конструктор сразу добавляет окно в конец
+`body` и регистрирует его по `id`, после чего работают триггеры
+`data-sf-modal-open`.
+
+```js
+const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
+
+whenLoader(() => SF.Loader.ready('Modal', (Modal) => {
+  const modal = new Modal({
+    id: 'delete-project',
+    param: {title: 'Удалить проект?', text: 'Действие нельзя отменить.', position: 'center'},
+  });
+  document.querySelector('#delete').addEventListener('click', () => modal.open());
+}));
+```
+
+Параметры (`param`):
+
+| Параметр | Что задаёт |
 |:---|:---|
-| `open({ animate })` | Открывает окно и переводит фокус внутрь |
-| `close()` | Закрывает окно и возвращает фокус на прежний элемент |
-| `toggle()` | Переключает открытое состояние |
-| `setSrc(url)` | Меняет источник AJAX/iframe-содержимого |
-| `reloadContent()` | Повторно загружает удалённое содержимое |
-| `setOverlay(value)` | Показывает или скрывает фон |
-| `destroy()` | Снимает обработчики и удаляет экземпляр по контракту базового компонента |
+| `title`, `text`, `html` | заголовок и содержимое |
+| `contentNodes`, `headerNodes`, `footerNodes` | узлы DOM для тела, шапки и нижней панели |
+| `position`, `width`, `height`, `fullscreen` | положение и размер |
+| `overlay`, `blur` | фон за окном |
+| `unclose`, `showClose`, `closeOnEsc`, `closeOnOverlay` | способы закрытия |
+| `open` | открыть окно сразу после создания |
+| `mode`, `src`, `preload` | `mode: 'ajax'` или `'iframe'` загружает содержимое по адресу `src` |
+| `display: 'inline'` | окно в потоке страницы с ролью `region`, без затемнения, захвата фокуса и блокировки прокрутки; вставляется в элемент `root` |
+| `beforeOpen`, `afterOpen`, `beforeClose`, `afterClose` | функции обратного вызова; `false` из `before…` отменяет переход |
 
-Триггер `data-sf-modal-open="<id>"` открывает зарегистрированный экземпляр, а
-`data-sf-modal-close="<id>"` закрывает его.
+Методы экземпляра: `open({animate})`, `close()`, `toggle()`, `setSrc(url)` и
+`reloadContent()` для загружаемого содержимого, `setOverlay(value)`,
+`destroy()`. Экземпляр по `id` находится в `Modal.registry`.
 
-### События
+События возникают на блоке окна, всплывают и дублируются на `window`:
+`modal:before-open` и `modal:before-close` — до перехода, их отменяет
+`preventDefault()` на блоке; `modal:after-open` и `modal:after-close` — после;
+`modal:before-content-upload` и `modal:after-content-upload` — вокруг загрузки
+содержимого. `detail` несёт `modal`, `id` и `isOpen`. События
+`SFModalBeforeOpenWindow`, `SFModalAfterOpenWindow`,
+`SFModalBeforeCloseWindow` и `SFModalAfterCloseWindow` — другие имена тех же
+событий.
 
-`modal:before-open` и `modal:before-close` можно отменить через
-`preventDefault()`. После перехода создаются `modal:after-open` и
-`modal:after-close`. Совместимые legacy-события `SFModalBeforeOpenWindow`,
-`SFModalAfterOpenWindow`, `SFModalBeforeCloseWindow` и
-`SFModalAfterCloseWindow` пока также поддерживаются.
+```js
+document.addEventListener('modal:before-close', (event) => {
+  if (event.detail.id === 'edit-profile' && formHasChanges()) event.preventDefault();
+});
+```
 
-## Положение
+## Классы
 
-Обычный Modal поддерживает `center`, `left`, `right`, `inline-start`,
-`inline-end`, `top` и `bottom`. Логические позиции `inline-start` и
-`inline-end` следуют направлению текста: в LTR это соответственно левая и
-правая сторона, а в RTL — правая и левая. Физические `left` и `right` не
-зеркалятся.
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-modal` |
+| Части | `sf-modal-close-button`, `sf-modal-close-button--inline-end`, `sf-modal-focus-guard`, `sf-modal-header`, `sf-modal-header-action`, `sf-modal-header-content`, `sf-modal-hide-button`, `sf-modal-hide-button--inline-end`, `sf-modal-hide-icon`, `sf-modal-surface`, `sf-modal-surface--elevated` |
 
-:::example {id="components/modal/positions" label="Положение обычного окна"}
-:::
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-Для интерфейса, который должен одинаково читать начало и конец строки в разных
-локалях, предпочитайте логические позиции. Физические позиции используйте,
-только когда сторона экрана является частью требования независимо от языка.
+## Переменные
 
-## Закрытие, фокус и scroll lock
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила блока (`.sf-modal`); переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
 
-Обычное окно закрывается по Escape, клику по фону и кнопке закрытия. Параметр
-`unclose` отключает эти способы для обязательного решения; внутри всё равно
-нужны явные действия, которые позволяют завершить сценарий.
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-modal-close-right` | не задана; задают модификаторы, например `.sf-modal-close-button`: `var(--sf-space-1/3)` | `inset-inline-end` |
+| `--sf-modal-close-top` | не задана; задают модификаторы, например `.sf-modal-close-button`: `var(--sf-space-1/3)` | `top` |
+| `--sf-modal-header-gap` | не задана; задают модификаторы, например `.sf-modal-header`: `var(--sf-space-1)` | `gap` |
+| `--sf-modal-hide-right` | не задана; задают модификаторы, например `.sf-modal-hide-button`: `var(--sf-space-2)` | `inset-inline-end` |
+| `--sf-modal-hide-top` | не задана; задают модификаторы, например `.sf-modal-hide-button`: `var(--sf-space-1/3)` | `top` |
+| `--sf-modal-iframe-min-height` | `var(--sf-g2)` | — |
+| `--sf-modal-overlay-background` | `var(--sf-black, #000)` | `background-color` |
+| `--sf-modal-overlay-opacity` | `var(--sf-opacity-60, 0.6)` | `opacity` |
+| `--sf-modal-surface-bg` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-surface-1, #fff)` | `background-color` |
+| `--sf-modal-surface-border-color` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-outline-variant, transparent)` | `border` |
+| `--sf-modal-surface-border-style` | не задана; задают модификаторы, например `.sf-modal-surface`: `solid` | `border` |
+| `--sf-modal-surface-border-width` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-border-width, var(--sf-px))` | `border` |
+| `--sf-modal-surface-gap` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-space-1)` | `gap` |
+| `--sf-modal-surface-padding` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-space-2)` | `padding` |
+| `--sf-modal-surface-radius` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-radius--surface)` | `border-radius` |
+| `--sf-modal-surface-shadow` | не задана; задают модификаторы, например `.sf-modal-surface`: `none` | `box-shadow` |
 
-При открытии Framework:
+## См. также
 
-- сохраняет активный элемент и возвращает на него фокус после закрытия;
-- удерживает Tab/Shift+Tab внутри верхнего окна стека;
-- блокирует прокрутку страницы и сохраняет компенсацию полосы прокрутки;
-- обрабатывает Escape только для верхнего окна.
-
-Заголовок должен однозначно называть задачу. Не отключайте закрытие, если
-пользователь может безопасно отменить действие.
-
-## Smart Modal
-
-`<sf-modal>` добавляет декларативную разметку, inline-режим, сворачивание,
-источники содержимого и настраиваемый фон. Это отдельный Smart-компонент поверх
-того же визуального и стекового контракта.
-
-:::example {id="components/modal/smart-overview" label="Smart Modal"}
-:::
-
-### Позиции
-
-:::example {id="components/modal/smart-positions" label="Положение Smart Modal"}
-:::
-
-Smart Modal принимает тот же набор значений. В примере рядом показаны
-физические и логические стороны; переключение `dir` у документа зеркалит только
-`inline-start` и `inline-end`.
-
-### Фон и полноэкранный режим
-
-:::example {id="components/modal/smart-overlay" label="Фон и полноэкранный режим"}
-:::
-
-### Сворачивание
-
-:::example {id="components/modal/smart-minimized" label="Свёрнутое Smart Modal"}
-:::
-
-### Локальное содержимое
-
-:::example {id="components/modal/smart-local-content" label="Локальный источник содержимого"}
-:::
-
-### Inline-режим
-
-:::example {id="components/modal/smart-inline" label="Smart Modal в потоке страницы"}
-:::
-
-Inline-режим имеет роль области, не блокирует прокрутку и не захватывает фокус.
-
-## Responsive и LTR/RTL
-
-На мобильной ширине проверяйте доступность действий, прокрутку длинного тела и
-отсутствие горизонтального переполнения. `top` и `bottom` не зависят от
-направления текста; `left` и `right` физические; `inline-start` и `inline-end`
-зеркалятся между LTR и RTL.
-
-## Ограничения и проверка
-
-- `modal` имеет статус `discoverable`, а не `ready`, в registry exact Core.
-- AJAX/iframe требуют обработки loading/error и доверенного источника.
-- Проверьте открытие и закрытие мышью и клавиатурой, Escape, цикл Tab,
-  восстановление фокуса, scroll lock, стек, mobile, light/dark и LTR/RTL.
-- Обычный Modal и Smart Modal не следует смешивать в одном примере без проверки
-  общего стека и возврата фокуса.
+- [Модальное окно — Smart-компонент](/ru/smart-components/overlays/modal/)
+- [Всплывающие сообщения](/ru/components/feedback/toast/)

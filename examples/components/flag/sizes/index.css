@@ -1,0 +1,3 @@
+.flag-demo-size-b6 { --sf-flag--size: var(--sf-b6); }
+.flag-demo-size-c2 { --sf-flag--size: var(--sf-c2); }
+.flag-demo-size-c6 { --sf-flag--size: var(--sf-c6); }

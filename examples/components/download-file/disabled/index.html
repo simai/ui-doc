@@ -1,9 +1,26 @@
-<button type="button" class="sf-download-file disabled" disabled>
-  <span class="sf-download-file__body sf-download-file-wrap flex items-cross-center">
-    <span class="sf-download-file__main sf-download-file-container flex flex-1 items-cross-center">
-      <i class="sf-download-file__icon sf-icon" aria-hidden="true">download</i>
-      <span class="sf-download-file__name sf-download-file-file-name">Файл временно недоступен</span>
+<div class="grid grid-col-1 gap-3">
+<div class="flex flex-col gap-1">
+  <button class="sf-download-file" type="button" disabled>
+    <span class="sf-download-file-wrap">
+      <span class="sf-download-file-container">
+        <i class="sf-icon" aria-hidden="true">download</i>
+        <span class="sf-download-file-file-name">Отчёт за квартал.pdf</span>
+      </span>
+      <span class="sf-download-file-file-size">2.4MB</span>
     </span>
-    <span class="sf-download-file__size sf-download-file-file-size">106 B</span>
-  </span>
-</button>
+  </button>
+  <code class="text-1/2 color-on-surface-variant">button disabled</code>
+</div>
+<div class="flex flex-col gap-1">
+  <a class="sf-download-file disabled" aria-disabled="true">
+    <span class="sf-download-file-wrap">
+      <span class="sf-download-file-container">
+        <i class="sf-icon" aria-hidden="true">download</i>
+        <span class="sf-download-file-file-name">Договор.pdf</span>
+      </span>
+      <span class="sf-download-file-file-size">860KB</span>
+    </span>
+  </a>
+  <code class="text-1/2 color-on-surface-variant">a без href, aria-disabled="true"</code>
+</div>
+</div>

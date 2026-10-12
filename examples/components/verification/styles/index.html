@@ -1,10 +1,10 @@
-<div class="grid grid-col-1 sm:grid-col-2 gap-3">
-  <label class="sf-verification-form sf-verification-form--size-1" data-length="4" data-mode="numeric">
-    <span class="sf-verification-form-label">Контурный</span>
-    <span class="sf-verification sf-verification--size-1"><input class="sf-verification-input" type="text" inputmode="numeric" autocomplete="one-time-code" value="1234" aria-label="Контурный код"></span>
-  </label>
-  <label class="sf-verification-form sf-verification-form--size-1" data-length="4" data-mode="alphanumeric">
-    <span class="sf-verification-form-label">С заливкой</span>
-    <span class="sf-verification sf-verification--size-1 sf-verification--filled"><input class="sf-verification-input" type="text" autocomplete="one-time-code" value="A7B2" aria-label="Буквенно-цифровой код"></span>
-  </label>
+<div class="flex flex-wrap gap-6">
+  <div class="flex flex-col gap-1">
+    <label class="sf-verification-form sf-verification-form--size-1" data-length="4"><span class="sf-verification-form-label">С границей</span><span class="sf-verification sf-verification--size-1"><input class="sf-verification-input" type="text" inputmode="numeric" value="12"></span></label>
+    <code class="text-1/2 color-on-surface-variant">без модификатора</code>
+  </div>
+  <div class="flex flex-col gap-1">
+    <label class="sf-verification-form sf-verification-form--size-1" data-length="4"><span class="sf-verification-form-label">С заливкой</span><span class="sf-verification sf-verification--size-1 sf-verification--filled"><input class="sf-verification-input" type="text" inputmode="numeric" value="12"></span></label>
+    <code class="text-1/2 color-on-surface-variant">sf-verification--filled</code>
+  </div>
 </div>

@@ -1,0 +1,4 @@
+/* Room for the open list, which the component positions under the field. */
+.country-code-open-room {
+  min-block-size: 18rem;
+}

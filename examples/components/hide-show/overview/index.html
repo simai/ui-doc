@@ -1,5 +1,7 @@
-<div class="sf-hide-show">
- <button class="sf-button sf-button--primary sf-button--size-1" type="button" data-action="show">Показать подробности</button>
- <button class="sf-button sf-button--outline sf-button--size-1" type="button" data-action="hide">Скрыть подробности</button>
- <div class="bg-surface-container p-2 radius-default" data-content>Дополнительное содержимое управляется теми же кнопками.</div>
+<div class="sf-hide-show flex flex-col items-start gap-2">
+  <div class="flex flex-wrap gap-1">
+    <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-action="show"><span class="sf-button-text-container">Показать подробности</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-action="hide"><span class="sf-button-text-container">Скрыть подробности</span></button>
+  </div>
+  <div class="bg-surface-container p-2 radius-2" data-content>Тариф включает до десяти участников и 50 ГБ хранилища.</div>
 </div>

@@ -111,6 +111,24 @@ const rules = (css) => {
 };
 // A vendor-prefixed declaration (`-o-object-fit`) beside its standard one is
 // a fallback a reader does not write; it is left out.
+// A selector list split at its own commas, not those inside `:where(…)`.
+const splitSelector = (selector) => {
+  const parts = [];
+  let depth = 0;
+  let current = '';
+  for (const char of selector) {
+    if (char === '(') depth += 1;
+    if (char === ')') depth -= 1;
+    if (char === ',' && depth === 0) {
+      parts.push(current);
+      current = '';
+      continue;
+    }
+    current += char;
+  }
+  parts.push(current);
+  return parts;
+};
 const declarations = (body) => {
   const items = body.split(';').map((item) => item.trim()).filter(Boolean);
   const standard = new Set(items.map((item) => item.split(':')[0].trim()).filter((property) => !property.startsWith('-')));
@@ -149,7 +167,7 @@ const utilityClasses = (families) => {
     const css = show(`distr/utility/${family}/default/css/default.css`);
     if (!css) throw new Error(`no default variant for utility family ${family}`);
     for (const {selector, body, media} of rules(css)) {
-      for (const part of selector.split(',').map((item) => item.trim())) {
+      for (const part of splitSelector(selector).map((item) => item.trim())) {
         const name = firstClass(part);
         if (!name) continue;
         const shownSelector = unescape(part);
@@ -371,7 +389,8 @@ const componentClasses = (component, block) => {
       // An escaped selector inside an attribute (`:has(.x\\[class*…\\])`) is not a
       // class a reader writes; a class name holds letters, digits, -, _ and /.
       if (!/^[a-z0-9_/-]+$/u.test(name)) continue;
-      if (name === block || name.startsWith(`${block}-`)) names.add(name);
+      // Parts are `block-…` or BEM `block__…`.
+      if (name === block || name.startsWith(`${block}-`) || name.startsWith(`${block}__`)) names.add(name);
     }
   }
   const sorted = [...names].sort();
@@ -404,10 +423,10 @@ const componentVariables = (component, block) => {
     for (const part of body.split(';')) {
       const match = part.trim().match(/^(--[a-zA-Z0-9_-]+)\s*:\s*([\s\S]+)$/u);
       if (!match || !match[1].startsWith(`--${block}`)) continue;
-      const base = !media && selector.split(',').map((item) => item.trim()).includes(`.${block}`);
+      const base = !media && splitSelector(selector).map((item) => item.trim()).includes(`.${block}`);
       const known = declared.get(match[1]);
       const value = unescape(match[2].trim());
-      if (!known) declared.set(match[1], {value, from: base ? null : unescape(selector.split(',')[0].trim()), base});
+      if (!known) declared.set(match[1], {value, from: base ? null : unescape(splitSelector(selector)[0].trim()), base});
       else if (base && !known.base) declared.set(match[1], {value, from: null, base: true});
     }
   }
@@ -474,6 +493,10 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     next = setSection(next, 'utility', 'Сводка', null);
     next = setSection(next, 'utility', 'Классы', [...utilityClasses(entry.families), ...utilityConditions(entry.families), '', SOURCE_NOTE]);
     next = setSection(next, 'utility', 'Переменные', utilityVariables(entry.families));
+  } else if (entry.kind === 'component' && entry.css === false) {
+    // A component that ships only a script (theme, hide-show) has no classes
+    // or variables of its own to list.
+    next = setSection(next, 'component', 'Сводка', null);
   } else if (entry.kind === 'component') {
     next = setSection(next, 'component', 'Сводка', null);
     // A component may own several blocks (pagination: the bar and its page

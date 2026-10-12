@@ -1,18 +1,30 @@
-<div class="flex flex-wrap gap-1 items-center">
-  <span class="sf-badge sf-badge--tonal sf-badge--success sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
-    <span class="sf-badge-icon-container flex justify-center items-center"><i class="sf-icon" aria-hidden="true">check</i></span>
-    <span class="sf-badge-text-container flex items-center"><span class="sf-badge-text">Проверено</span></span>
-  </span>
-  <span class="sf-badge sf-badge--outline sf-badge--info sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
-    <span class="sf-badge-text-container flex items-center"><span class="sf-badge-text">Справка</span></span>
-    <span class="sf-badge-icon-container flex justify-center items-center"><i class="sf-icon" aria-hidden="true">info</i></span>
-  </span>
-  <span class="sf-badge sf-badge--main sf-badge--danger sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
-    <span class="sr-only">Больше девяноста девяти непрочитанных сообщений</span>
-    <span class="sf-badge-text-container flex items-center" aria-hidden="true"><span class="sf-badge-text">99+</span></span>
-  </span>
-  <span class="sf-badge sf-badge--main sf-badge--success sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
-    <span class="sr-only">Подтверждено</span>
-    <span class="sf-badge-icon-container flex justify-center items-center"><i class="sf-icon" aria-hidden="true">verified</i></span>
-  </span>
+<div class="flex flex-wrap items-end gap-4">
+  <div class="flex flex-col items-start gap-1">
+    <span class="sf-badge sf-badge--tonal sf-badge--success sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
+      <span class="sf-badge-icon-container flex justify-center items-center"><i class="sf-icon" aria-hidden="true">check</i></span>
+      <span class="sf-badge-text-container flex items-center"><span class="sf-badge-text">Проверено</span></span>
+    </span>
+    <code class="text-1/2 color-on-surface-variant">иконка в начале</code>
+  </div>
+  <div class="flex flex-col items-start gap-1">
+    <span class="sf-badge sf-badge--outline sf-badge--info sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
+      <span class="sf-badge-text-container flex items-center"><span class="sf-badge-text">Справка</span></span>
+      <span class="sf-badge-icon-container flex justify-center items-center"><i class="sf-icon" aria-hidden="true">info</i></span>
+    </span>
+    <code class="text-1/2 color-on-surface-variant">иконка в конце</code>
+  </div>
+  <div class="flex flex-col items-start gap-1">
+    <span class="sf-badge sf-badge--main sf-badge--success sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
+      <span class="sr-only">Подтверждено</span>
+      <span class="sf-badge-icon-container flex justify-center items-center"><i class="sf-icon" aria-hidden="true">verified</i></span>
+    </span>
+    <code class="text-1/2 color-on-surface-variant">только иконка и sr-only</code>
+  </div>
+  <div class="flex flex-col items-start gap-1">
+    <span class="sf-badge sf-badge--main sf-badge--error sf-badge--size-1/2 flex flex-row flex-nowrap justify-center items-center">
+      <span class="sr-only">Больше девяноста девяти непрочитанных сообщений</span>
+      <span class="sf-badge-text-container flex items-center" aria-hidden="true"><span class="sf-badge-text">99+</span></span>
+    </span>
+    <code class="text-1/2 color-on-surface-variant">счётчик и sr-only</code>
+  </div>
 </div>

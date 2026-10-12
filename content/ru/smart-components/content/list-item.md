@@ -17,7 +17,7 @@ List Item остаётся статическим визуальным пред�
 Tab-фокуса и ложного click-поведения.
 
 Все пять вариантов — text, icon, checkbox, avatar и color — показаны в рабочем
-[примере типов пунктов Dropdown](/ru/components/navigation/dropdown/#типы-пунктов). Ниже
+[примере типов пунктов Dropdown](/ru/components/navigation/dropdown/#пункты-списка). Ниже
 показаны их статические представления без ложного интерактивного поведения.
 
 :::example {id="components/list-item/overview" label="Результат"}

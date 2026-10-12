@@ -1,4 +1,6 @@
 const startModalExample = (Modal) => {
+  if (Modal.registry.has('modal-example')) return;
+
   const modal = new Modal({
     id: 'modal-example',
     param: {
@@ -17,15 +19,13 @@ const startModalExample = (Modal) => {
         </div>
       `,
     },
-    attrs: {},
   });
 
-  modal.render();
-  document.querySelector('#modal-example-open')?.addEventListener('click', () => modal.open());
+  modal.template.querySelector('.sf-modal-close-button')?.setAttribute('aria-label', 'Закрыть окно');
 };
 
 if (window.SF?.Loader) {
   window.SF.Loader.ready('Modal', startModalExample);
 } else {
-  window.addEventListener('sf-loader-init', () => window.SF.Loader.ready('Modal', startModalExample), { once: true });
+  window.addEventListener('sf-loader-init', () => window.SF.Loader.ready('Modal', startModalExample), {once: true});
 }

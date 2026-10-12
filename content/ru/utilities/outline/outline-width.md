@@ -68,6 +68,25 @@ outline-offset-2`.
 `none`. Добавьте класс `outline` из ядра или класс
 [стиля](/ru/utilities/outline/outline-style/).
 
+### Классы ядра outline и outline-none
+
+| Класс | CSS |
+| :--- | :--- |
+| `outline` | `outline: var(--sf-px) var(--sf-outline-variant) solid` |
+| `outline-none` | `outline-width: var(--sf-0)` |
+
+`outline` включает сплошной контур в один пиксель цвета края области: он
+задаёт сразу толщину, цвет и стиль, а классы толщины и цвета после него
+уточняют одно своё свойство. `outline-none` снимает толщину контура.
+Префиксов ширины экрана и состояния у этих классов нет.
+
+Клавиатурный фокус рисуется не этими классами: ядро задаёт его правилом
+`:focus-visible` из переменных фокуса, см.
+[«Фокус»](/ru/guide/fundamentals/focus/). `outline-none` на элементе, который
+получает фокус, убирает и это кольцо. Класс `outline` в фокусе тоже заменяет
+кольцо своим тонким контуром; чтобы фокус оставался заметным, добавьте
+классы состояния, например `focus-visible:outline-2 focus-visible:outline-primary`.
+
 ```html
 <button class="outline outline-1 outline-primary outline-offset-2 focus-visible:outline-4">Отправить</button>
 ```

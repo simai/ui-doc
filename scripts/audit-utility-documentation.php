@@ -45,9 +45,9 @@ foreach ($pages as $path) {
     $standardPage = isset($standardPages[substr($relative, strlen('content/ru/'))]);
     if (str_contains($markdown, ':badge[')) {
         $metrics['pages_with_badges']++;
-    } elseif (! $standardPage) {
-        $blockers[] = ['code' => 'badge_missing', 'path' => $relative];
     }
+    // Badges are no longer asked for: the reference page standard carries no
+    // badges, and a page outside it (core link styles) has no family to badge.
     if (!preg_match('/^:::example\s*\{[^}\n]*\bid=["\'][^"\']+["\'][^}\n]*\}\s*$/mu', $markdown, $match, PREG_OFFSET_CAPTURE)) {
         $blockers[] = ['code' => 'reusable_example_missing', 'path' => $relative];
         continue;

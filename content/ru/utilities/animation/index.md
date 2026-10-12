@@ -3,7 +3,6 @@
 Утилиты категории Анимация помогают настраивать связанные CSS-свойства и паттерны в интерфейсе.
 
 ## Материалы раздела
-- [Параметры по умолчанию для анимации](/ru/utilities/animation/animation-default-parameters/)
 - [Продолжительность анимации](/ru/utilities/animation/animation-duration/)
 - [Задержка перехода](/ru/utilities/animation/animation-transition-delay/)
 - [Продолжительность перехода](/ru/utilities/animation/animation-transition-duration/)

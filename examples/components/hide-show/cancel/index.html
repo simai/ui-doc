@@ -1,7 +1,5 @@
-<div class="sf-hide-show" id="protected-details">
-  <button class="sf-button sf-button--outline" type="button" data-action="toggle">Попробовать скрыть</button>
-  <div class="bg-surface-container p-2 radius-default" data-content>Изменение отменяется обработчиком.</div>
+<div class="sf-hide-show flex flex-col items-start gap-2" data-hide-show-cancel-demo>
+  <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-action="toggle"><span class="sf-button-text-container">Скрыть форму</span></button>
+  <div class="bg-surface-container p-2 radius-2" data-content>В форме есть несохранённые изменения, поэтому она не скрывается.</div>
+  <p class="m-0" role="status" data-hide-show-cancel-result></p>
 </div>
-<script>
-  document.querySelector('#protected-details').addEventListener('sf-hide-show:change', event => event.preventDefault());
-</script>

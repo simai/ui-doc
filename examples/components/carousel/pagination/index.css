@@ -1,0 +1,4 @@
+/* Demo only: a shorter carousel, so several fit side by side. */
+.sf-carousel.carousel-demo-compact {
+  --sf-carousel--block-size: var(--sf-f0);
+}

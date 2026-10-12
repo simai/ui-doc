@@ -1,123 +1,224 @@
 ---
 title: "Теги"
-description: "Категории и выбранные значения в компактной форме."
+description: "Компактно показывает категорию, выбранное значение, фильтр или статус."
 profile: reference
 ---
 
 # Теги
 
-Тег компактно показывает категорию, выбранный фильтр, значение или статус. Сам
-по себе тег не является действием: интерактивность добавляется только тому
-элементу, который действительно можно выбрать или удалить.
+Тег компактно показывает категорию, выбранное значение, фильтр или статус.
+Сам по себе тег — надпись, а не действие: кнопкой становится только тег, который
+действительно можно выбрать, а удаляемое значение получает отдельную кнопку
+удаления. Для числа или статуса в углу другого элемента есть
+[бейдж](/ru/components/feedback/badges/).
 
 ## Пример
 
-:::example {id="components/tags/overview" label="Результат"}
+:::example {id="components/tags/overview" label="Теги"}
 :::
 
-## Особенности применения
+## Разметка
 
-Для обычной подписи или статуса используйте нейтральный контейнер без роли и
-Tab-остановки. Выбираемый фильтр оформляйте нативной кнопкой с
-`sf-tag--interactive` и `aria-pressed`. Удаляемое значение остаётся статической
-поверхностью и содержит одну отдельную кнопку удаления с понятным доступным
-именем. Выбор и удаление нельзя совмещать в одном теге.
+Минимальную разметку показывает пример выше: элемент с классами блока
+`sf-tag`, содержимого (`sf-tag--default`) и размера (`sf-tag--size-1`), внутри —
+подпись `<span class="sf-tag-container">`.
 
-## Типы содержимого
+- Раскладку задают утилиты `inline-flex flex-row flex-nowrap items-center`.
+- Статичный тег — `<div>` или `<span>` без роли и без точки Tab.
+- Выбираемый фильтр — нативный `<button type="button">` с
+  `sf-tag--interactive` и `aria-pressed`.
+- Удаляемое значение — статичный тег с `sf-tag--removable` и одной кнопкой
+  удаления внутри. Выбор и удаление в одном теге не совмещайте.
+- Иконку, цветную метку, аватар и отметку скрывайте (`aria-hidden="true"`),
+  когда подпись уже передаёт их смысл.
+- У компонента нет своего JavaScript: выбор и удаление обрабатывает
+  приложение.
 
-Модификаторы `sf-tag--checkbox`, `sf-tag--icon`, `sf-tag--color` и
-`sf-tag--avatar` добавляют соответствующий визуальный маркер. Если видимый текст
-уже передаёт его смысл, маркер скрывается от дерева доступности через
-`aria-hidden="true"`.
+## Варианты
 
-:::example {id="components/tags/types" label="Результат"}
+### Содержимое
+
+Модификатор содержимого добавляет маркер перед подписью: `sf-tag--default` —
+только текст; `sf-tag--checkbox` — отметка `sf-tag-check` для выбираемого
+фильтра; `sf-tag--icon` — иконка `sf-icon`; `sf-tag--color` — цветная метка
+`sf-tag-color-icon` (цвет задаёт утилита фона); `sf-tag--avatar` — аватар
+размера `1/4`.
+
+:::example {id="components/tags/types" label="Содержимое тега"}
 :::
 
-## Статусы
+### Статус
 
-Доступны нейтральный, успешный, предупреждающий и ошибочный варианты.
+`sf-tag--success`, `sf-tag--warning` и `sf-tag--error` окрашивают тег цветом
+статуса, точка [`sf-dot`](/ru/components/feedback/dot/) перед подписью
+повторяет его. Нейтральный статус — `sf-tag--default`. Статус не передавайте
+только цветом: подпись называет его словами.
 
-:::example {id="components/tags/statuses" label="Результат"}
+:::example {id="components/tags/statuses" label="Статусы тега"}
 :::
 
-## Внешний вид
+### Вид
 
-У тега внешний вид — **отдельная ось**, а не разновидность типа: тип говорит, что
-тег несёт или о чём сообщает, а не как он выглядит. Модификаторы
-`sf-tag--appearance-surface` и `sf-tag--appearance-ghost` берут степень
-контраста из [нейтральной alpha-шкалы](/ru/guide/fundamentals/colors-and-themes/):
-`surface` держит слабую заливку и границу на ступень сильнее, `ghost` в покое не
-показывает ничего.
+Вид — отдельная ось. Без класса тег стоит на нейтральной заливке.
+`sf-tag--appearance-surface` берёт слабую заливку и контур на ступень сильнее
+из [нейтральной шкалы](/ru/guide/fundamentals/colors-and-themes/) — для тега на
+цветном фоне или изображении. `sf-tag--appearance-ghost` прозрачен; у выбираемого
+тега фон появляется при наведении. Вид берут нейтральные теги (`default`,
+`icon`, `color`, `avatar`, `checkbox`); статусные теги вид не берут, чтобы не
+вымывать цвет статуса. Контур `surface` — внутренняя тень, а не рамка: тег не
+становится выше соседних.
 
-Вид берут только нейтральные типы — `default`, `icon`, `color`, `avatar`,
-`checkbox`. Статусный тег несёт смысл цветом, и вымывание цвета вымыло бы смысл,
-поэтому `success`, `error` и `warning` вид не берут.
+:::example {id="components/tags/appearance" label="Виды тега"}
+:::
 
-Граница у `surface` рисуется внутренней тенью, а не рамкой: тег собран без
-рамки, и реальная рамка сделала бы его выше соседнего. Выбор и нажатие сохраняют
-свой цвет — у тега нажатие показывает, как выглядит выбранное.
+### Размер
 
-## Счётчик и удаление
+Размеры `1/3`, `1/2`, `1`, `2` и `3` согласуют текст и отступы тега со
+ступенями текста; скругление у всех размеров одно — радиус контролов
+`--sf-radius--ui`. Тег берёт размер на ступень меньше текста или поля, рядом
+с которыми стоит.
 
-`sf-tag-count` добавляет к обычному тегу вспомогательное число. Для удаляемого
-значения используется `sf-tag--removable` и отдельная кнопка с именем,
-описывающим конкретное действие.
+:::example {id="components/tags/sizes" label="Размеры тега"}
+:::
 
-:::example {id="components/tags/actions" label="Результат"}
+### Плотность
+
+Плотность меняет только отступы сверху и снизу, как у кнопок:
+`spacing-compact`, без класса — обычная, `spacing-comfortable` и
+`spacing-spacious`.
+
+:::example {id="components/tags/spacing" label="Плотность тега"}
+:::
+
+### Счётчик и удаление
+
+`sf-tag-count` после подписи показывает вспомогательное число, например
+количество задач. `sf-tag--removable` готовит тег к кнопке удаления: внутри
+стоит [кнопка закрытия](/ru/components/actions/close/) размера `1/3`, её
+доступное имя называет удаляемое значение.
+
+:::example {id="components/tags/actions" label="Тег со счётчиком и удаляемый тег"}
+:::
+
+### В строке
+
+`sf-tag--inline` ставит тег на строку другого элемента — текста, ячейки,
+поля выпадающего списка: убирает отступы сверху и снизу и делает кнопку
+удаления высотой в строку. В строке текста тег обычно на ступень меньше
+текста вокруг. Высоту строки задают `sf-tag--line-1/2`, `--line-1` и
+`--line-2` или переменная `--sf-tag--line` на элементе. Вместе с
+`spacing-compact` тег в строке становится компактной плашкой своего размера —
+так поле выпадающего списка показывает выбранные значения.
+
+:::example {id="components/tags/inline" label="Теги в строке текста"}
+:::
+
+### Длинный текст
+
+Тег не шире доступной области и переносит длинную подпись, не создавая
+горизонтальной прокрутки. Переносы и промежутки между тегами группы задают
+утилиты контейнера.
+
+:::example {id="components/tags/wrapping" label="Группа тегов с длинной подписью"}
 :::
 
 ## Состояния
 
-`active` вместе с `aria-pressed="true"` отмечает выбранную кнопку-фильтр, а
-нативный `disabled` делает её недоступной. Фокус виден при клавиатурной
-навигации и сохраняется в режиме принудительных цветов.
+Наведение и нажатие выбираемый тег показывает сам.
 
-:::example {id="components/tags/states" label="Результат"}
+### Выбран
+
+Класс `active` вместе с `aria-pressed="true"` отмечает выбранный фильтр:
+отметка `sf-tag-check` заполняется. Состояние сообщает `aria-pressed`, а не
+класс.
+
+:::example {id="components/tags/state-active" label="Невыбранный и выбранный фильтр"}
 :::
 
-## Размеры
+### Недоступен
 
-Пять размеров — `1/3`, `1/2`, `1`, `2` и `3` — задают текст тега: 12, 14, 16,
-20 и 24 пикселя. Отступы каждого размера идут от его собственной шкалы, а
-скругление у всех одно — системный радиус компактных элементов `--sf-radius--ui`.
+Класс `disabled` даёт тегу серую заливку и приглушает подпись. Кнопке-фильтру
+добавьте и нативный `disabled`: только он снимает фокус и нажатие.
 
-:::example {id="components/tags/sizes" label="Результат"}
+:::example {id="components/tags/state-disabled" label="Недоступные теги"}
 :::
 
-## Плотность
+### Фокус
 
-Плотность меняет только отступы сверху и снизу и называется так же, как у
-кнопок: `spacing-compact`, `spacing-comfortable` и `spacing-spacious`. Без класса
-тег обычной плотности. Smart-тег принимает тот же выбор атрибутом `spacing`.
+Выбираемый тег и кнопка удаления при переходе клавишей Tab получают кольцо
+фокуса по `:focus-visible`; оно остаётся видимым и в режиме высокой
+контрастности. В примере фокус показан классом `focus-visible`, который CSS
+читает наравне с `:focus-visible`.
 
-:::example {id="components/tags/spacing" label="Результат"}
+:::example {id="components/tags/state-focus" label="Теги в фокусе"}
 :::
 
-## Тег в строке
+## Доступность
 
-Внутри другого элемента — в поле выпадающего списка, в строке текста, в ячейке
-таблицы — тег ставится на строку этого элемента: класс `sf-tag--inline` (у
-Smart-тега — атрибут `inline`) убирает отступы сверху и снизу, прижимает подпись
-и делает кнопку удаления высотой в строку, а её крестик — пропорциональным
-подписи. В строке текста такой тег обычно на один размер меньше текста вокруг.
-Элемент, в который встроен тег, может передать высоту своей строки переменной
-`--sf-tag--line`.
+- Статичный тег не получает роль и точку Tab.
+- Выбираемый фильтр — `<button>` с `aria-pressed`; группу фильтров
+  оборачивайте в элемент с `role="group"` и общим доступным именем.
+- Кнопка удаления называет значение: «Удалить тег Важное». После удаления
+  переведите фокус на соседний тег или на поле ввода.
+- Статус передавайте словами в подписи, а не только цветом.
+- Маркеры перед подписью и кнопка удаления стоят на логических сторонах и
+  зеркалятся при письме справа налево.
 
-Вместе с `spacing-compact` тег в строке становится компактной плашкой своего
-размера. Так выпадающий список показывает выбранные значения: в полях размеров
-`1`, `2` и `3` — компактный тег того же размера, что поле, с тем же шрифтом, а
-поле оставляет вокруг него 3 пикселя, поэтому поле с тегами той же высоты, что
-и поле с текстом. В размерах `1/2` и `1/3` места на это не хватает, и тег
-ставится на строку поля на размер меньше.
+## Классы
 
-:::example {id="components/tags/inline" label="Результат"}
-:::
+| Что | Классы |
+|:---|:---|
+| Блок | `sf-tag` |
+| Части | `sf-tag-check`, `sf-tag-color-icon`, `sf-tag-container`, `sf-tag-count` |
+| Модификаторы | `sf-tag--appearance-ghost`, `sf-tag--appearance-surface`, `sf-tag--avatar`, `sf-tag--checkbox`, `sf-tag--color`, `sf-tag--default`, `sf-tag--error`, `sf-tag--icon`, `sf-tag--inline`, `sf-tag--interactive`, `sf-tag--line-1`, `sf-tag--line-1/2`, `sf-tag--line-2`, `sf-tag--removable`, `sf-tag--success`, `sf-tag--warning` |
+| Размеры | `sf-tag--size-1`, `sf-tag--size-1/2`, `sf-tag--size-1/3`, `sf-tag--size-2`, `sf-tag--size-3` |
 
-## Группы и длинный текст
+Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
-Контейнер группы отвечает за переносы и расстояния через утилиты Framework.
-Сам тег ограничивает ширину доступной областью и переносит длинную подпись, не
-создавая горизонтальную прокрутку.
+## Переменные
 
-:::example {id="components/tags/wrapping" label="Результат"}
-:::
+Компонент читает свои переменные, а модификаторы задают им значения. Чтобы изменить вид, задайте переменную на элементе или в своём слое для всего проекта — CSS компонента менять не нужно. Значение по умолчанию — из базового правила блока (`.sf-tag`); переменную без него задают только модификаторы. Какие переменные публичный контракт, а какие служебные, Framework ещё уточняет.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-surface-container)` | `background-color` |
+| `--sf-tag--block` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-ui-1/3--space-y-tightness-default)` | `padding-top`, `padding-bottom` |
+| `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag.sf-tag--appearance-surface.sf-tag--color`: `inset 0 0 0 var(--sf-px) var(--sf-alpha-8)` | `box-shadow` |
+| `--sf-tag--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/3)` | `font-size`, `--sf-close-icon--height`, `--sf-close-icon--width` |
+| `--sf-tag--gap` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `0` | `gap` |
+| `--sf-tag--inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-ui-1/3--space-x)` | `padding-inline-end` |
+| `--sf-tag--inline-line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `var(--sf-tag--line)` | `line-height` |
+| `--sf-tag--inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-ui-1/3--space-x)` | `padding-inline-start` |
+| `--sf-tag--label-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-end` |
+| `--sf-tag--label-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-start` |
+| `--sf-tag--line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--line-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-tag--inline-line`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size` |
+| `--sf-tag--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-height-1/3)` | `line-height`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size` |
+| `--sf-tag--padding-bottom` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
+| `--sf-tag--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
+| `--sf-tag--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-start`, `--sf-tag-container--padding-inline-start` |
+| `--sf-tag--padding-top` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top` |
+| `--sf-tag-color-icon--border-radius` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color .sf-tag-color-icon`: `var(--sf-radius-circle)` | `border-radius` |
+| `--sf-tag-color-icon--height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-color-icon`: `var(--sf-text-height-1)` | `height` |
+| `--sf-tag-color-icon--opacity` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color.disabled .sf-tag-color-icon`: `var(--sf-opacity-30)` | `opacity` |
+| `--sf-tag-color-icon--width` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-color-icon`: `var(--sf-text-height-1)` | `width` |
+| `--sf-tag-container--background-color` | не задана; задают модификаторы, например `.sf-tag .sf-tag-container`: `transparent` | `background-color` |
+| `--sf-tag-container--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color .sf-tag-container`: `var(--sf-on-surface)` | `color` |
+| `--sf-tag-container--font-family` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text--family)` | `font-family` |
+| `--sf-tag-container--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-tag-container--font-weight` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-tag-container--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-tag-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
+| `--sf-tag-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
+| `--sf-tag-count--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `transparent` | `background-color` |
+| `--sf-tag-count--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `var(--sf-on-surface)` | `color` |
+| `--sf-tag-count--font-family` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text--family)` | `font-family` |
+| `--sf-tag-count--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-tag-count--font-weight` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-tag-count--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-tag-count--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-count`: `var(--sf-space-1/3)` | `padding-inline-end` |
+
+## См. также
+
+- [Бейджи](/ru/components/feedback/badges/)
+- [Аватары](/ru/components/content/avatars/)
+- [Tags — Smart-компонент](/ru/smart-components/content/tags/)

@@ -108,13 +108,35 @@ description: "Задаёт толщину рамки от 0 до 10 пиксел
 
 Ядро ставит всем элементам сплошной стиль, поэтому класс толщины сразу рисует
 линию. Её цвет — цвет текста, пока не задан класс
-[цвета границы](/ru/utilities/border/border-color/). Класс `border` из ядра
-включает рамку в 1px цвета `outline-variant`; `border-none` её убирает.
+[цвета границы](/ru/utilities/border/border-color/).
 
 ```html
 <div class="border-1 border-outline-variant radius-surface p-3">Карточка</div>
 <h2 class="border-bottom-2 border-primary">Раздел</h2>
 <blockquote class="border-inline-start-4 border-tertiary p-x-3">Цитата</blockquote>
+```
+
+### Классы ядра border и border-none
+
+Два класса включают и выключают рамку целиком, без отдельных классов
+толщины, цвета и стиля:
+
+| Класс | CSS |
+| :--- | :--- |
+| `border` | `border: var(--sf-px) var(--sf-outline-variant) solid` |
+| `border-none` | `border: var(--sf-px) var(--sf-transparent) solid` |
+
+`border` — сплошная рамка в один пиксель цвета края области; это та граница,
+которая нужна карточке или панели. `border-none` делает её прозрачной: рамка
+пропадает с экрана. Толщина задана в `--sf-px`, а не в шкале `rem`, поэтому
+она не растёт вместе с кеглем.
+
+Оба класса работают с префиксами ширины экрана `sm:`, `md:`, `lg:`, `xl:` и с
+префиксом `hover:`.
+
+```html
+<div class="border radius-surface p-3">Карточка с рамкой</div>
+<div class="border md:border-none p-3">Рамка только на узком экране</div>
 ```
 
 ## Ограничения
