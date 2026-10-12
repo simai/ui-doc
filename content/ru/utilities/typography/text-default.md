@@ -8,8 +8,7 @@ tags: [title]
 
 :badge[title]{type=main scheme=on-surface size=1}
 
-В новой версии настройки типографики упрощены и используют обновлённые переменные. Базовые параметры (размер шрифта,
-высота строки и т.д.) теперь управляются через более понятные и краткие наименования переменных.
+Базовые параметры текста — размер шрифта, высота строки и семейство — задаются переменными `--sf-text--*`.
 
 ## Наглядный пример
 
@@ -20,11 +19,11 @@ tags: [title]
 
 | Переменная             | Значение                        |
 |:-----------------------|:--------------------------------|
-| `--sf-text--size`      | var(`--sf-text-medium--size`)   |
-| `--sf-text--height`    | var(`--sf-text-medium--height`) |
-| `--sf-text--family`    | "Inter", sans-serif             |
-| `--sf-heading--family` | "Inter", sans-serif             |
-| `--sf-display--family` | "Inter", sans-serif             |
+| `--sf-text--size`      | var(`--sf-text--size-1`)        |
+| `--sf-text--height`    | var(`--sf-text--height-1`)      |
+| `--sf-text--family`    | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
+| `--sf-heading--family` | то же, что `--sf-text--family`  |
+| `--sf-display--family` | то же, что `--sf-text--family`  |
 | `--sf-text--weight`    | 400                             |
 | `--sf-heading--weight` | 700                             |
 | `--sf-display--weight` | 300                             |

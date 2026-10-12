@@ -336,7 +336,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       const alias = events.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
       const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
       const when = event.alias_of
-        ? `прежнее имя ${code(event.alias_of)}, приходит с тем же \`detail\`; подписывайтесь на ${code(event.alias_of)}.`
+        ? `устаревший псевдоним события ${code(event.alias_of)}: приходит с тем же \`detail\`, подписывайтесь на ${code(event.alias_of)}.`
         : (generic(event.summary) ? '' : ru(event.summary));
       const detailText = detail === 'не описан' ? '`detail` не описан.' : `\`detail\`: ${detail}.`;
       lines.push(item(`- ${code(name)} — ${event.alias_of ? when : `${detailText}${when ? ` ${when}` : ''}`}`));

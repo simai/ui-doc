@@ -56,8 +56,8 @@ profile: reference
 ## Действие и закрытие
 
 Для одного короткого необязательного действия используйте `data-action`, для
-закрытия — `data-close`. Совместимые `data-toast-action` и `data-toast-close`
-оставлены только для прежней разметки. Бизнес-действие выполняет приложение;
+закрытия — `data-close`. Атрибуты `data-toast-action` и `data-toast-close` —
+устаревшие псевдонимы этих атрибутов. Бизнес-действие выполняет приложение;
 Toast сообщает `sf-toast-action` и `sf-toast-close`.
 
 :::example {id="components/toast/actions" label="Результат"}

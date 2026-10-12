@@ -1,16 +1,4 @@
-let modalExampleInitialized = false;
-
-const initializeModalExample = () => {
-  if (modalExampleInitialized) return;
-
-  const registry = window.SF?.Loader?.ComponentRegistry ?? window.SF?.ComponentRegistry ?? {};
-  const pending = window.SF_PENDING_COMPONENTS ?? [];
-  const Modal = registry.Modal ?? pending.find(([name]) => name === 'Modal')?.[1];
-  if (typeof Modal !== 'function') {
-    window.setTimeout(initializeModalExample, 50);
-    return;
-  }
-
+const startModalExample = (Modal) => {
   const modal = new Modal({
     id: 'modal-example',
     param: {
@@ -34,8 +22,10 @@ const initializeModalExample = () => {
 
   modal.render();
   document.querySelector('#modal-example-open')?.addEventListener('click', () => modal.open());
-  modalExampleInitialized = true;
 };
 
-window.addEventListener('Modal:ready', initializeModalExample);
-initializeModalExample();
+if (window.SF?.Loader) {
+  window.SF.Loader.ready('Modal', startModalExample);
+} else {
+  window.addEventListener('sf-loader-init', () => window.SF.Loader.ready('Modal', startModalExample), { once: true });
+}

@@ -24,7 +24,9 @@ description: "События и связь с проектом: устройст
 :::
 
 
-В классе вызов `emitComponentEvent('quantity-change', { value })` создаёт событие `sf-quantity-change`. Подписка использует полное имя: `element.addEventListener('sf-quantity-change', handler)`. В `detail` базовый класс также добавляет `component`, `tagName` и `template`.
+Счётчик хранит значение, поэтому сообщает о его изменении событием `change`, как поля Framework. Класс отправляет его сам: `this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, detail: { value } }))`. Подписка: `element.addEventListener('change', handler)`.
+
+События жизненного цикла и прочие действия компонент отправляет через `emitComponentEvent(name, detail)`. Метод добавляет к имени префикс `sf-`: вызов `emitComponentEvent('confirm')` создаёт событие `sf-confirm`. В `detail` такого события базовый класс добавляет `component`, `tagName` и `template`.
 
 ## Всплытие и повторные события
 

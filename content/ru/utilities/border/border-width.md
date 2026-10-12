@@ -19,7 +19,7 @@ tags: [border-width, sm, md, lg, xl, xxl]
 
 | Класс | Значение |
 |:---|:---|
-| `border-{n}` | `border-width: var(--sf-*)` |
+| `border-{n}` | `border-width` со всех сторон |
 | `border-x-{n}` | `border-inline-start-width` + `border-inline-end-width` |
 | `border-y-{n}` | `border-top-width` + `border-bottom-width` |
 | `border-inline-start-{n}` | `border-inline-start-width` |
@@ -27,7 +27,16 @@ tags: [border-width, sm, md, lg, xl, xxl]
 | `border-top-{n}` | `border-top-width` |
 | `border-bottom-{n}` | `border-bottom-width` |
 
-`n`: `0..10`
+`n`: `0..10`. Значение толщины берётся из фиксированной шкалы размеров:
+
+| `n` | Значение | При корневом шрифте 16px |
+|:---|:---|:---|
+| `0` | `var(--sf-0)` — `0` | 0 |
+| `1` … `9` | `var(--sf-a1)` … `var(--sf-a9)` — от `0.0625rem` до `0.5625rem` с шагом `0.0625rem` | от 1px до 9px |
+| `10` | `var(--sf-b0)` — `0.625rem` | 10px |
+
+Стиль линии задавать не нужно: Core ставит всем элементам `border-style: solid`
+и `border-width: 0`, поэтому класс толщины сразу рисует сплошную границу.
 
 ## Описание
 

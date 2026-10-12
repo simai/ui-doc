@@ -15,7 +15,7 @@ async function start() {
     increment() {
       const count = this.getProp('count') + 1;
       this.setAttribute('count', String(count));
-      this.emitComponentEvent('quantity-change', { value: count });
+      this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, detail: { value: count } }));
     }
     template() {
       return html`<div class="flex gap-2 items-cross-center">
@@ -25,7 +25,7 @@ async function start() {
     }
   }
   ProjectCounter.define('project-counter');
-  document.querySelector('project-counter').addEventListener('sf-quantity-change', event => {
+  document.querySelector('project-counter').addEventListener('change', event => {
     document.querySelector('#counter-log').textContent = JSON.stringify({ value: event.detail.value });
   });
 }

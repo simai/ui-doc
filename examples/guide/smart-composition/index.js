@@ -14,7 +14,7 @@ async function start() {
       return html`<button type="button" @click=${() => {
         const value = this.getProp('count') + 1;
         this.setAttribute('count', String(value));
-        this.emitComponentEvent('quantity-change', { value });
+        this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, detail: { value } }));
       }}>Количество: ${this.getProp('count')}</button>`;
     }
   }
@@ -27,8 +27,8 @@ async function start() {
   ProjectQuantity.define('project-quantity');
   ProjectProduct.define('project-product');
   ProjectOrder.define('project-order');
-  document.querySelector('project-order').addEventListener('sf-quantity-change', event => {
-    document.querySelector('#order-log').textContent = `Заказ получил событие от ${event.detail.tagName}: ${event.detail.value}`;
+  document.querySelector('project-order').addEventListener('change', event => {
+    document.querySelector('#order-log').textContent = `Заказ получил событие от ${event.target.localName}: ${event.detail.value}`;
   });
 }
 start().catch(error => { document.querySelector('#order-log').textContent = error.message; });

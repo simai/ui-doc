@@ -25,8 +25,6 @@ tags: [place-items, sm, md, lg, xl, xxl]
 | `items-center` | `place-items: center;` |
 | `items-stretch` | `place-items: stretch;` |
 
-*(Обратите внимание, что в исходном коде был класс `items-text-center`, но по описанию это `items-center`.)*
-
 ## Синтаксис
 
 Использование: `{контрольная точка}:{модификатор}` или просто `{модификатор}`

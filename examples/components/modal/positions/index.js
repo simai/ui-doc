@@ -1,16 +1,4 @@
-let modalPositionsInitialized = false;
-
-const initializeModalPositions = () => {
-  if (modalPositionsInitialized) return;
-
-  const registry = window.SF?.Loader?.ComponentRegistry ?? window.SF?.ComponentRegistry ?? {};
-  const pending = window.SF_PENDING_COMPONENTS ?? [];
-  const Modal = registry.Modal ?? pending.find(([name]) => name === 'Modal')?.[1];
-  if (typeof Modal !== 'function') {
-    window.setTimeout(initializeModalPositions, 50);
-    return;
-  }
-
+const startModalPositions = (Modal) => {
   document.querySelectorAll('[data-modal-position]').forEach((button) => {
     const position = button.dataset.modalPosition;
     const id = `modal-position-${position}`;
@@ -26,8 +14,10 @@ const initializeModalPositions = () => {
     modal.render();
     button.addEventListener('click', () => modal.open());
   });
-  modalPositionsInitialized = true;
 };
 
-window.addEventListener('Modal:ready', initializeModalPositions);
-initializeModalPositions();
+if (window.SF?.Loader) {
+  window.SF.Loader.ready('Modal', startModalPositions);
+} else {
+  window.addEventListener('sf-loader-init', () => window.SF.Loader.ready('Modal', startModalPositions), { once: true });
+}

@@ -31,11 +31,27 @@ profile: reference
 | Задача | Классы |
 |:---|:---|
 | Основа | `sf-checkbox`, `sf-checkbox-box`, `sf-checkbox-container` |
+| Индикатор | `sf-icon` внутри `sf-checkbox-box`, после `<input>` |
 | Текст | `sf-checkbox-top`, `sf-checkbox-label`, `sf-checkbox-description` |
-| Размер | `sf-checkbox--size-1`, `sf-checkbox--size-2` |
+| Размер | `sf-checkbox--size-1/2`, `sf-checkbox--size-1`, `sf-checkbox--size-2` |
 | Ошибка | `error` на оболочке |
 
 Loader обнаруживает компонент по классу `sf-checkbox`.
+
+Нативный `<input type="checkbox">` и элемент `sf-icon` обязательно лежат внутри
+`sf-checkbox-box`. CSS скрывает только input — прямой потомок `sf-checkbox-box`;
+input в другом месте остаётся видимым браузерным флажком. Отметку рисует `sf-icon`:
+без него индикатор не показывает ни отметку, ни смешанное состояние.
+
+```html
+<label class="sf-checkbox sf-checkbox--size-1 flex">
+  <span class="sf-checkbox-box flex">
+    <input name="updates" type="checkbox">
+    <span class="sf-icon" aria-hidden="true"></span>
+  </span>
+  <span class="sf-checkbox-container"><span class="sf-checkbox-label">Получать обновления</span></span>
+</label>
+```
 
 ## Группа значений
 

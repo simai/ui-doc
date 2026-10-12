@@ -81,8 +81,8 @@ description: "Атрибуты, события и примеры Smart-комп�
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `change` — `detail`: `{ value: string|array, range: boolean, format: string, formattedValue?: string }`. Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки.
-- `sf-datepicker-change` — прежнее имя `change`, приходит с тем же `detail`; подписывайтесь на `change`.
-- `sf-change` — прежнее имя `change`, приходит с тем же `detail`; подписывайтесь на `change`.
+- `sf-datepicker-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
+- `sf-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
 ### Доступность
 

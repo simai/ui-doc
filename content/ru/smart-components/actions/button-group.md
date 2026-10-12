@@ -58,7 +58,7 @@ description: "Smart-компонент выбора одного вариант�
 Все события приходят на сам элемент, всплывают и проходят границу Shadow DOM. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `change` — `detail`: `{ previous: string, value: string, item: object|null }`. Выбранное значение изменилось; событие отправляется на элементе с previous, value и item. Используйте это имя для подписки.
-- `sf-button-group-change` — прежнее имя `change`, приходит с тем же `detail`; подписывайтесь на `change`.
+- `sf-button-group-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
 ### Доступность
 
