@@ -1,13 +1,13 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "5d27921856a1b1e582634b77c92e13e3f0f56991",
-    "core_revision": "ec56cef08625058eaffe2050e1d79f8cbdd5c4f1",
+    "source_revision": "4b460cd3bc6713cb422ac2415285b6ce6f408d2e",
+    "core_revision": "257f66def2b88e315931db8b4e887979ea284b3e",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "src/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "src/core/js/composition/index.mjs": "964f8f158f34135bc3f2a4760f35e40bdfded238672d52352bff1fec5687bf86",
+      "src/core/js/composition/index.mjs": "0a96408cd9598b825c66e1bbc27212280697a0c74946e114a36a83304d4ba1f5",
       "src/core/js/composition/builtins.mjs": "62ccb18b910e34fb39019805b41f85d3208ec714a6840bd0dcc79d75f8434d7e",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
       "src/smart/buttons/smart.manifest.json": "8afcb9f460e6d6ce0d9d4b4abfd2c56828900359876fa0a9b320a3a4b0ef4486"
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "90747669f98b1b0f68b25604a200f46cc697b9c75a4e715f39767990482f5e3a"
+      "distr/core/js/core.js": "f43595947d332284572428ad279a893ccaa9e565854b779331e3111b70988374"
     },
-    "note": "Reviewed at source 5d279218 and core ec56cef0 (release ui-ec56cef08625): every source and generated file the contract names, core.js included, is byte-identical to the review at source 253cb441 and core 9fb0297b. Nothing the composition pages describe changed."
+    "note": "Reviewed at source 4b460cd3 and core 257f66de (release ui-257f66def2b8): index.mjs adds extendRegistry (built-in types plus a product's own) and exports BUILTIN_TYPE_MANIFESTS; createRegistry is unchanged. reference/custom-type.md now shows registering a type with extendRegistry and says createRegistry takes its list as the whole registry. core.js changes by those fourteen lines alone; the schemas, builtins, fixture and buttons manifest are byte-identical."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

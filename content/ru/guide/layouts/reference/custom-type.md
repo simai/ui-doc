@@ -20,3 +20,23 @@ description: "Manifest собственного типа использует ф
 3. Добавьте допустимый fixture с двумя карточками.
 4. Добавьте fixture с неизвестным слотом и убедитесь, что проверка его отклоняет.
 5. Подключите пример к документации из проверяемого fixture.
+
+## Регистрация типа
+
+Тип регистрируется в реестре вместе с renderer. `SF.Composition.extendRegistry(manifests, renderers)` создаёт реестр из встроенных типов (`layout.page`, `layout.columns`, `content.paragraph` и других) и ваших. Ключ в `renderers` — имя из `renderer.name` в manifest.
+
+```js
+const registry = SF.Composition.extendRegistry(
+  [productGridManifest],
+  {
+    'project.product-grid': ({node, slots}) =>
+      `<div class="project-product-grid">${slots.items}</div>`,
+  },
+);
+
+const {html, diagnostics} = await SF.Composition.render(compositionDocument, {registry});
+```
+
+Renderer получает проверенный узел `node`, готовый HTML слотов в `slots` (строкой по имени слота и массивом в `slots.<имя>List`) и `manifest` типа. Ошибки документа приходят в `diagnostics`, а не исключением.
+
+`SF.Composition.createRegistry(manifests, renderers)` берёт список как весь реестр: встроенных типов в нём нет. Он подходит для теста одного типа. Список встроенных типов доступен как `SF.Composition.BUILTIN_TYPE_MANIFESTS`.

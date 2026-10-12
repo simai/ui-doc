@@ -376,6 +376,7 @@
     "Short message heading.": "Короткий заголовок сообщения.",
     "Short primary description.": "Короткое основное описание.",
     "Short result heading.": "Короткий заголовок результата.",
+    "Show a separate remove action; icon, color and avatar tags enable it by default, a checkbox tag only when it is set.": "Показывает отдельное действие удаления; у тегов с иконкой, цветом и аватаром оно включено по умолчанию, у тега-флажка — только когда атрибут задан.",
     "Show a separate remove action; icon, color and avatar tags enable it by default.": "Показывает отдельное действие удаления; у тегов с иконкой, цветом и аватаром оно включено по умолчанию.",
     "Show batch actions when actions are supplied.": "Показывает групповые действия, если они переданы.",
     "Show exactly these filter fields in the selected filter template. Used when a saved view is opened: settings.filter_fields names the fields it was showing.": "Показывает в выбранном шаблоне фильтра ровно эти поля фильтра. Используется при открытии сохранённого представления: settings.filter_fields перечисляет поля, которые в нём были показаны.",

@@ -30,7 +30,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-ec56cef08625` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-257f66def2b8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -39,7 +39,7 @@ description: "Атрибуты, события и примеры Smart-комп�
 | Тег | `<sf-checkbox>` |
 | Назначение | Smart-компонент Checkbox из SIMAI Framework. |
 | Контракт | `smart.checkbox`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-ec56cef08625` |
+| Поставка | выпуск Framework `ui-257f66def2b8` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -92,5 +92,5 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 ### Источник
 
-- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/smart/checkbox`
-- `simai/ui@ec56cef08625058eaffe2050e1d79f8cbdd5c4f1:distr/rule/rule.json#name=cl-checkbox`
+- `simai/ui@257f66def2b88e315931db8b4e887979ea284b3e:distr/smart/checkbox`
+- `simai/ui@257f66def2b88e315931db8b4e887979ea284b3e:distr/rule/rule.json#name=cl-checkbox`
