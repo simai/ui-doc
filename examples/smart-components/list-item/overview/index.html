@@ -1,0 +1,12 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-3">
+  <sf-dropdown name="place" label="Место" placeholder="Выберите место" search-placeholder="Найти">
+    <sf-list-item value="office" type="icon" icon="apartment" text="Офис"></sf-list-item>
+    <sf-list-item value="home" type="icon" icon="home" text="Дом"></sf-list-item>
+    <sf-list-item value="travel" type="icon" icon="flight" text="Командировка" disabled></sf-list-item>
+  </sf-dropdown>
+  <sf-dropdown name="labels" label="Метки" placeholder="Выберите метки" search-placeholder="Найти" multiple>
+    <sf-list-item value="bug" type="color" color-class="bg-error" text="Ошибка"></sf-list-item>
+    <sf-list-item value="feature" type="color" color-class="bg-primary" text="Доработка" selected></sf-list-item>
+    <sf-list-item value="docs" type="color" color-class="bg-tertiary" text="Документация"></sf-list-item>
+  </sf-dropdown>
+</div>

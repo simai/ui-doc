@@ -1,0 +1,20 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-3 items-cross-start">
+  <sf-textarea
+    name="reason"
+    label="Причина отказа"
+    appearance="filled"
+    required
+    invalid
+    error-message="Опишите причину: её увидит автор заявки"
+    rows="3">
+  </sf-textarea>
+
+  <sf-textarea
+    name="history"
+    label="Исходный текст"
+    value="Заявка принята в работу."
+    hint="Поле только для чтения"
+    readonly
+    rows="3">
+  </sf-textarea>
+</div>

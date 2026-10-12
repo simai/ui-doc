@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-2">
+  <sf-range-slider
+    id="price-range"
+    min="0"
+    max="50000"
+    step="500"
+    value="5000,20000"
+    margin="1000"
+    label="tooltip"
+    suffix=" ₽"
+    lower-label="Цена от"
+    upper-label="Цена до">
+  </sf-range-slider>
+  <output id="price-range-output" class="color-on-surface-variant" aria-live="polite">Цена: 5000–20000 ₽</output>
+</div>

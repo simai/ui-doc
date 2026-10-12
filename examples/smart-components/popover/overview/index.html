@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-2 items-cross-start">
+  <sf-popover label="Фильтр по статусу" placement="bottom-start">
+    <sf-button slot="trigger" appearance="outline" scheme="on-surface" icon-start="filter_list" text="Статус"></sf-button>
+    <div slot="content" class="flex flex-col gap-1 p-2">
+      <label class="sf-checkbox sf-checkbox--size-1 flex">
+        <span class="sf-checkbox-box transition flex"><input type="checkbox" name="status" value="open" checked><span class="sf-icon" aria-hidden="true"></span></span>
+        <span class="sf-checkbox-container"><span class="sf-checkbox-label">Открытые</span></span>
+      </label>
+      <label class="sf-checkbox sf-checkbox--size-1 flex">
+        <span class="sf-checkbox-box transition flex"><input type="checkbox" name="status" value="progress" checked><span class="sf-icon" aria-hidden="true"></span></span>
+        <span class="sf-checkbox-container"><span class="sf-checkbox-label">В работе</span></span>
+      </label>
+      <label class="sf-checkbox sf-checkbox--size-1 flex">
+        <span class="sf-checkbox-box transition flex"><input type="checkbox" name="status" value="closed"><span class="sf-icon" aria-hidden="true"></span></span>
+        <span class="sf-checkbox-container"><span class="sf-checkbox-label">Закрытые</span></span>
+      </label>
+    </div>
+  </sf-popover>
+  <p class="m-0">Подготовить договор с поставщиком — открыта</p>
+  <p class="m-0">Согласовать макет главной страницы — в работе</p>
+  <p class="m-0">Перенести архив заказов — в работе</p>
+  <p class="m-0">Обновить прайс-лист — закрыта</p>
+</div>

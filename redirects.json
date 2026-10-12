@@ -2419,6 +2419,14 @@
       "to": "ru/guide/architecture/standards/dynamic-composite-component"
     },
     {
+      "from": "ru/smart-components/actions/fab",
+      "to": "ru/components/actions/fab"
+    },
+    {
+      "from": "ru/smart-components/actions/link",
+      "to": "ru/components/navigation/link"
+    },
+    {
       "from": "ru/smart-components/catalog",
       "to": "ru/guide/smart-components/catalog-and-readiness"
     },
@@ -2435,8 +2443,28 @@
       "to": "ru/guide/smart-components/connection"
     },
     {
+      "from": "ru/smart-components/content/editor",
+      "to": "ru/smart-components/editor/inline-editor"
+    },
+    {
+      "from": "ru/smart-components/content/flags",
+      "to": "ru/components/content/flag"
+    },
+    {
+      "from": "ru/smart-components/content/list",
+      "to": "ru/smart-components/content/list-item"
+    },
+    {
       "from": "ru/smart-components/examples",
       "to": "ru/guide/smart-components/examples"
+    },
+    {
+      "from": "ru/smart-components/forms/form",
+      "to": "ru/smart-components/forms"
+    },
+    {
+      "from": "ru/smart-components/forms/rating",
+      "to": "ru/smart-components/forms"
     },
     {
       "from": "ru/smart-components/introduction",
@@ -2512,11 +2540,11 @@
     },
     {
       "from": "ru/smart-components/reference/editor",
-      "to": "ru/smart-components/content/editor"
+      "to": "ru/smart-components/editor/inline-editor"
     },
     {
       "from": "ru/smart-components/reference/fab",
-      "to": "ru/smart-components/actions/fab"
+      "to": "ru/components/actions/fab"
     },
     {
       "from": "ru/smart-components/reference/file-preview",
@@ -2528,11 +2556,11 @@
     },
     {
       "from": "ru/smart-components/reference/flags",
-      "to": "ru/smart-components/content/flags"
+      "to": "ru/components/content/flag"
     },
     {
       "from": "ru/smart-components/reference/form",
-      "to": "ru/smart-components/forms/form"
+      "to": "ru/smart-components/forms"
     },
     {
       "from": "ru/smart-components/reference/gallery",
@@ -2552,11 +2580,11 @@
     },
     {
       "from": "ru/smart-components/reference/link",
-      "to": "ru/smart-components/actions/link"
+      "to": "ru/components/navigation/link"
     },
     {
       "from": "ru/smart-components/reference/list",
-      "to": "ru/smart-components/content/list"
+      "to": "ru/smart-components/content/list-item"
     },
     {
       "from": "ru/smart-components/reference/list-item",
@@ -2588,7 +2616,7 @@
     },
     {
       "from": "ru/smart-components/reference/rating",
-      "to": "ru/smart-components/forms/rating"
+      "to": "ru/smart-components/forms"
     },
     {
       "from": "ru/smart-components/reference/reference-link",

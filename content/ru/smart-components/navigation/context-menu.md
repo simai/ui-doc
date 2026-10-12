@@ -1,13 +1,88 @@
 ---
 title: "Context Menu"
-description: "Атрибуты, события и примеры Smart-компонента context-menu."
+description: "Показывает короткий список действий над объектом с клавиатурной моделью меню."
 ---
 
 # Context Menu
 
+`<sf-context-menu>` — панель с коротким списком действий над объектом:
+строкой таблицы, файлом, карточкой. Он оформлен как обычное
+[контекстное меню](/ru/components/navigation/context-menu/) и даёт пунктам
+роль меню и управление стрелками. Открыть меню у объекта и закрыть его —
+задача страницы; для выбора значения в форме берите
+[Dropdown](/ru/smart-components/navigation/dropdown/).
+
+## Пример
+
+:::example {id="smart-components/context-menu/overview" label="Результат"}
+:::
+
+## Применение
+
+### Пункты
+
+Пункты — кнопки и ссылки, переданные со `slot="content"`: `<sf-button>`,
+нативные `<button>` и `<a href>`. Обычно берут `<sf-button>` вида `link` со
+схемой `on-surface` и размером `1/2`; держите в одном меню пункты одного
+размера. Меню выравнивает подписи по началу строки.
+
+Пункты можно передать и данными в свойстве `items`: каждый элемент массива —
+`{component, props}`. Для `component: 'sf-button'` в `props` читаются
+`text`, `type` (вид кнопки), `scheme`, `size`, `iconLeft`, `iconRight`,
+`ariaLabel`, `disabled` и обработчик `'@click'`. `text` без пунктов
+показывает в меню простой текст.
+
+### Хвост
+
+`position` ставит хвост на сторону панели, обращённую к объекту, например
+`top-inline-start` — хвост сверху у начала строки, для меню под объектом.
+Логические стороны `inline-start` и `inline-end` отражаются при письме
+справа налево. Без `position` меню рисуется без хвоста; `tooltip="false"`
+убирает хвост при заданной стороне. Свою разметку хвоста передаёт слот
+`tooltip`.
+
+### Открытие и закрытие
+
+Меню не открывается и не закрывается само: оно рисуется там, где стоит в
+разметке. Показывает его страница — по нажатию кнопки или правой кнопке мыши
+— и после показа переводит в него фокус методом `focus()`, дождавшись
+отрисовки. По `Escape` и после выбора пункта страница скрывает меню и
+возвращает фокус на кнопку, которая его открыла. Действие пункта — обычный
+`click` на кнопке. Скрывайте обёртку меню: сам `<sf-context-menu>` не
+занимает места в раскладке, и атрибут `hidden` на нём не действует.
+
+```js
+const layer = document.querySelector('#file-menu-layer');
+const menu = layer.querySelector('sf-context-menu');
+const opener = document.querySelector('#file-menu-button');
+
+opener.addEventListener('click', async () => {
+  layer.hidden = false;
+  opener.setAttribute('aria-expanded', 'true');
+  await menu.whenRendered();
+  menu.focus();
+});
+
+layer.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  layer.hidden = true;
+  opener.setAttribute('aria-expanded', 'false');
+  opener.focus();
+});
+```
+
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+- Меню нужно доступное имя: `aria-label` на `<sf-context-menu>`.
+- Прямые пункты получают роль `menuitem`; в порядке `Tab` остаётся один
+  пункт. Стрелки вверх и вниз переходят по пунктам по кругу, `Home` и `End`
+  — к первому и последнему, `Enter` и `Space` нажимают пункт. Недоступные и
+  скрытые пункты пропускаются.
+- Кнопка, которая открывает меню, сообщает его состояние через
+  `aria-expanded`, а после закрытия получает фокус обратно.
+- Хвост декоративен и скрыт от вспомогательных технологий.
+- Атрибут `role` со значением, отличным от `menu`, отключает клавиатурную
+  модель меню: задавайте его, только если пункты — не команды.
 
 ## Справочник API
 
@@ -80,3 +155,8 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/context-menu`
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-context-menu`
+
+## См. также
+
+- [Popover](/ru/smart-components/overlays/popover/) — поверхность у кнопки с открытием, закрытием и возвратом фокуса.
+- [Dropdown](/ru/smart-components/navigation/dropdown/) — выбор значения из списка.

@@ -1,18 +1,21 @@
 // Two colours, so the difference between «chosen» and «inherited» can be seen
-// side by side: the first carries a value, the second carries none and reports
+// side by side: the first carries a value, the second carries none and shows
 // the colour that applies while it stays empty.
 const initializeColourExample = async () => {
-  await customElements.whenDefined('sf-color');
+  const status = document.getElementById('colour-status');
+  if (!status || status.dataset.exampleReady === 'true') return;
+  status.dataset.exampleReady = 'true';
 
+  await customElements.whenDefined('sf-color');
   for (const colour of document.querySelectorAll('#brand-colour, #accent-colour')) {
-    if (colour.dataset.exampleReady === 'true') continue;
-    colour.dataset.exampleReady = 'true';
     colour.addEventListener('change', (event) => {
-      // A host stores the value it is given. An empty one means the inherited
-      // colour applies again, which is a different thing from the same colour
-      // written out: only one of them follows the theme when the theme changes.
-      const chosen = event.detail?.value;
-      colour.setAttribute('aria-description', chosen ? `выбран ${chosen}` : 'наследуется');
+      // The native picker's own change bubbles through the element too; the
+      // committed colour is the one that carries detail.
+      if (!event.detail) return;
+      // An empty value means the inherited colour applies again, which is not
+      // the same as that colour written out: only the first follows the theme.
+      const {name, value} = event.detail;
+      status.textContent = value ? `${name}: ${value}` : `${name}: наследуется`;
     });
   }
 };

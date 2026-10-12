@@ -1,16 +1,26 @@
 <div class="flex flex-col gap-3">
-  <sf-color
-    id="brand-colour"
-    label="Основной цвет"
-    value="#2a5bd7"
-    swatches="#2a5bd7|Фирменный синий, #0f9d58|Успех, #d93025|Ошибка, #f4b400|Внимание"
-    clearable="true">
-  </sf-color>
+  <div class="flex flex-col gap-1">
+    <span class="weight-6">Основной цвет</span>
+    <sf-color
+      id="brand-colour"
+      name="brand"
+      label="Основной цвет"
+      value="#2a5bd7"
+      swatches="#2a5bd7|Фирменный, #0f9d58|Успех, #d93025|Ошибка, #f4b400|Внимание"
+      clearable>
+    </sf-color>
+  </div>
 
-  <sf-color
-    id="accent-colour"
-    label="Акцент"
-    inherited-value="#2a5bd7"
-    clearable="true">
-  </sf-color>
+  <div class="flex flex-col gap-1">
+    <span class="weight-6">Акцент</span>
+    <sf-color
+      id="accent-colour"
+      name="accent"
+      label="Акцент"
+      inherited-value="#2a5bd7"
+      clearable>
+    </sf-color>
+  </div>
+
+  <p id="colour-status" class="m-0 color-on-surface-variant" aria-live="polite">Измените цвет — здесь появится значение из события.</p>
 </div>

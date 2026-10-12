@@ -14,8 +14,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Button Group](/ru/smart-components/actions/button-group/)
 - [Close](/ru/smart-components/actions/close/)
 - [Download File](/ru/smart-components/actions/download-file/)
-- [Fab](/ru/smart-components/actions/fab/)
-- [Link](/ru/smart-components/actions/link/)
 
 ## Формы и ввод
 
@@ -31,8 +29,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Smart-код страны](/ru/smart-components/forms/country-code/)
 - [Цвет](/ru/smart-components/forms/color/)
 - [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/)
-- [Rating](/ru/smart-components/forms/rating/)
-- [Form](/ru/smart-components/forms/form/)
 
 ## Навигация
 
@@ -61,13 +57,10 @@ description: "Смарт-компоненты по задачам интерфе
 - [Avatar](/ru/smart-components/content/avatar/)
 - [Avatars](/ru/smart-components/content/avatars/)
 - [Icons](/ru/smart-components/content/icons/)
-- [Flags](/ru/smart-components/content/flags/)
 - [Tags](/ru/smart-components/content/tags/)
-- [List](/ru/smart-components/content/list/)
 - [List Item](/ru/smart-components/content/list-item/)
 - [Представление данных](/ru/smart-components/content/table/)
 - [Галерея](/ru/smart-components/content/gallery/)
-- [Editor](/ru/smart-components/content/editor/)
 - [File Preview](/ru/smart-components/content/file-preview/)
 - [Reference Link](/ru/smart-components/content/reference-link/)
 

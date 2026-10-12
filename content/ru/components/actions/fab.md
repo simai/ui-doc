@@ -140,4 +140,3 @@ whenLoader(() => SF.Loader.ready('Fab', (Fab) => {
 ## См. также
 
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)
-- [FAB — Smart-компонент](/ru/smart-components/actions/fab/)

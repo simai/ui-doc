@@ -1,68 +1,91 @@
 ---
 title: "Inline-редактор"
-description: "Правка текста заголовков и абзацев прямо на странице с сохранением модели content, а не HTML."
-profile: reference
+description: "Даёт править текст заголовков и абзацев прямо на странице и возвращает модель content, а не HTML."
 ---
 
 # Inline-редактор
 
-Inline-редактор меняет текст `content.heading` и `content.paragraph` прямо на
-холсте. Поддерживаются жирный, курсив, код и ссылки — всё, что есть в модели
-content. Списков нет, потому что их нет в модели. События несут нормализованную
-модель, а не HTML.
-
-Код загружается по требованию: достаточно поставить на странице
-`<sf-inline-editor>`. Элемент ничего не показывает.
+`<sf-inline-editor>` — часть редактора страниц: правка текста
+`content.heading` и `content.paragraph` прямо на холсте. Доступно то, что есть
+в модели content: полужирный, курсив, код и ссылки; списков нет, потому что
+их нет в модели. События несут нормализованную модель, а не HTML.
 
 ## Пример
 
 :::example {id="smart-components/inline-editor/overview" label="Правка условий доставки"}
 :::
 
-## Особенности применения
+## Применение
 
-После загрузки `SF.Composition.startInlineEdit` или метод `edit` элемента
-`<sf-inline-editor>` запускает правку выбранного
-элемента. До загрузки вызов завершается ошибкой `inline_editor_not_loaded`,
-поэтому дождитесь `customElements.whenDefined('sf-inline-editor')`.
+### Подключение
+
+Элемент ничего не показывает: достаточно поставить на странице
+`<sf-inline-editor>`, и загрузчик Framework подключит код редактора по
+требованию. Правку запускает `SF.Composition.startInlineEdit(element, options)`
+или метод `edit(element, options)` элемента. До загрузки вызов завершается
+ошибкой `inline_editor_not_loaded`, поэтому сначала дождитесь
+`customElements.whenDefined('sf-inline-editor')`. Повторный запуск на элементе,
+который уже правится, завершается ошибкой `inline_edit_active`.
+
+### Параметры правки
+
+- `content` — текущая модель content; без неё редактор читает текст из
+  элемента;
+- `nodeId` — `id` узла Document, который придёт в событиях;
+- `label` — доступное имя поля правки, например «Абзац»;
+- `marks` — разрешённое оформление, подмножество `strong`, `em`, `code`;
+- `links` — `false` отключает ссылки;
+- `messages` — свои подписи панели форматирования.
+
+Вызов возвращает `{element, commit, cancel, value}`: `commit()` и `cancel()`
+завершают правку из кода, `value()` возвращает текущую модель.
+
+### События
+
+События отправляются на редактируемый элемент и всплывают до `document`:
+
+- `sf-inline-edit-input` — `{node_id, content}` после каждого изменения;
+- `sf-inline-edit-commit` — `{node_id, content}` по `Enter` или при уходе
+  фокуса;
+- `sf-inline-edit-cancel` — `{node_id}` по `Escape`; исходный HTML элемента
+  возвращается без изменений.
+
+Сохраняйте результат `commit` через свой контракт ревизий, проверяйте Document
+и перерисовывайте страницу.
 
 ```js
 await customElements.whenDefined('sf-inline-editor');
-SF.Composition.startInlineEdit(element, {content: node.data.content, nodeId: node.id, label: 'Абзац'});
-canvas.addEventListener('sf-inline-edit-commit', (event) => save(event.detail.node_id, event.detail.content));
+SF.Composition.startInlineEdit(element, {
+  content: node.data.content,
+  nodeId: node.id,
+  label: 'Абзац',
+});
+canvas.addEventListener('sf-inline-edit-commit', (event) => {
+  save(event.detail.node_id, event.detail.content);
+});
 ```
 
-Сохраняйте результат через свой контракт ревизий, проверяйте Document и
-перерисовывайте страницу. Отмена возвращает исходный HTML элемента без
-изменений.
+### Безопасность
 
-## Параметры и события
+- Ссылки допускаются только относительные, якорные и с протоколами `http`,
+  `https`, `mailto` и `tel`; другие адреса редактор отклоняет.
+- Вставка из Word и веб-страниц оставляет только разрешённое оформление: всё,
+  чего нет в модели content или в `marks`, отбрасывается.
+- События несут модель, а не HTML, поэтому в Document не попадает разметка,
+  которую не проверила модель.
 
-| Параметр | Назначение |
-|---|---|
-| `content` | текущая модель content |
-| `nodeId` | id узла для событий |
-| `label` | доступное имя поля |
-| `marks` | подмножество `strong`, `em`, `code` |
-| `links` | `false` отключает ссылки |
-| `messages` | свои тексты панели |
+## Доступность
 
-| Событие | Данные |
-|---|---|
-| `sf-inline-edit-input` | `{node_id, content}` после каждого изменения |
-| `sf-inline-edit-commit` | `{node_id, content}` по Enter или уходу фокуса |
-| `sf-inline-edit-cancel` | `{node_id}` по Escape |
-
-События отправляются на редактируемый элемент и всплывают до `document`.
-
-## Доступность и безопасность
-
-Ctrl/Cmd+B, I и E переключают жирный, курсив и код; Ctrl/Cmd+K открывает поле
-ссылки; Ctrl/Cmd+Z, Ctrl/Cmd+Shift+Z и Ctrl/Cmd+Y работают с историей правки.
-Во время правки элемент — подписанное поле `role="textbox"` с видимой рамкой,
-у кнопок панели есть `aria-pressed`. Ссылки допускаются только http, https,
-mailto, tel, относительные и якорные. Вставка из Word и веб-страниц оставляет
-только разрешённое оформление, ввод через IME не прерывается.
+- На время правки элемент становится полем `role="textbox"` с видимой рамкой
+  и доступным именем из `label`; задавайте `label` на языке страницы.
+- `Ctrl+B`, `Ctrl+I` и `Ctrl+E` (`Cmd` на Mac) переключают полужирный, курсив
+  и код; `Ctrl+K` открывает поле адреса ссылки.
+- `Ctrl+Z` отменяет шаг правки, `Ctrl+Shift+Z` и `Ctrl+Y` возвращают его.
+- У кнопок панели форматирования есть `aria-pressed` и подсказка с
+  сочетанием клавиш.
+- `Enter` сохраняет, `Escape` отменяет, уход фокуса сохраняет. Ввод через IME
+  не прерывается.
+- Подписи панели берутся на языке страницы (русском или английском).
 
 ## Справочник API
 
@@ -111,3 +134,8 @@ mailto, tel, относительные и якорные. Вставка из W
 
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/inline-editor`
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-inline-editor`
+
+## См. также
+
+- [Оверлей редактора](/ru/smart-components/editor/composition-overlay/) — выбор узла, текст которого правится.
+- [Правка текста на месте](/ru/guide/layouts/editor/inline-text/) — как редактор страниц запускает правку и сохраняет результат.

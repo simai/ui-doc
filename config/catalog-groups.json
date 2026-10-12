@@ -112,9 +112,7 @@
         "icon-buttons",
         "button-group",
         "close",
-        "download-file",
-        "fab",
-        "link"
+        "download-file"
       ]
     },
     "forms": {
@@ -131,8 +129,6 @@
         "datepicker",
         "country-code",
         "file-upload",
-        "rating",
-        "form",
         "color"
       ]
     },
@@ -168,13 +164,10 @@
         "avatar",
         "avatars",
         "icons",
-        "flags",
         "tags",
-        "list",
         "list-item",
         "table",
         "gallery",
-        "editor",
         "file-preview",
         "reference-link"
       ]

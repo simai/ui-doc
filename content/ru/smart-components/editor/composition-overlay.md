@@ -1,75 +1,108 @@
 ---
 title: "Оверлей редактора"
-description: "Рамки, подписи, панель действий, места вставки и дерево структуры поверх отрисованного Composition Document."
-profile: reference
+description: "Рисует поверх отрисованной страницы рамки, подписи, панель действий, места вставки и дерево структуры для редактора страниц."
 ---
 
 # Оверлей редактора
 
-`<sf-composition-overlay>` рисует интерфейс редактора поверх страницы, собранной
-из Composition Document: рамку при наведении и выборе, подпись и бейджи узла,
-панель действий, места вставки и дерево структуры для клавиатуры. HTML холста
-не меняется, поэтому опубликованная страница и её digest одинаковы с открытым и
-закрытым редактором.
-
-Код загружается по требованию: загрузчик Framework
-подключает его только на странице с тегом `sf-composition-overlay`.
+`<sf-composition-overlay>` — часть редактора страниц: рисует поверх страницы,
+собранной из Composition Document, рамку при наведении и выборе, подпись и
+значки узла, панель действий, места вставки и дерево структуры для
+клавиатуры. HTML холста оверлей не меняет, поэтому опубликованная страница
+одинакова с открытым и закрытым редактором. Берите его, когда страницу нужно
+править в контексте, а не в отдельной форме.
 
 ## Пример
 
 :::example {id="smart-components/composition-overlay/overview" label="Выбор блока и действия"}
 :::
 
-## Особенности применения
+## Применение
 
-Поставьте оверлей перед холстом, дождитесь загрузки и передайте ему холст,
-Document и действия. `describe(node)` возвращает подпись и бейджи, например
-«Общий» для блока, который используется на нескольких страницах.
+### Подключение к холсту
+
+Холст — элемент с HTML из `SF.Composition.render`; каждый узел Document
+отмечен в нём атрибутом `data-sf-composition-id`. Атрибут `for` называет `id`
+холста, метод `attach(canvas)` передаёт его явно. Код оверлея загрузчик
+Framework подключает по требованию — только на странице с тегом
+`sf-composition-overlay`, поэтому перед вызовом методов дождитесь
+`customElements.whenDefined('sf-composition-overlay')`.
+
+`setDocument(document, {describe})` передаёт Document. `describe(node)`
+возвращает подпись и значки узла: `{label, badges}`, например
+`{label: 'Шапка', badges: ['Общий']}` для блока, который используется на
+нескольких страницах. Без подписи оверлей показывает `id` узла; значков —
+не больше четырёх.
+
+### Действия
+
+`setActions(actions)` задаёт кнопки панели действий выбранного узла.
+Действие — только `{id, label}`: `id` по шаблону `^[a-z][a-z0-9-]{0,63}$`,
+действий не больше 16. Нажатие отправляет `sf-composition-overlay-action` с
+`{action_id, node_id}`; что сделать с узлом, решает приложение.
+
+### Выбор узла
+
+Выбор мышью, клавишей или методом `select(id)` отправляет
+`sf-composition-overlay-select` с `{node_id}`; `null` означает, что выбор
+снят. `select(id, {emit: false})` выбирает узел без события — например, когда
+выбор пришёл из боковой панели приложения.
+
+### Вставка и перенос
+
+Места вставки — промежутки в слотах узлов. Выбор места отправляет
+`sf-composition-overlay-insert` с `{parent_id, slot, index}`; при перетаскивании
+из библиотеки событие ещё несёт `{item, from, mode}` — какой элемент, из какого
+списка и в каком режиме. Атрибут `accepts` перечисляет группы
+[`sf-sortable`](/ru/smart-components/editor/sortable/), элементы которых можно
+бросить на холст. Перенос узла холста отправляет
+`sf-composition-overlay-move` с `{node_id, parent_id, slot, index}`.
+
+`setDropFilter((place, item) => boolean)` скрывает места, которые приложение
+отклонит; окончательную проверку выполняет Document.
+`setInsertionTarget({parent_id, slot, index})` отмечает на холсте место, куда
+приложение вставит блок, а значение `null` снимает отметку.
+
+### Изменения делает приложение
+
+События сообщают только намерение. Приложение меняет Document, сохраняет его с
+ожидаемой ревизией, проверяет и перерисовывает холст, а затем снова передаёт
+Document оверлею.
+
+После загрузки `SF.CompositionOverlay` даёт `OVERLAY_EVENTS` — имена событий,
+`overlayNodes(document)` — узлы Document в порядке документа и
+`checkOverlayActions(actions)` — проверку действий до передачи в оверлей.
+
+### Подписи
+
+Подписи дерева, панели и объявлений оверлей берёт на языке страницы (русском
+или английском). `setMessages(messages)` заменяет их своими.
 
 ```js
 await customElements.whenDefined('sf-composition-overlay');
 overlay.attach(canvas);
-overlay.setDocument(document, {describe: (node) => ({label: titleOf(node), badges: node.shared ? ['Общий'] : []})});
+overlay.setDocument(document, {
+  describe: (node) => ({label: titleOf(node), badges: node.shared ? ['Общий'] : []}),
+});
 overlay.setActions([{id: 'move-up', label: 'Выше'}, {id: 'remove', label: 'Удалить'}]);
 overlay.setDropFilter((place, item) => place.slot === 'default');
+overlay.addEventListener('sf-composition-overlay-action', (event) => {
+  applyAction(event.detail.action_id, event.detail.node_id);
+});
 ```
-
-События сообщают только намерение. Приложение меняет Document, сохраняет его с
-ожидаемой ревизией, проверяет и перерисовывает страницу. `setDropFilter`
-только скрывает места, которые приложение отклонит; окончательную проверку
-выполняет Document.
-
-## Атрибуты, методы и события
-
-| Атрибут | Назначение |
-|---|---|
-| `for` | id холста с HTML из `SF.Composition.render` |
-| `accepts` | группы `sf-sortable`, элементы которых можно бросить на места вставки |
-| `label` | имя дерева структуры |
-
-Методы: `attach(canvas)`, `setDocument(document, {describe})`,
-`setActions(actions)`, `setMessages(messages)`, `setDropFilter(filter)`,
-`setInsertionTarget(target)`, `select(id)`. Действие — только `{id, label}`,
-id по шаблону `^[a-z][a-z0-9-]{0,63}$`, не больше 16 действий.
-
-| Событие | Данные |
-|---|---|
-| `sf-composition-overlay-select` | `{node_id}` |
-| `sf-composition-overlay-action` | `{action_id, node_id}` |
-| `sf-composition-overlay-insert` | `{parent_id, slot, index}`, из библиотеки ещё `{item, from, mode}` |
-| `sf-composition-overlay-move` | `{node_id, parent_id, slot, index}` |
-
-После загрузки `SF.CompositionOverlay` даёт `OVERLAY_EVENTS`,
-`overlayNodes(document)` и `checkOverlayActions(actions)`.
 
 ## Доступность
 
-Дерево структуры (`role="tree"`): стрелки вверх и вниз идут по порядку
-документа, влево — к родителю, вправо — к первому вложенному узлу, Home и End —
-к краям, Enter открывает панель действий, Escape возвращает назад. Пробел
-начинает перенос, стрелки выбирают место, Enter кладёт, Escape отменяет. Выбор и
-перенос объявляются. Слой лежит ниже drawer и modal, цвета берутся из токенов
-темы, анимация отключается при `prefers-reduced-motion`.
+- Дерево структуры (`role="tree"`) — способ работать с холстом с клавиатуры.
+  Задайте ему имя атрибутом `label`, например «Структура страницы».
+- Стрелки вверх и вниз идут по узлам в порядке документа, влево — к
+  родителю, вправо — к первому вложенному узлу, `Home` и `End` — к краям.
+  `Enter` открывает панель действий, `Escape` возвращает назад или снимает
+  выбор.
+- `Space` начинает перенос выбранного узла, стрелки выбирают место, `Enter`
+  кладёт, `Escape` отменяет. Выбор и каждый шаг переноса объявляются.
+- Слой оверлея лежит ниже выдвижных панелей и модальных окон, цвета берёт из
+  токенов темы, а при `prefers-reduced-motion` отключает анимацию.
 
 ## Справочник API
 
@@ -128,3 +161,9 @@ id по шаблону `^[a-z][a-z0-9-]{0,63}$`, не больше 16 дейст
 
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/composition-overlay`
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-composition-overlay`
+
+## См. также
+
+- [Перетаскивание](/ru/smart-components/editor/sortable/) — библиотека блоков, из которой элементы попадают на холст.
+- [Inline-редактор](/ru/smart-components/editor/inline-editor/) — правка текста выбранного узла.
+- [Как устроен редактор страниц](/ru/guide/layouts/editor/overview/) — как части редактора работают вместе.

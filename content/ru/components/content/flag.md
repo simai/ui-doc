@@ -128,4 +128,3 @@ SF.flag.render(flag);
 ## См. также
 
 - [Код страны](/ru/components/forms/country-code/)
-- [Flags — Smart-компонент](/ru/smart-components/content/flags/)

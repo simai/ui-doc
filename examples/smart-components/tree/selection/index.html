@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-2" data-tree-selection-demo>
+  <sf-tree aria-label="Папка для сохранения" selection="single">
+    <sf-tree-item label="Входящие" value="inbox" selected></sf-tree-item>
+    <sf-tree-item label="Проекты" value="projects" open open-label="Развернуть" close-label="Свернуть">
+      <sf-tree-item label="Сайт компании" value="site"></sf-tree-item>
+      <sf-tree-item label="Мобильное приложение" value="app"></sf-tree-item>
+    </sf-tree-item>
+    <sf-tree-item label="Архив" value="archive"></sf-tree-item>
+  </sf-tree>
+  <p class="m-0" role="status" data-tree-selection-result>Выбрана папка: inbox</p>
+</div>

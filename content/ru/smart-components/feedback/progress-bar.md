@@ -1,13 +1,67 @@
 ---
 title: "Progress Bar"
-description: "Атрибуты, события и примеры Smart-компонента progress-bar."
+description: "Показывает известный ход процесса сплошной полосой от 0 до 100 процентов."
 ---
 
 # Progress Bar
 
+`<sf-progress-bar>` показывает ход процесса, у которого известна доля
+выполненного: загрузка файла, импорт, проверка. Элемент строится на классах
+компонента [Прогресс](/ru/components/feedback/progress-bar/). Когда доля
+неизвестна, берите [Spinner](/ru/smart-components/feedback/spinner/); когда
+ход удобнее читать крупными шагами —
+[Progress Scale](/ru/smart-components/feedback/progress-scale/).
+
+## Пример
+
+:::example {id="smart-components/progress-bar/overview" label="Загрузка и завершение"}
+:::
+
+## Применение
+
+### Значение
+
+`value` — доля выполненного в процентах, от `0` до `100`; значения вне
+диапазона приводятся к границе. `text-position` показывает число рядом с
+полосой: `inline-end` — в конце строки, `bottom` — под полосой, `none` (по
+умолчанию) — не показывает.
+
+### Статус и размер
+
+`status` сообщает смысл из общего словаря: `neutral` (по умолчанию), `info`,
+`success`, `warning`, `error`. Компонент не выводит статус из процента:
+ошибку или завершение задаёт приложение. `size` — толщина полосы, ступень
+`1/3`, `1/2`, `1`, `2` или `3`.
+
+### Обновление из скрипта
+
+Меняйте `value` по мере хода процесса: компонент обновляет полосу и
+`aria-valuenow` без перерисовки. `setProgress(n)` делает то же, а
+`getProgress()` возвращает текущее значение числом.
+
+```js
+const progress = document.querySelector('sf-progress-bar');
+upload.addEventListener('progress', (event) => {
+  progress.setProgress(Math.round((event.loaded / event.total) * 100));
+});
+upload.addEventListener('load', () => {
+  progress.setAttribute('status', 'success');
+  progress.setAttribute('value-text', 'Файлы загружены');
+});
+```
+
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+- Полоса — `role="progressbar"` с `aria-valuemin="0"`, `aria-valuemax="100"`
+  и текущим `aria-valuenow`. Задайте `label` — доступное имя: что именно
+  выполняется. Без него экранный диктор прочитает одно число.
+- `value-text` заменяет число словами: «Загружено 3 файла из 5»,
+  «Проверка завершена».
+- Полоса не получает фокус. Экранный диктор не объявляет каждое изменение
+  значения; о завершении или ошибке сообщите отдельным текстом с
+  `role="status"` или [Alert](/ru/smart-components/feedback/alert/).
+- Область, которая ждёт результата, отметьте `aria-busy="true"` до конца
+  процесса.
 
 ## Справочник API
 
@@ -69,3 +123,9 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/progress-bar`
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-progress-bar`
+
+## См. также
+
+- [Прогресс](/ru/components/feedback/progress-bar/) — полоса прогресса на классах.
+- [Progress Scale](/ru/smart-components/feedback/progress-scale/) — ход процесса десятью шагами.
+- [Spinner](/ru/smart-components/feedback/spinner/) — ожидание без известной доли.

@@ -1,0 +1,11 @@
+<fieldset id="export-columns" class="border-0 p-0 m-0">
+  <legend class="m-bottom-2 weight-6">Столбцы для выгрузки</legend>
+  <div class="flex flex-col gap-2">
+    <sf-checkbox data-role="all" label="Все столбцы" indeterminate></sf-checkbox>
+    <div class="flex flex-col gap-2 p-inline-start-4">
+      <sf-checkbox data-role="item" name="columns[]" value="title" label="Название" checked></sf-checkbox>
+      <sf-checkbox data-role="item" name="columns[]" value="author" label="Автор"></sf-checkbox>
+      <sf-checkbox data-role="item" name="columns[]" value="updated" label="Дата изменения"></sf-checkbox>
+    </div>
+  </div>
+</fieldset>

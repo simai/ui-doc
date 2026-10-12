@@ -436,13 +436,157 @@
       "component": "theme",
       "css": false
     },
+    "smart-components/actions/button-group.md": {
+      "kind": "smart"
+    },
+    "smart-components/actions/buttons.md": {
+      "kind": "smart"
+    },
+    "smart-components/actions/close.md": {
+      "kind": "smart"
+    },
+    "smart-components/actions/download-file.md": {
+      "kind": "smart"
+    },
+    "smart-components/actions/icon-buttons.md": {
+      "kind": "smart"
+    },
+    "smart-components/composite/admin-menu.md": {
+      "kind": "smart"
+    },
+    "smart-components/composite/page-header.md": {
+      "kind": "smart"
+    },
+    "smart-components/composite/property-view.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/avatar.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/avatars.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/file-preview.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/gallery.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/icons.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/list-item.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/reference-link.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/table.md": {
+      "kind": "smart"
+    },
+    "smart-components/content/tags.md": {
+      "kind": "smart"
+    },
+    "smart-components/editor/composition-overlay.md": {
+      "kind": "smart"
+    },
+    "smart-components/editor/inline-editor.md": {
+      "kind": "smart"
+    },
+    "smart-components/editor/sortable.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/alert.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/badges.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/progress-bar.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/progress-scale.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/skeleton.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/spinner.md": {
+      "kind": "smart"
+    },
     "smart-components/feedback/toast.md": {
+      "kind": "smart"
+    },
+    "smart-components/feedback/tooltip.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/checkbox.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/color.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/country-code.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/datepicker.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/file-upload.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/inputs.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/radio.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/range-slider.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/slider.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/switch.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/textarea.md": {
+      "kind": "smart"
+    },
+    "smart-components/forms/toggle.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/breadcrumbs.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/context-menu.md": {
       "kind": "smart"
     },
     "smart-components/navigation/dropdown.md": {
       "kind": "smart"
     },
+    "smart-components/navigation/pagination.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/steps.md": {
+      "kind": "smart"
+    },
     "smart-components/navigation/tabs.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/tree-item.md": {
+      "kind": "smart"
+    },
+    "smart-components/navigation/tree.md": {
+      "kind": "smart"
+    },
+    "smart-components/overlays/drawer.md": {
+      "kind": "smart"
+    },
+    "smart-components/overlays/modal.md": {
+      "kind": "smart"
+    },
+    "smart-components/overlays/popover.md": {
       "kind": "smart"
     },
     "utilities/animation/animation-duration.md": {

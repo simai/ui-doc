@@ -1,34 +1,81 @@
 ---
 title: "Tooltip"
-description: "Атрибуты, события и примеры Smart-компонента tooltip."
+description: "Рисует поверхность короткой подсказки с текстом, пояснением и стрелкой для компонентов, которые сами управляют её показом."
 ---
 
 # Tooltip
 
-`<sf-tooltip>` создаёт поверхность подсказки. Самостоятельно она остаётся
-видимой и не управляет триггером — это сохраняет совместимость с Range Slider и
-другими владельцами позиционирования. Для обычного hover/focus-сценария
-поместите Smart surface рядом с нативным триггером в
-`.sf-tooltip-anchor` и свяжите коротким `data-tooltip`.
+`<sf-tooltip>` рисует поверхность подсказки: короткий текст, необязательное
+пояснение и стрелку. Элемент всегда виден и сам не следит за триггером —
+его показывает и располагает владелец, например
+[Range Slider](/ru/smart-components/forms/range-slider/). Подсказку,
+которая открывается при наведении и фокусе на кнопке или поле, собирайте на
+классах компонента [Подсказка](/ru/components/overlays-media/tooltip/).
 
-## Минимальная разметка
+## Пример
+
+:::example {id="smart-components/tooltip/overview" label="Поверхности подсказки"}
+:::
+
+## Применение
+
+### Текст
+
+`text` — основной текст, `supporting-text` — пояснение или сочетание клавиш.
+Держите подсказку короткой: одно-два коротких предложения. Слоты `text` и
+`supporting-text` заменяют строки разметкой, слот `content` — всё
+содержимое, слот `tail` — стрелку.
+
+### Вид, размер и стрелка
+
+`appearance` выбирает вид: `dark` — контрастная тёмная поверхность, заметная
+на любом фоне; `light` (по умолчанию) — светлая поверхность без границы, она
+читается на затемнённом или цветном фоне и теряется на светлом. `size` —
+ступень `1/3`, `1/2`, `1`, `2` или `3`; берите ступень элемента, к которому
+относится подсказка.
+
+`arrow` ставит стрелку и тем самым показывает, с какой стороны стоит
+элемент: `bottom-center`, `bottom-inline-start`, `bottom-inline-end` — внизу
+поверхности, `top-center` — вверху, `inline-start` и `inline-end` — у
+начала или конца строки. `none` (по умолчанию) убирает стрелку.
+
+### Подсказка у триггера
+
+Связка `data-tooltip` с `<sf-tooltip>` не работает: контроллер подсказки
+показывает и располагает сам элемент `<sf-tooltip>`, у которого нет
+собственного блока, и поверхность остаётся под триггером шириной в него.
+Для подсказки при наведении и фокусе пишите поверхность классами
+`sf-tooltip`, как на странице [Подсказка](/ru/components/overlays-media/tooltip/).
 
 ```html
 <span class="sf-tooltip-anchor">
-  <button type="button" data-tooltip="help-tooltip"
-    aria-describedby="help-tooltip">Справка</button>
-  <sf-tooltip id="help-tooltip" text="Короткое пояснение"
-    type="dark" arrow="bottom-center" hidden></sf-tooltip>
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"
+    data-tooltip="save-tooltip" aria-describedby="save-tooltip">
+    <span class="sf-button-text-container">Сохранить</span>
+  </button>
+  <span id="save-tooltip" class="sf-tooltip sf-tooltip--dark sf-tooltip--size-1 sf-tooltip--arrow-bottom-center" hidden>
+    <span class="sf-tooltip-content flex flex-col">
+      <span class="sf-tooltip-wrap flex flex-col">
+        <span class="sf-tooltip-text">Сохранить изменения</span>
+      </span>
+      <span class="sf-tooltip-tail" aria-hidden="true"></span>
+    </span>
+  </span>
 </span>
 ```
 
 ## Доступность
 
-Поверхность получает `role="tooltip"`, а Framework сохраняет и дополняет
-`aria-describedby` триггера. Tooltip не получает фокус, не использует
-`aria-expanded` или `aria-haspopup`, открывается при hover/focus и
-закрывается по Escape без переноса фокуса. Интерактивное содержимое требует
-диалога или popover.
+- Подсказка дополняет имя элемента, а не заменяет его: у кнопки-иконки имя
+  задаёт `aria-label`, подсказка — пояснение через `aria-describedby`.
+- Владелец, который показывает поверхность, отвечает за связь с элементом:
+  `role="tooltip"` на поверхности и её `id` в `aria-describedby` элемента.
+- Поверхность не получает фокус. Не кладите в неё ссылки, кнопки и поля:
+  интерактивному содержимому нужен
+  [Popover](/ru/smart-components/overlays/popover/) или диалог.
+- Не задавайте триггеру `aria-expanded` и `aria-haspopup`: подсказка не
+  управляемое всплывающее окно.
+- Стрелка декоративна и скрыта от экранного диктора.
 
 ## Справочник API
 
@@ -86,3 +133,8 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/tooltip`
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-tooltip`
+
+## См. также
+
+- [Подсказка](/ru/components/overlays-media/tooltip/) — подсказка при наведении и фокусе на классах.
+- [Popover](/ru/smart-components/overlays/popover/) — всплывающая панель с интерактивным содержимым.

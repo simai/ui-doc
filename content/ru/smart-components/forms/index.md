@@ -1,22 +1,20 @@
 ---
 title: "Формы и ввод"
-description: "Формы и ввод — 14 смарт-компонентов SIMAI Framework."
+description: "Формы и ввод — 12 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
 # Формы и ввод
 
-- [Поле ввода](/ru/smart-components/forms/inputs/) — Smart-поле с единым контрактом состояний, подсказок, маски и логических start/end-элементов.
-- [Textarea](/ru/smart-components/forms/textarea/)
-- [Checkbox](/ru/smart-components/forms/checkbox/)
-- [Radio](/ru/smart-components/forms/radio/)
-- [Switch](/ru/smart-components/forms/switch/)
-- [Toggle](/ru/smart-components/forms/toggle/)
-- [Smart-слайдер](/ru/smart-components/forms/slider/) — Управляемая последовательность слайдов на общем компоненте Slider.
-- [Range Slider](/ru/smart-components/forms/range-slider/)
-- [Datepicker](/ru/smart-components/forms/datepicker/)
-- [Smart-код страны](/ru/smart-components/forms/country-code/) — Управляемое телефонное поле с кодом, флагом, маской и нативным поведением формы.
-- [Цвет](/ru/smart-components/forms/color/) — Выбор цвета: образец, палитра продукта и возврат к унаследованному значению.
-- [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/) — Управляемый выбор файлов со списком, прогрессом и состояниями передачи.
-- [Rating](/ru/smart-components/forms/rating/)
-- [Form](/ru/smart-components/forms/form/)
+- [Поле ввода](/ru/smart-components/forms/inputs/) — Однострочное поле формы с подписью, подсказкой, ошибкой, значком и маской ввода.
+- [Textarea](/ru/smart-components/forms/textarea/) — Многострочное поле формы с подписью, подсказкой и сообщением об ошибке.
+- [Checkbox](/ru/smart-components/forms/checkbox/) — Даёт отметить один или несколько независимых вариантов и отправляет отмеченные значения с формой.
+- [Radio](/ru/smart-components/forms/radio/) — Даёт выбрать ровно один вариант из видимой группы и отправляет его значение с формой.
+- [Switch](/ru/smart-components/forms/switch/) — Включает или выключает настройку сразу после нажатия, без отдельного подтверждения.
+- [Toggle](/ru/smart-components/forms/toggle/) — Устаревший двоичный переключатель: как перенести разметку Toggle на Switch.
+- [Smart-слайдер](/ru/smart-components/forms/slider/) — Показывает последовательность слайдов со стрелками, точками и миниатюрами.
+- [Range Slider](/ru/smart-components/forms/range-slider/) — Выбирает одно значение или две границы перетаскиванием ручки по шкале с известными пределами.
+- [Datepicker](/ru/smart-components/forms/datepicker/) — Выбирает дату или период в календаре — во всплывающем окне у поля или прямо на странице.
+- [Smart-код страны](/ru/smart-components/forms/country-code/) — Телефонное поле с выбором страны, флагом, кодом и маской номера, которое отправляется с формой.
+- [Цвет](/ru/smart-components/forms/color/) — Выбирает цвет системной палитрой или из цветов продукта и возвращает к унаследованному цвету.
+- [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/) — Зона выбора и перетаскивания файлов со списком выбранных файлов, прогрессом и ошибками передачи.

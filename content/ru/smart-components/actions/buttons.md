@@ -1,13 +1,101 @@
 ---
 title: "Buttons"
-description: "Атрибуты, события и примеры Smart-компонента buttons."
+description: "Запускает действие кнопкой с подписью, иконкой и состоянием загрузки."
 ---
 
 # Buttons
 
+`<sf-button>` рисует нативную кнопку с оформлением обычной
+[кнопки](/ru/components/actions/buttons/): вид, цвет, размер, иконки и
+состояние загрузки задаются атрибутами. Берите его там, где кнопку создаёт
+шаблон или код, а состояние меняется во время работы; в статической разметке
+хватает классов `sf-button`.
+
+## Пример
+
+:::example {id="smart-components/buttons/overview" label="Результат"}
+:::
+
+## Применение
+
+### Вид и цвет
+
+`appearance` задаёт вес кнопки: `default` — залитая основная, `tonal` —
+приглушённая заливка, `outline` — контур, `link` — текст без рамки,
+`surface` и `ghost` — нейтральные кнопки панелей инструментов. На одном
+участке экрана оставляйте одну кнопку вида `default`.
+
+`scheme` выбирает цветовое семейство: `primary`, `secondary` или
+`on-surface`. `status="error"` отмечает действие, которое удаляет данные или
+необратимо: такая кнопка окрашивается цветом ошибки поверх `scheme`.
+
+`size` берёт ступень общей шкалы элементов управления: `1/3`, `1/2`, `1`,
+`2`, `3`. `spacing` меняет внутренние отступы (`compact`, `normal`,
+`comfortable`, `spacious`), `radius` — скругление (`default`, `square`,
+`rounded`).
+
+### Подпись и иконки
+
+Подпись задаёт `text` или дочерний элемент со `slot="text"`. `icon-start` и
+`icon-end` ставят иконку в начало и в конец строки; `icon` — короткая запись
+одной иконки, её сторону выбирает `icon-position`. Пустой `icon-start=""`
+убирает иконку с этой стороны, даже если задан `icon`. Свою разметку иконки
+передают слоты `icon-start` и `icon-end`.
+
+### Состояния
+
+`loading` показывает загрузку: кнопка недоступна и сообщает
+`aria-busy="true"`. `disabled` отключает кнопку.
+
+:::example {id="smart-components/buttons/icons-states" label="Результат"}
+:::
+
+### Кнопка в форме и обработчики
+
+`native-type` задаёт нативный `type` внутренней кнопки: `button` по
+умолчанию, `submit` или `reset` для формы. Кнопка рисуется в обычном DOM,
+поэтому `submit` отправляет форму, в которой стоит `<sf-button>`. Остальные
+атрибуты, которых нет в справочнике (`name`, `value`, `form`, `data-*`),
+переходят на внутреннюю кнопку.
+
+Нажатие приходит обычным событием `click`. `onClick(handler)`, `onFocus`,
+`onBlur`, `onMouseEnter` и `onMouseLeave` подписывают обработчик и
+возвращают сам элемент; `setDisabled(true)` и `setDisabled(false)`
+переключают доступность. Свойство `value` у `<sf-button>` возвращает объект
+с текущими настройками, а не значение для формы.
+
+```html
+<form action="/profile" method="post">
+  <sf-button native-type="submit" name="intent" value="save" text="Сохранить"></sf-button>
+</form>
+```
+
+```js
+const button = await SF.createAsync('button', {
+  text: 'Экспортировать',
+  iconStart: 'download',
+  appearance: 'outline',
+});
+document.querySelector('#toolbar').append(button);
+
+button.onClick(async () => {
+  button.setAttribute('loading', '');
+  await exportReport();
+  button.removeAttribute('loading');
+});
+```
+
 ## Доступность
 
-Перед использованием проверьте доступное имя, порядок фокуса, управление клавиатурой и объявление состояний. Сгенерированная API-страница подтверждает source-контракт, но не заменяет сценарный accessibility smoke.
+- Доступное имя кнопки — её подпись. Кнопке только с иконкой задайте
+  `aria-label` или берите [Icon Buttons](/ru/smart-components/actions/icon-buttons/).
+- Фокус получает внутренняя нативная кнопка: `Tab` останавливается на ней,
+  `Enter` и `Space` нажимают её. Иконки декоративны и скрыты от
+  вспомогательных технологий.
+- Недоступная кнопка выпадает из порядка `Tab`. Если пользователю нужно
+  понять, почему действие недоступно, объясните это текстом рядом.
+- Цвет ошибки при `status="error"` не заменяет подпись: из неё должно быть
+  ясно, что действие удаляет данные.
 
 ## Справочник API
 
@@ -86,3 +174,8 @@ description: "Атрибуты, события и примеры Smart-комп�
 
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/smart/buttons`
 - `simai/ui@6d2bf151e3c8ba14d210e97227a8d0dd1b493170:distr/rule/rule.json#name=cl-buttons`
+
+## См. также
+
+- [Icon Buttons](/ru/smart-components/actions/icon-buttons/) — кнопка только с иконкой.
+- [Button Group](/ru/smart-components/actions/button-group/) — выбор одного варианта из кнопок.

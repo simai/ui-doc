@@ -105,4 +105,3 @@ profile: reference
 ## См. также
 
 - [Кнопки](/ru/components/actions/buttons/)
-- [Link — Smart-компонент](/ru/smart-components/actions/link/)
