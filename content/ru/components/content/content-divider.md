@@ -51,13 +51,17 @@ profile: reference
 
 ### Кнопки на линии
 
-`sf-divider-buttons` ставит на линию кнопки `sf-divider-button`: одиночную
-квадратную (`sf-divider-button--solo`) или пару со скруглёнными внешними углами
-(`sf-divider-button--left` и `sf-divider-button--right`). Модификаторы
-`sf-divider-button-square--left` и `sf-divider-button-square--right` дают паре
-прямые углы. Так в редакторах вставляют блок или меняют порядок блоков. В
-`sf-divider-buttons` можно поставить и обычные
-[кнопки](/ru/components/actions/buttons/).
+`sf-divider-buttons` ставит на линию обычные
+[кнопки](/ru/components/actions/buttons/) `sf-button` и
+[кнопки с иконкой](/ru/components/actions/icon-buttons/) `sf-icon-button` и
+держит между ними промежуток. Так в редакторах вставляют блок или меняют
+порядок блоков.
+
+Классы `sf-divider-button`, `sf-divider-button--solo`,
+`sf-divider-button--left`, `sf-divider-button--right`,
+`sf-divider-button-square--left` и `sf-divider-button-square--right` — старые
+имена кнопок на линии. Они работают для совместимости; в новой разметке
+используйте `sf-button` и `sf-icon-button`.
 
 :::example {id="components/content-divider/buttons" label="Кнопки на линии"}
 :::

@@ -161,7 +161,12 @@ profile: reference
 | `SF.FileUpload.removeItem(target, index)` | удаляет пункт и создаёт `sf-file-upload:remove` |
 | `SF.FileUpload.clear(target)` | очищает список |
 
-Приложение передаёт файлы своим запросом и обновляет пункты через `setItems`:
+Компонент не добавляет выбранные файлы в нативный `FormData` формы: после
+выбора скрытое поле файла очищается, поэтому обычная отправка формы файлов не
+несёт. Файлы передаёт приложение: берёт `File` из поля `file` пунктов — из
+`detail` событий `sf-file-upload:select` и `sf-file-upload:file-add` или через
+`SF.FileUpload.getItems(target)` — отправляет своим запросом и обновляет
+пункты через `setItems`:
 
 ```js
 const upload = document.querySelector('.sf-file-upload');

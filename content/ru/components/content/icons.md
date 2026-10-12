@@ -32,6 +32,9 @@ profile: reference
   `sf-icon-rounded`, `sf-icon-shape` и другие) работают так же, как
   модификаторы `sf-icon--weight-bold`, `sf-icon--filled`,
   `sf-icon--rounded` и `sf-icon--sharp`; в разметке пишите модификаторы.
+- Класс `sf-icon-loaded` ставит загрузчик иконок Framework, когда шрифт
+  готов; до этого иконка не видна, и вместо символа не мелькает его имя.
+  Этот класс не пишите в разметке вручную.
 
 ## Варианты
 

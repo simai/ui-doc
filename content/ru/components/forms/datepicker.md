@@ -53,7 +53,9 @@ profile: reference
 `sf-datepicker-text` — ячейка месяца или года для выбора без дней. Ячейки
 принимают те же состояния, что и дни: `active`, `disabled` и период
 `sf-datepicker-text-start`, `sf-datepicker-text-selected`,
-`sf-datepicker-text-end`.
+`sf-datepicker-text-end`. Ячейки периода ставьте в сетку без промежутка
+(`grid grid-col-3` без класса `gap-*`): промежуток разрывает полосу периода.
+Каждая ячейка периода, включая средние, получает `aria-pressed="true"`.
 
 :::example {id="components/datepicker/text-cells" label="Ячейки месяцев в разных состояниях"}
 :::

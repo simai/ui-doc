@@ -1,6 +1,6 @@
 ---
 title: "Toggle"
-description: "Устаревший двоичный переключатель: как читать его разметку и перенести её на переключатель."
+description: "Устаревший двоичный переключатель: как перенести его разметку на переключатель."
 profile: reference
 ---
 
@@ -8,29 +8,27 @@ profile: reference
 
 Toggle — устаревший компонент: тот же контрол, что и
 [переключатель](/ru/components/forms/switch/), — нативный checkbox с
-`role="switch"`, дорожка и бегунок. Выпуск сохраняет его для уже написанной
-разметки; в новой разметке берите переключатель.
+`role="switch"`, дорожка и бегунок. В новой разметке берите переключатель
+`sf-switch`; эта страница показывает, как перенести на него разметку Toggle.
 
 ## Пример
 
-:::example {id="components/toggle/overview" label="Toggle с подписью"}
+Toggle «Компактный режим» после переноса — переключатель с той же подписью и
+тем же полем формы:
+
+:::example {id="components/toggle/overview" label="Toggle, перенесённый на переключатель"}
 :::
 
 ## Разметка
 
-Минимальную разметку показывает пример выше. Части вложены так:
-`label.sf-toggle` → `sf-toggle-control` с `<input type="checkbox">` и
-`sf-toggle-container` → `sf-toggle-inner-wrap` → `sf-toggle-inner`; подпись
-`sf-toggle-text` идёт после `sf-toggle-control`.
+Перенос сохраняет нативный `<input type="checkbox" role="switch">` с его
+`name`, `value`, `checked` и `disabled`; меняются только классы оболочки и
+частей. Части переключателя вложены так: `label.sf-switch` →
+`sf-switch-toggler` с input и бегунком `sf-switch-inner` →
+`sf-switch-container-wrap` с подписью. Полное описание — на странице
+[переключателя](/ru/components/forms/switch/).
 
-- На оболочке `<label class="sf-toggle">` — класс вида и класс размера. Скрипт
-  компонента находит Toggle по `label.sf-toggle`.
-- Нативный `<input type="checkbox" role="switch">` — источник `name`, `value`,
-  `checked`, `disabled`, фокуса и отправки формы.
-- Скрипт ставит на `sf-toggle-container` класс `content-main-start` или
-  `content-main-end` по состоянию input: так бегунок встаёт к нужному краю.
-
-### Перенос на переключатель
+### Перенос классов
 
 | Toggle | Переключатель |
 |:---|:---|
@@ -42,89 +40,34 @@ Toggle — устаревший компонент: тот же контрол, 
 | `sf-toggle-control` | `sf-switch-toggler` |
 | `sf-toggle-container`, `sf-toggle-inner-wrap` | не нужны: бегунок лежит прямо в дорожке |
 | `sf-toggle-inner` | `sf-switch-inner` |
-| `sf-toggle-text` | `sf-switch-text` внутри `sf-switch-container-wrap` |
+| `sf-toggle-text` | `sf-switch-text` внутри `sf-switch-container` в `sf-switch-container-wrap` |
 | `SF.Toggle.setState` | `SF.Switch.setState` |
 
 Размеры не совпадают один в один: дорожки Toggle меньше дорожек переключателя
 той же ступени. После переноса сверьте форму на глаз.
 
-## Варианты
+### Где работает старая разметка
 
-### Размер
-
-Две ступени — `sf-toggle--size-1` и `sf-toggle--size-2`; размер меняет дорожку
-и подпись вместе.
-
-:::example {id="components/toggle/sizes" label="Размеры Toggle"}
-:::
-
-### Вид
-
-`sf-toggle--simple` — дорожка с круглым бегунком, `sf-toggle--icon` — бегунок
-со значком внутри (`sf-icon` в `sf-toggle-inner-wrap`), `sf-toggle--short` —
-короткая дорожка. Класс вида обязателен: без него дорожка не получает размеров.
-
-:::example {id="components/toggle/kinds" label="Виды Toggle"}
-:::
-
-## Состояния
-
-Состояния задаёт нативный input; скрипт синхронизирует с ним классы `active` и
-`disabled` на оболочке.
-
-### Включён
-
-Нативный `checked` заливает дорожку основным цветом и переводит бегунок к
-логическому концу.
-
-:::example {id="components/toggle/state-checked" label="Выключенный и включённый Toggle"}
-:::
-
-### Недоступен
-
-Нативный `disabled` приглушает дорожку и подпись; Toggle не получает фокус и не
-отправляется с формой.
-
-:::example {id="components/toggle/state-disabled" label="Недоступный Toggle"}
-:::
-
-### Фокус
-
-При переходе клавишей Tab дорожка получает кольцо фокуса по `:focus-visible`.
-В примере фокус показан классом `focus-visible` на input.
-
-:::example {id="components/toggle/state-focus" label="Toggle в фокусе"}
-:::
+Выпуск поставляет компонент Toggle: загрузчик подключает его стили и скрипт,
+когда на странице есть класс `sf-toggle`, а скрипт находит Toggle по
+`label.sf-toggle`. Поэтому уже написанная разметка Toggle и
+[Smart-компонент Toggle](/ru/smart-components/forms/toggle/) продолжают
+работать. Классы и переменные ниже описывают эту разметку; новую разметку на
+них не пишите.
 
 ## Доступность
 
 - `role="switch"` на input сообщает экранному диктору, что это переключатель, и
-  его состояние.
-- Подпись `sf-toggle-text` лежит внутри того же `<label>`: она даёт доступное
-  имя. Toggle без подписи получает `aria-label` на input.
-- Переключается пробелом; видимый фокус рисует компонент.
+  его состояние; при переносе этот атрибут остаётся.
+- Подпись лежит внутри того же `<label>` и даёт доступное имя; переключатель
+  без подписи получает `aria-label` на input.
 - Бегунок скрыт от вспомогательных технологий: состояние передаёт input.
 
 ## JavaScript
 
-`SF.Toggle.setState(input, state)` меняет поля `checked` и `disabled` нативного
-input и перерисовывает оболочку; для другого элемента возвращает `false`.
-Событие `change` она не создаёт.
-
-Компонент регистрирует класс `Toggle`. `SF.Loader` появляется к событию
-`sf-loader-init` на `window`; `SF.Loader.ready('Toggle', callback)` передаёт
-класс, когда он зарегистрирован. Параметры: `type` (`simple`, `icon`,
-`short`), `size` (`1`, `2`), `label`, `icon` (имя значка для `icon`), `name`,
-`value`, `checked`, `disabled`.
-
-```js
-const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
-
-whenLoader(() => SF.Loader.ready('Toggle', (Toggle) => {
-  const control = new Toggle({param: {type: 'simple', size: '1', label: 'Компактный режим', name: 'compact'}});
-  document.querySelector('#settings').append(control.render());
-}));
-```
+`SF.Toggle.setState(input, state)` меняет поля `checked` и `disabled` input
+внутри `label.sf-toggle` и перерисовывает оболочку. Для перенесённой разметки
+вызывайте `SF.Switch.setState(input, state)` с тем же аргументом.
 
 ## Классы
 
