@@ -13,5 +13,5 @@ Zabarov and contributors.” When sharing modified material, indicate that it
 was changed.
 
 Source code, configuration, scripts, templates, and code examples are covered
-by the repository's [MIT License](LICENSE). Third-party materials remain under
+by the repository's [Apache License 2.0](LICENSE). Third-party materials remain under
 their original terms.

@@ -166,7 +166,7 @@ local checkout is not an equivalent input.
 ## License
 
 Source code, configuration, scripts, templates, and code examples are
-available under the [MIT License](LICENSE). Original documentation prose and
+available under the [Apache License 2.0](LICENSE). Original documentation prose and
 images in `content/` are available under
 [CC BY 4.0](LICENSE-CONTENT.md). Third-party materials retain their original
 terms.

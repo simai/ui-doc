@@ -2,7 +2,7 @@
     "name": "simai/ui-doc",
     "description": "Public SIMAI Framework documentation built with Docara v2.",
     "type": "project",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Rim Zabarov",
