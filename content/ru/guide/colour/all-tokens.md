@@ -390,10 +390,10 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-breakpoint-lg` | `var(--sf-h5)` |
-| `--sf-breakpoint-md` | `var(--sf-h2)` |
-| `--sf-breakpoint-sm` | `var(--sf-h1)` |
+| `--sf-breakpoint-md` | `var(--sf-h1)` |
+| `--sf-breakpoint-sm` | `var(--sf-g6)` |
 | `--sf-breakpoint-xl` | `var(--sf-h8)` |
-| `--sf-breakpoint-xxl` | `var(--sf-i2)` |
+| `--sf-breakpoint-xxl` | `var(--sf-i0)` |
 | `--sf-container-1--size-max` | `var(--sf-h5)` |
 | `--sf-container-2--size-max` | `var(--sf-h6)` |
 | `--sf-container-3--size-max` | `var(--sf-h8)` |

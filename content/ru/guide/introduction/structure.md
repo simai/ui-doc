@@ -105,7 +105,7 @@ Apache-2.0. Пакет соответствует стандарту
     "package": "shop",
     "source": {
       "repository": "simai/ui-source",
-      "revision": "c0e9ab1e4dbb7ad2c25ae6327f793c801e39b102"
+      "revision": "0b9958856b23d893402fd9baf4371c048efe6c33"
     }
   }
   ```
@@ -113,7 +113,7 @@ Apache-2.0. Пакет соответствует стандарту
   `schema` — точно эта строка; `source.repository` — всегда
   `simai/ui-source`; `source.revision` — полный коммит исходников, из которых
   собран выбранный выпуск Framework (поле `build_inputs.source.commit` записи о
-  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-84c7312396f6`). `package` необязателен; если он есть, он совпадает с
+  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-45c15e706fde`). `package` необязателен; если он есть, он совпадает с
   именем пакета в сборке. Других полей сборка не читает.
 - **Правило компонента.** Файл `src/smart/<папка>/rule.js` записывает ровно
   одно правило `cl-<папка>` простыми данными, без регулярных выражений,
@@ -180,7 +180,7 @@ Apache-2.0. Пакет соответствует стандарту
 - **Квитанция пакета.** Каждая сборка пакета сопровождается квитанцией, по
   которой проект закрепляет пакет (описание квитанции — ниже).
 - **Лицензия.** Компоненты пакета распространяются по лицензии продукта.
-  Framework (`ui`) распространяется по лицензии MIT (см. [Принципы](/ru/guide/introduction/principles/)).
+  Framework (`ui`) распространяется по лицензии Apache 2.0 (см. [Принципы](/ru/guide/introduction/principles/)).
 
 **Квитанция пакета** — файл `package-receipt.json`. Имя формата
 `simai.framework.product-package-receipt` записано в поле `schema_id` (не
@@ -427,7 +427,7 @@ if (result.status !== 'PASS') {
 
 Проект, который использует элементы пакета `larena` без самой Larena, собирает
 пакет из открытого исходника `simai/larena-ui` при тех же условиях запуска.
-Пример — для выпуска `ui-84c7312396f6`; `<ui-builder>`, `<ui-source>` и `<ui>` —
+Пример — для выпуска `ui-45c15e706fde`; `<ui-builder>`, `<ui-source>` и `<ui>` —
 пути к рабочим копиям, `<ui>` стоит на текущей ветке `main`.
 
 1. **Сборка.** Папка пакета — `components` репозитория `simai/larena-ui`,
@@ -435,26 +435,26 @@ if (result.status !== 'PASS') {
 
    ```bash
    git clone https://github.com/simai/larena-ui.git
-   git -C larena-ui checkout 453a0537a78e1211a29a717d8613a176ea6d54ca
+   git -C larena-ui checkout 8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5
    node <ui-builder>/bin/sf-build.js package --name larena \
      --package-root larena-ui/components \
-     --package-revision 453a0537a78e1211a29a717d8613a176ea6d54ca \
+     --package-revision 8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5 \
      --package-repository simai/larena-ui \
      --ui-source <ui-source> --ui <ui> --out build/larena --json
    ```
 
 2. **Проверка квитанции.** Команда завершается с кодом `0` и `status: "PASS"`.
    В `build/larena/package-receipt.json` поле `framework.release` равно
-   `ui-84c7312396f6`, `package_source.revision` — коммиту из шага 1, а
+   `ui-45c15e706fde`, `package_source.revision` — коммиту из шага 1, а
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/larena/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/larena/453a0537a78e1211a29a717d8613a176ea6d54ca/smart/`, и объявляют
+   `public/assets/larena/8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {larena: {base: '/assets/larena/453a0537a78e1211a29a717d8613a176ea6d54ca/smart'}},
+     packages: {larena: {base: '/assets/larena/8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5/smart'}},
    };
    ```
 

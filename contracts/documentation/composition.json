@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "c0e9ab1e4dbb7ad2c25ae6327f793c801e39b102",
-    "core_revision": "84c7312396f6f59548b5c2c41ef6915de010ad5b",
+    "source_revision": "0b9958856b23d893402fd9baf4371c048efe6c33",
+    "core_revision": "45c15e706fde4a5785d684f0a0d54b9a42497c60",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "1a08380398877a46e7eae6e4f4399852890d2badf6c1bcd4937907d386c3e8ba"
     },
-    "note": "Reviewed at source c0e9ab1e and core 84c73123 (release ui-84c7312396f6): the composition schemas, builtins and fixture are byte-identical to the review at ui-7c01b6265585. sortable.mjs announces moves with aria-live polite instead of assertive (the docs name no politeness level); the buttons manifest gained method arguments, returns and event payloads, with the declarative props unchanged; core.js changed only in the anchored-panel percentage caps."
+    "note": "Reviewed at source 0b995885 and core 45c15e70 (release ui-45c15e706fde): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-84c7312396f6. The region grid's (min-width: 48rem) container query is a component threshold, not a breakpoint, and stays."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

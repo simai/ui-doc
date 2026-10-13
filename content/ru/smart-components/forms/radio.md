@@ -79,7 +79,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-45c15e706fde` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,7 +88,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 | Тег | `<sf-radio>` |
 | Назначение | Один вариант выбора: нативная радиокнопка с подписью, описанием и текстом подсказки. Радиокнопки с одинаковым name образуют группу, в которой выбор одной снимает выбор с остальных. |
 | Контракт | `smart.radio`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-84c7312396f6` |
+| Поставка | выпуск Framework `ui-45c15e706fde` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -135,5 +135,5 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 ### Источник
 
-- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/radio`
-- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-radio`
+- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/smart/radio`
+- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/rule/rule.json#name=cl-radio`

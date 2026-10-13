@@ -119,7 +119,7 @@ Framework поставляет базовые типы, на которых мо
 .sf-composition-column {
   min-inline-size: 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 44rem) {
   .sf-composition-columns[data-composition-columns="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sf-composition-columns[data-composition-columns="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sf-composition-columns[data-composition-columns="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }

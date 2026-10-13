@@ -49,15 +49,15 @@ description: "Ограничивает ширину содержимого ст�
 |:---|:---|
 | `--sf-space-1` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
 | `--sf-space-2` | `var(--sf-b6); от ширины lg: var(--sf-c0)` |
-| `--sf-breakpoint-sm` | `от ширины sm: var(--sf-h1)` |
+| `--sf-breakpoint-sm` | `от ширины sm: var(--sf-g6)` |
 | `--sf-space-3` | `var(--sf-b6); от ширины lg: var(--sf-c2)` |
-| `--sf-breakpoint-md` | `от ширины md: var(--sf-h2)` |
+| `--sf-breakpoint-md` | `от ширины md: var(--sf-h1)` |
 | `--sf-space-4` | `var(--sf-c2); от ширины lg: var(--sf-c6)` |
 | `--sf-breakpoint-lg` | `от ширины lg: var(--sf-h5)` |
 | `--sf-space-5` | `var(--sf-c6); от ширины lg: var(--sf-d0)` |
 | `--sf-breakpoint-xl` | `от ширины xl: var(--sf-h8)` |
 | `--sf-space-6` | `var(--sf-c6); от ширины lg: var(--sf-d2)` |
-| `--sf-breakpoint-xxl` | `от ширины xxl: var(--sf-i2)` |
+| `--sf-breakpoint-xxl` | `от ширины xxl: var(--sf-i0)` |
 
 ## Применение
 
