@@ -96,7 +96,7 @@ header.addEventListener('sf-page-header-star', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-45c15e706fde` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-82fc0ba882ba` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,7 +105,7 @@ header.addEventListener('sf-page-header-star', async (event) => {
 | Тег | `<sf-page-header>` |
 | Назначение | Шапка страницы администратора: путь, заголовок, счётчик, звезда избранного, отметка установки и главное действие. Используется вместе с sf-admin-menu. |
 | Контракт | `smart.page-header`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-45c15e706fde` |
+| Поставка | выпуск Framework `ui-82fc0ba882ba` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -142,8 +142,8 @@ header.addEventListener('sf-page-header-star', async (event) => {
 
 ### Источник
 
-- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/smart/page-header`
-- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/rule/rule.json#name=cl-page-header`
+- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/smart/page-header`
+- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/rule/rule.json#name=cl-page-header`
 
 ## См. также
 

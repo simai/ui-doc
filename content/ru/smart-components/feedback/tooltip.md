@@ -79,7 +79,7 @@ description: "Рисует поверхность короткой подска�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-45c15e706fde` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-82fc0ba882ba` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,7 +88,7 @@ description: "Рисует поверхность короткой подска�
 | Тег | `<sf-tooltip>` |
 | Назначение | Поверхность подсказки, которая может участвовать в обычной композиции триггера data-tooltip. |
 | Контракт | `smart.tooltip`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-45c15e706fde` |
+| Поставка | выпуск Framework `ui-82fc0ba882ba` |
 | Жизненный цикл | `released` |
 | Готовность | принят в продукт |
 
@@ -131,8 +131,8 @@ description: "Рисует поверхность короткой подска�
 
 ### Источник
 
-- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/smart/tooltip`
-- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/rule/rule.json#name=cl-tooltip`
+- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/smart/tooltip`
+- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/rule/rule.json#name=cl-tooltip`
 
 ## См. также
 

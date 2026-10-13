@@ -25,8 +25,7 @@ description: "Манифест (`smart.manifest.json`) описывает ком
 Smart-компоненты описаны манифестом действующей старшей версии.
 
 Файл схемы — `contracts/schema/smart-component-manifest.v2.schema.json` в
-закрытом репозитории `ui-source`; доступ к нему автор пакета получает через
-команду Framework. Образцы готовых манифестов открыты: это
+открытом репозитории [`simai/ui-source`](https://github.com/simai/ui-source). Образцы готовых манифестов открыты: это
 `distr/smart/<папка>/smart.manifest.json` в поставке `ui`.
 
 Кому манифест нужен:
@@ -146,8 +145,8 @@ SHA-256 файла; проверка манифестов `node scripts/sf-contr
   "compatibility": {
     "contract_schema": {"id": "https://simai.io/contracts/smart-component-manifest.v2.schema.json", "version": 2},
     "runtime_pair": {
-      "ui_revision": "45c15e706fde4a5785d684f0a0d54b9a42497c60",
-      "ui_smart_revision": "45c15e706fde4a5785d684f0a0d54b9a42497c60"
+      "ui_revision": "82fc0ba882baae72ae3d83d7370decbcebe366d7",
+      "ui_smart_revision": "82fc0ba882baae72ae3d83d7370decbcebe366d7"
     },
     "aliases": [],
     "deprecations": [],

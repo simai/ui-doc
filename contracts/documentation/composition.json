@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "0b9958856b23d893402fd9baf4371c048efe6c33",
-    "core_revision": "45c15e706fde4a5785d684f0a0d54b9a42497c60",
+    "source_revision": "807763260d72f56639f8e102e646d7519b639da1",
+    "core_revision": "82fc0ba882baae72ae3d83d7370decbcebe366d7",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "1a08380398877a46e7eae6e4f4399852890d2badf6c1bcd4937907d386c3e8ba"
+      "distr/core/js/core.js": "e95cf44026f87da79e063babe4aaa44ce7bc3719aa2d700877f3e4d64399129e"
     },
-    "note": "Reviewed at source 0b995885 and core 45c15e70 (release ui-45c15e706fde): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-84c7312396f6. The region grid's (min-width: 48rem) container query is a component threshold, not a breakpoint, and stays."
+    "note": "Reviewed at source 80776326 and core 82fc0ba8 (release ui-82fc0ba882ba): the composition schemas, builtins, fixture and buttons manifest are byte-identical to the review at ui-45c15e706fde. sortable.mjs adds the silhouette preview (preview=\"silhouette\", the default; \"line\" keeps the line), documented on the sortable page; core.js gains SF.notify and the same sortable preview, documented on the toast page. The composition contract the pages describe is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

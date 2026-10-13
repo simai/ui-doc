@@ -242,32 +242,54 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-button`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-button`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-button-background-color` | Заливка в спокойном состоянии; у наведения, нажатия и недоступности своя. | `var(--sf-primary)`; зависит от вида, схемы |
+| `--sf-button-color` | Цвет подписи в спокойном состоянии. | `var(--sf-on-primary)`; зависит от вида, схемы |
+| `--sf-button-border-color` | Цвет рамки в спокойном состоянии; виден при ненулевой ширине рамки. | `transparent`; зависит от вида, схемы |
+| `--sf-button-border-width` | Ширина рамки со всех сторон (у вида outline — var(--sf-px)). | `0`; зависит от вида |
+| `--sf-button-radius` | Скругление углов. | `var(--sf-radius--ui)` |
+| `--sf-button-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
+| `--sf-button-padding-block` | Отступ над и под содержимым. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+
+```css
+.sf-button {
+  --sf-button-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-button`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-button--background-color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-primary)` | `background-color` |
+| `--sf-button--background-color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-button-background-color, var(--sf-primary))` | `background-color` |
 | `--sf-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
-| `--sf-button--border-bottom-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-bottom`, `border-bottom-width` |
-| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--primary`: `var(--sf-outline)` | `border-color` |
-| `--sf-button--border-inline-end-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-inline-end`, `border-inline-end-width` |
-| `--sf-button--border-inline-start-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-inline-start`, `border-inline-start-width` |
+| `--sf-button--border-bottom-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-bottom`, `border-bottom-width` |
+| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--primary`: `var(--sf-button-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-button--border-inline-end-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-inline-end`, `border-inline-end-width` |
+| `--sf-button--border-inline-start-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-button--border-style` | не задана; задают модификаторы, например `.sf-button--outline`: `solid` | `border-style` |
 | `--sf-button--border-top-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-start-start-radius` |
 | `--sf-button--border-top-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-start-end-radius` |
-| `--sf-button--border-top-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `padding-top`, `border-top-width` |
+| `--sf-button--border-top-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-top`, `border-top-width` |
 | `--sf-button--border-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `border-width` |
 | `--sf-button--focus-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-on-primary)` | `--sf-button--focus-inset` |
 | `--sf-button--focus-inset` | не задана; задают модификаторы, например `.sf-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-button--focus-ink, transparent)` | `box-shadow` |
-| `--sf-button--padding-bottom` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
-| `--sf-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
-| `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
-| `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top` |
-| `--sf-button--radius` | `var(--sf-radius--ui)` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-button--padding-bottom` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
+| `--sf-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
+| `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
+| `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
+| `--sf-button--radius` | `var(--sf-button-radius, var(--sf-radius--ui))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-button-loading-stripe` | `var(--sf-alpha-8)` | `background-image` |
 | `--sf-button-text-container--background-color` | не задана; задают модификаторы, например `.sf-button .sf-button-text-container`: `transparent` | `background-color` |
-| `--sf-button-text-container--color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-on-primary)` | `color` |
+| `--sf-button-text-container--color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-button-color, var(--sf-on-primary))` | `color` |
 | `--sf-button-text-container--font-family` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text--family)` | `font-family` |
 | `--sf-button-text-container--font-size` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-button-text-container--font-weight` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-font-weight-medium)` | `font-weight` |

@@ -208,7 +208,7 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-radio-button--background-color` | не задана; задают модификаторы, например `.sf-radio-button[:has(input:enabled:not(:disabled):not(.disabled))]:hover`: `var(--sf-surface-container-hover)` | `background-color` |
+| `--sf-radio-button--background-color` | не задана; задают модификаторы, например `.sf-radio-wrap--type-font:hover`: `transparent` | `background-color` |
 | `--sf-radio-button--gap` | не задана; задают модификаторы, например `.sf-radio-button--size-1/2`: `var(--sf-ui-1/2--text-space-x)` | `gap` |
 | `--sf-radio-button-box--background-color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `transparent` | `background-color` |
 | `--sf-radio-button-box--border` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width` |

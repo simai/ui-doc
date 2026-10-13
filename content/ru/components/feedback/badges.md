@@ -105,25 +105,49 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-badge`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-badge`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-badge-background-color` | Заливка значка. | `var(--sf-on-surface-variant)`; зависит от вида, схемы, статуса |
+| `--sf-badge-color` | Цвет текста и иконки. | `var(--sf-on-surface-inverse)`; зависит от вида, схемы, статуса |
+| `--sf-badge-border-color` | Цвет рамки; виден при ненулевой ширине рамки. | `transparent`; зависит от вида, схемы, статуса |
+| `--sf-badge-border-width` | Ширина рамки со всех сторон. | `0`; зависит от вида |
+| `--sf-badge-radius` | Скругление углов. | `var(--sf-radius-circle)` |
+| `--sf-badge-padding-inline` | Отступ до и после текста по строчной оси. | `var(--sf-ui-1/3--text-space-x)`; зависит от размера |
+| `--sf-badge-padding-block` | Отступ над и под текстом. | `var(--sf-ui-1/3--space-y-tightness-low)`; зависит от размера |
+| `--sf-badge-gap` | Промежуток между иконкой и текстом. | `var(--sf-space-1/4)` |
+
+```css
+.sf-badge {
+  --sf-badge-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-badge`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-badge--background-color` | `var(--sf-on-surface-variant)` | `background-color` |
-| `--sf-badge--border-bottom-width` | не задана; задают модификаторы, например `.sf-badge--outline`: `var(--sf-px)` | `border-bottom-width` |
-| `--sf-badge--border-color` | не задана; задают модификаторы, например `.sf-badge.sf-badge--outline.sf-badge--neutral`: `var(--sf-outline-variant)` | `border-color` |
-| `--sf-badge--border-inline-end-width` | не задана; задают модификаторы, например `.sf-badge--outline`: `var(--sf-px)` | `border-inline-end-width` |
-| `--sf-badge--border-inline-start-width` | не задана; задают модификаторы, например `.sf-badge--outline`: `var(--sf-px)` | `border-inline-start-width` |
+| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-on-surface-variant))` | `background-color` |
+| `--sf-badge--border-bottom-width` | `var(--sf-badge-border-width, 0)` | `border-bottom-width` |
+| `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `border-color` |
+| `--sf-badge--border-inline-end-width` | `var(--sf-badge-border-width, 0)` | `border-inline-end-width` |
+| `--sf-badge--border-inline-start-width` | `var(--sf-badge-border-width, 0)` | `border-inline-start-width` |
 | `--sf-badge--border-style` | не задана; задают модификаторы, например `.sf-badge--outline`: `solid` | `border-style` |
-| `--sf-badge--border-top-width` | не задана; задают модификаторы, например `.sf-badge--outline`: `var(--sf-px)` | `border-top-width` |
-| `--sf-badge--color` | `var(--sf-on-surface-inverse)` | `color`, `--sf-icon--color`, `--sf-badge-text--color` |
+| `--sf-badge--border-top-width` | `var(--sf-badge-border-width, 0)` | `border-top-width` |
+| `--sf-badge--color` | `var(--sf-badge-color, var(--sf-on-surface-inverse))` | `color`, `--sf-icon--color`, `--sf-badge-text--color` |
 | `--sf-badge--font-size` | `var(--sf-text-size-1/3)` | `font-size`, `--sf-icon--font-size`, `--sf-badge-text--font-size` |
+| `--sf-badge--gap` | `var(--sf-badge-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-badge--line-height` | `var(--sf-text-height-1/3)` | `line-height`, `--sf-badge--min-size`, `--sf-badge-text--line-height` |
 | `--sf-badge--min-size` | `calc(var(--sf-badge--line-height) + 2 * var(--sf-badge--padding-block))` | `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
-| `--sf-badge--padding-block` | `var(--sf-ui-1/3--space-y-tightness-low)` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-badge--min-size` |
-| `--sf-badge--padding-inline-end` | `var(--sf-ui-1/3--text-space-x)` | `padding-inline-end` |
-| `--sf-badge--padding-inline-start` | `var(--sf-ui-1/3--text-space-x)` | `padding-inline-start` |
-| `--sf-badge-text--color` | не задана; задают модификаторы, например `.sf-badge.sf-badge--tonal .sf-badge-text`: `var(--sf-badge--color)` | `color` |
+| `--sf-badge--padding-block` | `var(--sf-badge-padding-block, var(--sf-ui-1/3--space-y-tightness-low))` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-badge--min-size` |
+| `--sf-badge--padding-inline-end` | `var(--sf-badge-padding-inline, var(--sf-ui-1/3--text-space-x))` | `padding-inline-end` |
+| `--sf-badge--padding-inline-start` | `var(--sf-badge-padding-inline, var(--sf-ui-1/3--text-space-x))` | `padding-inline-start` |
+| `--sf-badge-text--color` | не задана; задают модификаторы, например `.sf-badge.sf-badge--tonal .sf-badge-text`: `var(--sf-badge-color, var(--sf-badge--color))` | `color` |
 | `--sf-badge-text--font-size` | не задана; задают модификаторы, например `.sf-badge--size-1 .sf-badge-text`: `var(--sf-badge--font-size)` | `font-size` |
 | `--sf-badge-text--line-height` | не задана; задают модификаторы, например `.sf-badge--size-1 .sf-badge-text`: `var(--sf-badge--line-height)` | `line-height` |
 

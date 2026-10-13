@@ -215,11 +215,32 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-input`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-input`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-input-background-color` | Заливка поля в спокойном состоянии; у фокуса, ошибки и недоступности своя. | `var(--sf-surface-0)`; зависит от вида |
+| `--sf-input-border-color` | Рамка поля в спокойном состоянии. | `var(--sf-outline)`; зависит от вида |
+| `--sf-input-color` | Цвет введённого текста. | `inherit` |
+| `--sf-input-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
+| `--sf-input-padding-inline` | Внутренний отступ поля до и после содержимого по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
+| `--sf-input-padding-block` | Внутренний отступ поля над и под содержимым. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
+
+```css
+.sf-input {
+  --sf-input-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-input`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-input--radius` | `var(--sf-radius--ui)` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
+| `--sf-input--radius` | `var(--sf-input-radius, var(--sf-radius--ui))` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
 | `--sf-input-field--background-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-transparent-for-focus)` | `background-color` |
 | `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-error)` | `border-color` |
@@ -228,10 +249,10 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-field--border-start-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-end-radius` |
 | `--sf-input-field--border-start-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-start-radius` |
 | `--sf-input-field--box-shadow` | не задана; задают модификаторы, например `.sf-input:not(.sf-input--pointer-focus)[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-input-field`: `none` | `box-shadow` |
-| `--sf-input-field--padding-bottom` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))` | `padding-bottom` |
-| `--sf-input-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
-| `--sf-input-field--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
-| `--sf-input-field--padding-top` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))` | `padding-top` |
+| `--sf-input-field--padding-bottom` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-bottom` |
+| `--sf-input-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
+| `--sf-input-field--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
+| `--sf-input-field--padding-top` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-top` |
 | `--sf-input-hint--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-hint`: `transparent` | `background-color` |
 | `--sf-input-hint-text-wrap--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-hint-text-wrap`: `transparent` | `background-color` |
 | `--sf-input-hint-text-wrap--color` | не задана; задают модификаторы, например `.sf-input.sf-input--bordered .sf-input-hint-text-wrap`: `var(--sf-on-surface-variant)` | `color` |

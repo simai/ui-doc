@@ -10,22 +10,22 @@ Framework, а для каждого подключённого пакета пр
 также адреса, по которым они подключены. Удобная форма — файл блокировки
 проекта, например `simai-framework.lock.json` в корне репозитория проекта.
 Формат этого файла выбирает проект: Framework его не читает. Пример показывает
-минимальное содержание для выпуска `ui-45c15e706fde` с пакетом продукта
+минимальное содержание для выпуска `ui-82fc0ba882ba` с пакетом продукта
 `larena`, собранным для этого выпуска:
 
 ```json
 {
   "framework": {
-    "release": "ui-45c15e706fde",
-    "commit": "45c15e706fde4a5785d684f0a0d54b9a42497c60",
+    "release": "ui-82fc0ba882ba",
+    "commit": "82fc0ba882baae72ae3d83d7370decbcebe366d7",
     "distr_archive_sha256": "<runtime_sources.core.archive_sha256 из записи о выпуске>",
     "distr_tree": "<runtime_sources.core.runtime_tree из записи о выпуске>"
   },
   "packages": {
     "larena": {
       "receipt": "<путь к квитанции пакета>",
-      "source_revision": "8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5",
-      "framework": "ui-45c15e706fde",
+      "source_revision": "205f1bbf450adaa336ff46845647f690424051aa",
+      "framework": "ui-82fc0ba882ba",
       "manifest_sha256": "<output.manifest_sha256 из квитанции>"
     }
   }

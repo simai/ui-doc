@@ -328,7 +328,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-45c15e706fde` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-82fc0ba882ba` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -434,8 +434,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5:components/src/smart/data-view`
-- `simai/larena-ui@8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@205f1bbf450adaa336ff46845647f690424051aa:components/src/smart/data-view`
+- `simai/larena-ui@205f1bbf450adaa336ff46845647f690424051aa:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -481,7 +481,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `column-search-placeholder` — `string`, по умолчанию `Search the fields`. Placeholder и доступное имя поля поиска над списком настроек столбцов.
 - `column-search-empty-text` — `string`, по умолчанию `No field matches`. Выводится вместо списка настроек столбцов, когда поиск не нашёл ни одного поля.
 - `vertical-scroll` — `string`, по умолчанию `self`, значения: `self`, `page`. Прокручивается ли таблица внутри себя или прокручивается страница. Объявлено как строка с двумя значениями.
-- `filter-apply-text` — `string`, по умолчанию `Apply the filter`. Подпись кнопки подтверждения в окне фильтра; пока есть черновик, к ней добавляется число условий, которые изменит нажатие.
+- `filter-apply-text` — `string`, по умолчанию `Apply`. Подпись кнопки подтверждения в окне фильтра; пока есть черновик, к ней добавляется число условий, которые изменит нажатие.
 - `layout` — `string`, по умолчанию `table`, значения: `auto`, `table`, `list`. Как рисуются записи: таблицей, компактным списком или auto — таблицей, пока контейнер таблицы не уже list-below пикселей, и списком, когда уже. sf-data-view выбирает auto для списка на странице.
 - `list-below` — `number`, по умолчанию `600`. Ширина контейнера в пикселях, уже которой режим auto рисует компактный список.
 - `list-fields` — `number`, по умолчанию `3`. Сколько полей запись показывает под заголовком в компактном списке; поля выбираются по приоритету колонок.
@@ -567,5 +567,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5:components/src/smart/table`
-- `simai/larena-ui@8182faa2fa8d44a4e9343c996fbfabf05fa9a5d5:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@205f1bbf450adaa336ff46845647f690424051aa:components/src/smart/table`
+- `simai/larena-ui@205f1bbf450adaa336ff46845647f690424051aa:components/src/smart/table/rule.js#name=cl-table`

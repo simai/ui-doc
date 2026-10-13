@@ -57,10 +57,9 @@ description: "Публичное имя Framework (атрибут, значен�
 ## Журнал изменений
 
 **Журнал изменений** — машиночитаемый файл `contracts/changes/journal.json` в
-`ui-source` (формат `simai.change-journal`). `ui-source` — закрытый
-репозиторий, и в поставку `ui` журнал не входит; доступ к журналу и к
-инструменту `sf-upgrade` (см. [Инструмент `sf-upgrade`](/ru/guide/connection/updating/#инструмент-sf-upgrade)) проект получает через команду
-Framework. Это единственный полный список
+открытом репозитории [`simai/ui-source`](https://github.com/simai/ui-source)
+(формат `simai.change-journal`). В поставку `ui` журнал не входит; там же, в
+`ui-source`, лежит инструмент `sf-upgrade` (см. [Инструмент `sf-upgrade`](/ru/guide/connection/updating/#инструмент-sf-upgrade)). Это единственный полный список
 изменений, которые требуют правки проекта. Записи только добавляются и никогда
 не удаляются.
 

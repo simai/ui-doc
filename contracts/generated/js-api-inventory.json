@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-45c15e706fde",
-  "ui_commit": "45c15e706fde4a5785d684f0a0d54b9a42497c60",
+  "release": "ui-82fc0ba882ba",
+  "ui_commit": "82fc0ba882baae72ae3d83d7370decbcebe366d7",
   "stages": [
     "core",
     "dom",
@@ -299,7 +299,7 @@
       }
     },
     "language": {
-      "available": "components",
+      "available": "core",
       "type": "object",
       "members": {
         "components": {
@@ -453,7 +453,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "object"
+          "type": "null"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -721,14 +721,38 @@
       "available": "components",
       "type": "symbol"
     },
+    "notifications": {
+      "available": "core",
+      "type": "object",
+      "members": {
+        "close": {
+          "type": "function",
+          "arity": 1
+        },
+        "configure": {
+          "type": "function",
+          "arity": 0
+        },
+        "history": {
+          "type": "function",
+          "arity": 0
+        }
+      }
+    },
+    "notify": {
+      "available": "core",
+      "type": "function",
+      "arity": 0,
+      "class": false
+    },
     "pageLanguage": {
-      "available": "components",
+      "available": "core",
       "type": "function",
       "arity": 1,
       "class": false
     },
     "pageText": {
-      "available": "components",
+      "available": "core",
       "type": "function",
       "arity": 4,
       "class": false

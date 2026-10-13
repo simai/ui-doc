@@ -76,7 +76,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-45c15e706fde` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-82fc0ba882ba` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -85,7 +85,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 | Тег | `<sf-download-file>` |
 | Назначение | Нативная загрузка файла или подготовка файла силами приложения. |
 | Контракт | `smart.download-file`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-45c15e706fde` |
+| Поставка | выпуск Framework `ui-82fc0ba882ba` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -126,8 +126,8 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ### Источник
 
-- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/smart/download-file`
-- `simai/ui@45c15e706fde4a5785d684f0a0d54b9a42497c60:distr/rule/rule.json#name=cl-download-file`
+- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/smart/download-file`
+- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/rule/rule.json#name=cl-download-file`
 
 ## См. также
 

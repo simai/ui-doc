@@ -118,13 +118,36 @@ document.addEventListener('sf-alert-action', (event) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-alert`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-alert`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-alert-background-color` | Заливка предупреждения. | `var(--sf-surface-container)`; зависит от вида, статуса |
+| `--sf-alert-border-color` | Цвет рамки. | `var(--sf-outline)`; зависит от вида, статуса |
+| `--sf-alert-color` | Цвет текста. | `var(--sf-on-surface)`; зависит от вида, статуса |
+| `--sf-alert-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
+| `--sf-alert-radius` | Скругление углов. | `var(--sf-radius--surface)` |
+| `--sf-alert-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-space-1)` |
+| `--sf-alert-padding-block` | Отступ над и под содержимым. | `var(--sf-space-1)` |
+| `--sf-alert-gap` | Промежуток между иконкой, текстом и кнопками. | `var(--sf-space-1)` |
+
+```css
+.sf-alert {
+  --sf-alert-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-alert`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-surface-container)` | `background-color` |
-| `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-outline)` | `border-color` |
-| `--sf-alert--color` | `var(--sf-on-surface)` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color` |
+| `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-background-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-alert--color` | `var(--sf-alert-color, var(--sf-on-surface))` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color` |
 | `--sf-alert--opacity` | не задана; задают модификаторы, например `.sf-alert.closing`: `0` | `opacity` |
 | `--sf-alert-buttons--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `transparent` | `background-color` |
 | `--sf-alert-buttons--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `var(--sf-space-1/3)` | `gap` |
