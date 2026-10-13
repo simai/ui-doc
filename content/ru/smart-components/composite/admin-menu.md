@@ -281,8 +281,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/larena-ui@a064b5b4c5aad050916d43245729eb25d338447e:components/src/smart/admin-menu`
-- `simai/larena-ui@a064b5b4c5aad050916d43245729eb25d338447e:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/admin-menu`
+- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 
