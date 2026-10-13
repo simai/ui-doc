@@ -88,7 +88,7 @@ form.prepend(alert);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -97,7 +97,7 @@ form.prepend(alert);
 | Тег | `<sf-alert>` |
 | Назначение | Постоянное встроенное уведомление с семантическими ролями, необязательными действиями и закрытием. |
 | Контракт | `smart.alert`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -129,16 +129,17 @@ form.prepend(alert);
 
 ### Методы
 
-- `close()`
-- `onAction()`
-- `onClose()`
+- `close()` — возвращает `object`. Псевдоним dismiss(): отправляет sf-alert-close и удаляет уведомление после анимации исчезновения. Возвращает элемент.
+- `onAction(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-alert-action; обработчик получает (action, detail, event). Возвращает элемент.
+- `onClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-alert-close; обработчик получает (detail, event). Возвращает элемент.
+- `dismiss()` — возвращает `object`. Отправляет sf-alert-close, затем удаляет уведомление из DOM после анимации исчезновения (сразу при уменьшенном движении). Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-alert-action` — `detail` не описан.
-- `sf-alert-close` — `detail` не описан.
+- `sf-alert-action` — `detail`: `{ action?: string, alert?: any }`. Активирована кнопка действия ([data-action] или [data-alert-action]) внутри уведомления. Всплывает и с composed: true; не отменяемое. Уведомление остаётся.
+- `sf-alert-close` — `detail`: `{ alert?: any }`. Уведомление закрывается кнопкой закрытия или через dismiss()/close(). Всплывает и с composed: true; не отменяемое; после него элемент удаляется.
 
 ### Доступность
 
@@ -154,8 +155,8 @@ form.prepend(alert);
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/alert`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-alert`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/alert`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-alert`
 
 ## См. также
 

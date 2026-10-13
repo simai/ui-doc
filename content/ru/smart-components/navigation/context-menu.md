@@ -198,7 +198,7 @@ layer.addEventListener('keydown', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -207,7 +207,7 @@ layer.addEventListener('keydown', (event) => {
 | Тег | `<sf-context-menu>` |
 | Назначение | Меню действий Framework: пункты данными со значком, подписью, значением, сочетанием клавиш, отметкой, подменю, разделителем и заголовком; openFor() открывает его в верхнем слое с привязкой, клавиатурой, переходом по первой букве и возвратом фокуса. Хост может по-прежнему рисовать свои пункты и сам управлять жизненным циклом. |
 | Контракт | `smart.context-menu`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -257,8 +257,8 @@ layer.addEventListener('keydown', (event) => {
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `sf-context-menu-select` — `detail`: `{ id?: string|null, entry?: object, checked?: boolean|null, group?: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
-- `sf-context-menu-open` — `detail` не описан. Открыто через openFor().
-- `sf-context-menu-close` — `detail` не описан. Закрыто.
+- `sf-context-menu-open` — `detail`: `null`. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
+- `sf-context-menu-close` — `detail`: `null`. Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся.
 - `sf-context-menu-search` — `detail`: `{ query?: string }`. Запрос поиска, на который отвечает хост (search.remote).
 
 ### Доступность
@@ -276,8 +276,8 @@ layer.addEventListener('keydown', (event) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/context-menu`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/context-menu`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-context-menu`
 
 ## См. также
 

@@ -99,16 +99,16 @@ terms.setChecked(false);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-checkbox>` |
-| Назначение | Smart-компонент Checkbox из SIMAI Framework. |
+| Назначение | Нативный флажок с подписью, оформлением Framework и состояниями checked, indeterminate и disabled, которые согласованы между атрибутами хост-элемента и внутренним input. |
 | Контракт | `smart.checkbox`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -130,22 +130,22 @@ terms.setChecked(false);
 
 ### Методы
 
-- `getInputElement()`
+- `getInputElement()` — возвращает `object` | `null`. Возвращает внутренний нативный input флажка или null до отрисовки.
 - `isChecked()` — возвращает `boolean`. Возвращает текущее нативное состояние checked.
-- `setChecked()`
-- `setIndeterminate()`
-- `setDisabled()`
-- `setBooleanStateAttribute()`
-- `setState()`
-- `onChange()`
-- `onFocus()`
-- `onBlur()`
+- `setChecked(nextValue?: boolean|string)` — возвращает `object`. Устанавливает состояние checked в атрибуте хост-элемента и во внутреннем input через setState(). Возвращает элемент.
+- `setIndeterminate(nextValue?: boolean|string)` — возвращает `object`. Устанавливает состояние indeterminate в атрибуте хост-элемента и во внутреннем input через setState(). Возвращает элемент.
+- `setDisabled(nextValue?: boolean|string)` — возвращает `object`. Устанавливает состояние disabled в атрибуте хост-элемента и во внутреннем input через setState(). Возвращает элемент.
+- `setBooleanStateAttribute(name: string, value: boolean)` — возвращает `null`. Добавляет указанный атрибут хост-элемента как пустой атрибут, когда value истинно, и удаляет его в противном случае.
+- `setState(nextState?: object)` — возвращает `object`. Применяет checked, indeterminate и disabled и к атрибуту хост-элемента, и к внутреннему input; остальные ключи передаются в базовый setState как атрибуты хост-элемента. Возвращает элемент.
+- `onChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик change на хост-элементе. Возвращает элемент.
+- `onFocus(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusin на хост-элементе. Возвращает элемент.
+- `onBlur(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusout на хост-элементе. Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `change` — `detail` не описан. Изменилось состояние checked; нативное событие всплывает от внутреннего флажка, который является его целью.
+- `change` — `detail`: `null`. Изменилось состояние checked; нативное событие всплывает от внутреннего флажка, который является его целью. detail не передаётся.
 
 ### Доступность
 
@@ -161,5 +161,5 @@ terms.setChecked(false);
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/checkbox`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-checkbox`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/checkbox`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-checkbox`

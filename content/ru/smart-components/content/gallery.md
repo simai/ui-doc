@@ -106,16 +106,16 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-gallery>` |
-| Назначение | Smart-компонент Gallery из SIMAI Framework. |
+| Назначение | Упорядоченная коллекция медиа во встроенном Slider с необязательным лайтбоксом Modal, в котором находится второй Slider. Галерея хранит текущий слайд (нумерация с единицы) и держит на нём оба представления. |
 | Контракт | `smart.gallery`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -174,23 +174,23 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### Методы
 
-- `getModal()`
-- `getInlineSlider()`
-- `getLightboxSlider()`
-- `open()`
-- `close()`
-- `toggle()`
-- `goTo()`
-- `next()`
-- `prev()`
+- `getModal()` — возвращает `object` | `null`. Возвращает sf-modal лайтбокса или null, если его нет.
+- `getInlineSlider()` — возвращает `object` | `null`. Возвращает встроенный sf-slider или null до отрисовки.
+- `getLightboxSlider()` — возвращает `object` | `null`. Возвращает sf-slider лайтбокса или null, если его нет.
+- `open(index?: number)` — возвращает `object`. Переходит к указанному слайду (нумерация с единицы), если передан индекс, устанавливает open и открывает модальное окно лайтбокса. Возвращает элемент.
+- `close()` — возвращает `object`. Снимает open и закрывает модальное окно лайтбокса. Возвращает элемент.
+- `toggle(index?: number)` — возвращает `object`. Вызывает close(), если открыто, иначе open(index). Возвращает элемент.
+- `goTo(index: number)` — возвращает `object`. Переходит к слайду по номеру с единицы, ограничивая его числом слайдов, отражает его в атрибуте current, синхронизирует оба слайдера и отправляет sf-change, если слайд сменился. Возвращает элемент.
+- `next()` — возвращает `object`. goTo(current + 1); останавливается на последнем слайде. Возвращает элемент.
+- `prev()` — возвращает `object`. goTo(current - 1); останавливается на первом слайде. Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-change` — `detail` не описан.
-- `sf-close` — `detail` не описан.
-- `sf-open` — `detail` не описан.
+- `sf-change` — `detail`: `{ component?: any, tagName?: string, template?: string, previous?: number, current?: number, total?: number, from?: any }`. Текущий слайд изменился через API или любой из слайдеров. Всплывает и с composed: true.
+- `sf-close` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса закрылось. Всплывает и с composed: true.
+- `sf-open` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса открылось. Всплывает и с composed: true.
 
 ### Доступность
 
@@ -206,8 +206,8 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/gallery`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-gallery`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/gallery`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-gallery`
 
 ## См. также
 

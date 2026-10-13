@@ -76,7 +76,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -85,7 +85,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 | Тег | `<sf-download-file>` |
 | Назначение | Нативная загрузка файла или подготовка файла силами приложения. |
 | Контракт | `smart.download-file`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -110,7 +110,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-download-file:click` — `detail` не описан. Отправляется один раз для доступного нативного места назначения или действия, которым владеет приложение.
+- `sf-download-file:click` — `detail`: `{ href?: string, fileName?: string, download?: boolean }`. Отправляется один раз для доступного нативного назначения или действия, которым управляет приложение, от отрисованного корня .sf-download-file; всплывает до хост-элемента, не с composed: true и не отменяемое.
 
 ### Доступность
 
@@ -126,8 +126,8 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/download-file`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-download-file`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/download-file`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-download-file`
 
 ## См. также
 

@@ -84,7 +84,7 @@ remove.onClick(() => deleteRow(row));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -93,7 +93,7 @@ remove.onClick(() => deleteRow(row));
 | Тег | `<sf-icon-button>` |
 | Назначение | Нативная кнопка-иконка с геометрией из токенов, доступным именем и общей семантикой загрузки. |
 | Контракт | `smart.icon-buttons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -131,13 +131,13 @@ remove.onClick(() => deleteRow(row));
 
 ### Методы
 
-- `setButtonAttributes()`
-- `onClick()`
-- `onFocus()`
-- `onBlur()`
-- `onMouseEnter()`
-- `onMouseLeave()`
-- `setDisabled()`
+- `setButtonAttributes(attributes?: object)` — возвращает `object`. Передаёт объект в setState() как buttonAttributes; встроенный шаблон его не читает, поэтому он доходит только до внешнего шаблона проекта. Возвращает элемент.
+- `onClick(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик click на хост-элементе. Возвращает элемент.
+- `onFocus(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusin на хост-элементе. Возвращает элемент.
+- `onBlur(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusout на хост-элементе. Возвращает элемент.
+- `onMouseEnter(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик mouseenter на хост-элементе. Возвращает элемент.
+- `onMouseLeave(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик mouseleave на хост-элементе. Возвращает элемент.
+- `setDisabled(nextValue?: boolean)` — возвращает `object`. Устанавливает атрибут disabled, если nextValue истинно, и удаляет его в противном случае. Возвращает элемент.
 
 ### События
 
@@ -158,8 +158,8 @@ remove.onClick(() => deleteRow(row));
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/icon-buttons`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/icon-buttons`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-icon-buttons`
 
 ## См. также
 

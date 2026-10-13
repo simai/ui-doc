@@ -65,7 +65,7 @@ upload.addEventListener('load', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -74,7 +74,7 @@ upload.addEventListener('load', () => {
 | Тег | `<sf-progress-bar>` |
 | Назначение | Непрерывный определённый прогресс с нормализованным значением, доступной семантикой диапазона и явным семантическим тоном. |
 | Контракт | `smart.progress-bar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -99,9 +99,9 @@ upload.addEventListener('load', () => {
 
 ### Методы
 
-- `getProgress()`
-- `setProgress()`
-- `setTextPosition()`
+- `getProgress()` — возвращает `number`. Возвращает атрибут value как число (0, если атрибута нет); значение не ограничивается.
+- `setProgress(nextValue: number|string)` — возвращает `object`. Устанавливает атрибут value; null или undefined удаляет его.
+- `setTextPosition(nextValue: string)` — возвращает `object`. Устанавливает text-position; null или undefined удаляет его.
 
 ### События
 
@@ -121,8 +121,8 @@ upload.addEventListener('load', () => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/progress-bar`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-progress-bar`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/progress-bar`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-progress-bar`
 
 ## См. также
 

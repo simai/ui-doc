@@ -77,16 +77,16 @@ compact.addEventListener('change', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-switch>` |
-| Назначение | Smart-компонент Switch из SIMAI Framework. |
+| Назначение | Переключатель вкл./выкл. для настройки, которая применяется сразу: нативный флажок с role="switch", дорожка и движущийся бегунок, с подписью, описанием и текстом подсказки. |
 | Контракт | `smart.switch`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -103,13 +103,13 @@ compact.addEventListener('change', async (event) => {
 
 ### Методы
 
-- `getInputElement()`
-- `setChecked()`
-- `setDisabled()`
-- `setState()`
-- `onChange()`
-- `onFocus()`
-- `onBlur()`
+- `getInputElement()` — возвращает `object` | `null`. Возвращает внутренний нативный input (.sf-switch input[type="checkbox"]) или null до отрисовки.
+- `setChecked(nextValue?: boolean)` — возвращает `object`. Устанавливает свойство и состояние checked внутреннего input; не отправляет change.
+- `setDisabled(nextValue?: boolean)` — возвращает `object`. Устанавливает или снимает disabled на хост-элементе и внутреннем input.
+- `setState(nextState: object)` — возвращает `object`. Применяет checked и disabled к внутреннему input и отражает их в атрибутах хост-элемента; до отрисовки использует базовый setState.
+- `onChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик нативного события change, которое всплывает от внутреннего input.
+- `onFocus(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusin на хост-элементе.
+- `onBlur(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusout на хост-элементе.
 
 ### События
 
@@ -132,5 +132,5 @@ compact.addEventListener('change', async (event) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/switch`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-switch`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/switch`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-switch`

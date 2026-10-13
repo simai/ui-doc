@@ -80,7 +80,7 @@ file.onDownload((event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -89,7 +89,7 @@ file.onDownload((event) => {
 | Тег | `<sf-file-preview>` |
 | Назначение | Доступная Smart-проекция обычной строки File Preview. |
 | Контракт | `smart.file-preview`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -138,8 +138,8 @@ file.onDownload((event) => {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-file-preview:download` — `detail` не описан. Запрошено действие скачивания.
-- `sf-file-preview:remove` — `detail` не описан. Запрошено действие удаления.
+- `sf-file-preview:download` — `detail`: `{ action?: any, value?: object }`. Запрошено действие скачивания. Всплывает, с composed: true и отменяемое: preventDefault() останавливает встроенный переход по href.
+- `sf-file-preview:remove` — `detail`: `{ action?: any, value?: object }`. Запрошено действие удаления. Всплывает, с composed: true и отменяемое; компонент сам ничего не удаляет.
 
 ### Доступность
 
@@ -156,8 +156,8 @@ file.onDownload((event) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/file-preview`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-file-preview`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/file-preview`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-file-preview`
 
 ## См. также
 

@@ -100,16 +100,16 @@ price.setValue([10000, 30000]);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-range-slider>` |
-| Назначение | Smart-компонент Range Slider из SIMAI Framework. |
+| Назначение | Слайдер для одного числа или диапазона из двух на дорожке: перетаскивание, щелчок или клавиши сдвигают ручку на step, заливка показывает выбранную часть, а значение можно показать текстом или подсказкой у каждой ручки. |
 | Контракт | `smart.range-slider`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -125,7 +125,7 @@ price.setValue([10000, 30000]);
 - `margin` — `string`, по умолчанию пусто.
 - `connect` — `string`, по умолчанию пусто.
 - `keyboard` — `boolean`, по умолчанию `true`.
-- `label` — `string`, по умолчанию `none`.
+- `label` — `string`, по умолчанию `none`, значения: `none`, `text`, `tooltip`. Как каждая ручка показывает своё значение: никак, текстом рядом с ней или подсказкой.
 - `prefix` — `string`, по умолчанию пусто.
 - `suffix` — `string`, по умолчанию пусто.
 - `lower-label` — `string`, по умолчанию пусто.
@@ -139,43 +139,44 @@ price.setValue([10000, 30000]);
 
 ### Методы
 
-- `getSliderRoot()`
-- `getValue()`
-- `setValue()`
-- `setDisabled()`
-- `setState()`
-- `onUpdateValue()`
-- `onSliderUpdate()`
-- `onChange()`
-- `onSliderChange()`
-- `onSet()`
-- `onSliderSet()`
-- `onStart()`
-- `onSliderStart()`
-- `onEnd()`
-- `onSliderEnd()`
+- `getSliderRoot()` — возвращает `object` | `null`. Возвращает внутренний корень слайдера (.sf-range-slider) или null до отрисовки.
+- `getValue()` — возвращает `number` | `array` | `null`. Возвращает текущее значение слайдера: число при одной ручке, массив из двух чисел при двух; null до создания слайдера.
+- `setValue(nextValue: number|string|array)` — возвращает `object`. Устанавливает значение из кода (число, строка через запятую или массив). Число ручек следует за значением, если multiple не задан явно; значение, допустимое с учётом range, step и margin, отражается в атрибуте value. Не отправляет change.
+- `setDisabled(nextValue?: boolean)` — возвращает `object`. Устанавливает или удаляет атрибут disabled и перерисовывает.
+- `setState(nextState: object)` — возвращает `object`. Применяет ключи: value — через setValue, multiple явно задаёт число ручек, disabled — через setDisabled; любой другой ключ записывается как атрибут в kebab-case (false, null, undefined или пустое значение удаляет его, true устанавливает пустым).
+- `onUpdateValue(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-range-slider-update; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onSliderUpdate(handler: function, options?: object|boolean)` — возвращает `object`. То же, что onUpdateValue.
+- `onChange(handler: function, options?: object)` — Подписывается на change — зафиксированное значение: handler(value, detail, event). Возвращает элемент.
+- `onSliderChange(handler: function, options?: object|boolean)` — возвращает `object`. То же, что onChange: подписывается на change — каноническое имя.
+- `onSet(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-range-slider-set; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onSliderSet(handler: function, options?: object|boolean)` — возвращает `object`. То же, что onSet.
+- `onStart(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-range-slider-start; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onSliderStart(handler: function, options?: object|boolean)` — возвращает `object`. То же, что onStart.
+- `onEnd(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-range-slider-end; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onSliderEnd(handler: function, options?: object|boolean)` — возвращает `object`. То же, что onEnd.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `change` — `detail` не описан. Пользователь зафиксировал значение (конец перетаскивания, щелчок, клавиша); всплывает от корня слайдера с `values`, `value`, `handleCount` и `handle`. Значение, установленное из кода, не является изменением. Имя для привязки.
+- `change` — `detail`: `{ component: object, values: array, value: number|array, handleCount: number, handle: number }`. Пользователь зафиксировал значение (конец перетаскивания, щелчок, клавиша); всплывает от корня слайдера с `values`, `value`, `handleCount` и `handle`. Значение, установленное из кода, не является изменением. Имя для привязки.
 - `sf-range-slider-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 - `onSliderChange` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
 ### Доступность
 
-- Доступное имя: рекомендуется.
-- Клавиши: `Tab`.
-- Фокус: Сохраняет видимый фокус на активном элементе управления.
+- Роль: slider.
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End`.
+- Фокус: aria-label или aria-labelledby на хост-элементе передаётся каждой ручке; при двух ручках lower-label и upper-label называют каждую. Каждая ручка — остановка Tab с видимым кольцом фокуса. Стрелки сдвигают на step (зеркально в RTL), Home и End переводят к границам ручки; keyboard=false отключает клавиши.
 
 ### Минимальная разметка
 
 ```html
-<sf-range-slider></sf-range-slider>
+<sf-range-slider aria-label="Price" min="0" max="100" value="20"></sf-range-slider>
 ```
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/range-slider`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-range-slider`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/range-slider`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-range-slider`

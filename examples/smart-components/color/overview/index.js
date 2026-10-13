@@ -9,9 +9,6 @@ const initializeColourExample = async () => {
   await customElements.whenDefined('sf-color');
   for (const colour of document.querySelectorAll('#brand-colour, #accent-colour')) {
     colour.addEventListener('change', (event) => {
-      // The native picker's own change bubbles through the element too; the
-      // committed colour is the one that carries detail.
-      if (!event.detail) return;
       // An empty value means the inherited colour applies again, which is not
       // the same as that colour written out: only the first follows the theme.
       const {name, value} = event.detail;

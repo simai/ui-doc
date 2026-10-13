@@ -208,6 +208,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | `--sf-icon-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-inline-start` |
 | `--sf-icon-button--padding-top` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top` |
 | `--sf-icon-button--radius` | `var(--sf-radius--ui)` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-icon-button-loading-stripe` | `var(--sf-alpha-8)` | `background-image` |
 
 ## См. также
 

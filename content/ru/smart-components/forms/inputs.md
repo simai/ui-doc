@@ -112,7 +112,7 @@ email.getInputElement().focus();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -121,7 +121,7 @@ email.getInputElement().focus();
 | Тег | `<sf-input>` |
 | Назначение | Нативное однострочное поле формы с оформлением Framework, сообщениями валидации и необязательной поддержкой маски. |
 | Контракт | `smart.inputs`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -169,20 +169,20 @@ email.getInputElement().focus();
 
 ### Методы
 
-- `getInputElement()`
-- `onInput()`
-- `onChange()`
-- `onKeyUp()`
-- `onKeyDown()`
-- `onFocus()`
-- `onBlur()`
+- `getInputElement()` — возвращает `object` | `null`. Возвращает внутренний нативный input или null до отрисовки.
+- `onInput(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик input на хост-элементе. Возвращает элемент.
+- `onChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик change на хост-элементе. Возвращает элемент.
+- `onKeyUp(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик keyup на хост-элементе. Возвращает элемент.
+- `onKeyDown(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик keydown на хост-элементе. Возвращает элемент.
+- `onFocus(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusin на хост-элементе. Возвращает элемент.
+- `onBlur(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик focusout на хост-элементе. Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `change` — `detail` не описан. Значение зафиксировано; нативное событие всплывает от внутреннего поля ввода, которое является его целью.
-- `input` — `detail` не описан. Значение изменилось при вводе; нативное событие всплывает от внутреннего поля ввода, которое является его целью.
+- `change` — `detail`: `null`. Значение зафиксировано; нативное событие всплывает от внутреннего input, который является его целью. detail не передаётся.
+- `input` — `detail`: `null`. Значение изменилось во время ввода; нативное событие всплывает от внутреннего input, который является его целью. detail не передаётся.
 
 ### Доступность
 
@@ -199,5 +199,5 @@ email.getInputElement().focus();
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/inputs`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-inputs`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/inputs`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-inputs`

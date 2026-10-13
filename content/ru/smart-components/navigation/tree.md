@@ -96,7 +96,7 @@ tree.items = await fetchFolders();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,7 +105,7 @@ tree.items = await fetchFolders();
 | Тег | `<sf-tree>` |
 | Назначение | Доступный иерархический составной компонент с перемещаемым фокусом (roving focus), раскрытием ветвей и выбором, которым управляет элемент. |
 | Контракт | `smart.tree`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -116,16 +116,17 @@ tree.items = await fetchFolders();
 - `aria-label` — `string`, по умолчанию пусто.
 - `role` — `string`, по умолчанию `tree`, значения: `tree`.
 - `selection` — `string`, по умолчанию `none`, значения: `none`, `single`, `multiple`.
+- `items` — `array` из `object`, по умолчанию `[]`. Пункты, заданные данными вместо дочерних sf-tree-item (задаётся как свойство, а не атрибут): [{label, href?, target?, rel?, kind?, value?, open?, selected?, active?, disabled?, icon?, openIcon?, closedIcon?, chevronOpenIcon?, chevronClosedIcon?, openLabel?, closeLabel?, children?}]. text или title заменяют label. Установка заменяет пункты и перерисовывает дерево; дочерние sf-tree-item читаются один раз и удаляются, поэтому родитель, который перерисовывает изменённые пункты, передаёт их этим способом.
 
 ### Методы
 
-- `onToggle()`
+- `onToggle(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tree-item-toggle от любого пункта дерева; обработчик вызывается с (item, detail, event).
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-tree-selection-change` — `detail` не описан. Запрошен или изменён выбор элемента дерева.
+- `sf-tree-selection-change` — `detail`: `{ component: object, tagName: string, template: string, item: object, selected: boolean, value: string }`. Запрошен или изменён выбор элемента дерева.
 
 ### Доступность
 
@@ -142,8 +143,8 @@ tree.items = await fetchFolders();
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/tree`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-tree`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/tree`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-tree`
 
 ## См. также
 

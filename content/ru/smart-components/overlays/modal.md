@@ -156,7 +156,8 @@ modal.open();
   недоступна. После закрытия — кнопкой, `Escape` или методом `close()` —
   фокус возвращается на элемент, который открыл окно.
 - `Escape` закрывает верхнее окно, если не задан `unclose` или
-  `close-on-esc="false"`. В окне с `unclose` оставьте видимые действия,
+  `close-on-esc="false"`. Пока внутри открыта всплывающая панель
+  (`sf-popover`), `Escape` закрывает сначала её. В окне с `unclose` оставьте видимые действия,
   которыми задачу можно завершить.
 - Кнопки закрытия и сворачивания на русской странице называются «Закрыть» и
   «Свернуть».
@@ -165,16 +166,16 @@ modal.open();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-modal>` |
-| Назначение | Smart-компонент Modal из SIMAI Framework. |
+| Назначение | Диалоговое окно поверх страницы в общем стеке модальных окон: по центру или у боковой, верхней или нижней границы, со слотами заголовка, содержимого и подвала, ловушкой фокуса, блокировкой прокрутки и возвратом фокуса. Окно также можно свернуть, загрузить его содержимое через Ajax или в iframe либо отрисовать встроенным в поток страницы. |
 | Контракт | `smart.modal`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -222,27 +223,28 @@ modal.open();
 
 ### Методы
 
-- `getSlotHtml()`
-- `open()`
-- `close()`
-- `hide()`
-- `show()`
-- `toggle()`
-- `setSrc()`
-- `getModalRoot()`
-- `onKeyDown()`
-- `resetRemoteContent()`
-- `clearPortal()`
-- `onBeforeOpen()`
-- `onAfterOpen()`
-- `onBeforeClose()`
-- `onAfterClose()`
-- `onBeforeHide()`
-- `onAfterHide()`
-- `onBeforeShow()`
-- `onAfterShow()`
-- `onModalReady()`
-- `onModalUpdate()`
+- `getSlotHtml(name: string)` — возвращает `string`. Возвращает HTML захваченного содержимого для именованного слота с перенесёнными данными времени выполнения и идентификаторами событий.
+- `open(options?: object|boolean)` — возвращает `object`. Открывает окно или выводит его на передний план, если оно уже открыто. Отправляет modal:before-open (отменяемое), затем modal:after-open после проецирования; загружает удалённое содержимое, если задан src. options.animate (или логическое значение) управляет анимацией открытия. Возвращает элемент.
+- `close()` — возвращает `object`. Закрывает окно после modal:before-close (отменяемое), выполняет анимацию закрытия, возвращает фокус и отправляет modal:after-close. Возвращает элемент.
+- `hide()` — возвращает `object`. Сворачивает открытое накладываемое окно после modal:before-hide (отменяемое) и отправляет modal:after-hide. Во встроенном режиме ничего не делает. Возвращает элемент.
+- `show()` — возвращает `object`. Восстанавливает свёрнутое окно после modal:before-show (отменяемое) и отправляет modal:after-show. Возвращает элемент.
+- `toggle()` — возвращает `object`. Вызывает close(), если открыто, иначе open(). Возвращает элемент.
+- `setSrc(src: string)` — возвращает `object`. Устанавливает атрибут src, прерывает и сбрасывает текущее удалённое содержимое и загружает новый источник, если загрузка сейчас разрешена. Возвращает элемент.
+- `getModalRoot()` — возвращает `object` | `null`. Возвращает отрисованный элемент .sf-modal или null до отрисовки.
+- `onKeyDown(event: KeyboardEvent)` — возвращает `null`. Обработчик keydown документа, который модальное окно привязывает само: Escape закрывает верхнее открытое окно, если это разрешает close-on-esc, Tab удерживается внутри него. Не предназначен для вызова хостом.
+- `resetRemoteContent()` — возвращает `null`. Очищает загруженный удалённый HTML, ошибку и состояние загрузки и прерывает выполняющийся запрос.
+- `clearPortal()` — возвращает `null`. Снимает отрисовку и удаляет корень портала, в который проецировалось окно, если он есть.
+- `onBeforeOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:before-open, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onAfterOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:after-open, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onBeforeClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:before-close, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onAfterClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:after-close, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onBeforeHide(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:before-hide, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onAfterHide(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:after-hide, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onBeforeShow(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:before-show, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onAfterShow(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:after-show, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `onModalReady(handler: function, options?: object|boolean)` — возвращает `object`. Сразу вызывает обработчик с событием modal:ready, если модальное окно уже отрисовано, иначе добавляет обработчик его собственного modal:ready. Возвращает элемент.
+- `onModalUpdate(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик modal:update, который срабатывает только на собственные события этого модального окна. Возвращает элемент.
+- `reloadContent()` — возвращает `object`. Сбрасывает удалённое содержимое и снова загружает src, даже если окно закрыто и preload выключен. Возвращает элемент.
 
 ### События
 
@@ -256,16 +258,19 @@ modal.open();
 - `modal:before-hide` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед сворачиванием окна; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
 - `modal:before-open` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед открытием окна; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
 - `modal:before-show` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед тем как свёрнутое окно снова показано; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
-- `modal:ready` — `detail` не описан. Событие среды выполнения modal:ready. Всплывает и является composed; detail.modal — модальное окно, отправившее событие.
-- `modal:update` — `detail` не описан. Событие среды выполнения modal:update. Всплывает и является composed; detail.modal — модальное окно, отправившее событие.
-- `sf-after-render` — `detail` не описан.
-- `sf-before-render` — `detail` не описан.
+- `modal:ready` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any }`. Окно отрисовано впервые. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие.
+- `modal:update` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any }`. Окно отрисовано повторно после первой отрисовки. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие.
+- `sf-after-render` — `detail`: `{ component?: any, tagName?: string, template?: string, changedAttributes?: array }`. Базовое событие жизненного цикла после каждой отрисовки. Всплывает и с composed: true.
+- `sf-before-render` — `detail`: `{ component?: any, tagName?: string, template?: string, changedAttributes?: array }`. Базовое событие жизненного цикла перед каждой отрисовкой. Всплывает и с composed: true.
+- `modal:before-content-upload` — `detail`: `{ component?: any, modal?: any, modalId?: string, src?: string, remote?: object }`. Начинается Ajax-запрос содержимого (mode=ajax). Всплывает и с composed: true.
+- `modal:after-content-upload` — `detail`: `{ component?: any, modal?: any, modalId?: string, src?: string, remote?: object }`. Удалённое содержимое загружено, с success или error в detail.remote; прерванный запрос его не отправляет. Также отправляется при загрузке iframe. Всплывает и с composed: true.
 
 ### Доступность
 
-- Доступное имя: рекомендуется.
-- Клавиши: `Tab`.
-- Фокус: Сохраняет видимый фокус на активном элементе управления.
+- Роль: диалог (`dialog`).
+- Доступное имя: обязательно.
+- Клавиши: `Tab`, `Shift+Tab`, `Escape`.
+- Фокус: При открытии фокус переходит на панель верхнего окна; Tab и Shift+Tab удерживаются внутри неё, а Escape закрывает её, если это разрешает close-on-esc. При закрытии фокус возвращается элементу, который открыл окно. Заголовок по умолчанию задаёт доступное имя диалога через aria-labelledby; для пользовательского заголовка или окна без заголовка укажите aria-label. display=inline сохраняет обычную навигацию по документу. С display=inline окно является областью (region) на странице, а не диалогом.
 
 ### Минимальная разметка
 
@@ -275,8 +280,8 @@ modal.open();
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/modal`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-modal`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/modal`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-modal`
 
 ## См. также
 

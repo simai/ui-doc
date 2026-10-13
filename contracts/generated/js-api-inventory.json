@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-7c01b6265585",
-  "ui_commit": "7c01b6265585f06e34de6d25fb2a0bf64b6d08ed",
+  "release": "ui-84c7312396f6",
+  "ui_commit": "84c7312396f6f59548b5c2c41ef6915de010ad5b",
   "stages": [
     "core",
     "dom",
@@ -453,7 +453,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "object"
+          "type": "null"
         },
         "iconSubsetReady": {
           "type": "boolean"

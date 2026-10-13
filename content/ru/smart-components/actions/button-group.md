@@ -92,7 +92,7 @@ group.select('month');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -101,7 +101,7 @@ group.select('month');
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -137,7 +137,7 @@ group.select('month');
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `change` — `detail`: `{ previous: string, value: string, item: object|null }`. Выбранное значение изменилось; событие отправляется на элементе с previous, value и item. Используйте это имя для подписки.
+- `change` — `detail`: `{ component: any, previous: string, value: string, item: object|null }`. Выбранное значение изменилось через select() или clear(); событие отправляется на хост-элементе, всплывает и с composed: true. Имя для привязки.
 - `sf-button-group-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
 ### Доступность
@@ -155,8 +155,8 @@ group.select('month');
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/button-group`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/button-group`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-button-group`
 
 ## См. также
 

@@ -94,16 +94,16 @@ tabs.goTo(2);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-tabs>` |
-| Назначение | Smart-компонент Tabs из SIMAI Framework. |
+| Назначение | Список вкладок, который показывает одну локальную панель за раз: текстовые вкладки или вкладки с иконкой задаются атрибутами, слотами или данными, с перемещаемым фокусом клавиатуры и связанными панелями вкладок. |
 | Контракт | `smart.tabs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -123,19 +123,19 @@ tabs.goTo(2);
 
 ### Методы
 
-- `getData()`
-- `setData()`
-- `setItems()`
-- `setPanels()`
-- `setState()`
-- `goTo()`
-- `onTabChange()`
+- `getData()` — возвращает `object`. Возвращает данные, заданные через setData: {tabs, panels, ...}; {tabs: [], panels: []}, если ничего не задано.
+- `setData(data: object|function, reason?: string)` — возвращает `object`. Объединяет data с текущими данными (функция получает текущие данные и возвращает новые) и перерисовывает. tabs или items становятся вкладками; panels или content — панелями. Значение, не являющееся объектом, игнорируется.
+- `setItems(items: array|function, reason?: string)` — возвращает `object`. Заменяет вкладки в данных (функция получает текущие вкладки) и перерисовывает.
+- `setPanels(panels: array|function, reason?: string)` — возвращает `object`. Заменяет панели в данных (функция получает текущие панели) и перерисовывает.
+- `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label::flags, соединённые через |. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым.
+- `goTo(index: number|string)` — возвращает `object`. Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tab-change.
+- `onTabChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tab-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-tab-change` — `detail` не описан.
+- `sf-tab-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
 
 ### Доступность
 
@@ -152,8 +152,8 @@ tabs.goTo(2);
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/tabs`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-tabs`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/tabs`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-tabs`
 
 ## См. также
 

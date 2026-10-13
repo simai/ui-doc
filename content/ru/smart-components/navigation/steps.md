@@ -67,22 +67,22 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-steps>` |
-| Назначение | Smart-компонент Steps из SIMAI Framework. |
+| Назначение | Ряд подписанных кнопок шагов, разделённых иконкой, для многошагового процесса: отмечает текущий, завершённые и ошибочные шаги и переходит к доступному шагу при нажатии. |
 | Контракт | `smart.steps`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-- `size` — `string`, по умолчанию `1`.
+- `size` — `string`, по умолчанию `1`, значения: `1`, `1/2`.
 - `items` — `string`, по умолчанию `[]`.
 - `current` — `number`, по умолчанию `0`.
 - `error-step` — `string`, по умолчанию пусто.
@@ -94,15 +94,15 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### Методы
 
-- `setState()`
-- `goToStep()`
-- `onStepChange()`
+- `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label::disabled, соединённые через |. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым.
+- `goToStep(index: number|string)` — возвращает `object`. Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-step-change.
+- `onStepChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-step-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-step-change` — `detail` не описан.
+- `sf-step-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
 
 ### Доступность
 
@@ -119,8 +119,8 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/steps`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/steps`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-steps`
 
 ## См. также
 

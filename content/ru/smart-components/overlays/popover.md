@@ -59,14 +59,11 @@ description: "Открывает небольшую панель у кнопки
 
 ```js
 const popover = document.querySelector('sf-popover');
-const trigger = popover.querySelector('[slot="trigger"]');
 
 popover.addEventListener('sf-popover-open', () => {
-  trigger.setAttribute('aria-expanded', 'true');
   popover.querySelector('[slot="content"] input')?.focus();
 });
 popover.addEventListener('sf-popover-close', () => {
-  trigger.setAttribute('aria-expanded', 'false');
   applyFilter();
 });
 ```
@@ -74,9 +71,11 @@ popover.addEventListener('sf-popover-close', () => {
 ## Доступность
 
 - Поверхности нужно доступное имя: `label` на `<sf-popover>` передаётся ей
-  как `aria-label`. Роль поверхности по умолчанию — `dialog`.
-- Кнопке нужно доступное имя. Состояние `aria-expanded` компонент ей не
-  ставит: задайте его в обработчиках событий, как в примере кода.
+  как `aria-label`. Роль поверхности задаёт `surface-role`: `dialog` (по
+  умолчанию), `menu`, `listbox` или `group`. Атрибут `role` на самом
+  `<sf-popover>` компонент переносит на поверхность и предупреждает в консоли.
+- Кнопке нужно доступное имя. `aria-expanded` и `aria-haspopup` компонент
+  ставит ей сам по состоянию и роли поверхности.
 - При открытии фокус остаётся на кнопке. Если пользователь работает в
   поверхности с клавиатуры, переведите фокус на её первое поле. После
   закрытия фокус возвращается на кнопку.
@@ -85,7 +84,7 @@ popover.addEventListener('sf-popover-close', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -94,7 +93,7 @@ popover.addEventListener('sf-popover-close', () => {
 | Тег | `<sf-popover>` |
 | Назначение | Поверхность, привязанная к элементу управления, который передаёт потребитель, со своим состоянием открытия, закрытием и возвратом фокуса. |
 | Контракт | `smart.popover`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -104,9 +103,15 @@ popover.addEventListener('sf-popover-close', () => {
 - `open` — `boolean`, по умолчанию `false`. Показана ли поверхность. Отражается в атрибуте, поэтому потребитель может читать и задавать его.
 - `placement` — `string`, по умолчанию `bottom-end`, значения: `bottom-start`, `bottom-end`, `top-start`, `top-end`, `inline-start`, `inline-end`. От какого угла триггера отображается поверхность.
 - `label` — `string`, по умолчанию пусто. Доступное имя поверхности. Поверхность с ролью, но без имени объявляется как безымянная.
-- `role` — `string`, по умолчанию `dialog`, значения: `dialog`, `menu`, `listbox`, `group`. Чем является поверхность. Роль передаётся поверхности, в которую она рисует, поэтому меню команд сохраняет стрелки и перемещаемый фокус этого компонента.
 - `width` — `string`, по умолчанию пусто. Собственная ширина. Без неё поверхность принимает ширину самой длинной строки, и список имён получается широким и неровным.
 - `dismissible` — `boolean`, по умолчанию `true`. Esc и нажатие снаружи закрывают её. Потребитель, который сам обрабатывает эти действия, отключает это и вызывает close(), когда решит.
+- `surface-role` — `string`, по умолчанию `dialog`, значения: `dialog`, `menu`, `listbox`, `group`. Чем поверхность является для читателя: dialog, menu, listbox или group. Задаётся на sf-popover; поверхность получает role, а триггер — aria-haspopup.
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `surface-role` | `role` | работает и предупреждает | 2026-12-01 |
 
 ### Методы
 
@@ -119,13 +124,19 @@ popover.addEventListener('sf-popover-close', () => {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-popover-open` — `detail` не описан. Поверхность открылась.
-- `sf-popover-close` — `detail` не описан. Поверхность закрылась.
+- `sf-popover-open` — `detail`: `{ component: object, tagName: string, template: string, open: boolean }`. Поверхность открылась.
+- `sf-popover-close` — `detail`: `{ component: object, tagName: string, template: string, open: boolean }`. Поверхность закрылась.
+
+### Минимальная разметка
+
+```html
+<sf-popover label="Settings"><button slot="trigger" type="button">Settings</button><div slot="content">…</div></sf-popover>
+```
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/popover`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-popover`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/popover`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-popover`
 
 ## См. также
 

@@ -80,16 +80,16 @@ crumbs.onItemClick((item, detail) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-breadcrumbs>` |
-| Назначение | Smart-компонент Breadcrumbs из SIMAI Framework. |
+| Назначение | Показывает место текущей страницы в иерархии цепочкой нативных ссылок, построенной из items, атрибута items или дочерних sf-breadcrumbs-item. У длинной цепочки середина сворачивается в кнопку-многоточие (max-items, по умолчанию 4), которая раскрывается на месте. |
 | Контракт | `smart.breadcrumbs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -113,16 +113,16 @@ crumbs.onItemClick((item, detail) => {
 
 ### Методы
 
-- `getCapturedItems()`
-- `getDisplayItems()`
-- `setState()`
-- `onItemClick()`
+- `getCapturedItems()` — возвращает `array` из `object`. Читает захваченные дочерние sf-breadcrumbs-item в простые объекты пунктов (label, href, icon, current, active, disabled, ellipsis, target, rel, itemClass, containerClass, ariaLabel, value, hiddenItems).
+- `getDisplayItems(items?: array)` — возвращает `array` из `object`. Возвращает пункты в том виде, в каком они показаны: если их больше max-items (не меньше 3) и многоточие не раскрыто, середина заменяется одним пунктом-многоточием со скрытыми пунктами; все пункты переиндексируются, и текущим может быть только последний.
+- `setState(nextState?: object)` — возвращает `object`. Записывает каждый ключ как атрибут хост-элемента (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает элемент.
+- `onItemClick(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-breadcrumb-click; обработчик получает (item, detail, event). Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-breadcrumb-click` — `detail` не описан.
+- `sf-breadcrumb-click` — `detail`: `{ component?: any, tagName?: string, template?: string, item?: object, index?: number, items?: array, originalEvent?: any }`. Нажат пункт. Всплывает, с composed: true и отменяемое: preventDefault() на пункте-многоточии оставляет его свёрнутым. У отключённых и текущих пунктов нативный переход отменяется до отправки события.
 
 ### Доступность
 
@@ -139,8 +139,8 @@ crumbs.onItemClick((item, detail) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/breadcrumbs`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/breadcrumbs`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-breadcrumbs`
 
 ## См. также
 

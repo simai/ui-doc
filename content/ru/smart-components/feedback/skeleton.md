@@ -71,7 +71,7 @@ region.removeAttribute('aria-busy');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -80,7 +80,7 @@ region.removeAttribute('aria-busy');
 | Тег | `<sf-skeleton>` |
 | Назначение | Декоративная заглушка загрузки, которая резервирует геометрию будущего содержимого, использует семантические токены и учитывает режим уменьшенного движения. |
 | Контракт | `smart.skeleton`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -104,7 +104,7 @@ region.removeAttribute('aria-busy');
 
 ### Методы
 
-- `setState()`
+- `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case: false, null, undefined или пустая строка удаляет его, true устанавливает пустым, всё остальное приводится к строке.
 
 ### События
 
@@ -124,8 +124,8 @@ region.removeAttribute('aria-busy');
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/skeleton`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-skeleton`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/skeleton`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-skeleton`
 
 ## См. также
 

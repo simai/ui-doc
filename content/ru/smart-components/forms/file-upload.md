@@ -29,9 +29,10 @@ description: "Зона выбора и перетаскивания файлов
 
 ### Какие файлы и сколько
 
-`accept` передаётся системному окну выбора и сужает список файлов в нём.
-Перетаскивание это ограничение не проверяет, поэтому проверяйте тип и размер
-файла в приложении и на сервере. `multiple` разрешает выбрать несколько
+`accept` передаётся системному окну выбора и сужает список файлов в нём. Из
+перетащенных файлов компонент оставляет те, что названы в `accept`, а
+остальные сообщает событием `sf-file-upload:reject`. Размер файла и его
+содержимое проверяйте в приложении и на сервере. `multiple` разрешает выбрать несколько
 файлов; без него из перетащенных берётся первый. Новый выбор заменяет список
 файлов.
 
@@ -125,16 +126,16 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-file-upload>` |
-| Назначение | Smart-компонент File Upload из SIMAI Framework. |
+| Назначение | Область перетаскивания, которая открывает файловый диалог платформы или принимает перетащенные файлы с фильтром по accept и показывает каждый файл с прогрессом загрузки, ошибкой с повтором и удалением. Загрузку выполняет хост; компонент показывает состояние, которое задаёт хост. |
 | Контракт | `smart.file-upload`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -161,29 +162,31 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ### Методы
 
-- `getItems()`
-- `onFileAdd()`
-- `onFileError()`
-- `onFileComplete()`
-- `onFileRemove()`
-- `onFileRetry()`
-- `onComplete()`
-- `setItems()`
-- `clear()`
-- `setState()`
+- `getItems()` — возвращает `array` из `object`. Файлы списка в виде объектов пунктов.
+- `setItems(items: array)` — возвращает `object`. Заменяет список этими пунктами (name, fileSize, state, progress, errorMessage). Возвращает элемент.
+- `removeItem(index: number)` — возвращает `object`. Удаляет из списка пункт с этим индексом; индекс вне списка ничего не делает. Возвращает элемент.
+- `clear()` — возвращает `object`. Очищает список. Возвращает элемент.
+- `setState(state: object)` — возвращает `object`. Применяет несколько входных параметров сразу (size, icon, linkText, text, formats, supportingText, accept, multiple, disabled, items). Возвращает элемент.
+- `onFileAdd(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-add; обработчик получает событие. Возвращает элемент.
+- `onFileError(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-error; обработчик получает событие. Возвращает элемент.
+- `onFileComplete(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-complete; обработчик получает событие. Возвращает элемент.
+- `onFileRemove(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:remove; обработчик получает событие. Возвращает элемент.
+- `onFileRetry(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:retry; обработчик получает событие. Возвращает элемент.
+- `onComplete(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:complete; обработчик получает событие. Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `change` — `detail` не описан. Файлы выбраны; нативное событие всплывает от внутреннего поля ввода файла.
-- `sf-file-upload:select` — `detail` не описан. Выбраны файлы для загрузки.
-- `sf-file-upload:file-add` — `detail` не описан. Файл добавлен в список.
-- `sf-file-upload:file-error` — `detail` не описан. Ошибка загрузки файла.
-- `sf-file-upload:file-complete` — `detail` не описан. Файл загружен.
-- `sf-file-upload:complete` — `detail` не описан. Все файлы обработаны.
-- `sf-file-upload:remove` — `detail` не описан. Файл удалён из списка.
-- `sf-file-upload:retry` — `detail` не описан. Повторена загрузка файла с ошибкой.
+- `change` — `detail`: `{ files?: array, source?: string }`. Выбраны файлы: при выборе — нативное событие от внутреннего поля выбора файла, при перетаскивании — CustomEvent от области (detail files и source 'drop'), поэтому форма узнаёт об обоих случаях.
+- `sf-file-upload:complete` — `detail`: `{ items?: array }`. Все файлы обработаны.
+- `sf-file-upload:file-add` — `detail`: `{ item?: object, index?: number, items?: array, source?: string, multiple?: boolean }`. Файл добавлен в список.
+- `sf-file-upload:file-complete` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл загружен.
+- `sf-file-upload:file-error` — `detail`: `{ item?: object, index?: number, items?: array }`. Ошибка загрузки файла.
+- `sf-file-upload:reject` — `detail`: `{ files?: array, accept?: string, source?: string }`. Перетащенные файлы, не указанные в списке accept, пропущены, как их не предложил бы и диалог платформы.
+- `sf-file-upload:remove` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл удалён из списка.
+- `sf-file-upload:retry` — `detail`: `{ item?: object, index?: number, items?: array }`. Повторена загрузка файла с ошибкой.
+- `sf-file-upload:select` — `detail`: `{ files?: array, source?: string, multiple?: boolean }`. Выбраны файлы для загрузки.
 
 ### Доступность
 
@@ -200,5 +203,5 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/file-upload`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-file-upload`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/file-upload`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-file-upload`

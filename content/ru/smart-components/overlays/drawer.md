@@ -111,14 +111,15 @@ document.addEventListener('drawer:after-open', (event) => {
   фокус остаётся на кнопке; после закрытия возвращается туда, где был до
   открытия.
 - `Escape` закрывает верхнюю панель, но не перехватывает `Escape`, который
-  уже обработал редактор или перетаскивание.
+  уже обработал редактор или перетаскивание. Пока внутри открыта всплывающая
+  панель (`sf-popover`), `Escape` закрывает сначала её.
 - Кнопка закрытия на русской странице называется «Закрыть панель».
 - Положение учитывает направление текста, анимация отключается при
   `prefers-reduced-motion`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -127,7 +128,7 @@ document.addEventListener('drawer:after-open', (event) => {
 | Тег | `<sf-drawer>` |
 | Назначение | Боковая панель рабочей области, при которой страница остаётся доступной: закреплённая колонка или немодальная панель. Модальные боковые панели относятся к sf-modal; модальный режим Drawer устарел. |
 | Контракт | `smart.drawer`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
@@ -171,26 +172,26 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### Методы
 
-- `open()`
-- `close()`
-- `toggle()`
-- `setState()`
-- `getState()`
-- `onBeforeOpen()`
-- `onAfterOpen()`
-- `onBeforeClose()`
-- `onAfterClose()`
+- `open(options?: object)` — возвращает `object`. Открывает Drawer или выводит его на передний план, если он уже открыт. Отправляет drawer:before-open (отменяемое) и затем drawer:after-open, если options.emit не равно false. Возвращает элемент.
+- `close(options?: object)` — возвращает `object`. Закрывает Drawer и возвращает фокус элементу, который его открыл. Отправляет drawer:before-close (отменяемое) и drawer:after-close, если options.emit не равно false. Возвращает элемент.
+- `toggle()` — возвращает `object`. Вызывает close(), если открыто, иначе open(). Возвращает элемент.
+- `setState(state?: object)` — возвращает `object`. Ключ open вызывает open() или close(); остальные ключи передаются в базовый setState как атрибуты хост-элемента. Возвращает элемент.
+- `getState()` — возвращает `object`. Возвращает текущий контекст шаблона вместе с состоянием открытия.
+- `onBeforeOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:before-open, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
+- `onAfterOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:after-open, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
+- `onBeforeClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:before-close, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
+- `onAfterClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:after-close, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `drawer:ready` — `detail` не описан. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:update` — `detail` не описан. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:before-open` — `detail` не описан. Отменяемое намерение перед открытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
-- `drawer:after-open` — `detail` не описан. Drawer открыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:before-close` — `detail` не описан. Отменяемое намерение перед закрытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
-- `drawer:after-close` — `detail` не описан. Drawer закрыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:ready` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:update` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:before-open` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Отменяемое намерение перед открытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
+- `drawer:after-open` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Drawer открыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
+- `drawer:before-close` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Отменяемое намерение перед закрытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
+- `drawer:after-close` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Drawer закрыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 
 ### Доступность
 
@@ -207,8 +208,8 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/drawer`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-drawer`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/drawer`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-drawer`
 
 ## См. также
 

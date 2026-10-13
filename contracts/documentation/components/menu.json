@@ -3,8 +3,8 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "824764b405f787f9c04f93f5c9574f4eccbe725b",
-    "core_revision": "7c01b6265585f06e34de6d25fb2a0bf64b6d08ed",
+    "source_revision": "c0e9ab1e4dbb7ad2c25ae6327f793c801e39b102",
+    "core_revision": "84c7312396f6f59548b5c2c41ef6915de010ad5b",
     "source_files": {
       "src/component/menu/js/_menu.js": "d52321066c0813b2f7c0b67ecb0eca07e41dbf78a4d4e821a073ed3dd06a2503",
       "src/component/menu/scss/_css__menu.scss": "d28696ca6820883010b36f6ec4872c143caff0bf33fa92cf4d66f63ea8e51bb6",
@@ -12,9 +12,9 @@
     },
     "generated_files": {
       "distr/component/menu/css/menu.css": "17439fe5369c0712d1a0fe1e6b5dfc9233974fc07328668b0b8150dee880f82c",
-      "distr/component/menu/js/menu.js": "e5ef47645c38dbeef2fc63e2be6221e0af1c4b8bb17d531c71fba8d69166f9cb"
+      "distr/component/menu/js/menu.js": "17c7fd25ebed0895c4be881e30a7894f31ecc06d79275e850c2a4440e5ac466b"
     },
-    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical between source 8994ebf9 / core 6d2bf151 (release ui-6d2bf151e3c8) and source 824764b4 / core 7c01b626 (release ui-7c01b6265585)."
+    "note": "The menu's three source files and its built menu.css are byte-identical between source 824764b4 / core 7c01b626 (release ui-7c01b6265585) and source c0e9ab1e / core 84c73123 (release ui-84c7312396f6); menu.js changed only in the anchored-panel caps: a percentage max-width or max-height is read as a share of the viewport, not as pixels. The page makes no claim about the caps."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

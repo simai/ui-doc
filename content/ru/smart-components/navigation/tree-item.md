@@ -74,7 +74,7 @@ section.open();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-84c7312396f6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -83,7 +83,7 @@ section.open();
 | Тег | `<sf-tree-item>` |
 | Назначение | Один доступный узел иерархии Smart Tree. |
 | Контракт | `smart.tree-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7c01b6265585` |
+| Поставка | выпуск Framework `ui-84c7312396f6` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -122,20 +122,20 @@ section.open();
 
 ### Методы
 
-- `setOpen()`
-- `open()`
-- `close()`
+- `setOpen(open?: boolean)` — возвращает `object`. Открывает или закрывает ветку и отправляет sf-tree-item-toggle; ничего не делает для файла, листа, отключённого пункта или неизменного состояния.
+- `open()` — возвращает `object`. То же, что setOpen(true).
+- `close()` — возвращает `object`. То же, что setOpen(false).
 - `focusItem()` — возвращает `object`. Переносит фокус DOM на этот элемент дерева.
 - `activate()` — возвращает `object`. Активирует ссылку элемента или генерирует событие щелчка по элементу.
-- `toggle()`
-- `onToggle()`
+- `toggle()` — возвращает `object`. Переключает состояние открытия через setOpen.
+- `onToggle(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tree-item-toggle; обработчик вызывается с (open, detail, event). Обработчик, не являющийся функцией, игнорируется.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `sf-tree-item-click` — `detail` не описан.
-- `sf-tree-item-toggle` — `detail` не описан.
+- `sf-tree-item-click` — `detail`: `{ component: object, tagName: string, template: string, item: object, value: string, originalEvent: object|null }`.
+- `sf-tree-item-toggle` — `detail`: `{ component: object, tagName: string, template: string, item: object, open: boolean, value: string }`.
 
 ### Доступность
 
@@ -152,8 +152,8 @@ section.open();
 
 ### Источник
 
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/tree-item`
-- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/smart/tree-item`
+- `simai/ui@84c7312396f6f59548b5c2c41ef6915de010ad5b:distr/rule/rule.json#name=cl-tree-item`
 
 ## См. также
 
