@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90debba06744d49404aae1fc9c7a12d2",
+    "content-hash": "e84aad767d00ade3d4b7b4e826123fcd",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,19 +1570,25 @@
         },
         {
             "name": "simai/docara",
-            "version": "v2.18.2",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "9c57b58361ac3637c89137d30059911ee3b85fd5"
+                "reference": "f38dac503bd9fdbf0ef7d66a50224d29819a5fc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/9c57b58361ac3637c89137d30059911ee3b85fd5",
-                "reference": "9c57b58361ac3637c89137d30059911ee3b85fd5",
+                "url": "https://api.github.com/repos/simai/docara/zipball/f38dac503bd9fdbf0ef7d66a50224d29819a5fc7",
+                "reference": "f38dac503bd9fdbf0ef7d66a50224d29819a5fc7",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-intl": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-mbstring": "*",
                 "illuminate/filesystem": "^11.0 || ^12.0",
                 "illuminate/support": "^11.0 || ^12.0",
                 "illuminate/view": "^11.0 || ^12.0",
@@ -1612,30 +1618,31 @@
             },
             "archive": {
                 "exclude": [
-                    ".DS_Store",
-                    ".cache",
                     "/.editorconfig",
                     "/.env",
-                    "/.env.example",
+                    "/.env.local",
                     "/.git",
-                    "/.git-blame-ignore-revs",
                     "/.gitattributes",
                     "/.github",
-                    "/.markdownlint.json",
-                    "/composer.lock",
-                    "/CONTRIBUTING.md",
-                    ".hcs-audit",
+                    "/.gitignore",
                     "/.idea",
-                    ".phpunit.cache",
-                    ".playwright-cli",
-                    "build_*",
-                    "/graph",
+                    "/.markdownlint.json",
+                    "/.phpunit.cache",
+                    "/.vscode",
+                    "/CONTRIBUTING.md",
+                    "/composer.lock",
                     "/output",
                     "/phpunit.xml",
                     "/pint.json",
-                    "/source",
+                    "/resources/framework/runtime-packages",
                     "/tests",
-                    "/vendor"
+                    "/vendor",
+                    ".DS_Store",
+                    ".cache",
+                    ".docara-preview",
+                    ".docara-qa",
+                    "build_*",
+                    "node_modules"
                 ]
             },
             "license": [
@@ -1646,17 +1653,24 @@
                     "name": "SIMAI"
                 }
             ],
-            "description": "Portable static documentation and landing sites from Markdown and validated JSON with Simai Framework",
+            "description": "Build static documentation sites and landing pages from Markdown and JSON, styled with SIMAI Framework",
+            "homepage": "https://github.com/simai/docara",
             "keywords": [
+                "docs",
                 "documentation",
-                "generator",
                 "markdown",
                 "simai",
                 "simai-framework",
-                "site",
-                "static"
+                "site-generator",
+                "static-site",
+                "static-site-generator"
             ],
-            "time": "2026-10-13T16:40:07+00:00"
+            "support": {
+                "issues": "https://github.com/simai/docara/issues",
+                "source": "https://github.com/simai/docara",
+                "security": "https://github.com/simai/docara/security/policy"
+            },
+            "time": "2026-10-14T09:00:00+00:00"
         },
         {
             "name": "symfony/clock",
