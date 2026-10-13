@@ -99,10 +99,13 @@ JavaScript поля делает связи сам: выдаёт контрол�
 Пример ниже — форма регистрации: три поля, флажок и кнопка отправки одной
 ступени `1`, поэтому поля и кнопка одной высоты и с общими краями.
 Промежуток между частями формы — `gap-2`: это та же ступень `--sf-space-2`,
-что у токена связанных частей `--sf-content--space-related`.
+что у токена связанных частей `--sf-content--space-related`. Ширину
+одноколоночной формы ограничивает мера строки: класс `measure` (около 65
+знаков) не даёт полям растянуться на весь широкий экран
+([Длина строки](/ru/utilities/typography/text-max-width/)).
 
 ```html
-<form class="signup-form flex flex-col gap-2" action="/signup" method="post" novalidate>
+<form class="signup-form measure flex flex-col gap-2" action="/signup" method="post" novalidate>
   <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
     <span class="sf-input-label flex"><span class="sf-input-text">Имя</span><span class="sf-input-required" aria-hidden="true">*</span></span>
     <span class="sf-input-field items-cross-center transition flex">
@@ -156,7 +159,11 @@ const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener
 
 whenLoader(() => SF.Loader.ready('Inputs', () => {
   const fields = [...form.querySelectorAll('.sf-input input')];
-  const hints = new Map(fields.map((input) => [input, input.closest('.sf-input').querySelector('.sf-input-hint-text-wrap')?.textContent ?? '']));
+  const hintOf = (input) => {
+    const field = input.closest('.sf-input');
+    return field.dataset.hint ?? field.querySelector('.sf-input-hint-text-wrap')?.textContent ?? '';
+  };
+  const hints = new Map(fields.map((input) => [input, hintOf(input)]));
 
   const check = (input) => {
     const valid = input.checkValidity();
@@ -189,7 +196,11 @@ whenLoader(() => SF.Loader.ready('Inputs', () => {
 3. Исправленное поле возвращает свою подсказку: её текст сохранён до первой
    ошибки и передаётся в `errorMessage`.
 4. Серверная проверка остаётся задачей приложения: ответ сервера показывают
-   тем же `SF.Input.setState` у нужного поля.
+   тем же `SF.Input.setState` у нужного поля. Если сервер отдаёт страницу, где
+   поле уже в ошибке, в части `sf-input-hint-text-wrap` лежит текст ошибки, а
+   не подсказка. Такому полю приложение кладёт текст подсказки в атрибут
+   `data-hint` на оболочке `sf-input`: скрипт выше берёт подсказку оттуда и
+   вернёт её, когда поле исправят.
 
 **Смотрите также:** [Размер: одна лестница для всех компонентов](/ru/guide/components/settings/#размер-одна-лестница-для-всех-компонентов) — размер; [Состояния](/ru/guide/components/states/) — состояния; [Доступность: что компонент даёт и что остаётся за автором](/ru/guide/components/surfaces-and-accessibility/#доступность-что-компонент-даёт-и-что-остаётся-за-автором) — доступность;
 [Отступ внутри контрола и общие оси](/ru/guide/size-and-type/spacing/#отступ-внутри-контрола-и-общие-оси) — выравнивание связанных частей.

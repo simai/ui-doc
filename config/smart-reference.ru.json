@@ -687,6 +687,7 @@
     "tree": "дерево (`tree`)",
     "treeitem": "элемент дерева (`treeitem`)",
     "{placeholder, empty, remote}: a search field above the rows (set as a property). Local by default; with remote: true the menu raises sf-context-menu-search {query} and shows the entries the host sets. A submenu entry passes it with `search`.": "{placeholder, empty, remote}: поле поиска над строками (задаётся свойством). По умолчанию поиск локальный; с remote: true меню поднимает sf-context-menu-search {query} и показывает пункты, которые задаёт хост. Пункт подменю передаёт его через `search`.",
-    "{placeholder, empty}: a search field above the rows (set as a property). A submenu entry passes it with `search`.": "{placeholder, empty}: поле поиска над строками (задаётся свойством). Пункт с подменю передаёт его через `search`."
+    "{placeholder, empty}: a search field above the rows (set as a property). A submenu entry passes it with `search`.": "{placeholder, empty}: поле поиска над строками (задаётся свойством). Пункт с подменю передаёт его через `search`.",
+    "Which semantic colour the badge takes. A status word given here still works and reaches the status axis.": "Какой смысловой цвет берёт бейдж. Слово статуса здесь тоже работает и попадает на ось status."
   }
 }

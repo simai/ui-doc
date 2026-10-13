@@ -41,17 +41,66 @@ description: "Глава описывает, как компонент стро�
 Полный набор ключей конкретного компонента — его `templateContext()` и
 страница компонента в справочнике.
 
-**Контекст кнопки.** Шаблон `<sf-button>` получает `component`, `rootClass`,
-`rootStyle`, `templateName`, `size`, `appearance` и `type` (одно и то же
-разрешённое значение вида), `scheme`, `status`, `textPosition`, `text`,
-`segment`, `icon`, `iconStart`, `iconEnd`, `iconLeft`, `iconRight`,
-`iconPosition`, `spacing`, `tightness`, `radius`, `loading`, `disabled`,
-`nativeType`, `ariaLabel`, `diagnostics` и `custom`. Встроенный шаблон кнопки
-рисует один корневой `<button>` с классом `sf-button` и классами
-`sf-button--size-…`, `sf-button--<вид>`, `sf-button--<статус или схема>`;
-после отрисовки кнопка переносит на элемент `.sf-button` атрибуты тега, которые
-не являются её настройками, в том числе `data-*`. Внешний шаблон кнопки сохраняет корень с классом
-`sf-button`; поведение (обработчики на теге) остаётся у компонента.
+**Свой `templateContext()` заменяет контекст по умолчанию.** Базовый
+`templateContext()` возвращает `this.createPropsTemplateContext()`: объявленные
+свойства, `component`, `rootClass`, `rootStyle` и `custom`. Если компонент
+переопределяет метод и возвращает собственный объект, шаблон получает только
+его ключи — и встроенный, и внешний шаблон этого компонента. Чтобы сохранить
+стандартные ключи и добавить свои, верните
+`this.createPropsTemplateContext({ ...свои ключи })`. Объект только со
+свойствами даёт `this.getPropsContext()` (см. [Как компонент читает свойство](/ru/guide/smart-components/properties/#как-компонент-читает-свойство)).
+
+**Контекст кнопки.** Шаблон `<sf-button>` получает такие ключи:
+
+| Ключ | Тип | Что это |
+|:---|:---|:---|
+| `component` | элемент | Сам `<sf-button>`; через него шаблон читает слоты: `component.hasSlotContent('text')`, `component.getSlotContent('text')` |
+| `rootClass` | строка | Классы из атрибута `root-class`; шаблон добавляет их к своим |
+| `rootStyle` | строка | Стиль из атрибутов `style` и `root-style`; шаблон ставит его на корень |
+| `templateName` | строка | Имя шаблона из атрибута `template`, по умолчанию `default` |
+| `size` | строка | Ступень размера из атрибута `size`, по умолчанию `1` |
+| `appearance`, `type` | строка | Одно и то же значение вида: `appearance` или прежний атрибут `type`, по умолчанию `default` |
+| `scheme` | строка | Цветовая схема, по умолчанию `primary` |
+| `status` | строка | `error` или пустая строка; заданный статус сильнее схемы: цвет корня — `sf-button--<status или scheme>` |
+| `textPosition` | строка | Выравнивание подписи, по умолчанию `center` |
+| `text` | строка | Подпись из атрибута `text`; содержимое слота `text` важнее её |
+| `segment` | строка | Положение в группе кнопок или пустая строка |
+| `icon` | строка | Имя иконки; шаблон ставит её по `iconPosition` на ту сторону, где не задана своя |
+| `iconStart`, `iconEnd` | строка или `null` | Сырые атрибуты `icon-start` (или `icon-left`) и `icon-end` (или `icon-right`), а не значение, выведенное из `icon`: `null` — атрибута нет, сторона берёт `icon`; пустая строка — атрибут задан пустым, иконки на этой стороне нет |
+| `iconLeft`, `iconRight` | строка | Прежние имена тех же сторон; без атрибута — пустая строка |
+| `iconPosition` | строка | `start` (по умолчанию) или `end`; шаблон принимает и `left`, `right` |
+| `spacing` | строка | Плотность: `compact`, `normal`, `comfortable` или `spacious`, из атрибута `spacing` или прежнего `tightness` |
+| `tightness` | строка | Та же плотность прежним именем: `low`, пустая строка, `high`, `highest`; встроенный шаблон ставит класс `tightness-<значение>` |
+| `radius` | строка | `default`, `square`, `rounded` или пустая строка; класс `radius-<значение>` |
+| `loading` | булево | Идёт загрузка |
+| `disabled` | булево | Кнопка заблокирована |
+| `nativeType` | строка | Значение `type` у `<button>`, по умолчанию `button` |
+| `ariaLabel` | строка | Доступное имя из атрибута `aria-label` или пустая строка |
+| `diagnostics` | массив строк | Замечания о плотности: `invalid-spacing`, `invalid-tightness`, `spacing-overrides-tightness` |
+| `custom` | объект | Значения под необъявленными ключами |
+
+Атрибуты `disabled`, `aria-busy`, `type` и `aria-label` корня шаблон рисует
+сам: при `loading` кнопка получает `disabled` и `aria-busy="true"`. После
+отрисовки кнопка переносит на элемент `.sf-button` только атрибуты тега,
+которые не являются её настройками, в том числе `data-*`. Внешний шаблон
+кнопки сохраняет корень с классом `sf-button`; поведение (обработчики на теге)
+остаётся у компонента.
+
+**Разметка встроенного шаблона.** Встроенный шаблон для
+`<sf-button text="Save" icon="download" loading>` рисует такую разметку; с неё
+удобно начинать внешний шаблон:
+
+```html
+<button type="button" class="sf-button sf-button--size-1 sf-button--default sf-button--primary flex items-cross-center loading sf-button-state-loading" disabled aria-busy="true">
+  <sf-icon icon="download" root-class="pointer-event-none" weight="400" aria-hidden="true"></sf-icon>
+  <span class="sf-button-text-container text-center pointer-event-none">Save</span>
+</button>
+```
+
+Без загрузки классов `loading sf-button-state-loading` и атрибутов `disabled`,
+`aria-busy` нет. Кнопка без иконок добавляет контейнеру подписи класс
+`flex-1`. Классы `segment-…`, `tightness-…`, `radius-…` и `rootClass`
+добавляются к корню, когда заданы.
 
 ## Встроенный и внешний шаблон
 
@@ -97,9 +146,11 @@ description: "Глава описывает, как компонент стро�
 
 ### Пример внешнего шаблона
 
-Пример подключает локальный компонент `project-greeting` и его внешний шаблон
-`compact` — настоящий JavaScript-модуль с `index.css` в папке `./assets`
-примера:
+Пример подключает внешний шаблон `compact` двум компонентам: локальному
+`project-greeting` и библиотечной кнопке `<sf-button>`. Оба шаблона — настоящие
+JavaScript-модули с `index.css` в папке `./assets` примера; папку задаёт
+`window.SF_SMART_TEMPLATE_PATH` до отрисовки. Вторая кнопка рисуется шаблоном
+`compact`: те же классы корня, подпись без внутреннего отступа.
 
 :::internal_preview {size="tall" title="Работающий пример"}
 [Открыть демонстрацию](/demos/guide/smart-template/)
@@ -114,10 +165,17 @@ description: "Глава описывает, как компонент стро�
 :::code {src="../../../../examples/guide/smart-template/assets/project-greeting/compact/index.js" lang="javascript" title="assets/project-greeting/compact/index.js"}
 :::
 
+:::code {src="../../../../examples/guide/smart-template/assets/button/compact/index.js" lang="javascript" title="assets/button/compact/index.js"}
+:::
+
+:::code {src="../../../../examples/guide/smart-template/assets/button/compact/index.css" lang="css" title="assets/button/compact/index.css"}
+:::
+
+Для кнопки имя папки — имя тега без `sf-`: `<папка шаблонов>/button/compact/index.js`.
 Для локального компонента имя папки — полное имя тега:
 `<папка шаблонов>/project-greeting/compact/index.js`. Класс задаёт папку полем
 `static externalTemplateBasePath`, а свойство `templateName` связывает с
-атрибутом `template`.
+атрибутом `template`; глобальная переменная сильнее этого поля.
 
 ## Контракт внешнего модуля
 

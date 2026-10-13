@@ -142,8 +142,19 @@ button.onClick(async () => {
 | `icon-start` | `icon-left` | работает и предупреждает | 2026-12-01 |
 | `icon-end` | `icon-right` | работает и предупреждает | 2026-12-01 |
 | `spacing` | `tightness` | работает и предупреждает | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает и предупреждает | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает и предупреждает | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает и предупреждает | 2026-12-01 |
 | `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
+
+### Свойства в документе макета
+
+Узел типа `smart.buttons` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
+
+- свойства: `template`, `size`, `appearance`, `spacing`, `type`, `scheme`, `status`, `text`, `icon`, `icon-position`, `loading`, `disabled`, `native-type`, `aria-label`.
+
+Значения свойств те же, что у одноимённых атрибутов.
 
 ### Методы
 

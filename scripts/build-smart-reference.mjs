@@ -85,6 +85,9 @@ if (!releaseLock || releaseLock.compatibility_id !== pair) {
 const sourceCommit = releaseLock.build_inputs.source.commit;
 const sourceRepo = repository('SIMAI_UI_SOURCE_REPO', 'ui-source');
 const journal = JSON.parse(show(sourceRepo, sourceCommit, 'contracts/changes/journal.json') ?? '{"records":[]}');
+// The axis register says which legacy inputs are not retired but keep their own
+// meaning (badge `scheme` still picks a colour; only its status words moved).
+const axes = JSON.parse(show(sourceRepo, sourceCommit, 'contracts/public-api-axes.json') ?? '{"components":[]}');
 const ruleNames = new Set(JSON.parse(show(uiRepo, uiCommit, 'distr/rule/rule.json') ?? '[]')
   .map((rule) => rule?.name).filter(Boolean));
 
@@ -242,6 +245,27 @@ const PROPERTY_EXCEPTIONS = {'list-item': {value: 'itemValue'}};
 const AXES = ['status', 'appearance', 'kind'];
 const LEGACY_WORDS = ['type', 'variant'];
 const STAGE = {compat: 'работает и предупреждает', removed: 'удалено'};
+// A legacy input that stays its own axis: only some of its values moved.
+const staysOwnAxis = (folder, from, to) => (axes.components ?? []).some((entry) => entry.component === folder
+  && entry.axis === to && (entry.legacy ?? []).includes(from) && entry.legacy_input_remains_its_own_axis === true);
+// The values an attribute rename maps, read from the journal's class records of
+// the same rename (`tightness-low` → `spacing-compact` is `tightness="low"` →
+// `spacing="compact"`); the attribute record states the mapping only in prose.
+const valueMap = (from, to, inputs) => {
+  const oldValues = inputs[from]?.enum;
+  const pairs = new Map();
+  for (const record of journal.records.filter((entry) => entry.kind === 'class')) {
+    for (const item of record.items ?? []) {
+      if (!item.from?.startsWith(`${from}-`) || !item.to?.startsWith(`${to}-`)) continue;
+      const before = item.from.slice(from.length + 1);
+      const after = item.to.slice(to.length + 1);
+      if (oldValues && !oldValues.includes(before)) continue;
+      if (inputs[to]?.enum && !inputs[to].enum.includes(after)) continue;
+      pairs.set(before, after);
+    }
+  }
+  return [...pairs];
+};
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
@@ -262,7 +286,12 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
 
   const inputs = Object.entries(manifest.inputs?.properties ?? {});
   const legacy = legacyFor(tag, manifest.inputs?.properties ?? {});
-  const legacyNames = new Set(legacy.filter(({record}) => record.kind === 'attribute').map(({item}) => item.from));
+  const ownAxis = new Set(legacy
+    .filter(({record, item}) => record.kind === 'attribute' && staysOwnAxis(folder, item.from, item.to))
+    .map(({item}) => item.from));
+  const legacyNames = new Set(legacy
+    .filter(({record, item}) => record.kind === 'attribute' && !ownAxis.has(item.from))
+    .map(({item}) => item.from));
   // `type` and `variant` beside a named axis are the words the axes replaced
   // (scripts/audit-smart-attribute-tables.mjs holds the same rule), whether or
   // not the journal lists this component.
@@ -296,16 +325,44 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     // The journal can hold one rename twice (in a component's record and in
     // the record for every component); the table names it once.
     const rows = new Set();
+    const properties = manifest.inputs?.properties ?? {};
     for (const {record, item} of legacy) {
+      const stage = `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}`;
+      if (record.kind === 'attribute' && ownAxis.has(item.from)) {
+        // Only the new axis's words moved; the old attribute keeps its own values.
+        const words = (properties[item.to]?.enum ?? []).filter((value) => value !== '');
+        const which = words.length ? ` — только значения ${words.map(code).join(', ')}` : '';
+        rows.add(`| ${code(item.to)} | ${code(item.from)}${which} | ${stage} |`);
+        continue;
+      }
       const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
       const to = item.attribute ? `${item.attribute}="${item.to}"` : item.to;
-      rows.add(`| ${code(to)} | ${code(from)} | ${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'} |`);
+      rows.add(`| ${code(to)} | ${code(from)} | ${stage} |`);
+      if (record.kind === 'attribute' && !item.attribute) {
+        for (const [before, after] of valueMap(item.from, item.to, properties)) {
+          rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(`${item.from}="${before}"`)} | ${stage} |`);
+        }
+      }
     }
     lines.push(...rows);
     for (const name of unlisted) {
       lines.push(`| ${AXES.filter((axis) => inputs.some(([input]) => input === axis)).map(code).join(', ')} | ${code(name)} | принимается для совместимости | — |`);
     }
     lines.push('');
+  }
+
+  // What a node of this component takes in a layout document, when the
+  // manifest declares it (composition.declarative).
+  const declarative = manifest.composition?.declarative;
+  if (declarative?.type && (declarative.props?.length || Object.keys(declarative.data ?? {}).length)) {
+    lines.push(`${h} Свойства в документе макета`, '');
+    const standard = declarative.standard ? ` (${code(declarative.standard)})` : '';
+    lines.push(`Узел типа ${code(declarative.type)} в [документе макета](/ru/guide/layouts/building/smart-component/)${standard} принимает:`, '');
+    if (declarative.props?.length) lines.push(item(`- свойства: ${declarative.props.map(code).join(', ')};`));
+    const data = Object.keys(declarative.data ?? {});
+    if (data.length) lines.push(item(`- данные: ${data.map(code).join(', ')};`));
+    lines[lines.length - 1] = lines[lines.length - 1].replace(/;$/u, '.');
+    lines.push('', 'Значения свойств те же, что у одноимённых атрибутов.', '');
   }
 
   const methods = Object.entries(manifest.methods ?? {});

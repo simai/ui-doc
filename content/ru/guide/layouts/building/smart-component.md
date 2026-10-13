@@ -49,7 +49,7 @@ Smart-компонент можно вставить в макет, только
 в поставке `ui`, `src/smart/<папка>/smart.manifest.json` в пакете).
 
 Настройки, которые узел `smart.buttons` принимает в документе: `template`,
-`size`, `appearance`, `tightness`, `scheme`, `status`, `text`, `icon`,
+`size`, `appearance`, `spacing`, `scheme`, `status`, `text`, `icon`,
 `icon-position`, `loading`, `disabled`, `native-type`, `aria-label`. Значения
 у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки задаёт
 `appearance`; прежнее имя `type` узел тоже принимает ради совместимости, в
@@ -117,11 +117,18 @@ const result = await SF.Composition.render(doc, { registry });
 <main data-sf-composition-id="page"><section data-sf-composition-id="intro"><h1 data-sf-composition-id="title">О компании</h1><div class="sf-composition-columns" data-sf-composition-id="grid" data-composition-columns="2"><div class="sf-composition-column"><p data-sf-composition-id="col-left">Мы делаем интерфейсы.</p></div><div class="sf-composition-column"><sf-button native-type="button" text="Связаться"></sf-button></div></div></section></main>
 ```
 
+Атрибуты Smart-узла выводятся в алфавитном порядке: свойства узла
+приводятся к канонической форме с упорядоченными ключами, поэтому
+`native-type` стоит перед `text`, в каком бы порядке их ни записали.
+
 `result.assets` — `["composition/layout", "smart/buttons"]`,
 `result.hydration` — `[{"id": "contact", "type": "smart.buttons", "element": "sf-button"}]`.
 
 После вставки `result.html` на страницу Loader находит `<sf-button>` и
-загружает кнопку. Код, которому нужен готовый элемент, ждёт его через
+загружает кнопку. Кнопка в документе композиции — всегда Smart-узел: среди
+встроенных типов нет кнопки на классах, поэтому странице с таким документом
+нужен Loader. Кнопку на классах (`<button class="sf-button …">`) выводит
+только рендерер собственного типа (см. [Собственный тип](/ru/guide/layouts/reference/custom-type/)). Код, которому нужен готовый элемент, ждёт его через
 `SF.whenDefined('sf-button')` или `customElements.whenDefined('sf-button')`
 (см. [События загрузчика](/ru/guide/connection/loader/#события-загрузчика)).
 

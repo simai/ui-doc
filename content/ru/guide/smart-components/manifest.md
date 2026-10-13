@@ -66,6 +66,112 @@ Smart-компоненты описаны манифестом действую�
 | `provenance` | Происхождение, вплоть до хешей файлов исходника |
 | `ai_guidance` | Указания для ИИ ([Указания для ИИ](#указания-для-ии)) |
 
+**Происхождение (`provenance`).** `source_repository` и `source_revision` —
+репозиторий и полный коммит исходника компонента. Пути в `source_artifacts`
+отсчитываются от корня папки пакета (той, где лежит `framework.lock.json`):
+`src/smart/<папка>/index.js`, а не путь от корня репозитория продукта. В
+дереве `wave-1/overlay` сборки (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) папка пакета наложена на корень исходников
+Framework, поэтому эти пути ведут к тем же файлам. `sha256` у каждого пути —
+SHA-256 файла; проверка манифестов `node scripts/sf-contract.mjs build` в
+`wave-1/overlay` сверяет его с файлом. Пока у исходника нет коммита,
+`source_revision` может быть сорока нулями. `generated_runtime` может быть
+пустым списком.
+
+**Выпуск (`compatibility.runtime_pair`).** Выпуск Framework — один коммит
+`ui`, поэтому `ui_revision` и `ui_smart_revision` оба равны полному коммиту
+выпуска, на котором компонент проверен.
+
+## Полный пример
+
+Минимальный манифест компонента пакета `acme`, который проходит схему
+манифеста и `node scripts/sf-contract.mjs build`. В нём есть все обязательные
+разделы; необязательные (`templates`, `exported_parts`, `item_contract`,
+`contracts`, `backend`) опущены. Ключи `inputs.properties` — имена атрибутов
+элемента. Значение `sha256` в `provenance` замените хешем своего файла
+(`shasum -a 256 src/smart/acme-counter/index.js`).
+
+```json
+{
+  "schema_version": 2,
+  "id": "smart.acme-counter",
+  "version": "1.0.0",
+  "title": "Счётчик",
+  "summary": "Показывает число и кнопку, которая увеличивает его на единицу.",
+  "kind": "smart",
+  "reuse_mode": "whole",
+  "lifecycle": "experimental",
+  "tags": ["counter"],
+  "capabilities": ["render", "theme"],
+  "custom_element": "acme-counter",
+  "composition": {"uses": [], "public_parts": []},
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "value": {"type": "integer", "default": 0, "description": "Текущее число."}
+    },
+    "additionalProperties": false
+  },
+  "methods": {},
+  "events": {
+    "change": {
+      "summary": "Число изменилось по нажатию кнопки.",
+      "payload": {
+        "type": "object",
+        "properties": {"value": {"type": "integer"}},
+        "required": ["value"],
+        "additionalProperties": false
+      },
+      "canonical": true
+    }
+  },
+  "state": {"machines": {}, "visual_states": ["default", "disabled"]},
+  "persistence": {"mode": "none", "source_of_truth": "component", "network_owner": "none", "revision_field": null},
+  "ownership": {
+    "source": "acme/acme-ui",
+    "data": "component",
+    "effects": "component",
+    "forbidden_client_responsibilities": ["backend access decisions"]
+  },
+  "security": {"permissions_owner": "none", "untrusted_inputs": ["props"], "network_policy": "deny"},
+  "accessibility": {
+    "role": null,
+    "accessible_name": "internal",
+    "keyboard": ["Enter", "Space"],
+    "focus": "Фокус получает кнопка внутри компонента."
+  },
+  "presentation": {"themes": ["light", "dark"], "locales": ["ru", "en"], "responsive": ["desktop", "mobile"]},
+  "adapter": {"kind": "generic", "protocol": "simai.smart-studio-adapter.v1", "module": null},
+  "artifacts": {"fixtures": [], "scenarios": []},
+  "readiness": {"level": "runnable", "required_checks": ["manifest"]},
+  "compatibility": {
+    "contract_schema": {"id": "https://simai.io/contracts/smart-component-manifest.v2.schema.json", "version": 2},
+    "runtime_pair": {
+      "ui_revision": "251406fa18885f5c9c4c33c20f61dd68ac522d32",
+      "ui_smart_revision": "251406fa18885f5c9c4c33c20f61dd68ac522d32"
+    },
+    "aliases": [],
+    "deprecations": [],
+    "replacement": null,
+    "migrations": []
+  },
+  "provenance": {
+    "source_repository": "acme/acme-ui",
+    "source_revision": "0000000000000000000000000000000000000000",
+    "source_artifacts": [
+      {"path": "src/smart/acme-counter/index.js", "sha256": "a495cd1b22c5689ed40ab73c25faaa0dfde4b84a875061b179875a5a58e10541"}
+    ],
+    "generated_runtime": []
+  },
+  "ai_guidance": {
+    "use_when": "Нужен счётчик с кнопкой увеличения.",
+    "do_not": ["Не хранить число на сервере через компонент"],
+    "required_reads": ["inputs", "events"],
+    "minimal_example": "<acme-counter value=\"1\"></acme-counter>",
+    "owner_commands": ["node --test tests/acme-*.test.mjs", "node scripts/sf-contract.mjs build"]
+  }
+}
+```
+
 ## Указания для ИИ
 
 Раздел `ai_guidance` есть у каждого компонента:

@@ -123,6 +123,9 @@ group.select('month');
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | `spacing` | `tightness` | работает и предупреждает | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает и предупреждает | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает и предупреждает | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает и предупреждает | 2026-12-01 |
 
 ### Методы
 

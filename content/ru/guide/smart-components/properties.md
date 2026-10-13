@@ -82,6 +82,9 @@ static get props() {
   имена атрибута. Вторым аргументом можно передать объект настроек, тогда
   работают и имена значений:
   `this.getEnumAttr('size', { values: ['1/2', '1'], fallback: '1', valueAliases: { '1/2': ['small'] } })`;
+- `this.getPropsContext()` — объект со всеми объявленными свойствами:
+  `{ count: this.getProp('count'), … }`; его же базовый класс кладёт в
+  контекст шаблона (см. [Шаблон и templateContext](/ru/guide/smart-components/templates/#шаблон-и-templatecontext));
 - геттер, который компонент определяет сам, если значение нужно вычислить.
 
 **`static props` не создаёт полей на экземпляре.** Чтение `this.count`

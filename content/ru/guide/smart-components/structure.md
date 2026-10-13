@@ -103,22 +103,29 @@ function whenLoaderReady() {
 await whenLoaderReady();
 await SF.loadSmartBase();
 const { SfBaseElement, html } = SF.smart;
+const TEXT = {
+  en: { count: 'Count', add: 'Add' },
+  ru: { count: 'Количество', add: 'Добавить' },
+};
 
 class ProjectCounter extends SfBaseElement {
   static get props() {
-    return { count: { type: Number, default: 0 } };
+    return { count: { type: Number, default: 0 }, addLabel: { default: '' } };
   }
   templateContext() {
-    return { count: this.getProp('count') };
+    return this.createPropsTemplateContext({
+      countText: SF.pageText(TEXT, 'count', this),
+      addText: this.getProp('addLabel') || SF.pageText(TEXT, 'add', this),
+    });
   }
   template() {
-    const { count } = this.templateContext();
+    const { count, countText, addText } = this.templateContext();
     return html`
-      <span>${count}</span>
+      <output aria-live="polite">${countText}: ${count}</output>
       <button type="button"
-              class="sf-button sf-button--default sf-button--primary sf-button--size-1"
+              class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2"
               @click=${() => this.increment()}>
-        <span class="sf-button-text-container">Добавить</span>
+        <span class="sf-button-text-container">${addText}</span>
       </button>`;
   }
   increment() {
@@ -148,6 +155,12 @@ ProjectCounter.define('project-counter');
   элемента, `@click=${…}` — обработчик события.
 - `SF.smart` даёт также `nothing` — пустое значение Lit для атрибута, который
   не нужно выводить: `aria-label=${label || nothing}`.
+- Свои слова компонент держит в словаре `TEXT`: английское — в записи `en`,
+  русское — в `ru`; `SF.pageText(TEXT, key, this)` выбирает слово по языку
+  страницы, а подпись из атрибута `add-label` сильнее словаря (см. [Язык](/ru/guide/smart-components/quality/#язык)).
+- `templateContext()` строится через `this.createPropsTemplateContext({…})`:
+  так контекст сохраняет `component`, `rootClass`, `rootStyle` и все
+  объявленные свойства (см. [Шаблон и templateContext](/ru/guide/smart-components/templates/#шаблон-и-templatecontext)).
 - В исходниках Framework и пакета те же сущности импортируются из `smart-base`
   и `lit` (см. [Из чего состоит](#из-чего-состоит)); в проекте достаточно
   загруженной браузерной поставки, сборщик не нужен.
@@ -169,7 +182,8 @@ ProjectCounter.define('project-counter');
 :::code {src="../../../../examples/guide/smart-counter/index.js" lang="javascript" title="index.js"}
 :::
 
-`props` объявляет число `count`, `template()` возвращает разметку,
+`props` объявляет число `count` и подпись `addLabel`, `templateContext()`
+готовит значения и слова, `template()` возвращает разметку,
 `increment()` изменяет значение и отправляет событие, `define()` регистрирует
 тег.
 
@@ -201,6 +215,10 @@ ProjectCounter.define('project-counter');
 - Классы дочерних локальных компонентов регистрируются до использования.
 - Библиотечные `sf-*` элементы внутри локального компонента загружает Loader
   по пути поставки, как на любой странице (см. [Подключение к странице](/ru/guide/smart-components/connection/#подключение-к-странице)).
+- Классовые компоненты в разметке локального компонента (`sf-button`,
+  `sf-icon-button` и другие) Loader находит так же, как в любой разметке
+  страницы, в том числе нарисованной после загрузки, и подключает их стили:
+  отдельно подключать CSS компонента не нужно.
 - Проектный скрипт загружается один раз; его версия фиксируется вместе с
   проектом.
 

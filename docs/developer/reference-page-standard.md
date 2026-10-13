@@ -81,8 +81,10 @@ Every example labels each sample with the class it demonstrates.
 change journal keeps only for compatibility with their replacement.
 A component that ships only a script (theme, hide-show) is enrolled with
 `"css": false`: it has no «Классы» or «Переменные».
-`## Переменные` is the override surface: set a variable on the element or
-in a project layer instead of rewriting the component's CSS.
+`## Переменные` shows what the look is built from. The guide treats
+component variables as internal wiring, not a configuration surface: a
+project changes its look through the shared tokens and a Smart component's
+template.
 
 ## Smart component page — `content/ru/smart-components/**`
 

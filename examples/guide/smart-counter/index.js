@@ -8,9 +8,22 @@ async function start() {
   }
   await SF.loadSmartBase();
   const { SfBaseElement, html } = SF.smart;
+  // The component's own words: English in `en`, Russian in `ru`.
+  const TEXT = {
+    en: { count: 'Count', add: 'Add' },
+    ru: { count: 'Количество', add: 'Добавить' },
+  };
   class ProjectCounter extends SfBaseElement {
     static get props() {
-      return { count: { type: Number, default: 0 } };
+      // A label prop defaults to empty: the English word lives in the dictionary.
+      return { count: { type: Number, default: 0 }, addLabel: { default: '' } };
+    }
+    templateContext() {
+      // Keeps component, rootClass, rootStyle and every declared prop.
+      return this.createPropsTemplateContext({
+        countText: SF.pageText(TEXT, 'count', this),
+        addText: this.getProp('addLabel') || SF.pageText(TEXT, 'add', this),
+      });
     }
     increment() {
       const count = this.getProp('count') + 1;
@@ -18,9 +31,14 @@ async function start() {
       this.dispatchEvent(new CustomEvent('change', { bubbles: true, composed: true, detail: { value: count } }));
     }
     template() {
-      return html`<div class="flex gap-2 items-cross-center">
-        <output aria-live="polite">Количество: ${this.getProp('count')}</output>
-        <button type="button" @click=${() => this.increment()}>Добавить</button>
+      const { count, countText, addText, rootClass } = this.templateContext();
+      return html`<div class="flex gap-2 items-cross-center ${rootClass}">
+        <output aria-live="polite">${countText}: ${count}</output>
+        <button type="button"
+                class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2"
+                @click=${() => this.increment()}>
+          <span class="sf-button-text-container">${addText}</span>
+        </button>
       </div>`;
     }
   }

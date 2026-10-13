@@ -16,6 +16,9 @@ description: "Полный список переменных, которые о�
 Дробные ступени записаны в именах с косой чертой (`--sf-radius-1/2`); в CSS
 её экранируют: `var(--sf-radius-1\/2)`.
 
+Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
+читает ни один файл поставки: её значение ничего не меняет.
+
 ## Когда применять
 
 Когда нужно узнать, есть ли во фреймворке переменная для нужного, и что она
@@ -23,12 +26,14 @@ description: "Полный список переменных, которые о�
 
 ## Пример
 
-Переопределяются они как обычные свойства, на любом уровне:
+Свои значения проект объявляет на `:root` в собственном каскадном слое
+после `core.css` ([Как переопределять правильно](/ru/guide/colour/cascade-layers/#как-переопределять-правильно)):
 
 ```css
-.theme-light,
-.theme-dark {
+@layer project {
+  :root {
     --sf-radius--ui: var(--sf-radius-1\/2);
+  }
 }
 ```
 
@@ -215,9 +220,9 @@ description: "Полный список переменных, которые о�
 | `--sf-font-weight-medium` | `500` |
 | `--sf-font-weight-regular` | `400` |
 | `--sf-heading--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
-| `--sf-heading--font-family` | `inherit` |
-| `--sf-heading--font-style` | `normal` |
-| `--sf-heading--font-weight` | `600` |
+| `--sf-heading--font-family` | `inherit` · не читается: Framework берёт `--sf-heading--family` |
+| `--sf-heading--font-style` | `normal` · не читается |
+| `--sf-heading--font-weight` | `600` · не читается: Framework берёт `--sf-heading--weight` |
 | `--sf-heading--margin` | `var(--sf-heading--space-top)` |
 | `--sf-heading--space-bottom` | `var(--sf-content--space-text)` |
 | `--sf-heading--space-top` | `var(--sf-content--space-section)` |

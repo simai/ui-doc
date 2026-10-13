@@ -236,6 +236,35 @@ document.querySelector('sf-data-view').setHostPort(host);
   `summary`: представление спрашивает человека и повторяет намерение с
   подтверждением.
 
+Первый запрос `query.change` уходит сам, как только адаптер передан в
+`setHostPort()`, с `reason: 'host-connected'`. Его `payload` —
+`{sequence, query, reason}`, а `query` всегда содержит пять полей:
+
+| Поле `query` | Что в нём |
+|:---|:---|
+| `search` | строка поиска, по умолчанию пустая |
+| `filters` | объект значений фильтра, по умолчанию `{}` |
+| `sort` | массив `[{key, direction}]` или пустой массив без сортировки |
+| `page` | номер страницы с 1 |
+| `per_page` | размер страницы, по умолчанию 25 |
+
+Поиск, фильтр и сортировка возвращают `page` к 1. `reason` называет
+причину запроса: `search`, `filter`, `sort`, `page-change`,
+`page-size-change`, `show-more`, `retry`, `after-write` (перезапрос после
+изменения записи).
+
+Действие над строкой превращается в намерение так:
+
+| Что выбрал человек | Намерение |
+|:---|:---|
+| действие `view` у одной записи | `record.open` |
+| другое действие у одной записи | `record.mutate` с ревизией записи в `revisions` |
+| действие над выбранными записями — из панели выбора или над несколькими сразу | `bulk.apply_selected` |
+| кнопка создания | `view.create_record` |
+
+Действие, которого нет в списке `actions` записи, до хоста не доходит:
+представление отвечает себе отказом `action-not-allowed`.
+
 У порта карточки записи (`<sf-property-view>`) свой формат: запись приходит
 в самом ответе, без `data`.
 
@@ -322,6 +351,14 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `port-owner` — `string`, по умолчанию пусто. Составной компонент, в который встроен этот список; передаётся с запросом к порту хоста, чтобы хост знал, на какой обмен отвечает. Указывает составной компонент, а не элемент, поэтому списку, встроенному в другое место, не нужно новое значение.
 - `port-record` — `string`, по умолчанию пусто. Запись, которую показывает встраивающий составной компонент; передаётся с запросом к порту хоста.
 - `port-group` — `string`, по умолчанию пусто. Группа внутри составного компонента, которую представляет этот список; передаётся с запросом к порту хоста.
+
+#### Свойства в документе макета
+
+Узел типа `smart.data-view-composite` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
+
+- свойства: `aria-label`.
+
+Значения свойств те же, что у одноимённых атрибутов.
 
 #### Методы
 
@@ -427,6 +464,15 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `layout` — `string`, по умолчанию `table`, значения: `auto`, `table`, `list`. Как рисуются записи: таблицей, компактным списком или auto — таблицей, пока контейнер таблицы не уже list-below пикселей, и списком, когда уже. sf-data-view выбирает auto для списка на странице.
 - `list-below` — `number`, по умолчанию `600`. Ширина контейнера в пикселях, уже которой режим auto рисует компактный список.
 - `list-fields` — `number`, по умолчанию `3`. Сколько полей запись показывает под заголовком в компактном списке; поля выбираются по приоритету колонок.
+
+#### Свойства в документе макета
+
+Узел типа `smart.data-view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
+
+- свойства: `aria-label`, `table-settings-key`, `selectable`, `toolbar`, `settings`, `actions`, `row-actions`, `pagin`, `pagination-total`, `pagination-page-size`, `page-sizes`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `loading-text`, `empty-text`, `error-text`, `retry-text`, `context-menu-columns`, `data-state`;
+- данные: `columns`, `rows`.
+
+Значения свойств те же, что у одноимённых атрибутов.
 
 #### Методы
 

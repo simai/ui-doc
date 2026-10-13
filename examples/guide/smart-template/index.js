@@ -11,12 +11,20 @@ async function start() {
   class ProjectGreeting extends SfBaseElement {
     static externalTemplateBasePath = new URL('./assets', document.baseURI).href;
     static get props() { return { name: { default: 'Гость' }, templateName: { attribute: 'template', default: 'default' } }; }
-    templateContext() { return this.getPropsContext(); }
+    // createPropsTemplateContext keeps component, rootClass, rootStyle and the props.
+    templateContext() { return this.createPropsTemplateContext(); }
     template() { return html`<p>Привет, ${this.getProp('name')}</p>`; }
   }
   ProjectGreeting.define('project-greeting');
   const element = document.querySelector('project-greeting');
   await element.whenRendered();
-  document.querySelector('#template-log').textContent = element.querySelector('strong') ? 'Внешний шаблон compact подключён.' : 'Показан резервный шаблон: проверьте путь к compact.';
+  await SF.whenDefined('button');
+  const button = document.querySelector('sf-button[template="compact"]');
+  await button.whenRendered();
+  const greetingOk = Boolean(element.querySelector('strong'));
+  const buttonOk = Boolean(button.querySelector('.project-button-compact-text'));
+  document.querySelector('#template-log').textContent = greetingOk && buttonOk
+    ? 'Внешние шаблоны compact подключены: приветствие и кнопка.'
+    : 'Показан резервный шаблон: проверьте путь к compact.';
 }
 start().catch(error => { document.querySelector('#template-log').textContent = error.message; });

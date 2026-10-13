@@ -1,7 +1,11 @@
-<sf-datepicker
-  label="Дата встречи"
-  name="meeting"
-  value="2026-09-03"
-  min-date="2026-09-01"
-  placeholder="ДД.ММ.ГГГГ">
-</sf-datepicker>
+<div class="flex flex-col gap-2">
+  <sf-datepicker
+    id="meeting-date"
+    label="Дата встречи"
+    name="meeting"
+    value="2026-09-03"
+    min-date="2026-09-01"
+    placeholder="ДД.ММ.ГГГГ">
+  </sf-datepicker>
+  <output id="meeting-date-output" class="color-on-surface-variant" aria-live="polite">Выбрано: 03.09.2026 (2026-09-03)</output>
+</div>

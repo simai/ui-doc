@@ -87,6 +87,10 @@ const doc = JSON.parse(documentJson); // документ simai.composition.docu
 const result = await render(doc, { registry: extendRegistry([]) });
 ```
 
+Модулю не нужны браузерные объекты вроде `window` и `document`: из
+глобальных объектов он берёт только `crypto.subtle`, `TextEncoder` и `URL`,
+которые есть в Node.js 20 и новее. Гейт Framework работает на Node.js 20.
+
 ## Смотрите также
 
 - [Шаблоны, вставки и варианты](/ru/guide/layouts/building/recipe-templates-and-variants/) — шаблоны, вставки и варианты Recipe.

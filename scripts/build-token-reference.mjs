@@ -13,7 +13,7 @@
 //   --check  fails when the page on disk differs from what the core says now.
 
 import {execFileSync} from 'node:child_process';
-import {existsSync, readFileSync, writeFileSync} from 'node:fs';
+import {existsSync, readdirSync, readFileSync, writeFileSync} from 'node:fs';
 import {resolve, dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -37,6 +37,43 @@ const fromGit = () => {
 };
 const css = (existsSync(resolve(uiRoot, '.git')) && fromGit()) || readFileSync(corePath, 'utf8');
 const page = 'content/ru/guide/colour/all-tokens.md';
+
+// Names the core still declares that nothing in the runtime reads, with the
+// name the runtime reads instead (null when there is none). The build fails as
+// soon as one of them is read again, so the note cannot outlive the fact.
+const UNREAD = new Map([
+  ['--sf-heading--font-family', '--sf-heading--family'],
+  ['--sf-heading--font-weight', '--sf-heading--weight'],
+  ['--sf-heading--font-style', null],
+]);
+
+// Whether any CSS or JS file of the runtime, at the same commit as the core,
+// reads the name: `var(--name` in CSS, a quoted '--name' in a script.
+const isRead = (name) => {
+  const escaped = name.replace(/[.*+?^$()|[\]{}\\]/gu, '\\$&');
+  const pattern = `(var\\(|['"\`])${escaped}([^a-z0-9-]|$)`;
+  if (existsSync(resolve(uiRoot, '.git'))) {
+    try {
+      execFileSync('git', ['-C', uiRoot, 'grep', '-q', '-E', pattern, lockCommit, '--', 'distr/*.css', 'distr/*.js', ':!*.min.*'], {stdio: 'ignore'});
+      return true;
+    } catch (error) {
+      if (error.status === 1) return false;
+    }
+  }
+  const read = new RegExp(pattern, 'u');
+  const walk = (dir) => readdirSync(dir, {withFileTypes: true}).some((entry) => {
+    const path = resolve(dir, entry.name);
+    if (entry.isDirectory()) return walk(path);
+    return /\.(css|js)$/u.test(entry.name) && !/\.min\./u.test(entry.name) && read.test(readFileSync(path, 'utf8'));
+  });
+  return walk(resolve(uiRoot, 'distr'));
+};
+for (const name of UNREAD.keys()) {
+  if (isRead(name)) {
+    console.error(`${name} is read by the runtime again: drop it from UNREAD in scripts/build-token-reference.mjs`);
+    process.exit(1);
+  }
+}
 
 // A primitive is a step of a ramp: it has no meaning of its own, only a value.
 const isPrimitive = (name) => {
@@ -88,9 +125,16 @@ if (other.length) grouped.set('Прочее', other);
 // The core escapes the slash in a name like --sf-radius-1\/2 because CSS needs
 // it; a reader does not, and a table cell is not CSS.
 const readable = (text) => text.replace(/\\\//gu, '/');
+const unread = (name) => {
+  if (!UNREAD.has(name)) return '';
+  const instead = UNREAD.get(name);
+  return instead
+    ? ` · не читается: Framework берёт \`${instead}\``
+    : ' · не читается';
+};
 const shown = (name) => values.get(name)
   .map((value) => `\`${readable(value).replace(/\|/gu, '\\|')}\``)
-  .join(' · ');
+  .join(' · ') + unread(name);
 
 const total = values.size;
 const sections = [...grouped.entries()]
@@ -117,6 +161,9 @@ ${total} переменных, которые объявляет ядро, со 
 Дробные ступени записаны в именах с косой чертой (\`--sf-radius-1/2\`); в CSS
 её экранируют: \`var(--sf-radius-1\\/2)\`.
 
+Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
+читает ни один файл поставки: её значение ничего не меняет.
+
 ## Когда применять
 
 Когда нужно узнать, есть ли во фреймворке переменная для нужного, и что она
@@ -124,12 +171,14 @@ ${total} переменных, которые объявляет ядро, со 
 
 ## Пример
 
-Переопределяются они как обычные свойства, на любом уровне:
+Свои значения проект объявляет на \`:root\` в собственном каскадном слое
+после \`core.css\` ([Как переопределять правильно](/ru/guide/colour/cascade-layers/#как-переопределять-правильно)):
 
 \`\`\`css
-.theme-light,
-.theme-dark {
+@layer project {
+  :root {
     --sf-radius--ui: var(--sf-radius-1\\/2);
+  }
 }
 \`\`\`
 

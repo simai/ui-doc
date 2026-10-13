@@ -307,6 +307,14 @@ view: {
 - `delete-view-text` — `string`, по умолчанию `Remove the view`. Доступное имя элемента управления, который удаляет именованное представление.
 - `last-shared-view-text` — `string`, по умолчанию `The only view everyone has`. Почему удаление не предлагается для последнего общего представления: область без представлений ничего не даёт пользователю, у которого нет своих. Показывается на недоступном элементе управления, а не как отказ после нажатия.
 
+### Свойства в документе макета
+
+Узел типа `smart.property-view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
+
+- свойства: `cancel-text`, `changed-text`, `close-label`, `collection`, `conflict-text`, `copy-link-label`, `edit-text`, `empty-text`, `errors-text`, `open-full-label`, `panel`, `panel-label`, `panel-size`, `record-id`, `save-text`, `sections-label`, `show-rare`, `template`.
+
+Значения свойств те же, что у одноимённых атрибутов.
+
 ### Методы
 
 - `setHostPort(host: object)` — возвращает `object`. Подключает адаптер хоста, предоставляющий `raise(intent, payload, {signal})`, `version` и `capabilities`.

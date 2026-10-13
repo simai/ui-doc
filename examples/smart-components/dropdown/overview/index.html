@@ -1,5 +1,8 @@
-<sf-dropdown name="view" label="Представление" placeholder="Выберите представление" search-placeholder="Найти">
-  <sf-list-item value="all" text="Все элементы"></sf-list-item>
-  <sf-list-item value="active" text="Активные"></sf-list-item>
-  <sf-list-item value="archived" text="В архиве"></sf-list-item>
-</sf-dropdown>
+<div class="flex flex-col gap-2">
+  <sf-dropdown id="view-picker" name="view" label="Представление" placeholder="Выберите представление" search-placeholder="Найти">
+    <sf-list-item value="all" text="Все элементы"></sf-list-item>
+    <sf-list-item value="active" text="Активные"></sf-list-item>
+    <sf-list-item value="archived" text="В архиве"></sf-list-item>
+  </sf-dropdown>
+  <output id="view-picker-output" class="color-on-surface-variant" aria-live="polite">Представление не выбрано</output>
+</div>

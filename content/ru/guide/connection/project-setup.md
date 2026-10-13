@@ -78,7 +78,7 @@ Loader.
 | `window.SF_PRELOADED` | План заранее подключённых модулей (см. [Готовый план для рабочей сборки](/ru/guide/connection/loader/#готовый-план-для-рабочей-сборки)) | Нет |
 | `window.SF_SMART_TEMPLATE_PATH` | Папка внешних шаблонов Smart-компонентов проекта (см. [Свои компоненты проекта: где граница](#свои-компоненты-проекта-где-граница)) | `/local/smart/templates` |
 
-Две тонкости подключения.
+Три тонкости подключения.
 
 **`sfSmartPath` обычно не задают.** Loader ищет Smart-компоненты в
 `<sfPath>/smart/`, а в поставке `ui` они лежат именно там. Переменная нужна,
@@ -93,6 +93,24 @@ Loader.
 `core.js` и `sfPath` указывают на разные поставки, на странице окажутся две
 разные версии Framework сразу. Поэтому оба адреса всегда ведут в одну и ту же
 папку `distr/`.
+
+**Метки кеша для своей копии равны идентификатору выпуска.** `cacheVersion` и
+`pluginListVersion` — любые непустые строки: Loader сравнивает их с
+сохранёнными в `localStorage` как есть (см. [Кеш и версии адресов](/ru/guide/connection/loader/#кеш-и-версии-адресов)). Для своей
+копии поставки обеим меткам дают идентификатор выпуска, например
+`ui-251406fa1888`. При переходе на другой выпуск метки меняются вместе с ним:
+Loader очищает сохранённые списки модулей, а адреса модулей получают новый
+параметр `sf_v`.
+
+```html
+<script>
+  window.sfPath = '/assets/simai-framework/ui/distr/';
+  window.SF_BOOT_CONFIG = {
+    cacheVersion: 'ui-251406fa1888',
+    pluginListVersion: 'ui-251406fa1888',
+  };
+</script>
+```
 
 Если `sfPath` не задан, ядро берёт файлы из
 `https://cdn.jsdelivr.net/gh/simai/ui@main/distr/` и пишет в консоль
@@ -124,6 +142,21 @@ core.js, or to a pinned tag.
 Своя копия — весь каталог `distr/` одного выпуска в публичной папке проекта,
 например `public/assets/simai-framework/ui/distr/`. Его не смешивают с файлами
 другого выпуска и не правят.
+
+Своя копия получается из репозитория `simai/ui` по полному коммиту выпуска.
+Контрольную сумму архива сверяют с полем `runtime_sources.core.archive_sha256`
+записи о выпуске (см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)), и только после этого его
+распаковывают в публичную папку проекта:
+
+```bash
+git clone https://github.com/simai/ui.git simai-ui
+git -C simai-ui archive --format=tar 251406fa18885f5c9c4c33c20f61dd68ac522d32 distr | shasum -a 256
+# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-251406fa1888.lock.json
+mkdir -p public/assets/simai-framework/ui
+git -C simai-ui archive --format=tar 251406fa18885f5c9c4c33c20f61dd68ac522d32 distr | tar -x -C public/assets/simai-framework/ui
+```
+
+Каталог появляется как `public/assets/simai-framework/ui/distr/`.
 
 При подключении с CDN полный коммит выпуска ставится во всех адресах сразу:
 

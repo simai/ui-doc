@@ -123,6 +123,9 @@ remove.onClick(() => deleteRow(row));
 | `appearance` | `type` | работает и предупреждает | 2026-12-01 |
 | `kind` | `variant` | работает и предупреждает | 2026-12-01 |
 | `spacing` | `tightness` | работает и предупреждает | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает и предупреждает | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает и предупреждает | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает и предупреждает | 2026-12-01 |
 | `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
 

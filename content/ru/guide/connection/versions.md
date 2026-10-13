@@ -17,7 +17,9 @@ Framework, а для каждого подключённого пакета пр
 {
   "framework": {
     "release": "ui-251406fa1888",
-    "commit": "251406fa18885f5c9c4c33c20f61dd68ac522d32"
+    "commit": "251406fa18885f5c9c4c33c20f61dd68ac522d32",
+    "distr_archive_sha256": "<runtime_sources.core.archive_sha256 из записи о выпуске>",
+    "distr_tree": "<runtime_sources.core.runtime_tree из записи о выпуске>"
   },
   "packages": {
     "larena": {
@@ -33,6 +35,11 @@ Framework, а для каждого подключённого пакета пр
 Поле `commit` — полный коммит выпуска из записи о выпуске
 (`runtime_sources.core.commit`, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)). Он же стоит в адресах CDN:
 идентификатор выпуска — не тег git.
+
+Значения в угловых скобках — места, которые проект заполняет настоящими
+значениями; в файле блокировки угловых скобок не остаётся. `distr_archive_sha256`
+и `distr_tree` переписывают из записи о выпуске, `manifest_sha256` — из поля
+`output.manifest_sha256` квитанции пакета.
 
 Что важно заметить:
 

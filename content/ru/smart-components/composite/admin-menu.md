@@ -239,6 +239,14 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - `search-keys-hint` — `string`, по умолчанию `↑↓ select · Enter open · Esc close`. Строка подсказок по клавишам внизу панели поиска.
 - `search-title` — `string`, по умолчанию пусто. Заголовок над полем поиска в панели навигации.
 
+### Свойства в документе макета
+
+Узел типа `smart.admin-menu` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
+
+- свойства: `allow-system-settings`, `aria-label`, `brand`, `collapsible`, `compact`, `logo`, `logo-href`, `panel-class`, `persistence-mode`, `root-class`, `search-hint`, `search-keys-hint`, `search-label`, `search-mode`, `search-placeholder`, `search-shortcut`, `search-title`, `searchable`, `settings`, `settings-mode`, `settings-revision`, `settings-title`, `system-settings-revision`, `template`, `toggle-label`.
+
+Значения свойств те же, что у одноимённых атрибутов.
+
 ### Методы
 
 - `applyExternalSettingsState(state: object, target: any)` — возвращает `null`. Применяет состояние и дерево, вычисленные бэкендом.
