@@ -48,7 +48,7 @@ description: "Задаёт элементу постоянную пропорц�
 | `aspect-16x9` | `aspect-ratio: 16 / 9` | — |
 | `aspect-9x16` | `aspect-ratio: 9 / 16` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:aspect-1x1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:aspect-1x1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

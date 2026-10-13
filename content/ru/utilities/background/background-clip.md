@@ -38,7 +38,7 @@ description: "Ограничивает фон элемента областью 
 | `bg-clip-content` | `background-clip: content-box` | — |
 | `bg-clip-text` | `background-clip: text` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-clip-border`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-clip-border`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

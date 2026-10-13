@@ -39,7 +39,7 @@ description: "Ставит элемент сетки в колонку с зад
 | `col-start-13` | `grid-column-start: 13` | — |
 | `col-start-auto` | `grid-column-start: auto` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-start-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-start-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

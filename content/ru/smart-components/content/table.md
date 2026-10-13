@@ -29,7 +29,7 @@ Framework: пакет компонентов Loader с именем `larena` и�
 пакет до подключения Core:
 `window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к пакету>/smart'}}}`.
 Подробнее — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
+[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
 
 ### Имя и ключ настроек
 
@@ -209,7 +209,7 @@ Framework: пакет компонентов Loader с именем `larena` и�
 [набор проверок](/ai/ports/simai.dataview-port/1.0.0/kit/manifest.json)
 опубликованы машиночитаемо; приложение заявляет поддержку версии порта,
 когда прошло все 18 проверок набора. Правила стыка — в
-[стандарте порта хоста](/ru/guide/architecture/standards/composite-host-port/).
+[стандарте порта хоста](/ru/guide/standards/map/#порт-хоста-simai-composite-host-port).
 
 ### Проверка на сервере
 

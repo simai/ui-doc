@@ -28,7 +28,7 @@ description: "Включает или убирает псевдоэлемент�
 | `before-empty` (`.before-empty::before`) | `content: ''` | — |
 | `after-empty` (`.after-empty::after`) | `content: ''` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -65,4 +65,4 @@ description: "Включает или убирает псевдоэлемент�
 
 ## См. также
 
-- [Слои каскада](/ru/guide/fundamentals/cascade-layers/)
+- [Слои каскада](/ru/guide/colour/cascade-layers/)

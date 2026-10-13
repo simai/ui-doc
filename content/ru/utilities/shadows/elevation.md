@@ -39,13 +39,13 @@ description: "Поднимает элемент над страницей одн
 | `elevation-5` | `background-color: var(--sf-elevation-5--surface); box-shadow: var(--sf-elevation-5--shadow); --sf-on-surface-variant: var(--sf-on-elevation-5--variant)` | — |
 | `elevation-0` | `background-color: var(--sf-surface-0); box-shadow: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -130,4 +130,4 @@ description: "Поднимает элемент над страницей одн
 
 - [Тень элемента](/ru/utilities/shadows/element-shadow/)
 - [Цвет фона](/ru/utilities/background/background-color/)
-- [Границы](/ru/guide/fundamentals/borders/)
+- [Границы](/ru/guide/size-and-type/borders-and-radii/#границы)

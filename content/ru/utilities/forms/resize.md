@@ -35,7 +35,7 @@ description: "Разрешает или запрещает пользовате�
 | `resize-x` | `--sf-resize: horizontal; resize: var(--sf-resize)` | — |
 | `resize` | `--sf-resize: both; resize: var(--sf-resize)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -11,7 +11,7 @@ description: "Рисует кольцо вокруг элемента тенью
 фокуса с клавиатуры — с префиксом `focus-visible:`.
 
 Компоненты Framework рисуют фокус контуром из токенов `--sf-focus--*`, см.
-[Фокус](/ru/guide/fundamentals/focus/). Кольцо на утилитах — для
+[Фокус](/ru/guide/size-and-type/focus/). Кольцо на утилитах — для
 собственной разметки проекта; рядом с компонентами Framework берите токены,
 чтобы фокус выглядел одинаково.
 
@@ -67,13 +67,13 @@ description: "Рисует кольцо вокруг элемента тенью
 | `ring-{значение}` | `--sf-ring-width: var(--sf-a{значение}); box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + 0px) color-mix(in srgb, transparent, currentColor calc(1 * 100%)), 0 0 0 0px transparent; box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px)) color-mix(in srgb, transparent, var(--sf-ring-color, currentColor) calc(var(--sf-ring--alfa, 1) * 100%)), 0 0 0 var(--sf-ring-offset-width, 0px) var(--sf-ring-offset-color, transparent)` | `2`, `3`, `4` |
 | `ring-0` | `--sf-ring-width: var(--sf-0); box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + 0px) color-mix(in srgb, transparent, currentColor calc(1 * 100%)), 0 0 0 0px transparent; box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px)) color-mix(in srgb, transparent, var(--sf-ring-color, currentColor) calc(var(--sf-ring--alfa, 1) * 100%)), 0 0 0 var(--sf-ring-offset-width, 0px) var(--sf-ring-offset-color, transparent)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-transparent`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-transparent`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -166,4 +166,4 @@ description: "Рисует кольцо вокруг элемента тенью
 - [Внутреннее кольцо](/ru/utilities/outline/ring-inset/)
 - [Прозрачность кольца](/ru/utilities/outline/ring-opacity/)
 - [Цвет внешней границы](/ru/utilities/outline/outline-color/)
-- [Фокус](/ru/guide/fundamentals/focus/)
+- [Фокус](/ru/guide/size-and-type/focus/)

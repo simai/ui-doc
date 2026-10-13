@@ -23,13 +23,13 @@ description: "Закрашивает каждую вторую строку ил
 | `table-stripe` (`.table-stripe > tbody > tr:nth-of-type(odd) > *`) | `--sf-table-accent-bg: var(--sf-table-stripe-bg); color: var(--sf-table-stripe-color)` | — |
 | `table-stripe-col` (`.table-stripe-col > :not(caption) > tr > :nth-child(2n)`) | `--sf-table-accent-bg: var(--sf-table-stripe-bg); color: var(--sf-table-stripe-color)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

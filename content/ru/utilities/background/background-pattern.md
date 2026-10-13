@@ -40,7 +40,7 @@ description: "Заполняет фон элемента мелким узоро
 | `pattern-8` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%273%27 height=%271%27/><rect x=%270%27 y=%272%27 width=%273%27 height=%271%27/><rect x=%270%27 y=%270%27 width=%271%27 height=%273%27/>><rect x=%272%27 y=%270%27 width=%271%27 height=%273%27/>><rect x=%272%27 y=%270%27 width=%271%27 height=%271%27/></svg>")` | — |
 | `pattern-9` | `background: url("data:image/svg+xml; utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%274%27 height=%274%27><rect x=%270%27 y=%270%27 width=%273%27 height=%273%27 /></svg>")` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:pattern-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:pattern-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

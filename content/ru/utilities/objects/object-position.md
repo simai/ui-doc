@@ -35,7 +35,7 @@ description: "Выбирает, какая часть изображения и�
 | `object-inline-end-top` | `object-position: right top` | — |
 | `object-top` | `object-position: top` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:object-bottom`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:object-bottom`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

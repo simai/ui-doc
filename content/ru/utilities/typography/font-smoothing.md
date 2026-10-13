@@ -24,7 +24,7 @@ description: "Выбирает способ сглаживания шрифта 
 | `antialiased` | `-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale` | — |
 | `smoothing` | `-webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

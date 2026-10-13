@@ -38,7 +38,7 @@ description: "Выстраивает флекс-элементы в строку
 | `flex-row-reverse` | `flex-direction: row-reverse` | — |
 | `flex-col-reverse` | `flex-direction: column-reverse` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:flex-row`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:flex-row`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

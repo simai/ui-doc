@@ -31,7 +31,7 @@ description: "Выравнивает один элемент сетки по г�
 | `self-main-center` | `justify-self: center` | — |
 | `self-main-stretch` | `justify-self: stretch` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:self-main-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:self-main-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

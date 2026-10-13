@@ -48,7 +48,7 @@ description: "Как ядро красит ссылки в тексте, как 
 Каждый класс действует на саму ссылку и на ссылки внутри элемента, на
 котором он стоит.
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 ## Применение
 
@@ -68,7 +68,7 @@ description: "Как ядро красит ссылки в тексте, как 
 | посещённая | `--sf-link-visited` |
 
 Значения ролей в светлой и тёмной теме — на странице
-[«Link»](/ru/guide/fundamentals/colour-roles/link/). Подчёркивание у таких
+[«Link»](/ru/guide/colour/colour-roles/#служебные-роли). Подчёркивание у таких
 ссылок отстоит от текста на `--sf-a3`.
 
 Цвета наведения, нажатия и посещения ядро ставит любой ссылке, кроме кнопки
@@ -134,5 +134,5 @@ description: "Как ядро красит ссылки в тексте, как 
 
 - [Оформление текста](/ru/utilities/text-formatting/text-decoration/)
 - [Стиль линий оформления](/ru/utilities/text-formatting/text-decoration-style/)
-- [Link](/ru/guide/fundamentals/colour-roles/link/)
+- [Link](/ru/guide/colour/colour-roles/#служебные-роли)
 - [Ссылка](/ru/components/navigation/link/)

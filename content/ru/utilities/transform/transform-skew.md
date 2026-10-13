@@ -48,7 +48,7 @@ description: "Скашивает элемент вдоль горизонтал�
 | `skew-x-15` | `transform: skewX(15deg)` | — |
 | `skew-y-15` | `transform: skewY(15deg)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:skew-x-0`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:skew-x-0`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

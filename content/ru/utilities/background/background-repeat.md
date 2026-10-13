@@ -30,7 +30,7 @@ description: "Задаёт, повторяется ли фоновое изоб�
 | `bg-repeat-round` | `background-repeat: round` | — |
 | `bg-repeat-space` | `background-repeat: space` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-repeat`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-repeat`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

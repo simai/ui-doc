@@ -36,7 +36,7 @@ const fromGit = () => {
   }
 };
 const css = (existsSync(resolve(uiRoot, '.git')) && fromGit()) || readFileSync(corePath, 'utf8');
-const page = 'content/ru/guide/fundamentals/design-tokens/all-tokens.md';
+const page = 'content/ru/guide/colour/all-tokens.md';
 
 // A primitive is a step of a ramp: it has no meaning of its own, only a value.
 const isPrimitive = (name) => {

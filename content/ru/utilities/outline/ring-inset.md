@@ -23,7 +23,7 @@ description: "Переносит кольцо внутрь элемента, ч�
 |:---|:---|:---|
 | `ring-inset` | `--sf-ring-inset: inset` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-inset`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-inset`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

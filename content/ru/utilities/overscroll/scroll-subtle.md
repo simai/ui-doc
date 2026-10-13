@@ -32,13 +32,13 @@ Tab.
       var(--sf-transparent)
     ); --sf-scroll-bg-track: var(--sf-transparent); --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle); scrollbar-gutter: auto; scrollbar-width: thin; scrollbar-color: var(--sf-scroll-thumb-subtle) var(--sf-transparent); .scroll-subtle:hover { --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle-interactive); scrollbar-color: var(--sf-scroll-thumb-subtle-interactive) var(--sf-transparent) }; .scroll-subtle[focus-within] { --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle-interactive); scrollbar-color: var(--sf-scroll-thumb-subtle-interactive) var(--sf-transparent) }; .scroll-subtle:focus-within { --sf-scroll-bg-thumb: var(--sf-scroll-thumb-subtle-interactive); scrollbar-color: var(--sf-scroll-thumb-subtle-interactive) var(--sf-transparent) }; (forced-colors: active): scrollbar-color: auto; .scroll-subtle:hover { (forced-colors: active): scrollbar-color: auto }; .scroll-subtle[focus-within] { (forced-colors: active): scrollbar-color: auto }; .scroll-subtle:focus-within { (forced-colors: active): scrollbar-color: auto }` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

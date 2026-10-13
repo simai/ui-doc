@@ -32,7 +32,7 @@ description: "Одним классом располагает содержим�
 | `content-evenly` | `align-content: space-evenly; justify-content: space-evenly; place-content: space-evenly` | — |
 | `content-stretch` | `align-content: stretch; justify-content: stretch; place-content: stretch` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:content-center`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:content-center`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

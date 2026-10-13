@@ -38,13 +38,13 @@ outline-offset-2`.
 | `outline-4` | `outline-width: var(--sf-a4)` | — |
 | `outline-0` | `outline-width: var(--sf-0)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`. Например: `focus-visible:outline-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`. Например: `focus-visible:outline-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -82,7 +82,7 @@ outline-offset-2`.
 
 Клавиатурный фокус рисуется не этими классами: ядро задаёт его правилом
 `:focus-visible` из переменных фокуса, см.
-[«Фокус»](/ru/guide/fundamentals/focus/). `outline-none` на элементе, который
+[«Фокус»](/ru/guide/size-and-type/focus/). `outline-none` на элементе, который
 получает фокус, убирает и это кольцо. Класс `outline` в фокусе тоже заменяет
 кольцо своим тонким контуром; чтобы фокус оставался заметным, добавьте
 классы состояния, например `focus-visible:outline-2 focus-visible:outline-primary`.
@@ -103,4 +103,4 @@ outline-offset-2`.
 - [Стиль внешней границы](/ru/utilities/outline/outline-style/)
 - [Цвет внешней границы](/ru/utilities/outline/outline-color/)
 - [Отступ внешней границы](/ru/utilities/outline/outline-offset/)
-- [Фокус](/ru/guide/fundamentals/focus/)
+- [Фокус](/ru/guide/size-and-type/focus/)

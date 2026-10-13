@@ -49,7 +49,7 @@ description: "Не даёт элементу стать ниже высоты р
 | `min-h-fit` | `min-height: -webkit-fit-content; min-height: -moz-fit-content; min-height: fit-content` | — |
 | `min-h-0` | `min-height: 0` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:min-h-full`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:min-h-full`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

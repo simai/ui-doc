@@ -48,7 +48,7 @@ description: "Задаёт, как цвета элемента смешиваю�
 | `mix-blend-plus-darker` | `mix-blend-mode: plus-darker` | — |
 | `mix-blend-plus-lighter` | `mix-blend-mode: plus-lighter` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

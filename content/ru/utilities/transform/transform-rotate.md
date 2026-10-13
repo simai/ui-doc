@@ -41,7 +41,7 @@ description: "Поворачивает элемент на угол от 1° д�
 | `rotate-90` | `transform: rotate(90deg)` | — |
 | `rotate-180` | `transform: rotate(180deg)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:rotate-0`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:rotate-0`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

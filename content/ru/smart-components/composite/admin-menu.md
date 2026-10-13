@@ -27,7 +27,7 @@ description: "Даёт административному приложению �
 Элемент загружается, только если пакет `larena` объявлен до подключения Core:
 `window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к пакету>/smart'}}}`.
 Подробнее — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/).
+[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
 
 ### Два способа задать меню
 

@@ -72,7 +72,7 @@ description: "Задаёт, как элемент участвует в пото
 | `list-item` | `display: list-item` | — |
 | `hidden` | `display: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:block`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:block`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -45,7 +45,7 @@ description: "Задаёт, что происходит с содержимым,
 | `overflow-x-scroll` | `overflow-x: scroll` | — |
 | `overflow-y-scroll` | `overflow-y: scroll` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:overflow-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:overflow-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

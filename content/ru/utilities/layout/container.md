@@ -37,13 +37,13 @@ description: "Ограничивает ширину содержимого ст�
 |:---|:---|:---|
 | `container` | `width: 100%; padding-inline-start: var(--sf-space-1); padding-inline-end: var(--sf-space-1); от ширины sm: width: 100%; max-width: var(--sf-breakpoint-sm); padding-inline-start: var(--sf-space-2); padding-inline-end: var(--sf-space-2); от ширины md: width: 100%; max-width: var(--sf-breakpoint-md); padding-inline-start: var(--sf-space-3); padding-inline-end: var(--sf-space-3); от ширины lg: width: 100%; max-width: var(--sf-breakpoint-lg); padding-inline-start: var(--sf-space-4); padding-inline-end: var(--sf-space-4); от ширины xl: width: 100%; max-width: var(--sf-breakpoint-xl); padding-inline-start: var(--sf-space-5); padding-inline-end: var(--sf-space-5); от ширины xxl: width: 100%; max-width: var(--sf-breakpoint-xxl); padding-inline-start: var(--sf-space-6); padding-inline-end: var(--sf-space-6)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:container`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:container`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

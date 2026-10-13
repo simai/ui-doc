@@ -38,7 +38,7 @@ description: "Разрешает флекс-элементам переходи�
 | `flex-wrap-reverse` | `flex-wrap: wrap-reverse` | — |
 | `flex-nowrap` | `flex-wrap: nowrap` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:flex-wrap`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:flex-wrap`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

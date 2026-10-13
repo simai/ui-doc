@@ -27,7 +27,7 @@ description: "Управляет переносом строк, балансир
 | `text-balance` | `text-wrap: balance` | — |
 | `text-pretty` | `text-wrap: pretty` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

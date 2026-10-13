@@ -55,7 +55,7 @@ description: "Делит грид-контейнер на заданное чи�
 | `grid-col-none` | `grid-template-columns: none` | — |
 | `grid-col-subgrid` | `grid-template-columns: subgrid` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-col-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-col-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

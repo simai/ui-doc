@@ -52,13 +52,13 @@ description: "Окрашивает линии между соседними эл
 | `divider-success` (`.divider-success > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline-success) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline-success) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
 | `divide-success` (`.divide-success > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline-success) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline-success) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:divider-transparent`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:divider-transparent`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

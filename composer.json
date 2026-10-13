@@ -46,7 +46,6 @@
             "@docs:reference-sections:check",
             "@docs:reference-pages:check",
             "@docs:layout-classes:check",
-            "@docs:layout:check",
             "@docs:architecture:check",
             "@docs:composition:check",
             "@php scripts/audit-examples.php",
@@ -57,7 +56,6 @@
             "@docs:catalogue-indexes:check",
             "@php scripts/audit-smart-lessons.php"
         ],
-        "docs:layout:check": "@php scripts/audit-layout-information-architecture.php",
         "docs:architecture:check": [
             "@php scripts/audit-guide-information-architecture.php",
             "@php scripts/audit-guide-redirects.php",

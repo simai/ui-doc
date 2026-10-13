@@ -26,7 +26,7 @@ description: "Скрывает элемент, оставляя за ним ме
 | `visible` | `visibility: visible` | — |
 | `invisible` | `visibility: hidden` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:visible`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:visible`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

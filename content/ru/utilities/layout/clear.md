@@ -28,7 +28,7 @@ description: "Опускает блок ниже плавающих элемен
 | `clear-both` | `clear: both` | — |
 | `clear-none` | `clear: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:clear-inline-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:clear-inline-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

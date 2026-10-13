@@ -1,6 +1,1 @@
-{
-  "schema": "docara.page.v1",
-  "navigation": {
-    "order": 35
-  }
-}
+{"schema": "docara.page.v1", "navigation": {"order": 400}}

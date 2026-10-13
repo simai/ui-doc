@@ -29,7 +29,7 @@ description: "Задаёт высоту строк, которые сетка с
 | `auto-rows-max` | `grid-auto-rows: -webkit-max-content; grid-auto-rows: max-content` | — |
 | `auto-rows-fr` | `grid-auto-rows: minmax(0, 1fr)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:auto-rows`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:auto-rows`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

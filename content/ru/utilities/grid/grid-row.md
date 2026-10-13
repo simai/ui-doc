@@ -40,7 +40,7 @@ description: "Задаёт, сколько строк сетки занимае�
 | `row-span-full` | `grid-row: 1 / -1` | — |
 | `grid-row-span-full` | `grid-row: 1 / -1` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

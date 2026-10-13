@@ -31,7 +31,7 @@ description: "Разрешает или запрещает делить элем
 | `break-inside-avoid-page` | `page-break-inside: avoid; break-inside: avoid-page` | — |
 | `break-inside-avoid-column` | `-webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid-column` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-inside-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-inside-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

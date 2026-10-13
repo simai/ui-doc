@@ -34,7 +34,7 @@ description: "Не даёт прокрутке вложенной области
 | `scroll-over-x-none` | `overscroll-behavior-x: none` | — |
 | `scroll-over-y-none` | `overscroll-behavior-y: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

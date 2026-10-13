@@ -41,7 +41,7 @@ description: "Задаёт линию сетки, на которой элеме
 | `row-end-auto` | `grid-row-end: auto` | — |
 | `grid-row-end-auto` | `grid-row-end: auto` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-end-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-end-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

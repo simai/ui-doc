@@ -52,7 +52,7 @@ description: "Заливает значок SVG фирменным цветом 
 | `fill-behance` | `fill: #0057FF` | — |
 | `fill-soundcloud` | `fill: #FF5500` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:fill-fb`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:fill-fb`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

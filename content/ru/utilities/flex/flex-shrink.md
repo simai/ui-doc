@@ -27,7 +27,7 @@ description: "Разрешает или запрещает флекс-элеме
 | `shrink` | `flex-shrink: 1` | — |
 | `shrink-none` | `flex-shrink: 0` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:shrink`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:shrink`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

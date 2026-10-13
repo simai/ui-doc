@@ -62,7 +62,7 @@ description: "Ставит фоновое изображение в угол, к
 | `bg-inline-end-center` | `background-position: right center` | — |
 | `bg-top` | `background-position: top` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-bottom`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-bottom`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

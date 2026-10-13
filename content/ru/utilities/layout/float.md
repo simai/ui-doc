@@ -35,7 +35,7 @@ description: "Прижимает элемент к началу или конц�
 | `float-inline-start` | `float: inline-start` | — |
 | `float-none` | `float: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:float-inline-end`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:float-inline-end`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

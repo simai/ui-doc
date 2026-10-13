@@ -43,13 +43,13 @@ description: "Делает текст-подсказку в пустом пол�
 | `placeholder-opacity-full` | `.placeholder-opacity-full::-webkit-input-placeholder { opacity: 1 }; .placeholder-opacity-full::-moz-placeholder { opacity: 1 }; .placeholder-opacity-full:-ms-input-placeholder { opacity: 1 }; .placeholder-opacity-full::-ms-input-placeholder { opacity: 1 }; .placeholder-opacity-full::placeholder { opacity: 1 }` | — |
 | `placeholder-opacity-0` | `.placeholder-opacity-0::-webkit-input-placeholder { opacity: 0 }; .placeholder-opacity-0::-moz-placeholder { opacity: 0 }; .placeholder-opacity-0:-ms-input-placeholder { opacity: 0 }; .placeholder-opacity-0::-ms-input-placeholder { opacity: 0 }; .placeholder-opacity-0::placeholder { opacity: 0 }` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `focus:`, `hover:`. Например: `focus:placeholder-opacity-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus:`, `hover:`. Например: `focus:placeholder-opacity-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

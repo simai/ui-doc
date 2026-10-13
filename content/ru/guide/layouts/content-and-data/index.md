@@ -1,20 +1,24 @@
 ---
 title: "Содержимое и данные"
-description: "Откуда макет берёт данные, где проходит граница отрисовки и как работают снимки, кэш и публикация."
+description: "Макет описывает расположение данных, но не получает их сам."
 ---
 
 # Содержимое и данные
 
-Откуда макет берёт данные, где проходит граница отрисовки и как работают снимки, кэш и публикация.
+Макет описывает расположение данных, но не получает их сам. Эта глава
+определяет границу между Framework и продуктом и описывает входы, привязки,
+зависимости, структурированный текст и публикацию.
 
-## Когда применять
+## Смотрите также
 
-Когда макет перестаёт быть статическим: появляются источники данных, снимки и откаты.
+- [Всё или ничего](/ru/guide/layouts/introduction/document-flow/#всё-или-ничего) — правило «всё или ничего».
+- [Шаблоны, вставки и варианты](/ru/guide/layouts/building/recipe-templates-and-variants/) — входы в шаблонах и выборах.
+- [Правка текста на месте](/ru/guide/layouts/editor/inline-text/) — правка структурированного текста на месте.
 
 ## Страницы раздела
 
-- [Данные и внешние источники](/ru/guide/layouts/content-and-data/data-sources/)
+- [Граница ответственности](/ru/guide/layouts/content-and-data/rendering-boundary/)
+- [Входы и источники данных](/ru/guide/layouts/content-and-data/data-sources/)
+- [Снимки и кеш](/ru/guide/layouts/content-and-data/snapshots-and-cache/)
+- [Структурированный текст](/ru/guide/layouts/content-and-data/structured-text/)
 - [Публикация и откат](/ru/guide/layouts/content-and-data/publication-and-rollback/)
-- [Рендеринг и граница проекта](/ru/guide/layouts/content-and-data/rendering-boundary/)
-- [Снимок данных и кеш](/ru/guide/layouts/content-and-data/snapshots-and-cache/)
-- [Структурированный текст без HTML](/ru/guide/layouts/content-and-data/structured-text/)

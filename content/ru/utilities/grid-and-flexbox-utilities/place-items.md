@@ -28,7 +28,7 @@ description: "Одним классом выравнивает элементы 
 | `items-center` | `align-items: center; justify-items: center; place-items: center` | — |
 | `items-stretch` | `align-items: stretch; justify-items: stretch; place-items: stretch` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

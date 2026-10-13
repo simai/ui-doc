@@ -24,13 +24,13 @@ description: "Прячет полосу прокрутки области и п�
 |:---|:---|:---|
 | `scroll-hover` | `scrollbar-width: none; .scroll-hover::-webkit-scrollbar { width: 0; height: 0 }; .scroll-hover:hover { scrollbar-width: thin; scrollbar-color: var(--sf-scroll-bg-thumb) var(--sf-transparent) }; .scroll-hover:hover::-webkit-scrollbar { width: var(--sf-scroll-bg-width); height: var(--sf-scroll-bg-width) }; .scroll-hover:hover::-webkit-scrollbar-thumb { height: var(--sf-scroll-thumb-width); height: var(--sf-scroll-thumb-size, var(--sf-scroll-thumb-width)); border: var(--sf-scroll-thumb-inset) solid var(--sf-transparent); background-clip: padding-box; border-radius: var(--sf-scroll-radius); background-color: var(--sf-scroll-bg-thumb) }; .scroll-hover:hover::-webkit-scrollbar-track { background-color: var(--sf-scroll-bg-track); border: var(--sf-scroll-thumb-inset) solid var(--sf-transparent); background-clip: padding-box; border-radius: var(--sf-scroll-radius) }; transition: var(--sf-duration-normal) var(--sf-animation); .scroll-hover::-webkit-scrollbar { transition: var(--sf-duration-normal) var(--sf-animation) }; .scroll-hover::-webkit-scrollbar-thumb { transition: var(--sf-duration-normal) var(--sf-animation) }; .scroll-hover::-webkit-scrollbar-track { transition: var(--sf-duration-normal) var(--sf-animation) }` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

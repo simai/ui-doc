@@ -31,7 +31,7 @@ description: "Ставит изображение маски в угол, к с�
 | `mask-inline-end-top` | `mask-position: right top` | — |
 | `mask-inline-end-bottom` | `mask-position: right bottom` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

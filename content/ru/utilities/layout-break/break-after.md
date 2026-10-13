@@ -33,7 +33,7 @@ description: "Задаёт, начинается ли после элемент�
 | `break-after-right` | `page-break-after: right; -webkit-column-break-after: right; -moz-column-break-after: right; break-after: right` | — |
 | `break-after-column` | `-webkit-column-break-after: column; -moz-column-break-after: column; break-after: column` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-after-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-after-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -34,7 +34,7 @@ description: "Задаёт, начинает ли элемент новую ко
 | `break-before-right` | `page-break-before: right; -webkit-column-break-before: right; -moz-column-break-before: right; break-before: right` | — |
 | `break-before-column` | `-webkit-column-break-before: column; -moz-column-break-before: column; break-before: column` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-before-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:break-before-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

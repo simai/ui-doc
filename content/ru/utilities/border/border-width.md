@@ -61,13 +61,13 @@ description: "Задаёт толщину рамки от 0 до 10 пиксел
 | `border-y-10` | `border-top-width: var(--sf-b0); border-bottom-width: var(--sf-b0)` | — |
 | `border-y-0` | `border-top-width: var(--sf-0); border-bottom-width: var(--sf-0)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:border-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:border-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -154,4 +154,4 @@ description: "Задаёт толщину рамки от 0 до 10 пиксел
 - [Цвет границы](/ru/utilities/border/border-color/)
 - [Стиль границы](/ru/utilities/border/border-style/)
 - [Скругление границы](/ru/utilities/border/border-radius/)
-- [Границы](/ru/guide/fundamentals/borders/)
+- [Границы](/ru/guide/size-and-type/borders-and-radii/#границы)

@@ -27,7 +27,6 @@ php scripts/audit-framework-documentation-versions.php --check-remote
 php scripts/audit-guide-information-architecture.php
 php scripts/audit-guide-redirects.php
 php scripts/audit-reference-separation.php
-php scripts/audit-foundation-docs.php /absolute/path/to/ui
 php -d memory_limit=2G vendor/bin/docara build production
 php -d memory_limit=2G vendor/bin/docara verify-static build_production
 node scripts/audit-utility-executable-examples.mjs /absolute/path/to/exact-core \
@@ -123,9 +122,10 @@ node scripts/audit-composition-documentation-contract.mjs \
 ```
 
 После осмысленного обновления связанных страниц новые хеши принимаются только
-явной командой с `--refresh`. Структуру всех 24 страниц раздела дополнительно
-проверяет `composer docs:layout:check`: один H1, один предмет, обязательные шаги,
-явный порядок групп и отсутствие повторяющихся больших абзацев. Поэтому изменение контракта Framework делает
+явной командой с `--refresh`. Структуру раздела, как и всего руководства,
+проверяет `composer docs:architecture:check` по дереву `config/guide-structure.json`:
+один H1, заголовок и порядок страниц, вступление, отсутствие повторяющихся
+больших абзацев. Поэтому изменение контракта Framework делает
 устаревшую документацию ошибкой CI, а не скрытым расхождением.
 
 The migration command is deterministic and must report zero changed Markdown

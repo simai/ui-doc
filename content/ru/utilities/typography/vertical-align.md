@@ -38,7 +38,7 @@ description: "Выравнивает строчный элемент в стро
 | `text-sup` | `vertical-align: super` | — |
 | `text-sub` | `vertical-align: sub` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

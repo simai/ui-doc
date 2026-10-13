@@ -40,7 +40,7 @@ description: "Задаёт вид линии рамки — сплошная, п
 | `border-x-{значение}` | `border-inline-start-style: {значение}; border-inline-end-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
 | `border-y-{значение}` | `border-top-style: {значение}; border-bottom-style: {значение}` | `dotted`, `dashed`, `solid`, `double`, `hidden`, `inset`, `none` |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

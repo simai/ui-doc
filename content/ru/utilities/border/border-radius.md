@@ -84,13 +84,13 @@ description: "Скругляет углы элемента целиком, по 
 | `radius-bottom-inline-start-surface` | `border-end-start-radius: var(--sf-radius--surface)` | — |
 | `radius-bottom-inline-end-surface` | `border-end-end-radius: var(--sf-radius--surface)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:radius-0`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:radius-0`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -194,4 +194,4 @@ description: "Скругляет углы элемента целиком, по 
 
 - [Толщина границы](/ru/utilities/border/border-width/)
 - [Цвет границы](/ru/utilities/border/border-color/)
-- [Границы](/ru/guide/fundamentals/borders/)
+- [Границы](/ru/guide/size-and-type/borders-and-radii/#границы)

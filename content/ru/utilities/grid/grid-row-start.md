@@ -41,7 +41,7 @@ description: "Ставит элемент сетки в строку с зада
 | `row-start-auto` | `grid-row-start: auto` | — |
 | `grid-row-start-auto` | `grid-row-start: auto` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-start-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:row-start-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

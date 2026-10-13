@@ -57,7 +57,7 @@ description: "Заливает элемент фирменным цветом с
 | `bg-behance` | `background-color: #0057FF` | — |
 | `bg-soundcloud` | `background-color: #FF5500` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:bg-fb`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:bg-fb`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

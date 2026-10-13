@@ -1,19 +1,14 @@
 ---
-title: "Знакомство"
-description: "Что такое макет, из чего он складывается и чем отличается от страницы."
+title: "Введение в макеты"
+description: "Что такое макет, из каких представлений состоит страница, как проходит сборка и на какие уровни делится макет."
 ---
 
-# Знакомство
+# Введение в макеты
 
-Что такое макет, из чего он складывается и чем отличается от страницы.
+Что такое макет, из каких представлений состоит страница, как проходит сборка
+и на какие уровни делится макет.
 
-## Когда применять
-
-Начните отсюда, если встретили макеты впервые: раздел объясняет, что они решают и какими частями оперируют.
-
-## Страницы раздела
-
-- [Как проходит сборка](/ru/guide/layouts/introduction/document-flow/)
-- [Страница, секция, блок и компонент](/ru/guide/layouts/introduction/levels/)
-- [Recipe, Document и HTML](/ru/guide/layouts/introduction/recipe-document-html/)
 - [Что такое макет](/ru/guide/layouts/introduction/what-is-layout/)
+- [Recipe, документ и HTML](/ru/guide/layouts/introduction/recipe-document-html/)
+- [Как проходит сборка](/ru/guide/layouts/introduction/document-flow/)
+- [Уровни макета](/ru/guide/layouts/introduction/levels/)

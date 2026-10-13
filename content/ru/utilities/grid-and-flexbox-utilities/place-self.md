@@ -29,7 +29,7 @@ description: "Одним классом выравнивает один элем
 | `self-center` | `align-self: center; justify-self: center; place-self: center` | — |
 | `self-stretch` | `align-self: stretch; justify-self: stretch; place-self: stretch` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:self-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:self-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

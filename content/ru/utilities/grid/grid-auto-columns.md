@@ -29,7 +29,7 @@ description: "Задаёт ширину колонок, которые сетк�
 | `auto-cols-max` | `grid-auto-columns: -webkit-max-content; grid-auto-columns: max-content` | — |
 | `auto-cols-fr` | `grid-auto-columns: minmax(0, 1fr)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:auto-cols`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:auto-cols`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

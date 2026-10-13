@@ -30,7 +30,7 @@ description: "Задаёт область элемента, от которой 
 | `mask-origin-stroke` | `mask-origin: stroke-box` | — |
 | `mask-origin-viewbox` | `mask-origin: view-box` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

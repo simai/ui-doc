@@ -1,5 +1,1 @@
-{
-  "schema": "docara.section.v1",
-  "title": "Работа со Smart-компонентами",
-  "navigation": {"order": 70}
-}
+{"schema": "docara.section.v1", "title": "Smart-компоненты", "navigation": {"order": 70}}

@@ -3,6 +3,22 @@
 
 declare(strict_types=1);
 
+// Hold the guide to its tree, config/guide-structure.json: every section and
+// page where the tree puts it, with its title, H1 and navigation order; an
+// introduction before the first heading; no paragraph repeated on two pages; no
+// history or plans in the prose; every old route redirected to a page, without
+// chains; no link left to a route that no longer exists.
+//
+// The guide is the edited single-file guide split into pages (one page per
+// chapter or group of neighbouring chapters), approved by the owner on
+// 2026-10-12. The tree it replaced asked every page for «Когда применять» and
+// «Пример» sections and kept terms such as manifest, runtime or Larena off the
+// beginner's pages; the guide is written to a different standard -- it names
+// the manifest, the runtime and the product packages where a reader needs
+// them -- so those two checks went with the old tree.
+//
+// Usage: php scripts/audit-guide-information-architecture.php [--output=path]
+
 $root = dirname(__DIR__);
 $output = null;
 foreach ($argv as $argument) {
@@ -16,102 +32,18 @@ $check = static function (bool $condition, string $code, array $details = []) us
         $blockers[] = ['code' => $code, ...$details];
     }
 };
-$read = static function (string $relative) use ($root): string {
+$read = static function (string $relative) use ($root): ?string {
     $path = $root . '/' . $relative;
-    if (! is_file($path)) {
-        throw new RuntimeException('Required file is missing: ' . $relative);
-    }
-    return (string) file_get_contents($path);
+    return is_file($path) ? (string) file_get_contents($path) : null;
 };
-$readJson = static fn (string $relative): array => json_decode($read($relative), true, 512, JSON_THROW_ON_ERROR);
-// A page of the guide is either a file or a section with an index: a rule that
-// carries its own values -- the adaptive sizing table, the colour palettes --
-// is a directory, and the rule itself is its index. Both are the same page to
-// a reader, so both are the same page here.
-$pageBase = static function (string $base) use ($root): string {
-    return is_file($root . '/' . $base . '.md') ? $base : $base . '/index';
+$readJson = static function (string $relative) use ($read): ?array {
+    $text = $read($relative);
+    return $text === null ? null : json_decode($text, true, 512, JSON_THROW_ON_ERROR);
 };
 
-$structure = [
-    'introduction' => ['title' => 'Знакомство', 'order' => 10, 'pages' => [
-        'what-is-simai-framework' => ['Что такое SIMAI Framework', 10],
-        'quick-start' => ['Быстрый старт', 20],
-    ]],
-    'connection' => ['title' => 'Подключение', 'order' => 20, 'pages' => [
-        'project-setup' => ['Подключение к проекту', 10],
-        'loader' => ['Как работает Loader', 20],
-        'versions-and-updates' => ['Версии и обновление', 30],
-    ]],
-    'architecture' => ['title' => 'Устройство Framework', 'order' => 30, 'pages' => [
-        'overview' => ['Общая схема', 10],
-        'core' => ['Core', 20],
-        'utilities' => ['Утилиты', 30],
-        'components' => ['Компоненты', 40],
-        'smart-components' => ['Smart-компоненты', 50],
-        'composite-smart-components' => ['Составные смарт-компоненты', 60],
-        'blocks' => ['Блоки', 70],
-        'layouts' => ['Макеты', 80],
-        'framework-and-project' => ['Framework и проект', 90],
-    ]],
-    'fundamentals' => ['title' => 'Основы оформления', 'order' => 40, 'pages' => [
-        'index' => ['Основы оформления', 40],
-        'modifiers' => ['Модификаторы', 10],
-        'conditions' => ['Условия действия', 20],
-        'directions' => ['Направление текста', 25],
-        'values-and-scales' => ['Значения и шкалы', 30],
-        'sizes' => ['Система размеров', 40],
-        'size-scale' => ['Шкала размеров', 50],
-        // Its own values: the thresholds, the multipliers and how to do the
-        // arithmetic in your head, which the old description had and this one
-        // had lost.
-        'size-scale/pixels' => ['Перевод в пиксели', 10],
-        'spacing' => ['Интервалы', 60],
-        // What each step of --sf-space-* gives on a narrow and on a wide
-        // screen. The old full description carried this table and this
-        // documentation described the rule without ever giving the numbers
-        // (owner, 2026-10-09).
-        'spacing/scale' => ['Значения интервалов', 10],
-        'colors-and-themes' => ['Цвета и темы', 70],
-        'design-tokens' => ['Дизайн-токены', 80],
-        // The whole list, generated from the built core. The old full
-        // description carried one and this documentation had the values spread
-        // across the pages that use them, with nothing answering «what tokens
-        // are there» (owner, 2026-10-09).
-        'design-tokens/all-tokens' => ['Все переменные', 10],
-        'typography' => ['Типографика', 90],
-        'adaptive-sizing' => ['Адаптивные размеры', 100],
-    ]],
-    'components' => ['title' => 'Работа с компонентами', 'order' => 60, 'pages' => [
-        'form-elements' => ['Поля формы', 10],
-        'examples' => ['Как работать с примерами', 20],
-    ]],
-    'smart-components' => ['title' => 'Работа со Smart-компонентами', 'order' => 70, 'pages' => [
-        'introduction' => ['Что такое Smart-компонент', 10],
-        'connection' => ['Подключение Smart-компонентов', 20],
-        'lifecycle' => ['Загрузка и готовность', 30],
-        'catalog-and-readiness' => ['Статусы готовности', 40],
-        'templates-and-assets' => ['Шаблоны Smart-компонентов', 50],
-        'examples' => ['Проверка примера Smart-компонента', 60],
-        'creating' => ['Создание Smart-компонента', 65],
-        'properties' => ['Атрибуты, свойства и состояние', 70],
-        'events' => ['События и связь с проектом', 80],
-        'nesting' => ['Вложенность и составные компоненты', 90],
-        'local-components' => ['Локальные компоненты проекта', 100],
-        'slots' => ['Слоты и передача содержимого', 110],
-        'cleanup' => ['Обновление и освобождение ресурсов', 120],
-
-    ]],
-];
-
-$rootPages = [
-    'ai' => ['Работа с ИИ', 80],
-];
-
-$guideSection = $readJson('content/ru/guide/section.json');
-$check(($guideSection['title'] ?? null) === 'Руководство', 'guide_title_mismatch');
-$layoutsSection = $readJson('content/ru/guide/layouts/section.json');
-$check(($layoutsSection['title'] ?? null) === 'Макеты', 'layouts_title_mismatch');
-$check(($layoutsSection['navigation']['order'] ?? null) === 50, 'layouts_order_mismatch');
+$structure = $readJson('config/guide-structure.json');
+$guide = 'content/ru/guide';
+$check(($readJson($guide . '/section.json')['title'] ?? null) === $structure['title'], 'guide_title_mismatch');
 $header = $readJson('content/ru/section.json')['header_navigation']['items'] ?? [];
 $headerActual = array_map(static fn (array $item): array => [$item['label'] ?? null, $item['href'] ?? null], $header);
 $headerExpected = [
@@ -122,176 +54,122 @@ $headerExpected = [
 ];
 $check($headerActual === $headerExpected, 'header_navigation_mismatch', ['actual' => $headerActual]);
 
-$pageCount = 0;
+// Words that tell a story or promise one; a guide states what is.
+$history = ['/\bтеперь\b/iu', '/в новой версии/iu', '/\bс версии\b/iu', '/\bпланируется\b/iu'];
 $paragraphs = [];
-$hasConcreteExample = static function (string $markdown): bool {
-    if (preg_match('/^## Пример(?:[ \t]+[^\r\n]+)?[ \t]*$(.*?)(?=^## |\z)/msu', $markdown, $match) !== 1) {
-        return false;
-    }
-    $example = trim($match[1]);
-    return preg_match('/(?:^```|^:::(?:example|internal_preview|code)\b|^\|.+\|$|^(?:[-*]|\d+\.)\s+)/mu', $example) === 1;
-};
-foreach ($structure as $directory => $group) {
-    $section = $readJson('content/ru/guide/' . $directory . '/section.json');
-    $check(($section['title'] ?? null) === $group['title'], 'group_title_mismatch', ['group' => $directory]);
-    $check(($section['navigation']['order'] ?? null) === $group['order'], 'group_order_mismatch', ['group' => $directory]);
-    foreach ($group['pages'] as $slug => [$title, $order]) {
-        $pageCount++;
-        $base = $pageBase('content/ru/guide/' . $directory . '/' . $slug);
-        $markdown = $read($base . '.md');
-        $sidecar = $readJson($base . '.page.json');
-        preg_match_all('/^# (.+)$/m', $markdown, $h1);
-        $check(count($h1[1]) === 1 && ($h1[1][0] ?? null) === $title, 'page_h1_mismatch', ['page' => $base, 'actual' => $h1[1]]);
-        $check(str_contains($markdown, 'title: "' . $title . '"'), 'page_title_mismatch', ['page' => $base]);
-        $check(($sidecar['navigation']['order'] ?? null) === $order, 'page_order_mismatch', ['page' => $base]);
-        foreach (['## Когда применять', '## Пример'] as $heading) {
-            $check(str_contains($markdown, $heading), 'editorial_section_missing', ['page' => $base, 'heading' => $heading]);
-        }
-        $check($hasConcreteExample($markdown), 'concrete_example_missing', ['page' => $base]);
-        $body = preg_replace('/^---.*?---\s*/s', '', $markdown) ?? $markdown;
-        $intro = preg_split('/^## /m', $body, 2)[0] ?? '';
-        $check(mb_strlen(trim(preg_replace('/^# .*$/m', '', $intro) ?? '')) >= 40, 'introduction_too_short', ['page' => $base]);
-        foreach (preg_split('/\R\s*\R/u', $body) ?: [] as $paragraph) {
-            $normalized = mb_strtolower(trim(preg_replace('/\s+/u', ' ', $paragraph) ?? ''));
-            if (mb_strlen($normalized) >= 100 && ! str_starts_with($normalized, '```') && ! str_starts_with($normalized, ':::') && ! str_contains($normalized, '|')) {
-                $paragraphs[$normalized][] = $base;
-            }
-        }
-    }
-}
-
-foreach ($rootPages as $slug => [$title, $order]) {
+$pageCount = 0;
+$checkPage = static function (string $base, string $title, int $order) use ($read, $readJson, $check, $history, &$paragraphs, &$pageCount): void {
     $pageCount++;
-    $base = 'content/ru/guide/' . $slug;
     $markdown = $read($base . '.md');
-    $sidecar = $readJson($base . '.page.json');
-    preg_match_all('/^# (.+)$/m', $markdown, $h1);
-    $check(count($h1[1]) === 1 && ($h1[1][0] ?? null) === $title, 'page_h1_mismatch', ['page' => $base, 'actual' => $h1[1]]);
-    $check(($sidecar['navigation']['order'] ?? null) === $order, 'page_order_mismatch', ['page' => $base]);
-    foreach (['## Когда применять', '## Пример'] as $heading) {
-        $check(str_contains($markdown, $heading), 'editorial_section_missing', ['page' => $base, 'heading' => $heading]);
+    if ($markdown === null) {
+        $check(false, 'page_missing', ['page' => $base]);
+        return;
     }
-    $check($hasConcreteExample($markdown), 'concrete_example_missing', ['page' => $base]);
+    $sidecar = $readJson($base . '.page.json');
+    preg_match_all('/^# (.+)$/m', preg_replace('/```.*?```/s', '', $markdown) ?? $markdown, $h1);
+    $check(count($h1[1]) === 1 && ($h1[1][0] ?? null) === $title, 'page_h1_mismatch', ['page' => $base, 'actual' => $h1[1]]);
+    $check(str_contains($markdown, 'title: "' . $title . '"'), 'page_title_mismatch', ['page' => $base]);
+    $check(preg_match('/^description:\s*"\S/m', $markdown) === 1, 'page_description_missing', ['page' => $base]);
+    $check(($sidecar['navigation']['order'] ?? null) === $order, 'page_order_mismatch', ['page' => $base, 'actual' => $sidecar['navigation']['order'] ?? null]);
+    $body = preg_replace('/^---.*?---\s*/s', '', $markdown) ?? $markdown;
+    $intro = preg_split('/^## /m', $body, 2)[0] ?? '';
+    $check(mb_strlen(trim(preg_replace('/^# .*$/m', '', $intro) ?? '')) >= 40, 'introduction_too_short', ['page' => $base]);
+    $prose = preg_replace(['/```.*?```/s', '/`[^`\n]*`/'], '', $body) ?? $body;
+    foreach ($history as $pattern) {
+        if (preg_match($pattern, $prose, $match) === 1) {
+            $check(false, 'history_or_plan', ['page' => $base, 'word' => $match[0]]);
+        }
+    }
+    foreach (preg_split('/\R\s*\R/u', $body) ?: [] as $paragraph) {
+        $normalized = mb_strtolower(trim(preg_replace('/\s+/u', ' ', $paragraph) ?? ''));
+        if (mb_strlen($normalized) >= 100 && ! str_starts_with($normalized, '```') && ! str_starts_with($normalized, ':::') && ! str_contains($normalized, '|')) {
+            $paragraphs[$normalized][] = $base;
+        }
+    }
+};
+
+foreach ($structure['sections'] as $section) {
+    $directory = $guide . '/' . $section['slug'];
+    $sectionJson = $readJson($directory . '/section.json');
+    $check(($sectionJson['title'] ?? null) === $section['title'], 'section_title_mismatch', ['section' => $section['slug']]);
+    $check(($sectionJson['navigation']['order'] ?? null) === $section['order'], 'section_order_mismatch', ['section' => $section['slug']]);
+    // A section's place in the navigation is its index page's order.
+    $checkPage($directory . '/index', $section['title'], $section['order']);
+    foreach ($section['pages'] as $page) {
+        $checkPage($directory . '/' . $page['slug'], $page['title'], $page['order']);
+    }
+}
+foreach ($structure['root_pages'] as $page) {
+    $checkPage($guide . '/' . $page['slug'], $page['title'], $page['order']);
+}
+$check($read($guide . '/index.md') !== null, 'guide_index_missing');
+
+// A page on disk the tree does not name is a page nobody placed.
+$named = [$guide . '/index'];
+foreach ($structure['sections'] as $section) {
+    $named[] = $guide . '/' . $section['slug'] . '/index';
+    foreach ($section['pages'] as $page) {
+        $named[] = $guide . '/' . $section['slug'] . '/' . $page['slug'];
+    }
+}
+foreach ($structure['root_pages'] as $page) {
+    $named[] = $guide . '/' . $page['slug'];
+}
+$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/' . $guide, FilesystemIterator::SKIP_DOTS));
+foreach ($iterator as $file) {
+    if ($file->isFile() && $file->getExtension() === 'md') {
+        $relative = substr(str_replace('\\', '/', $file->getPathname()), strlen($root) + 1, -3);
+        $check(in_array($relative, $named, true), 'page_not_in_tree', ['page' => $relative]);
+    }
 }
 
-$guideIndex = $read('content/ru/guide/index.md');
-foreach (['## Когда применять', '## Пример'] as $heading) {
-    $check(str_contains($guideIndex, $heading), 'guide_index_section_missing', ['heading' => $heading]);
-}
-$check($hasConcreteExample($guideIndex), 'concrete_example_missing', ['page' => 'content/ru/guide/index']);
 foreach ($paragraphs as $paragraph => $files) {
     if (count(array_unique($files)) > 1) {
         $blockers[] = ['code' => 'duplicate_paragraph', 'pages' => array_values(array_unique($files)), 'sample' => mb_substr($paragraph, 0, 120)];
     }
 }
 
-$forbidden = [
-    'Docara',
-    'Larena',
-    'Bitrix',
-    'UI Studio',
-    'Custom Elements',
-    'registry',
-    'manifest',
-    'runtime',
-    'API',
-    'backend',
-    'уровень абстракции',
-    'жизненный цикл',
-    'синхронизировать состояние',
-    'проектирование интеграции',
-    'проектирования интеграции',
-    'бизнес-логик',
-    'бизнес-операц',
-    'направление развития',
-];
-$beginnerRoots = ['introduction', 'connection', 'architecture', 'fundamentals'];
-// The standards are inside «Устройство Framework» and are not on the beginner's
-// path: they say what must be true of a component to a person building one, and
-// they name the manifest, the host port and the consumers by name because that
-// is what they are about. Writing them in the beginner's vocabulary would cost
-// the precision that makes them standards (owner, 2026-10-09).
-$plainLanguageExempt = 'content/ru/guide/architecture/standards/';
-foreach ($beginnerRoots as $beginnerRoot) {
-$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide/' . $beginnerRoot));
-foreach ($iterator as $file) {
-    if (! $file->isFile() || $file->getExtension() !== 'md') {
-        continue;
-    }
-    if (str_contains(str_replace($root . '/', '', $file->getPathname()), $plainLanguageExempt)) {
-        continue;
-    }
-    $contents = (string) file_get_contents($file->getPathname());
-    $prose = preg_replace('/```.*?```/s', '', $contents) ?? $contents;
-    foreach ($forbidden as $term) {
-        $check(! str_contains($prose, $term), 'forbidden_term', ['page' => str_replace($root . '/', '', $file->getPathname()), 'term' => $term]);
-    }
-}
-}
-
-$expectedRedirects = [
-    'ru/start' => 'ru/guide/introduction/quick-start',
-    'ru/start/vision' => 'ru/guide/introduction/what-is-simai-framework',
-    'ru/start/installation' => 'ru/guide/connection/project-setup',
-    'ru/start/compatibility' => 'ru/guide/connection/versions-and-updates',
-    'ru/start/ai' => 'ru/guide/ai',
-    'ru/guide/practical/ai' => 'ru/guide/ai',
-    'ru/fundamentals' => 'ru/guide/fundamentals',
-    'ru/fundamentals/architecture' => 'ru/guide/architecture/overview',
-    'ru/fundamentals/modifiers' => 'ru/guide/fundamentals/modifiers',
-    'ru/fundamentals/conditions' => 'ru/guide/fundamentals/conditions',
-    'ru/fundamentals/values-and-scales' => 'ru/guide/fundamentals/values-and-scales',
-    'ru/fundamentals/sizes/sizes' => 'ru/guide/fundamentals/sizes',
-    'ru/fundamentals/sizes/size-scale' => 'ru/guide/fundamentals/size-scale',
-    'ru/fundamentals/content-spacing' => 'ru/guide/fundamentals/spacing',
-    'ru/fundamentals/colors-and-themes' => 'ru/guide/fundamentals/colors-and-themes',
-    'ru/fundamentals/design-tokens' => 'ru/guide/fundamentals/design-tokens',
-    'ru/fundamentals/typography-system' => 'ru/guide/fundamentals/typography',
-    'ru/fundamentals/adaptive-sizing-system' => 'ru/guide/fundamentals/adaptive-sizing',
-    'ru/layout' => 'ru/guide/layouts',
-    'ru/layout/introduction/what-is-layout' => 'ru/guide/layouts/introduction/what-is-layout',
-    'ru/layout/reference/studio-inspector' => 'ru/guide/layouts/reference/studio-inspector',
-    'ru/smart-components/introduction' => 'ru/guide/smart-components/introduction',
-    'ru/smart-components/connection' => 'ru/guide/smart-components/connection',
-    'ru/smart-components/lifecycle' => 'ru/guide/smart-components/lifecycle',
-    'ru/smart-components/catalog' => 'ru/guide/smart-components/catalog-and-readiness',
-    'ru/smart-components/templates-and-assets' => 'ru/guide/smart-components/templates-and-assets',
-    'ru/smart-components/examples' => 'ru/guide/smart-components/examples',
-];
+// Redirects: no chains, no cycles, and every target an existing page.
 $redirectRows = $readJson('redirects.json')['redirects'] ?? [];
 $redirects = [];
 foreach ($redirectRows as $row) {
     $from = $row['from'] ?? '';
-    $to = $row['to'] ?? '';
     $check(! isset($redirects[$from]), 'duplicate_redirect_source', ['from' => $from]);
-    $redirects[$from] = $to;
-    $check(! str_starts_with($to, 'ru/start') && ! str_starts_with($to, 'ru/fundamentals'), 'redirect_chain_to_removed_tree', ['from' => $from, 'to' => $to]);
-}
-foreach ($expectedRedirects as $from => $to) {
-    $check(($redirects[$from] ?? null) === $to, 'required_redirect_mismatch', ['from' => $from, 'actual' => $redirects[$from] ?? null, 'expected' => $to]);
+    $redirects[$from] = $row['to'] ?? '';
 }
 foreach ($redirects as $from => $to) {
     $check($from !== $to && ! isset($redirects[$to]), 'redirect_chain_or_cycle', ['from' => $from, 'to' => $to]);
+    if (str_starts_with($to, 'ru/guide')) {
+        $page = 'content/' . $to;
+        $check($read($page . '.md') !== null || $read($page . '/index.md') !== null, 'redirect_target_missing', ['from' => $from, 'to' => $to]);
+    }
 }
 
-$oldReferences = [];
-$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru'));
+// No link to a guide route that is not a page.
+$dead = [];
+$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru', FilesystemIterator::SKIP_DOTS));
 foreach ($iterator as $file) {
     if (! $file->isFile() || $file->getExtension() !== 'md') {
         continue;
     }
-    $contents = (string) file_get_contents($file->getPathname());
-    if (preg_match('#/ru/(?:start|fundamentals)/#', $contents) === 1) {
-        $oldReferences[] = str_replace($root . '/', '', $file->getPathname());
+    preg_match_all('#\]\((/ru/guide/[^)\s\#]*)#', (string) file_get_contents($file->getPathname()), $links);
+    foreach ($links[1] as $link) {
+        if (preg_match('/\.[a-z0-9]+$/i', $link) === 1) {
+            $check(is_file($root . '/content' . $link), 'guide_asset_missing', ['page' => substr($file->getPathname(), strlen($root) + 1), 'link' => $link]);
+            continue;
+        }
+        $page = 'content' . rtrim($link, '/');
+        if ($read($page . '.md') === null && $read($page . '/index.md') === null) {
+            $dead[] = ['page' => substr($file->getPathname(), strlen($root) + 1), 'link' => $link];
+        }
     }
 }
-$check($oldReferences === [], 'old_internal_links_remain', ['files' => $oldReferences]);
-$check(! is_dir($root . '/content/ru/start') && ! is_dir($root . '/content/ru/fundamentals'), 'removed_source_tree_present');
+$check($dead === [], 'guide_link_dead', ['links' => array_slice($dead, 0, 20)]);
 
 $report = [
-    'schema' => 'ui-doc.guide_information_architecture_audit.v1',
+    'schema' => 'ui-doc.guide_information_architecture_audit.v2',
     'status' => $blockers === [] ? 'pass' : 'fail',
-    'verified' => ['groups' => count($structure), 'pages' => $pageCount + 1, 'required_redirects' => count($expectedRedirects), 'header_items' => count($headerExpected)],
+    'verified' => ['sections' => count($structure['sections']), 'pages' => $pageCount, 'header_items' => count($headerExpected)],
     'blocker_count' => count($blockers),
     'blockers' => $blockers,
 ];

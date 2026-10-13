@@ -26,7 +26,7 @@ description: "Задаёт, от какого края — рамки, внут�
 | `bg-origin-padding` | `background-origin: padding-box` | — |
 | `bg-origin-content` | `background-origin: content-box` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-origin-border`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-origin-border`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

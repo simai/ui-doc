@@ -32,7 +32,7 @@ description: "Располагает строки флекс-контейнер�
 | `content-cross-evenly` | `align-content: space-evenly` | — |
 | `content-cross-stretch` | `align-content: stretch` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:content-cross-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:content-cross-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

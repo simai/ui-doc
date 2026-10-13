@@ -45,7 +45,7 @@ description: "Отбрасывает тень по контуру видимой
 | `drop-shadow-4` | `--sf-shadow--level-ratio: 8` | — |
 | `drop-shadow-5` | `--sf-shadow--level-ratio: 16` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-0`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-0`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

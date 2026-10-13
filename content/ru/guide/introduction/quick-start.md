@@ -1,28 +1,23 @@
 ---
 title: "Быстрый старт"
-description: "Первая рабочая страница на SIMAI Framework за несколько минут."
+description: "Первая страница не требует npm, сборщика и серверной части."
 ---
 
 # Быстрый старт
 
-Подключите SIMAI Framework к обычной HTML-странице и сразу проверьте результат.
-Для этого примера не нужны npm, сборщик или серверная часть проекта.
+Первая страница не требует npm, сборщика и серверной части. Нужны браузер,
+редактор и любой локальный HTTP-сервер.
 
-## Когда применять
+## Страница на Core
 
-Используйте этот способ для первого знакомства и быстрой проверки Framework без сборщика и серверной части проекта.
+Этот пример показывает минимальную страницу, на которой работают стили,
+токены, утилиты и компонент на классах.
 
-Вам понадобятся:
-
-- браузер;
-- редактор кода;
-- Python 3 или другой локальный HTTP-сервер.
-
-## Пример
-
-### 1. Создайте страницу
-
-Создайте пустую папку и сохраните в ней файл `index.html`:
+Создайте пустую папку и сохраните в ней `index.html`. Пример закреплён на
+выпуске `ui-c82d49d62d28`: во всех трёх адресах стоит полный коммит этого
+выпуска `c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3`. Идентификатор выпуска —
+не тег git, поэтому в адресе CDN пишется коммит. Чтобы взять другой выпуск,
+замените коммит во всех трёх адресах (см. [Версии: как закрепить выпуск](/ru/guide/connection/versions/)):
 
 ```html
 <!doctype html>
@@ -33,7 +28,7 @@ description: "Первая рабочая страница на SIMAI Framework 
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/core/css/core.css">
+        href="https://cdn.jsdelivr.net/gh/simai/ui@c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3/distr/core/css/core.min.css">
 </head>
 <body>
   <main class="p-4">
@@ -42,45 +37,72 @@ description: "Первая рабочая страница на SIMAI Framework 
       <p class="sf-body-medium color-on-surface">
         Стили, токены и утилиты работают.
       </p>
+      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+        <span class="sf-button-text-container">Кнопка на классах</span>
+      </button>
     </article>
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/simai/ui@v5.6.4/distr/core/js/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/simai/ui@c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3/distr/core/js/core.min.js"></script>
 </body>
 </html>
 ```
 
-Тег в трёх адресах должен быть одинаковым. Это опубликованная неизменяемая сборка, поэтому пример не изменится сам по себе.
-
-### 2. Запустите локальный сервер
-
-Откройте терминал в папке с файлом и выполните:
+Запустите сервер в этой папке:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Затем откройте [http://localhost:8080](http://localhost:8080). Вы должны увидеть
-карточку с отступами, фоном, скруглением и типографикой Framework.
+и откройте `http://localhost:8080`. Должна появиться карточка с отступами,
+фоном, скруглением, типографикой Framework и кнопкой.
 
-### 3. Проверьте подключение
+Классы в примере — это уровни из [Уровни Framework](/ru/guide/introduction/levels/#уровни-framework): `p-4`, `radius-2`,
+`bg-surface-container` — утилиты, `sf-h-2` и `sf-body-medium` — типографика
+Core, `sf-button` — компонент. У кнопки на классах обязательны четыре класса:
+корень `sf-button`, вид (`sf-button--default`), **схема** (`sf-button--primary`)
+и размер (`sf-button--size-1`), а подпись лежит в
+`<span class="sf-button-text-container">`. Без класса схемы кнопка не получает
+цветов. Типографика Core приходит вместе со стилем ядра; утилиты и компонент
+вручную не подключены: Loader нашёл их классы на странице и загрузил нужные
+модули.
 
-Откройте инструменты разработчика в браузере:
+Страница подключает сжатые файлы ядра, `core.min.css` и `core.min.js`, и
+Loader тоже загружает сжатые модули. Читаемые файлы нужны при отладке: их
+включает параметр `?sf-debug` в адресе страницы (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)).
+Строка `<link rel="icon" href="data:,">` только убирает из консоли ответ `404`
+на запрос значка сайта.
 
-- на вкладке Network не должно быть ответов `404`;
-- в Console не должно быть ошибок загрузки Framework;
-- выражение `window.SF?.Loader` должно вернуть загрузчик, а не `undefined`.
+## Проверка подключения
 
-Классы в примере меняют страницу прямо в разметке: `p-4` задаёт отступ,
-`radius-2` — скругление, а `bg-surface-container` — цвет поверхности. Загрузчик
-находит эти классы и подключает нужные модули автоматически.
+В инструментах разработчика браузера:
+
+- на вкладке Network нет ответов `404`;
+- в Console нет ошибок загрузки и нет предупреждения о том, что
+  `window.sfPath` не задан;
+- выражение `window.SF?.Loader` возвращает загрузчик, а не `undefined`.
+
+## Добавляем Smart-компоненты
+
+Smart-компоненты лежат в той же поставке, в `distr/smart/`. Loader находит их
+по `window.sfPath`, поэтому на странице из [Страница на Core](#страница-на-core) достаточно поставить тег:
+
+```html
+<sf-button text="Сохранить" scheme="primary" size="1"></sf-button>
+```
+
+Увидев `<sf-button>`, Loader загрузит Smart-кнопку, компонент кнопки, от
+которого зависит её вид, и общую основу Smart-компонентов — один файл на всю
+страницу (см. [Общая основа Smart-компонентов](/ru/guide/connection/loader/#общая-основа-smart-компонентов)). Полный порядок подключения своей копии поставки —
+см. [Порядок подключения](/ru/guide/connection/project-setup/#порядок-подключения); CDN или свои файлы — [CDN или своя копия](/ru/guide/connection/project-setup/#cdn-или-своя-копия); подключение пакета компонентов —
+[Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов); закрепление выпуска и обновление — [Версии: как закрепить выпуск](/ru/guide/connection/versions/) и [Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект).
 
 ## Попробуйте без проекта
 
 В [SIMAI Playground](https://play.simai.io/) можно открыть готовый пример,
 изменить классы и сразу увидеть результат в браузере. Это необязательный шаг:
-для подключения Framework к проекту достаточно инструкции выше.
+для подключения Framework к проекту достаточно страницы выше.

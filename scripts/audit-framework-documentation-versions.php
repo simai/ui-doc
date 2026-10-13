@@ -25,7 +25,6 @@ $check(str_contains((string) ($runtime['publication_profile'] ?? ''), 'candidate
 
 $allowedReleasePages = [
     'content/ru/guide/introduction/quick-start.md',
-    'content/ru/guide/connection/versions-and-updates/change-history.md',
 ];
 $paths = [];
 $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru', FilesystemIterator::SKIP_DOTS));
@@ -43,12 +42,17 @@ $staleSmartSourceReferences = [];
 foreach ($paths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
-    if ($relative !== 'content/ru/guide/connection/versions-and-updates/change-history.md' && preg_match('/(?<![\d.])v?5\.4(?:\.0)?(?![\d.])/', $markdown) === 1) {
+    if (preg_match('/(?<![\d.])v?5\.4(?:\.0)?(?![\d.])/', $markdown) === 1) {
         $legacyMentions[] = $relative;
     }
-    preg_match_all('/cdn\.jsdelivr\.net\/gh\/simai\/ui@(v\d+\.\d+\.\d+)\//', $markdown, $matches);
+    // A CDN address names the release the guide describes, by its commit: the
+    // release id is not a git tag, and an older core-only tag would hand a
+    // reader a Framework without the runtime the guide explains.
+    preg_match_all('/cdn\.jsdelivr\.net\/gh\/simai\/ui@([^\/\s`"<>]+)\//', $markdown, $matches);
     foreach ($matches[1] ?? [] as $tag) {
-        $cdnTags[$relative][] = $tag;
+        if ($tag !== 'main' && ! str_starts_with($tag, '<')) {
+            $cdnTags[$relative][] = $tag;
+        }
     }
     if (! in_array($relative, $allowedReleasePages, true)
         && preg_match('/SIMAI Framework\s+v?\d+\.\d+(?:\.\d+)?|Framework UI\s+v?\d+\.\d+(?:\.\d+)?|Реестр\s+`?\d+\.\d+(?:\.\d+)?/iu', $markdown) === 1
@@ -93,11 +97,9 @@ $check($legacyMentions === [], 'legacy_5_4_mentions_remain', ['paths' => $legacy
 $check($hardcodedReleaseMentions === [], 'release_numbers_in_durable_pages', ['paths' => $hardcodedReleaseMentions]);
 foreach ($cdnTags as $relative => $tags) {
     foreach ($tags as $tag) {
-        $check($tag === ($public['tag'] ?? null), 'cdn_tag_mismatch', ['path' => $relative, 'actual' => $tag]);
-        $check($tag !== ($runtime['ui']['tag'] ?? null), 'candidate_tag_used_in_public_snippet', ['path' => $relative]);
+        $check($tag === ($runtime['ui']['commit'] ?? null), 'cdn_release_mismatch', ['path' => $relative, 'actual' => $tag]);
     }
 }
-$check(count($cdnTags) === 1, 'unexpected_cdn_example_page_count', ['actual' => count($cdnTags)]);
 $check($staleSmartSourceReferences === [], 'stale_smart_source_references', ['references' => $staleSmartSourceReferences]);
 
 if ($checkRemote) {

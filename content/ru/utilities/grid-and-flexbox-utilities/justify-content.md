@@ -44,7 +44,7 @@ description: "Прижимает элементы флекс-контейнер�
 | `justify-evenly` | `justify-content: space-evenly` | — |
 | `content-main-evenly` | `justify-content: space-evenly` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:justify-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:justify-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

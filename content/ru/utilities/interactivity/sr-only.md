@@ -25,13 +25,13 @@ description: "Прячет текст с экрана, оставляя его �
 | `sr-only` | `position: absolute; width: var(--sf-px); height: var(--sf-px); padding: 0; margin: calc(-1 * var(--sf-px)); overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0` | — |
 | `not-sr-only` | `position: static; width: auto; height: auto; padding: 0; margin: 0; overflow: visible; clip: auto; white-space: normal` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -71,4 +71,4 @@ description: "Прячет текст с экрана, оставляя его �
 
 - [Метод отображения элемента](/ru/utilities/layout/display/)
 - [Видимость элемента](/ru/utilities/layout/visibility/)
-- [Фокус](/ru/guide/fundamentals/focus/)
+- [Фокус](/ru/guide/size-and-type/focus/)

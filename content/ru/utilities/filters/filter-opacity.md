@@ -42,7 +42,7 @@ description: "Делает элемент полупрозрачным чере�
 | `filter-opacity-full` | `filter: opacity(1)` | — |
 | `filter-opacity-0` | `filter: opacity(0)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:filter-opacity-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:filter-opacity-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

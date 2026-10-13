@@ -42,13 +42,13 @@ description: "Окрашивает внешний контур элемента 
 | `outline-warning` | `outline-color: var(--sf-outline-warning)` | — |
 | `outline-success` | `outline-color: var(--sf-outline-success)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `active:`, `focus-visible:`, `focus:`, `hover:`. Например: `active:outline-transparent`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus-visible:`, `focus:`, `hover:`. Например: `active:outline-transparent`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -102,4 +102,4 @@ description: "Окрашивает внешний контур элемента 
 - [Толщина внешней границы](/ru/utilities/outline/outline-width/)
 - [Стиль внешней границы](/ru/utilities/outline/outline-style/)
 - [Отступ внешней границы](/ru/utilities/outline/outline-offset/)
-- [Фокус](/ru/guide/fundamentals/focus/)
+- [Фокус](/ru/guide/size-and-type/focus/)

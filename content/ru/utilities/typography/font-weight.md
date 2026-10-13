@@ -52,7 +52,7 @@ description: "Задаёт толщину начертания текста по
 | `weight-8` | `font-weight: 800` | — |
 | `weight-9` | `font-weight: 900` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — `hover:`. Например: `sm:regular`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — `hover:`. Например: `sm:regular`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -83,5 +83,5 @@ description: "Задаёт толщину начертания текста по
 
 ## См. также
 
-- [Типографика](/ru/guide/fundamentals/typography/)
+- [Типографика](/ru/guide/size-and-type/typography/)
 - [Размер текста](/ru/utilities/typography/text-size/)

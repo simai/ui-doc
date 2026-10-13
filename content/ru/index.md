@@ -12,8 +12,8 @@
 [Начать работу](/ru/guide/introduction/quick-start/)
 :::
 
-[Что такое SIMAI Framework](/ru/guide/introduction/what-is-simai-framework/) ·
-[Работать с ИИ](/ru/guide/ai/)
+[Что такое SIMAI Framework](/ru/guide/introduction/what-is/#что-такое-simai-framework) ·
+[Работать с ИИ](/ru/guide/standards/ai/#работа-с-ии)
 
 ## Один язык интерфейса — четыре уровня
 
@@ -41,7 +41,7 @@
 Условия контрольных точек и состояний сочетаются с утилитами. Один и тот же
 подход работает для размеров экрана, `hover`, `focus` и других сценариев.
 
-[Изучить условия](/ru/guide/fundamentals/conditions/)
+[Изучить условия](/ru/guide/utilities/conditions/)
 
 ---
 
@@ -51,7 +51,7 @@
 семантические токены. Тему можно менять, не переписывая назначение каждого
 элемента.
 
-[Открыть дизайн-токены](/ru/guide/fundamentals/design-tokens/)
+[Открыть дизайн-токены](/ru/guide/colour/design-tokens/)
 
 ---
 
@@ -70,7 +70,7 @@ Smart Component только когда интерфейсу нужны логи
 сгенерированный статический результат. Это помогает команде воспроизводить
 одинаковую сборку.
 
-[Проверить совместимость](/ru/guide/connection/versions-and-updates/)
+[Проверить совместимость](/ru/guide/connection/versions/)
 :::
 
 :::::surface {width=full content_width=container padding=xl tone=accent}
@@ -87,7 +87,7 @@ Smart Component только когда интерфейсу нужны логи
 ## Документация по вашей задаче
 
 :::features
-- **[Руководство](/ru/guide/).** Знакомство, подключение, устройство Framework и основы оформления.
+- **[Руководство](/ru/guide/).** Знакомство, подключение и обновление, токены и цвет, размеры и текст, утилиты, компоненты, Smart-компоненты, макеты и стандарты.
 - **[Каталог утилит](/ru/utilities/).** Справочник классов по CSS-свойствам.
 - **[Компоненты](/ru/components/).** Полный каталог готовых элементов интерфейса с рабочими примерами.
 - **[Smart Components](/ru/smart-components/).** Жизненный цикл, API, события и зависимости.

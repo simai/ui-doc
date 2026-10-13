@@ -236,13 +236,13 @@ description: "Меняет отображение, направление, ко�
 | `cq-xl/sidebar:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-xl/sidebar:col-gap-{значение}` | `column-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `cq-sm:`, `cq-sm/sidebar:`, `cq-md:`, `cq-md/sidebar:`, `cq-lg:`, `cq-lg/sidebar:`, `cq-xl:`, `cq-xl/sidebar:`. Например: `cq-sm:block`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `cq-sm:`, `cq-sm/sidebar:`, `cq-md:`, `cq-md/sidebar:`, `cq-lg:`, `cq-lg/sidebar:`, `cq-xl:`, `cq-xl/sidebar:`. Например: `cq-sm:block`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -316,4 +316,4 @@ description: "Меняет отображение, направление, ко�
 - [Метод отображения элемента](/ru/utilities/layout/display/)
 - [Направление размещения](/ru/utilities/flex/flex-direction/)
 - [Шаблон колонок сетки](/ru/utilities/grid/grid-template-columns/)
-- [Условия](/ru/guide/fundamentals/conditions/)
+- [Условия](/ru/guide/utilities/conditions/)

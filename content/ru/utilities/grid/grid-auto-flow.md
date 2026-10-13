@@ -38,7 +38,7 @@ description: "Задаёт, как сетка раскладывает элем�
 | `grid-flow-row-dense` | `grid-auto-flow: row dense` | — |
 | `grid-flow-col-dense` | `grid-auto-flow: column dense` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-flow-row`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grid-flow-row`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

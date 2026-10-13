@@ -28,7 +28,7 @@ description: "Выравнивает все элементы сетки по г�
 | `items-main-center` | `justify-items: center` | — |
 | `items-main-stretch` | `justify-items: stretch` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-main-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:items-main-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

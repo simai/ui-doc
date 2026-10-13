@@ -49,7 +49,7 @@ description: "Меняет порядок показа элемента во ф�
 | `order-last` | `order: 9999` | — |
 | `order-none` | `order: 0` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:order-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:order-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

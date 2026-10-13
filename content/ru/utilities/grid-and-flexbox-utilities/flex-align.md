@@ -35,7 +35,7 @@ description: "Одним классом выравнивает элементы 
 | `end-center` | `justify-content: flex-end; align-items: center` | — |
 | `end-end` | `justify-content: flex-end; align-items: flex-end` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:start-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:start-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

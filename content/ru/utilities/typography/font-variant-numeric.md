@@ -40,7 +40,7 @@ description: "Включает особые начертания цифр шри
 | `num-stacked-fractions` | `font-feature-settings: var(--sf-text-num-stacked-fractions); font-variant-numeric: var(--sf-text-num-stacked-fractions)` | — |
 | `num-normal` | `font-feature-settings: var(--sf-text-num-normal); font-variant-numeric: var(--sf-text-num-normal)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

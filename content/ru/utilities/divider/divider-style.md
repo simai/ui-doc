@@ -34,7 +34,7 @@ description: "Задаёт вид линий между соседними эл�
 | `divider-hidden` (`.divider-hidden > :not([hidden]) ~ :not([hidden])`) | `border-style: hidden !important` | — |
 | `divide-hidden` (`.divide-hidden > :not([hidden]) ~ :not([hidden])`) | `border-style: hidden !important` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

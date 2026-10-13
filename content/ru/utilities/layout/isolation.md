@@ -28,7 +28,7 @@ description: "Создаёт для элемента отдельный конт
 | `isolation-auto` | `isolation: auto` | — |
 | `auto` | `isolation: auto` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:isolate`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:isolate`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

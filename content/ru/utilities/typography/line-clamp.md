@@ -29,7 +29,7 @@ description: "Показывает не больше заданного числ
 | `line-clamp-6` | `display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 6` | — |
 | `line-clamp-none` | `display: block; overflow: visible; -webkit-box-orient: horizontal; -webkit-line-clamp: unset` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

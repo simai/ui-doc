@@ -38,7 +38,7 @@ description: "Задаёт, как изображение или видео вп
 | `object-none` | `object-fit: none` | — |
 | `object-scale-down` | `object-fit: scale-down` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:object-contain`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:object-contain`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -65,13 +65,13 @@ description: "Рисует фоновый градиент: линейный п�
 | `gr-conic-2` | `background-image: conic-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-1)); background-image: conic-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-2, var(--sf-gradient--color-3, var(--sf-gradient--color-1))))` | — |
 | `gr-conic-3` | `background-image: conic-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-1), var(--sf-gradient--color-1)); background-image: conic-gradient(var(--sf-gradient--color-1), var(--sf-gradient--color-2, var(--sf-gradient--color-1)), var(--sf-gradient--color-3, var(--sf-gradient--color-2, var(--sf-gradient--color-1))))` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:gr-line-2`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:gr-line-2`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

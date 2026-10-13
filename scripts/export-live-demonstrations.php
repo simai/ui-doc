@@ -31,7 +31,7 @@ foreach ($ids as $id) {
     $html='<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Simai Framework — '.$id.'</title>'
 
     .'<link rel="stylesheet" href="'.$css[1].'">'
-    .'<script>window.sfPath='.json_encode($core).';window.sfSmartPath="/_docara/framework-runtime";window.SF_BOOT_CONFIG={theme:false,icons:{enabled:false,accumulate:false},smart:{base:true}};</script>'
+    .'<script>window.sfPath='.json_encode($core).';window.sfSmartPath="/_docara/framework-runtime";window.SF_BOOT_CONFIG={theme:false,icons:{enabled:false,accumulate:false},smart:{base:true},minified:false};</script>'
     .'<script src="'.$core.'core/js/core.js" defer></script>'.$js
     .'<style>body{padding:16px;margin:0;min-height:0;overflow-wrap:anywhere}project-counter,project-order,project-product,project-quantity,project-greeting{display:block}pre{max-width:100%;overflow:auto}textarea{box-sizing:border-box}button{cursor:pointer}iframe{box-sizing:border-box}</style></head><body>'.$body
     .'<script>function syncTheme(){if(parent===window)return;try{document.documentElement.dir=parent.document.documentElement.dir||"ltr";document.documentElement.classList.toggle("theme-dark",parent.document.documentElement.classList.contains("theme-dark"));document.documentElement.classList.toggle("theme-light",!parent.document.documentElement.classList.contains("theme-dark"));}catch(e){}}syncTheme();try{if(parent!==window)new MutationObserver(syncTheme).observe(parent.document.documentElement,{attributes:true,attributeFilter:["class","dir"]});}catch(e){}</script>'

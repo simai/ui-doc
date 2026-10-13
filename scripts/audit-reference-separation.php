@@ -31,23 +31,21 @@ foreach (['content/ru/reference', 'content/ru/layout', 'content/ru/smart-compone
 
 $requiredGuideOwners = [
     'content/ru/guide/layouts/index.md',
-    'content/ru/guide/fundamentals/directions.md',
-    'content/ru/guide/components/form-elements.md',
-    'content/ru/guide/components/examples.md',
+    'content/ru/guide/size-and-type/directions.md',
+    'content/ru/guide/components/form-fields.md',
+    'content/ru/guide/components/examples-and-project.md',
     'content/ru/guide/smart-components/introduction.md',
     'content/ru/guide/smart-components/connection.md',
     'content/ru/guide/smart-components/lifecycle.md',
-    'content/ru/guide/smart-components/catalog-and-readiness.md',
-    'content/ru/guide/smart-components/templates-and-assets.md',
-    'content/ru/guide/smart-components/examples.md',
+    'content/ru/guide/smart-components/templates.md',
 ];
 foreach ($requiredGuideOwners as $owner) {
     $check(is_file($root . '/' . $owner), 'guide_theory_owner_missing', ['path' => $owner]);
 }
 
 $catalogRules = [
-    'content/ru/utilities/index.md' => ['/ru/guide/fundamentals/', '## Направление (LTR/RTL)'],
-    'content/ru/components/index.md' => ['/ru/guide/components/examples/', '## Как устроены примеры'],
+    'content/ru/utilities/index.md' => ['/ru/guide/utilities/', '## Направление (LTR/RTL)'],
+    'content/ru/components/index.md' => ['/ru/guide/components/examples-and-project/#как-работать-с-примерами', '## Как устроены примеры'],
     'content/ru/smart-components/index.md' => ['/ru/guide/smart-components/introduction/', '/ru/smart-components/introduction/'],
 ];
 foreach ($catalogRules as $path => [$requiredLink, $forbiddenText]) {
@@ -66,7 +64,8 @@ foreach ($iterator as $file) {
     if (str_contains($contents, '/ru/layout/') || preg_match('#/ru/smart-components/(?:introduction|connection|lifecycle|catalog|templates-and-assets|examples)/#', $contents) === 1) {
         $staleLinks[] = str_replace($root . '/', '', $file->getPathname());
     }
-    preg_match_all('/^# (.+)$/m', $contents, $headings);
+    // A shell comment inside a code block is not a heading.
+    preg_match_all('/^# (.+)$/m', preg_replace('/^```.*?^```/ms', '', $contents) ?? $contents, $headings);
     $check(count($headings[1]) === 1, 'page_must_have_one_h1', ['path' => str_replace($root . '/', '', $file->getPathname()), 'count' => count($headings[1])]);
 }
 $check($staleLinks === [], 'stale_canonical_links', ['files' => $staleLinks]);

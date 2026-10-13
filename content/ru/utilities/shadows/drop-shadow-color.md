@@ -41,13 +41,13 @@ description: "Окрашивает падающую тень значка или
 | `drop-shadow-{значение}-transparent-overlay` | `--sf-shadow--color: var(--sf-{значение}-transparent-overlay); --sf-shadow--color-fill: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-overlay) var(--sf-shadow--alfa-fill)); --sf-shadow--color-outline: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-overlay) var(--sf-shadow--alfa-outline)); --sf-shadow--color-shading: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-overlay) var(--sf-shadow--alfa-shade)); --sf-shadow--color-shade: var(--sf-shadow--color-shading)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `drop-shadow-on-surface` | `--sf-shadow--color: var(--sf-on-surface); --sf-shadow--color-fill: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-fill)); --sf-shadow--color-outline: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-outline)); --sf-shadow--color-shading: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-shade)); --sf-shadow--color-shade: var(--sf-shadow--color-shading)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-transparent`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-transparent`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|

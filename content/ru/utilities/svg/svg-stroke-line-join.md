@@ -28,7 +28,7 @@ description: "Задаёт форму углов, где сходятся отр
 | `linejoin-miter-clip` | `stroke-linejoin: miter-clip` | — |
 | `linejoin-round` | `stroke-linejoin: round` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

@@ -1,0 +1,617 @@
+{
+ "schema": "ui-doc.guide-structure.v1",
+ "why": "The guide's tree: one page per chapter or group of neighbouring chapters of the edited guide (ui-control .artifacts/guide/SIMAI-Framework-Guide.md, approved by the owner on 2026-10-12). scripts/audit-guide-information-architecture.php holds the pages to it.",
+ "title": "Руководство",
+ "sections": [
+  {
+   "slug": "introduction",
+   "title": "Знакомство",
+   "order": 10,
+   "pages": [
+    {
+     "slug": "what-is",
+     "title": "Что такое SIMAI Framework",
+     "order": 10
+    },
+    {
+     "slug": "levels",
+     "title": "Уровни Framework",
+     "order": 20
+    },
+    {
+     "slug": "structure",
+     "title": "Из чего состоит Framework",
+     "order": 30
+    },
+    {
+     "slug": "framework-and-project",
+     "title": "Framework и проект",
+     "order": 40
+    },
+    {
+     "slug": "principles",
+     "title": "Принципы",
+     "order": 50
+    },
+    {
+     "slug": "quick-start",
+     "title": "Быстрый старт",
+     "order": 60
+    }
+   ]
+  },
+  {
+   "slug": "connection",
+   "title": "Подключение и обновление",
+   "order": 20,
+   "pages": [
+    {
+     "slug": "delivery",
+     "title": "Поставка и выпуск",
+     "order": 10
+    },
+    {
+     "slug": "project-setup",
+     "title": "Подключение к проекту",
+     "order": 20
+    },
+    {
+     "slug": "loader",
+     "title": "Как работает Loader",
+     "order": 30
+    },
+    {
+     "slug": "versions",
+     "title": "Версии",
+     "order": 40
+    },
+    {
+     "slug": "change-lifecycle",
+     "title": "Жизненный цикл изменений",
+     "order": 50
+    },
+    {
+     "slug": "updating",
+     "title": "Как обновить проект",
+     "order": 60
+    }
+   ]
+  },
+  {
+   "slug": "colour",
+   "title": "Токены, цвет и темы",
+   "order": 30,
+   "pages": [
+    {
+     "slug": "design-tokens",
+     "title": "Дизайн-токены",
+     "order": 10
+    },
+    {
+     "slug": "cascade-layers",
+     "title": "Каскадные слои",
+     "order": 20
+    },
+    {
+     "slug": "palettes",
+     "title": "Цветовые примитивы и палитры",
+     "order": 30
+    },
+    {
+     "slug": "colour-roles",
+     "title": "Цветовые роли",
+     "order": 40
+    },
+    {
+     "slug": "transparency",
+     "title": "Прозрачность",
+     "order": 50
+    },
+    {
+     "slug": "contrast",
+     "title": "Контраст",
+     "order": 60
+    },
+    {
+     "slug": "elevation",
+     "title": "Поверхность и тень",
+     "order": 70
+    },
+    {
+     "slug": "themes",
+     "title": "Темы",
+     "order": 80
+    },
+    {
+     "slug": "all-tokens",
+     "title": "Все переменные",
+     "order": 15
+    }
+   ]
+  },
+  {
+   "slug": "size-and-type",
+   "title": "Размер, пространство, текст и форма",
+   "order": 40,
+   "pages": [
+    {
+     "slug": "scales",
+     "title": "Шкалы и базовая единица",
+     "order": 10
+    },
+    {
+     "slug": "adaptive-sizing",
+     "title": "Адаптивные размеры",
+     "order": 20
+    },
+    {
+     "slug": "size-ladder",
+     "title": "Одна лестница размеров",
+     "order": 30
+    },
+    {
+     "slug": "spacing",
+     "title": "Пространство",
+     "order": 40
+    },
+    {
+     "slug": "typography",
+     "title": "Типографика",
+     "order": 50
+    },
+    {
+     "slug": "borders-and-radii",
+     "title": "Границы, скругления и высота",
+     "order": 60
+    },
+    {
+     "slug": "focus",
+     "title": "Фокус",
+     "order": 70
+    },
+    {
+     "slug": "directions",
+     "title": "Направление текста",
+     "order": 80
+    },
+    {
+     "slug": "language",
+     "title": "Язык интерфейса",
+     "order": 90
+    },
+    {
+     "slug": "geometry",
+     "title": "Геометрия: стандарт и проверка",
+     "order": 100
+    },
+    {
+     "slug": "spacing-scale",
+     "title": "Значения интервалов",
+     "order": 45
+    },
+    {
+     "slug": "default-text",
+     "title": "Текст по умолчанию",
+     "order": 55
+    },
+    {
+     "slug": "languages",
+     "title": "Языки",
+     "order": 95
+    },
+    {
+     "slug": "motion",
+     "title": "Движение",
+     "order": 115
+    },
+    {
+     "slug": "vertical-sizing",
+     "title": "Значения вертикальных размеров",
+     "order": 25
+    }
+   ]
+  },
+  {
+   "slug": "utilities",
+   "title": "Утилиты и раскладка",
+   "order": 50,
+   "pages": [
+    {
+     "slug": "what-is",
+     "title": "Что такое утилита",
+     "order": 10
+    },
+    {
+     "slug": "naming",
+     "title": "Имя утилиты",
+     "order": 20
+    },
+    {
+     "slug": "values",
+     "title": "Значения",
+     "order": 30
+    },
+    {
+     "slug": "conditions",
+     "title": "Условия действия",
+     "order": 40
+    },
+    {
+     "slug": "layout",
+     "title": "Раскладка",
+     "order": 50
+    },
+    {
+     "slug": "loading",
+     "title": "Как утилиты попадают на страницу",
+     "order": 60
+    },
+    {
+     "slug": "utilities-and-components",
+     "title": "Утилиты и компоненты",
+     "order": 70
+    }
+   ]
+  },
+  {
+   "slug": "components",
+   "title": "Компоненты",
+   "order": 60,
+   "pages": [
+    {
+     "slug": "what-is",
+     "title": "Что такое компонент",
+     "order": 10
+    },
+    {
+     "slug": "settings",
+     "title": "Настройки и размер",
+     "order": 20
+    },
+    {
+     "slug": "states",
+     "title": "Состояния",
+     "order": 30
+    },
+    {
+     "slug": "form-fields",
+     "title": "Поля формы",
+     "order": 40
+    },
+    {
+     "slug": "surfaces-and-accessibility",
+     "title": "Поверхности и доступность",
+     "order": 50
+    },
+    {
+     "slug": "smart-twin",
+     "title": "Компонент и его Smart-двойник",
+     "order": 60
+    },
+    {
+     "slug": "examples-and-project",
+     "title": "Примеры и компоненты проекта",
+     "order": 70
+    }
+   ]
+  },
+  {
+   "slug": "smart-components",
+   "title": "Smart-компоненты",
+   "order": 70,
+   "pages": [
+    {
+     "slug": "introduction",
+     "title": "Что это и что даёт",
+     "order": 10
+    },
+    {
+     "slug": "connection",
+     "title": "Подключение и использование",
+     "order": 20
+    },
+    {
+     "slug": "structure",
+     "title": "Устройство компонента",
+     "order": 30
+    },
+    {
+     "slug": "properties",
+     "title": "Атрибуты, свойства и состояние",
+     "order": 40
+    },
+    {
+     "slug": "templates",
+     "title": "Шаблоны",
+     "order": 50
+    },
+    {
+     "slug": "slots",
+     "title": "Содержимое и слоты",
+     "order": 60
+    },
+    {
+     "slug": "lifecycle",
+     "title": "Жизненный цикл",
+     "order": 70
+    },
+    {
+     "slug": "events",
+     "title": "События",
+     "order": 80
+    },
+    {
+     "slug": "states-and-loading",
+     "title": "Состояния и загрузка данных",
+     "order": 90
+    },
+    {
+     "slug": "composite",
+     "title": "Составные компоненты",
+     "order": 100
+    },
+    {
+     "slug": "host-ports",
+     "title": "Порты хоста и намерения",
+     "order": 110
+    },
+    {
+     "slug": "manifest",
+     "title": "Манифест",
+     "order": 120
+    },
+    {
+     "slug": "quality",
+     "title": "Качество",
+     "order": 130
+    },
+    {
+     "slug": "ai-development",
+     "title": "Разработка с ИИ",
+     "order": 140
+    }
+   ]
+  },
+  {
+   "slug": "layouts",
+   "title": "Макеты и композиция",
+   "order": 80,
+   "pages": [
+    {
+     "slug": "introduction/index",
+     "title": "Введение в макеты",
+     "order": 100
+    },
+    {
+     "slug": "introduction/what-is-layout",
+     "title": "Что такое макет",
+     "order": 20
+    },
+    {
+     "slug": "introduction/recipe-document-html",
+     "title": "Recipe, документ и HTML",
+     "order": 30
+    },
+    {
+     "slug": "introduction/document-flow",
+     "title": "Как проходит сборка",
+     "order": 40
+    },
+    {
+     "slug": "introduction/levels",
+     "title": "Уровни макета",
+     "order": 50
+    },
+    {
+     "slug": "building/index",
+     "title": "Построение макета",
+     "order": 200
+    },
+    {
+     "slug": "building/page",
+     "title": "Страница",
+     "order": 70
+    },
+    {
+     "slug": "building/section",
+     "title": "Секция",
+     "order": 80
+    },
+    {
+     "slug": "building/block",
+     "title": "Блок",
+     "order": 90
+    },
+    {
+     "slug": "building/component",
+     "title": "Компонент",
+     "order": 100
+    },
+    {
+     "slug": "building/slots",
+     "title": "Слоты и порядок",
+     "order": 110
+    },
+    {
+     "slug": "building/recipe-templates-and-variants",
+     "title": "Шаблоны, вставки и варианты",
+     "order": 120
+    },
+    {
+     "slug": "building/smart-component",
+     "title": "Smart-компонент в макете",
+     "order": 130
+    },
+    {
+     "slug": "building/composite-smart-component",
+     "title": "Составной компонент в макете",
+     "order": 140
+    },
+    {
+     "slug": "content-and-data/index",
+     "title": "Содержимое и данные",
+     "order": 300
+    },
+    {
+     "slug": "content-and-data/rendering-boundary",
+     "title": "Граница ответственности",
+     "order": 160
+    },
+    {
+     "slug": "content-and-data/data-sources",
+     "title": "Входы и источники данных",
+     "order": 170
+    },
+    {
+     "slug": "content-and-data/snapshots-and-cache",
+     "title": "Снимки и кеш",
+     "order": 180
+    },
+    {
+     "slug": "content-and-data/structured-text",
+     "title": "Структурированный текст",
+     "order": 190
+    },
+    {
+     "slug": "content-and-data/publication-and-rollback",
+     "title": "Публикация и откат",
+     "order": 200
+    },
+    {
+     "slug": "editor/index",
+     "title": "Редактор страниц",
+     "order": 400
+    },
+    {
+     "slug": "editor/overview",
+     "title": "Принцип и холст",
+     "order": 220
+    },
+    {
+     "slug": "editor/moving-blocks",
+     "title": "Перенос и вставка блоков",
+     "order": 230
+    },
+    {
+     "slug": "editor/inline-text",
+     "title": "Правка текста на месте",
+     "order": 240
+    },
+    {
+     "slug": "editor/panels",
+     "title": "Панели и поля свойств",
+     "order": 250
+    },
+    {
+     "slug": "reference/index",
+     "title": "Справочные темы",
+     "order": 500
+    },
+    {
+     "slug": "reference/api",
+     "title": "API сборки и отрисовки",
+     "order": 270
+    },
+    {
+     "slug": "reference/custom-type",
+     "title": "Собственный тип",
+     "order": 280
+    },
+    {
+     "slug": "reference/type-manifest",
+     "title": "Манифест типа",
+     "order": 290
+    },
+    {
+     "slug": "reference/diagnostics",
+     "title": "Диагностика",
+     "order": 300
+    },
+    {
+     "slug": "reference/versions",
+     "title": "Версии и отпечатки",
+     "order": 310
+    },
+    {
+     "slug": "reference/specification",
+     "title": "Где взять спецификацию",
+     "order": 320
+    },
+    {
+     "slug": "reference/studio-inspector",
+     "title": "Инспектор макета",
+     "order": 330
+    },
+    {
+     "slug": "examples/index",
+     "title": "Примеры макетов",
+     "order": 600
+    },
+    {
+     "slug": "examples/information-page",
+     "title": "Информационная страница",
+     "order": 350
+    },
+    {
+     "slug": "examples/catalog",
+     "title": "Каталог товаров",
+     "order": 360
+    },
+    {
+     "slug": "examples/dashboard",
+     "title": "Рабочая панель",
+     "order": 370
+    }
+   ]
+  },
+  {
+   "slug": "standards",
+   "title": "Стандарты, качество и ИИ",
+   "order": 90,
+   "pages": [
+    {
+     "slug": "what-is",
+     "title": "Что такое стандарт",
+     "order": 10
+    },
+    {
+     "slug": "map",
+     "title": "Карта стандартов",
+     "order": 20
+    },
+    {
+     "slug": "ports",
+     "title": "Порты и наборы проверок",
+     "order": 30
+    },
+    {
+     "slug": "quality-principles",
+     "title": "Принципы качества",
+     "order": 40
+    },
+    {
+     "slug": "framework-checks",
+     "title": "Как Framework проверяет себя",
+     "order": 50
+    },
+    {
+     "slug": "project-checks",
+     "title": "Как проект проверяет своё использование",
+     "order": 60
+    },
+    {
+     "slug": "ai",
+     "title": "Работа с ИИ",
+     "order": 70
+    }
+   ]
+  }
+ ],
+ "root_pages": [
+  {
+   "slug": "glossary",
+   "title": "Глоссарий",
+   "order": 900
+  }
+ ]
+}

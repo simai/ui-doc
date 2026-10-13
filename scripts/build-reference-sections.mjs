@@ -361,7 +361,7 @@ const utilityConditions = (families) => {
   const example = variants[0]?.example;
   return [
     '',
-    `Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — ${widths.length ? widths.join(', ') : 'нет'}; состояния — ${states.length ? states.join(', ') : 'нет'}.${example ? ` Например: ${code(example)}.` : ''}`,
+    `Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — ${widths.length ? widths.join(', ') : 'нет'}; состояния — ${states.length ? states.join(', ') : 'нет'}.${example ? ` Например: ${code(example)}.` : ''}`,
   ];
 };
 
@@ -369,7 +369,7 @@ const utilityVariables = (families) => {
   const tokens = utilityTokens(families);
   if (tokens.length === 0) return null;
   return [
-    'Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).',
+    'Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).',
     '',
     '| Переменная | Значение по умолчанию |',
     '|:---|:---|',

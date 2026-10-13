@@ -48,13 +48,13 @@ description: "Окрашивает подчёркивание и другие л
 | `decoration-warning` | `text-decoration-color: var(--sf-outline-warning)` | — |
 | `decoration-success` | `text-decoration-color: var(--sf-outline-success)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:decoration-inherit`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:decoration-inherit`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -97,4 +97,4 @@ description: "Окрашивает подчёркивание и другие л
 
 - [Линии оформления текста](/ru/utilities/text-formatting/text-decoration/)
 - [Цвет текста](/ru/utilities/text-formatting/text-color/)
-- [Цветовые роли](/ru/guide/fundamentals/colour-roles/)
+- [Цветовые роли](/ru/guide/colour/colour-roles/)

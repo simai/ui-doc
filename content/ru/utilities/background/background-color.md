@@ -171,13 +171,13 @@ description: "Заливает элемент цветовой ролью тем
 | `bg-pink-8` | `background-color: rgb(153, 48, 111)` | — |
 | `bg-pink-9` | `background-color: rgb(109, 34, 79)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `active:`, `hover:`. Например: `active:bg-surface-container`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `hover:`. Например: `active:bg-surface-container`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -324,5 +324,5 @@ description: "Заливает элемент цветовой ролью тем
 
 - [Цвет текста](/ru/utilities/text-formatting/text-color/)
 - [Брендовые цвета фона](/ru/utilities/background/background-color-brand/)
-- [Цветовые роли](/ru/guide/fundamentals/colour-roles/)
+- [Цветовые роли](/ru/guide/colour/colour-roles/)
 - [Высота](/ru/utilities/shadows/elevation/)

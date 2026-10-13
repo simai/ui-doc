@@ -1,23 +1,26 @@
 ---
-title: "Справочник"
-description: "Точные значения и перечни, которыми описан макет: инспектор, параметры и соответствия."
+title: "Справочные темы"
+description: "Эта глава собирает справочные сведения о композиции: API, собственные типы, манифест типа, диагностику, версии и спецификацию."
 ---
 
-# Справочник
+# Справочные темы
 
-Точные значения и перечни, которыми описан макет: инспектор, параметры и соответствия.
+Эта глава собирает справочные сведения о композиции: API, собственные типы,
+манифест типа, диагностику, версии и спецификацию. Точные значения, перечни и
+схемы — в справочнике и нормативных комплектах.
 
-## Когда применять
+## Смотрите также
 
-Когда правило уже понятно и нужно точное имя, значение или перечень.
+- [Версии: как закрепить выпуск](/ru/guide/connection/versions/) и [Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект) — закрепление выпуска и обновление.
+- [Recipe (`simai.composition-recipe`)](/ru/guide/standards/map/#recipe-simai-composition-recipe) — Composition Recipe среди стандартов Framework.
+- [Как Framework проверяет себя](/ru/guide/standards/framework-checks/) и [Работа с ИИ](/ru/guide/standards/ai/#работа-с-ии) — проверки и работа с ИИ.
 
 ## Страницы раздела
 
-- [API сборки и рендеринга](/ru/guide/layouts/reference/api/)
-- [Создание собственного типа](/ru/guide/layouts/reference/custom-type/)
-- [Ошибки и диагностика](/ru/guide/layouts/reference/diagnostics/)
-- [Документ макета](/ru/guide/layouts/reference/document/)
-- [Где взять спецификацию Recipe](/ru/guide/layouts/reference/specification/)
+- [API сборки и отрисовки](/ru/guide/layouts/reference/api/)
+- [Собственный тип](/ru/guide/layouts/reference/custom-type/)
+- [Манифест типа](/ru/guide/layouts/reference/type-manifest/)
+- [Диагностика](/ru/guide/layouts/reference/diagnostics/)
+- [Версии и отпечатки](/ru/guide/layouts/reference/versions/)
+- [Где взять спецификацию](/ru/guide/layouts/reference/specification/)
 - [Инспектор макета](/ru/guide/layouts/reference/studio-inspector/)
-- [Manifest типа](/ru/guide/layouts/reference/type-manifest/)
-- [Версии и совместимость](/ru/guide/layouts/reference/versions/)

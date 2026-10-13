@@ -35,7 +35,7 @@ description: "Подчёркивает, надчёркивает или зачё
 | `line-through` | `text-decoration-line: line-through` | — |
 | `decoration-none` | `text-decoration-line: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:underline`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:underline`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

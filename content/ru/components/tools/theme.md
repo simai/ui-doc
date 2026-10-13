@@ -79,5 +79,5 @@ window.addEventListener('sf-theme-change', (event) => {
 
 ## См. также
 
-- [Светлая и тёмная тема](/ru/guide/fundamentals/colors-and-themes/themes/)
-- [Все переменные](/ru/guide/fundamentals/design-tokens/all-tokens/)
+- [Светлая и тёмная тема](/ru/guide/colour/themes/#темы)
+- [Все переменные](/ru/guide/colour/all-tokens/)

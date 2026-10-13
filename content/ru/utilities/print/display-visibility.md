@@ -35,7 +35,7 @@ description: "Делает элемент невидимым или видимы
 | `print-hidden` | `при печати: visibility: hidden` | — |
 | `print-visible-none` | `при печати: visibility: hidden` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

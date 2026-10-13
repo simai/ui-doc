@@ -166,4 +166,4 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 - [Перетаскивание](/ru/smart-components/editor/sortable/) — библиотека блоков, из которой элементы попадают на холст.
 - [Inline-редактор](/ru/smart-components/editor/inline-editor/) — правка текста выбранного узла.
-- [Как устроен редактор страниц](/ru/guide/layouts/editor/overview/) — как части редактора работают вместе.
+- [Как устроен редактор страниц](/ru/guide/layouts/editor/overview/#принцип-намерения-а-не-правка) — как части редактора работают вместе.

@@ -148,13 +148,13 @@ description: "Окрашивает рамку элемента цветовой 
 | `border-pink-8` | `border-color: rgb(153, 48, 111)` | — |
 | `border-pink-9` | `border-color: rgb(109, 34, 79)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:border-transparent`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:border-transparent`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/fundamentals/design-tokens/all-tokens/).
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
@@ -237,4 +237,4 @@ description: "Окрашивает рамку элемента цветовой 
 - [Толщина границы](/ru/utilities/border/border-width/)
 - [Стиль границы](/ru/utilities/border/border-style/)
 - [Скругление границы](/ru/utilities/border/border-radius/)
-- [Границы](/ru/guide/fundamentals/borders/)
+- [Границы](/ru/guide/size-and-type/borders-and-radii/#границы)

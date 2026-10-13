@@ -47,7 +47,7 @@ description: "Раскладывает содержимое блока по за
 | `layout-col-12` | `column-count: 12` | — |
 | `layout-col-auto` | `column-count: auto` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:layout-col-1`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:layout-col-1`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

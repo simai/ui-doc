@@ -27,7 +27,7 @@ outline-offset-2`.
 | `outline-hidden` | `outline-style: hidden` | — |
 | `outline-none` | `outline-style: none` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -61,4 +61,4 @@ outline-offset-2`.
 
 - [Толщина внешней границы](/ru/utilities/outline/outline-width/)
 - [Цвет внешней границы](/ru/utilities/outline/outline-color/)
-- [Фокус](/ru/guide/fundamentals/focus/)
+- [Фокус](/ru/guide/size-and-type/focus/)

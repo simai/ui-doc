@@ -1,23 +1,29 @@
 ---
-title: "Устройство макета"
-description: "Из каких частей собирается макет: страница, секция, блок, компонент и слоты между ними."
+title: "Построение макета"
+description: "Макет делит страницу на три уровня ответственности."
 ---
 
-# Устройство макета
+# Построение макета
 
-Из каких частей собирается макет: страница, секция, блок, компонент и слоты между ними.
+Макет делит страницу на три уровня ответственности. Эта глава помогает
+выбрать уровень для каждой части страницы, описывает встроенные типы узлов и
+объясняет, что такое блок.
 
-## Когда применять
+## Смотрите также
 
-Когда собираете макет и выбираете, на каком уровне описывать нужное: страницей, секцией, блоком или компонентом.
+- [Уровни макета](/ru/guide/layouts/introduction/levels/) — уровни ответственности и встроенные типы.
+- [Слоты и порядок](/ru/guide/layouts/building/slots/) — слоты и порядок дочерних узлов.
+- [Smart-компонент в макете](/ru/guide/layouts/building/smart-component/) — Smart-компоненты в макете.
+- [Собственный тип](/ru/guide/layouts/reference/custom-type/) и [Манифест типа](/ru/guide/layouts/reference/type-manifest/) — собственный тип и манифест типа.
+- [Что такое компонент](/ru/guide/components/what-is/#что-такое-компонент) — компоненты.
 
 ## Страницы раздела
 
-- [Блок](/ru/guide/layouts/building/block/)
-- [Компонент в макете](/ru/guide/layouts/building/component/)
-- [Составной смарт-компонент](/ru/guide/layouts/building/composite-smart-component/)
 - [Страница](/ru/guide/layouts/building/page/)
-- [Шаблоны, вставки и варианты](/ru/guide/layouts/building/recipe-templates-and-variants/)
 - [Секция](/ru/guide/layouts/building/section/)
-- [Слоты и порядок элементов](/ru/guide/layouts/building/slots/)
+- [Блок](/ru/guide/layouts/building/block/)
+- [Компонент](/ru/guide/layouts/building/component/)
+- [Слоты и порядок](/ru/guide/layouts/building/slots/)
+- [Шаблоны, вставки и варианты](/ru/guide/layouts/building/recipe-templates-and-variants/)
 - [Smart-компонент в макете](/ru/guide/layouts/building/smart-component/)
+- [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)

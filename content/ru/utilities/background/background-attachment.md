@@ -27,7 +27,7 @@ description: "Задаёт, движется ли фоновое изображ�
 | `bg-local` | `background-attachment: local` | — |
 | `bg-scroll` | `background-attachment: scroll` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-fixed`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:bg-fixed`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

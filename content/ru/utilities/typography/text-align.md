@@ -42,7 +42,7 @@ description: "Выравнивает текст по началу строки, 
 | `text-end` | `text-align: end` | — |
 | `text-justify` | `text-align: justify` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:text-start`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:text-start`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -68,5 +68,5 @@ description: "Выравнивает текст по началу строки, 
 
 ## См. также
 
-- [Направление письма](/ru/guide/fundamentals/directions/)
+- [Направление письма](/ru/guide/size-and-type/directions/)
 - [Начертание цифр](/ru/utilities/typography/font-variant-numeric/)

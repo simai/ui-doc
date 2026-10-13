@@ -924,7 +924,7 @@
     },
     {
       "from": "ru/components/reference/theme-builder",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/components/reference/toast",
@@ -1000,7 +1000,7 @@
     },
     {
       "from": "ru/components/theme-builder",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/components/toast",
@@ -1016,7 +1016,7 @@
     },
     {
       "from": "ru/components/tools/theme-builder",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/components/tooltip",
@@ -1444,7 +1444,7 @@
     },
     {
       "from": "ru/framework-components/reference/theme-builder",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/framework-components/reference/toast",
@@ -1520,7 +1520,7 @@
     },
     {
       "from": "ru/framework-components/theme-builder",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/framework-components/toast",
@@ -1548,155 +1548,155 @@
     },
     {
       "from": "ru/fundamentals",
-      "to": "ru/guide/fundamentals"
+      "to": "ru/guide/colour"
     },
     {
       "from": "ru/fundamentals/abbreviations-of-properties",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/adaptive-sizing-system",
-      "to": "ru/guide/fundamentals/adaptive-sizing"
+      "to": "ru/guide/size-and-type/adaptive-sizing"
     },
     {
       "from": "ru/fundamentals/alignment",
-      "to": "ru/guide/fundamentals/values-and-scales"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/alignment/alignment",
-      "to": "ru/guide/fundamentals/values-and-scales"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/architecture",
-      "to": "ru/guide/architecture/overview"
+      "to": "ru/guide/introduction/levels"
     },
     {
       "from": "ru/fundamentals/best-practices",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/breakpoints",
-      "to": "ru/guide/fundamentals/conditions"
+      "to": "ru/guide/utilities/conditions"
     },
     {
       "from": "ru/fundamentals/colors-and-themes",
-      "to": "ru/guide/fundamentals/colors-and-themes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/fundamentals/conditions",
-      "to": "ru/guide/fundamentals/conditions"
+      "to": "ru/guide/utilities/conditions"
     },
     {
       "from": "ru/fundamentals/content-spacing",
-      "to": "ru/guide/fundamentals/spacing"
+      "to": "ru/guide/size-and-type/spacing"
     },
     {
       "from": "ru/fundamentals/design-tokens",
-      "to": "ru/guide/fundamentals/design-tokens"
+      "to": "ru/guide/colour/design-tokens"
     },
     {
       "from": "ru/fundamentals/directions",
-      "to": "ru/guide/fundamentals/values-and-scales"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/directions/directions",
-      "to": "ru/guide/fundamentals/values-and-scales"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/modifier-parameters",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/angle-parameter",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/axle-designations",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/examples-of-parameters-in-modifiers",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/modifier-parameters",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/side-parameter",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/modifiers",
-      "to": "ru/guide/fundamentals/modifiers"
+      "to": "ru/guide/utilities/what-is"
     },
     {
       "from": "ru/fundamentals/sizes",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/direct-translation",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/from-old-to-new",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/indents",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/mnemonic",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/relationship-between-letters-and-multipliers",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/reverse-conversion",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/reverse-translation",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/size-conversion",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/sizes/size-scale",
-      "to": "ru/guide/fundamentals/size-scale"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/sizes",
-      "to": "ru/guide/fundamentals/sizes"
+      "to": "ru/guide/size-and-type/size-ladder"
     },
     {
       "from": "ru/fundamentals/states",
-      "to": "ru/guide/fundamentals/conditions"
+      "to": "ru/guide/utilities/conditions"
     },
     {
       "from": "ru/fundamentals/typography-system",
-      "to": "ru/guide/fundamentals/typography"
+      "to": "ru/guide/size-and-type/typography"
     },
     {
       "from": "ru/fundamentals/values",
-      "to": "ru/guide/fundamentals/values-and-scales"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/values-and-scales",
-      "to": "ru/guide/fundamentals/values-and-scales"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/guide/architecture/complex-smart-components",
-      "to": "ru/guide/architecture/composite-smart-components"
+      "to": "ru/guide/introduction/levels"
     },
     {
       "from": "ru/guide/composition",
@@ -1712,7 +1712,7 @@
     },
     {
       "from": "ru/guide/composition/document-and-tree",
-      "to": "ru/guide/layouts/reference/document"
+      "to": "ru/guide/layouts/introduction/recipe-document-html"
     },
     {
       "from": "ru/guide/composition/rendering-and-project",
@@ -1736,107 +1736,107 @@
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes",
-      "to": "ru/guide/fundamentals/colour-palettes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/error",
-      "to": "ru/guide/fundamentals/colour-palettes/error"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/neutral",
-      "to": "ru/guide/fundamentals/colour-palettes/neutral"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/primary",
-      "to": "ru/guide/fundamentals/colour-palettes/primary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/secondary",
-      "to": "ru/guide/fundamentals/colour-palettes/secondary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/success",
-      "to": "ru/guide/fundamentals/colour-palettes/success"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/tertiary",
-      "to": "ru/guide/fundamentals/colour-palettes/tertiary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/transparent-white-black",
-      "to": "ru/guide/fundamentals/colour-palettes/transparent-white-black"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/palettes/warning",
-      "to": "ru/guide/fundamentals/colour-palettes/warning"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles",
-      "to": "ru/guide/fundamentals/colour-roles"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/disable",
-      "to": "ru/guide/fundamentals/colour-roles/disable"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/error",
-      "to": "ru/guide/fundamentals/colour-roles/error"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/focus",
-      "to": "ru/guide/fundamentals/colour-roles/focus"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/interactive",
-      "to": "ru/guide/fundamentals/colour-roles/interactive"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/link",
-      "to": "ru/guide/fundamentals/colour-roles/link"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/main",
-      "to": "ru/guide/fundamentals/colour-roles/main"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/mark",
-      "to": "ru/guide/fundamentals/colour-roles/mark"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/outline",
-      "to": "ru/guide/fundamentals/colour-roles/outline"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/primary",
-      "to": "ru/guide/fundamentals/colour-roles/primary"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/secondary",
-      "to": "ru/guide/fundamentals/colour-roles/secondary"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/special",
-      "to": "ru/guide/fundamentals/colour-roles/special"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/success",
-      "to": "ru/guide/fundamentals/colour-roles/success"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/supporting",
-      "to": "ru/guide/fundamentals/colour-roles/supporting"
+      "to": "ru/guide/colour/design-tokens"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/surface",
-      "to": "ru/guide/fundamentals/colour-roles/surface"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/tertiary",
-      "to": "ru/guide/fundamentals/colour-roles/tertiary"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/fundamentals/colors-and-themes/roles/warning",
-      "to": "ru/guide/fundamentals/colour-roles/warning"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/guide/layouts/building/complex-smart-component",
@@ -1844,7 +1844,7 @@
     },
     {
       "from": "ru/guide/practical/ai",
-      "to": "ru/guide/ai"
+      "to": "ru/guide/standards/ai"
     },
     {
       "from": "ru/layout",
@@ -1928,7 +1928,7 @@
     },
     {
       "from": "ru/layout/reference/document",
-      "to": "ru/guide/layouts/reference/document"
+      "to": "ru/guide/layouts/introduction/recipe-document-html"
     },
     {
       "from": "ru/layout/reference/studio-inspector",
@@ -1944,207 +1944,207 @@
     },
     {
       "from": "ru/migration",
-      "to": "ru/guide/connection/versions-and-updates"
+      "to": "ru/guide/connection/versions"
     },
     {
       "from": "ru/migration/adaptive-sizing-v1",
-      "to": "ru/guide/connection/versions-and-updates/adaptive-sizing-v1"
+      "to": "ru/guide/connection/updating"
     },
     {
       "from": "ru/migration/change-event",
-      "to": "ru/guide/connection/versions-and-updates/change-event"
+      "to": "ru/guide/connection/updating"
     },
     {
       "from": "ru/migration/change-history",
-      "to": "ru/guide/connection/versions-and-updates/change-history"
+      "to": "ru/guide/connection/versions"
     },
     {
       "from": "ru/reference/adaptive-sizing/generated-contract",
-      "to": "ru/guide/fundamentals/adaptive-sizing/vertical-sizing"
+      "to": "ru/guide/size-and-type/adaptive-sizing"
     },
     {
       "from": "ru/reference/color-primitives",
-      "to": "ru/guide/fundamentals/colors-and-themes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/additional-themes",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-color-palette",
-      "to": "ru/guide/fundamentals/colour-palettes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-error",
-      "to": "ru/guide/fundamentals/colour-palettes/error"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-neutral",
-      "to": "ru/guide/fundamentals/colour-palettes/neutral"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-primary",
-      "to": "ru/guide/fundamentals/colour-palettes/primary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-secondary",
-      "to": "ru/guide/fundamentals/colour-palettes/secondary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-success",
-      "to": "ru/guide/fundamentals/colour-palettes/success"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-tertiary",
-      "to": "ru/guide/fundamentals/colour-palettes/tertiary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-transparent-white-black",
-      "to": "ru/guide/fundamentals/colour-palettes/transparent-white-black"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette-warning",
-      "to": "ru/guide/fundamentals/colour-palettes/warning"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/color-palette",
-      "to": "ru/guide/fundamentals/colour-palettes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/error",
-      "to": "ru/guide/fundamentals/colour-palettes/error"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/neutral",
-      "to": "ru/guide/fundamentals/colour-palettes/neutral"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/primary",
-      "to": "ru/guide/fundamentals/colour-palettes/primary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/secondary",
-      "to": "ru/guide/fundamentals/colour-palettes/secondary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/success",
-      "to": "ru/guide/fundamentals/colour-palettes/success"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/tertiary",
-      "to": "ru/guide/fundamentals/colour-palettes/tertiary"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/transparent-white-black",
-      "to": "ru/guide/fundamentals/colour-palettes/transparent-white-black"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-palette/warning",
-      "to": "ru/guide/fundamentals/colour-palettes/warning"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-primitives",
-      "to": "ru/guide/fundamentals/colors-and-themes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/color-primitives/color-primitives-naming-rules",
-      "to": "ru/guide/fundamentals/colors-and-themes/naming-rules"
+      "to": "ru/guide/colour/design-tokens"
     },
     {
       "from": "ru/reference/color-primitives/color-roles",
-      "to": "ru/guide/fundamentals/colour-roles"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/disable-disable",
-      "to": "ru/guide/fundamentals/colour-roles/disable"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/disable-features-of-use",
-      "to": "ru/guide/fundamentals/colour-roles/disable"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/disable/disable",
-      "to": "ru/guide/fundamentals/colour-roles/disable"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/disable/features-of-use",
-      "to": "ru/guide/fundamentals/colour-roles/disable"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/error",
-      "to": "ru/guide/fundamentals/colour-roles/error"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/focus",
-      "to": "ru/guide/fundamentals/colour-roles/focus"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/interactive-roles",
-      "to": "ru/guide/fundamentals/colour-roles/interactive"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/light-and-dark-theme",
-      "to": "ru/guide/fundamentals/colors-and-themes/themes"
+      "to": "ru/guide/colour/themes"
     },
     {
       "from": "ru/reference/color-primitives/link",
-      "to": "ru/guide/fundamentals/colour-roles/link"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/main-roles",
-      "to": "ru/guide/fundamentals/colour-roles/main"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/mark",
-      "to": "ru/guide/fundamentals/colour-roles/mark"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/outline-features-of-use",
-      "to": "ru/guide/fundamentals/colour-roles/outline"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/outline-outline",
-      "to": "ru/guide/fundamentals/colour-roles/outline"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/outline/features-of-use",
-      "to": "ru/guide/fundamentals/colour-roles/outline"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/outline/outline",
-      "to": "ru/guide/fundamentals/colour-roles/outline"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/primary",
-      "to": "ru/guide/fundamentals/colour-roles/primary"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/secondary",
-      "to": "ru/guide/fundamentals/colour-roles/secondary"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/special-roles",
-      "to": "ru/guide/fundamentals/colour-roles/special"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/success",
-      "to": "ru/guide/fundamentals/colour-roles/success"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/supporting-roles",
-      "to": "ru/guide/fundamentals/colour-roles/supporting"
+      "to": "ru/guide/colour/design-tokens"
     },
     {
       "from": "ru/reference/color-primitives/surface",
-      "to": "ru/guide/fundamentals/colour-roles/surface"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/tertiary",
-      "to": "ru/guide/fundamentals/colour-roles/tertiary"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/color-primitives/warning",
-      "to": "ru/guide/fundamentals/colour-roles/warning"
+      "to": "ru/guide/colour/colour-roles"
     },
     {
       "from": "ru/reference/properties-of-modifiers",
@@ -2272,7 +2272,7 @@
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure-theme",
-      "to": "ru/guide/fundamentals/colors-and-themes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure-transform",
@@ -2400,7 +2400,7 @@
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/theme",
-      "to": "ru/guide/fundamentals/colors-and-themes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/reference/properties-of-modifiers/property-structure/transform",
@@ -2412,11 +2412,11 @@
     },
     {
       "from": "ru/reference/standards/composite-component",
-      "to": "ru/guide/architecture/standards/composite-component"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/reference/standards/dynamic-composite-component",
-      "to": "ru/guide/architecture/standards/dynamic-composite-component"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/smart-components/actions/fab",
@@ -2428,7 +2428,7 @@
     },
     {
       "from": "ru/smart-components/catalog",
-      "to": "ru/guide/smart-components/catalog-and-readiness"
+      "to": "ru/guide/smart-components/connection"
     },
     {
       "from": "ru/smart-components/complex",
@@ -2456,7 +2456,7 @@
     },
     {
       "from": "ru/smart-components/examples",
-      "to": "ru/guide/smart-components/examples"
+      "to": "ru/guide/smart-components/connection"
     },
     {
       "from": "ru/smart-components/forms/form",
@@ -2680,35 +2680,35 @@
     },
     {
       "from": "ru/smart-components/templates-and-assets",
-      "to": "ru/guide/smart-components/templates-and-assets"
+      "to": "ru/guide/smart-components/templates"
     },
     {
       "from": "ru/standards",
-      "to": "ru/guide/architecture/standards"
+      "to": "ru/guide/standards/what-is"
     },
     {
       "from": "ru/standards/composite-component",
-      "to": "ru/guide/architecture/standards/composite-component"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/standards/composite-host-port",
-      "to": "ru/guide/architecture/standards/composite-host-port"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/standards/composition-recipe",
-      "to": "ru/guide/architecture/standards/composition-recipe"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/standards/dynamic-composite-component",
-      "to": "ru/guide/architecture/standards/dynamic-composite-component"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/standards/smart-component-manifest",
-      "to": "ru/guide/architecture/standards/smart-component-manifest"
+      "to": "ru/guide/standards/map"
     },
     {
       "from": "ru/standards/standard-contract",
-      "to": "ru/guide/architecture/standards/standard-contract"
+      "to": "ru/guide/standards/what-is"
     },
     {
       "from": "ru/start",
@@ -2716,11 +2716,11 @@
     },
     {
       "from": "ru/start/ai",
-      "to": "ru/guide/ai"
+      "to": "ru/guide/standards/ai"
     },
     {
       "from": "ru/start/compatibility",
-      "to": "ru/guide/connection/versions-and-updates"
+      "to": "ru/guide/connection/versions"
     },
     {
       "from": "ru/start/glossary",
@@ -2756,11 +2756,11 @@
     },
     {
       "from": "ru/start/vision",
-      "to": "ru/guide/introduction/what-is-simai-framework"
+      "to": "ru/guide/introduction/what-is"
     },
     {
       "from": "ru/utilities/animation/animation-default-parameters",
-      "to": "ru/guide/fundamentals/motion"
+      "to": "ru/guide/size-and-type/motion"
     },
     {
       "from": "ru/utilities/animation/animation-transition-appearing",
@@ -2904,7 +2904,7 @@
     },
     {
       "from": "ru/utilities/reference/theme",
-      "to": "ru/guide/fundamentals/colors-and-themes"
+      "to": "ru/guide/colour/palettes"
     },
     {
       "from": "ru/utilities/reference/transform-translate-ext",
@@ -2948,15 +2948,371 @@
     },
     {
       "from": "ru/utilities/typography/text-default",
-      "to": "ru/guide/fundamentals/default-text"
+      "to": "ru/guide/size-and-type/default-text"
     },
     {
       "from": "ru/utilities/typography/text-role-modifiers",
-      "to": "ru/guide/fundamentals/default-text"
+      "to": "ru/guide/size-and-type/default-text"
     },
     {
       "from": "ru/utilities/typography/text-transform",
       "to": "ru/utilities/text-formatting/text-formatting-text"
+    },
+    {
+      "from": "ru/guide/ai",
+      "to": "ru/guide/standards/ai"
+    },
+    {
+      "from": "ru/guide/architecture",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/blocks",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/component-setting-names",
+      "to": "ru/guide/components/settings"
+    },
+    {
+      "from": "ru/guide/architecture/components",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/composite-smart-components",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/core",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/framework-and-project",
+      "to": "ru/guide/introduction/framework-and-project"
+    },
+    {
+      "from": "ru/guide/architecture/layouts",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/overview",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/smart-components",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/architecture/standards",
+      "to": "ru/guide/standards/what-is"
+    },
+    {
+      "from": "ru/guide/architecture/standards/composite-component",
+      "to": "ru/guide/standards/map"
+    },
+    {
+      "from": "ru/guide/architecture/standards/composite-host-port",
+      "to": "ru/guide/standards/map"
+    },
+    {
+      "from": "ru/guide/architecture/standards/composition-recipe",
+      "to": "ru/guide/standards/map"
+    },
+    {
+      "from": "ru/guide/architecture/standards/dynamic-composite-component",
+      "to": "ru/guide/standards/map"
+    },
+    {
+      "from": "ru/guide/architecture/standards/smart-component-manifest",
+      "to": "ru/guide/standards/map"
+    },
+    {
+      "from": "ru/guide/architecture/standards/standard-contract",
+      "to": "ru/guide/standards/what-is"
+    },
+    {
+      "from": "ru/guide/architecture/utilities",
+      "to": "ru/guide/introduction/levels"
+    },
+    {
+      "from": "ru/guide/components/examples",
+      "to": "ru/guide/components/examples-and-project"
+    },
+    {
+      "from": "ru/guide/components/form-elements",
+      "to": "ru/guide/components/form-fields"
+    },
+    {
+      "from": "ru/guide/connection/versions-and-updates",
+      "to": "ru/guide/connection/versions"
+    },
+    {
+      "from": "ru/guide/connection/versions-and-updates/adaptive-sizing-v1",
+      "to": "ru/guide/connection/updating"
+    },
+    {
+      "from": "ru/guide/connection/versions-and-updates/change-event",
+      "to": "ru/guide/connection/updating"
+    },
+    {
+      "from": "ru/guide/connection/versions-and-updates/change-history",
+      "to": "ru/guide/connection/versions"
+    },
+    {
+      "from": "ru/guide/connection/versions-and-updates/framework-updates",
+      "to": "ru/guide/connection/change-lifecycle"
+    },
+    {
+      "from": "ru/guide/fundamentals",
+      "to": "ru/guide/colour"
+    },
+    {
+      "from": "ru/guide/fundamentals/adaptive-sizing",
+      "to": "ru/guide/size-and-type/adaptive-sizing"
+    },
+    {
+      "from": "ru/guide/fundamentals/adaptive-sizing/vertical-sizing",
+      "to": "ru/guide/size-and-type/vertical-sizing"
+    },
+    {
+      "from": "ru/guide/fundamentals/borders",
+      "to": "ru/guide/size-and-type/borders-and-radii"
+    },
+    {
+      "from": "ru/guide/fundamentals/cascade-layers",
+      "to": "ru/guide/colour/cascade-layers"
+    },
+    {
+      "from": "ru/guide/fundamentals/colors-and-themes",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colors-and-themes/naming-rules",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/guide/fundamentals/colors-and-themes/themes",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/error",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/neutral",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/primary",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/secondary",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/success",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/tertiary",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/transparent-white-black",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-palettes/warning",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/disable",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/error",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/focus",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/interactive",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/link",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/main",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/mark",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/outline",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/primary",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/secondary",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/special",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/success",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/supporting",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/surface",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/tertiary",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/colour-roles/warning",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/guide/fundamentals/conditions",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/guide/fundamentals/default-text",
+      "to": "ru/guide/size-and-type/default-text"
+    },
+    {
+      "from": "ru/guide/fundamentals/design-tokens",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/guide/fundamentals/design-tokens/all-tokens",
+      "to": "ru/guide/colour/all-tokens"
+    },
+    {
+      "from": "ru/guide/fundamentals/directions",
+      "to": "ru/guide/size-and-type/directions"
+    },
+    {
+      "from": "ru/guide/fundamentals/focus",
+      "to": "ru/guide/size-and-type/focus"
+    },
+    {
+      "from": "ru/guide/fundamentals/language",
+      "to": "ru/guide/size-and-type/language"
+    },
+    {
+      "from": "ru/guide/fundamentals/languages",
+      "to": "ru/guide/size-and-type/languages"
+    },
+    {
+      "from": "ru/guide/fundamentals/layout-classes",
+      "to": "ru/guide/utilities/layout"
+    },
+    {
+      "from": "ru/guide/fundamentals/modifiers",
+      "to": "ru/guide/utilities/what-is"
+    },
+    {
+      "from": "ru/guide/fundamentals/motion",
+      "to": "ru/guide/size-and-type/motion"
+    },
+    {
+      "from": "ru/guide/fundamentals/size-scale.md",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/guide/fundamentals/size-scale",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/guide/fundamentals/size-scale/pixels",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/guide/fundamentals/sizes",
+      "to": "ru/guide/size-and-type/size-ladder"
+    },
+    {
+      "from": "ru/guide/fundamentals/spacing",
+      "to": "ru/guide/size-and-type/spacing"
+    },
+    {
+      "from": "ru/guide/fundamentals/spacing/scale",
+      "to": "ru/guide/size-and-type/spacing-scale"
+    },
+    {
+      "from": "ru/guide/fundamentals/transparency",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/guide/fundamentals/typography",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/guide/fundamentals/values-and-scales",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/guide/introduction/what-is-simai-framework",
+      "to": "ru/guide/introduction/what-is"
+    },
+    {
+      "from": "ru/guide/layouts/reference/document",
+      "to": "ru/guide/layouts/introduction/recipe-document-html"
+    },
+    {
+      "from": "ru/guide/smart-components/catalog-and-readiness",
+      "to": "ru/guide/smart-components/connection"
+    },
+    {
+      "from": "ru/guide/smart-components/cleanup",
+      "to": "ru/guide/smart-components/lifecycle"
+    },
+    {
+      "from": "ru/guide/smart-components/creating",
+      "to": "ru/guide/smart-components/structure"
+    },
+    {
+      "from": "ru/guide/smart-components/examples",
+      "to": "ru/guide/smart-components/connection"
+    },
+    {
+      "from": "ru/guide/smart-components/local-components",
+      "to": "ru/guide/smart-components/structure"
+    },
+    {
+      "from": "ru/guide/smart-components/nesting",
+      "to": "ru/guide/smart-components/composite"
+    },
+    {
+      "from": "ru/guide/smart-components/templates-and-assets",
+      "to": "ru/guide/smart-components/templates"
     }
   ]
 }

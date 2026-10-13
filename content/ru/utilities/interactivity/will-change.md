@@ -29,7 +29,7 @@ description: "Заранее сообщает браузеру, какое св�
 | `will-change-contents` | `will-change: contents` | — |
 | `will-change-transform` | `will-change: transform` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

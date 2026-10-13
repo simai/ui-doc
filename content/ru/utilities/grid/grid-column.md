@@ -46,7 +46,7 @@ description: "Задаёт, сколько колонок сетки заним�
 | `col-span-12` | `grid-column: span 12 / span 12` | — |
 | `col-span-full` | `grid-column: 1 / -1` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-auto`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:col-auto`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

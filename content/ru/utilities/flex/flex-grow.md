@@ -33,7 +33,7 @@ description: "Разрешает или запрещает флекс-элеме
 | `grow` | `flex-grow: 1` | — |
 | `grow-none` | `flex-grow: 0` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grow`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:grow`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

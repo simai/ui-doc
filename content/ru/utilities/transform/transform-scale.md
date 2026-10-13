@@ -62,7 +62,7 @@ description: "Уменьшает или увеличивает элемент ц
 | `scale-x-4` | `transform: scaleX(1.2)` | — |
 | `scale-y-4` | `transform: scaleY(1.2)` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:scale-0`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:scale-0`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

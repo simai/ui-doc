@@ -28,7 +28,7 @@ description: "Задаёт, сохраняются ли в тексте проб
 | `pre-wrap` | `white-space: pre-wrap` | — |
 | `whitespace-normal` | `white-space: normal` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — нет; состояния — нет.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

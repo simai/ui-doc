@@ -40,7 +40,7 @@ description: "Не даёт элементу стать уже родителя 
 | `min-w-full` | `min-width: 100%` | — |
 | `min-w-0` | `min-width: 0` | — |
 
-Условия ([что это](/ru/guide/fundamentals/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:min-w-min`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:min-w-min`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
