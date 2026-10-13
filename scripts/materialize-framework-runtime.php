@@ -36,17 +36,17 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = 'b707dddd5089d78b1dd7011529920e669b6658b9';
-const UI_RUNTIME_REVISION = '0b8e5c559207a2548d32a2284e086bdf3cc96dfb';
-const SOURCE_REVISION = 'dd7279cefeab78d4293ada7bd9fe2cbf07b1684f';
+const UI_METADATA_REVISION = '8d7b5eda69db47eab8a6e36a6a295897b0f0be16';
+const UI_RUNTIME_REVISION = '9e4292052a7aa77f31dbc61146f3b97cc0a1b4b1';
+const SOURCE_REVISION = 'b74947c5f57e847972f6737c31d2d7571e031bbe';
 const BUILDER_REVISION = 'c19b7c4f891e0c75dd85114d876800fd749de18b';
-const RELEASE_LOCK = 'contracts/releases/ui-0b8e5c559207.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-9e4292052a7a.lock.json';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes.
 const PACKAGES = [
     'larena' => [
         'repository' => 'simai/larena-ui',
-        'revision' => 'a1b414c54894c48865b62437fb9c956bd86d26ea',
+        'revision' => '0de3d8e8e626f1ab3fd6e7aff584c789716b7018',
         'path' => 'components',
         'archive_sha256' => 'f96e05fdac0bafae52f43417f2759b6793d43a38e6e21e6f7299bbd0bd029b03',
     ],

@@ -89,7 +89,7 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0b8e5c559207` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-9e4292052a7a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -98,7 +98,7 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 | Тег | `<sf-inline-editor>` |
 | Назначение | Редактор текста content.heading и content.paragraph на месте: strong, em, code и безопасные ссылки, собственная история, безопасная вставка; возвращает нормализованное содержимое, а не HTML. |
 | Контракт | `smart.inline-editor`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-0b8e5c559207` |
+| Поставка | выпуск Framework `ui-9e4292052a7a` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -132,8 +132,8 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ### Источник
 
-- `simai/ui@0b8e5c559207a2548d32a2284e086bdf3cc96dfb:distr/smart/inline-editor`
-- `simai/ui@0b8e5c559207a2548d32a2284e086bdf3cc96dfb:distr/rule/rule.json#name=cl-inline-editor`
+- `simai/ui@9e4292052a7aa77f31dbc61146f3b97cc0a1b4b1:distr/smart/inline-editor`
+- `simai/ui@9e4292052a7aa77f31dbc61146f3b97cc0a1b4b1:distr/rule/rule.json#name=cl-inline-editor`
 
 ## См. также
 
