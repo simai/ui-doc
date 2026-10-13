@@ -52,16 +52,16 @@ JavaScript поля делает связи сам: выдаёт контрол�
 ## Ошибка
 
 Ошибка задаётся классом `error` на оболочке и контроле. Сообщение кладётся в
-ту же часть, что и подсказка, с пометкой, что это ошибка:
+ту же часть, что и подсказка, с пометкой, что это ошибка; `aria-invalid`,
+`aria-describedby` и `aria-errormessage` скрипт поля поставит сам:
 
 ```html
 <label class="sf-input sf-input--size-1 sf-input--bordered error flex flex-col">
   <span class="sf-input-label flex"><span class="sf-input-text">Код проекта</span></span>
   <span class="sf-input-field items-cross-center transition flex">
-    <input class="error" type="text" value="demo space" aria-invalid="true"
-           aria-describedby="input-error" aria-errormessage="input-error">
+    <input class="error" type="text" value="demo space">
   </span>
-  <span id="input-error" class="sf-input-hint-text-wrap" data-field-message="error">Используйте латинские буквы без пробелов</span>
+  <span class="sf-input-hint-text-wrap" data-field-message="error">Используйте латинские буквы без пробелов</span>
 </label>
 ```
 
