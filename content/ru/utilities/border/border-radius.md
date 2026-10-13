@@ -108,6 +108,8 @@ description: "Скругляет углы элемента целиком, по 
 | `--sf-radius-rounded` | `1000px` |
 | `--sf-radius-round` | `var(--sf-radius-rounded)` |
 
+В CSS косую черту в имени экранируют: `var(--sf-radius-1\/3)`.
+
 ## Применение
 
 ### Шкала

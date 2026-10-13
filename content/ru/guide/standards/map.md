@@ -73,11 +73,13 @@ description: "Карта стандартов показывает все ста
 | Конверт динамического составного компонента | [`/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json`](/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json) |
 | Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.3/standard.json`](/ai/standards/simai.composite-host-port/1.0.3/standard.json) |
 | Схема объявления порта | [`/ai/standards/composite-host-port-schema/1.0.0/port.schema.json`](/ai/standards/composite-host-port-schema/1.0.0/port.schema.json) |
+| Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
+| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.0.0/standard.json`](/ai/standards/simai.component-package/1.0.0/standard.json) |
+| Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
 
-Копия схемы манифеста на сайте — издание 2.2.0; издание 2.3.0 добавляет к
-событию необязательные поля `canonical` и `alias_of`, остальное в них
-совпадает. Конверты жизненного цикла изменений и пакета компонентов лежат
-только в исходниках Framework.
+Копии берутся из закреплённого выпуска при каждой сборке сайта: схема
+манифеста — действующее издание 2.3.0, порты — все версии, которые
+поставляет выпуск.
 
 Версии стандартов, форматов и портов руководство называет только в этих
 таблицах; остальной текст называет их по имени.
@@ -150,7 +152,7 @@ Document описаны в [Три представления страницы: 
   `runnable`, `composable`, `exportable`, `accepted`, `host-required` и
   список проверок `required_checks`.
 
-Устройство манифеста и полный пример описаны в [Манифест](/ru/guide/smart-components/manifest/).
+Устройство манифеста описано в [Манифест](/ru/guide/smart-components/manifest/).
 
 ## Составной компонент (`simai.composite-component`)
 

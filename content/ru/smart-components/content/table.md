@@ -192,6 +192,44 @@ Framework: пакет компонентов Loader с именем `larena` и�
 версию порта 1.0.0. Если адаптер не передан, `<sf-data-view>` один раз
 запрашивает его событием `sf-host-port-request`.
 
+Ответ адаптера — конверт, а данные лежат в его поле `data`:
+
+```js
+const host = {
+  version: '1.9.0',
+  capabilities: ['row-actions'],
+  async raise(intent, payload, {signal}) {
+    const result = await fetch('/api/projects', {
+      method: 'POST',
+      body: JSON.stringify({intent, ...payload}),
+      signal,
+    }).then((response) => response.json());
+    return {
+      answer: 'applied',
+      sequence: payload.sequence,
+      data: {columns: result.columns, records: result.records, total: result.total, echo: result.echo},
+    };
+  },
+};
+document.querySelector('sf-data-view').setHostPort(host);
+```
+
+- `answer` — `applied`, `conflict`, `refused` или `unavailable`; `reason` —
+  машинная причина отказа, `message` — текст для человека.
+- `sequence` повторяет номер запроса: ответ на устаревший запрос
+  представление отбрасывает.
+- `data` — данные порта: `columns`, `records`, `total`, `has_next`, `echo`,
+  `column_settings` и другие из его описания. Ответ на запрос
+  (`query.change`) без `data` представление считает ошибкой. Ответ на
+  изменение записи может вернуть в `data.records` только изменённые записи
+  или не вернуть `data` вовсе — тогда представление перезапросит список.
+- Отказ с причиной `confirm_required` несёт `data.confirm` с `digest` и
+  `summary`: представление спрашивает человека и повторяет намерение с
+  подтверждением.
+
+У порта карточки записи (`<sf-property-view>`) свой формат: запись приходит
+в самом ответе, без `data`.
+
 Порт описывает стык отдельно от компонента:
 
 | Часть порта | Что в ней |

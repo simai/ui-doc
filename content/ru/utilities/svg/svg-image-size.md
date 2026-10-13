@@ -93,6 +93,8 @@ description: "Задаёт ширину и высоту значка по шка
 | `--sf-text-size-12` | `var(--sf-text--size-12)` |
 | `--sf-text-height-12` | `var(--sf-text--height-12)` |
 
+В CSS косую черту в имени экранируют: `var(--sf-text-size-1\/4)`.
+
 ## Применение
 
 ### Ступени

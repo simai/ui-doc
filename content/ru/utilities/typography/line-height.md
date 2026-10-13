@@ -87,6 +87,8 @@ description: "Задаёт высоту строки текста множите
 | `--sf-text-height-11` | `var(--sf-text--height-11)` |
 | `--sf-text-height-12` | `var(--sf-text--height-12)` |
 
+В CSS косую черту в имени экранируют: `var(--sf-text--height-1\/4)`.
+
 ## Применение
 
 | Класс | Множитель | Где |

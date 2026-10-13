@@ -365,6 +365,13 @@ const utilityConditions = (families) => {
   ];
 };
 
+// A step written as a fraction keeps its slash in the name, and CSS reads the
+// slash only escaped: a name copied from the table into var() as printed
+// breaks the declaration. Said once, under every table that has one.
+const fractionNote = (names) => (names.some((name) => name.includes('/'))
+  ? ['', `В CSS косую черту в имени экранируют: ${code(`var(${names.find((name) => name.includes('/')).replace('/', '\\/')})`)}.`]
+  : []);
+
 const utilityVariables = (families) => {
   const tokens = utilityTokens(families);
   if (tokens.length === 0) return null;
@@ -374,6 +381,7 @@ const utilityVariables = (families) => {
     '| Переменная | Значение по умолчанию |',
     '|:---|:---|',
     ...tokens.map((name) => `| ${code(name)} | ${tokenValue(name) ? code(tokenValue(name)) : 'задаётся темой'} |`),
+    ...fractionNote(tokens),
   ];
 };
 

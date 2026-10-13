@@ -193,7 +193,7 @@ Smart-компоненты собирают свою разметку сами �
   </section>
 
   <ul class="list-none m-0 p-0 grid grid-col-1 md:grid-col-2 lg:grid-col-3 gap-3">
-    <li class="p-2 radius-2 bg-surface-container flex flex-col gap-1">
+    <li class="p-2 radius-surface bg-surface-container flex flex-col gap-1">
       <h2 class="sf-h-4 m-0">Первая карточка</h2>
       <p class="m-0 color-on-surface-variant">Короткое описание.</p>
     </li>
