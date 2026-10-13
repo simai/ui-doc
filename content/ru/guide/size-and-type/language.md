@@ -151,9 +151,10 @@ switchLanguage('ar', 'rtl');
 | `sf-color` | `choose`, `clear`, `custom`, `inherited` |
 | `sf-datepicker` | `previousMonth`, `nextMonth`, `previousYears`, `nextYears`, `chooseMonth`, `chooseYear` |
 | `sf-drawer` | `closeLabel` |
+| `sf-dropdown` | `search` |
 | `sf-file-preview` | `ariaLabel`, `downloadLabel`, `removeLabel` |
 | `sf-file-upload` | `text`, `linkText` |
-| `sf-modal` | `close`, `minimize` |
+| `sf-modal` | `close`, `minimize`, `title` |
 | `sf-page-header` | `star`, `unstar`, `allSites` |
 | `sf-pagination` | `ariaLabel`, `pagesLabel`, `pageLabel`, `previousLabel`, `nextLabel`, `firstLabel`, `lastLabel`, `totalLabel`, `selectedLabel`, `showMoreText`, `pageSizeLabel`, `pageFieldLabel`, `showCountLabel`, `countingLabel`, `actionApplyText`, `actionForAllLabel`, `actionsLabel`, `actionChooseLabel`, `actionsRegionLabel`, `clearSelectionLabel` |
 | `sf-spinner` | `label` |
@@ -162,10 +163,7 @@ switchLanguage('ar', 'rtl');
 | `sf-toast` | `closeLabel` |
 | `sf-tree-item` | `openLabel`, `closeLabel` |
 
-Поставляемые словари `en` и `ru` содержат все ключи из таблицы. Подсказка в
-поле поиска `sf-dropdown` (атрибут `search-placeholder`) в словарь не входит:
-по умолчанию это слово `Placeholder` на любом языке. Задавайте атрибут на
-языке страницы.
+Поставляемые словари `en` и `ru` содержат все ключи из таблицы.
 
 Пример добавляет арабский язык к тегу и пагинации:
 

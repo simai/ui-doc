@@ -83,7 +83,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -92,7 +92,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 | Тег | `<sf-avatar>` |
 | Назначение | Smart-компонент Avatar из SIMAI Framework. |
 | Контракт | `smart.avatar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6960705a7e77` |
+| Поставка | выпуск Framework `ui-272734e6edf3` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -107,7 +107,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 - `no-wrap` — `boolean`, по умолчанию `false`.
 - `text` — `string`, по умолчанию пусто.
 - `status` — `string`, по умолчанию `none`, значения: `none`, `online`, `offline`, `company`, `verified`.
-- `aria-label` — `string`, по умолчанию `Avatar`.
+- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Avatar»).
 - `title` — `string`, по умолчанию пусто.
 - `description` — `string`, по умолчанию пусто.
 - `meta` — `string`, по умолчанию пусто.
@@ -144,8 +144,8 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 ### Источник
 
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/avatar`
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-avatar`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/avatar`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-avatar`
 
 ## См. также
 

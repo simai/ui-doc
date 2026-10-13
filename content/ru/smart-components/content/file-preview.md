@@ -80,7 +80,7 @@ file.onDownload((event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -89,7 +89,7 @@ file.onDownload((event) => {
 | Тег | `<sf-file-preview>` |
 | Назначение | Доступная Smart-проекция обычной строки File Preview. |
 | Контракт | `smart.file-preview`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6960705a7e77` |
+| Поставка | выпуск Framework `ui-272734e6edf3` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -114,9 +114,9 @@ file.onDownload((event) => {
 - `remove-action` — `boolean`, по умолчанию `true`.
 - `disabled` — `boolean`, по умолчанию `false`.
 - `compact` — `boolean`, по умолчанию `false`. Только ведущий значок высотой со строку списка: изображение или расширение файла в плитке. Для файла в ячейке таблицы.
-- `aria-label` — `string`, по умолчанию `File`.
-- `download-label` — `string`, по умолчанию `Download file`.
-- `remove-label` — `string`, по умолчанию `Remove file`.
+- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «File»).
+- `download-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Download file»).
+- `remove-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Remove file»).
 
 Прежние имена:
 
@@ -156,8 +156,8 @@ file.onDownload((event) => {
 
 ### Источник
 
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/file-preview`
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-file-preview`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/file-preview`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-file-preview`
 
 ## См. также
 

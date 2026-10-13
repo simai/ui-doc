@@ -80,7 +80,7 @@ crumbs.onItemClick((item, detail) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -89,7 +89,7 @@ crumbs.onItemClick((item, detail) => {
 | Тег | `<sf-breadcrumbs>` |
 | Назначение | Smart-компонент Breadcrumbs из SIMAI Framework. |
 | Контракт | `smart.breadcrumbs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6960705a7e77` |
+| Поставка | выпуск Framework `ui-272734e6edf3` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -106,8 +106,8 @@ crumbs.onItemClick((item, detail) => {
 - `current-class` — `string`, по умолчанию пусто.
 - `separator-class` — `string`, по умолчанию пусто.
 - `container-class` — `string`, по умолчанию пусто.
-- `aria-label` — `string`, по умолчанию `Breadcrumb`.
-- `expand-label` — `string`, по умолчанию `Show hidden breadcrumbs`.
+- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Breadcrumb»).
+- `expand-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Show hidden breadcrumbs»).
 - `expand-on-ellipsis` — `boolean`, по умолчанию `true`.
 - `max-items` — `number`, по умолчанию `4`.
 
@@ -139,8 +139,8 @@ crumbs.onItemClick((item, detail) => {
 
 ### Источник
 
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/breadcrumbs`
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/breadcrumbs`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-breadcrumbs`
 
 ## См. также
 

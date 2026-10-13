@@ -110,7 +110,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -119,7 +119,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 | Тег | `<sf-datepicker>` |
 | Назначение | Доступный выбор даты и диапазона дат во всплывающем и встроенном режимах, с навигацией по календарю и значениями, которыми управляет элемент. |
 | Контракт | `smart.datepicker`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6960705a7e77` |
+| Поставка | выпуск Framework `ui-272734e6edf3` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
@@ -146,7 +146,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 - `portal` — `boolean`, по умолчанию `true`.
 - `input-type` — `string`, по умолчанию `bordered`.
 - `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`. Размер поля формы.
-- `input-name` — `string`, по умолчанию пусто.
+- `input-name` — `string`, по умолчанию пусто. Имя поля формы для значения; сильнее name.
 - `placeholder` — `string`, по умолчанию пусто.
 - `label` — `string`, по умолчанию пусто.
 - `disabled` — `boolean`, по умолчанию `false`.
@@ -159,6 +159,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 - `mask-lazy` — `string`, по умолчанию `false`.
 - `mask-placeholder-char` — `string`, по умолчанию `_`.
 - `mask-options` — `string`, по умолчанию пусто.
+- `name` — `string`, по умолчанию пусто. Имя поля формы для значения. input-name делает то же и сильнее, если заданы оба.
 
 Прежние имена:
 
@@ -179,7 +180,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
-- `change` — `detail`: `{ value: string|array, range: boolean, format: string, formattedValue?: string }`. Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки.
+- `change` — `detail`: `{ value: string|array, range: boolean, format: string, formattedValue?: string, date?: string, isoValue?: string, startValue?: string, endValue?: string, startIsoValue?: string, endIsoValue?: string, formattedStartValue?: string, formattedEndValue?: string }`. Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки.
 - `sf-datepicker-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 - `sf-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
@@ -198,5 +199,5 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 ### Источник
 
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/datepicker`
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-datepicker`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/datepicker`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-datepicker`

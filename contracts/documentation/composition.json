@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "5b3f36b5098507a432a4ccb9898d957a14ace9ca",
-    "core_revision": "6960705a7e77154a9f1d42c0705556e8434c78aa",
+    "source_revision": "02b5e484fbbfe244f98e7c7a9e60436c0f765b24",
+    "core_revision": "272734e6edf378dc97d957ab2baa78503a526c16",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -10,15 +10,15 @@
       "src/core/js/composition/index.mjs": "0a96408cd9598b825c66e1bbc27212280697a0c74946e114a36a83304d4ba1f5",
       "src/core/js/composition/builtins.mjs": "62ccb18b910e34fb39019805b41f85d3208ec714a6840bd0dcc79d75f8434d7e",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "1394706c8bdf745c9ec777ff05dfe8afac1827cf2e1b37957571bdc5dfd24ded"
+      "src/smart/buttons/smart.manifest.json": "94ea1a543e1c5e1d8f7773a72892021caf82edb931926993e32432e8a9d8b68b"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "e8d4e48b558f35385fa7ec00a2659d0ff2fdf9b3424c185ec26b80621057120d"
+      "distr/core/js/core.js": "6f44fd6f2fce731ff50ffe0808bcfeac55d873d513a2c7606be2b5f787dd42fe"
     },
-    "note": "Reviewed at source 5b3f36b5 and core 6960705a (release ui-6960705a7e77): the composition sources, schemas, builtins and fixture are byte-identical to the review at ui-6d2bf151e3c8. The buttons manifest's declarative props gained appearance and tightness (the guide's layouts page lists them; type stays accepted) and its template enum went; core.js gained the shared Smart runtime fetch, ordered chunk fetching and the icon subset work, none of which the composition API uses."
+    "note": "Reviewed at source 02b5e484 and core 272734e6 (release ui-272734e6edf3): the composition sources, schemas, builtins and fixture are byte-identical to the review at ui-6d2bf151e3c8. The buttons manifest's declarative props accept appearance and tightness (type stays accepted) and its label defaults are empty; core.js gained the shared Smart runtime fetch, ordered chunk fetching, the icon subset work and the mask service, none of which the composition API uses."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

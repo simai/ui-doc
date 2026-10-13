@@ -74,7 +74,7 @@ section.open();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -83,7 +83,7 @@ section.open();
 | Тег | `<sf-tree-item>` |
 | Назначение | Один доступный узел иерархии Smart Tree. |
 | Контракт | `smart.tree-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6960705a7e77` |
+| Поставка | выпуск Framework `ui-272734e6edf3` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -107,8 +107,8 @@ section.open();
 - `icon` — `boolean`, по умолчанию `true`.
 - `chevron-open-icon` — `string`, по умолчанию `keyboard_arrow_down`.
 - `chevron-closed-icon` — `string`, по умолчанию `chevron_right`.
-- `open-label` — `string`, по умолчанию `Open item`.
-- `close-label` — `string`, по умолчанию `Close item`.
+- `open-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Open item»).
+- `close-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Close item»).
 - `root-class` — `string`, по умолчанию пусто.
 - `item-class` — `string`, по умолчанию пусто.
 - `container-class` — `string`, по умолчанию пусто.
@@ -152,8 +152,8 @@ section.open();
 
 ### Источник
 
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/tree-item`
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/tree-item`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-tree-item`
 
 ## См. также
 

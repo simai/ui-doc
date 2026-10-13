@@ -140,7 +140,7 @@ modal.open();
 ## Доступность
 
 - Окну нужно доступное имя: видимый `title` или `aria-label`. Без них окно
-  называется английским словом «Modal».
+  называется общим словом на языке страницы — «Окно», по-английски «Dialog».
 - Открытое окно — `dialog` с `aria-modal="true"`. Фокус переходит на саму
   панель окна, а не на первое поле; `Tab` и `Shift+Tab` не выходят за его границы, остальная страница
   недоступна. После закрытия фокус возвращается на элемент, который открыл
@@ -155,7 +155,7 @@ modal.open();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -164,7 +164,7 @@ modal.open();
 | Тег | `<sf-modal>` |
 | Назначение | Smart-компонент Modal из SIMAI Framework. |
 | Контракт | `smart.modal`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-6960705a7e77` |
+| Поставка | выпуск Framework `ui-272734e6edf3` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -172,7 +172,7 @@ modal.open();
 
 - `template` — `string`, по умолчанию `default`.
 - `modal-id` — `string`, по умолчанию пусто.
-- `title` — `string`, по умолчанию `Modal`.
+- `title` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Modal»).
 - `aria-label` — `string`, по умолчанию пусто.
 - `text` — `string`, по умолчанию пусто.
 - `open` — `boolean`, по умолчанию `false`.
@@ -238,6 +238,14 @@ modal.open();
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
+- `modal:after-close` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. После закрытия окна. Всплывает.
+- `modal:after-hide` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. После сворачивания окна. Всплывает.
+- `modal:after-open` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. После открытия окна. Всплывает.
+- `modal:after-show` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. После того как свёрнутое окно снова показано. Всплывает.
+- `modal:before-close` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед закрытием окна; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
+- `modal:before-hide` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед сворачиванием окна; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
+- `modal:before-open` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед открытием окна; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
+- `modal:before-show` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. Перед тем как свёрнутое окно снова показано; отменяемое — preventDefault() оставляет окно как есть. Всплывает.
 - `modal:ready` — `detail` не описан. Событие среды выполнения modal:ready. Всплывает и является composed; detail.modal — модальное окно, отправившее событие.
 - `modal:update` — `detail` не описан. Событие среды выполнения modal:update. Всплывает и является composed; detail.modal — модальное окно, отправившее событие.
 - `sf-after-render` — `detail` не описан.
@@ -257,8 +265,8 @@ modal.open();
 
 ### Источник
 
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/modal`
-- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-modal`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/modal`
+- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-modal`
 
 ## См. также
 
