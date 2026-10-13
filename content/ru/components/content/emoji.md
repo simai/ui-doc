@@ -56,6 +56,11 @@ profile: reference
 Без `decorative` элемент получает `role="img"` и `aria-label`. Событий
 компонент не отправляет.
 
+`skin` задаёт оттенок кожи: `1`–`5` или `light`, `medium-light`, `medium`,
+`medium-dark`, `dark`. Оттенок — это часть символа, а не стиль: класс
+дописывает модификатор после эмодзи, который его принимает (руки, люди), и
+оставляет остальные символы как есть.
+
 `SF.Loader` появляется к событию `sf-loader-init` на `window`;
 `SF.Loader.ready('Emoji', callback)` передаёт класс, когда он
 зарегистрирован.
@@ -65,7 +70,8 @@ const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener
 
 whenLoader(() => SF.Loader.ready('Emoji', (Emoji) => {
   const emoji = new Emoji({param: {emoji: '🎉', label: 'Праздник', size: '2'}});
-  document.querySelector('#release-note').prepend(emoji.render());
+  const wave = new Emoji({param: {emoji: '👋', label: 'Привет', skin: 'medium'}});
+  document.querySelector('#release-note').prepend(emoji.render(), wave.render());
 }));
 ```
 
