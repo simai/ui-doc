@@ -77,7 +77,7 @@ compact.addEventListener('change', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-251406fa1888` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -86,7 +86,7 @@ compact.addEventListener('change', async (event) => {
 | Тег | `<sf-switch>` |
 | Назначение | Smart-компонент Switch из SIMAI Framework. |
 | Контракт | `smart.switch`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-251406fa1888` |
+| Поставка | выпуск Framework `ui-7c01b6265585` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -132,5 +132,5 @@ compact.addEventListener('change', async (event) => {
 
 ### Источник
 
-- `simai/ui@251406fa18885f5c9c4c33c20f61dd68ac522d32:distr/smart/switch`
-- `simai/ui@251406fa18885f5c9c4c33c20f61dd68ac522d32:distr/rule/rule.json#name=cl-switch`
+- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/smart/switch`
+- `simai/ui@7c01b6265585f06e34de6d25fb2a0bf64b6d08ed:distr/rule/rule.json#name=cl-switch`

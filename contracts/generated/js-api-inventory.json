@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-251406fa1888",
-  "ui_commit": "251406fa18885f5c9c4c33c20f61dd68ac522d32",
+  "release": "ui-7c01b6265585",
+  "ui_commit": "7c01b6265585f06e34de6d25fb2a0bf64b6d08ed",
   "stages": [
     "core",
     "dom",
@@ -453,7 +453,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "null"
+          "type": "object"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -1641,6 +1641,9 @@
         "featured-icon": {
           "type": "object"
         },
+        "file-preview": {
+          "type": "object"
+        },
         "file-upload": {
           "type": "object"
         },
@@ -2301,6 +2304,9 @@
         "justify-self/xxl": {
           "type": "object"
         },
+        "kbd": {
+          "type": "object"
+        },
         "letter-spacing/default": {
           "type": "object"
         },
@@ -2323,6 +2329,9 @@
           "type": "object"
         },
         "line-height/xxl": {
+          "type": "object"
+        },
+        "link": {
           "type": "object"
         },
         "list-style-position/default": {
@@ -2587,6 +2596,9 @@
           "type": "object"
         },
         "order/xxl": {
+          "type": "object"
+        },
+        "outline": {
           "type": "object"
         },
         "outline-color/active": {

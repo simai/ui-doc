@@ -558,6 +558,9 @@
     "The size ladder step, so a colour beside a text field lines up with it.": "Ступень шкалы размеров, чтобы цвет рядом с текстовым полем выравнивался с ним.",
     "The star is a native button in sf-icon-button with aria-pressed and a label that says what pressing it does.": "Звезда — нативная кнопка в sf-icon-button с aria-pressed и подписью, которая говорит, что произойдёт при нажатии.",
     "The star was pressed. Carries the record, the collection and the state being asked for; the component changes nothing until the host sets favourite back.": "Нажата звезда. Передаёт запись, коллекцию и запрошенное состояние; компонент ничего не меняет, пока хост не установит favourite обратно.",
+    "The step of the size ladder its fields, buttons, labels and page numbers take: 1, or the dense 1/2 of an admin.": "Ступень лестницы размеров для полей, кнопок, подписей и номеров страниц: 1 или плотная 1/2, как в админке.",
+    "The step of the size ladder the table's controls and rows take: 1, or the dense 1/2 -- 32px controls, 14/20 text, rows of the step's height. A size of 1 written on an element the table draws becomes the table's.": "Ступень лестницы размеров для элементов управления и строк таблицы: 1 или плотная 1/2 — элементы управления высотой 32 px, текст 14/20, строки высотой ступени. Размер 1, записанный на элементе, который рисует таблица, становится размером таблицы.",
+    "The step of the size ladder the view's controls take, handed to its table, its page row and its selection band: 1, or the dense 1/2 of an admin.": "Ступень лестницы размеров для элементов управления представления; её получают таблица, строка страниц и полоса выбора: 1 или плотная 1/2, как в админке.",
     "The surface closed.": "Поверхность закрылась.",
     "The surface never receives focus. A linked native trigger owns focus and aria-describedby.": "Поверхность никогда не получает фокус. Фокусом и aria-describedby владеет связанный нативный триггер.",
     "The surface opened.": "Поверхность открылась.",
@@ -648,6 +651,7 @@
     "Which corner of the trigger the surface hangs from.": "От какого угла триггера отображается поверхность.",
     "Which filter fields the filter is showing, in the host's field order.": "Какие поля фильтра отображаются, в порядке полей хоста.",
     "Which object to read. Changing it re-reads through the port; the component keeps nothing from the previous one.": "Какой объект читать. При изменении значения данные перечитываются через порт; от предыдущего объекта компонент ничего не сохраняет.",
+    "Which semantic colour the badge takes. A status word given here still works and reaches the status axis.": "Какой смысловой цвет берёт бейдж. Слово статуса здесь тоже работает и попадает на ось status.",
     "Which stored settings this table uses. Empty means the element's own id, and then its instance id, so each table on a page keeps its own. A real default here would make every table share one key and overwrite the others.": "Какие сохранённые настройки использует таблица. Пустое значение означает id элемента, а при его отсутствии — id экземпляра, поэтому каждая таблица на странице хранит свои настройки. Реальное значение по умолчанию заставило бы все таблицы использовать один ключ и перезаписывать друг друга.",
     "Which template draws it.": "Шаблон, которым рисуется элемент.",
     "Which template draws the view.": "Шаблон, которым рисуется представление.",
@@ -687,7 +691,6 @@
     "tree": "дерево (`tree`)",
     "treeitem": "элемент дерева (`treeitem`)",
     "{placeholder, empty, remote}: a search field above the rows (set as a property). Local by default; with remote: true the menu raises sf-context-menu-search {query} and shows the entries the host sets. A submenu entry passes it with `search`.": "{placeholder, empty, remote}: поле поиска над строками (задаётся свойством). По умолчанию поиск локальный; с remote: true меню поднимает sf-context-menu-search {query} и показывает пункты, которые задаёт хост. Пункт подменю передаёт его через `search`.",
-    "{placeholder, empty}: a search field above the rows (set as a property). A submenu entry passes it with `search`.": "{placeholder, empty}: поле поиска над строками (задаётся свойством). Пункт с подменю передаёт его через `search`.",
-    "Which semantic colour the badge takes. A status word given here still works and reaches the status axis.": "Какой смысловой цвет берёт бейдж. Слово статуса здесь тоже работает и попадает на ось status."
+    "{placeholder, empty}: a search field above the rows (set as a property). A submenu entry passes it with `search`.": "{placeholder, empty}: поле поиска над строками (задаётся свойством). Пункт с подменю передаёт его через `search`."
   }
 }

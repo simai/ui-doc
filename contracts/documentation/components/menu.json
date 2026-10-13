@@ -3,18 +3,18 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "498260f4fae3c51faf87d8e5a37bb7f9216b8fd2",
-    "core_revision": "251406fa18885f5c9c4c33c20f61dd68ac522d32",
+    "source_revision": "824764b405f787f9c04f93f5c9574f4eccbe725b",
+    "core_revision": "7c01b6265585f06e34de6d25fb2a0bf64b6d08ed",
     "source_files": {
-      "src/component/menu/js/_menu.js": "d0be35e351e3a83f0b3ab992192f827c30a4bf2b9a4e72ceb83fcebf15c69f43",
+      "src/component/menu/js/_menu.js": "d52321066c0813b2f7c0b67ecb0eca07e41dbf78a4d4e821a073ed3dd06a2503",
       "src/component/menu/scss/_css__menu.scss": "d28696ca6820883010b36f6ec4872c143caff0bf33fa92cf4d66f63ea8e51bb6",
       "src/component/menu/docs/docs.md": "3dde35b3194ad20c1785fcf82b01e2b9335ce9a68cbe22e956f201b9d1798b08"
     },
     "generated_files": {
       "distr/component/menu/css/menu.css": "17439fe5369c0712d1a0fe1e6b5dfc9233974fc07328668b0b8150dee880f82c",
-      "distr/component/menu/js/menu.js": "bf8ce8f8df61c64c2b4b8d058803417fc134d303de40254bbbe97bdfeac8bb1d"
+      "distr/component/menu/js/menu.js": "e5ef47645c38dbeef2fc63e2be6221e0af1c4b8bb17d531c71fba8d69166f9cb"
     },
-    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical between source 8994ebf9 / core 6d2bf151 (release ui-6d2bf151e3c8) and source 498260f4 / core 251406fa (release ui-251406fa1888)."
+    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical between source 8994ebf9 / core 6d2bf151 (release ui-6d2bf151e3c8) and source 824764b4 / core 7c01b626 (release ui-7c01b6265585)."
   },
   "source_files": [
     "src/component/menu/js/_menu.js",

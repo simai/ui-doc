@@ -122,7 +122,10 @@ const browser = await chromium.launch(executablePath ? {executablePath} : {});
 const stages = {};
 const errors = [];
 try {
-  const context = await browser.newContext();
+  // The Loader loads a Smart element when it comes into view: a page of every
+  // tag is opened in a window tall enough to show them all, or the elements
+  // below the fold never load and their globals look missing.
+  const context = await browser.newContext({viewport: {width: 1280, height: 12000}});
   const tab = await context.newPage();
   tab.on('pageerror', (error) => errors.push(String(error.message).slice(0, 200)));
   await tab.goto(`${origin}/empty.html`, {waitUntil: 'load'});

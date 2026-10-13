@@ -130,6 +130,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-pagination` |
 | Части | `sf-pagination-actions`, `sf-pagination-actions-count`, `sf-pagination-actions-separator`, `sf-pagination-bottom`, `sf-pagination-container`, `sf-pagination-count`, `sf-pagination-direction`, `sf-pagination-item`, `sf-pagination-left`, `sf-pagination-list`, `sf-pagination-main`, `sf-pagination-marked`, `sf-pagination-marked-text`, `sf-pagination-page-field`, `sf-pagination-page-input`, `sf-pagination-pages-label`, `sf-pagination-top`, `sf-pagination-total` |
+| Размеры | `sf-pagination--size-1/2` |
 
 **`sf-page-number`**
 
@@ -157,9 +158,13 @@ profile: reference
 | `--sf-pagination-bottom--padding-bottom` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-bottom`: `var(--sf-space-1)` | `padding-bottom` |
 | `--sf-pagination-bottom--padding-top` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-bottom`: `var(--sf-space-1)` | `padding-top` |
 | `--sf-pagination-container--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-container`: `transparent` | `background-color` |
+| `--sf-pagination-container--font-size` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-pagination-container--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-container`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-pagination-container--line-height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-pagination-count--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-count`: `transparent` | `background-color` |
+| `--sf-pagination-count--font-size` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-pagination-count--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-count`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-pagination-count--line-height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-pagination-left--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-left`: `transparent` | `background-color` |
 | `--sf-pagination-left--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-left`: `var(--sf-space-1)` | `gap` |
 | `--sf-pagination-main--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-main`: `transparent` | `background-color` |
@@ -172,9 +177,9 @@ profile: reference
 | `--sf-pagination-marked--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-pagination-marked-text--color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked-text:nth-child(1)`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-pagination-marked-text--font-family` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked-text`: `var(--sf-text--family)` | `font-family` |
-| `--sf-pagination-marked-text--font-size` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked-text`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-pagination-marked-text--font-size` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-pagination-marked-text--font-weight` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked-text:nth-child(1)`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-pagination-marked-text--line-height` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-marked-text`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-pagination-marked-text--line-height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-pagination-page-input--digits` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-page-field`: `1` | `width`, `inline-size` |
 | `--sf-pagination-top--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-top`: `transparent` | `background-color` |
 | `--sf-pagination-top--border-bottom-width` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-top`: `var(--sf-px)` | `border-bottom-width` |
@@ -182,7 +187,9 @@ profile: reference
 | `--sf-pagination-top--border-style` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-top`: `solid` | `border-style` |
 | `--sf-pagination-top--padding-bottom` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-top`: `calc(var(--sf-space-3) - var(--sf-space-1))` | `padding-bottom` |
 | `--sf-pagination-total--background-color` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-total`: `transparent` | `background-color` |
+| `--sf-pagination-total--font-size` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-pagination-total--gap` | не задана; задают модификаторы, например `.sf-pagination .sf-pagination-total`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-pagination-total--line-height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-page-number--background-color` | `var(--sf-surface-0)` | `background-color` |
 | `--sf-page-number--border-bottom-width` | `var(--sf-px)` | `border-bottom-width`, `border-block-end-width` |
 | `--sf-page-number--border-color` | не задана; задают модификаторы, например `.sf-page-number:not(:disabled):not(.disabled):active`: `var(--sf-primary-active)` | `border-color` |
@@ -196,7 +203,11 @@ profile: reference
 | `--sf-page-number--border-top-width` | `var(--sf-px)` | `border-top-width`, `border-block-start-width` |
 | `--sf-page-number--border-width` | не задана; задают модификаторы, например `.sf-page-number:not(:disabled):not(.disabled):active`: `var(--sf-px)` | `border-width` |
 | `--sf-page-number--color` | `var(--sf-on-surface-variant)` | `color` |
+| `--sf-page-number--font-size` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-page-number--font-weight` | не задана; задают модификаторы, например `.sf-page-number:not(:disabled):not(.disabled):active`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-page-number--height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-ui-1/2--control-height)` | `height`, `block-size` |
+| `--sf-page-number--line-height` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-page-number--width` | не задана; задают модификаторы, например `.sf-pagination.sf-pagination--size-1/2`: `var(--sf-ui-1/2--control-height)` | `width`, `inline-size` |
 
 ## См. также
 

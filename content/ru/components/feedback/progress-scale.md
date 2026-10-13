@@ -37,9 +37,9 @@ profile: reference
 
 ### Статус
 
-Статус задаёт цвет заполненных участков. `data-tone` принимает `primary`
-(по умолчанию), `success`, `warning` и `error`. Информационный цвет даёт класс
-`sf-progress-scale--info` — атрибут его не принимает.
+Статус задаёт цвет заполненных участков. `data-tone` принимает `info`, `success`,
+`warning` и `error`; без него или с `primary` участки остаются цвета по
+умолчанию.
 
 :::example {id="components/progress-scale/status" label="Статусы шкалы"}
 :::

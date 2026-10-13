@@ -110,9 +110,9 @@ SF.Toast.show('#toasts', {
 Параметры: `status`, `icon` (имя значка), `title`, `supportingText`,
 `actionText` и `action` (кнопка действия и её значение), `closable` (по
 умолчанию `true`), `closeLabel`, `duration`, `role` (`status` или `alert`).
-`status` принимает `success`, `warning`, `error`, `default` (нейтральный) и
-`primary` (информационный); значения `neutral` и `info` функции не принимают
-и собирают нейтральное сообщение. Компонент также регистрирует класс `Toast` с
+`status` принимает общие значения статуса: `neutral`, `info`, `success`,
+`warning` и `error`; прежние `default` и `primary` означают `neutral` и
+`info`, а неизвестное значение собирает нейтральное сообщение. Компонент также регистрирует класс `Toast` с
 теми же параметрами: `SF.Loader.ready('Toast', callback)` передаёт его после
 события `sf-loader-init`.
 

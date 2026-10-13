@@ -328,7 +328,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-251406fa1888` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-7c01b6265585` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -351,6 +351,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `port-owner` — `string`, по умолчанию пусто. Составной компонент, в который встроен этот список; передаётся с запросом к порту хоста, чтобы хост знал, на какой обмен отвечает. Указывает составной компонент, а не элемент, поэтому списку, встроенному в другое место, не нужно новое значение.
 - `port-record` — `string`, по умолчанию пусто. Запись, которую показывает встраивающий составной компонент; передаётся с запросом к порту хоста.
 - `port-group` — `string`, по умолчанию пусто. Группа внутри составного компонента, которую представляет этот список; передаётся с запросом к порту хоста.
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`. Ступень лестницы размеров для элементов управления представления; её получают таблица, строка страниц и полоса выбора: 1 или плотная 1/2, как в админке.
 
 #### Свойства в документе макета
 
@@ -413,8 +414,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@d6191850354ab355b57a1075bbe94e6d7597fbeb:components/src/smart/data-view`
-- `simai/larena-ui@d6191850354ab355b57a1075bbe94e6d7597fbeb:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@1ef88ce692edbcd1bbc1663bb66b06d8358ce0f9:components/src/smart/data-view`
+- `simai/larena-ui@1ef88ce692edbcd1bbc1663bb66b06d8358ce0f9:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -464,6 +465,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `layout` — `string`, по умолчанию `table`, значения: `auto`, `table`, `list`. Как рисуются записи: таблицей, компактным списком или auto — таблицей, пока контейнер таблицы не уже list-below пикселей, и списком, когда уже. sf-data-view выбирает auto для списка на странице.
 - `list-below` — `number`, по умолчанию `600`. Ширина контейнера в пикселях, уже которой режим auto рисует компактный список.
 - `list-fields` — `number`, по умолчанию `3`. Сколько полей запись показывает под заголовком в компактном списке; поля выбираются по приоритету колонок.
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`. Ступень лестницы размеров для элементов управления и строк таблицы: 1 или плотная 1/2 — элементы управления высотой 32 px, текст 14/20, строки высотой ступени. Размер 1, записанный на элементе, который рисует таблица, становится размером таблицы.
 
 #### Свойства в документе макета
 
@@ -545,5 +547,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@d6191850354ab355b57a1075bbe94e6d7597fbeb:components/src/smart/table`
-- `simai/larena-ui@d6191850354ab355b57a1075bbe94e6d7597fbeb:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@1ef88ce692edbcd1bbc1663bb66b06d8358ce0f9:components/src/smart/table`
+- `simai/larena-ui@1ef88ce692edbcd1bbc1663bb66b06d8358ce0f9:components/src/smart/table/rule.js#name=cl-table`

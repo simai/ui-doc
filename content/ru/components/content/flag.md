@@ -92,18 +92,20 @@ profile: reference
 ## JavaScript
 
 Скрипт подключает флаги при загрузке страницы и флаги, добавленные позже.
-Объект `SF.flag` появляется вместе со скриптом компонента; Loader подключает
+Объект `SF.Flag` появляется вместе со скриптом компонента; Loader подключает
 его, когда находит на странице `.sf-flag`. Событий компонент не отправляет.
 
-- `SF.flag.render(element)` — перерисовывает флаг. Смену `data-country` или
+- `SF.Flag.render(element)` — перерисовывает флаг. Смену `data-country` или
   формы скрипт сам не отслеживает: после неё вызовите `render`.
-- `SF.flag.mount(element)` и `SF.flag.mountAll(root)` — подключают флаг или
+- `SF.Flag.mount(element)` и `SF.Flag.mountAll(root)` — подключают флаг или
   все флаги внутри `root` с учётом ленивой загрузки.
+
+Имя `SF.flag` указывает на тот же объект.
 
 ```js
 const flag = document.querySelector('#phone-country');
 flag.dataset.country = 'de';
-SF.flag.render(flag);
+SF.Flag.render(flag);
 ```
 
 ## Классы
