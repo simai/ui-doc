@@ -81,10 +81,15 @@ Every example labels each sample with the class it demonstrates.
 change journal keeps only for compatibility with their replacement.
 A component that ships only a script (theme, hide-show) is enrolled with
 `"css": false`: it has no «Классы» or «Переменные».
-`## Переменные` shows what the look is built from. The guide treats
-component variables as internal wiring, not a configuration surface: a
-project changes its look through the shared tokens and a Smart component's
-template.
+`## Переменные` shows what the look is built from. When the release's
+`core/contracts/public-variables.v1.json` lists the component, the section
+splits in two: `### Настройка` — the public variables (stable, renamed only
+through the change journal), each with its summary from
+`config/public-variables.ru.json`, its default token and what it varies
+with, plus a one-rule override example; and `### Устройство` — every other
+`--<block>…` property, internal wiring a project does not set. A component
+without public variables keeps the single table, described as internal
+wiring. A public variable summary without a translation fails the generator.
 
 ## Smart component page — `content/ru/smart-components/**`
 

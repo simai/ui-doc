@@ -455,9 +455,71 @@ const componentVariables = (component, block) => {
     .map(([name, {value, from}]) => ({name, value, from, properties: used(name)}));
 };
 
+// Public variables: the release's core/contracts/public-variables.v1.json names
+// the few variables a component offers for customisation; they are stable and
+// renamed only through the change journal. PUBLIC_VARIABLES_FILE points at
+// another copy of the contract (a candidate's) for a trial run. Their summaries
+// are translated in config/public-variables.ru.json; a missing one fails.
+const publicContract = (() => {
+  const text = process.env.PUBLIC_VARIABLES_FILE
+    ? readFileSync(process.env.PUBLIC_VARIABLES_FILE, 'utf8')
+    : show('distr/core/contracts/public-variables.v1.json');
+  return text ? JSON.parse(text) : {components: []};
+})();
+const publicTranslations = (() => {
+  const path = join(root, 'config/public-variables.ru.json');
+  return existsSync(path) ? readJson(path).strings : {};
+})();
+const untranslated = new Set();
+const ru = (text) => {
+  if (publicTranslations[text]) return publicTranslations[text];
+  untranslated.add(text);
+  return text;
+};
+const VARIES = {appearance: 'вида', scheme: 'схемы', status: 'статуса', size: 'размера'};
+
+const publicVariablesSection = (entry) => {
+  const example = entry.variables.find((item) => item.role === 'radius') ?? entry.variables[0];
+  return [
+    `Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (${code(entry.selector)}) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.`,
+    '',
+    '| Переменная | Что задаёт | По умолчанию |',
+    '|:---|:---|:---|',
+    ...entry.variables.map((item) => {
+      const varies = (item.varies_with ?? []).map((name) => VARIES[name] ?? name);
+      const fallback = `${code(item.default)}${varies.length ? `; зависит от ${varies.join(', ')}` : ''}`;
+      return `| ${code(item.name)} | ${ru(item.summary)} | ${fallback} |`;
+    }),
+    '',
+    '```css',
+    `${entry.selector} {`,
+    `  ${example.name}: ${example.role === 'radius' ? '0' : example.default};`,
+    '}',
+    '```',
+  ];
+};
+
 const componentVariablesSection = (component, blocks) => {
-  const variables = blocks.flatMap((item) => componentVariables(component, item));
-  const block = blocks[0];
+  const offered = publicContract.components.filter((item) => blocks.includes(item.selector.replace(/^\./u, '')));
+  const publicNames = new Set(offered.flatMap((item) => item.variables.map((variable) => variable.name)));
+  const variables = blocks.flatMap((item) => componentVariables(component, item)).filter(({name}) => !publicNames.has(name));
+  if (offered.length) {
+    return [
+      '### Настройка',
+      '',
+      ...offered.flatMap((item, index) => [...(index ? [''] : []), ...publicVariablesSection(item)]),
+      ...(variables.length ? [
+        '',
+        '### Устройство',
+        '',
+        `Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (${blocks.map((item) => code(`.${item}`)).join(', ')}); переменную без него задают только модификаторы.`,
+        '',
+        '| Переменная | По умолчанию | Задаёт |',
+        '|:---|:---|:---|',
+        ...variables.map(({name, value, from, properties}) => `| ${code(name)} | ${from ? `не задана; задают модификаторы, например ${code(from)}: ${code(value)}` : code(value)} | ${properties.length ? properties.map(code).join(', ') : '—'} |`),
+      ] : []),
+    ];
+  }
   if (variables.length === 0) return null;
   return [
     `Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (${blocks.map((item) => code(`.${item}`)).join(', ')}); переменную без него задают только модификаторы.`,
@@ -520,6 +582,11 @@ for (const [page, entry] of Object.entries(settings.pages)) {
     changed.push(page);
     if (!checkOnly) writeFileSync(path, next);
   }
+}
+if (untranslated.size) {
+  console.error(JSON.stringify({untranslated: [...untranslated]}, null, 2));
+  console.error('translate them in config/public-variables.ru.json');
+  process.exit(1);
 }
 const result = {
   schema: 'ui-doc.reference_sections.v1',

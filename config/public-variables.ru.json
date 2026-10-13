@@ -1,0 +1,31 @@
+{
+  "schema": "ui-doc.public-variables-translations",
+  "schema_version": 1,
+  "language": "ru",
+  "strings": {
+    "Space above and below the content.": "Отступ над и под содержимым.",
+    "Space above and below the text.": "Отступ над и под текстом.",
+    "Space before and after the content.": "Отступ до и после содержимого по строчной оси.",
+    "Space before and after the text.": "Отступ до и после текста по строчной оси.",
+    "Space between the icon and the text.": "Промежуток между иконкой и текстом.",
+    "Space between the icon, the text and the buttons.": "Промежуток между иконкой, текстом и кнопками.",
+    "Space inside the field above and below its content.": "Внутренний отступ поля над и под содержимым.",
+    "Space inside the field before and after its content.": "Внутренний отступ поля до и после содержимого по строчной оси.",
+    "The alert's fill.": "Заливка предупреждения.",
+    "The badge's fill.": "Заливка значка.",
+    "The border colour at rest; seen with a border width.": "Цвет рамки в спокойном состоянии; виден при ненулевой ширине рамки.",
+    "The border colour.": "Цвет рамки.",
+    "The border colour; seen with a border width.": "Цвет рамки; виден при ненулевой ширине рамки.",
+    "The border width on every side (outline appearance: var(--sf-px)).": "Ширина рамки со всех сторон (у вида outline — var(--sf-px)).",
+    "The border width on every side.": "Ширина рамки со всех сторон.",
+    "The corner radius.": "Скругление углов.",
+    "The field's border at rest.": "Рамка поля в спокойном состоянии.",
+    "The field's corner radius.": "Скругление углов поля.",
+    "The field's fill at rest; focus, error and disabled keep their own.": "Заливка поля в спокойном состоянии; у фокуса, ошибки и недоступности своя.",
+    "The label colour at rest.": "Цвет подписи в спокойном состоянии.",
+    "The resting fill; hover, pressed and disabled keep their own.": "Заливка в спокойном состоянии; у наведения, нажатия и недоступности своя.",
+    "The text and icon colour.": "Цвет текста и иконки.",
+    "The text colour.": "Цвет текста.",
+    "The typed text.": "Цвет введённого текста."
+  }
+}
