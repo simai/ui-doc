@@ -33,8 +33,8 @@ description: "Как устроены объявление порта хоста
 Форма объявления задана отдельной схемой — схемой порта (формат
 `simai.composite.host-port`). Рядом с `port.json` лежит набор проверок: его
 опись `kit/manifest.json` и случаи в `kit/cases/`. Например, текущая версия
-порта представления данных — `distr/core/contracts/ports/simai.dataview-port/1.9.0/port.json`
-и `distr/core/contracts/ports/simai.dataview-port/1.9.0/kit/manifest.json`.
+порта представления данных — `distr/core/contracts/ports/simai.dataview-port/1.10.0/port.json`
+и `distr/core/contracts/ports/simai.dataview-port/1.10.0/kit/manifest.json`.
 
 ## Набор проверок
 

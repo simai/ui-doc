@@ -106,7 +106,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-9fbf82f469bb` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -115,7 +115,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 | Тег | `<sf-gallery>` |
 | Назначение | Smart-компонент Gallery из SIMAI Framework. |
 | Контракт | `smart.gallery`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-272734e6edf3` |
+| Поставка | выпуск Framework `ui-9fbf82f469bb` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -206,8 +206,8 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### Источник
 
-- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/gallery`
-- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-gallery`
+- `simai/ui@9fbf82f469bb766482fe76c2a6e3e806e38b294e:distr/smart/gallery`
+- `simai/ui@9fbf82f469bb766482fe76c2a6e3e806e38b294e:distr/rule/rule.json#name=cl-gallery`
 
 ## См. также
 

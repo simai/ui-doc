@@ -67,7 +67,7 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-9fbf82f469bb` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -76,7 +76,7 @@ document.querySelector('#next').addEventListener('click', () => {
 | Тег | `<sf-steps>` |
 | Назначение | Smart-компонент Steps из SIMAI Framework. |
 | Контракт | `smart.steps`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-272734e6edf3` |
+| Поставка | выпуск Framework `ui-9fbf82f469bb` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -119,8 +119,8 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### Источник
 
-- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/steps`
-- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@9fbf82f469bb766482fe76c2a6e3e806e38b294e:distr/smart/steps`
+- `simai/ui@9fbf82f469bb766482fe76c2a6e3e806e38b294e:distr/rule/rule.json#name=cl-steps`
 
 ## См. также
 

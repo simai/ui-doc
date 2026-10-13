@@ -55,8 +55,8 @@ description: "Карта стандартов показывает все ста
 
 | Порт | Компонент | Текущая версия | Изданы | Случаев в наборе проверок |
 |:---|:---|:---|:---|:---|
-| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.9.0 | 1.0.0–1.9.0 | 38 |
-| `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.10.0 | 1.0.0–1.10.0 | 36 |
+| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.10.0 | 1.0.0–1.10.0 | 40 |
+| `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.11.0 | 1.0.0–1.11.0 | 36 |
 | `simai.admin-navigation-port` | `smart.admin-menu` (`sf-admin-menu`) | 1.0.0 | 1.0.0 | 37 |
 
 Компоненты этих портов поставляет пакет `larena` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)); порты

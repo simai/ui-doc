@@ -37,7 +37,7 @@ description: "Показывает и правит поля одного объ�
 
 Порт — объект с полями `version`, `capabilities` и методом
 `raise(intent, payload, {signal})`, который возвращает ответ приложения.
-Компонент принимает версии порта от `1.0.0` до `1.10.0`. Передайте порт
+Компонент принимает версии порта от `1.0.0` до `1.11.0`. Передайте порт
 методом `setHostPort` или в ответ на событие `sf-host-port-request`, которое
 компонент отправляет при подключении, пока порта у него нет.
 
@@ -216,7 +216,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-9fbf82f469bb` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -357,8 +357,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/property-view`
-- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@4d1448e13b6197920ddba20abf6e7e114c0fcfa8:components/src/smart/property-view`
+- `simai/larena-ui@4d1448e13b6197920ddba20abf6e7e114c0fcfa8:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 

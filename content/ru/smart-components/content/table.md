@@ -187,17 +187,26 @@ Framework: пакет компонентов Loader с именем `larena` и�
 `<sf-data-view>`: `setHostPort(host)` принимает объект с полями `version` и
 `capabilities` и методом `raise(intent, payload, {signal})`, который
 отвечает `{answer: 'applied' | 'conflict' | 'refused' | 'unavailable', …}`.
-`<sf-data-view>` говорит на порте `simai.dataview-port` версии 1.9.0 и
-принимает адаптеры версий от 1.0.0 до 1.9.0; манифест `<sf-table>` записывает
+`<sf-data-view>` говорит на порте `simai.dataview-port` версии 1.10.0 и
+принимает адаптеры версий от 1.0.0 до 1.10.0; манифест `<sf-table>` записывает
 версию порта 1.0.0. Если адаптер не передан, `<sf-data-view>` один раз
 запрашивает его событием `sf-host-port-request`.
 
-Ответ адаптера — конверт, а данные лежат в его поле `data`:
+Возможности хост объявляет в `capabilities`: представление предлагает
+только то, что хост объявил. Создание записи (`create-record`) и личные
+настройки колонок (`personal-column-settings`) — тоже возможности: хосту на
+порте 1.10.0, который их не объявил, представление не показывает кнопку
+создания и шестерёнку настроек колонок. Хост на более ранней версии порта
+получает обе, не объявляя их. У самой таблицы те же части включают и
+выключают атрибуты `creatable`, `settings-menu` и `filter-templates`.
+
+Ответ адаптера — конверт, а данные лежат в его поле `data`; порт описывает
+и конверт (`answer`), и данные ответа на каждое намерение (`answer_data`):
 
 ```js
 const host = {
-  version: '1.9.0',
-  capabilities: ['row-actions'],
+  version: '1.10.0',
+  capabilities: ['row-actions', 'create-record'],
   async raise(intent, payload, {signal}) {
     const result = await fetch('/api/projects', {
       method: 'POST',
@@ -243,8 +252,8 @@ document.querySelector('sf-data-view').setHostPort(host);
 
 Права приходят вместе с данными: каждая запись несёт список действий,
 которые приложение разрешает именно для неё, и представление предлагает
-только их. Текущая версия — [порт 1.9.0](/ai/ports/simai.dataview-port/1.9.0/port.json)
-и его [набор проверок](/ai/ports/simai.dataview-port/1.9.0/kit/manifest.json);
+только их. Текущая версия — [порт 1.10.0](/ai/ports/simai.dataview-port/1.10.0/port.json)
+и его [набор проверок](/ai/ports/simai.dataview-port/1.10.0/kit/manifest.json);
 прежние версии опубликованы рядом. Приложение заявляет поддержку версии
 порта, когда прошло все проверки её набора. Правила стыка — в
 [стандарте порта хоста](/ru/guide/standards/map/#порт-хоста-simai-composite-host-port).
@@ -290,7 +299,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-9fbf82f469bb` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -367,8 +376,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/data-view`
-- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@4d1448e13b6197920ddba20abf6e7e114c0fcfa8:components/src/smart/data-view`
+- `simai/larena-ui@4d1448e13b6197920ddba20abf6e7e114c0fcfa8:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -389,6 +398,9 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `settings` — `boolean`, по умолчанию `true`.
 - `actions` — `boolean`, по умолчанию `true`.
 - `row-actions` — `boolean`, по умолчанию `true`.
+- `creatable` — `boolean`, по умолчанию `true`. Кнопка создания и её меню видов записи среди действий. Представление данных выключает её для хоста на порте 1.10.0, который не объявил create-record.
+- `filter-templates` — `boolean`, по умолчанию `true`. Кнопка, которая сохраняет фильтр как шаблон. Представление данных выключает её, если хост не хранит сохранённые представления.
+- `settings-menu` — `boolean`, по умолчанию `true`. Шестерёнка в заголовке колонки настроек, которая открывает настройки колонок. Без неё колонка по-прежнему несёт меню каждой строки. Представление данных выключает её для хоста на порте 1.10.0, который не объявил personal-column-settings.
 - `pagin` — `boolean`, по умолчанию `false`.
 - `filter-text` — `string`, по умолчанию `Filter`.
 - `clear-text` — `string`, по умолчанию `Clear`.
@@ -487,5 +499,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/table`
-- `simai/larena-ui@6e07294e202aad6380b0c83b96ab94265de06805:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@4d1448e13b6197920ddba20abf6e7e114c0fcfa8:components/src/smart/table`
+- `simai/larena-ui@4d1448e13b6197920ddba20abf6e7e114c0fcfa8:components/src/smart/table/rule.js#name=cl-table`

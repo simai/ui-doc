@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "02b5e484fbbfe244f98e7c7a9e60436c0f765b24",
-    "core_revision": "272734e6edf378dc97d957ab2baa78503a526c16",
+    "source_revision": "c7ce32de95268ffe754ec909a4bee21d6b8538ab",
+    "core_revision": "9fbf82f469bb766482fe76c2a6e3e806e38b294e",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "6f44fd6f2fce731ff50ffe0808bcfeac55d873d513a2c7606be2b5f787dd42fe"
     },
-    "note": "Reviewed at source 02b5e484 and core 272734e6 (release ui-272734e6edf3): the composition sources, schemas, builtins and fixture are byte-identical to the review at ui-6d2bf151e3c8. The buttons manifest's declarative props accept appearance and tightness (type stays accepted) and its label defaults are empty; core.js gained the shared Smart runtime fetch, ordered chunk fetching, the icon subset work and the mask service, none of which the composition API uses."
+    "note": "Reviewed at source c7ce32de and core 9fbf82f4 (release ui-9fbf82f469bb): the composition sources, schemas, builtins and fixture are byte-identical to the review at ui-6d2bf151e3c8. The buttons manifest's declarative props accept appearance and tightness (type stays accepted) and its label defaults are empty; core.js gained the shared Smart runtime fetch, ordered chunk fetching, the icon subset work and the mask service, none of which the composition API uses."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

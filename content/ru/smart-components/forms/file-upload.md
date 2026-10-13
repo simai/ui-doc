@@ -125,7 +125,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-272734e6edf3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-9fbf82f469bb` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -134,7 +134,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | Тег | `<sf-file-upload>` |
 | Назначение | Smart-компонент File Upload из SIMAI Framework. |
 | Контракт | `smart.file-upload`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-272734e6edf3` |
+| Поставка | выпуск Framework `ui-9fbf82f469bb` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -200,5 +200,5 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ### Источник
 
-- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/smart/file-upload`
-- `simai/ui@272734e6edf378dc97d957ab2baa78503a526c16:distr/rule/rule.json#name=cl-file-upload`
+- `simai/ui@9fbf82f469bb766482fe76c2a6e3e806e38b294e:distr/smart/file-upload`
+- `simai/ui@9fbf82f469bb766482fe76c2a6e3e806e38b294e:distr/rule/rule.json#name=cl-file-upload`

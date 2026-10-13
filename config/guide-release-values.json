@@ -2,11 +2,11 @@
     "schema": "ui-doc.guide-release-values.v1",
     "why": "The release values the guide's pages name in its examples and tables, as last written. scripts/sync-framework-documentation-versions.php replaces each with the pinned value from scripts/materialize-framework-runtime.php and records the new set here; --check fails while a page still names an old one.",
     "values": {
-        "ui_runtime": "272734e6edf378dc97d957ab2baa78503a526c16",
-        "ui_record": "9c3ae218d676c45242d0bf80d5ae39345466aca2",
-        "source": "02b5e484fbbfe244f98e7c7a9e60436c0f765b24",
-        "builder": "c19b7c4f891e0c75dd85114d876800fd749de18b",
-        "larena": "6e07294e202aad6380b0c83b96ab94265de06805",
-        "release": "ui-272734e6edf3"
+        "ui_runtime": "9fbf82f469bb766482fe76c2a6e3e806e38b294e",
+        "ui_record": "be8c1a3c40971759194ee47ecf372d6ac32b01e5",
+        "source": "c7ce32de95268ffe754ec909a4bee21d6b8538ab",
+        "builder": "4f8a6db724aac80d5766dbbd8803203cbb9ba616",
+        "larena": "4d1448e13b6197920ddba20abf6e7e114c0fcfa8",
+        "release": "ui-9fbf82f469bb"
     }
 }
