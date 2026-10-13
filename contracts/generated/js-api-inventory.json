@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-9e4292052a7a",
-  "ui_commit": "9e4292052a7aa77f31dbc61146f3b97cc0a1b4b1",
+  "release": "ui-6809ba9001e6",
+  "ui_commit": "6809ba9001e601fa8dd00b92b624966de9f9e01f",
   "stages": [
     "core",
     "dom",
@@ -427,6 +427,9 @@
         "iconManifestStorageKey": {
           "type": "string"
         },
+        "iconPreloadApplied": {
+          "type": "boolean"
+        },
         "iconSubsetHash": {
           "type": "string"
         },
@@ -434,7 +437,7 @@
           "type": "object"
         },
         "iconSubsetManifest": {
-          "type": "object"
+          "type": "null"
         },
         "iconSubsetManifests": {
           "type": "object"
