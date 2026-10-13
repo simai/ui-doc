@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "bf261abc724db55738602395c68418a97537a354",
-  "core": "c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3",
-  "smart": "c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3",
+  "source": "dd7279cefeab78d4293ada7bd9fe2cbf07b1684f",
+  "core": "0b8e5c559207a2548d32a2284e086bdf3cc96dfb",
+  "smart": "0b8e5c559207a2548d32a2284e086bdf3cc96dfb",
   "source_files": {
     "src/core/js/smart-base.js": "e388a42ec926da2f73a02cf828f9e8c9f9e3b15fdbf91efe1c857ff7c2b4cb3c",
-    "src/core/js/loader.js": "0a4a9f6e869991fbb03f74dba11208387071f34782fb947c34d095bacb9bd359"
+    "src/core/js/loader.js": "7a97f3e0f2fd003fb313d921493e031b517be0d57add7640e920987ad2825c49"
   },
   "lessons": [
     "structure",
@@ -17,5 +17,5 @@
     "templates",
     "connection"
   ],
-  "review": "Reviewed the release ui-c82d49d62d28 (source bf261abc; Core and Smart are the same ui commit, Smart in distr/smart). One shared Smart runtime per page: lit, smart-base, page language, position and control spacing live in core/js/smart-base.js, which Core fetches the first time a Smart element is queued; a Smart bundle waits for it (SF.runtimeModule) and defines its element when it arrives. loader.js fetches minified bundles and lazy relations. The lessons' attributes, properties, events, slots, nesting, cleanup and assets do not change; a page that assembles its scripts by hand includes core/js/smart-base.js after core.js. The lessons moved into the guide's part 7 pages (structure holds creating and local components, composite holds nesting, lifecycle holds cleanup, templates holds templates and assets)."
+  "review": "Reviewed the release ui-0b8e5c559207 (source dd7279ce; Core and Smart are the same ui commit, Smart in distr/smart). One shared Smart runtime per page: lit, smart-base, page language, position and control spacing live in core/js/smart-base.js, which Core fetches the first time a Smart element is queued; a Smart bundle waits for it (SF.runtimeModule) and defines its element when it arrives. loader.js fetches minified bundles and lazy relations. The lessons' attributes, properties, events, slots, nesting, cleanup and assets do not change; a page that assembles its scripts by hand includes core/js/smart-base.js after core.js. The lessons moved into the guide's part 7 pages (structure holds creating and local components, composite holds nesting, lifecycle holds cleanup, templates holds templates and assets). loader.js at ui-0b8e5c559207 fetches an element's script while its relations load; the lessons do not change."
 }

@@ -216,7 +216,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c82d49d62d28` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0b8e5c559207` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -357,8 +357,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@7e0c6856cda0636186cf8b251f3b8104e84d0cdc:components/src/smart/property-view`
-- `simai/larena-ui@7e0c6856cda0636186cf8b251f3b8104e84d0cdc:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@a1b414c54894c48865b62437fb9c956bd86d26ea:components/src/smart/property-view`
+- `simai/larena-ui@a1b414c54894c48865b62437fb9c956bd86d26ea:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 

@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-c82d49d62d28",
-  "ui_commit": "c82d49d62d28c71aefa2ef2ad05b0a4fae49dfe3",
+  "release": "ui-0b8e5c559207",
+  "ui_commit": "0b8e5c559207a2548d32a2284e086bdf3cc96dfb",
   "stages": [
     "core",
     "dom",
@@ -415,6 +415,12 @@
         "iconDescriptorStates": {
           "type": "object"
         },
+        "iconFirstRequestHeld": {
+          "type": "null"
+        },
+        "iconFirstRequestReleased": {
+          "type": "boolean"
+        },
         "iconFontReady": {
           "type": "boolean"
         },
@@ -527,6 +533,9 @@
           "type": "string"
         },
         "plugins": {
+          "type": "object"
+        },
+        "preloadedScripts": {
           "type": "object"
         },
         "preloader": {

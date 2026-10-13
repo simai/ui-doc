@@ -118,7 +118,7 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-icon--fill` | `0` | `font-variation-settings` |
-| `--sf-icon--font-family` | не задана; задают модификаторы, например `.sf-icon--rounded`: `"Material Symbols Rounded"` | `font-family` |
+| `--sf-icon--font-family` | не задана; задают модификаторы, например `:root[data-sf-icons=subset-pending] .sf-icon`: `"Material Symbols Outlined Subset"` | `font-family` |
 | `--sf-icon--font-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `font-size` |
 | `--sf-icon--grade` | `0` | `font-variation-settings` |
 | `--sf-icon--height` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `height` |

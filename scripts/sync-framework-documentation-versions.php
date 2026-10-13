@@ -170,6 +170,59 @@ foreach ($iterator as $file) {
         file_put_contents($path, $expected, LOCK_EX);
     }
 }
+// The guide names the pinned release in its examples and tables (the release
+// id, the ui commits, the source, builder and package revisions). Each value is
+// read from the pin in scripts/materialize-framework-runtime.php; a value last
+// written for an earlier pin (config/guide-release-values.json) is replaced on
+// every guide page.
+$pin = (string) file_get_contents($root . '/scripts/materialize-framework-runtime.php');
+$pinned = static function (string $pattern) use ($pin): string {
+    if (preg_match($pattern, $pin, $match) !== 1) {
+        throw new RuntimeException('FRAMEWORK_PIN_UNREADABLE: ' . $pattern);
+    }
+    return $match[1];
+};
+$current = [
+    'ui_runtime' => $pinned("/const UI_RUNTIME_REVISION = '([0-9a-f]{40})'/"),
+    'ui_record' => $pinned("/const UI_METADATA_REVISION = '([0-9a-f]{40})'/"),
+    'source' => $pinned("/const SOURCE_REVISION = '([0-9a-f]{40})'/"),
+    'builder' => $pinned("/const BUILDER_REVISION = '([0-9a-f]{40})'/"),
+    'larena' => $pinned("/'larena' => \[\s*'repository' => 'simai\/larena-ui',\s*'revision' => '([0-9a-f]{40})'/"),
+];
+$current['release'] = 'ui-' . substr($current['ui_runtime'], 0, 12);
+$valuesPath = $root . '/config/guide-release-values.json';
+$recorded = json_decode((string) file_get_contents($valuesPath), true, 512, JSON_THROW_ON_ERROR);
+$replacements = [];
+foreach ($recorded['values'] as $key => $old) {
+    if (isset($current[$key]) && $old !== $current[$key]) {
+        $replacements[$old] = $current[$key];
+    }
+}
+// Longer values first, so a full commit is replaced before the release id
+// that is its prefix.
+uksort($replacements, static fn (string $a, string $b): int => strlen($b) <=> strlen($a));
+if ($replacements !== []) {
+    $guide = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide', FilesystemIterator::SKIP_DOTS));
+    foreach ($guide as $file) {
+        if (! $file->isFile() || $file->getExtension() !== 'md') {
+            continue;
+        }
+        $page = (string) file_get_contents($file->getPathname());
+        $next = strtr($page, $replacements);
+        if ($next !== $page) {
+            $changed[] = str_replace('\\', '/', substr($file->getPathname(), strlen($root) + 1));
+            if (! $checkOnly) {
+                file_put_contents($file->getPathname(), $next, LOCK_EX);
+            }
+        }
+    }
+    $changed[] = 'config/guide-release-values.json';
+    if (! $checkOnly) {
+        $recorded['values'] = $current;
+        file_put_contents($valuesPath, json_encode($recorded, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n", LOCK_EX);
+    }
+}
+
 $changed = array_values(array_unique($changed));
 sort($changed, SORT_STRING);
 
