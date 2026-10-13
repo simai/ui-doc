@@ -198,7 +198,7 @@ layer.addEventListener('keydown', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6809ba9001e6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -207,13 +207,13 @@ layer.addEventListener('keydown', (event) => {
 | Тег | `<sf-context-menu>` |
 | Назначение | Меню действий Framework: пункты данными со значком, подписью, значением, сочетанием клавиш, отметкой, подменю, разделителем и заголовком; openFor() открывает его в верхнем слое с привязкой, клавиатурой, переходом по первой букве и возвратом фокуса. Хост может по-прежнему рисовать свои пункты и сам управлять жизненным циклом. |
 | Контракт | `smart.context-menu`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-6809ba9001e6` |
+| Поставка | выпуск Framework `ui-6960705a7e77` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `template` — `string`, по умолчанию `default`.
 - `position` — `string`, по умолчанию пусто, значения: пусто, `inline-start`, `inline-start-top`, `inline-start-bottom`, `inline-end`, `inline-end-top`, `inline-end-bottom`, `top`, `top-inline-start`, `top-inline-end`, `bottom`, `bottom-inline-start`, `bottom-inline-end`, `start`, `end`, `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-start`, `left-end`, `right-start`, `right-end`, `inline-start-start`, `inline-start-end`, `inline-end-start`, `inline-end-end`. Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует.
 - `tooltip` — `boolean`, по умолчанию `true`. Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует.
 - `text` — `string`, по умолчанию пусто.
@@ -276,8 +276,8 @@ layer.addEventListener('keydown', (event) => {
 
 ### Источник
 
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/smart/context-menu`
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/context-menu`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-context-menu`
 
 ## См. также
 

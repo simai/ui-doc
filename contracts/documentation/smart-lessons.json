@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.smart-lessons-review.v1",
-  "source": "a8eae9863be5af16ce7fd2e61a9432c1424db41c",
-  "core": "6809ba9001e601fa8dd00b92b624966de9f9e01f",
-  "smart": "6809ba9001e601fa8dd00b92b624966de9f9e01f",
+  "source": "5b3f36b5098507a432a4ccb9898d957a14ace9ca",
+  "core": "6960705a7e77154a9f1d42c0705556e8434c78aa",
+  "smart": "6960705a7e77154a9f1d42c0705556e8434c78aa",
   "source_files": {
     "src/core/js/smart-base.js": "e388a42ec926da2f73a02cf828f9e8c9f9e3b15fdbf91efe1c857ff7c2b4cb3c",
-    "src/core/js/loader.js": "7a97f3e0f2fd003fb313d921493e031b517be0d57add7640e920987ad2825c49"
+    "src/core/js/loader.js": "b4ac2e727332ea2c5ef83713817a32e2b9cc48223a469f8b0c207a2b0806a4d0"
   },
   "lessons": [
     "structure",
@@ -17,5 +17,5 @@
     "templates",
     "connection"
   ],
-  "review": "Reviewed the release ui-6809ba9001e6 (source a8eae986; Core and Smart are the same ui commit, Smart in distr/smart). One shared Smart runtime per page: lit, smart-base, page language, position and control spacing live in core/js/smart-base.js, which Core fetches the first time a Smart element is queued; a Smart bundle waits for it (SF.runtimeModule) and defines its element when it arrives. loader.js fetches minified bundles and lazy relations. The lessons' attributes, properties, events, slots, nesting, cleanup and assets do not change; a page that assembles its scripts by hand includes core/js/smart-base.js after core.js. The lessons moved into the guide's part 7 pages (structure holds creating and local components, composite holds nesting, lifecycle holds cleanup, templates holds templates and assets). loader.js at ui-0b8e5c559207 fetches an element's script while its relations load; the lessons do not change."
+  "review": "Reviewed the release ui-6960705a7e77 (source 5b3f36b5; Core and Smart are the same ui commit, Smart in distr/smart). One shared Smart runtime per page: lit, smart-base, page language, position and control spacing live in core/js/smart-base.js, which Core fetches the first time a Smart element is queued; a Smart bundle waits for it (SF.runtimeModule) and defines its element when it arrives. loader.js fetches minified bundles and lazy relations. The lessons' attributes, properties, events, slots, nesting, cleanup and assets do not change; a page that assembles its scripts by hand includes core/js/smart-base.js after core.js. The lessons moved into the guide's part 7 pages (structure holds creating and local components, composite holds nesting, lifecycle holds cleanup, templates holds templates and assets). loader.js at ui-0b8e5c559207 fetches an element's script while its relations load; the lessons do not change."
 }

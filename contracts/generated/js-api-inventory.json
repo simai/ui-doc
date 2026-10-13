@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-6809ba9001e6",
-  "ui_commit": "6809ba9001e601fa8dd00b92b624966de9f9e01f",
+  "release": "ui-6960705a7e77",
+  "ui_commit": "6960705a7e77154a9f1d42c0705556e8434c78aa",
   "stages": [
     "core",
     "dom",
@@ -406,6 +406,10 @@
         "firstLoad": {
           "type": "boolean"
         },
+        "flushObservedChanges": {
+          "type": "function",
+          "arity": 0
+        },
         "frameworkPath": {
           "type": "string"
         },
@@ -437,7 +441,7 @@
           "type": "object"
         },
         "iconSubsetManifest": {
-          "type": "null"
+          "type": "object"
         },
         "iconSubsetManifests": {
           "type": "object"
@@ -449,7 +453,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "object"
+          "type": "null"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -581,6 +585,9 @@
           "type": "object"
         },
         "searchEnd": {
+          "type": "boolean"
+        },
+        "searchEndListening": {
           "type": "boolean"
         },
         "sfDir": {

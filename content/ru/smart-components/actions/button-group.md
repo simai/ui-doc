@@ -92,7 +92,7 @@ group.select('month');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6809ba9001e6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -101,13 +101,13 @@ group.select('month');
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6809ba9001e6` |
+| Поставка | выпуск Framework `ui-6960705a7e77` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона.
 - `items` — `array` из `object`, по умолчанию `[]`, например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`. Выбираемые элементы со стабильными полями value, label, icon и disabled.
 - `value` — `string`, по умолчанию пусто. Значение выбранного элемента.
 - `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`. Общий токен размера кнопки.
@@ -152,8 +152,8 @@ group.select('month');
 
 ### Источник
 
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/smart/button-group`
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/button-group`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-button-group`
 
 ## См. также
 

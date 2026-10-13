@@ -118,7 +118,7 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6809ba9001e6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -127,13 +127,13 @@ document.addEventListener('drawer:after-open', (event) => {
 | Тег | `<sf-drawer>` |
 | Назначение | Боковая панель рабочей области, при которой страница остаётся доступной: закреплённая колонка или немодальная панель. Модальные боковые панели относятся к sf-modal; модальный режим Drawer устарел. |
 | Контракт | `smart.drawer`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-6809ba9001e6` |
+| Поставка | выпуск Framework `ui-6960705a7e77` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `template` — `string`, по умолчанию `default`.
 - `open` — `boolean`, по умолчанию `false`.
 - `placement` — `string`, по умолчанию `right`, значения: `left`, `right`, `inline-start`, `inline-end`.
 - `overlay` — `boolean`, по умолчанию `true`.
@@ -207,8 +207,8 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### Источник
 
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/smart/drawer`
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/rule/rule.json#name=cl-drawer`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/drawer`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-drawer`
 
 ## См. также
 

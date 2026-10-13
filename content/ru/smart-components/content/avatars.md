@@ -67,7 +67,7 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-6809ba9001e6` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-6960705a7e77` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -76,13 +76,13 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 | Тег | `<sf-avatars>` |
 | Назначение | Smart-компонент Avatars из SIMAI Framework. |
 | Контракт | `smart.avatars`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-6809ba9001e6` |
+| Поставка | выпуск Framework `ui-6960705a7e77` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`, `user`, `group`, `label`, `profile`.
+- `template` — `string`, по умолчанию `default`.
 - `data` — `string`, по умолчанию пусто.
 - `property` — `string`, по умолчанию пусто.
 - `image-url` — `string`, по умолчанию пусто.
@@ -123,8 +123,8 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 
 ### Источник
 
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/smart/avatars`
-- `simai/ui@6809ba9001e601fa8dd00b92b624966de9f9e01f:distr/rule/rule.json#name=cl-avatars`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/smart/avatars`
+- `simai/ui@6960705a7e77154a9f1d42c0705556e8434c78aa:distr/rule/rule.json#name=cl-avatars`
 
 ## См. также
 

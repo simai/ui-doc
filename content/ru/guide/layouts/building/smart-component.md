@@ -49,11 +49,11 @@ Smart-компонент можно вставить в макет, только
 в поставке `ui`, `src/smart/<папка>/smart.manifest.json` в пакете).
 
 Настройки, которые узел `smart.buttons` принимает в документе: `template`,
-`size`, `type`, `scheme`, `status`, `text`, `icon`, `icon-position`,
-`loading`, `disabled`, `native-type`, `aria-label`. Значения у них те же, что
-у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки в документе задаёт `type` —
-прежнее имя атрибута `appearance`; самого `appearance` в этом списке нет, и
-узел с ним отклоняется.
+`size`, `appearance`, `tightness`, `scheme`, `status`, `text`, `icon`,
+`icon-position`, `loading`, `disabled`, `native-type`, `aria-label`. Значения
+у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки задаёт
+`appearance`; прежнее имя `type` узел тоже принимает ради совместимости, в
+новых документах его не пишут.
 
 ## Как Smart-узел превращается в HTML
 
