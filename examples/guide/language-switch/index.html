@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-2" data-language-demo>
+  <div class="sf-button-group" role="group" aria-label="Язык интерфейса">
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-language="ru" data-direction="ltr" aria-pressed="true"><span class="sf-button-text-container">Русский</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-language="en" data-direction="ltr" aria-pressed="false"><span class="sf-button-text-container">English</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-language="ar" data-direction="rtl" aria-pressed="false"><span class="sf-button-text-container">العربية</span></button>
+  </div>
+  <sf-pagination aria-label="Страницы заказов" current="3" total="240" page-size="20" top="false"></sf-pagination>
+  <div class="flex flex-wrap items-cross-center gap-1">
+    <sf-tag kind="default" text="SIMAI Framework" closable></sf-tag>
+  </div>
+  <p class="m-0 color-on-surface-variant" role="status" data-language-result></p>
+</div>
