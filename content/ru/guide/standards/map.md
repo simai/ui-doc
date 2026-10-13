@@ -68,7 +68,7 @@ description: "Карта стандартов показывает все ста
 |:---|:---|
 | Схема конверта Standard Contract | [`/ai/standards/standard-contract/1.0.0/standard.schema.json`](/ai/standards/standard-contract/1.0.0/standard.schema.json) |
 | Комплект Recipe | [`/ai/standards/composition-recipe/1.0.1/`](/ai/standards/composition-recipe/1.0.1/README.md) |
-| Схема манифеста Smart-компонента | [`/ai/standards/smart-component-manifest/2.2.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.2.0/manifest.schema.json) |
+| Схема манифеста Smart-компонента | [`/ai/standards/smart-component-manifest/2.3.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.3.0/manifest.schema.json) |
 | Конверт составного компонента | [`/ai/standards/simai.composite-component/1.0.2/standard.json`](/ai/standards/simai.composite-component/1.0.2/standard.json) |
 | Конверт динамического составного компонента | [`/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json`](/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json) |
 | Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.3/standard.json`](/ai/standards/simai.composite-host-port/1.0.3/standard.json) |
