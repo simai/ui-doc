@@ -112,7 +112,7 @@ view.value = 'archived';
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-82fc0ba882ba` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-86580e83da1b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -121,7 +121,7 @@ view.value = 'archived';
 | Тег | `<sf-dropdown>` |
 | Назначение | Доступный элемент одиночного или множественного выбора с поиском по вариантам и необязательным выводом в портал. |
 | Контракт | `smart.dropdown`, версия `1.2.0` |
-| Поставка | выпуск Framework `ui-82fc0ba882ba` |
+| Поставка | выпуск Framework `ui-86580e83da1b` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -182,8 +182,8 @@ view.value = 'archived';
 
 ### Источник
 
-- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/smart/dropdown`
-- `simai/ui@82fc0ba882baae72ae3d83d7370decbcebe366d7:distr/rule/rule.json#name=cl-dropdown`
+- `simai/ui@86580e83da1b4d4a049cf8a02727e5607aefeeee:distr/smart/dropdown`
+- `simai/ui@86580e83da1b4d4a049cf8a02727e5607aefeeee:distr/rule/rule.json#name=cl-dropdown`
 
 ## См. также
 

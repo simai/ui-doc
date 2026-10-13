@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "807763260d72f56639f8e102e646d7519b639da1",
-    "core_revision": "82fc0ba882baae72ae3d83d7370decbcebe366d7",
+    "source_revision": "f1aa7b7e770314468eff41a1fddf14a13fe02b58",
+    "core_revision": "86580e83da1b4d4a049cf8a02727e5607aefeeee",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "e95cf44026f87da79e063babe4aaa44ce7bc3719aa2d700877f3e4d64399129e"
     },
-    "note": "Reviewed at source 80776326 and core 82fc0ba8 (release ui-82fc0ba882ba): the composition schemas, builtins, fixture and buttons manifest are byte-identical to the review at ui-45c15e706fde. sortable.mjs adds the silhouette preview (preview=\"silhouette\", the default; \"line\" keeps the line), documented on the sortable page; core.js gains SF.notify and the same sortable preview, documented on the toast page. The composition contract the pages describe is unchanged."
+    "note": "Reviewed at source f1aa7b7e and core 86580e83 (release ui-86580e83da1b): the composition schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-82fc0ba882ba. sortable.mjs adds SF.Sortable.attach, the column mode, documented on the sortable page; the composition contract the pages describe is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
