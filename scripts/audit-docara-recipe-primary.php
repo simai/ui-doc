@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $read = static fn (string $path): array => json_decode((string) file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
-$plans = $read($root . '/build_production/.docara/resolved-page-plans.json');
+$plans = $read($root . '/build_production.docara/resolved-page-plans.json');
 $lock = $read($root . '/composer.lock');
 $specification = $read($root . '/contracts/composition-recipe-v1/contract.lock.json');
 $package = null;

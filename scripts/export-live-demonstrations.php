@@ -49,5 +49,5 @@ if (!in_array($recipeRelative,array_column($files,'path'),true)) {
 }
 $inputs[substr($recipeFixture,strlen($root)+1)]=hash_file('sha256',$recipeFixture);
 usort($files,static fn($a,$b)=>strcmp($a['path'],$b['path']));ksort($inputs);
-file_put_contents($build.'/.docara/standalone-examples.json',json_encode(['schema'=>'docara.standalone_examples.v1','generator_sha256'=>hash_file('sha256',__FILE__),'inputs_sha256'=>hash('sha256',json_encode($inputs)),'files'=>$files],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)."\n");
+file_put_contents($build.'.docara/standalone-examples.json',json_encode(['schema'=>'docara.standalone_examples.v1','generator_sha256'=>hash_file('sha256',__FILE__),'inputs_sha256'=>hash('sha256',json_encode($inputs)),'files'=>$files],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES)."\n");
 echo json_encode(['status'=>'pass','live_demonstrations'=>count($ids),'verified_fixtures'=>1])."\n";
