@@ -99,7 +99,7 @@ terms.setChecked(false);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7606ca8693c1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3a3949fae1b7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,7 +108,7 @@ terms.setChecked(false);
 | Тег | `<sf-checkbox>` |
 | Назначение | Нативный флажок с подписью, оформлением Framework и состояниями checked, indeterminate и disabled, которые согласованы между атрибутами хост-элемента и внутренним input. |
 | Контракт | `smart.checkbox`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7606ca8693c1` |
+| Поставка | выпуск Framework `ui-3a3949fae1b7` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -161,5 +161,5 @@ terms.setChecked(false);
 
 ### Источник
 
-- `simai/ui@7606ca8693c1f0d6c695059902fdce28b262847b:distr/smart/checkbox`
-- `simai/ui@7606ca8693c1f0d6c695059902fdce28b262847b:distr/rule/rule.json#name=cl-checkbox`
+- `simai/ui@3a3949fae1b7899521136f5e6011ce31a869ff76:distr/smart/checkbox`
+- `simai/ui@3a3949fae1b7899521136f5e6011ce31a869ff76:distr/rule/rule.json#name=cl-checkbox`

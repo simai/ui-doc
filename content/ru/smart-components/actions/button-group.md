@@ -92,7 +92,7 @@ group.select('month');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7606ca8693c1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3a3949fae1b7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -101,7 +101,7 @@ group.select('month');
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7606ca8693c1` |
+| Поставка | выпуск Framework `ui-3a3949fae1b7` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -155,8 +155,8 @@ group.select('month');
 
 ### Источник
 
-- `simai/ui@7606ca8693c1f0d6c695059902fdce28b262847b:distr/smart/button-group`
-- `simai/ui@7606ca8693c1f0d6c695059902fdce28b262847b:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@3a3949fae1b7899521136f5e6011ce31a869ff76:distr/smart/button-group`
+- `simai/ui@3a3949fae1b7899521136f5e6011ce31a869ff76:distr/rule/rule.json#name=cl-button-group`
 
 ## См. также
 

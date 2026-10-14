@@ -157,6 +157,7 @@
         "skeleton",
         "spinner",
         "tooltip",
+        "help-mark",
         "empty-state"
       ]
     },

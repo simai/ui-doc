@@ -1,15 +1,15 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-7606ca8693c1",
-  "ui_commit": "7606ca8693c1f0d6c695059902fdce28b262847b",
+  "release": "ui-3a3949fae1b7",
+  "ui_commit": "3a3949fae1b7899521136f5e6011ce31a869ff76",
   "stages": [
     "core",
     "dom",
     "idle",
     "components"
   ],
-  "smart_tags": 52,
+  "smart_tags": 53,
   "page_errors": [],
   "globals": {
     "Ajax": {
@@ -1417,6 +1417,9 @@
           "type": "object"
         },
         "cl-gallery": {
+          "type": "object"
+        },
+        "cl-help-mark": {
           "type": "object"
         },
         "cl-icon-buttons": {

@@ -52,6 +52,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Skeleton](/ru/smart-components/feedback/skeleton/)
 - [Spinner](/ru/smart-components/feedback/spinner/)
 - [Tooltip](/ru/smart-components/feedback/tooltip/)
+- [Подсказка «?»](/ru/smart-components/feedback/help-mark/)
 - [Пустое состояние](/ru/smart-components/feedback/empty-state/)
 
 ## Содержимое и медиа
