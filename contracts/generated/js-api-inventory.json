@@ -1,15 +1,15 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-a362f55f864c",
-  "ui_commit": "a362f55f864c59f56dcdaacddaf2188730fab9e7",
+  "release": "ui-3a39d8661e65",
+  "ui_commit": "3a39d8661e650ae0f4957c618ba37cb69327b305",
   "stages": [
     "core",
     "dom",
     "idle",
     "components"
   ],
-  "smart_tags": 48,
+  "smart_tags": 50,
   "page_errors": [],
   "globals": {
     "Ajax": {
@@ -887,6 +887,24 @@
       "arity": 3,
       "class": false
     },
+    "Resizer": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "SfResizer": {
+          "type": "function",
+          "arity": 0
+        },
+        "attach": {
+          "type": "function",
+          "arity": 1
+        },
+        "attachResizer": {
+          "type": "function",
+          "arity": 1
+        }
+      }
+    },
     "RuleLoader": {
       "available": "core",
       "type": "object",
@@ -1422,6 +1440,9 @@
         "cl-popover": {
           "type": "object"
         },
+        "cl-profile-picker": {
+          "type": "object"
+        },
         "cl-progress-bar": {
           "type": "object"
         },
@@ -1435,6 +1456,9 @@
           "type": "object"
         },
         "cl-reference-link": {
+          "type": "object"
+        },
+        "cl-resizer": {
           "type": "object"
         },
         "cl-skeleton": {

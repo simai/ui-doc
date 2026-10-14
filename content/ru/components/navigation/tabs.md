@@ -144,8 +144,9 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-tabs` |
-| Части | `sf-tabs-main-container`, `sf-tabs-top`, `sf-tabs-top-container` |
-| Модификаторы | `sf-tabs--full`, `sf-tabs--pills`, `sf-tabs--underline`, `sf-tabs--vertical` |
+| Части | `sf-tabs-count`, `sf-tabs-main-container`, `sf-tabs-more`, `sf-tabs-overflowed`, `sf-tabs-settings`, `sf-tabs-settings-handle`, `sf-tabs-settings-label`, `sf-tabs-settings-list`, `sf-tabs-settings-pin`, `sf-tabs-settings-row`, `sf-tabs-top`, `sf-tabs-top-container`, `sf-tabs-top-container--tools` |
+| Модификаторы | `sf-tabs--full`, `sf-tabs--overflow-more`, `sf-tabs--overflow-wrap`, `sf-tabs--pills`, `sf-tabs--underline`, `sf-tabs--vertical` |
+| Размеры | `sf-tabs--size-1`, `sf-tabs--size-1-2`, `sf-tabs--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

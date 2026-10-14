@@ -1,0 +1,13 @@
+<div class="flex radius-2 border border-outline-variant overflow-hidden" style="block-size: 14rem">
+  <nav class="flex flex-col gap-1 p-2 bg-surface-container flex-none" style="inline-size: var(--demo-menu-width, 14rem)" aria-label="Разделы">
+    <span class="text-1/2 color-on-surface-variant">Разделы</span>
+    <a class="sf-link" href="#resizer-orders">Заказы</a>
+    <a class="sf-link" href="#resizer-clients">Клиенты</a>
+    <a class="sf-link" href="#resizer-catalog">Каталог товаров и услуг</a>
+    <sf-resizer min="10rem" max="22rem" property="--demo-menu-width" label="Ширина меню"></sf-resizer>
+  </nav>
+  <main class="flex-1 p-3 flex flex-col gap-1">
+    <span class="text-1">Перетащите край меню, нажмите на нём стрелки или дважды щёлкните, чтобы вернуть ширину.</span>
+    <output class="text-1/2 color-on-surface-variant" id="resizer-log" aria-live="polite"></output>
+  </main>
+</div>

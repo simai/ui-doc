@@ -1,6 +1,6 @@
 ---
 title: "Редактор страниц"
-description: "Редактор страниц — 3 смарт-компонентов SIMAI Framework."
+description: "Редактор страниц — 3 смарт-компонента SIMAI Framework."
 profile: reference
 ---
 

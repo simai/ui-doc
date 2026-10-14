@@ -69,6 +69,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Модальное окно](/ru/smart-components/overlays/modal/)
 - [Drawer](/ru/smart-components/overlays/drawer/)
 - [Popover](/ru/smart-components/overlays/popover/)
+- [Изменение ширины](/ru/smart-components/overlays/resizer/)
 
 ## Редактор страниц
 
@@ -81,4 +82,5 @@ description: "Смарт-компоненты по задачам интерфе
 - [Admin Menu](/ru/smart-components/composite/admin-menu/)
 - [Представление свойств](/ru/smart-components/composite/property-view/)
 - [Page Header](/ru/smart-components/composite/page-header/)
+- [Выбор профиля](/ru/smart-components/composite/profile-picker/)
 

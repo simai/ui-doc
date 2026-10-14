@@ -106,7 +106,11 @@ for (const catalogue of CATALOGUES) {
     // The group's own one-liner says how many of what, and nothing a reader
     // could not have counted.
     const noun = catalogue === 'components' ? 'компонент' : 'смарт-компонент';
-    const plural = pages.length % 10 === 1 && pages.length % 100 !== 11 ? noun : `${noun}ов`;
+    // Russian counts: 1, 21 компонент; 2–4, 22–24 компонента; the rest компонентов.
+    const n10 = pages.length % 10;
+    const n100 = pages.length % 100;
+    const plural = n10 === 1 && n100 !== 11 ? noun
+      : n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14) ? `${noun}а` : `${noun}ов`;
     const page = `---
 title: "${section.title}"
 description: "${section.title} — ${pages.length} ${plural} SIMAI Framework."

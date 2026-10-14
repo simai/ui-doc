@@ -1,6 +1,6 @@
 ---
 title: "Системные и расширенные"
-description: "Системные и расширенные — 4 компонентов SIMAI Framework."
+description: "Системные и расширенные — 4 компонента SIMAI Framework."
 profile: reference
 ---
 

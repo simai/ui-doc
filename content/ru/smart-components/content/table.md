@@ -350,7 +350,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-a362f55f864c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-3a39d8661e65` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -456,8 +456,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@a557ee78f98aeefce0a10a7331779b4555a37a74:components/src/smart/data-view`
-- `simai/larena-ui@a557ee78f98aeefce0a10a7331779b4555a37a74:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@4e0b7bc29f7d28a6dd7824db066047253f299a41:components/src/smart/data-view`
+- `simai/larena-ui@4e0b7bc29f7d28a6dd7824db066047253f299a41:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -490,6 +490,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `pagination-page-size` — `integer`, по умолчанию `10`, значения: от 1; до 100.
 - `page-sizes` — `string`, по умолчанию `10,20,30,40`.
 - `context-menu-columns` — `integer`, по умолчанию `1`, значения: от 1; до 4. На сколько столбцов меню настроек делит свои пункты. Один, пока хост не запросит больше: на протяжении всего существования этого входа значение читалось напрямую, поэтому ни объявленное значение по умолчанию, ни значение, переданное хостом, до меню не доходили.
+- `remember-widths` — `boolean`, по умолчанию `false`. Запоминать ширины колонок в этом браузере (localStorage, под table-settings-key) для таблицы, настройки которой хост не хранит; двойной щелчок по краю колонки забывает её ширину.
 - `table-settings-key` — `string`, по умолчанию пусто, значения: не короче 1. Какие сохранённые настройки использует таблица. Пустое значение означает id элемента, а при его отсутствии — id экземпляра, поэтому каждая таблица на странице хранит свои настройки. Реальное значение по умолчанию заставило бы все таблицы использовать один ключ и перезаписывать друг друга.
 - `data-state` — `string`, по умолчанию `auto`, значения: `auto`, `loading`, `populated`, `empty`, `error`.
 - `loading-text` — `string`, по умолчанию `Loading`.
@@ -589,5 +590,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@a557ee78f98aeefce0a10a7331779b4555a37a74:components/src/smart/table`
-- `simai/larena-ui@a557ee78f98aeefce0a10a7331779b4555a37a74:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@4e0b7bc29f7d28a6dd7824db066047253f299a41:components/src/smart/table`
+- `simai/larena-ui@4e0b7bc29f7d28a6dd7824db066047253f299a41:components/src/smart/table/rule.js#name=cl-table`

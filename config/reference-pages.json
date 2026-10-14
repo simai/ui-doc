@@ -1839,6 +1839,12 @@
       "families": [
         "word-break"
       ]
+    },
+    "smart-components/overlays/resizer.md": {
+      "kind": "smart"
+    },
+    "smart-components/composite/profile-picker.md": {
+      "kind": "smart"
     }
   }
 }

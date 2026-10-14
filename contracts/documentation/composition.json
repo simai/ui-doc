@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "b3165773bbdbd0ccfccc879f210b2e6d2870fbbe",
-    "core_revision": "a362f55f864c59f56dcdaacddaf2188730fab9e7",
+    "source_revision": "6e547458c92abd92567024a31c5457617e2c16db",
+    "core_revision": "3a39d8661e650ae0f4957c618ba37cb69327b305",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "e95cf44026f87da79e063babe4aaa44ce7bc3719aa2d700877f3e4d64399129e"
     },
-    "note": "Reviewed at source b3165773 and core a362f55f (release ui-a362f55f864c): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-86580e83da1b."
+    "note": "Reviewed at source 6e547458 and core 3a39d866 (release ui-3a39d8661e65): the composition schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-a362f55f864c. sortable.mjs opens the silhouette in a grid too, which the sortable page states; the composition contract is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
