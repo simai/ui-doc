@@ -1,15 +1,15 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-3a39d8661e65",
-  "ui_commit": "3a39d8661e650ae0f4957c618ba37cb69327b305",
+  "release": "ui-7606ca8693c1",
+  "ui_commit": "7606ca8693c1f0d6c695059902fdce28b262847b",
   "stages": [
     "core",
     "dom",
     "idle",
     "components"
   ],
-  "smart_tags": 50,
+  "smart_tags": 52,
   "page_errors": [],
   "globals": {
     "Ajax": {
@@ -1389,6 +1389,9 @@
         "cl-context-menu": {
           "type": "object"
         },
+        "cl-copy-button": {
+          "type": "object"
+        },
         "cl-country-code": {
           "type": "object"
         },
@@ -1402,6 +1405,9 @@
           "type": "object"
         },
         "cl-dropdown": {
+          "type": "object"
+        },
+        "cl-empty-state": {
           "type": "object"
         },
         "cl-file-preview": {

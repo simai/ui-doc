@@ -112,7 +112,8 @@
         "icon-buttons",
         "button-group",
         "close",
-        "download-file"
+        "download-file",
+        "copy-button"
       ]
     },
     "forms": {
@@ -155,7 +156,8 @@
         "progress-scale",
         "skeleton",
         "spinner",
-        "tooltip"
+        "tooltip",
+        "empty-state"
       ]
     },
     "content": {

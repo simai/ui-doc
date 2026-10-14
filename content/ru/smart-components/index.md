@@ -14,6 +14,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Button Group](/ru/smart-components/actions/button-group/)
 - [Close](/ru/smart-components/actions/close/)
 - [Download File](/ru/smart-components/actions/download-file/)
+- [Кнопка копирования](/ru/smart-components/actions/copy-button/)
 
 ## Формы и ввод
 
@@ -51,6 +52,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Skeleton](/ru/smart-components/feedback/skeleton/)
 - [Spinner](/ru/smart-components/feedback/spinner/)
 - [Tooltip](/ru/smart-components/feedback/tooltip/)
+- [Пустое состояние](/ru/smart-components/feedback/empty-state/)
 
 ## Содержимое и медиа
 

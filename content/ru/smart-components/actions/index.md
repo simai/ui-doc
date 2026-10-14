@@ -1,6 +1,6 @@
 ---
 title: "Действия"
-description: "Действия — 5 смарт-компонентов SIMAI Framework."
+description: "Действия — 6 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -11,3 +11,4 @@ profile: reference
 - [Button Group](/ru/smart-components/actions/button-group/) — Переключает один из нескольких взаимоисключающих вариантов: вид списка, период, режим.
 - [Close](/ru/smart-components/actions/close/) — Рисует знак закрытия внутри кнопки, которую задаёт страница.
 - [Download File](/ru/smart-components/actions/download-file/) — Показывает файл для скачивания с именем и размером и сообщает о нажатии.
+- [Кнопка копирования](/ru/smart-components/actions/copy-button/) — Копирует значение или текст элемента, показывает результат галочкой и сообщает о нём экранному диктору.

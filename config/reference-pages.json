@@ -1845,6 +1845,12 @@
     },
     "smart-components/composite/profile-picker.md": {
       "kind": "smart"
+    },
+    "smart-components/feedback/empty-state.md": {
+      "kind": "smart"
+    },
+    "smart-components/actions/copy-button.md": {
+      "kind": "smart"
     }
   }
 }
