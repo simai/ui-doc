@@ -191,6 +191,18 @@ Framework: пакет компонентов Loader с именем `larena` и�
 изменение ширины или порядка приходит приложению событием
 `sf-table-column-settings-change`, как описано ниже.
 
+### Пустые состояния
+
+Когда ответ пришёл, а строк нет, таблица показывает внутри себя
+[пустое состояние](/ru/smart-components/feedback/empty-state/) своего размера
+и сама выбирает причину: нет прав (`refused`), ошибка с «Повторить», «Ничего не
+найдено» с кнопкой сброса того, что включено — поиска, фильтров или обоих, —
+или «нет записей» с «Создать», если создание разрешено. Пока идёт запрос,
+остаётся скелетон. `empty-text` и `error-text` становятся заголовками
+состояний «нет записей» и ошибки; слот `empty` заменяет блок целиком.
+Отдельная таблица без `<sf-data-view>` показывает только «нет записей» и
+ошибку. Подробнее — в [Пустые состояния](/ru/guide/smart-components/states-and-loading/#пустые-состояния).
+
 ### Шаблоны и настройки колонок
 
 Ширина, порядок, видимость и закрепление колонок — настройки представления.
@@ -350,7 +362,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-3a3949fae1b7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-d5db9dac5458` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -456,8 +468,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@01826308d1fb561517dc85aadd071311b2ea1d96:components/src/smart/data-view`
-- `simai/larena-ui@01826308d1fb561517dc85aadd071311b2ea1d96:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/data-view`
+- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -590,5 +602,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@01826308d1fb561517dc85aadd071311b2ea1d96:components/src/smart/table`
-- `simai/larena-ui@01826308d1fb561517dc85aadd071311b2ea1d96:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/table`
+- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/table/rule.js#name=cl-table`

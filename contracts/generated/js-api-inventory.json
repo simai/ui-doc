@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-3a3949fae1b7",
-  "ui_commit": "3a3949fae1b7899521136f5e6011ce31a869ff76",
+  "release": "ui-d5db9dac5458",
+  "ui_commit": "d5db9dac54580b35271c471107a62cab9b988d64",
   "stages": [
     "core",
     "dom",
@@ -12,26 +12,6 @@
   "smart_tags": 53,
   "page_errors": [],
   "globals": {
-    "Ajax": {
-      "available": "components",
-      "type": "function",
-      "arity": 1,
-      "class": false
-    },
-    "ButtonGroup": {
-      "available": "components",
-      "type": "object",
-      "members": {
-        "init": {
-          "type": "function",
-          "arity": 0
-        },
-        "sync": {
-          "type": "function",
-          "arity": 1
-        }
-      }
-    },
     "Checkbox": {
       "available": "components",
       "type": "object",
@@ -41,12 +21,6 @@
           "arity": 1
         }
       }
-    },
-    "cloneDeep": {
-      "available": "components",
-      "type": "function",
-      "arity": 2,
-      "class": false
     },
     "Composition": {
       "available": "core",
@@ -207,12 +181,6 @@
     },
     "createAsync": {
       "available": "idle",
-      "type": "function",
-      "arity": 1,
-      "class": false
-    },
-    "curpos": {
-      "available": "components",
       "type": "function",
       "arity": 1,
       "class": false
@@ -471,7 +439,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "null"
+          "type": "object"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -775,12 +743,6 @@
       "arity": 4,
       "class": false
     },
-    "Param": {
-      "available": "components",
-      "type": "function",
-      "arity": 0,
-      "class": false
-    },
     "Position": {
       "available": "core",
       "type": "object",
@@ -831,39 +793,11 @@
         }
       }
     },
-    "quickkey": {
-      "available": "components",
-      "type": "function",
-      "arity": 2,
-      "class": false
-    },
     "Radio": {
       "available": "components",
       "type": "object",
       "members": {
         "setState": {
-          "type": "function",
-          "arity": 1
-        }
-      }
-    },
-    "RangeSlider": {
-      "available": "components",
-      "type": "object",
-      "members": {
-        "bind": {
-          "type": "function",
-          "arity": 2
-        },
-        "getValue": {
-          "type": "function",
-          "arity": 1
-        },
-        "setValue": {
-          "type": "function",
-          "arity": 2
-        },
-        "unbind": {
           "type": "function",
           "arity": 1
         }
@@ -3533,12 +3467,6 @@
       "available": "components",
       "type": "boolean"
     },
-    "Search": {
-      "available": "components",
-      "type": "function",
-      "arity": 0,
-      "class": false
-    },
     "send": {
       "available": "idle",
       "type": "function",
@@ -3746,12 +3674,6 @@
           "arity": 1
         }
       }
-    },
-    "topZIndex": {
-      "available": "components",
-      "type": "function",
-      "arity": 0,
-      "class": false
     },
     "Tree": {
       "available": "components",

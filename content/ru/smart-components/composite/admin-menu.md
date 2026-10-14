@@ -198,7 +198,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-3a3949fae1b7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d5db9dac5458` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -289,8 +289,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/larena-ui@01826308d1fb561517dc85aadd071311b2ea1d96:components/src/smart/admin-menu`
-- `simai/larena-ui@01826308d1fb561517dc85aadd071311b2ea1d96:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/admin-menu`
+- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

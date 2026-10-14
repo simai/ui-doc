@@ -140,7 +140,7 @@ profile: reference
 | `--sf-datepicker-day-date--font-family` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-text--family)` | `font-family` |
 | `--sf-datepicker-day-date--font-size` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-text--size)` | `font-size` |
 | `--sf-datepicker-day-date--font-weight` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-font-weight-regular)` | `font-weight` |
-| `--sf-datepicker-day-date--line-height` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-text--height)` | `line-height` |
+| `--sf-datepicker-day-date--line-height` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-date`: `var(--sf-text--height)` | `line-height`, `top`, `inset-block` |
 | `--sf-datepicker-day-info--color` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-info`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-datepicker-day-info--font-family` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-info`: `var(--sf-text--family)` | `font-family` |
 | `--sf-datepicker-day-info--font-size` | не задана; задают модификаторы, например `.sf-datepicker-day .sf-datepicker-day-info`: `var(--sf-text-size-1/4)` | `font-size` |
