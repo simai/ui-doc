@@ -84,7 +84,7 @@ remove.onClick(() => deleteRow(row));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-86580e83da1b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-a362f55f864c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -93,7 +93,7 @@ remove.onClick(() => deleteRow(row));
 | Тег | `<sf-icon-button>` |
 | Назначение | Нативная кнопка-иконка с геометрией из токенов, доступным именем и общей семантикой загрузки. |
 | Контракт | `smart.icon-buttons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-86580e83da1b` |
+| Поставка | выпуск Framework `ui-a362f55f864c` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -158,8 +158,8 @@ remove.onClick(() => deleteRow(row));
 
 ### Источник
 
-- `simai/ui@86580e83da1b4d4a049cf8a02727e5607aefeeee:distr/smart/icon-buttons`
-- `simai/ui@86580e83da1b4d4a049cf8a02727e5607aefeeee:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui@a362f55f864c59f56dcdaacddaf2188730fab9e7:distr/smart/icon-buttons`
+- `simai/ui@a362f55f864c59f56dcdaacddaf2188730fab9e7:distr/rule/rule.json#name=cl-icon-buttons`
 
 ## См. также
 

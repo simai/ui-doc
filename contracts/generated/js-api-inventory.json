@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-86580e83da1b",
-  "ui_commit": "86580e83da1b4d4a049cf8a02727e5607aefeeee",
+  "release": "ui-a362f55f864c",
+  "ui_commit": "a362f55f864c59f56dcdaacddaf2188730fab9e7",
   "stages": [
     "core",
     "dom",
@@ -232,6 +232,24 @@
         "note": {
           "type": "function",
           "arity": 0
+        }
+      }
+    },
+    "DownloadFile": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "bind": {
+          "type": "function",
+          "arity": 1
+        },
+        "initAll": {
+          "type": "function",
+          "arity": 0
+        },
+        "unbind": {
+          "type": "function",
+          "arity": 1
         }
       }
     },
@@ -3581,6 +3599,14 @@
         "activeSortableSession": {
           "type": "function",
           "arity": 0
+        },
+        "attach": {
+          "type": "function",
+          "arity": 1
+        },
+        "attachSortable": {
+          "type": "function",
+          "arity": 1
         },
         "registerSortableDropTarget": {
           "type": "function",

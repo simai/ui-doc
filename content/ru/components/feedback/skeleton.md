@@ -22,8 +22,8 @@ profile: reference
 Минимальную разметку показывает пример выше: контейнер `sf-skeleton` и
 внутри него фигуры `sf-skeleton-text`.
 
-- `sf-skeleton` выстраивает фигуры столбцом с постоянным промежутком и несёт
-  класс движения. Без класса движения фигуры статичны.
+- `sf-skeleton` выстраивает фигуры столбцом без промежутков и несёт класс
+  движения. Без класса движения фигуры статичны.
 - `sf-skeleton-text` — одна фигура. Её высоту задаёт размер
   `sf-skeleton-text--size-*`, ширину — утилиты ширины (`w-full`, `w-1/2`) или
   размеры Framework.
@@ -49,6 +49,12 @@ profile: reference
 
 Классы `sf-skeleton-text--size-1/7` … `sf-skeleton-text--size-7` задают высоту
 фигуры по шкале кегля Framework. Для строки берите размер будущего текста.
+Строка-фигура высотой с кегль стоит посередине высоты строки того же размера,
+и строки идут одна за другой, как строки текста. Поэтому загружающийся блок
+занимает ровно столько места, сколько займёт текст, и страница не прыгает,
+когда приходят данные. Круг, квадрат, иконка и фигура с заданной высотой
+занимают ровно свою высоту. Переменные `--sf-skeleton-text--height` (фигура)
+и `--sf-skeleton-text--line` (её строка) задаются отдельно.
 Ступени `1/7`, `1/6` и `1/5` тоньше любого текста — ими рисуют разделитель или
 черту под заголовком.
 
@@ -120,7 +126,8 @@ Framework вроде `d2`), `animation` (`pulse` — по умолчанию, `w
 | `--sf-skeleton-base` | `var(--sf-ui-skeleton)` | `background` |
 | `--sf-skeleton-duration` | `calc(var(--sf-duration-slow) * 3)` | `animation` |
 | `--sf-skeleton-highlight` | `var(--sf-surface-container-active)` | `background-image` |
-| `--sf-skeleton-text--height` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-size-1)` | `height`, `block-size`, `width`, `inline-size` |
+| `--sf-skeleton-text--height` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-size-1)` | `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `width`, `inline-size` |
+| `--sf-skeleton-text--line` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-height-1)` | `margin-top`, `margin-bottom`, `margin-block` |
 
 ## См. также
 

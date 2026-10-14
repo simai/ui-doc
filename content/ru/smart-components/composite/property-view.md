@@ -216,7 +216,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-86580e83da1b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-a362f55f864c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -274,6 +274,7 @@ view: {
 - `panel` — `boolean`, по умолчанию `false`. Отображается в немодальной панели рядом со списком, из которого открыт объект, а не в рабочей области. Панель немодальная намеренно: список остаётся видимым и доступным.
 - `panel-label` — `string`, по умолчанию пусто. Название записи в шапке панели и доступное имя панели. Одного доступного имени недостаточно: панель без видимого заголовка не сообщает, какая запись открыта, а в стеке панелей это пользователю нужнее всего. Полная шапка с коллекцией и звездой — отдельный шаг.
 - `panel-size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`, `full`. Ширина панели по собственной шкале панели.
+- `size` — `string`, по умолчанию `1`, значения: `1`, `1/2`. Размер представления: текст, подписи полей, заголовки и элементы управления. 1/2 совпадает с таблицей размера 1/2.
 - `panel-width` — `string`, по умолчанию пусто. Точная ширина панели — для потребителя, макету которого не подходит шаг шкалы. Пустое значение оставляет управление `panel-size`; заданная здесь длина имеет приоритет. Панель в стопке сужается от этой ширины, а не от шкалы.
 - `personal-layer-text` — `string`, по умолчанию `Personal`. Слой, который видит только этот пользователь. Он стоит в списке именованных представлений рядом с «Обычный» и «Экспертный», поэтому его название отвечает на тот же вопрос, что и остальные.
 - `rare-text` — `string`, по умолчанию `rare`. Отмечает рядом с именем запись, которую коллекция объявляет редкой.
@@ -311,7 +312,7 @@ view: {
 
 Узел типа `smart.property-view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `cancel-text`, `changed-text`, `close-label`, `collection`, `conflict-text`, `copy-link-label`, `edit-text`, `empty-text`, `errors-text`, `open-full-label`, `panel`, `panel-label`, `panel-size`, `record-id`, `save-text`, `sections-label`, `show-rare`, `template`.
+- свойства: `cancel-text`, `changed-text`, `close-label`, `collection`, `conflict-text`, `copy-link-label`, `edit-text`, `empty-text`, `errors-text`, `open-full-label`, `panel`, `panel-label`, `panel-size`, `record-id`, `save-text`, `sections-label`, `show-rare`, `size`, `template`.
 
 Значения свойств те же, что у одноимённых атрибутов.
 
@@ -365,8 +366,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@b51fe8e5b4cb0a2eba1dcb664dfdf57e782f039f:components/src/smart/property-view`
-- `simai/larena-ui@b51fe8e5b4cb0a2eba1dcb664dfdf57e782f039f:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@a557ee78f98aeefce0a10a7331779b4555a37a74:components/src/smart/property-view`
+- `simai/larena-ui@a557ee78f98aeefce0a10a7331779b4555a37a74:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 
