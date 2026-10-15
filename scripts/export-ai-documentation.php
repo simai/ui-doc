@@ -165,7 +165,7 @@ foreach (glob($portsRoot . '/*/*/port.json') as $file) {
     }
     $items[] = [
         'id' => 'urn:simai:framework:port:' . str_replace(['/', '.'], [':', '-'], $identity . '/' . $edition),
-        'kind' => 'contract', 'title' => $port['summary'] ?? $identity, 'description' => 'Порт ' . $identity . ' ' . $edition . ' и набор проверок из ' . $port['conformance']['cases'] . ' случаев.',
+        'kind' => 'knowledge', 'title' => $port['summary'] ?? $identity, 'description' => 'Порт ' . $identity . ' ' . $edition . ' и набор проверок из ' . $port['conformance']['cases'] . ' случаев.',
         'language' => 'ru', 'revision' => $hash, 'status' => 'published',
         'source' => './' . $base . 'port.json',
         'htmlPage' => '/ru/guide/standards/map/#порт-хоста-simai-composite-host-port',
