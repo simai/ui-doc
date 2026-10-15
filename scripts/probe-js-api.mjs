@@ -152,6 +152,17 @@ for (const stage of order) {
     if (entry.members) globals[name].members = entry.members;
   }
 }
+// Legacy internals: helpers of the old sf-system and special bundles that the
+// Loader brings when a page holds sf-gallery, sf-overbox or sf-special (the
+// probe page holds every tag). They are not public API and are not documented;
+// the Framework moves them under SF.__internal with a deprecation (Framework
+// session, 2026-10-15). Marked here so a reference built from this file skips
+// them.
+const LEGACY_INTERNALS = new Set(['Ajax', 'Param', 'Search', 'cloneDeep', 'curpos', 'quickkey', 'topZIndex', 'ready', 'send', 'receive', 'RangeSlider']);
+for (const name of Object.keys(globals)) {
+  if (LEGACY_INTERNALS.has(name)) globals[name].legacy_internal = true;
+}
+
 const inventory = {
   schema: 'ui-doc.js-api-inventory',
   schema_version: 1,

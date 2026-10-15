@@ -12,12 +12,6 @@
   "smart_tags": 53,
   "page_errors": [],
   "globals": {
-    "Ajax": {
-      "available": "components",
-      "type": "function",
-      "arity": 1,
-      "class": false
-    },
     "Checkbox": {
       "available": "components",
       "type": "object",
@@ -27,12 +21,6 @@
           "arity": 1
         }
       }
-    },
-    "cloneDeep": {
-      "available": "components",
-      "type": "function",
-      "arity": 2,
-      "class": false
     },
     "Composition": {
       "available": "core",
@@ -193,12 +181,6 @@
     },
     "createAsync": {
       "available": "idle",
-      "type": "function",
-      "arity": 1,
-      "class": false
-    },
-    "curpos": {
-      "available": "components",
       "type": "function",
       "arity": 1,
       "class": false
@@ -761,12 +743,6 @@
       "arity": 4,
       "class": false
     },
-    "Param": {
-      "available": "components",
-      "type": "function",
-      "arity": 0,
-      "class": false
-    },
     "Position": {
       "available": "core",
       "type": "object",
@@ -862,12 +838,6 @@
         }
       }
     },
-    "quickkey": {
-      "available": "components",
-      "type": "function",
-      "arity": 2,
-      "class": false
-    },
     "Radio": {
       "available": "components",
       "type": "object",
@@ -898,19 +868,22 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "legacy_internal": true
     },
     "ready": {
       "available": "idle",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "legacy_internal": true
     },
     "receive": {
       "available": "idle",
       "type": "function",
       "arity": 3,
-      "class": false
+      "class": false,
+      "legacy_internal": true
     },
     "render": {
       "available": "components",
@@ -3564,17 +3537,12 @@
       "available": "components",
       "type": "boolean"
     },
-    "Search": {
-      "available": "components",
-      "type": "function",
-      "arity": 0,
-      "class": false
-    },
     "send": {
       "available": "idle",
       "type": "function",
       "arity": 2,
-      "class": false
+      "class": false,
+      "legacy_internal": true
     },
     "SfBaseElement": {
       "available": "components",
@@ -3777,12 +3745,6 @@
           "arity": 1
         }
       }
-    },
-    "topZIndex": {
-      "available": "components",
-      "type": "function",
-      "arity": 0,
-      "class": false
     },
     "Tree": {
       "available": "components",
