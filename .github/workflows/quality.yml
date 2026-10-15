@@ -5,11 +5,27 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
+# The site is checked against the exact Framework release and product package
+# it pins in scripts/materialize-framework-runtime.php. The pins are read from
+# that file (scripts/print-framework-pins.php), never repeated here, so a repin
+# commit is the whole change CI needs.
+#
+# The checks read git objects of the sibling repositories at those pins, beside
+# this checkout: ../ui, ../ui-source, ../ui-builder and ../larena-ui, the layout
+# the scripts default to. actions/checkout cannot write outside the workspace,
+# so they are plain full clones.
 jobs:
   verify:
     runs-on: ubuntu-latest
+    env:
+      # One documentation build takes about five minutes, past Composer's
+      # default script timeout of 300 seconds.
+      COMPOSER_PROCESS_TIMEOUT: "0"
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
       - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240
@@ -18,43 +34,101 @@ jobs:
           coverage: none
           ini-values: memory_limit=2G
           tools: composer
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "24"
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: Read the Framework pins
+        run: php scripts/print-framework-pins.php | tee -a "$GITHUB_ENV"
+      - name: Clone the Framework repositories at the pins
+        run: |
+          set -euo pipefail
+          parent="$(dirname "$GITHUB_WORKSPACE")"
+          clone() {
+            for attempt in 1 2 3; do
+              git clone --quiet --no-checkout "https://github.com/$1.git" "$parent/$2" && break
+              rm -rf "$parent/$2"
+              [ "$attempt" -lt 3 ] || return 1
+              sleep 10
+            done
+            git -C "$parent/$2" checkout --quiet --detach "$3"
+            echo "$1 $(git -C "$parent/$2" rev-parse HEAD) -> $parent/$2"
+          }
+          # ui at the metadata revision: it holds the release lock the package
+          # receipt names, and distr/ is the runtime revision's.
+          clone simai/ui ui "$UI_METADATA_REVISION"
+          git -C "$parent/ui" cat-file -e "$UI_RUNTIME_REVISION^{commit}"
+          clone simai/ui-source ui-source "$SOURCE_REVISION"
+          clone simai/ui-builder ui-builder "$BUILDER_REVISION"
+          clone "$LARENA_REPOSITORY" larena-ui "$LARENA_REVISION"
+          {
+            echo "FRAMEWORK_PARENT=$parent"
+            echo "DOCARA_SIMAI_UI_ROOT=$parent/ui"
+          } >> "$GITHUB_ENV"
+      - name: Install ui-builder
+        run: yarn --cwd "$FRAMEWORK_PARENT/ui-builder" install --frozen-lockfile --non-interactive --silent
+      - name: Build the Larena package at its pin
+        run: |
+          set -euo pipefail
+          # The waves are built under RUNNER_TEMP, a path without symlinks: the
+          # builder matches the shared runtime modules by path, and a symlinked
+          # temporary directory (macOS /var) bundles them instead.
+          out="$RUNNER_TEMP/larena-package"
+          cd "$RUNNER_TEMP"
+          node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" package \
+            --name larena \
+            --package-root "$FRAMEWORK_PARENT/larena-ui/$LARENA_PATH" \
+            --package-revision "$LARENA_REVISION" \
+            --package-repository "$LARENA_REPOSITORY" \
+            --ui-source "$FRAMEWORK_PARENT/ui-source" \
+            --ui "$DOCARA_SIMAI_UI_ROOT" \
+            --workspace "$RUNNER_TEMP/larena-waves" \
+            --out "$out" --replace-out
+          actual="$(node -p 'require(process.argv[1]).output.archive_sha256' "$out/package-receipt.json")"
+          if [ "$actual" != "$LARENA_ARCHIVE_SHA256" ]; then
+            echo "::error::larena archive $actual is not the pinned $LARENA_ARCHIVE_SHA256"
+            exit 1
+          fi
+          echo "LARENA_RECEIPT=$out/package-receipt.json" >> "$GITHUB_ENV"
       # composer.lock pins the exact published Docara release revision so the
       # documentation build remains reproducible.
       - run: composer validate --no-check-publish
       - run: composer install --no-interaction --prefer-source
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-      - name: Obtain pinned Composition Recipe runtime
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          repository: simai/ui
-          ref: 4665ecb607b009eae88e77d41cfb46d05d8e4af0
-          path: .recipe-runtime
-      - name: Configure Composition Recipe runtime
-        run: echo "DOCARA_SIMAI_UI_ROOT=$GITHUB_WORKSPACE/.recipe-runtime" >> "$GITHUB_ENV"
+      # Build-time tools of the site (Shiki colours the built code blocks).
+      - run: npm ci --no-audit --no-fund
+      # The runtime lives inside vendor/simai/docara: materialize after every
+      # composer install.
+      - name: Materialize the pinned Framework runtime
+        run: php scripts/materialize-framework-runtime.php "$DOCARA_SIMAI_UI_ROOT" --receipt="$LARENA_RECEIPT"
+      # SIMAI_UI_SOURCE_ROOT stays unset for docs:check: with it the composition
+      # audit also reads its recipe candidate at a ui-source commit older than
+      # the public snapshot, which only the private ui-source-history holds.
+      # The scripts that need ui-source find it beside this checkout.
       - run: composer docs:check
+      - name: Verify the Smart lesson sources at the reviewed ui-source revision
+        run: SIMAI_UI_SOURCE_ROOT="$FRAMEWORK_PARENT/ui-source" php scripts/audit-smart-lessons.php
       - run: php scripts/test-migrate-legacy-content.php
       - name: Verify committed migration is idempotent
         run: |
-          php scripts/migrate-legacy-content.php content redirects.json > /tmp/migration.json
-          test "$(php -r '$r=json_decode(file_get_contents("/tmp/migration.json"),true,512,JSON_THROW_ON_ERROR); echo $r["changed_markdown_files"];')" = "0"
+          php scripts/migrate-legacy-content.php content redirects.json > "$RUNNER_TEMP/migration.json"
+          test "$(php -r '$r=json_decode(file_get_contents($argv[1]),true,512,JSON_THROW_ON_ERROR); echo $r["changed_markdown_files"];' "$RUNNER_TEMP/migration.json")" = "0"
           git diff --exit-code
       - name: Build twice with identical output
         run: |
+          set -euo pipefail
+          digest() {
+            find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
+              printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
+            done
+          }
           composer docs:build
-          find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
-            printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
-          done > /tmp/build-first.sha256
+          digest > "$RUNNER_TEMP/build-first.sha256"
           rm -rf build_production
           composer docs:build
-          find build_production -type f -print0 | LC_ALL=C sort -z | while IFS= read -r -d '' file; do
-            printf '%s  %s\n' "$(sha256sum "$file" | cut -d ' ' -f 1)" "${file#build_production/}"
-          done > /tmp/build-second.sha256
-          diff -u /tmp/build-first.sha256 /tmp/build-second.sha256
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+          digest > "$RUNNER_TEMP/build-second.sha256"
+          diff -u "$RUNNER_TEMP/build-first.sha256" "$RUNNER_TEMP/build-second.sha256"
       - run: python -m pip install -r scripts/requirements-docs.txt
       - run: python scripts/check-ai-schema.py
       - name: Verify all generated local references
