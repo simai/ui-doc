@@ -58,7 +58,7 @@ Smart-компоненты описаны манифестом действую�
 | `persistence`, `ownership` | Что хранится и кто чем владеет |
 | `security` | Кто владеет правами, какие входы недоверенные, политика сетевых запросов |
 | `accessibility` | Ровно четыре поля: `role` (строка или `null`), `accessible_name` (`required`, `recommended` или `internal`), `keyboard` (список строк), `focus` (строка) |
-| `presentation` | Темы, языки и адаптивные режимы, которые компонент поддерживает |
+| `presentation` | Темы, языки и адаптивные режимы, которые компонент поддерживает; `skeleton` — заготовка формы до прихода кода и данных ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 | `readiness` | `level` — уровень готовности ([Уровни готовности](#уровни-готовности)) и `required_checks` — список обязательных проверок; оба поля обязательны |
 | `adapter`, `artifacts` | Адаптер для среды проверки компонента; файлы образцов данных и сценариев |
 | `compatibility` | Выпуск, на котором проверен; имена для совместимости; миграции |
@@ -145,8 +145,8 @@ SHA-256 файла; проверка манифестов `node scripts/sf-contr
   "compatibility": {
     "contract_schema": {"id": "https://simai.io/contracts/smart-component-manifest.v2.schema.json", "version": 2},
     "runtime_pair": {
-      "ui_revision": "c95d35179e847b720f59de0b40c2830bb3682a9b",
-      "ui_smart_revision": "c95d35179e847b720f59de0b40c2830bb3682a9b"
+      "ui_revision": "ed193b6adfdae157b03c018020cdaaa2c3da1508",
+      "ui_smart_revision": "ed193b6adfdae157b03c018020cdaaa2c3da1508"
     },
     "aliases": [],
     "deprecations": [],

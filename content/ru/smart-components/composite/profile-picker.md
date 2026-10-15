@@ -71,7 +71,7 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c95d35179e84` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ed193b6adfda` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -80,7 +80,7 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 | Тег | `<sf-profile-picker>` |
 | Назначение | Один способ выбрать, создать, переименовать, удалить и сбросить профиль: кнопка, похожая на поле, с названием текущего профиля, и панель, где всё делается на месте. Профили и права принадлежат хосту; компонент сообщает, что попросил человек. |
 | Контракт | `smart.profile-picker`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-c95d35179e84` |
+| Поставка | выпуск Framework `ui-ed193b6adfda` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -124,8 +124,8 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ### Источник
 
-- `simai/ui@c95d35179e847b720f59de0b40c2830bb3682a9b:distr/smart/profile-picker`
-- `simai/ui@c95d35179e847b720f59de0b40c2830bb3682a9b:distr/rule/rule.json#name=cl-profile-picker`
+- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/smart/profile-picker`
+- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/rule/rule.json#name=cl-profile-picker`
 
 ## См. также
 

@@ -134,7 +134,20 @@ try {
   stages.idle = await tab.evaluate(describe);
   await tab.goto(`${origin}/components.html`, {waitUntil: 'load'});
   await tab.evaluate(`Promise.all(${JSON.stringify(tags)}.map((tag) => (window.SF?.whenDefined ? Promise.race([window.SF.whenDefined(tag), new Promise((r) => setTimeout(r, 8000))]) : null)))`);
-  await tab.waitForTimeout(2500);
+  // A tag's script may pull further component classes after the tag is
+  // defined (sf-tree brings the tree class and SF.Tree): wait until window.SF
+  // holds the same keys for two seconds, at most fifteen, so a slow fetch
+  // does not drop a global from the inventory.
+  await tab.evaluate(`new Promise((resolve) => {
+    const keys = () => Object.keys(window.SF || {}).sort().join(',');
+    let last = keys(); let stable = 0; let waited = 0;
+    const tick = () => {
+      const now = keys();
+      stable = now === last ? stable + 250 : 0; last = now; waited += 250;
+      if (stable >= 2000 || waited >= 15000) resolve(); else setTimeout(tick, 250);
+    };
+    setTimeout(tick, 250);
+  })`);
   stages.components = await tab.evaluate(describe);
 } finally {
   await browser.close();

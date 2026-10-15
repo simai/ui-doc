@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-556 переменных, которые объявляет ядро, со значениями по умолчанию.
+564 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -654,4 +654,12 @@ description: "Полный список переменных, которые о�
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
+| `--sf-skeleton-bar` | `var(--sf-text-size-1)` |
+| `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |
+| `--sf-skeleton-inset` | `var(--sf-space-1)` |
+| `--sf-skeleton-line` | `var(--sf-text-height-1)` |
+| `--sf-skeleton-pair` | `calc(var(--sf-text-height-1/2) + var(--sf-text-height-1) + var(--sf-space-1))` |
+| `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` · `var(--sf-ui-1/2--control-height)` |
+| `--sf-skeleton-rows` | `10` · `6` · `8` |
+| `--sf-skeleton-toolbar` | `var(--sf-ui-1--control-height)` |
 | `--sf-transparent-for-focus` | `var(--sf-transparent)` |

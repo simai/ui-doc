@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-c95d35179e84",
-  "ui_commit": "c95d35179e847b720f59de0b40c2830bb3682a9b",
+  "release": "ui-ed193b6adfda",
+  "ui_commit": "ed193b6adfdae157b03c018020cdaaa2c3da1508",
   "stages": [
     "core",
     "dom",
@@ -12,6 +12,27 @@
   "smart_tags": 53,
   "page_errors": [],
   "globals": {
+    "Ajax": {
+      "available": "components",
+      "type": "function",
+      "arity": 1,
+      "class": false,
+      "legacy_internal": true
+    },
+    "ButtonGroup": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "init": {
+          "type": "function",
+          "arity": 0
+        },
+        "sync": {
+          "type": "function",
+          "arity": 1
+        }
+      }
+    },
     "Checkbox": {
       "available": "components",
       "type": "object",
@@ -21,6 +42,13 @@
           "arity": 1
         }
       }
+    },
+    "cloneDeep": {
+      "available": "components",
+      "type": "function",
+      "arity": 2,
+      "class": false,
+      "legacy_internal": true
     },
     "Composition": {
       "available": "core",
@@ -184,6 +212,13 @@
       "type": "function",
       "arity": 1,
       "class": false
+    },
+    "curpos": {
+      "available": "components",
+      "type": "function",
+      "arity": 1,
+      "class": false,
+      "legacy_internal": true
     },
     "deprecations": {
       "available": "components",
@@ -743,6 +778,13 @@
       "arity": 4,
       "class": false
     },
+    "Param": {
+      "available": "components",
+      "type": "function",
+      "arity": 0,
+      "class": false,
+      "legacy_internal": true
+    },
     "Position": {
       "available": "core",
       "type": "object",
@@ -837,6 +879,13 @@
           "arity": 1
         }
       }
+    },
+    "quickkey": {
+      "available": "components",
+      "type": "function",
+      "arity": 2,
+      "class": false,
+      "legacy_internal": true
     },
     "Radio": {
       "available": "components",
@@ -3519,6 +3568,9 @@
         "lit/directives/ref.js": {
           "type": "object"
         },
+        "lit/directives/repeat.js": {
+          "type": "object"
+        },
         "lit/directives/unsafe-html.js": {
           "type": "object"
         },
@@ -3536,6 +3588,13 @@
     "runtimeSettled": {
       "available": "components",
       "type": "boolean"
+    },
+    "Search": {
+      "available": "components",
+      "type": "function",
+      "arity": 0,
+      "class": false,
+      "legacy_internal": true
     },
     "send": {
       "available": "idle",
@@ -3745,6 +3804,13 @@
           "arity": 1
         }
       }
+    },
+    "topZIndex": {
+      "available": "components",
+      "type": "function",
+      "arity": 0,
+      "class": false,
+      "legacy_internal": true
     },
     "Tree": {
       "available": "components",

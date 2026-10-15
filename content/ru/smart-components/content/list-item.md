@@ -74,7 +74,7 @@ Dropdown; без `value` значением становится `text`. `text` 
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c95d35179e84` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-ed193b6adfda` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -83,7 +83,7 @@ Dropdown; без `value` значением становится `text`. `text` 
 | Тег | `<sf-list-item>` |
 | Назначение | Декларативное описание варианта и визуальная строка, которыми владеет Dropdown. |
 | Контракт | `smart.list-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-c95d35179e84` |
+| Поставка | выпуск Framework `ui-ed193b6adfda` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
@@ -134,8 +134,8 @@ Dropdown; без `value` значением становится `text`. `text` 
 
 ### Источник
 
-- `simai/ui@c95d35179e847b720f59de0b40c2830bb3682a9b:distr/smart/list-item`
-- `simai/ui@c95d35179e847b720f59de0b40c2830bb3682a9b:distr/rule/rule.json#name=cl-list-item`
+- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/smart/list-item`
+- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/rule/rule.json#name=cl-list-item`
 
 ## См. также
 
