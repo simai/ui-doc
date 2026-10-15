@@ -1031,6 +1031,8 @@
     "radio": "радиокнопка (`radio`)",
     "radiogroup": "группа переключателей (`radiogroup`)",
     "recommended": "рекомендуется",
+    "record.reorder of simai.dataview-port 1.11.0: rows dragged into another order in the view's table, raised through the port as the view receives it.": "record.reorder порта simai.dataview-port 1.11.0: строки таблицы представления перетащили в другой порядок; намерение уходит через порт в том виде, в каком его получило представление.",
+    "record.set of simai.dataview-port 1.11.0: a checkable cell pressed in the view's table, raised through the port as the view receives it.": "record.set порта simai.dataview-port 1.11.0: в таблице представления нажат флажок в ячейке; намерение уходит через порт в том виде, в каком его получило представление.",
     "region": "область (`region`)",
     "separator": "separator",
     "sf-sortable groups whose items may be dropped on insertion places": "группы sf-sortable, элементы которых можно отпускать в местах вставки",

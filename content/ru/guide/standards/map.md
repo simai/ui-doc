@@ -57,7 +57,7 @@ description: "Карта стандартов показывает все ста
 
 | Порт | Компонент | Текущая версия | Изданы | Случаев в наборе проверок |
 |:---|:---|:---|:---|:---|
-| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.10.0 | 1.0.0–1.10.0 | 40 |
+| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.11.0 | 1.0.0–1.11.0 | 43 |
 | `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.12.0 | 1.0.0–1.12.0 | 42 |
 | `simai.admin-navigation-port` | `smart.admin-menu` (`sf-admin-menu`) | 1.0.0 | 1.0.0 | 37 |
 
