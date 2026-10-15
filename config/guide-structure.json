@@ -346,6 +346,11 @@
      "order": 90
     },
     {
+     "slug": "view-preferences",
+     "title": "Персональный вид",
+     "order": 95
+    },
+    {
      "slug": "composite",
      "title": "Составные компоненты",
      "order": 100

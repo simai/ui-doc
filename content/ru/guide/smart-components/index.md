@@ -26,6 +26,7 @@ description: "Эта часть описывает Smart-компоненты �
 - [Жизненный цикл](/ru/guide/smart-components/lifecycle/)
 - [События](/ru/guide/smart-components/events/)
 - [Состояния и загрузка данных](/ru/guide/smart-components/states-and-loading/)
+- [Персональный вид](/ru/guide/smart-components/view-preferences/)
 - [Составные компоненты](/ru/guide/smart-components/composite/)
 - [Порты хоста и намерения](/ru/guide/smart-components/host-ports/)
 - [Манифест](/ru/guide/smart-components/manifest/)

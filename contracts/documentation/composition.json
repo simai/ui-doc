@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "930f0c94345cad34738c698510bef70759af8a6b",
-    "core_revision": "d5db9dac54580b35271c471107a62cab9b988d64",
+    "source_revision": "70154ca497ae8ee9b4cf42846d108fb66f794e77",
+    "core_revision": "c95d35179e847b720f59de0b40c2830bb3682a9b",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "e95cf44026f87da79e063babe4aaa44ce7bc3719aa2d700877f3e4d64399129e"
+      "distr/core/js/core.js": "24a61b52c0e678579f1b61593dd865c14a53b2512633d01d3fcbc509dfeba7ff"
     },
-    "note": "Reviewed at source 930f0c94 and core d5db9dac (release ui-d5db9dac5458): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-3a3949fae1b7."
+    "note": "Reviewed at source 70154ca4 and core c95d3517 (release ui-c95d35179e84): the composition sources, schemas, builtins, fixture and buttons manifest are byte-identical to the review at ui-d5db9dac5458. core.js gains SF.Preferences, documented on the guide page «Персональный вид»; the composition contract is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

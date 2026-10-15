@@ -129,7 +129,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-pagination` |
-| Части | `sf-pagination-actions`, `sf-pagination-actions-count`, `sf-pagination-actions-separator`, `sf-pagination-bottom`, `sf-pagination-container`, `sf-pagination-count`, `sf-pagination-direction`, `sf-pagination-item`, `sf-pagination-left`, `sf-pagination-list`, `sf-pagination-main`, `sf-pagination-marked`, `sf-pagination-marked-text`, `sf-pagination-page-field`, `sf-pagination-page-input`, `sf-pagination-pages-label`, `sf-pagination-top`, `sf-pagination-total` |
+| Части | `sf-pagination-actions`, `sf-pagination-actions-count`, `sf-pagination-actions-separator`, `sf-pagination-bottom`, `sf-pagination-container`, `sf-pagination-count`, `sf-pagination-direction`, `sf-pagination-item`, `sf-pagination-left`, `sf-pagination-list`, `sf-pagination-main`, `sf-pagination-marked`, `sf-pagination-marked-text`, `sf-pagination-more`, `sf-pagination-page-field`, `sf-pagination-page-input`, `sf-pagination-pages-label`, `sf-pagination-top`, `sf-pagination-total` |
 | Размеры | `sf-pagination--size-1/2` |
 
 **`sf-page-number`**

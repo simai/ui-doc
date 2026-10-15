@@ -203,6 +203,15 @@ Framework: пакет компонентов Loader с именем `larena` и�
 Отдельная таблица без `<sf-data-view>` показывает только «нет записей» и
 ошибку. Подробнее — в [Пустые состояния](/ru/guide/smart-components/states-and-loading/#пустые-состояния).
 
+### Персональный вид
+
+С атрибутом `preferences-key` на `<sf-data-view>` (обычно это имя
+коллекции) раскладка таблицы, сортировка и размер страницы хранятся как
+[персональный вид](/ru/guide/smart-components/view-preferences/) под ключом
+`sf-table/<preferences-key>` и применяются до первой отрисовки и первого
+запроса: скелетон уже стоит в порядке колонок человека. Без ключа ничего не
+запоминается.
+
 ### Шаблоны и настройки колонок
 
 Ширина, порядок, видимость и закрепление колонок — настройки представления.
@@ -362,7 +371,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-d5db9dac5458` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-c95d35179e84` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -406,6 +415,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `clear-selection-label` — `string`. Передаётся как clear-selection-label в пагинацию, которую рисует представление; без него действует собственная подпись пагинации на языке страницы.
 - `page-size-label` — `string`. Передаётся как page-size-label в пагинацию, которую рисует представление; без него действует собственная подпись пагинации на языке страницы.
 - `pagination-aria-label` — `string`. Передаётся как aria-label в пагинацию, которую рисует представление (собственный aria-label представления называет само представление).
+- `preferences-key` — `string`, по умолчанию пусто. Ключ, под которым хранится персональный вид этого списка (SF.Preferences, `sf-table/<key>`): раскладка таблицы, сортировка и размер страницы; применяется до первой отрисовки и первого запроса. Обычно это коллекция.
 
 #### Свойства в документе макета
 
@@ -468,8 +478,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/data-view`
-- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/data-view`
+- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -502,7 +512,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `pagination-page-size` — `integer`, по умолчанию `10`, значения: от 1; до 100.
 - `page-sizes` — `string`, по умолчанию `10,20,30,40`.
 - `context-menu-columns` — `integer`, по умолчанию `1`, значения: от 1; до 4. На сколько столбцов меню настроек делит свои пункты. Один, пока хост не запросит больше: на протяжении всего существования этого входа значение читалось напрямую, поэтому ни объявленное значение по умолчанию, ни значение, переданное хостом, до меню не доходили.
-- `remember-widths` — `boolean`, по умолчанию `false`. Запоминать ширины колонок в этом браузере (localStorage, под table-settings-key) для таблицы, настройки которой хост не хранит; двойной щелчок по краю колонки забывает её ширину.
+- `remember-widths` — `boolean`, по умолчанию `false`. Запоминать ширины колонок как персональный вид (SF.Preferences, под ключом preferences-key или table-settings-key) для таблицы, настройки которой хост не хранит; двойной щелчок по краю колонки забывает её ширину.
 - `table-settings-key` — `string`, по умолчанию пусто, значения: не короче 1. Какие сохранённые настройки использует таблица. Пустое значение означает id элемента, а при его отсутствии — id экземпляра, поэтому каждая таблица на странице хранит свои настройки. Реальное значение по умолчанию заставило бы все таблицы использовать один ключ и перезаписывать друг друга.
 - `data-state` — `string`, по умолчанию `auto`, значения: `auto`, `loading`, `populated`, `empty`, `error`.
 - `loading-text` — `string`, по умолчанию `Loading`.
@@ -521,6 +531,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `list-below` — `number`, по умолчанию `600`. Ширина контейнера в пикселях, уже которой режим auto рисует компактный список.
 - `list-fields` — `number`, по умолчанию `3`. Сколько полей запись показывает под заголовком в компактном списке; поля выбираются по приоритету колонок.
 - `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`. Ступень лестницы размеров для элементов управления и строк таблицы: 1 или плотная 1/2 — элементы управления высотой 32 px, текст 14/20, строки высотой ступени. Размер 1, записанный на элементе, который рисует таблица, становится размером таблицы.
+- `preferences-key` — `string`, по умолчанию пусто. Ключ, под которым раскладка таблицы — порядок, видимость, закрепление, ширины — хранится как персональный вид (SF.Preferences, `sf-table/<key>`); представление данных передаёт свой. Без него используется table-settings-key, а без обоих ничего не хранится.
 
 #### Свойства в документе макета
 
@@ -602,5 +613,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/table`
-- `simai/larena-ui@bf35c002f6928177fa3f36e84fbc40d5929508e0:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/table`
+- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/table/rule.js#name=cl-table`

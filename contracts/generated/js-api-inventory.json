@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-d5db9dac5458",
-  "ui_commit": "d5db9dac54580b35271c471107a62cab9b988d64",
+  "release": "ui-c95d35179e84",
+  "ui_commit": "c95d35179e847b720f59de0b40c2830bb3682a9b",
   "stages": [
     "core",
     "dom",
@@ -12,6 +12,12 @@
   "smart_tags": 53,
   "page_errors": [],
   "globals": {
+    "Ajax": {
+      "available": "components",
+      "type": "function",
+      "arity": 1,
+      "class": false
+    },
     "Checkbox": {
       "available": "components",
       "type": "object",
@@ -21,6 +27,12 @@
           "arity": 1
         }
       }
+    },
+    "cloneDeep": {
+      "available": "components",
+      "type": "function",
+      "arity": 2,
+      "class": false
     },
     "Composition": {
       "available": "core",
@@ -181,6 +193,12 @@
     },
     "createAsync": {
       "available": "idle",
+      "type": "function",
+      "arity": 1,
+      "class": false
+    },
+    "curpos": {
+      "available": "components",
       "type": "function",
       "arity": 1,
       "class": false
@@ -439,7 +457,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "object"
+          "type": "null"
         },
         "iconSubsetReady": {
           "type": "boolean"
@@ -743,6 +761,12 @@
       "arity": 4,
       "class": false
     },
+    "Param": {
+      "available": "components",
+      "type": "function",
+      "arity": 0,
+      "class": false
+    },
     "Position": {
       "available": "core",
       "type": "object",
@@ -762,6 +786,51 @@
         "resolveLength": {
           "type": "function",
           "arity": 1
+        }
+      }
+    },
+    "Preferences": {
+      "available": "core",
+      "type": "object",
+      "members": {
+        "flush": {
+          "type": "function",
+          "arity": 0
+        },
+        "hosted": {
+          "type": "boolean"
+        },
+        "load": {
+          "type": "function",
+          "arity": 1
+        },
+        "preload": {
+          "type": "function",
+          "arity": 1
+        },
+        "read": {
+          "type": "function",
+          "arity": 1
+        },
+        "readMerged": {
+          "type": "function",
+          "arity": 0
+        },
+        "remove": {
+          "type": "function",
+          "arity": 1
+        },
+        "subscribe": {
+          "type": "function",
+          "arity": 2
+        },
+        "useHost": {
+          "type": "function",
+          "arity": 1
+        },
+        "write": {
+          "type": "function",
+          "arity": 2
         }
       }
     },
@@ -793,11 +862,39 @@
         }
       }
     },
+    "quickkey": {
+      "available": "components",
+      "type": "function",
+      "arity": 2,
+      "class": false
+    },
     "Radio": {
       "available": "components",
       "type": "object",
       "members": {
         "setState": {
+          "type": "function",
+          "arity": 1
+        }
+      }
+    },
+    "RangeSlider": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "bind": {
+          "type": "function",
+          "arity": 2
+        },
+        "getValue": {
+          "type": "function",
+          "arity": 1
+        },
+        "setValue": {
+          "type": "function",
+          "arity": 2
+        },
+        "unbind": {
           "type": "function",
           "arity": 1
         }
@@ -3467,6 +3564,12 @@
       "available": "components",
       "type": "boolean"
     },
+    "Search": {
+      "available": "components",
+      "type": "function",
+      "arity": 0,
+      "class": false
+    },
     "send": {
       "available": "idle",
       "type": "function",
@@ -3674,6 +3777,12 @@
           "arity": 1
         }
       }
+    },
+    "topZIndex": {
+      "available": "components",
+      "type": "function",
+      "arity": 0,
+      "class": false
     },
     "Tree": {
       "available": "components",
