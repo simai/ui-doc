@@ -141,7 +141,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-1dffa0701c0a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-945c2ef505cc` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -150,7 +150,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 | Тег | `<sf-sortable>` |
 | Назначение | Список с перетаскиванием для изменения порядка, переноса между списками и копирования из библиотеки мышью, пером, касанием и с клавиатуры; только сообщает о намерении. |
 | Контракт | `smart.sortable`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-1dffa0701c0a` |
+| Поставка | выпуск Framework `ui-945c2ef505cc` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -188,8 +188,8 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### Источник
 
-- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/smart/sortable`
-- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/rule/rule.json#name=cl-sortable`
+- `simai/ui@945c2ef505cca268e423f9d67bf0eae0bc9cb7d9:distr/smart/sortable`
+- `simai/ui@945c2ef505cca268e423f9d67bf0eae0bc9cb7d9:distr/rule/rule.json#name=cl-sortable`
 
 ## См. также
 

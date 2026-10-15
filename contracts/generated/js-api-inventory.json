@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-1dffa0701c0a",
-  "ui_commit": "1dffa0701c0ae592c9678aabb4f091c5582ff03e",
+  "release": "ui-945c2ef505cc",
+  "ui_commit": "945c2ef505cca268e423f9d67bf0eae0bc9cb7d9",
   "stages": [
     "core",
     "dom",
@@ -3845,6 +3845,12 @@
       "class": false
     },
     "whenDefined": {
+      "available": "idle",
+      "type": "function",
+      "arity": 0,
+      "class": false
+    },
+    "whenFieldRenderers": {
       "available": "idle",
       "type": "function",
       "arity": 0,

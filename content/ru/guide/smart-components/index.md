@@ -28,6 +28,7 @@ description: "Эта часть описывает Smart-компоненты �
 - [Состояния и загрузка данных](/ru/guide/smart-components/states-and-loading/)
 - [Персональный вид](/ru/guide/smart-components/view-preferences/)
 - [Составные компоненты](/ru/guide/smart-components/composite/)
+- [Поля по типу свойства](/ru/guide/smart-components/field-renderers/)
 - [Порты хоста и намерения](/ru/guide/smart-components/host-ports/)
 - [Манифест](/ru/guide/smart-components/manifest/)
 - [Качество](/ru/guide/smart-components/quality/)

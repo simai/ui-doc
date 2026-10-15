@@ -96,6 +96,9 @@ Framework: пакет компонентов Loader с именем `larena` и�
 решает приложение. Цвет без палитры ищется как текст. Текстовый фильтр
 подписан «Содержит…».
 
+Ячейки колонок и элементы фильтра по типу свойства рисует общий набор,
+описанный в главе [Поля по типу свойства](/ru/guide/smart-components/field-renderers/).
+
 ### Действия и создание
 
 Действие над строкой или над выбранными строками отправляет
@@ -404,7 +407,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-1dffa0701c0a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-945c2ef505cc` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -513,8 +516,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@031a4e54977a465df7e67d799d4890ec2e8ceff8:components/src/smart/data-view`
-- `simai/larena-ui@031a4e54977a465df7e67d799d4890ec2e8ceff8:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/data-view`
+- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -651,5 +654,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@031a4e54977a465df7e67d799d4890ec2e8ceff8:components/src/smart/table`
-- `simai/larena-ui@031a4e54977a465df7e67d799d4890ec2e8ceff8:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/table`
+- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/table/rule.js#name=cl-table`

@@ -195,7 +195,7 @@ relation: [
 
 **Какое значение дать меткам.** Метка — любая непустая строка; Loader
 сравнивает её с сохранённой как есть. Для своей копии поставки обе метки
-задают равными идентификатору выпуска, например `ui-1dffa0701c0a`: метка
+задают равными идентификатору выпуска, например `ui-945c2ef505cc`: метка
 меняется ровно тогда, когда меняется выпуск (см. [Глобальные настройки](/ru/guide/connection/project-setup/#глобальные-настройки)).
 
 **Список отсутствующих файлов.** Если JavaScript модуля не нашёлся, Loader
@@ -293,7 +293,7 @@ Smart-компонентов.
 
 | Событие | Где | Когда |
 |:---|:---|:---|
-| `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase` и `SF.RuleLoader.registerPackage` доступны |
+| `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers` и `SF.RuleLoader.registerPackage` доступны |
 | `sf-loader-ready` | `window` | Первая партия модулей загружена. Событие отправляется один раз: обработчик, добавленный позже, не сработает |
 | `sf-runtime-ready` | `window` | Пришла общая основа Smart-компонентов (см. [Общая основа Smart-компонентов](#общая-основа-smart-компонентов)) |
 | `sf-smart-base-ready` | `window` | Загружена база Smart-компонентов; один раз на страницу |
@@ -307,7 +307,7 @@ Smart-компонентов.
 | API | Когда доступен | Как дождаться |
 |:---|:---|:---|
 | `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
-| `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
+| `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
 | `SF.Loader.theme` (`light` или `dark` — тема на странице) и `SF.Loader.themePreference` (`system`, `light` или `dark` — выбор человека) | Вместе с `SF.Loader`; значения появляются, когда Loader выбрал тему при запуске | Событие `sf-theme-change`: первое приходит при запуске |
 | `SF.smart`, `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations` | Вместе с базой Smart-компонентов: с первым Smart-элементом на странице или после `await SF.loadSmartBase()`. На странице без Smart-элементов их нет | `await SF.loadSmartBase()` после `sf-loader-init` |
 | Объекты компонентов на классах: `SF.Input`, `SF.Toast`, `SF.Tabs` и другие | Только после того, как Loader загрузил компонент по его разметке на странице. Без разметки компонента объекта нет | После `sf-loader-init`: `SF.Loader.ready('Inputs', () => SF.Input.setState(…))`. Функция вызывается сразу, если компонент уже загружен, иначе после его регистрации, когда объект `SF.<Имя>` уже назначен. Первый аргумент — имя компонента в реестре (`Inputs`, `Modal`); оно может отличаться от имени объекта (`SF.Input`) |

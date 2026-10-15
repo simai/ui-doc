@@ -55,6 +55,7 @@
             "@docs:reachable:check",
             "@docs:tokens:check",
             "@docs:catalogue-indexes:check",
+            "@docs:property-types:check",
             "@php scripts/audit-smart-lessons.php"
         ],
         "docs:architecture:check": [
@@ -84,6 +85,8 @@
         ],
         "docs:catalogue-indexes:build": "node scripts/build-catalogue-group-indexes.mjs",
         "docs:catalogue-indexes:check": "node scripts/build-catalogue-group-indexes.mjs --check",
+        "docs:property-types:build": "node scripts/build-property-types-reference.mjs",
+        "docs:property-types:check": "node scripts/build-property-types-reference.mjs --check",
         "docs:standards:check": "node scripts/sync-framework-standards.mjs --check"
     },
     "config": {

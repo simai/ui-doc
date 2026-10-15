@@ -356,6 +356,11 @@
      "order": 100
     },
     {
+     "slug": "field-renderers",
+     "title": "Поля по типу свойства",
+     "order": 105
+    },
+    {
      "slug": "host-ports",
      "title": "Порты хоста и намерения",
      "order": 110

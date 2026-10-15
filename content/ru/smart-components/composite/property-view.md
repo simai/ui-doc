@@ -130,7 +130,9 @@ description: "Показывает и правит поля одного объ�
 `sections` обязателен даже для одного раздела; один раздел рисуется без
 списка разделов. Поле занимает половину или всю ширину области (`width`),
 область раскладывается в одну или две колонки (`columns`). Отрисовщик поля
-выбирается по `propertyType`, а не по имени компонента.
+выбирается по `propertyType`, а не по имени компонента. Типы свойств, их
+значения и элементы правки описывает глава
+[Поля по типу свойства](/ru/guide/smart-components/field-renderers/).
 
 Раздел, область или поле с `rare: true` скрыты, пока не задан `show-rare`;
 приложение присылает их всегда, поэтому показ редких полей ничего не
@@ -266,7 +268,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-1dffa0701c0a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-945c2ef505cc` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -419,8 +421,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@031a4e54977a465df7e67d799d4890ec2e8ceff8:components/src/smart/property-view`
-- `simai/larena-ui@031a4e54977a465df7e67d799d4890ec2e8ceff8:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/property-view`
+- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 
