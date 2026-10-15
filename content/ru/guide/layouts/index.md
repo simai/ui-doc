@@ -31,6 +31,8 @@ Recipe имеет статус `experimental` (словарь жизненног
 
 - Компоненты, которые становятся типами макета, — [Что такое компонент](/ru/guide/components/what-is/#что-такое-компонент); Smart-компоненты,
   составные компоненты, маршруты и порты хоста — [Составные компоненты](/ru/guide/smart-components/composite/) и [Связь с приложением: порты хоста и намерения](/ru/guide/smart-components/host-ports/).
+- Страница рабочего интерфейса из фрагментов и смена области содержимого без
+  полной загрузки — [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/) и [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/).
 - Утилиты раскладки, которыми оформлен полученный HTML, — [Раскладка](/ru/guide/utilities/layout/).
 - Закрепление выпуска и обновление — [Версии: как закрепить выпуск](/ru/guide/connection/versions/) и [Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект).
 - Стандарт Composition Recipe среди других стандартов — [Recipe (`simai.composition-recipe`)](/ru/guide/standards/map/#recipe-simai-composition-recipe); проверки и

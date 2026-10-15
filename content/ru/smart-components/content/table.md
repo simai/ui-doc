@@ -207,9 +207,47 @@ Framework: пакет компонентов Loader с именем `larena` и�
   `sf-table-rows-drag` с `{ids, source}`. Принимает их, например,
   [дерево](/ru/smart-components/navigation/tree/) с `accept-records` — так
   записи раскладывают по папкам.
+- `row-reorder` — строки можно переставить, перетаскивая их внутри списка.
+  Во время перетаскивания отмечено место, куда встанет строка; после
+  отпускания приходит `sf-table-rows-reorder` с `{ids, before, order}`:
+  перемещённые идентификаторы, строка, перед которой они встали (`null` —
+  в конце), и весь новый порядок. Если порядок не изменился, события нет.
+  Порядок сохраняет приложение.
 - `accept-files` на `<sf-data-view>` — на представление можно перетащить файлы
   с компьютера: пока они над ним, видна зона сброса, после отпускания приходит
   `sf-data-view-files-drop` с `{files}`. Загружает файлы приложение.
+
+`<sf-data-view>` ставит `row-reorder` своей таблице, когда хост объявил
+возможность `row-reorder`, и не ставит в режиме дерева. Перестановку оно
+показывает сразу и просит у приложения намерением `record.reorder` с
+`{record_ids, before, revision}`; если ответ не `applied`, прежний порядок
+возвращается.
+
+### Флажки в ячейках
+
+С атрибутом `inline-edit` логическая ячейка — ячейка колонки с
+`type: 'boolean'` — становится флажком, если запись называет поле этой
+колонки в своём списке `editable`. Так приложение решает по каждой записи,
+что человек может менять:
+
+```js
+table.setColumns([
+  {key: 'title', label: 'Название'},
+  {key: 'published', label: 'Опубликовано', type: 'boolean'}
+]);
+table.setRows([
+  {id: 7, title: 'Отчёт за квартал', published: true, editable: ['published'], revision: 'r12'},
+  {id: 8, title: 'Черновик', published: false, editable: []}
+]);
+```
+
+Нажатие флажка отправляет `sf-table-cell-set` с `{id, key, value, revision}`;
+пока приложение отвечает, флажок выключен. Таблица сама значение не
+сохраняет: строку перерисовывает то, что ответило приложение.
+`<sf-data-view>` ставит `inline-edit` своей таблице, когда хост объявил
+возможность `inline-edit`, и просит изменение намерением `record.set` с
+`{record_id, key, value, revision}`. Если ответ не `applied`, флажок
+показывает значение, которое запись хранит.
 
 Кнопки действий строки по умолчанию видны в строке под указателем, в фокусе
 или текущей (`row-actions-visible="hover"`); `always` показывает их во всех
@@ -407,7 +445,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-945c2ef505cc` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-376117eac4fe` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -516,8 +554,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/data-view`
-- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@773c54ef7d4ff0d1b6056ddd3809c3846c675644:components/src/smart/data-view`
+- `simai/larena-ui@773c54ef7d4ff0d1b6056ddd3809c3846c675644:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -572,6 +610,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `preferences-key` — `string`, по умолчанию пусто. Ключ, под которым раскладка таблицы — порядок, видимость, закрепление, ширины — хранится как персональный вид (SF.Preferences, `sf-table/<key>`); представление данных передаёт свой. Без него используется table-settings-key, а без обоих ничего не хранится.
 - `row-actions-visible` — `string`, по умолчанию `hover`, значения: `hover`, `always`. Где видны кнопки действий строки: в строке под указателем, в фокусе или текущей (hover, по умолчанию) или во всех строках (always).
 - `drag-rows` — `boolean`, по умолчанию `false`. Строки можно перетащить из списка как записи (application/x-sf-records+json): запись строки или все выбранные записи, если строка среди них.
+- `row-reorder` — `boolean`, по умолчанию `false`. Строки можно переставить, перетаскивая их внутри списка; отпускание отправляет sf-table-rows-reorder {ids, before, order}. Представление данных ставит атрибут, когда хост предлагает возможность row-reorder.
+- `inline-edit` — `boolean`, по умолчанию `false`. Логическая ячейка, поле которой запись называет в `editable`, становится флажком; нажатие отправляет sf-table-cell-set {id, key, value, revision}, и ячейка ждёт ответа хоста. Представление данных ставит атрибут, когда хост предлагает возможность inline-edit.
 
 #### Свойства в документе макета
 
@@ -638,6 +678,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-table-tree-toggle` — `detail`: `{ id?: string|integer, expanded?: boolean }`. Пользователь открыл или закрыл строку дерева. Отвечает представление данных; таблица сообщает только, какая строка и была ли она открыта.
 - `sf-table-tree-more` — `detail`: `{ parent?: string|integer|null, cursor?: string|null }`. Пользователь запросил следующую страницу уровня дерева.
 - `sf-table-rows-drag` — `detail` не описан. Строки начали перетаскивать из списка: {ids, source}.
+- `sf-table-rows-reorder` — `detail`: `{ ids?: array, before?: any, order?: array }`. Строки перетащили в другой порядок внутри списка: перемещённые идентификаторы, строка, перед которой они теперь стоят (null — в конце), и весь показанный порядок.
+- `sf-table-cell-set` — `detail`: `{ id?: any, key?: string, value?: any, revision?: any }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
 
 #### Доступность
 
@@ -654,5 +696,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/table`
-- `simai/larena-ui@2628743f66980c685ddd7ec2e9c5018d8409651d:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@773c54ef7d4ff0d1b6056ddd3809c3846c675644:components/src/smart/table`
+- `simai/larena-ui@773c54ef7d4ff0d1b6056ddd3809c3846c675644:components/src/smart/table/rule.js#name=cl-table`

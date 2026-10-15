@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-945c2ef505cc",
-  "ui_commit": "945c2ef505cca268e423f9d67bf0eae0bc9cb7d9",
+  "release": "ui-376117eac4fe",
+  "ui_commit": "376117eac4fec7a187364c144a54fc8a6012749a",
   "stages": [
     "core",
     "dom",
@@ -66,6 +66,9 @@
         "BUILTIN_TYPE_MANIFESTS": {
           "type": "array"
         },
+        "FRAGMENT_DESCRIPTOR_SCHEMA": {
+          "type": "string"
+        },
         "Recipe": {
           "type": "object"
         },
@@ -75,6 +78,10 @@
         "applyFieldValue": {
           "type": "function",
           "arity": 3
+        },
+        "checkFragmentDescriptor": {
+          "type": "function",
+          "arity": 1
         },
         "checkPortValue": {
           "type": "function",
@@ -131,6 +138,10 @@
         "projectEditorFields": {
           "type": "function",
           "arity": 3
+        },
+        "publishEffects": {
+          "type": "function",
+          "arity": 1
         },
         "render": {
           "type": "function",
@@ -933,6 +944,27 @@
       "arity": 3,
       "class": false,
       "legacy_internal": true
+    },
+    "RegionNavigation": {
+      "available": "core",
+      "type": "object",
+      "members": {
+        "disable": {
+          "type": "function",
+          "arity": 0
+        },
+        "enable": {
+          "type": "function",
+          "arity": 0
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "navigate": {
+          "type": "function",
+          "arity": 1
+        }
+      }
     },
     "render": {
       "available": "components",

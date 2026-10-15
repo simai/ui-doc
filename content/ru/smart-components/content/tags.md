@@ -110,7 +110,7 @@ tags.addEventListener('close', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-945c2ef505cc` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-376117eac4fe` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -119,7 +119,7 @@ tags.addEventListener('close', (event) => {
 | Тег | `<sf-tag>` |
 | Назначение | Компактные статические, выбираемые и удаляемые метки с одним явным владельцем взаимодействия. |
 | Контракт | `smart.tags`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-945c2ef505cc` |
+| Поставка | выпуск Framework `ui-376117eac4fe` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | принят в продукт |
 
@@ -184,8 +184,8 @@ tags.addEventListener('close', (event) => {
 
 ### Источник
 
-- `simai/ui@945c2ef505cca268e423f9d67bf0eae0bc9cb7d9:distr/smart/tags`
-- `simai/ui@945c2ef505cca268e423f9d67bf0eae0bc9cb7d9:distr/rule/rule.json#name=cl-tags`
+- `simai/ui@376117eac4fec7a187364c144a54fc8a6012749a:distr/smart/tags`
+- `simai/ui@376117eac4fec7a187364c144a54fc8a6012749a:distr/rule/rule.json#name=cl-tags`
 
 ## См. также
 

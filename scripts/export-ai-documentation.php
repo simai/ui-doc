@@ -128,6 +128,9 @@ $standards['standard-contract/1.0.0'] = [$standardsRoot . '/standard-contract-1.
 $manifestSchemaVersion = json_decode((string) file_get_contents($standardsRoot . '/smart-component-manifest.v2.schema.json'), true, 512, JSON_THROW_ON_ERROR)['x-simai-version'] ?? throw new RuntimeException('Manifest schema without x-simai-version');
 $standards['smart-component-manifest/' . $manifestSchemaVersion] = [$standardsRoot . '/smart-component-manifest.v2.schema.json', null, 'manifest.schema.json', 'Манифест Smart-компонента ' . $manifestSchemaVersion, 'Схема манифеста Smart-компонента, версия 2.'];
 $standards['composite-host-port-schema/1.0.0'] = [$standardsRoot . '/composite-host-port.v1.schema.json', null, 'port.schema.json', 'Схема порта хоста 1.0.0', 'Форма объявления порта: возможности, данные, намерения с ответами, слои настроек и набор проверок.'];
+// The fragment descriptor schema names its own edition (x-simai-version).
+$fragmentSchemaVersion = json_decode((string) file_get_contents($standardsRoot . '/interface-fragment.v1.schema.json'), true, 512, JSON_THROW_ON_ERROR)['x-simai-version'] ?? throw new RuntimeException('Fragment descriptor schema without x-simai-version');
+$standards['interface-fragment-schema/' . $fragmentSchemaVersion] = [$standardsRoot . '/interface-fragment.v1.schema.json', null, 'descriptor.schema.json', 'Схема описания фрагмента ' . $fragmentSchemaVersion, 'Форма описания фрагмента интерфейса: элемент, области, порт, выходы и входы с типами значений, операция доступа, ключи адреса и бюджет.'];
 ksort($standards, SORT_STRING);
 foreach ($standards as $key => [$file, $standard, $name, $title, $description]) {
     $bytes = (string) file_get_contents($file);

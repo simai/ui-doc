@@ -63,8 +63,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-context-menu` |
-| Части | `sf-context-menu-body`, `sf-context-menu-choice`, `sf-context-menu-choice-option`, `sf-context-menu-content`, `sf-context-menu-footer`, `sf-context-menu-header`, `sf-context-menu-header-avatar`, `sf-context-menu-header-caption`, `sf-context-menu-header-name`, `sf-context-menu-header-text`, `sf-context-menu-heading`, `sf-context-menu-item`, `sf-context-menu-item--current`, `sf-context-menu-item--danger`, `sf-context-menu-item-avatar`, `sf-context-menu-item-caption`, `sf-context-menu-item-check`, `sf-context-menu-item-chevron`, `sf-context-menu-item-icon`, `sf-context-menu-item-label`, `sf-context-menu-item-lead`, `sf-context-menu-item-shortcut`, `sf-context-menu-item-text`, `sf-context-menu-item-value`, `sf-context-menu-note`, `sf-context-menu-search`, `sf-context-menu-search-input`, `sf-context-menu-separator`, `sf-context-menu-tooltip`, `sf-context-menu-top` |
-| Модификаторы | `sf-context-menu--entries`, `sf-context-menu--open` |
+| Части | `sf-context-menu-body`, `sf-context-menu-choice`, `sf-context-menu-choice-option`, `sf-context-menu-content`, `sf-context-menu-footer`, `sf-context-menu-head`, `sf-context-menu-header`, `sf-context-menu-header-avatar`, `sf-context-menu-header-caption`, `sf-context-menu-header-name`, `sf-context-menu-header-text`, `sf-context-menu-heading`, `sf-context-menu-item`, `sf-context-menu-item--current`, `sf-context-menu-item--danger`, `sf-context-menu-item-avatar`, `sf-context-menu-item-caption`, `sf-context-menu-item-check`, `sf-context-menu-item-chevron`, `sf-context-menu-item-icon`, `sf-context-menu-item-label`, `sf-context-menu-item-lead`, `sf-context-menu-item-shortcut`, `sf-context-menu-item-text`, `sf-context-menu-item-value`, `sf-context-menu-note`, `sf-context-menu-row`, `sf-context-menu-row-text`, `sf-context-menu-search`, `sf-context-menu-search-input`, `sf-context-menu-separator`, `sf-context-menu-tabs`, `sf-context-menu-tooltip`, `sf-context-menu-top` |
+| Модификаторы | `sf-context-menu--entries`, `sf-context-menu--open`, `sf-context-menu--panel` |
 | Размеры | `sf-context-menu--size-1` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -94,6 +94,7 @@ profile: reference
 | `--sf-context-menu-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-inline-end` |
 | `--sf-context-menu-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-inline-start` |
 | `--sf-context-menu-content--padding-top` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-top` |
+| `--sf-context-menu-panel--inline-size` | не задана; задают модификаторы, например `.sf-context-menu.sf-context-menu--panel .sf-context-menu-content`: `calc(var(--sf-ui-1--control-height) * 8)` | `width`, `inline-size` |
 | `--sf-context-menu-tail-corner-offset` | `0px` | — |
 | `--sf-context-menu-tail-half` | `0px` | — |
 | `--sf-context-menu-tail-size` | `0px` | — |

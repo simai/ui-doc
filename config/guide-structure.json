@@ -458,6 +458,16 @@
      "order": 140
     },
     {
+     "slug": "building/interface-fragments",
+     "title": "Фрагменты интерфейса",
+     "order": 150
+    },
+    {
+     "slug": "building/region-navigation",
+     "title": "Навигация по областям страницы",
+     "order": 155
+    },
+    {
      "slug": "content-and-data/index",
      "title": "Содержимое и данные",
      "order": 300
@@ -521,6 +531,11 @@
      "slug": "reference/api",
      "title": "API сборки и отрисовки",
      "order": 270
+    },
+    {
+     "slug": "reference/value-types",
+     "title": "Типы значений маршрутов",
+     "order": 275
     },
     {
      "slug": "reference/custom-type",

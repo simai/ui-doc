@@ -1,13 +1,13 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "bfd5b805d355b2099fdf68bd992338d72a9a70f4",
-    "core_revision": "945c2ef505cca268e423f9d67bf0eae0bc9cb7d9",
+    "source_revision": "7d6d95c0dc3291b82dca7d34443ac33dd555ce27",
+    "core_revision": "376117eac4fec7a187364c144a54fc8a6012749a",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "src/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "src/core/js/composition/index.mjs": "0a96408cd9598b825c66e1bbc27212280697a0c74946e114a36a83304d4ba1f5",
+      "src/core/js/composition/index.mjs": "cf474082ae9f869db6a79d584861f70d0ddce8e567289cd1315967af6e806e0b",
       "src/core/js/composition/builtins.mjs": "62ccb18b910e34fb39019805b41f85d3208ec714a6840bd0dcc79d75f8434d7e",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
       "src/smart/buttons/smart.manifest.json": "1f122288fc4b66e374b4fdc756a9db515f3562e4246ca814b77813132272efc1"
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "24a61b52c0e678579f1b61593dd865c14a53b2512633d01d3fcbc509dfeba7ff"
+      "distr/core/js/core.js": "e31b2e727f30816f1a3d3746d48080defb97e4cfd0c714cda511dad4208d3096"
     },
-    "note": "Reviewed at source bfd5b805 and core 945c2ef5 (release ui-945c2ef505cc): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-d7685ca01ec3."
+    "note": "Reviewed at source 7d6d95c0 and core 376117ea (release ui-376117eac4fe). index.mjs exports publishEffects, definePageHost and defineFragmentBoundary and defines sf-page-host and sf-fragment in the browser (fragments.mjs, simai.interface-fragment host-is-an-endpoint and failure-is-contained); core.js carries them and the region skeleton's reduced-motion rule. Documented in layouts/building/interface-fragments (Хост страницы, Граница фрагмента) and the api table. At ui-8711cf7df562 (source b09c469d) index.mjs gained checkFragmentDescriptor and FRAGMENT_DESCRIPTOR_SCHEMA, routing.mjs seven page value types and core.js SF.RegionNavigation, documented in layouts/building/interface-fragments, layouts/building/region-navigation and layouts/reference/value-types. The document and type-manifest schemas, composition-types, builtins, fixture and buttons manifest are byte-identical to the review at ui-7cbf3a19a7a7; the pages this contract holds do not change."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

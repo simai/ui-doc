@@ -27,3 +27,5 @@ description: "Макет делит страницу на три уровня о
 - [Шаблоны, вставки и варианты](/ru/guide/layouts/building/recipe-templates-and-variants/)
 - [Smart-компонент в макете](/ru/guide/layouts/building/smart-component/)
 - [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)
+- [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/)
+- [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)

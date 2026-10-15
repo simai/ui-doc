@@ -19,7 +19,18 @@ description: "Всё доступно как `SF.Composition` в браузер�
 | `extendRegistry(manifests, renderers)` | собирает реестр из встроенных типов и переданных | реестр |
 | `createRegistry(manifests, renderers)` | собирает реестр только из переданных манифестов: список — это весь реестр | реестр |
 | `BUILTIN_TYPE_MANIFESTS` | — | манифесты встроенных типов |
+| `checkPortValue(type, value)` | проверяет значение порта по типу ([Типы значений маршрутов](/ru/guide/layouts/reference/value-types/)) | замороженная копия значения или `TypeError` |
+| `VALUE_TYPES` | — | закрытый перечень типов значений: у каждого `summary`, `schema`, `check` |
+| `checkFragmentDescriptor(descriptor)` | проверяет описание фрагмента ([Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/#проверка-описания)) | список проблем; пустой — описание верно |
+| `publishEffects(effects, {origin})` | публикует последствия ответа порта на выходах хоста страницы `<sf-page-host>` ([Хост страницы](/ru/guide/layouts/building/interface-fragments/#хост-страницы)) | `{published, refused}` |
 | `compositionTypeFromSmartManifest(manifest)` | строит манифест типа из манифеста Smart-компонента ([Декларативный контракт](/ru/guide/layouts/building/smart-component/#декларативный-контракт)) | манифест типа |
+
+В браузере модуль сам определяет элементы `sf-composition-scope`,
+`sf-page-host` и `sf-fragment`. Модуль экспортирует и функции, которые их
+определяют, — `defineCompositionScope()`, `definePageHost()` и
+`defineFragmentBoundary()` (в `SF.Composition` из них есть только первая):
+они принимают реестр элементов, по умолчанию `customElements`, и не
+определяют элемент повторно.
 
 Пример ниже показывает полный путь от Recipe к HTML:
 

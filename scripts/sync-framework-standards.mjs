@@ -11,7 +11,7 @@
 //   - standards: ui-source contracts/standards at SOURCE_REVISION -- each
 //     current edition's standard.json, the standard-contract schema, the
 //     manifest schema in force (contracts/schema) and the pinned host-port
-//     schema (history/ stays in the source);
+//     and interface-fragment descriptor schemas (history/ stays in the source);
 //   - ports: ui distr/core/contracts/ports at UI_RUNTIME_REVISION, every
 //     edition and its conformance kit (the .gz copies left out).
 //
@@ -54,6 +54,7 @@ for (const [from, to] of [
   // pinned/ holds the editions the standards were written against.
   ['contracts/schema/smart-component-manifest.v2.schema.json', 'smart-component-manifest.v2.schema.json'],
   [standards + 'pinned/composite-host-port.v1.schema.json', 'composite-host-port.v1.schema.json'],
+  [standards + 'pinned/interface-fragment.v1.schema.json', 'interface-fragment.v1.schema.json'],
 ]) {
   expected.set(`contracts/standards/${to}`, read('source', from));
 }

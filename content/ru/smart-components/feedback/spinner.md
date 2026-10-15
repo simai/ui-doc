@@ -70,7 +70,7 @@ report.append(spinner);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-945c2ef505cc` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-376117eac4fe` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -79,7 +79,7 @@ report.append(spinner);
 | Тег | `<sf-spinner>` |
 | Назначение | Индикатор неопределённого ожидания в виде дуги или точек с необязательным вежливым (polite) объявлением статуса и анимацией Framework. |
 | Контракт | `smart.spinner`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-945c2ef505cc` |
+| Поставка | выпуск Framework `ui-376117eac4fe` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -128,8 +128,8 @@ report.append(spinner);
 
 ### Источник
 
-- `simai/ui@945c2ef505cca268e423f9d67bf0eae0bc9cb7d9:distr/smart/spinner`
-- `simai/ui@945c2ef505cca268e423f9d67bf0eae0bc9cb7d9:distr/rule/rule.json#name=cl-spinner`
+- `simai/ui@376117eac4fec7a187364c144a54fc8a6012749a:distr/smart/spinner`
+- `simai/ui@376117eac4fec7a187364c144a54fc8a6012749a:distr/rule/rule.json#name=cl-spinner`
 
 ## См. также
 
