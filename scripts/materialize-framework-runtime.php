@@ -46,9 +46,9 @@ const RELEASE_LOCK = 'contracts/releases/ui-c95d35179e84.lock.json';
 const PACKAGES = [
     'larena' => [
         'repository' => 'simai/larena-ui',
-        'revision' => '05ff22ab26edeb135b57c5bd6c9d12f028b975dc',
+        'revision' => '267dee5a28f7cea19bd58ea31db8aaf683612bb3',
         'path' => 'components',
-        'archive_sha256' => '980bdd5e0786e6ce19e3dd90e4c421143e797fe062c3cf41211893fdcfc578ae',
+        'archive_sha256' => '15cb77134dc046b99395ff9680002ff56cd11b18168de2074c5c6a76708d8a48',
     ],
 ];
 

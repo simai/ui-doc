@@ -203,6 +203,18 @@ Framework: пакет компонентов Loader с именем `larena` и�
 Отдельная таблица без `<sf-data-view>` показывает только «нет записей» и
 ошибку. Подробнее — в [Пустые состояния](/ru/guide/smart-components/states-and-loading/#пустые-состояния).
 
+### Прокрутка на странице списка
+
+`vertical-scroll` у `<sf-table>` выбирает, что прокручивается вверх и вниз:
+`self` — таблица внутри своей рамки, `page` — сама страница. Представление
+данных по умолчанию ставит своей таблице `page`, если приложение не выбрало
+иное. Тогда таблица растёт на высоту своих строк, и на странице списка
+прокручивается одно — сама страница. По горизонтали таблица прокручивается
+внутри себя: её полосу заменяет направляющая, закреплённая у нижнего края
+окна. Панель инструментов держится у верхнего края, а шапка таблицы встаёт
+под ней. В настройках таблицы на вкладке «Вид» это переключает «Закреплять
+фильтр и шапку»; по умолчанию закрепление включено.
+
 ### Персональный вид
 
 С атрибутом `preferences-key` на `<sf-data-view>` (обычно это имя
@@ -478,8 +490,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/data-view`
-- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@267dee5a28f7cea19bd58ea31db8aaf683612bb3:components/src/smart/data-view`
+- `simai/larena-ui@267dee5a28f7cea19bd58ea31db8aaf683612bb3:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -613,5 +625,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/table`
-- `simai/larena-ui@05ff22ab26edeb135b57c5bd6c9d12f028b975dc:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@267dee5a28f7cea19bd58ea31db8aaf683612bb3:components/src/smart/table`
+- `simai/larena-ui@267dee5a28f7cea19bd58ea31db8aaf683612bb3:components/src/smart/table/rule.js#name=cl-table`

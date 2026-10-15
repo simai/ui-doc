@@ -438,10 +438,10 @@ if (result.status !== 'PASS') {
 
    ```bash
    git clone https://github.com/simai/larena-ui.git
-   git -C larena-ui checkout 05ff22ab26edeb135b57c5bd6c9d12f028b975dc
+   git -C larena-ui checkout 267dee5a28f7cea19bd58ea31db8aaf683612bb3
    node <ui-builder>/bin/sf-build.js package --name larena \
      --package-root larena-ui/components \
-     --package-revision 05ff22ab26edeb135b57c5bd6c9d12f028b975dc \
+     --package-revision 267dee5a28f7cea19bd58ea31db8aaf683612bb3 \
      --package-repository simai/larena-ui \
      --ui-source <ui-source> --ui <ui> --out build/larena --json
    ```
@@ -452,12 +452,12 @@ if (result.status !== 'PASS') {
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/larena/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/larena/05ff22ab26edeb135b57c5bd6c9d12f028b975dc/smart/`, и объявляют
+   `public/assets/larena/267dee5a28f7cea19bd58ea31db8aaf683612bb3/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {larena: {base: '/assets/larena/05ff22ab26edeb135b57c5bd6c9d12f028b975dc/smart'}},
+     packages: {larena: {base: '/assets/larena/267dee5a28f7cea19bd58ea31db8aaf683612bb3/smart'}},
    };
    ```
 
