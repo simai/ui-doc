@@ -226,7 +226,7 @@ layer.addEventListener('keydown', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-ed193b6adfda` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1dffa0701c0a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -235,7 +235,7 @@ layer.addEventListener('keydown', (event) => {
 | Тег | `<sf-context-menu>` |
 | Назначение | Меню действий Framework: пункты данными со значком, подписью, значением, сочетанием клавиш, отметкой, подменю, разделителем и заголовком; openFor() открывает его в верхнем слое с привязкой, клавиатурой, переходом по первой букве и возвратом фокуса. Хост может по-прежнему рисовать свои пункты и сам управлять жизненным циклом. |
 | Контракт | `smart.context-menu`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-ed193b6adfda` |
+| Поставка | выпуск Framework `ui-1dffa0701c0a` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -306,8 +306,8 @@ layer.addEventListener('keydown', (event) => {
 
 ### Источник
 
-- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/smart/context-menu`
-- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/smart/context-menu`
+- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/rule/rule.json#name=cl-context-menu`
 
 ## См. также
 

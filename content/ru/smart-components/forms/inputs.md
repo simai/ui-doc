@@ -112,7 +112,7 @@ email.getInputElement().focus();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-ed193b6adfda` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1dffa0701c0a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -121,7 +121,7 @@ email.getInputElement().focus();
 | Тег | `<sf-input>` |
 | Назначение | Нативное однострочное поле формы с оформлением Framework, сообщениями валидации и необязательной поддержкой маски. |
 | Контракт | `smart.inputs`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-ed193b6adfda` |
+| Поставка | выпуск Framework `ui-1dffa0701c0a` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -199,5 +199,5 @@ email.getInputElement().focus();
 
 ### Источник
 
-- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/smart/inputs`
-- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/rule/rule.json#name=cl-inputs`
+- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/smart/inputs`
+- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/rule/rule.json#name=cl-inputs`

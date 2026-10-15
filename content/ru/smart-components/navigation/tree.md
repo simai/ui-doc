@@ -76,6 +76,20 @@ await customElements.whenDefined('sf-tree');
 tree.items = await fetchFolders();
 ```
 
+### Перетаскивание на узел
+
+Дерево может принимать на узел то, что на него перетащили, — например, в
+файловом менеджере. Само оно ничего не перемещает и не загружает: оно
+сообщает, что и куда отпустили, а дальше действует приложение. Узел, над
+которым сейчас перетаскивают, подсвечивается.
+
+- `accept-records` — узел принимает записи, перетащенные из списка, например
+  строки [таблицы](/ru/smart-components/content/table/) с `drag-rows`. После
+  отпускания приходит `sf-tree-records-drop` с `{value, ids, source}`: `value` —
+  узел, `ids` — записи, `source` — откуда их взяли.
+- `accept-files` — узел принимает файлы с компьютера; приходит
+  `sf-tree-files-drop` с `{value, files}`.
+
 ## Доступность
 
 - Дереву нужно доступное имя: `aria-label` на `<sf-tree>`.
@@ -96,7 +110,7 @@ tree.items = await fetchFolders();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-ed193b6adfda` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1dffa0701c0a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,7 +119,7 @@ tree.items = await fetchFolders();
 | Тег | `<sf-tree>` |
 | Назначение | Доступный иерархический составной компонент с перемещаемым фокусом (roving focus), раскрытием ветвей и выбором, которым управляет элемент. |
 | Контракт | `smart.tree`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-ed193b6adfda` |
+| Поставка | выпуск Framework `ui-1dffa0701c0a` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -117,6 +131,8 @@ tree.items = await fetchFolders();
 - `role` — `string`, по умолчанию `tree`, значения: `tree`.
 - `selection` — `string`, по умолчанию `none`, значения: `none`, `single`, `multiple`.
 - `items` — `array` из `object`, по умолчанию `[]`. Пункты, заданные данными вместо дочерних sf-tree-item (задаётся как свойство, а не атрибут): [{label, href?, target?, rel?, kind?, value?, open?, selected?, active?, disabled?, icon?, openIcon?, closedIcon?, chevronOpenIcon?, chevronClosedIcon?, openLabel?, closeLabel?, children?}]. text или title заменяют label. Установка заменяет пункты и перерисовывает дерево; дочерние sf-tree-item читаются один раз и удаляются, поэтому родитель, который перерисовывает изменённые пункты, передаёт их этим способом.
+- `accept-records` — `boolean`, по умолчанию `false`. Узел принимает записи, перетащенные из списка (application/x-sf-records+json), и сообщает об этом событием sf-tree-records-drop.
+- `accept-files` — `boolean`, по умолчанию `false`. Узел принимает файлы, перетащенные с компьютера, и сообщает об этом событием sf-tree-files-drop.
 
 ### Методы
 
@@ -127,6 +143,8 @@ tree.items = await fetchFolders();
 Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
 
 - `sf-tree-selection-change` — `detail`: `{ component: object, tagName: string, template: string, item: object, selected: boolean, value: string }`. Запрошен или изменён выбор элемента дерева.
+- `sf-tree-records-drop` — `detail` не описан. На узел отпустили записи, перетащенные из списка: {value, ids, source}. Дерево ничего не перемещает.
+- `sf-tree-files-drop` — `detail` не описан. На узел отпустили файлы с компьютера: {value, files}. Дерево ничего не загружает.
 
 ### Доступность
 
@@ -143,8 +161,8 @@ tree.items = await fetchFolders();
 
 ### Источник
 
-- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/smart/tree`
-- `simai/ui@ed193b6adfdae157b03c018020cdaaa2c3da1508:distr/rule/rule.json#name=cl-tree`
+- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/smart/tree`
+- `simai/ui@1dffa0701c0ae592c9678aabb4f091c5582ff03e:distr/rule/rule.json#name=cl-tree`
 
 ## См. также
 

@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "70b2a4d6dacacddba683524f5af1d88c7b4825f8",
-    "core_revision": "ed193b6adfdae157b03c018020cdaaa2c3da1508",
+    "source_revision": "cd6b3e876e1359bfc435551c72d80e1108ba0150",
+    "core_revision": "1dffa0701c0ae592c9678aabb4f091c5582ff03e",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "24a61b52c0e678579f1b61593dd865c14a53b2512633d01d3fcbc509dfeba7ff"
     },
-    "note": "Reviewed at source 70b2a4d6 and core ed193b6a (release ui-ed193b6adfda): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-c95d35179e84."
+    "note": "Reviewed at source cd6b3e87 and core 1dffa070 (release ui-1dffa0701c0a): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-ed193b6adfda."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
