@@ -26,6 +26,8 @@ description: "Карта стандартов показывает все ста
 | 4 | Порт хоста | `simai.composite-host-port` | 1.0.3 | Сам стык: объявленный и версионированный порт | наследует динамический |
 | 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.0.0 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
 | сквозной | Жизненный цикл изменений | `simai.change-lifecycle` | 1.0.0 | Как публичное имя уходит из Framework | схема журнала, политика сроков |
+| сквозной | Правила взаимодействия | `simai.interaction-rules` | 1.0.0 | Как любой Smart-компонент загружается, говорит с соседями и рисует | — |
+| 2 | Фоновый эффект | `simai.effect` | 1.0.0 | Анимированный фон в области страницы: манифест, модуль, правила работы, набор проверок | Standard Contract; схема манифеста эффекта; правила взаимодействия |
 
 Форматы данных и их старшие версии. Старшая версия формата равна старшей
 версии стандарта, который его определяет (см. [Имена и версии](#имена-и-версии)).
@@ -39,6 +41,7 @@ description: "Карта стандартов показывает все ста
 | Манифест Smart-компонента (`smart.manifest.json`) | 2 | `simai.smart-component-manifest` |
 | `simai.composite.host-port` — объявление порта | 1 | `simai.composite-host-port` |
 | `simai.interface-fragment` — описание фрагмента | 1 | `simai.interface-fragment` |
+| `simai.effect` — манифест эффекта (`effect.json`) | 1 | `simai.effect` |
 | `simai.change-journal` | 1 | `simai.change-lifecycle` |
 | `simai.framework.product-package-source-lock` | 1 | `simai.component-package` |
 | `simai.framework.product-package-receipt` | 1 | `simai.component-package` |
@@ -46,7 +49,7 @@ description: "Карта стандартов показывает все ста
 Где записана версия, зависит от формата. Квитанция пакета записывает имя в
 поле `schema_id`, а версию — в `schema_version`. Форматы композиции (Recipe,
 документ, входы, перечень зависимостей), журнал изменений и
-`framework.lock.json` пакета и описание фрагмента несут старшую
+`framework.lock.json` пакета, описание фрагмента и манифест эффекта несут старшую
 версию в самой метке `schema` (`"simai.framework.product-package-source-lock.v1"`)
 и отдельного поля `schema_version` не имеют. Такую метку пишут точно, как в
 примерах (см. [Имена и версии](#имена-и-версии)).
@@ -77,6 +80,9 @@ description: "Карта стандартов показывает все ста
 | Схема объявления порта | [`/ai/standards/composite-host-port-schema/1.0.0/port.schema.json`](/ai/standards/composite-host-port-schema/1.0.0/port.schema.json) |
 | Конверт фрагмента интерфейса | [`/ai/standards/simai.interface-fragment/1.0.0/standard.json`](/ai/standards/simai.interface-fragment/1.0.0/standard.json) |
 | Схема описания фрагмента | [`/ai/standards/interface-fragment-schema/1.0.0/descriptor.schema.json`](/ai/standards/interface-fragment-schema/1.0.0/descriptor.schema.json) |
+| Конверт правил взаимодействия | [`/ai/standards/simai.interaction-rules/1.0.0/standard.json`](/ai/standards/simai.interaction-rules/1.0.0/standard.json) |
+| Конверт фонового эффекта | [`/ai/standards/simai.effect/1.0.0/standard.json`](/ai/standards/simai.effect/1.0.0/standard.json) |
+| Схема манифеста эффекта | [`/ai/standards/effect-schema/1.0.0/effect.schema.json`](/ai/standards/effect-schema/1.0.0/effect.schema.json) |
 | Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
 | Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.0.0/standard.json`](/ai/standards/simai.component-package/1.0.0/standard.json) |
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
@@ -305,6 +311,32 @@ Smart-компонента (`simai.smart-component-manifest`) — заморож
 
 Как устроены описание и страница из фрагментов — см. [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/); типы значений — [Типы значений маршрутов](/ru/guide/layouts/reference/value-types/); навигация по областям — [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/).
 
+## Правила взаимодействия (`simai.interaction-rules`)
+
+Стандарт **правил взаимодействия** задаёт, как любой Smart-компонент —
+простой или составной — загружается, говорит с другими компонентами и
+рисует: одно действие — одна отрисовка, пять состояний со скелетоном для
+загрузки и `sf-empty-state` для остальных, ожидание вместо «недоступно»,
+свойства вниз и события вверх, маршруты между соседями, настройки вида через
+`SF.Preferences`, лёгкая разметка для повторов, ресурсы вместе и один раз,
+устойчивая геометрия, уменьшение движения, изоляция сбоев, работа без кадров
+анимации и проверка каждого правила в сборке. Стандарт сквозной: он
+относится ко всем компонентам и составным компонентам и не наследует другие
+стандарты. Восемнадцать требований с пояснениями — на странице
+[Правила взаимодействия компонентов](/ru/guide/standards/interaction-rules/).
+
+## Фоновый эффект (`simai.effect`)
+
+Стандарт **фонового эффекта** задаёт анимированный фон в одной области
+страницы: манифест `effect.json` с типизированными настройками в границах,
+один модуль с `mount`, `update`, `pause`, `resume` и `destroy`, неподвижный
+кадр при уменьшении движения, покой в скрытой вкладке, отсутствие сетевых
+запросов, чистое уничтожение, чужие эффекты в изолированном фрейме и набор
+проверок перед показом в списке. Он использует схему манифеста (`uses`) и
+опирается на правила взаимодействия в части движения и сбоев. Как написать,
+подключить и проверить эффект, и семнадцать требований — на странице
+[Фоновые эффекты](/ru/guide/layouts/building/background-effects/).
+
 ## Жизненный цикл изменений (`simai.change-lifecycle`)
 
 Стандарт **жизненного цикла изменений** задаёт, как публичное имя уходит из
@@ -438,7 +470,8 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 (`"schema": "simai.change-journal.v1"`), файл закрепления пакета
 (`"schema": "simai.framework.product-package-source-lock.v1"`), файл
 настроек `sf-build` (`"schema": "simai.sf-build.config.v1"`), описание
-фрагмента (`"schema": "simai.interface-fragment.v1"`). Для них метку
+фрагмента (`"schema": "simai.interface-fragment.v1"`), манифест эффекта
+(`"schema": "simai.effect.v1"`). Для них метку
 пишут точно, с версией; поле `schema_version` им не нужно. Перевод такого
 формата на пару `schema` и `schema_version` — несовместимое изменение формата
 и проходит путь, описанный ниже.

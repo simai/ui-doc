@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-5f5f49438ee0",
-  "ui_commit": "5f5f49438ee0315fe2beb05d1d85385abe0c49b4",
+  "release": "ui-2cc712424489",
+  "ui_commit": "2cc712424489c73947caed36a0b9a61a211ebc2a",
   "stages": [
     "core",
     "dom",
@@ -262,6 +262,31 @@
           "arity": 0
         },
         "unbind": {
+          "type": "function",
+          "arity": 1
+        }
+      }
+    },
+    "Effects": {
+      "available": "core",
+      "type": "object",
+      "members": {
+        "EFFECT_SCHEMA": {
+          "type": "string"
+        },
+        "checkEffectManifest": {
+          "type": "function",
+          "arity": 1
+        },
+        "checkSetting": {
+          "type": "function",
+          "arity": 2
+        },
+        "effectSettings": {
+          "type": "function",
+          "arity": 1
+        },
+        "mountEffect": {
           "type": "function",
           "arity": 1
         }

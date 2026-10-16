@@ -195,7 +195,7 @@ relation: [
 
 **Какое значение дать меткам.** Метка — любая непустая строка; Loader
 сравнивает её с сохранённой как есть. Для своей копии поставки обе метки
-задают равными идентификатору выпуска, например `ui-5f5f49438ee0`: метка
+задают равными идентификатору выпуска, например `ui-2cc712424489`: метка
 меняется ровно тогда, когда меняется выпуск (см. [Глобальные настройки](/ru/guide/connection/project-setup/#глобальные-настройки)).
 
 **Список отсутствующих файлов.** Если JavaScript модуля не нашёлся, Loader
@@ -306,7 +306,7 @@ Smart-компонентов.
 
 | API | Когда доступен | Как дождаться |
 |:---|:---|:---|
-| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
+| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
 | `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
 | `SF.Loader.theme` (`light` или `dark` — тема на странице) и `SF.Loader.themePreference` (`system`, `light` или `dark` — выбор человека) | Вместе с `SF.Loader`; значения появляются, когда Loader выбрал тему при запуске | Событие `sf-theme-change`: первое приходит при запуске |
 | `SF.smart`, `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations` | Вместе с базой Smart-компонентов: с первым Smart-элементом на странице или после `await SF.loadSmartBase()`. На странице без Smart-элементов их нет | `await SF.loadSmartBase()` после `sf-loader-init` |

@@ -468,6 +468,11 @@
      "order": 155
     },
     {
+     "slug": "building/background-effects",
+     "title": "Фоновые эффекты",
+     "order": 158
+    },
+    {
      "slug": "content-and-data/index",
      "title": "Содержимое и данные",
      "order": 300
@@ -603,6 +608,11 @@
      "slug": "map",
      "title": "Карта стандартов",
      "order": 20
+    },
+    {
+     "slug": "interaction-rules",
+     "title": "Правила взаимодействия компонентов",
+     "order": 25
     },
     {
      "slug": "ports",

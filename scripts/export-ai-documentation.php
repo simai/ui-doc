@@ -131,6 +131,8 @@ $standards['composite-host-port-schema/1.0.0'] = [$standardsRoot . '/composite-h
 // The fragment descriptor schema names its own edition (x-simai-version).
 $fragmentSchemaVersion = json_decode((string) file_get_contents($standardsRoot . '/interface-fragment.v1.schema.json'), true, 512, JSON_THROW_ON_ERROR)['x-simai-version'] ?? throw new RuntimeException('Fragment descriptor schema without x-simai-version');
 $standards['interface-fragment-schema/' . $fragmentSchemaVersion] = [$standardsRoot . '/interface-fragment.v1.schema.json', null, 'descriptor.schema.json', 'Схема описания фрагмента ' . $fragmentSchemaVersion, 'Форма описания фрагмента интерфейса: элемент, области, порт, выходы и входы с типами значений, операция доступа, ключи адреса и бюджет.'];
+$effectSchemaVersion = json_decode((string) file_get_contents($standardsRoot . '/effect.v1.schema.json'), true, 512, JSON_THROW_ON_ERROR)['x-simai-version'] ?? throw new RuntimeException('Effect manifest schema without x-simai-version');
+$standards['effect-schema/' . $effectSchemaVersion] = [$standardsRoot . '/effect.v1.schema.json', null, 'effect.schema.json', 'Схема манифеста эффекта ' . $effectSchemaVersion, 'Форма effect.json фонового эффекта: имя, версия, подпись, модуль, стили, превью, поверхности, типизированные настройки и потребности.'];
 ksort($standards, SORT_STRING);
 foreach ($standards as $key => [$file, $standard, $name, $title, $description]) {
     $bytes = (string) file_get_contents($file);

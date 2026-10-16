@@ -29,3 +29,4 @@ description: "Макет делит страницу на три уровня о
 - [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)
 - [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/)
 - [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)
+- [Фоновые эффекты](/ru/guide/layouts/building/background-effects/)

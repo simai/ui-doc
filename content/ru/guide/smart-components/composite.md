@@ -130,3 +130,4 @@ Smart-компонентов. Используйте `customElements.whenDefined
 - [События](/ru/guide/smart-components/events/) — события и их всплытие.
 - [Связь с приложением: порты хоста и намерения](/ru/guide/smart-components/host-ports/) — динамический составной компонент и порты хоста.
 - [Разделы манифеста](/ru/guide/smart-components/manifest/#разделы-манифеста) — поле `kind` манифеста.
+- [Правила взаимодействия компонентов](/ru/guide/standards/interaction-rules/) — свойства вниз и события вверх, маршруты между соседями.

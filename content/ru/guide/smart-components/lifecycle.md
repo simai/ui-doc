@@ -110,3 +110,4 @@ onDisconnected() {
 - [События](/ru/guide/smart-components/events/) — события жизненного цикла.
 - [Содержимое и слоты](/ru/guide/smart-components/slots/) — когда доступно содержимое слотов.
 - [Проверки](/ru/guide/smart-components/quality/#проверки) — проверки жизненного цикла.
+- [Правила взаимодействия компонентов](/ru/guide/standards/interaction-rules/) — одно действие — одна отрисовка, обновления в одном кадре.

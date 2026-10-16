@@ -27,6 +27,7 @@ description: "Как стандарты, проверки и машиночит�
 
 - [Что такое стандарт](/ru/guide/standards/what-is/)
 - [Карта стандартов](/ru/guide/standards/map/)
+- [Правила взаимодействия компонентов](/ru/guide/standards/interaction-rules/)
 - [Порты и наборы проверок](/ru/guide/standards/ports/)
 - [Принципы качества](/ru/guide/standards/quality-principles/)
 - [Как Framework проверяет себя](/ru/guide/standards/framework-checks/)

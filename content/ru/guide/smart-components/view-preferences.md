@@ -108,3 +108,4 @@ SF.Preferences.useHost({
 ## Смотрите также
 
 - [Состояния и загрузка данных](/ru/guide/smart-components/states-and-loading/) — граница состояния компонента.
+- [Правила взаимодействия компонентов](/ru/guide/standards/interaction-rules/) — общее состояние человека только через `SF.Preferences`.
