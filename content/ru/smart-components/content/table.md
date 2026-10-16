@@ -773,7 +773,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-table-create-intent` — `detail`: `{ item: string|null }`. Событие таблицы, которое слушает представление: нажата кнопка создания или пункт её меню. Представление отправляет view.create_record с detail в том виде, в каком он пришёл.
 - `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Событие таблицы, которое слушает представление: изменился входной порт контекста его таблицы. Представление не берёт номер последовательности таблицы и перечитывает список своим query.change.
 - `sf-table-template-delete` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» удалён сохранённый шаблон, по одному событию на шаблон. Представление отправляет view.delete с ключом.
-- `sf-table-template-save` — `detail` не описан. Событие таблицы, которое слушает представление: сохранён шаблон фильтра. Представление превращает его в saveView (view.save) с key, label, revision, level, roles, layout и settings; массив в detail — несколько шаблонов после «Применить» на вкладке «Шаблоны» — сохраняется по одному шаблону с key.
+- `sf-table-template-save` — `detail` не описан. Событие таблицы, которое слушает представление: сохранён шаблон фильтра. Представление превращает его в saveView (view.save) с key, label, revision, level, roles, layout и settings; массив в detail сохраняется по одному шаблону, каждый своим view.save, записи без key пропускаются.
 - `sf-table-template-select` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» применён другой сохранённый шаблон. Представление отправляет view.open с ключом и восстанавливает поля фильтра, с которыми представление было сохранено.
 - `sf-host-port-request` — `detail`: `{ component?: object, context?: object }`. Запрашивает у страницы порт хоста — один раз за подключение и только пока у элемента его нет. Общее соглашение для всех компонентов, принимающих `setHostPort`: потребителю, встраивающему такой компонент в другой, не нужно искать элемент и вызывать у него метод. Ответ — вызов `setHostPort` на цели события, сразу или позже.
 - `sf-data-view-list-open` — `detail`: `{ reason: any, query: object }`. Пользователь запросил весь список, часть которого показана из-за ограничения числа строк. Передаёт запрос, чтобы хост открыл полное представление с теми же записями; компонент не строит собственный адрес.
@@ -797,8 +797,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/data-view`
-- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/data-view`
+- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -939,5 +939,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/table`
-- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/table`
+- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/table/rule.js#name=cl-table`

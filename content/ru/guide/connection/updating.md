@@ -162,7 +162,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `larena`, например
-  `SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/7c8831498dabec046f68a55b455a7dd4d44a9c72/smart'}`
+  `SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/13c0550c34a5ec59818fb1791e92cd7bc780cb63/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/larena-ui` (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)).

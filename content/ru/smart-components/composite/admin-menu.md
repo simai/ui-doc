@@ -198,6 +198,9 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 Переход по строке меню не выполняет: оно поднимает `item.open`, и после ответа
 `applied` отмечает строку текущей и отправляет `sf-admin-menu-navigate` с
 `{key, href}`. Приложение со своим маршрутизатором переходит по этому событию.
+Открытая вторая колонка следует за текущей страницей: при первом ответе порта
+и при каждой смене адреса она показывает корень, в котором лежит страница.
+Колонку, которую человек закрыл, меню само не открывает.
 Каждое намерение дублируется событием `sf-admin-menu-intent` с
 `{intent, payload}`: по нему страница видит, что человек попросил, но отвечает
 только порт.
@@ -338,8 +341,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/admin-menu`
-- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/admin-menu`
+- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 
