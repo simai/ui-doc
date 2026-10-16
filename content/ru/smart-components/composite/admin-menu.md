@@ -26,8 +26,8 @@ description: "Даёт административному приложению �
 
 Элемент загружается, только если пакет `larena` объявлен до подключения Core:
 `window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
-Готовой сборки пакета для загрузки нет: проект без Larena собирает её сам
-(см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)). Подробнее — в разделе
+Сборка пакета публикуется выпуском репозитория `simai/larena-ui`
+(см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Подробнее — в разделе
 [Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
 
 ### Два способа задать меню

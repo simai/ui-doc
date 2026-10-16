@@ -358,8 +358,8 @@ await SF.loadSmartBase();   // после этого доступны SF.smart, 
 Действующий пакет продукта — `larena`: четыре элемента `sf-table`,
 `sf-data-view`, `sf-property-view` и `sf-admin-menu`. Их нет ни в поставке
 `ui`, ни в правилах ядра; страница, которой они нужны, объявляет пакет
-`larena` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)). Готовой сборки пакета `larena` для загрузки
-нет: проект без Larena собирает её сам (см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)). Пример ниже показывает тот же
+`larena` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)). Готовая сборка пакета `larena`
+публикуется выпуском репозитория `simai/larena-ui` (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Пример ниже показывает тот же
 порядок на вымышленном пакете `shop`.
 
 Пакет соответствует стандарту `simai.component-package` (см. [Пакет компонентов (`simai.component-package`)](/ru/guide/standards/map/#пакет-компонентов-simai-component-package)) и

@@ -165,7 +165,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/8ca46f49f30847f5e8c328dfadb4d117389616a1/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
-  странице. Проект без Larena собирает пакет сам (см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)).
+  странице. Проект без Larena берёт сборку из выпуска `simai/larena-ui` (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)).
 
 После ручных правок инструмент запускают снова и повторяют, пока он ничего
 не находит: ручная правка одного места может открыть следующую механическую

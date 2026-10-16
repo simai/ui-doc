@@ -194,9 +194,9 @@ Apache-2.0. Пакет соответствует стандарту
 - **Как поставляется.** Продукт кладёт собранный каталог `smart/` в свою
   поставку и отдаёт его вместе с тем выпуском Framework, на котором пакет
   собран. Отдельного репозитория со сборками нет, и собранные файлы в git не
-  хранятся: сборку пакета `larena` приносит поставка Larena, а какой выпуск
-  Framework ей нужен, называет её квитанция. Проект без Larena собирает пакет
-  `larena` сам (см. «Пакет `larena` без поставки Larena» в [Сборка пакета: `sf-build`](#сборка-пакета-sf-build)). На странице пакет подключается как пакет компонентов Loader под
+  хранятся: сборку пакета `larena` приносит поставка Larena или выпуск репозитория
+  `simai/larena-ui`, а какой выпуск Framework ей нужен, называет её квитанция
+  (см. [«Пакет `larena` для проекта без Larena»](#пакет-larena-для-проекта-без-larena)). На странице пакет подключается как пакет компонентов Loader под
   именем продукта: `SF_BOOT_CONFIG.packages.<имя> = {base: '<путь>/smart'}`.
   Файл правил `<base>/rule.js` Loader загружает сам (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)).
 - **Квитанция пакета.** Каждая сборка пакета сопровождается квитанцией, по
@@ -448,17 +448,41 @@ if (result.status !== 'PASS') {
 - каждая из двух сборок устанавливает зафиксированные зависимости сборщика
   заново, поэтому нужен кеш Yarn или доступ к сети.
 
-#### Пакет `larena` без поставки Larena
+#### Пакет `larena` для проекта без Larena
 
-Готовой сборки пакета `larena` для загрузки нет. Проект, который использует
-элементы пакета `larena` без самой Larena, собирает пакет сам командой
-`sf-build package` при тех же условиях запуска. Нужны три открытых
-репозитория на закреплённых ревизиях: `simai/ui-builder` (сборщик; установка
-зависимостей и команда — в его [README](https://github.com/simai/ui-builder#using-sf-build-in-a-product)), `simai/ui-source` (исходники
+Каждая сборка пакета `larena` публикуется выпуском открытого репозитория
+[`simai/larena-ui`](https://github.com/simai/larena-ui/releases): выпуск
+называется `larena-` и первыми двенадцатью знаками коммита пакета. В выпуске
+три файла: архив `package-larena.tar`, его SHA-256 в
+`package-larena.tar.sha256` и квитанция `package-receipt.json`, которая
+называет выпуск Framework, рядом с которым пакет работает. Проект без Larena
+берёт пакет оттуда:
+
+```bash
+commit=8ca46f49f30847f5e8c328dfadb4d117389616a1
+tag="larena-${commit:0:12}"
+gh release download "$tag" --repo simai/larena-ui \
+  --pattern 'package-larena.tar*' --pattern package-receipt.json
+shasum -a 256 -c package-larena.tar.sha256
+mkdir -p "public/assets/larena/$commit"
+tar -xf package-larena.tar -C "public/assets/larena/$commit"
+```
+
+Без `gh` те же файлы скачиваются по адресу
+`https://github.com/simai/larena-ui/releases/download/<выпуск>/<файл>`.
+Архив разворачивает папку `smart/`; её адрес и объявляют на странице:
+`SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/<коммит пакета>/smart'}`.
+Если SHA-256 не совпадает, архив не разворачивают.
+
+Ту же сборку можно воспроизвести из исходников командой `sf-build package` при
+тех же условиях запуска: архив получится байт в байт тем же, и его SHA-256
+совпадёт с опубликованным. Нужны три открытых репозитория на закреплённых
+ревизиях: `simai/ui-builder` (сборщик; установка зависимостей и команда — в
+его [README](https://github.com/simai/ui-builder#using-sf-build-in-a-product)), `simai/ui-source` (исходники
 Framework на ревизии, которую закрепляет `components/framework.lock.json`
 пакета, для этого выпуска — `d28ac099cc09450d60f0e0d1895fe3bc5dc8a082`) и `simai/larena-ui`
 (исходник пакета).
-Пример — для выпуска `ui-b67288e349e0`; `<ui-builder>`, `<ui-source>` и `<ui>` —
+Пример воспроизведения — для выпуска `ui-b67288e349e0`; `<ui-builder>`, `<ui-source>` и `<ui>` —
 пути к рабочим копиям, `<ui>` стоит на текущей ветке `main`.
 
 1. **Сборка.** Папка пакета — `components` репозитория `simai/larena-ui`,
