@@ -53,7 +53,8 @@ description: "Даёт административному приложению �
 - `item-id` — постоянный ключ пункта. Сохранённые настройки ссылаются на него,
   поэтому не меняйте его при переименовании.
 - `label` — подпись, `href` — адрес, `left-icon` — значок перед подписью
-  (имя из набора иконок Framework), `badge` — значок с числом справа.
+  (имя из набора иконок Framework; атрибут `icon` у пункта не читается),
+  `badge` — значок с числом справа.
 - `current` отмечает пункт текущей страницы, `disabled` выключает пункт,
   `hidden` скрывает его.
 - `divider` превращает пункт в разделитель.
@@ -112,7 +113,6 @@ description: "Даёт административному приложению �
   @media (width >= 44rem) {
     .app-menu { inline-size: var(--menu-width, 16rem); }
   }
-  .app-menu sf-resizer { z-index: 61; }
 }
 ```
 
@@ -120,9 +120,8 @@ description: "Даёт административному приложению �
 
 - у колонки нет `overflow`: ручка наполовину выходит за её край, и
   прокрутка колонки обрезала бы эту половину;
-- у корня `<sf-admin-menu>` `z-index` равен 60, а у ручки — 2, поэтому без
-  правила `z-index: 61` меню закрывает ручку от указателя, и её нельзя ни
-  тянуть, ни вернуть двойным щелчком; клавиатура работает и без него;
+- ручка стоит над меню сама: её слой — седьмая ступень, а корня
+  `<sf-admin-menu>` — шестая, поэтому своего `z-index` в CSS проекта не нужно;
 - ширину колонки хранит ручка под `sf-resizer/<storage-key>`
   ([персональный вид](/ru/guide/smart-components/view-preferences/)), а
   ширину в первом кадре пишет сервер в `style` колонки (см. [Где хранится ширина](/ru/smart-components/overlays/resizer/#где-хранится-ширина)).
@@ -187,7 +186,9 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 `unavailable`. Исключение в `raise` меню считает ответом `unavailable`.
 Ответ `applied` на `navigation.load` несёт всё меню: `revision`, `echo`,
 `site`, `current`, `items`, `favourites`, `profiles`, `rights` и `person`.
-Строка в `items` — `{key, kind, level, label, icon, href, children}`; `kind`
+Строка в `items` — `{key, kind, level, label, icon, href, children}`; `icon`
+строки становится значком перед подписью, как `left-icon` у пункта
+разметки; `kind`
 принимает значения `root`, `section`, `page`, `divider`, `heading`, `link`, а
 `level="install"` выделяет строки, общие для всех сайтов. Счётчики в строках —
 только непрочитанное и ожидающее; число записей показывает
@@ -246,7 +247,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e3daedde2b41` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-b67288e349e0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -337,8 +338,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/admin-menu`
-- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/admin-menu`
+- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

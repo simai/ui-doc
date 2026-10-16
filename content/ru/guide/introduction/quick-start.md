@@ -14,8 +14,8 @@ description: "Первая страница не требует npm, сборщ�
 токены, утилиты и компонент на классах.
 
 Создайте пустую папку и сохраните в ней `index.html`. Пример закреплён на
-выпуске `ui-e3daedde2b41`: во всех трёх адресах стоит полный коммит этого
-выпуска `e3daedde2b41ad5925e13977b315d360f1977c0a`. Идентификатор выпуска —
+выпуске `ui-b67288e349e0`: во всех трёх адресах стоит полный коммит этого
+выпуска `b67288e349e0601433963fa52e271a1c4cfc9a57`. Идентификатор выпуска —
 не тег git, поэтому в адресе CDN пишется коммит. Чтобы взять другой выпуск,
 замените коммит во всех трёх адресах (см. [Версии: как закрепить выпуск](/ru/guide/connection/versions/)):
 
@@ -28,7 +28,7 @@ description: "Первая страница не требует npm, сборщ�
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a/distr/core/css/core.min.css">
+        href="https://cdn.jsdelivr.net/gh/simai/ui@b67288e349e0601433963fa52e271a1c4cfc9a57/distr/core/css/core.min.css">
 </head>
 <body>
   <main class="p-4">
@@ -44,10 +44,10 @@ description: "Первая страница не требует npm, сборщ�
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@b67288e349e0601433963fa52e271a1c4cfc9a57/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/gh/simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a/distr/core/js/core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/simai/ui@b67288e349e0601433963fa52e271a1c4cfc9a57/distr/core/js/core.min.js"></script>
 </body>
 </html>
 ```

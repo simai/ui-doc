@@ -6,10 +6,8 @@ description: "Одним классом выравнивает элементы 
 # Размещение элементов по обеим осям
 
 Классы `items-*` задают `place-items` — `align-items` и `justify-items` одним
-значением: где каждый элемент стоит в своей ячейке сетки. На странице,
-которую обслуживает Loader, они выравнивают только по поперечной оси (см.
-[Ограничения](#ограничения)); в центр ячеек там ставит пара
-`items-cross-center items-main-center`.
+значением: где каждый элемент стоит в своей ячейке сетки. Берите
+`items-center`, чтобы поставить содержимое ячеек в центр.
 
 ## Пример
 
@@ -45,7 +43,7 @@ description: "Одним классом выравнивает элементы 
 ### Значки в центре ячеек
 
 ```html
-<div class="grid grid-col-4 auto-rows-fr items-cross-center items-main-center gap-1">
+<div class="grid grid-col-4 auto-rows-fr items-center gap-1">
   <img src="1.svg" alt="Первый">
   <img src="2.svg" alt="Второй">
   <img src="3.svg" alt="Третий">
@@ -58,14 +56,6 @@ description: "Одним классом выравнивает элементы 
 [`items-main-*`](/ru/utilities/grid-and-flexbox-utilities/justify-items/).
 
 ## Ограничения
-
-- Loader переписывает классы `items-start`, `items-end`, `items-center`,
-  `items-stretch` и `items-baseline` в `items-cross-*` до того, как
-  применятся стили: в атрибуте `class` вместо `items-center` оказывается
-  `items-cross-center`. Поэтому на странице с Loader эти классы задают только
-  `align-items`, и в сетке `justify-items` остаётся по умолчанию. Для обеих
-  осей ставьте `items-cross-*` и `items-main-*` вместе. Без Loader классы
-  работают, как описано в таблице.
 
 - Во флекс-контейнере действует только вертикальная часть: `flex items-center`
   выравнивает элементы по поперечной оси, как `items-cross-center`. По основной

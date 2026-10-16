@@ -362,12 +362,12 @@ table.setRows([
 отправляет; поэтому присылайте в ответе на запрос личный слой с ревизией или
 `target` с ней.
 
-На ответ `conflict` хост кладёт текущую ревизию слоя в
-`data.current_revision`. Представление показывает `message` уведомлением и
-ревизию, по которой пишет, не меняет: следующая запись колонок с этого
-устройства снова получит `conflict`, пока представление не перечитает список
-— следующим запросом или вызовом `refresh()`; новый ответ на запрос приносит
-слой с текущей ревизией.
+На ответ `conflict` представление показывает `message` уведомлением и
+обновляет ревизию, по которой пишет: берёт настройки колонок из
+`data.column_settings`, если хост их прислал, иначе ревизию слоя из
+`data.current_revision`, а без того и другого перечитывает список — ответ на
+запрос приносит слой с текущей ревизией. Поэтому следующая запись колонок с
+этого устройства идёт уже против новой ревизии.
 
 `saveColumnSettings(columnSettings, {shared, base_revision})` записывает
 раскладку из кода: `shared: true` — в общий слой намерением
@@ -487,8 +487,10 @@ document.querySelector('sf-data-view').setHostPort(host);
 список. Если `raise` выбросил ошибку или запрос прерван через `signal`,
 представление показывает ошибку; ответ на устаревший запрос отбрасывается.
 Отказ `refused` на `query.change` означает «нет доступа»: строки прежнего
-ответа и строка страниц убираются, а текст `message` приходит
-уведомлением и в блок «Нет доступа» не попадает; при `unavailable`
+ответа и строка страниц убираются, вместе с ними прячутся панель
+инструментов (поиск, фильтр, «Создать») и выбор строк, а текст `message`
+приходит уведомлением и в блок «Нет доступа» не попадает. Следующий ответ
+`applied` возвращает панель и выбор такими, какими их задал автор; при `unavailable`
 представление показывает свою ошибку и `message` не читает. `sequence` в
 ответах `refused` и `unavailable` необязателен: ответ без него представление
 считает ответом на текущий запрос.
@@ -523,12 +525,14 @@ document.querySelector('sf-data-view').setHostPort(host);
 это `query-change`. Только причины `page-change`, `page-size-change` и
 `show-more` сохраняют `page`, при любой другой она становится 1. Причины
 `search` и `filter` отмечают запрос как действие человека: ошибка в ответ
-на него объявляется сразу. `refresh(reason)` повторяет текущий запрос.
+на него объявляется сразу. Поле поиска на панели показывает строку поиска
+запроса, кто бы её ни задал: после `changeQuery({search: 'договор'})` в нём
+стоит «договор». `refresh(reason)` повторяет текущий запрос.
 
 | Событие | `detail` |
 |:---|:---|
 | `sf-data-view-state` | `{state, message, instance_id}`: `state` — `loading`, `populated`, `empty` или `error`; `message` — текст для экранного диктора: о загрузке, ошибке или уведомлении хоста |
-| `sf-data-view-answer` | ответ хоста на любое намерение: `{intent, answer, reason, message, data, sequence, instance_id}` — поля, которых не было в ответе, отсутствуют |
+| `sf-data-view-answer` | ответ хоста на любое намерение: `{intent, answer, reason, message, data, sequence, effects, instance_id}` — поля, которых не было в ответе, отсутствуют |
 | `sf-table-column-settings-reset` | `{target: 'personal', tableSettingsKey}`; представление отвечает на него `resetColumnSettings()` |
 
 ### Пример: связь с приложением
@@ -538,8 +542,8 @@ document.querySelector('sf-data-view').setHostPort(host);
 своей странице `raise()` отправляет те же намерения на сервер и возвращает его
 ответ в том же конверте. Переключатель над таблицей меняет ответ приложения:
 данные, отказ в доступе или сбой сервера. При отказе представление убирает
-строки и строку страниц, показывает блок «Нет доступа», а текст `message`
-приходит уведомлением. При сбое оно показывает ошибку с «Повторить».
+строки, строку страниц и панель инструментов, показывает блок «Нет
+доступа», а текст `message` приходит уведомлением. При сбое оно показывает ошибку с «Повторить».
 
 :::example {id="smart-components/table/application" label="Представление данных с приложением"}
 :::
@@ -662,7 +666,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-e3daedde2b41` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-b67288e349e0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -720,44 +724,44 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 #### Методы
 
 - `applyProjection(data: object)` — возвращает `null`. Отображает ответ хоста во всех трёх слотах.
-- `applyUnderFilter(actionId: string, confirmedTotal: number)` — возвращает `object`. Вызывает подтверждённое действие для всего фильтра.
+- `applyUnderFilter(actionId: string, confirmedTotal: integer)` — возвращает `object`. Выполняет подтверждённое действие над всем фильтром (bulk.apply_under_filter) по текущим фильтрам. Бросает TypeError, если confirmedTotal не равен текущему общему числу.
 - `changeQuery(patch: object, reason?: string)` — возвращает `object`. Изменяет поиск, фильтры, сортировку или окно.
 - `deleteView(key: string)` — возвращает `object`. Удаляет сохранённое представление.
 - `notify(text: string, options?: object)` — возвращает `object`. Показывает одно уведомление поверх карточки или убирает его при пустом тексте. Отказ, конфликт и недоступность хоста выводят его сами.
 - `openView(key: string)` — возвращает `object`. Открывает сохранённое представление.
 - `refresh(reason?: string)` — возвращает `object`. Запрашивает текущую выборку с новым номером последовательности.
-- `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек столбцов с его ревизией.
-- `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление.
+- `resetColumnSettings()` — возвращает `object`. Сбрасывает раскладку колонок человека: пустой личный слой, записанный против его ревизии, — это сброс по порту (запись, а не удаление). Значения по умолчанию даёт хост.
+- `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: settings.save_personal или settings.save_shared. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт data.column_settings или data.current_revision для этого слоя, если хост их дал, а иначе перечитывает список.
+- `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0. Бросает TypeError без key и label или для другого уровня.
 - `setHostPort(host: object)` — возвращает `object`. Привязывает конкретный адаптер хоста.
-- `updateRecord(id: string, patch?: object)` — возвращает `boolean`. Записывает одну запись на месте: строка перезаписывается, и у хоста ничего не запрашивается. Запись, на которую получен ответ только с записями, проходит этот путь сама.
+- `updateRecord(id: string|integer, patch?: object)` — возвращает `boolean`. Записывает одну запись на месте: строка перезаписывается, и у хоста ничего не запрашивается. Запись, на которую получен ответ только с записями, проходит этот путь сама.
 - `expandNode(id: string|integer)` — возвращает `object`. Открывает узел, у которого по словам хоста есть потомки: из того, что уже есть у представления, или запросом к хосту через tree.expand.
 - `collapseNode(id: string|integer)` — возвращает `null`. Закрывает открытый узел. Это дело самого представления, хост не спрашивается.
 - `loadMoreNodes(parent: string|integer|null, cursor?: string|null)` — возвращает `object`. Следующая страница одного уровня: корни — через запрос, потомки узла — через tree.expand с его курсором.
 - `openMoveDialog(record: object)` — возвращает `object`. Спрашивает хост, куда можно перенести запись (node.targets), даёт выбрать ровно из этих мест и переносит её туда (node.move).
-- `resetColumnSettings()` — возвращает `object`. Записывает пустую раскладку `{}` в личный слой настроек столбцов против его ревизии, как «Сбросить» в настройках таблицы; значения по умолчанию определяет хост.
 
 #### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-count-request` — `detail` не описан.
-- `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, message?: string, data?: object, sequence?: integer, instance_id: string }`. Хост ответил на намерение порта.
-- `sf-data-view-saved-view-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-data-view-state` — `detail`: `{ state: string, message: string, instance_id: string }`. Состояние списка сменилось: `state` — `loading`, `populated`, `empty` или `error`; `message` — текст для экранного диктора. При `empty` и `error` причина уже лежит в `emptyContext` таблицы.
-- `sf-table-action-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-column-settings-change` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Человек нажал «Сбросить» в настройках таблицы; `target` — `personal`. Представление отвечает на него `resetColumnSettings()`.
-- `sf-table-create-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-query-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-template-delete` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-template-save` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-template-select` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
+- `sf-count-request` — `detail`: `{ component: object, tagName: string, template: string, reason: string, current: integer, pageSize: integer }`. Отправляет пагинация представления, когда человек просит общее число, последнюю страницу или действие над фильтром, пока число неизвестно. Представление отвечает на него намерением query.count; хосту слушать его не нужно.
+- `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, data?: object, sequence?: integer, effects?: array, instance_id: string }`. Приходит после каждого ответа порта, по которому действует представление, включая ответы, которые оно даёт себе само (порт не подключён, возможность не объявлена, действие не разрешено), — чтобы страница видела результаты, не оборачивая порт.
+- `sf-data-view-saved-view-intent` — `detail`: `{  }`. Объявлено, но не отправляется: в этой версии его не вызывает ни один путь кода. Запись сохранённых представлений идёт через порт как view.open, view.save, view.save_shared и view.delete, а её результат сообщает sf-data-view-answer.
+- `sf-data-view-state` — `detail`: `{ state: string, message: string, instance_id: string }`. Приходит при каждой смене состояния данных представления (loading, populated, empty, error) вместе со строкой, которую оно объявляет в своей живой области; для страницы, которая показывает состояние где-то ещё.
+- `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Событие таблицы, которое слушает представление: в его таблице выбрано действие над строкой или групповое действие. Представление проверяет, что строка его разрешает, и отправляет record.open (view), record.mutate (одна строка) или bulk.apply_selected с ревизиями записей; перенос и создание в дереве открывают окно переноса или view.create_record.
+- `sf-table-column-settings-change` — `detail`: `{ reason: string, columnSettings: object, tableSettingsKey: string, target?: string, base_revision?: string|number }`. Событие таблицы, которое слушает представление: человек изменил ширину колонки, переставил, закрепил или скрыл её. Представление записывает это через saveColumnSettings как settings.save_personal или settings.save_shared, если detail говорит target: shared.
+- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Событие таблицы, которое слушает представление: человек попросил вернуть колонки по умолчанию. Представление вызывает resetColumnSettings — пустой личный слой, записанный против его ревизии; значения по умолчанию даёт хост.
+- `sf-table-create-intent` — `detail`: `{ item: string|null }`. Событие таблицы, которое слушает представление: нажата кнопка создания или пункт её меню. Представление отправляет view.create_record с detail в том виде, в каком он пришёл.
+- `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Событие таблицы, которое слушает представление: изменился входной порт контекста его таблицы. Представление не берёт номер последовательности таблицы и перечитывает список своим query.change.
+- `sf-table-template-delete` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» удалён сохранённый шаблон, по одному событию на шаблон. Представление отправляет view.delete с ключом.
+- `sf-table-template-save` — `detail` не описан. Событие таблицы, которое слушает представление: сохранён шаблон фильтра. Представление превращает его в saveView (view.save) с key, label, revision, level, roles, layout и settings; массив в detail не несёт одного ключа, и saveView его отклоняет.
+- `sf-table-template-select` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» применён другой сохранённый шаблон. Представление отправляет view.open с ключом и восстанавливает поля фильтра, с которыми представление было сохранено.
 - `sf-host-port-request` — `detail`: `{ component?: object, context?: object }`. Запрашивает у страницы порт хоста — один раз за подключение и только пока у элемента его нет. Общее соглашение для всех компонентов, принимающих `setHostPort`: потребителю, встраивающему такой компонент в другой, не нужно искать элемент и вызывать у него метод. Ответ — вызов `setHostPort` на цели события, сразу или позже.
 - `sf-data-view-list-open` — `detail`: `{ reason: any, query: object }`. Пользователь запросил весь список, часть которого показана из-за ограничения числа строк. Передаёт запрос, чтобы хост открыл полное представление с теми же записями; компонент не строит собственный адрес.
 - `sf-table-tree-intent` — `detail`: `{ intent: string, payload: object }`. Намерение дерева порта simai.dataview-port 1.8.0 — tree.expand, node.targets или node.move, — которое представление объявляет, когда его поднимает. Хост отвечает через порт.
-- `sf-data-view-files-drop` — `detail` не описан. На представление отпустили файлы с компьютера: {files}. Представление ничего не загружает — это делает хост.
-- `sf-table-cell-set` — `detail` не описан. record.set порта simai.dataview-port 1.11.0: в таблице представления нажат флажок в ячейке; намерение уходит через порт в том виде, в каком его получило представление.
-- `sf-table-rows-reorder` — `detail` не описан. record.reorder порта simai.dataview-port 1.11.0: строки таблицы представления перетащили в другой порядок; намерение уходит через порт в том виде, в каком его получило представление.
+- `sf-data-view-files-drop` — `detail`: `{ files: array }`. На представление с accept-files отпустили файлы с компьютера. Представление ничего не загружает, и файлы не идут через порт; их загружает хост.
+- `sf-table-cell-set` — `detail`: `{ id: string|integer, key: string, value: any, revision: string|integer|null }`. Событие таблицы, которое слушает представление: нажат флажок в ячейке. Представление отправляет record.set порта simai.dataview-port 1.11.0 (возможность inline-edit) с record_id, key, value и revision и возвращает флажок, если ответ не applied.
+- `sf-table-rows-reorder` — `detail`: `{ ids: array, before: string|null, order: array }`. Событие таблицы, которое слушает представление: строки перетащили в другой порядок. Представление сразу показывает новый порядок и отправляет record.reorder порта simai.dataview-port 1.11.0 (возможность row-reorder); отказ или конфликт возвращает прежний порядок.
 
 #### Доступность
 
@@ -774,8 +778,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/data-view`
-- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/data-view`
+- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -884,9 +888,9 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-port-output` — `detail`: `{ port: any, value: array }`. Выход порта композиции. Таблица отправляет порт `selection` (`record-ids.v1`) один раз при каждом изменении явного выделения, включая сброс; маршрутизирует его общий `sf-composition-scope`.
 - `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Запрашивает одну операцию над строкой или групповую операцию, которую выполняет хост. Источник события — экземпляр таблицы-владельца; отправка события не означает успех операции.
 - `sf-table-column-settings-change` — `detail`: `{ reason: string, tableSettingsKey: string, columnSettings: object }`. Запрашивает сохранение изменений настроек столбцов после изменения ширины, порядка или видимости.
-- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Человек нажал «Сбросить» в настройках таблицы; `target` — `personal`. Раскладку колонок из персонального вида таблица уже убрала.
+- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Человек попросил вернуть колонки по умолчанию. Таблица убирает свою сохранённую раскладку и значений по умолчанию не называет: личный слой сбрасывает хост (или представление данных) и отвечает своими значениями.
 - `sf-table-create-intent` — `detail`: `{ item: string|null }`. Пользователь нажал кнопку создания (item равен null) или выбрал пункт из её меню (id пункта). Только намерение: хост открывает свою форму создания.
-- `sf-table-filter-change` — `detail` не описан. Запрашивает у хоста выборку после изменения активного черновика фильтра.
+- `sf-table-filter-change` — `detail`: `{ templateKey: string, templateLabel: string, values: object, tags: object }`. Запрашивает у хоста выборку после изменения активного фильтра: «Применить» в окне фильтра, удалённая метка или очищенный фильтр. Представление данных превращает его в query.change с filters из values.
 - `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Запрашивает у хоста выборку после изменения входного порта контекста. Хост разрешает связь и права доступа и отвечает вызовом applyQueryResult(sequence, rows); более старые номера последовательности игнорируются.
 - `sf-table-retry` — `detail`: `null`. Запрашивает у хоста повторную загрузку после состояния ошибки.
 - `sf-table-search-change` — `detail`: `string`. Запрашивает у хоста выборку после изменения значения поиска (с задержкой debounce).
@@ -897,7 +901,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-table-toolbar-action` — `detail`: `{ action: string, href?: string|null }`. Пользователь выбрал одно из собственных действий представления в меню панели инструментов. Только намерение, событие можно отменить: компонент переходит по href пункта на том же сайте, если хост не перехватит переход через preventDefault.
 - `sf-table-tree-toggle` — `detail`: `{ id?: string|integer, expanded?: boolean }`. Пользователь открыл или закрыл строку дерева. Отвечает представление данных; таблица сообщает только, какая строка и была ли она открыта.
 - `sf-table-tree-more` — `detail`: `{ parent?: string|integer|null, cursor?: string|null }`. Пользователь запросил следующую страницу уровня дерева.
-- `sf-table-rows-drag` — `detail` не описан. Строки начали перетаскивать из списка: {ids, source}.
+- `sf-table-rows-drag` — `detail`: `{ ids: array, source: string|null }`. Строки с drag-rows начали перетаскивать из списка к цели вроде дерева; те же {ids, source} лежат в данных перетаскивания как application/x-sf-records+json.
 - `sf-table-rows-reorder` — `detail`: `{ ids?: array, before?: any, order?: array }`. Строки перетащили в другой порядок внутри списка: перемещённые идентификаторы, строка, перед которой они теперь стоят (null — в конце), и весь показанный порядок.
 - `sf-table-cell-set` — `detail`: `{ id?: any, key?: string, value?: any, revision?: any }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
 
@@ -916,5 +920,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/table`
-- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/table`
+- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/table/rule.js#name=cl-table`

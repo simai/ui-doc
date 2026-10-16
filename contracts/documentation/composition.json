@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "fde630ef63307ffa84a06a297839e031c252e49a",
-    "core_revision": "e3daedde2b41ad5925e13977b315d360f1977c0a",
+    "source_revision": "d28ac099cc09450d60f0e0d1895fe3bc5dc8a082",
+    "core_revision": "b67288e349e0601433963fa52e271a1c4cfc9a57",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "6c3a31a12c33ff79ef532c4dfc13cc03665e6c4e52407559e6579f6d9a06a130"
+      "distr/core/js/core.js": "019bfcc4ef5b8ef9253b0b3882971a074174e151828de53ef4f3c76d70e10ae9"
     },
-    "note": "At source fde630ef and core e3daedde (release ui-e3daedde2b41) the composition schemas, composition-types, index.mjs, builtins, fixture and core.js are byte-identical to the review at ui-a2d9554ab5ee; the buttons manifest drops the deprecated type from composition.declarative.props, and layouts/building/smart-component no longer says a node accepts it. "
+    "note": "At source d28ac099 and core b67288e3 (release ui-b67288e349e0) the composition schemas, composition-types, index.mjs, builtins, fixture and the buttons manifest are byte-identical to the review at ui-e3daedde2b41; core.js changes only in SF.Preferences (an unchanged value is not written again) and the Loader's class map (items-start|end|center|stretch are no longer rewritten), neither of which the composition pages describe."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
