@@ -354,8 +354,9 @@ table.setRows([
 Их изменение отправляет `sf-table-column-settings-change` с `reason`,
 `tableSettingsKey` и полными настройками `columnSettings`; отдельная таблица
 отдаёт их приложению, и оно при следующей загрузке применяет их через
-`setTableSettings(settings)`. В `<sf-data-view>` то же изменение уходит
-намерением `settings.save_personal` с `base_revision` — ревизией слоя
+`setTableSettings(settings)`. В `<sf-data-view>` то же изменение всегда
+уходит в личный слой человека — намерением `settings.save_personal` с
+`base_revision` — ревизией слоя
 `data.column_settings.layers.personal`, а если хост этого слоя ещё не
 прислал, — ревизией из `data.column_settings.target`. Если нет ни того, ни
 другого, представление само отвечает `unavailable` и намерение до хоста не
@@ -372,7 +373,8 @@ table.setRows([
 `saveColumnSettings(columnSettings, {shared, base_revision})` записывает
 раскладку из кода: `shared: true` — в общий слой намерением
 `settings.save_shared` (возможность `shared-column-settings`), без него — в
-личный; `base_revision` заменяет ревизию, которую представление взяло бы из
+личный. Выбора слоя таблица человеку не предлагает, поэтому общий слой
+записывает только код страницы этим вызовом; `base_revision` заменяет ревизию, которую представление взяло бы из
 слоя. `resetColumnSettings()` делает то же, что «Сбросить» в настройках
 таблицы: записывает пустую раскладку `{}` в личный слой против его
 ревизии; значения по умолчанию определяет хост. Где при этом хранится раскладка — в
@@ -380,7 +382,24 @@ table.setRows([
 Сохранённые представления передаёт `setTemplates(templates)`; изменения на
 вкладке «Шаблоны» приходят событиями `sf-table-template-save`,
 `sf-table-template-select` (`{key}`) и `sf-table-template-delete` (`{key}`,
-по одному на шаблон).
+по одному на шаблон). `sf-table-template-save` несёт один шаблон из формы
+или массив шаблонов, если «Применить» на вкладке «Шаблоны» изменило
+несколько (порядок, закрепление, выбор по умолчанию); `<sf-data-view>`
+сохраняет каждый шаблон с `key` отдельным намерением `view.save`.
+
+Общее сохранённое представление записывает код страницы: он отправляет на
+`<sf-data-view>` событие `sf-data-view-saved-view-intent` с `{key, label,
+revision, roles}` (`revision` и `roles` необязательны), и представление
+отправляет хосту `view.save_shared` с текущим запросом, колонками и
+настройками. Нужна возможность `shared-saved-views` и порт версии 1.1.0 или
+новее; на порте 1.0.0 представление само отвечает `unavailable`. То же
+делает `saveView({key, label, level: 'shared'})`.
+
+```js
+view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
+  detail: {key: 'overdue', label: 'Просроченные'},
+}));
+```
 
 ### Порт хоста
 
@@ -732,7 +751,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `refresh(reason?: string)` — возвращает `object`. Запрашивает текущую выборку с новым номером последовательности.
 - `resetColumnSettings()` — возвращает `object`. Сбрасывает раскладку колонок человека: пустой личный слой, записанный против его ревизии, — это сброс по порту (запись, а не удаление). Значения по умолчанию даёт хост.
 - `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: settings.save_personal или settings.save_shared. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт data.column_settings или data.current_revision для этого слоя, если хост их дал, а иначе перечитывает список.
-- `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0. Бросает TypeError без key и label или для другого уровня.
+- `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0 и новее. Бросает TypeError без key и label или для другого уровня.
 - `setHostPort(host: object)` — возвращает `object`. Привязывает конкретный адаптер хоста.
 - `updateRecord(id: string|integer, patch?: object)` — возвращает `boolean`. Записывает одну запись на месте: строка перезаписывается, и у хоста ничего не запрашивается. Запись, на которую получен ответ только с записями, проходит этот путь сама.
 - `expandNode(id: string|integer)` — возвращает `object`. Открывает узел, у которого по словам хоста есть потомки: из того, что уже есть у представления, или запросом к хосту через tree.expand.
@@ -746,15 +765,15 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 - `sf-count-request` — `detail`: `{ component: object, tagName: string, template: string, reason: string, current: integer, pageSize: integer }`. Отправляет пагинация представления, когда человек просит общее число, последнюю страницу или действие над фильтром, пока число неизвестно. Представление отвечает на него намерением query.count; хосту слушать его не нужно.
 - `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, data?: object, sequence?: integer, effects?: array, instance_id: string }`. Приходит после каждого ответа порта, по которому действует представление, включая ответы, которые оно даёт себе само (порт не подключён, возможность не объявлена, действие не разрешено), — чтобы страница видела результаты, не оборачивая порт.
-- `sf-data-view-saved-view-intent` — `detail`: `{  }`. Объявлено, но не отправляется: в этой версии его не вызывает ни один путь кода. Запись сохранённых представлений идёт через порт как view.open, view.save, view.save_shared и view.delete, а её результат сообщает sf-data-view-answer.
+- `sf-data-view-saved-view-intent` — `detail`: `{ key: string, label: string, revision?: string|integer, roles?: object }`. Событие, которое страница отправляет на представление, чтобы сохранить общее сохранённое представление (порт 1.1.0 и новее): представление отправляет view.save_shared с key и label из detail.
 - `sf-data-view-state` — `detail`: `{ state: string, message: string, instance_id: string }`. Приходит при каждой смене состояния данных представления (loading, populated, empty, error) вместе со строкой, которую оно объявляет в своей живой области; для страницы, которая показывает состояние где-то ещё.
 - `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Событие таблицы, которое слушает представление: в его таблице выбрано действие над строкой или групповое действие. Представление проверяет, что строка его разрешает, и отправляет record.open (view), record.mutate (одна строка) или bulk.apply_selected с ревизиями записей; перенос и создание в дереве открывают окно переноса или view.create_record.
-- `sf-table-column-settings-change` — `detail`: `{ reason: string, columnSettings: object, tableSettingsKey: string, target?: string, base_revision?: string|number }`. Событие таблицы, которое слушает представление: человек изменил ширину колонки, переставил, закрепил или скрыл её. Представление записывает это через saveColumnSettings как settings.save_personal или settings.save_shared, если detail говорит target: shared.
+- `sf-table-column-settings-change` — `detail`: `{ reason: string, columnSettings: object, tableSettingsKey: string, target?: string, base_revision?: string|number }`. Событие таблицы, которое слушает представление: человек изменил ширину колонки, переставил, закрепил или скрыл её. Представление записывает это в личный слой человека (settings.save_personal): выбора слоя таблица не предлагает, и таблица, которую оно рисует, не передаёт target. Общий слой записывает код страницы через saveColumnSettings(settings, {shared: true}).
 - `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Событие таблицы, которое слушает представление: человек попросил вернуть колонки по умолчанию. Представление вызывает resetColumnSettings — пустой личный слой, записанный против его ревизии; значения по умолчанию даёт хост.
 - `sf-table-create-intent` — `detail`: `{ item: string|null }`. Событие таблицы, которое слушает представление: нажата кнопка создания или пункт её меню. Представление отправляет view.create_record с detail в том виде, в каком он пришёл.
 - `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Событие таблицы, которое слушает представление: изменился входной порт контекста его таблицы. Представление не берёт номер последовательности таблицы и перечитывает список своим query.change.
 - `sf-table-template-delete` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» удалён сохранённый шаблон, по одному событию на шаблон. Представление отправляет view.delete с ключом.
-- `sf-table-template-save` — `detail` не описан. Событие таблицы, которое слушает представление: сохранён шаблон фильтра. Представление превращает его в saveView (view.save) с key, label, revision, level, roles, layout и settings; массив в detail не несёт одного ключа, и saveView его отклоняет.
+- `sf-table-template-save` — `detail` не описан. Событие таблицы, которое слушает представление: сохранён шаблон фильтра. Представление превращает его в saveView (view.save) с key, label, revision, level, roles, layout и settings; массив в detail — несколько шаблонов после «Применить» на вкладке «Шаблоны» — сохраняется по одному шаблону с key.
 - `sf-table-template-select` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» применён другой сохранённый шаблон. Представление отправляет view.open с ключом и восстанавливает поля фильтра, с которыми представление было сохранено.
 - `sf-host-port-request` — `detail`: `{ component?: object, context?: object }`. Запрашивает у страницы порт хоста — один раз за подключение и только пока у элемента его нет. Общее соглашение для всех компонентов, принимающих `setHostPort`: потребителю, встраивающему такой компонент в другой, не нужно искать элемент и вызывать у него метод. Ответ — вызов `setHostPort` на цели события, сразу или позже.
 - `sf-data-view-list-open` — `detail`: `{ reason: any, query: object }`. Пользователь запросил весь список, часть которого показана из-за ограничения числа строк. Передаёт запрос, чтобы хост открыл полное представление с теми же записями; компонент не строит собственный адрес.
@@ -778,8 +797,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/data-view`
-- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/data-view`
+- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -920,5 +939,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/table`
-- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/table`
+- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/table/rule.js#name=cl-table`

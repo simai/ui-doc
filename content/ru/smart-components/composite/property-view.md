@@ -422,8 +422,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/property-view`
-- `simai/larena-ui@8ca46f49f30847f5e8c328dfadb4d117389616a1:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/property-view`
+- `simai/larena-ui@7c8831498dabec046f68a55b455a7dd4d44a9c72:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 
