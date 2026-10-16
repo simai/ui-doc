@@ -267,6 +267,25 @@ const valueMap = (from, to, inputs) => {
   return [...pairs];
 };
 
+// The person's view the component keeps (manifest persistence.view_preference,
+// schema 2.5.0): its key, version and fields. The same table is shown in the
+// component's reference and in the view-preferences guide.
+const viewPreferenceTable = (preference) => {
+  const lines = [
+    `Ключ ${code(preference.key)}${preference.general_key ? `, общий для всех элементов этого вида — ${code(preference.general_key)}` : ''}; версия формата — \`v: ${preference.v}\`.`
+      + ' В столбце «Для первой отрисовки» «да» значит, что сервер может положить поле в блок `data-sf-preferences` страницы.',
+    '',
+    '| Поле | Тип | Пишет | Для первой отрисовки | Что в нём |',
+    '|:---|:---|:---|:---|:---|',
+  ];
+  for (const [name, field] of Object.entries(preference.fields ?? {})) {
+    const writers = (field.written_by ?? []).map((writer) => code(writer)).join(', ') || '—';
+    lines.push(`| ${code(name)} | ${code(field.type)} | ${writers} | ${field.seed ? 'да' : 'нет'} | ${cell(ru(field.description))} |`);
+  }
+  lines.push('');
+  return lines;
+};
+
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
   const lines = [];
@@ -405,6 +424,11 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     lines.push('');
   }
 
+  const preference = manifest.persistence?.view_preference;
+  if (preference) {
+    lines.push(`${h} Персональный вид`, '', ...viewPreferenceTable(preference));
+  }
+
   // A section a manifest is known to get wrong is left out until the manifest
   // is fixed (config/smart-reference.json `suppress`, with the reason).
   const suppressed = new Set(settings.suppress?.[folder]?.sections ?? []);
@@ -486,6 +510,38 @@ for (const [page, entries] of [...pages].sort(([a], [b]) => a.localeCompare(b)))
   if (expected === current) continue;
   changed.push(relative(root, page));
   if (!checkOnly && !listMissing) writeFileSync(page, expected);
+}
+
+// The view-preferences guide quotes every declared view preference under its
+// own heading; the rest of the guide page is written by hand.
+{
+  const GUIDE_HEADING = '## Поля значения';
+  const guide = join(root, 'content/ru/guide/smart-components/view-preferences.md');
+  const current = readFileSync(guide, 'utf8');
+  const begin = current.indexOf(`\n${GUIDE_HEADING}\n`);
+  if (begin < 0) {
+    console.error(`${GUIDE_HEADING} not found in ${relative(root, guide)}`);
+    process.exit(2);
+  }
+  const after = begin + 1 + GUIDE_HEADING.length + 1;
+  const next = current.indexOf('\n## ', after);
+  const end = next < 0 ? current.length : next + 1;
+  const body = [
+    GUIDE_HEADING,
+    '',
+    'Раздел собран из манифестов выпуска ' + code(pair) + ' и пакетов (`persistence.view_preference`) и обновляется вместе с ними.',
+    '',
+  ];
+  const declared = [...components].filter(([, {manifest}]) => manifest.persistence?.view_preference)
+    .sort(([, a], [, b]) => a.manifest.custom_element.localeCompare(b.manifest.custom_element));
+  for (const [, {manifest}] of declared) {
+    body.push(`### \`<${manifest.custom_element}>\``, '', ...viewPreferenceTable(manifest.persistence.view_preference));
+  }
+  const expected = `${current.slice(0, begin + 1)}${body.join('\n').replace(/\n+$/u, '')}\n${next < 0 ? '' : `\n${current.slice(end)}`}`;
+  if (expected !== current) {
+    changed.push(relative(root, guide));
+    if (!checkOnly && !listMissing) writeFileSync(guide, expected);
+  }
 }
 
 if (listMissing) {

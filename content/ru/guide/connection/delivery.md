@@ -40,17 +40,17 @@ Smart-компонентов» по отдельности, а один конк
 Выпуск — один коммит сборки в `ui`. Его идентификатор составлен из первых 12
 знаков этого коммита:
 
-| Что | Значение для выпуска `ui-b67288e349e0` |
+| Что | Значение для выпуска `ui-dec4c338a088` |
 |:---|:---|
-| Идентификатор выпуска | `ui-b67288e349e0` |
-| Полный коммит `ui` (адрес CDN, закрепление проекта) | `b67288e349e0601433963fa52e271a1c4cfc9a57` |
-| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `d28ac099cc09450d60f0e0d1895fe3bc5dc8a082` |
+| Идентификатор выпуска | `ui-dec4c338a088` |
+| Полный коммит `ui` (адрес CDN, закрепление проекта) | `dec4c338a088967f2ec7a8565adfd1f822a2f1b9` |
+| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `ca179df38f7dff082eb031e61f6450e1ce5a6c12` |
 | Коммит сборщика `ui-builder` | `e7c2fc2c332818f97cb6c17a89953393b622e26f` |
-| Запись о выпуске | `contracts/releases/ui-b67288e349e0.lock.json` в репозитории `ui`, добавлена коммитом `eabbe2e83b5a81258193e6c329eebec459cc59cf` |
-| Пакет продукта `larena`, собранный для этого выпуска | Исходник — `simai/larena-ui`, коммит `13c0550c34a5ec59818fb1791e92cd7bc780cb63` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
+| Запись о выпуске | `contracts/releases/ui-dec4c338a088.lock.json` в репозитории `ui`, добавлена коммитом `d03ba852b460d0b9c6bd1315745f270f598e8ae5` |
+| Пакет продукта `larena`, собранный для этого выпуска | Исходник — `simai/larena-ui`, коммит `1886b2eebe8bf088239289b248d144c8ec52f9be` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
 
 **Идентификатор выпуска — не тег git.** Тегов у выпусков нет (в записи о
-выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-b67288e349e0`
+выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-dec4c338a088`
 не существует. В адресах и в закреплении проекта используется полный коммит:
 `https://cdn.jsdelivr.net/gh/simai/ui@<полный коммит>/distr/…`.
 
@@ -93,9 +93,9 @@ git log --diff-filter=A --format='%cs %s' -- 'contracts/releases/ui-*.lock.json'
 `simai/ui` по полному коммиту выпуска и сверяют с записью о выпуске:
 
 ```bash
-git archive --format=tar b67288e349e0601433963fa52e271a1c4cfc9a57 distr | shasum -a 256
+git archive --format=tar dec4c338a088967f2ec7a8565adfd1f822a2f1b9 distr | shasum -a 256
 # равно runtime_sources.core.archive_sha256
-git rev-parse b67288e349e0601433963fa52e271a1c4cfc9a57:distr
+git rev-parse dec4c338a088967f2ec7a8565adfd1f822a2f1b9:distr
 # равно runtime_sources.core.runtime_tree
 ```
 

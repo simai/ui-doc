@@ -84,7 +84,7 @@ popover.addEventListener('sf-popover-close', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-b67288e349e0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-dec4c338a088` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -93,7 +93,7 @@ popover.addEventListener('sf-popover-close', () => {
 | Тег | `<sf-popover>` |
 | Назначение | Поверхность, привязанная к элементу управления, который передаёт потребитель, со своим состоянием открытия, закрытием и возвратом фокуса. |
 | Контракт | `smart.popover`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-b67288e349e0` |
+| Поставка | выпуск Framework `ui-dec4c338a088` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -135,8 +135,8 @@ popover.addEventListener('sf-popover-close', () => {
 
 ### Источник
 
-- `simai/ui@b67288e349e0601433963fa52e271a1c4cfc9a57:distr/smart/popover`
-- `simai/ui@b67288e349e0601433963fa52e271a1c4cfc9a57:distr/rule/rule.json#name=cl-popover`
+- `simai/ui@dec4c338a088967f2ec7a8565adfd1f822a2f1b9:distr/smart/popover`
+- `simai/ui@dec4c338a088967f2ec7a8565adfd1f822a2f1b9:distr/rule/rule.json#name=cl-popover`
 
 ## См. также
 

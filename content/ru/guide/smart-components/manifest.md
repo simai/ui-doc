@@ -55,7 +55,7 @@ Smart-компоненты описаны манифестом действую�
 | `state` | Визуальные состояния и автоматы поведения |
 | `templates`, `exported_parts` | Шаблоны и части, доступные снаружи |
 | `composition`, `item_contract`, `contracts` | Состав, контракт элемента списка, порты |
-| `persistence`, `ownership` | Что хранится и кто чем владеет |
+| `persistence`, `ownership` | Что хранится и кто чем владеет; `persistence.view_preference` — персональный вид компонента (см. «Персональный вид в манифесте» ниже) |
 | `security` | Кто владеет правами, какие входы недоверенные, политика сетевых запросов |
 | `accessibility` | Ровно четыре поля: `role` (строка или `null`), `accessible_name` (`required`, `recommended` или `internal`), `keyboard` (список строк), `focus` (строка) |
 | `presentation` | Темы, языки и адаптивные режимы, которые компонент поддерживает; `skeleton` — заготовка формы до прихода кода и данных ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -75,6 +75,35 @@ SHA-256 файла; проверка манифестов `node scripts/sf-contr
 `wave-1/overlay` сверяет его с файлом. Пока у исходника нет коммита,
 `source_revision` может быть сорока нулями. `generated_runtime` может быть
 пустым списком.
+
+**Персональный вид в манифесте**
+
+Компонент, который хранит [персональный вид](/ru/guide/smart-components/view-preferences/)
+через `SF.Preferences`, объявляет его в `persistence.view_preference` (схема
+2.5.0):
+
+| Поле | Что в нём |
+|:---|:---|
+| `key` | Ключ значения; атрибут, из которого он строится, — в угловых скобках: `sf-table/<preferences-key>` |
+| `general_key` | Ключ общего вида человека для всех элементов этого вида, который читается под значением экземпляра, например `sf-table/*`; или `null` |
+| `v` | Версия формата значения — она же поле `v` в самом значении. Компонент читает известную ему более раннюю версию и не трогает незнакомую |
+| `fields` | Поля значения: у каждого `type`, `description` и `seed`, а также необязательные `written_by` — какие элементы его пишут — и `schema` |
+
+`seed: true` значит, что сервер может положить поле в страницу для первой
+отрисовки — в блок `data-sf-preferences` или через `SF.Preferences.preload()`, —
+и компонент нарисуется в виде человека до первого запроса. Объявленные поля
+таблицы и ручки ширины перечислены в [Персональный вид → Поля значения](/ru/guide/smart-components/view-preferences/#поля-значения); они
+же — в справочнике каждого компонента.
+
+```json
+"persistence": {
+  "mode": "none", "source_of_truth": "host", "network_owner": "none", "revision_field": null,
+  "view_preference": {
+    "key": "sf-resizer/<storage-key>", "general_key": null, "v": 1,
+    "fields": {"width": {"type": "integer", "description": "…", "seed": true, "written_by": ["sf-resizer"]}}
+  }
+}
+```
 
 **Выпуск (`compatibility.runtime_pair`).** Выпуск Framework — один коммит
 `ui`, поэтому `ui_revision` и `ui_smart_revision` оба равны полному коммиту
@@ -145,8 +174,8 @@ SHA-256 файла; проверка манифестов `node scripts/sf-contr
   "compatibility": {
     "contract_schema": {"id": "https://simai.io/contracts/smart-component-manifest.v2.schema.json", "version": 2},
     "runtime_pair": {
-      "ui_revision": "b67288e349e0601433963fa52e271a1c4cfc9a57",
-      "ui_smart_revision": "b67288e349e0601433963fa52e271a1c4cfc9a57"
+      "ui_revision": "dec4c338a088967f2ec7a8565adfd1f822a2f1b9",
+      "ui_smart_revision": "dec4c338a088967f2ec7a8565adfd1f822a2f1b9"
     },
     "aliases": [],
     "deprecations": [],

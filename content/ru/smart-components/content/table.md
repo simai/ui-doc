@@ -346,7 +346,11 @@ table.setRows([
 `sf-table/<preferences-key>` и применяются до первого запроса: первый
 запрос несёт сортировку и размер страницы человека, а первый кадр с
 колонками данных уже стоит в его раскладке. Скелетон до ответа колонок
-данных не показывает. Без ключа ничего не запоминается.
+данных не показывает. Без ключа ничего не запоминается. Поля значения —
+`columnSettings`, `widths`, `view`, `sort` и `pageSize` — таблица объявляет в
+манифесте (`persistence.view_preference`); все пять сервер может положить в
+страницу для первой отрисовки. Их описание — в справочнике `<sf-table>` ниже
+и в [Персональный вид → Поля значения](/ru/guide/smart-components/view-preferences/#поля-значения).
 
 ### Шаблоны и настройки колонок
 
@@ -363,11 +367,12 @@ table.setRows([
 отправляет; поэтому присылайте в ответе на запрос личный слой с ревизией или
 `target` с ней.
 
-На ответ `conflict` представление показывает `message` уведомлением и
-обновляет ревизию, по которой пишет: берёт настройки колонок из
-`data.column_settings`, если хост их прислал, иначе ревизию слоя из
-`data.current_revision`, а без того и другого перечитывает список — ответ на
-запрос приносит слой с текущей ревизией. Поэтому следующая запись колонок с
+Ответ `conflict` несёт рядом с `answer` текущую ревизию слоя
+`current_revision` и колонки слоя, какими они стали, — `columns`.
+Представление показывает `message` уведомлением и обновляет ревизию, по
+которой пишет: берёт настройки колонок из `data.column_settings`, если хост
+их прислал, иначе `current_revision` и `columns`, а без них перечитывает
+список — ответ на запрос приносит слой с текущей ревизией. Поэтому следующая запись колонок с
 этого устройства идёт уже против новой ревизии.
 
 `saveColumnSettings(columnSettings, {shared, base_revision})` записывает
@@ -408,8 +413,8 @@ view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
 `<sf-data-view>`: `setHostPort(host)` принимает объект с полями `version` и
 `capabilities` и методом `raise(intent, payload, {signal})`, который
 отвечает `{answer: 'applied' | 'conflict' | 'refused' | 'unavailable', …}`.
-`<sf-data-view>` говорит на порте `simai.dataview-port` версии 1.11.0 и
-принимает адаптеры версий от 1.0.0 до 1.11.0; манифест `<sf-table>` записывает
+`<sf-data-view>` говорит на порте `simai.dataview-port` версии 1.12.0 и
+принимает адаптеры версий от 1.0.0 до 1.12.0; манифест `<sf-table>` записывает
 версию порта 1.0.0. Если адаптер не передан, `<sf-data-view>` один раз
 запрашивает его событием `sf-host-port-request`.
 
@@ -420,7 +425,12 @@ view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
 создания и шестерёнку настроек колонок. Хост на более ранней версии порта
 получает обе, не объявляя их. Запись логического поля в ячейке
 (`inline-edit`) и перестановка строк (`row-reorder`) — возможности порта
-1.11.0; их получает только хост, который их объявил.
+1.11.0; их получает только хост, который их объявил. Порт 1.12.0 новых
+намерений и возможностей не добавляет: он точнее описывает ответ —
+`sequence`, что несёт конфликт, известные причины — и требует
+`column_settings` только от хоста, который объявил `personal-column-settings`
+или `shared-column-settings`. Хост без них может не присылать
+`column_settings`, и представление рисует колонки как есть.
 У самой таблицы те же части включают и
 выключают атрибуты `creatable`, `settings-menu` и `filter-templates`.
 
@@ -429,7 +439,7 @@ view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
 
 ```js
 const host = {
-  version: '1.11.0',
+  version: '1.12.0',
   capabilities: ['row-actions', 'create-record'],
   async raise(intent, payload, {signal}) {
     const result = await fetch('/api/projects', {
@@ -447,12 +457,27 @@ const host = {
 document.querySelector('sf-data-view').setHostPort(host);
 ```
 
-- `answer` — `applied`, `conflict`, `refused` или `unavailable`; `reason` —
-  машинная причина отказа, `message` — текст для человека.
-- `sequence` повторяет номер запроса: ответ на устаревший запрос
-  представление отбрасывает.
+- `answer` — `applied`, `conflict`, `refused` или `unavailable`; `message` —
+  текст для человека.
+- `reason` — машинная причина отказа или недоступности, свободная строка.
+  Порт называет причины, которые знает представление: `capability-not-provided`,
+  `confirm_required`, `not-confirmed`, `port-not-connected`,
+  `no-base-revision`, `record_invalid`, `forbidden`, `stale-revision`. Без
+  `message` представление показывает свои слова для
+  `capability-not-provided`, `port-not-connected` и `action-not-allowed`, а
+  для остальных причин — общий текст по виду ответа.
+- `sequence` в ответе на `query.change` и `query.count` повторяет номер
+  запроса: ответ на устаревший запрос представление отбрасывает. Это
+  проверяет случай набора `query-answer-names-its-sequence`.
+- Конфликт несёт рядом с `answer`, а не в `data`, `current_revision` —
+  ревизию, против которой нужно было писать. Конфликт записи настроек
+  колонок несёт ещё `columns` — колонки слоя, какими они стали, а конфликт
+  пакетного действия — `conflicts`, по записи `{id, current_revision}` на
+  каждую устаревшую запись. Без `current_revision` представление
+  перечитывает список.
 - `data` — данные порта: `columns`, `records`, `total`, `has_next`, `echo`,
-  `column_settings` и другие из его описания. Ответ на запрос
+  `column_settings` (обязательны только у хоста с личными или общими
+  настройками колонок) и другие из его описания. Ответ на запрос
   (`query.change`) без `data` представление считает ошибкой. Ответ на
   изменение записи может вернуть в `data.records` только изменённые записи
   или не вернуть `data` вовсе — тогда представление перезапросит список.
@@ -510,9 +535,9 @@ document.querySelector('sf-data-view').setHostPort(host);
 инструментов (поиск, фильтр, «Создать») и выбор строк, а текст `message`
 приходит уведомлением и в блок «Нет доступа» не попадает. Следующий ответ
 `applied` возвращает панель и выбор такими, какими их задал автор; при `unavailable`
-представление показывает свою ошибку и `message` не читает. `sequence` в
-ответах `refused` и `unavailable` необязателен: ответ без него представление
-считает ответом на текущий запрос.
+представление показывает свою ошибку и `message` не читает. Ответ на запрос
+называет свой `sequence` и тогда, когда он `refused` или `unavailable`; ответ
+без него представление считает ответом на текущий запрос.
 
 У порта карточки записи (`<sf-property-view>`) свой формат: запись приходит
 в самом ответе, без `data`.
@@ -530,8 +555,8 @@ document.querySelector('sf-data-view').setHostPort(host);
 
 Права приходят вместе с данными: каждая запись несёт список действий,
 которые приложение разрешает именно для неё, и представление предлагает
-только их. Текущая версия — [порт 1.11.0](/ai/ports/simai.dataview-port/1.11.0/port.json)
-и его [набор проверок](/ai/ports/simai.dataview-port/1.11.0/kit/manifest.json);
+только их. Текущая версия — [порт 1.12.0](/ai/ports/simai.dataview-port/1.12.0/port.json)
+и его [набор проверок](/ai/ports/simai.dataview-port/1.12.0/kit/manifest.json);
 прежние версии опубликованы рядом. Приложение заявляет поддержку версии
 порта, когда прошло все проверки её набора. Правила стыка — в
 [стандарте порта хоста](/ru/guide/standards/map/#порт-хоста-simai-composite-host-port).
@@ -640,9 +665,10 @@ document.querySelector('sf-data-view').setHostPort(host);
 список перезапрашивается. На любой другой ответ, например `conflict` с
 текущей ревизией, представление возвращает прежний порядок.
 
-Набор проверок порта 1.11.0 — 43 случая; три из них проверяют запись в
+Набор проверок порта 1.12.0 — 44 случая; три из них проверяют запись в
 ячейке с ответом записью, запись с подтверждением и перестановку против
-устаревшей ревизии.
+устаревшей ревизии, а `query-answer-names-its-sequence` — что ответ на запрос
+называет его `sequence`.
 
 ### Проверка на сервере
 
@@ -685,7 +711,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-b67288e349e0` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-dec4c338a088` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -750,7 +776,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `openView(key: string)` — возвращает `object`. Открывает сохранённое представление.
 - `refresh(reason?: string)` — возвращает `object`. Запрашивает текущую выборку с новым номером последовательности.
 - `resetColumnSettings()` — возвращает `object`. Сбрасывает раскладку колонок человека: пустой личный слой, записанный против его ревизии, — это сброс по порту (запись, а не удаление). Значения по умолчанию даёт хост.
-- `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: settings.save_personal или settings.save_shared. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт data.column_settings или data.current_revision для этого слоя, если хост их дал, а иначе перечитывает список.
+- `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: settings.save_personal или settings.save_shared. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт data.column_settings, иначе current_revision и columns, которые конфликт несёт рядом с answer (порт 1.12.0; их же в data тоже читает), а без них перечитывает список.
 - `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0 и новее. Бросает TypeError без key и label или для другого уровня.
 - `setHostPort(host: object)` — возвращает `object`. Привязывает конкретный адаптер хоста.
 - `updateRecord(id: string|integer, patch?: object)` — возвращает `boolean`. Записывает одну запись на месте: строка перезаписывается, и у хоста ничего не запрашивается. Запись, на которую получен ответ только с записями, проходит этот путь сама.
@@ -797,8 +823,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/data-view`
-- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/data-view`
+- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -924,6 +950,18 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-table-rows-reorder` — `detail`: `{ ids?: array, before?: any, order?: array }`. Строки перетащили в другой порядок внутри списка: перемещённые идентификаторы, строка, перед которой они теперь стоят (null — в конце), и весь показанный порядок.
 - `sf-table-cell-set` — `detail`: `{ id?: any, key?: string, value?: any, revision?: any }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
 
+#### Персональный вид
+
+Ключ `sf-table/<preferences-key>`, общий для всех элементов этого вида — `sf-table/*`; версия формата — `v: 1`. В столбце «Для первой отрисовки» «да» значит, что сервер может положить поле в блок `data-sf-preferences` страницы.
+
+| Поле | Тип | Пишет | Для первой отрисовки | Что в нём |
+|:---|:---|:---|:---|:---|
+| `columnSettings` | `object` | `sf-table` | да | Раскладка колонок человека по ключу колонки: `visible` (логическое), `width` (длина CSS), `order` (число), `pinned` (`start` или `end`). Накладывается на настройки колонок хоста, поэтому колонка, которой в ней нет, остаётся как у хоста. |
+| `widths` | `object` | `sf-table` | да | Ширины колонок, которые человек задал перетаскиванием, по ключу колонки, в виде `"<N>px"`. Хранятся и без `preferences-key`, если у таблицы есть `remember-widths`, — тогда под собственным ключом таблицы. |
+| `view` | `object` | `sf-table` | да | Вид таблицы: `density` (`compact`, `normal`, `spacious`), `stripes`, `lines`, `singleLine`, `stickyHead`. Под `sf-table/*` это вид всех таблиц человека; он читается под видом этой таблицы. |
+| `sort` | `array` | `sf-data-view` | да | Сортировка, которую выбрал человек: `[{key, direction}]`. Пишет и читает представление данных, в котором стоит таблица, поэтому первый запрос уже приходит в этом порядке. |
+| `pageSize` | `integer` | `sf-data-view` | да | Размер страницы, который выбрал человек. Пишет и читает представление данных, поэтому первый запрос уже просит этот размер. |
+
 #### Доступность
 
 - Роль: область (`region`).
@@ -939,5 +977,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/table`
-- `simai/larena-ui@13c0550c34a5ec59818fb1791e92cd7bc780cb63:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/table`
+- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/table/rule.js#name=cl-table`

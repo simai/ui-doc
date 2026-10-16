@@ -19,7 +19,7 @@ description: "Карта стандартов показывает все ста
 |:---|:---|:---|:---|:---|:---|
 | 1 | Standard Contract | `standard-contract` | 1.0.0 | Форму любого стандарта | — |
 | 2 | Recipe | `simai.composition-recipe` | 1.0.1 | Правила сборки документа страницы | Standard Contract |
-| 2 | Манифест Smart-компонента | `simai.smart-component-manifest` | 2.4.0 | Контракт одного компонента | Standard Contract |
+| 2 | Манифест Smart-компонента | `simai.smart-component-manifest` | 2.5.0 | Контракт одного компонента | Standard Contract |
 | 3 | Составной компонент | `simai.composite-component` | 1.0.2 | Внешнюю сторону составного компонента | Recipe, манифест |
 | 3 | Пакет компонентов | `simai.component-package` | 1.0.0 | Пакет Smart-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
 | 4 | Динамический составной компонент | `simai.dynamic-composite-component` | 1.0.2 | Поведение составного компонента на стыке с приложением | наследует уровень 3 |
@@ -60,7 +60,7 @@ description: "Карта стандартов показывает все ста
 
 | Порт | Компонент | Текущая версия | Изданы | Случаев в наборе проверок |
 |:---|:---|:---|:---|:---|
-| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.11.0 | 1.0.0–1.11.0 | 43 |
+| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.12.0 | 1.0.0–1.12.0 | 44 |
 | `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.12.0 | 1.0.0–1.12.0 | 42 |
 | `simai.admin-navigation-port` | `smart.admin-menu` (`sf-admin-menu`) | 1.0.0 | 1.0.0 | 37 |
 
@@ -73,7 +73,7 @@ description: "Карта стандартов показывает все ста
 |:---|:---|
 | Схема конверта Standard Contract | [`/ai/standards/standard-contract/1.0.0/standard.schema.json`](/ai/standards/standard-contract/1.0.0/standard.schema.json) |
 | Комплект Recipe | [`/ai/standards/composition-recipe/1.0.1/`](/ai/standards/composition-recipe/1.0.1/README.md) |
-| Схема манифеста Smart-компонента | [`/ai/standards/smart-component-manifest/2.4.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.4.0/manifest.schema.json) |
+| Схема манифеста Smart-компонента | [`/ai/standards/smart-component-manifest/2.5.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.5.0/manifest.schema.json) |
 | Конверт составного компонента | [`/ai/standards/simai.composite-component/1.0.2/standard.json`](/ai/standards/simai.composite-component/1.0.2/standard.json) |
 | Конверт динамического составного компонента | [`/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json`](/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json) |
 | Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.3/standard.json`](/ai/standards/simai.composite-host-port/1.0.3/standard.json) |
@@ -88,7 +88,7 @@ description: "Карта стандартов показывает все ста
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
 
 Копии берутся из закреплённого выпуска при каждой сборке сайта: схема
-манифеста — действующее издание 2.4.0, порты — все версии, которые
+манифеста — действующее издание 2.5.0, порты — все версии, которые
 поставляет выпуск.
 
 Версии стандартов, форматов и портов руководство называет только в этих

@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "d28ac099cc09450d60f0e0d1895fe3bc5dc8a082",
-    "core_revision": "b67288e349e0601433963fa52e271a1c4cfc9a57",
+    "source_revision": "ca179df38f7dff082eb031e61f6450e1ce5a6c12",
+    "core_revision": "dec4c338a088967f2ec7a8565adfd1f822a2f1b9",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "019bfcc4ef5b8ef9253b0b3882971a074174e151828de53ef4f3c76d70e10ae9"
     },
-    "note": "At source d28ac099 and core b67288e3 (release ui-b67288e349e0) the composition schemas, composition-types, index.mjs, builtins, fixture and the buttons manifest are byte-identical to the review at ui-e3daedde2b41; core.js changes only in SF.Preferences (an unchanged value is not written again) and the Loader's class map (items-start|end|center|stretch are no longer rewritten), neither of which the composition pages describe."
+    "note": "At source ca179df3 and core dec4c338 (release ui-dec4c338a088) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at ui-d1cd7069b16d (that release changed only the manifest schema, 2.5.0 persistence.view_preference, and the resizer manifest)."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
