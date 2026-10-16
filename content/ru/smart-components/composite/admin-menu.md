@@ -25,8 +25,9 @@ description: "Даёт административному приложению �
 ### Подключение пакета
 
 Элемент загружается, только если пакет `larena` объявлен до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к пакету>/smart'}}}`.
-Подробнее — в разделе
+`window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
+Готовой сборки пакета для загрузки нет: проект без Larena собирает её сам
+(см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)). Подробнее — в разделе
 [Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
 
 ### Два способа задать меню
@@ -89,6 +90,53 @@ description: "Даёт административному приложению �
 из кода. Каждое переключение отправляет `sf-admin-menu-compact-change` с
 `event.detail` `{compact, source}`: по нему оболочка приложения меняет ширину
 своей колонки.
+
+### Меню в колонке с ручкой ширины
+
+Ширину колонки меню меняет [ручка ширины](/ru/smart-components/overlays/resizer/)
+`<sf-resizer>`, которая стоит в той же колонке рядом с меню. Меню занимает
+колонку по высоте и прокручивает свои пункты само, поэтому колонке
+прокрутка не нужна.
+
+```html
+<nav class="app-menu" style="--menu-width: 288px">
+  <sf-admin-menu brand="Larena" searchable collapsible>…</sf-admin-menu>
+  <sf-resizer min="13rem" max="24rem" property="--menu-width"
+              storage-key="admin-menu" label="Ширина меню"></sf-resizer>
+</nav>
+```
+
+```css
+@layer project {
+  .app-menu { position: sticky; inset-block-start: 0; block-size: 100vh; }
+  @media (width >= 44rem) {
+    .app-menu { inline-size: var(--menu-width, 16rem); }
+  }
+  .app-menu sf-resizer { z-index: 61; }
+}
+```
+
+Что важно заметить:
+
+- у колонки нет `overflow`: ручка наполовину выходит за её край, и
+  прокрутка колонки обрезала бы эту половину;
+- у корня `<sf-admin-menu>` `z-index` равен 60, а у ручки — 2, поэтому без
+  правила `z-index: 61` меню закрывает ручку от указателя, и её нельзя ни
+  тянуть, ни вернуть двойным щелчком; клавиатура работает и без него;
+- ширину колонки хранит ручка под `sf-resizer/<storage-key>`
+  ([персональный вид](/ru/guide/smart-components/view-preferences/)), а
+  ширину в первом кадре пишет сервер в `style` колонки (см. [Где хранится ширина](/ru/smart-components/overlays/resizer/#где-хранится-ширина)).
+
+Свой персональный вид у меню отдельный: свёрнутость и открытый раздел оно
+хранит под ключом `sf-admin-menu/main`, и с шириной колонки он не
+пересекается. В компактном
+режиме ширину колонки задаёт оболочка, и ручку на это время выключают:
+
+```js
+menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
+  handle.toggleAttribute('disabled', detail.compact);
+});
+```
 
 ### Настройки пунктов
 

@@ -57,18 +57,23 @@ Smart-компонента своей копии этих модулей не н
 Так подключаются `<sf-table>`, `<sf-data-view>`, `<sf-property-view>` и
 `<sf-admin-menu>`: это компоненты Larena, пакет `larena`. Их исходники лежат в
 репозитории `simai/larena-ui` (папка `components/`, лицензия Apache-2.0), а не
-в поставке `ui`. Отдельной поставки у пакета нет: Larena собирает его
+в поставке `ui`. Готовой сборки пакета для загрузки нет: Larena собирает его
 инструментом ui-builder из точной ревизии исходников Framework и отдаёт в своей
-поставке. Квитанция сборки (`package-receipt.json`) называет выпуск Framework
-`ui-…`, с которым пакет собран, — подключайте их вместе. Пакет объявляется до
-`core.js`, файл правил `smart/rule.js` Loader загружает сам:
+поставке, а проект без Larena собирает пакет сам командой `sf-build package`
+из открытых репозиториев `simai/ui-builder`, `simai/ui-source` и
+`simai/larena-ui` на закреплённых ревизиях (см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)). Без
+сборки пакета эти четыре элемента на странице не работают. Квитанция сборки
+(`package-receipt.json`) называет выпуск Framework `ui-…`, с которым пакет
+собран, — подключайте их вместе. Пакет объявляется до `core.js`, путь к нему —
+по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов) (`/assets/larena/<коммит пакета>/smart`), файл
+правил `smart/rule.js` Loader загружает сам:
 
 ```html
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
-      larena: {base: '/assets/larena-ui/smart'},
+      larena: {base: '/assets/larena/679f88874389aef4bcd1fca60e85aa0bfa438968/smart'},
     },
   };
 </script>

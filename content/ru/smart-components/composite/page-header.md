@@ -53,6 +53,28 @@ description: "Показывает в начале страницы админи
 :::example {id="smart-components/page-header/install" label="Страница установки"}
 :::
 
+### Место на странице и размер действий
+
+Кнопкам в слоте `actions` берите ступень остальных элементов страницы: рядом с полями
+`sf-input--size-1` — кнопки размера 1 (`size="1"` у Smart-кнопки,
+`sf-button--size-1` у классовой). Кнопка только со значком называется
+своим атрибутом: `label` у `<sf-copy-button>`, `aria-label` у классовой
+кнопки.
+
+Своих отступов по краям у шапки нет: она встаёт в контейнер страницы с
+отступами вместе с остальным содержимым, а не над ним. Иначе путь,
+заголовок и действия прижимаются к краям окна.
+
+```html
+<main class="p-4 flex flex-col gap-3">
+  <sf-page-header heading="Настройки решения">
+    <sf-breadcrumbs slot="path">…</sf-breadcrumbs>
+    <sf-copy-button slot="actions" value="https://larena.test/admin/solutions/42" icon="link" text="Скопировать ссылку" label="Скопировать ссылку на страницу" size="1"></sf-copy-button>
+  </sf-page-header>
+  <form>…</form>
+</main>
+```
+
 ### Избранное и событие `sf-page-header-star`
 
 `star` управляет звездой: пустое значение её не рисует, `off` и `on` рисуют

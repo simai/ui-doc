@@ -27,8 +27,9 @@ Framework: пакет компонентов Loader с именем `larena` и�
 [`<sf-property-view>`](/ru/smart-components/composite/property-view/) и
 [`<sf-admin-menu>`](/ru/smart-components/composite/admin-menu/). Объявите
 пакет до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к пакету>/smart'}}}`.
-Подробнее — в разделе
+`window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
+Готовой сборки пакета для загрузки нет: проект без Larena собирает её сам
+(см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)). Подробнее — в разделе
 [Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
 
 ### Имя и ключ настроек
@@ -61,7 +62,8 @@ Framework: пакет компонентов Loader с именем `larena` и�
 строк оставляет их на месте притушенными. В состоянии `error` таблица
 показывает кнопку повтора; нажатие отправляет `sf-table-retry`. Тексты
 состояний задают `loading-text`, `empty-text`, `error-text` и `retry-text`;
-без них компонент берёт тексты на языке страницы.
+без них компонент берёт тексты на языке страницы. `loading-text` на экране не
+виден: пока стоит скелетон, его объявляет экранный диктор.
 
 ### Части оболочки
 
@@ -125,6 +127,11 @@ Framework: пакет компонентов Loader с именем `larena` и�
 в меню панели инструментов; выбор отправляет отменяемое
 `sf-table-toolbar-action` с `{action, href}`, и без `preventDefault()`
 компонент переходит по `href` того же сайта.
+
+В `<sf-data-view>` кнопку «Создать» показывает возможность `create-record`
+адаптера. Отдельного права на создание у человека порт не передаёт: хост
+объявляет `create-record` в адаптере, который строит для этого человека, а
+на `view.create_record` без права отвечает `refused`.
 
 ### Таблица или список
 
@@ -269,12 +276,53 @@ table.setRows([
 остаётся скелетон. `empty-text` и `error-text` становятся заголовками
 состояний «нет записей» и ошибки. Слот `empty` заменяет блок при любой
 причине, включая ошибку: «Повторить» и встроенные слова тогда не
-показываются. Между отрисовками элемент слота вынут из документа, поэтому
-держите ссылку на него, а не ищите его по `id`, и меняйте его по событию
-`sf-data-view-state`: при `state === 'empty'` причина лежит в
-`table.emptyContext.kind` (`no-access`, `nothing-found` или `no-data`), при
-`state === 'error'` — ошибка. Действия `retry`, `create` и `reset-query` в
-блоке слота таблица выполняет сама; второй запрос из кода страницы не нужен.
+показываются.
+
+Уже при первой отрисовке таблица вынимает элемент слота из документа, и
+поиск по `id` после этого вернёт `null` — в том числе после
+`customElements.whenDefined('sf-data-view')`. Поэтому ссылку на блок берите на
+верхнем уровне скрипта в конце `body`, до того как придёт код пакета, и
+меняйте блок по событию `sf-data-view-state`. Таблица записывает причину в
+свойство `emptyContext` до того, как представление отправляет событие:
+
+| `detail.state` | Что в `table.emptyContext` |
+|:---|:---|
+| `empty` | `{kind, reset}`: `kind` — `no-access`, `nothing-found` или `no-data`; `reset` у `nothing-found` — `search`, `filters` или `both` |
+| `error` | `{caused}`: `true`, если ошибку вызвал поиск или фильтр человека |
+
+Действия с `id` `retry`, `create` и `reset-query` в блоке слота таблица
+выполняет сама: повторяет запрос, отправляет намерение создания (оно, как
+кнопка на панели инструментов, проходит проверку возможности `create-record`)
+или очищает то, что назвал `reset`. Второй запрос из кода страницы не нужен.
+
+```html
+<sf-data-view id="solutions" preferences-key="cms.solutions" aria-label="Решения">
+  <sf-table slot="content" aria-label="Решения">
+    <sf-empty-state slot="empty" id="solutions-empty" heading-level="2"></sf-empty-state>
+  </sf-table>
+</sf-data-view>
+<script>
+  const view = document.getElementById('solutions');
+  const empty = document.getElementById('solutions-empty'); // сразу, до прихода кода
+  const words = {
+    'no-data': ['Решений пока нет', [{id: 'create', text: 'Создать'}]],
+    'nothing-found': ['Решения не найдены', [{id: 'reset-query', text: 'Очистить поиск', appearance: 'outline'}]],
+    'no-access': ['Нет доступа к решениям', []],
+    error: ['Не удалось загрузить решения', [{id: 'retry', text: 'Повторить', appearance: 'outline'}]],
+  };
+  view.addEventListener('sf-data-view-state', ({detail}) => {
+    if (detail.state !== 'empty' && detail.state !== 'error') return;
+    const context = view.querySelector('sf-table').emptyContext ?? {};
+    const kind = detail.state === 'error' ? 'error' : context.kind;
+    const [heading, actions] = words[kind] ?? words['no-data'];
+    empty.setAttribute('kind', kind);
+    empty.setAttribute('title', heading);
+    empty.setAttribute('live', context.caused ? 'alert' : 'auto');
+    empty.actions = actions;
+  });
+</script>
+```
+
 Отдельная таблица без `<sf-data-view>` показывает только «нет записей» и
 ошибку. Подробнее — в [Пустые состояния](/ru/guide/smart-components/states-and-loading/#пустые-состояния).
 
@@ -295,9 +343,10 @@ table.setRows([
 С атрибутом `preferences-key` на `<sf-data-view>` (обычно это имя
 коллекции) раскладка таблицы, сортировка и размер страницы хранятся как
 [персональный вид](/ru/guide/smart-components/view-preferences/) под ключом
-`sf-table/<preferences-key>` и применяются до первой отрисовки и первого
-запроса: скелетон уже стоит в порядке колонок человека. Без ключа ничего не
-запоминается.
+`sf-table/<preferences-key>` и применяются до первого запроса: первый
+запрос несёт сортировку и размер страницы человека, а первый кадр с
+колонками данных уже стоит в его раскладке. Скелетон до ответа колонок
+данных не показывает. Без ключа ничего не запоминается.
 
 ### Шаблоны и настройки колонок
 
@@ -311,7 +360,22 @@ table.setRows([
 прислал, — ревизией из `data.column_settings.target`. Если нет ни того, ни
 другого, представление само отвечает `unavailable` и намерение до хоста не
 отправляет; поэтому присылайте в ответе на запрос личный слой с ревизией или
-`target` с ней. Где при этом хранится раскладка — в
+`target` с ней.
+
+На ответ `conflict` хост кладёт текущую ревизию слоя в
+`data.current_revision`. Представление показывает `message` уведомлением и
+ревизию, по которой пишет, не меняет: следующая запись колонок с этого
+устройства снова получит `conflict`, пока представление не перечитает список
+— следующим запросом или вызовом `refresh()`; новый ответ на запрос приносит
+слой с текущей ревизией.
+
+`saveColumnSettings(columnSettings, {shared, base_revision})` записывает
+раскладку из кода: `shared: true` — в общий слой намерением
+`settings.save_shared` (возможность `shared-column-settings`), без него — в
+личный; `base_revision` заменяет ревизию, которую представление взяло бы из
+слоя. `resetColumnSettings()` делает то же, что «Сбросить» в настройках
+таблицы: записывает пустую раскладку `{}` в личный слой против его
+ревизии; значения по умолчанию определяет хост. Где при этом хранится раскладка — в
 [Персональный вид → Раскладка таблицы](/ru/guide/smart-components/view-preferences/#раскладка-таблицы-предпочтение-и-слой-порта).
 Сохранённые представления передаёт `setTemplates(templates)`; изменения на
 вкладке «Шаблоны» приходят событиями `sf-table-template-save`,
@@ -423,9 +487,11 @@ document.querySelector('sf-data-view').setHostPort(host);
 список. Если `raise` выбросил ошибку или запрос прерван через `signal`,
 представление показывает ошибку; ответ на устаревший запрос отбрасывается.
 Отказ `refused` на `query.change` означает «нет доступа»: строки прежнего
-ответа и строка страниц убираются, а текст `message` показывается
-сообщением; при `unavailable` представление показывает свою
-ошибку и `message` не читает.
+ответа и строка страниц убираются, а текст `message` приходит
+уведомлением и в блок «Нет доступа» не попадает; при `unavailable`
+представление показывает свою ошибку и `message` не читает. `sequence` в
+ответах `refused` и `unavailable` необязателен: ответ без него представление
+считает ответом на текущий запрос.
 
 У порта карточки записи (`<sf-property-view>`) свой формат: запись приходит
 в самом ответе, без `data`.
@@ -438,7 +504,7 @@ document.querySelector('sf-data-view').setHostPort(host);
 | Эхо запроса | что человек выбрал, что приложение применило, что отклонило, поиск, сортировка, окно и что потерялось при смене представления |
 | Намерения | запрос, действия над записью, запись поля в ячейке, перестановка записей, пакет по выбору и по фильтру, сохранение настроек лично и для всех, шаблоны, создание |
 | Возможности | сохранённые представления, общие настройки колонок, пакет по фильтру, действия над записью, создание, личные настройки колонок, запись в ячейке, перестановка строк — приложение объявляет, что даёт |
-| Настройки | слои `package`, `shared`, `personal`; запись всегда против ревизии слоя, сброс — тоже запись |
+| Настройки | слои `package`, `shared`, `personal`; запись всегда против ревизии слоя, сброс — запись пустой раскладки `{}` против ревизии |
 | Словарь колонки | видимость, порядок, ширина, минимальная ширина, приоритет при нехватке места, закрепление |
 
 Права приходят вместе с данными: каждая запись несёт список действий,
@@ -448,6 +514,22 @@ document.querySelector('sf-data-view').setHostPort(host);
 прежние версии опубликованы рядом. Приложение заявляет поддержку версии
 порта, когда прошло все проверки её набора. Правила стыка — в
 [стандарте порта хоста](/ru/guide/standards/map/#порт-хоста-simai-composite-host-port).
+
+### Запрос и события для кода страницы
+
+`changeQuery(patch, reason)` сливает `patch` с текущим запросом и
+запрашивает список. В `patch` — поля `query`: `search`, `filters`, `sort`,
+`page`, `per_page`. `reason` уходит хосту в `payload.reason`; по умолчанию
+это `query-change`. Только причины `page-change`, `page-size-change` и
+`show-more` сохраняют `page`, при любой другой она становится 1. Причины
+`search` и `filter` отмечают запрос как действие человека: ошибка в ответ
+на него объявляется сразу. `refresh(reason)` повторяет текущий запрос.
+
+| Событие | `detail` |
+|:---|:---|
+| `sf-data-view-state` | `{state, message, instance_id}`: `state` — `loading`, `populated`, `empty` или `error`; `message` — текст для экранного диктора: о загрузке, ошибке или уведомлении хоста |
+| `sf-data-view-answer` | ответ хоста на любое намерение: `{intent, answer, reason, message, data, sequence, instance_id}` — поля, которых не было в ответе, отсутствуют |
+| `sf-table-column-settings-reset` | `{target: 'personal', tableSettingsKey}`; представление отвечает на него `resetColumnSettings()` |
 
 ### Пример: связь с приложением
 
@@ -652,18 +734,19 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `collapseNode(id: string|integer)` — возвращает `null`. Закрывает открытый узел. Это дело самого представления, хост не спрашивается.
 - `loadMoreNodes(parent: string|integer|null, cursor?: string|null)` — возвращает `object`. Следующая страница одного уровня: корни — через запрос, потомки узла — через tree.expand с его курсором.
 - `openMoveDialog(record: object)` — возвращает `object`. Спрашивает хост, куда можно перенести запись (node.targets), даёт выбрать ровно из этих мест и переносит её туда (node.move).
+- `resetColumnSettings()` — возвращает `object`. Записывает пустую раскладку `{}` в личный слой настроек столбцов против его ревизии, как «Сбросить» в настройках таблицы; значения по умолчанию определяет хост.
 
 #### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-count-request` — `detail` не описан.
-- `sf-data-view-answer` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
+- `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, message?: string, data?: object, sequence?: integer, instance_id: string }`. Хост ответил на намерение порта.
 - `sf-data-view-saved-view-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-data-view-state` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
+- `sf-data-view-state` — `detail`: `{ state: string, message: string, instance_id: string }`. Состояние списка сменилось: `state` — `loading`, `populated`, `empty` или `error`; `message` — текст для экранного диктора. При `empty` и `error` причина уже лежит в `emptyContext` таблицы.
 - `sf-table-action-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
 - `sf-table-column-settings-change` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
-- `sf-table-column-settings-reset` — `detail` не описан.
+- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Человек нажал «Сбросить» в настройках таблицы; `target` — `personal`. Представление отвечает на него `resetColumnSettings()`.
 - `sf-table-create-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
 - `sf-table-query-intent` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
 - `sf-table-template-delete` — `detail` не описан. Намерение или ответ порта, наблюдаемые хостом.
@@ -801,7 +884,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-port-output` — `detail`: `{ port: any, value: array }`. Выход порта композиции. Таблица отправляет порт `selection` (`record-ids.v1`) один раз при каждом изменении явного выделения, включая сброс; маршрутизирует его общий `sf-composition-scope`.
 - `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Запрашивает одну операцию над строкой или групповую операцию, которую выполняет хост. Источник события — экземпляр таблицы-владельца; отправка события не означает успех операции.
 - `sf-table-column-settings-change` — `detail`: `{ reason: string, tableSettingsKey: string, columnSettings: object }`. Запрашивает сохранение изменений настроек столбцов после изменения ширины, порядка или видимости.
-- `sf-table-column-settings-reset` — `detail` не описан.
+- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Человек нажал «Сбросить» в настройках таблицы; `target` — `personal`. Раскладку колонок из персонального вида таблица уже убрала.
 - `sf-table-create-intent` — `detail`: `{ item: string|null }`. Пользователь нажал кнопку создания (item равен null) или выбрал пункт из её меню (id пункта). Только намерение: хост открывает свою форму создания.
 - `sf-table-filter-change` — `detail` не описан. Запрашивает у хоста выборку после изменения активного черновика фильтра.
 - `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Запрашивает у хоста выборку после изменения входного порта контекста. Хост разрешает связь и права доступа и отвечает вызовом applyQueryResult(sequence, rows); более старые номера последовательности игнорируются.

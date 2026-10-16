@@ -12,5 +12,36 @@
       ],
       "reason": "The ui-9fb0297bb5c2 and ui-ec56cef08625 manifests carry sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
     }
+  },
+  "amend": {
+    "data-view": {
+      "reason": "The larena-679f88874389 data-view manifest does not list resetColumnSettings() and does not describe these event details; read from larena-ui components/src/smart/data-view/index.js and table/index.js at that revision. Reported to the Framework session 2026-10-16 (docs trial 5).",
+      "methods": {
+        "resetColumnSettings()": "возвращает `object`. Записывает пустую раскладку `{}` в личный слой настроек столбцов против его ревизии, как «Сбросить» в настройках таблицы; значения по умолчанию определяет хост."
+      },
+      "events": {
+        "sf-data-view-state": {
+          "detail": "`{ state: string, message: string, instance_id: string }`",
+          "text": "Состояние списка сменилось: `state` — `loading`, `populated`, `empty` или `error`; `message` — текст для экранного диктора. При `empty` и `error` причина уже лежит в `emptyContext` таблицы."
+        },
+        "sf-data-view-answer": {
+          "detail": "`{ intent: string, answer: string, reason?: string, message?: string, data?: object, sequence?: integer, instance_id: string }`",
+          "text": "Хост ответил на намерение порта."
+        },
+        "sf-table-column-settings-reset": {
+          "detail": "`{ target: string, tableSettingsKey: string|null }`",
+          "text": "Человек нажал «Сбросить» в настройках таблицы; `target` — `personal`. Представление отвечает на него `resetColumnSettings()`."
+        }
+      }
+    },
+    "table": {
+      "reason": "The larena-679f88874389 data-view manifest does not list resetColumnSettings() and does not describe these event details; read from larena-ui components/src/smart/data-view/index.js and table/index.js at that revision. Reported to the Framework session 2026-10-16 (docs trial 5).",
+      "events": {
+        "sf-table-column-settings-reset": {
+          "detail": "`{ target: string, tableSettingsKey: string|null }`",
+          "text": "Человек нажал «Сбросить» в настройках таблицы; `target` — `personal`. Раскладку колонок из персонального вида таблица уже убрала."
+        }
+      }
+    }
   }
 }

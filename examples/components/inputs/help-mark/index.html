@@ -1,0 +1,19 @@
+<div class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+  <span class="sf-input-label flex items-cross-center gap-1">
+    <label class="sf-input-text" for="inputs-help-mark-code">Код решения</label>
+    <sf-help-mark label="Подробнее: код решения" title="Код решения" size="1/3"
+                  text="Уникальное имя модуля латиницей, например simai.billing."></sf-help-mark>
+  </span>
+  <span class="sf-input-field items-cross-center transition flex">
+    <input id="inputs-help-mark-code" name="code" required pattern="[a-z0-9.]+" placeholder="simai.billing">
+  </span>
+  <span class="sf-input-hint-text-wrap">Строчные латинские буквы, цифры и точки</span>
+</div>
+<script>
+(() => {
+  const field = document.currentScript.previousElementSibling;
+  const bind = () => SF.Input.setState(field, {});
+  if (window.SF?.Input?.setState) bind();
+  else window.addEventListener('sf-loader-ready', bind, {once: true});
+})();
+</script>

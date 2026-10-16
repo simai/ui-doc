@@ -23,8 +23,9 @@ description: "Показывает и правит поля одного объ�
 ### Подключение пакета
 
 Элемент загружается, только если пакет `larena` объявлен до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {larena: {base: '<путь к пакету>/smart'}}}`.
-Подробнее — в разделе
+`window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
+Готовой сборки пакета для загрузки нет: проект без Larena собирает её сам
+(см. [Пакет `larena` без поставки Larena](/ru/guide/introduction/structure/#пакет-larena-без-поставки-larena)). Подробнее — в разделе
 [Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
 
 ### Запись и порт свойств

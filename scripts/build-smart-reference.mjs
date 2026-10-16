@@ -268,6 +268,10 @@ const valueMap = (from, to, inputs) => {
 };
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
+  // What a manifest leaves out and the source does (config/smart-reference.json
+  // `amend`, with the reason): a method it does not list, an event detail it
+  // does not describe. The manifest wins as soon as it says it itself.
+  const amend = settings.amend?.[folder] ?? {};
   const tag = manifest.custom_element;
   const lines = [];
   const h = single ? '###' : '####';
@@ -382,6 +386,10 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       if (!generic(method.summary)) parts.push(ru(method.summary));
       lines.push(item(`- ${code(`${name}(${argumentList.join(', ')})`)}${parts.length ? ` — ${parts.join(' ')}` : ''}`));
     }
+    for (const [signature, text] of Object.entries(amend.methods ?? {})) {
+      if (manifest.methods?.[signature.replace(/\(.*$/u, '')]) continue;
+      lines.push(item(`- ${code(signature)} — ${text}`));
+    }
     lines.push('');
   }
 
@@ -399,8 +407,10 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       const when = event.alias_of
         ? `устаревший псевдоним события ${code(event.alias_of)}: приходит с тем же \`detail\`, подписывайтесь на ${code(event.alias_of)}.`
         : (generic(event.summary) ? '' : ru(event.summary));
-      const detailText = detail === 'не описан' ? '`detail` не описан.' : `\`detail\`: ${detail}.`;
-      lines.push(item(`- ${code(name)} — ${event.alias_of ? when : `${detailText}${when ? ` ${when}` : ''}`}`));
+      const amended = detail === 'не описан' && !event.alias_of ? amend.events?.[name] : null;
+      const detailText = amended ? `\`detail\`: ${amended.detail}.` : (detail === 'не описан' ? '`detail` не описан.' : `\`detail\`: ${detail}.`);
+      const said = amended?.text ?? when;
+      lines.push(item(`- ${code(name)} — ${event.alias_of ? when : `${detailText}${said ? ` ${said}` : ''}`}`));
     }
     lines.push('');
   }
