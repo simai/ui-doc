@@ -69,8 +69,8 @@ description: "Глава описывает, как компонент стро�
 | `iconStart`, `iconEnd` | строка или `null` | Сырые атрибуты `icon-start` (или `icon-left`) и `icon-end` (или `icon-right`), а не значение, выведенное из `icon`: `null` — атрибута нет, сторона берёт `icon`; пустая строка — атрибут задан пустым, иконки на этой стороне нет |
 | `iconLeft`, `iconRight` | строка | Прежние имена тех же сторон; без атрибута — пустая строка |
 | `iconPosition` | строка | `start` (по умолчанию) или `end`; шаблон принимает и `left`, `right` |
-| `spacing` | строка | Плотность: `compact`, `normal`, `comfortable` или `spacious`, из атрибута `spacing` или прежнего `tightness`. Внешний шаблон ставит класс `spacing-<значение>`, для `normal` класса нет. Отсутствующий атрибут и явное `normal` дают одно значение; различить их можно через `component.hasAttribute('spacing')` |
-| `tightness` | строка | Та же плотность прежним именем: `low`, пустая строка, `high`, `highest`; встроенный шаблон ставит класс прежнего имени `tightness-<значение>`, у которого те же стили, что у `spacing-<значение>` |
+| `spacing` | строка | Плотность: `compact`, `normal`, `comfortable` или `spacious`, из атрибута `spacing` или прежнего `tightness`. Шаблон ставит класс `spacing-<значение>`, для `normal` класса нет. Отсутствующий атрибут и явное `normal` дают одно значение; различить их можно через `component.hasAttribute('spacing')` |
+| `tightness` | строка | Та же плотность прежним именем: `low`, пустая строка, `high`, `highest`; класс по нему шаблон не ставит, берите `spacing` |
 | `radius` | строка | `default`, `square`, `rounded` или пустая строка; класс `radius-<значение>` |
 | `loading` | булево | Идёт загрузка |
 | `disabled` | булево | Кнопка заблокирована |
@@ -99,7 +99,7 @@ description: "Глава описывает, как компонент стро�
 
 Без загрузки классов `loading sf-button-state-loading` и атрибутов `disabled`,
 `aria-busy` нет. Кнопка без иконок добавляет контейнеру подписи класс
-`flex-1`. Классы `segment-…`, `tightness-…`, `radius-…` и `rootClass`
+`flex-1`. Классы `segment-…`, `spacing-…`, `radius-…` и `rootClass`
 добавляются к корню, когда заданы.
 
 ## Встроенный и внешний шаблон

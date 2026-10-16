@@ -77,7 +77,8 @@ SF.Loader.themePreference;  // 'system', 'light' или 'dark'
 
 Готовый переключатель — кнопка с классом `.sf-theme-button`; атрибут
 `data-theme="system|light|dark"` делает из неё выбор конкретного значения.
-Состояние кнопок Framework ставит сам, атрибутом `aria-pressed`:
+Состояние кнопок Framework ставит сам: атрибут `aria-pressed` и класс
+`active`, с которым кнопка выглядит нажатой:
 
 - кнопка с `data-theme` нажата, когда её значение равно текущему выбору
   (`preference`). Кнопка `system` нажата, пока явного выбора нет;

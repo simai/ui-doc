@@ -28,7 +28,7 @@ description: "Меняет отображение, направление, ко�
 промежуток растёт. Во второй строке от ширины `sm` один образец скрывается,
 другой появляется.
 
-:::example {id="utilities/layout/query-layout-align" label="cq-sm:justify-between, cq-sm:gap-3 и cq-sm:hidden"}
+:::example {id="utilities/layout/query-layout-align" label="cq-sm:content-main-between, cq-sm:gap-3 и cq-sm:hidden"}
 :::
 
 ## Классы
@@ -52,10 +52,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-sm:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-sm:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-sm:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-sm:justify-start` | `justify-content: flex-start` | — |
-| `cq-sm:justify-end` | `justify-content: flex-end` | — |
-| `cq-sm:justify-center` | `justify-content: center` | — |
-| `cq-sm:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-sm:content-main-start` | `justify-content: flex-start` | — |
+| `cq-sm:content-main-end` | `justify-content: flex-end` | — |
+| `cq-sm:content-main-center` | `justify-content: center` | — |
+| `cq-sm:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-sm:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-sm:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-sm:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -77,10 +77,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-sm/sidebar:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-sm/sidebar:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-sm/sidebar:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-sm/sidebar:justify-start` | `justify-content: flex-start` | — |
-| `cq-sm/sidebar:justify-end` | `justify-content: flex-end` | — |
-| `cq-sm/sidebar:justify-center` | `justify-content: center` | — |
-| `cq-sm/sidebar:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-sm/sidebar:content-main-start` | `justify-content: flex-start` | — |
+| `cq-sm/sidebar:content-main-end` | `justify-content: flex-end` | — |
+| `cq-sm/sidebar:content-main-center` | `justify-content: center` | — |
+| `cq-sm/sidebar:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-sm/sidebar:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-sm/sidebar:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-sm/sidebar:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -102,10 +102,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-md:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-md:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-md:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-md:justify-start` | `justify-content: flex-start` | — |
-| `cq-md:justify-end` | `justify-content: flex-end` | — |
-| `cq-md:justify-center` | `justify-content: center` | — |
-| `cq-md:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-md:content-main-start` | `justify-content: flex-start` | — |
+| `cq-md:content-main-end` | `justify-content: flex-end` | — |
+| `cq-md:content-main-center` | `justify-content: center` | — |
+| `cq-md:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-md:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-md:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-md:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -127,10 +127,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-md/sidebar:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-md/sidebar:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-md/sidebar:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-md/sidebar:justify-start` | `justify-content: flex-start` | — |
-| `cq-md/sidebar:justify-end` | `justify-content: flex-end` | — |
-| `cq-md/sidebar:justify-center` | `justify-content: center` | — |
-| `cq-md/sidebar:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-md/sidebar:content-main-start` | `justify-content: flex-start` | — |
+| `cq-md/sidebar:content-main-end` | `justify-content: flex-end` | — |
+| `cq-md/sidebar:content-main-center` | `justify-content: center` | — |
+| `cq-md/sidebar:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-md/sidebar:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-md/sidebar:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-md/sidebar:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -152,10 +152,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-lg:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-lg:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-lg:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-lg:justify-start` | `justify-content: flex-start` | — |
-| `cq-lg:justify-end` | `justify-content: flex-end` | — |
-| `cq-lg:justify-center` | `justify-content: center` | — |
-| `cq-lg:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-lg:content-main-start` | `justify-content: flex-start` | — |
+| `cq-lg:content-main-end` | `justify-content: flex-end` | — |
+| `cq-lg:content-main-center` | `justify-content: center` | — |
+| `cq-lg:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-lg:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-lg:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-lg:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -177,10 +177,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-lg/sidebar:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-lg/sidebar:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-lg/sidebar:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-lg/sidebar:justify-start` | `justify-content: flex-start` | — |
-| `cq-lg/sidebar:justify-end` | `justify-content: flex-end` | — |
-| `cq-lg/sidebar:justify-center` | `justify-content: center` | — |
-| `cq-lg/sidebar:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-lg/sidebar:content-main-start` | `justify-content: flex-start` | — |
+| `cq-lg/sidebar:content-main-end` | `justify-content: flex-end` | — |
+| `cq-lg/sidebar:content-main-center` | `justify-content: center` | — |
+| `cq-lg/sidebar:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-lg/sidebar:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-lg/sidebar:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-lg/sidebar:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -202,10 +202,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-xl:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-xl:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-xl:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-xl:justify-start` | `justify-content: flex-start` | — |
-| `cq-xl:justify-end` | `justify-content: flex-end` | — |
-| `cq-xl:justify-center` | `justify-content: center` | — |
-| `cq-xl:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-xl:content-main-start` | `justify-content: flex-start` | — |
+| `cq-xl:content-main-end` | `justify-content: flex-end` | — |
+| `cq-xl:content-main-center` | `justify-content: center` | — |
+| `cq-xl:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-xl:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-xl:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-xl:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
@@ -227,10 +227,10 @@ description: "Меняет отображение, направление, ко�
 | `cq-xl/sidebar:grid-col-{значение}` | `grid-template-columns: repeat({значение}, minmax(0, 1fr))` | `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
 | `cq-xl/sidebar:grid-col-none` | `grid-template-columns: none` | — |
 | `cq-xl/sidebar:grid-col-subgrid` | `grid-template-columns: subgrid` | — |
-| `cq-xl/sidebar:justify-start` | `justify-content: flex-start` | — |
-| `cq-xl/sidebar:justify-end` | `justify-content: flex-end` | — |
-| `cq-xl/sidebar:justify-center` | `justify-content: center` | — |
-| `cq-xl/sidebar:justify-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
+| `cq-xl/sidebar:content-main-start` | `justify-content: flex-start` | — |
+| `cq-xl/sidebar:content-main-end` | `justify-content: flex-end` | — |
+| `cq-xl/sidebar:content-main-center` | `justify-content: center` | — |
+| `cq-xl/sidebar:content-main-{значение}` | `justify-content: space-{значение}` | `between`, `around`, `evenly` |
 | `cq-xl/sidebar:items-cross-{значение}` | `align-items: {значение}` | `start`, `end`, `center`, `baseline`, `stretch` |
 | `cq-xl/sidebar:gap-{значение}` | `gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-xl/sidebar:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |

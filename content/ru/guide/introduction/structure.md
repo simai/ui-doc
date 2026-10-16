@@ -122,7 +122,7 @@ Apache-2.0. Пакет соответствует стандарту
     "package": "shop",
     "source": {
       "repository": "simai/ui-source",
-      "revision": "d7fc879d02c891c0e275fae58efd25aed970b091"
+      "revision": "ce2830141ff423e045fb6133e6ac599601f8a852"
     }
   }
   ```
@@ -130,7 +130,7 @@ Apache-2.0. Пакет соответствует стандарту
   `schema` — точно эта строка; `source.repository` — всегда
   `simai/ui-source`; `source.revision` — полный коммит исходников, из которых
   собран выбранный выпуск Framework (поле `build_inputs.source.commit` записи о
-  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-2cc712424489`). `package` необязателен; если он есть, он совпадает с
+  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-a2d9554ab5ee`). `package` необязателен; если он есть, он совпадает с
   именем пакета в сборке. Других полей сборка не читает.
 - **Правило компонента.** Файл `src/smart/<папка>/rule.js` записывает ровно
   одно правило `cl-<папка>` простыми данными, без регулярных выражений,
@@ -265,7 +265,7 @@ Apache-2.0. Пакет соответствует стандарту
 **Доступ.** Репозитории `ui-builder` и `ui-source` открыты и
 распространяются по лицензии Apache 2.0, как и поставка `ui`. Сборка пакета
 требует обе рабочие копии (см. «Условия запуска» ниже). Пакет собирается из
-открытых исходников для выпусков, начиная с `ui-2cc712424489`: их ревизии
+открытых исходников для выпусков, начиная с `ui-a2d9554ab5ee`: их ревизии
 исходников лежат в `simai/ui-source`. Ревизии более ранних выпусков хранятся
 в закрытом архиве истории исходников, и пакет под такой выпуск собирается
 только с доступом к нему, который даёт команда Framework.
@@ -452,7 +452,7 @@ if (result.status !== 'PASS') {
 
 Проект, который использует элементы пакета `larena` без самой Larena, собирает
 пакет из открытого исходника `simai/larena-ui` при тех же условиях запуска.
-Пример — для выпуска `ui-2cc712424489`; `<ui-builder>`, `<ui-source>` и `<ui>` —
+Пример — для выпуска `ui-a2d9554ab5ee`; `<ui-builder>`, `<ui-source>` и `<ui>` —
 пути к рабочим копиям, `<ui>` стоит на текущей ветке `main`.
 
 1. **Сборка.** Папка пакета — `components` репозитория `simai/larena-ui`,
@@ -460,30 +460,30 @@ if (result.status !== 'PASS') {
 
    Сборщик стоит на коммите из записи о выпуске
    (`build_inputs.builder.commit`), для этого выпуска —
-   `git -C <ui-builder> checkout 8648eb97a7657fda3c4d548ea445402f2ffb3d2c`.
+   `git -C <ui-builder> checkout e7c2fc2c332818f97cb6c17a89953393b622e26f`.
 
    ```bash
    git clone https://github.com/simai/larena-ui.git
-   git -C larena-ui checkout 832c7d1707603ede670c866666238fcf3ea70317
+   git -C larena-ui checkout d295468b07b80f29dd625786fa74f955d05aeda3
    node <ui-builder>/bin/sf-build.js package --name larena \
      --package-root larena-ui/components \
-     --package-revision 832c7d1707603ede670c866666238fcf3ea70317 \
+     --package-revision d295468b07b80f29dd625786fa74f955d05aeda3 \
      --package-repository simai/larena-ui \
      --ui-source <ui-source> --ui <ui> --out build/larena --json
    ```
 
 2. **Проверка квитанции.** Команда завершается с кодом `0` и `status: "PASS"`.
    В `build/larena/package-receipt.json` поле `framework.release` равно
-   `ui-2cc712424489`, `package_source.revision` — коммиту из шага 1, а
+   `ui-a2d9554ab5ee`, `package_source.revision` — коммиту из шага 1, а
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/larena/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/larena/832c7d1707603ede670c866666238fcf3ea70317/smart/`, и объявляют
+   `public/assets/larena/d295468b07b80f29dd625786fa74f955d05aeda3/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {larena: {base: '/assets/larena/832c7d1707603ede670c866666238fcf3ea70317/smart'}},
+     packages: {larena: {base: '/assets/larena/d295468b07b80f29dd625786fa74f955d05aeda3/smart'}},
    };
    ```
 

@@ -80,11 +80,15 @@ Framework: пакет компонентов Loader с именем `larena` и�
 У `<sf-data-view>` свои части перечисляет атрибут `chrome`: `toolbar`,
 `pagination`, `select`, `settings`; без атрибута включены все. Часть
 `toolbar` — запасная строка поиска самого представления. Если в слот
-`content` вставлена своя `<sf-table>` со своей панелью инструментов, уберите
-запасную строку: `chrome="pagination select settings"`, иначе на странице
-окажутся два поля поиска. Без `toolbar` в `chrome` представление ставит
-таблице `layout="table"`; список на узком экране сохраняет `layout="auto"`,
-записанный на самой таблице.
+`content` вставлена своя `<sf-table>` со своей панелью инструментов,
+запасная строка не показывается. Без `toolbar` в `chrome` представление
+ставит таблице `layout="table"`; список на узком экране сохраняет
+`layout="auto"`, записанный на самой таблице.
+
+Область представления называет `aria-label` самого `<sf-data-view>`; без
+него — общее «Представление данных». Строка страниц с «Всего» появляется
+после первого ответа приложения и скрыта, пока список не загрузился, при
+ошибке и при отказе в доступе.
 
 ### Поиск и фильтр
 
@@ -303,10 +307,11 @@ table.setRows([
 отдаёт их приложению, и оно при следующей загрузке применяет их через
 `setTableSettings(settings)`. В `<sf-data-view>` то же изменение уходит
 намерением `settings.save_personal` с `base_revision` — ревизией слоя
-`data.column_settings.layers.personal`. Присылайте этот слой в каждом ответе
-на запрос, даже пустым (`{revision: '0', columns: {}}`): без него
-перестановка, ширина и сброс колонок завершаются ошибкой «Column settings
-need a base revision». Где при этом хранится раскладка — в
+`data.column_settings.layers.personal`, а если хост этого слоя ещё не
+прислал, — ревизией из `data.column_settings.target`. Если нет ни того, ни
+другого, представление само отвечает `unavailable` и намерение до хоста не
+отправляет; поэтому присылайте в ответе на запрос личный слой с ревизией или
+`target` с ней. Где при этом хранится раскладка — в
 [Персональный вид → Раскладка таблицы](/ru/guide/smart-components/view-preferences/#раскладка-таблицы-предпочтение-и-слой-порта).
 Сохранённые представления передаёт `setTemplates(templates)`; изменения на
 вкладке «Шаблоны» приходят событиями `sf-table-template-save`,
@@ -384,8 +389,9 @@ document.querySelector('sf-data-view').setHostPort(host);
 | `page` | номер страницы с 1 |
 | `per_page` | размер страницы, по умолчанию 25 |
 
-Встроенная пагинация представления предлагает размеры 10, 20, 30 и 40, и
-размер 25 среди них не выбран. Свои размеры задаёт своя пагинация в слоте:
+Пагинация предлагает размеры из своего `page-sizes`, по умолчанию 10, 20,
+30 и 40; действующий размер страницы представление добавляет в этот список,
+поэтому 25 тоже есть в выборе. Свои размеры задаёт своя пагинация в слоте:
 `<sf-pagination slot="pagination" page-sizes="25,50,100">`; `page-sizes` на
 `<sf-table>` внутри представления не действует.
 
@@ -409,7 +415,8 @@ document.querySelector('sf-data-view').setHostPort(host);
 представление отвечает себе отказом `action-not-allowed`. Подписи есть
 только у действий `view`, `edit` и `delete`; подпись и значок своего действия
 приложение передаёт каталогом `data.row_actions: [{id, label, icon}]` в
-ответе на запрос, иначе кнопка называется идентификатором действия.
+ответе на запрос. Действие без записи в каталоге подписано «Действие», а в
+консоли появляется предупреждение с его идентификатором.
 Переход после `record.open` и `view.create_record` делает само приложение.
 
 Повторный вызов `setHostPort()` заменяет адаптер и заново запрашивает
@@ -573,7 +580,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-2cc712424489` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-a2d9554ab5ee` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -684,8 +691,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@832c7d1707603ede670c866666238fcf3ea70317:components/src/smart/data-view`
-- `simai/larena-ui@832c7d1707603ede670c866666238fcf3ea70317:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/data-view`
+- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -826,5 +833,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@832c7d1707603ede670c866666238fcf3ea70317:components/src/smart/table`
-- `simai/larena-ui@832c7d1707603ede670c866666238fcf3ea70317:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/table`
+- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/table/rule.js#name=cl-table`

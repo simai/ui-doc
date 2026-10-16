@@ -66,7 +66,7 @@ description: "Цветовые роли — это токены, которые 
 |:---|:---|:---|
 | Залитая (`default`) | `--sf-primary` | `--sf-on-primary` |
 | Тональная (`tonal`) | `--sf-primary-container` | `--sf-on-primary-container` |
-| Контурная (`outline`), `link`, `ghost` | прозрачный | `--sf-primary` |
+| Контурная (`outline`), `link` | прозрачный | `--sf-primary` |
 | Отключённая залитая или тональная | `--sf-disable` | `--sf-on-disable` |
 
 Настройка `scheme` у компонента (см. [Настройки: общий язык компонентов](/ru/guide/components/settings/#настройки-общий-язык-компонентов)) выбирает семейство ролей:

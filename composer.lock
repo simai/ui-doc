@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f513e0b30ebcd5a62a7ecc0e14dbc3fb",
+    "content-hash": "de70f816b23220e625a812e1b4d4e766",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "ebf627e15e6b4643d61a3d76d65d01c25c649a66"
+                "reference": "5dbed266182472bb16e619f8d544dd6a49f45525"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/ebf627e15e6b4643d61a3d76d65d01c25c649a66",
-                "reference": "ebf627e15e6b4643d61a3d76d65d01c25c649a66",
+                "url": "https://api.github.com/repos/simai/docara/zipball/5dbed266182472bb16e619f8d544dd6a49f45525",
+                "reference": "5dbed266182472bb16e619f8d544dd6a49f45525",
                 "shasum": ""
             },
             "require": {
@@ -1631,6 +1631,7 @@
                     "/.vscode",
                     "/CONTRIBUTING.md",
                     "/composer.lock",
+                    "/docs/site/.gitignore",
                     "/output",
                     "/phpunit.xml",
                     "/pint.json",
@@ -1670,7 +1671,7 @@
                 "source": "https://github.com/simai/docara",
                 "security": "https://github.com/simai/docara/security/policy"
             },
-            "time": "2026-10-15T22:48:10+00:00"
+            "time": "2026-10-16T02:00:27+00:00"
         },
         {
             "name": "symfony/clock",
