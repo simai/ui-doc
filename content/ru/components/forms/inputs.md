@@ -20,7 +20,10 @@ profile: reference
 
 Минимальную разметку показывает пример выше. Части вложены так:
 `label.sf-input` → подпись `sf-input-label`, рамка `sf-input-field` с
-нативным `<input>` и подсказка `sf-input-hint-text-wrap`.
+нативным `<input>` и подсказка `sf-input-hint-text-wrap`. Пояснение к
+подписи по нажатию — [знак «?»](/ru/smart-components/feedback/help-mark/)
+рядом с подписью: поле тогда подписывают `<label for>`, а знак ставят вне
+`<label>`.
 
 - Оболочка — `<label class="sf-input">` с классом размера, классом вида
   (`sf-input--bordered` или `sf-input--filled`) и утилитами `flex flex-col`.

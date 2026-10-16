@@ -137,7 +137,7 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-composition-overlay-select` — `detail`: `{ node_id?: string|null }`. Выбран узел.
 - `sf-composition-overlay-action` — `detail`: `{ action_id: string, node_id: string }`. Выбрано действие панели инструментов.

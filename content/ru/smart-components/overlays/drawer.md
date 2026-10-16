@@ -164,11 +164,11 @@ document.addEventListener('drawer:after-open', (event) => {
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `size="1/2"` | `size="small"` | работает и предупреждает | 2026-12-01 |
-| `size="1"` | `size="medium"` | работает и предупреждает | 2026-12-01 |
-| `size="2"` | `size="large"` | работает и предупреждает | 2026-12-01 |
-| `placement="inline-start"` | `placement="left"` | работает и предупреждает | 2026-12-01 |
-| `placement="inline-end"` | `placement="right"` | работает и предупреждает | 2026-12-01 |
+| `size="1/2"` | `size="small"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `size="1"` | `size="medium"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `size="2"` | `size="large"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `placement="inline-start"` | `placement="left"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `placement="inline-end"` | `placement="right"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -184,7 +184,7 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `drawer:ready` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 - `drawer:update` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.

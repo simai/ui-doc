@@ -290,20 +290,20 @@ layer.addEventListener('keydown', (event) => {
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `position="inline-start"` | `position="start"` | работает и предупреждает | 2026-12-01 |
-| `position="inline-end"` | `position="end"` | работает и предупреждает | 2026-12-01 |
-| `position="top-inline-start"` | `position="top-start"` | работает и предупреждает | 2026-12-01 |
-| `position="top-inline-end"` | `position="top-end"` | работает и предупреждает | 2026-12-01 |
-| `position="bottom-inline-start"` | `position="bottom-start"` | работает и предупреждает | 2026-12-01 |
-| `position="bottom-inline-end"` | `position="bottom-end"` | работает и предупреждает | 2026-12-01 |
-| `position="left-top"` | `position="left-start"` | работает и предупреждает | 2026-12-01 |
-| `position="left-bottom"` | `position="left-end"` | работает и предупреждает | 2026-12-01 |
-| `position="right-top"` | `position="right-start"` | работает и предупреждает | 2026-12-01 |
-| `position="right-bottom"` | `position="right-end"` | работает и предупреждает | 2026-12-01 |
-| `position="inline-start-top"` | `position="inline-start-start"` | работает и предупреждает | 2026-12-01 |
-| `position="inline-start-bottom"` | `position="inline-start-end"` | работает и предупреждает | 2026-12-01 |
-| `position="inline-end-top"` | `position="inline-end-start"` | работает и предупреждает | 2026-12-01 |
-| `position="inline-end-bottom"` | `position="inline-end-end"` | работает и предупреждает | 2026-12-01 |
+| `position="inline-start"` | `position="start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="inline-end"` | `position="end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="top-inline-start"` | `position="top-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="top-inline-end"` | `position="top-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="bottom-inline-start"` | `position="bottom-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="bottom-inline-end"` | `position="bottom-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="left-top"` | `position="left-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="left-bottom"` | `position="left-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="right-top"` | `position="right-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="right-bottom"` | `position="right-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="inline-start-top"` | `position="inline-start-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="inline-start-bottom"` | `position="inline-start-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="inline-end-top"` | `position="inline-end-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `position="inline-end-bottom"` | `position="inline-end-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -316,7 +316,7 @@ layer.addEventListener('keydown', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-context-menu-select` — `detail`: `{ id?: string|null, entry?: object, checked?: boolean|null, group?: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
 - `sf-context-menu-open` — `detail`: `null`. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.

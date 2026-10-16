@@ -101,7 +101,7 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-profile-select` — `detail`: `{ id: string }`. Человек выбрал профиль.
 - `sf-profile-create` — `detail`: `{ label: string, shared: boolean, from?: string }`. Человек попросил новый профиль — копию текущего.

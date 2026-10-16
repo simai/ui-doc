@@ -295,8 +295,8 @@ Smart-компонентов.
 |:---|:---|:---|
 | `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers` и `SF.RuleLoader.registerPackage` доступны |
 | `sf-loader-ready` | `window` | Первая партия модулей загружена. Событие отправляется один раз: обработчик, добавленный позже, не сработает |
-| `sf-runtime-ready` | `window` | Пришла общая основа Smart-компонентов (см. [Общая основа Smart-компонентов](#общая-основа-smart-компонентов)) |
-| `sf-smart-base-ready` | `window` | Загружена база Smart-компонентов; один раз на страницу |
+| `sf-runtime-ready` | `window` | Пришла общая основа Smart-компонентов — модули, против которых собраны их скрипты (см. [Общая основа Smart-компонентов](#общая-основа-smart-компонентов)) |
+| `sf-smart-base-ready` | `window` | Загружен базовый класс Smart-компонентов: есть `SF.smart`, `SF.language`, `SF.pageText`; один раз на страницу. Надёжнее событий — `await SF.loadSmartBase()`: обещание выполняется и тогда, когда база уже пришла |
 | `sf-theme-change` | `window` | Сменилась тема или выбор темы; `detail: {theme, preference}`. Приходит и один раз при запуске, когда Loader впервые выбрал тему (см. [Как выбирается тема на странице](/ru/guide/colour/themes/#как-выбирается-тема-на-странице)) |
 | `component:ready` | `document` | Зарегистрирован обычный компонент (`detail.name` — имя в реестре, например `Inputs`). Объект `SF.<Имя>` к этому моменту уже назначен |
 
@@ -306,7 +306,7 @@ Smart-компонентов.
 
 | API | Когда доступен | Как дождаться |
 |:---|:---|:---|
-| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
+| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.Preferences` ([Персональный вид](/ru/guide/smart-components/view-preferences/)), `SF.notify` и `SF.notifications` ([Всплывающие сообщения](/ru/components/feedback/toast/#уведомления-страницы-sf-notify)), `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
 | `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
 | `SF.Loader.theme` (`light` или `dark` — тема на странице) и `SF.Loader.themePreference` (`system`, `light` или `dark` — выбор человека) | Вместе с `SF.Loader`; значения появляются, когда Loader выбрал тему при запуске | Событие `sf-theme-change`: первое приходит при запуске |
 | `SF.smart`, `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations` | Вместе с базой Smart-компонентов: с первым Smart-элементом на странице или после `await SF.loadSmartBase()`. На странице без Smart-элементов их нет | `await SF.loadSmartBase()` после `sf-loader-init` |
@@ -371,16 +371,16 @@ await SF.loadSmartBase();   // после этого доступны SF.smart, 
 Framework и пакет `shop` из своих копий:
 
 ```html
-<link rel="stylesheet" href="/assets/ui/distr/core/css/core.min.css">
+<link rel="stylesheet" href="/assets/simai-framework/ui/distr/core/css/core.min.css">
 <script>
-  window.sfPath = '/assets/ui/distr/';
+  window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
       shop: {base: '/assets/shop/smart'},
     },
   };
 </script>
-<script src="/assets/ui/distr/core/js/core.min.js"></script>
+<script src="/assets/simai-framework/ui/distr/core/js/core.min.js"></script>
 ```
 
 Что важно заметить:

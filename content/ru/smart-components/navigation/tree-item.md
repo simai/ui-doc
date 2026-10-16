@@ -118,7 +118,7 @@ section.open();
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `kind` | `type` | работает и предупреждает | 2026-12-01 |
+| `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -132,7 +132,7 @@ section.open();
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-tree-item-click` — `detail`: `{ component: object, tagName: string, template: string, item: object, value: string, originalEvent: object|null }`.
 - `sf-tree-item-toggle` — `detail`: `{ component: object, tagName: string, template: string, item: object, open: boolean, value: string }`.

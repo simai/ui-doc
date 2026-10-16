@@ -90,10 +90,10 @@ scale.setProgress(completedSteps * 20);
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `status` | `tone` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
-| `status="neutral"` | `status="primary"` | работает и предупреждает | 2026-12-01 |
+| `status` | `tone` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="neutral"` | `status="primary"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -102,7 +102,7 @@ scale.setProgress(completedSteps * 20);
 
 ### События
 
-Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Своих событий нет; общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 ### Доступность
 

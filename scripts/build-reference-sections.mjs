@@ -274,7 +274,10 @@ const utilityVariants = (families) => {
       const name = firstClass(first.selector);
       const prefix = name.includes(':') ? name.slice(0, name.lastIndexOf(':') + 1) : `${variant}:`;
       const width = first.media?.match(/min-width:\s*([0-9.]+(?:px|rem|em))/u)?.[1];
-      if (!seen.has(prefix)) seen.set(prefix, {width: width ?? null, state: width ? null : prefix.slice(0, -1), example: name});
+      // A container query (`cq-sm:`) is a condition of its own kind, not a
+      // state: it answers to the width of the nearest query container.
+      const container = prefix.startsWith('cq-');
+      if (!seen.has(prefix)) seen.set(prefix, {width: width ?? null, container, state: width || container ? null : prefix.slice(0, -1), example: name});
     }
   }
   // A family may ship its state classes in the default sheet (`hover:fill-*`).
@@ -284,7 +287,8 @@ const utilityVariants = (families) => {
       const name = firstClass(selector);
       if (!name || !name.includes(':')) continue;
       const prefix = name.slice(0, name.lastIndexOf(':') + 1);
-      if (!seen.has(prefix)) seen.set(prefix, {width: null, state: prefix.slice(0, -1), example: name});
+      const container = prefix.startsWith('cq-');
+      if (!seen.has(prefix)) seen.set(prefix, {width: null, container, state: container ? null : prefix.slice(0, -1), example: name});
     }
   }
   return [...seen].map(([prefix, data]) => ({prefix, ...data}))
@@ -357,11 +361,13 @@ const tokenValue = (name) => {
 const utilityConditions = (families) => {
   const variants = utilityVariants(families);
   const widths = variants.filter(({width}) => width).map(({prefix}) => code(prefix));
+  const containers = variants.filter(({container}) => container).map(({prefix}) => code(prefix));
   const states = variants.filter(({state}) => state).map(({prefix}) => code(prefix));
   const example = variants[0]?.example;
+  const containerPart = containers.length ? `; ширина контейнера — ${containers.join(', ')}` : '';
   return [
     '',
-    `Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — ${widths.length ? widths.join(', ') : 'нет'}; состояния — ${states.length ? states.join(', ') : 'нет'}.${example ? ` Например: ${code(example)}.` : ''}`,
+    `Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — ${widths.length ? widths.join(', ') : 'нет'}${containerPart}; состояния — ${states.length ? states.join(', ') : 'нет'}.${example ? ` Например: ${code(example)}.` : ''}`,
   ];
 };
 

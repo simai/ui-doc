@@ -121,11 +121,11 @@ form.prepend(alert);
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `appearance` | `variant` | работает и предупреждает | 2026-12-01 |
-| `status` | `type` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
-| `status="neutral"` | `status="clear"` | работает и предупреждает | 2026-12-01 |
+| `appearance` | `variant` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="neutral"` | `status="clear"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -136,7 +136,7 @@ form.prepend(alert);
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-alert-action` — `detail`: `{ action?: string, alert?: any }`. Активирована кнопка действия ([data-action] или [data-alert-action]) внутри уведомления. Всплывает и с composed: true; не отменяемое. Уведомление остаётся.
 - `sf-alert-close` — `detail`: `{ alert?: any }`. Уведомление закрывается кнопкой закрытия или через dismiss()/close(). Всплывает и с composed: true; не отменяемое; после него элемент удаляется.

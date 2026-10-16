@@ -108,7 +108,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-download-file:click` — `detail`: `{ href?: string, fileName?: string, download?: boolean }`. Отправляется один раз для доступного нативного назначения или действия, которым управляет приложение, от отрисованного корня .sf-download-file; всплывает до хост-элемента, не с composed: true и не отменяемое.
 

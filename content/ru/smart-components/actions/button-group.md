@@ -122,10 +122,10 @@ group.select('month');
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `spacing` | `tightness` | работает и предупреждает | 2026-12-01 |
-| `spacing="compact"` | `tightness="low"` | работает и предупреждает | 2026-12-01 |
-| `spacing="comfortable"` | `tightness="high"` | работает и предупреждает | 2026-12-01 |
-| `spacing="spacious"` | `tightness="highest"` | работает и предупреждает | 2026-12-01 |
+| `spacing` | `tightness` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -135,7 +135,7 @@ group.select('month');
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ component: any, previous: string, value: string, item: object|null }`. Выбранное значение изменилось через select() или clear(); событие отправляется на хост-элементе, всплывает и с composed: true. Имя для привязки.
 - `sf-button-group-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.

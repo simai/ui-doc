@@ -236,7 +236,7 @@ description: "Меняет отображение, направление, ко�
 | `cq-xl/sidebar:row-gap-{значение}` | `row-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 | `cq-xl/sidebar:col-gap-{значение}` | `column-gap: var(--sf-space-{значение})` | `0`, `1/4`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8` |
 
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `cq-sm:`, `cq-sm/sidebar:`, `cq-md:`, `cq-md/sidebar:`, `cq-lg:`, `cq-lg/sidebar:`, `cq-xl:`, `cq-xl/sidebar:`. Например: `cq-sm:block`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; ширина контейнера — `cq-sm:`, `cq-sm/sidebar:`, `cq-md:`, `cq-md/sidebar:`, `cq-lg:`, `cq-lg/sidebar:`, `cq-xl:`, `cq-xl/sidebar:`; состояния — нет. Например: `cq-sm:block`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

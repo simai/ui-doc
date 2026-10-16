@@ -113,6 +113,9 @@ profile: reference
 скругление, `radius-rounded` делает края полностью круглыми; `radius-default`
 даёт совместимое значение `--sf-radius-default` — постоянные 4 px, не связанные
 с ролью `--sf-radius--ui`. Другие классы `radius-*` на кнопку не действуют.
+Переменная `--sf-button-radius` из раздела «Переменные» не действует на кнопки
+с иконкой `sf-icon-button`: квадратную кнопку с иконкой задаёт класс
+`radius-square` на каждой кнопке.
 
 :::example {id="components/buttons/radius" label="Радиус кнопки"}
 :::

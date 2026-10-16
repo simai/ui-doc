@@ -147,6 +147,10 @@ await button.whenRendered();
 (см. [Подключение к странице](#подключение-к-странице)). Для тега Framework
 можно писать короткое имя: `await SF.whenDefined('button')`.
 
+Свойства компонента (`value`, `formattedValue`, `triggerText` и другие)
+верны уже после `whenDefined()`; узлы внутри компонента появляются после
+`whenRendered()`.
+
 `whenRendered()` работает и после первой отрисовки: если отрисовка уже
 случилась, обещание выполняется сразу. Полная запись —
 `whenRendered(callback?, { next? })`: необязательная функция `callback`

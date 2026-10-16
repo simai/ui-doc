@@ -111,7 +111,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-badge-background-color` | Заливка значка. | `var(--sf-on-surface-variant)`; зависит от вида, схемы, статуса |
+| `--sf-badge-background-color` | Заливка бейджа. | `var(--sf-on-surface-variant)`; зависит от вида, схемы, статуса |
 | `--sf-badge-color` | Цвет текста и иконки. | `var(--sf-on-surface-inverse)`; зависит от вида, схемы, статуса |
 | `--sf-badge-border-color` | Цвет рамки; виден при ненулевой ширине рамки. | `transparent`; зависит от вида, схемы, статуса |
 | `--sf-badge-border-width` | Ширина рамки со всех сторон. | `0`; зависит от вида |

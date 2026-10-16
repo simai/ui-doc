@@ -1,1 +1,4 @@
-project-greeting { display: block; }
+/* The tag itself has no box (display: contents); the template's root carries the layout. */
+@layer project {
+  .project-greeting-compact { margin: 0; }
+}

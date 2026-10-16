@@ -146,12 +146,16 @@ core.js, or to a pinned tag.
 Своя копия получается из репозитория `simai/ui` по полному коммиту выпуска.
 Контрольную сумму архива сверяют с полем `runtime_sources.core.archive_sha256`
 записи о выпуске (см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)), и только после этого его
-распаковывают в публичную папку проекта:
+распаковывают в публичную папку проекта. Запись о выпуске лежит в ветке
+`main` репозитория, а не в самом коммите выпуска; та же сумма есть в поле
+`runtime.ui.sha256` файла [`/ai/framework-lock.json`](/ai/framework-lock.json)
+этого сайта:
 
 ```bash
 git clone https://github.com/simai/ui.git simai-ui
 git -C simai-ui archive --format=tar 2cc712424489c73947caed36a0b9a61a211ebc2a distr | shasum -a 256
 # равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-2cc712424489.lock.json
+# и полю runtime.ui.sha256 в /ai/framework-lock.json этого сайта
 mkdir -p public/assets/simai-framework/ui
 git -C simai-ui archive --format=tar 2cc712424489c73947caed36a0b9a61a211ebc2a distr | tar -x -C public/assets/simai-framework/ui
 ```

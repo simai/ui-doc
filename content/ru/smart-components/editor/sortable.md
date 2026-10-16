@@ -169,7 +169,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-sortable-intent` — `detail`: `{ item: string, from: string, to: string, index: integer, mode: any }`. Пользователь отпустил перетаскиваемый элемент; хост применяет или отклоняет изменение.
 - `sf-sortable-state` — `detail`: `{ state?: any, item?: string }`. Сеанс перетаскивания начался (элемент взят) или закончился (отпущен, отменён).

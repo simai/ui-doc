@@ -140,7 +140,7 @@ tree.items = await fetchFolders();
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-tree-selection-change` — `detail`: `{ component: object, tagName: string, template: string, item: object, selected: boolean, value: string }`. Запрошен или изменён выбор элемента дерева.
 - `sf-tree-records-drop` — `detail` не описан. На узел отпустили записи, перетащенные из списка: {value, ids, source}. Дерево ничего не перемещает.

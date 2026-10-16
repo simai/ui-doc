@@ -48,8 +48,8 @@ description: "Компоненты Framework сами подставляют ч�
    любом языке;
 2. слово, которое проект зарегистрировал для этого языка (см. [Свой язык и явный выбор языка](#свой-язык-и-явный-выбор-языка));
 3. слово, которое поставляет сам компонент;
-4. то же для языка без региона: для `pt-BR` — `pt`;
-5. то же для английского;
+4. шаги 2–3 для языка без региона: для `pt-BR` — `pt`;
+5. шаги 2–3 для английского;
 6. сам ключ слова — пропуск в переводе виден, а не превращается в пустое место.
 
 Поэтому слово, которое проект не перевёл, показывается по-английски, а не на
@@ -111,6 +111,16 @@ function switchLanguage(code, direction = 'ltr') {
 switchLanguage('ar', 'rtl');
 ```
 
+Выбор, сохранённый с прошлого визита, восстанавливайте до `core.js`
+встроенным скриптом: он ставит `lang` и `dir` на `<html>`, и компоненты
+сразу рисуются на этом языке. `SF.language.use()` вызывайте, когда
+`SF.language` появится (после `await SF.loadSmartBase()`), — если выбран язык
+с регионом, который нужен календарю и числам.
+
+Подпись, переданная атрибутом, сильнее словаря (шаг 1 в
+[Откуда берётся слово](#откуда-берётся-слово)), поэтому при смене языка
+`aria-label` и другие подписи из атрибутов страница переставляет сама.
+
 ### Пример переключателя
 
 Переключатель выбирает русский, английский или арабский. Арабских слов
@@ -146,27 +156,75 @@ switchLanguage('ar', 'rtl');
 
 **Ключи словарей компонентов.** Слова регистрируются под именем тега:
 
-| Компонент | Ключи |
-|:---|:---|
-| `sf-alert` | `closeLabel` |
-| `sf-avatar` | `ariaLabel` |
-| `sf-breadcrumbs` | `ariaLabel`, `expandLabel` |
-| `sf-color` | `choose`, `clear`, `custom`, `inherited` |
-| `sf-datepicker` | `previousMonth`, `nextMonth`, `previousYears`, `nextYears`, `chooseMonth`, `chooseYear` |
-| `sf-drawer` | `closeLabel` |
-| `sf-dropdown` | `search` |
-| `sf-file-preview` | `ariaLabel`, `downloadLabel`, `removeLabel` |
-| `sf-file-upload` | `text`, `linkText` |
-| `sf-modal` | `close`, `minimize`, `title` |
-| `sf-page-header` | `star`, `unstar`, `allSites` |
-| `sf-pagination` | `ariaLabel`, `pagesLabel`, `pageLabel`, `previousLabel`, `nextLabel`, `firstLabel`, `lastLabel`, `totalLabel`, `selectedLabel`, `showMoreText`, `pageSizeLabel`, `pageFieldLabel`, `showCountLabel`, `countingLabel`, `actionApplyText`, `actionForAllLabel`, `actionsLabel`, `actionChooseLabel`, `actionsRegionLabel`, `clearSelectionLabel` |
-| `sf-spinner` | `label` |
-| `sf-steps` | `ariaLabel`, `completedLabel`, `errorLabel` |
-| `sf-tag` | `remove` |
-| `sf-toast` | `closeLabel` |
-| `sf-tree-item` | `openLabel`, `closeLabel` |
+| Компонент | Ключ | Слово `en` | Слово `ru` |
+|:---|:---|:---|:---|
+| `sf-alert` | `closeLabel` | Close alert | Закрыть сообщение |
+| `sf-avatar` | `ariaLabel` | Avatar | Аватар |
+| `sf-breadcrumbs` | `ariaLabel` | Breadcrumb | Хлебные крошки |
+| `sf-breadcrumbs` | `expandLabel` | Show hidden breadcrumbs | Показать скрытые крошки |
+| `sf-color` | `choose` | Choose a colour | Выбрать цвет |
+| `sf-color` | `clear` | Use the inherited colour | Вернуть унаследованный |
+| `sf-color` | `inherited` | inherited | наследуется |
+| `sf-color` | `custom` | Custom | Свой |
+| `sf-datepicker` | `previousMonth` | Previous month | Предыдущий месяц |
+| `sf-datepicker` | `nextMonth` | Next month | Следующий месяц |
+| `sf-datepicker` | `previousYears` | Previous years | Предыдущие годы |
+| `sf-datepicker` | `nextYears` | Next years | Следующие годы |
+| `sf-datepicker` | `chooseMonth` | Choose a month | Выберите месяц |
+| `sf-datepicker` | `chooseYear` | Choose a year | Выберите год |
+| `sf-datepicker` | `presets` | Quick ranges | Быстрый выбор |
+| `sf-datepicker` | `customRange` | Custom range | Свой период |
+| `sf-datepicker` | `preset_today` | Today | Сегодня |
+| `sf-datepicker` | `preset_yesterday` | Yesterday | Вчера |
+| `sf-datepicker` | `preset_last7Days` | Last 7 days | Последние 7 дней |
+| `sf-datepicker` | `preset_last30Days` | Last 30 days | Последние 30 дней |
+| `sf-datepicker` | `preset_thisWeek` | This week | Эта неделя |
+| `sf-datepicker` | `preset_thisMonth` | This month | Этот месяц |
+| `sf-datepicker` | `preset_lastMonth` | Last month | Прошлый месяц |
+| `sf-drawer` | `closeLabel` | Close drawer | Закрыть панель |
+| `sf-dropdown` | `search` | Search | Поиск |
+| `sf-file-preview` | `ariaLabel` | File | Файл |
+| `sf-file-preview` | `downloadLabel` | Download file | Скачать файл |
+| `sf-file-preview` | `removeLabel` | Remove file | Удалить файл |
+| `sf-file-upload` | `linkText` | Click to upload | Выберите файл |
+| `sf-file-upload` | `text` | or drag and drop | или перетащите его сюда |
+| `sf-file-upload` | `retry` | Try again | Повторить |
+| `sf-modal` | `close` | Close | Закрыть |
+| `sf-modal` | `minimize` | Minimize | Свернуть |
+| `sf-modal` | `title` | Dialog | Окно |
+| `sf-page-header` | `star` | Add to favourites | В избранное |
+| `sf-page-header` | `unstar` | Remove from favourites | Убрать из избранного |
+| `sf-page-header` | `allSites` | for all sites | для всех сайтов |
+| `sf-pagination` | `ariaLabel` | Result pages | Страницы результатов |
+| `sf-pagination` | `pagesLabel` | Pages: | Страницы: |
+| `sf-pagination` | `pageLabel` | Page | Страница |
+| `sf-pagination` | `previousLabel` | Previous page | Предыдущая страница |
+| `sf-pagination` | `nextLabel` | Next page | Следующая страница |
+| `sf-pagination` | `lastLabel` | Last | Последняя |
+| `sf-pagination` | `totalLabel` | Total: | Всего: |
+| `sf-pagination` | `selectedLabel` | Selected: | Отмечено: |
+| `sf-pagination` | `showMoreText` | Show more | Показать ещё |
+| `sf-pagination` | `pageSizeLabel` | Per page: | На странице: |
+| `sf-pagination` | `actionApplyText` | Apply | Применить |
+| `sf-pagination` | `actionForAllLabel` | For all | Для всех |
+| `sf-pagination` | `actionsLabel` | Action for the selected records | Действие с выбранными элементами |
+| `sf-pagination` | `actionChooseLabel` | Choose an action | Выберите действие |
+| `sf-pagination` | `actionsRegionLabel` | Actions for the selected | Действия с отмеченными |
+| `sf-pagination` | `clearSelectionLabel` | Clear the selection | Снять выделение |
+| `sf-pagination` | `showCountLabel` | Show the number | Показать количество |
+| `sf-pagination` | `countingLabel` | Counting | Считаем |
+| `sf-pagination` | `firstLabel` | First | В начало |
+| `sf-pagination` | `pageFieldLabel` | Page: | Страница: |
+| `sf-spinner` | `label` | Loading... | Загрузка… |
+| `sf-steps` | `ariaLabel` | Steps | Шаги |
+| `sf-steps` | `completedLabel` | Completed | Завершено |
+| `sf-steps` | `errorLabel` | Error | Ошибка |
+| `sf-tag` | `remove` | Remove | Удалить |
+| `sf-toast` | `closeLabel` | Close message | Закрыть сообщение |
+| `sf-tree-item` | `openLabel` | Open item | Развернуть |
+| `sf-tree-item` | `closeLabel` | Close item | Свернуть |
 
-Поставляемые словари `en` и `ru` содержат все ключи из таблицы.
+Таблица собрана из словарей компонентов выпуска.
 
 Пример добавляет арабский язык к тегу и пагинации:
 

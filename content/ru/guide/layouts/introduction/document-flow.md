@@ -81,11 +81,18 @@ Markdown + настройки сайта
 и остальные), а экспорт по умолчанию — сам объект `Composition`:
 
 ```js
-import { render, extendRegistry } from './ui/distr/core/js/composition/index.mjs';
+import { readFile } from 'node:fs/promises';
+import { render, extendRegistry, compositionTypeFromSmartManifest } from './ui/distr/core/js/composition/index.mjs';
 
+// Тип для Smart-компонента берётся из его манифеста в той же поставке.
+const buttons = JSON.parse(await readFile('./ui/distr/smart/buttons/smart.manifest.json', 'utf8'));
 const doc = JSON.parse(documentJson); // документ simai.composition.document
-const result = await render(doc, { registry: extendRegistry([]) });
+const result = await render(doc, { registry: extendRegistry([compositionTypeFromSmartManifest(buttons)]) });
 ```
+
+Если в документе есть Smart-узел, страница с результатом подключает Core и
+Loader: узел выводится тегом компонента, а загружает его Loader (см.
+[Smart-компонент в макете](/ru/guide/layouts/building/smart-component/)).
 
 Модулю не нужны браузерные объекты вроде `window` и `document`: из
 глобальных объектов он берёт только `crypto.subtle`, `TextEncoder` и `URL`,

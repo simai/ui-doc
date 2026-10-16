@@ -114,6 +114,7 @@ description: "Выбирает дату или период в календар�
 | `format` | значение атрибута `format` |
 | `startValue`, `endValue` | для периода: границы в виде `ГГГГ-ММ-ДД` |
 | `formattedStartValue`, `formattedEndValue` | для периода: границы в формате `format` |
+| `date`, `isoValue` | совместимые поля; для одной даты — то же, что `value`. Для периода их значения не согласованы с `value`, поэтому берите `value` или `startValue` и `endValue` |
 
 При выборе периода событие приходит дважды: после начала — с пустым
 `endValue`, и после конца.
@@ -122,7 +123,8 @@ description: "Выбирает дату или период в календар�
 `detail`. Подписывайтесь на `change`.
 
 Свойство `value` возвращает дату или массив границ периода и принимает то же
-при присваивании. Свойство `formattedValue` возвращает выбранную дату в
+при присваивании. Кнопки очистки у календаря нет: из кода присвойте
+`value = ''`; событие `change` при этом не приходит. Свойство `formattedValue` возвращает выбранную дату в
 формате `format`, для периода — `formattedStartValue` и
 `formattedEndValue`; читать их можно в любой момент, без события. `openPanel()`, `closePanel()` и `togglePanel()` открывают и
 закрывают окно из кода; `openPanel({focusCalendar: true})` переводит фокус на
@@ -210,9 +212,9 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `size` | `input-size` | работает и предупреждает | 2026-12-01 |
-| `size="1/2"` | `size="1/3"` | работает и предупреждает | 2026-12-01 |
-| `size="2"` | `size="3"` | работает и предупреждает | 2026-12-01 |
+| `size` | `input-size` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `size="1/2"` | `size="1/3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `size="2"` | `size="3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -225,7 +227,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ value: string|array, range: boolean, format: string, formattedValue?: string, date?: string, isoValue?: string, startValue?: string, endValue?: string, startIsoValue?: string, endIsoValue?: string, formattedStartValue?: string, formattedEndValue?: string, preset?: object|null }`. Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки.
 - `sf-datepicker-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.

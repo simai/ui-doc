@@ -133,7 +133,7 @@ slider.slideNext();
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-slide-change` — `detail`: `{ component: object, tagName: string, template: string, activeIndex: number, realIndex: number, previousIndex: number }`.
 

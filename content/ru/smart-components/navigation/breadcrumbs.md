@@ -120,7 +120,7 @@ crumbs.onItemClick((item, detail) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-breadcrumb-click` — `detail`: `{ component?: any, tagName?: string, template?: string, item?: object, index?: number, items?: array, originalEvent?: any }`. Нажат пункт. Всплывает, с composed: true и отменяемое: preventDefault() на пункте-многоточии оставляет его свёрнутым. У отключённых и текущих пунктов нативный переход отменяется до отправки события.
 

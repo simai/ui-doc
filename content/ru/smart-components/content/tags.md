@@ -152,11 +152,11 @@ tags.addEventListener('close', (event) => {
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `kind` | `type` | работает и предупреждает | 2026-12-01 |
-| `status` | `type` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает и предупреждает | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает и предупреждает | 2026-12-01 |
-| `kind="default"` | `kind="quantity"` | работает и предупреждает | 2026-12-01 |
+| `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `kind="default"` | `kind="quantity"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -165,7 +165,7 @@ tags.addEventListener('close', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ active: boolean, component: object }`. Изменилось активное состояние тега-флажка.
 - `close` — `detail`: `{ component: object }`. Удаление запрошено через отдельно названное действие закрытия.

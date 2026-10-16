@@ -10,7 +10,7 @@ const buttons = [...demo.querySelectorAll('[data-layout]')].filter((item) => ite
 const modes = {
   list: {
     project: 'grid gap-2',
-    summary: 'flex flex-wrap items-cross-center content-main-between gap-1 p-2 radius-1 bg-primary-container color-on-primary-container',
+    summary: 'flex flex-wrap items-cross-center justify-between gap-1 p-2 radius-1 bg-primary-container color-on-primary-container',
     items: 'flex flex-col gap-1',
     card: 'grid grid-col-2 items-cross-center gap-1 p-2 radius-1 border border-outline-variant bg-surface-0',
     value: 'color-primary text-2 bold',
@@ -18,15 +18,15 @@ const modes = {
   },
   cards: {
     project: 'grid gap-2',
-    summary: 'flex flex-wrap items-cross-center content-main-between gap-1 p-2 radius-1 bg-primary-container color-on-primary-container',
+    summary: 'flex flex-wrap items-cross-center justify-between gap-1 p-2 radius-1 bg-primary-container color-on-primary-container',
     items: 'grid grid-col-1 sm:grid-col-3 gap-2',
-    card: 'flex flex-col content-main-between gap-2 p-2 radius-1 border border-outline-variant bg-surface-0',
+    card: 'flex flex-col justify-between gap-2 p-2 radius-1 border border-outline-variant bg-surface-0',
     value: 'color-primary text-3 bold',
     recipe: 'grid grid-col-1 sm:grid-col-3 gap-2'
   },
   focus: {
     project: 'grid grid-col-1 md:grid-col-3 gap-2',
-    summary: 'flex flex-col content-main-between gap-2 p-2 radius-1 bg-primary-container color-on-primary-container md:col-span-1',
+    summary: 'flex flex-col justify-between gap-2 p-2 radius-1 bg-primary-container color-on-primary-container md:col-span-1',
     items: 'grid grid-col-1 sm:grid-col-2 gap-1 md:col-span-2',
     card: 'grid grid-col-2 items-cross-center gap-1 p-2 radius-1 border border-outline-variant bg-surface-0',
     value: 'color-primary text-2 bold',

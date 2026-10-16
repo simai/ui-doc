@@ -244,7 +244,7 @@ const legacyFor = (tag, inputs) => journal.records
 const PROPERTY_EXCEPTIONS = {'list-item': {value: 'itemValue'}};
 const AXES = ['status', 'appearance', 'kind'];
 const LEGACY_WORDS = ['type', 'variant'];
-const STAGE = {compat: 'работает и предупреждает', removed: 'удалено'};
+const STAGE = {compat: 'работает, отмечается в `SF.deprecations`', removed: 'удалено'};
 // A legacy input that stays its own axis: only some of its values moved.
 const staysOwnAxis = (folder, from, to) => (axes.components ?? []).some((entry) => entry.component === folder
   && entry.axis === to && (entry.legacy ?? []).includes(from) && entry.legacy_input_remains_its_own_axis === true);
@@ -388,9 +388,9 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   const events = Object.entries(manifest.events ?? {});
   lines.push(`${h} События`, '');
   if (events.length === 0) {
-    lines.push('Своих событий нет; общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
+    lines.push('Своих событий нет; общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).', '');
   } else {
-    lines.push('Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).', '');
+    lines.push('Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).', '');
     for (const [name, event] of events) {
       // Both names carry one detail; when only the alias declares its shape,
       // the name to bind shows it too.

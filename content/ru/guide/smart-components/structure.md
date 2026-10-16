@@ -161,6 +161,10 @@ ProjectCounter.define('project-counter');
 - `templateContext()` строится через `this.createPropsTemplateContext({…})`:
   так контекст сохраняет `component`, `rootClass`, `rootStyle` и все
   объявленные свойства (см. [Шаблон и templateContext](/ru/guide/smart-components/templates/#шаблон-и-templatecontext)).
+- Сам тег блока не образует: базовый класс ставит ему встроенный
+  `style="display: contents"`, и правило CSS вроде `project-greeting { display: block }`
+  на него не действует. Раскладку и стиль тега (`rootStyle`) шаблон переносит
+  на свой корневой элемент.
 - В исходниках Framework и пакета те же сущности импортируются из `smart-base`
   и `lit` (см. [Из чего состоит](#из-чего-состоит)); в проекте достаточно
   загруженной браузерной поставки, сборщик не нужен.

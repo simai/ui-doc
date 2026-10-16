@@ -119,7 +119,9 @@ const result = await SF.Composition.render(doc, { registry });
 
 Атрибуты Smart-узла выводятся в алфавитном порядке: свойства узла
 приводятся к канонической форме с упорядоченными ключами, поэтому
-`native-type` стоит перед `text`, в каком бы порядке их ни записали.
+`native-type` стоит перед `text`, в каком бы порядке их ни записали. Явно
+заданные свойства остаются атрибутами, даже если равны значению по
+умолчанию.
 
 `result.assets` — `["composition/layout", "smart/buttons"]`,
 `result.hydration` — `[{"id": "contact", "type": "smart.buttons", "element": "sf-button"}]`.
@@ -131,6 +133,8 @@ const result = await SF.Composition.render(doc, { registry });
 только рендерер собственного типа (см. [Собственный тип](/ru/guide/layouts/reference/custom-type/)). Код, которому нужен готовый элемент, ждёт его через
 `SF.whenDefined('sf-button')` или `customElements.whenDefined('sf-button')`
 (см. [События загрузчика](/ru/guide/connection/loader/#события-загрузчика)).
+Своих событий у кнопки нет: нажатие мышью и клавишами приходит обычным
+`click`, и обработчик удобно вешать делегированием на общий родитель.
 
 Что важно заметить: `createRegistry(список)` берёт список как реестр целиком.
 Реестр из одного типа кнопки не знает `layout.page`, и документ отклоняется с

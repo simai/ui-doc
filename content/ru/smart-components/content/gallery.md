@@ -170,7 +170,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `lightbox-class` | `root-class` | работает и предупреждает | 2026-12-01 |
+| `lightbox-class` | `root-class` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -186,7 +186,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-change` — `detail`: `{ component?: any, tagName?: string, template?: string, previous?: number, current?: number, total?: number, from?: any }`. Текущий слайд изменился через API или любой из слайдеров. Всплывает и с composed: true.
 - `sf-close` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса закрылось. Всплывает и с composed: true.

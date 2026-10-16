@@ -111,7 +111,7 @@ popover.addEventListener('sf-popover-close', () => {
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `surface-role` | `role` | работает и предупреждает | 2026-12-01 |
+| `surface-role` | `role` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -122,7 +122,7 @@ popover.addEventListener('sf-popover-close', () => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-popover-open` — `detail`: `{ component: object, tagName: string, template: string, open: boolean }`. Поверхность открылась.
 - `sf-popover-close` — `detail`: `{ component: object, tagName: string, template: string, open: boolean }`. Поверхность закрылась.

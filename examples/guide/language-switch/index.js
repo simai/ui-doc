@@ -21,6 +21,10 @@ const initializeLanguageSwitch = async () => {
   registerArabic();
 
   const result = root.querySelector('[data-language-result]');
+  // A label passed as an attribute is stronger than any dictionary, so the
+  // page sets its own labels again on every switch.
+  const pagination = root.querySelector('sf-pagination');
+  const pageLabels = {ru: 'Страницы заказов', en: 'Order pages', ar: 'صفحات الطلبات'};
   const tag = root.querySelector('sf-tag');
   const report = () => {
     const label = tag.isConnected ? tag.closeLabel : '—';
@@ -32,6 +36,7 @@ const initializeLanguageSwitch = async () => {
   // lang and dir serve assistive technology, :lang() styles and the layout.
   const switchLanguage = (code, direction) => {
     SF.language.use(code);
+    pagination.setAttribute('aria-label', pageLabels[code] ?? pageLabels.en);
     document.documentElement.lang = code;
     document.documentElement.dir = direction;
     // Here the example sits in a documentation frame whose body carries its

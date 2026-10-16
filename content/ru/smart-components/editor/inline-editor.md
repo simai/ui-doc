@@ -112,7 +112,7 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента описаны в разделе [Загрузка и готовность](/ru/guide/smart-components/lifecycle/).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-inline-edit-input` — `detail`: `{ node_id: string|null, content: array }`. Актуальное нормализованное содержимое после изменения. Отправляется на редактируемом элементе; всплывает до `document`.
 - `sf-inline-edit-commit` — `detail`: `{ node_id: string|null, content: array }`. Редактирование завершено нажатием Enter или уходом фокуса; сохраняет хост. Отправляется на редактируемом элементе; всплывает до `document`.
