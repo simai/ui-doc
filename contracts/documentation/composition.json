@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "ce2830141ff423e045fb6133e6ac599601f8a852",
-    "core_revision": "a2d9554ab5eed98f7f5314539c7347114161841b",
+    "source_revision": "fde630ef63307ffa84a06a297839e031c252e49a",
+    "core_revision": "e3daedde2b41ad5925e13977b315d360f1977c0a",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "cf474082ae9f869db6a79d584861f70d0ddce8e567289cd1315967af6e806e0b",
       "src/core/js/composition/builtins.mjs": "62ccb18b910e34fb39019805b41f85d3208ec714a6840bd0dcc79d75f8434d7e",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "479914a05b50c23689486fbc2101f642542d13e2fc98f48a5989bc18c742e390"
+      "src/smart/buttons/smart.manifest.json": "70a070dc59e424487fb60222223b9cb5d9eee4a84fbc71d34fbe62ccbdb1dc11"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "6c3a31a12c33ff79ef532c4dfc13cc03665e6c4e52407559e6579f6d9a06a130"
     },
-    "note": "At source ce283014 and core a2d9554a (release ui-a2d9554ab5ee) the composition schemas, composition-types, index.mjs, builtins, fixture and core.js are byte-identical to the review at ui-2cc712424489; the buttons manifest changes only the appearance description (ghost is the old name of link) and its source digest, which no page this contract holds quotes. "
+    "note": "At source fde630ef and core e3daedde (release ui-e3daedde2b41) the composition schemas, composition-types, index.mjs, builtins, fixture and core.js are byte-identical to the review at ui-a2d9554ab5ee; the buttons manifest drops the deprecated type from composition.declarative.props, and layouts/building/smart-component no longer says a node accepts it. "
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

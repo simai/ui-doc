@@ -17,7 +17,9 @@ description: "Полный список переменных, которые о�
 её экранируют: `var(--sf-radius-1\/2)`.
 
 Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
-читает ни один файл поставки: её значение ничего не меняет.
+читает ни один файл поставки: её значение ничего не меняет. Пометка
+«устарела» называет дату, после которой переменная уходит из ядра, и запись
+[журнала изменений](/ru/guide/connection/change-lifecycle/#журнал-изменений).
 
 ## Когда применять
 
@@ -220,9 +222,9 @@ description: "Полный список переменных, которые о�
 | `--sf-font-weight-medium` | `500` |
 | `--sf-font-weight-regular` | `400` |
 | `--sf-heading--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
-| `--sf-heading--font-family` | `inherit` · не читается: Framework берёт `--sf-heading--family` |
-| `--sf-heading--font-style` | `normal` · не читается |
-| `--sf-heading--font-weight` | `600` · не читается: Framework берёт `--sf-heading--weight` |
+| `--sf-heading--font-family` | `inherit` · не читается: Framework берёт `--sf-heading--family` · устарела: удаляется после 2026-12-01, запись `token-heading-font-unused` журнала |
+| `--sf-heading--font-style` | `normal` · не читается · устарела: удаляется после 2026-12-01, запись `token-heading-font-unused` журнала |
+| `--sf-heading--font-weight` | `600` · не читается: Framework берёт `--sf-heading--weight` · устарела: удаляется после 2026-12-01, запись `token-heading-font-unused` журнала |
 | `--sf-heading--margin` | `var(--sf-heading--space-top)` |
 | `--sf-heading--space-bottom` | `var(--sf-content--space-text)` |
 | `--sf-heading--space-top` | `var(--sf-content--space-section)` |
@@ -291,9 +293,9 @@ description: "Полный список переменных, которые о�
 | `--sf-text--size-1/2` | `0.75rem` · `var(--sf-b2)` · `0.875rem` · `var(--sf-b4)` |
 | `--sf-text--size-1/3` | `0.75rem` · `var(--sf-b2)` |
 | `--sf-text--size-1/4` | `0.625rem` · `var(--sf-b0)` |
-| `--sf-text--size-1/5` | `0.5rem` · `var(--sf-a8)` |
-| `--sf-text--size-1/6` | `0.375rem` · `var(--sf-a6)` |
-| `--sf-text--size-1/7` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-text--size-1/5` | `0.5rem` · `var(--sf-a8)` · устарела: удаляется после 2026-12-01, запись `token-text-size-below-quarter` журнала |
+| `--sf-text--size-1/6` | `0.375rem` · `var(--sf-a6)` · устарела: удаляется после 2026-12-01, запись `token-text-size-below-quarter` журнала |
+| `--sf-text--size-1/7` | `0.25rem` · `var(--sf-a4)` · устарела: удаляется после 2026-12-01, запись `token-text-size-below-quarter` журнала |
 | `--sf-text--size-2` | `var(--sf-b6)` · `var(--sf-c0)` |
 | `--sf-text--size-3` | `var(--sf-b8)` · `var(--sf-c2)` |
 | `--sf-text--size-4` | `var(--sf-c0)` · `var(--sf-c4)` |
@@ -455,8 +457,8 @@ description: "Полный список переменных, которые о�
 | `--sf-radius-3` | `var(--sf-b6)` · `var(--sf-c2)` |
 | `--sf-radius-4` | `var(--sf-c2)` · `var(--sf-c6)` |
 | `--sf-radius-circle` | `1000px` |
-| `--sf-radius-default` | `var(--sf-a4)` |
-| `--sf-radius-round` | `var(--sf-radius-rounded)` |
+| `--sf-radius-default` | `var(--sf-a4)` · устарела: удаляется после 2026-11-01, запись `token-radius-default` журнала |
+| `--sf-radius-round` | `var(--sf-radius-rounded)` · устарела: удаляется после 2026-11-01, запись `token-radius-round` журнала |
 | `--sf-radius-rounded` | `1000px` |
 | `--sf-radius-square` | `0` |
 | `--sf-shadow--alfa` | `1` |

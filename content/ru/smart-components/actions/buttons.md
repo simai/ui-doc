@@ -23,7 +23,8 @@ description: "Запускает действие кнопкой с подпис
 `appearance` задаёт вес кнопки: `default` — залитая основная, `tonal` —
 приглушённая заливка, `outline` — контур, `link` — текст без рамки,
 `surface` — нейтральная кнопка панелей инструментов. `ghost` — прежнее
-имя вида `link`: оно работает до 2026-12-01, в разметке пишите `link`. На одном
+имя вида `link`: значение совместимости, которое манифест и журнал изменений
+объявляют до 2026-12-01; в разметке пишите `link`. На одном
 участке экрана оставляйте одну кнопку вида `default`.
 
 `scheme` выбирает цветовое семейство: `primary`, `secondary` или
@@ -100,7 +101,7 @@ button.onClick(async () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-a2d9554ab5ee` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e3daedde2b41` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -109,7 +110,7 @@ button.onClick(async () => {
 | Тег | `<sf-button>` |
 | Назначение | Нативная кнопка с оформлением Framework: размер, вид, цветовая роль или статус, необязательные иконки в начале и в конце, отступы и скругление. loading устанавливает aria-busy и отключает кнопку от повторной активации. |
 | Контракт | `smart.buttons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-a2d9554ab5ee` |
+| Поставка | выпуск Framework `ui-e3daedde2b41` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 
@@ -154,7 +155,7 @@ button.onClick(async () => {
 
 Узел типа `smart.buttons` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `template`, `size`, `appearance`, `spacing`, `type`, `scheme`, `status`, `text`, `icon`, `icon-position`, `loading`, `disabled`, `native-type`, `aria-label`.
+- свойства: `template`, `size`, `appearance`, `spacing`, `scheme`, `status`, `text`, `icon`, `icon-position`, `loading`, `disabled`, `native-type`, `aria-label`.
 
 Значения свойств те же, что у одноимённых атрибутов.
 
@@ -185,8 +186,8 @@ button.onClick(async () => {
 
 ### Источник
 
-- `simai/ui@a2d9554ab5eed98f7f5314539c7347114161841b:distr/smart/buttons`
-- `simai/ui@a2d9554ab5eed98f7f5314539c7347114161841b:distr/rule/rule.json#name=cl-buttons`
+- `simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a:distr/smart/buttons`
+- `simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a:distr/rule/rule.json#name=cl-buttons`
 
 ## См. также
 

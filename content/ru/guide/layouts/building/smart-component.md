@@ -52,8 +52,8 @@ Smart-компонент можно вставить в макет, только
 `size`, `appearance`, `spacing`, `scheme`, `status`, `text`, `icon`,
 `icon-position`, `loading`, `disabled`, `native-type`, `aria-label`. Значения
 у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки задаёт
-`appearance`; прежнее имя `type` узел тоже принимает ради совместимости, в
-новых документах его не пишут.
+`appearance`; прежнего имени `type` в этом списке нет, и в документе макета
+его не пишут.
 
 ## Как Smart-узел превращается в HTML
 

@@ -75,6 +75,28 @@ for (const name of UNREAD.keys()) {
   }
 }
 
+// Tokens the change journal retires (kind token, stage compat), read from the
+// journal at the source revision the release was built from: a note beside the
+// value says when the name leaves and which record says so.
+const sourceRoot = process.env.SIMAI_UI_SOURCE_ROOT ?? resolve(root, '../ui-source');
+const sourceCommit = JSON.parse(readFileSync(resolve(root, 'contracts/generated/framework-contract-registry.json'), 'utf8'))
+  .compatibility?.build_inputs?.source?.commit;
+const retired = new Map();
+try {
+  const journal = JSON.parse(execFileSync('git', ['-C', sourceRoot, 'show', `${sourceCommit}:contracts/changes/journal.json`], {encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['ignore', 'pipe', 'ignore']}));
+  for (const record of journal.records ?? journal) {
+    if (record.kind !== 'token' || record.stage !== 'compat') continue;
+    for (const item of record.items ?? []) retired.set(item.from, record);
+  }
+} catch {
+  // Without the source checkout the page is built without the journal notes;
+  // --check then reports the difference rather than passing silently.
+}
+const retiredNote = (name) => {
+  const record = retired.get(name);
+  return record ? ` · устарела: удаляется после ${record.remove_after}, запись \`${record.id}\` журнала` : '';
+};
+
 // A primitive is a step of a ramp: it has no meaning of its own, only a value.
 const isPrimitive = (name) => {
   const bare = name.replace('--sf-', '');
@@ -134,7 +156,7 @@ const unread = (name) => {
 };
 const shown = (name) => values.get(name)
   .map((value) => `\`${readable(value).replace(/\|/gu, '\\|')}\``)
-  .join(' · ') + unread(name);
+  .join(' · ') + unread(name) + retiredNote(name);
 
 const total = values.size;
 const sections = [...grouped.entries()]
@@ -162,7 +184,9 @@ ${total} переменных, которые объявляет ядро, со 
 её экранируют: \`var(--sf-radius-1\\/2)\`.
 
 Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
-читает ни один файл поставки: её значение ничего не меняет.
+читает ни один файл поставки: её значение ничего не меняет. Пометка
+«устарела» называет дату, после которой переменная уходит из ядра, и запись
+[журнала изменений](/ru/guide/connection/change-lifecycle/#журнал-изменений).
 
 ## Когда применять
 

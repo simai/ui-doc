@@ -422,8 +422,9 @@ document.querySelector('sf-data-view').setHostPort(host);
 Повторный вызов `setHostPort()` заменяет адаптер и заново запрашивает
 список. Если `raise` выбросил ошибку или запрос прерван через `signal`,
 представление показывает ошибку; ответ на устаревший запрос отбрасывается.
-Отказ `refused` на `query.change` означает «нет доступа», а текст `message`
-показывается сообщением; при `unavailable` представление показывает свою
+Отказ `refused` на `query.change` означает «нет доступа»: строки прежнего
+ответа и строка страниц убираются, а текст `message` показывается
+сообщением; при `unavailable` представление показывает свою
 ошибку и `message` не читает.
 
 У порта карточки записи (`<sf-property-view>`) свой формат: запись приходит
@@ -454,10 +455,9 @@ document.querySelector('sf-data-view').setHostPort(host);
 здесь — несколько строк JavaScript с массивом записей и задержкой ответа; на
 своей странице `raise()` отправляет те же намерения на сервер и возвращает его
 ответ в том же конверте. Переключатель над таблицей меняет ответ приложения:
-данные, отказ в доступе или сбой сервера. При отказе уже показанные строки
-остаются на месте, а текст `message` приходит уведомлением; блок «Нет
-доступа» представление показывает, когда строк ещё нет. При сбое оно
-показывает ошибку с «Повторить».
+данные, отказ в доступе или сбой сервера. При отказе представление убирает
+строки и строку страниц, показывает блок «Нет доступа», а текст `message`
+приходит уведомлением. При сбое оно показывает ошибку с «Повторить».
 
 :::example {id="smart-components/table/application" label="Представление данных с приложением"}
 :::
@@ -580,7 +580,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-a2d9554ab5ee` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-e3daedde2b41` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -691,8 +691,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/data-view`
-- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/data-view`
+- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -833,5 +833,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/table`
-- `simai/larena-ui@d295468b07b80f29dd625786fa74f955d05aeda3:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/table`
+- `simai/larena-ui@679f88874389aef4bcd1fca60e85aa0bfa438968:components/src/smart/table/rule.js#name=cl-table`

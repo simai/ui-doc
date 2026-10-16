@@ -5,6 +5,10 @@
 // (ui-control control/DOCS-TRIAL-2026-10-12.md) found `m-b-2` in 132 example
 // files and `sf-card` in 202, neither declared anywhere.
 //
+// A class the Loader renames on the page (convertTailwindClassToken in
+// src/core/js/tailwind-map.js at the pinned source revision) counts as the
+// name it becomes.
+//
 // Sources: the release's distr/**/*.css (--core-root=/absolute/ui, or
 // SIMAI_UI_CORE_ROOT, or ../ui), and per example the .css files beside it and
 // its <style> blocks. JavaScript hooks (`js-*`) are not styling and are skipped.
@@ -14,8 +18,11 @@
 //
 // Usage: node scripts/audit-example-classes.mjs [--write-baseline]
 
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
+import {pathToFileURL} from 'node:url';
 
 const args = process.argv.slice(2);
 const value = (name) => args.find((a) => a.startsWith(`${name}=`))?.slice(name.length + 1);
@@ -49,6 +56,29 @@ const scripts = walk(path.join(coreRoot, 'distr'), (name) => name.endsWith('.js'
   .map((file) => fs.readFileSync(file, 'utf8')).join('\n');
 const inScripts = (name) => new RegExp(`(^|[^a-zA-Z0-9_-])${name.replace(/[.*+?^${}()|[\]\\/]/gu, '\\$&')}($|[^a-zA-Z0-9_-])`, 'u').test(scripts);
 
+// The Loader rewrites class names before they reach a stylesheet: markup
+// writes `cq-sm:justify-between` and the sheet holds `cq-sm:content-main-between`.
+// A class is known when the name the Loader gives it is declared. The mapping is
+// the Loader's own module, src/core/js/tailwind-map.js, read from ui-source at
+// the source revision the pinned release was built from -- never a hand list.
+const sourceRoot = process.env.SIMAI_UI_SOURCE_ROOT || path.resolve(projectRoot, '../ui-source');
+const sourceCommit = JSON.parse(fs.readFileSync(path.join(projectRoot, 'contracts/generated/framework-contract-registry.json'), 'utf8'))
+  .compatibility?.build_inputs?.source?.commit;
+let loaderName = (name) => name;
+let loaderMapping = 'unavailable';
+try {
+  const module = execFileSync('git', ['-C', sourceRoot, 'show', `${sourceCommit}:src/core/js/tailwind-map.js`], {encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore']});
+  const file = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'ui-doc-loader-map-')), 'tailwind-map.mjs');
+  fs.writeFileSync(file, module);
+  const {convertTailwindClassToken} = await import(pathToFileURL(file).href);
+  fs.rmSync(path.dirname(file), {recursive: true, force: true});
+  loaderName = (name) => convertTailwindClassToken(name) ?? name;
+  loaderMapping = `${sourceCommit}:src/core/js/tailwind-map.js`;
+} catch {
+  // Without the source checkout a class is looked up as written.
+}
+const isDeclared = (name) => declared.has(name) || declared.has(loaderName(name));
+
 const unknown = new Map();
 const examples = walk(path.join(projectRoot, 'examples'), (name) => name.endsWith('.html'));
 for (const file of examples) {
@@ -61,7 +91,7 @@ for (const file of examples) {
   for (const [, list] of html.matchAll(/\bclass="([^"]*)"/gu)) {
     for (const name of list.split(/\s+/u).filter(Boolean)) {
       if (/[{}$<>]/u.test(name) || name.startsWith('js-') || name.startsWith('language-')
-        || declared.has(name) || local.has(name) || inScripts(name)) continue;
+        || isDeclared(name) || local.has(name) || inScripts(name)) continue;
       const files = unknown.get(name) ?? new Set();
       files.add(path.relative(projectRoot, file));
       unknown.set(name, files);
@@ -88,6 +118,7 @@ console.log(JSON.stringify({
   schema: 'ui-doc.example_class_audit.v1',
   status: findings.length === 0 ? 'pass' : 'needs_revision',
   examples: examples.length,
+  loader_mapping: loaderMapping,
   unknown_classes: Object.keys(found).length,
   findings,
 }, null, 2));

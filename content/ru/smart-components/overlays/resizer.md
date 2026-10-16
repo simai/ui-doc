@@ -131,7 +131,7 @@ SF.Resizer.attach(table, {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-a2d9554ab5ee` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e3daedde2b41` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -140,7 +140,7 @@ SF.Resizer.attach(table, {
 | Тег | `<sf-resizer>` |
 | Назначение | Ручка на краю панели, которая меняет её ширину перетаскиванием, клавиатурой или возвращает её двойным щелчком, в заданных пределах; ширину можно запоминать в браузере. |
 | Контракт | `smart.resizer`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-a2d9554ab5ee` |
+| Поставка | выпуск Framework `ui-e3daedde2b41` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 
@@ -152,7 +152,7 @@ SF.Resizer.attach(table, {
 - `target` — `string`, по умолчанию пусто. Селектор ближайшего предка, который является панелью; без него — родитель.
 - `edge` — `string`, по умолчанию `inline-end`, значения: `inline-end`, `inline-start`.
 - `step` — `string`, по умолчанию `16`. На сколько пикселей сдвигает стрелка; с Shift — на четыре шага.
-- `storage-key` — `string`, по умолчанию пусто. Запоминает ширину в этом браузере под ключом `sf-resizer:<key>`; двойной щелчок её забывает.
+- `storage-key` — `string`, по умолчанию пусто. Запоминает ширину в этом браузере как персональный вид под ключом `sf-resizer/<key>` (`SF.Preferences`); двойной щелчок её забывает.
 - `label` — `string`, по умолчанию пусто. Доступное имя; по умолчанию «Изменить ширину» на языке страницы.
 - `disabled` — `boolean`, по умолчанию `false`.
 - `value` — `string`, по умолчанию пусто. Ширина в пикселях, которую хранит хост (личные настройки человека); она важнее памяти браузера.
@@ -177,13 +177,13 @@ SF.Resizer.attach(table, {
 ### Минимальная разметка
 
 ```html
-<nav style="position:relative; inline-size: var(--menu-width, 16rem)"><sf-resizer min="13rem" max="24rem" property="--menu-width" storage-key="menu" label="Menu width"></sf-resizer></nav>
+<nav style="inline-size: var(--menu-width, 16rem)"><sf-resizer min="13rem" max="24rem" property="--menu-width" storage-key="menu" label="Menu width"></sf-resizer></nav>
 ```
 
 ### Источник
 
-- `simai/ui@a2d9554ab5eed98f7f5314539c7347114161841b:distr/smart/resizer`
-- `simai/ui@a2d9554ab5eed98f7f5314539c7347114161841b:distr/rule/rule.json#name=cl-resizer`
+- `simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a:distr/smart/resizer`
+- `simai/ui@e3daedde2b41ad5925e13977b315d360f1977c0a:distr/rule/rule.json#name=cl-resizer`
 
 ## См. также
 
