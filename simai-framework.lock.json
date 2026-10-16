@@ -1801,15 +1801,15 @@
             "schema_version": 2,
             "package": "larena",
             "requires": "ui-dec4c338a088",
-            "mount": "_docara/framework-packages/larena/1886b2eebe8bf088239289b248d144c8ec52f9be",
+            "mount": "_docara/framework-packages/larena/a82484bd1ae9601383253f35ffc5fade2129e7ad",
             "receipt": {
                 "schema": "simai.framework.product-package-receipt",
                 "schema_version": 1,
                 "package_source": {
                     "repository": "simai/larena-ui",
-                    "revision": "1886b2eebe8bf088239289b248d144c8ec52f9be",
+                    "revision": "a82484bd1ae9601383253f35ffc5fade2129e7ad",
                     "path": "components",
-                    "tree": "e952bd8c396cd0bdf917afcb93fa546c5981b9a9"
+                    "tree": "34e127121b942943f73c97439309f7f27b726fca"
                 },
                 "framework_source": {
                     "repository": "simai/ui-source",
@@ -1819,8 +1819,8 @@
                     "repository": "simai/ui-builder",
                     "revision": "e7c2fc2c332818f97cb6c17a89953393b622e26f"
                 },
-                "manifest_sha256": "6e274d2b46049eb352b9870688f2850f495a3756a62c778527ce1b7bce0a7e6a",
-                "archive_sha256": "5146b04205e83c12e33c28f6a025f7fc30f33f61920991f18ea844477f9014b9"
+                "manifest_sha256": "7436db0d95a7fb8989268917489ff42dc4194eb19a81aca5520e5898ee57acd1",
+                "archive_sha256": "a46d70ba5a75acfe244548e53aadc1e773d78f41a8cd1b73108602006bec90e1"
             },
             "files": {
                 "smart/admin-menu/css/admin-menu.css": {
@@ -1833,7 +1833,7 @@
                     "sha256": "d12c68237763b98567b604d8b659a0878b61f3415078f0e1fcdfafbc6199e3b6"
                 },
                 "smart/data-view/js/data-view.js": {
-                    "sha256": "4bb1b14161b70e1445b02e02e4041b0131e8d930ebdd350fd52e3782500508be"
+                    "sha256": "219ff72f86f12e4ed1b52f717d4881784fc63e5781b151d05278bdc81169af2f"
                 },
                 "smart/property-view/css/property-view.css": {
                     "sha256": "e7a29fee08601aa9ebae3296bb9ea3b32d48eabe3692a4633d5be5c6c3879361"

@@ -459,13 +459,24 @@ document.querySelector('sf-data-view').setHostPort(host);
 
 - `answer` — `applied`, `conflict`, `refused` или `unavailable`; `message` —
   текст для человека.
-- `reason` — машинная причина отказа или недоступности, свободная строка.
-  Порт называет причины, которые знает представление: `capability-not-provided`,
-  `confirm_required`, `not-confirmed`, `port-not-connected`,
-  `no-base-revision`, `record_invalid`, `forbidden`, `stale-revision`. Без
-  `message` представление показывает свои слова для
-  `capability-not-provided`, `port-not-connected` и `action-not-allowed`, а
-  для остальных причин — общий текст по виду ответа.
+- `reason` — машинная причина отказа или недоступности, свободная строка,
+  которую хост может дополнять своими. Если хост не прислал `message`,
+  представление показывает для причин из порта свои слова на языке страницы;
+  `message` хоста важнее них:
+
+  | `reason` | Слова представления |
+  |:---|:---|
+  | `capability-not-provided` | Хост не поддерживает это действие. |
+  | `confirm_required` | Действие нужно сначала подтвердить. |
+  | `not-confirmed` | Действие отменено. |
+  | `port-not-connected` | Источник данных не подключён. |
+  | `no-base-revision` | Настройки пока нельзя сохранить: у представления нет их текущей версии. Обновите представление. |
+  | `record_invalid` | Запись не найдена. |
+  | `forbidden` | Недостаточно прав для этого действия. |
+  | `stale-revision` | Данные успели изменить. Обновите представление и повторите действие. |
+
+  Для другой причины представление показывает общий текст по виду ответа,
+  например «Действие отклонено.» у `refused`.
 - `sequence` в ответе на `query.change` и `query.count` повторяет номер
   запроса: ответ на устаревший запрос представление отбрасывает. Это
   проверяет случай набора `query-answer-names-its-sequence`.
@@ -776,7 +787,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `openView(key: string)` — возвращает `object`. Открывает сохранённое представление.
 - `refresh(reason?: string)` — возвращает `object`. Запрашивает текущую выборку с новым номером последовательности.
 - `resetColumnSettings()` — возвращает `object`. Сбрасывает раскладку колонок человека: пустой личный слой, записанный против его ревизии, — это сброс по порту (запись, а не удаление). Значения по умолчанию даёт хост.
-- `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: settings.save_personal или settings.save_shared. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт data.column_settings, иначе current_revision и columns, которые конфликт несёт рядом с answer (порт 1.12.0; их же в data тоже читает), а без них перечитывает список.
+- `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: settings.save_personal или settings.save_shared. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт current_revision (и колонки слоя), которые ответ несёт рядом с answer, как требует simai.dataview-port 1.12.0; data.current_revision и data.column_settings оно тоже читает — для хоста, который следовал словам версии 1.10.0, — а если конфликт не называет ревизию, перечитывает список.
 - `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0 и новее. Бросает TypeError без key и label или для другого уровня.
 - `setHostPort(host: object)` — возвращает `object`. Привязывает конкретный адаптер хоста.
 - `updateRecord(id: string|integer, patch?: object)` — возвращает `boolean`. Записывает одну запись на месте: строка перезаписывается, и у хоста ничего не запрашивается. Запись, на которую получен ответ только с записями, проходит этот путь сама.
@@ -823,8 +834,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/data-view`
-- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/data-view`
+- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -977,5 +988,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/table`
-- `simai/larena-ui@1886b2eebe8bf088239289b248d144c8ec52f9be:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/table`
+- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/table/rule.js#name=cl-table`

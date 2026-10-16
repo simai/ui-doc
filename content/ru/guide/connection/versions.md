@@ -27,7 +27,7 @@ Framework, а для каждого подключённого пакета пр
   "packages": {
     "larena": {
       "receipt": "<путь к квитанции пакета>",
-      "source_revision": "1886b2eebe8bf088239289b248d144c8ec52f9be",
+      "source_revision": "a82484bd1ae9601383253f35ffc5fade2129e7ad",
       "framework": "ui-dec4c338a088",
       "manifest_sha256": "<output.manifest_sha256 из квитанции>"
     }
