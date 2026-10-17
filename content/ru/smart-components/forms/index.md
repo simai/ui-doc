@@ -1,6 +1,6 @@
 ---
 title: "Формы и ввод"
-description: "Формы и ввод — 12 смарт-компонентов SIMAI Framework."
+description: "Формы и ввод — 13 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -17,4 +17,5 @@ profile: reference
 - [Datepicker](/ru/smart-components/forms/datepicker/) — Выбирает дату или период в календаре — во всплывающем окне у поля или прямо на странице.
 - [Smart-код страны](/ru/smart-components/forms/country-code/) — Телефонное поле с выбором страны, флагом, кодом и маской номера, которое отправляется с формой.
 - [Цвет](/ru/smart-components/forms/color/) — Выбирает цвет системной палитрой или из цветов продукта и возвращает к унаследованному цвету.
+- [Генератор темы](/ru/smart-components/forms/theme-generator/) — Строит тему Framework из одного цвета: восемь тональных палитр, предпросмотр и применение к странице или её участку.
 - [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/) — Зона выбора и перетаскивания файлов со списком выбранных файлов, прогрессом и ошибками передачи.

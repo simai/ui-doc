@@ -15,7 +15,7 @@
 //                 release's rules name, after SF.whenDefined for each.
 // For a function it records its arity; for an object its own keys and their
 // types (one level). The result is contracts/generated/js-api-inventory.json,
-// which scripts/build-js-api-reference.mjs reads.
+// checked against the release's public-js-api.json contract.
 //
 // Usage: node scripts/probe-js-api.mjs
 // Needs playwright-core (PLAYWRIGHT_CORE, or ../ui-studio/node_modules,
@@ -165,15 +165,18 @@ for (const stage of order) {
     if (entry.members) globals[name].members = entry.members;
   }
 }
-// Legacy internals: helpers of the old sf-system and special bundles that the
-// Loader brings when a page holds sf-gallery, sf-overbox or sf-special (the
-// probe page holds every tag). They are not public API and are not documented;
-// the Framework moves them under SF.__internal with a deprecation (Framework
-// session, 2026-10-15). Marked here so a reference built from this file skips
-// them.
-const LEGACY_INTERNALS = new Set(['Ajax', 'Param', 'Search', 'cloneDeep', 'curpos', 'quickkey', 'topZIndex', 'ready', 'send', 'receive', 'RangeSlider']);
+// The release declares every global and whether it is public or internal
+// (core/contracts/public-js-api.json, simai.framework.public-js-api); the JS
+// API reference is built from that contract (scripts/build-smart-reference.mjs).
+// This probe is the cross-check: each name the runtime puts on window.SF takes
+// the contract's status, and a name the contract does not declare is reported.
+const contract = JSON.parse(execFileSync('git', ['-C', uiRepo, 'show', `${commit}:distr/core/contracts/public-js-api.json`], {encoding: 'utf8'}));
+const declared = new Map(contract.globals.map((item) => [item.name.replace(/^SF\./u, ''), item]));
+const undeclared = [];
 for (const name of Object.keys(globals)) {
-  if (LEGACY_INTERNALS.has(name)) globals[name].legacy_internal = true;
+  const entry = declared.get(name);
+  if (entry) globals[name].status = entry.status;
+  else undeclared.push(name);
 }
 
 const inventory = {
@@ -184,7 +187,9 @@ const inventory = {
   stages: order,
   smart_tags: tags.length,
   page_errors: errors,
+  undeclared,
   globals: Object.fromEntries(Object.entries(globals).sort(([a], [b]) => a.localeCompare(b))),
 };
 writeFileSync(join(root, 'contracts/generated/js-api-inventory.json'), `${JSON.stringify(inventory, null, 2)}\n`);
-console.log(JSON.stringify({release: pair, globals: Object.keys(globals).length, by_stage: Object.fromEntries(order.map((stage) => [stage, Object.values(globals).filter((g) => g.available === stage).length])), page_errors: errors.length}, null, 2));
+console.log(JSON.stringify({release: pair, globals: Object.keys(globals).length, by_stage: Object.fromEntries(order.map((stage) => [stage, Object.values(globals).filter((g) => g.available === stage).length])), page_errors: errors.length, undeclared}, null, 2));
+if (undeclared.length) process.exitCode = 1;

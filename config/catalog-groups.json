@@ -130,7 +130,8 @@
         "datepicker",
         "country-code",
         "file-upload",
-        "color"
+        "color",
+        "theme-generator"
       ]
     },
     "navigation": {

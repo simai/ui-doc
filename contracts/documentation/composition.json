@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "c07c45da07509ddf7de634ba3ffb410f1669ed67",
-    "core_revision": "b6321b263444ebe4e7ac00357006b801cb51f3c4",
+    "source_revision": "d8992a9340187e6f2c50114e86fce60c1d31de05",
+    "core_revision": "5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "019bfcc4ef5b8ef9253b0b3882971a074174e151828de53ef4f3c76d70e10ae9"
     },
-    "note": "At source c07c45da and core b6321b26 (release ui-b6321b263444) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at ui-1aa66c4385cf (that release adds public CSS variables for twelve components)."
+    "note": "At source d8992a93 and core 5f1d2e9e (release ui-5f1d2e9e5529, through ui-45384c434d3f) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at ui-b6321b263444 (the two releases add sf-theme-generator, the public JS API contract, simai.ai-development, the choices checklist, schema-name.mjs and simai.property-view-port 1.13.0, none of which the composition pages describe)."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

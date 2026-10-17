@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-3">
+  <sf-theme-generator aria-label="Цвет темы примера" value="#2e7d32" apply target="#theme-generator-demo"></sf-theme-generator>
+  <div id="theme-generator-demo" class="theme-light flex flex-col gap-2 p-3 radius-3 bg-surface-container">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+        <span class="sf-button-text-container">Сохранить</span>
+      </button>
+      <button type="button" class="sf-button sf-button--link sf-button--primary sf-button--size-1">
+        <span class="sf-button-text-container">Черновик</span>
+      </button>
+      <button type="button" class="sf-button sf-button--outline sf-button--primary sf-button--size-1">
+        <span class="sf-button-text-container">Отмена</span>
+      </button>
+    </div>
+    <label class="sf-checkbox sf-checkbox--size-1 flex">
+      <span class="sf-checkbox-box transition flex"><input name="published" type="checkbox" checked><span class="sf-icon" aria-hidden="true"></span></span>
+      <span class="sf-checkbox-container flex flex-col"><span class="sf-checkbox-top flex"><span class="sf-checkbox-label">Показывать на сайте</span></span></span>
+    </label>
+    <p class="m-0">Выберите основной цвет: кнопки, флажок и фон этого блока перекрасятся, а страница вокруг останется в цветах Framework.</p>
+  </div>
+</div>

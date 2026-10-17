@@ -98,7 +98,7 @@ Loader.
 `pluginListVersion` — любые непустые строки: Loader сравнивает их с
 сохранёнными в `localStorage` как есть (см. [Кеш и версии адресов](/ru/guide/connection/loader/#кеш-и-версии-адресов)). Для своей
 копии поставки обеим меткам дают идентификатор выпуска, например
-`ui-b6321b263444`. При переходе на другой выпуск метки меняются вместе с ним:
+`ui-5f1d2e9e5529`. При переходе на другой выпуск метки меняются вместе с ним:
 Loader очищает сохранённые списки модулей, а адреса модулей получают новый
 параметр `sf_v`.
 
@@ -106,8 +106,8 @@ Loader очищает сохранённые списки модулей, а а�
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
-    cacheVersion: 'ui-b6321b263444',
-    pluginListVersion: 'ui-b6321b263444',
+    cacheVersion: 'ui-5f1d2e9e5529',
+    pluginListVersion: 'ui-5f1d2e9e5529',
   };
 </script>
 ```
@@ -153,11 +153,11 @@ core.js, or to a pinned tag.
 
 ```bash
 git clone https://github.com/simai/ui.git simai-ui
-git -C simai-ui archive --format=tar b6321b263444ebe4e7ac00357006b801cb51f3c4 distr | shasum -a 256
-# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-b6321b263444.lock.json
+git -C simai-ui archive --format=tar 5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864 distr | shasum -a 256
+# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-5f1d2e9e5529.lock.json
 # и полю runtime.ui.sha256 в /ai/framework-lock.json этого сайта
 mkdir -p public/assets/simai-framework/ui
-git -C simai-ui archive --format=tar b6321b263444ebe4e7ac00357006b801cb51f3c4 distr | tar -x -C public/assets/simai-framework/ui
+git -C simai-ui archive --format=tar 5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864 distr | tar -x -C public/assets/simai-framework/ui
 ```
 
 Каталог появляется как `public/assets/simai-framework/ui/distr/`.
@@ -174,7 +174,7 @@ git -C simai-ui archive --format=tar b6321b263444ebe4e7ac00357006b801cb51f3c4 di
 
 `<метка>` — полный коммит выбранного выпуска (поле
 `runtime_sources.core.commit` записи о выпуске), например
-`b6321b263444ebe4e7ac00357006b801cb51f3c4` для выпуска `ui-b6321b263444`.
+`5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864` для выпуска `ui-5f1d2e9e5529`.
 Идентификатор выпуска меткой не служит: выпуски не помечены тегами
 (см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)). Готовая страница с полным коммитом — в быстром
 старте (см. [Страница на Core](/ru/guide/introduction/quick-start/#страница-на-core)). Пакет продукта приходит в поставке

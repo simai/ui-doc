@@ -61,6 +61,11 @@
      "order": 30
     },
     {
+     "slug": "js-api",
+     "title": "JavaScript API",
+     "order": 35
+    },
+    {
      "slug": "versions",
      "title": "Версии",
      "order": 40

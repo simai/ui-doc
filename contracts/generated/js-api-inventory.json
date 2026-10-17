@@ -1,23 +1,24 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-b6321b263444",
-  "ui_commit": "b6321b263444ebe4e7ac00357006b801cb51f3c4",
+  "release": "ui-5f1d2e9e5529",
+  "ui_commit": "5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864",
   "stages": [
     "core",
     "dom",
     "idle",
     "components"
   ],
-  "smart_tags": 53,
+  "smart_tags": 54,
   "page_errors": [],
+  "undeclared": [],
   "globals": {
     "Ajax": {
       "available": "components",
       "type": "function",
       "arity": 1,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "ButtonGroup": {
       "available": "components",
@@ -31,7 +32,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Checkbox": {
       "available": "components",
@@ -41,14 +43,15 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "cloneDeep": {
       "available": "components",
       "type": "function",
       "arity": 2,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "Composition": {
       "available": "core",
@@ -183,7 +186,8 @@
           "type": "function",
           "arity": 2
         }
-      }
+      },
+      "status": "public"
     },
     "CompositionOverlay": {
       "available": "components",
@@ -200,7 +204,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "CountryCode": {
       "available": "components",
@@ -210,26 +215,29 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "create": {
       "available": "idle",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "createAsync": {
       "available": "idle",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "curpos": {
       "available": "components",
       "type": "function",
       "arity": 1,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "deprecations": {
       "available": "components",
@@ -247,7 +255,8 @@
           "type": "function",
           "arity": 0
         }
-      }
+      },
+      "status": "public"
     },
     "DownloadFile": {
       "available": "components",
@@ -265,7 +274,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Effects": {
       "available": "core",
@@ -290,7 +300,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "FileUpload": {
       "available": "components",
@@ -312,13 +323,15 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "html": {
       "available": "components",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "InlineEditor": {
       "available": "components",
@@ -343,7 +356,8 @@
           "type": "function",
           "arity": 3
         }
-      }
+      },
+      "status": "public"
     },
     "Input": {
       "available": "components",
@@ -353,7 +367,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "language": {
       "available": "core",
@@ -391,13 +406,15 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "litHtml": {
       "available": "idle",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "internal"
     },
     "Loader": {
       "available": "idle",
@@ -738,19 +755,22 @@
         "utilyPath": {
           "type": "string"
         }
-      }
+      },
+      "status": "public"
     },
     "loadRuntime": {
       "available": "core",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "status": "internal"
     },
     "loadSmartBase": {
       "available": "idle",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "status": "internal"
     },
     "Mask": {
       "available": "core",
@@ -772,11 +792,13 @@
           "type": "function",
           "arity": 2
         }
-      }
+      },
+      "status": "public"
     },
     "nothing": {
       "available": "components",
-      "type": "symbol"
+      "type": "symbol",
+      "status": "public"
     },
     "notifications": {
       "available": "core",
@@ -794,32 +816,36 @@
           "type": "function",
           "arity": 0
         }
-      }
+      },
+      "status": "public"
     },
     "notify": {
       "available": "core",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "pageLanguage": {
       "available": "core",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "pageText": {
       "available": "core",
       "type": "function",
       "arity": 4,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "Param": {
       "available": "components",
       "type": "function",
       "arity": 0,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "Position": {
       "available": "core",
@@ -841,7 +867,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Preferences": {
       "available": "core",
@@ -886,7 +913,8 @@
           "type": "function",
           "arity": 2
         }
-      }
+      },
+      "status": "public"
     },
     "ProgressBar": {
       "available": "components",
@@ -900,7 +928,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "ProgressScale": {
       "available": "components",
@@ -914,14 +943,15 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "quickkey": {
       "available": "components",
       "type": "function",
       "arity": 2,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "Radio": {
       "available": "components",
@@ -931,7 +961,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "RangeSlider": {
       "available": "components",
@@ -954,21 +985,21 @@
           "arity": 1
         }
       },
-      "legacy_internal": true
+      "status": "public"
     },
     "ready": {
       "available": "idle",
       "type": "function",
       "arity": 0,
       "class": false,
-      "legacy_internal": true
+      "status": "public"
     },
     "receive": {
       "available": "idle",
       "type": "function",
       "arity": 3,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "RegionNavigation": {
       "available": "core",
@@ -989,13 +1020,15 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "render": {
       "available": "components",
       "type": "function",
       "arity": 3,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "Resizer": {
       "available": "components",
@@ -1013,7 +1046,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "RuleLoader": {
       "available": "core",
@@ -1605,6 +1639,9 @@
           "type": "object"
         },
         "cl-textarea": {
+          "type": "object"
+        },
+        "cl-theme-generator": {
           "type": "object"
         },
         "cl-toast": {
@@ -3584,24 +3621,28 @@
         "z-index/xxl": {
           "type": "object"
         }
-      }
+      },
+      "status": "public"
     },
     "runtimeArrived": {
       "available": "components",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "internal"
     },
     "runtimeLoading": {
       "available": "components",
       "type": "object",
-      "members": {}
+      "members": {},
+      "status": "internal"
     },
     "runtimeModule": {
       "available": "core",
       "type": "function",
       "arity": 1,
-      "class": false
+      "class": false,
+      "status": "internal"
     },
     "runtimeModules": {
       "available": "components",
@@ -3640,31 +3681,34 @@
         "smart-base": {
           "type": "object"
         }
-      }
+      },
+      "status": "internal"
     },
     "runtimeSettled": {
       "available": "components",
-      "type": "boolean"
+      "type": "boolean",
+      "status": "internal"
     },
     "Search": {
       "available": "components",
       "type": "function",
       "arity": 0,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "send": {
       "available": "idle",
       "type": "function",
       "arity": 2,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "SfBaseElement": {
       "available": "components",
       "type": "function",
       "arity": 0,
-      "class": true
+      "class": true,
+      "status": "public"
     },
     "Slider": {
       "available": "components",
@@ -3682,7 +3726,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "smart": {
       "available": "components",
@@ -3723,16 +3768,19 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "internal"
     },
     "smartBaseAnnounced": {
       "available": "components",
-      "type": "boolean"
+      "type": "boolean",
+      "status": "internal"
     },
     "smartBaseReady": {
       "available": "idle",
       "type": "object",
-      "members": {}
+      "members": {},
+      "status": "internal"
     },
     "Sortable": {
       "available": "components",
@@ -3764,7 +3812,8 @@
           "type": "function",
           "arity": 2
         }
-      }
+      },
+      "status": "public"
     },
     "Spinner": {
       "available": "components",
@@ -3790,7 +3839,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Switch": {
       "available": "components",
@@ -3800,7 +3850,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Tabs": {
       "available": "components",
@@ -3814,7 +3865,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Textarea": {
       "available": "components",
@@ -3824,7 +3876,52 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
+    },
+    "ThemePalette": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "DEFAULT_THEME_COLOR": {
+          "type": "string"
+        },
+        "THEME_PALETTES": {
+          "type": "array"
+        },
+        "THEME_TONES": {
+          "type": "array"
+        },
+        "applyTheme": {
+          "type": "function",
+          "arity": 1
+        },
+        "colorToHct": {
+          "type": "function",
+          "arity": 1
+        },
+        "isThemeColor": {
+          "type": "function",
+          "arity": 1
+        },
+        "themeFromColor": {
+          "type": "function",
+          "arity": 0
+        },
+        "themeFromHct": {
+          "type": "function",
+          "arity": 0
+        },
+        "themeToCss": {
+          "type": "function",
+          "arity": 1
+        },
+        "themeVariables": {
+          "type": "function",
+          "arity": 1
+        }
+      },
+      "status": "public"
     },
     "Toast": {
       "available": "components",
@@ -3850,7 +3947,8 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "Toggle": {
       "available": "components",
@@ -3860,14 +3958,15 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "topZIndex": {
       "available": "components",
       "type": "function",
       "arity": 0,
       "class": false,
-      "legacy_internal": true
+      "status": "internal"
     },
     "Tree": {
       "available": "components",
@@ -3893,25 +3992,29 @@
           "type": "function",
           "arity": 1
         }
-      }
+      },
+      "status": "public"
     },
     "whenDefine": {
       "available": "idle",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "whenDefined": {
       "available": "idle",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "status": "public"
     },
     "whenFieldRenderers": {
       "available": "idle",
       "type": "function",
       "arity": 0,
-      "class": false
+      "class": false,
+      "status": "public"
     }
   }
 }

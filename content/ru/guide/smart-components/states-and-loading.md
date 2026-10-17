@@ -125,14 +125,14 @@ Smart-компонент показывает своё состояние — о
 
 #### Формы компонентов
 
-Раздел собран из манифестов выпуска `ui-b6321b263444` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+Раздел собран из манифестов выпуска `ui-5f1d2e9e5529` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
 
 | Форма | Компоненты |
 |:---|:---|
 | `rows` | `<sf-data-view>` (свой скелетон), `<sf-table>` (свой скелетон) |
 | `record` | `<sf-property-view>` (свой скелетон) |
 | `menu` | `<sf-admin-menu>`, `<sf-tree>` |
-| `block` | `<sf-alert>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-range-slider>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>` |
+| `block` | `<sf-alert>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-range-slider>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>`, `<sf-theme-generator>` |
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
 | `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-toggle>`, `<sf-tooltip>` |
 

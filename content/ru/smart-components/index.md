@@ -29,6 +29,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Datepicker](/ru/smart-components/forms/datepicker/)
 - [Smart-код страны](/ru/smart-components/forms/country-code/)
 - [Цвет](/ru/smart-components/forms/color/)
+- [Генератор темы](/ru/smart-components/forms/theme-generator/)
 - [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/)
 
 ## Навигация

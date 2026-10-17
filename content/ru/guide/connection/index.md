@@ -12,7 +12,7 @@ Framework, как это подключить к странице и как по
 
 Порядок чтения: [Поставка и выпуск](/ru/guide/connection/delivery/) и
 [Подключение к проекту](/ru/guide/connection/project-setup/) нужны всем, кто подключает Framework.
-[Как работает Loader](/ru/guide/connection/loader/) объясняет, что происходит внутри страницы.
+[Как работает Loader](/ru/guide/connection/loader/) объясняет, что происходит внутри страницы, а [JavaScript API](/ru/guide/connection/js-api/) перечисляет, что Framework кладёт в `window.SF`.
 [Версии](/ru/guide/connection/versions/), [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/) и
 [Как обновить проект](/ru/guide/connection/updating/) — про закрепление выпуска и переход на
 новый.
@@ -20,6 +20,7 @@ Framework, как это подключить к странице и как по
 - [Поставка и выпуск](/ru/guide/connection/delivery/)
 - [Подключение к проекту](/ru/guide/connection/project-setup/)
 - [Как работает Loader](/ru/guide/connection/loader/)
+- [JavaScript API](/ru/guide/connection/js-api/)
 - [Версии](/ru/guide/connection/versions/)
 - [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/)
 - [Как обновить проект](/ru/guide/connection/updating/)

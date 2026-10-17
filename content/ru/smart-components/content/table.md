@@ -722,7 +722,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-b6321b263444` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-5f1d2e9e5529` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -835,8 +835,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@12fd9eb5b548303b17b0fdf479e8273c392e8ceb:components/src/smart/data-view`
-- `simai/larena-ui@12fd9eb5b548303b17b0fdf479e8273c392e8ceb:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@e8f16f2ab2c28b485f0497289c714dccbe780c16:components/src/smart/data-view`
+- `simai/larena-ui@e8f16f2ab2c28b485f0497289c714dccbe780c16:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -990,5 +990,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@12fd9eb5b548303b17b0fdf479e8273c392e8ceb:components/src/smart/table`
-- `simai/larena-ui@12fd9eb5b548303b17b0fdf479e8273c392e8ceb:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@e8f16f2ab2c28b485f0497289c714dccbe780c16:components/src/smart/table`
+- `simai/larena-ui@e8f16f2ab2c28b485f0497289c714dccbe780c16:components/src/smart/table/rule.js#name=cl-table`

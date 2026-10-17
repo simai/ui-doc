@@ -27,6 +27,7 @@ description: "Карта стандартов показывает все ста
 | 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.0.0 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
 | сквозной | Жизненный цикл изменений | `simai.change-lifecycle` | 1.0.0 | Как публичное имя уходит из Framework | схема журнала, политика сроков |
 | сквозной | Правила взаимодействия | `simai.interaction-rules` | 1.0.0 | Как любой Smart-компонент загружается, говорит с соседями и рисует | — |
+| сквозной | Разработка с ИИ | `simai.ai-development` | 1.0.0 | Как ИИ-агент разрабатывает на Framework и вместе с ним: контракты, публичная поверхность, выпуски, проверка и приёмка | — |
 | 2 | Фоновый эффект | `simai.effect` | 1.0.0 | Анимированный фон в области страницы: манифест, модуль, правила работы, набор проверок | Standard Contract; схема манифеста эффекта; правила взаимодействия |
 
 Форматы данных и их старшие версии. Старшая версия формата равна старшей
@@ -61,7 +62,7 @@ description: "Карта стандартов показывает все ста
 | Порт | Компонент | Текущая версия | Изданы | Случаев в наборе проверок |
 |:---|:---|:---|:---|:---|
 | `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.12.0 | 1.0.0–1.12.0 | 44 |
-| `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.12.0 | 1.0.0–1.12.0 | 42 |
+| `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.13.0 | 1.0.0–1.13.0 | 42 |
 | `simai.admin-navigation-port` | `smart.admin-menu` (`sf-admin-menu`) | 1.0.0 | 1.0.0 | 37 |
 
 Компоненты этих портов поставляет пакет `larena` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)); порты
@@ -81,6 +82,7 @@ description: "Карта стандартов показывает все ста
 | Конверт фрагмента интерфейса | [`/ai/standards/simai.interface-fragment/1.0.0/standard.json`](/ai/standards/simai.interface-fragment/1.0.0/standard.json) |
 | Схема описания фрагмента | [`/ai/standards/interface-fragment-schema/1.0.0/descriptor.schema.json`](/ai/standards/interface-fragment-schema/1.0.0/descriptor.schema.json) |
 | Конверт правил взаимодействия | [`/ai/standards/simai.interaction-rules/1.0.0/standard.json`](/ai/standards/simai.interaction-rules/1.0.0/standard.json) |
+| Конверт разработки с ИИ | [`/ai/standards/simai.ai-development/1.0.0/standard.json`](/ai/standards/simai.ai-development/1.0.0/standard.json) |
 | Конверт фонового эффекта | [`/ai/standards/simai.effect/1.0.0/standard.json`](/ai/standards/simai.effect/1.0.0/standard.json) |
 | Схема манифеста эффекта | [`/ai/standards/effect-schema/1.0.0/effect.schema.json`](/ai/standards/effect-schema/1.0.0/effect.schema.json) |
 | Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
@@ -325,6 +327,17 @@ Smart-компонента (`simai.smart-component-manifest`) — заморож
 стандарты. Восемнадцать требований с пояснениями — на странице
 [Правила взаимодействия компонентов](/ru/guide/standards/interaction-rules/).
 
+## Разработка с ИИ (`simai.ai-development`)
+
+Стандарт **разработки с ИИ** задаёт, как агент работает над Framework и с
+ним: сначала читает машинные контракты, пользуется только публичной
+поверхностью, не правит сгенерированное, закрепляет точные выпуски,
+обновляется по журналу изменений, называет форматы без версий, подключает
+порты по их наборам проверок, проверяет видимое в браузере и сдаёт работу
+доказательствами. Стандарт сквозной и не наследует другие. Шестнадцать
+требований с пояснениями — на странице
+[Разработка с ИИ](/ru/guide/smart-components/ai-development/).
+
 ## Фоновый эффект (`simai.effect`)
 
 Стандарт **фонового эффекта** задаёт анимированный фон в одной области
@@ -475,6 +488,12 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 пишут точно, с версией; поле `schema_version` им не нужно. Перевод такого
 формата на пару `schema` и `schema_version` — несовместимое изменение формата
 и проходит путь, описанный ниже.
+
+Обе формы читает один модуль исходников Framework — `src/core/js/schema-name.mjs`:
+`readSchema()` разбирает и `simai.<имя>.v<n>`, и `simai.<имя>` с
+`schema_version` в одно `{name, version}`, а `schemaFields()` выдаёт писателю
+новую форму. Через него читатели Framework проходят окно совместимости,
+когда формат переводят на пару полей.
 
 **Несовместимое изменение формата** проходит жизненный цикл изменений (см. [Жизненный цикл изменений и совместимость](/ru/guide/connection/change-lifecycle/)
 и [Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект)):

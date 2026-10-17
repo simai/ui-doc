@@ -135,6 +135,13 @@ const set = await SF.whenFieldRenderers();
 записи поле в просмотре само служит кнопкой, которая открывает правку его
 группы, а кнопка не может содержать другой элемент управления.
 
+Правка поля `choices` зависит от длины списка. До 12 вариантов это выпадающий
+список с несколькими отметками; от 13 — список флажков, в две колонки там, где
+поле достаточно широкое, и в одну, где нет: так выбранное видно целиком, а
+длинный список не прокручивается внутри прокрутки. Вариант поля задаёт вид
+явно при любой длине: `variant: 'checklist'` — флажки, `variant: 'select'` —
+выпадающий список.
+
 `renderCellField(field, value, host)` возвращает содержимое ячейки в том же
 виде, в каком его передаёт таблице хост: строку, объект
 `{component: {type, props}}` или массив таких значений; цвет и код — шаблоном
@@ -248,7 +255,7 @@ set.renderCellField(status, 'live');
 | `datetime` | Дата и время | — | `required`, `readonly` | есть | есть | своё | своё |
 | `boolean` | Да или нет | — | `trueText`, `falseText`, `required`, `readonly` | есть | есть | своё | своё |
 | `choice` | Одно из списка | — | `options`, `badgeAppearance`, `required`, `readonly` | есть | есть | своё | своё |
-| `choices` | Несколько из списка | `badges` — Значками | `options`, `badgeAppearance`, `required`, `readonly` | есть | есть | своё | своё |
+| `choices` | Несколько из списка | `badges` — Значками, `checklist` — Флажками, `select` — Выпадающим списком | `options`, `badgeAppearance`, `required`, `readonly` | есть | есть | своё | своё |
 | `user` | Пользователь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `record` | Запись | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `relation` | Связь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |

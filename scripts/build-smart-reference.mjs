@@ -558,6 +558,42 @@ const releaseLine = 'Раздел собран из манифестов вып�
   writeGuideSection('content/ru/guide/smart-components/view-preferences.md', '## Поля значения', body);
 }
 
+// The JavaScript API guide lists every global the release declares on
+// window.SF (core/contracts/public-js-api.json, schema
+// simai.framework.public-js-api): the public ones with what they are, where
+// they come from and their members; the internal ones by name only.
+{
+  const text = show(uiRepo, uiCommit, 'distr/core/contracts/public-js-api.json');
+  if (text) {
+    const contract = JSON.parse(text);
+    const KIND = {object: 'объект', function: 'функция', value: 'значение', class: 'класс'};
+    const origin = (loadedBy) => {
+      if (loadedBy === 'core') return 'ядро, сразу после `core.js`';
+      if (loadedBy === 'smart-base') return 'основа Smart-компонентов';
+      const [layer, name] = String(loadedBy).split('/');
+      if (layer === 'component') return `компонент ${code(name)}`;
+      if (layer === 'smart') return `Smart-компонент ${code(`sf-${name}`)}`;
+      return code(loadedBy);
+    };
+    const byName = (a, b) => a.name.localeCompare(b.name);
+    const publicGlobals = contract.globals.filter((item) => item.status === 'public').sort(byName);
+    const internalGlobals = contract.globals.filter((item) => item.status !== 'public').sort(byName);
+    const body = [
+      'Раздел собран из контракта выпуска ' + code(pair) + ' (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.',
+      '',
+      `Публичные имена (${publicGlobals.length}) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.`,
+      '',
+      '| Имя | Вид | Откуда | Что это | Члены |',
+      '|:---|:---|:---|:---|:---|',
+      ...publicGlobals.map((item) => `| ${code(item.name)} | ${KIND[item.kind] ?? code(item.kind)} | ${origin(item.loaded_by)} | ${cell(ru(item.summary))} | ${(item.members ?? []).map((member) => code(member)).join(', ') || '—'} |`),
+      '',
+      `Внутренние имена (${internalGlobals.length}) принадлежат среде выполнения и могут измениться в любом выпуске; страница их не вызывает: ${internalGlobals.map((item) => code(item.name)).join(', ')}.`,
+      '',
+    ];
+    writeGuideSection('content/ru/guide/connection/js-api.md', '## Глобальные объекты', body);
+  }
+}
+
 // The states guide lists every component by the shape it declares.
 {
   const body = [releaseLine + ' Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.', '',
