@@ -722,7 +722,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-dec4c338a088` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-1aa66c4385cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -736,6 +736,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | `host-required` |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 #### Атрибуты
 
@@ -834,8 +835,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/data-view`
-- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@e3d02975df10607e4ab0d26b574ae06310239c32:components/src/smart/data-view`
+- `simai/larena-ui@e3d02975df10607e4ab0d26b574ae06310239c32:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -847,6 +848,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | `host-required` |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 #### Атрибуты
 
@@ -988,5 +990,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/table`
-- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@e3d02975df10607e4ab0d26b574ae06310239c32:components/src/smart/table`
+- `simai/larena-ui@e3d02975df10607e4ab0d26b574ae06310239c32:components/src/smart/table/rule.js#name=cl-table`

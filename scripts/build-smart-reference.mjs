@@ -286,6 +286,16 @@ const viewPreferenceTable = (preference) => {
   return lines;
 };
 
+// The shape the element holds before its code (manifest presentation.skeleton):
+// the data-sf-skeleton value the server writes, and whether the component
+// draws a skeleton of its own while it waits for data.
+const SKELETON_SHAPES = ['rows', 'record', 'menu', 'block', 'line', 'none'];
+const skeletonText = (skeleton) => (skeleton.shape === 'none'
+  ? 'нет: атрибут `data-sf-skeleton` не пишется; '
+  : `сервер пишет ${code(`data-sf-skeleton="${skeleton.shape}"`)}; `)
+  + (skeleton.while_loading === 'template' ? 'пока ждёт данные, рисует свой скелетон' : 'своего скелетона при загрузке данных нет')
+  + ' ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода))';
+
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
   const lines = [];
@@ -300,6 +310,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     `| Поставка | ${delivery} |`,
     `| Жизненный цикл | ${LIFECYCLE[manifest.lifecycle] ?? code(manifest.lifecycle)} |`,
     `| Готовность | ${READINESS[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')} |`,
+    ...(manifest.presentation?.skeleton ? [`| Заготовка до прихода кода | ${skeletonText(manifest.presentation.skeleton)} |`] : []),
     '',
   );
 
@@ -512,36 +523,55 @@ for (const [page, entries] of [...pages].sort(([a], [b]) => a.localeCompare(b)))
   if (!checkOnly && !listMissing) writeFileSync(page, expected);
 }
 
-// The view-preferences guide quotes every declared view preference under its
-// own heading; the rest of the guide page is written by hand.
-{
-  const GUIDE_HEADING = '## Поля значения';
-  const guide = join(root, 'content/ru/guide/smart-components/view-preferences.md');
-  const current = readFileSync(guide, 'utf8');
-  const begin = current.indexOf(`\n${GUIDE_HEADING}\n`);
+// A guide page may hold one section this script writes: from its heading to
+// the next heading of the same or a higher level. The rest of the page is
+// written by hand.
+const writeGuideSection = (page, heading, body) => {
+  const path = join(root, page);
+  const current = readFileSync(path, 'utf8');
+  const begin = current.indexOf(`\n${heading}\n`);
   if (begin < 0) {
-    console.error(`${GUIDE_HEADING} not found in ${relative(root, guide)}`);
+    console.error(`${heading} not found in ${page}`);
     process.exit(2);
   }
-  const after = begin + 1 + GUIDE_HEADING.length + 1;
-  const next = current.indexOf('\n## ', after);
-  const end = next < 0 ? current.length : next + 1;
-  const body = [
-    GUIDE_HEADING,
-    '',
-    'Раздел собран из манифестов выпуска ' + code(pair) + ' и пакетов (`persistence.view_preference`) и обновляется вместе с ними.',
-    '',
-  ];
-  const declared = [...components].filter(([, {manifest}]) => manifest.persistence?.view_preference)
-    .sort(([, a], [, b]) => a.manifest.custom_element.localeCompare(b.manifest.custom_element));
-  for (const [, {manifest}] of declared) {
+  const level = heading.match(/^#+/u)[0].length;
+  const after = begin + 1 + heading.length + 1;
+  const rest = current.slice(after);
+  const match = rest.match(new RegExp(`^#{1,${level}} `, 'mu'));
+  const end = match ? after + match.index : current.length;
+  const section = [heading, '', ...body].join('\n').replace(/\n+$/u, '');
+  const expected = `${current.slice(0, begin + 1)}${section}\n${match ? `\n${current.slice(end)}` : ''}`;
+  if (expected !== current) {
+    changed.push(page);
+    if (!checkOnly && !listMissing) writeFileSync(path, expected);
+  }
+};
+const byTag = (list) => list.sort(([, a], [, b]) => a.manifest.custom_element.localeCompare(b.manifest.custom_element));
+const releaseLine = 'Раздел собран из манифестов выпуска ' + code(pair) + ' и пакетов и обновляется вместе с ними.';
+
+// The view-preferences guide quotes every declared view preference.
+{
+  const body = [releaseLine + ' Поля объявляет `persistence.view_preference`.', ''];
+  for (const [, {manifest}] of byTag([...components].filter(([, {manifest}]) => manifest.persistence?.view_preference))) {
     body.push(`### \`<${manifest.custom_element}>\``, '', ...viewPreferenceTable(manifest.persistence.view_preference));
   }
-  const expected = `${current.slice(0, begin + 1)}${body.join('\n').replace(/\n+$/u, '')}\n${next < 0 ? '' : `\n${current.slice(end)}`}`;
-  if (expected !== current) {
-    changed.push(relative(root, guide));
-    if (!checkOnly && !listMissing) writeFileSync(guide, expected);
+  writeGuideSection('content/ru/guide/smart-components/view-preferences.md', '## Поля значения', body);
+}
+
+// The states guide lists every component by the shape it declares.
+{
+  const body = [releaseLine + ' Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.', '',
+    '| Форма | Компоненты |', '|:---|:---|'];
+  const declared = byTag([...components].filter(([, {manifest}]) => manifest.presentation?.skeleton));
+  for (const shape of SKELETON_SHAPES) {
+    const tags = declared.filter(([, {manifest}]) => manifest.presentation.skeleton.shape === shape)
+      .map(([, {manifest}]) => `${code(`<${manifest.custom_element}>`)}${manifest.presentation.skeleton.while_loading === 'template' ? ' (свой скелетон)' : ''}`);
+    if (tags.length) body.push(`| ${code(shape)} | ${tags.join(', ')} |`);
   }
+  const undeclared = byTag([...components].filter(([, {manifest}]) => !manifest.presentation?.skeleton)).map(([, {manifest}]) => code(`<${manifest.custom_element}>`));
+  if (undeclared.length) body.push('', `Формы не объявляют: ${undeclared.join(', ')}.`);
+  body.push('');
+  writeGuideSection('content/ru/guide/smart-components/states-and-loading.md', '#### Формы компонентов', body);
 }
 
 if (listMissing) {

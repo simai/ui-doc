@@ -90,7 +90,7 @@ Smart-компонент показывает своё состояние — о
 | `rows` | список: панель инструментов и строки | `--sf-skeleton-rows`, по умолчанию 10 |
 | `record` | запись: пары «подпись — значение» | `--sf-skeleton-rows`, по умолчанию 6 |
 | `menu` | колонка меню | `--sf-skeleton-rows`, по умолчанию 8 |
-| `block` | прямоугольник | высота `--sf-skeleton-block-size` |
+| `block` | прямоугольник | высота `--sf-skeleton-block-size`, по умолчанию высота контрола размера 1 |
 | `line` | одна строка текста | — |
 
 ```html
@@ -117,8 +117,24 @@ Smart-компонент показывает своё состояние — о
 Какую форму компонент занимает до кода и рисует ли он свой скелетон, пока
 ждёт данные, объявляет манифест: `presentation.skeleton` с полями `shape`
 (`rows`, `record`, `menu`, `block`, `line` или `none`) и `while_loading`
-(`template` или `none`). Так объявлены таблица и представление данных
-(`rows`), панель свойств (`record`) и меню администратора (`menu`).
+(`template` или `none`). Форму объявляет каждый Smart-компонент.
+`none` объявляют элементы в строке текста и то, что открывается поверх
+страницы: заготовка до прихода кода сдвинула бы строку, в которой элемент
+стоит. Какую форму назвал каждый компонент — в таблице ниже и в справочнике
+компонента (строка «Заготовка до прихода кода»).
+
+#### Формы компонентов
+
+Раздел собран из манифестов выпуска `ui-1aa66c4385cf` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+
+| Форма | Компоненты |
+|:---|:---|
+| `rows` | `<sf-data-view>` (свой скелетон), `<sf-table>` (свой скелетон) |
+| `record` | `<sf-property-view>` (свой скелетон) |
+| `menu` | `<sf-admin-menu>`, `<sf-tree>` |
+| `block` | `<sf-alert>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-range-slider>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>` |
+| `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
+| `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-toggle>`, `<sf-tooltip>` |
 
 ### Скелетон области страницы
 

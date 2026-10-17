@@ -80,7 +80,7 @@ crumbs.onItemClick((item, detail) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-dec4c338a088` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1aa66c4385cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -89,9 +89,10 @@ crumbs.onItemClick((item, detail) => {
 | Тег | `<sf-breadcrumbs>` |
 | Назначение | Показывает место текущей страницы в иерархии цепочкой нативных ссылок, построенной из items, атрибута items или дочерних sf-breadcrumbs-item. У длинной цепочки середина сворачивается в кнопку-многоточие (max-items, по умолчанию 4), которая раскрывается на месте. |
 | Контракт | `smart.breadcrumbs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-dec4c338a088` |
+| Поставка | выпуск Framework `ui-1aa66c4385cf` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
@@ -139,8 +140,8 @@ crumbs.onItemClick((item, detail) => {
 
 ### Источник
 
-- `simai/ui@dec4c338a088967f2ec7a8565adfd1f822a2f1b9:distr/smart/breadcrumbs`
-- `simai/ui@dec4c338a088967f2ec7a8565adfd1f822a2f1b9:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui@1aa66c4385cf0128549d4ccfc8d6c82f22b50aa8:distr/smart/breadcrumbs`
+- `simai/ui@1aa66c4385cf0128549d4ccfc8d6c82f22b50aa8:distr/rule/rule.json#name=cl-breadcrumbs`
 
 ## См. также
 

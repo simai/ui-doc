@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "ca179df38f7dff082eb031e61f6450e1ce5a6c12",
-    "core_revision": "dec4c338a088967f2ec7a8565adfd1f822a2f1b9",
+    "source_revision": "f08335a69a56c5d8fbd656466f9fc5c59cbefbb5",
+    "core_revision": "1aa66c4385cf0128549d4ccfc8d6c82f22b50aa8",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "7ade650853b818b503ea966c735e5b57c76cbd35576452565e9f722412d1e131",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "cf474082ae9f869db6a79d584861f70d0ddce8e567289cd1315967af6e806e0b",
       "src/core/js/composition/builtins.mjs": "62ccb18b910e34fb39019805b41f85d3208ec714a6840bd0dcc79d75f8434d7e",
       "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
-      "src/smart/buttons/smart.manifest.json": "70a070dc59e424487fb60222223b9cb5d9eee4a84fbc71d34fbe62ccbdb1dc11"
+      "src/smart/buttons/smart.manifest.json": "3ee83769eb6ff6903d549c2d2ef037a09b0c58666943c8c9e91e3ae9a1201774"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "a3eb3e2d2dc6505a9848174da60e0afab812b38b809e45a1fb583d2b6c2e6d80",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "019bfcc4ef5b8ef9253b0b3882971a074174e151828de53ef4f3c76d70e10ae9"
     },
-    "note": "At source ca179df3 and core dec4c338 (release ui-dec4c338a088) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at ui-d1cd7069b16d (that release changed only the manifest schema, 2.5.0 persistence.view_preference, and the resizer manifest)."
+    "note": "At source f08335a6 and core 1aa66c43 (release ui-1aa66c4385cf) the composition schemas, composition-types, index.mjs, builtins, fixture and core.js are byte-identical to the review at ui-dec4c338a088; the buttons manifest only gains presentation.skeleton {shape: none, while_loading: none}, and composition.declarative is unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

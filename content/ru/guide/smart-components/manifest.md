@@ -58,7 +58,7 @@ Smart-компоненты описаны манифестом действую�
 | `persistence`, `ownership` | Что хранится и кто чем владеет; `persistence.view_preference` — персональный вид компонента (см. «Персональный вид в манифесте» ниже) |
 | `security` | Кто владеет правами, какие входы недоверенные, политика сетевых запросов |
 | `accessibility` | Ровно четыре поля: `role` (строка или `null`), `accessible_name` (`required`, `recommended` или `internal`), `keyboard` (список строк), `focus` (строка) |
-| `presentation` | Темы, языки и адаптивные режимы, которые компонент поддерживает; `skeleton` — заготовка формы до прихода кода и данных ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
+| `presentation` | Темы, языки и адаптивные режимы, которые компонент поддерживает; `skeleton` — заготовка формы до прихода кода (`shape`) и свой скелетон при загрузке данных (`while_loading`); его объявляет каждый Smart-компонент, `none` — тоже ответ ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 | `readiness` | `level` — уровень готовности ([Уровни готовности](#уровни-готовности)) и `required_checks` — список обязательных проверок; оба поля обязательны |
 | `adapter`, `artifacts` | Адаптер для среды проверки компонента; файлы образцов данных и сценариев |
 | `compatibility` | Выпуск, на котором проверен; имена для совместимости; миграции |
@@ -167,15 +167,15 @@ SHA-256 файла; проверка манифестов `node scripts/sf-contr
     "keyboard": ["Enter", "Space"],
     "focus": "Фокус получает кнопка внутри компонента."
   },
-  "presentation": {"themes": ["light", "dark"], "locales": ["ru", "en"], "responsive": ["desktop", "mobile"]},
+  "presentation": {"themes": ["light", "dark"], "locales": ["ru", "en"], "responsive": ["desktop", "mobile"], "skeleton": {"shape": "none", "while_loading": "none"}},
   "adapter": {"kind": "generic", "protocol": "simai.smart-studio-adapter.v1", "module": null},
   "artifacts": {"fixtures": [], "scenarios": []},
   "readiness": {"level": "runnable", "required_checks": ["manifest"]},
   "compatibility": {
     "contract_schema": {"id": "https://simai.io/contracts/smart-component-manifest.v2.schema.json", "version": 2},
     "runtime_pair": {
-      "ui_revision": "dec4c338a088967f2ec7a8565adfd1f822a2f1b9",
-      "ui_smart_revision": "dec4c338a088967f2ec7a8565adfd1f822a2f1b9"
+      "ui_revision": "1aa66c4385cf0128549d4ccfc8d6c82f22b50aa8",
+      "ui_smart_revision": "1aa66c4385cf0128549d4ccfc8d6c82f22b50aa8"
     },
     "aliases": [],
     "deprecations": [],

@@ -133,7 +133,9 @@ description: "Показывает и правит поля одного объ�
 область раскладывается в одну или две колонки (`columns`). Отрисовщик поля
 выбирается по `propertyType`, а не по имени компонента. Типы свойств, их
 значения и элементы правки описывает глава
-[Поля по типу свойства](/ru/guide/smart-components/field-renderers/).
+[Поля по типу свойства](/ru/guide/smart-components/field-renderers/). Поле
+с несколькими значениями (`choices`) в просмотре переносит метки на новые
+строки, и каждая метка остаётся шириной в свой текст.
 
 Раздел, область или поле с `rare: true` скрыты, пока не задан `show-rare`;
 приложение присылает их всегда, поэтому показ редких полей ничего не
@@ -269,7 +271,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-dec4c338a088` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1aa66c4385cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -281,6 +283,7 @@ view: {
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | `host-required` |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="record"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
@@ -422,8 +425,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/property-view`
-- `simai/larena-ui@a82484bd1ae9601383253f35ffc5fade2129e7ad:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@e3d02975df10607e4ab0d26b574ae06310239c32:components/src/smart/property-view`
+- `simai/larena-ui@e3d02975df10607e4ab0d26b574ae06310239c32:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 
