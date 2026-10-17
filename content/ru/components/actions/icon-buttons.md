@@ -197,29 +197,51 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-icon-button`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-icon-button`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-icon-button-background-color` | Заливка в покое; у наведения, нажатия, фокуса и недоступности — своя. | `var(--sf-primary)`; зависит от вида, схемы |
+| `--sf-icon-button-color` | Цвет значка и крестика в покое; у недоступной — свой. | `var(--sf-on-surface-variant)`; зависит от вида, схемы |
+| `--sf-icon-button-border-color` | Цвет рамки в спокойном состоянии; виден при ненулевой ширине рамки. | `transparent`; зависит от вида |
+| `--sf-icon-button-border-width` | Толщина рамки со всех сторон (у видов `outline` и `surface` — `var(--sf-px)`). | `0`; зависит от вида |
+| `--sf-icon-button-radius` | Скругление углов. | `var(--sf-radius--ui)` |
+| `--sf-icon-button-padding-inline` | Отступ до и после значка. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+| `--sf-icon-button-padding-block` | Отступ сверху и снизу от значка. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+
+```css
+.sf-icon-button {
+  --sf-icon-button-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-icon-button`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-icon-button--background-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-primary)` | `background-color` |
+| `--sf-icon-button--background-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-icon-button-background-color, var(--sf-primary))` | `background-color` |
 | `--sf-icon-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-icon-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
-| `--sf-icon-button--border-bottom-width` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `var(--sf-px)` | `padding-bottom`, `border-bottom-width` |
-| `--sf-icon-button--border-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--outline.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-outline)` | `border-color` |
-| `--sf-icon-button--border-inline-end-width` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `var(--sf-px)` | `padding-inline-end`, `border-inline-end-width` |
-| `--sf-icon-button--border-inline-start-width` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `var(--sf-px)` | `padding-inline-start`, `border-inline-start-width` |
+| `--sf-icon-button--border-bottom-width` | `var(--sf-icon-button-border-width, 0)` | `padding-bottom`, `border-bottom-width` |
+| `--sf-icon-button--border-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--outline.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-icon-button-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-icon-button--border-inline-end-width` | `var(--sf-icon-button-border-width, 0)` | `padding-inline-end`, `border-inline-end-width` |
+| `--sf-icon-button--border-inline-start-width` | `var(--sf-icon-button-border-width, 0)` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-icon-button--border-style` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `solid` | `border-style` |
 | `--sf-icon-button--border-top-left-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-middle`: `var(--sf-radius-square)` | `border-start-start-radius` |
 | `--sf-icon-button--border-top-right-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-start`: `var(--sf-radius-square)` | `border-start-end-radius` |
-| `--sf-icon-button--border-top-width` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `var(--sf-px)` | `padding-top`, `border-top-width` |
-| `--sf-icon-button--border-width` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `var(--sf-px)` | `border-width` |
+| `--sf-icon-button--border-top-width` | `var(--sf-icon-button-border-width, 0)` | `padding-top`, `border-top-width` |
+| `--sf-icon-button--border-width` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `var(--sf-icon-button-border-width, var(--sf-px))` | `border-width` |
 | `--sf-icon-button--focus-ink` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary`: `var(--sf-on-primary)` | `--sf-icon-button--focus-inset` |
 | `--sf-icon-button--focus-inset` | не задана; задают модификаторы, например `.sf-icon-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-icon-button--focus-ink, transparent)` | `box-shadow` |
-| `--sf-icon-button--padding-bottom` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
-| `--sf-icon-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-inline-end` |
-| `--sf-icon-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-inline-start` |
-| `--sf-icon-button--padding-top` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top` |
-| `--sf-icon-button--radius` | `var(--sf-radius--ui)` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-icon-button--padding-bottom` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
+| `--sf-icon-button--padding-inline-end` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-inline, var(--sf-ui-1--space-y-tightness-default))` | `padding-inline-end` |
+| `--sf-icon-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-inline, var(--sf-ui-1--space-y-tightness-default))` | `padding-inline-start` |
+| `--sf-icon-button--padding-top` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
+| `--sf-icon-button--radius` | `var(--sf-icon-button-radius, var(--sf-radius--ui))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-icon-button-loading-stripe` | `var(--sf-alpha-8)` | `background-image` |
 
 ## См. также

@@ -177,21 +177,44 @@ handle.close();
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-toast`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-toast`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-toast-background-color` | Подложка поверх приподнятой поверхности уведомления. Её задаёт класс статуса (`sf-toast--neutral`, `sf-toast--info` и другие); без статуса подложки нет, и переменная не действует. | `var(--sf-surface-container)`; зависит от статуса |
+| `--sf-toast-color` | Цвет заголовка и поясняющего текста. | `var(--sf-on-surface)`; зависит от статуса |
+| `--sf-toast-border-color` | Цвет рамки. | `var(--sf-outline-variant)` |
+| `--sf-toast-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
+| `--sf-toast-radius` | Скругление углов. | `var(--sf-radius--surface)` |
+| `--sf-toast-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-space-1)` |
+| `--sf-toast-padding-block` | Отступ над и под содержимым. | `var(--sf-space-1)` |
+| `--sf-toast-gap` | Промежуток между значком, текстом и кнопкой закрытия. | `var(--sf-space-1/2)` |
+
+```css
+.sf-toast {
+  --sf-toast-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-toast`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-toast--background-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-surface-container)` | `background-image` |
-| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-on-surface)` | `color` |
+| `--sf-toast--background-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-background-color, var(--sf-surface-container))` | `background-image` |
+| `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
 | `--sf-toast-bottom--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-bottom`: `transparent` | `background-color` |
 | `--sf-toast-container--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `transparent` | `background-color` |
 | `--sf-toast-container--gap` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `var(--sf-space-1/2)` | `gap` |
-| `--sf-toast-supporting-text--color` | не задана; задают модификаторы, например `.sf-toast.sf-toast--neutral .sf-toast-supporting-text`: `var(--sf-on-surface)` | `color` |
+| `--sf-toast-supporting-text--color` | не задана; задают модификаторы, например `.sf-toast.sf-toast--neutral .sf-toast-supporting-text`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
 | `--sf-toast-supporting-text--font-family` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-toast-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-toast-supporting-text--font-weight` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-toast-supporting-text--line-height` | не задана; задают модификаторы, например `.sf-toast .sf-toast-supporting-text`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-toast-text--color` | не задана; задают модификаторы, например `.sf-toast.sf-toast--neutral .sf-toast-text`: `var(--sf-on-surface)` | `color` |
+| `--sf-toast-text--color` | не задана; задают модификаторы, например `.sf-toast.sf-toast--neutral .sf-toast-text`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
 | `--sf-toast-text--font-family` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-toast-text--font-size` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-toast-text--font-weight` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-font-weight-medium)` | `font-weight` |

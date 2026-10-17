@@ -274,14 +274,14 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--background-color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-button-background-color, var(--sf-primary))` | `background-color` |
 | `--sf-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
-| `--sf-button--border-bottom-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-bottom`, `border-bottom-width` |
+| `--sf-button--border-bottom-width` | `var(--sf-button-border-width, 0)` | `padding-bottom`, `border-bottom-width` |
 | `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--primary`: `var(--sf-button-border-color, var(--sf-outline))` | `border-color` |
-| `--sf-button--border-inline-end-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-inline-end`, `border-inline-end-width` |
-| `--sf-button--border-inline-start-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-inline-start`, `border-inline-start-width` |
+| `--sf-button--border-inline-end-width` | `var(--sf-button-border-width, 0)` | `padding-inline-end`, `border-inline-end-width` |
+| `--sf-button--border-inline-start-width` | `var(--sf-button-border-width, 0)` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-button--border-style` | не задана; задают модификаторы, например `.sf-button--outline`: `solid` | `border-style` |
 | `--sf-button--border-top-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-start-start-radius` |
 | `--sf-button--border-top-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-start-end-radius` |
-| `--sf-button--border-top-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-button-border-width, var(--sf-px))` | `padding-top`, `border-top-width` |
+| `--sf-button--border-top-width` | `var(--sf-button-border-width, 0)` | `padding-top`, `border-top-width` |
 | `--sf-button--border-width` | не задана; задают модификаторы, например `.sf-button--outline`: `var(--sf-px)` | `border-width` |
 | `--sf-button--focus-ink` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary`: `var(--sf-on-primary)` | `--sf-button--focus-inset` |
 | `--sf-button--focus-inset` | не задана; задают модификаторы, например `.sf-button:not(:disabled):not(.disabled).focus-visible`: `inset 0 0 0 var(--sf-focus--offset) var(--sf-button--focus-ink, transparent)` | `box-shadow` |

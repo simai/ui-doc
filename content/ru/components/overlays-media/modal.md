@@ -147,7 +147,29 @@ document.addEventListener('modal:before-close', (event) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-modal`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-modal-surface`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-modal-background-color` | Заливка панели; у затемнения фона — своя. | `var(--sf-surface-1, #fff)`; зависит от вида |
+| `--sf-modal-border-color` | Цвет рамки панели. | `var(--sf-outline-variant, transparent)` |
+| `--sf-modal-border-width` | Толщина рамки панели со всех сторон. | `var(--sf-border-width, var(--sf-px))` |
+| `--sf-modal-radius` | Скругление углов панели; панель во весь экран остаётся прямоугольной. | `var(--sf-radius--surface)` |
+| `--sf-modal-padding-inline` | Отступ внутри панели до и после содержимого; атрибут `surface-padding` окна важнее. | `var(--sf-space-2)` |
+| `--sf-modal-padding-block` | Отступ внутри панели сверху и снизу от содержимого; атрибут `surface-padding` окна важнее. | `var(--sf-space-2)` |
+| `--sf-modal-gap` | Промежуток между шапкой, телом и подвалом. | `var(--sf-space-1)` |
+
+```css
+.sf-modal-surface {
+  --sf-modal-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-modal`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
@@ -159,13 +181,13 @@ document.addEventListener('modal:before-close', (event) => {
 | `--sf-modal-iframe-min-height` | `var(--sf-g2)` | — |
 | `--sf-modal-overlay-background` | `var(--sf-black, #000)` | `background-color` |
 | `--sf-modal-overlay-opacity` | `var(--sf-opacity-60, 0.6)` | `opacity` |
-| `--sf-modal-surface-bg` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-surface-1, #fff)` | `background-color` |
-| `--sf-modal-surface-border-color` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-outline-variant, transparent)` | `border` |
+| `--sf-modal-surface-bg` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-background-color, var(--sf-surface-1, #fff))` | `background-color` |
+| `--sf-modal-surface-border-color` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-border-color, var(--sf-outline-variant, transparent))` | `border` |
 | `--sf-modal-surface-border-style` | не задана; задают модификаторы, например `.sf-modal-surface`: `solid` | `border` |
-| `--sf-modal-surface-border-width` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-border-width, var(--sf-px))` | `border` |
-| `--sf-modal-surface-gap` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-space-1)` | `gap` |
-| `--sf-modal-surface-padding` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-space-2)` | `padding` |
-| `--sf-modal-surface-radius` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-radius--surface)` | `border-radius` |
+| `--sf-modal-surface-border-width` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-border-width, var(--sf-border-width, var(--sf-px)))` | `border` |
+| `--sf-modal-surface-gap` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-gap, var(--sf-space-1))` | `gap` |
+| `--sf-modal-surface-padding` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-padding-block, var(--sf-space-2)) var(--sf-modal-padding-inline, var(--sf-space-2))` | `padding` |
+| `--sf-modal-surface-radius` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-radius, var(--sf-radius--surface))` | `border-radius` |
 | `--sf-modal-surface-shadow` | не задана; задают модификаторы, например `.sf-modal-surface`: `none` | `box-shadow` |
 
 ## См. также

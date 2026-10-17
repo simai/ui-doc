@@ -176,21 +176,42 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-checkbox`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-checkbox`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-checkbox-background-color` | Заливка квадрата без отметки; у отмеченного, ошибки и недоступного — своя. | `var(--sf-surface-0)` |
+| `--sf-checkbox-border-color` | Рамка квадрата без отметки; у отмеченного, наведения, ошибки и недоступного — своя. | `var(--sf-outline)` |
+| `--sf-checkbox-border-width` | Толщина рамки квадрата со всех сторон. | `var(--sf-px)` |
+| `--sf-checkbox-radius` | Скругление углов квадрата. | `var(--sf-radius--ui)` |
+| `--sf-checkbox-size` | Ширина и высота квадрата. | `var(--sf-text-height-1)`; зависит от размера |
+| `--sf-checkbox-gap` | Промежуток между квадратом и подписью. | `var(--sf-ui-1--text-space-x)`; зависит от размера |
+
+```css
+.sf-checkbox {
+  --sf-checkbox-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-checkbox`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-ui-1/2--text-space-x)` | `gap` |
-| `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-surface-0)` | `background-color` |
-| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-outline)` | `border-color` |
-| `--sf-checkbox-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-end-end-radius` |
-| `--sf-checkbox-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-end-start-radius` |
-| `--sf-checkbox-box--border-start-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-start-end-radius` |
-| `--sf-checkbox-box--border-start-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-radius--ui)` | `border-start-start-radius` |
+| `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-checkbox-gap, var(--sf-ui-1/2--text-space-x))` | `gap` |
+| `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-checkbox-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
+| `--sf-checkbox-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
+| `--sf-checkbox-box--border-start-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
+| `--sf-checkbox-box--border-start-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
 | `--sf-checkbox-box--box-shadow` | не задана; задают модификаторы, например `.sf-checkbox[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-checkbox-box`: `none` | `box-shadow` |
-| `--sf-checkbox-box--height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-text-height-1/2)` | `height` |
-| `--sf-checkbox-box--width` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-text-height-1/2)` | `width` |
+| `--sf-checkbox-box--height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-checkbox-size, var(--sf-text-height-1/2))` | `height` |
+| `--sf-checkbox-box--width` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-checkbox-size, var(--sf-text-height-1/2))` | `width` |
 | `--sf-checkbox-container--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-container`: `transparent` | `background-color` |
 | `--sf-checkbox-description--color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-checkbox-description--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-text--family)` | `font-family` |

@@ -506,7 +506,9 @@ const publicVariablesSection = (entry) => {
 };
 
 const componentVariablesSection = (component, blocks) => {
-  const offered = publicContract.components.filter((item) => blocks.includes(item.selector.replace(/^\./u, '')));
+  // A component's public variables may sit on a part rather than on its block
+  // (the modal's on .sf-modal-surface): the contract names the component.
+  const offered = publicContract.components.filter((item) => blocks.includes(item.selector.replace(/^\./u, '')) || item.component === component);
   const publicNames = new Set(offered.flatMap((item) => item.variables.map((variable) => variable.name)));
   const variables = blocks.flatMap((item) => componentVariables(component, item)).filter(({name}) => !publicNames.has(name));
   if (offered.length) {

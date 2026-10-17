@@ -193,11 +193,32 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-textarea`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-textarea`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-textarea-background-color` | Заливка поля в покое; у наведения, фокуса, только чтения, ошибки и недоступного — своя. | `var(--sf-surface-0)`; зависит от вида |
+| `--sf-textarea-border-color` | Рамка поля в спокойном состоянии. | `var(--sf-outline)`; зависит от вида |
+| `--sf-textarea-color` | Цвет введённого текста; у недоступного — свой. | `var(--sf-on-surface)` |
+| `--sf-textarea-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
+| `--sf-textarea-padding-inline` | Отступ внутри поля до и после текста. | `calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x))`; зависит от размера |
+| `--sf-textarea-padding-block` | Отступ внутри поля сверху и снизу от текста. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
+
+```css
+.sf-textarea {
+  --sf-textarea-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-textarea`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-textarea--radius` | `var(--sf-radius--ui)` | `--sf-textarea-textarea--border-end-end-radius`, `--sf-textarea-textarea--border-end-start-radius`, `--sf-textarea-textarea--border-start-end-radius`, `--sf-textarea-textarea--border-start-start-radius` |
+| `--sf-textarea--radius` | `var(--sf-textarea-radius, var(--sf-radius--ui))` | `--sf-textarea-textarea--border-end-end-radius`, `--sf-textarea-textarea--border-end-start-radius`, `--sf-textarea-textarea--border-start-end-radius`, `--sf-textarea-textarea--border-start-start-radius` |
 | `--sf-textarea-hint-text-wrap--background-color` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-hint-text-wrap`: `transparent` | `background-color` |
 | `--sf-textarea-hint-text-wrap--color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered .sf-textarea-hint-text-wrap`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-textarea-hint-text-wrap--font-family` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered .sf-textarea-hint-text-wrap`: `var(--sf-text--family)` | `font-family` |
@@ -220,23 +241,23 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-text--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-textarea-text--font-weight` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-textarea-text--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-textarea-textarea--background-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-surface-0)` | `background-color` |
+| `--sf-textarea-textarea--background-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-background-color, var(--sf-surface-0))` | `background-color` |
 | `--sf-textarea-textarea--border` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-outline)` | `border-color` |
+| `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-textarea-textarea--border-end-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-end-radius` |
 | `--sf-textarea-textarea--border-end-start-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-start-radius` |
 | `--sf-textarea-textarea--border-start-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-start-end-radius` |
 | `--sf-textarea-textarea--border-start-start-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-start-start-radius` |
 | `--sf-textarea-textarea--box-shadow` | не задана; задают модификаторы, например `.sf-textarea:not(.sf-textarea--pointer-focus) textarea:not(:disabled):not(.disabled).focus-visible`: `none` | `box-shadow` |
-| `--sf-textarea-textarea--color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-on-surface)` | `color` |
+| `--sf-textarea-textarea--color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-color, var(--sf-on-surface))` | `color` |
 | `--sf-textarea-textarea--font-family` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text--family)` | `font-family` |
 | `--sf-textarea-textarea--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-textarea-textarea--font-weight` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-textarea-textarea--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-textarea-textarea--padding-bottom` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))` | `padding-bottom` |
-| `--sf-textarea-textarea--padding-inline-end` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x))` | `padding-inline-end` |
-| `--sf-textarea-textarea--padding-inline-start` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x))` | `padding-inline-start` |
-| `--sf-textarea-textarea--padding-top` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))` | `padding-top` |
+| `--sf-textarea-textarea--padding-bottom` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `var(--sf-textarea-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-bottom` |
+| `--sf-textarea-textarea--padding-inline-end` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `var(--sf-textarea-padding-inline, calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x)))` | `padding-inline-end` |
+| `--sf-textarea-textarea--padding-inline-start` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `var(--sf-textarea-padding-inline, calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x)))` | `padding-inline-start` |
+| `--sf-textarea-textarea--padding-top` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `var(--sf-textarea-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-top` |
 
 ## См. также
 

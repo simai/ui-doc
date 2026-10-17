@@ -173,21 +173,41 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-avatar`, `.sf-online-indicator`, `.sf-add-button`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-avatar`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-avatar-background-color` | Заливка под инициалами или заглушкой; изображение её закрывает. | `transparent`; зависит от вида |
+| `--sf-avatar-color` | Цвет инициалов и значка-заглушки. | `var(--sf-on-surface-variant)` |
+| `--sf-avatar-border-color` | Цвет рамки в покое; у наведения — свой. | `transparent` |
+| `--sf-avatar-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
+| `--sf-avatar-radius` | Скругление углов — одинаково для круглой и квадратной формы. | `var(--sf-radius-circle)`; зависит от вида |
+
+```css
+.sf-avatar {
+  --sf-avatar-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-avatar`, `.sf-online-indicator`, `.sf-add-button`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-avatar--background-color` | `transparent` | `background-color` |
-| `--sf-avatar--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-radius--ui)` | `border-end-start-radius` |
-| `--sf-avatar--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-radius--ui)` | `border-end-end-radius` |
-| `--sf-avatar--border-bottom-width` | `var(--sf-px)` | `border-bottom-width` |
+| `--sf-avatar--background-color` | `var(--sf-avatar-background-color, transparent)` | `background-color` |
+| `--sf-avatar--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
+| `--sf-avatar--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
+| `--sf-avatar--border-bottom-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-bottom-width` |
 | `--sf-avatar--border-color` | не задана; задают модификаторы, например `.disabled .sf-avatar`: `transparent` | `border-color` |
-| `--sf-avatar--border-inline-end-width` | `var(--sf-px)` | `border-inline-end-width` |
-| `--sf-avatar--border-inline-start-width` | `var(--sf-px)` | `border-inline-start-width` |
+| `--sf-avatar--border-inline-end-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-inline-end-width` |
+| `--sf-avatar--border-inline-start-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-inline-start-width` |
 | `--sf-avatar--border-style` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `solid` | `border-style` |
-| `--sf-avatar--border-top-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-radius--ui)` | `border-start-start-radius` |
-| `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-radius--ui)` | `border-start-end-radius` |
-| `--sf-avatar--border-top-width` | `var(--sf-px)` | `border-top-width` |
+| `--sf-avatar--border-top-left-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
+| `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
+| `--sf-avatar--border-top-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-top-width` |
 | `--sf-avatar--border-width` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `var(--sf-px)` | `border-width` |
 | `--sf-avatar--font-size` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-avatar--height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `height` |

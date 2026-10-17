@@ -121,25 +121,48 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-tooltip`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-tooltip`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-tooltip-background-color` | Заливка подсказки вместе с хвостиком. | `var(--sf-elevation-2--surface)`; зависит от вида |
+| `--sf-tooltip-color` | Цвет текста и поясняющего текста. | `var(--sf-on-surface)`; зависит от вида |
+| `--sf-tooltip-border-color` | Цвет рамки светлого вида; у тёмного рамки нет. | `var(--sf-outline-variant)`; зависит от вида |
+| `--sf-tooltip-border-width` | Толщина рамки светлого вида со всех сторон; у тёмного рамки нет. | `var(--sf-px)`; зависит от вида |
+| `--sf-tooltip-radius` | Скругление углов. | `var(--sf-radius--ui)` |
+| `--sf-tooltip-padding-inline` | Отступ до и после текста по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
+| `--sf-tooltip-padding-block` | Отступ над и под текстом. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера |
+| `--sf-tooltip-gap` | Промежуток между текстом и поясняющим текстом. | `var(--sf-space-1/4)` |
+
+```css
+.sf-tooltip {
+  --sf-tooltip-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-tooltip`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-tooltip-content--background-color` | не задана; задают модификаторы, например `.sf-tooltip--dark .sf-tooltip-content`: `var(--sf-surface-inverse-fixed)` | `background-color` |
-| `--sf-tooltip-content--border-end-end-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-radius--ui)` | `border-end-end-radius` |
-| `--sf-tooltip-content--border-end-start-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-radius--ui)` | `border-end-start-radius` |
-| `--sf-tooltip-content--border-start-end-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-radius--ui)` | `border-start-end-radius` |
-| `--sf-tooltip-content--border-start-start-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-radius--ui)` | `border-start-start-radius` |
-| `--sf-tooltip-content--padding-bottom` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
-| `--sf-tooltip-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
-| `--sf-tooltip-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
-| `--sf-tooltip-content--padding-top` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-top` |
-| `--sf-tooltip-supporting-text--color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark .sf-tooltip-supporting-text`: `var(--sf-on-surface-inverse-fixed)` | `color` |
+| `--sf-tooltip-content--background-color` | не задана; задают модификаторы, например `.sf-tooltip--dark .sf-tooltip-content`: `var(--sf-tooltip-background-color, var(--sf-surface-inverse-fixed))` | `background-color` |
+| `--sf-tooltip-content--border-end-end-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-end-end-radius` |
+| `--sf-tooltip-content--border-end-start-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
+| `--sf-tooltip-content--border-start-end-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
+| `--sf-tooltip-content--border-start-start-radius` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-content`: `var(--sf-tooltip-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
+| `--sf-tooltip-content--padding-bottom` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-bottom` |
+| `--sf-tooltip-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
+| `--sf-tooltip-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
+| `--sf-tooltip-content--padding-top` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-content`: `var(--sf-tooltip-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
+| `--sf-tooltip-supporting-text--color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark .sf-tooltip-supporting-text`: `var(--sf-tooltip-color, var(--sf-on-surface-inverse-fixed))` | `color` |
 | `--sf-tooltip-supporting-text--font-family` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-supporting-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-tooltip-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--size-1 .sf-tooltip-supporting-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-tooltip-supporting-text--font-weight` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-supporting-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-tooltip-supporting-text--line-height` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--size-1 .sf-tooltip-supporting-text`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-tooltip-tail--background-color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark .sf-tooltip-tail`: `var(--sf-surface-inverse-fixed)` | `background-color` |
+| `--sf-tooltip-tail--background-color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark .sf-tooltip-tail`: `var(--sf-tooltip-background-color, var(--sf-surface-inverse-fixed))` | `background-color` |
 | `--sf-tooltip-tail--color` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-on-surface-inverse-fixed)` | `color` |
 | `--sf-tooltip-tail--font-family` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-text--family)` | `font-family` |
 | `--sf-tooltip-tail--font-size` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--dark.sf-tooltip--arrow-bottom-left.sf-tooltip--size-1 .sf-tooltip-tail`: `var(--sf-text-size-1)` | `font-size` |
@@ -148,13 +171,13 @@ profile: reference
 | `--sf-tooltip-tail-corner-offset` | `var(--sf-b6)` | `inset-inline-start`, `inset-inline-end` |
 | `--sf-tooltip-tail-half` | `calc(var(--sf-tooltip-tail-size) / 2)` | `bottom`, `inset-block-end`, `top`, `inset-block-start`, `inset-inline-end`, `inset-inline-start` |
 | `--sf-tooltip-tail-size` | `var(--sf-b2)` | `--sf-tooltip-tail-half`, `width`, `height` |
-| `--sf-tooltip-text--color` | не задана; задают модификаторы, например `.sf-tooltip--dark .sf-tooltip-text`: `var(--sf-on-surface-inverse-fixed)` | `color` |
+| `--sf-tooltip-text--color` | не задана; задают модификаторы, например `.sf-tooltip--dark .sf-tooltip-text`: `var(--sf-tooltip-color, var(--sf-on-surface-inverse-fixed))` | `color` |
 | `--sf-tooltip-text--font-family` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-tooltip-text--font-size` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-tooltip-text--font-weight` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-text`: `var(--sf-font-weight-bold)` | `font-weight` |
 | `--sf-tooltip-text--line-height` | не задана; задают модификаторы, например `.sf-tooltip.sf-tooltip--size-1 .sf-tooltip-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-tooltip-wrap--background-color` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-wrap`: `transparent` | `background-color` |
-| `--sf-tooltip-wrap--gap` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-wrap`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-tooltip-wrap--gap` | не задана; задают модификаторы, например `.sf-tooltip .sf-tooltip-wrap`: `var(--sf-tooltip-gap, var(--sf-space-1/4))` | `gap` |
 
 ## См. также
 

@@ -71,7 +71,30 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-context-menu`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-context-menu`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-context-menu-background-color` | Заливка меню вместе с закреплённым подвалом. | `var(--sf-elevation-3--surface)` |
+| `--sf-context-menu-color` | Цвет подписи строки в покое; у текущей, опасной и недоступной строки — свой. | `var(--sf-on-surface)` |
+| `--sf-context-menu-border-color` | Цвет тонкой линии вокруг меню. | `var(--sf-outline-variant)` |
+| `--sf-context-menu-border-width` | Толщина линии вокруг меню. | `var(--sf-px)` |
+| `--sf-context-menu-radius` | Скругление углов меню и его тени. | `var(--sf-radius--surface)` |
+| `--sf-context-menu-padding-inline` | Отступ между краем меню и строками до и после; содержимое строк остаётся на своей оси. | `var(--sf-space-1/4)` |
+| `--sf-context-menu-padding-block` | Отступ над первой строкой и под последней. | `var(--sf-space-1/4)` |
+| `--sf-context-menu-gap` | Промежуток между строками. | `var(--sf-px)` |
+
+```css
+.sf-context-menu {
+  --sf-context-menu-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-context-menu`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
@@ -88,12 +111,12 @@ profile: reference
 | `--sf-context-menu--line` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height`, `min-height`, `min-block-size`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-context-menu--space-y` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-ui-1/2--space-y)` | `min-height`, `min-block-size`, `padding` |
 | `--sf-context-menu--text-size` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-text-size-1/2)` | `font-size` |
-| `--sf-context-menu-content--background-color` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-elevation-3--surface)` | `background-color` |
-| `--sf-context-menu-content--border-radius` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-radius--surface)` | `border-radius` |
-| `--sf-context-menu-content--padding-bottom` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-bottom`, `bottom`, `inset-block-end`, `margin-bottom`, `margin-block-end`, `padding-block-end` |
-| `--sf-context-menu-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-inline-end` |
-| `--sf-context-menu-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-inline-start` |
-| `--sf-context-menu-content--padding-top` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `padding-top` |
+| `--sf-context-menu-content--background-color` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-background-color, var(--sf-elevation-3--surface))` | `background-color` |
+| `--sf-context-menu-content--border-radius` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-radius, var(--sf-radius--surface))` | `border-radius` |
+| `--sf-context-menu-content--padding-bottom` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-block, var(--sf-space-1/4))` | `padding-bottom`, `bottom`, `inset-block-end`, `margin-bottom`, `margin-block-end`, `padding-block-end` |
+| `--sf-context-menu-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-inline, var(--sf-space-1/4))` | `padding-inline-end` |
+| `--sf-context-menu-content--padding-inline-start` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-inline, var(--sf-space-1/4))` | `padding-inline-start` |
+| `--sf-context-menu-content--padding-top` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-block, var(--sf-space-1/4))` | `padding-top` |
 | `--sf-context-menu-panel--inline-size` | не задана; задают модификаторы, например `.sf-context-menu.sf-context-menu--panel .sf-context-menu-content`: `calc(var(--sf-ui-1--control-height) * 8)` | `width`, `inline-size` |
 | `--sf-context-menu-tail-corner-offset` | `0px` | — |
 | `--sf-context-menu-tail-half` | `0px` | — |

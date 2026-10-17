@@ -177,18 +177,39 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-tag`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-tag`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-tag-background-color` | Заливка метки в покое; у наведения, нажатия, выбора и недоступности — своя. | `var(--sf-surface-container)`; зависит от вида, статуса |
+| `--sf-tag-color` | Цвет подписи и счётчика в покое; у недоступной — свой. | `var(--sf-on-surface)`; зависит от статуса |
+| `--sf-tag-radius` | Скругление углов. | `var(--sf-radius--ui)` |
+| `--sf-tag-padding-inline` | Отступ до и после содержимого; метка в строке сохраняет отступы своего хозяина. | `var(--sf-ui-1--space-x)`; зависит от размера |
+| `--sf-tag-padding-block` | Отступ сверху и снизу от содержимого; метка в строке сохраняет отступы своего хозяина. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+| `--sf-tag-gap` | Промежуток между частями метки (каждый размер ставит 0: подпись отделяет её собственная ступень). | `var(--sf-a1)`; зависит от размера |
+
+```css
+.sf-tag {
+  --sf-tag-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-tag`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-surface-container)` | `background-color` |
-| `--sf-tag--block` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-ui-1/3--space-y-tightness-default)` | `padding-top`, `padding-bottom` |
+| `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-tag-background-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-tag--block` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-block, var(--sf-ui-1/3--space-y-tightness-default))` | `padding-top`, `padding-bottom` |
 | `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag.sf-tag--appearance-surface.sf-tag--color`: `inset 0 0 0 var(--sf-px) var(--sf-alpha-8)` | `box-shadow` |
 | `--sf-tag--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/3)` | `font-size`, `--sf-close-icon--height`, `--sf-close-icon--width` |
-| `--sf-tag--gap` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `0` | `gap` |
-| `--sf-tag--inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-ui-1/3--space-x)` | `padding-inline-end` |
+| `--sf-tag--gap` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-gap, 0)` | `gap` |
+| `--sf-tag--inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-inline, var(--sf-ui-1/3--space-x))` | `padding-inline-end` |
 | `--sf-tag--inline-line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `var(--sf-tag--line)` | `line-height` |
-| `--sf-tag--inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-ui-1/3--space-x)` | `padding-inline-start` |
+| `--sf-tag--inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-inline, var(--sf-ui-1/3--space-x))` | `padding-inline-start` |
 | `--sf-tag--label-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-end` |
 | `--sf-tag--label-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-start` |
 | `--sf-tag--line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--line-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-tag--inline-line`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size` |
@@ -202,7 +223,7 @@ profile: reference
 | `--sf-tag-color-icon--opacity` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color.disabled .sf-tag-color-icon`: `var(--sf-opacity-30)` | `opacity` |
 | `--sf-tag-color-icon--width` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1 .sf-tag-color-icon`: `var(--sf-text-height-1)` | `width` |
 | `--sf-tag-container--background-color` | не задана; задают модификаторы, например `.sf-tag .sf-tag-container`: `transparent` | `background-color` |
-| `--sf-tag-container--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color .sf-tag-container`: `var(--sf-on-surface)` | `color` |
+| `--sf-tag-container--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--color .sf-tag-container`: `var(--sf-tag-color, var(--sf-on-surface))` | `color` |
 | `--sf-tag-container--font-family` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text--family)` | `font-family` |
 | `--sf-tag-container--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-tag-container--font-weight` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-font-weight-regular)` | `font-weight` |
@@ -210,7 +231,7 @@ profile: reference
 | `--sf-tag-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
 | `--sf-tag-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color .sf-tag-container`: `var(--sf-ui-1--space-x)` | `padding-inline-start` |
 | `--sf-tag-count--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `transparent` | `background-color` |
-| `--sf-tag-count--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `var(--sf-on-surface)` | `color` |
+| `--sf-tag-count--color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--default .sf-tag-count`: `var(--sf-tag-color, var(--sf-on-surface))` | `color` |
 | `--sf-tag-count--font-family` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text--family)` | `font-family` |
 | `--sf-tag-count--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-tag-count--font-weight` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--default .sf-tag-count`: `var(--sf-font-weight-regular)` | `font-weight` |

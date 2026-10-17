@@ -175,17 +175,38 @@ input, класс из `attrs.class` — на оболочку.
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-switch`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-switch`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-switch-background-color` | Заливка дорожки в выключенном положении; у включённого, нажатого и недоступного — своя. | `var(--sf-surface-0)` |
+| `--sf-switch-border-color` | Рамка дорожки в покое; у наведения и недоступного — своя. | `var(--sf-outline)` |
+| `--sf-switch-border-width` | Толщина рамки дорожки; место ползунка отсчитывается от внешнего края, поэтому он остаётся на месте. | `var(--sf-px)` |
+| `--sf-switch-radius` | Скругление углов дорожки. | `var(--sf-radius-circle)` |
+| `--sf-switch-color` | Цвет подписи; у недоступного — свой. | `var(--sf-on-surface)` |
+| `--sf-switch-gap` | Промежуток между дорожкой и подписью. | `var(--sf-ui-1--text-space-x)`; зависит от размера |
+
+```css
+.sf-switch {
+  --sf-switch-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-switch`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-switch--duration` | `var(--sf-duration-normal)` | `transition` |
-| `--sf-switch--gap` | не задана; задают модификаторы, например `.sf-switch--size-1/2`: `var(--sf-ui-1/2--text-space-x)` | `gap` |
+| `--sf-switch--gap` | не задана; задают модификаторы, например `.sf-switch--size-1/2`: `var(--sf-switch-gap, var(--sf-ui-1/2--text-space-x))` | `gap` |
 | `--sf-switch--ratio` | `2` | `--sf-switch-toggler--width`, `--sf-switch-inner--travel` |
 | `--sf-switch--seat` | `var(--sf-a2)` | `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top`, `--sf-switch-inner--height`, `--sf-switch-inner--width` |
 | `--sf-switch--track-height` | не задана; задают модификаторы, например `.sf-switch.sf-switch--size-1/2`: `var(--sf-text-height-1/2)` | `--sf-switch-toggler--height`, `--sf-switch-toggler--width`, `--sf-switch-inner--height`, `--sf-switch-inner--width`, `--sf-switch-inner--travel` |
 | `--sf-switch-container--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `transparent` | `background-color` |
-| `--sf-switch-container--color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `var(--sf-on-surface)` | `color` |
+| `--sf-switch-container--color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `var(--sf-switch-color, var(--sf-on-surface))` | `color` |
 | `--sf-switch-container--font-size` | не задана; задают модификаторы, например `.sf-switch.sf-switch--size-1/2 .sf-switch-container`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-switch-container--gap` | не задана; задают модификаторы, например `.sf-switch .sf-switch-container`: `var(--sf-a0)` | `gap` |
 | `--sf-switch-container--line-height` | не задана; задают модификаторы, например `.sf-switch.sf-switch--size-1/2 .sf-switch-container`: `var(--sf-text-height-1/2)` | `line-height` |
@@ -202,15 +223,15 @@ input, класс из `attrs.class` — на оболочку.
 | `--sf-switch-inner--height` | не задана; задают модификаторы, например `.sf-switch .sf-switch-inner`: `calc(var(--sf-switch--track-height) - 2 * var(--sf-switch--seat))` | `height`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
 | `--sf-switch-inner--travel` | не задана; задают модификаторы, например `.sf-switch .sf-switch-inner`: `0px` | `transform` |
 | `--sf-switch-inner--width` | не задана; задают модификаторы, например `.sf-switch .sf-switch-inner`: `calc(var(--sf-switch--track-height) - 2 * var(--sf-switch--seat))` | `width` |
-| `--sf-switch-toggler--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-surface-0)` | `background-color`, `--sf-icon--color` |
+| `--sf-switch-toggler--background-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-background-color, var(--sf-surface-0))` | `background-color`, `--sf-icon--color` |
 | `--sf-switch-toggler--border` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width`, `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top` |
-| `--sf-switch-toggler--border-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-outline)` | `border-color` |
-| `--sf-switch-toggler--border-end-end-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-radius-circle)` | `border-end-end-radius` |
-| `--sf-switch-toggler--border-end-start-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-radius-circle)` | `border-end-start-radius` |
-| `--sf-switch-toggler--border-start-end-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-radius-circle)` | `border-start-end-radius` |
-| `--sf-switch-toggler--border-start-start-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-radius-circle)` | `border-start-start-radius` |
+| `--sf-switch-toggler--border-color` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-switch-toggler--border-end-end-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-end-end-radius` |
+| `--sf-switch-toggler--border-end-start-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-end-start-radius` |
+| `--sf-switch-toggler--border-start-end-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-start-end-radius` |
+| `--sf-switch-toggler--border-start-start-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-start-start-radius` |
 | `--sf-switch-toggler--border-style` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `solid` | `border-style` |
-| `--sf-switch-toggler--border-width` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-px)` | `border-width`, `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top` |
+| `--sf-switch-toggler--border-width` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-border-width, var(--sf-px))` | `border-width`, `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top` |
 | `--sf-switch-toggler--box-shadow` | не задана; задают модификаторы, например `.sf-switch[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-switch-toggler`: `none` | `box-shadow` |
 | `--sf-switch-toggler--height` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch--track-height)` | `height` |
 | `--sf-switch-toggler--padding-bottom` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `calc(var(--sf-switch--seat) - var(--sf-switch-toggler--border-width))` | `padding-bottom` |

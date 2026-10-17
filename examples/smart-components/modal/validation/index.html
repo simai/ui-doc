@@ -1,24 +1,26 @@
-<button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-open="smart-modal-validation">
-  <span class="sf-button-text-container">Пригласить участника</span>
-</button>
-<p id="smart-modal-validation-result" class="m-0" role="status"></p>
+<div class="modal-example-stage">
+  <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1" data-sf-modal-open="smart-modal-validation">
+    <span class="sf-button-text-container">Пригласить участника</span>
+  </button>
+  <p id="smart-modal-validation-result" class="m-0" role="status"></p>
 
-<sf-modal modal-id="smart-modal-validation" title="Приглашение" show-footer="false">
-  <form slot="content" data-modal-form="invite" class="flex flex-col gap-2" novalidate>
-    <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
-      <span class="sf-input-label flex"><span class="sf-input-text">Почта</span></span>
-      <span class="sf-input-field items-cross-center transition flex">
-        <input type="email" name="email" autocomplete="email" required>
-      </span>
-      <span class="sf-input-hint-text-wrap">Приглашение придёт на этот адрес</span>
-    </label>
-    <div class="flex flex-wrap gap-2">
-      <button type="submit" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-        <span class="sf-button-text-container">Пригласить</span>
-      </button>
-      <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1" data-sf-modal-close="smart-modal-validation">
-        <span class="sf-button-text-container">Отмена</span>
-      </button>
-    </div>
-  </form>
-</sf-modal>
+  <sf-modal modal-id="smart-modal-validation" title="Приглашение" show-footer="false">
+    <form slot="content" data-modal-form="invite" class="flex flex-col gap-2" novalidate>
+      <label class="sf-input sf-input--size-1 sf-input--bordered flex flex-col">
+        <span class="sf-input-label flex"><span class="sf-input-text">Почта</span></span>
+        <span class="sf-input-field items-cross-center transition flex">
+          <input type="email" name="email" autocomplete="email" required>
+        </span>
+        <span class="sf-input-hint-text-wrap">Приглашение придёт на этот адрес</span>
+      </label>
+      <div class="flex flex-wrap gap-2">
+        <button type="submit" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
+          <span class="sf-button-text-container">Пригласить</span>
+        </button>
+        <button type="button" class="sf-button sf-button--link sf-button--on-surface sf-button--size-1" data-sf-modal-close="smart-modal-validation">
+          <span class="sf-button-text-container">Отмена</span>
+        </button>
+      </div>
+    </form>
+  </sf-modal>
+</div>
