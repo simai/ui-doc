@@ -1,7 +1,9 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/site-base.php';
 $root = dirname(__DIR__);
+$siteBase = ui_doc_site_base($root);
 $build = $root . '/build_production';
 $check = in_array('--check', $argv, true);
 $lockBytes = file_get_contents($root . '/simai-framework.lock.json');
@@ -63,10 +65,10 @@ foreach ($files as $file) {
         foreach ($sources as $path) $result .= "\nSource: " . substr($path, strlen($root) + 1) . "\n\n````" . pathinfo($path, PATHINFO_EXTENSION) . "\n" . file_get_contents($path) . "\n````\n";
         return $result;
     }, $body);
-    $bytes = '<!-- Canonical page: /' . $route . '; Framework lock SHA-256: ' . hash('sha256', $lockBytes) . " -->\n" . trim($body) . "\n";
+    $bytes = '<!-- Canonical page: ' . $siteBase . $route . '; Framework lock SHA-256: ' . hash('sha256', $lockBytes) . " -->\n" . trim($body) . "\n";
     $hash = hash('sha256', $bytes);
     $write($route . 'ai.md', $bytes);
-    $item = ['id' => 'urn:simai:docs:' . str_replace('/', ':', trim($route, '/')), 'kind' => 'knowledge', 'title' => $title[1] ?? $route, 'description' => 'Documentation: ' . ($title[1] ?? $route), 'language' => explode('/', $route)[0], 'revision' => $hash, 'status' => 'published', 'source' => './' . $route . 'ai.md', 'htmlPage' => '/' . $route, 'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string)$version]], 'representations' => [['href' => './' . $route . 'ai.md', 'mediaType' => 'text/markdown', 'sha256' => $hash, 'role' => 'full']]];
+    $item = ['id' => 'urn:simai:docs:' . str_replace('/', ':', trim($route, '/')), 'kind' => 'knowledge', 'title' => $title[1] ?? $route, 'description' => 'Documentation: ' . ($title[1] ?? $route), 'language' => explode('/', $route)[0], 'revision' => $hash, 'status' => 'published', 'source' => './' . $route . 'ai.md', 'htmlPage' => $siteBase . $route, 'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string)$version]], 'representations' => [['href' => './' . $route . 'ai.md', 'mediaType' => 'text/markdown', 'sha256' => $hash, 'role' => 'full']]];
     $items[] = $item;
     $local = $item; $local['source'] = './ai.md'; $local['representations'][0]['href'] = './ai.md';
     $write($route . 'ai.json', $json($manifest([$local], $hash)));
@@ -145,7 +147,7 @@ foreach ($standards as $key => [$file, $standard, $name, $title, $description]) 
         'language' => 'ru', 'revision' => $hash, 'status' => 'published',
         'source' => './' . $public,
         // The standards are described together on one page of the guide.
-        'htmlPage' => '/ru/guide/standards/map/',
+        'htmlPage' => $siteBase . 'ru/guide/standards/map/',
         'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
         'representations' => [['href' => './' . $public, 'mediaType' => 'application/json', 'sha256' => $hash, 'role' => 'full']],
     ];
@@ -173,7 +175,7 @@ foreach (glob($portsRoot . '/*/*/port.json') as $file) {
         'kind' => 'knowledge', 'title' => $port['summary'] ?? $identity, 'description' => 'Порт ' . $identity . ' ' . $edition . ' и набор проверок из ' . $port['conformance']['cases'] . ' случаев.',
         'language' => 'ru', 'revision' => $hash, 'status' => 'published',
         'source' => './' . $base . 'port.json',
-        'htmlPage' => '/ru/guide/standards/map/#порт-хоста-simai-composite-host-port',
+        'htmlPage' => $siteBase . 'ru/guide/standards/map/#порт-хоста-simai-composite-host-port',
         'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
         'representations' => [['href' => './' . $base . 'port.json', 'mediaType' => 'application/json', 'sha256' => $hash, 'role' => 'full']],
     ];

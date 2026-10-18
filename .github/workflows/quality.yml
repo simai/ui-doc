@@ -4,6 +4,8 @@ on:
   pull_request:
   push:
     branches: [main]
+  # A manual run on main republishes the site.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,6 +19,13 @@ permissions:
 # this checkout: ../ui, ../ui-source, ../ui-builder and ../larena-ui, the layout
 # the scripts default to. actions/checkout cannot write outside the workspace,
 # so they are plain full clones.
+#
+# On main (a push or a manual run, never a pull request) the verified site is
+# then built once more for GitHub Pages, https://simai.github.io/ui-doc/, a
+# project site served under the repository's path: base_url comes from the
+# Pages configuration and is set in this checkout only (the committed
+# docara.json keeps "/"). That build is checked the same way, served under its
+# path, and the deploy job publishes it.
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -155,3 +164,58 @@ jobs:
       - name: Browser smoke of the key pages
         timeout-minutes: 5
         run: node scripts/qa/browser-smoke.mjs --root build_production
+      # The GitHub Pages build, on main only. configure-pages fails until
+      # Pages is enabled with "GitHub Actions" as the source.
+      - id: pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      # base_path is "/ui-doc" for the project site and empty for a custom
+      # domain.
+      - name: Set the site base URL for GitHub Pages
+        if: steps.pages.outcome == 'success'
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          set -euo pipefail
+          jq --arg base "${BASE_PATH%/}/" '.base_url = $base' docara.json > "$RUNNER_TEMP/docara.json"
+          mv "$RUNNER_TEMP/docara.json" docara.json
+          echo "SITE_BASE=$(jq -r '.base_url' docara.json)" | tee -a "$GITHUB_ENV"
+      - name: Build for GitHub Pages
+        if: steps.pages.outcome == 'success'
+        run: |
+          rm -rf build_production
+          composer docs:build
+      - name: Verify the GitHub Pages build
+        if: steps.pages.outcome == 'success'
+        env:
+          DOCARA_COMPOSER_AUTOLOAD: ${{ github.workspace }}/vendor/autoload.php
+        run: |
+          python scripts/check-ai-schema.py
+          php vendor/simai/docara/scripts/verify-static-build.php build_production
+      # Served under its path: a link or asset that leaves the base is a 404.
+      - name: Browser smoke of the GitHub Pages build
+        if: steps.pages.outcome == 'success'
+        timeout-minutes: 5
+        run: node scripts/qa/browser-smoke.mjs --root build_production --prefix "$SITE_BASE"
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        if: steps.pages.outcome == 'success'
+        with:
+          path: build_production
+
+  deploy:
+    needs: verify
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    # One deployment at a time; a newer one waits instead of cancelling.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

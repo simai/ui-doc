@@ -5,6 +5,12 @@ SIMAI Framework. It is a content-only Docara 2 project: authored pages live in
 `content/<locale>/`, site configuration lives in `docara.json`, and local
 assets live in `assets/`.
 
+The documentation is published at <https://simai.github.io/ui-doc/>. The
+Quality workflow builds it on every push to `main` with `base_url` set to the
+GitHub Pages path (`/ui-doc/`, in the CI checkout only: the committed
+`docara.json` keeps `/` for local builds), checks that build and deploys it to
+GitHub Pages.
+
 Developer references:
 
 - [Reference page standard](docs/developer/reference-page-standard.md): utility, component and Smart component pages.

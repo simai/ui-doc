@@ -16,6 +16,13 @@
 //   node scripts/qa/browser-smoke.mjs --all                 # every page of the build
 //   node scripts/qa/browser-smoke.mjs --all --base https://ui-doc.test
 //   node scripts/qa/browser-smoke.mjs /ru/guide/ /ru/components/   # given pages
+//   node scripts/qa/browser-smoke.mjs --prefix /ui-doc/     # a build made for base_url /ui-doc/
+//
+// --prefix serves the build under that path, the way GitHub Pages serves a
+// project site, and answers 404 for everything outside it, so a link or asset
+// that leaves the base fails the page. Page paths (the key pages, the given
+// ones and the --all list) are read relative to the site and opened under the
+// prefix; with --base the prefix is added to the given address.
 //
 // --all takes the page list from _docara/page-metadata.json, the list of
 // published pages Docara writes into the build; redirect stubs are not in it.
@@ -71,6 +78,8 @@ let base = option('--base', '');
 const concurrency = Number(option('--concurrency', '6'));
 const pageTimeout = Number(option('--page-timeout', '45000'));
 const jsonOut = option('--json', '');
+// '/ui-doc/' -> '/ui-doc'; the default '/' -> '' (the site at the root).
+const prefix = `/${option('--prefix', '/').split('/').filter(Boolean).join('/')}`.replace(/^\/$/, '');
 const SETTLE_MS = 3000;
 const DEFINE_WAIT_MS = 10000;
 
@@ -95,6 +104,17 @@ function serve(dir) {
     } catch {
       response.writeHead(400).end();
       return;
+    }
+    if (prefix) {
+      if (path === prefix) {
+        response.writeHead(301, {location: prefix + '/'}).end();
+        return;
+      }
+      if (!path.startsWith(prefix + '/')) {
+        response.writeHead(404, {'content-type': 'text/plain'}).end('outside the site prefix');
+        return;
+      }
+      path = path.slice(prefix.length);
     }
     const file = normalize(join(dir, path));
     if (!file.startsWith(dir)) {
@@ -128,18 +148,24 @@ async function loadPlaywright() {
 }
 
 async function pageList(context) {
-  if (args.length) return args;
-  if (!all) return SMOKE_PAGES;
+  if (args.length) return args.map(inSite);
+  if (!all) return SMOKE_PAGES.map(inSite);
   let metadata;
   if (server) {
     metadata = JSON.parse(readFileSync(join(root, '_docara/page-metadata.json'), 'utf8'));
   } else {
     // Through the browser context: a local site's certificate is one only
     // the browser is told to accept.
-    const response = await context.request.get(new URL('/_docara/page-metadata.json', base).href);
+    const response = await context.request.get(base + prefix + '/_docara/page-metadata.json');
     metadata = await response.json();
   }
-  return [...new Set(metadata.pages.map((page) => page.url))].sort();
+  return [...new Set(metadata.pages.map((page) => inSite(page.url)))].sort();
+}
+
+// A page path under the prefix; one that already carries it is kept.
+function inSite(path) {
+  if (!prefix || path === prefix || path.startsWith(prefix + '/')) return path;
+  return prefix + path;
 }
 
 async function checkPage(context, path) {
