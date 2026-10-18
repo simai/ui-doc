@@ -554,8 +554,9 @@ document.querySelector('sf-data-view').setHostPort(host);
 консоли появляется предупреждение с его идентификатором.
 Переход после `record.open` и `view.create_record` делает само приложение.
 
-Поля фильтра порт не передаёт. Окно «Фильтр» без них показывает только
-список колонок без значений. Поля задаёт страница: она вставляет свою
+Поля фильтра порт не передаёт. Кнопку «Фильтр» таблица показывает, только
+когда есть по чему фильтровать: страница передала поля фильтра, есть
+сохранённые шаблоны или фильтр уже применён. Поля задаёт страница: она вставляет свою
 `<sf-table>` в слот `content` представления и вызывает у неё
 `setFilterFields(fields)` (см. [Поиск и фильтр](#поиск-и-фильтр)); применённый
 фильтр представление отправляет хосту в `query.filters`.
@@ -860,8 +861,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@894b6fff0e20216bb82531710d121165d3618c5a:components/src/smart/data-view`
-- `simai/larena-ui@894b6fff0e20216bb82531710d121165d3618c5a:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@e78cdbf3df82121abe92536c6f8c2d5bb9da687c:components/src/smart/data-view`
+- `simai/larena-ui@e78cdbf3df82121abe92536c6f8c2d5bb9da687c:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1015,5 +1016,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@894b6fff0e20216bb82531710d121165d3618c5a:components/src/smart/table`
-- `simai/larena-ui@894b6fff0e20216bb82531710d121165d3618c5a:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@e78cdbf3df82121abe92536c6f8c2d5bb9da687c:components/src/smart/table`
+- `simai/larena-ui@e78cdbf3df82121abe92536c6f8c2d5bb9da687c:components/src/smart/table/rule.js#name=cl-table`
