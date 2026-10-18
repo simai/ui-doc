@@ -70,13 +70,13 @@ const initializeApplicationView = async () => {
   };
 
   const host = {
-    version: '1.11.0',
+    version: '1.12.0',
     capabilities: ['row-actions', 'personal-column-settings'],
     async raise(intent, payload) {
       await new Promise((resolve) => setTimeout(resolve, 300));
       if (intent === 'query.change') {
-        if (scenario === 'refused') return {answer: 'refused', reason: 'forbidden', message: 'Нет доступа к проектам'};
-        if (scenario === 'unavailable') return {answer: 'unavailable', reason: 'server-error'};
+        if (scenario === 'refused') return {answer: 'refused', reason: 'forbidden', message: 'Нет доступа к проектам', sequence: payload.sequence};
+        if (scenario === 'unavailable') return {answer: 'unavailable', reason: 'server-error', sequence: payload.sequence};
         return {answer: 'applied', sequence: payload.sequence, data: answerQuery(payload)};
       }
       if (intent === 'record.open') {
@@ -99,7 +99,8 @@ const initializeApplicationView = async () => {
         personal = {revision: String(Number(personal.revision) + 1), columns: payload.columnSettings ?? {}};
         return {answer: 'applied', data: {column_settings: {target: {kind: 'personal', revision: personal.revision}, layers: {personal}}}};
       }
-      return {answer: 'refused', reason: 'not-supported'};
+      // An intent this application does not provide.
+      return {answer: 'unavailable', reason: 'capability-not-provided'};
     },
     // Dates in cells are the application's to write.
     formatFieldValue(field, value) {

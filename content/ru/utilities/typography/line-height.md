@@ -71,9 +71,9 @@ description: "Задаёт высоту строки текста множите
 | `--sf-text--height-10` | `var(--sf-d5); от ширины lg: var(--sf-e2)` |
 | `--sf-text--height-11` | `var(--sf-d6); от ширины lg: var(--sf-e3)` |
 | `--sf-text--height-12` | `var(--sf-d8); от ширины lg: var(--sf-e5)` |
-| `--sf-text-height-1/4` | `var(--sf-text--height-1/4)` |
-| `--sf-text-height-1/3` | `var(--sf-text--height-1/3)` |
-| `--sf-text-height-1/2` | `var(--sf-text--height-1/2)` |
+| `--sf-text-height-1/4` | `var(--sf-text--height-1\/4)` |
+| `--sf-text-height-1/3` | `var(--sf-text--height-1\/3)` |
+| `--sf-text-height-1/2` | `var(--sf-text--height-1\/2)` |
 | `--sf-text-height-1` | `var(--sf-text--height-1)` |
 | `--sf-text-height-2` | `var(--sf-text--height-2)` |
 | `--sf-text-height-3` | `var(--sf-text--height-3)` |

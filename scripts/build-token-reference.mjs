@@ -154,8 +154,9 @@ const unread = (name) => {
     ? ` · не читается: Framework берёт \`${instead}\``
     : ' · не читается';
 };
+// A value is CSS and is copied into CSS, so it keeps the escape.
 const shown = (name) => values.get(name)
-  .map((value) => `\`${readable(value).replace(/\|/gu, '\\|')}\``)
+  .map((value) => `\`${value.replace(/\|/gu, '\\|')}\``)
   .join(' · ') + unread(name) + retiredNote(name);
 
 const total = values.size;
@@ -181,7 +182,8 @@ ${total} переменных, которые объявляет ядро, со 
 экрана; показаны оба, через точку — сначала первое объявление, затем второе.
 
 Дробные ступени записаны в именах с косой чертой (\`--sf-radius-1/2\`); в CSS
-её экранируют: \`var(--sf-radius-1\\/2)\`.
+её экранируют: \`var(--sf-radius-1\\/2)\`. В столбце значений имена уже
+записаны так, как их пишут в CSS.
 
 Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
 читает ни один файл поставки: её значение ничего не меняет. Пометка

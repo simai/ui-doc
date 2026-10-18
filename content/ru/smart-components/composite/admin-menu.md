@@ -260,8 +260,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
 | Контракт | `smart.admin-menu`, версия `1.1.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| Жизненный цикл | экспериментальный: API может меняться между выпусками |
-| Готовность | `host-required` |
+| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="menu"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
@@ -298,7 +298,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 - свойства: `allow-system-settings`, `aria-label`, `brand`, `collapsible`, `compact`, `logo`, `logo-href`, `panel-class`, `persistence-mode`, `root-class`, `search-hint`, `search-keys-hint`, `search-label`, `search-mode`, `search-placeholder`, `search-shortcut`, `search-title`, `searchable`, `settings`, `settings-mode`, `settings-revision`, `settings-title`, `system-settings-revision`, `template`, `toggle-label`.
 
-Значения свойств те же, что у одноимённых атрибутов.
+Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
 ### Методы
 

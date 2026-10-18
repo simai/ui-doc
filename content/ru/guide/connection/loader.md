@@ -143,8 +143,12 @@ relation: [
    списка (см. [Кеш и версии адресов](#кеш-и-версии-адресов)), не дожидаясь разбора разметки.
 4. **Разбор разметки.** После загрузки документа Loader обходит DOM: ищет теги
    Smart-компонентов, иконки, атрибуты и классы, сверяя их с правилами.
-   Содержимое `script`, `style`, `svg`, `head` и элементов с
-   `data-sf-observer="ignore"` не просматривается.
+   Элементы `script`, `style`, `svg`, `path`, `g`, `head`, `meta`, `link` и
+   элементы с `data-sf-observer="ignore"` не просматриваются вместе с
+   содержимым — в том числе их собственные классы: класс `fill-primary` на
+   `<svg>` модуль утилиты не загружает. Цвет встроенного SVG задают
+   `fill="currentColor"` и утилитой `color-*` на обёртке (см.
+   [Знак бренда и встроенный SVG](/ru/guide/colour/colour-roles/#знак-бренда-и-встроенный-svg)).
 5. **Загрузка.** Найденные модули и их зависимости грузятся параллельно;
    первыми идут модули раскладки (контейнер, flex, grid, отступы, размеры).
    С первым Smart-элементом в очереди ядро запрашивает общую основу
@@ -293,10 +297,10 @@ Smart-компонентов.
 
 | Событие | Где | Когда |
 |:---|:---|:---|
-| `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers` и `SF.RuleLoader.registerPackage` доступны |
+| `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.ready`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.smartBaseReady`, `SF.whenFieldRenderers` и `SF.RuleLoader.registerPackage` доступны |
 | `sf-loader-ready` | `window` | Первая партия модулей загружена. Событие отправляется один раз: обработчик, добавленный позже, не сработает |
 | `sf-runtime-ready` | `window` | Пришла общая основа Smart-компонентов — модули, против которых собраны их скрипты (см. [Общая основа Smart-компонентов](#общая-основа-smart-компонентов)) |
-| `sf-smart-base-ready` | `window` | Загружен базовый класс Smart-компонентов: есть `SF.smart`, `SF.language`, `SF.pageText`; один раз на страницу. Надёжнее событий — `await SF.loadSmartBase()`: обещание выполняется и тогда, когда база уже пришла |
+| `sf-smart-base-ready` | `window` | Загружен базовый класс Smart-компонентов: есть `SF.smart`; один раз на страницу. Надёжнее событий — `await SF.loadSmartBase()`: обещание выполняется и тогда, когда база уже пришла |
 | `sf-theme-change` | `window` | Сменилась тема или выбор темы; `detail: {theme, preference}`. Приходит и один раз при запуске, когда Loader впервые выбрал тему (см. [Как выбирается тема на странице](/ru/guide/colour/themes/#как-выбирается-тема-на-странице)) |
 | `component:ready` | `document` | Зарегистрирован обычный компонент (`detail.name` — имя в реестре, например `Inputs`). Объект `SF.<Имя>` к этому моменту уже назначен |
 
@@ -306,10 +310,10 @@ Smart-компонентов.
 
 | API | Когда доступен | Как дождаться |
 |:---|:---|:---|
-| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.Preferences` ([Персональный вид](/ru/guide/smart-components/view-preferences/)), `SF.notify` и `SF.notifications` ([Всплывающие сообщения](/ru/components/feedback/toast/#уведомления-страницы-sf-notify)), `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
-| `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
+| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.Preferences` ([Персональный вид](/ru/guide/smart-components/view-preferences/)), `SF.notify` и `SF.notifications` ([Всплывающие сообщения](/ru/components/feedback/toast/#уведомления-страницы-sf-notify)), `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations`, `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
+| `SF.Loader`, `SF.ready`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.smartBaseReady`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
 | `SF.Loader.theme` (`light` или `dark` — тема на странице) и `SF.Loader.themePreference` (`system`, `light` или `dark` — выбор человека) | Вместе с `SF.Loader`; значения появляются, когда Loader выбрал тему при запуске | Событие `sf-theme-change`: первое приходит при запуске |
-| `SF.smart`, `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations` | Вместе с базой Smart-компонентов: с первым Smart-элементом на странице или после `await SF.loadSmartBase()`. На странице без Smart-элементов их нет | `await SF.loadSmartBase()` после `sf-loader-init` |
+| `SF.smart` (`SfBaseElement`, `html`, `nothing` и помощники) | Вместе с базой Smart-компонентов: с первым Smart-элементом на странице или после `await SF.loadSmartBase()`. На странице без Smart-элементов его нет | `await SF.loadSmartBase()` после `sf-loader-init` |
 | Объекты компонентов на классах: `SF.Input`, `SF.Toast`, `SF.Tabs` и другие | Только после того, как Loader загрузил компонент по его разметке на странице. Без разметки компонента объекта нет | После `sf-loader-init`: `SF.Loader.ready('Inputs', () => SF.Input.setState(…))`. Функция вызывается сразу, если компонент уже загружен, иначе после его регистрации, когда объект `SF.<Имя>` уже назначен. Первый аргумент — имя компонента в реестре (`Inputs`, `Modal`); оно может отличаться от имени объекта (`SF.Input`) |
 | Smart-элемент на странице | После загрузки и регистрации его тега | `await SF.createAsync('datepicker')` для нового элемента; для элемента в разметке — `await SF.whenDefined('sf-datepicker')`, затем `await element.whenRendered()` (см. [Ожидание готовности](/ru/guide/smart-components/connection/#ожидание-готовности)) |
 
@@ -325,7 +329,7 @@ function whenLoaderReady() {
 }
 
 await whenLoaderReady();
-await SF.loadSmartBase();   // после этого доступны SF.smart, SF.language, SF.pageText
+await SF.loadSmartBase();   // после этого доступен SF.smart
 ```
 
 Что важно заметить:
@@ -389,7 +393,10 @@ Framework и пакет `shop` из своих копий:
 - файл правил пакета на страницу не подключается: Loader сам загружает
   `<base>/rule.js` до первого разбора разметки;
 - тег компонента пакета, например `<shop-catalog>`, пишется так же, как тег
-  любого Smart-компонента; его файлы Loader берёт из каталога пакета.
+  любого Smart-компонента; его файлы Loader берёт из каталога пакета;
+- компоненты пакета наследуют `SfBaseElement`, поэтому их слова следуют
+  языку страницы так же, как у компонентов Framework, и перерисовываются
+  при `SF.language.use()`.
 
 **Префикс элементов пакета.** Элементы пакета носят префикс владельца
 (`shop-catalog`), а не префикс Framework `sf-` (стандарт пакета,

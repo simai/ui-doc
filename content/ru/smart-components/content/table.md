@@ -435,27 +435,35 @@ view.dispatchEvent(new CustomEvent('sf-data-view-saved-view-intent', {
 выключают атрибуты `creatable`, `settings-menu` и `filter-templates`.
 
 Ответ адаптера — конверт, а данные лежат в его поле `data`; порт описывает
-и конверт (`answer`), и данные ответа на каждое намерение (`answer_data`):
+и конверт (`answer`), и данные ответа на каждое намерение (`answer_data`).
+Адаптер передаёт намерение серверу и возвращает его конверт как есть: сервер
+сам решает, ответить `applied`, `conflict` или `refused`. Ошибку HTTP адаптер
+превращает в `unavailable`, а намерение, которого приложение не
+поддерживает, сервер отклоняет ответом `unavailable` с причиной
+`capability-not-provided`:
 
 ```js
 const host = {
   version: '1.12.0',
   capabilities: ['row-actions', 'create-record'],
   async raise(intent, payload, {signal}) {
-    const result = await fetch('/api/projects', {
+    const response = await fetch('/api/projects/port', {
       method: 'POST',
-      body: JSON.stringify({intent, ...payload}),
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({intent, payload}),
       signal,
-    }).then((response) => response.json());
-    return {
-      answer: 'applied',
-      sequence: payload.sequence,
-      data: {columns: result.columns, records: result.records, total: result.total, echo: result.echo},
-    };
+    });
+    if (!response.ok) {
+      return {answer: 'unavailable', reason: `http-${response.status}`, sequence: payload.sequence};
+    }
+    return response.json();   // {answer, reason?, message?, sequence?, data?}
   },
 };
 document.querySelector('sf-data-view').setHostPort(host);
 ```
+
+Транспорт, сессия и защита от подделки запроса (CSRF) — дело приложения:
+порт описывает только намерение, его `payload` и конверт ответа.
 
 - `answer` — `applied`, `conflict`, `refused` или `unavailable`; `message` —
   текст для человека.
@@ -489,7 +497,12 @@ document.querySelector('sf-data-view').setHostPort(host);
 - `data` — данные порта: `columns`, `records`, `total`, `has_next`, `echo`,
   `column_settings` (обязательны только у хоста с личными или общими
   настройками колонок) и другие из его описания. Ответ на запрос
-  (`query.change`) без `data` представление считает ошибкой. Ответ на
+  (`query.change`) без `data` представление считает ошибкой. В каждом ответе
+  на запрос обязательны `records` и `echo`. `columns` нужны в первом ответе:
+  представление рисует колонки по ним и держит их, пока следующий ответ не
+  пришлёт новые. `total` нужен, если хост не объявил `count-on-request`;
+  хост с этой возможностью может не считать записи и вместо `total`
+  присылает `has_next`. Ответ на
   изменение записи может вернуть в `data.records` только изменённые записи
   или не вернуть `data` вовсе — тогда представление перезапросит список.
 - Отказ с причиной `confirm_required` несёт `data.confirm` с `digest` и
@@ -498,7 +511,10 @@ document.querySelector('sf-data-view').setHostPort(host);
 
 Первый запрос `query.change` уходит сам, как только адаптер передан в
 `setHostPort()`, с `reason: 'host-connected'`. Его `payload` —
-`{sequence, query, reason}`, а `query` всегда содержит пять полей:
+`{sequence, query, reason}`, а `query` от представления всегда содержит пять
+полей. Случаи набора проверок присылают только нужные им поля (например,
+`page` и `per_page`), поэтому хост подставляет недостающим значения по
+умолчанию из таблицы:
 
 | Поле `query` | Что в нём |
 |:---|:---|
@@ -524,7 +540,7 @@ document.querySelector('sf-data-view').setHostPort(host);
 | Что выбрал человек | Намерение |
 |:---|:---|
 | действие `view` у одной записи | `record.open` |
-| другое действие у одной записи | `record.mutate` с ревизией записи в `revisions` |
+| другое действие у одной записи | `record.mutate` с ревизией записи в `revisions` — объекте, где ключ — идентификатор записи строкой: `{"1": "r1"}` |
 | действие над выбранными записями — из панели выбора или над несколькими сразу | `bulk.apply_selected` |
 | кнопка создания | `view.create_record` |
 | флажок в ячейке (возможность `inline-edit`) | `record.set` |
@@ -537,6 +553,12 @@ document.querySelector('sf-data-view').setHostPort(host);
 ответе на запрос. Действие без записи в каталоге подписано «Действие», а в
 консоли появляется предупреждение с его идентификатором.
 Переход после `record.open` и `view.create_record` делает само приложение.
+
+Поля фильтра порт не передаёт. Окно «Фильтр» без них показывает только
+список колонок без значений. Поля задаёт страница: она вставляет свою
+`<sf-table>` в слот `content` представления и вызывает у неё
+`setFilterFields(fields)` (см. [Поиск и фильтр](#поиск-и-фильтр)); применённый
+фильтр представление отправляет хосту в `query.filters`.
 
 Повторный вызов `setHostPort()` заменяет адаптер и заново запрашивает
 список. Если `raise` выбросил ошибку или запрос прерван через `signal`,
@@ -605,9 +627,12 @@ document.querySelector('sf-data-view').setHostPort(host);
 
 Что делает адаптер в примере:
 
-- объявляет версию порта `1.11.0` и возможности `row-actions` и
+- объявляет версию порта `1.12.0` и возможности `row-actions` и
   `personal-column-settings`; без объявленной возможности намерение до
   приложения не доходит, а её часть интерфейса не показывается;
+- на намерение, которого приложение не поддерживает, отвечает `unavailable`
+  с причиной `capability-not-provided`, а ответы на запрос, в том числе отказ
+  и сбой, называют `sequence` запроса;
 - на `query.change` отвечает `applied` с `data`: колонки, записи страницы,
   `total`, эхо запроса, каталог действий `row_actions` и настройки колонок
   с личным слоем;
@@ -734,8 +759,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
 | Контракт | `smart.data-view-composite`, версия `1.0.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| Жизненный цикл | экспериментальный: API может меняться между выпусками |
-| Готовность | `host-required` |
+| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 #### Атрибуты
@@ -776,7 +801,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 - свойства: `aria-label`.
 
-Значения свойств те же, что у одноимённых атрибутов.
+Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
 #### Методы
 
@@ -824,7 +849,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 - Роль: область (`region`).
 - Доступное имя: обязательно.
-- Клавиши: `Native controls and child Smart components`.
+- Клавиши: Нативные элементы управления и дочерние Smart-компоненты.
 - Фокус: Фокус не перемещается при обновлении данных
 
 #### Минимальная разметка
@@ -846,8 +871,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
 | Контракт | `smart.data-view`, версия `1.9.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| Жизненный цикл | экспериментальный: API может меняться между выпусками |
-| Готовность | `host-required` |
+| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 #### Атрибуты
@@ -902,7 +927,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - свойства: `aria-label`, `table-settings-key`, `selectable`, `toolbar`, `settings`, `actions`, `row-actions`, `pagin`, `pagination-total`, `pagination-page-size`, `page-sizes`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `loading-text`, `empty-text`, `error-text`, `retry-text`, `context-menu-columns`, `data-state`;
 - данные: `columns`, `rows`.
 
-Значения свойств те же, что у одноимённых атрибутов.
+Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
 #### Методы
 
@@ -979,7 +1004,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 - Роль: область (`region`).
 - Доступное имя: обязательно.
-- Клавиши: `Tab`, `Shift+Tab`, `Enter`, `Space`, `Escape`, `Arrow keys`, `ArrowLeft and ArrowRight resize a focused resizable column`.
+- Клавиши: `Tab`, `Shift+Tab`, `Enter`, `Space`, `Escape`, стрелки, `ArrowLeft` и `ArrowRight` меняют ширину колонки в фокусе, если её можно менять.
 - Фокус: У каждого действия только с иконкой и каждой контекстной поверхности есть доступное имя. Оверлеи экземпляра остаются в пределах визуального окна просмотра, закрываются по Escape и возвращают фокус на свой триггер. При изменении ширины столбца фокус остаётся на его нативной кнопке.
 
 #### Минимальная разметка

@@ -79,7 +79,8 @@ Document имеет формат `simai.composition.document`. Его оболо
 
 | Поле | Смысл |
 |:---|:---|
-| `schema` | имя формата `simai.composition.document` с меткой версии, как в примере ниже (см. [Имена и версии](/ru/guide/standards/map/#имена-и-версии)) |
+| `schema` | имя формата `simai.composition.document`, как в примере ниже; версию несёт `schema_version` (имя с меткой версии тоже принимается, см. [Имена и версии](/ru/guide/standards/map/#имена-и-версии)) |
+| `schema_version` | версия формата: `1` |
 | `id` | идентификатор документа |
 | `profile` | `ui-layout` — интерфейс; `structured-content` — самостоятельный структурированный материал |
 | `locale` | необязательный язык документа |

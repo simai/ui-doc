@@ -29,7 +29,9 @@ profile: reference
   полем через `aria-labelledby`.
 - Две кнопки `sf-quantity-count` — первая уменьшает, вторая увеличивает. Это
   кнопки с иконкой (`sf-icon-button`) с `type="button"` и собственным
-  `aria-label`.
+  `aria-label`. Их цвет и размер задаёт `sf-quantity`, поэтому класса
+  `sf-icon-button--icon` им не нужно. Отдельная кнопка-иконка вне
+  `sf-quantity` получает цвета только вместе с `sf-icon-button--icon`.
 - `<input type="text">` с `inputmode="numeric"` или `"decimal"` хранит значение
   и `name`; `min`, `max` и `step` задают диапазон и шаг. Тип `text` выбран
   потому, что поле показывает число в формате языка страницы.

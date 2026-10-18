@@ -97,6 +97,9 @@ Loader: узел выводится тегом компонента, а загр
 Модулю не нужны браузерные объекты вроде `window` и `document`: из
 глобальных объектов он берёт только `crypto.subtle`, `TextEncoder` и `URL`,
 которые есть в Node.js 20 и новее. Гейт Framework работает на Node.js 20.
+В браузере `crypto.subtle` есть только в защищённом контексте (`https` или
+`localhost`); без него `render()` выбрасывает ошибку
+`composition_crypto_unavailable`.
 
 ## Смотрите также
 

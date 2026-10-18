@@ -74,7 +74,7 @@ Loader.
 |:---|:---|:---|
 | `window.sfPath` | Адрес папки `distr/` поставки | Незакреплённая ветка `main` на CDN, с предупреждением в консоли |
 | `window.sfSmartPath` | Адрес папки, в которой лежит `smart/`, если Smart-компоненты отдаются не из `distr/smart/` | Равен `sfPath`: Smart-компоненты берутся из `<sfPath>/smart/` |
-| `window.SF_BOOT_CONFIG` | Настройки запуска: `preloader`, `theme`, `icons`, `smart`, `packages` (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), `minified` (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)), `cacheVersion`, `pluginListVersion` | Пустой объект |
+| `window.SF_BOOT_CONFIG` | Настройки запуска: `preloader`, `theme` (принимает только `false` — выключает автоматический выбор темы, см. [Темы](/ru/guide/colour/themes/#как-выбирается-тема-на-странице)), `icons`, `smart`, `packages` (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), `minified` (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)), `cacheVersion`, `pluginListVersion` | Пустой объект |
 | `window.SF_PRELOADED` | План заранее подключённых модулей (см. [Готовый план для рабочей сборки](/ru/guide/connection/loader/#готовый-план-для-рабочей-сборки)) | Нет |
 | `window.SF_SMART_TEMPLATE_PATH` | Папка внешних шаблонов Smart-компонентов проекта (см. [Свои компоненты проекта: где граница](#свои-компоненты-проекта-где-граница)) | `/local/smart/templates` |
 
@@ -125,7 +125,8 @@ core.js, or to a pinned tag.
 ```
 
 Увидели его — задайте `sfPath` на свою копию `distr/` или на адрес CDN с
-полным коммитом выпуска.
+полным коммитом выпуска. «Pinned tag» в тексте предупреждения означает тот же
+полный коммит выпуска: тегов у выпусков нет.
 Это касается и примеров во встроенных фреймах: у каждого документа свой
 `sfPath`.
 

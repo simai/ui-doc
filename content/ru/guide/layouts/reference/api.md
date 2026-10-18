@@ -60,7 +60,12 @@ const result = await SF.Composition.render(assembled.document, {registry});
   `SF.Composition.BUILTIN_TYPE_MANIFESTS`; `extendRegistry(список)` —
   то же, что `createRegistry([...BUILTIN_TYPE_MANIFESTS, ...список])`.
 - `render()` сам вызывает проверку и нормализацию; если документ неверен,
-  `html` пуст, а причина — в `diagnostics`. Если для узла нет рендерера, узел
+  `html` пуст, а причина — в `diagnostics`. Отдельно вызывать `validate()` и
+  `normalize()` перед ним не нужно.
+- `render()` считает `digest` через `crypto.subtle`. В браузере он есть
+  только в защищённом контексте — на странице по `https` или с `localhost`;
+  на странице по обычному `http` с другим адресом `render()` выбрасывает
+  ошибку `composition_crypto_unavailable`. Если для узла нет рендерера, узел
   пропускается с кодом `renderer_unavailable`; результат с любой диагностикой
   не публикуют.
 - `assets` в результате `render()` перечисляет ресурсы, от которых зависит

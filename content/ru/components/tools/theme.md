@@ -55,7 +55,15 @@ profile: reference
   глазами.
 - У кнопки-иконки доступное имя задаёт `aria-label` («Тёмная тема»); оно не
   меняется при переключении — состояние передаёт `aria-pressed`. Значок тоже
-  не меняется; другой значок для тёмной темы ставит код проекта.
+  не меняется; другой значок для тёмной темы ставит код проекта по событию
+  `sf-theme-change`, которое приходит и при запуске:
+
+  ```js
+  const glyph = document.querySelector('.sf-theme-button:not([data-theme]) .sf-icon');
+  window.addEventListener('sf-theme-change', (event) => {
+    glyph.textContent = event.detail.theme === 'dark' ? 'light_mode' : 'dark_mode';
+  });
+  ```
 - Смена темы не перемещает фокус.
 
 ## JavaScript

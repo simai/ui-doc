@@ -1164,6 +1164,19 @@
     "Back to the Framework's own colour; fires sf-theme-generator-change and sf-theme-generator-apply (and their first names until 2026-12-01).": "Возвращает цвет Framework; отправляет sf-theme-generator-change и sf-theme-generator-apply (и их прежние имена до 2026-12-01).",
     "Loads the Smart base when the page has no Smart element yet; resolves with SF.smart. A project's own Smart component waits for it.": "Загружает основу Smart-компонентов, когда на странице ещё нет Smart-элемента; выполняется с `SF.smart`. Собственный Smart-компонент проекта ждёт её.",
     "Loads the shared Smart runtime (core/js/smart-base.js) and resolves with its modules.": "Загружает общую среду Smart-компонентов (`core/js/smart-base.js`) и выполняется с её модулями.",
-    "The Smart base: SfBaseElement and the helpers a project's own Smart component extends.": "Основа Smart-компонентов: `SfBaseElement` и помощники, на которых строится собственный Smart-компонент проекта."
+    "The Smart base: SfBaseElement and the helpers a project's own Smart component extends.": "Основа Smart-компонентов: `SfBaseElement` и помощники, на которых строится собственный Smart-компонент проекта.",
+    "A whole theme from one colour: the eight tonal palettes as 128 --sf-<palette>-<tone> tones and 98 translucent steps, 226 variables in all.": "Тема из одного цвета: восемь тональных палитр — 128 тонов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, всего 226 переменных.",
+    "The Modal component's script API, loaded with the component (component/modal); its methods are the component's documentation.": "Скриптовый API компонента Modal; приходит вместе с компонентом (`component/modal`), его методы описаны на странице компонента.",
+    "Arrow keys": "стрелки",
+    "ArrowLeft and ArrowRight resize a focused resizable column": "`ArrowLeft` и `ArrowRight` меняют ширину колонки в фокусе, если её можно менять",
+    "Enter on links": "`Enter` на ссылках",
+    "Enter or Space on the ellipsis button": "`Enter` или `Space` на кнопке с многоточием",
+    "Enter or Space toggles the star": "`Enter` или `Space` ставит и снимает звезду",
+    "Escape dismisses a linked open tooltip without moving trigger focus": "`Escape` закрывает открытую связанную подсказку, не уводя фокус с элемента",
+    "Tab reaches the star and the actions": "`Tab` доходит до звезды и действий",
+    "native multiline text editing": "обычная правка многострочного текста",
+    "native text editing": "обычная правка текста",
+    "typeahead": "поиск по первым буквам",
+    "Typeahead": "поиск по первым буквам"
   }
 }

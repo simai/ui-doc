@@ -62,12 +62,12 @@ description: "Задаёт ширину и высоту значка по шка
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-text-size-1/4` | `var(--sf-text--size-1/4)` |
-| `--sf-text-height-1/4` | `var(--sf-text--height-1/4)` |
-| `--sf-text-size-1/3` | `var(--sf-text--size-1/3)` |
-| `--sf-text-height-1/3` | `var(--sf-text--height-1/3)` |
-| `--sf-text-size-1/2` | `var(--sf-text--size-1/2)` |
-| `--sf-text-height-1/2` | `var(--sf-text--height-1/2)` |
+| `--sf-text-size-1/4` | `var(--sf-text--size-1\/4)` |
+| `--sf-text-height-1/4` | `var(--sf-text--height-1\/4)` |
+| `--sf-text-size-1/3` | `var(--sf-text--size-1\/3)` |
+| `--sf-text-height-1/3` | `var(--sf-text--height-1\/3)` |
+| `--sf-text-size-1/2` | `var(--sf-text--size-1\/2)` |
+| `--sf-text-height-1/2` | `var(--sf-text--height-1\/2)` |
 | `--sf-text-size-1` | `var(--sf-text--size-1)` |
 | `--sf-text-height-1` | `var(--sf-text--height-1)` |
 | `--sf-text-size-2` | `var(--sf-text--size-2)` |
@@ -115,6 +115,11 @@ description: "Задаёт ширину и высоту значка по шка
 
 ## Ограничения
 
+- Loader не читает классы на самих элементах `<svg>`, `<path>` и `<g>`:
+  такой класс не загружает модуль утилиты и действует, только если модуль
+  уже загрузил другой элемент страницы. Одноцветный знак надёжнее красить так:
+  `fill="currentColor"` (или `stroke="currentColor"`) на SVG и утилита
+  `color-*` на обёртке — ссылке или `<span>` (см. [Знак бренда и встроенный SVG](/ru/guide/colour/colour-roles/#знак-бренда-и-встроенный-svg)).
 - Класс задаёт ширину и высоту одним значением: значок с другими пропорциями
   вписывается в квадрат по своему `viewBox`.
 - Класс задаёт и `line-height` ступени текста; на сам элемент `<svg>` это не

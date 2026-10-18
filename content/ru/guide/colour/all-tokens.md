@@ -14,7 +14,8 @@ description: "Полный список переменных, которые о�
 экрана; показаны оба, через точку — сначала первое объявление, затем второе.
 
 Дробные ступени записаны в именах с косой чертой (`--sf-radius-1/2`); в CSS
-её экранируют: `var(--sf-radius-1\/2)`.
+её экранируют: `var(--sf-radius-1\/2)`. В столбце значений имена уже
+записаны так, как их пишут в CSS.
 
 Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
 читает ни один файл поставки: её значение ничего не меняет. Пометка
@@ -98,7 +99,7 @@ description: "Полный список переменных, которые о�
 | `--sf-code--background` | `var(--sf-tertiary-container)` |
 | `--sf-code--color` | `var(--sf-tertiary)` |
 | `--sf-code--font-family` | `var(--sf-mono)` |
-| `--sf-code--radius` | `var(--sf-radius-1/3)` |
+| `--sf-code--radius` | `var(--sf-radius-1\/3)` |
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-error-active` | `light-dark(var(--sf-error-30), var(--sf-error-90))` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
@@ -243,10 +244,10 @@ description: "Полный список переменных, которые о�
 | `--sf-heading-6--size` | `var(--sf-text--size-1)` |
 | `--sf-label-large--height` | `var(--sf-c0)` |
 | `--sf-label-large--size` | `var(--sf-b4)` |
-| `--sf-label-medium--height` | `var(--sf-text--height-1/3)` |
-| `--sf-label-medium--size` | `var(--sf-text--size-1/3)` |
-| `--sf-label-small--height` | `var(--sf-text--height-1/4)` |
-| `--sf-label-small--size` | `var(--sf-text--size-1/4)` |
+| `--sf-label-medium--height` | `var(--sf-text--height-1\/3)` |
+| `--sf-label-medium--size` | `var(--sf-text--size-1\/3)` |
+| `--sf-label-small--height` | `var(--sf-text--height-1\/4)` |
+| `--sf-label-small--size` | `var(--sf-text--size-1\/4)` |
 | `--sf-mono` | `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace` |
 | `--sf-text--family` | `"Inter Variable", "Inter Fallback", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Segoe UI", sans-serif` |
@@ -259,7 +260,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--font-weight-7` | `700` |
 | `--sf-text--font-weight-8` | `800` |
 | `--sf-text--font-weight-9` | `900` |
-| `--sf-text--height` | `var(--sf-text--height-1)` · `var(--sf-text--height-1/2)` |
+| `--sf-text--height` | `var(--sf-text--height-1)` · `var(--sf-text--height-1\/2)` |
 | `--sf-text--height-1` | `var(--sf-c0)` · `var(--sf-c2)` |
 | `--sf-text--height-10` | `var(--sf-d5)` · `var(--sf-e2)` |
 | `--sf-text--height-11` | `var(--sf-d6)` · `var(--sf-e3)` |
@@ -285,7 +286,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--measure` | `65ch` |
 | `--sf-text--measure-narrow` | `45ch` |
 | `--sf-text--measure-wide` | `80ch` |
-| `--sf-text--size` | `var(--sf-text--size-1)` · `var(--sf-text--size-1/2)` |
+| `--sf-text--size` | `var(--sf-text--size-1)` · `var(--sf-text--size-1\/2)` |
 | `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
 | `--sf-text--size-10` | `var(--sf-d0)` · `var(--sf-d6)` |
 | `--sf-text--size-11` | `var(--sf-d1)` · `var(--sf-d8)` |
@@ -318,9 +319,9 @@ description: "Полный список переменных, которые о�
 | `--sf-text-height-10` | `var(--sf-text--height-10)` |
 | `--sf-text-height-11` | `var(--sf-text--height-11)` |
 | `--sf-text-height-12` | `var(--sf-text--height-12)` |
-| `--sf-text-height-1/2` | `var(--sf-text--height-1/2)` |
-| `--sf-text-height-1/3` | `var(--sf-text--height-1/3)` |
-| `--sf-text-height-1/4` | `var(--sf-text--height-1/4)` |
+| `--sf-text-height-1/2` | `var(--sf-text--height-1\/2)` |
+| `--sf-text-height-1/3` | `var(--sf-text--height-1\/3)` |
+| `--sf-text-height-1/4` | `var(--sf-text--height-1\/4)` |
 | `--sf-text-height-2` | `var(--sf-text--height-2)` |
 | `--sf-text-height-3` | `var(--sf-text--height-3)` |
 | `--sf-text-height-4` | `var(--sf-text--height-4)` |
@@ -337,12 +338,12 @@ description: "Полный список переменных, которые о�
 | `--sf-text-size-10` | `var(--sf-text--size-10)` |
 | `--sf-text-size-11` | `var(--sf-text--size-11)` |
 | `--sf-text-size-12` | `var(--sf-text--size-12)` |
-| `--sf-text-size-1/2` | `var(--sf-text--size-1/2)` |
-| `--sf-text-size-1/3` | `var(--sf-text--size-1/3)` |
-| `--sf-text-size-1/4` | `var(--sf-text--size-1/4)` |
-| `--sf-text-size-1/5` | `var(--sf-text--size-1/5)` |
-| `--sf-text-size-1/6` | `var(--sf-text--size-1/6)` |
-| `--sf-text-size-1/7` | `var(--sf-text--size-1/7)` |
+| `--sf-text-size-1/2` | `var(--sf-text--size-1\/2)` |
+| `--sf-text-size-1/3` | `var(--sf-text--size-1\/3)` |
+| `--sf-text-size-1/4` | `var(--sf-text--size-1\/4)` |
+| `--sf-text-size-1/5` | `var(--sf-text--size-1\/5)` |
+| `--sf-text-size-1/6` | `var(--sf-text--size-1\/6)` |
+| `--sf-text-size-1/7` | `var(--sf-text--size-1\/7)` |
 | `--sf-text-size-2` | `var(--sf-text--size-2)` |
 | `--sf-text-size-3` | `var(--sf-text--size-3)` |
 | `--sf-text-size-4` | `var(--sf-text--size-4)` |
@@ -351,8 +352,8 @@ description: "Полный список переменных, которые о�
 | `--sf-text-size-7` | `var(--sf-text--size-7)` |
 | `--sf-text-size-8` | `var(--sf-text--size-8)` |
 | `--sf-text-size-9` | `var(--sf-text--size-9)` |
-| `--sf-text-small--height` | `var(--sf-text--height-1/2)` |
-| `--sf-text-small--size` | `var(--sf-text--size-1/2)` |
+| `--sf-text-small--height` | `var(--sf-text--height-1\/2)` |
+| `--sf-text-small--size` | `var(--sf-text--size-1\/2)` |
 | `--sf-title--height-1` | `var(--sf-b6)` · `var(--sf-b8)` |
 | `--sf-title--height-10` | `var(--sf-d2)` · `var(--sf-d9)` |
 | `--sf-title--height-11` | `var(--sf-d3)` · `var(--sf-e0)` |
@@ -448,7 +449,7 @@ description: "Полный список переменных, которые о�
 | `--sf-elevation-5--shadow` | `var(--sf-ui-shadow-5), var(--sf-shadow--rim)` |
 | `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-5))` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
-| `--sf-radius--ui` | `var(--sf-radius-1/2)` |
+| `--sf-radius--ui` | `var(--sf-radius-1\/2)` |
 | `--sf-radius-0` | `var(--sf-a0)` |
 | `--sf-radius-1` | `var(--sf-a8)` |
 | `--sf-radius-1/2` | `0.25rem` · `var(--sf-a4)` |
@@ -544,7 +545,7 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-1--space-y-tightness-highest` | `var(--sf-b6)` |
 | `--sf-ui-1--space-y-tightness-low` | `var(--sf-a4)` |
 | `--sf-ui-1--text-space-x` | `var(--sf-a6)` · `var(--sf-a8)` |
-| `--sf-ui-1/2--control-height` | `calc(var(--sf-text--height-1/2) + 2 * var(--sf-ui-1/2--space-y-tightness-default))` |
+| `--sf-ui-1/2--control-height` | `calc(var(--sf-text--height-1\/2) + 2 * var(--sf-ui-1\/2--space-y-tightness-default))` |
 | `--sf-ui-1/2--space-x` | `0.75rem` · `var(--sf-b2)` · `0.875rem` · `var(--sf-b4)` |
 | `--sf-ui-1/2--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-1/2--space-y-tightness-default` | `0.375rem` · `var(--sf-a6)` |
@@ -552,7 +553,7 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-1/2--space-y-tightness-highest` | `0.875rem` · `var(--sf-b4)` |
 | `--sf-ui-1/2--space-y-tightness-low` | `0.25rem` · `var(--sf-a4)` |
 | `--sf-ui-1/2--text-space-x` | `0.375rem` · `var(--sf-a6)` · `0.4375rem` · `var(--sf-a7)` |
-| `--sf-ui-1/3--control-height` | `calc(var(--sf-text--height-1/3) + 2 * var(--sf-ui-1/3--space-y-tightness-default))` |
+| `--sf-ui-1/3--control-height` | `calc(var(--sf-text--height-1\/3) + 2 * var(--sf-ui-1\/3--space-y-tightness-default))` |
 | `--sf-ui-1/3--space-x` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` |
 | `--sf-ui-1/3--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-1/3--space-y-tightness-default` | `0.25rem` · `var(--sf-a4)` |
@@ -660,8 +661,8 @@ description: "Полный список переменных, которые о�
 | `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |
 | `--sf-skeleton-inset` | `var(--sf-space-1)` |
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
-| `--sf-skeleton-pair` | `calc(var(--sf-text-height-1/2) + var(--sf-text-height-1) + var(--sf-space-1))` |
-| `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` · `var(--sf-ui-1/2--control-height)` |
+| `--sf-skeleton-pair` | `calc(var(--sf-text-height-1\/2) + var(--sf-text-height-1) + var(--sf-space-1))` |
+| `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` · `var(--sf-ui-1\/2--control-height)` |
 | `--sf-skeleton-rows` | `10` · `6` · `8` |
 | `--sf-skeleton-toolbar` | `var(--sf-ui-1--control-height)` |
 | `--sf-transparent-for-focus` | `var(--sf-transparent)` |

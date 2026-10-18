@@ -5,6 +5,8 @@ async function show() {
   preview.srcdoc = ''; document.querySelector('#layout-html').textContent = '';
   try {
     const doc = JSON.parse(input.value);
+    // validate() and normalize() are called here only to show their output;
+    // render() checks and normalizes the document by itself.
     const checked = SF.Composition.validate(doc);
     if (!checked.valid) { status.textContent = JSON.stringify(checked.diagnostics, null, 2); return; }
     const normalized = await SF.Composition.normalize(doc);

@@ -111,8 +111,8 @@ button.onClick(async () => {
 | Назначение | Нативная кнопка с оформлением Framework: размер, вид, цветовая роль или статус, необязательные иконки в начале и в конце, отступы и скругление. loading устанавливает aria-busy и отключает кнопку от повторной активации. |
 | Контракт | `smart.buttons`, версия `1.0.0` |
 | Поставка | выпуск Framework `ui-9a4b9cc82edf` |
-| Жизненный цикл | экспериментальный: API может меняться между выпусками |
-| Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
+| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
@@ -142,14 +142,14 @@ button.onClick(async () => {
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | `appearance` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `icon-start` | `icon-left` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `icon-end` | `icon-right` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing` | `tightness` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="compact"` | `tightness="low"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="comfortable"` | `tightness="high"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `icon-start` | `icon-left` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
+| `icon-end` | `icon-right` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
+| `spacing` | `tightness` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
+| `status="error"` | `status="danger"` | не работает у `sf-button`: кнопка рисуется основной (`primary`); пишите `status="error"` | 2026-12-01 |
+| `status="error"` | `status="critical"` | не работает у `sf-button`: кнопка рисуется основной (`primary`); пишите `status="error"` | 2026-12-01 |
 | `appearance="link"` | `appearance="ghost"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Свойства в документе макета
@@ -158,7 +158,7 @@ button.onClick(async () => {
 
 - свойства: `template`, `size`, `appearance`, `spacing`, `scheme`, `status`, `text`, `icon`, `icon-position`, `loading`, `disabled`, `native-type`, `aria-label`.
 
-Значения свойств те же, что у одноимённых атрибутов.
+Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
 ### Методы
 

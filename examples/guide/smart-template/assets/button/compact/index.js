@@ -14,6 +14,14 @@ export default function ({ html, nothing, context, component }) {
   const start = iconStart ?? (icon && !atEnd ? icon : '');
   const end = iconEnd ?? (icon && atEnd ? icon : '');
   const label = component.hasSlotContent('text') ? component.getSlotContent('text') : text;
+  // A slotted icon wins over the icon name, as in the built-in template;
+  // icon-left and icon-right are the old slot names.
+  const slotted = (...names) => {
+    const name = names.find((slot) => component.hasSlotContent(slot));
+    return name ? component.getSlotContent(name) : null;
+  };
+  const startContent = slotted('icon-start', 'icon-left');
+  const endContent = slotted('icon-end', 'icon-right');
   const classes = [
     'sf-button', `sf-button--size-${size}`, `sf-button--${appearance}`, `sf-button--${status || scheme}`,
     'flex', 'items-cross-center',
@@ -26,15 +34,15 @@ export default function ({ html, nothing, context, component }) {
   ].filter(Boolean).join(' ');
   const textClasses = [
     'sf-button-text-container', `text-${textPosition || 'center'}`, 'pointer-event-none',
-    start || end ? '' : 'flex-1', 'project-button-compact-text',
+    start || end || startContent || endContent ? '' : 'flex-1', 'project-button-compact-text',
   ].filter(Boolean).join(' ');
   const iconOf = (name) => (name ? html`<sf-icon icon=${name} root-class="pointer-event-none" weight="400" aria-hidden="true"></sf-icon>` : nothing);
   // disabled, aria-busy, type and aria-label are the template's to render:
   // the component forwards only attributes that are not its settings.
   return html`<button type=${nativeType} class=${classes} style=${rootStyle || nothing}
       ?disabled=${disabled || loading} aria-label=${ariaLabel || nothing} aria-busy=${loading ? 'true' : nothing}>
-    ${iconOf(start)}
+    ${startContent ?? iconOf(start)}
     ${label ? html`<span class=${textClasses}>${label}</span>` : nothing}
-    ${iconOf(end)}
+    ${endContent ?? iconOf(end)}
   </button>`;
 }

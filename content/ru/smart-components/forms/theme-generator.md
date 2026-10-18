@@ -88,7 +88,19 @@ generator.addEventListener('sf-theme-generator-apply', ({detail}) => {
 Расчёт — модуль ядра `theme-palette`, опубликованный как `SF.ThemePalette`.
 Он приходит на страницу вместе с кодом `<sf-theme-generator>`; на странице без
 этого элемента его нет. Сервер или сборка проекта вызывают те же функции из
-исходников Framework (`src/core/js/theme-palette.js`):
+исходников Framework: файл `src/core/js/theme-palette.js` открытого
+репозитория [`simai/ui-source`](https://github.com/simai/ui-source) на коммите
+исходников выпуска (`build_inputs.source.commit` в записи выпуска). Модуль
+зависит только от файлов `material-color-utilities`, которые лежат рядом в
+`src/core/js/vendor/`, и в Node.js 20 импортируется напрямую:
+
+```js
+import {themeFromColor, themeVariables} from './ui-source/src/core/js/theme-palette.js';
+
+const variables = themeVariables(themeFromColor('#833ab6'));   // 226 пар {имя: значение}
+```
+
+Тот же расчёт без модуля описан в [Как построить палитру](/ru/guide/colour/palettes/#как-построить-палитру).
 
 | Функция | Что делает |
 |:---|:---|
@@ -102,6 +114,19 @@ generator.addEventListener('sf-theme-generator-apply', ({detail}) => {
 ```js
 const theme = SF.ThemePalette.themeFromColor('#2e7d32');
 const css = SF.ThemePalette.themeToCss(theme, ':root');
+```
+
+`themeToCss()` возвращает правило без слоя. Оно сильнее слоёв Framework и
+работает как есть; по соглашению проекта его кладут в `@layer project`.
+
+Тема всегда содержит все восемь палитр. Чтобы сменить только акцент, оставьте
+из `themeVariables()` переменные `--sf-primary-*` (и `--sf-info-*`, если
+`info` должен следовать за брендом), а остальные не записывайте:
+
+```js
+const variables = SF.ThemePalette.themeVariables(theme);
+const accent = Object.entries(variables).filter(([name]) => name.startsWith('--sf-primary-'));
+const css = `@layer project { :root { ${accent.map(([name, value]) => `${name}: ${value};`).join(' ')} } }`;
 ```
 
 Модель HCT — из пакета Google `material-color-utilities` 0.4.0 (лицензия
@@ -129,8 +154,8 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 | Назначение | Тема из одного цвета: человек выбирает основной цвет (или тон и насыщенность генератора), а компонент строит восемь тональных палитр Framework — 128 примитивов, из которых читаются все семантические токены, и 98 полупрозрачных ступеней, которые ядро выводит из них, — с предпросмотром, событиями с CSS и применением к странице по желанию. |
 | Контракт | `smart.theme-generator`, версия `1.0.0` |
 | Поставка | выпуск Framework `ui-9a4b9cc82edf` |
-| Жизненный цикл | экспериментальный: API может меняться между выпусками |
-| Готовность | работает в сценарии студии, продуктовой приёмки нет |
+| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты

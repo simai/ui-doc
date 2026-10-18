@@ -102,7 +102,7 @@ description: "Скругляет углы элемента целиком, по 
 | `--sf-radius-3` | `var(--sf-b6); от ширины lg: var(--sf-c2)` |
 | `--sf-radius-4` | `var(--sf-c2); от ширины lg: var(--sf-c6)` |
 | `--sf-radius-default` | `var(--sf-a4)` |
-| `--sf-radius--ui` | `var(--sf-radius-1/2)` |
+| `--sf-radius--ui` | `var(--sf-radius-1\/2)` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
 | `--sf-radius-square` | `0` |
 | `--sf-radius-rounded` | `1000px` |

@@ -343,7 +343,8 @@ const tokenValue = (name) => {
     for (const part of body.split(';')) {
       const index = part.indexOf(':');
       if (index < 0 || unescape(part.slice(0, index).trim()) !== name) continue;
-      const value = unescape(part.slice(index + 1).trim());
+      // The value is CSS and is copied into CSS: it keeps the escaped slash.
+      const value = part.slice(index + 1).trim();
       const label = mediaLabel(media);
       if (values.some((item) => item.label === label)) continue;
       // A wider-screen value equal to the base one says nothing new.

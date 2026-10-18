@@ -12,5 +12,81 @@
       ],
       "reason": "The ui-9fb0297bb5c2 and ui-ec56cef08625 manifests carry sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
     }
+  },
+  "js_api": {
+    "reason": "Corrections to distr/core/contracts/public-js-api.json of the pinned release, keyed by global name. Each field replaces the contract's; the generator fails --check when the contract already says the same, so a fixed contract makes the entry stale. Reported to ui-source 2026-10-18.",
+    "globals": {
+      "SF.Loader": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.ready": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.create": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.createAsync": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.whenDefined": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.whenDefine": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.whenFieldRenderers": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.loadSmartBase": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.smartBaseReady": {
+        "loaded_by": "loader",
+        "note": "на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`"
+      },
+      "SF.Modal": {
+        "loaded_by": "component/modal",
+        "note": "объект `SF.Modal` регистрирует компонент `modal` (`component/modal/js/modal.js`); `sf-system` только пользуется им",
+        "summary": "The Modal component's script API, loaded with the component (component/modal); its methods are the component's documentation."
+      },
+      "SF.ThemePalette": {
+        "summary": "A whole theme from one colour: the eight tonal palettes as 128 --sf-<palette>-<tone> tones and 98 translucent steps, 226 variables in all.",
+        "members": [
+          "themeFromColor",
+          "themeFromHct",
+          "colorToHct",
+          "themeToCss",
+          "themeVariables",
+          "applyTheme",
+          "isThemeColor",
+          "THEME_TONES",
+          "THEME_PALETTES",
+          "THEME_ALPHA",
+          "DEFAULT_THEME_COLOR"
+        ],
+        "note": "в объекте есть и `THEME_ALPHA` — полупрозрачные ступени палитр; всего модуль пишет 226 переменных"
+      }
+    }
+  },
+  "legacy_state": {
+    "reason": "What sf-button does with each old name at the pinned release (ui-source 2119e6b0 src/smart/buttons/index.js, docs trial 6 probe): icon-left/icon-right and tightness are read without a note; status danger/critical are not read at all. Reported to ui-source 2026-10-18.",
+    "buttons": {
+      "icon-left": "работает, но в `SF.deprecations` не отмечается",
+      "icon-right": "работает, но в `SF.deprecations` не отмечается",
+      "tightness": "работает, но в `SF.deprecations` не отмечается",
+      "tightness=\"low\"": "работает, но в `SF.deprecations` не отмечается",
+      "tightness=\"high\"": "работает, но в `SF.deprecations` не отмечается",
+      "tightness=\"highest\"": "работает, но в `SF.deprecations` не отмечается",
+      "status=\"danger\"": "не работает у `sf-button`: кнопка рисуется основной (`primary`); пишите `status=\"error\"`",
+      "status=\"critical\"": "не работает у `sf-button`: кнопка рисуется основной (`primary`); пишите `status=\"error\"`"
+    }
   }
 }

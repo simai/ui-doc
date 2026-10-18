@@ -64,7 +64,8 @@ python3 -m http.server 8080
 Классы в примере — это уровни из [Уровни Framework](/ru/guide/introduction/levels/#уровни-framework): `p-4`, `radius-2`,
 `bg-surface-container` — утилиты, `sf-h-2` и `sf-body-medium` — типографика
 Core, `sf-button` — компонент. У кнопки на классах обязательны четыре класса:
-корень `sf-button`, вид (`sf-button--default`), **схема** (`sf-button--primary`)
+корень `sf-button`, вид (`sf-button--default`; есть ещё `tonal`, `outline`,
+`link` и `surface`, см. [Кнопки → Вид](/ru/components/actions/buttons/#вид)), **схема** (`sf-button--primary`)
 и размер (`sf-button--size-1`), а подпись лежит в
 `<span class="sf-button-text-container">`. Без класса схемы кнопка не получает
 цветов. Типографика Core приходит вместе со стилем ядра; утилиты и компонент

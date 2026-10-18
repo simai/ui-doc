@@ -39,7 +39,7 @@ description: "Глава перечисляет этапы жизни компо
 
 | Метод | Когда вызывается |
 |:---|:---|
-| `onConnected()` | После подключения к странице |
+| `onConnected()` | После каждого подключения к странице, в том числе после повторной вставки удалённого элемента |
 | `beforeRender(changed)` | Перед каждой отрисовкой |
 | `afterRender(changed)` | После отрисовки и загрузки стилей |
 | `afterUpdate(changed, mode)` | После обновления |
@@ -70,7 +70,33 @@ description: "Глава перечисляет этапы жизни компо
 - Базовый класс уже определяет свойство `value` (чтение и запись) и
   `state` с методом `getState()`. Не перекрывайте `value` одним геттером:
   присваивание `element.value = …` станет ошибкой. Переопределяйте его парой
-  `get`/`set` или назовите своё свойство иначе.
+  `get`/`set` или назовите своё свойство иначе. Вход `value` в `static props`
+  допустим: базовый `value` читает и пишет атрибут `value`.
+- Переопределяют только методы из таблицы выше, `template()` и
+  `templateContext()`. Остальные имена базового класса подкласс не занимает
+  ни полем, ни методом: `value` (кроме пары `get`/`set`), `state`, `style`,
+  `isRendered`, `getState`, `setState`, `patchState`, `set`, `refresh`,
+  `setHidden`, `isHidden`, `getProp`, `getPropValue`, `getPropsContext`,
+  `createPropsTemplateContext`, `createTemplateContext`, `setAttributes`,
+  `removeAttributes`, `getAttributeValue`, `setAttributeValue`, `setSlot`,
+  `clearSlot`, `hasSlotContent`, `getSlotContent`, `whenRendered`,
+  `whenChildrenDefined`, `requestComponentUpdate`, `emitComponentEvent`,
+  `createRef`, `addRootClass`, `removeRootClass`, `toggleRootClass`,
+  `setRootClass`, `setRootStyle`, `getRootClass`, `getRootStyle`,
+  `onPropChange`, `onUpdate`, `onAfterRender`. Имена свойств вроде `name`,
+  `size`, `disabled`, `label`, `min`, `max` и `step` свободны.
+- Базовый класс не связан с формой: элемент не участвует в отправке и
+  сбросе `<form>` сам. Чтобы значение ушло с формой, шаблон рисует обычный
+  `<input name="…">` (скрытый или видимый) и пишет в него значение: элемент
+  рисует в своём DOM, без теневого корня, поэтому такое поле принадлежит
+  форме. Сброс формы восстанавливает поле, а состояние компонента —
+  обработчик `reset` формы:
+
+  ```js
+  template() {
+    return html`…<input type="hidden" name=${this.getProp('name')} .value=${String(this.count)}>`;
+  }
+  ```
 
 ## Освобождение ресурсов
 
