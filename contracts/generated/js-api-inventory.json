@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-a063efd005e3",
-  "ui_commit": "a063efd005e3264bbb1a914a54a7f01af43a532b",
+  "release": "ui-1082208bdcef",
+  "ui_commit": "1082208bdcef19a747c2b738e628a52739be1b66",
   "stages": [
     "core",
     "dom",
@@ -3801,6 +3801,9 @@
       "members": {
         "DEFAULT_THEME_COLOR": {
           "type": "string"
+        },
+        "THEME_ALPHA": {
+          "type": "object"
         },
         "THEME_PALETTES": {
           "type": "array"
