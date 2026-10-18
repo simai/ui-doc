@@ -145,3 +145,13 @@ jobs:
         env:
           DOCARA_COMPOSER_AUTOLOAD: ${{ github.workspace }}/vendor/autoload.php
         run: php vendor/simai/docara/scripts/verify-static-build.php build_production
+      # Key pages of the built site in headless Chromium, served from
+      # build_production: a page error, a missing site asset (HTTP >= 400), a
+      # Smart tag still undefined after 10 s or an example frame that did not
+      # load fails the job. playwright-core is pinned in package.json and
+      # installs the Chromium of that exact version.
+      - name: Install the pinned Chromium
+        run: npx --no-install playwright-core install --with-deps --only-shell chromium
+      - name: Browser smoke of the key pages
+        timeout-minutes: 5
+        run: node scripts/qa/browser-smoke.mjs --root build_production
