@@ -98,7 +98,7 @@ Loader.
 `pluginListVersion` — любые непустые строки: Loader сравнивает их с
 сохранёнными в `localStorage` как есть (см. [Кеш и версии адресов](/ru/guide/connection/loader/#кеш-и-версии-адресов)). Для своей
 копии поставки обеим меткам дают идентификатор выпуска, например
-`ui-9a4b9cc82edf`. При переходе на другой выпуск метки меняются вместе с ним:
+`ui-10dd6caf7e40`. При переходе на другой выпуск метки меняются вместе с ним:
 Loader очищает сохранённые списки модулей, а адреса модулей получают новый
 параметр `sf_v`.
 
@@ -106,8 +106,8 @@ Loader очищает сохранённые списки модулей, а а�
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
-    cacheVersion: 'ui-9a4b9cc82edf',
-    pluginListVersion: 'ui-9a4b9cc82edf',
+    cacheVersion: 'ui-10dd6caf7e40',
+    pluginListVersion: 'ui-10dd6caf7e40',
   };
 </script>
 ```
@@ -121,12 +121,11 @@ Loader очищает сохранённые списки модулей, а а�
 SIMAI Framework: window.sfPath is not set, so the runtime is loading from
 https://cdn.jsdelivr.net/gh/simai/ui@main/distr/ — an unpinned branch that
 changes without notice. Set window.sfPath to your own copy of distr/, before
-core.js, or to a pinned tag.
+core.js, or to a released commit: https://cdn.jsdelivr.net/gh/simai/ui@<commit>/distr/ .
 ```
 
 Увидели его — задайте `sfPath` на свою копию `distr/` или на адрес CDN с
-полным коммитом выпуска. «Pinned tag» в тексте предупреждения означает тот же
-полный коммит выпуска: тегов у выпусков нет.
+полным коммитом выпуска.
 Это касается и примеров во встроенных фреймах: у каждого документа свой
 `sfPath`.
 
@@ -154,11 +153,11 @@ core.js, or to a pinned tag.
 
 ```bash
 git clone https://github.com/simai/ui.git simai-ui
-git -C simai-ui archive --format=tar 9a4b9cc82edf6c5247832022f4e56f49911c2ec7 distr | shasum -a 256
-# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-9a4b9cc82edf.lock.json
+git -C simai-ui archive --format=tar 10dd6caf7e40716bd8fe53859c7fb0d071697925 distr | shasum -a 256
+# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-10dd6caf7e40.lock.json
 # и полю runtime.ui.sha256 в /ai/framework-lock.json этого сайта
 mkdir -p public/assets/simai-framework/ui
-git -C simai-ui archive --format=tar 9a4b9cc82edf6c5247832022f4e56f49911c2ec7 distr | tar -x -C public/assets/simai-framework/ui
+git -C simai-ui archive --format=tar 10dd6caf7e40716bd8fe53859c7fb0d071697925 distr | tar -x -C public/assets/simai-framework/ui
 ```
 
 Каталог появляется как `public/assets/simai-framework/ui/distr/`.
@@ -175,7 +174,7 @@ git -C simai-ui archive --format=tar 9a4b9cc82edf6c5247832022f4e56f49911c2ec7 di
 
 `<метка>` — полный коммит выбранного выпуска (поле
 `runtime_sources.core.commit` записи о выпуске), например
-`9a4b9cc82edf6c5247832022f4e56f49911c2ec7` для выпуска `ui-9a4b9cc82edf`.
+`10dd6caf7e40716bd8fe53859c7fb0d071697925` для выпуска `ui-10dd6caf7e40`.
 Идентификатор выпуска меткой не служит: выпуски не помечены тегами
 (см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)). Готовая страница с полным коммитом — в быстром
 старте (см. [Страница на Core](/ru/guide/introduction/quick-start/#страница-на-core)). Пакет продукта приходит в поставке

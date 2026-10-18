@@ -37,7 +37,7 @@ Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-9a4b9cc82edf` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-10dd6caf7e40` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
 Публичные имена (64) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
@@ -70,7 +70,7 @@ Loader выбрал тему при запуске.
 | `SF.loadRuntime` | функция | ядро, сразу после `core.js` | Загружает общую среду Smart-компонентов (`core/js/smart-base.js`) и выполняется с её модулями. | — |
 | `SF.loadSmartBase` | функция | Loader, после `sf-loader-init` | Загружает основу Smart-компонентов, когда на странице ещё нет Smart-элемента; выполняется с `SF.smart`. Собственный Smart-компонент проекта ждёт её. | — |
 | `SF.Mask` | объект | ядро, сразу после `core.js` | Маски ввода: загрузить библиотеку масок и подключить маску к полю. | `load`, `create`, `pipe`, `destroy` |
-| `SF.Modal` | объект | компонент `modal` | Скриптовый API компонента Modal; приходит вместе с компонентом (`component/modal`), его методы описаны на странице компонента. | — |
+| `SF.Modal` | объект | компонент `sf-system` | Скриптовый API модального окна `sf-system`; приходит с `component/sf-system`, его методы описаны на странице этого компонента. Это не класс компонента Modal: на странице, которая загружает только `component/modal` (`sf-modal`, примеры окна), `SF.Modal` нет, а класс лежит в `SF.Loader.ComponentRegistry.Modal` (`new Modal({id, param})`), как в примерах документации. | — |
 | `SF.nothing` | значение | основа Smart-компонентов | `nothing` библиотеки Lit. | — |
 | `SF.notifications` | объект | ядро, сразу после `core.js` | Область уведомлений: её настройки, закрытие сообщения и показанные сообщения. | `configure`, `close`, `history` |
 | `SF.notify` | функция | ядро, сразу после `core.js` | Показывает сообщение в единственной области уведомлений страницы. | — |
@@ -99,7 +99,7 @@ Loader выбрал тему при запуске.
 | `SF.Tab` | объект | компонент `tab` | Скриптовый API компонента Tab; приходит вместе с компонентом (`component/tab`), его методы описаны на странице компонента. | — |
 | `SF.Tabs` | объект | компонент `tabs` | Скриптовый API компонента Tabs; приходит вместе с компонентом (`component/tabs`), его методы описаны на странице компонента. | — |
 | `SF.Textarea` | объект | компонент `textarea` | Скриптовый API компонента Textarea; приходит вместе с компонентом (`component/textarea`), его методы описаны на странице компонента. | — |
-| `SF.ThemePalette` | объект | Smart-компонент `sf-theme-generator` | Тема из одного цвета: восемь тональных палитр — 128 тонов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, всего 226 переменных. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
+| `SF.ThemePalette` | объект | Smart-компонент `sf-theme-generator` | Тема из одного цвета: восемь тональных палитр — 128 примитивов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, которые ядро определяет на них (`--sf-<палитра>-<тон>--alfa-<n>`, список — в `THEME_ALPHA`), всего 226 переменных. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
 | `SF.Toast` | объект | компонент `toast` | Скриптовый API компонента Toast; приходит вместе с компонентом (`component/toast`), его методы описаны на странице компонента. | — |
 | `SF.Toggle` | объект | компонент `toggle` | Скриптовый API компонента Toggle; приходит вместе с компонентом (`component/toggle`), его методы описаны на странице компонента. | — |
 | `SF.Tree` | объект | компонент `tree` | Скриптовый API компонента Tree; приходит вместе с компонентом (`component/tree`), его методы описаны на странице компонента. | — |
@@ -107,12 +107,6 @@ Loader выбрал тему при запуске.
 | `SF.whenDefine` | функция | Loader, после `sf-loader-init` | Прежнее имя `SF.whenDefined`, сохранено. | — |
 | `SF.whenDefined` | функция | Loader, после `sf-loader-init` | Обещание определения Smart-элемента; загружает его, если страница ещё не загрузила. | — |
 | `SF.whenFieldRenderers` | функция | Loader, после `sf-loader-init` | Обещание набора отрисовщиков полей (`SF.fieldRenderers`); загружает его по требованию. | — |
-
-Где контракт выпуска расходится с тем, что видно на странице, таблица следует странице:
-
-- `SF.Loader`, `SF.ready`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.whenDefine`, `SF.whenFieldRenderers`, `SF.loadSmartBase`, `SF.smartBaseReady` — на странице эти имена появляются вместе с Loader, после события `sf-loader-init`, а не сразу после `core.js`.
-- `SF.Modal` — объект `SF.Modal` регистрирует компонент `modal` (`component/modal/js/modal.js`); `sf-system` только пользуется им.
-- `SF.ThemePalette` — в объекте есть и `THEME_ALPHA` — полупрозрачные ступени палитр; всего модуль пишет 226 переменных.
 
 Внутренние имена (28) принадлежат среде выполнения и могут измениться в любом выпуске; страница их не вызывает: `SF.__internal`, `SF.Ajax`, `SF.Blocks`, `SF.cloneDeep`, `SF.ComponentRegistry`, `SF.Controller`, `SF.curpos`, `SF.Events`, `SF.extend`, `SF.flag`, `SF.Gallery`, `SF.litHtml`, `SF.Methods`, `SF.Overbox`, `SF.Param`, `SF.Parameters`, `SF.Provider`, `SF.quickkey`, `SF.receive`, `SF.runtimeArrived`, `SF.runtimeLoading`, `SF.runtimeModules`, `SF.runtimeSettled`, `SF.Search`, `SF.send`, `SF.smartBaseAnnounced`, `SF.Special`, `SF.topZIndex`.
 

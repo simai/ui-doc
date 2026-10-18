@@ -190,6 +190,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-icon-button` |
+| Части | `sf-icon-button-state-loading` |
 | Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--error`, `sf-icon-button--ghost`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--outline`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
 

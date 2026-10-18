@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "2119e6b0be0a2c8946f270ca9c7e0b0907624d9f",
-    "core_revision": "9a4b9cc82edf6c5247832022f4e56f49911c2ec7",
+    "source_revision": "cc24d714f14745ab69e2828ea2f73f554ebc7e34",
+    "core_revision": "10dd6caf7e40716bd8fe53859c7fb0d071697925",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
@@ -10,15 +10,15 @@
       "src/core/js/composition/index.mjs": "45a71cda246130f6dd6aa3b4c44f24ae8eda396712705ed986720c9ebc7919f9",
       "src/core/js/composition/builtins.mjs": "cecc06f437f0c247b0430c565075f2de6435546a6ef44311b366e34b9592f7ea",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/buttons/smart.manifest.json": "3ee83769eb6ff6903d549c2d2ef037a09b0c58666943c8c9e91e3ae9a1201774"
+      "src/smart/buttons/smart.manifest.json": "6f59e4c360166c4a97752393873ee97a574bf9ae938f19aa7c9f4b7648c0a31b"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
-      "distr/core/js/core.js": "d212f911c44ad36ad15a29eaa47757f76f4b1b23bad24dfe333a120e03d24fc2"
+      "distr/core/js/core.js": "37130cedb8e011b0332b26bd47103d87a2b56f6b128baef27a543ae6982794c3"
     },
-    "note": "At source 2119e6b0 and core 9a4b9cc8 (release ui-9a4b9cc82edf) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at the previous pin (the release lets SF.Modal cover an overlay container, which the composition pages do not describe)."
+    "note": "At source cc24d714 and core 10dd6caf (release ui-10dd6caf7e40) the composition schemas, composition-types, index.mjs, builtins and fixture are byte-identical to the review at the previous pin; the buttons manifest changed only its source_artifacts hash, and core.js changed only in the sfPath warning text, which the composition pages do not describe."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

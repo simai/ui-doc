@@ -101,7 +101,7 @@ button.onClick(async () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9a4b9cc82edf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-10dd6caf7e40` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -110,7 +110,7 @@ button.onClick(async () => {
 | Тег | `<sf-button>` |
 | Назначение | Нативная кнопка с оформлением Framework: размер, вид, цветовая роль или статус, необязательные иконки в начале и в конце, отступы и скругление. loading устанавливает aria-busy и отключает кнопку от повторной активации. |
 | Контракт | `smart.buttons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9a4b9cc82edf` |
+| Поставка | выпуск Framework `ui-10dd6caf7e40` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -142,14 +142,14 @@ button.onClick(async () => {
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | `appearance` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `icon-start` | `icon-left` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
-| `icon-end` | `icon-right` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
-| `spacing` | `tightness` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
-| `spacing="compact"` | `tightness="low"` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
-| `spacing="comfortable"` | `tightness="high"` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
-| `spacing="spacious"` | `tightness="highest"` | работает, но в `SF.deprecations` не отмечается | 2026-12-01 |
-| `status="error"` | `status="danger"` | не работает у `sf-button`: кнопка рисуется основной (`primary`); пишите `status="error"` | 2026-12-01 |
-| `status="error"` | `status="critical"` | не работает у `sf-button`: кнопка рисуется основной (`primary`); пишите `status="error"` | 2026-12-01 |
+| `icon-start` | `icon-left` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `icon-end` | `icon-right` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing` | `tightness` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `appearance="link"` | `appearance="ghost"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Свойства в документе макета
@@ -187,8 +187,8 @@ button.onClick(async () => {
 
 ### Источник
 
-- `simai/ui@9a4b9cc82edf6c5247832022f4e56f49911c2ec7:distr/smart/buttons`
-- `simai/ui@9a4b9cc82edf6c5247832022f4e56f49911c2ec7:distr/rule/rule.json#name=cl-buttons`
+- `simai/ui@10dd6caf7e40716bd8fe53859c7fb0d071697925:distr/smart/buttons`
+- `simai/ui@10dd6caf7e40716bd8fe53859c7fb0d071697925:distr/rule/rule.json#name=cl-buttons`
 
 ## См. также
 

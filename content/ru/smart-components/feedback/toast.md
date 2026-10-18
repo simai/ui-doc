@@ -99,7 +99,7 @@ Toast отвечает за одно сообщение. Позицию на э�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-9a4b9cc82edf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-10dd6caf7e40` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,7 +108,7 @@ Toast отвечает за одно сообщение. Позицию на э�
 | Тег | `<sf-toast>` |
 | Назначение | Временное всплывающее уведомление с семантическими ролями, необязательным действием, безопасной паузой времени показа и закрытием. |
 | Контракт | `smart.toast`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-9a4b9cc82edf` |
+| Поставка | выпуск Framework `ui-10dd6caf7e40` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -160,13 +160,13 @@ Toast отвечает за одно сообщение. Позицию на э�
 ### Минимальная разметка
 
 ```html
-<sf-toast status="success" title="Saved" supporting-text="Your changes are available." role="status" close-label="Close message"></sf-toast>
+<sf-toast status="success" title="Сохранено" supporting-text="Изменения доступны." role="status"></sf-toast>
 ```
 
 ### Источник
 
-- `simai/ui@9a4b9cc82edf6c5247832022f4e56f49911c2ec7:distr/smart/toast`
-- `simai/ui@9a4b9cc82edf6c5247832022f4e56f49911c2ec7:distr/rule/rule.json#name=cl-toast`
+- `simai/ui@10dd6caf7e40716bd8fe53859c7fb0d071697925:distr/smart/toast`
+- `simai/ui@10dd6caf7e40716bd8fe53859c7fb0d071697925:distr/rule/rule.json#name=cl-toast`
 
 ## См. также
 

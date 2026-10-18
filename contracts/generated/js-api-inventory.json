@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-9a4b9cc82edf",
-  "ui_commit": "9a4b9cc82edf6c5247832022f4e56f49911c2ec7",
+  "release": "ui-10dd6caf7e40",
+  "ui_commit": "10dd6caf7e40716bd8fe53859c7fb0d071697925",
   "stages": [
     "core",
     "dom",

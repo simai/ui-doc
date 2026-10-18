@@ -1165,8 +1165,6 @@
     "Loads the Smart base when the page has no Smart element yet; resolves with SF.smart. A project's own Smart component waits for it.": "Загружает основу Smart-компонентов, когда на странице ещё нет Smart-элемента; выполняется с `SF.smart`. Собственный Smart-компонент проекта ждёт её.",
     "Loads the shared Smart runtime (core/js/smart-base.js) and resolves with its modules.": "Загружает общую среду Smart-компонентов (`core/js/smart-base.js`) и выполняется с её модулями.",
     "The Smart base: SfBaseElement and the helpers a project's own Smart component extends.": "Основа Smart-компонентов: `SfBaseElement` и помощники, на которых строится собственный Smart-компонент проекта.",
-    "A whole theme from one colour: the eight tonal palettes as 128 --sf-<palette>-<tone> tones and 98 translucent steps, 226 variables in all.": "Тема из одного цвета: восемь тональных палитр — 128 тонов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, всего 226 переменных.",
-    "The Modal component's script API, loaded with the component (component/modal); its methods are the component's documentation.": "Скриптовый API компонента Modal; приходит вместе с компонентом (`component/modal`), его методы описаны на странице компонента.",
     "Arrow keys": "стрелки",
     "ArrowLeft and ArrowRight resize a focused resizable column": "`ArrowLeft` и `ArrowRight` меняют ширину колонки в фокусе, если её можно менять",
     "Enter on links": "`Enter` на ссылках",
@@ -1177,6 +1175,10 @@
     "native multiline text editing": "обычная правка многострочного текста",
     "native text editing": "обычная правка текста",
     "typeahead": "поиск по первым буквам",
-    "Typeahead": "поиск по первым буквам"
+    "Typeahead": "поиск по первым буквам",
+    "The first day of the week, 0 Sunday to 6 Saturday (1 Monday). Without the attribute it follows the page's language (ru: Monday, en-US: Sunday, ar-EG: Saturday).": "Первый день недели: от 0 — воскресенье до 6 — суббота (1 — понедельник). Без атрибута следует языку страницы (`ru` — понедельник, `en-US` — воскресенье, `ar-EG` — суббота).",
+    "A whole theme from one colour: the eight tonal palettes as the 128 --sf-<palette>-<tone> primitives and the 98 translucent steps core defines on them (--sf-<palette>-<tone>--alfa-<n>, listed in THEME_ALPHA), 226 variables in all.": "Тема из одного цвета: восемь тональных палитр — 128 примитивов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, которые ядро определяет на них (`--sf-<палитра>-<тон>--alfa-<n>`, список — в `THEME_ALPHA`), всего 226 переменных.",
+    "The sf-system modal's script API, loaded with component/sf-system; its methods are that component's documentation. It is not the Modal component's class: a page that loads only component/modal (sf-modal, the modal examples) has no SF.Modal, and finds the class at SF.Loader.ComponentRegistry.Modal (new Modal({id, param})), as the documentation's examples do.": "Скриптовый API модального окна `sf-system`; приходит с `component/sf-system`, его методы описаны на странице этого компонента. Это не класс компонента Modal: на странице, которая загружает только `component/modal` (`sf-modal`, примеры окна), `SF.Modal` нет, а класс лежит в `SF.Loader.ComponentRegistry.Modal` (`new Modal({id, param})`), как в примерах документации.",
+    "<sf-toast status=\"success\" title=\"Saved\" supporting-text=\"Your changes are available.\" role=\"status\" close-label=\"Close message\"></sf-toast>": "<sf-toast status=\"success\" title=\"Сохранено\" supporting-text=\"Изменения доступны.\" role=\"status\"></sf-toast>"
   }
 }

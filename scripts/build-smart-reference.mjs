@@ -153,7 +153,6 @@ for (const [folder, component] of [...components].sort(([a], [b]) => a.localeCom
 // ---- rendering --------------------------------------------------------------
 
 const missing = new Set();
-const usedStates = new Set();
 const ru = (text) => {
   if (text === undefined || text === null || text === '') return '';
   const value = dictionary[text];
@@ -357,18 +356,9 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     // the record for every component); the table names it once.
     const rows = new Set();
     const properties = manifest.inputs?.properties ?? {};
-    // What the component does with an old name, where it differs from the
-    // journal's stage (config/smart-reference.json `legacy_state`, keyed by the
-    // component folder and the old name as the table prints it).
-    const states = settings.legacy_state?.[folder] ?? {};
     for (const {record, item} of legacy) {
       const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
-      const stateOf = (name) => {
-        if (states[name] === undefined) return STAGE[record.stage] ?? record.stage;
-        usedStates.add(`${folder}:${name}`);
-        return states[name];
-      };
-      const stage = `${stateOf(from)} | ${record.remove_after ?? '—'}`;
+      const stage = `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}`;
       if (record.kind === 'attribute' && ownAxis.has(item.from)) {
         // Only the new axis's words moved; the old attribute keeps its own values.
         const words = (properties[item.to]?.enum ?? []).filter((value) => value !== '');
@@ -380,8 +370,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       rows.add(`| ${code(to)} | ${code(from)} | ${stage} |`);
       if (record.kind === 'attribute' && !item.attribute) {
         for (const [before, after] of valueMap(item.from, item.to, properties)) {
-          const old = `${item.from}="${before}"`;
-          rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(old)} | ${stateOf(old)} | ${record.remove_after ?? '—'} |`);
+          rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(`${item.from}="${before}"`)} | ${stage} |`);
         }
       }
     }
@@ -470,7 +459,9 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   // An example that does not use the component's own tag was copied from
   // another manifest; showing it would teach the wrong element.
   const example = manifest.ai_guidance?.minimal_example;
-  if (example && example.includes(`<${tag}`)) lines.push(`${h} Минимальная разметка`, '', '```html', example.trim(), '```', '');
+  // A Russian version of the example, when the dictionary has one, so its
+  // words match the page; otherwise the manifest's own.
+  if (example && example.includes(`<${tag}`)) lines.push(`${h} Минимальная разметка`, '', '```html', (dictionary[example] ?? example).trim(), '```', '');
 
   lines.push(`${h} Источник`, '', `- \`${citation}\``);
   if (rule) lines.push(`- \`${rule}\``);
@@ -579,25 +570,10 @@ const releaseLine = 'Раздел собран из манифестов вып�
   const text = show(uiRepo, uiCommit, 'distr/core/contracts/public-js-api.json');
   if (text) {
     const contract = JSON.parse(text);
-    // Corrections the docs carry until the contract says the same
-    // (config/smart-reference.json `js_api.globals`, keyed by name). An entry
-    // whose every field already matches the contract is stale and fails --check.
-    const overrides = settings.js_api?.globals ?? {};
-    const corrected = new Map();
-    for (const [name, fix] of Object.entries(overrides)) {
-      const item = contract.globals.find((entry) => entry.name === name);
-      const fields = Object.keys(fix).filter((key) => key !== 'note');
-      if (!item || fields.every((key) => JSON.stringify(item[key]) === JSON.stringify(fix[key]))) {
-        unplaced.push(`js_api override ${name}: ${item ? 'the contract already says this; remove the entry' : 'not in the contract'}`);
-        continue;
-      }
-      for (const key of fields) item[key] = fix[key];
-      corrected.set(name, fix.note);
-    }
     const KIND = {object: 'объект', function: 'функция', value: 'значение', class: 'класс'};
     const origin = (loadedBy) => {
       if (loadedBy === 'core') return 'ядро, сразу после `core.js`';
-      if (loadedBy === 'loader') return 'Loader, после `sf-loader-init`';
+      if (loadedBy === 'core-loader') return 'Loader, после `sf-loader-init`';
       if (loadedBy === 'smart-base') return 'основа Smart-компонентов';
       const [layer, name] = String(loadedBy).split('/');
       if (layer === 'component') return `компонент ${code(name)}`;
@@ -616,12 +592,6 @@ const releaseLine = 'Раздел собран из манифестов вып�
       '|:---|:---|:---|:---|:---|',
       ...publicGlobals.map((item) => `| ${code(item.name)} | ${KIND[item.kind] ?? code(item.kind)} | ${origin(item.loaded_by)} | ${cell(ru(item.summary))} | ${(item.members ?? []).map((member) => code(member)).join(', ') || '—'} |`),
       '',
-      ...(corrected.size ? [
-        'Где контракт выпуска расходится с тем, что видно на странице, таблица следует странице:',
-        '',
-        ...[...new Set(corrected.values())].map((note) => `- ${[...corrected].filter(([, text]) => text === note).map(([name]) => code(name)).join(', ')} — ${note}.`),
-        '',
-      ] : []),
       `Внутренние имена (${internalGlobals.length}) принадлежат среде выполнения и могут измениться в любом выпуске; страница их не вызывает: ${internalGlobals.map((item) => code(item.name)).join(', ')}.`,
       '',
     ];
@@ -643,13 +613,6 @@ const releaseLine = 'Раздел собран из манифестов вып�
   if (undeclared.length) body.push('', `Формы не объявляют: ${undeclared.join(', ')}.`);
   body.push('');
   writeGuideSection('content/ru/guide/smart-components/states-and-loading.md', '#### Формы компонентов', body);
-}
-
-for (const [folder, names] of Object.entries(settings.legacy_state ?? {})) {
-  if (folder === 'reason') continue;
-  for (const name of Object.keys(names)) {
-    if (!usedStates.has(`${folder}:${name}`)) unplaced.push(`legacy_state ${folder} ${name}: no such row; remove the entry`);
-  }
 }
 
 if (listMissing) {
