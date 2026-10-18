@@ -86,11 +86,9 @@ profile: reference
 
 Компонент регистрирует класс `Modal`. `SF.Loader` появляется к событию
 `sf-loader-init` на `window`; `SF.Loader.ready('Modal', callback)` передаёт
-класс, когда он зарегистрирован. Конструктор сразу добавляет окно в конец
-`body` и регистрирует его по `id`, после чего работают триггеры
-`data-sf-modal-open`. Окно на классах всегда стоит в конце `body` и закрывает всю
-страницу; держать окно внутри блока (`data-sf-overlay-container`) умеет
-[Smart-окно `<sf-modal>`](/ru/smart-components/overlays/modal/#окно-внутри-блока).
+класс, когда он зарегистрирован. Конструктор сразу добавляет окно на
+страницу и регистрирует его по `id`, после чего работают триггеры
+`data-sf-modal-open`.
 
 ```js
 const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
@@ -113,10 +111,29 @@ whenLoader(() => SF.Loader.ready('Modal', (Modal) => {
 | `position`, `width`, `height`, `fullscreen` | положение и размер |
 | `overlay`, `blur` | фон за окном |
 | `unclose`, `showClose`, `closeOnEsc`, `closeOnOverlay` | способы закрытия |
+| `container` | блок, который закрывает окно: селектор (`'#stage'`) или элемент; см. ниже |
 | `open` | открыть окно сразу после создания |
 | `mode`, `src`, `preload` | `mode: 'ajax'` или `'iframe'` загружает содержимое по адресу `src` |
 | `display: 'inline'` | окно в потоке страницы с ролью `region`, без затемнения, захвата фокуса и блокировки прокрутки; вставляется в элемент `root` |
 | `beforeOpen`, `afterOpen`, `beforeClose`, `afterClose` | функции обратного вызова; `false` из `before…` отменяет переход |
+
+**Окно внутри блока.** Обычно окно закрывает всё окно браузера и блокирует
+прокрутку страницы. С `param.container` окно выводится в этот блок и закрывает
+только его: блок получает атрибут `data-sf-overlay-container` (если его не
+было) и с ним `contain: layout`, а страница продолжает прокручиваться. Без
+`container` окно, открытое, пока фокус внутри блока с
+`data-sf-overlay-container`, закрывает этот блок; это решается заново при
+каждом `open()`. Поэтому, когда окно должно стоять в определённом блоке,
+передавайте `container`: результат тогда не зависит от того, где был фокус.
+Вне таких блоков ничего не меняется. Так же блок держит и
+[Smart-окно `<sf-modal>`](/ru/smart-components/overlays/modal/#окно-внутри-блока).
+
+```js
+const modal = new Modal({
+  id: 'preview',
+  param: {container: '#editor-pane', title: 'Предпросмотр', text: 'Окно закрывает только область редактора.'},
+});
+```
 
 Методы экземпляра: `open({animate})`, `close()`, `toggle()`, `setSrc(url)` и
 `reloadContent()` для загружаемого содержимого, `setOverlay(value)`,

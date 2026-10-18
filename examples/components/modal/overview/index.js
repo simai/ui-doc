@@ -4,6 +4,7 @@ const startModalExample = (Modal) => {
   const modal = new Modal({
     id: 'modal-example',
     param: {
+      container: '#modal-example-box',
       title: 'Опубликовать изменения?',
       html: `
         <div class="flex flex-col gap-2">

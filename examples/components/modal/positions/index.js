@@ -16,6 +16,7 @@ const startModalPositions = (Modal) => {
     const modal = new Modal({
       id,
       param: {
+        container: '#modal-example-box',
         title: label,
         html: '<p class="m-0">Окно стоит у выбранного края экрана.</p>',
         ...options,

@@ -12,6 +12,7 @@ const startModalSize = (Modal) => {
     const modal = new Modal({
       id,
       param: {
+        container: '#modal-example-box',
         title: label,
         html: '<p class="m-0">Ширину и высоту окна задают параметры.</p>',
         ...options,

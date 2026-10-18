@@ -13,22 +13,22 @@ Framework, а для каждого подключённого пакета пр
 блокировки нет, выпуск определяют по полному коммиту в адресе CDN, с которого
 страница подключает `distr/`, и сразу записывают его в файл блокировки;
 номер из `VERSION` выпуск не определяет. Пример показывает
-минимальное содержание для выпуска `ui-05eacb7c04e9` с пакетом продукта
+минимальное содержание для выпуска `ui-9a4b9cc82edf` с пакетом продукта
 `larena`, собранным для этого выпуска:
 
 ```json
 {
   "framework": {
-    "release": "ui-05eacb7c04e9",
-    "commit": "05eacb7c04e913660a62925b28fac40ee9032cb5",
+    "release": "ui-9a4b9cc82edf",
+    "commit": "9a4b9cc82edf6c5247832022f4e56f49911c2ec7",
     "distr_archive_sha256": "<runtime_sources.core.archive_sha256 из записи о выпуске>",
     "distr_tree": "<runtime_sources.core.runtime_tree из записи о выпуске>"
   },
   "packages": {
     "larena": {
       "receipt": "<путь к квитанции пакета>",
-      "source_revision": "f7f2e57590f176f1838b61f5e7ec140e51666c50",
-      "framework": "ui-05eacb7c04e9",
+      "source_revision": "5fccdcdcca4dc1baf211cdef5212e8383b142b83",
+      "framework": "ui-9a4b9cc82edf",
       "manifest_sha256": "<output.manifest_sha256 из квитанции>"
     }
   }

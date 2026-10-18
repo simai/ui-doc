@@ -13,6 +13,7 @@ const startModalBackdrop = (Modal) => {
     const modal = new Modal({
       id,
       param: {
+        container: '#modal-example-box',
         title: label,
         html: '<p class="m-0">Фон за окном отделяет его от страницы.</p>',
         ...options,
