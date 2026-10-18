@@ -27,7 +27,7 @@ description: "Как описать, зарегистрировать и про�
 
 Тип `project.product-grid` разрешает слот `items`, пресет `cards` и ресурс
 `project/product-grid`. Его манифест имеет формат
-`simai.composition.type-manifest.v1` ([Манифест типа](/ru/guide/layouts/reference/type-manifest/)). Контрольный пример
+`simai.composition.type-manifest` ([Манифест типа](/ru/guide/layouts/reference/type-manifest/)). Контрольный пример
 доказывает порядок карточек, а отрицательный — что неизвестный слот и опасная
 ссылка отклоняются.
 

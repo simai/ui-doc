@@ -92,7 +92,8 @@ const result = await SF.Composition.render(doc, { registry });
 
 ```json
 {
-  "schema": "simai.composition.document.v1",
+  "schema": "simai.composition.document",
+  "schema_version": 1,
   "id": "about-page",
   "profile": "ui-layout",
   "locale": "ru",

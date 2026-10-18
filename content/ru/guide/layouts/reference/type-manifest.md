@@ -10,7 +10,8 @@ description: "Манифест типа (`simai.composition.type-manifest`) — 
 
 ```json
 {
-  "schema": "simai.composition.type-manifest.v1",
+  "schema": "simai.composition.type-manifest",
+  "schema_version": 1,
   "type": "project.product-grid",
   "version": "1.0.0",
   "category": "component",
@@ -26,9 +27,8 @@ description: "Манифест типа (`simai.composition.type-manifest`) — 
 }
 ```
 
-- `schema` — `simai.composition.type-manifest.v1` или та же метка без версии,
-  `simai.composition.type-manifest`, с `"schema_version": 1`; реестр типов
-  принимает обе формы.
+- `schema` — `simai.composition.type-manifest` с `"schema_version": 1`; реестр
+  типов принимает и прежнюю метку `simai.composition.type-manifest.v1`.
 - `category` — `layout`, `content`, `component` или `smart`; по ней слоты
   разрешают детей.
 - `mode` — `leaf` или `composite`.

@@ -68,7 +68,8 @@ description: "Публичное имя Framework (атрибут, значен�
 
 ```json
 {
-  "schema": "simai.change-journal.v1",
+  "schema": "simai.change-journal",
+  "schema_version": 1,
   "policy": "contracts/lifecycle-policy.json",
   "records": [
     {"id": "attribute-type-to-appearance", "stage": "compat", "…": "…"}

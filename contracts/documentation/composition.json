@@ -1,24 +1,24 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "ebfc1528796459e7f3802d8d77a5ef058973050b",
-    "core_revision": "99fd4f0bea6f7d2b1fbb38bca00d80102f0a62bb",
+    "source_revision": "963c46cc4b752fd281b9bdd24855ae1ccea31e8a",
+    "core_revision": "a063efd005e3264bbb1a914a54a7f01af43a532b",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
-      "src/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "src/core/js/composition/index.mjs": "77e3a8a57800d4f204afb5b4d2dbc1d3d005f7cfd7f2d81a39a7a2b77de399aa",
-      "src/core/js/composition/builtins.mjs": "62ccb18b910e34fb39019805b41f85d3208ec714a6840bd0dcc79d75f8434d7e",
-      "tests/fixtures/composition/catalog-page.json": "02b694120e106f047d0848176a4b8e59ce51360e50760315fb28f428ee51ec0f",
+      "src/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
+      "src/core/js/composition/index.mjs": "45a71cda246130f6dd6aa3b4c44f24ae8eda396712705ed986720c9ebc7919f9",
+      "src/core/js/composition/builtins.mjs": "cecc06f437f0c247b0430c565075f2de6435546a6ef44311b366e34b9592f7ea",
+      "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
       "src/smart/buttons/smart.manifest.json": "3ee83769eb6ff6903d549c2d2ef037a09b0c58666943c8c9e91e3ae9a1201774"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
-      "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
-      "distr/core/js/core.js": "f4b31efe4f31b8a718a7351ad065ec68a1045f9c7ab5f8810b31936630d5bb6a"
+      "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
+      "distr/core/js/core.js": "d212f911c44ad36ad15a29eaa47757f76f4b1b23bad24dfe333a120e03d24fc2"
     },
-    "note": "Reviewed at source ebfc1528 and core 99fd4f0b (release ui-99fd4f0bea6f): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-25beeb814ae8."
+    "note": "At source 963c46cc and core a063efd0 (release ui-a063efd005e3) the composition writers emit format names without a version (format-names-without-version, step 2): builtins, compositionTypeFromSmartManifest and composition-types.v1.json write `simai.composition.type-manifest` / port / editor manifests with schema_version 1, and the catalog-page fixture is `simai.composition.document` with schema_version 1; a Document resolved from a recipe takes the recipe's form. The guide's document and type-manifest samples, the layout-inspector and layout example assets and the fixture's public copy are moved to the new form; what-is-layout, type-manifest and custom-type say so; the standards map lists what is still written in the older form."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
@@ -117,7 +117,7 @@
     {
       "path": "content/ru/guide/layouts/reference/custom-type.md",
       "snippets": [
-        "simai.composition.type-manifest.v1",
+        "simai.composition.type-manifest",
         "project.product-grid"
       ]
     },

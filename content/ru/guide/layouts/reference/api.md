@@ -37,7 +37,7 @@ description: "Всё доступно как `SF.Composition` в браузер�
 ```js
 const assembled = await SF.Composition.resolveRecipe(recipe, {
   trustedContext: {scope: 'example-site-17'}, // область сайта от продукта
-  inputs,            // снимок simai.composition.inputs.v1
+  inputs,            // снимок simai.composition.inputs
   ports,             // {readReference, readInput} — чтение источников, реализует продукт
   registry,          // реестр типов, если есть собственные типы
   executionContract  // {contractDigest, registryDigest, rendererDigest}

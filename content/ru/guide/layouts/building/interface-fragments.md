@@ -119,7 +119,7 @@ const {published, refused} = SF.Composition.publishEffects(answer.effects ?? [],
 
 | Поле | Что означает | Правило |
 |:---|:---|:---|
-| `schema` | метка формата | ровно `simai.interface-fragment.v1` |
+| `schema` | метка формата | `simai.interface-fragment.v1` или `simai.interface-fragment` с `"schema_version": 1` |
 | `id` | имя фрагмента | не меньше двух частей через точку из строчных латинских букв, цифр и дефиса: `shop.order-list` |
 | `element` | тег элемента | имя пользовательского элемента с дефисом: `shop-order-list` |
 | `regions` | области страницы, где фрагмент может стоять | от одной до восьми уникальных имён: строчная буква, затем до 31 строчной буквы, цифры или дефиса |

@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/schema-name.php';
 
 $root = dirname(__DIR__);
 $read = static fn (string $path): array => json_decode((string) file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
@@ -29,10 +30,8 @@ foreach ($plans['pages'] ?? [] as $page) {
     }
     $dependency = $receipt['dependency_receipt'] ?? [];
     $execution = $dependency['executionContract'] ?? [];
-    // Either form of the format name: the versioned one, or the name with schema_version.
-    $dependencyVersioned = ($dependency['schema'] ?? null) === 'simai.composition.dependencies.v1';
-    $dependencyNamed = ($dependency['schema'] ?? null) === 'simai.composition.dependencies' && ($dependency['schema_version'] ?? null) === 1;
-    if (!$dependencyVersioned && !$dependencyNamed) $add('dependency_receipt_invalid', $url);
+    // Either form of the format name (scripts/schema-name.php).
+    if (!simai_is_schema($dependency, 'simai.composition.dependencies', 1)) $add('dependency_receipt_invalid', $url);
     if (($execution['contractDigest'] ?? null) !== ($specification['contractDigest'] ?? null)) $add('recipe_specification_mismatch', $url);
     if (($execution['rendererDigest'] ?? null) !== 'sha256:' . ($engine['tree_sha256'] ?? '')) $add('docara_renderer_mismatch', $url);
     foreach (['recipe_digest' => 'recipeDigest', 'document_digest' => 'documentDigest'] as $field => $dependencyField) {

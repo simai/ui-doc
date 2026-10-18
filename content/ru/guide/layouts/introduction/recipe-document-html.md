@@ -102,7 +102,8 @@ Document имеет формат `simai.composition.document`. Его оболо
 
 ```json
 {
-  "schema": "simai.composition.document.v1",
+  "schema": "simai.composition.document",
+  "schema_version": 1,
   "id": "about-page",
   "profile": "ui-layout",
   "locale": "ru",

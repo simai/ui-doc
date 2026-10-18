@@ -1094,7 +1094,7 @@
     "The product's own colours offered beside the picker, as sf-color takes them: '#hex|Name, #hex'.": "Цвета продукта рядом с выбором, как у sf-color: `'#hex|Название, #hex'`.",
     "The selector of the rule in the events' css and in toCSS().": "Селектор правила в `css` событий и в `toCSS()`.",
     "The theme as one stylesheet rule of its 128 primitives, under the given selector or the `selector` attribute.": "Тема одним правилом CSS из 128 примитивов под переданным селектором или под атрибутом `selector`.",
-    "The theme object (simai.framework.theme.v1): source hue and chroma, and each palette's hue, chroma and tones.": "Объект темы (`simai.framework.theme.v1`): тон и насыщенность источника и у каждой палитры её тон, насыщенность и тона.",
+    "The theme object (simai.framework.theme.v1): source hue and chroma, and each palette's hue, chroma and tones.": "Объект темы (`simai.framework.theme` с `schema_version: 1`): тон и насыщенность источника и у каждой палитры её тон, насыщенность и тона.",
     "A component's word in the language of a node, with the page's registered words first.": "Слово компонента на языке узла; сначала — слова, зарегистрированные страницей.",
     "A promise of a Smart element's definition, loading it when the page has not.": "Обещание определения Smart-элемента; загружает его, если страница ещё не загрузила.",
     "A promise of the field renderer set (SF.fieldRenderers), loading it on demand.": "Обещание набора отрисовщиков полей (`SF.fieldRenderers`); загружает его по требованию.",
