@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3aeebc0f70703d8033c151d448241fd3",
+    "content-hash": "0346041386b30a2a45ba4ae9bb67104f",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1570,16 +1570,16 @@
         },
         {
             "name": "simai/docara",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara.git",
-                "reference": "3a2095f90816a4bd0eaa6e842546c30e28cb36e9"
+                "reference": "bce2fdf07150be30a8d5b306e88bcda563d48496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/3a2095f90816a4bd0eaa6e842546c30e28cb36e9",
-                "reference": "3a2095f90816a4bd0eaa6e842546c30e28cb36e9",
+                "url": "https://api.github.com/repos/simai/docara/zipball/bce2fdf07150be30a8d5b306e88bcda563d48496",
+                "reference": "bce2fdf07150be30a8d5b306e88bcda563d48496",
                 "shasum": ""
             },
             "require": {
@@ -1671,7 +1671,7 @@
                 "source": "https://github.com/simai/docara",
                 "security": "https://github.com/simai/docara/security/policy"
             },
-            "time": "2026-10-18T13:24:50+00:00"
+            "time": "2026-10-18T15:04:08+00:00"
         },
         {
             "name": "symfony/clock",
