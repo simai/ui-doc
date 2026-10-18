@@ -72,7 +72,7 @@ Smart-компонента своей копии этих модулей не н
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
-      larena: {base: '/assets/larena/8f4c00d7f788f5a5eba5a91bf6c66cb73f0152d9/smart'},
+      larena: {base: '/assets/larena/2e4c08bda8c18804d5918a7fbc9d09e4f448226d/smart'},
     },
   };
 </script>

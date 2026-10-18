@@ -29,7 +29,10 @@ foreach ($plans['pages'] ?? [] as $page) {
     }
     $dependency = $receipt['dependency_receipt'] ?? [];
     $execution = $dependency['executionContract'] ?? [];
-    if (($dependency['schema'] ?? null) !== 'simai.composition.dependencies.v1') $add('dependency_receipt_invalid', $url);
+    // Either form of the format name: the versioned one, or the name with schema_version.
+    $dependencyVersioned = ($dependency['schema'] ?? null) === 'simai.composition.dependencies.v1';
+    $dependencyNamed = ($dependency['schema'] ?? null) === 'simai.composition.dependencies' && ($dependency['schema_version'] ?? null) === 1;
+    if (!$dependencyVersioned && !$dependencyNamed) $add('dependency_receipt_invalid', $url);
     if (($execution['contractDigest'] ?? null) !== ($specification['contractDigest'] ?? null)) $add('recipe_specification_mismatch', $url);
     if (($execution['rendererDigest'] ?? null) !== 'sha256:' . ($engine['tree_sha256'] ?? '')) $add('docara_renderer_mismatch', $url);
     foreach (['recipe_digest' => 'recipeDigest', 'document_digest' => 'documentDigest'] as $field => $dependencyField) {

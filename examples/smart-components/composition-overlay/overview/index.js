@@ -8,7 +8,8 @@ const initializeOverlayExample = async () => {
   overlay.dataset.exampleReady = 'true';
   const text = (value) => [{ type: 'text', value }];
   const model = {
-    schema: 'simai.composition.document.v1',
+    schema: 'simai.composition.document',
+    schema_version: 1,
     id: 'overlay-example',
     profile: 'ui-layout',
     root: { id: 'page', type: 'layout.section', slots: { default: [

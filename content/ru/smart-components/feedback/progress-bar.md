@@ -65,7 +65,7 @@ upload.addEventListener('load', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-25beeb814ae8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-99fd4f0bea6f` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -74,7 +74,7 @@ upload.addEventListener('load', () => {
 | Тег | `<sf-progress-bar>` |
 | Назначение | Непрерывный определённый прогресс с нормализованным значением, доступной семантикой диапазона и явным семантическим тоном. |
 | Контракт | `smart.progress-bar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-25beeb814ae8` |
+| Поставка | выпуск Framework `ui-99fd4f0bea6f` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -122,8 +122,8 @@ upload.addEventListener('load', () => {
 
 ### Источник
 
-- `simai/ui@25beeb814ae87b1e8e7bb5831b70a23b7cf36f96:distr/smart/progress-bar`
-- `simai/ui@25beeb814ae87b1e8e7bb5831b70a23b7cf36f96:distr/rule/rule.json#name=cl-progress-bar`
+- `simai/ui@99fd4f0bea6f7d2b1fbb38bca00d80102f0a62bb:distr/smart/progress-bar`
+- `simai/ui@99fd4f0bea6f7d2b1fbb38bca00d80102f0a62bb:distr/rule/rule.json#name=cl-progress-bar`
 
 ## См. также
 

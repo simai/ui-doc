@@ -7,7 +7,8 @@ const output = document.querySelector('#editor-document');
 const text = (value) => [{ type: 'text', value }];
 let created = 0;
 let model = {
-  schema: 'simai.composition.document.v1',
+  schema: 'simai.composition.document',
+  schema_version: 1,
   id: 'editor-demo',
   profile: 'ui-layout',
   root: { id: 'page', type: 'layout.section', slots: { default: [

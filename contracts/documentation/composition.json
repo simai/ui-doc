@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "94b497f5bf0b54c02c8749eae57c6821a629797c",
-    "core_revision": "25beeb814ae87b1e8e7bb5831b70a23b7cf36f96",
+    "source_revision": "ebfc1528796459e7f3802d8d77a5ef058973050b",
+    "core_revision": "99fd4f0bea6f7d2b1fbb38bca00d80102f0a62bb",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "780da3f1592fef294936229f8188c6d52a8fe5b3b7b4d7ef216e0b268ca13dbd",
       "distr/core/js/core.js": "f4b31efe4f31b8a718a7351ad065ec68a1045f9c7ab5f8810b31936630d5bb6a"
     },
-    "note": "At source 94b497f5 and core 25beeb81 (release ui-25beeb814ae8; ui-1cb0739a8423 was skipped: it shipped composition modules importing a schema-name.mjs it did not carry) the composition modules read a format name in both forms through core/js/composition/schema-name.mjs, which now ships beside them; index.mjs changes only that import, core.js only moves the runtime's own names under SF.__internal. what-is-layout and type-manifest say both forms are accepted; the rest of the composition pages do not change."
+    "note": "Reviewed at source ebfc1528 and core 99fd4f0b (release ui-99fd4f0bea6f): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-25beeb814ae8."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
