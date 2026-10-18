@@ -20,15 +20,24 @@ Framework кладёт свои объекты и функции в `window.SF`.
   страницы: `SF.Input` есть на странице с полем `sf-input`, `SF.ThemePalette` —
   на странице с `<sf-theme-generator>`.
 
+Внутренние имена среды выполнения — шина сообщений, состояние реестра
+модулей, объявление основы Smart-компонентов и `litHtml` — лежат в
+`SF.__internal`. Прежние имена прямо на `SF` (`SF.send`, `SF.receive`,
+`SF.runtimeModules`, `SF.runtimeArrived`, `SF.runtimeLoading`,
+`SF.runtimeSettled`, `SF.smartBaseAnnounced`, `SF.litHtml`) читают и пишут
+туда же и отмечены устаревшими до 2026-12-01 (запись журнала
+`global-sf-internal`, вид `global`). `SF.loadSmartBase`, `SF.smart`,
+`SF.smartBaseReady`, `SF.loadRuntime` и `SF.runtimeModule` — публичные.
+
 `SF.Loader.theme` и `SF.Loader.themePreference` — значения состояния, а не
 функции: тема на странице и выбор человека; первое значение появляется, когда
 Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-5f1d2e9e5529` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-25beeb814ae8` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
-Публичные имена (59) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
+Публичные имена (64) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
 | Имя | Вид | Откуда | Что это | Члены |
 |:---|:---|:---|:---|:---|
@@ -56,6 +65,8 @@ Loader выбрал тему при запуске.
 | `SF.language` | объект | ядро, сразу после `core.js` | Язык страницы и слова, зарегистрированные для компонентов. | `current`, `use`, `register`, `registerAll`, `known`, `components`, `onChange`, `forget` |
 | `SF.LazyLoad` | объект | компонент `lazy-load` | Скриптовый API компонента LazyLoad; приходит вместе с компонентом (`component/lazy-load`), его методы описаны на странице компонента. | — |
 | `SF.Loader` | объект | ядро, сразу после `core.js` | Загрузчик: по требованию загружает то, что использует страница, — компоненты и утилиты — и тему. Когда тема задана (`setTheme`, `changeTheme`), её читают `SF.Loader.theme` и `SF.Loader.themePreference`. | `ready`, `ensurePlugin`, `ensureSmartElementLoaded`, `registerComponent`, `setTheme`, `changeTheme`, `theme`, `preloadIcons`, `clearCache`, `smartPath`, `minified` |
+| `SF.loadRuntime` | функция | ядро, сразу после `core.js` | Загружает общую среду Smart-компонентов (`core/js/smart-base.js`) и выполняется с её модулями. | — |
+| `SF.loadSmartBase` | функция | ядро, сразу после `core.js` | Загружает основу Smart-компонентов, когда на странице ещё нет Smart-элемента; выполняется с `SF.smart`. Собственный Smart-компонент проекта ждёт её. | — |
 | `SF.Mask` | объект | ядро, сразу после `core.js` | Маски ввода: загрузить библиотеку масок и подключить маску к полю. | `load`, `create`, `pipe`, `destroy` |
 | `SF.Modal` | объект | компонент `sf-system` | Скриптовый API компонента Modal; приходит вместе с компонентом (`component/sf-system`), его методы описаны на странице компонента. | — |
 | `SF.nothing` | значение | основа Smart-компонентов | `nothing` библиотеки Lit. | — |
@@ -74,9 +85,12 @@ Loader выбрал тему при запуске.
 | `SF.render` | функция | основа Smart-компонентов | `render` библиотеки Lit. | — |
 | `SF.Resizer` | объект | Smart-компонент `sf-resizer` | Скриптовый API компонента Resizer; приходит вместе с компонентом (`smart/resizer`), его методы описаны на странице компонента. | — |
 | `SF.RuleLoader` | объект | ядро, сразу после `core.js` | Правила загрузки по имени: что нужно классу, тегу или компоненту. Пакет продукта добавляет сюда свои правила (свой `rule.js`). | — |
+| `SF.runtimeModule` | функция | ядро, сразу после `core.js` | Обещание одного модуля общей среды Smart-компонентов по его id (`lit`, `smart-base`, `page-language` и другие); через него импортирует собранный Smart-бандл. | — |
 | `SF.Scrollbar` | объект | компонент `scrollbar` | Скриптовый API компонента Scrollbar; приходит вместе с компонентом (`component/scrollbar`), его методы описаны на странице компонента. | — |
 | `SF.SfBaseElement` | класс | основа Smart-компонентов | Базовый класс каждого Smart-элемента; собственные Smart-компоненты продукта наследуют его. | — |
 | `SF.Slider` | объект | компонент `slider` | Скриптовый API компонента Slider; приходит вместе с компонентом (`component/slider`), его методы описаны на странице компонента. | — |
+| `SF.smart` | объект | основа Smart-компонентов | Основа Smart-компонентов: `SfBaseElement` и помощники, на которых строится собственный Smart-компонент проекта. | — |
+| `SF.smartBaseReady` | объект | ядро, сразу после `core.js` | Обещание основы Smart-компонентов, как бы она ни пришла (со Smart-элементом или через `SF.loadSmartBase()`). | — |
 | `SF.Sortable` | объект | Smart-компонент `sf-sortable` | Скриптовый API компонента Sortable; приходит вместе с компонентом (`smart/sortable`), его методы описаны на странице компонента. | — |
 | `SF.Spinner` | объект | компонент `spinner` | Скриптовый API компонента Spinner; приходит вместе с компонентом (`component/spinner`), его методы описаны на странице компонента. | — |
 | `SF.Switch` | объект | компонент `switch` | Скриптовый API компонента Switch; приходит вместе с компонентом (`component/switch`), его методы описаны на странице компонента. | — |
@@ -92,7 +106,7 @@ Loader выбрал тему при запуске.
 | `SF.whenDefined` | функция | ядро, сразу после `core.js` | Обещание определения Smart-элемента; загружает его, если страница ещё не загрузила. | — |
 | `SF.whenFieldRenderers` | функция | ядро, сразу после `core.js` | Обещание набора отрисовщиков полей (`SF.fieldRenderers`); загружает его по требованию. | — |
 
-Внутренние имена (32) принадлежат среде выполнения и могут измениться в любом выпуске; страница их не вызывает: `SF.Ajax`, `SF.Blocks`, `SF.cloneDeep`, `SF.ComponentRegistry`, `SF.Controller`, `SF.curpos`, `SF.Events`, `SF.extend`, `SF.flag`, `SF.Gallery`, `SF.litHtml`, `SF.loadRuntime`, `SF.loadSmartBase`, `SF.Methods`, `SF.Overbox`, `SF.Param`, `SF.Parameters`, `SF.Provider`, `SF.quickkey`, `SF.receive`, `SF.runtimeArrived`, `SF.runtimeLoading`, `SF.runtimeModule`, `SF.runtimeModules`, `SF.runtimeSettled`, `SF.Search`, `SF.send`, `SF.smart`, `SF.smartBaseAnnounced`, `SF.smartBaseReady`, `SF.Special`, `SF.topZIndex`.
+Внутренние имена (28) принадлежат среде выполнения и могут измениться в любом выпуске; страница их не вызывает: `SF.__internal`, `SF.Ajax`, `SF.Blocks`, `SF.cloneDeep`, `SF.ComponentRegistry`, `SF.Controller`, `SF.curpos`, `SF.Events`, `SF.extend`, `SF.flag`, `SF.Gallery`, `SF.litHtml`, `SF.Methods`, `SF.Overbox`, `SF.Param`, `SF.Parameters`, `SF.Provider`, `SF.quickkey`, `SF.receive`, `SF.runtimeArrived`, `SF.runtimeLoading`, `SF.runtimeModules`, `SF.runtimeSettled`, `SF.Search`, `SF.send`, `SF.smartBaseAnnounced`, `SF.Special`, `SF.topZIndex`.
 
 ## Смотрите также
 

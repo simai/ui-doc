@@ -106,7 +106,7 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-5f1d2e9e5529` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-25beeb814ae8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -115,7 +115,7 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 | Тег | `<sf-composition-overlay>` |
 | Назначение | Интерфейс редактора поверх отрисованного Composition Document: рамки, подписи, значки, панель действий, места вставки, перемещение перетаскиванием и с клавиатуры и дерево для клавиатуры — без изменения HTML холста. |
 | Контракт | `smart.composition-overlay`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-5f1d2e9e5529` |
+| Поставка | выпуск Framework `ui-25beeb814ae8` |
 | Жизненный цикл | экспериментальный: API может меняться между выпусками |
 | Готовность | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -160,8 +160,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### Источник
 
-- `simai/ui@5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864:distr/smart/composition-overlay`
-- `simai/ui@5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864:distr/rule/rule.json#name=cl-composition-overlay`
+- `simai/ui@25beeb814ae87b1e8e7bb5831b70a23b7cf36f96:distr/smart/composition-overlay`
+- `simai/ui@25beeb814ae87b1e8e7bb5831b70a23b7cf36f96:distr/rule/rule.json#name=cl-composition-overlay`
 
 ## См. также
 

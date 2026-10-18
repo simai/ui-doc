@@ -33,7 +33,7 @@ foreach (['UI_METADATA_REVISION', 'UI_RUNTIME_REVISION', 'SOURCE_REVISION', 'BUI
 // own variables and its own build step, so its appearance fails here.
 $package = "/'(?<name>[a-z0-9-]+)' => \[\s*'repository' => '(?<repository>[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+)',"
     . "\s*'revision' => '(?<revision>[0-9a-f]{40})',\s*'path' => '(?<path>[A-Za-z0-9._\/-]+)',"
-    . "\s*'archive_sha256' => '(?<archive>[0-9a-f]{64})',\s*\]/";
+    . "\s*'archive_sha256' => '(?<archive>[0-9a-f]{64})',\s*'builder' => '(?<builder>[0-9a-f]{40})',\s*\]/";
 if (preg_match_all($package, $text, $matches, PREG_SET_ORDER) !== 1 || $matches[0]['name'] !== 'larena') {
     fwrite(STDERR, "pin unreadable: PACKAGES must declare exactly the larena package\n");
     exit(1);
@@ -42,6 +42,7 @@ $pins['LARENA_REPOSITORY'] = $matches[0]['repository'];
 $pins['LARENA_REVISION'] = $matches[0]['revision'];
 $pins['LARENA_PATH'] = $matches[0]['path'];
 $pins['LARENA_ARCHIVE_SHA256'] = $matches[0]['archive'];
+$pins['LARENA_BUILDER'] = $matches[0]['builder'];
 
 foreach ($pins as $name => $value) {
     echo $name, '=', $value, "\n";

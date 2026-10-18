@@ -188,6 +188,9 @@ $current = [
     'source' => $pinned("/const SOURCE_REVISION = '([0-9a-f]{40})'/"),
     'builder' => $pinned("/const BUILDER_REVISION = '([0-9a-f]{40})'/"),
     'larena' => $pinned("/'larena' => \[\s*'repository' => 'simai\/larena-ui',\s*'revision' => '([0-9a-f]{40})'/"),
+    // The ui-builder commit that built the larena package (its receipt): it may
+    // be newer than the one the Framework release was built with.
+    'larena_builder' => $pinned("/'larena' => \[[^\]]*?'builder' => '([0-9a-f]{40})'/s"),
 ];
 $current['release'] = 'ui-' . substr($current['ui_runtime'], 0, 12);
 $valuesPath = $root . '/config/guide-release-values.json';
@@ -195,8 +198,18 @@ $recorded = json_decode((string) file_get_contents($valuesPath), true, 512, JSON
 $replacements = [];
 foreach ($recorded['values'] as $key => $old) {
     if (isset($current[$key]) && $old !== $current[$key]) {
+        if (isset($replacements[$old]) && $replacements[$old] !== $current[$key]) {
+            throw new RuntimeException('GUIDE_RELEASE_VALUE_AMBIGUOUS: ' . $old . ' was two values that now differ');
+        }
         $replacements[$old] = $current[$key];
     }
+}
+// Text that names a release for what it was -- «open sources from release X on»
+// -- is not the current release: config/guide-release-values.json `keep` lists
+// those exact spans, page by page, and the sync leaves them as written.
+$keep = [];
+foreach ($recorded['keep'] ?? [] as $span) {
+    $keep[(string) $span['page']][] = (string) $span['text'];
 }
 // Longer values first, so a full commit is replaced before the release id
 // that is its prefix.
@@ -208,7 +221,15 @@ if ($replacements !== []) {
             continue;
         }
         $page = (string) file_get_contents($file->getPathname());
-        $next = strtr($page, $replacements);
+        $relative = str_replace('\\', '/', substr($file->getPathname(), strlen($root) + 1));
+        $held = [];
+        foreach ($keep[$relative] ?? [] as $index => $span) {
+            if (! str_contains($page, $span)) {
+                throw new RuntimeException('GUIDE_RELEASE_KEEP_MISSING: ' . $relative . ': ' . $span);
+            }
+            $held["\u{E000}keep-{$index}\u{E000}"] = $span;
+        }
+        $next = strtr(strtr(strtr($page, array_flip($held)), $replacements), $held);
         if ($next !== $page) {
             $changed[] = str_replace('\\', '/', substr($file->getPathname(), strlen($root) + 1));
             if (! $checkOnly) {

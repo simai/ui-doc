@@ -36,19 +36,23 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '242d3b92e3658a4c6204899854f3d69ff4c77ed4';
-const UI_RUNTIME_REVISION = '5f1d2e9e5529e8a80d5fcf497dd8d1ff2ab9c864';
-const SOURCE_REVISION = 'd8992a9340187e6f2c50114e86fce60c1d31de05';
-const BUILDER_REVISION = 'e7c2fc2c332818f97cb6c17a89953393b622e26f';
-const RELEASE_LOCK = 'contracts/releases/ui-5f1d2e9e5529.lock.json';
+const UI_METADATA_REVISION = '719ceb3928dd72cd46e11147d0e8b9587a859fde';
+const UI_RUNTIME_REVISION = '25beeb814ae87b1e8e7bb5831b70a23b7cf36f96';
+const SOURCE_REVISION = '94b497f5bf0b54c02c8749eae57c6821a629797c';
+const BUILDER_REVISION = '48c4d7debdf92949bf3204e66c849f4f8605d056';
+const RELEASE_LOCK = 'contracts/releases/ui-25beeb814ae8.lock.json';
 // Product component packages, each taken by its package receipt. The build is
-// reproducible, so the archive digest names the exact bytes.
+// reproducible, so the archive digest names the exact bytes. A package names
+// the ui-builder commit that built it: it may be newer than the one the
+// Framework release was built with (BUILDER_REVISION), and CI rebuilds the
+// package with this one.
 const PACKAGES = [
     'larena' => [
         'repository' => 'simai/larena-ui',
-        'revision' => 'e8f16f2ab2c28b485f0497289c714dccbe780c16',
+        'revision' => '8f4c00d7f788f5a5eba5a91bf6c66cb73f0152d9',
         'path' => 'components',
         'archive_sha256' => 'fe6f9ea89e210a55a19b9dddb9712038fa83fc6cef9cb8651424947b0a80252e',
+        'builder' => '48c4d7debdf92949bf3204e66c849f4f8605d056',
     ],
 ];
 
@@ -189,6 +193,7 @@ foreach ($receiptPaths as $receiptPath) {
         'revision' => $receipt['package_source']['revision'] ?? null,
         'path' => $receipt['package_source']['path'] ?? null,
         'archive_sha256' => $receipt['output']['archive_sha256'] ?? null,
+        'builder' => $receipt['builder']['revision'] ?? null,
     ];
     if ($pinned === null || isset($receipts[$name])) {
         throw new RuntimeException('FRAMEWORK_PACKAGE_NOT_PINNED: ' . (string) $name);

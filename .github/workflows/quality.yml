@@ -62,7 +62,7 @@ jobs:
           clone simai/ui ui "$UI_METADATA_REVISION"
           git -C "$parent/ui" cat-file -e "$UI_RUNTIME_REVISION^{commit}"
           clone simai/ui-source ui-source "$SOURCE_REVISION"
-          clone simai/ui-builder ui-builder "$BUILDER_REVISION"
+          clone simai/ui-builder ui-builder "$LARENA_BUILDER"
           clone "$LARENA_REPOSITORY" larena-ui "$LARENA_REVISION"
           {
             echo "FRAMEWORK_PARENT=$parent"

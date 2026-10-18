@@ -484,16 +484,16 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 (`"schema": "simai.framework.product-package-source-lock.v1"`), файл
 настроек `sf-build` (`"schema": "simai.sf-build.config.v1"`), описание
 фрагмента (`"schema": "simai.interface-fragment.v1"`), манифест эффекта
-(`"schema": "simai.effect.v1"`). Для них метку
-пишут точно, с версией; поле `schema_version` им не нужно. Перевод такого
-формата на пару `schema` и `schema_version` — несовместимое изменение формата
-и проходит путь, описанный ниже.
+(`"schema": "simai.effect.v1"`) и другие — всего 40 меток. Такие форматы
+переводятся на пару `schema` и `schema_version` путём, описанным ниже: запись
+журнала `format-names-without-version` (совместимость до 2026-12-01). Каждый
+читатель Framework, `sf-build` и читатель файла закрепления Larena уже
+принимают обе формы — `simai.<имя>.v<n>` и `simai.<имя>` с `schema_version`
+рядом; писатели Framework переходят на новую форму следующим выпуском.
 
-Обе формы читает один модуль исходников Framework — `src/core/js/schema-name.mjs`:
-`readSchema()` разбирает и `simai.<имя>.v<n>`, и `simai.<имя>` с
-`schema_version` в одно `{name, version}`, а `schemaFields()` выдаёт писателю
-новую форму. Через него читатели Framework проходят окно совместимости,
-когда формат переводят на пару полей.
+Обе формы разбирает модуль Framework `core/js/composition/schema-name.mjs` (в поставке — рядом с модулями композиции):
+`readSchema()` сводит `simai.<имя>.v<n>` и `simai.<имя>` с `schema_version` к
+одному `{name, version}`, а `schemaFields()` выдаёт писателю новую форму.
 
 **Несовместимое изменение формата** проходит жизненный цикл изменений (см. [Жизненный цикл изменений и совместимость](/ru/guide/connection/change-lifecycle/)
 и [Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект)):

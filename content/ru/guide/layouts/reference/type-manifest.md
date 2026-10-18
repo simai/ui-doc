@@ -26,6 +26,9 @@ description: "Манифест типа (`simai.composition.type-manifest`) — 
 }
 ```
 
+- `schema` — `simai.composition.type-manifest.v1` или та же метка без версии,
+  `simai.composition.type-manifest`, с `"schema_version": 1`; реестр типов
+  принимает обе формы.
 - `category` — `layout`, `content`, `component` или `smart`; по ней слоты
   разрешают детей.
 - `mode` — `leaf` или `composite`.
