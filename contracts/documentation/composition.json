@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "f1823d0ec7442fd129c310f4f3e7c62959cc9d07",
-    "core_revision": "1082208bdcef19a747c2b738e628a52739be1b66",
+    "source_revision": "f55d70e53d2bbd2374beb918e2f3d800f730ed7d",
+    "core_revision": "05eacb7c04e913660a62925b28fac40ee9032cb5",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "distr/core/js/core.js": "d212f911c44ad36ad15a29eaa47757f76f4b1b23bad24dfe333a120e03d24fc2"
     },
-    "note": "Reviewed at source f1823d0e and core 1082208b (release ui-1082208bdcef): the composition sources, schemas, builtins, fixture, buttons manifest and core.js are byte-identical to the review at ui-a063efd005e3."
+    "note": "At source f55d70e5 and core 05eacb7c (release ui-05eacb7c04e9) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at the previous pin (the release adds data-sf-overlay-container for sf-modal and sf-drawer and sf-upgrade's rename-format, none of which the composition pages describe)."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

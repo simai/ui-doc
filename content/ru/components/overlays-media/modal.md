@@ -88,7 +88,9 @@ profile: reference
 `sf-loader-init` на `window`; `SF.Loader.ready('Modal', callback)` передаёт
 класс, когда он зарегистрирован. Конструктор сразу добавляет окно в конец
 `body` и регистрирует его по `id`, после чего работают триггеры
-`data-sf-modal-open`.
+`data-sf-modal-open`. Окно на классах всегда стоит в конце `body` и закрывает всю
+страницу; держать окно внутри блока (`data-sf-overlay-container`) умеет
+[Smart-окно `<sf-modal>`](/ru/smart-components/overlays/modal/#окно-внутри-блока).
 
 ```js
 const whenLoader = (run) => (window.SF?.Loader ? run() : window.addEventListener('sf-loader-init', run, {once: true}));
