@@ -98,7 +98,7 @@ Loader.
 `pluginListVersion` — любые непустые строки: Loader сравнивает их с
 сохранёнными в `localStorage` как есть (см. [Кеш и версии адресов](/ru/guide/connection/loader/#кеш-и-версии-адресов)). Для своей
 копии поставки обеим меткам дают идентификатор выпуска, например
-`ui-7493766fe39e`. При переходе на другой выпуск метки меняются вместе с ним:
+`ui-2f724e0810ea`. При переходе на другой выпуск метки меняются вместе с ним:
 Loader очищает сохранённые списки модулей, а адреса модулей получают новый
 параметр `sf_v`.
 
@@ -106,8 +106,8 @@ Loader очищает сохранённые списки модулей, а а�
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
-    cacheVersion: 'ui-7493766fe39e',
-    pluginListVersion: 'ui-7493766fe39e',
+    cacheVersion: 'ui-2f724e0810ea',
+    pluginListVersion: 'ui-2f724e0810ea',
   };
 </script>
 ```
@@ -153,11 +153,11 @@ core.js, or to a released commit: https://cdn.jsdelivr.net/gh/simai/ui@<commit>/
 
 ```bash
 git clone https://github.com/simai/ui.git simai-ui
-git -C simai-ui archive --format=tar 7493766fe39ec6633cb1420532690c61661b0354 distr | shasum -a 256
-# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-7493766fe39e.lock.json
+git -C simai-ui archive --format=tar 2f724e0810ea58bb8381767b9f9b8c368f5f33ae distr | shasum -a 256
+# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-2f724e0810ea.lock.json
 # и полю runtime.ui.sha256 в /ai/framework-lock.json этого сайта
 mkdir -p public/assets/simai-framework/ui
-git -C simai-ui archive --format=tar 7493766fe39ec6633cb1420532690c61661b0354 distr | tar -x -C public/assets/simai-framework/ui
+git -C simai-ui archive --format=tar 2f724e0810ea58bb8381767b9f9b8c368f5f33ae distr | tar -x -C public/assets/simai-framework/ui
 ```
 
 Каталог появляется как `public/assets/simai-framework/ui/distr/`.
@@ -174,7 +174,7 @@ git -C simai-ui archive --format=tar 7493766fe39ec6633cb1420532690c61661b0354 di
 
 `<метка>` — полный коммит выбранного выпуска (поле
 `runtime_sources.core.commit` записи о выпуске), например
-`7493766fe39ec6633cb1420532690c61661b0354` для выпуска `ui-7493766fe39e`.
+`2f724e0810ea58bb8381767b9f9b8c368f5f33ae` для выпуска `ui-2f724e0810ea`.
 Идентификатор выпуска меткой не служит: выпуски не помечены тегами
 (см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)). Готовая страница с полным коммитом — в быстром
 старте (см. [Страница на Core](/ru/guide/introduction/quick-start/#страница-на-core)). Пакет продукта приходит в поставке

@@ -92,7 +92,7 @@ group.select('month');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7493766fe39e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2f724e0810ea` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -101,7 +101,7 @@ group.select('month');
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-7493766fe39e` |
+| Поставка | выпуск Framework `ui-2f724e0810ea` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -156,8 +156,8 @@ group.select('month');
 
 ### Источник
 
-- `simai/ui@7493766fe39ec6633cb1420532690c61661b0354:distr/smart/button-group`
-- `simai/ui@7493766fe39ec6633cb1420532690c61661b0354:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@2f724e0810ea58bb8381767b9f9b8c368f5f33ae:distr/smart/button-group`
+- `simai/ui@2f724e0810ea58bb8381767b9f9b8c368f5f33ae:distr/rule/rule.json#name=cl-button-group`
 
 ## См. также
 

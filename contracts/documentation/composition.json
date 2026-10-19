@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "eb5b215c332c65644529a5c12631ec57c0f30df1",
-    "core_revision": "7493766fe39ec6633cb1420532690c61661b0354",
+    "source_revision": "b9d7f025bb4c185a020a3f3cfa7690bc07c336f6",
+    "core_revision": "2f724e0810ea58bb8381767b9f9b8c368f5f33ae",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "distr/core/js/core.js": "83ad881988afcc5f01f7a57ff21dded54394dfcea4066380d792f5b1bdc3b57a"
     },
-    "note": "At source eb5b215c and core 7493766f (release ui-7493766fe39e) the composition schemas, composition-types, index.mjs, builtins, fixture and the buttons manifest are byte-identical to the review at the previous pin; core.js changed only in the bundled recipe.mjs, which takes the canonicalization profile under either name (Recipe 1.1.0, reviewed under recipe_candidate), which the composition pages do not describe."
+    "note": "At source b9d7f025 and core 2f724e08 (release ui-2f724e0810ea) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at the previous pin (the release gives dimmed text on a container fill its own role and relates sf-quantity to icon-buttons, which the composition pages do not describe)."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
@@ -130,8 +130,8 @@
     }
   ],
   "recipe_candidate": {
-    "source_revision": "eb5b215c332c65644529a5c12631ec57c0f30df1",
-    "core_revision": "7493766fe39ec6633cb1420532690c61661b0354",
+    "source_revision": "b9d7f025bb4c185a020a3f3cfa7690bc07c336f6",
+    "core_revision": "2f724e0810ea58bb8381767b9f9b8c368f5f33ae",
     "source_files": {
       "src/core/contracts/composition-recipe-v1/recipe.schema.json": "08749a44701f7c3b4fbbab9f936a8b0f9939f1cffd1ba3d4fa724e9addf8d973",
       "src/core/contracts/composition-recipe-v1/manifest.schema.json": "3943213661945c3d862de7abadd99c18302b1156c233a51ca09271ca70d79536",
@@ -238,6 +238,6 @@
         ]
       }
     ],
-    "note": "Reviewed at Recipe 1.1.0 (source eb5b215c, core 7493766f, release ui-7493766fe39e): the four schemas and the canonicalization profile take names without a version beside the older labels; fixtures/header-switch.json and canonical.mjs are byte-identical to 1.0.1, so the public copy assets/examples/composition/header-switch.json stays in the older form; format-names.json records the bare-name digests. The layout reference page states the edition."
+    "note": "Reviewed at Recipe 1.1.0 (source eb5b215c, core 7493766f, release ui-7493766fe39e; every file byte-identical at source b9d7f025, core 2f724e08, release ui-2f724e0810ea): the four schemas and the canonicalization profile take names without a version beside the older labels; fixtures/header-switch.json and canonical.mjs are byte-identical to 1.0.1, so the public copy assets/examples/composition/header-switch.json stays in the older form; format-names.json records the bare-name digests. The layout reference page states the edition."
   }
 }
