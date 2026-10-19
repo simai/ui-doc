@@ -26,7 +26,7 @@ const record = {
               { key: 'code', label: 'Код решения', propertyType: 'string', value: 'simai.payments', width: 'half', required: true },
               { key: 'title', label: 'Название', propertyType: 'string', value: 'SIMAI: Платежи №178', width: 'half', required: true },
               { key: 'section', label: 'Раздел', propertyType: 'record', width: 'half',
-                value: { value: 'record-demo-section', label: 'Платежи и биллинг', href: 'https://simai.github.io/ui-doc/ru/smart-components/content/table/' } },
+                value: { value: 'record-demo-section', label: 'Платежи и биллинг', href: 'https://ui.simai.io/ru/smart-components/content/table/' } },
               { key: 'version', label: 'Версия', propertyType: 'string', value: '2.4.1', width: 'half' },
               { key: 'summary', label: 'Описание', propertyType: 'text', width: 'full',
                 value: 'Приём платежей, возвраты и сверка с банком.' },

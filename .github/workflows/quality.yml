@@ -21,8 +21,8 @@ permissions:
 # so they are plain full clones.
 #
 # On main (a push or a manual run, never a pull request) the verified site is
-# then built once more for GitHub Pages, https://simai.github.io/ui-doc/, a
-# project site served under the repository's path: base_url and site_url come
+# then built once more for GitHub Pages, https://ui.simai.io/ (the custom
+# domain of the project site): base_url and site_url come
 # from the Pages configuration and are set in this checkout only (the committed
 # docara.json keeps "/" and no site_url). site_url adds sitemap.xml,
 # robots.txt, llms.txt, absolute canonical addresses and Open Graph tags. That
@@ -171,8 +171,8 @@ jobs:
       - id: pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-      # base_path is "/ui-doc" for the project site and empty for a custom
-      # domain; base_url is the full address, whose path Docara requires to
+      # base_path is empty for the custom domain and "/ui-doc" for the
+      # project site without one; base_url is the full address, whose path Docara requires to
       # equal base_url.
       - name: Set the site base URL and site URL for GitHub Pages
         if: steps.pages.outcome == 'success'

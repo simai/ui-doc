@@ -12,10 +12,10 @@ source exists shows the Russian original with a notice, and the English pages
 left from the earlier site, which have no Russian source, are not published.
 The build lists what it holds back.
 
-The documentation is published at <https://simai.github.io/ui-doc/>. The
-Quality workflow builds it on every push to `main` with `base_url` set to the
-GitHub Pages path (`/ui-doc/`) and `site_url` to the full address, in the CI
-checkout only (the committed `docara.json` keeps `/` and no `site_url` for
+The documentation is published at <https://ui.simai.io/>. The
+Quality workflow builds it on every push to `main` with `base_url` and
+`site_url` taken from the GitHub Pages configuration (the custom domain
+serves the site at `/`), in the CI checkout only (the committed `docara.json` keeps `/` and no `site_url` for
 local builds). `site_url` adds `sitemap.xml`, `robots.txt`, `llms.txt`
 (with the links in `discovery.llms_links`, `ai.json` among them), absolute
 canonical addresses and Open Graph tags. The workflow checks that build and

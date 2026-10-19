@@ -56,12 +56,12 @@ Framework применяется без чтения исходного кода
 ### Где читать документацию
 
 Постоянный публичный адрес документации —
-[https://simai.github.io/ui-doc/](https://simai.github.io/ui-doc/). Индекс для
+[https://ui.simai.io/](https://ui.simai.io/). Индекс для
 ИИ лежит в его корне:
-[https://simai.github.io/ui-doc/ai.json](https://simai.github.io/ui-doc/ai.json),
-файл выпуска — `https://simai.github.io/ui-doc/ai/framework-lock.json`, а
+[https://ui.simai.io/ai.json](https://ui.simai.io/ai.json),
+файл выпуска — `https://ui.simai.io/ai/framework-lock.json`, а
 текст любой страницы — в `ai.md` в её папке, например
-`https://simai.github.io/ui-doc/ru/guide/standards/ai/ai.md`.
+`https://ui.simai.io/ru/guide/standards/ai/ai.md`.
 
 Сайт описывает один выпуск — тот, что назван в его
 `/ai/framework-lock.json`. Помощник сам этот адрес не найдёт: передайте его в
@@ -166,11 +166,11 @@ Recipe, ИИ находит в индексе знание
 # SIMAI Framework в этом проекте
 
 - Выпуск Framework: см. файл блокировки проекта (`simai-framework.lock.json`).
-- Документация: https://simai.github.io/ui-doc/ (индекс для ИИ — /ai.json).
+- Документация: https://ui.simai.io/ (индекс для ИИ — /ai.json).
   Если `runtime.pair_id` в /ai/framework-lock.json не совпадает с выпуском
   проекта, сообщи об этом и не применяй документацию молча.
-- Правила: https://simai.github.io/ui-doc/ru/guide/standards/ai/ai.md и
-  https://simai.github.io/ui-doc/ru/guide/smart-components/ai-development/ai.md.
+- Правила: https://ui.simai.io/ru/guide/standards/ai/ai.md и
+  https://ui.simai.io/ru/guide/smart-components/ai-development/ai.md.
 - Только существующие классы, токены, атрибуты и события; для каждого решения
   назови страницу или манифест.
 - Обновление выпуска — только через `node scripts/sf-upgrade.mjs` и журнал
