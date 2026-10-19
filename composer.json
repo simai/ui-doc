@@ -1,19 +1,12 @@
 {
     "name": "simai/ui-doc",
-    "description": "Public SIMAI Framework documentation built with Docara v2.",
+    "description": "Public SIMAI Framework documentation built with Docara.",
     "type": "project",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Rim Zabarov",
             "role": "Creator"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/simai/docara.git",
-            "no-api": true
         }
     ],
     "require": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d9e72342aa2b448cf4233f6e287cd19",
+    "content-hash": "d0109d11deba45bde7ec6292f34278e5",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1611,41 +1611,7 @@
                     "Simai\\Docara\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
-            "archive": {
-                "exclude": [
-                    "/.editorconfig",
-                    "/.env",
-                    "/.env.local",
-                    "/.git",
-                    "/.gitattributes",
-                    "/.github",
-                    "/.gitignore",
-                    "/.idea",
-                    "/.markdownlint.json",
-                    "/.phpunit.cache",
-                    "/.vscode",
-                    "/CONTRIBUTING.md",
-                    "/composer.lock",
-                    "/docs/site/.gitignore",
-                    "/output",
-                    "/phpunit.xml",
-                    "/pint.json",
-                    "/resources/framework/runtime-packages",
-                    "/tests",
-                    "/vendor",
-                    ".DS_Store",
-                    ".cache",
-                    ".docara-preview",
-                    ".docara-qa",
-                    "build_*",
-                    "node_modules"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1668,8 +1634,8 @@
             ],
             "support": {
                 "issues": "https://github.com/simai/docara/issues",
-                "source": "https://github.com/simai/docara",
-                "security": "https://github.com/simai/docara/security/policy"
+                "security": "https://github.com/simai/docara/security/policy",
+                "source": "https://github.com/simai/docara"
             },
             "time": "2026-10-19T01:37:51+00:00"
         },
