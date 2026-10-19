@@ -8,14 +8,16 @@
   "navigation": {
     "scope": "section"
   },
+  "search": {
+    "enabled": false
+  },
   "header_navigation": {
     "enabled": true,
     "items": [
-      {"id": "start", "label": "Start", "href": "/en/start/introduction/"},
-      {"id": "fundamentals", "label": "Fundamentals", "href": "/en/fundamentals/"},
+      {"id": "guide", "label": "Guide (RU)", "href": "/ru/guide/"},
       {"id": "utilities", "label": "Utilities", "href": "/en/utilities/"},
-      {"id": "components", "label": "Components", "href": "/en/framework-components/introduction/"},
-      {"id": "smart-components", "label": "Smart Components", "href": "/en/smart-components/introduction/"}
+      {"id": "components", "label": "Components (RU)", "href": "/ru/components/"},
+      {"id": "smart-components", "label": "Smart Components (RU)", "href": "/ru/smart-components/"}
     ]
   }
 }

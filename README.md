@@ -1,15 +1,25 @@
 # SIMAI Framework Documentation
 
-This repository contains the Russian and English public documentation for
-SIMAI Framework. It is a content-only Docara 2 project: authored pages live in
-`content/<locale>/`, site configuration lives in `docara.json`, and local
-assets live in `assets/`.
+This repository contains the public documentation for SIMAI Framework. It is
+a content-only Docara project: authored pages live in `content/<locale>/`, site
+configuration lives in `docara.json`, and local assets live in `assets/`.
+
+Russian (`content/ru`) is the source. English (`content/en`) is a translation
+to be made later: `translation_tracking.mode` is `publish-current`, so an
+English page is published only once its translation is accepted
+(`vendor/bin/docara translations accept`). Until then an English page whose
+source exists shows the Russian original with a notice, and the English pages
+left from the earlier site, which have no Russian source, are not published.
+The build lists what it holds back.
 
 The documentation is published at <https://simai.github.io/ui-doc/>. The
 Quality workflow builds it on every push to `main` with `base_url` set to the
-GitHub Pages path (`/ui-doc/`, in the CI checkout only: the committed
-`docara.json` keeps `/` for local builds), checks that build and deploys it to
-GitHub Pages.
+GitHub Pages path (`/ui-doc/`) and `site_url` to the full address, in the CI
+checkout only (the committed `docara.json` keeps `/` and no `site_url` for
+local builds). `site_url` adds `sitemap.xml`, `robots.txt`, `llms.txt`
+(with the links in `discovery.llms_links`, `ai.json` among them), absolute
+canonical addresses and Open Graph tags. The workflow checks that build and
+deploys it to GitHub Pages.
 
 Developer references:
 

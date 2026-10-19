@@ -325,6 +325,22 @@ foreach ($files as $file) {
     }
 }
 
+// With translation_tracking.mode "publish-current" (docara.json beside the
+// content root) a target locale publishes only translations of source pages:
+// its legacy tree, which has no source, is withheld, and a redirect into it
+// would name a page the build does not write. Directory redirects are then
+// derived for the source locale only.
+$sourceLocaleOnly = null;
+$siteConfigPath = dirname(rtrim($root, DIRECTORY_SEPARATOR)) . DIRECTORY_SEPARATOR . 'docara.json';
+if (is_file($siteConfigPath)) {
+    $siteConfig = json_decode((string) file_get_contents($siteConfigPath), true);
+    if (($siteConfig['translation_tracking']['mode'] ?? null) === 'publish-current'
+        && is_string($siteConfig['translation_tracking']['source_locale'] ?? null)
+    ) {
+        $sourceLocaleOnly = $siteConfig['translation_tracking']['source_locale'];
+    }
+}
+
 $directories = new RecursiveIteratorIterator(
     new RecursiveDirectoryIterator($root, FilesystemIterator::SKIP_DOTS),
     RecursiveIteratorIterator::SELF_FIRST,
@@ -335,6 +351,9 @@ foreach ($directories as $directory) {
     }
     $relative = str_replace('\\', '/', substr($directory->getPathname(), strlen(rtrim($root, DIRECTORY_SEPARATOR)) + 1));
     if ($relative === '' || ! str_contains($relative, '/')) {
+        continue;
+    }
+    if ($sourceLocaleOnly !== null && ! str_starts_with($relative, $sourceLocaleOnly . '/')) {
         continue;
     }
     $route = trim($relative, '/');

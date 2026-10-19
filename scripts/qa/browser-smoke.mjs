@@ -52,8 +52,10 @@ export const SMOKE_PAGES = [
   '/ru/smart-components/forms/theme-generator/',
   '/ru/utilities/',
   '/ru/utilities/tables/',
+  // English shows the Russian original with a notice until a translation is
+  // accepted (translation_tracking.mode publish-current).
   '/en/',
-  '/en/fundamentals/alignment/alignment/',
+  '/en/utilities/tables/',
 ];
 
 const args = process.argv.slice(2);
@@ -186,12 +188,16 @@ async function checkPage(context, path) {
     if (response && response.status() >= 400) return;
     // Lazy frames (loading="lazy") load only once scrolled to: bring each
     // into view and wait for its document before moving on, or it is never
-    // requested and reads as a frame that failed.
+    // requested and reads as a frame that failed. Docara (3.3.0) keeps an
+    // example's document in data-docara-srcdoc and moves it to srcdoc when the
+    // frame nears the screen; a srcdoc frame keeps reporting about:blank, so
+    // the move itself is the signal (the frame check below reads its document).
     for (const handle of await page.$$('iframe[loading="lazy"]')) {
       await handle.scrollIntoViewIfNeeded().catch(() => {});
       for (let waited = 0; waited < 5000; waited += 100) {
         const url = (await handle.contentFrame())?.url() || '';
         if (url && url !== 'about:blank') break;
+        if (await handle.evaluate((frame) => frame.hasAttribute('srcdoc')).catch(() => false)) break;
         await page.waitForTimeout(100);
       }
     }

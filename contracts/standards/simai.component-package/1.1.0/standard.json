@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.component-package",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "SIMAI Framework Component Package",
   "appliesTo": [
     "simai.framework.component-package"
@@ -153,10 +153,10 @@
   "uses": [
     {
       "id": "simai.framework.smart-component-manifest",
-      "version": "2.2.0",
-      "path": "../../pinned/smart-component-manifest-2.2.0.schema.json",
-      "sha256": "ed957aed20465f92c2dbd75d31c5f12ff5badcc21f854ce54405ec43ca1e05db",
-      "description": "The contract of each component in a package. Since 2.2.0 a product may name its own components and a component declares its host port by exact bytes."
+      "version": "2.5.0",
+      "path": "../../pinned/smart-component-manifest-2.5.0.schema.json",
+      "sha256": "d5b0a5b299fa4b044d8125a315458c37de76f0bb5c6cb686962cdec7922b14ce",
+      "description": "The contract of each component in a package. Since 2.2.0 a product may name its own components and a component declares its host port by exact bytes; 2.3.0 to 2.5.0 added presentation.skeleton, view preferences and the other compatible fields the Framework's own components declare."
     }
   ],
   "references": [
@@ -218,7 +218,8 @@
         "a collision between two packages declared on one page is found only by the Loader at runtime",
         "manifests, entries and templates are held by the package's own tests and sf-contract in the overlay, not by the builder",
         "a package has no cache version of its own; each build is served under its own path"
-      ]
+      ],
+      "reissue": "Issued as 1.1.0 after documentation trial 6 (2026-10-18): 1.0.0 pinned the manifest schema 2.2.0 while the Framework's components, and therefore a package built on it, declare fields added up to 2.5.0. Requirements are unchanged since 1.0.0; 1.0.0 keeps its published bytes under contracts/standards/history."
     }
   }
 }

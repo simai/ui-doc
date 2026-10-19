@@ -31,7 +31,7 @@
   "translation_tracking": {
     "enabled": true,
     "source_locale": "ru",
-    "mode": "report",
+    "mode": "publish-current",
     "lock_file": "translations.lock.json"
   },
   "documentation_tracking": {
@@ -55,6 +55,16 @@
     }
   ],
   "base_url": "/",
+  "discovery": {
+    "llms_links": [
+      {"title": "Машиночитаемая документация", "path": "ai.json", "description": "Манифест документации для ИИ-агента: закреплённый выпуск Framework и каталоги страниц с исходниками примеров"},
+      {"title": "Быстрый старт", "path": "ru/guide/introduction/quick-start/", "description": "Первая страница на Framework"},
+      {"title": "Подключение и обновление", "path": "ru/guide/connection/", "description": "Поставка, подключение к проекту, Loader и обновление"},
+      {"title": "Smart-компоненты", "path": "ru/guide/smart-components/", "description": "Как подключать, настраивать и создавать Smart-компоненты"},
+      {"title": "Стандарты, качество и ИИ", "path": "ru/guide/standards/", "description": "Стандарты Framework, проверка и разработка с ИИ"},
+      {"title": "Словарь", "path": "ru/guide/glossary/", "description": "Термины Framework и где о них читать"}
+    ]
+  },
   "branding": {
     "title": "SIMAI Framework",
     "mode": "compact",

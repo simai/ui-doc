@@ -21,7 +21,7 @@ description: "Карта стандартов показывает все ста
 | 2 | Recipe | `simai.composition-recipe` | 1.0.1 | Правила сборки документа страницы | Standard Contract |
 | 2 | Манифест Smart-компонента | `simai.smart-component-manifest` | 2.5.0 | Контракт одного компонента | Standard Contract |
 | 3 | Составной компонент | `simai.composite-component` | 1.0.2 | Внешнюю сторону составного компонента | Recipe, манифест |
-| 3 | Пакет компонентов | `simai.component-package` | 1.0.0 | Пакет Smart-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
+| 3 | Пакет компонентов | `simai.component-package` | 1.1.0 | Пакет Smart-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
 | 4 | Динамический составной компонент | `simai.dynamic-composite-component` | 1.0.2 | Поведение составного компонента на стыке с приложением | наследует уровень 3 |
 | 4 | Порт хоста | `simai.composite-host-port` | 1.0.3 | Сам стык: объявленный и версионированный порт | наследует динамический |
 | 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.0.0 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
@@ -86,7 +86,7 @@ description: "Карта стандартов показывает все ста
 | Конверт фонового эффекта | [`/ai/standards/simai.effect/1.0.0/standard.json`](/ai/standards/simai.effect/1.0.0/standard.json) |
 | Схема манифеста эффекта | [`/ai/standards/effect-schema/1.0.0/effect.schema.json`](/ai/standards/effect-schema/1.0.0/effect.schema.json) |
 | Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
-| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.0.0/standard.json`](/ai/standards/simai.component-package/1.0.0/standard.json) |
+| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.0/standard.json`](/ai/standards/simai.component-package/1.1.0/standard.json) |
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
 
 Копии берутся из закреплённого выпуска при каждой сборке сайта: схема
@@ -395,7 +395,8 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 Связи с другими стандартами (см. [Связи между стандартами](/ru/guide/standards/what-is/#связи-между-стандартами)):
 
 - `uses` — манифест Smart-компонента (`simai.smart-component-manifest`),
-  замороженная копия схемы;
+  замороженная копия схемы 2.5.0 — той же, что действует для компонентов
+  Framework;
 - `references` — `simai.composite-component`,
   `simai.dynamic-composite-component`, `simai.composite-host-port` и
   `simai.change-lifecycle`, каждый по версии и хешу. Их требования действуют для
@@ -403,6 +404,15 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 
 Стандарт не наследует ни одного требования (`extends` у него нет): он
 относится к отдельному виду — пакету компонентов.
+
+**Издания.** Действующее издание — 1.1.0. Оно закрепляет схему манифеста
+2.5.0, поэтому манифест компонента пакета объявляет те же поля, что и
+компоненты Framework, в том числе `presentation.skeleton` и персональный вид.
+Требования в 1.1.0 те же, что в 1.0.0. Издание 1.0.0 закрепляло схему 2.2.0,
+хотя компоненты Framework, а значит и пакет, построенный на них, уже
+объявляли поля до 2.5.0. Издание 1.0.0 осталось в истории: его байты хранятся в
+исходниках Framework (`contracts/standards/history/simai.component-package/1.0.0/`),
+а сайт документации публикует только действующее издание.
 
 | Требование | Уровень | Суть |
 |:---|:---|:---|
