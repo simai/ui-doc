@@ -5,7 +5,7 @@ Build responsive, maintainable web interfaces in one system: from design
 tokens and CSS utilities to ready-made components and Smart Components with
 behavior and state.
 
-[Get started](/en/start/introduction/)
+[Get started](/ru/guide/introduction/)
 :::
 
 ## One interface language — four levels
@@ -131,7 +131,7 @@ show(0);
 Breakpoint and state conditions compose with utilities. The same approach
 covers screen sizes, `hover`, `focus`, and other scenarios.
 
-[Learn the fundamentals](/en/fundamentals/)
+[Learn the fundamentals](/ru/guide/)
 
 ---
 
@@ -141,7 +141,7 @@ Sizes, colors, radii, shadows, and typography build on shared primitives and
 semantic tokens. Themes can change without rewriting the purpose of every
 element.
 
-[Explore fundamentals](/en/fundamentals/)
+[Explore fundamentals](/ru/guide/)
 
 ---
 
@@ -150,7 +150,7 @@ element.
 Start with one utility, move to a ready-made component, and add a Smart
 Component only when the interface needs behavior and state.
 
-[Compare the layers](/en/start/introduction/)
+[Compare the layers](/ru/guide/introduction/)
 
 ---
 
@@ -174,9 +174,9 @@ generated static result, helping a team reproduce the same build.
 ## Documentation for your task
 
 :::features
-- **[Start](/en/start/introduction/).** Installation, setup, and the first page.
-- **[Fundamentals](/en/fundamentals/).** Modifier language, scales, themes, and typography.
+- **[Start](/ru/guide/introduction/).** Installation, setup, and the first page.
+- **[Fundamentals](/ru/guide/).** Modifier language, scales, themes, and typography.
 - **[Utility catalog](/en/utilities/).** CSS utilities grouped by purpose.
 - **[Components](/en/framework-components/introduction/).** Architecture and loading guidance.
-- **[Smart Components](/en/smart-components/introduction/).** Architecture, lifecycle, and integration.
+- **[Smart Components](/ru/smart-components/).** Architecture, lifecycle, and integration.
 :::

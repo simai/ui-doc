@@ -10,7 +10,7 @@ frontend library SFLoaderPlugin and a PHP server architecture with caching, temp
 
 ## Section navigation
 
-- [Overview](/en/start/loader/overview/)
+- [Overview](/ru/guide/connection/loader/)
 - [Frontend](/en/start/loader/frontend-index/)
 - [Backend](/en/start/loader/backend-index/)
 - [API](/en/start/loader/api-index/)

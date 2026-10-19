@@ -7,4 +7,4 @@ Recommended order for a working environment:
 3. Enable linters and formatting for Blade/Markdown so examples from the docs match your project style.
 4. Set up a dev server with hot reload to quickly verify modifiers and utilities.
 
-After configuration, proceed to [Fundamentals](/en/fundamentals/) and adjust the Loader for your environment.
+After configuration, proceed to [Fundamentals](/ru/guide/) and adjust the Loader for your environment.

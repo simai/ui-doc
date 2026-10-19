@@ -1040,11 +1040,11 @@
     },
     {
       "from": "ru/fundamentals",
-      "to": "ru/guide/colour"
+      "to": "ru/guide"
     },
     {
       "from": "ru/fundamentals/abbreviations-of-properties",
-      "to": "ru/guide/utilities/what-is"
+      "to": "ru/guide/utilities/naming"
     },
     {
       "from": "ru/fundamentals/abbreviations-of-properties/abbreviations-of-properties",
@@ -1056,7 +1056,7 @@
     },
     {
       "from": "ru/fundamentals/alignment",
-      "to": "ru/guide/size-and-type/scales"
+      "to": "ru/guide/utilities/values"
     },
     {
       "from": "ru/fundamentals/alignment/alignment",
@@ -1092,7 +1092,7 @@
     },
     {
       "from": "ru/fundamentals/directions",
-      "to": "ru/guide/size-and-type/scales"
+      "to": "ru/guide/size-and-type/directions"
     },
     {
       "from": "ru/fundamentals/directions/directions",
@@ -1100,19 +1100,19 @@
     },
     {
       "from": "ru/fundamentals/modifier-parameters",
-      "to": "ru/guide/utilities/what-is"
+      "to": "ru/guide/utilities/naming"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/angle-parameter",
-      "to": "ru/guide/utilities/what-is"
+      "to": "ru/guide/utilities/naming"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/axle-designations",
-      "to": "ru/guide/utilities/what-is"
+      "to": "ru/guide/utilities/naming"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/examples-of-parameters-in-modifiers",
-      "to": "ru/guide/utilities/what-is"
+      "to": "ru/guide/utilities/naming"
     },
     {
       "from": "ru/fundamentals/modifier-parameters/modifier-parameters",
@@ -1120,7 +1120,7 @@
     },
     {
       "from": "ru/fundamentals/modifier-parameters/side-parameter",
-      "to": "ru/guide/utilities/what-is"
+      "to": "ru/guide/utilities/naming"
     },
     {
       "from": "ru/fundamentals/modifiers",
@@ -1128,39 +1128,39 @@
     },
     {
       "from": "ru/fundamentals/sizes",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/direct-translation",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/from-old-to-new",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/spacing-scale"
     },
     {
       "from": "ru/fundamentals/sizes/indents",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/spacing-scale"
     },
     {
       "from": "ru/fundamentals/sizes/mnemonic",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/relationship-between-letters-and-multipliers",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/reverse-conversion",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/reverse-translation",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/size-conversion",
-      "to": "ru/guide/size-and-type/size-ladder"
+      "to": "ru/guide/size-and-type/scales"
     },
     {
       "from": "ru/fundamentals/sizes/size-scale",
@@ -1180,7 +1180,7 @@
     },
     {
       "from": "ru/fundamentals/values",
-      "to": "ru/guide/size-and-type/scales"
+      "to": "ru/guide/utilities/values"
     },
     {
       "from": "ru/fundamentals/values-and-scales",
@@ -1960,7 +1960,7 @@
     },
     {
       "from": "ru/smart-components/introduction",
-      "to": "ru/guide/smart-components/introduction"
+      "to": "ru/smart-components"
     },
     {
       "from": "ru/smart-components/lifecycle",
@@ -2216,7 +2216,7 @@
     },
     {
       "from": "ru/start/glossary",
-      "to": "ru/guide/introduction/quick-start"
+      "to": "ru/guide/glossary"
     },
     {
       "from": "ru/start/installation",
@@ -2228,11 +2228,11 @@
     },
     {
       "from": "ru/start/introduction",
-      "to": "ru/guide/introduction/quick-start"
+      "to": "ru/guide/introduction"
     },
     {
       "from": "ru/start/loader",
-      "to": "ru/guide/connection/project-setup"
+      "to": "ru/guide/connection/loader"
     },
     {
       "from": "ru/start/playground",
@@ -2805,6 +2805,558 @@
     {
       "from": "ru/guide/smart-components/templates-and-assets",
       "to": "ru/guide/smart-components/templates"
+    },
+    {
+      "from": "en/components/introduction",
+      "to": "ru/components"
+    },
+    {
+      "from": "en/fundamentals",
+      "to": "ru/guide"
+    },
+    {
+      "from": "en/smart-components/introduction",
+      "to": "ru/smart-components"
+    },
+    {
+      "from": "en/start/glossary",
+      "to": "ru/guide/glossary"
+    },
+    {
+      "from": "en/start/glossary/index",
+      "to": "ru/guide/glossary"
+    },
+    {
+      "from": "en/start/installation",
+      "to": "ru/guide/connection/project-setup"
+    },
+    {
+      "from": "en/start/introduction",
+      "to": "ru/guide/introduction"
+    },
+    {
+      "from": "en/start/loader/api",
+      "to": "ru/guide/connection/js-api"
+    },
+    {
+      "from": "en/start/loader/api/events",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/api/methods",
+      "to": "ru/guide/connection/js-api"
+    },
+    {
+      "from": "en/start/loader/backend",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "en/start/loader/backend/caching",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "en/start/loader/backend/index",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "en/start/loader/backend/integration",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "en/start/loader/backend/server-interaction",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "en/start/loader/description",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/cache-control",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/caching",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/dependencies",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/dynamic-js-css",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/plugin-discovery",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/preloader",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/smart-components",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/frontend/standalone",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "en/start/loader/overview",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/fundamentals/break-points/break-points-description",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/break-points/break-points-mobile-and-desktop",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/break-points/break-points-prefixes",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/break-points/break-points-relationship",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/break-points/break-points-variables",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/color",
+      "to": "ru/guide/colour"
+    },
+    {
+      "from": "ru/fundamentals/color/color-generator",
+      "to": "ru/smart-components/forms/theme-generator"
+    },
+    {
+      "from": "ru/fundamentals/color/color-palette",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/fundamentals/color/new-approach-to-using-color",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/fundamentals/concept/abbreviations-of-properties",
+      "to": "ru/guide/utilities/naming"
+    },
+    {
+      "from": "ru/fundamentals/concept/alignment",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/break-points/break-points-description",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/concept/break-points/break-points-mobile-and-desktop",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/concept/break-points/break-points-prefixes",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/concept/break-points/break-points-relationship",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/concept/break-points/break-points-variables",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/concept/color",
+      "to": "ru/guide/colour"
+    },
+    {
+      "from": "ru/fundamentals/concept/color/color-generator",
+      "to": "ru/smart-components/forms/theme-generator"
+    },
+    {
+      "from": "ru/fundamentals/concept/color/color-palette",
+      "to": "ru/guide/colour/palettes"
+    },
+    {
+      "from": "ru/fundamentals/concept/color/new-approach-to-using-color",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/fundamentals/concept/directions",
+      "to": "ru/guide/size-and-type/directions"
+    },
+    {
+      "from": "ru/fundamentals/concept/modifier-parameters",
+      "to": "ru/guide/utilities/naming"
+    },
+    {
+      "from": "ru/fundamentals/concept/modifier-parameters/angle-parameter",
+      "to": "ru/guide/utilities/naming"
+    },
+    {
+      "from": "ru/fundamentals/concept/modifier-parameters/axle-designations",
+      "to": "ru/guide/utilities/naming"
+    },
+    {
+      "from": "ru/fundamentals/concept/modifier-parameters/examples-of-parameters-in-modifiers",
+      "to": "ru/guide/utilities/naming"
+    },
+    {
+      "from": "ru/fundamentals/concept/modifier-parameters/side-parameter",
+      "to": "ru/guide/utilities/naming"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/direct-translation",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/from-old-to-new",
+      "to": "ru/guide/size-and-type/spacing-scale"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/indents",
+      "to": "ru/guide/size-and-type/spacing-scale"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/mnemonic",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/relationship-between-letters-and-multipliers",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/reverse-conversion",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/reverse-translation",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/sizes/size-conversion",
+      "to": "ru/guide/size-and-type/scales"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/change-background-on-hover",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/color-and-theme",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/examples",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/named-colors",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/theme-color-palette",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/theme-color-palette/dark-theme-palette",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/theme-color-palette/light-theme-palette",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/fundamentals/concept/themes/design-themes/using-themes",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/border-radius",
+      "to": "ru/guide/size-and-type/borders-and-radii"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/categories-font-sizes",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/changing-font-sizes",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/focus",
+      "to": "ru/guide/size-and-type/focus"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/font-family",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/line-height",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/links",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/roles-of-text",
+      "to": "ru/guide/size-and-type/default-text"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/shadows",
+      "to": "ru/guide/colour/elevation"
+    },
+    {
+      "from": "ru/fundamentals/concept/typography/text-indents",
+      "to": "ru/guide/size-and-type/default-text"
+    },
+    {
+      "from": "ru/fundamentals/concept/values/absolute-dimensions",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/values/binary-values",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/values/degrees",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/values/percents",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/values/proportional-values",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/values/relative-sizes",
+      "to": "ru/guide/utilities/values"
+    },
+    {
+      "from": "ru/fundamentals/concept/variables",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/concept/variables/variables-default",
+      "to": "ru/guide/colour/all-tokens"
+    },
+    {
+      "from": "ru/fundamentals/concept/variables/variables-global",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/concept/variables/variables-local",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/concept/variables/variables-types",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/change-background-on-hover",
+      "to": "ru/guide/utilities/conditions"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/color-and-theme",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/examples",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/named-colors",
+      "to": "ru/guide/colour/colour-roles"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/theme-color-palette",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/theme-color-palette/dark-theme-palette",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/theme-color-palette/light-theme-palette",
+      "to": "ru/guide/colour/transparency"
+    },
+    {
+      "from": "ru/fundamentals/themes/design-themes/using-themes",
+      "to": "ru/guide/colour/themes"
+    },
+    {
+      "from": "ru/fundamentals/typography/border-radius",
+      "to": "ru/guide/size-and-type/borders-and-radii"
+    },
+    {
+      "from": "ru/fundamentals/typography/categories-font-sizes",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/typography/changing-font-sizes",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/typography/focus",
+      "to": "ru/guide/size-and-type/focus"
+    },
+    {
+      "from": "ru/fundamentals/typography/font-family",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/typography/line-height",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/typography/links",
+      "to": "ru/guide/size-and-type/typography"
+    },
+    {
+      "from": "ru/fundamentals/typography/roles-of-text",
+      "to": "ru/guide/size-and-type/default-text"
+    },
+    {
+      "from": "ru/fundamentals/typography/shadows",
+      "to": "ru/guide/colour/elevation"
+    },
+    {
+      "from": "ru/fundamentals/typography/text-indents",
+      "to": "ru/guide/size-and-type/default-text"
+    },
+    {
+      "from": "ru/fundamentals/variables",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/variables/variables-default",
+      "to": "ru/guide/colour/all-tokens"
+    },
+    {
+      "from": "ru/fundamentals/variables/variables-global",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/variables/variables-local",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/fundamentals/variables/variables-types",
+      "to": "ru/guide/colour/design-tokens"
+    },
+    {
+      "from": "ru/smart-components/badges",
+      "to": "ru/smart-components/feedback/badges"
+    },
+    {
+      "from": "ru/start/glossary/index",
+      "to": "ru/guide/glossary"
+    },
+    {
+      "from": "ru/start/loader/api",
+      "to": "ru/guide/connection/js-api"
+    },
+    {
+      "from": "ru/start/loader/api/events",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/api/methods",
+      "to": "ru/guide/connection/js-api"
+    },
+    {
+      "from": "ru/start/loader/backend",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "ru/start/loader/backend/caching",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "ru/start/loader/backend/index",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "ru/start/loader/backend/integration",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "ru/start/loader/backend/server-interaction",
+      "to": "ru/guide/connection"
+    },
+    {
+      "from": "ru/start/loader/description",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/cache-control",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/caching",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/dependencies",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/dynamic-js-css",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/plugin-discovery",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/preloader",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/smart-components",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/frontend/standalone",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/loader/overview",
+      "to": "ru/guide/connection/loader"
+    },
+    {
+      "from": "ru/start/version-matrix",
+      "to": "ru/guide/size-and-type/vertical-sizing"
+    },
+    {
+      "from": "ru/utilities/overscroll/scrollbar-presets",
+      "to": "ru/components/tools/scrollbar"
     }
   ]
 }
