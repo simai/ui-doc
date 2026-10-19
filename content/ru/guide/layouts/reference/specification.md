@@ -25,14 +25,37 @@ description: "Где лежат нормативные комплекты Compos
 
 | Файл | Что проверяет |
 |:---|:---|
-| [описание алгоритма](/ai/standards/composition-recipe/1.0.1/README.md) | полный алгоритм сборки; его читают первым |
-| [схема Recipe](/ai/standards/composition-recipe/1.0.1/recipe.schema.json) | сам план сборки |
-| [схема входов](/ai/standards/composition-recipe/1.0.1/inputs.schema.json) | снимок разрешённых данных и настроек проекта |
-| [файл фиксации](/ai/standards/composition-recipe/1.0.1/contract.lock.json) | точные отпечатки всех нормативных файлов |
-| [пример шапки](/ai/standards/composition-recipe/1.0.1/fixtures/header-switch.json) | ожидаемые Document и перечень зависимостей для обоих вариантов шапки |
+| [описание алгоритма](/ai/standards/composition-recipe/1.1.0/README.md) | полный алгоритм сборки; его читают первым |
+| [схема Recipe](/ai/standards/composition-recipe/1.1.0/recipe.schema.json) | сам план сборки |
+| [схема входов](/ai/standards/composition-recipe/1.1.0/inputs.schema.json) | снимок разрешённых данных и настроек проекта |
+| [файл фиксации](/ai/standards/composition-recipe/1.1.0/contract.lock.json) | точные отпечатки всех нормативных файлов |
+| [пример шапки](/ai/standards/composition-recipe/1.1.0/fixtures/header-switch.json) | ожидаемые Document и перечень зависимостей для обоих вариантов шапки |
+| [имена форматов](/ai/standards/composition-recipe/1.1.0/fixtures/format-names.json) | обе формы имён форматов и профиля канонизации, digest формы без версии |
 
-Редакция 1.0.1 уточняет статус работающего сборщика; правила JSON те же, что
-в редакции 1.0.0.
+Редакция 1.1.0 принимает имена форматов без версии. Схемы Recipe, манифеста
+шаблона, входов и перечня зависимостей принимают обе формы:
+
+- прежнюю метку `simai.composition.<имя>.v1` — без `schema_version` или с
+  `"schema_version": 1`;
+- имя без версии `simai.composition.<имя>` — только вместе с
+  `"schema_version": 1`.
+
+Профиль канонизации называется `simai.recipe.canonical-json.v1` или
+`simai.recipe.canonical-json`: это одно имя алгоритма, байты и digest от
+выбора имени не зависят. Сборщик принимает в
+`executionContract.canonicalization` любое из двух имён и повторяет его в
+перечне зависимостей; без имени пишет прежнее, другое имя даёт ошибку
+`incompatible_profile`.
+
+Форма рецепта решает форму результата. Рецепт в прежней форме даёт те же
+байты Document и те же digest, что фиксирует редакция 1.0.1, — пример шапки не
+изменился и записан в прежней форме. Рецепт без версии в имени даёт Document
+(`simai.composition.document`) и перечень зависимостей
+(`simai.composition.dependencies`) без версии в имени; их digest отличается
+только потому, что отличается поле `schema`, и записан в примере имён
+форматов. Поэтому `sf-upgrade` не переписывает сохранённые рецепты, манифесты
+шаблонов и входы: их переводит владелец, когда готов к новым digest.
+Алгоритм, ограничения и схемы значений в 1.1.0 те же, что в 1.0.1.
 
 По контрольному примеру можно проверить собственный сборщик или убедиться,
 что ИИ не придумал поле, тип узла или способ получения данных. В примере шапки

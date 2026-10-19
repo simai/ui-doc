@@ -76,13 +76,13 @@ foreach ($files as $file) {
 if (count($items) < 100) throw new RuntimeException('AI export requires a complete documentation build');
 $specRoot = $root . '/contracts/composition-recipe-v1';
 $specLock = json_decode((string) file_get_contents($specRoot . '/contract.lock.json'), true, 512, JSON_THROW_ON_ERROR);
-if (($specLock['version'] ?? null) !== '1.0.1') throw new RuntimeException('Unexpected Recipe specification edition');
+if (($specLock['version'] ?? null) !== '1.1.0') throw new RuntimeException('Unexpected Recipe specification edition');
 $normative = $specLock['normativeFiles'] ?? throw new RuntimeException('Recipe normative file map is missing');
 ksort($normative, SORT_STRING);
 if ('sha256:' . hash('sha256', json_encode($normative, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR)) !== $specLock['contractDigest']) {
     throw new RuntimeException('Recipe specification digest mismatch');
 }
-$specBase = 'ai/standards/composition-recipe/1.0.1/';
+$specBase = 'ai/standards/composition-recipe/1.1.0/';
 foreach ([...array_keys($normative), 'contract.lock.json', 'fixtures/header-switch.json'] as $relative) {
     if (!preg_match('#^[a-zA-Z0-9._/-]+$#', $relative) || str_contains($relative, '..')) throw new RuntimeException('Unsafe Recipe specification path');
     $bytes = (string) file_get_contents($specRoot . '/' . $relative);
@@ -100,13 +100,13 @@ foreach ([...array_keys($normative), 'contract.lock.json', 'fixtures/header-swit
         'id' => $id, 'kind' => 'knowledge', 'title' => $title,
         'description' => $relative === 'fixtures/header-switch.json' ?
             'Проверенный пример двух вариантов шапки и ожидаемых результатов Recipe.' :
-            'Проверенный файл нормативного комплекта Composition Recipe 1.0.1.',
+            'Проверенный файл нормативного комплекта Composition Recipe 1.1.0.',
         'language' => 'ru', 'revision' => $hash, 'status' => 'published',
         'source' => './' . $public,
         'appliesTo' => ['product' => 'urn:simai:framework', 'versions' => [(string) $version]],
         'representations' => [['href' => './' . $public, 'mediaType' => str_ends_with($relative, '.md') ? 'text/markdown' : 'application/json', 'sha256' => $hash, 'role' => 'full']],
         'x-simai-contractDigest' => $specLock['contractDigest'],
-        'x-simai-sourceRevision' => '8d3438aa9c2e054580fa1eab97916aed010ec545',
+        'x-simai-sourceRevision' => 'eb5b215c332c65644529a5c12631ec57c0f30df1',
     ];
 }
 // Framework standards: the envelope of every published standard, plus the

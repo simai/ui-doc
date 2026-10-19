@@ -104,7 +104,7 @@ const {published, refused} = SF.Composition.publishEffects(answer.effects ?? [],
   "id": "shop.order-list",
   "element": "shop-order-list",
   "regions": ["content"],
-  "port": {"standard": "simai.composite-host-port", "version": "1.0.3"},
+  "port": {"standard": "simai.composite-host-port", "version": "1.0.4"},
   "outputs": {
     "changed": {"value": "record-changed.v1", "summary": "Заказ изменён в списке."}
   },
@@ -123,7 +123,7 @@ const {published, refused} = SF.Composition.publishEffects(answer.effects ?? [],
 | `id` | имя фрагмента | не меньше двух частей через точку из строчных латинских букв, цифр и дефиса: `shop.order-list` |
 | `element` | тег элемента | имя пользовательского элемента с дефисом: `shop-order-list` |
 | `regions` | области страницы, где фрагмент может стоять | от одной до восьми уникальных имён: строчная буква, затем до 31 строчной буквы, цифры или дефиса |
-| `port` | стандарт и версия порта хоста | `{standard, version}`, версия полная: `1.0.3` |
+| `port` | стандарт и версия порта хоста | `{standard, version}`, версия полная: `1.0.4` |
 | `outputs` | выходы | до 16 портов; у каждого `value` — тип значения из перечня и `summary` — описание до 1000 символов |
 | `inputs` | входы | то же, что `outputs` |
 | `operation` | операция доступа, без которой фрагмент не показывают | слово-метка: строчная буква, затем до 127 символов из строчных букв, цифр, точки, подчёркивания, двоеточия и дефиса |

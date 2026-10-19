@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.composite-host-port",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "title": "SIMAI Composite Host Port",
   "appliesTo": [
     "simai.framework.composite-component"
@@ -141,9 +141,9 @@
   "extends": [
     {
       "id": "simai.dynamic-composite-component",
-      "version": "1.0.2",
-      "path": "../../simai.dynamic-composite-component/1.0.2/standard.json",
-      "sha256": "901ee98862e443d34ccef0b5c231c5808b55bf30d18fcdc063d4d72700028511",
+      "version": "1.0.3",
+      "path": "../../simai.dynamic-composite-component/1.0.3/standard.json",
+      "sha256": "3080bd327a3062b2f060e73955ca61e87d612e14b170cf1b9c119fd083321bad",
       "description": "Behaviour on the seam: intents, revisions, settings layers, instance lifecycle and data states. This standard declares and versions the seam itself."
     }
   ],
@@ -183,7 +183,7 @@
         "the Framework reference host, which passes the 18-case kit of that port"
       ],
       "origin": "Drafted by simai/larena (larena-specs 0b1db2d0, proposal simai.composite-host-port 1.0.0) and authored for publication by the Framework owner.",
-      "reissue": "Re-issued as 1.0.3 when the form of a port declaration itself was published: the standard now pins that schema and the manifest version (2.2.0) in which a component declares its port. Requirements are unchanged since 1.0.0; the bytes of 1.0.0, 1.0.1 and 1.0.2 stay in history."
+      "reissue": "Re-issued as 1.0.4 because its parent simai.dynamic-composite-component was re-issued as 1.0.3 for the Recipe contract 1.1.0 (2026-10-19); extends pins the parent by version and digest. 1.0.3 had published the form of a port declaration and pinned the manifest schema 2.2.0. Requirements are unchanged since 1.0.0; the bytes of 1.0.0 to 1.0.3 stay in history."
     }
   }
 }

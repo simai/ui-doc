@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.interface-fragment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "SIMAI Interface Fragment",
   "appliesTo": [
     "simai.framework.composite-component"
@@ -125,9 +125,9 @@
   "extends": [
     {
       "id": "simai.composite-host-port",
-      "version": "1.0.3",
-      "path": "../../simai.composite-host-port/1.0.3/standard.json",
-      "sha256": "e2518df716ff9934bdccbbeb22302f1ea8d7c81937c4865ddddbdc752a4657f3",
+      "version": "1.0.4",
+      "path": "../../simai.composite-host-port/1.0.4/standard.json",
+      "sha256": "92911fdc3e873ce09237084573ee65c8e99d02216e7848c25aedce740a795d76",
       "description": "The seam between a composite and its host. A fragment is such a composite placed in a page region beside others."
     }
   ],
@@ -158,7 +158,8 @@
       "validated_against": [
         "the closed value-type checks in src/core/js/composition/routing.mjs",
         "SF.Composition.checkFragmentDescriptor against the pinned descriptor schema"
-      ]
+      ],
+      "reissue": "Re-issued as 1.0.1 because the standard it extends, simai.composite-host-port, was re-issued as 1.0.4 for the Recipe contract 1.1.0 (2026-10-19); extends pins it by version and digest. Requirements are unchanged since 1.0.0; the bytes of 1.0.0 stay in history."
     }
   }
 }

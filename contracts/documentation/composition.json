@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "6a1f0206308edfafaa58ff37aad2670c633ebad1",
-    "core_revision": "1d2a86b4add81438b541a2d27f051448eac4c51e",
+    "source_revision": "eb5b215c332c65644529a5c12631ec57c0f30df1",
+    "core_revision": "7493766fe39ec6633cb1420532690c61661b0354",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
-      "distr/core/js/core.js": "37130cedb8e011b0332b26bd47103d87a2b56f6b128baef27a543ae6982794c3"
+      "distr/core/js/core.js": "83ad881988afcc5f01f7a57ff21dded54394dfcea4066380d792f5b1bdc3b57a"
     },
-    "note": "At source 6a1f0206 and core 1d2a86b4 (release ui-1d2a86b4add8) the composition schemas, composition-types, index.mjs, builtins, fixture, the buttons manifest and core.js are byte-identical to the review at the previous pin (the release shows an inline sf-modal without open and issues simai.component-package 1.1.0, which the composition pages do not describe)."
+    "note": "At source eb5b215c and core 7493766f (release ui-7493766fe39e) the composition schemas, composition-types, index.mjs, builtins, fixture and the buttons manifest are byte-identical to the review at the previous pin; core.js changed only in the bundled recipe.mjs, which takes the canonicalization profile under either name (Recipe 1.1.0, reviewed under recipe_candidate), which the composition pages do not describe."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
@@ -130,40 +130,44 @@
     }
   ],
   "recipe_candidate": {
-    "source_revision": "8d3438aa9c2e054580fa1eab97916aed010ec545",
-    "core_revision": "8c22fe2b80bb3bb88ec40dd34bbcddffb65f27d2",
+    "source_revision": "eb5b215c332c65644529a5c12631ec57c0f30df1",
+    "core_revision": "7493766fe39ec6633cb1420532690c61661b0354",
     "source_files": {
-      "src/core/contracts/composition-recipe-v1/recipe.schema.json": "63d2f7d506be22b3f4a6060306a4d3d08e562d3720d82f13c41e69bc6ce3ffb3",
-      "src/core/contracts/composition-recipe-v1/manifest.schema.json": "e897974dcdb1e2428f0f808a7fa9ad7a8eef6d79128d24016a5e21fc372b730c",
-      "src/core/contracts/composition-recipe-v1/inputs.schema.json": "e83e5c8ece50c4641b58256b852a3fecc33a786919279d85de5c7689d32d2af1",
-      "src/core/contracts/composition-recipe-v1/dependencies.schema.json": "a2f3f371ace795f22bf4fb293e0005dcecbbc6c340cb669ba8e274c6e0b745e8",
-      "src/core/contracts/composition-recipe-v1/contract.lock.json": "73fbc4f16b5a1b9e23d517c9975db6dc51f18846c074b0dece1b326374b1f871",
+      "src/core/contracts/composition-recipe-v1/recipe.schema.json": "08749a44701f7c3b4fbbab9f936a8b0f9939f1cffd1ba3d4fa724e9addf8d973",
+      "src/core/contracts/composition-recipe-v1/manifest.schema.json": "3943213661945c3d862de7abadd99c18302b1156c233a51ca09271ca70d79536",
+      "src/core/contracts/composition-recipe-v1/inputs.schema.json": "7a05d19fa70e35a2aba0c54cdd89d2b73a3c4417456182e45dd068b9f67457bb",
+      "src/core/contracts/composition-recipe-v1/dependencies.schema.json": "3d4508db8ba3056ad408fdf6c0ae6a497d9ab47ec1cf04cf06e70f2d5efd9cb5",
+      "src/core/contracts/composition-recipe-v1/contract.lock.json": "271b0d8ac3f7eef42410269eb1ee1a64e7925610b591b425419f771d2e7768ed",
       "src/core/contracts/composition-recipe-v1/fixtures/header-switch.json": "a5a3105d42e3403d5d4a99d86155b4a2d5609e54abc7c9638e56c2bb1f7e26eb",
       "src/core/js/composition/canonical.mjs": "aa6b44b2b81fc71040a32c6d8521201b7b8f23881ba2844c5a749b2e6ba3587c",
-      "src/core/js/composition/recipe.mjs": "26663eecdbeed1e1950e7170b6bc00aa502a98bcd637c9bc388d146737bddfb6",
-      "src/core/js/composition/index.mjs": "ab7c520156e25a600caa9a1f168202f04d6c6689cefa666f6983b1ff5ec06cde"
+      "src/core/js/composition/recipe.mjs": "855bc06ed56980350e9540c55301464fc8a4d453b6dabfbbab82812dc6992a34",
+      "src/core/js/composition/index.mjs": "45a71cda246130f6dd6aa3b4c44f24ae8eda396712705ed986720c9ebc7919f9",
+      "src/core/contracts/composition-recipe-v1/fixtures/format-names.json": "9f860084ee6abb4cabbc90bdddb402cb04f3f5ed39a170e252b3a8fce2debc78"
     },
     "generated_files": {
-      "distr/core/contracts/composition-recipe-v1/recipe.schema.json": "63d2f7d506be22b3f4a6060306a4d3d08e562d3720d82f13c41e69bc6ce3ffb3",
-      "distr/core/contracts/composition-recipe-v1/manifest.schema.json": "e897974dcdb1e2428f0f808a7fa9ad7a8eef6d79128d24016a5e21fc372b730c",
-      "distr/core/contracts/composition-recipe-v1/inputs.schema.json": "e83e5c8ece50c4641b58256b852a3fecc33a786919279d85de5c7689d32d2af1",
-      "distr/core/contracts/composition-recipe-v1/dependencies.schema.json": "a2f3f371ace795f22bf4fb293e0005dcecbbc6c340cb669ba8e274c6e0b745e8",
-      "distr/core/contracts/composition-recipe-v1/contract.lock.json": "979c3a435a8002854c3505a5b54e875eaee185d28667320c74ac4591823b3c9d",
+      "distr/core/contracts/composition-recipe-v1/recipe.schema.json": "08749a44701f7c3b4fbbab9f936a8b0f9939f1cffd1ba3d4fa724e9addf8d973",
+      "distr/core/contracts/composition-recipe-v1/manifest.schema.json": "3943213661945c3d862de7abadd99c18302b1156c233a51ca09271ca70d79536",
+      "distr/core/contracts/composition-recipe-v1/inputs.schema.json": "7a05d19fa70e35a2aba0c54cdd89d2b73a3c4417456182e45dd068b9f67457bb",
+      "distr/core/contracts/composition-recipe-v1/dependencies.schema.json": "3d4508db8ba3056ad408fdf6c0ae6a497d9ab47ec1cf04cf06e70f2d5efd9cb5",
+      "distr/core/contracts/composition-recipe-v1/contract.lock.json": "271b0d8ac3f7eef42410269eb1ee1a64e7925610b591b425419f771d2e7768ed",
       "distr/core/contracts/composition-recipe-v1/fixtures/header-switch.json": "a5a3105d42e3403d5d4a99d86155b4a2d5609e54abc7c9638e56c2bb1f7e26eb",
-      "distr/core/js/core.js": "1d5c249ba2e42a12d3e085679387eb2647c671579add9b847dfdffea357e790c"
+      "distr/core/js/core.js": "83ad881988afcc5f01f7a57ff21dded54394dfcea4066380d792f5b1bdc3b57a"
     },
     "source_snippets": {
       "src/core/js/composition/recipe.mjs": [
         "export async function resolveRecipe",
         "document: null",
-        "dependencyReceipt"
+        "dependencyReceipt",
+        "simai.recipe.canonical-json'",
+        "incompatible_profile"
       ],
       "src/core/js/composition/index.mjs": [
         "resolveRecipe",
         "globalThis.SF.Composition"
       ],
       "src/core/contracts/composition-recipe-v1/recipe.schema.json": [
-        "simai.composition.recipe.v1"
+        "simai.composition.recipe.v1",
+        "simai.composition.recipe"
       ]
     },
     "generated_snippets": {
@@ -223,7 +227,17 @@
           "resolveRecipe(recipe, context)",
           "dependencyReceipt"
         ]
+      },
+      {
+        "path": "content/ru/guide/layouts/reference/specification.md",
+        "snippets": [
+          "Редакция 1.1.0 принимает имена форматов без версии",
+          "simai.recipe.canonical-json",
+          "incompatible_profile",
+          "пример шапки не\nизменился"
+        ]
       }
-    ]
+    ],
+    "note": "Reviewed at Recipe 1.1.0 (source eb5b215c, core 7493766f, release ui-7493766fe39e): the four schemas and the canonicalization profile take names without a version beside the older labels; fixtures/header-switch.json and canonical.mjs are byte-identical to 1.0.1, so the public copy assets/examples/composition/header-switch.json stays in the older form; format-names.json records the bare-name digests. The layout reference page states the edition."
   }
 }

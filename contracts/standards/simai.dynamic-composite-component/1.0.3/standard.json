@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.dynamic-composite-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "title": "SIMAI Dynamic Composite Component",
   "appliesTo": [
     "simai.framework.composite-component"
@@ -128,9 +128,9 @@
   "extends": [
     {
       "id": "simai.composite-component",
-      "version": "1.0.2",
-      "path": "../../simai.composite-component/1.0.2/standard.json",
-      "sha256": "a4cc1676dd75455baa6cc4182b409593b52b4c8d966acbfe2839e74b712809fc",
+      "version": "1.0.3",
+      "path": "../../simai.composite-component/1.0.3/standard.json",
+      "sha256": "c48f74c27a247f14a90799cf05d87f461e0f92aa25dcc2275495f9e45f487a56",
       "description": "Frontend composition, presentation, accessibility and no-JS behaviour. This standard adds the host relationship."
     }
   ],
@@ -164,7 +164,7 @@
         "simai framework smart table"
       ],
       "origin": "Drafted by simai/larena (larena-specs 5c458cf0) and authored for publication by the Framework owner.",
-      "reissue": "Re-issued as 1.0.2 after a report from Larena: 1.0.1 named the manifest schema as 2.0.0 while pinning the bytes it gained in the data view work. A pinned reference now names the version the target itself declares (x-simai-version), so one identity and version never covers two byte sets. Requirements are unchanged since 1.0.0."
+      "reissue": "Re-issued as 1.0.3 because its parent simai.composite-component was re-issued as 1.0.3 for the Recipe contract 1.1.0 (2026-10-19); extends pins the parent by version and digest. Requirements are unchanged since 1.0.0; the bytes of 1.0.0, 1.0.1 and 1.0.2 stay in history."
     }
   }
 }

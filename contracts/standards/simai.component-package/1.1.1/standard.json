@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.component-package",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "SIMAI Framework Component Package",
   "appliesTo": [
     "simai.framework.component-package"
@@ -162,23 +162,23 @@
   "references": [
     {
       "id": "simai.composite-component",
-      "version": "1.0.2",
-      "path": "../../simai.composite-component/1.0.2/standard.json",
-      "sha256": "a4cc1676dd75455baa6cc4182b409593b52b4c8d966acbfe2839e74b712809fc",
+      "version": "1.0.3",
+      "path": "../../simai.composite-component/1.0.3/standard.json",
+      "sha256": "c48f74c27a247f14a90799cf05d87f461e0f92aa25dcc2275495f9e45f487a56",
       "description": "A composite in a package is held to this standard as published."
     },
     {
       "id": "simai.dynamic-composite-component",
-      "version": "1.0.2",
-      "path": "../../simai.dynamic-composite-component/1.0.2/standard.json",
-      "sha256": "901ee98862e443d34ccef0b5c231c5808b55bf30d18fcdc063d4d72700028511",
+      "version": "1.0.3",
+      "path": "../../simai.dynamic-composite-component/1.0.3/standard.json",
+      "sha256": "3080bd327a3062b2f060e73955ca61e87d612e14b170cf1b9c119fd083321bad",
       "description": "A package composite that works against a host is held to this standard as published."
     },
     {
       "id": "simai.composite-host-port",
-      "version": "1.0.3",
-      "path": "../../simai.composite-host-port/1.0.3/standard.json",
-      "sha256": "e2518df716ff9934bdccbbeb22302f1ea8d7c81937c4865ddddbdc752a4657f3",
+      "version": "1.0.4",
+      "path": "../../simai.composite-host-port/1.0.4/standard.json",
+      "sha256": "92911fdc3e873ce09237084573ee65c8e99d02216e7848c25aedce740a795d76",
       "description": "The seam a package component implements when it implements a public Framework port."
     },
     {
@@ -219,7 +219,7 @@
         "manifests, entries and templates are held by the package's own tests and sf-contract in the overlay, not by the builder",
         "a package has no cache version of its own; each build is served under its own path"
       ],
-      "reissue": "Issued as 1.1.0 after documentation trial 6 (2026-10-18): 1.0.0 pinned the manifest schema 2.2.0 while the Framework's components, and therefore a package built on it, declare fields added up to 2.5.0. Requirements are unchanged since 1.0.0; 1.0.0 keeps its published bytes under contracts/standards/history."
+      "reissue": "Re-issued as 1.1.1 because the standards it references by digest were re-issued for the Recipe contract 1.1.0 (2026-10-19): simai.composite-component 1.0.3, simai.dynamic-composite-component 1.0.3 and simai.composite-host-port 1.0.4. 1.1.0 was issued after documentation trial 6 (2026-10-18) to pin the manifest schema 2.5.0. Requirements are unchanged since 1.0.0; 1.0.0 and 1.1.0 keep their published bytes under contracts/standards/history."
     }
   }
 }

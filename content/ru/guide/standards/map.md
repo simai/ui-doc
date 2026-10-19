@@ -18,17 +18,28 @@ description: "Карта стандартов показывает все ста
 | Уровень | Стандарт | Имя (`id`) | Версия | Что задаёт | Опирается на |
 |:---|:---|:---|:---|:---|:---|
 | 1 | Standard Contract | `standard-contract` | 1.0.0 | Форму любого стандарта | — |
-| 2 | Recipe | `simai.composition-recipe` | 1.0.1 | Правила сборки документа страницы | Standard Contract |
+| 2 | Recipe | `simai.composition-recipe` | 1.1.0 | Правила сборки документа страницы | Standard Contract |
 | 2 | Манифест Smart-компонента | `simai.smart-component-manifest` | 2.5.0 | Контракт одного компонента | Standard Contract |
-| 3 | Составной компонент | `simai.composite-component` | 1.0.2 | Внешнюю сторону составного компонента | Recipe, манифест |
-| 3 | Пакет компонентов | `simai.component-package` | 1.1.0 | Пакет Smart-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
-| 4 | Динамический составной компонент | `simai.dynamic-composite-component` | 1.0.2 | Поведение составного компонента на стыке с приложением | наследует уровень 3 |
-| 4 | Порт хоста | `simai.composite-host-port` | 1.0.3 | Сам стык: объявленный и версионированный порт | наследует динамический |
-| 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.0.0 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
+| 3 | Составной компонент | `simai.composite-component` | 1.0.3 | Внешнюю сторону составного компонента | Recipe, манифест |
+| 3 | Пакет компонентов | `simai.component-package` | 1.1.1 | Пакет Smart-компонентов владельца: устройство, сборку, квитанцию, поставку и подключение | манифест (`uses`); ссылается на составной, динамический составной, порт хоста, жизненный цикл изменений |
+| 4 | Динамический составной компонент | `simai.dynamic-composite-component` | 1.0.3 | Поведение составного компонента на стыке с приложением | наследует уровень 3 |
+| 4 | Порт хоста | `simai.composite-host-port` | 1.0.4 | Сам стык: объявленный и версионированный порт | наследует динамический |
+| 5 | Фрагмент интерфейса | `simai.interface-fragment` | 1.0.1 | Составной компонент в области страницы рядом с другими: описание фрагмента, типы значений страницы, навигацию по областям | наследует порт хоста |
 | сквозной | Жизненный цикл изменений | `simai.change-lifecycle` | 1.0.0 | Как публичное имя уходит из Framework | схема журнала, политика сроков |
 | сквозной | Правила взаимодействия | `simai.interaction-rules` | 1.0.0 | Как любой Smart-компонент загружается, говорит с соседями и рисует | — |
 | сквозной | Разработка с ИИ | `simai.ai-development` | 1.0.0 | Как ИИ-агент разрабатывает на Framework и вместе с ним: контракты, публичная поверхность, выпуски, проверка и приёмка | — |
 | 2 | Фоновый эффект | `simai.effect` | 1.0.0 | Анимированный фон в области страницы: манифест, модуль, правила работы, набор проверок | Standard Contract; схема манифеста эффекта; правила взаимодействия |
+
+**Переиздания без новых требований.** Стандарт закрепляет то, на что
+опирается, по версии и хешу (см. [Закрепление по хешу](/ru/guide/standards/what-is/#закрепление-по-хешу)), поэтому новое издание опоры
+переиздаёт всю цепочку над ней. Recipe 1.1.0 принимает имена форматов без
+версии (см. [Recipe (`simai.composition-recipe`)](#recipe-simai-composition-recipe)). Составной компонент закрепил новый lock-файл
+Recipe и вышел изданием 1.0.3. Динамический составной компонент (1.0.3), порт
+хоста (1.0.4) и фрагмент интерфейса (1.0.1) переизданы, потому что каждый
+наследует (`extends`) предыдущий по хешу. Пакет компонентов (1.1.1) переиздан,
+потому что ссылается (`references`) на эти издания по хешу. Требования ни в
+одном из них не изменились; прежние издания хранятся в истории исходников
+Framework (`contracts/standards/history/`).
 
 Форматы данных и их старшие версии. Старшая версия формата равна старшей
 версии стандарта, который его определяет (см. [Имена и версии](#имена-и-версии)).
@@ -73,20 +84,20 @@ description: "Карта стандартов показывает все ста
 | Что | Адрес |
 |:---|:---|
 | Схема конверта Standard Contract | [`/ai/standards/standard-contract/1.0.0/standard.schema.json`](/ai/standards/standard-contract/1.0.0/standard.schema.json) |
-| Комплект Recipe | [`/ai/standards/composition-recipe/1.0.1/`](/ai/standards/composition-recipe/1.0.1/README.md) |
+| Комплект Recipe | [`/ai/standards/composition-recipe/1.1.0/`](/ai/standards/composition-recipe/1.1.0/README.md) |
 | Схема манифеста Smart-компонента | [`/ai/standards/smart-component-manifest/2.5.0/manifest.schema.json`](/ai/standards/smart-component-manifest/2.5.0/manifest.schema.json) |
-| Конверт составного компонента | [`/ai/standards/simai.composite-component/1.0.2/standard.json`](/ai/standards/simai.composite-component/1.0.2/standard.json) |
-| Конверт динамического составного компонента | [`/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json`](/ai/standards/simai.dynamic-composite-component/1.0.2/standard.json) |
-| Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.3/standard.json`](/ai/standards/simai.composite-host-port/1.0.3/standard.json) |
+| Конверт составного компонента | [`/ai/standards/simai.composite-component/1.0.3/standard.json`](/ai/standards/simai.composite-component/1.0.3/standard.json) |
+| Конверт динамического составного компонента | [`/ai/standards/simai.dynamic-composite-component/1.0.3/standard.json`](/ai/standards/simai.dynamic-composite-component/1.0.3/standard.json) |
+| Конверт порта хоста | [`/ai/standards/simai.composite-host-port/1.0.4/standard.json`](/ai/standards/simai.composite-host-port/1.0.4/standard.json) |
 | Схема объявления порта | [`/ai/standards/composite-host-port-schema/1.0.0/port.schema.json`](/ai/standards/composite-host-port-schema/1.0.0/port.schema.json) |
-| Конверт фрагмента интерфейса | [`/ai/standards/simai.interface-fragment/1.0.0/standard.json`](/ai/standards/simai.interface-fragment/1.0.0/standard.json) |
+| Конверт фрагмента интерфейса | [`/ai/standards/simai.interface-fragment/1.0.1/standard.json`](/ai/standards/simai.interface-fragment/1.0.1/standard.json) |
 | Схема описания фрагмента | [`/ai/standards/interface-fragment-schema/1.0.0/descriptor.schema.json`](/ai/standards/interface-fragment-schema/1.0.0/descriptor.schema.json) |
 | Конверт правил взаимодействия | [`/ai/standards/simai.interaction-rules/1.0.0/standard.json`](/ai/standards/simai.interaction-rules/1.0.0/standard.json) |
 | Конверт разработки с ИИ | [`/ai/standards/simai.ai-development/1.0.0/standard.json`](/ai/standards/simai.ai-development/1.0.0/standard.json) |
 | Конверт фонового эффекта | [`/ai/standards/simai.effect/1.0.0/standard.json`](/ai/standards/simai.effect/1.0.0/standard.json) |
 | Схема манифеста эффекта | [`/ai/standards/effect-schema/1.0.0/effect.schema.json`](/ai/standards/effect-schema/1.0.0/effect.schema.json) |
 | Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
-| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.0/standard.json`](/ai/standards/simai.component-package/1.1.0/standard.json) |
+| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.1/standard.json`](/ai/standards/simai.component-package/1.1.1/standard.json) |
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
 
 Копии берутся из закреплённого выпуска при каждой сборке сайта: схема
@@ -124,6 +135,15 @@ Recipe издаётся нормативным комплектом, а не о�
 - lock-файл, хеш которого покрывает каждый нормативный файл комплекта.
 
 Изменение любого файла комплекта сразу видно по хешу.
+
+Издание 1.1.0 принимает имена форматов без версии: схемы Recipe, манифеста
+шаблона, входов и перечня зависимостей принимают и прежнюю метку
+`simai.composition.<имя>.v1`, и имя `simai.composition.<имя>` с
+`"schema_version": 1`, а профиль канонизации называется
+`simai.recipe.canonical-json.v1` или `simai.recipe.canonical-json`. Рецепт в
+прежней форме даёт те же байты Document и те же digest, что и в издании 1.0.1;
+рецепт без версии в имени даёт Document и перечень зависимостей без версии в
+имени. Подробно — в [Где взять спецификацию](/ru/guide/layouts/reference/specification/).
 
 Комплект лежит в исходниках Framework (`src/core/contracts/composition-recipe-v1/`),
 в поставке `ui` (`distr/core/contracts/composition-recipe-v1/`) и на сайте
@@ -405,13 +425,15 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 Стандарт не наследует ни одного требования (`extends` у него нет): он
 относится к отдельному виду — пакету компонентов.
 
-**Издания.** Действующее издание — 1.1.0. Оно закрепляет схему манифеста
-2.5.0, поэтому манифест компонента пакета объявляет те же поля, что и
-компоненты Framework, в том числе `presentation.skeleton` и персональный вид.
-Требования в 1.1.0 те же, что в 1.0.0. Издание 1.0.0 закрепляло схему 2.2.0,
+**Издания.** Действующее издание — 1.1.1. С издания 1.1.0 стандарт закрепляет
+схему манифеста 2.5.0, поэтому манифест компонента пакета объявляет те же
+поля, что и компоненты Framework, в том числе `presentation.skeleton` и
+персональный вид. Издание 1.1.1 только обновляет хеши изданий, на которые
+стандарт ссылается (см. [Переиздания без новых требований](#уровни-стандартов)).
+Требования во всех изданиях те же, что в 1.0.0. Издание 1.0.0 закрепляло схему 2.2.0,
 хотя компоненты Framework, а значит и пакет, построенный на них, уже
-объявляли поля до 2.5.0. Издание 1.0.0 осталось в истории: его байты хранятся в
-исходниках Framework (`contracts/standards/history/simai.component-package/1.0.0/`),
+объявляли поля до 2.5.0. Издания 1.0.0 и 1.1.0 остались в истории: их байты хранятся в
+исходниках Framework (`contracts/standards/history/simai.component-package/<версия>/`),
 а сайт документации публикует только действующее издание.
 
 | Требование | Уровень | Суть |
@@ -503,8 +525,8 @@ Framework (`contracts/standards/simai.component-package/<версия>/`).
 собранный из рецепта, берёт форму рецепта: рецепт в прежней форме даёт
 `simai.composition.document.v1`. В прежней форме пока пишутся реестр
 контрактов Smart-компонентов, порты хоста и их
-наборы проверок, закрепления контрактов возможностей и рецептов, файлы Recipe
-1.0.1, а также форматы продуктов и инструментов: описание фрагмента
+наборы проверок, закрепления контрактов возможностей и рецептов, lock-файл и
+примеры комплекта Recipe (рецепт в прежней форме даёт прежние digest), а также форматы продуктов и инструментов: описание фрагмента
 (`simai.interface-fragment.v1`), манифест эффекта (`simai.effect.v1`), файл
 закрепления пакета (`simai.framework.product-package-source-lock.v1`) и файл
 настроек `sf-build` (`simai.sf-build.config.v1`). Примеры документации
