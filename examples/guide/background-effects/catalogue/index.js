@@ -1,8 +1,8 @@
 // Каталог и отпечаток его индекса: индекс тоже проверяется.
 window.SF_BOOT_CONFIG = Object.assign({}, window.SF_BOOT_CONFIG, {
   effects: {
-    catalogue: 'https://cdn.jsdelivr.net/gh/simai/ui-effects@d955c66ae024552f5e2f98c418e2923959484877/',
-    indexSha256: '9a594fa4d9bb452419aaafbbd4af72443034ce5b1c71d6805be95b1fb868e01e',
+    catalogue: 'https://cdn.jsdelivr.net/gh/simai/ui-effects@e3a6c512f562e214bb33cab79cfac0c8ad1ead4e/',
+    indexSha256: '41dc65f33c5dd5bc519b153bd289de91e4dcf9e1632b0403edfc2f0ad018e2e2',
   },
 });
 
@@ -24,11 +24,13 @@ async function start() {
   const handle = await Effects.placeEffect(area, {effect: 'contour-map', settings: {}, themeMode: 'auto'});
   write(handle ? `placeEffect: ${handle.effect}, схема ${handle.scheme}` : `placeEffect: ${area.getAttribute('data-sf-effect-reason')}`);
 
-  // Адрес вне каталога — чужой эффект: он не запускается.
+  // Адрес вне каталога — чужой эффект: он работает только в изолированном
+  // фрейме. С foreign: 'refuse' он отклоняется, и адрес даже не запрашивается.
+  write(`foreignMode: ${Effects.foreignMode()}`);
   try {
-    await Effects.loadEffect('https://example.com/effects/other/effect.json');
+    await Effects.loadEffect('https://example.com/effects/other/effect.json', {foreign: 'refuse'});
   } catch (error) {
-    write(`чужой адрес: ${error.reason}`);
+    write(`чужой адрес при refuse: ${error.reason}`);
   }
 }
 start().catch((error) => write(`ошибка: ${error.reason ?? error.message}`));

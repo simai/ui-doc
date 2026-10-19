@@ -37,7 +37,7 @@ Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-106d5901f8c3` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-32c7a64e4575` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
 Публичные имена (64) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
@@ -56,7 +56,7 @@ Loader выбрал тему при запуске.
 | `SF.createAsync` | функция | Loader, после `sf-loader-init` | `SF.create`, который ждёт определения элемента. | — |
 | `SF.deprecations` | объект | ядро, сразу после `core.js` | Прежние имена, которые ещё принимаются, и что их заменило — как их объявляет журнал изменений. | — |
 | `SF.DownloadFile` | объект | компонент `download-file` | Скриптовый API компонента DownloadFile; приходит вместе с компонентом (`component/download-file`), его методы описаны на странице компонента. | — |
-| `SF.Effects` | объект | ядро, сразу после `core.js` | Фоновые эффекты (`simai.effect`): проверить манифест, прочитать сохранённые настройки, выбрать тему размещения, подключить эффект или группу окон по правилам, загрузить эффект из закреплённого каталога с проверкой целостности. | `checkEffectManifest`, `checkSetting`, `effectSettings`, `effectSchemes`, `pairIsForeign`, `allowedModes`, `resolveTheme`, `pageScheme`, `mountEffect`, `mountWindows`, `loadEffect`, `placeEffect`, `EFFECT_SCHEMA` |
+| `SF.Effects` | объект | ядро, сразу после `core.js` | Фоновые эффекты (`simai.effect`): проверить манифест, прочитать сохранённые настройки, выбрать тему размещения, подключить эффект или группу окон по правилам, загрузить эффект из закреплённого каталога с проверкой целостности, запустить чужой эффект только в изолированном фрейме. | `checkEffectManifest`, `checkSetting`, `effectSettings`, `effectSchemes`, `pairIsForeign`, `foreignMode`, `allowedModes`, `resolveTheme`, `pageScheme`, `mountEffect`, `mountWindows`, `loadEffect`, `placeEffect`, `EFFECT_FORMAT`, `EFFECT_SCHEMA`, `SANDBOX_RUNNER_SHA256` |
 | `SF.fieldRenderers` | объект | Smart-компонент `sf-field-renderers` | Набор отрисовщиков полей: значение в ячейке, в просмотре записи, в элементе правки и в фильтре. | `renderCellField`, `renderEditField`, `renderViewField`, `renderFilterField` |
 | `SF.FileUpload` | объект | компонент `file-upload` | Скриптовый API компонента FileUpload; приходит вместе с компонентом (`component/file-upload`), его методы описаны на странице компонента. | — |
 | `SF.Flag` | объект | компонент `flag` | Скриптовый API компонента Flag; приходит вместе с компонентом (`component/flag`), его методы описаны на странице компонента. | — |

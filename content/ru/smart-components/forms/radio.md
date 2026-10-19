@@ -79,7 +79,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-106d5901f8c3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-32c7a64e4575` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,7 +88,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 | Тег | `<sf-radio>` |
 | Назначение | Один вариант выбора: нативная радиокнопка с подписью, описанием и текстом подсказки. Радиокнопки с одинаковым name образуют группу, в которой выбор одной снимает выбор с остальных. |
 | Контракт | `smart.radio`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-106d5901f8c3` |
+| Поставка | выпуск Framework `ui-32c7a64e4575` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -136,5 +136,5 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 ### Источник
 
-- `simai/ui@106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4:distr/smart/radio`
-- `simai/ui@106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4:distr/rule/rule.json#name=cl-radio`
+- `simai/ui@32c7a64e457583eaf5a1860590001217a86b5af9:distr/smart/radio`
+- `simai/ui@32c7a64e457583eaf5a1860590001217a86b5af9:distr/rule/rule.json#name=cl-radio`

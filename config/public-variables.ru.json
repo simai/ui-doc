@@ -97,6 +97,7 @@
     "The label and icon colour of a segment that is not selected, at rest; hover, pressed and disabled keep their own.": "Цвет подписи и иконки невыбранного сегмента в спокойном состоянии; наведение, нажатие и недоступность сохраняют свои цвета.",
     "The fill of the plate under the selected segment; disabled keeps its own.": "Заливка плашки под выбранным сегментом; недоступность сохраняет свою.",
     "The label, icon and count colour on the selected plate.": "Цвет подписи, иконки и числа на плашке выбранного сегмента.",
-    "The count's colour in a segment that is not selected; the selected one takes the plate's ink.": "Цвет числа в невыбранном сегменте; выбранный берёт цвет содержимого плашки."
+    "The count's colour in a segment that is not selected; the selected one takes the plate's ink.": "Цвет числа в невыбранном сегменте; выбранный берёт цвет содержимого плашки.",
+    "The corner radius of a segment and the plate under the selected one, a button-sized control; the track takes it plus the padding, so the corners stay concentric. The radius attribute, when set, wins.": "Скругление сегмента и плашки под выбранным — элемента размером с кнопку; дорожка получает его плюс отступ, поэтому углы остаются концентричными. Атрибут `radius`, если задан, важнее."
   }
 }

@@ -9,7 +9,8 @@ profile: reference
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
 по смыслу действий над одним объектом; для выбора одного значения из нескольких
-есть [Smart-компонент Button Group](/ru/smart-components/actions/button-group/).
+есть [Smart-компонент Button Group](/ru/smart-components/actions/button-group/),
+а в виде утопленной дорожки с плашкой — [сегментный переключатель](/ru/smart-components/actions/segmented/).
 
 ## Пример
 
@@ -115,7 +116,7 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 |:---|:---|
 | Блок | `sf-button-group` |
 | Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-segment` |
-| Модификаторы | `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--secondary`, `sf-button-group--segmented` |
+| Модификаторы | `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
 | Размеры | `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -130,6 +131,7 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 |:---|:---|:---|
 | `--sf-button-group-background-color` | Заливка дорожки сегментированного вида в спокойном состоянии. | `var(--sf-surface-container)`; зависит от вида |
 | `--sf-button-group-padding` | Внутренний отступ дорожки сегментированного вида со всех сторон, он же промежуток между сегментами; скругление плашки остаётся концентричным. | `var(--sf-a4)`; зависит от вида, размера |
+| `--sf-button-group-radius` | Скругление сегмента и плашки под выбранным — элемента размером с кнопку; дорожка получает его плюс отступ, поэтому углы остаются концентричными. Атрибут `radius`, если задан, важнее. | `var(--sf-button-radius, var(--sf-radius--ui))`; зависит от вида, размера |
 | `--sf-button-group-color` | Цвет подписи и иконки невыбранного сегмента в спокойном состоянии; наведение, нажатие и недоступность сохраняют свои цвета. | `var(--sf-on-surface-container--variant)`; зависит от вида |
 | `--sf-button-group-plate-background-color` | Заливка плашки под выбранным сегментом; недоступность сохраняет свою. | `var(--sf-primary)`; зависит от вида, схемы |
 | `--sf-button-group-plate-color` | Цвет подписи, иконки и числа на плашке выбранного сегмента. | `var(--sf-on-primary)`; зависит от вида, схемы |
@@ -137,7 +139,7 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 
 ```css
 .sf-button-group {
-  --sf-button-group-background-color: var(--sf-surface-container);
+  --sf-button-group-radius: 0;
 }
 ```
 
@@ -148,8 +150,10 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-button-group--count-gap` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-ui-1--text-space-x)` | `margin-inline-start` |
-| `--sf-button-group--padding` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-group-padding, var(--sf-a4))` | `gap`, `padding`, `border-radius` |
-| `--sf-button-group--plate-radius` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-radius, var(--sf-radius--ui))` | `border-radius` |
+| `--sf-button-group--padding` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-group-padding, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-ui-1--space-y-tightness-low)))` | `--sf-button-group--radius`, `gap`, `padding`, `--sf-button-group--segment-padding-block` |
+| `--sf-button-group--plate-radius` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-group-radius, var(--sf-button-radius, var(--sf-radius--ui)))` | `--sf-button-group--radius`, `border-radius` |
+| `--sf-button-group--radius` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `calc(var(--sf-button-group--plate-radius) + var(--sf-button-group--padding))` | `border-radius` |
+| `--sf-button-group--segment-padding-block` | не задана; задают модификаторы, например `.sf-button-group--segmented > .sf-button-group-segment`: `max(calc(var(--sf-px) * 0), calc(var(--sf-button--padding-top) - var(--sf-button-group--padding)))` | `padding-top`, `padding-bottom`, `padding-block`, `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-button-group--text-height` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-button-group--text-size` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-text-size-1)` | `font-size` |
 

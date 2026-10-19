@@ -1,11 +1,11 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "3029d8abda3899f055d91e1599e1c19a969e4369",
-    "core_revision": "106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4",
+    "source_revision": "c06496ba71395d9556a6698229a084de76c61324",
+    "core_revision": "32c7a64e457583eaf5a1860590001217a86b5af9",
     "source_files": {
-      "src/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
-      "src/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
+      "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
+      "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
       "src/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "src/core/js/composition/index.mjs": "45a71cda246130f6dd6aa3b4c44f24ae8eda396712705ed986720c9ebc7919f9",
       "src/core/js/composition/builtins.mjs": "cecc06f437f0c247b0430c565075f2de6435546a6ef44311b366e34b9592f7ea",
@@ -13,12 +13,12 @@
       "src/smart/buttons/smart.manifest.json": "6f59e4c360166c4a97752393873ee97a574bf9ae938f19aa7c9f4b7648c0a31b"
     },
     "generated_files": {
-      "distr/core/contracts/composition-document.v1.schema.json": "5e4309ad97a84309bb5cfd6f21c21c5079a68e65adcb3fd6f6c88bbe2fed0710",
-      "distr/core/contracts/composition-type-manifest.v1.schema.json": "a5457bf4bed8641096b9eb4a2a59f4ca0f4868fb5045b0afb85a85ae05067038",
+      "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
+      "distr/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
-      "distr/core/js/core.js": "108f08b452ed58e5cd64d1c83388cd61b392d9b7aa393a4f170f47e65612d4a6"
+      "distr/core/js/core.js": "6b51e0bb4d35a5dcf2560c6548ea64641ff4ceb53c5e90ccdb4a661d631c5afa"
     },
-    "note": "At source 3029d8ab and core 106d5901 (release ui-106d5901f8c3) the composition schemas, composition-types, index.mjs, builtins, fixture and the buttons manifest are byte-identical to the review at the previous pin; core.js changed only in the bundled effects.js (simai.effect 1.1.0: schemes, pair, placement theme, windows, catalogue loading) and in routing.mjs and fragments.mjs, which read every composition value type by its bare name beside the older .v1 label (routing contract 1.1.0, fragment descriptor schema 1.2.0, journal record value-types-without-version, remove_after 2026-12-01). The composition pages of this contract do not describe either; the value-type, interface-fragment, region-navigation and specification pages, the glossary and the standards map name the types without a version and state that the .v1 label is read until 2026-12-01."
+    "note": "At source c06496ba and core 32c7a64e (release ui-32c7a64e4575) composition-types, index.mjs, builtins, the fixture and the buttons manifest are byte-identical to the review at the previous pin; the composition document and type manifest schemas change only their title (SIMAI in capitals); core.js changed only in the bundled effects.js (the sandbox runner for foreign effects, the effect area ink, EFFECT_FORMAT), public-path.js (Core finds its distr from its own script URL), loader.js (?sf-debug falls back to .min) and deprecations.js. The composition pages of this contract do not describe any of them."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
@@ -130,8 +130,8 @@
     }
   ],
   "recipe_candidate": {
-    "source_revision": "3029d8abda3899f055d91e1599e1c19a969e4369",
-    "core_revision": "106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4",
+    "source_revision": "c06496ba71395d9556a6698229a084de76c61324",
+    "core_revision": "32c7a64e457583eaf5a1860590001217a86b5af9",
     "source_files": {
       "src/core/contracts/composition-recipe-v1/recipe.schema.json": "08749a44701f7c3b4fbbab9f936a8b0f9939f1cffd1ba3d4fa724e9addf8d973",
       "src/core/contracts/composition-recipe-v1/manifest.schema.json": "3943213661945c3d862de7abadd99c18302b1156c233a51ca09271ca70d79536",
@@ -151,7 +151,7 @@
       "distr/core/contracts/composition-recipe-v1/dependencies.schema.json": "3d4508db8ba3056ad408fdf6c0ae6a497d9ab47ec1cf04cf06e70f2d5efd9cb5",
       "distr/core/contracts/composition-recipe-v1/contract.lock.json": "271b0d8ac3f7eef42410269eb1ee1a64e7925610b591b425419f771d2e7768ed",
       "distr/core/contracts/composition-recipe-v1/fixtures/header-switch.json": "a5a3105d42e3403d5d4a99d86155b4a2d5609e54abc7c9638e56c2bb1f7e26eb",
-      "distr/core/js/core.js": "108f08b452ed58e5cd64d1c83388cd61b392d9b7aa393a4f170f47e65612d4a6"
+      "distr/core/js/core.js": "6b51e0bb4d35a5dcf2560c6548ea64641ff4ceb53c5e90ccdb4a661d631c5afa"
     },
     "source_snippets": {
       "src/core/js/composition/recipe.mjs": [
@@ -238,6 +238,6 @@
         ]
       }
     ],
-    "note": "Reviewed at Recipe 1.1.0 (source eb5b215c, core 7493766f, release ui-7493766fe39e; every Recipe file byte-identical at source 3029d8ab, core 106d5901, release ui-106d5901f8c3, where core.js changed only outside the bundled recipe.mjs and canonical.mjs, in effects.js, routing.mjs and fragments.mjs): the four schemas and the canonicalization profile take names without a version beside the older labels; fixtures/header-switch.json and canonical.mjs are byte-identical to 1.0.1, so the public copy assets/examples/composition/header-switch.json stays in the older form; format-names.json records the bare-name digests. The layout reference page states the edition."
+    "note": "At source c06496ba and core 32c7a64e (release ui-32c7a64e4575) the Recipe contract files and recipe.mjs are byte-identical to the review at the previous pin; core.js changed only in effects.js, public-path.js, loader.js and deprecations.js, which the Recipe candidate does not read."
   }
 }

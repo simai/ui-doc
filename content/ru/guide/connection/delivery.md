@@ -41,18 +41,18 @@ Smart-компонентов» по отдельности, а один конк
 Выпуск — один коммит сборки в `ui`. Его идентификатор составлен из первых 12
 знаков этого коммита:
 
-| Что | Значение для выпуска `ui-106d5901f8c3` |
+| Что | Значение для выпуска `ui-32c7a64e4575` |
 |:---|:---|
-| Идентификатор выпуска | `ui-106d5901f8c3` |
-| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4` |
-| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261019.1559` |
-| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `3029d8abda3899f055d91e1599e1c19a969e4369` |
+| Идентификатор выпуска | `ui-32c7a64e4575` |
+| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `32c7a64e457583eaf5a1860590001217a86b5af9` |
+| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261019.2041` |
+| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `c06496ba71395d9556a6698229a084de76c61324` |
 | Коммит сборщика `ui-builder` | `7d57d9b45549e7f6b7bc4e615ccf80a3f35cedc3` |
-| Запись о выпуске | `contracts/releases/ui-106d5901f8c3.lock.json` в репозитории `ui`, добавлена коммитом `938d72363ad7b6765e4978925cea883226b5b5e2` |
-| Пакет продукта `larena`, собранный для этого выпуска | Исходник — `simai/larena-ui`, коммит `5f33ba576aebde377d5195ec71836eb4430aa84d` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
+| Запись о выпуске | `contracts/releases/ui-32c7a64e4575.lock.json` в репозитории `ui`, добавлена коммитом `efccc737657634122270ce7281a43878baa78410` |
+| Пакет продукта `larena`, собранный для этого выпуска | Исходник — `simai/larena-ui`, коммит `6f8eca43372b1964c8dd05b23780bdcf613e5cb5` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
 
 **Идентификатор выпуска — не тег git.** Тегов у выпусков нет (в записи о
-выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-106d5901f8c3`
+выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-32c7a64e4575`
 не существует. Своя копия поставки берётся по полному коммиту, адрес CDN —
 по версии пакета npm этого выпуска (см. [Пакет npm](#пакет-npm)).
 
@@ -95,9 +95,9 @@ git log --diff-filter=A --format='%cs %s' -- 'contracts/releases/ui-*.lock.json'
 `simai/ui` по полному коммиту выпуска и сверяют с записью о выпуске:
 
 ```bash
-git archive --format=tar 106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4 distr | shasum -a 256
+git archive --format=tar 32c7a64e457583eaf5a1860590001217a86b5af9 distr | shasum -a 256
 # равно runtime_sources.core.archive_sha256
-git rev-parse 106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4:distr
+git rev-parse 32c7a64e457583eaf5a1860590001217a86b5af9:distr
 # равно runtime_sources.core.runtime_tree
 ```
 
@@ -117,10 +117,10 @@ git rev-parse 106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4:distr
 Framework подключают из этого пакета: jsDelivr и unpkg отдают любой файл
 пакета по адресу с его версией.
 
-| CDN | Адрес папки `distr/` выпуска `ui-106d5901f8c3` |
+| CDN | Адрес папки `distr/` выпуска `ui-32c7a64e4575` |
 |:---|:---|
-| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/` |
-| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261019.1559/distr/` |
+| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/` |
+| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261019.2041/distr/` |
 
 Адрес папки становится значением `window.sfPath`, а стиль и скрипт ядра
 лежат внутри неё: `core/css/core.css` и `core/js/core.js` (см. [Порядок подключения](/ru/guide/connection/project-setup/#порядок-подключения)).
@@ -133,16 +133,18 @@ Framework подключают из этого пакета: jsDelivr и unpkg �
 файла `package.json` пакета:
 
 ```bash
-npm view @simai-studio/ui@5.20261019.1559 simai
-# { release: 'ui-106d5901f8c3', commit: '106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4' }
+npm view @simai-studio/ui@5.20261019.2041 simai
+# { release: 'ui-32c7a64e4575', commit: '32c7a64e457583eaf5a1860590001217a86b5af9' }
 ```
 
 **Что в пакете.** Каталог `distr/` выпуска с двумя отличиями от репозитория
 `ui`: ядро (`distr/core/`) лежит целиком, в читаемой и сжатой форме, а у
 модулей утилит, компонентов и Smart-компонентов есть только сжатая форма
 (`<имя>.min.css`, `<имя>.min.js`); копий `.gz` в пакете нет. Loader и так
-загружает сжатые модули, поэтому страница работает одинаково; читаемые модули
-для отладки есть только в полной поставке из репозитория `ui` (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)).
+загружает сжатые модули, поэтому страница работает одинаково, и в режиме
+отладки тоже: вместо отсутствующего читаемого модуля Loader берёт сжатый.
+Читаемые модули для отладки есть только в полной поставке из репозитория `ui`
+(см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)).
 Рядом с `distr/` лежит `package-manifest.json`: выпуск, коммит, версия и
 SHA-256 каждого файла пакета в форме `sha256-…`, которую принимает атрибут
 `integrity`.

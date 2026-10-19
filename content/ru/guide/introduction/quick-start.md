@@ -15,7 +15,7 @@ description: "Первая страница не требует установк
 
 Создайте пустую папку и сохраните в ней `index.html`. Framework подключается
 с CDN из пакета npm `@simai-studio/ui`. Пример закреплён на выпуске
-`ui-106d5901f8c3`: во всех трёх адресах стоит версия пакета `5.20261019.1559`,
+`ui-32c7a64e4575`: во всех трёх адресах стоит версия пакета `5.20261019.2041`,
 которая соответствует этому выпуску. Чтобы взять другой выпуск, замените
 версию во всех трёх адресах (см. [Версии: как закрепить выпуск](/ru/guide/connection/versions/)):
 
@@ -27,7 +27,7 @@ description: "Первая страница не требует установк
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/core/css/core.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/core/css/core.css">
 </head>
 <body>
   <main class="p-4">
@@ -43,8 +43,8 @@ description: "Первая страница не требует установк
   </main>
 
   <script>window.SF_BOOT_CONFIG = {preloader: {enabled: false}};</script>
-  <script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/';</script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/core/js/core.js"></script>
+  <script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/';</script>
+  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/core/js/core.js"></script>
 </body>
 </html>
 ```
@@ -69,10 +69,15 @@ Core, `sf-button` — компонент. У кнопки на классах о
 вручную не подключены: Loader нашёл их классы на странице и загрузил нужные
 модули.
 
+Строка с `window.sfPath` необязательна: без неё ядро возьмёт папку `distr/`
+из адреса своего скрипта, то есть ту же версию пакета. Здесь она написана
+явно, чтобы было видно, откуда придут модули (см. [Глобальные настройки](/ru/guide/connection/project-setup/#глобальные-настройки)).
+
 Страница подключает ядро в читаемом виде, `core.css` и `core.js`; модули
 утилит и компонентов Loader загружает сжатыми. В пакете npm у модулей есть
-только сжатая форма, поэтому режим отладки с читаемыми модулями
-(`?sf-debug`) работает только со своей копией поставки (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)).
+только сжатая форма: в режиме отладки (`?sf-debug`) страница работает, но
+модули остаются сжатыми, а читаемые есть только в своей копии поставки
+(см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)).
 Строка `<link rel="icon" href="data:,">` только убирает из консоли ответ `404`
 на запрос значка сайта.
 
@@ -88,8 +93,8 @@ Core, `sf-button` — компонент. У кнопки на классах о
 
 - на вкладке Network нет ответов `404`, все файлы Framework идут с адреса
   `cdn.jsdelivr.net/npm/@simai-studio/ui@<версия>`;
-- в Console нет ошибок загрузки и нет предупреждения о том, что
-  `window.sfPath` не задан;
+- в Console нет ошибок загрузки и нет предупреждения о незакреплённой ветке
+  `main`;
 - выражение `window.SF?.Loader` возвращает загрузчик, а не `undefined`.
 
 ## Добавляем Smart-компоненты

@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-106d5901f8c3",
-  "ui_commit": "106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4",
+  "release": "ui-32c7a64e4575",
+  "ui_commit": "32c7a64e457583eaf5a1860590001217a86b5af9",
   "stages": [
     "core",
     "dom",
@@ -281,7 +281,13 @@
       "available": "core",
       "type": "object",
       "members": {
+        "EFFECT_FORMAT": {
+          "type": "object"
+        },
         "EFFECT_SCHEMA": {
+          "type": "string"
+        },
+        "SANDBOX_RUNNER_SHA256": {
           "type": "string"
         },
         "allowedModes": {
@@ -303,6 +309,10 @@
         "effectSettings": {
           "type": "function",
           "arity": 1
+        },
+        "foreignMode": {
+          "type": "function",
+          "arity": 0
         },
         "loadEffect": {
           "type": "function",
@@ -552,7 +562,7 @@
           "type": "boolean"
         },
         "iconSubsetPromise": {
-          "type": "object"
+          "type": "null"
         },
         "iconSubsetReady": {
           "type": "boolean"

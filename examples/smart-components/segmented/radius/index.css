@@ -1,0 +1,4 @@
+/* Радиус плашки и сегмента; дорожка получает его плюс свой отступ. */
+.segmented-soft-corners {
+  --sf-button-group-radius: 0.75rem;
+}

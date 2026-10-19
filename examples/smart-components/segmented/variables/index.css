@@ -1,0 +1,10 @@
+/* Публичные переменные задают на элементе группы или выше: они наследуются. */
+.segmented-brand {
+  --sf-button-group-background-color: var(--sf-secondary-container);
+  --sf-button-group-padding: var(--sf-a2);
+  --sf-button-group-radius: 999rem;
+  --sf-button-group-color: var(--sf-on-secondary-container);
+  --sf-button-group-plate-background-color: var(--sf-secondary);
+  --sf-button-group-plate-color: var(--sf-on-secondary);
+  --sf-button-group-count-color: var(--sf-on-secondary-container);
+}

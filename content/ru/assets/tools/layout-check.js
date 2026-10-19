@@ -211,10 +211,14 @@
       "flexDirection": "column",
       "alignItems": "center"
     },
+    "sf-pagination-actions": {
+      "alignItems": "center"
+    },
     "sf-pagination-bottom": {
       "alignItems": "center"
     },
     "sf-pagination-container": {
+      "flexWrap": "wrap",
       "alignItems": "center"
     },
     "sf-pagination-count": {
@@ -225,6 +229,7 @@
       "alignItems": "center"
     },
     "sf-pagination-main": {
+      "flexWrap": "wrap",
       "justifyContent": "space-between",
       "alignItems": "center"
     },

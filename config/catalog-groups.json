@@ -111,6 +111,7 @@
         "buttons",
         "icon-buttons",
         "button-group",
+        "segmented",
         "close",
         "download-file",
         "copy-button"

@@ -58,7 +58,9 @@ export const build = (uiRoot) => {
   const targets = {};
   for (const file of cssFiles(uiRoot)) {
     const css = fs.readFileSync(file, 'utf8');
-    for (const rule of css.matchAll(/\/\* utility-hint:([^*]*)\*\/\s*\n([^{]*)\{/gu)) {
+    // A hint may close a longer comment that says why the rule is laid out so:
+    // prose first, then `utility-hint:` and the list.
+    for (const rule of css.matchAll(/\/\*[^*]*?utility-hint:([^*]*)\*\/\s*\n([^{]*)\{/gu)) {
       const hinted = [...rule[1].matchAll(/\(\.([a-z0-9\\/-]+)\)/gu)].map((m) => m[1]);
       const expect = {};
       for (const name of hinted) {
