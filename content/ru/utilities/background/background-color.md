@@ -67,11 +67,12 @@ description: "Заливает элемент цветовой ролью тем
 | `bg-surface-{значение}` | `background-color: var(--sf-surface-{значение})` | `0`, `1`, `2`, `3`, `4`, `inverse` |
 | `bg-surface` | `background-color: var(--sf-surface-1)` | — |
 | `bg-surface-inverse-fixed` | `background-color: var(--sf-surface-inverse-fixed)` | — |
-| `bg-{значение}-container` | `background-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `bg-surface-container` | `background-color: var(--sf-surface-container); --sf-on-surface-variant: var(--sf-on-surface-container--variant)` | — |
 | `bg-on-surface` | `background-color: var(--sf-on-surface)` | — |
 | `bg-on-surface-variant` | `background-color: var(--sf-on-surface-variant)` | — |
 | `bg-{значение}-transparent-select` | `background-color: var(--sf-{значение}-transparent-select)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `bg-{значение}-transparent-overlay` | `background-color: var(--sf-{значение}-transparent-overlay)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `bg-{значение}-container` | `background-color: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `active:bg-{значение}-container` (`.active:bg-{значение}-container:active`) | `background-color: var(--sf-{значение}-container-active)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `active:bg-on-surface` (`.active:bg-on-surface:active`) | `background-color: var(--sf-on-surface-active)` | — |
 | `active:bg-{значение}-transparent` (`.active:bg-{значение}-transparent:active`) | `background-color: var(--sf-{значение}-transparent-active)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
@@ -192,7 +193,6 @@ description: "Заливает элемент цветовой ролью тем
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
 | `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 | `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
 | `--sf-disable` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
@@ -220,6 +220,7 @@ description: "Заливает элемент цветовой ролью тем
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
 | `--sf-success-transparent-select` | `light-dark(var(--sf-success-50--alfa-8), var(--sf-success-90--alfa-8))` |
 | `--sf-success-transparent-overlay` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
+| `--sf-on-surface-container--variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` |
 | `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
 | `--sf-surface-transparent-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |

@@ -31,6 +31,9 @@ distr/
 
 Поставку выпуска берут из репозитория `simai/ui` по полному коммиту выпуска и
 сверяют с контрольной суммой из записи о выпуске (см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)).
+Для подключения с CDN тот же выпуск издан пакетом npm `@simai-studio/ui`: в
+нём ядро целиком, а у модулей утилит, компонентов и Smart-компонентов только
+сжатая форма (см. [Пакет npm](/ru/guide/connection/delivery/#пакет-npm)).
 
 Собранный пакет продукта устроен так же, как `distr/smart/`: по папке на
 компонент и файл правил загрузки `rule.js` (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)).
@@ -72,7 +75,7 @@ Loader.
 
 | Настройка | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `window.sfPath` | Адрес папки `distr/` поставки | Незакреплённая ветка `main` на CDN, с предупреждением в консоли |
+| `window.sfPath` | Адрес папки `distr/` поставки | Незакреплённая ветка `main` репозитория `simai/ui` на CDN, с предупреждением в консоли |
 | `window.sfSmartPath` | Адрес папки, в которой лежит `smart/`, если Smart-компоненты отдаются не из `distr/smart/` | Равен `sfPath`: Smart-компоненты берутся из `<sfPath>/smart/` |
 | `window.SF_BOOT_CONFIG` | Настройки запуска: `preloader`, `theme` (принимает только `false` — выключает автоматический выбор темы, см. [Темы](/ru/guide/colour/themes/#как-выбирается-тема-на-странице)), `icons`, `smart`, `packages` (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), `minified` (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)), `cacheVersion`, `pluginListVersion` | Пустой объект |
 | `window.SF_PRELOADED` | План заранее подключённых модулей (см. [Готовый план для рабочей сборки](/ru/guide/connection/loader/#готовый-план-для-рабочей-сборки)) | Нет |
@@ -98,7 +101,7 @@ Loader.
 `pluginListVersion` — любые непустые строки: Loader сравнивает их с
 сохранёнными в `localStorage` как есть (см. [Кеш и версии адресов](/ru/guide/connection/loader/#кеш-и-версии-адресов)). Для своей
 копии поставки обеим меткам дают идентификатор выпуска, например
-`ui-2f724e0810ea`. При переходе на другой выпуск метки меняются вместе с ним:
+`ui-106d5901f8c3`. При переходе на другой выпуск метки меняются вместе с ним:
 Loader очищает сохранённые списки модулей, а адреса модулей получают новый
 параметр `sf_v`.
 
@@ -106,26 +109,25 @@ Loader очищает сохранённые списки модулей, а а�
 <script>
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
-    cacheVersion: 'ui-2f724e0810ea',
-    pluginListVersion: 'ui-2f724e0810ea',
+    cacheVersion: 'ui-106d5901f8c3',
+    pluginListVersion: 'ui-106d5901f8c3',
   };
 </script>
 ```
 
-Если `sfPath` не задан, ядро берёт файлы из
-`https://cdn.jsdelivr.net/gh/simai/ui@main/distr/` и пишет в консоль
-предупреждение о незакреплённой ветке. Страница при этом работает — и именно
-поэтому ошибку легко не заметить. Предупреждение выглядит так:
+Если `sfPath` не задан, ядро берёт файлы с CDN из ветки `main` репозитория
+`simai/ui` и пишет в консоль предупреждение о незакреплённой ветке. Оно
+начинается так:
 
 ```text
-SIMAI Framework: window.sfPath is not set, so the runtime is loading from
-https://cdn.jsdelivr.net/gh/simai/ui@main/distr/ — an unpinned branch that
-changes without notice. Set window.sfPath to your own copy of distr/, before
-core.js, or to a released commit: https://cdn.jsdelivr.net/gh/simai/ui@<commit>/distr/ .
+SIMAI Framework: window.sfPath is not set, so the runtime is loading from …
 ```
 
-Увидели его — задайте `sfPath` на свою копию `distr/` или на адрес CDN с
-полным коммитом выпуска.
+Ветка `main` — не выпуск, а репозиторий `simai/ui` слишком велик для отдачи
+с jsDelivr из GitHub: такой адрес часть файлов не отдаёт. Увидели
+предупреждение — задайте `sfPath` на свою копию `distr/` или на адрес пакета
+npm с версией выпуска (см. [CDN или своя копия](#cdn-или-своя-копия)); адрес
+из текста предупреждения для этого не подходит.
 Это касается и примеров во встроенных фреймах: у каждого документа свой
 `sfPath`.
 
@@ -136,7 +138,7 @@ core.js, or to a released commit: https://cdn.jsdelivr.net/gh/simai/ui@<commit>/
 
 | Способ | Когда подходит |
 |:---|:---|
-| CDN с полным коммитом выпуска | Знакомство, прототип, документация |
+| CDN: пакет npm `@simai-studio/ui` с версией выпуска | Знакомство, прототип, документация |
 | Своя копия поставки в проекте | Рабочий проект: свой кеш, независимость от внешнего CDN |
 
 Своя копия — весь каталог `distr/` одного выпуска в публичной папке проекта,
@@ -153,31 +155,36 @@ core.js, or to a released commit: https://cdn.jsdelivr.net/gh/simai/ui@<commit>/
 
 ```bash
 git clone https://github.com/simai/ui.git simai-ui
-git -C simai-ui archive --format=tar 2f724e0810ea58bb8381767b9f9b8c368f5f33ae distr | shasum -a 256
-# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-2f724e0810ea.lock.json
+git -C simai-ui archive --format=tar 106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4 distr | shasum -a 256
+# равно runtime_sources.core.archive_sha256 в записи simai-ui/contracts/releases/ui-106d5901f8c3.lock.json
 # и полю runtime.ui.sha256 в /ai/framework-lock.json этого сайта
 mkdir -p public/assets/simai-framework/ui
-git -C simai-ui archive --format=tar 2f724e0810ea58bb8381767b9f9b8c368f5f33ae distr | tar -x -C public/assets/simai-framework/ui
+git -C simai-ui archive --format=tar 106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4 distr | tar -x -C public/assets/simai-framework/ui
 ```
 
 Каталог появляется как `public/assets/simai-framework/ui/distr/`.
 
-При подключении с CDN полный коммит выпуска ставится во всех адресах сразу:
+При подключении с CDN страница берёт файлы из пакета npm `@simai-studio/ui`,
+и версия пакета стоит во всех трёх адресах сразу:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/simai/ui@<метка>/distr/core/css/core.min.css">
-<script>
-  window.sfPath = 'https://cdn.jsdelivr.net/gh/simai/ui@<метка>/distr/';
-</script>
-<script src="https://cdn.jsdelivr.net/gh/simai/ui@<метка>/distr/core/js/core.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/core/css/core.css">
+<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/';</script>
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.1559/distr/core/js/core.js"></script>
 ```
 
-`<метка>` — полный коммит выбранного выпуска (поле
-`runtime_sources.core.commit` записи о выпуске), например
-`2f724e0810ea58bb8381767b9f9b8c368f5f33ae` для выпуска `ui-2f724e0810ea`.
-Идентификатор выпуска меткой не служит: выпуски не помечены тегами
-(см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске)). Готовая страница с полным коммитом — в быстром
-старте (см. [Страница на Core](/ru/guide/introduction/quick-start/#страница-на-core)). Пакет продукта приходит в поставке
+`5.20261019.1559` — версия пакета для выпуска `ui-106d5901f8c3`. Версию другого
+выпуска и правило, по которому она получается из коммита выпуска, —
+см. [Пакет npm](/ru/guide/connection/delivery/#пакет-npm). Тот же пакет
+отдаёт unpkg: адреса вида
+`https://unpkg.com/@simai-studio/ui@5.20261019.1559/distr/` работают так же. Готовая
+страница — в быстром старте (см. [Страница на Core](/ru/guide/introduction/quick-start/#страница-на-core)).
+
+В пакете npm у модулей утилит, компонентов и Smart-компонентов есть только
+сжатая форма, а копий `.gz` нет. Поэтому с CDN ядро подключают в любой форме,
+но режим отладки с читаемыми модулями (`?sf-debug`, `data-sf-debug`,
+`minified: false`) работает только со своей копией поставки: с адреса пакета
+читаемые модули не загрузятся (см. [Сжатые файлы](/ru/guide/connection/loader/#сжатые-файлы)). Пакет продукта приходит в поставке
 продукта и объявляется пакетом (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)).
 
 В статическом сайте эти теги стоят в HTML, в веб-приложении — в общем шаблоне
@@ -192,6 +199,8 @@ git -C simai-ui archive --format=tar 2f724e0810ea58bb8381767b9f9b8c368f5f33ae di
 1. Во вкладке Network нет ответов `404`, все файлы Framework идут с
    закреплённого адреса.
 2. В Console нет ошибок загрузки и предупреждения о незаданном `sfPath`.
+   При подключении с CDN все адреса Framework содержат одну и ту же версию
+   пакета `@simai-studio/ui`.
 3. `window.SF?.Loader` возвращает загрузчик.
 4. Основные страницы просмотрены на мобильной и настольной ширине, в светлой и
    тёмной теме.

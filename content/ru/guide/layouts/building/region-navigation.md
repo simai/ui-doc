@@ -182,7 +182,7 @@ HTML и JSON живут по одному адресу, поэтому серв�
 ## Смотрите также
 
 - [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/) — что стоит в области и как фрагменты освобождают ресурсы.
-- [Типы значений маршрутов](/ru/guide/layouts/reference/value-types/) — `navigation.v1`: переход в области как значение маршрута.
+- [Типы значений маршрутов](/ru/guide/layouts/reference/value-types/) — `navigation`: переход в области как значение маршрута.
 - [Скелетон области страницы](/ru/guide/smart-components/states-and-loading/#скелетон-области-страницы) — как выглядит область во время перехода.
 - [Как работает Loader](/ru/guide/connection/loader/) — когда доступен каждый `SF.*`.
 - [Фрагмент интерфейса (`simai.interface-fragment`)](/ru/guide/standards/map/#фрагмент-интерфейса-simai-interface-fragment) — требования `region-navigation` и `full-load-fallback`.

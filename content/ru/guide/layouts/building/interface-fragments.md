@@ -13,7 +13,7 @@ Smart-компонент, поставленный в именованную о�
 соседями. Фрагмент интерфейса не страница, не шаблон и не серверная вставка
 со своим поведением; не путайте его с фрагментом Recipe — повторно
 используемой частью плана сборки ([Словарь Recipe](/ru/guide/layouts/building/recipe-templates-and-variants/#словарь-recipe)). Правила фрагмента задаёт стандарт
-[`simai.interface-fragment`](/ru/guide/standards/map/#фрагмент-интерфейса-simai-interface-fragment).
+[`simai.interface-fragment`](/ru/guide/standards/map/#фрагмент-интерфейса-simai-interface-fragment) 1.0.2.
 
 ## Как фрагменты связаны
 
@@ -29,7 +29,7 @@ Smart-компонент, поставленный в именованную о�
   концах совпадают ([Типы значений маршрутов](/ru/guide/layouts/reference/value-types/)).
 
 Значение между фрагментами говорит, что и где изменилось, но не несёт
-данные. Список файлов отправляет `files-moved.v1` с идентификаторами и
+данные. Список файлов отправляет `files-moved` с идентификаторами и
 папками; дерево папок получает его и перечитывает нужные папки через свой
 порт хоста со своими правами. Последствия ответов приложения приходят к
 фрагментам тем же путём — через [хост страницы](#хост-страницы).
@@ -61,7 +61,7 @@ Smart-компонент, поставленный в именованную о�
 ```html
 <sf-composition-scope data-sf-routes='[{"id": "files-refresh",
     "from": {"endpoint": "host", "port": "collection-changed", "value": "collection-changed.v1"},
-    "to": {"endpoint": "files", "port": "changed", "value": "collection-changed.v1"}}]'>
+    "to": {"endpoint": "files", "port": "changed", "value": "collection-changed"}}]'>
   <sf-page-host data-sf-endpoint="host"></sf-page-host>
   <sf-fragment data-sf-fragment="shop.file-list">
     <shop-file-list data-sf-endpoint="files"></shop-file-list>
@@ -70,9 +70,15 @@ Smart-компонент, поставленный в именованную о�
 ```
 
 Разметку области обычно выводит сервер из документа композиции; здесь она
-показана готовой. `<sf-page-host>` скрыт и входов не имеет.
+показана готовой. `<sf-page-host>` скрыт и входов не имеет. Каждая сторона
+маршрута несёт тип в той форме, в какой его объявил порт: выходы хоста
+объявлены прежними метками (`collection-changed.v1`), а список файлов — именем
+без версии. Это один тип, и маршрут допустим
+([Имя типа](/ru/guide/layouts/reference/value-types/#имя-типа)).
 
-Последствия — список `{type, value}`. Их публикует
+Последствия — список `{type, value}`, где `type` — имя типа без версии
+(`record-changed`); прежняя метка (`record-changed.v1`) читается до
+2026-12-01 и уходит на тот же выход. Их публикует
 `SF.Composition.publishEffects(effects, {origin})`: функция находит хост в
 той области `sf-composition-scope`, где стоит элемент `origin` (обычно
 фрагмент, получивший ответ), а если `origin` не задан или стоит вне области —
@@ -106,10 +112,10 @@ const {published, refused} = SF.Composition.publishEffects(answer.effects ?? [],
   "regions": ["content"],
   "port": {"standard": "simai.composite-host-port", "version": "1.0.4"},
   "outputs": {
-    "changed": {"value": "record-changed.v1", "summary": "Заказ изменён в списке."}
+    "changed": {"value": "record-changed", "summary": "Заказ изменён в списке."}
   },
   "inputs": {
-    "removed": {"value": "record-removed.v1", "summary": "Убрать заказ из списка."}
+    "removed": {"value": "record-removed", "summary": "Убрать заказ из списка."}
   },
   "operation": "orders.read",
   "url_state": ["status", "page"],
@@ -124,7 +130,7 @@ const {published, refused} = SF.Composition.publishEffects(answer.effects ?? [],
 | `element` | тег элемента | имя пользовательского элемента с дефисом: `shop-order-list` |
 | `regions` | области страницы, где фрагмент может стоять | от одной до восьми уникальных имён: строчная буква, затем до 31 строчной буквы, цифры или дефиса |
 | `port` | стандарт и версия порта хоста | `{standard, version}`, версия полная: `1.0.4` |
-| `outputs` | выходы | до 16 портов; у каждого `value` — тип значения из перечня и `summary` — описание до 1000 символов |
+| `outputs` | выходы | до 16 портов; у каждого `value` — тип значения из перечня, имя без версии (`record-changed`) или прежняя метка (`record-changed.v1`) до 2026-12-01, и `summary` — описание до 1000 символов |
 | `inputs` | входы | то же, что `outputs` |
 | `operation` | операция доступа, без которой фрагмент не показывают | слово-метка: строчная буква, затем до 127 символов из строчных букв, цифр, точки, подчёркивания, двоеточия и дефиса |
 | `url_state` | ключи адреса, которыми владеет фрагмент | до 16 уникальных ключей: строчная буква, затем до 63 строчных букв, цифр, подчёркиваний или дефисов |
@@ -140,7 +146,7 @@ const {published, refused} = SF.Composition.publishEffects(answer.effects ?? [],
 исправляет и не приводит. Тот же вызов есть в модуле
 `distr/core/js/composition/index.mjs`, поэтому гейт пакета, страница и тест
 читают одно правило. Метка формата лежит в
-`SF.Composition.FRAGMENT_DESCRIPTOR_SCHEMA`, схема — в поставке `ui`
+`SF.Composition.FRAGMENT_DESCRIPTOR_SCHEMA`, схема 1.2.0 — в поставке `ui`
 (`distr/core/contracts/interface-fragment.v1.schema.json`).
 
 ```js

@@ -91,6 +91,12 @@
     "The colour of the text and the supporting text.": "Цвет текста и поясняющего текста.",
     "The border colour of the light appearance; the dark one has no border.": "Цвет рамки светлого вида; у тёмного рамки нет.",
     "The border width of the light appearance on every side; the dark one has no border.": "Толщина рамки светлого вида со всех сторон; у тёмного рамки нет.",
-    "Space between the text and the supporting text.": "Промежуток между текстом и поясняющим текстом."
+    "Space between the text and the supporting text.": "Промежуток между текстом и поясняющим текстом.",
+    "The segmented track's fill at rest.": "Заливка дорожки сегментированного вида в спокойном состоянии.",
+    "The segmented track's padding on every side, which is also the gap between segments; the plate's radius stays concentric.": "Внутренний отступ дорожки сегментированного вида со всех сторон, он же промежуток между сегментами; скругление плашки остаётся концентричным.",
+    "The label and icon colour of a segment that is not selected, at rest; hover, pressed and disabled keep their own.": "Цвет подписи и иконки невыбранного сегмента в спокойном состоянии; наведение, нажатие и недоступность сохраняют свои цвета.",
+    "The fill of the plate under the selected segment; disabled keeps its own.": "Заливка плашки под выбранным сегментом; недоступность сохраняет свою.",
+    "The label, icon and count colour on the selected plate.": "Цвет подписи, иконки и числа на плашке выбранного сегмента.",
+    "The count's colour in a segment that is not selected; the selected one takes the plate's ink.": "Цвет числа в невыбранном сегменте; выбранный берёт цвет содержимого плашки."
   }
 }

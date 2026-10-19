@@ -29,7 +29,7 @@ foreach ($ids as $id) {
     $body=file_get_contents($source.'/index.html');
     $js=is_file($source.'/index.js')?'<script src="index.js" defer></script>':'';
     if ($js!=='')copy($source.'/index.js',$target.'/index.js');
-    $html='<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Simai Framework — '.$id.'</title>'
+    $html='<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>SIMAI Framework — '.$id.'</title>'
 
     .'<link rel="stylesheet" href="'.$css[1].'">'
     .'<script>window.sfPath='.json_encode($core).';window.sfSmartPath='.json_encode($base.'_docara/framework-runtime',JSON_UNESCAPED_SLASHES).';window.SF_BOOT_CONFIG={theme:false,icons:{enabled:false,accumulate:false},smart:{base:true},minified:false};</script>'

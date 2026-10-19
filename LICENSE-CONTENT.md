@@ -8,7 +8,7 @@ International License (CC BY 4.0):
 
 https://creativecommons.org/licenses/by/4.0/
 
-Preferred attribution: “Simai Framework documentation, Rim Rashitovich
+Preferred attribution: “SIMAI Framework documentation, Rim Rashitovich
 Zabarov and contributors.” When sharing modified material, indicate that it
 was changed.
 

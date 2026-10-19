@@ -55,8 +55,8 @@ for (const [from, to] of [
   // pinned/ holds the editions the standards were written against.
   ['contracts/schema/smart-component-manifest.v2.schema.json', 'smart-component-manifest.v2.schema.json'],
   [standards + 'pinned/composite-host-port.v1.schema.json', 'composite-host-port.v1.schema.json'],
-  [standards + 'pinned/interface-fragment.v1.schema.json', 'interface-fragment.v1.schema.json'],
-  [standards + 'pinned/effect.v1.schema.json', 'effect.v1.schema.json'],
+  [standards + 'pinned/interface-fragment-1.2.0.schema.json', 'interface-fragment.v1.schema.json'],
+  [standards + 'pinned/effect-1.2.0.schema.json', 'effect.v1.schema.json'],
 ]) {
   expected.set(`contracts/standards/${to}`, read('source', from));
 }

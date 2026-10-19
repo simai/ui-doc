@@ -35,24 +35,49 @@ foreach ($iterator as $file) {
 }
 sort($paths, SORT_STRING);
 
+// The CDN form: the release on npm, @simai-studio/ui at the version pinned in
+// scripts/materialize-framework-runtime.php (NPM_VERSION, checked against the
+// release commit by the version sync). The jsDelivr /gh/simai/ui@ form fails
+// for readers (simai/ui-source#5): no page, example or AI source may name it.
+$pin = (string) file_get_contents($root . '/scripts/materialize-framework-runtime.php');
+$npmVersion = preg_match("/const NPM_VERSION = '(5\\.\\d{8}\\.\\d{1,4})'/", $pin, $npmMatch) === 1 ? $npmMatch[1] : null;
+$check($npmVersion !== null, 'npm_version_pin_unreadable');
+$scanned = $paths;
+foreach (['examples', 'docs', 'assets'] as $directory) {
+    if (! is_dir($root . '/' . $directory)) {
+        continue;
+    }
+    $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/' . $directory, FilesystemIterator::SKIP_DOTS));
+    foreach ($files as $file) {
+        if ($file->isFile() && in_array(strtolower($file->getExtension()), ['md', 'html', 'js', 'mjs', 'json', 'php'], true)) {
+            $scanned[] = $file->getPathname();
+        }
+    }
+}
+sort($scanned, SORT_STRING);
+$githubCdnMentions = [];
+$npmVersions = [];
+foreach ($scanned as $path) {
+    $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
+    $text = (string) file_get_contents($path);
+    if (preg_match('~(?:cdn\.jsdelivr\.net|fastly\.jsdelivr\.net)/gh/simai/ui(?:-smart)?@~', $text) === 1) {
+        $githubCdnMentions[] = $relative;
+    }
+    preg_match_all('~(?:cdn\.jsdelivr\.net/npm|unpkg\.com)/@simai-studio/ui@([^/\s`"\'<>]+)~', $text, $npmMatches);
+    foreach ($npmMatches[1] ?? [] as $version) {
+        if ($version !== $npmVersion && ! str_starts_with($version, '<')) {
+            $npmVersions[$relative][] = $version;
+        }
+    }
+}
 $hardcodedReleaseMentions = [];
 $legacyMentions = [];
-$cdnTags = [];
 $staleSmartSourceReferences = [];
 foreach ($paths as $path) {
     $relative = str_replace('\\', '/', substr($path, strlen($root) + 1));
     $markdown = (string) file_get_contents($path);
     if (preg_match('/(?<![\d.])v?5\.4(?:\.0)?(?![\d.])/', $markdown) === 1) {
         $legacyMentions[] = $relative;
-    }
-    // A CDN address names the release the guide describes, by its commit: the
-    // release id is not a git tag, and an older core-only tag would hand a
-    // reader a Framework without the runtime the guide explains.
-    preg_match_all('/cdn\.jsdelivr\.net\/gh\/simai\/ui@([^\/\s`"<>]+)\//', $markdown, $matches);
-    foreach ($matches[1] ?? [] as $tag) {
-        if ($tag !== 'main' && ! str_starts_with($tag, '<')) {
-            $cdnTags[$relative][] = $tag;
-        }
     }
     if (! in_array($relative, $allowedReleasePages, true)
         && preg_match('/SIMAI Framework\s+v?\d+\.\d+(?:\.\d+)?|Framework UI\s+v?\d+\.\d+(?:\.\d+)?|Реестр\s+`?\d+\.\d+(?:\.\d+)?/iu', $markdown) === 1
@@ -95,10 +120,9 @@ foreach ($paths as $path) {
 
 $check($legacyMentions === [], 'legacy_5_4_mentions_remain', ['paths' => $legacyMentions]);
 $check($hardcodedReleaseMentions === [], 'release_numbers_in_durable_pages', ['paths' => $hardcodedReleaseMentions]);
-foreach ($cdnTags as $relative => $tags) {
-    foreach ($tags as $tag) {
-        $check($tag === ($runtime['ui']['commit'] ?? null), 'cdn_release_mismatch', ['path' => $relative, 'actual' => $tag]);
-    }
+$check($githubCdnMentions === [], 'cdn_github_form_remains', ['paths' => $githubCdnMentions]);
+foreach ($npmVersions as $relative => $found) {
+    $check(false, 'cdn_npm_version_mismatch', ['path' => $relative, 'expected' => $npmVersion, 'actual' => array_values(array_unique($found))]);
 }
 $check($staleSmartSourceReferences === [], 'stale_smart_source_references', ['references' => $staleSmartSourceReferences]);
 
@@ -133,7 +157,7 @@ $report = [
         'publication_profile' => $runtime['publication_profile'] ?? null,
     ],
     'checked_ru_pages' => count($paths),
-    'cdn_example_pages' => array_keys($cdnTags),
+    'npm_version' => $npmVersion,
     'remote_checked' => $checkRemote,
     'failure_count' => count($failures),
     'failures' => $failures,

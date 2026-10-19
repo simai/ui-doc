@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-2f724e0810ea",
-  "ui_commit": "2f724e0810ea58bb8381767b9f9b8c368f5f33ae",
+  "release": "ui-106d5901f8c3",
+  "ui_commit": "106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4",
   "stages": [
     "core",
     "dom",
@@ -284,6 +284,10 @@
         "EFFECT_SCHEMA": {
           "type": "string"
         },
+        "allowedModes": {
+          "type": "function",
+          "arity": 1
+        },
         "checkEffectManifest": {
           "type": "function",
           "arity": 1
@@ -292,11 +296,39 @@
           "type": "function",
           "arity": 2
         },
+        "effectSchemes": {
+          "type": "function",
+          "arity": 1
+        },
         "effectSettings": {
           "type": "function",
           "arity": 1
         },
+        "loadEffect": {
+          "type": "function",
+          "arity": 1
+        },
         "mountEffect": {
+          "type": "function",
+          "arity": 1
+        },
+        "mountWindows": {
+          "type": "function",
+          "arity": 1
+        },
+        "pageScheme": {
+          "type": "function",
+          "arity": 0
+        },
+        "pairIsForeign": {
+          "type": "function",
+          "arity": 1
+        },
+        "placeEffect": {
+          "type": "function",
+          "arity": 1
+        },
+        "resolveTheme": {
           "type": "function",
           "arity": 1
         }

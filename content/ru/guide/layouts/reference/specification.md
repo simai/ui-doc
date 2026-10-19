@@ -13,6 +13,9 @@ description: "Где лежат нормативные комплекты Compos
   lock-файл с отпечатками всех нормативных файлов.
 - **Composition Regions**, **Composition Routing**, **поля редактора** —
   отдельные комплекты для областей, маршрутов и полей свойств.
+  Комплект Composition Routing — редакция 1.1.0: тип значения в нём
+  называется без версии, а прежняя метка с версией читается до 2026-12-01
+  ([Имя типа](/ru/guide/layouts/reference/value-types/#имя-типа)).
 
 Комплекты лежат в поставке `ui` (`distr/core/contracts/composition-*`) и в каталоге
 документации для ИИ (`/ai/standards/composition-recipe/<версия>/`); корневой

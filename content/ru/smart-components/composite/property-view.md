@@ -278,7 +278,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2f724e0810ea` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-106d5901f8c3` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -388,7 +388,7 @@ view: {
 - `cancelEdit()` — возвращает `object`. Закрывает открытую группу, отбрасывая введённое. Ничего не записывает.
 - `saveGroup()` — возвращает `object`. Сохраняет изменённые поля открытой группы одной ревизией.
 - `selectSection(key: string)` — возвращает `object`. Открывает один раздел.
-- `changeField(field: object, value: any)` — возвращает `object`. Фиксирует изменение поля. Вызывается шаблоном редактирования; хосту он не нужен.
+- `changeField(field: object, value: any)` — возвращает `object`. Фиксирует изменение поля; `undefined` отменяет изменение, и сохранение ничего не передаёт для этого поля. Вызывается шаблоном редактирования; хосту он не нужен.
 - `getFieldOptionsPage(field: object)` — возвращает `object` | `null`. Страница кандидатов, которую хост последней вернул для одного поля.
 - `getFieldOptionSearch(field: object)` — возвращает `string`. Текст, введённый пользователем в элемент выбора одного поля.
 - `setFieldOptionSearch(field: object, text: string)` — возвращает `object`. Записывает введённый текст, не обращаясь к хосту.
@@ -432,8 +432,8 @@ view: {
 
 ### Источник
 
-- `simai/larena-ui@35820dcd41f315b1d0d43d62f0b7d5cb6dfd986f:components/src/smart/property-view`
-- `simai/larena-ui@35820dcd41f315b1d0d43d62f0b7d5cb6dfd986f:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/larena-ui@5f33ba576aebde377d5195ec71836eb4430aa84d:components/src/smart/property-view`
+- `simai/larena-ui@5f33ba576aebde377d5195ec71836eb4430aa84d:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 

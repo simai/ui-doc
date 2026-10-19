@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.interface-fragment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "SIMAI Interface Fragment",
   "appliesTo": [
     "simai.framework.composite-component"
@@ -42,9 +42,9 @@
     {
       "id": "closed-value-types",
       "level": "must",
-      "text": "Values that cross between fragments use the closed vocabulary of value types (record-changed.v1, record-removed.v1, collection-changed.v1, files-moved.v1, counter.v1, navigation.v1, preference-changed.v1 and the composition types). Each has a schema and a check; a value that fails its check is refused, never coerced.",
+      "text": "Values that cross between fragments use the closed vocabulary of value types (record-changed, record-removed, collection-changed, files-moved, counter, navigation, preference-changed and the composition types). A type is named without a version; the older label with the version (record-changed.v1 ...) names the same type and is read until the change journal retires it. Each has a schema and a check; a value that fails its check is refused, never coerced.",
       "verification": "manual",
-      "guidance": "Framework: VALUE_TYPES in src/core/js/composition/routing.mjs, one check per type, refused values in tests/interface-fragment.contract.test.mjs."
+      "guidance": "Framework: VALUE_TYPES and valueTypeName in src/core/js/composition/routing.mjs, one check per type, either form of a name read in one place; refused values in tests/interface-fragment.contract.test.mjs."
     },
     {
       "id": "values-say-what-changed",
@@ -134,10 +134,10 @@
   "uses": [
     {
       "id": "simai.framework.interface-fragment-descriptor",
-      "version": "1.0.0",
-      "path": "../../pinned/interface-fragment.v1.schema.json",
-      "sha256": "b24ff7c66e8be9f0d5500176f7c58439f1caa8852d64555f94f07879c7011733",
-      "description": "The form of a fragment descriptor: element, regions, port, outputs and inputs with value types, operation, url_state and budget."
+      "version": "1.2.0",
+      "path": "../../pinned/interface-fragment-1.2.0.schema.json",
+      "sha256": "0f19604199d9ee60ecfce64d976a146b9e205e8197f78c6134e37d6266042e4f",
+      "description": "The form of a fragment descriptor: element, regions, port, outputs and inputs with value types (either form of a name), operation, url_state and budget."
     }
   ],
   "specification": {
@@ -156,10 +156,11 @@
       "scope_note": "Pages built from fragments that update one another through declared contracts, and a shell whose content region changes without a full load. The product keeps data access, permissions and the region answers; the Framework keeps the descriptor, the value types, routing and region navigation.",
       "origin": "Asked for by simai/larena (larena-specs docs/architecture/2026-10-15-interface-fragments.md, handoff ui-control control/handoffs/2026-10-15-interface-fragments.md), owner decision 2026-10-15, authored for publication by the Framework owner.",
       "validated_against": [
-        "the closed value-type checks in src/core/js/composition/routing.mjs",
-        "SF.Composition.checkFragmentDescriptor against the pinned descriptor schema"
+        "the closed value-type checks in src/core/js/composition/routing.mjs, either form of a name",
+        "SF.Composition.checkFragmentDescriptor against the pinned descriptor schema",
+        "the routing contract 1.1.0 corpus src/core/contracts/composition-routing-v1/fixtures/value-type-names.json"
       ],
-      "reissue": "Re-issued as 1.0.1 because the standard it extends, simai.composite-host-port, was re-issued as 1.0.4 for the Recipe contract 1.1.0 (2026-10-19); extends pins it by version and digest. Requirements are unchanged since 1.0.0; the bytes of 1.0.0 stay in history."
+      "reissue": "Re-issued as 1.0.2 because value types are named without a version (owner decision 2026-10-19, change journal record value-types-without-version): the descriptor schema 1.2.0, pinned as a frozen copy, takes a value type by its bare name or by the older label with the version, and closed-value-types names the types without it. Before: 1.0.1, re-issued because the standard it extends, simai.composite-host-port, became 1.0.4 for the Recipe contract 1.1.0 (2026-10-19). The other requirements are unchanged since 1.0.0; the bytes of 1.0.0 and 1.0.1 stay in history."
     }
   }
 }

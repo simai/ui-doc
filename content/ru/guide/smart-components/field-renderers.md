@@ -71,7 +71,7 @@ const set = await SF.whenFieldRenderers();
 |:---|:---|
 | `key` | имя поля; элемент формы получает `name` вида `sf_field_<key>`, фильтр — `sf_filter_<key>` |
 | `label` | подпись: `aria-label` или `label` элемента правки, подпись цвета |
-| `variant` | вариант типа: `phone` у строки, `scale` у числа, `badges` у нескольких значений, `image`, `image-card`, `image-list` у файла |
+| `variant` | вариант типа: `phone` и `password` у строки, `scale` у числа, `badges` у нескольких значений, `image`, `image-card`, `image-list` у файла |
 | `options` | варианты выбора: `{value, label}`, вместо `label` допустим `text`; цвет метки — `color` или `scheme` (схема Framework или hex). Если `options` нет, набор берёт `filter.options`, затем `constraints.options` |
 | `required` | атрибут `required` элемента правки у строки, текста, числа, даты, выбора из списка, выбора записи и кода; у логического поля — переключатель вместо пары кнопок; у цвета запрещает очистку |
 | `readonly` | `true` у любого типа: `renderEditField` возвращает то же, что просмотр, а не выключенный элемент формы |
@@ -97,7 +97,7 @@ const set = await SF.whenFieldRenderers();
 
 | Тип | Значение |
 |:---|:---|
-| `string`, `text`, `include` | строка |
+| `string`, `text`, `include` | строка; у варианта `password` — `{set: true}` или `{set: false}`, сам пароль хост не передаёт |
 | `integer`, `number` | число; у варианта `scale` — от 0 до 100, иначе значение остаётся текстом |
 | `date`, `datetime` | строка даты `ГГГГ-ММ-ДД` или даты со временем; правка меняет день и сохраняет время |
 | `boolean` | `true` или `false`; отсутствие значения — «не задано» |
@@ -142,6 +142,32 @@ const set = await SF.whenFieldRenderers();
 явно при любой длине: `variant: 'checklist'` — флажки, `variant: 'select'` —
 выпадающий список.
 
+Строка с вариантом `password` — пароль, который набор никогда не показывает.
+Хост передаёт не пароль, а признак `{set: true}` или `{set: false}`; `null` и
+отсутствие значения читаются как «не задан». Просмотр, ячейка и поле с
+`readonly: true` показывают только «Задан» или «Не задан» на языке страницы.
+Правка — пустое поле пароля (`autocomplete="new-password"`) с кнопкой
+«Показать пароль», которая переключает видимость введённого текста. Если
+пароль задан, подсказка в поле говорит, что новый пароль заменит его, а
+`required` не действует: пустое поле оставляет заданный пароль. Набор вызывает
+`setFieldValue` только когда человек вводит текст; поле, которого не касались,
+ничего не передаёт, поэтому сохранение не очищает и не повторяет пароль.
+Очистить заданный пароль через это поле нельзя.
+
+```js
+const set = await SF.whenFieldRenderers();
+const changes = {};
+const host = {
+  setFieldValue(field, value) {
+    // undefined: человек стёр ввод — ключ в сохранение не попадает.
+    if (value === undefined) delete changes[field.key];
+    else changes[field.key] = value;
+  },
+};
+const field = {key: 'secret', label: 'Пароль хранилища', propertyType: 'string', variant: 'password'};
+SF.render(set.renderEditField(field, {set: true}, host), document.querySelector('#secret'));
+```
+
 `renderCellField(field, value, host)` возвращает содержимое ячейки в том же
 виде, в каком его передаёт таблице хост: строку, объект
 `{component: {type, props}}` или массив таких значений; цвет и код — шаблоном
@@ -162,7 +188,7 @@ lit. `null` значит «показать значение как есть». 
 
 | Тип | Что получает `setFieldValue` |
 |:---|:---|
-| `string`, `text`, `include` | строку |
+| `string`, `text`, `include` | строку; у варианта `password` — введённый пароль или `undefined`, когда ввод стёрт |
 | `integer`, `number` | число или `null`, когда поле очищено |
 | `date`, `datetime` | строку даты; у даты со временем — с прежним временем |
 | `boolean` | `true` или `false`; необязательное поле — ещё `null` |
@@ -247,7 +273,7 @@ set.renderCellField(status, 'live');
 
 | Тип | Название | Варианты | Параметры | Просмотр | Правка | Ячейка | Фильтр |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| `string` | Строка | `phone` — Телефон | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
+| `string` | Строка | `phone` — Телефон, `password` — Пароль | `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
 | `integer` | Целое число | — | `unit`, `required`, `readonly` | есть | есть | своё | своё |
 | `number` | Число | `scale` — Шкала 0–100 | `unit`, `required`, `readonly` | есть | есть | своё | своё |

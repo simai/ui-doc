@@ -193,6 +193,33 @@ $current = [
     'larena_builder' => $pinned("/'larena' => \[[^\]]*?'builder' => '([0-9a-f]{40})'/s"),
 ];
 $current['release'] = 'ui-' . substr($current['ui_runtime'], 0, 12);
+// The npm version the CDN snippets name. It is derived from the release
+// commit (5.<yyyymmdd>.<hhmm> of its UTC commit time, the last part without
+// leading zeros), so a pin that names another commit's version fails here. The
+// commit time is read from the ui repository: DOCARA_SIMAI_UI_ROOT, SIMAI_UI_ROOT
+// or ../ui beside this checkout.
+if ($pinned("/const NPM_PACKAGE = '(@simai-studio\/ui)'/") !== '@simai-studio/ui') {
+    throw new RuntimeException('FRAMEWORK_NPM_PACKAGE_INVALID');
+}
+$current['npm_version'] = $pinned("/const NPM_VERSION = '(5\.\d{8}\.\d{1,4})'/");
+$uiRepository = null;
+foreach ([getenv('DOCARA_SIMAI_UI_ROOT'), getenv('SIMAI_UI_ROOT'), dirname($root) . '/ui'] as $candidate) {
+    if (is_string($candidate) && $candidate !== '' && is_dir($candidate)) {
+        $uiRepository = $candidate;
+        break;
+    }
+}
+if ($uiRepository === null) {
+    throw new RuntimeException('FRAMEWORK_NPM_VERSION_UNVERIFIABLE: no ui repository to read the release commit time from');
+}
+$commitTime = trim((string) shell_exec('git -C ' . escapeshellarg($uiRepository) . ' show -s --format=%ct ' . escapeshellarg($current['ui_runtime']) . ' 2>/dev/null'));
+if (preg_match('/^\d+$/D', $commitTime) !== 1) {
+    throw new RuntimeException('FRAMEWORK_NPM_VERSION_UNVERIFIABLE: ' . $uiRepository . ' does not hold ' . $current['ui_runtime']);
+}
+$expectedNpmVersion = '5.' . gmdate('Ymd', (int) $commitTime) . '.' . (int) gmdate('Hi', (int) $commitTime);
+if ($current['npm_version'] !== $expectedNpmVersion) {
+    throw new RuntimeException('FRAMEWORK_NPM_VERSION_MISMATCH: NPM_VERSION ' . $current['npm_version'] . ' is not ' . $expectedNpmVersion . ', the version of ' . $current['ui_runtime']);
+}
 $valuesPath = $root . '/config/guide-release-values.json';
 $recorded = json_decode((string) file_get_contents($valuesPath), true, 512, JSON_THROW_ON_ERROR);
 $replacements = [];
@@ -237,6 +264,10 @@ if ($replacements !== []) {
             }
         }
     }
+}
+// A value the record does not hold yet (a new kind of release value) is
+// recorded too; pages naming it are written by hand the first time.
+if ($replacements !== [] || array_diff_key($current, $recorded['values']) !== []) {
     $changed[] = 'config/guide-release-values.json';
     if (! $checkOnly) {
         $recorded['values'] = $current;
@@ -253,6 +284,7 @@ echo json_encode([
     'public_core_tag' => $publicCoreTag,
     'candidate_pair' => $candidatePair,
     'candidate_core_revision' => $candidateCoreRevision,
+    'npm_version' => $current['npm_version'],
     'candidate_smart_revision' => $candidateSmartRevision,
     'packages' => $packages,
     'package_folders' => $packageFolders,

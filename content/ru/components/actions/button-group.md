@@ -114,8 +114,44 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button-group` |
+| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-segment` |
+| Модификаторы | `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--secondary`, `sf-button-group--segmented` |
+| Размеры | `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-button-group`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-button-group-background-color` | Заливка дорожки сегментированного вида в спокойном состоянии. | `var(--sf-surface-container)`; зависит от вида |
+| `--sf-button-group-padding` | Внутренний отступ дорожки сегментированного вида со всех сторон, он же промежуток между сегментами; скругление плашки остаётся концентричным. | `var(--sf-a4)`; зависит от вида, размера |
+| `--sf-button-group-color` | Цвет подписи и иконки невыбранного сегмента в спокойном состоянии; наведение, нажатие и недоступность сохраняют свои цвета. | `var(--sf-on-surface-container--variant)`; зависит от вида |
+| `--sf-button-group-plate-background-color` | Заливка плашки под выбранным сегментом; недоступность сохраняет свою. | `var(--sf-primary)`; зависит от вида, схемы |
+| `--sf-button-group-plate-color` | Цвет подписи, иконки и числа на плашке выбранного сегмента. | `var(--sf-on-primary)`; зависит от вида, схемы |
+| `--sf-button-group-count-color` | Цвет числа в невыбранном сегменте; выбранный берёт цвет содержимого плашки. | `currentColor`; зависит от вида |
+
+```css
+.sf-button-group {
+  --sf-button-group-background-color: var(--sf-surface-container);
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-button-group`); переменную без него задают только модификаторы.
+
+| Переменная | По умолчанию | Задаёт |
+|:---|:---|:---|
+| `--sf-button-group--count-gap` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-ui-1--text-space-x)` | `margin-inline-start` |
+| `--sf-button-group--padding` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-group-padding, var(--sf-a4))` | `gap`, `padding`, `border-radius` |
+| `--sf-button-group--plate-radius` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-radius, var(--sf-radius--ui))` | `border-radius` |
+| `--sf-button-group--text-height` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-button-group--text-size` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-text-size-1)` | `font-size` |
 
 ## См. также
 

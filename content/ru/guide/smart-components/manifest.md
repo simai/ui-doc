@@ -175,8 +175,8 @@ SHA-256 файла; проверка манифестов `node scripts/sf-contr
   "compatibility": {
     "contract_schema": {"id": "https://simai.io/contracts/smart-component-manifest.v2.schema.json", "version": 2},
     "runtime_pair": {
-      "ui_revision": "2f724e0810ea58bb8381767b9f9b8c368f5f33ae",
-      "ui_smart_revision": "2f724e0810ea58bb8381767b9f9b8c368f5f33ae"
+      "ui_revision": "106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4",
+      "ui_smart_revision": "106d5901f8c3b4f23131ce0e7ede5dbd8abfe4f4"
     },
     "aliases": [],
     "deprecations": [],

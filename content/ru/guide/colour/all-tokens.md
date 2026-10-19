@@ -63,7 +63,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
-| `--sf-on-surface-container--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-on-surface-container--variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
 | `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |

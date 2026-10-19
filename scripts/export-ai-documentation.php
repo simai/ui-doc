@@ -23,7 +23,7 @@ $write = static function (string $relative, string $bytes) use ($build, $check, 
 $json = static fn (array $value): string => json_encode($value, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR) . "\n";
 $manifest = static fn (array $records, string $revision): array => [
     'format' => 'ai-first', 'formatVersion' => '1.0', 'document' => 'manifest', 'revision' => $revision,
-    'resource' => ['id' => 'urn:simai:framework:documentation', 'name' => 'Simai Framework documentation', 'description' => 'Version-bound documentation and executable example sources.', 'language' => 'ru', 'scope' => './', 'publisher' => ['name' => 'Rim Zabarov']],
+    'resource' => ['id' => 'urn:simai:framework:documentation', 'name' => 'SIMAI Framework documentation', 'description' => 'Version-bound documentation and executable example sources.', 'language' => 'ru', 'scope' => './', 'publisher' => ['name' => 'Rim Zabarov']],
     'items' => $records,
 ];
 $files = [];
@@ -195,5 +195,30 @@ foreach (array_chunk($items, 100) as $index => $chunk) {
     $main['catalogs'][] = ['href' => './' . $name, 'description' => 'Documentation pages ' . ($index * 100 + 1) . '–' . ($index * 100 + count($chunk)), 'sha256' => hash('sha256', $bytes)];
 }
 $main['frameworkLock'] = ['href' => './ai/framework-lock.json', 'sha256' => hash('sha256', $lockBytes)];
+// How a page connects the release this documentation describes: the npm
+// package and version the guide's CDN snippets use (the pins in
+// scripts/materialize-framework-runtime.php, the version checked against the
+// release commit by scripts/sync-framework-documentation-versions.php).
+$pins = (string) file_get_contents($root . '/scripts/materialize-framework-runtime.php');
+preg_match("/const NPM_PACKAGE = '(@simai-studio\/ui)';/", $pins, $npmPackage) === 1 || throw new RuntimeException('NPM_PACKAGE pin unreadable');
+preg_match("/const NPM_VERSION = '(5\.\d{8}\.\d{1,4})';/", $pins, $npmVersion) === 1 || throw new RuntimeException('NPM_VERSION pin unreadable');
+preg_match("/const UI_RUNTIME_REVISION = '([0-9a-f]{40})';/", $pins, $runtimeCommit) === 1 || throw new RuntimeException('UI_RUNTIME_REVISION pin unreadable');
+$npmBase = 'https://cdn.jsdelivr.net/npm/' . $npmPackage[1] . '@' . $npmVersion[1] . '/distr/';
+$main['x-simai-delivery'] = [
+    'release' => (string) $version,
+    'commit' => $runtimeCommit[1],
+    'npm' => ['package' => $npmPackage[1], 'version' => $npmVersion[1]],
+    'cdn' => [
+        'stylesheet' => $npmBase . 'core/css/core.css',
+        'sfPath' => $npmBase,
+        'script' => $npmBase . 'core/js/core.js',
+        'unpkg' => 'https://unpkg.com/' . $npmPackage[1] . '@' . $npmVersion[1] . '/distr/',
+    ],
+    'snippet' => '<link rel="stylesheet" href="' . $npmBase . 'core/css/core.css">' . "\n"
+        . "<script>window.sfPath = '" . $npmBase . "';</script>\n"
+        . '<script src="' . $npmBase . 'core/js/core.js"></script>',
+    'selfHosting' => 'distr/ of https://github.com/simai/ui at ' . $runtimeCommit[1],
+    'htmlPage' => $siteBase . 'ru/guide/connection/delivery/',
+];
 $write('ai.json', $json($main));
 echo $json(['status'=>'pass', 'mode'=>$check?'check':'export', 'formatVersion'=>'1.0', 'knowledgeItems'=>count($items), 'files'=>count($expected)]);
