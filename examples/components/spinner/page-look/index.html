@@ -1,0 +1,24 @@
+<div class="flex flex-col gap-3" data-spinner-page-demo>
+  <div class="sf-button-group" role="group" aria-label="Вид спиннера на странице">
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="arc" aria-pressed="true"><span class="sf-button-text-container">arc</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="breathing" aria-pressed="false"><span class="sf-button-text-container">breathing</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="comet" aria-pressed="false"><span class="sf-button-text-container">comet</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="dots" aria-pressed="false"><span class="sf-button-text-container">dots</span></button>
+  </div>
+  <div class="flex flex-wrap items-cross-center gap-3">
+    <div class="sf-loader-container sf-loader--size-1" data-infinite="true" data-label=""></div>
+    <button type="button" disabled aria-busy="true" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1 loading sf-button-state-loading"><span class="sf-loader-container sf-loader--infinite sf-button-spinner" data-infinite="true" aria-hidden="true"></span><span class="sf-button-text-container">Загрузить</span></button>
+    <button type="button" disabled aria-busy="true" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading"><span class="sf-loader-container sf-loader--infinite sf-button-spinner sf-button-spinner--overlay" data-infinite="true" aria-hidden="true"></span><span class="sf-button-text-container">Сохранить</span></button>
+    <button type="button" disabled aria-busy="true" aria-label="Обновить" class="sf-icon-button sf-icon-button--icon sf-icon-button--tonal sf-icon-button--primary sf-icon-button--size-1 loading sf-icon-button-state-loading"><span class="sf-loader-container sf-loader--infinite sf-icon-button-spinner" data-infinite="true" aria-hidden="true"></span></button>
+    <code class="text-1/2 color-on-surface-variant">вид страницы</code>
+  </div>
+  <div class="flex flex-wrap items-cross-center gap-3" data-sf-spinner="dots">
+    <div class="sf-loader-container sf-loader--size-1" data-infinite="true" data-label=""></div>
+    <code class="text-1/2 color-on-surface-variant">блок с data-sf-spinner="dots"</code>
+  </div>
+  <div class="flex flex-wrap items-cross-center gap-3">
+    <div class="sf-loader-container sf-loader--size-1" data-variant="comet" data-infinite="true" data-label=""></div>
+    <code class="text-1/2 color-on-surface-variant">data-variant="comet" у самого спиннера</code>
+  </div>
+  <p class="m-0 color-on-surface-variant" role="status" data-spinner-page-result></p>
+</div>

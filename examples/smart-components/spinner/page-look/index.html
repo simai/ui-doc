@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-3" data-spinner-page-demo>
+  <div class="sf-button-group" role="group" aria-label="Вид спиннера на странице">
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="arc" aria-pressed="true"><span class="sf-button-text-container">arc</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="breathing" aria-pressed="false"><span class="sf-button-text-container">breathing</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="comet" aria-pressed="false"><span class="sf-button-text-container">comet</span></button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1/2" data-look="dots" aria-pressed="false"><span class="sf-button-text-container">dots</span></button>
+  </div>
+  <div class="flex flex-wrap items-cross-center gap-3">
+    <sf-spinner size="1" infinite label="Загрузка списка"></sf-spinner>
+    <sf-button size="1" appearance="outline" scheme="on-surface" icon-start="upload" loading text="Загрузить"></sf-button>
+    <sf-button size="1" loading text="Сохранить"></sf-button>
+    <sf-icon-button size="1" appearance="tonal" icon="sync" loading aria-label="Синхронизировать"></sf-icon-button>
+  </div>
+  <div class="flex flex-wrap items-cross-center gap-3" data-sf-spinner="dots">
+    <sf-spinner size="1" infinite label="Блок с data-sf-spinner=&quot;dots&quot;"></sf-spinner>
+  </div>
+  <div class="flex flex-wrap items-cross-center gap-3">
+    <sf-spinner size="1" kind="comet" infinite label="kind=&quot;comet&quot; у самого спиннера"></sf-spinner>
+  </div>
+  <p class="m-0 color-on-surface-variant" role="status" data-spinner-page-result></p>
+</div>

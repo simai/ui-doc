@@ -83,7 +83,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-132b0863e12b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-16caec9d7fff` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -92,7 +92,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 | Тег | `<sf-avatar>` |
 | Назначение | Показывает человека или организацию фотографией или инициалами с необязательной отметкой доступности или подтверждения. Шаблоны по умолчанию и label отрисовывают нативную кнопку, aria-label которой называет её действие; шаблон card статичен и добавляет заголовок, описание и строку метаданных. |
 | Контракт | `smart.avatar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-132b0863e12b` |
+| Поставка | выпуск Framework `ui-16caec9d7fff` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -145,8 +145,8 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 ### Источник
 
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/smart/avatar`
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/rule/rule.json#name=cl-avatar`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/smart/avatar`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/rule/rule.json#name=cl-avatar`
 
 ## См. также
 

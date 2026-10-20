@@ -137,7 +137,10 @@ const modal = new Modal({
 
 Методы экземпляра: `open({animate})`, `close()`, `toggle()`, `setSrc(url)` и
 `reloadContent()` для загружаемого содержимого, `setOverlay(value)`,
-`destroy()`. Экземпляр по `id` находится в `Modal.registry`.
+`destroy()`. Экземпляр по `id` находится в `Modal.registry`. Пока
+загружаемое содержимое не пришло, окно показывает спиннер ступени 3 в
+[виде страницы](/ru/components/feedback/spinner/#вид-страницы), заданном
+`data-sf-spinner`.
 
 События возникают на блоке окна, всплывают и дублируются на `window`:
 `modal:before-open` и `modal:before-close` — до перехода, их отменяет
@@ -159,7 +162,7 @@ document.addEventListener('modal:before-close', (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-modal` |
-| Части | `sf-modal-close-button`, `sf-modal-close-button--inline-end`, `sf-modal-focus-guard`, `sf-modal-header`, `sf-modal-header-action`, `sf-modal-header-content`, `sf-modal-hide-button`, `sf-modal-hide-button--inline-end`, `sf-modal-hide-icon`, `sf-modal-surface`, `sf-modal-surface--elevated` |
+| Части | `sf-modal-close-button`, `sf-modal-close-button--inline-end`, `sf-modal-focus-guard`, `sf-modal-header`, `sf-modal-header-action`, `sf-modal-header-content`, `sf-modal-hide-button`, `sf-modal-hide-button--inline-end`, `sf-modal-hide-icon`, `sf-modal-loading`, `sf-modal-spinner`, `sf-modal-surface`, `sf-modal-surface--elevated` |
 | Устаревшие | `sf-modal--positon-bottom` → `sf-modal--position-bottom`, `sf-modal--positon-center` → `sf-modal--position-center`, `sf-modal--positon-inline-end` → `sf-modal--position-inline-end`, `sf-modal--positon-inline-start` → `sf-modal--position-inline-start`, `sf-modal--positon-left` → `sf-modal--position-left`, `sf-modal--positon-right` → `sf-modal--position-right`, `sf-modal--positon-top` → `sf-modal--position-top` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

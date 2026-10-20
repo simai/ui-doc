@@ -72,7 +72,8 @@ description: "Переключает страницы длинного спис�
 отправляют `sf-count-request` с причиной в `detail.reason`: `total`,
 `last-page` или `action-for-all`. Пока приложение считает, компонент
 показывает короткое ожидание; ответ приходит атрибутами `total`,
-`count-known` и снятым `counting`.
+`count-known` и снятым `counting`. Спиннер ожидания берёт
+[вид страницы](/ru/smart-components/feedback/spinner/#вид-страницы), заданный `data-sf-spinner`.
 
 :::example {id="smart-components/pagination/unknown-count" label="Результат"}
 :::
@@ -141,7 +142,7 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-132b0863e12b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-16caec9d7fff` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -150,7 +151,7 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 | Тег | `<sf-pagination>` |
 | Назначение | Навигация по коллекции, разбитой на пронумерованные страницы, на основе источника данных. |
 | Контракт | `smart.pagination`, версия `1.0.1` |
-| Поставка | выпуск Framework `ui-132b0863e12b` |
+| Поставка | выпуск Framework `ui-16caec9d7fff` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -244,8 +245,8 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ### Источник
 
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/smart/pagination`
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/rule/rule.json#name=cl-pagination`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/smart/pagination`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/rule/rule.json#name=cl-pagination`
 
 ## См. также
 

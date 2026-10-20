@@ -120,7 +120,7 @@ phone.setState({iso2: 'KZ'});
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-132b0863e12b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-16caec9d7fff` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -129,7 +129,7 @@ phone.setState({iso2: 'KZ'});
 | Тег | `<sf-country-code>` |
 | Назначение | Поле телефона с выбором страны: кнопка открывает список стран с поиском, а выбранная страна задаёт телефонный код, флаг и, при необходимости, маску ввода нативного поля tel. |
 | Контракт | `smart.country-code`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-132b0863e12b` |
+| Поставка | выпуск Framework `ui-16caec9d7fff` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -192,5 +192,5 @@ phone.setState({iso2: 'KZ'});
 
 ### Источник
 
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/smart/country-code`
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/rule/rule.json#name=cl-country-code`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/smart/country-code`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/rule/rule.json#name=cl-country-code`

@@ -60,7 +60,7 @@ description: "Выводит символ Material Symbols, для которо�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-132b0863e12b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-16caec9d7fff` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -69,7 +69,7 @@ description: "Выводит символ Material Symbols, для которо�
 | Тег | `<sf-icon>` |
 | Назначение | Семантическая обёртка Material Symbol с точным отслеживанием в Loader, доступными декоративным и информативным режимами и геометрией из токенов. |
 | Контракт | `smart.icons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-132b0863e12b` |
+| Поставка | выпуск Framework `ui-16caec9d7fff` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -108,8 +108,8 @@ description: "Выводит символ Material Symbols, для которо�
 
 ### Источник
 
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/smart/icons`
-- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/rule/rule.json#name=cl-icons`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/smart/icons`
+- `simai/ui@16caec9d7fff1902140eca352eeddb61c08ace55:distr/rule/rule.json#name=cl-icons`
 
 ## См. также
 

@@ -1,0 +1,11 @@
+/* Четыре вида в столбцах, три ступени в строках; последний столбец — кнопка
+   той же ступени, с иконкой которой совпадает спиннер. */
+.spinner-looks {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  align-items: center;
+  justify-items: center;
+  gap: var(--sf-space-3) var(--sf-space-4);
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
