@@ -173,7 +173,10 @@ Framework не запоминает выбранный язык: ни cookie, н
   у компонента нет, ничего не меняет: компонент показывает своё слово по
   порядку из [Откуда берётся слово](#откуда-берётся-слово).
 
-**Ключи словарей компонентов.** Слова регистрируются под именем тега:
+**Ключи словарей компонентов.** Слова регистрируются под именем тега.
+[Модальное окно на классах](/ru/components/overlays-media/modal/) берёт слова
+из того же словаря `sf-modal`, что и `<sf-modal>`: одна регистрация переводит
+оба.
 
 | Компонент | Ключ | Слово `en` | Слово `ru` |
 |:---|:---|:---|:---|
@@ -211,6 +214,9 @@ Framework не запоминает выбранный язык: ни cookie, н
 | `sf-modal` | `close` | Close | Закрыть |
 | `sf-modal` | `minimize` | Minimize | Свернуть |
 | `sf-modal` | `title` | Dialog | Окно |
+| `sf-modal` | `loading` | Loading… | Загрузка… |
+| `sf-modal` | `loadFailed` | Failed to load content | Не удалось загрузить содержимое |
+| `sf-modal` | `frameFailed` | Failed to load iframe content | Не удалось загрузить встроенную страницу |
 | `sf-page-header` | `star` | Add to favourites | В избранное |
 | `sf-page-header` | `unstar` | Remove from favourites | Убрать из избранного |
 | `sf-page-header` | `allSites` | for all sites | для всех сайтов |
@@ -234,7 +240,7 @@ Framework не запоминает выбранный язык: ни cookie, н
 | `sf-pagination` | `countingLabel` | Counting | Считаем |
 | `sf-pagination` | `firstLabel` | First | В начало |
 | `sf-pagination` | `pageFieldLabel` | Page: | Страница: |
-| `sf-spinner` | `label` | Loading... | Загрузка… |
+| `sf-spinner` | `label` | Loading… | Загрузка… |
 | `sf-steps` | `ariaLabel` | Steps | Шаги |
 | `sf-steps` | `completedLabel` | Completed | Завершено |
 | `sf-steps` | `errorLabel` | Error | Ошибка |

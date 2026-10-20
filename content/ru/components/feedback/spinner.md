@@ -61,8 +61,10 @@ profile: reference
 Четыре вида нарисованы на одном кольце и на одной лестнице размеров, поэтому
 у каждого коробка равна иконке кнопки той же ступени, а цвет — цвету текста:
 
-- `arc` — дуга бежит по кольцу; вид по умолчанию;
-- `breathing` — дуга растёт и сжимается, пока кольцо вращается;
+- `arc` — дуга постоянной длины, около трети кольца, равномерно вращается,
+  один оборот в секунду; вид по умолчанию;
+- `breathing` — дуга растёт и сжимается, пока кольцо вращается; длина дуги
+  меняется, этим вид и отличается от `arc`;
 - `comet` — вращающаяся дуга с гаснущим хвостом;
 - `dots` — кольцо точек, по которому бежит волна яркости.
 
@@ -150,8 +152,9 @@ SIMAI Framework: `window.SF_BOOT_CONFIG = {spinner: 'comet'}` записывае
 - Спиннер без подписи скрыт от экранного диктора; тогда о загрузке сообщает
   соседний текст или `aria-busy`.
 - При системной настройке уменьшения движения анимация останавливается в
-  каждом виде, и спиннер показывает неподвижный кадр: дугу, комету на месте
-  или точки с выделенными яркими.
+  каждом виде, и спиннер показывает неподвижный кадр: дугу `arc` в те же 30%
+  кольца, дугу `breathing` в четверть кольца, комету на месте или точки с
+  выделенными яркими.
 
 ## JavaScript
 
@@ -197,18 +200,20 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 |:---|:---|:---|
 | `--sf-loader--look-accent` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `inline` | `display` |
 | `--sf-loader--look-comet` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `none` | `display` |
+| `--sf-loader--look-dash` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `30 70` | `stroke-dasharray` |
 | `--sf-loader--look-dots` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `none` | `display` |
-| `--sf-loader--look-motion` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `sf-loader-ring-accent-fill` | `animation-name`, `animation-duration`, `animation-timing-function` |
+| `--sf-loader--look-motion` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `none` | `animation-name`, `animation-duration`, `animation-timing-function` |
 | `--sf-loader--look-motion-duration` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `var(--sf-loader-cycle-duration)` | `animation-duration` |
 | `--sf-loader--look-motion-easing` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `linear` | `animation-timing-function` |
-| `--sf-loader--look-spin` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `none` | `animation-name`, `animation-duration` |
-| `--sf-loader--look-spin-duration` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `var(--sf-loader-spin-duration)` | `animation-duration` |
+| `--sf-loader--look-spin` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `sf-loader-svg-rotate` | `animation-name`, `animation-duration` |
+| `--sf-loader--look-spin-duration` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `var(--sf-loader-arc-duration)` | `animation-duration` |
 | `--sf-loader--look-track` | не задана; задают модификаторы, например `:where([data-sf-spinner]:not([data-sf-spinner=""]))`: `inline` | `display` |
+| `--sf-loader-arc-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 2)` | `--sf-loader--look-spin-duration`, `animation-duration` |
 | `--sf-loader-breath-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 3)` | `--sf-loader--look-motion-duration` |
 | `--sf-loader-comet-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 2)` | `--sf-loader--look-spin-duration` |
 | `--sf-loader-cycle-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 6)` | `--sf-loader--look-motion-duration`, `animation-duration` |
 | `--sf-loader-dot-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 3)` | `animation`, `animation-delay` |
-| `--sf-loader-spin-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 4)` | `--sf-loader--look-spin-duration`, `animation-duration` |
+| `--sf-loader-spin-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 4)` | `--sf-loader--look-spin-duration` |
 | `--sf-loader-stroke-width` | не задана; задают модификаторы, например `.sf-loader-container`: `2` | `stroke-width` |
 | `--sf-loader-svg-height` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-height-1)` | `height` |
 | `--sf-loader-svg-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-height-1)` | `width` |

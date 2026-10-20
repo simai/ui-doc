@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "a91c620c5766e14c1068639935cdf27b261788c4",
-    "core_revision": "16caec9d7fff1902140eca352eeddb61c08ace55",
+    "source_revision": "4404143c7caec324b74601a97e55d989a1e28591",
+    "core_revision": "d985d7cc2e2d2529f4e18e211f05f8c66ac3a655",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "distr/core/js/core.js": "a9bb3cc57b7c7f1a04c34db84b451b21513cf382e998ba7b70a4f7a1558c9952"
     },
-    "note": "At source a91c620c and core 16caec9d (release ui-16caec9d7fff) the composition schemas, composition-types, index.mjs, builtins and the fixture are byte-identical to the review at the previous pin. The buttons manifest only adds to the loading description that the spinner takes the page's look (data-sf-spinner); core.js only writes SF_BOOT_CONFIG.spinner on html as data-sf-spinner. The composition pages of this contract describe neither."
+    "note": "At source 4404143c and core d985d7cc (release ui-d985d7cc2e2d) the composition schemas, composition-types, index.mjs, builtins, the fixture, the buttons manifest and the bundled core.js are byte-identical to the review at the previous pin (source a91c620c, core 16caec9d)."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
