@@ -48,6 +48,22 @@ description: "Запускает действие компактной кноп�
 :::example {id="smart-components/icon-buttons/sizes-states" label="Результат"}
 :::
 
+### Загрузка
+
+С `loading` кнопка показывает [Spinner](/ru/smart-components/feedback/spinner/)
+на месте иконки, ровно её размера на каждой ступени `size`, поэтому кнопка не
+меняет размер. Доступное имя из `aria-label` остаётся, внутренняя кнопка
+получает `aria-busy="true"` и нативный `disabled`. Спиннер окрашен цветом
+недоступной кнопки; другой цвет задаёт `--sf-loader--color`. При уменьшении
+движения спиннер — неподвижная дуга.
+
+:::example {id="smart-components/icon-buttons/loading" label="Загрузка и покой на всех размерах"}
+:::
+
+Переменная `--sf-icon-button-loading-stripe` устарела: Framework её не
+задаёт, а страница, которая задаёт её сама, до 2026-12-01 получает
+неподвижные полосы поверх кнопки в загрузке. Удалите её.
+
 ### В группе и в коде
 
 `segment` (`start`, `middle`, `end`) ставит кнопку в объединённую группу
@@ -84,7 +100,7 @@ remove.onClick(() => deleteRow(row));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-32c7a64e4575` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-132b0863e12b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -93,7 +109,7 @@ remove.onClick(() => deleteRow(row));
 | Тег | `<sf-icon-button>` |
 | Назначение | Нативная кнопка-иконка с геометрией из токенов, доступным именем и общей семантикой загрузки. |
 | Контракт | `smart.icon-buttons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-32c7a64e4575` |
+| Поставка | выпуск Framework `ui-132b0863e12b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -112,7 +128,7 @@ remove.onClick(() => deleteRow(row));
 - `spacing` — `string`, по умолчанию `normal`, значения: `compact`, `normal`, `comfortable`, `spacious`. Семантический профиль внутренних отступов.
 - `radius` — `string`, по умолчанию пусто, значения: пусто, `default`, `square`, `rounded`. Модификатор скругления углов.
 - `root-class` — `string`, по умолчанию пусто. Дополнительные классы внутреннего элемента кнопки-иконки.
-- `loading` — `boolean`, по умолчанию `false`. Флаг состояния загрузки.
+- `loading` — `boolean`, по умолчанию `false`. Состояние загрузки: spinner на месте иконки, размером с неё. Ставит aria-busy и отключает нативную кнопку.
 - `disabled` — `boolean`, по умолчанию `false`. Флаг отключённого состояния.
 - `native-type` — `string`, по умолчанию `button`, значения: `button`, `submit`, `reset`. Нативный атрибут `type` кнопки.
 - `aria-label` — `string`, по умолчанию пусто. Доступная подпись.
@@ -159,8 +175,8 @@ remove.onClick(() => deleteRow(row));
 
 ### Источник
 
-- `simai/ui@32c7a64e457583eaf5a1860590001217a86b5af9:distr/smart/icon-buttons`
-- `simai/ui@32c7a64e457583eaf5a1860590001217a86b5af9:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/smart/icon-buttons`
+- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/rule/rule.json#name=cl-icon-buttons`
 
 ## См. также
 

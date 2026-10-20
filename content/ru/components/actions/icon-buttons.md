@@ -133,8 +133,8 @@ profile: reference
 не срабатывает. Класс `disabled` только отключает эффекты наведения, нажатия
 и фокуса; вид недоступной он даёт лишь варианту `sf-icon-button--surface`.
 На время операции ставьте кнопке класс `loading`, `aria-busy="true"` и
-`aria-disabled="true"`, а результат сообщайте текстом. `loading` рисует
-полосы и не пропускает указатель, но фокус остаётся на кнопке, и `Enter` её
+`aria-disabled="true"`, а результат сообщайте текстом. `loading` показывает
+спиннер на месте иконки и не пропускает указатель, но фокус остаётся на кнопке, и `Enter` её
 по-прежнему нажимает, поэтому обработчик пропускает нажатие, пока стоит
 `aria-busy`. Нативный `disabled` здесь не подходит: он снимает фокус с кнопки,
 фокус уходит на `body`, и окно подтверждения, закрывшись, тоже возвращает его
@@ -152,6 +152,33 @@ profile: reference
 :::example {id="components/icon-buttons/state-focus" label="Кнопки с иконкой в фокусе"}
 :::
 
+### Загрузка
+
+Классы `loading sf-icon-button-state-loading` показывают
+[спиннер](/ru/components/feedback/spinner/) на месте иконки, ровно её
+размера на каждой ступени, и не пропускают указатель. Конструктор рисует
+спиннер сам; в своей разметке поставьте блок спиннера вместо иконки.
+Доступное имя из `aria-label` остаётся, `aria-busy="true"` сообщает о работе.
+С нативным `disabled` спиннер окрашен цветом недоступной кнопки; другой цвет
+задаёт `--sf-loader--color`. При уменьшении движения спиннер — неподвижная
+дуга.
+
+:::example {id="components/icon-buttons/state-loading" label="Кнопки с иконкой в загрузке и в покое"}
+:::
+
+```html
+<button type="button" class="sf-icon-button sf-icon-button--icon sf-icon-button--tonal sf-icon-button--primary sf-icon-button--size-1 loading sf-icon-button-state-loading" disabled aria-busy="true" aria-label="Обновить">
+  <span class="sf-loader-container sf-loader--infinite sf-icon-button-spinner" data-infinite="true" aria-hidden="true"></span>
+</button>
+```
+
+Переменная `--sf-icon-button-loading-stripe` устарела: Framework её не
+задаёт, а страница, которая задаёт её сама, до 2026-12-01 получает
+неподвижные полосы поверх кнопки в загрузке. Удалите её.
+
+Загрузка на всех размерах рядом с обычными кнопками — в разделе
+[Загрузка](/ru/components/actions/buttons/#загрузка) кнопок.
+
 ## Доступность
 
 - `aria-label` называет действие и объект: «Удалить строку», а не «Корзина».
@@ -168,7 +195,8 @@ profile: reference
 Разметка `sf-icon-button` работает без скрипта. Компонент регистрирует класс
 `IconButtons`, который собирает кнопку из параметров: `icon`, `size`, `type`
 (вид), `scheme`, `spacing` (`compact`, `comfortable`, `spacious`), `radius`,
-`disabled`; `attrs` переносятся на кнопку. Событий компонент не отправляет.
+`disabled`, `loading` (спиннер на месте иконки, `aria-busy` и `disabled`);
+`attrs` переносятся на кнопку. Событий компонент не отправляет.
 `SF.Loader` появляется к событию `sf-loader-init` на `window`;
 `SF.Loader.ready('IconButtons', callback)` передаёт класс, когда он
 зарегистрирован.
@@ -190,7 +218,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-icon-button` |
-| Части | `sf-icon-button-state-loading` |
+| Части | `sf-icon-button-spinner`, `sf-icon-button-state-loading` |
 | Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--error`, `sf-icon-button--ghost`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--outline`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
 
@@ -243,7 +271,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | `--sf-icon-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-inline, var(--sf-ui-1--space-y-tightness-default))` | `padding-inline-start` |
 | `--sf-icon-button--padding-top` | не задана; задают модификаторы, например `.sf-icon-button--size-1`: `var(--sf-icon-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
 | `--sf-icon-button--radius` | `var(--sf-icon-button-radius, var(--sf-radius--ui))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-icon-button-loading-stripe` | `var(--sf-alpha-8)` | `background-image` |
+| `--sf-icon-button-spinner--size` | `var(--sf-icon-size-3)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size` |
 
 ## См. также
 

@@ -167,19 +167,53 @@ profile: reference
 
 ### Загрузка
 
-Класс `loading` вместе с `disabled` и `aria-busy="true"` блокирует повторный
-запуск и выводит поверх кнопки бегущие полоски. Кнопка в загрузке одновременно
-недоступна, поэтому любой вид выглядит как недоступная кнопка; полоски — ступень
-нейтральной шкалы, одинаковая для всех видов и обеих тем. При системной
-настройке уменьшения движения полоски не движутся.
+Классы `loading sf-button-state-loading` вместе с нативным `disabled` и
+`aria-busy="true"` блокируют повторный запуск. Кнопка в загрузке недоступна,
+поэтому любой вид выглядит как недоступная кнопка, и показывает
+[спиннер](/ru/components/feedback/spinner/) размером со свою иконку:
 
-Модификатор `sf-button--loading` из списка классов — не состояние загрузки:
-он только снимает заливку у сочетаний `sf-button--default` с
-`sf-button--primary` и с `sf-button--error` и полосок не рисует. Загрузку
-задаёт класс `loading`.
+- у кнопки с иконкой спиннер встаёт на место иконки — начальной, а если её
+  нет, конечной;
+- у кнопки без иконки спиннер лежит поверх подписи. Подпись остаётся на месте
+  и становится прозрачной, поэтому ширина кнопки не меняется;
+- у кнопки с одной иконкой ([кнопка с иконкой](/ru/components/actions/icon-buttons/))
+  спиннер встаёт на место иконки.
+
+Подпись остаётся в разметке и остаётся доступным именем кнопки, а
+`aria-busy="true"` сообщает о работе. Спиннер окрашен цветом подписи
+недоступной кнопки; другой цвет задаёт `--sf-loader--color` на кнопке или
+предке. При системной настройке уменьшения движения спиннер — неподвижная
+дуга.
 
 :::example {id="components/buttons/state-loading" label="Кнопки в загрузке"}
 :::
+
+Загрузка на каждой ступени размера: кнопка с иконкой, кнопка без иконки
+рядом с такой же кнопкой в покое (ширина у них одна) и кнопка с одной
+иконкой.
+
+:::example {id="components/buttons/loading-sizes" label="Загрузка на всех размерах"}
+:::
+
+Конструктор `Buttons` рисует спиннер сам. В своей разметке поставьте блок
+спиннера на место иконки, а у кнопки без иконки — перед подписью с классом
+`sf-button-spinner--overlay`:
+
+```html
+<button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1 loading sf-button-state-loading" disabled aria-busy="true">
+  <span class="sf-loader-container sf-loader--infinite sf-button-spinner sf-button-spinner--overlay" data-infinite="true" aria-hidden="true"></span>
+  <span class="sf-button-text-container">Сохранить</span>
+</button>
+```
+
+Модификатор `sf-button--loading` из списка классов — не состояние загрузки:
+он только снимает заливку у сочетаний `sf-button--default` с
+`sf-button--primary` и с `sf-button--error` и спиннера не рисует. Загрузку
+задают классы `loading sf-button-state-loading`.
+
+Переменная `--sf-button-loading-stripe` устарела: Framework её не задаёт,
+а страница, которая задаёт её сама, до 2026-12-01 получает неподвижные полосы
+поверх кнопки в загрузке. Удалите её; цвет спиннера задаёт `--sf-loader--color`.
 
 ## Доступность
 
@@ -188,8 +222,9 @@ profile: reference
   неё есть [кнопка с иконкой](/ru/components/actions/icon-buttons/).
 - Для переключателя используйте `aria-pressed`, для перехода — ссылку `<a>`.
 - Недоступность задавайте нативным `disabled`, а не цветом или классом.
-- На время загрузки ставьте `aria-busy="true"` и сохраняйте подпись: анимация не
-  должна быть единственным признаком работы.
+- На время загрузки ставьте `aria-busy="true"` и сохраняйте подпись: спиннер
+  не должен быть единственным признаком работы. Подпись под спиннером остаётся
+  доступным именем кнопки.
 - После асинхронного действия сообщите результат рядом с кнопкой или через
   область статуса.
 - Логические отступы и края сегментов зеркалятся при письме справа налево
@@ -225,7 +260,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `iconLeft`, `iconRight` | — | иконки до и после подписи явно |
 | `spacing` | — | плотность: `compact`, `normal`, `comfortable`, `spacious`; при заданном `spacing` параметр `tightness` не учитывается |
 | `radius` | — | добавляет класс `radius-{значение}` |
-| `loading` | `false` | ставит `loading`, `aria-busy="true"` и `disabled` |
+| `loading` | `false` | ставит `loading`, `aria-busy="true"` и `disabled` и рисует спиннер |
 | `disabled` | `false` | ставит нативный `disabled` |
 
 `attrs` переносятся на `<button>` как атрибуты; без `type` в `attrs` кнопка
@@ -236,7 +271,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button` |
-| Части | `sf-button-state-loading`, `sf-button-text-container` |
+| Части | `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
 | Модификаторы | `sf-button--default`, `sf-button--error`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--outline`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 | Устаревшие | `sf-button--ghost` → `sf-button--link` |
@@ -290,7 +325,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
 | `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
 | `--sf-button--radius` | `var(--sf-button-radius, var(--sf-radius--ui))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-button-loading-stripe` | `var(--sf-alpha-8)` | `background-image` |
+| `--sf-button-spinner--size` | `var(--sf-icon-size-3)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-button-text-container--background-color` | не задана; задают модификаторы, например `.sf-button .sf-button-text-container`: `transparent` | `background-color` |
 | `--sf-button-text-container--color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-button-color, var(--sf-on-primary))` | `color` |
 | `--sf-button-text-container--font-family` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text--family)` | `font-family` |

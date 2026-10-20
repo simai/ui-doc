@@ -93,14 +93,18 @@ description: "Глава описывает, как компонент стро�
 
 ```html
 <button type="button" class="sf-button sf-button--size-1 sf-button--default sf-button--primary flex items-cross-center loading sf-button-state-loading" disabled aria-busy="true">
-  <sf-icon icon="download" root-class="pointer-event-none" weight="400" aria-hidden="true"></sf-icon>
+  <span class="sf-loader-container sf-loader--infinite sf-button-spinner" data-infinite="true" aria-hidden="true"><span class="sf-loader--loading-indicator"><svg>…</svg></span></span>
   <span class="sf-button-text-container text-center pointer-event-none">Save</span>
 </button>
 ```
 
 Без загрузки классов `loading sf-button-state-loading` и атрибутов `disabled`,
-`aria-busy` нет. Полосы загрузки рисует любой из двух классов, `loading` или
-`sf-button-state-loading`. Кнопка без иконок добавляет контейнеру подписи класс
+`aria-busy` нет, а на месте спиннера стоит иконка
+`<sf-icon icon="download" root-class="pointer-event-none" weight="400" aria-hidden="true">`.
+В загрузке спиннер занимает место иконки; у кнопки без иконок он стоит перед
+подписью с классом `sf-button-spinner--overlay` и лежит поверх неё, а подпись
+остаётся на месте. Внешний шаблон рисует спиннер так же, иначе кнопка в
+загрузке останется без индикатора. Кнопка без иконок добавляет контейнеру подписи класс
 `flex-1`. Классы `segment-…`, `spacing-…`, `radius-…` и `rootClass`
 добавляются к корню, когда заданы.
 

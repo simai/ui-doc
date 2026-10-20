@@ -1,0 +1,5 @@
+<div class="flex flex-col gap-3 items-cross-start">
+  <sf-button-group aria-label="Период отчёта, месяц загружается" value="week" items='[{"value":"day","label":"День"},{"value":"week","label":"Неделя"},{"value":"month","label":"Месяц","loading":true}]'></sf-button-group>
+  <sf-button-group appearance="segmented" aria-label="Вид списка, плитка загружается" value="list" items='[{"value":"list","label":"Список","icon":"list"},{"value":"grid","label":"Плитка","icon":"grid_view","loading":true},{"value":"table","label":"Таблица"}]'></sf-button-group>
+  <sf-button-group appearance="segmented" aria-label="Период, неделя загружается" value="d" items="d::День|w::Неделя::loading|m::Месяц"></sf-button-group>
+</div>

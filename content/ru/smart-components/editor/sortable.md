@@ -141,7 +141,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-32c7a64e4575` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-132b0863e12b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -150,7 +150,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 | Тег | `<sf-sortable>` |
 | Назначение | Список с перетаскиванием для изменения порядка, переноса между списками и копирования из библиотеки мышью, пером, касанием и с клавиатуры; только сообщает о намерении. |
 | Контракт | `smart.sortable`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-32c7a64e4575` |
+| Поставка | выпуск Framework `ui-132b0863e12b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -189,8 +189,8 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### Источник
 
-- `simai/ui@32c7a64e457583eaf5a1860590001217a86b5af9:distr/smart/sortable`
-- `simai/ui@32c7a64e457583eaf5a1860590001217a86b5af9:distr/rule/rule.json#name=cl-sortable`
+- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/smart/sortable`
+- `simai/ui@132b0863e12b9d5d9c9180d32b20c71f0584e7eb:distr/rule/rule.json#name=cl-sortable`
 
 ## См. также
 

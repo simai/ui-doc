@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "c06496ba71395d9556a6698229a084de76c61324",
-    "core_revision": "32c7a64e457583eaf5a1860590001217a86b5af9",
+    "source_revision": "6b16b41db95a441d80925edf895e798fe1ac8e69",
+    "core_revision": "132b0863e12b9d5d9c9180d32b20c71f0584e7eb",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "45a71cda246130f6dd6aa3b4c44f24ae8eda396712705ed986720c9ebc7919f9",
       "src/core/js/composition/builtins.mjs": "cecc06f437f0c247b0430c565075f2de6435546a6ef44311b366e34b9592f7ea",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/buttons/smart.manifest.json": "6f59e4c360166c4a97752393873ee97a574bf9ae938f19aa7c9f4b7648c0a31b"
+      "src/smart/buttons/smart.manifest.json": "e083dc64139c9983608334068ad222f5a828dc505827ba64c60ead9152482839"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "distr/core/js/core.js": "6b51e0bb4d35a5dcf2560c6548ea64641ff4ceb53c5e90ccdb4a661d631c5afa"
     },
-    "note": "At source c06496ba and core 32c7a64e (release ui-32c7a64e4575) composition-types, index.mjs, builtins, the fixture and the buttons manifest are byte-identical to the review at the previous pin; the composition document and type manifest schemas change only their title (SIMAI in capitals); core.js changed only in the bundled effects.js (the sandbox runner for foreign effects, the effect area ink, EFFECT_FORMAT), public-path.js (Core finds its distr from its own script URL), loader.js (?sf-debug falls back to .min) and deprecations.js. The composition pages of this contract do not describe any of them."
+    "note": "At source 6b16b41d and core 132b0863 (release ui-132b0863e12b) the composition schemas, composition-types, index.mjs, builtins, the fixture and the bundled core.js are byte-identical to the review at the previous pin. The buttons manifest adds component.spinner to composition.uses and describes loading (the spinner at the icon's size, the width kept); the composition pages of this contract do not describe either."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

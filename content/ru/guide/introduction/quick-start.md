@@ -15,7 +15,7 @@ description: "Первая страница не требует установк
 
 Создайте пустую папку и сохраните в ней `index.html`. Framework подключается
 с CDN из пакета npm `@simai-studio/ui`. Пример закреплён на выпуске
-`ui-32c7a64e4575`: во всех трёх адресах стоит версия пакета `5.20261019.2041`,
+`ui-132b0863e12b`: во всех трёх адресах стоит версия пакета `5.20261020.1056`,
 которая соответствует этому выпуску. Чтобы взять другой выпуск, замените
 версию во всех трёх адресах (см. [Версии: как закрепить выпуск](/ru/guide/connection/versions/)):
 
@@ -27,7 +27,7 @@ description: "Первая страница не требует установк
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/core/css/core.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261020.1056/distr/core/css/core.css">
 </head>
 <body>
   <main class="p-4">
@@ -43,8 +43,8 @@ description: "Первая страница не требует установк
   </main>
 
   <script>window.SF_BOOT_CONFIG = {preloader: {enabled: false}};</script>
-  <script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/';</script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261019.2041/distr/core/js/core.js"></script>
+  <script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261020.1056/distr/';</script>
+  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261020.1056/distr/core/js/core.js"></script>
 </body>
 </html>
 ```
