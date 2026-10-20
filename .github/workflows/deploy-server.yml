@@ -1,0 +1,83 @@
+name: Deploy to the simai server
+
+# Deploys the documentation site to the simai-env server (201.51.24.222) as
+# ui.simai.io, after Quality passes on a push to main, or on a manual run.
+# It ships the exact site Quality built for GitHub Pages: the Pages build takes
+# its base path and site URL from the custom domain ui.simai.io, so the same
+# files are correct on the server. Nothing is rebuilt here. GitHub Pages stays
+# as the fallback.
+#
+# It does nothing until the repository variable SIMAI_SERVER_DEPLOY is "true"
+# and the environment simai-server holds SIMAI_DEPLOY_KEY (a key the server's
+# deploy gate lets deploy ui.simai.io only) and SIMAI_DEPLOY_KNOWN_HOSTS.
+# A manual run deploys the Pages artifact of the latest successful Quality run
+# on main; that artifact lives one day, so after that rerun Quality first.
+on:
+  workflow_run:
+    workflows: [Quality]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: simai-server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      vars.SIMAI_SERVER_DEPLOY == 'true' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'))
+    runs-on: ubuntu-latest
+    environment: simai-server
+    steps:
+      - name: Find the Quality run to deploy
+        id: run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TRIGGER_RUN: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          run_id="$TRIGGER_RUN"
+          if [ -z "$run_id" ]; then
+            run_id=$(gh run list -R "$GITHUB_REPOSITORY" --workflow quality.yml --branch main \
+              --event push --status success --limit 1 --json databaseId -q '.[0].databaseId')
+          fi
+          test -n "$run_id"
+          echo "Quality run $run_id"
+          echo "id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Download the Pages artifact of that run
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          name: github-pages
+          run-id: ${{ steps.run.outputs.id }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/pages
+      - name: Unpack and check the site
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/site"
+          tar -xf "$RUNNER_TEMP/pages/artifact.tar" -C "$RUNNER_TEMP/site"
+          test -f "$RUNNER_TEMP/site/ru/index.html"
+          # The Pages build must have been made for the domain root.
+          grep -q 'https://ui.simai.io/ru/' "$RUNNER_TEMP/site/ru/index.html"
+      - name: Deploy the artifact
+        env:
+          DEPLOY_KEY: ${{ secrets.SIMAI_DEPLOY_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.SIMAI_DEPLOY_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/site/.simai"
+          printf '%s\n' '{"schema":"simai-app/1","profile":"static","health":{"path":"/ru/"}}' > "$RUNNER_TEMP/site/.simai/app.json"
+          install -m 600 /dev/null "$RUNNER_TEMP/key" && printf '%s\n' "$DEPLOY_KEY" > "$RUNNER_TEMP/key"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$RUNNER_TEMP/known_hosts"
+          tar -C "$RUNNER_TEMP/site" -czf "$RUNNER_TEMP/site.tgz" .
+          sum=$(sha256sum "$RUNNER_TEMP/site.tgz" | cut -d' ' -f1)
+          echo "artifact sha256 $sum"
+          ssh -i "$RUNNER_TEMP/key" -o UserKnownHostsFile="$RUNNER_TEMP/known_hosts" -o StrictHostKeyChecking=yes \
+            simai-deploy@201.51.24.222 "deploy-artifact $sum" < "$RUNNER_TEMP/site.tgz"
