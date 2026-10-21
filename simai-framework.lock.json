@@ -1850,15 +1850,15 @@
             "schema_version": 2,
             "package": "larena",
             "requires": "ui-e19da1d40f07",
-            "mount": "_docara/framework-packages/larena/dee1e8348a3d872da7520583507e050eaae52518",
+            "mount": "_docara/framework-packages/larena/3f6c86da4dd6e003a00d39e25e8330bc851db5ce",
             "receipt": {
                 "schema": "simai.framework.product-package-receipt",
                 "schema_version": 1,
                 "package_source": {
                     "repository": "simai/larena-ui",
-                    "revision": "dee1e8348a3d872da7520583507e050eaae52518",
+                    "revision": "3f6c86da4dd6e003a00d39e25e8330bc851db5ce",
                     "path": "components",
-                    "tree": "dd7a0c08ae53962beceb35f20174826ded11b303"
+                    "tree": "a8b4de461d1af6b390892eddaf2c7db22ef5de26"
                 },
                 "framework_source": {
                     "repository": "simai/ui-source",
@@ -1868,15 +1868,15 @@
                     "repository": "simai/ui-builder",
                     "revision": "a1405ae3563fb07995edf05c0f90461104baebdc"
                 },
-                "manifest_sha256": "49bae656590718cd57394e783273ed61bdff68f6d801c99fc6583c412dc62ca1",
-                "archive_sha256": "e2c0ee8e3ff632edc9f380f970e612ca970fe7a7a0fce8b7470044996c808b17"
+                "manifest_sha256": "f327db89b3bdd11a74e25ace468f89e189d59a4a3f745576ba9a2dafa6e74246",
+                "archive_sha256": "cb0de23c2be51cf32e26cf98a4785890b8b98f6af74052a523650837830a1e81"
             },
             "files": {
                 "smart/admin-menu/css/admin-menu.css": {
                     "sha256": "13d1788be11ac5e65776742e366f303ddaa5c4d8f8c5f6f7fae8ceb0dd6f6a80"
                 },
                 "smart/admin-menu/js/admin-menu.js": {
-                    "sha256": "83d8eb44ddf86ac553928e8a9aab446b4f7034973eb1143357ae76dfd0da6589"
+                    "sha256": "180007de8c70540378e48aaf04f80e08397ffacf843de75a3d4a79e2b91f5da4"
                 },
                 "smart/data-view/css/data-view.css": {
                     "sha256": "d12c68237763b98567b604d8b659a0878b61f3415078f0e1fcdfafbc6199e3b6"

@@ -531,7 +531,7 @@ node <ui-builder>/bin/sf-build.js package --kind theme \
 Larena берёт пакет оттуда:
 
 ```bash
-commit=dee1e8348a3d872da7520583507e050eaae52518
+commit=3f6c86da4dd6e003a00d39e25e8330bc851db5ce
 tag="larena-${commit:0:12}"
 gh release download "$tag" --repo simai/larena-ui \
   --pattern 'package-larena.tar*' --pattern package-receipt.json
@@ -566,10 +566,10 @@ Framework на ревизии, которую закрепляет `components/f
 
    ```bash
    git clone https://github.com/simai/larena-ui.git
-   git -C larena-ui checkout dee1e8348a3d872da7520583507e050eaae52518
+   git -C larena-ui checkout 3f6c86da4dd6e003a00d39e25e8330bc851db5ce
    node <ui-builder>/bin/sf-build.js package --name larena \
      --package-root larena-ui/components \
-     --package-revision dee1e8348a3d872da7520583507e050eaae52518 \
+     --package-revision 3f6c86da4dd6e003a00d39e25e8330bc851db5ce \
      --package-repository simai/larena-ui \
      --ui-source <ui-source> --ui <ui> --out build/larena --json
    ```
@@ -580,12 +580,12 @@ Framework на ревизии, которую закрепляет `components/f
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/larena/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/larena/dee1e8348a3d872da7520583507e050eaae52518/smart/`, и объявляют
+   `public/assets/larena/3f6c86da4dd6e003a00d39e25e8330bc851db5ce/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {larena: {base: '/assets/larena/dee1e8348a3d872da7520583507e050eaae52518/smart'}},
+     packages: {larena: {base: '/assets/larena/3f6c86da4dd6e003a00d39e25e8330bc851db5ce/smart'}},
    };
    ```
 

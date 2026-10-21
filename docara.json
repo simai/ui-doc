@@ -56,9 +56,6 @@
   "page_transforms": [
     {
       "command": ["node", "scripts/highlight-code.mjs"]
-    },
-    {
-      "command": ["node", "scripts/landing-hero.mjs"]
     }
   ],
   "base_url": "/",
