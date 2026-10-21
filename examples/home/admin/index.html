@@ -1,0 +1,33 @@
+<!-- The administrative interface on the home page: the admin polygon of
+     simai/ui-admin at 51e8891 (the commit pinned to this site's Framework pair
+     ui-132b0863e12b with larena-6a23c152c948), its list, record panel, menu
+     and data host, built into index.js. scripts/export-live-demonstrations.php
+     publishes it as the standalone page /demos/home/admin/. -->
+<aside class="admin-navigation h-full">
+      <sf-admin-menu class="h-full" aria-label="Разделы админки" data-sf-skeleton="menu"></sf-admin-menu>
+    </aside>
+    <main class="flex flex-col flex-1 min-w-0 min-h-0">
+      <section id="list-section" class="flex flex-col gap-2 p-4 flex-1 min-w-0 min-h-0">
+        <sf-page-header id="page-header" heading="Каталог решений" star="off">
+          <sf-breadcrumbs slot="path" aria-label="Где вы находитесь">
+            <sf-breadcrumbs-item href="/">simai.ru</sf-breadcrumbs-item>
+            <sf-breadcrumbs-item href="/">Данные</sf-breadcrumbs-item>
+          </sf-breadcrumbs>
+        </sf-page-header>
+        <p id="state" class="color-on-surface-variant m-0 sf-text-1" role="status"></p>
+        <sf-data-view
+          data-sf-skeleton="rows"
+          preferences-key="polygon.solutions"
+          size="1/2"
+          id="solutions"
+          aria-label="Решения">
+          <span slot="toolbar"></span>
+          <sf-table
+            slot="content"
+            id="solutions-table"
+            table-settings-key="polygon.solutions"
+            aria-label="Решения"></sf-table>
+          <sf-pagination slot="pagination" actions="publish:Опубликовать|unpublish:Снять с публикации|delete:Удалить"></sf-pagination>
+        </sf-data-view>
+      </section>
+    </main>

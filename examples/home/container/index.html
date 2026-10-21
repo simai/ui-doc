@@ -1,0 +1,26 @@
+<div class="flex flex-col gap-2" data-cq-demo>
+  <div class="home-cq-panel p-3 radius-3 border border-dashed border-outline" data-cq-panel>
+    <div class="query-container">
+      <article class="flex flex-col cq-sm:flex-row cq-md:grid cq-md:grid-col-3 gap-2 p-2 radius-2 bg-surface-container color-on-surface" data-cq-card>
+        <div class="flex items-cross-center content-main-center radius-1 bg-primary-container color-on-primary-container home-cq-media" aria-hidden="true">
+          <span class="sf-icon">deployed_code</span>
+        </div>
+        <div class="flex flex-col gap-1 flex-1 min-w-0">
+          <h3 class="m-0 sf-h-5">Тариф «Команда»</h3>
+          <p class="m-0 sf-body-medium color-on-surface-variant">До 20 сотрудников, общий каталог проектов и роли доступа.</p>
+          <div class="flex flex-wrap gap-1/2">
+            <span class="p-x-1 p-y-1/3 radius-rounded bg-success-container color-on-success-container text-1/2 weight-7">Доступен</span>
+            <span class="p-x-1 p-y-1/3 radius-rounded bg-secondary-container color-on-secondary-container text-1/2 weight-7">Помесячно</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-cross-start justify-between gap-1">
+          <strong class="sf-h-4">2 900 ₽<span class="sf-body-small color-on-surface-variant"> / мес.</span></strong>
+          <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1"><span class="sf-button-text-container">Подключить</span></button>
+        </div>
+      </article>
+    </div>
+    <sf-resizer min="15rem" max="60rem" property="--home-cq-width" label="Ширина панели"></sf-resizer>
+  </div>
+  <p class="m-0 sf-body-small color-on-surface-variant" aria-live="polite" data-cq-readout></p>
+  <code class="text-1/2 color-on-surface-variant">query-container · flex-col · cq-sm:flex-row · cq-md:grid cq-md:grid-col-3</code>
+</div>

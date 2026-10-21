@@ -242,7 +242,10 @@ foreach ($recorded['keep'] ?? [] as $span) {
 // that is its prefix.
 uksort($replacements, static fn (string $a, string $b): int => strlen($b) <=> strlen($a));
 if ($replacements !== []) {
-    $guide = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide', FilesystemIterator::SKIP_DOTS));
+    // The home page names the release too: its connection lines and footer.
+    $guide = new AppendIterator();
+    $guide->append(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide', FilesystemIterator::SKIP_DOTS)));
+    $guide->append(new ArrayIterator([new SplFileInfo($root . '/content/ru/index.md')]));
     foreach ($guide as $file) {
         if (! $file->isFile() || $file->getExtension() !== 'md') {
             continue;

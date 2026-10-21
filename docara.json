@@ -49,9 +49,16 @@
   },
   "documentation_version": "current",
   "redirects_file": "redirects.json",
+  "effects": {
+    "catalogue": "https://cdn.jsdelivr.net/gh/simai/ui-effects@e3a6c512f562e214bb33cab79cfac0c8ad1ead4e/",
+    "index_sha256": "41dc65f33c5dd5bc519b153bd289de91e4dcf9e1632b0403edfc2f0ad018e2e2"
+  },
   "page_transforms": [
     {
       "command": ["node", "scripts/highlight-code.mjs"]
+    },
+    {
+      "command": ["node", "scripts/landing-hero.mjs"]
     }
   ],
   "base_url": "/",

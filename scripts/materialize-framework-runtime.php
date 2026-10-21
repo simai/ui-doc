@@ -57,9 +57,9 @@ const NPM_VERSION = '5.20261021.26';
 const PACKAGES = [
     'larena' => [
         'repository' => 'simai/larena-ui',
-        'revision' => '1829e81014eee3b743cba118b13738cd54eafb89',
+        'revision' => 'dee1e8348a3d872da7520583507e050eaae52518',
         'path' => 'components',
-        'archive_sha256' => '054177eab2fbef21b1030e1b11bc900fa31f58159544dd6d32c2edaca5a78ad3',
+        'archive_sha256' => 'e2c0ee8e3ff632edc9f380f970e612ca970fe7a7a0fce8b7470044996c808b17',
         'builder' => 'a1405ae3563fb07995edf05c0f90461104baebdc',
     ],
 ];

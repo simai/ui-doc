@@ -92,6 +92,12 @@ description: "Даёт административному приложению �
 `event.detail` `{compact, source}`: по нему оболочка приложения меняет ширину
 своей колонки.
 
+Счётчик пункта (`badge`) окрашен ролью ошибки в обоих режимах. В компактном
+режиме значок пункта стоит на шаге `1/2`, поэтому счётчик переходит на его
+верхний угол точкой размером 8px, а число остаётся в имени пункта. Как точка и
+число ведут себя на якоре, описано в разделе
+[Бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре).
+
 ### Меню в колонке с ручкой ширины
 
 Ширину колонки меню меняет [ручка ширины](/ru/smart-components/overlays/resizer/)
@@ -342,8 +348,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/larena-ui@1829e81014eee3b743cba118b13738cd54eafb89:components/src/smart/admin-menu`
-- `simai/larena-ui@1829e81014eee3b743cba118b13738cd54eafb89:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/larena-ui@dee1e8348a3d872da7520583507e050eaae52518:components/src/smart/admin-menu`
+- `simai/larena-ui@dee1e8348a3d872da7520583507e050eaae52518:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

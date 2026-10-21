@@ -861,8 +861,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@1829e81014eee3b743cba118b13738cd54eafb89:components/src/smart/data-view`
-- `simai/larena-ui@1829e81014eee3b743cba118b13738cd54eafb89:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@dee1e8348a3d872da7520583507e050eaae52518:components/src/smart/data-view`
+- `simai/larena-ui@dee1e8348a3d872da7520583507e050eaae52518:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1016,5 +1016,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@1829e81014eee3b743cba118b13738cd54eafb89:components/src/smart/table`
-- `simai/larena-ui@1829e81014eee3b743cba118b13738cd54eafb89:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@dee1e8348a3d872da7520583507e050eaae52518:components/src/smart/table`
+- `simai/larena-ui@dee1e8348a3d872da7520583507e050eaae52518:components/src/smart/table/rule.js#name=cl-table`
