@@ -143,7 +143,7 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d985d7cc2e2d` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e19da1d40f07` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -152,7 +152,7 @@ document.addEventListener('drawer:after-open', (event) => {
 | Тег | `<sf-drawer>` |
 | Назначение | Боковая панель рабочей области, при которой страница остаётся доступной: закреплённая колонка или немодальная панель. Модальные боковые панели относятся к sf-modal; модальный режим Drawer устарел. |
 | Контракт | `smart.drawer`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-d985d7cc2e2d` |
+| Поставка | выпуск Framework `ui-e19da1d40f07` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -233,8 +233,8 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### Источник
 
-- `simai/ui@d985d7cc2e2d2529f4e18e211f05f8c66ac3a655:distr/smart/drawer`
-- `simai/ui@d985d7cc2e2d2529f4e18e211f05f8c66ac3a655:distr/rule/rule.json#name=cl-drawer`
+- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/smart/drawer`
+- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/rule/rule.json#name=cl-drawer`
 
 ## См. также
 

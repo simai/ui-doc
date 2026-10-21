@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "simai/docara": "^3.5"
+        "simai/docara": "^3.6"
     },
     "scripts": {
         "docs:viewer:check": "@php scripts/audit-example-viewer.php",

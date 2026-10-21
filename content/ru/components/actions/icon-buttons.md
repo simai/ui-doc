@@ -252,6 +252,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-icon-button--anchor-radius` | не задана; задают модификаторы, например `.sf-icon-button.radius-default`: `var(--sf-radius-default)` | — |
 | `--sf-icon-button--background-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-icon-button-background-color, var(--sf-primary))` | `background-color` |
 | `--sf-icon-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-icon-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |

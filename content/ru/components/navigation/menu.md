@@ -80,6 +80,24 @@ profile: reference
 :::example {id="components/menu/icons" label="Иконка пункта и своя иконка ветки"}
 :::
 
+### Счётчик и компактное меню
+
+Счётчик строки — `.sf-badge` с `data-count` внутри `sf-menu-element-wrap`,
+после `sf-menu-element-text`. Он стоит в конце строки, показывает `99+` после
+порога, прячется при `0`, а его фраза завершает имя ссылки: «Входящие, 3
+непрочитанных».
+
+`sf-menu--compact` на корневом списке превращает меню в узкую колонку разделов
+первого уровня: в строке видна только иконка или аватар, слова скрыты, но
+остаются в имени ссылки. Счётчик переходит на иконку и встаёт в её верхний
+угол так же, как [бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре)
+шага `1`, с кольцом. Ветки в компактном меню не раскрываются. Компактная панель
+[Admin Menu](/ru/smart-components/composite/admin-menu/) так же переносит
+счётчик пункта на его иконку.
+
+:::example {id="components/menu/compact" label="Счётчики в обычном и компактном меню"}
+:::
+
 ## Состояния
 
 ### Текущий пункт
@@ -122,7 +140,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-menu` |
 | Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-item` |
-| Модификаторы | `sf-menu--documentation-tree`, `sf-menu--horizontal` |
+| Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

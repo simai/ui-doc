@@ -79,6 +79,78 @@ profile: reference
 :::example {id="components/badges/icons" label="Бейджи с иконками"}
 :::
 
+### Бейдж на якоре
+
+Счётчик или точку ставят внутрь якоря, и Framework сам ставит их на место:
+утилиты положения не нужны. Якорь — аватар `sf-avatar`, кнопка-иконка
+`sf-icon-button` или обёртка `sf-badge-anchor` вокруг иконки или любого
+другого элемента. Бейдж — прямой потомок якоря:
+`<span class="sf-badge sf-badge--anchored" data-count="3"></span>`.
+
+Центр бейджа лежит в верхнем конце якоря (справа, при письме справа налево —
+слева). У круглого якоря это точка окружности под 45°, у скруглённого — та же
+точка дуги угла, у квадратного — сам угол. Бейдж перекрывает якорь и выходит
+за него не больше чем на половину своего размера. Индикатор статуса аватара
+остаётся в нижнем конце.
+
+:::example {id="components/badges/anchored" label="Счётчик и точка на кнопках-иконках"}
+:::
+
+Иконку оборачивают в `sf-badge-anchor`: текст глифа — его лигатура, поэтому
+бейдж не ставят внутрь `sf-icon`. Шаг обёртки — `sf-badge-anchor--size-1/3`,
+`--size-1/2`, `--size-1`, `--size-2` или `--size-3` (без класса — `1`); форма —
+`sf-badge-anchor--square` (по умолчанию), `--rounded` (радиус элементов
+управления) или `--round`. Так же обёртка служит якорем для элемента пакета.
+
+:::example {id="components/badges/anchor-wrapper" label="Обёртка sf-badge-anchor вокруг иконки"}
+:::
+
+| Атрибут | Что делает |
+|:---|:---|
+| `data-count` | Целое число. `0`, пустое или отрицательное значение прячет бейдж. |
+| `data-dot` | Точка без числа: есть новое. Показывается, когда `data-count` не задан. |
+| `data-cap` | Порог, по умолчанию `99`: число больше порога показывается как `99+`. |
+| `data-label` | Свои слова. Для точки — её текстовый эквивалент, для счёта — формы множественного числа через `\|` с `{count}` на месте числа: `{count} заявка\|{count} заявки\|{count} заявок`. |
+
+Скрипт компонента `SF.AnchoredBadge` следит за такими бейджами сам, в том числе
+за добавленными и изменёнными позже: странице достаточно менять атрибуты.
+`SF.AnchoredBadge.init(scope)` обрабатывает поддерево сразу, `update(badge)` —
+один бейдж. На странице работает один такой скрипт, сколько бы элементов его ни
+подключали: имя владельца пишется, только когда меняется, и фраза не
+дописывается второй раз.
+
+Размер бейджа задаёт шаг якоря:
+
+| Шаг якоря | Счётчик | Точка | Кольцо |
+|:---|:---|:---|:---|
+| `1/3` | рисуется точкой | 6px | 1px |
+| `1/2` | рисуется точкой | 8px | 2px |
+| `1` | высота 16px | 10px | 2px |
+| `2` | высота 20px | 12px | 2px |
+| `3` | высота 24px | 14px | 2px |
+
+Значения — при корневом размере шрифта 16px. Шаг кнопки-иконки и обёртки —
+её размер `--size-N`. Аватары `1/4` и `1/3` и аватары по строке текста
+`--line-1/2` и `--line-1` получают шаг `1/3`, аватар `1/2` и `--line-2` — шаг
+`1/2`. Число на якоре `1/3` и `1/2` рисуется точкой и остаётся в доступном
+имени и во всплывающей подсказке. Цифры табличные: один знак — круг, два и три
+— бейдж растёт вширь.
+
+По умолчанию бейдж окрашен ролью ошибки; другие классы цвета бейджа, например
+`sf-badge--main sf-badge--primary`, меняют его. От якоря бейдж отделяет кольцо
+цвета поверхности под якорем. Цвет кольца — `--sf-badge-ring-color`, если её
+задала страница; иначе цвет поднятой поверхности Framework — выпадающего
+списка, контекстного меню, подменю, панели админ-меню, шторки, поповера,
+модального окна или тоста; иначе поверхность страницы `--sf-surface-0`.
+Кольцо верно в светлой и тёмной теме.
+
+Smart-элементы [Avatar](/ru/smart-components/content/avatar/),
+[Icons](/ru/smart-components/content/icons/) и
+[Icon Buttons](/ru/smart-components/actions/icon-buttons/) рисуют такой бейдж
+по входам `badge-count`, `badge-dot`, `badge-cap` и `badge-label`. В
+компактном [меню](/ru/components/navigation/menu/#счётчик-и-компактное-меню)
+счётчик строки переходит на её иконку.
+
 ## Доступность
 
 - Бейдж — неинтерактивный текст: он не получает фокус и не имеет роли.
@@ -88,6 +160,10 @@ profile: reference
   часть скрыта от экранного диктора.
 - Счётчику нужен контекст: «3 новых сообщения», а не «3». Задайте его соседним
   текстом или через `sr-only`.
+- Бейдж на якоре называет себя сам: цифры и точка скрыты от экранного
+  диктора, а фраза добавляется к `aria-label` якоря или ссылки и кнопки вокруг:
+  «Анна Белова, 3 непрочитанных». Точка читается «есть новое», на английской
+  странице — "3 unread" и "new". В имени всегда точное число, и при `99+`.
 - Если значение меняется на глазах у пользователя, объявление задаёт
   окружающая область с `aria-live` или `role="status"`.
 
@@ -96,8 +172,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-badge` |
-| Части | `sf-badge-icon-container`, `sf-badge-text`, `sf-badge-text-container` |
-| Модификаторы | `sf-badge--error`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tonal`, `sf-badge--warning` |
+| Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-icon-container`, `sf-badge-text`, `sf-badge-text-container` |
+| Модификаторы | `sf-badge--anchored`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tonal`, `sf-badge--warning` |
 | Размеры | `sf-badge--size-1`, `sf-badge--size-1/2`, `sf-badge--size-1/3` |
 | Устаревшие | `sf-badge--danger` → `sf-badge--error` |
 
@@ -119,6 +195,7 @@ profile: reference
 | `--sf-badge-padding-inline` | Отступ до и после текста по строчной оси. | `var(--sf-ui-1/3--text-space-x)`; зависит от размера |
 | `--sf-badge-padding-block` | Отступ над и под текстом. | `var(--sf-ui-1/3--space-y-tightness-low)`; зависит от размера |
 | `--sf-badge-gap` | Промежуток между иконкой и текстом. | `var(--sf-space-1/4)` |
+| `--sf-badge-ring-color` | Кольцо, которое отделяет бейдж на аватаре, иконке или кнопке-иконке от якоря: цвет поверхности, на которой стоит якорь. Поверхности Framework (меню, списки, шторки, модальные окна, тосты) задают свой; задайте её там, где страница рисует собственную поверхность. | `var(--sf-surface-0)` |
 
 ```css
 .sf-badge {
@@ -132,6 +209,15 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-badge--anchor-border` | не задана; задают модификаторы, например `.sf-avatar > .sf-badge--anchored`: `var(--sf-avatar--border-top-width, var(--sf-a0))` | `--sf-badge--anchored-inset`, `top`, `inset-block-start`, `inset-inline-start` |
+| `--sf-badge--anchor-radius` | не задана; задают модификаторы, например `.sf-avatar > .sf-badge--anchored`: `var(--sf-avatar--border-top-right-radius, var(--sf-avatar-radius, var(--sf-radius-circle)))` | `--sf-badge--anchored-inset` |
+| `--sf-badge--anchored-count` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-b6)` | `--sf-badge--anchored-size` |
+| `--sf-badge--anchored-dot` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-b0)` | `--sf-badge--anchored-size`, `--sf-badge--anchored-max` |
+| `--sf-badge--anchored-font-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-text-size-1/4)` | `font-size` |
+| `--sf-badge--anchored-inset` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `calc(min(var(--sf-badge--anchor-radius), 50% + var(--sf-badge--anchor-border)) * 0.29289)` | `top`, `inset-block-start`, `inset-inline-start` |
+| `--sf-badge--anchored-max` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `none` | `max-width`, `max-inline-size` |
+| `--sf-badge--anchored-padding` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a4)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-badge--anchored-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge--anchored-count)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size`, `line-height` |
 | `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-on-surface-variant))` | `background-color` |
 | `--sf-badge--border-bottom-width` | `var(--sf-badge-border-width, 0)` | `border-bottom-width` |
 | `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `border-color` |
@@ -147,6 +233,9 @@ profile: reference
 | `--sf-badge--padding-block` | `var(--sf-badge-padding-block, var(--sf-ui-1/3--space-y-tightness-low))` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-badge--min-size` |
 | `--sf-badge--padding-inline-end` | `var(--sf-badge-padding-inline, var(--sf-ui-1/3--text-space-x))` | `padding-inline-end` |
 | `--sf-badge--padding-inline-start` | `var(--sf-badge-padding-inline, var(--sf-ui-1/3--text-space-x))` | `padding-inline-start` |
+| `--sf-badge--ring` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge-ring-color, var(--sf-badge--surface, var(--sf-surface-0)))` | `box-shadow`, `outline` |
+| `--sf-badge--ring-width` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a2)` | `box-shadow`, `outline` |
+| `--sf-badge-anchor--radius` | не задана; задают модификаторы, например `.sf-badge-anchor`: `var(--sf-radius-square)` | `--sf-badge--anchor-radius` |
 | `--sf-badge-text--color` | не задана; задают модификаторы, например `.sf-badge.sf-badge--tonal .sf-badge-text`: `var(--sf-badge-color, var(--sf-badge--color))` | `color` |
 | `--sf-badge-text--font-size` | не задана; задают модификаторы, например `.sf-badge--size-1 .sf-badge-text`: `var(--sf-badge--font-size)` | `font-size` |
 | `--sf-badge-text--line-height` | не задана; задают модификаторы, например `.sf-badge--size-1 .sf-badge-text`: `var(--sf-badge--line-height)` | `line-height` |

@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-d985d7cc2e2d",
-  "ui_commit": "d985d7cc2e2d2529f4e18e211f05f8c66ac3a655",
+  "release": "ui-e19da1d40f07",
+  "ui_commit": "e19da1d40f07c52ea9f47990d8805375cc8b6258",
   "stages": [
     "core",
     "dom",
@@ -19,6 +19,25 @@
       "arity": 1,
       "class": false,
       "status": "internal"
+    },
+    "AnchoredBadge": {
+      "available": "components",
+      "type": "object",
+      "members": {
+        "init": {
+          "type": "function",
+          "arity": 0
+        },
+        "state": {
+          "type": "function",
+          "arity": 0
+        },
+        "update": {
+          "type": "function",
+          "arity": 1
+        }
+      },
+      "status": "public"
     },
     "ButtonGroup": {
       "available": "components",

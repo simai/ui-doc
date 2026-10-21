@@ -3,22 +3,23 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "4404143c7caec324b74601a97e55d989a1e28591",
-    "core_revision": "d985d7cc2e2d2529f4e18e211f05f8c66ac3a655",
+    "source_revision": "72edc63352923d2e5168e3780bf9a8f479b74d20",
+    "core_revision": "e19da1d40f07c52ea9f47990d8805375cc8b6258",
     "source_files": {
       "src/component/menu/js/_menu.js": "d52321066c0813b2f7c0b67ecb0eca07e41dbf78a4d4e821a073ed3dd06a2503",
-      "src/component/menu/scss/_css__menu.scss": "d28696ca6820883010b36f6ec4872c143caff0bf33fa92cf4d66f63ea8e51bb6",
-      "src/component/menu/docs/docs.md": "3dde35b3194ad20c1785fcf82b01e2b9335ce9a68cbe22e956f201b9d1798b08"
+      "src/component/menu/scss/_css__menu.scss": "8dd164f009591aa4014c10bbe85deb86da0bde5b281c247f32cfba6686dc5cd8",
+      "src/component/menu/scss/_css__menu_compact.scss": "d724e97ae5cd7098dc974a20d1b50a5d8d90c08a74010eb9f503b11aefa74ec0",
+      "src/component/menu/docs/docs.md": "bf05d9934f941dc857c7210c5852f61e5ccd2c84a15ec95ed888fb57c4a0896e"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "17439fe5369c0712d1a0fe1e6b5dfc9233974fc07328668b0b8150dee880f82c",
+      "distr/component/menu/css/menu.css": "657d7176ac7287aad234b04b08463325c949ae1d160f0b658241f21b4721082b",
       "distr/component/menu/js/menu.js": "17c7fd25ebed0895c4be881e30a7894f31ecc06d79275e850c2a4440e5ac466b"
-    },
-    "note": "The menu's three source files and its built menu.css and menu.js are byte-identical between source a91c620c / core 16caec9d (release ui-16caec9d7fff) and source 4404143c / core d985d7cc (release ui-d985d7cc2e2d)."
+    }
   },
   "source_files": [
     "src/component/menu/js/_menu.js",
     "src/component/menu/scss/_css__menu.scss",
+    "src/component/menu/scss/_css__menu_compact.scss",
     "src/component/menu/docs/docs.md"
   ],
   "generated_files": [
@@ -39,13 +40,18 @@
       ".sf-menu.sf-menu--documentation-tree",
       "sf-menu-element--level-4",
       "inset-inline-start: 100%"
+    ],
+    "src/component/menu/scss/_css__menu_compact.scss": [
+      ".sf-menu.sf-menu--compact",
+      ".sf-menu-element-wrap > .sf-badge"
     ]
   },
   "generated_snippets": {
     "distr/component/menu/css/menu.css": [
       ".sf-menu.sf-menu--horizontal",
       ".sf-menu.sf-menu--documentation-tree",
-      "inset-inline-start: 100%"
+      "inset-inline-start: 100%",
+      ".sf-menu.sf-menu--compact"
     ],
     "distr/component/menu/js/menu.js": [
       "closeHorizontalSiblings",
@@ -69,7 +75,8 @@
     "Enter",
     "Пробел",
     "Escape",
-    "направление раскрытия"
+    "направление раскрытия",
+    "sf-menu--compact"
   ],
   "examples": {
     "components/menu/overview": [
@@ -87,6 +94,10 @@
     "components/menu/states": [
       "aria-current=\"page\"",
       "disabled"
+    ],
+    "components/menu/compact": [
+      "sf-menu sf-menu--compact",
+      "class=\"sf-badge\" data-count=\"3\""
     ]
   }
 }
