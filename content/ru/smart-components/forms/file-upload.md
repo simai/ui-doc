@@ -20,8 +20,11 @@ description: "Зона выбора и перетаскивания файлов
 
 ### Тексты зоны
 
-`link-text` — выделенная часть приглашения, `text` — его продолжение.
-Без них компонент пишет приглашение на языке страницы. `supporting-text` —
+`link-text` — слова ссылки в зоне («Выберите файл»), `text` — слова **после**
+ссылки в той же строке («или перетащите его сюда»). `text` — не всё
+приглашение и не заменяет `link-text`: заданный вместо всей фразы, он
+встанет рядом со словами ссылки. Без этих атрибутов компонент пишет
+приглашение на языке страницы. `supporting-text` —
 строка под приглашением; без неё компонент выводит `formats`, а без `formats`
 собирает список из `accept`. Если не задано ни то ни другое, строки с
 форматами нет: какие файлы принимает поле, компонент сам не знает. `icon`
@@ -68,6 +71,30 @@ description: "Зона выбора и перетаскивания файлов
 :::example {id="components/file-upload/smart-states" label="Результат"}
 :::
 
+### Элемент списка
+
+Элемент списка — обычный объект. `getItems()` возвращает такие объекты,
+`setItems()` принимает их, а каждое событие передаёт элемент в
+`event.detail.item` вместе с его `index` и всем списком `items`. Из выбора
+пользователя компонент сам собирает элементы этой формы и хранит в каждом
+объект `File`.
+
+| Ключ | Значение |
+|:---|:---|
+| `id` | Постоянный идентификатор элемента между вызовами `setItems()`: по нему смена состояния превращается в события `file-error`, `file-complete` и `complete`. Для выбранного файла это `<имя>-<размер>-<lastModified>`. Без `id` элемент узнаётся по файлу или по имени и позиции. |
+| `name` (или `fileName`) | Имя файла в строке. Без обоих выводится `File`. |
+| `fileSize` (или `sizeText`) | Размер уже готовым текстом, например `348KB`. Число компонент здесь не форматирует. |
+| `progress` | От 0 до 100, выводится как задано: 100 не переводит элемент в `done`. |
+| `state` (или `status`) | `process` — полоса прогресса, `done` — отметка готовности, `error` — кнопка повтора. |
+| `errorMessage` (или `retryText`) | Подпись кнопки повтора у элемента в `error`. Без неё — «Повторить» или «Try again» по языку страницы. |
+| `icon` | Значок строки; по умолчанию `cloud_upload`. |
+| `file` | Сам объект `File` для передачи приложением. Компонент его не читает. |
+
+Задавайте `state` и `progress` явно в каждом элементе, который передаёте в
+`setItems()`. Передача, прогресс и проверка на сервере остаются за
+приложением: оно меняет `progress` и `state` через `setItems()` по ходу своей
+передачи.
+
 ### Удаление и повтор
 
 Кнопки в строке файла удаляют файл из списка и повторяют передачу с ошибкой.
@@ -89,6 +116,28 @@ description: "Зона выбора и перетаскивания файлов
 
 :::example {id="components/file-upload/smart-customization" label="Результат"}
 :::
+
+### Подписка до регистрации элемента
+
+`onFileAdd()` и другие методы `on…()` появляются, когда загрузчик
+зарегистрировал элемент. На `<sf-file-upload>`, который ещё не
+зарегистрирован, вызов падает с ошибкой `… is not a function`. Два способа
+работают всегда:
+
+```js
+// 1. Событие: оно не требует метода и всплывает от элемента.
+upload.addEventListener('sf-file-upload:file-add', (event) => add(event.detail.item));
+
+// 2. Дождаться регистрации и затем вызывать методы.
+await customElements.whenDefined('sf-file-upload');
+upload.onFileAdd((event) => add(event.detail.item));
+```
+
+`sf-file-upload:file-add` приходит на каждый добавленный файл, а
+`sf-file-upload:select` — один раз на весь выбор. Методам соответствуют
+события `sf-file-upload:file-add`, `sf-file-upload:file-error`,
+`sf-file-upload:file-complete`, `sf-file-upload:remove`,
+`sf-file-upload:retry` и `sf-file-upload:complete`.
 
 ### Отправка файлов
 
@@ -112,6 +161,44 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 });
 ```
 
+### Импорт в браузере без сервера
+
+Файлы сохраняются в IndexedDB, а компонент показывает, что с каждым
+произошло: выбор, проверка, сохранение и повтор после ошибки.
+
+```js
+const upload = document.querySelector('sf-file-upload');
+const items = new Map(); // id → элемент
+
+upload.addEventListener('sf-file-upload:file-add', async (event) => {
+  const item = {...event.detail.item};
+  items.set(item.id, item);
+  await store(item);
+});
+
+upload.addEventListener('sf-file-upload:retry', (event) => {
+  const item = items.get(event.detail.item.id);
+  if (item) store({...item, state: 'process', progress: 0});
+});
+
+async function store(item) {
+  const next = {...item, state: 'process', progress: 10};
+  items.set(item.id, next);
+  upload.setItems([...items.values()]); // полоса двигается
+  try {
+    if (item.file.size > 5 * 1024 * 1024) throw new Error('Файл больше 5 МБ');
+    await put(item.id, item.file); // запись в IndexedDB
+    items.set(item.id, {...next, state: 'done', progress: 100});
+  } catch (error) {
+    items.set(item.id, {...next, state: 'error', errorMessage: error.message});
+  }
+  upload.setItems([...items.values()]);
+}
+```
+
+Кнопка повтора несёт текст `errorMessage`, поэтому причина и действие — один
+элемент: человек читает, почему не получилось, и нажимает, чтобы повторить.
+
 ## Доступность
 
 - Зона — кнопка с одной остановкой `Tab`; `Enter` или `Space` открывают
@@ -126,7 +213,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e19da1d40f07` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -135,7 +222,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | Тег | `<sf-file-upload>` |
 | Назначение | Область перетаскивания, которая открывает файловый диалог платформы или принимает перетащенные файлы с фильтром по accept и показывает каждый файл с прогрессом загрузки, ошибкой с повтором и удалением. Загрузку выполняет хост; компонент показывает состояние, которое задаёт хост. |
 | Контракт | `smart.file-upload`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-e19da1d40f07` |
+| Поставка | выпуск Framework `ui-3d6921cd2516` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -204,5 +291,5 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ### Источник
 
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/smart/file-upload`
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/rule/rule.json#name=cl-file-upload`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/smart/file-upload`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/rule/rule.json#name=cl-file-upload`

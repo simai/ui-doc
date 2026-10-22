@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "72edc63352923d2e5168e3780bf9a8f479b74d20",
-    "core_revision": "e19da1d40f07c52ea9f47990d8805375cc8b6258",
+    "source_revision": "f6835d3393f37b796d40b8692efda4b23f5faff8",
+    "core_revision": "3d6921cd25169dc9b29fd277466bd0dccbef1691",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
@@ -10,7 +10,7 @@
       "src/core/js/composition/index.mjs": "45a71cda246130f6dd6aa3b4c44f24ae8eda396712705ed986720c9ebc7919f9",
       "src/core/js/composition/builtins.mjs": "cecc06f437f0c247b0430c565075f2de6435546a6ef44311b366e34b9592f7ea",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/buttons/smart.manifest.json": "4462b9e1b26bfbe747d05052418e770520c4bba377b3a7b3766ef3ad91990488"
+      "src/smart/buttons/smart.manifest.json": "583497ff47429015edd9be2fa823646f0bcf10eeec02f5006a85bb4d3aad1dde"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "distr/core/js/core.js": "a9bb3cc57b7c7f1a04c34db84b451b21513cf382e998ba7b70a4f7a1558c9952"
     },
-    "note": "At source 72edc633 and core e19da1d4 (release ui-e19da1d40f07) the composition schemas, composition-types, index.mjs, builtins, the fixture, the buttons manifest and the bundled core.js are byte-identical to the review at source 4404143c / core d985d7cc."
+    "note": "At source f6835d33 and core 3d6921cd (release ui-3d6921cd2516) the composition schemas, composition-types, index.mjs, builtins, the fixture and the bundled core.js are byte-identical to the review at source 72edc633 / core e19da1d4. The buttons manifest differs only in provenance: the source_artifacts digest of src/smart/buttons/index.js (host data attributes, the text-child label, focus delegation); its composition-facing declarations are unchanged."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

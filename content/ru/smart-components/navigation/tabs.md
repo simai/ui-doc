@@ -63,6 +63,31 @@ profile: reference
 :::example {id="components/tabs/smart-appearance" label="Результат"}
 :::
 
+### Пилюли и переключатель из двух вариантов
+
+`type="pills"` только скругляет вкладки, а заливку даёт `scheme`. При
+`scheme` по умолчанию каждая пилюля — залитая кнопка, и выбранная почти не
+выделяется в ряду. Чтобы залита была только выбранная вкладка, задайте
+`scheme="outline"` (или `link`):
+
+```html
+<sf-tabs type="pills" scheme="outline" aria-label="Разделы"></sf-tabs>
+```
+
+Вкладки показывают панели: у каждой вкладки своя панель. Переключатель из
+двух-трёх вариантов без панелей — это группа кнопок
+`<sf-button-group appearance="segmented">`:
+
+```html
+<sf-button-group appearance="segmented" aria-label="Вид" value="edit"
+  items='[{"value":"edit","label":"Редактор"},{"value":"code","label":"Код"}]'></sf-button-group>
+```
+
+Это `radiogroup` с одной остановкой `Tab`, стрелками, `Home` и `End`, а
+высота дорожки равна высоте `sf-button` того же `size`, поэтому группа стоит
+в одном ряду с кнопками. Пилюли не следуют лестнице высот кнопок и рядом с
+кнопками по высоте не совпадают. Подробнее — [Button Group](/ru/smart-components/actions/button-group/).
+
 ### Подчёркнутые вкладки: размеры
 
 У `type="underline"` вкладка — это подпись и линия под ней, без отступов по
@@ -217,7 +242,7 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e19da1d40f07` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -226,7 +251,7 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 | Тег | `<sf-tabs>` |
 | Назначение | Список вкладок, который показывает одну локальную панель за раз: текстовые вкладки или вкладки с иконкой задаются атрибутами, слотами или данными, с перемещаемым фокусом клавиатуры и связанными панелями вкладок. |
 | Контракт | `smart.tabs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-e19da1d40f07` |
+| Поставка | выпуск Framework `ui-3d6921cd2516` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -281,8 +306,8 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ### Источник
 
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/smart/tabs`
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/rule/rule.json#name=cl-tabs`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/smart/tabs`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/rule/rule.json#name=cl-tabs`
 
 ## См. также
 

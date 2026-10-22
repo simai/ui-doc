@@ -117,7 +117,10 @@ Framework: пакет компонентов Loader с именем `larena` и�
 ### Действия и создание
 
 Действие над строкой или над выбранными строками отправляет
-`sf-table-action-intent` с `{action_id, record_ids}`. `setBulkActions(actions)`
+`sf-table-action-intent` с `{action_id, record_ids}`. Встроенные действия
+строки — `view` (глаз), `edit` (карандаш) и `delete` — представление берёт из
+каталога таблицы, и «Удалить» в меню строки окрашено цветом ошибки, даже если
+хост не назвал это действие в своём каталоге. `setBulkActions(actions)`
 задаёт массовые действия; пока ничего не выбрано, они выключены.
 `getSelectedRecordIds()` возвращает выбранные идентификаторы.
 
@@ -466,7 +469,14 @@ document.querySelector('sf-data-view').setHostPort(host);
 порт описывает только намерение, его `payload` и конверт ответа.
 
 - `answer` — `applied`, `conflict`, `refused` или `unavailable`; `message` —
-  текст для человека.
+  текст для человека. Если список отклонён (`refused`) или недоступен
+  (`unavailable`) и ответ на `query.change` несёт непустой `message`, этот
+  текст становится заголовком пустого состояния таблицы («нет прав») или
+  состояния ошибки и строкой, которую объявляет область статуса; он выводится
+  как текст, не как разметка. `unavailable` с `message` не показывает
+  уведомление об ошибке — причину уже называет состояние, например «Список
+  готовится…». Без `message` представление показывает свои слова («Данные
+  временно недоступны») и уведомление.
 - `reason` — машинная причина отказа или недоступности, свободная строка,
   которую хост может дополнять своими. Если хост не прислал `message`,
   представление показывает для причин из порта свои слова на языке страницы;
@@ -748,7 +758,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-e19da1d40f07` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -828,7 +838,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-count-request` — `detail`: `{ component: object, tagName: string, template: string, reason: string, current: integer, pageSize: integer }`. Отправляет пагинация представления, когда человек просит общее число, последнюю страницу или действие над фильтром, пока число неизвестно. Представление отвечает на него намерением query.count; хосту слушать его не нужно.
-- `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, data?: object, sequence?: integer, effects?: array, instance_id: string }`. Приходит после каждого ответа порта, по которому действует представление, включая ответы, которые оно даёт себе само (порт не подключён, возможность не объявлена, действие не разрешено), — чтобы страница видела результаты, не оборачивая порт.
+- `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, message?: string, data?: object, sequence?: integer, effects?: array, instance_id: string }`. Приходит после каждого ответа порта, по которому действует представление, включая ответы, которые оно даёт себе само (порт не подключён, возможность не объявлена, действие не разрешено), — чтобы страница видела результаты, не оборачивая порт.
 - `sf-data-view-saved-view-intent` — `detail`: `{ key: string, label: string, revision?: string|integer, roles?: object }`. Событие, которое страница отправляет на представление, чтобы сохранить общее сохранённое представление (порт 1.1.0 и новее): представление отправляет view.save_shared с key и label из detail.
 - `sf-data-view-state` — `detail`: `{ state: string, message: string, instance_id: string }`. Приходит при каждой смене состояния данных представления (loading, populated, empty, error) вместе со строкой, которую оно объявляет в своей живой области; для страницы, которая показывает состояние где-то ещё.
 - `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Событие таблицы, которое слушает представление: в его таблице выбрано действие над строкой или групповое действие. Представление проверяет, что строка его разрешает, и отправляет record.open (view), record.mutate (одна строка) или bulk.apply_selected с ревизиями записей; перенос и создание в дереве открывают окно переноса или view.create_record.
@@ -861,8 +871,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@3f6c86da4dd6e003a00d39e25e8330bc851db5ce:components/src/smart/data-view`
-- `simai/larena-ui@3f6c86da4dd6e003a00d39e25e8330bc851db5ce:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/data-view`
+- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1016,5 +1026,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@3f6c86da4dd6e003a00d39e25e8330bc851db5ce:components/src/smart/table`
-- `simai/larena-ui@3f6c86da4dd6e003a00d39e25e8330bc851db5ce:components/src/smart/table/rule.js#name=cl-table`
+- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/table`
+- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/table/rule.js#name=cl-table`

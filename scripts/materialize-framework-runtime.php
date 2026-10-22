@@ -36,11 +36,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '46f4298c0b719ec6e97c66c22755fba89e030b6d';
-const UI_RUNTIME_REVISION = 'e19da1d40f07c52ea9f47990d8805375cc8b6258';
-const SOURCE_REVISION = '72edc63352923d2e5168e3780bf9a8f479b74d20';
+const UI_METADATA_REVISION = '00524a87c19cf381ed6ce67c2d439790714ed72d';
+const UI_RUNTIME_REVISION = '3d6921cd25169dc9b29fd277466bd0dccbef1691';
+const SOURCE_REVISION = 'f6835d3393f37b796d40b8692efda4b23f5faff8';
 const BUILDER_REVISION = '12a022bdde4d04a388996304e1dd09ccabc29ad7';
-const RELEASE_LOCK = 'contracts/releases/ui-e19da1d40f07.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-3d6921cd2516.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -48,7 +48,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-e19da1d40f07.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261021.26';
+const NPM_VERSION = '5.20261022.1303';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
@@ -57,10 +57,10 @@ const NPM_VERSION = '5.20261021.26';
 const PACKAGES = [
     'larena' => [
         'repository' => 'simai/larena-ui',
-        'revision' => '3f6c86da4dd6e003a00d39e25e8330bc851db5ce',
+        'revision' => '1cee9e276c26834031153f25ac2a8f9ba5cbb26c',
         'path' => 'components',
-        'archive_sha256' => 'cb0de23c2be51cf32e26cf98a4785890b8b98f6af74052a523650837830a1e81',
-        'builder' => 'a1405ae3563fb07995edf05c0f90461104baebdc',
+        'archive_sha256' => 'defe2ef922ad9189bfc206eb0abb8e46d3656176c83f938f741f11361233c88b',
+        'builder' => '0460ee479efeb5735a095149519ae3f039a878f5',
     ],
 ];
 

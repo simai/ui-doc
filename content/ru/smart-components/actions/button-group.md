@@ -94,6 +94,17 @@ description: "Переключает один из нескольких взаи
 | `item` | данные выбранного варианта: `value`, `label`, `icon`, `disabled`; после `clear()` — `null` |
 | `component` | элемент `<sf-button-group>` |
 
+`component` — живой элемент, а не данные, поэтому `detail` — не JSON:
+`JSON.stringify(event.detail)` падает на циклической структуре. Берите нужные
+поля (`previous` и `value` — строки) и передавайте их дальше:
+
+```js
+group.addEventListener('change', (event) => {
+  const {previous, value} = event.detail;
+  apply(value, previous);
+});
+```
+
 Группа хранит выбор только в атрибуте `value`; сохранить его и применить
 выбранный вид — задача страницы. Методы `select(value)` и `clear()` меняют
 выбор из кода и отправляют то же событие; повторный выбор текущего варианта и
@@ -131,7 +142,7 @@ group.select('month');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e19da1d40f07` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -140,7 +151,7 @@ group.select('month');
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
 | Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-e19da1d40f07` |
+| Поставка | выпуск Framework `ui-3d6921cd2516` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -201,8 +212,8 @@ group.select('month');
 
 ### Источник
 
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/smart/button-group`
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/smart/button-group`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/rule/rule.json#name=cl-button-group`
 
 ## См. также
 

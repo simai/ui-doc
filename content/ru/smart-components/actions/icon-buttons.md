@@ -104,6 +104,25 @@ row.querySelector('.row-actions').append(remove);
 remove.onClick(() => deleteRow(row));
 ```
 
+### Атрибуты `data-*` и фокус
+
+Как у [Buttons](/ru/smart-components/actions/buttons/#атрибуты-data-и-фокус),
+атрибут `data-*` с `<sf-icon-button>` переносится на внутреннюю нативную
+кнопку: у неё есть размеры, она получает фокус и нажатие, поэтому селектор
+`[data-…]` находит ровно один элемент — её. Хост своей области не имеет
+(`display: contents`), к нему ведёт `closest('sf-icon-button')`.
+
+```js
+const toggle = menu.querySelector('[data-search-toggle]');  // нативная кнопка
+toggle.focus();
+toggle.closest('sf-icon-button');                            // хост
+```
+
+Записанное на хосте читает свойство `dataAttributes`
+(`data-column-key` → `.columnKey`), а `removeHostDataAttribute(name)`
+убирает атрибут и с хоста, и с кнопки. `focus()` и `blur()` на хосте
+передаются внутренней кнопке.
+
 ## Доступность
 
 - Каждой кнопке нужно доступное имя в `aria-label`: иконка его не даёт.
@@ -119,7 +138,7 @@ remove.onClick(() => deleteRow(row));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e19da1d40f07` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -128,7 +147,7 @@ remove.onClick(() => deleteRow(row));
 | Тег | `<sf-icon-button>` |
 | Назначение | Нативная кнопка-иконка с геометрией из токенов, доступным именем и общей семантикой загрузки. |
 | Контракт | `smart.icon-buttons`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-e19da1d40f07` |
+| Поставка | выпуск Framework `ui-3d6921cd2516` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -198,8 +217,8 @@ remove.onClick(() => deleteRow(row));
 
 ### Источник
 
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/smart/icon-buttons`
-- `simai/ui@e19da1d40f07c52ea9f47990d8805375cc8b6258:distr/rule/rule.json#name=cl-icon-buttons`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/smart/icon-buttons`
+- `simai/ui@3d6921cd25169dc9b29fd277466bd0dccbef1691:distr/rule/rule.json#name=cl-icon-buttons`
 
 ## См. также
 

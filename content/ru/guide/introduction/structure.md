@@ -128,7 +128,7 @@ Apache-2.0. Пакет соответствует стандарту
     "package": "shop",
     "source": {
       "repository": "simai/ui-source",
-      "revision": "72edc63352923d2e5168e3780bf9a8f479b74d20"
+      "revision": "f6835d3393f37b796d40b8692efda4b23f5faff8"
     }
   }
   ```
@@ -136,7 +136,7 @@ Apache-2.0. Пакет соответствует стандарту
   `schema` — точно эта строка; `source.repository` — всегда
   `simai/ui-source`; `source.revision` — полный коммит исходников, из которых
   собран выбранный выпуск Framework (поле `build_inputs.source.commit` записи о
-  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-e19da1d40f07`). `package` необязателен; если он есть, он совпадает с
+  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-3d6921cd2516`). `package` необязателен; если он есть, он совпадает с
   именем пакета в сборке. Других полей сборка не читает.
 - **Правило компонента.** Файл `src/smart/<папка>/rule.js` записывает ровно
   одно правило `cl-<папка>` простыми данными, без регулярных выражений,
@@ -242,6 +242,7 @@ Apache-2.0. Пакет соответствует стандарту
 | `package` | Имя пакета |
 | `loader` | Как объявить пакет на странице: `SF_BOOT_CONFIG.packages.<имя>.base`, каталог `smart`, файл правил `smart/rule.js` |
 | `package_source` | Репозиторий, ревизия и путь папки пакета, git-дерево этой папки |
+| `licence` | Лицензия пакета `{ref}` — поле `license` из `package.json` папки пакета на собранной ревизии: идентификатор SPDX, `LicenseRef-…` или выражение SPDX. У пакета `larena` — `{"ref": "Apache-2.0"}`. Пакет без `package.json`, без `license` или с `UNLICENSED` квитанцию не получает |
 | `framework` | Ревизия исходников Framework и выпуск `ui-<ревизия>`, собранный из неё (`null`, если такого выпуска нет) |
 | `builder` | Ревизия сборщика и признак чистого рабочего дерева |
 | `node` | Версия Node.js, на которой шла сборка |
@@ -531,7 +532,7 @@ node <ui-builder>/bin/sf-build.js package --kind theme \
 Larena берёт пакет оттуда:
 
 ```bash
-commit=3f6c86da4dd6e003a00d39e25e8330bc851db5ce
+commit=1cee9e276c26834031153f25ac2a8f9ba5cbb26c
 tag="larena-${commit:0:12}"
 gh release download "$tag" --repo simai/larena-ui \
   --pattern 'package-larena.tar*' --pattern package-receipt.json
@@ -552,9 +553,9 @@ tar -xf package-larena.tar -C "public/assets/larena/$commit"
 ревизиях: `simai/ui-builder` (сборщик; установка зависимостей и команда — в
 его [README](https://github.com/simai/ui-builder#using-sf-build-in-a-product)), `simai/ui-source` (исходники
 Framework на ревизии, которую закрепляет `components/framework.lock.json`
-пакета, для этого выпуска — `72edc63352923d2e5168e3780bf9a8f479b74d20`) и `simai/larena-ui`
+пакета, для этого выпуска — `f6835d3393f37b796d40b8692efda4b23f5faff8`) и `simai/larena-ui`
 (исходник пакета).
-Пример воспроизведения — для выпуска `ui-e19da1d40f07`; `<ui-builder>`, `<ui-source>` и `<ui>` —
+Пример воспроизведения — для выпуска `ui-3d6921cd2516`; `<ui-builder>`, `<ui-source>` и `<ui>` —
 пути к рабочим копиям, `<ui>` стоит на текущей ветке `main`.
 
 1. **Сборка.** Папка пакета — `components` репозитория `simai/larena-ui`,
@@ -562,30 +563,30 @@ Framework на ревизии, которую закрепляет `components/f
 
    Сборщик стоит на коммите, которым собран пакет (поле сборщика в его
    квитанции); он может быть новее сборщика выпуска Framework. Для этого
-   пакета — `git -C <ui-builder> checkout a1405ae3563fb07995edf05c0f90461104baebdc`.
+   пакета — `git -C <ui-builder> checkout 0460ee479efeb5735a095149519ae3f039a878f5`.
 
    ```bash
    git clone https://github.com/simai/larena-ui.git
-   git -C larena-ui checkout 3f6c86da4dd6e003a00d39e25e8330bc851db5ce
+   git -C larena-ui checkout 1cee9e276c26834031153f25ac2a8f9ba5cbb26c
    node <ui-builder>/bin/sf-build.js package --name larena \
      --package-root larena-ui/components \
-     --package-revision 3f6c86da4dd6e003a00d39e25e8330bc851db5ce \
+     --package-revision 1cee9e276c26834031153f25ac2a8f9ba5cbb26c \
      --package-repository simai/larena-ui \
      --ui-source <ui-source> --ui <ui> --out build/larena --json
    ```
 
 2. **Проверка квитанции.** Команда завершается с кодом `0` и `status: "PASS"`.
    В `build/larena/package-receipt.json` поле `framework.release` равно
-   `ui-e19da1d40f07`, `package_source.revision` — коммиту из шага 1, а
+   `ui-3d6921cd2516`, `package_source.revision` — коммиту из шага 1, а
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/larena/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/larena/3f6c86da4dd6e003a00d39e25e8330bc851db5ce/smart/`, и объявляют
+   `public/assets/larena/1cee9e276c26834031153f25ac2a8f9ba5cbb26c/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {larena: {base: '/assets/larena/3f6c86da4dd6e003a00d39e25e8330bc851db5ce/smart'}},
+     packages: {larena: {base: '/assets/larena/1cee9e276c26834031153f25ac2a8f9ba5cbb26c/smart'}},
    };
    ```
 
