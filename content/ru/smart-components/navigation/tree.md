@@ -110,7 +110,7 @@ tree.items = await fetchFolders();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c408b1c544f9` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-f2f3e8f912cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -119,7 +119,7 @@ tree.items = await fetchFolders();
 | Тег | `<sf-tree>` |
 | Назначение | Доступный иерархический составной компонент с перемещаемым фокусом (roving focus), раскрытием ветвей и выбором, которым управляет элемент. |
 | Контракт | `smart.tree`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-c408b1c544f9` |
+| Поставка | выпуск Framework `ui-f2f3e8f912cf` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="menu"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -162,8 +162,8 @@ tree.items = await fetchFolders();
 
 ### Источник
 
-- `simai/ui@c408b1c544f94b19b20a0bd2ae953e5bb67a6d50:distr/smart/tree`
-- `simai/ui@c408b1c544f94b19b20a0bd2ae953e5bb67a6d50:distr/rule/rule.json#name=cl-tree`
+- `simai/ui@f2f3e8f912cf618b95b509040465e618208e7322:distr/smart/tree`
+- `simai/ui@f2f3e8f912cf618b95b509040465e618208e7322:distr/rule/rule.json#name=cl-tree`
 
 ## См. также
 

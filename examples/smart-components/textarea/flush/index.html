@@ -1,0 +1,16 @@
+<style>
+  .composer { display: flex; align-items: flex-end; gap: var(--sf-space-1); padding: var(--sf-space-1); border: var(--sf-px) solid var(--sf-outline-variant); border-radius: var(--sf-radius--ui); }
+  .composer:has(:focus-visible) { outline: var(--sf-focus--width) var(--sf-focus--style) var(--sf-focus--color); outline-offset: var(--sf-focus--offset); }
+  .composer > sf-textarea { flex: 1 1 auto; min-inline-size: 0; }
+</style>
+<form class="composer" aria-label="Новое сообщение" onsubmit="return false">
+  <sf-textarea
+    name="message"
+    appearance="flush"
+    placeholder="Напишите сообщение"
+    aria-label="Сообщение"
+    auto-grow
+    max-rows="6">
+  </sf-textarea>
+  <sf-icon-button icon="send" aria-label="Отправить" native-type="submit"></sf-icon-button>
+</form>

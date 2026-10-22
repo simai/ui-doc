@@ -568,8 +568,15 @@ document.querySelector('sf-data-view').setHostPort(host);
 | флажок в ячейке (возможность `inline-edit`) | `record.set` |
 | перетаскивание строк внутри плоского списка (возможность `row-reorder`) | `record.reorder` |
 
-Действие, которого нет в списке `actions` записи, до хоста не доходит:
-представление отвечает себе отказом `action-not-allowed`. Подписи есть
+Действие строки (`sf-table-action-intent`), которого нет в списке `actions`
+записи, до хоста не доходит: представление отвечает себе отказом
+`action-not-allowed`. Массовое действие над выбранными записями
+(`sf-action-apply` из панели выбора) всегда идёт в `bulk.apply_selected`, даже
+если выбрана одна запись, и может иметь свой идентификатор, например
+`bulk_delete`, которого нет в `actions` записей: право на него проверяет хост.
+Представление только проверяет, что каждая выбранная запись есть в текущем
+ответе, и прикладывает её ревизию; запись, которой там нет, отклоняется на
+месте. Подписи есть
 только у действий `view`, `edit` и `delete`; подпись и значок своего действия
 приложение передаёт каталогом `data.row_actions: [{id, label, icon}]` в
 ответе на запрос. Действие без записи в каталоге подписано «Действие», а в
@@ -770,7 +777,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-c408b1c544f9` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-f2f3e8f912cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -883,8 +890,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/data-view`
-- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-admin@2d4acf45e73f0e65809726ca6553336edd808125:components/src/smart/data-view`
+- `simai/ui-admin@2d4acf45e73f0e65809726ca6553336edd808125:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1038,5 +1045,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/table`
-- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-admin@2d4acf45e73f0e65809726ca6553336edd808125:components/src/smart/table`
+- `simai/ui-admin@2d4acf45e73f0e65809726ca6553336edd808125:components/src/smart/table/rule.js#name=cl-table`

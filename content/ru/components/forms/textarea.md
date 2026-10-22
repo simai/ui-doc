@@ -47,6 +47,27 @@ profile: reference
 :::example {id="components/textarea/variants" label="Поле с границей и с заливкой"}
 :::
 
+### Без рамки
+
+`sf-textarea--flush` — поле внутри составного элемента, например строки ввода
+сообщения, где рамку, фон, тень и фокус рисует общий блок. У такого поля нет
+своей границы, фона, тени, скругления, боковых отступов, ручки изменения
+размера и своего кольца фокуса — ни при наведении, ни при нажатии. Отступ
+сверху и снизу у него такой же, как у поля с границей вместе с её линией,
+поэтому текст стоит на той же высоте, что текст поля ввода и кнопки того же
+размера, а одна строка равна их высоте. Высота по тексту
+(`data-auto-grow`, `data-min-rows`, `data-max-rows`) работает так же, как у
+других видов.
+
+Фокус показывает составной блок: задайте ему контур через
+`:has(:focus-visible)`, как в примере, — поле само фокус не рисует. Полю нужно
+доступное имя: видимая подпись или `aria-label`. Отступы вокруг текста задаёт
+блок; `--sf-textarea-padding-block` и `--sf-textarea-padding-inline` по-прежнему
+меняют отступы самого поля.
+
+:::example {id="components/textarea/flush" label="Поле без рамки в строке ввода сообщения"}
+:::
+
 ### Размер
 
 Три ступени — `sf-textarea--size-1/2`, `sf-textarea--size-1` и
@@ -201,7 +222,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 |:---|:---|
 | Блок | `sf-textarea` |
 | Части | `sf-textarea-hint-text-wrap`, `sf-textarea-label`, `sf-textarea-required`, `sf-textarea-text` |
-| Модификаторы | `sf-textarea--auto-grow`, `sf-textarea--bordered`, `sf-textarea--filled`, `sf-textarea--pointer-focus` |
+| Модификаторы | `sf-textarea--auto-grow`, `sf-textarea--bordered`, `sf-textarea--filled`, `sf-textarea--flush`, `sf-textarea--pointer-focus` |
 | Размеры | `sf-textarea--size-1`, `sf-textarea--size-1/2`, `sf-textarea--size-2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
