@@ -56,8 +56,9 @@ Smart-компонента своей копии этих модулей не н
 
 Так подключаются `<sf-table>`, `<sf-data-view>`, `<sf-property-view>` и
 `<sf-admin-menu>`: это компоненты Larena, пакет `larena`. Их исходники лежат в
-репозитории `simai/larena-ui` (папка `components/`, лицензия Apache-2.0), а не
-в поставке `ui`. Пакет собирает инструмент ui-builder из точной ревизии
+репозитории `simai/ui-admin` (папка `components/`; лицензия PolyForm Small
+Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу — коммерческая
+лицензия SIMAI; в составе Larena — лицензия Larena), а не в поставке `ui`. Пакет собирает инструмент ui-builder из точной ревизии
 исходников Framework; Larena отдаёт сборку в своей поставке, а каждая сборка
 публикуется выпуском репозитория `simai/larena-ui` с архивом, его SHA-256 и
 квитанцией (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Без
@@ -72,7 +73,7 @@ Smart-компонента своей копии этих модулей не н
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
-      larena: {base: '/assets/larena/1cee9e276c26834031153f25ac2a8f9ba5cbb26c/smart'},
+      larena: {base: '/assets/larena/9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4/smart'},
     },
   };
 </script>

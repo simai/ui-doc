@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "f6835d3393f37b796d40b8692efda4b23f5faff8",
-    "core_revision": "3d6921cd25169dc9b29fd277466bd0dccbef1691",
+    "source_revision": "148f5becc9b336cb5684702ed128fd0833b0eed9",
+    "core_revision": "c408b1c544f94b19b20a0bd2ae953e5bb67a6d50",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
@@ -16,9 +16,9 @@
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
-      "distr/core/js/core.js": "a9bb3cc57b7c7f1a04c34db84b451b21513cf382e998ba7b70a4f7a1558c9952"
+      "distr/core/js/core.js": "15bd4dd22a6f4009988056aa026caa36e514f21766b4baf929f71520b93487d2"
     },
-    "note": "At source f6835d33 and core 3d6921cd (release ui-3d6921cd2516) the composition schemas, composition-types, index.mjs, builtins, the fixture and the bundled core.js are byte-identical to the review at source 72edc633 / core e19da1d4. The buttons manifest differs only in provenance: the source_artifacts digest of src/smart/buttons/index.js (host data attributes, the text-child label, focus delegation); its composition-facing declarations are unchanged."
+    "note": "At source 148f5bec and core c408b1c5 (release ui-c408b1c544f9) the composition schemas, composition-types, index.mjs, builtins, the fixture and the buttons manifest are byte-identical to the review at source f6835d33 / core 3d6921cd. The bundled core.js changes for SF.ready (src/core/js/ready.js) and the ordered open-surface mark (open-surface-mark.js); the composition runtime it carries and the composition pages do not change."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",

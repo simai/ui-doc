@@ -93,14 +93,7 @@ CSS-слои Framework. Shadow DOM компоненты Framework не испо�
 [Работающий пример](#работающий-пример).
 
 ```js
-function whenLoaderReady() {
-  if (window.SF?.loadSmartBase) return Promise.resolve();
-  return new Promise((resolve) => {
-    window.addEventListener('sf-loader-init', () => resolve(), { once: true });
-  });
-}
-
-await whenLoaderReady();
+await SF.ready;               // Loader на месте (см. «Когда доступен каждый SF.*»)
 await SF.loadSmartBase();
 const { SfBaseElement, html } = SF.smart;
 const TEXT = {

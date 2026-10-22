@@ -197,7 +197,7 @@ relation: [
 
 **Какое значение дать меткам.** Метка — любая непустая строка; Loader
 сравнивает её с сохранённой как есть. Для своей копии поставки обе метки
-задают равными идентификатору выпуска, например `ui-3d6921cd2516`: метка
+задают равными идентификатору выпуска, например `ui-c408b1c544f9`: метка
 меняется ровно тогда, когда меняется выпуск (см. [Глобальные настройки](/ru/guide/connection/project-setup/#глобальные-настройки)).
 
 **Список отсутствующих файлов.** Если JavaScript модуля не нашёлся, Loader
@@ -305,7 +305,7 @@ Smart-компонентов.
 
 | Событие | Где | Когда |
 |:---|:---|:---|
-| `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.ready`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.smartBaseReady`, `SF.whenFieldRenderers` и `SF.RuleLoader.registerPackage` доступны |
+| `sf-loader-init` | `window` | Loader создан: `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.smartBaseReady`, `SF.whenFieldRenderers` и `SF.RuleLoader.registerPackage` доступны, и в этот же момент выполняется `SF.ready`. Обработчик, добавленный после события, не сработает — ждите `SF.ready` |
 | `sf-loader-ready` | `window` | Первая партия модулей загружена. Событие отправляется один раз: обработчик, добавленный позже, не сработает |
 | `sf-runtime-ready` | `window` | Пришла общая основа Smart-компонентов — модули, против которых собраны их скрипты (см. [Общая основа Smart-компонентов](#общая-основа-smart-компонентов)) |
 | `sf-smart-base-ready` | `window` | Загружен базовый класс Smart-компонентов: есть `SF.smart`; один раз на страницу. Надёжнее событий — `await SF.loadSmartBase()`: обещание выполняется и тогда, когда база уже пришла |
@@ -318,8 +318,8 @@ Smart-компонентов.
 
 | API | Когда доступен | Как дождаться |
 |:---|:---|:---|
-| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.Preferences` ([Персональный вид](/ru/guide/smart-components/view-preferences/)), `SF.notify` и `SF.notifications` ([Всплывающие сообщения](/ru/components/feedback/toast/#уведомления-страницы-sf-notify)), `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations`, `SF.loadRuntime`, `SF.runtimeModule`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
-| `SF.Loader`, `SF.ready`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.smartBaseReady`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | Событие `sf-loader-init` на `window` (пример ниже) |
+| `SF.Composition`, `SF.Position`, `SF.Mask`, `SF.RegionNavigation` ([Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)), `SF.Effects` ([Фоновые эффекты](/ru/guide/layouts/building/background-effects/)), `SF.Preferences` ([Персональный вид](/ru/guide/smart-components/view-preferences/)), `SF.notify` и `SF.notifications` ([Всплывающие сообщения](/ru/components/feedback/toast/#уведомления-страницы-sf-notify)), `SF.language`, `SF.pageLanguage`, `SF.pageText`, `SF.deprecations`, `SF.loadRuntime`, `SF.runtimeModule`, `SF.ready`; объект правил `SF.RuleLoader` (пока пустой) | Сразу после выполнения `core.js` | Ждать не нужно |
+| `SF.Loader`, `SF.create`, `SF.createAsync`, `SF.whenDefined`, `SF.loadSmartBase`, `SF.smartBaseReady`, `SF.whenFieldRenderers`, `SF.RuleLoader.registerPackage` | После асинхронной загрузки Loader; приходят все вместе | `await SF.ready` (пример ниже) |
 | `SF.Loader.theme` (`light` или `dark` — тема на странице) и `SF.Loader.themePreference` (`system`, `light` или `dark` — выбор человека) | Вместе с `SF.Loader`; значения появляются, когда Loader выбрал тему при запуске | Событие `sf-theme-change`: первое приходит при запуске |
 | `SF.smart` (`SfBaseElement`, `html`, `nothing` и помощники) | Вместе с базой Smart-компонентов: с первым Smart-элементом на странице или после `await SF.loadSmartBase()`. На странице без Smart-элементов его нет | `await SF.loadSmartBase()` после `sf-loader-init` |
 | Объекты компонентов на классах: `SF.Input`, `SF.Toast`, `SF.Tabs` и другие | Только после того, как Loader загрузил компонент по его разметке на странице. Без разметки компонента объекта нет | После `sf-loader-init`: `SF.Loader.ready('Inputs', () => SF.Input.setState(…))`. Функция вызывается сразу, если компонент уже загружен, иначе после его регистрации, когда объект `SF.<Имя>` уже назначен. Первый аргумент — имя компонента в реестре (`Inputs`, `Modal`); оно может отличаться от имени объекта (`SF.Input`) |
@@ -329,16 +329,31 @@ Smart-компонентов.
 и после `sf-loader-init`.
 
 ```js
-function whenLoaderReady() {
-  if (window.SF?.loadSmartBase) return Promise.resolve();
-  return new Promise((resolve) => {
-    window.addEventListener('sf-loader-init', () => resolve(), {once: true});
-  });
-}
-
-await whenLoaderReady();
-await SF.loadSmartBase();   // после этого доступен SF.smart
+const SF = await window.SF.ready;   // window.SF, Loader уже на месте
+await SF.loadSmartBase();           // после этого доступен SF.smart
 ```
+
+**`SF.ready` — готовность Loader.** Она есть в `window.SF` сразу после
+выполнения `core.js`, до следующего скрипта:
+
+- `await SF.ready`, `SF.ready.then(fn)` и `Promise.resolve(SF.ready)`
+  выполняются со значением `window.SF` в тот момент, когда Loader отправляет
+  `sf-loader-init`. Скрипт, который спрашивает позже, получает уже
+  выполненное обещание; отклонения не бывает.
+- Вызов функцией, `SF.ready(fn)`, запускает `fn`, когда Loader готов и документ
+  разобран, — синхронно, если оба условия уже выполнены.
+- `SF.ready` один на страницу: второй `core.js` или сборка компонента его не
+  заменяют.
+- Скрипту, который стоит до `core.js`, читать ещё нечего. Он ставит функцию в
+  очередь `SF_ON_READY`; её вызовут с `window.SF`, когда выполнится
+  `SF.ready`:
+
+  ```html
+  <script>
+    (window.SF_ON_READY = window.SF_ON_READY || []).push((SF) => SF.loadSmartBase());
+  </script>
+  <script src=".../distr/core/js/core.js"></script>
+  ```
 
 Что важно заметить:
 
@@ -357,7 +372,7 @@ await SF.loadSmartBase();   // после этого доступен SF.smart
   выполняется, когда определено первое из них. Имя без дефиса — всегда имя
   Framework.
 - Скрипт, который вызывает `SF.RuleLoader.registerPackage()` сразу после
-  `core.js`, сначала дожидается `sf-loader-init`.
+  `core.js`, сначала дожидается `await SF.ready`.
 
 ## Пакеты компонентов
 

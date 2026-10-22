@@ -15,23 +15,23 @@ Framework, а для каждого подключённого пакета пр
 выпуск и коммит, см. [Пакет npm](/ru/guide/connection/delivery/#пакет-npm)) или по полному коммиту,
 из которого взята своя копия, — и сразу записывают его в файл блокировки;
 номер из `VERSION` выпуск не определяет. Пример показывает
-минимальное содержание для выпуска `ui-3d6921cd2516` с пакетом продукта
+минимальное содержание для выпуска `ui-c408b1c544f9` с пакетом продукта
 `larena`, собранным для этого выпуска:
 
 ```json
 {
   "framework": {
-    "release": "ui-3d6921cd2516",
-    "commit": "3d6921cd25169dc9b29fd277466bd0dccbef1691",
-    "npm": "@simai-studio/ui@5.20261022.1303",
+    "release": "ui-c408b1c544f9",
+    "commit": "c408b1c544f94b19b20a0bd2ae953e5bb67a6d50",
+    "npm": "@simai-studio/ui@5.20261022.1534",
     "distr_archive_sha256": "<runtime_sources.core.archive_sha256 из записи о выпуске>",
     "distr_tree": "<runtime_sources.core.runtime_tree из записи о выпуске>"
   },
   "packages": {
     "larena": {
       "receipt": "<путь к квитанции пакета>",
-      "source_revision": "1cee9e276c26834031153f25ac2a8f9ba5cbb26c",
-      "framework": "ui-3d6921cd2516",
+      "source_revision": "9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4",
+      "framework": "ui-c408b1c544f9",
       "manifest_sha256": "<output.manifest_sha256 из квитанции>"
     }
   }
@@ -55,7 +55,7 @@ Framework, а для каждого подключённого пакета пр
   точных ревизий и хешей;
 - поле `framework` у пакета совпадает с выпуском Framework, который закреплён
   рядом; `source_revision` — поле `package_source.revision` квитанции, коммит
-  репозитория `simai/larena-ui`, из которого собран пакет;
+  репозитория `simai/ui-admin`, из которого собран пакет;
 - файл блокировки проекта — не то же самое, что `/ai/framework-lock.json`
   сайта документации: тот называет выпуск, который описывает документация, а
   не выпуск проекта (см. [Машиночитаемые источники](/ru/guide/standards/ai/#машиночитаемые-источники)).

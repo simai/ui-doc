@@ -10,7 +10,7 @@
 // DOCARA_SIMAI_UI_ROOT), and those of a product component package in the package
 // itself (--package-root=/absolute/path, repeatable, or SIMAI_UI_PACKAGE_ROOTS
 // separated by `:`): a package output holding smart/ (sf-build --out) or a package
-// source folder holding src/smart/ (Larena's larena-ui/components). A separate
+// source folder holding src/smart/ (Larena's ui-admin/components). A separate
 // ui-smart checkout (--smart-root, SIMAI_UI_SMART_ROOT) is still read when named.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -32,7 +32,7 @@ const packageRoots = [
   ...(process.env.SIMAI_UI_PACKAGE_ROOTS || '').split(':').filter(Boolean),
 ];
 if (packageRoots.length === 0) {
-  const beside = found(path.resolve(projectRoot, '../larena-ui/components'), 'src/smart');
+  const beside = found(path.resolve(projectRoot, '../ui-admin/components'), 'src/smart');
   if (beside) packageRoots.push(beside);
 }
 for (const root of [smartRoot, uiRoot, ...packageRoots]) {

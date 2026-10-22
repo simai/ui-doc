@@ -43,6 +43,10 @@ $pins['LARENA_REVISION'] = $matches[0]['revision'];
 $pins['LARENA_PATH'] = $matches[0]['path'];
 $pins['LARENA_ARCHIVE_SHA256'] = $matches[0]['archive'];
 $pins['LARENA_BUILDER'] = $matches[0]['builder'];
+// The folder CI clones the package repository into, beside this checkout: the
+// repository's own name (simai/ui-admin -> ui-admin), the layout the scripts
+// default to.
+$pins['LARENA_CHECKOUT'] = explode('/', $matches[0]['repository'])[1];
 
 foreach ($pins as $name => $value) {
     echo $name, '=', $value, "\n";

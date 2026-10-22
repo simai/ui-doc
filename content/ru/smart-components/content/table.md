@@ -23,7 +23,9 @@ description: "Показывает серверную коллекцию таб�
 
 Элементы `<sf-table>` и `<sf-data-view>` поставляет Larena, а не выпуск
 Framework: пакет компонентов Loader с именем `larena` из репозитория
-`simai/larena-ui` (лицензия Apache-2.0). В пакет входят ещё
+`simai/ui-admin` (лицензия PolyForm Small Business 1.0.0 или PolyForm
+Noncommercial 1.0.0, по запросу — коммерческая лицензия SIMAI; в составе
+Larena — лицензия Larena). В пакет входят ещё
 [`<sf-property-view>`](/ru/smart-components/composite/property-view/) и
 [`<sf-admin-menu>`](/ru/smart-components/composite/admin-menu/). Объявите
 пакет до подключения Core:
@@ -477,6 +479,16 @@ document.querySelector('sf-data-view').setHostPort(host);
   уведомление об ошибке — причину уже называет состояние, например «Список
   готовится…». Без `message` представление показывает свои слова («Данные
   временно недоступны») и уведомление.
+
+  Отказ (`refused`) означает «нет прав», только если причина — доступ:
+  `reason` нет, или это `forbidden`, `access_denied`, `scope_denied`, или
+  имя хоста, которое кончается на `_access_denied` или `_scope_denied`. Тогда
+  уходят строки, панель инструментов, выбор и «Создать». Любая другая причина
+  относится к запросу — например, `query_invalid` для слишком длинного поиска
+  или недопустимого фильтра: список показывает состояние ошибки с `message`
+  хоста (без него — «Запрос не выполнен»), а панель инструментов, набранный
+  поиск и фильтры остаются, чтобы запрос можно было исправить на месте.
+  Уведомление поверх не показывается.
 - `reason` — машинная причина отказа или недоступности, свободная строка,
   которую хост может дополнять своими. Если хост не прислал `message`,
   представление показывает для причин из порта свои слова на языке страницы;
@@ -758,7 +770,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-c408b1c544f9` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -871,8 +883,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/data-view`
-- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/data-view`
+- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1026,5 +1038,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/table`
-- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/table`
+- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/table/rule.js#name=cl-table`

@@ -31,8 +31,8 @@ Developer references:
 composer install
 npm ci
 node /absolute/path/to/ui-builder/bin/sf-build.js package --name larena \
-  --package-root /absolute/path/to/larena-ui/components --package-revision <pinned revision> \
-  --package-repository simai/larena-ui --ui-source /absolute/path/to/ui-source \
+  --package-root /absolute/path/to/ui-admin/components --package-revision <pinned revision> \
+  --package-repository simai/ui-admin --ui-source /absolute/path/to/ui-source \
   --ui /absolute/path/to/ui --out /absolute/path/to/larena-package
 php scripts/materialize-framework-runtime.php /absolute/path/to/ui \
   --receipt=/absolute/path/to/larena-package/package-receipt.json
@@ -59,8 +59,10 @@ skips a block coloured that way. Shiki is the one npm dependency
 
 The site is pinned to one Framework release (release lock v2, `ui-<12>`:
 Core and Smart from the same `simai/ui` commit, Smart in `distr/smart`) and
-to Larena's component package `larena` built against it (`simai/larena-ui`,
-folder `components/`, Apache-2.0: `sf-table`, `sf-data-view`,
+to Larena's component package `larena` built against it (`simai/ui-admin`,
+folder `components/`, PolyForm Small Business 1.0.0 or PolyForm Noncommercial
+1.0.0, or SIMAI Commercial on request; builds are published as releases of
+`simai/larena-ui`: `sf-table`, `sf-data-view`,
 `sf-property-view`, `sf-admin-menu`). The release revisions and the package's
 source revision and archive digest are named at the top of
 `scripts/materialize-framework-runtime.php`. The package is built with

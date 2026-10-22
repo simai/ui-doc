@@ -187,7 +187,7 @@ $current = [
     'ui_record' => $pinned("/const UI_METADATA_REVISION = '([0-9a-f]{40})'/"),
     'source' => $pinned("/const SOURCE_REVISION = '([0-9a-f]{40})'/"),
     'builder' => $pinned("/const BUILDER_REVISION = '([0-9a-f]{40})'/"),
-    'larena' => $pinned("/'larena' => \[\s*'repository' => 'simai\/larena-ui',\s*'revision' => '([0-9a-f]{40})'/"),
+    'larena' => $pinned("/'larena' => \[\s*'repository' => '[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+',\s*'revision' => '([0-9a-f]{40})'/"),
     // The ui-builder commit that built the larena package (its receipt): it may
     // be newer than the one the Framework release was built with.
     'larena_builder' => $pinned("/'larena' => \[[^\]]*?'builder' => '([0-9a-f]{40})'/s"),

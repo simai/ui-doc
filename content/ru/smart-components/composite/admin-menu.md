@@ -12,8 +12,10 @@ description: "Даёт административному приложению �
 настройки принадлежат этому компоненту. Заголовок, число записей и действия
 страницы показывает [Page Header](/ru/smart-components/composite/page-header/).
 
-Компонент поставляется пакетом `larena` из репозитория `simai/larena-ui`
-(папка `components/`, лицензия Apache-2.0), а не выпуском Framework.
+Компонент поставляется пакетом `larena` из репозитория `simai/ui-admin`
+(папка `components/`), а не выпуском Framework. Лицензия пакета — PolyForm
+Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу —
+коммерческая лицензия SIMAI; в составе Larena — лицензия Larena.
 
 ## Пример
 
@@ -256,7 +258,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-3d6921cd2516` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c408b1c544f9` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -348,8 +350,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/admin-menu`
-- `simai/larena-ui@1cee9e276c26834031153f25ac2a8f9ba5cbb26c:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/admin-menu`
+- `simai/ui-admin@9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

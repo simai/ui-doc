@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.js-api-inventory",
   "schema_version": 1,
-  "release": "ui-3d6921cd2516",
-  "ui_commit": "3d6921cd25169dc9b29fd277466bd0dccbef1691",
+  "release": "ui-c408b1c544f9",
+  "ui_commit": "c408b1c544f94b19b20a0bd2ae953e5bb67a6d50",
   "stages": [
     "core",
     "dom",
@@ -1042,9 +1042,9 @@
       "status": "public"
     },
     "ready": {
-      "available": "idle",
+      "available": "core",
       "type": "function",
-      "arity": 0,
+      "arity": 1,
       "class": false,
       "status": "public"
     },

@@ -16,8 +16,8 @@ permissions:
 # commit is the whole change CI needs.
 #
 # The checks read git objects of the sibling repositories at those pins, beside
-# this checkout: ../ui, ../ui-source, ../ui-builder and ../larena-ui, the layout
-# the scripts default to. actions/checkout cannot write outside the workspace,
+# this checkout: ../ui, ../ui-source, ../ui-builder and the package repository
+# (../ui-admin, LARENA_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
 # so they are plain full clones.
 #
 # On main (a push or a manual run, never a pull request) the verified site is
@@ -74,10 +74,22 @@ jobs:
           git -C "$parent/ui" cat-file -e "$UI_RUNTIME_REVISION^{commit}"
           clone simai/ui-source ui-source "$SOURCE_REVISION"
           clone simai/ui-builder ui-builder "$LARENA_BUILDER"
-          clone "$LARENA_REPOSITORY" larena-ui "$LARENA_REVISION"
+          # The package repository, fully, at the package lock's revision.
+          clone "$LARENA_REPOSITORY" "$LARENA_CHECKOUT" "$LARENA_REVISION"
+          # The package is built over the ui-source revision its own
+          # components/framework.lock.json names; when that is not the
+          # release's source, it gets a checkout of its own.
+          package_source="$(node -p 'require(process.argv[1]).source.revision' "$parent/$LARENA_CHECKOUT/$LARENA_PATH/framework.lock.json")"
+          if [ "$package_source" = "$SOURCE_REVISION" ]; then
+            package_source_root="$parent/ui-source"
+          else
+            clone simai/ui-source ui-source-package "$package_source"
+            package_source_root="$parent/ui-source-package"
+          fi
           {
             echo "FRAMEWORK_PARENT=$parent"
             echo "DOCARA_SIMAI_UI_ROOT=$parent/ui"
+            echo "LARENA_SOURCE_ROOT=$package_source_root"
           } >> "$GITHUB_ENV"
       - name: Install ui-builder
         run: yarn --cwd "$FRAMEWORK_PARENT/ui-builder" install --frozen-lockfile --non-interactive --silent
@@ -91,10 +103,10 @@ jobs:
           cd "$RUNNER_TEMP"
           node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" package \
             --name larena \
-            --package-root "$FRAMEWORK_PARENT/larena-ui/$LARENA_PATH" \
+            --package-root "$FRAMEWORK_PARENT/$LARENA_CHECKOUT/$LARENA_PATH" \
             --package-revision "$LARENA_REVISION" \
             --package-repository "$LARENA_REPOSITORY" \
-            --ui-source "$FRAMEWORK_PARENT/ui-source" \
+            --ui-source "$LARENA_SOURCE_ROOT" \
             --ui "$DOCARA_SIMAI_UI_ROOT" \
             --workspace "$RUNNER_TEMP/larena-waves" \
             --out "$out" --replace-out

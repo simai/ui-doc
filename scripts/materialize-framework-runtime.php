@@ -13,7 +13,8 @@ declare(strict_types=1);
  * over a pinned ui-source revision (`sf-build package`); the build writes a
  * package receipt (`simai.framework.product-package-receipt` version 1) that
  * names the free release the package must be served beside. Larena's package
- * `larena` (simai/larena-ui, folder `components`, Apache-2.0) carries
+ * `larena` (simai/ui-admin, folder `components`; PolyForm Small Business 1.0.0
+ * or PolyForm Noncommercial 1.0.0, or SIMAI Commercial) carries
  * `sf-table`, `sf-data-view`, `sf-property-view` and `sf-admin-menu`; the site
  * serves it as the Loader package `larena`.
  *
@@ -36,11 +37,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '00524a87c19cf381ed6ce67c2d439790714ed72d';
-const UI_RUNTIME_REVISION = '3d6921cd25169dc9b29fd277466bd0dccbef1691';
-const SOURCE_REVISION = 'f6835d3393f37b796d40b8692efda4b23f5faff8';
+const UI_METADATA_REVISION = 'eda97bf44b8c6fa868f28a6f2960633d8c46d0f0';
+const UI_RUNTIME_REVISION = 'c408b1c544f94b19b20a0bd2ae953e5bb67a6d50';
+const SOURCE_REVISION = '148f5becc9b336cb5684702ed128fd0833b0eed9';
 const BUILDER_REVISION = '12a022bdde4d04a388996304e1dd09ccabc29ad7';
-const RELEASE_LOCK = 'contracts/releases/ui-3d6921cd2516.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-c408b1c544f9.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -48,18 +49,20 @@ const RELEASE_LOCK = 'contracts/releases/ui-3d6921cd2516.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261022.1303';
+const NPM_VERSION = '5.20261022.1534';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
 // Framework release was built with (BUILDER_REVISION), and CI rebuilds the
-// package with this one.
+// package with this one. The revision is the package lock's source revision
+// (ui-admin config/simai-package.lock.json): the last commit that touched the
+// package folder, not the repository's head.
 const PACKAGES = [
     'larena' => [
-        'repository' => 'simai/larena-ui',
-        'revision' => '1cee9e276c26834031153f25ac2a8f9ba5cbb26c',
+        'repository' => 'simai/ui-admin',
+        'revision' => '9f3e80fb16e3d66d860ddea8828f6640a0ac5ca4',
         'path' => 'components',
-        'archive_sha256' => 'defe2ef922ad9189bfc206eb0abb8e46d3656176c83f938f741f11361233c88b',
+        'archive_sha256' => '8c53e5430a0eb015a3aa9eb1114bcb8ccb1000aa140ad0a71706667c29469fa8',
         'builder' => '0460ee479efeb5735a095149519ae3f039a878f5',
     ],
 ];

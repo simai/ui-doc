@@ -58,7 +58,7 @@ const set = await SF.whenFieldRenderers();
 ```
 
 `SF.whenFieldRenderers` есть на странице после запуска Loader; скрипт, который
-выполняется до запуска Loader, ждёт событие `sf-loader-init` на `window`.
+выполняется раньше, сначала ждёт `await SF.ready`.
 
 ## Описание поля
 
