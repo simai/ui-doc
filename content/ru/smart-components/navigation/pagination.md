@@ -142,7 +142,7 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-f2f3e8f912cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d90198da3a2f` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -151,7 +151,7 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 | Тег | `<sf-pagination>` |
 | Назначение | Навигация по коллекции, разбитой на пронумерованные страницы, на основе источника данных. |
 | Контракт | `smart.pagination`, версия `1.0.1` |
-| Поставка | выпуск Framework `ui-f2f3e8f912cf` |
+| Поставка | выпуск Framework `ui-d90198da3a2f` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -245,8 +245,8 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ### Источник
 
-- `simai/ui@f2f3e8f912cf618b95b509040465e618208e7322:distr/smart/pagination`
-- `simai/ui@f2f3e8f912cf618b95b509040465e618208e7322:distr/rule/rule.json#name=cl-pagination`
+- `simai/ui@d90198da3a2fbad60b5a9057e8fc562bb5e08333:distr/smart/pagination`
+- `simai/ui@d90198da3a2fbad60b5a9057e8fc562bb5e08333:distr/rule/rule.json#name=cl-pagination`
 
 ## См. также
 

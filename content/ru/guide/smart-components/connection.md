@@ -73,7 +73,7 @@ Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу — ко
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
-      larena: {base: '/assets/larena/2d4acf45e73f0e65809726ca6553336edd808125/smart'},
+      larena: {base: '/assets/larena/3fd844535e1bac661fda81f5b2efbbdb081256a1/smart'},
     },
   };
 </script>

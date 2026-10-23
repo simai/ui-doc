@@ -49,6 +49,28 @@ profile: reference
 :::example {id="components/accordion/appearance" label="Поверхности аккордеона"}
 :::
 
+### Размер
+
+Без класса размера у заголовка просторный отступ для страниц с текстом. В
+плотном интерфейсе — в панели свойств или боковой колонке — поставьте
+аккордеон на лестницу размеров классом `sf-accordion--size-1/3`,
+`sf-accordion--size-1/2`, `sf-accordion--size-1`, `sf-accordion--size-2` или
+`sf-accordion--size-3` на каждом `.sf-accordion`:
+
+- заголовок ровно высотой с элемент управления этого размера — с поле или
+  кнопку рядом — и растёт, только если длинный заголовок переносится;
+- заголовок берёт кегль и высоту строки своего размера, шеврон высотой в
+  строку;
+- внутренний отступ заголовка по горизонтали равен отступу размера, и
+  содержимое начинается под заголовком.
+
+Размер не наследуется: вложенный аккордеон без класса размера остаётся
+обычным. Класс размера задаёт отступы, поэтому свои значения переменных
+отступов ставьте после него.
+
+:::example {id="components/accordion/sizes" label="Аккордеон рядом с полями того же размера"}
+:::
+
 ### Иконка
 
 Шеврон смотрит в сторону у закрытого раздела и вниз у открытого; он
@@ -112,6 +134,7 @@ profile: reference
 | Блок | `sf-accordion` |
 | Части | `sf-accordion-content`, `sf-accordion-heading`, `sf-accordion-title`, `sf-accordion-trigger` |
 | Модификаторы | `sf-accordion--flush`, `sf-accordion--legacy`, `sf-accordion--outline`, `sf-accordion--plus-minus` |
+| Размеры | `sf-accordion--size-1`, `sf-accordion--size-1/2`, `sf-accordion--size-1/3`, `sf-accordion--size-2`, `sf-accordion--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -125,7 +148,11 @@ profile: reference
 | `--sf-accordion--border-color` | `var(--sf-outline-variant)` | `border`, `border-bottom`, `border-block-end` |
 | `--sf-accordion--border-width` | `var(--sf-px)` | `border`, `border-bottom`, `border-block-end`, `height` |
 | `--sf-accordion--content-padding` | `var(--sf-space-3)` | `padding` |
+| `--sf-accordion--icon-size` | `var(--sf-text-height-1)` | `font-size`, `height`, `width` |
 | `--sf-accordion--radius` | `var(--sf-radius--surface)` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-accordion--text-height` | `var(--sf-text--height)` | `line-height` |
+| `--sf-accordion--text-size` | `var(--sf-text--size)` | `font-size` |
+| `--sf-accordion--trigger-min-block-size` | `auto` | `min-height`, `min-block-size` |
 | `--sf-accordion--trigger-padding-block` | `var(--sf-space-2)` | `padding` |
 | `--sf-accordion--trigger-padding-inline` | `var(--sf-space-3)` | `padding` |
 

@@ -118,7 +118,7 @@ header.addEventListener('sf-page-header-star', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-f2f3e8f912cf` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d90198da3a2f` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -127,7 +127,7 @@ header.addEventListener('sf-page-header-star', async (event) => {
 | Тег | `<sf-page-header>` |
 | Назначение | Шапка страницы администратора: путь, заголовок, счётчик, звезда избранного, отметка установки и главное действие. Используется вместе с sf-admin-menu. |
 | Контракт | `smart.page-header`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-f2f3e8f912cf` |
+| Поставка | выпуск Framework `ui-d90198da3a2f` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -165,8 +165,8 @@ header.addEventListener('sf-page-header-star', async (event) => {
 
 ### Источник
 
-- `simai/ui@f2f3e8f912cf618b95b509040465e618208e7322:distr/smart/page-header`
-- `simai/ui@f2f3e8f912cf618b95b509040465e618208e7322:distr/rule/rule.json#name=cl-page-header`
+- `simai/ui@d90198da3a2fbad60b5a9057e8fc562bb5e08333:distr/smart/page-header`
+- `simai/ui@d90198da3a2fbad60b5a9057e8fc562bb5e08333:distr/rule/rule.json#name=cl-page-header`
 
 ## См. также
 

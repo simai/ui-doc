@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-566 переменных, которые объявляет ядро, со значениями по умолчанию.
+569 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -92,6 +92,7 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-transparent-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
 | `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
 | `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
+| `--sf-surface-well` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-5))` |
 
 ### Цвет: акцентные роли
 
@@ -649,11 +650,13 @@ description: "Полный список переменных, которые о�
 | `--sf-on-error` | `light-dark(var(--sf-white), var(--sf-error-20))` |
 | `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` |
 | `--sf-on-neutral` | `light-dark(var(--sf-white), var(--sf-neutral-20))` |
+| `--sf-on-paper` | `var(--sf-neutral-10)` |
 | `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` |
 | `--sf-on-secondary` | `light-dark(var(--sf-white), var(--sf-secondary-20))` |
 | `--sf-on-success` | `light-dark(var(--sf-white), var(--sf-success-20))` |
 | `--sf-on-tertiary` | `light-dark(var(--sf-white), var(--sf-tertiary-20))` |
 | `--sf-on-warning` | `light-dark(var(--sf-white), var(--sf-warning-20))` |
+| `--sf-paper` | `var(--sf-white)` |
 | `--sf-px` | `1px` |
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
