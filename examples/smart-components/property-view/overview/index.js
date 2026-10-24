@@ -37,7 +37,7 @@ const record = {
             label: 'Состояние',
             columns: 2,
             fields: [
-              { key: 'status', label: 'Статус', propertyType: 'enum', width: 'half', value: 'active',
+              { key: 'status', label: 'Статус', propertyType: 'choice', width: 'half', value: 'active',
                 options: [
                   { value: 'active', label: 'Развивается' },
                   { value: 'frozen', label: 'Заморожено' },

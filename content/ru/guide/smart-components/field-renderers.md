@@ -107,6 +107,7 @@ const set = await SF.whenFieldRenderers();
 | `choices` | массив значений из `options`; в ячейке варианта `badges` элемент может быть `{value, text}` |
 | `user` | `{value, label, avatarText, href}` |
 | `record`, `relation` | `{value, label, href}`; `href` — только когда запись можно открыть |
+| `lookup` | `{value, label}`, при `multiple` — массив таких объектов; из значения ничего не открывается |
 | `file` | `{label, mime, href, size}` или массив таких объектов; вместо `label` допустим `name`, вместо `mime` — `mimeType`; ячейке нужен `label` |
 | `color` | строка цвета, например `#1d4ed8` |
 
@@ -235,6 +236,7 @@ lit. `null` значит «показать значение как есть». 
 | `choice` | значение варианта |
 | `choices` | массив значений |
 | `user`, `record`, `relation` | `{value, label}` выбранной записи или `null` |
+| `lookup` | `{value, label}` выбранного варианта или `null`; при `multiple` — массив |
 | `file` | оставшиеся файлы после удаления: массив, один файл или `null` |
 | `color` | строку цвета |
 
@@ -326,6 +328,7 @@ set.renderCellField(status, 'live');
 | `user` | Пользователь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `record` | Запись | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `relation` | Связь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
+| `lookup` | Из справочника | — | `options`, `multiple`, `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `file` | Файл | `image` — Изображение, `image-card` — Изображение карточкой, `image-list` — Изображения списком | `accept`, `multiple`, `formats`, `uploadText`, `uploadSupportingText`, `uploadHint`, `readonly` | есть | есть | своё | своё |
 | `color` | Цвет | — | `swatches`, `required`, `readonly` | есть | есть | своё | своё |
 | `include` | Код | — | `language`, `required`, `readonly` | есть | есть | своё | текстовый |

@@ -91,6 +91,23 @@ profile: reference
 :::example {id="components/accordion/single" label="Группа с одним открытым разделом"}
 :::
 
+### Одна секция
+
+Одной секции раскрываться незачем. Единственный `.sf-accordion` в
+`.sf-accordion-group` или секция с классом `sf-accordion--single` показывается
+как обычный раздел: содержимое видно всегда, а заголовок — просто заголовок.
+Вместо кнопки стоит элемент `span.sf-accordion-trigger` с атрибутом
+`data-sf-accordion-static`, корень получает `sf-accordion--static`. Нет
+стрелки, наведения и остановки `Tab`; линия под заголовком и высота шапки по
+размеру остаются. Когда в группу добавляется вторая секция, кнопка
+возвращается, и секция остаётся открытой; когда секций снова одна, она
+снова обычный раздел. Группа, которая должна оставить одну секцию
+раскрывающейся, например список, который заполнится позже, получает
+`data-single-section="toggle"`.
+
+:::example {id="components/accordion/single-section" label="Одна секция и группа с переключателем"}
+:::
+
 ## Состояния
 
 Наведение и нажатие заголовок показывает сам.
@@ -133,7 +150,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-accordion` |
 | Части | `sf-accordion-content`, `sf-accordion-heading`, `sf-accordion-title`, `sf-accordion-trigger` |
-| Модификаторы | `sf-accordion--flush`, `sf-accordion--legacy`, `sf-accordion--outline`, `sf-accordion--plus-minus` |
+| Модификаторы | `sf-accordion--flush`, `sf-accordion--legacy`, `sf-accordion--outline`, `sf-accordion--plus-minus`, `sf-accordion--static` |
 | Размеры | `sf-accordion--size-1`, `sf-accordion--size-1/2`, `sf-accordion--size-1/3`, `sf-accordion--size-2`, `sf-accordion--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

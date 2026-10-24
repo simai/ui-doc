@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "d83dd8267cfbf9383415e0c988390a933ec1ab03",
-    "core_revision": "d90198da3a2fbad60b5a9057e8fc562bb5e08333",
+    "source_revision": "aa81305b14f103def02dead1ffc0b0451c877f0f",
+    "core_revision": "720203c5b5e5186e2d44f6e1f8d9c23a0e410cc1",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
@@ -18,7 +18,7 @@
       "distr/core/contracts/composition-types.v1.json": "0d120a0a8d5bbf6a0a6810b9d2a56202fd207c6bdd6f673fa72958665c2f3543",
       "distr/core/js/core.js": "15bd4dd22a6f4009988056aa026caa36e514f21766b4baf929f71520b93487d2"
     },
-    "note": "At source d83dd826 and core d90198da (release ui-d90198da3a2f) the composition schemas, composition-types, index.mjs, builtins, the fixture, the buttons manifest and the bundled core.js are byte-identical to the review at source 8dce3f88 / core f2f3e8f9; the release changes components (list row, bottom sheet, accordion sizes, paper and well roles), not the composition contract."
+    "note": "At source aa81305b and core 720203c5 (release ui-720203c5b5e5, through ui-22d6367046c5) the composition schemas, composition-types, index.mjs, builtins, the fixture, the buttons manifest and the bundled core.js are byte-identical to the review at source d83dd826 / core d90198da; the releases change sf-drawer, sf-modal, the accordion, paper state roles, layout tokens and simai.property-view-port 1.14.0, not the composition contract."
   },
   "source_files": [
     "src/core/contracts/composition-document.v1.schema.json",
