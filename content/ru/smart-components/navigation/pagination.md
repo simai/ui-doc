@@ -1,9 +1,9 @@
 ---
-title: "Pagination"
+title: "Пагинация"
 description: "Переключает страницы длинного списка: поле номера между стрелками, размер страницы и догрузка."
 ---
 
-# Pagination
+# Пагинация
 
 `<sf-pagination>` — подвал длинного списка или таблицы: сколько всего
 записей, на какой странице читатель, как перейти на другую и сколько записей
@@ -250,4 +250,4 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ## См. также
 
-- [Dropdown](/ru/smart-components/navigation/dropdown/) — выбор размера страницы устроен так же.
+- [Выпадающий список](/ru/smart-components/navigation/dropdown/) — выбор размера страницы устроен так же.

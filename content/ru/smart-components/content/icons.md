@@ -1,16 +1,16 @@
 ---
-title: "Icons"
+title: "Иконки"
 description: "Выводит символ Material Symbols, для которого Loader загружает только нужные знаки шрифта."
 ---
 
-# Icons
+# Иконки
 
 `<sf-icon>` выводит один символ Material Symbols по имени и сообщает Loader,
 какие знаки шрифта загрузить. Внешний вид — размер, начертание, заливка,
 толщина — задаётся атрибутами на общей шкале Framework. Элемент строится на
 классах компонента [Иконки](/ru/components/content/icons/). Для иконки,
 которую нажимают, берите
-[Icon Buttons](/ru/smart-components/actions/icon-buttons/).
+[Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/).
 
 ## Пример
 
@@ -138,4 +138,4 @@ description: "Выводит символ Material Symbols, для которо�
 ## См. также
 
 - [Иконки](/ru/components/content/icons/) — иконки на классах.
-- [Icon Buttons](/ru/smart-components/actions/icon-buttons/) — кнопка из одной иконки.
+- [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) — кнопка из одной иконки.

@@ -1,15 +1,15 @@
 ---
-title: "File Preview"
+title: "Предпросмотр файла"
 description: "Показывает выбранный или прикреплённый файл строкой с именем, размером, превью и кнопками скачивания и удаления."
 ---
 
-# File Preview
+# Предпросмотр файла
 
 `<sf-file-preview>` показывает один уже выбранный или прикреплённый файл:
 значок или миниатюру, имя, размер и две кнопки — скачать и удалить. Элемент
 строится на классах компонента
 [Предпросмотр файла](/ru/components/content/file-preview/). Выбирает и загружает
-файлы [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/).
+файлы [Загрузка файлов](/ru/smart-components/forms/file-upload/).
 
 ## Пример
 
@@ -163,4 +163,4 @@ file.onDownload((event) => {
 ## См. также
 
 - [Предпросмотр файла](/ru/components/content/file-preview/) — та же строка на классах.
-- [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/) — выбор и загрузка файлов.
+- [Загрузка файлов](/ru/smart-components/forms/file-upload/) — выбор и загрузка файлов.

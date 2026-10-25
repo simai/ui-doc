@@ -1,9 +1,9 @@
 ---
-title: "Icon Buttons"
+title: "Кнопки с иконкой"
 description: "Запускает действие компактной кнопкой с одной иконкой и доступным именем."
 ---
 
-# Icon Buttons
+# Кнопки с иконкой
 
 `<sf-icon-button>` — кнопка с одной иконкой вместо подписи: изменить,
 поделиться, закрыть, открыть меню. Она рисует нативную кнопку с оформлением
@@ -26,12 +26,12 @@ description: "Запускает действие компактной кноп�
 разметку иконки передаёт слот `icon`.
 
 `kind="close"` делает кнопку закрытия: вместо иконки она рисует знак
-[Close](/ru/smart-components/actions/close/) того же размера.
+[Закрытие](/ru/smart-components/actions/close/) того же размера.
 
 ### Вид, цвет и размер
 
 `appearance`, `scheme` и `status` работают как у
-[Buttons](/ru/smart-components/actions/buttons/): `default`, `tonal`,
+[Кнопки](/ru/smart-components/actions/buttons/): `default`, `tonal`,
 `outline`, `link`, `surface`, `ghost`; цветовое семейство `primary`,
 `secondary` или `on-surface`; `status="error"` для действия, которое удаляет
 данные. Для второстепенных действий в строке берите `ghost` или `link` со
@@ -50,7 +50,7 @@ description: "Запускает действие компактной кноп�
 
 ### Загрузка
 
-С `loading` кнопка показывает [Spinner](/ru/smart-components/feedback/spinner/)
+С `loading` кнопка показывает [Спиннер](/ru/smart-components/feedback/spinner/)
 на месте иконки, ровно её размера на каждой ступени `size`, поэтому кнопка не
 меняет размер. Доступное имя из `aria-label` остаётся, внутренняя кнопка
 получает `aria-busy="true"` и нативный `disabled`. Спиннер окрашен цветом
@@ -106,7 +106,7 @@ remove.onClick(() => deleteRow(row));
 
 ### Атрибуты `data-*` и фокус
 
-Как у [Buttons](/ru/smart-components/actions/buttons/#атрибуты-data-и-фокус),
+Как у [Кнопки](/ru/smart-components/actions/buttons/#атрибуты-data-и-фокус),
 атрибут `data-*` с `<sf-icon-button>` переносится на внутреннюю нативную
 кнопку: у неё есть размеры, она получает фокус и нажатие, поэтому селектор
 `[data-…]` находит ровно один элемент — её. Хост своей области не имеет
@@ -222,5 +222,5 @@ toggle.closest('sf-icon-button');                            // хост
 
 ## См. также
 
-- [Buttons](/ru/smart-components/actions/buttons/) — кнопка с подписью.
-- [Close](/ru/smart-components/actions/close/) — знак закрытия внутри своей кнопки.
+- [Кнопки](/ru/smart-components/actions/buttons/) — кнопка с подписью.
+- [Закрытие](/ru/smart-components/actions/close/) — знак закрытия внутри своей кнопки.

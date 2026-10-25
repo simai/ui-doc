@@ -233,4 +233,4 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 
 - [Радиокнопки](/ru/components/forms/radio/)
 - [Переключатель](/ru/components/forms/switch/)
-- [Checkbox — Smart-компонент](/ru/smart-components/forms/checkbox/)
+- [Флажок — Smart-компонент](/ru/smart-components/forms/checkbox/)

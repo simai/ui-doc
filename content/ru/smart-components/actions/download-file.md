@@ -1,9 +1,9 @@
 ---
-title: "Download File"
+title: "Скачивание файла"
 description: "Показывает файл для скачивания с именем и размером и сообщает о нажатии."
 ---
 
-# Download File
+# Скачивание файла
 
 `<sf-download-file>` показывает файл, который можно скачать: иконку, имя и
 размер. С адресом он становится нативной ссылкой, без адреса — кнопкой, по
@@ -132,4 +132,4 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ## См. также
 
-- [Buttons](/ru/smart-components/actions/buttons/) — действие без файла.
+- [Кнопки](/ru/smart-components/actions/buttons/) — действие без файла.

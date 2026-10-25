@@ -144,4 +144,4 @@ profile: reference
 ## См. также
 
 - [Вкладки](/ru/components/navigation/tabs/)
-- [Steps — Smart-компонент](/ru/smart-components/navigation/steps/)
+- [Шаги — Smart-компонент](/ru/smart-components/navigation/steps/)

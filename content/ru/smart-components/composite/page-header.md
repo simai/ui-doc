@@ -1,14 +1,14 @@
 ---
-title: "Page Header"
+title: "Шапка страницы"
 description: "Показывает в начале страницы администрирования путь, заголовок, число записей, отметку избранного и главные действия."
 ---
 
-# Page Header
+# Шапка страницы
 
 `<sf-page-header>` — шапка страницы административного приложения: путь к
 странице, заголовок, число записей, звезда избранного и главные действия в
 одной строке. Ставьте её в начало каждой страницы администрирования рядом с
-[Admin Menu](/ru/smart-components/composite/admin-menu/): меню показывает, где
+[Меню администратора](/ru/smart-components/composite/admin-menu/): меню показывает, где
 находится раздел, шапка — что это за страница и что на ней можно сделать.
 
 ## Пример
@@ -34,7 +34,7 @@ description: "Показывает в начале страницы админи
 Содержимое передаётся в слоты:
 
 - `path` — путь к странице над строкой заголовка, обычно
-  [Breadcrumbs](/ru/smart-components/navigation/breadcrumbs/);
+  [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/);
 - `actions` — главные действия страницы, прижатые к концу строки: одна
   основная кнопка и при необходимости несколько второстепенных;
 - `start` — элемент перед заголовком, например кнопка открытия меню на узком
@@ -170,5 +170,5 @@ header.addEventListener('sf-page-header-star', async (event) => {
 
 ## См. также
 
-- [Admin Menu](/ru/smart-components/composite/admin-menu/) — навигация администратора, рядом с которой стоит шапка.
-- [Breadcrumbs](/ru/smart-components/navigation/breadcrumbs/) — путь к странице для слота `path`.
+- [Меню администратора](/ru/smart-components/composite/admin-menu/) — навигация администратора, рядом с которой стоит шапка.
+- [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/) — путь к странице для слота `path`.

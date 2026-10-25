@@ -215,5 +215,5 @@ profile: reference
 
 ## См. также
 
-- [Pagination — Smart-компонент](/ru/smart-components/navigation/pagination/)
+- [Пагинация — Smart-компонент](/ru/smart-components/navigation/pagination/)
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)

@@ -9,71 +9,71 @@ description: "Смарт-компоненты по задачам интерфе
 
 ## Действия
 
-- [Buttons](/ru/smart-components/actions/buttons/)
-- [Icon Buttons](/ru/smart-components/actions/icon-buttons/)
-- [Button Group](/ru/smart-components/actions/button-group/)
+- [Кнопки](/ru/smart-components/actions/buttons/)
+- [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/)
+- [Группа кнопок](/ru/smart-components/actions/button-group/)
 - [Сегментный переключатель](/ru/smart-components/actions/segmented/)
-- [Close](/ru/smart-components/actions/close/)
-- [Download File](/ru/smart-components/actions/download-file/)
+- [Закрытие](/ru/smart-components/actions/close/)
+- [Скачивание файла](/ru/smart-components/actions/download-file/)
 - [Кнопка копирования](/ru/smart-components/actions/copy-button/)
 
 ## Формы и ввод
 
-- [Поле ввода](/ru/smart-components/forms/inputs/)
-- [Textarea](/ru/smart-components/forms/textarea/)
-- [Checkbox](/ru/smart-components/forms/checkbox/)
-- [Radio](/ru/smart-components/forms/radio/)
-- [Switch](/ru/smart-components/forms/switch/)
+- [Текстовые поля](/ru/smart-components/forms/inputs/)
+- [Многострочное поле](/ru/smart-components/forms/textarea/)
+- [Флажок](/ru/smart-components/forms/checkbox/)
+- [Радиокнопки](/ru/smart-components/forms/radio/)
+- [Переключатель](/ru/smart-components/forms/switch/)
 - [Toggle](/ru/smart-components/forms/toggle/)
-- [Smart-слайдер](/ru/smart-components/forms/slider/)
-- [Range Slider](/ru/smart-components/forms/range-slider/)
-- [Datepicker](/ru/smart-components/forms/datepicker/)
-- [Smart-код страны](/ru/smart-components/forms/country-code/)
+- [Слайдер контента](/ru/smart-components/forms/slider/)
+- [Слайдер диапазона](/ru/smart-components/forms/range-slider/)
+- [Календарь](/ru/smart-components/forms/datepicker/)
+- [Код страны](/ru/smart-components/forms/country-code/)
 - [Цвет](/ru/smart-components/forms/color/)
 - [Генератор темы](/ru/smart-components/forms/theme-generator/)
-- [Smart-загрузка файлов](/ru/smart-components/forms/file-upload/)
+- [Загрузка файлов](/ru/smart-components/forms/file-upload/)
 
 ## Навигация
 
-- [Breadcrumbs](/ru/smart-components/navigation/breadcrumbs/)
-- [Pagination](/ru/smart-components/navigation/pagination/)
-- [Smart-вкладки](/ru/smart-components/navigation/tabs/)
-- [Steps](/ru/smart-components/navigation/steps/)
-- [Tree](/ru/smart-components/navigation/tree/)
-- [Tree Item](/ru/smart-components/navigation/tree-item/)
-- [Dropdown](/ru/smart-components/navigation/dropdown/)
-- [Context Menu](/ru/smart-components/navigation/context-menu/)
+- [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/)
+- [Пагинация](/ru/smart-components/navigation/pagination/)
+- [Вкладки](/ru/smart-components/navigation/tabs/)
+- [Шаги](/ru/smart-components/navigation/steps/)
+- [Дерево](/ru/smart-components/navigation/tree/)
+- [Элемент дерева](/ru/smart-components/navigation/tree-item/)
+- [Выпадающий список](/ru/smart-components/navigation/dropdown/)
+- [Контекстное меню](/ru/smart-components/navigation/context-menu/)
 
 ## Уведомления и состояния
 
-- [Alert](/ru/smart-components/feedback/alert/)
-- [Toast](/ru/smart-components/feedback/toast/)
-- [Badges](/ru/smart-components/feedback/badges/)
-- [Progress Bar](/ru/smart-components/feedback/progress-bar/)
-- [Progress Scale](/ru/smart-components/feedback/progress-scale/)
-- [Skeleton](/ru/smart-components/feedback/skeleton/)
-- [Spinner](/ru/smart-components/feedback/spinner/)
-- [Tooltip](/ru/smart-components/feedback/tooltip/)
+- [Уведомление](/ru/smart-components/feedback/alert/)
+- [Всплывающие сообщения](/ru/smart-components/feedback/toast/)
+- [Бейджи](/ru/smart-components/feedback/badges/)
+- [Прогресс](/ru/smart-components/feedback/progress-bar/)
+- [Шкала прогресса](/ru/smart-components/feedback/progress-scale/)
+- [Скелетон](/ru/smart-components/feedback/skeleton/)
+- [Спиннер](/ru/smart-components/feedback/spinner/)
+- [Подсказка](/ru/smart-components/feedback/tooltip/)
 - [Подсказка «?»](/ru/smart-components/feedback/help-mark/)
 - [Пустое состояние](/ru/smart-components/feedback/empty-state/)
 
 ## Содержимое и медиа
 
-- [Avatar](/ru/smart-components/content/avatar/)
-- [Avatars](/ru/smart-components/content/avatars/)
-- [Icons](/ru/smart-components/content/icons/)
-- [Tags](/ru/smart-components/content/tags/)
-- [List Item](/ru/smart-components/content/list-item/)
+- [Аватар](/ru/smart-components/content/avatar/)
+- [Аватары](/ru/smart-components/content/avatars/)
+- [Иконки](/ru/smart-components/content/icons/)
+- [Теги](/ru/smart-components/content/tags/)
+- [Строка списка](/ru/smart-components/content/list-item/)
 - [Представление данных](/ru/smart-components/content/table/)
 - [Галерея](/ru/smart-components/content/gallery/)
-- [File Preview](/ru/smart-components/content/file-preview/)
-- [Reference Link](/ru/smart-components/content/reference-link/)
+- [Предпросмотр файла](/ru/smart-components/content/file-preview/)
+- [Справочная ссылка](/ru/smart-components/content/reference-link/)
 
 ## Окна и панели
 
 - [Модальное окно](/ru/smart-components/overlays/modal/)
-- [Drawer](/ru/smart-components/overlays/drawer/)
-- [Popover](/ru/smart-components/overlays/popover/)
+- [Боковая панель](/ru/smart-components/overlays/drawer/)
+- [Всплывающая панель](/ru/smart-components/overlays/popover/)
 - [Изменение ширины](/ru/smart-components/overlays/resizer/)
 
 ## Редактор страниц
@@ -84,8 +84,8 @@ description: "Смарт-компоненты по задачам интерфе
 
 ## Составные компоненты
 
-- [Admin Menu](/ru/smart-components/composite/admin-menu/)
+- [Меню администратора](/ru/smart-components/composite/admin-menu/)
 - [Представление свойств](/ru/smart-components/composite/property-view/)
-- [Page Header](/ru/smart-components/composite/page-header/)
+- [Шапка страницы](/ru/smart-components/composite/page-header/)
 - [Выбор профиля](/ru/smart-components/composite/profile-picker/)
 

@@ -1,15 +1,15 @@
 ---
-title: "Поле ввода"
+title: "Текстовые поля"
 description: "Однострочное поле формы с подписью, подсказкой, ошибкой, значком и маской ввода."
 ---
 
-# Поле ввода
+# Текстовые поля
 
 `<sf-input>` — однострочное поле для текста, почты, пароля, поиска, телефона
 или адреса. Оно собирает разметку [поля ввода](/ru/components/forms/inputs/)
 вместе с подписью, подсказкой и сообщением об ошибке. Для многострочного
-текста берите [Textarea](/ru/smart-components/forms/textarea/), для даты —
-[Datepicker](/ru/smart-components/forms/datepicker/).
+текста берите [Многострочное поле](/ru/smart-components/forms/textarea/), для даты —
+[Календарь](/ru/smart-components/forms/datepicker/).
 
 ## Пример
 

@@ -212,5 +212,5 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ## См. также
 
-- [Smart-слайдер](/ru/smart-components/forms/slider/) — лента материалов без модального окна.
+- [Слайдер контента](/ru/smart-components/forms/slider/) — лента материалов без модального окна.
 - [Модальное окно](/ru/smart-components/overlays/modal/) — окно, в котором открывается галерея.

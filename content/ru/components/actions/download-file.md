@@ -158,4 +158,4 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 ## См. также
 
 - [Просмотр файла](/ru/components/content/file-preview/)
-- [Download File — Smart-компонент](/ru/smart-components/actions/download-file/)
+- [Скачивание файла — Smart-компонент](/ru/smart-components/actions/download-file/)

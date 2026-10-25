@@ -1,16 +1,16 @@
 ---
-title: "Context Menu"
+title: "Контекстное меню"
 description: "Показывает короткий список действий над объектом с клавиатурной моделью меню."
 ---
 
-# Context Menu
+# Контекстное меню
 
 `<sf-context-menu>` — панель с коротким списком действий над объектом:
 страницей, строкой таблицы, файлом, профилем. Он оформлен как обычное
 [контекстное меню](/ru/components/navigation/context-menu/) и даёт пунктам
 роль меню и управление клавиатурой. Пункты задаются данными, а метод
 `openFor` открывает меню у кнопки и дальше управляет им сам; для выбора
-значения в форме берите [Dropdown](/ru/smart-components/navigation/dropdown/).
+значения в форме берите [Выпадающий список](/ru/smart-components/navigation/dropdown/).
 
 ## Пример
 
@@ -348,5 +348,5 @@ layer.addEventListener('keydown', (event) => {
 
 ## См. также
 
-- [Popover](/ru/smart-components/overlays/popover/) — поверхность у кнопки с открытием, закрытием и возвратом фокуса.
-- [Dropdown](/ru/smart-components/navigation/dropdown/) — выбор значения из списка.
+- [Всплывающая панель](/ru/smart-components/overlays/popover/) — поверхность у кнопки с открытием, закрытием и возвратом фокуса.
+- [Выпадающий список](/ru/smart-components/navigation/dropdown/) — выбор значения из списка.

@@ -1,16 +1,16 @@
 ---
-title: "Progress Scale"
+title: "Шкала прогресса"
 description: "Показывает известный ход процесса шкалой из десяти делений."
 ---
 
-# Progress Scale
+# Шкала прогресса
 
 `<sf-progress-scale>` показывает известную долю выполненного шкалой из десяти
 делений. Берите её, когда точность до процента не нужна и ход удобнее читать
 крупными шагами: заполненность профиля, этапы подготовки, занятое место.
 Элемент строится на классах компонента
 [Шкала прогресса](/ru/components/feedback/progress-scale/); для плавного хода
-загрузки подходит [Progress Bar](/ru/smart-components/feedback/progress-bar/).
+загрузки подходит [Прогресс](/ru/smart-components/feedback/progress-bar/).
 
 ## Пример
 
@@ -125,4 +125,4 @@ scale.setProgress(completedSteps * 20);
 ## См. также
 
 - [Шкала прогресса](/ru/components/feedback/progress-scale/) — шкала на классах.
-- [Progress Bar](/ru/smart-components/feedback/progress-bar/) — сплошная полоса прогресса.
+- [Прогресс](/ru/smart-components/feedback/progress-bar/) — сплошная полоса прогресса.

@@ -77,7 +77,7 @@ Larena — лицензия Larena). В пакет входят ещё
 `pagination-page-size` и `page-sizes` задают общее число записей, размер
 страницы и выбор размеров. Её события `sf-page-change`,
 `sf-page-size-change` и `sf-show-more` приходят от
-[Pagination](/ru/smart-components/navigation/pagination/).
+[Пагинация](/ru/smart-components/navigation/pagination/).
 `vertical-scroll="page"` отдаёт прокрутку странице вместо самой таблицы,
 `context-menu-columns` (от 1 до 4) делит меню настроек на колонки.
 

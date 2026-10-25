@@ -1,9 +1,9 @@
 ---
-title: "Buttons"
+title: "Кнопки"
 description: "Запускает действие кнопкой с подписью, иконкой и состоянием загрузки."
 ---
 
-# Buttons
+# Кнопки
 
 `<sf-button>` рисует нативную кнопку с оформлением обычной
 [кнопки](/ru/components/actions/buttons/): вид, цвет, размер, иконки и
@@ -60,7 +60,7 @@ description: "Запускает действие кнопкой с подпис
 
 ### Загрузка
 
-Кнопка с `loading` показывает [Spinner](/ru/smart-components/feedback/spinner/)
+Кнопка с `loading` показывает [Спиннер](/ru/smart-components/feedback/spinner/)
 размером со свою иконку на каждой ступени `size`:
 
 - с иконкой спиннер встаёт на место иконки — начальной, а если её нет,
@@ -68,7 +68,7 @@ description: "Запускает действие кнопкой с подпис
 - без иконки спиннер лежит поверх подписи. Подпись остаётся на месте и
   становится прозрачной, поэтому ширина кнопки не меняется при любой подписи,
   `spacing` и отступах;
-- у [Icon Buttons](/ru/smart-components/actions/icon-buttons/) спиннер встаёт
+- у [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) спиннер встаёт
   на место иконки.
 
 Подпись остаётся доступным именем кнопки, внутренняя кнопка получает
@@ -167,7 +167,7 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 ## Доступность
 
 - Доступное имя кнопки — её подпись. Кнопке только с иконкой задайте
-  `aria-label` или берите [Icon Buttons](/ru/smart-components/actions/icon-buttons/).
+  `aria-label` или берите [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/).
 - Фокус получает внутренняя нативная кнопка: `Tab` останавливается на ней,
   `Enter` и `Space` нажимают её. Иконки декоративны и скрыты от
   вспомогательных технологий.
@@ -269,5 +269,5 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 
 ## См. также
 
-- [Icon Buttons](/ru/smart-components/actions/icon-buttons/) — кнопка только с иконкой.
-- [Button Group](/ru/smart-components/actions/button-group/) — выбор одного варианта из кнопок.
+- [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) — кнопка только с иконкой.
+- [Группа кнопок](/ru/smart-components/actions/button-group/) — выбор одного варианта из кнопок.

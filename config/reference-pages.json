@@ -548,7 +548,8 @@
       "kind": "smart"
     },
     "smart-components/forms/switch.md": {
-      "kind": "smart"
+      "kind": "smart",
+      "standard": 2
     },
     "smart-components/forms/textarea.md": {
       "kind": "smart"

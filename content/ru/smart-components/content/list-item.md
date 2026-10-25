@@ -1,11 +1,11 @@
 ---
-title: "List Item"
+title: "Строка списка"
 description: "Вариант выпадающего списка и общая строка списка: подпись, вторая строка, выбор и перестановка."
 ---
 
-# List Item
+# Строка списка
 
-`<sf-list-item>` описывает один вариант [Dropdown](/ru/smart-components/navigation/dropdown/):
+`<sf-list-item>` описывает один вариант [Выпадающий список](/ru/smart-components/navigation/dropdown/):
 машинное значение, подпись и вид строки — текст, иконка, флажок, аватар или
 цветовой маркер. В Dropdown список, фокус, выбор и значение формы принадлежат
 родительскому Dropdown. Тот же элемент служит общей строкой списка для
@@ -186,5 +186,5 @@ Dropdown; без `value` значением становится `text`. `text` 
 
 ## См. также
 
-- [Dropdown](/ru/smart-components/navigation/dropdown/) — выпадающий список, которому принадлежат пункты.
+- [Выпадающий список](/ru/smart-components/navigation/dropdown/) — выпадающий список, которому принадлежат пункты.
 - [Выпадающий список](/ru/components/navigation/dropdown/) — классы строки списка.

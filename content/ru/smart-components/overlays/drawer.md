@@ -1,10 +1,10 @@
 ---
-title: "Drawer"
+title: "Боковая панель"
 description: "Открывает боковую панель рабочего места, рядом с которой страница остаётся доступной."
 profile: reference
 ---
 
-# Drawer
+# Боковая панель
 
 `<sf-drawer>` — боковая панель рабочего места, рядом с которой страница
 остаётся доступной: подсказка у формы, библиотека блоков и свойства в
@@ -16,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="smart-components/drawer/overview" label="Немодальная панель"}
+:::example {id="smart-components/drawer/overview" label="Немодальная панель" preview=sandbox}
 :::
 
 ## Применение
@@ -40,7 +40,7 @@ profile: reference
 помечается `data-sf-drawer-dock-host`; Framework задаёт ему отступы по сумме
 ширин открытых закреплённых панелей слева и справа, обе стороны одновременно.
 
-:::example {id="smart-components/drawer/docked" label="Закреплённые панели"}
+:::example {id="smart-components/drawer/docked" label="Закреплённые панели" preview=sandbox}
 :::
 
 Отдавать ли место странице, решает ширина хоста `data-sf-drawer-dock-host`:
@@ -99,7 +99,7 @@ profile: reference
 
 `docked` у нижнего листа не действует: лист всегда лежит поверх страницы.
 
-:::example {id="smart-components/drawer/sheet" label="Нижний лист"}
+:::example {id="smart-components/drawer/sheet" label="Нижний лист" preview=sandbox}
 :::
 
 ### Панели под шапкой приложения
@@ -326,4 +326,4 @@ document.addEventListener('drawer:after-open', (event) => {
 ## См. также
 
 - [Модальное окно](/ru/smart-components/overlays/modal/) — модальная боковая панель и диалог.
-- [Popover](/ru/smart-components/overlays/popover/) — небольшая панель у кнопки.
+- [Всплывающая панель](/ru/smart-components/overlays/popover/) — небольшая панель у кнопки.

@@ -1,17 +1,17 @@
 ---
-title: "Skeleton"
+title: "Скелетон"
 description: "Занимает место будущего содержимого фигурами той же формы, пока данные загружаются."
 ---
 
-# Skeleton
+# Скелетон
 
 `<sf-skeleton>` рисует серые фигуры на месте содержимого, которое ещё
 загружается: строки текста, аватар, изображение, карточку. Страница не
 прыгает, когда приходят данные, и читатель заранее видит раскладку. Элемент
 строится на классах компонента [Скелетон](/ru/components/feedback/skeleton/).
 Для ожидания без известной раскладки берите
-[Spinner](/ru/smart-components/feedback/spinner/), для известной доли
-выполненного — [Progress Bar](/ru/smart-components/feedback/progress-bar/).
+[Спиннер](/ru/smart-components/feedback/spinner/), для известной доли
+выполненного — [Прогресс](/ru/smart-components/feedback/progress-bar/).
 
 ## Пример
 
@@ -131,4 +131,4 @@ region.removeAttribute('aria-busy');
 ## См. также
 
 - [Скелетон](/ru/components/feedback/skeleton/) — фигуры загрузки на классах.
-- [Spinner](/ru/smart-components/feedback/spinner/) — ожидание без известной раскладки.
+- [Спиннер](/ru/smart-components/feedback/spinner/) — ожидание без известной раскладки.

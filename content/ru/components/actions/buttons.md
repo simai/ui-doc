@@ -343,4 +343,4 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)
 - [Группа кнопок](/ru/components/actions/button-group/)
-- [Buttons — Smart-компонент](/ru/smart-components/actions/buttons/)
+- [Кнопки — Smart-компонент](/ru/smart-components/actions/buttons/)

@@ -116,4 +116,4 @@ profile: reference
 
 - [Скачивание файла](/ru/components/actions/download-file/)
 - [Загрузка файлов](/ru/components/forms/file-upload/)
-- [File Preview — Smart-компонент](/ru/smart-components/content/file-preview/)
+- [Предпросмотр файла — Smart-компонент](/ru/smart-components/content/file-preview/)

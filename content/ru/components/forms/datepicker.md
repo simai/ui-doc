@@ -8,7 +8,7 @@ profile: reference
 
 Календарь — набор классов поверхности, на которой показывают дни месяца,
 выбранную дату или период. Поведения у него нет: перелистывание, выбор даты и
-клавиатуру даёт [Smart-компонент Datepicker](/ru/smart-components/forms/datepicker/),
+клавиатуру даёт [Smart-компонент Календарь](/ru/smart-components/forms/datepicker/),
 который рисует эту же поверхность. Классы нужны, чтобы показать календарь,
 собранный своим кодом или на сервере.
 
@@ -164,4 +164,4 @@ profile: reference
 
 ## См. также
 
-- [Datepicker — Smart-компонент](/ru/smart-components/forms/datepicker/)
+- [Календарь — Smart-компонент](/ru/smart-components/forms/datepicker/)

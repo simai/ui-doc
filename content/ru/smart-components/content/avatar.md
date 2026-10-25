@@ -1,15 +1,15 @@
 ---
-title: "Avatar"
+title: "Аватар"
 description: "Показывает человека или организацию изображением, инициалами или значком, отдельно или с подписью."
 ---
 
-# Avatar
+# Аватар
 
 `<sf-avatar>` показывает одного человека или одну организацию: фотографию,
 инициалы или значок-заполнитель, при необходимости — состояние в сети или
 отметку проверенного профиля. Элемент строится на классах компонента
 [Аватары](/ru/components/content/avatars/); для готовых сочетаний аватаров со
-ссылкой или группой есть [Avatars](/ru/smart-components/content/avatars/).
+ссылкой или группой есть [Аватары](/ru/smart-components/content/avatars/).
 
 ## Пример
 
@@ -174,4 +174,4 @@ avatar.addEventListener('click', () => openProfile('anna'));
 ## См. также
 
 - [Аватары](/ru/components/content/avatars/) — тот же вид на классах, без Smart-элемента.
-- [Avatars](/ru/smart-components/content/avatars/) — готовые сочетания аватаров.
+- [Аватары](/ru/smart-components/content/avatars/) — готовые сочетания аватаров.

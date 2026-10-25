@@ -1,9 +1,9 @@
 ---
-title: "Steps"
+title: "Шаги"
 description: "Показывает этапы последовательного процесса: пройденные, текущий и ошибочный."
 ---
 
-# Steps
+# Шаги
 
 `<sf-steps>` показывает этапы процесса, который проходят по порядку:
 оформление заказа, публикация, мастер настройки. Пройденные этапы отмечены
@@ -125,5 +125,5 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ## См. также
 
-- [Breadcrumbs](/ru/smart-components/navigation/breadcrumbs/) — путь по иерархии страниц.
-- [Smart-вкладки](/ru/smart-components/navigation/tabs/) — панели без обязательного порядка.
+- [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/) — путь по иерархии страниц.
+- [Вкладки](/ru/smart-components/navigation/tabs/) — панели без обязательного порядка.

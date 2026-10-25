@@ -123,4 +123,4 @@ description: "Знак «?» рядом с подписью: по нажатию
 ## См. также
 
 - [Всплывающая подсказка](/ru/smart-components/feedback/tooltip/)
-- [Popover](/ru/smart-components/overlays/popover/)
+- [Всплывающая панель](/ru/smart-components/overlays/popover/)

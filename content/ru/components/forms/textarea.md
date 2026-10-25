@@ -304,4 +304,4 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 ## См. также
 
 - [Поле ввода](/ru/components/forms/inputs/)
-- [Textarea — Smart-компонент](/ru/smart-components/forms/textarea/)
+- [Многострочное поле — Smart-компонент](/ru/smart-components/forms/textarea/)

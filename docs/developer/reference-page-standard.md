@@ -104,6 +104,39 @@ wiring. A public variable summary without a translation fails the generator.
 A page for a component the release does not ship is removed and its address
 redirected; a catalogue does not describe what a reader cannot load.
 
+### Smart component page, standard 2
+
+The owner asked (2026-10-23) for Smart pages laid out like component pages,
+because an interface is built from Smart components, not from classes: the
+reader expects the same «what does it look like, what can I write» before the
+scenarios. A page moves to it with `"standard": 2` in its
+`config/reference-pages.json` entry; the audit then holds it to this list and
+requires a live example under every H3 of «Варианты» and «Состояния», as on a
+component page. Pages move one by one, and new Smart pages start here.
+
+| # | Section | Required | Written by |
+|:--|:---|:---|:---|
+| 1 | `## Пример` | yes | hand: the component in its most common form |
+| 2 | `## Разметка` | yes | hand: the minimal correct tag, the attributes it cannot work without, the slots and what goes in them |
+| 3 | `## Варианты` | when it has visual axes | hand: one H3 per axis (вид, схема, размер, иконка, форма …), a short description and a live example showing every value |
+| 4 | `## Состояния` | when it has states | hand: one H3 per state (недоступен, загрузка, ошибка, только чтение …) with a live example |
+| 5 | `## Применение` | yes | hand: when to choose it, the decisions a reader makes, behaviour and events; one H3 per topic |
+| 6 | `## Доступность` | yes | hand: the scenario (labels, focus, keys in context) |
+| 7 | `## Справочник API` | yes | generated (`scripts/build-smart-reference.mjs`) |
+| 8 | `## См. также` | no | hand |
+
+Rules that come with it:
+- **The name is the base component's name.** A Smart page carries the Russian
+  title of the component page it builds on («Переключатель», «Боковая
+  панель»), never the tag's English name; the section «Смарт-компоненты»
+  tells the two apart. A Smart component with no class component gets a
+  Russian name of its own.
+- **Every example can be seen at full width.** An example whose layout
+  depends on the window (panels, sheets, menus, tables) is rendered in the
+  sandbox (`preview="sandbox"`), which gives the full-width viewer.
+- An axis is shown by values, not by prose: a size axis is one example with
+  every size side by side, labelled; a state is the component in that state.
+
 ## Generated sections
 
 A generated section is rewritten whole by its generator and checked by

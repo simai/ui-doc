@@ -148,4 +148,4 @@ document.querySelector('.sf-breadcrumbs').addEventListener('sf-breadcrumb-click'
 
 - [Меню](/ru/components/navigation/menu/)
 - [Ссылка](/ru/components/navigation/link/)
-- [Breadcrumbs — Smart-компонент](/ru/smart-components/navigation/breadcrumbs/)
+- [Хлебные крошки — Smart-компонент](/ru/smart-components/navigation/breadcrumbs/)

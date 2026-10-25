@@ -29,6 +29,13 @@ const STANDARD = {
     order: ['Пример', 'Применение', 'Доступность', 'Справочник API', 'См. также'],
     required: ['Пример', 'Применение', 'Доступность', 'Справочник API'],
   },
+  // The Smart page laid out like a component page (owner, 2026-10-23): the
+  // markup, every visual axis and every state with a live example, then the
+  // scenarios. A page moves to it by `"standard": 2` in its enrolment entry.
+  smart2: {
+    order: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Применение', 'Доступность', 'Справочник API', 'См. также'],
+    required: ['Пример', 'Разметка', 'Применение', 'Доступность', 'Справочник API'],
+  },
 };
 // Words that tell a story or promise one; a reference page states what is.
 const FORBIDDEN = [
@@ -43,7 +50,7 @@ const prose = (text) => text
 
 const findings = [];
 for (const [page, entry] of Object.entries(settings.pages)) {
-  const standard = STANDARD[entry.kind];
+  const standard = STANDARD[entry.kind === 'smart' && entry.standard === 2 ? 'smart2' : entry.kind];
   const add = (code, detail = {}) => findings.push({page, code, ...detail});
   if (!standard) {
     add('kind_unknown', {kind: entry.kind});
@@ -84,7 +91,7 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   if (example && !/^:::example\b/mu.test(example)) add('live_example_missing');
   // A component shows every modifier axis and state it describes: each H3
   // under «Варианты» and «Состояния» carries its own live example.
-  if (entry.kind === 'component') {
+  if (entry.kind === 'component' || standard === STANDARD.smart2) {
     for (const name of ['Варианты', 'Состояния']) {
       const section = sections.find((item) => item.startsWith(`${name}\n`));
       if (!section) continue;

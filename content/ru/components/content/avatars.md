@@ -281,6 +281,6 @@ unread" и "new". В имени всегда точное число: при `99
 
 ## См. также
 
-- [Avatar — Smart-компонент](/ru/smart-components/content/avatar/)
-- [Avatars — Smart-компонент](/ru/smart-components/content/avatars/)
+- [Аватар — Smart-компонент](/ru/smart-components/content/avatar/)
+- [Аватары — Smart-компонент](/ru/smart-components/content/avatars/)
 - [Теги](/ru/components/content/tags/)

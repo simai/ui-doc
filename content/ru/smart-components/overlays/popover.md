@@ -1,16 +1,16 @@
 ---
-title: "Popover"
+title: "Всплывающая панель"
 description: "Открывает небольшую панель у кнопки: фильтр, настройки, список, — и возвращает фокус после закрытия."
 ---
 
-# Popover
+# Всплывающая панель
 
 `<sf-popover>` открывает небольшую поверхность рядом с кнопкой: фильтр,
 настройки поля, список того, что можно добавить. Компонент держит состояние
 открытия, закрывает поверхность по `Escape` и нажатию снаружи и возвращает
 фокус на кнопку. Для меню действий над объектом берите
-[Context Menu](/ru/smart-components/navigation/context-menu/), для выбора
-значения в форме — [Dropdown](/ru/smart-components/navigation/dropdown/),
+[Контекстное меню](/ru/smart-components/navigation/context-menu/), для выбора
+значения в форме — [Выпадающий список](/ru/smart-components/navigation/dropdown/),
 для задачи, которая требует внимания целиком, —
 [модальное окно](/ru/smart-components/overlays/modal/).
 
@@ -143,5 +143,5 @@ popover.addEventListener('sf-popover-close', () => {
 
 ## См. также
 
-- [Context Menu](/ru/smart-components/navigation/context-menu/) — меню действий над объектом.
-- [Drawer](/ru/smart-components/overlays/drawer/) — боковая панель рабочего места.
+- [Контекстное меню](/ru/smart-components/navigation/context-menu/) — меню действий над объектом.
+- [Боковая панель](/ru/smart-components/overlays/drawer/) — боковая панель рабочего места.

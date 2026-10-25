@@ -1,16 +1,16 @@
 ---
-title: "Admin Menu"
+title: "Меню администратора"
 description: "Даёт административному приложению боковую навигацию с вложенными разделами, поиском, компактным режимом и настройкой пунктов."
 ---
 
-# Admin Menu
+# Меню администратора
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
 Берите его целиком, а не собирайте меню из классов
 [Admin Menu](/ru/components/internal/admin-menu/): состояние, поиск и
 настройки принадлежат этому компоненту. Заголовок, число записей и действия
-страницы показывает [Page Header](/ru/smart-components/composite/page-header/).
+страницы показывает [Шапка страницы](/ru/smart-components/composite/page-header/).
 
 Компонент поставляется пакетом `larena` из репозитория `simai/ui-admin`
 (папка `components/`), а не выпуском Framework. Лицензия пакета — PolyForm
@@ -200,7 +200,7 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 принимает значения `root`, `section`, `page`, `divider`, `heading`, `link`, а
 `level="install"` выделяет строки, общие для всех сайтов. Счётчики в строках —
 только непрочитанное и ожидающее; число записей показывает
-[Page Header](/ru/smart-components/composite/page-header/). Если в ответе есть
+[Шапка страницы](/ru/smart-components/composite/page-header/). Если в ответе есть
 `notifications`, меню рисует строку уведомлений с числом непрочитанных.
 
 Переход по строке меню не выполняет: оно поднимает `item.open`, и после ответа
@@ -355,6 +355,6 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## См. также
 
-- [Page Header](/ru/smart-components/composite/page-header/) — шапка страницы рядом с меню.
+- [Шапка страницы](/ru/smart-components/composite/page-header/) — шапка страницы рядом с меню.
 - [Представление свойств](/ru/smart-components/composite/property-view/) — карточка записи из того же пакета `larena`.
 - [Admin Menu](/ru/components/internal/admin-menu/) — классы, на которых построено меню.

@@ -124,4 +124,4 @@ profile: reference
 ## См. также
 
 - [Ссылка](/ru/components/navigation/link/)
-- [Reference Link — Smart-компонент](/ru/smart-components/content/reference-link/)
+- [Справочная ссылка — Smart-компонент](/ru/smart-components/content/reference-link/)

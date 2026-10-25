@@ -1,9 +1,9 @@
 ---
-title: "Tree Item"
+title: "Элемент дерева"
 description: "Задаёт один пункт дерева: подпись, ссылку, тип, вложенные пункты и состояние."
 ---
 
-# Tree Item
+# Элемент дерева
 
 `<sf-tree-item>` — один пункт [дерева](/ru/smart-components/navigation/tree/):
 папка с вложенными пунктами, файл или ссылка на раздел. Пункты ставят внутрь
@@ -30,7 +30,7 @@ description: "Задаёт один пункт дерева: подпись, с�
 папки, файл — иконку документа и никогда не раскрывается. Вложенный пункт
 из разметки может потерять `kind`, когда `<sf-tree>` перерисовывает его,
 поэтому дерево с файлами передавайте данными, как в
-[примере Tree](/ru/smart-components/navigation/tree/).
+[примере Дерево](/ru/smart-components/navigation/tree/).
 
 `open-icon` и `closed-icon` заменяют иконки папки, `chevron-open-icon` и
 `chevron-closed-icon` — стрелку раскрытия. `icon="false"` убирает иконку
@@ -158,4 +158,4 @@ section.open();
 
 ## См. также
 
-- [Tree](/ru/smart-components/navigation/tree/) — дерево, клавиатура и выбор.
+- [Дерево](/ru/smart-components/navigation/tree/) — дерево, клавиатура и выбор.

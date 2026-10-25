@@ -130,4 +130,4 @@ profile: reference
 ## См. также
 
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)
-- [Close — Smart-компонент](/ru/smart-components/actions/close/)
+- [Закрытие — Smart-компонент](/ru/smart-components/actions/close/)

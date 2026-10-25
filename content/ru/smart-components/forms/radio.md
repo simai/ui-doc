@@ -1,15 +1,15 @@
 ---
-title: "Radio"
+title: "Радиокнопки"
 description: "Даёт выбрать ровно один вариант из видимой группы и отправляет его значение с формой."
 ---
 
-# Radio
+# Радиокнопки
 
 `<sf-radio>` — радиокнопка: один вариант из группы взаимоисключающих, где
 все варианты видны сразу. Она собирает разметку
 [радиокнопки](/ru/components/forms/radio/) из атрибутов. Для независимых
-вариантов берите [Checkbox](/ru/smart-components/forms/checkbox/), для
-длинного списка — [Dropdown](/ru/smart-components/navigation/dropdown/).
+вариантов берите [Флажок](/ru/smart-components/forms/checkbox/), для
+длинного списка — [Выпадающий список](/ru/smart-components/navigation/dropdown/).
 
 ## Пример
 

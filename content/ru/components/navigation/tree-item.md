@@ -72,4 +72,4 @@ Enter на узле переходит по ней. Уберите ссылку 
 ## См. также
 
 - [Дерево](/ru/components/navigation/tree/)
-- [Tree Item — Smart-компонент](/ru/smart-components/navigation/tree-item/)
+- [Элемент дерева — Smart-компонент](/ru/smart-components/navigation/tree-item/)

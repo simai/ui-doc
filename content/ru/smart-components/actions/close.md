@@ -1,13 +1,13 @@
 ---
-title: "Close"
+title: "Закрытие"
 description: "Рисует знак закрытия внутри кнопки, которую задаёт страница."
 ---
 
-# Close
+# Закрытие
 
 `<sf-close>` рисует только знак закрытия — крестик нужного размера. Это не
 кнопка: её даёт нативный `<button>` или
-[Icon Buttons](/ru/smart-components/actions/icon-buttons/) с
+[Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) с
 `kind="close"`, внутри которого стоит `<sf-close>`. Оформление знака совпадает
 с обычным компонентом [«Закрыть»](/ru/components/actions/close/).
 
@@ -93,5 +93,5 @@ description: "Рисует знак закрытия внутри кнопки, 
 
 ## См. также
 
-- [Icon Buttons](/ru/smart-components/actions/icon-buttons/) — готовая кнопка закрытия с `kind="close"`.
+- [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) — готовая кнопка закрытия с `kind="close"`.
 - [Модальное окно](/ru/smart-components/overlays/modal/) — окно со своей кнопкой закрытия.

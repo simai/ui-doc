@@ -169,4 +169,4 @@ document.addEventListener('sf-alert-action', (event) => {
 ## См. также
 
 - [Всплывающие сообщения](/ru/components/feedback/toast/)
-- [Alert — Smart-компонент](/ru/smart-components/feedback/alert/)
+- [Уведомление — Smart-компонент](/ru/smart-components/feedback/alert/)

@@ -1,9 +1,9 @@
 ---
-title: "Breadcrumbs"
+title: "Хлебные крошки"
 description: "Показывает путь от корня сайта до текущей страницы и сворачивает длинный путь."
 ---
 
-# Breadcrumbs
+# Хлебные крошки
 
 `<sf-breadcrumbs>` показывает, где в иерархии сайта находится страница:
 ссылки на разделы выше и название текущей страницы в конце. Он собирает
@@ -145,5 +145,5 @@ crumbs.onItemClick((item, detail) => {
 
 ## См. также
 
-- [Steps](/ru/smart-components/navigation/steps/) — этапы последовательного процесса.
-- [Tree](/ru/smart-components/navigation/tree/) — вся иерархия разделов сразу.
+- [Шаги](/ru/smart-components/navigation/steps/) — этапы последовательного процесса.
+- [Дерево](/ru/smart-components/navigation/tree/) — вся иерархия разделов сразу.

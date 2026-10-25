@@ -1,10 +1,10 @@
 ---
-title: "Smart-вкладки"
+title: "Вкладки"
 description: "Переключает связанные панели содержимого на одном месте страницы."
 profile: reference
 ---
 
-# Smart-вкладки
+# Вкладки
 
 `<sf-tabs>` собирает доступную группу вкладок из строки, слотов или данных и
 оформляет её как обычный компонент [«Вкладки»](/ru/components/navigation/tabs/).
@@ -86,7 +86,7 @@ profile: reference
 Это `radiogroup` с одной остановкой `Tab`, стрелками, `Home` и `End`, а
 высота дорожки равна высоте `sf-button` того же `size`, поэтому группа стоит
 в одном ряду с кнопками. Пилюли не следуют лестнице высот кнопок и рядом с
-кнопками по высоте не совпадают. Подробнее — [Button Group](/ru/smart-components/actions/button-group/).
+кнопками по высоте не совпадают. Подробнее — [Группа кнопок](/ru/smart-components/actions/button-group/).
 
 ### Подчёркнутые вкладки: размеры
 
@@ -312,4 +312,4 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 ## См. также
 
 - [Вкладки](/ru/components/navigation/tabs/) — вкладки на классах без Smart-элемента.
-- [Dropdown](/ru/smart-components/navigation/dropdown/) — выбор из скрытого списка, когда вариантов много.
+- [Выпадающий список](/ru/smart-components/navigation/dropdown/) — выбор из скрытого списка, когда вариантов много.

@@ -553,4 +553,4 @@ view: {
 ## См. также
 
 - [Представление данных](/ru/smart-components/content/table/) — множество записей, из которого открывается карточка.
-- [Admin Menu](/ru/smart-components/composite/admin-menu/) — навигация из того же пакета `larena`.
+- [Меню администратора](/ru/smart-components/composite/admin-menu/) — навигация из того же пакета `larena`.

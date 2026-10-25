@@ -5,7 +5,7 @@ description: "Выбирает одно значение из нескольки
 
 # Сегментный переключатель
 
-**Сегментный переключатель** — [Button Group](/ru/smart-components/actions/button-group/)
+**Сегментный переключатель** — [Группа кнопок](/ru/smart-components/actions/button-group/)
 с `appearance="segmented"`: утопленная дорожка на заливке контейнера, сегменты
 без рамок и плашка под выбранным. Он выбирает ровно одно значение из
 нескольких — период отчёта, вид списка, фильтр, тему оформления — и сразу
@@ -18,8 +18,8 @@ description: "Выбирает одно значение из нескольки
 | Задача | Что взять |
 |:---|:---|
 | Одно значение из двух–пяти коротких вариантов, которое сразу меняет вид или данные на той же странице | сегментный переключатель |
-| То же, но варианты должны выглядеть как обычные кнопки в общем контуре | [Button Group](/ru/smart-components/actions/button-group/) с `appearance="default"` |
-| Варианты переключают панели с разным содержимым | [вкладки](/ru/smart-components/navigation/tabs/): у них есть панели и роль `tablist` |
+| То же, но варианты должны выглядеть как обычные кнопки в общем контуре | [Группа кнопок](/ru/smart-components/actions/button-group/) с `appearance="default"` |
+| Варианты переключают панели с разным содержимым | [Вкладки](/ru/smart-components/navigation/tabs/): у них есть панели и роль `tablist` |
 | Независимые действия, которые нажимают в любом сочетании | обычная [группа кнопок](/ru/components/actions/button-group/) с `role="group"` |
 | Много вариантов или длинные подписи | [выпадающий список](/ru/smart-components/navigation/dropdown/) или [переключатели](/ru/smart-components/forms/radio/) |
 
@@ -245,7 +245,7 @@ description: "Выбирает одно значение из нескольки
 
 ## См. также
 
-- [Button Group](/ru/smart-components/actions/button-group/) — тот же компонент в обычном виде и его справочник API.
-- [Smart-вкладки](/ru/smart-components/navigation/tabs/) — когда варианты переключают панели содержимого.
+- [Группа кнопок](/ru/smart-components/actions/button-group/) — тот же компонент в обычном виде и его справочник API.
+- [Вкладки](/ru/smart-components/navigation/tabs/) — когда варианты переключают панели содержимого.
 - [Группа кнопок](/ru/components/actions/button-group/) — независимые действия в общем контуре и CSS-переменные группы.
 - [Тема](/ru/components/tools/theme/) — классы темы и кнопки `sf-theme-button`.

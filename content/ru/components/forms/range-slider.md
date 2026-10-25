@@ -169,4 +169,4 @@ slider.addEventListener('change', (event) => applyFilter(event.detail.value));
 
 ## См. также
 
-- [Range Slider — Smart-компонент](/ru/smart-components/forms/range-slider/)
+- [Слайдер диапазона — Smart-компонент](/ru/smart-components/forms/range-slider/)

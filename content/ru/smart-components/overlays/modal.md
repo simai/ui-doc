@@ -39,7 +39,7 @@ profile: reference
 `center`, `inline-start`, `inline-end`, `top` и `bottom` меняют положение, но
 не поведение окна. Положения `inline-start` и `inline-end` — модальная
 боковая панель; панели, рядом с которыми страница остаётся доступной, делает
-[Drawer](/ru/smart-components/overlays/drawer/). Логические направления
+[Боковая панель](/ru/smart-components/overlays/drawer/). Логические направления
 учитывают письмо справа налево; физические `left` и `right` — их синонимы
 для совместимости.
 
@@ -156,7 +156,7 @@ profile: reference
 блокируется. Так область редактора или пример документации держат своё окно;
 примеры с формой, источником содержимого и проверкой формы на этой странице
 устроены так. Тот же атрибут держит внутри блока и
-[Drawer](/ru/smart-components/overlays/drawer/#панель-внутри-блока).
+[Боковая панель](/ru/smart-components/overlays/drawer/#панель-внутри-блока).
 
 ```html
 <div data-sf-overlay-container class="h-e6">
@@ -339,5 +339,5 @@ modal.open();
 
 ## См. также
 
-- [Drawer](/ru/smart-components/overlays/drawer/) — немодальная и закреплённая боковые панели.
-- [Popover](/ru/smart-components/overlays/popover/) — небольшая панель у кнопки.
+- [Боковая панель](/ru/smart-components/overlays/drawer/) — немодальная и закреплённая боковые панели.
+- [Всплывающая панель](/ru/smart-components/overlays/popover/) — небольшая панель у кнопки.

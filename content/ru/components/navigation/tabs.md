@@ -187,4 +187,4 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 
 - [Вкладка (совместимость)](/ru/components/navigation/tab/)
 - [Шаги](/ru/components/navigation/step/)
-- [Smart-вкладки](/ru/smart-components/navigation/tabs/)
+- [Вкладки](/ru/smart-components/navigation/tabs/)

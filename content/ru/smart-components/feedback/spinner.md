@@ -1,19 +1,19 @@
 ---
-title: "Spinner"
+title: "Спиннер"
 description: "Показывает ожидание, длительность которого неизвестна, в одном из четырёх видов с подписью; вид задаётся один раз для страницы."
 ---
 
-# Spinner
+# Спиннер
 
 `<sf-spinner>` показывает, что работа идёт, но сколько ещё ждать —
 неизвестно: запрос к серверу, подготовка отчёта. Элемент строится на классах
 компонента [Спиннер](/ru/components/feedback/spinner/). Если доля
 выполненного известна, берите
-[Progress Bar](/ru/smart-components/feedback/progress-bar/), если известна
-раскладка будущего содержимого — [Skeleton](/ru/smart-components/feedback/skeleton/).
+[Прогресс](/ru/smart-components/feedback/progress-bar/), если известна
+раскладка будущего содержимого — [Скелетон](/ru/smart-components/feedback/skeleton/).
 Спиннер — единственный индикатор загрузки SIMAI Framework: его же показывают
-[Buttons](/ru/smart-components/actions/buttons/#загрузка) и
-[Icon Buttons](/ru/smart-components/actions/icon-buttons/#загрузка) в
+[Кнопки](/ru/smart-components/actions/buttons/#загрузка) и
+[Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/#загрузка) в
 состоянии `loading`.
 
 ## Пример
@@ -68,11 +68,11 @@ description: "Показывает ожидание, длительность к
 `body`): `<html lang="ru" data-sf-spinner="comet">`.
 
 Его получают все спиннеры, которые рисует SIMAI Framework: `<sf-spinner>` без
-`kind`, [Buttons](/ru/smart-components/actions/buttons/#загрузка) и
-[Icon Buttons](/ru/smart-components/actions/icon-buttons/#загрузка) в
+`kind`, [Кнопки](/ru/smart-components/actions/buttons/#загрузка) и
+[Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/#загрузка) в
 состоянии `loading`, варианты
-[Button Group](/ru/smart-components/actions/button-group/#загрузка-варианта),
-подсчёт в [Pagination](/ru/smart-components/navigation/pagination/#количество-неизвестно)
+[Группа кнопок](/ru/smart-components/actions/button-group/#загрузка-варианта),
+подсчёт в [Пагинация](/ru/smart-components/navigation/pagination/#количество-неизвестно)
 и загрузка содержимого [Modal](/ru/smart-components/overlays/modal/#источник-содержимого).
 
 Атрибут наследуется, как свойство CSS: блок со своим `data-sf-spinner` задаёт
@@ -233,5 +233,5 @@ report.append(spinner);
 ## См. также
 
 - [Спиннер](/ru/components/feedback/spinner/) — спиннер на классах.
-- [Progress Bar](/ru/smart-components/feedback/progress-bar/) — ход процесса с известной долей.
-- [Skeleton](/ru/smart-components/feedback/skeleton/) — место будущего содержимого.
+- [Прогресс](/ru/smart-components/feedback/progress-bar/) — ход процесса с известной долей.
+- [Скелетон](/ru/smart-components/feedback/skeleton/) — место будущего содержимого.

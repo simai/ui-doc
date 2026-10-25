@@ -267,4 +267,4 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 
 - [Флажок](/ru/components/forms/checkbox/)
 - [Переключатель](/ru/components/forms/switch/)
-- [Radio — Smart-компонент](/ru/smart-components/forms/radio/)
+- [Радиокнопки — Smart-компонент](/ru/smart-components/forms/radio/)

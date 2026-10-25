@@ -1,16 +1,16 @@
 ---
-title: "Tree"
+title: "Дерево"
 description: "Показывает иерархию папок или разделов с раскрытием ветвей, выбором и управлением с клавиатуры."
 ---
 
-# Tree
+# Дерево
 
 `<sf-tree>` показывает вложенный список: папки и файлы, разделы сайта,
 категории каталога. Ветви раскрываются и сворачиваются, пункты выбираются
-мышью и клавиатурой. Каждый пункт — [Tree Item](/ru/smart-components/navigation/tree-item/);
+мышью и клавиатурой. Каждый пункт — [Элемент дерева](/ru/smart-components/navigation/tree-item/);
 оформление совпадает с обычным [деревом](/ru/components/navigation/tree/).
 Для короткого плоского списка берите обычный список, для пути к текущей
-странице — [Breadcrumbs](/ru/smart-components/navigation/breadcrumbs/).
+странице — [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/).
 
 ## Пример
 
@@ -25,7 +25,7 @@ description: "Показывает иерархию папок или разде
 дерева. Дерево читает их при подключении и рисует заново; пункты, добавленные
 в `<sf-tree>` позже, дописываются в конец. Подпись, ссылку, тип и состояние
 пункта задают его атрибуты — они описаны на странице
-[Tree Item](/ru/smart-components/navigation/tree-item/).
+[Элемент дерева](/ru/smart-components/navigation/tree-item/).
 
 ### Пункты данными
 
@@ -167,5 +167,5 @@ tree.items = await fetchFolders();
 
 ## См. также
 
-- [Tree Item](/ru/smart-components/navigation/tree-item/) — атрибуты одного пункта.
-- [Breadcrumbs](/ru/smart-components/navigation/breadcrumbs/) — путь к текущей странице.
+- [Элемент дерева](/ru/smart-components/navigation/tree-item/) — атрибуты одного пункта.
+- [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/) — путь к текущей странице.

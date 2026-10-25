@@ -1,16 +1,16 @@
 ---
-title: "Progress Bar"
+title: "Прогресс"
 description: "Показывает известный ход процесса сплошной полосой от 0 до 100 процентов."
 ---
 
-# Progress Bar
+# Прогресс
 
 `<sf-progress-bar>` показывает ход процесса, у которого известна доля
 выполненного: загрузка файла, импорт, проверка. Элемент строится на классах
 компонента [Прогресс](/ru/components/feedback/progress-bar/). Когда доля
-неизвестна, берите [Spinner](/ru/smart-components/feedback/spinner/); когда
+неизвестна, берите [Спиннер](/ru/smart-components/feedback/spinner/); когда
 ход удобнее читать крупными шагами —
-[Progress Scale](/ru/smart-components/feedback/progress-scale/).
+[Шкала прогресса](/ru/smart-components/feedback/progress-scale/).
 
 ## Пример
 
@@ -59,7 +59,7 @@ upload.addEventListener('load', () => {
   «Проверка завершена».
 - Полоса не получает фокус. Экранный диктор не объявляет каждое изменение
   значения; о завершении или ошибке сообщите отдельным текстом с
-  `role="status"` или [Alert](/ru/smart-components/feedback/alert/).
+  `role="status"` или [Уведомление](/ru/smart-components/feedback/alert/).
 - Область, которая ждёт результата, отметьте `aria-busy="true"` до конца
   процесса.
 
@@ -128,5 +128,5 @@ upload.addEventListener('load', () => {
 ## См. также
 
 - [Прогресс](/ru/components/feedback/progress-bar/) — полоса прогресса на классах.
-- [Progress Scale](/ru/smart-components/feedback/progress-scale/) — ход процесса десятью шагами.
-- [Spinner](/ru/smart-components/feedback/spinner/) — ожидание без известной доли.
+- [Шкала прогресса](/ru/smart-components/feedback/progress-scale/) — ход процесса десятью шагами.
+- [Спиннер](/ru/smart-components/feedback/spinner/) — ожидание без известной доли.

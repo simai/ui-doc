@@ -1,9 +1,9 @@
 ---
-title: "Dropdown"
+title: "Выпадающий список"
 description: "Выбирает одно или несколько значений из списка с поиском, группами и сеткой пунктов."
 ---
 
-# Dropdown
+# Выпадающий список
 
 `<sf-dropdown>` — поле выбора одного или нескольких значений из раскрывающегося
 списка с поиском. Берите его, когда вариантов больше, чем удобно показать
@@ -225,5 +225,5 @@ view.value = 'archived';
 
 ## См. также
 
-- [Context Menu](/ru/smart-components/navigation/context-menu/) — меню действий у элемента.
-- [List Item](/ru/smart-components/content/list-item/) — пункт списка вариантов.
+- [Контекстное меню](/ru/smart-components/navigation/context-menu/) — меню действий у элемента.
+- [Строка списка](/ru/smart-components/content/list-item/) — пункт списка вариантов.

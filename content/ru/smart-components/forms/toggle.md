@@ -6,7 +6,7 @@ description: "Устаревший двоичный переключатель: 
 # Toggle
 
 `<sf-toggle>` — устаревший Smart-компонент: тот же двоичный переключатель с
-`role="switch"`, что и [Switch](/ru/smart-components/forms/switch/). В новой
+`role="switch"`, что и [Переключатель](/ru/smart-components/forms/switch/). В новой
 разметке берите `<sf-switch>`; эта страница показывает, как перенести на него
 разметку Toggle.
 

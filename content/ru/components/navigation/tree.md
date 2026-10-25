@@ -165,4 +165,4 @@ whenLoader(() => SF.Loader.ready('Tree', () => {
 
 - [Элемент дерева](/ru/components/navigation/tree-item/)
 - [Меню](/ru/components/navigation/menu/)
-- [Tree — Smart-компонент](/ru/smart-components/navigation/tree/)
+- [Дерево — Smart-компонент](/ru/smart-components/navigation/tree/)
