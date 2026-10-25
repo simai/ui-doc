@@ -245,7 +245,7 @@ if ($replacements !== []) {
     // The home page names the release too: its connection lines and footer.
     $guide = new AppendIterator();
     $guide->append(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/guide', FilesystemIterator::SKIP_DOTS)));
-    $guide->append(new ArrayIterator([new SplFileInfo($root . '/content/ru/index.md')]));
+    $guide->append(new ArrayIterator([new SplFileInfo($root . '/content/ru/index.md'), new SplFileInfo($root . '/content/en/index.md')]));
     foreach ($guide as $file) {
         if (! $file->isFile() || $file->getExtension() !== 'md') {
             continue;

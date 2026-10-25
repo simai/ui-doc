@@ -125,5 +125,4 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и S
 [GitHub](https://github.com/simai/ui-source) ·
 [Сообщить о проблеме](https://github.com/simai/ui-source/issues) ·
 [Версии](/ru/guide/connection/versions/) ·
-[Apache-2.0](https://github.com/simai/ui-source/blob/main/LICENSE) ·
-[English](/en/)
+[Apache-2.0](https://github.com/simai/ui-source/blob/main/LICENSE)

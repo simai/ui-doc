@@ -1,10 +1,12 @@
 {
   "schema": "docara.page.v1",
   "title": "SIMAI Framework",
-  "description": "SIMAI Framework combines design tokens, responsive CSS utilities, components, and Smart Components for building web interfaces.",
+  "description": "SIMAI Framework: CSS utilities, components and Smart Components from a CDN, one CSS file and one script, with no npm and no bundler.",
   "preset": "landing",
   "layout": {
-    "container": {"max": 7}
+    "container": {
+      "max": 7
+    }
   },
   "navigation": {
     "hidden": true,

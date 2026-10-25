@@ -23,6 +23,18 @@
             "target_path": "content/en/lang.json#/common/greeting",
             "target_sha256": "48e1645a3bf4c08fc0e1819c5ba4813f9fb385f957556196a6aedb88721e2266",
             "target_structure_sha256": "44e194478eef1bdbd7567d0cf92c6aa09c6ff3a713a572f870a8c3e3e0263687"
+        },
+        {
+            "key": "index.md",
+            "kind": "page",
+            "locale": "en",
+            "review": "ai_verified",
+            "source_path": "content/ru/index.md",
+            "source_sha256": "a3f7c5b5236dd109358fbb3682649691e132708b78e4de43c843d05e21841436",
+            "source_structure_sha256": "0adc055468de72abaa651b7ec26806c73130371a36704805bd1632cab7439851",
+            "target_path": "content/en/index.md",
+            "target_sha256": "311d79fbf1544fbe700c5cc7474265e0ae0f5b0cbd78c26f46c1fbfa54da95cc",
+            "target_structure_sha256": "0adc055468de72abaa651b7ec26806c73130371a36704805bd1632cab7439851"
         }
     ],
     "exclusions": [],
