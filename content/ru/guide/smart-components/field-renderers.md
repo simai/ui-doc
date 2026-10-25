@@ -303,6 +303,9 @@ set.renderCellField(status, 'live');
 :::example {id="guide/field-renderers/overview" label="Просмотр, правка и ячейка"}
 :::
 
+Как каждый тип и вариант выглядит в просмотре и в правке, показывает
+[галерея типов свойств](/ru/guide/smart-components/property-types/).
+
 ## Типы свойств
 
 Таблица собирается из реестра выпуска — того же списка, что страница получает

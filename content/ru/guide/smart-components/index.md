@@ -29,6 +29,7 @@ description: "Эта часть описывает Smart-компоненты �
 - [Персональный вид](/ru/guide/smart-components/view-preferences/)
 - [Составные компоненты](/ru/guide/smart-components/composite/)
 - [Поля по типу свойства](/ru/guide/smart-components/field-renderers/)
+- [Галерея типов свойств](/ru/guide/smart-components/property-types/)
 - [Порты хоста и намерения](/ru/guide/smart-components/host-ports/)
 - [Манифест](/ru/guide/smart-components/manifest/)
 - [Качество](/ru/guide/smart-components/quality/)

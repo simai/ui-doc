@@ -366,6 +366,11 @@
      "order": 105
     },
     {
+     "slug": "property-types",
+     "title": "Галерея типов свойств",
+     "order": 106
+    },
+    {
      "slug": "host-ports",
      "title": "Порты хоста и намерения",
      "order": 110
