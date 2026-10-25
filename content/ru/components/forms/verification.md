@@ -153,16 +153,38 @@ document.addEventListener('verification:complete', (event) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-verification`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-verification`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-verification-background-color` | Заливка ячейки в покое: поверхность в виде bordered, тоновая заливка в виде filled; у кода filled в фокусе, ошибки и недоступного поля своя. | `var(--sf-surface-0)`; зависит от вида |
+| `--sf-verification-border-color` | Рамка ячейки в покое; у наведения, текущей ячейки, ошибки и недоступного поля своя, у кода filled её нет. | `var(--sf-outline)` |
+| `--sf-verification-border-width` | Толщина рамки ячейки. | `var(--sf-px)` |
+| `--sf-verification-radius` | Скругление углов ячейки и кольца фокуса вокруг ячеек. | `var(--sf-radius--ui)` |
+| `--sf-verification-color` | Цвет символов в ячейках; у ошибки и недоступного поля свой. | `var(--sf-on-surface)` |
+| `--sf-verification-cell-size` | Ширина и высота ячейки; если задана — одинаковая на всех размерах. | `var(--sf-title-height-6)`; зависит от размера |
+| `--sf-verification-gap` | Расстояние между ячейками. | `var(--sf-space-1/3)` |
+
+```css
+.sf-verification {
+  --sf-verification-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-verification`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-verification--border-width` | `var(--sf-px)` | `border` |
-| `--sf-verification--cell-size` | `var(--sf-title-height-6)` | `width`, `inline-size`, `height`, `block-size` |
+| `--sf-verification--border-width` | `var(--sf-verification-border-width, var(--sf-px))` | `border` |
+| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-title-height-6))` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-verification--font-size` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
-| `--sf-verification--gap` | `var(--sf-space-1/3)` | `gap` |
+| `--sf-verification--gap` | `var(--sf-verification-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-verification--line-height` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-verification--radius` | `var(--sf-radius--ui)` | `border-radius` |
+| `--sf-verification--radius` | `var(--sf-verification-radius, var(--sf-radius--ui))` | `border-radius` |
 
 ## См. также
 

@@ -10,7 +10,7 @@ description: "Показывает и правит поля одного объ�
 его для записи, настроек сайта или профиля; множество записей показывает
 [представление данных](/ru/smart-components/content/table/).
 
-Компонент поставляется пакетом `larena` из репозитория `simai/ui-admin`
+Компонент поставляется пакетом `larena` из репозитория `simai/ui-pro`
 (папка `components/`), а не выпуском Framework. Лицензия пакета — PolyForm
 Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу —
 коммерческая лицензия SIMAI; в составе Larena — лицензия Larena.
@@ -391,7 +391,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-720203c5b5e5` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -547,8 +547,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-admin@063c2814324592bc39ecdcb2b9379cca9fe09977:components/src/smart/property-view`
-- `simai/ui-admin@063c2814324592bc39ecdcb2b9379cca9fe09977:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/property-view`
+- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 

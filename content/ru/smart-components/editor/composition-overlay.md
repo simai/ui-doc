@@ -63,6 +63,23 @@ Framework подключает по требованию — только на �
 `setInsertionTarget({parent_id, slot, index})` отмечает на холсте место, куда
 приложение вставит блок, а значение `null` снимает отметку.
 
+### Холст во фрейме
+
+Если холст редактора — фрейм того же источника, укажите его `id` в атрибуте
+`frame` (вместо `for`) или вызовите `attachFrame(iframe)`. Документ во фрейме
+слой не читает: приложение передаёт плоский список узлов методом
+`setNodes(nodes, {describe})`, где `describe(node)` возвращает подпись и
+бейджи узла. Рамки, панель действий, места вставки и дерево для клавиатуры
+рисуются над фреймом так же, как над обычным холстом; у списка верхнего
+уровня `parent_id` в `sf-composition-overlay-insert` пустой, а `slot` —
+`default`.
+
+Узел, помеченный как редактируемый, можно править на месте: `Enter` в
+дереве или метод `edit(id)`. Это правка обычной
+строки — `Enter` сохраняет, `Escape` отменяет. Сохранённое значение
+приходит событием `sf-composition-overlay-edit` с `node_id`, `value` и
+`previous`; если отменить событие, вернётся прежний текст.
+
 ### Изменения делает приложение
 
 События сообщают только намерение. Приложение меняет Document, сохраняет его с
@@ -106,16 +123,16 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-720203c5b5e5` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-composition-overlay>` |
-| Назначение | Интерфейс редактора поверх отрисованного Composition Document: рамки, подписи, значки, панель действий, места вставки, перемещение перетаскиванием и с клавиатуры и дерево для клавиатуры — без изменения HTML холста. |
-| Контракт | `smart.composition-overlay`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-720203c5b5e5` |
+| Назначение | Оболочка редактора поверх отрисованного документа композиции: рамки, подписи, бейджи, панель действий, места вставки, перенос мышью и с клавиатуры и дерево для клавиатуры — HTML холста не меняется. В режиме фрейма та же оболочка рисуется над фреймом того же источника по плоскому списку узлов, с правкой обычных строк на месте. |
+| Контракт | `smart.composition-overlay`, версия `1.1.0` |
+| Поставка | выпуск Framework `ui-357568a20a7e` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -125,16 +142,21 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 - `for` — `string`, по умолчанию пусто. id элемента canvas, в котором находится вывод SF.Composition.render
 - `accepts` — `string`, по умолчанию пусто. группы sf-sortable, элементы которых можно отпускать в местах вставки
 - `label` — `string`, по умолчанию пусто.
+- `frame` — `string`, по умолчанию пусто. id холста во фрейме того же источника (режим фрейма, данные — через setNodes); используется вместо for
 
 ### Методы
 
 - `attach(canvas: Element)` — Привязывает оверлей к элементу холста.
+- `attachFrame(iframe: Element)` — Привязывает слой к холсту во фрейме того же источника (режим фрейма).
 - `setDocument(document: object, options: object)` — Задаёт Document и describe(node) → {label, badges}.
+- `setNodes(nodes: array, options: object)` — Задаёт плоский список узлов холста во фрейме и необязательную функцию describe(node) → {label, badges}.
 - `setActions(actions: array)` — Задаёт действия панели инструментов {id, label}.
 - `setMessages(messages: object)` — Переопределяет тексты интерфейса.
 - `setDropFilter(filter: function)` — Скрывает места вставки, которые хост отклонил бы: `(place, item) => boolean`.
 - `setInsertionTarget(target: object|null)` — Отмечает место вставки или сбрасывает его значением `null`.
 - `select(id: string|null, options: object)` — Выбирает узел по id.
+- `edit(id: string)` — возвращает `boolean`. Начинает правку обычной строки на месте у редактируемого узла во фрейме; возвращает, началась ли правка.
+- `refresh()` — Измеряет заново на следующем кадре — после изменения, о котором не сообщает ни один наблюдатель (трансформация у предка).
 
 ### События
 
@@ -142,15 +164,16 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 - `sf-composition-overlay-select` — `detail`: `{ node_id?: string|null }`. Выбран узел.
 - `sf-composition-overlay-action` — `detail`: `{ action_id: string, node_id: string }`. Выбрано действие панели инструментов.
-- `sf-composition-overlay-insert` — `detail`: `{ parent_id: string, slot: string, index: integer, item?: string, from?: string, mode?: any }`. Запрошена вставка в место, при необходимости с элементом библиотеки.
+- `sf-composition-overlay-insert` — `detail`: `{ parent_id: string, slot: string, index: integer, item?: string, from?: string, mode?: any }`. Запрошена вставка в место, при необходимости с элементом библиотеки. В режиме фрейма у списка верхнего уровня parent_id равен "", а slot — "default".
 - `sf-composition-overlay-move` — `detail`: `{ node_id: string, parent_id: string, slot: string, index: integer }`. Узел холста перемещён в место.
+- `sf-composition-overlay-edit` — `detail`: `{ node_id: string, value: string, previous: string }`. Правка обычной строки на месте сохранена с изменённым значением (режим фрейма). Событие можно отменить: preventDefault возвращает прежний текст.
 
 ### Доступность
 
 - Роль: дерево (`tree`).
 - Доступное имя: рекомендуется.
 - Клавиши: `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Home`, `End`, `Enter`, `Space`, `Escape`.
-- Фокус: У дерева по одному treeitem на узел; стрелки перемещают в порядке документа и между родителем и потомком, Enter открывает панель инструментов, Escape возвращает или сбрасывает. Space начинает перемещение с клавиатуры, стрелки выбирают место, Enter отпускает, Escape отменяет. Выбор и перемещения озвучиваются.
+- Фокус: В дереве по одному treeitem на узел; стрелки двигают в порядке документа и между родителем и потомком, Enter открывает панель действий, Escape возвращает или снимает выбор. Space начинает перенос с клавиатуры, стрелки выбирают место, Enter опускает, Escape отменяет. Выбор и переносы объявляются. В режиме фрейма дерево следует порядку списка узлов, указатель и клавиши внутри фрейма тоже выбирают, Enter на редактируемом узле начинает правку текста во фрейме (Enter сохраняет, Escape отменяет, фокус возвращается в дерево), а Escape уступает открытой внутри поверхности.
 
 ### Минимальная разметка
 
@@ -160,8 +183,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### Источник
 
-- `simai/ui@720203c5b5e5186e2d44f6e1f8d9c23a0e410cc1:distr/smart/composition-overlay`
-- `simai/ui@720203c5b5e5186e2d44f6e1f8d9c23a0e410cc1:distr/rule/rule.json#name=cl-composition-overlay`
+- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/composition-overlay`
+- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-composition-overlay`
 
 ## См. также
 

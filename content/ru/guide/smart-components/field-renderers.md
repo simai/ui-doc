@@ -229,7 +229,7 @@ lit. `null` значит «показать значение как есть». 
 | Тип | Что получает `setFieldValue` |
 |:---|:---|
 | `string`, `text`, `include` | строку; у варианта `password` — введённый пароль или `undefined`, когда ввод стёрт |
-| `integer`, `number` | число или `null`, когда поле очищено |
+| `integer`, `number` | число или `null`, когда поле очищено; у варианта `stepper` — число [поля количества](/ru/smart-components/forms/quantity/): шаг `step`, границы `min` и `max`, у числа — знаки `precision` (иначе из `step`, иначе два), у целого — без знаков после запятой |
 | `date` | строку даты; у даты со временем — с прежним временем |
 | `datetime` | строку даты и времени ISO 8601, `null`, когда оба поля очищены, или `undefined`, пока ввод не закончен или вернулся к прежнему значению |
 | `boolean` | `true` или `false`; необязательное поле — ещё `null` |
@@ -237,7 +237,7 @@ lit. `null` значит «показать значение как есть». 
 | `choices` | массив значений |
 | `user`, `record`, `relation` | `{value, label}` выбранной записи или `null` |
 | `lookup` | `{value, label}` выбранного варианта или `null`; при `multiple` — массив |
-| `file` | оставшиеся файлы после удаления: массив, один файл или `null` |
+| `file` | оставшиеся файлы после удаления: массив, один файл или `null`; у варианта `image` с одним файлом правка — [поле изображения](/ru/smart-components/forms/image-field/), которое передаёт файл с `File` в `file` и адресом в `href` или `null` после «Убрать» |
 | `color` | строку цвета |
 
 Остальные методы хоста необязательны, и каждый включает свою часть:
@@ -321,8 +321,8 @@ set.renderCellField(status, 'live');
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | `string` | Строка | `phone` — Телефон, `password` — Пароль | `placeholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
-| `integer` | Целое число | — | `unit`, `required`, `readonly` | есть | есть | своё | своё |
-| `number` | Число | `scale` — Шкала 0–100 | `unit`, `required`, `readonly` | есть | есть | своё | своё |
+| `integer` | Целое число | `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
+| `number` | Число | `scale` — Шкала 0–100, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
 | `date` | Дата | — | `required`, `readonly` | есть | есть | своё | своё |
 | `datetime` | Дата и время | — | `required`, `readonly` | есть | есть | своё | своё |
 | `boolean` | Да или нет | — | `trueText`, `falseText`, `required`, `readonly` | есть | есть | своё | своё |
@@ -332,6 +332,6 @@ set.renderCellField(status, 'live');
 | `record` | Запись | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `relation` | Связь | — | `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
 | `lookup` | Из справочника | — | `options`, `multiple`, `placeholder`, `searchPlaceholder`, `required`, `readonly` | есть | есть | своё | своё |
-| `file` | Файл | `image` — Изображение, `image-card` — Изображение карточкой, `image-list` — Изображения списком | `accept`, `multiple`, `formats`, `uploadText`, `uploadSupportingText`, `uploadHint`, `readonly` | есть | есть | своё | своё |
+| `file` | Файл | `image` — Изображение, `image-card` — Изображение карточкой, `image-list` — Изображения списком | `accept`, `multiple`, `formats`, `uploadText`, `uploadSupportingText`, `uploadHint`, `required`, `readonly` | есть | есть | своё | своё |
 | `color` | Цвет | — | `swatches`, `required`, `readonly` | есть | есть | своё | своё |
 | `include` | Код | — | `language`, `required`, `readonly` | есть | есть | своё | текстовый |

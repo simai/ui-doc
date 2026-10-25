@@ -20,6 +20,7 @@ description: "Смарт-компоненты по задачам интерфе
 ## Формы и ввод
 
 - [Текстовые поля](/ru/smart-components/forms/inputs/)
+- [Количество](/ru/smart-components/forms/quantity/)
 - [Многострочное поле](/ru/smart-components/forms/textarea/)
 - [Флажок](/ru/smart-components/forms/checkbox/)
 - [Радиокнопки](/ru/smart-components/forms/radio/)
@@ -29,14 +30,17 @@ description: "Смарт-компоненты по задачам интерфе
 - [Слайдер диапазона](/ru/smart-components/forms/range-slider/)
 - [Календарь](/ru/smart-components/forms/datepicker/)
 - [Код страны](/ru/smart-components/forms/country-code/)
+- [Код подтверждения](/ru/smart-components/forms/code-input/)
 - [Цвет](/ru/smart-components/forms/color/)
 - [Генератор темы](/ru/smart-components/forms/theme-generator/)
 - [Загрузка файлов](/ru/smart-components/forms/file-upload/)
+- [Поле изображения](/ru/smart-components/forms/image-field/)
 
 ## Навигация
 
 - [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/)
 - [Пагинация](/ru/smart-components/navigation/pagination/)
+- [Меню](/ru/smart-components/navigation/menu/)
 - [Вкладки](/ru/smart-components/navigation/tabs/)
 - [Шаги](/ru/smart-components/navigation/steps/)
 - [Дерево](/ru/smart-components/navigation/tree/)
@@ -64,6 +68,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Иконки](/ru/smart-components/content/icons/)
 - [Теги](/ru/smart-components/content/tags/)
 - [Строка списка](/ru/smart-components/content/list-item/)
+- [Аккордеон](/ru/smart-components/content/accordion/)
 - [Представление данных](/ru/smart-components/content/table/)
 - [Галерея](/ru/smart-components/content/gallery/)
 - [Предпросмотр файла](/ru/smart-components/content/file-preview/)
@@ -88,4 +93,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Представление свойств](/ru/smart-components/composite/property-view/)
 - [Шапка страницы](/ru/smart-components/composite/page-header/)
 - [Выбор профиля](/ru/smart-components/composite/profile-picker/)
+- [Список разговоров](/ru/smart-components/composite/thread-list/)
+- [Лента сообщений](/ru/smart-components/composite/message-log/)
+- [Подтверждение изменения](/ru/smart-components/composite/change-confirm/)
 

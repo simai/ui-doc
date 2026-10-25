@@ -121,6 +121,7 @@
       "title": "Формы и ввод",
       "items": [
         "inputs",
+        "quantity",
         "textarea",
         "checkbox",
         "radio",
@@ -130,7 +131,9 @@
         "range-slider",
         "datepicker",
         "country-code",
+        "code-input",
         "file-upload",
+        "image-field",
         "color",
         "theme-generator"
       ]
@@ -140,6 +143,7 @@
       "items": [
         "breadcrumbs",
         "pagination",
+        "menu",
         "tabs",
         "steps",
         "tree",
@@ -171,6 +175,7 @@
         "icons",
         "tags",
         "list-item",
+        "accordion",
         "table",
         "gallery",
         "file-preview",
@@ -200,7 +205,10 @@
         "admin-menu",
         "property-view",
         "page-header",
-        "profile-picker"
+        "profile-picker",
+        "thread-list",
+        "message-log",
+        "change-confirm"
       ]
     }
   }

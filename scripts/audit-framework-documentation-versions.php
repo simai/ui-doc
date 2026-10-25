@@ -87,8 +87,17 @@ foreach ($paths as $path) {
     if (str_starts_with($relative, 'content/ru/smart-components/')) {
         preg_match_all('/simai\/ui-smart@([a-f0-9]{40})(?=:smart\/)/', $markdown, $smartMatches);
         preg_match_all('/simai\/ui@([a-f0-9]{40})(?=:distr\/(?:rule\/rule\.json|smart\/))/', $markdown, $coreMatches);
-        // SIMAI Framework Pro is dropped: no page may cite its repository.
-        preg_match_all('/simai\/ui-pro@([a-f0-9]{40})/', $markdown, $droppedMatches);
+        // The old SIMAI Framework Pro line is retired: no page may cite it. Since
+        // 2026-10-23 the public simai/ui-pro (SIMAI Pro) is a component package
+        // source, so it is cited at its receipt's revision and checked below.
+        $packageRepositories = array_map(
+            static fn (array $package): string => (string) ($package['receipt']['package_source']['repository'] ?? ''),
+            $lock['package_projections'] ?? [],
+        );
+        $droppedMatches = [[], []];
+        if (! in_array('simai/ui-pro', $packageRepositories, true)) {
+            preg_match_all('/simai\/ui-pro@([a-f0-9]{40})/', $markdown, $droppedMatches);
+        }
         foreach ($smartMatches[1] ?? [] as $revision) {
             // Release lock v2 carries Smart in ui's distr/smart: no page may
             // still cite the separate ui-smart repository.

@@ -10,6 +10,9 @@ profile: reference
 группы вложенных разделов. Один компонент показывается вертикально в боковой
 панели, строкой в шапке или деревом документации. Для действий над
 выбранным объектом берите [контекстное меню](/ru/components/navigation/context-menu/).
+Меню из данных, с текущей страницей и состоянием веток собирает
+Smart-компонент [Меню](/ru/smart-components/navigation/menu/): разметку,
+которую он нарисовал, скрипт классового меню не трогает.
 
 ## Пример
 
@@ -146,21 +149,45 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-menu`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-menu`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-menu-background-color` | Заливка под всем списком; по умолчанию нет. | `transparent` |
+| `--sf-menu-gap` | Расстояние между строками списка; у дерева документации своё, меньше. | `var(--sf-space-1/3)`; зависит от вида |
+| `--sf-menu-item-color` | Цвет слов и значка строки в покое; у недоступной строки свой. | `var(--sf-on-surface)` |
+| `--sf-menu-item-background-color` | Заливка строки в покое; у наведения и открытой ветки своя. | `var(--sf-transparent)` |
+| `--sf-menu-item-border-color` | Цвет тонкой рамки строки в покое; у наведения и открытой ветки свой. | `var(--sf-surface-container)` |
+| `--sf-menu-item-radius` | Скругление углов строки. | `var(--sf-radius--ui)` |
+| `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-elevation-2--surface)`; зависит от orientation |
+| `--sf-menu-submenu-border-color` | Цвет рамки панели горизонтального меню. | `var(--sf-outline-variant)`; зависит от orientation |
+| `--sf-menu-submenu-radius` | Скругление углов панели горизонтального меню. | `var(--sf-radius--ui)`; зависит от orientation |
+
+```css
+.sf-menu {
+  --sf-menu-item-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-menu`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree`: `var(--sf-space-1/4)` | `gap` |
-| `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-transparent)` | `background-color` |
-| `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-surface-container)` | `border-color` |
+| `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-background-color, var(--sf-transparent))` | `background-color` |
+| `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-border-color, var(--sf-surface-container))` | `border-color` |
 | `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width` |
-| `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-on-surface)` | `color` |
+| `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-color, var(--sf-on-surface))` | `color` |
 | `--sf-menu-element--gap` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-menu-element--padding-bottom` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-bottom`, `padding-block-end` |
 | `--sf-menu-element--padding-inline-start` | не задана; задают модификаторы, например `.sf-menu-element--level-1`: `var(--sf-space-1)` | `padding-inline-start` |
 | `--sf-menu-element--padding-right` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-inline-end` |
 | `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-top`, `padding-block-start` |
-| `--sf-menu-element--radius` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-radius--ui)` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
+| `--sf-menu-element--radius` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-radius, var(--sf-radius--ui))` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
 | `--sf-menu-item--background-color` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `transparent` | `background-color` |
 | `--sf-menu-item--gap` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `var(--sf-space-1/3)` | `gap` |
 
@@ -168,4 +195,5 @@ profile: reference
 
 - [Контекстное меню](/ru/components/navigation/context-menu/)
 - [Хлебные крошки](/ru/components/navigation/breadcrumbs/)
+- [Меню — Smart-компонент](/ru/smart-components/navigation/menu/)
 - [Меню администратора — Smart-компонент](/ru/smart-components/composite/admin-menu/)

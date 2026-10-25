@@ -23,7 +23,7 @@ description: "Показывает серверную коллекцию таб�
 
 Элементы `<sf-table>` и `<sf-data-view>` поставляет Larena, а не выпуск
 Framework: пакет компонентов Loader с именем `larena` из репозитория
-`simai/ui-admin` (лицензия PolyForm Small Business 1.0.0 или PolyForm
+`simai/ui-pro` (лицензия PolyForm Small Business 1.0.0 или PolyForm
 Noncommercial 1.0.0, по запросу — коммерческая лицензия SIMAI; в составе
 Larena — лицензия Larena). В пакет входят ещё
 [`<sf-property-view>`](/ru/smart-components/composite/property-view/) и
@@ -777,7 +777,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-720203c5b5e5` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -890,8 +890,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-admin@063c2814324592bc39ecdcb2b9379cca9fe09977:components/src/smart/data-view`
-- `simai/ui-admin@063c2814324592bc39ecdcb2b9379cca9fe09977:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/data-view`
+- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1045,5 +1045,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-admin@063c2814324592bc39ecdcb2b9379cca9fe09977:components/src/smart/table`
-- `simai/ui-admin@063c2814324592bc39ecdcb2b9379cca9fe09977:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/table`
+- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/table/rule.js#name=cl-table`

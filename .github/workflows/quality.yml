@@ -17,7 +17,7 @@ permissions:
 #
 # The checks read git objects of the sibling repositories at those pins, beside
 # this checkout: ../ui, ../ui-source, ../ui-builder and the package repository
-# (../ui-admin, LARENA_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
+# (../ui-pro, LARENA_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
 # so they are plain full clones.
 #
 # On main (a push or a manual run, never a pull request) the verified site is

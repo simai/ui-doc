@@ -54,15 +54,16 @@ Smart-компонента своей копии этих модулей не н
 Если пакет не объявлен, Loader не загружает его компонент и сообщает в консоли,
 какой тег и почему не загружен.
 
-Так подключаются `<sf-table>`, `<sf-data-view>`, `<sf-property-view>` и
-`<sf-admin-menu>`: это компоненты Larena, пакет `larena`. Их исходники лежат в
-репозитории `simai/ui-admin` (папка `components/`; лицензия PolyForm Small
+Так подключаются `<sf-table>`, `<sf-data-view>`, `<sf-property-view>`,
+`<sf-admin-menu>`, `<sf-thread-list>`, `<sf-message-log>` и
+`<sf-change-confirm>`: это компоненты пакета `larena`. Их исходники лежат в
+репозитории `simai/ui-pro` (папка `components/`; лицензия PolyForm Small
 Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу — коммерческая
 лицензия SIMAI; в составе Larena — лицензия Larena), а не в поставке `ui`. Пакет собирает инструмент ui-builder из точной ревизии
 исходников Framework; Larena отдаёт сборку в своей поставке, а каждая сборка
 публикуется выпуском репозитория `simai/larena-ui` с архивом, его SHA-256 и
 квитанцией (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Без
-сборки пакета эти четыре элемента на странице не работают. Квитанция сборки
+сборки пакета эти элементы на странице не работают. Квитанция сборки
 (`package-receipt.json`) называет выпуск Framework `ui-…`, с которым пакет
 собран, — подключайте их вместе. Пакет объявляется до `core.js`, путь к нему —
 по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов) (`/assets/larena/<коммит пакета>/smart`), файл
@@ -73,7 +74,7 @@ Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу — ко
   window.sfPath = '/assets/simai-framework/ui/distr/';
   window.SF_BOOT_CONFIG = {
     packages: {
-      larena: {base: '/assets/larena/063c2814324592bc39ecdcb2b9379cca9fe09977/smart'},
+      larena: {base: '/assets/larena/9cbe0610b74b781c86721de77273819a046adda0/smart'},
     },
   };
 </script>

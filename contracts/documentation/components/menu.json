@@ -3,17 +3,17 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "aa81305b14f103def02dead1ffc0b0451c877f0f",
-    "core_revision": "720203c5b5e5186e2d44f6e1f8d9c23a0e410cc1",
+    "source_revision": "51002278751d887da2fc4950f4d6d34d573c69bf",
+    "core_revision": "357568a20a7ef6c6825217b7346c1f08870003a2",
     "source_files": {
-      "src/component/menu/js/_menu.js": "d52321066c0813b2f7c0b67ecb0eca07e41dbf78a4d4e821a073ed3dd06a2503",
-      "src/component/menu/scss/_css__menu.scss": "8dd164f009591aa4014c10bbe85deb86da0bde5b281c247f32cfba6686dc5cd8",
+      "src/component/menu/js/_menu.js": "db7a78e4ea25b870d75d1c3b5f105ac38e951d375366298f04438792d321ca3b",
+      "src/component/menu/scss/_css__menu.scss": "09e5cad39da2bbd82f2b7c9ec26f8f62945ff54bae2d89ab3ea780e4a69ce8dd",
       "src/component/menu/scss/_css__menu_compact.scss": "d724e97ae5cd7098dc974a20d1b50a5d8d90c08a74010eb9f503b11aefa74ec0",
-      "src/component/menu/docs/docs.md": "bf05d9934f941dc857c7210c5852f61e5ccd2c84a15ec95ed888fb57c4a0896e"
+      "src/component/menu/docs/docs.md": "118774012eec8d85523d969f5508cc4b39c46f0f61d85803251d473f7063cef3"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "657d7176ac7287aad234b04b08463325c949ae1d160f0b658241f21b4721082b",
-      "distr/component/menu/js/menu.js": "17c7fd25ebed0895c4be881e30a7894f31ecc06d79275e850c2a4440e5ac466b"
+      "distr/component/menu/css/menu.css": "d21028a519e4a35c169096212e1a9374e802df991dcb667959029fbb0ad3c40e",
+      "distr/component/menu/js/menu.js": "dd999db1e3a130225e4241d3e9566ad02fc856b888e29318bfece0e03893af4a"
     }
   },
   "source_files": [

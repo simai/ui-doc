@@ -1853,8 +1853,40 @@
     "smart-components/actions/copy-button.md": {
       "kind": "smart"
     },
+    "smart-components/composite/change-confirm.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/message-log.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/thread-list.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/content/accordion.md": {
+      "kind": "smart",
+      "standard": 2
+    },
     "smart-components/feedback/help-mark.md": {
       "kind": "smart"
+    },
+    "smart-components/forms/code-input.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/forms/image-field.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/forms/quantity.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/navigation/menu.md": {
+      "kind": "smart",
+      "standard": 2
     }
   }
 }

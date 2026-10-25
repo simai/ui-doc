@@ -157,16 +157,39 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-accordion`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-accordion`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-accordion-background-color` | Заливка секции в обычном виде; у outline и flush её нет, а наведение и нажатие сохраняют свою. | `var(--sf-surface-container)`; зависит от вида |
+| `--sf-accordion-border-color` | Цвет рамки в виде outline и линии под секцией в виде flush. | `var(--sf-outline-variant)`; зависит от вида |
+| `--sf-accordion-border-width` | Толщина этой рамки и линии, а также разделителя под шапкой открытой секции. | `var(--sf-px)`; зависит от вида |
+| `--sf-accordion-radius` | Скругление углов секции; секция в виде flush остаётся прямоугольной. | `var(--sf-radius--surface)`; зависит от вида |
+| `--sf-accordion-title-color` | Цвет заголовка секции в её шапке. | `var(--sf-on-surface)` |
+| `--sf-accordion-content-color` | Цвет текста содержимого секции. | `var(--sf-on-surface-variant)` |
+| `--sf-accordion-icon-color` | Цвет метки (шеврона или плюса и минуса) и значка перед заголовком; у недоступной секции свой. | `var(--sf-on-surface-variant)` |
+| `--sf-accordion-divider-color` | Цвет линии под шапкой открытой секции и под шапкой единственной секции. | `var(--sf-outline-variant)` |
+
+```css
+.sf-accordion {
+  --sf-accordion-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-accordion`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-accordion--background-color` | `var(--sf-surface-container)` | `background-color` |
-| `--sf-accordion--border-color` | `var(--sf-outline-variant)` | `border`, `border-bottom`, `border-block-end` |
-| `--sf-accordion--border-width` | `var(--sf-px)` | `border`, `border-bottom`, `border-block-end`, `height` |
+| `--sf-accordion--background-color` | `var(--sf-accordion-background-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-accordion--border-color` | `var(--sf-accordion-border-color, var(--sf-outline-variant))` | `border`, `border-bottom`, `border-block-end` |
+| `--sf-accordion--border-width` | `var(--sf-accordion-border-width, var(--sf-px))` | `border`, `border-bottom`, `border-block-end`, `height` |
 | `--sf-accordion--content-padding` | `var(--sf-space-3)` | `padding` |
 | `--sf-accordion--icon-size` | `var(--sf-text-height-1)` | `font-size`, `height`, `width` |
-| `--sf-accordion--radius` | `var(--sf-radius--surface)` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
+| `--sf-accordion--radius` | `var(--sf-accordion-radius, var(--sf-radius--surface))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-accordion--text-height` | `var(--sf-text--height)` | `line-height` |
 | `--sf-accordion--text-size` | `var(--sf-text--size)` | `font-size` |
 | `--sf-accordion--trigger-min-block-size` | `auto` | `min-height`, `min-block-size` |
