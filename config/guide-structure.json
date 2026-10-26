@@ -478,6 +478,11 @@
      "order": 150
     },
     {
+     "slug": "packages",
+     "title": "Пакеты партнёров и проектов",
+     "order": 155
+    },
+    {
      "slug": "quality",
      "title": "Проверки",
      "order": 160

@@ -25,17 +25,21 @@ SIMAI Framework, а старые имена событий и методов п�
 | Публичные методы (`methods`) | [Жизненный цикл](/ru/guide/smart-components/lifecycle/) | **действия** (`actions`) с исходом `applied` или `refused`; методы генерируются; методов-читателей нет | [Модель компонента](/ru/guide/smart-components-2/model/#действия-и-их-исход) |
 | Класс на `SfBaseElement`, `index.js`, `rule.js`, `meta.mjs` | [Устройство компонента](/ru/guide/smart-components/structure/) | одна папка: `component.json`, `template.html`, `behaviour.js`; код элемента, правило загрузчика и реестр генерируются | [Папка компонента и манифест](/ru/guide/smart-components-2/folder/) |
 | Методы для переопределения (`onConnected`, `beforeRender`…) | [Жизненный цикл](/ru/guide/smart-components/lifecycle/#методы-для-переопределения) | `behaviour.js` с вычисляемыми значениями и кодом действий; события отрисовки — только базовые | [Модель компонента](/ru/guide/smart-components-2/model/#базовый-интерфейс) |
-| Шаблон Lit и `templateContext()` | [Шаблоны](/ru/guide/smart-components/templates/) | **HTML-шаблоны** с `{{…}}`, `:attr`, `@event`, `if`, `each … key`; Lit — переходная форма | [Разметка и шаблоны](/ru/guide/smart-components-2/markup/) |
+| Шаблон Lit и `templateContext()` | [Шаблоны](/ru/guide/smart-components/templates/) | **HTML-шаблоны** с `{{…}}`, `:attr`, `@event`, `if`, `each … key`, которые построение компилирует в Lit; Lit внутри JavaScript — переходная форма | [Разметка и шаблоны](/ru/guide/smart-components-2/markup/) |
 | Внешний шаблон (`template="compact"`) | [Шаблоны](/ru/guide/smart-components/templates/#встроенный-и-внешний-шаблон) | `template.<имя>.html` в папке компонента; шаблоны называются по расположению | [Внешний вид](/ru/guide/smart-components-2/look/) |
 | Публичные `refresh(reason)`, `set()` и `state` базового элемента | [Жизненный цикл](/ru/guide/smart-components/lifecycle/) | переименованы в `rerender`, `assign` и закрытое `#state` с псевдонимами, чтобы имя `refresh` осталось действию из словаря | [Модель компонента](/ru/guide/smart-components-2/model/#базовый-интерфейс) |
 | Слоты, забранные из детей тега | [Содержимое и слоты](/ru/guide/smart-components/slots/) | содержимое ставится и не копируется; слоты с `accepts` и `each` | [Слоты](/ru/guide/smart-components-2/slots/) |
 | Заготовка до прихода кода, скелетоны | [Состояния и загрузка данных](/ru/guide/smart-components/states-and-loading/#загрузка-данных-и-скелетоны) | статическая разметка каждого примера и её подхват за один кадр | [Разметка и шаблоны](/ru/guide/smart-components-2/markup/#статическая-разметка) |
+| Версия компонента и совместимость с экраном | [Манифест](/ru/guide/smart-components/manifest/) | **отпечаток договора** в реестре и файле блокировки; роль может закрепить `part@<старшая версия>`; изменение используемого члена отклоняет деталь при загрузке | [Папка компонента и манифест](/ru/guide/smart-components-2/folder/#отпечаток-договора) |
+| Обработчики и таймеры, которые компонент снимает сам | [Жизненный цикл](/ru/guide/smart-components/lifecycle/) | **область экземпляра**: всё запущенное привязано к сигналу отмены и заканчивается с экземпляром | [Сборки](/ru/guide/smart-components-2/assemblies/#область-экземпляра) |
+| Сохранение манифеста инструментом | [Манифест](/ru/guide/smart-components/manifest/) | сохранённый вид: новый файл — канонически, существующий — с сохранением байтов; ИИ правит заплаткой JSON Patch | [Папка компонента и манифест](/ru/guide/smart-components-2/folder/#сохранённый-вид-манифеста), [Для ИИ](/ru/guide/smart-components-2/ai/#правка-манифеста-заплаткой) |
 
 ## События
 
 | Текущее понятие | Где описано сейчас | Место в 2.0 | Где описано в 2.0 |
 |:---|:---|:---|:---|
 | События с двоеточием (`sf-menu:navigate`, `modal:after-close`) | [События](/ru/guide/smart-components/events/) | `sf-<тег>-<глагол>` и `sf-<тег>-<глагол>ed`; старые имена — псевдонимы с датой | [Имена и общие слова](/ru/guide/smart-components-2/names/#имена-событий) |
+| Имя события в манифесте как DOM-имя (`events.sf-modal-closed`) | [События](/ru/guide/smart-components/events/) | событие объявлено глаголом (`closed`), DOM-имя выводит построение | [На странице](/ru/guide/smart-components-2/page/#имена-событий) |
 | Суффикс `-intent` (`sf-table-query-intent`) | [Порты хоста и намерения](/ru/guide/smart-components/host-ports/) | глагол словаря: `sf-table-query`, `sf-table-apply` | [Имена и общие слова](/ru/guide/smart-components-2/names/#свой-глагол-компонента) |
 | Соглашение `change` | [События](/ru/guide/smart-components/events/#соглашение-change) | `change` сообщает только об изменении человеком; изменение снаружи слушают через `data.<ключ>` | [На странице](/ru/guide/smart-components-2/page/#событие-change) |
 | `modal:before-close` и подобные «перед» | [События](/ru/guide/smart-components/events/) | отклоняемая просьба `sf-<тег>-close {reason, unsaved}` | [Окна и панели](/ru/guide/smart-components-2/layers/#закрытие-с-причиной) |
@@ -49,7 +53,13 @@ SIMAI Framework, а старые имена событий и методов п�
 | Составной компонент (`kind: "composite"`) | [Составные компоненты](/ru/guide/smart-components/composite/) | **сборка** (`kind: "assembly"`): детали по ролям, данные с одним хозяином, правила | [Сборки](/ru/guide/smart-components-2/assemblies/) |
 | Связь компонентов без кода проекта, `composition` | [Составные компоненты](/ru/guide/smart-components/composite/#связь-компонентов-без-кода-проекта) | `roles` и `bind`; моменты — `rules` «Когда → Только если → Сделать» | [Правила](/ru/guide/smart-components-2/rules/) |
 | Всплытие событий вложенных элементов | [Жизненный цикл](/ru/guide/smart-components/lifecycle/#этапы) | события частей останавливаются на рамке сборки; наружу — только `emit` | [Сборки](/ru/guide/smart-components-2/assemblies/#рамка-ничего-не-выходит-само) |
-| Пакеты компонентов продуктов (приставка владельца) | [Составные компоненты](/ru/guide/smart-components/composite/) | компоненты делают только в SIMAI Framework и ui-pro, приставка одна — `sf-`; экраны продукта — сборки | [Папка компонента и манифест](/ru/guide/smart-components-2/folder/#где-делают-компоненты) |
+| Пакеты компонентов продуктов (приставка владельца) | [Составные компоненты](/ru/guide/smart-components/composite/) | компоненты SIMAI делают только в SIMAI Framework и ui-pro, приставка одна — `sf-`; экраны продукта — сборки; партнёр или проект выпускает пакет под своей приставкой и входит в сборку через интерфейс | [Папка компонента и манифест](/ru/guide/smart-components-2/folder/#где-делают-компоненты), [Пакеты партнёров и проектов](/ru/guide/smart-components-2/packages/) |
+| Вычисления и флаги в коде проекта | [Составные компоненты](/ru/guide/smart-components/composite/) | **производные ключи** из закрытого списка чтений и условий; шаги `append` и `remove`; остальное — код детали | [Сборки](/ru/guide/smart-components-2/assemblies/#производные-ключи), [Правила](/ru/guide/smart-components-2/rules/) |
+| Скрытие поля стилями | [Состояния и загрузка данных](/ru/guide/smart-components/states-and-loading/) | `if` убирает деталь из DOM, формы и проверки; `hidden` оставляет её и отключает поля внутри | [Сборки](/ru/guide/smart-components-2/assemblies/#показ-и-скрытие-детали) |
+| Повторная отправка, пока ждём ответа | [Порты хоста и намерения](/ru/guide/smart-components/host-ports/) | одна настройка `concurrency` — `parallel`, `queue`, `drop`, `latest` — с `timeout` и `retry`; исход `cancelled` | [Правила](/ru/guide/smart-components-2/rules/#одновременные-запуски) |
+| Растущий ответ чата, загрузка файла (`upsert`, `file-complete`) | [Порты хоста и намерения](/ru/guide/smart-components/host-ports/) | одна жизнь потока: `started`, `chunk`, `completed`, `failed`, `cancelled`; ключ записи `growing` | [Данные с сервера](/ru/guide/smart-components-2/data/#потоки) |
+| Проверка всей формы только обычной `<form>` | [Поля по типу свойства](/ru/guide/smart-components/field-renderers/) | сборка как форма: `form.aggregates` даёт `valid`, `value`, `check-validity` и `reset` | [Поля форм](/ru/guide/smart-components-2/forms/#сборка-как-форма) |
+| Recipe и Document как вторая модель композиции | [Составные компоненты](/ru/guide/smart-components/composite/) | одна модель композиции — сборка; Recipe и Document компилируются в сборки или остаются форматами хранения | [Сборки](/ru/guide/smart-components-2/assemblies/#одна-модель-композиции) |
 | Порт хоста и намерения | [Порты хоста и намерения](/ru/guide/smart-components/host-ports/) | `port` в манифесте и сгенерированный адаптер; данные приносит **источник** `sf-source`; **четыре ответа** хоста | [Данные с сервера](/ru/guide/smart-components-2/data/) |
 | Состояния данных (`populated` и другие) | [Состояния и загрузка данных](/ru/guide/smart-components/states-and-loading/) | семь состояний словаря; `ready` вместо `populated` | [Данные с сервера](/ru/guide/smart-components-2/data/#семь-состояний-данных) |
 | Персональный вид (`persistence.view_preference`) | [Персональный вид](/ru/guide/smart-components/view-preferences/) | флаг ключа `"persist": "local"` или `"host"` | [Сборки](/ru/guide/smart-components-2/assemblies/#история-и-сохранение) |
@@ -71,6 +81,11 @@ SIMAI Framework, а старые имена событий и методов п�
 | `readiness` | проверки стандарта |
 | `contracts.*` (свободный текст) | `docs.md` или пример |
 | `accessibility.keyboard`, `accessible_name` | `accessibility.keys` с действиями и `accessibility.name.from` |
+| `aria-label`, `role` как входные настройки | атрибуты хоста, а не настройки |
+| строковая настройка с числами (`min`, `max`, `step`, `heading-level`) | `number` с `integer`, `min`, `max` и `step` |
+| `keys` для клавиатуры у детали | `keyboard`; `keys` — только данные сборки |
+| побочные эффекты в свободной форме | `side-effects` |
+| `announces` на верхнем уровне | `accessibility.announces` |
 | `security`, `ownership`, `presentation`, `ai_guidance` | остаются как есть до следующей версии стандарта |
 
 Манифест текущего вида переводит скрипт; всё, что он не смог разместить,
@@ -95,17 +110,33 @@ SIMAI Framework, а старые имена событий и методов п�
 | `sf-modal` в `body` теряет язык, тему и переменные хоста; цвет включённого `sf-switch` — только токен роли | simai/ui-source#46 |
 | Включённый `sf-switch` без `value` отправляет в форму пустую строку, а не `on` | simai/ui-source#38 |
 | Ошибка поля, заданная действием, только красит его, а форма отправляется | сценарий A2 стандарта |
+| 45 настроек в 38 компонентах названы именами прототипа: `aria-label` ×29, `title` ×8, `role` ×4, `blur` ×2, `prefix`, `spellcheck`; `aria-label` и `role` уходят из настроек, остальные переименовываются с псевдонимами | пункт 26 переноса |
+| Переводчик манифестов пишет ключи событий DOM-именами: 165 событий в 66 манифестах; он переходит на глаголы | пункт 27 переноса |
+| Поля `keys` (клавиатура), побочные эффекты и `announces` на старых местах; старые формы читаются до 1.4.0 с предупреждением | пункт 28 переноса |
+| 17 настроек в 13 компонентах хранят числа строками; они становятся `number` | пункт 29 переноса |
+| Для 65 компонентов в документации есть второй текст рядом с `docs.md`, а справочник построен с выпуска, а не с кандидата | пункт 30 переноса |
+| `sf-message-log` заменяет узел сообщения на каждую часть ответа, и фокус падает на `body`; лента задаётся только методами | пункт 31 переноса |
+| `sf-chat-composer` сделан в продукте; его события `sf-chat-send` и `sf-chat-stop` становятся `sf-chat-composer-submit` и `sf-chat-composer-stop` | пункт 32 переноса |
+| Студия не открывает манифест, а одно сохранение теряет 13 вещей: `id`, `version`, `family`, названия ролей, пометку «само», файл слов | пункт 33 переноса |
+| Все теги определяются в одном общем реестре элементов, поэтому две старшие версии тега не уживаются на странице | пункт 34 переноса |
+| `sf-property-view` держит версию на каждый раздел, а не одну на запись | пункт 35 переноса |
+| Ни одна проверка не считает, что оставил убранный компонент | пункт 36 переноса |
 
 ## Открытые вопросы стандарта
 
-Эти вопросы стандарт 1.3.5 не решает; ответы на них в него не входят:
+Эти вопросы стандарт 1.3.6 не решает; ответы на них в него не входят:
 
 - старшая версия ui-pro относительно пар SIMAI Framework;
-- как типы ключей соотносятся с типами значений документа композиции;
+- таблица соответствия типов значений документа композиции типам ключей:
+  направление задано, а таблица пишется с первым документом, который
+  скомпилирует Docara или Larena;
 - компоненты поведения после `sf-source`: `sf-form-state` (ключ «форма
   изменена», который читает `unsaved` у слоя) и горячие клавиши;
 - оптимистичные изменения отдельных ключей в строках и их откат в полосе
-  проверки Студии.
+  проверки Студии;
+- статическая разметка двух старших версий одного тега на одной странице;
+- операторы связи кроме `debounce` и чтения сверх закрытого списка: каждый
+  появится, только когда его докажет стенд.
 
 ## Смотрите также
 
