@@ -84,11 +84,11 @@ orders.connectPort({ port: window.app.dataViewPort });
 :::diagram {engine=mermaid title="Семь состояний данных: из loading в одно из пяти по ответу хоста; новый запрос или повтор снова ведёт в loading"}
 flowchart LR
     idle(["idle"]) -- "запрос" --> loading(["loading"])
-    loading --> ready(["ready<br/>есть записи"])
-    loading --> empty(["empty<br/>записей нет"])
-    loading --> refused(["refused<br/>нет доступа"])
-    loading --> error(["error<br/>ошибка или сбой"])
-    loading --> unavailable(["unavailable<br/>хост не ответил"])
+    loading --> ready(["ready — есть записи"])
+    loading --> empty(["empty — записей нет"])
+    loading --> refused(["refused — нет доступа"])
+    loading --> error(["error — ошибка или сбой"])
+    loading --> unavailable(["unavailable — хост не ответил"])
 :::
 
 - `idle` — ещё не спрашивали, `loading` — ждём ответа.

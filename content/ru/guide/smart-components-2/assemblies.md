@@ -58,7 +58,7 @@ flowchart TB
     end
     subgraph moment["Правило r-open: когда открыли запись"]
         direction LR
-        rule{{"set chosen<br/>emit open"}} --> chosen(["chosen"])
+        rule{{"set chosen — emit open"}} --> chosen(["chosen"])
         rule --> out["Наружу: событие open"]
     end
     list -- "событие open" --> rule
