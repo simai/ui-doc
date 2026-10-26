@@ -393,6 +393,113 @@
    ]
   },
   {
+   "slug": "smart-components-2",
+   "title": "Смарт-компоненты 2.0",
+   "order": 75,
+   "pages": [
+    {
+     "slug": "model",
+     "title": "Модель компонента",
+     "order": 10
+    },
+    {
+     "slug": "page",
+     "title": "На странице",
+     "order": 20
+    },
+    {
+     "slug": "folder",
+     "title": "Папка компонента и манифест",
+     "order": 30
+    },
+    {
+     "slug": "markup",
+     "title": "Разметка и шаблоны",
+     "order": 40
+    },
+    {
+     "slug": "assemblies",
+     "title": "Сборки",
+     "order": 50
+    },
+    {
+     "slug": "first-paint",
+     "title": "Первый кадр и ленивая загрузка",
+     "order": 55
+    },
+    {
+     "slug": "rules",
+     "title": "Правила",
+     "order": 60
+    },
+    {
+     "slug": "data",
+     "title": "Данные с сервера",
+     "order": 70
+    },
+    {
+     "slug": "slots",
+     "title": "Слоты",
+     "order": 80
+    },
+    {
+     "slug": "forms",
+     "title": "Поля форм",
+     "order": 90
+    },
+    {
+     "slug": "entries",
+     "title": "Записи: строки и узлы",
+     "order": 100
+    },
+    {
+     "slug": "layers",
+     "title": "Окна и панели",
+     "order": 110
+    },
+    {
+     "slug": "look",
+     "title": "Внешний вид",
+     "order": 120
+    },
+    {
+     "slug": "language",
+     "title": "Язык",
+     "order": 130
+    },
+    {
+     "slug": "accessibility",
+     "title": "Доступность",
+     "order": 140
+    },
+    {
+     "slug": "names",
+     "title": "Имена и общие слова",
+     "order": 150
+    },
+    {
+     "slug": "quality",
+     "title": "Проверки",
+     "order": 160
+    },
+    {
+     "slug": "studio",
+     "title": "Студия",
+     "order": 170
+    },
+    {
+     "slug": "ai",
+     "title": "Для ИИ",
+     "order": 180
+    },
+    {
+     "slug": "comparison",
+     "title": "Сравнение с текущим устройством",
+     "order": 190
+    }
+   ]
+  },
+  {
    "slug": "layouts",
    "title": "Макеты и композиция",
    "order": 80,
