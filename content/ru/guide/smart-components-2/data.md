@@ -81,6 +81,16 @@ orders.connectPort({ port: window.app.dataViewPort });
 | `unavailable` (`collection_unavailable`, `capability-not-provided`) | `unavailable` |
 | сбой сети, HTTP 5xx | `error` |
 
+:::diagram {engine=mermaid title="Семь состояний данных: из loading в одно из пяти по ответу хоста; новый запрос или повтор снова ведёт в loading"}
+flowchart LR
+    idle(["idle"]) -- "запрос" --> loading(["loading"])
+    loading --> ready(["ready<br/>есть записи"])
+    loading --> empty(["empty<br/>записей нет"])
+    loading --> refused(["refused<br/>нет доступа"])
+    loading --> error(["error<br/>ошибка или сбой"])
+    loading --> unavailable(["unavailable<br/>хост не ответил"])
+:::
+
 - `idle` — ещё не спрашивали, `loading` — ждём ответа.
 - `ready` заменяет `populated`; старое слово остаётся псевдонимом с датой.
 - «Загружается ещё» — не состояние: это `has-more` вместе с идущим

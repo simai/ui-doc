@@ -97,6 +97,25 @@ description: "Логика сборки — упорядоченный спис�
    ход с цепочкой того хода, который спрашивал, поэтому защита от петель
    работает и через ожидание.
 
+:::diagram {engine=mermaid title="Шаг, который обращается к хосту, ждёт ответа: при applied правило идёт дальше, иначе выполняется otherwise"}
+sequenceDiagram
+    participant list as Список
+    participant asm as Сборка
+    participant src as Источник
+    participant host as Хост
+    list->>asm: событие remove.press
+    asm->>src: do source.delete
+    src->>host: запрос
+    host-->>src: ответ
+    alt applied
+        src-->>asm: applied
+        asm->>asm: следующие шаги
+    else conflict, refused или unavailable
+        src-->>asm: отказ с причиной
+        asm->>asm: ветка otherwise и запись в журнал
+    end
+:::
+
 ## Событие, которое ждёт
 
 Событие с `"waits": true` — тот же договор ожидания, только со стороны
