@@ -80,7 +80,7 @@ description: "Машиночитаемая сводка стандарта см�
 ```json
 {
   "schema": "simai.smart-component.ai.v2",
-  "standard": "simai.smart-component 1.3.8",
+  "standard": "simai.smart-component 1.3.9",
   "vocabulary": "simai.smart-vocabulary 1.1.5",
   "events": {
     "declared_as": "the verb (open, saved, change)",
@@ -149,7 +149,7 @@ description: "Машиночитаемая сводка стандарта см�
 ## Где лежит сводка
 
 Сводка, стандарт, словарь и краткая русская версия переезжают в
-`simai/ui-source` в папку `src/core/contracts/standards/simai.smart-component/1.3.8/`.
+`simai/ui-source` в папку `src/core/contracts/standards/simai.smart-component/1.3.9/`.
 
 ## Смотрите также
 

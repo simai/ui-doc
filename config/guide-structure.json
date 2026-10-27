@@ -488,6 +488,11 @@
      "order": 160
     },
     {
+     "slug": "authors",
+     "title": "Правила для авторов",
+     "order": 165
+    },
+    {
      "slug": "studio",
      "title": "Студия",
      "order": 170
