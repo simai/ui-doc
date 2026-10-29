@@ -194,7 +194,28 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-loader`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-loader-container`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-spinner-color` | Дуга, точки или комета: текущий цвет текста, если не задано. | `currentColor` |
+| `--sf-spinner-track-color` | Кольцо под дугой. | `var(--sf-surface-container)` |
+| `--sf-spinner-size` | Рамка рисунка; по умолчанию — значок кнопки того же размера. | `var(--sf-text-height-1)`; зависит от размера |
+| `--sf-spinner-stroke-width` | Толщина кольца в единицах сетки значка из 24 единиц. | `2` |
+| `--sf-spinner-gap` | Расстояние между рисунком и его словами. | `var(--sf-space-1/2)`; зависит от размера |
+| `--sf-spinner-text-color` | Слова под рисунком. | `var(--sf-on-surface)` |
+
+```css
+.sf-loader-container {
+  --sf-spinner-color: currentColor;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-loader`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
@@ -214,12 +235,12 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 | `--sf-loader-cycle-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 6)` | `--sf-loader--look-motion-duration`, `animation-duration` |
 | `--sf-loader-dot-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 3)` | `animation`, `animation-delay` |
 | `--sf-loader-spin-duration` | не задана; задают модификаторы, например `.sf-loader-container`: `calc(var(--sf-duration-slow) * 4)` | `--sf-loader--look-spin-duration` |
-| `--sf-loader-stroke-width` | не задана; задают модификаторы, например `.sf-loader-container`: `2` | `stroke-width` |
-| `--sf-loader-svg-height` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-height-1)` | `height` |
-| `--sf-loader-svg-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-height-1)` | `width` |
-| `--sf-loader-text-gap` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-space-1/2)` | `gap` |
+| `--sf-loader-stroke-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-stroke-width, 2)` | `stroke-width` |
+| `--sf-loader-svg-height` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-size, var(--sf-text-height-1))` | `height` |
+| `--sf-loader-svg-width` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-size, var(--sf-text-height-1))` | `width` |
+| `--sf-loader-text-gap` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-gap, var(--sf-space-1/2))` | `gap` |
 | `--sf-loader-text-size` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-loader-track-color` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-surface-container)` | `stroke` |
+| `--sf-loader-track-color` | не задана; задают модификаторы, например `.sf-loader-container`: `var(--sf-spinner-track-color, var(--sf-surface-container))` | `stroke` |
 
 ## См. также
 

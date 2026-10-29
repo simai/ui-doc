@@ -505,7 +505,11 @@
     "smart-components/feedback/progress-bar.md": {
       "kind": "smart"
     },
-    "smart-components/feedback/progress-scale.md": {
+    "smart-components/feedback/progress-ring.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/feedback/progress-scale.md": {
       "kind": "smart"
     },
     "smart-components/feedback/skeleton.md": {
@@ -1861,7 +1865,27 @@
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/thread-list.md": {
+    "smart-components/composite/chat-composer.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/chat-interlocutor.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/chat-message.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/chat-window.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/site-header.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/thread-list.md": {
       "kind": "smart",
       "standard": 2
     },

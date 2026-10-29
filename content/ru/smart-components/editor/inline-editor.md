@@ -89,38 +89,44 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-inline-editor>` |
-| Назначение | Редактор текста content.heading и content.paragraph на месте: strong, em, code и безопасные ссылки, собственная история, безопасная вставка; возвращает нормализованное содержимое, а не HTML. |
-| Контракт | `smart.inline-editor`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Назначение | Правит `content.heading` или `content.paragraph` прямо на холсте — strong, em, code и ссылки — и отдаёт хосту нормализованную модель содержимого, а не HTML. |
+| Контракт | `smart.inline-editor`, версия `1.1.2` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-Атрибутов нет.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 
 ### Методы
 
-- `edit(element: Element, options: object)` — возвращает `object`. Начинает редактирование отображённого заголовка или абзаца; возвращает {element, commit, cancel, value}.
+- `edit(element: object, options: object)` — возвращает `object`. Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры content, nodeId, label, marks, links, messages
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-inline-edit-input` — `detail`: `{ node_id: string|null, content: array }`. Актуальное нормализованное содержимое после изменения. Отправляется на редактируемом элементе; всплывает до `document`.
-- `sf-inline-edit-commit` — `detail`: `{ node_id: string|null, content: array }`. Редактирование завершено нажатием Enter или уходом фокуса; сохраняет хост. Отправляется на редактируемом элементе; всплывает до `document`.
-- `sf-inline-edit-cancel` — `detail`: `{ node_id?: string|null }`. Редактирование отменено нажатием Escape; исходный HTML восстановлен. Отправляется на редактируемом элементе; всплывает до `document`.
+- `sf-inline-editor-input` — `detail`: `{ id: string|null, content: array }`. Текст изменился во время правки; отправляется на редактируемом элементе
+- `sf-inline-editor-change` — `detail`: `{ id: string|null, content: array }`. Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе
+- `sf-inline-editor-cancel` — `detail`: `{ id: string|null }`. Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе
+- `sf-inline-edit-input` — `detail`: `{ node_id: string|null, content: array }`. Псевдоним с датой для `sf-inline-editor-input` до 2026-12-01: текущее нормализованное содержимое после изменения. Отправляется на редактируемом элементе и всплывает до document.
+- `sf-inline-edit-commit` — `detail`: `{ node_id: string|null, content: array }`. Псевдоним с датой для `sf-inline-editor-change` до 2026-12-01: правка завершена клавишей Enter или уходом фокуса; хост сохраняет. Отправляется на редактируемом элементе и всплывает до document.
+- `sf-inline-edit-cancel` — `detail`: `{ node_id?: string|null }`. Псевдоним с датой для `sf-inline-editor-cancel` до 2026-12-01: правка отменена клавишей Escape, исходный HTML восстановлен. Отправляется на редактируемом элементе и всплывает до document.
 
 ### Доступность
 
+- Роль: нет (`none`).
 - Доступное имя: внутренний.
 - Клавиши: `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape`.
 - Фокус: Носитель sf-inline-editor скрыт и не имеет роли. Во время редактирования редактируемый элемент становится подписанным role=textbox с видимым контуром; панель форматирования имеет состояния aria-pressed и aria-keyshortcuts. Enter фиксирует, Escape отменяет, потеря фокуса фиксирует; ввод через IME никогда не прерывается.
@@ -133,8 +139,8 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/inline-editor`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-inline-editor`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/inline-editor`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-inline-editor`
 
 ## См. также
 

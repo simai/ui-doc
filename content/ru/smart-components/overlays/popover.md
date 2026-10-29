@@ -86,7 +86,7 @@ popover.addEventListener('sf-popover-close', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -94,8 +94,8 @@ popover.addEventListener('sf-popover-close', () => {
 |:---|:---|
 | Тег | `<sf-popover>` |
 | Назначение | Поверхность, привязанная к элементу управления, который передаёт потребитель, со своим состоянием открытия, закрытием и возвратом фокуса. |
-| Контракт | `smart.popover`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.popover`, версия `1.1.2` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -103,12 +103,15 @@ popover.addEventListener('sf-popover-close', () => {
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона.
-- `open` — `boolean`, по умолчанию `false`. Показана ли поверхность. Отражается в атрибуте, поэтому потребитель может читать и задавать его.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `placement` — `string`, по умолчанию `bottom-end`, значения: `bottom-start`, `bottom-end`, `top-start`, `top-end`, `inline-start`, `inline-end`. От какого угла триггера отображается поверхность.
 - `label` — `string`, по умолчанию пусто. Доступное имя поверхности. Поверхность с ролью, но без имени объявляется как безымянная.
 - `width` — `string`, по умолчанию пусто. Собственная ширина. Без неё поверхность принимает ширину самой длинной строки, и список имён получается широким и неровным.
 - `dismissible` — `boolean`, по умолчанию `true`. Esc и нажатие снаружи закрывают её. Потребитель, который сам обрабатывает эти действия, отключает это и вызывает close(), когда решит.
 - `surface-role` — `string`, по умолчанию `dialog`, значения: `dialog`, `menu`, `listbox`, `group`. Чем поверхность является для читателя: dialog, menu, listbox или group. Задаётся на sf-popover; поверхность получает role, а триггер — aria-haspopup.
+- `unsaved` — `boolean`, по умолчанию `false`.
+- `open` — `boolean`, по умолчанию `false`. Показана ли поверхность. Отражается в атрибуте, поэтому потребитель может читать и задавать его.
 
 Прежние имена:
 
@@ -118,17 +121,19 @@ popover.addEventListener('sf-popover-close', () => {
 
 ### Методы
 
-- `toggle(force?: boolean)` — возвращает `boolean`. Открыть или закрыть; логическое значение задаёт одно из состояний принудительно.
+- `toggle(force: boolean)` — возвращает `boolean`. Открыть или закрыть; логическое значение задаёт одно из состояний принудительно.
 - `show()` — возвращает `boolean`. Открыть.
-- `close()` — возвращает `boolean`. Закрыть.
+- `close(reason: any)` — возвращает `boolean`. Закрыть.
 - `returnFocus()` — возвращает `null`. Вернуть фокус на триггер.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-popover-open` — `detail`: `{ component: object, tagName: string, template: string, open: boolean }`. Поверхность открылась.
-- `sf-popover-close` — `detail`: `{ component: object, tagName: string, template: string, open: boolean }`. Поверхность закрылась.
+- `sf-popover-open` — `detail`: `{  }`. Поверхность открылась.
+- `sf-popover-opened` — `detail`: `{  }`. opened (словарь).
+- `sf-popover-close` — `detail`: `{ reason: any, unsaved: boolean }`. Поверхность закрылась.
+- `sf-popover-closed` — `detail`: `{ reason: any }`. closed (словарь).
 
 ### Минимальная разметка
 
@@ -138,8 +143,8 @@ popover.addEventListener('sf-popover-close', () => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/popover`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-popover`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/popover`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-popover`
 
 ## См. также
 

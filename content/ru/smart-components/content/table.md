@@ -777,7 +777,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -787,7 +787,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 |:---|:---|
 | Тег | `<sf-data-view>` |
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
-| Контракт | `smart.data-view-composite`, версия `1.0.0` |
+| Контракт | `smart.data-view-composite`, версия `1.6.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
@@ -798,6 +798,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `aria-label` — `string`, по умолчанию `Представление данных`.
 - `chrome` — `string`, по умолчанию `toolbar pagination select settings`. Какие элементы оформления отображает список, через пробел. `toolbar` и `pagination` — собственные части этого элемента; `select` и `settings` — два служебных столбца таблицы, они указаны здесь, потому что относятся к той же категории: столбец флажков нужен для панели групповых действий, столбец с шестерёнкой — для доступа к настройкам столбцов, а во встроенном списке нет ни того, ни другого. Пустое значение не отображает ничего из этого — для списка внутри блока, у которого уже есть заголовок. Значения задаются явно, а не выводятся из панели инструментов, чтобы потребитель мог запросить во встроенном списке только выделение. `status` не входит в список и не отключается: список, который не может сообщить об ошибке загрузки, выглядел бы пустым при сбое.
 - `row-cap` — `integer`, по умолчанию `0`, значения: от 0. Максимальное число строк во встроенном списке; если часть скрыта, под ним отображается действие «показать все». Ноль — без ограничения, как в списке на странице. Отделено от `page-size` — постраничного вывода хоста, — потому что ограничение определяет, сколько элемент показывает из уже имеющейся страницы.
+- `expected-columns` — `integer`, по умолчанию `4`, значения: от 1. Сколько колонок рисует скелетон до первого ответа хоста: это форма скелетона, а не предел — ответ приносит свои колонки. Их знает страница или сервер, который выводит коллекцию; с правильным числом список не сдвигается, когда приходят данные.
 - `port-owner` — `string`, по умолчанию пусто. Составной компонент, в который встроен этот список; передаётся с запросом к порту хоста, чтобы хост знал, на какой обмен отвечает. Указывает составной компонент, а не элемент, поэтому списку, встроенному в другое место, не нужно новое значение.
 - `port-record` — `string`, по умолчанию пусто. Запись, которую показывает встраивающий составной компонент; передаётся с запросом к порту хоста.
 - `port-group` — `string`, по умолчанию пусто. Группа внутри составного компонента, которую представляет этот список; передаётся с запросом к порту хоста.
@@ -824,6 +825,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `pagination-aria-label` — `string`. Передаётся как aria-label в пагинацию, которую рисует представление (собственный aria-label представления называет само представление).
 - `preferences-key` — `string`, по умолчанию пусто. Ключ, под которым хранится персональный вид этого списка (SF.Preferences, `sf-table/<key>`): раскладка таблицы, сортировка и размер страницы; применяется до первой отрисовки и первого запроса. Обычно это коллекция.
 - `accept-files` — `boolean`, по умолчанию `false`. Файлы, перетащенные с компьютера на представление, загружает хост: пока файлы над ним, видна зона сброса, а sf-data-view-files-drop {files} сообщает, что их отпустили.
+- `collection` — `string`, по умолчанию пусто. id коллекции хоста; ключ предпочтений вида по умолчанию берётся из него (component.json settings.collection).
+- `current` — `string`, по умолчанию пусто. id записи, открытой на странице: её строка несёт `aria-current`. Запись этого значения ничего не отправляет (component.json settings.current).
 
 #### Свойства в документе макета
 
@@ -874,6 +877,9 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-data-view-files-drop` — `detail`: `{ files: array }`. На представление с accept-files отпустили файлы с компьютера. Представление ничего не загружает, и файлы не идут через порт; их загружает хост.
 - `sf-table-cell-set` — `detail`: `{ id: string|integer, key: string, value: any, revision: string|integer|null }`. Событие таблицы, которое слушает представление: нажат флажок в ячейке. Представление отправляет record.set порта simai.dataview-port 1.11.0 (возможность inline-edit) с record_id, key, value и revision и возвращает флажок, если ответ не applied.
 - `sf-table-rows-reorder` — `detail`: `{ ids: array, before: string|null, order: array }`. Событие таблицы, которое слушает представление: строки перетащили в другой порядок. Представление сразу показывает новый порядок и отправляет record.reorder порта simai.dataview-port 1.11.0 (возможность row-reorder); отказ или конфликт возвращает прежний порядок.
+- `sf-data-view-open` — `detail`: `{ id: any }`. Действие «просмотр» строки просит открыть её запись, словарь §5 open `{id}`: отменяемая просьба; за ней следует `record.open` хоста, если ни один обработчик её не отклонил.
+- `sf-data-view-deleted` — `detail`: `{ ids: array }`. Факт после применённого удаления, словарь §4: `{ids}`.
+- `sf-data-view-tree` — `detail`: `{ intent: string, payload?: object }`. Объявленные намерения порта дерева, `{intent, payload}`; прежнее `sf-table-tree-intent` отправляется один раз после него до 2026-12-01 (aliases.json).
 
 #### Доступность
 
@@ -890,8 +896,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/data-view`
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/data-view`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -899,7 +905,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 |:---|:---|
 | Тег | `<sf-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.data-view`, версия `1.9.0` |
+| Контракт | `smart.data-view`, версия `1.13.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
@@ -930,6 +936,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `data-state` — `string`, по умолчанию `auto`, значения: `auto`, `loading`, `populated`, `empty`, `error`.
 - `loading-text` — `string`, по умолчанию `Loading`.
 - `empty-text` — `string`, по умолчанию `No data`.
+- `empty-description` — `string`, по умолчанию пусто.
 - `error-text` — `string`, по умолчанию `The data could not be loaded`.
 - `retry-text` — `string`, по умолчанию `Try again`.
 - `toolbar` — `boolean`, по умолчанию `true`. Показывает встроенную панель инструментов; составной компонент может передать свою панель через слот.
@@ -949,12 +956,13 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `drag-rows` — `boolean`, по умолчанию `false`. Строки можно перетащить из списка как записи (application/x-sf-records+json): запись строки или все выбранные записи, если строка среди них.
 - `row-reorder` — `boolean`, по умолчанию `false`. Строки можно переставить, перетаскивая их внутри списка; отпускание отправляет sf-table-rows-reorder {ids, before, order}. Представление данных ставит атрибут, когда хост предлагает возможность row-reorder.
 - `inline-edit` — `boolean`, по умолчанию `false`. Логическая ячейка, поле которой запись называет в `editable`, становится флажком; нажатие отправляет sf-table-cell-set {id, key, value, revision}, и ячейка ждёт ответа хоста. Представление данных ставит атрибут, когда хост предлагает возможность inline-edit.
+- `current` — `string`, по умолчанию пусто. id строки, открытой на странице: эта строка несёт `aria-current` и `data-current`. Запись значения отмечает строку, но не переводит на неё фокус и не отправляет события (component.json settings.current).
 
 #### Свойства в документе макета
 
 Узел типа `smart.data-view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `aria-label`, `table-settings-key`, `selectable`, `toolbar`, `settings`, `actions`, `row-actions`, `pagin`, `pagination-total`, `pagination-page-size`, `page-sizes`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `loading-text`, `empty-text`, `error-text`, `retry-text`, `context-menu-columns`, `data-state`;
+- свойства: `aria-label`, `table-settings-key`, `selectable`, `toolbar`, `settings`, `actions`, `row-actions`, `pagin`, `pagination-total`, `pagination-page-size`, `page-sizes`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `loading-text`, `empty-text`, `empty-description`, `error-text`, `retry-text`, `context-menu-columns`, `data-state`;
 - данные: `columns`, `rows`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
@@ -1017,6 +1025,16 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-table-rows-drag` — `detail`: `{ ids: array, source: string|null }`. Строки с drag-rows начали перетаскивать из списка к цели вроде дерева; те же {ids, source} лежат в данных перетаскивания как application/x-sf-records+json.
 - `sf-table-rows-reorder` — `detail`: `{ ids?: array, before?: any, order?: array }`. Строки перетащили в другой порядок внутри списка: перемещённые идентификаторы, строка, перед которой они теперь стоят (null — в конце), и весь показанный порядок.
 - `sf-table-cell-set` — `detail`: `{ id?: any, key?: string, value?: any, revision?: any }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
+- `sf-table-apply` — `detail`: `{ action: string, scope: any, ids: array, revisions?: object }`. Действие строки или выбранных, словарь §5 apply: `{action, scope: entry | selection, ids, revisions}`. Решает хост; отправка события — ещё не успех. Прежнее имя `sf-table-action-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-select` — `detail`: `{ ids: array }`. Отмеченные строки изменились, словарь §5 select `{ids}`: один раз на каждое изменение явного выбора, включая очистку. Прежнее имя `sf-port-output` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-save` — `detail`: `{ kind: any, columnSettings?: object }`. Настройки колонок человека, словарь §5 save `{kind: columns, reason, columnSettings, tableSettingsKey}`. Прежнее имя `sf-table-column-settings-change` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-create` — `detail`: `{ item?: string|null }`. Кнопка создания или один из её видов, словарь §5 create `{item}`. Прежнее имя `sf-table-create-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-query` — `detail`: `{ reason?: string, sequence?: integer }`. Контекстный запрос входного порта композиции, словарь §5.1 query `{reason, context, sequence}`. Прежнее имя `sf-table-query-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-refresh` — `detail`: `{  }`. Кнопка повтора у списка с ошибкой, словарь §5 refresh. Прежнее имя `sf-table-retry` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-expand` — `detail`: `{ id: any, expanded?: boolean }`. Строка дерева открылась или закрылась, словарь §5 expand `{id, expanded}`. Прежнее имя `sf-table-tree-toggle` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-load-more` — `detail`: `{ direction?: any }`. Следующая страница уровня дерева, словарь §5 load-more `{direction: after, parent, cursor}`. Прежнее имя `sf-table-tree-more` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-move` — `detail`: `{ ids: array }`. Строки переставлены, словарь §5 move `{ids, before, order}`. Прежнее имя `sf-table-rows-reorder` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-window` — `detail`: `{ first: integer, last: integer }`. Изменились нарисованные строки длинного списка (стандарт 1.3.8 §18.4): `{first, last}`, номера строк в списке.
 
 #### Персональный вид
 
@@ -1045,5 +1063,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/table`
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/table`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/table/rule.js#name=cl-table`

@@ -57,7 +57,12 @@ const cssFiles = (root) => {
 export const build = (uiRoot) => {
   const targets = {};
   for (const file of cssFiles(uiRoot)) {
-    const css = fs.readFileSync(file, 'utf8');
+    // A root block may stand between a hint and the rule it describes: a
+    // component publishes its box as variables on :root inside its own layer
+    // (sf-pagination's row height since ui-bc1fb36ec8f1). It names no element,
+    // so it is taken out before the hints are read; otherwise the hint binds to
+    // it and the element it describes silently loses its expectation.
+    const css = fs.readFileSync(file, 'utf8').replace(/:root\s*\{[^{}]*\}\s*/gu, '');
     // A hint may close a longer comment that says why the rule is laid out so:
     // prose first, then `utility-hint:` and the list.
     for (const rule of css.matchAll(/\/\*[^*]*?utility-hint:([^*]*)\*\/\s*\n([^{]*)\{/gu)) {
@@ -68,7 +73,8 @@ export const build = (uiRoot) => {
         if (pair) expect[pair[0]] = pair[1];
       }
       if (Object.keys(expect).length === 0) continue;
-      for (const branch of rule[2].split(',')) {
+      // Prose between the hint and the rule is not a selector.
+      for (const branch of rule[2].replace(/\/\*[\s\S]*?\*\//gu, ' ').split(',')) {
         // Only the last simple selector names the element being laid out. What
         // comes before it is scope -- and in the published CSS that scope is
         // often direction scaffolding, `html:not([dir="rtl"]) …`, split out of a

@@ -211,12 +211,34 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-file-upload`, `.sf-upload-progress`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-file-upload`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-file-upload-background-color` | Заливка области в покое; у наведения, фокуса, перетаскивания над ней и выключенного состояния свои. | `var(--sf-surface-0)` |
+| `--sf-file-upload-border-color` | Граница области в покое. | `var(--sf-outline)` |
+| `--sf-file-upload-radius` | Скругление углов области; хуки отдельных углов по-прежнему важнее. | `var(--sf-radius--surface)` |
+| `--sf-file-upload-link-color` | Цвет слов, которые открывают диалог выбора файла. | `var(--sf-primary)` |
+| `--sf-file-upload-text-color` | Цвет слов после ссылки. | `var(--sf-on-surface-variant)` |
+| `--sf-file-upload-dragged-over-background-color` | Заливка области, пока над ней держат файлы. | `var(--sf-primary-transparent-select)` |
+| `--sf-file-upload-dragged-over-border-color` | Граница области, пока над ней держат файлы. | `var(--sf-outline-primary)` |
+
+```css
+.sf-file-upload {
+  --sf-file-upload-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-file-upload`, `.sf-upload-progress`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-file-upload--background-color` | `var(--sf-surface-0)` | `background-color` |
-| `--sf-file-upload--border-color` | `var(--sf-outline)` | `border-color` |
+| `--sf-file-upload--background-color` | `var(--sf-file-upload-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-file-upload--border-color` | `var(--sf-file-upload-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-file-upload--gap` | не задана; задают модификаторы, например `.sf-file-upload--size-1`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-file-upload--padding-bottom` | не задана; задают модификаторы, например `.sf-file-upload--size-1`: `var(--sf-space-1)` | `padding-bottom` |
 | `--sf-file-upload--padding-inline-end` | не задана; задают модификаторы, например `.sf-file-upload--size-1`: `var(--sf-space-3)` | `padding-inline-end` |
@@ -224,14 +246,14 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 | `--sf-file-upload--padding-top` | не задана; задают модификаторы, например `.sf-file-upload--size-1`: `var(--sf-space-1)` | `padding-top` |
 | `--sf-file-upload-block--background-color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-block`: `transparent` | `background-color` |
 | `--sf-file-upload-block--gap` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-block`: `var(--sf-space-1/4)` | `gap` |
-| `--sf-file-upload-block-text--color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-block-text`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-file-upload-block-text--color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-block-text`: `var(--sf-file-upload-text-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-file-upload-block-text--font-family` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-block-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-file-upload-block-text--font-size` | не задана; задают модификаторы, например `.sf-file-upload--size-1 .sf-file-upload-block-text`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-file-upload-block-text--font-weight` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-block-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-file-upload-block-text--line-height` | не задана; задают модификаторы, например `.sf-file-upload--size-1 .sf-file-upload-block-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-file-upload-bottom--background-color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-bottom`: `transparent` | `background-color` |
 | `--sf-file-upload-bottom--gap` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-bottom`: `var(--sf-space-1/4)` | `gap` |
-| `--sf-file-upload-link--color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-link`: `var(--sf-primary)` | `color` |
+| `--sf-file-upload-link--color` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-link`: `var(--sf-file-upload-link-color, var(--sf-primary))` | `color` |
 | `--sf-file-upload-link--font-family` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-link`: `var(--sf-text--family)` | `font-family` |
 | `--sf-file-upload-link--font-size` | не задана; задают модификаторы, например `.sf-file-upload--size-1 .sf-file-upload-link`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-file-upload-link--font-weight` | не задана; задают модификаторы, например `.sf-file-upload .sf-file-upload-link`: `var(--sf-font-weight-medium)` | `font-weight` |

@@ -71,7 +71,7 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -79,31 +79,41 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 |:---|:---|
 | Тег | `<sf-profile-picker>` |
 | Назначение | Один способ выбрать, создать, переименовать, удалить и сбросить профиль: кнопка, похожая на поле, с названием текущего профиля, и панель, где всё делается на месте. Профили и права принадлежат хосту; компонент сообщает, что попросил человек. |
-| Контракт | `smart.profile-picker`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.profile-picker`, версия `1.1.6` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `label` — `string`, по умолчанию пусто. Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `label` — `string`. Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы.
 - `size` — `string`, по умолчанию `1/2`, значения: `1/2`, `1`.
-- `current` — `string`, по умолчанию пусто. Идентификатор текущего профиля.
 - `resettable` — `boolean`, по умолчанию `false`. Показывает внизу «Сбросить к стандартному».
 - `message` — `string`, по умолчанию пусто. Почему хост отказал в последнем действии; показывается в панели.
 - `disabled` — `boolean`, по умолчанию `false`.
-- `root-class` — `string`, по умолчанию пусто.
-- `template` — `string`, по умолчанию `default`.
+- `current` — `string`, по умолчанию пусто. Идентификатор текущего профиля.
+- `profiles` — `array`.
+- `rights` — `object`.
 
 ### Методы
 
-Публичных методов нет.
+- `open()` — возвращает `object`. Действие open.
+- `close()` — возвращает `object`. Действие close.
+- `toggle()` — возвращает `object`. Действие toggle.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-profile-picker-select` — `detail`: `{ id: string, ids: array }`. select (словарь).
+- `sf-profile-picker-create` — `detail`: `{ label: string, shared: boolean, from: string, kind: any }`. create (словарь).
+- `sf-profile-picker-rename` — `detail`: `{ id: string, label: string, title: string }`. rename (словарь).
+- `sf-profile-picker-delete` — `detail`: `{ id: string, ids: array }`. delete (словарь).
+- `sf-profile-picker-reset` — `detail`: `{ id: string }`. reset (словарь).
 - `sf-profile-select` — `detail`: `{ id: string }`. Человек выбрал профиль.
 - `sf-profile-create` — `detail`: `{ label: string, shared: boolean, from?: string }`. Человек попросил новый профиль — копию текущего.
 - `sf-profile-rename` — `detail`: `{ id: string, label: string }`. Человек переименовал профиль.
@@ -125,8 +135,8 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/profile-picker`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-profile-picker`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/profile-picker`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-profile-picker`
 
 ## См. также
 

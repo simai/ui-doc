@@ -100,7 +100,7 @@ price.setValue([10000, 30000]);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,26 +108,27 @@ price.setValue([10000, 30000]);
 |:---|:---|
 | Тег | `<sf-range-slider>` |
 | Назначение | Слайдер для одного числа или диапазона из двух на дорожке: перетаскивание, щелчок или клавиши сдвигают ручку на step, заливка показывает выбранную часть, а значение можно показать текстом или подсказкой у каждой ручки. |
-| Контракт | `smart.range-slider`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.range-slider`, версия `1.1.2` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
-- `min` — `string`, по умолчанию `0`.
-- `max` — `string`, по умолчанию `100`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `min` — `number`, по умолчанию `0`.
+- `max` — `number`, по умолчанию `100`.
 - `start` — `string`, по умолчанию пусто.
-- `value` — `string`, по умолчанию пусто.
 - `multiple` — `boolean`, по умолчанию `false`.
-- `step` — `string`, по умолчанию пусто.
+- `step` — `number`.
 - `margin` — `string`, по умолчанию пусто.
 - `connect` — `string`, по умолчанию пусто.
 - `keyboard` — `boolean`, по умолчанию `true`.
 - `label` — `string`, по умолчанию `none`, значения: `none`, `text`, `tooltip`. Как каждая ручка показывает своё значение: никак, текстом рядом с ней или подсказкой.
-- `prefix` — `string`, по умолчанию пусто.
+- `prefix-text` — `string`, по умолчанию пусто.
 - `suffix` — `string`, по умолчанию пусто.
 - `lower-label` — `string`, по умолчанию пусто.
 - `upper-label` — `string`, по умолчанию пусто.
@@ -136,7 +137,9 @@ price.setValue([10000, 30000]);
 - `text-position` — `string`, по умолчанию пусто.
 - `label-position` — `string`, по умолчанию пусто.
 - `disabled` — `boolean`, по умолчанию `false`.
-- `root-class` — `string`, по умолчанию пусто.
+- `value` — `string`, по умолчанию пусто.
+- `aria-label` — `string`, по умолчанию пусто.
+- `prefix` — `string`, по умолчанию пусто. Псевдоним с датой для `prefix-text` до 2026-12-01.
 
 ### Методы
 
@@ -160,7 +163,7 @@ price.setValue([10000, 30000]);
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `change` — `detail`: `{ component: object, values: array, value: number|array, handleCount: number, handle: number }`. Пользователь зафиксировал значение (конец перетаскивания, щелчок, клавиша); всплывает от корня слайдера с `values`, `value`, `handleCount` и `handle`. Значение, установленное из кода, не является изменением. Имя для привязки.
+- `change` — `detail`: `{ values: array, value: object, handleCount: number, handle: number }`. Пользователь зафиксировал значение (конец перетаскивания, щелчок, клавиша); всплывает от корня слайдера с `values`, `value`, `handleCount` и `handle`. Значение, установленное из кода, не является изменением. Имя для привязки.
 - `sf-range-slider-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 - `onSliderChange` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
@@ -179,5 +182,5 @@ price.setValue([10000, 30000]);
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/range-slider`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-range-slider`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/range-slider`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-range-slider`

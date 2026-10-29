@@ -76,7 +76,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -84,18 +84,20 @@ document.addEventListener('sf-download-file:click', async (event) => {
 |:---|:---|
 | Тег | `<sf-download-file>` |
 | Назначение | Нативная загрузка файла или подготовка файла силами приложения. |
-| Контракт | `smart.download-file`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.download-file`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`. Существующая шкала размеров компонентов от компактного до крупного.
 - `file-name` — `string`, по умолчанию `File.pdf`. Видимое имя файла и нативное имя для скачивания по умолчанию.
-- `file-size` — `string`, по умолчанию пусто. Известный размер в удобочитаемом виде. Передавайте, если он доступен, чтобы не определять его.
+- `file-size` — `string`, по умолчанию пусто. Размер текстом (2,4 МБ); пусто при заданном href — размер спрашивается одним запросом HEAD
 - `icon` — `string`, по умолчанию `download`. Имя декоративной иконки.
 - `href` — `string`, по умолчанию пусто. Реальное место ресурса; в доступном состоянии отрисовывает нативную ссылку (`a`).
 - `download` — `boolean`, по умолчанию `false`. Применяет к ссылке нативную семантику скачивания.
@@ -111,10 +113,12 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-download-file-download` — `detail`: `{ href: string, fileName: string, download: boolean }`. download (словарь).
 - `sf-download-file:click` — `detail`: `{ href?: string, fileName?: string, download?: boolean }`. Отправляется один раз для доступного нативного назначения или действия, которым управляет приложение, от отрисованного корня .sf-download-file; всплывает до хост-элемента, не с composed: true и не отменяемое.
 
 ### Доступность
 
+- Роль: ссылка (`link`).
 - Доступное имя: рекомендуется.
 - Клавиши: `Tab`.
 - Фокус: Сохраняет видимый фокус на активном элементе управления.
@@ -127,8 +131,8 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/download-file`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-download-file`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/download-file`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-download-file`
 
 ## См. также
 

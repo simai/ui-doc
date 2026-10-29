@@ -67,7 +67,7 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -75,34 +75,37 @@ document.querySelector('#next').addEventListener('click', () => {
 |:---|:---|
 | Тег | `<sf-steps>` |
 | Назначение | Ряд подписанных кнопок шагов, разделённых иконкой, для многошагового процесса: отмечает текущий, завершённые и ошибочные шаги и переходит к доступному шагу при нажатии. |
-| Контракт | `smart.steps`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.steps`, версия `1.1.3` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `size` — `string`, по умолчанию `1`, значения: `1`, `1/2`.
-- `items` — `string`, по умолчанию `[]`.
-- `current` — `number`, по умолчанию `0`.
-- `error-step` — `string`, по умолчанию пусто.
-- `separator-icon` — `string`, по умолчанию `chevron_right`.
-- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Steps»).
-- `completed-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Completed»).
-- `error-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Error»).
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
 - `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `size` — `string`, по умолчанию `1`, значения: `1`, `1/2`.
+- `error-step` — `integer`, значения: от 0.
+- `separator-icon` — `string`, по умолчанию `chevron_right`.
+- `completed-label` — `string`. Пусто — текст на языке страницы (по-английски «Completed»).
+- `error-label` — `string`. Пусто — текст на языке страницы (по-английски «Error»).
+- `current` — `integer`, по умолчанию `0`, значения: от 0.
+- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Steps»).
+- `items` — `array`, по умолчанию `[]`.
 
 ### Методы
 
+- `goToStep(index: number)` — возвращает `object`. Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-step-change.
 - `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label::disabled, соединённые через |. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым.
-- `goToStep(index: number|string)` — возвращает `object`. Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-step-change.
 - `onStepChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-step-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-steps-change` — `detail`: `{ previous: number, current: number, item: object, items: array }`. change (словарь).
 - `sf-step-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
 
 ### Доступность
@@ -120,8 +123,8 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/steps`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/steps`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-steps`
 
 ## См. также
 

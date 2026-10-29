@@ -80,7 +80,7 @@ crumbs.onItemClick((item, detail) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,29 +88,30 @@ crumbs.onItemClick((item, detail) => {
 |:---|:---|
 | Тег | `<sf-breadcrumbs>` |
 | Назначение | Показывает место текущей страницы в иерархии цепочкой нативных ссылок, построенной из items, атрибута items или дочерних sf-breadcrumbs-item. У длинной цепочки середина сворачивается в кнопку-многоточие (max-items, по умолчанию 4), которая раскрывается на месте. |
-| Контракт | `smart.breadcrumbs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.breadcrumbs`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
-- `items` — `string`, по умолчанию `[]`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `separator-icon` — `string`, по умолчанию `chevron_right`.
 - `home-icon` — `string`, по умолчанию `home`.
 - `home-label` — `string`, по умолчанию пусто.
-- `root-class` — `string`, по умолчанию пусто.
 - `item-class` — `string`, по умолчанию пусто.
 - `link-class` — `string`, по умолчанию пусто.
 - `current-class` — `string`, по умолчанию пусто.
 - `separator-class` — `string`, по умолчанию пусто.
 - `container-class` — `string`, по умолчанию пусто.
-- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Breadcrumb»).
-- `expand-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Show hidden breadcrumbs»).
+- `expand-label` — `string`. Пусто — текст на языке страницы (по-английски «Show hidden breadcrumbs»).
 - `expand-on-ellipsis` — `boolean`, по умолчанию `true`.
-- `max-items` — `number`, по умолчанию `4`.
+- `max-items` — `integer`, по умолчанию `4`, значения: от 0.
+- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Breadcrumb»).
+- `items` — `array`, по умолчанию `[]`.
 
 ### Методы
 
@@ -123,6 +124,7 @@ crumbs.onItemClick((item, detail) => {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-breadcrumbs-press` — `detail`: `{ item: object, index: number, items: array }`. press (словарь).
 - `sf-breadcrumb-click` — `detail`: `{ component?: any, tagName?: string, template?: string, item?: object, index?: number, items?: array, originalEvent?: any }`. Нажат пункт. Всплывает, с composed: true и отменяемое: preventDefault() на пункте-многоточии оставляет его свёрнутым. У отключённых и текущих пунктов нативный переход отменяется до отправки события.
 
 ### Доступность
@@ -140,8 +142,8 @@ crumbs.onItemClick((item, detail) => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/breadcrumbs`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/breadcrumbs`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-breadcrumbs`
 
 ## См. также
 

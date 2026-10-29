@@ -256,7 +256,7 @@ layer.addEventListener('keydown', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -264,31 +264,32 @@ layer.addEventListener('keydown', (event) => {
 |:---|:---|
 | Тег | `<sf-context-menu>` |
 | Назначение | Меню действий Framework: пункты данными со значком, подписью, значением, сочетанием клавиш, отметкой, подменю, разделителем и заголовком; openFor() открывает его в верхнем слое с привязкой, клавиатурой, переходом по первой букве и возвратом фокуса. Хост может по-прежнему рисовать свои пункты и сам управлять жизненным циклом. |
-| Контракт | `smart.context-menu`, версия `1.3.1` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.context-menu`, версия `1.4.4` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `position` — `string`, по умолчанию пусто, значения: пусто, `inline-start`, `inline-start-top`, `inline-start-bottom`, `inline-end`, `inline-end-top`, `inline-end-bottom`, `top`, `top-inline-start`, `top-inline-end`, `bottom`, `bottom-inline-start`, `bottom-inline-end`, `start`, `end`, `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-start`, `left-end`, `right-start`, `right-end`, `inline-start-start`, `inline-start-end`, `inline-end-start`, `inline-end-end`. Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует.
 - `tooltip` — `boolean`, по умолчанию `true`. Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует.
 - `text` — `string`, по умолчанию пусто.
-- `aria-label` — `string`, по умолчанию пусто.
-- `items` — `array` из `object`, по умолчанию `[]`.
-- `role` — `string`, по умолчанию `menu`.
 - `content-class` — `string`, по умолчанию пусто.
-- `root-class` — `string`, по умолчанию пусто.
-- `entries` — `array` из `object`, по умолчанию `[]`. Меню данными (свойством или JSON в атрибуте). См. item_contract. Если задано, заменяет items и слот содержимого.
 - `popup` — `boolean`, по умолчанию `false`. Не рисуется, пока его не откроет openFor(). Меню без этого атрибута рисуется на месте.
-- `search` — `object`, по умолчанию `null`. {placeholder, empty, remote}: поле поиска над строками (задаётся свойством). По умолчанию поиск локальный; с remote: true меню поднимает sf-context-menu-search {query} и показывает пункты, которые задаёт хост. Пункт подменю передаёт его через `search`.
 - `size` — `string`, по умолчанию `1/2`, значения: `1/2`, `1`. Размер меню: строки высотой с поле того же размера, текст, отступы, поиск и подвал. Подменю берёт размер родительского меню.
 - `width` — `string`, по умолчанию `content`. Какой ширины openFor() открывает меню: content — по самой длинной строке, в пределах --sf-context-menu--min-inline-size и --sf-context-menu--max-inline-size; trigger — точно по элементу, который его открыл (длинная строка обрезается многоточием); или длина CSS. openFor(anchor, {width}) переопределяет значение.
 - `tabs` — `string` | `array`, по умолчанию пусто. Панель с вкладками: подписи через | или свойство [{id, label}]. Шапка (вкладки и кнопка закрытия) и подвал не прокручиваются, прокручивается тело; ширина панели постоянна (ступень лестницы размеров или width) и не зависит от содержимого вкладки.
 - `active-tab` — `string`, по умолчанию пусто. id или номер выбранной вкладки; хост выводит строки этой вкладки в слот content.
 - `closable` — `boolean`, по умолчанию `false`. Кнопка закрытия в конце шапки панели.
+- `aria-label` — `string`, по умолчанию пусто.
+- `role` — `string`, по умолчанию `menu`.
+- `items` — `array` из `object`, по умолчанию `[]`.
+- `entries` — `array` из `object`, по умолчанию `[]`. Меню данными (свойством или JSON в атрибуте). См. item_contract. Если задано, заменяет items и слот содержимого.
+- `search` — `object`. {placeholder, empty, remote}: поле поиска над строками (задаётся свойством). По умолчанию поиск локальный; с remote: true меню поднимает sf-context-menu-search {query} и показывает пункты, которые задаёт хост. Пункт подменю передаёт его через `search`.
 
 Прежние имена:
 
@@ -311,22 +312,24 @@ layer.addEventListener('keydown', (event) => {
 
 ### Методы
 
-- `focus(options?: object)` — возвращает `null`. Переводит фокус на текущий доступный пункт. Хост, который рисует меню сам, ждёт отрисовки и сам отвечает за открытие и закрытие.
-- `openFor(anchor: Element, options?: object)` — возвращает `Promise<boolean>`. Открыть рядом с элементом: в верхнем слое, с привязкой через SF.Position с переворотом и сдвигом, фокус на первом пункте (или 'last', или 'none'). Дальше меню управляет собой само: Escape, Tab, нажатие снаружи и выбор пункта закрывают его и возвращают фокус — туда, где он был, или на элемент управления якоря, если фокуса нигде не было.
-- `toggleFor(anchor: Element, options?: object)` — возвращает `Promise<boolean>`. Закрывает меню, если оно уже открыто у этого элемента, иначе вызывает openFor().
-- `close(options?: object)` — возвращает `boolean`. Закрывает это меню и все подменю.
+- `openFor(anchor: object, options: object)` — возвращает `Promise<boolean>`. Открыть рядом с элементом: в верхнем слое, с привязкой через SF.Position с переворотом и сдвигом, фокус на первом пункте (или 'last', или 'none'). Дальше меню управляет собой само: Escape, Tab, нажатие снаружи и выбор пункта закрывают его и возвращают фокус — туда, где он был, или на элемент управления якоря, если фокуса нигде не было.
+- `toggleFor(anchor: object, options: object)` — возвращает `Promise<boolean>`. Закрывает меню, если оно уже открыто у этого элемента, иначе вызывает openFor().
+- `close(reason: any)` — возвращает `boolean`. Закрывает это меню и все подменю.
 - `chooseTab(index: number)` — возвращает `object`. Выбирает вкладку по номеру и отправляет sf-context-menu-tab.
 - `requestClose()` — возвращает `boolean`. Закрывает меню, открытое самим компонентом; для меню, которое поставил хост, отправляет sf-context-menu-close, чтобы его закрыл хост.
+- `focus(options?: object)` — возвращает `null`. Переводит фокус на текущий доступный пункт. Хост, который рисует меню сам, ждёт отрисовки и сам отвечает за открытие и закрытие.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-context-menu-select` — `detail`: `{ id?: string|null, entry?: object, checked?: boolean|null, group?: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
-- `sf-context-menu-open` — `detail`: `null`. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
-- `sf-context-menu-close` — `detail`: `null`. Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся.
-- `sf-context-menu-search` — `detail`: `{ query?: string }`. Запрос поиска, на который отвечает хост (search.remote).
-- `sf-context-menu-tab` — `detail`: `{ id?: string, index?: number }`. Выбрана вкладка панели; хост показывает её строки.
+- `sf-context-menu-select` — `detail`: `{ id: string|null, entry: object, checked: boolean|null, group: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
+- `sf-context-menu-open` — `detail`: `{  }`. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
+- `sf-context-menu-opened` — `detail`: `{  }`. opened (словарь).
+- `sf-context-menu-close` — `detail`: `{ reason: any, unsaved: boolean }`. Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся.
+- `sf-context-menu-closed` — `detail`: `{ reason: any }`. closed (словарь).
+- `sf-context-menu-search` — `detail`: `{ query: string }`. Запрос поиска, на который отвечает хост (search.remote).
+- `sf-context-menu-tab` — `detail`: `{ id: string, index: number }`. Выбрана вкладка панели; хост показывает её строки.
 
 ### Доступность
 
@@ -343,8 +346,8 @@ layer.addEventListener('keydown', (event) => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/context-menu`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/context-menu`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-context-menu`
 
 ## См. также
 

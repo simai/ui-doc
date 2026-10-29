@@ -213,7 +213,7 @@ async function store(item) {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -221,25 +221,28 @@ async function store(item) {
 |:---|:---|
 | Тег | `<sf-file-upload>` |
 | Назначение | Область перетаскивания, которая открывает файловый диалог платформы или принимает перетащенные файлы с фильтром по accept и показывает каждый файл с прогрессом загрузки, ошибкой с повтором и удалением. Загрузку выполняет хост; компонент показывает состояние, которое задаёт хост. |
-| Контракт | `smart.file-upload`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.file-upload`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`.
 - `icon` — `string`, по умолчанию `upload_file`.
-- `link-text` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Click to upload»).
-- `text` — `string`, по умолчанию `or drag and drop`.
+- `link-text` — `string`. Пусто — текст на языке страницы (по-английски «Click to upload»).
+- `text` — `string`.
 - `formats` — `string`, по умолчанию пусто. Строка форматов под действием. Если не задана, выводится из `accept`; пуста, если не задано ни то ни другое: компонент не называет форматы, которые не может знать.
 - `supporting-text` — `string`, по умолчанию пусто. Вспомогательная строка; по умолчанию берётся из formats.
 - `accept` — `string`, по умолчанию пусто.
 - `multiple` — `boolean`, по умолчанию `false`.
 - `disabled` — `boolean`, по умолчанию `false`.
 - `aria-label` — `string`, по умолчанию пусто.
+- `items` — `array`, по умолчанию `[]`. Файлы и их загрузки, записанные хостом: состояние каждой записи (process, done, error) и прогресс 0–100 — это её поток (§10.8)
 
 Прежние имена:
 
@@ -250,10 +253,10 @@ async function store(item) {
 
 ### Методы
 
-- `getItems()` — возвращает `array` из `object`. Файлы списка в виде объектов пунктов.
-- `setItems(items: array)` — возвращает `object`. Заменяет список этими пунктами (name, fileSize, state, progress, errorMessage). Возвращает элемент.
 - `removeItem(index: number)` — возвращает `object`. Удаляет из списка пункт с этим индексом; индекс вне списка ничего не делает. Возвращает элемент.
 - `clear()` — возвращает `object`. Очищает список. Возвращает элемент.
+- `getItems()` — возвращает `array` из `object`. Файлы списка в виде объектов пунктов.
+- `setItems(items: array)` — возвращает `object`. Заменяет список этими пунктами (name, fileSize, state, progress, errorMessage). Возвращает элемент.
 - `setState(state: object)` — возвращает `object`. Применяет несколько входных параметров сразу (size, icon, linkText, text, formats, supportingText, accept, multiple, disabled, items). Возвращает элемент.
 - `onFileAdd(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-add; обработчик получает событие. Возвращает элемент.
 - `onFileError(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-error; обработчик получает событие. Возвращает элемент.
@@ -266,15 +269,26 @@ async function store(item) {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `change` — `detail`: `{ files?: array, source?: string }`. Выбраны файлы: при выборе — нативное событие от внутреннего поля выбора файла, при перетаскивании — CustomEvent от области (detail files и source 'drop'), поэтому форма узнаёт об обоих случаях.
-- `sf-file-upload:complete` — `detail`: `{ items?: array }`. Все файлы обработаны.
-- `sf-file-upload:file-add` — `detail`: `{ item?: object, index?: number, items?: array, source?: string, multiple?: boolean }`. Файл добавлен в список.
-- `sf-file-upload:file-complete` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл загружен.
-- `sf-file-upload:file-error` — `detail`: `{ item?: object, index?: number, items?: array }`. Ошибка загрузки файла.
-- `sf-file-upload:reject` — `detail`: `{ files?: array, accept?: string, source?: string }`. Перетащенные файлы, не указанные в списке accept, пропущены, как их не предложил бы и диалог платформы.
-- `sf-file-upload:remove` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл удалён из списка.
-- `sf-file-upload:retry` — `detail`: `{ item?: object, index?: number, items?: array }`. Повторена загрузка файла с ошибкой.
-- `sf-file-upload:select` — `detail`: `{ files?: array, source?: string, multiple?: boolean }`. Выбраны файлы для загрузки.
+- `change` — `detail`: `{ files: array, source: any }`. Выбраны файлы: при выборе — нативное событие от внутреннего поля выбора файла, при перетаскивании — CustomEvent от области (detail files и source 'drop'), поэтому форма узнаёт об обоих случаях.
+- `sf-file-upload-attach` — `detail`: `{ files: array, source: any, multiple: boolean }`. Выбраны файлы для загрузки. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-attached` — `detail`: `{ id: any, item: object, index: number, items: array, source: string, multiple: boolean }`. Файл попал в список. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:file-add` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-detach` — `detail`: `{ id: any, item: object, index: number, items: array }`. Файл убран из списка. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:remove` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-rejected` — `detail`: `{ files: array, accept: string, source: string }`. Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:reject` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-retry` — `detail`: `{ id: any, item: object, index: number, items: array }`. Файл с ошибкой отправлен снова. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:retry` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-begun` — `detail`: `{ id: any, item: object }`. Запись перешла в process — выбрана, перетащена или отправлена снова: начался её поток загрузки (стандарт simai.smart-component 1.3.8 §10.8, словарь 1.1.5 §5.2).
+- `sf-file-upload-chunk` — `detail`: `{ id: any, done: number, total: number, item: object }`. Хост сдвинул прогресс записи, пока она в process: `{id, done, total}` с total 100 (§10.8).
+- `sf-file-upload-completed` — `detail`: `{ id: any, item: object, index: number, items: array }`. Файл загружен. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:file-complete` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-failed` — `detail`: `{ id: any, item: object, index: number, items: array, reason: string, message: string }`. Файл не загрузился. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:file-error` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload-cancelled` — `detail`: `{ id: any, item: object }`. Запись ушла, будучи в process, — её убрал человек или хост: её поток кончился, не завершившись (§10.8).
+- `sf-file-upload-finished` — `detail`: `{ items: array }`. Все файлы обработаны. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:complete` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:complete` — `detail`: `{ items?: array }`. Все файлы обработаны. Прежнее имя: отправляется после `sf-file-upload-finished` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:file-add` — `detail`: `{ item?: object, index?: number, items?: array, source?: string, multiple?: boolean }`. Файл попал в список. Прежнее имя: отправляется после `sf-file-upload-attached` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:file-complete` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл загружен. Прежнее имя: отправляется после `sf-file-upload-completed` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:file-error` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл не загрузился. Прежнее имя: отправляется после `sf-file-upload-failed` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:reject` — `detail`: `{ files?: array, accept?: string, source?: string }`. Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. Прежнее имя: отправляется после `sf-file-upload-rejected` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:remove` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл убран из списка. Прежнее имя: отправляется после `sf-file-upload-detach` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:retry` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл с ошибкой отправлен снова. Прежнее имя: отправляется после `sf-file-upload-retry` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:select` — `detail`: `{ files?: array, source?: string, multiple?: boolean }`. Выбраны файлы для загрузки. Прежнее имя: отправляется после `sf-file-upload-attach` с тем же detail до 2026-12-01 (aliases.json).
 
 ### Доступность
 
@@ -291,5 +305,5 @@ async function store(item) {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/file-upload`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-file-upload`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/file-upload`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-file-upload`

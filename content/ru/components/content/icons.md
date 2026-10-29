@@ -166,14 +166,34 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 |:---|:---|
 | Блок | `sf-icon` |
 | Части | `sf-icon-bold`, `sf-icon-extra-light`, `sf-icon-filled`, `sf-icon-light`, `sf-icon-medium`, `sf-icon-regular`, `sf-icon-rounded`, `sf-icon-semi-bold`, `sf-icon-shape`, `sf-icon-solid`, `sf-icon-thin` |
-| Модификаторы | `sf-icon--filled`, `sf-icon--rotate-135`, `sf-icon--rotate-180`, `sf-icon--rotate-225`, `sf-icon--rotate-270`, `sf-icon--rotate-315`, `sf-icon--rotate-45`, `sf-icon--rotate-90`, `sf-icon--rounded`, `sf-icon--sharp`, `sf-icon--weight-bold`, `sf-icon--weight-extra-light`, `sf-icon--weight-light`, `sf-icon--weight-medium`, `sf-icon--weight-regular`, `sf-icon--weight-semi-bold`, `sf-icon--weight-thin` |
+| Модификаторы | `sf-icon--filled`, `sf-icon--rotate-135`, `sf-icon--rotate-180`, `sf-icon--rotate-225`, `sf-icon--rotate-270`, `sf-icon--rotate-315`, `sf-icon--rotate-90`, `sf-icon--rounded`, `sf-icon--sharp`, `sf-icon--weight-bold`, `sf-icon--weight-extra-light`, `sf-icon--weight-light`, `sf-icon--weight-medium`, `sf-icon--weight-regular`, `sf-icon--weight-semi-bold`, `sf-icon--weight-thin` |
 | Размеры | `sf-icon--size-1`, `sf-icon--size-1/2`, `sf-icon--size-1/3`, `sf-icon--size-1/4`, `sf-icon--size-2`, `sf-icon--size-3`, `sf-icon--size-4`, `sf-icon--size-5`, `sf-icon--size-6`, `sf-icon--size-7` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-icon`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-icon`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-icon-color` | Цвет символа там, где окружающий компонент не задаёт свой (кнопка, поле и меню задают цвет своим значкам); иначе `currentColor`. | `currentColor` |
+| `--sf-icon-glyph-size` | Размер шрифта, ширина и высота символа вместе. | `var(--sf-icon-size-3)`; зависит от размера |
+| `--sf-icon-weight` | Ось насыщенности шрифта (wght), от 100 до 700. | `var(--sf-weight--regular)`; зависит от weight |
+| `--sf-icon-fill` | Ось заливки шрифта (FILL): 0 — контур, 1 — заливка. | `0`; зависит от filled |
+| `--sf-icon-line-height` | Строчный блок символа. | `1` |
+
+```css
+.sf-icon {
+  --sf-icon-color: currentColor;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-icon`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|

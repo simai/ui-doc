@@ -167,42 +167,62 @@ tree.items = await fetchFolders();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-tree>` |
-| Назначение | Доступный иерархический составной компонент с перемещаемым фокусом (roving focus), раскрытием ветвей и выбором, которым управляет элемент. |
-| Контракт | `smart.tree`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Назначение | Дерево записей: открывающиеся папки, файлы и ссылки; одна остановка Tab, переход стрелками, выбор по желанию, перетаскивание записей и файлов на запись. Тысячи записей: строки по ключу, окно при более чем 300. |
+| Контракт | `smart.tree`, версия `2.0.5` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="menu"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
 - `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `selection` — `string`, по умолчанию `none`, значения: `none`, `one`, `many`. Что делает нажатие: none открывает запись (или переходит по её ссылке), one выбирает одну запись, many переключает каждую
+- `accept-records` — `boolean`, по умолчанию `false`. Запись принимает записи, перетащенные из списка (application/x-sf-records+json)
+- `accept-files` — `boolean`, по умолчанию `false`. Запись принимает файлы, перетащенные с компьютера
+- `selected` — `string`, по умолчанию пусто. id текущей записи (§18.2); при `selection` many — последней нажатой
 - `aria-label` — `string`, по умолчанию пусто.
-- `role` — `string`, по умолчанию `tree`, значения: `tree`.
-- `selection` — `string`, по умолчанию `none`, значения: `none`, `single`, `multiple`.
-- `items` — `array` из `object`, по умолчанию `[]`. Пункты, заданные данными вместо дочерних sf-tree-item (задаётся как свойство, а не атрибут): [{label, href?, target?, rel?, kind?, value?, open?, selected?, active?, disabled?, icon?, openIcon?, closedIcon?, chevronOpenIcon?, chevronClosedIcon?, openLabel?, closeLabel?, children?}]. text или title заменяют label. Установка заменяет пункты и перерисовывает дерево; дочерние sf-tree-item читаются один раз и удаляются, поэтому родитель, который перерисовывает изменённые пункты, передаёт их этим способом.
-- `accept-records` — `boolean`, по умолчанию `false`. Узел принимает записи, перетащенные из списка (application/x-sf-records+json), и сообщает об этом событием sf-tree-records-drop.
-- `accept-files` — `boolean`, по умолчанию `false`. Узел принимает файлы, перетащенные с компьютера, и сообщает об этом событием sf-tree-files-drop.
+- `items` — `array` из `object`, по умолчанию `[]`. Дерево как данные: записи с детьми; иначе один раз читаются дети `sf-tree-item`, написанные внутри. id записи — id, иначе value, иначе её место
+- `selected-ids` — `array`, по умолчанию `[]`. Выбранные id в порядке записей, при `selection` many (§18.2)
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `selection="one"` | `selection="single"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `selection="many"` | `selection="multiple"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
+- `expand(id: any)` — возвращает `object`. Открывает ветку; отказ для неизвестного id, листа или выключенной записи
+- `collapse(id: any)` — возвращает `object`. Действие collapse.
+- `focusEntry(id: any)` — возвращает `object`. Переводит фокус на запись, сначала нарисовав её, если окно её не показывает
 - `onToggle(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tree-item-toggle от любого пункта дерева; обработчик вызывается с (item, detail, event).
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-tree-open` — `detail`: `{ id: any, value: string }`. Нажатие на имя записи или Enter на листе без ссылки (словарь 1.1.5 §5 open)
+- `sf-tree-select` — `detail`: `{ ids: array, id: any, selected: boolean }`. Выбор изменился: ids — весь выбор, id — нажатая запись, selected — выбрана ли она теперь (словарь §5 select)
+- `sf-tree-toggle` — `detail`: `{ id: any, open: boolean, value: string }`. Ветка открылась или закрылась (словарь §5 toggle)
+- `sf-tree-move` — `detail`: `{ ids: array, parent: any, before: any, source: string }`. Записи, перетащенные из списка, сброшены на запись: просьба перенести их в неё (словарь §5 move); дерево само ничего не переносит
+- `sf-tree-attach` — `detail`: `{ files: array, parent: any }`. На запись перетащили файлы: просьба прикрепить их туда (словарь §5 attach); дерево само ничего не загружает
+- `sf-tree-window` — `detail`: `{ first: number, last: number }`. При более чем 300 видимых записях — какие из них нарисованы (§18.4)
 - `sf-tree-selection-change` — `detail`: `{ component: object, tagName: string, template: string, item: object, selected: boolean, value: string }`. Запрошен или изменён выбор элемента дерева.
 - `sf-tree-records-drop` — `detail` не описан. На узел отпустили записи, перетащенные из списка: {value, ids, source}. Дерево ничего не перемещает.
 - `sf-tree-files-drop` — `detail` не описан. На узел отпустили файлы с компьютера: {value, files}. Дерево ничего не загружает.
+- `sf-tree-item-click` — `detail` не описан. Псевдоним с датой для `sf-tree-open` до 2026-12-01 (разделено).
+- `sf-tree-item-toggle` — `detail` не описан. Псевдоним с датой для `sf-tree-toggle` до 2026-12-01 (разделено).
 
 ### Доступность
 
@@ -219,8 +239,8 @@ tree.items = await fetchFolders();
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/tree`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-tree`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/tree`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-tree`
 
 ## См. также
 

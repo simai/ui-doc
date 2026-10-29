@@ -67,7 +67,7 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -75,32 +75,34 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 |:---|:---|
 | Тег | `<sf-avatars>` |
 | Назначение | Готовые сочетания аватаров: человек с источником, группа внахлёст с остатком, аватар с двумя строками подписи и аватар профиля со значком подтверждения. Собраны из частей sf-avatar; для одного аватара с именем или карточкой используйте sf-avatar. |
-| Контракт | `smart.avatars`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.avatars`, версия `1.1.3` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
-- `data` — `string`, по умолчанию пусто.
-- `property` — `string`, по умолчанию пусто.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `fields` — `string`, по умолчанию пусто. JSON-текст полей, которые принимают и атрибуты ниже (imageUrl, avatarUrl, avatarSize, active, check, name, source, labelText, labelSecondText, avatars, avatarsMore); атрибут важнее своего поля
+- `property` — `string`, по умолчанию пусто. JSON-текст размеров, которые принимают и атрибуты `round-size`, `label-size` и `profile-size`
 - `image-url` — `string`, по умолчанию пусто.
 - `avatar-url` — `string`, по умолчанию пусто.
 - `avatar-size` — `string`, по умолчанию пусто.
-- `active` — `boolean`, по умолчанию `false`.
 - `check` — `boolean`, по умолчанию `false`.
 - `name` — `string`, по умолчанию пусто.
 - `source` — `string`, по умолчанию пусто.
 - `label-text` — `string`, по умолчанию пусто.
 - `label-second-text` — `string`, по умолчанию пусто.
-- `avatars` — `array`, по умолчанию `[]`.
 - `avatars-more` — `string`, по умолчанию пусто.
 - `round-size` — `string`, по умолчанию пусто.
 - `label-size` — `string`, по умолчанию пусто.
 - `profile-size` — `string`, по умолчанию пусто.
-- `root-class` — `string`, по умолчанию пусто.
+- `active` — `boolean`, по умолчанию `false`.
+- `data` — `string`, по умолчанию пусто. Псевдоним с датой для `fields` до 2026-12-01.
+- `avatars` — `array`, по умолчанию `[]`. Аватары группы: изображение, иначе текст (инициалы); атрибут принимает список и как JSON-текст
 
 ### Методы
 
@@ -112,6 +114,7 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 
 ### Доступность
 
+- Роль: нет (`none`).
 - Доступное имя: внутренний.
 - Фокус: Здесь ничто не получает фокус: каждый аватар — декоративное изображение (alt ""), а человека называет видимый текст — имя в user, label-text в label. Аватар, открывающий профиль, — это sf-avatar с aria-label внутри собственной ссылки или кнопки хоста.
 
@@ -123,8 +126,8 @@ JSON с теми же полями в camelCase или snake_case (`imageUrl`, `
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/avatars`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-avatars`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/avatars`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-avatars`
 
 ## См. также
 

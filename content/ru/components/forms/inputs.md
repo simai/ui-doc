@@ -265,6 +265,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
 | `--sf-input-padding-inline` | Внутренний отступ поля до и после содержимого по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
 | `--sf-input-padding-block` | Внутренний отступ поля над и под содержимым. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
+| `--sf-input-invalid-border-color` | Рамка поля при ошибке (вид с рамкой). | `var(--sf-error)` |
 
 ```css
 .sf-input {
@@ -281,7 +282,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input--radius` | `var(--sf-input-radius, var(--sf-radius--ui))` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
 | `--sf-input-field--background-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-transparent-for-focus)` | `background-color` |
 | `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-error)` | `border-color` |
+| `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-input-invalid-border-color, var(--sf-error))` | `border-color` |
 | `--sf-input-field--border-end-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-end-radius` |
 | `--sf-input-field--border-end-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-start-radius` |
 | `--sf-input-field--border-start-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-end-radius` |

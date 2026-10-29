@@ -159,6 +159,7 @@
         "toast",
         "badges",
         "progress-bar",
+        "progress-ring",
         "progress-scale",
         "skeleton",
         "spinner",
@@ -205,10 +206,15 @@
         "admin-menu",
         "property-view",
         "page-header",
+        "site-header",
         "profile-picker",
         "thread-list",
         "message-log",
-        "change-confirm"
+        "change-confirm",
+        "chat-window",
+        "chat-message",
+        "chat-composer",
+        "chat-interlocutor"
       ]
     }
   }

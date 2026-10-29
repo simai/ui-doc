@@ -35,7 +35,8 @@ description: "Ограничивает ширину содержимого ст�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `container` | `width: 100%; padding-inline-start: var(--sf-space-1); padding-inline-end: var(--sf-space-1); от ширины sm: width: 100%; max-width: var(--sf-breakpoint-sm); padding-inline-start: var(--sf-space-2); padding-inline-end: var(--sf-space-2); от ширины md: width: 100%; max-width: var(--sf-breakpoint-md); padding-inline-start: var(--sf-space-3); padding-inline-end: var(--sf-space-3); от ширины lg: width: 100%; max-width: var(--sf-breakpoint-lg); padding-inline-start: var(--sf-space-4); padding-inline-end: var(--sf-space-4); от ширины xl: width: 100%; max-width: var(--sf-breakpoint-xl); padding-inline-start: var(--sf-space-5); padding-inline-end: var(--sf-space-5); от ширины xxl: width: 100%; max-width: var(--sf-breakpoint-xxl); padding-inline-start: var(--sf-space-6); padding-inline-end: var(--sf-space-6)` | — |
+| `container` | `width: 100%; padding-inline-start: var(--sf-space-1); padding-inline-start: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-1))); padding-inline-end: var(--sf-space-1); padding-inline-end: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-1))); от ширины sm: width: 100%; max-width: var(--sf-breakpoint-sm); padding-inline-start: var(--sf-space-2); padding-inline-start: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-2))); padding-inline-end: var(--sf-space-2); padding-inline-end: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-2))); от ширины md: width: 100%; max-width: var(--sf-breakpoint-md); padding-inline-start: var(--sf-space-3); padding-inline-start: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-3))); padding-inline-end: var(--sf-space-3); padding-inline-end: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-3))); от ширины lg: width: 100%; max-width: var(--sf-breakpoint-lg); padding-inline-start: var(--sf-space-4); padding-inline-start: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-4))); padding-inline-end: var(--sf-space-4); padding-inline-end: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-4))); от ширины xl: width: 100%; max-width: var(--sf-breakpoint-xl); padding-inline-start: var(--sf-space-5); padding-inline-start: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-5))); padding-inline-end: var(--sf-space-5); padding-inline-end: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-5))); от ширины xxl: width: 100%; max-width: var(--sf-breakpoint-xxl); padding-inline-start: var(--sf-space-6); padding-inline-start: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-6))); padding-inline-end: var(--sf-space-6); padding-inline-end: var(--sf-container--inset, var(--sf-container-gutter, var(--sf-space-6)))` | — |
+| `container-flush` | `--sf-container--inset: 0px` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:container`.
 
@@ -48,6 +49,7 @@ description: "Ограничивает ширину содержимого ст�
 | Переменная | Значение по умолчанию |
 |:---|:---|
 | `--sf-space-1` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
+| `--sf-container-gutter` | задаётся темой |
 | `--sf-space-2` | `var(--sf-b6); от ширины lg: var(--sf-c0)` |
 | `--sf-breakpoint-sm` | `от ширины sm: var(--sf-g6)` |
 | `--sf-space-3` | `var(--sf-b6); от ширины lg: var(--sf-c2)` |

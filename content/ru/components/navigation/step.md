@@ -120,14 +120,36 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-steps`, `.sf-step`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-steps`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-steps-gap` | Расстояние между шагом и соседним разделителем. | `var(--sf-steps-container--gap)` |
+| `--sf-steps-separator-color` | Значок-разделитель между двумя шагами. | `var(--sf-on-surface-variant)` |
+| `--sf-steps-step-color` | Подпись и номер шага в покое. | `var(--sf-on-surface-variant)` |
+| `--sf-steps-step-border-color` | Обводка шага в покое. | `var(--sf-outline-variant)` |
+| `--sf-steps-step-radius` | Скругление углов шага. | `var(--sf-radius-circle)` |
+| `--sf-steps-current-border-color` | Обводка текущего шага. | `var(--sf-outline-primary)` |
+| `--sf-steps-completed-icon-color` | Значок-галочка пройденного шага. | `var(--sf-success)` |
+
+```css
+.sf-steps {
+  --sf-steps-step-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-steps`, `.sf-step`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-steps-container--background-color` | не задана; задают модификаторы, например `.sf-steps .sf-steps-container`: `transparent` | `background-color` |
 | `--sf-steps-container--gap` | не задана; задают модификаторы, например `.sf-steps.sf-steps--size-1 .sf-steps-container`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-step--background-color` | `transparent` | `background-color` |
-| `--sf-step--border-color` | `var(--sf-outline-variant)` | `border-color` |
+| `--sf-step--border-color` | `var(--sf-steps-step-border-color, var(--sf-outline-variant))` | `border-color` |
 | `--sf-step--box-shadow` | не задана; задают модификаторы, например `.sf-step:not(:disabled):not(.disabled):not([aria-disabled=true]).focus-visible`: `none` | `box-shadow` |
 | `--sf-step--color` | `var(--sf-on-surface-variant)` | `color` |
 | `--sf-step--font-size` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-text-size-1)` | `font-size` |
@@ -135,7 +157,7 @@ profile: reference
 | `--sf-step--padding-bottom` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-space-1/4)` | `padding-bottom` |
 | `--sf-step--padding-top` | не задана; задают модификаторы, например `.sf-step--size-1`: `var(--sf-space-1/4)` | `padding-top` |
 | `--sf-step-container--background-color` | не задана; задают модификаторы, например `.sf-step .sf-step-container`: `transparent` | `background-color` |
-| `--sf-step-container--color` | не задана; задают модификаторы, например `.sf-step.sf-step--stage-default .sf-step-container`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-step-container--color` | не задана; задают модификаторы, например `.sf-step.sf-step--stage-default .sf-step-container`: `var(--sf-steps-step-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-step-container--font-size` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1 .sf-step-container`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-step-container--line-height` | не задана; задают модификаторы, например `.sf-step.sf-step--size-1 .sf-step-container`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-steps-container--background-color` | не задана; задают модификаторы, например `.sf-steps .sf-steps-container`: `transparent` | `background-color` |

@@ -82,21 +82,41 @@ Toggle «Компактный режим» после переноса — пе�
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-toggle`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-toggle`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-toggle-background-color` | Заливка дорожки в выключенном положении; у наведения, нажатия и выключенного состояния свои. | `var(--sf-surface-container)` |
+| `--sf-toggle-checked-background-color` | Заливка и обводка дорожки во включённом положении (состояние checked). | `var(--sf-primary)` |
+| `--sf-toggle-border-color` | Обводка дорожки в покое (outline, а не рамка); у включённого и выключенного состояния свои. | `var(--sf-outline)` |
+| `--sf-toggle-color` | Цвет подписи; у нажатого и выключенного состояния свои. | `var(--sf-on-surface-variant)` |
+| `--sf-toggle-gap` | Промежуток между дорожкой и подписью. | `var(--sf-space-1/3)`; зависит от размера |
+
+```css
+.sf-toggle {
+  --sf-toggle-background-color: var(--sf-surface-container);
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-toggle`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-toggle--color` | `var(--sf-on-surface-variant)` | `color` |
+| `--sf-toggle--color` | `var(--sf-toggle-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-toggle--font-size` | не задана; задают модификаторы, например `.sf-toggle--size-1`: `var(--sf-text-size-1)` | `font-size` |
-| `--sf-toggle--gap` | не задана; задают модификаторы, например `.sf-toggle--size-1`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-toggle--gap` | не задана; задают модификаторы, например `.sf-toggle--size-1`: `var(--sf-toggle-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-toggle--line-height` | не задана; задают модификаторы, например `.sf-toggle--size-1`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-toggle-container--background-color` | не задана; задают модификаторы, например `.sf-toggle .sf-toggle-container`: `var(--sf-surface-container)` | `background-color` |
+| `--sf-toggle-container--background-color` | не задана; задают модификаторы, например `.sf-toggle .sf-toggle-container`: `var(--sf-toggle-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-toggle-container--border-end-end-radius` | не задана; задают модификаторы, например `.sf-toggle .sf-toggle-container`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-toggle-container--border-end-start-radius` | не задана; задают модификаторы, например `.sf-toggle .sf-toggle-container`: `var(--sf-radius-circle)` | `border-end-start-radius` |
 | `--sf-toggle-container--border-start-end-radius` | не задана; задают модификаторы, например `.sf-toggle .sf-toggle-container`: `var(--sf-radius-circle)` | `border-start-end-radius` |
 | `--sf-toggle-container--border-start-start-radius` | не задана; задают модификаторы, например `.sf-toggle .sf-toggle-container`: `var(--sf-radius-circle)` | `border-start-start-radius` |
 | `--sf-toggle-container--height` | не задана; задают модификаторы, например `.sf-toggle.sf-toggle--short.sf-toggle--size-1 .sf-toggle-container`: `var(--sf-text-height-1/3)` | `height` |
-| `--sf-toggle-container--outline-color` | не задана; задают модификаторы, например `.sf-toggle.active[:not-has(input:disabled)].sf-toggle--short .sf-toggle-container`: `var(--sf-primary)` | `outline` |
+| `--sf-toggle-container--outline-color` | не задана; задают модификаторы, например `.sf-toggle[:has(input:checked)][:not-has(input:disabled)].sf-toggle--short .sf-toggle-container`: `var(--sf-toggle-checked-background-color, var(--sf-primary))` | `outline` |
 | `--sf-toggle-container--padding-bottom` | не задана; задают модификаторы, например `.sf-toggle.sf-toggle--simple.sf-toggle--size-1 .sf-toggle-container`: `var(--sf-a2)` | `padding-bottom` |
 | `--sf-toggle-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-toggle.sf-toggle--simple.sf-toggle--size-1 .sf-toggle-container`: `var(--sf-a2)` | `padding-inline-end` |
 | `--sf-toggle-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-toggle.sf-toggle--simple.sf-toggle--size-1 .sf-toggle-container`: `var(--sf-a2)` | `padding-inline-start` |

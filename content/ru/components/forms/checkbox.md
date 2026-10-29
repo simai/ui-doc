@@ -190,6 +190,8 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-radius` | Скругление углов квадрата. | `var(--sf-radius--ui)` |
 | `--sf-checkbox-size` | Ширина и высота квадрата. | `var(--sf-text-height-1)`; зависит от размера |
 | `--sf-checkbox-gap` | Промежуток между квадратом и подписью. | `var(--sf-ui-1--text-space-x)`; зависит от размера |
+| `--sf-checkbox-checked-background-color` | Заливка и рамка квадрата, когда он отмечен, в неопределённом состоянии или нажат; у ошибки и выключенного состояния свои. | `var(--sf-primary)` |
+| `--sf-checkbox-invalid-border-color` | Рамка квадрата при ошибке. | `var(--sf-error)` |
 
 ```css
 .sf-checkbox {

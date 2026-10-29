@@ -101,46 +101,47 @@ section.expand();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-tree-item>` |
-| Назначение | Один доступный узел иерархии Smart Tree. |
-| Контракт | `smart.tree-item`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Назначение | Узел дерева: папка, открывающая группу узлов, или файл либо ссылка. Внутри `sf-tree` он читается один раз как данные, и строку рисует дерево; сам по себе он рисует себя сам. |
+| Контракт | `smart.tree-item`, версия `1.1.3` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
-- `label` — `string`, по умолчанию пусто.
-- `text` — `string`, по умолчанию пусто.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `label` — `string`, по умолчанию пусто. Имя узла; без него — собственный текст узла
 - `href` — `string`, по умолчанию пусто.
 - `target` — `string`, по умолчанию пусто.
 - `rel` — `string`, по умолчанию пусто.
 - `kind` — `string`, по умолчанию `folder`, значения: `folder`, `file`. Тип элемента дерева: папка или файл.
-- `value` — `string`, по умолчанию пусто.
-- `open` — `boolean`, по умолчанию `false`.
-- `selected` — `boolean`, по умолчанию `false`.
-- `active` — `boolean`, по умолчанию `false`.
+- `value` — `string`, по умолчанию пусто. id узла: `data-value` его строки, id, который несут его события
 - `disabled` — `boolean`, по умолчанию `false`.
-- `items-data` — `array`, по умолчанию `[]`.
 - `open-icon` — `string`, по умолчанию `folder_open`.
 - `closed-icon` — `string`, по умолчанию `folder`.
-- `icon` — `boolean`, по умолчанию `true`.
+- `icon` — `boolean`, по умолчанию `true`. false скрывает значок папки или файла
 - `chevron-open-icon` — `string`, по умолчанию `keyboard_arrow_down`.
 - `chevron-closed-icon` — `string`, по умолчанию `chevron_right`.
-- `open-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Open item»).
-- `close-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Close item»).
-- `root-class` — `string`, по умолчанию пусто.
-- `item-class` — `string`, по умолчанию пусто.
-- `container-class` — `string`, по умолчанию пусто.
-- `name-class` — `string`, по умолчанию пусто.
+- `open-label` — `string`. Имя шеврона, пока ветка закрыта
+- `close-label` — `string`. Имя шеврона, пока ветка открыта
+- `item-class` — `string`, по умолчанию пусто. Классы рамки строки
+- `container-class` — `string`, по умолчанию пусто. Классы линии строки
+- `name-class` — `string`, по умолчанию пусто. Классы имени строки
+- `open` — `boolean`, по умолчанию `false`. Ветка открыта
+- `selected` — `boolean`, по умолчанию `false`.
+- `active` — `boolean`, по умолчанию `false`. Узел — текущая страница: `aria-current`
+- `text` — `string`, по умолчанию пусто. Псевдоним с датой для `label` до 2026-12-01.
+- `items-data` — `array` из `object`, по умолчанию `[]`. Дети узла как данные (форма записи `sf-tree`); иначе один раз читаются дети, написанные внутри
 
 Прежние имена:
 
@@ -150,11 +151,14 @@ section.expand();
 
 ### Методы
 
+- `expand()` — возвращает `object`. Открывает ветку; отказ для файла, листа или выключенного узла
+- `collapse()` — возвращает `object`. Закрывает ветку
+- `toggleOpen()` — возвращает `object`. Открывает закрытую ветку, закрывает открытую
+- `activate()` — возвращает `object`. Что делает Enter на листе: переходит по его ссылке или отправляет open
+- `focusItem()` — возвращает `object`. Переводит фокус на строку узла
 - `setOpen(open?: boolean)` — возвращает `object`. Открывает или закрывает ветку и отправляет sf-tree-item-toggle; ничего не делает для файла, листа, отключённого пункта или неизменного состояния.
 - `open()` — возвращает `object`. То же, что setOpen(true).
 - `close()` — возвращает `object`. То же, что setOpen(false).
-- `focusItem()` — возвращает `object`. Переносит фокус DOM на этот элемент дерева.
-- `activate()` — возвращает `object`. Активирует ссылку элемента или генерирует событие щелчка по элементу.
 - `toggle()` — возвращает `object`. Переключает состояние открытия через setOpen.
 - `onToggle(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tree-item-toggle; обработчик вызывается с (open, detail, event). Обработчик, не являющийся функцией, игнорируется.
 
@@ -162,8 +166,9 @@ section.expand();
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-tree-item-open` — `detail`: `{ id: string, value: string }`. Нажатие на имя или Enter на листе без ссылки: open `{id}` словаря 1.1.5 §5
+- `sf-tree-item-toggle` — `detail`: `{ id: string, open: boolean, value: string }`. Ветка открылась или закрылась (словарь §5 toggle); DOM-имя `sf-tree-item-toggle` не изменилось
 - `sf-tree-item-click` — `detail`: `{ component: object, tagName: string, template: string, item: object, value: string, originalEvent: object|null }`.
-- `sf-tree-item-toggle` — `detail`: `{ component: object, tagName: string, template: string, item: object, open: boolean, value: string }`.
 
 ### Доступность
 
@@ -180,8 +185,8 @@ section.expand();
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/tree-item`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/tree-item`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-tree-item`
 
 ## См. также
 

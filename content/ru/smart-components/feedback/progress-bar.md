@@ -65,7 +65,7 @@ upload.addEventListener('load', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -73,21 +73,24 @@ upload.addEventListener('load', () => {
 |:---|:---|
 | Тег | `<sf-progress-bar>` |
 | Назначение | Непрерывный определённый прогресс с нормализованным значением, доступной семантикой диапазона и явным семантическим тоном. |
-| Контракт | `smart.progress-bar`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.progress-bar`, версия `1.1.2` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`.
-- `value` — `string`, по умолчанию `0`, значения: шаблон `^(?:100|[1-9]?[0-9])(?:\.[0-9]+)?$`.
+- `value` — `number`, по умолчанию `0`, значения: от 0; до 100; шаблон `^(?:100|[1-9]?[0-9])(?:\.[0-9]+)?$`.
 - `text-position` — `string`, по умолчанию `none`, значения: `none`, `inline-end`, `bottom`, `right`.
 - `status` — `string`, по умолчанию `neutral`, значения: `neutral`, `info`, `success`, `warning`, `error`. О чём сообщает индикатор прогресса, в общем словаре статусов. Также принимается значение primary; оно означает neutral.
 - `label` — `string`, по умолчанию пусто.
 - `value-text` — `string`, по умолчанию пусто.
+- `aria-label` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -100,6 +103,7 @@ upload.addEventListener('load', () => {
 
 ### Методы
 
+- `chunk(done: number, total: number)` — возвращает `object`. Действие chunk.
 - `getProgress()` — возвращает `number`. Возвращает атрибут value как число (0, если атрибута нет); значение не ограничивается.
 - `setProgress(nextValue: number|string)` — возвращает `object`. Устанавливает атрибут value; null или undefined удаляет его.
 - `setTextPosition(nextValue: string)` — возвращает `object`. Устанавливает text-position; null или undefined удаляет его.
@@ -122,8 +126,8 @@ upload.addEventListener('load', () => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/progress-bar`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-progress-bar`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/progress-bar`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-progress-bar`
 
 ## См. также
 

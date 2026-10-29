@@ -166,6 +166,7 @@ document.addEventListener('verification:complete', (event) => {
 | `--sf-verification-color` | Цвет символов в ячейках; у ошибки и недоступного поля свой. | `var(--sf-on-surface)` |
 | `--sf-verification-cell-size` | Ширина и высота ячейки; если задана — одинаковая на всех размерах. | `var(--sf-title-height-6)`; зависит от размера |
 | `--sf-verification-gap` | Расстояние между ячейками. | `var(--sf-space-1/3)` |
+| `--sf-verification-invalid-border-color` | Рамка ячейки при ошибке в коде. | `var(--sf-error)` |
 
 ```css
 .sf-verification {

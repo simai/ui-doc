@@ -242,7 +242,7 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -250,36 +250,40 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 |:---|:---|
 | Тег | `<sf-tabs>` |
 | Назначение | Список вкладок, который показывает одну локальную панель за раз: текстовые вкладки или вкладки с иконкой задаются атрибутами, слотами или данными, с перемещаемым фокусом клавиатуры и связанными панелями вкладок. |
-| Контракт | `smart.tabs`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.tabs`, версия `1.1.6` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
-- `type` — `string`, по умолчанию `null`.
-- `size` — `string`, по умолчанию `1`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `type` — `string`, по умолчанию пусто, значения: `underline`, `pills`, `full`, `vertical`.
+- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`.
 - `variant` — `string`, по умолчанию `buttons`.
 - `scheme` — `string`, по умолчанию `default`. Встроенный вид кнопки: `default`, `outline` или `link`. Это не выбор семантического цвета. Пользовательские шаблоны могут трактовать его по-своему.
 - `top-position` — `string`, по умолчанию `start`.
-- `active-index` — `number`, по умолчанию `0`.
-- `items` — `string`, по умолчанию `[]`. Пункт (задаётся через setItems) может нести key (постоянный идентификатор для настроек; иначе индекс), icon, count (небольшой счётчик после подписи), href (вкладка — ссылка: активация переходит по адресу; у активной aria-current=page) и pinned (никогда не скрывается и неподвижна в настройках).
-- `root-class` — `string`, по умолчанию пусто.
+- `active-index` — `integer`, по умолчанию `0`, значения: от 0.
 - `top-class` — `string`, по умолчанию пусто.
 - `panel-class` — `string`, по умолчанию пусто.
 - `overflow` — `string`, по умолчанию `scroll`, значения: `scroll`, `wrap`, `more`. Что делают вкладки, когда не помещаются: scroll — ряд прокручивается, wrap — переносятся строки, more — не поместившиеся уходят в меню «Ещё (n)» в конце; активная всегда остаётся на месте.
 - `configurable` — `boolean`, по умолчанию `false`. Шестерёнка в конце вкладок («Настроить вкладки») открывает стандартное меню: вкладки списком с перетаскиванием, флажок видимости у каждой (закреплённые неподвижны) и «Сбросить» в подвале. Выбор хранит хост: sf-tabs-settings-change {order, hidden}, sf-tabs-settings-reset, setSettings({order, hidden}).
+- `selected` — `string`, по умолчанию пусто. id записи выбранной вкладки (её ключ, иначе её место)
+- `aria-label` — `string`, по умолчанию пусто.
+- `items` — `array`, по умолчанию `[]`. Пункт (задаётся через setItems) может нести key (постоянный идентификатор для настроек; иначе индекс), icon, count (небольшой счётчик после подписи), href (вкладка — ссылка: активация переходит по адресу; у активной aria-current=page) и pinned (никогда не скрывается и неподвижна в настройках).
+- `settings` — `object`.
 
 ### Методы
 
+- `setData(data: object, reason: string)` — возвращает `object`. Объединяет data с текущими данными (функция получает текущие данные и возвращает новые) и перерисовывает. tabs или items становятся вкладками; panels или content — панелями. Значение, не являющееся объектом, игнорируется.
+- `setPanels(panels: array, reason: string)` — возвращает `object`. Заменяет панели в данных (функция получает текущие панели) и перерисовывает.
+- `goTo(index: number)` — возвращает `object`. Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tab-change.
 - `getData()` — возвращает `object`. Возвращает данные, заданные через setData: {tabs, panels, ...}; {tabs: [], panels: []}, если ничего не задано.
-- `setData(data: object|function, reason?: string)` — возвращает `object`. Объединяет data с текущими данными (функция получает текущие данные и возвращает новые) и перерисовывает. tabs или items становятся вкладками; panels или content — панелями. Значение, не являющееся объектом, игнорируется.
 - `setItems(items: array|function, reason?: string)` — возвращает `object`. Заменяет вкладки в данных (функция получает текущие вкладки) и перерисовывает.
-- `setPanels(panels: array|function, reason?: string)` — возвращает `object`. Заменяет панели в данных (функция получает текущие панели) и перерисовывает.
 - `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label::flags, соединённые через |. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым.
-- `goTo(index: number|string)` — возвращает `object`. Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tab-change.
 - `onTabChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tab-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
 - `setSettings(settings: object)` — возвращает `object`. Применяет сохранённую раскладку человека: {order: [keys], hidden: [keys]}. Ключ, которого больше нет среди пунктов, пропускается; пункт, не названный в порядке, встаёт на своё объявленное место видимым; закреплённая вкладка никогда не скрывается; активная вкладка видна на месте, даже если скрыта.
 
@@ -287,9 +291,10 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-tab-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
-- `sf-tabs-settings-change` — `detail`: `{ order: array, hidden: array, reason?: string }`. Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Хост сохраняет выбор и возвращает его через setSettings.
+- `sf-tabs-change` — `detail`: `{ selected: any, previous: number, current: number, item: object, items: array }`. change (словарь).
+- `sf-tabs-settings-change` — `detail`: `{ order: array, hidden: array, reason?: any }`. Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Хост сохраняет выбор и возвращает его через setSettings.
 - `sf-tabs-settings-reset` — `detail`: `{  }`. Человек попросил вернуть объявленный порядок; компонент показывает его, пока хост не ответит через setSettings.
+- `sf-tab-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
 
 ### Доступность
 
@@ -306,8 +311,8 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/tabs`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-tabs`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/tabs`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-tabs`
 
 ## См. также
 

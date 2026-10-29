@@ -124,18 +124,39 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-progress-bar`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-progress-bar`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-progress-bar-fill-color` | Заполненная часть; статус задаёт свой цвет, если эта переменная не задана. | `var(--sf-primary)`; зависит от статуса |
+| `--sf-progress-bar-track-color` | Дорожка под заполненной частью. | `var(--sf-surface-container)` |
+| `--sf-progress-bar-height` | Толщина дорожки. | `var(--sf-text-size-1/5)`; зависит от размера |
+| `--sf-progress-bar-radius` | Углы дорожки и заполненной части. | `var(--sf-radius--ui)` |
+| `--sf-progress-bar-color` | Видимый процент. | `var(--sf-on-surface)` |
+| `--sf-progress-bar-gap` | Расстояние между дорожкой и процентом. | `var(--sf-space-1/3)`; зависит от размера |
+
+```css
+.sf-progress-bar {
+  --sf-progress-bar-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-progress-bar`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-progress-bar--font-size` | не задана; задают модификаторы, например `.sf-progress-bar.sf-progress-bar--size-1`: `var(--sf-text-size-1/2)` | `font-size` |
-| `--sf-progress-bar--gap` | не задана; задают модификаторы, например `.sf-progress-bar--size-1`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-progress-bar--gap` | не задана; задают модификаторы, например `.sf-progress-bar--size-1`: `var(--sf-progress-bar-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-progress-bar--line-height` | не задана; задают модификаторы, например `.sf-progress-bar.sf-progress-bar--size-1`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-progress-bar-main--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-surface-container)` | `background-color` |
-| `--sf-progress-bar-main--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-radius--ui)` | `border-radius` |
+| `--sf-progress-bar-main--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-track-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-progress-bar-main--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-main`: `var(--sf-progress-bar-radius, var(--sf-radius--ui))` | `border-radius` |
 | `--sf-progress-bar-main--height` | не задана; задают модификаторы, например `.sf-progress-bar--size-1 .sf-progress-bar-main`: `var(--sf-text-size-1/5)` | `height` |
-| `--sf-progress-bar-progress--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-primary)` | `background-color` |
-| `--sf-progress-bar-progress--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-radius--ui)` | `border-radius` |
+| `--sf-progress-bar-progress--background-color` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-fill-color, var(--sf-primary))` | `background-color` |
+| `--sf-progress-bar-progress--border-radius` | не задана; задают модификаторы, например `.sf-progress-bar .sf-progress-bar-progress`: `var(--sf-progress-bar-radius, var(--sf-radius--ui))` | `border-radius` |
 
 ## См. также
 

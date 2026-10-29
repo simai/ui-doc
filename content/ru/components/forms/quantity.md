@@ -207,6 +207,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-padding-block` | Внутренний отступ поля над и под содержимым. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
 | `--sf-quantity-gap` | Расстояние между кнопками «−», «+» и полем числа. | `var(--sf-space-2)` |
 | `--sf-quantity-stepper-radius` | Скругление углов кнопок «−» и «+». | `var(--sf-radius-1\/2)` |
+| `--sf-quantity-invalid-border-color` | Рамка поля при ошибке. | `var(--sf-error)` |
 
 ```css
 .sf-quantity {

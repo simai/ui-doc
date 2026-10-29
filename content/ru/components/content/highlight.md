@@ -110,7 +110,8 @@ await SF.Highlight.refresh(block, 'const total = price * count;');
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-highlight` |
-| Части | `sf-highlight__head`, `sf-highlight__wrap` |
+| Части | `sf-highlight__head`, `sf-highlight__wrap`, `sf-highlight__wrap-toggle` |
+| Модификаторы | `sf-highlight--wrap` |
 
 **`sf-code-surface`**
 

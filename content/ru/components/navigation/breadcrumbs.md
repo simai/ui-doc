@@ -130,14 +130,35 @@ document.querySelector('.sf-breadcrumbs').addEventListener('sf-breadcrumb-click'
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-breadcrumbs`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-breadcrumbs`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-breadcrumbs-gap` | Расстояние между крошками и разделителями. | `var(--sf-space-1/3)` |
+| `--sf-breadcrumbs-color` | Крошка, которая не ссылка и не текущая страница. | `var(--sf-on-surface-variant)` |
+| `--sf-breadcrumbs-link-color` | Крошка-ссылка на свою страницу в покое. | `var(--sf-primary)` |
+| `--sf-breadcrumbs-link-hover-color` | Крошка-ссылка под указателем. | `var(--sf-primary-hover)` |
+| `--sf-breadcrumbs-current-color` | Крошка текущей страницы. | `var(--sf-on-surface)` |
+| `--sf-breadcrumbs-separator-color` | Значок-разделитель между двумя крошками. | `var(--sf-on-surface-variant)` |
+
+```css
+.sf-breadcrumbs {
+  --sf-breadcrumbs-gap: var(--sf-space-1/3);
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-breadcrumbs`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-breadcrumbs-item--background-color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item`: `transparent` | `background-color` |
 | `--sf-breadcrumbs-item--box-shadow` | не задана; задают модификаторы, например `.sf-breadcrumbs-item`: `none` | `box-shadow` |
 | `--sf-breadcrumbs-item-container--background-color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `transparent` | `background-color` |
-| `--sf-breadcrumbs-item-container--color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-breadcrumbs-item-container--color` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-breadcrumbs-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-breadcrumbs-item-container--font-family` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-text--family)` | `font-family` |
 | `--sf-breadcrumbs-item-container--font-size` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-breadcrumbs-item-container--font-weight` | не задана; задают модификаторы, например `.sf-breadcrumbs-item .sf-breadcrumbs-item-container`: `var(--sf-font-weight-regular)` | `font-weight` |

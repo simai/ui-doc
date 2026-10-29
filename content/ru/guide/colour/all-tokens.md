@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-576 переменных, которые объявляет ядро, со значениями по умолчанию.
+574 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -515,7 +515,7 @@ description: "Полный список переменных, которые о�
 | `--sf-opacity-80` | `80%` |
 | `--sf-opacity-90` | `90%` |
 | `--sf-scroll--alfa` | `1` |
-| `--sf-scroll-bg-thumb` | `var(--sf-surface-1)` |
+| `--sf-scroll-bg-thumb` | `var(--sf-on-neutral-container-graphic)` |
 | `--sf-scroll-bg-track` | `var(--sf-transparent)` |
 | `--sf-scroll-bg-width` | `var(--sf-b4)` |
 | `--sf-scroll-radius` | `var(--sf-d6)` |
@@ -535,6 +535,8 @@ description: "Полный список переменных, которые о�
 | `--sf-z-index-7` | `70` |
 | `--sf-z-index-8` | `80` |
 | `--sf-z-index-9` | `90` |
+| `--sf-z-index-layer` | `9000` |
+| `--sf-z-index-layer-step` | `2` |
 
 ### Геометрия элементов управления
 
@@ -671,10 +673,6 @@ description: "Полный список переменных, которые о�
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
 | `--sf-skeleton-bar` | `var(--sf-text-size-1)` |
 | `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |
-| `--sf-skeleton-inset` | `var(--sf-space-1)` |
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
-| `--sf-skeleton-pair` | `calc(var(--sf-text-height-1\/2) + var(--sf-text-height-1) + var(--sf-space-1))` |
-| `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` · `var(--sf-ui-1\/2--control-height)` |
-| `--sf-skeleton-rows` | `10` · `6` · `8` |
-| `--sf-skeleton-toolbar` | `var(--sf-ui-1--control-height)` |
+| `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` |
 | `--sf-transparent-for-focus` | `var(--sf-transparent)` |

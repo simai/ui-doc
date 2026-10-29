@@ -108,7 +108,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -116,7 +116,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 |:---|:---|
 | Тег | `<sf-thread-list>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.thread-list`, версия `1.0.0` |
+| Контракт | `smart.thread-list`, версия `1.3.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
@@ -133,6 +133,15 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 - `no-archive` — `boolean`, по умолчанию `false`. Без архива: нет перехода в него и нет «В архив» среди действий строки.
 - `group-by` — —, по умолчанию `day`, значения: `day`, `none`. day: «Сегодня», «Вчера», «Раньше» по updated_at в часовом поясе читателя. none: один список.
 - `label` — `string`, по умолчанию пусто. Доступное имя навигации; пусто — «Разговоры» или «Архив» на языке страницы.
+- `loading` — `boolean`, по умолчанию `false`. Форма списка, пока загружается первая страница.
+- `status` — `string`, по умолчанию пусто. Фраза вместо списка (ошибка); пустая строка её убирает.
+
+Прежние имена:
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 ### Методы
 
@@ -140,8 +149,8 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 - `appendThreads(threads: array, options?: object)` — возвращает `null`. Следующая страница после показанных; разговор, который уже есть в списке, не повторяется.
 - `upsert(thread: object)` — возвращает `null`. Новый или изменившийся разговор; встаёт на место по своей дате.
 - `removeThread(id: string|number)` — возвращает `null`. Убирает один разговор из списка.
-- `setLoading(loading: boolean)` — возвращает `null`. Пока загружается первая страница: форма списка, и список занят.
-- `setStatus(message: string)` — возвращает `null`. Фраза вместо списка (ошибка); пустая строка её убирает.
+- `setLoading(loading: boolean)` — возвращает `null`. Пока загружается первая страница: форма списка и занятость списка. Устарело: настройка `loading` (до 2026-12-01).
+- `setStatus(message: string)` — возвращает `null`. Фраза вместо списка (ошибка); пусто — убирает её. Устарело: настройка `status` (до 2026-12-01).
 - `moreFailed()` — возвращает `null`. Следующую страницу загрузить не удалось: достижение конца попросит снова.
 - `rename(id: string|number)` — возвращает `null`. Начинает переименование разговора на месте, как F2.
 - `openMenu(id: string, anchor: object)` — возвращает `null`. Открывает действия разговора, как «⋯» в строке и Shift+F10.
@@ -151,13 +160,13 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-thread-list-create` — `detail`: `{  }`. Нажали «Новый разговор».
-- `sf-thread-list-select` — `detail`: `{ id: string }`. Разговор открыли. Список сам не меняет selected — его задаёт хост.
+- `sf-thread-list-open` — `detail`: `{ id: string }`. Человек просит открыть беседу (словарь open); хост записывает `selected` обратно. Имя версии 1.0 `sf-thread-list-select` отправляется после него до 2026-12-01.
 - `sf-thread-list-rename` — `detail`: `{ id: string, title: string }`. Разговор переименовали на месте; новое название видно сразу. Хост, который не может его сохранить, возвращает прежнее название через upsert.
-- `sf-thread-list-archive` — `detail`: `{ id: string }`. Для разговора выбрали «В архив».
-- `sf-thread-list-unarchive` — `detail`: `{ id: string }`. Для разговора в архиве выбрали «Вернуть».
-- `sf-thread-list-action` — `detail`: `{ id: string, action: string }`. Выбрано одно из собственных действий строки, которые задал хост.
-- `sf-thread-list-load-more` — `detail`: `{  }`. Конец списка показался при has-more: нужна следующая страница. moreFailed() позволяет попросить снова.
-- `sf-thread-list-view` — `detail`: `{ archived: boolean }`. Нажали переход в архив или обратно.
+- `sf-thread-list-archive` — `detail`: `{ id: string, ids?: array }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).
+- `sf-thread-list-restore` — `detail`: `{ id: string, ids?: array }`. Восстановить `{ids, id}` (словарь restore). Имя версии 1.0 `sf-thread-list-unarchive` отправляется после него до 2026-12-01.
+- `sf-thread-list-apply` — `detail`: `{ id: string, action: string, ids?: array, scope?: any }`. Одно из действий хоста над строкой: `{action, scope: entry, ids, id}` (словарь apply). Имя версии 1.0 `sf-thread-list-action` отправляется после него до 2026-12-01.
+- `sf-thread-list-load-more` — `detail`: `{ direction?: any }`. Конец списка показался на экране, пока `has-more`: `{direction: after}`.
+- `sf-thread-list-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно. Имя версии 1.0 `sf-thread-list-view` отправляется после него до 2026-12-01.
 
 ### Доступность
 
@@ -174,5 +183,5 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ### Источник
 
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/thread-list`
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/thread-list/rule.js#name=cl-thread-list`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/thread-list`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/thread-list/rule.js#name=cl-thread-list`

@@ -208,9 +208,9 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text[:not-has(%3E%20.sf-dropdown-field%20%3E%20:disabled)] .sf-dropdown-field`: `var(--sf-surface-0)` | `background-color` |
+| `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text[:not-has(%3E%20.sf-dropdown-field%20%3E%20:disabled)] .sf-dropdown-field`: `var(--sf-dropdown-background-color, var(--sf-surface-0))` | `background-color` |
 | `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-dropdown-field--border-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text[:not-has(%3E%20.sf-dropdown-field%20%3E%20:disabled)] .sf-dropdown-field`: `var(--sf-outline)` | `border-color` |
+| `--sf-dropdown-field--border-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text[:not-has(%3E%20.sf-dropdown-field%20%3E%20:disabled)] .sf-dropdown-field`: `var(--sf-dropdown-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-dropdown-field--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-dropdown-field--padding-bottom` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `calc(var(--sf-ui-1/2--space-y-tightness-default) - var(--sf-px))` | `padding-bottom` |
 | `--sf-dropdown-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-ui-1/2--space-x)` | `padding-inline-end`, `inset-inline-end` |

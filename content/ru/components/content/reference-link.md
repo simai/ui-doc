@@ -108,12 +108,34 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-reference-link`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-reference-link`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-reference-link-background-color` | Заливка карточки в покое; у наведения, нажатия и выключенного состояния свои. | `transparent` |
+| `--sf-reference-link-border-color` | Рамка карточки в покое; у наведения и выключенного состояния свои. | `var(--sf-outline-variant)` |
+| `--sf-reference-link-radius` | Скругление углов карточки. | `var(--sf-radius--ui)` |
+| `--sf-reference-link-link-color` | Цвет ссылки. | `var(--sf-link)` |
+| `--sf-reference-link-padding-inline` | Отступ в начале и в конце карточки; у `plain` его нет. | `var(--sf-space-1)`; зависит от размера, line, вида |
+| `--sf-reference-link-padding-block` | Отступ над и под содержимым карточки; у `plain` его нет. | `var(--sf-space-1)`; зависит от размера, line, вида |
+| `--sf-reference-link-gap` | Расстояние между ссылкой и текстом после неё. | `var(--sf-space-1)`; зависит от размера, line |
+
+```css
+.sf-reference-link {
+  --sf-reference-link-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-reference-link`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-reference-link--background-color` | `transparent` | `background-color` |
-| `--sf-reference-link--border-color` | `var(--sf-outline-variant)` | `border` |
+| `--sf-reference-link--background-color` | `var(--sf-reference-link-background-color, transparent)` | `background-color` |
+| `--sf-reference-link--border-color` | `var(--sf-reference-link-border-color, var(--sf-outline-variant))` | `border` |
 | `--sf-reference-link--font-size` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-reference-link--gap` | `var(--sf-space-1)` | `gap` |
 | `--sf-reference-link--line-height` | не задана; задают модификаторы, например `.sf-reference-link.sf-reference-link--size-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |

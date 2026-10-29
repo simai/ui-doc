@@ -94,7 +94,7 @@ slider.slideNext();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -102,14 +102,17 @@ slider.slideNext();
 |:---|:---|
 | Тег | `<sf-slider>` |
 | Назначение | Ряд слайдов, которые переключаются стрелками, точками, свайпом или клавишами, на основе общего адаптера Swiper; со связанными миниатюрами слайд выбирается во втором слайдере. |
-| Контракт | `smart.slider`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.slider`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `button-type` — `string`, по умолчанию `primary`.
 - `button-size` — `string`, по умолчанию `1`.
 - `dots` — `boolean`, по умолчанию `true`.
@@ -122,24 +125,25 @@ slider.slideNext();
 - `loop` — `boolean`, по умолчанию `false`.
 - `space-between` — `number`, по умолчанию `12`.
 - `speed` — `number`, по умолчанию `450`.
-- `root-class` — `string`, по умолчанию пусто.
 - `slide-class` — `string`, по умолчанию пусто.
 
 ### Методы
 
-- `getSlider()` — возвращает `object` | `null`. Экземпляр Swiper, на котором построен слайдер, или null до привязки.
 - `refresh()` — возвращает `object`. Заново привязывает слайдер после изменения его слайдов: передаёт data-атрибуты и пересоздаёт Swiper, сохраняя привязанные события. Возвращает элемент.
 - `slideNext()` — возвращает `object`. Переходит к следующему слайду, как стрелка «вперёд». Возвращает элемент.
 - `slidePrev()` — возвращает `object`. Переходит к предыдущему слайду, как стрелка «назад». Возвращает элемент.
+- `getSlider()` — возвращает `object` | `null`. Экземпляр Swiper, на котором построен слайдер, или null до привязки.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `change` — `detail`: `{ activeIndex: number, realIndex: number, previousIndex: number }`. change (словарь).
 - `sf-slide-change` — `detail`: `{ component: object, tagName: string, template: string, activeIndex: number, realIndex: number, previousIndex: number }`.
 
 ### Доступность
 
+- Роль: нет (`none`).
 - Доступное имя: рекомендуется.
 - Клавиши: `Tab`.
 - Фокус: Сохраняет видимый фокус на активном элементе управления.
@@ -152,5 +156,5 @@ slider.slideNext();
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/slider`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-slider`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/slider`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-slider`

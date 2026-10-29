@@ -79,40 +79,49 @@ Smart-компонент показывает своё состояние — о
 
 ### Заготовка до прихода кода
 
-Код Smart-компонента подгружается, когда элемент появляется на странице, и
-до этого момента элемент пуст. Чтобы ничего не сдвигалось, когда код придёт,
-элемент заранее занимает место своей будущей формы и показывает её полосками
-скелетона. Форму называет атрибут `data-sf-skeleton`, который пишет разметка
-сервера:
+Код Smart-компонента подгружается, когда элемент появляется на странице.
+Чтобы ничего не сдвинулось, когда код придёт, элемент до этого момента
+занимает ровно то место, которое ему дала страница. Своей формы ядро не
+придумывает: высоту строки списка, панель инструментов, число колонок меню
+знает только компонент, и выдуманная форма оказывалась картинкой ядра между
+страницей и компонентом — список высотой 1176 px, который компонент потом
+рисовал на 200, 640 и 1096.
 
-| Значение | Форма | Сколько |
-|:---|:---|:---|
-| `rows` | список: панель инструментов и строки | `--sf-skeleton-rows`, по умолчанию 10 |
-| `record` | запись: пары «подпись — значение» | `--sf-skeleton-rows`, по умолчанию 6 |
-| `menu` | колонка меню | `--sf-skeleton-rows`, по умолчанию 8 |
-| `block` | прямоугольник | высота `--sf-skeleton-block-size`, по умолчанию высота контрола размера 1 |
-| `line` | одна строка текста | — |
+| Что есть у элемента | Что видно до кода |
+|:---|:---|
+| напечатанный начальный вид (`data-sf-static`) | он сам: это и картинка элемента, и его рамка; заготовка ядра не рисуется |
+| объявленная страницей высота (`block-size`, `min-block-size` или `--sf-skeleton-block-size`) | пустая рамка этой высоты |
+| ничего из этого | ничего: элемент вырастет, когда нарисуется |
+
+Форму называет атрибут `data-sf-skeleton`, который пишет разметка сервера:
+
+| Значение | Что делает до кода |
+|:---|:---|
+| `rows`, `record`, `menu` | держат объявленную высоту и остаются пустыми, пока компонент не нарисует свой скелетон |
+| `block` | заполняет объявленную рамку одной полоской; без высоты — высота контрола размера 1 |
+| `line` | одна строка текста: полоска в строке |
 
 ```html
-<sf-data-view data-sf-skeleton="rows" style="--sf-skeleton-rows: 20"></sf-data-view>
+<sf-data-view data-sf-skeleton="rows" style="--sf-skeleton-block-size: 640px"></sf-data-view>
 <sf-property-view data-sf-skeleton="record"></sf-property-view>
 ```
 
-Формы лежат в ядре, потому что собственные стили компонента приходят вместе
-с его кодом — слишком поздно. Заготовка видна, только пока элемент не
-определён (`:not(:defined)`), и пульсирует; при системной настройке
-уменьшения движения она неподвижна. Когда код пришёл, компонент показывает
-свой скелетон загрузки данных, если он у него есть, а затем данные или
+Одно число строк (`--sf-skeleton-rows`) места не отводит: рамку знает
+страница — она же выводит список — или напечатанный начальный вид.
+
+Заготовка лежит в ядре, потому что собственные стили компонента приходят
+вместе с его кодом — слишком поздно. Она видна, только пока элемент не
+определён (`:not(:defined)`) и пока в нём нет напечатанного начального вида,
+и пульсирует; при системной настройке уменьшения движения она неподвижна.
+Когда код пришёл, компонент показывает свой скелетон загрузки данных, если он
+у него есть, а затем данные или
 [пустое состояние](#пустые-состояния).
 
-При первой загрузке страницы заготовку не видно. Пока Loader не загрузил
-модули, которые нашёл на странице, и не отправил `sf-loader-ready`, Core
-держит страницу прозрачной, а заставка загрузчика (`SF_BOOT_CONFIG.preloader`,
-по умолчанию включена) закрывает её. Заготовка видна у элемента, который
-появился после `sf-loader-ready`: его вставил код страницы или принесла
-[навигация по областям](/ru/guide/layouts/building/region-navigation/). Атрибут
-`data-sf-skeleton` всё равно пишут на сервере: он держит место элемента, и
-поэтому после показа страницы ничего не сдвигается.
+Страницу ядро не прячет. Заставка загрузчика
+(`SF_BOOT_CONFIG.preloader`, по умолчанию включена) показывается через
+задержку и только на странице, где нет ни напечатанного начального вида, ни
+заготовок: страница, которая их напечатала, показывает их, а не заставку
+поверх них.
 
 Какую форму компонент занимает до кода и рисует ли он свой скелетон, пока
 ждёт данные, объявляет манифест: `presentation.skeleton` с полями `shape`
@@ -125,16 +134,18 @@ Smart-компонент показывает своё состояние — о
 
 #### Формы компонентов
 
-Раздел собран из манифестов выпуска `ui-357568a20a7e` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+Раздел собран из манифестов выпуска `ui-bc1fb36ec8f1` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
 
 | Форма | Компоненты |
 |:---|:---|
 | `rows` | `<sf-data-view>` (свой скелетон), `<sf-table>` (свой скелетон), `<sf-thread-list>` (свой скелетон) |
 | `record` | `<sf-property-view>` (свой скелетон) |
 | `menu` | `<sf-admin-menu>`, `<sf-tree>` |
-| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-code-input>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-image-field>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-menu>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-quantity>`, `<sf-range-slider>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>`, `<sf-theme-generator>` |
+| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-code-input>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-image-field>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-menu>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-quantity>`, `<sf-range-slider>`, `<sf-site-header>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>`, `<sf-theme-generator>` |
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
-| `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-change-confirm>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-toggle>`, `<sf-tooltip>` |
+| `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-change-confirm>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-toggle>`, `<sf-tooltip>` |
+
+Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`.
 
 ### Скелетон области страницы
 

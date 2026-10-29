@@ -391,7 +391,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -399,7 +399,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-property-view>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт хоста. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.property-view`, версия `1.4.0` |
+| Контракт | `smart.property-view`, версия `1.7.9` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
@@ -484,6 +484,8 @@ view: {
 - `new-view-text` — `string`, по умолчанию `New view`. Название представления в момент создания, пока пользователь его не заменил. Представление «Новое представление» среди четырёх настоящих невозможно отличить от остальных, поэтому имя сразу открывается для ввода.
 - `delete-view-text` — `string`, по умолчанию `Remove the view`. Доступное имя элемента управления, который удаляет именованное представление.
 - `last-shared-view-text` — `string`, по умолчанию `The only view everyone has`. Почему удаление не предлагается для последнего общего представления: область без представлений ничего не даёт пользователю, у которого нет своих. Показывается на недоступном элементе управления, а не как отказ после нажатия.
+- `full` — `boolean`, по умолчанию `false`. Запись как страница: панель рисуется на месте, а не поверх страницы (component.json settings.full).
+- `open` — `boolean`, по умолчанию `true`. Панель видна, пока она открыта и не скрыта; `open=false` или `hidden` закрывает её выезжающую панель и снимает её со стопки, и так же возвращает обратно (component.json settings.open, simai/ui-pro#4).
 
 ### Свойства в документе макета
 
@@ -530,7 +532,11 @@ view: {
 - `sf-property-view-favourite` — `detail`: `{ record_id?: string|null, collection?: string|null, favourite?: boolean }`. Нажата звезда. Передаёт запись, коллекцию и запрошенное состояние; компонент ничего не меняет, пока хост не установит favourite обратно.
 - `sf-property-view-menu` — `detail`: `{ items?: array, open?: boolean }`. Открыто меню «…» в шапке с пунктами, которые компонент предлагает для представления. Хост добавляет свои пункты через слот menu.
 - `sf-property-view-created` — `detail`: `{ record_id?: string|integer|null, collection?: string|null }`. Форма создания создала объект; хост может перейти к его собственному месту. Компонент показывает новый объект в режиме auto.
-- `sf-property-view-cancel` — `detail`: `{ mode?: any }`. Поверхность, открытая целиком (edit, create), отменена: введённое отбрасывается, а куда перейти, решает хост. Панель закрывается.
+- `sf-property-view-cancel` — `detail`: `{ mode?: any, scope?: any, section?: string, group?: string }`. Правка отменена; введённое человеком отбрасывается. Поверхность, открытая целиком (edit, create), не передаёт scope, и хост решает, к чему это ведёт (панель закрывается); отмена одной группы (с 1.7.0) передаёт scope group с её разделом и группой, чтобы хост, следящий за несохранённой работой, узнал, что записи отброшены.
+- `sf-property-view-saved` — `detail`: `{ id: any, revision?: string }`. Факт после применённого сохранения (`group.save` или `record.save`), словарь §4: `{id, revision}`.
+- `sf-property-view-failed` — `detail`: `{ reason: string, message?: string }`. Факт после записи, которую не удалось прочитать, `{reason, message}`: код хоста (record-unknown для устаревшей ссылки) и его фраза.
+- `sf-property-view-open` — `detail`: `{ field?: string, value?: any, answer?: any }`. Просят открыть связанную запись, словарь §5 open: `{field, value, answer}`. Прежнее `sf-property-view-open-record` отправляется один раз после него до 2026-12-01 (aliases.json).
+- `sf-property-view-delete` — `detail`: `{ record_id?: any, answer?: any }`. Просили удалить запись, и хост ответил, словарь §5 delete: `{record_id, collection, revision, answer}`. Прежнее `sf-property-view-delete-record` отправляется один раз после него до 2026-12-01 (aliases.json).
 
 ### Доступность
 
@@ -547,8 +553,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/property-view`
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/property-view`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/property-view/rule.js#name=cl-property-view`
 
 ## См. также
 

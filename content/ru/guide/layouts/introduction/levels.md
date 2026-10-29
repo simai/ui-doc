@@ -45,7 +45,7 @@ description: "Как макет делится на страницу, секци
 угадывает.
 
 Имя типа состоит из пространства и имени: `layout.section`,
-`content.paragraph`, `smart.buttons`, `project.product-card`.
+`content.paragraph`, `smart.button`, `project.product-card`.
 
 ## Встроенные типы
 

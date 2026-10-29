@@ -80,7 +80,7 @@ file.onDownload((event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,16 +88,17 @@ file.onDownload((event) => {
 |:---|:---|
 | Тег | `<sf-file-preview>` |
 | Назначение | Доступная Smart-проекция обычной строки File Preview. |
-| Контракт | `smart.file-preview`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.file-preview`, версия `1.1.3` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
-- `name` — `string`, по умолчанию `File`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `file-name` — `string`, по умолчанию `File`.
 - `file-size` — `string`, по умолчанию пусто. Размер файла в виде текста, например 12 KB.
 - `icon` — `string`, по умолчанию `description`.
@@ -105,8 +106,6 @@ file.onDownload((event) => {
 - `kind` — `string`, по умолчанию `auto`, значения: `auto`, `icon`, `image`. Что показывает превью: иконку, само изображение или то, что подходит файлу.
 - `mime-type` — `string`, по умолчанию пусто.
 - `image-url` — `string`, по умолчанию пусто.
-- `avatar-size` — `string`, по умолчанию пусто.
-- `open` — `boolean`, по умолчанию `false`.
 - `surface` — `boolean`, по умолчанию `false`.
 - `download` — `boolean`, по умолчанию `true`.
 - `target` — `string`, по умолчанию `_blank`.
@@ -114,10 +113,11 @@ file.onDownload((event) => {
 - `download-action` — `boolean`, по умолчанию `true`.
 - `remove-action` — `boolean`, по умолчанию `true`.
 - `disabled` — `boolean`, по умолчанию `false`.
+- `download-label` — `string`. Пусто — текст на языке страницы (по-английски «Download file»).
+- `remove-label` — `string`. Пусто — текст на языке страницы (по-английски «Remove file»).
 - `compact` — `boolean`, по умолчанию `false`. Только ведущий значок высотой со строку списка: изображение или расширение файла в плитке. Для файла в ячейке таблицы.
 - `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «File»).
-- `download-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Download file»).
-- `remove-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Remove file»).
+- `name` — `string`, по умолчанию `File`. Псевдоним с датой для `file-name` до 2026-12-01.
 
 Прежние имена:
 
@@ -139,6 +139,8 @@ file.onDownload((event) => {
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
+- `sf-file-preview-download` — `detail`: `{ id: string, action: string, value: object }`. download (словарь).
+- `sf-file-preview-detach` — `detail`: `{ id: string, action: string, value: object }`. detach (словарь).
 - `sf-file-preview:download` — `detail`: `{ action?: any, value?: object }`. Запрошено действие скачивания. Всплывает, с composed: true и отменяемое: preventDefault() останавливает встроенный переход по href.
 - `sf-file-preview:remove` — `detail`: `{ action?: any, value?: object }`. Запрошено действие удаления. Всплывает, с composed: true и отменяемое; компонент сам ничего не удаляет.
 
@@ -157,8 +159,8 @@ file.onDownload((event) => {
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/file-preview`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-file-preview`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/file-preview`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-file-preview`
 
 ## См. также
 

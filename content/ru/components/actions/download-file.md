@@ -143,14 +143,36 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-download-file`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-download-file`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-download-file-background-color` | Заливка карточки в покое; у наведения, нажатия и выключенного состояния свои. | `transparent` |
+| `--sf-download-file-border-color` | Рамка карточки в покое; у наведения и выключенного состояния свои. | `var(--sf-outline-variant)` |
+| `--sf-download-file-radius` | Скругление углов карточки. | `var(--sf-radius--ui)` |
+| `--sf-download-file-padding` | Отступ вокруг содержимого карточки. | `var(--sf-space-1/3)`; зависит от размера |
+| `--sf-download-file-gap` | Расстояние между именем файла и его размером. | `var(--sf-space-1/3)`; зависит от размера |
+| `--sf-download-file-icon-size` | Размер значка скачивания. | `var(--sf-text-size-3)`; зависит от размера |
+| `--sf-download-file-icon-color` | Цвет значка скачивания; у выключенного состояния свой. | `var(--sf-primary)` |
+
+```css
+.sf-download-file {
+  --sf-download-file-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-download-file`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-download-file--background-color` | `transparent` | `background-color` |
-| `--sf-download-file--border-color` | `var(--sf-outline-variant)` | `border` |
+| `--sf-download-file--background-color` | `var(--sf-download-file-background-color, transparent)` | `background-color` |
+| `--sf-download-file--border-color` | `var(--sf-download-file-border-color, var(--sf-outline-variant))` | `border` |
 | `--sf-download-file--gap` | `var(--sf-space-1/3)` | `gap` |
-| `--sf-download-file--icon-size` | `var(--sf-text-size-3)` | `height`, `block-size`, `width`, `inline-size`, `font-size` |
+| `--sf-download-file--icon-size` | `var(--sf-text-size-3)` | `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
 | `--sf-download-file--padding` | `var(--sf-space-1/3)` | `padding` |
 | `--sf-download-file--text-height` | `var(--sf-text-height-1)` | `line-height` |
 | `--sf-download-file--text-size` | `var(--sf-text-size-1)` | `font-size` |

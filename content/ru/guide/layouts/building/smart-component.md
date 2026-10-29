@@ -45,15 +45,16 @@ Smart-компонент можно вставить в макет, только
 - события перечисляются явно и берутся из раздела `events` манифеста.
 
 В поставке Framework декларативный контракт публикует кнопка
-(`smart.buttons`). Компоненты пакета продукта публикуют свои контракты в своих
+(`smart.button`). Компоненты пакета продукта публикуют свои контракты в своих
 манифестах: например, таблица пакета `larena` — тип `smart.data-view` с
 данными `columns` и `rows`. Актуальный перечень — раздел
 `composition.declarative` в манифестах (`distr/smart/<папка>/smart.manifest.json`
 в поставке `ui`, `src/smart/<папка>/smart.manifest.json` в пакете).
 
-Настройки, которые узел `smart.buttons` принимает в документе: `template`,
-`size`, `appearance`, `spacing`, `scheme`, `status`, `text`, `icon`,
-`icon-position`, `loading`, `disabled`, `native-type`, `aria-label`. Значения
+Настройки, которые узел `smart.button` принимает в документе: `template`,
+`size`, `appearance`, `scheme`, `status`, `text-position`, `text`, `segment`,
+`icon`, `icon-start`, `icon-end`, `icon-position`, `spacing`, `radius`,
+`loading`, `disabled`, `native-type`, `expanded`, `aria-label`. Значения
 у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки задаёт
 `appearance`; прежнего имени `type` в этом списке нет, и в документе макета
 его не пишут.
@@ -65,7 +66,7 @@ Smart-компонент можно вставить в макет, только
 ```json
 {
   "id": "contact",
-  "type": "smart.buttons",
+  "type": "smart.button",
   "props": {"text": "Связаться", "native-type": "button"}
 }
 ```
@@ -73,16 +74,16 @@ Smart-компонент можно вставить в макет, только
 Рендерер такого типа — пользовательский элемент (`custom-element`): узел
 становится тегом `<sf-button native-type="button" text="Связаться">`, а
 настройки — его атрибутами с экранированными значениями.
-`render()` добавляет объявленный ресурс (`smart/buttons`) в список ресурсов и
+`render()` добавляет объявленный ресурс (`smart/button`) в список ресурсов и
 запись в список `hydration` — какие узлы нужно оживить в браузере. Оживляет
 их Loader, как любой Smart-компонент на странице.
 
-Тип `smart.buttons` не входит во встроенные типы: его добавляют в реестр.
+Тип `smart.button` не входит во встроенные типы: его добавляют в реестр.
 Реестр, в котором есть встроенные типы и тип кнопки, собирает
 `extendRegistry`. Манифест кнопки лежит в поставке рядом с её кодом:
 
 ```js
-const buttonManifest = await fetch(window.sfPath + 'smart/buttons/smart.manifest.json')
+const buttonManifest = await fetch(window.sfPath + 'smart/button/smart.manifest.json')
   .then((response) => response.json());
 const registry = SF.Composition.extendRegistry([
   SF.Composition.compositionTypeFromSmartManifest(buttonManifest),
@@ -107,7 +108,7 @@ const result = await SF.Composition.render(doc, { registry });
       {"id": "grid", "type": "layout.columns", "props": {"columns": 2}, "slots": {"columns": [
         {"id": "col-left", "type": "content.paragraph",
          "data": {"content": [{"type": "text", "value": "Мы делаем интерфейсы."}]}},
-        {"id": "contact", "type": "smart.buttons",
+        {"id": "contact", "type": "smart.button",
          "props": {"text": "Связаться", "native-type": "button"}}
       ]}}
     ]}}
@@ -127,8 +128,8 @@ const result = await SF.Composition.render(doc, { registry });
 заданные свойства остаются атрибутами, даже если равны значению по
 умолчанию.
 
-`result.assets` — `["composition/layout", "smart/buttons"]`,
-`result.hydration` — `[{"id": "contact", "type": "smart.buttons", "element": "sf-button"}]`.
+`result.assets` — `["composition/layout", "smart/button"]`,
+`result.hydration` — `[{"id": "contact", "type": "smart.button", "element": "sf-button"}]`.
 
 После вставки `result.html` на страницу Loader находит `<sf-button>` и
 загружает кнопку. Кнопка в документе композиции — всегда Smart-узел: среди

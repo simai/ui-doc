@@ -94,11 +94,7 @@ profile: reference
 | `--sf-scrollbar-keyboard-step` | `var(--sf-d0)` | — |
 | `--sf-scrollbar-min-thumb-size` | `var(--sf-d1)` | `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
 | `--sf-scrollbar-rest-size` | `var(--sf-a2)` | `width`, `inline-size`, `height`, `block-size` |
-| `--sf-scrollbar-thumb-color` | `color-mix(
-      in srgb,
-      var(--sf-on-surface) 34%,
-      var(--sf-transparent)
-    )` | `background` |
+| `--sf-scrollbar-thumb-color` | `var(--sf-on-neutral-container-graphic)` | `background` |
 
 ## См. также
 

@@ -62,7 +62,7 @@ scale.setProgress(completedSteps * 20);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -70,22 +70,25 @@ scale.setProgress(completedSteps * 20);
 |:---|:---|
 | Тег | `<sf-progress-scale>` |
 | Назначение | Сегментированный определённый прогресс с точным доступным значением, явным семантическим тоном и десятью визуальными шагами. |
-| Контракт | `smart.progress-scale`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.progress-scale`, версия `1.1.2` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`.
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`.
 - `line` — `string`, по умолчанию пусто, значения: пусто, `1/2`, `1`, `2`. Занимает строку текста этого размера формы — для ячейки таблицы или ряда полей, чтобы строка сохраняла высоту элемента управления.
-- `value` — `string`, по умолчанию `0`, значения: шаблон `^(?:100|[1-9]?[0-9])(?:\.[0-9]+)?$`.
+- `value` — `number`, по умолчанию `0`, значения: от 0; до 100; шаблон `^(?:100|[1-9]?[0-9])(?:\.[0-9]+)?$`.
 - `show-text` — `boolean`, по умолчанию `true`.
 - `status` — `string`, по умолчанию `neutral`, значения: `neutral`, `info`, `success`, `warning`, `error`. О чём сообщает индикатор прогресса, в общем словаре статусов. Также принимается значение primary; оно означает neutral.
 - `label` — `string`, по умолчанию пусто.
 - `value-text` — `string`, по умолчанию пусто.
+- `aria-label` — `string`, по умолчанию пусто.
 
 Прежние имена:
 
@@ -98,6 +101,7 @@ scale.setProgress(completedSteps * 20);
 
 ### Методы
 
+- `chunk(done: number, total: number)` — возвращает `object`. Действие chunk.
 - `getProgress()` — возвращает `number`. Возвращает значение как число, ограниченное диапазоном 0..100; нечисловое значение читается как 0.
 - `setProgress(nextValue: number|string)` — возвращает `object`. Устанавливает атрибут value; null или undefined удаляет его.
 
@@ -119,8 +123,8 @@ scale.setProgress(completedSteps * 20);
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/progress-scale`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-progress-scale`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/progress-scale`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-progress-scale`
 
 ## См. также
 

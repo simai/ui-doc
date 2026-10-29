@@ -246,6 +246,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
 | `--sf-textarea-padding-inline` | Отступ внутри поля до и после текста. | `calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x))`; зависит от размера |
 | `--sf-textarea-padding-block` | Отступ внутри поля сверху и снизу от текста. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px))`; зависит от размера |
+| `--sf-textarea-invalid-border-color` | Рамка поля при ошибке (вид с рамкой). | `var(--sf-error)` |
 
 ```css
 .sf-textarea {

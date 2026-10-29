@@ -142,7 +142,7 @@ group.select('month');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -150,8 +150,8 @@ group.select('month');
 |:---|:---|
 | Тег | `<sf-button-group>` |
 | Назначение | Управляемая группа одиночного выбора из кнопок Framework. |
-| Контракт | `smart.button-group`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-357568a20a7e` |
+| Контракт | `smart.button-group`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -159,8 +159,8 @@ group.select('month');
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона.
-- `items` — `array` из `object`, по умолчанию `[]`, например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`, `[{"value":"all","label":"Все","count":24},{"value":"light","label":"Светлые","count":17},{"value":"dark","label":"Тёмные","count":7}]`. Выбираемые элементы со стабильными полями value, label, icon, count, icon-only, disabled и loading.
-- `value` — `string`, по умолчанию пусто. Значение выбранного элемента.
+- `root-class` — `string`, по умолчанию пусто. Дополнительные классы корневого элемента группы.
+- `root-style` — `string`, по умолчанию пусто.
 - `name` — `string`, по умолчанию пусто. Имя поля формы: группа отправляет своё значение вместе с формой, сброс формы возвращает начальное значение, а отключённая группа в отправку не входит.
 - `theme-switch` — `boolean`, по умолчанию `false`. Готовый переключатель темы: группа сама рисует три пункта только с иконками (`system`, `light`, `dark`) с подписями на языке страницы, выбирает предпочтение темы `SF.Loader` и следует за `sf-theme-change`; выбор вызывает `SF.Loader.setTheme`. `items` не используется.
 - `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`. Общий токен размера кнопки.
@@ -172,8 +172,9 @@ group.select('month');
 - `radius` — `string`, по умолчанию пусто, значения: пусто, `default`, `square`, `rounded`. Скругление углов, как у `sf-button`: пустое значение — обычный радиус элементов. В сегментированном виде плашка — сегмент размером с кнопку — получает радиус кнопки с тем же значением, а дорожка — его же плюс отступ (при `rounded` обе — «таблетки»).
 - `orientation` — `string`, по умолчанию `horizontal`, значения: `horizontal`, `vertical`. Ориентация раскладки и навигации с клавиатуры.
 - `disabled` — `boolean`, по умолчанию `false`. Отключает всю группу.
+- `value` — `string`, по умолчанию пусто. Значение выбранного элемента.
 - `aria-label` — `string`, по умолчанию пусто. Доступное имя группы.
-- `root-class` — `string`, по умолчанию пусто. Дополнительные классы корневого элемента группы.
+- `items` — `array` из `object`, по умолчанию `[]`, например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`, `[{"value":"all","label":"Все","count":24},{"value":"light","label":"Светлые","count":17},{"value":"dark","label":"Тёмные","count":7}]`. Выбираемые элементы со стабильными полями value, label, icon, count, icon-only, disabled и loading.
 
 Прежние имена:
 
@@ -194,7 +195,7 @@ group.select('month');
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `change` — `detail`: `{ component: any, previous: string, value: string, item: object|null }`. Выбранное значение изменилось через select() или clear(); событие отправляется на хост-элементе, всплывает и с composed: true. Имя для привязки.
+- `change` — `detail`: `{ previous: string, value: string, item: object|null }`. Выбранное значение изменилось через select() или clear(); событие отправляется на хост-элементе, всплывает и с composed: true. Имя для привязки.
 - `sf-button-group-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
 ### Доступность
@@ -212,8 +213,8 @@ group.select('month');
 
 ### Источник
 
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/smart/button-group`
-- `simai/ui@357568a20a7ef6c6825217b7346c1f08870003a2:distr/rule/rule.json#name=cl-button-group`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/button-group`
+- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-button-group`
 
 ## См. также
 

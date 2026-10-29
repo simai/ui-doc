@@ -89,18 +89,40 @@ profile: reference
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид Smart-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-file-preview`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`.sf-file-preview`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-file-preview-background-color` | Заливка строки: в покое нет, с `surface` — цвет контейнера. | `transparent`; зависит от surface |
+| `--sf-file-preview-padding` | Отступ внутри строки: в покое нет, с `surface` — одна ступень. | `var(--sf-space-0)`; зависит от surface |
+| `--sf-file-preview-radius` | Углы строки. | `var(--sf-radius--ui)` |
+| `--sf-file-preview-gap` | Расстояние между миниатюрой, именем и действиями. | `var(--sf-space-1/2)` |
+| `--sf-file-preview-holder-size` | Квадрат миниатюры. | `var(--sf-ui-2--control-height)` |
+| `--sf-file-preview-holder-background-color` | Заливка миниатюры под значком. | `var(--sf-surface-container)` |
+| `--sf-file-preview-holder-color` | Значок файла в миниатюре. | `var(--sf-on-surface-variant)` |
+
+```css
+.sf-file-preview {
+  --sf-file-preview-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-file-preview`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-file-preview--background-color` | `transparent` | `background-color` |
-| `--sf-file-preview--gap` | `var(--sf-space-1/2)` | `grid-gap`, `gap` |
-| `--sf-file-preview--padding` | `var(--sf-space-0)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `padding-inline-start`, `padding-inline-end` |
-| `--sf-file-preview--radius` | `var(--sf-radius--ui)` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
-| `--sf-file-preview-holder--background-color` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-surface-container)` | `background-color` |
-| `--sf-file-preview-holder--color` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-on-surface-variant)` | `color` |
+| `--sf-file-preview--background-color` | `var(--sf-file-preview-background-color, transparent)` | `background-color` |
+| `--sf-file-preview--gap` | `var(--sf-file-preview-gap, var(--sf-space-1/2))` | `grid-gap`, `gap` |
+| `--sf-file-preview--padding` | `var(--sf-file-preview-padding, var(--sf-space-0))` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `padding-inline-start`, `padding-inline-end` |
+| `--sf-file-preview--radius` | `var(--sf-file-preview-radius, var(--sf-radius--ui))` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
+| `--sf-file-preview-holder--background-color` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-file-preview-holder-background-color, var(--sf-surface-container))` | `background-color` |
+| `--sf-file-preview-holder--color` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-file-preview-holder-color, var(--sf-on-surface-variant))` | `color` |
 | `--sf-file-preview-holder--radius` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-radius--ui)` | `border-radius` |
-| `--sf-file-preview-holder--size` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-ui-2--control-height)` | `width`, `inline-size`, `height`, `block-size` |
+| `--sf-file-preview-holder--size` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-holder`: `var(--sf-file-preview-holder-size, var(--sf-ui-2--control-height))` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-file-preview-name--color` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-name`: `var(--sf-on-surface)` | `color` |
 | `--sf-file-preview-name--font-family` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-name`: `var(--sf-text--family)` | `font-family` |
 | `--sf-file-preview-name--font-size` | не задана; задают модификаторы, например `.sf-file-preview .sf-file-preview-name`: `var(--sf-text-size-1)` | `font-size` |

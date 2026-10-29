@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.effect",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "title": "SIMAI Background Effect",
   "appliesTo": [
     "simai.framework.component"
@@ -83,9 +83,9 @@
     {
       "id": "theme-follows-the-placement",
       "level": "must",
-      "text": "A placement has a theme mode: as the page (auto, the default), always dark or always light. When the effect cannot draw the target scheme, its pair is shown; failing a pair, a dark-only effect stays dark on a light page, and a light-only effect is not shown on a dark target -- a plain surface of that theme instead, since a reader who chose dark did so to avoid glare. An editor offers only the fixed modes the effect, or its pair, can draw.",
+      "text": "A placement has a theme mode: as the page (auto, the default), always dark or always light. When the effect cannot draw the target scheme, its pair is shown; failing a pair, in auto a single-scheme effect keeps its own scheme: a dark-only effect stays dark on a light page and a light-only effect stays light on a dark page, its area in that scheme. A fixed mode the effect cannot draw shows a plain surface of that theme instead. An editor offers only the fixed modes the effect, or its pair, can draw.",
       "verification": "manual",
-      "guidance": "The resolution order: the effect in the target scheme; its pair in the target scheme; a dark-only effect kept dark; nothing. SF.Effects carries it from the next pair (themeMode)."
+      "guidance": "The resolution order: the effect in the target scheme; its pair in the target scheme; in auto, a single-scheme effect in its own scheme; nothing (a fixed mode it cannot draw). SF.Effects.resolveTheme carries it."
     },
     {
       "id": "area-takes-the-drawn-theme",
@@ -164,8 +164,8 @@
       "publication": "ui-doc",
       "builds_on": "simai.interaction-rules 1.0.0 (motion, failure containment)",
       "scope_note": "An animated background drawn into one area of a page -- a sign-in page's art side, a hero block, a group of cards seen as windows. The Framework owns the manifest, the module interface, the runtime rules, the theme policy, SF.Effects and the kit; the catalogue (simai/ui-effects) owns the effects; a product owns its built-in effects, installing and turning effects on, their settings and placements.",
-      "origin": "Designed by simai/larena (larena-specs docs/architecture/2026-10-14-background-effects.md, approved by the owner 2026-10-14), the contract handed to the Framework; authored for publication on 2026-10-16. Edition 1.1.0 (2026-10-19) takes the owner's decisions after the gallery review: schemes, pairs, the placement's theme mode and the windows mode in the standard, effects in the separate catalogue simai/ui-effects (ui-control control/handoffs/2026-10-19-effects-core.md; evidence in the effects lab: THEMES.md, SCHEMES.md, 240 combinations at 4.5:1 or more), and the pair's trust agreed with the catalogue owner.",
-      "changes": "1.1.0 adds schemes-and-pair-declared, theme-follows-the-placement, area-takes-the-drawn-theme, drawn-with-palette-tones, windows-are-mask-safe and pair-under-the-same-trust, and pins the effect manifest schema 1.2.0 (schemes, pair, capabilities; a 1.0 manifest stays valid). To stay within twenty principles three 1.0 requirements were folded into neighbours with their text kept: settings-form-from-the-manifest into manifest-describes-everything, update-without-remount into one-module-one-mount, pixel-density-capped into draws-in-its-host-only. The module contract gains context.scheme and update(settings, context). The bytes of 1.0.0 stay in history.",
+      "origin": "Designed by simai/larena (larena-specs docs/architecture/2026-10-14-background-effects.md, approved by the owner 2026-10-14), the contract handed to the Framework; authored for publication on 2026-10-16. Edition 1.1.0 (2026-10-19) takes the owner's decisions after the gallery review: schemes, pairs, the placement's theme mode and the windows mode in the standard, effects in the separate catalogue simai/ui-effects (ui-control control/handoffs/2026-10-19-effects-core.md; evidence in the effects lab: THEMES.md, SCHEMES.md, 240 combinations at 4.5:1 or more), and the pair's trust agreed with the catalogue owner. Edition 1.2.0 (2026-10-28) takes the owner's decision in the catalogue thread: a light-only effect stays light on a dark page in auto, as a dark-only effect stays dark on a light one.",
+      "changes": "1.2.0 changes theme-follows-the-placement: in auto a light-only effect without a pair keeps its light scheme on a dark page instead of being hidden, so both single-scheme cases resolve alike; the reason light-only-on-dark is gone. No other requirement and no pin changed. The bytes of 1.1.0 stay in history. Before: 1.1.0 adds schemes-and-pair-declared, theme-follows-the-placement, area-takes-the-drawn-theme, drawn-with-palette-tones, windows-are-mask-safe and pair-under-the-same-trust, and pins the effect manifest schema 1.2.0 (schemes, pair, capabilities; a 1.0 manifest stays valid). To stay within twenty principles three 1.0 requirements were folded into neighbours with their text kept: settings-form-from-the-manifest into manifest-describes-everything, update-without-remount into one-module-one-mount, pixel-density-capped into draws-in-its-host-only. The module contract gains context.scheme and update(settings, context). The bytes of 1.0.0 stay in history.",
       "validated_against": [
         "the kit on a rule-keeping and a rule-breaking fixture (tests/fixtures/effect-sample, effect-bad)",
         "the kit on a two-scheme, windows-capable fixture (tests/fixtures/effect-schemes)",

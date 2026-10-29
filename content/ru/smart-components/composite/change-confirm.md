@@ -99,7 +99,7 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-357568a20a7e` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -107,7 +107,7 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 |:---|:---|
 | Тег | `<sf-change-confirm>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.change-confirm`, версия `1.0.0` |
+| Контракт | `smart.change-confirm`, версия `1.2.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
@@ -128,15 +128,17 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ### Методы
 
-- `answer(kind: any)` — возвращает `boolean`. Отвечает так, как ответил бы человек; false, если карточка не открыта, недоступна или хост отменил событие.
+- `answer(accepted: boolean)` — возвращает `object`. Ответить, как ответил бы человек: `accepted` true подтверждает, false отклоняет. Отказ, если карточка закрыта, выключена или ответ отменён. `answer('accept')` и `answer('decline')` читаются до 2026-12-01.
+- `confirm()` — возвращает `object`. Согласие; `data-sf-action="<id>.confirm"`.
+- `cancel()` — возвращает `object`. Отказ; `data-sf-action="<id>.cancel"`.
+- `open()` — возвращает `object`. Задаёт вопрос снова; если его попросила сборка, отвечает `{accepted, reason, value}`, когда человек ответил или время вышло.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-change-confirm-accept` — `detail`: `{ id: string }`. Человек подтвердил. Отмените событие, чтобы оставить вопрос открытым.
-- `sf-change-confirm-decline` — `detail`: `{ id: string }`. Человек отклонил. Отмените событие, чтобы оставить вопрос открытым.
-- `sf-change-confirm-expire` — `detail`: `{ id: string }`. Открытая карточка прошла срок expires-at; сообщается один раз на каждый срок.
+- `sf-change-confirm-answer` — `detail`: `{ id: string, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
+- `sf-change-confirm-expired` — `detail`: `{ id: string }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
 
 ### Доступность
 
@@ -153,5 +155,5 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/change-confirm`
-- `simai/ui-pro@9cbe0610b74b781c86721de77273819a046adda0:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/change-confirm`
+- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
