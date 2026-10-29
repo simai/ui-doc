@@ -53,10 +53,15 @@ description: "Переключает страницы длинного спис�
 
 | Событие | Когда | Поля `event.detail` |
 |:---|:---|:---|
-| `sf-page-change` | открыта другая страница | `previous`, `current`, `total`, `pageCount`, `pageSize` |
-| `sf-page-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
-| `sf-show-more` | нажата «Показать ещё» | `current`, `total`, `pageSize`, `pageCount`, `hasNext`, `item` |
-| `sf-count-request` | запрошено общее количество | `reason`, `current`, `pageSize` |
+| `sf-pagination-change` | открыта другая страница | `previous`, `current`, `total`, `pageCount`, `pageSize` |
+| `sf-pagination-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
+| `sf-pagination-load-more` | нажата «Показать ещё» | `current`, `total`, `pageSize`, `pageCount`, `hasNext`, `item` |
+| `sf-pagination-count` | запрошено общее количество | `reason`, `current`, `pageSize` |
+
+Прежние имена этих событий — `sf-page-change`, `sf-page-size-change`,
+`sf-show-more`, `sf-count-request`, `sf-action-change`,
+`sf-action-for-all-change`, `sf-action-apply` и `sf-selection-clear` —
+приходят с тем же `detail` до 2026-12-01; подписывайтесь на новые.
 
 При смене размера `current` остаётся в пределах нового числа страниц.
 `goToPage(n)`, `setPageSize(n)` и `showMore()` делают то же из кода,
@@ -69,7 +74,7 @@ description: "Переключает страницы длинного спис�
 `count-known="false"` и сообщает `has-next`, есть ли следующая страница.
 Тогда вместо числа в начале строки стоит ссылка «Показать количество» — если задан
 `can-count`. Нажатие на неё, на стрелку «Последняя» и отметка «Для всех»
-отправляют `sf-count-request` с причиной в `detail.reason`: `total`,
+отправляют `sf-pagination-count` с причиной в `detail.reason`: `total`,
 `last-page` или `action-for-all`. Пока приложение считает, компонент
 показывает короткое ожидание; ответ приходит атрибутами `total`,
 `count-known` и снятым `counting`. Спиннер ожидания берёт
@@ -89,10 +94,11 @@ description: "Переключает страницы длинного спис�
 «Для всех» — применить действие ко всем записям под фильтром.
 
 Компонент не хранит выделение: `selected-count` передаёт приложение, а
-`sf-action-change` (`previous`, `action`), `sf-action-for-all-change`
-(`previous`, `actionForAll`), `sf-action-apply` (`action`, `actionForAll`,
-`current`, `total`, `pageSize`, `pageCount`) и `sf-selection-clear`
-(`selectedCount`, `total`) сообщают ему о выборе пользователя.
+`sf-pagination-action-change` (`previous`, `action`),
+`sf-pagination-action-for-all-change` (`previous`, `actionForAll`),
+`sf-pagination-apply` (`action`, `actionForAll`, `current`, `total`,
+`pageSize`, `pageCount`) и `sf-pagination-selection-clear` (`selectedCount`,
+`total`) сообщают ему о выборе пользователя.
 `bottom="false"` убирает панель, если действия показывает соседний компонент.
 
 ```html
@@ -109,12 +115,12 @@ description: "Переключает страницы длинного спис�
 ```js
 const pagination = document.querySelector('sf-pagination');
 
-pagination.addEventListener('sf-page-change', async (event) => {
+pagination.addEventListener('sf-pagination-change', async (event) => {
   const {current, pageSize} = event.detail;
   renderRows(await loadOrders({page: current, size: pageSize}));
 });
 
-pagination.addEventListener('sf-action-apply', async (event) => {
+pagination.addEventListener('sf-pagination-apply', async (event) => {
   await applyToSelected(event.detail.action);
   pagination.setAttribute('selected-count', '0');
 });
