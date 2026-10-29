@@ -222,16 +222,16 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-pagination-change` — `detail`: `{ previous: number, current: number, total: number, pageCount: number|null, pageSize: number }`. change (словарь).
-- `sf-pagination-size-change` — `detail`: `{ previous: number, pageSize: number, current: number, total: number, pageCount: number|null }`. size-change (словарь).
-- `sf-pagination-count` — `detail`: `{ reason: any, current: number, pageSize: number }`. count (словарь).
-- `sf-pagination-load-more` — `detail`: `{ direction: any, current: number, total: number, pageSize: number, pageCount: number|null, hasNext: boolean }`. load-more (словарь).
-- `sf-pagination-selection-clear` — `detail`: `{ selectedCount: number, total: number }`. selection-clear (словарь).
-- `sf-pagination-action-change` — `detail`: `{ previous: string, action: string }`. action-change (словарь).
-- `sf-pagination-action-for-all-change` — `detail`: `{ previous: boolean, actionForAll: boolean }`. action-for-all-change (словарь).
-- `sf-pagination-apply` — `detail`: `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number|null }`. apply (словарь).
+- `sf-pagination-change` — `detail`: `{ previous: number, current: number, total: number, pageCount: number|null, pageSize: number }`.
+- `sf-pagination-size-change` — `detail`: `{ previous: number, pageSize: number, current: number, total: number, pageCount: number|null }`.
+- `sf-pagination-count` — `detail`: `{ reason: any, current: number, pageSize: number }`.
+- `sf-pagination-load-more` — `detail`: `{ direction: any, current: number, total: number, pageSize: number, pageCount: number|null, hasNext: boolean }`.
+- `sf-pagination-selection-clear` — `detail`: `{ selectedCount: number, total: number }`.
+- `sf-pagination-action-change` — `detail`: `{ previous: string, action: string }`.
+- `sf-pagination-action-for-all-change` — `detail`: `{ previous: boolean, actionForAll: boolean }`.
+- `sf-pagination-apply` — `detail`: `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number|null }`.
 - `sf-action-apply` — `detail`: `{ component: object, tagName: string, template: string, action: string, actionForAll: boolean, current: number, total: number, pageSize: number, pageCount: number|null }`.
 - `sf-action-change` — `detail`: `{ component: object, tagName: string, template: string, previous: string, action: string }`.
 - `sf-action-for-all-change` — `detail`: `{ component: object, tagName: string, template: string, previous: boolean, actionForAll: boolean }`.

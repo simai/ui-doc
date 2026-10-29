@@ -124,7 +124,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-chat-interlocutor-select` — `detail`: `{ id: string }`. Выбран другой собеседник (словарь select). Имя 0.3 `sf-chat-interlocutor` отправляется после него до 2026-12-01.
 

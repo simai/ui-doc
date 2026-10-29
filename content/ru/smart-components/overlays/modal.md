@@ -311,18 +311,18 @@ modal.open();
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-modal-open` — `detail`: `{ modalId: string, phase: string }`. open (словарь).
-- `sf-modal-opened` — `detail`: `{ modalId: string, phase: string }`. opened (словарь).
-- `sf-modal-close` — `detail`: `{ modalId: string, phase: string, reason: any, unsaved: boolean }`. close (словарь).
-- `sf-modal-closed` — `detail`: `{ modalId: string, phase: string, reason: any, accepted: boolean }`. closed (словарь).
-- `sf-modal-minimize` — `detail`: `{ modalId: string, phase: string }`. minimize (словарь).
-- `sf-modal-minimized` — `detail`: `{ modalId: string, phase: string }`. minimized (словарь).
-- `sf-modal-expand` — `detail`: `{ modalId: string, phase: string }`. expand (словарь).
-- `sf-modal-expanded` — `detail`: `{ modalId: string, phase: string }`. expanded (словарь).
-- `sf-modal-content-upload` — `detail`: `{ modalId: string, src: string, remote: object }`. content-upload (словарь).
-- `sf-modal-content-uploaded` — `detail`: `{ modalId: string, src: string, remote: object }`. content-uploaded (словарь).
+- `sf-modal-open` — `detail`: `{ modalId: string, phase: string }`.
+- `sf-modal-opened` — `detail`: `{ modalId: string, phase: string }`.
+- `sf-modal-close` — `detail`: `{ modalId: string, phase: string, reason: any, unsaved: boolean }`.
+- `sf-modal-closed` — `detail`: `{ modalId: string, phase: string, reason: any, accepted: boolean }`.
+- `sf-modal-minimize` — `detail`: `{ modalId: string, phase: string }`.
+- `sf-modal-minimized` — `detail`: `{ modalId: string, phase: string }`.
+- `sf-modal-expand` — `detail`: `{ modalId: string, phase: string }`.
+- `sf-modal-expanded` — `detail`: `{ modalId: string, phase: string }`.
+- `sf-modal-content-upload` — `detail`: `{ modalId: string, src: string, remote: object }`.
+- `sf-modal-content-uploaded` — `detail`: `{ modalId: string, src: string, remote: object }`.
 - `modal:after-close` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string, reason?: string }`. После закрытия окна. Всплывает.
 - `modal:after-hide` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. После сворачивания окна. Всплывает.
 - `modal:after-open` — `detail`: `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }`. После открытия окна. Всплывает.

@@ -103,9 +103,9 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-steps-change` — `detail`: `{ previous: number, current: number, item: object, items: array }`. change (словарь).
+- `sf-steps-change` — `detail`: `{ previous: number, current: number, item: object, items: array }`.
 - `sf-step-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
 
 ### Доступность

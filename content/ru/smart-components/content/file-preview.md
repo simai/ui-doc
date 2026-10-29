@@ -137,10 +137,10 @@ file.onDownload((event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-file-preview-download` — `detail`: `{ id: string, action: string, value: object }`. download (словарь).
-- `sf-file-preview-detach` — `detail`: `{ id: string, action: string, value: object }`. detach (словарь).
+- `sf-file-preview-download` — `detail`: `{ id: string, action: string, value: object }`.
+- `sf-file-preview-detach` — `detail`: `{ id: string, action: string, value: object }`.
 - `sf-file-preview:download` — `detail`: `{ action?: any, value?: object }`. Запрошено действие скачивания. Всплывает, с composed: true и отменяемое: preventDefault() останавливает встроенный переход по href.
 - `sf-file-preview:remove` — `detail`: `{ action?: any, value?: object }`. Запрошено действие удаления. Всплывает, с composed: true и отменяемое; компонент сам ничего не удаляет.
 

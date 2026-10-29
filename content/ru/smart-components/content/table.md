@@ -857,7 +857,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-count-request` — `detail`: `{ component: object, tagName: string, template: string, reason: string, current: integer, pageSize: integer }`. Отправляет пагинация представления, когда человек просит общее число, последнюю страницу или действие над фильтром, пока число неизвестно. Представление отвечает на него намерением query.count; хосту слушать его не нужно.
 - `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, message?: string, data?: object, sequence?: integer, effects?: array, instance_id: string }`. Приходит после каждого ответа порта, по которому действует представление, включая ответы, которые оно даёт себе само (порт не подключён, возможность не объявлена, действие не разрешено), — чтобы страница видела результаты, не оборачивая порт.
@@ -1004,7 +1004,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-port-output` — `detail`: `{ port: any, value: array }`. Выход порта композиции. Таблица отправляет порт `selection` (`record-ids.v1`) один раз при каждом изменении явного выделения, включая сброс; маршрутизирует его общий `sf-composition-scope`.
 - `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Запрашивает одну операцию над строкой или групповую операцию, которую выполняет хост. Источник события — экземпляр таблицы-владельца; отправка события не означает успех операции.
@@ -1030,7 +1030,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sf-table-save` — `detail`: `{ kind: any, columnSettings?: object }`. Настройки колонок человека, словарь §5 save `{kind: columns, reason, columnSettings, tableSettingsKey}`. Прежнее имя `sf-table-column-settings-change` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
 - `sf-table-create` — `detail`: `{ item?: string|null }`. Кнопка создания или один из её видов, словарь §5 create `{item}`. Прежнее имя `sf-table-create-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
 - `sf-table-query` — `detail`: `{ reason?: string, sequence?: integer }`. Контекстный запрос входного порта композиции, словарь §5.1 query `{reason, context, sequence}`. Прежнее имя `sf-table-query-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-refresh` — `detail`: `{  }`. Кнопка повтора у списка с ошибкой, словарь §5 refresh. Прежнее имя `sf-table-retry` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-refresh` — ничего не передаёт. Кнопка повтора у списка с ошибкой, словарь §5 refresh. Прежнее имя `sf-table-retry` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
 - `sf-table-expand` — `detail`: `{ id: any, expanded?: boolean }`. Строка дерева открылась или закрылась, словарь §5 expand `{id, expanded}`. Прежнее имя `sf-table-tree-toggle` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
 - `sf-table-load-more` — `detail`: `{ direction?: any }`. Следующая страница уровня дерева, словарь §5 load-more `{direction: after, parent, cursor}`. Прежнее имя `sf-table-tree-more` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
 - `sf-table-move` — `detail`: `{ ids: array }`. Строки переставлены, словарь §5 move `{ids, before, order}`. Прежнее имя `sf-table-rows-reorder` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).

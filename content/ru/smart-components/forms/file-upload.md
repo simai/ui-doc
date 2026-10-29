@@ -267,7 +267,7 @@ async function store(item) {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ files: array, source: any }`. Выбраны файлы: при выборе — нативное событие от внутреннего поля выбора файла, при перетаскивании — CustomEvent от области (detail files и source 'drop'), поэтому форма узнаёт об обоих случаях.
 - `sf-file-upload-attach` — `detail`: `{ files: array, source: any, multiple: boolean }`. Выбраны файлы для загрузки. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json).

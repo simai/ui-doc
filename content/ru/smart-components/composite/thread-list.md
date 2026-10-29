@@ -157,9 +157,9 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-thread-list-create` — `detail`: `{  }`. Нажали «Новый разговор».
+- `sf-thread-list-create` — ничего не передаёт. Нажали «Новый разговор».
 - `sf-thread-list-open` — `detail`: `{ id: string }`. Человек просит открыть беседу (словарь open); хост записывает `selected` обратно. Имя версии 1.0 `sf-thread-list-select` отправляется после него до 2026-12-01.
 - `sf-thread-list-rename` — `detail`: `{ id: string, title: string }`. Разговор переименовали на месте; новое название видно сразу. Хост, который не может его сохранить, возвращает прежнее название через upsert.
 - `sf-thread-list-archive` — `detail`: `{ id: string, ids?: array }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).

@@ -316,7 +316,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ value: object, date: string, startValue: string, endValue: string, formattedValue: string, isoValue: string, range: boolean, format: string, preset: object }`. Выбрана дата или граница диапазона; событие отправляется на элементе. Имя для привязки.
 - `sf-datepicker-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.

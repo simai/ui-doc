@@ -190,11 +190,11 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `change` — `detail`: `{ previous: number, current: number, total: number, from: any }`. change (словарь).
-- `sf-gallery-opened` — `detail`: `{ current: number, total: number }`. opened (словарь).
-- `sf-gallery-closed` — `detail`: `{ current: number, total: number }`. closed (словарь).
+- `change` — `detail`: `{ previous: number, current: number, total: number, from: any }`.
+- `sf-gallery-opened` — `detail`: `{ current: number, total: number }`.
+- `sf-gallery-closed` — `detail`: `{ current: number, total: number }`.
 - `sf-change` — `detail`: `{ component?: any, tagName?: string, template?: string, previous?: number, current?: number, total?: number, from?: any }`. Текущий слайд изменился через API или любой из слайдеров. Всплывает и с composed: true.
 - `sf-close` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса закрылось. Всплывает и с composed: true.
 - `sf-open` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса открылось. Всплывает и с composed: true.

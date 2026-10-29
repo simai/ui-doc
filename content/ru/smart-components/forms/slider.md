@@ -136,9 +136,9 @@ slider.slideNext();
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `change` — `detail`: `{ activeIndex: number, realIndex: number, previousIndex: number }`. change (словарь).
+- `change` — `detail`: `{ activeIndex: number, realIndex: number, previousIndex: number }`.
 - `sf-slide-change` — `detail`: `{ component: object, tagName: string, template: string, activeIndex: number, realIndex: number, previousIndex: number }`.
 
 ### Доступность

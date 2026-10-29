@@ -186,7 +186,7 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }`. Выбор изменился — перетаскивание в палитре, образец, введённое число (словарь 1.1.5 §5.1: `sf-theme-change` → change у генератора темы); имя браузера, тема — в detail
 - `sf-theme-generator-committed` — `detail`: `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }`. Выбор принят — change палитры, образец, Enter или уход из поля, сброс: тема, которую сохраняет хост

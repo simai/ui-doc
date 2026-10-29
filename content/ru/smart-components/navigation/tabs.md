@@ -289,11 +289,11 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-tabs-change` — `detail`: `{ selected: any, previous: number, current: number, item: object, items: array }`. change (словарь).
+- `sf-tabs-change` — `detail`: `{ selected: any, previous: number, current: number, item: object, items: array }`.
 - `sf-tabs-settings-change` — `detail`: `{ order: array, hidden: array, reason?: any }`. Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Хост сохраняет выбор и возвращает его через setSettings.
-- `sf-tabs-settings-reset` — `detail`: `{  }`. Человек попросил вернуть объявленный порядок; компонент показывает его, пока хост не ответит через setSettings.
+- `sf-tabs-settings-reset` — ничего не передаёт. Человек попросил вернуть объявленный порядок; компонент показывает его, пока хост не ответит через setSettings.
 - `sf-tab-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
 
 ### Доступность

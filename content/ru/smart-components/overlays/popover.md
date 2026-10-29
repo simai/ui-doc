@@ -128,12 +128,12 @@ popover.addEventListener('sf-popover-close', () => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-popover-open` — `detail`: `{  }`. Поверхность открылась.
-- `sf-popover-opened` — `detail`: `{  }`. opened (словарь).
+- `sf-popover-open` — ничего не передаёт. Поверхность открылась.
+- `sf-popover-opened` — ничего не передаёт.
 - `sf-popover-close` — `detail`: `{ reason: any, unsaved: boolean }`. Поверхность закрылась.
-- `sf-popover-closed` — `detail`: `{ reason: any }`. closed (словарь).
+- `sf-popover-closed` — `detail`: `{ reason: any }`.
 
 ### Минимальная разметка
 

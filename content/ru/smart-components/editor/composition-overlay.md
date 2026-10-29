@@ -166,7 +166,7 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-composition-overlay-select` — `detail`: `{ ids: array, id: any, node_id: any }`. Узел выбран (или выбор снят): словарь 1.1.5 §5 select; в detail остаётся `node_id` для хоста композиции
 - `sf-composition-overlay-apply` — `detail`: `{ action: string, scope: any, ids: array }`. Для выбранного узла выбрано действие панели инструментов: собственное действие записи (словарь §5 apply, стандарт §18.3)

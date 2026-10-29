@@ -115,10 +115,10 @@ Ctrl+C» (⌘C на macOS), чтобы человек скопировал са�
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-copy-button-copied` — `detail`: `{ text: string, method: any }`. copied (словарь).
-- `sf-copy-button-copy-failed` — `detail`: `{ code: any }`. copy-failed (словарь).
+- `sf-copy-button-copied` — `detail`: `{ text: string, method: any }`.
+- `sf-copy-button-copy-failed` — `detail`: `{ code: any }`.
 - `sf-copy` — `detail`: `{ text: string, method: any }`. Значение скопировано.
 - `sf-copy-error` — `detail`: `{ code: any }`. Значение не скопировано; при denied текст выделен для Ctrl+C.
 

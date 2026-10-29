@@ -115,7 +115,7 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-inline-editor-input` — `detail`: `{ id: string|null, content: array }`. Текст изменился во время правки; отправляется на редактируемом элементе
 - `sf-inline-editor-change` — `detail`: `{ id: string|null, content: array }`. Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе

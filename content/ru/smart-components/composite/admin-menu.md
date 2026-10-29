@@ -328,7 +328,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: string }`. Уведомляет оболочку хоста о режиме ширины.
 - `sf-admin-menu-search` — `detail` не описан. Имя версии 1.0 для `sf-admin-menu-query` `{kind: menu, query, requestId}`; отправляется после него до 2026-12-01.

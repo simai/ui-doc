@@ -212,9 +212,9 @@ SF.Resizer.attach(table, {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-resizer-resize` — `detail`: `{ width: number, phase: any }`. resize (словарь).
+- `sf-resizer-resize` — `detail`: `{ width: number, phase: any }`.
 - `sf-resize` — `detail`: `{ width: number, phase: any }`. Ширина изменилась: во время перетаскивания (move), после перетаскивания или нажатия клавиши (end) или вернулась к ширине из стилей (reset).
 
 ### Персональный вид

@@ -217,7 +217,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-sortable-move` — `detail`: `{ item: string, from: string, to: string, index: number, mode: any }`. Просьба перенести (или скопировать) элемент в место: один ручной перенос словаря 1.1.5 §5 move, `{id, parent, position}` под именами item, to и index; применяет его хост
 - `sf-sortable-state` — `detail`: `{ state: any, item: string }`. Шаг перетаскивания: взяли, отпустили или отменили

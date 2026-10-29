@@ -190,7 +190,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-chat-window-open` — `detail`: `{ request-id: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`) либо запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-load-more` — `detail`: `{ request-id: string, intent: string, kind?: string, payload: object }`. Более ранние сообщения (порт `history.older {conversation_id, before_id}`, kind `history`) или следующая страница списка (`x-conversations-paging`, `conversations.more {archived}`, kind `conversations`). Было `chat-port:older`, `chat-window:more`. Имена 0.3 `chat-port:older`, `chat-window:more {request_id, ...payload}` отправляются после него до 2026-12-01.

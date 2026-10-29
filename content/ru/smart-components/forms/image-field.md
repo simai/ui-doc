@@ -150,7 +150,7 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ value: object|null, file: object|null, source: any, name: string }`. Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит.
 - `input` — `detail`: `{ value: object|null, file: object|null, source: any, name: string }`. Отправляется при каждом изменении, перед ним, с тем же detail — как нативный файловый input отправляет input и change вместе.

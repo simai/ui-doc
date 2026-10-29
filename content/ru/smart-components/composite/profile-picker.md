@@ -107,13 +107,13 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-profile-picker-select` — `detail`: `{ id: string, ids: array }`. select (словарь).
-- `sf-profile-picker-create` — `detail`: `{ label: string, shared: boolean, from: string, kind: any }`. create (словарь).
-- `sf-profile-picker-rename` — `detail`: `{ id: string, label: string, title: string }`. rename (словарь).
-- `sf-profile-picker-delete` — `detail`: `{ id: string, ids: array }`. delete (словарь).
-- `sf-profile-picker-reset` — `detail`: `{ id: string }`. reset (словарь).
+- `sf-profile-picker-select` — `detail`: `{ id: string, ids: array }`.
+- `sf-profile-picker-create` — `detail`: `{ label: string, shared: boolean, from: string, kind: any }`.
+- `sf-profile-picker-rename` — `detail`: `{ id: string, label: string, title: string }`.
+- `sf-profile-picker-delete` — `detail`: `{ id: string, ids: array }`.
+- `sf-profile-picker-reset` — `detail`: `{ id: string }`.
 - `sf-profile-select` — `detail`: `{ id: string }`. Человек выбрал профиль.
 - `sf-profile-create` — `detail`: `{ label: string, shared: boolean, from?: string }`. Человек попросил новый профиль — копию текущего.
 - `sf-profile-rename` — `detail`: `{ id: string, label: string }`. Человек переименовал профиль.

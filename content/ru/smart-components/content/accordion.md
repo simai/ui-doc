@@ -164,9 +164,9 @@ faq.open(location.hash.slice(1));
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-accordion-toggle` — `detail`: `{ id: any, open: boolean, source: any, section: object }`. toggle (словарь).
+- `sf-accordion-toggle` — `detail`: `{ id: any, open: boolean, source: any, section: object }`.
 - `sf-accordion:toggle` — `detail`: `{ id?: string, open?: boolean, source?: string, section?: object }`. Секция открылась или закрылась — по действию человека (source user) или метода (source method). В режиме single закрытая секция отправляет своё событие после запрошенной, как группа нативных `<details name>`.
 
 ### Доступность

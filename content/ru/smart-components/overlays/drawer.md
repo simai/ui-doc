@@ -300,13 +300,13 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-drawer-open` — `detail`: `{ drawerId: string }`. open (словарь).
-- `sf-drawer-opened` — `detail`: `{ drawerId: string }`. opened (словарь).
-- `sf-drawer-close` — `detail`: `{ drawerId: string, reason: any, unsaved: boolean }`. close (словарь).
-- `sf-drawer-closed` — `detail`: `{ drawerId: string, reason: any }`. closed (словарь).
-- `sf-drawer-snapped` — `detail`: `{ drawerId: string, snap: any }`. snapped (словарь).
+- `sf-drawer-open` — `detail`: `{ drawerId: string }`.
+- `sf-drawer-opened` — `detail`: `{ drawerId: string }`.
+- `sf-drawer-close` — `detail`: `{ drawerId: string, reason: any, unsaved: boolean }`.
+- `sf-drawer-closed` — `detail`: `{ drawerId: string, reason: any }`.
+- `sf-drawer-snapped` — `detail`: `{ drawerId: string, snap: any }`.
 - `drawer:ready` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 - `drawer:update` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 - `drawer:before-open` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Отменяемое намерение перед открытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.

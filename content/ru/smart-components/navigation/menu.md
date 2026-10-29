@@ -83,18 +83,26 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 
 ### Переходы и события
 
-Перед переходом по ссылке приходит `sf-menu:navigate` с `id`, `href` и
+Перед переходом по ссылке приходит `sf-menu-navigate` с `id`, `href` и
 `item`. Его можно отменить: `preventDefault()` останавливает переход, и
 приложение, которое само меняет страницы, показывает нужную. Нажатие с
 клавишей-модификатором или средней кнопкой событие не отправляет.
-`sf-menu:toggle` сообщает, что ветка открылась или закрылась.
+`sf-menu-toggle` сообщает, что ветка открылась или закрылась.
+
+Прежние имена `sf-menu:navigate` и `sf-menu:toggle` приходят с тем же
+`detail` до 2026-12-01; отмена перехода действует для обоих имён. Каждое
+обращение к прежнему имени записывается в `SF.deprecations`.
 
 `open(id)`, `close(id)`, `toggle(id)`, `isOpen(id)` и `closeAll()` управляют
-ветками из кода.
+ветками из кода. Открыть, закрыть и переключить ветку можно и объектом:
+`open({id})`. Они отвечают `{outcome: 'applied'}`, если что-то изменилось, и
+`{outcome: 'refused', reason}`, если нет: `unknown` — такой ветки нет,
+`compact` — вид compact ветки не открывает, `disabled` — пункт недоступен,
+`already` — ветка уже в этом состоянии.
 
 ```js
 const menu = document.querySelector('sf-menu');
-menu.addEventListener('sf-menu:navigate', (event) => {
+menu.addEventListener('sf-menu-navigate', (event) => {
   event.preventDefault();
   router.go(event.detail.href);
 });
@@ -107,7 +115,8 @@ menu.addEventListener('sf-menu:navigate', (event) => {
   страницей, показывает в строке ссылку и кнопку рядом.
 - `Tab` обходит ссылки и кнопки по порядку, `Enter` и `Space` открывают и
   закрывают ветку, `Escape` закрывает самую глубокую открытую панель и
-  возвращает фокус на её кнопку.
+  возвращает фокус на её кнопку. В колонке панелей нет: её группы на `Escape`
+  не закрываются, и клавиша остаётся странице.
 - Это шаблон навигации WAI-ARIA, а не меню приложения: роли `menu` у него нет.
 
 ## Справочник API
@@ -151,10 +160,10 @@ menu.addEventListener('sf-menu:navigate', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-menu-navigate` — `detail`: `{ id: any, href: string, item: object }`. navigate (словарь).
-- `sf-menu-toggle` — `detail`: `{ id: any, open: boolean, source: any, item: object|null }`. toggle (словарь).
+- `sf-menu-navigate` — `detail`: `{ id: any, href: string, item: object }`.
+- `sf-menu-toggle` — `detail`: `{ id: any, open: boolean, source: any, item: object|null }`.
 - `sf-menu:navigate` — `detail`: `{ id?: string, href?: string, item?: object }`. Переход по ссылке меню, до того как браузер уйдёт со страницы. Можно отменить: preventDefault() останавливает переход, и хост, который сам меняет страницы (SPA), показывает нужную. Нажатие с клавишей-модификатором, средней кнопкой или ссылка в другое окно остаются браузеру и событие не отправляют.
 - `sf-menu:toggle` — `detail`: `{ id?: string|null, open?: boolean, source?: string, item?: object|null }`. Ветка открылась или закрылась — по действию человека (source user) или метода (source method): сначала запрошенная ветка, затем закрывшиеся вместе с ней, от самой внутренней. Панель свёрнутого меню отправляет событие с id null.
 

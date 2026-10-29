@@ -164,7 +164,7 @@ section.expand();
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-tree-item-open` — `detail`: `{ id: string, value: string }`. Нажатие на имя или Enter на листе без ссылки: open `{id}` словаря 1.1.5 §5
 - `sf-tree-item-toggle` — `detail`: `{ id: string, open: boolean, value: string }`. Ветка открылась или закрылась (словарь §5 toggle); DOM-имя `sf-tree-item-toggle` не изменилось

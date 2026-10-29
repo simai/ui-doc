@@ -321,13 +321,13 @@ layer.addEventListener('keydown', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-context-menu-select` — `detail`: `{ id: string|null, entry: object, checked: boolean|null, group: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
-- `sf-context-menu-open` — `detail`: `{  }`. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
-- `sf-context-menu-opened` — `detail`: `{  }`. opened (словарь).
+- `sf-context-menu-open` — ничего не передаёт. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
+- `sf-context-menu-opened` — ничего не передаёт.
 - `sf-context-menu-close` — `detail`: `{ reason: any, unsaved: boolean }`. Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся.
-- `sf-context-menu-closed` — `detail`: `{ reason: any }`. closed (словарь).
+- `sf-context-menu-closed` — `detail`: `{ reason: any }`.
 - `sf-context-menu-search` — `detail`: `{ query: string }`. Запрос поиска, на который отвечает хост (search.remote).
 - `sf-context-menu-tab` — `detail`: `{ id: string, index: number }`. Выбрана вкладка панели; хост показывает её строки.
 

@@ -135,7 +135,7 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-change-confirm-answer` — `detail`: `{ id: string, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
 - `sf-change-confirm-expired` — `detail`: `{ id: string }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
