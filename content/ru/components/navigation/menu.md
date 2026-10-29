@@ -11,7 +11,7 @@ profile: reference
 панели, строкой в шапке или деревом документации. Для действий над
 выбранным объектом берите [контекстное меню](/ru/components/navigation/context-menu/).
 Меню из данных, с текущей страницей и состоянием веток собирает
-Smart-компонент [Меню](/ru/smart-components/navigation/menu/): разметку,
+смарт-компонент [Меню](/ru/smart-components/navigation/menu/): разметку,
 которую он нарисовал, скрипт классового меню не трогает.
 
 ## Пример
@@ -195,5 +195,5 @@ Smart-компонент [Меню](/ru/smart-components/navigation/menu/): ра
 
 - [Контекстное меню](/ru/components/navigation/context-menu/)
 - [Хлебные крошки](/ru/components/navigation/breadcrumbs/)
-- [Меню — Smart-компонент](/ru/smart-components/navigation/menu/)
-- [Меню администратора — Smart-компонент](/ru/smart-components/composite/admin-menu/)
+- [Меню — смарт-компонент](/ru/smart-components/navigation/menu/)
+- [Меню администратора — смарт-компонент](/ru/smart-components/composite/admin-menu/)

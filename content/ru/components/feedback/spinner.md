@@ -246,4 +246,4 @@ whenLoader(() => SF.Loader.ready('Spinner', (Spinner) => {
 
 - [Прогресс](/ru/components/feedback/progress-bar/)
 - [Скелетон](/ru/components/feedback/skeleton/)
-- [Спиннер — Smart-компонент](/ru/smart-components/feedback/spinner/)
+- [Спиннер — смарт-компонент](/ru/smart-components/feedback/spinner/)

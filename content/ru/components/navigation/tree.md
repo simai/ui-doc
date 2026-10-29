@@ -121,7 +121,7 @@ Enter раскрывает ветвь или активирует лист; пр
 ## JavaScript
 
 Скрипт подключается сам и обслуживает каждый `.sf-tree`, в том числе
-добавленный позже. Корни внутри Smart-компонента `<sf-tree>` он пропускает.
+добавленный позже. Корни внутри смарт-компонента `<sf-tree>` он пропускает.
 
 | Функция | Что делает |
 |:---|:---|
@@ -192,4 +192,4 @@ sf-tree, .sf-tree {
 
 - [Элемент дерева](/ru/components/navigation/tree-item/)
 - [Меню](/ru/components/navigation/menu/)
-- [Дерево — Smart-компонент](/ru/smart-components/navigation/tree/)
+- [Дерево — смарт-компонент](/ru/smart-components/navigation/tree/)

@@ -32,7 +32,7 @@ profile: reference
   Обычно берут вид `sf-button--link` со схемой `sf-button--on-surface`.
 - Компонент — только оформление. Открыть меню у объекта, поставить его рядом,
   закрыть по Escape и вернуть фокус — задача вызывающего кода или
-  Smart-компонента `<sf-context-menu>`.
+  смарт-компонента `<sf-context-menu>`.
 
 ## Варианты
 
@@ -50,7 +50,7 @@ profile: reference
 
 - Статическая разметка `sf-context-menu` не задаёт ролей. Не ставьте ей
   `role="menu"`, если не реализуете клавиатурную модель меню целиком.
-- Для плоского списка действий берите Smart-компонент `<sf-context-menu>` с
+- Для плоского списка действий берите смарт-компонент `<sf-context-menu>` с
   `aria-label`: он даёт прямым кнопкам и ссылкам роль `menuitem`, оставляет в
   порядке Tab один пункт и переводит фокус клавишами со стрелками вверх и
   вниз, Home и End.
@@ -127,4 +127,4 @@ profile: reference
 
 - [Выпадающий список](/ru/components/navigation/dropdown/)
 - [Кнопки](/ru/components/actions/buttons/)
-- [Контекстное меню — Smart-компонент](/ru/smart-components/navigation/context-menu/)
+- [Контекстное меню — смарт-компонент](/ru/smart-components/navigation/context-menu/)

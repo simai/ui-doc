@@ -16,7 +16,7 @@ description: "Подготовленное изменение ждёт отве�
 PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу —
 коммерческая лицензия SIMAI; в составе Larena — лицензия Larena. Как
 подключить пакет — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
+[Подключение смарт-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ## Пример
 

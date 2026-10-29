@@ -84,15 +84,15 @@ Markdown + настройки сайта
 import { readFile } from 'node:fs/promises';
 import { render, extendRegistry, compositionTypeFromSmartManifest } from './ui/distr/core/js/composition/index.mjs';
 
-// Тип для Smart-компонента берётся из его манифеста в той же поставке.
+// Тип для смарт-компонента берётся из его манифеста в той же поставке.
 const button = JSON.parse(await readFile('./ui/distr/smart/button/smart.manifest.json', 'utf8'));
 const doc = JSON.parse(documentJson); // документ simai.composition.document
 const result = await render(doc, { registry: extendRegistry([compositionTypeFromSmartManifest(button)]) });
 ```
 
-Если в документе есть Smart-узел, страница с результатом подключает Core и
+Если в документе есть смарт-узел, страница с результатом подключает Core и
 Loader: узел выводится тегом компонента, а загружает его Loader (см.
-[Smart-компонент в макете](/ru/guide/layouts/building/smart-component/)).
+[Смарт-компонент в макете](/ru/guide/layouts/building/smart-component/)).
 
 Модулю не нужны браузерные объекты вроде `window` и `document`: из
 глобальных объектов он берёт только `crypto.subtle`, `TextEncoder` и `URL`,

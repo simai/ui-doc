@@ -23,6 +23,6 @@ foreach (['components','smart-components'] as $catalog) {
 foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root.'/content/ru/guide')) as $file) {
     if (!$file->isFile() || $file->getExtension()!=='md') continue;
     $text=file_get_contents($file->getPathname());
-    if (preg_match('/^## Что дальше|[Сс]ложн\S* Smart-компонент/u',$text)) $errors[]='Terminology or duplicate navigation: '.$file->getFilename();
+    if (preg_match('/^## Что дальше|[Сс]ложн\S* смарт-компонент/u',$text)) $errors[]='Terminology or duplicate navigation: '.$file->getFilename();
 }
 echo json_encode(['status'=>$errors?'fail':'pass','catalog_entries'=>$count,'errors'=>$errors],JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE)."\n";exit($errors?1:0);

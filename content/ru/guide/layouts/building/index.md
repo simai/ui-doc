@@ -13,7 +13,7 @@ description: "Макет делит страницу на три уровня о
 
 - [Уровни макета](/ru/guide/layouts/introduction/levels/) — уровни ответственности и встроенные типы.
 - [Слоты и порядок](/ru/guide/layouts/building/slots/) — слоты и порядок дочерних узлов.
-- [Smart-компонент в макете](/ru/guide/layouts/building/smart-component/) — Smart-компоненты в макете.
+- [Смарт-компонент в макете](/ru/guide/layouts/building/smart-component/) — смарт-компоненты в макете.
 - [Собственный тип](/ru/guide/layouts/reference/custom-type/) и [Манифест типа](/ru/guide/layouts/reference/type-manifest/) — собственный тип и манифест типа.
 - [Что такое компонент](/ru/guide/components/what-is/#что-такое-компонент) — компоненты.
 
@@ -25,7 +25,7 @@ description: "Макет делит страницу на три уровня о
 - [Компонент](/ru/guide/layouts/building/component/)
 - [Слоты и порядок](/ru/guide/layouts/building/slots/)
 - [Шаблоны, вставки и варианты](/ru/guide/layouts/building/recipe-templates-and-variants/)
-- [Smart-компонент в макете](/ru/guide/layouts/building/smart-component/)
+- [Смарт-компонент в макете](/ru/guide/layouts/building/smart-component/)
 - [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)
 - [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/)
 - [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/)

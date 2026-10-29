@@ -51,7 +51,7 @@ Toggle «Компактный режим» после переноса — пе�
 Выпуск поставляет компонент Toggle: загрузчик подключает его стили и скрипт,
 когда на странице есть класс `sf-toggle`, а скрипт находит Toggle по
 `label.sf-toggle`. Поэтому уже написанная разметка Toggle и
-[Smart-компонент Toggle](/ru/smart-components/forms/toggle/) продолжают
+[смарт-компонент Toggle](/ru/smart-components/forms/toggle/) продолжают
 работать. Классы и переменные ниже описывают эту разметку; новую разметку на
 них не пишите.
 
@@ -142,4 +142,4 @@ Toggle «Компактный режим» после переноса — пе�
 ## См. также
 
 - [Переключатель](/ru/components/forms/switch/)
-- [Toggle — Smart-компонент](/ru/smart-components/forms/toggle/)
+- [Toggle — смарт-компонент](/ru/smart-components/forms/toggle/)

@@ -153,7 +153,7 @@ profile: reference
 модального окна или тоста; иначе поверхность страницы `--sf-surface-0`.
 Кольцо верно в светлой и тёмной теме.
 
-Smart-элементы [Аватар](/ru/smart-components/content/avatar/),
+Смарт-элементы [Аватар](/ru/smart-components/content/avatar/),
 [Иконки](/ru/smart-components/content/icons/) и
 [Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) рисуют такой бейдж
 по входам `badge-count`, `badge-dot`, `badge-cap` и `badge-label`. В
@@ -253,4 +253,4 @@ Smart-элементы [Аватар](/ru/smart-components/content/avatar/),
 
 - [Точка состояния](/ru/components/feedback/dot/)
 - [Уведомления](/ru/components/feedback/alerts/)
-- [Бейджи — Smart-компонент](/ru/smart-components/feedback/badges/)
+- [Бейджи — смарт-компонент](/ru/smart-components/feedback/badges/)

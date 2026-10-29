@@ -95,7 +95,7 @@ profile: reference
 - Шаги дополняют, а не заменяют заголовок экрана и кнопки «Назад» и «Далее».
 - Для перехода по шагам делайте их нативными кнопками или ссылками; тогда
   они получают фокус и срабатывают по Enter. Выбор шага с клавиатуры и
-  событие `sf-step-change` даёт Smart-компонент `sf-steps`.
+  событие `sf-step-change` даёт смарт-компонент `sf-steps`.
 
 ## Классы
 
@@ -166,4 +166,4 @@ profile: reference
 ## См. также
 
 - [Вкладки](/ru/components/navigation/tabs/)
-- [Шаги — Smart-компонент](/ru/smart-components/navigation/steps/)
+- [Шаги — смарт-компонент](/ru/smart-components/navigation/steps/)

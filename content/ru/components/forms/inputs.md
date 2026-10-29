@@ -331,4 +331,4 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 
 - [Многострочное поле](/ru/components/forms/textarea/)
 - [Количество](/ru/components/forms/quantity/)
-- [Inputs — Smart-компонент](/ru/smart-components/forms/inputs/)
+- [Inputs — смарт-компонент](/ru/smart-components/forms/inputs/)

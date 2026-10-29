@@ -126,7 +126,7 @@ whenLoader(() => SF.Loader.ready('Modal', (Modal) => {
 каждом `open()`. Поэтому, когда окно должно стоять в определённом блоке,
 передавайте `container`: результат тогда не зависит от того, где был фокус.
 Вне таких блоков ничего не меняется. Так же блок держит и
-[Smart-окно `<sf-modal>`](/ru/smart-components/overlays/modal/#окно-внутри-блока).
+[смарт-окно `<sf-modal>`](/ru/smart-components/overlays/modal/#окно-внутри-блока).
 
 ```js
 const modal = new Modal({
@@ -222,5 +222,5 @@ document.addEventListener('modal:before-close', (event) => {
 
 ## См. также
 
-- [Модальное окно — Smart-компонент](/ru/smart-components/overlays/modal/)
+- [Модальное окно — смарт-компонент](/ru/smart-components/overlays/modal/)
 - [Всплывающие сообщения](/ru/components/feedback/toast/)

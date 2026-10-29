@@ -157,6 +157,6 @@ whenLoader(() => SF.Loader.ready('Copy', (Copy) => {
 
 ## См. также
 
-- [Кнопка копирования](/ru/smart-components/actions/copy-button/) — Smart-компонент: копирует содержимое другого элемента и сообщает о результате
+- [Кнопка копирования](/ru/smart-components/actions/copy-button/) — смарт-компонент: копирует содержимое другого элемента и сообщает о результате
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)
 - [Подсветка кода](/ru/components/content/highlight/)

@@ -140,7 +140,7 @@ description: "Граница показывает, где находится э�
   или `2`);
 - кнопки `sf-quantity` — ступень `1/2`;
 - рамка точек слайдера `sf-slider-dots--framed` — ступень `3`;
-- образцы цвета Smart-компонента `sf-color` (`sf-color-chip`,
+- образцы цвета смарт-компонента `sf-color` (`sf-color-chip`,
   `sf-color-preset`) — ступень `1`;
 - рамка, подпись и панель `sf-composition-overlay` и панель
   `sf-inline-editor` — ступень `1`.

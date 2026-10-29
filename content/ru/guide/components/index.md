@@ -15,5 +15,5 @@ description: "Эта часть объясняет обычные компоне
 - [Состояния](/ru/guide/components/states/)
 - [Поля формы](/ru/guide/components/form-fields/)
 - [Поверхности и доступность](/ru/guide/components/surfaces-and-accessibility/)
-- [Компонент и его Smart-двойник](/ru/guide/components/smart-twin/)
+- [Компонент и его смарт-двойник](/ru/guide/components/smart-twin/)
 - [Примеры и компоненты проекта](/ru/guide/components/examples-and-project/)

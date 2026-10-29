@@ -92,4 +92,4 @@ sf-tree-item, .sf-tree-item {
 ## См. также
 
 - [Дерево](/ru/components/navigation/tree/)
-- [Элемент дерева — Smart-компонент](/ru/smart-components/navigation/tree-item/)
+- [Элемент дерева — смарт-компонент](/ru/smart-components/navigation/tree-item/)

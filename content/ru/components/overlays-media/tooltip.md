@@ -27,7 +27,7 @@ profile: reference
 `sf-tooltip-supporting-text`, затем хвост `sf-tooltip-tail`.
 
 - Триггер — нативный фокусируемый элемент: кнопка, ссылка, поле. На теге
-  Smart-компонента, например `<sf-icon-button>`, описание достаётся самому
+  смарт-компонента, например `<sf-icon-button>`, описание достаётся самому
   тегу, а не кнопке внутри него; для подсказки берите классовую кнопку
   `sf-icon-button`. Атрибут
   `data-tooltip` на нём хранит `id` поверхности; пустой `data-tooltip` берёт
@@ -181,4 +181,4 @@ profile: reference
 
 ## См. также
 
-- [Подсказка — Smart-компонент](/ru/smart-components/feedback/tooltip/)
+- [Подсказка — смарт-компонент](/ru/smart-components/feedback/tooltip/)

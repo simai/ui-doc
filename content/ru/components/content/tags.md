@@ -242,4 +242,4 @@ profile: reference
 
 - [Бейджи](/ru/components/feedback/badges/)
 - [Аватары](/ru/components/content/avatars/)
-- [Теги — Smart-компонент](/ru/smart-components/content/tags/)
+- [Теги — смарт-компонент](/ru/smart-components/content/tags/)

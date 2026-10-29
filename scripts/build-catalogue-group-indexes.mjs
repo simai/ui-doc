@@ -85,7 +85,7 @@ for (const catalogue of CATALOGUES) {
       return frontmatter(readFileSync(join(groupDir, `${slug}.md`), 'utf8')).description;
     };
     // Most smart pages answer to the same generated sentence -- "Атрибуты,
-    // события и примеры Smart-компонента <name>" -- and a column of it under
+    // события и примеры смарт-компонента <name>" -- and a column of it under
     // the links tells a reader less than the links alone. A description is
     // carried over only if it is that page's own: strip the component name and
     // a sentence shared with a sibling is boilerplate, not a description.

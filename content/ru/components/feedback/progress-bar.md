@@ -162,4 +162,4 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 
 - [Шкала прогресса](/ru/components/feedback/progress-scale/)
 - [Спиннер](/ru/components/feedback/spinner/)
-- [Прогресс — Smart-компонент](/ru/smart-components/feedback/progress-bar/)
+- [Прогресс — смарт-компонент](/ru/smart-components/feedback/progress-bar/)

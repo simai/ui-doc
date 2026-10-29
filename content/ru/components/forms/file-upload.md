@@ -292,4 +292,4 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 ## См. также
 
 - [Прогресс](/ru/components/feedback/progress-bar/)
-- [File Upload — Smart-компонент](/ru/smart-components/forms/file-upload/)
+- [File Upload — смарт-компонент](/ru/smart-components/forms/file-upload/)

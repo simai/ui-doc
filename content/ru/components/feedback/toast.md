@@ -225,4 +225,4 @@ handle.close();
 ## См. также
 
 - [Уведомления](/ru/components/feedback/alerts/)
-- [Всплывающие сообщения — Smart-компонент](/ru/smart-components/feedback/toast/)
+- [Всплывающие сообщения — смарт-компонент](/ru/smart-components/feedback/toast/)

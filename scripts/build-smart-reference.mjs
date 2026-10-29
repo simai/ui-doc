@@ -605,12 +605,12 @@ const releaseLine = 'Раздел собран из манифестов вып�
     const unit = (text) => {
       if (text === 'core') return 'ядро, сразу после `core.js`';
       if (text === 'core-loader') return 'Loader, после `sf-loader-init`';
-      if (text === 'smart-base') return 'основа Smart-компонентов';
+      if (text === 'smart-base') return 'основа смарт-компонентов';
       const match = /^([a-z-]+)\/([a-z0-9-]+)(?:\s*\((.+)\))?$/u.exec(text);
       if (!match) return code(text);
       const [, layer, name, note] = match;
       const where = layer === 'component' ? `компонент ${code(name)}`
-        : layer === 'smart' ? `Smart-компонент ${code(`sf-${name}`)}`
+        : layer === 'smart' ? `смарт-компонент ${code(`sf-${name}`)}`
           : code(`${layer}/${name}`);
       return note ? `${where} (${asked(note)})` : where;
     };

@@ -29,9 +29,9 @@ profile: reference
 - Блок действий необязателен: без него остаются держатель и имя.
 - У компонента нет своего JavaScript: удаление и скачивание выполняет
   приложение.
-- Loader подключает CSS компонента вместе со Smart-компонентом
+- Loader подключает CSS компонента вместе со смарт-компонентом
   `sf-file-preview`, но не находит его по разметке `sf-file-preview`: без
-  Smart-компонента подключите `component/file-preview/css/file-preview.css`
+  смарт-компонента подключите `component/file-preview/css/file-preview.css`
   сами.
 
 ## Варианты
@@ -138,4 +138,4 @@ profile: reference
 
 - [Скачивание файла](/ru/components/actions/download-file/)
 - [Загрузка файлов](/ru/components/forms/file-upload/)
-- [Предпросмотр файла — Smart-компонент](/ru/smart-components/content/file-preview/)
+- [Предпросмотр файла — смарт-компонент](/ru/smart-components/content/file-preview/)

@@ -276,4 +276,4 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 
 - [Текстовые поля](/ru/components/forms/inputs/)
 - [Флаг](/ru/components/content/flag/)
-- [Country Code — Smart-компонент](/ru/smart-components/forms/country-code/)
+- [Country Code — смарт-компонент](/ru/smart-components/forms/country-code/)

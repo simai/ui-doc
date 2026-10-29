@@ -26,7 +26,7 @@ HTML**. Страница описана Document. Редактор показы�
 Если Document стал неверным или сервер отказал, страница остаётся прежней, а
 человек видит понятное сообщение.
 
-Редактор собирается из Smart-компонентов: оверлея холста
+Редактор собирается из смарт-компонентов: оверлея холста
 `<sf-composition-overlay>` ([справочник](/ru/smart-components/editor/composition-overlay/)), перетаскивания `<sf-sortable>`
 ([справочник](/ru/smart-components/editor/sortable/)), редактора текста `<sf-inline-editor>` ([справочник](/ru/smart-components/editor/inline-editor/)) и закреплённых
 панелей `<sf-drawer docked>` ([справочник](/ru/smart-components/overlays/drawer/)). Их код

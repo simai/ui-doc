@@ -180,4 +180,4 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 ## См. также
 
 - [Просмотр файла](/ru/components/content/file-preview/)
-- [Скачивание файла — Smart-компонент](/ru/smart-components/actions/download-file/)
+- [Скачивание файла — смарт-компонент](/ru/smart-components/actions/download-file/)

@@ -9,7 +9,7 @@ profile: reference
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
 по смыслу действий над одним объектом; для выбора одного значения из нескольких
-есть [Smart-компонент Группа кнопок](/ru/smart-components/actions/button-group/),
+есть [смарт-компонент Группа кнопок](/ru/smart-components/actions/button-group/),
 а в виде утопленной дорожки с плашкой — [сегментный переключатель](/ru/smart-components/actions/segmented/).
 
 ## Пример
@@ -160,4 +160,4 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 ## См. также
 
 - [Кнопки](/ru/components/actions/buttons/)
-- [Группа кнопок — Smart-компонент](/ru/smart-components/actions/button-group/)
+- [Группа кнопок — смарт-компонент](/ru/smart-components/actions/button-group/)

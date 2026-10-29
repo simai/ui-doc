@@ -28,7 +28,7 @@ description: "Обновление — это переход проекта с �
    каталогом нового выпуска, а при подключении с CDN — версию пакета во всех
    трёх адресах.
 5. Проверьте основные страницы на мобильной и настольной ширине, в обеих темах,
-   Network и Console; на страницах со Smart-компонентами — пустой
+   Network и Console; на страницах со смарт-компонентами — пустой
    `SF.deprecations.list()`.
 6. Запишите новый идентификатор выпуска, его полный коммит, версию пакета
    npm (при подключении с CDN) и квитанции пакетов.
@@ -222,7 +222,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 Что происходит на каждом шаге:
 
 1. **На странице.** Пока запись на этапе совместимости, кнопка работает:
-   Smart-компонент читает `type` как `appearance`. `SF.deprecations.list()`
+   смарт-компонент читает `type` как `appearance`. `SF.deprecations.list()`
    показывает строку с компонентом `sf-button`, устаревшим именем `type` и
    каноническим `appearance`.
 2. **Отчёт.** `node scripts/sf-upgrade.mjs ../my-product` сообщает файл,
@@ -286,5 +286,5 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 - Тема на `<html>` — [Темы](/ru/guide/colour/themes/#темы); токены, которые приносит `core.css`, — [Дизайн-токены](/ru/guide/colour/design-tokens/).
 - Лестница размеров и адаптивная типографика — [Адаптивные размеры](/ru/guide/size-and-type/adaptive-sizing/), [Одна лестница размеров](/ru/guide/size-and-type/size-ladder/) и [Типографика](/ru/guide/size-and-type/typography/).
 - Классы и условия, по которым Loader выбирает модули, — [Как устроено имя утилиты](/ru/guide/utilities/naming/), [Условия действия](/ru/guide/utilities/conditions/) и [Как утилиты попадают на страницу](/ru/guide/utilities/loading/).
-- Smart-компоненты, их база, шаблоны и события — раздел [Смарт-компоненты](/ru/guide/smart-components/) ([Папка компонента и манифест](/ru/guide/smart-components/folder/), [Разметка и шаблоны](/ru/guide/smart-components/markup/), [На странице](/ru/guide/smart-components/page/)).
+- Смарт-компоненты, их база, шаблоны и события — раздел [Смарт-компоненты](/ru/guide/smart-components/) ([Папка компонента и манифест](/ru/guide/smart-components/folder/), [Разметка и шаблоны](/ru/guide/smart-components/markup/), [На странице](/ru/guide/smart-components/page/)).
 - Проверки качества и работа с ИИ — [Как Framework проверяет себя](/ru/guide/standards/framework-checks/)–[Работа с ИИ](/ru/guide/standards/ai/#работа-с-ии).

@@ -153,4 +153,4 @@ Framework вроде `d2`), `animation` (`pulse` — по умолчанию, `w
 
 - [Спиннер](/ru/components/feedback/spinner/)
 - [Заполнитель](/ru/components/feedback/placeholder/)
-- [Скелетон — Smart-компонент](/ru/smart-components/feedback/skeleton/)
+- [Скелетон — смарт-компонент](/ru/smart-components/feedback/skeleton/)

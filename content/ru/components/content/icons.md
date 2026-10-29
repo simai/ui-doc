@@ -211,4 +211,4 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 
 - [Акцентная иконка](/ru/components/content/featured-icon/)
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)
-- [Иконки — Smart-компонент](/ru/smart-components/content/icons/)
+- [Иконки — смарт-компонент](/ru/smart-components/content/icons/)
