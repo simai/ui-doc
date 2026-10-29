@@ -131,7 +131,7 @@ ring.setAttribute('value-text', 'Файлы загружены');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e2cff39223f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -140,7 +140,7 @@ ring.setAttribute('value-text', 'Файлы загружены');
 | Тег | `<sf-progress-ring>` |
 | Назначение | Значение от 0 до 100 или неизвестное, нарисованное кольцом по лестнице элементов управления, с процентом или картинкой в середине. |
 | Контракт | `smart.progress-ring`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-466d8f260e58` |
+| Поставка | выпуск Framework `ui-e2cff39223f1` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -189,8 +189,8 @@ ring.setAttribute('value-text', 'Файлы загружены');
 
 ### Источник
 
-- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/progress-ring`
-- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-progress-ring`
+- `simai/ui@e2cff39223f1a4b004dafe332f081e5178fad2f3:distr/smart/progress-ring`
+- `simai/ui@e2cff39223f1a4b004dafe332f081e5178fad2f3:distr/rule/rule.json#name=cl-progress-ring`
 
 ## См. также
 

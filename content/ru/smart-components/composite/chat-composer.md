@@ -114,23 +114,25 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e2cff39223f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-chat-composer>` |
-| Назначение | Где пишут вопрос и добавляют файлы: Enter отправляет, Shift+Enter переносит строку, набор иероглифов (IME) никогда не обрывается, кнопка отправки становится «Остановить ожидание», пока ждётся ответ, а файлы только сообщаются — загружает их хост, и их чипы возвращаются настройкой `files`. |
-| Контракт | `smart.chat-composer`, версия `1.0.1` |
+| Назначение | Место, где пишут вопрос и добавляют файлы: Enter отправляет, Shift+Enter переносит строку, набор через IME никогда не прерывается, кнопка отправки на время ожидания ответа становится «остановить ожидание», а файлы только сообщаются — загружает их хост; их плашки приходят обратно через `files`. |
+| Контракт | `smart.chat-composer`, версия `1.0.2` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`.
-- `placeholder` — `string`, по умолчанию пусто. Пусто — поле берёт своё слово «Спросите что-нибудь».
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `placeholder` — `string`. Пусто — поле берёт своё слово «Спросите что-нибудь».
 - `maxlength` — `integer`, по умолчанию `4000`, значения: от 1. `bootstrap.limits.message_chars`.
 - `max-files` — `integer`, по умолчанию `5`, значения: от 1.
 - `max-bytes` — `integer`, по умолчанию `0`, значения: от 0. 0 — размер не проверяется.
@@ -138,7 +140,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 - `attachments` — `boolean`, по умолчанию `false`. Можно добавлять файлы.
 - `busy` — `boolean`, по умолчанию `false`. Ждётся ответ: «Отправить» становится «Остановить ожидание».
 - `disabled` — `boolean`, по умолчанию `false`. Писать нельзя, например пока нет согласия.
-- `value` — `string`, по умолчанию пусто. Текст в поле (черновик): атрибут задаёт первый текст, свойство читает и пишет поле; запись — как будто набрали.
+- `value` — `string`, по умолчанию пусто. текст в поле (черновик); запись в него равносильна набору: поле вырастает под него. Атрибут задаёт первый текст, свойство читает поле.
 - `files` — `array` из `object`, по умолчанию `[]`. Чипы в том виде, в каком их знает хост: свойство, действие `set-files` или JSON-остров.
 
 ### Методы
@@ -151,10 +153,14 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-chat-composer-submit` — `detail`: `{ text: string, attachment-ids: array }`. Отправка: обрезанный текст и коды готовых файлов. Отмена оставляет предупреждение. Имя 0.3 `sf-chat-send {text, attachmentIds}` отправляется после него до 2026-12-01.
-- `sf-chat-composer-stop` — `detail` не описан. Нажали «Остановить ожидание». Имя 0.3 `sf-chat-stop` отправляется после него до 2026-12-01.
+- `sf-chat-composer-submit` — `detail`: `{ text: string, attachmentIds: array }`. Отправка: обрезанный текст и коды готовых файлов. Отмена оставляет предупреждение. Имя 0.3 `sf-chat-send {text, attachmentIds}` отправляется после него до 2026-12-01.
+- `sf-chat-composer-stop` — ничего не передаёт. Нажали «Остановить ожидание». Имя 0.3 `sf-chat-stop` отправляется после него до 2026-12-01.
 - `sf-chat-composer-attach` — `detail`: `{ files: array, rejected: array }`. Файлы предложены кнопкой, перетаскиванием или вставкой; отклонённые — по типу, размеру или числу, каждый со своей причиной. Имя 0.3 `sf-chat-files` отправляется после него до 2026-12-01.
-- `sf-chat-composer-detach` — `detail`: `{ id: string, name?: string }`. Нажали «Убрать файл» на чипе. Имя 0.3 `sf-chat-action {action: remove-attachment, id, name}` отправляется после него до 2026-12-01.
+- `sf-chat-composer-detach` — `detail`: `{ id: any, name?: string }`. Нажали «Убрать файл» на чипе. Имя 0.3 `sf-chat-action {action: remove-attachment, id, name}` отправляется после него до 2026-12-01.
+- `sf-chat-send` — устаревший псевдоним события `sf-chat-composer-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-submit`.
+- `sf-chat-stop` — устаревший псевдоним события `sf-chat-composer-stop`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-stop`.
+- `sf-chat-files` — устаревший псевдоним события `sf-chat-composer-attach`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-attach`.
+- `sf-chat-action` — устаревший псевдоним события `sf-chat-composer-detach`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-detach`.
 
 ### Доступность
 
@@ -171,8 +177,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@eabbe5178045a91b9c5bbd27616b1f2a68bd176b:components/src/smart/chat-composer`
-- `simai/ui-pro@eabbe5178045a91b9c5bbd27616b1f2a68bd176b:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@1f5853f87e9e8db5438b9a99d691652a06fa9c75:components/src/smart/chat-composer`
+- `simai/ui-pro@1f5853f87e9e8db5438b9a99d691652a06fa9c75:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 

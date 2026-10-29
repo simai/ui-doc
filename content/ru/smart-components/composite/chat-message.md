@@ -124,7 +124,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e2cff39223f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -132,15 +132,18 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает хост. |
-| Контракт | `smart.chat-message`, версия `1.0.2` |
+| Контракт | `smart.chat-message`, версия `1.0.3` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`, `person`. `default` — ответ помощника или вопрос человека (API.md Message); `person` — сообщение разговора людей.
-- `message` — `object` | `null`, по умолчанию `null`. Сообщение: свойство или JSON-остров; тексты рисуются текстом, `html` очищается.
+- `template` — `string`, по умолчанию `default`. `default` — ответ помощника или вопрос человека (API.md Message); `person` — сообщение разговора людей.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
+- `view` — `string`, по умолчанию `{}`. Псевдоним с датой для `display` до 2026-12-01.
+- `message` — `object`. Сообщение: свойство или JSON-остров; тексты рисуются текстом, `html` очищается.
 - `display` — `object`, по умолчанию `{}`. Что знает хост, а сервер нет (в 0.3 — `view`): `wait`, `busy`, `feedback`, `retried`, `note`, `code`, `sources_open`, `brief`, `brief_draft`; для `person` — `own`, `first`, `last`, `showName`, `editing`, `askDelete`.
 - `features` — `object`, по умолчанию `{"feedback":true,"proposals":true,"memory":true,"brief":false}`. Что предлагает поверхность: оценку, предложения изменений, заметки памяти, уточнение задачи.
 
@@ -152,16 +155,17 @@ log.renderMessage = (message, {view}) => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
-- `sf-chat-message-retry` — `detail`: `{ id?: string|number, key?: string, kind?: string }`. «Повторить» (словарь §5 retry): неудавшийся ответ `{id}`; неотправленное сообщение человека `{key}` (его клиентский код); неудавшийся файл человека `{id, key, kind: file}`. Имя 0.3 `sf-chat-action {action: retry, id}` отправляется после него до 2026-12-01.
-- `sf-chat-message-check` — `detail`: `{ id: string|number }`. «Обновить» при остановленном, задержанном или потерянном ожидании: спросить хост, пришёл ли ответ (собственный глагол чата `check`, словарь 1.1.3 §5.1). Имя 0.3 `sf-chat-action {action: check}` отправляется после него до 2026-12-01.
-- `sf-chat-message-rate` — `detail`: `{ id: string|number, value: string, reason?: string|null, note?: string }`. «Полезно» или «Не полезно» `{id, value: up|down}` (словарь §5 rate); «Отправить» в карточке «Что не так» `{id, value: down, reason, note}`. Кнопки показывают оценку сразу; хост держит её в `display.feedback`. Имена 0.3 `sf-chat-action {action: feedback / feedback-send}` отправляются после него до 2026-12-01.
-- `sf-chat-message-cancel` — `detail`: `{ id: string|number, kind: string }`. «Не сейчас» или Escape в карточке «Что не так» `{id, kind: rate}` (словарь §5 cancel): простое «не полезно» остаётся. Имя 0.3 `sf-chat-action {action: feedback-skip}` отправляется после него до 2026-12-01.
-- `sf-chat-message-drafted` — `detail`: `{ id: string|number, reason: string|null, note: string }`. В карточке «Что не так» изменился выбор или комментарий `{id, reason, note}` (факт; черновик хост держит и в `display.feedback.draft`). Имя 0.3 `sf-chat-action {action: feedback-draft}` отправляется после него до 2026-12-01.
-- `sf-chat-message-toggle` — `detail`: `{ id: string|number, kind: string, open: boolean }`. Местная часть открылась или закрылась (словарь §5 toggle): список источников `{kind: sources}` (хост помнит это как `display.sources_open`); у шаблона `person` — редактор `{kind: edit}` и вопрос об удалении `{kind: delete}`, которые хост держит в `display.editing` и `display.askDelete`. Имя 0.3 `sf-chat-action {action: sources}` отправляется после него до 2026-12-01.
-- `sf-chat-message-copied` — `detail`: `{ id: string|number, done: boolean }`. Ответ скопирован вместе со списком источников `{id, done}`; строка действий говорит об этом вежливо. Имя 0.3 `sf-chat-action {action: copy}` отправляется после него до 2026-12-01.
-- `sf-chat-message-submit` — `detail`: `{ id: string|number, text: string }`. Ответ на уточнение задачи уходит сообщением (словарь §5 submit; API.md v1.2): вариант, свои слова человека, несколько ответов через «; » с «—» для пропущенного или «Да» на карточке. Имя 0.3 `sf-chat-action {action: brief-answer}` отправляется после него до 2026-12-01.
-- `sf-chat-message-save` — `detail`: `{ id: string|number, values: object }`. Шаблон `person`: изменённое сообщение `{id, values: {body}}` (словарь §5 save, порт `message.edit`). Неизменённый или пустой текст даёт вместо этого `toggle {kind: edit, open: false}`.
+- `sf-chat-message-retry` — `detail`: `{ id?: any, key?: string, kind?: string }`. «Повторить» (словарь §5 retry): неудавшийся ответ `{id}`; неотправленное сообщение человека `{key}` (его клиентский код); неудавшийся файл человека `{id, key, kind: file}`. Имя 0.3 `sf-chat-action {action: retry, id}` отправляется после него до 2026-12-01.
+- `sf-chat-message-check` — `detail`: `{ id: any }`. «Обновить» при остановленном, задержанном или потерянном ожидании: спросить хост, пришёл ли ответ (собственный глагол чата `check`, словарь 1.1.3 §5.1). Имя 0.3 `sf-chat-action {action: check}` отправляется после него до 2026-12-01.
+- `sf-chat-message-rate` — `detail`: `{ id: any, value: string, reason?: string|null, note?: string }`. «Полезно» или «Не полезно» `{id, value: up|down}` (словарь §5 rate); «Отправить» в карточке «Что не так» `{id, value: down, reason, note}`. Кнопки показывают оценку сразу; хост держит её в `display.feedback`. Имена 0.3 `sf-chat-action {action: feedback / feedback-send}` отправляются после него до 2026-12-01.
+- `sf-chat-message-cancel` — `detail`: `{ id: any, kind: string }`. «Не сейчас» или Escape в карточке «Что не так» `{id, kind: rate}` (словарь §5 cancel): простое «не полезно» остаётся. Имя 0.3 `sf-chat-action {action: feedback-skip}` отправляется после него до 2026-12-01.
+- `sf-chat-message-drafted` — `detail`: `{ id: any, reason: string|null, note: string }`. В карточке «Что не так» изменился выбор или комментарий `{id, reason, note}` (факт; черновик хост держит и в `display.feedback.draft`). Имя 0.3 `sf-chat-action {action: feedback-draft}` отправляется после него до 2026-12-01.
+- `sf-chat-message-toggle` — `detail`: `{ id: any, kind: string, open: boolean }`. Местная часть открылась или закрылась (словарь §5 toggle): список источников `{kind: sources}` (хост помнит это как `display.sources_open`); у шаблона `person` — редактор `{kind: edit}` и вопрос об удалении `{kind: delete}`, которые хост держит в `display.editing` и `display.askDelete`. Имя 0.3 `sf-chat-action {action: sources}` отправляется после него до 2026-12-01.
+- `sf-chat-message-copied` — `detail`: `{ id: any, done: boolean }`. Ответ скопирован вместе со списком источников `{id, done}`; строка действий говорит об этом вежливо. Имя 0.3 `sf-chat-action {action: copy}` отправляется после него до 2026-12-01.
+- `sf-chat-message-submit` — `detail`: `{ id: any, text: string }`. Ответ на уточнение задачи уходит сообщением (словарь §5 submit; API.md v1.2): вариант, свои слова человека, несколько ответов через «; » с «—» для пропущенного или «Да» на карточке. Имя 0.3 `sf-chat-action {action: brief-answer}` отправляется после него до 2026-12-01.
+- `sf-chat-message-save` — `detail`: `{ id: any, values: object }`. Шаблон `person`: изменённое сообщение `{id, values: {body}}` (словарь §5 save, порт `message.edit`). Неизменённый или пустой текст даёт вместо этого `toggle {kind: edit, open: false}`.
 - `sf-chat-message-delete` — `detail`: `{ ids: array }`. Шаблон `person`: «Удалить» подтверждено `{ids: [id]}` (словарь §5 delete, порт `message.delete`).
+- `sf-chat-action` — устаревший псевдоним события `sf-chat-message-retry`: приходит с тем же `detail`, подписывайтесь на `sf-chat-message-retry`.
 
 ### Доступность
 
@@ -178,8 +182,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@eabbe5178045a91b9c5bbd27616b1f2a68bd176b:components/src/smart/chat-message`
-- `simai/ui-pro@eabbe5178045a91b9c5bbd27616b1f2a68bd176b:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@1f5853f87e9e8db5438b9a99d691652a06fa9c75:components/src/smart/chat-message`
+- `simai/ui-pro@1f5853f87e9e8db5438b9a99d691652a06fa9c75:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 
