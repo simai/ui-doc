@@ -94,7 +94,7 @@ slider.slideNext();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -102,8 +102,8 @@ slider.slideNext();
 |:---|:---|
 | Тег | `<sf-slider>` |
 | Назначение | Ряд слайдов, которые переключаются стрелками, точками, свайпом или клавишами, на основе общего адаптера Swiper; со связанными миниатюрами слайд выбирается во втором слайдере. |
-| Контракт | `smart.slider`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.slider`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -139,7 +139,7 @@ slider.slideNext();
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `change` — `detail`: `{ activeIndex: number, realIndex: number, previousIndex: number }`.
-- `sf-slide-change` — `detail`: `{ component: object, tagName: string, template: string, activeIndex: number, realIndex: number, previousIndex: number }`.
+- `sf-slide-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
 
 ### Доступность
 
@@ -156,5 +156,5 @@ slider.slideNext();
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/slider`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-slider`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/slider`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-slider`

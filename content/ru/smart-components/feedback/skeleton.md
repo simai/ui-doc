@@ -71,7 +71,7 @@ region.removeAttribute('aria-busy');
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -80,7 +80,7 @@ region.removeAttribute('aria-busy');
 | Тег | `<sf-skeleton>` |
 | Назначение | Декоративная заглушка загрузки, которая резервирует геометрию будущего содержимого, использует семантические токены и учитывает режим уменьшенного движения. |
 | Контракт | `smart.skeleton`, версия `1.1.2` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -127,8 +127,8 @@ region.removeAttribute('aria-busy');
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/skeleton`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-skeleton`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/skeleton`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-skeleton`
 
 ## См. также
 

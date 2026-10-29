@@ -213,7 +213,7 @@ async function store(item) {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -221,8 +221,8 @@ async function store(item) {
 |:---|:---|
 | Тег | `<sf-file-upload>` |
 | Назначение | Область перетаскивания, которая открывает файловый диалог платформы или принимает перетащенные файлы с фильтром по accept и показывает каждый файл с прогрессом загрузки, ошибкой с повтором и удалением. Загрузку выполняет хост; компонент показывает состояние, которое задаёт хост. |
-| Контракт | `smart.file-upload`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.file-upload`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -258,12 +258,12 @@ async function store(item) {
 - `getItems()` — возвращает `array` из `object`. Файлы списка в виде объектов пунктов.
 - `setItems(items: array)` — возвращает `object`. Заменяет список этими пунктами (name, fileSize, state, progress, errorMessage). Возвращает элемент.
 - `setState(state: object)` — возвращает `object`. Применяет несколько входных параметров сразу (size, icon, linkText, text, formats, supportingText, accept, multiple, disabled, items). Возвращает элемент.
-- `onFileAdd(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-add; обработчик получает событие. Возвращает элемент.
-- `onFileError(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-error; обработчик получает событие. Возвращает элемент.
-- `onFileComplete(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:file-complete; обработчик получает событие. Возвращает элемент.
-- `onFileRemove(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:remove; обработчик получает событие. Возвращает элемент.
-- `onFileRetry(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:retry; обработчик получает событие. Возвращает элемент.
-- `onComplete(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload:complete; обработчик получает событие. Возвращает элемент.
+- `onFileAdd(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload-attached; обработчик получает событие. Возвращает элемент.
+- `onFileError(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload-failed; обработчик получает событие. Возвращает элемент.
+- `onFileComplete(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload-completed; обработчик получает событие. Возвращает элемент.
+- `onFileRemove(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload-detach; обработчик получает событие. Возвращает элемент.
+- `onFileRetry(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload-retry; обработчик получает событие. Возвращает элемент.
+- `onComplete(handler: function, options?: object)` — возвращает `object`. Подписывается на sf-file-upload-finished; обработчик получает событие. Возвращает элемент.
 
 ### События
 
@@ -281,14 +281,14 @@ async function store(item) {
 - `sf-file-upload-failed` — `detail`: `{ id: any, item: object, index: number, items: array, reason: string, message: string }`. Файл не загрузился. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:file-error` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
 - `sf-file-upload-cancelled` — `detail`: `{ id: any, item: object }`. Запись ушла, будучи в process, — её убрал человек или хост: её поток кончился, не завершившись (§10.8).
 - `sf-file-upload-finished` — `detail`: `{ items: array }`. Все файлы обработаны. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:complete` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:complete` — `detail`: `{ items?: array }`. Все файлы обработаны. Прежнее имя: отправляется после `sf-file-upload-finished` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:file-add` — `detail`: `{ item?: object, index?: number, items?: array, source?: string, multiple?: boolean }`. Файл попал в список. Прежнее имя: отправляется после `sf-file-upload-attached` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:file-complete` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл загружен. Прежнее имя: отправляется после `sf-file-upload-completed` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:file-error` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл не загрузился. Прежнее имя: отправляется после `sf-file-upload-failed` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:reject` — `detail`: `{ files?: array, accept?: string, source?: string }`. Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. Прежнее имя: отправляется после `sf-file-upload-rejected` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:remove` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл убран из списка. Прежнее имя: отправляется после `sf-file-upload-detach` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:retry` — `detail`: `{ item?: object, index?: number, items?: array }`. Файл с ошибкой отправлен снова. Прежнее имя: отправляется после `sf-file-upload-retry` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-file-upload:select` — `detail`: `{ files?: array, source?: string, multiple?: boolean }`. Выбраны файлы для загрузки. Прежнее имя: отправляется после `sf-file-upload-attach` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-file-upload:complete` — устаревший псевдоним события `sf-file-upload-finished`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-finished`.
+- `sf-file-upload:file-add` — устаревший псевдоним события `sf-file-upload-attached`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-attached`.
+- `sf-file-upload:file-complete` — устаревший псевдоним события `sf-file-upload-completed`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-completed`.
+- `sf-file-upload:file-error` — устаревший псевдоним события `sf-file-upload-failed`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-failed`.
+- `sf-file-upload:reject` — устаревший псевдоним события `sf-file-upload-rejected`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-rejected`.
+- `sf-file-upload:remove` — устаревший псевдоним события `sf-file-upload-detach`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-detach`.
+- `sf-file-upload:retry` — устаревший псевдоним события `sf-file-upload-retry`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-retry`.
+- `sf-file-upload:select` — устаревший псевдоним события `sf-file-upload-attach`: приходит с тем же `detail`, подписывайтесь на `sf-file-upload-attach`.
 
 ### Доступность
 
@@ -305,5 +305,5 @@ async function store(item) {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/file-upload`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-file-upload`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/file-upload`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-file-upload`

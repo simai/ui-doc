@@ -168,7 +168,7 @@ report.append(spinner);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -177,7 +177,7 @@ report.append(spinner);
 | Тег | `<sf-spinner>` |
 | Назначение | Индикатор неопределённого ожидания в одном из четырёх видов на лестнице размеров (arc, breathing, comet, dots), который берёт вид страницы из data-sf-spinner, с необязательным вежливым (polite) объявлением статуса и анимацией Framework. |
 | Контракт | `smart.spinner`, версия `1.2.2` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -229,8 +229,8 @@ report.append(spinner);
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/spinner`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-spinner`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/spinner`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-spinner`
 
 ## См. также
 

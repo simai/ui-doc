@@ -224,7 +224,7 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -232,8 +232,8 @@ document.addEventListener('drawer:after-open', (event) => {
 |:---|:---|
 | Тег | `<sf-drawer>` |
 | Назначение | Боковая панель рабочей области, при которой страница остаётся доступной: закреплённая колонка или немодальная панель. Модальные боковые панели относятся к sf-modal; модальный режим Drawer устарел. |
-| Контракт | `smart.drawer`, версия `1.8.2` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.drawer`, версия `1.8.3` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -287,16 +287,16 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### Методы
 
-- `open()` — возвращает `object`. Открывает Drawer или выводит его на передний план, если он уже открыт. Отправляет drawer:before-open (отменяемое) и затем drawer:after-open, если options.emit не равно false. Возвращает элемент.
-- `close(reason: any)` — возвращает `object`. Закрывает выезжающую панель и возвращает фокус (тому, кто её открыл, если она верхний слой; панель, закрывающаяся под другим слоем, фокус не двигает). Отправляет `drawer:before-close` (отменяемое) и `drawer:after-close`, если `options.emit` не false; `options.reason` говорит почему (close, escape, outside, cancelled, api; по умолчанию api). Возвращает элемент.
+- `open()` — возвращает `object`. Открывает Drawer или выводит его на передний план, если он уже открыт. Отправляет sf-drawer-open (отменяемое) и затем sf-drawer-opened, если options.emit не равно false. Возвращает элемент.
+- `close(reason: any)` — возвращает `object`. Закрывает Drawer и возвращает фокус (тому, кто его открыл, если Drawer — верхний слой; Drawer, закрывающийся под другим слоем, фокус не переносит). Отправляет sf-drawer-close (отменяемое) и sf-drawer-closed, если options.emit не равно false; options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api). Возвращает элемент.
 - `toggle()` — возвращает `object`. Вызывает close(), если открыто, иначе open(). Возвращает элемент.
 - `setState(state?: object)` — возвращает `object`. Ключ open вызывает open() или close(); остальные ключи передаются в базовый setState как атрибуты хост-элемента. Возвращает элемент.
 - `getState()` — возвращает `object`. Возвращает текущий контекст шаблона вместе с состоянием открытия.
-- `onBeforeOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:before-open, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
-- `onAfterOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:after-open, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
-- `onBeforeClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:before-close, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
-- `onAfterClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост-элементе обработчик drawer:after-close, который срабатывает только на собственные события этого Drawer. Возвращает элемент.
-- `setSnap(snap: string)` — возвращает `object`. Задаёт высоту нижней панели в покое (auto, half или full) и при её смене отправляет drawer:snap. Возвращает элемент.
+- `onBeforeOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-open, который срабатывает только на события этого Drawer. Возвращает элемент.
+- `onAfterOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-opened, который срабатывает только на события этого Drawer. Возвращает элемент.
+- `onBeforeClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-close, который срабатывает только на события этого Drawer. Возвращает элемент.
+- `onAfterClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-closed, который срабатывает только на события этого Drawer. Возвращает элемент.
+- `setSnap(snap: string)` — возвращает `object`. Задаёт высоту нижней панели в покое (auto, half или full) и при её смене отправляет sf-drawer-snapped. Возвращает элемент.
 
 ### События
 
@@ -309,11 +309,11 @@ document.addEventListener('drawer:after-open', (event) => {
 - `sf-drawer-snapped` — `detail`: `{ drawerId: string, snap: any }`.
 - `drawer:ready` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
 - `drawer:update` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:before-open` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Отменяемое намерение перед открытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
-- `drawer:after-open` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Drawer открыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:before-close` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any, reason?: string, unsaved?: boolean }`. Отменяемое намерение перед закрытием. Всплывает и является `composed`; `detail.drawer` — панель, отправившая событие.
-- `drawer:after-close` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any, reason?: string }`. Drawer закрыт. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:snap` — `detail`: `{ drawer?: object, drawerId?: string }`. Нижняя панель остановилась на другой высоте (ручка, жест или setSnap()).
+- `drawer:before-open` — устаревший псевдоним события `sf-drawer-open`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-open`.
+- `drawer:after-open` — устаревший псевдоним события `sf-drawer-opened`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-opened`.
+- `drawer:before-close` — устаревший псевдоним события `sf-drawer-close`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-close`.
+- `drawer:after-close` — устаревший псевдоним события `sf-drawer-closed`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-closed`.
+- `drawer:snap` — устаревший псевдоним события `sf-drawer-snapped`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-snapped`.
 
 ### Доступность
 
@@ -330,8 +330,8 @@ document.addEventListener('drawer:after-open', (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/drawer`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-drawer`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/drawer`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-drawer`
 
 ## См. также
 

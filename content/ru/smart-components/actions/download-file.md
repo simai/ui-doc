@@ -76,7 +76,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -84,8 +84,8 @@ document.addEventListener('sf-download-file:click', async (event) => {
 |:---|:---|
 | Тег | `<sf-download-file>` |
 | Назначение | Нативная загрузка файла или подготовка файла силами приложения. |
-| Контракт | `smart.download-file`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.download-file`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -114,7 +114,7 @@ document.addEventListener('sf-download-file:click', async (event) => {
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components-2/names/). Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
 
 - `sf-download-file-download` — `detail`: `{ href: string, fileName: string, download: boolean }`.
-- `sf-download-file:click` — `detail`: `{ href?: string, fileName?: string, download?: boolean }`. Отправляется один раз для доступного нативного назначения или действия, которым управляет приложение, от отрисованного корня .sf-download-file; всплывает до хост-элемента, не с composed: true и не отменяемое.
+- `sf-download-file:click` — устаревший псевдоним события `sf-download-file-download`: приходит с тем же `detail`, подписывайтесь на `sf-download-file-download`.
 
 ### Доступность
 
@@ -131,8 +131,8 @@ document.addEventListener('sf-download-file:click', async (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/download-file`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-download-file`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/download-file`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-download-file`
 
 ## См. также
 

@@ -101,7 +101,7 @@ section.expand();
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -109,8 +109,8 @@ section.expand();
 |:---|:---|
 | Тег | `<sf-tree-item>` |
 | Назначение | Узел дерева: папка, открывающая группу узлов, или файл либо ссылка. Внутри `sf-tree` он читается один раз как данные, и строку рисует дерево; сам по себе он рисует себя сам. |
-| Контракт | `smart.tree-item`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.tree-item`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -168,7 +168,7 @@ section.expand();
 
 - `sf-tree-item-open` — `detail`: `{ id: string, value: string }`. Нажатие на имя или Enter на листе без ссылки: open `{id}` словаря 1.1.5 §5
 - `sf-tree-item-toggle` — `detail`: `{ id: string, open: boolean, value: string }`. Ветка открылась или закрылась (словарь §5 toggle); DOM-имя `sf-tree-item-toggle` не изменилось
-- `sf-tree-item-click` — `detail`: `{ component: object, tagName: string, template: string, item: object, value: string, originalEvent: object|null }`.
+- `sf-tree-item-click` — устаревший псевдоним события `sf-tree-item-open`: приходит с тем же `detail`, подписывайтесь на `sf-tree-item-open`.
 
 ### Доступность
 
@@ -185,8 +185,8 @@ section.expand();
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/tree-item`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-tree-item`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/tree-item`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-tree-item`
 
 ## См. также
 

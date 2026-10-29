@@ -89,7 +89,7 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c8735b2dc5b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -97,8 +97,8 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 |:---|:---|
 | Тег | `<sf-inline-editor>` |
 | Назначение | Правит `content.heading` или `content.paragraph` прямо на холсте — strong, em, code и ссылки — и отдаёт хосту нормализованную модель содержимого, а не HTML. |
-| Контракт | `smart.inline-editor`, версия `1.1.2` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.inline-editor`, версия `1.1.3` |
+| Поставка | выпуск Framework `ui-0c8735b2dc5b` |
 | [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
@@ -120,9 +120,9 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 - `sf-inline-editor-input` — `detail`: `{ id: string|null, content: array }`. Текст изменился во время правки; отправляется на редактируемом элементе
 - `sf-inline-editor-change` — `detail`: `{ id: string|null, content: array }`. Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе
 - `sf-inline-editor-cancel` — `detail`: `{ id: string|null }`. Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе
-- `sf-inline-edit-input` — `detail`: `{ node_id: string|null, content: array }`. Псевдоним с датой для `sf-inline-editor-input` до 2026-12-01: текущее нормализованное содержимое после изменения. Отправляется на редактируемом элементе и всплывает до document.
-- `sf-inline-edit-commit` — `detail`: `{ node_id: string|null, content: array }`. Псевдоним с датой для `sf-inline-editor-change` до 2026-12-01: правка завершена клавишей Enter или уходом фокуса; хост сохраняет. Отправляется на редактируемом элементе и всплывает до document.
-- `sf-inline-edit-cancel` — `detail`: `{ node_id?: string|null }`. Псевдоним с датой для `sf-inline-editor-cancel` до 2026-12-01: правка отменена клавишей Escape, исходный HTML восстановлен. Отправляется на редактируемом элементе и всплывает до document.
+- `sf-inline-edit-input` — устаревший псевдоним события `sf-inline-editor-input`: приходит с тем же `detail`, подписывайтесь на `sf-inline-editor-input`.
+- `sf-inline-edit-commit` — устаревший псевдоним события `sf-inline-editor-change`: приходит с тем же `detail`, подписывайтесь на `sf-inline-editor-change`.
+- `sf-inline-edit-cancel` — устаревший псевдоним события `sf-inline-editor-cancel`: приходит с тем же `detail`, подписывайтесь на `sf-inline-editor-cancel`.
 
 ### Доступность
 
@@ -139,8 +139,8 @@ canvas.addEventListener('sf-inline-edit-commit', (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/inline-editor`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-inline-editor`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/smart/inline-editor`
+- `simai/ui@0c8735b2dc5ba8da99f776280f78064469639b77:distr/rule/rule.json#name=cl-inline-editor`
 
 ## См. также
 

@@ -26,7 +26,7 @@ description: "Начальный вид у каждого смарт-компо�
 
 С выпуска `ui-133dc02b833d` начальный вид поставляется у всех 59
 смарт-компонентов SIMAI Framework, а новые компоненты приходят уже с ним:
-`sf-progress-ring` и `sf-site-header` в выпуске `ui-bc1fb36ec8f1`.
+`sf-progress-ring` и `sf-site-header` в выпуске `ui-0c8735b2dc5b`.
 
 ## Снимок при построении
 

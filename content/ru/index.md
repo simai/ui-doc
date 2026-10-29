@@ -36,7 +36,7 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и S
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261029.3/distr/core/css/core.min.css">
+        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261029.630/distr/core/css/core.min.css">
 </head>
 <body>
   <main class="p-4">
@@ -52,10 +52,10 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и S
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261029.3/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261029.630/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261029.3/distr/core/js/core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261029.630/distr/core/js/core.min.js"></script>
 </body>
 </html>
 ```
@@ -121,7 +121,7 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и S
 
 ---
 
-**SIMAI Framework** · выпуск `ui-bc1fb36ec8f1` ·
+**SIMAI Framework** · выпуск `ui-0c8735b2dc5b` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Сообщить о проблеме](https://github.com/simai/ui-source/issues) ·
 [Версии](/ru/guide/connection/versions/) ·
