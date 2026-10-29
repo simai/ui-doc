@@ -242,7 +242,7 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -250,8 +250,8 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 |:---|:---|
 | Тег | `<sf-tabs>` |
 | Назначение | Список вкладок, который показывает одну локальную панель за раз: текстовые вкладки или вкладки с иконкой задаются атрибутами, слотами или данными, с перемещаемым фокусом клавиатуры и связанными панелями вкладок. |
-| Контракт | `smart.tabs`, версия `1.1.6` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.tabs`, версия `1.1.7` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -280,21 +280,21 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 - `setData(data: object, reason: string)` — возвращает `object`. Объединяет data с текущими данными (функция получает текущие данные и возвращает новые) и перерисовывает. tabs или items становятся вкладками; panels или content — панелями. Значение, не являющееся объектом, игнорируется.
 - `setPanels(panels: array, reason: string)` — возвращает `object`. Заменяет панели в данных (функция получает текущие панели) и перерисовывает.
-- `goTo(index: number)` — возвращает `object`. Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tab-change.
+- `goTo(index: number)` — возвращает `object`. Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tabs-change.
 - `getData()` — возвращает `object`. Возвращает данные, заданные через setData: {tabs, panels, ...}; {tabs: [], panels: []}, если ничего не задано.
 - `setItems(items: array|function, reason?: string)` — возвращает `object`. Заменяет вкладки в данных (функция получает текущие вкладки) и перерисовывает.
 - `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label::flags, соединённые через |. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым.
-- `onTabChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tab-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onTabChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-tabs-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
 - `setSettings(settings: object)` — возвращает `object`. Применяет сохранённую раскладку человека: {order: [keys], hidden: [keys]}. Ключ, которого больше нет среди пунктов, пропускается; пункт, не названный в порядке, встаёт на своё объявленное место видимым; закреплённая вкладка никогда не скрывается; активная вкладка видна на месте, даже если скрыта.
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-tabs-change` — `detail`: `{ selected: any, previous: number, current: number, item: object, items: array }`. change (словарь).
+- `sf-tabs-change` — `detail`: `{ selected: any, previous: number, current: number, item: object, items: array }`.
 - `sf-tabs-settings-change` — `detail`: `{ order: array, hidden: array, reason?: any }`. Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Хост сохраняет выбор и возвращает его через setSettings.
-- `sf-tabs-settings-reset` — `detail`: `{  }`. Человек попросил вернуть объявленный порядок; компонент показывает его, пока хост не ответит через setSettings.
-- `sf-tab-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
+- `sf-tabs-settings-reset` — ничего не передаёт. Человек попросил вернуть объявленный порядок; компонент показывает его, пока хост не ответит через setSettings.
+- `sf-tab-change` — устаревший псевдоним события `sf-tabs-change`: приходит с тем же `detail`, подписывайтесь на `sf-tabs-change`.
 
 ### Доступность
 
@@ -311,8 +311,8 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/tabs`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-tabs`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/tabs`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-tabs`
 
 ## См. также
 

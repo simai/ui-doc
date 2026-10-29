@@ -128,7 +128,7 @@ faq.open(location.hash.slice(1));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -136,8 +136,8 @@ faq.open(location.hash.slice(1));
 |:---|:---|
 | Тег | `<sf-accordion>` |
 | Назначение | Секции, которые открываются и закрываются, из данных — группы записи, панель настроек, вопросы и ответы — или из `<details>` в разметке, в разметке класса accordion: те же размеры на лестнице элементов управления, виды, метка и единственная секция. single оставляет открытой одну; шапки — кнопки с клавиатурой аккордеона WAI-ARIA. |
-| Контракт | `smart.accordion`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.accordion`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -157,17 +157,17 @@ faq.open(location.hash.slice(1));
 
 ### Методы
 
-- `open(id: any)` — возвращает `boolean`. Открывает секцию с этим id; в режиме single открытая закрывается. sf-accordion:toggle приходит для каждой изменившейся секции, source method. Возвращает, изменилось ли что-нибудь.
+- `open(id: any)` — возвращает `boolean`. Открывает секцию с этим id; в режиме single открытая закрывается. sf-accordion-toggle приходит для каждой изменившейся секции, source method. Возвращает, изменилось ли что-нибудь.
 - `close(id: any)` — возвращает `boolean`. Закрывает секцию с этим id. Возвращает, изменилось ли что-нибудь.
 - `toggle(id: any)` — возвращает `boolean`. Открывает секцию, если она закрыта, и закрывает, если открыта. Возвращает, изменилось ли что-нибудь.
 - `isOpen(id: string)` — возвращает `boolean`. Открыта ли секция с этим id. Единственная секция открыта всегда.
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-accordion-toggle` — `detail`: `{ id: any, open: boolean, source: any, section: object }`. toggle (словарь).
-- `sf-accordion:toggle` — `detail`: `{ id?: string, open?: boolean, source?: string, section?: object }`. Секция открылась или закрылась — по действию человека (source user) или метода (source method). В режиме single закрытая секция отправляет своё событие после запрошенной, как группа нативных `<details name>`.
+- `sf-accordion-toggle` — `detail`: `{ id: any, open: boolean, source: any, section: object }`.
+- `sf-accordion:toggle` — устаревший псевдоним события `sf-accordion-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-accordion-toggle`.
 
 ### Доступность
 
@@ -183,5 +183,5 @@ faq.open(location.hash.slice(1));
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/accordion`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-accordion`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/accordion`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-accordion`

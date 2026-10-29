@@ -183,7 +183,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -191,8 +191,8 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 |:---|:---|
 | Тег | `<sf-sortable>` |
 | Назначение | Список, элементы которого переносятся указателем, касанием и клавиатурой — между списками одной группы и на зарегистрированные места сброса; он просит хост перенести и никогда не двигает DOM или данные хоста сам. |
-| Контракт | `smart.sortable`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.sortable`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -217,12 +217,12 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-sortable-move` — `detail`: `{ item: string, from: string, to: string, index: number, mode: any }`. Просьба перенести (или скопировать) элемент в место: один ручной перенос словаря 1.1.5 §5 move, `{id, parent, position}` под именами item, to и index; применяет его хост
 - `sf-sortable-state` — `detail`: `{ state: any, item: string }`. Шаг перетаскивания: взяли, отпустили или отменили
 - `sf-sortable-insert` — `detail`: `{ index: integer, item: string, to: string }`. Просьба вставщика поставить новый элемент палитры в место; отменяемая
-- `sf-sortable-intent` — `detail`: `{ item: string, from: string, to: string, index: integer, mode: any }`. Пользователь отпустил перетаскиваемый элемент; хост применяет или отклоняет изменение.
+- `sf-sortable-intent` — устаревший псевдоним события `sf-sortable-move`: приходит с тем же `detail`, подписывайтесь на `sf-sortable-move`.
 
 ### Доступность
 
@@ -239,8 +239,8 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/sortable`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-sortable`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/sortable`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-sortable`
 
 ## См. также
 

@@ -80,7 +80,7 @@ crumbs.onItemClick((item, detail) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,8 +88,8 @@ crumbs.onItemClick((item, detail) => {
 |:---|:---|
 | Тег | `<sf-breadcrumbs>` |
 | Назначение | Показывает место текущей страницы в иерархии цепочкой нативных ссылок, построенной из items, атрибута items или дочерних sf-breadcrumbs-item. У длинной цепочки середина сворачивается в кнопку-многоточие (max-items, по умолчанию 4), которая раскрывается на месте. |
-| Контракт | `smart.breadcrumbs`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.breadcrumbs`, версия `1.1.6` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -118,14 +118,14 @@ crumbs.onItemClick((item, detail) => {
 - `getCapturedItems()` — возвращает `array` из `object`. Читает захваченные дочерние sf-breadcrumbs-item в простые объекты пунктов (label, href, icon, current, active, disabled, ellipsis, target, rel, itemClass, containerClass, ariaLabel, value, hiddenItems).
 - `getDisplayItems(items?: array)` — возвращает `array` из `object`. Возвращает пункты в том виде, в каком они показаны: если их больше max-items (не меньше 3) и многоточие не раскрыто, середина заменяется одним пунктом-многоточием со скрытыми пунктами; все пункты переиндексируются, и текущим может быть только последний.
 - `setState(nextState?: object)` — возвращает `object`. Записывает каждый ключ как атрибут хост-элемента (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает элемент.
-- `onItemClick(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-breadcrumb-click; обработчик получает (item, detail, event). Возвращает элемент.
+- `onItemClick(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-breadcrumbs-press; обработчик получает (item, detail, event). Возвращает элемент.
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-breadcrumbs-press` — `detail`: `{ item: object, index: number, items: array }`. press (словарь).
-- `sf-breadcrumb-click` — `detail`: `{ component?: any, tagName?: string, template?: string, item?: object, index?: number, items?: array, originalEvent?: any }`. Нажат пункт. Всплывает, с composed: true и отменяемое: preventDefault() на пункте-многоточии оставляет его свёрнутым. У отключённых и текущих пунктов нативный переход отменяется до отправки события.
+- `sf-breadcrumbs-press` — `detail`: `{ item: object, index: number, items: array }`.
+- `sf-breadcrumb-click` — устаревший псевдоним события `sf-breadcrumbs-press`: приходит с тем же `detail`, подписывайтесь на `sf-breadcrumbs-press`.
 
 ### Доступность
 
@@ -142,8 +142,8 @@ crumbs.onItemClick((item, detail) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/breadcrumbs`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-breadcrumbs`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/breadcrumbs`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-breadcrumbs`
 
 ## См. также
 

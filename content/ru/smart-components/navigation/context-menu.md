@@ -256,7 +256,7 @@ layer.addEventListener('keydown', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -265,7 +265,7 @@ layer.addEventListener('keydown', (event) => {
 | Тег | `<sf-context-menu>` |
 | Назначение | Меню действий Framework: пункты данными со значком, подписью, значением, сочетанием клавиш, отметкой, подменю, разделителем и заголовком; openFor() открывает его в верхнем слое с привязкой, клавиатурой, переходом по первой букве и возвратом фокуса. Хост может по-прежнему рисовать свои пункты и сам управлять жизненным циклом. |
 | Контракт | `smart.context-menu`, версия `1.4.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -321,13 +321,13 @@ layer.addEventListener('keydown', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-context-menu-select` — `detail`: `{ id: string|null, entry: object, checked: boolean|null, group: string|null }`. Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым.
-- `sf-context-menu-open` — `detail`: `{  }`. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
-- `sf-context-menu-opened` — `detail`: `{  }`. opened (словарь).
+- `sf-context-menu-open` — ничего не передаёт. Открыто через openFor(). Всплывает и с composed: true; detail не передаётся.
+- `sf-context-menu-opened` — ничего не передаёт.
 - `sf-context-menu-close` — `detail`: `{ reason: any, unsaved: boolean }`. Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся.
-- `sf-context-menu-closed` — `detail`: `{ reason: any }`. closed (словарь).
+- `sf-context-menu-closed` — `detail`: `{ reason: any }`.
 - `sf-context-menu-search` — `detail`: `{ query: string }`. Запрос поиска, на который отвечает хост (search.remote).
 - `sf-context-menu-tab` — `detail`: `{ id: string, index: number }`. Выбрана вкладка панели; хост показывает её строки.
 
@@ -346,8 +346,8 @@ layer.addEventListener('keydown', (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/context-menu`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-context-menu`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/context-menu`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-context-menu`
 
 ## См. также
 

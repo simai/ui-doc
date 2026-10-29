@@ -80,7 +80,7 @@ file.onDownload((event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,8 +88,8 @@ file.onDownload((event) => {
 |:---|:---|
 | Тег | `<sf-file-preview>` |
 | Назначение | Доступная Smart-проекция обычной строки File Preview. |
-| Контракт | `smart.file-preview`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.file-preview`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -137,12 +137,12 @@ file.onDownload((event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-file-preview-download` — `detail`: `{ id: string, action: string, value: object }`. download (словарь).
-- `sf-file-preview-detach` — `detail`: `{ id: string, action: string, value: object }`. detach (словарь).
-- `sf-file-preview:download` — `detail`: `{ action?: any, value?: object }`. Запрошено действие скачивания. Всплывает, с composed: true и отменяемое: preventDefault() останавливает встроенный переход по href.
-- `sf-file-preview:remove` — `detail`: `{ action?: any, value?: object }`. Запрошено действие удаления. Всплывает, с composed: true и отменяемое; компонент сам ничего не удаляет.
+- `sf-file-preview-download` — `detail`: `{ id: string, action: string, value: object }`.
+- `sf-file-preview-detach` — `detail`: `{ id: string, action: string, value: object }`.
+- `sf-file-preview:download` — устаревший псевдоним события `sf-file-preview-download`: приходит с тем же `detail`, подписывайтесь на `sf-file-preview-download`.
+- `sf-file-preview:remove` — устаревший псевдоним события `sf-file-preview-detach`: приходит с тем же `detail`, подписывайтесь на `sf-file-preview-detach`.
 
 ### Доступность
 
@@ -159,8 +159,8 @@ file.onDownload((event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/file-preview`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-file-preview`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/file-preview`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-file-preview`
 
 ## См. также
 

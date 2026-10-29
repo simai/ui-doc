@@ -153,18 +153,31 @@ for (const [folder, component] of [...components].sort(([a], [b]) => a.localeCom
 // ---- rendering --------------------------------------------------------------
 
 const missing = new Set();
+// A contract's own prose may name an element or a placeholder in tags -- «a
+// <script type="application/json" data-sf-port> island», «data-sf-action="<id>
+// .confirm"». Markdown passes those through as raw HTML, which the site
+// forbids. An element with attributes reads best as code; a bare placeholder
+// sits inside a word or a quoted value, so there the brackets are escaped and
+// the line reads as it was written.
+const tagsAsCode = (text) => String(text)
+  .split('`')
+  .map((part, index) => (index % 2 === 1 ? part : part.replace(
+    /<[a-zA-Z][^<>`]*>/gu,
+    (tag) => (/\s/u.test(tag) ? `\`${tag}\`` : tag.replace('<', '&lt;').replace('>', '&gt;')),
+  )))
+  .join('`');
 const ru = (text) => {
   if (text === undefined || text === null || text === '') return '';
   const value = dictionary[text];
   if (value === undefined) {
     missing.add(text);
-    return text;
+    return tagsAsCode(text);
   }
-  return value;
+  return tagsAsCode(value);
 };
 // A list item is not a table cell: the pipe needs no escape there.
-const item = (text) => text.replace(/\\\|/gu, '|').replace(/\s*\n\s*/gu, ' ');
-const cell = (text) => String(text).replace(/\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
+const item = (text) => tagsAsCode(text).replace(/\\\|/gu, '|').replace(/\s*\n\s*/gu, ' ');
+const cell = (text) => tagsAsCode(String(text)).replace(/\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
 const code = (text) => `\`${String(text).replace(/\|/gu, '\\|')}\``;
 const literal = (value) => {
   if (value === '') return 'пусто';
@@ -176,7 +189,12 @@ const literal = (value) => {
 // the name does.
 const generic = (text) => !text
   || /^Public runtime method [\w$]+\.$/u.test(text)
-  || /^Runtime event [\w:-]+\.$/u.test(text);
+  || /^Runtime event [\w:-]+\.$/u.test(text)
+  // Standard 1.4 manifests say «<name> (vocabulary).» for an event whose
+  // meaning the vocabulary holds, not the component. That is a pointer, not a
+  // sentence about this component: the row shows its detail and the section's
+  // own link sends the reader to the vocabulary.
+  || /^[a-z][a-z-]* \(vocabulary\)\.$/u.test(text);
 
 const typeName = (schema) => {
   if (!schema) return '—';
@@ -204,6 +222,9 @@ const resolveRef = (manifest, schema) => {
 const shape = (manifest, payload) => {
   const schema = resolveRef(manifest, payload);
   if (!schema) return 'не описан';
+  // A 1.4 manifest writes an open object with no keys for an event that
+  // carries nothing: `{  }` says less than the words do.
+  if (schema.properties && Object.keys(schema.properties).length === 0) return 'пустой';
   if (schema.properties) {
     const required = new Set(schema.required ?? []);
     const keys = Object.entries(schema.properties).map(([key, value]) => {
@@ -420,7 +441,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   if (events.length === 0) {
     lines.push('Своих событий нет; общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
   } else {
-    lines.push('Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
+    lines.push('Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
     for (const [name, event] of events) {
       // Both names carry one detail; when only the alias declares its shape,
       // the name to bind shows it too.
@@ -429,7 +450,9 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       const when = event.alias_of
         ? `устаревший псевдоним события ${code(event.alias_of)}: приходит с тем же \`detail\`, подписывайтесь на ${code(event.alias_of)}.`
         : (generic(event.summary) ? '' : ru(event.summary));
-      const detailText = detail === 'не описан' ? '`detail` не описан.' : `\`detail\`: ${detail}.`;
+      const detailText = detail === 'не описан'
+        ? '`detail` не описан.'
+        : (detail === 'пустой' ? 'ничего не передаёт.' : `\`detail\`: ${detail}.`);
       lines.push(item(`- ${code(name)} — ${event.alias_of ? when : `${detailText}${when ? ` ${when}` : ''}`}`));
     }
     lines.push('');
@@ -571,15 +594,30 @@ const releaseLine = 'Раздел собран из манифестов вып�
   if (text) {
     const contract = JSON.parse(text);
     const KIND = {object: 'объект', function: 'функция', value: 'значение', class: 'класс'};
-    const origin = (loadedBy) => {
-      if (loadedBy === 'core') return 'ядро, сразу после `core.js`';
-      if (loadedBy === 'core-loader') return 'Loader, после `sf-loader-init`';
-      if (loadedBy === 'smart-base') return 'основа Smart-компонентов';
-      const [layer, name] = String(loadedBy).split('/');
-      if (layer === 'component') return `компонент ${code(name)}`;
-      if (layer === 'smart') return `Smart-компонент ${code(`sf-${name}`)}`;
-      return code(loadedBy);
+    // A name may come with more than one unit, and a unit may say how it is
+    // asked for: «component/theme-palette (SF.Loader.ensurePlugin('theme-palette')
+    // or data-sf-theme-palette), and smart/theme-generator». Reading the whole
+    // string as one layer/name turned that into one mangled cell.
+    const asked = (note) => note
+      .split(/\s+or\s+/u)
+      .map((one) => code(one.trim()))
+      .join(' или ');
+    const unit = (text) => {
+      if (text === 'core') return 'ядро, сразу после `core.js`';
+      if (text === 'core-loader') return 'Loader, после `sf-loader-init`';
+      if (text === 'smart-base') return 'основа Smart-компонентов';
+      const match = /^([a-z-]+)\/([a-z0-9-]+)(?:\s*\((.+)\))?$/u.exec(text);
+      if (!match) return code(text);
+      const [, layer, name, note] = match;
+      const where = layer === 'component' ? `компонент ${code(name)}`
+        : layer === 'smart' ? `Smart-компонент ${code(`sf-${name}`)}`
+          : code(`${layer}/${name}`);
+      return note ? `${where} (${asked(note)})` : where;
     };
+    const origin = (loadedBy) => String(loadedBy)
+      .split(/,?\s+and\s+/u)
+      .map((part) => unit(part.trim()))
+      .join(' и ');
     const byName = (a, b) => a.name.localeCompare(b.name);
     const publicGlobals = contract.globals.filter((item) => item.status === 'public').sort(byName);
     const internalGlobals = contract.globals.filter((item) => item.status !== 'public').sort(byName);

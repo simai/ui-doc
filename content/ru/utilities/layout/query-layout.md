@@ -26,11 +26,11 @@ description: "Меняет отображение, направление, ко�
 Сузьте контейнер: в узком заголовок и действие стоят столбиком; от ширины
 `sm` они расходятся по краям, выравниваются по центру по высоте, а
 промежуток растёт. Во второй строке от ширины `sm` один образец скрывается,
-другой появляется. В разметке стоит `cq-sm:justify-between`; таблица ниже
+другой появляется. В разметке стоит `cq-sm:content-main-between`; таблица ниже
 называет тот же класс именем из таблицы стилей, `cq-sm:content-main-between`,
 — в него Loader переводит запись из разметки.
 
-:::example {id="utilities/layout/query-layout-align" label="cq-sm:justify-between, cq-sm:gap-3 и cq-sm:hidden"}
+:::example {id="utilities/layout/query-layout-align" label="cq-sm:content-main-between, cq-sm:gap-3 и cq-sm:hidden"}
 :::
 
 ## Классы

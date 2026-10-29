@@ -149,7 +149,7 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -157,8 +157,8 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 |:---|:---|
 | Тег | `<sf-theme-generator>` |
 | Назначение | Тема из одного цвета: основной цвет, собственные тон и насыщенность генератора, просмотр восьми палитр и возврат к цвету SIMAI Framework; ничего не хранит и меняет страницу только через `apply`. |
-| Контракт | `smart.theme-generator`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.theme-generator`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -186,14 +186,14 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `change` — `detail`: `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }`. Выбор изменился — перетаскивание в палитре, образец, введённое число (словарь 1.1.5 §5.1: `sf-theme-change` → change у генератора темы); имя браузера, тема — в detail
 - `sf-theme-generator-committed` — `detail`: `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }`. Выбор принят — change палитры, образец, Enter или уход из поля, сброс: тема, которую сохраняет хост
-- `sf-theme-generator-change` — `detail`: `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }`. Выбор меняется: перетаскивание в палитре, образец цвета, число в поле.
-- `sf-theme-generator-apply` — `detail`: `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }`. Выбор зафиксирован: change палитры, образец цвета, Enter или уход из поля, «Сбросить».
-- `sf-theme-change` — `detail`: `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }`. Прежнее имя; ещё отправляется с тем же detail до 2026-12-01 (запись журнала event-theme-generator-names). Это имя носит и событие Loader о светлой и тёмной теме. Подписывайтесь на sf-theme-generator-change.
-- `sf-theme-apply` — `detail`: `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }`. Прежнее имя; ещё отправляется с тем же detail до 2026-12-01 (запись журнала event-theme-generator-names). Это имя носит и событие Loader о светлой и тёмной теме. Подписывайтесь на sf-theme-generator-apply.
+- `sf-theme-generator-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
+- `sf-theme-generator-apply` — устаревший псевдоним события `sf-theme-generator-committed`: приходит с тем же `detail`, подписывайтесь на `sf-theme-generator-committed`.
+- `sf-theme-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
+- `sf-theme-apply` — устаревший псевдоним события `sf-theme-generator-committed`: приходит с тем же `detail`, подписывайтесь на `sf-theme-generator-committed`.
 
 ### Доступность
 
@@ -210,8 +210,8 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/theme-generator`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-theme-generator`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/theme-generator`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-theme-generator`
 
 ## См. также
 

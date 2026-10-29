@@ -1614,6 +1614,12 @@
         "table-border"
       ]
     },
+    "utilities/tables/table-frame.md": {
+      "kind": "utility",
+      "families": [
+        "table-frame"
+      ]
+    },
     "utilities/tables/table-layout.md": {
       "kind": "utility",
       "families": [

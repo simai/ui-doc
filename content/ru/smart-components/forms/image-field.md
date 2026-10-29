@@ -104,7 +104,7 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -112,8 +112,8 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 |:---|:---|
 | Тег | `<sf-image-field>` |
 | Назначение | Поле формы для одного изображения: миниатюра с именем и размером файла, «Заменить…» и «Убрать»; файл, перетащенный на поле, заменяет изображение; подпись, пояснение, ошибка, обязательность, недоступность и только чтение — как у любого поля. Передаёт выбранный File; загружает его хост. |
-| Контракт | `smart.image-field`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.image-field`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -143,23 +143,23 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 
 - `clear()` — возвращает `object`. Очищает поле из кода; то же, что setValue(null). Возвращает элемент.
 - `choose()` — возвращает `boolean`. Открывает окно выбора файла, как «Заменить…» и «Выбрать…». Возвращает false, если поле недоступно или только для чтения.
-- `removeImage()` — возвращает `boolean`. Убирает изображение, как человек кнопкой «Убрать»: приходят input, change и sf-image-field:remove, фокус переходит на «Выбрать…». Возвращает, было ли что убирать.
-- `takeFile(file: object, source: string)` — возвращает `boolean`. Принимает File, как если бы его выбрал человек (source input, drop или другой, названный хостом): миниатюра показывает его по object URL, приходят input, change и sf-image-field:select. Файл, которого нет в accept, вместо этого отклоняется. Возвращает, принят ли файл.
+- `removeImage()` — возвращает `boolean`. Убирает изображение, как человек кнопкой «Убрать»: приходят input, change и sf-image-field-detach, фокус переходит на «Выбрать…». Возвращает, было ли что убирать.
+- `takeFile(file: object, source: string)` — возвращает `boolean`. Принимает File, как если бы его выбрал человек (source input, drop или другой, названный хостом): миниатюра показывает его по object URL, приходят input, change и sf-image-field-attach. Файл, которого нет в accept, вместо этого отклоняется. Возвращает, принят ли файл.
 - `setError(message: string)` — возвращает `object`. Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает элемент.
 - `setValue(value: object|string|null)` — возвращает `object`. Задаёт изображение из кода — в форме файла или адресом; null очищает поле. Событий не отправляет: значение из кода — не изменение. Возвращает элемент.
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `change` — `detail`: `{ value: object|null, file: object|null, source: any, name: string }`. Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит.
 - `input` — `detail`: `{ value: object|null, file: object|null, source: any, name: string }`. Отправляется при каждом изменении, перед ним, с тем же detail — как нативный файловый input отправляет input и change вместе.
 - `sf-image-field-attach` — `detail`: `{ files: array, file: object, source: any, value: object, name: string }`. Файл выбран или перетащен: File для загрузки. Хост загружает его и задаёт сохранённое значение. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
 - `sf-image-field-detach` — `detail`: `{ value: object, name: string }`. Человек убрал изображение; detail несёт значение, которое было. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:remove` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
 - `sf-image-field-rejected` — `detail`: `{ files: array, accept: string, source: string }`. Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:reject` отправляется после него с тем же detail до 2026-12-01 (aliases.json).
-- `sf-image-field:select` — `detail`: `{ file?: object, source?: string, value?: object, name?: string }`. Файл выбран или перетащен: File для загрузки. Хост загружает его и задаёт сохранённое значение. Прежнее имя: отправляется после `sf-image-field-attach` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-image-field:remove` — `detail`: `{ value?: object, name?: string }`. Человек убрал изображение; detail несёт значение, которое было. Прежнее имя: отправляется после `sf-image-field-detach` с тем же detail до 2026-12-01 (aliases.json).
-- `sf-image-field:reject` — `detail`: `{ files?: array, accept?: string, source?: string }`. Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Прежнее имя: отправляется после `sf-image-field-rejected` с тем же detail до 2026-12-01 (aliases.json).
+- `sf-image-field:select` — устаревший псевдоним события `sf-image-field-attach`: приходит с тем же `detail`, подписывайтесь на `sf-image-field-attach`.
+- `sf-image-field:remove` — устаревший псевдоним события `sf-image-field-detach`: приходит с тем же `detail`, подписывайтесь на `sf-image-field-detach`.
+- `sf-image-field:reject` — устаревший псевдоним события `sf-image-field-rejected`: приходит с тем же `detail`, подписывайтесь на `sf-image-field-rejected`.
 
 ### Доступность
 
@@ -176,5 +176,5 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/image-field`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-image-field`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/image-field`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-image-field`

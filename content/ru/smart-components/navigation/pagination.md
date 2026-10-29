@@ -53,10 +53,15 @@ description: "Переключает страницы длинного спис�
 
 | Событие | Когда | Поля `event.detail` |
 |:---|:---|:---|
-| `sf-page-change` | открыта другая страница | `previous`, `current`, `total`, `pageCount`, `pageSize` |
-| `sf-page-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
-| `sf-show-more` | нажата «Показать ещё» | `current`, `total`, `pageSize`, `pageCount`, `hasNext`, `item` |
-| `sf-count-request` | запрошено общее количество | `reason`, `current`, `pageSize` |
+| `sf-pagination-change` | открыта другая страница | `previous`, `current`, `total`, `pageCount`, `pageSize` |
+| `sf-pagination-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
+| `sf-pagination-load-more` | нажата «Показать ещё» | `current`, `total`, `pageSize`, `pageCount`, `hasNext`, `item` |
+| `sf-pagination-count` | запрошено общее количество | `reason`, `current`, `pageSize` |
+
+Прежние имена этих событий — `sf-page-change`, `sf-page-size-change`,
+`sf-show-more`, `sf-count-request`, `sf-action-change`,
+`sf-action-for-all-change`, `sf-action-apply` и `sf-selection-clear` —
+приходят с тем же `detail` до 2026-12-01; подписывайтесь на новые.
 
 При смене размера `current` остаётся в пределах нового числа страниц.
 `goToPage(n)`, `setPageSize(n)` и `showMore()` делают то же из кода,
@@ -69,7 +74,7 @@ description: "Переключает страницы длинного спис�
 `count-known="false"` и сообщает `has-next`, есть ли следующая страница.
 Тогда вместо числа в начале строки стоит ссылка «Показать количество» — если задан
 `can-count`. Нажатие на неё, на стрелку «Последняя» и отметка «Для всех»
-отправляют `sf-count-request` с причиной в `detail.reason`: `total`,
+отправляют `sf-pagination-count` с причиной в `detail.reason`: `total`,
 `last-page` или `action-for-all`. Пока приложение считает, компонент
 показывает короткое ожидание; ответ приходит атрибутами `total`,
 `count-known` и снятым `counting`. Спиннер ожидания берёт
@@ -89,10 +94,11 @@ description: "Переключает страницы длинного спис�
 «Для всех» — применить действие ко всем записям под фильтром.
 
 Компонент не хранит выделение: `selected-count` передаёт приложение, а
-`sf-action-change` (`previous`, `action`), `sf-action-for-all-change`
-(`previous`, `actionForAll`), `sf-action-apply` (`action`, `actionForAll`,
-`current`, `total`, `pageSize`, `pageCount`) и `sf-selection-clear`
-(`selectedCount`, `total`) сообщают ему о выборе пользователя.
+`sf-pagination-action-change` (`previous`, `action`),
+`sf-pagination-action-for-all-change` (`previous`, `actionForAll`),
+`sf-pagination-apply` (`action`, `actionForAll`, `current`, `total`,
+`pageSize`, `pageCount`) и `sf-pagination-selection-clear` (`selectedCount`,
+`total`) сообщают ему о выборе пользователя.
 `bottom="false"` убирает панель, если действия показывает соседний компонент.
 
 ```html
@@ -109,12 +115,12 @@ description: "Переключает страницы длинного спис�
 ```js
 const pagination = document.querySelector('sf-pagination');
 
-pagination.addEventListener('sf-page-change', async (event) => {
+pagination.addEventListener('sf-pagination-change', async (event) => {
   const {current, pageSize} = event.detail;
   renderRows(await loadOrders({page: current, size: pageSize}));
 });
 
-pagination.addEventListener('sf-action-apply', async (event) => {
+pagination.addEventListener('sf-pagination-apply', async (event) => {
   await applyToSelected(event.detail.action);
   pagination.setAttribute('selected-count', '0');
 });
@@ -142,7 +148,7 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -150,8 +156,8 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-pagination>` |
 | Назначение | Навигация по коллекции, разбитой на пронумерованные страницы, на основе источника данных. |
-| Контракт | `smart.pagination`, версия `1.3.2` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.pagination`, версия `1.3.3` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -208,38 +214,38 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ### Методы
 
-- `goToPage(page: number)` — возвращает `object`. Переходит на страницу: номер разбирается как целое число и ограничивается диапазоном 1..pageCount, если количество известно (иначе только снизу значением 1). Отправляет sf-page-change, когда страница действительно меняется; ничего не делает, если известно, что всего страниц ноль.
-- `showMore()` — возвращает `object`. Отправляет sf-show-more с текущими параметрами пагинации и переданным пунктом; не выполняет запрос и не меняет состояние.
+- `goToPage(page: number)` — возвращает `object`. Переходит на страницу: номер разбирается как целое число и ограничивается диапазоном 1..pageCount, если количество известно (иначе только снизу значением 1). Отправляет sf-pagination-change, когда страница действительно меняется; ничего не делает, если известно, что всего страниц ноль.
+- `showMore()` — возвращает `object`. Отправляет sf-pagination-load-more с текущими параметрами пагинации и переданным пунктом; не выполняет запрос и не меняет состояние.
 - `getTopSection()` — возвращает `object` | `null`. Возвращает элемент верхней секции (.sf-pagination-top) или null, если она не отрисована.
 - `getMainSection()` — возвращает `object` | `null`. Возвращает элемент основной секции (.sf-pagination-main) или null, если она не отрисована.
 - `getBottomSection()` — возвращает `object` | `null`. Возвращает элемент нижней секции (.sf-pagination-bottom) или null, если она не отрисована.
-- `setPageSize(size: number|string)` — возвращает `object`. Устанавливает положительный размер страницы, удерживает текущую страницу в пределах нового числа страниц и отправляет sf-page-size-change. Неположительный, нечисловой или неизменный размер игнорируется.
-- `setAction(action: string)` — возвращает `object`. Выбирает групповое действие по значению (пустое значение сбрасывает выбор) и отправляет sf-action-change, если оно отличается от текущего.
-- `setActionForAll(value: boolean)` — возвращает `object`. Задаёт, применяется ли групповое действие ко всем записям под фильтром, и отправляет sf-action-for-all-change. При включении также запрашивает количество (sf-count-request с reason action-for-all), если оно ещё неизвестно.
+- `setPageSize(size: number|string)` — возвращает `object`. Устанавливает положительный размер страницы, удерживает текущую страницу в пределах нового числа страниц и отправляет sf-pagination-size-change. Неположительный, нечисловой или неизменный размер игнорируется.
+- `setAction(action: string)` — возвращает `object`. Выбирает групповое действие по значению (пустое значение сбрасывает выбор) и отправляет sf-pagination-action-change, если оно отличается от текущего.
+- `setActionForAll(value: boolean)` — возвращает `object`. Задаёт, применяется ли групповое действие ко всем записям под фильтром, и отправляет sf-pagination-action-for-all-change. При включении также запрашивает количество (sf-pagination-count с reason action-for-all), если оно ещё неизвестно.
 - `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case: false, null, undefined или пустая строка удаляет атрибут, true устанавливает его пустым, всё остальное приводится к строке.
-- `onPageChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-page-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
-- `onShowMore(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-show-more; обработчик вызывается с (detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onPageChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-pagination-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onShowMore(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-pagination-load-more; обработчик вызывается с (detail, event). Обработчик, не являющийся функцией, игнорируется.
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-pagination-change` — `detail`: `{ previous: number, current: number, total: number, pageCount: number|null, pageSize: number }`. change (словарь).
-- `sf-pagination-size-change` — `detail`: `{ previous: number, pageSize: number, current: number, total: number, pageCount: number|null }`. size-change (словарь).
-- `sf-pagination-count` — `detail`: `{ reason: any, current: number, pageSize: number }`. count (словарь).
-- `sf-pagination-load-more` — `detail`: `{ direction: any, current: number, total: number, pageSize: number, pageCount: number|null, hasNext: boolean }`. load-more (словарь).
-- `sf-pagination-selection-clear` — `detail`: `{ selectedCount: number, total: number }`. selection-clear (словарь).
-- `sf-pagination-action-change` — `detail`: `{ previous: string, action: string }`. action-change (словарь).
-- `sf-pagination-action-for-all-change` — `detail`: `{ previous: boolean, actionForAll: boolean }`. action-for-all-change (словарь).
-- `sf-pagination-apply` — `detail`: `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number|null }`. apply (словарь).
-- `sf-action-apply` — `detail`: `{ component: object, tagName: string, template: string, action: string, actionForAll: boolean, current: number, total: number, pageSize: number, pageCount: number|null }`.
-- `sf-action-change` — `detail`: `{ component: object, tagName: string, template: string, previous: string, action: string }`.
-- `sf-action-for-all-change` — `detail`: `{ component: object, tagName: string, template: string, previous: boolean, actionForAll: boolean }`.
-- `sf-count-request` — `detail`: `{ component: object, tagName: string, template: string, reason: string, current: number, pageSize: number }`.
-- `sf-page-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, total: number, pageCount: number|null, pageSize: number }`.
-- `sf-page-size-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, pageSize: number, current: number, total: number, pageCount: number }`.
-- `sf-selection-clear` — `detail`: `{ component: object, tagName: string, template: string, selectedCount: number, total: number }`.
-- `sf-show-more` — `detail`: `{ component: object, tagName: string, template: string, current: number, total: number, pageSize: number, pageCount: number|null, hasNext: boolean, item: object|null }`.
+- `sf-pagination-change` — `detail`: `{ previous: number, current: number, total: number, pageCount: number|null, pageSize: number }`.
+- `sf-pagination-size-change` — `detail`: `{ previous: number, pageSize: number, current: number, total: number, pageCount: number|null }`.
+- `sf-pagination-count` — `detail`: `{ reason: any, current: number, pageSize: number }`.
+- `sf-pagination-load-more` — `detail`: `{ direction: any, current: number, total: number, pageSize: number, pageCount: number|null, hasNext: boolean }`.
+- `sf-pagination-selection-clear` — `detail`: `{ selectedCount: number, total: number }`.
+- `sf-pagination-action-change` — `detail`: `{ previous: string, action: string }`.
+- `sf-pagination-action-for-all-change` — `detail`: `{ previous: boolean, actionForAll: boolean }`.
+- `sf-pagination-apply` — `detail`: `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number|null }`.
+- `sf-action-apply` — устаревший псевдоним события `sf-pagination-apply`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-apply`.
+- `sf-action-change` — устаревший псевдоним события `sf-pagination-action-change`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-action-change`.
+- `sf-action-for-all-change` — устаревший псевдоним события `sf-pagination-action-for-all-change`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-action-for-all-change`.
+- `sf-count-request` — устаревший псевдоним события `sf-pagination-count`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-count`.
+- `sf-page-change` — устаревший псевдоним события `sf-pagination-change`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-change`.
+- `sf-page-size-change` — устаревший псевдоним события `sf-pagination-size-change`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-size-change`.
+- `sf-selection-clear` — устаревший псевдоним события `sf-pagination-selection-clear`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-selection-clear`.
+- `sf-show-more` — устаревший псевдоним события `sf-pagination-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-pagination-load-more`.
 
 ### Доступность
 
@@ -256,8 +262,8 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/pagination`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-pagination`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/pagination`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-pagination`
 
 ## См. также
 

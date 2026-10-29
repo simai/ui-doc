@@ -124,7 +124,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -150,7 +150,7 @@ log.renderMessage = (message, {view}) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-chat-message-retry` — `detail`: `{ id?: string|number, key?: string, kind?: string }`. «Повторить» (словарь §5 retry): неудавшийся ответ `{id}`; неотправленное сообщение человека `{key}` (его клиентский код); неудавшийся файл человека `{id, key, kind: file}`. Имя 0.3 `sf-chat-action {action: retry, id}` отправляется после него до 2026-12-01.
 - `sf-chat-message-check` — `detail`: `{ id: string|number }`. «Обновить» при остановленном, задержанном или потерянном ожидании: спросить хост, пришёл ли ответ (собственный глагол чата `check`, словарь 1.1.3 §5.1). Имя 0.3 `sf-chat-action {action: check}` отправляется после него до 2026-12-01.
@@ -178,8 +178,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/chat-message`
-- `simai/ui-pro@ae62d3e35076f0e25f2cde042c82ce929620b3db:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@eabbe5178045a91b9c5bbd27616b1f2a68bd176b:components/src/smart/chat-message`
+- `simai/ui-pro@eabbe5178045a91b9c5bbd27616b1f2a68bd176b:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

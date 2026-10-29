@@ -123,7 +123,7 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -131,8 +131,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 |:---|:---|
 | Тег | `<sf-composition-overlay>` |
 | Назначение | Слой редактора над отрисованным документом композиции: рамки наведения и выбора, панель действий узла, места вставки, перенос указателем и клавиатурой и дерево структуры; холст никогда не меняется, каждое изменение выполняет хост. |
-| Контракт | `smart.composition-overlay`, версия `1.2.3` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.composition-overlay`, версия `1.2.4` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -166,15 +166,15 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-composition-overlay-select` — `detail`: `{ ids: array, id: any, node_id: any }`. Узел выбран (или выбор снят): словарь 1.1.5 §5 select; в detail остаётся `node_id` для хоста композиции
 - `sf-composition-overlay-apply` — `detail`: `{ action: string, scope: any, ids: array }`. Для выбранного узла выбрано действие панели инструментов: собственное действие записи (словарь §5 apply, стандарт §18.3)
 - `sf-composition-overlay-insert` — `detail`: `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }`. Выбрано место вставки или элемент библиотеки сброшен на холст: место `{parent, slot, index}` и элемент, если его перетаскивали; в detail остаётся `parent_id` для хоста композиции
 - `sf-composition-overlay-move` — `detail`: `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }`. Узел перенесён указателем или клавиатурой: один ручной перенос (словарь §5 move, `{id, parent, position}`); в detail остаются `node_id`, `parent_id` и `index` для хоста композиции
 - `sf-composition-overlay-change` — `detail`: `{ id: any, value: string, previous: string }`. Правка простой строки принята; при отмене текст показывает то, что было до неё
-- `sf-composition-overlay-action` — `detail`: `{ action_id: string, node_id: string }`. Псевдоним с датой для `sf-composition-overlay-apply` до 2026-12-01: выбрано действие панели инструментов.
-- `sf-composition-overlay-edit` — `detail`: `{ node_id: string, value: string, previous: string }`. Псевдоним с датой для `sf-composition-overlay-change` до 2026-12-01: правка простой строки на месте принята с изменённым значением (режим во фрейме). Отменяемое: `preventDefault` возвращает прежний текст.
+- `sf-composition-overlay-action` — устаревший псевдоним события `sf-composition-overlay-apply`: приходит с тем же `detail`, подписывайтесь на `sf-composition-overlay-apply`.
+- `sf-composition-overlay-edit` — устаревший псевдоним события `sf-composition-overlay-change`: приходит с тем же `detail`, подписывайтесь на `sf-composition-overlay-change`.
 
 ### Доступность
 
@@ -191,8 +191,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/composition-overlay`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-composition-overlay`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/composition-overlay`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-composition-overlay`
 
 ## См. также
 

@@ -67,7 +67,7 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -75,8 +75,8 @@ document.querySelector('#next').addEventListener('click', () => {
 |:---|:---|
 | Тег | `<sf-steps>` |
 | Назначение | Ряд подписанных кнопок шагов, разделённых иконкой, для многошагового процесса: отмечает текущий, завершённые и ошибочные шаги и переходит к доступному шагу при нажатии. |
-| Контракт | `smart.steps`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.steps`, версия `1.1.4` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -97,16 +97,16 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### Методы
 
-- `goToStep(index: number)` — возвращает `object`. Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-step-change.
+- `goToStep(index: number)` — возвращает `object`. Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-steps-change.
 - `setState(nextState: object)` — возвращает `object`. Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label::disabled, соединённые через |. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым.
-- `onStepChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-step-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
+- `onStepChange(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-steps-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется.
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-steps-change` — `detail`: `{ previous: number, current: number, item: object, items: array }`. change (словарь).
-- `sf-step-change` — `detail`: `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }`.
+- `sf-steps-change` — `detail`: `{ previous: number, current: number, item: object, items: array }`.
+- `sf-step-change` — устаревший псевдоним события `sf-steps-change`: приходит с тем же `detail`, подписывайтесь на `sf-steps-change`.
 
 ### Доступность
 
@@ -123,8 +123,8 @@ document.querySelector('#next').addEventListener('click', () => {
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/steps`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-steps`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/steps`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-steps`
 
 ## См. также
 

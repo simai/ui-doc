@@ -78,7 +78,7 @@ Ctrl+C» (⌘C на macOS), чтобы человек скопировал са�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -86,8 +86,8 @@ Ctrl+C» (⌘C на macOS), чтобы человек скопировал са�
 |:---|:---|
 | Тег | `<sf-copy-button>` |
 | Назначение | Копирует значение или текст элемента, подтверждает галочкой и вежливым объявлением, а если браузер не даёт доступ к буферу обмена, выделяет текст для Ctrl+C. |
-| Контракт | `smart.copy-button`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.copy-button`, версия `1.1.6` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -115,12 +115,12 @@ Ctrl+C» (⌘C на macOS), чтобы человек скопировал са�
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-copy-button-copied` — `detail`: `{ text: string, method: any }`. copied (словарь).
-- `sf-copy-button-copy-failed` — `detail`: `{ code: any }`. copy-failed (словарь).
-- `sf-copy` — `detail`: `{ text: string, method: any }`. Значение скопировано.
-- `sf-copy-error` — `detail`: `{ code: any }`. Значение не скопировано; при denied текст выделен для Ctrl+C.
+- `sf-copy-button-copied` — `detail`: `{ text: string, method: any }`.
+- `sf-copy-button-copy-failed` — `detail`: `{ code: any }`.
+- `sf-copy` — устаревший псевдоним события `sf-copy-button-copied`: приходит с тем же `detail`, подписывайтесь на `sf-copy-button-copied`.
+- `sf-copy-error` — устаревший псевдоним события `sf-copy-button-copy-failed`: приходит с тем же `detail`, подписывайтесь на `sf-copy-button-copy-failed`.
 
 ### Доступность
 
@@ -137,8 +137,8 @@ Ctrl+C» (⌘C на macOS), чтобы человек скопировал са�
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/copy-button`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-copy-button`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/copy-button`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-copy-button`
 
 ## См. также
 

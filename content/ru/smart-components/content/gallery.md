@@ -106,7 +106,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-bc1fb36ec8f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-466d8f260e58` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -114,8 +114,8 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 |:---|:---|
 | Тег | `<sf-gallery>` |
 | Назначение | Упорядоченная коллекция медиа во встроенном Slider с необязательным лайтбоксом Modal, в котором находится второй Slider. Галерея хранит текущий слайд (нумерация с единицы) и держит на нём оба представления. |
-| Контракт | `smart.gallery`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
+| Контракт | `smart.gallery`, версия `1.1.5` |
+| Поставка | выпуск Framework `ui-466d8f260e58` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -181,7 +181,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 - `open(index: number)` — возвращает `object`. Переходит к указанному слайду (нумерация с единицы), если передан индекс, устанавливает open и открывает модальное окно лайтбокса. Возвращает элемент.
 - `close()` — возвращает `object`. Снимает open и закрывает модальное окно лайтбокса. Возвращает элемент.
 - `toggle(index: number)` — возвращает `object`. Вызывает close(), если открыто, иначе open(index). Возвращает элемент.
-- `goTo(index: number)` — возвращает `object`. Переходит к слайду по номеру с единицы, ограничивая его числом слайдов, отражает его в атрибуте current, синхронизирует оба слайдера и отправляет sf-change, если слайд сменился. Возвращает элемент.
+- `goTo(index: number)` — возвращает `object`. Переходит к слайду по номеру с единицы, ограничивая его числом слайдов, отражает его в атрибуте current, синхронизирует оба слайдера и отправляет нативное событие change, если слайд сменился. Возвращает элемент.
 - `next()` — возвращает `object`. goTo(current + 1); останавливается на последнем слайде. Возвращает элемент.
 - `prev()` — возвращает `object`. goTo(current - 1); останавливается на первом слайде. Возвращает элемент.
 - `getModal()` — возвращает `object` | `null`. Возвращает sf-modal лайтбокса или null, если его нет.
@@ -190,14 +190,14 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `change` — `detail`: `{ previous: number, current: number, total: number, from: any }`. change (словарь).
-- `sf-gallery-opened` — `detail`: `{ current: number, total: number }`. opened (словарь).
-- `sf-gallery-closed` — `detail`: `{ current: number, total: number }`. closed (словарь).
-- `sf-change` — `detail`: `{ component?: any, tagName?: string, template?: string, previous?: number, current?: number, total?: number, from?: any }`. Текущий слайд изменился через API или любой из слайдеров. Всплывает и с composed: true.
-- `sf-close` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса закрылось. Всплывает и с composed: true.
-- `sf-open` — `detail`: `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }`. Модальное окно лайтбокса открылось. Всплывает и с composed: true.
+- `change` — `detail`: `{ previous: number, current: number, total: number, from: any }`.
+- `sf-gallery-opened` — `detail`: `{ current: number, total: number }`.
+- `sf-gallery-closed` — `detail`: `{ current: number, total: number }`.
+- `sf-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
+- `sf-close` — устаревший псевдоним события `sf-gallery-closed`: приходит с тем же `detail`, подписывайтесь на `sf-gallery-closed`.
+- `sf-open` — устаревший псевдоним события `sf-gallery-opened`: приходит с тем же `detail`, подписывайтесь на `sf-gallery-opened`.
 
 ### Доступность
 
@@ -214,8 +214,8 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ### Источник
 
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/smart/gallery`
-- `simai/ui@bc1fb36ec8f1dd7e92a0bcae26216017432df947:distr/rule/rule.json#name=cl-gallery`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/smart/gallery`
+- `simai/ui@466d8f260e58fbbac430d06b06991567df587816:distr/rule/rule.json#name=cl-gallery`
 
 ## См. также
 
