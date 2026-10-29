@@ -82,10 +82,10 @@ PHP-приложение, Node-сервер, тестовая заглушка.
 
 Порт хоста — адаптер данных. Не путайте его с портами маршрутизации
 композиции, по которым между компонентами идут типизированные значения (см.
-[Связь компонентов без кода проекта](/ru/guide/smart-components/composite/#связь-компонентов-без-кода-проекта) и [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)).
+[Роли и связи](/ru/guide/smart-components/assemblies/#роли-и-связи) и [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)).
 
 ## Смотрите также
 
 - [Порт хоста (`simai.composite-host-port`)](/ru/guide/standards/map/#порт-хоста-simai-composite-host-port) — требования стандарта порта хоста.
-- [Связь с приложением: порты хоста и намерения](/ru/guide/smart-components/host-ports/) — порты хоста в Smart-компонентах.
+- [Данные с сервера](/ru/guide/smart-components/data/) — порты хоста в Smart-компонентах.
 - [Как проект проверяет своё использование Framework](/ru/guide/standards/project-checks/) — как проект подтверждает поддержку порта.

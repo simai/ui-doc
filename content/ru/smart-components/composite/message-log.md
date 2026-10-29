@@ -16,7 +16,7 @@ description: "Переписка прокручиваемой колонкой: 
 PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу —
 коммерческая лицензия SIMAI; в составе Larena — лицензия Larena. Как
 подключить пакет — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
+[Подключение Smart-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ## Пример
 
@@ -107,9 +107,9 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 | Назначение | Переписка прокручиваемой колонкой сообщений, которые рисует хост: сохраняет положение чтения, когда сверху добавляется история, следует за низом, только когда читатель внизу, объединяет подряд идущие сообщения одного автора и объявляет новое один раз. |
 | Контракт | `smart.message-log`, версия `1.2.2` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
-| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 
 ### Атрибуты
 
@@ -137,7 +137,7 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-message-log-load-more` — `detail`: `{ before: string|null, direction?: any }`. Запрошена более ранняя история: `{direction: before, before}`. Отменить запрос — `earlierFailed()`. Имя версии 1.0 `sf-message-log-load-earlier` отправляется после него до 2026-12-01.
 - `sf-message-log-begun` — `detail`: `{ id: string }`. Пришло растущее сообщение (словарь §5.2).

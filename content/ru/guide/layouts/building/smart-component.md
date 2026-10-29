@@ -12,7 +12,7 @@ description: "Smart-компоненты попадают в макет как �
 
 Smart-компоненты попадают в макет как типы узлов через декларативный
 контракт. Эта глава описывает, как это устроено; поведение Smart-компонентов,
-их события, состояния и порты хоста описаны в части о Smart-компонентах (см. [Составные компоненты](/ru/guide/smart-components/composite/) и [Связь с приложением: порты хоста и намерения](/ru/guide/smart-components/host-ports/)).
+их события, состояния и порты хоста описаны в части о Smart-компонентах (см. [Сборки](/ru/guide/smart-components/assemblies/) и [Данные с сервера](/ru/guide/smart-components/data/)).
 
 Наличие компонента в справочнике само по себе не значит, что его можно
 вставить в слот макета: нужен опубликованный и проверенный декларативный
@@ -147,10 +147,10 @@ const result = await SF.Composition.render(doc, { registry });
 `extendRegistry`.
 
 Документ не содержит обработчиков JavaScript. Компонент сообщает о действии
-событием, проект решает, что делать (см. [Граница ответственности](/ru/guide/smart-components/introduction/#граница-ответственности)).
+событием, проект решает, что делать (см. [Смарт-компоненты](/ru/guide/smart-components/)).
 
 ## Смотрите также
 
-- [Составные компоненты](/ru/guide/smart-components/composite/) и [Связь с приложением: порты хоста и намерения](/ru/guide/smart-components/host-ports/) — составные компоненты, маршруты и порты хоста.
+- [Сборки](/ru/guide/smart-components/assemblies/) и [Данные с сервера](/ru/guide/smart-components/data/) — составные компоненты, маршруты и порты хоста.
 - [Встроенные типы](/ru/guide/layouts/introduction/levels/#встроенные-типы) — `layout.scope` среди встроенных типов.
 - [Где взять спецификацию](/ru/guide/layouts/reference/specification/) — комплект Composition Routing.

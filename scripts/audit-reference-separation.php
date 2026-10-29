@@ -34,10 +34,10 @@ $requiredGuideOwners = [
     'content/ru/guide/size-and-type/directions.md',
     'content/ru/guide/components/form-fields.md',
     'content/ru/guide/components/examples-and-project.md',
-    'content/ru/guide/smart-components/introduction.md',
-    'content/ru/guide/smart-components/connection.md',
-    'content/ru/guide/smart-components/lifecycle.md',
-    'content/ru/guide/smart-components/templates.md',
+    'content/ru/guide/smart-components/index.md',
+    'content/ru/guide/smart-components/page.md',
+    'content/ru/guide/smart-components/model.md',
+    'content/ru/guide/smart-components/markup.md',
 ];
 foreach ($requiredGuideOwners as $owner) {
     $check(is_file($root . '/' . $owner), 'guide_theory_owner_missing', ['path' => $owner]);
@@ -46,7 +46,7 @@ foreach ($requiredGuideOwners as $owner) {
 $catalogRules = [
     'content/ru/utilities/index.md' => ['/ru/guide/utilities/', '## Направление (LTR/RTL)'],
     'content/ru/components/index.md' => ['/ru/guide/components/examples-and-project/#как-работать-с-примерами', '## Как устроены примеры'],
-    'content/ru/smart-components/index.md' => ['/ru/guide/smart-components/introduction/', '/ru/smart-components/introduction/'],
+    'content/ru/smart-components/index.md' => ['/ru/guide/smart-components/', '/ru/smart-components/introduction/'],
 ];
 foreach ($catalogRules as $path => [$requiredLink, $forbiddenText]) {
     $contents = (string) file_get_contents($root . '/' . $path);

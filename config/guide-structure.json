@@ -302,100 +302,8 @@
   },
   {
    "slug": "smart-components",
-   "title": "Smart-компоненты",
+   "title": "Смарт-компоненты",
    "order": 70,
-   "pages": [
-    {
-     "slug": "introduction",
-     "title": "Что это и что даёт",
-     "order": 10
-    },
-    {
-     "slug": "connection",
-     "title": "Подключение и использование",
-     "order": 20
-    },
-    {
-     "slug": "structure",
-     "title": "Устройство компонента",
-     "order": 30
-    },
-    {
-     "slug": "properties",
-     "title": "Атрибуты, свойства и состояние",
-     "order": 40
-    },
-    {
-     "slug": "templates",
-     "title": "Шаблоны",
-     "order": 50
-    },
-    {
-     "slug": "slots",
-     "title": "Содержимое и слоты",
-     "order": 60
-    },
-    {
-     "slug": "lifecycle",
-     "title": "Жизненный цикл",
-     "order": 70
-    },
-    {
-     "slug": "events",
-     "title": "События",
-     "order": 80
-    },
-    {
-     "slug": "states-and-loading",
-     "title": "Состояния и загрузка данных",
-     "order": 90
-    },
-    {
-     "slug": "view-preferences",
-     "title": "Персональный вид",
-     "order": 95
-    },
-    {
-     "slug": "composite",
-     "title": "Составные компоненты",
-     "order": 100
-    },
-    {
-     "slug": "field-renderers",
-     "title": "Поля по типу свойства",
-     "order": 105
-    },
-    {
-     "slug": "property-types",
-     "title": "Галерея типов свойств",
-     "order": 106
-    },
-    {
-     "slug": "host-ports",
-     "title": "Порты хоста и намерения",
-     "order": 110
-    },
-    {
-     "slug": "manifest",
-     "title": "Манифест",
-     "order": 120
-    },
-    {
-     "slug": "quality",
-     "title": "Качество",
-     "order": 130
-    },
-    {
-     "slug": "ai-development",
-     "title": "Разработка с ИИ",
-     "order": 140
-    }
-   ]
-  },
-  {
-   "slug": "smart-components-2",
-   "title": "Смарт-компоненты 2.0",
-   "order": 75,
    "pages": [
     {
      "slug": "model",
@@ -443,6 +351,11 @@
      "order": 70
     },
     {
+     "slug": "view-preferences",
+     "title": "Персональный вид",
+     "order": 72
+    },
+    {
      "slug": "slots",
      "title": "Слоты",
      "order": 80
@@ -451,6 +364,16 @@
      "slug": "forms",
      "title": "Поля форм",
      "order": 90
+    },
+    {
+     "slug": "field-renderers",
+     "title": "Поля по типу свойства",
+     "order": 92
+    },
+    {
+     "slug": "property-types",
+     "title": "Галерея типов свойств",
+     "order": 94
     },
     {
      "slug": "entries",
@@ -509,7 +432,7 @@
     },
     {
      "slug": "comparison",
-     "title": "Сравнение с текущим устройством",
+     "title": "Сравнение с прежним устройством",
      "order": 190
     }
    ]

@@ -250,13 +250,13 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 `clear()` тоже отправляют `change`, как и прежнее имя. Пока запись на этапе совместимости,
 прежние имена приходят вместе с `change`, поэтому код на прежних именах
 работает до замены. У `sf-datepicker` прежнее `sf-change` несёт другой
-`detail`: все данные компонента, а не состав `change` (см. [События](/ru/guide/smart-components/events/)).
+`detail`: все данные компонента, а не состав `change` (см. [На странице](/ru/guide/smart-components/page/)).
 
 **Механическая замена может менять поведение.** Запись `event-change-aliases`
 механически заменяет прежние имена события изменения на `change`, в том числе
 `sf-range-slider-change` у `sf-range-slider`. Её поле `manual` предупреждает:
 `sf-range-slider-change` приходит и при установке значения из кода, а `change`
-— только при действии человека (см. [Соглашение `change`](/ru/guide/smart-components/events/#соглашение-change)). Код, которому нужно событие после
+— только при действии человека (см. [Событие `change`](/ru/guide/smart-components/page/#событие-change)). Код, которому нужно событие после
 установки значения из кода, после замены вызывает свой обработчик сам.
 `sf-upgrade --apply` это предупреждение не печатает (см. [Инструмент `sf-upgrade`](#инструмент-sf-upgrade)), поэтому поле `manual`
 каждой применённой записи читают в журнале.
@@ -286,5 +286,5 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 - Тема на `<html>` — [Темы](/ru/guide/colour/themes/#темы); токены, которые приносит `core.css`, — [Дизайн-токены](/ru/guide/colour/design-tokens/).
 - Лестница размеров и адаптивная типографика — [Адаптивные размеры](/ru/guide/size-and-type/adaptive-sizing/), [Одна лестница размеров](/ru/guide/size-and-type/size-ladder/) и [Типографика](/ru/guide/size-and-type/typography/).
 - Классы и условия, по которым Loader выбирает модули, — [Как устроено имя утилиты](/ru/guide/utilities/naming/), [Условия действия](/ru/guide/utilities/conditions/) и [Как утилиты попадают на страницу](/ru/guide/utilities/loading/).
-- Smart-компоненты, их база, шаблоны и события — раздел [Smart-компоненты](/ru/guide/smart-components/) ([Устройство компонента](/ru/guide/smart-components/structure/), [Шаблоны](/ru/guide/smart-components/templates/), [События](/ru/guide/smart-components/events/)).
+- Smart-компоненты, их база, шаблоны и события — раздел [Смарт-компоненты](/ru/guide/smart-components/) ([Папка компонента и манифест](/ru/guide/smart-components/folder/), [Разметка и шаблоны](/ru/guide/smart-components/markup/), [На странице](/ru/guide/smart-components/page/)).
 - Проверки качества и работа с ИИ — [Как Framework проверяет себя](/ru/guide/standards/framework-checks/)–[Работа с ИИ](/ru/guide/standards/ai/#работа-с-ии).

@@ -2,9 +2,7 @@ const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright-c
 const base = process.env.DOCS_BASE_URL || 'http://127.0.0.1:8788';
 import assert from 'node:assert/strict';
 const b=await chromium.launch({executablePath:process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});const p=await b.newPage({viewport:{width:1280,height:1000}});const errors=[];p.on('pageerror',e=>errors.push(e.message));
-await p.goto(base+'/demos/guide/smart-counter/');await p.locator('project-counter button').click();await p.waitForFunction(()=>document.querySelector('#counter-log').textContent.includes('2'));assert.match(await p.locator('output').innerText(),/2/);
 await p.goto(base+'/demos/guide/smart-composition/');await p.locator('project-quantity button').click();await p.waitForFunction(()=>document.querySelector('#order-log').textContent.includes('project-quantity: 2'));
-await p.goto(base+'/demos/guide/smart-template/');await p.locator('project-greeting strong').waitFor();assert.equal(await p.locator('project-greeting strong').innerText(),'Рим');
 await p.goto(base+'/demos/guide/layout-inspector/');await p.waitForFunction(()=>document.querySelector('#layout-html').textContent.includes('sf-composition-columns'));await p.locator('#layout-preview').scrollIntoViewIfNeeded();await p.waitForTimeout(1000);assert.match(await p.frames().at(-1).locator('body').innerText(),/Каталог товаров/);
 await p.locator('#layout-sample').selectOption('information');await p.waitForFunction(()=>document.querySelector('#layout-html').textContent.includes('О компании'));
 await p.locator('#layout-json').fill('{invalid');await p.locator('#layout-render').click();assert.equal(await p.locator('#layout-html').textContent(),'');
@@ -22,7 +20,7 @@ for (const viewport of [{width:1440,height:1000},{width:390,height:844}]) {
 }
 await p.goto(base+'/ru/smart-components/reference/buttons/',{waitUntil:'domcontentloaded'});
 await p.waitForURL('**/ru/smart-components/actions/buttons/');
-for(const route of ['creating','events','nesting','templates-and-assets']) {
+for(const route of ['page']) {
   await p.goto(base+'/ru/guide/smart-components/'+route+'/',{waitUntil:'domcontentloaded'});
   const frame=p.locator('[data-docara-block="internal-preview"] iframe').first();await frame.scrollIntoViewIfNeeded();
   await p.waitForTimeout(600);assert.ok(await frame.isVisible());
@@ -32,4 +30,4 @@ for(const route of ['creating','events','nesting','templates-and-assets']) {
     assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   }
 }
-console.log(JSON.stringify({status:'pass',counter:true,nestedEvent:true,externalTemplate:true,threeLayouts:true,invalidJson:true,unknownType:true,errors}));assert.deepEqual(errors,[]);await b.close();
+console.log(JSON.stringify({status:'pass',nestedEvent:true,threeLayouts:true,invalidJson:true,unknownType:true,errors}));assert.deepEqual(errors,[]);await b.close();

@@ -152,9 +152,9 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 | Назначение | Навигация по коллекции, разбитой на пронумерованные страницы, на основе источника данных. |
 | Контракт | `smart.pagination`, версия `1.3.2` |
 | Поставка | выпуск Framework `ui-bc1fb36ec8f1` |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | принят в продукт |
-| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | принят в продукт |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 
 ### Атрибуты
 
@@ -222,7 +222,7 @@ pagination.addEventListener('sf-action-apply', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-pagination-change` — `detail`: `{ previous: number, current: number, total: number, pageCount: number|null, pageSize: number }`. change (словарь).
 - `sf-pagination-size-change` — `detail`: `{ previous: number, pageSize: number, current: number, total: number, pageCount: number|null }`. size-change (словарь).

@@ -32,7 +32,7 @@ Larena — лицензия Larena). В пакет входят ещё
 `window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
 Сборка пакета публикуется выпуском репозитория `simai/larena-ui`
 (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Подробнее — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
+[Подключение Smart-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ### Имя и ключ настроек
 
@@ -329,7 +329,7 @@ table.setRows([
 ```
 
 Отдельная таблица без `<sf-data-view>` показывает только «нет записей» и
-ошибку. Подробнее — в [Пустые состояния](/ru/guide/smart-components/states-and-loading/#пустые-состояния).
+ошибку. Подробнее — в [Пустое состояние](/ru/guide/smart-components/data/#пустое-состояние).
 
 ### Прокрутка на странице списка
 
@@ -789,9 +789,9 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
 | Контракт | `smart.data-view-composite`, версия `1.6.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
-| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 
 #### Атрибуты
 
@@ -857,7 +857,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-count-request` — `detail`: `{ component: object, tagName: string, template: string, reason: string, current: integer, pageSize: integer }`. Отправляет пагинация представления, когда человек просит общее число, последнюю страницу или действие над фильтром, пока число неизвестно. Представление отвечает на него намерением query.count; хосту слушать его не нужно.
 - `sf-data-view-answer` — `detail`: `{ intent: string, answer: string, reason?: string, message?: string, data?: object, sequence?: integer, effects?: array, instance_id: string }`. Приходит после каждого ответа порта, по которому действует представление, включая ответы, которые оно даёт себе само (порт не подключён, возможность не объявлена, действие не разрешено), — чтобы страница видела результаты, не оборачивая порт.
@@ -907,9 +907,9 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
 | Контракт | `smart.data-view`, версия `1.13.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
-| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 
 #### Атрибуты
 
@@ -1004,7 +1004,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-port-output` — `detail`: `{ port: any, value: array }`. Выход порта композиции. Таблица отправляет порт `selection` (`record-ids.v1`) один раз при каждом изменении явного выделения, включая сброс; маршрутизирует его общий `sf-composition-scope`.
 - `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Запрашивает одну операцию над строкой или групповую операцию, которую выполняет хост. Источник события — экземпляр таблицы-владельца; отправка события не означает успех операции.

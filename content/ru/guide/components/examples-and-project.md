@@ -94,7 +94,7 @@ description: "Пример на странице компонента показ
 - Утилиты, которые раскладывают части компонента и ставятся поверх него, —
   [Раскладка](/ru/guide/utilities/layout/) и [Утилиты и компоненты: где проходит граница](/ru/guide/utilities/utilities-and-components/#утилиты-и-компоненты-где-проходит-граница).
 - Loader и поставка — [Как работает Loader](/ru/guide/connection/loader/); совместимость и обновление — [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/).
-- Поведение, события и состояние поверх тех же классов — [Smart-компоненты](/ru/guide/smart-components/).
+- Поведение, события и состояние поверх тех же классов — [Смарт-компоненты](/ru/guide/smart-components/).
 - Сборка страниц и блоков из компонентов — [Макеты и композиция](/ru/guide/layouts/) (см. [Построение макета](/ru/guide/layouts/building/)).
 - Проверки, которые держат эти правила (граница контрола, пара высоты,
   геометрия, фокус), — [Принципы качества для всего Framework](/ru/guide/standards/quality-principles/) и [Как Framework проверяет себя](/ru/guide/standards/framework-checks/).

@@ -137,4 +137,4 @@ Framework.
 - [Принципы качества для всего Framework](/ru/guide/standards/quality-principles/) — принципы, которые держат эти проверки.
 - [Как проект проверяет своё использование Framework](/ru/guide/standards/project-checks/) — что проверяет сам проект.
 - [Что такое поставка](/ru/guide/connection/delivery/), [Версии: как закрепить выпуск](/ru/guide/connection/versions/) — выпуск и его закрепление в проекте.
-- [Проверки](/ru/guide/smart-components/quality/#проверки) — проверки Smart-компонентов.
+- [Проверки](/ru/guide/smart-components/quality/) — проверки Smart-компонентов.

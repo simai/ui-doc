@@ -21,7 +21,7 @@ description: "Окно чата целиком на порте хоста: сп�
 
 Компонент поставляется пакетом `larena` из репозитория `simai/ui-pro`, а не
 выпуском SIMAI Framework. Как подключить пакет — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
+[Подключение Smart-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ## Пример
 
@@ -142,8 +142,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 | Назначение | Окно чата целиком на порте хоста `simai.chat-port` 1.0.0: разговоры (архив, страницы, поиск, закрепление), открытый разговор с сообщениями, предложениями изменений, оценками и уточнением задачи, поле с файлами, выбор собеседника и «Мои файлы». В сеть окно не ходит: данные даёт хост, он же отвечает на каждое намерение — через порт или действием `settle`. |
 | Контракт | `smart.chat-window`, версия `1.0.3` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
@@ -190,7 +190,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-chat-window-open` — `detail`: `{ request-id: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`) либо запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-load-more` — `detail`: `{ request-id: string, intent: string, kind?: string, payload: object }`. Более ранние сообщения (порт `history.older {conversation_id, before_id}`, kind `history`) или следующая страница списка (`x-conversations-paging`, `conversations.more {archived}`, kind `conversations`). Было `chat-port:older`, `chat-window:more`. Имена 0.3 `chat-port:older`, `chat-window:more {request_id, ...payload}` отправляются после него до 2026-12-01.

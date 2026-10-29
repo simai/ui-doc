@@ -16,7 +16,7 @@ description: "Подготовленное изменение ждёт отве�
 PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу —
 коммерческая лицензия SIMAI; в составе Larena — лицензия Larena. Как
 подключить пакет — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
+[Подключение Smart-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ## Пример
 
@@ -109,9 +109,9 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
 | Контракт | `smart.change-confirm`, версия `1.2.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
-| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода)) |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 
 ### Атрибуты
 
@@ -135,7 +135,7 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-change-confirm-answer` — `detail`: `{ id: string, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
 - `sf-change-confirm-expired` — `detail`: `{ id: string }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.

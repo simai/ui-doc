@@ -12,7 +12,7 @@ description: "Кнопка с именем текущего собеседник
 
 Компонент поставляется пакетом `larena` из репозитория `simai/ui-pro`, а не
 выпуском SIMAI Framework. Как подключить пакет — в разделе
-[Подключение Smart-компонентов](/ru/guide/smart-components/connection/#подключение-к-странице).
+[Подключение Smart-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ## Пример
 
@@ -108,8 +108,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 | Назначение | С кем разговор: собеседники сервера в контекстном меню SIMAI Framework, текущий отмечен, а выбор другого сообщается хосту, чтобы тот начал новый разговор. Один собеседник — это имя, а не выбор. |
 | Контракт | `smart.chat-interlocutor`, версия `1.0.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
-| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | `host-required` |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
@@ -124,7 +124,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).
+Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-chat-interlocutor-select` — `detail`: `{ id: string }`. Выбран другой собеседник (словарь select). Имя 0.3 `sf-chat-interlocutor` отправляется после него до 2026-12-01.
 

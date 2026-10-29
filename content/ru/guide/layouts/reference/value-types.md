@@ -124,7 +124,7 @@ try {
 
 ## Смотрите также
 
-- [Связь компонентов без кода проекта](/ru/guide/smart-components/composite/#связь-компонентов-без-кода-проекта) — маршруты `layout.scope`.
+- [Роли и связи](/ru/guide/smart-components/assemblies/#роли-и-связи) — маршруты `layout.scope`.
 - [Фрагменты интерфейса](/ru/guide/layouts/building/interface-fragments/) — описание фрагмента, его выходы и входы.
 - [Фрагмент интерфейса (`simai.interface-fragment`)](/ru/guide/standards/map/#фрагмент-интерфейса-simai-interface-fragment) — требования стандарта.
 - [Диагностика](/ru/guide/layouts/reference/diagnostics/) — коды ошибок проверки документа.

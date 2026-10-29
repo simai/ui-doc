@@ -44,7 +44,7 @@ Framework применяется без чтения исходного кода
 - `minimal_example` — минимальную рабочую разметку;
 - `owner_commands` — команды, которыми владелец подтверждает изменение.
 
-Подробно — см. [Указания для ИИ](/ru/guide/smart-components/manifest/#указания-для-ии).
+Подробно — см. [Для ИИ](/ru/guide/smart-components/ai/).
 
 Сайт и AI-выдача строятся из одних исходников одной командой
 `composer docs:build`. Проверка `composer docs:ai:check` повторно вычисляет
@@ -205,7 +205,7 @@ Recipe, ИИ находит в индексе знание
   новая версия с записью причины, прежняя уходит в историю.
 - Публичное имя — SIMAI Framework, технический префикс — `sf`.
 
-Правила для Smart-компонентов — см. [Стандарт разработки Smart-компонентов с ИИ](/ru/guide/smart-components/ai-development/).
+Правила для Smart-компонентов — см. [Для ИИ](/ru/guide/smart-components/ai/#правила-работы).
 
 ### Чего ИИ не делает
 
@@ -235,8 +235,8 @@ Recipe, ИИ находит в индексе знание
 
 ### Смотрите также
 
-- [Указания для ИИ](/ru/guide/smart-components/manifest/#указания-для-ии) — раздел `ai_guidance` манифеста.
-- [Стандарт разработки Smart-компонентов с ИИ](/ru/guide/smart-components/ai-development/) — правила ИИ для Smart-компонентов.
+- [Для ИИ](/ru/guide/smart-components/ai/) — раздел `ai_guidance` манифеста.
+- [Для ИИ](/ru/guide/smart-components/ai/#правила-работы) — правила ИИ для Smart-компонентов.
 - [Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект) — обновление проекта по журналу.
 - [Как Framework проверяет себя](/ru/guide/standards/framework-checks/), [Как проект проверяет своё использование Framework](/ru/guide/standards/project-checks/) — проверки Framework и проекта.
 
@@ -247,4 +247,4 @@ Recipe, ИИ находит в индексе знание
 - Лестница размеров, фокус, направления, язык — [Одна лестница размеров](/ru/guide/size-and-type/size-ladder/), [Фокус](/ru/guide/size-and-type/focus/)–[Язык интерфейса](/ru/guide/size-and-type/language/); стандарт
   геометрии — [Геометрия: стандарт и проверка](/ru/guide/size-and-type/geometry/#геометрия-стандарт-и-проверка).
 - Composition Recipe и композиция — [Макеты и композиция](/ru/guide/layouts/).
-- Манифест, проверки и правила ИИ для Smart-компонентов — [Манифест](/ru/guide/smart-components/manifest/), [Проверки](/ru/guide/smart-components/quality/#проверки) и [Стандарт разработки Smart-компонентов с ИИ](/ru/guide/smart-components/ai-development/).
+- Манифест, проверки и правила ИИ для Smart-компонентов — [Папка компонента и манифест](/ru/guide/smart-components/folder/), [Проверки](/ru/guide/smart-components/quality/) и [Для ИИ](/ru/guide/smart-components/ai/#правила-работы).

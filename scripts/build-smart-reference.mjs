@@ -294,7 +294,7 @@ const skeletonText = (skeleton) => (skeleton.shape === 'none'
   ? 'нет: атрибут `data-sf-skeleton` не пишется; '
   : `сервер пишет ${code(`data-sf-skeleton="${skeleton.shape}"`)}; `)
   + (skeleton.while_loading === 'template' ? 'пока ждёт данные, рисует свой скелетон' : 'своего скелетона при загрузке данных нет')
-  + ' ([Заготовка до прихода кода](/ru/guide/smart-components/states-and-loading/#заготовка-до-прихода-кода))';
+  + ' ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода))';
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
@@ -308,8 +308,8 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     `| Назначение | ${cell(ru(manifest.summary) || '—')} |`,
     `| Контракт | ${code(manifest.id)}, версия ${code(manifest.version)} |`,
     `| Поставка | ${delivery} |`,
-    `| [Жизненный цикл](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | ${LIFECYCLE[manifest.lifecycle] ?? code(manifest.lifecycle)} |`,
-    `| [Готовность](/ru/guide/smart-components/connection/#готовность-компонента-к-использованию) | ${READINESS[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')} |`,
+    `| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | ${LIFECYCLE[manifest.lifecycle] ?? code(manifest.lifecycle)} |`,
+    `| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | ${READINESS[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')} |`,
     ...(manifest.presentation?.skeleton ? [`| Заготовка до прихода кода | ${skeletonText(manifest.presentation.skeleton)} |`] : []),
     '',
   );
@@ -418,9 +418,9 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   const events = Object.entries(manifest.events ?? {});
   lines.push(`${h} События`, '');
   if (events.length === 0) {
-    lines.push('Своих событий нет; общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).', '');
+    lines.push('Своих событий нет; общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
   } else {
-    lines.push('Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Жизненный цикл → Этапы](/ru/guide/smart-components/lifecycle/#этапы).', '');
+    lines.push('Все события приходят на сам элемент и всплывают. Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
     for (const [name, event] of events) {
       // Both names carry one detail; when only the alias declares its shape,
       // the name to bind shows it too.
@@ -599,7 +599,7 @@ const releaseLine = 'Раздел собран из манифестов вып�
   }
 }
 
-// The states guide lists every component by the shape it declares.
+// The first-paint guide lists every component by the shape it declares.
 {
   const body = [releaseLine + ' Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.', '',
     '| Форма | Компоненты |', '|:---|:---|'];
@@ -612,7 +612,7 @@ const releaseLine = 'Раздел собран из манифестов вып�
   const undeclared = byTag([...components].filter(([, {manifest}]) => !manifest.presentation?.skeleton)).map(([, {manifest}]) => code(`<${manifest.custom_element}>`));
   if (undeclared.length) body.push('', `Формы не объявляют: ${undeclared.join(', ')}.`);
   body.push('');
-  writeGuideSection('content/ru/guide/smart-components/states-and-loading.md', '#### Формы компонентов', body);
+  writeGuideSection('content/ru/guide/smart-components/first-paint.md', '### Формы компонентов', body);
 }
 
 if (listMissing) {

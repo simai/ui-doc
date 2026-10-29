@@ -202,7 +202,7 @@ SF.Composition.checkFragmentDescriptor({
 - **Пять состояний.** Фрагмент показывает те же состояния, что любой
   Smart-компонент: загрузка, есть данные, пусто, нет доступа, ошибка.
   Загрузка — скелетон в своей области, а не пустой ответ
-  ([Загрузка данных и скелетоны](/ru/guide/smart-components/states-and-loading/#загрузка-данных-и-скелетоны)).
+  ([Скелетон](/ru/guide/smart-components/first-paint/#скелетон)).
 - **Сбой не выходит за фрагмент.** Фрагмент, упавший при загрузке или
   отрисовке, заменяется на своём месте состоянием ошибки с повтором
   ([Граница фрагмента](#граница-фрагмента)).
@@ -231,5 +231,5 @@ SF.Composition.checkFragmentDescriptor({
 - [Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/) — составной компонент как тип макета.
 - [Типы значений маршрутов](/ru/guide/layouts/reference/value-types/) — перечень типов и правила отказа.
 - [Навигация по областям страницы](/ru/guide/layouts/building/region-navigation/) — замена области содержимого без полной загрузки.
-- [Порты хоста и намерения](/ru/guide/smart-components/host-ports/) — порт хоста фрагмента.
+- [Данные с сервера](/ru/guide/smart-components/data/) — порт хоста фрагмента.
 - [Фрагмент интерфейса (`simai.interface-fragment`)](/ru/guide/standards/map/#фрагмент-интерфейса-simai-interface-fragment) — требования стандарта.

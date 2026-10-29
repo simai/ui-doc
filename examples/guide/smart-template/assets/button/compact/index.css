@@ -1,3 +1,0 @@
-/* The template's own class. This file sits outside the cascade layers, so it
-   wins over the Framework's button styles. */
-.project-button-compact-text { padding-inline: 0; }

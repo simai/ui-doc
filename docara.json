@@ -64,7 +64,7 @@
       {"title": "Машиночитаемая документация", "path": "ai.json", "description": "Манифест документации для ИИ-агента: закреплённый выпуск Framework и каталоги страниц с исходниками примеров"},
       {"title": "Быстрый старт", "path": "ru/guide/introduction/quick-start/", "description": "Первая страница на Framework"},
       {"title": "Подключение и обновление", "path": "ru/guide/connection/", "description": "Поставка, подключение к проекту, Loader и обновление"},
-      {"title": "Smart-компоненты", "path": "ru/guide/smart-components/", "description": "Как подключать, настраивать и создавать Smart-компоненты"},
+      {"title": "Смарт-компоненты", "path": "ru/guide/smart-components/", "description": "Стандарт смарт-компонентов: модель, страница, папка и манифест, сборки, данные, проверки"},
       {"title": "Стандарты, качество и ИИ", "path": "ru/guide/standards/", "description": "Стандарты Framework, проверка и разработка с ИИ"},
       {"title": "Словарь", "path": "ru/guide/glossary/", "description": "Термины Framework и где о них читать"}
     ]

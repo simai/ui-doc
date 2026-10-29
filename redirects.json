@@ -1920,7 +1920,7 @@
     },
     {
       "from": "ru/smart-components/catalog",
-      "to": "ru/guide/smart-components/connection"
+      "to": "ru/guide/smart-components/quality"
     },
     {
       "from": "ru/smart-components/complex",
@@ -1932,7 +1932,7 @@
     },
     {
       "from": "ru/smart-components/connection",
-      "to": "ru/guide/smart-components/connection"
+      "to": "ru/guide/smart-components/page"
     },
     {
       "from": "ru/smart-components/content/editor",
@@ -1948,7 +1948,7 @@
     },
     {
       "from": "ru/smart-components/examples",
-      "to": "ru/guide/smart-components/connection"
+      "to": "ru/guide/smart-components/page"
     },
     {
       "from": "ru/smart-components/forms/form",
@@ -1964,7 +1964,7 @@
     },
     {
       "from": "ru/smart-components/lifecycle",
-      "to": "ru/guide/smart-components/lifecycle"
+      "to": "ru/guide/smart-components/model"
     },
     {
       "from": "ru/smart-components/reference",
@@ -2172,7 +2172,7 @@
     },
     {
       "from": "ru/smart-components/templates-and-assets",
-      "to": "ru/guide/smart-components/templates"
+      "to": "ru/guide/smart-components/markup"
     },
     {
       "from": "ru/standards",
@@ -2780,31 +2780,31 @@
     },
     {
       "from": "ru/guide/smart-components/catalog-and-readiness",
-      "to": "ru/guide/smart-components/connection"
+      "to": "ru/guide/smart-components/quality"
     },
     {
       "from": "ru/guide/smart-components/cleanup",
-      "to": "ru/guide/smart-components/lifecycle"
+      "to": "ru/guide/smart-components/assemblies"
     },
     {
       "from": "ru/guide/smart-components/creating",
-      "to": "ru/guide/smart-components/structure"
+      "to": "ru/guide/smart-components/folder"
     },
     {
       "from": "ru/guide/smart-components/examples",
-      "to": "ru/guide/smart-components/connection"
+      "to": "ru/guide/smart-components/page"
     },
     {
       "from": "ru/guide/smart-components/local-components",
-      "to": "ru/guide/smart-components/structure"
+      "to": "ru/guide/smart-components/folder"
     },
     {
       "from": "ru/guide/smart-components/nesting",
-      "to": "ru/guide/smart-components/composite"
+      "to": "ru/guide/smart-components/assemblies"
     },
     {
       "from": "ru/guide/smart-components/templates-and-assets",
-      "to": "ru/guide/smart-components/templates"
+      "to": "ru/guide/smart-components/markup"
     },
     {
       "from": "en/components/introduction",
@@ -3357,6 +3357,150 @@
     {
       "from": "ru/utilities/overscroll/scrollbar-presets",
       "to": "ru/components/tools/scrollbar"
+    },
+    {
+      "from": "ru/guide/smart-components-2",
+      "to": "ru/guide/smart-components"
+    },
+    {
+      "from": "ru/guide/smart-components-2/accessibility",
+      "to": "ru/guide/smart-components/accessibility"
+    },
+    {
+      "from": "ru/guide/smart-components-2/ai",
+      "to": "ru/guide/smart-components/ai"
+    },
+    {
+      "from": "ru/guide/smart-components-2/assemblies",
+      "to": "ru/guide/smart-components/assemblies"
+    },
+    {
+      "from": "ru/guide/smart-components-2/authors",
+      "to": "ru/guide/smart-components/authors"
+    },
+    {
+      "from": "ru/guide/smart-components-2/comparison",
+      "to": "ru/guide/smart-components/comparison"
+    },
+    {
+      "from": "ru/guide/smart-components-2/data",
+      "to": "ru/guide/smart-components/data"
+    },
+    {
+      "from": "ru/guide/smart-components-2/entries",
+      "to": "ru/guide/smart-components/entries"
+    },
+    {
+      "from": "ru/guide/smart-components-2/first-paint",
+      "to": "ru/guide/smart-components/first-paint"
+    },
+    {
+      "from": "ru/guide/smart-components-2/folder",
+      "to": "ru/guide/smart-components/folder"
+    },
+    {
+      "from": "ru/guide/smart-components-2/forms",
+      "to": "ru/guide/smart-components/forms"
+    },
+    {
+      "from": "ru/guide/smart-components-2/language",
+      "to": "ru/guide/smart-components/language"
+    },
+    {
+      "from": "ru/guide/smart-components-2/layers",
+      "to": "ru/guide/smart-components/layers"
+    },
+    {
+      "from": "ru/guide/smart-components-2/look",
+      "to": "ru/guide/smart-components/look"
+    },
+    {
+      "from": "ru/guide/smart-components-2/markup",
+      "to": "ru/guide/smart-components/markup"
+    },
+    {
+      "from": "ru/guide/smart-components-2/model",
+      "to": "ru/guide/smart-components/model"
+    },
+    {
+      "from": "ru/guide/smart-components-2/names",
+      "to": "ru/guide/smart-components/names"
+    },
+    {
+      "from": "ru/guide/smart-components-2/packages",
+      "to": "ru/guide/smart-components/packages"
+    },
+    {
+      "from": "ru/guide/smart-components-2/page",
+      "to": "ru/guide/smart-components/page"
+    },
+    {
+      "from": "ru/guide/smart-components-2/quality",
+      "to": "ru/guide/smart-components/quality"
+    },
+    {
+      "from": "ru/guide/smart-components-2/rules",
+      "to": "ru/guide/smart-components/rules"
+    },
+    {
+      "from": "ru/guide/smart-components-2/runtime",
+      "to": "ru/guide/smart-components/runtime"
+    },
+    {
+      "from": "ru/guide/smart-components-2/slots",
+      "to": "ru/guide/smart-components/slots"
+    },
+    {
+      "from": "ru/guide/smart-components-2/studio",
+      "to": "ru/guide/smart-components/studio"
+    },
+    {
+      "from": "ru/guide/smart-components/ai-development",
+      "to": "ru/guide/smart-components/ai"
+    },
+    {
+      "from": "ru/guide/smart-components/composite",
+      "to": "ru/guide/smart-components/assemblies"
+    },
+    {
+      "from": "ru/guide/smart-components/connection",
+      "to": "ru/guide/smart-components/page"
+    },
+    {
+      "from": "ru/guide/smart-components/events",
+      "to": "ru/guide/smart-components/page"
+    },
+    {
+      "from": "ru/guide/smart-components/host-ports",
+      "to": "ru/guide/smart-components/data"
+    },
+    {
+      "from": "ru/guide/smart-components/introduction",
+      "to": "ru/guide/smart-components"
+    },
+    {
+      "from": "ru/guide/smart-components/lifecycle",
+      "to": "ru/guide/smart-components/model"
+    },
+    {
+      "from": "ru/guide/smart-components/manifest",
+      "to": "ru/guide/smart-components/folder"
+    },
+    {
+      "from": "ru/guide/smart-components/properties",
+      "to": "ru/guide/smart-components/model"
+    },
+    {
+      "from": "ru/guide/smart-components/states-and-loading",
+      "to": "ru/guide/smart-components/data"
+    },
+    {
+      "from": "ru/guide/smart-components/structure",
+      "to": "ru/guide/smart-components/folder"
+    },
+    {
+      "from": "ru/guide/smart-components/templates",
+      "to": "ru/guide/smart-components/markup"
     }
   ]
 }

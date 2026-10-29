@@ -77,7 +77,7 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбо�
   исходники Framework: `src/smart/<папка>/` — по папке на компонент (точка
   входа `index.js`, правило загрузки `rule.js`, манифест
   `smart.manifest.json`, шаблоны и стили — как у компонентов Framework,
-  см. [Из чего состоит](/ru/guide/smart-components/structure/#из-чего-состоит)), `tests/` — тесты пакета. Сборка берёт из папки пакета только
+  см. [Одна папка](/ru/guide/smart-components/folder/#одна-папка)), `tests/` — тесты пакета. Сборка берёт из папки пакета только
   `src/`, `tests/` и `docs/`. Пакет с одним компонентом целиком:
 
   ```text
@@ -94,8 +94,8 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбо�
   ```
 
   Что пишется в каждом файле — ниже на этой странице, в
-  [Устройство компонента](/ru/guide/smart-components/structure/) и в
-  [Манифест](/ru/guide/smart-components/manifest/).
+  [Папка компонента и манифест](/ru/guide/smart-components/folder/) и в
+  [Папка компонента и манифест](/ru/guide/smart-components/folder/).
 - **Импорты и стили.** Компонент импортирует Framework относительными путями,
   как компоненты самого Framework. Базовый класс — экспорт по умолчанию
   модуля `smart-base`, остальное — именованные экспорты:
@@ -285,7 +285,7 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбо�
 
 Что остаётся во Framework: порты хоста и их наборы проверок, рендереры полей
 и части редактора композиции. Компонент продукта работает с данными через
-публичный порт Framework (см. [Порт хоста](/ru/guide/smart-components/host-ports/#порт-хоста) и [Порты и наборы проверок](/ru/guide/standards/ports/)), поэтому приложение реализует и
+публичный порт Framework (см. [Порт](/ru/guide/smart-components/data/#порт) и [Порты и наборы проверок](/ru/guide/standards/ports/)), поэтому приложение реализует и
 проверяет свой хост по открытому контракту.
 
 ### Сборка пакета: `sf-build`

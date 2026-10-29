@@ -246,4 +246,4 @@ Loader знает только правила Framework и объявленны�
 - **Обычный компонент на классах Framework.** Разметка из утилит и классов
   компонентов: Loader подключит всё, что в ней использовано.
 
-Подробно о создании Smart-компонентов и шаблонов — см. [Минимальный компонент](/ru/guide/smart-components/structure/#минимальный-компонент), [Локальные компоненты проекта](/ru/guide/smart-components/structure/#локальные-компоненты-проекта) и [Шаблоны](/ru/guide/smart-components/templates/).
+Подробно о создании Smart-компонентов и шаблонов — см. [Одна папка](/ru/guide/smart-components/folder/#одна-папка), [Где делают компоненты](/ru/guide/smart-components/folder/#где-делают-компоненты) и [Разметка и шаблоны](/ru/guide/smart-components/markup/).
