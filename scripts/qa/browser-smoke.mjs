@@ -137,7 +137,17 @@ function serve(dir) {
       response.writeHead(404, {'content-type': 'text/plain'}).end('not found');
       return;
     }
-    response.writeHead(200, {'content-type': MIME[extname(target).toLowerCase()] || 'application/octet-stream'});
+    // Fonts answer any origin, the way a site must serve them: Docara draws
+    // every example in a sandbox="allow-scripts" frame, whose origin is
+    // "null", and a @font-face fetch is always an anonymous CORS request. A
+    // server without the header fails the icon font inside every example
+    // frame -- net::ERR_FAILED on 5 of 14 pages, 2026-10-29 -- while the page
+    // around it loads the same file. ui.simai.io itself is missing the header
+    // (q-7c48e62f14); until that is set there, this keeps the check on the
+    // failures that are the site's own.
+    const headers = {'content-type': MIME[extname(target).toLowerCase()] || 'application/octet-stream'};
+    if (/^\.(woff2?|ttf|otf|eot)$/u.test(extname(target).toLowerCase())) headers['access-control-allow-origin'] = '*';
+    response.writeHead(200, headers);
     createReadStream(target).pipe(response);
   });
   return new Promise((done) => server.listen(0, '127.0.0.1', () => done(server)));
