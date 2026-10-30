@@ -523,6 +523,11 @@
      "order": 155
     },
     {
+     "slug": "building/workspace",
+     "title": "Рабочая область",
+     "order": 156
+    },
+    {
      "slug": "building/background-effects",
      "title": "Фоновые эффекты",
      "order": 158
