@@ -22,7 +22,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Текстовые поля](/ru/smart-components/forms/inputs/)
 - [Количество](/ru/smart-components/forms/quantity/)
 - [Многострочное поле](/ru/smart-components/forms/textarea/)
-- [Форматированный текст](/ru/smart-components/forms/rich-text/)
 - [Флажок](/ru/smart-components/forms/checkbox/)
 - [Радиокнопки](/ru/smart-components/forms/radio/)
 - [Переключатель](/ru/smart-components/forms/switch/)
