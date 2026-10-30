@@ -1,0 +1,8 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-3 items-cross-start">
+  <sf-lookup label="Ответственный" name="owner" invalid error-message="Выберите ответственного: без него заявку не принять">
+    <script type="application/json" data-sf-settings>{"options":[{"value":"u1","label":"Анна Петрова"},{"value":"u2","label":"Борис Иванов"}]}</script>
+  </sf-lookup>
+  <sf-lookup label="Автор" name="author" readonly appearance="filled" hint="Поле только для чтения">
+    <script type="application/json" data-sf-settings>{"options":[{"value":"u2","label":"Борис Иванов","caption":"Разработка"}],"value":{"value":"u2","label":"Борис Иванов","caption":"Разработка"}}</script>
+  </sf-lookup>
+</div>

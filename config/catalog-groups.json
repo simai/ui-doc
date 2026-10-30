@@ -124,6 +124,7 @@
         "quantity",
         "textarea",
         "rich-text",
+        "lookup",
         "checkbox",
         "radio",
         "switch",

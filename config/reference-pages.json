@@ -558,6 +558,9 @@
     "smart-components/forms/rich-text.md": {
       "kind": "smart"
     },
+    "smart-components/forms/lookup.md": {
+      "kind": "smart"
+    },
     "smart-components/forms/textarea.md": {
       "kind": "smart"
     },
