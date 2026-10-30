@@ -107,4 +107,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Сообщение чата](/ru/smart-components/composite/chat-message/)
 - [Поле чата](/ru/smart-components/composite/chat-composer/)
 - [Выбор собеседника](/ru/smart-components/composite/chat-interlocutor/)
+- [Список писем](/ru/smart-components/composite/mail-letters/)
+- [Библиотека блоков письма](/ru/smart-components/composite/mail-library/)
 

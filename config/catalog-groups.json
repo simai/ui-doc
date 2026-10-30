@@ -219,7 +219,9 @@
         "chat-window",
         "chat-message",
         "chat-composer",
-        "chat-interlocutor"
+        "chat-interlocutor",
+        "mail-letters",
+        "mail-library"
       ]
     }
   }
