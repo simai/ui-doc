@@ -106,8 +106,9 @@ Placeholder исчезает после ввода, поэтому подпис�
 `input` приходит при каждом изменении во время ввода, `change` — когда
 значение зафиксировано. Оба — нативные события внутреннего поля, всплывают
 через `<sf-input>`, `detail` у них нет; значение читайте из
-`event.target.value`. `getInputElement()` возвращает внутренний `<input>` для
-стандартных методов — `focus()`, `checkValidity()`, `setCustomValidity()`.
+`event.target.value`. `focus()` на самом `<sf-input>` переводит фокус во
+внутреннее поле; `getInputElement()` возвращает этот `<input>`, если нужны его
+собственные методы.
 
 ```js
 const email = document.querySelector('sf-input[name="email"]');
@@ -116,7 +117,7 @@ email.addEventListener('change', (event) => {
   email.toggleAttribute('invalid', !valid);
   email.setAttribute('error-message', valid ? '' : 'Проверьте адрес почты');
 });
-email.getInputElement().focus();
+email.focus();
 ```
 
 ## Доступность
