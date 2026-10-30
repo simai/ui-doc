@@ -181,8 +181,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-badge` |
-| Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-icon-container`, `sf-badge-text`, `sf-badge-text-container` |
-| Модификаторы | `sf-badge--anchored`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tonal`, `sf-badge--warning` |
+| Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-icon-container`, `sf-badge-spinner`, `sf-badge-text`, `sf-badge-text-container` |
+| Модификаторы | `sf-badge--anchored`, `sf-badge--compact`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tonal`, `sf-badge--warning` |
 | Размеры | `sf-badge--size-1`, `sf-badge--size-1/2`, `sf-badge--size-1/3` |
 | Устаревшие | `sf-badge--danger` → `sf-badge--error` |
 
@@ -239,12 +239,13 @@ profile: reference
 | `--sf-badge--gap` | `var(--sf-badge-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-badge--line-height` | `var(--sf-text-height-1/3)` | `line-height`, `--sf-badge--min-size`, `--sf-badge-text--line-height` |
 | `--sf-badge--min-size` | `calc(var(--sf-badge--line-height) + 2 * var(--sf-badge--padding-block))` | `min-height`, `min-block-size`, `min-width`, `min-inline-size` |
-| `--sf-badge--padding-block` | `var(--sf-badge-padding-block, var(--sf-ui-1/3--space-y-tightness-low))` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-badge--min-size` |
+| `--sf-badge--padding-block` | `var(--sf-badge-padding-block, var(--sf-ui-1/3--space-y-tightness-low))` | `padding-top`, `padding-bottom`, `padding-block`, `--sf-badge--min-size`, `--sf-badge--padding-inline-start`, `--sf-badge--padding-inline-end` |
 | `--sf-badge--padding-inline-end` | `var(--sf-badge-padding-inline, var(--sf-ui-1/3--text-space-x))` | `padding-inline-end` |
 | `--sf-badge--padding-inline-start` | `var(--sf-badge-padding-inline, var(--sf-ui-1/3--text-space-x))` | `padding-inline-start` |
 | `--sf-badge--ring` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge-ring-color, var(--sf-badge--surface, var(--sf-surface-0)))` | `box-shadow`, `outline` |
 | `--sf-badge--ring-width` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a2)` | `box-shadow`, `outline` |
 | `--sf-badge-anchor--radius` | не задана; задают модификаторы, например `.sf-badge-anchor`: `var(--sf-radius-square)` | `--sf-badge--anchor-radius` |
+| `--sf-badge-spinner--size` | `var(--sf-text-size-1/3)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-badge-text--color` | не задана; задают модификаторы, например `.sf-badge.sf-badge--tonal .sf-badge-text`: `var(--sf-badge-color, var(--sf-badge--color))` | `color` |
 | `--sf-badge-text--font-size` | не задана; задают модификаторы, например `.sf-badge--size-1 .sf-badge-text`: `var(--sf-badge--font-size)` | `font-size` |
 | `--sf-badge-text--line-height` | не задана; задают модификаторы, например `.sf-badge--size-1 .sf-badge-text`: `var(--sf-badge--line-height)` | `line-height` |

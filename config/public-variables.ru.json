@@ -3,6 +3,7 @@
   "schema_version": 1,
   "language": "ru",
   "strings": {
+    "The fixed width of a drilling panel (submenu=\"drill\"), the settings panel's own: it grows neither with a level's longest word nor with a value.": "Постоянная ширина панели с переходами (submenu=\"drill\"), собственная ширина панели настроек: она не растёт ни от самого длинного слова уровня, ни от значения.",
     "Space above and below the content.": "Отступ над и под содержимым.",
     "Space above and below the text.": "Отступ над и под текстом.",
     "Space before and after the content.": "Отступ до и после содержимого по строчной оси.",

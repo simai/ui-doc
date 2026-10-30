@@ -62,7 +62,7 @@ scale.setProgress(completedSteps * 20);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -71,7 +71,7 @@ scale.setProgress(completedSteps * 20);
 | Тег | `<sf-progress-scale>` |
 | Назначение | Сегментированный определённый прогресс с точным доступным значением, явным семантическим тоном и десятью визуальными шагами. |
 | Контракт | `smart.progress-scale`, версия `1.1.2` |
-| Поставка | выпуск Framework `ui-68cbd8d1b560` |
+| Поставка | выпуск Framework `ui-d6292bd6fc34` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -123,8 +123,8 @@ scale.setProgress(completedSteps * 20);
 
 ### Источник
 
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/smart/progress-scale`
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/rule/rule.json#name=cl-progress-scale`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/smart/progress-scale`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/rule/rule.json#name=cl-progress-scale`
 
 ## См. также
 

@@ -1901,6 +1901,14 @@
     "kind": "smart",
     "standard": 2
   },
+  "smart-components/composite/mail-letters.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/mail-library.md": {
+    "kind": "smart",
+    "standard": 2
+  },
   "smart-components/navigation/contents.md": {
     "kind": "smart",
     "standard": 2

@@ -76,11 +76,14 @@ Recipe и вышел изданием 1.0.3. Динамический соста
 
 | Порт | Компонент | Текущая версия | Изданы | Случаев в наборе проверок |
 |:---|:---|:---|:---|:---|
-| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.12.0 | 1.0.0–1.12.0 | 44 |
-| `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.13.0 | 1.0.0–1.13.0 | 42 |
+| `simai.dataview-port` | `smart.data-view-composite` (`sf-data-view`) | 1.13.0 | 1.0.0–1.13.0 | 44 |
+| `simai.property-view-port` | `smart.property-view` (`sf-property-view`) | 1.17.0 | 1.0.0–1.17.0 | 63 |
 | `simai.admin-navigation-port` | `smart.admin-menu` (`sf-admin-menu`) | 1.0.0 | 1.0.0 | 37 |
+| `simai.chat-port` | `smart.chat-window` (`sf-chat-window`) | 1.0.0 | 1.0.0 | 14 |
+| `simai.search-port` | `smart.search` (`sf-search`) | 1.0.0 | 1.0.0 | 26 |
 
-Компоненты этих портов поставляет пакет `larena` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)); порты
+`sf-search` входит в выпуск Framework, компоненты остальных портов поставляет
+пакет `larena` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)); порты
 и наборы проверок входят в поставку Framework.
 
 Машиночитаемые копии на сайте документации:

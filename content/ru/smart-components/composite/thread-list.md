@@ -108,7 +108,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -116,7 +116,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 |:---|:---|
 | Тег | `<sf-thread-list>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.thread-list`, версия `1.3.1` |
+| Контракт | `smart.thread-list`, версия `1.5.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -129,6 +129,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 - `has-more` — `boolean`, по умолчанию `false`. Есть следующая страница: когда показался конец, список её просит.
 - `archived` — `boolean`, по умолчанию `false`. Показывает архив: переход обратно, «Вернуть» вместо «В архив», без нового разговора.
 - `no-create` — `boolean`, по умолчанию `false`. Без кнопки «Новый разговор».
+- `create-commands` — `array` из `object`, по умолчанию `[]`. Команды в шапке вместо «Нового разговора»: `[{id, text, icon?}]`, свойство. Нажатая команда сообщает `create {kind: id}`. Если пусто — одна кнопка «Новый разговор», как обычно.
 - `no-manage` — `boolean`, по умолчанию `false`. Без действий строки: нет меню и F2.
 - `no-archive` — `boolean`, по умолчанию `false`. Без архива: нет перехода в него и нет «В архив» среди действий строки.
 - `group-by` — —, по умолчанию `day`, значения: `day`, `none`. day: «Сегодня», «Вчера», «Раньше» по updated_at в часовом поясе читателя. none: один список.
@@ -159,7 +160,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-thread-list-create` — ничего не передаёт. Нажали «Новый разговор».
+- `sf-thread-list-create` — `detail`: `{ kind?: string }`. Нажали «Новый разговор» или команду создания (`kind` — её `id`).
 - `sf-thread-list-open` — `detail`: `{ id: string }`. Человек просит открыть беседу (словарь open); хост записывает `selected` обратно. Имя версии 1.0 `sf-thread-list-select` отправляется после него до 2026-12-01.
 - `sf-thread-list-rename` — `detail`: `{ id: string, title: string }`. Разговор переименовали на месте; новое название видно сразу. Хост, который не может его сохранить, возвращает прежнее название через upsert.
 - `sf-thread-list-archive` — `detail`: `{ id: string, ids?: array }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).
@@ -183,5 +184,5 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ### Источник
 
-- `simai/ui-pro@0905ea5a358b442b669148c32044235447541230:components/src/smart/thread-list`
-- `simai/ui-pro@0905ea5a358b442b669148c32044235447541230:components/src/smart/thread-list/rule.js#name=cl-thread-list`
+- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/thread-list`
+- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/thread-list/rule.js#name=cl-thread-list`

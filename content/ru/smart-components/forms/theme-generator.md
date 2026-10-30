@@ -149,7 +149,7 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -158,7 +158,7 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 | Тег | `<sf-theme-generator>` |
 | Назначение | Тема из одного цвета: основной цвет, собственные тон и насыщенность генератора, просмотр восьми палитр и возврат к цвету SIMAI Framework; ничего не хранит и меняет страницу только через `apply`. |
 | Контракт | `smart.theme-generator`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-68cbd8d1b560` |
+| Поставка | выпуск Framework `ui-d6292bd6fc34` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -210,8 +210,8 @@ Apache-2.0): нужные модули лежат в исходниках Framew
 
 ### Источник
 
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/smart/theme-generator`
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/rule/rule.json#name=cl-theme-generator`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/smart/theme-generator`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/rule/rule.json#name=cl-theme-generator`
 
 ## См. также
 

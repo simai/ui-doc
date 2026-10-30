@@ -39,11 +39,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '7cb83084a244f83ac5af0577bc6ecdbf80ca6e9e';
-const UI_RUNTIME_REVISION = '68cbd8d1b560baf853aa1263b6f3515d2c76ca04';
-const SOURCE_REVISION = '12511a107c74912bd219607e3b92bb9f5abed030';
+const UI_METADATA_REVISION = 'e467bc9a56f0bc84dbc2e20fa66d8253c0e95c7c';
+const UI_RUNTIME_REVISION = 'd6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2';
+const SOURCE_REVISION = '810850711e27ced91b49f8434c78b335550c8122';
 const BUILDER_REVISION = 'a89508ce28acf00ca5b987059a424bfe1039f187';
-const RELEASE_LOCK = 'contracts/releases/ui-68cbd8d1b560.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-d6292bd6fc34.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -51,7 +51,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-68cbd8d1b560.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261030.313';
+const NPM_VERSION = '5.20261030.1224';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
@@ -62,9 +62,9 @@ const NPM_VERSION = '5.20261030.313';
 const PACKAGES = [
     'larena' => [
         'repository' => 'simai/ui-pro',
-        'revision' => '0905ea5a358b442b669148c32044235447541230',
+        'revision' => '714eff7db69481def4238bf944801c35adda9eec',
         'path' => 'components',
-        'archive_sha256' => '5b87295ca22856b6b416a056ce0660a34266097c3875efc7202c3115158af7c3',
+        'archive_sha256' => '6af4511accd0b1df5cfb7a07315be78f9e778ad1ff54a034d79bf7c7b7bf3f24',
         'builder' => 'a89508ce28acf00ca5b987059a424bfe1039f187',
     ],
 ];
