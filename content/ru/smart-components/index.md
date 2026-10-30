@@ -109,4 +109,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Выбор собеседника](/ru/smart-components/composite/chat-interlocutor/)
 - [Список писем](/ru/smart-components/composite/mail-letters/)
 - [Библиотека блоков письма](/ru/smart-components/composite/mail-library/)
+- [Структура письма](/ru/smart-components/composite/mail-structure/)
+- [Панель свойств письма](/ru/smart-components/composite/mail-inspector/)
+- [Холст письма](/ru/smart-components/composite/mail-canvas/)
 

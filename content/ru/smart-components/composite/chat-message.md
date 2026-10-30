@@ -104,6 +104,31 @@ log.renderMessage = (message, {view}) => {
 Оценка «Полезно» и «Не полезно» спрашивает «Что не так с ответом?» —
 причину и комментарий — и уходит событиями `rate`, `cancel` и `drafted`.
 
+### Среди людей
+
+Всё включается полями и `display`, которые даёт хост; без них сообщение прежнее.
+
+| Поле или настройка | Что это |
+|:---|:---|
+| `message.reactions` | `[{emoji, count, mine}]`, оба шаблона: пилюли под сообщением, нажатие — событие `react {id, emoji, on}`. Сообщение само счётчик не меняет. |
+| `message.reply_to` | `{id, author: {name}, text, is_deleted?}`, оба шаблона: цитата вверху, нажатие — `open {id, kind: quote, target}`. |
+| `message.speaker` | `{kind: assistant\|agent\|bot, name}`, шаблон `default`: кто говорит. |
+| `message.asked_by` | `{name}`: «по просьбе …», имя как дано (хост даёт падеж: «Анны»). |
+| `display.document` | документ без пузыря на всю колонку, копирование и оценка видны всегда. `display.showAuthor: false` — без знака и имени (один на один). |
+| `display.canReact`, `canReply` | кнопки «Реакция» и «Ответить»; у `person` «Изменить» и «Удалить» тогда уходят в «⋯». Без обоих — прежние две кнопки. |
+| `display.reacting` | эмодзи в пути: пилюля ждёт, второго нажатия нет. |
+| `display.picker` | открыт выбор из шести; закрытие и открытие — `toggle {kind: react, open, quiet?}`. |
+| `display.replyLoaded: false`, `replyDeleted` | оригинала нет в ленте: подсказка, ничего не двигается; он удалён: «Сообщение удалено». |
+| `display.canStop` | «Остановить ответ» в ожидании документа, событие `stop {id}`. |
+| `display.fold_open` | длинный текст раскрыт; `toggle {kind: fold, open}`. |
+
+Длинный текст документа сворачивается, если в нём больше примерно 14 строк (и ещё две
+в запас), считая по высоте строки в колонке; таблица не считается и остаётся на виду,
+предложение стоит вне текста. Аватар человека — `sf-avatar` (`inert`, не точка табуляции
+в ленте; не загрузилась картинка — инициалы); знак не человека — разметка `avatars` со
+`sf-icon`: настройки значка у `sf-avatar` нет. Слово рядом с именем — `sf-badge`. Вид без
+рантайма (виджет, пилот) рисует прежние буквы и значок, у него нет `ctx.avatar`.
+
 ### Внешний вид
 
 Открытые переменные читаются, но не задаются компонентом:
@@ -124,7 +149,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -132,7 +157,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает хост. |
-| Контракт | `smart.chat-message`, версия `1.2.0` |
+| Контракт | `smart.chat-message`, версия `1.4.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -143,8 +168,8 @@ log.renderMessage = (message, {view}) => {
 - `root-class` — `string`, по умолчанию пусто.
 - `root-style` — `string`, по умолчанию пусто.
 - `view` — `string`, по умолчанию `{}`. Псевдоним с датой для `display` до 2026-12-01.
-- `message` — `object`. Сообщение: свойство или JSON-остров; тексты рисуются текстом, `html` очищается.
-- `display` — `object`, по умолчанию `{}`. Что знает хост, а сервер нет (вид версии 0.3): wait, busy, feedback, retried, note, code, sources_open, steps_open, brief, brief_draft; для person own, first, last, showName, editing, askDelete, conflict (1.2.0); divider (1.2.0).
+- `message` — `object`. Сообщение: свойство или JSON-остров; текст выводится как текст, html очищается. Между людьми (1.4.0): reactions, reply_to; для автора-документа — asked_by.
+- `display` — `object`, по умолчанию `{}`. То, что знает хост, но не сервер (вид 0.3): wait, busy, feedback, retried, note, code, sources_open, steps_open, brief, brief_draft; для person — own, first, last, showName, editing, askDelete, conflict (1.2.0); divider (1.2.0); day, editLimit (1.3.0). Между людьми (1.4.0): canReact, canReply, reacting, picker, replyLoaded, replyDeleted; document, showAuthor, canStop, askDelete, fold_open.
 - `features` — `object`, по умолчанию `{"feedback":true,"proposals":true,"memory":true,"brief":false}`. Что предлагает поверхность: оценку, предложения изменений, заметки памяти, уточнение задачи.
 
 ### Методы
@@ -160,12 +185,15 @@ log.renderMessage = (message, {view}) => {
 - `sf-chat-message-rate` — `detail`: `{ id: any, value: string, reason?: string|null, note?: string }`. «Полезно» или «Не полезно» `{id, value: up|down}` (словарь §5 rate); «Отправить» в карточке «Что не так» `{id, value: down, reason, note}`. Кнопки показывают оценку сразу; хост держит её в `display.feedback`. Имена 0.3 `sf-chat-action {action: feedback / feedback-send}` отправляются после него до 2026-12-01.
 - `sf-chat-message-cancel` — `detail`: `{ id: any, kind: string }`. «Не сейчас» или Escape в карточке «Что не так» `{id, kind: rate}` (словарь §5 cancel): простое «не полезно» остаётся. Имя 0.3 `sf-chat-action {action: feedback-skip}` отправляется после него до 2026-12-01.
 - `sf-chat-message-drafted` — `detail`: `{ id: any, reason: string|null, note: string }`. В карточке «Что не так» изменился выбор или комментарий `{id, reason, note}` (факт; черновик хост держит и в `display.feedback.draft`). Имя 0.3 `sf-chat-action {action: feedback-draft}` отправляется после него до 2026-12-01.
-- `sf-chat-message-toggle` — `detail`: `{ id: any, kind: string, open: boolean }`. Местная часть открылась или закрылась (словарь §5 toggle): список источников `{kind: sources}` (хост помнит это как `display.sources_open`), шаги ответа `{kind: steps}` (`display.steps_open`, 1.1.0); у шаблона `person` — редактор `{kind: edit}` и вопрос об удалении `{kind: delete}`, которые хост держит в `display.editing` и `display.askDelete`. Имя 0.3 `sf-chat-action {action: sources}` отправляется после него до 2026-12-01.
-- `sf-chat-message-open` — `detail`: `{ id: any, kind: any, source: object }`. Источник или файл ответа просит свой предпросмотр: `{id, kind: preview, source}`. Хост, который его показывает, отменяет событие; иначе сноска открывает список источников (файл — в новой вкладке).
+- `sf-chat-message-toggle` — `detail`: `{ id: any, kind: string, open: boolean, quiet?: boolean }`. Открылась или закрылась локальная часть (словарь §5 toggle): список источников {kind: sources} (хост запоминает его как display.sources_open), шаги ответа {kind: steps} (display.steps_open, 1.1.0); в шаблоне person — редактор {kind: edit} и вопрос об удалении {kind: delete}, которые хост держит как display.editing и display.askDelete. Прежнее sf-chat-action {action: sources} идёт следом до 2026-12-01. Между людьми (1.4.0): выбор реакции {kind: react} и сворачивание длинного текста {kind: fold}.
+- `sf-chat-message-open` — `detail`: `{ id: any, kind: any, source?: object, target?: any }`. Источник или файл ответа просит предпросмотр: {id, kind: preview, source}. Хост, который его показывает, отменяет событие; иначе сноска открывает список источников (файл — новую вкладку). Нажатие на цитату: {id, kind: quote, target}.
 - `sf-chat-message-copied` — `detail`: `{ id: any, done: boolean }`. Ответ скопирован вместе со списком источников `{id, done}`; строка действий говорит об этом вежливо. Имя 0.3 `sf-chat-action {action: copy}` отправляется после него до 2026-12-01.
 - `sf-chat-message-submit` — `detail`: `{ id: any, text: string }`. Ответ на уточнение задачи уходит сообщением (словарь §5 submit; API.md v1.2): вариант, свои слова человека, несколько ответов через «; » с «—» для пропущенного или «Да» на карточке. Имя 0.3 `sf-chat-action {action: brief-answer}` отправляется после него до 2026-12-01.
 - `sf-chat-message-save` — `detail`: `{ id: any, values: object }`. Шаблон `person`: изменённое сообщение `{id, values: {body}}` (словарь §5 save, порт `message.edit`). Неизменённый или пустой текст даёт вместо этого `toggle {kind: edit, open: false}`.
 - `sf-chat-message-delete` — `detail`: `{ ids: array }`. Шаблон `person`: «Удалить» подтверждено `{ids: [id]}` (словарь §5 delete, порт `message.delete`).
+- `sf-chat-message-react` — `detail`: `{ id: any, emoji: string, on: boolean }`. Плашка реакции или выбор реакции: {id, emoji, on}. Счётчик ведёт хост; display.reacting говорит, что реакция в пути.
+- `sf-chat-message-reply` — `detail`: `{ id: any }`. «Ответить»: {id}. Хост решает, на что отвечает поле.
+- `sf-chat-message-stop` — `detail`: `{ id: any }`. Остановка на ожидании документа, где это разрешает display.canStop: {id}.
 - `sf-chat-action` — устаревший псевдоним события `sf-chat-message-retry`: приходит с тем же `detail`, подписывайтесь на `sf-chat-message-retry`.
 
 ### Доступность
@@ -183,8 +211,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/chat-message`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-message`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

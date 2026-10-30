@@ -1909,6 +1909,18 @@
     "kind": "smart",
     "standard": 2
   },
+  "smart-components/composite/mail-structure.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/mail-inspector.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/mail-canvas.md": {
+    "kind": "smart",
+    "standard": 2
+  },
   "smart-components/navigation/contents.md": {
     "kind": "smart",
     "standard": 2

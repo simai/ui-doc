@@ -99,7 +99,7 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -107,7 +107,7 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 |:---|:---|
 | Тег | `<sf-change-confirm>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.change-confirm`, версия `1.2.1` |
+| Контракт | `smart.change-confirm`, версия `1.2.2` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -115,30 +115,35 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `heading` — `string`, по умолчанию пусто. Что это за изменение; без него карточка называется «Что изменится».
-- `heading-level` — —, по умолчанию `3`, значения: `2`, `3`, `4`, `5`, `6`. Уровень заголовка там, где стоит карточка.
-- `state` — —, по умолчанию `open`, значения: `open`, `pending`, `accepted`, `declined`, `expired`. open: ответы предложены. pending: ответ отправляется (ставится нажатием). accepted, declined, expired: виден только итог.
-- `expires-at` — `string`, по умолчанию пусто. ISO 8601. После этого времени открытая карточка читается как истёкшая и один раз сообщает об этом событием sf-change-confirm-expire.
+- `heading-level` — `string`, по умолчанию `3`, значения: `2`, `3`, `4`, `5`, `6`. Уровень заголовка там, где стоит карточка.
+- `state` — `string`, по умолчанию `open`, значения: `open`, `pending`, `accepted`, `declined`, `expired`. open: ответы предложены. pending: ответ отправляется (ставится нажатием). accepted, declined, expired: виден только итог.
+- `expires-at` — `string`, по умолчанию пусто. ISO 8601. После этого момента открытая карточка считается просроченной и один раз сообщает об этом через sf-change-confirm-expired.
 - `change-id` — `string`, по умолчанию пусто. Имя изменения у хоста; возвращается в каждом событии.
 - `disabled` — `boolean`, по умолчанию `false`. Ответы видны, но их нельзя нажать (где-то уже идёт отправка).
-- `accept-text` — `string`, по умолчанию пусто. Слова ответа «да»; пусто — «Подтвердить» на языке страницы.
-- `decline-text` — `string`, по умолчанию пусто. Слова ответа «нет»; пусто — «Отклонить» на языке страницы.
+- `accept-text` — `string`. Слова ответа «да»; пусто — «Подтвердить» на языке страницы.
+- `decline-text` — `string`. Слова ответа «нет»; пусто — «Отклонить» на языке страницы.
 - `changes` — `array` из `object`, по умолчанию `[]`. Значения в JSON для разметки; свойство, заданное из скрипта, важнее.
 
 ### Методы
 
+- `open()` — возвращает `object`. Задаёт вопрос снова; если его попросила сборка, отвечает `{accepted, reason, value}`, когда человек ответил или время вышло.
 - `answer(accepted: boolean)` — возвращает `object`. Ответить, как ответил бы человек: `accepted` true подтверждает, false отклоняет. Отказ, если карточка закрыта, выключена или ответ отменён. `answer('accept')` и `answer('decline')` читаются до 2026-12-01.
 - `confirm()` — возвращает `object`. Согласие; `data-sf-action="<id>.confirm"`.
 - `cancel()` — возвращает `object`. Отказ; `data-sf-action="<id>.cancel"`.
-- `open()` — возвращает `object`. Задаёт вопрос снова; если его попросила сборка, отвечает `{accepted, reason, value}`, когда человек ответил или время вышло.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-change-confirm-answer` — `detail`: `{ id: string, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
-- `sf-change-confirm-expired` — `detail`: `{ id: string }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
+- `sf-change-confirm-answer` — `detail`: `{ id: any, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
+- `sf-change-confirm-expired` — `detail`: `{ id: any }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
+- `sf-change-confirm-accept` — устаревший псевдоним события `sf-change-confirm-answer`: приходит с тем же `detail`, подписывайтесь на `sf-change-confirm-answer`.
+- `sf-change-confirm-decline` — устаревший псевдоним события `sf-change-confirm-answer`: приходит с тем же `detail`, подписывайтесь на `sf-change-confirm-answer`.
+- `sf-change-confirm-expire` — устаревший псевдоним события `sf-change-confirm-expired`: приходит с тем же `detail`, подписывайтесь на `sf-change-confirm-expired`.
 
 ### Доступность
 
@@ -155,5 +160,5 @@ card.addEventListener('sf-change-confirm-accept', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/change-confirm`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/change-confirm`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`

@@ -108,7 +108,7 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -116,7 +116,7 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 |:---|:---|
 | Тег | `<sf-mail-library>` |
 | Назначение | Блоки, которые может принять письмо в SIMAI Email Editor, по группам назначения, с чипами категорий, поиском по названию и назначению и вариантами шапки и подвала письма. Строка добавляет свой блок или заменяет вариант; элемент вызывает событие и письмо не меняет. |
-| Контракт | `smart.mail-library`, версия `1.0.0` |
+| Контракт | `smart.mail-library`, версия `1.0.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -161,5 +161,5 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/mail-library`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/mail-library/rule.js#name=cl-mail-library`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/mail-library`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/mail-library/rule.js#name=cl-mail-library`

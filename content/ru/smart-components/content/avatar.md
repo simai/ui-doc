@@ -122,7 +122,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -130,8 +130,8 @@ avatar.addEventListener('click', () => openProfile('anna'));
 |:---|:---|
 | Тег | `<sf-avatar>` |
 | Назначение | Показывает человека или организацию фотографией или инициалами с необязательной отметкой доступности или подтверждения. Шаблоны по умолчанию и label отрисовывают нативную кнопку, aria-label которой называет её действие; шаблон card статичен и добавляет заголовок, описание и строку метаданных. |
-| Контракт | `smart.avatar`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-d6292bd6fc34` |
+| Контракт | `smart.avatar`, версия `1.2.0` |
+| Поставка | выпуск Framework `ui-7153f7a9c092` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -148,6 +148,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 - `image-alt` — `string`, по умолчанию пусто.
 - `no-wrap` — `boolean`, по умолчанию `false`.
 - `text` — `string`, по умолчанию пусто.
+- `tone` — `string`, по умолчанию пусто, значения: пусто, `auto`, `rose`, `amber`, `lime`, `green`, `teal`, `sky`, `indigo`, `violet`. Приглушённый цвет, которым рисуются инициалы. Пусто — нейтральный вид. auto — один цвет, выбранный по имени (heading, иначе aria-label, иначе text) по постоянной формуле, одинаковый в любом браузере и на сервере; без имени — нейтральный вид. Цвет берут только инициалы: картинка и заглушка не меняются. --sf-avatar-background-color и --sf-avatar-color по-прежнему важнее.
 - `status` — `string`, по умолчанию `none`, значения: `none`, `online`, `offline`, `company`, `verified`.
 - `heading` — `string`, по умолчанию пусто.
 - `description` — `string`, по умолчанию пусто.
@@ -192,8 +193,8 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 ### Источник
 
-- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/smart/avatar`
-- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/rule/rule.json#name=cl-avatar`
+- `simai/ui@7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr/smart/avatar`
+- `simai/ui@7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr/rule/rule.json#name=cl-avatar`
 
 ## См. также
 

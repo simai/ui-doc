@@ -26,7 +26,7 @@ description: "Начальный вид у каждого смарт-компо�
 
 С выпуска `ui-133dc02b833d` начальный вид поставляется у всех 59
 смарт-компонентов SIMAI Framework, а новые компоненты приходят уже с ним:
-`sf-contents`, `sf-pager` и `sf-search` в выпуске `ui-d6292bd6fc34`.
+`sf-contents`, `sf-pager` и `sf-search` в выпуске `ui-7153f7a9c092`.
 
 ## Снимок при построении
 
@@ -216,7 +216,7 @@ node scripts/snapshot-first-paint.mjs <папка сборки> --check
 
 ### Формы компонентов
 
-Раздел собран из манифестов выпуска `ui-d6292bd6fc34` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+Раздел собран из манифестов выпуска `ui-7153f7a9c092` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
 
 | Форма | Компоненты |
 |:---|:---|
@@ -227,7 +227,7 @@ node scripts/snapshot-first-paint.mjs <папка сборки> --check
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
 | `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-change-confirm>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-search>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-toggle>`, `<sf-tooltip>` |
 
-Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-mail-letters>`, `<sf-mail-library>`.
+Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-mail-canvas>`, `<sf-mail-inspector>`, `<sf-mail-letters>`, `<sf-mail-library>`, `<sf-mail-structure>`.
 
 ## Первый кадр сборки
 

@@ -258,7 +258,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -266,7 +266,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.6.1` |
+| Контракт | `smart.admin-menu`, версия `1.6.2` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -274,41 +274,43 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `brand` — `string`, по умолчанию пусто.
 - `logo` — `string`, по умолчанию пусто.
 - `logo-href` — `string`, по умолчанию `#`.
-- `aria-label` — `string`, по умолчанию `Admin menu`, значения: не короче 1.
 - `searchable` — `boolean`, по умолчанию `false`.
 - `collapsible` — `boolean`, по умолчанию `false`.
 - `settings` — `boolean`, по умолчанию `true`.
-- `settings-title` — `string`, по умолчанию `Menu settings`.
-- `compact` — `boolean`, по умолчанию `false`.
+- `settings-title` — `string`.
 - `persistence-mode` — `string`, по умолчанию `local`, значения: `local`, `external`.
 - `settings-mode` — `string`, по умолчанию `user`, значения: `user`, `system`.
 - `settings-revision` — `integer`, по умолчанию `0`, значения: от 0.
 - `system-settings-revision` — `integer`, по умолчанию `0`, значения: от 0.
 - `allow-system-settings` — `boolean`, по умолчанию `false`.
-- `search-placeholder` — `string`, по умолчанию `Search sections`.
-- `toggle-label` — `string`, по умолчанию `Menu`.
+- `search-placeholder` — `string`.
+- `toggle-label` — `string`.
 - `panel-class` — `string`, по умолчанию пусто.
-- `root-class` — `string`, по умолчанию пусто.
-- `source` — `string`, по умолчанию `items`, значения: `items`, `port`. Откуда берутся записи: items (настройка и дети) или port (`simai.admin-navigation-port`, подключает хост). С port меню остаётся скелетоном навигации, пока хост не ответит.
 - `search-mode` — `string`, по умолчанию `row`, значения: `row`, `panel`. Расположение поиска: строка под шапкой или панель, открываемая значком лупы в шапке.
-- `search-label` — `string`, по умолчанию `Search the admin (Ctrl+K)`. Доступное имя и подсказка лупы, открывающей панель поиска.
+- `search-label` — `string`. Доступное имя и подсказка лупы, открывающей панель поиска.
 - `search-shortcut` — `string`, по умолчанию `mod+k`. Клавиша, которая открывает поиск из любого места страницы; пустое значение отключает её.
-- `search-hint` — `string`, по умолчанию пусто. Короткая строка под пустым запросом, если она есть у хоста.
-- `search-keys-hint` — `string`, по умолчанию `↑↓ select · Enter open · Esc close`. Строка подсказок по клавишам внизу панели поиска.
-- `search-title` — `string`, по умолчанию пусто. Заголовок над полем поиска в панели навигации.
+- `search-hint` — `string`. Короткая строка под пустым запросом, если она есть у хоста.
+- `search-keys-hint` — `string`. Строка подсказок по клавишам внизу панели поиска.
+- `search-title` — `string`. Заголовок над полем поиска в панели навигации.
 - `current` — `string`, по умолчанию пусто. Строка, на которой находится страница, по её ключу; пусто — строка, по адресу которой открыта страница.
+- `source` — `string`, по умолчанию `items`, значения: `items`, `port`. Откуда берутся записи: items (настройка и дети) или port (`simai.admin-navigation-port`, подключает хост). С port меню остаётся скелетоном навигации, пока хост не ответит.
 - `expected-columns` — `integer`, по умолчанию `2`, значения: от 1; до 2. Сколько колонок рисует скелетон навигации на широком экране до ответа хоста: 1, если в строке страницы нет открытого корня (панель управления), 2 — если есть. Сервер это знает; с правильным числом меню до ответа такой же ширины, как после. Это не предел: меню после ответа берёт столько колонок, сколько нужно его строкам.
-- `open` — `boolean`. Записывает страница, которая открывает меню своей кнопкой: на узком экране меню свёрнуто, пока false (`data-open`). Не записано — ничего не меняется.
+- `open` — `boolean`, по умолчанию `false`. Записывает страница, которая открывает меню своей кнопкой: на узком экране меню свёрнуто, пока false (`data-open`). Не записано — ничего не меняется.
+- `compact` — `boolean`, по умолчанию `false`.
+- `aria-label` — `string`, по умолчанию `Admin menu`, значения: не короче 1.
+- `recent-results` — `array`, по умолчанию `[]`.
 
 ### Свойства в документе макета
 
 Узел типа `smart.admin-menu` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `allow-system-settings`, `aria-label`, `brand`, `collapsible`, `compact`, `expected-columns`, `logo`, `logo-href`, `panel-class`, `persistence-mode`, `root-class`, `search-hint`, `search-keys-hint`, `search-label`, `search-mode`, `search-placeholder`, `search-shortcut`, `search-title`, `searchable`, `settings`, `settings-mode`, `settings-revision`, `settings-title`, `source`, `system-settings-revision`, `template`, `toggle-label`.
+- свойства: `template`, `brand`, `logo`, `logo-href`, `searchable`, `collapsible`, `settings`, `settings-title`, `persistence-mode`, `settings-mode`, `settings-revision`, `system-settings-revision`, `allow-system-settings`, `search-placeholder`, `toggle-label`, `panel-class`, `search-mode`, `search-label`, `search-shortcut`, `search-hint`, `search-keys-hint`, `search-title`, `current`, `source`, `expected-columns`, `open`, `compact`, `aria-label`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
@@ -317,40 +319,40 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - `applyExternalSettingsState(state: object, target: any)` — возвращает `null`. Применяет состояние и дерево, вычисленные бэкендом.
 - `applySettingsResult(result: object)` — возвращает `null`. Фиксирует успешный ответ внешнего сохранения.
 - `applySettingsError(error: object)` — возвращает `null`. Сохраняет черновик и показывает состояние ошибки или конфликта.
-- `setCompact(compact: boolean)` — возвращает `boolean`. Включает компактный режим навигации.
 - `toggleMenuSettings()` — возвращает `null`. Входит в редактор настроек или выходит из него.
 - `refresh()` — возвращает `object`. Повторно читает меню навигации у хоста после того, как что-то вне меню изменило его содержимое (звёздочка в заголовке страницы). На меню элементов не влияет.
+- `setSearchResults(requestId: string, groups: array)` — возвращает `boolean`. Хост отвечает на один поисковый запрос своими группами результатов. Ответ на запрос, который пользователь уже сменил, отбрасывается.
+- `toggle(id: any, on: boolean)` — возвращает `object`. Добавить строку в избранное человека или убрать из него (`favourite.toggle`). Меню элементов отказывает.
+- `setCompact(compact: boolean)` — возвращает `boolean`. Включает компактный режим навигации.
 - `setHostPort(host: object)` — возвращает `object`. Подключает хост порта simai.admin-navigation-port; меню рисует оболочку навигации вместо меню из пунктов.
-- `setSearchResults(requestId: string, groups?: array)` — возвращает `boolean`. Хост отвечает на один поисковый запрос своими группами результатов. Ответ на запрос, который пользователь уже сменил, отбрасывается.
 - `setRecentResults(groups?: array)` — возвращает `boolean`. Что хост предлагает пустому полю поиска: недавний список, пока хост не задаст другой. Устарело: настройка `recent-results` (до 2026-12-01).
 - `connectPort(port: object)` — возвращает `object`. Базовое действие SIMAI Framework `connect-port {port}` (стандарт 1.3.8 §4.1, §4.9): передаёт порт навигации, он хранится как `sfPort`; отвечает исходом (refused other-port — для другого порта, port-unsupported — для версии, которую меню не принимает). `setHostPort` — его псевдоним.
-- `toggle(id: string, on: boolean)` — возвращает `object`. Добавить строку в избранное человека или убрать из него (`favourite.toggle`). Меню элементов отказывает.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: string }`. Уведомляет оболочку хоста о режиме ширины.
-- `sf-admin-menu-search` — `detail` не описан. Имя версии 1.0 для `sf-admin-menu-query` `{kind: menu, query, requestId}`; отправляется после него до 2026-12-01.
-- `sf-admin-menu-settings-cancel` — `detail`: `{ target?: any }`. Отбрасывает локальный черновик.
+- `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: any }`. Уведомляет оболочку хоста о режиме ширины.
+- `sf-admin-menu-query` — `detail`: `{ kind: any, query: string, requestId?: string, intent?: string, payload?: object }`. Запрос: kind menu (меню элементов), site или search (словарь 1.1.5).
+- `sf-admin-menu-settings-cancel` — `detail`: `{ target: any, baseRevision: integer }`. Отбрасывает локальный черновик.
 - `sf-admin-menu-settings-mode-change` — `detail`: `{ target: any }`. Запрашивает состояние для другого уровня настроек.
-- `sf-admin-menu-settings-refresh` — `detail`: `{ target: any, base_revision: integer, profile: object }`. Запрашивает актуальное состояние бэкенда после конфликта.
-- `sf-admin-menu-settings-reset` — `detail`: `{ target: any, base_revision: integer }`. Имя версии 1.0 для `sf-admin-menu-reset` `{kind: settings, target, base_revision, baseRevision}`; отправляется после него до 2026-12-01.
-- `sf-admin-menu-settings-save` — `detail`: `{ target: any, base_revision: integer, profile: object }`. Запрашивает сохранение текущих изменений.
+- `sf-admin-menu-settings-refresh` — `detail`: `{ target: any, baseRevision: integer, profile: object }`. Запрашивает актуальное состояние бэкенда после конфликта.
+- `sf-admin-menu-settings-save` — `detail`: `{ target: any, baseRevision: integer, profile: object }`. Запрашивает сохранение текущих изменений.
+- `sf-admin-menu-reset` — `detail`: `{ kind: any, target?: string, baseRevision?: number, id?: any, intent?: string, payload?: object }`. kind settings (меню элементов) или view (словарь 1.1.5).
+- `sf-admin-menu-navigate` — `detail`: `{ id: any, key: string, href: string|null, region?: boolean }`. Хост подтвердил применение item.open: страница теперь принадлежит этой строке. Для хоста, который выполняет переход в собственном маршрутизаторе, а не по адресу из ответа.
+- `sf-admin-menu-refresh` — `detail`: `{ kind: string, intent: string, payload: object, reason?: string|null, site?: any }`. У хоста запрошено `navigation.load` или `notifications.load` (словарь 1.1.5).
+- `sf-admin-menu-open` — `detail`: `{ kind: string, intent: string, payload: object, id: any, href?: string|null, group?: string|null }`. Запрошено `item.open`, `site.switch`, `view.profile` или `search.choose` (словарь 1.1.5).
+- `sf-admin-menu-toggle` — `detail`: `{ kind: string, intent: string, payload: object, id: any, on: boolean }`. Запрошено `favourite.toggle` (словарь 1.1.5).
+- `sf-admin-menu-save` — `detail`: `{ kind: string, intent: string, payload: object, values?: object, id?: any, revision?: number|null }`. Запрошено сохранение предпочтения или `view.save` (словарь 1.1.5).
+- `sf-admin-menu-create` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `view.create` (словарь 1.1.5).
+- `sf-admin-menu-rename` — `detail`: `{ kind: string, intent: string, payload: object, id: any, title: string }`. Запрошено `view.rename` (словарь 1.1.5).
+- `sf-admin-menu-delete` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `view.delete` (словарь 1.1.5).
+- `sf-admin-menu-read` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `notifications.read` (словарь 1.1.5).
+- `sf-admin-menu-sign-out` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `session.sign-out` (словарь 1.1.5).
+- `sf-admin-menu-search` — устаревший псевдоним события `sf-admin-menu-query`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-query`.
+- `sf-admin-menu-settings-reset` — устаревший псевдоним события `sf-admin-menu-reset`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-reset`.
 - `sf-host-port-request` — `detail`: `{ component: object, context: object }`. При подключении спросить у страницы порт хоста. Страница, ответившая портом `simai.admin-navigation-port`, получает оболочку навигации; не ответившая ничем — меню элементов без изменений. Выведено из употребления: страница передаёт порт через `connectPort({port})`; ещё отправляется до 2026-12-01.
-- `sf-admin-menu-navigate` — `detail`: `{ key: string, href: string|null }`. Хост подтвердил применение item.open: страница теперь принадлежит этой строке. Для хоста, который выполняет переход в собственном маршрутизаторе, а не по адресу из ответа.
-- `sf-admin-menu-intent` — `detail`: `{ intent: string, payload: object }`. В 1.0 — о чём человек попросил хост. С 1.2.0 каждое намерение сообщается своим глаголом (`sf-admin-menu-refresh`, `-open`, `-toggle`, `-save`, `-query`, `-create`, `-rename`, `-delete`, `-read`, `-reset`, `-sign-out`: `{kind, ..., intent, payload}`); это имя отправляется после каждого до 2026-12-01.
-- `sf-admin-menu-refresh` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. У хоста запрошено `navigation.load` или `notifications.load` (словарь 1.1.5).
-- `sf-admin-menu-open` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `item.open`, `site.switch`, `view.profile` или `search.choose` (словарь 1.1.5).
-- `sf-admin-menu-toggle` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `favourite.toggle` (словарь 1.1.5).
-- `sf-admin-menu-save` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено сохранение предпочтения или `view.save` (словарь 1.1.5).
-- `sf-admin-menu-query` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрос: kind menu (меню элементов), site или search (словарь 1.1.5).
-- `sf-admin-menu-create` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `view.create` (словарь 1.1.5).
-- `sf-admin-menu-rename` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `view.rename` (словарь 1.1.5).
-- `sf-admin-menu-delete` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `view.delete` (словарь 1.1.5).
-- `sf-admin-menu-read` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `notifications.read` (словарь 1.1.5).
-- `sf-admin-menu-reset` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. kind settings (меню элементов) или view (словарь 1.1.5).
-- `sf-admin-menu-sign-out` — `detail`: `{ kind?: string, intent?: string, payload?: object }`. Запрошено `session.sign-out` (словарь 1.1.5).
+- `sf-admin-menu-intent` — устаревший псевдоним события `sf-admin-menu-refresh`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-refresh`.
 
 ### Доступность
 
@@ -367,8 +369,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/admin-menu`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/admin-menu`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

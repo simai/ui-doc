@@ -165,6 +165,19 @@ unread" и "new". В имени всегда точное число: при `99
 :::example {id="components/avatars/cards" label="Квадратная и портретная карточка"}
 :::
 
+### Цвет инициалов
+
+Только у инициалов: `.sf-avatar--text.sf-avatar--tone-<название>`, где название —
+`rose`, `amber`, `lime`, `green`, `teal`, `sky`, `indigo` или `violet`. Приглушённая
+заливка и чернила, которые читаются на ней в обеих темах, из токенов
+`--sf-tone-<название>-container` и `--sf-on-tone-<название>-container`. Картинка и
+заглушка не меняются, а `--sf-avatar-background-color` и `--sf-avatar-color` по-прежнему
+важнее. Как выбрать цвет по имени на сервере — на странице
+[смарт-аватара](/ru/smart-components/content/avatar/#цвет-инициалов).
+
+:::example {id="components/avatars/tones" label="Восемь цветов инициалов"}
+:::
+
 ## Состояния
 
 ### Фокус
@@ -200,7 +213,7 @@ unread" и "new". В имени всегда точное число: при `99
 |:---|:---|
 | Блок | `sf-avatar` |
 | Части | `sf-avatar-badge`, `sf-avatar-badge--company`, `sf-avatar-badge--size-1`, `sf-avatar-badge--size-1/2`, `sf-avatar-badge--size-1/3`, `sf-avatar-badge--size-1/4`, `sf-avatar-badge--size-2`, `sf-avatar-badge--size-3`, `sf-avatar-card`, `sf-avatar-card--portrait`, `sf-avatar-card--square`, `sf-avatar-card-content`, `sf-avatar-card-image`, `sf-avatar-card-portrait`, `sf-avatar-card-row`, `sf-avatar-card-square`, `sf-avatar-card-title`, `sf-avatar-group`, `sf-avatar-group--size-md`, `sf-avatar-group--size-sm`, `sf-avatar-group--size-xs`, `sf-avatar-group-avatars`, `sf-avatar-image`, `sf-avatar-label-group`, `sf-avatar-label-group--size-1`, `sf-avatar-label-group--size-1/2`, `sf-avatar-label-group--size-1/3`, `sf-avatar-label-group--size-1/4`, `sf-avatar-label-group--size-2`, `sf-avatar-label-group--size-3`, `sf-avatar-label-group--status-icon-company`, `sf-avatar-label-group-container`, `sf-avatar-label-group-text`, `sf-avatar-label-group-title` |
-| Модификаторы | `sf-avatar--line-1`, `sf-avatar--line-1/2`, `sf-avatar--line-2`, `sf-avatar--placeholder`, `sf-avatar--square`, `sf-avatar--text` |
+| Модификаторы | `sf-avatar--line-1`, `sf-avatar--line-1/2`, `sf-avatar--line-2`, `sf-avatar--placeholder`, `sf-avatar--square`, `sf-avatar--text`, `sf-avatar--tone-amber`, `sf-avatar--tone-green`, `sf-avatar--tone-indigo`, `sf-avatar--tone-lime`, `sf-avatar--tone-rose`, `sf-avatar--tone-sky`, `sf-avatar--tone-teal`, `sf-avatar--tone-violet` |
 | Размеры | `sf-avatar--size-1`, `sf-avatar--size-1/2`, `sf-avatar--size-1/3`, `sf-avatar--size-1/4`, `sf-avatar--size-2`, `sf-avatar--size-3` |
 
 **`sf-online-indicator`**
@@ -257,6 +270,7 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
 | `--sf-avatar--border-top-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-top-width` |
 | `--sf-avatar--border-width` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `var(--sf-px)` | `border-width` |
+| `--sf-avatar--color` | не задана; задают модификаторы, например `.sf-avatar--text.sf-avatar--tone-rose`: `var(--sf-avatar-color, var(--sf-on-tone-rose-container))` | `color` |
 | `--sf-avatar--font-size` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-avatar--height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `height` |
 | `--sf-avatar--line-height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-height-1)` | `line-height` |

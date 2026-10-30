@@ -777,7 +777,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -896,8 +896,8 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/data-view`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/data-view`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -905,7 +905,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 |:---|:---|
 | Тег | `<sf-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.data-view`, версия `1.13.0` |
+| Контракт | `smart.data-view`, версия `1.13.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -913,8 +913,9 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`.
-- `aria-label` — `string`, по умолчанию `Data table`, значения: не короче 1. Доступное имя таблицы. Читайте его из контекста props, а не из элемента: `aria-label` отражается платформой, поэтому element.ariaLabel возвращает null без заданного атрибута и перекрывает значение, которое вычисляет компонент.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто.
+- `root-style` — `string`, по умолчанию пусто.
 - `selectable` — `boolean`, по умолчанию `true`.
 - `settings` — `boolean`, по умолчанию `true`.
 - `actions` — `boolean`, по умолчанию `true`.
@@ -923,30 +924,30 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `filter-templates` — `boolean`, по умолчанию `true`. Кнопка, которая сохраняет фильтр как шаблон. Представление данных выключает её, если хост не хранит сохранённые представления.
 - `settings-menu` — `boolean`, по умолчанию `true`. Шестерёнка в заголовке колонки настроек, которая открывает настройки колонок. Без неё колонка по-прежнему несёт меню каждой строки. Представление данных выключает её для хоста на порте 1.10.0, который не объявил personal-column-settings.
 - `pagin` — `boolean`, по умолчанию `false`.
-- `filter-text` — `string`, по умолчанию `Filter`.
-- `clear-text` — `string`, по умолчанию `Clear`.
-- `search-placeholder` — `string`, по умолчанию `Search`.
-- `create-text` — `string`, по умолчанию `Create`.
+- `filter-text` — `string`.
+- `clear-text` — `string`.
+- `search-placeholder` — `string`.
+- `create-text` — `string`.
 - `pagination-total` — `integer`, по умолчанию `10`, значения: от 0.
 - `pagination-page-size` — `integer`, по умолчанию `10`, значения: от 1; до 100.
 - `page-sizes` — `string`, по умолчанию `10,20,30,40`.
 - `context-menu-columns` — `integer`, по умолчанию `1`, значения: от 1; до 4. На сколько столбцов меню настроек делит свои пункты. Один, пока хост не запросит больше: на протяжении всего существования этого входа значение читалось напрямую, поэтому ни объявленное значение по умолчанию, ни значение, переданное хостом, до меню не доходили.
 - `remember-widths` — `boolean`, по умолчанию `false`. Запоминать ширины колонок как персональный вид (SF.Preferences, под ключом preferences-key или table-settings-key) для таблицы, настройки которой хост не хранит; двойной щелчок по краю колонки забывает её ширину.
 - `table-settings-key` — `string`, по умолчанию пусто, значения: не короче 1. Какие сохранённые настройки использует таблица. Пустое значение означает id элемента, а при его отсутствии — id экземпляра, поэтому каждая таблица на странице хранит свои настройки. Реальное значение по умолчанию заставило бы все таблицы использовать один ключ и перезаписывать друг друга.
-- `data-state` — `string`, по умолчанию `auto`, значения: `auto`, `loading`, `populated`, `empty`, `error`.
-- `loading-text` — `string`, по умолчанию `Loading`.
-- `empty-text` — `string`, по умолчанию `No data`.
+- `data-state` — `string`, по умолчанию `auto`, значения: `auto`, `loading`, `ready`, `populated`, `empty`, `error`.
+- `loading-text` — `string`.
+- `empty-text` — `string`.
 - `empty-description` — `string`, по умолчанию пусто.
-- `error-text` — `string`, по умолчанию `The data could not be loaded`.
-- `retry-text` — `string`, по умолчанию `Try again`.
+- `error-text` — `string`.
+- `retry-text` — `string`.
 - `toolbar` — `boolean`, по умолчанию `true`. Показывает встроенную панель инструментов; составной компонент может передать свою панель через слот.
-- `pin-column-label` — `string`, по умолчанию `Pin the column`. Доступное имя и подсказка элемента управления, закрепляющего столбец.
-- `unpin-column-label` — `string`, по умолчанию `Unpin the column`. Доступное имя и подсказка элемента управления, открепляющего столбец.
-- `column-move-label` — `string`, по умолчанию `Move the column`. Доступное имя маркера, перемещающего столбец в списке настроек; к нему добавляется подпись столбца.
-- `column-search-placeholder` — `string`, по умолчанию `Search the fields`. Placeholder и доступное имя поля поиска над списком настроек столбцов.
-- `column-search-empty-text` — `string`, по умолчанию `No field matches`. Выводится вместо списка настроек столбцов, когда поиск не нашёл ни одного поля.
+- `pin-column-label` — `string`. Доступное имя и подсказка элемента управления, закрепляющего столбец.
+- `unpin-column-label` — `string`. Доступное имя и подсказка элемента управления, открепляющего столбец.
+- `column-move-label` — `string`. Доступное имя маркера, перемещающего столбец в списке настроек; к нему добавляется подпись столбца.
+- `column-search-placeholder` — `string`. Placeholder и доступное имя поля поиска над списком настроек столбцов.
+- `column-search-empty-text` — `string`. Выводится вместо списка настроек столбцов, когда поиск не нашёл ни одного поля.
 - `vertical-scroll` — `string`, по умолчанию `self`, значения: `self`, `page`. Прокручивается ли таблица внутри себя или прокручивается страница. Объявлено как строка с двумя значениями.
-- `filter-apply-text` — `string`, по умолчанию `Apply`. Подпись кнопки подтверждения в окне фильтра; пока есть черновик, к ней добавляется число условий, которые изменит нажатие.
+- `filter-apply-text` — `string`. Подпись кнопки подтверждения в окне фильтра; пока есть черновик, к ней добавляется число условий, которые изменит нажатие.
 - `layout` — `string`, по умолчанию `table`, значения: `auto`, `table`, `list`. Как рисуются записи: таблицей, компактным списком или auto — таблицей, пока контейнер таблицы не уже list-below пикселей, и списком, когда уже. sf-data-view выбирает auto для списка на странице.
 - `list-below` — `number`, по умолчанию `600`. Ширина контейнера в пикселях, уже которой режим auto рисует компактный список.
 - `list-fields` — `number`, по умолчанию `3`. Сколько полей запись показывает под заголовком в компактном списке; поля выбираются по приоритету колонок.
@@ -957,12 +958,25 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `row-reorder` — `boolean`, по умолчанию `false`. Строки можно переставить, перетаскивая их внутри списка; отпускание отправляет sf-table-rows-reorder {ids, before, order}. Представление данных ставит атрибут, когда хост предлагает возможность row-reorder.
 - `inline-edit` — `boolean`, по умолчанию `false`. Логическая ячейка, поле которой запись называет в `editable`, становится флажком; нажатие отправляет sf-table-cell-set {id, key, value, revision}, и ячейка ждёт ответа хоста. Представление данных ставит атрибут, когда хост предлагает возможность inline-edit.
 - `current` — `string`, по умолчанию пусто. id строки, открытой на странице: эта строка несёт `aria-current` и `data-current`. Запись значения отмечает строку, но не переводит на неё фокус и не отправляет события (component.json settings.current).
+- `aria-label` — `string`, по умолчанию `Data table`, значения: не короче 1. Доступное имя таблицы. Читайте его из контекста props, а не из элемента: `aria-label` отражается платформой, поэтому element.ariaLabel возвращает null без заданного атрибута и перекрывает значение, которое вычисляет компонент.
+- `active-filter-fields` — `array` из `object`.
+- `bulk-actions` — `array`.
+- `columns` — `array`.
+- `create-items` — `array`.
+- `filter-fields` — `array`.
+- `rows` — `array` из `object`.
+- `table-data` — `object`.
+- `table-settings` — `object`.
+- `templates` — `array`.
+- `toolbar-actions` — `array`.
+- `sort` — `array`.
+- `selection` — `array`, по умолчанию `[]`. идентификаторы отмеченных строк в порядке строк
 
 #### Свойства в документе макета
 
 Узел типа `smart.data-view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `aria-label`, `table-settings-key`, `selectable`, `toolbar`, `settings`, `actions`, `row-actions`, `pagin`, `pagination-total`, `pagination-page-size`, `page-sizes`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `loading-text`, `empty-text`, `empty-description`, `error-text`, `retry-text`, `context-menu-columns`, `data-state`;
+- свойства: `template`, `selectable`, `settings`, `actions`, `row-actions`, `creatable`, `filter-templates`, `settings-menu`, `pagin`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `pagination-total`, `pagination-page-size`, `page-sizes`, `context-menu-columns`, `remember-widths`, `table-settings-key`, `data-state`, `loading-text`, `empty-text`, `empty-description`, `error-text`, `retry-text`, `toolbar`, `pin-column-label`, `unpin-column-label`, `column-move-label`, `column-search-placeholder`, `column-search-empty-text`, `vertical-scroll`, `filter-apply-text`, `layout`, `list-below`, `list-fields`, `size`, `preferences-key`, `row-actions-visible`, `drag-rows`, `row-reorder`, `inline-edit`, `current`, `aria-label`;
 - данные: `columns`, `rows`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
@@ -972,6 +986,13 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `addRows(rows: array)` — возвращает `object`. Добавляет ещё одну страницу с бэкенда в режиме «показать ещё».
 - `applyQueryResult(sequence: integer, rows: array)` — возвращает `boolean`. Применяет строки, отвечающие на последний ожидающий запрос контекста. Для устаревшей, повторной или неизвестной последовательности возвращает `false` и ничего не меняет.
 - `clearSelection()` — возвращает `object`. Сбрасывает явное выделение этого экземпляра; при изменении один раз отправляет порт выделения.
+- `requestActionIntent(actionId: string, recordIds: array)` — возвращает `object`. Отправляет типизированный запрос действия над строкой или пакетного действия; выполнение и авторизация на стороне хоста. При недопустимых аргументах до отправки выбрасывается `TypeError`.
+- `requestCreateIntent(itemId: string|null)` — возвращает `object`. Отправляет `sf-table-create-intent` для основной кнопки (`null`) или объявленного id пункта создания.
+- `requestRetry()` — возвращает `object`. Отправляет намерение повтора после неудачного запроса данных.
+- `setSort(key: string|null, direction: any)` — возвращает `object`. Показывает в заголовках текущую сортировку хоста без отправки события; (null, null) сбрасывает её.
+- `toggleTreeRow(row: object)` — возвращает `object`. Сообщает, что строку дерева открыли или закрыли (sf-table-tree-toggle).
+- `requestTreeMore(row: object)` — возвращает `object`. Запрашивает следующую страницу уровня дерева (sf-table-tree-more).
+- `focusRow(id: any)` — возвращает `object`. Действие focus-row.
 - `getActiveFilterFieldKeys()` — возвращает `array`. Какие поля фильтра отображаются, в порядке полей хоста.
 - `getColumnSettings()` — возвращает `object`. Читает текущее изменение настроек столбцов.
 - `getFilterPayload()` — возвращает `object`. Читает текущий черновик фильтра для проверки запроса на стороне хоста.
@@ -980,10 +1001,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `getSelectedRecordIds()` — возвращает `array` из `string` | `integer`. Читает типизированные идентификаторы записей, выбранных в этом результате таблицы, без разбора DOM.
 - `getSort()` — возвращает `object`. Читает сортировку, отображаемую в заголовках.
 - `getToolbarActions()` — возвращает `array`. Действия панели инструментов в объявленном виде, копия.
-- `requestActionIntent(actionId: string, recordIds: array)` — возвращает `object`. Отправляет типизированный запрос действия над строкой или пакетного действия; выполнение и авторизация на стороне хоста. При недопустимых аргументах до отправки выбрасывается `TypeError`.
 - `requestContextQuery(sequence: integer)` — возвращает `object`. Внутренний метод порта контекста: отправляет `sf-table-query-intent` для текущего контекста с новой ожидающей последовательностью.
-- `requestCreateIntent(itemId: string|null)` — возвращает `object`. Отправляет `sf-table-create-intent` для основной кнопки (`null`) или объявленного id пункта создания.
-- `requestRetry()` — возвращает `object`. Отправляет намерение повтора после неудачного запроса данных.
 - `setActiveFilterFields(keys: array)` — возвращает `object`. Показывает в выбранном шаблоне фильтра ровно эти поля фильтра. Используется при открытии сохранённого представления: settings.filter_fields перечисляет поля, которые в нём были показаны.
 - `setBulkActions(actions: array)` — возвращает `object`. Регистрирует подписанные непрозрачные действия для текущего выделения. При пустом выделении их элементы управления отключены.
 - `setColumns(columns: array)` — возвращает `object`. Заменяет канонические столбцы, полученные от бэкенда.
@@ -991,7 +1009,6 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `setDataState(state: string)` — возвращает `object`. Переключает состояние отображения: автоматическое, загрузка, заполнено, пусто и ошибка.
 - `setFilterFields(fields: array)` — возвращает `object`. Регистрирует поля и элементы управления фильтра из разрешённого бэкендом списка.
 - `setRows(rows: array)` — возвращает `object`. Заменяет текущие строки результата бэкенда.
-- `setSort(key: string|null, direction: any)` — возвращает `object`. Показывает в заголовках текущую сортировку хоста без отправки события; (null, null) сбрасывает её.
 - `setTableData(patch: object)` — возвращает `object`. Обновляет столбцы, строки или связанное состояние таблицы, переданные хостом.
 - `setTableSettings(settings: object)` — возвращает `object`. Применяет изменение настроек столбцов без запроса на сохранение.
 - `setTemplates(templates: array)` — возвращает `object`. Применяет сохранённые шаблоны фильтров и представлений.
@@ -999,42 +1016,47 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 - `sfPortInput(port: any, value: array, meta: object)` — возвращает `null`. Входной порт композиции, используемый `sf-composition-scope`. Принимает только объявленный порт контекста с `record-ids.v1`; при недопустимых портах или значениях до изменения состояния выбрасывается `TypeError`.
 - `isTree()` — возвращает `boolean`. Являются ли строки деревом: у какой-то строки есть __tree, которое представление данных пишет по уровням хоста.
 - `treeColumnKey(columns?: array)` — возвращает `string` | `null`. Колонка, от которой растёт дерево: колонка заголовка или первая колонка данных.
-- `toggleTreeRow(row: object)` — возвращает `object`. Сообщает, что строку дерева открыли или закрыли (sf-table-tree-toggle).
-- `requestTreeMore(row: object)` — возвращает `object`. Запрашивает следующую страницу уровня дерева (sf-table-tree-more).
 
 #### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-port-output` — `detail`: `{ port: any, value: array }`. Выход порта композиции. Таблица отправляет порт `selection` (`record-ids.v1`) один раз при каждом изменении явного выделения, включая сброс; маршрутизирует его общий `sf-composition-scope`.
-- `sf-table-action-intent` — `detail`: `{ action_id: string, record_ids: array }`. Запрашивает одну операцию над строкой или групповую операцию, которую выполняет хост. Источник события — экземпляр таблицы-владельца; отправка события не означает успех операции.
-- `sf-table-column-settings-change` — `detail`: `{ reason: string, tableSettingsKey: string, columnSettings: object }`. Запрашивает сохранение изменений настроек столбцов после изменения ширины, порядка или видимости.
-- `sf-table-column-settings-reset` — `detail`: `{ target: string, tableSettingsKey: string|null }`. Человек попросил вернуть колонки по умолчанию. Таблица убирает свою сохранённую раскладку и значений по умолчанию не называет: личный слой сбрасывает хост (или представление данных) и отвечает своими значениями.
-- `sf-table-create-intent` — `detail`: `{ item: string|null }`. Пользователь нажал кнопку создания (item равен null) или выбрал пункт из её меню (id пункта). Только намерение: хост открывает свою форму создания.
-- `sf-table-filter-change` — `detail`: `{ templateKey: string, templateLabel: string, values: object, tags: object }`. Запрашивает у хоста выборку после изменения активного фильтра: «Применить» в окне фильтра, удалённая метка или очищенный фильтр. Представление данных превращает его в query.change с filters из values.
-- `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Запрашивает у хоста выборку после изменения входного порта контекста. Хост разрешает связь и права доступа и отвечает вызовом applyQueryResult(sequence, rows); более старые номера последовательности игнорируются.
-- `sf-table-retry` — `detail`: `null`. Запрашивает у хоста повторную загрузку после состояния ошибки.
-- `sf-table-search-change` — `detail`: `string`. Запрашивает у хоста выборку после изменения значения поиска (с задержкой debounce).
+- `sf-table-select` — `detail`: `{ ids: array }`. Отмеченные строки изменились, словарь §5 select `{ids}`: один раз на каждое изменение явного выбора, включая очистку. Прежнее имя `sf-port-output` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-apply` — `detail`: `{ action: string, scope: any, ids: array, revisions?: object }`. Действие строки или выбранных, словарь §5 apply: `{action, scope: entry | selection, ids, revisions}`. Решает хост; отправка события — ещё не успех. Прежнее имя `sf-table-action-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-save` — `detail`: `{ kind: any, reason: string, columnSettings: object, tableSettingsKey: string }`. Настройки колонок человека, словарь §5 save `{kind: columns, reason, columnSettings, tableSettingsKey}`. Прежнее имя `sf-table-column-settings-change` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-column-settings-reset` — `detail`: `{ target: any, tableSettingsKey: string|null }`. Человек попросил вернуть колонки по умолчанию. Таблица убирает свою сохранённую раскладку и значений по умолчанию не называет: личный слой сбрасывает хост (или представление данных) и отвечает своими значениями.
+- `sf-table-create` — `detail`: `{ item?: string|null }`. Кнопка создания или один из её видов, словарь §5 create `{item}`. Прежнее имя `sf-table-create-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-filter-change` — `detail`: `{ templateKey: string, templateLabel: string, values: object, tags: object }`. Запросить у хоста новую выборку после смены активного фильтра: «Применить» в окне фильтра, снятая плашка или сброс фильтра. Представление данных превращает это в query.change с filters из values. В detail лежит getFilterPayload() таблицы: сначала собственные поля данных выбранного шаблона, затем эти четыре.
+- `sf-table-query` — `detail`: `{ reason: string, context: object, sequence: integer }`. Контекстный запрос входного порта композиции, словарь §5.1 query `{reason, context, sequence}`. Прежнее имя `sf-table-query-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-refresh` — ничего не передаёт. Кнопка повтора у списка с ошибкой, словарь §5 refresh. Прежнее имя `sf-table-retry` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-search-change` — `detail`: `{ search: string }`. Запрашивает у хоста выборку после изменения значения поиска (с задержкой debounce).
 - `sf-table-sort-change` — `detail`: `{ key: string, direction: any }`. Пользователь активировал сортируемый заголовок. Направление циклически меняется: asc, desc, null (без сортировки). Только намерение: таблица отмечает заголовок, но не переупорядочивает строки; переупорядочивает или перезагружает их хост.
 - `sf-table-template-delete` — `detail`: `{ key: string }`. Пользователь удалил сохранённые шаблоны на вкладке «Шаблоны» и нажал «Применить». Только намерение: хост удаляет сохранённое представление. Одно событие на каждый удалённый шаблон.
 - `sf-table-template-save` — `detail`: `object` | `array`. Запрашивает сохранение одного или нескольких шаблонов фильтра (порядок, закрепление, удаление, флаги по умолчанию и выбора или данные). О загрузке сохранённого представления сообщает событие sf-table-template-select.
 - `sf-table-template-select` — `detail`: `{ key: string }`. Пользователь применил другой сохранённый шаблон на вкладке «Шаблоны». Только намерение: хост загружает это сохранённое представление.
 - `sf-table-toolbar-action` — `detail`: `{ action: string, href?: string|null }`. Пользователь выбрал одно из собственных действий представления в меню панели инструментов. Только намерение, событие можно отменить: компонент переходит по href пункта на том же сайте, если хост не перехватит переход через preventDefault.
-- `sf-table-tree-toggle` — `detail`: `{ id?: string|integer, expanded?: boolean }`. Пользователь открыл или закрыл строку дерева. Отвечает представление данных; таблица сообщает только, какая строка и была ли она открыта.
-- `sf-table-tree-more` — `detail`: `{ parent?: string|integer|null, cursor?: string|null }`. Пользователь запросил следующую страницу уровня дерева.
-- `sf-table-rows-drag` — `detail`: `{ ids: array, source: string|null }`. Строки с drag-rows начали перетаскивать из списка к цели вроде дерева; те же {ids, source} лежат в данных перетаскивания как application/x-sf-records+json.
-- `sf-table-rows-reorder` — `detail`: `{ ids?: array, before?: any, order?: array }`. Строки перетащили в другой порядок внутри списка: перемещённые идентификаторы, строка, перед которой они теперь стоят (null — в конце), и весь показанный порядок.
-- `sf-table-cell-set` — `detail`: `{ id?: any, key?: string, value?: any, revision?: any }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
-- `sf-table-apply` — `detail`: `{ action: string, scope: any, ids: array, revisions?: object }`. Действие строки или выбранных, словарь §5 apply: `{action, scope: entry | selection, ids, revisions}`. Решает хост; отправка события — ещё не успех. Прежнее имя `sf-table-action-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-select` — `detail`: `{ ids: array }`. Отмеченные строки изменились, словарь §5 select `{ids}`: один раз на каждое изменение явного выбора, включая очистку. Прежнее имя `sf-port-output` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-save` — `detail`: `{ kind: any, columnSettings?: object }`. Настройки колонок человека, словарь §5 save `{kind: columns, reason, columnSettings, tableSettingsKey}`. Прежнее имя `sf-table-column-settings-change` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-create` — `detail`: `{ item?: string|null }`. Кнопка создания или один из её видов, словарь §5 create `{item}`. Прежнее имя `sf-table-create-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-query` — `detail`: `{ reason?: string, sequence?: integer }`. Контекстный запрос входного порта композиции, словарь §5.1 query `{reason, context, sequence}`. Прежнее имя `sf-table-query-intent` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-refresh` — ничего не передаёт. Кнопка повтора у списка с ошибкой, словарь §5 refresh. Прежнее имя `sf-table-retry` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-reference-open` — `detail`: `{ field: string, value: object, href: string }`.
 - `sf-table-expand` — `detail`: `{ id: any, expanded?: boolean }`. Строка дерева открылась или закрылась, словарь §5 expand `{id, expanded}`. Прежнее имя `sf-table-tree-toggle` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-load-more` — `detail`: `{ direction?: any }`. Следующая страница уровня дерева, словарь §5 load-more `{direction: after, parent, cursor}`. Прежнее имя `sf-table-tree-more` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
-- `sf-table-move` — `detail`: `{ ids: array }`. Строки переставлены, словарь §5 move `{ids, before, order}`. Прежнее имя `sf-table-rows-reorder` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-load-more` — `detail`: `{ direction: any, parent: any, cursor: string|null }`. Следующая страница уровня дерева, словарь §5 load-more `{direction: after, parent, cursor}`. Прежнее имя `sf-table-tree-more` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-rows-drag` — `detail`: `{ ids: array, source: string|null }`. Строки с drag-rows начали перетаскивать из списка к цели вроде дерева; те же {ids, source} лежат в данных перетаскивания как application/x-sf-records+json.
+- `sf-table-move` — `detail`: `{ ids: array, before: any, order: array }`. Строки переставлены, словарь §5 move `{ids, before, order}`. Прежнее имя `sf-table-rows-reorder` отправляется один раз после него с прежним detail до 2026-12-01 (aliases.json).
+- `sf-table-cell-set` — `detail`: `{ id: object, key: string, value: object, revision: object }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
+- `sf-table-view-change` — `detail`: `{ view: object, everywhere: boolean }`.
 - `sf-table-window` — `detail`: `{ first: integer, last: integer }`. Изменились нарисованные строки длинного списка (стандарт 1.3.8 §18.4): `{first, last}`, номера строк в списке.
+- `sf-port-output` — устаревший псевдоним события `sf-table-select`: приходит с тем же `detail`, подписывайтесь на `sf-table-select`.
+- `sf-table-action-intent` — устаревший псевдоним события `sf-table-apply`: приходит с тем же `detail`, подписывайтесь на `sf-table-apply`.
+- `sf-table-column-settings-change` — устаревший псевдоним события `sf-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-save`.
+- `sf-table-create-intent` — устаревший псевдоним события `sf-table-create`: приходит с тем же `detail`, подписывайтесь на `sf-table-create`.
+- `sf-table-query-intent` — устаревший псевдоним события `sf-table-query`: приходит с тем же `detail`, подписывайтесь на `sf-table-query`.
+- `sf-table-retry` — устаревший псевдоним события `sf-table-refresh`: приходит с тем же `detail`, подписывайтесь на `sf-table-refresh`.
+- `sf-table-tree-toggle` — устаревший псевдоним события `sf-table-expand`: приходит с тем же `detail`, подписывайтесь на `sf-table-expand`.
+- `sf-table-tree-more` — устаревший псевдоним события `sf-table-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-table-load-more`.
+- `sf-table-rows-reorder` — устаревший псевдоним события `sf-table-move`: приходит с тем же `detail`, подписывайтесь на `sf-table-move`.
+- `sf-table:column-settings-change` — устаревший псевдоним события `sf-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-save`.
+- `onColumnSettingsChange` — устаревший псевдоним события `sf-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-save`.
+- `onSearchEnd` — устаревший псевдоним события `sf-table-search-change`: приходит с тем же `detail`, подписывайтесь на `sf-table-search-change`.
+- `onTemplateSave` — устаревший псевдоним события `sf-table-template-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-template-save`.
+- `onFilterUpdate` — устаревший псевдоним события `sf-table-filter-change`: приходит с тем же `detail`, подписывайтесь на `sf-table-filter-change`.
 
 #### Персональный вид
 
@@ -1050,7 +1072,7 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Доступность
 
-- Роль: область (`region`).
+- Роль: сетка.
 - Доступное имя: обязательно.
 - Клавиши: `Tab`, `Shift+Tab`, `Enter`, `Space`, `Escape`, стрелки, `ArrowLeft` и `ArrowRight` меняют ширину колонки в фокусе, если её можно менять.
 - Фокус: У каждого действия только с иконкой и каждой контекстной поверхности есть доступное имя. Оверлеи экземпляра остаются в пределах визуального окна просмотра, закрываются по Escape и возвращают фокус на свой триггер. При изменении ширины столбца фокус остаётся на его нативной кнопке.
@@ -1063,5 +1085,5 @@ table.addEventListener('sf-table-action-intent', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/table`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/table`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/table/rule.js#name=cl-table`

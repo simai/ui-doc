@@ -117,6 +117,53 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 `--sf-chat-window-text-color`, `--sf-chat-window-muted-color` и
 `--sf-chat-window-border-color`.
 
+### Между людьми
+
+С возможностью `people` окно ведёт разговор людей. Эти части версии 1.6.0 включаются
+вместе с `people`, реакции и ответы — ещё и своими возможностями.
+
+**Кто говорит.** Вид сообщения идёт за автором. `author.kind`: `person` (по умолчанию), `assistant`, `agent`, `bot`; поле не из порта 1.0, читается только с `people`, `kind: assistant` без него — это `assistant`. Человек — пузырь и `sf-avatar` (`author.avatar_url` или `author.avatar`, иначе инициалы). Остальные — документ без пузыря на всю колонку, текст на уровне текста людей: нейтральный знак (не лицо), имя, слово «ИИ», «Агент» или «Бот» (цвет не единственное отличие), «по просьбе…» из `asked_by: {name}` (имя рисуется как дано: хост даёт его в нужном падеже, «Анны»). У документа все части ответа: шаги, источники, файлы, ожидание; копирование и оценка видны всегда, оценка видна только оценившему. Длиннее примерно 14 строк текста сворачивается до «Показать полностью»; таблица и предложение не сворачиваются. Найти в разговоре видит свёрнутое только после раскрытия. В личном разговоре (`conversation.type: private`) знака и имени в ленте нет: это сказала шапка. Правки у документа нет; удаление — при `can_delete`.
+
+**Поле свободно.** Ответ ИИ в работе не блокирует поле и не ставит в очередь никого и не забирает фокус, когда закончился. Кнопка остановки — только у самого сообщения, если хост разрешил (`can_stop`) и есть `assistant`: уходит `wait.stop {conversation_id}`, в порте нет слова для одного сообщения. Пока уходит своя отправка, поле ждёт, как раньше, но без кнопки остановки.
+
+**Шапка.** С `people` шапка говорит, кто это: аватар из строки списка (`avatar`), название и строка под ним (`subtitle` строки списка или разговора: «12 участников», «В сети»). Пустой выбор помощника не показывается, если нет `interlocutors`. Без `people` шапка как раньше.
+
+#### Реакции
+
+`message.reactions: [{emoji, count, mine}]`: под сообщением кнопки-пилюли с нажатым
+состоянием и именем («Реакция 👍, 3, ваша»). При наведении или фокусе у сообщения не
+больше трёх кнопок: «Ответить» (с `x-reply`), «Реакция», «⋯» с «Изменить» и «Удалить»,
+если можно; на сенсорном экране они видны всегда и не меньше 44 px. Без `x-reactions`
+и `x-reply` у человека остаются прежние две кнопки. Выбор из шести эмодзи: стрелки
+ходят, Escape закрывает, фокус возвращается на кнопку.
+
+`message.react {conversation_id, message_id, emoji, on}`, событие `react`. Окно ничего
+не показывает заранее: пока хост не ответил, пилюля ждёт (`aria-busy`) и второго нажатия
+не принимает. `applied` с `data: {message}`: сообщение вливается по ревизии, той же
+ревизии тоже (реакция не обязана её менять), более старая проигрывает. Отказ: тихая
+строка над полем, счётчики не меняются. Не на удалённых и не на своих неотправленных.
+
+#### Ответ на сообщение
+
+`message.reply_to: {id, author: {name}, text}` рисуется цитатой вверху пузыря или
+документа: имя и одна строка, слева линия. «Ответить» показывает над полем полосу с
+цитатой и крестиком, фокус в поле; Escape в поле сначала убирает полосу. Нажатие на
+цитату прокручивает к оригиналу, если он в ленте, и ненадолго отмечает его (при
+`prefers-reduced-motion` без плавной прокрутки и анимации); если не загружен, ничего не
+двигается, подсказка говорит «Сообщение не загружено». Цитата удалённого —
+«Сообщение удалено» (`reply_to.is_deleted` или удалённый оригинал в ленте).
+
+**Отправка.** Порт 1.0 запрещает лишние поля в `message.send` (`additionalProperties:
+false`), поэтому ответ уходит своим намерением `message.reply`, тем же событием
+`submit` с `kind: reply` и теми же полями плюс `reply_to_id`:
+`{conversation_id, body, files, client_key, interlocutor, reply_to_id}`. Без цитаты —
+обычный `message.send`. Хосту нужен один случай в адаптере; повтор — `message.retry`
+по тому же `client_key`.
+
+Полоса уходит при отправке (если отправка не прошла, остаётся с текстом) и при смене
+разговора; как и набранный текст, она помнится по разговору на этой странице: вернулись
+— стоит снова.
+
 ## Доступность
 
 - Части сохраняют свою клавиатуру: у списка — переход стрелками, у поля —
@@ -132,7 +179,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -140,7 +187,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
-| Контракт | `smart.chat-window`, версия `1.4.0` |
+| Контракт | `smart.chat-window`, версия `1.6.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -150,7 +197,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
 - `root-class` — `string`, по умолчанию пусто.
 - `root-style` — `string`, по умолчанию пусто.
-- `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (`assistant`, `people`, `files`, `edit`, `delete`, `feedback`, `proposals`, `conversation-create`, `conversation-manage`, `interlocutors`, `read`), и свои возможности окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`, `x-conversation-pin`, `x-early-upload`, `x-my-files`, `x-brief`, `x-conversation-start`, `x-members`). Что не объявлено, то не предлагается, а его намерение получает ответ `unavailable` без события. Свойство принимает и массив.
+- `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (assistant, people, files, edit, delete, feedback, proposals, conversation-create, conversation-manage, interlocutors, read), и расширения окна (x-archive-view, x-conversations-paging, x-conversations-search, x-conversation-pin, x-early-upload, x-my-files, x-brief, x-conversation-start, x-members, x-reactions, x-reply). Что не объявлено, то не предлагается, а его намерение получает ответ unavailable без события. Свойство принимает и массив.
 - `landmark` — `string`, по умолчанию `main`, значения: `main`, `section`. `main`, когда окно и есть страница; `section` внутри страницы со своим `main`.
 - `heading-level` — `integer`, по умолчанию `1`, значения: от 1; до 2. Уровень собственных заголовков окна (разговор, приветствие): `2` внутри чужой страницы.
 - `embedded` — `boolean`, по умолчанию `false`. Встроено в страницу хоста: окно берёт высоту контейнера и рисует свою рамку.
@@ -161,7 +208,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `conversation` — `object`. данные порта `conversation`: открытый разговор `{id, title, interlocutor, can_send, archived, revoked}`, `null`, если ни один не открыт
 - `messages` — `array`, по умолчанию `[]`. данные порта `messages` — сообщения открытого разговора, старые сверху (`kind person|assistant`, `body`, `html`, `files`, `status`, `stage`, `wait`, `sources`, `verification`, `notices`, `proposal`, `feedback`, `summary`, `limit_resets_at`, `brief`, `local`)
 - `history` — `object`, по умолчанию `{"has_older":false}`. данные порта `history {has_older}`
-- `limits` — `object`, по умолчанию `{}`. пределы данных порта `{body_chars, files_per_message, file_bytes, file_types}`; с `x-conversation-start` — свои пределы группы у окна `{title_chars, members_max, search_min, search_max, query_chars?}`, по умолчанию 120, 49, 2, 20, 80
+- `limits` — `object`, по умолчанию `{}`. данные порта limits {body_chars, files_per_message, file_bytes, file_types}; с x-conversation-start собственные group окна {title_chars, members_max, search_min, search_max, query_chars?}, по умолчанию 120, 49, 2, 20, 80. Между людьми (1.5.0) limits.message_chars — так это называет модуль — читается раньше body_chars; поле и редактор берут один предел, 4000, если не задано ни то, ни другое.
 - `interlocutors` — `array`, по умолчанию `[]`. данные порта `interlocutors` `[{id, title, greeting, suggestions, capabilities {attachments, proposals, memory}}]`: первый — обычный
 - `notice` — `object`. данные порта `notice {kind: info|error, text, retry}`: строка над полем, ошибка с «Повторить», когда `retry` — функция
 - `conversation-list` — `object`, по умолчанию `{"archived":false,"has_more":false,"loading":false}`. данные окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`) `{archived, has_more, loading, query}`: какой список показан, есть ли следующая страница, идёт ли загрузка и что искали
@@ -206,7 +253,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 - `sf-chat-window-open` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`), запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`) либо рядом с разговором вот-вот откроется предпросмотр источника (1.2.0: kind `preview`, intent `preview.open`, payload `{source}`; это действие самого окна, хосту ничего не передаётся; отмените событие, чтобы предпросмотр не открылся, — тогда сноска открывает список источников). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Либо запрошены участники группы (1.4.0, `x-members`, `members.list {conversation_id}`, kind `members`; прежнего имени нет). Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-load-more` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Более ранние сообщения (порт `history.older {conversation_id, before_id}`, kind `history`) или следующая страница списка (`x-conversations-paging`, `conversations.more {archived}`, kind `conversations`). Было `chat-port:older`, `chat-window:more`. Имена 0.3 `chat-port:older`, `chat-window:more {request_id, ...payload}` отправляются после него до 2026-12-01.
-- `sf-chat-window-submit` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение отправлено (порт `message.send {conversation_id, body, files, client_key, interlocutor}`): из поля, подсказкой, ответом на уточнение задачи или повторным вопросом. Было `chat-port:send`. Имя 0.3 `chat-port:send {request_id, ...payload}` отправляется после него до 2026-12-01.
+- `sf-chat-window-submit` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение отправлено (порт message.send {conversation_id, body, files, client_key, interlocutor}): из поля, подсказка, ответ на бриф или повторённый вопрос. Было chat-port:send. Прежнее chat-port:send {request_id, ...payload} идёт следом до 2026-12-01. Отправка в ответ на сообщение (x-reply) — это message.reply, kind reply, те же данные плюс reply_to_id.
 - `sf-chat-window-retry` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. То же сообщение заново по его `client_key` (порт `message.retry`, kind `message`) или неудавшийся файл сообщения (порт `file.retry {conversation_id, message_id, file_key}`, kind `file`). Было `chat-port:retry`, `chat-port:file-retry`. Имена 0.3 `chat-port:retry`, `chat-port:file-retry {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-save` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение изменено с учётом ревизии (порт message.edit); 1.3.0: из редактора сообщения человека, после конфликта — снова с текущей ревизией («Заменить своим»). Было chat-port:edit. Имя версии 0.3 chat-port:edit {request_id, ...payload} отправляется следом до 2026-12-01.
 - `sf-chat-window-delete` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение удалено с учётом ревизии (порт message.delete, kind message; 1.3.0: после вопроса на месте сообщения) или удалён сохранённый файл (x-my-files files.remove {file_id}, kind file). Было chat-port:delete, chat-window:file-remove. Имена версии 0.3 chat-port:delete, chat-window:file-remove {request_id, ...payload} отправляются следом до 2026-12-01.
@@ -226,6 +273,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `sf-chat-window-detach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Чип убран из поля (`x-early-upload`, `file.detach {key}`). Было `chat-window:detach`. Имя 0.3 `chat-window:detach {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-settled` — `detail`: `{ requestId: string, intent: string, payload: object, answer: any, reason?: string|null }`. Факт ответа хоста — от порта или от `settle`: `{request-id, intent, payload, answer, reason}`; сообщается после того, как данные ответа применены, и до того, как окно само на него отреагирует (фокус). Было `sf-chat-window-answer`. Имя 0.3 `sf-chat-window-answer {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-toggle` — `detail`: `{ kind: any, open: boolean, form?: any }`. Поиск по разговору, предпросмотр источника, форма нового разговора или участники группы открыты или закрыты: `{kind: find|preview|start|members, open, form?}`. То же говорят состояния хоста `data-find-open`, `data-preview-open`, `data-start-open` и `data-members-open`.
+- `sf-chat-window-react` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Реакция (x-reactions): message.react {conversation_id, message_id, emoji, on}. Ответ applied с data {message} вливается по revision.
 - `chat-port:open` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
 - `chat-port:older` — устаревший псевдоним события `sf-chat-window-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-load-more`.
 - `chat-port:send` — устаревший псевдоним события `sf-chat-window-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-submit`.
@@ -266,8 +314,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/chat-window`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-window`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

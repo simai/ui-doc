@@ -107,7 +107,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -161,5 +161,5 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/mail-letters`
-- `simai/ui-pro@714eff7db69481def4238bf944801c35adda9eec:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/mail-letters`
+- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`

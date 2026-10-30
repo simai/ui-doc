@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-576 переменных, которые объявляет ядро, со значениями по умолчанию.
+608 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -660,6 +660,14 @@ description: "Полный список переменных, которые о�
 | `--sf-on-secondary` | `light-dark(var(--sf-white), var(--sf-secondary-20))` |
 | `--sf-on-success` | `light-dark(var(--sf-white), var(--sf-success-20))` |
 | `--sf-on-tertiary` | `light-dark(var(--sf-white), var(--sf-tertiary-20))` |
+| `--sf-on-tone-amber-container` | `light-dark(var(--sf-tone-amber-30), var(--sf-tone-amber-85))` |
+| `--sf-on-tone-green-container` | `light-dark(var(--sf-tone-green-30), var(--sf-tone-green-85))` |
+| `--sf-on-tone-indigo-container` | `light-dark(var(--sf-tone-indigo-30), var(--sf-tone-indigo-85))` |
+| `--sf-on-tone-lime-container` | `light-dark(var(--sf-tone-lime-30), var(--sf-tone-lime-85))` |
+| `--sf-on-tone-rose-container` | `light-dark(var(--sf-tone-rose-30), var(--sf-tone-rose-85))` |
+| `--sf-on-tone-sky-container` | `light-dark(var(--sf-tone-sky-30), var(--sf-tone-sky-85))` |
+| `--sf-on-tone-teal-container` | `light-dark(var(--sf-tone-teal-30), var(--sf-tone-teal-85))` |
+| `--sf-on-tone-violet-container` | `light-dark(var(--sf-tone-violet-30), var(--sf-tone-violet-85))` |
 | `--sf-on-warning` | `light-dark(var(--sf-white), var(--sf-warning-20))` |
 | `--sf-paper` | `var(--sf-white)` |
 | `--sf-paper-hover` | `var(--sf-primary-50--alfa-4)` |
@@ -675,6 +683,30 @@ description: "Полный список переменных, которые о�
 | `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
 | `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` |
+| `--sf-tone-amber-30` | `#693c00` |
+| `--sf-tone-amber-85` | `#ffcb98` |
+| `--sf-tone-amber-container` | `light-dark(var(--sf-tone-amber-50--alfa-20), var(--sf-tone-amber-50--alfa-32))` |
+| `--sf-tone-green-30` | `#00531f` |
+| `--sf-tone-green-85` | `#95e79d` |
+| `--sf-tone-green-container` | `light-dark(var(--sf-tone-green-50--alfa-20), var(--sf-tone-green-50--alfa-32))` |
+| `--sf-tone-indigo-30` | `#3b3d8f` |
+| `--sf-tone-indigo-85` | `#d1d0ff` |
+| `--sf-tone-indigo-container` | `light-dark(var(--sf-tone-indigo-50--alfa-20), var(--sf-tone-indigo-50--alfa-32))` |
+| `--sf-tone-lime-30` | `#4a4900` |
+| `--sf-tone-lime-85` | `#dcda62` |
+| `--sf-tone-lime-container` | `light-dark(var(--sf-tone-lime-50--alfa-20), var(--sf-tone-lime-50--alfa-32))` |
+| `--sf-tone-rose-30` | `#7c2942` |
+| `--sf-tone-rose-85` | `#ffc6d1` |
+| `--sf-tone-rose-container` | `light-dark(var(--sf-tone-rose-50--alfa-20), var(--sf-tone-rose-50--alfa-32))` |
+| `--sf-tone-sky-30` | `#004b72` |
+| `--sf-tone-sky-85` | `#afd9ff` |
+| `--sf-tone-sky-container` | `light-dark(var(--sf-tone-sky-50--alfa-20), var(--sf-tone-sky-50--alfa-32))` |
+| `--sf-tone-teal-30` | `#00504b` |
+| `--sf-tone-teal-85` | `#61e9de` |
+| `--sf-tone-teal-container` | `light-dark(var(--sf-tone-teal-50--alfa-20), var(--sf-tone-teal-50--alfa-32))` |
+| `--sf-tone-violet-30` | `#682e76` |
+| `--sf-tone-violet-85` | `#f9c2ff` |
+| `--sf-tone-violet-container` | `light-dark(var(--sf-tone-violet-50--alfa-20), var(--sf-tone-violet-50--alfa-32))` |
 | `--sf-transparent-for-focus` | `var(--sf-transparent)` |
 | `--sf-workspace--layout` | `narrow` · `split` · `wide` |
 | `--sf-workspace--list-edge` | `0` |

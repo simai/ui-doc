@@ -96,7 +96,7 @@ field.addEventListener('change', () => save(field.value));
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,7 +105,7 @@ field.addEventListener('change', () => save(field.value));
 | Тег | `<sf-rich-text>` |
 | Назначение | Поле формы для текста с оформлением: абзацы, заголовки 2–4, полужирный, курсив, ссылки, маркированные и нумерованные списки и цитаты, с панелью кнопок, отменой и повтором. Значение — HTML из этого набора и ничего сверх него: к нему приводятся и заданное значение, и каждая вставка или перетаскивание, и каждая правка. |
 | Контракт | `smart.rich-text`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-d6292bd6fc34` |
+| Поставка | выпуск Framework `ui-7153f7a9c092` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -159,5 +159,5 @@ field.addEventListener('change', () => save(field.value));
 
 ### Источник
 
-- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/smart/rich-text`
-- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/rule/rule.json#name=cl-rich-text`
+- `simai/ui@7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr/smart/rich-text`
+- `simai/ui@7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr/rule/rule.json#name=cl-rich-text`
