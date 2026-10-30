@@ -123,6 +123,7 @@
         "inputs",
         "quantity",
         "textarea",
+        "rich-text",
         "checkbox",
         "radio",
         "switch",
