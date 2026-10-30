@@ -106,7 +106,7 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -114,8 +114,8 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 |:---|:---|
 | Тег | `<sf-lookup>` |
 | Назначение | Поле формы для выбора людей или объектов из поиска, на который отвечает сайт: человек набирает, видит строки с картинкой, именем и подписью и выбирает одно или несколько. Выбранное — плашки, которые можно убрать; список говорит, когда ждёт больше букв, ищет, ничего не нашёл, недоступен или не смог найти, и предлагает повторить. |
-| Контракт | `smart.lookup`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-68cbd8d1b560` |
+| Контракт | `smart.lookup`, версия `1.1.0` |
+| Поставка | выпуск Framework `ui-d6292bd6fc34` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -145,7 +145,7 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 - `aria-label` — `string`, по умолчанию пусто.
 - `options` — `array`, по умолчанию `[]`. Короткий список целиком, [{value, label, caption?, avatar?}]: поиск по нему идёт на месте, provider не спрашивается. Свойство или остров data-sf-settings.
 - `exclude` — `array`, по умолчанию `[]`. Значения, исключённые из каждого ответа и из options (сам человек, текущие участники); фильтрует компонент. Свойство или остров data-sf-settings.
-- `provider` — `object`, по умолчанию `null`. Поиск: async-функция (query, {cursor, limit, signal}), отвечающая {items: [{value, label, caption?, avatar?: {src} | {initials}}], nextCursor?} или {status: 'unavailable'}; брошенная ошибка или отклонённое обещание — состояние ошибки. Предыдущий вызов прерывается через signal, его опоздавший ответ отбрасывается. Только свойство.
+- `provider` — `object`, по умолчанию `null`. Поиск: async-функция (query, {cursor, limit, signal}), отвечающая {items: [{value, label, caption?, avatar?: {src} | {initials}}], nextCursor?, notice?} или {status: 'unavailable'}; notice — своя строка хоста под строками (показаны первые 20, уточните поиск); брошенная ошибка или отклонённое обещание — состояние ошибки. Предыдущий вызов прерывается через signal, его опоздавший ответ отбрасывается. Только свойство.
 - `value` — `object`, по умолчанию `null`. Одно значение: {value, label} или null. Несколько: список {value, label} в порядке выбора, [], когда ничего не выбрано. Выбранный элемент хранит подпись и аватар. Значение из кода (или атрибут value как JSON; одиночное значение ищется в options) событий не отправляет.
 
 ### Методы
@@ -177,5 +177,5 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 
 ### Источник
 
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/smart/lookup`
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/rule/rule.json#name=cl-lookup`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/smart/lookup`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/rule/rule.json#name=cl-lookup`

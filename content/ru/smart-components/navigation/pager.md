@@ -225,7 +225,7 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6292bd6fc34` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -234,7 +234,7 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 | Тег | `<sf-pager>` |
 | Назначение | Переход к соседней странице или шагу по смыслу: предыдущая и следующая страница документации двумя карточками или одной строкой ссылок, «Назад» и «Далее» мастера с дорожкой шагов, точки уроков курса и следующий урок или счётчик записей. Это не листание списка: `sf-pagination` держит 1, 2, 3 …. |
 | Контракт | `smart.pager`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-68cbd8d1b560` |
+| Поставка | выпуск Framework `ui-d6292bd6fc34` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -287,8 +287,8 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/smart/pager`
-- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/rule/rule.json#name=cl-pager`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/smart/pager`
+- `simai/ui@d6292bd6fc34b6bab3cc2c21ee04ee321a7b5ee2:distr/rule/rule.json#name=cl-pager`
 
 ## См. также
 

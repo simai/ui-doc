@@ -4,11 +4,7 @@
   "pages": {
     "data-view": "content/table.md"
   },
-  "skip": {
-    "settings-menu": {
-      "reason": "folded into sf-context-menu value rows; removed in the next pair (owner decision q-8a6a227fdb)"
-    }
-  },
+  "skip": {},
   "suppress": {
     "popover": {
       "sections": [
