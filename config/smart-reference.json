@@ -1,10 +1,14 @@
 {
   "schema": "ui-doc.smart-reference-config",
-  "schema_version": 1,
+  "schema_version": 2,
   "pages": {
     "data-view": "content/table.md"
   },
-  "skip": [],
+  "skip": {
+    "settings-menu": {
+      "reason": "folded into sf-context-menu value rows; removed in the next pair (owner decision q-8a6a227fdb)"
+    }
+  },
   "suppress": {
     "popover": {
       "sections": [

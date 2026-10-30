@@ -1,0 +1,26 @@
+/* The example scrolls in its own box, so the contents follow the box,
+   not the documentation page. The aside is left to stretch to the article's
+   height: that is the room a sticky column sticks in. */
+.contents-demo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 13rem;
+  gap: 1.5rem;
+  block-size: 20rem;
+  overflow: auto;
+  padding: 0 1rem;
+  border: 1px solid var(--sf-outline-variant);
+  border-radius: var(--sf-radius--ui);
+}
+.contents-demo--stack {
+  display: block;
+}
+.contents-demo--rail {
+  grid-template-columns: minmax(0, 1fr) 2.5rem;
+}
+.contents-demo-article h2,
+.contents-demo-article h3 {
+  margin-block: 1rem 0.5rem;
+}
+.contents-demo-article p {
+  margin-block: 0 0.5rem;
+}

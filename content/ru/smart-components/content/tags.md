@@ -110,7 +110,7 @@ tags.addEventListener('close', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -119,7 +119,7 @@ tags.addEventListener('close', (event) => {
 | Тег | `<sf-tag>` |
 | Назначение | Компактные статические, выбираемые и удаляемые метки с одним явным владельцем взаимодействия. |
 | Контракт | `smart.tag`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-4b07c619f88b` |
+| Поставка | выпуск Framework `ui-766822bf90e2` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -188,8 +188,8 @@ tags.addEventListener('close', (event) => {
 
 ### Источник
 
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/smart/tag`
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/rule/rule.json#name=cl-tag`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/smart/tag`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/rule/rule.json#name=cl-tag`
 
 ## См. также
 

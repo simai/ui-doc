@@ -123,7 +123,7 @@ compact.addEventListener('change', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -132,7 +132,7 @@ compact.addEventListener('change', async (event) => {
 | Тег | `<sf-switch>` |
 | Назначение | Переключатель вкл./выкл. для настройки, которая применяется сразу: нативный флажок с role="switch", дорожка и движущийся бегунок, с подписью, описанием и текстом подсказки. |
 | Контракт | `smart.switch`, версия `1.2.0` |
-| Поставка | выпуск Framework `ui-4b07c619f88b` |
+| Поставка | выпуск Framework `ui-766822bf90e2` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -189,5 +189,5 @@ compact.addEventListener('change', async (event) => {
 
 ### Источник
 
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/smart/switch`
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/rule/rule.json#name=cl-switch`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/smart/switch`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/rule/rule.json#name=cl-switch`

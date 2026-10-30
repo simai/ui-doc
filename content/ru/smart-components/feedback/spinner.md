@@ -168,7 +168,7 @@ report.append(spinner);
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -177,7 +177,7 @@ report.append(spinner);
 | Тег | `<sf-spinner>` |
 | Назначение | Индикатор неопределённого ожидания в одном из четырёх видов на лестнице размеров (arc, breathing, comet, dots), который берёт вид страницы из data-sf-spinner, с необязательным вежливым (polite) объявлением статуса и анимацией Framework. |
 | Контракт | `smart.spinner`, версия `1.2.2` |
-| Поставка | выпуск Framework `ui-4b07c619f88b` |
+| Поставка | выпуск Framework `ui-766822bf90e2` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -229,8 +229,8 @@ report.append(spinner);
 
 ### Источник
 
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/smart/spinner`
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/rule/rule.json#name=cl-spinner`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/smart/spinner`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/rule/rule.json#name=cl-spinner`
 
 ## См. также
 
