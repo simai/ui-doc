@@ -152,8 +152,7 @@
         "tree",
         "tree-item",
         "dropdown",
-        "context-menu",
-        "settings-menu"
+        "context-menu"
       ]
     },
     "feedback": {

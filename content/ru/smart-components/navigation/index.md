@@ -1,6 +1,6 @@
 ---
 title: "Навигация"
-description: "Навигация — 12 смарт-компонентов SIMAI Framework."
+description: "Навигация — 11 смарт-компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -17,4 +17,3 @@ profile: reference
 - [Элемент дерева](/ru/smart-components/navigation/tree-item/) — Задаёт один пункт дерева: подпись, ссылку, тип, вложенные пункты и состояние.
 - [Выпадающий список](/ru/smart-components/navigation/dropdown/) — Выбирает одно или несколько значений из списка с поиском, группами и сеткой пунктов.
 - [Контекстное меню](/ru/smart-components/navigation/context-menu/) — Показывает короткий список действий над объектом с клавиатурной моделью меню.
-- [Компактные настройки](/ru/smart-components/navigation/settings-menu/) — Небольшой набор настроек в меню: тема, размер текста, вид таблицы, настройки чата; открывается кнопкой или стоит в панели.

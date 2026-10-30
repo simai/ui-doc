@@ -139,7 +139,10 @@ const pageFor = (folder) => {
 const pages = new Map();
 const unplaced = [];
 for (const [folder, component] of [...components].sort(([a], [b]) => a.localeCompare(b))) {
-  if ((settings.skip ?? []).includes(folder)) continue;
+  // A component the release still ships but the site does not document, each
+  // with its reason (config/smart-reference.json `skip`): without this the
+  // check would demand a page for a component on its way out.
+  if (Object.hasOwn(settings.skip ?? {}, folder)) continue;
   const page = pageFor(folder);
   if (!page || !existsSync(page)) {
     unplaced.push(folder);

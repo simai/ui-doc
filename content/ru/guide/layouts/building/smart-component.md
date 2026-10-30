@@ -54,7 +54,8 @@ description: "Смарт-компоненты попадают в макет к�
 Настройки, которые узел `smart.button` принимает в документе: `template`,
 `size`, `appearance`, `scheme`, `status`, `text-position`, `text`, `segment`,
 `icon`, `icon-start`, `icon-end`, `icon-position`, `spacing`, `radius`,
-`loading`, `disabled`, `native-type`, `expanded`, `aria-label`. Значения
+`loading`, `disabled`, `native-type`, `shortcut`, `shortcut-listen`,
+`expanded`, `aria-label`. Значения
 у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки задаёт
 `appearance`; прежнего имени `type` в этом списке нет, и в документе макета
 его не пишут.

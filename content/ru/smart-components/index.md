@@ -50,7 +50,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Элемент дерева](/ru/smart-components/navigation/tree-item/)
 - [Выпадающий список](/ru/smart-components/navigation/dropdown/)
 - [Контекстное меню](/ru/smart-components/navigation/context-menu/)
-- [Компактные настройки](/ru/smart-components/navigation/settings-menu/)
 
 ## Уведомления и состояния
 

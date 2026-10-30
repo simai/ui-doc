@@ -235,7 +235,7 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -243,8 +243,8 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 |:---|:---|
 | Тег | `<sf-button>` |
 | Назначение | Нативная кнопка с оформлением Framework: размер, вид, цветовая роль или статус, необязательные иконки в начале и в конце, отступы и скругление. loading устанавливает aria-busy и отключает кнопку от повторной активации. |
-| Контракт | `smart.button`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-4b07c619f88b` |
+| Контракт | `smart.button`, версия `1.2.0` |
+| Поставка | выпуск Framework `ui-766822bf90e2` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -256,7 +256,7 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 - `root-style` — `string`, по умолчанию пусто.
 - `size` — `string`, по умолчанию `1`, значения: `1/3`, `1/2`, `1`, `2`, `3`. Токен размера кнопки.
 - `appearance` — `string`, по умолчанию `default`, значения: `default`, `tonal`, `outline`, `link`, `surface`. Вид кнопки. `surface` использует нейтральную шкалу прозрачности: лёгкая заливка и рамка. `ghost` — прежнее имя вида `link`, работает до 2026-12-01.
-- `scheme` — `string`, по умолчанию `primary`, значения: `primary`, `secondary`, `on-surface`. Цветовое семейство элемента управления. Назначение элемента задаёт ось статуса; заданный там статус имеет приоритет.
+- `scheme` — `string`, по умолчанию `primary`, значения: `primary`, `secondary`, `on-surface`, `on-surface-variant`. Цветовое семейство элемента управления. `on-surface-variant` — семейство `on-surface` на ступень тише: заливка и край `on-surface`, подпись и иконки — `--sf-on-surface-variant` (кнопка поиска, похожая на поле). Назначение элемента задаёт ось статуса; заданный там статус имеет приоритет.
 - `status` — `string`, по умолчанию пусто, значения: пусто, `error`. Назначение элемента управления в общем словаре статусов. Элемент управления окрашивает только `error` — деструктивный статус: элемент, который удаляет, отбрасывает или выполняет необратимое действие.
 - `text-position` — `string`, по умолчанию `center`.
 - `text` — `string`, по умолчанию пусто. Видимый текст кнопки, если слот text не передан.
@@ -270,6 +270,8 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 - `loading` — `boolean`, по умолчанию `false`. Состояние загрузки: spinner размером с иконку на месте начальной иконки (если её нет — конечной); без иконки он лежит поверх подписи, которая остаётся на месте, поэтому ширина не меняется. Spinner берёт вид страницы (data-sf-spinner). Ставит aria-busy и отключает нативную кнопку.
 - `disabled` — `boolean`, по умолчанию `false`. Флаг отключённого состояния.
 - `native-type` — `string`, по умолчанию `button`, значения: `button`, `submit`, `reset`. Нативный атрибут `type` кнопки.
+- `shortcut` — `string`, по умолчанию пусто. Сочетание клавиш в конце кнопки, приглушёнными клавишами: слова через `+`, например `mod+k` (Cmd K на Mac, Ctrl K в других системах), `shift+/`, `/` или `escape`. `mod` — Cmd на устройствах Apple и Ctrl в остальных. Сочетание записывается и в `aria-keyshortcuts` нативной кнопки. Пусто — клавиш нет
+- `shortcut-listen` — `boolean`, по умолчанию `false`. Кнопка слушает своё сочетание на странице и нажимается им, как щелчком. Сочетание без `mod`, `ctrl`, `alt` или `meta` не слышно, пока фокус в редактируемом поле
 - `expanded` — `boolean`, по умолчанию `false`. Открыта ли панель, которую открывает эта кнопка: `aria-expanded` на родной кнопке; нет атрибута — ничего не сообщается
 - `aria-label` — `string`, по умолчанию пусто. Доступная подпись для кнопок только с иконкой или пользовательских кнопок.
 
@@ -292,7 +294,7 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 
 Узел типа `smart.button` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `template`, `size`, `appearance`, `scheme`, `status`, `text-position`, `text`, `segment`, `icon`, `icon-start`, `icon-end`, `icon-position`, `spacing`, `radius`, `loading`, `disabled`, `native-type`, `expanded`, `aria-label`.
+- свойства: `template`, `size`, `appearance`, `scheme`, `status`, `text-position`, `text`, `segment`, `icon`, `icon-start`, `icon-end`, `icon-position`, `spacing`, `radius`, `loading`, `disabled`, `native-type`, `shortcut`, `shortcut-listen`, `expanded`, `aria-label`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
@@ -326,8 +328,8 @@ add.removeHostDataAttribute('data-add');   // снимает и с хоста, �
 
 ### Источник
 
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/smart/button`
-- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/rule/rule.json#name=cl-button`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/smart/button`
+- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/rule/rule.json#name=cl-button`
 
 ## См. также
 

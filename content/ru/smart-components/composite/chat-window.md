@@ -132,7 +132,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -140,7 +140,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
-| Контракт | `smart.chat-window`, версия `1.1.0` |
+| Контракт | `smart.chat-window`, версия `1.2.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -188,6 +188,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `setListFooter(node: object|null)` — возвращает `object`. что страница показывает под списком разговоров, после «Моих файлов» (у Mirai24 — расход); `null` убирает это (действие `set-list-footer`; отвечает исходом)
 - `openFind(query: string)` — возвращает `object`. Открыть поиск по разговору с фокусом в его поле; query сразу запускает поиск (действие open-find; отвечает исходом).
 - `closeFind(focus: boolean)` — возвращает `object`. Закрыть поиск по разговору; фокус возвращается туда, откуда поиск открыли (действие close-find; отвечает исходом).
+- `openPreview(source: object)` — возвращает `object`. Открыть предпросмотр источника рядом с разговором (действие `open-preview`; отвечает итогом).
+- `closePreview(focus: boolean)` — возвращает `object`. Закрыть предпросмотр источника; фокус возвращается туда, откуда его открыли (действие `close-preview`; отвечает итогом).
 - `focus(options?: object)` — возвращает `null`. Фокус базового элемента.
 - `applyData(partial: object)` — возвращает `object`. Задаёт несколько данных порта сразу (и свои данные окна); неизвестные ключи пропускаются. Каждое данное — ещё и свойство со своим именем. Осталось от 0.3; действие `set-data` — его вид в манифесте.
 - `answer(request_id: string, result: object)` — возвращает `boolean`. Ответ хоста на намерение: `{answer, reason, text, data, current}`. Данные применённого ответа применяются как данные. Возвращает `false` для неизвестного `request_id`. Осталось от 0.3 для хоста без порта; действие `settle` — его вид в манифесте.
@@ -198,7 +200,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-chat-window-open` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`) либо запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01.
+- `sf-chat-window-open` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`), запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`) либо рядом с разговором вот-вот откроется предпросмотр источника (1.2.0: kind `preview`, intent `preview.open`, payload `{source}`; это действие самого окна, хосту ничего не передаётся; отмените событие, чтобы предпросмотр не открылся, — тогда сноска открывает список источников). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-load-more` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Более ранние сообщения (порт `history.older {conversation_id, before_id}`, kind `history`) или следующая страница списка (`x-conversations-paging`, `conversations.more {archived}`, kind `conversations`). Было `chat-port:older`, `chat-window:more`. Имена 0.3 `chat-port:older`, `chat-window:more {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-submit` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение отправлено (порт `message.send {conversation_id, body, files, client_key, interlocutor}`): из поля, подсказкой, ответом на уточнение задачи или повторным вопросом. Было `chat-port:send`. Имя 0.3 `chat-port:send {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-retry` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. То же сообщение заново по его `client_key` (порт `message.retry`, kind `message`) или неудавшийся файл сообщения (порт `file.retry {conversation_id, message_id, file_key}`, kind `file`). Было `chat-port:retry`, `chat-port:file-retry`. Имена 0.3 `chat-port:retry`, `chat-port:file-retry {request_id, ...payload}` отправляются после него до 2026-12-01.
@@ -219,7 +221,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `sf-chat-window-attach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Файлы выбраны, перетащены или вставлены, чтобы загрузить их сразу (`x-early-upload`, `file.attach {files, conversation_id, interlocutor}`). Было `chat-window:attach`. Имя 0.3 `chat-window:attach {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-detach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Чип убран из поля (`x-early-upload`, `file.detach {key}`). Было `chat-window:detach`. Имя 0.3 `chat-window:detach {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-settled` — `detail`: `{ requestId: string, intent: string, payload: object, answer: any, reason?: string|null }`. Факт ответа хоста — от порта или от `settle`: `{request-id, intent, payload, answer, reason}`; сообщается после того, как данные ответа применены, и до того, как окно само на него отреагирует (фокус). Было `sf-chat-window-answer`. Имя 0.3 `sf-chat-window-answer {request_id, ...payload}` отправляется после него до 2026-12-01.
-- `sf-chat-window-toggle` — `detail`: `{ kind: any, open: boolean }`. Поиск по разговору открыт или закрыт: {kind: find, open}. То же говорит состояние хоста data-find-open.
+- `sf-chat-window-toggle` — `detail`: `{ kind: any, open: boolean }`. Поиск по разговору или предпросмотр источника открыт или закрыт: `{kind: find|preview, open}`. То же говорят состояния хоста `data-find-open` и `data-preview-open`.
 - `chat-port:open` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
 - `chat-port:older` — устаревший псевдоним события `sf-chat-window-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-load-more`.
 - `chat-port:send` — устаревший псевдоним события `sf-chat-window-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-submit`.
@@ -260,8 +262,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@d1b0a1cf83c98e9225e0cc78afbdea27ad214bfd:components/src/smart/chat-window`
-- `simai/ui-pro@d1b0a1cf83c98e9225e0cc78afbdea27ad214bfd:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@9c0b7286e4410a3b06f8e09902bd4e02ff45712d:components/src/smart/chat-window`
+- `simai/ui-pro@9c0b7286e4410a3b06f8e09902bd4e02ff45712d:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 
