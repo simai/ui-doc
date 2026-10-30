@@ -26,7 +26,7 @@ description: "Начальный вид у каждого смарт-компо�
 
 С выпуска `ui-133dc02b833d` начальный вид поставляется у всех 59
 смарт-компонентов SIMAI Framework, а новые компоненты приходят уже с ним:
-`sf-progress-ring` и `sf-site-header` в выпуске `ui-e2cff39223f1`.
+`sf-progress-ring` и `sf-site-header` в выпуске `ui-4b07c619f88b`.
 
 ## Снимок при построении
 
@@ -216,14 +216,14 @@ node scripts/snapshot-first-paint.mjs <папка сборки> --check
 
 ### Формы компонентов
 
-Раздел собран из манифестов выпуска `ui-e2cff39223f1` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+Раздел собран из манифестов выпуска `ui-4b07c619f88b` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
 
 | Форма | Компоненты |
 |:---|:---|
 | `rows` | `<sf-data-view>` (свой скелетон), `<sf-table>` (свой скелетон), `<sf-thread-list>` (свой скелетон) |
 | `record` | `<sf-property-view>` (свой скелетон) |
 | `menu` | `<sf-admin-menu>`, `<sf-tree>` |
-| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-code-input>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-image-field>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-menu>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-quantity>`, `<sf-range-slider>`, `<sf-site-header>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>`, `<sf-theme-generator>` |
+| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-code-input>`, `<sf-color>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-image-field>`, `<sf-inline-editor>`, `<sf-input>`, `<sf-menu>`, `<sf-page-header>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-quantity>`, `<sf-range-slider>`, `<sf-rich-text>`, `<sf-site-header>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>`, `<sf-theme-generator>` |
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
 | `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-change-confirm>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-toggle>`, `<sf-tooltip>` |
 

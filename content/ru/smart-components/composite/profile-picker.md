@@ -71,7 +71,7 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e2cff39223f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -80,7 +80,7 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 | Тег | `<sf-profile-picker>` |
 | Назначение | Один способ выбрать, создать, переименовать, удалить и сбросить профиль: кнопка, похожая на поле, с названием текущего профиля, и панель, где всё делается на месте. Профили и права принадлежат хосту; компонент сообщает, что попросил человек. |
 | Контракт | `smart.profile-picker`, версия `1.1.7` |
-| Поставка | выпуск Framework `ui-e2cff39223f1` |
+| Поставка | выпуск Framework `ui-4b07c619f88b` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -135,8 +135,8 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ### Источник
 
-- `simai/ui@e2cff39223f1a4b004dafe332f081e5178fad2f3:distr/smart/profile-picker`
-- `simai/ui@e2cff39223f1a4b004dafe332f081e5178fad2f3:distr/rule/rule.json#name=cl-profile-picker`
+- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/smart/profile-picker`
+- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/rule/rule.json#name=cl-profile-picker`
 
 ## См. также
 

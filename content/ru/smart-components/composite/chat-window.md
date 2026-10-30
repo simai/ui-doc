@@ -132,15 +132,15 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e2cff39223f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-chat-window>` |
-| Назначение | Окно чата целиком на порте хоста `simai.chat-port` 1.0.0: разговоры (архив, страницы, поиск, закрепление), открытый разговор с сообщениями, предложениями изменений, оценками и уточнением задачи, поле с файлами, выбор собеседника и «Мои файлы». В сеть окно не ходит: данные даёт хост, он же отвечает на каждое намерение — через порт или действием `settle`. |
-| Контракт | `smart.chat-window`, версия `1.0.4` |
+| Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
+| Контракт | `smart.chat-window`, версия `1.1.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -154,6 +154,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `landmark` — `string`, по умолчанию `main`, значения: `main`, `section`. `main`, когда окно и есть страница; `section` внутри страницы со своим `main`.
 - `heading-level` — `integer`, по умолчанию `1`, значения: от 1; до 2. Уровень собственных заголовков окна (разговор, приветствие): `2` внутри чужой страницы.
 - `embedded` — `boolean`, по умолчанию `false`. Встроено в страницу хоста: окно берёт высоту контейнера и рисует свою рамку.
+- `no-queue` — `boolean`, по умолчанию `false`. Выключает очередь: пока ждётся ответ, поле ничего не отправляет и объясняет почему, как до 1.1.0.
 - `feed-state` — `string`, по умолчанию `ready`, значения: `ready`, `loading`, `revoked`. данные порта `feed_state`: `loading` рисует колонку заново, `revoked` очищает ленту, черновик и всё неотправленное; задаётся свойством (`feedState` или `feed_state` порта)
 - `me` — `object`. данные порта `me {id, name}`: кто читает
 - `conversations` — `array`, по умолчанию `[]`. данные порта `conversations` `[{id, title, type, interlocutor, unread_count, updated_at, archived, pinned}]`, новые сверху; `pinned` — от `x-conversation-pin`
@@ -171,7 +172,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 Узел типа `smart.chat-window` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `template`, `capabilities`, `landmark`, `heading-level`, `embedded`, `feed-state`.
+- свойства: `template`, `capabilities`, `landmark`, `heading-level`, `embedded`, `no-queue`, `feed-state`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
@@ -185,6 +186,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `openFiles()` — возвращает `object`. «Мои файлы» на месте разговора (`x-my-files`); без этой возможности — отказ `capability-not-provided` (действие `open-files`; отвечает исходом)
 - `closeFiles(focus: boolean)` — возвращает `object`. обратно к разговору; `focus` false оставляет фокус на месте (действие `close-files`; отвечает исходом)
 - `setListFooter(node: object|null)` — возвращает `object`. что страница показывает под списком разговоров, после «Моих файлов» (у Mirai24 — расход); `null` убирает это (действие `set-list-footer`; отвечает исходом)
+- `openFind(query: string)` — возвращает `object`. Открыть поиск по разговору с фокусом в его поле; query сразу запускает поиск (действие open-find; отвечает исходом).
+- `closeFind(focus: boolean)` — возвращает `object`. Закрыть поиск по разговору; фокус возвращается туда, откуда поиск открыли (действие close-find; отвечает исходом).
 - `focus(options?: object)` — возвращает `null`. Фокус базового элемента.
 - `applyData(partial: object)` — возвращает `object`. Задаёт несколько данных порта сразу (и свои данные окна); неизвестные ключи пропускаются. Каждое данное — ещё и свойство со своим именем. Осталось от 0.3; действие `set-data` — его вид в манифесте.
 - `answer(request_id: string, result: object)` — возвращает `boolean`. Ответ хоста на намерение: `{answer, reason, text, data, current}`. Данные применённого ответа применяются как данные. Возвращает `false` для неизвестного `request_id`. Осталось от 0.3 для хоста без порта; действие `settle` — его вид в манифесте.
@@ -216,6 +219,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `sf-chat-window-attach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Файлы выбраны, перетащены или вставлены, чтобы загрузить их сразу (`x-early-upload`, `file.attach {files, conversation_id, interlocutor}`). Было `chat-window:attach`. Имя 0.3 `chat-window:attach {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-detach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Чип убран из поля (`x-early-upload`, `file.detach {key}`). Было `chat-window:detach`. Имя 0.3 `chat-window:detach {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-settled` — `detail`: `{ requestId: string, intent: string, payload: object, answer: any, reason?: string|null }`. Факт ответа хоста — от порта или от `settle`: `{request-id, intent, payload, answer, reason}`; сообщается после того, как данные ответа применены, и до того, как окно само на него отреагирует (фокус). Было `sf-chat-window-answer`. Имя 0.3 `sf-chat-window-answer {request_id, ...payload}` отправляется после него до 2026-12-01.
+- `sf-chat-window-toggle` — `detail`: `{ kind: any, open: boolean }`. Поиск по разговору открыт или закрыт: {kind: find, open}. То же говорит состояние хоста data-find-open.
 - `chat-port:open` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
 - `chat-port:older` — устаревший псевдоним события `sf-chat-window-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-load-more`.
 - `chat-port:send` — устаревший псевдоним события `sf-chat-window-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-submit`.
@@ -245,8 +249,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 - Роль: область (`region`).
 - Доступное имя: внутренний.
-- Клавиши: `Tab`, `Enter`, `Shift+Enter`, `Escape`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `F2`, `Shift+F10`.
-- Фокус: Части сохраняют свою клавиатуру (у списка — одна остановка Tab и переход стрелками, у поля — Enter). После нового разговора или смены собеседника фокус уходит в поле; когда закончилось последнее ожидание ответа в разговоре, он возвращается туда же, без прокрутки. Когда исчезло то, что держало фокус (строка ушла в архив), его забирает путь обратно над полем, а не страница. Проходящая строка уходит, только если на ней нет указателя и фокуса, и возвращает фокус в поле.
+- Клавиши: `Tab`, `Enter`, `Shift+Enter`, `Escape`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `F2`, `Shift+F10`, `Mod+F`.
+- Фокус: Части сохраняют свою клавиатуру (перемещаемый фокус списка, Enter в поле). После нового разговора или другого собеседника фокус уходит в поле; когда заканчивается последний ожидаемый ответ разговора, он возвращается туда без прокрутки. Если то, что держало фокус, исчезло (строка ушла в архив), фокус берёт путь назад над полем, но никогда не страница. Проходящая строка уходит, только когда на ней нет ни указателя, ни фокуса, и возвращает фокус в поле. «Изменить» в очереди возвращает вопрос в поле вместе с фокусом; «Убрать» переводит фокус на карточку на его месте, иначе в поле. Поиск по разговору при открытии забирает фокус и при закрытии возвращает его туда, откуда его открыли.
 
 ### Минимальная разметка
 
@@ -256,8 +260,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@1f5853f87e9e8db5438b9a99d691652a06fa9c75:components/src/smart/chat-window`
-- `simai/ui-pro@1f5853f87e9e8db5438b9a99d691652a06fa9c75:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@d1b0a1cf83c98e9225e0cc78afbdea27ad214bfd:components/src/smart/chat-window`
+- `simai/ui-pro@d1b0a1cf83c98e9225e0cc78afbdea27ad214bfd:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

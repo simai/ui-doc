@@ -104,7 +104,7 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e2cff39223f1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-4b07c619f88b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -113,7 +113,7 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 | Тег | `<sf-image-field>` |
 | Назначение | Поле формы для одного изображения: миниатюра с именем и размером файла, «Заменить…» и «Убрать»; файл, перетащенный на поле, заменяет изображение; подпись, пояснение, ошибка, обязательность, недоступность и только чтение — как у любого поля. Передаёт выбранный File; загружает его хост. |
 | Контракт | `smart.image-field`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-e2cff39223f1` |
+| Поставка | выпуск Framework `ui-4b07c619f88b` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -176,5 +176,5 @@ logo.addEventListener('sf-image-field:select', async (event) => {
 
 ### Источник
 
-- `simai/ui@e2cff39223f1a4b004dafe332f081e5178fad2f3:distr/smart/image-field`
-- `simai/ui@e2cff39223f1a4b004dafe332f081e5178fad2f3:distr/rule/rule.json#name=cl-image-field`
+- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/smart/image-field`
+- `simai/ui@4b07c619f88b7c4e94362c122ca45e48482aeb41:distr/rule/rule.json#name=cl-image-field`
