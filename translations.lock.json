@@ -30,11 +30,11 @@
             "locale": "en",
             "review": "ai_verified",
             "source_path": "content/ru/index.md",
-            "source_sha256": "da0ddd772556a042235b418c0025fedf2e517b1dd1c9be3c13c2b27d4cedb444",
-            "source_structure_sha256": "2c98d6bfa1e0063c209ffe5c396f0340684f9b2c95ca02b31ba49a185148fb28",
+            "source_sha256": "3d7caed9b4017e4eff24b05b66e2d0b5a36a9d8c6efb2b03864af92561a542ab",
+            "source_structure_sha256": "ec42e251b79037251bcc8ce7fbae1d50d3fb8548bdebf56a17216358eb3bf4cd",
             "target_path": "content/en/index.md",
-            "target_sha256": "c26059c5a185f3de58b024bb64cbd108e054670d44ef5d847a5d90261495f1e9",
-            "target_structure_sha256": "2c98d6bfa1e0063c209ffe5c396f0340684f9b2c95ca02b31ba49a185148fb28"
+            "target_sha256": "31a12611888cd80dccfb0983686f8ac720eff3a7d67b293d785171af61ea4e8d",
+            "target_structure_sha256": "ec42e251b79037251bcc8ce7fbae1d50d3fb8548bdebf56a17216358eb3bf4cd"
         }
     ],
     "exclusions": [],
