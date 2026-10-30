@@ -127,7 +127,7 @@ count.addEventListener('change', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -136,7 +136,7 @@ count.addEventListener('change', (event) => {
 | Тег | `<sf-quantity>` |
 | Назначение | Числовое поле с «−» и «+»: spinbutton WAI-ARIA с границами, шагом и знаками после запятой, строгим вводом по правилам языка страницы, ArrowUp/ArrowDown, PageUp/PageDown и Home/End; удерживаемая кнопка повторяет шаг; подпись, пояснение, ошибка, обязательность, недоступность, только чтение, три размера полей и наследуемое значение — как у любого поля. |
 | Контракт | `smart.quantity`, версия `1.2.0` |
-| Поставка | выпуск Framework `ui-766822bf90e2` |
+| Поставка | выпуск Framework `ui-68cbd8d1b560` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -206,5 +206,5 @@ count.addEventListener('change', (event) => {
 
 ### Источник
 
-- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/smart/quantity`
-- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/rule/rule.json#name=cl-quantity`
+- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/smart/quantity`
+- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/rule/rule.json#name=cl-quantity`

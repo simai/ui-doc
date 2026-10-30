@@ -124,7 +124,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -132,7 +132,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает хост. |
-| Контракт | `smart.chat-message`, версия `1.1.0` |
+| Контракт | `smart.chat-message`, версия `1.2.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -144,7 +144,7 @@ log.renderMessage = (message, {view}) => {
 - `root-style` — `string`, по умолчанию пусто.
 - `view` — `string`, по умолчанию `{}`. Псевдоним с датой для `display` до 2026-12-01.
 - `message` — `object`. Сообщение: свойство или JSON-остров; тексты рисуются текстом, `html` очищается.
-- `display` — `object`, по умолчанию `{}`. Что знает хост, а сервер нет (в 0.3 — `view`): `wait`, `busy`, `feedback`, `retried`, `note`, `code`, `sources_open`, `steps_open`, `brief`, `brief_draft`; для `person` — `own`, `first`, `last`, `showName`, `editing`, `askDelete`.
+- `display` — `object`, по умолчанию `{}`. Что знает хост, а сервер нет (вид версии 0.3): wait, busy, feedback, retried, note, code, sources_open, steps_open, brief, brief_draft; для person own, first, last, showName, editing, askDelete, conflict (1.2.0); divider (1.2.0).
 - `features` — `object`, по умолчанию `{"feedback":true,"proposals":true,"memory":true,"brief":false}`. Что предлагает поверхность: оценку, предложения изменений, заметки памяти, уточнение задачи.
 
 ### Методы
@@ -183,8 +183,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@9c0b7286e4410a3b06f8e09902bd4e02ff45712d:components/src/smart/chat-message`
-- `simai/ui-pro@9c0b7286e4410a3b06f8e09902bd4e02ff45712d:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@0905ea5a358b442b669148c32044235447541230:components/src/smart/chat-message`
+- `simai/ui-pro@0905ea5a358b442b669148c32044235447541230:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

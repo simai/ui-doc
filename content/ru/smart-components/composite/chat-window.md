@@ -132,7 +132,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -140,7 +140,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
-| Контракт | `smart.chat-window`, версия `1.2.0` |
+| Контракт | `smart.chat-window`, версия `1.3.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -204,9 +204,9 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 - `sf-chat-window-load-more` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Более ранние сообщения (порт `history.older {conversation_id, before_id}`, kind `history`) или следующая страница списка (`x-conversations-paging`, `conversations.more {archived}`, kind `conversations`). Было `chat-port:older`, `chat-window:more`. Имена 0.3 `chat-port:older`, `chat-window:more {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-submit` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение отправлено (порт `message.send {conversation_id, body, files, client_key, interlocutor}`): из поля, подсказкой, ответом на уточнение задачи или повторным вопросом. Было `chat-port:send`. Имя 0.3 `chat-port:send {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-retry` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. То же сообщение заново по его `client_key` (порт `message.retry`, kind `message`) или неудавшийся файл сообщения (порт `file.retry {conversation_id, message_id, file_key}`, kind `file`). Было `chat-port:retry`, `chat-port:file-retry`. Имена 0.3 `chat-port:retry`, `chat-port:file-retry {request_id, ...payload}` отправляются после него до 2026-12-01.
-- `sf-chat-window-save` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение изменено по своей версии (порт `message.edit`). Было `chat-port:edit`. Имя 0.3 `chat-port:edit {request_id, ...payload}` отправляется после него до 2026-12-01.
-- `sf-chat-window-delete` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение удалено по своей версии (порт `message.delete`, kind `message`) или удалён сохранённый файл (`x-my-files`, `files.remove {file_id}`, kind `file`). Было `chat-port:delete`, `chat-window:file-remove`. Имена 0.3 `chat-port:delete`, `chat-window:file-remove {request_id, ...payload}` отправляются после него до 2026-12-01.
-- `sf-chat-window-read` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Последнее действительно увиденное сообщение (порт `message.read`). Было `chat-port:read`. Имя 0.3 `chat-port:read {request_id, ...payload}` отправляется после него до 2026-12-01.
+- `sf-chat-window-save` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение изменено с учётом ревизии (порт message.edit); 1.3.0: из редактора сообщения человека, после конфликта — снова с текущей ревизией («Заменить своим»). Было chat-port:edit. Имя версии 0.3 chat-port:edit {request_id, ...payload} отправляется следом до 2026-12-01.
+- `sf-chat-window-delete` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение удалено с учётом ревизии (порт message.delete, kind message; 1.3.0: после вопроса на месте сообщения) или удалён сохранённый файл (x-my-files files.remove {file_id}, kind file). Было chat-port:delete, chat-window:file-remove. Имена версии 0.3 chat-port:delete, chat-window:file-remove {request_id, ...payload} отправляются следом до 2026-12-01.
+- `sf-chat-window-read` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Последнее действительно прочитанное сообщение (порт message.read); 1.3.0: когда конец разговора виден, не чаще раза в 2 с и только для более позднего сообщения. Было chat-port:read. Имя версии 0.3 chat-port:read {request_id, ...payload} отправляется следом до 2026-12-01.
 - `sf-chat-window-rate` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Ответ оценён (порт `message.rate {message_id, value, reason, note}`). Было `chat-port:rate`. Имя 0.3 `chat-port:rate {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-answer` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Ответ на предложение изменения: хост отправляет ровно его команду (порт `proposal.decide {message_id, code, decision: confirm|cancel}`). Было `chat-port:decide`. Имя 0.3 `chat-port:decide {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-check` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Пришёл ли остановленный или задержанный ответ (порт `wait.check {message_id}`). Было `chat-port:check`. Имя 0.3 `chat-port:check {request_id, ...payload}` отправляется после него до 2026-12-01.
@@ -262,8 +262,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@9c0b7286e4410a3b06f8e09902bd4e02ff45712d:components/src/smart/chat-window`
-- `simai/ui-pro@9c0b7286e4410a3b06f8e09902bd4e02ff45712d:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@0905ea5a358b442b669148c32044235447541230:components/src/smart/chat-window`
+- `simai/ui-pro@0905ea5a358b442b669148c32044235447541230:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

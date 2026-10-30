@@ -138,7 +138,7 @@ toggle.closest('sf-icon-button');                            // хост
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-766822bf90e2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-68cbd8d1b560` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -147,7 +147,7 @@ toggle.closest('sf-icon-button');                            // хост
 | Тег | `<sf-icon-button>` |
 | Назначение | Нативная кнопка-иконка с геометрией из токенов, доступным именем и общей семантикой загрузки. |
 | Контракт | `smart.icon-button`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-766822bf90e2` |
+| Поставка | выпуск Framework `ui-68cbd8d1b560` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -219,8 +219,8 @@ toggle.closest('sf-icon-button');                            // хост
 
 ### Источник
 
-- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/smart/icon-button`
-- `simai/ui@766822bf90e2942bc3bdbe842a68a1055e3f47d3:distr/rule/rule.json#name=cl-icon-button`
+- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/smart/icon-button`
+- `simai/ui@68cbd8d1b560baf853aa1263b6f3515d2c76ca04:distr/rule/rule.json#name=cl-icon-button`
 
 ## См. также
 

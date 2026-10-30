@@ -356,6 +356,7 @@ set.renderCellField(status, 'live');
 |:---|:---|:---|:---|:---|:---|:---|:---|
 | `string` | Строка | `phone` — Телефон, `password` — Пароль | `placeholder`, `mask`, `nullable`, `required`, `readonly` | есть | есть | своё | своё |
 | `text` | Текст | — | `placeholder`, `required`, `readonly` | есть | есть | текстовый | своё |
+| `html` | Форматированный текст | — | `placeholder`, `required`, `readonly` | есть | есть | своё | текстовый |
 | `integer` | Целое число | `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `required`, `readonly` | есть | есть | своё | своё |
 | `number` | Число | `scale` — Шкала 0–100, `stepper` — Кнопками «−» и «+» | `unit`, `min`, `max`, `step`, `precision`, `required`, `readonly` | есть | есть | своё | своё |
 | `date` | Дата | — | `required`, `readonly` | есть | есть | своё | своё |
