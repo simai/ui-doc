@@ -1891,6 +1891,22 @@
     "kind": "smart",
     "standard": 2
   },
+  "smart-components/composite/search.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/navigation/contents.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/navigation/pager.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/navigation/settings-menu.md": {
+    "kind": "smart",
+    "standard": 2
+  },
   "smart-components/composite/thread-list.md": {
       "kind": "smart",
       "standard": 2

@@ -1,0 +1,5 @@
+/* The example holds its own window: it opens inside this block
+   (data-sf-overlay-container) and covers only it. */
+[data-sf-overlay-container] {
+  min-block-size: 28rem;
+}

@@ -40,13 +40,16 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Хлебные крошки](/ru/smart-components/navigation/breadcrumbs/)
 - [Пагинация](/ru/smart-components/navigation/pagination/)
+- [Листалка страниц](/ru/smart-components/navigation/pager/)
 - [Меню](/ru/smart-components/navigation/menu/)
+- [Оглавление](/ru/smart-components/navigation/contents/)
 - [Вкладки](/ru/smart-components/navigation/tabs/)
 - [Шаги](/ru/smart-components/navigation/steps/)
 - [Дерево](/ru/smart-components/navigation/tree/)
 - [Элемент дерева](/ru/smart-components/navigation/tree-item/)
 - [Выпадающий список](/ru/smart-components/navigation/dropdown/)
 - [Контекстное меню](/ru/smart-components/navigation/context-menu/)
+- [Компактные настройки](/ru/smart-components/navigation/settings-menu/)
 
 ## Уведомления и состояния
 
@@ -94,6 +97,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Представление свойств](/ru/smart-components/composite/property-view/)
 - [Шапка страницы](/ru/smart-components/composite/page-header/)
 - [Шапка сайта](/ru/smart-components/composite/site-header/)
+- [Поиск по сайту](/ru/smart-components/composite/search/)
 - [Выбор профиля](/ru/smart-components/composite/profile-picker/)
 - [Список разговоров](/ru/smart-components/composite/thread-list/)
 - [Лента сообщений](/ru/smart-components/composite/message-log/)
