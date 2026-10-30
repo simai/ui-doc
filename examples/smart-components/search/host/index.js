@@ -24,9 +24,10 @@ customElements.whenDefined('sf-search').then(() => search.connectPort({
     if (intent === 'query.change') {
       const query = payload.query.toLowerCase();
       const misspelt = query === 'тблица';
-      const results = query
-        ? pages.filter((page) => page.title.toLowerCase().includes(query.slice(0, 3)) || misspelt)
-        : pages.filter((page) => page.kind === 'action');
+      const results = pages.filter((page) => {
+        if (misspelt) return page.kind === 'page';
+        return query ? page.title.toLowerCase().includes(query.slice(0, 3)) : page.kind === 'action';
+      });
       const data = {results: results.map(({words, ...result}) => result), echo: {query: payload.query, scope: payload.scope ?? null}, scopes, recent, popular: ['таблица', 'тема']};
       if (misspelt) data.correction = {query: 'таблица', total: 2};
       return {answer: 'applied', sequence: payload.sequence, data};
