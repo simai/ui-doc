@@ -73,6 +73,27 @@
         "sf-divider"
       ]
     },
+    "components/content/card.md": {
+      "kind": "component",
+      "component": "card",
+      "blocks": [
+        "sf-card"
+      ]
+    },
+    "components/content/figure.md": {
+      "kind": "component",
+      "component": "figure",
+      "blocks": [
+        "sf-figure"
+      ]
+    },
+    "components/content/procedure.md": {
+      "kind": "component",
+      "component": "procedure",
+      "blocks": [
+        "sf-procedure"
+      ]
+    },
     "components/content/doc.md": {
       "kind": "component",
       "component": "doc",
@@ -1918,6 +1939,10 @@
     "standard": 2
   },
   "smart-components/composite/mail-canvas.md": {
+    "kind": "smart",
+    "standard": 2
+  },
+  "smart-components/composite/content-editor.md": {
     "kind": "smart",
     "standard": 2
   },

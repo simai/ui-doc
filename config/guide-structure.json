@@ -558,6 +558,11 @@
      "order": 190
     },
     {
+     "slug": "content-and-data/content-types",
+     "title": "Блоки содержимого",
+     "order": 195
+    },
+    {
      "slug": "content-and-data/publication-and-rollback",
      "title": "Публикация и откат",
      "order": 200

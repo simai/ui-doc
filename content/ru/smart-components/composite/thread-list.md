@@ -128,7 +128,7 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3b75bb31a203` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -136,7 +136,7 @@ noted in `SF.deprecations`.
 |:---|:---|
 | Тег | `<sf-thread-list>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.thread-list`, версия `1.6.0` |
+| Контракт | `smart.thread-list`, версия `1.6.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -212,5 +212,5 @@ noted in `SF.deprecations`.
 
 ### Источник
 
-- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/thread-list`
-- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/thread-list/rule.js#name=cl-thread-list`
+- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/thread-list`
+- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/thread-list/rule.js#name=cl-thread-list`

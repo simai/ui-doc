@@ -1,6 +1,6 @@
 ---
 title: "Содержимое и представление"
-description: "Содержимое и представление — 13 компонентов SIMAI Framework."
+description: "Содержимое и представление — 16 компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -9,8 +9,10 @@ profile: reference
 - **[Предпросмотр файла](/ru/components/content/file-preview/)** — Имя, размер и действия для выбранного или прикреплённого файла.
 - **[Аккордеон](/ru/components/content/accordion/)** — Сворачиваемые разделы связанного содержимого.
 - **[Аватары](/ru/components/content/avatars/)** — Изображение или инициалы человека и группы людей.
+- **[Карточка](/ru/components/content/card/)** — Несколько блоков содержимого на своей поверхности.
 - **[Разделитель](/ru/components/content/content-divider/)** — Смысловое разделение соседних частей содержимого.
 - **[Документ](/ru/components/content/doc/)** — Представление документа или связанного материала.
+- **[Рисунок](/ru/components/content/figure/)** — Картинка или видео с подписью.
 - **[Подсветка](/ru/components/content/highlight/)** — Выделение важного фрагмента текста или кода.
 - **[Иконки](/ru/components/content/icons/)** — Системные символы действий, объектов и состояний.
 - **[Emoji](/ru/components/content/emoji/)** — Компактный эмоциональный или смысловой символ.
@@ -18,4 +20,5 @@ profile: reference
 - **[Клавиши](/ru/components/content/kbd/)** — Обозначение клавиши или сочетания клавиш.
 - **[Акцентная иконка](/ru/components/content/featured-icon/)** — Крупный тематический символ для карточки или сообщения.
 - **[Теги](/ru/components/content/tags/)** — Категории и выбранные значения в компактной форме.
+- **[Шаги инструкции](/ru/components/content/procedure/)** — Нумерованные шаги с содержимым.
 - **[Справочная ссылка](/ru/components/content/reference-link/)** — Ссылка на дополнительное объяснение или источник.

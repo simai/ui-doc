@@ -112,4 +112,5 @@ description: "Смарт-компоненты по задачам интерфе
 - [Структура письма](/ru/smart-components/composite/mail-structure/)
 - [Панель свойств письма](/ru/smart-components/composite/mail-inspector/)
 - [Холст письма](/ru/smart-components/composite/mail-canvas/)
+- [Редактор содержимого](/ru/smart-components/composite/content-editor/)
 

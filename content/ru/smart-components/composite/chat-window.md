@@ -179,7 +179,7 @@ false`), поэтому ответ уходит своим намерением 
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3b75bb31a203` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -187,7 +187,7 @@ false`), поэтому ответ уходит своим намерением 
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
-| Контракт | `smart.chat-window`, версия `1.6.0` |
+| Контракт | `smart.chat-window`, версия `1.9.0` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -197,7 +197,7 @@ false`), поэтому ответ уходит своим намерением 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
 - `root-class` — `string`, по умолчанию пусто.
 - `root-style` — `string`, по умолчанию пусто.
-- `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (assistant, people, files, edit, delete, feedback, proposals, conversation-create, conversation-manage, interlocutors, read), и расширения окна (x-archive-view, x-conversations-paging, x-conversations-search, x-conversation-pin, x-early-upload, x-my-files, x-brief, x-conversation-start, x-members, x-reactions, x-reply). Что не объявлено, то не предлагается, а его намерение получает ответ unavailable без события. Свойство принимает и массив.
+- `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (`assistant`, `people`, `files`, `edit`, `delete`, `feedback`, `proposals`, `conversation-create`, `conversation-manage`, `interlocutors`, `read`), и расширения окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`, `x-conversation-pin`, `x-early-upload`, `x-my-files`, `x-brief`, `x-conversation-start`, `x-members`, `x-members-manage`, `x-reactions`, `x-reply`). Что не объявлено, то не предлагается: на такое намерение приходит ответ «недоступно» без события. Свойство принимает и массив.
 - `landmark` — `string`, по умолчанию `main`, значения: `main`, `section`. `main`, когда окно и есть страница; `section` внутри страницы со своим `main`.
 - `heading-level` — `integer`, по умолчанию `1`, значения: от 1; до 2. Уровень собственных заголовков окна (разговор, приветствие): `2` внутри чужой страницы.
 - `embedded` — `boolean`, по умолчанию `false`. Встроено в страницу хоста: окно берёт высоту контейнера и рисует свою рамку.
@@ -274,6 +274,7 @@ false`), поэтому ответ уходит своим намерением 
 - `sf-chat-window-settled` — `detail`: `{ requestId: string, intent: string, payload: object, answer: any, reason?: string|null }`. Факт ответа хоста — от порта или от `settle`: `{request-id, intent, payload, answer, reason}`; сообщается после того, как данные ответа применены, и до того, как окно само на него отреагирует (фокус). Было `sf-chat-window-answer`. Имя 0.3 `sf-chat-window-answer {request_id, ...payload}` отправляется после него до 2026-12-01.
 - `sf-chat-window-toggle` — `detail`: `{ kind: any, open: boolean, form?: any }`. Поиск по разговору, предпросмотр источника, форма нового разговора или участники группы открыты или закрыты: `{kind: find|preview|start|members, open, form?}`. То же говорят состояния хоста `data-find-open`, `data-preview-open`, `data-start-open` и `data-members-open`.
 - `sf-chat-window-react` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Реакция (x-reactions): message.react {conversation_id, message_id, emoji, on}. Ответ applied с data {message} вливается по revision.
+- `sf-chat-window-apply` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Управление участниками группы (`x-members-manage`): `member.add`, `member.remove`, `member.role`, `member.transfer`, `member.leave`, вид `member`; кнопки следуют флагам хоста (`canRemove`, `canChangeRole`, `canTransfer`; `can_manage`, `can_leave`).
 - `chat-port:open` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
 - `chat-port:older` — устаревший псевдоним события `sf-chat-window-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-load-more`.
 - `chat-port:send` — устаревший псевдоним события `sf-chat-window-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-submit`.
@@ -314,8 +315,8 @@ false`), поэтому ответ уходит своим намерением 
 
 ### Источник
 
-- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-window`
-- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/chat-window`
+- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

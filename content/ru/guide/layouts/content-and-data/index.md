@@ -21,4 +21,5 @@ description: "Макет описывает расположение данны�
 - [Входы и источники данных](/ru/guide/layouts/content-and-data/data-sources/)
 - [Снимки и кеш](/ru/guide/layouts/content-and-data/snapshots-and-cache/)
 - [Структурированный текст](/ru/guide/layouts/content-and-data/structured-text/)
+- [Блоки содержимого](/ru/guide/layouts/content-and-data/content-types/)
 - [Публикация и откат](/ru/guide/layouts/content-and-data/publication-and-rollback/)

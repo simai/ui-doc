@@ -149,7 +149,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3b75bb31a203` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -157,7 +157,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает хост. |
-| Контракт | `smart.chat-message`, версия `1.4.0` |
+| Контракт | `smart.chat-message`, версия `1.4.1` |
 | Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -211,8 +211,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-message`
-- `simai/ui-pro@86a389a5e6da8417b14a96a2aae65e155bb33137:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/chat-message`
+- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

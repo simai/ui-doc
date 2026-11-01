@@ -177,8 +177,8 @@ slider.addEventListener('change', (event) => applyFilter(event.detail.value));
 |:---|:---|:---|
 | `--sf-range-slider-track-color` | Заливка дорожки вне выбранной части. | `var(--sf-surface-container)` |
 | `--sf-range-slider-fill-color` | Заливка выбранной части дорожки. | `var(--sf-primary)` |
-| `--sf-range-slider-handle-color` | Кольцо ручки в покое; у выключенного состояния своё. | `var(--sf-primary)` |
-| `--sf-range-slider-handle-inner-color` | Середина ручки. | `var(--sf-surface-0)` |
+| `--sf-range-slider-handle-color` | Круг ручки в покое; у отключённой — свой. | `var(--sf-primary)` |
+| `--sf-range-slider-handle-inner-color` | Середина полой ручки. Не задана — ручка сплошной круг; цвет рисует в ней середину. | `transparent` |
 | `--sf-range-slider-value-color` | Цвет значения, показанного текстом или в подсказке. | `var(--sf-on-surface)` |
 
 ```css

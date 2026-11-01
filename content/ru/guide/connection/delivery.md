@@ -41,18 +41,18 @@ Loader загружает по умолчанию, и читаемая для о
 Выпуск — один коммит сборки в `ui`. Его идентификатор составлен из первых 12
 знаков этого коммита:
 
-| Что | Значение для выпуска `ui-7153f7a9c092` |
+| Что | Значение для выпуска `ui-3b75bb31a203` |
 |:---|:---|
-| Идентификатор выпуска | `ui-7153f7a9c092` |
-| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f` |
-| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261030.1913` |
-| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `481b50fe9a5f1d1b5ea3ecd73e46569bad31c006` |
+| Идентификатор выпуска | `ui-3b75bb31a203` |
+| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `3b75bb31a203c1935d4a5357510daed3abee53e8` |
+| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261101.414` |
+| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `b5a55fd032ca1b087c0cd9adf7c046d306bd2f92` |
 | Коммит сборщика `ui-builder` | `a89508ce28acf00ca5b987059a424bfe1039f187` |
-| Запись о выпуске | `contracts/releases/ui-7153f7a9c092.lock.json` в репозитории `ui`, добавлена коммитом `46ce16bc2613e2fead3b6f2675495bcc3a499b5f` |
-| Пакет продукта `larena`, собранный для этого выпуска | Исходник — `simai/ui-pro`, коммит `86a389a5e6da8417b14a96a2aae65e155bb33137` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
+| Запись о выпуске | `contracts/releases/ui-3b75bb31a203.lock.json` в репозитории `ui`, добавлена коммитом `bc88ea67bd60f43ffb0f95924baa2f14925a918c` |
+| Пакет продукта `larena`, собранный для этого выпуска | Исходник — `simai/ui-pro`, коммит `27366c53cfdfd25f1e05ae76f7d927f39b9c544e` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
 
 **Идентификатор выпуска — не тег git.** Тегов у выпусков нет (в записи о
-выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-7153f7a9c092`
+выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-3b75bb31a203`
 не существует. Своя копия поставки берётся по полному коммиту, адрес CDN —
 по версии пакета npm этого выпуска (см. [Пакет npm](#пакет-npm)).
 
@@ -95,9 +95,9 @@ git log --diff-filter=A --format='%cs %s' -- 'contracts/releases/ui-*.lock.json'
 `simai/ui` по полному коммиту выпуска и сверяют с записью о выпуске:
 
 ```bash
-git archive --format=tar 7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f distr | shasum -a 256
+git archive --format=tar 3b75bb31a203c1935d4a5357510daed3abee53e8 distr | shasum -a 256
 # равно runtime_sources.core.archive_sha256
-git rev-parse 7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr
+git rev-parse 3b75bb31a203c1935d4a5357510daed3abee53e8:distr
 # равно runtime_sources.core.runtime_tree
 ```
 
@@ -117,10 +117,10 @@ git rev-parse 7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr
 Framework подключают из этого пакета: jsDelivr и unpkg отдают любой файл
 пакета по адресу с его версией.
 
-| CDN | Адрес папки `distr/` выпуска `ui-7153f7a9c092` |
+| CDN | Адрес папки `distr/` выпуска `ui-3b75bb31a203` |
 |:---|:---|
-| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261030.1913/distr/` |
-| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261030.1913/distr/` |
+| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261101.414/distr/` |
+| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261101.414/distr/` |
 
 Адрес папки становится значением `window.sfPath`, а стиль и скрипт ядра
 лежат внутри неё: `core/css/core.css` и `core/js/core.js` (см. [Порядок подключения](/ru/guide/connection/project-setup/#порядок-подключения)).
@@ -133,8 +133,8 @@ Framework подключают из этого пакета: jsDelivr и unpkg �
 файла `package.json` пакета:
 
 ```bash
-npm view @simai-studio/ui@5.20261030.1913 simai
-# { release: 'ui-7153f7a9c092', commit: '7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f' }
+npm view @simai-studio/ui@5.20261101.414 simai
+# { release: 'ui-3b75bb31a203', commit: '3b75bb31a203c1935d4a5357510daed3abee53e8' }
 ```
 
 **Что в пакете.** Каталог `distr/` выпуска с двумя отличиями от репозитория

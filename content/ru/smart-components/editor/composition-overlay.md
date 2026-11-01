@@ -123,7 +123,7 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-7153f7a9c092` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-3b75bb31a203` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -131,8 +131,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 |:---|:---|
 | Тег | `<sf-composition-overlay>` |
 | Назначение | Слой редактора над отрисованным документом композиции: рамки наведения и выбора, панель действий узла, места вставки, перенос указателем и клавиатурой и дерево структуры; холст никогда не меняется, каждое изменение выполняет хост. |
-| Контракт | `smart.composition-overlay`, версия `1.2.4` |
-| Поставка | выпуск Framework `ui-7153f7a9c092` |
+| Контракт | `smart.composition-overlay`, версия `1.3.0` |
+| Поставка | выпуск Framework `ui-3b75bb31a203` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -146,7 +146,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 - `frame` — `string`, по умолчанию пусто. id холста в iframe того же источника (режим во фрейме, его питает `setNodes`)
 - `accepts` — `string`, по умолчанию пусто. Группы `sf-sortable`, элементы которых можно сбросить на холст, через пробел
 - `label` — `string`, по умолчанию пусто. Имя дерева структуры; иначе — `runtime.tree` из языкового файла
-- `actions` — `array`, по умолчанию `[]`. Действия выбранного узла: до 16 `{id, label}`; записываются через ту же проверку, что и `setActions`
+- `placement` — `string`, по умолчанию `top`, значения: `top`, `side`. Где стоит панель действий: `top` — над блоком по правому краю, по умолчанию; `side` — сбоку от блока, если рядом есть место, а если места нет — над блоком
+- `actions` — `array`, по умолчанию `[]`. Действия выбранного узла: до 16 `{id, label}` с необязательными `icon`, `shortcut`, `disabled` и `tone`; записываются через ту же проверку, что и `setActions`
 - `messages` — `object`, по умолчанию `{}`. Собственные слова хоста поверх языкового файла; записываются через `setMessages`
 - `insertion-target` — `object`, по умолчанию `{}`. Место вставки, которое хост держит отмеченным `{parent_id, slot, index}`; записывается через `setInsertionTarget`
 
@@ -191,8 +192,8 @@ overlay.addEventListener('sf-composition-overlay-action', (event) => {
 
 ### Источник
 
-- `simai/ui@7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr/smart/composition-overlay`
-- `simai/ui@7153f7a9c0929a28d67f458e9d9a9f9351f7cf8f:distr/rule/rule.json#name=cl-composition-overlay`
+- `simai/ui@3b75bb31a203c1935d4a5357510daed3abee53e8:distr/smart/composition-overlay`
+- `simai/ui@3b75bb31a203c1935d4a5357510daed3abee53e8:distr/rule/rule.json#name=cl-composition-overlay`
 
 ## См. также
 

@@ -67,8 +67,10 @@
         "file-preview",
         "accordion",
         "avatars",
+        "card",
         "content-divider",
         "doc",
+        "figure",
         "highlight",
         "icons",
         "emoji",
@@ -76,6 +78,7 @@
         "kbd",
         "featured-icon",
         "tags",
+        "procedure",
         "reference-link"
       ]
     },
@@ -224,7 +227,8 @@
         "mail-library",
         "mail-structure",
         "mail-inspector",
-        "mail-canvas"
+        "mail-canvas",
+        "content-editor"
       ]
     }
   }
