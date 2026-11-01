@@ -58,8 +58,10 @@ git: в адресах и закреплении проекта использу
 открытый репозиторий `simai/ui-pro` (SIMAI Pro), а продукты получают их
 сборкой. Такой набор называется **пакетом продукта**. Действующий пакет —
 `larena`: элементы администрирования `sf-table`, `sf-data-view`,
-`sf-property-view`, `sf-admin-menu` и элементы разговора `sf-thread-list`,
-`sf-message-log`, `sf-change-confirm` (описаны в справочнике
+`sf-property-view`, `sf-admin-menu`, элементы разговора `sf-chat-window`,
+`sf-thread-list`, `sf-message-log`, `sf-chat-message`, `sf-chat-composer`,
+`sf-chat-interlocutor`, `sf-change-confirm`, части редактора писем `sf-mail-*` и
+`sf-content-editor` (описаны в справочнике
 смарт-компонентов). Его исходник —
 папка `components` открытого репозитория `simai/ui-pro`. Лицензия пакета —
 PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбор, по

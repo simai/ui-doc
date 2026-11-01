@@ -22,7 +22,7 @@ const initializeOverlayExample = async () => {
   overlay.setDocument(model, { describe: (node) => ({ label: names[node.type] || node.type }) });
   overlay.setActions([{ id: 'duplicate', label: 'Дублировать' }, { id: 'remove', label: 'Удалить' }]);
   overlay.addEventListener('sf-composition-overlay-select', (event) => { status.textContent = event.detail.node_id ? `Выбран узел ${event.detail.node_id}.` : 'Выбор снят.'; });
-  overlay.addEventListener('sf-composition-overlay-action', (event) => { status.textContent = `Действие ${event.detail.action_id} для узла ${event.detail.node_id}. Изменение выполняет приложение.`; });
+  overlay.addEventListener('sf-composition-overlay-apply', (event) => { status.textContent = `Действие ${event.detail.action} для узла ${event.detail.ids[0]}. Изменение выполняет приложение.`; });
   overlay.addEventListener('sf-composition-overlay-insert', (event) => { status.textContent = `Вставка в «${event.detail.slot}», позиция ${event.detail.index + 1}.`; });
 };
 

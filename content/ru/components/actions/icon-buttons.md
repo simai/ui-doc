@@ -64,6 +64,12 @@ profile: reference
 :::example {id="components/icon-buttons/schemes" label="Сочетания вида и схемы"}
 :::
 
+`on-surface-variant` — то же нейтральное действие на ступень тише: заливка и
+граница как у `on-surface`, иконка — цветом `--sf-on-surface-variant`. Так
+выглядит тихая кнопка рядом с полем или в шапке панели. Класс ставят вместе с
+`sf-icon-button--on-surface`. У вида `default` иконка остаётся как у
+`on-surface`: на тёмной заливке тише некуда.
+
 ### Содержимое
 
 `sf-icon-button--icon` — кнопка с иконкой из шрифта `sf-icon`.

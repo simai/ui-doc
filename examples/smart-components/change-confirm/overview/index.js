@@ -5,8 +5,7 @@ const initialize = async () => {
   const card = document.querySelector('#change-confirm-overview');
   if (!card || card.dataset.exampleReady === 'true') return;
   card.dataset.exampleReady = 'true';
-  card.addEventListener('sf-change-confirm-accept', () => { setTimeout(() => { card.state = 'accepted'; }, 800); });
-  card.addEventListener('sf-change-confirm-decline', () => { setTimeout(() => { card.state = 'declined'; }, 800); });
+  card.addEventListener('sf-change-confirm-answer', (event) => { setTimeout(() => { card.state = event.detail.accepted ? 'accepted' : 'declined'; }, 800); });
 };
 
 initialize();

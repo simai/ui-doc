@@ -195,9 +195,10 @@ Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу �
 - открытие на отдельной странице, если есть `address` и возможность
   `record-open`, — `sf-property-view-open-full` с `{address, record_id}`;
 - удаление, если в `record.actions` есть `record.delete`, — после ответа
-  приходит `sf-property-view-delete-record` с
+  приходит `sf-property-view-delete` с
   `{record_id, collection, revision, answer}`; спрашивать ли подтверждение,
-  решает приложение.
+  решает приложение. Прежнее имя `sf-property-view-delete-record` приходит
+  следом до 2026-12-01.
 
 #### Закрытие панели
 
@@ -227,7 +228,8 @@ view.addEventListener('sf-property-view-close', async (event) => {
 ```
 
 Значение-ссылка поднимает `record.open` и затем отправляет
-`sf-property-view-open-record` с `{field, value, answer}`. Смена состояния
+`sf-property-view-open` с `{field, value, answer}`; прежнее имя
+`sf-property-view-open-record` приходит следом до 2026-12-01. Смена состояния
 карточки (загрузка, готово, правка, ошибка) отправляет
 `sf-property-view-state` с `{state, message}`.
 

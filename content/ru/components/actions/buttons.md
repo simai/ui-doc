@@ -71,6 +71,11 @@ profile: reference
 :::example {id="components/buttons/schemes" label="Сочетания вида и схемы"}
 :::
 
+Тихой кнопке рядом с полем или в шапке панели ставят два класса:
+`sf-button--on-surface sf-button--on-surface-variant`. Заливка, край и
+состояния у неё от `on-surface`, а текст и иконка окрашены
+`--sf-on-surface-variant`. У вида `default` цвет остаётся обратным.
+
 Вторичная палитра почти нейтральна, и рядом с `tonal on-surface` кнопка
 `tonal secondary` выглядит так же серой. Для мягкой цветной кнопки берите
 `tonal primary`.

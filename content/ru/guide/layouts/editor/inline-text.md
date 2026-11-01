@@ -16,8 +16,8 @@ canvas.addEventListener('dblclick', (event) => {
   const node = findNode(element.dataset.sfCompositionId); // модель приложения
   SF.Composition.startInlineEdit(element, {content: node.data.content, nodeId: node.id, label: 'Абзац'});
 });
-document.addEventListener('sf-inline-edit-commit', (event) => {
-  saveProperty(event.detail.node_id, 'content', event.detail.content);
+document.addEventListener('sf-inline-editor-change', (event) => {
+  saveProperty(event.detail.id, 'content', event.detail.content);
 });
 ```
 
@@ -31,6 +31,10 @@ document.addEventListener('sf-inline-edit-commit', (event) => {
 
 - Ctrl/Cmd+B, I, E — жирный, курсив, код; Ctrl/Cmd+K — ссылка с проверкой
   адреса;
+- встроенные компоненты (`badge`, `kbd`, `icon`, `button`) — одна позиция
+  курсора: стрелки перешагивают их, Backspace и Delete удаляют целиком,
+  копирование и вставка сохраняют (см. [Встроенные компоненты](/ru/guide/layouts/content-and-data/structured-text/#встроенные-компоненты));
+- запись, которую редактор не знает, возвращается без изменений;
 - собственная история отмены;
 - Enter и уход фокуса сохраняют, Escape отменяет и возвращает исходную
   разметку;

@@ -62,7 +62,7 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запр
 После ответа приложение ставит `state`: `accepted` — подтверждено,
 `declined` — отклонено. Если ответ доставить не удалось, верните `open`.
 После `expires-at` открытая карточка читается как `expired` и один раз
-отправляет `sf-change-confirm-expire`.
+отправляет `sf-change-confirm-expired`.
 
 :::example {id="smart-components/change-confirm/state-outcome" label="Подтверждено, отклонено и истёк срок"}
 :::
@@ -71,17 +71,21 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запр
 
 ### Ответ и события
 
-`sf-change-confirm-accept` и `sf-change-confirm-decline` приходят с `id` —
-значением `change-id`. Приложение применяет или отклоняет изменение и ставит
+Ответ человека приходит событием `sf-change-confirm-answer` с
+`{id, accepted}`: `id` — значение `change-id`, `accepted` — `true` для «да» и
+`false` для «нет». Приложение применяет или отклоняет изменение и ставит
 итог. Если отменить событие (`preventDefault()`), вопрос остаётся открытым.
-`answer('accept')` и `answer('decline')` отвечают из кода, как человек.
+`answer({accepted: true})` и `answer({accepted: false})` отвечают из кода, как
+человек. Прежние имена `sf-change-confirm-accept`, `-decline` и `-expire` и
+вызов `answer('accept')` работают до 2026-12-01.
 
 ```js
 const card = document.querySelector('sf-change-confirm');
-card.addEventListener('sf-change-confirm-accept', async (event) => {
+card.addEventListener('sf-change-confirm-answer', async (event) => {
+  const {id, accepted} = event.detail;
   try {
-    await api.apply(event.detail.id);
-    card.state = 'accepted';
+    await (accepted ? api.apply(id) : api.reject(id));
+    card.state = accepted ? 'accepted' : 'declined';
   } catch {
     card.state = 'open';
   }

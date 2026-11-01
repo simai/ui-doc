@@ -7,8 +7,8 @@ description: "Даёт править текст заголовков и абз�
 
 `<sf-inline-editor>` — часть редактора страниц: правка текста
 `content.heading` и `content.paragraph` прямо на холсте. Доступно то, что есть
-в модели content: полужирный, курсив, код и ссылки; списков нет, потому что
-их нет в модели. События несут нормализованную модель, а не HTML.
+в модели content: полужирный, курсив, код, ссылки и встроенные компоненты
+(`badge`, `kbd`, `icon`, `button`); списков нет, потому что их нет в модели. События несут нормализованную модель, а не HTML.
 
 ## Пример
 
@@ -44,11 +44,14 @@ description: "Даёт править текст заголовков и абз�
 
 События отправляются на редактируемый элемент и всплывают до `document`:
 
-- `sf-inline-edit-input` — `{node_id, content}` после каждого изменения;
-- `sf-inline-edit-commit` — `{node_id, content}` по `Enter` или при уходе
+- `sf-inline-editor-input` — `{id, content}` после каждого изменения;
+- `sf-inline-editor-change` — `{id, content}` по `Enter` или при уходе
   фокуса;
-- `sf-inline-edit-cancel` — `{node_id}` по `Escape`; исходный HTML элемента
+- `sf-inline-editor-cancel` — `{id}` по `Escape`; исходный HTML элемента
   возвращается без изменений.
+
+Прежние имена `sf-inline-edit-input`, `sf-inline-edit-commit` и
+`sf-inline-edit-cancel` с `node_id` вместо `id` приходят следом до 2026-12-01.
 
 Сохраняйте результат `commit` через свой контракт ревизий, проверяйте Document
 и перерисовывайте страницу.
@@ -60,10 +63,22 @@ SF.Composition.startInlineEdit(element, {
   nodeId: node.id,
   label: 'Абзац',
 });
-canvas.addEventListener('sf-inline-edit-commit', (event) => {
-  save(event.detail.node_id, event.detail.content);
+canvas.addEventListener('sf-inline-editor-change', (event) => {
+  save(event.detail.id, event.detail.content);
 });
 ```
+
+### Встроенные компоненты
+
+Встроенный компонент в тексте — одна позиция курсора: внутри он не правится,
+оформления не принимает и в ссылку не входит. Стрелки перешагивают его за
+одно нажатие, `Backspace` и `Delete` удаляют целиком, выделение может его
+захватывать. Копирование и вставка в inline-редактор возвращают тот же
+компонент; вставленные `<kbd>`, `<sf-badge>`, `<sf-icon>` и `<sf-button>` с
+объявленными атрибутами тоже становятся компонентами. Запись, которую
+редактор не знает, сохраняется без изменений, а во время правки на её месте
+стоит заглушка. Какие компоненты и настройки разрешены — в разделе
+[Встроенные компоненты](/ru/guide/layouts/content-and-data/structured-text/#встроенные-компоненты).
 
 ### Безопасность
 

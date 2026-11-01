@@ -27,7 +27,7 @@ description: "Как называются смарт-компоненты, их 
 
 | Нельзя | Почему | Вместо этого |
 |:---|:---|:---|
-| вид или расположение: compact, horizontal, dark, big | это настройки и шаблоны | `sf-admin-menu` с `appearance="compact"`, а не `sf-admin-menu-compact` |
+| вид или расположение: compact, horizontal, dark, big | это настройки и шаблоны | `sf-admin-menu` с `compact`, а не `sf-admin-menu-compact` |
 | место или продукт: `larena`, `bitrix`, `simai`, имена экранов | компонент переходит между экранами и продуктами | имя по назначению |
 | `--`, `__`, `.` | так в классовой разметке пишутся модификаторы и элементы (`.sf-menu--compact`) | одно слово через дефис |
 | версия | версия живёт в манифесте | поле `version` |
@@ -46,7 +46,7 @@ description: "Как называются смарт-компоненты, их 
 - Продукты SIMAI компонентов не делают. Компонент, который продукт всё же
   выпустил, переезжает в ui-pro с именем `sf-` и сохраняет старое как
   псевдоним с датой. Все поставляемые теги — `sf-`; `sf-chat-composer`
-  сделан в UI Chat и переезжает в ui-pro.
+  сделан в UI Chat и переехал в ui-pro.
 - **Пакет партнёра или проекта** берёт свою приставку, никогда не `sf-` —
   см. [Пакеты партнёров и проектов](/ru/guide/smart-components/packages/).
 - Слова продукта, места и вида, которых нет в именах, проверка берёт из
@@ -185,7 +185,8 @@ description: "Как называются смарт-компоненты, их 
 | Старое имя | Новое имя |
 |:---|:---|
 | `sf-table-query-intent` | `sf-table-query` |
-| `sf-table-tree-intent` | `sf-table-expand`, `sf-table-load-more` |
+| `sf-table-tree-toggle`, `sf-table-tree-more` | `sf-table-expand`, `sf-table-load-more` |
+| `sf-table-tree-intent` | `sf-data-view-tree` |
 | `sf-table:column-settings-change` | `sf-table-save {kind: columns}` |
 | `sf-sortable-intent` | `sf-sortable-move` |
 | `sf-tree:activate`, `sf-tree:selection-change` | `sf-tree-open`, `sf-tree-select` |

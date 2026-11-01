@@ -43,9 +43,10 @@ Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу �
   пользователя. Меню ничего не хранит и обо всём, что делает человек,
   спрашивает приложение.
 
-При подключении меню отправляет событие `sf-host-port-request`. Если страница
-ответила портом, рисуется навигация порта; если не ответила — меню из
-пунктов разметки.
+Порт передаётся методом `connectPort(port)`; прежний `setHostPort` — его
+псевдоним. С портом рисуется навигация порта, без него — меню из пунктов
+разметки. Прежний запрос `sf-host-port-request`, на который страница отвечала
+портом, меню отправляет при подключении до 2026-12-01.
 
 ### Пункты меню
 
@@ -76,11 +77,12 @@ Small Business 1.0.0 или PolyForm Noncommercial 1.0.0, по запросу �
 системах); пустое значение её отключает.
 
 Чтобы искать не только по разделам, но и по записям приложения, слушайте
-`sf-admin-menu-search`. Событие приходит после паузы в наборе с
-`event.detail` `{query, requestId}`; ответ передаётся методом
+`sf-admin-menu-query`. Событие приходит после паузы в наборе с
+`event.detail` `{kind, query, requestId}`, где `kind` — `menu`; ответ передаётся методом
 `setSearchResults(requestId, groups)`. Ответ на запрос, который человек уже
-сменил, отбрасывается. `setRecentResults(groups)` задаёт, что показывать при
-пустом поле, например недавно открытое.
+сменил, отбрасывается. Настройка `recent-results` (свойство `recentResults`) задаёт,
+что показывать при пустом поле, например недавно открытое. Прежние
+`sf-admin-menu-search` и `setRecentResults(groups)` работают до 2026-12-01.
 
 Группа результатов — `{key, label, items, more}`, результат —
 `{text, subtext, icon, href}`, `more` — `{text, href}`. Результаты с адресом на
@@ -156,8 +158,10 @@ menu.addEventListener('sf-admin-menu-compact-change', ({detail}) => {
   записывает приложение.
 
 В режиме `external` сохранение отправляет `sf-admin-menu-settings-save` с
-`{target, base_revision, profile}`; сброс — `sf-admin-menu-settings-reset`,
-отмена — `sf-admin-menu-settings-cancel`. `target` — уровень настроек: `user`
+`{target, baseRevision, profile}`; сброс — `sf-admin-menu-reset` с
+`{kind: 'settings', target, baseRevision}`, отмена — `sf-admin-menu-settings-cancel`.
+Прежнее поле `base_revision` и прежнее имя `sf-admin-menu-settings-reset`
+приходят до 2026-12-01. `target` — уровень настроек: `user`
 для своих, `system` для общих; общие доступны при `allow-system-settings`, а
 переключение уровня отправляет `sf-admin-menu-settings-mode-change`.
 `settings-revision` и `system-settings-revision` — ревизии, против которых
@@ -175,7 +179,7 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 Порт — объект с полями `port`, `version`, `capabilities` и методом
 `raise(intent, payload)`, который возвращает ответ приложения. Меню принимает
 порт `simai.admin-navigation-port` версии `1.0.0`; другой порт метод
-`setHostPort` отклоняет с ошибкой.
+`connectPort` отклоняет с ошибкой.
 
 `capabilities` перечисляет, что приложение умеет. Управление, за которым
 нет возможности, меню не рисует.
@@ -209,22 +213,23 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 Открытая вторая колонка следует за текущей страницей: при первом ответе порта
 и при каждой смене адреса она показывает корень, в котором лежит страница.
 Колонку, которую человек закрыл, меню само не открывает.
-Каждое намерение дублируется событием `sf-admin-menu-intent` с
-`{intent, payload}`: по нему страница видит, что человек попросил, но отвечает
-только порт.
+Каждое намерение дублируется событием по своему глаголу — `sf-admin-menu-open`,
+`-toggle`, `-save`, `-query` и другими (список — в справочнике ниже) — с
+`{kind, intent, payload}` и полями намерения: по нему страница видит, что
+человек попросил, но отвечает только порт. Прежнее `sf-admin-menu-intent`
+приходит до 2026-12-01.
 
 Если избранное или разделы изменились вне меню — например, звездой в шапке
 страницы, — вызовите `refresh()`: меню заново запросит `navigation.load`.
 
 ```js
-document.addEventListener('sf-host-port-request', (event) => {
-  if (event.detail.context?.owner !== 'admin-menu') return;
-  event.detail.component.setHostPort({
-    port: 'simai.admin-navigation-port',
-    version: '1.0.0',
-    capabilities: ['search', 'favourites', 'preferences'],
-    raise: (intent, payload) => api.adminNavigation(intent, payload),
-  });
+const menu = document.querySelector('sf-admin-menu');
+await customElements.whenDefined('sf-admin-menu');
+menu.connectPort({
+  port: 'simai.admin-navigation-port',
+  version: '1.0.0',
+  capabilities: ['search', 'favourites', 'preferences'],
+  raise: (intent, payload) => api.adminNavigation(intent, payload),
 });
 
 document.addEventListener('sf-admin-menu-navigate', (event) => {

@@ -18,13 +18,13 @@ const initializeInlineExample = async () => {
     event.preventDefault();
     editor.edit(element, { content, nodeId: 'note', label: 'Условия доставки' });
   });
-  canvas.addEventListener('sf-inline-edit-commit', (event) => {
+  canvas.addEventListener('sf-inline-editor-change', (event) => {
     content = event.detail.content;
     const paragraph = canvas.querySelector('[data-sf-composition-id="note"]');
     paragraph.replaceChildren(SF.InlineEditor.renderInlineDom(document, content));
     status.textContent = `Сохранено: ${JSON.stringify(content)}`;
   });
-  canvas.addEventListener('sf-inline-edit-cancel', () => { status.textContent = 'Правка отменена.'; });
+  canvas.addEventListener('sf-inline-editor-cancel', () => { status.textContent = 'Правка отменена.'; });
 };
 
 initializeInlineExample();
