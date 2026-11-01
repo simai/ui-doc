@@ -103,7 +103,7 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-3b75bb31a203` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1232b187244c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -164,5 +164,5 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/change-confirm`
-- `simai/ui-pro@27366c53cfdfd25f1e05ae76f7d927f39b9c544e:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
+- `simai/ui-pro@f8939812c7f977a1a62e8440f326adf249ae72b9:components/src/smart/change-confirm`
+- `simai/ui-pro@f8939812c7f977a1a62e8440f326adf249ae72b9:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`

@@ -9,14 +9,14 @@
   "sources": [
     {
       "source": "simai/ui-source",
-      "release": "ui-3b75bb31a203",
-      "revision": "b5a55fd032ca1b087c0cd9adf7c046d306bd2f92",
+      "release": "ui-1232b187244c",
+      "revision": "f7616a2a922d29e3d952eab5df1966bf78fd6a71",
       "brought_up_on": "2026-11-01"
     },
     {
       "source": "simai/ui-pro",
-      "release": "larena-27366c53cfdf",
-      "revision": "27366c53cfdfd25f1e05ae76f7d927f39b9c544e",
+      "release": "larena-f8939812c7f9",
+      "revision": "f8939812c7f977a1a62e8440f326adf249ae72b9",
       "brought_up_on": "2026-11-01"
     }
   ],
@@ -773,14 +773,14 @@
       "units": [
         {
           "id": "component.range-slider",
-          "version": "1.1.0",
-          "content_sha256": "91bbadd64420ffa029e611b2c73d82c7fca169971a6a2c11058186756e3f36da",
+          "version": "1.1.1",
+          "content_sha256": "a5869891d9c6e0ec5f4c11a969d5049dcbea357ffc1b265f88758b30936d52b2",
           "source": "simai/ui-source"
         },
         {
           "id": "smart.range-slider",
-          "version": "1.2.0",
-          "content_sha256": "10c1da473f3b3cfb40566a458af082c42b13c4caeac4da23ba11db1e399324f7",
+          "version": "1.2.1",
+          "content_sha256": "1795daeb85682ee63a6dd81b8bcd17ab7b6aedfe431f3ff0f6c52afcdfd64a34",
           "source": "simai/ui-source"
         }
       ]
@@ -990,14 +990,14 @@
       "units": [
         {
           "id": "component.menu",
-          "version": "1.0.0",
-          "content_sha256": "7e50c45541ace72fc46b103737a47ec807dcfac0561f42269c6de212d9320429",
+          "version": "1.1.0",
+          "content_sha256": "c8bb23f351ddff5e66de5646f9d48852e9e9b7689bdd2428c8c134e16b896e16",
           "source": "simai/ui-source"
         },
         {
           "id": "smart.menu",
-          "version": "1.1.4",
-          "content_sha256": "d0794681e331b382d146e87a552aff747b011ed25dd15633dc4294543689bf32",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
           "source": "simai/ui-source"
         }
       ]
@@ -1070,8 +1070,8 @@
       "units": [
         {
           "id": "component.tabs",
-          "version": "1.0.0",
-          "content_sha256": "b8799dffc22251c08f5a13ef63f008f661bbd19311cf812073761870be9548da",
+          "version": "1.0.1",
+          "content_sha256": "559dcad8a0312478c8bfc42e887225ca918029667f7ba92a99b99e987c378df0",
           "source": "simai/ui-source"
         },
         {
@@ -1088,8 +1088,8 @@
         },
         {
           "id": "smart.tabs",
-          "version": "1.1.7",
-          "content_sha256": "70c4d361e6187b45b70375a218dab086cfb0bfa995a2a648d9ecfe41383f9136",
+          "version": "1.1.8",
+          "content_sha256": "ec3f4d330d780fdcefda571cbc57691cdc1a1d16d7dc7746c8010f2f22d99385",
           "source": "simai/ui-source"
         }
       ]
@@ -1425,8 +1425,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.0.1",
-          "content_sha256": "e908f3b76c9e08fea64cac10053a65e34cba20df125a79e96d6bad7c7a7fcb86",
+          "version": "1.2.0",
+          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
           "source": "simai/ui-pro"
         },
         {
@@ -1513,8 +1513,8 @@
         },
         {
           "id": "smart.range-slider",
-          "version": "1.2.0",
-          "content_sha256": "10c1da473f3b3cfb40566a458af082c42b13c4caeac4da23ba11db1e399324f7",
+          "version": "1.2.1",
+          "content_sha256": "1795daeb85682ee63a6dd81b8bcd17ab7b6aedfe431f3ff0f6c52afcdfd64a34",
           "source": "simai/ui-source"
         }
       ]
@@ -1536,8 +1536,8 @@
         },
         {
           "id": "smart.tabs",
-          "version": "1.1.7",
-          "content_sha256": "70c4d361e6187b45b70375a218dab086cfb0bfa995a2a648d9ecfe41383f9136",
+          "version": "1.1.8",
+          "content_sha256": "ec3f4d330d780fdcefda571cbc57691cdc1a1d16d7dc7746c8010f2f22d99385",
           "source": "simai/ui-source"
         }
       ]
@@ -1600,8 +1600,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.0.1",
-          "content_sha256": "e908f3b76c9e08fea64cac10053a65e34cba20df125a79e96d6bad7c7a7fcb86",
+          "version": "1.2.0",
+          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
           "source": "simai/ui-pro"
         },
         {
@@ -1671,6 +1671,12 @@
           "id": "smart.alert",
           "version": "1.1.5",
           "content_sha256": "1e5bd607dddf499133ca5317aca423d98f7ccb970d56cfa3b054ee09cd496b16",
+          "source": "simai/ui-source"
+        },
+        {
+          "id": "smart.download-file",
+          "version": "1.1.5",
+          "content_sha256": "2162619ee21b4816452ab692ebc3171ad7a2182e58a485f1a39c3b6ecdb17669",
           "source": "simai/ui-source"
         },
         {
@@ -1998,8 +2004,8 @@
         },
         {
           "id": "smart.menu",
-          "version": "1.1.4",
-          "content_sha256": "d0794681e331b382d146e87a552aff747b011ed25dd15633dc4294543689bf32",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
           "source": "simai/ui-source"
         },
         {
@@ -2028,8 +2034,8 @@
         },
         {
           "id": "smart.tabs",
-          "version": "1.1.7",
-          "content_sha256": "70c4d361e6187b45b70375a218dab086cfb0bfa995a2a648d9ecfe41383f9136",
+          "version": "1.1.8",
+          "content_sha256": "ec3f4d330d780fdcefda571cbc57691cdc1a1d16d7dc7746c8010f2f22d99385",
           "source": "simai/ui-source"
         },
         {
@@ -2247,8 +2253,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.0.1",
-          "content_sha256": "e908f3b76c9e08fea64cac10053a65e34cba20df125a79e96d6bad7c7a7fcb86",
+          "version": "1.2.0",
+          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
           "source": "simai/ui-pro"
         },
         {
@@ -2349,8 +2355,8 @@
         },
         {
           "id": "smart.image-field",
-          "version": "1.1.5",
-          "content_sha256": "ce0eb93e09f2c984de664a38750c7bada1c3e25844a1101100f306eb4376ae79",
+          "version": "1.1.6",
+          "content_sha256": "78590a3f38f95b30f3ceeb2085cf993242b1929fd70ed6bb0236eeed94f6dcbb",
           "source": "simai/ui-source"
         },
         {
@@ -2409,8 +2415,8 @@
         },
         {
           "id": "smart.menu",
-          "version": "1.1.4",
-          "content_sha256": "d0794681e331b382d146e87a552aff747b011ed25dd15633dc4294543689bf32",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
           "source": "simai/ui-source"
         },
         {
@@ -2493,8 +2499,8 @@
         },
         {
           "id": "smart.range-slider",
-          "version": "1.2.0",
-          "content_sha256": "10c1da473f3b3cfb40566a458af082c42b13c4caeac4da23ba11db1e399324f7",
+          "version": "1.2.1",
+          "content_sha256": "1795daeb85682ee63a6dd81b8bcd17ab7b6aedfe431f3ff0f6c52afcdfd64a34",
           "source": "simai/ui-source"
         },
         {
@@ -2523,8 +2529,8 @@
         },
         {
           "id": "smart.site-header",
-          "version": "1.0.0",
-          "content_sha256": "239563a84629a5cc25010a9919b6174da9ad5961e7bf3815b157d44fe83d89f9",
+          "version": "1.1.0",
+          "content_sha256": "6ebdefa8d90c3b8d52e5754b9219cd321cb1e6977167f4bd714f7b9da687ac65",
           "source": "simai/ui-source"
         },
         {
@@ -2565,8 +2571,8 @@
         },
         {
           "id": "smart.tabs",
-          "version": "1.1.7",
-          "content_sha256": "70c4d361e6187b45b70375a218dab086cfb0bfa995a2a648d9ecfe41383f9136",
+          "version": "1.1.8",
+          "content_sha256": "ec3f4d330d780fdcefda571cbc57691cdc1a1d16d7dc7746c8010f2f22d99385",
           "source": "simai/ui-source"
         },
         {
@@ -2700,8 +2706,8 @@
         },
         {
           "id": "smart.tabs",
-          "version": "1.1.7",
-          "content_sha256": "70c4d361e6187b45b70375a218dab086cfb0bfa995a2a648d9ecfe41383f9136",
+          "version": "1.1.8",
+          "content_sha256": "ec3f4d330d780fdcefda571cbc57691cdc1a1d16d7dc7746c8010f2f22d99385",
           "source": "simai/ui-source"
         }
       ]
@@ -2780,8 +2786,8 @@
         },
         {
           "id": "smart.menu",
-          "version": "1.1.4",
-          "content_sha256": "d0794681e331b382d146e87a552aff747b011ed25dd15633dc4294543689bf32",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
           "source": "simai/ui-source"
         },
         {
@@ -2810,8 +2816,8 @@
         },
         {
           "id": "smart.range-slider",
-          "version": "1.2.0",
-          "content_sha256": "10c1da473f3b3cfb40566a458af082c42b13c4caeac4da23ba11db1e399324f7",
+          "version": "1.2.1",
+          "content_sha256": "1795daeb85682ee63a6dd81b8bcd17ab7b6aedfe431f3ff0f6c52afcdfd64a34",
           "source": "simai/ui-source"
         },
         {
@@ -3082,8 +3088,8 @@
         },
         {
           "id": "smart.menu",
-          "version": "1.1.4",
-          "content_sha256": "d0794681e331b382d146e87a552aff747b011ed25dd15633dc4294543689bf32",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
           "source": "simai/ui-source"
         }
       ]
@@ -3337,9 +3343,15 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.0.1",
-          "content_sha256": "e908f3b76c9e08fea64cac10053a65e34cba20df125a79e96d6bad7c7a7fcb86",
+          "version": "1.2.0",
+          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
           "source": "simai/ui-pro"
+        },
+        {
+          "id": "smart.download-file",
+          "version": "1.1.5",
+          "content_sha256": "2162619ee21b4816452ab692ebc3171ad7a2182e58a485f1a39c3b6ecdb17669",
+          "source": "simai/ui-source"
         },
         {
           "id": "smart.inline-editor",
@@ -3383,8 +3395,8 @@
         },
         {
           "id": "smart.image-field",
-          "version": "1.1.5",
-          "content_sha256": "ce0eb93e09f2c984de664a38750c7bada1c3e25844a1101100f306eb4376ae79",
+          "version": "1.1.6",
+          "content_sha256": "78590a3f38f95b30f3ceeb2085cf993242b1929fd70ed6bb0236eeed94f6dcbb",
           "source": "simai/ui-source"
         },
         {
@@ -3601,9 +3613,15 @@
           "source": "simai/ui-source"
         },
         {
+          "id": "smart.menu",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
+          "source": "simai/ui-source"
+        },
+        {
           "id": "smart.site-header",
-          "version": "1.0.0",
-          "content_sha256": "239563a84629a5cc25010a9919b6174da9ad5961e7bf3815b157d44fe83d89f9",
+          "version": "1.1.0",
+          "content_sha256": "6ebdefa8d90c3b8d52e5754b9219cd321cb1e6977167f4bd714f7b9da687ac65",
           "source": "simai/ui-source"
         }
       ]
@@ -4098,8 +4116,8 @@
       "units": [
         {
           "id": "smart.image-field",
-          "version": "1.1.5",
-          "content_sha256": "ce0eb93e09f2c984de664a38750c7bada1c3e25844a1101100f306eb4376ae79",
+          "version": "1.1.6",
+          "content_sha256": "78590a3f38f95b30f3ceeb2085cf993242b1929fd70ed6bb0236eeed94f6dcbb",
           "source": "simai/ui-source"
         }
       ]
@@ -4153,8 +4171,8 @@
       "units": [
         {
           "id": "smart.range-slider",
-          "version": "1.2.0",
-          "content_sha256": "10c1da473f3b3cfb40566a458af082c42b13c4caeac4da23ba11db1e399324f7",
+          "version": "1.2.1",
+          "content_sha256": "1795daeb85682ee63a6dd81b8bcd17ab7b6aedfe431f3ff0f6c52afcdfd64a34",
           "source": "simai/ui-source"
         }
       ]
@@ -4340,8 +4358,8 @@
       "units": [
         {
           "id": "smart.menu",
-          "version": "1.1.4",
-          "content_sha256": "d0794681e331b382d146e87a552aff747b011ed25dd15633dc4294543689bf32",
+          "version": "1.2.0",
+          "content_sha256": "7941fd8b2f7e384c8670baa8e7fb48f1c828e08f412475f1f5b842e3dad56407",
           "source": "simai/ui-source"
         }
       ]
@@ -4402,8 +4420,8 @@
         },
         {
           "id": "smart.tabs",
-          "version": "1.1.7",
-          "content_sha256": "70c4d361e6187b45b70375a218dab086cfb0bfa995a2a648d9ecfe41383f9136",
+          "version": "1.1.8",
+          "content_sha256": "ec3f4d330d780fdcefda571cbc57691cdc1a1d16d7dc7746c8010f2f22d99385",
           "source": "simai/ui-source"
         }
       ]

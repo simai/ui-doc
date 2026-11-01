@@ -28,7 +28,7 @@ description: "Карта стандартов показывает все ста
 | сквозной | Жизненный цикл изменений | `simai.change-lifecycle` | 1.0.0 | Как публичное имя уходит из Framework | схема журнала, политика сроков |
 | сквозной | Правила взаимодействия | `simai.interaction-rules` | 1.0.0 | Как любой смарт-компонент загружается, говорит с соседями и рисует | — |
 | сквозной | Разработка с ИИ | `simai.ai-development` | 1.0.0 | Как ИИ-агент разрабатывает на Framework и вместе с ним: контракты, публичная поверхность, выпуски, проверка и приёмка | — |
-| 2 | Фоновый эффект | `simai.effect` | 1.2.0 | Анимированный фон в области страницы: манифест, модуль, правила работы, набор проверок | Standard Contract; схема манифеста эффекта; правила взаимодействия |
+| 2 | Фоновый эффект | `simai.effect` | 1.3.0 | Анимированный фон в области страницы: манифест, модуль, правила работы, набор проверок | Standard Contract; схема манифеста эффекта; правила взаимодействия |
 
 **Переиздания без новых требований.** Стандарт закрепляет то, на что
 опирается, по версии и хешу (см. [Закрепление по хешу](/ru/guide/standards/what-is/#закрепление-по-хешу)), поэтому новое издание опоры
@@ -101,8 +101,8 @@ Recipe и вышел изданием 1.0.3. Динамический соста
 | Схема описания фрагмента | [`/ai/standards/interface-fragment-schema/1.2.0/descriptor.schema.json`](/ai/standards/interface-fragment-schema/1.2.0/descriptor.schema.json) |
 | Конверт правил взаимодействия | [`/ai/standards/simai.interaction-rules/1.0.0/standard.json`](/ai/standards/simai.interaction-rules/1.0.0/standard.json) |
 | Конверт разработки с ИИ | [`/ai/standards/simai.ai-development/1.0.0/standard.json`](/ai/standards/simai.ai-development/1.0.0/standard.json) |
-| Конверт фонового эффекта | [`/ai/standards/simai.effect/1.2.0/standard.json`](/ai/standards/simai.effect/1.2.0/standard.json) |
-| Схема манифеста эффекта | [`/ai/standards/effect-schema/1.2.0/effect.schema.json`](/ai/standards/effect-schema/1.2.0/effect.schema.json) |
+| Конверт фонового эффекта | [`/ai/standards/simai.effect/1.3.0/standard.json`](/ai/standards/simai.effect/1.3.0/standard.json) |
+| Схема манифеста эффекта | [`/ai/standards/effect-schema/1.3.0/effect.schema.json`](/ai/standards/effect-schema/1.3.0/effect.schema.json) |
 | Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
 | Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.1/standard.json`](/ai/standards/simai.component-package/1.1.1/standard.json) |
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |

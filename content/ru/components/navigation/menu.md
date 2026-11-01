@@ -52,6 +52,20 @@ profile: reference
 :::example {id="components/menu/layouts" label="Вертикальное, горизонтальное и дерево документации"}
 :::
 
+### Навигация в шапке
+
+`sf-menu--navigation` на корневом списке — разделы сайта, как их рисует
+шапка: строки без рамки и заливки, под указателем — лёгкая заливка
+состояния (`--sf-surface-transparent-hover`, при нажатии `-active`),
+открытая ветка — `--sf-surface-transparent-select`, текущая страница
+(`aria-current="page"` или `"true"` на пункте или ссылке) — плашка
+`--sf-surface-container-active`, которая под указателем не меняется. Высота,
+отступы и шрифт — обычной строки меню. Работает с `sf-menu--horizontal` и без
+него; в режиме принудительных цветов текущая страница обводится рамкой.
+
+:::example {id="components/menu/navigation" label="Разделы сайта в шапке"}
+:::
+
 ### Подменю горизонтального меню
 
 В горизонтальном меню подменю первого уровня открывается вниз, следующие —
@@ -143,7 +157,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-menu` |
 | Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-item` |
-| Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal` |
+| Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--navigation` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -177,7 +191,7 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation`: `var(--sf-menu-gap, var(--sf-space-1/4))` | `gap` |
 | `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-border-color, var(--sf-surface-container))` | `border-color` |
 | `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width` |

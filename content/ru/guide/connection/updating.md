@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-3b75bb31a203` это ревизия
-`b5a55fd032ca1b087c0cd9adf7c046d306bd2f92`.
+выпуска `ui-1232b187244c` это ревизия
+`f7616a2a922d29e3d952eab5df1966bf78fd6a71`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `larena`, например
-  `SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/27366c53cfdfd25f1e05ae76f7d927f39b9c544e/smart'}`
+  `SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/f8939812c7f977a1a62e8440f326adf249ae72b9/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/larena-ui` (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)).
