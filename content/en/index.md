@@ -16,7 +16,7 @@ an English page.
 ## What you can build
 
 The admin, the chat and the editor are live: click and type in them. A tab
-loads when you open it. The demo data is in Russian.
+loads when you open it.
 
 :::internal_preview {size=tall title="Admin, chat and editor"}
 [Open the demo](/demos/home/showcase/)
