@@ -2414,15 +2414,15 @@
             "schema_version": 2,
             "package": "pro",
             "requires": "ui-c4d39d528148",
-            "mount": "_docara/framework-packages/pro/576a2692edb021bffe04fc93041cea4ab64f6ea4",
+            "mount": "_docara/framework-packages/pro/5d68df26ef3d34669be874d096a7bb9c62495a11",
             "receipt": {
                 "schema": "simai.framework.product-package-receipt",
                 "schema_version": 1,
                 "package_source": {
                     "repository": "simai/ui-pro",
-                    "revision": "576a2692edb021bffe04fc93041cea4ab64f6ea4",
+                    "revision": "5d68df26ef3d34669be874d096a7bb9c62495a11",
                     "path": "components",
-                    "tree": "ee4566dd8b1cf78694ba55d03dbd754cb1ab654d"
+                    "tree": "14b175a232bc5d0f22e66318023c7cb8d361c0d1"
                 },
                 "framework_source": {
                     "repository": "simai/ui-source",
@@ -2432,8 +2432,8 @@
                     "repository": "simai/ui-builder",
                     "revision": "a89508ce28acf00ca5b987059a424bfe1039f187"
                 },
-                "manifest_sha256": "52d2f0134b18e105983bc3e4f7c68909cc6dfecc6e26e5222554bdef046292b5",
-                "archive_sha256": "9a0d993b08b0dd95f78a6da8ee75f1fac23f573a72205783d2a8f6fb3c793f38"
+                "manifest_sha256": "89404ed7319648b1d301fdbdde81a61d58862320beb7f7313bb9d28785795f81",
+                "archive_sha256": "0439d5525351979b4c07181343038d60a8efc7ddde20f9731a595377450b135c"
             },
             "files": {
                 "smart/admin-menu/css/admin-menu.css": {
@@ -2533,7 +2533,7 @@
                     "sha256": "d58396b0bb91f2a86d94f47440b5e6b2c3184060d61b2d0c5ca6125de37bf0b4"
                 },
                 "smart/table/js/table.js": {
-                    "sha256": "0ae8c197f63eae31d96c389f4e7e70b1c421ed917c869de0d9831ef2afe1e4a6"
+                    "sha256": "a0891affc2c9a9f86a85c73f5d3c26a496a90b2480ac62dffdee15b6a7703fa1"
                 },
                 "smart/thread-list/css/thread-list.css": {
                     "sha256": "6a72ac828381a46cd5c0aca7429d31e65f3fde5e655c56d83da19fd79cb0304d"

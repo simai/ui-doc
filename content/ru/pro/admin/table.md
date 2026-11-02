@@ -914,8 +914,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/data-view`
-- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/data-view`
+- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -923,7 +923,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.data-view`, версия `1.13.3` |
+| Контракт | `smart.data-view`, версия `1.13.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1103,5 +1103,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/table`
-- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/table`
+- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/table/rule.js#name=cl-table`
