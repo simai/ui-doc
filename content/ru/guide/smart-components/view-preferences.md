@@ -24,7 +24,7 @@ description: "Как компоненты запоминают то, что че
 Вид хранится под ключом `<компонент>/<экземпляр>`: `sf-table/cms.solutions`,
 `sf-resizer/menu`. Экземпляр — постоянное имя того, что показывается
 (коллекция, меню); его компоненту передаёт атрибут, например `preferences-key`
-у таблицы или `storage-key` у [изменения ширины](/ru/smart-components/overlays/resizer/).
+у таблицы или `storage-key` у [изменения ширины](/ru/smart/overlays/resizer/).
 Без ключа ничего не запоминается: таблица-пример в документации остаётся
 чистой.
 
@@ -212,7 +212,7 @@ view.changeQuery({sort: [], per_page: 25, page: 1});
 
 ## Какие компоненты уже хранят вид
 
-- [Изменение ширины](/ru/smart-components/overlays/resizer/) — ширина панели
+- [Изменение ширины](/ru/smart/overlays/resizer/) — ширина панели
   под `sf-resizer/<storage-key>`.
 - [Представление данных](/ru/pro/admin/table/) — раскладка
   таблицы, сортировка и размер страницы под `sf-table/<preferences-key>`.
@@ -221,7 +221,7 @@ view.changeQuery({sort: [], per_page: 25, page: 1});
   навигации порта хранят его ручки под `sf-resizer/admin-nav-first` и
   `sf-resizer/admin-nav-second`.
 
-[Вкладки](/ru/smart-components/navigation/tabs/) с `configurable` вид не
+[Вкладки](/ru/smart/navigation/tabs/) с `configurable` вид не
 хранят: порядок и скрытые вкладки приходят событием
 `sf-tabs-settings-change`, и приложение сохраняет их само — у себя или через
 `SF.Preferences.write('sf-tabs/<ключ>', {v: 1, order, hidden})` — и

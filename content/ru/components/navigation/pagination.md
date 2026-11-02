@@ -79,7 +79,7 @@ profile: reference
 
 ### Поле номера страницы
 
-Для длинных списков, как в табличном представлении, номер страницы вводится в поле между стрелками: человек видит, где он, и переходит на любую страницу, набрав номер. Поле — `sf-pagination-page-field` с полем ввода `sf-input` и классом `sf-pagination-page-input`; стрелки «в начало», «назад», «вперёд», «в конец» — кнопки-иконки с классом `sf-pagination-direction`. Переход по введённому номеру выполняет ваш код. Смарт-компонент [`<sf-pagination>`](/ru/smart-components/navigation/pagination/) собирает эту раскладку сам: считает число страниц по `total` и `page-size`, переходит по `Enter` и сообщает о переходе событием `sf-page-change`.
+Для длинных списков, как в табличном представлении, номер страницы вводится в поле между стрелками: человек видит, где он, и переходит на любую страницу, набрав номер. Поле — `sf-pagination-page-field` с полем ввода `sf-input` и классом `sf-pagination-page-input`; стрелки «в начало», «назад», «вперёд», «в конец» — кнопки-иконки с классом `sf-pagination-direction`. Переход по введённому номеру выполняет ваш код. Смарт-компонент [`<sf-pagination>`](/ru/smart/navigation/pagination/) собирает эту раскладку сам: считает число страниц по `total` и `page-size`, переходит по `Enter` и сообщает о переходе событием `sf-page-change`.
 
 :::example {id="components/pagination/page-field" label="Поле номера страницы"}
 :::
@@ -219,5 +219,5 @@ profile: reference
 
 ## См. также
 
-- [Пагинация — смарт-компонент](/ru/smart-components/navigation/pagination/)
+- [Пагинация — смарт-компонент](/ru/smart/navigation/pagination/)
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)

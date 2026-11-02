@@ -18,8 +18,8 @@ for (const viewport of [{width:1440,height:1000},{width:390,height:844}]) {
   assert.ok(colors.length>0);assert.ok(colors.every(c=>c===colors[0]));
   if(viewport.width===390){await p.getByRole('button',{name:'Открыть навигацию',exact:true}).click();await p.getByText('Формы и ввод',{exact:true}).first().waitFor({state:'visible'});}
 }
-await p.goto(base+'/ru/smart-components/reference/buttons/',{waitUntil:'domcontentloaded'});
-await p.waitForURL('**/ru/smart-components/actions/buttons/');
+await p.goto(base+'/ru/smart/reference/buttons/',{waitUntil:'domcontentloaded'});
+await p.waitForURL('**/ru/smart/actions/buttons/');
 for(const route of ['page']) {
   await p.goto(base+'/ru/guide/smart-components/'+route+'/',{waitUntil:'domcontentloaded'});
   const frame=p.locator('[data-docara-block="internal-preview"] iframe').first();await frame.scrollIntoViewIfNeeded();

@@ -1924,7 +1924,7 @@
     },
     {
       "from": "ru/smart-components/complex",
-      "to": "ru/smart-components"
+      "to": "ru/smart"
     },
     {
       "from": "ru/smart-components/complex/admin-menu",
@@ -1936,7 +1936,7 @@
     },
     {
       "from": "ru/smart-components/content/editor",
-      "to": "ru/smart-components/editor/inline-editor"
+      "to": "ru/smart/editor/inline-editor"
     },
     {
       "from": "ru/smart-components/content/flags",
@@ -1944,7 +1944,7 @@
     },
     {
       "from": "ru/smart-components/content/list",
-      "to": "ru/smart-components/content/list-item"
+      "to": "ru/smart/content/list-item"
     },
     {
       "from": "ru/smart-components/examples",
@@ -1952,15 +1952,15 @@
     },
     {
       "from": "ru/smart-components/forms/form",
-      "to": "ru/smart-components/forms"
+      "to": "ru/smart/forms"
     },
     {
       "from": "ru/smart-components/forms/rating",
-      "to": "ru/smart-components/forms"
+      "to": "ru/smart/forms"
     },
     {
       "from": "ru/smart-components/introduction",
-      "to": "ru/smart-components"
+      "to": "ru/smart"
     },
     {
       "from": "ru/smart-components/lifecycle",
@@ -1968,7 +1968,7 @@
     },
     {
       "from": "ru/smart-components/reference",
-      "to": "ru/smart-components"
+      "to": "ru/smart"
     },
     {
       "from": "ru/smart-components/reference/admin-menu",
@@ -1976,63 +1976,63 @@
     },
     {
       "from": "ru/smart-components/reference/alert",
-      "to": "ru/smart-components/feedback/alert"
+      "to": "ru/smart/feedback/alert"
     },
     {
       "from": "ru/smart-components/reference/avatar",
-      "to": "ru/smart-components/content/avatar"
+      "to": "ru/smart/content/avatar"
     },
     {
       "from": "ru/smart-components/reference/avatars",
-      "to": "ru/smart-components/content/avatars"
+      "to": "ru/smart/content/avatars"
     },
     {
       "from": "ru/smart-components/reference/badges",
-      "to": "ru/smart-components/feedback/badges"
+      "to": "ru/smart/feedback/badges"
     },
     {
       "from": "ru/smart-components/reference/breadcrumbs",
-      "to": "ru/smart-components/navigation/breadcrumbs"
+      "to": "ru/smart/navigation/breadcrumbs"
     },
     {
       "from": "ru/smart-components/reference/buttons",
-      "to": "ru/smart-components/actions/buttons"
+      "to": "ru/smart/actions/buttons"
     },
     {
       "from": "ru/smart-components/reference/checkbox",
-      "to": "ru/smart-components/forms/checkbox"
+      "to": "ru/smart/forms/checkbox"
     },
     {
       "from": "ru/smart-components/reference/close",
-      "to": "ru/smart-components/actions/close"
+      "to": "ru/smart/actions/close"
     },
     {
       "from": "ru/smart-components/reference/context-menu",
-      "to": "ru/smart-components/navigation/context-menu"
+      "to": "ru/smart/navigation/context-menu"
     },
     {
       "from": "ru/smart-components/reference/country-code",
-      "to": "ru/smart-components/forms/country-code"
+      "to": "ru/smart/forms/country-code"
     },
     {
       "from": "ru/smart-components/reference/datepicker",
-      "to": "ru/smart-components/forms/datepicker"
+      "to": "ru/smart/forms/datepicker"
     },
     {
       "from": "ru/smart-components/reference/download-file",
-      "to": "ru/smart-components/actions/download-file"
+      "to": "ru/smart/actions/download-file"
     },
     {
       "from": "ru/smart-components/reference/drawer",
-      "to": "ru/smart-components/overlays/drawer"
+      "to": "ru/smart/overlays/drawer"
     },
     {
       "from": "ru/smart-components/reference/dropdown",
-      "to": "ru/smart-components/navigation/dropdown"
+      "to": "ru/smart/navigation/dropdown"
     },
     {
       "from": "ru/smart-components/reference/editor",
-      "to": "ru/smart-components/editor/inline-editor"
+      "to": "ru/smart/editor/inline-editor"
     },
     {
       "from": "ru/smart-components/reference/fab",
@@ -2040,11 +2040,11 @@
     },
     {
       "from": "ru/smart-components/reference/file-preview",
-      "to": "ru/smart-components/content/file-preview"
+      "to": "ru/smart/content/file-preview"
     },
     {
       "from": "ru/smart-components/reference/file-upload",
-      "to": "ru/smart-components/forms/file-upload"
+      "to": "ru/smart/forms/file-upload"
     },
     {
       "from": "ru/smart-components/reference/flags",
@@ -2052,23 +2052,23 @@
     },
     {
       "from": "ru/smart-components/reference/form",
-      "to": "ru/smart-components/forms"
+      "to": "ru/smart/forms"
     },
     {
       "from": "ru/smart-components/reference/gallery",
-      "to": "ru/smart-components/content/gallery"
+      "to": "ru/smart/content/gallery"
     },
     {
       "from": "ru/smart-components/reference/icon-buttons",
-      "to": "ru/smart-components/actions/icon-buttons"
+      "to": "ru/smart/actions/icon-buttons"
     },
     {
       "from": "ru/smart-components/reference/icons",
-      "to": "ru/smart-components/content/icons"
+      "to": "ru/smart/content/icons"
     },
     {
       "from": "ru/smart-components/reference/inputs",
-      "to": "ru/smart-components/forms/inputs"
+      "to": "ru/smart/forms/inputs"
     },
     {
       "from": "ru/smart-components/reference/link",
@@ -2076,63 +2076,63 @@
     },
     {
       "from": "ru/smart-components/reference/list",
-      "to": "ru/smart-components/content/list-item"
+      "to": "ru/smart/content/list-item"
     },
     {
       "from": "ru/smart-components/reference/list-item",
-      "to": "ru/smart-components/content/list-item"
+      "to": "ru/smart/content/list-item"
     },
     {
       "from": "ru/smart-components/reference/modal",
-      "to": "ru/smart-components/overlays/modal"
+      "to": "ru/smart/overlays/modal"
     },
     {
       "from": "ru/smart-components/reference/pagination",
-      "to": "ru/smart-components/navigation/pagination"
+      "to": "ru/smart/navigation/pagination"
     },
     {
       "from": "ru/smart-components/reference/progress-bar",
-      "to": "ru/smart-components/feedback/progress-bar"
+      "to": "ru/smart/feedback/progress-bar"
     },
     {
       "from": "ru/smart-components/reference/progress-scale",
-      "to": "ru/smart-components/feedback/progress-scale"
+      "to": "ru/smart/feedback/progress-scale"
     },
     {
       "from": "ru/smart-components/reference/radio",
-      "to": "ru/smart-components/forms/radio"
+      "to": "ru/smart/forms/radio"
     },
     {
       "from": "ru/smart-components/reference/range-slider",
-      "to": "ru/smart-components/forms/range-slider"
+      "to": "ru/smart/forms/range-slider"
     },
     {
       "from": "ru/smart-components/reference/rating",
-      "to": "ru/smart-components/forms"
+      "to": "ru/smart/forms"
     },
     {
       "from": "ru/smart-components/reference/reference-link",
-      "to": "ru/smart-components/content/reference-link"
+      "to": "ru/smart/content/reference-link"
     },
     {
       "from": "ru/smart-components/reference/skeleton",
-      "to": "ru/smart-components/feedback/skeleton"
+      "to": "ru/smart/feedback/skeleton"
     },
     {
       "from": "ru/smart-components/reference/slider",
-      "to": "ru/smart-components/forms/slider"
+      "to": "ru/smart/forms/slider"
     },
     {
       "from": "ru/smart-components/reference/spinner",
-      "to": "ru/smart-components/feedback/spinner"
+      "to": "ru/smart/feedback/spinner"
     },
     {
       "from": "ru/smart-components/reference/steps",
-      "to": "ru/smart-components/navigation/steps"
+      "to": "ru/smart/navigation/steps"
     },
     {
       "from": "ru/smart-components/reference/switch",
-      "to": "ru/smart-components/forms/switch"
+      "to": "ru/smart/forms/switch"
     },
     {
       "from": "ru/smart-components/reference/table",
@@ -2140,35 +2140,35 @@
     },
     {
       "from": "ru/smart-components/reference/tabs",
-      "to": "ru/smart-components/navigation/tabs"
+      "to": "ru/smart/navigation/tabs"
     },
     {
       "from": "ru/smart-components/reference/tags",
-      "to": "ru/smart-components/content/tags"
+      "to": "ru/smart/content/tags"
     },
     {
       "from": "ru/smart-components/reference/textarea",
-      "to": "ru/smart-components/forms/textarea"
+      "to": "ru/smart/forms/textarea"
     },
     {
       "from": "ru/smart-components/reference/toast",
-      "to": "ru/smart-components/feedback/toast"
+      "to": "ru/smart/feedback/toast"
     },
     {
       "from": "ru/smart-components/reference/toggle",
-      "to": "ru/smart-components/forms/switch"
+      "to": "ru/smart/forms/switch"
     },
     {
       "from": "ru/smart-components/reference/tooltip",
-      "to": "ru/smart-components/feedback/tooltip"
+      "to": "ru/smart/feedback/tooltip"
     },
     {
       "from": "ru/smart-components/reference/tree",
-      "to": "ru/smart-components/navigation/tree"
+      "to": "ru/smart/navigation/tree"
     },
     {
       "from": "ru/smart-components/reference/tree-item",
-      "to": "ru/smart-components/navigation/tree-item"
+      "to": "ru/smart/navigation/tree-item"
     },
     {
       "from": "ru/smart-components/templates-and-assets",
@@ -2816,7 +2816,7 @@
     },
     {
       "from": "en/smart-components/introduction",
-      "to": "ru/smart-components"
+      "to": "ru/smart"
     },
     {
       "from": "en/start/glossary",
@@ -2936,7 +2936,7 @@
     },
     {
       "from": "ru/fundamentals/color/color-generator",
-      "to": "ru/smart-components/forms/theme-generator"
+      "to": "ru/smart/forms/theme-generator"
     },
     {
       "from": "ru/fundamentals/color/color-palette",
@@ -2980,7 +2980,7 @@
     },
     {
       "from": "ru/fundamentals/concept/color/color-generator",
-      "to": "ru/smart-components/forms/theme-generator"
+      "to": "ru/smart/forms/theme-generator"
     },
     {
       "from": "ru/fundamentals/concept/color/color-palette",
@@ -3268,7 +3268,7 @@
     },
     {
       "from": "ru/smart-components/badges",
-      "to": "ru/smart-components/feedback/badges"
+      "to": "ru/smart/feedback/badges"
     },
     {
       "from": "ru/start/glossary/index",
@@ -3508,7 +3508,7 @@
     },
     {
       "from": "ru/smart-components/forms/toggle",
-      "to": "ru/smart-components/forms/switch"
+      "to": "ru/smart/forms/switch"
     },
     {
       "from": "ru/smart-components/composite/admin-menu",
@@ -3573,6 +3573,310 @@
     {
       "from": "ru/smart-components/composite/content-editor",
       "to": "ru/pro/editor/content-editor"
+    },
+    {
+      "from": "ru/smart-components/actions/button-group",
+      "to": "ru/smart/actions/button-group"
+    },
+    {
+      "from": "ru/smart-components/actions/buttons",
+      "to": "ru/smart/actions/buttons"
+    },
+    {
+      "from": "ru/smart-components/actions/close",
+      "to": "ru/smart/actions/close"
+    },
+    {
+      "from": "ru/smart-components/actions/copy-button",
+      "to": "ru/smart/actions/copy-button"
+    },
+    {
+      "from": "ru/smart-components/actions/download-file",
+      "to": "ru/smart/actions/download-file"
+    },
+    {
+      "from": "ru/smart-components/actions/icon-buttons",
+      "to": "ru/smart/actions/icon-buttons"
+    },
+    {
+      "from": "ru/smart-components/actions",
+      "to": "ru/smart/actions"
+    },
+    {
+      "from": "ru/smart-components/actions/segmented",
+      "to": "ru/smart/actions/segmented"
+    },
+    {
+      "from": "ru/smart-components/composite",
+      "to": "ru/smart/composite"
+    },
+    {
+      "from": "ru/smart-components/composite/page-header",
+      "to": "ru/smart/composite/page-header"
+    },
+    {
+      "from": "ru/smart-components/composite/profile-picker",
+      "to": "ru/smart/composite/profile-picker"
+    },
+    {
+      "from": "ru/smart-components/composite/search",
+      "to": "ru/smart/composite/search"
+    },
+    {
+      "from": "ru/smart-components/composite/site-header",
+      "to": "ru/smart/composite/site-header"
+    },
+    {
+      "from": "ru/smart-components/content/accordion",
+      "to": "ru/smart/content/accordion"
+    },
+    {
+      "from": "ru/smart-components/content/avatar",
+      "to": "ru/smart/content/avatar"
+    },
+    {
+      "from": "ru/smart-components/content/avatars",
+      "to": "ru/smart/content/avatars"
+    },
+    {
+      "from": "ru/smart-components/content/file-preview",
+      "to": "ru/smart/content/file-preview"
+    },
+    {
+      "from": "ru/smart-components/content/gallery",
+      "to": "ru/smart/content/gallery"
+    },
+    {
+      "from": "ru/smart-components/content/icons",
+      "to": "ru/smart/content/icons"
+    },
+    {
+      "from": "ru/smart-components/content/include",
+      "to": "ru/smart/content/include"
+    },
+    {
+      "from": "ru/smart-components/content",
+      "to": "ru/smart/content"
+    },
+    {
+      "from": "ru/smart-components/content/list-item",
+      "to": "ru/smart/content/list-item"
+    },
+    {
+      "from": "ru/smart-components/content/reference-link",
+      "to": "ru/smart/content/reference-link"
+    },
+    {
+      "from": "ru/smart-components/content/tags",
+      "to": "ru/smart/content/tags"
+    },
+    {
+      "from": "ru/smart-components/editor/composition-overlay",
+      "to": "ru/smart/editor/composition-overlay"
+    },
+    {
+      "from": "ru/smart-components/editor",
+      "to": "ru/smart/editor"
+    },
+    {
+      "from": "ru/smart-components/editor/inline-editor",
+      "to": "ru/smart/editor/inline-editor"
+    },
+    {
+      "from": "ru/smart-components/editor/sortable",
+      "to": "ru/smart/editor/sortable"
+    },
+    {
+      "from": "ru/smart-components/feedback/alert",
+      "to": "ru/smart/feedback/alert"
+    },
+    {
+      "from": "ru/smart-components/feedback/badges",
+      "to": "ru/smart/feedback/badges"
+    },
+    {
+      "from": "ru/smart-components/feedback/empty-state",
+      "to": "ru/smart/feedback/empty-state"
+    },
+    {
+      "from": "ru/smart-components/feedback/help-mark",
+      "to": "ru/smart/feedback/help-mark"
+    },
+    {
+      "from": "ru/smart-components/feedback",
+      "to": "ru/smart/feedback"
+    },
+    {
+      "from": "ru/smart-components/feedback/progress-bar",
+      "to": "ru/smart/feedback/progress-bar"
+    },
+    {
+      "from": "ru/smart-components/feedback/progress-ring",
+      "to": "ru/smart/feedback/progress-ring"
+    },
+    {
+      "from": "ru/smart-components/feedback/progress-scale",
+      "to": "ru/smart/feedback/progress-scale"
+    },
+    {
+      "from": "ru/smart-components/feedback/skeleton",
+      "to": "ru/smart/feedback/skeleton"
+    },
+    {
+      "from": "ru/smart-components/feedback/spinner",
+      "to": "ru/smart/feedback/spinner"
+    },
+    {
+      "from": "ru/smart-components/feedback/toast",
+      "to": "ru/smart/feedback/toast"
+    },
+    {
+      "from": "ru/smart-components/feedback/tooltip",
+      "to": "ru/smart/feedback/tooltip"
+    },
+    {
+      "from": "ru/smart-components/forms/checkbox",
+      "to": "ru/smart/forms/checkbox"
+    },
+    {
+      "from": "ru/smart-components/forms/code-input",
+      "to": "ru/smart/forms/code-input"
+    },
+    {
+      "from": "ru/smart-components/forms/color",
+      "to": "ru/smart/forms/color"
+    },
+    {
+      "from": "ru/smart-components/forms/country-code",
+      "to": "ru/smart/forms/country-code"
+    },
+    {
+      "from": "ru/smart-components/forms/datepicker",
+      "to": "ru/smart/forms/datepicker"
+    },
+    {
+      "from": "ru/smart-components/forms/file-upload",
+      "to": "ru/smart/forms/file-upload"
+    },
+    {
+      "from": "ru/smart-components/forms/image-field",
+      "to": "ru/smart/forms/image-field"
+    },
+    {
+      "from": "ru/smart-components/forms",
+      "to": "ru/smart/forms"
+    },
+    {
+      "from": "ru/smart-components/forms/inputs",
+      "to": "ru/smart/forms/inputs"
+    },
+    {
+      "from": "ru/smart-components/forms/lookup",
+      "to": "ru/smart/forms/lookup"
+    },
+    {
+      "from": "ru/smart-components/forms/quantity",
+      "to": "ru/smart/forms/quantity"
+    },
+    {
+      "from": "ru/smart-components/forms/radio",
+      "to": "ru/smart/forms/radio"
+    },
+    {
+      "from": "ru/smart-components/forms/range-slider",
+      "to": "ru/smart/forms/range-slider"
+    },
+    {
+      "from": "ru/smart-components/forms/rich-text",
+      "to": "ru/smart/forms/rich-text"
+    },
+    {
+      "from": "ru/smart-components/forms/slider",
+      "to": "ru/smart/forms/slider"
+    },
+    {
+      "from": "ru/smart-components/forms/switch",
+      "to": "ru/smart/forms/switch"
+    },
+    {
+      "from": "ru/smart-components/forms/textarea",
+      "to": "ru/smart/forms/textarea"
+    },
+    {
+      "from": "ru/smart-components/forms/theme-generator",
+      "to": "ru/smart/forms/theme-generator"
+    },
+    {
+      "from": "ru/smart-components",
+      "to": "ru/smart"
+    },
+    {
+      "from": "ru/smart-components/navigation/breadcrumbs",
+      "to": "ru/smart/navigation/breadcrumbs"
+    },
+    {
+      "from": "ru/smart-components/navigation/contents",
+      "to": "ru/smart/navigation/contents"
+    },
+    {
+      "from": "ru/smart-components/navigation/context-menu",
+      "to": "ru/smart/navigation/context-menu"
+    },
+    {
+      "from": "ru/smart-components/navigation/dropdown",
+      "to": "ru/smart/navigation/dropdown"
+    },
+    {
+      "from": "ru/smart-components/navigation",
+      "to": "ru/smart/navigation"
+    },
+    {
+      "from": "ru/smart-components/navigation/menu",
+      "to": "ru/smart/navigation/menu"
+    },
+    {
+      "from": "ru/smart-components/navigation/pager",
+      "to": "ru/smart/navigation/pager"
+    },
+    {
+      "from": "ru/smart-components/navigation/pagination",
+      "to": "ru/smart/navigation/pagination"
+    },
+    {
+      "from": "ru/smart-components/navigation/steps",
+      "to": "ru/smart/navigation/steps"
+    },
+    {
+      "from": "ru/smart-components/navigation/tabs",
+      "to": "ru/smart/navigation/tabs"
+    },
+    {
+      "from": "ru/smart-components/navigation/tree-item",
+      "to": "ru/smart/navigation/tree-item"
+    },
+    {
+      "from": "ru/smart-components/navigation/tree",
+      "to": "ru/smart/navigation/tree"
+    },
+    {
+      "from": "ru/smart-components/overlays/drawer",
+      "to": "ru/smart/overlays/drawer"
+    },
+    {
+      "from": "ru/smart-components/overlays",
+      "to": "ru/smart/overlays"
+    },
+    {
+      "from": "ru/smart-components/overlays/modal",
+      "to": "ru/smart/overlays/modal"
+    },
+    {
+      "from": "ru/smart-components/overlays/popover",
+      "to": "ru/smart/overlays/popover"
+    },
+    {
+      "from": "ru/smart-components/overlays/resizer",
+      "to": "ru/smart/overlays/resizer"
     }
   ]
 }

@@ -508,7 +508,7 @@ if (result.status !== 'PASS') {
 ```
 
 Сборка — модуль `src/core/js/theme-palette.js` закреплённой ревизии, тот же
-расчёт, что у [генератора темы](/ru/smart-components/forms/theme-generator/): дважды, с
+расчёт, что у [генератора темы](/ru/smart/forms/theme-generator/): дважды, с
 побайтным сравнением. Результат в `--out`:
 
 | Файл | Что в нём |

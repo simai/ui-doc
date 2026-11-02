@@ -3469,7 +3469,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/button-group.md",
+      "place": "content/ru/smart/actions/button-group.md",
       "units": [
         {
           "id": "smart.button",
@@ -3486,7 +3486,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/buttons.md",
+      "place": "content/ru/smart/actions/buttons.md",
       "units": [
         {
           "id": "smart.button",
@@ -3503,7 +3503,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/close.md",
+      "place": "content/ru/smart/actions/close.md",
       "units": [
         {
           "id": "smart.close",
@@ -3520,7 +3520,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/copy-button.md",
+      "place": "content/ru/smart/actions/copy-button.md",
       "units": [
         {
           "id": "smart.copy-button",
@@ -3531,7 +3531,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/download-file.md",
+      "place": "content/ru/smart/actions/download-file.md",
       "units": [
         {
           "id": "smart.download-file",
@@ -3542,7 +3542,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/icon-buttons.md",
+      "place": "content/ru/smart/actions/icon-buttons.md",
       "units": [
         {
           "id": "smart.icon-button",
@@ -3553,7 +3553,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/actions/segmented.md",
+      "place": "content/ru/smart/actions/segmented.md",
       "units": [
         {
           "id": "smart.button",
@@ -3570,7 +3570,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/composite/page-header.md",
+      "place": "content/ru/smart/composite/page-header.md",
       "units": [
         {
           "id": "smart.admin-menu",
@@ -3605,7 +3605,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/composite/profile-picker.md",
+      "place": "content/ru/smart/composite/profile-picker.md",
       "units": [
         {
           "id": "smart.profile-picker",
@@ -3616,7 +3616,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/composite/search.md",
+      "place": "content/ru/smart/composite/search.md",
       "units": [
         {
           "id": "port.simai.search-port",
@@ -3645,7 +3645,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/composite/site-header.md",
+      "place": "content/ru/smart/composite/site-header.md",
       "units": [
         {
           "id": "smart.button-group",
@@ -3674,7 +3674,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/accordion.md",
+      "place": "content/ru/smart/content/accordion.md",
       "units": [
         {
           "id": "smart.accordion",
@@ -3697,7 +3697,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/avatar.md",
+      "place": "content/ru/smart/content/avatar.md",
       "units": [
         {
           "id": "smart.avatar",
@@ -3708,7 +3708,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/avatars.md",
+      "place": "content/ru/smart/content/avatars.md",
       "units": [
         {
           "id": "smart.avatar",
@@ -3725,7 +3725,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/file-preview.md",
+      "place": "content/ru/smart/content/file-preview.md",
       "units": [
         {
           "id": "smart.file-preview",
@@ -3736,7 +3736,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/gallery.md",
+      "place": "content/ru/smart/content/gallery.md",
       "units": [
         {
           "id": "smart.close",
@@ -3753,7 +3753,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/icons.md",
+      "place": "content/ru/smart/content/icons.md",
       "units": [
         {
           "id": "smart.icon",
@@ -3764,7 +3764,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/include.md",
+      "place": "content/ru/smart/content/include.md",
       "units": [
         {
           "id": "smart.include",
@@ -3775,7 +3775,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/list-item.md",
+      "place": "content/ru/smart/content/list-item.md",
       "units": [
         {
           "id": "smart.dropdown",
@@ -3798,7 +3798,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/reference-link.md",
+      "place": "content/ru/smart/content/reference-link.md",
       "units": [
         {
           "id": "smart.reference-link",
@@ -3809,7 +3809,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/content/tags.md",
+      "place": "content/ru/smart/content/tags.md",
       "units": [
         {
           "id": "smart.tag",
@@ -3820,7 +3820,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/editor/composition-overlay.md",
+      "place": "content/ru/smart/editor/composition-overlay.md",
       "units": [
         {
           "id": "smart.composition-overlay",
@@ -3837,7 +3837,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/editor/inline-editor.md",
+      "place": "content/ru/smart/editor/inline-editor.md",
       "units": [
         {
           "id": "smart.badge",
@@ -3866,7 +3866,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/editor/sortable.md",
+      "place": "content/ru/smart/editor/sortable.md",
       "units": [
         {
           "id": "smart.sortable",
@@ -3877,7 +3877,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/alert.md",
+      "place": "content/ru/smart/feedback/alert.md",
       "units": [
         {
           "id": "smart.alert",
@@ -3888,7 +3888,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/badges.md",
+      "place": "content/ru/smart/feedback/badges.md",
       "units": [
         {
           "id": "smart.badge",
@@ -3899,7 +3899,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/empty-state.md",
+      "place": "content/ru/smart/feedback/empty-state.md",
       "units": [
         {
           "id": "smart.button",
@@ -3916,7 +3916,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/help-mark.md",
+      "place": "content/ru/smart/feedback/help-mark.md",
       "units": [
         {
           "id": "smart.help-mark",
@@ -3927,7 +3927,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/progress-bar.md",
+      "place": "content/ru/smart/feedback/progress-bar.md",
       "units": [
         {
           "id": "smart.progress-bar",
@@ -3938,7 +3938,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/progress-ring.md",
+      "place": "content/ru/smart/feedback/progress-ring.md",
       "units": [
         {
           "id": "smart.avatar",
@@ -3961,7 +3961,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/progress-scale.md",
+      "place": "content/ru/smart/feedback/progress-scale.md",
       "units": [
         {
           "id": "smart.progress-scale",
@@ -3972,7 +3972,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/skeleton.md",
+      "place": "content/ru/smart/feedback/skeleton.md",
       "units": [
         {
           "id": "smart.skeleton",
@@ -3983,7 +3983,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/spinner.md",
+      "place": "content/ru/smart/feedback/spinner.md",
       "units": [
         {
           "id": "smart.button",
@@ -4006,7 +4006,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/toast.md",
+      "place": "content/ru/smart/feedback/toast.md",
       "units": [
         {
           "id": "smart.toast",
@@ -4017,7 +4017,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/feedback/tooltip.md",
+      "place": "content/ru/smart/feedback/tooltip.md",
       "units": [
         {
           "id": "smart.tooltip",
@@ -4028,7 +4028,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/checkbox.md",
+      "place": "content/ru/smart/forms/checkbox.md",
       "units": [
         {
           "id": "smart.checkbox",
@@ -4039,7 +4039,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/code-input.md",
+      "place": "content/ru/smart/forms/code-input.md",
       "units": [
         {
           "id": "smart.code-input",
@@ -4050,7 +4050,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/color.md",
+      "place": "content/ru/smart/forms/color.md",
       "units": [
         {
           "id": "smart.color",
@@ -4061,7 +4061,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/country-code.md",
+      "place": "content/ru/smart/forms/country-code.md",
       "units": [
         {
           "id": "smart.country-code",
@@ -4072,7 +4072,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/datepicker.md",
+      "place": "content/ru/smart/forms/datepicker.md",
       "units": [
         {
           "id": "smart.datepicker",
@@ -4083,7 +4083,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/file-upload.md",
+      "place": "content/ru/smart/forms/file-upload.md",
       "units": [
         {
           "id": "smart.file-upload",
@@ -4094,7 +4094,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/image-field.md",
+      "place": "content/ru/smart/forms/image-field.md",
       "units": [
         {
           "id": "smart.image-field",
@@ -4105,7 +4105,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/inputs.md",
+      "place": "content/ru/smart/forms/inputs.md",
       "units": [
         {
           "id": "smart.input",
@@ -4116,7 +4116,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/lookup.md",
+      "place": "content/ru/smart/forms/lookup.md",
       "units": [
         {
           "id": "smart.lookup",
@@ -4127,7 +4127,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/quantity.md",
+      "place": "content/ru/smart/forms/quantity.md",
       "units": [
         {
           "id": "smart.quantity",
@@ -4138,7 +4138,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/radio.md",
+      "place": "content/ru/smart/forms/radio.md",
       "units": [
         {
           "id": "smart.radio",
@@ -4149,7 +4149,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/range-slider.md",
+      "place": "content/ru/smart/forms/range-slider.md",
       "units": [
         {
           "id": "smart.range-slider",
@@ -4160,7 +4160,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/rich-text.md",
+      "place": "content/ru/smart/forms/rich-text.md",
       "units": [
         {
           "id": "smart.rich-text",
@@ -4177,7 +4177,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/slider.md",
+      "place": "content/ru/smart/forms/slider.md",
       "units": [
         {
           "id": "smart.slider",
@@ -4188,7 +4188,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/switch.md",
+      "place": "content/ru/smart/forms/switch.md",
       "units": [
         {
           "id": "smart.switch",
@@ -4199,7 +4199,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/textarea.md",
+      "place": "content/ru/smart/forms/textarea.md",
       "units": [
         {
           "id": "smart.button",
@@ -4228,7 +4228,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/theme-generator.md",
+      "place": "content/ru/smart/forms/theme-generator.md",
       "units": [
         {
           "id": "smart.color",
@@ -4245,7 +4245,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/breadcrumbs.md",
+      "place": "content/ru/smart/navigation/breadcrumbs.md",
       "units": [
         {
           "id": "smart.breadcrumbs",
@@ -4256,7 +4256,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/contents.md",
+      "place": "content/ru/smart/navigation/contents.md",
       "units": [
         {
           "id": "smart.contents",
@@ -4279,7 +4279,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/context-menu.md",
+      "place": "content/ru/smart/navigation/context-menu.md",
       "units": [
         {
           "id": "smart.button",
@@ -4302,7 +4302,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/dropdown.md",
+      "place": "content/ru/smart/navigation/dropdown.md",
       "units": [
         {
           "id": "smart.dropdown",
@@ -4319,7 +4319,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/menu.md",
+      "place": "content/ru/smart/navigation/menu.md",
       "units": [
         {
           "id": "smart.menu",
@@ -4330,7 +4330,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/pager.md",
+      "place": "content/ru/smart/navigation/pager.md",
       "units": [
         {
           "id": "smart.pager",
@@ -4347,7 +4347,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/pagination.md",
+      "place": "content/ru/smart/navigation/pagination.md",
       "units": [
         {
           "id": "smart.pagination",
@@ -4358,7 +4358,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/steps.md",
+      "place": "content/ru/smart/navigation/steps.md",
       "units": [
         {
           "id": "smart.steps",
@@ -4369,7 +4369,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/tabs.md",
+      "place": "content/ru/smart/navigation/tabs.md",
       "units": [
         {
           "id": "smart.button",
@@ -4392,7 +4392,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/tree-item.md",
+      "place": "content/ru/smart/navigation/tree-item.md",
       "units": [
         {
           "id": "smart.icon",
@@ -4415,7 +4415,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/navigation/tree.md",
+      "place": "content/ru/smart/navigation/tree.md",
       "units": [
         {
           "id": "smart.icon",
@@ -4438,7 +4438,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/overlays/drawer.md",
+      "place": "content/ru/smart/overlays/drawer.md",
       "units": [
         {
           "id": "smart.drawer",
@@ -4455,7 +4455,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/overlays/modal.md",
+      "place": "content/ru/smart/overlays/modal.md",
       "units": [
         {
           "id": "smart.drawer",
@@ -4478,7 +4478,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/overlays/popover.md",
+      "place": "content/ru/smart/overlays/popover.md",
       "units": [
         {
           "id": "smart.button",
@@ -4495,7 +4495,7 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/overlays/resizer.md",
+      "place": "content/ru/smart/overlays/resizer.md",
       "units": [
         {
           "id": "smart.resizer",

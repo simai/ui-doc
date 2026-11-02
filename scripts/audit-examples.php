@@ -74,6 +74,12 @@ foreach ($markdownPaths as $path) {
             }
             $run[] = $headings[$index];
         }
+        // An example under a later section of its own is not the «Пример»
+        // section's demonstration; a fence there is that section's markup.
+        $afterRun = (int) $run[0][0][1] + strlen((string) $run[0][0][0]);
+        if (preg_match('/^#{2,6}\s+/m', substr($before, $afterRun)) === 1) {
+            continue;
+        }
         $region = substr($before, (int) $run[count($run) - 1][0][1]);
         $redundantFences += preg_match_all('/^(`{3,}|~{3,})[^\n]*\R.*?^\1\h*$/ms', $region);
         $duplicateHeadings += max(0, count($run) - 1);

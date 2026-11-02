@@ -102,7 +102,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 картинка `image-url` важнее знака. Нет `avatar` — нет и колонки под него: в списке
 только с ИИ-разговорами пустого места слева не остаётся. Инициалы рисуются
 приглушённым цветом по названию разговора (1.6.1, `sf-avatar` `tone="auto"`, см.
-[Цвет инициалов](/ru/smart-components/content/avatar/#цвет-инициалов)): у одного
+[Цвет инициалов](/ru/smart/content/avatar/#цвет-инициалов)): у одного
 названия цвет всегда один.
 `activity` (`running`, `waiting`, `done`, `stopped`, `failed`) is where the work in the
 conversation is: a compact `sf-badge` in the row, its word the accessible name.

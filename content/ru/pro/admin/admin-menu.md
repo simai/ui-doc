@@ -10,7 +10,7 @@ description: "Даёт административному приложению �
 Берите его целиком, а не собирайте меню из классов
 [Admin Menu](/ru/components/internal/admin-menu/): состояние, поиск и
 настройки принадлежат этому компоненту. Заголовок, число записей и действия
-страницы показывает [Шапка страницы](/ru/smart-components/composite/page-header/).
+страницы показывает [Шапка страницы](/ru/smart/composite/page-header/).
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
 Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
@@ -103,7 +103,7 @@ Framework: поставляется пакетом `larena` из репозит�
 
 ### Меню в колонке с ручкой ширины
 
-Ширину колонки меню меняет [ручка ширины](/ru/smart-components/overlays/resizer/)
+Ширину колонки меню меняет [ручка ширины](/ru/smart/overlays/resizer/)
 `<sf-resizer>`, которая стоит в той же колонке рядом с меню. Меню занимает
 колонку по высоте и прокручивает свои пункты само, поэтому колонке
 прокрутка не нужна.
@@ -133,7 +133,7 @@ Framework: поставляется пакетом `larena` из репозит�
   `<sf-admin-menu>` — шестая, поэтому своего `z-index` в CSS проекта не нужно;
 - ширину колонки хранит ручка под `sf-resizer/<storage-key>`
   ([персональный вид](/ru/guide/smart-components/view-preferences/)), а
-  ширину в первом кадре пишет сервер в `style` колонки (см. [Где хранится ширина](/ru/smart-components/overlays/resizer/#где-хранится-ширина)).
+  ширину в первом кадре пишет сервер в `style` колонки (см. [Где хранится ширина](/ru/smart/overlays/resizer/#где-хранится-ширина)).
 
 Свой персональный вид у меню отдельный: свёрнутость и открытый раздел оно
 хранит под ключом `sf-admin-menu/main`, и с шириной колонки он не
@@ -203,7 +203,7 @@ profile})` фиксирует сохранение, `applySettingsError(error)` 
 принимает значения `root`, `section`, `page`, `divider`, `heading`, `link`, а
 `level="install"` выделяет строки, общие для всех сайтов. Счётчики в строках —
 только непрочитанное и ожидающее; число записей показывает
-[Шапка страницы](/ru/smart-components/composite/page-header/). Если в ответе есть
+[Шапка страницы](/ru/smart/composite/page-header/). Если в ответе есть
 `notifications`, меню рисует строку уведомлений с числом непрочитанных.
 
 Переход по строке меню не выполняет: оно поднимает `item.open`, и после ответа
@@ -378,6 +378,6 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## См. также
 
-- [Шапка страницы](/ru/smart-components/composite/page-header/) — шапка страницы рядом с меню.
+- [Шапка страницы](/ru/smart/composite/page-header/) — шапка страницы рядом с меню.
 - [Представление свойств](/ru/pro/admin/property-view/) — карточка записи из того же пакета `larena`.
 - [Admin Menu](/ru/components/internal/admin-menu/) — классы, на которых построено меню.

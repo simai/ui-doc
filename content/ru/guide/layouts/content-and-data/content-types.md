@@ -52,7 +52,7 @@ v1, те же id, проверка, канонический вид и отпе�
 | `content.divider` | | | | компонент [разделитель](/ru/components/content/content-divider/) |
 | `content.table` | `rows` (ячейки — текст), `caption` | `header` (row, column, both, none), `align` | | утилита `table-frame` |
 | `content.figure` | `src`, `alt`, `width`, `height`, `caption` | `ratio` (auto, 1/1, 4/3, 3/2, 16/9, 21/9), `fit` (cover, contain) | | компонент [рисунок](/ru/components/content/figure/) |
-| `content.file` | `href`, `label`, `mime`, `size` (байты), `value` (ключ хранилища) | | | строка [`sf-download-file`](/ru/smart-components/actions/download-file/): значок по типу, название, размер |
+| `content.file` | `href`, `label`, `mime`, `size` (байты), `value` (ключ хранилища) | | | строка [`sf-download-file`](/ru/smart/actions/download-file/): значок по типу, название, размер |
 | `content.alert` | `title` (текст) | `status` (neutral, info, success, warning, error), `appearance` (default, outlined, flat) | `default` | классы `sf-alert` |
 | `content.details` | `summary` (текст) | `open`, `layout` (surface, lines) | `default` | `details`: раскрывается без скрипта |
 | `content.tabs` | `label` | | `tabs`: `content.tab` | компонент `tabs` |

@@ -46,10 +46,10 @@ export const SMOKE_PAGES = [
   '/ru/guide/connection/js-api/',
   '/ru/components/',
   '/ru/components/navigation/menu/',
-  '/ru/smart-components/overlays/drawer/',
-  '/ru/smart-components/overlays/modal/',
+  '/ru/smart/overlays/drawer/',
+  '/ru/smart/overlays/modal/',
   '/ru/pro/admin/table/',
-  '/ru/smart-components/forms/theme-generator/',
+  '/ru/smart/forms/theme-generator/',
   '/ru/utilities/',
   '/ru/utilities/tables/',
   // English shows the Russian original with a notice until a translation is

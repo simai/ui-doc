@@ -56,7 +56,7 @@ description: "Смарт-компоненты попадают в макет к�
 `icon`, `icon-start`, `icon-end`, `icon-position`, `spacing`, `radius`,
 `loading`, `disabled`, `native-type`, `shortcut`, `shortcut-listen`,
 `expanded`, `aria-label`. Значения
-у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart-components/actions/buttons/)). Вид кнопки задаёт
+у них те же, что у атрибутов кнопки ([Кнопки](/ru/smart/actions/buttons/)). Вид кнопки задаёт
 `appearance`; прежнего имени `type` в этом списке нет, и в документе макета
 его не пишут.
 

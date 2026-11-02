@@ -37,10 +37,14 @@ const args = new Set(process.argv.slice(2));
 const checkOnly = args.has('--check');
 const listMissing = args.has('--missing');
 const HEADING = '## Справочник API';
+// A page on the third Smart standard (owner, 2026-11-02) takes the reference
+// as tables under «Справочник», with the component's facts last.
+const HEADING3 = '## Справочник';
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
 const lock = readJson(join(root, 'simai-framework.lock.json'));
 const settings = readJson(join(root, 'config/smart-reference.json'));
+const enrolment = readJson(join(root, 'config/reference-pages.json')).pages;
 const dictionaryPath = join(root, 'config/smart-reference.ru.json');
 const dictionary = existsSync(dictionaryPath) ? readJson(dictionaryPath).strings : {};
 
@@ -127,7 +131,7 @@ for (const [name, projection] of Object.entries(lock.package_projections ?? {}))
 // Pro section (simai/ui-pro). A named page is a path under content/ru.
 const contentRoot = join(root, 'content/ru');
 const pageByName = new Map();
-for (const catalogue of ['smart-components', 'pro']) {
+for (const catalogue of ['smart', 'pro']) {
   const catalogueRoot = join(contentRoot, catalogue);
   for (const group of readdirSync(catalogueRoot, {withFileTypes: true})) {
     if (!group.isDirectory()) continue;
@@ -500,6 +504,151 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
   return lines;
 };
 
+// The third standard: attributes, methods and events as tables, earlier names
+// folded away, and what the component is (contract, delivery, readiness,
+// accessibility, source) in one short block at the end. The markup lives in
+// the page's own «Разметка»; the layout document's rule lives in its guide.
+const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) => {
+  const tag = manifest.custom_element;
+  const lines = [];
+  const h = single ? '###' : '####';
+  if (!single) lines.push(`### \`<${tag}>\``, '');
+
+  const inputs = Object.entries(manifest.inputs?.properties ?? {});
+  const legacy = legacyFor(tag, manifest.inputs?.properties ?? {});
+  const ownAxis = new Set(legacy
+    .filter(({record, item}) => record.kind === 'attribute' && staysOwnAxis(folder, item.from, item.to))
+    .map(({item}) => item.from));
+  const legacyNames = new Set(legacy
+    .filter(({record, item}) => record.kind === 'attribute' && !ownAxis.has(item.from))
+    .map(({item}) => item.from));
+  const hasAxis = inputs.some(([name]) => AXES.includes(name));
+  const unlisted = inputs.map(([name]) => name)
+    .filter((name) => hasAxis && LEGACY_WORDS.includes(name) && !legacyNames.has(name));
+  const current = inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name));
+  lines.push(`${h} Атрибуты`, '');
+  if (current.length === 0) {
+    lines.push('Атрибутов нет.', '');
+  } else {
+    lines.push('| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|');
+    for (const [name, schema] of current) {
+      const fallback = schema.default === undefined ? '—' : literal(schema.default);
+      const choice = values(schema) !== '—'
+        ? values(schema)
+        : (schema.examples ? `например ${schema.examples.map(literal).join(', ')}` : '—');
+      lines.push(`| ${code(name)} | ${typeName(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`);
+    }
+    lines.push('', 'Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase:'
+      + ' `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.');
+    for (const [attribute, property] of Object.entries(PROPERTY_EXCEPTIONS[folder] ?? {})) {
+      lines.push(`Свойство атрибута ${code(attribute)} называется ${code(property)}.`);
+    }
+    lines.push('');
+  }
+  if (legacy.length || unlisted.length) {
+    const rows = new Set();
+    const properties = manifest.inputs?.properties ?? {};
+    for (const {record, item} of legacy) {
+      const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
+      const stage = `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}`;
+      if (record.kind === 'attribute' && ownAxis.has(item.from)) {
+        const words = (properties[item.to]?.enum ?? []).filter((value) => value !== '');
+        const which = words.length ? ` — только значения ${words.map(code).join(', ')}` : '';
+        rows.add(`| ${code(item.to)} | ${code(item.from)}${which} | ${stage} |`);
+        continue;
+      }
+      const to = item.attribute ? `${item.attribute}="${item.to}"` : item.to;
+      rows.add(`| ${code(to)} | ${code(from)} | ${stage} |`);
+      if (record.kind === 'attribute' && !item.attribute) {
+        for (const [before, after] of valueMap(item.from, item.to, properties)) {
+          rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(`${item.from}="${before}"`)} | ${stage} |`);
+        }
+      }
+    }
+    for (const name of unlisted) {
+      rows.add(`| ${AXES.filter((axis) => inputs.some(([input]) => input === axis)).map(code).join(', ')} | ${code(name)} | принимается для совместимости | — |`);
+    }
+    lines.push(':::details {layout=lines}', `${h}# Прежние имена (${rows.size})`, '',
+      '| Имя | Прежнее имя | Состояние | Убирается после |', '|:---|:---|:---|:---|', ...rows, ':::', '');
+  }
+
+  const methods = Object.entries(manifest.methods ?? {});
+  lines.push(`${h} Методы`, '');
+  if (methods.length === 0) {
+    lines.push('Публичных методов нет.', '');
+  } else {
+    lines.push('| Метод | Возвращает | Что делает |', '|:---|:---|:---|');
+    for (const [name, method] of methods) {
+      const argumentList = (method.arguments ?? []).map((argument) => (typeof argument === 'string'
+        ? argument
+        : `${argument.name}${argument.required === false ? '?' : ''}: ${[argument.type ?? argument.schema?.type].flat().filter(Boolean).join('|') || 'any'}`));
+      const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
+      const returns = method.returns && !unknown ? typeName(method.returns) : '—';
+      lines.push(`| ${code(`${name}(${argumentList.join(', ')})`)} | ${returns} | ${generic(method.summary) ? '—' : cell(ru(method.summary))} |`);
+    }
+    lines.push('');
+  }
+
+  const events = Object.entries(manifest.events ?? {});
+  lines.push(`${h} События`, '');
+  const shared = 'Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).';
+  if (events.length === 0) {
+    lines.push(`Своих событий нет. ${shared}`, '');
+  } else {
+    lines.push(`События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). ${shared}`, '',
+      '| Событие | `detail` | Когда приходит |', '|:---|:---|:---|');
+    for (const [name, event] of events) {
+      const alias = events.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
+      const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
+      const when = event.alias_of
+        ? `устаревший псевдоним ${code(event.alias_of)}: подписывайтесь на ${code(event.alias_of)}`
+        : (generic(event.summary) ? '—' : ru(event.summary));
+      const detailText = detail === 'не описан' ? 'не описан' : (detail === 'пустой' ? 'нет' : detail);
+      lines.push(`| ${code(name)} | ${cell(detailText)} | ${cell(when)} |`);
+    }
+    lines.push('');
+  }
+
+  const preference = manifest.persistence?.view_preference;
+  if (preference) lines.push(`${h} Персональный вид`, '', ...viewPreferenceTable(preference));
+
+  const suppressed = new Set(settings.suppress?.[folder]?.sections ?? []);
+  const access = suppressed.has('accessibility') ? {} : (manifest.accessibility ?? {});
+  const key = (entry) => (dictionary[entry] === undefined && /^[A-Z][A-Za-z0-9]*(\+[A-Za-z0-9]+)*$/u.test(entry) ? code(entry) : ru(entry));
+  const accessParts = [];
+  if (access.role) accessParts.push(`роль ${ru(access.role)}`);
+  if (access.accessible_name) accessParts.push(`доступное имя ${NAME_RULE[access.accessible_name] ?? ru(access.accessible_name)}`);
+  if (Array.isArray(access.keyboard) && access.keyboard.length) accessParts.push(`клавиши ${access.keyboard.map(key).join(', ')}`);
+  else if (typeof access.keyboard === 'string' && access.keyboard) accessParts.push(ru(access.keyboard).replace(/\.$/u, ''));
+  const declarative = manifest.composition?.declarative;
+  const quality = '/ru/guide/smart-components/quality/#готовность-компонента-к-использованию';
+  lines.push(`${h} О компоненте`, '',
+    '| | |',
+    '|:---|:---|',
+    `| Тег | ${code(`<${tag}>`)}, контракт ${code(manifest.id)} версии ${code(manifest.version)} |`,
+    `| Поставка | ${delivery} |`,
+    `| [Готовность](${quality}) | ${LIFECYCLE[manifest.lifecycle] ?? code(manifest.lifecycle)}; ${READINESS[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')} |`,
+    ...(manifest.presentation?.skeleton ? [`| До прихода кода | ${skeletonText(manifest.presentation.skeleton)} |`] : []),
+    ...(accessParts.length ? [`| Доступность | ${cell(accessParts.join('; '))} |`] : []),
+    ...(declarative?.type ? [`| [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел ${code(declarative.type)}; свойства — атрибуты из таблицы выше${(() => { const props = new Set(declarative.props ?? []); const out = current.map(([name]) => name).filter((name) => !props.has(name)); return out.length ? `, кроме ${out.map(code).join(', ')}` : ''; })()}${Object.keys(declarative.data ?? {}).length ? `, данные: ${Object.keys(declarative.data).map(code).join(', ')}` : ''} |`] : []),
+    `| Источник | ${code(citation)} |`,
+    ...(rule ? [`| Правило классов | ${code(rule)} |`] : []),
+    '');
+  return lines;
+};
+
+const renderSection3 = (entries) => {
+  const lines = [
+    HEADING3,
+    '',
+    `Собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`
+      + ' и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.',
+    '',
+  ];
+  for (const [folder, component] of entries) lines.push(...renderComponent3(folder, component, entries.length === 1));
+  return `${lines.join('\n').replace(/\n+$/u, '')}\n`;
+};
+
 const renderSection = (entries) => {
   const lines = [
     HEADING,
@@ -531,11 +680,12 @@ const LEGACY = {
 };
 const IDENTIFIER = /^Идентификатор: `[^`]+`\.[^\n]*\n\n/mu;
 
-const rewrite = (text, entries) => {
-  const at = text.indexOf(`\n${HEADING}\n`);
+const rewrite = (text, entries, third) => {
+  const heading = text.includes(`\n${HEADING}\n`) ? HEADING : HEADING3;
+  const at = text.indexOf(`\n${heading}\n`);
   let body = at === -1 ? text : text.slice(0, at + 1);
   // What follows the generated section (the standard's «См. также») stays.
-  const next = at === -1 ? -1 : text.indexOf('\n## ', at + HEADING.length + 1);
+  const next = at === -1 ? -1 : text.indexOf('\n## ', at + heading.length + 1);
   const tail = next === -1 ? '' : text.slice(next + 1);
   body = body.replace(IDENTIFIER, '');
   const parts = body.split(/^(?=## )/mu);
@@ -546,13 +696,13 @@ const rewrite = (text, entries) => {
     return !(test && test(match[2]));
   });
   body = kept.join('').replace(/\n+$/u, '');
-  return `${body}\n\n${renderSection(entries)}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
+  return `${body}\n\n${(third ? renderSection3 : renderSection)(entries)}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
 };
 
 const changed = [];
 for (const [page, entries] of [...pages].sort(([a], [b]) => a.localeCompare(b))) {
   const current = readFileSync(page, 'utf8');
-  const expected = rewrite(current, entries);
+  const expected = rewrite(current, entries, enrolment[relative(contentRoot, page)]?.standard === 3);
   if (expected === current) continue;
   changed.push(relative(root, page));
   if (!checkOnly && !listMissing) writeFileSync(page, expected);

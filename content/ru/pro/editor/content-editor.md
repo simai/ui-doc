@@ -85,7 +85,7 @@ editor.addEventListener('change', (event) => save(event.detail.document));
   (английское имя вида находит его на любом языке: `/div`, `/image`),
   стрелки выбирают, Enter применяет, Esc закрывает. Строка с «/» сама
   становится выбранным блоком.
-- Выделение текста показывает панель [`sf-inline-editor`](/ru/smart-components/editor/inline-editor/):
+- Выделение текста показывает панель [`sf-inline-editor`](/ru/smart/editor/inline-editor/):
   жирный, курсив, код, ссылка (⌘B, ⌘I, ⌘E, ⌘K). Пока курсор просто стоит,
   панели нет.
 - ↑ и ↓ на первой и последней строке переходят в соседнее поле; ⌥↑ ⌥↓

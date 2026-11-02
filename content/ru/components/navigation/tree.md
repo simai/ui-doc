@@ -9,7 +9,7 @@ profile: reference
 Дерево показывает вложенную иерархию — папки, разделы, категории — и даёт
 раскрывать и сворачивать ветви. Для навигации по страницам сайта с
 подменю берите [меню](/ru/components/navigation/menu/), для двух уровней
-вложенности обычно хватает [списка](/ru/smart-components/content/list-item/).
+вложенности обычно хватает [списка](/ru/smart/content/list-item/).
 
 ## Пример
 
@@ -192,4 +192,4 @@ sf-tree, .sf-tree {
 
 - [Элемент дерева](/ru/components/navigation/tree-item/)
 - [Меню](/ru/components/navigation/menu/)
-- [Дерево — смарт-компонент](/ru/smart-components/navigation/tree/)
+- [Дерево — смарт-компонент](/ru/smart/navigation/tree/)

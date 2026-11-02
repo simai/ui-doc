@@ -80,7 +80,7 @@ const walk = (dir) => {
   }
 };
 // Smart pages: the Framework's catalogue and the Pro section.
-walk(path.join(projectRoot, 'content/ru/smart-components'));
+walk(path.join(projectRoot, 'content/ru/smart'));
 walk(path.join(projectRoot, 'content/ru/pro'));
 
 const findings = [];

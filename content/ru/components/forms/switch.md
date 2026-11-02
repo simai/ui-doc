@@ -245,4 +245,4 @@ input, класс из `attrs.class` — на оболочку.
 ## См. также
 
 - [Флажок](/ru/components/forms/checkbox/)
-- [Переключатель — смарт-компонент](/ru/smart-components/forms/switch/)
+- [Переключатель — смарт-компонент](/ru/smart/forms/switch/)

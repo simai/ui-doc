@@ -137,4 +137,4 @@ profile: reference
 
 - [Выпадающий список](/ru/components/navigation/dropdown/)
 - [Кнопки](/ru/components/actions/buttons/)
-- [Контекстное меню — смарт-компонент](/ru/smart-components/navigation/context-menu/)
+- [Контекстное меню — смарт-компонент](/ru/smart/navigation/context-menu/)

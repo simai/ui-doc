@@ -173,7 +173,7 @@ unread" и "new". В имени всегда точное число: при `99
 `--sf-tone-<название>-container` и `--sf-on-tone-<название>-container`. Картинка и
 заглушка не меняются, а `--sf-avatar-background-color` и `--sf-avatar-color` по-прежнему
 важнее. Как выбрать цвет по имени на сервере — на странице
-[смарт-аватара](/ru/smart-components/content/avatar/#цвет-инициалов).
+[смарт-аватара](/ru/smart/content/avatar/#цвет-инициалов).
 
 :::example {id="components/avatars/tones" label="Восемь цветов инициалов"}
 :::
@@ -295,6 +295,6 @@ unread" и "new". В имени всегда точное число: при `99
 
 ## См. также
 
-- [Аватар — смарт-компонент](/ru/smart-components/content/avatar/)
-- [Аватары — смарт-компонент](/ru/smart-components/content/avatars/)
+- [Аватар — смарт-компонент](/ru/smart/content/avatar/)
+- [Аватары — смарт-компонент](/ru/smart/content/avatars/)
 - [Теги](/ru/components/content/tags/)

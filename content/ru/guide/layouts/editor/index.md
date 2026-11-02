@@ -14,7 +14,7 @@ description: "Визуальный редактор страниц позвол�
 - [Встроенные типы](/ru/guide/layouts/introduction/levels/#встроенные-типы) — атрибут `data-sf-composition-id`.
 - [Структурированный текст](/ru/guide/layouts/content-and-data/structured-text/) — модель структурированного текста.
 - [Где взять спецификацию](/ru/guide/layouts/reference/specification/) — комплект полей редактора.
-- [Смарт-компоненты](/ru/smart-components/editor/) — справочник компонентов редактора.
+- [Смарт-компоненты](/ru/smart/editor/) — справочник компонентов редактора.
 
 ## Страницы раздела
 

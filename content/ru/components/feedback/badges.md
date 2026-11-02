@@ -153,9 +153,9 @@ profile: reference
 модального окна или тоста; иначе поверхность страницы `--sf-surface-0`.
 Кольцо верно в светлой и тёмной теме.
 
-Смарт-элементы [Аватар](/ru/smart-components/content/avatar/),
-[Иконки](/ru/smart-components/content/icons/) и
-[Кнопки с иконкой](/ru/smart-components/actions/icon-buttons/) рисуют такой бейдж
+Смарт-элементы [Аватар](/ru/smart/content/avatar/),
+[Иконки](/ru/smart/content/icons/) и
+[Кнопки с иконкой](/ru/smart/actions/icon-buttons/) рисуют такой бейдж
 по входам `badge-count`, `badge-dot`, `badge-cap` и `badge-label`. В
 компактном [меню](/ru/components/navigation/menu/#счётчик-и-компактное-меню)
 счётчик строки переходит на её иконку.
@@ -254,4 +254,4 @@ profile: reference
 
 - [Точка состояния](/ru/components/feedback/dot/)
 - [Уведомления](/ru/components/feedback/alerts/)
-- [Бейджи — смарт-компонент](/ru/smart-components/feedback/badges/)
+- [Бейджи — смарт-компонент](/ru/smart/feedback/badges/)

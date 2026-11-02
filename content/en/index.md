@@ -72,7 +72,7 @@ a button load from the CDN.
 - **[Connecting](/ru/guide/connection/project-setup/)** From the CDN or from your own files, and the order to connect them.
 - **[Layouts](/ru/guide/layouts/)** A page made of sections and blocks.
 - **[Components](/ru/components/)** Buttons, fields, cards and other elements made of classes.
-- **[Smart Components](/ru/smart-components/)** Tags with behaviour: a table, a menu, forms.
+- **[Smart Components](/ru/smart/)** Tags with behaviour: a table, a menu, forms.
 :::
 
 :::features
@@ -86,7 +86,7 @@ a button load from the CDN.
 
 :::features
 - **[No build step](/ru/guide/introduction/quick-start/)** Classes and tags in the markup load the modules they need. Only what the page uses is fetched.
-- **[Ready admin screens](/ru/smart-components/)** A table, filters, a record card and a menu are already Smart Components.
+- **[Ready admin screens](/ru/smart/)** A table, filters, a record card and a menu are already Smart Components.
 - **[Predictable updates](/ru/guide/connection/versions/)** A project pins a release, and the change journal says what to adjust when moving on.
 - **[Open source](https://github.com/simai/ui-source/blob/main/LICENSE)** Apache-2.0 licence, commercial projects included.
 :::

@@ -93,7 +93,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
   имя — «Помощник: <название>», а скрытое описание говорит, что выбор начнёт
   новый разговор.
 - Пункты меню — радиокнопки, текущий отмечен; клавиатура — меню
-  [Контекстное меню](/ru/smart-components/navigation/context-menu/): стрелки,
+  [Контекстное меню](/ru/smart/navigation/context-menu/): стрелки,
   Home, End, буквы, Escape возвращает фокус на кнопку.
 
 ## Справочник API
@@ -153,4 +153,4 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 - [Окно чата](/ru/pro/chat/chat-window/) — где стоит выбор собеседника.
 - [Список разговоров](/ru/pro/chat/thread-list/) — разговоры человека.
-- [Контекстное меню](/ru/smart-components/navigation/context-menu/) — меню, которым открывается список.
+- [Контекстное меню](/ru/smart/navigation/context-menu/) — меню, которым открывается список.
