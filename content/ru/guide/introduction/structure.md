@@ -544,7 +544,7 @@ node <ui-builder>/bin/sf-build.js package --kind theme \
 пакет оттуда:
 
 ```bash
-commit=576a2692edb021bffe04fc93041cea4ab64f6ea4
+commit=5d68df26ef3d34669be874d096a7bb9c62495a11
 tag="pro-${commit:0:12}"
 gh release download "$tag" --repo simai/ui-pro \
   --pattern 'package-pro.tar*' --pattern package-receipt.json
@@ -580,10 +580,10 @@ Framework на ревизии, которую закрепляет `components/f
 
    ```bash
    git clone https://github.com/simai/ui-pro.git
-   git -C ui-pro checkout 576a2692edb021bffe04fc93041cea4ab64f6ea4
+   git -C ui-pro checkout 5d68df26ef3d34669be874d096a7bb9c62495a11
    node <ui-builder>/bin/sf-build.js package --name pro \
      --package-root ui-pro/components \
-     --package-revision 576a2692edb021bffe04fc93041cea4ab64f6ea4 \
+     --package-revision 5d68df26ef3d34669be874d096a7bb9c62495a11 \
      --package-repository simai/ui-pro \
      --ui-source <ui-source> --ui <ui> --out build/pro --json
    ```
@@ -594,12 +594,12 @@ Framework на ревизии, которую закрепляет `components/f
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/pro/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/pro/576a2692edb021bffe04fc93041cea4ab64f6ea4/smart/`, и объявляют
+   `public/assets/pro/5d68df26ef3d34669be874d096a7bb9c62495a11/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {pro: {base: '/assets/pro/576a2692edb021bffe04fc93041cea4ab64f6ea4/smart'}},
+     packages: {pro: {base: '/assets/pro/5d68df26ef3d34669be874d096a7bb9c62495a11/smart'}},
    };
    ```
 

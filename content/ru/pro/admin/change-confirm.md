@@ -161,5 +161,5 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/change-confirm`
-- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
+- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/change-confirm`
+- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`

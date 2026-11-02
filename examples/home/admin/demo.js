@@ -41,14 +41,3 @@ addEventListener('sf-admin-menu-navigate', (event) => {
   notice.hidden = catalogue;
   notice.textContent = 'В этой демонстрации данные есть только в разделе «Каталог решений» — откройте его в меню.';
 });
-
-// In the narrow list the table opens a record on a double click or from the
-// row's menu, while the wide table's title is a link: here the list's title
-// opens it with one click too, as the table's own double click does.
-document.addEventListener('click', (event) => {
-  if (event.button !== 0 || event.detail > 1) return;
-  const title = event.target.closest?.('.sf-table-list-title');
-  const item = title?.closest('.sf-table-list-item');
-  if (!item) return;
-  item.dispatchEvent(new MouseEvent('dblclick', {bubbles: true, composed: true, cancelable: true}));
-});
