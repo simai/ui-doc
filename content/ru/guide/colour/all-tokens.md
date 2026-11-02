@@ -99,10 +99,10 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-code` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
-| `--sf-code--background` | `var(--sf-tertiary-container)` |
-| `--sf-code--color` | `var(--sf-tertiary)` |
+| `--sf-code--background` | `var(--sf-surface-container)` |
+| `--sf-code--color` | `var(--sf-on-surface)` |
 | `--sf-code--font-family` | `var(--sf-mono)` |
-| `--sf-code--radius` | `var(--sf-radius-1\/3)` |
+| `--sf-code--radius` | `var(--sf-radius--ui)` |
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-error-active` | `light-dark(var(--sf-error-30), var(--sf-error-90))` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |

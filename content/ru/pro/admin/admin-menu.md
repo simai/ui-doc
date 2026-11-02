@@ -13,7 +13,7 @@ description: "Даёт административному приложению �
 страницы показывает [Шапка страницы](/ru/smart/composite/page-header/).
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -25,10 +25,10 @@ Framework: поставляется пакетом `larena` из репозит�
 
 ### Подключение пакета
 
-Элемент загружается, только если пакет `larena` объявлен до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
-Сборка пакета публикуется выпуском репозитория `simai/larena-ui`
-(см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Подробнее — в разделе
+Элемент загружается, только если пакет `pro` объявлен до подключения Core:
+`window.SF_BOOT_CONFIG = {packages: {pro: {base: '/assets/pro/<коммит пакета>/smart'}}}`.
+Сборка пакета публикуется выпуском репозитория `simai/ui-pro`
+(см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)). Подробнее — в разделе
 [Подключение смарт-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ### Два способа задать меню
@@ -262,7 +262,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -270,8 +270,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.6.2` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.admin-menu`, версия `1.6.3` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="menu"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -279,8 +279,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `brand` — `string`, по умолчанию пусто.
 - `logo` — `string`, по умолчанию пусто.
 - `logo-href` — `string`, по умолчанию `#`.
@@ -354,9 +354,9 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - `sf-admin-menu-read` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `notifications.read` (словарь 1.1.5).
 - `sf-admin-menu-sign-out` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `session.sign-out` (словарь 1.1.5).
 - `sf-admin-menu-search` — устаревший псевдоним события `sf-admin-menu-query`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-query`.
-- `sf-admin-menu-settings-reset` — устаревший псевдоним события `sf-admin-menu-reset`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-reset`.
+- `sf-admin-menu-settings-reset` — устаревший псевдоним события `sf-admin-menu-reset`: приходит с прежним `detail`: `{ target: any, base_revision: integer }`, подписывайтесь на `sf-admin-menu-reset`.
 - `sf-host-port-request` — `detail`: `{ component: object, context: object }`. При подключении спросить у страницы порт хоста. Страница, ответившая портом `simai.admin-navigation-port`, получает оболочку навигации; не ответившая ничем — меню элементов без изменений. Выведено из употребления: страница передаёт порт через `connectPort({port})`; ещё отправляется до 2026-12-01.
-- `sf-admin-menu-intent` — устаревший псевдоним события `sf-admin-menu-refresh`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-refresh`.
+- `sf-admin-menu-intent` — устаревший псевдоним события `sf-admin-menu-refresh`: приходит с прежним `detail`: `{ intent: string, payload: object }`, подписывайтесь на `sf-admin-menu-refresh`.
 
 ### Доступность
 
@@ -373,11 +373,11 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/admin-menu`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/admin-menu`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 
 - [Шапка страницы](/ru/smart/composite/page-header/) — шапка страницы рядом с меню.
-- [Представление свойств](/ru/pro/admin/property-view/) — карточка записи из того же пакета `larena`.
+- [Представление свойств](/ru/pro/admin/property-view/) — карточка записи из того же пакета `pro`.
 - [Admin Menu](/ru/components/internal/admin-menu/) — классы, на которых построено меню.

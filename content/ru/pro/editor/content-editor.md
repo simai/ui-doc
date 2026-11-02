@@ -11,7 +11,7 @@ description: "Страница набирается одним потоком: �
 событие `change` с новым документом, а сохраняет приложение.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -200,7 +200,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -208,16 +208,16 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 |:---|:---|
 | Тег | `<sf-content-editor>` |
 | Назначение | Режим «Содержимое» редактора страниц SIMAI: страница набирается одним потоком поверх Composition Document (structured-content). Enter и Backspace делят и соединяют блоки, Markdown в начале строки и «/» меняют вид блока, «+» и ручка на поле слева (вне текста) добавляют, двигают блок и открывают его меню; каждое меню открывается у того, что его вызвало. Выделение показывает панель форматирования, Esc выбирает блоки, вставка становится блоками через html@1, по таблице ходит Tab. У выбранного блока над ним — быстрые настройки, остальное уходит в панель хоста (или во всплывающее окно). Картинку бросают, вставляют или выбирают прямо на странице, хранит её хост. Элемент ничего не сохраняет: новый документ он отправляет в `change`. |
-| Контракт | `smart.content-editor`, версия `1.2.2` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.content-editor`, версия `1.2.3` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `parameters` — `string`, по умолчанию `popover`, значения: `popover`, `host`. Где правятся параметры выбранного блока сверх быстрых настроек: `popover` (sf-popover из быстрой панели блока) или `host` (их рисует хост по событию `params`, как панель «Свойства» редактора страниц).
 - `label` — `string`. Доступное имя блоков страницы.
 - `document` — `object`, по умолчанию `null`. Страница: Composition Document профиля structured-content. Новый документ начинает правку заново; документ, который редактор сам отправил в `change`, узнаётся и сохраняется.
@@ -243,7 +243,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 - `sf-content-editor-select` — `detail`: `{ ids: array }`. Выбраны эти блоки: `{ids}`; пусто, если ни одного.
 - `sf-content-editor-leave` — ничего не передаёт. Esc при выбранных блоках: человек просит выйти из текста.
 - `sf-content-editor-params` — `detail`: `{ id: any, type: string, kind: string, label: string, fields: array, open: boolean }`. Параметры выбранного блока для панели хоста: `{id, type, kind, label, fields, open}`; `id` пуст, если блок не выбран.
-- `sf-content-editor-file` — `detail`: `{ file: object, block: any, type?: string }`. Файл, который нужно сохранить: `{file, block, type}`, где `type` — тип блока (`content.figure` или `content.file`). Хост сохраняет файл и вызывает `answer-file` с `{block, value, href}` или `{block, reason}`.
+- `sf-content-editor-file` — `detail`: `{ file: object, block: any, type: string }`. Файл, который нужно сохранить: `{file, block, type}`, где `type` — тип блока (`content.figure` или `content.file`). Хост сохраняет файл и вызывает `answer-file` с `{block, value, href}` или `{block, reason}`.
 
 ### Доступность
 
@@ -260,5 +260,5 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/content-editor`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/content-editor/rule.js#name=cl-content-editor`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/content-editor`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/content-editor/rule.js#name=cl-content-editor`

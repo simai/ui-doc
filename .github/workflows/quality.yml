@@ -17,7 +17,7 @@ permissions:
 #
 # The checks read git objects of the sibling repositories at those pins, beside
 # this checkout: ../ui, ../ui-source, ../ui-builder and the package repository
-# (../ui-pro, LARENA_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
+# (../ui-pro, PRO_CHECKOUT), the layout the scripts default to. actions/checkout cannot write outside the workspace,
 # so they are plain full clones.
 #
 # On main (a push or a manual run, never a pull request) the verified site is
@@ -73,13 +73,13 @@ jobs:
           clone simai/ui ui "$UI_METADATA_REVISION"
           git -C "$parent/ui" cat-file -e "$UI_RUNTIME_REVISION^{commit}"
           clone simai/ui-source ui-source "$SOURCE_REVISION"
-          clone simai/ui-builder ui-builder "$LARENA_BUILDER"
+          clone simai/ui-builder ui-builder "$PRO_BUILDER"
           # The package repository, fully, at the package lock's revision.
-          clone "$LARENA_REPOSITORY" "$LARENA_CHECKOUT" "$LARENA_REVISION"
+          clone "$PRO_REPOSITORY" "$PRO_CHECKOUT" "$PRO_REVISION"
           # The package is built over the ui-source revision its own
           # components/framework.lock.json names; when that is not the
           # release's source, it gets a checkout of its own.
-          package_source="$(node -p 'require(process.argv[1]).source.revision' "$parent/$LARENA_CHECKOUT/$LARENA_PATH/framework.lock.json")"
+          package_source="$(node -p 'require(process.argv[1]).source.revision' "$parent/$PRO_CHECKOUT/$PRO_PATH/framework.lock.json")"
           if [ "$package_source" = "$SOURCE_REVISION" ]; then
             package_source_root="$parent/ui-source"
           else
@@ -89,41 +89,41 @@ jobs:
           {
             echo "FRAMEWORK_PARENT=$parent"
             echo "DOCARA_SIMAI_UI_ROOT=$parent/ui"
-            echo "LARENA_SOURCE_ROOT=$package_source_root"
+            echo "PRO_SOURCE_ROOT=$package_source_root"
           } >> "$GITHUB_ENV"
       - name: Install ui-builder
         run: yarn --cwd "$FRAMEWORK_PARENT/ui-builder" install --frozen-lockfile --non-interactive --silent
-      - name: Build the Larena package at its pin
+      - name: Build the Pro package at its pin
         run: |
           set -euo pipefail
           # The waves are built under RUNNER_TEMP, a path without symlinks: the
           # builder matches the shared runtime modules by path, and a symlinked
           # temporary directory (macOS /var) bundles them instead.
-          out="$RUNNER_TEMP/larena-package"
+          out="$RUNNER_TEMP/pro-package"
           cd "$RUNNER_TEMP"
           node "$FRAMEWORK_PARENT/ui-builder/bin/sf-build.js" package \
-            --name larena \
-            --package-root "$FRAMEWORK_PARENT/$LARENA_CHECKOUT/$LARENA_PATH" \
-            --package-revision "$LARENA_REVISION" \
-            --package-repository "$LARENA_REPOSITORY" \
-            --ui-source "$LARENA_SOURCE_ROOT" \
+            --name pro \
+            --package-root "$FRAMEWORK_PARENT/$PRO_CHECKOUT/$PRO_PATH" \
+            --package-revision "$PRO_REVISION" \
+            --package-repository "$PRO_REPOSITORY" \
+            --ui-source "$PRO_SOURCE_ROOT" \
             --ui "$DOCARA_SIMAI_UI_ROOT" \
-            --workspace "$RUNNER_TEMP/larena-waves" \
+            --workspace "$RUNNER_TEMP/pro-waves" \
             --out "$out" --replace-out
           actual="$(node -p 'require(process.argv[1]).output.archive_sha256' "$out/package-receipt.json")"
-          if [ "$actual" != "$LARENA_ARCHIVE_SHA256" ]; then
-            echo "::error::larena archive $actual is not the pinned $LARENA_ARCHIVE_SHA256"
+          if [ "$actual" != "$PRO_ARCHIVE_SHA256" ]; then
+            echo "::error::pro archive $actual is not the pinned $PRO_ARCHIVE_SHA256"
             exit 1
           fi
-          echo "LARENA_RECEIPT=$out/package-receipt.json" >> "$GITHUB_ENV"
+          echo "PRO_RECEIPT=$out/package-receipt.json" >> "$GITHUB_ENV"
       # A digest that differs from the pin leaves the built package for a diff
       # against a local build of the same pins.
-      - name: Keep the Larena package for comparison
+      - name: Keep the Pro package for comparison
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: larena-package
-          path: ${{ runner.temp }}/larena-package
+          name: pro-package
+          path: ${{ runner.temp }}/pro-package
           retention-days: 7
       # composer.lock pins the exact published Docara release revision so the
       # documentation build remains reproducible.
@@ -134,7 +134,7 @@ jobs:
       # The runtime lives inside vendor/simai/docara: materialize after every
       # composer install.
       - name: Materialize the pinned Framework runtime
-        run: php scripts/materialize-framework-runtime.php "$DOCARA_SIMAI_UI_ROOT" --receipt="$LARENA_RECEIPT"
+        run: php scripts/materialize-framework-runtime.php "$DOCARA_SIMAI_UI_ROOT" --receipt="$PRO_RECEIPT"
       # SIMAI_UI_SOURCE_ROOT stays unset for docs:check: with it the composition
       # audit also reads its recipe candidate at a ui-source commit older than
       # the public snapshot, which only the private ui-source-history holds.

@@ -34,19 +34,19 @@ foreach (['UI_METADATA_REVISION', 'UI_RUNTIME_REVISION', 'SOURCE_REVISION', 'BUI
 $package = "/'(?<name>[a-z0-9-]+)' => \[\s*'repository' => '(?<repository>[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+)',"
     . "\s*'revision' => '(?<revision>[0-9a-f]{40})',\s*'path' => '(?<path>[A-Za-z0-9._\/-]+)',"
     . "\s*'archive_sha256' => '(?<archive>[0-9a-f]{64})',\s*'builder' => '(?<builder>[0-9a-f]{40})',\s*\]/";
-if (preg_match_all($package, $text, $matches, PREG_SET_ORDER) !== 1 || $matches[0]['name'] !== 'larena') {
-    fwrite(STDERR, "pin unreadable: PACKAGES must declare exactly the larena package\n");
+if (preg_match_all($package, $text, $matches, PREG_SET_ORDER) !== 1 || $matches[0]['name'] !== 'pro') {
+    fwrite(STDERR, "pin unreadable: PACKAGES must declare exactly the pro package\n");
     exit(1);
 }
-$pins['LARENA_REPOSITORY'] = $matches[0]['repository'];
-$pins['LARENA_REVISION'] = $matches[0]['revision'];
-$pins['LARENA_PATH'] = $matches[0]['path'];
-$pins['LARENA_ARCHIVE_SHA256'] = $matches[0]['archive'];
-$pins['LARENA_BUILDER'] = $matches[0]['builder'];
+$pins['PRO_REPOSITORY'] = $matches[0]['repository'];
+$pins['PRO_REVISION'] = $matches[0]['revision'];
+$pins['PRO_PATH'] = $matches[0]['path'];
+$pins['PRO_ARCHIVE_SHA256'] = $matches[0]['archive'];
+$pins['PRO_BUILDER'] = $matches[0]['builder'];
 // The folder CI clones the package repository into, beside this checkout: the
 // repository's own name (simai/ui-admin -> ui-admin), the layout the scripts
 // default to.
-$pins['LARENA_CHECKOUT'] = explode('/', $matches[0]['repository'])[1];
+$pins['PRO_CHECKOUT'] = explode('/', $matches[0]['repository'])[1];
 
 foreach ($pins as $name => $value) {
     echo $name, '=', $value, "\n";

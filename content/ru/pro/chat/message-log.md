@@ -12,7 +12,7 @@ description: "Переписка прокручиваемой колонкой: 
 одного автора собираются в серию. Сообщения передаёт и рисует приложение.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -94,7 +94,7 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -102,8 +102,8 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 |:---|:---|
 | Тег | `<sf-message-log>` |
 | Назначение | Переписка прокручиваемой колонкой сообщений, которые рисует хост: сохраняет положение чтения, когда сверху добавляется история, следует за низом, только когда читатель внизу, объединяет подряд идущие сообщения одного автора и объявляет новое один раз. |
-| Контракт | `smart.message-log`, версия `1.2.3` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.message-log`, версия `1.2.4` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -111,8 +111,8 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `changes` — `string`, по умолчанию `content`, значения: `content`, `revision`. Как сравниваются две записи одного сообщения (§18.4).
 - `has-more` — `boolean`, по умолчанию `false`. Есть ранняя история: видна кнопка «Раньше», а достижение верха её просит.
 - `label` — `string`. Доступное имя области; пусто — «Переписка» на языке страницы.
@@ -162,5 +162,5 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/message-log`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/message-log`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/message-log/rule.js#name=cl-message-log`

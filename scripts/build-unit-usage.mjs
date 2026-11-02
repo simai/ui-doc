@@ -38,9 +38,9 @@ const values = (name) => args.flatMap((arg, index) => (arg === name ? [args[inde
 
 const lock = JSON.parse(readFileSync(join(root, 'simai-framework.lock.json'), 'utf8'));
 const pair = lock.runtime.pair_id;
-const packageRevision = lock.package_projections?.larena?.source?.revision
+const packageRevision = (lock.package_projections?.pro ?? lock.package_projections?.larena)?.source?.revision
   ?? /'revision' => '([0-9a-f]{40})'/u.exec(readFileSync(join(root, 'scripts/materialize-framework-runtime.php'), 'utf8'))?.[1];
-const packageId = packageRevision ? `larena-${packageRevision.slice(0, 12)}` : null;
+const packageId = packageRevision ? `pro-${packageRevision.slice(0, 12)}` : null;
 
 const say = (report) => {
   console.log(JSON.stringify({schema: 'ui-doc.unit_usage.v1', ...report}, null, 2));
@@ -67,10 +67,10 @@ const frameworkInventory = (id) => {
   return path;
 };
 
-// A package's inventory is a release asset of simai/larena-ui, beside its tar.
+// A package's inventory is a release asset of simai/ui-pro, beside its tar.
 const packageInventory = async (id) => {
   if (!id) return null;
-  const response = await fetch(`https://github.com/simai/larena-ui/releases/download/${id}/package-inventory.json`);
+  const response = await fetch(`https://github.com/simai/ui-pro/releases/download/${id}/package-inventory.json`);
   if (!response.ok) return null;
   const path = join(scratch, `${id}.inventory.json`);
   writeFileSync(path, await response.text());

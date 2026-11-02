@@ -192,15 +192,15 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | — |
-| `root-style` | строка | пусто | — | — |
+| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `for` | строка | пусто | — | id элемента-холста, поверх которого рисует слой |
 | `frame` | строка | пусто | — | id холста в iframe того же источника (режим во фрейме, его питает `setNodes`) |
 | `accepts` | строка | пусто | — | Группы `sf-sortable`, элементы которых можно сбросить на холст, через пробел |
@@ -246,13 +246,13 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-composition-overlay>`, контракт `smart.composition-overlay` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
+| Тег | `<sf-composition-overlay>`, контракт `smart.composition-overlay` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-c4d39d528148` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль дерево (`tree`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Home`, `End`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/composition-overlay` |
-| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-composition-overlay` |
+| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/composition-overlay` |
+| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-composition-overlay` |
 
 ## См. также
 

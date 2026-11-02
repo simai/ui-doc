@@ -247,54 +247,54 @@ modal.open();
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | — |
-| `root-style` | строка | пусто | — | — |
-| `modal-id` | строка | пусто | — | — |
-| `heading` | строка | — | — | — |
-| `text` | строка | пусто | — | — |
-| `autoload` | да/нет | нет | — | — |
-| `minimizable` | да/нет | нет | — | — |
-| `hide-modifier` | строка | пусто | — | — |
-| `overlay` | да/нет | да | — | — |
-| `show-header` | да/нет | да | — | — |
-| `show-close` | да/нет | да | — | — |
-| `show-footer` | да/нет | да | — | — |
-| `close-on-esc` | да/нет | да | — | — |
-| `close-on-overlay` | да/нет | да | — | — |
-| `preserve-scroll-gap` | да/нет | да | — | — |
-| `position` | строка | `center` | `center`, `left`, `right`, `inline-start`, `inline-end`, `top`, `bottom` | — |
-| `mode` | строка | `inline` | `inline`, `ajax`, `iframe` | — |
-| `display` | строка | `modal` | `modal`, `inline` | — |
-| `src` | строка | пусто | — | — |
-| `preload` | да/нет | да | — | — |
-| `fullscreen` | да/нет | нет | — | — |
-| `width` | строка | пусто | — | — |
-| `height` | строка | пусто | — | — |
-| `backdrop-blur` | строка | пусто | — | — |
-| `blur-type` | строка | `medium` | `none`, `small`, `medium`, `large` | — |
-| `overlay-preset` | строка | `default` | `default`, `focus` | — |
-| `overlay-class` | строка | пусто | — | — |
-| `close-class` | строка | пусто | — | — |
-| `surface-class` | строка | пусто | — | — |
-| `surface-padding` | строка | пусто | — | — |
-| `panel-class` | строка | пусто | — | — |
-| `header-class` | строка | пусто | — | — |
-| `body-class` | строка | пусто | — | — |
-| `content-class` | строка | пусто | — | — |
+| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
+| `modal-id` | строка | пусто | — | Идентификатор окна: его называют элементы управления с `data-sf-modal-close` и `data-sf-modal-hide`. Пусто — `id` элемента, иначе идентификатор по пути. |
+| `heading` | строка | — | — | Заголовок окна в стандартной шапке. Пусто — текст на языке страницы (по-английски «Dialog»). |
+| `text` | строка | пусто | — | Простой текст в теле, когда содержимое не задано. |
+| `autoload` | да/нет | нет | — | Открывает окно один раз, без анимации, сразу после отрисовки. |
+| `minimizable` | да/нет | нет | — | Показывает кнопку сворачивания в шапке (не во встроенном показе); `minimize()` и атрибут `minimized` оставляют окно открытым, но убирают его из вида. |
+| `hide-modifier` | строка | пусто | — | Классы кнопки сворачивания. |
+| `overlay` | да/нет | да | — | Рисует затемнение за окном (во встроенном показе — никогда). |
+| `show-header` | да/нет | да | — | Рисует шапку: заголовок (или слот шапки) и её кнопки. |
+| `show-close` | да/нет | да | — | Рисует кнопку закрытия в шапке, если окно можно закрыть. |
+| `show-footer` | да/нет | да | — | Рисует содержимое слота подвала. |
+| `close-on-esc` | да/нет | да | — | Escape закрывает верхнее окно, если его можно закрыть. |
+| `close-on-overlay` | да/нет | да | — | Нажатие на затемнение закрывает верхнее окно, если его можно закрыть. |
+| `preserve-scroll-gap` | да/нет | да | — | Пока страница заблокирована, добавляет ширину полосы прокрутки к конечному отступу страницы, чтобы содержимое не сдвигалось; `false` отступ не трогает. |
+| `position` | строка | `center` | `center`, `left`, `right`, `inline-start`, `inline-end`, `top`, `bottom` | Где стоит окно: `center`, боковая панель у `inline-start` или `inline-end` (по направлению документа), `top` или `bottom`; `left` и `right` — физические варианты. |
+| `mode` | строка | `inline` | `inline`, `ajax`, `iframe` | Откуда берётся содержимое: `inline` (собственное содержимое элемента), `ajax` (загружается из `src`: адрес или `#id`, чьё содержимое берётся) или `iframe` (`src` во фрейме). |
+| `display` | строка | `modal` | `modal`, `inline` | `modal` — диалог поверх страницы; `inline` — область в потоке страницы, видна без `open`. |
+| `src` | строка | пусто | — | Для режима `ajax` — адрес для загрузки или `#id` элемента, чьё содержимое берётся; для режима `iframe` — адрес фрейма. |
+| `preload` | да/нет | да | — | Загружает `src` до открытия окна; `false` — при первом открытии. |
+| `fullscreen` | да/нет | нет | — | Окно занимает всю область просмотра. |
+| `width` | строка | пусто | — | Ширина панели, длина CSS (задаёт `--sf-modal-width`). |
+| `height` | строка | пусто | — | Высота панели, длина CSS (задаёт `--sf-modal-height`). |
+| `backdrop-blur` | строка | пусто | — | Размывает страницу за затемнением: атрибут без значения или `true` — сила из `blur-type`, либо сама сила (`none`, `small`, `medium`, `large`). |
+| `blur-type` | строка | `medium` | `none`, `small`, `medium`, `large` | Сила, которую берёт `backdrop-blur`. |
+| `overlay-preset` | строка | `default` | `default`, `focus` | Затемнение: `default` — постоянное чёрное затемнение 60%; `focus` — то же с небольшим размытием фона. |
+| `overlay-class` | строка | пусто | — | Классы затемнения; применяются последними, поэтому сильнее заготовки. |
+| `close-class` | строка | пусто | — | Классы кнопки закрытия. |
+| `surface-class` | строка | пусто | — | Классы поверхности окна. |
+| `surface-padding` | строка | пусто | — | Внутренний отступ поверхности, длина CSS (задаёт `--sf-modal-surface-padding`). |
+| `panel-class` | строка | пусто | — | Классы панели — блока, который держит поверхность. |
+| `header-class` | строка | пусто | — | Классы шапки. |
+| `body-class` | строка | пусто | — | Классы прокручиваемой области тела. |
+| `content-class` | строка | пусто | — | Классы обёртки содержимого слота. |
 | `footer-class` | строка | пусто | — | Классы подвала. Его действия стоят в конце, между ними --sf-modal-footer-gap (space-1/2); эти значения лежат под утилитами, поэтому утилита здесь всё равно побеждает. |
-| `unsaved` | да/нет | нет | — | — |
-| `dismissible` | да/нет | да | — | — |
+| `unsaved` | да/нет | нет | — | В окне есть несохранённое: запрос на закрытие (`sf-modal-close`) несёт это как `detail.unsaved`, и страница может спросить, прежде чем дать окну закрыться. |
+| `dismissible` | да/нет | да | — | `false`: Escape, нажатие на затемнение и кнопка закрытия окно не закрывают; `close()` и элементы управления страницы закрывают. |
 | `open` | да/нет | нет | — | — |
 | `minimized` | да/нет | нет | — | — |
 | `aria-label` | строка | пусто | — | — |
-| `title` | строка | — | — | Пусто — текст на языке страницы (по-английски «Dialog»). |
+| `title` | строка | — | — | Псевдоним с датой для `heading` до 2026-12-01: заголовок окна. |
 | `blur` | строка | пусто | — | Псевдоним с датой для `backdrop-blur` до 2026-12-01. |
 | `hide` | да/нет | нет | — | Псевдоним с датой для `minimizable` до 2026-12-01. |
 | `unclose` | да/нет | нет | — | Псевдоним с датой для `dismissible` до 2026-12-01, с обратным значением. |
@@ -347,30 +347,30 @@ modal.open();
 | `sf-modal-expanded` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-content-upload` | `{ modalId: string, src: string, remote: object }` | — |
 | `sf-modal-content-uploaded` | `{ modalId: string, src: string, remote: object }` | — |
-| `modal:after-close` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string, reason?: string }` | устаревший псевдоним `sf-modal-closed`: подписывайтесь на `sf-modal-closed` |
-| `modal:after-hide` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }` | устаревший псевдоним `sf-modal-minimized`: подписывайтесь на `sf-modal-minimized` |
-| `modal:after-open` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }` | устаревший псевдоним `sf-modal-opened`: подписывайтесь на `sf-modal-opened` |
-| `modal:after-show` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }` | устаревший псевдоним `sf-modal-expanded`: подписывайтесь на `sf-modal-expanded` |
-| `modal:before-close` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string, reason?: string, unsaved?: boolean }` | устаревший псевдоним `sf-modal-close`: подписывайтесь на `sf-modal-close` |
-| `modal:before-hide` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }` | устаревший псевдоним `sf-modal-minimize`: подписывайтесь на `sf-modal-minimize` |
-| `modal:before-open` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }` | устаревший псевдоним `sf-modal-open`: подписывайтесь на `sf-modal-open` |
-| `modal:before-show` | `{ component?: any, modal?: any, modalId?: string, root?: any, phase?: string }` | устаревший псевдоним `sf-modal-expand`: подписывайтесь на `sf-modal-expand` |
+| `modal:after-close` | `{ modalId: string, phase: string, reason: string, accepted: boolean, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-closed`: подписывайтесь на `sf-modal-closed` |
+| `modal:after-hide` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-minimized`: подписывайтесь на `sf-modal-minimized` |
+| `modal:after-open` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-opened`: подписывайтесь на `sf-modal-opened` |
+| `modal:after-show` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-expanded`: подписывайтесь на `sf-modal-expanded` |
+| `modal:before-close` | `{ modalId: string, phase: string, reason: string, unsaved: boolean, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-close`: подписывайтесь на `sf-modal-close` |
+| `modal:before-hide` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-minimize`: подписывайтесь на `sf-modal-minimize` |
+| `modal:before-open` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-open`: подписывайтесь на `sf-modal-open` |
+| `modal:before-show` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-expand`: подписывайтесь на `sf-modal-expand` |
 | `modal:ready` | `{ component?: any, modal?: any, modalId?: string, root?: any }` | Окно отрисовано впервые. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие. |
 | `modal:update` | `{ component?: any, modal?: any, modalId?: string, root?: any }` | Окно отрисовано повторно после первой отрисовки. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие. |
-| `modal:before-content-upload` | `{ component?: any, modal?: any, modalId?: string, src?: string, remote?: object }` | устаревший псевдоним `sf-modal-content-upload`: подписывайтесь на `sf-modal-content-upload` |
-| `modal:after-content-upload` | `{ component?: any, modal?: any, modalId?: string, src?: string, remote?: object }` | устаревший псевдоним `sf-modal-content-uploaded`: подписывайтесь на `sf-modal-content-uploaded` |
+| `modal:before-content-upload` | `{ modalId: string, src: string, remote: object, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-content-upload`: подписывайтесь на `sf-modal-content-upload` |
+| `modal:after-content-upload` | `{ modalId: string, src: string, remote: object, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-content-uploaded`: подписывайтесь на `sf-modal-content-uploaded` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-modal>`, контракт `smart.modal` версии `1.4.3` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
+| Тег | `<sf-modal>`, контракт `smart.modal` версии `1.4.4` |
+| Поставка | выпуск Framework `ui-c4d39d528148` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль диалог (`dialog`); доступное имя обязательно; клавиши `Tab`, `Shift+Tab`, `Escape` |
-| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/modal` |
-| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-modal` |
+| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/modal` |
+| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-modal` |
 
 ## См. также
 

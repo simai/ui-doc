@@ -22,14 +22,14 @@ SIMAI Framework распространяется по лицензии Apache-2.
 ## Подключение
 
 Компоненты Pro лежат в репозитории `simai/ui-pro` и собираются в пакет
-компонентов, который Loader знает под именем `larena`. Каждая сборка пакета
+компонентов, который Loader знает под именем `pro`. Каждая сборка пакета
 делается поверх одного выпуска SIMAI Framework и публикуется выпуском
-репозитория `simai/larena-ui` вместе с контрольной суммой. Пакет объявляют
+репозитория `simai/ui-pro` вместе с контрольной суммой. Пакет объявляют
 до подключения Core:
 
 ```html
 <script>
-  window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}};
+  window.SF_BOOT_CONFIG = {packages: {pro: {base: '/assets/pro/<коммит пакета>/smart'}}};
 </script>
 ```
 

@@ -20,7 +20,7 @@ description: "Окно чата целиком на порте хоста: сп�
 ответ уже спросили заново, куда уходит фокус.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -239,7 +239,7 @@ Escape закрывает его и возвращает фокус на ком�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -247,16 +247,16 @@ Escape закрывает его и возвращает фокус на ком�
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
-| Контракт | `smart.chat-window`, версия `1.9.0` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.chat-window`, версия `1.9.1` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (`assistant`, `people`, `files`, `edit`, `delete`, `feedback`, `proposals`, `conversation-create`, `conversation-manage`, `interlocutors`, `read`), и расширения окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`, `x-conversation-pin`, `x-early-upload`, `x-my-files`, `x-brief`, `x-conversation-start`, `x-members`, `x-members-manage`, `x-reactions`, `x-reply`). Что не объявлено, то не предлагается: на такое намерение приходит ответ «недоступно» без события. Свойство принимает и массив.
 - `landmark` — `string`, по умолчанию `main`, значения: `main`, `section`. `main`, когда окно и есть страница; `section` внутри страницы со своим `main`.
 - `heading-level` — `integer`, по умолчанию `1`, значения: от 1; до 2. Уровень собственных заголовков окна (разговор, приветствие): `2` внутри чужой страницы.
@@ -375,8 +375,8 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-window`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/chat-window`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

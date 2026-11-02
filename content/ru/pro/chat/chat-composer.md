@@ -11,7 +11,7 @@ description: "Поле вопроса и файлов чата: Enter отпра
 `files`, поэтому принят ли файл, решает сервер.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -114,7 +114,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -122,16 +122,16 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 |:---|:---|
 | Тег | `<sf-chat-composer>` |
 | Назначение | Место, где пишут вопрос и добавляют файлы: Enter отправляет, Shift+Enter переносит строку, набор через IME никогда не прерывается, кнопка отправки на время ожидания ответа становится «остановить ожидание», а файлы только сообщаются — загружает их хост; их плашки приходят обратно через `files`. |
-| Контракт | `smart.chat-composer`, версия `1.2.0` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.chat-composer`, версия `1.2.1` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `placeholder` — `string`. Пусто — поле берёт своё слово «Спросите что-нибудь».
 - `maxlength` — `integer`, по умолчанию `4000`, значения: от 1. `bootstrap.limits.message_chars`.
 - `max-files` — `integer`, по умолчанию `5`, значения: от 1.
@@ -179,8 +179,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-composer`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/chat-composer`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 
