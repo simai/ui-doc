@@ -28,8 +28,8 @@ description: "Набор SF.fieldRenderers рисует значение сво�
 
 Таблица `<sf-table>` берёт из набора ячейки и фильтры, карточка записи
 `<sf-property-view>` — просмотр и правку. Оба компонента входят в пакет
-`larena` ([Представление данных](/ru/smart-components/content/table/),
-[Представление свойств](/ru/smart-components/composite/property-view/)). Страница
+`larena` ([Представление данных](/ru/pro/admin/table/),
+[Представление свойств](/ru/pro/admin/property-view/)). Страница
 вызывает те же функции сама, когда рисует поле без этих компонентов.
 
 Набор публикуется на `window.SF.fieldRenderers`:

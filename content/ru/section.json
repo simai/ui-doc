@@ -32,6 +32,11 @@
         "id": "smart-components",
         "label": "Смарт-компоненты",
         "href": "/ru/smart-components/"
+      },
+      {
+        "id": "pro",
+        "label": "Pro",
+        "href": "/ru/pro/"
       }
     ]
   }

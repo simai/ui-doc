@@ -20,7 +20,10 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const content = join(root, 'content/ru');
-const CATALOGUES = ['components', 'smart-components'];
+// The Pro section (simai/ui-pro components) is a catalogue of its own: its
+// chapters are groups like any other, under the name of the product they ship in.
+const CATALOGUES = ['components', 'smart-components', 'pro'];
+const PRODUCT = { components: 'SIMAI Framework', 'smart-components': 'SIMAI Framework', pro: 'SIMAI Pro' };
 const check = process.argv.includes('--check');
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
@@ -105,7 +108,7 @@ for (const catalogue of CATALOGUES) {
 
     // The group's own one-liner says how many of what, and nothing a reader
     // could not have counted.
-    const noun = catalogue === 'components' ? 'компонент' : 'смарт-компонент';
+    const noun = catalogue === 'smart-components' ? 'смарт-компонент' : 'компонент';
     // Russian counts: 1, 21 компонент; 2–4, 22–24 компонента; the rest компонентов.
     const n10 = pages.length % 10;
     const n100 = pages.length % 100;
@@ -113,7 +116,7 @@ for (const catalogue of CATALOGUES) {
       : n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14) ? `${noun}а` : `${noun}ов`;
     const page = `---
 title: "${section.title}"
-description: "${section.title} — ${pages.length} ${plural} SIMAI Framework."
+description: "${section.title} — ${pages.length} ${plural} ${PRODUCT[catalogue]}."
 profile: reference
 ---
 

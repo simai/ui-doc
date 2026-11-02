@@ -48,7 +48,7 @@ export const SMOKE_PAGES = [
   '/ru/components/navigation/menu/',
   '/ru/smart-components/overlays/drawer/',
   '/ru/smart-components/overlays/modal/',
-  '/ru/smart-components/content/table/',
+  '/ru/pro/admin/table/',
   '/ru/smart-components/forms/theme-generator/',
   '/ru/utilities/',
   '/ru/utilities/tables/',

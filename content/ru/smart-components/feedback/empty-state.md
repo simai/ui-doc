@@ -150,4 +150,4 @@ description: "Показывает, почему в списке, панели �
 - [Пустые состояния в составных компонентах](/ru/guide/smart-components/data/#пустое-состояние)
 
 - [Скелетон](/ru/smart-components/feedback/skeleton/)
-- [Представление данных](/ru/smart-components/content/table/)
+- [Представление данных](/ru/pro/admin/table/)

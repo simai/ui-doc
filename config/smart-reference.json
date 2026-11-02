@@ -2,7 +2,7 @@
   "schema": "ui-doc.smart-reference-config",
   "schema_version": 2,
   "pages": {
-    "data-view": "content/table.md"
+    "data-view": "pro/admin/table.md"
   },
   "skip": {},
   "suppress": {

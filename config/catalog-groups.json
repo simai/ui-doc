@@ -182,7 +182,6 @@
         "tags",
         "list-item",
         "accordion",
-        "table",
         "gallery",
         "file-preview",
         "reference-link",
@@ -209,24 +208,47 @@
     "composite": {
       "title": "Составные компоненты",
       "items": [
-        "admin-menu",
-        "property-view",
         "page-header",
         "site-header",
         "search",
-        "profile-picker",
+        "profile-picker"
+      ]
+    }
+  },
+  "pro": {
+    "admin": {
+      "title": "Админка",
+      "items": [
+        "admin-menu",
+        "property-view",
+        "table",
+        "change-confirm"
+      ]
+    },
+    "chat": {
+      "title": "Чат",
+      "items": [
+        "chat-window",
         "thread-list",
         "message-log",
-        "change-confirm",
-        "chat-window",
-        "chat-message",
         "chat-composer",
-        "chat-interlocutor",
+        "chat-message",
+        "chat-interlocutor"
+      ]
+    },
+    "mail": {
+      "title": "Письма",
+      "items": [
         "mail-letters",
         "mail-library",
         "mail-structure",
-        "mail-inspector",
         "mail-canvas",
+        "mail-inspector"
+      ]
+    },
+    "editor": {
+      "title": "Редактор страниц",
+      "items": [
         "content-editor"
       ]
     }

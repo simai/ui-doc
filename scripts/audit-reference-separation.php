@@ -18,6 +18,7 @@ $check($actualHeader === [
     ['Утилиты', '/ru/utilities/'],
     ['Компоненты', '/ru/components/'],
     ['Смарт-компоненты', '/ru/smart-components/'],
+    ['Pro', '/ru/pro/'],
 ], 'header_is_not_guide_plus_references', ['actual' => $actualHeader]);
 
 // content/ru/reference is on this list from 2026-10-09. It held 66 pages of

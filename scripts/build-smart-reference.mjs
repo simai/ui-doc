@@ -123,17 +123,22 @@ for (const [name, projection] of Object.entries(lock.package_projections ?? {}))
 
 // ---- pages ------------------------------------------------------------------
 
-const smartRoot = join(root, 'content/ru/smart-components');
+// Smart pages live in two catalogues: the Framework's smart components and the
+// Pro section (simai/ui-pro). A named page is a path under content/ru.
+const contentRoot = join(root, 'content/ru');
 const pageByName = new Map();
-for (const group of readdirSync(smartRoot, {withFileTypes: true})) {
-  if (!group.isDirectory()) continue;
-  for (const file of readdirSync(join(smartRoot, group.name))) {
-    if (file.endsWith('.md') && file !== 'index.md') pageByName.set(file.slice(0, -3), join(smartRoot, group.name, file));
+for (const catalogue of ['smart-components', 'pro']) {
+  const catalogueRoot = join(contentRoot, catalogue);
+  for (const group of readdirSync(catalogueRoot, {withFileTypes: true})) {
+    if (!group.isDirectory()) continue;
+    for (const file of readdirSync(join(catalogueRoot, group.name))) {
+      if (file.endsWith('.md') && file !== 'index.md') pageByName.set(file.slice(0, -3), join(catalogueRoot, group.name, file));
+    }
   }
 }
 const pageFor = (folder) => {
   const named = settings.pages?.[folder];
-  if (named) return join(smartRoot, named);
+  if (named) return join(contentRoot, named);
   return pageByName.get(folder) ?? pageByName.get(folder.replace(/s$/u, '')) ?? pageByName.get(`${folder}s`) ?? null;
 };
 const pages = new Map();

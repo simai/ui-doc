@@ -465,13 +465,13 @@
     "smart-components/actions/icon-buttons.md": {
       "kind": "smart"
     },
-    "smart-components/composite/admin-menu.md": {
+    "pro/admin/admin-menu.md": {
       "kind": "smart"
     },
     "smart-components/composite/page-header.md": {
       "kind": "smart"
     },
-    "smart-components/composite/property-view.md": {
+    "pro/admin/property-view.md": {
       "kind": "smart"
     },
     "smart-components/content/avatar.md": {
@@ -498,7 +498,7 @@
     "smart-components/content/include.md": {
       "kind": "smart"
     },
-    "smart-components/content/table.md": {
+    "pro/admin/table.md": {
       "kind": "smart"
     },
     "smart-components/content/tags.md": {
@@ -1882,27 +1882,27 @@
     "smart-components/actions/copy-button.md": {
       "kind": "smart"
     },
-    "smart-components/composite/change-confirm.md": {
+    "pro/admin/change-confirm.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/message-log.md": {
+    "pro/chat/message-log.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/chat-composer.md": {
+    "pro/chat/chat-composer.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/chat-interlocutor.md": {
+    "pro/chat/chat-interlocutor.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/chat-message.md": {
+    "pro/chat/chat-message.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/chat-window.md": {
+    "pro/chat/chat-window.md": {
       "kind": "smart",
       "standard": 2
     },
@@ -1914,27 +1914,27 @@
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/mail-letters.md": {
+    "pro/mail/mail-letters.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/mail-library.md": {
+    "pro/mail/mail-library.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/mail-structure.md": {
+    "pro/mail/mail-structure.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/mail-inspector.md": {
+    "pro/mail/mail-inspector.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/mail-canvas.md": {
+    "pro/mail/mail-canvas.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/content-editor.md": {
+    "pro/editor/content-editor.md": {
       "kind": "smart",
       "standard": 2
     },
@@ -1946,7 +1946,7 @@
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/thread-list.md": {
+    "pro/chat/thread-list.md": {
       "kind": "smart",
       "standard": 2
     },

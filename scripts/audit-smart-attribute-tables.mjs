@@ -79,7 +79,9 @@ const walk = (dir) => {
     else if (entry.name.endsWith('.md')) pages.set(entry.name.slice(0, -3), full);
   }
 };
+// Smart pages: the Framework's catalogue and the Pro section.
 walk(path.join(projectRoot, 'content/ru/smart-components'));
+walk(path.join(projectRoot, 'content/ru/pro'));
 
 const findings = [];
 let checked = 0;

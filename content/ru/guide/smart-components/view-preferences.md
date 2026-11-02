@@ -174,7 +174,7 @@ SF.Preferences.useHost({
 значения в блок `data-sf-preferences`, или учитывает личный слой, когда
 собирает `data.columns`. Ответ на запрос несёт личный слой с ревизией или
 хотя бы `target` с ней: без ревизии запись колонок не отправляется
-(см. [Представление данных → Шаблоны и настройки колонок](/ru/smart-components/content/table/#шаблоны-и-настройки-колонок)).
+(см. [Представление данных → Шаблоны и настройки колонок](/ru/pro/admin/table/#шаблоны-и-настройки-колонок)).
 
 ## Уровни
 
@@ -214,9 +214,9 @@ view.changeQuery({sort: [], per_page: 25, page: 1});
 
 - [Изменение ширины](/ru/smart-components/overlays/resizer/) — ширина панели
   под `sf-resizer/<storage-key>`.
-- [Представление данных](/ru/smart-components/content/table/) — раскладка
+- [Представление данных](/ru/pro/admin/table/) — раскладка
   таблицы, сортировка и размер страницы под `sf-table/<preferences-key>`.
-- [Меню администратора](/ru/smart-components/composite/admin-menu/) Larena —
+- [Меню администратора](/ru/pro/admin/admin-menu/) Larena —
   свёрнутость и открытый раздел под `sf-admin-menu/main`; ширины колонок
   навигации порта хранят его ручки под `sf-resizer/admin-nav-first` и
   `sf-resizer/admin-nav-second`.

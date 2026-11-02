@@ -10,7 +10,7 @@ profile: reference
 приложения: шапка, поиск, пункты с иконками, вложенные панели, компактный
 режим и показ пунктов, которые не поместились. Законченный сценарий с
 поиском и настройками даёт смарт-компонент
-[Меню администратора](/ru/smart-components/composite/admin-menu/); для обычной
+[Меню администратора](/ru/pro/admin/admin-menu/); для обычной
 навигации по сайту берите [меню](/ru/components/navigation/menu/).
 
 ## Пример
@@ -152,4 +152,4 @@ whenLoader(() => SF.Loader.ready('AdminMenu', () => {
 ## См. также
 
 - [Меню](/ru/components/navigation/menu/)
-- [Меню администратора — смарт-компонент](/ru/smart-components/composite/admin-menu/)
+- [Меню администратора — смарт-компонент](/ru/pro/admin/admin-menu/)

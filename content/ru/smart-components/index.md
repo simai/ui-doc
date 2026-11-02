@@ -5,7 +5,7 @@ description: "Смарт-компоненты по задачам интерфе
 
 # Смарт-компоненты
 
-Выберите нужную задачу. На странице элемента находятся его параметры и ограничения; обучение — в [руководстве](/ru/guide/smart-components/). Статус доступности указан у каждого элемента.
+Выберите нужную задачу. На странице элемента находятся его параметры и ограничения; обучение — в [руководстве](/ru/guide/smart-components/). Статус доступности указан у каждого элемента. Большие компоненты для админки, чата, писем и редактора страниц собраны в разделе [Pro](/ru/pro/).
 
 ## Действия
 
@@ -73,7 +73,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Теги](/ru/smart-components/content/tags/)
 - [Строка списка](/ru/smart-components/content/list-item/)
 - [Аккордеон](/ru/smart-components/content/accordion/)
-- [Представление данных](/ru/smart-components/content/table/)
 - [Галерея](/ru/smart-components/content/gallery/)
 - [Предпросмотр файла](/ru/smart-components/content/file-preview/)
 - [Справочная ссылка](/ru/smart-components/content/reference-link/)
@@ -94,23 +93,8 @@ description: "Смарт-компоненты по задачам интерфе
 
 ## Составные компоненты
 
-- [Меню администратора](/ru/smart-components/composite/admin-menu/)
-- [Представление свойств](/ru/smart-components/composite/property-view/)
 - [Шапка страницы](/ru/smart-components/composite/page-header/)
 - [Шапка сайта](/ru/smart-components/composite/site-header/)
 - [Поиск по сайту](/ru/smart-components/composite/search/)
 - [Выбор профиля](/ru/smart-components/composite/profile-picker/)
-- [Список разговоров](/ru/smart-components/composite/thread-list/)
-- [Лента сообщений](/ru/smart-components/composite/message-log/)
-- [Подтверждение изменения](/ru/smart-components/composite/change-confirm/)
-- [Окно чата](/ru/smart-components/composite/chat-window/)
-- [Сообщение чата](/ru/smart-components/composite/chat-message/)
-- [Поле чата](/ru/smart-components/composite/chat-composer/)
-- [Выбор собеседника](/ru/smart-components/composite/chat-interlocutor/)
-- [Список писем](/ru/smart-components/composite/mail-letters/)
-- [Библиотека блоков письма](/ru/smart-components/composite/mail-library/)
-- [Структура письма](/ru/smart-components/composite/mail-structure/)
-- [Панель свойств письма](/ru/smart-components/composite/mail-inspector/)
-- [Холст письма](/ru/smart-components/composite/mail-canvas/)
-- [Редактор содержимого](/ru/smart-components/composite/content-editor/)
 

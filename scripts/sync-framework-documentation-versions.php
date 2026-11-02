@@ -122,8 +122,11 @@ foreach ($targets as $relative => $render) {
     }
 }
 
-$smartDocumentationRoot = $root . '/content/ru/smart-components';
-$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($smartDocumentationRoot, FilesystemIterator::SKIP_DOTS));
+// Smart pages: the Framework's catalogue and the Pro section.
+$iterator = new AppendIterator();
+foreach (['smart-components', 'pro'] as $catalogue) {
+    $iterator->append(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/' . $catalogue, FilesystemIterator::SKIP_DOTS)));
+}
 foreach ($iterator as $file) {
     if (! $file->isFile() || strtolower($file->getExtension()) !== 'md') {
         continue;

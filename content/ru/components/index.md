@@ -115,4 +115,4 @@ profile: reference
 
 - **[Основа Admin Menu](/ru/components/internal/admin-menu/)** — Низкоуровневый
   визуальный контракт для разработчиков Framework. Пользовательский сценарий
-  документирован только как [Меню администратора](/ru/smart-components/composite/admin-menu/).
+  документирован только как [Меню администратора](/ru/pro/admin/admin-menu/).

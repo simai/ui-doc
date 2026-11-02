@@ -109,7 +109,7 @@ profile: reference
 остаются в имени ссылки. Счётчик переходит на иконку и встаёт в её верхний
 угол так же, как [бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре)
 шага `1`, с кольцом. Ветки в компактном меню не раскрываются. Компактная панель
-[Меню администратора](/ru/smart-components/composite/admin-menu/) так же переносит
+[Меню администратора](/ru/pro/admin/admin-menu/) так же переносит
 счётчик пункта на его иконку.
 
 :::example {id="components/menu/compact" label="Счётчики в обычном и компактном меню"}
@@ -210,4 +210,4 @@ profile: reference
 - [Контекстное меню](/ru/components/navigation/context-menu/)
 - [Хлебные крошки](/ru/components/navigation/breadcrumbs/)
 - [Меню — смарт-компонент](/ru/smart-components/navigation/menu/)
-- [Меню администратора — смарт-компонент](/ru/smart-components/composite/admin-menu/)
+- [Меню администратора — смарт-компонент](/ru/pro/admin/admin-menu/)

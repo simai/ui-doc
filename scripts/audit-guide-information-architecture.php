@@ -51,6 +51,7 @@ $headerExpected = [
     ['Утилиты', '/ru/utilities/'],
     ['Компоненты', '/ru/components/'],
     ['Смарт-компоненты', '/ru/smart-components/'],
+    ['Pro', '/ru/pro/'],
 ];
 $check($headerActual === $headerExpected, 'header_navigation_mismatch', ['actual' => $headerActual]);
 

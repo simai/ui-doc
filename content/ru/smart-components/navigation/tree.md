@@ -131,7 +131,7 @@ tree.items = await fetchFolders();
 которым сейчас перетаскивают, подсвечивается.
 
 - `accept-records` — узел принимает записи, перетащенные из списка, например
-  строки [таблицы](/ru/smart-components/content/table/) с `drag-rows`. После
+  строки [таблицы](/ru/pro/admin/table/) с `drag-rows`. После
   отпускания приходит `sf-tree-move` с `{ids, parent, before, source}`:
   `ids` — записи, `parent` — узел, `source` — откуда их взяли. Это просьба
   переместить; переносит записи хост.

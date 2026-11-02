@@ -103,7 +103,7 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 над выбранным объектом берите
 [Контекстное меню](/ru/smart-components/navigation/context-menu/), для
 навигации административного приложения —
-[Меню администратора](/ru/smart-components/composite/admin-menu/).
+[Меню администратора](/ru/pro/admin/admin-menu/).
 
 ### Переходы и события
 

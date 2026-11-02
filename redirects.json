@@ -1928,7 +1928,7 @@
     },
     {
       "from": "ru/smart-components/complex/admin-menu",
-      "to": "ru/smart-components/composite/admin-menu"
+      "to": "ru/pro/admin/admin-menu"
     },
     {
       "from": "ru/smart-components/connection",
@@ -1972,7 +1972,7 @@
     },
     {
       "from": "ru/smart-components/reference/admin-menu",
-      "to": "ru/smart-components/composite/admin-menu"
+      "to": "ru/pro/admin/admin-menu"
     },
     {
       "from": "ru/smart-components/reference/alert",
@@ -2136,7 +2136,7 @@
     },
     {
       "from": "ru/smart-components/reference/table",
-      "to": "ru/smart-components/content/table"
+      "to": "ru/pro/admin/table"
     },
     {
       "from": "ru/smart-components/reference/tabs",
@@ -3509,6 +3509,70 @@
     {
       "from": "ru/smart-components/forms/toggle",
       "to": "ru/smart-components/forms/switch"
+    },
+    {
+      "from": "ru/smart-components/composite/admin-menu",
+      "to": "ru/pro/admin/admin-menu"
+    },
+    {
+      "from": "ru/smart-components/composite/property-view",
+      "to": "ru/pro/admin/property-view"
+    },
+    {
+      "from": "ru/smart-components/content/table",
+      "to": "ru/pro/admin/table"
+    },
+    {
+      "from": "ru/smart-components/composite/change-confirm",
+      "to": "ru/pro/admin/change-confirm"
+    },
+    {
+      "from": "ru/smart-components/composite/chat-window",
+      "to": "ru/pro/chat/chat-window"
+    },
+    {
+      "from": "ru/smart-components/composite/thread-list",
+      "to": "ru/pro/chat/thread-list"
+    },
+    {
+      "from": "ru/smart-components/composite/message-log",
+      "to": "ru/pro/chat/message-log"
+    },
+    {
+      "from": "ru/smart-components/composite/chat-composer",
+      "to": "ru/pro/chat/chat-composer"
+    },
+    {
+      "from": "ru/smart-components/composite/chat-message",
+      "to": "ru/pro/chat/chat-message"
+    },
+    {
+      "from": "ru/smart-components/composite/chat-interlocutor",
+      "to": "ru/pro/chat/chat-interlocutor"
+    },
+    {
+      "from": "ru/smart-components/composite/mail-letters",
+      "to": "ru/pro/mail/mail-letters"
+    },
+    {
+      "from": "ru/smart-components/composite/mail-library",
+      "to": "ru/pro/mail/mail-library"
+    },
+    {
+      "from": "ru/smart-components/composite/mail-structure",
+      "to": "ru/pro/mail/mail-structure"
+    },
+    {
+      "from": "ru/smart-components/composite/mail-canvas",
+      "to": "ru/pro/mail/mail-canvas"
+    },
+    {
+      "from": "ru/smart-components/composite/mail-inspector",
+      "to": "ru/pro/mail/mail-inspector"
+    },
+    {
+      "from": "ru/smart-components/composite/content-editor",
+      "to": "ru/pro/editor/content-editor"
     }
   ]
 }

@@ -140,5 +140,5 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 
 ## См. также
 
-- [Представление свойств](/ru/smart-components/composite/property-view/)
-- [Меню администратора](/ru/smart-components/composite/admin-menu/)
+- [Представление свойств](/ru/pro/admin/property-view/)
+- [Меню администратора](/ru/pro/admin/admin-menu/)
