@@ -125,7 +125,9 @@ header.addEventListener('sf-site-header-opened', () => {
 один раз для всей страницы, и полоса берёт их. Открытые переменные полосы —
 `--sf-site-header-background`, `--sf-site-header-color`,
 `--sf-site-header-border-color`, `--sf-site-header-block-size`,
-`--sf-site-header-gap`, `--sf-site-header-brand-size`,
+`--sf-site-header-gap`, `--sf-site-header-tools-gap` (шаг между
+инструментами; его же берёт выбор цвета между образцом и кнопкой сброса),
+`--sf-site-header-brand-size`,
 `--sf-site-header-sheet-inline-size` и `--sf-site-header-z-index`.
 
 ## Доступность
@@ -143,7 +145,7 @@ header.addEventListener('sf-site-header-opened', () => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-1232b187244c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-654a2aceaa96` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -151,8 +153,8 @@ header.addEventListener('sf-site-header-opened', () => {
 |:---|:---|
 | Тег | `<sf-site-header>` |
 | Назначение | Верхняя полоса сайта SIMAI: бренд, разделы, ссылки и инструменты в одну строку по ширине контейнера. Ниже ступени сетки SIMAI Framework полоса сворачивается в кнопку меню, которая открывает разделы и ссылки боковой панелью в общем стеке слоёв. Её используют все сайты SIMAI: каталог эффектов, сайты документации на Docara и портал simai.io. |
-| Контракт | `smart.site-header`, версия `1.1.0` |
-| Поставка | выпуск Framework `ui-1232b187244c` |
+| Контракт | `smart.site-header`, версия `1.2.0` |
+| Поставка | выпуск Framework `ui-654a2aceaa96` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -200,8 +202,8 @@ header.addEventListener('sf-site-header-opened', () => {
 
 ### Источник
 
-- `simai/ui@1232b187244c82ddfffe67b092674cb5aee6f16c:distr/smart/site-header`
-- `simai/ui@1232b187244c82ddfffe67b092674cb5aee6f16c:distr/rule/rule.json#name=cl-site-header`
+- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/smart/site-header`
+- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/rule/rule.json#name=cl-site-header`
 
 ## См. также
 

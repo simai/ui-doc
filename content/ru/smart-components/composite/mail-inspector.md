@@ -181,7 +181,7 @@ panel.sections = [
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-1232b187244c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-654a2aceaa96` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -261,5 +261,5 @@ panel.sections = [
 
 ### Источник
 
-- `simai/ui-pro@f8939812c7f977a1a62e8440f326adf249ae72b9:components/src/smart/mail-inspector`
-- `simai/ui-pro@f8939812c7f977a1a62e8440f326adf249ae72b9:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`
+- `simai/ui-pro@4e61bb2a1c5655ce9ddbd43764dd49e9468a6856:components/src/smart/mail-inspector`
+- `simai/ui-pro@4e61bb2a1c5655ce9ddbd43764dd49e9468a6856:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`

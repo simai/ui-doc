@@ -79,7 +79,7 @@ description: "Рисует поверхность короткой подска�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-1232b187244c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-654a2aceaa96` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -88,7 +88,7 @@ description: "Рисует поверхность короткой подска�
 | Тег | `<sf-tooltip>` |
 | Назначение | Поверхность подсказки, которая может участвовать в обычной композиции триггера data-tooltip. |
 | Контракт | `smart.tooltip`, версия `1.1.2` |
-| Поставка | выпуск Framework `ui-1232b187244c` |
+| Поставка | выпуск Framework `ui-654a2aceaa96` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `released` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -133,8 +133,8 @@ description: "Рисует поверхность короткой подска�
 
 ### Источник
 
-- `simai/ui@1232b187244c82ddfffe67b092674cb5aee6f16c:distr/smart/tooltip`
-- `simai/ui@1232b187244c82ddfffe67b092674cb5aee6f16c:distr/rule/rule.json#name=cl-tooltip`
+- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/smart/tooltip`
+- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/rule/rule.json#name=cl-tooltip`
 
 ## См. также
 

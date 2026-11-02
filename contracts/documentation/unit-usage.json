@@ -9,15 +9,15 @@
   "sources": [
     {
       "source": "simai/ui-source",
-      "release": "ui-1232b187244c",
-      "revision": "f7616a2a922d29e3d952eab5df1966bf78fd6a71",
-      "brought_up_on": "2026-11-01"
+      "release": "ui-654a2aceaa96",
+      "revision": "9f5810bb8e2e41d3c48375b717ac17c85410b446",
+      "brought_up_on": "2026-11-02"
     },
     {
       "source": "simai/ui-pro",
-      "release": "larena-f8939812c7f9",
-      "revision": "f8939812c7f977a1a62e8440f326adf249ae72b9",
-      "brought_up_on": "2026-11-01"
+      "release": "larena-4e61bb2a1c56",
+      "revision": "4e61bb2a1c5655ce9ddbd43764dd49e9468a6856",
+      "brought_up_on": "2026-11-02"
     }
   ],
   "places": [
@@ -1425,8 +1425,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.0",
-          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
+          "version": "1.2.1",
+          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
           "source": "simai/ui-pro"
         },
         {
@@ -1600,8 +1600,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.0",
-          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
+          "version": "1.2.1",
+          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
           "source": "simai/ui-pro"
         },
         {
@@ -2253,8 +2253,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.0",
-          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
+          "version": "1.2.1",
+          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
           "source": "simai/ui-pro"
         },
         {
@@ -2529,8 +2529,8 @@
         },
         {
           "id": "smart.site-header",
-          "version": "1.1.0",
-          "content_sha256": "6ebdefa8d90c3b8d52e5754b9219cd321cb1e6977167f4bd714f7b9da687ac65",
+          "version": "1.2.0",
+          "content_sha256": "b9e456ab4af523bae53a25c744e63f8b2c65bb4dcaa37d782e78b3875537aa3e",
           "source": "simai/ui-source"
         },
         {
@@ -3343,8 +3343,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.0",
-          "content_sha256": "e5fe47297d08dadffd223481ac1e9fe3e8115510e319f13c743e0b09df615bb6",
+          "version": "1.2.1",
+          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
           "source": "simai/ui-pro"
         },
         {
@@ -3620,8 +3620,8 @@
         },
         {
           "id": "smart.site-header",
-          "version": "1.1.0",
-          "content_sha256": "6ebdefa8d90c3b8d52e5754b9219cd321cb1e6977167f4bd714f7b9da687ac65",
+          "version": "1.2.0",
+          "content_sha256": "b9e456ab4af523bae53a25c744e63f8b2c65bb4dcaa37d782e78b3875537aa3e",
           "source": "simai/ui-source"
         }
       ]
