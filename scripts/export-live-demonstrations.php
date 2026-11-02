@@ -67,7 +67,7 @@ $adminHtml='<!doctype html><html lang="ru" class="max-h-screen h-full" data-sf-d
     .'<link rel="stylesheet" href="'.$css[1].'"><link rel="stylesheet" href="index.css">'
     .'<script>(function(){var d=window.matchMedia("(prefers-color-scheme: dark)").matches;try{if(parent!==window)d=parent.document.documentElement.classList.contains("theme-dark");}catch(e){}document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);})();</script>'
     .'<script>window.sfPath='.json_encode($core,JSON_UNESCAPED_SLASHES).';window.sfSmartPath='.json_encode($base.'_docara/framework-runtime',JSON_UNESCAPED_SLASHES).';window.SF_BOOT_CONFIG='.json_encode($adminBoot,JSON_UNESCAPED_SLASHES).';</script>'
-    .'<script src="'.$core.'core/js/core.js" defer></script><script type="module" src="index.js"></script></head>'
+    .'<script src="'.$core.'core/js/core.js" defer></script><script type="module" src="index.js"></script><script type="module" src="demo.js"></script></head>'
     .'<body class="flex h-full">'.file_get_contents($adminSource.'/index.html')
     .'<script>function syncTheme(){if(parent===window)return;try{var d=parent.document.documentElement.classList.contains("theme-dark");document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);}catch(e){}}try{if(parent!==window)new MutationObserver(syncTheme).observe(parent.document.documentElement,{attributes:true,attributeFilter:["class"]});}catch(e){}</script>'
     .'</body></html>';

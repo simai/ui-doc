@@ -99,16 +99,89 @@ const data = {
   ]
 };
 
+// The second conversation and the answers are the demo's own: whatever is
+// asked, the assistant says it is a demonstration.
+const feeds = {
+  thr_01: data.messages,
+  thr_02: [
+    {id: 'msg_11', kind: 'person', author: {id: 7, name: 'Анна', own: true}, body: 'Какой график работы в ноябре?'},
+    {id: 'msg_12', kind: 'assistant', author: {id: 'hr', name: 'Кадры'}, status: 'completed', body: 'В ноябре 19 рабочих дней. 4 ноября — выходной, 3 ноября — сокращённый день.'},
+  ],
+};
+let next = 100;
+const demoAnswer = (interlocutor) => ({
+  id: `msg_${next++}`,
+  kind: 'assistant',
+  author: {id: interlocutor, name: data.interlocutors.find((one) => one.id === interlocutor)?.title ?? 'Помощник'},
+  status: 'completed',
+  body: 'Это демонстрация: ответы здесь заготовлены. В вашем приложении их даёт ваш сервер или ИИ-сотрудник.',
+});
+const conversationOf = (id) => {
+  const one = data.conversations.find((item) => item.id === id);
+  return one && {id: one.id, title: one.title, interlocutor: one.interlocutor, can_send: true};
+};
+const applied = (result) => ({answer: 'applied', ...(result ? {data: result} : {})});
+let chosen = 'personal';
+
 const initialize = async () => {
   await customElements.whenDefined('sf-chat-window');
   const chat = document.querySelector('#showcase-chat');
   if (!chat || chat.dataset.exampleReady === 'true') return;
   chat.dataset.exampleReady = 'true';
+  const reply = (conversationId, interlocutor) => setTimeout(() => {
+    feeds[conversationId].push(demoAnswer(interlocutor));
+    chat.setData({messages: [...feeds[conversationId]]});
+  }, 700);
+  const intents = {
+    'conversation.open': ({conversation_id: id}) => {
+      const conversation = conversationOf(id);
+      if (!conversation) return {answer: 'refused', reason: 'not-found'};
+      feeds[id] ??= [];
+      return applied({conversation, messages: [...feeds[id]], history: {has_older: false}});
+    },
+    'conversation.create': ({interlocutor}) => {
+      const id = `thr_${next++}`;
+      data.conversations.unshift({id, title: 'Новый разговор', type: 'assistant', interlocutor: interlocutor ?? chosen, updated_at: new Date().toISOString(), archived: false});
+      feeds[id] = [];
+      return applied({conversations: [...data.conversations], conversation: conversationOf(id), messages: []});
+    },
+    'message.send': ({conversation_id: id, body, interlocutor}) => {
+      let conversationId = id;
+      let created = null;
+      if (conversationId == null) {
+        conversationId = `thr_${next++}`;
+        data.conversations.unshift({id: conversationId, title: body.slice(0, 40), type: 'assistant', interlocutor: interlocutor ?? chosen, updated_at: new Date().toISOString(), archived: false});
+        feeds[conversationId] = [];
+        created = conversationOf(conversationId);
+      }
+      const message = {id: `msg_${next++}`, kind: 'person', author: {...data.me, own: true}, body};
+      // A new conversation is named by its first question.
+      const entry = data.conversations.find((item) => item.id === conversationId);
+      const named = !created && entry && feeds[conversationId].length === 0 && entry.title === 'Новый разговор';
+      if (named) entry.title = body.slice(0, 40);
+      feeds[conversationId].push(message);
+      reply(conversationId, conversationOf(conversationId).interlocutor);
+      return applied(created ? {message, conversation: created, conversations: [...data.conversations]} : (named ? {message, conversations: [...data.conversations]} : {message}));
+    },
+    'message.rate': () => applied(),
+    'interlocutor.choose': ({interlocutor}) => { chosen = interlocutor; return applied(); },
+    'conversation.rename': ({conversation_id: id, title}) => {
+      const one = data.conversations.find((item) => item.id === id);
+      if (one) one.title = title;
+      return applied({conversations: [...data.conversations]});
+    },
+    'conversation.archive': ({conversation_id: id, archived}) => {
+      const one = data.conversations.find((item) => item.id === id);
+      if (one) one.archived = archived;
+      return applied({conversations: [...data.conversations]});
+    },
+    'proposal.decide': () => applied(),
+  };
   chat.connectPort({
     port: 'simai.chat-port',
     version: '1.0.0',
-    capabilities: ['conversation-manage'],
-    raise: () => ({answer: 'unavailable', reason: 'example'}),
+    capabilities: ['assistant', 'feedback', 'proposals', 'conversation-create', 'conversation-manage', 'interlocutors'],
+    raise: (intent, payload = {}) => intents[intent]?.(payload) ?? {answer: 'unavailable', reason: 'capability-not-provided'},
   });
   chat.setData(data);
 };
