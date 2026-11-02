@@ -29,9 +29,9 @@ Framework открыто под Apache-2.0.
 3. Откройте страницу — загрузчик сам подгрузит то, что на ней есть.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/css/core.min.css">
-<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/';</script>
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/js/core.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1446/distr/core/css/core.min.css">
+<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1446/distr/';</script>
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1446/distr/core/js/core.min.js"></script>
 
 <sf-button text="Сохранить"></sf-button>
 ```
@@ -56,7 +56,7 @@ Framework открыто под Apache-2.0.
 
 ---
 
-**SIMAI Framework** · выпуск `ui-2d39b617a719` ·
+**SIMAI Framework** · выпуск `ui-c4d39d528148` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Сообщить о проблеме](https://github.com/simai/ui-source/issues) ·
 [Версии](/ru/guide/connection/versions/) ·
