@@ -1,0 +1,19 @@
+<div data-sf-overlay-container>
+  <div class="flex flex-col gap-2 p-3 radius-3 bg-surface-container">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-start">
+        <span class="sf-button-text-container">placement="inline-start"</span>
+      </button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-end">
+        <span class="sf-button-text-container">placement="inline-end"</span>
+      </button>
+    </div>
+    <p class="m-0">Панель выезжает от начального или от конечного края; при письме справа налево стороны меняются местами.</p>
+  </div>
+  <sf-drawer id="drawer-example-start" modal="false" placement="inline-start" size="1/2" heading="Структура">
+    <p class="m-0">Панель у начального края.</p>
+  </sf-drawer>
+  <sf-drawer id="drawer-example-end" modal="false" placement="inline-end" size="1/2" heading="Свойства">
+    <p class="m-0">Панель у конечного края.</p>
+  </sf-drawer>
+</div>

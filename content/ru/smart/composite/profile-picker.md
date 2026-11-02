@@ -8,13 +8,55 @@ description: "Выбирает, создаёт, переименовывает, 
 `<sf-profile-picker>` — один способ работать с профилями: профилями меню,
 видами записи и всем, у чего есть профили. В свёрнутом виде это кнопка,
 похожая на поле: «Профиль: Обычный». В открытой панели всё делается на месте.
+Им пользуются меню администратора и представление свойств Larena.
 
 ## Пример
 
 :::example {id="smart-components/profile-picker/overview" label="Профили"}
 :::
 
-## Применение
+## Разметка
+
+В разметке задаются подпись и текущий профиль, список профилей и права
+передаёт код сайта:
+
+```html
+<sf-profile-picker label="Профиль" current="regular" resettable></sf-profile-picker>
+```
+
+`label` — как здесь называется профиль («Профиль», «Вид»); без значения —
+«Профиль» на языке страницы. `current` — идентификатор текущего профиля.
+`resettable` показывает внизу «Сбросить к стандартному». `message` — текст
+отказа сайта в последнем действии, он показывается в панели.
+
+Свойства, которые задаются из кода:
+
+- `profiles` — список `{id, label, shared, builtin, editable}`.
+  `editable: false` — профиль можно выбрать, но нельзя менять; `builtin` —
+  стандартный профиль, его не переименовывают и не удаляют.
+- `rights.create` — `{personal, shared}`: какие профили человек может
+  создать. Личный профиль у человека один: если он уже есть, сайт передаёт
+  `personal: false`.
+
+## Варианты
+
+### Размер
+
+`size` — `1/2` (по умолчанию) или `1`.
+
+:::example {id="smart-components/profile-picker/sizes" label="Размеры выбора профиля"}
+:::
+
+## Состояния
+
+### Недоступен
+
+`disabled` отключает выбор профиля.
+
+:::example {id="smart-components/profile-picker/state-disabled" label="Недоступный выбор профиля"}
+:::
+
+## Поведение
 
 ### Что в панели
 
@@ -25,6 +67,8 @@ description: "Выбирает, создаёт, переименовывает, 
 - «Новый профиль…» открывает форму в списке: название и «Личный / Для всех».
   Новый профиль — копия текущего.
 - «Сбросить к стандартному» внизу, если задан `resettable`.
+
+Методы `open()`, `close()` и `toggle()` открывают и закрывают панель из кода.
 
 ### Профили и права принадлежат сайту
 
@@ -41,26 +85,20 @@ picker.profiles = [
 ];
 picker.rights = {create: {personal: false, shared: true}};
 picker.setAttribute('current', 'regular');
-picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail.id));
+picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event.detail.id));
 ```
 
 | Событие | `detail` | Что просит человек |
 |:---|:---|:---|
-| `sf-profile-select` | `{id}` | выбрать профиль |
-| `sf-profile-create` | `{label, shared, from}` | создать профиль — копию `from` |
-| `sf-profile-rename` | `{id, label}` | переименовать |
-| `sf-profile-delete` | `{id}` | удалить |
-| `sf-profile-reset` | `{id}` | сбросить к стандартному |
+| `sf-profile-picker-select` | `{id}` | выбрать профиль |
+| `sf-profile-picker-create` | `{label, shared, from}` | создать профиль — копию `from` |
+| `sf-profile-picker-rename` | `{id, label}` | переименовать |
+| `sf-profile-picker-delete` | `{id}` | удалить |
+| `sf-profile-picker-reset` | `{id}` | сбросить к стандартному |
 
-- `profiles` — список `{id, label, shared, builtin, editable}`.
-  `editable: false` — профиль можно выбрать, но нельзя менять; `builtin` —
-  стандартный профиль, его не переименовывают и не удаляют.
-- `rights.create` — `{personal, shared}`: какие профили человек может
-  создать. Личный профиль у человека один: если он уже есть, сайт передаёт
-  `personal: false`.
-- `size` — `1/2` (по умолчанию) или `1`.
-
-Им пользуются меню администратора и представление свойств Larena.
+Прежние имена событий — `sf-profile-select`, `sf-profile-create`,
+`sf-profile-rename`, `sf-profile-delete` и `sf-profile-reset` — приходят
+следом с полями из таблицы.
 
 ## Доступность
 
@@ -69,74 +107,64 @@ picker.addEventListener('sf-profile-select', (event) => openProfile(event.detail
 - `Escape` закрывает форму, а затем панель.
 - Подписи по умолчанию — на языке страницы.
 
-## Справочник API
+## Справочник
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-profile-picker>` |
-| Назначение | Один способ выбрать, создать, переименовать, удалить и сбросить профиль: кнопка, похожая на поле, с названием текущего профиля, и панель, где всё делается на месте. Профили и права принадлежат хосту; компонент сообщает, что попросил человек. |
-| Контракт | `smart.profile-picker`, версия `1.1.7` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
-| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
-- `label` — `string`. Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы.
-- `size` — `string`, по умолчанию `1/2`, значения: `1/2`, `1`.
-- `resettable` — `boolean`, по умолчанию `false`. Показывает внизу «Сбросить к стандартному».
-- `message` — `string`, по умолчанию пусто. Почему хост отказал в последнем действии; показывается в панели.
-- `disabled` — `boolean`, по умолчанию `false`.
-- `current` — `string`, по умолчанию пусто. Идентификатор текущего профиля.
-- `profiles` — `array`.
-- `rights` — `object`.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `root-class` | строка | пусто | — | — |
+| `root-style` | строка | пусто | — | — |
+| `label` | строка | — | — | Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы. |
+| `size` | строка | `1/2` | `1/2`, `1` | — |
+| `resettable` | да/нет | нет | — | Показывает внизу «Сбросить к стандартному». |
+| `message` | строка | пусто | — | Почему хост отказал в последнем действии; показывается в панели. |
+| `disabled` | да/нет | нет | — | — |
+| `current` | строка | пусто | — | Идентификатор текущего профиля. |
+| `profiles` | список | — | — | — |
+| `rights` | объект | — | — | — |
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
 ### Методы
 
-- `open()` — возвращает `object`. Действие open.
-- `close()` — возвращает `object`. Действие close.
-- `toggle()` — возвращает `object`. Действие toggle.
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `open()` | объект | Действие open. |
+| `close()` | объект | Действие close. |
+| `toggle()` | объект | Действие toggle. |
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-profile-picker-select` — `detail`: `{ id: string, ids: array }`.
-- `sf-profile-picker-create` — `detail`: `{ label: string, shared: boolean, from: string, kind: any }`.
-- `sf-profile-picker-rename` — `detail`: `{ id: string, label: string, title: string }`.
-- `sf-profile-picker-delete` — `detail`: `{ id: string, ids: array }`.
-- `sf-profile-picker-reset` — `detail`: `{ id: string }`.
-- `sf-profile-select` — устаревший псевдоним события `sf-profile-picker-select`: приходит с тем же `detail`, подписывайтесь на `sf-profile-picker-select`.
-- `sf-profile-create` — устаревший псевдоним события `sf-profile-picker-create`: приходит с тем же `detail`, подписывайтесь на `sf-profile-picker-create`.
-- `sf-profile-rename` — устаревший псевдоним события `sf-profile-picker-rename`: приходит с тем же `detail`, подписывайтесь на `sf-profile-picker-rename`.
-- `sf-profile-delete` — устаревший псевдоним события `sf-profile-picker-delete`: приходит с тем же `detail`, подписывайтесь на `sf-profile-picker-delete`.
-- `sf-profile-reset` — устаревший псевдоним события `sf-profile-picker-reset`: приходит с тем же `detail`, подписывайтесь на `sf-profile-picker-reset`.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `sf-profile-picker-select` | `{ id: string, ids: array }` | — |
+| `sf-profile-picker-create` | `{ label: string, shared: boolean, from: string, kind: any }` | — |
+| `sf-profile-picker-rename` | `{ id: string, label: string, title: string }` | — |
+| `sf-profile-picker-delete` | `{ id: string, ids: array }` | — |
+| `sf-profile-picker-reset` | `{ id: string }` | — |
+| `sf-profile-select` | `{ id: string }` | устаревший псевдоним `sf-profile-picker-select`: подписывайтесь на `sf-profile-picker-select` |
+| `sf-profile-create` | `{ label: string, shared: boolean, from?: string }` | устаревший псевдоним `sf-profile-picker-create`: подписывайтесь на `sf-profile-picker-create` |
+| `sf-profile-rename` | `{ id: string, label: string }` | устаревший псевдоним `sf-profile-picker-rename`: подписывайтесь на `sf-profile-picker-rename` |
+| `sf-profile-delete` | `{ id: string }` | устаревший псевдоним `sf-profile-picker-delete`: подписывайтесь на `sf-profile-picker-delete` |
+| `sf-profile-reset` | `{ id: string }` | устаревший псевдоним `sf-profile-picker-reset`: подписывайтесь на `sf-profile-picker-reset` |
 
-### Доступность
+### О компоненте
 
-- Роль: меню (`menu`).
-- Доступное имя: рекомендуется.
-- Клавиши: `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Space`, `F2`, `Delete`, `Escape`.
-- Фокус: Кнопка открытия — с aria-haspopup=menu; строки панели — menuitemradio, текущая отмечена. Стрелки, Home и End ходят по строкам, Enter выбирает, F2 переименовывает, Delete спрашивает об удалении, Escape закрывает форму, а затем панель и возвращает фокус на кнопку.
-
-### Минимальная разметка
-
-```html
-<sf-profile-picker label="Профиль" current="regular" resettable></sf-profile-picker>
-```
-
-### Источник
-
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/profile-picker`
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-profile-picker`
+| | |
+|:---|:---|
+| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.1.7` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
+| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+| Доступность | роль меню (`menu`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Space`, `F2`, `Delete`, `Escape` |
+| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/profile-picker` |
+| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-profile-picker` |
 
 ## См. также
 

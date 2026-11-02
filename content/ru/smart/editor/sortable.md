@@ -15,20 +15,27 @@ description: "Даёт переставлять элементы, перенос
 :::example {id="smart-components/sortable/overview" label="Две колонки задач"}
 :::
 
-## Применение
+## Разметка
 
-### Элементы и ручки
+Списку нужны группа, имя для объявлений и элементы с `id`:
+
+```html
+<sf-sortable id="todo" group="tasks" label="Нужно сделать">
+  <div data-sf-sortable-item="brief"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Собрать требования</div>
+  <div data-sf-sortable-item="layout"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Нарисовать макет</div>
+</sf-sortable>
+```
 
 Элементы списка — потомки с `data-sf-sortable-item="<id>"`; `id` приходит в
 событиях. Ручка `data-sf-sortable-handle` внутри элемента ограничивает
 перетаскивание и служит целью касания; без ручки перетаскивается весь
 элемент. Элементы, добавленные в список позже, становятся перетаскиваемыми
-сами. Код компонента загрузчик Framework подключает по требованию, когда на
-странице появляется `sf-sortable`.
+сами. Код компонента загрузчик SIMAI Framework подключает по требованию,
+когда на странице появляется `sf-sortable`.
 
-`orientation="horizontal"` говорит, что элементы стоят в строку: место
-вставки при перетаскивании указателем считается по горизонтали. Раскладку
-списка задают классы, а не этот атрибут.
+## Варианты
+
+### Предпросмотр места
 
 При перетаскивании указателем элемент по умолчанию поднимается из списка, а
 на месте, куда он встанет, открывается контур его размера; соседние элементы
@@ -37,6 +44,20 @@ description: "Даёт переставлять элементы, перенос
 переносится в сетку (например, поля в две колонки), контур занимает одну
 ячейку в порядке чтения. Перемещение с клавиатуры и внешние цели всегда
 показывают линию.
+
+:::example {id="smart-components/sortable/preview" label="Контур и линия на месте вставки"}
+:::
+
+### Ориентация
+
+`orientation="horizontal"` говорит, что элементы стоят в строку: место
+вставки при перетаскивании указателем считается по горизонтали. Раскладку
+списка задают классы, а не этот атрибут.
+
+:::example {id="smart-components/sortable/orientation" label="Метки в строку"}
+:::
+
+## Поведение
 
 ### Группы и библиотека
 
@@ -49,10 +70,11 @@ description: "Даёт переставлять элементы, перенос
 редактора копия попадает через атрибут `accepts` у
 [оверлея редактора](/ru/smart/editor/composition-overlay/).
 
-### Событие `sf-sortable-intent`
+### Событие `sf-sortable-move`
 
 Когда пользователь отпускает элемент, список-получатель отправляет
-`sf-sortable-intent` с `event.detail`:
+`sf-sortable-move` с `event.detail` (прежнее имя `sf-sortable-intent`
+приходит с тем же `detail`):
 
 | Поле | Содержимое |
 |:---|:---|
@@ -71,7 +93,7 @@ description: "Даёт переставлять элементы, перенос
 закончился.
 
 ```js
-document.addEventListener('sf-sortable-intent', (event) => {
+document.addEventListener('sf-sortable-move', (event) => {
   const {item, from, to, index, mode} = event.detail;
   // Применить к своей модели с ожидаемой ревизией; при отказе ничего не менять.
 });
@@ -96,7 +118,7 @@ document.addEventListener('sf-sortable-intent', (event) => {
    Если хост поставил фокус сам, компонент его не трогает.
 
 ```js
-list.addEventListener('sf-sortable-intent', (event) => {
+list.addEventListener('sf-sortable-move', (event) => {
   const {item, from, to, index, mode} = event.detail;
   if (!model.apply({item, from, to, index, mode})) return; // отказ: ничего не менять
   for (const element of list.querySelectorAll('[data-sf-sortable-item]')) element.remove();
@@ -113,7 +135,7 @@ list.addEventListener('sf-sortable-intent', (event) => {
 label}` и `{type: "separator"}` группируют пункты. Выбор приходит событием
 `sf-sortable-insert` с `index`, `item` и `to`: приложение создаёт элемент и
 перерисовывает список. `preventDefault()` отказывает и оставляет вставщик
-открытым. Без `inserter-items` список ведёт себя как прежде.
+открытым. Без `inserter-items` места вставки нет.
 
 С клавиатуры точка вставки — последняя остановка `Tab` в списке: стрелки
 переводят её между местами, `Enter` или `Space` открывает вставщик; `+` на
@@ -181,35 +203,27 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 - У краёв прокручиваемой области во время перетаскивания включается
   автопрокрутка.
 
-## Справочник API
+## Справочник
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-sortable>` |
-| Назначение | Список, элементы которого переносятся указателем, касанием и клавиатурой — между списками одной группы и на зарегистрированные места сброса; он просит хост перенести и никогда не двигает DOM или данные хоста сам. |
-| Контракт | `smart.sortable`, версия `1.1.4` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
-| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
-- `group` — `string`, по умолчанию пусто, значения: шаблон `^[a-z][a-z0-9-]{0,31}$`. Группа списка: элемент переносится между списками одной группы; обязательна для списка с переносимыми элементами
-- `accepts` — `string`, по умолчанию пусто. Другие группы, элементы которых принимает этот список, через пробел
-- `mode` — `string`, по умолчанию `move`, значения: `move`, `copy`. copy: список-библиотека; его элементы копируются наружу и остаются на месте
-- `orientation` — `string`, по умолчанию `vertical`, значения: `vertical`, `horizontal`.
-- `label` — `string`, по умолчанию пусто. Имя списка в том, что объявляется вслух
-- `preview` — `string`, по умолчанию `silhouette`, значения: `silhouette`, `line`. silhouette открывает промежуток размером с элемент; line рисует линию
-- `inserter-items` — `string`, по умолчанию пусто. Что предлагает место вставки, в JSON `[{item, label, icon?, description?}]`; пусто — места вставки нет
-- `aria-label` — `string`, по умолчанию пусто.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `root-class` | строка | пусто | — | — |
+| `root-style` | строка | пусто | — | — |
+| `group` | строка | пусто | шаблон `^[a-z][a-z0-9-]{0,31}$` | Группа списка: элемент переносится между списками одной группы; обязательна для списка с переносимыми элементами |
+| `accepts` | строка | пусто | — | Другие группы, элементы которых принимает этот список, через пробел |
+| `mode` | строка | `move` | `move`, `copy` | copy: список-библиотека; его элементы копируются наружу и остаются на месте |
+| `orientation` | строка | `vertical` | `vertical`, `horizontal` | — |
+| `label` | строка | пусто | — | Имя списка в том, что объявляется вслух |
+| `preview` | строка | `silhouette` | `silhouette`, `line` | silhouette открывает промежуток размером с элемент; line рисует линию |
+| `inserter-items` | строка | пусто | — | Что предлагает место вставки, в JSON `[{item, label, icon?, description?}]`; пусто — места вставки нет |
+| `aria-label` | строка | пусто | — | — |
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
 ### Методы
 
@@ -217,30 +231,26 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-sortable-move` — `detail`: `{ item: string, from: string, to: string, index: number, mode: any }`. Просьба перенести (или скопировать) элемент в место: один ручной перенос словаря 1.1.5 §5 move, `{id, parent, position}` под именами item, to и index; применяет его хост
-- `sf-sortable-state` — `detail`: `{ state: any, item: string }`. Шаг перетаскивания: взяли, отпустили или отменили
-- `sf-sortable-insert` — `detail`: `{ index: integer, item: string, to: string }`. Просьба вставщика поставить новый элемент палитры в место; отменяемая
-- `sf-sortable-intent` — устаревший псевдоним события `sf-sortable-move`: приходит с тем же `detail`, подписывайтесь на `sf-sortable-move`.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: any }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос словаря 1.1.5 §5 move, `{id, parent, position}` под именами item, to и index; применяет его хост |
+| `sf-sortable-state` | `{ state: any, item: string }` | Шаг перетаскивания: взяли, отпустили или отменили |
+| `sf-sortable-insert` | `{ index: integer, item: string, to: string }` | Просьба вставщика поставить новый элемент палитры в место; отменяемая |
+| `sf-sortable-intent` | `{ item: string, from: string, to: string, index: integer, mode: any }` | устаревший псевдоним `sf-sortable-move`: подписывайтесь на `sf-sortable-move` |
 
-### Доступность
+### О компоненте
 
-- Роль: нет (`none`).
-- Доступное имя: рекомендуется.
-- Клавиши: `Space`, `Enter`, `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Escape`, `Tab`, +, `Home`, `End`.
-- Фокус: Элементы получают фокус и описывают порядок действий. Space или Enter берёт элемент, стрелки двигают его внутри списка и в другие принимающие списки или внешние цели, Space или Enter опускает, Escape или Tab отменяет. Каждый шаг объявляется в вежливой (polite) живой области на языке страницы. Если заданы пункты вставщика, + на строке в фокусе открывает вставщик для места после неё, а точка вставки — последняя остановка Tab в списке: стрелки переводят её между местами, Home и End — к первому и последнему, Enter или Space открывает вставщик; во вставщике ввод фильтрует, стрелки и Enter выбирают, Escape закрывает его и возвращает фокус.
-
-### Минимальная разметка
-
-```html
-<sf-sortable id="sections" group="sections" label="Sections"><div data-sf-sortable-item="s1">Section 1</div><div data-sf-sortable-item="s2">Section 2</div></sf-sortable>
-```
-
-### Источник
-
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/sortable`
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-sortable`
+| | |
+|:---|:---|
+| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.1.4` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
+| До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+| Доступность | роль нет (`none`); доступное имя рекомендуется; клавиши `Space`, `Enter`, `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Escape`, `Tab`, +, `Home`, `End` |
+| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/sortable` |
+| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-sortable` |
 
 ## См. также
 

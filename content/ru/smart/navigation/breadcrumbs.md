@@ -7,33 +7,47 @@ description: "Показывает путь от корня сайта до те
 
 `<sf-breadcrumbs>` показывает, где в иерархии сайта находится страница:
 ссылки на разделы выше и название текущей страницы в конце. Он собирает
-разметку обычных [хлебных крошек](/ru/components/navigation/breadcrumbs/) из
-строки или данных и сам сворачивает длинный путь. Берите его на страницах
-глубже второго уровня, где пользователю нужно вернуться к разделу.
+разметку обычных хлебных крошек из строки или данных и сам сворачивает
+длинный путь. Берите его на страницах глубже второго уровня, где
+пользователю нужно вернуться к разделу.
+
+То же на классах — [Хлебные крошки](/ru/components/navigation/breadcrumbs/):
+для статической разметки без JavaScript.
 
 ## Пример
 
-:::example {id="smart-components/breadcrumbs/overview" label="Результат"}
+:::example {id="smart-components/breadcrumbs/overview" label="Путь к товару"}
 :::
 
-## Применение
+## Разметка
 
-### Пункты пути
+Пункты задаёт `items`:
 
-Пункты задаёт `items`. Короткая запись — строка, где пункты разделены
-символом `|`, а после `::` идут поля пункта через запятую:
-`Каталог::href=/catalog|Лампы`. Поля: `href`, `icon`, `target`, `rel`,
-`aria-label` и флаг `disabled`. Полная запись — массив JSON с
-теми же полями и подписью в `label`. Пункты можно передать и дочерними
-элементами `<sf-breadcrumbs-item>` с теми же атрибутами.
+```html
+<sf-breadcrumbs aria-label="Путь к товару" items="Каталог::href=/catalog|Лампы"></sf-breadcrumbs>
+```
+
+Короткая запись — строка, где пункты разделены символом `|`, а после `::`
+идут поля пункта через запятую: `Каталог::href=/catalog|Лампы`. Поля:
+`href`, `icon`, `target`, `rel`, `aria-label` и флаг `disabled`. Полная
+запись — массив JSON с теми же полями и подписью в `label`. Пункты можно
+передать и дочерними элементами `<sf-breadcrumbs-item>` с теми же
+атрибутами.
 
 Последний пункт — текущая страница: он рисуется текстом, не ссылкой, и
 получает `aria-current="page"`. Пункт с `href` становится ссылкой, пункт без
 адреса — кнопкой, нажатие на которую приложение обрабатывает событием.
 
-`separator-icon` меняет разделитель, по умолчанию `chevron_right`.
-`home-label` и `home-icon` подписывают первый пункт, если у него нет своей
-подписи.
+## Варианты
+
+### Иконка
+
+Поле `icon` ставит иконку в пункт. `separator-icon` меняет разделитель, по
+умолчанию `chevron_right`. `home-label` и `home-icon` подписывают первый
+пункт, если у него нет своей подписи.
+
+:::example {id="smart-components/breadcrumbs/icons" label="Иконка пункта и свой разделитель"}
+:::
 
 ### Длинный путь
 
@@ -42,18 +56,29 @@ description: "Показывает путь от корня сайта до те
 передаёт в событии нажатия, в поле `item.hiddenItems`. `max-items` меньше 3
 отключает сворачивание.
 
-:::example {id="smart-components/breadcrumbs/long-path" label="Результат"}
+:::example {id="smart-components/breadcrumbs/long-path" label="Шесть пунктов, середина свёрнута"}
 :::
 
-### Событие `sf-breadcrumb-click`
+## Состояния
+
+### Недоступный пункт
+
+Флаг `disabled` в полях пункта делает его недоступным.
+
+:::example {id="smart-components/breadcrumbs/state-disabled" label="Недоступный раздел в середине пути"}
+:::
+
+## Поведение
+
+### Нажатие на пункт
 
 Нажатие на пункт отправляет всплывающее отменяемое событие
-`sf-breadcrumb-click`. Его `event.detail`
-содержит `item` — данные пункта (`label`, `href`, `value`, `ellipsis` и
-другие поля), `index` — номер пункта среди показанных, `items` — все
-показанные пункты, `originalEvent` — исходный `click`. У кнопки «…» в `item` есть
-`ellipsis: true` и `hiddenItems`. Помощник `onItemClick(handler)` передаёт
-обработчику данные пункта первым аргументом.
+`sf-breadcrumbs-press` (прежнее имя — `sf-breadcrumb-click`). Его
+`event.detail` содержит `item` — данные пункта (`label`, `href`, `value`,
+`ellipsis` и другие поля), `index` — номер пункта среди показанных, `items` —
+все показанные пункты, `originalEvent` — исходный `click`. У кнопки «…» в
+`item` есть `ellipsis: true` и `hiddenItems`. Помощник
+`onItemClick(handler)` передаёт обработчику данные пункта первым аргументом.
 
 Для навигации в одностраничном приложении перехватите нажатие на ссылку:
 
@@ -78,74 +103,65 @@ crumbs.onItemClick((item, detail) => {
 - Разделители и иконки скрыты от вспомогательных технологий; пункт только с
   иконкой получает имя из поля `aria-label`.
 
-## Справочник API
+## Справочник
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-breadcrumbs>` |
-| Назначение | Показывает место текущей страницы в иерархии цепочкой нативных ссылок, построенной из items, атрибута items или дочерних sf-breadcrumbs-item. У длинной цепочки середина сворачивается в кнопку-многоточие (max-items, по умолчанию 4), которая раскрывается на месте. |
-| Контракт | `smart.breadcrumbs`, версия `1.1.6` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
-| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
-- `separator-icon` — `string`, по умолчанию `chevron_right`.
-- `home-icon` — `string`, по умолчанию `home`.
-- `home-label` — `string`, по умолчанию пусто.
-- `item-class` — `string`, по умолчанию пусто.
-- `link-class` — `string`, по умолчанию пусто.
-- `current-class` — `string`, по умолчанию пусто.
-- `separator-class` — `string`, по умолчанию пусто.
-- `container-class` — `string`, по умолчанию пусто.
-- `expand-label` — `string`. Пусто — текст на языке страницы (по-английски «Show hidden breadcrumbs»).
-- `expand-on-ellipsis` — `boolean`, по умолчанию `true`.
-- `max-items` — `integer`, по умолчанию `4`, значения: от 0.
-- `aria-label` — `string`, по умолчанию пусто. Пусто — текст на языке страницы (по-английски «Breadcrumb»).
-- `items` — `array`, по умолчанию `[]`.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `root-class` | строка | пусто | — | — |
+| `root-style` | строка | пусто | — | — |
+| `separator-icon` | строка | `chevron_right` | — | — |
+| `home-icon` | строка | `home` | — | — |
+| `home-label` | строка | пусто | — | — |
+| `item-class` | строка | пусто | — | — |
+| `link-class` | строка | пусто | — | — |
+| `current-class` | строка | пусто | — | — |
+| `separator-class` | строка | пусто | — | — |
+| `container-class` | строка | пусто | — | — |
+| `expand-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «Show hidden breadcrumbs»). |
+| `expand-on-ellipsis` | да/нет | да | — | — |
+| `max-items` | целое число | `4` | от 0 | — |
+| `aria-label` | строка | пусто | — | Пусто — текст на языке страницы (по-английски «Breadcrumb»). |
+| `items` | список | `[]` | — | — |
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
 ### Методы
 
-- `getCapturedItems()` — возвращает `array` из `object`. Читает захваченные дочерние sf-breadcrumbs-item в простые объекты пунктов (label, href, icon, current, active, disabled, ellipsis, target, rel, itemClass, containerClass, ariaLabel, value, hiddenItems).
-- `getDisplayItems(items?: array)` — возвращает `array` из `object`. Возвращает пункты в том виде, в каком они показаны: если их больше max-items (не меньше 3) и многоточие не раскрыто, середина заменяется одним пунктом-многоточием со скрытыми пунктами; все пункты переиндексируются, и текущим может быть только последний.
-- `setState(nextState?: object)` — возвращает `object`. Записывает каждый ключ как атрибут хост-элемента (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает элемент.
-- `onItemClick(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет обработчик sf-breadcrumbs-press; обработчик получает (item, detail, event). Возвращает элемент.
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `getCapturedItems()` | список: объект | Читает захваченные дочерние sf-breadcrumbs-item в простые объекты пунктов (label, href, icon, current, active, disabled, ellipsis, target, rel, itemClass, containerClass, ariaLabel, value, hiddenItems). |
+| `getDisplayItems(items?: array)` | список: объект | Возвращает пункты в том виде, в каком они показаны: если их больше max-items (не меньше 3) и многоточие не раскрыто, середина заменяется одним пунктом-многоточием со скрытыми пунктами; все пункты переиндексируются, и текущим может быть только последний. |
+| `setState(nextState?: object)` | объект | Записывает каждый ключ как атрибут хост-элемента (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает элемент. |
+| `onItemClick(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-breadcrumbs-press; обработчик получает (item, detail, event). Возвращает элемент. |
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-breadcrumbs-press` — `detail`: `{ item: object, index: number, items: array }`.
-- `sf-breadcrumb-click` — устаревший псевдоним события `sf-breadcrumbs-press`: приходит с тем же `detail`, подписывайтесь на `sf-breadcrumbs-press`.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `sf-breadcrumbs-press` | `{ item: object, index: number, items: array }` | — |
+| `sf-breadcrumb-click` | `{ component?: any, tagName?: string, template?: string, item?: object, index?: number, items?: array, originalEvent?: any }` | устаревший псевдоним `sf-breadcrumbs-press`: подписывайтесь на `sf-breadcrumbs-press` |
 
-### Доступность
+### О компоненте
 
-- Роль: навигация (`navigation`).
-- Доступное имя: обязательно.
-- Клавиши: `Tab`, `Enter` на ссылках, `Enter` или `Space` на кнопке с многоточием.
-- Фокус: Нативные ссылки и кнопка с многоточием используют `focus-visible` только для клавиатуры; текущая страница не входит в порядок табуляции.
-
-### Минимальная разметка
-
-```html
-<sf-breadcrumbs></sf-breadcrumbs>
-```
-
-### Источник
-
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/breadcrumbs`
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-breadcrumbs`
+| | |
+|:---|:---|
+| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.1.6` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
+| До прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+| Доступность | роль навигация (`navigation`); доступное имя обязательно; клавиши `Tab`, `Enter` на ссылках, `Enter` или `Space` на кнопке с многоточием |
+| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 
 - [Шаги](/ru/smart/navigation/steps/) — этапы последовательного процесса.
 - [Дерево](/ru/smart/navigation/tree/) — вся иерархия разделов сразу.
+- [Хлебные крошки на классах](/ru/components/navigation/breadcrumbs/) — тот же путь в статической разметке.

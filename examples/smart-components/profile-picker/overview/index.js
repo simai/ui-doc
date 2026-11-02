@@ -20,20 +20,20 @@ const initializeProfilePicker = async () => {
   };
   answer('regular', '');
 
-  picker.addEventListener('sf-profile-select', ({detail}) => answer(detail.id, `Выбран профиль ${detail.id}`));
-  picker.addEventListener('sf-profile-create', ({detail}) => {
+  picker.addEventListener('sf-profile-picker-select', ({detail}) => answer(detail.id, `Выбран профиль ${detail.id}`));
+  picker.addEventListener('sf-profile-picker-create', ({detail}) => {
     const id = `profile-${next++}`;
     profiles = [...profiles, {id, label: detail.label, shared: detail.shared}];
     answer(id, `Создан профиль «${detail.label}» — копия ${detail.from}`);
   });
-  picker.addEventListener('sf-profile-rename', ({detail}) => {
+  picker.addEventListener('sf-profile-picker-rename', ({detail}) => {
     profiles = profiles.map((p) => (p.id === detail.id ? {...p, label: detail.label} : p));
     answer(null, `Профиль переименован в «${detail.label}»`);
   });
-  picker.addEventListener('sf-profile-delete', ({detail}) => {
+  picker.addEventListener('sf-profile-picker-delete', ({detail}) => {
     profiles = profiles.filter((p) => p.id !== detail.id);
     answer('regular', 'Профиль удалён');
   });
-  picker.addEventListener('sf-profile-reset', ({detail}) => answer(detail.id, 'Профиль сброшен к стандартному'));
+  picker.addEventListener('sf-profile-picker-reset', ({detail}) => answer(detail.id, 'Профиль сброшен к стандартному'));
 };
 initializeProfilePicker();

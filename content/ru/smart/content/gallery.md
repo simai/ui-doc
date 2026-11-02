@@ -17,19 +17,28 @@ description: "Показывает набор материалов слайде�
 :::example {id="components/gallery/overview" label="Галерея проекта"}
 :::
 
-## Применение
+## Разметка
 
-### Материалы
+Каждый значимый дочерний элемент с `slot="slide"` — один материал;
+`heading` называет галерею:
 
-Каждый значимый дочерний элемент с `slot="slide"` — один материал. Пробелы и
-комментарии между ними не считаются. Составную карточку — изображение,
-подпись, ссылку — держите в одном корневом элементе, например `figure`:
-галерея не собирает карточку из соседних элементов.
+```html
+<sf-gallery heading="Проект">
+  <img slot="slide" src="/photos/1.jpg" alt="Фасад">
+  <img slot="slide" src="/photos/2.jpg" alt="Холл">
+</sf-gallery>
+```
+
+Пробелы и комментарии между материалами не считаются. Составную карточку —
+изображение, подпись, ссылку — держите в одном корневом элементе, например
+`figure`: галерея не собирает карточку из соседних элементов.
 
 Подпись и альтернативный текст принадлежат содержимому. Компонент не
 придумывает их по имени файла: у каждого изображения должен быть свой `alt`.
 
-### Только встроенный просмотр
+## Варианты
+
+### Без модального окна
 
 `lightbox="false"` оставляет галерею в потоке страницы, без модального окна.
 Так делайте, когда увеличение не нужно или материалы уже занимают крупную
@@ -38,6 +47,8 @@ description: "Показывает набор материалов слайде�
 
 :::example {id="components/gallery/inline" label="Без полноэкранного просмотра"}
 :::
+
+## Поведение
 
 ### Галерея из ссылок
 
@@ -59,10 +70,11 @@ description: "Показывает набор материалов слайде�
 `arrows`, `dots`, `thumbs` и `loop` меняют способ листания, не меняя набор
 материалов; `space-between` и `speed` — расстояние между слайдами и скорость
 перехода. Модальное окно настраивается атрибутами галереи с теми же именами,
-что у модального окна: `title`, `text`, `show-header`, `show-close`,
-`close-on-esc`, `close-on-overlay`, `position`, `fullscreen`, `width`,
-`height`. Внешний вид частей задают `root-class`, `inline-class`,
-`lightbox-class`, `slide-class` и классы частей окна — утилитами Framework.
+что у модального окна: `heading` (прежнее имя — `title`), `text`,
+`show-header`, `show-close`, `close-on-esc`, `close-on-overlay`, `position`,
+`fullscreen`, `width`, `height`. Внешний вид частей задают
+`lightbox-class` (прежнее имя — `root-class`), `inline-class`,
+`slide-class` и классы частей окна — утилитами Framework.
 
 ### Текущее положение и события
 
@@ -72,14 +84,15 @@ description: "Показывает набор материалов слайде�
 переключают его. Нажатие на материал во встроенном слайдере открывает окно
 на этом материале.
 
-Смена материала отправляет `sf-change`, открытие и закрытие окна —
-`sf-open` и `sf-close`. Все три всплывают; в `event.detail` приходят
-`current` и `total`, а у `sf-change` ещё `previous` и `from` — откуда пришла
-смена: `inline`, `lightbox` или `api`.
+Смена материала отправляет `change`, открытие и закрытие окна —
+`sf-gallery-opened` и `sf-gallery-closed` (прежние имена — `sf-change`,
+`sf-open` и `sf-close` — приходят с тем же `detail`). Все три всплывают; в
+`event.detail` приходят `current` и `total`, а у `change` ещё `previous` и
+`from` — откуда пришла смена: `inline`, `lightbox` или `api`.
 
 ```js
 const gallery = document.querySelector('sf-gallery');
-gallery.addEventListener('sf-change', (event) => {
+gallery.addEventListener('change', (event) => {
   counter.textContent = `${event.detail.current} из ${event.detail.total}`;
 });
 gallery.open(3);
@@ -91,7 +104,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 ## Доступность
 
-- Задайте `title`: он становится заголовком модального окна и называет
+- Задайте `heading`: он становится заголовком модального окна и называет
   диалог. По умолчанию заголовок английский — «Gallery».
 - Материал встроенного слайдера, который открывает окно, получает роль кнопки
   и попадает в порядок `Tab`; `Enter` и пробел открывают окно на нём. Его
@@ -104,118 +117,110 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
   доступна с клавиатуры, изображение — нет.
 - При системной настройке уменьшения движения слайды сменяются без анимации.
 
-## Справочник API
+## Справочник
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-gallery>` |
-| Назначение | Упорядоченная коллекция медиа во встроенном Slider с необязательным лайтбоксом Modal, в котором находится второй Slider. Галерея хранит текущий слайд (нумерация с единицы) и держит на нём оба представления. |
-| Контракт | `smart.gallery`, версия `1.1.5` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
-| Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-style` — `string`, по умолчанию пусто.
-- `modal-id` — `string`, по умолчанию пусто.
-- `heading` — `string`.
-- `text` — `string`, по умолчанию пусто.
-- `inline` — `boolean`, по умолчанию `true`.
-- `lightbox` — `boolean`, по умолчанию `true`.
-- `arrows` — `boolean`, по умолчанию `true`.
-- `dots` — `boolean`, по умолчанию `false`.
-- `thumbs` — `boolean`, по умолчанию `true`.
-- `loop` — `boolean`, по умолчанию `false`.
-- `space-between` — `number`, по умолчанию `12`.
-- `speed` — `number`, по умолчанию `450`.
-- `button-type` — `string`, по умолчанию `primary`.
-- `button-size` — `string`, по умолчанию `1`.
-- `dots-type` — `string`, по умолчанию `primary-dark`.
-- `dots-size` — `string`, по умолчанию `2`.
-- `thumbs-class` — `string`, по умолчанию пусто.
-- `thumb-class` — `string`, по умолчанию пусто.
-- `slide-class` — `string`, по умолчанию пусто.
-- `inline-class` — `string`, по умолчанию пусто.
-- `lightbox-class` — `string`, по умолчанию пусто.
-- `overlay` — `boolean`, по умолчанию `true`.
-- `show-header` — `boolean`, по умолчанию `true`.
-- `show-close` — `boolean`, по умолчанию `true`.
-- `close-on-esc` — `boolean`, по умолчанию `true`.
-- `close-on-overlay` — `boolean`, по умолчанию `true`.
-- `preserve-scroll-gap` — `boolean`, по умолчанию `true`.
-- `position` — `string`, по умолчанию `center`, значения: `center`, `left`, `right`, `top`, `bottom`.
-- `fullscreen` — `boolean`, по умолчанию `false`.
-- `width` — `string`, по умолчанию пусто.
-- `height` — `string`, по умолчанию пусто.
-- `backdrop-blur` — `boolean`, по умолчанию `false`.
-- `blur-type` — `string`, по умолчанию `medium`, значения: `none`, `small`, `medium`, `large`.
-- `overlay-class` — `string`, по умолчанию пусто.
-- `close-class` — `string`, по умолчанию пусто.
-- `surface-class` — `string`, по умолчанию пусто.
-- `surface-padding` — `string`, по умолчанию пусто.
-- `panel-class` — `string`, по умолчанию пусто.
-- `header-class` — `string`, по умолчанию пусто.
-- `body-class` — `string`, по умолчанию пусто.
-- `content-class` — `string`, по умолчанию пусто.
-- `footer-class` — `string`, по умолчанию пусто.
-- `open` — `boolean`, по умолчанию `false`.
-- `current` — `integer`, по умолчанию `1`, значения: от 1.
-- `title` — `string`. Псевдоним с датой для `heading` до 2026-12-01.
-- `blur` — `boolean`, по умолчанию `false`. Псевдоним с датой для `backdrop-blur` до 2026-12-01.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `root-style` | строка | пусто | — | — |
+| `modal-id` | строка | пусто | — | — |
+| `heading` | строка | — | — | — |
+| `text` | строка | пусто | — | — |
+| `inline` | да/нет | да | — | — |
+| `lightbox` | да/нет | да | — | — |
+| `arrows` | да/нет | да | — | — |
+| `dots` | да/нет | нет | — | — |
+| `thumbs` | да/нет | да | — | — |
+| `loop` | да/нет | нет | — | — |
+| `space-between` | число | `12` | — | — |
+| `speed` | число | `450` | — | — |
+| `button-type` | строка | `primary` | — | — |
+| `button-size` | строка | `1` | — | — |
+| `dots-type` | строка | `primary-dark` | — | — |
+| `dots-size` | строка | `2` | — | — |
+| `thumbs-class` | строка | пусто | — | — |
+| `thumb-class` | строка | пусто | — | — |
+| `slide-class` | строка | пусто | — | — |
+| `inline-class` | строка | пусто | — | — |
+| `lightbox-class` | строка | пусто | — | — |
+| `overlay` | да/нет | да | — | — |
+| `show-header` | да/нет | да | — | — |
+| `show-close` | да/нет | да | — | — |
+| `close-on-esc` | да/нет | да | — | — |
+| `close-on-overlay` | да/нет | да | — | — |
+| `preserve-scroll-gap` | да/нет | да | — | — |
+| `position` | строка | `center` | `center`, `left`, `right`, `top`, `bottom` | — |
+| `fullscreen` | да/нет | нет | — | — |
+| `width` | строка | пусто | — | — |
+| `height` | строка | пусто | — | — |
+| `backdrop-blur` | да/нет | нет | — | — |
+| `blur-type` | строка | `medium` | `none`, `small`, `medium`, `large` | — |
+| `overlay-class` | строка | пусто | — | — |
+| `close-class` | строка | пусто | — | — |
+| `surface-class` | строка | пусто | — | — |
+| `surface-padding` | строка | пусто | — | — |
+| `panel-class` | строка | пусто | — | — |
+| `header-class` | строка | пусто | — | — |
+| `body-class` | строка | пусто | — | — |
+| `content-class` | строка | пусто | — | — |
+| `footer-class` | строка | пусто | — | — |
+| `open` | да/нет | нет | — | — |
+| `current` | целое число | `1` | от 1 | — |
+| `title` | строка | — | — | Псевдоним с датой для `heading` до 2026-12-01. |
+| `blur` | да/нет | нет | — | Псевдоним с датой для `backdrop-blur` до 2026-12-01. |
 
-Прежние имена:
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
+
+:::details {layout=lines}
+#### Прежние имена (1)
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | `lightbox-class` | `root-class` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+:::
 
 ### Методы
 
-- `open(index: number)` — возвращает `object`. Переходит к указанному слайду (нумерация с единицы), если передан индекс, устанавливает open и открывает модальное окно лайтбокса. Возвращает элемент.
-- `close()` — возвращает `object`. Снимает open и закрывает модальное окно лайтбокса. Возвращает элемент.
-- `toggle(index: number)` — возвращает `object`. Вызывает close(), если открыто, иначе open(index). Возвращает элемент.
-- `goTo(index: number)` — возвращает `object`. Переходит к слайду по номеру с единицы, ограничивая его числом слайдов, отражает его в атрибуте current, синхронизирует оба слайдера и отправляет нативное событие change, если слайд сменился. Возвращает элемент.
-- `next()` — возвращает `object`. goTo(current + 1); останавливается на последнем слайде. Возвращает элемент.
-- `prev()` — возвращает `object`. goTo(current - 1); останавливается на первом слайде. Возвращает элемент.
-- `getModal()` — возвращает `object` | `null`. Возвращает sf-modal лайтбокса или null, если его нет.
-- `getInlineSlider()` — возвращает `object` | `null`. Возвращает встроенный sf-slider или null до отрисовки.
-- `getLightboxSlider()` — возвращает `object` | `null`. Возвращает sf-slider лайтбокса или null, если его нет.
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `open(index: number)` | объект | Переходит к указанному слайду (нумерация с единицы), если передан индекс, устанавливает open и открывает модальное окно лайтбокса. Возвращает элемент. |
+| `close()` | объект | Снимает open и закрывает модальное окно лайтбокса. Возвращает элемент. |
+| `toggle(index: number)` | объект | Вызывает close(), если открыто, иначе open(index). Возвращает элемент. |
+| `goTo(index: number)` | объект | Переходит к слайду по номеру с единицы, ограничивая его числом слайдов, отражает его в атрибуте current, синхронизирует оба слайдера и отправляет нативное событие change, если слайд сменился. Возвращает элемент. |
+| `next()` | объект | goTo(current + 1); останавливается на последнем слайде. Возвращает элемент. |
+| `prev()` | объект | goTo(current - 1); останавливается на первом слайде. Возвращает элемент. |
+| `getModal()` | объект или пусто | Возвращает sf-modal лайтбокса или null, если его нет. |
+| `getInlineSlider()` | объект или пусто | Возвращает встроенный sf-slider или null до отрисовки. |
+| `getLightboxSlider()` | объект или пусто | Возвращает sf-slider лайтбокса или null, если его нет. |
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `change` — `detail`: `{ previous: number, current: number, total: number, from: any }`.
-- `sf-gallery-opened` — `detail`: `{ current: number, total: number }`.
-- `sf-gallery-closed` — `detail`: `{ current: number, total: number }`.
-- `sf-change` — устаревший псевдоним события `change`: приходит с тем же `detail`, подписывайтесь на `change`.
-- `sf-close` — устаревший псевдоним события `sf-gallery-closed`: приходит с тем же `detail`, подписывайтесь на `sf-gallery-closed`.
-- `sf-open` — устаревший псевдоним события `sf-gallery-opened`: приходит с тем же `detail`, подписывайтесь на `sf-gallery-opened`.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `change` | `{ previous: number, current: number, total: number, from: any }` | — |
+| `sf-gallery-opened` | `{ current: number, total: number }` | — |
+| `sf-gallery-closed` | `{ current: number, total: number }` | — |
+| `sf-change` | `{ component?: any, tagName?: string, template?: string, previous?: number, current?: number, total?: number, from?: any }` | устаревший псевдоним `change`: подписывайтесь на `change` |
+| `sf-close` | `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }` | устаревший псевдоним `sf-gallery-closed`: подписывайтесь на `sf-gallery-closed` |
+| `sf-open` | `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }` | устаревший псевдоним `sf-gallery-opened`: подписывайтесь на `sf-gallery-opened` |
 
-### Доступность
+### О компоненте
 
-- Роль: нет (`none`).
-- Доступное имя: рекомендуется.
-- Клавиши: `Tab`.
-- Фокус: Сохраняет видимый фокус на активном элементе управления.
-
-### Минимальная разметка
-
-```html
-<sf-gallery></sf-gallery>
-```
-
-### Источник
-
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/gallery`
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-gallery`
+| | |
+|:---|:---|
+| Тег | `<sf-gallery>`, контракт `smart.gallery` версии `1.1.5` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
+| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+| Доступность | роль нет (`none`); доступное имя рекомендуется; клавиши `Tab` |
+| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/gallery` |
+| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-gallery` |
 
 ## См. также
 

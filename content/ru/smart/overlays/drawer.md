@@ -19,12 +19,19 @@ profile: reference
 :::example {id="smart-components/drawer/overview" label="Немодальная панель" preview=sandbox}
 :::
 
-## Применение
+## Разметка
 
-### Открытие и закрытие
+Панели нужны `id`, заголовок и режим; кнопка открывает её без своего кода:
 
-Кнопка открывает панель без своего кода: `data-drawer="toggle"`, `open` или
-`close` и `aria-controls` с `id` панели. `open` на `<sf-drawer>` показывает
+```html
+<button type="button" data-drawer="toggle" aria-controls="help">Подсказка</button>
+<sf-drawer id="help" modal="false" placement="inline-end" heading="Подсказка">
+  <p>Название показывается во вкладке браузера.</p>
+</sf-drawer>
+```
+
+Кнопке нужны `data-drawer="toggle"`, `open` или `close` и `aria-controls` с
+`id` панели. `open` на `<sf-drawer>` показывает
 панель сразу. Кнопку закрытия в шапке панель рисует сама: `show-close="false"`
 убирает её, `close-placement="outside"` ставит снаружи у края,
 `close-label` меняет её имя. `close-on-esc` и `close-on-overlay` управляют
@@ -33,11 +40,32 @@ profile: reference
 Модальный режим по умолчанию оставлен только для совместимости и помечен
 устаревшим. Новой панели всегда задавайте `modal="false"` или `docked`.
 
+`heading` задаёт видимый заголовок панели (прежнее имя атрибута — `title`, до
+2026-12-01), `label` — доступное имя без заголовка.
+
+## Варианты
+
+### Сторона
+
+`placement` — `inline-start` или `inline-end`; сторона отражается при письме
+справа налево. `placement="bottom"` открывает [нижний лист](#нижний-лист).
+
+:::example {id="smart-components/drawer/placement" label="Панели у начального и конечного края" preview=sandbox}
+:::
+
+### Размер
+
+`size` берёт ступень общей шкалы `1/2`, `1`, `2` или `full` — во всю ширину.
+`width` задаёт точную ширину, если ступеней мало, `z-index` — слой.
+
+:::example {id="smart-components/drawer/sizes" label="Ширина панели на каждой ступени" preview=sandbox}
+:::
+
 ### Закреплённая панель
 
 `docked` превращает панель в колонку `role="region"` рядом со страницей: без
 затемнения, блокировки прокрутки и удержания фокуса. Контейнер страницы
-помечается `data-sf-drawer-dock-host`; Framework задаёт ему отступы по сумме
+помечается `data-sf-drawer-dock-host`; SIMAI Framework задаёт ему отступы по сумме
 ширин открытых закреплённых панелей слева и справа, обе стороны одновременно.
 
 :::example {id="smart-components/drawer/docked" label="Закреплённые панели" preview=sandbox}
@@ -49,6 +77,32 @@ profile: reference
 изменении; если хоста на странице нет, решает ширина окна. Хост в примере
 уже порога, поэтому панели ложатся поверх; чтобы увидеть, как страница
 сдвигается, откройте проверку адаптивности примера на ширине Desktop.
+
+### Нижний лист
+
+`placement="bottom"` — панель для телефона: выезжает снизу во всю ширину,
+со скруглением сверху и ручкой.
+
+- `snap="auto|half|full"` — высота в покое: по содержимому (не выше места
+  под шапкой), половина места или всё место под шапкой приложения.
+- Ручка — кнопка высотой с элемент управления 1/2. Нажатие или `Enter`
+  переключают половину и всё место, стрелки вверх и вниз — между `auto`,
+  `half` и `full`. Каждое изменение — событие `sf-drawer-snapped`; задать
+  высоту из кода — метод `setSnap()`.
+- Смахивание вниз по ручке или шапке закрывает лист, а из `full` переводит
+  его в `half`; смахивание вверх открывает лист на всё место. Лист следует
+  за пальцем.
+- Модальный лист удерживает фокус и возвращает его после закрытия;
+  `Escape` закрывает только верхний слой.
+- Снизу сохраняется безопасная зона экрана, а при уменьшении движения лист
+  появляется без анимации.
+
+`docked` у нижнего листа не действует: лист всегда лежит поверх страницы.
+
+:::example {id="smart-components/drawer/sheet" label="Нижний лист" preview=sandbox}
+:::
+
+## Поведение
 
 ### Порог закрепления
 
@@ -71,37 +125,6 @@ profile: reference
 `--sf-drawer-dock-inline-end`, высоту шапки над панелями задаёт
 `--sf-drawer-dock-block-start`.
 
-### Сторона и размер
-
-`placement` — `inline-start` или `inline-end`; сторона отражается при письме
-справа налево. `placement="bottom"` открывает [нижний лист](#нижний-лист). `size` берёт ступень общей шкалы `1/2`, `1`, `2` или `full` —
-во всю ширину. `width` задаёт точную ширину, если ступеней мало, `z-index` —
-слой.
-
-### Нижний лист
-
-`placement="bottom"` — панель для телефона: выезжает снизу во всю ширину,
-со скруглением сверху и ручкой.
-
-- `snap="auto|half|full"` — высота в покое: по содержимому (не выше места
-  под шапкой), половина места или всё место под шапкой приложения.
-- Ручка — кнопка высотой с элемент управления 1/2. Нажатие или `Enter`
-  переключают половину и всё место, стрелки вверх и вниз — между `auto`,
-  `half` и `full`. Каждое изменение — событие `drawer:snap`; задать высоту
-  из кода — метод `setSnap()`.
-- Смахивание вниз по ручке или шапке закрывает лист, а из `full` переводит
-  его в `half`; смахивание вверх открывает лист на всё место. Лист следует
-  за пальцем.
-- Модальный лист удерживает фокус и возвращает его после закрытия;
-  `Escape` закрывает только верхний слой.
-- Снизу сохраняется безопасная зона экрана, а при уменьшении движения лист
-  появляется без анимации.
-
-`docked` у нижнего листа не действует: лист всегда лежит поверх страницы.
-
-:::example {id="smart-components/drawer/sheet" label="Нижний лист" preview=sandbox}
-:::
-
 ### Панели под шапкой приложения
 
 По умолчанию выезжающая панель начинается от верхнего края окна и закрывает
@@ -114,8 +137,8 @@ profile: reference
 
 ```html
 <html style="--sf-drawer-block-start: var(--app-bar-height)">
-<sf-drawer id="structure" modal="false" placement="inline-start" title="Структура">…</sf-drawer>
-<sf-drawer id="preview" block-start="4rem" placement="inline-end" title="Просмотр">…</sf-drawer>
+<sf-drawer id="structure" modal="false" placement="inline-start" heading="Структура">…</sf-drawer>
+<sf-drawer id="preview" block-start="4rem" placement="inline-end" heading="Просмотр">…</sf-drawer>
 ```
 
 ### Панель с внешним переключателем
@@ -129,7 +152,7 @@ profile: reference
 
 ```html
 <nav><button type="button" aria-controls="structure" data-drawer="toggle">Структура</button></nav>
-<sf-drawer id="structure" controlled modal="false" placement="inline-start" title="Структура">…</sf-drawer>
+<sf-drawer id="structure" controlled modal="false" placement="inline-start" heading="Структура">…</sf-drawer>
 ```
 
 Тот же переключатель скрывает и закреплённую панель: она убирается, а
@@ -176,7 +199,7 @@ profile: reference
 
 ```html
 <div data-sf-overlay-container class="h-e6">
-  <sf-drawer id="preview" open modal="false" title="Подсказка">…</sf-drawer>
+  <sf-drawer id="preview" open modal="false" heading="Подсказка">…</sf-drawer>
 </div>
 ```
 
@@ -185,15 +208,18 @@ profile: reference
 ### Методы и события
 
 `open()`, `close()`, `toggle()`, `getState()` и `setState(state)` управляют
-тем же экземпляром. События `drawer:before-open` и `drawer:before-close`
-можно отменить; `drawer:after-open` и `drawer:after-close` приходят после
+тем же экземпляром. События `sf-drawer-open` и `sf-drawer-close` можно
+отменить; `sf-drawer-opened` и `sf-drawer-closed` приходят после
 завершённого перехода, `drawer:ready` и `drawer:update` — после отрисовки.
 
-События `drawer:*` всплывают до `document`, как остальные события `sf-*`.
-Панель, которая их отправила, указана в `event.detail.drawer`. Помощники
+События всплывают до `document`, как остальные события `sf-*`. Панель,
+которая их отправила, указана в `event.detail.drawerId`. Прежние имена
+`drawer:before-open`, `drawer:after-open`, `drawer:before-close`,
+`drawer:after-close` и `drawer:snap` приходят до 2026-12-01 с элементом
+панели в `event.detail.drawer`. Помощники
 `onBeforeOpen()`, `onAfterOpen()`, `onBeforeClose()` и `onAfterClose()`
 получают только события своей панели; обычный слушатель на внешней панели
-услышит и вложенную, поэтому проверяйте `event.detail.drawer`.
+услышит и вложенную, поэтому проверяйте `event.detail.drawerId`.
 
 ```js
 const drawer = document.querySelector('#drawer-example-help');
@@ -202,14 +228,14 @@ drawer.onBeforeClose((event) => {
   if (hasUnsavedChanges()) event.preventDefault();
 });
 
-document.addEventListener('drawer:after-open', (event) => {
-  analytics.track('panel-open', event.detail.drawer.id);
+document.addEventListener('sf-drawer-opened', (event) => {
+  analytics.track('panel-open', event.detail.drawerId);
 });
 ```
 
 ## Доступность
 
-- Панели нужно доступное имя: `title` становится видимым заголовком и именем,
+- Панели нужно доступное имя: `heading` становится видимым заголовком и именем,
   `label` задаёт имя без заголовка.
 - Немодальная и закреплённая панели не удерживают фокус и не блокируют
   страницу: `Tab` проходит из панели на страницу и обратно. При открытии
@@ -222,60 +248,53 @@ document.addEventListener('drawer:after-open', (event) => {
 - Положение учитывает направление текста, анимация отключается при
   `prefers-reduced-motion`.
 
-## Справочник API
+## Справочник
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
-Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
-
-| | |
-|:---|:---|
-| Тег | `<sf-drawer>` |
-| Назначение | Боковая панель рабочей области, при которой страница остаётся доступной: закреплённая колонка или немодальная панель. Модальные боковые панели относятся к sf-modal; модальный режим Drawer устарел. |
-| Контракт | `smart.drawer`, версия `1.8.3` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
-| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | принят в продукт |
-| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
-- `placement` — `string`, по умолчанию `right`, значения: `left`, `right`, `inline-start`, `inline-end`, `bottom`.
-- `snap` — `string`, по умолчанию `auto`, значения: `auto`, `half`, `full`. Высота нижней панели в покое: по содержимому, половина места под панелью приложения или всё место.
-- `overlay` — `boolean`, по умолчанию `true`.
-- `modal` — `boolean`, по умолчанию `true`.
-- `docked` — `boolean`, по умолчанию `false`.
-- `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`, `2`, `full`.
-- `close-on-esc` — `boolean`, по умолчанию `true`.
-- `close-on-overlay` — `boolean`, по умолчанию `true`.
-- `preserve-scroll-gap` — `boolean`, по умолчанию `true`.
-- `show-close` — `boolean`, по умолчанию `true`.
-- `controlled` — `boolean`, по умолчанию `false`. Панель открывает и закрывает внешний переключатель (элемент, который называет панель в aria-controls): пока он на экране, своей кнопки закрытия у панели нет.
-- `close-placement` — `string`, по умолчанию `inside`, значения: `inside`, `outside`.
-- `heading` — `string`, по умолчанию пусто.
-- `label` — `string`, по умолчанию пусто.
-- `close-label` — `string`. Пусто — текст на языке страницы (по-английски «Close drawer»).
-- `width` — `string`, по умолчанию пусто.
-- `stack-offset` — `string`, по умолчанию пусто. Насколько каждая нижняя панель выступает из-под верхней у того же края, в виде длины (например, `var(--sf-space-4)`). Панель отстоит от своего края на глубину × смещение, где глубина — число открытых незакреплённых панелей под ней у этого края. Пустое значение: панели лежат вровень.
-- `dock-breakpoint` — `string`, по умолчанию пусто. С какой ширины хоста закрепления (или окна, если хоста нет) закреплённая панель становится колонкой страницы; уже — она всплывает над страницей и становится модальной (если не `modal=false`). Длина в rem, em или px. Пусто — переменная `--sf-drawer-dock-breakpoint` там, где стоит панель, иначе 48rem.
-- `block-start` — `string`, по умолчанию пусто. Отступ начала панели сверху (высота панели приложения); переменная --sf-drawer-block-start задаёт его для всех панелей.
-- `gutter` — `string`, по умолчанию пусто. Общий горизонтальный отступ шапки и тела в виде длины (например, var(--sf-space-3)), чтобы заголовок и содержимое начинались на одной оси. Пусто — собственный отступ drawer, space-1. Тема может задать --sf-drawer-gutter.
-- `z-index` — `string`, по умолчанию пусто.
-- `overlay-class` — `string`, по умолчанию пусто.
-- `panel-class` — `string`, по умолчанию пусто.
-- `panel-style` — `string`, по умолчанию пусто. Объявления, задаваемые на самой панели, для читаемых ею пользовательских свойств — фона, радиуса, тени. Если потребитель окрашивает содержимое в цвет, отличный от панели, заголовок и поля остаются другого цвета.
-- `header-class` — `string`, по умолчанию пусто.
-- `body-class` — `string`, по умолчанию пусто.
-- `close-class` — `string`, по умолчанию пусто.
-- `unsaved` — `boolean`, по умолчанию `false`.
-- `dismissible` — `boolean`, по умолчанию `true`.
-- `open` — `boolean`, по умолчанию `false`.
-- `title` — `string`, по умолчанию пусто. Псевдоним с датой для `heading` до 2026-12-01.
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `root-class` | строка | пусто | — | — |
+| `root-style` | строка | пусто | — | — |
+| `placement` | строка | `right` | `left`, `right`, `inline-start`, `inline-end`, `bottom` | — |
+| `snap` | строка | `auto` | `auto`, `half`, `full` | Высота нижней панели в покое: по содержимому, половина места под панелью приложения или всё место. |
+| `overlay` | да/нет | да | — | — |
+| `modal` | да/нет | да | — | — |
+| `docked` | да/нет | нет | — | — |
+| `size` | строка | `1` | `1/2`, `1`, `2`, `full` | — |
+| `close-on-esc` | да/нет | да | — | — |
+| `close-on-overlay` | да/нет | да | — | — |
+| `preserve-scroll-gap` | да/нет | да | — | — |
+| `show-close` | да/нет | да | — | — |
+| `controlled` | да/нет | нет | — | Панель открывает и закрывает внешний переключатель (элемент, который называет панель в aria-controls): пока он на экране, своей кнопки закрытия у панели нет. |
+| `close-placement` | строка | `inside` | `inside`, `outside` | — |
+| `heading` | строка | пусто | — | — |
+| `label` | строка | пусто | — | — |
+| `close-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «Close drawer»). |
+| `width` | строка | пусто | — | — |
+| `stack-offset` | строка | пусто | — | Насколько каждая нижняя панель выступает из-под верхней у того же края, в виде длины (например, `var(--sf-space-4)`). Панель отстоит от своего края на глубину × смещение, где глубина — число открытых незакреплённых панелей под ней у этого края. Пустое значение: панели лежат вровень. |
+| `dock-breakpoint` | строка | пусто | — | С какой ширины хоста закрепления (или окна, если хоста нет) закреплённая панель становится колонкой страницы; уже — она всплывает над страницей и становится модальной (если не `modal=false`). Длина в rem, em или px. Пусто — переменная `--sf-drawer-dock-breakpoint` там, где стоит панель, иначе 48rem. |
+| `block-start` | строка | пусто | — | Отступ начала панели сверху (высота панели приложения); переменная --sf-drawer-block-start задаёт его для всех панелей. |
+| `gutter` | строка | пусто | — | Общий горизонтальный отступ шапки и тела в виде длины (например, var(--sf-space-3)), чтобы заголовок и содержимое начинались на одной оси. Пусто — собственный отступ drawer, space-1. Тема может задать --sf-drawer-gutter. |
+| `z-index` | строка | пусто | — | — |
+| `overlay-class` | строка | пусто | — | — |
+| `panel-class` | строка | пусто | — | — |
+| `panel-style` | строка | пусто | — | Объявления, задаваемые на самой панели, для читаемых ею пользовательских свойств — фона, радиуса, тени. Если потребитель окрашивает содержимое в цвет, отличный от панели, заголовок и поля остаются другого цвета. |
+| `header-class` | строка | пусто | — | — |
+| `body-class` | строка | пусто | — | — |
+| `close-class` | строка | пусто | — | — |
+| `unsaved` | да/нет | нет | — | — |
+| `dismissible` | да/нет | да | — | — |
+| `open` | да/нет | нет | — | — |
+| `title` | строка | пусто | — | Псевдоним с датой для `heading` до 2026-12-01. |
 
-Прежние имена:
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
+
+:::details {layout=lines}
+#### Прежние имена (5)
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
@@ -284,54 +303,53 @@ document.addEventListener('drawer:after-open', (event) => {
 | `size="2"` | `size="large"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `placement="inline-start"` | `placement="left"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `placement="inline-end"` | `placement="right"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+:::
 
 ### Методы
 
-- `open()` — возвращает `object`. Открывает Drawer или выводит его на передний план, если он уже открыт. Отправляет sf-drawer-open (отменяемое) и затем sf-drawer-opened, если options.emit не равно false. Возвращает элемент.
-- `close(reason: any)` — возвращает `object`. Закрывает Drawer и возвращает фокус (тому, кто его открыл, если Drawer — верхний слой; Drawer, закрывающийся под другим слоем, фокус не переносит). Отправляет sf-drawer-close (отменяемое) и sf-drawer-closed, если options.emit не равно false; options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api). Возвращает элемент.
-- `toggle()` — возвращает `object`. Вызывает close(), если открыто, иначе open(). Возвращает элемент.
-- `setState(state?: object)` — возвращает `object`. Ключ open вызывает open() или close(); остальные ключи передаются в базовый setState как атрибуты хост-элемента. Возвращает элемент.
-- `getState()` — возвращает `object`. Возвращает текущий контекст шаблона вместе с состоянием открытия.
-- `onBeforeOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-open, который срабатывает только на события этого Drawer. Возвращает элемент.
-- `onAfterOpen(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-opened, который срабатывает только на события этого Drawer. Возвращает элемент.
-- `onBeforeClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-close, который срабатывает только на события этого Drawer. Возвращает элемент.
-- `onAfterClose(handler: function, options?: object|boolean)` — возвращает `object`. Добавляет на хост обработчик sf-drawer-closed, который срабатывает только на события этого Drawer. Возвращает элемент.
-- `setSnap(snap: string)` — возвращает `object`. Задаёт высоту нижней панели в покое (auto, half или full) и при её смене отправляет sf-drawer-snapped. Возвращает элемент.
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `open()` | объект | Открывает Drawer или выводит его на передний план, если он уже открыт. Отправляет sf-drawer-open (отменяемое) и затем sf-drawer-opened, если options.emit не равно false. Возвращает элемент. |
+| `close(reason: any)` | объект | Закрывает Drawer и возвращает фокус (тому, кто его открыл, если Drawer — верхний слой; Drawer, закрывающийся под другим слоем, фокус не переносит). Отправляет sf-drawer-close (отменяемое) и sf-drawer-closed, если options.emit не равно false; options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api). Возвращает элемент. |
+| `toggle()` | объект | Вызывает close(), если открыто, иначе open(). Возвращает элемент. |
+| `setState(state?: object)` | объект | Ключ open вызывает open() или close(); остальные ключи передаются в базовый setState как атрибуты хост-элемента. Возвращает элемент. |
+| `getState()` | объект | Возвращает текущий контекст шаблона вместе с состоянием открытия. |
+| `onBeforeOpen(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-drawer-open, который срабатывает только на события этого Drawer. Возвращает элемент. |
+| `onAfterOpen(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-drawer-opened, который срабатывает только на события этого Drawer. Возвращает элемент. |
+| `onBeforeClose(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-drawer-close, который срабатывает только на события этого Drawer. Возвращает элемент. |
+| `onAfterClose(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-drawer-closed, который срабатывает только на события этого Drawer. Возвращает элемент. |
+| `setSnap(snap: string)` | объект | Задаёт высоту нижней панели в покое (auto, half или full) и при её смене отправляет sf-drawer-snapped. Возвращает элемент. |
 
 ### События
 
-Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-drawer-open` — `detail`: `{ drawerId: string }`.
-- `sf-drawer-opened` — `detail`: `{ drawerId: string }`.
-- `sf-drawer-close` — `detail`: `{ drawerId: string, reason: any, unsaved: boolean }`.
-- `sf-drawer-closed` — `detail`: `{ drawerId: string, reason: any }`.
-- `sf-drawer-snapped` — `detail`: `{ drawerId: string, snap: any }`.
-- `drawer:ready` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:update` — `detail`: `{ component?: any, drawer?: any, drawerId?: string, root?: any }`. Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие.
-- `drawer:before-open` — устаревший псевдоним события `sf-drawer-open`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-open`.
-- `drawer:after-open` — устаревший псевдоним события `sf-drawer-opened`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-opened`.
-- `drawer:before-close` — устаревший псевдоним события `sf-drawer-close`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-close`.
-- `drawer:after-close` — устаревший псевдоним события `sf-drawer-closed`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-closed`.
-- `drawer:snap` — устаревший псевдоним события `sf-drawer-snapped`: приходит с тем же `detail`, подписывайтесь на `sf-drawer-snapped`.
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `sf-drawer-open` | `{ drawerId: string }` | — |
+| `sf-drawer-opened` | `{ drawerId: string }` | — |
+| `sf-drawer-close` | `{ drawerId: string, reason: any, unsaved: boolean }` | — |
+| `sf-drawer-closed` | `{ drawerId: string, reason: any }` | — |
+| `sf-drawer-snapped` | `{ drawerId: string, snap: any }` | — |
+| `drawer:ready` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
+| `drawer:update` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
+| `drawer:before-open` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | устаревший псевдоним `sf-drawer-open`: подписывайтесь на `sf-drawer-open` |
+| `drawer:after-open` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | устаревший псевдоним `sf-drawer-opened`: подписывайтесь на `sf-drawer-opened` |
+| `drawer:before-close` | `{ component?: any, drawer?: any, drawerId?: string, root?: any, reason?: string, unsaved?: boolean }` | устаревший псевдоним `sf-drawer-close`: подписывайтесь на `sf-drawer-close` |
+| `drawer:after-close` | `{ component?: any, drawer?: any, drawerId?: string, root?: any, reason?: string }` | устаревший псевдоним `sf-drawer-closed`: подписывайтесь на `sf-drawer-closed` |
+| `drawer:snap` | `{ drawer?: object, drawerId?: string }` | устаревший псевдоним `sf-drawer-snapped`: подписывайтесь на `sf-drawer-snapped` |
 
-### Доступность
+### О компоненте
 
-- Роль: диалог (`dialog`).
-- Доступное имя: обязательно.
-- Клавиши: `Tab`, `Shift+Tab`, `Escape`.
-- Фокус: Модальная панель Drawer переносит фокус внутрь, удерживает Tab в верхнем экземпляре и возвращает фокус на доступный открывший элемент. Немодальная панель Drawer не удерживает фокус и не блокирует страницу. Закреплённая панель Drawer — именованный столбец с `role=region`: без ловушки фокуса и блокировки прокрутки; Escape закрывает верхний экземпляр.
-
-### Минимальная разметка
-
-```html
-<div data-sf-drawer-dock-host>…</div><sf-drawer id="blocks" docked open placement="inline-start" size="1/2" title="Blocks"><p>Content</p></sf-drawer>
-```
-
-### Источник
-
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/drawer`
-- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-drawer`
+| | |
+|:---|:---|
+| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.8.3` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; принят в продукт |
+| До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+| Доступность | роль диалог (`dialog`); доступное имя обязательно; клавиши `Tab`, `Shift+Tab`, `Escape` |
+| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/drawer` |
+| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-drawer` |
 
 ## См. также
 

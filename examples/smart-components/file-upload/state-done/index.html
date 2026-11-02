@@ -1,0 +1,9 @@
+<sf-file-upload link-text="Добавить файлы" text="" aria-label="Добавить файлы"></sf-file-upload>
+<script>
+(() => {
+  const upload = document.currentScript.previousElementSibling;
+  customElements.whenDefined('sf-file-upload').then(() => {
+    upload.setItems([{ name: 'logo.svg', fileSize: '84 КБ', progress: 100, state: 'done' }]);
+  });
+})();
+</script>

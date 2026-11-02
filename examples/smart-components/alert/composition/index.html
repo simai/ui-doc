@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-1">
+    <sf-alert status="neutral" title="Только заголовок"></sf-alert>
+    <code class="text-1/2 color-on-surface-variant">title</code>
+  </div>
+  <div class="flex flex-col gap-1">
+    <sf-alert status="info" icon="none" title="Без иконки" supporting-text="Пояснение обычным размером текста."></sf-alert>
+    <code class="text-1/2 color-on-surface-variant">icon="none" supporting-text</code>
+  </div>
+  <div class="flex flex-col gap-1">
+    <sf-alert status="warning" title="Адрес не подтверждён" supporting-text="Подтвердите адрес, чтобы получать уведомления." action-text="Подтвердить" action="confirm" secondary-action-text="Позже" closable close-label="Закрыть сообщение"></sf-alert>
+    <code class="text-1/2 color-on-surface-variant">action-text secondary-action-text closable</code>
+  </div>
+</div>

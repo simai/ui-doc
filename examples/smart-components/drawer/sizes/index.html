@@ -1,0 +1,31 @@
+<div data-sf-overlay-container>
+  <div class="flex flex-col gap-2 p-3 radius-3 bg-surface-container">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-size-1-2">
+        <span class="sf-button-text-container">size="1/2"</span>
+      </button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-size-1">
+        <span class="sf-button-text-container">size="1"</span>
+      </button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-size-2">
+        <span class="sf-button-text-container">size="2"</span>
+      </button>
+      <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-drawer="toggle" aria-controls="drawer-example-size-full">
+        <span class="sf-button-text-container">size="full"</span>
+      </button>
+    </div>
+    <p class="m-0">Откройте панели по очереди и сравните ширину; <code>full</code> занимает всю ширину блока.</p>
+  </div>
+  <sf-drawer id="drawer-example-size-1-2" modal="false" placement="inline-end" size="1/2" heading="Размер 1/2">
+    <p class="m-0">Панель размера <code>1/2</code>.</p>
+  </sf-drawer>
+  <sf-drawer id="drawer-example-size-1" modal="false" placement="inline-end" size="1" heading="Размер 1">
+    <p class="m-0">Панель размера <code>1</code>.</p>
+  </sf-drawer>
+  <sf-drawer id="drawer-example-size-2" modal="false" placement="inline-end" size="2" heading="Размер 2">
+    <p class="m-0">Панель размера <code>2</code>.</p>
+  </sf-drawer>
+  <sf-drawer id="drawer-example-size-full" modal="false" placement="inline-end" size="full" heading="Размер full">
+    <p class="m-0">Панель размера <code>full</code>.</p>
+  </sf-drawer>
+</div>

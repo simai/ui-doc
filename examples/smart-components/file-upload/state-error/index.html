@@ -1,0 +1,9 @@
+<sf-file-upload link-text="Добавить файлы" text="" aria-label="Добавить файлы"></sf-file-upload>
+<script>
+(() => {
+  const upload = document.currentScript.previousElementSibling;
+  customElements.whenDefined('sf-file-upload').then(() => {
+    upload.setItems([{ name: 'archive.zip', fileSize: '8,1 МБ', progress: 0, state: 'error', errorMessage: 'Не удалось передать. Повторить' }]);
+  });
+})();
+</script>

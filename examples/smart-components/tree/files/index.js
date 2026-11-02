@@ -5,12 +5,12 @@ customElements.whenDefined('sf-tree').then(() => {
         label: 'Документы',
         open: true,
         children: [
-          {label: 'Договор.pdf', type: 'file'},
-          {label: 'Смета.xlsx', type: 'file'},
+          {label: 'Договор.pdf', kind: 'file'},
+          {label: 'Смета.xlsx', kind: 'file'},
         ],
       },
-      {label: 'Изображения', children: [{label: 'Обложка.png', type: 'file'}]},
-      {label: 'README.md', type: 'file'},
+      {label: 'Изображения', children: [{label: 'Обложка.png', kind: 'file'}]},
+      {label: 'README.md', kind: 'file'},
     ];
   });
 });

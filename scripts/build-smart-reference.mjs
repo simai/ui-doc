@@ -508,6 +508,18 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
 // folded away, and what the component is (contract, delivery, readiness,
 // accessibility, source) in one short block at the end. The markup lives in
 // the page's own «Разметка»; the layout document's rule lives in its guide.
+// Types in words on the third standard (owner, 2026-11-02): the column is read,
+// not copied, and a word does not break the way a code word does.
+const TYPE_RU = {string: 'строка', boolean: 'да/нет', number: 'число', integer: 'целое число',
+  icon: 'иконка', object: 'объект', array: 'список', null: 'пусто', function: 'функция'};
+const typeRu = (schema) => {
+  if (!schema) return '—';
+  if (schema.$ref) return code(schema.$ref.split('/').pop());
+  if (schema.type === 'array' && schema.items) return `список: ${typeRu(schema.items)}`;
+  const types = [schema.type].flat().filter(Boolean);
+  return types.length ? types.map((type) => TYPE_RU[type] ?? code(type)).join(' или ') : '—';
+};
+
 const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
   const lines = [];
@@ -532,11 +544,12 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
   } else {
     lines.push('| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|');
     for (const [name, schema] of current) {
-      const fallback = schema.default === undefined ? '—' : literal(schema.default);
+      const fallback = schema.default === undefined ? '—'
+        : (typeof schema.default === 'boolean' ? (schema.default ? 'да' : 'нет') : literal(schema.default));
       const choice = values(schema) !== '—'
         ? values(schema)
         : (schema.examples ? `например ${schema.examples.map(literal).join(', ')}` : '—');
-      lines.push(`| ${code(name)} | ${typeName(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`);
+      lines.push(`| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`);
     }
     lines.push('', 'Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase:'
       + ' `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.');
@@ -583,7 +596,7 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
         ? argument
         : `${argument.name}${argument.required === false ? '?' : ''}: ${[argument.type ?? argument.schema?.type].flat().filter(Boolean).join('|') || 'any'}`));
       const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
-      const returns = method.returns && !unknown ? typeName(method.returns) : '—';
+      const returns = method.returns && !unknown ? typeRu(method.returns) : '—';
       lines.push(`| ${code(`${name}(${argumentList.join(', ')})`)} | ${returns} | ${generic(method.summary) ? '—' : cell(ru(method.summary))} |`);
     }
     lines.push('');

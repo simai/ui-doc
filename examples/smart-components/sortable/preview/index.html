@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-2" data-sortable-demo>
+  <div class="flex flex-wrap gap-3 items-start">
+    <div class="flex flex-col gap-1 items-start">
+      <sf-sortable id="sortable-preview-silhouette" group="preview-silhouette" label="Контур" class="flex flex-col gap-1 p-2 radius-2 border border-outline-variant">
+        <div data-sf-sortable-item="s-one" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Шапка</div>
+        <div data-sf-sortable-item="s-two" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Галерея</div>
+        <div data-sf-sortable-item="s-three" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Подвал</div>
+      </sf-sortable>
+      <code class="text-1/2 color-on-surface-variant">preview="silhouette"</code>
+    </div>
+    <div class="flex flex-col gap-1 items-start">
+      <sf-sortable id="sortable-preview-line" group="preview-line" preview="line" label="Линия" class="flex flex-col gap-1 p-2 radius-2 border border-outline-variant">
+        <div data-sf-sortable-item="l-one" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Шапка</div>
+        <div data-sf-sortable-item="l-two" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Галерея</div>
+        <div data-sf-sortable-item="l-three" class="flex gap-1 p-1 radius-1 bg-surface-container"><span data-sf-sortable-handle aria-hidden="true">⠿</span>Подвал</div>
+      </sf-sortable>
+      <code class="text-1/2 color-on-surface-variant">preview="line"</code>
+    </div>
+  </div>
+  <p role="status" class="m-0" data-sortable-status>Перетащите блок за ручку.</p>
+</div>
