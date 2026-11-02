@@ -115,7 +115,7 @@ code.addEventListener('sf-code-input:complete', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-654a2aceaa96` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -124,7 +124,7 @@ code.addEventListener('sf-code-input:complete', async (event) => {
 | Тег | `<sf-code-input>` |
 | Назначение | Одноразовый код — из сообщения, приложения-генератора, письма — как поле формы со своим значением, вставкой и ошибками, в разметке класса verification: код хранит один нативный input (autocomplete one-time-code, поэтому автозаполнение и WebOTP вставляют его целиком), а ячейки его показывают. Ввод заполняет следующую ячейку, Backspace возвращается и стирает, вставленный код заполняет все ячейки, каждая ячейка объявляется по своему месту. |
 | Контракт | `smart.code-input`, версия `1.1.3` |
-| Поставка | выпуск Framework `ui-654a2aceaa96` |
+| Поставка | выпуск Framework `ui-c1d81395889c` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -181,5 +181,5 @@ code.addEventListener('sf-code-input:complete', async (event) => {
 
 ### Источник
 
-- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/smart/code-input`
-- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/rule/rule.json#name=cl-code-input`
+- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/smart/code-input`
+- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/rule/rule.json#name=cl-code-input`

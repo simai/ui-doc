@@ -104,7 +104,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-654a2aceaa96` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -113,7 +113,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 | Тег | `<sf-inline-editor>` |
 | Назначение | Правит `content.heading` или `content.paragraph` прямо на холсте — полужирный, курсив, код, ссылки и встроенные атомы компонентов — и отдаёт хосту нормализованную модель содержимого, а не HTML. |
 | Контракт | `smart.inline-editor`, версия `1.2.0` |
-| Поставка | выпуск Framework `ui-654a2aceaa96` |
+| Поставка | выпуск Framework `ui-c1d81395889c` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -154,8 +154,8 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 ### Источник
 
-- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/smart/inline-editor`
-- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/rule/rule.json#name=cl-inline-editor`
+- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/smart/inline-editor`
+- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/rule/rule.json#name=cl-inline-editor`
 
 ## См. также
 

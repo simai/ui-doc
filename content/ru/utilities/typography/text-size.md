@@ -1,14 +1,12 @@
 ---
 title: "Размер текста"
-description: "Задаёт размер шрифта вместе с высотой строки по шкале текста или по общей шкале размеров."
+description: "Задаёт размер шрифта вместе с высотой строки по шкале текста."
 ---
 
 # Размер текста
 
-Классы `text-*` задают размер шрифта и высоту строки одним классом. Шкала
-текста `text-1/4` … `text-12` — основной выбор: `text-1` равен размеру
-обычного текста. Классы общей шкалы `text-a0` … `text-i9` берите, когда
-размер должен совпасть со ступенью размеров или меняться с шириной экрана.
+Классы `text-*` задают размер шрифта и высоту строки одним классом по шкале
+текста `text-1/4` … `text-12`: `text-1` равен размеру обычного текста.
 
 ## Пример
 
@@ -17,22 +15,6 @@ description: "Задаёт размер шрифта вместе с высот�
 Подпись слева — класс образца.
 
 :::example {id="utilities/typography/text-size" label="text-1/4 … text-12"}
-:::
-
-### Общая шкала размеров
-
-У этих классов высота строки равна размеру шрифта — они рассчитаны на одну
-строку.
-
-:::example {id="utilities/typography/text-size-ext" label="text-b4 … text-d6"}
-:::
-
-### Ширина экрана
-
-Меняйте ширину окна просмотра: заголовок увеличивается от ширины `md` и ещё
-раз от ширины `lg`.
-
-:::example {id="utilities/typography/text-size-responsive" label="text-c0 md:text-c8 lg:text-d6"}
 :::
 
 ### Заголовок
@@ -47,11 +29,23 @@ description: "Задаёт размер шрифта вместе с высот�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `text-{значение}` | `font-size: var(--sf-text--size-{значение}); line-height: var(--sf-text--height-{значение})` | `1/4`, `1/3`, `1/2` |
-| `text-{значение}` | `font-size: var(--sf-text--size-{значение}); line-height: var(--sf-text--height-{значение}); .text-{значение}.heading { line-height: var(--sf-title--height-{значение}) }` | `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12` |
-| `text-{значение}` | `font-size: var(--sf-{значение}); line-height: var(--sf-{значение})` | `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `a9`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `b9`, `c0`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `d0`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `d9`, `e0`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `e9`, `f0`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `f9`, `g0`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `g9`, `h0`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `h9`, `i0`, `i1`, `i2`, `i3`, `i4`, `i5`, `i6`, `i7`, `i8`, `i9` |
+| `text-1/4` | `font-size: var(--sf-text--size-1/4); line-height: var(--sf-text--height-1/4)` | — |
+| `text-1/3` | `font-size: var(--sf-text--size-1/3); line-height: var(--sf-text--height-1/3)` | — |
+| `text-1/2` | `font-size: var(--sf-text--size-1/2); line-height: var(--sf-text--height-1/2)` | — |
+| `text-1` | `font-size: var(--sf-text--size-1); line-height: var(--sf-text--height-1); .text-1.heading { line-height: var(--sf-title--height-1) }` | — |
+| `text-2` | `font-size: var(--sf-text--size-2); line-height: var(--sf-text--height-2); .text-2.heading { line-height: var(--sf-title--height-2) }` | — |
+| `text-3` | `font-size: var(--sf-text--size-3); line-height: var(--sf-text--height-3); .text-3.heading { line-height: var(--sf-title--height-3) }` | — |
+| `text-4` | `font-size: var(--sf-text--size-4); line-height: var(--sf-text--height-4); .text-4.heading { line-height: var(--sf-title--height-4) }` | — |
+| `text-5` | `font-size: var(--sf-text--size-5); line-height: var(--sf-text--height-5); .text-5.heading { line-height: var(--sf-title--height-5) }` | — |
+| `text-6` | `font-size: var(--sf-text--size-6); line-height: var(--sf-text--height-6); .text-6.heading { line-height: var(--sf-title--height-6) }` | — |
+| `text-7` | `font-size: var(--sf-text--size-7); line-height: var(--sf-text--height-7); .text-7.heading { line-height: var(--sf-title--height-7) }` | — |
+| `text-8` | `font-size: var(--sf-text--size-8); line-height: var(--sf-text--height-8); .text-8.heading { line-height: var(--sf-title--height-8) }` | — |
+| `text-9` | `font-size: var(--sf-text--size-9); line-height: var(--sf-text--height-9); .text-9.heading { line-height: var(--sf-title--height-9) }` | — |
+| `text-10` | `font-size: var(--sf-text--size-10); line-height: var(--sf-text--height-10); .text-10.heading { line-height: var(--sf-title--height-10) }` | — |
+| `text-11` | `font-size: var(--sf-text--size-11); line-height: var(--sf-text--height-11); .text-11.heading { line-height: var(--sf-title--height-11) }` | — |
+| `text-12` | `font-size: var(--sf-text--size-12); line-height: var(--sf-text--height-12); .text-12.heading { line-height: var(--sf-title--height-12) }` | — |
 
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — `sm:`, `md:`, `lg:`, `xl:`, `xxl:`; состояния — нет. Например: `sm:text-a0`.
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -103,96 +97,6 @@ description: "Задаёт размер шрифта вместе с высот�
 | `--sf-title--height-10` | `var(--sf-d2); от ширины lg: var(--sf-d9)` |
 | `--sf-title--height-11` | `var(--sf-d3); от ширины lg: var(--sf-e0)` |
 | `--sf-title--height-12` | `var(--sf-d4); от ширины lg: var(--sf-e2)` |
-| `--sf-a0` | `0rem` |
-| `--sf-a1` | `0.0625rem` |
-| `--sf-a2` | `0.125rem` |
-| `--sf-a3` | `0.1875rem` |
-| `--sf-a4` | `0.25rem` |
-| `--sf-a5` | `0.3125rem` |
-| `--sf-a6` | `0.375rem` |
-| `--sf-a7` | `0.4375rem` |
-| `--sf-a8` | `0.5rem` |
-| `--sf-a9` | `0.5625rem` |
-| `--sf-b0` | `0.625rem` |
-| `--sf-b1` | `0.6875rem` |
-| `--sf-b2` | `0.75rem` |
-| `--sf-b3` | `0.8125rem` |
-| `--sf-b4` | `0.875rem` |
-| `--sf-b5` | `0.9375rem` |
-| `--sf-b6` | `1rem` |
-| `--sf-b7` | `1.0625rem` |
-| `--sf-b8` | `1.125rem` |
-| `--sf-b9` | `1.1875rem` |
-| `--sf-c0` | `1.25rem` |
-| `--sf-c1` | `1.375rem` |
-| `--sf-c2` | `1.5rem` |
-| `--sf-c3` | `1.625rem` |
-| `--sf-c4` | `1.75rem` |
-| `--sf-c5` | `1.875rem` |
-| `--sf-c6` | `2rem` |
-| `--sf-c7` | `2.125rem` |
-| `--sf-c8` | `2.25rem` |
-| `--sf-c9` | `2.375rem` |
-| `--sf-d0` | `2.5rem` |
-| `--sf-d1` | `2.75rem` |
-| `--sf-d2` | `3rem` |
-| `--sf-d3` | `3.25rem` |
-| `--sf-d4` | `3.5rem` |
-| `--sf-d5` | `3.75rem` |
-| `--sf-d6` | `4rem` |
-| `--sf-d7` | `4.25rem` |
-| `--sf-d8` | `4.5rem` |
-| `--sf-d9` | `4.75rem` |
-| `--sf-e0` | `5rem` |
-| `--sf-e1` | `5.5rem` |
-| `--sf-e2` | `6rem` |
-| `--sf-e3` | `6.5rem` |
-| `--sf-e4` | `7rem` |
-| `--sf-e5` | `7.5rem` |
-| `--sf-e6` | `8rem` |
-| `--sf-e7` | `8.5rem` |
-| `--sf-e8` | `9rem` |
-| `--sf-e9` | `9.5rem` |
-| `--sf-f0` | `10rem` |
-| `--sf-f1` | `11rem` |
-| `--sf-f2` | `12rem` |
-| `--sf-f3` | `13rem` |
-| `--sf-f4` | `14rem` |
-| `--sf-f5` | `15rem` |
-| `--sf-f6` | `16rem` |
-| `--sf-f7` | `17rem` |
-| `--sf-f8` | `18rem` |
-| `--sf-f9` | `19rem` |
-| `--sf-g0` | `20rem` |
-| `--sf-g1` | `22rem` |
-| `--sf-g2` | `24rem` |
-| `--sf-g3` | `26rem` |
-| `--sf-g4` | `28rem` |
-| `--sf-g5` | `30rem` |
-| `--sf-g6` | `32rem` |
-| `--sf-g7` | `34rem` |
-| `--sf-g8` | `36rem` |
-| `--sf-g9` | `38rem` |
-| `--sf-h0` | `40rem` |
-| `--sf-h1` | `44rem` |
-| `--sf-h2` | `48rem` |
-| `--sf-h3` | `52rem` |
-| `--sf-h4` | `56rem` |
-| `--sf-h5` | `60rem` |
-| `--sf-h6` | `64rem` |
-| `--sf-h7` | `68rem` |
-| `--sf-h8` | `72rem` |
-| `--sf-h9` | `76rem` |
-| `--sf-i0` | `80rem` |
-| `--sf-i1` | `88rem` |
-| `--sf-i2` | `96rem` |
-| `--sf-i3` | `104rem` |
-| `--sf-i4` | `112rem` |
-| `--sf-i5` | `120rem` |
-| `--sf-i6` | `128rem` |
-| `--sf-i7` | `136rem` |
-| `--sf-i8` | `144rem` |
-| `--sf-i9` | `152rem` |
 
 В CSS косую черту в имени экранируют: `var(--sf-text--size-1\/4)`.
 
@@ -221,11 +125,7 @@ description: "Задаёт размер шрифта вместе с высот�
 
 ## Ограничения
 
-- Префиксы ширины экрана есть только у классов общей шкалы `text-a0` …
-  `text-i9`. У `text-1/4` … `text-12` их нет: `md:text-6` не существует.
-- У классов общей шкалы высота строки равна размеру шрифта: текст в
-  несколько строк получается слитным. Добавьте `line-*` или берите шкалу
-  текста.
+- У `text-*` нет префиксов ширины экрана: `md:text-6` не существует.
 - `text-1/3` и `text-1/2` дают одинаковый размер и высоту строки.
 - `text-*` и `line-*` задают `line-height` в одном слое каскада: при
   сочетании побеждает правило, подключённое позже.

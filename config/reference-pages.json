@@ -305,13 +305,6 @@
         "sf-textarea"
       ]
     },
-    "components/forms/toggle.md": {
-      "kind": "component",
-      "component": "toggle",
-      "blocks": [
-        "sf-toggle"
-      ]
-    },
     "components/forms/verification.md": {
       "kind": "component",
       "component": "verification",
@@ -502,6 +495,9 @@
     "smart-components/content/reference-link.md": {
       "kind": "smart"
     },
+    "smart-components/content/include.md": {
+      "kind": "smart"
+    },
     "smart-components/content/table.md": {
       "kind": "smart"
     },
@@ -527,10 +523,10 @@
       "kind": "smart"
     },
     "smart-components/feedback/progress-ring.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/feedback/progress-scale.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/feedback/progress-scale.md": {
       "kind": "smart"
     },
     "smart-components/feedback/skeleton.md": {
@@ -583,9 +579,6 @@
       "kind": "smart"
     },
     "smart-components/forms/textarea.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/toggle.md": {
       "kind": "smart"
     },
     "smart-components/navigation/breadcrumbs.md": {
@@ -1844,8 +1837,7 @@
     "utilities/typography/text-size.md": {
       "kind": "utility",
       "families": [
-        "font-size",
-        "font-size-ext"
+        "font-size"
       ]
     },
     "utilities/typography/text-wrap.md": {
@@ -1899,62 +1891,62 @@
       "standard": 2
     },
     "smart-components/composite/chat-composer.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/chat-interlocutor.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/chat-message.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/chat-window.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/site-header.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/search.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/mail-letters.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/mail-library.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/mail-structure.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/mail-inspector.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/mail-canvas.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/content-editor.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/navigation/contents.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/navigation/pager.md": {
-    "kind": "smart",
-    "standard": 2
-  },
-  "smart-components/composite/thread-list.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/chat-interlocutor.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/chat-message.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/chat-window.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/site-header.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/search.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/mail-letters.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/mail-library.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/mail-structure.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/mail-inspector.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/mail-canvas.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/content-editor.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/navigation/contents.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/navigation/pager.md": {
+      "kind": "smart",
+      "standard": 2
+    },
+    "smart-components/composite/thread-list.md": {
       "kind": "smart",
       "standard": 2
     },

@@ -56,17 +56,17 @@ description: "Скругляет углы элемента целиком, по 
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `radius-{значение}` | `border-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
+| `radius-{значение}` | `border-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
 | `radius-ui` | `border-radius: var(--sf-radius--ui)` | — |
 | `radius-surface` | `border-radius: var(--sf-radius--surface)` | — |
-| `radius-top-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-bottom-{значение}` | `border-end-start-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-top-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-top-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-bottom-inline-start-{значение}` | `border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
-| `radius-bottom-inline-end-{значение}` | `border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `default`, `square`, `rounded`, `round` |
+| `radius-top-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-bottom-{значение}` | `border-end-start-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение}); border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение}); border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-top-inline-start-{значение}` | `border-start-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-top-inline-end-{значение}` | `border-start-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-bottom-inline-start-{значение}` | `border-end-start-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
+| `radius-bottom-inline-end-{значение}` | `border-end-end-radius: var(--sf-radius-{значение})` | `0`, `1/3`, `1/2`, `1`, `2`, `3`, `4`, `square`, `rounded` |
 | `radius-top-ui` | `border-start-start-radius: var(--sf-radius--ui); border-start-end-radius: var(--sf-radius--ui)` | — |
 | `radius-bottom-ui` | `border-end-start-radius: var(--sf-radius--ui); border-end-end-radius: var(--sf-radius--ui)` | — |
 | `radius-inline-start-ui` | `border-start-start-radius: var(--sf-radius--ui); border-end-start-radius: var(--sf-radius--ui)` | — |
@@ -101,12 +101,10 @@ description: "Скругляет углы элемента целиком, по 
 | `--sf-radius-2` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
 | `--sf-radius-3` | `var(--sf-b6); от ширины lg: var(--sf-c2)` |
 | `--sf-radius-4` | `var(--sf-c2); от ширины lg: var(--sf-c6)` |
-| `--sf-radius-default` | `var(--sf-a4)` |
 | `--sf-radius--ui` | `var(--sf-radius-1\/2)` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
 | `--sf-radius-square` | `0` |
 | `--sf-radius-rounded` | `1000px` |
-| `--sf-radius-round` | `var(--sf-radius-rounded)` |
 
 В CSS косую черту в имени экранируют: `var(--sf-radius-1\/3)`.
 
@@ -177,10 +175,10 @@ description: "Скругляет углы элемента целиком, по 
 ### Другие имена
 
 - `radius-square` — то же, что `radius-0`.
-- `radius-round` — второе имя `radius-rounded`; в разметке пишите
-  `radius-rounded`.
-- `radius-default` даёт 4px и не равен радиусу блока. Для блока берите
-  `radius-surface`, для контрола — `radius-ui`.
+
+Классы `radius-round` и `radius-default` удалены. Вместо `radius-round`
+пишите `radius-rounded`; вместо `radius-default` — `radius-surface` для блока
+или `radius-ui` для контрола.
 
 ## Ограничения
 

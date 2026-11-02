@@ -13,7 +13,7 @@ component. For example, fancybox may depend on jquery.
 In the client config you can pass a `relations` object that describes which components depend on others:
 
 ```json
-{relations: { "fancybox": ["jquery"],  "tooltip": ["jquery", "wow"]}}
+{relations: { "fancybox": ["jquery"],  "tooltip": ["jquery"]}}
 ```
 
 When the loader encounters fancybox, it first loads all declared dependencies (jquery, ...), **then fancybox itself**.

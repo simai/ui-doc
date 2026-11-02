@@ -27,7 +27,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Флажок](/ru/smart-components/forms/checkbox/)
 - [Радиокнопки](/ru/smart-components/forms/radio/)
 - [Переключатель](/ru/smart-components/forms/switch/)
-- [Toggle](/ru/smart-components/forms/toggle/)
 - [Слайдер контента](/ru/smart-components/forms/slider/)
 - [Слайдер диапазона](/ru/smart-components/forms/range-slider/)
 - [Календарь](/ru/smart-components/forms/datepicker/)
@@ -78,6 +77,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Галерея](/ru/smart-components/content/gallery/)
 - [Предпросмотр файла](/ru/smart-components/content/file-preview/)
 - [Справочная ссылка](/ru/smart-components/content/reference-link/)
+- [Часть страницы по адресу](/ru/smart-components/content/include/)
 
 ## Окна и панели
 

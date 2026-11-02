@@ -21,7 +21,6 @@
         "checkbox",
         "radio",
         "switch",
-        "toggle",
         "quantity",
         "range-slider",
         "slider",
@@ -131,7 +130,6 @@
         "checkbox",
         "radio",
         "switch",
-        "toggle",
         "slider",
         "range-slider",
         "datepicker",
@@ -187,7 +185,8 @@
         "table",
         "gallery",
         "file-preview",
-        "reference-link"
+        "reference-link",
+        "include"
       ]
     },
     "overlays": {

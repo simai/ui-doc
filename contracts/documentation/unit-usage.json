@@ -9,14 +9,14 @@
   "sources": [
     {
       "source": "simai/ui-source",
-      "release": "ui-654a2aceaa96",
-      "revision": "9f5810bb8e2e41d3c48375b717ac17c85410b446",
+      "release": "ui-c1d81395889c",
+      "revision": "83df55608fe5760bbe5e1044583f65116dde35e1",
       "brought_up_on": "2026-11-02"
     },
     {
       "source": "simai/ui-pro",
-      "release": "larena-4e61bb2a1c56",
-      "revision": "4e61bb2a1c5655ce9ddbd43764dd49e9468a6856",
+      "release": "larena-21d21fc3c1fa",
+      "revision": "21d21fc3c1fa7a43f499351c115d9cccfa00a187",
       "brought_up_on": "2026-11-02"
     }
   ],
@@ -26,8 +26,8 @@
       "units": [
         {
           "id": "component.button-group",
-          "version": "1.0.0",
-          "content_sha256": "baccf400f3cdf1fa842157f6530dc8df701c2f651d8e416e4ec35e0a15be96ae",
+          "version": "1.0.1",
+          "content_sha256": "263bd79ef6f91c27a74f7019f694697e389e5dcb1dffa64e3e9e9e0e0f235cfa",
           "source": "simai/ui-source"
         },
         {
@@ -49,8 +49,8 @@
       "units": [
         {
           "id": "component.buttons",
-          "version": "1.1.0",
-          "content_sha256": "1bce022da26fa114dfc41cdb6f79bd239d07760f2e7ebc2830c2c76e12fc19d0",
+          "version": "1.1.1",
+          "content_sha256": "9d86f30749b1f715c9850eb0070196fc7c9dc2b631a4c1102876c1f6519451f3",
           "source": "simai/ui-source"
         },
         {
@@ -158,8 +158,8 @@
       "units": [
         {
           "id": "component.icon-buttons",
-          "version": "1.1.0",
-          "content_sha256": "f531dbaed5a22c2f4a159ebd0e9170421678511d433b14296b5cb1105c8fd934",
+          "version": "1.1.1",
+          "content_sha256": "f2974321e6afe6a0f61c3573122733b62a04acf372640e86ec98fbb31df1c8c3",
           "source": "simai/ui-source"
         },
         {
@@ -849,29 +849,6 @@
       ]
     },
     {
-      "place": "content/ru/components/forms/toggle.md",
-      "units": [
-        {
-          "id": "component.toggle",
-          "version": "1.0.0",
-          "content_sha256": "83a51ebbde2fea00aacb45c41176b48e0b21fa273d3f0a46d81cd9d60076de6d",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "smart.switch",
-          "version": "1.2.1",
-          "content_sha256": "92439af106b014c5b305bab63a4438e02e73ca0f2e316df1283b2df4a760f292",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "smart.toggle",
-          "version": "1.1.3",
-          "content_sha256": "f39caf451b21b5500e50f6c99b1f77bc9712b9115b81d33119f426c30da4fe6a",
-          "source": "simai/ui-source"
-        }
-      ]
-    },
-    {
       "place": "content/ru/components/forms/verification.md",
       "units": [
         {
@@ -1380,12 +1357,6 @@
           "id": "smart.input",
           "version": "1.4.2",
           "content_sha256": "1ff955399fbf83fe4119968512878aa140fae1d27314ef4f8ba89d66961edbb4",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "smart.modal",
-          "version": "1.4.3",
-          "content_sha256": "0a06eb525c2eb5f2b6031abec8246eee1137b6f30bc40b7112d8b72bac51ae8a",
           "source": "simai/ui-source"
         },
         {
@@ -2360,6 +2331,12 @@
           "source": "simai/ui-source"
         },
         {
+          "id": "smart.include",
+          "version": "1.0.0",
+          "content_sha256": "a37001b9f407627f248612baa63013841926e53a4360c2bb8178ebc9b35c4806",
+          "source": "simai/ui-source"
+        },
+        {
           "id": "smart.inline-editor",
           "version": "1.2.0",
           "content_sha256": "a098595c7c43aea5440305e027cc8e915b077ee3f4400c47cacc3a2771cc30a7",
@@ -2603,12 +2580,6 @@
           "id": "smart.toast",
           "version": "1.1.4",
           "content_sha256": "49bff501673971109dfd1f202a0454d86f3d7fff4743c63344b4416cc62bb8eb",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "smart.toggle",
-          "version": "1.1.3",
-          "content_sha256": "f39caf451b21b5500e50f6c99b1f77bc9712b9115b81d33119f426c30da4fe6a",
           "source": "simai/ui-source"
         },
         {
@@ -3740,6 +3711,17 @@
       ]
     },
     {
+      "place": "content/ru/smart-components/content/include.md",
+      "units": [
+        {
+          "id": "smart.include",
+          "version": "1.0.0",
+          "content_sha256": "a37001b9f407627f248612baa63013841926e53a4360c2bb8178ebc9b35c4806",
+          "source": "simai/ui-source"
+        }
+      ]
+    },
+    {
       "place": "content/ru/smart-components/content/list-item.md",
       "units": [
         {
@@ -4263,23 +4245,6 @@
       ]
     },
     {
-      "place": "content/ru/smart-components/forms/toggle.md",
-      "units": [
-        {
-          "id": "smart.switch",
-          "version": "1.2.1",
-          "content_sha256": "92439af106b014c5b305bab63a4438e02e73ca0f2e316df1283b2df4a760f292",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "smart.toggle",
-          "version": "1.1.3",
-          "content_sha256": "f39caf451b21b5500e50f6c99b1f77bc9712b9115b81d33119f426c30da4fe6a",
-          "source": "simai/ui-source"
-        }
-      ]
-    },
-    {
       "place": "content/ru/smart-components/navigation/breadcrumbs.md",
       "units": [
         {
@@ -4600,8 +4565,8 @@
       "units": [
         {
           "id": "utility.animation",
-          "version": "1.0.0",
-          "content_sha256": "7eebee72207d641a206c29f2cdb1f4e4c2f2e9e08c0cc66c7e3552831cf58bf2",
+          "version": "1.1.0",
+          "content_sha256": "3997d862815edc26e273066ddc36fdc0c65506af36f4c3f4d11fb52c8242794d",
           "source": "simai/ui-source"
         }
       ]
@@ -4865,8 +4830,8 @@
       "units": [
         {
           "id": "utility.border-radius",
-          "version": "1.0.0",
-          "content_sha256": "5f51a081f5ee81b6f828f91ed9bb02da0987bc9c38e3b69a81a874cc9f66e3ed",
+          "version": "1.1.0",
+          "content_sha256": "ffd39600e6227d6cc7f2e93e797339fe8d0505297cd6c1b17499b85e31749bb3",
           "source": "simai/ui-source"
         }
       ]
@@ -6884,12 +6849,6 @@
           "id": "utility.font-size",
           "version": "1.0.0",
           "content_sha256": "c3f921a5bd770d3e4f73c1916a49ecdb890fcb08e07cc9d9ac252185fd87aed6",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "utility.font-size-ext",
-          "version": "1.0.0",
-          "content_sha256": "d32de391e55d3b7f509767ca3aff363a1868db2db78b979b16572491bdcfdba6",
           "source": "simai/ui-source"
         }
       ]

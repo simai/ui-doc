@@ -34,9 +34,10 @@ const css = ['distr/core/css/core.css', 'distr/core/css/utility.full.css']
   .map((file) => fs.readFileSync(path.join(coreRoot, file), 'utf8'))
   .join('\n');
 // A class in the sheet may carry escaped slashes (`.scroll-p-1\/2`); compare on
-// the name a page would write.
+// the name a page would write. A class may also be followed by an attribute
+// selector (`.animation-on-view[data-sf-on-view=waiting]`).
 const declared = new Set(
-  [...css.matchAll(/\.((?:[a-z0-9]|-|\\\/)+)(?=[\s,{:.>+~])/gu)].map(([, name]) => name.replace(/\\/g, '')),
+  [...css.matchAll(/\.((?:[a-z0-9]|-|\\\/)+)(?=[\s,{:.>+~[])/gu)].map(([, name]) => name.replace(/\\/g, '')),
 );
 
 // Pages that explain the move from the old size system quote the retired names on

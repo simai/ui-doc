@@ -114,7 +114,7 @@ Dropdown; без `value` значением становится `text`. `text` 
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-654a2aceaa96` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -123,7 +123,7 @@ Dropdown; без `value` значением становится `text`. `text` 
 | Тег | `<sf-list-item>` |
 | Назначение | Строка: вариант, который забирает `sf-dropdown`, или общая строка списка — дополнительная строка, строка с действием, элемент списка `sf-sortable`, закреплённая строка. |
 | Контракт | `smart.list-item`, версия `1.2.4` |
-| Поставка | выпуск Framework `ui-654a2aceaa96` |
+| Поставка | выпуск Framework `ui-c1d81395889c` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | принят в продукт |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -184,8 +184,8 @@ Dropdown; без `value` значением становится `text`. `text` 
 
 ### Источник
 
-- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/smart/list-item`
-- `simai/ui@654a2aceaa96efa919f13bc0b6c30df10ffba54a:distr/rule/rule.json#name=cl-list-item`
+- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/smart/list-item`
+- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/rule/rule.json#name=cl-list-item`
 
 ## См. также
 

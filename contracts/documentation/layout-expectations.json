@@ -303,19 +303,6 @@
         "sf-toast-wrap": {
             "flexDirection": "column"
         },
-        "sf-toggle": {
-            "alignItems": "center"
-        },
-        "sf-toggle-container": {
-            "alignItems": "center"
-        },
-        "sf-toggle-inner": {
-            "alignItems": "center"
-        },
-        "sf-toggle-inner-wrap": {
-            "alignItems": "center",
-            "justifyContent": "center"
-        },
         "sf-tooltip-content": {
             "flexDirection": "column"
         },

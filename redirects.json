@@ -424,7 +424,7 @@
     },
     {
       "from": "ru/components/reference/toggle",
-      "to": "ru/components/forms/toggle"
+      "to": "ru/components/forms/switch"
     },
     {
       "from": "ru/components/reference/tooltip",
@@ -500,7 +500,7 @@
     },
     {
       "from": "ru/components/toggle",
-      "to": "ru/components/forms/toggle"
+      "to": "ru/components/forms/switch"
     },
     {
       "from": "ru/components/tools/monaco",
@@ -944,7 +944,7 @@
     },
     {
       "from": "ru/framework-components/reference/toggle",
-      "to": "ru/components/forms/toggle"
+      "to": "ru/components/forms/switch"
     },
     {
       "from": "ru/framework-components/reference/tooltip",
@@ -1020,7 +1020,7 @@
     },
     {
       "from": "ru/framework-components/toggle",
-      "to": "ru/components/forms/toggle"
+      "to": "ru/components/forms/switch"
     },
     {
       "from": "ru/framework-components/tooltip",
@@ -2156,7 +2156,7 @@
     },
     {
       "from": "ru/smart-components/reference/toggle",
-      "to": "ru/smart-components/forms/toggle"
+      "to": "ru/smart-components/forms/switch"
     },
     {
       "from": "ru/smart-components/reference/tooltip",
@@ -3501,6 +3501,14 @@
     {
       "from": "ru/guide/smart-components/templates",
       "to": "ru/guide/smart-components/markup"
+    },
+    {
+      "from": "ru/components/forms/toggle",
+      "to": "ru/components/forms/switch"
+    },
+    {
+      "from": "ru/smart-components/forms/toggle",
+      "to": "ru/smart-components/forms/switch"
     }
   ]
 }

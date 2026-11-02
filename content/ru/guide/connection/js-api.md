@@ -37,14 +37,13 @@ Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-654a2aceaa96` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-c1d81395889c` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
-Публичные имена (71) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
+Публичные имена (67) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
 | Имя | Вид | Откуда | Что это | Члены |
 |:---|:---|:---|:---|:---|
 | `SF.AdminMenu` | объект | компонент `admin-menu` | Скриптовый API компонента AdminMenu; приходит вместе с компонентом (`component/admin-menu`), его методы описаны на странице компонента. | — |
-| `SF.AjaxLoad` | объект | компонент `ajaxload` | Скриптовый API компонента AjaxLoad; приходит вместе с компонентом (`component/ajaxload`), его методы описаны на странице компонента. | — |
 | `SF.aliases` | объект | ядро, сразу после `core.js` | Псевдонимы элемента с датой (стандарт simai.smart-component 1.3.8 §16.20): `install(element, table)` сохраняет работающими прежние имена событий, настроек, атрибутов, действий и значений компонента до `remove_after` и отмечает каждое использование в `SF.deprecations` с его датами; `strict = true` не принимает истёкшие имена. | `version`, `strict`, `install`, `uninstall`, `dispatch`, `of`, `read`, `expired` |
 | `SF.AnchoredBadge` | объект | компонент `badges` | Счётчики и точки компонента component/badges, которые ведутся по разметке: .sf-badge с data-count или data-dot рисуется, ограничивается порогом, прячется при 0 и получает имя, как только оказывается на странице. init(scope) обрабатывает поддерево сразу, update(badge) — один бейдж, state({count, dot, cap, label}, node) отвечает, что бейдж покажет и скажет, не трогая страницу. | `init`, `update`, `state` |
 | `SF.Assembly` | объект | ядро, сразу после `core.js` | Среда выполнения сборок стандарта simai.smart-component 1.3.8 (решение владельца 2026-10-27): `define(manifest, {layouts, lang})` определяет тег сборки только по её манифесту; её детали — любые пользовательские элементы с объявленным интерфейсом (`interfaces.register`). Журнал записывает каждый шаг в режиме разработки (`?sf-debug`). Пока нет: отменяемых шагов и слотов в среде выполнения. | `define`, `defined`, `interfaces`, `journal`, `debug`, `activity`, `whenIdle`, `instance`, `instances`, `PART_LINK`, `adaptElement`, `createLink`, `compile`, `AssemblyCore`, `headlessView` |
@@ -69,12 +68,10 @@ Loader выбрал тему при запуске.
 | `SF.InlineEditor` | объект | смарт-компонент `sf-inline-editor` | Скриптовый API компонента InlineEditor; приходит вместе с компонентом (`smart/inline-editor`), его методы описаны на странице компонента. | — |
 | `SF.Input` | объект | компонент `inputs` | Скриптовый API компонента Input; приходит вместе с компонентом (`component/inputs`), его методы описаны на странице компонента. | — |
 | `SF.language` | объект | ядро, сразу после `core.js` | Язык страницы и слова, зарегистрированные для компонентов. | `current`, `use`, `register`, `registerAll`, `known`, `components`, `onChange`, `forget` |
-| `SF.LazyLoad` | объект | компонент `lazy-load` | Скриптовый API компонента LazyLoad; приходит вместе с компонентом (`component/lazy-load`), его методы описаны на странице компонента. | — |
 | `SF.Loader` | объект | Loader, после `sf-loader-init` | Загрузчик: по требованию загружает то, что использует страница, — компоненты и утилиты — и тему. Когда тема задана (`setTheme`, `changeTheme`), её читают `SF.Loader.theme` и `SF.Loader.themePreference`. | `ready`, `ensurePlugin`, `ensureSmartElementLoaded`, `registerComponent`, `setTheme`, `changeTheme`, `theme`, `preloadIcons`, `clearCache`, `smartPath`, `minified` |
 | `SF.loadRuntime` | функция | ядро, сразу после `core.js` | Загружает общую среду смарт-компонентов (`core/js/smart-base.js`) и выполняется с её модулями. | — |
 | `SF.loadSmartBase` | функция | Loader, после `sf-loader-init` | Загружает основу смарт-компонентов, когда на странице ещё нет смарт-элемента; выполняется с `SF.smart`. Собственный смарт-компонент проекта ждёт её. | — |
 | `SF.Mask` | объект | ядро, сразу после `core.js` | Маски ввода: загрузить библиотеку масок и подключить маску к полю. | `load`, `create`, `pipe`, `destroy` |
-| `SF.Modal` | объект | компонент `sf-system` | Скриптовый API модального окна `sf-system`; приходит с `component/sf-system`, его методы описаны на странице этого компонента. Это не класс компонента Modal: на странице, которая загружает только `component/modal` (`sf-modal`, примеры окна), `SF.Modal` нет, а класс лежит в `SF.Loader.ComponentRegistry.Modal` (`new Modal({id, param})`), как в примерах документации. | — |
 | `SF.nothing` | значение | основа смарт-компонентов | `nothing` библиотеки Lit. | — |
 | `SF.notifications` | объект | ядро, сразу после `core.js` | Область уведомлений: её настройки, закрытие сообщения и показанные сообщения. | `configure`, `close`, `history` |
 | `SF.notify` | функция | ядро, сразу после `core.js` | Показывает сообщение в единственной области уведомлений страницы: строка — это его текст, объект несёт `status`, `title`, `text` и остальное. | — |
@@ -107,7 +104,6 @@ Loader выбрал тему при запуске.
 | `SF.Textarea` | объект | компонент `textarea` | Скриптовый API компонента Textarea; приходит вместе с компонентом (`component/textarea`), его методы описаны на странице компонента. | — |
 | `SF.ThemePalette` | объект | компонент `theme-palette` (`SF.Loader.ensurePlugin('theme-palette')` или `data-sf-theme-palette`) и смарт-компонент `sf-theme-generator` | Тема из одного цвета: восемь тональных палитр — 128 примитивов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, которые ядро определяет на них (`--sf-<палитра>-<тон>--alfa-<n>`, список — в `THEME_ALPHA`), всего 226 переменных. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
 | `SF.Toast` | объект | компонент `toast` | Скриптовый API компонента Toast; приходит вместе с компонентом (`component/toast`), его методы описаны на странице компонента. | — |
-| `SF.Toggle` | объект | компонент `toggle` | Скриптовый API компонента Toggle; приходит вместе с компонентом (`component/toggle`), его методы описаны на странице компонента. | — |
 | `SF.Tree` | объект | компонент `tree` | Скриптовый API компонента Tree; приходит вместе с компонентом (`component/tree`), его методы описаны на странице компонента. | — |
 | `SF.Verification` | объект | компонент `verification` | Скриптовый API компонента Verification; приходит вместе с компонентом (`component/verification`), его методы описаны на странице компонента. | — |
 | `SF.whenDefine` | функция | Loader, после `sf-loader-init` | Прежнее имя `SF.whenDefined`, сохранено. | — |

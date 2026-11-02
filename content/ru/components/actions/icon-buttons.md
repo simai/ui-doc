@@ -103,7 +103,7 @@ profile: reference
 
 Кнопка берёт смысловой радиус контрола (`radius-ui`). `radius-square`
 убирает скругление, `radius-rounded` делает кнопку круглой, `radius-default`
-даёт постоянные 4 px независимо от темы. Общей переменной радиуса, как
+оставлен для совместимости и даёт тот же радиус контрола `--sf-radius--ui`. Общей переменной радиуса, как
 `--sf-button-radius` у кнопок, у кнопок с иконкой нет: радиус задаёт класс на
 каждой кнопке.
 
@@ -258,7 +258,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-icon-button--anchor-radius` | не задана; задают модификаторы, например `.sf-icon-button.radius-default`: `var(--sf-radius-default)` | — |
+| `--sf-icon-button--anchor-radius` | не задана; задают модификаторы, например `.sf-icon-button.radius-default`: `var(--sf-radius--ui)` | — |
 | `--sf-icon-button--background-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--default.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-icon-button-background-color, var(--sf-primary))` | `background-color` |
 | `--sf-icon-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-icon-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |

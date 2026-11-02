@@ -1,6 +1,6 @@
 ---
 title: "Формы и ввод"
-description: "Формы и ввод — 13 компонентов SIMAI Framework."
+description: "Формы и ввод — 12 компонентов SIMAI Framework."
 profile: reference
 ---
 
@@ -11,7 +11,6 @@ profile: reference
 - **[Флажок](/ru/components/forms/checkbox/)** — Независимый выбор одного или нескольких значений.
 - **[Переключатель radio](/ru/components/forms/radio/)** — Выбор одного значения из небольшой группы.
 - **[Switch](/ru/components/forms/switch/)** — Немедленное включение или выключение настройки.
-- **[Toggle](/ru/components/forms/toggle/)** — Компактное переключение состояния или режима.
 - **[Количество](/ru/components/forms/quantity/)** — Точное числовое значение с кнопками увеличения и уменьшения.
 - **[Диапазон](/ru/components/forms/range-slider/)** — Выбор границ числового диапазона.
 - **[Слайдер](/ru/components/forms/slider/)** — Приблизительный выбор одного значения на шкале.
