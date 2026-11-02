@@ -1,0 +1,11 @@
+<!-- The home page showcase: what you can build, one tab each. The admin is its
+     own page (/demos/home/admin/); the chat and the editor are created, and
+     their components loaded, the first time their tab opens (index.js).
+     scripts/export-live-demonstrations.php publishes it as /demos/home/showcase/. -->
+<sf-tabs type="pills" size="1/2" aria-label="Что можно собрать" items="Админка|Чат|Редактор" data-showcase>
+  <div slot="panel-0" class="showcase__panel" data-panel="admin" data-panel-index="0">
+    <iframe class="showcase__frame" data-src="../admin/" title="Административный интерфейс"></iframe>
+  </div>
+  <div slot="panel-1" class="showcase__panel" data-panel="chat" data-panel-index="1"></div>
+  <div slot="panel-2" class="showcase__panel" data-panel="editor" data-panel-index="2"></div>
+</sf-tabs>

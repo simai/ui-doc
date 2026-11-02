@@ -67,12 +67,36 @@ $adminHtml='<!doctype html><html lang="ru" class="max-h-screen h-full" data-sf-d
     .'<link rel="stylesheet" href="'.$css[1].'"><link rel="stylesheet" href="index.css">'
     .'<script>(function(){var d=window.matchMedia("(prefers-color-scheme: dark)").matches;try{if(parent!==window)d=parent.document.documentElement.classList.contains("theme-dark");}catch(e){}document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);})();</script>'
     .'<script>window.sfPath='.json_encode($core,JSON_UNESCAPED_SLASHES).';window.sfSmartPath='.json_encode($base.'_docara/framework-runtime',JSON_UNESCAPED_SLASHES).';window.SF_BOOT_CONFIG='.json_encode($adminBoot,JSON_UNESCAPED_SLASHES).';</script>'
-    .'<script src="'.$core.'core/js/core.js" defer></script><script type="module" src="index.js"></script></head>'
+    .'<script src="'.$core.'core/js/core.js" defer></script><script type="module" src="index.js"></script><script type="module" src="demo.js"></script></head>'
     .'<body class="flex h-full">'.file_get_contents($adminSource.'/index.html')
     .'<script>function syncTheme(){if(parent===window)return;try{var d=parent.document.documentElement.classList.contains("theme-dark");document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);}catch(e){}}try{if(parent!==window)new MutationObserver(syncTheme).observe(parent.document.documentElement,{attributes:true,attributeFilter:["class"]});}catch(e){}</script>'
     .'</body></html>';
 file_put_contents($adminTarget.'/index.html',$adminHtml);
 foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($adminTarget, FilesystemIterator::SKIP_DOTS)) as $f) if($f->isFile()) $files[]=['path'=>substr($f->getPathname(),strlen($build)+1),'sha256'=>hash_file('sha256',$f->getPathname())];
+
+// The home page showcase (examples/home/showcase): tabs of the admin, the chat
+// and the editor. The admin is the page above in a frame; the chat and the
+// editor come from the same product package and are made when their tab opens.
+$showcaseSource=$root.'/examples/home/showcase';
+$showcaseTarget=$build.'/demos/home/showcase';
+if (!is_dir($showcaseTarget)) mkdir($showcaseTarget,0775,true);
+foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($showcaseSource, FilesystemIterator::SKIP_DOTS)) as $input) {
+    if (!$input->isFile()) continue;
+    $relative=substr($input->getPathname(),strlen($showcaseSource)+1);
+    $inputs[substr($input->getPathname(),strlen($root)+1)]=hash_file('sha256',$input->getPathname());
+    if ($relative==='index.html') continue;
+    copy($input->getPathname(),$showcaseTarget.'/'.$relative);
+}
+$showcaseHtml='<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Что можно собрать</title>'
+    .'<link rel="stylesheet" href="'.$css[1].'"><link rel="stylesheet" href="index.css">'
+    .'<script>(function(){var d=window.matchMedia("(prefers-color-scheme: dark)").matches;try{if(parent!==window)d=parent.document.documentElement.classList.contains("theme-dark");}catch(e){}document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);})();</script>'
+    .'<script>window.sfPath='.json_encode($core,JSON_UNESCAPED_SLASHES).';window.sfSmartPath='.json_encode($base.'_docara/framework-runtime',JSON_UNESCAPED_SLASHES).';window.SF_BOOT_CONFIG='.json_encode($adminBoot,JSON_UNESCAPED_SLASHES).';</script>'
+    .'<script src="'.$core.'core/js/core.js" defer></script><script type="module" src="index.js"></script></head>'
+    .'<body>'.file_get_contents($showcaseSource.'/index.html')
+    .'<script>function syncTheme(){if(parent===window)return;try{var d=parent.document.documentElement.classList.contains("theme-dark");document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);}catch(e){}}try{if(parent!==window)new MutationObserver(syncTheme).observe(parent.document.documentElement,{attributes:true,attributeFilter:["class"]});}catch(e){}</script>'
+    .'</body></html>';
+file_put_contents($showcaseTarget.'/index.html',$showcaseHtml);
+foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($showcaseTarget, FilesystemIterator::SKIP_DOTS)) as $f) if($f->isFile()) $files[]=['path'=>substr($f->getPathname(),strlen($build)+1),'sha256'=>hash_file('sha256',$f->getPathname())];
 
 $recipeFixture=$root.'/assets/examples/composition/header-switch.json';
 $recipeTarget=$build.'/demos/guide/composition-recipe/header-switch.json';
