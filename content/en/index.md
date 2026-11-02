@@ -15,37 +15,17 @@ an English page.
 
 ## What you can build
 
-### Admin
+The admin, the chat and the editor are live: click and type in them. A tab
+loads when you open it. The demo data is in Russian.
 
-A section menu, a list with search and filters, a record card. Open a record,
-filter the list, change a column's width. The demo data is in Russian.
-
-:::internal_preview {size=tall title="Admin interface"}
-[Open the demo](/demos/home/admin/)
+:::internal_preview {size=tall title="Admin, chat and editor"}
+[Open the demo](/demos/home/showcase/)
 :::
 
-[Open on its own page](/demos/home/admin/)
-
-### Chat
-
-A list of conversations, the message feed and a composer with attachments.
-
-:::example {id="smart-components/chat-window/embedded" label="Chat" preview=sandbox}
-:::
-
-[About the chat](/ru/pro/chat/) (in Russian)
-
-### Editor
-
-A page of blocks: text, headings, lists and notes. Try typing right in the example.
-
-:::example {id="home/editor" label="Editor"}
-:::
-
-[About the editor](/ru/pro/editor/content-editor/) (in Russian)
-
-The admin, chat and editor are [SIMAI Pro](/ru/pro/) components under their
-own licence; the rest of SIMAI Framework is open under Apache-2.0.
+More: [the admin](/demos/home/admin/) on its own page,
+[the chat](/ru/pro/chat/) and [the editor](/ru/pro/editor/content-editor/) (in
+Russian). All three are [SIMAI Pro](/ru/pro/) components under their own
+licence; the rest of SIMAI Framework is open under Apache-2.0.
 
 ## Three steps
 

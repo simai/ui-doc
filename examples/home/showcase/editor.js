@@ -1,4 +1,4 @@
-const element = document.getElementById('content-editor-home');
+const element = document.getElementById('showcase-editor');
 Object.assign(element, {
   "document": {
     "schema": "simai.composition.document",
