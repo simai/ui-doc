@@ -1,12 +1,11 @@
-:::hero {variant=compact padding=2xl media=none effect="neon-horizon" effect_theme=auto effect_settings='{"intensity": 30}'}
-# An interface with no build step: one CSS file and one script
+:::hero {layout=split padding=2xl media=none effect="assembly" effect_theme=auto effect_settings='{"intensity": 55, "shapes": "interface", "interactive": false}'}
+# An interface from ready parts
 
-SIMAI Framework is CSS utilities, ready components and Smart Components for
-websites, portals and admin interfaces. It loads from a CDN, with no npm and
-no bundler: the loader fetches only what the page uses.
+Components and Smart Components from a CDN — no npm, no build step.
 
 [Start in 5 minutes](/ru/guide/introduction/quick-start/)
-[GitHub](https://github.com/simai/ui-source)
+
+[Components](/ru/components/)
 :::
 
 The full documentation is written in Russian; the guide and catalogue links
@@ -14,11 +13,12 @@ on this page open the Russian pages. Components follow the page language:
 their own words (calendar months, button labels, hints) appear in English on
 an English page.
 
-## Admin interface
+## What you can build
 
-A section menu, a list with search, filters and sorting, and a record card,
-all built from Smart Components over demo data. Open a record, filter the
-list, change a column's width. The demo data is in Russian.
+### Admin
+
+A section menu, a list with search and filters, a record card. Open a record,
+filter the list, change a column's width. The demo data is in Russian.
 
 :::internal_preview {size=tall title="Admin interface"}
 [Open the demo](/demos/home/admin/)
@@ -26,108 +26,62 @@ list, change a column's width. The demo data is in Russian.
 
 [Open on its own page](/demos/home/admin/)
 
-## Code in 30 seconds
+### Chat
 
-Save the page as `index.html` and open it in a browser. Styles, utilities and
-a button load from the CDN.
+A list of conversations, the message feed and a composer with attachments.
+
+:::example {id="smart-components/chat-window/embedded" label="Chat" preview=sandbox}
+:::
+
+[About the chat](/ru/pro/chat/) (in Russian)
+
+### Editor
+
+A page of blocks: text, headings, lists and notes. Try typing right in the example.
+
+:::example {id="home/editor" label="Editor"}
+:::
+
+[About the editor](/ru/pro/editor/content-editor/) (in Russian)
+
+The admin, chat and editor are [SIMAI Pro](/ru/pro/) components under their
+own licence; the rest of SIMAI Framework is open under Apache-2.0.
+
+## Three steps
+
+1. Connect the stylesheet and the script from the CDN.
+2. Write the classes or the component's tag.
+3. Open the page — the loader fetches what the page uses.
 
 ```html
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Первая страница на SIMAI Framework</title>
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1446/distr/core/css/core.min.css">
-</head>
-<body>
-  <main class="p-4">
-    <article class="p-4 bg-surface-container radius-2">
-      <h1 class="sf-h-2 m-bottom-2">SIMAI Framework подключён</h1>
-      <p class="sf-body-medium color-on-surface">
-        Стили, токены и утилиты работают.
-      </p>
-      <button type="button" class="sf-button sf-button--default sf-button--primary sf-button--size-1">
-        <span class="sf-button-text-container">Кнопка на классах</span>
-      </button>
-    </article>
-  </main>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/css/core.min.css">
+<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/';</script>
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/js/core.min.js"></script>
 
-  <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1446/distr/';
-    window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1446/distr/core/js/core.min.js"></script>
-</body>
-</html>
+<sf-button text="Save"></sf-button>
 ```
 
-[Quick start: running it and checking the connection](/ru/guide/introduction/quick-start/) (in Russian)
+[Quick start: a full page and checking the connection](/ru/guide/introduction/quick-start/) (in Russian)
 
 ## Find your task
 
 :::features
-- **[Connecting](/ru/guide/connection/project-setup/)** From the CDN or from your own files, and the order to connect them.
-- **[Layouts](/ru/guide/layouts/)** A page made of sections and blocks.
-- **[Components](/ru/components/)** Buttons, fields, cards and other elements made of classes.
+- **[Connecting](/ru/guide/connection/project-setup/)** From the CDN or from your own files.
+- **[Components](/ru/components/)** Buttons, fields, cards made of classes.
 - **[Smart Components](/ru/smart/)** Tags with behaviour: a table, a menu, forms.
+- **[Layouts](/ru/guide/layouts/)** A page made of sections and blocks.
 :::
 
 :::features
 - **[Themes](/ru/guide/colour/themes/)** Light, dark and your own theme from one colour.
-- **[JavaScript API](/ru/guide/connection/js-api/)** Objects and events for your own scripts.
-- **[Working with AI](/ru/guide/standards/ai/)** How to give an assistant the documentation.
-- **[Updating](/ru/guide/connection/updating/)** Moving between releases and the change journal.
+- **[Updating](/ru/guide/connection/updating/)** A pinned release and the change journal.
+- **[Background effects](https://effects.simai.io/)** Live backgrounds for first screens.
+- **[Working with AI](/ru/guide/standards/ai/)** The `ai.json` index and a text version of every page.
 :::
-
-## Why SIMAI Framework
-
-:::features
-- **[No build step](/ru/guide/introduction/quick-start/)** Classes and tags in the markup load the modules they need. Only what the page uses is fetched.
-- **[Ready admin screens](/ru/smart/)** A table, filters, a record card and a menu are already Smart Components.
-- **[Predictable updates](/ru/guide/connection/versions/)** A project pins a release, and the change journal says what to adjust when moving on.
-- **[Open source](https://github.com/simai/ui-source/blob/main/LICENSE)** Apache-2.0 licence, commercial projects included.
-:::
-
-## See it work
-
-### A card that follows its container
-
-The card rearranges itself by the width of its panel, not of the window: the
-`cq-sm:` and `cq-md:` classes respond to the container's width. Drag the
-panel's right edge.
-
-:::example {id="home/container" label="Container query"}
-:::
-
-### A theme from one colour
-
-Pick a primary colour, and the generator builds the palettes and the theme
-variables.
-
-:::example {id="smart-components/theme-generator/overview" label="Theme generator"}
-:::
-
-For first screens and cards there is a
-[catalogue of background effects](https://effects.simai.io/), a separate
-site with live examples.
-
-## For AI assistants
-
-Give the assistant the documentation's address. The `ai.json` index lists
-every page, and every page has a text version. More in
-[Working with AI](/ru/guide/standards/ai/) (in Russian).
-
-```text
-Документация SIMAI Framework: https://ui.simai.io/ (индекс для ИИ — /ai.json).
-Правила: https://ui.simai.io/ru/guide/standards/ai/ai.md
-```
 
 ---
 
-**SIMAI Framework** · release `ui-c4d39d528148` ·
+**SIMAI Framework** · release `ui-2d39b617a719` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Report a problem](https://github.com/simai/ui-source/issues) ·
 [Versions](/ru/guide/connection/versions/) ·
