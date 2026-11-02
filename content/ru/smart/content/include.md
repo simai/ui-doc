@@ -122,7 +122,7 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -131,7 +131,7 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 | Тег | `<sf-include>` |
 | Назначение | Загружает часть страницы с адреса: скелетон, пока она грузится, HTML сервера на его месте, когда она пришла (компоненты в ней запускает Loader), ошибка с «Повторить», когда не пришла. `load="view"` ждёт, пока часть подойдёт к экрану. |
 | Контракт | `smart.include`, версия `1.0.0` |
-| Поставка | выпуск Framework `ui-c1d81395889c` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | описан: манифест и сценарий есть, продуктовой приёмки нет |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="block"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -171,8 +171,8 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 
 ### Источник
 
-- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/smart/include`
-- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/rule/rule.json#name=cl-include`
+- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/include`
+- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-include`
 
 ## См. также
 

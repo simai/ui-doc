@@ -40,7 +40,7 @@ a button load from the CDN.
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/core/css/core.min.css">
+        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/css/core.min.css">
 </head>
 <body>
   <main class="p-4">
@@ -56,10 +56,10 @@ a button load from the CDN.
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/core/js/core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/js/core.min.js"></script>
 </body>
 </html>
 ```
@@ -127,7 +127,7 @@ every page, and every page has a text version. More in
 
 ---
 
-**SIMAI Framework** · release `ui-c1d81395889c` ·
+**SIMAI Framework** · release `ui-2d39b617a719` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Report a problem](https://github.com/simai/ui-source/issues) ·
 [Versions](/ru/guide/connection/versions/) ·

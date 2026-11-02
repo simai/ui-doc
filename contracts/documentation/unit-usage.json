@@ -9,14 +9,14 @@
   "sources": [
     {
       "source": "simai/ui-source",
-      "release": "ui-c1d81395889c",
-      "revision": "83df55608fe5760bbe5e1044583f65116dde35e1",
+      "release": "ui-2d39b617a719",
+      "revision": "426123e2946b96e9e8275f85eeed7d745171dc79",
       "brought_up_on": "2026-11-02"
     },
     {
       "source": "simai/ui-pro",
-      "release": "larena-21d21fc3c1fa",
-      "revision": "21d21fc3c1fa7a43f499351c115d9cccfa00a187",
+      "release": "pro-1fcb47404ee8",
+      "revision": "1fcb47404ee810e12d3a2bdf7308f819366a06f7",
       "brought_up_on": "2026-11-02"
     }
   ],
@@ -1396,8 +1396,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.1",
-          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
+          "version": "1.2.2",
+          "content_sha256": "db4a65d5ed74153c6fc3735c2dfede2754cec1f8d32338e331bd258bd598bc1a",
           "source": "simai/ui-pro"
         },
         {
@@ -1571,8 +1571,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.1",
-          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
+          "version": "1.2.2",
+          "content_sha256": "db4a65d5ed74153c6fc3735c2dfede2754cec1f8d32338e331bd258bd598bc1a",
           "source": "simai/ui-pro"
         },
         {
@@ -2224,8 +2224,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.1",
-          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
+          "version": "1.2.2",
+          "content_sha256": "db4a65d5ed74153c6fc3735c2dfede2754cec1f8d32338e331bd258bd598bc1a",
           "source": "simai/ui-pro"
         },
         {
@@ -3335,8 +3335,8 @@
         },
         {
           "id": "smart.content-editor",
-          "version": "1.2.1",
-          "content_sha256": "520898868f0a6e589bef49d86797108fa9e0e4b8251070430c60365bcfe8e961",
+          "version": "1.2.2",
+          "content_sha256": "db4a65d5ed74153c6fc3735c2dfede2754cec1f8d32338e331bd258bd598bc1a",
           "source": "simai/ui-pro"
         },
         {

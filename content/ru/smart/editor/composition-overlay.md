@@ -179,7 +179,7 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -188,7 +188,7 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 | Тег | `<sf-composition-overlay>` |
 | Назначение | Слой редактора над отрисованным документом композиции: рамки наведения и выбора, панель действий узла, места вставки, перенос указателем и клавиатурой и дерево структуры; холст никогда не меняется, каждое изменение выполняет хост. |
 | Контракт | `smart.composition-overlay`, версия `1.3.0` |
-| Поставка | выпуск Framework `ui-c1d81395889c` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | работает в сценарии студии, продуктовой приёмки нет |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -248,8 +248,8 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 ### Источник
 
-- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/smart/composition-overlay`
-- `simai/ui@c1d81395889cf5816808ad833dad8595f4d33910:distr/rule/rule.json#name=cl-composition-overlay`
+- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/composition-overlay`
+- `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-composition-overlay`
 
 ## См. также
 
