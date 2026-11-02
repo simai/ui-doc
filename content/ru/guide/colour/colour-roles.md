@@ -177,7 +177,7 @@ on-primary:
 семейство `--sf-neutral`, `--sf-on-neutral`, `--sf-neutral-container`.
 
 Статусные палитры заданы жёстко и за фирменным цветом не идут:
-[генератор темы](/ru/smart-components/forms/theme-generator/) двигает
+[генератор темы](/ru/smart/forms/theme-generator/) двигает
 акцентные и нейтральную палитры, а `info`, `success`, `warning` и `error`
 остаются своими. У `info` это своя палитра цвета `#005bbe`, поэтому
 информационные сообщения синие при любом фирменном цвете.

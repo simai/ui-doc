@@ -17,7 +17,7 @@ $check($actualHeader === [
     ['Руководство', '/ru/guide/'],
     ['Утилиты', '/ru/utilities/'],
     ['Компоненты', '/ru/components/'],
-    ['Смарт-компоненты', '/ru/smart-components/'],
+    ['Смарт-компоненты', '/ru/smart/'],
     ['Pro', '/ru/pro/'],
 ], 'header_is_not_guide_plus_references', ['actual' => $actualHeader]);
 
@@ -26,7 +26,7 @@ $check($actualHeader === [
 // inbound links in the whole site: a rule and its numbers in separate trees
 // drift, and nobody sees the drift because nobody can reach the second tree.
 // Values live under the rule they belong to now, inside the guide.
-foreach (['content/ru/reference', 'content/ru/layout', 'content/ru/smart-components/introduction.md', 'content/ru/smart-components/connection.md', 'content/ru/smart-components/lifecycle.md', 'content/ru/smart-components/catalog.md', 'content/ru/smart-components/templates-and-assets.md', 'content/ru/smart-components/examples.md'] as $removedOwner) {
+foreach (['content/ru/reference', 'content/ru/layout', 'content/ru/smart/introduction.md', 'content/ru/smart/connection.md', 'content/ru/smart/lifecycle.md', 'content/ru/smart/catalog.md', 'content/ru/smart/templates-and-assets.md', 'content/ru/smart/examples.md'] as $removedOwner) {
     $check(! file_exists($root . '/' . $removedOwner), 'theory_remains_in_reference_tree', ['path' => $removedOwner]);
 }
 
@@ -47,7 +47,7 @@ foreach ($requiredGuideOwners as $owner) {
 $catalogRules = [
     'content/ru/utilities/index.md' => ['/ru/guide/utilities/', '## Направление (LTR/RTL)'],
     'content/ru/components/index.md' => ['/ru/guide/components/examples-and-project/#как-работать-с-примерами', '## Как устроены примеры'],
-    'content/ru/smart-components/index.md' => ['/ru/guide/smart-components/', '/ru/smart-components/introduction/'],
+    'content/ru/smart/index.md' => ['/ru/guide/smart-components/', '/ru/smart/introduction/'],
 ];
 foreach ($catalogRules as $path => [$requiredLink, $forbiddenText]) {
     $contents = (string) file_get_contents($root . '/' . $path);
@@ -62,7 +62,7 @@ foreach ($iterator as $file) {
         continue;
     }
     $contents = (string) file_get_contents($file->getPathname());
-    if (str_contains($contents, '/ru/layout/') || preg_match('#/ru/smart-components/(?:introduction|connection|lifecycle|catalog|templates-and-assets|examples)/#', $contents) === 1) {
+    if (str_contains($contents, '/ru/layout/') || preg_match('#/ru/smart/(?:introduction|connection|lifecycle|catalog|templates-and-assets|examples)/#', $contents) === 1) {
         $staleLinks[] = str_replace($root . '/', '', $file->getPathname());
     }
     // A shell comment inside a code block is not a heading.

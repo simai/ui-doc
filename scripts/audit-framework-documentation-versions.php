@@ -84,7 +84,7 @@ foreach ($paths as $path) {
     ) {
         $hardcodedReleaseMentions[] = $relative;
     }
-    if (str_starts_with($relative, 'content/ru/smart-components/')) {
+    if (str_starts_with($relative, 'content/ru/smart/')) {
         preg_match_all('/simai\/ui-smart@([a-f0-9]{40})(?=:smart\/)/', $markdown, $smartMatches);
         preg_match_all('/simai\/ui@([a-f0-9]{40})(?=:distr\/(?:rule\/rule\.json|smart\/))/', $markdown, $coreMatches);
         // The old SIMAI Framework Pro line is retired: no page may cite it. Since

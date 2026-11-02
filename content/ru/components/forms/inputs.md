@@ -115,7 +115,7 @@ input, а при звёздочке скрипт ставит его сам. З�
 
 ### Поле с пояснением к подписи
 
-Пояснение к подписи по нажатию — [знак «?»](/ru/smart-components/feedback/help-mark/)
+Пояснение к подписи по нажатию — [знак «?»](/ru/smart/feedback/help-mark/)
 рядом с подписью. Внутри `<label>` знак стал бы его элементом управления, и
 нажатие на подпись открывало бы пояснение вместо перехода в поле. Поэтому у
 такого поля оболочка — `<div class="sf-input">`, подпись — `<label for>` с
@@ -331,4 +331,4 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 
 - [Многострочное поле](/ru/components/forms/textarea/)
 - [Количество](/ru/components/forms/quantity/)
-- [Inputs — смарт-компонент](/ru/smart-components/forms/inputs/)
+- [Inputs — смарт-компонент](/ru/smart/forms/inputs/)

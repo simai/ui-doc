@@ -246,4 +246,4 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 ## См. также
 
 - [Контекстное меню](/ru/components/navigation/context-menu/)
-- [Выпадающий список — смарт-компонент](/ru/smart-components/navigation/dropdown/)
+- [Выпадающий список — смарт-компонент](/ru/smart/navigation/dropdown/)

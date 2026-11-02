@@ -40,7 +40,7 @@ a button load from the CDN.
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/core/css/core.min.css">
+        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/css/core.min.css">
 </head>
 <body>
   <main class="p-4">
@@ -56,10 +56,10 @@ a button load from the CDN.
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/core/js/core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/js/core.min.js"></script>
 </body>
 </html>
 ```
@@ -72,7 +72,7 @@ a button load from the CDN.
 - **[Connecting](/ru/guide/connection/project-setup/)** From the CDN or from your own files, and the order to connect them.
 - **[Layouts](/ru/guide/layouts/)** A page made of sections and blocks.
 - **[Components](/ru/components/)** Buttons, fields, cards and other elements made of classes.
-- **[Smart Components](/ru/smart-components/)** Tags with behaviour: a table, a menu, forms.
+- **[Smart Components](/ru/smart/)** Tags with behaviour: a table, a menu, forms.
 :::
 
 :::features
@@ -86,7 +86,7 @@ a button load from the CDN.
 
 :::features
 - **[No build step](/ru/guide/introduction/quick-start/)** Classes and tags in the markup load the modules they need. Only what the page uses is fetched.
-- **[Ready admin screens](/ru/smart-components/)** A table, filters, a record card and a menu are already Smart Components.
+- **[Ready admin screens](/ru/smart/)** A table, filters, a record card and a menu are already Smart Components.
 - **[Predictable updates](/ru/guide/connection/versions/)** A project pins a release, and the change journal says what to adjust when moving on.
 - **[Open source](https://github.com/simai/ui-source/blob/main/LICENSE)** Apache-2.0 licence, commercial projects included.
 :::
@@ -127,7 +127,7 @@ every page, and every page has a text version. More in
 
 ---
 
-**SIMAI Framework** · release `ui-c1d81395889c` ·
+**SIMAI Framework** · release `ui-2d39b617a719` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Report a problem](https://github.com/simai/ui-source/issues) ·
 [Versions](/ru/guide/connection/versions/) ·

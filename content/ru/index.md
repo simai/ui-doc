@@ -36,7 +36,7 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и �
   <title>Первая страница на SIMAI Framework</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/core/css/core.min.css">
+        href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/css/core.min.css">
 </head>
 <body>
   <main class="p-4">
@@ -52,10 +52,10 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и �
   </main>
 
   <script>
-    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/';
+    window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/';
     window.SF_BOOT_CONFIG = {preloader: {enabled: false}};
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.208/distr/core/js/core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261102.1106/distr/core/js/core.min.js"></script>
 </body>
 </html>
 ```
@@ -68,7 +68,7 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и �
 - **[Подключение](/ru/guide/connection/project-setup/)** С CDN или из своих файлов, порядок подключения.
 - **[Макеты](/ru/guide/layouts/)** Страница из секций и блоков.
 - **[Компоненты](/ru/components/)** Кнопки, поля, карточки и другие элементы на классах.
-- **[Смарт-компоненты](/ru/smart-components/)** Теги с поведением: таблица, меню, формы.
+- **[Смарт-компоненты](/ru/smart/)** Теги с поведением: таблица, меню, формы.
 :::
 
 :::features
@@ -82,7 +82,7 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и �
 
 :::features
 - **[Без сборки](/ru/guide/introduction/quick-start/)** Классы и теги в разметке подключают нужные модули сами. Грузится только то, что есть на странице.
-- **[Готовые административные экраны](/ru/smart-components/)** Таблица, фильтры, карточка записи и меню уже собраны в смарт-компоненты.
+- **[Готовые административные экраны](/ru/smart/)** Таблица, фильтры, карточка записи и меню уже собраны в смарт-компоненты.
 - **[Предсказуемые обновления](/ru/guide/connection/versions/)** Проект закрепляет выпуск, а журнал изменений показывает, что поправить при переходе.
 - **[Открытый код](https://github.com/simai/ui-source/blob/main/LICENSE)** Лицензия Apache-2.0, в том числе для коммерческих проектов.
 :::
@@ -121,7 +121,7 @@ SIMAI Framework — CSS-утилиты, готовые компоненты и �
 
 ---
 
-**SIMAI Framework** · выпуск `ui-c1d81395889c` ·
+**SIMAI Framework** · выпуск `ui-2d39b617a719` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Сообщить о проблеме](https://github.com/simai/ui-source/issues) ·
 [Версии](/ru/guide/connection/versions/) ·

@@ -1,0 +1,9 @@
+<sf-file-upload link-text="Добавить файлы" text="" aria-label="Добавить файлы"></sf-file-upload>
+<script>
+(() => {
+  const upload = document.currentScript.previousElementSibling;
+  customElements.whenDefined('sf-file-upload').then(() => {
+    upload.setItems([{ name: 'presentation.pdf', fileSize: '2,4 МБ', progress: 65, state: 'process' }]);
+  });
+})();
+</script>

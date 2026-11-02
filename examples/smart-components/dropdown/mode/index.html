@@ -1,0 +1,18 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-3">
+  <div class="flex flex-col gap-1">
+    <sf-dropdown multiple name="reviewers-text" label="Участники" placeholder="Выберите участников" search-placeholder="Найти" value="anna,ivan">
+      <sf-list-item value="anna" text="Анна Белова"></sf-list-item>
+      <sf-list-item value="ivan" text="Иван Петров"></sf-list-item>
+      <sf-list-item value="maria" text="Мария Козлова"></sf-list-item>
+    </sf-dropdown>
+    <code class="text-1/2 color-on-surface-variant">multiple</code>
+  </div>
+  <div class="flex flex-col gap-1">
+    <sf-dropdown mode="tag" multiple name="reviewers-tag" label="Участники" placeholder="Выберите участников" search-placeholder="Найти" value="anna,ivan">
+      <sf-list-item value="anna" text="Анна Белова"></sf-list-item>
+      <sf-list-item value="ivan" text="Иван Петров"></sf-list-item>
+      <sf-list-item value="maria" text="Мария Козлова"></sf-list-item>
+    </sf-dropdown>
+    <code class="text-1/2 color-on-surface-variant">mode="tag" multiple</code>
+  </div>
+</div>

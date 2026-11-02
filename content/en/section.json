@@ -17,7 +17,7 @@
       {"id": "guide", "label": "Guide (RU)", "href": "/ru/guide/"},
       {"id": "utilities", "label": "Utilities", "href": "/en/utilities/"},
       {"id": "components", "label": "Components (RU)", "href": "/ru/components/"},
-      {"id": "smart-components", "label": "Smart Components (RU)", "href": "/ru/smart-components/"}
+      {"id": "smart-components", "label": "Smart Components (RU)", "href": "/ru/smart/"}
     ]
   }
 }

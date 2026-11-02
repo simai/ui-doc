@@ -106,7 +106,7 @@
       ]
     }
   },
-  "smart-components": {
+  "smart": {
     "actions": {
       "title": "Действия",
       "items": [

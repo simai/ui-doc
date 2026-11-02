@@ -94,7 +94,7 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -162,5 +162,5 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/message-log`
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/message-log`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/message-log/rule.js#name=cl-message-log`

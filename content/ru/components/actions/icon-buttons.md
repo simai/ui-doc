@@ -56,7 +56,7 @@ profile: reference
 «Удалить». `secondary` есть только у вида `tonal`, `error` нет у вида
 `surface`; прочерк в примере — сочетание, которого нет. Необратимое действие
 кнопка только начинает: спросите подтверждение в
-[модальном окне](/ru/smart-components/overlays/modal/) и выполните действие
+[модальном окне](/ru/smart/overlays/modal/) и выполните действие
 после ответа. На время самого действия кнопке ставят класс `loading`, а не
 `disabled` (см. [Недоступная](#недоступная)): так окно возвращает фокус на
 кнопку.
@@ -285,4 +285,4 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 - [Кнопки](/ru/components/actions/buttons/)
 - [Закрытие](/ru/components/actions/close/)
 - [Группа кнопок](/ru/components/actions/button-group/)
-- [Кнопки с иконкой — смарт-компонент](/ru/smart-components/actions/icon-buttons/)
+- [Кнопки с иконкой — смарт-компонент](/ru/smart/actions/icon-buttons/)

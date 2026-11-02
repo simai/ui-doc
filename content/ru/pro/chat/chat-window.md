@@ -51,6 +51,10 @@ Framework: поставляется пакетом `larena` из репозит�
 `embedded` встраивает окно в страницу: высота берётся от контейнера, у окна
 своя рамка.
 
+Без `embedded` окно занимает всю высоту экрана: так его ставят на отдельную
+страницу. Примеры на этой странице встроены, потому что рамка примера
+подстраивает свою высоту под содержимое.
+
 :::example {id="smart-components/chat-window/embedded" label="Окно внутри страницы" preview=sandbox}
 :::
 
@@ -235,7 +239,7 @@ Escape закрывает его и возвращает фокус на ком�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -371,8 +375,8 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Источник
 
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/chat-window`
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-window`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

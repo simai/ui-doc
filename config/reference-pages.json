@@ -450,169 +450,218 @@
       "component": "theme",
       "css": false
     },
-    "smart-components/actions/button-group.md": {
-      "kind": "smart"
+    "smart/actions/button-group.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/actions/buttons.md": {
-      "kind": "smart"
+    "smart/actions/buttons.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/actions/close.md": {
-      "kind": "smart"
+    "smart/actions/close.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/actions/download-file.md": {
-      "kind": "smart"
+    "smart/actions/download-file.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/actions/icon-buttons.md": {
-      "kind": "smart"
+    "smart/actions/icon-buttons.md": {
+      "kind": "smart",
+      "standard": 3
     },
     "pro/admin/admin-menu.md": {
       "kind": "smart"
     },
-    "smart-components/composite/page-header.md": {
-      "kind": "smart"
+    "smart/composite/page-header.md": {
+      "kind": "smart",
+      "standard": 3
     },
     "pro/admin/property-view.md": {
       "kind": "smart"
     },
-    "smart-components/content/avatar.md": {
-      "kind": "smart"
+    "smart/content/avatar.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/avatars.md": {
-      "kind": "smart"
+    "smart/content/avatars.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/file-preview.md": {
-      "kind": "smart"
+    "smart/content/file-preview.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/gallery.md": {
-      "kind": "smart"
+    "smart/content/gallery.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/icons.md": {
-      "kind": "smart"
+    "smart/content/icons.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/list-item.md": {
-      "kind": "smart"
+    "smart/content/list-item.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/reference-link.md": {
-      "kind": "smart"
+    "smart/content/reference-link.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/content/include.md": {
-      "kind": "smart"
+    "smart/content/include.md": {
+      "kind": "smart",
+      "standard": 3
     },
     "pro/admin/table.md": {
       "kind": "smart"
     },
-    "smart-components/content/tags.md": {
-      "kind": "smart"
-    },
-    "smart-components/editor/composition-overlay.md": {
-      "kind": "smart"
-    },
-    "smart-components/editor/inline-editor.md": {
-      "kind": "smart"
-    },
-    "smart-components/editor/sortable.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/alert.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/badges.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/progress-bar.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/progress-ring.md": {
+    "smart/content/tags.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/feedback/progress-scale.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/skeleton.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/spinner.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/toast.md": {
-      "kind": "smart"
-    },
-    "smart-components/feedback/tooltip.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/checkbox.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/color.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/country-code.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/datepicker.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/file-upload.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/inputs.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/radio.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/range-slider.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/slider.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/switch.md": {
+    "smart/editor/composition-overlay.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/forms/rich-text.md": {
-      "kind": "smart"
+    "smart/editor/inline-editor.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/forms/lookup.md": {
-      "kind": "smart"
+    "smart/editor/sortable.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/forms/textarea.md": {
-      "kind": "smart"
+    "smart/feedback/alert.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/breadcrumbs.md": {
-      "kind": "smart"
+    "smart/feedback/badges.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/context-menu.md": {
-      "kind": "smart"
+    "smart/feedback/progress-bar.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/dropdown.md": {
-      "kind": "smart"
+    "smart/feedback/progress-ring.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/pagination.md": {
-      "kind": "smart"
+    "smart/feedback/progress-scale.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/steps.md": {
-      "kind": "smart"
+    "smart/feedback/skeleton.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/tabs.md": {
-      "kind": "smart"
+    "smart/feedback/spinner.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/tree-item.md": {
-      "kind": "smart"
+    "smart/feedback/toast.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/navigation/tree.md": {
-      "kind": "smart"
+    "smart/feedback/tooltip.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/overlays/drawer.md": {
-      "kind": "smart"
+    "smart/forms/checkbox.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/overlays/modal.md": {
-      "kind": "smart"
+    "smart/forms/color.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/overlays/popover.md": {
-      "kind": "smart"
+    "smart/forms/country-code.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/datepicker.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/file-upload.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/inputs.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/radio.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/range-slider.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/slider.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/switch.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/rich-text.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/lookup.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/textarea.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/breadcrumbs.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/context-menu.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/dropdown.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/pagination.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/steps.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/tabs.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/tree-item.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/navigation/tree.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/overlays/drawer.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/overlays/modal.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/overlays/popover.md": {
+      "kind": "smart",
+      "standard": 3
     },
     "utilities/animation/animation-duration.md": {
       "kind": "utility",
@@ -1870,17 +1919,21 @@
         "word-break"
       ]
     },
-    "smart-components/overlays/resizer.md": {
-      "kind": "smart"
+    "smart/overlays/resizer.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/composite/profile-picker.md": {
-      "kind": "smart"
+    "smart/composite/profile-picker.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/feedback/empty-state.md": {
-      "kind": "smart"
+    "smart/feedback/empty-state.md": {
+      "kind": "smart",
+      "standard": 3
     },
-    "smart-components/actions/copy-button.md": {
-      "kind": "smart"
+    "smart/actions/copy-button.md": {
+      "kind": "smart",
+      "standard": 3
     },
     "pro/admin/change-confirm.md": {
       "kind": "smart",
@@ -1906,13 +1959,13 @@
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/composite/site-header.md": {
+    "smart/composite/site-header.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/composite/search.md": {
+    "smart/composite/search.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/mail/mail-letters.md": {
       "kind": "smart",
@@ -1938,40 +1991,45 @@
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/navigation/contents.md": {
+    "smart/navigation/contents.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/navigation/pager.md": {
+    "smart/navigation/pager.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
     "pro/chat/thread-list.md": {
       "kind": "smart",
       "standard": 2
     },
-    "smart-components/content/accordion.md": {
+    "smart/content/accordion.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/feedback/help-mark.md": {
-      "kind": "smart"
-    },
-    "smart-components/forms/code-input.md": {
+    "smart/feedback/help-mark.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/forms/image-field.md": {
+    "smart/forms/code-input.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/forms/quantity.md": {
+    "smart/forms/image-field.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
     },
-    "smart-components/navigation/menu.md": {
+    "smart/forms/quantity.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 3
+    },
+    "smart/navigation/menu.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/forms/theme-generator.md": {
+      "kind": "smart",
+      "standard": 3
     }
   }
 }

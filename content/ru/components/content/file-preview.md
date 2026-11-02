@@ -138,4 +138,4 @@ profile: reference
 
 - [Скачивание файла](/ru/components/actions/download-file/)
 - [Загрузка файлов](/ru/components/forms/file-upload/)
-- [Предпросмотр файла — смарт-компонент](/ru/smart-components/content/file-preview/)
+- [Предпросмотр файла — смарт-компонент](/ru/smart/content/file-preview/)

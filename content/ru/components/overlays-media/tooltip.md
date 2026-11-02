@@ -181,4 +181,4 @@ profile: reference
 
 ## См. также
 
-- [Подсказка — смарт-компонент](/ru/smart-components/feedback/tooltip/)
+- [Подсказка — смарт-компонент](/ru/smart/feedback/tooltip/)

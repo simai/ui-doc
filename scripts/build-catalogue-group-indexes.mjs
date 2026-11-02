@@ -22,8 +22,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const content = join(root, 'content/ru');
 // The Pro section (simai/ui-pro components) is a catalogue of its own: its
 // chapters are groups like any other, under the name of the product they ship in.
-const CATALOGUES = ['components', 'smart-components', 'pro'];
-const PRODUCT = { components: 'SIMAI Framework', 'smart-components': 'SIMAI Framework', pro: 'SIMAI Pro' };
+const CATALOGUES = ['components', 'smart', 'pro'];
+const PRODUCT = { components: 'SIMAI Framework', 'smart': 'SIMAI Framework', pro: 'SIMAI Pro' };
 const check = process.argv.includes('--check');
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
@@ -108,7 +108,7 @@ for (const catalogue of CATALOGUES) {
 
     // The group's own one-liner says how many of what, and nothing a reader
     // could not have counted.
-    const noun = catalogue === 'smart-components' ? 'смарт-компонент' : 'компонент';
+    const noun = catalogue === 'smart' ? 'смарт-компонент' : 'компонент';
     // Russian counts: 1, 21 компонент; 2–4, 22–24 компонента; the rest компонентов.
     const n10 = pages.length % 10;
     const n100 = pages.length % 100;

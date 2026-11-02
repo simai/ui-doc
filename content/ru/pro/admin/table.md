@@ -81,7 +81,7 @@ Larena — лицензия Larena). В пакет входят ещё
 `pagination-page-size` и `page-sizes` задают общее число записей, размер
 страницы и выбор размеров. Её события `sf-page-change`,
 `sf-page-size-change` и `sf-show-more` приходят от
-[Пагинация](/ru/smart-components/navigation/pagination/).
+[Пагинация](/ru/smart/navigation/pagination/).
 `vertical-scroll="page"` отдаёт прокрутку странице вместо самой таблицы,
 `context-menu-columns` (от 1 до 4) делит меню настроек на колонки.
 
@@ -229,7 +229,7 @@ record_ids}` приходит следом до 2026-12-01. Встроенные
 С клавиатуры порядок меняют в списке колонок в настройках таблицы. Колонка
 действий — системная: её не растягивают и не переносят.
 
-Перетаскивание заголовков устроено на `SF.Sortable.attach` (см. [Колонки таблицы](/ru/smart-components/editor/sortable/#колонки-таблицы-sf-sortable-attach)):
+Перетаскивание заголовков устроено на `SF.Sortable.attach` (см. [Колонки таблицы](/ru/smart/editor/sortable/#колонки-таблицы-sf-sortable-attach)):
 скрипт `sf-sortable` таблица подгружает сама при первом перетаскивании. Каждое
 изменение ширины или порядка приходит приложению событием
 `sf-table-save` с `kind: 'columns'`, как описано ниже.
@@ -239,7 +239,7 @@ record_ids}` приходит следом до 2026-12-01. Встроенные
 - `drag-rows` — строки можно вытащить из таблицы как записи: запись строки
   или все выбранные, если строка среди них. Начало перетаскивания сообщает
   `sf-table-rows-drag` с `{ids, source}`. Принимает их, например,
-  [дерево](/ru/smart-components/navigation/tree/) с `accept-records` — так
+  [дерево](/ru/smart/navigation/tree/) с `accept-records` — так
   записи раскладывают по папкам.
 - `row-reorder` — строки можно переставить, перетаскивая их внутри списка.
   Во время перетаскивания отмечено место, куда встанет строка; после
@@ -284,7 +284,7 @@ table.setRows([
 ### Пустые состояния
 
 Когда ответ пришёл, а строк нет, таблица показывает внутри себя
-[пустое состояние](/ru/smart-components/feedback/empty-state/) своего размера
+[пустое состояние](/ru/smart/feedback/empty-state/) своего размера
 и сама выбирает причину: нет прав (`refused`), ошибка с «Повторить», «Ничего не
 найдено» с кнопкой сброса того, что включено — поиска, фильтров или обоих, —
 или «нет записей» с «Создать», если создание разрешено. Пока идёт запрос,
@@ -789,7 +789,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -914,8 +914,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/data-view`
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/data-view`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -1103,5 +1103,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/table`
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/table`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/table/rule.js#name=cl-table`

@@ -36,6 +36,13 @@ const STANDARD = {
     order: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Применение', 'Доступность', 'Справочник API', 'См. также'],
     required: ['Пример', 'Разметка', 'Применение', 'Доступность', 'Справочник API'],
   },
+  // The third Smart standard (owner, 2026-11-02): the class page's order, then
+  // behaviour, and the reference as tables with the component's facts last.
+  // A twin class page is linked from the introduction.
+  smart3: {
+    order: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Поведение', 'Доступность', 'Справочник', 'См. также'],
+    required: ['Пример', 'Разметка', 'Доступность', 'Справочник'],
+  },
 };
 // Words that tell a story or promise one; a reference page states what is.
 const FORBIDDEN = [
@@ -50,7 +57,7 @@ const prose = (text) => text
 
 const findings = [];
 for (const [page, entry] of Object.entries(settings.pages)) {
-  const standard = STANDARD[entry.kind === 'smart' && entry.standard === 2 ? 'smart2' : entry.kind];
+  const standard = STANDARD[entry.kind === 'smart' && entry.standard ? `smart${entry.standard === 1 ? '' : entry.standard}` : entry.kind];
   const add = (code, detail = {}) => findings.push({page, code, ...detail});
   if (!standard) {
     add('kind_unknown', {kind: entry.kind});
@@ -91,7 +98,7 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   if (example && !/^:::example\b/mu.test(example)) add('live_example_missing');
   // A component shows every modifier axis and state it describes: each H3
   // under «Варианты» and «Состояния» carries its own live example.
-  if (entry.kind === 'component' || standard === STANDARD.smart2) {
+  if (entry.kind === 'component' || standard === STANDARD.smart2 || standard === STANDARD.smart3) {
     for (const name of ['Варианты', 'Состояния']) {
       const section = sections.find((item) => item.startsWith(`${name}\n`));
       if (!section) continue;

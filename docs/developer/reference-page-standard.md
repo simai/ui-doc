@@ -91,7 +91,7 @@ with, plus a one-rule override example; and `### Устройство` — every
 without public variables keeps the single table, described as internal
 wiring. A public variable summary without a translation fails the generator.
 
-## Smart component page — `content/ru/smart-components/**`
+## Smart component page — `content/ru/smart/**`
 
 | # | Section | Required | Written by |
 |:--|:---|:---|:---|
@@ -124,6 +124,31 @@ component page. Pages move one by one, and new Smart pages start here.
 | 6 | `## Доступность` | yes | hand: the scenario (labels, focus, keys in context) |
 | 7 | `## Справочник API` | yes | generated (`scripts/build-smart-reference.mjs`) |
 | 8 | `## См. также` | no | hand |
+
+### Smart component page, standard 3
+
+The owner asked (2026-11-02) for the Smart page to read like the class page
+it builds on, with the reference a reader scans rather than reads. A page
+moves to it with `"standard": 3` in its `config/reference-pages.json` entry;
+Buttons (`smart/actions/buttons.md`) is the prototype. The catalogue lives at
+`/ru/smart/` (moved from `/ru/smart-components/` the same day, with a
+redirect for every page).
+
+| # | Section | Required | Written by |
+|:--|:---|:---|:---|
+| — | introduction | yes | hand; when a class twin exists, a line «То же на классах — …» links it |
+| 1 | `## Пример` | yes | hand |
+| 2 | `## Разметка` | yes | hand: the minimal tag, how the label and slots are given |
+| 3 | `## Варианты` | when it has visual axes | hand: the class page's H3 names (Вид, Схема, Размер, Иконки …), each with a live example |
+| 4 | `## Состояния` | when it has states | hand: one H3 per state with a live example |
+| 5 | `## Поведение` | no | hand: events, methods and JavaScript in context; one H3 per topic |
+| 6 | `## Доступность` | yes | hand |
+| 7 | `## Справочник` | yes | generated: attributes, methods and events as tables, earlier names in a closed `<details>`, then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
+| 8 | `## См. также` | no | hand |
+
+The generated «Минимальная разметка» and «Свойства в документе макета» are
+not repeated here: the page's «Разметка» shows the markup, and the layout
+document's value rule is in its guide, linked from «О компоненте».
 
 Rules that come with it:
 - **The name is the base component's name.** A Smart page carries the Russian

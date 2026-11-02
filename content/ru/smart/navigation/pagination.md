@@ -1,0 +1,292 @@
+---
+title: "Пагинация"
+description: "Переключает страницы длинного списка: поле номера между стрелками, размер страницы и догрузка."
+---
+
+# Пагинация
+
+`<sf-pagination>` — подвал длинного списка или таблицы: сколько всего
+записей, на какой странице читатель, как перейти на другую и сколько записей
+показывать. Данные компонент не загружает: приложение передаёт числа и по
+событиям загружает нужную страницу.
+
+То же на классах — [Пагинация](/ru/components/navigation/pagination/):
+элемент собирает раскладку обычной пагинации с полем номера между стрелками,
+как в табличном представлении.
+
+## Пример
+
+:::example {id="smart-components/pagination/overview" label="Результат"}
+:::
+
+## Разметка
+
+Подвалу нужны числа списка и имя ориентира:
+
+```html
+<sf-pagination aria-label="Страницы заказов"
+  current="1" total="240" page-size="20"></sf-pagination>
+```
+
+`total` — сколько записей всего, `page-size` — сколько на странице,
+`current` — номер текущей страницы, начиная с единицы. Число страниц
+компонент считает сам и держит `current` в его пределах. При `total="0"`
+переходы и выбор размера не показываются.
+
+## Варианты
+
+### Размер
+
+`size` — ступень лестницы размеров для полей, кнопок, подписей и номеров
+страниц: `1` (по умолчанию) или плотная `1/2`, как в админке.
+
+:::example {id="smart-components/pagination/sizes" label="Две ступени размера"}
+:::
+
+### Состав подвала
+
+В начале строки — общее количество. В середине — подпись «Страницы:», стрелки «В
+начало» и «Предыдущая страница», поле с номером текущей страницы и стрелки
+«Следующая страница» и «Последняя». Стрелки назад видны со второй страницы,
+стрелки вперёд — пока следующая страница есть. В поле можно набрать любой
+номер и нажать `Enter`; номер за пределами списка приводится к первой или
+последней странице.
+
+В конце строки — кнопка «Показать ещё» и выбор размера страницы. Кнопку убирает
+`top="false"`, выбор размера — `show-page-size="false"`; варианты размера
+задаёт `page-sizes`, по умолчанию `10,20,30,40`.
+`middle="false"` убирает всю строку подвала.
+
+В узкой колонке части строки переносятся: подпись «Страницы:», стрелки,
+«Показать ещё» и выбор размера начинают новую строку, сохраняя свой размер, и
+не накрывают друг друга.
+
+:::example {id="smart-components/pagination/composition" label="Полный подвал, подвал без кнопки и размера, свои размеры страницы"}
+:::
+
+## Состояния
+
+### Догрузка
+
+`show-more-busy` делает кнопку «Показать ещё» занятой, пока приложение
+догружает записи.
+
+:::example {id="smart-components/pagination/show-more-busy" label="«Показать ещё» занята"}
+:::
+
+### Количество неизвестно
+
+Список, который не считает записи на каждом запросе, задаёт
+`count-known="false"` и сообщает `has-next`, есть ли следующая страница.
+Тогда вместо числа в начале строки стоит ссылка «Показать количество» — если задан
+`can-count`. Нажатие на неё, на стрелку «Последняя» и отметка «Для всех»
+отправляют `sf-pagination-count` с причиной в `detail.reason`: `total`,
+`last-page` или `action-for-all`. Пока приложение считает, компонент
+показывает короткое ожидание; ответ приходит атрибутами `total`,
+`count-known` и снятым `counting`. Спиннер ожидания берёт
+[вид страницы](/ru/smart/feedback/spinner/#вид-страницы), заданный `data-sf-spinner`.
+
+:::example {id="smart-components/pagination/unknown-count" label="Результат"}
+:::
+
+## Поведение
+
+### Переход и события
+
+Компонент сам меняет `current` и `page-size` и сообщает об изменении
+всплывающим событием; приложение по нему загружает записи. В `event.detail`
+каждого события есть также `component`.
+
+| Событие | Когда | Поля `event.detail` |
+|:---|:---|:---|
+| `sf-pagination-change` | открыта другая страница | `previous`, `current`, `total`, `pageCount`, `pageSize` |
+| `sf-pagination-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
+| `sf-pagination-load-more` | нажата «Показать ещё» | `current`, `total`, `pageSize`, `pageCount`, `hasNext`, `item` |
+| `sf-pagination-count` | запрошено общее количество | `reason`, `current`, `pageSize` |
+
+Прежние имена этих событий — `sf-page-change`, `sf-page-size-change`,
+`sf-show-more`, `sf-count-request`, `sf-action-change`,
+`sf-action-for-all-change`, `sf-action-apply` и `sf-selection-clear` —
+приходят с тем же `detail` до 2026-12-01; подписывайтесь на новые.
+
+При смене размера `current` остаётся в пределах нового числа страниц.
+`goToPage(n)`, `setPageSize(n)` и `showMore()` делают то же из кода,
+`onPageChange(handler)` передаёт обработчику номер новой страницы первым
+аргументом.
+
+### Действия с отмеченными
+
+`actions` и `selected-count` добавляют панель действий с отмеченными
+строками: сколько отмечено, список действий, «Применить» и сброс
+выделения. Панель видна, пока `selected-count` больше нуля. Действия задаются
+строкой `значение:Подпись` через `|`, флаги `disabled` и `selected` идут
+после `::`. Действие по умолчанию не выбрано, поэтому «Применить» недоступна,
+пока пользователь не выберет его сам. `show-action-for-all` добавляет отметку
+«Для всех» — применить действие ко всем записям под фильтром.
+
+Компонент не хранит выделение: `selected-count` передаёт приложение, а
+`sf-pagination-action-change` (`previous`, `action`),
+`sf-pagination-action-for-all-change` (`previous`, `actionForAll`),
+`sf-pagination-apply` (`action`, `actionForAll`, `current`, `total`,
+`pageSize`, `pageCount`) и `sf-pagination-selection-clear` (`selectedCount`,
+`total`) сообщают ему о выборе пользователя.
+`bottom="false"` убирает панель, если действия показывает соседний компонент.
+
+```html
+<sf-pagination
+  aria-label="Страницы заказов"
+  current="1"
+  total="240"
+  page-size="20"
+  selected-count="3"
+  actions="archive:Архивировать|export:Выгрузить|delete:Удалить"
+></sf-pagination>
+```
+
+```js
+const pagination = document.querySelector('sf-pagination');
+
+pagination.addEventListener('sf-pagination-change', async (event) => {
+  const {current, pageSize} = event.detail;
+  renderRows(await loadOrders({page: current, size: pageSize}));
+});
+
+pagination.addEventListener('sf-pagination-apply', async (event) => {
+  await applyToSelected(event.detail.action);
+  pagination.setAttribute('selected-count', '0');
+});
+```
+
+### Подписи
+
+Все подписи — «Всего:», «Страницы:», «Показать ещё», «На странице:» и
+доступные имена стрелок — берутся из языка страницы: на русской странице они
+русские. Атрибуты `total-label`, `pages-label`, `previous-label`,
+`next-label`, `first-label`, `last-label`, `page-field-label` и другие из
+справочника заменяют отдельные слова.
+
+## Доступность
+
+- Корень — ориентир `nav`. Имя по умолчанию — «Страницы результатов»; если на
+  странице несколько списков, задайте каждому своё в `aria-label`.
+- Стрелки — кнопки-иконки с доступными именами и подсказками. Поле номера
+  подписано «Страница:» и переходит по `Enter`; стрелки и поле — обычные
+  остановки `Tab`.
+- Переход сам ничего не объявляет. Сообщите о загрузке новых записей в
+  области с `role="status"`, если они появляются не рядом с подвалом.
+- Панель действий с отмеченными — область с именем «Действия с отмеченными»;
+  у кнопки сброса выделения есть имя «Снять выделение».
+
+## Справочник
+
+Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+
+### Атрибуты
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона. |
+| `root-class` | строка | пусто | — | — |
+| `root-style` | строка | пусто | — | — |
+| `top` | да/нет | да | — | Показывает совместимый блок «показать ещё». |
+| `middle` | да/нет | да | — | Показывает навигацию по страницам и сводку по коллекции. |
+| `bottom` | да/нет | да | — | Разрешает совместимый раздел пакетных действий. |
+| `top-class` | строка | пусто | — | Утилитарные классы Framework для раздела «показать ещё». |
+| `main-class` | строка | пусто | — | Утилитарные классы Framework для раздела навигации. |
+| `bottom-class` | строка | пусто | — | Утилитарные классы Framework для раздела пакетных действий. |
+| `pages-label` | строка | — | — | Видимая подпись перед элементами страниц. Пусто — текст на языке страницы (по-английски «Pages:»). |
+| `page-label` | строка | — | — | Доступная приставка к номеру страницы. Пусто — текст на языке страницы (по-английски «Page»). |
+| `previous-label` | строка | — | — | Доступное имя действия «предыдущая страница». Пусто — текст на языке страницы (по-английски «Previous page»). |
+| `next-label` | строка | — | — | Доступное имя действия «следующая страница». Пусто — текст на языке страницы (по-английски «Next page»). |
+| `last-label` | строка | — | — | Видимая подпись действия «последняя страница» для совместимости. Пусто — текст на языке страницы (по-английски «Last»). |
+| `total-label` | строка | — | — | Видимая подпись общего числа записей. Пусто — текст на языке страницы (по-английски «Total:»). |
+| `selected-label` | строка | — | — | Видимая подпись числа выбранных записей. Пусто — текст на языке страницы (по-английски «Selected:»). |
+| `selected-count` | целое число | `0` | от 0 | Количество выбранных элементов, ограниченное диапазоном от нуля до общего количества. |
+| `show-more-text` | строка | — | — | Подпись действия «показать ещё» для совместимости. Пусто — текст на языке страницы (по-английски «Show more»). |
+| `total` | целое число | `10` | от 0 | Неотрицательное общее число элементов. |
+| `page-size` | целое число | `10` | от 1 | Положительное число элементов на странице. |
+| `page-sizes` | строка | `10,20,30,40` | — | Варианты размера страницы — положительные числа через запятую. |
+| `show-page-size` | да/нет | да | — | Показывает выбор размера страницы для непустой коллекции. |
+| `page-size-label` | строка | — | — | Видимая и доступная подпись выбора размера страницы. Пусто — текст на языке страницы (по-английски «Per page:»). |
+| `show-actions` | да/нет | да | — | Показывает групповые действия, если они переданы. |
+| `actions` | строка | пусто | — | Определения совместимых пакетных действий, разделённые вертикальной чертой. |
+| `action` | строка | пусто | — | Значение выбранного группового действия. |
+| `action-apply-text` | строка | — | — | Подпись кнопки, которая применяет действие к выбранному. Пусто — текст на языке страницы (по-английски «Apply»). |
+| `show-action-for-all` | да/нет | нет | — | Показывает совместимый переключатель «все элементы». |
+| `action-for-all` | да/нет | нет | — | Текущее значение переключателя «все элементы». |
+| `action-for-all-label` | строка | — | — | Подпись переключателя «для всех». Пусто — текст на языке страницы (по-английски «For all»). |
+| `actions-label` | строка | — | — | Доступное имя списка действий над выбранным. Пусто — текст на языке страницы (по-английски «Action for the selected records»). |
+| `action-choose-label` | строка | — | — | Подсказка в списке действий над выбранным, пока действие не выбрано. Пусто — текст на языке страницы (по-английски «Choose an action»). |
+| `actions-region-label` | строка | — | — | Доступное имя панели, которая появляется, пока строки отмечены. Пусто — текст на языке страницы (по-английски «Actions for the selected»). |
+| `clear-selection-label` | строка | — | — | Доступное имя и подсказка элемента, который снимает выбор. Пусто — текст на языке страницы (по-английски «Clear the selection»). |
+| `count-known` | да/нет | да | — | Известно ли количество записей. Хост, который не считает каждый ответ, задаёт false, и представление предлагает подсчитать количество вместо того, чтобы показывать его. |
+| `total-exact` | да/нет | да | — | false, когда total — оценка: строка показывает «~N», последняя страница и число страниц не предлагаются как точные, а ссылка счётчика спрашивает число (словарь 1.1.5 total-exact; проверка 29) |
+| `can-count` | да/нет | нет | — | Может ли хост подсчитать количество по запросу. Без этого представление ничего не предлагает и ничего не запрашивает. |
+| `counting` | да/нет | нет | — | Счётчик загружается; вместо числа отображается короткое ожидание. |
+| `has-next` | да/нет | нет | — | Существует ли следующая страница. Определяет переход вперёд и «Показать ещё», когда общее количество не передано. |
+| `show-count-label` | строка | — | — | Текст элемента, который просит хост посчитать записи. Пусто — текст на языке страницы (по-английски «Show the number»). |
+| `counting-label` | строка | — | — | Доступное имя короткого ожидания, пока число записей в пути. Пусто — текст на языке страницы (по-английски «Counting»). |
+| `first-label` | строка | — | — | Доступное имя и подсказка элемента, который переходит на первую страницу. Пусто — текст на языке страницы (по-английски «First»). |
+| `page-field-label` | строка | — | — | Подпись поля, в которое вводят номер страницы. Пусто — текст на языке страницы (по-английски «Page:»). |
+| `show-more-busy` | да/нет | нет | — | Отмечает кнопку «Показать ещё» как занятую, пока хост загружает следующую порцию; она отключена и показывает индикатор загрузки. |
+| `size` | строка | `1` | `1/2`, `1` | Ступень лестницы размеров для полей, кнопок, подписей и номеров страниц: 1 или плотная 1/2, как в админке. |
+| `current` | целое число | `1` | от 1 | Читаемая страница, с 1 (словарь 1.1.5 page) |
+| `aria-label` | строка | пусто | — | Доступное имя области навигации. Пусто — текст на языке страницы (по-английски «Result pages»). |
+
+Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
+
+### Методы
+
+| Метод | Возвращает | Что делает |
+|:---|:---|:---|
+| `goToPage(page: number)` | объект | Переходит на страницу: номер разбирается как целое число и ограничивается диапазоном 1..pageCount, если количество известно (иначе только снизу значением 1). Отправляет sf-pagination-change, когда страница действительно меняется; ничего не делает, если известно, что всего страниц ноль. |
+| `showMore()` | объект | Отправляет sf-pagination-load-more с текущими параметрами пагинации и переданным пунктом; не выполняет запрос и не меняет состояние. |
+| `getTopSection()` | объект или пусто | Возвращает элемент верхней секции (.sf-pagination-top) или null, если она не отрисована. |
+| `getMainSection()` | объект или пусто | Возвращает элемент основной секции (.sf-pagination-main) или null, если она не отрисована. |
+| `getBottomSection()` | объект или пусто | Возвращает элемент нижней секции (.sf-pagination-bottom) или null, если она не отрисована. |
+| `setPageSize(size: number\|string)` | объект | Устанавливает положительный размер страницы, удерживает текущую страницу в пределах нового числа страниц и отправляет sf-pagination-size-change. Неположительный, нечисловой или неизменный размер игнорируется. |
+| `setAction(action: string)` | объект | Выбирает групповое действие по значению (пустое значение сбрасывает выбор) и отправляет sf-pagination-action-change, если оно отличается от текущего. |
+| `setActionForAll(value: boolean)` | объект | Задаёт, применяется ли групповое действие ко всем записям под фильтром, и отправляет sf-pagination-action-for-all-change. При включении также запрашивает количество (sf-pagination-count с reason action-for-all), если оно ещё неизвестно. |
+| `setState(nextState: object)` | объект | Записывает каждый ключ как атрибут в kebab-case: false, null, undefined или пустая строка удаляет атрибут, true устанавливает его пустым, всё остальное приводится к строке. |
+| `onPageChange(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-pagination-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется. |
+| `onShowMore(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-pagination-load-more; обработчик вызывается с (detail, event). Обработчик, не являющийся функцией, игнорируется. |
+
+### События
+
+События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).
+
+| Событие | `detail` | Когда приходит |
+|:---|:---|:---|
+| `sf-pagination-change` | `{ previous: number, current: number, total: number, pageCount: number\\|null, pageSize: number }` | — |
+| `sf-pagination-size-change` | `{ previous: number, pageSize: number, current: number, total: number, pageCount: number\\|null }` | — |
+| `sf-pagination-count` | `{ reason: any, current: number, pageSize: number }` | — |
+| `sf-pagination-load-more` | `{ direction: any, current: number, total: number, pageSize: number, pageCount: number\\|null, hasNext: boolean }` | — |
+| `sf-pagination-selection-clear` | `{ selectedCount: number, total: number }` | — |
+| `sf-pagination-action-change` | `{ previous: string, action: string }` | — |
+| `sf-pagination-action-for-all-change` | `{ previous: boolean, actionForAll: boolean }` | — |
+| `sf-pagination-apply` | `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number\\|null }` | — |
+| `sf-action-apply` | `{ component: object, tagName: string, template: string, action: string, actionForAll: boolean, current: number, total: number, pageSize: number, pageCount: number\\|null }` | устаревший псевдоним `sf-pagination-apply`: подписывайтесь на `sf-pagination-apply` |
+| `sf-action-change` | `{ component: object, tagName: string, template: string, previous: string, action: string }` | устаревший псевдоним `sf-pagination-action-change`: подписывайтесь на `sf-pagination-action-change` |
+| `sf-action-for-all-change` | `{ component: object, tagName: string, template: string, previous: boolean, actionForAll: boolean }` | устаревший псевдоним `sf-pagination-action-for-all-change`: подписывайтесь на `sf-pagination-action-for-all-change` |
+| `sf-count-request` | `{ component: object, tagName: string, template: string, reason: string, current: number, pageSize: number }` | устаревший псевдоним `sf-pagination-count`: подписывайтесь на `sf-pagination-count` |
+| `sf-page-change` | `{ component: object, tagName: string, template: string, previous: number, current: number, total: number, pageCount: number\\|null, pageSize: number }` | устаревший псевдоним `sf-pagination-change`: подписывайтесь на `sf-pagination-change` |
+| `sf-page-size-change` | `{ component: object, tagName: string, template: string, previous: number, pageSize: number, current: number, total: number, pageCount: number }` | устаревший псевдоним `sf-pagination-size-change`: подписывайтесь на `sf-pagination-size-change` |
+| `sf-selection-clear` | `{ component: object, tagName: string, template: string, selectedCount: number, total: number }` | устаревший псевдоним `sf-pagination-selection-clear`: подписывайтесь на `sf-pagination-selection-clear` |
+| `sf-show-more` | `{ component: object, tagName: string, template: string, current: number, total: number, pageSize: number, pageCount: number\\|null, hasNext: boolean, item: object\\|null }` | устаревший псевдоним `sf-pagination-load-more`: подписывайтесь на `sf-pagination-load-more` |
+
+### О компоненте
+
+| | |
+|:---|:---|
+| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.3` |
+| Поставка | выпуск Framework `ui-2d39b617a719` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; принят в продукт |
+| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+| Доступность | роль навигация (`navigation`); доступное имя обязательно; клавиши `Tab` |
+| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/pagination` |
+| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-pagination` |
+
+## См. также
+
+- [Пагинация на классах](/ru/components/navigation/pagination/) — та же раскладка в статической разметке.
+- [Выпадающий список](/ru/smart/navigation/dropdown/) — выбор размера страницы устроен так же.

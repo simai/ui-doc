@@ -93,12 +93,12 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
   имя — «Помощник: <название>», а скрытое описание говорит, что выбор начнёт
   новый разговор.
 - Пункты меню — радиокнопки, текущий отмечен; клавиатура — меню
-  [Контекстное меню](/ru/smart-components/navigation/context-menu/): стрелки,
+  [Контекстное меню](/ru/smart/navigation/context-menu/): стрелки,
   Home, End, буквы, Escape возвращает фокус на кнопку.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c1d81395889c` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -146,11 +146,11 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@21d21fc3c1fa7a43f499351c115d9cccfa00a187:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 
 - [Окно чата](/ru/pro/chat/chat-window/) — где стоит выбор собеседника.
 - [Список разговоров](/ru/pro/chat/thread-list/) — разговоры человека.
-- [Контекстное меню](/ru/smart-components/navigation/context-menu/) — меню, которым открывается список.
+- [Контекстное меню](/ru/smart/navigation/context-menu/) — меню, которым открывается список.

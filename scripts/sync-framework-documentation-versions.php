@@ -124,7 +124,7 @@ foreach ($targets as $relative => $render) {
 
 // Smart pages: the Framework's catalogue and the Pro section.
 $iterator = new AppendIterator();
-foreach (['smart-components', 'pro'] as $catalogue) {
+foreach (['smart', 'pro'] as $catalogue) {
     $iterator->append(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/content/ru/' . $catalogue, FilesystemIterator::SKIP_DOTS)));
 }
 foreach ($iterator as $file) {

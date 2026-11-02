@@ -27,9 +27,9 @@ HTML**. Страница описана Document. Редактор показы�
 человек видит понятное сообщение.
 
 Редактор собирается из смарт-компонентов: оверлея холста
-`<sf-composition-overlay>` ([справочник](/ru/smart-components/editor/composition-overlay/)), перетаскивания `<sf-sortable>`
-([справочник](/ru/smart-components/editor/sortable/)), редактора текста `<sf-inline-editor>` ([справочник](/ru/smart-components/editor/inline-editor/)) и закреплённых
-панелей `<sf-drawer docked>` ([справочник](/ru/smart-components/overlays/drawer/)). Их код
+`<sf-composition-overlay>` ([справочник](/ru/smart/editor/composition-overlay/)), перетаскивания `<sf-sortable>`
+([справочник](/ru/smart/editor/sortable/)), редактора текста `<sf-inline-editor>` ([справочник](/ru/smart/editor/inline-editor/)) и закреплённых
+панелей `<sf-drawer docked>` ([справочник](/ru/smart/overlays/drawer/)). Их код
 загружается только на странице редактора, поэтому обычные страницы сайта не
 получают лишний JavaScript, а опубликованный HTML одинаков с открытым и
 закрытым редактором.
