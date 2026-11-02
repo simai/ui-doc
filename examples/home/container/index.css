@@ -1,0 +1,18 @@
+/* The panel's width is the resizer's --home-cq-width; the card inside only
+   knows the width of its query-container, never the window's. */
+body { margin: 0; }
+
+.home-cq-panel {
+  position: relative;
+  box-sizing: border-box;
+  inline-size: var(--home-cq-width, 40rem);
+  max-inline-size: 100%;
+}
+
+.home-cq-media {
+  flex: 0 0 auto;
+  min-inline-size: 6rem;
+  min-block-size: 6rem;
+}
+
+.home-cq-media .sf-icon { font-size: 2.5rem; }
