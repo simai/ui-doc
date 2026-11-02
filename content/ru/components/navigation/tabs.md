@@ -160,7 +160,7 @@ whenLoader(() => SF.Loader.ready('Tabs', () => {
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
 | `--sf-tabs-color` | Цвет подписи и значка вкладки в покое у видов `underline` и `full`; у выбранной вкладки — свой. | `var(--sf-on-surface)`; зависит от вида |
-| `--sf-tabs-indicator-color` | Цвет линии под выбранной вкладкой у вида `underline`. | `var(--sf-outline)`; зависит от вида |
+| `--sf-tabs-indicator-color` | Цвет линии под выбранной вкладкой у вида `underline`. | `var(--sf-primary)`; зависит от вида |
 | `--sf-tabs-indicator-width` | Толщина линии под вкладкой у вида `underline`; высота вкладки не меняется. | `calc(var(--sf-px) * 2)`; зависит от вида, размера |
 | `--sf-tabs-border-color` | Цвет разделителя под рядом вкладок; у видов `pills`, `full` и вертикальных вкладок его нет. | `var(--sf-outline-variant)`; зависит от вида |
 | `--sf-tabs-border-width` | Толщина разделителя под рядом вкладок; ряд `underline` стоит на нём. | `var(--sf-px)`; зависит от вида |

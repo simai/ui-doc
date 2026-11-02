@@ -37,7 +37,7 @@ Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-2d39b617a719` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-c4d39d528148` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
 Публичные имена (67) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
@@ -51,7 +51,7 @@ Loader выбрал тему при запуске.
 | `SF.Carousel` | объект | компонент `carousel` | Скриптовый API компонента Carousel; приходит вместе с компонентом (`component/carousel`), его методы описаны на странице компонента. | — |
 | `SF.Checkbox` | объект | компонент `checkbox` | Скриптовый API компонента Checkbox; приходит вместе с компонентом (`component/checkbox`), его методы описаны на странице компонента. | — |
 | `SF.Clipboard` | объект | компонент `clipboard` | Скриптовый API компонента Clipboard; приходит вместе с компонентом (`component/clipboard`), его методы описаны на странице компонента. | — |
-| `SF.Composition` | объект | ядро, сразу после `core.js` | Помощники композиции: описатели фрагментов, выходы хоста страницы, реестры типов компонентов и портов, виды полей. | `checkFragmentDescriptor`, `publishEffects`, `checkPortValue`, `createPortRegistry`, `defineCompositionScope`, `createRegistry`, `extendRegistry`, `describeRegions`, `resolveFieldKind`, `validateFieldValue`, `applyFieldValue`, `parseFieldSubmission` |
+| `SF.Composition` | объект | ядро, сразу после `core.js` | Помощники композиции: описания фрагментов, выходы хоста страницы, реестры типов компонентов и портов, виды полей и слова встроенных манифестов редактора (`editorFieldMessages`; владелец `sf-composition` в `SF.language`). | `checkFragmentDescriptor`, `publishEffects`, `checkPortValue`, `createPortRegistry`, `defineCompositionScope`, `createRegistry`, `extendRegistry`, `describeRegions`, `resolveFieldKind`, `validateFieldValue`, `applyFieldValue`, `parseFieldSubmission`, `editorFieldMessages` |
 | `SF.CompositionOverlay` | объект | смарт-компонент `sf-composition-overlay` | Скриптовый API компонента CompositionOverlay; приходит вместе с компонентом (`smart/composition-overlay`), его методы описаны на странице компонента. | — |
 | `SF.CountryCode` | объект | компонент `country-code` | Скриптовый API компонента CountryCode; приходит вместе с компонентом (`component/country-code`), его методы описаны на странице компонента. | — |
 | `SF.create` | функция | Loader, после `sf-loader-init` | Создаёт элемент компонента по имени с атрибутами. | — |

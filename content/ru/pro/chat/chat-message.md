@@ -12,7 +12,7 @@ description: "Одно сообщение чата: ответ помощник�
 хост.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -149,7 +149,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -157,16 +157,16 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает хост. |
-| Контракт | `smart.chat-message`, версия `1.4.1` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.chat-message`, версия `1.4.2` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. `default` — ответ помощника или вопрос человека (API.md Message); `person` — сообщение разговора людей.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `view` — `string`, по умолчанию `{}`. Псевдоним с датой для `display` до 2026-12-01.
 - `message` — `object`. Сообщение: свойство или JSON-остров; текст выводится как текст, html очищается. Между людьми (1.4.0): reactions, reply_to; для автора-документа — asked_by.
 - `display` — `object`, по умолчанию `{}`. То, что знает хост, но не сервер (вид 0.3): wait, busy, feedback, retried, note, code, sources_open, steps_open, brief, brief_draft; для person — own, first, last, showName, editing, askDelete, conflict (1.2.0); divider (1.2.0); day, editLimit (1.3.0). Между людьми (1.4.0): canReact, canReply, reacting, picker, replyLoaded, replyDeleted; document, showAuthor, canStop, askDelete, fold_open.
@@ -211,8 +211,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-message`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/chat-message`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

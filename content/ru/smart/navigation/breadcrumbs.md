@@ -76,18 +76,21 @@ description: "Показывает путь от корня сайта до те
 `sf-breadcrumbs-press` (прежнее имя — `sf-breadcrumb-click`). Его
 `event.detail` содержит `item` — данные пункта (`label`, `href`, `value`,
 `ellipsis` и другие поля), `index` — номер пункта среди показанных, `items` —
-все показанные пункты, `originalEvent` — исходный `click`. У кнопки «…» в
-`item` есть `ellipsis: true` и `hiddenItems`. Помощник
-`onItemClick(handler)` передаёт обработчику данные пункта первым аргументом.
+все показанные пункты. У кнопки «…» в `item` есть `ellipsis: true` и
+`hiddenItems`. Помощник `onItemClick(handler)` передаёт обработчику данные
+пункта, `detail` и само событие: `(item, detail, event)`.
 
-Для навигации в одностраничном приложении перехватите нажатие на ссылку:
+`event.preventDefault()` отменяет только раскрытие «…». Переход по ссылке он не
+отменяет: пункт с `href` остаётся обычной ссылкой.
+
+Для навигации в одностраничном приложении задайте пункту `value` без `href`:
+такой пункт рисуется кнопкой, а переход делает страница.
 
 ```js
 const crumbs = document.querySelector('sf-breadcrumbs');
-crumbs.onItemClick((item, detail) => {
-  if (!item.href) return;
-  detail.originalEvent.preventDefault();
-  router.navigate(item.href);
+crumbs.onItemClick((item) => {
+  if (item.href || item.ellipsis) return;
+  router.navigate(item.value);
 });
 ```
 
@@ -105,15 +108,15 @@ crumbs.onItemClick((item, detail) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | — |
-| `root-style` | строка | пусто | — | — |
+| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `separator-icon` | строка | `chevron_right` | — | — |
 | `home-icon` | строка | `home` | — | — |
 | `home-label` | строка | пусто | — | — |
@@ -152,13 +155,13 @@ crumbs.onItemClick((item, detail) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.1.6` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
+| Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.1.7` |
+| Поставка | выпуск Framework `ui-c4d39d528148` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль навигация (`navigation`); доступное имя обязательно; клавиши `Tab`, `Enter` на ссылках, `Enter` или `Space` на кнопке с многоточием |
-| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/breadcrumbs` |
-| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-breadcrumbs` |
+| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 

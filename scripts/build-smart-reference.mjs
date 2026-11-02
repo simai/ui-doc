@@ -459,8 +459,13 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       // the name to bind shows it too.
       const alias = events.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
       const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
+      // An alias keeps the canonical detail only when the manifest says so;
+      // most carry their former detail (component, originalEvent ...).
+      const own = shape(manifest, event.payload);
+      const canonical = event.alias_of ? (events.find(([other]) => other === event.alias_of)?.[1]) : null;
+      const same = own === 'не описан' || (canonical && own === shape(manifest, canonical.payload));
       const when = event.alias_of
-        ? `устаревший псевдоним события ${code(event.alias_of)}: приходит с тем же \`detail\`, подписывайтесь на ${code(event.alias_of)}.`
+        ? `устаревший псевдоним события ${code(event.alias_of)}: ${same ? 'приходит с тем же `detail`' : `приходит с прежним \`detail\`: ${own}`}, подписывайтесь на ${code(event.alias_of)}.`
         : (generic(event.summary) ? '' : ru(event.summary));
       const detailText = detail === 'не описан'
         ? '`detail` не описан.'

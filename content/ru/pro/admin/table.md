@@ -10,10 +10,10 @@ description: "Показывает серверную коллекцию таб�
 выполнение действий остаются за приложением: компонент показывает то, что
 ему передали, и сообщает о намерениях пользователя событиями.
 `<sf-data-view>` оборачивает таблицу и связывает её с приложением через порт
-хоста. Оба элемента входят в пакет компонентов `larena`.
+хоста. Оба элемента входят в пакет компонентов `pro`.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -26,16 +26,16 @@ Framework: поставляется пакетом `larena` из репозит�
 ### Подключение пакета
 
 Элементы `<sf-table>` и `<sf-data-view>` поставляет Larena, а не выпуск
-Framework: пакет компонентов Loader с именем `larena` из репозитория
+Framework: пакет компонентов Loader с именем `pro` из репозитория
 `simai/ui-pro` (лицензия PolyForm Small Business 1.0.0 или PolyForm
 Noncommercial 1.0.0, по запросу — коммерческая лицензия SIMAI; в составе
 Larena — лицензия Larena). В пакет входят ещё
 [`<sf-property-view>`](/ru/pro/admin/property-view/) и
 [`<sf-admin-menu>`](/ru/pro/admin/admin-menu/). Объявите
 пакет до подключения Core:
-`window.SF_BOOT_CONFIG = {packages: {larena: {base: '/assets/larena/<коммит пакета>/smart'}}}`.
-Сборка пакета публикуется выпуском репозитория `simai/larena-ui`
-(см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)). Подробнее — в разделе
+`window.SF_BOOT_CONFIG = {packages: {pro: {base: '/assets/pro/<коммит пакета>/smart'}}}`.
+Сборка пакета публикуется выпуском репозитория `simai/ui-pro`
+(см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)). Подробнее — в разделе
 [Подключение смарт-компонентов](/ru/guide/smart-components/page/#подключение-к-странице).
 
 ### Имя и ключ настроек
@@ -789,7 +789,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -799,8 +799,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-data-view>` |
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
-| Контракт | `smart.data-view-composite`, версия `1.6.3` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.data-view-composite`, версия `1.6.4` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -808,8 +808,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 #### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `chrome` — `string`, по умолчанию `toolbar pagination select settings`. Какие элементы оформления отображает список, через пробел. `toolbar` и `pagination` — собственные части этого элемента; `select` и `settings` — два служебных столбца таблицы, они указаны здесь, потому что относятся к той же категории: столбец флажков нужен для панели групповых действий, столбец с шестерёнкой — для доступа к настройкам столбцов, а во встроенном списке нет ни того, ни другого. Пустое значение не отображает ничего из этого — для списка внутри блока, у которого уже есть заголовок. Значения задаются явно, а не выводятся из панели инструментов, чтобы потребитель мог запросить во встроенном списке только выделение. `status` не входит в список и не отключается: список, который не может сообщить об ошибке загрузки, выглядел бы пустым при сбое.
 - `row-cap` — `integer`, по умолчанию `0`, значения: от 0. Максимальное число строк во встроенном списке; если часть скрыта, под ним отображается действие «показать все». Ноль — без ограничения, как в списке на странице. Отделено от `page-size` — постраничного вывода хоста, — потому что ограничение определяет, сколько элемент показывает из уже имеющейся страницы.
 - `expected-columns` — `integer`, по умолчанию `4`, значения: от 1. Сколько колонок рисует скелетон до первого ответа хоста: это форма скелетона, а не предел — ответ приносит свои колонки. Их знает страница или сервер, который выводит коллекцию; с правильным числом список не сдвигается, когда приходят данные.
@@ -897,7 +897,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-data-view-list-open` — `detail`: `{ reason: any, query: object }`. Пользователь запросил весь список, часть которого показана из-за ограничения числа строк. Передаёт запрос, чтобы хост открыл полное представление с теми же записями; компонент не строит собственный адрес.
 - `sf-table-cell-set` — `detail`: `{ id: string|integer, key: string, value: any, revision: string|integer|null }`. Событие таблицы, которое слушает представление: нажат флажок в ячейке. Представление отправляет record.set порта simai.dataview-port 1.11.0 (возможность inline-edit) с record_id, key, value и revision и возвращает флажок, если ответ не applied.
 - `sf-table-rows-reorder` — `detail`: `{ ids: array, before: string|null, order: array }`. Событие таблицы, которое слушает представление: строки перетащили в другой порядок. Представление сразу показывает новый порядок и отправляет record.reorder порта simai.dataview-port 1.11.0 (возможность row-reorder); отказ или конфликт возвращает прежний порядок.
-- `sf-table-tree-intent` — устаревший псевдоним события `sf-data-view-tree`: приходит с тем же `detail`, подписывайтесь на `sf-data-view-tree`.
+- `sf-table-tree-intent` — устаревший псевдоним события `sf-data-view-tree`: приходит с прежним `detail`: `{ intent: string, payload: object }`, подписывайтесь на `sf-data-view-tree`.
 
 #### Доступность
 
@@ -914,8 +914,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/data-view`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/data-view/rule.js#name=cl-data-view`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/data-view`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/data-view/rule.js#name=cl-data-view`
 
 ### `<sf-table>`
 
@@ -923,8 +923,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.data-view`, версия `1.13.2` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.data-view`, версия `1.13.3` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | сервер пишет `data-sf-skeleton="rows"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -932,8 +932,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 #### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `selectable` — `boolean`, по умолчанию `true`.
 - `settings` — `boolean`, по умолчанию `true`.
 - `actions` — `boolean`, по умолчанию `true`.
@@ -1061,15 +1061,15 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-table-cell-set` — `detail`: `{ id: object, key: string, value: object, revision: object }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
 - `sf-table-view-change` — `detail`: `{ view: object, everywhere: boolean }`.
 - `sf-table-window` — `detail`: `{ first: integer, last: integer }`. Изменились нарисованные строки длинного списка (стандарт 1.3.8 §18.4): `{first, last}`, номера строк в списке.
-- `sf-port-output` — устаревший псевдоним события `sf-table-select`: приходит с тем же `detail`, подписывайтесь на `sf-table-select`.
-- `sf-table-action-intent` — устаревший псевдоним события `sf-table-apply`: приходит с тем же `detail`, подписывайтесь на `sf-table-apply`.
-- `sf-table-column-settings-change` — устаревший псевдоним события `sf-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-save`.
-- `sf-table-create-intent` — устаревший псевдоним события `sf-table-create`: приходит с тем же `detail`, подписывайтесь на `sf-table-create`.
-- `sf-table-query-intent` — устаревший псевдоним события `sf-table-query`: приходит с тем же `detail`, подписывайтесь на `sf-table-query`.
-- `sf-table-retry` — устаревший псевдоним события `sf-table-refresh`: приходит с тем же `detail`, подписывайтесь на `sf-table-refresh`.
-- `sf-table-tree-toggle` — устаревший псевдоним события `sf-table-expand`: приходит с тем же `detail`, подписывайтесь на `sf-table-expand`.
-- `sf-table-tree-more` — устаревший псевдоним события `sf-table-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-table-load-more`.
-- `sf-table-rows-reorder` — устаревший псевдоним события `sf-table-move`: приходит с тем же `detail`, подписывайтесь на `sf-table-move`.
+- `sf-port-output` — устаревший псевдоним события `sf-table-select`: приходит с прежним `detail`: `{ port: any, value: array }`, подписывайтесь на `sf-table-select`.
+- `sf-table-action-intent` — устаревший псевдоним события `sf-table-apply`: приходит с прежним `detail`: `{ action_id: string, record_ids: array }`, подписывайтесь на `sf-table-apply`.
+- `sf-table-column-settings-change` — устаревший псевдоним события `sf-table-save`: приходит с прежним `detail`: `{ reason: string, tableSettingsKey: string, columnSettings: object }`, подписывайтесь на `sf-table-save`.
+- `sf-table-create-intent` — устаревший псевдоним события `sf-table-create`: приходит с прежним `detail`: `{ item: string|null }`, подписывайтесь на `sf-table-create`.
+- `sf-table-query-intent` — устаревший псевдоним события `sf-table-query`: приходит с прежним `detail`: `{ reason: any, context: object, sequence: integer }`, подписывайтесь на `sf-table-query`.
+- `sf-table-retry` — устаревший псевдоним события `sf-table-refresh`: приходит с прежним `detail`: `null`, подписывайтесь на `sf-table-refresh`.
+- `sf-table-tree-toggle` — устаревший псевдоним события `sf-table-expand`: приходит с прежним `detail`: `{ id?: string|integer, expanded?: boolean }`, подписывайтесь на `sf-table-expand`.
+- `sf-table-tree-more` — устаревший псевдоним события `sf-table-load-more`: приходит с прежним `detail`: `{ parent?: string|integer|null, cursor?: string|null }`, подписывайтесь на `sf-table-load-more`.
+- `sf-table-rows-reorder` — устаревший псевдоним события `sf-table-move`: приходит с прежним `detail`: `{ ids?: array, before?: any, order?: array }`, подписывайтесь на `sf-table-move`.
 - `sf-table:column-settings-change` — устаревший псевдоним события `sf-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-save`.
 - `onColumnSettingsChange` — устаревший псевдоним события `sf-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-table-save`.
 - `onSearchEnd` — устаревший псевдоним события `sf-table-search-change`: приходит с тем же `detail`, подписывайтесь на `sf-table-search-change`.
@@ -1103,5 +1103,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/table`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/table/rule.js#name=cl-table`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/table`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/table/rule.js#name=cl-table`

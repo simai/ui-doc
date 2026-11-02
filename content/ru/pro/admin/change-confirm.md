@@ -12,7 +12,7 @@ description: "Подготовленное изменение ждёт отве�
 импорте перед записью. Карточка ничего не применяет: нажатие — это событие.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `larena` из репозитория `simai/ui-pro`.
+Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
 Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
 
 ## Пример
@@ -100,7 +100,7 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,8 +108,8 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 |:---|:---|
 | Тег | `<sf-change-confirm>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.change-confirm`, версия `1.2.2` |
-| Поставка | пакет `larena` (`SF_BOOT_CONFIG.packages.larena`) |
+| Контракт | `smart.change-confirm`, версия `1.2.3` |
+| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -117,8 +117,8 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `heading` — `string`, по умолчанию пусто. Что это за изменение; без него карточка называется «Что изменится».
 - `heading-level` — `string`, по умолчанию `3`, значения: `2`, `3`, `4`, `5`, `6`. Уровень заголовка там, где стоит карточка.
 - `state` — `string`, по умолчанию `open`, значения: `open`, `pending`, `accepted`, `declined`, `expired`. open: ответы предложены. pending: ответ отправляется (ставится нажатием). accepted, declined, expired: виден только итог.
@@ -161,5 +161,5 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/change-confirm`
-- `simai/ui-pro@1fcb47404ee810e12d3a2bdf7308f819366a06f7:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/change-confirm`
+- `simai/ui-pro@576a2692edb021bffe04fc93041cea4ab64f6ea4:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`

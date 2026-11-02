@@ -387,15 +387,15 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | — |
-| `root-style` | строка | пусто | — | — |
+| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `position` | строка | пусто | пусто, `inline-start`, `inline-start-top`, `inline-start-bottom`, `inline-end`, `inline-end-top`, `inline-end-bottom`, `top`, `top-inline-start`, `top-inline-end`, `bottom`, `bottom-inline-start`, `bottom-inline-end`, `start`, `end`, `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-start`, `left-end`, `right-start`, `right-end`, `inline-start-start`, `inline-start-end`, `inline-end-start`, `inline-end-end` | Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует. |
 | `tooltip` | да/нет | да | — | Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует. |
 | `text` | строка | пусто | — | — |
@@ -472,13 +472,13 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-context-menu>`, контракт `smart.context-menu` версии `1.5.1` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
+| Тег | `<sf-context-menu>`, контракт `smart.context-menu` версии `1.5.2` |
+| Поставка | выпуск Framework `ui-c4d39d528148` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль меню (`menu`); доступное имя обязательно; клавиши `ArrowDown`, `ArrowUp`, `Home`, `End`, `ArrowRight`, `ArrowLeft`, `Enter`, `Space`, `Escape`, `Tab`, поиск по первым буквам |
-| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/context-menu` |
-| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-context-menu` |
+| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/context-menu` |
+| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-context-menu` |
 
 ## См. также
 

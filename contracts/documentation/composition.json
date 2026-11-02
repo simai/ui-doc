@@ -1,22 +1,22 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "426123e2946b96e9e8275f85eeed7d745171dc79",
-    "core_revision": "2d39b617a7197dee18e4652a83321da1ca3439e6",
+    "source_revision": "b94f978de04c0ba77cc66c40b1b33510059c4972",
+    "core_revision": "c4d39d528148cc8fbb1b1dadc5294462a2aaa812",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
       "src/core/contracts/composition-types.v1.json": "bfbf5c9ed306ed1b6576f0a9e882252e2f68c120dd154b8964bdd9a8984daaaf",
-      "src/core/js/composition/index.mjs": "ad07684bdd44919e1b1383731a858b17aee09b73bc3c56a3f6a6df13721c9813",
-      "src/core/js/composition/builtins.mjs": "bded39c9fcadbc3de6b17f004f2fee501b80b8026d37d1a965385f60f2c7917f",
+      "src/core/js/composition/index.mjs": "591741779452a1e0937f104e03a9cfbfeaaeb2c8a1c0a5df30a3d7ec26cefd7a",
+      "src/core/js/composition/builtins.mjs": "9fc7497e9cd54b63c7005c5545eb8a43a9c47793e9881db55150590d86ae921b",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/button/smart.manifest.json": "87847ce15e6180a305bfd3fb9e3e25772a5a79d443e2da62becc87e1ef37d14b"
+      "src/smart/button/smart.manifest.json": "9f2b0c2e37c8c4d45f4d30bf7d89abfc96c55b270947eaca18b6feaa4b3391dd"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "cf872866267d6511099d153fe7755fb6a72a0ae624c7a2576ff2efb93ea4416f",
       "distr/core/contracts/composition-types.v1.json": "bfbf5c9ed306ed1b6576f0a9e882252e2f68c120dd154b8964bdd9a8984daaaf",
-      "distr/core/js/core.js": "d70d73e5cda28b35e730f58d5682bb8dc3c00e894999629a9186c1a2ff8e0a09"
+      "distr/core/js/core.js": "a6a4180a14d8c2aa578e84982a9ed17d1745e4d7b6bc5d48eb84481e9c1c8fc9"
     }
   },
   "source_files": [

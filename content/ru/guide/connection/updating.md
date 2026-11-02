@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-2d39b617a719` это ревизия
-`426123e2946b96e9e8275f85eeed7d745171dc79`.
+выпуска `ui-c4d39d528148` это ревизия
+`b94f978de04c0ba77cc66c40b1b33510059c4972`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -164,15 +164,15 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   нигде не объявлен (`packages: {<имя>: …}`, `packages.<имя> = …` или вызов
   `SF.RuleLoader.registerPackage('<имя>', …)`), инструмент сообщает об этом
   как о ручной работе и называет, что добавить: объявление пакета
-  (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)). Так перенесены в пакет продукта `larena` (исходник —
+  (см. [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)). Так перенесены в пакет продукта `pro` (исходник —
   `simai/ui-pro`) четыре элемента: `sf-table`, `sf-data-view`,
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
-  работают, только если она объявила пакет `larena`, например
-  `SF_BOOT_CONFIG.packages.larena = {base: '/assets/larena/1fcb47404ee810e12d3a2bdf7308f819366a06f7/smart'}`
+  работают, только если она объявила пакет `pro`, например
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/576a2692edb021bffe04fc93041cea4ab64f6ea4/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
-  странице. Проект без Larena берёт сборку из выпуска `simai/larena-ui` (см. [Пакет `larena` для проекта без Larena](/ru/guide/introduction/structure/#пакет-larena-для-проекта-без-larena)).
+  странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
 
 После ручных правок инструмент запускают снова и повторяют, пока он ничего
 не находит: ручная правка одного места может открыть следующую механическую

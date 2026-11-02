@@ -48,8 +48,8 @@ foreach ($ids as $id) {
 // way the documentation pages do. Links inside it never navigate (index.js).
 $adminSource=$root.'/examples/home/admin';
 $adminTarget=$build.'/demos/home/admin';
-$larenaMount=$lock['package_projections']['larena']['mount'] ?? null;
-if (!is_string($larenaMount) || preg_match('~\A_docara/framework-packages/larena/[0-9a-f]{40}\z~', $larenaMount) !== 1) throw new RuntimeException('Admin demonstration: package mount missing from the lock');
+$proMount=$lock['package_projections']['pro']['mount'] ?? null;
+if (!is_string($proMount) || preg_match('~\A_docara/framework-packages/pro/[0-9a-f]{40}\z~', $proMount) !== 1) throw new RuntimeException('Admin demonstration: package mount missing from the lock');
 if (!is_dir($adminTarget)) mkdir($adminTarget,0775,true);
 foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($adminSource, FilesystemIterator::SKIP_DOTS)) as $input) {
     if (!$input->isFile()) continue;
@@ -62,7 +62,7 @@ foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($adminSourc
 }
 // Icons from the runtime's own icon font: the menu and the list use many more
 // glyphs than the documentation's subset carries.
-$adminBoot=['theme'=>false,'icons'=>['enabled'=>true,'accumulate'=>false],'smart'=>['base'=>true],'minified'=>false,'packages'=>['larena'=>['base'=>$base.$larenaMount.'/smart']]];
+$adminBoot=['theme'=>false,'icons'=>['enabled'=>true,'accumulate'=>false],'smart'=>['base'=>true],'minified'=>false,'packages'=>['pro'=>['base'=>$base.$proMount.'/smart']]];
 $adminHtml='<!doctype html><html lang="ru" class="max-h-screen h-full" data-sf-density="compact"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Административный интерфейс</title>'
     .'<link rel="stylesheet" href="'.$css[1].'"><link rel="stylesheet" href="index.css">'
     .'<script>(function(){var d=window.matchMedia("(prefers-color-scheme: dark)").matches;try{if(parent!==window)d=parent.document.documentElement.classList.contains("theme-dark");}catch(e){}document.documentElement.classList.toggle("theme-dark",d);document.documentElement.classList.toggle("theme-light",!d);})();</script>'

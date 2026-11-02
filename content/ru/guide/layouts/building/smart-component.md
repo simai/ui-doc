@@ -46,7 +46,7 @@ description: "Смарт-компоненты попадают в макет к�
 
 В поставке Framework декларативный контракт публикует кнопка
 (`smart.button`). Компоненты пакета продукта публикуют свои контракты в своих
-манифестах: например, таблица пакета `larena` — тип `smart.data-view` с
+манифестах: например, таблица пакета `pro` — тип `smart.data-view` с
 данными `columns` и `rows`. Актуальный перечень — раздел
 `composition.declarative` в манифестах (`distr/smart/<папка>/smart.manifest.json`
 в поставке `ui`, `src/smart/<папка>/smart.manifest.json` в пакете).

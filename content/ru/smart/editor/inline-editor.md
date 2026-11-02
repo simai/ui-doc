@@ -112,15 +112,15 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | — |
-| `root-style` | строка | пусто | — | — |
+| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -128,7 +128,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `edit(element: object, options: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры content, nodeId, label, marks, links, messages |
+| `edit(element: object, options: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением) |
 
 ### События
 
@@ -147,13 +147,13 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-inline-editor>`, контракт `smart.inline-editor` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
+| Тег | `<sf-inline-editor>`, контракт `smart.inline-editor` версии `1.3.0` |
+| Поставка | выпуск Framework `ui-c4d39d528148` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape` |
-| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/inline-editor` |
-| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-inline-editor` |
+| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/inline-editor` |
+| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-inline-editor` |
 
 ## См. также
 

@@ -26,11 +26,11 @@ flowchart TB
     runtime["smart-base.min.js — общая среда: lit, основа, слой элементов"]
     button["Сборка sf-button — только свой элемент"]
     tree["Сборка sf-tree — только свой элемент"]
-    larena["Пакет larena из ui-pro — только свои элементы"]
+    pro["Пакет pro из ui-pro — только свои элементы"]
     core -->|загружает| runtime
     button -->|просит модули| runtime
     tree -->|просит модули| runtime
-    larena -->|просит модули| runtime
+    pro -->|просит модули| runtime
 :::
 
 До выпуска `ui-1fe369009512` (core.runtime 1.1.0) каждая сборка несла свой

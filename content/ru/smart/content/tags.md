@@ -123,7 +123,7 @@ description: "Показывает короткую метку — катего�
 
 Тег `kind="checkbox"` — кнопка-переключатель. Нажатие меняет `active` и
 отправляет всплывающее событие `change`; в `event.detail.active` — новое
-состояние, в `event.detail.component` — сам тег.
+состояние, сам тег — `event.target`.
 
 ```js
 document.querySelector('.filters').addEventListener('change', (event) => {
@@ -135,13 +135,13 @@ document.querySelector('.filters').addEventListener('change', (event) => {
 ### Удаление
 
 Нажатие на кнопку удаления отправляет всплывающее событие `sf-tag-close`
-(прежнее имя — `close`) с тегом в `event.detail.component`. Сам тег не
-исчезает: убирает его приложение, когда удаление принято.
+(прежнее имя — `close`); `event.detail` пустой, сам тег — `event.target`. Тег
+не исчезает: убирает его приложение, когда удаление принято.
 
 ```js
 tags.addEventListener('sf-tag-close', (event) => {
-  removeValue(event.detail.component.getAttribute('text'));
-  event.detail.component.remove();
+  removeValue(event.target.getAttribute('text'));
+  event.target.remove();
 });
 ```
 
@@ -175,7 +175,7 @@ tags.addEventListener('sf-tag-close', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-2d39b617a719` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -183,7 +183,7 @@ tags.addEventListener('sf-tag-close', (event) => {
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя шаблона. |
 | `root-class` | строка | пусто | — | Утилитарные классы Framework для видимого корневого элемента. |
-| `root-style` | строка | пусто | — | — |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `kind` | строка | `checkbox` | `checkbox`, `icon`, `default`, `color`, `avatar` | Содержимое тега: флажок, иконка, цвет, аватар или только подпись. Значение совместимости quantity также принимается и означает default. |
 | `status` | строка | пусто | пусто, `info`, `success`, `warning`, `error` | О чём сообщает тег, в общем словаре статусов. Оставьте пустым для тега, который ни о чём не сообщает. |
 | `appearance` | строка | `default` | `default`, `surface`, `ghost` | Внешний вид на основе нейтральной шкалы прозрачности, независимый от типа: surface сохраняет лёгкую заливку и границу, ghost не имеет ничего до наведения. Применяется только к нейтральным типам, потому что тег статуса передаёт смысл цветом. |
@@ -240,13 +240,13 @@ tags.addEventListener('sf-tag-close', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-tag>`, контракт `smart.tag` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-2d39b617a719` |
+| Тег | `<sf-tag>`, контракт `smart.tag` версии `1.1.8` |
+| Поставка | выпуск Framework `ui-c4d39d528148` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; принят в продукт |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль кнопка (`button`); доступное имя обязательно; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/smart/tag` |
-| Правило классов | `simai/ui@2d39b617a7197dee18e4652a83321da1ca3439e6:distr/rule/rule.json#name=cl-tag` |
+| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/tag` |
+| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-tag` |
 
 ## См. также
 
