@@ -39,11 +39,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '382a11aeb3285fd0a2b02d993e9583b32e35082c';
-const UI_RUNTIME_REVISION = '2d39b617a7197dee18e4652a83321da1ca3439e6';
-const SOURCE_REVISION = '426123e2946b96e9e8275f85eeed7d745171dc79';
+const UI_METADATA_REVISION = '2f9a934f50ea89c4793d19d16f729a7874007b54';
+const UI_RUNTIME_REVISION = 'c4d39d528148cc8fbb1b1dadc5294462a2aaa812';
+const SOURCE_REVISION = 'b94f978de04c0ba77cc66c40b1b33510059c4972';
 const BUILDER_REVISION = 'a89508ce28acf00ca5b987059a424bfe1039f187';
-const RELEASE_LOCK = 'contracts/releases/ui-2d39b617a719.lock.json';
+const RELEASE_LOCK = 'contracts/releases/ui-c4d39d528148.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -51,7 +51,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-2d39b617a719.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261102.1106';
+const NPM_VERSION = '5.20261102.1446';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the

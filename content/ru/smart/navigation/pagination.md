@@ -95,19 +95,21 @@ description: "Переключает страницы длинного спис�
 
 Компонент сам меняет `current` и `page-size` и сообщает об изменении
 всплывающим событием; приложение по нему загружает записи. В `event.detail`
-каждого события есть также `component`.
+только данные, без самого элемента.
 
 | Событие | Когда | Поля `event.detail` |
 |:---|:---|:---|
 | `sf-pagination-change` | открыта другая страница | `previous`, `current`, `total`, `pageCount`, `pageSize` |
 | `sf-pagination-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
-| `sf-pagination-load-more` | нажата «Показать ещё» | `current`, `total`, `pageSize`, `pageCount`, `hasNext`, `item` |
+| `sf-pagination-load-more` | нажата «Показать ещё» | `direction` (всегда `after`), `current`, `total`, `pageSize`, `pageCount`, `hasNext` |
 | `sf-pagination-count` | запрошено общее количество | `reason`, `current`, `pageSize` |
 
 Прежние имена этих событий — `sf-page-change`, `sf-page-size-change`,
 `sf-show-more`, `sf-count-request`, `sf-action-change`,
 `sf-action-for-all-change`, `sf-action-apply` и `sf-selection-clear` —
-приходят с тем же `detail` до 2026-12-01; подписывайтесь на новые.
+приходят до 2026-12-01 с прежним `detail`: в нём ещё `component`, у
+`sf-show-more` — `item`, у `sf-action-apply` — `actionForAll`. Подписывайтесь на
+новые.
 
 При смене размера `current` остаётся в пределах нового числа страниц.
 `goToPage(n)`, `setPageSize(n)` и `showMore()` делают то же из кода,
@@ -127,8 +129,9 @@ description: "Переключает страницы длинного спис�
 Компонент не хранит выделение: `selected-count` передаёт приложение, а
 `sf-pagination-action-change` (`previous`, `action`),
 `sf-pagination-action-for-all-change` (`previous`, `actionForAll`),
-`sf-pagination-apply` (`action`, `actionForAll`, `current`, `total`,
-`pageSize`, `pageCount`) и `sf-pagination-selection-clear` (`selectedCount`,
+`sf-pagination-apply` (`action`, `scope` — `selection` для отмеченных строк
+или `filter` для всех под фильтром, `current`, `total`, `pageSize`,
+`pageCount`) и `sf-pagination-selection-clear` (`selectedCount`,
 `total`) сообщают ему о выборе пользователя.
 `bottom="false"` убирает панель, если действия показывает соседний компонент.
 

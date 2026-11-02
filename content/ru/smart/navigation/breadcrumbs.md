@@ -76,18 +76,21 @@ description: "Показывает путь от корня сайта до те
 `sf-breadcrumbs-press` (прежнее имя — `sf-breadcrumb-click`). Его
 `event.detail` содержит `item` — данные пункта (`label`, `href`, `value`,
 `ellipsis` и другие поля), `index` — номер пункта среди показанных, `items` —
-все показанные пункты, `originalEvent` — исходный `click`. У кнопки «…» в
-`item` есть `ellipsis: true` и `hiddenItems`. Помощник
-`onItemClick(handler)` передаёт обработчику данные пункта первым аргументом.
+все показанные пункты. У кнопки «…» в `item` есть `ellipsis: true` и
+`hiddenItems`. Помощник `onItemClick(handler)` передаёт обработчику данные
+пункта, `detail` и само событие: `(item, detail, event)`.
 
-Для навигации в одностраничном приложении перехватите нажатие на ссылку:
+`event.preventDefault()` отменяет только раскрытие «…». Переход по ссылке он не
+отменяет: пункт с `href` остаётся обычной ссылкой.
+
+Для навигации в одностраничном приложении задайте пункту `value` без `href`:
+такой пункт рисуется кнопкой, а переход делает страница.
 
 ```js
 const crumbs = document.querySelector('sf-breadcrumbs');
-crumbs.onItemClick((item, detail) => {
-  if (!item.href) return;
-  detail.originalEvent.preventDefault();
-  router.navigate(item.href);
+crumbs.onItemClick((item) => {
+  if (item.href || item.ellipsis) return;
+  router.navigate(item.value);
 });
 ```
 

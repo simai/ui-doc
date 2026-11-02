@@ -123,7 +123,7 @@ description: "Показывает короткую метку — катего�
 
 Тег `kind="checkbox"` — кнопка-переключатель. Нажатие меняет `active` и
 отправляет всплывающее событие `change`; в `event.detail.active` — новое
-состояние, в `event.detail.component` — сам тег.
+состояние, сам тег — `event.target`.
 
 ```js
 document.querySelector('.filters').addEventListener('change', (event) => {
@@ -135,13 +135,13 @@ document.querySelector('.filters').addEventListener('change', (event) => {
 ### Удаление
 
 Нажатие на кнопку удаления отправляет всплывающее событие `sf-tag-close`
-(прежнее имя — `close`) с тегом в `event.detail.component`. Сам тег не
-исчезает: убирает его приложение, когда удаление принято.
+(прежнее имя — `close`); `event.detail` пустой, сам тег — `event.target`. Тег
+не исчезает: убирает его приложение, когда удаление принято.
 
 ```js
 tags.addEventListener('sf-tag-close', (event) => {
-  removeValue(event.detail.component.getAttribute('text'));
-  event.detail.component.remove();
+  removeValue(event.target.getAttribute('text'));
+  event.target.remove();
 });
 ```
 
