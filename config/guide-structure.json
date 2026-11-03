@@ -438,6 +438,33 @@
    ]
   },
   {
+   "slug": "sets",
+   "title": "Наборы компонентов",
+   "order": 75,
+   "pages": [
+    {
+     "slug": "connect",
+     "title": "Подключение набора",
+     "order": 10
+    },
+    {
+     "slug": "versions",
+     "title": "Версии и совместимость",
+     "order": 20
+    },
+    {
+     "slug": "licence",
+     "title": "Лицензия",
+     "order": 30
+    },
+    {
+     "slug": "names",
+     "title": "Имена компонентов",
+     "order": 40
+    }
+   ]
+  },
+  {
    "slug": "layouts",
    "title": "Макеты и композиция",
    "order": 80,
