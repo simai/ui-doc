@@ -249,7 +249,8 @@
     "editor": {
       "title": "Редактор страниц",
       "items": [
-        "content-editor"
+        "content-editor",
+        "blocks"
       ]
     }
   }

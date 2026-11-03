@@ -129,6 +129,13 @@
       ]
     },
     {
+      "path": "content/ru/pro/editor/blocks.md",
+      "snippets": [
+        "kits/block/check.mjs",
+        "BLOCK_CHECK_PASS"
+      ]
+    },
+    {
       "path": "content/ru/guide/layouts/reference/studio-inspector.md",
       "snippets": [
         "Инспектор",
