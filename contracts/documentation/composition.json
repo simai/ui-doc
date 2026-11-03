@@ -129,7 +129,7 @@
       ]
     },
     {
-      "path": "content/ru/pro/editor/blocks/index.md",
+      "path": "content/ru/pro/editor/blocks.md",
       "snippets": [
         "kits/block/check.mjs",
         "BLOCK_CHECK_PASS"

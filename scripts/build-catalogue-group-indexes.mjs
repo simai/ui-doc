@@ -25,6 +25,9 @@ const content = join(root, 'content/ru');
 const CATALOGUES = ['components', 'smart', 'pro'];
 const PRODUCT = { components: 'SIMAI Framework', 'smart': 'SIMAI Framework', pro: 'SIMAI Pro' };
 const check = process.argv.includes('--check');
+// Pages a group lists that are not components (a how-to beside the
+// component it serves): listed like the rest, left out of the count.
+const GUIDES = new Set(['pro/editor/blocks']);
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
 
@@ -110,13 +113,14 @@ for (const catalogue of CATALOGUES) {
     // could not have counted.
     const noun = catalogue === 'smart' ? 'смарт-компонент' : 'компонент';
     // Russian counts: 1, 21 компонент; 2–4, 22–24 компонента; the rest компонентов.
-    const n10 = pages.length % 10;
-    const n100 = pages.length % 100;
+    const count = pages.filter((slug) => !GUIDES.has(`${catalogue}/${entry.name}/${slug}`)).length;
+    const n10 = count % 10;
+    const n100 = count % 100;
     const plural = n10 === 1 && n100 !== 11 ? noun
       : n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14) ? `${noun}а` : `${noun}ов`;
     const page = `---
 title: "${section.title}"
-description: "${section.title} — ${pages.length} ${plural} ${PRODUCT[catalogue]}."
+description: "${section.title} — ${count} ${plural} ${PRODUCT[catalogue]}."
 profile: reference
 ---
 
