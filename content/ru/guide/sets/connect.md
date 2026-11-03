@@ -10,21 +10,28 @@ description: "Набор подключают одной строкой: атр�
 Loader сам найдёт подходящий выпуск набора и загрузит только те его
 компоненты, которые есть на странице.
 
-> **Скоро.** Атрибут `data-sf-sets` понимает Loader из выпуска SIMAI Framework
-> с `core.runtime` 1.25.0. Этот выпуск ещё не вышел.
+Атрибут `data-sf-sets` понимает Loader начиная с выпуска SIMAI Framework
+`5.20261103.2154` (`core.runtime` 1.25.0).
 
 ## Одна строка
 
-Пример подключает набор эффектов и ставит на страницу один эффект:
+Пример подключает набор эффектов к выпуску SIMAI Framework `5.20261103.2154`
+и ставит на страницу один эффект:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@<выпуск>/distr/core/css/core.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@<выпуск>/distr/core/js/core.min.js" data-sf-sets="effects"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261103.2154/distr/core/css/core.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261103.2154/distr/core/js/core.min.js" data-sf-sets="effects"></script>
 
 <sf-effect effect="aurora-curtain" speed="200"></sf-effect>
 ```
 
-`<выпуск>` — версия пакета `@simai-studio/ui`, которую закрепил проект (см.
+В общем виде строка та же, только с версией, которую закрепил проект:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@<выпуск>/distr/core/js/core.min.js" data-sf-sets="effects"></script>
+```
+
+`<выпуск>` — версия пакета `@simai-studio/ui` не ниже `5.20261103.2154` (см.
 [Версии](/ru/guide/connection/versions/)). Набор берётся из общего каталога
 выпусков: Loader выбирает самый новый выпуск набора, который подходит к этому
 SIMAI Framework.
