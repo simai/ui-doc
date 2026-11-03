@@ -20,7 +20,6 @@ description: "Эта глава собирает справочные сведе
 - [API сборки и отрисовки](/ru/guide/layouts/reference/api/)
 - [Типы значений маршрутов](/ru/guide/layouts/reference/value-types/)
 - [Собственный тип](/ru/guide/layouts/reference/custom-type/)
-- [Как сделать свой блок](/ru/guide/layouts/reference/block-author-kit/)
 - [Манифест типа](/ru/guide/layouts/reference/type-manifest/)
 - [Диагностика](/ru/guide/layouts/reference/diagnostics/)
 - [Версии и отпечатки](/ru/guide/layouts/reference/versions/)

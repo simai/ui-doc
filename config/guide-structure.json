@@ -613,11 +613,6 @@
      "order": 280
     },
     {
-     "slug": "reference/block-author-kit",
-     "title": "Как сделать свой блок",
-     "order": 285
-    },
-    {
      "slug": "reference/type-manifest",
      "title": "Манифест типа",
      "order": 290
