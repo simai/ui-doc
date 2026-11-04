@@ -98,7 +98,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -106,7 +106,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 |:---|:---|
 | Тег | `<sf-chat-interlocutor>` |
 | Назначение | С кем разговор: собеседники сервера в контекстном меню SIMAI Framework, текущий отмечен, а выбор другого сообщается хосту, чтобы тот начал новый разговор. Один собеседник — это имя, а не выбор. |
-| Контракт | `smart.chat-interlocutor`, версия `1.0.3` |
+| Контракт | `smart.chat-interlocutor`, версия `1.0.5` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -136,7 +136,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 - Роль: кнопка (`button`).
 - Доступное имя: внутренний.
 - Клавиши: `Tab`, `Enter`, `Space`.
-- Фокус: Обычная кнопка с `aria-haspopup=menu` и `aria-expanded=false` с самого начала, с именем «Помощник: <название>» и скрытым описанием того, к чему ведёт смена, ещё до открытия меню. Меню — `sf-context-menu` SIMAI Framework с пунктами-радиокнопками, текущий отмечен, со своей клавиатурой. При одном собеседнике кнопка неактивна, без `aria-haspopup`, `aria-expanded` и описания.
+- Фокус: Обычная кнопка с `aria-haspopup=menu` и `aria-expanded=false` с самого начала, с именем «Помощник: <название>» и скрытым описанием того, к чему ведёт смена, ещё до открытия меню. Меню — `sf-menu-context` SIMAI Framework с пунктами-радиокнопками, текущий отмечен, со своей клавиатурой. При одном собеседнике кнопка неактивна, без `aria-haspopup`, `aria-expanded` и описания.
 
 ### Минимальная разметка
 
@@ -146,8 +146,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 

@@ -200,15 +200,15 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
-| Тег | `<sf-content-editor>` |
+| Тег | `<sf-editor-content>` |
 | Назначение | Режим «Содержимое» редактора страниц SIMAI: страница набирается одним потоком поверх Composition Document (structured-content). Enter и Backspace делят и соединяют блоки, Markdown в начале строки и «/» меняют вид блока, «+» и ручка на поле слева (вне текста) добавляют, двигают блок и открывают его меню; каждое меню открывается у того, что его вызвало. Выделение показывает панель форматирования, Esc выбирает блоки, вставка становится блоками через html@1, по таблице ходит Tab. У выбранного блока над ним — быстрые настройки, остальное уходит в панель хоста (или во всплывающее окно). Картинку бросают, вставляют или выбирают прямо на странице, хранит её хост. Элемент ничего не сохраняет: новый документ он отправляет в `change`. |
-| Контракт | `smart.content-editor`, версия `1.2.3` |
+| Контракт | `smart.editor-content`, версия `1.3.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -240,10 +240,14 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `change` — `detail`: `{ document: object, reason: string }`. Страница изменилась: `{document, reason}`. Документ сохраняет хост.
-- `sf-content-editor-select` — `detail`: `{ ids: array }`. Выбраны эти блоки: `{ids}`; пусто, если ни одного.
-- `sf-content-editor-leave` — ничего не передаёт. Esc при выбранных блоках: человек просит выйти из текста.
-- `sf-content-editor-params` — `detail`: `{ id: any, type: string, kind: string, label: string, fields: array, open: boolean }`. Параметры выбранного блока для панели хоста: `{id, type, kind, label, fields, open}`; `id` пуст, если блок не выбран.
-- `sf-content-editor-file` — `detail`: `{ file: object, block: any, type: string }`. Файл, который нужно сохранить: `{file, block, type}`, где `type` — тип блока (`content.figure` или `content.file`). Хост сохраняет файл и вызывает `answer-file` с `{block, value, href}` или `{block, reason}`.
+- `sf-editor-content-select` — `detail`: `{ ids: array }`. Выбраны эти блоки: `{ids}`; пусто, если ни одного.
+- `sf-editor-content-leave` — ничего не передаёт. Esc при выбранных блоках: человек просит выйти из текста.
+- `sf-editor-content-params` — `detail`: `{ id: any, type: string, kind: string, label: string, fields: array, open: boolean }`. Параметры выбранного блока для панели хоста: `{id, type, kind, label, fields, open}`; `id` пуст, если блок не выбран.
+- `sf-editor-content-file` — `detail`: `{ file: object, block: any, type: string }`. Файл, который нужно сохранить: `{file, block, type}`, где `type` — тип блока (`content.figure` или `content.file`). Хост сохраняет файл и вызывает `answer-file` с `{block, value, href}` или `{block, reason}`.
+- `sf-content-editor-select` — устаревший псевдоним события `sf-editor-content-select`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-select`.
+- `sf-content-editor-leave` — устаревший псевдоним события `sf-editor-content-leave`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-leave`.
+- `sf-content-editor-params` — устаревший псевдоним события `sf-editor-content-params`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-params`.
+- `sf-content-editor-file` — устаревший псевдоним события `sf-editor-content-file`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-file`.
 
 ### Доступность
 
@@ -255,10 +259,10 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 ### Минимальная разметка
 
 ```html
-<sf-content-editor id="page"></sf-content-editor> <script>page.document = doc; page.addEventListener('change', (e) => save(e.detail.document));</script>
+<sf-editor-content id="page"></sf-editor-content> <script>page.document = doc; page.addEventListener('change', (e) => save(e.detail.document));</script>
 ```
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/content-editor`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/content-editor/rule.js#name=cl-content-editor`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/editor-content`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/editor-content/rule.js#name=cl-editor-content`

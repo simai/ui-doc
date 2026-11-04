@@ -205,7 +205,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -244,13 +244,13 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 | | |
 |:---|:---|
-| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-sortable>`, контракт `smart.sortable` версии `1.1.7` |
+| Поставка | выпуск Framework `ui-c3015f76bcc2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя рекомендуется; клавиши `Space`, `Enter`, `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Escape`, `Tab`, +, `Home`, `End` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/sortable` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-sortable` |
+| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/sortable` |
+| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-sortable` |
 
 ## См. также
 

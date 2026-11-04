@@ -83,6 +83,9 @@ const walk = (dir) => {
 walk(path.join(projectRoot, 'content/ru/smart'));
 walk(path.join(projectRoot, 'content/ru/pro'));
 
+// A folder renamed by a tag rename keeps the page written under its old name;
+// config/smart-reference.json names that page, as for the API reference.
+const referencePages = JSON.parse(fs.readFileSync(path.join(projectRoot, 'config/smart-reference.json'), 'utf8')).pages ?? {};
 const findings = [];
 let checked = 0;
 const manifestNames = manifestRoots
@@ -96,7 +99,8 @@ for (const [name, manifestRoot] of manifestNames) {
   const axes = Object.keys(inputs).filter((key) => AXES.has(key));
   if (axes.length === 0) continue;
   if (inputs[LADDER]?.enum) axes.push(LADDER);
-  const page = pages.get(name) ?? pages.get(name.replace(/s$/, '')) ?? pages.get(`${name}s`);
+  const named = referencePages[name] ? path.join(projectRoot, 'content/ru', referencePages[name]) : null;
+  const page = named ?? pages.get(name) ?? pages.get(name.replace(/s$/, '')) ?? pages.get(`${name}s`);
   if (!page) {
     findings.push({ component: name, code: 'page_missing' });
     continue;

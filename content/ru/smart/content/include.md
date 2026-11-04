@@ -133,7 +133,7 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -168,12 +168,12 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 | | |
 |:---|:---|
 | Тег | `<sf-include>`, контракт `smart.include` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Поставка | выпуск Framework `ui-c3015f76bcc2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Tab` доходит до «Повторить» в состоянии ошибки., `Enter` или `Space` нажимает «Повторить». |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/include` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-include` |
+| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/include` |
+| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-include` |
 
 ## См. также
 

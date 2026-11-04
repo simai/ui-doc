@@ -136,7 +136,7 @@ code.addEventListener('sf-code-input-completed', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -180,20 +180,21 @@ code.addEventListener('sf-code-input-completed', async (event) => {
 |:---|:---|:---|
 | `input` | `null` | Код изменился при вводе, вставке или автозаполнении; нативное событие всплывает от внутреннего input, который является его целью, со значением, уже приведённым к режиму и длине. detail нет. |
 | `change` | `null` | Код сохранён: поле потеряло фокус с кодом, отличным от того, что был при получении фокуса. Отправляется один раз от внутреннего input. detail нет. |
-| `sf-code-input-completed` | `{ value: string }` | Факт завершения (стандарт 1.3.8 §8): в каждой ячейке есть символ, после правки человека; один раз на каждый целый код, после его события input. Элемент сам форму не отправляет. |
-| `sf-code-input:complete` | `{ value?: string }` | устаревший псевдоним `sf-code-input-completed`: подписывайтесь на `sf-code-input-completed` |
+| `sf-input-code-completed` | `{ value: string }` | Факт завершения (стандарт 1.3.8 §8): в каждой ячейке есть символ, после правки человека; один раз на каждый целый код, после его события input. Элемент сам форму не отправляет. |
+| `sf-code-input:complete` | `{ value?: string }` | устаревший псевдоним `sf-input-code-completed`: подписывайтесь на `sf-input-code-completed` |
+| `sf-code-input-completed` | не описан | устаревший псевдоним `sf-input-code-completed`: подписывайтесь на `sf-input-code-completed` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-code-input>`, контракт `smart.code-input` версии `1.1.4` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-c3015f76bcc2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя обязательно; клавиши `Tab`, `Backspace`, `Delete`, `ArrowLeft`, `ArrowRight`, `Home`, `End` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/code-input` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-code-input` |
+| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/input-code` |
+| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-input-code` |
 
 ## См. также
 

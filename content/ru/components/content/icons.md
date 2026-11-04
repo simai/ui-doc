@@ -165,7 +165,7 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-icon` |
-| Части | `sf-icon-bold`, `sf-icon-extra-light`, `sf-icon-filled`, `sf-icon-light`, `sf-icon-medium`, `sf-icon-regular`, `sf-icon-rounded`, `sf-icon-semi-bold`, `sf-icon-shape`, `sf-icon-solid`, `sf-icon-thin` |
+| Части | `sf-icon-bold`, `sf-icon-extra-light`, `sf-icon-filled`, `sf-icon-light`, `sf-icon-loaded`, `sf-icon-medium`, `sf-icon-regular`, `sf-icon-rounded`, `sf-icon-semi-bold`, `sf-icon-shape`, `sf-icon-solid`, `sf-icon-thin` |
 | Модификаторы | `sf-icon--filled`, `sf-icon--rotate-135`, `sf-icon--rotate-180`, `sf-icon--rotate-225`, `sf-icon--rotate-270`, `sf-icon--rotate-315`, `sf-icon--rotate-90`, `sf-icon--rounded`, `sf-icon--sharp`, `sf-icon--weight-bold`, `sf-icon--weight-extra-light`, `sf-icon--weight-light`, `sf-icon--weight-medium`, `sf-icon--weight-regular`, `sf-icon--weight-semi-bold`, `sf-icon--weight-thin` |
 | Размеры | `sf-icon--size-1`, `sf-icon--size-1/2`, `sf-icon--size-1/3`, `sf-icon--size-1/4`, `sf-icon--size-2`, `sf-icon--size-3`, `sf-icon--size-4`, `sf-icon--size-5`, `sf-icon--size-6`, `sf-icon--size-7` |
 
@@ -199,7 +199,7 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 |:---|:---|:---|
 | `--sf-icon--fill` | `0` | `font-variation-settings` |
 | `--sf-icon--font-family` | не задана; задают модификаторы, например `:root[data-sf-icons=subset-pending] .sf-icon`: `"Material Symbols Outlined Subset"` | `font-family` |
-| `--sf-icon--font-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `font-size` |
+| `--sf-icon--font-size` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `font-size`, `width`, `inline-size` |
 | `--sf-icon--grade` | `0` | `font-variation-settings` |
 | `--sf-icon--height` | не задана; задают модификаторы, например `.sf-icon--size-1/4`: `var(--sf-icon-size-1/4)` | `height` |
 | `--sf-icon--line-height` | `1` | `line-height` |

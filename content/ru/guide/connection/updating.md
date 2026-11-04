@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-c4d39d528148` это ревизия
-`b94f978de04c0ba77cc66c40b1b33510059c4972`.
+выпуска `ui-c3015f76bcc2` это ревизия
+`4863a40e221cba7684cd0c7d860b286613d3e8c4`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/5d68df26ef3d34669be874d096a7bb9c62495a11/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/978d513cf4bf331e0f89aa201aefe608b90e9d1c/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -278,6 +278,53 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 изменений запись журнала описывает в поле `manual`, что проверить и как
 поправить; места находит человек или ИИ по полям `from` и `to`, а результат
 подтверждают проверки проекта.
+
+## Новые имена тегов
+
+С выпуска `ui-c3015f76bcc2` (`@simai-studio/ui` 5.20261104.451) часть
+смарт-компонентов называется по-новому: сначала семейство, затем уточнение
+(`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
+Loader определяет его как псевдоним нового, поэтому страницы на прежних
+именах не ломаются. Какие имена ещё открыты, говорит
+`SF.tags.list()` (см. [JS API](/ru/guide/connection/js-api/)). Страницы этой документации пока показывают примеры
+на прежних тегах; новое имя стоит в справочнике каждой страницы.
+
+| Прежний тег | Новый тег |
+|:---|:---|
+| `sf-avatars` | `sf-avatar-group` |
+| `sf-close` | `sf-button-close` |
+| `sf-copy-button` | `sf-button-copy` |
+| `sf-icon-button` | `sf-button-icon` |
+| `sf-change-confirm` | `sf-confirm-change` |
+| `sf-inline-editor` | `sf-editor-inline` |
+| `sf-composition-overlay` | `sf-editor-overlay` |
+| `sf-download-file` | `sf-file-download` |
+| `sf-page-header` | `sf-header-page` |
+| `sf-site-header` | `sf-header-site` |
+| `sf-code-input` | `sf-input-code` |
+| `sf-color` | `sf-input-color` |
+| `sf-country-code` | `sf-input-country` |
+| `sf-datepicker` | `sf-input-date` |
+| `sf-image-field` | `sf-input-image` |
+| `sf-lookup` | `sf-input-lookup` |
+| `sf-quantity` | `sf-input-quantity` |
+| `sf-rich-text` | `sf-input-rich` |
+| `sf-textarea` | `sf-input-textarea` |
+| `sf-context-menu` | `sf-menu-context` |
+| `sf-range-slider` | `sf-slider-range` |
+
+Компоненты пакета `pro` переименованы так же:
+
+| Прежний тег | Новый тег |
+|:---|:---|
+| `sf-thread-list` | `sf-chat-threads` |
+| `sf-content-editor` | `sf-editor-content` |
+| `sf-property-view` | `sf-view-properties` |
+| `sf-table` | `sf-view-table` |
+| `sf-data-view` | `sf-view` |
+
+`sf-change-confirm` при этом перешёл из пакета `pro` в выпуск SIMAI
+Framework (см. [Подтверждение изменения](/ru/pro/admin/change-confirm/)).
 
 ## Связь с другими частями
 

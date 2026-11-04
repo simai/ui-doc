@@ -287,7 +287,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-field--border-end-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-start-radius` |
 | `--sf-input-field--border-start-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-end-radius` |
 | `--sf-input-field--border-start-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-start-radius` |
-| `--sf-input-field--box-shadow` | не задана; задают модификаторы, например `.sf-input:not(.sf-input--pointer-focus)[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-input-field`: `none` | `box-shadow` |
+| `--sf-input-field--box-shadow` | не задана; задают модификаторы, например `.sf-input:not(.sf-input--pointer-focus):has(input:not(:disabled):not(.disabled).focus-visible) .sf-input-field`: `none` | `box-shadow` |
 | `--sf-input-field--padding-bottom` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-bottom` |
 | `--sf-input-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-end` |
 | `--sf-input-field--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1 .sf-input-field`: `var(--sf-input-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |

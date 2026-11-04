@@ -215,7 +215,7 @@ view.value = 'archived';
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -281,13 +281,13 @@ view.value = 'archived';
 
 | | |
 |:---|:---|
-| Тег | `<sf-dropdown>`, контракт `smart.dropdown` версии `1.5.2` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-dropdown>`, контракт `smart.dropdown` версии `1.5.3` |
+| Поставка | выпуск Framework `ui-c3015f76bcc2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль поле со списком (`combobox`); доступное имя обязательно; клавиши `Tab`, `ArrowDown`, `ArrowUp`, `Home`, `End`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/dropdown` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-dropdown` |
+| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/dropdown` |
+| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-dropdown` |
 
 ## См. также
 

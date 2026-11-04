@@ -73,8 +73,8 @@ const result = await SF.Composition.render(assembled.document, {registry});
   Если на странице работает Loader, ничего подключать вручную не нужно: он
   сам загружает смарт-компоненты по тегам. Без Loader `smart/<имя>`
   соответствует папке `distr/smart/<имя>/` поставки. Файла
-  `composition/layout` в поставке нет: колонки оформляет CSS страницы
-  (см. [Что выводят встроенные рендереры](/ru/guide/layouts/introduction/levels/#встроенные-типы)).
+  `composition/layout` в поставке нет: с `layout.columns` 1.1.0 сетку
+  колонок выводят утилиты SIMAI Framework из `core.css` (см. [Что выводят встроенные рендереры](/ru/guide/layouts/introduction/levels/#встроенные-типы)).
 - `ports` в `resolveRecipe()` реализует продукт: он читает входы и точные
   версии шаблонов после проверки доступа. Рендерер данные повторно не
   получает.

@@ -127,15 +127,15 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
-| Тег | `<sf-thread-list>` |
+| Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.thread-list`, версия `1.6.2` |
+| Контракт | `smart.chat-threads`, версия `1.7.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -183,18 +183,26 @@ noted in `SF.deprecations`.
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-thread-list-create` — `detail`: `{ kind?: string }`. Нажали «Новый разговор» или команду создания (`kind` — её `id`).
-- `sf-thread-list-open` — `detail`: `{ id: any }`. Человек просит открыть беседу (словарь open); хост записывает `selected` обратно. Имя версии 1.0 `sf-thread-list-select` отправляется после него до 2026-12-01.
-- `sf-thread-list-rename` — `detail`: `{ id: any, title: string }`. Разговор переименовали на месте; новое название видно сразу. Хост, который не может его сохранить, возвращает прежнее название через upsert.
-- `sf-thread-list-archive` — `detail`: `{ ids?: array, id: any }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).
-- `sf-thread-list-restore` — `detail`: `{ ids?: array, id: any }`. Восстановить `{ids, id}` (словарь restore). Имя версии 1.0 `sf-thread-list-unarchive` отправляется после него до 2026-12-01.
-- `sf-thread-list-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий хоста над строкой: `{action, scope: entry, ids, id}` (словарь apply). Имя версии 1.0 `sf-thread-list-action` отправляется после него до 2026-12-01.
-- `sf-thread-list-load-more` — `detail`: `{ direction: any }`. Конец списка показался на экране, пока `has-more`: `{direction: after}`.
-- `sf-thread-list-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно. Имя версии 1.0 `sf-thread-list-view` отправляется после него до 2026-12-01.
-- `sf-thread-list-select` — устаревший псевдоним события `sf-thread-list-open`: приходит с тем же `detail`, подписывайтесь на `sf-thread-list-open`.
-- `sf-thread-list-unarchive` — устаревший псевдоним события `sf-thread-list-restore`: приходит с тем же `detail`, подписывайтесь на `sf-thread-list-restore`.
-- `sf-thread-list-action` — устаревший псевдоним события `sf-thread-list-apply`: приходит с тем же `detail`, подписывайтесь на `sf-thread-list-apply`.
-- `sf-thread-list-view` — устаревший псевдоним события `sf-thread-list-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-thread-list-toggle`.
+- `sf-chat-threads-create` — `detail`: `{ kind?: string }`. Нажали «Новый разговор» или команду создания (`kind` — её `id`).
+- `sf-chat-threads-open` — `detail`: `{ id: any }`. Человек просит открыть беседу (словарь open); хост записывает `selected` обратно. Имя версии 1.0 `sf-thread-list-select` отправляется после него до 2026-12-01.
+- `sf-chat-threads-rename` — `detail`: `{ id: any, title: string }`. Разговор переименовали на месте; новое название видно сразу. Хост, который не может его сохранить, возвращает прежнее название через upsert.
+- `sf-chat-threads-archive` — `detail`: `{ ids?: array, id: any }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).
+- `sf-chat-threads-restore` — `detail`: `{ ids?: array, id: any }`. Восстановить `{ids, id}` (словарь restore). Имя версии 1.0 `sf-thread-list-unarchive` отправляется после него до 2026-12-01.
+- `sf-chat-threads-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий хоста над строкой: `{action, scope: entry, ids, id}` (словарь apply). Имя версии 1.0 `sf-thread-list-action` отправляется после него до 2026-12-01.
+- `sf-chat-threads-load-more` — `detail`: `{ direction: any }`. Конец списка показался на экране, пока `has-more`: `{direction: after}`.
+- `sf-chat-threads-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно. Имя версии 1.0 `sf-thread-list-view` отправляется после него до 2026-12-01.
+- `sf-thread-list-select` — устаревший псевдоним события `sf-chat-threads-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-open`.
+- `sf-thread-list-unarchive` — устаревший псевдоним события `sf-chat-threads-restore`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-restore`.
+- `sf-thread-list-action` — устаревший псевдоним события `sf-chat-threads-apply`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-apply`.
+- `sf-thread-list-view` — устаревший псевдоним события `sf-chat-threads-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-toggle`.
+- `sf-thread-list-create` — устаревший псевдоним события `sf-chat-threads-create`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-create`.
+- `sf-thread-list-open` — устаревший псевдоним события `sf-chat-threads-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-open`.
+- `sf-thread-list-rename` — устаревший псевдоним события `sf-chat-threads-rename`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-rename`.
+- `sf-thread-list-archive` — устаревший псевдоним события `sf-chat-threads-archive`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-archive`.
+- `sf-thread-list-restore` — устаревший псевдоним события `sf-chat-threads-restore`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-restore`.
+- `sf-thread-list-apply` — устаревший псевдоним события `sf-chat-threads-apply`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-apply`.
+- `sf-thread-list-load-more` — устаревший псевдоним события `sf-chat-threads-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-load-more`.
+- `sf-thread-list-toggle` — устаревший псевдоним события `sf-chat-threads-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-toggle`.
 
 ### Доступность
 
@@ -206,10 +214,10 @@ noted in `SF.deprecations`.
 ### Минимальная разметка
 
 ```html
-<sf-thread-list selected="t1"></sf-thread-list>
+<sf-chat-threads selected="t1"></sf-chat-threads>
 ```
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/thread-list`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/thread-list/rule.js#name=cl-thread-list`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/chat-threads`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

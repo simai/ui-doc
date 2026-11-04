@@ -5,15 +5,18 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
-`<sf-change-confirm>` — карточка подготовленного изменения, которое ждёт
+`<sf-confirm-change>` — карточка подготовленного изменения, которое ждёт
 «да» или «нет» человека: каждое значение как было и как станет, два
 равноценных ответа, срок, до которого можно ответить, а после ответа —
 только итог. Так спрашивают о предложении ассистента, правке коллеги,
 импорте перед записью. Карточка ничего не применяет: нажатие — это событие.
 
-**Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
-Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
-Лицензия и подключение — на странице [Pro](/ru/pro/#лицензия).
+**Теперь в SIMAI Framework.** С выпуска `ui-c3015f76bcc2` карточка входит в
+выпуск SIMAI Framework под тегом `<sf-confirm-change>`, а пакет `pro` её
+больше не поставляет. Прежний тег `<sf-change-confirm>` работает до
+2027-01-01. Рядом с ней в Framework — `<sf-confirm>`: тот же вопрос без
+«было и станет», например удаление, о котором спрашивают в строке; оба
+описаны в справочнике ниже.
 
 ## Пример
 
@@ -59,7 +62,7 @@ Framework: поставляется пакетом `pro` из репозитор
 После ответа приложение ставит `state`: `accepted` — подтверждено,
 `declined` — отклонено. Если ответ доставить не удалось, верните `open`.
 После `expires-at` открытая карточка читается как `expired` и один раз
-отправляет `sf-change-confirm-expired`.
+отправляет `sf-confirm-change-expired`.
 
 :::example {id="smart-components/change-confirm/state-outcome" label="Подтверждено, отклонено и истёк срок"}
 :::
@@ -68,17 +71,19 @@ Framework: поставляется пакетом `pro` из репозитор
 
 ### Ответ и события
 
-Ответ человека приходит событием `sf-change-confirm-answer` с
+Ответ человека приходит событием `sf-confirm-change-answer` с
 `{id, accepted}`: `id` — значение `change-id`, `accepted` — `true` для «да» и
 `false` для «нет». Приложение применяет или отклоняет изменение и ставит
 итог. Если отменить событие (`preventDefault()`), вопрос остаётся открытым.
 `answer({accepted: true})` и `answer({accepted: false})` отвечают из кода, как
 человек. Прежние имена `sf-change-confirm-accept`, `-decline` и `-expire` и
-вызов `answer('accept')` работают до 2026-12-01.
+вызов `answer('accept')` работают до 2026-12-01, имена
+`sf-change-confirm-answer` и `sf-change-confirm-expired` — до 2027-01-01, как
+и прежний тег.
 
 ```js
-const card = document.querySelector('sf-change-confirm');
-card.addEventListener('sf-change-confirm-answer', async (event) => {
+const card = document.querySelector('sf-confirm-change');
+card.addEventListener('sf-confirm-change-answer', async (event) => {
   const {id, accepted} = event.detail;
   try {
     await (accepted ? api.apply(id) : api.reject(id));
@@ -100,21 +105,82 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
+### `<sf-confirm>`
+
 | | |
 |:---|:---|
-| Тег | `<sf-change-confirm>` |
-| Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.change-confirm`, версия `1.2.3` |
-| Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
+| Тег | `<sf-confirm>` |
+| Назначение | Вопрос человеку на месте — удаление, о котором спрашивают в его строке, исключение участника, сброс вида: что произойдёт, два ответа, состояние ожидания, пока ответ применяется, итог и необязательный срок, после которого вопрос истекает. Сам ничего не применяет: нажатие — это событие. |
+| Контракт | `smart.confirm`, версия `1.0.0` |
+| Поставка | выпуск Framework `ui-c3015f76bcc2` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 
-### Атрибуты
+#### Атрибуты
+
+- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `question` — `string`, по умолчанию пусто. Вопрос, сказанный на месте: что произойдёт, одним предложением («Удалить файл «Отчёт.pdf»?»). Он же называет группу; без него группа называется «Подтверждение».
+- `state` — `string`, по умолчанию `open`, значения: `open`, `pending`, `accepted`, `declined`, `expired`. open: ответы предложены. pending: ответ отправляется (ставится нажатием). accepted, declined, expired: виден только итог.
+- `expires-at` — `string`, по умолчанию пусто. ISO 8601. После этого срока открытый вопрос считается истёкшим и один раз сообщает об этом событием `sf-confirm-expired`.
+- `confirm-id` — `string`, по умолчанию пусто. Имя вопроса у хоста (строка, запись); возвращается в каждом событии.
+- `disabled` — `boolean`, по умолчанию `false`. Ответы видны, но их нельзя нажать (где-то уже идёт отправка).
+- `destructive` — `boolean`, по умолчанию `false`. Согласие что-то уничтожает (удаление): у принимающего ответа статус error.
+- `appearance` — `string`, по умолчанию `inline`, значения: `inline`, `card`. inline: вопрос и ответы в потоке строки, без своей рамки. card: в карточке с рамкой и собственным отступом.
+- `accept-text` — `string`. Слова ответа «да»; пусто — «Подтвердить» на языке страницы.
+- `decline-text` — `string`. Отказывающий ответ; пусто — «Отмена» на языке страницы.
+
+#### Методы
+
+- `open()` — возвращает `object`. Задаёт вопрос снова; если его попросила сборка, отвечает `{accepted, reason, value}`, когда человек ответил или время вышло.
+- `answer(accepted: boolean)` — возвращает `object`. Отвечает, как ответил бы человек: `accepted` true подтверждает, false отказывается. Отказ: `unknown`, `closed`, `disabled` или `prevented`.
+- `confirm()` — возвращает `object`. Согласие; `data-sf-action="<id>.confirm"`.
+- `cancel()` — возвращает `object`. Отказывающий ответ; `data-sf-action="<id>.cancel"`. Escape внутри открытого вопроса — тот же ответ.
+
+#### События
+
+Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
+
+- `sf-confirm-answer` — `detail`: `{ id: any, accepted: boolean }`. Человек ответил (слово словаря answer). Отмените событие, чтобы вопрос остался открытым.
+- `sf-confirm-expired` — `detail`: `{ id: any }`. Открытый вопрос дождался `expires-at`; сообщается один раз на каждый срок.
+
+#### Доступность
+
+- Роль: группа (`group`).
+- Доступное имя: внутренний.
+- Клавиши: `Tab`, `Enter`, `Space`, `Escape`.
+- Фокус: Группа, названная своим вопросом. Строка состояния — вежливая живая область, которая есть на странице до того, как заговорит; когда нажатие убирает ответы, фокус переходит на неё, а не падает на страницу, и возвращается к первому ответу, если хост отменил. Escape внутри открытого вопроса — отказ.
+
+#### Минимальная разметка
+
+```html
+<sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-17" accept-text="Удалить" destructive></sf-confirm>
+```
+
+#### Источник
+
+- `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/confirm`
+- `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-confirm`
+
+### `<sf-confirm-change>`
+
+| | |
+|:---|:---|
+| Тег | `<sf-confirm-change>` |
+| Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
+| Контракт | `smart.confirm-change`, версия `1.4.0` |
+| Поставка | выпуск Framework `ui-c3015f76bcc2` |
+| [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
+| Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
+
+#### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
 - `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
@@ -129,37 +195,39 @@ card.addEventListener('sf-change-confirm-answer', async (event) => {
 - `decline-text` — `string`. Слова ответа «нет»; пусто — «Отклонить» на языке страницы.
 - `changes` — `array` из `object`, по умолчанию `[]`. Значения в JSON для разметки; свойство, заданное из скрипта, важнее.
 
-### Методы
+#### Методы
 
 - `open()` — возвращает `object`. Задаёт вопрос снова; если его попросила сборка, отвечает `{accepted, reason, value}`, когда человек ответил или время вышло.
 - `answer(accepted: boolean)` — возвращает `object`. Ответить, как ответил бы человек: `accepted` true подтверждает, false отклоняет. Отказ, если карточка закрыта, выключена или ответ отменён. `answer('accept')` и `answer('decline')` читаются до 2026-12-01.
 - `confirm()` — возвращает `object`. Согласие; `data-sf-action="<id>.confirm"`.
 - `cancel()` — возвращает `object`. Отказ; `data-sf-action="<id>.cancel"`.
 
-### События
+#### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-change-confirm-answer` — `detail`: `{ id: any, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
-- `sf-change-confirm-expired` — `detail`: `{ id: any }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
-- `sf-change-confirm-accept` — устаревший псевдоним события `sf-change-confirm-answer`: приходит с тем же `detail`, подписывайтесь на `sf-change-confirm-answer`.
-- `sf-change-confirm-decline` — устаревший псевдоним события `sf-change-confirm-answer`: приходит с тем же `detail`, подписывайтесь на `sf-change-confirm-answer`.
-- `sf-change-confirm-expire` — устаревший псевдоним события `sf-change-confirm-expired`: приходит с тем же `detail`, подписывайтесь на `sf-change-confirm-expired`.
+- `sf-confirm-change-answer` — `detail`: `{ id: any, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
+- `sf-confirm-change-expired` — `detail`: `{ id: any }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
+- `sf-change-confirm-accept` — устаревший псевдоним события `sf-confirm-change-answer`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-answer`.
+- `sf-change-confirm-decline` — устаревший псевдоним события `sf-confirm-change-answer`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-answer`.
+- `sf-change-confirm-expire` — устаревший псевдоним события `sf-confirm-change-expired`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-expired`.
+- `sf-change-confirm-answer` — устаревший псевдоним события `sf-confirm-change-answer`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-answer`.
+- `sf-change-confirm-expired` — устаревший псевдоним события `sf-confirm-change-expired`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-expired`.
 
-### Доступность
+#### Доступность
 
 - Роль: область (`region`).
 - Доступное имя: внутренний.
 - Клавиши: `Tab`, `Enter`, `Space`.
 - Фокус: Раздел, названный заголовком (role=heading уровня heading-level). Значения — список описаний. Строка состояния — вежливая живая область, которая есть на странице до того, как заговорит; когда нажатие убирает ответы, фокус переходит на неё, а не падает на страницу, и возвращается на первый ответ, если хост отменил событие.
 
-### Минимальная разметка
+#### Минимальная разметка
 
 ```html
-<sf-change-confirm heading="Переименовать раздел" change-id="c1" changes='[{"label":"Название","before":"Новости","after":"События"}]'></sf-change-confirm>
+<sf-confirm-change heading="Переименовать раздел" change-id="c1" changes='[{"label":"Название","before":"Новости","after":"События"}]'></sf-confirm-change>
 ```
 
-### Источник
+#### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/change-confirm`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/change-confirm/rule.js#name=cl-change-confirm`
+- `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/confirm-change`
+- `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-confirm-change`

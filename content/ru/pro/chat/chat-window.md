@@ -239,7 +239,7 @@ Escape закрывает его и возвращает фокус на ком�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -247,7 +247,7 @@ Escape закрывает его и возвращает фокус на ком�
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту хоста simai.chat-port 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт хост, он же отвечает на каждое намерение — через порт или действие settle. |
-| Контракт | `smart.chat-window`, версия `1.9.1` |
+| Контракт | `smart.chat-window`, версия `1.10.5` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -257,7 +257,7 @@ Escape закрывает его и возвращает фокус на ком�
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
 - `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
 - `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
-- `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (`assistant`, `people`, `files`, `edit`, `delete`, `feedback`, `proposals`, `conversation-create`, `conversation-manage`, `interlocutors`, `read`), и расширения окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`, `x-conversation-pin`, `x-early-upload`, `x-my-files`, `x-brief`, `x-conversation-start`, `x-members`, `x-members-manage`, `x-reactions`, `x-reply`). Что не объявлено, то не предлагается: на такое намерение приходит ответ «недоступно» без события. Свойство принимает и массив.
+- `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает хост, через пробел (`assistant`, `people`, `files`, `edit`, `delete`, `feedback`, `proposals`, `conversation-create`, `conversation-manage`, `interlocutors`, `read`), и расширения окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`, `x-conversation-pin`, `x-early-upload`, `x-my-files`, `x-brief`, `x-conversation-start`, `x-members`, `x-members-manage`, `x-reactions`, `x-reply`, `x-threads`). Что не объявлено, то не предлагается: на такое намерение приходит ответ «недоступно» без события. Свойство принимает и массив.
 - `landmark` — `string`, по умолчанию `main`, значения: `main`, `section`. `main`, когда окно и есть страница; `section` внутри страницы со своим `main`.
 - `heading-level` — `integer`, по умолчанию `1`, значения: от 1; до 2. Уровень собственных заголовков окна (разговор, приветствие): `2` внутри чужой страницы.
 - `embedded` — `boolean`, по умолчанию `false`. Встроено в страницу хоста: окно берёт высоту контейнера и рисует свою рамку.
@@ -311,7 +311,7 @@ Escape закрывает его и возвращает фокус на ком�
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-chat-window-open` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`), запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`) либо рядом с разговором вот-вот откроется предпросмотр источника (1.2.0: kind `preview`, intent `preview.open`, payload `{source}`; это действие самого окна, хосту ничего не передаётся; отмените событие, чтобы предпросмотр не открылся, — тогда сноска открывает список источников). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Либо запрошены участники группы (1.4.0, `x-members`, `members.list {conversation_id}`, kind `members`; прежнего имени нет). Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01.
+- `sf-chat-window-open` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор открыт из списка (порт `conversation.open {conversation_id}`, kind `conversation`), показан архив или текущий список (`x-archive-view`, `conversations.view {archived}`, kind `list`), запрошены «Мои файлы» (`x-my-files`, `files.list`, kind `files`) либо рядом с разговором вот-вот откроется предпросмотр источника (1.2.0: kind `preview`, intent `preview.open`, payload `{source}`; это действие самого окна, хосту ничего не передаётся; отмените событие, чтобы предпросмотр не открылся, — тогда сноска открывает список источников). Было `chat-port:open`, `chat-window:view`, `chat-window:files`. Либо запрошены участники группы (1.4.0, `x-members`, `members.list {conversation_id}`, kind `members`; прежнего имени нет). Имена 0.3 `chat-port:open`, `chat-window:view`, `chat-window:files {request_id, ...payload}` отправляются после него до 2026-12-01. Либо запрошено обсуждение сообщения (`x-threads`, `thread.open`, kind `thread`).
 - `sf-chat-window-load-more` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Более ранние сообщения (порт `history.older {conversation_id, before_id}`, kind `history`) или следующая страница списка (`x-conversations-paging`, `conversations.more {archived}`, kind `conversations`). Было `chat-port:older`, `chat-window:more`. Имена 0.3 `chat-port:older`, `chat-window:more {request_id, ...payload}` отправляются после него до 2026-12-01.
 - `sf-chat-window-submit` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Сообщение отправлено (порт message.send {conversation_id, body, files, client_key, interlocutor}): из поля, подсказка, ответ на бриф или повторённый вопрос. Было chat-port:send. Прежнее chat-port:send {request_id, ...payload} идёт следом до 2026-12-01. Отправка в ответ на сообщение (x-reply) — это message.reply, kind reply, те же данные плюс reply_to_id.
 - `sf-chat-window-retry` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. То же сообщение заново по его `client_key` (порт `message.retry`, kind `message`) или неудавшийся файл сообщения (порт `file.retry {conversation_id, message_id, file_key}`, kind `file`). Было `chat-port:retry`, `chat-port:file-retry`. Имена 0.3 `chat-port:retry`, `chat-port:file-retry {request_id, ...payload}` отправляются после него до 2026-12-01.
@@ -375,8 +375,8 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/chat-window`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/chat-window`
+- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

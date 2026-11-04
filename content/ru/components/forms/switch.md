@@ -232,7 +232,7 @@ input, класс из `attrs.class` — на оболочку.
 | `--sf-switch-toggler--border-start-start-radius` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-radius, var(--sf-radius-circle))` | `border-start-start-radius` |
 | `--sf-switch-toggler--border-style` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `solid` | `border-style` |
 | `--sf-switch-toggler--border-width` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch-border-width, var(--sf-px))` | `border-width`, `--sf-switch-toggler--padding-bottom`, `--sf-switch-toggler--padding-inline-end`, `--sf-switch-toggler--padding-inline-start`, `--sf-switch-toggler--padding-top` |
-| `--sf-switch-toggler--box-shadow` | не задана; задают модификаторы, например `.sf-switch[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-switch-toggler`: `none` | `box-shadow` |
+| `--sf-switch-toggler--box-shadow` | не задана; задают модификаторы, например `.sf-switch:has(input:not(:disabled):not(.disabled).focus-visible) .sf-switch-toggler`: `none` | `box-shadow` |
 | `--sf-switch-toggler--height` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `var(--sf-switch--track-height)` | `height` |
 | `--sf-switch-toggler--padding-bottom` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `calc(var(--sf-switch--seat) - var(--sf-switch-toggler--border-width))` | `padding-bottom` |
 | `--sf-switch-toggler--padding-inline-end` | не задана; задают модификаторы, например `.sf-switch .sf-switch-toggler`: `calc(var(--sf-switch--seat) - var(--sf-switch-toggler--border-width))` | `padding-inline-end` |

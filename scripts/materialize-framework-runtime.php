@@ -40,11 +40,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = '2f9a934f50ea89c4793d19d16f729a7874007b54';
-const UI_RUNTIME_REVISION = 'c4d39d528148cc8fbb1b1dadc5294462a2aaa812';
-const SOURCE_REVISION = 'b94f978de04c0ba77cc66c40b1b33510059c4972';
-const BUILDER_REVISION = 'a89508ce28acf00ca5b987059a424bfe1039f187';
-const RELEASE_LOCK = 'contracts/releases/ui-c4d39d528148.lock.json';
+const UI_METADATA_REVISION = '0f6029f5e8ca9adf76be91ed8e6953da2a08289e';
+const UI_RUNTIME_REVISION = 'c3015f76bcc20cd502d5fe7931495e35711d6a4d';
+const SOURCE_REVISION = '4863a40e221cba7684cd0c7d860b286613d3e8c4';
+const BUILDER_REVISION = '9c9c1b1510393b24adb98ea2ca523b26474cf0cf';
+const RELEASE_LOCK = 'contracts/releases/ui-c3015f76bcc2.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -52,7 +52,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-c4d39d528148.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261102.1446';
+const NPM_VERSION = '5.20261104.451';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
@@ -63,10 +63,10 @@ const NPM_VERSION = '5.20261102.1446';
 const PACKAGES = [
     'pro' => [
         'repository' => 'simai/ui-pro',
-        'revision' => '5d68df26ef3d34669be874d096a7bb9c62495a11',
+        'revision' => '978d513cf4bf331e0f89aa201aefe608b90e9d1c',
         'path' => 'components',
-        'archive_sha256' => '0439d5525351979b4c07181343038d60a8efc7ddde20f9731a595377450b135c',
-        'builder' => 'a89508ce28acf00ca5b987059a424bfe1039f187',
+        'archive_sha256' => 'c32337ffaf509155d55a9db57d94d2fab0322e7056b52b9bfca2d129504643a3',
+        'builder' => '9c9c1b1510393b24adb98ea2ca523b26474cf0cf',
     ],
 ];
 
