@@ -109,7 +109,7 @@ document.addEventListener('sf-download-file-download', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -140,20 +140,21 @@ document.addEventListener('sf-download-file-download', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-download-file-download` | `{ href: string, fileName: string, download: boolean }` | — |
-| `sf-download-file:click` | `{ href?: string, fileName?: string, download?: boolean }` | устаревший псевдоним `sf-download-file-download`: подписывайтесь на `sf-download-file-download` |
+| `sf-file-download-download` | `{ href: string, fileName: string, download: boolean }` | — |
+| `sf-download-file:click` | `{ href?: string, fileName?: string, download?: boolean }` | устаревший псевдоним `sf-file-download-download`: подписывайтесь на `sf-file-download-download` |
+| `sf-download-file-download` | не описан | устаревший псевдоним `sf-file-download-download`: подписывайтесь на `sf-file-download-download` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-download-file>`, контракт `smart.download-file` версии `1.1.6` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль ссылка (`link`); доступное имя рекомендуется; клавиши `Tab` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/download-file` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-download-file` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/file-download` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-file-download` |
 
 ## См. также
 

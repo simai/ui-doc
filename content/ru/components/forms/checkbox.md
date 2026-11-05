@@ -213,7 +213,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-box--border-end-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-start-radius` |
 | `--sf-checkbox-box--border-start-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
 | `--sf-checkbox-box--border-start-start-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-start-start-radius` |
-| `--sf-checkbox-box--box-shadow` | не задана; задают модификаторы, например `.sf-checkbox[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-checkbox-box`: `none` | `box-shadow` |
+| `--sf-checkbox-box--box-shadow` | не задана; задают модификаторы, например `.sf-checkbox:has(input:not(:disabled):not(.disabled).focus-visible) .sf-checkbox-box`: `none` | `box-shadow` |
 | `--sf-checkbox-box--height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-checkbox-size, var(--sf-text-height-1/2))` | `height` |
 | `--sf-checkbox-box--width` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-box`: `var(--sf-checkbox-size, var(--sf-text-height-1/2))` | `width` |
 | `--sf-checkbox-container--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-container`: `transparent` | `background-color` |
@@ -223,7 +223,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | `--sf-checkbox-description--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-description`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-checkbox-description--line-height` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-description`: `var(--sf-text-height-1/3)` | `line-height` |
 | `--sf-checkbox-label--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `transparent` | `background-color` |
-| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox:not(.error)[:has(input:not(:checked))] .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
+| `--sf-checkbox-label--color` | не задана; задают модификаторы, например `.sf-checkbox:not(.error):has(input:not(:checked)) .sf-checkbox-label`: `var(--sf-on-surface)` | `color` |
 | `--sf-checkbox-label--font-family` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-text--family)` | `font-family` |
 | `--sf-checkbox-label--font-size` | не задана; задают модификаторы, например `.sf-checkbox.sf-checkbox--size-1/2 .sf-checkbox-label`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-checkbox-label--font-weight` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-label`: `var(--sf-font-weight-medium)` | `font-weight` |

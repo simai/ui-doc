@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-606 переменных, которые объявляет ядро, со значениями по умолчанию.
+648 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -629,6 +629,39 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-0` | `0` |
+| `--sf-chart-1` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-chart-1-fill` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
+| `--sf-chart-1-fill-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` |
+| `--sf-chart-1-fill-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` |
+| `--sf-chart-2` | `light-dark(var(--sf-tone-rose-50), var(--sf-tone-rose-60))` |
+| `--sf-chart-2-fill` | `light-dark(var(--sf-tone-rose-50--alfa-12), var(--sf-tone-rose-50--alfa-24))` |
+| `--sf-chart-2-fill-active` | `light-dark(var(--sf-tone-rose-50--alfa-20), var(--sf-tone-rose-50--alfa-32))` |
+| `--sf-chart-2-fill-hover` | `light-dark(var(--sf-tone-rose-50--alfa-16), var(--sf-tone-rose-50--alfa-28))` |
+| `--sf-chart-3` | `light-dark(var(--sf-tone-green-30), var(--sf-tone-green-85))` |
+| `--sf-chart-3-fill` | `light-dark(var(--sf-tone-green-50--alfa-12), var(--sf-tone-green-50--alfa-24))` |
+| `--sf-chart-3-fill-active` | `light-dark(var(--sf-tone-green-50--alfa-20), var(--sf-tone-green-50--alfa-32))` |
+| `--sf-chart-3-fill-hover` | `light-dark(var(--sf-tone-green-50--alfa-16), var(--sf-tone-green-50--alfa-28))` |
+| `--sf-chart-4` | `light-dark(var(--sf-tone-violet-30), var(--sf-tone-violet-85))` |
+| `--sf-chart-4-fill` | `light-dark(var(--sf-tone-violet-50--alfa-12), var(--sf-tone-violet-50--alfa-24))` |
+| `--sf-chart-4-fill-active` | `light-dark(var(--sf-tone-violet-50--alfa-20), var(--sf-tone-violet-50--alfa-32))` |
+| `--sf-chart-4-fill-hover` | `light-dark(var(--sf-tone-violet-50--alfa-16), var(--sf-tone-violet-50--alfa-28))` |
+| `--sf-chart-5` | `light-dark(var(--sf-tone-lime-50), var(--sf-tone-lime-60))` |
+| `--sf-chart-5-fill` | `light-dark(var(--sf-tone-lime-50--alfa-12), var(--sf-tone-lime-50--alfa-24))` |
+| `--sf-chart-5-fill-active` | `light-dark(var(--sf-tone-lime-50--alfa-20), var(--sf-tone-lime-50--alfa-32))` |
+| `--sf-chart-5-fill-hover` | `light-dark(var(--sf-tone-lime-50--alfa-16), var(--sf-tone-lime-50--alfa-28))` |
+| `--sf-chart-6` | `light-dark(var(--sf-tone-teal-50), var(--sf-tone-teal-60))` |
+| `--sf-chart-6-fill` | `light-dark(var(--sf-tone-teal-50--alfa-12), var(--sf-tone-teal-50--alfa-24))` |
+| `--sf-chart-6-fill-active` | `light-dark(var(--sf-tone-teal-50--alfa-20), var(--sf-tone-teal-50--alfa-32))` |
+| `--sf-chart-6-fill-hover` | `light-dark(var(--sf-tone-teal-50--alfa-16), var(--sf-tone-teal-50--alfa-28))` |
+| `--sf-chart-7` | `light-dark(var(--sf-tone-amber-30), var(--sf-tone-amber-60))` |
+| `--sf-chart-7-fill` | `light-dark(var(--sf-tone-amber-50--alfa-12), var(--sf-tone-amber-50--alfa-24))` |
+| `--sf-chart-7-fill-active` | `light-dark(var(--sf-tone-amber-50--alfa-20), var(--sf-tone-amber-50--alfa-32))` |
+| `--sf-chart-7-fill-hover` | `light-dark(var(--sf-tone-amber-50--alfa-16), var(--sf-tone-amber-50--alfa-28))` |
+| `--sf-chart-8` | `light-dark(var(--sf-tone-sky-30), var(--sf-tone-sky-85))` |
+| `--sf-chart-8-fill` | `light-dark(var(--sf-tone-sky-50--alfa-12), var(--sf-tone-sky-50--alfa-24))` |
+| `--sf-chart-8-fill-active` | `light-dark(var(--sf-tone-sky-50--alfa-20), var(--sf-tone-sky-50--alfa-32))` |
+| `--sf-chart-8-fill-hover` | `light-dark(var(--sf-tone-sky-50--alfa-16), var(--sf-tone-sky-50--alfa-28))` |
+| `--sf-chart-midpoint` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
 | `--sf-color--alfa` | `1` |
 | `--sf-current` | `currentColor` |
 | `--sf-decoration--alfa` | `1` |
@@ -676,12 +709,15 @@ description: "Полный список переменных, которые о�
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
+| `--sf-scrim-color` | `var(--sf-black)` |
+| `--sf-scrim-opacity` | `var(--sf-opacity-60)` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
 | `--sf-skeleton-bar` | `var(--sf-text-size-1)` |
 | `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
 | `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` |
 | `--sf-tone-amber-30` | `#693c00` |
+| `--sf-tone-amber-60` | `#cb8024` |
 | `--sf-tone-amber-85` | `#ffcb98` |
 | `--sf-tone-amber-container` | `light-dark(var(--sf-tone-amber-50--alfa-20), var(--sf-tone-amber-50--alfa-32))` |
 | `--sf-tone-green-30` | `#00531f` |
@@ -691,15 +727,21 @@ description: "Полный список переменных, которые о�
 | `--sf-tone-indigo-85` | `#d1d0ff` |
 | `--sf-tone-indigo-container` | `light-dark(var(--sf-tone-indigo-50--alfa-20), var(--sf-tone-indigo-50--alfa-32))` |
 | `--sf-tone-lime-30` | `#4a4900` |
+| `--sf-tone-lime-50` | `#7d7b00` |
+| `--sf-tone-lime-60` | `#979523` |
 | `--sf-tone-lime-85` | `#dcda62` |
 | `--sf-tone-lime-container` | `light-dark(var(--sf-tone-lime-50--alfa-20), var(--sf-tone-lime-50--alfa-32))` |
 | `--sf-tone-rose-30` | `#7c2942` |
+| `--sf-tone-rose-50` | `#b85871` |
+| `--sf-tone-rose-60` | `#d7718b` |
 | `--sf-tone-rose-85` | `#ffc6d1` |
 | `--sf-tone-rose-container` | `light-dark(var(--sf-tone-rose-50--alfa-20), var(--sf-tone-rose-50--alfa-32))` |
 | `--sf-tone-sky-30` | `#004b72` |
 | `--sf-tone-sky-85` | `#afd9ff` |
 | `--sf-tone-sky-container` | `light-dark(var(--sf-tone-sky-50--alfa-20), var(--sf-tone-sky-50--alfa-32))` |
 | `--sf-tone-teal-30` | `#00504b` |
+| `--sf-tone-teal-50` | `#00857e` |
+| `--sf-tone-teal-60` | `#00a299` |
 | `--sf-tone-teal-85` | `#61e9de` |
 | `--sf-tone-teal-container` | `light-dark(var(--sf-tone-teal-50--alfa-20), var(--sf-tone-teal-50--alfa-32))` |
 | `--sf-tone-violet-30` | `#682e76` |

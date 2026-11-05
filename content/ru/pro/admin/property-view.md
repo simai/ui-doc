@@ -392,15 +392,15 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
-| Тег | `<sf-property-view>` |
+| Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт хоста. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.property-view`, версия `1.8.2` |
+| Контракт | `smart.view-properties`, версия `1.9.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -493,7 +493,7 @@ view: {
 
 ### Свойства в документе макета
 
-Узел типа `smart.property-view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
+Узел типа `smart.view-properties` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
 - свойства: `template`, `add-field-text`, `add-group-text`, `add-section-text`, `back-label`, `cancel-configuring-text`, `cancel-name-text`, `cancel-text`, `changed-text`, `close-label`, `collection`, `collection-icon`, `collection-label`, `configure-hint-narrow-text`, `configure-hint-text`, `configure-text`, `conflict-text`, `copy-link-label`, `delete-text`, `done-configuring-text`, `edit-text`, `empty-record-text`, `empty-text`, `errors-text`, `favourite`, `favourite-label`, `field-label-text`, `field-settings-text`, `hidden-text`, `hide-rare-text`, `hint-text`, `in-this-group-text`, `inherited-text`, `link-copied-label`, `menu-label`, `move-down-text`, `move-up-text`, `new-group-title`, `new-section-title`, `no-match-text`, `open-full-label`, `panel`, `panel-label`, `panel-size`, `size`, `mode`, `panel-width`, `personal-layer-text`, `rare-text`, `record-id`, `remove-field-text`, `remove-group-text`, `remove-section-text`, `rename-text`, `reset-view-ask-text`, `reset-view-text`, `save-name-text`, `save-text`, `section-icon-text`, `section-icons`, `sections-as`, `sections-label`, `shared-layer-text`, `show-rare`, `show-rare-text`, `shown-text`, `unplaced-hint-text`, `unplaced-title`, `variant-text`, `view-conflict-text`, `view-denied-text`, `width-text`, `view-profile-label`, `add-view-text`, `new-view-text`, `delete-view-text`, `last-shared-view-text`, `full`, `open`, `aria-label`.
 
@@ -527,20 +527,31 @@ view: {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-property-view-close` — `detail`: `{ reason: any, record_id: any, unsaved_fields: array }`. Панель просит закрыть её (крестиком, Esc или «Отменить») и передаёт, сколько полей будет потеряно: изменённых и не сохранённых или введённых, но ещё не ставших значением.
-- `sf-property-view-open-full` — `detail`: `{ id: any, address: string, record_id: any }`. Пользователь запросил этот объект на полной странице по адресу, который передал хост.
-- `sf-property-view-saved` — `detail`: `{ id: any, revision?: string }`. Факт после применённого сохранения (`group.save` или `record.save`), словарь §4: `{id, revision}`.
-- `sf-property-view-failed` — `detail`: `{ reason: string, message?: string }`. Факт после записи, которую не удалось прочитать, `{reason, message}`: код хоста (record-unknown для устаревшей ссылки) и его фраза.
-- `sf-property-view-open` — `detail`: `{ field: string, value: object, answer: string }`. Просят открыть связанную запись, словарь §5 open: `{field, value, answer}`. Прежнее `sf-property-view-open-record` отправляется один раз после него до 2026-12-01 (aliases.json).
-- `sf-property-view-delete` — `detail`: `{ collection: string, revision: string, answer: string, record_id: any }`. Просили удалить запись, и хост ответил, словарь §5 delete: `{record_id, collection, revision, answer}`. Прежнее `sf-property-view-delete-record` отправляется один раз после него до 2026-12-01 (aliases.json).
-- `sf-property-view-created` — `detail`: `{ collection: string|null, record_id: any }`. Форма создания создала объект; хост может перейти к его собственному месту. Компонент показывает новый объект в режиме auto.
-- `sf-property-view-cancel` — `detail`: `{ mode: any, scope?: any, section?: string, group?: string }`. Правка отменена; введённое человеком отбрасывается. Поверхность, открытая целиком (edit, create), не передаёт scope, и хост решает, к чему это ведёт (панель закрывается); отмена одной группы (с 1.7.0) передаёт scope group с её разделом и группой, чтобы хост, следящий за несохранённой работой, узнал, что записи отброшены.
-- `sf-property-view-state` — `detail`: `{ state: string, message: string }`.
-- `sf-property-view-address-copy` — ничего не передаёт. Адрес окна скопирован, или браузер отказал в доступе к буферу обмена.
-- `sf-property-view-favourite` — `detail`: `{ collection: string|null, favourite: boolean, record_id: any }`. Нажата звезда. Передаёт запись, коллекцию и запрошенное состояние; компонент ничего не меняет, пока хост не установит favourite обратно.
-- `sf-property-view-delete-record` — устаревший псевдоним события `sf-property-view-delete`: приходит с тем же `detail`, подписывайтесь на `sf-property-view-delete`.
-- `sf-property-view-open-record` — устаревший псевдоним события `sf-property-view-open`: приходит с тем же `detail`, подписывайтесь на `sf-property-view-open`.
+- `sf-view-properties-close` — `detail`: `{ reason: any, record_id: any, unsaved_fields: array }`. Панель просит закрыть её (крестиком, Esc или «Отменить») и передаёт, сколько полей будет потеряно: изменённых и не сохранённых или введённых, но ещё не ставших значением.
+- `sf-view-properties-open-full` — `detail`: `{ id: any, address: string, record_id: any }`. Пользователь запросил этот объект на полной странице по адресу, который передал хост.
+- `sf-view-properties-saved` — `detail`: `{ id: any, revision?: string }`. Факт после применённого сохранения (`group.save` или `record.save`), словарь §4: `{id, revision}`.
+- `sf-view-properties-failed` — `detail`: `{ reason: string, message?: string }`. Факт после записи, которую не удалось прочитать, `{reason, message}`: код хоста (record-unknown для устаревшей ссылки) и его фраза.
+- `sf-view-properties-open` — `detail`: `{ field: string, value: object, answer: string }`. Просят открыть связанную запись, словарь §5 open: `{field, value, answer}`. Прежнее `sf-property-view-open-record` отправляется один раз после него до 2026-12-01 (aliases.json).
+- `sf-view-properties-delete` — `detail`: `{ collection: string, revision: string, answer: string, record_id: any }`. Просили удалить запись, и хост ответил, словарь §5 delete: `{record_id, collection, revision, answer}`. Прежнее `sf-property-view-delete-record` отправляется один раз после него до 2026-12-01 (aliases.json).
+- `sf-view-properties-created` — `detail`: `{ collection: string|null, record_id: any }`. Форма создания создала объект; хост может перейти к его собственному месту. Компонент показывает новый объект в режиме auto.
+- `sf-view-properties-cancel` — `detail`: `{ mode: any, scope?: any, section?: string, group?: string }`. Правка отменена; введённое человеком отбрасывается. Поверхность, открытая целиком (edit, create), не передаёт scope, и хост решает, к чему это ведёт (панель закрывается); отмена одной группы (с 1.7.0) передаёт scope group с её разделом и группой, чтобы хост, следящий за несохранённой работой, узнал, что записи отброшены.
+- `sf-view-properties-state` — `detail`: `{ state: string, message: string }`.
+- `sf-view-properties-address-copy` — ничего не передаёт. Адрес окна скопирован, или браузер отказал в доступе к буферу обмена.
+- `sf-view-properties-favourite` — `detail`: `{ collection: string|null, favourite: boolean, record_id: any }`. Нажата звезда. Передаёт запись, коллекцию и запрошенное состояние; компонент ничего не меняет, пока хост не установит favourite обратно.
+- `sf-property-view-delete-record` — устаревший псевдоним события `sf-view-properties-delete`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-delete`.
+- `sf-property-view-open-record` — устаревший псевдоним события `sf-view-properties-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-open`.
 - `sf-host-port-request` — `detail`: `{ component?: object, context?: object }`. Запрашивает у страницы порт хоста — один раз за подключение и только пока у элемента его нет. Общее соглашение для всех компонентов, принимающих `setHostPort`. Ответ — вызов `setHostPort` на цели события, сразу или позже.
+- `sf-property-view-close` — устаревший псевдоним события `sf-view-properties-close`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-close`.
+- `sf-property-view-open-full` — устаревший псевдоним события `sf-view-properties-open-full`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-open-full`.
+- `sf-property-view-saved` — устаревший псевдоним события `sf-view-properties-saved`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-saved`.
+- `sf-property-view-failed` — устаревший псевдоним события `sf-view-properties-failed`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-failed`.
+- `sf-property-view-open` — устаревший псевдоним события `sf-view-properties-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-open`.
+- `sf-property-view-delete` — устаревший псевдоним события `sf-view-properties-delete`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-delete`.
+- `sf-property-view-created` — устаревший псевдоним события `sf-view-properties-created`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-created`.
+- `sf-property-view-cancel` — устаревший псевдоним события `sf-view-properties-cancel`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-cancel`.
+- `sf-property-view-state` — устаревший псевдоним события `sf-view-properties-state`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-state`.
+- `sf-property-view-address-copy` — устаревший псевдоним события `sf-view-properties-address-copy`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-address-copy`.
+- `sf-property-view-favourite` — устаревший псевдоним события `sf-view-properties-favourite`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-favourite`.
 
 ### Доступность
 
@@ -552,13 +563,13 @@ view: {
 ### Минимальная разметка
 
 ```html
-<sf-property-view collection="storage" record-id="42" aria-label="Запись"></sf-property-view>
+<sf-view-properties collection="storage" record-id="42" aria-label="Запись"></sf-view-properties>
 ```
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/property-view`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/property-view/rule.js#name=cl-property-view`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/view-properties`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

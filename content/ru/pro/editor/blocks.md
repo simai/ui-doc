@@ -30,12 +30,20 @@ description: "Набор автора блока: шаблон, генерато
   версия схемы 1): документы с блоком и то, что они рисуют.
 
 Набор лежит в репозитории SIMAI Framework, в папке
-[`kits/block/`](https://github.com/simai/ui-source/tree/5eb3ae23dad4ada5ec7aa58b039f02a1c0702e23/kits/block):
+[`kits/block/`](https://github.com/simai/ui-source/tree/4863a40e221cba7684cd0c7d860b286613d3e8c4/kits/block):
 шаблон, с которого начинают, генератор и проверка, которую разработчик
-запускает на своём блоке. Пример `kits/block/examples/sample-quote/` — блок
-`sample.quote` (цитата с автором), сделанный только средствами набора. Набор
-вышел в паре `ui-8e1a016a28a0`. Он лежит вне исходников SIMAI Framework
-(`src/`): в поставку не собирается и версий модулей не меняет.
+запускает на своём блоке. Набор вышел в паре `ui-8e1a016a28a0`; эти
+инструменты лежат вне исходников SIMAI Framework (`src/`), в поставку не
+собираются и версий модулей не меняют.
+
+Примеры блоков, сделанных только средствами набора, — `sample.quote`
+(цитата с автором) и `sample.cards` (блок с данными: место в каталоге,
+варианты, параметры раскладки, именованное место и привязка к хосту). Они
+лежат в `src/core/kits/block/` и с выпуска `ui-c3015f76bcc2` входят в
+поставку целиком: `distr/core/kits/block/sample-quote/` и
+`distr/core/kits/block/sample-cards/` в пакете `@simai-studio/ui`. Хост может
+загрузить их с CDN, например
+`https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261105.829/distr/core/kits/block/sample-quote/type.json`.
 
 ## Быстрый старт
 
@@ -333,13 +341,13 @@ HTML рендерера — это и предпросмотр блока в р�
 недостающее слово, отсутствие примера, который блок отклоняет.
 
 ```text
-SIMAI Framework block check: sample.quote 1.0.0 (kits/block/examples/sample-quote)
+SIMAI Framework block check: sample.quote 1.1.0 (src/core/kits/block/sample-quote)
   PASS  manifest  the type and editor manifests are valid
   PASS  renderer  the renderer is registered and draws the block
   PASS  form      the parameter form builds from the editor manifest
   PASS  output    JSON to HTML gives the expected output, and the output is safe
   PASS  unknown   an unknown type stays safe, the block is kept byte for byte
-BLOCK_CHECK_PASS sample.quote@1.0.0 groups=5 cases=7 warnings=0
+BLOCK_CHECK_PASS sample.quote@1.1.0 groups=5 cases=7 warnings=0
 ```
 
 Код выхода — 0, если блок прошёл, 1 — если не прошёл, 2 — если проверка не
@@ -351,4 +359,5 @@ BLOCK_CHECK_PASS sample.quote@1.0.0 groups=5 cases=7 warnings=0
 - [Собственный тип](/ru/guide/layouts/reference/custom-type/) — регистрация типа и рендерера.
 - [Манифест типа](/ru/guide/layouts/reference/type-manifest/) — поля `simai.composition.type-manifest`.
 - [Диагностика](/ru/guide/layouts/reference/diagnostics/) — как читать коды ошибок документа.
-- [Набор автора блока на GitHub](https://github.com/simai/ui-source/tree/5eb3ae23dad4ada5ec7aa58b039f02a1c0702e23/kits/block) — шаблон, генератор, проверка и пример `sample.quote`.
+- [Набор автора блока на GitHub](https://github.com/simai/ui-source/tree/4863a40e221cba7684cd0c7d860b286613d3e8c4/kits/block) — шаблон, генератор и проверка.
+- [Примеры блоков на GitHub](https://github.com/simai/ui-source/tree/4863a40e221cba7684cd0c7d860b286613d3e8c4/src/core/kits/block) — `sample.quote` и `sample.cards`.

@@ -209,8 +209,8 @@ document.addEventListener('modal:before-close', (event) => {
 | `--sf-modal-hide-right` | не задана; задают модификаторы, например `.sf-modal-hide-button`: `var(--sf-space-2)` | `inset-inline-end` |
 | `--sf-modal-hide-top` | не задана; задают модификаторы, например `.sf-modal-hide-button`: `var(--sf-space-1/3)` | `top` |
 | `--sf-modal-iframe-min-height` | `var(--sf-g2)` | — |
-| `--sf-modal-overlay-background` | `var(--sf-black, #000)` | `background-color` |
-| `--sf-modal-overlay-opacity` | `var(--sf-opacity-60, 0.6)` | `opacity` |
+| `--sf-modal-overlay-background` | `var(--sf-scrim-color, var(--sf-black, #000))` | `background-color` |
+| `--sf-modal-overlay-opacity` | `var(--sf-scrim-opacity, var(--sf-opacity-60, 0.6))` | `opacity` |
 | `--sf-modal-surface-bg` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-background-color, var(--sf-surface-1, #fff))` | `background-color`, `--sf-badge--surface` |
 | `--sf-modal-surface-border-color` | не задана; задают модификаторы, например `.sf-modal-surface`: `var(--sf-modal-border-color, var(--sf-outline-variant, transparent))` | `border` |
 | `--sf-modal-surface-border-style` | не задана; задают модификаторы, например `.sf-modal-surface`: `solid` | `border` |

@@ -120,7 +120,7 @@ const result = await SF.Composition.render(doc, { registry });
 Для этого документа `result.html` такой:
 
 ```html
-<main data-sf-composition-id="page"><section data-sf-composition-id="intro"><h1 data-sf-composition-id="title">О компании</h1><div class="sf-composition-columns" data-sf-composition-id="grid" data-composition-columns="2"><div class="sf-composition-column"><p data-sf-composition-id="col-left">Мы делаем интерфейсы.</p></div><div class="sf-composition-column"><sf-button native-type="button" text="Связаться"></sf-button></div></div></section></main>
+<main data-sf-composition-id="page"><section class="p-y-8" data-sf-composition-id="intro"><div class="container m-inline-auto" data-sf-composition-part="frame"><div class="space-y-3" data-sf-composition-part="content"><h1 data-sf-composition-id="title">О компании</h1><div class="sf-composition-columns grid gap-4 grid-col-2" data-sf-composition-id="grid" data-composition-columns="2"><div class="sf-composition-column"><p data-sf-composition-id="col-left">Мы делаем интерфейсы.</p></div><div class="sf-composition-column"><sf-button native-type="button" text="Связаться"></sf-button></div></div></div></div></section></main>
 ```
 
 Атрибуты смарт-узла выводятся в алфавитном порядке: свойства узла

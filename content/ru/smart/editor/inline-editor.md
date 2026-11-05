@@ -112,7 +112,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -136,24 +136,27 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-inline-editor-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе |
-| `sf-inline-editor-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе |
-| `sf-inline-editor-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе |
-| `sf-inline-edit-input` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-inline-editor-input`: подписывайтесь на `sf-inline-editor-input` |
-| `sf-inline-edit-commit` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-inline-editor-change`: подписывайтесь на `sf-inline-editor-change` |
-| `sf-inline-edit-cancel` | `{ node_id?: string\\|null }` | устаревший псевдоним `sf-inline-editor-cancel`: подписывайтесь на `sf-inline-editor-cancel` |
+| `sf-editor-inline-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе |
+| `sf-editor-inline-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе |
+| `sf-editor-inline-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе |
+| `sf-inline-edit-input` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-editor-inline-input`: подписывайтесь на `sf-editor-inline-input` |
+| `sf-inline-edit-commit` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-editor-inline-change`: подписывайтесь на `sf-editor-inline-change` |
+| `sf-inline-edit-cancel` | `{ node_id?: string\\|null }` | устаревший псевдоним `sf-editor-inline-cancel`: подписывайтесь на `sf-editor-inline-cancel` |
+| `sf-inline-editor-input` | не описан | устаревший псевдоним `sf-editor-inline-input`: подписывайтесь на `sf-editor-inline-input` |
+| `sf-inline-editor-change` | не описан | устаревший псевдоним `sf-editor-inline-change`: подписывайтесь на `sf-editor-inline-change` |
+| `sf-inline-editor-cancel` | не описан | устаревший псевдоним `sf-editor-inline-cancel`: подписывайтесь на `sf-editor-inline-cancel` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-inline-editor>`, контракт `smart.inline-editor` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.4.0` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/inline-editor` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-inline-editor` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

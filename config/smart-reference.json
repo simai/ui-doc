@@ -2,9 +2,37 @@
   "schema": "ui-doc.smart-reference-config",
   "schema_version": 2,
   "pages": {
-    "data-view": "pro/admin/table.md"
+    "avatar-group": "smart/content/avatars.md",
+    "button-close": "smart/actions/close.md",
+    "button-copy": "smart/actions/copy-button.md",
+    "button-icon": "smart/actions/icon-buttons.md",
+    "chat-threads": "pro/chat/thread-list.md",
+    "confirm": "pro/admin/change-confirm.md",
+    "confirm-change": "pro/admin/change-confirm.md",
+    "editor-content": "pro/editor/content-editor.md",
+    "editor-inline": "smart/editor/inline-editor.md",
+    "editor-overlay": "smart/editor/composition-overlay.md",
+    "file-download": "smart/actions/download-file.md",
+    "header-page": "smart/composite/page-header.md",
+    "header-site": "smart/composite/site-header.md",
+    "input-code": "smart/forms/code-input.md",
+    "input-color": "smart/forms/color.md",
+    "input-country": "smart/forms/country-code.md",
+    "input-date": "smart/forms/datepicker.md",
+    "input-image": "smart/forms/image-field.md",
+    "input-lookup": "smart/forms/lookup.md",
+    "input-quantity": "smart/forms/quantity.md",
+    "input-rich": "smart/forms/rich-text.md",
+    "input-textarea": "smart/forms/textarea.md",
+    "menu-context": "smart/navigation/context-menu.md",
+    "slider-range": "smart/forms/range-slider.md",
+    "view": "pro/admin/table.md",
+    "view-properties": "pro/admin/property-view.md",
+    "view-table": "pro/admin/table.md"
   },
-  "skip": {},
+  "skip": {
+    "editor": "sf-editor (the block editor, simai/ui-pro components/src/smart/editor) has no page yet; its page comes with the editor documentation, not with a repin."
+  },
   "suppress": {
     "popover": {
       "sections": [
@@ -12,5 +40,6 @@
       ],
       "reason": "The ui-9fb0297bb5c2 and ui-ec56cef08625 manifests carry sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
     }
-  }
+  },
+  "why": "Folders renamed by the R2 tag renames (ui-c3015f76bcc2; the old tags stay aliases until 2027-01-01) keep the pages written under the old names."
 }

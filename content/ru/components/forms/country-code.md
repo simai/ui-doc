@@ -222,7 +222,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-flag-icon--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-flag-icon`: `transparent` | `background-color` |
 | `--sf-country-code-flag-icon--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-flag-icon`: `var(--sf-text-size-6)` | `font-size` |
 | `--sf-country-code-flag-icon--height` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-flag-icon`: `calc(var(--sf-text-height-1) * 3 / 4)` | `height` |
-| `--sf-country-code-flag-icon--opacity` | не задана; задают модификаторы, например `.sf-country-code[:has(input:disabled)] .sf-country-code-flag-icon`: `var(--sf-opacity-60)` | `opacity` |
+| `--sf-country-code-flag-icon--opacity` | не задана; задают модификаторы, например `.sf-country-code:has(input:disabled) .sf-country-code-flag-icon`: `var(--sf-opacity-60)` | `opacity` |
 | `--sf-country-code-flag-icon--width` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-flag-icon`: `calc(var(--sf-text-height-1) * 3 / 4 * 1.4)` | `width` |
 | `--sf-country-code-hint--color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-hint`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-country-code-hint--font-family` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-hint`: `var(--sf-text--family)` | `font-family` |

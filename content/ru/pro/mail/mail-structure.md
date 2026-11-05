@@ -97,7 +97,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,7 +105,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 |:---|:---|
 | Тег | `<sf-mail-structure>` |
 | Назначение | Структура письма в SIMAI Email Editor: параметры письма, по строке на блок и способ добавить блок. Строка выбирает, двигает, копирует и удаляет свой блок; точка между строками просит там новый блок; шапка и подвал закреплены. Элемент не хранит письмо и не меняет его; он сообщает, о чём попросил человек. |
-| Контракт | `smart.mail-structure`, версия `1.0.0` |
+| Контракт | `smart.mail-structure`, версия `1.0.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -113,8 +113,8 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто.
-- `root-style` — `string`, по умолчанию пусто.
+- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
+- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `selected` — `string`, по умолчанию пусто. Выбранный блок; пусто — выбраны параметры письма.
 - `rows` — `array` из `object`, по умолчанию `[]`. Блоки в порядке письма, по строке на блок: {id, title, summary, icon, family}. family отмечает место, которое есть в каждом письме (header, footer): оно не двигается, и за него ничего не встанет.
 - `inserter-items` — `array` из `object`, по умолчанию `[]`. Виды, которые предлагает точка вставки между строками, в форме sf-sortable: {value, label, icon, caption, keywords} и {type: 'heading', label}. Пусто — точек вставки нет.
@@ -156,5 +156,5 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/mail-structure`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-structure`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`

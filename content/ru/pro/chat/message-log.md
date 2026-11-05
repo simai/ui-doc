@@ -94,7 +94,7 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -102,7 +102,7 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 |:---|:---|
 | Тег | `<sf-message-log>` |
 | Назначение | Переписка прокручиваемой колонкой сообщений, которые рисует хост: сохраняет положение чтения, когда сверху добавляется история, следует за низом, только когда читатель внизу, объединяет подряд идущие сообщения одного автора и объявляет новое один раз. |
-| Контракт | `smart.message-log`, версия `1.2.4` |
+| Контракт | `smart.message-log`, версия `1.2.5` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -162,5 +162,5 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/message-log`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/message-log`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/message-log/rule.js#name=cl-message-log`

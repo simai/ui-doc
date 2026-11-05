@@ -114,7 +114,7 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -160,24 +160,27 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 |:---|:---|:---|
 | `change` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит. |
 | `input` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Отправляется при каждом изменении, перед ним, с тем же detail — как нативный файловый input отправляет input и change вместе. |
-| `sf-image-field-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Хост загружает его и задаёт сохранённое значение. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-image-field-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:remove` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-image-field-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:reject` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-image-field:select` | `{ file?: object, source?: string, value?: object, name?: string }` | устаревший псевдоним `sf-image-field-attach`: подписывайтесь на `sf-image-field-attach` |
-| `sf-image-field:remove` | `{ value?: object, name?: string }` | устаревший псевдоним `sf-image-field-detach`: подписывайтесь на `sf-image-field-detach` |
-| `sf-image-field:reject` | `{ files?: array, accept?: string, source?: string }` | устаревший псевдоним `sf-image-field-rejected`: подписывайтесь на `sf-image-field-rejected` |
+| `sf-input-image-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Хост загружает его и задаёт сохранённое значение. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
+| `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:remove` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
+| `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:reject` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
+| `sf-image-field:select` | `{ file?: object, source?: string, value?: object, name?: string }` | устаревший псевдоним `sf-input-image-attach`: подписывайтесь на `sf-input-image-attach` |
+| `sf-image-field:remove` | `{ value?: object, name?: string }` | устаревший псевдоним `sf-input-image-detach`: подписывайтесь на `sf-input-image-detach` |
+| `sf-image-field:reject` | `{ files?: array, accept?: string, source?: string }` | устаревший псевдоним `sf-input-image-rejected`: подписывайтесь на `sf-input-image-rejected` |
+| `sf-image-field-attach` | не описан | устаревший псевдоним `sf-input-image-attach`: подписывайтесь на `sf-input-image-attach` |
+| `sf-image-field-detach` | не описан | устаревший псевдоним `sf-input-image-detach`: подписывайтесь на `sf-input-image-detach` |
+| `sf-image-field-rejected` | не описан | устаревший псевдоним `sf-input-image-rejected`: подписывайтесь на `sf-input-image-rejected` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-image-field>`, контракт `smart.image-field` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя рекомендуется; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/image-field` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-image-field` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/input-image` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 

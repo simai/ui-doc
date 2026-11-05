@@ -109,7 +109,7 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -158,13 +158,13 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 
 | | |
 |:---|:---|
-| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.1.8` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.1.10` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль меню (`menu`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Space`, `F2`, `Delete`, `Escape` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/profile-picker` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-profile-picker` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/profile-picker` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-profile-picker` |
 
 ## См. также
 

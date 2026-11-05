@@ -26,7 +26,7 @@ description: "Начальный вид у каждого смарт-компо�
 
 С выпуска `ui-133dc02b833d` начальный вид поставляется у всех 59
 смарт-компонентов SIMAI Framework, а новые компоненты приходят уже с ним:
-`sf-contents`, `sf-pager` и `sf-search` в выпуске `ui-c4d39d528148`.
+`sf-contents`, `sf-pager` и `sf-search` в выпуске `ui-e22fefb3c1f8`.
 
 ## Снимок при построении
 
@@ -216,18 +216,18 @@ node scripts/snapshot-first-paint.mjs <папка сборки> --check
 
 ### Формы компонентов
 
-Раздел собран из манифестов выпуска `ui-c4d39d528148` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+Раздел собран из манифестов выпуска `ui-e22fefb3c1f8` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
 
 | Форма | Компоненты |
 |:---|:---|
-| `rows` | `<sf-data-view>` (свой скелетон), `<sf-table>` (свой скелетон), `<sf-thread-list>` (свой скелетон) |
-| `record` | `<sf-property-view>` (свой скелетон) |
+| `rows` | `<sf-chat-threads>` (свой скелетон), `<sf-view>` (свой скелетон), `<sf-view-table>` (свой скелетон) |
+| `record` | `<sf-view-properties>` (свой скелетон) |
 | `menu` | `<sf-admin-menu>`, `<sf-tree>` |
-| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-code-input>`, `<sf-color>`, `<sf-contents>`, `<sf-country-code>`, `<sf-datepicker>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-image-field>`, `<sf-include>` (свой скелетон), `<sf-inline-editor>`, `<sf-input>`, `<sf-lookup>`, `<sf-menu>`, `<sf-page-header>`, `<sf-pager>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-quantity>`, `<sf-range-slider>`, `<sf-rich-text>`, `<sf-site-header>`, `<sf-slider>`, `<sf-steps>`, `<sf-tabs>`, `<sf-textarea>`, `<sf-theme-generator>` |
+| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-contents>`, `<sf-editor-inline>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-header-page>`, `<sf-header-site>`, `<sf-include>` (свой скелетон), `<sf-input>`, `<sf-input-code>`, `<sf-input-color>`, `<sf-input-country>`, `<sf-input-date>`, `<sf-input-image>`, `<sf-input-lookup>`, `<sf-input-quantity>`, `<sf-input-rich>`, `<sf-input-textarea>`, `<sf-menu>`, `<sf-pager>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-slider>`, `<sf-slider-range>`, `<sf-steps>`, `<sf-tabs>`, `<sf-theme-generator>` |
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
-| `none` | `<sf-avatar>`, `<sf-avatars>`, `<sf-badge>`, `<sf-button>`, `<sf-button-group>`, `<sf-change-confirm>`, `<sf-checkbox>`, `<sf-close>`, `<sf-composition-overlay>`, `<sf-context-menu>`, `<sf-copy-button>`, `<sf-download-file>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-icon-button>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-search>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-tooltip>` |
+| `none` | `<sf-avatar>`, `<sf-avatar-group>`, `<sf-badge>`, `<sf-button>`, `<sf-button-close>`, `<sf-button-copy>`, `<sf-button-group>`, `<sf-button-icon>`, `<sf-checkbox>`, `<sf-confirm>`, `<sf-confirm-change>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-editor-overlay>`, `<sf-file-download>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-menu-context>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-search>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-tooltip>` |
 
-Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-content-editor>`, `<sf-mail-canvas>`, `<sf-mail-inspector>`, `<sf-mail-letters>`, `<sf-mail-library>`, `<sf-mail-structure>`.
+Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-editor>`, `<sf-editor-content>`, `<sf-mail-canvas>`, `<sf-mail-inspector>`, `<sf-mail-letters>`, `<sf-mail-library>`, `<sf-mail-structure>`.
 
 ## Первый кадр сборки
 

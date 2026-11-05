@@ -114,7 +114,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -179,8 +179,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/chat-composer`
-- `simai/ui-pro@5d68df26ef3d34669be874d096a7bb9c62495a11:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-composer`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 

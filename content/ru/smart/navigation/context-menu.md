@@ -387,7 +387,7 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -415,27 +415,6 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (14)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `position="inline-start"` | `position="start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="inline-end"` | `position="end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="top-inline-start"` | `position="top-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="top-inline-end"` | `position="top-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="bottom-inline-start"` | `position="bottom-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="bottom-inline-end"` | `position="bottom-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="left-top"` | `position="left-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="left-bottom"` | `position="left-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="right-top"` | `position="right-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="right-bottom"` | `position="right-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="inline-start-top"` | `position="inline-start-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="inline-start-bottom"` | `position="inline-start-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="inline-end-top"` | `position="inline-end-start"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `position="inline-end-bottom"` | `position="inline-end-end"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -457,28 +436,38 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-context-menu-select` | `{ id: string\\|null, entry: object, checked: boolean\\|null, group: string\\|null }` | Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым. |
-| `sf-context-menu-change` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Человек просит изменить настройку в строке значения: это запрос, он приходит до записи значения. Возникает после `select` и только если `select` не отменён; командная строка вызывает только `select`. Если отменить, ничего не меняется и строка сохраняет прежнее значение — вид никогда не показывает значение, которое хост не принял. |
-| `sf-context-menu-changed` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Факт изменения: значение записано в пункт, и строка его показывает. Хост, который только сохраняет сделанное человеком, слушает это событие и больше ничего. `reset` вызывает его по разу на каждую сдвинувшуюся строку; `set-value` и `set-all` его не вызывают: значение, заданное извне, обратно не сообщается (стандарт, §8). |
-| `sf-context-menu-reset` | нет | Человек попросил вернуть объявленные значения: это запрос. Если отменить, текущие значения остаются; иначе меню показывает объявленные, по разу на каждую сдвинувшуюся строку сообщает `changed` и ждёт, пока хост их сохранит, как при `sf-tabs-settings-reset`. |
-| `sf-context-menu-open` | нет | Открыто через openFor(). Всплывает и с composed: true; detail не передаётся. |
-| `sf-context-menu-opened` | нет | — |
-| `sf-context-menu-close` | `{ reason: any, unsaved: boolean }` | Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся. |
-| `sf-context-menu-closed` | `{ reason: any }` | — |
-| `sf-context-menu-search` | `{ query: string }` | Запрос поиска, на который отвечает хост (search.remote). |
-| `sf-context-menu-tab` | `{ id: string, index: number }` | Выбрана вкладка панели; хост показывает её строки. |
+| `sf-menu-context-select` | `{ id: string\\|null, entry: object, checked: boolean\\|null, group: string\\|null }` | Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым. |
+| `sf-menu-context-change` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Человек просит изменить настройку в строке значения: это запрос, он приходит до записи значения. Возникает после `select` и только если `select` не отменён; командная строка вызывает только `select`. Если отменить, ничего не меняется и строка сохраняет прежнее значение — вид никогда не показывает значение, которое хост не принял. |
+| `sf-menu-context-changed` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Факт изменения: значение записано в пункт, и строка его показывает. Хост, который только сохраняет сделанное человеком, слушает это событие и больше ничего. `reset` вызывает его по разу на каждую сдвинувшуюся строку; `set-value` и `set-all` его не вызывают: значение, заданное извне, обратно не сообщается (стандарт, §8). |
+| `sf-menu-context-reset` | нет | Человек попросил вернуть объявленные значения: это запрос. Если отменить, текущие значения остаются; иначе меню показывает объявленные, по разу на каждую сдвинувшуюся строку сообщает `changed` и ждёт, пока хост их сохранит, как при `sf-tabs-settings-reset`. |
+| `sf-menu-context-open` | нет | Открыто через openFor(). Всплывает и с composed: true; detail не передаётся. |
+| `sf-menu-context-opened` | нет | — |
+| `sf-menu-context-close` | `{ reason: any, unsaved: boolean }` | Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся. |
+| `sf-menu-context-closed` | `{ reason: any }` | — |
+| `sf-menu-context-search` | `{ query: string }` | Запрос поиска, на который отвечает хост (search.remote). |
+| `sf-menu-context-tab` | `{ id: string, index: number }` | Выбрана вкладка панели; хост показывает её строки. |
+| `sf-context-menu-select` | не описан | устаревший псевдоним `sf-menu-context-select`: подписывайтесь на `sf-menu-context-select` |
+| `sf-context-menu-change` | не описан | устаревший псевдоним `sf-menu-context-change`: подписывайтесь на `sf-menu-context-change` |
+| `sf-context-menu-changed` | не описан | устаревший псевдоним `sf-menu-context-changed`: подписывайтесь на `sf-menu-context-changed` |
+| `sf-context-menu-reset` | не описан | устаревший псевдоним `sf-menu-context-reset`: подписывайтесь на `sf-menu-context-reset` |
+| `sf-context-menu-open` | не описан | устаревший псевдоним `sf-menu-context-open`: подписывайтесь на `sf-menu-context-open` |
+| `sf-context-menu-opened` | не описан | устаревший псевдоним `sf-menu-context-opened`: подписывайтесь на `sf-menu-context-opened` |
+| `sf-context-menu-close` | не описан | устаревший псевдоним `sf-menu-context-close`: подписывайтесь на `sf-menu-context-close` |
+| `sf-context-menu-closed` | не описан | устаревший псевдоним `sf-menu-context-closed`: подписывайтесь на `sf-menu-context-closed` |
+| `sf-context-menu-search` | не описан | устаревший псевдоним `sf-menu-context-search`: подписывайтесь на `sf-menu-context-search` |
+| `sf-context-menu-tab` | не описан | устаревший псевдоним `sf-menu-context-tab`: подписывайтесь на `sf-menu-context-tab` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-context-menu>`, контракт `smart.context-menu` версии `1.5.2` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.6.0` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль меню (`menu`); доступное имя обязательно; клавиши `ArrowDown`, `ArrowUp`, `Home`, `End`, `ArrowRight`, `ArrowLeft`, `Enter`, `Space`, `Escape`, `Tab`, поиск по первым буквам |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/context-menu` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-context-menu` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/menu-context` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-menu-context` |
 
 ## См. также
 

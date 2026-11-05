@@ -113,7 +113,7 @@ document.addEventListener('sf-copy-button-copied', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -148,22 +148,24 @@ document.addEventListener('sf-copy-button-copied', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-copy-button-copied` | `{ text: string, method: any }` | — |
-| `sf-copy-button-copy-failed` | `{ code: any }` | — |
-| `sf-copy` | `{ text: string, method: any }` | устаревший псевдоним `sf-copy-button-copied`: подписывайтесь на `sf-copy-button-copied` |
-| `sf-copy-error` | `{ code: any }` | устаревший псевдоним `sf-copy-button-copy-failed`: подписывайтесь на `sf-copy-button-copy-failed` |
+| `sf-button-copy-copied` | `{ text: string, method: any }` | — |
+| `sf-button-copy-copy-failed` | `{ code: any }` | — |
+| `sf-copy` | `{ text: string, method: any }` | устаревший псевдоним `sf-button-copy-copied`: подписывайтесь на `sf-button-copy-copied` |
+| `sf-copy-error` | `{ code: any }` | устаревший псевдоним `sf-button-copy-copy-failed`: подписывайтесь на `sf-button-copy-copy-failed` |
+| `sf-copy-button-copied` | не описан | устаревший псевдоним `sf-button-copy-copied`: подписывайтесь на `sf-button-copy-copied` |
+| `sf-copy-button-copy-failed` | не описан | устаревший псевдоним `sf-button-copy-copy-failed`: подписывайтесь на `sf-button-copy-copy-failed` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-copy-button>`, контракт `smart.copy-button` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-button-copy>`, контракт `smart.button-copy` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль кнопка (`button`); доступное имя рекомендуется; клавиши `Enter`, `Space` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/copy-button` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-copy-button` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/button-copy` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-button-copy` |
 
 ## См. также
 

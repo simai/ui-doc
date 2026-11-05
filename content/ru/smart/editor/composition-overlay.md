@@ -192,7 +192,7 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -234,25 +234,30 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-composition-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран (или выбор снят): словарь 1.1.5 §5 select; в detail остаётся `node_id` для хоста композиции |
-| `sf-composition-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи (словарь §5 apply, стандарт §18.3) |
-| `sf-composition-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }` | Выбрано место вставки или элемент библиотеки сброшен на холст: место `{parent, slot, index}` и элемент, если его перетаскивали; в detail остаётся `parent_id` для хоста композиции |
-| `sf-composition-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён указателем или клавиатурой: один ручной перенос (словарь §5 move, `{id, parent, position}`); в detail остаются `node_id`, `parent_id` и `index` для хоста композиции |
-| `sf-composition-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё |
-| `sf-composition-overlay-action` | `{ action_id: string, node_id: string }` | устаревший псевдоним `sf-composition-overlay-apply`: подписывайтесь на `sf-composition-overlay-apply` |
-| `sf-composition-overlay-edit` | `{ node_id: string, value: string, previous: string }` | устаревший псевдоним `sf-composition-overlay-change`: подписывайтесь на `sf-composition-overlay-change` |
+| `sf-editor-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран (или выбор снят): словарь 1.1.5 §5 select; в detail остаётся `node_id` для хоста композиции |
+| `sf-editor-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи (словарь §5 apply, стандарт §18.3) |
+| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }` | Выбрано место вставки или элемент библиотеки сброшен на холст: место `{parent, slot, index}` и элемент, если его перетаскивали; в detail остаётся `parent_id` для хоста композиции |
+| `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён указателем или клавиатурой: один ручной перенос (словарь §5 move, `{id, parent, position}`); в detail остаются `node_id`, `parent_id` и `index` для хоста композиции |
+| `sf-editor-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё |
+| `sf-composition-overlay-action` | `{ action_id: string, node_id: string }` | устаревший псевдоним `sf-editor-overlay-apply`: подписывайтесь на `sf-editor-overlay-apply` |
+| `sf-composition-overlay-edit` | `{ node_id: string, value: string, previous: string }` | устаревший псевдоним `sf-editor-overlay-change`: подписывайтесь на `sf-editor-overlay-change` |
+| `sf-composition-overlay-select` | не описан | устаревший псевдоним `sf-editor-overlay-select`: подписывайтесь на `sf-editor-overlay-select` |
+| `sf-composition-overlay-apply` | не описан | устаревший псевдоним `sf-editor-overlay-apply`: подписывайтесь на `sf-editor-overlay-apply` |
+| `sf-composition-overlay-insert` | не описан | устаревший псевдоним `sf-editor-overlay-insert`: подписывайтесь на `sf-editor-overlay-insert` |
+| `sf-composition-overlay-move` | не описан | устаревший псевдоним `sf-editor-overlay-move`: подписывайтесь на `sf-editor-overlay-move` |
+| `sf-composition-overlay-change` | не описан | устаревший псевдоним `sf-editor-overlay-change`: подписывайтесь на `sf-editor-overlay-change` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-composition-overlay>`, контракт `smart.composition-overlay` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.4.0` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль дерево (`tree`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Home`, `End`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/composition-overlay` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-composition-overlay` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/editor-overlay` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-editor-overlay` |
 
 ## См. также
 

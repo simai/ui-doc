@@ -229,7 +229,7 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -269,13 +269,13 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.1.1` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.1.3` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль навигация (`navigation`); доступное имя внутренний; клавиши Tab по порядку проходит ссылки разделов, Enter на ссылке прокручивает к её разделу и переводит туда фокус, Enter или пробел на кнопке свёрнутой строки открывают список; Escape закрывает его и возвращает фокус на кнопку |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/contents` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-contents` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/contents` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-contents` |
 
 ## См. также
 

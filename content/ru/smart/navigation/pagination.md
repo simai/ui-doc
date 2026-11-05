@@ -182,7 +182,7 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c4d39d528148` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -281,13 +281,13 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.4` |
-| Поставка | выпуск Framework `ui-c4d39d528148` |
+| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.6` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; принят в продукт |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль навигация (`navigation`); доступное имя обязательно; клавиши `Tab` |
-| Источник | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/smart/pagination` |
-| Правило классов | `simai/ui@c4d39d528148cc8fbb1b1dadc5294462a2aaa812:distr/rule/rule.json#name=cl-pagination` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/pagination` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-pagination` |
 
 ## См. также
 

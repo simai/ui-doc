@@ -242,7 +242,7 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 | `--sf-radio-button-box--border-start-start-radius` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radius-circle)` | `border-start-start-radius` |
 | `--sf-radio-button-box--border-style` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `solid` | `border-style` |
 | `--sf-radio-button-box--border-width` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-radio-button-border-width, var(--sf-px))` | `border-width` |
-| `--sf-radio-button-box--box-shadow` | не задана; задают модификаторы, например `.sf-radio-button[:has(input:not(:disabled):not(.disabled).focus-visible)] .sf-radio-button-box`: `none` | `box-shadow` |
+| `--sf-radio-button-box--box-shadow` | не задана; задают модификаторы, например `.sf-radio-button:has(input:not(:disabled):not(.disabled).focus-visible) .sf-radio-button-box`: `none` | `box-shadow` |
 | `--sf-radio-button-box--gap` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-box`: `var(--sf-a0)` | `gap` |
 | `--sf-radio-button-box--height` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2 .sf-radio-button-box`: `var(--sf-radio-button-size, var(--sf-text-height-1/2))` | `height`, `--sf-radio-button-mark--height` |
 | `--sf-radio-button-box--width` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2 .sf-radio-button-box`: `var(--sf-radio-button-size, var(--sf-text-height-1/2))` | `width`, `--sf-radio-button-mark--width` |
@@ -252,10 +252,10 @@ whenLoader(() => SF.Loader.ready('Radio', (Radio) => {
 | `--sf-radio-button-description--font-size` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2 .sf-radio-button-description`: `var(--sf-text-size-1/3)` | `font-size` |
 | `--sf-radio-button-description--font-weight` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-description`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-radio-button-description--line-height` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2 .sf-radio-button-description`: `var(--sf-text-height-1/3)` | `line-height` |
-| `--sf-radio-button-mark--background-color` | не задана; задают модификаторы, например `.sf-radio-button[:has(input:checked)][:not-has(input:disabled)] .sf-radio-button-mark`: `var(--sf-radio-button-checked-color, var(--sf-primary))` | `background-color` |
-| `--sf-radio-button-mark--border-radius` | не задана; задают модификаторы, например `.sf-radio-button[:has(input:checked)] .sf-radio-button-mark`: `var(--sf-radius-circle)` | `border-radius` |
-| `--sf-radio-button-mark--height` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2[:has(input:checked)] .sf-radio-button-mark`: `calc(var(--sf-radio-button-box--height) / 2)` | `height` |
-| `--sf-radio-button-mark--width` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2[:has(input:checked)] .sf-radio-button-mark`: `calc(var(--sf-radio-button-box--width) / 2)` | `width` |
+| `--sf-radio-button-mark--background-color` | не задана; задают модификаторы, например `.sf-radio-button:has(input:checked):not(:has(input:disabled)) .sf-radio-button-mark`: `var(--sf-radio-button-checked-color, var(--sf-primary))` | `background-color` |
+| `--sf-radio-button-mark--border-radius` | не задана; задают модификаторы, например `.sf-radio-button:has(input:checked) .sf-radio-button-mark`: `var(--sf-radius-circle)` | `border-radius` |
+| `--sf-radio-button-mark--height` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2:has(input:checked) .sf-radio-button-mark`: `calc(var(--sf-radio-button-box--height) / 2)` | `height` |
+| `--sf-radio-button-mark--width` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2:has(input:checked) .sf-radio-button-mark`: `calc(var(--sf-radio-button-box--width) / 2)` | `width` |
 | `--sf-radio-button-text--background-color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-text`: `transparent` | `background-color` |
 | `--sf-radio-button-text--color` | не задана; задают модификаторы, например `.sf-radio-button .sf-radio-button-text`: `var(--sf-radio-button-color, var(--sf-on-surface))` | `color` |
 | `--sf-radio-button-text--font-family` | не задана; задают модификаторы, например `.sf-radio-button.sf-radio-button--size-1/2 .sf-radio-button-text`: `var(--sf-text--family)` | `font-family` |

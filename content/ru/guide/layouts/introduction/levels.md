@@ -57,10 +57,18 @@ Framework поставляет базовые типы, на которых мо
 | `layout.page` | корень документа, слот `default` | `<main>` |
 | `layout.section` | смысловая секция, слот `default` | `<section>` |
 | `layout.columns` | колонки, слот `columns`, настройка `columns` от 1 до 12 | сетка колонок |
+| `layout.container` | часть секции своей ширины, слот `default` | `<div>` с контейнером |
+| `layout.grid` | сетка одинаковых ячеек, слот `default`: одна колонка на телефоне, три от планшета | `<div>` с сеткой |
+| `layout.spacer` | пустое место по вертикали, настройка `size` от 1 до 8 | пустой `<div>` |
+| `layout.area` | место, где пишет автор, внутри раскладки | `<div>` |
 | `content.heading` | заголовок уровня 1–6 со структурированным текстом | `<h1>`–`<h6>` |
 | `content.paragraph` | абзац со структурированным текстом | `<p>` |
 | `layout.regions`, `layout.region` | именованные области страницы ([Области страницы](/ru/guide/layouts/building/slots/#области-страницы)) | ориентиры `header`, `main`, `aside` и др. |
 | `layout.scope` | общий родитель для связи компонентов маршрутами ([Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)) | `<sf-composition-scope>` |
+| `element.button`, `element.button-icon`, `element.badge`, `element.icon` | кнопка (с `href` — ссылка с видом кнопки), кнопка-значок, метка, значок | `<sf-button>`, `<sf-button-icon>`, `<sf-badge>`, `<sf-icon>` |
+
+Типы `layout.container`, `layout.grid`, `layout.spacer`, `layout.area` и
+`element.*` появились в выпуске `ui-e22fefb3c1f8` (`core.runtime` 1.26.0).
 
 Полный перечень с допустимыми значениями — в реестре типов
 (`distr/core/contracts/composition-types.v1.json` поставки `ui`).
@@ -78,62 +86,58 @@ Framework поставляет базовые типы, на которых мо
 | `layout.page` | слот `default` | — |
 | `layout.section` | слот `default` | пресеты `surface`, `contrast`; модификаторы `contained`, `spacious` |
 | `layout.columns` | `props.columns` — целое от 1 до 12; слот `columns` — от 1 до 12 детей | модификаторы `equal`, `responsive` |
-| `content.heading` | `data.level` — от 1 до 6; `data.content` — структурированный текст | — |
-| `content.paragraph` | `data.content` — структурированный текст | модификаторы `lead`, `muted` |
+| `content.heading` | `data.level` — от 1 до 6; `data.content` — структурированный текст; `props.align`, `props.hidden` — для каждого экрана свои | — |
+| `content.paragraph` | `data.content` — структурированный текст; `props.align`, `props.hidden` — для каждого экрана свои | модификаторы `lead`, `muted` |
 
 Слоты `default` и `columns` принимают узлы категорий `layout`, `content` и
 `smart`.
 
 Что выводят встроенные рендереры:
 
-- `layout.columns` выводит
-  `<div class="sf-composition-columns" data-composition-columns="N">`, а
-  каждого ребёнка слота `columns` оборачивает в
-  `<div class="sf-composition-column">`: один ребёнок — одна колонка. Стилей
-  для этих классов Framework не поставляет; сетку колонок задаёт CSS страницы.
+- `layout.columns` (1.1.0) выводит сетку утилитами SIMAI Framework:
+  `<div class="sf-composition-columns grid gap-4 grid-col-N" data-composition-columns="N">`,
+  а каждого ребёнка слота `columns` оборачивает в
+  `<div class="sf-composition-column">`: один ребёнок — одна колонка.
+  `columns` и `gap` можно задать для каждого экрана:
+  `"columns": {"xs": 1, "md": 2}` даёт `grid-col-1 md:grid-col-2`. Число
+  `"columns": 2` действует на всех экранах, в том числе на телефоне.
   Несколько узлов в одной колонке объединяет `layout.section`: она и есть
   группа, ребёнок слота `columns`, а узлы колонки лежат в её слоте `default`.
   Это не та лишняя секция вокруг каждого абзаца, от которой предостерегает
   раздел выше. Число детей слота с настройкой `columns` не сверяется: третий
   ребёнок при `columns: 2` без диагностики становится третьей колонкой.
-- `presentation` проверяется по манифесту типа, но встроенные рендереры его не
-  выводят: пресеты и модификаторы не дают в HTML ни классов, ни атрибутов.
-  Если вариант должен быть виден, его рисует рендерер собственного типа.
-- `content.heading` и `content.paragraph` выводят `<h1>`–`<h6>` и `<p>` без
-  классов: их вид задают стили текста по умолчанию и CSS страницы (вывод
-  отметок и ссылок — см. [Структурированный текст](/ru/guide/layouts/content-and-data/structured-text/)).
+- `presentation` проверяется по манифесту типа. Пресеты и модификаторы
+  секции и колонок в HTML не попадают. Модификаторы абзаца выводят утилиты:
+  `lead` — `text-large color-on-surface-variant`, `muted` —
+  `color-on-surface-variant`.
+- `content.heading` и `content.paragraph` выводят `<h1>`–`<h6>` и `<p>`. Без
+  настроек у них нет классов, вид задают стили текста по умолчанию. `align`
+  выводит `text-start`, `text-center` или `text-end`, `hidden` — `hidden` или
+  `block`, для каждого экрана свои: `"align": {"xs": "center", "md": "start"}`
+  даёт `text-center md:text-start` (вывод отметок и ссылок — см.
+  [Структурированный текст](/ru/guide/layouts/content-and-data/structured-text/)).
+- `layout.section` (1.2.0) без настроек выводит отступы и контейнер
+  страницы: `<section class="p-y-8">` с частями `frame` и `content` (см.
+  [Секция](/ru/guide/layouts/building/section/)).
 - `layout.page` всегда выводит `<main>`. Если у страницы проекта уже есть свой
   `<main>`, корнем документа делают секцию (`layout.section`) или другой тип:
   корень документа не обязан быть страницей.
 - Для колонок `render()` называет в `assets` ресурс `composition/layout`.
   Файла с таким именем в поставке нет: его роль играет CSS страницы.
 
-### CSS колонок в проекте
+### Колонки на узком экране
 
-Колонки без стилей проекта идут одна под другой. Правила колонок кладите в
-слой проекта, объявленный после `core.css`, например `@layer project` (см.
-[Каскадные слои](/ru/guide/colour/cascade-layers/)). Рекомендуемый минимум —
-сетка с промежутком из шкалы пространства, одна колонка на узком экране и
-заданное число колонок от контрольной точки `md`. В примере ниже её ширина
-записана числом, потому что медиазапрос не читает переменные; берите её из
-выпуска, которым пользуется проект:
+С `layout.columns` 1.1.0 сетку колонок выводят утилиты SIMAI Framework, и
+своего CSS колонкам не нужно. Число в `columns` действует на всех экранах.
+Чтобы на телефоне колонки шли одна под другой, задайте число для каждого
+экрана:
 
-```css
-.sf-composition-columns {
-  display: grid;
-  gap: var(--sf-space-4);
-}
-.sf-composition-column {
-  min-inline-size: 0;
-}
-@media (min-width: 44rem) {
-  .sf-composition-columns[data-composition-columns="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sf-composition-columns[data-composition-columns="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .sf-composition-columns[data-composition-columns="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
+```text
+"props": {"columns": {"xs": 1, "md": 3}, "gap": 4}
 ```
 
-Добавьте правила для того числа колонок, которое встречается в ваших
-документах. Модификаторы `equal` и `responsive` в HTML не попадают, поэтому
-такое правило действует на все колонки одного числа (см. [Значения интервалов](/ru/guide/size-and-type/spacing-scale/) и
-[Ширина экрана: контрольные точки](/ru/guide/utilities/conditions/#ширина-экрана-контрольные-точки)).
+Контрольные точки — те же, что у утилит (см.
+[Ширина экрана: контрольные точки](/ru/guide/utilities/conditions/#ширина-экрана-контрольные-точки)),
+шаг `gap` — из шкалы пространства (см.
+[Значения интервалов](/ru/guide/size-and-type/spacing-scale/)). Модификаторы
+`equal` и `responsive` в HTML не попадают.

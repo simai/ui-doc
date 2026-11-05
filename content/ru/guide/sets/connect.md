@@ -15,21 +15,22 @@ Loader сам найдёт подходящий выпуск набора и з�
 
 ## Одна строка
 
-Пример подключает набор эффектов и ставит на страницу один эффект:
+Пример подключает набор эффектов к выпуску SIMAI Framework `5.20261105.829`
+и ставит на страницу один эффект:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@<выпуск>/distr/core/css/core.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@<выпуск>/distr/core/js/core.min.js" data-sf-sets="effects"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261105.829/distr/core/css/core.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261105.829/distr/core/js/core.min.js" data-sf-sets="effects"></script>
 
 <sf-effect effect="aurora-curtain" speed="200"></sf-effect>
 ```
 
-`<выпуск>` — версия пакета `@simai-studio/ui`, которую закрепил проект (см.
+В своём проекте на месте `5.20261105.829` стоит версия пакета
+`@simai-studio/ui`, которую закрепил проект (см.
 [Версии](/ru/guide/connection/versions/)): `5.20261103.2154` или новее.
 Набор берётся из общего каталога выпусков: Loader выбирает самый новый
-выпуск набора, который подходит к этому SIMAI Framework. Например, с
-`5.20261103.2154` на месте `<выпуск>` Loader найдёт в каталоге набор `effects`
-1.0.0 и загрузит его с jsDelivr.
+выпуск набора, который подходит к этому SIMAI Framework. В примере Loader
+найдёт в каталоге набор `effects` 1.0.0 и загрузит его с jsDelivr.
 
 ## Закрепить версию набора
 
