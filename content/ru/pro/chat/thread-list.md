@@ -5,7 +5,7 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
-`<sf-thread-list>` — разговоры человека, новые сверху: с ассистентом или
+`<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
 открытый, даёт переименовать разговор на месте, отправить его в архив и
 просит следующую страницу, когда показался конец списка. Сам список ничего не
@@ -79,7 +79,7 @@ Framework: поставляется пакетом `pro` из репозитор
 - `sf-thread-list-view` — `{archived}`, переход в архив и обратно.
 
 ```js
-const list = document.querySelector('sf-thread-list');
+const list = document.querySelector('sf-chat-threads');
 list.setThreads(await api.threads(), {hasMore: true});
 list.addEventListener('sf-thread-list-select', (event) => {
   openConversation(event.detail.id);

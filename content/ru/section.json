@@ -34,6 +34,11 @@
         "href": "/ru/smart/"
       },
       {
+        "id": "sets",
+        "label": "Наборы",
+        "href": "/ru/guide/sets/"
+      },
+      {
         "id": "pro",
         "label": "Pro",
         "href": "/ru/pro/"

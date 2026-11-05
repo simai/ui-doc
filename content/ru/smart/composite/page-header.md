@@ -5,7 +5,7 @@ description: "Показывает в начале страницы админи
 
 # Шапка страницы
 
-`<sf-page-header>` — шапка страницы административного приложения: путь к
+`<sf-header-page>` — шапка страницы административного приложения: путь к
 странице, заголовок, число записей, звезда избранного и главные действия в
 одной строке. Ставьте её в начало каждой страницы администрирования рядом с
 [Меню администратора](/ru/pro/admin/admin-menu/): меню показывает, где
@@ -21,10 +21,10 @@ description: "Показывает в начале страницы админи
 Шапке нужен заголовок; путь и действия передаются в слоты:
 
 ```html
-<sf-page-header heading="Каталог решений" count="448">
+<sf-header-page heading="Каталог решений" count="448">
   <sf-breadcrumbs slot="path" aria-label="Путь к странице" items='[…]'></sf-breadcrumbs>
   <sf-button slot="actions" icon-start="add" text="Создать"></sf-button>
-</sf-page-header>
+</sf-header-page>
 ```
 
 `heading` — название страницы. Компонент выводит его как `h1` четвёртой
@@ -80,7 +80,7 @@ description: "Показывает в начале страницы админи
 Кнопкам в слоте `actions` берите ступень остальных элементов страницы: рядом с полями
 `sf-input--size-1` — кнопки размера 1 (`size="1"` у смарт-кнопки,
 `sf-button--size-1` у классовой). Кнопка только со значком называется
-своим атрибутом: `label` у `<sf-copy-button>`, `aria-label` у классовой
+своим атрибутом: `label` у `<sf-button-copy>`, `aria-label` у классовой
 кнопки.
 
 Своих отступов по краям у шапки нет: она встаёт в контейнер страницы с
@@ -89,10 +89,10 @@ description: "Показывает в начале страницы админи
 
 ```html
 <main class="p-4 flex flex-col gap-3">
-  <sf-page-header heading="Настройки решения">
+  <sf-header-page heading="Настройки решения">
     <sf-breadcrumbs slot="path">…</sf-breadcrumbs>
-    <sf-copy-button slot="actions" value="https://larena.test/admin/solutions/42" icon="link" text="Скопировать ссылку" label="Скопировать ссылку на страницу" size="1"></sf-copy-button>
-  </sf-page-header>
+    <sf-button-copy slot="actions" value="https://larena.test/admin/solutions/42" icon="link" text="Скопировать ссылку" label="Скопировать ссылку на страницу" size="1"></sf-button-copy>
+  </sf-header-page>
   <form>…</form>
 </main>
 ```
@@ -107,7 +107,7 @@ description: "Показывает в начале страницы админи
 состояние, которое не сохранилось.
 
 ```js
-const header = document.querySelector('sf-page-header');
+const header = document.querySelector('sf-header-page');
 header.addEventListener('sf-page-header-toggle', async (event) => {
   event.preventDefault();
   const saved = await saveFavourite(event.detail.on);

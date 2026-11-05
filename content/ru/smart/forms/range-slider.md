@@ -5,12 +5,12 @@ description: "Выбирает одно значение или две гран�
 
 # Слайдер диапазона
 
-`<sf-range-slider>` — шкала с одной или двумя ручками для приблизительной
+`<sf-slider-range>` — шкала с одной или двумя ручками для приблизительной
 настройки: цены, громкости, расстояния. Когда важно точное число, добавьте
 рядом [поле ввода](/ru/smart/forms/inputs/).
 
 То же на классах — [Слайдер диапазона](/ru/components/forms/range-slider/):
-`<sf-range-slider>` собирает его из атрибутов.
+`<sf-slider-range>` собирает его из атрибутов.
 
 ## Пример
 
@@ -22,10 +22,10 @@ description: "Выбирает одно значение или две гран�
 Слайдеру нужны доступное имя и значение:
 
 ```html
-<sf-range-slider aria-label="Громкость" value="30"></sf-range-slider>
+<sf-slider-range aria-label="Громкость" value="30"></sf-slider-range>
 ```
 
-`aria-label` или `aria-labelledby` на `<sf-range-slider>` переходит на ручку.
+`aria-label` или `aria-labelledby` на `<sf-slider-range>` переходит на ручку.
 `min` и `max` задают пределы шкалы, по умолчанию 0 и 100. `value` — текущее
 значение; для двух ручек это два числа через запятую. Значение вне пределов
 прижимается к ближайшему пределу.
@@ -117,7 +117,7 @@ description: "Выбирает одно значение или две гран�
 перенесите его в скрытое поле или в запрос в обработчике `change`.
 
 ```js
-const price = document.querySelector('sf-range-slider');
+const price = document.querySelector('sf-slider-range');
 const hidden = document.querySelector('input[name="price"]');
 price.addEventListener('change', (event) => {
   hidden.value = event.detail.values.join('-');
@@ -134,7 +134,7 @@ price.setValue([10000, 30000]);
 ## Доступность
 
 - Задайте доступное имя: `aria-label` или `aria-labelledby` на
-  `<sf-range-slider>` переходит на ручку. Двум ручкам нужны отдельные имена в
+  `<sf-slider-range>` переходит на ручку. Двум ручкам нужны отдельные имена в
   `lower-label` и `upper-label`.
 - Каждая ручка — отдельная остановка `Tab` с ролью `slider`; она сообщает
   текущее значение с `prefix-text` и `suffix` и допустимые пределы с учётом

@@ -1,12 +1,12 @@
 // The inline editor returns the content model, never HTML. Here the page keeps
 // the model and redraws the paragraph from it after each commit.
 const initializeInlineExample = async () => {
-  await customElements.whenDefined('sf-inline-editor');
+  await customElements.whenDefined('sf-editor-inline');
   const canvas = document.querySelector('#inline-example-canvas');
   const status = document.querySelector('#inline-example-status');
   if (!canvas || canvas.dataset.exampleReady === 'true') return;
   canvas.dataset.exampleReady = 'true';
-  const editor = document.querySelector('sf-inline-editor');
+  const editor = document.querySelector('sf-editor-inline');
   let content = [
     { type: 'text', value: 'Доставка по городу — ' },
     { type: 'text', value: 'бесплатно', marks: ['strong'] },

@@ -1,14 +1,14 @@
 <div class="grid grid-col-1 gap-3">
   <div class="flex flex-col gap-1">
-    <sf-country-code label="Без маски" iso2="RU" value="+7 9031234567"></sf-country-code>
+    <sf-input-country label="Без маски" iso2="RU" value="+7 9031234567"></sf-input-country>
     <code class="text-1/2 color-on-surface-variant">без use-mask</code>
   </div>
   <div class="flex flex-col gap-1">
-    <sf-country-code label="Маска страны" iso2="RU" value="+7 9031234567" use-mask="true"></sf-country-code>
+    <sf-input-country label="Маска страны" iso2="RU" value="+7 9031234567" use-mask="true"></sf-input-country>
     <code class="text-1/2 color-on-surface-variant">use-mask="true"</code>
   </div>
   <div class="flex flex-col gap-1">
-    <sf-country-code label="Общий шаблон" iso2="RU" value="+7 9031234567" use-mask="true" use-country-masks="false" mask-pattern="+0 000 000 00 00"></sf-country-code>
+    <sf-input-country label="Общий шаблон" iso2="RU" value="+7 9031234567" use-mask="true" use-country-masks="false" mask-pattern="+0 000 000 00 00"></sf-input-country>
     <code class="text-1/2 color-on-surface-variant">use-country-masks="false" mask-pattern="+0 000 000 00 00"</code>
   </div>
 </div>

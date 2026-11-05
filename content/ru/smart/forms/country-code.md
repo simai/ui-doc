@@ -5,13 +5,13 @@ description: "Телефонное поле с выбором страны, фл
 
 # Код страны
 
-`<sf-country-code>` — телефонное поле с кнопкой выбора страны: флаг и код
+`<sf-input-country>` — телефонное поле с кнопкой выбора страны: флаг и код
 страны стоят перед номером, а маска подстраивается под выбранную страну. Для
 телефона без выбора страны хватит [поля ввода](/ru/smart/forms/inputs/) с
 маской.
 
 То же на классах — [Код страны](/ru/components/forms/country-code/):
-`<sf-country-code>` собирает его разметку из атрибутов.
+`<sf-input-country>` собирает его разметку из атрибутов.
 
 ## Пример
 
@@ -23,7 +23,7 @@ description: "Телефонное поле с выбором страны, фл
 Полю нужна подпись, имя для формы и начальная страна:
 
 ```html
-<sf-country-code label="Телефон" name="phone" iso2="RU"></sf-country-code>
+<sf-input-country label="Телефон" name="phone" iso2="RU"></sf-input-country>
 ```
 
 `label` — видимая подпись поля. Без `label` строки подписи нет вовсе, и
@@ -71,7 +71,7 @@ description: "Телефонное поле с выбором страны, фл
 `dialCode`, `label` и необязательным `maskPattern`. Для известных кодов ISO
 пропущенные поля дополняются встроенным справочником. `max-items` ограничивает
 число стран в списке. Присваивайте свойство после регистрации элемента —
-`await customElements.whenDefined('sf-country-code')`.
+`await customElements.whenDefined('sf-input-country')`.
 
 :::example {id="components/country-code/smart-countries" label="Список из двух стран"}
 :::
@@ -124,7 +124,7 @@ description: "Телефонное поле с выбором страны, фл
 ### Состояние из кода и событие `change`
 
 Когда номер или страна зафиксированы, нативное событие `change` внутреннего
-поля всплывает через `<sf-country-code>`; `detail` у него нет. Номер
+поля всплывает через `<sf-input-country>`; `detail` у него нет. Номер
 читайте из `event.target.value`, а страну и код — из свойства `state`:
 `value`, `iso2`, `dialCode`, `open` и `disabled`.
 

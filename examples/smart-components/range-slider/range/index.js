@@ -6,7 +6,7 @@ const initializePriceRange = async () => {
   if (!slider || !output || slider.dataset.exampleReady === 'true') return;
   slider.dataset.exampleReady = 'true';
 
-  await customElements.whenDefined('sf-range-slider');
+  await customElements.whenDefined('sf-slider-range');
   slider.addEventListener('change', (event) => {
     const [from, to] = event.detail.values;
     output.value = `Цена: ${from}–${to} ₽`;

@@ -116,7 +116,8 @@
         "segmented",
         "close",
         "download-file",
-        "copy-button"
+        "copy-button",
+        "confirm"
       ]
     },
     "forms": {
@@ -249,6 +250,7 @@
     "editor": {
       "title": "Редактор страниц",
       "items": [
+        "editor",
         "content-editor",
         "blocks"
       ]

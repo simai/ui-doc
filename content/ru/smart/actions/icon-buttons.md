@@ -5,7 +5,7 @@ description: "Запускает действие компактной кноп�
 
 # Кнопки с иконкой
 
-`<sf-icon-button>` — кнопка с одной иконкой вместо подписи: изменить,
+`<sf-button-icon>` — кнопка с одной иконкой вместо подписи: изменить,
 поделиться, закрыть, открыть меню. Берите её в панелях инструментов и строках
 таблиц, где подпись не помещается, а смысл иконки понятен; если сомневаетесь,
 берите [кнопку с подписью](/ru/smart/actions/buttons/).
@@ -23,7 +23,7 @@ description: "Запускает действие компактной кноп�
 Кнопке нужны иконка и доступное имя:
 
 ```html
-<sf-icon-button icon="edit" aria-label="Изменить"></sf-icon-button>
+<sf-button-icon icon="edit" aria-label="Изменить"></sf-button-icon>
 ```
 
 `icon` — имя иконки Material Symbols, по умолчанию `add`. Свою разметку
@@ -165,15 +165,15 @@ remove.onClick(() => deleteRow(row));
 ### Атрибуты `data-*` и фокус
 
 Как у [Кнопки](/ru/smart/actions/buttons/#атрибуты-data-и-фокус),
-атрибут `data-*` с `<sf-icon-button>` переносится на внутреннюю нативную
+атрибут `data-*` с `<sf-button-icon>` переносится на внутреннюю нативную
 кнопку: у неё есть размеры, она получает фокус и нажатие, поэтому селектор
 `[data-…]` находит ровно один элемент — её. Хост своей области не имеет
-(`display: contents`), к нему ведёт `closest('sf-icon-button')`.
+(`display: contents`), к нему ведёт `closest('sf-button-icon')`.
 
 ```js
 const toggle = menu.querySelector('[data-search-toggle]');  // нативная кнопка
 toggle.focus();
-toggle.closest('sf-icon-button');                            // хост
+toggle.closest('sf-button-icon');                            // хост
 ```
 
 Записанное на хосте читает свойство `dataAttributes`

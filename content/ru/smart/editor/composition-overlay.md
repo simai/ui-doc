@@ -5,7 +5,7 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
-`<sf-composition-overlay>` — часть редактора страниц: рисует поверх страницы,
+`<sf-editor-overlay>` — часть редактора страниц: рисует поверх страницы,
 собранной из Composition Document, рамку при наведении и выборе, подпись и
 значки узла, панель действий, место вставки у стыка блоков и дерево структуры для
 клавиатуры. HTML холста оверлей не меняет, поэтому опубликованная страница
@@ -22,7 +22,7 @@ description: "Рисует поверх отрисованной страниц�
 Оверлей ставят перед холстом и называют холст атрибутом `for`:
 
 ```html
-<sf-composition-overlay for="canvas" label="Структура страницы"></sf-composition-overlay>
+<sf-editor-overlay for="canvas" label="Структура страницы"></sf-editor-overlay>
 <div id="canvas">
   <section data-sf-composition-id="page">
     <h3 data-sf-composition-id="title">О компании</h3>
@@ -34,8 +34,8 @@ description: "Рисует поверх отрисованной страниц�
 отмечен в нём атрибутом `data-sf-composition-id`. Атрибут `for` называет `id`
 холста, метод `attach(canvas)` передаёт его явно. Код оверлея загрузчик
 SIMAI Framework подключает по требованию — только на странице с тегом
-`sf-composition-overlay`, поэтому перед вызовом методов дождитесь
-`customElements.whenDefined('sf-composition-overlay')`.
+`sf-editor-overlay`, поэтому перед вызовом методов дождитесь
+`customElements.whenDefined('sf-editor-overlay')`.
 
 Оверлей ставят перед холстом, внутри той же прокручиваемой области: дерево
 идёт первым в порядке `Tab`, а рамки и панель лежат в прокручиваемом
@@ -160,7 +160,7 @@ Document оверлею.
 или английском). `setMessages(messages)` заменяет их своими.
 
 ```js
-await customElements.whenDefined('sf-composition-overlay');
+await customElements.whenDefined('sf-editor-overlay');
 overlay.attach(canvas);
 overlay.setDocument(document, {
   describe: (node) => ({label: titleOf(node), badges: node.shared ? ['Общий'] : []}),

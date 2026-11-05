@@ -5,7 +5,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 
 # Шапка сайта
 
-`<sf-site-header>` — верхняя полоса сайта: бренд, разделы, ссылки и
+`<sf-header-site>` — верхняя полоса сайта: бренд, разделы, ссылки и
 инструменты в одну строку по ширине контейнера. На узком экране разделы и
 ссылки уходят в боковую панель, которую открывает кнопка меню. Одна шапка для
 всех сайтов SIMAI: каталога эффектов, сайтов документации и портала.
@@ -26,7 +26,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 и состояние сохраняются:
 
 ```html
-<sf-site-header>
+<sf-header-site>
   <a slot="brand" href="/"><span>SIMAI</span></a>
   <nav aria-label="Разделы">
     <a href="/framework/">Framework</a>
@@ -34,7 +34,7 @@ description: "Верхняя полоса сайта: бренд, разделы
   </nav>
   <a slot="actions" href="https://github.com/simai">GitHub</a>
   <sf-button-group slot="tools" appearance="segmented" theme-switch size="1/2" aria-label="Тема"></sf-button-group>
-</sf-site-header>
+</sf-header-site>
 ```
 
 | Слот | В широкой строке | На узком экране |
@@ -107,7 +107,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 `outside`, `cancelled` или `api`.
 
 ```js
-const header = document.querySelector('sf-site-header');
+const header = document.querySelector('sf-header-site');
 header.addEventListener('sf-site-header-opened', () => {
   header.querySelector('[slot="sheet"]')?.replaceChildren(buildDocumentationTree());
 });

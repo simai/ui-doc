@@ -86,7 +86,7 @@ description: "Показывает набор материалов слайде�
 
 Смена материала отправляет `change`, открытие и закрытие окна —
 `sf-gallery-opened` и `sf-gallery-closed` (прежние имена — `sf-change`,
-`sf-open` и `sf-close` — приходят с тем же `detail`). Все три всплывают; в
+`sf-open` и `sf-button-close` — приходят с тем же `detail`). Все три всплывают; в
 `event.detail` приходят `current` и `total`, а у `change` ещё `previous` и
 `from` — откуда пришла смена: `inline`, `lightbox` или `api`.
 

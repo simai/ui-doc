@@ -42,7 +42,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 ### Палитра продукта
 
 `swatches` — цвета продукта рядом с выбором, как у
-[`<sf-color>`](/ru/smart/forms/color/): `#hex|Название, #hex`.
+[`<sf-input-color>`](/ru/smart/forms/color/): `#hex|Название, #hex`.
 
 :::example {id="smart-components/theme-generator/swatches" label="Цвета продукта рядом с выбором"}
 :::

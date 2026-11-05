@@ -1,7 +1,7 @@
 // The canvas holds HTML produced by SF.Composition.render for this Document.
 // The overlay draws editor chrome over it and never changes it.
 const initializeOverlayExample = async () => {
-  await customElements.whenDefined('sf-composition-overlay');
+  await customElements.whenDefined('sf-editor-overlay');
   const overlay = document.querySelector('#overlay-example');
   const status = document.querySelector('#overlay-example-status');
   if (!overlay || overlay.dataset.exampleReady === 'true') return;

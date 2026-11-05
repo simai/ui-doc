@@ -5,7 +5,7 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
-`<sf-inline-editor>` — часть редактора страниц: правка текста
+`<sf-editor-inline>` — часть редактора страниц: правка текста
 `content.heading` и `content.paragraph` прямо на холсте. Доступно то, что есть
 в модели content: полужирный, курсив, код, ссылки и встроенные компоненты
 (`badge`, `kbd`, `icon`, `button`); списков нет, потому что их нет в модели. События несут нормализованную модель, а не HTML.
@@ -18,11 +18,11 @@ description: "Даёт править текст заголовков и абз�
 ## Разметка
 
 Элемент ничего не показывает: достаточно поставить на странице
-`<sf-inline-editor>`, и загрузчик SIMAI Framework подключит код редактора по
+`<sf-editor-inline>`, и загрузчик SIMAI Framework подключит код редактора по
 требованию.
 
 ```html
-<sf-inline-editor></sf-inline-editor>
+<sf-editor-inline></sf-editor-inline>
 <p data-sf-composition-id="note">Доставка по городу — <strong>бесплатно</strong>.</p>
 ```
 
@@ -30,7 +30,7 @@ description: "Даёт править текст заголовков и абз�
 кода. Правку запускает `SF.Composition.startInlineEdit(element, options)`
 или метод `edit(element, options)` элемента. До загрузки вызов завершается
 ошибкой `inline_editor_not_loaded`, поэтому сначала дождитесь
-`customElements.whenDefined('sf-inline-editor')`. Повторный запуск на элементе,
+`customElements.whenDefined('sf-editor-inline')`. Повторный запуск на элементе,
 который уже правится, завершается ошибкой `inline_edit_active`.
 
 ## Поведение
@@ -65,7 +65,7 @@ description: "Даёт править текст заголовков и абз�
 и перерисовывайте страницу.
 
 ```js
-await customElements.whenDefined('sf-inline-editor');
+await customElements.whenDefined('sf-editor-inline');
 SF.Composition.startInlineEdit(element, {
   content: node.data.content,
   nodeId: node.id,

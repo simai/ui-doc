@@ -39,7 +39,7 @@ description: "Сборка — компонент из компонентов: �
     "search": {"part": "sf-search-field", "bind": {"values.query": "query"}},
     "source": {"part": "sf-source", "bind": {"settings.collection": "collection", "settings.query": "query",
                                              "values.items": "items", "values.total": "total", "values.state": "state"}},
-    "list": {"part": "sf-table", "bind": {"settings.items": "items", "settings.state": "state"}}
+    "list": {"part": "sf-view-table", "bind": {"settings.items": "items", "settings.state": "state"}}
   },
   "layouts": {"default": {"file": "layout.default.html"}},
   "rules": [
@@ -205,7 +205,7 @@ flowchart LR
 ```json
 "roles": {
   "inn":  {"part": "sf-input", "if": "is-company", "settings": {"name": "inn", "required": true}},
-  "note": {"part": "sf-textarea", "hidden": "!has-note"}
+  "note": {"part": "sf-input-textarea", "hidden": "!has-note"}
 }
 ```
 

@@ -1,7 +1,7 @@
 // A host that lives on this page: the card applies nothing, it raises an
 // event and waits. The host answers after a moment and sets the outcome.
 const initialize = async () => {
-  await customElements.whenDefined('sf-change-confirm');
+  await customElements.whenDefined('sf-confirm-change');
   const card = document.querySelector('#change-confirm-overview');
   if (!card || card.dataset.exampleReady === 'true') return;
   card.dataset.exampleReady = 'true';

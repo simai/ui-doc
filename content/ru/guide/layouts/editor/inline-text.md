@@ -23,7 +23,7 @@ document.addEventListener('sf-inline-editor-change', (event) => {
 
 Правила подключения:
 
-- на странице редактора обязательно должен стоять `<sf-inline-editor>`: по
+- на странице редактора обязательно должен стоять `<sf-editor-inline>`: по
   этому тегу Loader подключает код правки;
 - до загрузки `startInlineEdit` выбрасывает ошибку `inline_editor_not_loaded`.
 

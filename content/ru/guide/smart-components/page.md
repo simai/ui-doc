@@ -39,7 +39,7 @@ description: "Как интерфейс смарт-компонента выгл
   которая объявила его пакет в `SF_BOOT_CONFIG.packages` до подключения Core.
   Если пакет не объявлен, загрузчик компонент не загружает и пишет в консоли,
   какой тег и почему. Так подключаются компоненты пакета `pro`:
-  `<sf-table>`, `<sf-data-view>`, `<sf-property-view>`, `<sf-admin-menu>` и
+  `<sf-view-table>`, `<sf-view>`, `<sf-view-properties>`, `<sf-admin-menu>` и
   другие — см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)
   и [Пакеты партнёров и проектов](/ru/guide/smart-components/packages/).
 

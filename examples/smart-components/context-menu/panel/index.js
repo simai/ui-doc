@@ -1,7 +1,7 @@
 // The panel reports the chosen tab; the page puts that tab's rows into the
 // content slot. The head with the tabs stays, the rows scroll, the width holds.
 const demo = document.querySelector('[data-context-menu-demo="panel"]');
-const menu = demo.querySelector('sf-context-menu');
+const menu = demo.querySelector('sf-menu-context');
 const rows = demo.querySelector('[data-panel-rows]');
 const result = demo.querySelector('[data-panel-result]');
 

@@ -10,7 +10,7 @@ const threads = [
 ];
 
 const initialize = async () => {
-  await customElements.whenDefined('sf-thread-list');
+  await customElements.whenDefined('sf-chat-threads');
   const list = document.querySelector('#thread-list-overview');
   if (!list || list.dataset.exampleReady === 'true') return;
   list.dataset.exampleReady = 'true';

@@ -63,7 +63,7 @@ orders.connectPort({ port: window.app.dataViewPort });
 объявляет порт прямо в элементе — JSON-островом внутри него:
 
 ```html
-<sf-data-view id="list" aria-label="Каталог">
+<sf-view id="list" aria-label="Каталог">
   <script type="application/json" data-sf-port>{
     "port": "simai.dataview-port",
     "version": "1.12.0",
@@ -73,7 +73,7 @@ orders.connectPort({ port: window.app.dataViewPort });
               "payload": {"query": {"filters": {}, "search": "", "sort": [], "page": 1, "per_page": 20}}}
   }</script>
   …начальный вид элемента…
-</sf-data-view>
+</sf-view>
 ```
 
 | Поле | Что задаёт |
@@ -135,7 +135,7 @@ simai/ui-source.
 ### Первый ответ и тихая перепроверка
 
 Страница может напечатать первый ответ списка вместе с HTML — остров
-`first-answer` у `sf-data-view` в форме ответа порта, — и список работает
+`first-answer` у `sf-view` в форме ответа порта, — и список работает
 ещё до порта. Тогда:
 
 - **возможности порта известны до его ответа** — из объявленного порта или
@@ -296,7 +296,7 @@ flowchart LR
   отвечает версией всей записи, `group.save` сравнивается с ней, а своей
   версии у раздела нет. Сохранение по более старой версии отвечает
   `conflict` с текущей. Так работает порт `simai.property-view-port` 1.15.0
-  (выпуск `ui-dde3ef154c34`) и `sf-property-view` из ui-pro на нём; хост без
+  (выпуск `ui-dde3ef154c34`) и `sf-view-properties` из ui-pro на нём; хост без
   возможности `group-load` обслуживается через `record.load` один раз на
   версию, см.
   [Один раздел записи](/ru/guide/smart-components/first-paint/#один-раздел-записи).
