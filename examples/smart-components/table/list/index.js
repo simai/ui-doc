@@ -1,5 +1,5 @@
 const initializeProjectsList = async () => {
-  await customElements.whenDefined('sf-table');
+  await customElements.whenDefined('sf-view-table');
 
   const table = document.querySelector('#projects-list-view');
   if (!table || table.dataset.exampleReady === 'true') return;

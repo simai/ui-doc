@@ -1,25 +1,25 @@
 <div class="flex flex-col gap-3">
   <div class="flex flex-col gap-1">
     <span class="weight-6">Основной цвет</span>
-    <sf-color
+    <sf-input-color
       id="brand-colour"
       name="brand"
       label="Основной цвет"
       value="#2a5bd7"
       swatches="#2a5bd7|Фирменный, #0f9d58|Успех, #d93025|Ошибка, #f4b400|Внимание"
       clearable>
-    </sf-color>
+    </sf-input-color>
   </div>
 
   <div class="flex flex-col gap-1">
     <span class="weight-6">Акцент</span>
-    <sf-color
+    <sf-input-color
       id="accent-colour"
       name="accent"
       label="Акцент"
       inherited-value="#2a5bd7"
       clearable>
-    </sf-color>
+    </sf-input-color>
   </div>
 
   <p id="colour-status" class="m-0 color-on-surface-variant" aria-live="polite">Измените цвет — здесь появится значение из события.</p>

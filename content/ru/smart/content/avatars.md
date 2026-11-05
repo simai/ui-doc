@@ -5,7 +5,7 @@ description: "Выводит готовые сочетания аватаров:
 
 # Аватары
 
-`<sf-avatars>` собирает из аватаров готовые сочетания: человек с источником,
+`<sf-avatar-group>` собирает из аватаров готовые сочетания: человек с источником,
 группа с остатком, аватар с двумя строками подписи, аватар профиля. Для
 одного аватара, аватара с подписью и карточки берите
 [Аватар](/ru/smart/content/avatar/) — у него есть имя для
@@ -24,7 +24,7 @@ description: "Выводит готовые сочетания аватаров:
 Сочетание выбирает `template`, остальное — атрибуты этого шаблона:
 
 ```html
-<sf-avatars template="user" name="Анна Белова" source="simai.ru"></sf-avatars>
+<sf-avatar-group template="user" name="Анна Белова" source="simai.ru"></sf-avatar-group>
 ```
 
 - `user` — изображение из `image-url`, имя из `name` и источник из `source`
@@ -55,9 +55,9 @@ description: "Выводит готовые сочетания аватаров:
 `tiny`, `small`, `big`, `extra_big`.
 
 ```html
-<sf-avatars template="group"
+<sf-avatar-group template="group"
   avatars='[{"imageUrl": "/team/anna.jpg"}, {"imageUrl": "/team/ivan.jpg"}]'
-  avatars-more="5"></sf-avatars>
+  avatars-more="5"></sf-avatar-group>
 ```
 
 ## Доступность

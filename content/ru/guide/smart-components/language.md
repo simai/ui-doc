@@ -103,7 +103,7 @@ description: "Слова смарт-компонента в файлах lang/<�
 ```json
 "roles": {
   "status": {"part": "sf-dropdown", "settings": {"options": [{"value": "open"}, {"value": "won"}, {"value": "lost"}]}, "bind": {"values.value": "status"}},
-  "table":  {"part": "sf-table", "settings": {"columns": [{"key": "title"}, {"key": "amount"}]}, "bind": {"settings.items": "deals"}}
+  "table":  {"part": "sf-view-table", "settings": {"columns": [{"key": "title"}, {"key": "amount"}]}, "bind": {"settings.items": "deals"}}
 }
 ```
 
@@ -144,9 +144,9 @@ description: "Слова смарт-компонента в файлах lang/<�
 ```html
 <html lang="ru">
   <body>
-    <sf-quantity name="count"></sf-quantity>       <!-- говорит по-русски -->
+    <sf-input-quantity name="count"></sf-input-quantity>       <!-- говорит по-русски -->
     <section lang="en">
-      <sf-quantity name="count-en"></sf-quantity>  <!-- говорит по-английски,
+      <sf-input-quantity name="count-en"></sf-input-quantity>  <!-- говорит по-английски,
                                                       даже после SF.language.use('ru') -->
     </section>
   </body>

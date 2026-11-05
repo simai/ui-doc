@@ -6,7 +6,7 @@ const initializeColourExample = async () => {
   if (!status || status.dataset.exampleReady === 'true') return;
   status.dataset.exampleReady = 'true';
 
-  await customElements.whenDefined('sf-color');
+  await customElements.whenDefined('sf-input-color');
   for (const colour of document.querySelectorAll('#brand-colour, #accent-colour')) {
     colour.addEventListener('change', (event) => {
       // An empty value means the inherited colour applies again, which is not

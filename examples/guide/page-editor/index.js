@@ -89,7 +89,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 (async () => {
   // The editor surfaces are Smart components: the loader fetches them because
   // their tags are on this page.
-  await Promise.all(['sf-sortable', 'sf-composition-overlay', 'sf-inline-editor'].map((tag) => customElements.whenDefined(tag)));
+  await Promise.all(['sf-sortable', 'sf-editor-overlay', 'sf-editor-inline'].map((tag) => customElements.whenDefined(tag)));
   overlay.attach(canvas);
   overlay.setActions([{ id: 'remove', label: 'Удалить' }]);
   overlay.setDropFilter((place) => place.parent_id === 'page');

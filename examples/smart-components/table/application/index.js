@@ -32,10 +32,10 @@ const dateFormat = new Intl.DateTimeFormat('ru-RU', {dateStyle: 'medium', timeSt
 const initializeApplicationView = async () => {
   const root = document.querySelector('[data-application-demo]');
   if (!root || root.dataset.exampleReady === 'true') return;
-  await customElements.whenDefined('sf-data-view');
+  await customElements.whenDefined('sf-view');
   root.dataset.exampleReady = 'true';
 
-  const view = root.querySelector('sf-data-view');
+  const view = root.querySelector('sf-view');
   const log = root.querySelector('[data-application-log]');
   let scenario = 'normal';
   const records = PROJECTS.map((project) => ({...project, revision: '1'}));

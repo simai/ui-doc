@@ -1,6 +1,6 @@
 document.querySelectorAll('[data-context-menu-demo="profile"]').forEach((demo) => {
   const anchor = demo.querySelector('[data-menu-anchor]');
-  const menu = demo.querySelector('sf-context-menu');
+  const menu = demo.querySelector('sf-menu-context');
   const result = demo.querySelector('[data-menu-result]');
 
   menu.entries = [

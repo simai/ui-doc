@@ -74,7 +74,7 @@ const answer = () => {
 };
 
 const initializeSolutionPropertyView = async () => {
-  await customElements.whenDefined('sf-property-view');
+  await customElements.whenDefined('sf-view-properties');
 
   const panel = document.querySelector('#solution-property-view');
   if (!panel || panel.dataset.exampleReady === 'true') return;

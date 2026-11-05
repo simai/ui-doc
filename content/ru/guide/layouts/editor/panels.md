@@ -18,7 +18,7 @@ description: "Библиотеку блоков и свойства выбран
 
 ```html
 <div class="editor-page" data-sf-drawer-dock-host>
-  <sf-composition-overlay for="canvas" accepts="blocks"></sf-composition-overlay>
+  <sf-editor-overlay for="canvas" accepts="blocks"></sf-editor-overlay>
   <div id="canvas"></div>
 </div>
 <sf-drawer id="blocks" docked open placement="inline-start" title="Блоки">

@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-`<sf-context-menu>` — панель с коротким списком действий над объектом:
+`<sf-menu-context>` — панель с коротким списком действий над объектом:
 страницей, строкой таблицы, файлом, профилем. Он даёт пунктам роль меню и
 управление клавиатурой. Пункты задаются данными, а метод `openFor`
 открывает меню у кнопки и дальше управляет им сам; для выбора значения в
@@ -26,7 +26,7 @@ description: "Показывает короткий список действи�
 атрибут `popup`:
 
 ```html
-<sf-context-menu popup aria-label="Действия со страницей"></sf-context-menu>
+<sf-menu-context popup aria-label="Действия со страницей"></sf-menu-context>
 ```
 
 Любое меню действий строится одинаково: пункты передаются данными в
@@ -164,11 +164,11 @@ description: "Показывает короткий список действи�
 список прокручивается; его кнопки делят ширину поровну.
 
 ```html
-<sf-context-menu popup size="1/2" aria-label="Настройки">
+<sf-menu-context popup size="1/2" aria-label="Настройки">
   <div slot="content" class="sf-context-menu-body">…</div>
   <sf-button slot="footer" size="1/2" appearance="outline" scheme="on-surface" text="Сбросить"></sf-button>
   <sf-button slot="footer" size="1/2" text="Применить"></sf-button>
-</sf-context-menu>
+</sf-menu-context>
 ```
 
 ### Меню, которым управляет страница
@@ -178,12 +178,12 @@ description: "Показывает короткий список действи�
 кнопке мыши — и после показа переводит в него фокус методом `focus()`,
 дождавшись отрисовки. По `Escape` и после выбора пункта страница скрывает
 меню и возвращает фокус на кнопку, которая его открыла. Действие пункта —
-обычный `click` на кнопке. Скрывайте обёртку меню: сам `<sf-context-menu>`
+обычный `click` на кнопке. Скрывайте обёртку меню: сам `<sf-menu-context>`
 не занимает места в раскладке, и атрибут `hidden` на нём не действует.
 
 ```js
 const layer = document.querySelector('#file-menu-layer');
-const menu = layer.querySelector('sf-context-menu');
+const menu = layer.querySelector('sf-menu-context');
 const opener = document.querySelector('#file-menu-button');
 
 opener.addEventListener('click', async () => {
@@ -210,7 +210,7 @@ layer.addEventListener('keydown', (event) => {
 раздувалась на каждом уровне.
 
 ```html
-<sf-context-menu id="menu" popup submenu="drill" width="280px" aria-label="Вид"></sf-context-menu>
+<sf-menu-context id="menu" popup submenu="drill" width="280px" aria-label="Вид"></sf-menu-context>
 ```
 
 У пункта с подменю значение `value` в этом случае стоит под названием: длинное
@@ -364,7 +364,7 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 - На сенсорном экране каждая строка меню — действие, флажок, вариант выбора —
   не ниже 44 px, чтобы в неё попадал палец; с мышью строки остаются на
   лестнице размеров.
-- Меню нужно доступное имя: `aria-label` на `<sf-context-menu>`. Подменю
+- Меню нужно доступное имя: `aria-label` на `<sf-menu-context>`. Подменю
   получает имя по подписи пункта, который его открыл.
 - Пункты из `entries` получают роли `menuitem`, `menuitemcheckbox` или
   `menuitemradio` с `aria-checked`; пункт с подменю — `aria-haspopup` и

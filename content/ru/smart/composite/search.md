@@ -39,7 +39,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 Кнопка-вызов в другом месте страницы:
 
 ```html
-<sf-icon-button id="search-button" icon="search" aria-label="Поиск"></sf-icon-button>
+<sf-button-icon id="search-button" icon="search" aria-label="Поиск"></sf-button-icon>
 <sf-search for="search-button" index="/search-index.json"></sf-search>
 ```
 

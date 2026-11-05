@@ -16,6 +16,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Закрытие](/ru/smart/actions/close/)
 - [Скачивание файла](/ru/smart/actions/download-file/)
 - [Кнопка копирования](/ru/smart/actions/copy-button/)
+- [Подтверждение](/ru/smart/actions/confirm/)
 
 ## Формы и ввод
 

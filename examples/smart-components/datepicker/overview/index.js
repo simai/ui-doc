@@ -6,7 +6,7 @@ const initializeMeetingDate = async () => {
   if (!picker || !output || picker.dataset.exampleReady === 'true') return;
   picker.dataset.exampleReady = 'true';
 
-  await customElements.whenDefined('sf-datepicker');
+  await customElements.whenDefined('sf-input-date');
   picker.addEventListener('change', (event) => {
     if (event.target !== picker) return;
     const {value, formattedValue} = event.detail;

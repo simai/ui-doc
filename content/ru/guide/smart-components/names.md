@@ -14,10 +14,10 @@ description: "Как называются смарт-компоненты, их 
 
 - Тег — английское словосочетание в kebab-case после приставки:
   `sf-<уточнение>-<главное слово>`, **главное слово в конце**:
-  `sf-context-menu`, `sf-admin-menu`, `sf-range-slider`, `sf-page-header`,
-  `sf-thread-list`, `sf-message-log`.
+  `sf-menu-context`, `sf-admin-menu`, `sf-slider-range`, `sf-header-page`,
+  `sf-chat-threads`, `sf-message-log`.
 - Компонент того же рода сохраняет главное слово и получает уточнение:
-  `sf-menu`, `sf-context-menu`, `sf-admin-menu`, `sf-site-menu`. В семье
+  `sf-menu`, `sf-menu-context`, `sf-admin-menu`, `sf-site-menu`. В семье
   может быть сколько угодно членов.
 - Сборка из сборок называется так же — по тому, что она есть:
   `sf-record-screen`, а не по своим частям.
@@ -64,13 +64,13 @@ description: "Как называются смарт-компоненты, их 
 | `source` | спрашивает данные у хоста через порт по `collection`, `query`, `filters`, `sort` и `page`; применяет только новейший ответ (`concurrency: latest`); вычисляет состояние данных; сообщает о присланном без запроса и о потоках фактами | порты представления данных и свойств, порт чата |
 | `search` | текстовый запрос | поиск таблицы и админ-меню |
 | `filter` | условия на записи | фильтры таблицы |
-| `list` | показывает записи; открывает одну, выбирает несколько | `sf-table`, `sf-data-view`, `sf-thread-list` |
+| `list` | показывает записи; открывает одну, выбирает несколько | `sf-view-table`, `sf-view`, `sf-chat-threads` |
 | `pagination` | страница, размер страницы, полоса массовых действий | `sf-pagination` |
 | `feed` | лента, новое внизу, раннее по запросу | `sf-message-log` |
-| `record` | показывает и правит одну запись | `sf-property-view` |
+| `record` | показывает и правит одну запись | `sf-view-properties` |
 | `actions` | команды для выбранного или записи | панель инструментов, действия строки |
 | `composer` | пишет новую запись | поле ввода UI Chat |
-| `confirm` | спрашивает перед изменением, отвечает отпечатком | `sf-change-confirm` |
+| `confirm` | спрашивает перед изменением, отвечает отпечатком | `sf-confirm-change` |
 | `navigation` | где человек; переход между разделами | `sf-admin-menu` |
 
 ## Ключи экрана

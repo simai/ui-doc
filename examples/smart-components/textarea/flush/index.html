@@ -4,13 +4,13 @@
   .composer > sf-textarea { flex: 1 1 auto; min-inline-size: 0; }
 </style>
 <form class="composer" aria-label="Новое сообщение" onsubmit="return false">
-  <sf-textarea
+  <sf-input-textarea
     name="message"
     appearance="flush"
     placeholder="Напишите сообщение"
     aria-label="Сообщение"
     auto-grow
     max-rows="6">
-  </sf-textarea>
-  <sf-icon-button icon="send" aria-label="Отправить" native-type="submit"></sf-icon-button>
+  </sf-input-textarea>
+  <sf-button-icon icon="send" aria-label="Отправить" native-type="submit"></sf-button-icon>
 </form>

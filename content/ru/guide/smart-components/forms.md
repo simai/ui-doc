@@ -130,7 +130,7 @@ amount.form.reportValidity(); // false: форма не отправится
 
 Поле может показывать значение, унаследованное от уровня выше: от раздела,
 от шаблона, от общих настроек. Черта используется в `sf-input`,
-`sf-textarea`, `sf-dropdown`, `sf-color`, `sf-switch` и `sf-quantity` и
+`sf-input-textarea`, `sf-dropdown`, `sf-input-color`, `sf-switch` и `sf-input-quantity` и
 приносит:
 
 | Часть | Имена |

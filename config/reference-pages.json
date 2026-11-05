@@ -1935,6 +1935,10 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/actions/confirm.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "pro/admin/change-confirm.md": {
       "kind": "smart",
       "standard": 2

@@ -7,7 +7,7 @@
     "button-copy": "smart/actions/copy-button.md",
     "button-icon": "smart/actions/icon-buttons.md",
     "chat-threads": "pro/chat/thread-list.md",
-    "confirm": "pro/admin/change-confirm.md",
+    "confirm": "smart/actions/confirm.md",
     "confirm-change": "pro/admin/change-confirm.md",
     "editor-content": "pro/editor/content-editor.md",
     "editor-inline": "smart/editor/inline-editor.md",
@@ -28,11 +28,10 @@
     "slider-range": "smart/forms/range-slider.md",
     "view": "pro/admin/table.md",
     "view-properties": "pro/admin/property-view.md",
-    "view-table": "pro/admin/table.md"
+    "view-table": "pro/admin/table.md",
+    "editor": "pro/editor/editor.md"
   },
-  "skip": {
-    "editor": "sf-editor (the block editor, simai/ui-pro components/src/smart/editor) has no page yet; its page comes with the editor documentation, not with a repin."
-  },
+  "skip": {},
   "suppress": {
     "popover": {
       "sections": [

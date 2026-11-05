@@ -35,7 +35,7 @@ description: "Компоненты Framework сами подставляют ч�
 
 ```html
 <section lang="en">
-  <sf-country-code></sf-country-code>
+  <sf-input-country></sf-input-country>
   <!-- поле и названия стран — по-английски -->
 </section>
 ```

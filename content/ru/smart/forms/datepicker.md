@@ -5,13 +5,13 @@ description: "Выбирает дату или период в календар�
 
 # Календарь
 
-`<sf-datepicker>` — выбор одной даты или периода в календаре с переходом по
+`<sf-input-date>` — выбор одной даты или периода в календаре с переходом по
 месяцам и годам. Берите его, когда дату удобнее найти в календаре, чем
 напечатать; если основной сценарий — ввод с клавиатуры, хватит
 [поля ввода](/ru/smart/forms/inputs/).
 
 То же на классах — [Календарь](/ru/components/forms/datepicker/): оформление
-календаря `<sf-datepicker>` берёт из этого компонента.
+календаря `<sf-input-date>` берёт из этого компонента.
 
 ## Пример
 
@@ -24,7 +24,7 @@ description: "Выбирает дату или период в календар�
 открывается по щелчку или с клавиатуры:
 
 ```html
-<sf-datepicker label="Дата встречи" name="meeting" value="2026-09-03"></sf-datepicker>
+<sf-input-date label="Дата встречи" name="meeting" value="2026-09-03"></sf-input-date>
 ```
 
 `label` выводит подпись над полем. Если подпись выводит сама страница —
@@ -202,7 +202,7 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 календарём:
 
 ```html
-<sf-datepicker label="Дата доставки" input-name="delivery_date_text"></sf-datepicker>
+<sf-input-date label="Дата доставки" input-name="delivery_date_text"></sf-input-date>
 <input type="hidden" name="delivery_date">
 <script>
   const picker = document.querySelector('sf-datepicker[input-name="delivery_date_text"]');
