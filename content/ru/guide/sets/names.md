@@ -19,7 +19,7 @@ description: "У всех наборов одна приставка sf-, имя
 |:---|:---|:---|
 | `sf-effect` | `effect` | набор `effects` |
 | `sf-chat-composer` | `chat` | набор `chat` |
-| `sf-message-log` | `message` | набор `chat` |
+| `sf-chat-window` | `chat` | набор `chat` |
 | `sf-view-table` | `view` | набор `view` |
 | `sf-button` | `button` | SIMAI Framework |
 
@@ -45,4 +45,5 @@ description: "У всех наборов одна приставка sf-, имя
 Когда компонент переименовывают, старое имя ещё какое-то время работает и
 пишет в консоль подсказку с новым именем, как и у компонентов SIMAI Framework
 (см. [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/)). Срок,
-до которого действует старое имя, набор указывает сам.
+до которого действует старое имя, набор указывает сам. Таблица переименований
+ноября 2026 — на странице [Обновление](/ru/guide/connection/updating/).

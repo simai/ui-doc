@@ -18,9 +18,9 @@
 :::
 
 Подробнее: [админка](/demos/home/admin/) на отдельной странице,
-[чат](/ru/pro/chat/), [редактор](/ru/pro/editor/content-editor/). Все три —
-компоненты [SIMAI Pro](/ru/pro/) с отдельной лицензией; остальное в SIMAI
-Framework открыто под Apache-2.0.
+[чат](/ru/pro/chat/), [редактор](/ru/pro/editor/editor/). Это
+[наборы компонентов](/ru/guide/sets/) `admin`, `chat` и `editor` с лицензией
+Pro; SIMAI Framework открыт под Apache-2.0.
 
 ## Три шага
 
@@ -50,7 +50,7 @@ Framework открыто под Apache-2.0.
 :::features
 - **[Темы](/ru/guide/colour/themes/)** Светлая, тёмная и своя тема из одного цвета.
 - **[Обновление](/ru/guide/connection/updating/)** Закреплённый выпуск и журнал изменений.
-- **[Фоновые эффекты](https://effects.simai.io/)** Живые фоны для первых экранов.
+- **[Наборы компонентов](/ru/guide/sets/)** Админка, таблицы, чат, письма, редактор, эффекты.
 - **[Работа с ИИ](/ru/guide/standards/ai/)** Индекс `ai.json` и текстовая версия каждой страницы.
 :::
 

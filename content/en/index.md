@@ -23,9 +23,9 @@ loads when you open it.
 :::
 
 More: [the admin](/demos/home/admin/) on its own page,
-[the chat](/ru/pro/chat/) and [the editor](/ru/pro/editor/content-editor/) (in
-Russian). All three are [SIMAI Pro](/ru/pro/) components under their own
-licence; the rest of SIMAI Framework is open under Apache-2.0.
+[the chat](/ru/pro/chat/) and [the editor](/ru/pro/editor/editor/) (in
+Russian). They are the [component sets](/ru/guide/sets/) `admin`, `chat` and
+`editor` under the Pro licence; SIMAI Framework is open under Apache-2.0.
 
 ## Three steps
 
@@ -55,7 +55,7 @@ licence; the rest of SIMAI Framework is open under Apache-2.0.
 :::features
 - **[Themes](/ru/guide/colour/themes/)** Light, dark and your own theme from one colour.
 - **[Updating](/ru/guide/connection/updating/)** A pinned release and the change journal.
-- **[Background effects](https://effects.simai.io/)** Live backgrounds for first screens.
+- **[Component sets](/ru/guide/sets/)** Admin, tables, chat, mail, editor, effects.
 - **[Working with AI](/ru/guide/standards/ai/)** The `ai.json` index and a text version of every page.
 :::
 
