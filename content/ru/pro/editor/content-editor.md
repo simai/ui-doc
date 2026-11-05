@@ -200,7 +200,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -264,5 +264,5 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ### Источник
 
-- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/editor-content`
-- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/editor-content/rule.js#name=cl-editor-content`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/editor-content`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/editor-content/rule.js#name=cl-editor-content`

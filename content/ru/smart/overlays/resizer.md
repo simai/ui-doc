@@ -192,7 +192,7 @@ SF.Resizer.attach(table, {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -241,12 +241,12 @@ SF.Resizer.attach(table, {
 | | |
 |:---|:---|
 | Тег | `<sf-resizer>`, контракт `smart.resizer` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-c3015f76bcc2` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль separator; доступное имя рекомендуется; клавиши `ArrowLeft`, `ArrowRight`, `Home`, `End`, `PageUp`, `PageDown`, `Enter`, `Space` |
-| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/resizer` |
-| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-resizer` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/resizer` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-resizer` |
 
 ## См. также
 

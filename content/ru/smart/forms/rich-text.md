@@ -151,7 +151,7 @@ field.addEventListener('change', () => save(field.value));
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -200,12 +200,12 @@ field.addEventListener('change', () => save(field.value));
 | | |
 |:---|:---|
 | Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-c3015f76bcc2` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль текстовое поле (`textbox`); доступное имя обязательно; клавиши Tab приводит на панель (одна остановка), затем в текст; Tab в тексте уводит из поля, ArrowLeft, ArrowRight, Home и End переходят между кнопками панели, Mod+B и Mod+I включают и выключают полужирный и курсив, Mod+K открывает поле ссылки, Mod+Z отменяет, Mod+Shift+Z и Mod+Y повторяют, Enter в поле ссылки применяет адрес, Escape закрывает поле |
-| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/input-rich` |
-| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-input-rich` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/input-rich` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-input-rich` |
 
 ## См. также
 

@@ -153,7 +153,7 @@ Dropdown не меняются.
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -208,12 +208,12 @@ Dropdown не меняются.
 | | |
 |:---|:---|
 | Тег | `<sf-list-item>`, контракт `smart.list-item` версии `1.2.6` |
-| Поставка | выпуск Framework `ui-c3015f76bcc2` |
+| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; принят в продукт |
 | До прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя обязательно; клавиши `ArrowDown`, `ArrowUp`, `Home`, `End`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/smart/list-item` |
-| Правило классов | `simai/ui@c3015f76bcc20cd502d5fe7931495e35711d6a4d:distr/rule/rule.json#name=cl-list-item` |
+| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/list-item` |
+| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-list-item` |
 
 ## См. также
 

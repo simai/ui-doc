@@ -176,7 +176,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-co
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-c3015f76bcc2` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -243,5 +243,5 @@ Tab не входят. Клавиши дерева и панели — у `sf-co
 
 ### Источник
 
-- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/mail-canvas`
-- `simai/ui-pro@978d513cf4bf331e0f89aa201aefe608b90e9d1c:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-canvas`
+- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`

@@ -68,7 +68,7 @@ Framework поставляет базовые типы, на которых мо
 | `element.button`, `element.button-icon`, `element.badge`, `element.icon` | кнопка (с `href` — ссылка с видом кнопки), кнопка-значок, метка, значок | `<sf-button>`, `<sf-button-icon>`, `<sf-badge>`, `<sf-icon>` |
 
 Типы `layout.container`, `layout.grid`, `layout.spacer`, `layout.area` и
-`element.*` появились в выпуске `ui-c3015f76bcc2` (`core.runtime` 1.26.0).
+`element.*` появились в выпуске `ui-e22fefb3c1f8` (`core.runtime` 1.26.0).
 
 Полный перечень с допустимыми значениями — в реестре типов
 (`distr/core/contracts/composition-types.v1.json` поставки `ui`).
