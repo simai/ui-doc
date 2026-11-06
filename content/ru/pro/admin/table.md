@@ -789,7 +789,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -799,7 +799,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view>` |
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
-| Контракт | `smart.view`, версия `1.8.1` |
+| Контракт | `smart.view`, версия `1.8.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -922,8 +922,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/view`
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/view`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -1133,5 +1133,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/view-table`
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/view-table`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/view-table/rule.js#name=cl-view-table`

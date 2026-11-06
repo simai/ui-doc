@@ -392,7 +392,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -400,7 +400,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт хоста. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.view-properties`, версия `1.10.0` |
+| Контракт | `smart.view-properties`, версия `1.10.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -568,8 +568,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/view-properties`
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/view-properties`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

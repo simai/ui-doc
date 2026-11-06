@@ -114,7 +114,7 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -175,12 +175,12 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
+| Поставка | выпуск Framework `ui-1ec283e856cd` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя рекомендуется; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/input-image` |
-| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-input-image` |
+| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/input-image` |
+| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 

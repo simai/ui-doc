@@ -330,7 +330,7 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -414,12 +414,12 @@ period.value = ['2026-10-01', '2026-10-31'];
 | | |
 |:---|:---|
 | Тег | `<sf-input-date>`, контракт `smart.input-date` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
+| Поставка | выпуск Framework `ui-1ec283e856cd` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; принят в продукт |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль диалог (`dialog`); доступное имя обязательно; клавиши `Tab`, `Shift+Tab`, `Enter`, `Space`, `Escape`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `PageUp`, `PageDown` |
-| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/input-date` |
-| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-input-date` |
+| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/input-date` |
+| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-input-date` |
 
 ## См. также
 

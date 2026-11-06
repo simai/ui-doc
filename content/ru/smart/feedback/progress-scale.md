@@ -93,7 +93,7 @@ scale.setProgress(completedSteps * 20);
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -141,12 +141,12 @@ scale.setProgress(completedSteps * 20);
 | | |
 |:---|:---|
 | Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.1.3` |
-| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
+| Поставка | выпуск Framework `ui-1ec283e856cd` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль индикатор прогресса (`progressbar`); доступное имя обязательно |
-| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/progress-scale` |
-| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-progress-scale` |
+| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/progress-scale` |
+| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-progress-scale` |
 
 ## См. также
 

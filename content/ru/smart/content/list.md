@@ -168,7 +168,7 @@ list.addEventListener('sf-list-open', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -186,7 +186,7 @@ list.addEventListener('sf-list-open', (event) => {
 | `label` | строка | — | — | Доступное имя списка; пустое — «Список» на языке страницы. |
 | `heading-level` | целое число | `3` | от 2; до 6 | Уровень заголовков групп в структуре страницы. |
 | `empty-text` | строка | — | — | Заголовок пустого состояния (`sf-empty-state` no-data); слот `empty` заменяет состояние целиком. |
-| `items` | список: объект | `[]` | — | Строки в порядке хоста: `{id, text, supporting?, icon?, date?, group?, disabled?, actions?}`. |
+| `items` | список: объект | `[]` | — | Строки в порядке хоста: `{id, text, supporting?, icon?, avatar?, date?, group?, count?, badge?, pinned?, disabled?, actions?}`. |
 | `groups` | список | `[]` | — | Для `group-by` key: группы по порядку, `[{key, text}]`; ключ, которого нет в списке, идёт последним, его заголовок — сам ключ. |
 | `actions` | список | `[]` | — | Действия строки в общем меню после «Переименовать»: `[{id, text, icon?, destructive?}]`. Выбранное действие уходит событием apply `{action, scope: entry, ids}`. |
 
@@ -220,13 +220,13 @@ list.addEventListener('sf-list-open', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list>`, контракт `smart.list` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
+| Тег | `<sf-list>`, контракт `smart.list` версии `1.1.0` |
+| Поставка | выпуск Framework `ui-1ec283e856cd` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; `host-required` |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль список; доступное имя внутренний; клавиши `Tab`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `ContextMenu` |
-| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/list` |
-| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/list` |
+| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

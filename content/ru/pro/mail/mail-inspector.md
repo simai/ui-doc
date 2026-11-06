@@ -178,7 +178,7 @@ panel.sections = [
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -186,7 +186,7 @@ panel.sections = [
 |:---|:---|
 | Тег | `<sf-mail-inspector>` |
 | Назначение | Правая панель SIMAI Email Editor как форма, нарисованная из данных: заголовок с действиями, путь уровней, вкладки, раскрывающиеся разделы и все поля редактора. Хост передаёт форму на языке человека, включая значение, ошибку, подсказку и заполнитель каждого поля; элемент сообщает, что сделал человек, и ничего не меняет. Набранный текст, который хост не принял, переживает перерисовку, а перерисовка никогда не уводит фокус и курсор из поля, где человек печатает. |
-| Контракт | `smart.mail-inspector`, версия `1.0.1` |
+| Контракт | `smart.mail-inspector`, версия `1.0.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -258,5 +258,5 @@ panel.sections = [
 
 ### Источник
 
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/mail-inspector`
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/mail-inspector`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`

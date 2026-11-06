@@ -104,7 +104,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -112,7 +112,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 |:---|:---|
 | Тег | `<sf-mail-letters>` |
 | Назначение | Все письма человека в SIMAI Email Editor: поиск по названию, порядок и то, что предлагает каждая строка, — «Открыть» и под ⋯ копия, переименование и удаление. Момент изменения и число блоков записаны на языке страницы. Элемент не хранит писем и ничего не запоминает; он сообщает, что выбрал человек. |
-| Контракт | `smart.mail-letters`, версия `1.0.2` |
+| Контракт | `smart.mail-letters`, версия `1.0.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -158,5 +158,5 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/mail-letters`
-- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/mail-letters`
+- `simai/ui-pro@ff58cea49d9abdcd67f1de98ba9e250aec5edccb:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`
