@@ -253,7 +253,32 @@ layer.addEventListener('keydown', (event) => {
 Компактные настройки — это то же меню, отдельного компонента для них нет. Запись с полем `type` рисуется не командой, а
 строкой, которая показывает и меняет значение.
 
-:::example {id="smart-components/context-menu/settings" label="Панель настроек: плитки, переключатель, выбор и ползунок"}
+У панели настроек три вида — из тех же записей:
+
+- **Переход внутрь** (`submenu="drill"`, у выбора `view: 'drill'`): под
+  названием мелко стоит текущее значение, нажатие открывает варианты в той же
+  панели с возвратом и галочкой. Подходит для настроек чтения, профиля, языка —
+  когда вариантов много или они длинные.
+- **Строки** (без `submenu`): название слева, управление справа —
+  переключатель, короткие варианты подряд, ползунок. Всё видно сразу, без
+  перехода; подходит для вида таблицы или списка.
+- **Плитки сверху** (`group` с `view: 'tiles'`): самые частые
+  переключатели — плитками по три в ряд, остальное строками ниже. Как быстрые
+  настройки телефона.
+
+#### Переход внутрь
+
+:::example {id="smart-components/context-menu/settings-drill" label="Настройки чтения: переход внутрь"}
+:::
+
+#### Строки
+
+:::example {id="smart-components/context-menu/settings-rows" label="Вид таблицы: управление справа"}
+:::
+
+#### Плитки сверху
+
+:::example {id="smart-components/context-menu/settings-tiles" label="Быстрые настройки плитками"}
 :::
 
 | `type` | Строка | `value` |
@@ -291,12 +316,12 @@ menu.entries = [
 
 | Событие | Когда |
 | --- | --- |
-| `sf-context-menu-change` | Человек просит изменить значение; отменяемое, `{id, value, previous, entry}` |
-| `sf-context-menu-changed` | Значение записано в запись, строка его показывает |
-| `sf-context-menu-reset` | Человек просит вернуть объявленные значения; отменяемое |
+| `sf-menu-context-change` | Человек просит изменить значение; отменяемое, `{id, value, previous, entry}` |
+| `sf-menu-context-changed` | Значение записано в запись, строка его показывает |
+| `sf-menu-context-reset` | Человек просит вернуть объявленные значения; отменяемое |
 
 ```js
-menu.addEventListener('sf-context-menu-change', async (event) => {
+menu.addEventListener('sf-menu-context-change', async (event) => {
   event.preventDefault();                       // ждём сервер
   const {id, value} = event.detail;
   if (await save(id, value)) menu.setValue(id, value);
