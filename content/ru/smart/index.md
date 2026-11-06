@@ -51,6 +51,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Элемент дерева](/ru/smart/navigation/tree-item/)
 - [Выпадающий список](/ru/smart/navigation/dropdown/)
 - [Контекстное меню](/ru/smart/navigation/context-menu/)
+- [Выбор языка](/ru/smart/navigation/language/)
 
 ## Уведомления и состояния
 

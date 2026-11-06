@@ -2046,6 +2046,10 @@
     "smart/forms/theme-generator.md": {
       "kind": "smart",
       "standard": 3
+    },
+    "smart/navigation/language.md": {
+      "kind": "smart",
+      "standard": 3
     }
   }
 }

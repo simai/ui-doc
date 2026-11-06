@@ -29,7 +29,9 @@ description: "Переключает один из нескольких взаи
 
 Варианты передаются в `items` массивом JSON с полями `value`, `label`,
 `icon`, `aria-label`, `disabled` и `loading`; сегментированный вид читает ещё
-`count` и `icon-only`:
+`count` и `icon-only`. Поле `lang` ставит атрибут `lang` на сегмент, когда
+подпись написана на другом языке, чем страница: «Deutsch» на русской странице
+читается немецким голосом:
 
 ```html
 <sf-button-group aria-label="Вид" value="list"
@@ -198,7 +200,7 @@ group.select('month');
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -220,7 +222,7 @@ group.select('month');
 | `disabled` | да/нет | нет | — | Отключает всю группу. |
 | `value` | строка | пусто | — | Значение выбранного элемента. |
 | `aria-label` | строка | пусто | — | Доступное имя группы. |
-| `items` | список: объект | `[]` | например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`, `[{"value":"all","label":"Все","count":24},{"value":"light","label":"Светлые","count":17},{"value":"dark","label":"Тёмные","count":7}]` | Выбираемые элементы со стабильными полями value, label, icon, count, icon-only, disabled и loading. |
+| `items` | список: объект | `[]` | например `[{"value":"list","label":"List","icon":"list"},{"value":"grid","label":"Grid","icon":"grid_view"}]`, `[{"value":"all","label":"Все","count":24},{"value":"light","label":"Светлые","count":17},{"value":"dark","label":"Тёмные","count":7}]` | Выбираемые элементы со стабильными полями value, label, lang, icon, count, icon-only, disabled и loading. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -256,13 +258,13 @@ group.select('month');
 
 | | |
 |:---|:---|
-| Тег | `<sf-button-group>`, контракт `smart.button-group` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
+| Тег | `<sf-button-group>`, контракт `smart.button-group` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-1ec283e856cd` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа переключателей (`radiogroup`); доступное имя обязательно; клавиши `Tab`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End` |
-| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/button-group` |
-| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-button-group` |
+| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/button-group` |
+| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-button-group` |
 
 ## См. также
 
