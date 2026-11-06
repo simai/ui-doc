@@ -162,6 +162,7 @@
       "title": "Уведомления и состояния",
       "items": [
         "alert",
+        "alert-bar",
         "toast",
         "badges",
         "progress-bar",
@@ -182,6 +183,8 @@
         "icons",
         "tags",
         "list-item",
+        "list",
+        "list-feed",
         "accordion",
         "gallery",
         "file-preview",

@@ -535,6 +535,18 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/feedback/alert-bar.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/content/list.md": {
+      "kind": "smart",
+      "standard": 3
+    },
+    "smart/content/list-feed.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/feedback/badges.md": {
       "kind": "smart",
       "standard": 3

@@ -55,6 +55,7 @@ description: "Смарт-компоненты по задачам интерфе
 ## Уведомления и состояния
 
 - [Уведомление](/ru/smart/feedback/alert/)
+- [Плашка уведомлений](/ru/smart/feedback/alert-bar/)
 - [Всплывающие сообщения](/ru/smart/feedback/toast/)
 - [Бейджи](/ru/smart/feedback/badges/)
 - [Прогресс](/ru/smart/feedback/progress-bar/)
@@ -73,6 +74,8 @@ description: "Смарт-компоненты по задачам интерфе
 - [Иконки](/ru/smart/content/icons/)
 - [Теги](/ru/smart/content/tags/)
 - [Строка списка](/ru/smart/content/list-item/)
+- [Список](/ru/smart/content/list/)
+- [Лента](/ru/smart/content/list-feed/)
 - [Аккордеон](/ru/smart/content/accordion/)
 - [Галерея](/ru/smart/content/gallery/)
 - [Предпросмотр файла](/ru/smart/content/file-preview/)

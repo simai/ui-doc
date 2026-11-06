@@ -1,15 +1,16 @@
 ---
 title: "Лента сообщений"
-description: "Переписка прокручиваемой колонкой: ранняя история сверху без сдвига, новое снизу, серии одного автора."
+description: "Прежнее имя ленты SIMAI Framework sf-list-feed в пакете Pro: переписка прокручиваемой колонкой, которая отвечает на прежние имена до 2027-01-01."
 ---
 
 # Лента сообщений
 
-`<sf-message-log>` — переписка прокручиваемой колонкой: человек и
-ассистент или люди между собой. Компонент отвечает за положение чтения:
-ранняя история добавляется сверху, не сдвигая читаемое; новое сообщение тянет
-колонку вниз, только если человек уже был внизу; подряд идущие сообщения
-одного автора собираются в серию. Сообщения передаёт и рисует приложение.
+`<sf-message-log>` — устаревшее имя [Ленты](/ru/smart/content/list-feed/)
+(`sf-list-feed`) SIMAI Framework, которое работает до 2027-01-01. Поведение
+ленты — положение чтения, серии одного автора, растущие записи, перерисовка на
+месте, объявления и клавиатура — принадлежит `sf-list-feed`: элемент под
+прежним тегом — её наследник, он рисует ту же разметку, отправляет её события
+и отвечает на прежние имена. В новом коде пишите `<sf-list-feed>`.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
 Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
@@ -24,13 +25,15 @@ Framework: поставляется пакетом `pro` из репозитор
 
 В разметке — только тег; высоту ему даёт контейнер. Сам тег —
 `display: contents`, а колонка растягивается во flex-контейнере и
-прокручивается внутри.
+прокручивается внутри. Правило `cl-message-log` связано с `cl-list-feed`:
+Loader загружает ленту вместе с элементом, а элемент определяется, как только
+определена лента.
 
 - Сообщения передаёт скрипт: `setMessages()`, `prependMessages()`,
-  `upsert()`.
+  `upsert()`, или JSON-блок `data-sf-settings` с `messages`.
 - Сообщение — обычные данные. Компонент читает `id` (обязательный
-  постоянный ключ), `author`, `own`, `pending`, а без своей функции
-  отрисовки — ещё `author_name` и `text`. Остальные поля — для функции
+  постоянный ключ), `author`, `own`, `growing`, а без своей функции
+  отрисовки — ещё `author-name` и `text`. Остальные поля — для функции
   отрисовки приложения.
 - Слот `empty` показывается вместо колонки, пока сообщений нет.
 
@@ -39,10 +42,9 @@ Framework: поставляется пакетом `pro` из репозитор
 ### Своя отрисовка сообщения
 
 Свойство `renderMessage(message, context)` возвращает узел, строку (она
-выводится как текст) или `null`. В `context` — `own`, `first` и `last`
-(начало и конец серии автора), `previous`, `next` и `view`. Без функции
-лента выводит имя автора над первым сообщением серии и текст — только
-текст, никогда разметку.
+выводится как текст) или `null`; в `context` — те же поля, что у
+`renderItem` ленты. Без функции лента выводит имя автора над первым
+сообщением серии и текст — только текст, никогда разметку.
 
 :::example {id="smart-components/message-log/custom-render" label="Сообщения человека и ассистента"}
 :::
@@ -58,12 +60,45 @@ Framework: поставляется пакетом `pro` из репозитор
 
 ## Применение
 
+### Прежние имена
+
+Каждое прежнее имя работает до 2027-01-01 и записывается в
+`SF.deprecations`; первый `<sf-message-log>` на странице один раз
+называется в консоли.
+
+| Прежнее имя | Имя ленты |
+|:---|:---|
+| `<sf-message-log>` | `<sf-list-feed>` |
+| `messages` | `items` |
+| `setMessages(messages, {hasMore})` | `setItems(items, {hasMore})` |
+| `prependMessages(messages, {hasMore})` | `prependItems(items, {hasMore})` |
+| `renderMessage(message, context)` | `renderItem(entry, context)`; в `context` вместо `log` — `feed` |
+| `announceMessage(message, context)` | `announceItem(entry, context)` |
+| `sf-message-log-load-more`, `-begun`, `-chunk`, `-completed`, `-failed`, `-cancelled` | `sf-list-feed-load-more`, `-begun`, `-chunk`, `-completed`, `-failed`, `-cancelled` |
+| `setHasMore(value)` | настройка `has-more` (`hasMore`) |
+| `isNearBottom()` | `isAtLatest()` |
+| `cl-message-log` | `cl-list-feed` |
+| `--sf-message-log-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` | `--sf-list-feed-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` |
+
+Каждое событие ленты уходит и под прежним именем с тем же `detail`; один
+`preventDefault()` отменяет оба. До 2026-12-01 действуют ещё имена версии
+1.0: событие `sf-message-log-load-earlier` (теперь `-load-more`), поля
+сообщения `pending` (теперь `growing`) и `author_name` (теперь
+`author-name`), а `remove(id)` — это `detach(id)`; `remove()` без `id` —
+браузерный.
+
+Разметка и внутренние переменные — ленты: стили страницы для
+`.sf-message-log`, `.sf-message-log__*` и `--sf-message-log--*` переносятся
+на `.sf-list-feed`, `.sf-list-feed__*` и `--sf-list-feed--*`. Публичные
+переменные `--sf-message-log-*` продолжают работать.
+
 ### Ранняя история
 
-При `has-more` вверху есть кнопка «Раньше», а верх колонки один раз
-просит предыдущие сообщения: приходит `sf-message-log-load-earlier` с
-`before` — `id` первого показанного сообщения. Ответ передайте
-`prependMessages()`; если загрузить не удалось, вызовите `earlierFailed()`.
+При `has-more` вверху есть кнопка «Показать предыдущие сообщения», а верх колонки один раз
+просит предыдущие сообщения: приходит `sf-message-log-load-more` (и
+`sf-list-feed-load-more`) с `{direction: 'before', before}`, где `before` —
+`id` первого показанного сообщения. Ответ передайте `prependMessages()`; если
+загрузить не удалось, вызовите `earlierFailed()`.
 
 ### Новые и изменившиеся сообщения
 
@@ -75,7 +110,7 @@ Framework: поставляется пакетом `pro` из репозитор
 ```js
 const log = document.querySelector('sf-message-log');
 log.setMessages(await api.messages(threadId), {hasMore: true});
-log.addEventListener('sf-message-log-load-earlier', async (event) => {
+log.addEventListener('sf-message-log-load-more', async (event) => {
   const page = await api.messages(threadId, {before: event.detail.before});
   log.prependMessages(page.items, {hasMore: page.hasMore});
 });
@@ -83,8 +118,8 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Доступность
 
-- Колонка — названная область, которая получает фокус и прокручивается
-  обычными клавишами.
+- Колонка — названная область (по умолчанию «Переписка»), которая получает
+  фокус и прокручивается обычными клавишами.
 - Законченное сообщение другого участника объявляется один раз вежливо
   (`live="polite"`); `live="off"` оставляет объявления приложению — метод
   `announce()`.
@@ -94,15 +129,15 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-message-log>` |
-| Назначение | Переписка прокручиваемой колонкой сообщений, которые рисует хост: сохраняет положение чтения, когда сверху добавляется история, следует за низом, только когда читатель внизу, объединяет подряд идущие сообщения одного автора и объявляет новое один раз. |
-| Контракт | `smart.message-log`, версия `1.2.5` |
+| Назначение | Устаревшее имя `sf-list-feed` SIMAI Framework (до 2027-01-01): лента под прежним тегом, которая по-прежнему отвечает на прежние имена (`messages`, `setMessages`, `prependMessages`, `renderMessage`, `announceMessage`, события `sf-message-log-*`). |
+| Контракт | `smart.message-log`, версия `2.0.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -145,7 +180,7 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 - `sf-message-log-completed` — `detail`: `{ id: any }`. Сообщение перестало расти целиком.
 - `sf-message-log-failed` — `detail`: `{ id: any, reason: string, message: string }`. Сообщение перестало расти с ошибкой: `{id, reason, message}`.
 - `sf-message-log-cancelled` — `detail`: `{ id: any }`. Поток остановлен: cancel, ожидание прервано, сообщение убрано, беседа заменена.
-- `sf-message-log-load-earlier` — устаревший псевдоним события `sf-message-log-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-message-log-load-more`.
+- `sf-message-log-load-earlier` — `detail` не описан. Устаревшее имя `sf-list-feed-load-more` до 2026-12-01 (detail дополняется).
 
 ### Доступность
 
@@ -162,5 +197,5 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/message-log`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/message-log`
+- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/message-log/rule.js#name=cl-message-log`

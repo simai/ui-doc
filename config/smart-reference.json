@@ -29,7 +29,10 @@
     "view": "pro/admin/table.md",
     "view-properties": "pro/admin/property-view.md",
     "view-table": "pro/admin/table.md",
-    "editor": "pro/editor/editor.md"
+    "editor": "pro/editor/editor.md",
+    "alert-bar": "smart/feedback/alert-bar.md",
+    "list": "smart/content/list.md",
+    "list-feed": "smart/content/list-feed.md"
   },
   "skip": {},
   "suppress": {
