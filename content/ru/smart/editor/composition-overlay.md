@@ -5,6 +5,8 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
+:badge[sf-editor-overlay]{type=tonal scheme=primary size=1/2} :badge[1.5.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-editor-overlay>` — часть редактора страниц: рисует поверх страницы,
 собранной из Composition Document, рамку при наведении и выборе, подпись и
 значки узла, панель действий, место вставки у стыка блоков и дерево структуры для
@@ -241,14 +243,6 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 | `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён указателем или клавиатурой: один ручной перенос (словарь §5 move, `{id, parent, position}`); в detail остаются `node_id`, `parent_id` и `index` для хоста композиции |
 | `sf-editor-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё |
 | `sf-editor-overlay-open` | `{ ids: array, id: any, node: any, point: object\\|null, trigger: any }` | Человек попросил открыть узел: второй щелчок по выбранному узлу, двойной щелчок по узлу или Enter на выбранном узле в дереве (словарь 1.1.5 §5 open). Отправляется один раз на жест и никогда в пассивном режиме; редактируемый узел холста в рамке открывается своей правкой простой строки. |
-| `sf-composition-overlay-action` | `{ action_id: string, node_id: string }` | устаревший псевдоним `sf-editor-overlay-apply`: подписывайтесь на `sf-editor-overlay-apply` |
-| `sf-composition-overlay-edit` | `{ node_id: string, value: string, previous: string }` | устаревший псевдоним `sf-editor-overlay-change`: подписывайтесь на `sf-editor-overlay-change` |
-| `sf-composition-overlay-select` | не описан | устаревший псевдоним `sf-editor-overlay-select`: подписывайтесь на `sf-editor-overlay-select` |
-| `sf-composition-overlay-apply` | не описан | устаревший псевдоним `sf-editor-overlay-apply`: подписывайтесь на `sf-editor-overlay-apply` |
-| `sf-composition-overlay-insert` | не описан | устаревший псевдоним `sf-editor-overlay-insert`: подписывайтесь на `sf-editor-overlay-insert` |
-| `sf-composition-overlay-move` | не описан | устаревший псевдоним `sf-editor-overlay-move`: подписывайтесь на `sf-editor-overlay-move` |
-| `sf-composition-overlay-change` | не описан | устаревший псевдоним `sf-editor-overlay-change`: подписывайтесь на `sf-editor-overlay-change` |
-| `sf-composition-overlay-open` | не описан | устаревший псевдоним `sf-editor-overlay-open`: подписывайтесь на `sf-editor-overlay-open` |
 
 ### О компоненте
 

@@ -5,6 +5,8 @@ description: "Рисует знак закрытия внутри кнопки, 
 
 # Закрытие
 
+:badge[sf-button-close]{type=tonal scheme=primary size=1/2} :badge[1.1.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-button-close>` рисует только знак закрытия — крестик нужного размера. Это не
 кнопка: её даёт нативный `<button>` или
 [Кнопки с иконкой](/ru/smart/actions/icon-buttons/) с

@@ -5,6 +5,8 @@ description: "Раскрывающиеся секции из данных или
 
 # Аккордеон
 
+:badge[sf-accordion]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-accordion>` — секции, которые открываются и закрываются по нажатию на
 шапку. Он собирает разметку аккордеона из данных или из элементов
 `<details>`, написанных внутри: те же размеры, виды, метки и единственная
@@ -180,7 +182,6 @@ faq.open(location.hash.slice(1));
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-accordion-toggle` | `{ id: any, open: boolean, source: any, section: object }` | — |
-| `sf-accordion:toggle` | `{ id?: string, open?: boolean, source?: string, section?: object }` | устаревший псевдоним `sf-accordion-toggle`: подписывайтесь на `sf-accordion-toggle` |
 
 ### О компоненте
 

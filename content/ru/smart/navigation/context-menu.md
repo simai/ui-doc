@@ -5,6 +5,8 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
+:badge[sf-menu-context]{type=tonal scheme=primary size=1/2} :badge[1.6.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-menu-context>` — панель с коротким списком действий над объектом:
 страницей, строкой таблицы, файлом, профилем. Он даёт пунктам роль меню и
 управление клавиатурой. Пункты задаются данными, а метод `openFor`
@@ -486,16 +488,6 @@ menu.addEventListener('sf-context-menu-search', async (event) => {
 | `sf-menu-context-closed` | `{ reason: any }` | — |
 | `sf-menu-context-search` | `{ query: string }` | Запрос поиска, на который отвечает хост (search.remote). |
 | `sf-menu-context-tab` | `{ id: string, index: number }` | Выбрана вкладка панели; хост показывает её строки. |
-| `sf-context-menu-select` | не описан | устаревший псевдоним `sf-menu-context-select`: подписывайтесь на `sf-menu-context-select` |
-| `sf-context-menu-change` | не описан | устаревший псевдоним `sf-menu-context-change`: подписывайтесь на `sf-menu-context-change` |
-| `sf-context-menu-changed` | не описан | устаревший псевдоним `sf-menu-context-changed`: подписывайтесь на `sf-menu-context-changed` |
-| `sf-context-menu-reset` | не описан | устаревший псевдоним `sf-menu-context-reset`: подписывайтесь на `sf-menu-context-reset` |
-| `sf-context-menu-open` | не описан | устаревший псевдоним `sf-menu-context-open`: подписывайтесь на `sf-menu-context-open` |
-| `sf-context-menu-opened` | не описан | устаревший псевдоним `sf-menu-context-opened`: подписывайтесь на `sf-menu-context-opened` |
-| `sf-context-menu-close` | не описан | устаревший псевдоним `sf-menu-context-close`: подписывайтесь на `sf-menu-context-close` |
-| `sf-context-menu-closed` | не описан | устаревший псевдоним `sf-menu-context-closed`: подписывайтесь на `sf-menu-context-closed` |
-| `sf-context-menu-search` | не описан | устаревший псевдоним `sf-menu-context-search`: подписывайтесь на `sf-menu-context-search` |
-| `sf-context-menu-tab` | не описан | устаревший псевдоним `sf-menu-context-tab`: подписывайтесь на `sf-menu-context-tab` |
 
 ### О компоненте
 

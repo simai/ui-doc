@@ -5,6 +5,8 @@ description: "Навигация по сайту из данных или спи
 
 # Меню
 
+:badge[sf-menu]{type=tonal scheme=primary size=1/2} :badge[1.2.3]{type=outline scheme=on-surface size=1/2}
+
 `<sf-menu>` — навигация по сайту, разделу или кабинету: вложенные разделы,
 текущая страница, ветки, которые открываются и закрываются. Оно собирает
 разметку меню из данных или из вложенного списка ссылок, написанного
@@ -193,8 +195,6 @@ menu.addEventListener('sf-menu-navigate', (event) => {
 |:---|:---|:---|
 | `sf-menu-navigate` | `{ id: any, href: string, item: object }` | — |
 | `sf-menu-toggle` | `{ id: any, open: boolean, source: any, item: object\\|null }` | — |
-| `sf-menu:navigate` | `{ id?: string, href?: string, item?: object }` | устаревший псевдоним `sf-menu-navigate`: подписывайтесь на `sf-menu-navigate` |
-| `sf-menu:toggle` | `{ id?: string\\|null, open?: boolean, source?: string, item?: object\\|null }` | устаревший псевдоним `sf-menu-toggle`: подписывайтесь на `sf-menu-toggle` |
 
 ### О компоненте
 

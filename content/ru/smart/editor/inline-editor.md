@@ -5,6 +5,8 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
+:badge[sf-editor-inline]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-editor-inline>` — часть редактора страниц: правка текста
 `content.heading` и `content.paragraph` прямо на холсте. Доступно то, что есть
 в модели content: полужирный, курсив, код, ссылки и встроенные компоненты
@@ -139,12 +141,6 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 | `sf-editor-inline-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе |
 | `sf-editor-inline-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе |
 | `sf-editor-inline-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе |
-| `sf-inline-edit-input` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-editor-inline-input`: подписывайтесь на `sf-editor-inline-input` |
-| `sf-inline-edit-commit` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-editor-inline-change`: подписывайтесь на `sf-editor-inline-change` |
-| `sf-inline-edit-cancel` | `{ node_id?: string\\|null }` | устаревший псевдоним `sf-editor-inline-cancel`: подписывайтесь на `sf-editor-inline-cancel` |
-| `sf-inline-editor-input` | не описан | устаревший псевдоним `sf-editor-inline-input`: подписывайтесь на `sf-editor-inline-input` |
-| `sf-inline-editor-change` | не описан | устаревший псевдоним `sf-editor-inline-change`: подписывайтесь на `sf-editor-inline-change` |
-| `sf-inline-editor-cancel` | не описан | устаревший псевдоним `sf-editor-inline-cancel`: подписывайтесь на `sf-editor-inline-cancel` |
 
 ### О компоненте
 

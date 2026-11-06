@@ -5,6 +5,8 @@ description: "Выбирает, создаёт, переименовывает, 
 
 # Выбор профиля
 
+:badge[sf-profile-picker]{type=tonal scheme=primary size=1/2} :badge[1.1.10]{type=outline scheme=on-surface size=1/2}
+
 `<sf-profile-picker>` — один способ работать с профилями: профилями меню,
 видами записи и всем, у чего есть профили. В свёрнутом виде это кнопка,
 похожая на поле: «Профиль: Обычный». В открытой панели всё делается на месте.
@@ -148,11 +150,6 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | `sf-profile-picker-rename` | `{ id: string, label: string, title: string }` | — |
 | `sf-profile-picker-delete` | `{ id: string, ids: array }` | — |
 | `sf-profile-picker-reset` | `{ id: string }` | — |
-| `sf-profile-select` | `{ id: string, ids: array }` | устаревший псевдоним `sf-profile-picker-select`: подписывайтесь на `sf-profile-picker-select` |
-| `sf-profile-create` | `{ label: string, shared: boolean, from: string, kind: any }` | устаревший псевдоним `sf-profile-picker-create`: подписывайтесь на `sf-profile-picker-create` |
-| `sf-profile-rename` | `{ id: string, label: string, title: string }` | устаревший псевдоним `sf-profile-picker-rename`: подписывайтесь на `sf-profile-picker-rename` |
-| `sf-profile-delete` | `{ id: string, ids: array }` | устаревший псевдоним `sf-profile-picker-delete`: подписывайтесь на `sf-profile-picker-delete` |
-| `sf-profile-reset` | `{ id: string }` | устаревший псевдоним `sf-profile-picker-reset`: подписывайтесь на `sf-profile-picker-reset` |
 
 ### О компоненте
 

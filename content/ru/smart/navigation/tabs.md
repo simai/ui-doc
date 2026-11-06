@@ -6,6 +6,8 @@ profile: reference
 
 # Вкладки
 
+:badge[sf-tabs]{type=tonal scheme=primary size=1/2} :badge[1.1.11]{type=outline scheme=on-surface size=1/2}
+
 `<sf-tabs>` собирает доступную группу вкладок из строки, слотов или данных.
 Берите его, когда несколько панелей одного уровня занимают одно место и
 пользователь смотрит их по очереди.
@@ -337,7 +339,6 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 | `sf-tabs-change` | `{ selected: any, previous: number, current: number, item: object, items: array }` | — |
 | `sf-tabs-settings-change` | `{ order: array, hidden: array, reason?: any }` | Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Хост сохраняет выбор и возвращает его через setSettings. |
 | `sf-tabs-settings-reset` | нет | Человек попросил вернуть объявленный порядок; компонент показывает его, пока хост не ответит через setSettings. |
-| `sf-tab-change` | `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }` | устаревший псевдоним `sf-tabs-change`: подписывайтесь на `sf-tabs-change` |
 
 ### О компоненте
 

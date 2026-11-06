@@ -5,6 +5,8 @@ description: "Показывает постоянное сообщение в п
 
 # Уведомление
 
+:badge[sf-alert]{type=tonal scheme=primary size=1/2} :badge[1.1.8]{type=outline scheme=on-surface size=1/2}
+
 `<sf-alert>` показывает сообщение, которое остаётся на странице, пока его не
 закроют: предупреждение перед действием, ошибку формы, итог проверки. Для
 короткого результата поверх интерфейса, который исчезает сам, берите
@@ -146,18 +148,6 @@ form.prepend(alert);
 | `title` | строка | пусто | — | Короткий заголовок сообщения. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
-
-:::details {layout=lines}
-#### Прежние имена (5)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `appearance` | `variant` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="neutral"` | `status="clear"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
 
 ### Методы
 

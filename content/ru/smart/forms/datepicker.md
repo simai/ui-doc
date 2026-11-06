@@ -5,6 +5,8 @@ description: "Выбирает дату, дату со временем, вре�
 
 # Календарь
 
+:badge[sf-input-date]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-input-date>` — выбор одной даты или периода в календаре с переходом по
 месяцам и годам, а также даты со временем или одного времени суток. Берите его, когда дату удобнее найти в календаре, чем
 напечатать; если основной сценарий — ввод с клавиатуры, хватит
@@ -406,8 +408,6 @@ period.value = ['2026-10-01', '2026-10-31'];
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `change` | `{ value: object, date: string, startValue: string, endValue: string, formattedValue: string, isoValue: string, range: boolean, format: string, preset: object, mode: string, time: string }` | Выбраны дата, время или граница диапазона; событие отправляется на элементе. Имя для привязки. |
-| `sf-datepicker-change` | `{ value: string\\|array, range: boolean, format: string, formattedValue?: string, date?: string, isoValue?: string, startValue?: string, endValue?: string, startIsoValue?: string, endIsoValue?: string, formattedStartValue?: string, formattedEndValue?: string, preset?: object\\|null, mode?: string, time?: string }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `sf-change` | `{ value: string\\|array, range: boolean, format: string, formattedValue?: string, date?: string, isoValue?: string, startValue?: string, endValue?: string, startIsoValue?: string, endIsoValue?: string, formattedStartValue?: string, formattedEndValue?: string, preset?: object\\|null, mode?: string, time?: string }` | устаревший псевдоним `change`: подписывайтесь на `change` |
 
 ### О компоненте
 

@@ -5,6 +5,8 @@ description: "Страница набирается одним потоком: �
 
 # Редактор содержимого
 
+:badge[sf-editor-content]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-editor-content>` — режим «Содержимое» редактора страниц SIMAI: страница
 набирается одним потоком, как в обычном текстовом редакторе. Элемент ничего не
 хранит: он правит свою копию документа и после каждого изменения отправляет
@@ -246,10 +248,6 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 - `sf-editor-content-leave` — ничего не передаёт. Esc при выбранных блоках: человек просит выйти из текста.
 - `sf-editor-content-params` — `detail`: `{ id: any, type: string, kind: string, label: string, fields: array, open: boolean }`. Параметры выбранного блока для панели хоста: `{id, type, kind, label, fields, open}`; `id` пуст, если блок не выбран.
 - `sf-editor-content-file` — `detail`: `{ file: object, block: any, type: string }`. Файл, который нужно сохранить: `{file, block, type}`, где `type` — тип блока (`content.figure` или `content.file`). Хост сохраняет файл и вызывает `answer-file` с `{block, value, href}` или `{block, reason}`.
-- `sf-content-editor-select` — устаревший псевдоним события `sf-editor-content-select`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-select`.
-- `sf-content-editor-leave` — устаревший псевдоним события `sf-editor-content-leave`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-leave`.
-- `sf-content-editor-params` — устаревший псевдоним события `sf-editor-content-params`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-params`.
-- `sf-content-editor-file` — устаревший псевдоним события `sf-editor-content-file`: приходит с тем же `detail`, подписывайтесь на `sf-editor-content-file`.
 
 ### Доступность
 

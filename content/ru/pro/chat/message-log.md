@@ -5,6 +5,8 @@ description: "Прежнее имя ленты SIMAI Framework sf-list-feed в �
 
 # Лента сообщений
 
+:badge[sf-message-log]{type=tonal scheme=primary size=1/2} :badge[2.0.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-message-log>` — устаревшее имя [Ленты](/ru/smart/content/list-feed/)
 (`sf-list-feed`) SIMAI Framework, которое работает до 2027-01-01. Поведение
 ленты — положение чтения, серии одного автора, растущие записи, перерисовка на
@@ -81,8 +83,8 @@ Loader загружает ленту вместе с элементом, а эл
 | `--sf-message-log-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` | `--sf-list-feed-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` |
 
 Каждое событие ленты уходит и под прежним именем с тем же `detail`; один
-`preventDefault()` отменяет оба. До 2026-12-01 действуют ещё имена версии
-1.0: событие `sf-message-log-load-earlier` (теперь `-load-more`), поля
+`preventDefault()` отменяет оба. До 2026-12-01 действуют ещё более ранние
+имена: событие `sf-message-log-load-earlier` (теперь `-load-more`), поля
 сообщения `pending` (теперь `growing`) и `author_name` (теперь
 `author-name`), а `remove(id)` — это `detach(id)`; `remove()` без `id` —
 браузерный.

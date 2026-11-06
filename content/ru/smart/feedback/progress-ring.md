@@ -5,6 +5,8 @@ description: "Показывает долю выполненного кольц�
 
 # Кольцо прогресса
 
+:badge[sf-progress-ring]{type=tonal scheme=primary size=1/2} :badge[1.0.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-progress-ring>` показывает значение от 0 до 100 кольцом размером с
 элемент управления: в панели инструментов, в боковой полосе, вокруг аватара.
 Для длинной задачи в теле страницы берите
@@ -155,15 +157,6 @@ ring.setAttribute('value-text', 'Файлы загружены');
 | `aria-label` | строка | пусто | — | — |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
-
-:::details {layout=lines}
-#### Прежние имена (2)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
 
 ### Методы
 

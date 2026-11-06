@@ -5,6 +5,8 @@ description: "Выбирает одно значение или две гран�
 
 # Слайдер диапазона
 
+:badge[sf-slider-range]{type=tonal scheme=primary size=1/2} :badge[1.3.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-slider-range>` — шкала с одной или двумя ручками для приблизительной
 настройки: цены, громкости, расстояния. Когда важно точное число, добавьте
 рядом [поле ввода](/ru/smart/forms/inputs/).
@@ -207,8 +209,6 @@ price.setValue([10000, 30000]);
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `change` | `{ values: array, value: object, handleCount: number, handle: number }` | Пользователь зафиксировал значение (конец перетаскивания, щелчок, клавиша); всплывает от корня слайдера с `values`, `value`, `handleCount` и `handle`. Значение, установленное из кода, не является изменением. Имя для привязки. |
-| `sf-range-slider-change` | `{ component: object, values: array, value: number\\|array, handleCount: number, handle: number }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `onSliderChange` | не описан | устаревший псевдоним `change`: подписывайтесь на `change` |
 
 ### О компоненте
 

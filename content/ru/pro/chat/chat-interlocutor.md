@@ -5,6 +5,8 @@ description: "Кнопка с именем текущего собеседник
 
 # Выбор собеседника
 
+:badge[sf-chat-interlocutor]{type=tonal scheme=primary size=1/2} :badge[1.0.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-chat-interlocutor>` показывает, с кем разговор, и даёт выбрать другого
 собеседника. Список собеседников — серверный: элемент только показывает его и
 сообщает о выборе. Разговор принадлежит одному собеседнику, поэтому выбор
@@ -129,7 +131,6 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-chat-interlocutor-select` — `detail`: `{ id: any }`. Выбран другой собеседник (словарь select). Имя 0.3 `sf-chat-interlocutor` отправляется после него до 2026-12-01.
-- `sf-chat-interlocutor` — устаревший псевдоним события `sf-chat-interlocutor-select`: приходит с тем же `detail`, подписывайтесь на `sf-chat-interlocutor-select`.
 
 ### Доступность
 

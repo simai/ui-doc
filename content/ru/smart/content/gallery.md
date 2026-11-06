@@ -5,6 +5,8 @@ description: "Показывает набор материалов слайде�
 
 # Галерея
 
+:badge[sf-gallery]{type=tonal scheme=primary size=1/2} :badge[1.1.8]{type=outline scheme=on-surface size=1/2}
+
 `<sf-gallery>` показывает упорядоченный набор материалов — изображения,
 карточки, макеты — слайдером в потоке страницы и в модальном окне на весь
 экран. Оба представления держат одно текущее положение. Галерея собрана из
@@ -175,14 +177,6 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (1)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `lightbox-class` | `root-class` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -206,9 +200,6 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 | `change` | `{ previous: number, current: number, total: number, from: any }` | — |
 | `sf-gallery-opened` | `{ current: number, total: number }` | — |
 | `sf-gallery-closed` | `{ current: number, total: number }` | — |
-| `sf-change` | `{ component?: any, tagName?: string, template?: string, previous?: number, current?: number, total?: number, from?: any }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `sf-close` | `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }` | устаревший псевдоним `sf-gallery-closed`: подписывайтесь на `sf-gallery-closed` |
-| `sf-open` | `{ component?: any, tagName?: string, template?: string, current?: number, total?: number }` | устаревший псевдоним `sf-gallery-opened`: подписывайтесь на `sf-gallery-opened` |
 
 ### О компоненте
 

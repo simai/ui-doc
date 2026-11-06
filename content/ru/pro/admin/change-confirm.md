@@ -5,6 +5,8 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
+:badge[sf-confirm-change]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-confirm-change>` — карточка подготовленного изменения, которое ждёт
 «да» или «нет» человека: каждое значение как было и как станет, два
 равноценных ответа, срок, до которого можно ответить, а после ответа —
@@ -147,11 +149,6 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 - `sf-confirm-change-answer` — `detail`: `{ id: any, accepted: boolean }`. Человек ответил (словарь answer). Отмените событие, чтобы вопрос остался открытым. Имена версии 1.0 `sf-change-confirm-accept` и `-decline` отправляются после него до 2026-12-01.
 - `sf-confirm-change-expired` — `detail`: `{ id: any }`. Открытая карточка прошла `expires-at`; сообщается один раз на каждое время. Имя версии 1.0 `sf-change-confirm-expire` отправляется после него до 2026-12-01.
-- `sf-change-confirm-accept` — устаревший псевдоним события `sf-confirm-change-answer`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-answer`.
-- `sf-change-confirm-decline` — устаревший псевдоним события `sf-confirm-change-answer`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-answer`.
-- `sf-change-confirm-expire` — устаревший псевдоним события `sf-confirm-change-expired`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-expired`.
-- `sf-change-confirm-answer` — устаревший псевдоним события `sf-confirm-change-answer`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-answer`.
-- `sf-change-confirm-expired` — устаревший псевдоним события `sf-confirm-change-expired`: приходит с тем же `detail`, подписывайтесь на `sf-confirm-change-expired`.
 
 ### Доступность
 

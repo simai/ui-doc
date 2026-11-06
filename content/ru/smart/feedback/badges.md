@@ -5,6 +5,8 @@ description: "Показывает короткую неинтерактивну
 
 # Бейджи
 
+:badge[sf-badge]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-badge>` показывает короткую пометку рядом с объектом: статус записи,
 категорию, версию, число новых событий. Пометку не нажимают. Для метки,
 которую выбирают или удаляют, берите [Теги](/ru/smart/content/tags/).
@@ -129,19 +131,6 @@ JavaScript.
 | `aria-label` | строка | пусто | — | — |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
-
-:::details {layout=lines}
-#### Прежние имена (6)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `appearance` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status` | `scheme` — только значения `info`, `success`, `warning`, `error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `icon-start` | `icon-left` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `icon-end` | `icon-right` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
 
 ### Методы
 

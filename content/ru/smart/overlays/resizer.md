@@ -5,6 +5,8 @@ description: "Ручка на краю панели: ширину меняют �
 
 # Изменение ширины
 
+:badge[sf-resizer]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-resizer>` — ручка на краю панели, которая меняет её ширину. Ширину тянут
 мышью, пером или касанием, меняют стрелками с клавиатуры и возвращают двойным
 щелчком. Подходит для колонки меню, боковой панели и области списка рядом с
@@ -226,7 +228,6 @@ SF.Resizer.attach(table, {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-resizer-resize` | `{ width: number, phase: any }` | — |
-| `sf-resize` | `{ width: number, phase: any }` | устаревший псевдоним `sf-resizer-resize`: подписывайтесь на `sf-resizer-resize` |
 
 ### Персональный вид
 

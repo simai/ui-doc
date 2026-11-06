@@ -5,6 +5,8 @@ description: "Переключает один из нескольких взаи
 
 # Группа кнопок
 
+:badge[sf-button-group]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-button-group>` — группа кнопок, в которой выбран ровно один вариант: вид
 списка, период отчёта, режим просмотра. Она собрана из
 [смарт-кнопок](/ru/smart/actions/buttons/). Для независимых действий, которые
@@ -226,17 +228,6 @@ group.select('month');
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (4)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `spacing` | `tightness` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="compact"` | `tightness="low"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="comfortable"` | `tightness="high"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -252,7 +243,6 @@ group.select('month');
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `change` | `{ previous: string, value: string, item: object\\|null }` | Выбранное значение изменилось через select() или clear(); событие отправляется на хост-элементе, всплывает и с composed: true. Имя для привязки. |
-| `sf-button-group-change` | `{ previous: string, value: string, item: object\\|null }` | устаревший псевдоним `change`: подписывайтесь на `change` |
 
 ### О компоненте
 

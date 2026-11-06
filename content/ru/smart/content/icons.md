@@ -5,6 +5,8 @@ description: "Выводит символ Material Symbols, для которо�
 
 # Иконки
 
+:badge[sf-icon]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-icon>` выводит один символ Material Symbols по имени и сообщает Loader,
 какие знаки шрифта загрузить. Внешний вид — размер, начертание, заливка,
 толщина — задаётся атрибутами на общей шкале Framework. Для иконки, которую

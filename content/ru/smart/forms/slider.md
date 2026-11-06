@@ -5,6 +5,8 @@ description: "Показывает последовательность слай
 
 # Слайдер контента
 
+:badge[sf-slider]{type=tonal scheme=primary size=1/2} :badge[1.1.7]{type=outline scheme=on-surface size=1/2}
+
 `<sf-slider>` — последовательность слайдов, которую листают стрелками,
 точками, миниатюрами или жестом. Берите его для материалов, которые смотрят
 по одному; то, что нужно сравнить, выкладывайте на странице рядом.
@@ -186,7 +188,6 @@ slider.slideNext();
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `change` | `{ activeIndex: number, realIndex: number, previousIndex: number }` | — |
-| `sf-slide-change` | `{ component: object, tagName: string, template: string, activeIndex: number, realIndex: number, previousIndex: number }` | устаревший псевдоним `change`: подписывайтесь на `change` |
 
 ### О компоненте
 

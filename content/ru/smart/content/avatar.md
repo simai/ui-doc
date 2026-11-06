@@ -5,6 +5,8 @@ description: "Показывает человека или организаци�
 
 # Аватар
 
+:badge[sf-avatar]{type=tonal scheme=primary size=1/2} :badge[1.2.2]{type=outline scheme=on-surface size=1/2}
+
 `<sf-avatar>` показывает одного человека или одну организацию: фотографию,
 инициалы или значок-заполнитель, при необходимости — состояние в сети или
 отметку проверенного профиля. Для готовых сочетаний аватаров со ссылкой или
@@ -234,15 +236,6 @@ avatar.addEventListener('click', () => openProfile('anna'));
 | `title` | строка | пусто | — | Псевдоним с датой для `heading` до 2026-12-01. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
-
-:::details {layout=lines}
-#### Прежние имена (2)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
 
 ### Методы
 

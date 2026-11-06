@@ -5,6 +5,8 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
+:badge[sf-view-properties]{type=tonal scheme=primary size=1/2} :badge[1.10.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-view-properties>` — карточка одного объекта: поля сгруппированы в области,
 области — в разделы, а каждое поле рисуется отрисовщиком своего типа. Берите
 его для записи, настроек сайта или профиля; множество записей показывает
@@ -538,20 +540,7 @@ view: {
 - `sf-view-properties-state` — `detail`: `{ state: string, message: string }`.
 - `sf-view-properties-address-copy` — ничего не передаёт. Адрес окна скопирован, или браузер отказал в доступе к буферу обмена.
 - `sf-view-properties-favourite` — `detail`: `{ collection: string|null, favourite: boolean, record_id: any }`. Нажата звезда. Передаёт запись, коллекцию и запрошенное состояние; компонент ничего не меняет, пока хост не установит favourite обратно.
-- `sf-property-view-delete-record` — устаревший псевдоним события `sf-view-properties-delete`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-delete`.
-- `sf-property-view-open-record` — устаревший псевдоним события `sf-view-properties-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-open`.
 - `sf-host-port-request` — `detail`: `{ component?: object, context?: object }`. Запрашивает у страницы порт хоста — один раз за подключение и только пока у элемента его нет. Общее соглашение для всех компонентов, принимающих `setHostPort`. Ответ — вызов `setHostPort` на цели события, сразу или позже.
-- `sf-property-view-close` — устаревший псевдоним события `sf-view-properties-close`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-close`.
-- `sf-property-view-open-full` — устаревший псевдоним события `sf-view-properties-open-full`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-open-full`.
-- `sf-property-view-saved` — устаревший псевдоним события `sf-view-properties-saved`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-saved`.
-- `sf-property-view-failed` — устаревший псевдоним события `sf-view-properties-failed`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-failed`.
-- `sf-property-view-open` — устаревший псевдоним события `sf-view-properties-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-open`.
-- `sf-property-view-delete` — устаревший псевдоним события `sf-view-properties-delete`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-delete`.
-- `sf-property-view-created` — устаревший псевдоним события `sf-view-properties-created`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-created`.
-- `sf-property-view-cancel` — устаревший псевдоним события `sf-view-properties-cancel`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-cancel`.
-- `sf-property-view-state` — устаревший псевдоним события `sf-view-properties-state`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-state`.
-- `sf-property-view-address-copy` — устаревший псевдоним события `sf-view-properties-address-copy`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-address-copy`.
-- `sf-property-view-favourite` — устаревший псевдоним события `sf-view-properties-favourite`: приходит с тем же `detail`, подписывайтесь на `sf-view-properties-favourite`.
 
 ### Доступность
 

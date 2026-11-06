@@ -5,6 +5,8 @@ description: "Знак «?» рядом с подписью: по нажатию
 
 # Подсказка «?»
 
+:badge[sf-help-mark]{type=tonal scheme=primary size=1/2} :badge[1.1.8]{type=outline scheme=on-surface size=1/2}
+
 `<sf-help-mark>` — знак «?» рядом с подписью, который открывает короткое
 пояснение: что значит поле или настройка. Для короткого имени кнопки-иконки
 берите [Всплывающую подсказку](/ru/smart/feedback/tooltip/).
@@ -137,8 +139,6 @@ description: "Знак «?» рядом с подписью: по нажатию
 |:---|:---|:---|
 | `sf-help-mark-opened` | нет | — |
 | `sf-help-mark-closed` | нет | — |
-| `sf-help-mark-open` | нет | устаревший псевдоним `sf-help-mark-opened`: подписывайтесь на `sf-help-mark-opened` |
-| `sf-help-mark-close` | нет | устаревший псевдоним `sf-help-mark-closed`: подписывайтесь на `sf-help-mark-closed` |
 
 ### О компоненте
 

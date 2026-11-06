@@ -5,6 +5,8 @@ description: "Показывает в начале страницы админи
 
 # Шапка страницы
 
+:badge[sf-header-page]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-header-page>` — шапка страницы административного приложения: путь к
 странице, заголовок, число записей, звезда избранного и главные действия в
 одной строке. Ставьте её в начало каждой страницы администрирования рядом с
@@ -159,8 +161,6 @@ header.addEventListener('sf-page-header-toggle', async (event) => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-header-page-toggle` | `{ on: boolean }` | Человек нажал на звезду: просьба добавить страницу в избранное (on) или убрать (off); хост, который отвечает сам, отменяет событие и записывает `star` |
-| `sf-page-header-star` | `{ on: boolean }` | устаревший псевдоним `sf-header-page-toggle`: подписывайтесь на `sf-header-page-toggle` |
-| `sf-page-header-toggle` | не описан | устаревший псевдоним `sf-header-page-toggle`: подписывайтесь на `sf-header-page-toggle` |
 
 ### О компоненте
 

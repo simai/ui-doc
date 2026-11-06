@@ -5,6 +5,8 @@ description: "Показывает этапы последовательного
 
 # Шаги
 
+:badge[sf-steps]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-steps>` показывает этапы процесса, который проходят по порядку:
 оформление заказа, публикация, мастер настройки. Пройденные этапы отмечены
 галочкой, текущий выделен.
@@ -146,7 +148,6 @@ document.querySelector('#next').addEventListener('click', () => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-steps-change` | `{ previous: number, current: number, item: object, items: array }` | — |
-| `sf-step-change` | `{ component: object, tagName: string, template: string, previous: number, current: number, item: object, items: array }` | устаревший псевдоним `sf-steps-change`: подписывайтесь на `sf-steps-change` |
 
 ### О компоненте
 

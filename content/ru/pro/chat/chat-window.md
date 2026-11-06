@@ -5,6 +5,8 @@ description: "Окно чата целиком на порте хоста: сп�
 
 # Окно чата
 
+:badge[sf-chat-window]{type=tonal scheme=primary size=1/2} :badge[1.13.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-chat-window>` — окно чата целиком: список разговоров, открытый разговор,
 поле ввода, выбор собеседника и «Мои файлы». Окно собрано из частей —
 [Список разговоров](/ru/pro/chat/thread-list/),
@@ -65,7 +67,7 @@ Framework: поставляется пакетом `pro` из репозитор
 Пока разговор не открыт, посередине стоит приветствие, а поле ввода ждёт
 первый вопрос. Если хост не объявил собеседников (`interlocutors`), приветствовать
 некого: поле ввода убирается, а на его месте строка «Выберите разговор слева или
-начните новый» (1.8.0).
+начните новый».
 
 :::example {id="smart-components/chat-window/greeting" label="Приветствие без разговора" preview=sandbox}
 :::
@@ -116,8 +118,8 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### Раскладка и мебель страницы
 
-Области раскладывает SIMAI Framework: окно — рабочее место `.sf-workspace` из ядра
-(1.7.0). Где что стоит, решает ширина контейнера, а не окна браузера. Шире 72rem
+Области раскладывает SIMAI Framework: окно — рабочее место `.sf-workspace` из ядра.
+Где что стоит, решает ширина контейнера, а не окна браузера. Шире 72rem
 список, переписка и просмотр источника стоят колонками. Уже — видна одна область
 за раз: «К разговорам» в шапке переписки возвращает к списку, а просмотр источника
 выдвигается панелью поверх переписки, с затемнением. Окно приносит вид своих
@@ -135,7 +137,7 @@ chat.addEventListener('sf-chat-window-open', (event) => {
 
 ### Между людьми
 
-С возможностью `people` окно ведёт разговор людей. Эти части версии 1.6.0 включаются
+С возможностью `people` окно ведёт разговор людей. Эти части включаются
 вместе с `people`, реакции и ответы — ещё и своими возможностями.
 
 **Кто говорит.** Вид сообщения идёт за автором. `author.kind`: `person` (по умолчанию), `assistant`, `agent`, `bot`; поле не из порта 1.0, читается только с `people`, `kind: assistant` без него — это `assistant`. Человек — пузырь и `sf-avatar` (`author.avatar_url` или `author.avatar`, иначе инициалы). Остальные — документ без пузыря на всю колонку, текст на уровне текста людей: нейтральный знак (не лицо), имя, слово «ИИ», «Агент» или «Бот» (цвет не единственное отличие), «по просьбе…» из `asked_by: {name}` (имя рисуется как дано: хост даёт его в нужном падеже, «Анны»). У документа все части ответа: шаги, источники, файлы, ожидание; копирование и оценка видны всегда, оценка видна только оценившему. Длиннее примерно 14 строк текста сворачивается до «Показать полностью»; таблица и предложение не сворачиваются. Найти в разговоре видит свёрнутое только после раскрытия. В личном разговоре (`conversation.type: private`) знака и имени в ленте нет: это сказала шапка. Правки у документа нет; удаление — при `can_delete`.
@@ -206,7 +208,7 @@ Escape закрывает его и возвращает фокус на ком�
 «Руководитель», «Участник», «Наблюдатель». Без `x-members-manage` вид только для
 чтения.
 
-С `x-members-manage` (1.9.0) вид управляет группой. В голове — «Добавить» (если у
+С `x-members-manage` вид управляет группой. В голове — «Добавить» (если у
 разговора `can_manage`) и «Выйти» (если `can_leave`). У строки — «⋯» с «Роль»,
 «Исключить» и «Передать владение», но только теми, что хост разрешил флагами строки
 `canChangeRole`, `canRemove`, `canTransfer`. Нет флага — нет кнопки: кто что может,
@@ -335,30 +337,6 @@ Escape закрывает его и возвращает фокус на ком�
 - `sf-chat-window-toggle` — `detail`: `{ kind: any, open: boolean, form?: any }`. Поиск по разговору, предпросмотр источника, форма нового разговора или участники группы открыты или закрыты: `{kind: find|preview|start|members, open, form?}`. То же говорят состояния хоста `data-find-open`, `data-preview-open`, `data-start-open` и `data-members-open`.
 - `sf-chat-window-react` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Реакция (x-reactions): message.react {conversation_id, message_id, emoji, on}. Ответ applied с data {message} вливается по revision.
 - `sf-chat-window-apply` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Управление участниками группы (`x-members-manage`): `member.add`, `member.remove`, `member.role`, `member.transfer`, `member.leave`, вид `member`; кнопки следуют флагам хоста (`canRemove`, `canChangeRole`, `canTransfer`; `can_manage`, `can_leave`).
-- `chat-port:open` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
-- `chat-port:older` — устаревший псевдоним события `sf-chat-window-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-load-more`.
-- `chat-port:send` — устаревший псевдоним события `sf-chat-window-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-submit`.
-- `chat-port:retry` — устаревший псевдоним события `sf-chat-window-retry`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-retry`.
-- `chat-port:edit` — устаревший псевдоним события `sf-chat-window-save`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-save`.
-- `chat-port:delete` — устаревший псевдоним события `sf-chat-window-delete`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-delete`.
-- `chat-port:read` — устаревший псевдоним события `sf-chat-window-read`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-read`.
-- `chat-port:rate` — устаревший псевдоним события `sf-chat-window-rate`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-rate`.
-- `chat-port:file-retry` — устаревший псевдоним события `sf-chat-window-retry`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-retry`.
-- `chat-port:decide` — устаревший псевдоним события `sf-chat-window-answer`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-answer`.
-- `chat-port:check` — устаревший псевдоним события `sf-chat-window-check`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-check`.
-- `chat-port:stop` — устаревший псевдоним события `sf-chat-window-stop`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-stop`.
-- `chat-port:create` — устаревший псевдоним события `sf-chat-window-create`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-create`.
-- `chat-port:rename` — устаревший псевдоним события `sf-chat-window-rename`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-rename`.
-- `chat-port:archive` — устаревший псевдоним события `sf-chat-window-archive`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-archive`.
-- `chat-port:interlocutor` — устаревший псевдоним события `sf-chat-window-select`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-select`.
-- `chat-window:view` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
-- `chat-window:more` — устаревший псевдоним события `sf-chat-window-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-load-more`.
-- `chat-window:search` — устаревший псевдоним события `sf-chat-window-query`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-query`.
-- `chat-window:pin` — устаревший псевдоним события `sf-chat-window-pin`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-pin`.
-- `chat-window:attach` — устаревший псевдоним события `sf-chat-window-attach`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-attach`.
-- `chat-window:detach` — устаревший псевдоним события `sf-chat-window-detach`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-detach`.
-- `chat-window:files` — устаревший псевдоним события `sf-chat-window-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-open`.
-- `chat-window:file-remove` — устаревший псевдоним события `sf-chat-window-delete`: приходит с тем же `detail`, подписывайтесь на `sf-chat-window-delete`.
 
 ### Доступность
 

@@ -5,6 +5,8 @@ description: "Поле вопроса и файлов чата: Enter отпра
 
 # Поле чата
 
+:badge[sf-chat-composer]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-chat-composer>` — поле вопроса и файлов чата: текст растёт до восьми
 строк, Enter отправляет, Shift+Enter переносит строку. Файлы поле только
 проверяет и сообщает о них: загружает их хост и возвращает чипы настройкой
@@ -159,10 +161,6 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 - `sf-chat-composer-stop` — ничего не передаёт. Нажали «Остановить ожидание». Имя 0.3 `sf-chat-stop` отправляется после него до 2026-12-01.
 - `sf-chat-composer-attach` — `detail`: `{ files: array, rejected: array }`. Файлы предложены кнопкой, перетаскиванием или вставкой; отклонённые — по типу, размеру или числу, каждый со своей причиной. Имя 0.3 `sf-chat-files` отправляется после него до 2026-12-01.
 - `sf-chat-composer-detach` — `detail`: `{ id: any, name?: string }`. Нажали «Убрать файл» на чипе. Имя 0.3 `sf-chat-action {action: remove-attachment, id, name}` отправляется после него до 2026-12-01.
-- `sf-chat-send` — устаревший псевдоним события `sf-chat-composer-submit`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-submit`.
-- `sf-chat-stop` — устаревший псевдоним события `sf-chat-composer-stop`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-stop`.
-- `sf-chat-files` — устаревший псевдоним события `sf-chat-composer-attach`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-attach`.
-- `sf-chat-action` — устаревший псевдоним события `sf-chat-composer-detach`: приходит с тем же `detail`, подписывайтесь на `sf-chat-composer-detach`.
 
 ### Доступность
 

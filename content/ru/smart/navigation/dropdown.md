@@ -5,6 +5,8 @@ description: "Выбирает одно или несколько значени
 
 # Выпадающий список
 
+:badge[sf-dropdown]{type=tonal scheme=primary size=1/2} :badge[1.6.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-dropdown>` — поле выбора одного или нескольких значений из раскрывающегося
 списка с поиском. Берите его, когда вариантов больше, чем удобно показать
 [радиокнопками](/ru/components/forms/radio/) или
@@ -260,16 +262,6 @@ SIMAI Framework язык не запоминает.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (3)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `appearance` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size="1/2"` | `size="1/3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size="2"` | `size="3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -287,8 +279,6 @@ SIMAI Framework язык не запоминает.
 |:---|:---|:---|
 | `change` | `{ value: string, label: string, values: array, item: object, multiple: boolean }` | Выбор изменился; событие отправляется на элементе. Имя для привязки. |
 | `sf-field-reset` | `{ tag: string, value: string, inheritedValue: string, name: string }` | Человек нажал сброс к наследуемому значению. Событие признака field-inherit@1: одно имя для всех полей семейства, поэтому форма слышит их все сразу и различает по detail.tag. Отправляется до очистки поля и отменяемо: preventDefault сохраняет значение. Если не отменено, поле очищается, сообщает об этом обычным change, снова показывает наследуемое значение и забирает фокус. |
-| `sf-dropdown:change` | `{ value: string, label?: string, values: array, item?: any, root?: any, multiple: boolean }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `sf-field:reset` | `{ value?: string, inheritedValue?: string, name?: string }` | устаревший псевдоним `sf-field-reset`: подписывайтесь на `sf-field-reset` |
 
 ### О компоненте
 

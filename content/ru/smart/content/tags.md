@@ -5,6 +5,8 @@ description: "Показывает короткую метку — катего�
 
 # Теги
 
+:badge[sf-tag]{type=tonal scheme=primary size=1/2} :badge[1.1.9]{type=outline scheme=on-surface size=1/2}
+
 `<sf-tag>` показывает одну короткую метку: категорию, выбранное значение,
 фильтр или статус. Тег может быть статичным, переключаться нажатием и
 предлагать отдельную кнопку удаления. Для неинтерактивной пометки рядом с
@@ -207,18 +209,6 @@ tags.addEventListener('sf-tag-close', (event) => {
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (5)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `kind="default"` | `kind="quantity"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -234,7 +224,6 @@ tags.addEventListener('sf-tag-close', (event) => {
 |:---|:---|:---|
 | `change` | `{ active: boolean }` | Изменилось активное состояние тега-флажка. |
 | `sf-tag-close` | нет | — |
-| `close` | `{ component: object }` | устаревший псевдоним `sf-tag-close`: подписывайтесь на `sf-tag-close` |
 
 ### О компоненте
 

@@ -5,6 +5,8 @@ description: "Показывает, почему в списке, панели �
 
 # Пустое состояние
 
+:badge[sf-empty-state]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+
 `<sf-empty-state>` — то, что список, панель или страница показывает, когда
 показать нечего. Одна причина — один вид: значок, заголовок, пояснение и, если
 нужно, действие.

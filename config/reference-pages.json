@@ -1957,7 +1957,8 @@
     },
     "pro/chat/message-log.md": {
       "kind": "smart",
-      "standard": 2
+      "standard": 2,
+      "alias_of": "sf-list-feed"
     },
     "pro/chat/chat-composer.md": {
       "kind": "smart",

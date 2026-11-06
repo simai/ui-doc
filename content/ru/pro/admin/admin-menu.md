@@ -5,6 +5,8 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
+:badge[sf-admin-menu]{type=tonal scheme=primary size=1/2} :badge[1.7.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
 Берите его целиком, а не собирайте меню из классов
@@ -354,10 +356,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - `sf-admin-menu-delete` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `view.delete` (словарь 1.1.5).
 - `sf-admin-menu-read` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `notifications.read` (словарь 1.1.5).
 - `sf-admin-menu-sign-out` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `session.sign-out` (словарь 1.1.5).
-- `sf-admin-menu-search` — устаревший псевдоним события `sf-admin-menu-query`: приходит с тем же `detail`, подписывайтесь на `sf-admin-menu-query`.
-- `sf-admin-menu-settings-reset` — устаревший псевдоним события `sf-admin-menu-reset`: приходит с прежним `detail`: `{ target: any, base_revision: integer }`, подписывайтесь на `sf-admin-menu-reset`.
 - `sf-host-port-request` — `detail`: `{ component: object, context: object }`. При подключении спросить у страницы порт хоста. Страница, ответившая портом `simai.admin-navigation-port`, получает оболочку навигации; не ответившая ничем — меню элементов без изменений. Выведено из употребления: страница передаёт порт через `connectPort({port})`; ещё отправляется до 2026-12-01.
-- `sf-admin-menu-intent` — устаревший псевдоним события `sf-admin-menu-refresh`: приходит с прежним `detail`: `{ intent: string, payload: object }`, подписывайтесь на `sf-admin-menu-refresh`.
 
 ### Доступность
 

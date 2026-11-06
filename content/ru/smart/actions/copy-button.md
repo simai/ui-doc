@@ -5,6 +5,8 @@ description: "Копирует значение или текст элемент
 
 # Кнопка копирования
 
+:badge[sf-button-copy]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-button-copy>` копирует значение и сообщает о результате: значок на миг
 становится галочкой, а «Скопировано» вежливо объявляется для чтения с экрана.
 Берите его, когда копируется содержимое другого элемента (`target`), нужно
@@ -150,10 +152,6 @@ document.addEventListener('sf-copy-button-copied', (event) => {
 |:---|:---|:---|
 | `sf-button-copy-copied` | `{ text: string, method: any }` | — |
 | `sf-button-copy-copy-failed` | `{ code: any }` | — |
-| `sf-copy` | `{ text: string, method: any }` | устаревший псевдоним `sf-button-copy-copied`: подписывайтесь на `sf-button-copy-copied` |
-| `sf-copy-error` | `{ code: any }` | устаревший псевдоним `sf-button-copy-copy-failed`: подписывайтесь на `sf-button-copy-copy-failed` |
-| `sf-copy-button-copied` | не описан | устаревший псевдоним `sf-button-copy-copied`: подписывайтесь на `sf-button-copy-copied` |
-| `sf-copy-button-copy-failed` | не описан | устаревший псевдоним `sf-button-copy-copy-failed`: подписывайтесь на `sf-button-copy-copy-failed` |
 
 ### О компоненте
 

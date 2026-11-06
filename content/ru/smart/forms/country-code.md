@@ -5,6 +5,8 @@ description: "Телефонное поле с выбором страны, фл
 
 # Код страны
 
+:badge[sf-input-country]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-input-country>` — телефонное поле с кнопкой выбора страны: флаг и код
 страны стоят перед номером, а маска подстраивается под выбранную страну. Для
 телефона без выбора страны хватит [поля ввода](/ru/smart/forms/inputs/) с

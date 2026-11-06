@@ -5,6 +5,8 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 # Генератор темы
 
+:badge[sf-theme-generator]{type=tonal scheme=primary size=1/2} :badge[1.1.7]{type=outline scheme=on-surface size=1/2}
+
 `<sf-theme-generator>` строит тему из одного цвета. Человек выбирает основной
 цвет, а компонент строит восемь тональных палитр SIMAI Framework — основную,
 вторичную, дополнительную, нейтральную, ошибку, предупреждение, успех и
@@ -222,10 +224,6 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 |:---|:---|:---|
 | `change` | `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }` | Выбор изменился — перетаскивание в палитре, образец, введённое число (словарь 1.1.5 §5.1: `sf-theme-change` → change у генератора темы); имя браузера, тема — в detail |
 | `sf-theme-generator-committed` | `{ value: string, hue: number, chroma: number, theme: object, variables: object, css: string }` | Выбор принят — change палитры, образец, Enter или уход из поля, сброс: тема, которую сохраняет хост |
-| `sf-theme-generator-change` | `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `sf-theme-generator-apply` | `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }` | устаревший псевдоним `sf-theme-generator-committed`: подписывайтесь на `sf-theme-generator-committed` |
-| `sf-theme-change` | `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `sf-theme-apply` | `{ value?: string, hue?: number, chroma?: number, theme?: object, variables?: object, css?: string }` | устаревший псевдоним `sf-theme-generator-committed`: подписывайтесь на `sf-theme-generator-committed` |
 
 ### О компоненте
 

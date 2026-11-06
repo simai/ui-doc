@@ -5,6 +5,8 @@ description: "Показывает ожидание, длительность к
 
 # Спиннер
 
+:badge[sf-spinner]{type=tonal scheme=primary size=1/2} :badge[1.2.3]{type=outline scheme=on-surface size=1/2}
+
 `<sf-spinner>` показывает, что работа идёт, но сколько ещё ждать —
 неизвестно: запрос к серверу, подготовка отчёта. Если доля
 выполненного известна, берите
@@ -196,18 +198,6 @@ report.append(spinner);
 | `direction` | строка | `clockwise` | `clockwise`, `counterclockwise` | — |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
-
-:::details {layout=lines}
-#### Прежние имена (5)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `kind` | `variant` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size` | `width` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size` | `height` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size` | `stroke-width` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size` | `dot-radius` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
 
 ### Методы
 

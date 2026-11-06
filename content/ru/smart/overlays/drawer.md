@@ -6,6 +6,8 @@ profile: reference
 
 # Боковая панель
 
+:badge[sf-drawer]{type=tonal scheme=primary size=1/2} :badge[1.8.7]{type=outline scheme=on-surface size=1/2}
+
 `<sf-drawer>` — боковая панель рабочего места, рядом с которой страница
 остаётся доступной: подсказка у формы, библиотека блоков и свойства в
 редакторе страниц. Закреплённая панель (`docked`) становится колонкой и
@@ -293,18 +295,6 @@ document.addEventListener('sf-drawer-opened', (event) => {
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (5)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `size="1/2"` | `size="small"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size="1"` | `size="medium"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size="2"` | `size="large"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `placement="inline-start"` | `placement="left"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `placement="inline-end"` | `placement="right"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -333,11 +323,6 @@ document.addEventListener('sf-drawer-opened', (event) => {
 | `sf-drawer-snapped` | `{ drawerId: string, snap: any }` | — |
 | `drawer:ready` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
 | `drawer:update` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
-| `drawer:before-open` | `{ drawerId: string, component?: any, drawer?: any, root?: any }` | устаревший псевдоним `sf-drawer-open`: подписывайтесь на `sf-drawer-open` |
-| `drawer:after-open` | `{ drawerId: string, component?: any, drawer?: any, root?: any }` | устаревший псевдоним `sf-drawer-opened`: подписывайтесь на `sf-drawer-opened` |
-| `drawer:before-close` | `{ drawerId: string, reason: string, unsaved: boolean, component?: any, drawer?: any, root?: any }` | устаревший псевдоним `sf-drawer-close`: подписывайтесь на `sf-drawer-close` |
-| `drawer:after-close` | `{ drawerId: string, reason: string, component?: any, drawer?: any, root?: any }` | устаревший псевдоним `sf-drawer-closed`: подписывайтесь на `sf-drawer-closed` |
-| `drawer:snap` | `{ drawerId: string, snap: any, component?: any, drawer?: any, root?: any }` | устаревший псевдоним `sf-drawer-snapped`: подписывайтесь на `sf-drawer-snapped` |
 
 ### О компоненте
 

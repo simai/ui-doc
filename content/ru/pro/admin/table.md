@@ -5,6 +5,8 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
+:badge[sf-view]{type=tonal scheme=primary size=1/2} :badge[1.8.2]{type=outline scheme=on-surface size=1/2} :badge[sf-view-table]{type=tonal scheme=primary size=1/2} :badge[1.15.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-view-table>` показывает серверную коллекцию записей: поиск, фильтры, таблицу,
 выбор строк, действия, настройки колонок и пагинацию. Данные, права и
 выполнение действий остаются за приложением: компонент показывает то, что
@@ -897,15 +899,6 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-view-list-open` — `detail`: `{ reason: any, query: object }`. Пользователь запросил весь список, часть которого показана из-за ограничения числа строк. Передаёт запрос, чтобы хост открыл полное представление с теми же записями; компонент не строит собственный адрес.
 - `sf-table-cell-set` — `detail`: `{ id: string|integer, key: string, value: any, revision: string|integer|null }`. Событие таблицы, которое слушает представление: нажат флажок в ячейке. Представление отправляет record.set порта simai.dataview-port 1.11.0 (возможность inline-edit) с record_id, key, value и revision и возвращает флажок, если ответ не applied.
 - `sf-table-rows-reorder` — `detail`: `{ ids: array, before: string|null, order: array }`. Событие таблицы, которое слушает представление: строки перетащили в другой порядок. Представление сразу показывает новый порядок и отправляет record.reorder порта simai.dataview-port 1.11.0 (возможность row-reorder); отказ или конфликт возвращает прежний порядок.
-- `sf-table-tree-intent` — устаревший псевдоним события `sf-view-tree`: приходит с прежним `detail`: `{ intent: string, payload: object }`, подписывайтесь на `sf-view-tree`.
-- `sf-data-view-open` — устаревший псевдоним события `sf-view-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-open`.
-- `sf-data-view-deleted` — устаревший псевдоним события `sf-view-deleted`: приходит с тем же `detail`, подписывайтесь на `sf-view-deleted`.
-- `sf-data-view-answer` — устаревший псевдоним события `sf-view-answer`: приходит с тем же `detail`, подписывайтесь на `sf-view-answer`.
-- `sf-data-view-state` — устаревший псевдоним события `sf-view-state`: приходит с тем же `detail`, подписывайтесь на `sf-view-state`.
-- `sf-data-view-tree` — устаревший псевдоним события `sf-view-tree`: приходит с тем же `detail`, подписывайтесь на `sf-view-tree`.
-- `sf-data-view-files-drop` — устаревший псевдоним события `sf-view-files-drop`: приходит с тем же `detail`, подписывайтесь на `sf-view-files-drop`.
-- `sf-data-view-saved-view-intent` — устаревший псевдоним события `sf-view-saved-view-intent`: приходит с тем же `detail`, подписывайтесь на `sf-view-saved-view-intent`.
-- `sf-data-view-list-open` — устаревший псевдоним события `sf-view-list-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-list-open`.
 
 #### Доступность
 
@@ -1069,42 +1062,6 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-view-table-cell-set` — `detail`: `{ id: object, key: string, value: object, revision: object }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
 - `sf-view-table-view-change` — `detail`: `{ view: object, everywhere: boolean }`.
 - `sf-view-table-window` — `detail`: `{ first: integer, last: integer }`. Изменились нарисованные строки длинного списка (стандарт 1.3.8 §18.4): `{first, last}`, номера строк в списке.
-- `sf-port-output` — устаревший псевдоним события `sf-view-table-select`: приходит с прежним `detail`: `{ port: any, value: array }`, подписывайтесь на `sf-view-table-select`.
-- `sf-table-action-intent` — устаревший псевдоним события `sf-view-table-apply`: приходит с прежним `detail`: `{ action_id: string, record_ids: array }`, подписывайтесь на `sf-view-table-apply`.
-- `sf-table-column-settings-change` — устаревший псевдоним события `sf-view-table-save`: приходит с прежним `detail`: `{ reason: string, tableSettingsKey: string, columnSettings: object }`, подписывайтесь на `sf-view-table-save`.
-- `sf-table-create-intent` — устаревший псевдоним события `sf-view-table-create`: приходит с прежним `detail`: `{ item: string|null }`, подписывайтесь на `sf-view-table-create`.
-- `sf-table-query-intent` — устаревший псевдоним события `sf-view-table-query`: приходит с прежним `detail`: `{ reason: any, context: object, sequence: integer }`, подписывайтесь на `sf-view-table-query`.
-- `sf-table-retry` — устаревший псевдоним события `sf-view-table-refresh`: приходит с прежним `detail`: `null`, подписывайтесь на `sf-view-table-refresh`.
-- `sf-table-tree-toggle` — устаревший псевдоним события `sf-view-table-expand`: приходит с прежним `detail`: `{ id?: string|integer, expanded?: boolean }`, подписывайтесь на `sf-view-table-expand`.
-- `sf-table-tree-more` — устаревший псевдоним события `sf-view-table-load-more`: приходит с прежним `detail`: `{ parent?: string|integer|null, cursor?: string|null }`, подписывайтесь на `sf-view-table-load-more`.
-- `sf-table-rows-reorder` — устаревший псевдоним события `sf-view-table-move`: приходит с прежним `detail`: `{ ids?: array, before?: any, order?: array }`, подписывайтесь на `sf-view-table-move`.
-- `sf-table:column-settings-change` — устаревший псевдоним события `sf-view-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-save`.
-- `onColumnSettingsChange` — устаревший псевдоним события `sf-view-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-save`.
-- `onSearchEnd` — устаревший псевдоним события `sf-view-table-search-change`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-search-change`.
-- `onTemplateSave` — устаревший псевдоним события `sf-view-table-template-save`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-template-save`.
-- `onFilterUpdate` — устаревший псевдоним события `sf-view-table-filter-change`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-filter-change`.
-- `sf-table-select` — устаревший псевдоним события `sf-view-table-select`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-select`.
-- `sf-table-apply` — устаревший псевдоним события `sf-view-table-apply`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-apply`.
-- `sf-table-save` — устаревший псевдоним события `sf-view-table-save`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-save`.
-- `sf-table-column-settings-reset` — устаревший псевдоним события `sf-view-table-column-settings-reset`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-column-settings-reset`.
-- `sf-table-create` — устаревший псевдоним события `sf-view-table-create`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-create`.
-- `sf-table-filter-change` — устаревший псевдоним события `sf-view-table-filter-change`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-filter-change`.
-- `sf-table-query` — устаревший псевдоним события `sf-view-table-query`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-query`.
-- `sf-table-refresh` — устаревший псевдоним события `sf-view-table-refresh`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-refresh`.
-- `sf-table-search-change` — устаревший псевдоним события `sf-view-table-search-change`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-search-change`.
-- `sf-table-sort-change` — устаревший псевдоним события `sf-view-table-sort-change`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-sort-change`.
-- `sf-table-template-delete` — устаревший псевдоним события `sf-view-table-template-delete`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-template-delete`.
-- `sf-table-template-save` — устаревший псевдоним события `sf-view-table-template-save`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-template-save`.
-- `sf-table-template-select` — устаревший псевдоним события `sf-view-table-template-select`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-template-select`.
-- `sf-table-toolbar-action` — устаревший псевдоним события `sf-view-table-toolbar-action`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-toolbar-action`.
-- `sf-table-reference-open` — устаревший псевдоним события `sf-view-table-reference-open`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-reference-open`.
-- `sf-table-expand` — устаревший псевдоним события `sf-view-table-expand`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-expand`.
-- `sf-table-load-more` — устаревший псевдоним события `sf-view-table-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-load-more`.
-- `sf-table-rows-drag` — устаревший псевдоним события `sf-view-table-rows-drag`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-rows-drag`.
-- `sf-table-move` — устаревший псевдоним события `sf-view-table-move`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-move`.
-- `sf-table-cell-set` — устаревший псевдоним события `sf-view-table-cell-set`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-cell-set`.
-- `sf-table-view-change` — устаревший псевдоним события `sf-view-table-view-change`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-view-change`.
-- `sf-table-window` — устаревший псевдоним события `sf-view-table-window`: приходит с тем же `detail`, подписывайтесь на `sf-view-table-window`.
 
 #### Персональный вид
 

@@ -21,7 +21,19 @@ here.
 
 - Front matter: `title` (the Russian name), `description` (one sentence: what
   it does for the reader). No badges in the body: the generated sections
-  carry the facts badges repeated.
+  carry the facts badges repeated. The one exception is generated: on a
+  Smart page `scripts/build-smart-reference.mjs` writes one line under the
+  H1 with the tag and the version of every component the page documents
+  (owner remark R007, 2026-11-07), and the audit fails a Smart page without
+  it (`version_badges_missing`) or with a version left in its prose
+  (`version_in_prose`).
+- A component page shows only what to write today: no earlier names, no
+  retired attributes, variables or appearances, no «работает до …». Earlier
+  names live in one place, the generated «Прежние имена по компонентам» of
+  the names guide (`content/ru/guide/smart-components/names.md`); the audit
+  fails a page that still carries them (`earlier_names_on_page`), unless the
+  page documents an alias as its subject (`alias_of` in
+  `config/reference-pages.json`). Owner remark R006, 2026-11-07.
 - `# <title>`, then one or two sentences: what it does and when to choose
   it. No «Модификатор …», no CSS property lists here — that is the classes
   section.
@@ -140,12 +152,12 @@ redirect for every page).
 | — | introduction | yes | hand; when a class twin exists, a line «То же на классах — …» links it |
 | 1 | `## Пример` | yes | hand |
 | 2 | `## Разметка` | yes | hand: the minimal tag, how the label and slots are given |
-| 3 | `## Варианты` | when it has visual axes | hand: the class page's H3 names (Вид, Схема, Размер, Иконки …), each with a live example |
+| 3 | `## Варианты` | when it has visual axes | hand: the class page's H3 names with the attribute they describe («Вид `appearance`», «Размер `size`» …), each with a specimen grid (below) |
 | 4 | `## Состояния` | when it has states | hand: one H3 per state with a live example |
 | 5 | `## Поведение` | no | hand: events, methods and JavaScript in context; one H3 per topic |
 | 6 | `## Применение` | no | hand: one H3 per everyday task the component solves, each with a live example and the reason for the choice; it replaces a separate «Решения» section (owner, 2026-11-06) |
 | 7 | `## Доступность` | yes | hand |
-| 8 | `## Справочник` | yes | generated: attributes, methods and events as tables, earlier names in a closed `<details>`, then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
+| 8 | `## Справочник` | yes | generated: attributes, methods and events as tables (events without their aliases), then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
 | 9 | `## См. также` | no | hand |
 
 The generated «Минимальная разметка» and «Свойства в документе макета» are
@@ -163,6 +175,33 @@ Rules that come with it:
   sandbox (`preview="sandbox"`), which gives the full-width viewer.
 - An axis is shown by values, not by prose: a size axis is one example with
   every size side by side, labelled; a state is the component in that state.
+- **One specimen grid for every axis** (owner remark R002, 2026-11-07). The
+  values sit in equal cells, each specimen centred in its cell, with one
+  small muted line under it that holds the value alone — no attribute name
+  and no code chip, since the H3 already names the attribute. The grid is
+  utilities only, so the example stays inline (`preview=inline` in its
+  example.json keeps the container query from forcing a sandbox):
+
+  ```html
+  <div class="query-container">
+    <div class="grid grid-col-2 cq-sm:grid-col-3 cq-md:grid-col-5 gap-4">
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 items-cross-center"><sf-button text="Сохранить" appearance="tonal"></sf-button></div>
+        <span class="text-1/2 color-on-surface-variant wrap-none">tonal</span>
+      </div>
+      …
+    </div>
+  </div>
+  ```
+
+  Columns follow the example's own width, not the window's: two on a
+  phone, three from 32rem, five from 44rem. A grid of fewer values uses
+  fewer columns at the widest step.
+- **A live example says what it sends.** An example that reacts — a form,
+  a toggle, a shortcut, a choice — shows its events in the shared event
+  log under it: `examples/shared/event-log.js`, copied into the example's
+  `index.js` by `composer docs:example-helpers:sync` and checked by
+  `docs:check` (owner remark R011, 2026-11-07).
 
 ## Generated sections
 

@@ -5,6 +5,8 @@ description: "Вариант выпадающего списка и общая �
 
 # Строка списка
 
+:badge[sf-list-item]{type=tonal scheme=primary size=1/2} :badge[1.2.6]{type=outline scheme=on-surface size=1/2}
+
 `<sf-list-item>` описывает один вариант [Выпадающий список](/ru/smart/navigation/dropdown/):
 машинное значение, подпись и вид строки — текст, иконка, флажок, аватар или
 цветовой маркер. В Dropdown список, фокус, выбор и значение формы принадлежат
@@ -182,14 +184,6 @@ Dropdown не меняются.
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 Свойство атрибута `value` называется `itemValue`.
 
-:::details {layout=lines}
-#### Прежние имена (1)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 Публичных методов нет.
@@ -201,7 +195,6 @@ Dropdown не меняются.
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-list-item-open` | `{ id: string, trigger: any }` | Человек нажал на интерактивную строку или Enter на ней: open `{id}` словаря 1.1.5 §5, где id — это value |
-| `sf-list-item-activate` | `{ value: string, trigger: any }` | устаревший псевдоним `sf-list-item-open`: подписывайтесь на `sf-list-item-open` |
 
 ### О компоненте
 

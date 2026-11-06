@@ -5,6 +5,8 @@ description: "Даёт отметить один или несколько не�
 
 # Флажок
 
+:badge[sf-checkbox]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+
 `<sf-checkbox>` — флажок для независимого выбора: каждый вариант отмечают или
 снимают отдельно от остальных. Для одного варианта из нескольких берите
 [Радиокнопки](/ru/smart/forms/radio/), для настройки, которая действует сразу, —

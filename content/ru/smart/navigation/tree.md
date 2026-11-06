@@ -5,6 +5,8 @@ description: "Показывает иерархию папок или разде
 
 # Дерево
 
+:badge[sf-tree]{type=tonal scheme=primary size=1/2} :badge[2.0.8]{type=outline scheme=on-surface size=1/2}
+
 `<sf-tree>` показывает вложенный список: папки и файлы, разделы сайта,
 категории каталога. Ветви раскрываются и сворачиваются, пункты выбираются
 мышью и клавиатурой. Каждый пункт — [Элемент дерева](/ru/smart/navigation/tree-item/).
@@ -193,15 +195,6 @@ tree.items = await fetchFolders();
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (2)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `selection="one"` | `selection="single"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `selection="many"` | `selection="multiple"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -223,11 +216,6 @@ tree.items = await fetchFolders();
 | `sf-tree-move` | `{ ids: array, parent: any, before: any, source: string }` | Записи, перетащенные из списка, сброшены на запись: просьба перенести их в неё (словарь §5 move); дерево само ничего не переносит |
 | `sf-tree-attach` | `{ files: array, parent: any }` | На запись перетащили файлы: просьба прикрепить их туда (словарь §5 attach); дерево само ничего не загружает |
 | `sf-tree-window` | `{ first: number, last: number }` | При более чем 300 видимых записях — какие из них нарисованы (§18.4) |
-| `sf-tree-selection-change` | `{ component: object, tagName: string, template: string, item: object, selected: boolean, value: string }` | устаревший псевдоним `sf-tree-select`: подписывайтесь на `sf-tree-select` |
-| `sf-tree-records-drop` | не описан | устаревший псевдоним `sf-tree-move`: подписывайтесь на `sf-tree-move` |
-| `sf-tree-files-drop` | не описан | устаревший псевдоним `sf-tree-attach`: подписывайтесь на `sf-tree-attach` |
-| `sf-tree-item-click` | не описан | устаревший псевдоним `sf-tree-open`: подписывайтесь на `sf-tree-open` |
-| `sf-tree-item-toggle` | не описан | устаревший псевдоним `sf-tree-toggle`: подписывайтесь на `sf-tree-toggle` |
 
 ### О компоненте
 

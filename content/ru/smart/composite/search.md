@@ -5,6 +5,8 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 # Поиск по сайту
 
+:badge[sf-search]{type=tonal scheme=primary size=1/2} :badge[1.2.3]{type=outline scheme=on-surface size=1/2}
+
 `<sf-search>` — поиск по сайту SIMAI: окно с крупным скруглённым полем и
 отдельной карточкой результатов под ним, над лёгким затемнением. Его
 открывает кнопка в шапке и клавиши `Command/Control+K` и `/`. На телефоне

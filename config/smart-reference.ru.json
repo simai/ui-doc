@@ -376,7 +376,7 @@
     "How the alert looks: a filled surface, an outline, or flat.": "Вид уведомления: заливка, контур или плоский.",
     "How the badge looks: the most visible fill, a calmer tonal one, or an outline.": "Вид значка: наиболее заметная заливка, более спокойная тональная или контур.",
     "How the button looks. Surface and ghost read the neutral alpha ramp: surface keeps a faint fill and a border, ghost keeps nothing until it is hovered or focused.": "Вид кнопки. `surface` и `ghost` используют нейтральную шкалу прозрачности: `surface` сохраняет лёгкую заливку и рамку, `ghost` не имеет ничего, пока на него не наведут курсор или фокус.",
-    "How the button looks. Surface reads the neutral alpha ramp: a faint fill and a border. ghost is the link appearance under its old name (compat until 2026-12-01).": "Вид кнопки. `surface` использует нейтральную шкалу прозрачности: лёгкая заливка и рамка. `ghost` — прежнее имя вида `link`, работает до 2026-12-01.",
+    "How the button looks. Surface reads the neutral alpha ramp: a faint fill and a border. ghost is the link appearance under its old name (compat until 2026-12-01).": "Вид кнопки. `surface` использует нейтральную шкалу прозрачности: лёгкая заливка и рамка.",
     "How the date is shown in the field, e.g. DD.MM.YYYY. The value stays ISO.": "Как дата показывается в поле, например DD.MM.YYYY. Значение остаётся в ISO.",
     "How the dropdown looks: a filled field or an outlined one.": "Вид выпадающего списка: поле с заливкой или с контуром.",
     "How the field looks: a bordered box or a filled one.": "Вид поля: блок с рамкой или с заливкой.",

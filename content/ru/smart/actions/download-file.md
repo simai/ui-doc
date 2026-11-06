@@ -5,6 +5,8 @@ description: "Показывает файл для скачивания с им�
 
 # Скачивание файла
 
+:badge[sf-file-download]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-file-download>` показывает файл, который можно скачать: иконку, имя и
 размер. С адресом он становится нативной ссылкой, без адреса — кнопкой, по
 которой приложение само готовит файл.
@@ -141,8 +143,6 @@ document.addEventListener('sf-download-file-download', async (event) => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-file-download-download` | `{ href: string, fileName: string, download: boolean }` | — |
-| `sf-download-file:click` | `{ href?: string, fileName?: string, download?: boolean }` | устаревший псевдоним `sf-file-download-download`: подписывайтесь на `sf-file-download-download` |
-| `sf-download-file-download` | не описан | устаревший псевдоним `sf-file-download-download`: подписывайтесь на `sf-file-download-download` |
 
 ### О компоненте
 

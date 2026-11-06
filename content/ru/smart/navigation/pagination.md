@@ -5,6 +5,8 @@ description: "Переключает страницы длинного спис�
 
 # Пагинация
 
+:badge[sf-pagination]{type=tonal scheme=primary size=1/2} :badge[1.3.7]{type=outline scheme=on-surface size=1/2}
+
 `<sf-pagination>` — подвал длинного списка или таблицы: сколько всего
 записей, на какой странице читатель, как перейти на другую и сколько записей
 показывать. Данные компонент не загружает: приложение передаёт числа и по
@@ -268,14 +270,6 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 | `sf-pagination-action-change` | `{ previous: string, action: string }` | — |
 | `sf-pagination-action-for-all-change` | `{ previous: boolean, actionForAll: boolean }` | — |
 | `sf-pagination-apply` | `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number\\|null }` | — |
-| `sf-action-apply` | `{ component: object, tagName: string, template: string, action: string, actionForAll: boolean, current: number, total: number, pageSize: number, pageCount: number\\|null }` | устаревший псевдоним `sf-pagination-apply`: подписывайтесь на `sf-pagination-apply` |
-| `sf-action-change` | `{ component: object, tagName: string, template: string, previous: string, action: string }` | устаревший псевдоним `sf-pagination-action-change`: подписывайтесь на `sf-pagination-action-change` |
-| `sf-action-for-all-change` | `{ component: object, tagName: string, template: string, previous: boolean, actionForAll: boolean }` | устаревший псевдоним `sf-pagination-action-for-all-change`: подписывайтесь на `sf-pagination-action-for-all-change` |
-| `sf-count-request` | `{ component: object, tagName: string, template: string, reason: string, current: number, pageSize: number }` | устаревший псевдоним `sf-pagination-count`: подписывайтесь на `sf-pagination-count` |
-| `sf-page-change` | `{ component: object, tagName: string, template: string, previous: number, current: number, total: number, pageCount: number\\|null, pageSize: number }` | устаревший псевдоним `sf-pagination-change`: подписывайтесь на `sf-pagination-change` |
-| `sf-page-size-change` | `{ component: object, tagName: string, template: string, previous: number, pageSize: number, current: number, total: number, pageCount: number }` | устаревший псевдоним `sf-pagination-size-change`: подписывайтесь на `sf-pagination-size-change` |
-| `sf-selection-clear` | `{ component: object, tagName: string, template: string, selectedCount: number, total: number }` | устаревший псевдоним `sf-pagination-selection-clear`: подписывайтесь на `sf-pagination-selection-clear` |
-| `sf-show-more` | `{ component: object, tagName: string, template: string, current: number, total: number, pageSize: number, pageCount: number\\|null, hasNext: boolean, item: object\\|null }` | устаревший псевдоним `sf-pagination-load-more`: подписывайтесь на `sf-pagination-load-more` |
 
 ### О компоненте
 

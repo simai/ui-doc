@@ -5,6 +5,8 @@ description: "Показывает известный ход процесса ш
 
 # Шкала прогресса
 
+:badge[sf-progress-scale]{type=tonal scheme=primary size=1/2} :badge[1.1.3]{type=outline scheme=on-surface size=1/2}
+
 `<sf-progress-scale>` показывает известную долю выполненного шкалой из десяти
 делений. Берите её, когда точность до процента не нужна и ход удобнее читать
 крупными шагами: заполненность профиля, этапы подготовки, занятое место. Для
@@ -112,17 +114,6 @@ scale.setProgress(completedSteps * 20);
 | `aria-label` | строка | пусто | — | — |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
-
-:::details {layout=lines}
-#### Прежние имена (4)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `status` | `tone` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="neutral"` | `status="primary"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
 
 ### Методы
 

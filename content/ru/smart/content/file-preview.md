@@ -5,6 +5,8 @@ description: "Показывает выбранный или прикреплё�
 
 # Предпросмотр файла
 
+:badge[sf-file-preview]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-file-preview>` показывает один уже выбранный или прикреплённый файл:
 значок или миниатюру, имя, размер и две кнопки — скачать и удалить.
 Выбирает и загружает файлы [Загрузка файлов](/ru/smart/forms/file-upload/).
@@ -160,16 +162,6 @@ file.onDownload((event) => {
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (3)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `file-size` | `size` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `kind="auto"` | `kind="default"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -188,8 +180,6 @@ file.onDownload((event) => {
 |:---|:---|:---|
 | `sf-file-preview-download` | `{ id: string, action: string, value: object }` | — |
 | `sf-file-preview-detach` | `{ id: string, action: string, value: object }` | — |
-| `sf-file-preview:download` | `{ action?: any, value?: object }` | устаревший псевдоним `sf-file-preview-download`: подписывайтесь на `sf-file-preview-download` |
-| `sf-file-preview:remove` | `{ action?: any, value?: object }` | устаревший псевдоним `sf-file-preview-detach`: подписывайтесь на `sf-file-preview-detach` |
 
 ### О компоненте
 

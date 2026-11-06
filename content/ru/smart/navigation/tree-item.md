@@ -5,6 +5,8 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 # Элемент дерева
 
+:badge[sf-tree-item]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+
 `<sf-tree-item>` — один пункт [дерева](/ru/smart/navigation/tree/):
 папка с вложенными пунктами, файл или ссылка на раздел. Пункты ставят внутрь
 `<sf-tree>`: дерево даёт им общий порядок фокуса, клавиатуру и выбор.
@@ -186,14 +188,6 @@ section.expand();
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (1)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -214,7 +208,6 @@ section.expand();
 |:---|:---|:---|
 | `sf-tree-item-open` | `{ id: string, value: string }` | Нажатие на имя или Enter на листе без ссылки: open `{id}` словаря 1.1.5 §5 |
 | `sf-tree-item-toggle` | `{ id: string, open: boolean, value: string }` | Ветка открылась или закрылась (словарь §5 toggle); DOM-имя `sf-tree-item-toggle` не изменилось |
-| `sf-tree-item-click` | `{ component: object, tagName: string, template: string, item: object, value: string, originalEvent: object\\|null }` | устаревший псевдоним `sf-tree-item-open`: подписывайтесь на `sf-tree-item-open` |
 
 ### О компоненте
 

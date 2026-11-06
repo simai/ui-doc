@@ -5,6 +5,8 @@ description: "Зона выбора и перетаскивания файлов
 
 # Загрузка файлов
 
+:badge[sf-file-upload]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+
 `<sf-file-upload>` — зона, где пользователь выбирает файлы в системном окне
 или перетаскивает их, и список выбранных файлов с прогрессом и состоянием
 передачи. Сами файлы он не отправляет: передачу и проверку выполняет
@@ -285,15 +287,6 @@ async function store(item) {
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
-:::details {layout=lines}
-#### Прежние имена (2)
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `size="1/2"` | `size="1/3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `size="2"` | `size="3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-:::
-
 ### Методы
 
 | Метод | Возвращает | Что делает |
@@ -328,14 +321,6 @@ async function store(item) {
 | `sf-file-upload-failed` | `{ id: any, item: object, index: number, items: array, reason: string, message: string }` | Файл не загрузился. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:file-error` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
 | `sf-file-upload-cancelled` | `{ id: any, item: object }` | Запись ушла, будучи в process, — её убрал человек или хост: её поток кончился, не завершившись (§10.8). |
 | `sf-file-upload-finished` | `{ items: array }` | Все файлы обработаны. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-file-upload:complete` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-file-upload:complete` | `{ items?: array }` | устаревший псевдоним `sf-file-upload-finished`: подписывайтесь на `sf-file-upload-finished` |
-| `sf-file-upload:file-add` | `{ item?: object, index?: number, items?: array, source?: string, multiple?: boolean }` | устаревший псевдоним `sf-file-upload-attached`: подписывайтесь на `sf-file-upload-attached` |
-| `sf-file-upload:file-complete` | `{ item?: object, index?: number, items?: array }` | устаревший псевдоним `sf-file-upload-completed`: подписывайтесь на `sf-file-upload-completed` |
-| `sf-file-upload:file-error` | `{ item?: object, index?: number, items?: array }` | устаревший псевдоним `sf-file-upload-failed`: подписывайтесь на `sf-file-upload-failed` |
-| `sf-file-upload:reject` | `{ files?: array, accept?: string, source?: string }` | устаревший псевдоним `sf-file-upload-rejected`: подписывайтесь на `sf-file-upload-rejected` |
-| `sf-file-upload:remove` | `{ item?: object, index?: number, items?: array }` | устаревший псевдоним `sf-file-upload-detach`: подписывайтесь на `sf-file-upload-detach` |
-| `sf-file-upload:retry` | `{ item?: object, index?: number, items?: array }` | устаревший псевдоним `sf-file-upload-retry`: подписывайтесь на `sf-file-upload-retry` |
-| `sf-file-upload:select` | `{ files?: array, source?: string, multiple?: boolean }` | устаревший псевдоним `sf-file-upload-attach`: подписывайтесь на `sf-file-upload-attach` |
 
 ### О компоненте
 

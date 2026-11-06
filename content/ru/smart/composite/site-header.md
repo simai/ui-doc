@@ -5,6 +5,8 @@ description: "Верхняя полоса сайта: бренд, разделы
 
 # Шапка сайта
 
+:badge[sf-header-site]{type=tonal scheme=primary size=1/2} :badge[1.3.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-header-site>` — верхняя полоса сайта: бренд, разделы, ссылки и
 инструменты в одну строку по ширине контейнера. На узком экране разделы и
 ссылки уходят в боковую панель, которую открывает кнопка меню. Одна шапка для
@@ -193,10 +195,6 @@ header.addEventListener('sf-site-header-opened', () => {
 | `sf-header-site-opened` | нет | Боковая панель открылась; страница, которая заполняет слот `sheet` позже, делает это здесь |
 | `sf-header-site-close` | `{ reason: any }` | Боковая панель вот-вот закроется, и почему: её кнопка закрытия, Escape, нажатие на затемнение или действие (выбранная в панели ссылка и окно, ставшее шире ступени, называют `api`) |
 | `sf-header-site-closed` | `{ reason: any }` | Боковая панель закрылась, и почему |
-| `sf-site-header-open` | не описан | устаревший псевдоним `sf-header-site-open`: подписывайтесь на `sf-header-site-open` |
-| `sf-site-header-opened` | не описан | устаревший псевдоним `sf-header-site-opened`: подписывайтесь на `sf-header-site-opened` |
-| `sf-site-header-close` | не описан | устаревший псевдоним `sf-header-site-close`: подписывайтесь на `sf-header-site-close` |
-| `sf-site-header-closed` | не описан | устаревший псевдоним `sf-header-site-closed`: подписывайтесь на `sf-header-site-closed` |
 
 ### О компоненте
 

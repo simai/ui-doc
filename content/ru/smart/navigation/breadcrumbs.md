@@ -5,6 +5,8 @@ description: "Показывает путь от корня сайта до те
 
 # Хлебные крошки
 
+:badge[sf-breadcrumbs]{type=tonal scheme=primary size=1/2} :badge[1.1.7]{type=outline scheme=on-surface size=1/2}
+
 `<sf-breadcrumbs>` показывает, где в иерархии сайта находится страница:
 ссылки на разделы выше и название текущей страницы в конце. Он собирает
 разметку обычных хлебных крошек из строки или данных и сам сворачивает
@@ -149,7 +151,6 @@ crumbs.onItemClick((item) => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-breadcrumbs-press` | `{ item: object, index: number, items: array }` | — |
-| `sf-breadcrumb-click` | `{ component?: any, tagName?: string, template?: string, item?: object, index?: number, items?: array, originalEvent?: any }` | устаревший псевдоним `sf-breadcrumbs-press`: подписывайтесь на `sf-breadcrumbs-press` |
 
 ### О компоненте
 

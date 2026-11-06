@@ -5,6 +5,8 @@ description: "Даёт переставлять элементы, перенос
 
 # Перетаскивание
 
+:badge[sf-sortable]{type=tonal scheme=primary size=1/2} :badge[1.1.7]{type=outline scheme=on-surface size=1/2}
+
 `<sf-sortable>` — часть редактора страниц: список, элементы которого можно
 переставлять, переносить в другие списки той же группы и копировать из
 библиотеки. Работает мышью, пером, касанием и клавиатурой. Компонент только
@@ -238,7 +240,6 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 | `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: any }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос словаря 1.1.5 §5 move, `{id, parent, position}` под именами item, to и index; применяет его хост |
 | `sf-sortable-state` | `{ state: any, item: string }` | Шаг перетаскивания: взяли, отпустили или отменили |
 | `sf-sortable-insert` | `{ index: integer, item: string, to: string }` | Просьба вставщика поставить новый элемент палитры в место; отменяемая |
-| `sf-sortable-intent` | `{ item: string, from: string, to: string, index: integer, mode: any }` | устаревший псевдоним `sf-sortable-move`: подписывайтесь на `sf-sortable-move` |
 
 ### О компоненте
 

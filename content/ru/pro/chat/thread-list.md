@@ -5,6 +5,8 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
+:badge[sf-chat-threads]{type=tonal scheme=primary size=1/2} :badge[1.7.0]{type=outline scheme=on-surface size=1/2}
+
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
 открытый, даёт переименовать разговор на месте, отправить его в архив и
@@ -97,11 +99,11 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ### Аватар строки
 
-`avatar` (1.6.0): `shape` — `circle` (по умолчанию, один человек) или `square` (группа,
+`avatar`: `shape` — `circle` (по умолчанию, один человек) или `square` (группа,
 канал); `icon` — знак вместо инициалов (канал, агент, бот; имя значка Framework),
 картинка `image-url` важнее знака. Нет `avatar` — нет и колонки под него: в списке
 только с ИИ-разговорами пустого места слева не остаётся. Инициалы рисуются
-приглушённым цветом по названию разговора (1.6.1, `sf-avatar` `tone="auto"`, см.
+приглушённым цветом по названию разговора (`sf-avatar` `tone="auto"`, см.
 [Цвет инициалов](/ru/smart/content/avatar/#цвет-инициалов)): у одного
 названия цвет всегда один.
 `activity` (`running`, `waiting`, `done`, `stopped`, `failed`) is where the work in the
@@ -160,13 +162,6 @@ noted in `SF.deprecations`.
 - `create-commands` — `array` из `object`, по умолчанию `[]`. Команды в шапке вместо «Нового разговора»: [{id, text, icon?}], свойство. Нажатая команда сообщает create {kind: id}. Если список пуст, остаётся один «Новый разговор», как раньше; no-create и архив убирают и команды.
 - `actions` — `array`, по умолчанию `[]`.
 
-Прежние имена:
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
 ### Методы
 
 - `setThreads(threads: array, hasMore: boolean)` — возвращает `object`. Заменяет список; остаются только разговоры показанного вида (в архиве или нет).
@@ -191,18 +186,6 @@ noted in `SF.deprecations`.
 - `sf-chat-threads-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий хоста над строкой: `{action, scope: entry, ids, id}` (словарь apply). Имя версии 1.0 `sf-thread-list-action` отправляется после него до 2026-12-01.
 - `sf-chat-threads-load-more` — `detail`: `{ direction: any }`. Конец списка показался на экране, пока `has-more`: `{direction: after}`.
 - `sf-chat-threads-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно. Имя версии 1.0 `sf-thread-list-view` отправляется после него до 2026-12-01.
-- `sf-thread-list-select` — устаревший псевдоним события `sf-chat-threads-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-open`.
-- `sf-thread-list-unarchive` — устаревший псевдоним события `sf-chat-threads-restore`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-restore`.
-- `sf-thread-list-action` — устаревший псевдоним события `sf-chat-threads-apply`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-apply`.
-- `sf-thread-list-view` — устаревший псевдоним события `sf-chat-threads-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-toggle`.
-- `sf-thread-list-create` — устаревший псевдоним события `sf-chat-threads-create`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-create`.
-- `sf-thread-list-open` — устаревший псевдоним события `sf-chat-threads-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-open`.
-- `sf-thread-list-rename` — устаревший псевдоним события `sf-chat-threads-rename`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-rename`.
-- `sf-thread-list-archive` — устаревший псевдоним события `sf-chat-threads-archive`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-archive`.
-- `sf-thread-list-restore` — устаревший псевдоним события `sf-chat-threads-restore`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-restore`.
-- `sf-thread-list-apply` — устаревший псевдоним события `sf-chat-threads-apply`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-apply`.
-- `sf-thread-list-load-more` — устаревший псевдоним события `sf-chat-threads-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-load-more`.
-- `sf-thread-list-toggle` — устаревший псевдоним события `sf-chat-threads-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-toggle`.
 
 ### Доступность
 

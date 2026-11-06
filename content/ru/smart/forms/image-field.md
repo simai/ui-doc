@@ -5,6 +5,8 @@ description: "Поле формы для одного изображения: м
 
 # Поле изображения
 
+:badge[sf-input-image]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
+
 `<sf-input-image>` — поле формы для одного изображения: логотипа, обложки,
 картинки в блоке. Оно показывает миниатюру с именем и размером файла, кнопки
 «Заменить…» и «Убрать» и принимает файл, перетащенный на поле. Загружает
@@ -163,12 +165,6 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | `sf-input-image-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Хост загружает его и задаёт сохранённое значение. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
 | `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:remove` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
 | `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:reject` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-image-field:select` | `{ file?: object, source?: string, value?: object, name?: string }` | устаревший псевдоним `sf-input-image-attach`: подписывайтесь на `sf-input-image-attach` |
-| `sf-image-field:remove` | `{ value?: object, name?: string }` | устаревший псевдоним `sf-input-image-detach`: подписывайтесь на `sf-input-image-detach` |
-| `sf-image-field:reject` | `{ files?: array, accept?: string, source?: string }` | устаревший псевдоним `sf-input-image-rejected`: подписывайтесь на `sf-input-image-rejected` |
-| `sf-image-field-attach` | не описан | устаревший псевдоним `sf-input-image-attach`: подписывайтесь на `sf-input-image-attach` |
-| `sf-image-field-detach` | не описан | устаревший псевдоним `sf-input-image-detach`: подписывайтесь на `sf-input-image-detach` |
-| `sf-image-field-rejected` | не описан | устаревший псевдоним `sf-input-image-rejected`: подписывайтесь на `sf-input-image-rejected` |
 
 ### О компоненте
 

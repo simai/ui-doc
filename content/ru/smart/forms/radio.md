@@ -5,6 +5,8 @@ description: "Даёт выбрать ровно один вариант из в
 
 # Радиокнопки
 
+:badge[sf-radio]{type=tonal scheme=primary size=1/2} :badge[1.1.4]{type=outline scheme=on-surface size=1/2}
+
 `<sf-radio>` — радиокнопка: один вариант из группы взаимоисключающих, где
 все варианты видны сразу. Для независимых вариантов берите
 [Флажок](/ru/smart/forms/checkbox/), для длинного списка —

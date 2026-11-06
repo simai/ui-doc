@@ -6,6 +6,8 @@ profile: reference
 
 # Модальное окно
 
+:badge[sf-modal]{type=tonal scheme=primary size=1/2} :badge[1.4.6]{type=outline scheme=on-surface size=1/2}
+
 `<sf-modal>` показывает одну ограниченную задачу поверх страницы:
 подтверждение, короткую форму, подробности. Компонент управляет верхним
 слоем, клавиатурной границей, блокировкой страницы и возвратом фокуса;
@@ -347,18 +349,8 @@ modal.open();
 | `sf-modal-expanded` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-content-upload` | `{ modalId: string, src: string, remote: object }` | — |
 | `sf-modal-content-uploaded` | `{ modalId: string, src: string, remote: object }` | — |
-| `modal:after-close` | `{ modalId: string, phase: string, reason: string, accepted: boolean, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-closed`: подписывайтесь на `sf-modal-closed` |
-| `modal:after-hide` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-minimized`: подписывайтесь на `sf-modal-minimized` |
-| `modal:after-open` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-opened`: подписывайтесь на `sf-modal-opened` |
-| `modal:after-show` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-expanded`: подписывайтесь на `sf-modal-expanded` |
-| `modal:before-close` | `{ modalId: string, phase: string, reason: string, unsaved: boolean, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-close`: подписывайтесь на `sf-modal-close` |
-| `modal:before-hide` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-minimize`: подписывайтесь на `sf-modal-minimize` |
-| `modal:before-open` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-open`: подписывайтесь на `sf-modal-open` |
-| `modal:before-show` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-expand`: подписывайтесь на `sf-modal-expand` |
 | `modal:ready` | `{ component?: any, modal?: any, modalId?: string, root?: any }` | Окно отрисовано впервые. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие. |
 | `modal:update` | `{ component?: any, modal?: any, modalId?: string, root?: any }` | Окно отрисовано повторно после первой отрисовки. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие. |
-| `modal:before-content-upload` | `{ modalId: string, src: string, remote: object, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-content-upload`: подписывайтесь на `sf-modal-content-upload` |
-| `modal:after-content-upload` | `{ modalId: string, src: string, remote: object, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-content-uploaded`: подписывайтесь на `sf-modal-content-uploaded` |
 
 ### О компоненте
 
