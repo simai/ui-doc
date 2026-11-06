@@ -79,7 +79,11 @@ const initialize = async () => {
   form.dataset.exampleReady = 'true';
   const log = exampleEventLog(panel);
   log.watch(form.querySelector('sf-language'), 'change');
-  form.addEventListener('submit', (event) => {
+  // The example frame is sandboxed without allow-forms, so the browser never
+  // fires submit here: the example reads the press of the submit button and
+  // prints what the form would send. On a page, listen for submit itself.
+  form.addEventListener('click', (event) => {
+    if (!event.target.closest('button[type="submit"]')) return;
     event.preventDefault();
     log.write('submit', `language=${new FormData(form).get('language')}`);
   });

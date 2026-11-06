@@ -54,7 +54,7 @@ description: "Запускает действие кнопкой с подпис
 «Отмена»; `link` — самое лёгкое, в строке таблицы или рядом с текстом;
 `surface` — нейтральная кнопка панелей инструментов и цветного фона.
 
-:::example {id="smart-components/buttons/appearance" label="Виды кнопки"}
+:::example {id="smart-components/buttons/appearance" label="Виды кнопки" preview=inline}
 :::
 
 ### Схема `scheme` и статус `status`
@@ -68,7 +68,7 @@ description: "Запускает действие кнопкой с подпис
 `status="error"` отмечает действие, которое удаляет данные или необратимо:
 кнопка окрашивается цветом ошибки поверх `scheme`.
 
-:::example {id="smart-components/buttons/scheme" label="Цветовые семейства и статус ошибки"}
+:::example {id="smart-components/buttons/scheme" label="Схемы и статус" preview=inline}
 :::
 
 ### Размер `size`
@@ -77,7 +77,7 @@ description: "Запускает действие кнопкой с подпис
 `2`, `3`. Высота, отступы, текст и иконка меняются согласованно; размер
 кнопки совпадает с размером полей той же строки.
 
-:::example {id="smart-components/buttons/sizes" label="Размеры кнопки"}
+:::example {id="smart-components/buttons/sizes" label="Размеры кнопки" preview=inline}
 :::
 
 ### Иконки `icon-start`, `icon-end` и `icon`
@@ -87,7 +87,7 @@ description: "Запускает действие кнопкой с подпис
 `icon-start=""` убирает иконку с этой стороны, даже если задан `icon`.
 Размер иконки следует за размером кнопки.
 
-:::example {id="smart-components/buttons/icons" label="Иконки в кнопке"}
+:::example {id="smart-components/buttons/icons" label="Иконки в кнопке" preview=inline}
 :::
 
 ### Плотность `spacing`
@@ -96,7 +96,7 @@ description: "Запускает действие кнопкой с подпис
 плотным таблицам и панелям, `normal` — по умолчанию, `comfortable` и
 `spacious` — крупным одиночным действиям.
 
-:::example {id="smart-components/buttons/spacing" label="Плотность кнопки"}
+:::example {id="smart-components/buttons/spacing" label="Плотность кнопки" preview=inline}
 :::
 
 ### Радиус `radius`
@@ -105,7 +105,7 @@ description: "Запускает действие кнопкой с подпис
 `radius="square"` убирает скругление, `radius="rounded"` делает края
 полностью круглыми; `default` даёт тот же радиус, что и без атрибута.
 
-:::example {id="smart-components/buttons/radius" label="Радиус кнопки"}
+:::example {id="smart-components/buttons/radius" label="Радиус кнопки" preview=inline}
 :::
 
 ### Сегмент `segment`
@@ -127,13 +127,14 @@ description: "Запускает действие кнопкой с подпис
 
 `disabled` отключает кнопку: она не нажимается и выпадает из порядка `Tab`.
 
-:::example {id="smart-components/buttons/state-disabled" label="Недоступные кнопки"}
+:::example {id="smart-components/buttons/state-disabled" label="Недоступные кнопки" preview=inline}
 :::
 
 ### Загрузка
 
-Кнопка с `loading` показывает [Спиннер](/ru/smart/feedback/spinner/)
-размером со свою иконку на каждой ступени `size`:
+Кнопка с `loading` показывает спиннер — тот же, что рисует
+[`<sf-spinner>`](/ru/smart/feedback/spinner/), размером со свою иконку на
+каждой ступени `size`:
 
 - с иконкой спиннер встаёт на место иконки — начальной, а если её нет,
   конечной;
@@ -146,12 +147,25 @@ description: "Запускает действие кнопкой с подпис
 Подпись остаётся доступным именем кнопки, внутренняя кнопка получает
 `aria-busy="true"` и нативный `disabled`. Спиннер окрашен цветом подписи
 недоступной кнопки; другой цвет задаёт `--sf-loader--color` на
-`<sf-button>` или предке. Вид спиннера — [вид страницы](/ru/smart/feedback/spinner/#вид-страницы), заданный
-`data-sf-spinner`; при системной настройке уменьшения движения спиннер
-показывает неподвижный кадр этого вида. Снимите `loading`, когда работа закончилась: кнопка
+`<sf-button>` или предке. Снимите `loading`, когда работа закончилась: кнопка
 вернёт иконку и станет доступной.
 
-:::example {id="smart-components/buttons/loading" label="Загрузка с иконкой, без иконки и только с иконкой на всех размерах"}
+:::example {id="smart-components/buttons/loading" label="Загрузка и обычная кнопка" preview=inline}
+:::
+
+Спиннер растёт вместе с кнопкой:
+
+:::example {id="smart-components/buttons/loading-sizes" label="Загрузка по размерам" preview=inline}
+:::
+
+Какой спиннер крутится, решает [вид страницы](/ru/smart/feedback/spinner/#вид-страницы):
+атрибут `data-sf-spinner` на `html`, `body` или ближайшем предке — `arc`,
+`breathing`, `comet` или `dots`, без атрибута `arc`. Свой вид у кнопки не
+задаётся: все спиннеры страницы выглядят одинаково. Ниже у каждой ячейки свой
+`data-sf-spinner`, чтобы виды стояли рядом. При системной настройке
+уменьшения движения спиннер показывает неподвижный кадр своего вида.
+
+:::example {id="smart-components/buttons/loading-looks" label="Виды спиннера" preview=inline}
 :::
 
 ## Поведение
@@ -161,16 +175,29 @@ description: "Запускает действие кнопкой с подпис
 С `href` кнопка становится ссылкой с видом кнопки:
 внутри рисуется `<a href>`, и по ней работают Enter и клавиши браузера для
 ссылок. Подходят относительный адрес, фрагмент, http(s), mailto и tel; с
-другой схемой остаётся кнопка.
+другой схемой остаётся кнопка. Первые три кнопки примера — ссылки; у
+последней схема `ftp:`, и она осталась кнопкой. Пример не переходит по
+ссылке, а показывает, какой элемент нажат и куда он ведёт.
 
-```html
-<sf-button href="/ru/guide/" text="Открыть руководство"></sf-button>
-```
+:::example {id="smart-components/buttons/link" label="Ссылки" preview=sandbox}
+:::
 
 `pressed` делает кнопку переключателем: `pressed` —
 включена, `pressed="false"` — выключена, на внутренней кнопке ставится
 `aria-pressed`. Без атрибута кнопка не переключатель. У ссылки `pressed` не
 действует.
+
+Сама кнопка состояние не меняет: нажатие присылает `sf-button-press`, а
+страница переключает свойство `pressed`, и кнопка рисует новое состояние.
+
+```js
+button.addEventListener('sf-button-press', () => {
+  button.pressed = !button.pressed;
+});
+```
+
+:::example {id="smart-components/buttons/toggle" label="Переключатели" preview=sandbox}
+:::
 
 ### Сочетание клавиш
 
@@ -206,7 +233,7 @@ description: "Запускает действие кнопкой с подпис
 Сочетание сверяется и по физической клавише, поэтому `mod+k` работает и в
 русской раскладке.
 
-:::example {id="smart-components/buttons/shortcut" label="Сочетания на кнопках и кнопка поиска, которая слушает Alt+K"}
+:::example {id="smart-components/buttons/shortcut" label="Сочетания клавиш" preview=sandbox}
 :::
 
 Кнопка поиска, похожая на поле:
@@ -233,9 +260,18 @@ description: "Запускает действие кнопкой с подпис
 переключают доступность. Свойство `value` у `<sf-button>` возвращает объект
 с текущими настройками, а не значение для формы.
 
+В примере две кнопки отправки с разными `value`, кнопка сброса и кнопка
+«Экспортировать» с обработчиком `onClick`, который на полторы секунды
+включает `loading`. Под кнопками видно, что получает страница: форма не
+уходит на сервер, пример печатает её `intent`.
+
+:::example {id="smart-components/buttons/form" label="Форма и обработчик" preview=sandbox}
+:::
+
 ```html
 <form action="/profile" method="post">
   <sf-button native-type="submit" name="intent" value="save" text="Сохранить"></sf-button>
+  <sf-button native-type="submit" name="intent" value="draft" appearance="tonal" text="В черновик"></sf-button>
 </form>
 ```
 

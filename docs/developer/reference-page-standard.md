@@ -179,8 +179,8 @@ Rules that come with it:
   values sit in equal cells, each specimen centred in its cell, with one
   small muted line under it that holds the value alone — no attribute name
   and no code chip, since the H3 already names the attribute. The grid is
-  utilities only, so the example stays inline (`preview=inline` in its
-  example.json keeps the container query from forcing a sandbox):
+  utilities only, so the example stays inline (`preview=inline` on its
+  `:::example` keeps the container query from forcing a sandbox):
 
   ```html
   <div class="query-container">
@@ -196,7 +196,9 @@ Rules that come with it:
 
   Columns follow the example's own width, not the window's: two on a
   phone, three from 32rem, five from 44rem. A grid of fewer values uses
-  fewer columns at the widest step.
+  fewer columns at the widest step, and a grid whose largest specimen is
+  wider than its cell (a size scale up to `3`) uses one column on a phone
+  and three above: a specimen never leaves its cell.
 - **A live example says what it sends.** An example that reacts — a form,
   a toggle, a shortcut, a choice — shows its events in the shared event
   log under it: `examples/shared/event-log.js`, copied into the example's
