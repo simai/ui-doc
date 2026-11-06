@@ -1,0 +1,19 @@
+<div data-sf-overlay-container data-solution-header>
+  <sf-header-site size="1/2" collapse="md">
+    <a slot="brand" href="#"><span class="font-medium">Компания</span></a>
+    <nav aria-label="Разделы сайта">
+      <a href="#" aria-current="page">Главная</a>
+      <a href="#">Каталог</a>
+      <a href="#">Поддержка</a>
+    </nav>
+    <sf-search slot="tools" id="solution-header-search" shortcut="" recent-key="docs-solution-header" keys="false" popular="false">
+      <sf-button-icon icon="search" appearance="link" scheme="on-surface" size="1/2" aria-label="Поиск"></sf-button-icon>
+    </sf-search>
+    <sf-button-icon slot="tools" icon="translate" appearance="link" scheme="on-surface" size="1/2" aria-label="Язык: Русский" aria-haspopup="menu" data-header-language></sf-button-icon>
+    <button slot="tools" class="sf-theme-button sf-icon-button sf-icon-button--icon sf-icon-button--link sf-icon-button--on-surface sf-icon-button--size-1/2" type="button" aria-label="Тёмная тема" aria-pressed="false"><i class="sf-icon" aria-hidden="true"></i></button>
+    <sf-avatar slot="tools" text="АБ" tone="auto" size="1/2" aria-label="Анна Белова, меню пользователя" aria-haspopup="menu" data-header-user></sf-avatar>
+  </sf-header-site>
+  <sf-menu-context popup aria-label="Язык интерфейса" data-header-language-menu></sf-menu-context>
+  <sf-menu-context popup aria-label="Меню пользователя" data-header-user-menu></sf-menu-context>
+  <p class="m-0 p-3 text-1/2 color-on-surface-variant" role="status" data-header-result>Шапка собрана из компонентов SIMAI Framework.</p>
+</div>

@@ -1,0 +1,4 @@
+/* The search window opens inside this block (data-sf-overlay-container). */
+[data-solution-header] {
+  min-block-size: 24rem;
+}

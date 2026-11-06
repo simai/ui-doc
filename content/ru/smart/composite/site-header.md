@@ -127,6 +127,20 @@ header.addEventListener('sf-site-header-opened', () => {
 `--sf-site-header-brand-size`,
 `--sf-site-header-sheet-inline-size` и `--sf-site-header-z-index`.
 
+## Применение
+
+### Поиск, язык, тема и меню пользователя
+
+Все инструменты сайта — в слоте `tools`: они остаются в полосе и на узком
+экране, когда разделы уходят в панель. Слева направо: значок
+[поиска](/ru/smart/composite/search/), меню языков, кнопка
+[темы](/ru/components/tools/theme/) и [аватар](/ru/smart/content/avatar/#меню-пользователя)
+с меню пользователя. Все одного размера `1/2`, как полоса. Сузьте окно
+примера, чтобы увидеть панель.
+
+:::example {id="smart-components/site-header/tools" label="Шапка с инструментами" preview=sandbox}
+:::
+
 ## Доступность
 
 - Элемент рисует `<header>` — ориентир «баннер» страницы, если шапка стоит

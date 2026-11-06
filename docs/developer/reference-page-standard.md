@@ -70,11 +70,12 @@ Every example labels each sample with the class it demonstrates.
 | 2 | `## Разметка` | yes | hand: the minimal correct markup and which parts are required |
 | 3 | `## Варианты` | when the component has them | hand: one H3 per modifier axis (вид, схема, статус, размер, иконки …), each a short description and a live example showing every value of that axis |
 | 4 | `## Состояния` | when it has them | hand: one H3 per state (недоступна, загрузка, активна …) with a description and a live example |
-| 5 | `## Доступность` | yes | hand |
-| 6 | `## JavaScript` | when it has a public runtime API | hand now; generated from `public-js-api.json` once the release ships it |
-| 7 | `## Классы` | yes | generated from `distr/component/<name>/css` |
-| 8 | `## Переменные` | when it has its own variables | generated: each `--<block>…` property, its default, what it sets |
-| 9 | `## См. также` | no | hand |
+| 5 | `## Применение` | no | hand: one H3 per everyday task the component solves (a language switch, a user menu), each with a live example and the reason for the choice (owner, 2026-11-06) |
+| 6 | `## Доступность` | yes | hand |
+| 7 | `## JavaScript` | when it has a public runtime API | hand now; generated from `public-js-api.json` once the release ships it |
+| 8 | `## Классы` | yes | generated from `distr/component/<name>/css` |
+| 9 | `## Переменные` | when it has its own variables | generated: each `--<block>…` property, its default, what it sets |
+| 10 | `## См. также` | no | hand |
 
 `## Классы` groups the component's public classes: the block, its parts
 (`sf-x-…`) and modifiers (`sf-x--…`), sizes apart, and the modifiers the
@@ -142,9 +143,10 @@ redirect for every page).
 | 3 | `## Варианты` | when it has visual axes | hand: the class page's H3 names (Вид, Схема, Размер, Иконки …), each with a live example |
 | 4 | `## Состояния` | when it has states | hand: one H3 per state with a live example |
 | 5 | `## Поведение` | no | hand: events, methods and JavaScript in context; one H3 per topic |
-| 6 | `## Доступность` | yes | hand |
-| 7 | `## Справочник` | yes | generated: attributes, methods and events as tables, earlier names in a closed `<details>`, then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
-| 8 | `## См. также` | no | hand |
+| 6 | `## Применение` | no | hand: one H3 per everyday task the component solves, each with a live example and the reason for the choice; it replaces a separate «Решения» section (owner, 2026-11-06) |
+| 7 | `## Доступность` | yes | hand |
+| 8 | `## Справочник` | yes | generated: attributes, methods and events as tables, earlier names in a closed `<details>`, then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
+| 9 | `## См. также` | no | hand |
 
 The generated «Минимальная разметка» and «Свойства в документе макета» are
 not repeated here: the page's «Разметка» shows the markup, and the layout

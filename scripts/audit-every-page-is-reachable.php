@@ -42,6 +42,17 @@ foreach ($header['header_navigation']['items'] ?? [] as $item) {
     $entries[] = preg_replace('#^ru/?#', '', $href) ?? '';
 }
 
+// The home page is the other entry: a section it links into is reachable
+// from every page through the brand link. Component sets leave the header
+// (owner, 2026-11-06): their cards on the home page lead into the Pro tree
+// until each set has its own site.
+$home = (string) file_get_contents($content . '/index.md');
+if (preg_match_all('#\]\(/ru/([a-z0-9-]+)/#', $home, $homeLinks)) {
+    foreach (array_unique($homeLinks[1]) as $linked) {
+        $entries[] = $linked;
+    }
+}
+
 $orphans = [];
 $pages = 0;
 foreach (new DirectoryIterator($content) as $entry) {
