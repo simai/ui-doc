@@ -147,7 +147,7 @@ price.setValue([10000, 30000]);
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -215,12 +215,12 @@ price.setValue([10000, 30000]);
 | | |
 |:---|:---|
 | Тег | `<sf-slider-range>`, контракт `smart.slider-range` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
+| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль slider; доступное имя обязательно; клавиши `Tab`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/slider-range` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-slider-range` |
+| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/slider-range` |
+| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-slider-range` |
 
 ## См. также
 

@@ -77,7 +77,7 @@ confirm.addEventListener('sf-confirm-answer', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -121,12 +121,12 @@ confirm.addEventListener('sf-confirm-answer', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-confirm>`, контракт `smart.confirm` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
+| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; `host-required` |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя внутренний; клавиши `Tab`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/confirm` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-confirm` |
+| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/confirm` |
+| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-confirm` |
 
 ## См. также
 

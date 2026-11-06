@@ -141,6 +141,8 @@
     "The card's fill at rest; hover, press and disabled keep their own.": "Заливка карточки в покое; у наведения, нажатия и выключенного состояния свои.",
     "The card's border at rest; hover and disabled keep their own.": "Рамка карточки в покое; у наведения и выключенного состояния свои.",
     "The card's corner radius.": "Скругление углов карточки.",
+    "The size of a heading inside the card, its title.": "Размер заголовка внутри карточки — её названия.",
+    "The weight of a heading inside the card, its title.": "Насыщенность заголовка внутри карточки — её названия.",
     "Space around the card's content.": "Отступ вокруг содержимого карточки.",
     "Space between the file's name and its size.": "Расстояние между именем файла и его размером.",
     "The download icon's size.": "Размер значка скачивания.",

@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-648 переменных, которые объявляет ядро, со значениями по умолчанию.
+652 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -61,7 +61,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-secondary-container-graphic` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
 | `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` |
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
-| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
+| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-primary)` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
 | `--sf-on-surface-container--variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
@@ -69,7 +69,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
 | `--sf-on-surface-muted` | `light-dark(var(--sf-neutral-60), var(--sf-neutral-40))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-on-primary)` |
 | `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
 | `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-on-warning-container` | `light-dark(var(--sf-warning-10), var(--sf-warning-90))` |
@@ -629,6 +629,9 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-0` | `0` |
+| `--sf-button--background-color` | `var(--sf-button-background-color, var(--sf-on-primary))` · `var(--sf-primary-container)` |
+| `--sf-button--border-color` | `var(--sf-button-border-color, var(--sf-on-primary))` |
+| `--sf-button-text-container--color` | `var(--sf-button-color, var(--sf-primary))` · `var(--sf-button-color, var(--sf-on-primary))` |
 | `--sf-chart-1` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
 | `--sf-chart-1-fill` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
 | `--sf-chart-1-fill-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` |
@@ -668,6 +671,7 @@ description: "Полный список переменных, которые о�
 | `--sf-drop-shadow--alfa` | `1` |
 | `--sf-empty` | `` |
 | `--sf-gradient--angle` | `90deg` |
+| `--sf-icon--color` | `var(--sf-primary)` · `var(--sf-on-primary)` |
 | `--sf-inherit` | `inherit` |
 | `--sf-layout-floating-panel-height` | `calc(var(--sf-h0) + var(--sf-d0))` |
 | `--sf-layout-floating-panel-width` | `calc(var(--sf-g2) + var(--sf-b6))` |

@@ -156,7 +156,7 @@ header.addEventListener('sf-site-header-opened', () => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -203,12 +203,12 @@ header.addEventListener('sf-site-header-opened', () => {
 | | |
 |:---|:---|
 | Тег | `<sf-header-site>`, контракт `smart.header-site` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
+| Поставка | выпуск Framework `ui-e7b79c3a9e05` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль баннер (`banner`); доступное имя внутренний; клавиши Tab обходит бренд, разделы, ссылки и инструменты по порядку, Enter или пробел на кнопке меню открывают боковую панель, Escape закрывает боковую панель и возвращает фокус на кнопку меню |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/header-site` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-header-site` |
+| Источник | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/smart/header-site` |
+| Правило классов | `simai/ui@e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349:distr/rule/rule.json#name=cl-header-site` |
 
 ## См. также
 

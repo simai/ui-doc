@@ -2,19 +2,23 @@
     "schema": "ui-doc.guide-release-values.v1",
     "why": "The release values the guide's pages name in its examples and tables, as last written. scripts/sync-framework-documentation-versions.php replaces each with the pinned value from scripts/materialize-framework-runtime.php and records the new set here; --check fails while a page still names an old one. `keep` lists the exact spans that name a past release on purpose; the sync leaves them as written.",
     "values": {
-        "ui_runtime": "e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f",
-        "ui_record": "6534a3ebd97ded90b3f1e6f97ce79483714b7f37",
-        "source": "297a56c0914a42ff2c24bcba1f45ae0234e3a483",
+        "ui_runtime": "e7b79c3a9e0585cd4ce67151aa9f243a7b4e3349",
+        "ui_record": "108a0e7eb5231fea9b660b72dfb3fe5281eb161c",
+        "source": "5443d10d710be65429b296750b97a503de5d1d0b",
         "builder": "9c9c1b1510393b24adb98ea2ca523b26474cf0cf",
-        "pro": "0516a01732c81983bc88a0db311c876c21666679",
+        "pro": "db5cc2a375bd411397a45826c038ff94172d2893",
         "pro_builder": "9c9c1b1510393b24adb98ea2ca523b26474cf0cf",
-        "release": "ui-e22fefb3c1f8",
-        "npm_version": "5.20261105.829"
+        "release": "ui-e7b79c3a9e05",
+        "npm_version": "5.20261105.2041"
     },
     "keep": [
         {
             "page": "content/ru/guide/introduction/structure.md",
             "text": "для выпусков, начиная с `ui-82fc0ba882ba`"
+        },
+        {
+            "page": "content/ru/guide/layouts/introduction/levels.md",
+            "text": "появились в выпуске `ui-c3015f76bcc2`"
         }
     ]
 }

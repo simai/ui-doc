@@ -149,7 +149,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-e7b79c3a9e05` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -157,7 +157,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает хост. |
-| Контракт | `smart.chat-message`, версия `1.5.5` |
+| Контракт | `smart.chat-message`, версия `1.7.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -175,6 +175,8 @@ log.renderMessage = (message, {view}) => {
 ### Методы
 
 - `focus(options?: object)` — возвращает `null`. Фокус базового элемента.
+- `focusField(blockId: string, key?: string)` — возвращает `boolean`. Показывает поле карточки и переносит на него фокус (`x-blocks`, 1.7.0): то, чего не хватает документу, называет его по `id` блока карточки и ключу поля. Отвечает, есть ли карточка в этом сообщении.
+- `settleBlock(blockId: string, result: object)` — возвращает `null`. Ответ хоста на отправку карточки (`x-blocks`, 1.6.0): applied `{block}`, conflict или refused с ошибками по полям, причиной closed (карточка теряет кнопки) или сообщением хоста. Вызывает окно; карточка показывает ответ.
 
 ### События
 
@@ -186,9 +188,9 @@ log.renderMessage = (message, {view}) => {
 - `sf-chat-message-cancel` — `detail`: `{ id: any, kind: string }`. «Не сейчас» или Escape в карточке «Что не так» `{id, kind: rate}` (словарь §5 cancel): простое «не полезно» остаётся. Имя 0.3 `sf-chat-action {action: feedback-skip}` отправляется после него до 2026-12-01.
 - `sf-chat-message-drafted` — `detail`: `{ id: any, reason: string|null, note: string }`. В карточке «Что не так» изменился выбор или комментарий `{id, reason, note}` (факт; черновик хост держит и в `display.feedback.draft`). Имя 0.3 `sf-chat-action {action: feedback-draft}` отправляется после него до 2026-12-01.
 - `sf-chat-message-toggle` — `detail`: `{ id: any, kind: string, open: boolean, quiet?: boolean }`. Открылась или закрылась локальная часть (словарь §5 toggle): список источников {kind: sources} (хост запоминает его как display.sources_open), шаги ответа {kind: steps} (display.steps_open, 1.1.0); в шаблоне person — редактор {kind: edit} и вопрос об удалении {kind: delete}, которые хост держит как display.editing и display.askDelete. Прежнее sf-chat-action {action: sources} идёт следом до 2026-12-01. Между людьми (1.4.0): выбор реакции {kind: react} и сворачивание длинного текста {kind: fold}.
-- `sf-chat-message-open` — `detail`: `{ id: any, kind: any, source?: object, target?: any }`. Источник или файл ответа просит предпросмотр: {id, kind: preview, source}. Хост, который его показывает, отменяет событие; иначе сноска открывает список источников (файл — новую вкладку). Нажатие на цитату: {id, kind: quote, target}. Запрошено обсуждение сообщения: {id, kind: thread}.
+- `sf-chat-message-open` — `detail`: `{ id: any, kind: any, source?: object, target?: any, document?: object }`. Источник или файл ответа просит предпросмотр: {id, kind: preview, source}. Хост, который его показывает, отменяет событие; иначе сноска открывает список источников (файл — новую вкладку). Нажатие на цитату: {id, kind: quote, target}. Запрошено обсуждение сообщения: {id, kind: thread}. «Открыть» у документа: {id, kind: document, document}.
 - `sf-chat-message-copied` — `detail`: `{ id: any, done: boolean }`. Ответ скопирован вместе со списком источников `{id, done}`; строка действий говорит об этом вежливо. Имя 0.3 `sf-chat-action {action: copy}` отправляется после него до 2026-12-01.
-- `sf-chat-message-submit` — `detail`: `{ id: any, text: string }`. Ответ на уточнение задачи уходит сообщением (словарь §5 submit; API.md v1.2): вариант, свои слова человека, несколько ответов через «; » с «—» для пропущенного или «Да» на карточке. Имя 0.3 `sf-chat-action {action: brief-answer}` отправляется после него до 2026-12-01.
+- `sf-chat-message-submit` — `detail`: `{ id: any, text: string, kind: string, block_id: any, action: string, revision: string, values: object }`. Ответ на уточнение задачи уходит сообщением (словарь §5 submit; API.md v1.2): вариант, свои слова человека, несколько ответов через «; » с «—» для пропущенного или «Да» на карточке. Имя 0.3 `sf-chat-action {action: brief-answer}` отправляется после него до 2026-12-01. Либо сохранение или отмена карточки (1.6.0, `x-blocks`): `{id, kind: block, block_id, action, revision, values}`, в `values` — только изменённые поля, значение числового поля — строкой; окно отвечает через `settleBlock`.
 - `sf-chat-message-save` — `detail`: `{ id: any, values: object }`. Шаблон `person`: изменённое сообщение `{id, values: {body}}` (словарь §5 save, порт `message.edit`). Неизменённый или пустой текст даёт вместо этого `toggle {kind: edit, open: false}`.
 - `sf-chat-message-delete` — `detail`: `{ ids: array }`. Шаблон `person`: «Удалить» подтверждено `{ids: [id]}` (словарь §5 delete, порт `message.delete`).
 - `sf-chat-message-react` — `detail`: `{ id: any, emoji: string, on: boolean }`. Плашка реакции или выбор реакции: {id, emoji, on}. Счётчик ведёт хост; display.reacting говорит, что реакция в пути.
@@ -211,8 +213,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-message`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/chat-message`
+- `simai/ui-pro@db5cc2a375bd411397a45826c038ff94172d2893:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

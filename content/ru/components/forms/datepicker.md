@@ -118,8 +118,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-datepicker` |
-| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-row`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-top`, `sf-datepicker-weekday` |
-| Модификаторы | `sf-datepicker--presets` |
+| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-row`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-weekday` |
+| Модификаторы | `sf-datepicker--presets`, `sf-datepicker--time` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
