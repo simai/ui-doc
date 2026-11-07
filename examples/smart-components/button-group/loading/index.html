@@ -1,5 +1,12 @@
-<div class="flex flex-col gap-3 items-cross-start">
-  <sf-button-group aria-label="Период отчёта, месяц загружается" value="week" items='[{"value":"day","label":"День"},{"value":"week","label":"Неделя"},{"value":"month","label":"Месяц","loading":true}]'></sf-button-group>
-  <sf-button-group appearance="segmented" aria-label="Вид списка, плитка загружается" value="list" items='[{"value":"list","label":"Список","icon":"list"},{"value":"grid","label":"Плитка","icon":"grid_view","loading":true},{"value":"table","label":"Таблица"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" aria-label="Период, неделя загружается" value="d" items="d::День|w::Неделя::loading|m::Месяц"></sf-button-group>
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-group aria-label="Период отчёта, месяц загружается" value="week" items='[{"value":"day","label":"День"},{"value":"week","label":"Неделя"},{"value":"month","label":"Месяц","loading":true}]'></sf-button-group></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">без иконки</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-group aria-label="Вид списка, плитка загружается" value="list" items='[{"value":"list","label":"Список","icon":"list"},{"value":"grid","label":"Плитка","icon":"grid_view","loading":true}]'></sf-button-group></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">с иконкой</span>
+    </div>
+  </div>
 </div>
