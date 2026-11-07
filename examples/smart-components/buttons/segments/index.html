@@ -1,5 +1,32 @@
-<div role="group" aria-label="Период" class="flex">
-  <sf-button appearance="outline" scheme="on-surface" segment="start" text="День"></sf-button>
-  <sf-button appearance="link" scheme="on-surface" segment="middle" text="Неделя"></sf-button>
-  <sf-button appearance="link" scheme="on-surface" segment="end" text="Месяц"></sf-button>
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-3 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Правка" class="flex">
+          <sf-button appearance="outline" scheme="on-surface" segment="start" icon-start="undo" text="Отменить"></sf-button>
+          <sf-button appearance="outline" scheme="on-surface" segment="end" icon-start="redo" text="Повторить"></sf-button>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">связанные действия</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Календарь" class="flex">
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="start" icon="chevron_left" aria-label="Предыдущий месяц"></sf-button-icon>
+          <sf-button appearance="outline" scheme="on-surface" segment="middle" text="Сегодня"></sf-button>
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="end" icon="chevron_right" aria-label="Следующий месяц"></sf-button-icon>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">навигация</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Сохранение" class="flex">
+          <sf-button segment="start" text="Сохранить"></sf-button>
+          <sf-button-icon segment="end" icon="expand_more" aria-label="Другие способы сохранить"></sf-button-icon>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">главное и запасное</span>
+    </div>
+  </div>
 </div>
