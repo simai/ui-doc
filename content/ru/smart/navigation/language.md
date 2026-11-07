@@ -14,7 +14,7 @@ description: "Переключает язык сайта: сегментами �
 
 ## Пример
 
-:::example {id="smart-components/language/overview" label="Два, пять и двенадцать языков" preview=sandbox}
+:::example {id="smart-components/language/overview" label="Два, пять и двенадцать языков" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -136,7 +136,7 @@ description: "Переключает язык сайта: сегментами �
 В примере язык применяется к рамке примера, а не ко всей странице
 документации: пагинация под переключателем отвечает на выбранном языке.
 
-:::example {id="smart-components/language/apply" label="Язык применяется к странице примера" preview=sandbox}
+:::example {id="smart-components/language/apply" label="Язык применяется к странице примера" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ### Адрес для каждого языка
@@ -160,7 +160,7 @@ picker.addEventListener('change', (event) => {
 });
 ```
 
-:::example {id="smart-components/language/url" label="Шаблон адреса и переход с сохранением пути" preview=sandbox}
+:::example {id="smart-components/language/url" label="Шаблон адреса и переход с сохранением пути" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ### Запомнить выбор
@@ -195,7 +195,7 @@ picker.addEventListener('change', (event) => {
 возвращает значение, с которым он был написан, а отключённый не
 отправляется. Отдельного поля для языка не нужно.
 
-:::example {id="smart-components/language/form" label="Язык в форме настроек" preview=sandbox}
+:::example {id="smart-components/language/form" label="Язык в форме настроек" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ### Из скрипта
@@ -206,7 +206,7 @@ picker.addEventListener('change', (event) => {
 `disabled` — компонент недоступен, `prevented` — `change` отменили.
 `toggleMenu()` открывает и закрывает меню видов `menu` и `search`.
 
-:::example {id="smart-components/language/api" label="select() и toggleMenu()" preview=sandbox}
+:::example {id="smart-components/language/api" label="select() и toggleMenu()" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Применение
@@ -231,7 +231,7 @@ picker.addEventListener('change', (event) => {
 `detail.dir` в `change` сообщает направление заранее — сайт, который
 переходит сам, передаёт его дальше.
 
-:::example {id="smart-components/language/rtl" label="Арабский переворачивает направление" preview=sandbox}
+:::example {id="smart-components/language/rtl" label="Арабский переворачивает направление" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Доступность
