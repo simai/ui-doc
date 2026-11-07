@@ -1,9 +1,12 @@
-document.querySelectorAll('[data-download-demo]').forEach((demo) => {
-  const result = demo.querySelector('[data-download-result]');
-  demo.addEventListener('sf-download-file-download', (event) => {
-    const {href, fileName} = event.detail;
-    result.textContent = href
-      ? `Браузер скачивает «${fileName}».`
-      : `Приложение готовит файл «${fileName}».`;
+// A file with an address is a link the browser downloads; without one the
+// press asks the application to prepare the file. Both send the same event.
+const initialize = async () => {
+  await customElements.whenDefined('sf-file-download');
+  if (document.body.dataset.exampleReady === 'true') return;
+  document.body.dataset.exampleReady = 'true';
+  document.addEventListener('sf-file-download-download', (event) => {
+    docara.example.log('sf-file-download-download', event.detail);
   });
-});
+};
+
+initialize();
