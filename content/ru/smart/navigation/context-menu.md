@@ -294,7 +294,7 @@ layer.addEventListener('keydown', (event) => {
 панели с заходом. Панель с вкладками прокручивает своё тело под шапкой, как и
 раньше.
 
-:::example {id="smart-components/context-menu/search" label="Поиск города: поле на месте, строки прокручиваются" preview=sandbox}
+:::example {id="smart-components/context-menu/search" label="Поиск города: поле на месте, строки прокручиваются" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Поиск на стороне хоста
@@ -319,7 +319,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 шесть первых сайтов, а ответ на прежний запрос, пришедший позже нового,
 отбрасывается.
 
-:::example {id="smart-components/context-menu/host-search" label="Поиск сайта на стороне хоста" preview=sandbox}
+:::example {id="smart-components/context-menu/host-search" label="Поиск сайта на стороне хоста" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Панель с вкладками
