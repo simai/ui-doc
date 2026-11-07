@@ -92,7 +92,9 @@ const initialize = async () => {
     return fresh;
   };
   await stamp();
-  document.querySelector('sf-button[data-redraw]')?.addEventListener('click', async () => {
+  // sf-button hands data-* to its inner button: the press is read by delegation.
+  document.addEventListener('click', async (event) => {
+    if (!event.target.closest('[data-redraw]')) return;
     const fresh = await stamp();
     log.write('новый элемент, values', fresh.values);
   });

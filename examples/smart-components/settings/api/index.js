@@ -94,14 +94,16 @@ const initialize = async () => {
     reset: () => ['reset()', settings.reset()],
     missing: () => ['setValue("zoom", 2)', settings.setValue('zoom', 2)],
   };
-  for (const button of document.querySelectorAll('sf-button[data-call]')) {
-    button.addEventListener('click', async (event) => {
-      event.stopPropagation();
-      const [name, result] = await calls[button.dataset.call]();
-      log.write(name, result);
-      print();
-    });
-  }
+  // sf-button hands data-* to its inner button, so the press is read from
+  // whichever of the two carries data-call.
+  document.addEventListener('click', async (event) => {
+    const button = event.target.closest('[data-call]');
+    if (!button) return;
+    event.stopPropagation();
+    const [name, result] = await calls[button.dataset.call]();
+    log.write(name, result);
+    print();
+  });
 };
 
 initialize();

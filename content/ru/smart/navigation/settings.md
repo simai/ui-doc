@@ -100,7 +100,7 @@ description: "Компактная панель настроек: переклю
 Ступень лестницы размеров меню: `1/2` (по умолчанию) даёт строки высотой
 32 px, `1` — 40 px. Ширина панели от размера не зависит.
 
-:::example {id="smart-components/settings/sizes" label="Размеры 1/2 и 1" preview=inline}
+:::example {id="smart-components/settings/sizes" label="Размеры 1/2 и 1" preview=sandbox}
 :::
 
 ## Состояния
