@@ -1,5 +1,5 @@
 // Many languages go into a menu behind one button. Each entry is written in
-// its own language (`lang`), and the chosen one carries the radio mark.
+// its own language (`lang`); the chosen one is a radio row marked by its fill.
 const languages = [
   {code: 'ru', name: 'Русский', dir: 'ltr'},
   {code: 'en', name: 'English', dir: 'ltr'},

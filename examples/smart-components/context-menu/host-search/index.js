@@ -88,7 +88,7 @@ const findSites = (query) => new Promise((resolve) => {
 });
 
 // With nothing found the host answers with one note row under the menu's own
-// search.empty: a menu given no rows at all closes (ui-5bebd29af045).
+// search.empty: a menu given no rows at all closes (still so on ui-98143c0a0728).
 const rows = ({total, sites}, current) => (total === 0 ? [{type: 'note', text: 'Попробуйте часть адреса: simai, shop'}] : [
   ...sites.map((site) => ({id: site, text: site, initials: site.slice(0, 2).toUpperCase(), kind: 'radio', checked: site === current})),
   ...(total > sites.length ? [{type: 'note', text: `Показаны ${sites.length} из ${total}; уточните запрос`}] : []),
