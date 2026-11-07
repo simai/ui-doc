@@ -49,6 +49,14 @@ const STANDARD = {
     order: ['Пример', 'Разметка', 'Варианты', 'Состояния', 'Поведение', 'Применение', 'Доступность', 'Справочник', 'См. также'],
     required: ['Пример', 'Разметка', 'Доступность', 'Справочник'],
   },
+  // The fourth Smart standard (R022, 2026-11-07, Buttons the prototype): the
+  // reader's questions first (when to choose it, everyday tasks with ready
+  // code), then the look and the states, code, traps, accessibility and the
+  // same generated reference as the third.
+  smart4: {
+    order: ['Пример', 'Когда брать', 'Частые задачи', 'Внешний вид', 'Состояния', 'Работа из кода', 'Учтите', 'Доступность', 'Справочник', 'См. также'],
+    required: ['Пример', 'Доступность', 'Справочник'],
+  },
 };
 // Words that tell a story or promise one; a reference page states what is.
 const FORBIDDEN = [
@@ -111,8 +119,8 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   if (example && !/^:::example\b/mu.test(example)) add('live_example_missing');
   // A component shows every modifier axis and state it describes: each H3
   // under «Варианты» and «Состояния» carries its own live example.
-  if (entry.kind === 'component' || standard === STANDARD.smart2 || standard === STANDARD.smart3) {
-    for (const name of ['Варианты', 'Состояния']) {
+  if (entry.kind === 'component' || standard === STANDARD.smart2 || standard === STANDARD.smart3 || standard === STANDARD.smart4) {
+    for (const name of ['Варианты', 'Внешний вид', 'Состояния']) {
       const section = sections.find((item) => item.startsWith(`${name}\n`));
       if (!section) continue;
       for (const sub of section.split(/^### /mu).slice(1)) {

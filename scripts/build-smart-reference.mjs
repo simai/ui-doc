@@ -39,6 +39,7 @@ const listMissing = args.has('--missing');
 const HEADING = '## Справочник API';
 // A page on the third Smart standard (owner, 2026-11-02) takes the reference
 // as tables under «Справочник», with the component's facts last.
+// The fourth standard (R022) keeps the same reference.
 const HEADING3 = '## Справочник';
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
@@ -712,7 +713,7 @@ const withBadges = (text, entries) => {
 const changed = [];
 for (const [page, entries] of [...pages].sort(([a], [b]) => a.localeCompare(b))) {
   const current = readFileSync(page, 'utf8');
-  const expected = withBadges(rewrite(current, entries, enrolment[relative(contentRoot, page)]?.standard === 3), entries);
+  const expected = withBadges(rewrite(current, entries, (enrolment[relative(contentRoot, page)]?.standard ?? 0) >= 3), entries);
   if (expected === current) continue;
   changed.push(relative(root, page));
   if (!checkOnly && !listMissing) writeFileSync(page, expected);

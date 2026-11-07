@@ -205,6 +205,33 @@ Rules that come with it:
   `index.js` by `composer docs:example-helpers:sync` and checked by
   `docs:check` (owner remark R011, 2026-11-07).
 
+### Smart component page, standard 4 (draft, R022)
+
+A rewrite of the third standard from three critics' review of Buttons
+(2026-11-07), pending the owner's acceptance; Buttons is the only page on it.
+A page moves to it with `"standard": 4`. The reference is the third
+standard's, generated the same way.
+
+| # | Section | Required | Written by |
+|:--|:---|:---|:---|
+| — | introduction | yes | hand, as in the third standard |
+| 1 | `## Пример` | yes | hand: the live example and the minimal tag |
+| 2 | `## Когда брать` | no | hand: the choices a reader makes before writing it |
+| 3 | `## Частые задачи` | no | hand: one H3 per everyday task, with code that copies as is |
+| 4 | `## Внешний вид` | when it has visual axes | hand: one H3 per axis, each with a live example |
+| 5 | `## Состояния` | when it has states | hand: one H3 per state, each with a live example |
+| 6 | `## Работа из кода` | no | hand: events (which fires when), properties, methods |
+| 7 | `## Учтите` | no | hand: the traps, one H3 each |
+| 8 | `## Доступность` | yes | hand, with code for each point |
+| 9 | `## Справочник` | yes | generated, as in the third standard |
+| 10 | `## См. также` | no | hand |
+
+Section rules: a heading is up to three plain Russian words, no code; under a
+feature heading one line names the attribute, its default and links the
+reference («`appearance` · по умолчанию `default` · справочник»); the first
+sentence says why, without values; three values or more are a table
+«Значение | Когда брать»; particulars go to «Учтите:», up to three bullets.
+
 ## Generated sections
 
 A generated section is rewritten whole by its generator and checked by
