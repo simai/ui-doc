@@ -7,11 +7,11 @@ description: "Выбирает одно или несколько значени
 
 :badge[sf-dropdown]{type=tonal scheme=primary size=1/2} :badge[1.6.0]{type=outline scheme=on-surface size=1/2}
 
-`<sf-dropdown>` — поле выбора одного или нескольких значений из раскрывающегося
+Выпадающий список даёт выбрать одно или несколько значений из раскрывающегося
 списка с поиском. Берите его, когда вариантов больше, чем удобно показать
 [радиокнопками](/ru/components/forms/radio/) или
-[флажками](/ru/components/forms/checkbox/), или когда значения нужно
-показать тегами.
+[флажками](/ru/components/forms/checkbox/), или когда значения нужно показать
+тегами.
 
 То же на классах — [Выпадающий список](/ru/components/navigation/dropdown/):
 для статической разметки без JavaScript.

@@ -7,10 +7,10 @@ description: "Рисует знак закрытия внутри кнопки, 
 
 :badge[sf-button-close]{type=tonal scheme=primary size=1/2} :badge[1.1.0]{type=outline scheme=on-surface size=1/2}
 
-`<sf-button-close>` рисует только знак закрытия — крестик нужного размера. Это не
-кнопка: её даёт нативный `<button>` или
-[Кнопки с иконкой](/ru/smart/actions/icon-buttons/) с
-`kind="close"`, внутри которого стоит `<sf-button-close>`.
+Закрытие — это крестик нужного размера для кнопки, которая закрывает окно,
+панель или сообщение. Сам он не кнопка: кнопку даёт обычный `<button>` или
+[Кнопки с иконкой](/ru/smart/actions/icon-buttons/) с `kind="close"`, а
+крестик стоит внутри неё.
 
 Готовую кнопку закрытия даёт `<sf-button-icon kind="close">`: она сама
 ставит `<sf-button-close>` того же размера, что кнопка. `<sf-button-close>` отдельно берите

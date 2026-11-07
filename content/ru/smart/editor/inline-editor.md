@@ -7,10 +7,11 @@ description: "Даёт править текст заголовков и абз�
 
 :badge[sf-editor-inline]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
 
-`<sf-editor-inline>` — часть редактора страниц: правка текста
-`content.heading` и `content.paragraph` прямо на холсте. Доступно то, что есть
-в модели content: полужирный, курсив, код, ссылки и встроенные компоненты
-(`badge`, `kbd`, `icon`, `button`); списков нет, потому что их нет в модели. События несут нормализованную модель, а не HTML.
+Inline-редактор даёт править текст заголовков и абзацев (`content.heading` и
+`content.paragraph`) прямо на странице. Доступно то, что есть в модели
+content: полужирный, курсив, код, ссылки и встроенные компоненты (`badge`,
+`kbd`, `icon`, `button`); списков нет, потому что их нет в модели. Изменения
+приходят моделью content, а не HTML.
 
 ## Пример
 

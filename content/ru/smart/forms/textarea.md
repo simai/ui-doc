@@ -7,9 +7,9 @@ description: "Многострочное поле формы с подписью
 
 :badge[sf-input-textarea]{type=tonal scheme=primary size=1/2} :badge[1.7.0]{type=outline scheme=on-surface size=1/2}
 
-`<sf-input-textarea>` — многострочное поле для комментариев, описаний и другого
-свободного текста. Для короткого значения в одну строку берите
-[Текстовые поля](/ru/smart/forms/inputs/).
+Многострочное поле — для комментариев, описаний и другого свободного текста.
+Для короткого значения в одну строку берите [Текстовые
+поля](/ru/smart/forms/inputs/).
 
 То же на классах — [Многострочное поле](/ru/components/forms/textarea/):
 `<sf-input-textarea>` собирает его разметку из атрибутов.

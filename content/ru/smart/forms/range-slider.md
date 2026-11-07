@@ -7,7 +7,7 @@ description: "Выбирает одно значение или две гран�
 
 :badge[sf-slider-range]{type=tonal scheme=primary size=1/2} :badge[1.3.0]{type=outline scheme=on-surface size=1/2}
 
-`<sf-slider-range>` — шкала с одной или двумя ручками для приблизительной
+Слайдер диапазона — шкала с одной или двумя ручками для приблизительной
 настройки: цены, громкости, расстояния. Когда важно точное число, добавьте
 рядом [поле ввода](/ru/smart/forms/inputs/).
 
