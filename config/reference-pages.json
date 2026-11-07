@@ -2051,6 +2051,10 @@
     "smart/navigation/language.md": {
       "kind": "smart",
       "standard": 3
+    },
+    "smart/navigation/settings.md": {
+      "kind": "smart",
+      "standard": 3
     }
   }
 }

@@ -1,0 +1,38 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <sf-settings look="rows" size="1/2" label="Вид таблицы">
+        <script type="application/json" data-sf-settings>
+          {"items": [
+            {"type": "group", "text": "Вид таблицы", "items": [
+              {"id": "density", "type": "choice", "text": "Плотность", "value": "normal", "options": [{"id": "compact", "text": "Плотно"}, {"id": "normal", "text": "Обычно"}]},
+              {"id": "align", "type": "choice", "text": "Выравнивание", "value": "start", "options": [{"id": "start", "text": "По левому краю", "icon": "format_align_left"}, {"id": "center", "text": "По центру", "icon": "format_align_center"}, {"id": "end", "text": "По правому краю", "icon": "format_align_right"}]},
+              {"id": "wrap", "type": "switch", "text": "Переносить строки", "value": false},
+              {"id": "stripes", "type": "switch", "text": "Полосы через строку", "value": true}
+            ]},
+            {"type": "separator"},
+            {"id": "scale", "type": "range", "text": "Масштаб", "value": 100, "min": 80, "max": 140, "step": 10, "unit": "%"}
+          ]}
+        </script>
+      </sf-settings>
+      <span class="text-1/2 color-on-surface-variant wrap-none">1/2</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <sf-settings look="rows" size="1" label="Вид таблицы">
+        <script type="application/json" data-sf-settings>
+          {"items": [
+            {"type": "group", "text": "Вид таблицы", "items": [
+              {"id": "density", "type": "choice", "text": "Плотность", "value": "normal", "options": [{"id": "compact", "text": "Плотно"}, {"id": "normal", "text": "Обычно"}]},
+              {"id": "align", "type": "choice", "text": "Выравнивание", "value": "start", "options": [{"id": "start", "text": "По левому краю", "icon": "format_align_left"}, {"id": "center", "text": "По центру", "icon": "format_align_center"}, {"id": "end", "text": "По правому краю", "icon": "format_align_right"}]},
+              {"id": "wrap", "type": "switch", "text": "Переносить строки", "value": false},
+              {"id": "stripes", "type": "switch", "text": "Полосы через строку", "value": true}
+            ]},
+            {"type": "separator"},
+            {"id": "scale", "type": "range", "text": "Масштаб", "value": 100, "min": 80, "max": 140, "step": 10, "unit": "%"}
+          ]}
+        </script>
+      </sf-settings>
+      <span class="text-1/2 color-on-surface-variant wrap-none">1</span>
+    </div>
+  </div>
+</div>
