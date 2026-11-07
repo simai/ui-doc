@@ -1,6 +1,12 @@
-<div class="flex flex-wrap gap-3 items-cross-center">
-  <button type="button" class="sf-icon-button sf-icon-button--close sf-icon-button--link sf-icon-button--on-surface sf-icon-button--size-1 flex items-cross-center" aria-label="Закрыть уведомление">
-    <sf-button-close size="1"></sf-button-close>
-  </button>
-  <sf-button-icon kind="close" appearance="link" scheme="on-surface" aria-label="Закрыть панель"></sf-button-icon>
+<div class="query-container">
+  <div class="grid grid-col-2 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><button type="button" class="sf-icon-button sf-icon-button--close sf-icon-button--link sf-icon-button--on-surface sf-icon-button--size-1 flex items-cross-center" aria-label="Закрыть уведомление"><sf-button-close size="1"></sf-button-close></button></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">своя кнопка</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon kind="close" appearance="link" scheme="on-surface" aria-label="Закрыть панель"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">kind="close"</span>
+    </div>
+  </div>
 </div>

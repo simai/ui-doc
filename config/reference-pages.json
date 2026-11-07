@@ -460,7 +460,7 @@
     },
     "smart/actions/close.md": {
       "kind": "smart",
-      "standard": 3
+      "standard": 4
     },
     "smart/actions/download-file.md": {
       "kind": "smart",
