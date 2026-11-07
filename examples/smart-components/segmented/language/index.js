@@ -8,7 +8,6 @@ const initialize = async () => {
   await Promise.all(['sf-button-group', 'sf-pagination'].map((tag) => customElements.whenDefined(tag)));
   const group = root.querySelector('sf-button-group');
   const pagination = root.querySelector('sf-pagination');
-  const result = root.querySelector('[data-language-result]');
   const labels = {ru: 'Страницы заказов', en: 'Order pages'};
   const switchLanguage = (code) => {
     SF.language.use(code);
@@ -16,7 +15,7 @@ const initialize = async () => {
     root.lang = code;
     // A label passed as an attribute is stronger than the dictionary.
     pagination.setAttribute('aria-label', labels[code]);
-    result.textContent = `Язык страницы: ${SF.language.current()}`;
+    docara.example.log('язык', SF.language.current());
   };
   group.addEventListener('change', () => switchLanguage(group.value));
   switchLanguage(group.value || 'ru');

@@ -1,4 +1,12 @@
-<div class="flex flex-col gap-3 items-cross-start">
-  <sf-button-group appearance="segmented" aria-label="Вид списка" value="list" items='[{"value":"list","label":"Список","icon":"view_list"},{"value":"board","label":"Доска","icon":"view_kanban"},{"value":"calendar","label":"Календарь","icon":"calendar_month"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" aria-label="Вид списка, только иконки" value="list" items='[{"value":"list","label":"Список","icon":"view_list","icon-only":true},{"value":"board","label":"Доска","icon":"view_kanban","icon-only":true},{"value":"calendar","label":"Календарь","icon":"calendar_month","icon-only":true}]'></sf-button-group>
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-group appearance="segmented" aria-label="Вид списка" value="list" items='[{"value":"list","label":"Список","icon":"view_list"},{"value":"board","label":"Доска","icon":"view_kanban"}]'></sf-button-group></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">иконка и подпись</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-group appearance="segmented" aria-label="Вид списка, только иконки" value="list" items='[{"value":"list","label":"Список","icon":"view_list","icon-only":true},{"value":"board","label":"Доска","icon":"view_kanban","icon-only":true}]'></sf-button-group></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">icon-only</span>
+    </div>
+  </div>
 </div>

@@ -1,8 +1,13 @@
-// Число варианта приходит в event.detail.item вместе с подписью.
-document.querySelectorAll('[data-filter-demo]').forEach((demo) => {
-  const result = demo.querySelector('[data-filter-result]');
-  demo.addEventListener('change', (event) => {
-    if (event.target.localName !== 'sf-button-group') return;
-    result.textContent = `Показано тем: ${event.detail.item?.count ?? 0}`;
+// The option's count arrives in event.detail.item together with its label.
+const initialize = async () => {
+  await customElements.whenDefined('sf-button-group');
+  const group = document.querySelector('sf-button-group');
+  if (!group || group.dataset.exampleReady === 'true') return;
+  group.dataset.exampleReady = 'true';
+  group.addEventListener('change', (event) => {
+    const {item} = event.detail;
+    docara.example.log('change', {value: event.detail.value, label: item?.label, count: item?.count});
   });
-});
+};
+
+initialize();
