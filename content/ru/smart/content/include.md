@@ -5,7 +5,7 @@ description: "Загружает часть страницы с адреса с�
 
 # Часть страницы по адресу
 
-:badge[sf-include]{type=tonal scheme=primary size=1/2} :badge[1.0.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-include]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Часть страницы по адресу подгружает то, что сервер сайта отдаёт отдельно: блок
 новостей, список, собранный на сервере, нижнюю часть страницы, которую стоит

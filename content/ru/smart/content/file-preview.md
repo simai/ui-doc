@@ -5,7 +5,7 @@ description: "Показывает выбранный или прикреплё�
 
 # Предпросмотр файла
 
-:badge[sf-file-preview]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+:badge[sf-file-preview]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
 
 Предпросмотр файла показывает один уже выбранный или прикреплённый файл:
 значок или миниатюру, имя, размер и две кнопки — скачать и удалить. Выбирают и

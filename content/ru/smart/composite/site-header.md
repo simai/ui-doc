@@ -5,7 +5,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 
 # Шапка сайта
 
-:badge[sf-header-site]{type=tonal scheme=primary size=1/2} :badge[1.3.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-header-site]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Шапка сайта — верхняя полоса с брендом, разделами, ссылками и инструментами в
 одну строку по ширине контейнера. На узком экране разделы и ссылки уходят в

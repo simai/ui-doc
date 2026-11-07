@@ -5,7 +5,7 @@ description: "Включает или выключает настройку ср
 
 # Переключатель
 
-:badge[sf-switch]{type=tonal scheme=primary size=1/2} :badge[1.3.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Переключатель включает или выключает настройку сразу после нажатия. Подпись
 называет состояние или возможность — «Уведомления», «Компактный режим», — а не

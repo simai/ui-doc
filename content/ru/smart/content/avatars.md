@@ -5,7 +5,7 @@ description: "Выводит готовые сочетания аватаров:
 
 # Аватары
 
-:badge[sf-avatar-group]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-avatar-group]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Аватары — готовые сочетания: человек с источником, группа с остатком, аватар с
 двумя строками подписи, аватар профиля. Для одного аватара, аватара с подписью

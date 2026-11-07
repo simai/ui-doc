@@ -5,7 +5,7 @@ description: "Переключает один из нескольких взаи
 
 # Группа кнопок
 
-:badge[sf-button-group]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-button-group]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Группа кнопок даёт выбрать ровно один вариант: вид списка, период отчёта,
 режим просмотра. Выбранная кнопка залита цветом, остальные остаются

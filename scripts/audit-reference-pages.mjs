@@ -90,7 +90,7 @@ for (const [page, entry] of Object.entries(settings.pages)) {
   if (!/^description:\s*\S/mu.test(front)) add('description_missing');
   const smart = entry.kind === 'smart';
   // The generated version line: tag and version badges, nothing else.
-  const versionLine = /^(# .+\n)\n(:badge\[sf-[a-z0-9-]+\]\{type=tonal scheme=primary size=1\/2\} :badge\[\d+\.\d+\.\d+\]\{type=outline scheme=on-surface size=1\/2\}( |$))+\n/mu;
+  const versionLine = /^(# .+\n)\n(:badge\[sf-[a-z0-9-]+\]\{variant=tonal scheme=primary size=1\/2\} :badge\[\d+\.\d+\.\d+\]\{variant=outline scheme=on-surface size=1\/2\}( |$))+\n/mu;
   if (smart && !versionLine.test(text)) add('version_badges_missing');
   if (/:badge\[/u.test(smart ? text.replace(versionLine, '$1') : text)) add('badge_in_body');
   // A page for a dated alias (`alias_of` in its entry) exists to migrate

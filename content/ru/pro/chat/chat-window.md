@@ -5,7 +5,7 @@ description: "Окно чата целиком на порте хоста: сп�
 
 # Окно чата
 
-:badge[sf-chat-window]{type=tonal scheme=primary size=1/2} :badge[1.13.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-chat-window]{variant=tonal scheme=primary size=1/2} :badge[1.13.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-window>` — окно чата целиком: список разговоров, открытый разговор,
 поле ввода, выбор собеседника и «Мои файлы». Окно собрано из частей —

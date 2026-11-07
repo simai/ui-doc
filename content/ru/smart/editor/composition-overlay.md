@@ -5,7 +5,7 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
-:badge[sf-editor-overlay]{type=tonal scheme=primary size=1/2} :badge[1.5.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-editor-overlay]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Оверлей редактора даёт править страницу на месте, а не в отдельной форме:
 поверх страницы, собранной из Composition Document, он показывает рамку при

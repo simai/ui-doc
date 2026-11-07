@@ -5,7 +5,7 @@ description: "Числовое поле с кнопками «−» и «+»: г
 
 # Количество
 
-:badge[sf-input-quantity]{type=tonal scheme=primary size=1/2} :badge[1.3.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Количество — поле для числа с границами, которое удобно менять по шагам:
 количество, сумма, целое свойство. Для значения, которое выбирают

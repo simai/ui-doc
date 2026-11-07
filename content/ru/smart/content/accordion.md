@@ -5,7 +5,7 @@ description: "Раскрывающиеся секции из данных или
 
 # Аккордеон
 
-:badge[sf-accordion]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{variant=tonal scheme=primary size=1/2} :badge[1.1.6]{variant=outline scheme=on-surface size=1/2}
 
 Аккордеон делит одно содержание на секции, которые открываются и закрываются
 по нажатию на шапку: группы полей записи, разделы настроек, вопросы и ответы.

@@ -5,7 +5,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 # Поиск по сайту
 
-:badge[sf-search]{type=tonal scheme=primary size=1/2} :badge[1.2.3]{type=outline scheme=on-surface size=1/2}
+:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 Поиск по сайту открывается кнопкой в шапке или клавишами `Command/Control+K` и
 `/`: крупное скруглённое поле и карточка результатов под ним, над лёгким

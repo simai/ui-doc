@@ -6,7 +6,7 @@ tags: [z-index, sm, md, lg, xl, xxl]
 
 # Положение элемента по оси Z
 
-:badge[z-index]{type=main scheme=on-surface size=1} :badge[sm]{type=tonal scheme=neutral size=1} :badge[md]{type=tonal scheme=neutral size=1} :badge[lg]{type=tonal scheme=neutral size=1} :badge[xl]{type=tonal scheme=neutral size=1} :badge[xxl]{type=tonal scheme=neutral size=1}
+:badge[z-index]{variant=main scheme=on-surface size=1} :badge[sm]{variant=tonal scheme=neutral size=1} :badge[md]{variant=tonal scheme=neutral size=1} :badge[lg]{variant=tonal scheme=neutral size=1} :badge[xl]{variant=tonal scheme=neutral size=1} :badge[xxl]{variant=tonal scheme=neutral size=1}
 
 Вы можете управлять положением элемента по оси Z, используя модификаторы z-index. Значения z-index задаются через
 переменные, что позволяет гибко настраивать слойность элементов.

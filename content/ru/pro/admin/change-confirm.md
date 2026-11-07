@@ -5,7 +5,7 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
-:badge[sf-confirm-change]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-confirm-change>` — карточка подготовленного изменения, которое ждёт
 «да» или «нет» человека: каждое значение как было и как станет, два

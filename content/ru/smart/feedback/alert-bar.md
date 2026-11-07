@@ -5,7 +5,7 @@ description: "Полоса во всю ширину над шапкой стра
 
 # Плашка уведомлений
 
-:badge[sf-alert-bar]{type=tonal scheme=primary size=1/2} :badge[1.0.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-alert-bar]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Плашка уведомлений — полоса во всю ширину над шапкой страницы или
 административного интерфейса для состояний, которые требуют действия сейчас:

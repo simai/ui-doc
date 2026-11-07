@@ -5,7 +5,7 @@ description: "Единый редактор блоков страницы: ра�
 
 # Редактор страниц
 
-:badge[sf-editor]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-editor]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-editor>` — единый редактор блоков страницы SIMAI: раскладка и текст —
 один документ и один редактор. Режимов нет, есть глубина: щелчок по тексту —

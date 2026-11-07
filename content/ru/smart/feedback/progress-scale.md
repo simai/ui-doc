@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса ш
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{type=tonal scheme=primary size=1/2} :badge[1.1.3]{type=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 Шкала прогресса показывает известную долю выполненного десятью делениями.
 Берите её, когда точность до процента не нужна и ход удобнее читать крупными

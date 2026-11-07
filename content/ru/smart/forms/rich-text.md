@@ -5,7 +5,7 @@ description: "Поле формы для текста с заголовками,
 
 # Форматированный текст
 
-:badge[sf-input-rich]{type=tonal scheme=primary size=1/2} :badge[1.1.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-rich]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Форматированный текст — поле формы для текста с оформлением: абзацы, заголовки
 второго–четвёртого уровня, полужирный, курсив, ссылки, списки и цитаты, с

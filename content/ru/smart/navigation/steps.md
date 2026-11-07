@@ -5,7 +5,7 @@ description: "Показывает этапы последовательного
 
 # Шаги
 
-:badge[sf-steps]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают этапы процесса, который проходят по порядку: оформление
 заказа, публикация, мастер настройки. Пройденные этапы отмечены галочкой,

@@ -5,7 +5,7 @@ description: "Параметры письма, строки блоков в по
 
 # Структура письма
 
-:badge[sf-mail-structure]{type=tonal scheme=primary size=1/2} :badge[1.0.2]{type=outline scheme=on-surface size=1/2}
+:badge[sf-mail-structure]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-structure>` — структура письма в редакторе писем: параметры письма, по
 строке на блок в порядке письма и способ добавить блок. Элемент не хранит письмо

@@ -6,7 +6,7 @@ profile: reference
 
 # Боковая панель
 
-:badge[sf-drawer]{type=tonal scheme=primary size=1/2} :badge[1.8.7]{type=outline scheme=on-surface size=1/2}
+:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.8.7]{variant=outline scheme=on-surface size=1/2}
 
 Боковая панель открывается рядом со страницей и оставляет её доступной:
 подсказка у формы, библиотека блоков и свойства в редакторе страниц.

@@ -5,7 +5,7 @@ description: "Прокручиваемая колонка записей, кот
 
 # Лента
 
-:badge[sf-list-feed]{type=tonal scheme=primary size=1/2} :badge[1.0.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-list-feed]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Лента — прокручиваемая колонка записей, которую читают от новой записи внизу:
 переписка, комментарии к задаче, история действий, журнал, ход выполнения

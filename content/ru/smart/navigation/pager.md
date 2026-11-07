@@ -5,7 +5,7 @@ description: "Ведёт на соседнюю страницу или шаг п
 
 # Листалка страниц
 
-:badge[sf-pager]{type=tonal scheme=primary size=1/2} :badge[1.0.4]{type=outline scheme=on-surface size=1/2}
+:badge[sf-pager]{variant=tonal scheme=primary size=1/2} :badge[1.0.4]{variant=outline scheme=on-surface size=1/2}
 
 Листалка страниц ведёт на соседнюю страницу или шаг по смыслу: предыдущая и
 следующая страница документации, записи блога или товара, шаги мастера, уроки

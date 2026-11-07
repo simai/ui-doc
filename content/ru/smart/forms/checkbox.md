@@ -5,7 +5,7 @@ description: "Даёт отметить один или несколько не�
 
 # Флажок
 
-:badge[sf-checkbox]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+:badge[sf-checkbox]{variant=tonal scheme=primary size=1/2} :badge[1.1.6]{variant=outline scheme=on-surface size=1/2}
 
 Флажок даёт независимый выбор: каждый вариант отмечают или снимают отдельно от
 остальных. Для одного варианта из нескольких берите

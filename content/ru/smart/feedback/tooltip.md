@@ -5,7 +5,7 @@ description: "Рисует поверхность короткой подска�
 
 # Подсказка
 
-:badge[sf-tooltip]{type=tonal scheme=primary size=1/2} :badge[1.1.3]{type=outline scheme=on-surface size=1/2}
+:badge[sf-tooltip]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 Подсказка — это сама плашка с коротким текстом, необязательным пояснением и
 стрелкой. Она всегда видна и сама не следит, на что навели: показывает и

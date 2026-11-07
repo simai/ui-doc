@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и

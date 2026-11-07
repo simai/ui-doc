@@ -5,7 +5,7 @@ description: "Зона выбора и перетаскивания файлов
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.6]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов даёт выбрать файлы в системном окне или перетащить их и
 показывает список выбранных файлов с прогрессом и состоянием передачи. Сами

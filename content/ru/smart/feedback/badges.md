@@ -5,7 +5,7 @@ description: "Показывает короткую неинтерактивну
 
 # Бейджи
 
-:badge[sf-badge]{type=tonal scheme=primary size=1/2} :badge[1.3.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткую пометку рядом с объектом: статус записи, категорию,
 версию, число новых событий. Пометку не нажимают. Для метки, которую выбирают

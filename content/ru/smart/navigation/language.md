@@ -5,7 +5,7 @@ description: "Переключает язык сайта: сегментами �
 
 # Выбор языка
 
-:badge[sf-language]{type=tonal scheme=primary size=1/2} :badge[1.0.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
 
 Выбор языка переключает язык сайта. Вид следует за числом языков: при
 двух-трёх все языки видны сразу и выбираются одним нажатием, при четырёх и

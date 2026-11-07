@@ -5,7 +5,7 @@ description: "Навигация по сайту из данных или спи
 
 # Меню
 
-:badge[sf-menu]{type=tonal scheme=primary size=1/2} :badge[1.2.4]{type=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.2.4]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по сайту, разделу или кабинету: вложенные разделы, текущая
 страница, ветки, которые открываются и закрываются; пункты задают данными или

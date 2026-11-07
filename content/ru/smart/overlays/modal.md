@@ -6,7 +6,7 @@ profile: reference
 
 # Модальное окно
 
-:badge[sf-modal]{type=tonal scheme=primary size=1/2} :badge[1.4.6]{type=outline scheme=on-surface size=1/2}
+:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.4.6]{variant=outline scheme=on-surface size=1/2}
 
 Модальное окно показывает одну ограниченную задачу поверх страницы:
 подтверждение, короткую форму, подробности. Пока оно открыто, страница за ним

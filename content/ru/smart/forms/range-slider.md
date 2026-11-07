@@ -5,7 +5,7 @@ description: "Выбирает одно значение или две гран�
 
 # Слайдер диапазона
 
-:badge[sf-slider-range]{type=tonal scheme=primary size=1/2} :badge[1.3.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-slider-range]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
 
 Слайдер диапазона — шкала с одной или двумя ручками для приблизительной
 настройки: цены, громкости, расстояния. Когда важно точное число, добавьте

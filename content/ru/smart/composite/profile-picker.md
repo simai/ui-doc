@@ -5,7 +5,7 @@ description: "Выбирает, создаёт, переименовывает, 
 
 # Выбор профиля
 
-:badge[sf-profile-picker]{type=tonal scheme=primary size=1/2} :badge[1.1.11]{type=outline scheme=on-surface size=1/2}
+:badge[sf-profile-picker]{variant=tonal scheme=primary size=1/2} :badge[1.1.11]{variant=outline scheme=on-surface size=1/2}
 
 Выбор профиля даёт одно место для работы с профилями: профилями меню, видами
 записи и всем, у чего есть профили. В свёрнутом виде это кнопка, похожая на

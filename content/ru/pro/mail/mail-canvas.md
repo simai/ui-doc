@@ -5,7 +5,7 @@ description: "Готовое письмо в рамке, которая ниче
 
 # Холст письма
 
-:badge[sf-mail-canvas]{type=tonal scheme=primary size=1/2} :badge[1.1.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-mail-canvas]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-canvas>` — холст редактора писем: готовое письмо в рамке, которая ничего
 не запускает, переключатель ширины над ним, две заметки о письме («устарел» и

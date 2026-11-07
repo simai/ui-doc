@@ -5,7 +5,7 @@ description: "Ведёт на реальный адрес и показывае�
 
 # Справочная ссылка
 
-:badge[sf-reference-link]{type=tonal scheme=primary size=1/2} :badge[1.0.5]{type=outline scheme=on-surface size=1/2}
+:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
 
 Справочная ссылка ведёт на реальный адрес и показывает рядом короткую справку:
 путь, источник, номер документа. Берите её, когда читателю важно видеть, куда

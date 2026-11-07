@@ -5,7 +5,7 @@ description: "Письма человека в редакторе: поиск п
 
 # Список писем
 
-:badge[sf-mail-letters]{type=tonal scheme=primary size=1/2} :badge[1.0.3]{type=outline scheme=on-surface size=1/2}
+:badge[sf-mail-letters]{variant=tonal scheme=primary size=1/2} :badge[1.0.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-letters>` — письма человека в редакторе писем: поиск по названию,
 порядок и то, что предлагает строка, — «Открыть» и под ⋯ копия, переименование

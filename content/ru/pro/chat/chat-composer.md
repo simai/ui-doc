@@ -5,7 +5,7 @@ description: "Поле вопроса и файлов чата: Enter отпра
 
 # Поле чата
 
-:badge[sf-chat-composer]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-chat-composer]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-composer>` — поле вопроса и файлов чата: текст растёт до восьми
 строк, Enter отправляет, Shift+Enter переносит строку. Файлы поле только

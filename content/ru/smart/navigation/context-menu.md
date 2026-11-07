@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-:badge[sf-menu-context]{type=tonal scheme=primary size=1/2} :badge[1.8.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-menu-context]{variant=tonal scheme=primary size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — панель с коротким списком действий над объектом: страницей,
 строкой таблицы, файлом, профилем; пунктами можно управлять с клавиатуры.

@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{type=tonal scheme=primary size=1/2} :badge[1.8.2]{type=outline scheme=on-surface size=1/2} :badge[sf-view-table]{type=tonal scheme=primary size=1/2} :badge[1.15.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.8.2]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.15.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-table>` показывает серверную коллекцию записей: поиск, фильтры, таблицу,
 выбор строк, действия, настройки колонок и пагинацию. Данные, права и

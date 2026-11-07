@@ -5,7 +5,7 @@ description: "Показывает путь от корня сайта до те
 
 # Хлебные крошки
 
-:badge[sf-breadcrumbs]{type=tonal scheme=primary size=1/2} :badge[1.1.7]{type=outline scheme=on-surface size=1/2}
+:badge[sf-breadcrumbs]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
 
 Хлебные крошки показывают, где в иерархии сайта находится страница: ссылки на
 разделы выше и название текущей страницы в конце; длинный путь сворачивается

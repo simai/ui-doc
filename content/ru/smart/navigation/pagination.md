@@ -5,7 +5,7 @@ description: "Переключает страницы длинного спис�
 
 # Пагинация
 
-:badge[sf-pagination]{type=tonal scheme=primary size=1/2} :badge[1.3.7]{type=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.7]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация — подвал длинного списка или таблицы: сколько всего записей, на
 какой странице читатель, как перейти на другую и сколько записей показывать.

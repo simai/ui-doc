@@ -5,7 +5,7 @@ description: "Ручка на краю панели: ширину меняют �
 
 # Изменение ширины
 
-:badge[sf-resizer]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+:badge[sf-resizer]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
 
 Изменение ширины — ручка на краю панели: ширину тянут мышью, пером или
 касанием, меняют стрелками с клавиатуры и возвращают двойным щелчком. Подходит

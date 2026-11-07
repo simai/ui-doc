@@ -5,7 +5,7 @@ description: "Прежнее имя ленты SIMAI Framework sf-list-feed в �
 
 # Лента сообщений
 
-:badge[sf-message-log]{type=tonal scheme=primary size=1/2} :badge[2.0.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-message-log]{variant=tonal scheme=primary size=1/2} :badge[2.0.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-message-log>` — устаревшее имя [Ленты](/ru/smart/content/list-feed/)
 (`sf-list-feed`) SIMAI Framework, которое работает до 2027-01-01. Поведение

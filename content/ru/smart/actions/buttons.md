@@ -5,7 +5,7 @@ description: "Запускает действие кнопкой с подпис
 
 # Кнопки
 
-:badge[sf-button]{type=tonal scheme=primary size=1/2} :badge[1.5.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка запускает действие: сохранить, отправить, открыть окно. Вид, цвет,
 размер, иконки и индикатор загрузки задаются атрибутами. Берите её там, где

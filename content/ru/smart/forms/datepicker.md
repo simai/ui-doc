@@ -5,7 +5,7 @@ description: "Выбирает дату, дату со временем, вре�
 
 # Календарь
 
-:badge[sf-input-date]{type=tonal scheme=primary size=1/2} :badge[1.4.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-date]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Календарь даёт выбрать одну дату или период с переходом по месяцам и годам, а
 также дату со временем или одно время суток. Берите его, когда дату удобнее

@@ -5,7 +5,7 @@ description: "Даёт переставлять элементы, перенос
 
 # Перетаскивание
 
-:badge[sf-sortable]{type=tonal scheme=primary size=1/2} :badge[1.1.7]{type=outline scheme=on-surface size=1/2}
+:badge[sf-sortable]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
 
 Перетаскивание даёт переставлять элементы списка, переносить их в другие
 списки той же группы и копировать из библиотеки — мышью, пером, касанием и

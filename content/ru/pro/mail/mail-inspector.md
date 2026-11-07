@@ -5,7 +5,7 @@ description: "Заголовок с действиями, путь, вкладк
 
 # Панель свойств письма
 
-:badge[sf-mail-inspector]{type=tonal scheme=primary size=1/2} :badge[1.0.2]{type=outline scheme=on-surface size=1/2}
+:badge[sf-mail-inspector]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-inspector>` — правая панель редактора писем: заголовок с действиями,
 путь, вкладки, разделы и все виды полей редактора. Это форма, нарисованная из

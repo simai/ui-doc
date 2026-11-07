@@ -5,7 +5,7 @@ description: "Однострочное поле формы с подписью, 
 
 # Текстовые поля
 
-:badge[sf-input]{type=tonal scheme=primary size=1/2} :badge[1.4.4]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает одну строку — текст, почту, пароль, поиск, телефон
 или адрес — вместе с подписью, подсказкой и сообщением об ошибке. Для

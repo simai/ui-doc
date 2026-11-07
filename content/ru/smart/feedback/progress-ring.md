@@ -5,7 +5,7 @@ description: "Показывает долю выполненного кольц�
 
 # Кольцо прогресса
 
-:badge[sf-progress-ring]{type=tonal scheme=primary size=1/2} :badge[1.0.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-progress-ring]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Кольцо прогресса показывает значение от 0 до 100 кольцом размером с элемент
 управления: в панели инструментов, в боковой полосе, вокруг аватара. Для

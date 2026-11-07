@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладки
 
-:badge[sf-tabs]{type=tonal scheme=primary size=1/2} :badge[1.1.11]{type=outline scheme=on-surface size=1/2}
+:badge[sf-tabs]{variant=tonal scheme=primary size=1/2} :badge[1.1.11]{variant=outline scheme=on-surface size=1/2}
 
 Вкладки показывают несколько панелей одного уровня на одном месте: человек
 переключает их и смотрит по очереди. Вкладки задают строкой, разметкой внутри

@@ -5,7 +5,7 @@ description: "Многострочное поле формы с подписью
 
 # Многострочное поле
 
-:badge[sf-input-textarea]{type=tonal scheme=primary size=1/2} :badge[1.7.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-textarea]{variant=tonal scheme=primary size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле — для комментариев, описаний и другого свободного текста.
 Для короткого значения в одну строку берите [Текстовые

@@ -5,7 +5,7 @@ description: "Компактная панель настроек: переклю
 
 # Настройки
 
-:badge[sf-settings]{type=tonal scheme=primary size=1/2} :badge[1.0.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-settings]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Настройки — компактная панель с несколькими настройками, которые человек
 меняет на месте: тема и размер текста у читалки, плотность таблицы, звук в

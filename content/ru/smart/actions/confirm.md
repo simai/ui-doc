@@ -5,7 +5,7 @@ description: "Вопрос человеку прямо на месте: что �
 
 # Подтверждение
 
-:badge[sf-confirm]{type=tonal scheme=primary size=1/2} :badge[1.0.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-confirm]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
 
 Подтверждение спрашивает человека прямо там, где он работает: удалить файл в
 его строке, убрать участника, вернуть вид раздела. Оно показывает, что

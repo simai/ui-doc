@@ -5,7 +5,7 @@ description: "Запускает действие компактной кноп�
 
 # Кнопки с иконкой
 
-:badge[sf-button-icon]{type=tonal scheme=primary size=1/2} :badge[1.4.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-button-icon]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие одной иконкой вместо подписи: изменить,
 поделиться, закрыть, открыть меню. Берите её в панелях инструментов и строках

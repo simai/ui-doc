@@ -5,7 +5,7 @@ description: "Занимает место будущего содержимог�
 
 # Скелетон
 
-:badge[sf-skeleton]{type=tonal scheme=primary size=1/2} :badge[1.1.3]{type=outline scheme=on-surface size=1/2}
+:badge[sf-skeleton]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 Скелетон занимает место содержимого, которое ещё загружается, серыми фигурами:
 строками текста, аватаром, изображением, карточкой. Страница не прыгает, когда

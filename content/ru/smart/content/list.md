@@ -5,7 +5,7 @@ description: "Список, с которым работают: строки и�
 
 # Список
 
-:badge[sf-list]{type=tonal scheme=primary size=1/2} :badge[1.1.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Список — для того, с чем что-то делают: беседы, письма, шаблоны, файлы,
 участники, версии. Строки строятся из данных — название и тихая вторая строка;

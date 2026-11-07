@@ -5,7 +5,7 @@ description: "Поле формы для одного изображения: м
 
 # Поле изображения
 
-:badge[sf-input-image]{type=tonal scheme=primary size=1/2} :badge[1.2.2]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-image]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Поле изображения принимает одно изображение в форме: логотип, обложку,
 картинку в блоке. Оно показывает миниатюру с именем и размером файла, кнопки

@@ -5,7 +5,7 @@ description: "Показывает иерархию папок или разде
 
 # Дерево
 
-:badge[sf-tree]{type=tonal scheme=primary size=1/2} :badge[2.0.8]{type=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[2.0.8]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенный список: папки и файлы, разделы сайта, категории
 каталога. Ветви раскрываются и сворачиваются, пункты выбираются мышью и

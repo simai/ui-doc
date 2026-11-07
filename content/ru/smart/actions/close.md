@@ -5,7 +5,7 @@ description: "Рисует знак закрытия внутри кнопки, 
 
 # Закрытие
 
-:badge[sf-button-close]{type=tonal scheme=primary size=1/2} :badge[1.1.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-button-close]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Закрытие — крестик для кнопки, которая закрывает окно, панель или сообщение.
 Сам он не кнопка и не нажимается: он стоит внутри кнопки. Готовую кнопку
