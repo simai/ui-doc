@@ -267,6 +267,8 @@
     "The line from one marker to the next.": "Цвет линии от маркера к следующему.",
     "The width of the line between the markers.": "Толщина линии между маркерами.",
     "The space between the steps.": "Промежуток между шагами.",
-    "The space between a marker and its step's content.": "Промежуток между маркером и содержимым шага."
+    "The space between a marker and its step's content.": "Промежуток между маркером и содержимым шага.",
+    "The border width on every side, a length. It is drawn inside the badge's size: the padding gives up its width, so a badge of one size is as high with a border as without.": "Толщина рамки со всех сторон, длина. Рамка рисуется внутри размера бейджа: отступ уступает ей свою ширину, поэтому бейдж одного размера одной высоты с рамкой и без неё.",
+    "Space before and after the text: --sf-space-1/2 by default at every size; sf-badge--tight (sf-badge tight) and a single figure take the size's own text inset, so a figure stays round; a compact badge takes the block padding and stays square.": "Отступ до и после текста: по умолчанию `--sf-space-1/2` при любом размере; `sf-badge--tight` (`<sf-badge tight>`) и одна цифра берут собственный отступ текста размера, поэтому цифра остаётся круглой; компактный бейдж берёт блочный отступ и остаётся квадратным."
   }
 }

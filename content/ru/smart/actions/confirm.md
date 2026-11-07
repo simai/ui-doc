@@ -126,12 +126,12 @@ confirm.addEventListener('sf-confirm-answer', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-confirm>`, контракт `smart.confirm` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; `host-required` |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя внутренний; клавиши `Tab`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/confirm` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-confirm` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/confirm` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-confirm` |
 
 ## См. также
 

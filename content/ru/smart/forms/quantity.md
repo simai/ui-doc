@@ -210,12 +210,12 @@ count.addEventListener('change', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-quantity>`, контракт `smart.input-quantity` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль числовое поле; доступное имя обязательно; клавиши `Tab`, `ArrowUp`, `ArrowDown`, `PageUp`, `PageDown`, `Home`, `End`, `Enter`, `Escape` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/input-quantity` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-input-quantity` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/input-quantity` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-input-quantity` |
 
 ## См. также
 

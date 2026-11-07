@@ -253,12 +253,12 @@ avatar.addEventListener('click', () => openProfile('anna'));
 | | |
 |:---|:---|
 | Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль кнопка (`button`); доступное имя рекомендуется; клавиши `Tab` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/avatar` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-avatar` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/avatar` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-avatar` |
 
 ## См. также
 

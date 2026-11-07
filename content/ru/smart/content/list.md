@@ -5,7 +5,7 @@ description: "Список, с которым работают: строки и�
 
 # Список
 
-:badge[sf-list]{type=tonal scheme=primary size=1/2} :badge[1.1.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-list]{type=tonal scheme=primary size=1/2} :badge[1.1.1]{type=outline scheme=on-surface size=1/2}
 
 Список — для того, с чем что-то делают: беседы, письма, шаблоны, файлы,
 участники, версии. Строки строятся из данных — название и тихая вторая строка;
@@ -224,13 +224,13 @@ list.addEventListener('sf-list-open', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list>`, контракт `smart.list` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Тег | `<sf-list>`, контракт `smart.list` версии `1.1.1` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; `host-required` |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль список; доступное имя внутренний; клавиши `Tab`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `ContextMenu` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/list` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/list` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

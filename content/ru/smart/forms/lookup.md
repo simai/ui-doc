@@ -217,12 +217,12 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-lookup>`, контракт `smart.input-lookup` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль поле со списком (`combobox`); доступное имя обязательно; клавиши Набор текста запускает поиск; ArrowDown открывает список и идёт вниз, ArrowUp — вверх, Home и End — к краям, пока список открыт, Enter выбирает активную строку; в поле с одним значением закрывает список, Escape закрывает список, второй Escape очищает запрос, Backspace в пустом поле поиска убирает последнюю плашку, Tab проходит по кнопкам удаления плашек и уводит из поля |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/input-lookup` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-input-lookup` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/input-lookup` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-input-lookup` |
 
 ## См. также
 

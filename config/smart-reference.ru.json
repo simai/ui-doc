@@ -2569,6 +2569,8 @@
     "The name the native button submits its value under, as a native button's name.": "Имя, под которым нативная кнопка отправляет своё значение, как `name` нативной кнопки.",
     "The value the native button submits under name when it is the submitter (next, skip).": "Значение, которое нативная кнопка отправляет под `name`, когда форму отправляет она (`next`, `skip`).",
     "Empty: the text of the page's language (\"Skipped\" in English).": "Пусто — текст на языке страницы (по-английски «Skipped»).",
-    "Empty: the text of the page's language (\"In progress\" in English).": "Пусто — текст на языке страницы (по-английски «In progress»)."
+    "Empty: the text of the page's language (\"In progress\" in English).": "Пусто — текст на языке страницы (по-английски «In progress»).",
+    "Keeps the size's own narrow side room, for dense places: a table, a counter, a chip in a row. By default the text sits --sf-space-1/2 from the badge's edges at every size.": "Оставляет узкие поля по бокам, свои у каждого размера, — для плотных мест: таблицы, счётчика, метки в строке. По умолчанию текст отстоит от краёв бейджа на `--sf-space-1/2` при любом размере.",
+    "The gap between the trigger and the surface: a token (var(--sf-space-1\\/3)) or a CSS length. Left empty, the surface touches the trigger as before.": "Зазор между кнопкой-триггером и панелью: токен (`var(--sf-space-1/3)`) или длина CSS. Пусто — панель прилегает к триггеру, как раньше."
   }
 }

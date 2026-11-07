@@ -128,9 +128,9 @@ save.addEventListener('sf-button-press', async () => {
 | Значение | Когда брать |
 |:---|:---|
 | `primary` | акцентное действие |
-| `secondary` | второе цветное действие рядом с главным, когда два `primary` спорят |
-| `on-surface` | нейтральное действие: «Отмена», панели |
-| `on-surface-variant` | тихая кнопка, похожая на поле: поиск |
+| `secondary` | тихое второе действие и фильтры-чипы, обычно в виде `tonal` |
+| `on-surface` | нейтральное действие рядом с главным: «Отмена» в виде `outline`, панели |
+| `on-surface-variant` | кнопка, похожая на поле: поиск рядом с полями, в виде `outline` или `surface`. В виде `default` она такая же, как `on-surface` |
 
 `status="error"` окрашивает кнопку цветом ошибки поверх любого цвета: для
 удаления и необратимых действий.
@@ -469,13 +469,13 @@ menuButton.expanded = true; // aria-expanded="true" на кнопке внутр
 | | |
 |:---|:---|
 | Тег | `<sf-button>`, контракт `smart.button` версии `1.5.0` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль кнопка (`button`); доступное имя рекомендуется; клавиши `Tab` |
 | [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел `smart.button`; свойства — атрибуты из таблицы выше, кроме `root-class`, `root-style` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/button` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-button` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/button` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-button` |
 
 ### Для разработчика
 

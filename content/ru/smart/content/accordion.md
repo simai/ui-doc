@@ -5,7 +5,7 @@ description: "Раскрывающиеся секции из данных или
 
 # Аккордеон
 
-:badge[sf-accordion]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
 
 Аккордеон делит одно содержание на секции, которые открываются и закрываются
 по нажатию на шапку: группы полей записи, разделы настроек, вопросы и ответы.
@@ -189,13 +189,13 @@ faq.open(location.hash.slice(1));
 
 | | |
 |:---|:---|
-| Тег | `<sf-accordion>`, контракт `smart.accordion` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Тег | `<sf-accordion>`, контракт `smart.accordion` версии `1.1.6` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | доступное имя внутренний; клавиши `Tab`, `Enter`, `Space`, `ArrowDown`, `ArrowUp`, `Home`, `End` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/accordion` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-accordion` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/accordion` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-accordion` |
 
 ## См. также
 

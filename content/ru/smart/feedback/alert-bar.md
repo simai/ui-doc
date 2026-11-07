@@ -200,12 +200,12 @@ bar.addEventListener('sf-alert-bar-close', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-alert-bar>`, контракт `smart.alert-bar` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль область (`region`); доступное имя внутренний; клавиши Tab по порядку доходит до ссылки действия, отметки, стрелок перелистывания, «Все N» и закрытия, Enter или Space нажимает элемент управления; Enter переходит по ссылке действия, Escape закрывает открытый список и возвращает фокус на «Все N» |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/alert-bar` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-alert-bar` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/alert-bar` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-alert-bar` |
 
 ## См. также
 

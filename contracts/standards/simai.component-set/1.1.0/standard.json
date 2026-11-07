@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.component-set",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "SIMAI Framework Component Set",
   "appliesTo": [
     "simai.framework.component-set"
@@ -48,9 +48,9 @@
     {
       "id": "one-framework-pair",
       "level": "must",
-      "text": "A set is built and tested over exactly one SIMAI Framework source revision, named by full commit in its lock and in its passport, together with the lowest core.runtime version it needs. A release names the free release (ui-<12 hex>) built from that revision. Moving to a newer SIMAI Framework is a commit to the lock and the passport, the gates again and a new release; a set never floats on a branch or a latest release.",
+      "text": "A set is built and tested over exactly one SIMAI Framework source revision, named by full commit in its lock and in its passport, together with the lowest core.runtime version it needs. A release names the free release (ui-<12 hex>) built from that revision. Moving to a newer SIMAI Framework is a commit to the lock and the passport, the gates again and a new release, unless the set's own source did not change: then the existing release, unchanged, gains a pair receipt for the newer pair when the release source repinned to it rebuilds to the released bytes apart from the passport's source revision and the set's gates pass over the newer pair against those bytes; otherwise it is a new release. A set never floats on a branch or a latest release.",
       "verification": "manual",
-      "guidance": "framework.lock.json keeps the simai.framework.product-package-source-lock form of simai.component-package; the passport's framework.source_revision equals the lock's source.revision."
+      "guidance": "framework.lock.json keeps the simai.framework.product-package-source-lock form of simai.component-package; the passport's framework.source_revision equals the lock's source.revision. A pair receipt is simai.framework.set-pair-receipt v1, written by ui-builder scripts/pair-receipt.py run (owner decision 2026-11-07, ui-control control/decisions/2026-11-07-set-pair-receipts.md); the release lock, the package receipt and the passport in the release keep naming the pair the release was built over."
     },
     {
       "id": "required-sets-shallow",
@@ -104,16 +104,16 @@
     {
       "id": "one-release-route",
       "level": "must",
-      "text": "Every set is released one way. A release is tagged <set>-<12 hex>, the first twelve hex digits of the set commit it is built from, on the set's repository, with the assets package-<set>.tar, its .sha256, package-receipt.json and the built set.json. The same bytes are published to npm as @simai-studio/<set>. A release is never moved or rewritten; a fix is a new release.",
+      "text": "Every set is released one way. A release is tagged <set>-<12 hex>, the first twelve hex digits of the set commit it is built from, on the set's repository, with the assets package-<set>.tar, its .sha256, package-receipt.json and the built set.json. The same bytes are published to npm as @simai-studio/<set>. A release is never moved or rewritten; a fix is a new release. A pair receipt adds the asset pair-receipt-<pair>.json to the existing release and the same bytes as contracts/pair-receipts/<release>/<pair>.json to the set's repository; nothing published before it changes, npm included.",
       "verification": "manual",
       "guidance": "The Pro route generalised (pro-<12>, package-pro.tar since 2026-11-02). The npm name follows from the set id, so no set needs a separate naming decision."
     },
     {
       "id": "one-compatibility-index",
       "level": "must",
-      "text": "Every release adds one row to one shared compatibility index: the set, the release id, the npm version, the SIMAI Framework pairs it runs over, the sets it requires with their ranges, and the digest of its receipt. The index is the only place a consumer and the Loader learn which set releases go with which SIMAI Framework pair; no set keeps an index of its own.",
+      "text": "Every release adds one row to one shared compatibility index: the set, the release id, the npm version, the SIMAI Framework pairs it runs over (the pair it was built over, and each pair it was re-receipted over, added to its row as pairs), the sets it requires with their ranges, and the digest of its receipt. The index is the only place a consumer and the Loader learn which set releases go with which SIMAI Framework pair; no set keeps an index of its own.",
       "verification": "manual",
-      "guidance": "Replaces simai/ui-pro package-index/releases.json. Format simai.framework.set-index (contracts/schema/set-index.v1.schema.json, pinned/set-index-1.0.0.schema.json). Location: index.json of the npm package @simai-studio/sets, read by the Loader from https://cdn.jsdelivr.net/npm/@simai-studio/sets@1/index.json (the format major pinned; SF_BOOT_CONFIG.setIndex overrides it for a mirror or a stand). Writer: the set release route, ui-builder scripts/set-index.py add, from the release's built set.json and receipt; a row is never changed. The Loader chooses the newest release of a set whose framework.core_runtime this Core meets (core/js/sets.js selectSetRelease)."
+      "guidance": "Replaces simai/ui-pro package-index/releases.json. Format simai.framework.set-index (contracts/schema/set-index.v1.schema.json, pinned/set-index-1.1.0.schema.json). Location: index.json of the npm package @simai-studio/sets, read by the Loader from https://cdn.jsdelivr.net/npm/@simai-studio/sets@1/index.json (the format major pinned; SF_BOOT_CONFIG.setIndex overrides it for a mirror or a stand). Writer: the set release route, ui-builder scripts/set-index.py add, from the release's built set.json and receipt; a row's facts never change and its pairs only grow (set-index.py pair). The Loader chooses the newest release of a set whose framework.core_runtime this Core meets (core/js/sets.js selectSetRelease)."
     },
     {
       "id": "one-line-connection",
@@ -154,10 +154,10 @@
     },
     {
       "id": "simai.framework.set-index-schema",
-      "version": "1.0.0",
-      "path": "../../pinned/set-index-1.0.0.schema.json",
-      "sha256": "89dba243fa63b85b6a65f26d0566272454e9d527102b0d080f28a8ad40c578e1",
-      "description": "The one compatibility index: one row per set release with its npm version, the SIMAI Framework it was built over, the lowest core.runtime it needs, the sets it requires and its receipt digest; the Loader places a set named without a base from it."
+      "version": "1.1.0",
+      "path": "../../pinned/set-index-1.1.0.schema.json",
+      "sha256": "1fe136749eff355e21db481ee57ca886c8f9386f53d89429099d465969371376",
+      "description": "The one compatibility index: one row per set release with its npm version, the SIMAI Framework it was built over, the lowest core.runtime it needs, the sets it requires and its receipt digest; the Loader places a set named without a base from it; since 1.1.0 a row also lists the further pairs its unchanged release was re-receipted over."
     },
     {
       "id": "simai.framework.smart-component-manifest",
@@ -215,7 +215,8 @@
         "ui-control control/decisions/2026-11-03-component-sets.md (owner, 2026-11-03, points 1-11)",
         "ui-control control/decisions/2026-11-02-smart-component-naming.md (owner, 2026-11-02: set-block-variant)",
         "ui-control control/decisions/2026-11-02-ui-chart-package.md (chart names reserved)",
-        "ui-control control/EFFECTS-PACKAGE-PLAN-2026-11-03.md, section What generalises to every set"
+        "ui-control control/EFFECTS-PACKAGE-PLAN-2026-11-03.md, section What generalises to every set",
+        "ui-control control/decisions/2026-11-07-set-pair-receipts.md (owner, 2026-11-07: re-receipt an unchanged set release per pair, no new version)"
       ],
       "tools": {
         "passport_schema": "simai/ui-source contracts/schema/component-set.v1.schema.json",
@@ -224,7 +225,8 @@
         "gate": "simai/ui-source tests/component-set.contract.test.mjs",
         "fixture": "simai/ui-source tests/fixtures/component-set/set.json",
         "set_index_schema": "simai/ui-source contracts/schema/set-index.v1.schema.json",
-        "loader": "simai/ui-source src/core/js/sets.js and loader.js (data-sf-sets, packages.<set> forms, packageOf, SF.package, per-set aliases); tests/component-set-loader.contract.test.mjs, tests/loader-packages.contract.test.mjs, tests/browser/component-sets.browser.mjs"
+        "loader": "simai/ui-source src/core/js/sets.js and loader.js (data-sf-sets, packages.<set> forms, packageOf, SF.package, per-set aliases); tests/component-set-loader.contract.test.mjs, tests/loader-packages.contract.test.mjs, tests/browser/component-sets.browser.mjs",
+        "pair_receipt": "simai/ui-builder scripts/pair-receipt.py (run, check, publish), schema simai.framework.set-pair-receipt v1; scripts/set-index.py pair"
       },
       "rollout": [
         "1. this standard, the passport and registry formats, the registry seeded and its gate (draft)",
@@ -241,7 +243,8 @@
         "one-site-per-set: no gate checks the five sections until the Docara set template exists",
         "framework-first is a review item with no gate",
         "the set view (data views: table, kanban, calendar, gantt, list) awaits the owner; the registry holds the family view for it as pending"
-      ]
+      ],
+      "reissue": "Issued as 1.1.0 on 2026-11-07: one-framework-pair allows a pair receipt of an unchanged release instead of a new release, one-release-route names its asset, one-compatibility-index lets a row list the pairs it was re-receipted over, and the index form is pinned at 1.1.0 (the optional pairs). Every 1.0.0 passport, release and index row still holds. 1.0.0 keeps its published bytes under contracts/standards/history."
     }
   }
 }

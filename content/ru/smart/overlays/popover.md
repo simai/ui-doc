@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{type=tonal scheme=primary size=1/2} :badge[1.1.6]{type=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и
@@ -116,6 +116,7 @@ popover.addEventListener('sf-popover-closed', () => {
 | `placement` | строка | `bottom-end` | `bottom-start`, `bottom-end`, `top-start`, `top-end`, `inline-start`, `inline-end` | От какого угла триггера отображается поверхность. |
 | `label` | строка | пусто | — | Доступное имя поверхности. Поверхность с ролью, но без имени объявляется как безымянная. |
 | `width` | строка | пусто | — | Собственная ширина. Без неё поверхность принимает ширину самой длинной строки, и список имён получается широким и неровным. |
+| `offset` | строка | пусто | — | Зазор между кнопкой-триггером и панелью: токен (`var(--sf-space-1/3)`) или длина CSS. Пусто — панель прилегает к триггеру, как раньше. |
 | `dismissible` | да/нет | да | — | Esc и нажатие снаружи закрывают её. Потребитель, который сам обрабатывает эти действия, отключает это и вызывает close(), когда решит. |
 | `surface-role` | строка | `dialog` | `dialog`, `menu`, `listbox`, `group` | Чем поверхность является для читателя: dialog, menu, listbox или group. Задаётся на sf-popover; поверхность получает role, а триггер — aria-haspopup. |
 | `unsaved` | да/нет | нет | — | — |
@@ -155,12 +156,12 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.1.6` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/popover` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/popover` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 

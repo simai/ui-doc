@@ -274,12 +274,12 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 | | |
 |:---|:---|
 | Тег | `<sf-contents>`, контракт `smart.contents` версии `1.1.3` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль навигация (`navigation`); доступное имя внутренний; клавиши Tab по порядку проходит ссылки разделов, Enter на ссылке прокручивает к её разделу и переводит туда фокус, Enter или пробел на кнопке свёрнутой строки открывают список; Escape закрывает его и возвращает фокус на кнопку |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/contents` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-contents` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/contents` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-contents` |
 
 ## См. также
 

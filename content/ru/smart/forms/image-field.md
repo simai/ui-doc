@@ -5,7 +5,7 @@ description: "Поле формы для одного изображения: м
 
 # Поле изображения
 
-:badge[sf-input-image]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-image]{type=tonal scheme=primary size=1/2} :badge[1.2.2]{type=outline scheme=on-surface size=1/2}
 
 Поле изображения принимает одно изображение в форме: логотип, обложку,
 картинку в блоке. Оно показывает миниатюру с именем и размером файла, кнопки
@@ -172,13 +172,13 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-579db8035fa9` |
+| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.2` |
+| Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя рекомендуется; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/input-image` |
-| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-input-image` |
+| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/input-image` |
+| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 
