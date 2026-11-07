@@ -87,10 +87,12 @@ const findSites = (query) => new Promise((resolve) => {
   setTimeout(() => resolve({total: found.length, sites: found.slice(0, LIMIT)}), 300);
 });
 
-const rows = ({total, sites}, current) => [
+// With nothing found the host answers with one note row under the menu's own
+// search.empty: a menu given no rows at all closes (ui-5bebd29af045).
+const rows = ({total, sites}, current) => (total === 0 ? [{type: 'note', text: 'Попробуйте часть адреса: simai, shop'}] : [
   ...sites.map((site) => ({id: site, text: site, initials: site.slice(0, 2).toUpperCase(), kind: 'radio', checked: site === current})),
   ...(total > sites.length ? [{type: 'note', text: `Показаны ${sites.length} из ${total}; уточните запрос`}] : []),
-];
+]);
 
 const initialize = async () => {
   await customElements.whenDefined('sf-menu-context');
