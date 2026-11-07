@@ -157,7 +157,7 @@ redirect for every page).
 | 5 | `## Поведение` | no | hand: events, methods and JavaScript in context; one H3 per topic |
 | 6 | `## Применение` | no | hand: one H3 per everyday task the component solves, each with a live example and the reason for the choice; it replaces a separate «Решения» section (owner, 2026-11-06) |
 | 7 | `## Доступность` | yes | hand |
-| 8 | `## Справочник` | yes | generated: attributes, methods and events as tables (events without their aliases), then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
+| 8 | `## Справочник` | yes | generated: attributes (the ones every Smart component has — `template`, `root-class`, `root-style` — last, under «Общие для всех компонентов»), methods and events as tables (events without their aliases), then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
 | 9 | `## См. также` | no | hand |
 
 The generated «Минимальная разметка» and «Свойства в документе макета» are
@@ -220,17 +220,20 @@ standard's, generated the same way.
 | 3 | `## Частые задачи` | no | hand: one H3 per everyday task, with code that copies as is |
 | 4 | `## Внешний вид` | when it has visual axes | hand: one H3 per axis, each with a live example |
 | 5 | `## Состояния` | when it has states | hand: one H3 per state, each with a live example |
-| 6 | `## Работа из кода` | no | hand: events (which fires when), properties, methods |
-| 7 | `## Учтите` | no | hand: the traps, one H3 each |
+| 6 | `## Сочетание клавиш` | no | hand: when the component draws and listens for a shortcut |
+| 7 | `## Работа из кода` | no | hand: events (which fires when), properties; methods link the reference |
 | 8 | `## Доступность` | yes | hand, with code for each point |
-| 9 | `## Справочник` | yes | generated, as in the third standard |
+| 9 | `## Справочник` | yes | generated, as in the third standard; a hand-written `### Для разработчика` after the tables (the traps) is kept by the generator |
 | 10 | `## См. также` | no | hand |
 
 Section rules: a heading is up to three plain Russian words, no code; under a
 feature heading one line names the attribute, its default and links the
 reference («`appearance` · по умолчанию `default` · справочник»); the first
 sentence says why, without values; three values or more are a table
-«Значение | Когда брать»; particulars go to «Учтите:», up to three bullets.
+«Значение | Когда брать»; «Учтите:» at most once per section and only for a real trap; tables carry
+no «(по умолчанию)» — the attribute line says it; example tabs are named in
+two or three words; a code block that repeats the example's HTML tab is left
+out.
 
 ## Generated sections
 

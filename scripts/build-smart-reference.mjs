@@ -41,6 +41,7 @@ const HEADING = '## Справочник API';
 // as tables under «Справочник», with the component's facts last.
 // The fourth standard (R022) keeps the same reference.
 const HEADING3 = '## Справочник';
+const DEVELOPER = '### Для разработчика';
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
 const lock = readJson(join(root, 'simai-framework.lock.json'));
@@ -540,6 +541,8 @@ const typeRu = (schema) => {
   return types.length ? types.map((type) => TYPE_RU[type] ?? code(type)).join(' или ') : '—';
 };
 
+const COMMON_ATTRIBUTES = new Set(['template', 'root-class', 'root-style']);
+
 const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
   const lines = [];
@@ -551,15 +554,23 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
   if (current.length === 0) {
     lines.push('Атрибутов нет.', '');
   } else {
-    lines.push('| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|');
-    for (const [name, schema] of current) {
+    // The attributes every Smart component has (template, root-class,
+    // root-style) are not what a reader looks for: they close the list in a
+    // group of their own (R022, 2026-11-07).
+    const own = current.filter(([name]) => !COMMON_ATTRIBUTES.has(name));
+    const common = current.filter(([name]) => COMMON_ATTRIBUTES.has(name));
+    const row = ([name, schema]) => {
       const fallback = schema.default === undefined ? '—'
         : (typeof schema.default === 'boolean' ? (schema.default ? 'да' : 'нет') : literal(schema.default));
       const choice = values(schema) !== '—'
         ? values(schema)
         : (schema.examples ? `например ${schema.examples.map(literal).join(', ')}` : '—');
-      lines.push(`| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`);
-    }
+      return `| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`;
+    };
+    const head = ['| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|'];
+    if (own.length) lines.push(...head, ...own.map(row));
+    if (own.length && common.length) lines.push('', `${h}# Общие для всех компонентов`, '');
+    if (common.length) lines.push(...head, ...common.map(row));
     lines.push('', 'Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase:'
       + ' `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.');
     for (const [attribute, property] of Object.entries(PROPERTY_EXCEPTIONS[folder] ?? {})) {
@@ -597,10 +608,15 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     for (const [name, event] of events) {
       const alias = declared.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
       const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
+      // A manifest that only points at the vocabulary («press (vocabulary).»)
+      // says nothing about when this component sends it; the page's own words
+      // stand in, from config/smart-reference.json `event_summaries`, until
+      // the manifest says it.
+      const stated = settings.event_summaries?.[folder]?.[name];
       const when = event.alias_of
         ? `устаревший псевдоним ${code(event.alias_of)}: подписывайтесь на ${code(event.alias_of)}`
-        : (generic(event.summary) ? '—' : ru(event.summary));
-      const detailText = detail === 'не описан' ? 'не описан' : (detail === 'пустой' ? 'нет' : detail);
+        : (generic(event.summary) ? (stated ?? '—') : ru(event.summary));
+      const detailText = detail === 'не описан' ? 'не описан' : (detail === 'пустой' ? 'пустой объект' : detail);
       lines.push(`| ${code(name)} | ${cell(detailText)} | ${cell(when)} |`);
     }
     lines.push('');
@@ -635,13 +651,9 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
 };
 
 const renderSection3 = (entries) => {
-  const lines = [
-    HEADING3,
-    '',
-    `Собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`
-      + ' и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.',
-    '',
-  ];
+  // The release is named in «О компоненте» (Поставка, Источник); the page
+  // does not open its reference with how it was built (R022).
+  const lines = [HEADING3, ''];
   for (const [folder, component] of entries) lines.push(...renderComponent3(folder, component, entries.length === 1));
   return `${lines.join('\n').replace(/\n+$/u, '')}\n`;
 };
@@ -684,6 +696,11 @@ const rewrite = (text, entries, third) => {
   // What follows the generated section (the standard's «См. также») stays.
   const next = at === -1 ? -1 : text.indexOf('\n## ', at + heading.length + 1);
   const tail = next === -1 ? '' : text.slice(next + 1);
+  // A page may close its reference with a hand-written «### Для разработчика»
+  // (R022): it is kept, from its heading to the next H2, after the tables.
+  const sectionText = at === -1 ? '' : text.slice(at + 1, next === -1 ? text.length : next + 1);
+  const ownAt = sectionText.indexOf(`\n${DEVELOPER}\n`);
+  const own = ownAt === -1 ? '' : sectionText.slice(ownAt + 1).replace(/\n+$/u, '\n');
   body = body.replace(IDENTIFIER, '');
   const parts = body.split(/^(?=## )/mu);
   const kept = parts.filter((part) => {
@@ -693,7 +710,7 @@ const rewrite = (text, entries, third) => {
     return !(test && test(match[2]));
   });
   body = kept.join('').replace(/\n+$/u, '');
-  return `${body}\n\n${(third ? renderSection3 : renderSection)(entries)}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
+  return `${body}\n\n${(third ? renderSection3 : renderSection)(entries)}${own ? `\n${own}` : ''}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
 };
 
 // The version a page describes stands under its title as two Framework badges

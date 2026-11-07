@@ -393,15 +393,10 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-98143c0a0728` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `position` | строка | пусто | пусто, `inline-start`, `inline-start-top`, `inline-start-bottom`, `inline-end`, `inline-end-top`, `inline-end-bottom`, `top`, `top-inline-start`, `top-inline-end`, `bottom`, `bottom-inline-start`, `bottom-inline-end`, `start`, `end`, `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left`, `left-top`, `left-bottom`, `right`, `right-top`, `right-bottom`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`, `left-start`, `left-end`, `right-start`, `right-end`, `inline-start-start`, `inline-start-end`, `inline-end-start`, `inline-end-end` | Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует. |
 | `tooltip` | да/нет | да | — | Устаревший: у меню нет хвоста; значение сохранено ради его класса и ничего не рисует. |
 | `text` | строка | пусто | — | — |
@@ -418,6 +413,14 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 | `items` | список: объект | `[]` | — | — |
 | `entries` | список: объект | `[]` | — | Меню данными (свойством или JSON в атрибуте). См. item_contract. Если задано, заменяет items и слот содержимого. |
 | `search` | объект | — | — | {placeholder, empty, remote}: поле поиска над строками (задаётся свойством). По умолчанию поиск локальный; с remote: true меню поднимает sf-context-menu-search {query} и показывает пункты, которые задаёт хост. Пункт подменю передаёт его через `search`. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
+| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -445,9 +448,9 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 | `sf-menu-context-select` | `{ id: string\\|null, entry: object, checked: boolean\\|null, group: string\\|null }` | Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым. |
 | `sf-menu-context-change` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Человек просит изменить настройку в строке значения: это запрос, он приходит до записи значения. Возникает после `select` и только если `select` не отменён; командная строка вызывает только `select`. Если отменить, ничего не меняется и строка сохраняет прежнее значение — вид никогда не показывает значение, которое хост не принял. |
 | `sf-menu-context-changed` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Факт изменения: значение записано в пункт, и строка его показывает. Хост, который только сохраняет сделанное человеком, слушает это событие и больше ничего. `reset` вызывает его по разу на каждую сдвинувшуюся строку; `set-value` и `set-all` его не вызывают: значение, заданное извне, обратно не сообщается (стандарт, §8). |
-| `sf-menu-context-reset` | нет | Человек попросил вернуть объявленные значения: это запрос. Если отменить, текущие значения остаются; иначе меню показывает объявленные, по разу на каждую сдвинувшуюся строку сообщает `changed` и ждёт, пока хост их сохранит, как при `sf-tabs-settings-reset`. |
-| `sf-menu-context-open` | нет | Открыто через openFor(). Всплывает и с composed: true; detail не передаётся. |
-| `sf-menu-context-opened` | нет | — |
+| `sf-menu-context-reset` | пустой объект | Человек попросил вернуть объявленные значения: это запрос. Если отменить, текущие значения остаются; иначе меню показывает объявленные, по разу на каждую сдвинувшуюся строку сообщает `changed` и ждёт, пока хост их сохранит, как при `sf-tabs-settings-reset`. |
+| `sf-menu-context-open` | пустой объект | Открыто через openFor(). Всплывает и с composed: true; detail не передаётся. |
+| `sf-menu-context-opened` | пустой объект | — |
 | `sf-menu-context-close` | `{ reason: any, unsaved: boolean }` | Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся. |
 | `sf-menu-context-closed` | `{ reason: any }` | — |
 | `sf-menu-context-search` | `{ query: string }` | Запрос поиска, на который отвечает хост (search.remote). |

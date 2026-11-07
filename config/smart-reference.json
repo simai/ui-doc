@@ -43,5 +43,10 @@
       "reason": "The ui-9fb0297bb5c2 and ui-ec56cef08625 manifests carry sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
     }
   },
-  "why": "Folders renamed by the R2 tag renames (ui-c3015f76bcc2; the old tags stay aliases until 2027-01-01) keep the pages written under the old names."
+  "why": "Folders renamed by the R2 tag renames (ui-c3015f76bcc2; the old tags stay aliases until 2027-01-01) keep the pages written under the old names.",
+  "event_summaries": {
+    "button": {
+      "sf-button-press": "Нажатие человеком: щелчок, Enter, пробел или сочетание `shortcut-listen`; вызов `click()` у тега его не присылает, недоступная кнопка и кнопка в загрузке — тоже"
+    }
+  }
 }

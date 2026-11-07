@@ -51,10 +51,11 @@ const STANDARD = {
   },
   // The fourth Smart standard (R022, 2026-11-07, Buttons the prototype): the
   // reader's questions first (when to choose it, everyday tasks with ready
-  // code), then the look and the states, code, traps, accessibility and the
-  // same generated reference as the third.
+  // code), then the look, the states, keyboard shortcuts, code, accessibility
+  // and the third standard's reference, closed by a hand-written «Для
+  // разработчика» for the traps.
   smart4: {
-    order: ['Пример', 'Когда брать', 'Частые задачи', 'Внешний вид', 'Состояния', 'Работа из кода', 'Учтите', 'Доступность', 'Справочник', 'См. также'],
+    order: ['Пример', 'Когда брать', 'Частые задачи', 'Внешний вид', 'Состояния', 'Сочетание клавиш', 'Работа из кода', 'Доступность', 'Справочник', 'См. также'],
     required: ['Пример', 'Доступность', 'Справочник'],
   },
 };
