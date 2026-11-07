@@ -146,12 +146,12 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape` |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-editor-inline` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

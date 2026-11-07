@@ -348,12 +348,12 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 | | |
 |:---|:---|
 | Тег | `<sf-tabs>`, контракт `smart.tabs` версии `1.1.11` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль список вкладок (`tablist`); доступное имя обязательно; клавиши `Tab`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Space` |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/tabs` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-tabs` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/tabs` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-tabs` |
 
 ## См. также
 

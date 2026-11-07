@@ -190,12 +190,12 @@ faq.open(location.hash.slice(1));
 | | |
 |:---|:---|
 | Тег | `<sf-accordion>`, контракт `smart.accordion` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | доступное имя внутренний; клавиши `Tab`, `Enter`, `Space`, `ArrowDown`, `ArrowUp`, `Home`, `End` |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/accordion` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-accordion` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/accordion` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-accordion` |
 
 ## См. также
 

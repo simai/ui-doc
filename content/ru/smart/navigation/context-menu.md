@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-:badge[sf-menu-context]{type=tonal scheme=primary size=1/2} :badge[1.7.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-menu-context]{type=tonal scheme=primary size=1/2} :badge[1.7.2]{type=outline scheme=on-surface size=1/2}
 
 Контекстное меню — панель с коротким списком действий над объектом: страницей,
 строкой таблицы, файлом, профилем; пунктами можно управлять с клавиатуры.
@@ -460,13 +460,13 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.7.0` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.7.2` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль меню (`menu`); доступное имя обязательно; клавиши `ArrowDown`, `ArrowUp`, `Home`, `End`, `ArrowRight`, `ArrowLeft`, `Enter`, `Space`, `Escape`, `Tab`, поиск по первым буквам |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/menu-context` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-menu-context` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/menu-context` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-menu-context` |
 
 ## См. также
 

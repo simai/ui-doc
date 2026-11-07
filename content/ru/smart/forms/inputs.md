@@ -251,12 +251,12 @@ email.focus();
 | | |
 |:---|:---|
 | Тег | `<sf-input>`, контракт `smart.input` версии `1.4.4` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль текстовое поле (`textbox`); доступное имя обязательно; клавиши `Tab`, обычная правка текста |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/input` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-input` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/input` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-input` |
 
 ## См. также
 

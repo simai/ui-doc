@@ -113,7 +113,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-step` |
 | Части | `sf-step-container` |
-| Модификаторы | `sf-step--stage-completed`, `sf-step--stage-default`, `sf-step--stage-error` |
+| Модификаторы | `sf-step--stage-completed`, `sf-step--stage-default`, `sf-step--stage-error`, `sf-step--stage-running`, `sf-step--stage-skipped` |
 | Размеры | `sf-step--size-1`, `sf-step--size-1/2` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

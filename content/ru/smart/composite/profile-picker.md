@@ -5,7 +5,7 @@ description: "Выбирает, создаёт, переименовывает, 
 
 # Выбор профиля
 
-:badge[sf-profile-picker]{type=tonal scheme=primary size=1/2} :badge[1.1.10]{type=outline scheme=on-surface size=1/2}
+:badge[sf-profile-picker]{type=tonal scheme=primary size=1/2} :badge[1.1.11]{type=outline scheme=on-surface size=1/2}
 
 Выбор профиля даёт одно место для работы с профилями: профилями меню, видами
 записи и всем, у чего есть профили. В свёрнутом виде это кнопка, похожая на
@@ -158,13 +158,13 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 
 | | |
 |:---|:---|
-| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.1.10` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.1.11` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль меню (`menu`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Space`, `F2`, `Delete`, `Escape` |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/profile-picker` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-profile-picker` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/profile-picker` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-profile-picker` |
 
 ## См. также
 

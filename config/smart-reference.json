@@ -34,7 +34,10 @@
     "list": "smart/content/list.md",
     "list-feed": "smart/content/list-feed.md"
   },
-  "skip": {},
+  "skip": {
+    "wizard": "New in ui-b58b5dec35e4 (sf-wizard); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
+    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
+  },
   "suppress": {
     "popover": {
       "sections": [

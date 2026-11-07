@@ -139,12 +139,12 @@ description: "Рисует поверхность короткой подска�
 | | |
 |:---|:---|
 | Тег | `<sf-tooltip>`, контракт `smart.tooltip` версии `1.1.3` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `released`; принят в продукт |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль подсказка (`tooltip`); доступное имя внутренний; клавиши `Escape` закрывает открытую связанную подсказку, не уводя фокус с элемента |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/tooltip` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-tooltip` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/tooltip` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-tooltip` |
 
 ## См. также
 

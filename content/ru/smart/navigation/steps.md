@@ -5,7 +5,7 @@ description: "Показывает этапы последовательного
 
 # Шаги
 
-:badge[sf-steps]{type=tonal scheme=primary size=1/2} :badge[1.1.5]{type=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
 
 Шаги показывают этапы процесса, который проходят по порядку: оформление
 заказа, публикация, мастер настройки. Пройденные этапы отмечены галочкой,
@@ -122,6 +122,8 @@ document.querySelector('#next').addEventListener('click', () => {
 | `separator-icon` | строка | `chevron_right` | — | — |
 | `completed-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «Completed»). |
 | `error-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «Error»). |
+| `skipped-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «Skipped»). |
+| `running-label` | строка | — | — | Пусто — текст на языке страницы (по-английски «In progress»). |
 | `current` | целое число | `0` | от 0 | — |
 | `aria-label` | строка | пусто | — | Пусто — текст на языке страницы (по-английски «Steps»). |
 | `items` | список | `[]` | — | — |
@@ -156,13 +158,13 @@ document.querySelector('#next').addEventListener('click', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-steps>`, контракт `smart.steps` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Тег | `<sf-steps>`, контракт `smart.steps` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль группа (`group`); доступное имя обязательно; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/steps` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-steps` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/steps` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-steps` |
 
 ## См. также
 

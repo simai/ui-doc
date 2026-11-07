@@ -5,7 +5,7 @@ description: "Поле формы для выбора людей или объе
 
 # Выбор из поиска
 
-:badge[sf-input-lookup]{type=tonal scheme=primary size=1/2} :badge[1.2.0]{type=outline scheme=on-surface size=1/2}
+:badge[sf-input-lookup]{type=tonal scheme=primary size=1/2} :badge[1.2.1]{type=outline scheme=on-surface size=1/2}
 
 Выбор из поиска даёт выбрать людей или объекты по имени: человек набирает имя,
 видит строки с аватаром, именем и подписью и выбирает одно значение или
@@ -216,13 +216,13 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-lookup>`, контракт `smart.input-lookup` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-98143c0a0728` |
+| Тег | `<sf-input-lookup>`, контракт `smart.input-lookup` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-579db8035fa9` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль поле со списком (`combobox`); доступное имя обязательно; клавиши Набор текста запускает поиск; ArrowDown открывает список и идёт вниз, ArrowUp — вверх, Home и End — к краям, пока список открыт, Enter выбирает активную строку; в поле с одним значением закрывает список, Escape закрывает список, второй Escape очищает запрос, Backspace в пустом поле поиска убирает последнюю плашку, Tab проходит по кнопкам удаления плашек и уводит из поля |
-| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/input-lookup` |
-| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-input-lookup` |
+| Источник | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/smart/input-lookup` |
+| Правило классов | `simai/ui@579db8035fa9cc7889218eb6a42149def0c30854:distr/rule/rule.json#name=cl-input-lookup` |
 
 ## См. также
 
