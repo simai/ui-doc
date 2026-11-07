@@ -264,7 +264,7 @@ async function store(item) {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-5bebd29af045` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -327,12 +327,12 @@ async function store(item) {
 | | |
 |:---|:---|
 | Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.6` |
-| Поставка | выпуск Framework `ui-1ec283e856cd` |
+| Поставка | выпуск Framework `ui-5bebd29af045` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль кнопка (`button`); доступное имя рекомендуется; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/file-upload` |
-| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-file-upload` |
+| Источник | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/smart/file-upload` |
+| Правило классов | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/rule/rule.json#name=cl-file-upload` |
 
 ## См. также
 

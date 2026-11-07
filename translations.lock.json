@@ -30,10 +30,10 @@
             "locale": "en",
             "review": "ai_verified",
             "source_path": "content/ru/index.md",
-            "source_sha256": "aa76425679a8f4114d53a2c40429482d2f0135c5d8b6c1f52f16861f68f297ad",
+            "source_sha256": "d2c45ad8a2c941734e845794546d6f9cc3bbd7d4148c0a978a10848e597c3e3f",
             "source_structure_sha256": "c07064f37437f80a3327d56be3af38a51bb8688a8ae3fcd3d62ceba60a8179b6",
             "target_path": "content/en/index.md",
-            "target_sha256": "dd02e5baa11d87da35b3acabc720fb13c3aa7bdf22fbb8b809a1c11540057e52",
+            "target_sha256": "f016ea3192ff2d445a169e7497f8303f6c68568184dc6b71a66410e7ed092721",
             "target_structure_sha256": "c07064f37437f80a3327d56be3af38a51bb8688a8ae3fcd3d62ceba60a8179b6"
         }
     ],

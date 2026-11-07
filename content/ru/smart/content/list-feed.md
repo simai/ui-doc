@@ -157,7 +157,7 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-5bebd29af045` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -209,12 +209,12 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list-feed>`, контракт `smart.list-feed` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-1ec283e856cd` |
+| Поставка | выпуск Framework `ui-5bebd29af045` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; `host-required` |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль область (`region`); доступное имя внутренний; клавиши `Tab`, `Enter`, `Space`, `ArrowUp`, `ArrowDown`, `Home`, `End` |
-| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/list-feed` |
-| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-list-feed` |
+| Источник | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/smart/list-feed` |
+| Правило классов | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/rule/rule.json#name=cl-list-feed` |
 
 ## См. также
 

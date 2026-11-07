@@ -110,7 +110,7 @@ crumbs.onItemClick((item) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-1ec283e856cd` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-5bebd29af045` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -157,12 +157,12 @@ crumbs.onItemClick((item) => {
 | | |
 |:---|:---|
 | Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-1ec283e856cd` |
+| Поставка | выпуск Framework `ui-5bebd29af045` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="line"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль навигация (`navigation`); доступное имя обязательно; клавиши `Tab`, `Enter` на ссылках, `Enter` или `Space` на кнопке с многоточием |
-| Источник | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/smart/breadcrumbs` |
-| Правило классов | `simai/ui@1ec283e856cdcab6491fc387f0e4c2ec77400209:distr/rule/rule.json#name=cl-breadcrumbs` |
+| Источник | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 

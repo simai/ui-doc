@@ -1,8 +1,8 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "82cf89e23ce8f7eb9c255dcaf3b1f251943ae2af",
-    "core_revision": "1ec283e856cdcab6491fc387f0e4c2ec77400209",
+    "source_revision": "9a978ec46e735dccf50ce6a44f61c3f4292c81c4",
+    "core_revision": "5bebd29af045ba90f285160f673c0f8191ec308f",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "src/core/contracts/composition-type-manifest.v1.schema.json": "53f603377124a90a2340ce42453998f65642e0e28b046a4d9c7b5328024389b0",
@@ -10,13 +10,13 @@
       "src/core/js/composition/index.mjs": "eeebe1fb5680ab8b7d187534a1d51fb187695dc0d8ff2f3f6a1e62e57496675e",
       "src/core/js/composition/builtins.mjs": "80fafe4dd1bd849821d55779a910448a2d205d1e6f90c2426f2f2b4f75f060c4",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/button/smart.manifest.json": "55cf1240a5648ed3fd1d8f2c910cf235cf69c21fe2eec14713ec21aad8746039"
+      "src/smart/button/smart.manifest.json": "5cf7d0585becde78882f6c76206aad2bdb67eea358f0d648bb24a6924b5128be"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
       "distr/core/contracts/composition-type-manifest.v1.schema.json": "53f603377124a90a2340ce42453998f65642e0e28b046a4d9c7b5328024389b0",
       "distr/core/contracts/composition-types.v1.json": "563beb8838199832c7f82e97897234eae7ef52f47e1321db0df3382c19b677f5",
-      "distr/core/js/core.js": "bef19f457a390839ba0a64c0664de7de3b95799720beb129f26135d9551eddac"
+      "distr/core/js/core.js": "8dd261757a45f1d2629cf75d7a0922f4d0c403e9eaddb9a5aa883f52b41f2ad6"
     }
   },
   "source_files": [
