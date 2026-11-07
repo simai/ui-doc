@@ -1,14 +1,20 @@
-<div class="flex flex-wrap gap-3 items-end">
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-icon disabled icon="lock" aria-label="Изменить доступ"></sf-button-icon>
-    <code class="text-1/2 color-on-surface-variant">appearance="default" disabled</code>
-  </div>
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-icon disabled icon="lock" appearance="tonal" aria-label="Изменить доступ"></sf-button-icon>
-    <code class="text-1/2 color-on-surface-variant">appearance="tonal" disabled</code>
-  </div>
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-icon disabled icon="lock" appearance="outline" aria-label="Изменить доступ"></sf-button-icon>
-    <code class="text-1/2 color-on-surface-variant">appearance="outline" disabled</code>
+<div class="query-container">
+  <div class="grid grid-col-2 cq-sm:grid-col-4 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon disabled icon="lock" aria-label="Изменить доступ"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">default</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon disabled icon="lock" appearance="tonal" aria-label="Изменить доступ"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">tonal</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon disabled icon="lock" appearance="outline" aria-label="Изменить доступ"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">outline</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon disabled icon="lock" appearance="ghost" scheme="on-surface" aria-label="Изменить доступ"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">ghost</span>
+    </div>
   </div>
 </div>

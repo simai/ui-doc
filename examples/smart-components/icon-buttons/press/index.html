@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-wrap items-cross-center gap-2">
+    <span class="flex-1">Отчёт за октябрь</span>
+    <sf-button-icon icon="edit" appearance="ghost" scheme="on-surface" aria-label="Изменить отчёт" data-action="edit"></sf-button-icon>
+    <sf-button-icon icon="delete" appearance="ghost" status="error" aria-label="Удалить отчёт" data-action="delete"></sf-button-icon>
+  </div>
+  <form id="icon-buttons-search" action="/search" class="flex flex-wrap items-cross-center gap-2">
+    <sf-input class="flex-1" name="q" value="отчёт" aria-label="Что найти"></sf-input>
+    <sf-button-icon native-type="submit" icon="search" aria-label="Найти"></sf-button-icon>
+  </form>
+</div>

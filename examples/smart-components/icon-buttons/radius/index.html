@@ -1,14 +1,16 @@
-<div class="flex flex-wrap gap-3 items-end">
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-icon icon="share" appearance="tonal" aria-label="Поделиться, обычный радиус"></sf-button-icon>
-    <code class="text-1/2 color-on-surface-variant">без атрибута</code>
-  </div>
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-icon radius="square" icon="share" appearance="tonal" aria-label="Поделиться, без скругления"></sf-button-icon>
-    <code class="text-1/2 color-on-surface-variant">radius="square"</code>
-  </div>
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-icon radius="rounded" icon="share" appearance="tonal" aria-label="Поделиться, круглая"></sf-button-icon>
-    <code class="text-1/2 color-on-surface-variant">radius="rounded"</code>
+<div class="query-container">
+  <div class="grid grid-col-3 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon icon="share" appearance="tonal" aria-label="Поделиться, обычное скругление"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">по умолчанию</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon radius="square" icon="share" appearance="tonal" aria-label="Поделиться, без скругления"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">square</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-button-icon radius="rounded" icon="share" appearance="tonal" aria-label="Поделиться, круглая"></sf-button-icon></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">rounded</span>
+    </div>
   </div>
 </div>
