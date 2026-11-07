@@ -134,7 +134,7 @@ header.addEventListener('sf-page-header-toggle', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-5bebd29af045` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-98143c0a0728` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -167,12 +167,12 @@ header.addEventListener('sf-page-header-toggle', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-header-page>`, контракт `smart.header-page` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-5bebd29af045` |
+| Поставка | выпуск Framework `ui-98143c0a0728` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Tab` доходит до звезды и действий, `Enter` или `Space` ставит и снимает звезду |
-| Источник | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/smart/header-page` |
-| Правило классов | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/rule/rule.json#name=cl-header-page` |
+| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/header-page` |
+| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-header-page` |
 
 ## См. также
 

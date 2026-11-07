@@ -170,7 +170,7 @@ list.addEventListener('sf-list-open', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-5bebd29af045` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-98143c0a0728` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -223,12 +223,12 @@ list.addEventListener('sf-list-open', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list>`, контракт `smart.list` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-5bebd29af045` |
+| Поставка | выпуск Framework `ui-98143c0a0728` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; `host-required` |
 | До прихода кода | сервер пишет `data-sf-skeleton="block"`; пока ждёт данные, рисует свой скелетон ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль список; доступное имя внутренний; клавиши `Tab`, `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `ContextMenu` |
-| Источник | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/smart/list` |
-| Правило классов | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/list` |
+| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

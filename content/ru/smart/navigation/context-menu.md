@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-:badge[sf-menu-context]{type=tonal scheme=primary size=1/2} :badge[1.6.1]{type=outline scheme=on-surface size=1/2}
+:badge[sf-menu-context]{type=tonal scheme=primary size=1/2} :badge[1.7.0]{type=outline scheme=on-surface size=1/2}
 
 `<sf-menu-context>` — панель с коротким списком действий над объектом:
 страницей, строкой таблицы, файлом, профилем. Он даёт пунктам роль меню и
@@ -355,7 +355,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-5bebd29af045` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Собран из манифеста компонента выпуска `ui-98143c0a0728` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 ### Атрибуты
 
@@ -419,13 +419,13 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.6.1` |
-| Поставка | выпуск Framework `ui-5bebd29af045` |
+| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.7.0` |
+| Поставка | выпуск Framework `ui-98143c0a0728` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
 | До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
 | Доступность | роль меню (`menu`); доступное имя обязательно; клавиши `ArrowDown`, `ArrowUp`, `Home`, `End`, `ArrowRight`, `ArrowLeft`, `Enter`, `Space`, `Escape`, `Tab`, поиск по первым буквам |
-| Источник | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/smart/menu-context` |
-| Правило классов | `simai/ui@5bebd29af045ba90f285160f673c0f8191ec308f:distr/rule/rule.json#name=cl-menu-context` |
+| Источник | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/smart/menu-context` |
+| Правило классов | `simai/ui@98143c0a0728904c0ea5f6b5e222b924b56e23b0:distr/rule/rule.json#name=cl-menu-context` |
 
 ## См. также
 
