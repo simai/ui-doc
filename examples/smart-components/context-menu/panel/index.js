@@ -23,5 +23,5 @@ function show(index) {
   result.textContent = `Открыта вкладка «${labels[index]}».`;
 }
 
-menu.addEventListener('sf-context-menu-tab', (event) => show(event.detail.index));
+menu.addEventListener('sf-menu-context-tab', (event) => show(event.detail.index));
 show(0);

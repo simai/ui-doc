@@ -25,7 +25,7 @@ document.querySelectorAll('[data-context-menu-demo="profile"]').forEach((demo) =
   ];
 
   anchor.addEventListener('click', () => menu.toggleFor(anchor));
-  menu.addEventListener('sf-context-menu-select', (event) => {
+  menu.addEventListener('sf-menu-context-select', (event) => {
     const {id, group} = event.detail;
     result.textContent = group ? `Тема: ${id}.` : `Выбран пункт ${id}.`;
   });
