@@ -71,9 +71,10 @@ save.addEventListener('sf-button-press', async () => {
 ### Ссылка в виде кнопки
 
 Переход остаётся ссылкой, даже когда выглядит кнопкой: работают Enter,
-новая вкладка и адрес при наведении.
+новая вкладка и адрес при наведении. Пример не переходит по ссылке, а пишет
+в журнал её адрес.
 
-:::example {id="smart-components/buttons/link" label="Ссылки" preview=sandbox}
+:::example {id="smart-components/buttons/link" label="Ссылки" preview=sandbox log_console=true log_open=false}
 :::
 
 ```html
@@ -88,7 +89,7 @@ save.addEventListener('sf-button-press', async () => {
 
 Кнопка отправки передаёт с формой своё имя и значение, как обычная кнопка.
 
-:::example {id="smart-components/buttons/form" label="Форма" preview=sandbox}
+:::example {id="smart-components/buttons/form" label="Форма" preview=sandbox log_console=true log_open=false}
 :::
 
 Учтите: без `native-type="submit"` кнопка форму не отправляет — по умолчанию
@@ -279,7 +280,7 @@ save.addEventListener('sf-button-press', async () => {
 Кнопка-переключатель включает и выключает настройку: жирный шрифт,
 избранное.
 
-:::example {id="smart-components/buttons/toggle" label="Переключатели" preview=sandbox}
+:::example {id="smart-components/buttons/toggle" label="Переключатели" preview=sandbox log_console=true log_open=false}
 :::
 
 `pressed` — кнопка включена, `pressed="false"` — выключена. Без атрибута
@@ -304,9 +305,10 @@ bold.addEventListener('sf-button-press', () => {
 `shortcut`, `shortcut-listen` • [справочник](#атрибуты)
 
 Сочетание на кнопке подсказывает быстрый путь, а `shortcut-listen` нажимает
-кнопку с клавиатуры.
+кнопку с клавиатуры. В примере нажмите Alt+K (⌥ K на Mac): кнопка поиска
+нажмётся, а журнал под примером покажет событие.
 
-:::example {id="smart-components/buttons/shortcut" label="Сочетания клавиш" preview=sandbox}
+:::example {id="smart-components/buttons/shortcut" label="Сочетания клавиш" preview=sandbox log_console=true log_open=false}
 :::
 
 | Запись | На Mac | В других системах |
