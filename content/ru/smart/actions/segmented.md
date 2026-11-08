@@ -79,7 +79,7 @@ description: "Выбирает ровно одно значение из нес�
 ### Два языка в шапке
 
 Для двух языков меню не нужно: переключатель показывает оба сразу, выбор —
-одно нажатие.
+одно нажатие. В примере переключатель меняет язык меню шапки.
 
 :::example {id="smart-components/segmented/language" label="RU и EN в шапке" preview=sandbox log_console=true log_open=false}
 :::

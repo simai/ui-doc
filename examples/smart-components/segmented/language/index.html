@@ -1,5 +1,10 @@
-<div class="flex flex-col gap-2 items-cross-start" data-solution-language="segmented">
+<header class="flex items-cross-center gap-4 p-2 radius-ui border-1 border-solid border-outline-variant" data-solution-language="segmented">
+  <strong class="text-1">SIMAI</strong>
+  <nav class="flex gap-3 flex-1" aria-label="Разделы">
+    <a href="#" data-i18n="catalog">Каталог</a>
+    <a href="#" data-i18n="pricing">Цены</a>
+    <a href="#" data-i18n="contacts">Контакты</a>
+  </nav>
   <sf-button-group appearance="segmented" size="1/2" value="ru" aria-label="Язык интерфейса"
     items='[{"value":"ru","label":"RU"},{"value":"en","label":"EN"}]'></sf-button-group>
-  <sf-pagination aria-label="Страницы заказов" current="3" total="240" page-size="20" top="false"></sf-pagination>
-</div>
+</header>
