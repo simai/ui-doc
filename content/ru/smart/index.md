@@ -26,6 +26,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Выбор из поиска](/ru/smart/forms/lookup/)
 - [Флажок](/ru/smart/forms/checkbox/)
 - [Радиокнопки](/ru/smart/forms/radio/)
+- [Выбор карточками](/ru/smart/forms/input-choice/) — Поле формы: один вариант или несколько из карточек с названием, пояснением и иконкой.
 - [Переключатель](/ru/smart/forms/switch/)
 - [Слайдер контента](/ru/smart/forms/slider/)
 - [Слайдер диапазона](/ru/smart/forms/range-slider/)

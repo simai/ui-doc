@@ -129,6 +129,7 @@
         "lookup",
         "checkbox",
         "radio",
+        "input-choice",
         "switch",
         "slider",
         "range-slider",

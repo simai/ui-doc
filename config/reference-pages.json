@@ -551,6 +551,10 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/forms/input-choice.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/feedback/badges.md": {
       "kind": "smart",
       "standard": 3
