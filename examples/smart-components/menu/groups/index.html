@@ -1,0 +1,29 @@
+<div class="grid grid-col-1 md:grid-col-2 gap-4 items-cross-start">
+  <div class="flex flex-col gap-2">
+    <sf-menu id="groups-open" label="Разделы сайта" appearance="navigation" collapse="none" current="address" items='[
+      {"id": "site", "label": "Сайт", "group": true, "items": [
+        {"id": "address", "label": "Адрес", "href": "#address", "icon": "language"},
+        {"id": "code", "label": "Код", "href": "#code", "icon": "code"},
+        {"id": "data", "label": "Данные", "href": "#data", "icon": "database"}
+      ]},
+      {"id": "watch", "label": "Наблюдение", "group": true, "collapsible": true, "items": [
+        {"id": "health", "label": "Состояние", "href": "#health", "icon": "monitor_heart"},
+        {"id": "journal", "label": "Журнал", "href": "#journal", "icon": "history"}
+      ]}
+    ]'></sf-menu>
+    <span class="text-1/2 color-on-surface-variant">«Сайт» не сворачивается, «Наблюдение» — collapsible</span>
+  </div>
+  <div class="flex flex-col gap-2">
+    <sf-menu id="groups-closed" label="Разделы сайта, свёрнутая группа" appearance="navigation" collapse="none" current="address" items='[
+      {"id": "site", "label": "Сайт", "group": true, "items": [
+        {"id": "address", "label": "Адрес", "href": "#address", "icon": "language"},
+        {"id": "code", "label": "Код", "href": "#code", "icon": "code"}
+      ]},
+      {"id": "watch", "label": "Наблюдение", "group": true, "collapsible": true, "open": false, "items": [
+        {"id": "health", "label": "Состояние", "href": "#health", "icon": "monitor_heart"},
+        {"id": "journal", "label": "Журнал", "href": "#journal", "icon": "history"}
+      ]}
+    ]'></sf-menu>
+    <span class="text-1/2 color-on-surface-variant">open: false — свёрнута сначала</span>
+  </div>
+</div>
