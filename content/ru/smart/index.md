@@ -58,6 +58,7 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Уведомление](/ru/smart/feedback/alert/)
 - [Плашка уведомлений](/ru/smart/feedback/alert-bar/)
+- [Требует внимания](/ru/smart/feedback/list-attention/) — Список проблем, которым нужен человек: самые серьёзные первыми, у каждой одно действие.
 - [Всплывающие сообщения](/ru/smart/feedback/toast/)
 - [Бейджи](/ru/smart/feedback/badges/)
 - [Прогресс](/ru/smart/feedback/progress-bar/)

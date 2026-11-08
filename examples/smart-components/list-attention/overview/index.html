@@ -1,0 +1,10 @@
+<sf-list-attention label="Здоровье сервера">
+  <script type="application/json" data-sf-settings>
+    {"items": [
+      {"id": "backup", "status": "warning", "title": "Последняя копия demo.test не удалась", "text": "27 октября, 03:30 · нет места на диске", "action": {"label": "Открыть копии", "href": "#backups"}},
+      {"id": "down", "status": "error", "title": "demo-php.test не отвечает", "text": "12 минут, код 502", "action": {"label": "Перезапустить", "event": "restart"}},
+      {"id": "cert", "status": "warning", "title": "Сертификат demo-static.test истекает через 6 дней", "action": {"label": "Продлить", "href": "#cert"}},
+      {"id": "update", "status": "info", "title": "Доступно обновление панели", "text": "Изменения: журнал, резервные копии"}
+    ]}
+  </script>
+</sf-list-attention>

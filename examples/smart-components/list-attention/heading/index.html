@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-2">
+    <sf-list-attention>
+      <script type="application/json" data-sf-settings>{"items": [{"id": "cert", "status": "warning", "title": "Сертификат demo-static.test истекает через 6 дней", "text": "Продлите до 14 ноября", "action": {"label": "Продлить", "href": "#cert"}}]}</script>
+    </sf-list-attention>
+    <span class="text-1/2 color-on-surface-variant">без label</span>
+  </div>
+  <div class="flex flex-col gap-2">
+    <sf-list-attention label="Импорт каталога" heading-level="2">
+      <script type="application/json" data-sf-settings>{"items": [{"id": "rows", "status": "error", "title": "14 строк не загрузились", "text": "Нет обязательного поля «Цена»", "action": {"label": "Скачать отчёт", "event": "report"}}, {"id": "dupes", "status": "warning", "title": "3 товара уже есть в каталоге", "action": {"label": "Показать", "event": "show"}}]}</script>
+    </sf-list-attention>
+    <span class="text-1/2 color-on-surface-variant">label="Импорт каталога" heading-level="2"</span>
+  </div>
+</div>
