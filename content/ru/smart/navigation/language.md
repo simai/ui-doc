@@ -50,7 +50,7 @@ description: "Переключает язык сайта: сегментами �
 же код или тот же основной язык), иначе первый.
 
 Компонент не рисует ничего своего: переключатель — это
-[Группа кнопок](/ru/smart/actions/button-group/) `appearance="segmented"`,
+[Выбор из кнопок](/ru/smart/actions/button-group/) `appearance="segmented"`,
 кнопка — [Кнопка с иконкой](/ru/smart/actions/icon-buttons/) `translate`,
 меню — [Контекстное меню](/ru/smart/navigation/context-menu/) с поиском.
 Флагов и глобуса нет: флаг называет страну, а не язык.
@@ -308,7 +308,7 @@ picker.addEventListener('change', (event) => {
 ## См. также
 
 - [Шапка сайта](/ru/smart/composite/site-header/) — место выбора языка на сайте.
-- [Группа кнопок](/ru/smart/actions/button-group/) — переключатель, из которого
+- [Выбор из кнопок](/ru/smart/actions/button-group/) — переключатель, из которого
   собран вид для двух-трёх языков.
 - [Контекстное меню](/ru/smart/navigation/context-menu/) — меню видов `menu`
   и `search`.

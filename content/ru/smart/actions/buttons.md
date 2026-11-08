@@ -225,7 +225,7 @@ save.addEventListener('sf-button-press', async () => {
 
 Группе нужны `role="group"` и общее имя в `aria-label`. Атрибут `segment`
 подходит для действий: каждая кнопка делает своё. Если в группе выбирают
-один вариант, берите готовую [Группу кнопок](/ru/smart/actions/button-group/)
+один вариант, берите готовый [Выбор из кнопок](/ru/smart/actions/button-group/)
 или [Сегментный переключатель](/ru/smart/actions/segmented/): в них уже есть
 выбор, клавиатура и событие `change`.
 
@@ -510,7 +510,7 @@ tag.getAttribute('value'); // 'save' — уходит с формой
 ## См. также
 
 - [Кнопки с иконкой](/ru/smart/actions/icon-buttons/) — кнопка только с иконкой.
-- [Группа кнопок](/ru/smart/actions/button-group/) — выбор одного варианта из кнопок.
+- [Выбор из кнопок](/ru/smart/actions/button-group/) — выбор одного варианта из кнопок.
 - [Кнопки на классах](/ru/components/actions/buttons/) — та же кнопка в статической разметке.
 - [Спиннер](/ru/smart/feedback/spinner/) — вид спиннера на странице.
 - [Клавиши](/ru/components/content/kbd/) — как рисуются клавиши сочетания.

@@ -11,7 +11,7 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Кнопки](/ru/smart/actions/buttons/)
 - [Кнопки с иконкой](/ru/smart/actions/icon-buttons/)
-- [Группа кнопок](/ru/smart/actions/button-group/)
+- [Выбор из кнопок](/ru/smart/actions/button-group/)
 - [Сегментный переключатель](/ru/smart/actions/segmented/)
 - [Кнопка закрытия](/ru/smart/actions/close/)
 - [Скачивание файла](/ru/smart/actions/download-file/)

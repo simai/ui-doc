@@ -85,7 +85,7 @@ description: "Показывает ожидание, длительность к
 `kind`, [Кнопки](/ru/smart/actions/buttons/#загрузка) и
 [Кнопки с иконкой](/ru/smart/actions/icon-buttons/#загрузка) в
 состоянии `loading`, варианты
-[Группа кнопок](/ru/smart/actions/button-group/#загрузка-варианта),
+[Выбор из кнопок](/ru/smart/actions/button-group/#загрузка-варианта),
 подсчёт в [Пагинация](/ru/smart/navigation/pagination/#количество-неизвестно)
 и загрузка содержимого [Modal](/ru/smart/overlays/modal/#источник-содержимого).
 
