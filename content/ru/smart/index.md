@@ -78,6 +78,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Список](/ru/smart/content/list/)
 - [Лента](/ru/smart/content/list-feed/)
 - [Аккордеон](/ru/smart/content/accordion/)
+- [Плитка показателя](/ru/smart/content/tile-metric/) — Одно важное число на панели: значение, изменение за период, предел со шкалой и состояние.
 - [Галерея](/ru/smart/content/gallery/)
 - [Предпросмотр файла](/ru/smart/content/file-preview/)
 - [Справочная ссылка](/ru/smart/content/reference-link/)
