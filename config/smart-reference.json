@@ -38,7 +38,6 @@
   "skip": {
     "wizard": "New in ui-b58b5dec35e4 (sf-wizard); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
     "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
-    "list-timeline": "New in ui-0c23f6a0af12 (sf-list-timeline); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
     "progress-run": "New in ui-0c23f6a0af12 (sf-progress-run); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
   },
   "suppress": {
