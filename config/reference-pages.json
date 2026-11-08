@@ -551,6 +551,10 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/feedback/progress-run.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/content/list-timeline.md": {
       "kind": "smart",
       "standard": 3

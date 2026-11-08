@@ -171,6 +171,7 @@
         "progress-bar",
         "progress-ring",
         "progress-scale",
+        "progress-run",
         "skeleton",
         "spinner",
         "tooltip",

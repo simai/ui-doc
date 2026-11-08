@@ -64,6 +64,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Прогресс](/ru/smart/feedback/progress-bar/)
 - [Кольцо прогресса](/ru/smart/feedback/progress-ring/)
 - [Шкала прогресса](/ru/smart/feedback/progress-scale/)
+- [Ход выполнения](/ru/smart/feedback/progress-run/) — Долгое задание по шагам: состояния и время шагов, вывод, итог, отмена и повтор.
 - [Скелетон](/ru/smart/feedback/skeleton/)
 - [Спиннер](/ru/smart/feedback/spinner/)
 - [Подсказка](/ru/smart/feedback/tooltip/)
