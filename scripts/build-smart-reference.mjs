@@ -719,7 +719,13 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
       : ROLE_PLAIN[access.role] ? `Читается как ${ROLE_PLAIN[access.role]}` : `Роль ${code(access.role)}`);
   }
   if (access.accessible_name) accessParts.push(NAME_PLAIN[access.accessible_name] ?? `название: ${code(access.accessible_name)}`);
-  if (Array.isArray(access.keyboard) && access.keyboard.length) accessParts.push(`с клавиатуры: ${access.keyboard.map(keyText).join(', ')}`);
+  // Key names read as a list; a phrase about keys has commas of its own, so
+  // a phrase stands apart from its neighbours with a semicolon.
+  if (Array.isArray(access.keyboard) && access.keyboard.length) {
+    const keys = access.keyboard.map(keyText);
+    const bare = (text) => /^`[^`]+`$/u.test(text);
+    accessParts.push(`с клавиатуры: ${keys.map((text, i) => (i === 0 ? '' : (bare(text) && bare(keys[i - 1]) ? ', ' : '; ')) + text).join('')}`);
+  }
   else if (typeof access.keyboard === 'string' && access.keyboard) accessParts.push(ru(access.keyboard).replace(/\.$/u, ''));
   if (accessParts.length) accessParts[0] = accessParts[0][0].toUpperCase() + accessParts[0].slice(1);
   const declarative = manifest.composition?.declarative;

@@ -464,7 +464,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 | Поставка | выпуск Framework `ui-2a671352d67b` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Доступность | Читается как меню; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `→`, `←`, `Enter`, `Пробел`, `Esc`, `Tab`, поиск по первым буквам. |
+| Доступность | Читается как меню; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `→`, `←`, `Enter`, `Пробел`, `Esc`, `Tab`; поиск по первым буквам. |
 | Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/menu-context` |
 | Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-menu-context` |
 
