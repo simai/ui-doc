@@ -551,6 +551,10 @@
       "kind": "smart",
       "standard": 3
     },
+    "smart/content/list-description.md": {
+      "kind": "smart",
+      "standard": 3
+    },
     "smart/feedback/list-attention.md": {
       "kind": "smart",
       "standard": 3
