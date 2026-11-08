@@ -114,7 +114,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `template` — `string`, по умолчанию `default`. Имя шаблона отрисовки; `default` — встроенный.
 - `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
 - `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `selected` — `string`, по умолчанию пусто. Выбранный блок; пусто — выбраны параметры письма.
@@ -138,7 +138,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 - `sf-mail-structure-select` — `detail`: `{ id: any, keyboard?: boolean }`. Выбран этот блок: {id, keyboard}. Пустой id — параметры письма.
 - `sf-mail-structure-move` — `detail`: `{ id: any, index: number }`. Переместить этот блок в это место: {id, index}.
 - `sf-mail-structure-insert` — `detail`: `{ type: any, index: number }`. Добавить в этом месте новый блок этого вида: {type, index}.
-- `sf-mail-structure-add` — ничего не передаёт. Попросили блок; место выбирает хост.
+- `sf-mail-structure-add` — ничего не передаёт. Попросили блок; место выбирает приложение.
 - `sf-mail-structure-duplicate` — `detail`: `{ id: any }`. Сделать копию этого блока: {id}.
 - `sf-mail-structure-delete` — `detail`: `{ ids: array, id: any }`. Удалить этот блок: {ids: [id], id}.
 - `sf-mail-structure-replace` — `detail`: `{ family: any }`. Попросили другой вариант этого места: {family}.

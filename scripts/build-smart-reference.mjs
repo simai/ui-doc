@@ -192,6 +192,13 @@ const ru = (text) => {
 // A list item is not a table cell: the pipe needs no escape there.
 const item = (text) => tagsAsCode(text).replace(/\\\|/gu, '|').replace(/\s*\n\s*/gu, ' ');
 const cell = (text) => tagsAsCode(String(text)).replace(/\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
+// A description in a table or a list reads as a sentence: it ends with a stop
+// whether or not the manifest's prose (or its translation) did.
+const sentence = (text) => {
+  const value = String(text ?? '').trim();
+  if (!value || value === '—' || /[.!?…]$/u.test(value)) return value;
+  return `${value}.`;
+};
 const code = (text) => `\`${String(text).replace(/\|/gu, '\\|')}\``;
 const literal = (value) => {
   if (value === '') return 'пусто';
@@ -315,7 +322,7 @@ const viewPreferenceTable = (preference) => {
   ];
   for (const [name, field] of Object.entries(preference.fields ?? {})) {
     const writers = (field.written_by ?? []).map((writer) => code(writer)).join(', ') || '—';
-    lines.push(`| ${code(name)} | ${code(field.type)} | ${writers} | ${field.seed ? 'да' : 'нет'} | ${cell(ru(field.description))} |`);
+    lines.push(`| ${code(name)} | ${code(field.type)} | ${writers} | ${field.seed ? 'да' : 'нет'} | ${cell(sentence(ru(field.description)))} |`);
   }
   lines.push('');
   return lines;
@@ -341,6 +348,29 @@ const eventStage = (name) => {
     && (entry.items ?? []).some((one) => one.from === name));
   return record ? `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}` : 'работает как псевдоним | —';
 };
+// A manifest may keep an old name as its own entry and say so only in its
+// prose: «Dated alias of heading until 2026-12-01.», «Compatibility alias for
+// spacing.», «Legacy name for invalid, still honoured.», «Alias of dismiss():
+// …». The page describes the current version (R006): such an entry leaves the
+// page for the names guide when the name it stands for is declared beside it.
+const ALIAS_PROSE = /^(?:Dated alias of|Compatibility alias for|Legacy name (?:for|of)|Alias of)\s+`?([A-Za-z][\w-]*)(?:\(\))?`?/u;
+const aliasOf = (text, declared) => {
+  const match = ALIAS_PROSE.exec(String(text ?? ''));
+  return match && Object.hasOwn(declared ?? {}, match[1]) ? match[1] : null;
+};
+const aliasUntil = (text) => /until (\d{4}-\d{2}-\d{2})/u.exec(String(text ?? ''))?.[1] ?? '—';
+const proseAliases = (manifest) => {
+  const properties = manifest.inputs?.properties ?? {};
+  const pick = (entries, declared, field) => entries
+    .map(([name, entry]) => [name, aliasOf(entry?.[field], declared), aliasUntil(entry?.[field])])
+    .filter(([name, target]) => target && target !== name);
+  return {
+    inputs: pick(Object.entries(properties), properties, 'description'),
+    methods: pick(Object.entries(manifest.methods ?? {}), manifest.methods, 'summary'),
+    events: pick(Object.entries(manifest.events ?? {}).filter(([, event]) => !event.alias_of), manifest.events, 'summary'),
+  };
+};
+const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name);
 const collectLegacy = (folder, manifest) => {
   const tag = manifest.custom_element;
   const properties = manifest.inputs?.properties ?? {};
@@ -386,8 +416,15 @@ const collectLegacy = (folder, manifest) => {
   for (const [name, event] of Object.entries(manifest.events ?? {})) {
     if (event.alias_of) rows.add(`| событие ${code(event.alias_of)} | ${code(name)} | ${eventStage(name)} |`);
   }
+  const prose = proseAliases(manifest);
+  for (const [name, target, until] of prose.inputs) {
+    if (!legacyNames.has(name) && !unlisted.includes(name)) rows.add(`| ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
+  }
+  for (const [name, target, until] of prose.methods) rows.add(`| метод ${code(`${target}()`)} | ${code(`${name}()`)} | работает как псевдоним | ${until} |`);
+  for (const [name, target, until] of prose.events) rows.add(`| событие ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
   if (rows.size) legacyByTag.set(tag, [...rows]);
-  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name))};
+  const aliasInputs = new Set(prose.inputs.map(([name]) => name));
+  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name))};
 };
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
@@ -420,7 +457,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       if (schema.default !== undefined) facts.push(`по умолчанию ${literal(schema.default)}`);
       if (values(schema) !== '—') facts.push(`значения: ${values(schema)}`);
       if (schema.examples) facts.push(`например ${schema.examples.map(literal).join(', ')}`);
-      const purpose = ru(schema.description);
+      const purpose = sentence(ru(schema.description));
       lines.push(item(`- ${code(name)} — ${facts.join(', ')}.${purpose ? ` ${purpose}` : ''}`));
     }
     lines.push('');
@@ -442,7 +479,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     lines.push('', 'Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.', '');
   }
 
-  const methods = Object.entries(manifest.methods ?? {});
+  const methods = Object.entries(manifest.methods ?? {}).filter(([name]) => !isProseAlias(manifest, 'methods', name));
   lines.push(`${h} Методы`, '');
   if (methods.length === 0) {
     lines.push('Публичных методов нет.', '');
@@ -456,7 +493,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
       const parts = [];
       if (method.returns && !unknown) parts.push(`возвращает ${typeName(method.returns)}.`);
-      if (!generic(method.summary)) parts.push(ru(method.summary));
+      if (!generic(method.summary)) parts.push(sentence(ru(method.summary)));
       lines.push(item(`- ${code(`${name}(${argumentList.join(', ')})`)}${parts.length ? ` — ${parts.join(' ')}` : ''}`));
     }
     lines.push('');
@@ -464,7 +501,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
 
   // An event's dated old name is an earlier name: the names guide lists it.
   const declared = Object.entries(manifest.events ?? {});
-  const events = declared.filter(([, event]) => !event.alias_of);
+  const events = declared.filter(([name, event]) => !event.alias_of && !isProseAlias(manifest, 'events', name));
   lines.push(`${h} События`, '');
   if (events.length === 0) {
     lines.push('Своих событий нет; общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
@@ -482,7 +519,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       const same = own === 'не описан' || (canonical && own === shape(manifest, canonical.payload));
       const when = event.alias_of
         ? `устаревший псевдоним события ${code(event.alias_of)}: ${same ? 'приходит с тем же `detail`' : `приходит с прежним \`detail\`: ${own}`}, подписывайтесь на ${code(event.alias_of)}.`
-        : (generic(event.summary) ? '' : ru(event.summary));
+        : (generic(event.summary) ? '' : sentence(ru(event.summary)));
       const detailText = detail === 'не описан'
         ? '`detail` не описан.'
         : (detail === 'пустой' ? 'ничего не передаёт.' : `\`detail\`: ${detail}.`);
@@ -565,7 +602,7 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
       const choice = values(schema) !== '—'
         ? values(schema)
         : (schema.examples ? `например ${schema.examples.map(literal).join(', ')}` : '—');
-      return `| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`;
+      return `| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(sentence(ru(schema.description)) || '—')} |`;
     };
     const head = ['| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|'];
     if (own.length) lines.push(...head, ...own.map(row));
@@ -578,7 +615,7 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     }
     lines.push('');
   }
-  const methods = Object.entries(manifest.methods ?? {});
+  const methods = Object.entries(manifest.methods ?? {}).filter(([name]) => !isProseAlias(manifest, 'methods', name));
   lines.push(`${h} Методы`, '');
   if (methods.length === 0) {
     lines.push('Публичных методов нет.', '');
@@ -590,14 +627,14 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
         : `${argument.name}${argument.required === false ? '?' : ''}: ${[argument.type ?? argument.schema?.type].flat().filter(Boolean).join('|') || 'any'}`));
       const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
       const returns = method.returns && !unknown ? typeRu(method.returns) : '—';
-      lines.push(`| ${code(`${name}(${argumentList.join(', ')})`)} | ${returns} | ${generic(method.summary) ? '—' : cell(ru(method.summary))} |`);
+      lines.push(`| ${code(`${name}(${argumentList.join(', ')})`)} | ${returns} | ${generic(method.summary) ? '—' : cell(sentence(ru(method.summary)))} |`);
     }
     lines.push('');
   }
 
   // An event's dated old name is an earlier name: the names guide lists it.
   const declared = Object.entries(manifest.events ?? {});
-  const events = declared.filter(([, event]) => !event.alias_of);
+  const events = declared.filter(([name, event]) => !event.alias_of && !isProseAlias(manifest, 'events', name));
   lines.push(`${h} События`, '');
   const shared = 'Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).';
   if (events.length === 0) {
@@ -617,7 +654,7 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
         ? `устаревший псевдоним ${code(event.alias_of)}: подписывайтесь на ${code(event.alias_of)}`
         : (generic(event.summary) ? (stated ?? '—') : ru(event.summary));
       const detailText = detail === 'не описан' ? 'не описан' : (detail === 'пустой' ? 'пустой объект' : detail);
-      lines.push(`| ${code(name)} | ${cell(detailText)} | ${cell(when)} |`);
+      lines.push(`| ${code(name)} | ${cell(detailText)} | ${cell(sentence(when))} |`);
     }
     lines.push('');
   }

@@ -138,7 +138,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-message-log>` |
-| Назначение | Устаревшее имя `sf-list-feed` SIMAI Framework (до 2027-01-01): лента под прежним тегом, которая по-прежнему отвечает на прежние имена (`messages`, `setMessages`, `prependMessages`, `renderMessage`, `announceMessage`, события `sf-message-log-*`). |
+| Назначение | Та же лента, что `sf-list-feed`, под другим тегом; отвечает и на имена `messages`, `setMessages`, `prependMessages`, `renderMessage`, `announceMessage` и события `sf-message-log-*`. |
 | Контракт | `smart.message-log`, версия `2.0.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
@@ -147,13 +147,13 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
 - `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
 - `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `changes` — `string`, по умолчанию `content`, значения: `content`, `revision`. Как сравниваются две записи одного сообщения (§18.4).
 - `has-more` — `boolean`, по умолчанию `false`. Есть ранняя история: видна кнопка «Раньше», а достижение верха её просит.
 - `label` — `string`. Доступное имя области; пусто — «Переписка» на языке страницы.
-- `live` — `string`, по умолчанию `polite`, значения: `polite`, `off`. polite: законченное сообщение другого участника объявляется один раз. off: объявляет хост через announce(), или ничего не объявляется.
+- `live` — `string`, по умолчанию `polite`, значения: `polite`, `off`. polite: законченное сообщение другого участника объявляется один раз. off: объявляет приложение через announce(), или ничего не объявляется.
 - `messages` — `array` из `object`, по умолчанию `[]`.
 
 ### Методы
@@ -166,7 +166,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 - `cancel(id: any)` — возвращает `object`. Сразу прекратить рисовать растущее сообщение; поток кончается как отменённый.
 - `redraw(id: any)` — возвращает `object`. Перерисовывает одно сообщение или все, после того как изменились собственные входные данные функции отрисовки.
 - `requestEarlier()` — возвращает `object`. Просит раннюю историю, как кнопка и достижение верха; пока запрос не завершён — ничего.
-- `earlierFailed()` — возвращает `object`. Хост не смог загрузить раннюю историю: кнопку снова можно нажать.
+- `earlierFailed()` — возвращает `object`. Приложение не смогло загрузить раннюю историю: кнопку снова можно нажать.
 - `scrollToLatest(options: object)` — возвращает `object`. Прокручивает к последнему сообщению; с focus фокус переходит на него.
 - `announce(text: string)` — возвращает `object`. Один раз произносит текст через вежливую живую область ленты (обрезается до 240 символов).
 - `setHasMore(value: boolean)` — возвращает `null`. Есть ли ранняя история.
@@ -176,20 +176,20 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-message-log-load-more` — `detail`: `{ direction?: any, before: any }`. Запрошена более ранняя история: `{direction: before, before}`. Отменить запрос — `earlierFailed()`. Имя версии 1.0 `sf-message-log-load-earlier` отправляется после него до 2026-12-01.
+- `sf-message-log-load-more` — `detail`: `{ direction?: any, before: any }`. Запрошена более ранняя история: `{direction: before, before}`. Отменить запрос — `earlierFailed()`.
 - `sf-message-log-begun` — `detail`: `{ id: any }`. Пришло растущее сообщение (словарь §5.2).
 - `sf-message-log-chunk` — `detail`: `{ id: any, revision?: string }`. Растущее сообщение изменилось и нарисовано заново на том же месте.
 - `sf-message-log-completed` — `detail`: `{ id: any }`. Сообщение перестало расти целиком.
 - `sf-message-log-failed` — `detail`: `{ id: any, reason: string, message: string }`. Сообщение перестало расти с ошибкой: `{id, reason, message}`.
 - `sf-message-log-cancelled` — `detail`: `{ id: any }`. Поток остановлен: cancel, ожидание прервано, сообщение убрано, беседа заменена.
-- `sf-message-log-load-earlier` — `detail` не описан. Устаревшее имя `sf-list-feed-load-more` до 2026-12-01 (detail дополняется).
+- `sf-message-log-load-earlier` — `detail` не описан. То же, что `sf-list-feed-load-more`.
 
 ### Доступность
 
 - Роль: область (`region`).
 - Доступное имя: внутренний.
 - Клавиши: `Tab`, `Enter`, `Space`, `ArrowUp`, `ArrowDown`, `Home`, `End`.
-- Фокус: Прокручиваемая колонка — названная область с фокусом, внутри — лог с aria-live off; один вежливый диктор объявляет новое один раз. «К последнему сообщению» переносит фокус на последнее сообщение (article хоста, иначе элемент списка). Из сообщения в фокусе ArrowUp/ArrowDown переходят к соседнему, Home/End — к первому и последнему загруженному; ArrowUp на первом просит раннюю историю. Плавная прокрутка учитывает prefers-reduced-motion.
+- Фокус: Прокручиваемая колонка — названная область с фокусом, внутри — лог с aria-live off; один вежливый диктор объявляет новое один раз. «К последнему сообщению» переносит фокус на последнее сообщение (article приложения, иначе элемент списка). Из сообщения в фокусе ArrowUp/ArrowDown переходят к соседнему, Home/End — к первому и последнему загруженному; ArrowUp на первом просит раннюю историю. Плавная прокрутка учитывает prefers-reduced-motion.
 
 ### Минимальная разметка
 

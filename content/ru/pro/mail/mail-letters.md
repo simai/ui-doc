@@ -121,7 +121,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
 - `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
 - `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
 - `query` — `string`, по умолчанию пусто. Поиск по названию; поле внутри элемента записывает его, пока человек печатает.
@@ -141,8 +141,8 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 - `sf-mail-letters-open` — `detail`: `{ id: any }`. Открыть это письмо: `{id}`. Текущее письмо не предлагается.
 - `sf-mail-letters-copy` — `detail`: `{ id: any }`. Сделать копию этого письма: `{id}`.
-- `sf-mail-letters-rename` — `detail`: `{ id: any }`. Переименовать это письмо: `{id}`. Новое название спрашивает хост.
-- `sf-mail-letters-delete` — `detail`: `{ ids: array, id: any }`. Удалить это письмо: `{ids: [id], id}`. Подтверждает и удаляет хост.
+- `sf-mail-letters-rename` — `detail`: `{ id: any }`. Переименовать это письмо: `{id}`. Новое название спрашивает приложение.
+- `sf-mail-letters-delete` — `detail`: `{ ids: array, id: any }`. Удалить это письмо: `{ids: [id], id}`. Подтверждает и удаляет приложение.
 - `sf-mail-letters-create` — ничего не передаёт. Запрошено новое письмо.
 
 ### Доступность

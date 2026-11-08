@@ -173,13 +173,12 @@ price.setValue([10000, 30000]);
 | `disabled` | да/нет | нет | — | — |
 | `value` | строка | пусто | — | — |
 | `aria-label` | строка | пусто | — | — |
-| `prefix` | строка | пусто | — | Псевдоним с датой для `prefix-text` до 2026-12-01. |
 
 #### Общие для всех компонентов
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
 | `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
 | `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
@@ -196,7 +195,7 @@ price.setValue([10000, 30000]);
 | `setState(nextState: object)` | объект | Применяет ключи: value — через setValue, multiple явно задаёт число ручек, disabled — через setDisabled; любой другой ключ записывается как атрибут в kebab-case (false, null, undefined или пустое значение удаляет его, true устанавливает пустым). |
 | `onUpdateValue(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-range-slider-update; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется. |
 | `onSliderUpdate(handler: function, options?: object\|boolean)` | объект | То же, что onUpdateValue. |
-| `onChange(handler: function, options?: object)` | — | Подписывается на change — зафиксированное значение: handler(value, detail, event). Возвращает элемент. |
+| `onChange(handler: function, options?: object)` | — | Подписывается на change — зафиксированное значение: handler(value, detail, event). Возвращает тег. |
 | `onSliderChange(handler: function, options?: object\|boolean)` | объект | То же, что onChange: подписывается на change — каноническое имя. |
 | `onSet(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-range-slider-set; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется. |
 | `onSliderSet(handler: function, options?: object\|boolean)` | объект | То же, что onSet. |

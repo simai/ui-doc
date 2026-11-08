@@ -148,7 +148,7 @@ compact.addEventListener('change', async (event) => {
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
 | `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
 | `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
@@ -160,11 +160,11 @@ compact.addEventListener('change', async (event) => {
 |:---|:---|:---|
 | `getInputElement()` | объект или пусто | Возвращает внутренний нативный input (.sf-switch input[type="checkbox"]) или null до отрисовки. |
 | `setChecked(nextValue?: boolean)` | объект | Устанавливает свойство и состояние checked внутреннего input; не отправляет change. |
-| `setDisabled(nextValue?: boolean)` | объект | Устанавливает или снимает disabled на хост-элементе и внутреннем input. |
-| `setState(nextState: object)` | объект | Применяет checked и disabled к внутреннему input и отражает их в атрибутах хост-элемента; до отрисовки использует базовый setState. |
+| `setDisabled(nextValue?: boolean)` | объект | Устанавливает или снимает disabled на теге и внутреннем input. |
+| `setState(nextState: object)` | объект | Применяет checked и disabled к внутреннему input и отражает их в атрибутах тега; до отрисовки использует базовый setState. |
 | `onChange(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик нативного события change, которое всплывает от внутреннего input. |
-| `onFocus(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик focusin на хост-элементе. |
-| `onBlur(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик focusout на хост-элементе. |
+| `onFocus(handler: function, options?: object\|boolean)` | объект | Подписывает на `focusin` у тега. |
+| `onBlur(handler: function, options?: object\|boolean)` | объект | Подписывает на `focusout` у тега. |
 | `resetToInherited()` | да/нет | Возвращает поле к наследуемому значению, как кнопка сброса: отправляет отменяемое sf-field-reset, затем очищает собственное значение и ставит фокус на элемент управления. Возвращает, был ли сброс (false — если нет наследуемого или собственного значения, если поле недоступно или только для чтения, или событие отменили). |
 
 ### События

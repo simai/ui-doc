@@ -139,13 +139,12 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 | `value` | строка | `on` | — | Что отправляет выбранная радиокнопка; без значения — "on", как у родной радиокнопки (стандарт 1.3.8 §17.1, пункт 2). |
 | `invalid` | да/нет | нет | — | Показанное состояние ошибки: вид ошибки и `aria-invalid` на родном поле ввода. |
 | `checked` | да/нет | нет | — | — |
-| `error` | да/нет | нет | — | Прежнее имя `invalid`: псевдоним с датой до 2026-12-01 (aliases.json, стандарт 1.3.8 §17.2). |
 
 #### Общие для всех компонентов
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
 | `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
 | `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
@@ -157,11 +156,11 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 |:---|:---|:---|
 | `getInputElement()` | объект или пусто | Возвращает внутренний нативный input (.sf-radio-button input[type="radio"]) или null до отрисовки. |
 | `setChecked(nextValue?: boolean)` | объект | Устанавливает свойство и состояние checked внутреннего input; не отправляет change. |
-| `setDisabled(nextValue?: boolean)` | объект | Устанавливает или снимает disabled на хост-элементе и внутреннем input. |
-| `setState(nextState: object)` | объект | Применяет checked и disabled к внутреннему input (установка checked также обновляет остальную именованную группу) и отражает их в атрибутах хост-элемента; до отрисовки использует базовый setState. |
+| `setDisabled(nextValue?: boolean)` | объект | Устанавливает или снимает disabled на теге и внутреннем input. |
+| `setState(nextState: object)` | объект | Применяет checked и disabled к внутреннему input (установка checked также обновляет остальную именованную группу) и отражает их в атрибутах тега; до отрисовки использует базовый setState. |
 | `onChange(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик нативного события change, которое всплывает от внутреннего input. |
-| `onFocus(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик focusin на хост-элементе. |
-| `onBlur(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик focusout на хост-элементе. |
+| `onFocus(handler: function, options?: object\|boolean)` | объект | Подписывает на `focusin` у тега. |
+| `onBlur(handler: function, options?: object\|boolean)` | объект | Подписывает на `focusout` у тега. |
 
 ### События
 

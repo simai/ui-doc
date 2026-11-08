@@ -131,7 +131,7 @@ crumbs.onItemClick((item) => {
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
 | `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
 | `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
@@ -143,8 +143,8 @@ crumbs.onItemClick((item) => {
 |:---|:---|:---|
 | `getCapturedItems()` | список: объект | Читает захваченные дочерние sf-breadcrumbs-item в простые объекты пунктов (label, href, icon, current, active, disabled, ellipsis, target, rel, itemClass, containerClass, ariaLabel, value, hiddenItems). |
 | `getDisplayItems(items?: array)` | список: объект | Возвращает пункты в том виде, в каком они показаны: если их больше max-items (не меньше 3) и многоточие не раскрыто, середина заменяется одним пунктом-многоточием со скрытыми пунктами; все пункты переиндексируются, и текущим может быть только последний. |
-| `setState(nextState?: object)` | объект | Записывает каждый ключ как атрибут хост-элемента (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает элемент. |
-| `onItemClick(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-breadcrumbs-press; обработчик получает (item, detail, event). Возвращает элемент. |
+| `setState(nextState?: object)` | объект | Записывает каждый ключ как атрибут тега (camelCase в kebab-case): массивы — как JSON, true — как пустой атрибут, false/null/undefined удаляют его. Возвращает тег. |
+| `onItemClick(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-breadcrumbs-press; обработчик получает (item, detail, event). Возвращает тег. |
 
 ### События
 

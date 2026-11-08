@@ -166,13 +166,12 @@ terms.setChecked(false);
 | `checked` | да/нет | нет | — | — |
 | `indeterminate` | да/нет | нет | — | Смешанное визуальное состояние чекбокса, обобщающего связанные варианты. |
 | `aria-label` | строка | пусто | — | Доступное имя чекбокса без видимой подписи. |
-| `error` | да/нет | нет | — | Прежнее имя `invalid`: псевдоним с датой до 2026-12-01 (aliases.json, стандарт 1.3.8 §17.2). |
 
 #### Общие для всех компонентов
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
 | `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
 | `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
@@ -184,14 +183,14 @@ terms.setChecked(false);
 |:---|:---|:---|
 | `getInputElement()` | объект или пусто | Возвращает внутренний нативный input флажка или null до отрисовки. |
 | `isChecked()` | да/нет | Возвращает текущее нативное состояние checked. |
-| `setChecked(nextValue?: boolean\|string)` | объект | Устанавливает состояние checked в атрибуте хост-элемента и во внутреннем input через setState(). Возвращает элемент. |
-| `setIndeterminate(nextValue?: boolean\|string)` | объект | Устанавливает состояние indeterminate в атрибуте хост-элемента и во внутреннем input через setState(). Возвращает элемент. |
-| `setDisabled(nextValue?: boolean\|string)` | объект | Устанавливает состояние disabled в атрибуте хост-элемента и во внутреннем input через setState(). Возвращает элемент. |
-| `setBooleanStateAttribute(name: string, value: boolean)` | пусто | Добавляет указанный атрибут хост-элемента как пустой атрибут, когда value истинно, и удаляет его в противном случае. |
-| `setState(nextState?: object)` | объект | Применяет checked, indeterminate и disabled и к атрибуту хост-элемента, и к внутреннему input; остальные ключи передаются в базовый setState как атрибуты хост-элемента. Возвращает элемент. |
-| `onChange(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик change на хост-элементе. Возвращает элемент. |
-| `onFocus(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик focusin на хост-элементе. Возвращает элемент. |
-| `onBlur(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик focusout на хост-элементе. Возвращает элемент. |
+| `setChecked(nextValue?: boolean\|string)` | объект | Устанавливает состояние checked в атрибуте тега и во внутреннем input через setState(). Возвращает тег. |
+| `setIndeterminate(nextValue?: boolean\|string)` | объект | Устанавливает состояние indeterminate в атрибуте тега и во внутреннем input через setState(). Возвращает тег. |
+| `setDisabled(nextValue?: boolean\|string)` | объект | Устанавливает состояние disabled в атрибуте тега и во внутреннем input через setState(). Возвращает тег. |
+| `setBooleanStateAttribute(name: string, value: boolean)` | пусто | Добавляет указанный атрибут тега как пустой атрибут, когда value истинно, и удаляет его в противном случае. |
+| `setState(nextState?: object)` | объект | Применяет checked, indeterminate и disabled и к атрибуту тега, и к внутреннему input; остальные ключи передаются в базовый setState как атрибуты тега. Возвращает тег. |
+| `onChange(handler: function, options?: object\|boolean)` | объект | Подписывает на `change` у тега. Возвращает тег. |
+| `onFocus(handler: function, options?: object\|boolean)` | объект | Подписывает на `focusin` у тега. Возвращает тег. |
+| `onBlur(handler: function, options?: object\|boolean)` | объект | Подписывает на `focusout` у тега. Возвращает тег. |
 
 ### События
 

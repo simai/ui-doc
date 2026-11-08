@@ -119,7 +119,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
 | `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
 | `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 
@@ -129,7 +129,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `edit(element: object, options: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением) |
+| `edit(element: object, options: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением). |
 
 ### События
 
@@ -137,9 +137,9 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-editor-inline-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе |
-| `sf-editor-inline-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе |
-| `sf-editor-inline-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе |
+| `sf-editor-inline-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе. |
+| `sf-editor-inline-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе. |
+| `sf-editor-inline-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе. |
 
 ### О компоненте
 
