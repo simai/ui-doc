@@ -3575,8 +3575,12 @@
       "to": "ru/pro/editor/content-editor"
     },
     {
+      "from": "ru/smart/actions/button-group",
+      "to": "ru/smart/actions/segmented"
+    },
+    {
       "from": "ru/smart-components/actions/button-group",
-      "to": "ru/smart/actions/button-group"
+      "to": "ru/smart/actions/segmented"
     },
     {
       "from": "ru/smart-components/actions/buttons",

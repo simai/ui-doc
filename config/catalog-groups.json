@@ -112,7 +112,6 @@
       "items": [
         "buttons",
         "icon-buttons",
-        "button-group",
         "segmented",
         "close",
         "download-file",

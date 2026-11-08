@@ -450,7 +450,7 @@
       "component": "theme",
       "css": false
     },
-    "smart/actions/button-group.md": {
+    "smart/actions/segmented.md": {
       "kind": "smart",
       "standard": 4
     },
