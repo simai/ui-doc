@@ -147,9 +147,9 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 |:---|:---|
 | Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.4.0` |
 | Поставка | выпуск Framework `ui-2a671352d67b` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Esc`. |
 | Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/editor-inline` |
 | Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-editor-inline` |
 

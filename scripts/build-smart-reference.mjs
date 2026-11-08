@@ -272,6 +272,45 @@ const READINESS = {
   accepted: 'принят в продукт',
 };
 const NAME_RULE = {required: 'обязательно', optional: 'необязательно', none: 'не нужно', inherited: 'наследуется от содержимого'};
+// «О компоненте» reads as plain sentences for a product developer (owner,
+// 2026-11-08): what the release promises, what a screen reader hears and
+// which keys work, without manifest vocabulary. Only facts the manifest
+// states; a value with no plain wording here is shown as code.
+const LIFECYCLE_PLAIN = {
+  experimental: 'Пробный: может измениться в следующих выпусках',
+  stable: 'Стабильный',
+  released: 'Выпущен',
+  deprecated: 'Устаревший: замените, пока его не убрали',
+  internal: 'Внутренний: не используйте напрямую',
+};
+const READINESS_PLAIN = {
+  described: 'описан и проверен своим сценарием, в продуктах ещё не проверен',
+  runnable: 'работает в Студии, в продуктах ещё не проверен',
+  verified: 'проверен приёмкой',
+  accepted: 'используется в продуктах',
+  'host-required': 'работает только с приложением, подключённым через порт',
+};
+const ROLE_PLAIN = {
+  banner: 'шапка сайта', button: 'кнопка', checkbox: 'флажок', combobox: 'поле со списком', dialog: 'диалоговое окно',
+  group: 'группа', img: 'изображение', link: 'ссылка', list: 'список', menu: 'меню', meter: 'шкала',
+  navigation: 'навигация', progressbar: 'индикатор прогресса', radio: 'радиокнопка', radiogroup: 'группа переключателей',
+  region: 'область страницы', separator: 'разделитель', slider: 'ползунок', spinbutton: 'числовое поле',
+  status: 'строка состояния', switch: 'переключатель', tablist: 'вкладки', textbox: 'текстовое поле',
+  tooltip: 'подсказка', tree: 'дерево', treeitem: 'пункт дерева',
+};
+const NAME_PLAIN = {
+  required: 'нужна подпись или `aria-label`',
+  recommended: 'желательна подпись или `aria-label`',
+  optional: 'подпись или `aria-label` по желанию',
+  none: 'подпись не нужна',
+  inherited: 'название берётся из содержимого',
+  internal: 'название компонент ставит сам',
+};
+const KEY_PLAIN = {
+  Space: 'Пробел', Escape: 'Esc', ArrowUp: '↑', ArrowDown: '↓', ArrowLeft: '←', ArrowRight: '→', ContextMenu: 'клавиша меню',
+};
+const keyPlain = (name) => (KEY_PLAIN[name] ?? name).replace(/^Mod\+/u, 'Ctrl/Cmd+');
+const SHAPE_PLAIN = {rows: 'строки', record: 'запись', menu: 'меню', block: 'блок', line: 'строка'};
 
 // A journal item names its component, or names only an attribute when the rename
 // holds for every component that has it (`status="danger"` became `error`).
@@ -332,6 +371,12 @@ const viewPreferenceTable = (preference) => {
 // the data-sf-skeleton value the server writes, and whether the component
 // draws a skeleton of its own while it waits for data.
 const SKELETON_SHAPES = ['rows', 'record', 'menu', 'block', 'line', 'none'];
+const skeletonPlain = (skeleton) => (skeleton.shape === 'none'
+  ? `Заготовки нет${skeleton.while_loading === 'template' ? '; пока ждёт данные, компонент показывает свою' : ''}.`
+  : `Пока грузится код, на месте компонента видна заготовка «${SHAPE_PLAIN[skeleton.shape] ?? skeleton.shape}»`
+    + ` (сервер пишет ${code(`data-sf-skeleton="${skeleton.shape}"`)})`
+    + `${skeleton.while_loading === 'template' ? '; пока ждёт данные, компонент показывает свою' : ''}.`)
+  + ' Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода).';
 const skeletonText = (skeleton) => (skeleton.shape === 'none'
   ? 'нет: атрибут `data-sf-skeleton` не пишется; '
   : `сервер пишет ${code(`data-sf-skeleton="${skeleton.shape}"`)}; `)
@@ -666,10 +711,17 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
   const access = suppressed.has('accessibility') ? {} : (manifest.accessibility ?? {});
   const key = (entry) => (dictionary[entry] === undefined && /^[A-Z][A-Za-z0-9]*(\+[A-Za-z0-9]+)*$/u.test(entry) ? code(entry) : ru(entry));
   const accessParts = [];
-  if (access.role) accessParts.push(`роль ${ru(access.role)}`);
-  if (access.accessible_name) accessParts.push(`доступное имя ${NAME_RULE[access.accessible_name] ?? ru(access.accessible_name)}`);
-  if (Array.isArray(access.keyboard) && access.keyboard.length) accessParts.push(`клавиши ${access.keyboard.map(key).join(', ')}`);
+  // A key name is code; a phrase the manifest writes about keys is text.
+  const keyText = (entry) => (dictionary[entry] === undefined && (/^[A-Z][A-Za-z0-9]*(\+[A-Za-z0-9]+)*$/u.test(entry) || /^[^\sа-яё]{1,3}$/iu.test(entry))
+    ? code(keyPlain(entry)) : ru(entry).replace(/\.$/u, ''));
+  if (access.role) {
+    accessParts.push(access.role === 'none' ? 'Своей роли для экранного диктора нет'
+      : ROLE_PLAIN[access.role] ? `Читается как ${ROLE_PLAIN[access.role]}` : `Роль ${code(access.role)}`);
+  }
+  if (access.accessible_name) accessParts.push(NAME_PLAIN[access.accessible_name] ?? `название: ${code(access.accessible_name)}`);
+  if (Array.isArray(access.keyboard) && access.keyboard.length) accessParts.push(`с клавиатуры: ${access.keyboard.map(keyText).join(', ')}`);
   else if (typeof access.keyboard === 'string' && access.keyboard) accessParts.push(ru(access.keyboard).replace(/\.$/u, ''));
+  if (accessParts.length) accessParts[0] = accessParts[0][0].toUpperCase() + accessParts[0].slice(1);
   const declarative = manifest.composition?.declarative;
   const quality = '/ru/guide/smart-components/quality/#готовность-компонента-к-использованию';
   lines.push(`${h} О компоненте`, '',
@@ -677,9 +729,9 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     '|:---|:---|',
     `| Тег | ${code(`<${tag}>`)}, контракт ${code(manifest.id)} версии ${code(manifest.version)} |`,
     `| Поставка | ${delivery} |`,
-    `| [Готовность](${quality}) | ${LIFECYCLE[manifest.lifecycle] ?? code(manifest.lifecycle)}; ${READINESS[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')} |`,
-    ...(manifest.presentation?.skeleton ? [`| До прихода кода | ${skeletonText(manifest.presentation.skeleton)} |`] : []),
-    ...(accessParts.length ? [`| Доступность | ${cell(accessParts.join('; '))} |`] : []),
+    `| [Готовность](${quality}) | ${LIFECYCLE_PLAIN[manifest.lifecycle] ?? `Состояние ${code(manifest.lifecycle)}`}; ${READINESS_PLAIN[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')}. |`,
+    ...(manifest.presentation?.skeleton ? [`| До прихода кода | ${skeletonPlain(manifest.presentation.skeleton)} |`] : []),
+    ...(accessParts.length ? [`| Доступность | ${cell(`${accessParts.join('; ')}.`)} |`] : []),
     ...(declarative?.type ? [`| [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел ${code(declarative.type)}; свойства — атрибуты из таблицы выше${(() => { const props = new Set(declarative.props ?? []); const out = current.map(([name]) => name).filter((name) => !props.has(name)); return out.length ? `, кроме ${out.map(code).join(', ')}` : ''; })()}${Object.keys(declarative.data ?? {}).length ? `, данные: ${Object.keys(declarative.data).map(code).join(', ')}` : ''} |`] : []),
     `| Источник | ${code(citation)} |`,
     ...(rule ? [`| Правило классов | ${code(rule)} |`] : []),

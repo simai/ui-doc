@@ -245,9 +245,9 @@ SF.Resizer.attach(table, {
 |:---|:---|
 | Тег | `<sf-resizer>`, контракт `smart.resizer` версии `1.1.5` |
 | Поставка | выпуск Framework `ui-2a671352d67b` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль separator; доступное имя рекомендуется; клавиши `ArrowLeft`, `ArrowRight`, `Home`, `End`, `PageUp`, `PageDown`, `Enter`, `Space` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как разделитель; желательна подпись или `aria-label`; с клавиатуры: `←`, `→`, `Home`, `End`, `PageUp`, `PageDown`, `Enter`, `Пробел`. |
 | Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/resizer` |
 | Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-resizer` |
 

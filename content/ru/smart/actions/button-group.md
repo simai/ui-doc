@@ -287,9 +287,9 @@ group.addEventListener('change', (event) => {
 |:---|:---|
 | Тег | `<sf-button-group>`, контракт `smart.button-group` версии `1.2.0` |
 | Поставка | выпуск Framework `ui-2a671352d67b` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль группа переключателей (`radiogroup`); доступное имя обязательно; клавиши `Tab`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`. |
 | Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/button-group` |
 | Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-button-group` |
 

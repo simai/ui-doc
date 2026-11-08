@@ -192,9 +192,9 @@ code.addEventListener('sf-code-input-completed', async (event) => {
 |:---|:---|
 | Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.2.0` |
 | Поставка | выпуск Framework `ui-2a671352d67b` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль группа (`group`); доступное имя обязательно; клавиши `Tab`, `Backspace`, `Delete`, `ArrowLeft`, `ArrowRight`, `Home`, `End` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Backspace`, `Delete`, `←`, `→`, `Home`, `End`. |
 | Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/input-code` |
 | Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-input-code` |
 
