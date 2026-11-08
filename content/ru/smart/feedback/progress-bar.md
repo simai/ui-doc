@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса с
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Прогресс показывает ход процесса, у которого известна доля выполненного:
 загрузка файла, импорт, проверка. Когда доля неизвестна, берите
@@ -100,7 +100,9 @@ upload.addEventListener('load', () => {
 | `size` | строка | `1` | `1/3`, `1/2`, `1`, `2`, `3` | — |
 | `value` | число | `0` | от 0; до 100; шаблон `^(?:100\\|[1-9]?[0-9])(?:\.[0-9]+)?$` | — |
 | `text-position` | строка | `none` | `none`, `inline-end`, `bottom`, `right` | — |
-| `status` | строка | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | Цвет по смыслу, например `success` или `error`. `primary` тоже принимается и значит `neutral`. |
+| `status` | строка | `neutral` | `neutral`, `info`, `success`, `warning`, `error` | Цвет по смыслу, например `success` или `error`. `primary` тоже принимается и значит `neutral`. С порогами `warning-at` и `error-at` берётся более серьёзный из двух цветов. |
+| `warning-at` | число | — | от 0; до 100 | Порог в процентах: начиная с него полоса сама становится предупреждением, например диск заполнен на 83 % при `warning-at="80"`. Без атрибута порога нет. |
+| `error-at` | число | — | от 0; до 100 | Порог в процентах: начиная с него полоса сама становится ошибкой. Если заданы оба порога, этот выше `warning-at`. Без атрибута порога нет. |
 | `label` | строка | пусто | — | — |
 | `value-text` | строка | пусто | — | — |
 | `aria-label` | строка | пусто | — | — |
@@ -132,13 +134,13 @@ upload.addEventListener('load', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-bar>`, контракт `smart.progress-bar` версии `1.1.3` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Тег | `<sf-progress-bar>`, контракт `smart.progress-bar` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/progress-bar` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-progress-bar` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/progress-bar` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-progress-bar` |
 
 ## См. также
 

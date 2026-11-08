@@ -283,7 +283,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-2a671352d67b` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-0c23f6a0af12` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -379,11 +379,14 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
+| `appearance` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `kind` | `variant` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing` | `tightness` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="compact"` | `tightness="low"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="comfortable"` | `tightness="high"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status`, `appearance`, `kind` | `type` | принимается для совместимости | — |
-| `status`, `appearance`, `kind` | `variant` | принимается для совместимости | — |
-| `spacing` | `tightness` | работает как псевдоним | — |
 
 #### `<sf-chat-composer>`
 
@@ -854,6 +857,13 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-theme-generator-committed` | `sf-theme-generator-apply` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `change` | `sf-theme-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-theme-generator-committed` | `sf-theme-apply` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+
+#### `<sf-tile-metric>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-toast>`
 

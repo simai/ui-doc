@@ -99,7 +99,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2a671352d67b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -158,5 +158,5 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ### Источник
 
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/mail-structure`
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/mail-structure`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`

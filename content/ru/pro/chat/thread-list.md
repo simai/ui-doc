@@ -5,7 +5,7 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
-:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
@@ -129,7 +129,7 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2a671352d67b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -137,7 +137,7 @@ noted in `SF.deprecations`.
 |:---|:---|
 | Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.chat-threads`, версия `1.7.1` |
+| Контракт | `smart.chat-threads`, версия `1.7.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -202,5 +202,5 @@ noted in `SF.deprecations`.
 
 ### Источник
 
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/chat-threads`
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-threads`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

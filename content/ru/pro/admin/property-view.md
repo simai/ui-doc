@@ -5,7 +5,7 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-properties>` — карточка одного объекта: поля сгруппированы в области,
 области — в разделы, а каждое поле рисуется отрисовщиком своего типа. Берите
@@ -394,7 +394,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2a671352d67b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -402,7 +402,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт приложения. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.view-properties`, версия `1.11.0` |
+| Контракт | `smart.view-properties`, версия `1.11.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -557,8 +557,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/view-properties`
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/view-properties`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

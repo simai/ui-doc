@@ -146,12 +146,12 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Esc`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-editor-inline` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Однострочное поле формы с подписью, 
 
 # Текстовые поля
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает одну строку — текст, почту, пароль, поиск, телефон
 или адрес — вместе с подписью, подсказкой и сообщением об ошибке. Для
@@ -183,12 +183,15 @@ email.focus();
 | `label` | строка | пусто | — | — |
 | `required` | да/нет | нет | — | — |
 | `placeholder` | строка | пусто | — | — |
-| `input-type` | строка | `text` | `text`, `email`, `password`, `search`, `tel`, `url` | — |
+| `input-type` | строка | `text` | `text`, `email`, `password`, `search`, `tel`, `url`, `number` | — |
 | `autocomplete` | строка | пусто | — | — |
 | `inputmode` | строка | пусто | пусто, `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search` | — |
 | `minlength` | строка | пусто | — | — |
 | `maxlength` | строка | пусто | — | — |
 | `pattern` | строка | пусто | — | — |
+| `min` | строка | пусто | — | Наименьшее число в числовом поле (`input-type="number"`); число меньше — ошибка. Для других типов не действует. |
+| `max` | строка | пусто | — | Наибольшее число в числовом поле (`input-type="number"`); число больше — ошибка. Для других типов не действует. |
+| `step` | строка | пусто | — | Шаг числового поля: по умолчанию `1`, `any` — любое число; число не по шагу — ошибка. Для других типов не действует. |
 | `hint` | строка | пусто | — | — |
 | `default-value` | строка | пусто | — | — |
 | `name` | строка | пусто | — | — |
@@ -247,13 +250,13 @@ email.focus();
 
 | | |
 |:---|:---|
-| Тег | `<sf-input>`, контракт `smart.input` версии `1.4.4` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Тег | `<sf-input>`, контракт `smart.input` версии `1.5.0` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab`; обычная правка текста. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/input` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-input` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/input` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-input` |
 
 ## См. также
 

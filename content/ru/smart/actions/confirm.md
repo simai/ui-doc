@@ -176,12 +176,12 @@ Tab доходит до ответов, Enter и пробел отвечают, 
 | | |
 |:---|:---|
 | Тег | `<sf-confirm>`, контракт `smart.confirm` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/confirm` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-confirm` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/confirm` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-confirm` |
 
 ## См. также
 

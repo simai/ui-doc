@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-652 переменных, которые объявляет ядро, со значениями по умолчанию.
+654 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -102,7 +102,9 @@ description: "Полный список переменных, которые о�
 | `--sf-code--background` | `var(--sf-surface-container)` |
 | `--sf-code--color` | `var(--sf-on-surface)` |
 | `--sf-code--font-family` | `var(--sf-mono)` |
-| `--sf-code--radius` | `var(--sf-radius--ui)` |
+| `--sf-code--font-size` | `85%` |
+| `--sf-code--padding` | `0.2em 0.4em` |
+| `--sf-code--radius` | `var(--sf-a6)` |
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-error-active` | `light-dark(var(--sf-error-30), var(--sf-error-90))` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
@@ -237,10 +239,10 @@ description: "Полный список переменных, которые о�
 | `--sf-heading-1--size` | `var(--sf-text--size-6)` |
 | `--sf-heading-2--height` | `var(--sf-title--height-5)` |
 | `--sf-heading-2--size` | `var(--sf-text--size-5)` |
-| `--sf-heading-3--height` | `var(--sf-title--height-4)` |
-| `--sf-heading-3--size` | `var(--sf-text--size-4)` |
-| `--sf-heading-4--height` | `var(--sf-title--height-3)` |
-| `--sf-heading-4--size` | `var(--sf-text--size-3)` |
+| `--sf-heading-3--height` | `var(--sf-title--height-2)` |
+| `--sf-heading-3--size` | `var(--sf-text--size-2)` |
+| `--sf-heading-4--height` | `var(--sf-title--height-1)` |
+| `--sf-heading-4--size` | `var(--sf-text--size-1)` |
 | `--sf-heading-5--height` | `var(--sf-title--height-2)` |
 | `--sf-heading-5--size` | `var(--sf-text--size-2)` |
 | `--sf-heading-6--height` | `var(--sf-title--height-1)` |

@@ -156,7 +156,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-menu` |
-| Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-item` |
+| Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group` |
 | Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--navigation` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -178,6 +178,7 @@ profile: reference
 | `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-elevation-2--surface)`; зависит от orientation |
 | `--sf-menu-submenu-border-color` | Цвет рамки панели горизонтального меню. | `var(--sf-outline-variant)`; зависит от orientation |
 | `--sf-menu-submenu-radius` | Скругление углов панели горизонтального меню. | `var(--sf-radius--ui)`; зависит от orientation |
+| `--sf-menu-sticky-top` | На каком расстоянии от верха окна останавливается закреплённое меню (`sticky`): высота закреплённой шапки над ним. | `0` |
 
 ```css
 .sf-menu {
@@ -202,6 +203,7 @@ profile: reference
 | `--sf-menu-element--padding-right` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-inline-end` |
 | `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-top`, `padding-block-start` |
 | `--sf-menu-element--radius` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-radius, var(--sf-radius--ui))` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
+| `--sf-menu-group-heading--border-width` | не задана; задают модификаторы, например `.sf-menu-group-heading`: `var(--sf-px)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-menu-item--background-color` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `transparent` | `background-color` |
 | `--sf-menu-item--gap` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `var(--sf-space-1/3)` | `gap` |
 

@@ -5,7 +5,7 @@ description: "Показывает короткую неинтерактивну
 
 # Бейджи
 
-:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткую пометку рядом с объектом: статус записи, категорию,
 версию, число новых событий. Пометку не нажимают. Для метки, которую выбирают
@@ -148,13 +148,13 @@ JavaScript.
 
 | | |
 |:---|:---|
-| Тег | `<sf-badge>`, контракт `smart.badge` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Тег | `<sf-badge>`, контракт `smart.badge` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/badge` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-badge` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/badge` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-badge` |
 
 ## См. также
 

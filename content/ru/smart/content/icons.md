@@ -5,7 +5,7 @@ description: "Выводит символ Material Symbols, для которо�
 
 # Иконки
 
-:badge[sf-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.6]{variant=outline scheme=on-surface size=1/2}
 
 Иконка выводит один символ Material Symbols по имени, а загружается только
 нужная часть шрифта. Размер, начертание, заливка и толщина задаются атрибутами
@@ -161,13 +161,13 @@ Loader отслеживает каждый `<sf-icon>` и загружает з�
 
 | | |
 |:---|:---|
-| Тег | `<sf-icon>`, контракт `smart.icon` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Тег | `<sf-icon>`, контракт `smart.icon` версии `1.1.6` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как изображение; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/icon` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-icon` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/icon` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-icon` |
 
 ## См. также
 

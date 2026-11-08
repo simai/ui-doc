@@ -204,12 +204,12 @@ field.addEventListener('change', () => save(field.value));
 | | |
 |:---|:---|
 | Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab` ведёт на панель кнопок (одна остановка), затем в текст, а из текста — дальше из поля; `←`, `→`, `Home` и `End` переходят между кнопками панели; `Ctrl/Cmd+B` и `Ctrl/Cmd+I` включают и выключают полужирный и курсив, `Ctrl/Cmd+K` открывает поле ссылки; `Ctrl/Cmd+Z` отменяет, `Ctrl/Cmd+Shift+Z` и `Ctrl/Cmd+Y` повторяют; `Enter` в поле ссылки применяет адрес, `Esc` закрывает поле. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/input-rich` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-input-rich` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/input-rich` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-input-rich` |
 
 ## См. также
 

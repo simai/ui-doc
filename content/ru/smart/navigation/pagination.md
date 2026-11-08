@@ -5,7 +5,7 @@ description: "Переключает страницы длинного спис�
 
 # Пагинация
 
-:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.8]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация — подвал длинного списка или таблицы: сколько всего записей, на
 какой странице читатель, как перейти на другую и сколько записей показывать.
@@ -278,13 +278,13 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.7` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.8` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/pagination` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-pagination` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/pagination` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-pagination` |
 
 ## См. также
 

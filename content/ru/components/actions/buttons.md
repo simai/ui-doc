@@ -280,7 +280,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-shortcut-key--square`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--default`, `sf-button--error`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Модификаторы | `sf-button--default`, `sf-button--error`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 | Устаревшие | `sf-button--ghost` → `sf-button--link` |
 
@@ -301,6 +301,8 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button-radius` | Скругление углов. | `var(--sf-radius--ui)` |
 | `--sf-button-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
 | `--sf-button-padding-block` | Отступ над и под содержимым. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+| `--sf-button-pressed-background-color` | Заливка включённой кнопки-переключателя (`pressed`, `aria-pressed="true"`); наведение, нажатие и отключённое состояние рисуются поверх своими цветами. | `var(--sf-primary-container)` |
+| `--sf-button-pressed-color` | Цвет подписи и иконки включённой кнопки-переключателя. | `var(--sf-on-primary-container)` |
 
 ```css
 .sf-button {
@@ -318,7 +320,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
 | `--sf-button--border-bottom-width` | `var(--sf-button-border-width, 0)` | `padding-bottom`, `border-bottom-width` |
-| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--primary`: `var(--sf-button-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--on-surface`: `var(--sf-button-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-button--border-inline-end-width` | `var(--sf-button-border-width, 0)` | `padding-inline-end`, `border-inline-end-width` |
 | `--sf-button--border-inline-start-width` | `var(--sf-button-border-width, 0)` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-button--border-style` | не задана; задают модификаторы, например `.sf-button--outline`: `solid` | `border-style` |

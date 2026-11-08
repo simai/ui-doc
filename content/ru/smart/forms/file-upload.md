@@ -5,7 +5,7 @@ description: "Зона выбора и перетаскивания файлов
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов даёт выбрать файлы в системном окне или перетащить их и
 показывает список выбранных файлов с прогрессом и состоянием передачи. Сами
@@ -328,13 +328,13 @@ async function store(item) {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.6` |
-| Поставка | выпуск Framework `ui-2a671352d67b` |
+| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.7` |
+| Поставка | выпуск Framework `ui-0c23f6a0af12` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/smart/file-upload` |
-| Правило классов | `simai/ui@2a671352d67b15acf233805767dd4cb4b6b6aad4:distr/rule/rule.json#name=cl-file-upload` |
+| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/file-upload` |
+| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-file-upload` |
 
 ## См. также
 

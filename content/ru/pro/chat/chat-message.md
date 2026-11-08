@@ -5,7 +5,7 @@ description: "Одно сообщение чата: ответ помощник�
 
 # Сообщение чата
 
-:badge[sf-chat-message]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-message]{variant=tonal scheme=primary size=1/2} :badge[1.7.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-message>` рисует одно сообщение чата: ответ помощника с разметкой,
 источниками, отметкой проверки и оценкой, вопрос человека с файлами, а по
@@ -151,7 +151,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2a671352d67b` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -159,7 +159,7 @@ log.renderMessage = (message, {view}) => {
 |:---|:---|
 | Тег | `<sf-chat-message>` |
 | Назначение | Одно сообщение чата: ответ помощника с разметкой, источниками, отметкой проверки, заметками, предложением изменения, оценкой и уточнением задачи — или его ожидание; вопрос человека с файлами; а по шаблону `person` — сообщение разговора людей. Сообщение сообщает, что сделал человек; что это значит, решает приложение. |
-| Контракт | `smart.chat-message`, версия `1.7.2` |
+| Контракт | `smart.chat-message`, версия `1.7.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -213,8 +213,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/chat-message`
-- `simai/ui-pro@dc021e7bc57d4690b554ce9a923aa1d89849846f:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-message`
+- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 
