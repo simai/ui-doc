@@ -283,6 +283,6 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 ## См. также
 
 - [Кнопки](/ru/components/actions/buttons/)
-- [Закрытие](/ru/components/actions/close/)
+- [Кнопка закрытия](/ru/components/actions/close/)
 - [Группа кнопок](/ru/components/actions/button-group/)
 - [Кнопки с иконкой — смарт-компонент](/ru/smart/actions/icon-buttons/)
