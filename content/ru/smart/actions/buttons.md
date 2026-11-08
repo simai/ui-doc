@@ -275,7 +275,7 @@ save.addEventListener('sf-button-press', async () => {
 
 ### Включённая и выключенная
 
-`pressed` • [справочник](#атрибуты)
+`pressed`, `text-pressed` • [справочник](#атрибуты)
 
 Кнопка-переключатель включает и выключает настройку: жирный шрифт,
 избранное.
@@ -287,8 +287,13 @@ save.addEventListener('sf-button-press', async () => {
 кнопка не переключатель. Сама кнопка состояние не меняет: его переключает
 страница.
 
+Если подпись говорит о состоянии, задайте `text-pressed`: «В избранное»
+превращается в «В избранном», пока кнопка включена. Вид нажатой кнопки
+остаётся, а экранный диктор читает новую подпись вместо «нажата».
+
 ```html
 <sf-button id="bold" pressed="false" icon-start="format_bold" text="Жирный"></sf-button>
+<sf-button pressed="false" icon-start="star" text="В избранное" text-pressed="В избранном"></sf-button>
 ```
 
 ```js
