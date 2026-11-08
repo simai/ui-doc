@@ -115,6 +115,41 @@ profile: reference
 :::example {id="components/menu/compact" label="Счётчики в обычном и компактном меню"}
 :::
 
+### Группы разделов
+
+`sf-menu-item--group`, `sf-menu-group-heading`, `sf-menu-group-label` • [классы](#классы)
+
+Группа — заголовок над своими пунктами первого уровня, как в колонке
+разделов сайта или настроек. Её пишут так:
+
+```html
+<li class="sf-menu-item sf-menu-item--group">
+  <span class="sf-menu-group-heading" id="group-site">
+    <span class="sf-menu-group-label">Сайт</span>
+  </span>
+  <ul class="sf-menu" aria-labelledby="group-site">
+    <li class="sf-menu-item">…</li>
+  </ul>
+</li>
+```
+
+Пункты группы стоят без отступа, как строки первого уровня, а слова
+заголовка — на одной линии со словами строк. Заголовок мельче строки и
+приглушён; между группами — небольшой зазор. Если группу можно свернуть,
+заголовок — кнопка `<button class="sf-menu-group-heading">` с
+`aria-expanded`: под указателем у неё лёгкая заливка, при фокусе — общее
+кольцо фокуса. В конце строки может стоять цветная точка состояния
+`.sf-dot` — перед счётчиком, а её слово для экранного диктора лежит рядом в
+скрытом `.sf-menu-element-status`.
+
+Скрипт классового меню групп не строит и не сворачивает: пункт с вложенным
+списком он считает веткой. Группы из данных рисует и сворачивает
+смарт-компонент [Меню](/ru/smart/navigation/menu/#группы-разделов), а эти
+классы дают им вид.
+
+:::example {id="smart-components/menu/groups" label="Группы разделов в смарт-меню" preview=sandbox log_console=true log_open=false}
+:::
+
 ## Состояния
 
 ### Текущий пункт
