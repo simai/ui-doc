@@ -225,8 +225,8 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -240,7 +240,7 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: any }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос словаря 1.1.5 §5 move, `{id, parent, position}` под именами item, to и index; применяет его приложение. |
+| `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: any }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос, `{id, parent, position}` под именами item, to и index; применяет его приложение. |
 | `sf-sortable-state` | `{ state: any, item: string }` | Шаг перетаскивания: взяли, отпустили или отменили. |
 | `sf-sortable-insert` | `{ index: integer, item: string, to: string }` | Просьба вставщика поставить новый элемент палитры в место; отменяемая. |
 

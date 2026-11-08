@@ -277,15 +277,15 @@ async function store(item) {
 | `multiple` | да/нет | нет | — | — |
 | `disabled` | да/нет | нет | — | — |
 | `aria-label` | строка | пусто | — | — |
-| `items` | список | `[]` | — | Файлы и их загрузки, записанные приложением: состояние каждой записи (process, done, error) и прогресс 0–100 — это её поток (§10.8). |
+| `items` | список | `[]` | — | Файлы и их загрузки, записанные приложением: состояние каждой записи (process, done, error) и прогресс 0–100 — это её поток. |
 
 #### Общие для всех компонентов
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -311,18 +311,18 @@ async function store(item) {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ files: array, source: any }` | Выбраны файлы: при выборе — нативное событие от внутреннего поля выбора файла, при перетаскивании — CustomEvent от области (detail files и source 'drop'), поэтому форма узнаёт об обоих случаях. |
-| `sf-file-upload-attach` | `{ files: array, source: any, multiple: boolean }` | Выбраны файлы для загрузки. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-attached` | `{ id: any, item: object, index: number, items: array, source: string, multiple: boolean }` | Файл попал в список. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-detach` | `{ id: any, item: object, index: number, items: array }` | Файл убран из списка. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-rejected` | `{ files: array, accept: string, source: string }` | Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-retry` | `{ id: any, item: object, index: number, items: array }` | Файл с ошибкой отправлен снова. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-begun` | `{ id: any, item: object }` | Запись перешла в process — выбрана, перетащена или отправлена снова: начался её поток загрузки (стандарт simai.smart-component 1.3.8 §10.8, словарь 1.1.5 §5.2). |
-| `sf-file-upload-chunk` | `{ id: any, done: number, total: number, item: object }` | Приложение сдвинуло прогресс записи, пока она в process: `{id, done, total}` с total 100 (§10.8). |
-| `sf-file-upload-completed` | `{ id: any, item: object, index: number, items: array }` | Файл загружен. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-failed` | `{ id: any, item: object, index: number, items: array, reason: string, message: string }` | Файл не загрузился. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-file-upload-cancelled` | `{ id: any, item: object }` | Запись ушла, будучи в process, — её убрал человек или приложение: её поток кончился, не завершившись (§10.8). |
-| `sf-file-upload-finished` | `{ items: array }` | Все файлы обработаны. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
+| `change` | `{ files: array, source: any }` | Выбраны файлы — через окно выбора или перетаскиванием (тогда в `detail` есть `files` и `source: 'drop'`); форма узнаёт об обоих случаях. |
+| `sf-file-upload-attach` | `{ files: array, source: any, multiple: boolean }` | Выбраны файлы для загрузки. |
+| `sf-file-upload-attached` | `{ id: any, item: object, index: number, items: array, source: string, multiple: boolean }` | Файл попал в список. |
+| `sf-file-upload-detach` | `{ id: any, item: object, index: number, items: array }` | Файл убран из списка. |
+| `sf-file-upload-rejected` | `{ files: array, accept: string, source: string }` | Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. |
+| `sf-file-upload-retry` | `{ id: any, item: object, index: number, items: array }` | Файл с ошибкой отправлен снова. |
+| `sf-file-upload-begun` | `{ id: any, item: object }` | Запись перешла в process — выбрана, перетащена или отправлена снова: начался её поток загрузки. |
+| `sf-file-upload-chunk` | `{ id: any, done: number, total: number, item: object }` | Приложение сдвинуло прогресс записи, пока она в process: `{id, done, total}` с total 100. |
+| `sf-file-upload-completed` | `{ id: any, item: object, index: number, items: array }` | Файл загружен. |
+| `sf-file-upload-failed` | `{ id: any, item: object, index: number, items: array, reason: string, message: string }` | Файл не загрузился. |
+| `sf-file-upload-cancelled` | `{ id: any, item: object }` | Запись ушла, будучи в process, — её убрал человек или приложение: её поток кончился, не завершившись. |
+| `sf-file-upload-finished` | `{ items: array }` | Все файлы обработаны. |
 
 ### О компоненте
 

@@ -148,9 +148,9 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
-- `changes` — `string`, по умолчанию `content`, значения: `content`, `revision`. Как сравниваются две записи одного сообщения (§18.4).
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
+- `changes` — `string`, по умолчанию `content`, значения: `content`, `revision`. Как сравниваются две записи одного сообщения.
 - `has-more` — `boolean`, по умолчанию `false`. Есть ранняя история: видна кнопка «Раньше», а достижение верха её просит.
 - `label` — `string`. Доступное имя области; пусто — «Переписка» на языке страницы.
 - `live` — `string`, по умолчанию `polite`, значения: `polite`, `off`. polite: законченное сообщение другого участника объявляется один раз. off: объявляет приложение через announce(), или ничего не объявляется.
@@ -177,7 +177,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-message-log-load-more` — `detail`: `{ direction?: any, before: any }`. Запрошена более ранняя история: `{direction: before, before}`. Отменить запрос — `earlierFailed()`.
-- `sf-message-log-begun` — `detail`: `{ id: any }`. Пришло растущее сообщение (словарь §5.2).
+- `sf-message-log-begun` — `detail`: `{ id: any }`. Пришло растущее сообщение.
 - `sf-message-log-chunk` — `detail`: `{ id: any, revision?: string }`. Растущее сообщение изменилось и нарисовано заново на том же месте.
 - `sf-message-log-completed` — `detail`: `{ id: any }`. Сообщение перестало расти целиком.
 - `sf-message-log-failed` — `detail`: `{ id: any, reason: string, message: string }`. Сообщение перестало расти с ошибкой: `{id, reason, message}`.

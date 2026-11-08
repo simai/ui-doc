@@ -146,8 +146,8 @@ noted in `SF.deprecations`.
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `has-more` — `boolean`, по умолчанию `false`. Есть следующая страница: когда показался конец, список её просит.
 - `archived` — `boolean`, по умолчанию `false`. Показывает архив: переход обратно, «Вернуть» вместо «В архив», без нового разговора.
 - `no-create` — `boolean`, по умолчанию `false`. Без кнопки «Новый разговор».
@@ -179,11 +179,11 @@ noted in `SF.deprecations`.
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-chat-threads-create` — `detail`: `{ kind?: string }`. Нажали «Новый разговор» или команду создания (`kind` — её `id`).
-- `sf-chat-threads-open` — `detail`: `{ id: any }`. Человек просит открыть беседу (словарь open); приложение записывает `selected` обратно.
+- `sf-chat-threads-open` — `detail`: `{ id: any }`. Человек просит открыть беседу; приложение записывает `selected` обратно.
 - `sf-chat-threads-rename` — `detail`: `{ id: any, title: string }`. Разговор переименовали на месте; новое название видно сразу. Приложение, которое не может его сохранить, возвращает прежнее название через upsert.
-- `sf-chat-threads-archive` — `detail`: `{ ids?: array, id: any }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).
-- `sf-chat-threads-restore` — `detail`: `{ ids?: array, id: any }`. Восстановить `{ids, id}` (словарь restore).
-- `sf-chat-threads-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий приложения над строкой: `{action, scope: entry, ids, id}` (словарь apply).
+- `sf-chat-threads-archive` — `detail`: `{ ids?: array, id: any }`. Архивировать `{ids, id}` (id остаётся для слушателей версии 1.0).
+- `sf-chat-threads-restore` — `detail`: `{ ids?: array, id: any }`. Восстановить `{ids, id}`.
+- `sf-chat-threads-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий приложения над строкой: `{action, scope: entry, ids, id}`.
 - `sf-chat-threads-load-more` — `detail`: `{ direction: any }`. Конец списка показался на экране, пока `has-more`: `{direction: after}`.
 - `sf-chat-threads-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно.
 

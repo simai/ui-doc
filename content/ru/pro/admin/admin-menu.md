@@ -281,8 +281,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `brand` — `string`, по умолчанию пусто.
 - `logo` — `string`, по умолчанию пусто.
 - `logo-href` — `string`, по умолчанию `#`.
@@ -306,12 +306,12 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - `search-title` — `string`. Заголовок над полем поиска в панели навигации.
 - `current` — `string`, по умолчанию пусто. Строка, на которой находится страница, по её ключу; пусто — строка, по адресу которой открыта страница.
 - `source` — `string`, по умолчанию `items`, значения: `items`, `port`. Откуда берутся записи: items (настройка и дети) или port (`simai.admin-navigation-port`, подключает приложение). С port меню остаётся скелетоном навигации, пока приложение не ответит.
-- `expected-columns` — `integer`, по умолчанию `2`, значения: от 1; до 2. Сколько колонок рисует скелетон навигации на широком экране до ответа приложения: 1, если в строке страницы нет открытого корня (панель управления), 2 — если есть. Сервер это знает; с правильным числом меню до ответа такой же ширины, как после. Это не предел: меню после ответа берёт столько колонок, сколько нужно его строкам.
+- `expected-columns` — `integer`, по умолчанию `2`, значения: от 1; до 2. Сколько колонок у заготовки меню на широком экране, пока приложение не ответило: `1` — на странице без открытого раздела (например, панель управления), `2` — с открытым. С верным числом меню не меняет ширину после ответа; это не предел.
 - `open` — `boolean`, по умолчанию `false`. Записывает страница, которая открывает меню своей кнопкой: на узком экране меню свёрнуто, пока false (`data-open`). Не записано — ничего не меняется.
 - `compact` — `boolean`, по умолчанию `false`.
 - `aria-label` — `string`, по умолчанию `Admin menu`, значения: не короче 1.
 - `recent-results` — `array`, по умолчанию `[]`.
-- `first-answer` — `object`. Первый ответ приложения на `navigation.load`, напечатанный вместе со страницей (JSON-блок `data-sf-settings`). С портом источника меню рисуется из него сразу, без скелетона; порт отвечает следом.
+- `first-answer` — `object`. Первый ответ приложения на `navigation.load`, напечатанный сервером прямо в странице: меню сразу рисуется из него, без заготовки, а порт отвечает следом.
 
 ### Свойства в документе макета
 
@@ -333,29 +333,29 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - `setCompact(compact: boolean)` — возвращает `boolean`. Включает компактный режим навигации.
 - `setHostPort(host: object)` — возвращает `object`. Подключает приложение, которое отвечает по порту `simai.admin-navigation-port`; меню рисует оболочку навигации вместо меню из пунктов.
 - `setRecentResults(groups?: array)` — возвращает `boolean`. Что приложение предлагает пустому полю поиска: недавний список, пока приложение не задаст другой.
-- `connectPort(port: object)` — возвращает `object`. Базовое действие SIMAI Framework `connect-port {port}` (стандарт 1.3.8 §4.1, §4.9): передаёт порт навигации, он хранится как `sfPort`; отвечает исходом (`refused other-port` — для другого порта, `port-unsupported` — для версии, которую меню не принимает). То же делает `setHostPort`.
+- `connectPort(port: object)` — возвращает `object`. Базовое действие SIMAI Framework `connect-port {port}`: передаёт порт навигации, он хранится как `sfPort`; отвечает исходом (`refused other-port` — для другого порта, `port-unsupported` — для версии, которую меню не принимает). То же делает `setHostPort`.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: any }`. Уведомляет оболочку приложения о режиме ширины.
-- `sf-admin-menu-query` — `detail`: `{ kind: any, query: string, requestId?: string, intent?: string, payload?: object }`. Запрос: kind menu (меню элементов), site или search (словарь 1.1.5).
+- `sf-admin-menu-query` — `detail`: `{ kind: any, query: string, requestId?: string, intent?: string, payload?: object }`. Запрос: kind menu (меню элементов), site или search.
 - `sf-admin-menu-settings-cancel` — `detail`: `{ target: any, baseRevision: integer }`. Отбрасывает локальный черновик.
 - `sf-admin-menu-settings-mode-change` — `detail`: `{ target: any }`. Запрашивает состояние для другого уровня настроек.
 - `sf-admin-menu-settings-refresh` — `detail`: `{ target: any, baseRevision: integer, profile: object }`. Запрашивает актуальное состояние бэкенда после конфликта.
 - `sf-admin-menu-settings-save` — `detail`: `{ target: any, baseRevision: integer, profile: object }`. Запрашивает сохранение текущих изменений.
-- `sf-admin-menu-reset` — `detail`: `{ kind: any, target?: string, baseRevision?: number, id?: any, intent?: string, payload?: object }`. kind settings (меню элементов) или view (словарь 1.1.5).
+- `sf-admin-menu-reset` — `detail`: `{ kind: any, target?: string, baseRevision?: number, id?: any, intent?: string, payload?: object }`. kind settings (меню элементов) или view.
 - `sf-admin-menu-navigate` — `detail`: `{ id: any, key: string, href: string|null, region?: boolean }`. Приложение подтвердило применение item.open: страница теперь принадлежит этой строке. Для приложения, которое выполняет переход в собственном маршрутизаторе, а не по адресу из ответа.
-- `sf-admin-menu-refresh` — `detail`: `{ kind: string, intent: string, payload: object, reason?: string|null, site?: any }`. У приложения запрошено `navigation.load` или `notifications.load` (словарь 1.1.5).
-- `sf-admin-menu-open` — `detail`: `{ kind: string, intent: string, payload: object, id: any, href?: string|null, group?: string|null }`. Запрошено `item.open`, `site.switch`, `view.profile` или `search.choose` (словарь 1.1.5).
-- `sf-admin-menu-toggle` — `detail`: `{ kind: string, intent: string, payload: object, id: any, on: boolean }`. Запрошено `favourite.toggle` (словарь 1.1.5).
-- `sf-admin-menu-save` — `detail`: `{ kind: string, intent: string, payload: object, values?: object, id?: any, revision?: number|null }`. Запрошено сохранение предпочтения или `view.save` (словарь 1.1.5).
-- `sf-admin-menu-create` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `view.create` (словарь 1.1.5).
-- `sf-admin-menu-rename` — `detail`: `{ kind: string, intent: string, payload: object, id: any, title: string }`. Запрошено `view.rename` (словарь 1.1.5).
-- `sf-admin-menu-delete` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `view.delete` (словарь 1.1.5).
-- `sf-admin-menu-read` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `notifications.read` (словарь 1.1.5).
-- `sf-admin-menu-sign-out` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `session.sign-out` (словарь 1.1.5).
+- `sf-admin-menu-refresh` — `detail`: `{ kind: string, intent: string, payload: object, reason?: string|null, site?: any }`. У приложения запрошено `navigation.load` или `notifications.load`.
+- `sf-admin-menu-open` — `detail`: `{ kind: string, intent: string, payload: object, id: any, href?: string|null, group?: string|null }`. Запрошено `item.open`, `site.switch`, `view.profile` или `search.choose`.
+- `sf-admin-menu-toggle` — `detail`: `{ kind: string, intent: string, payload: object, id: any, on: boolean }`. Запрошено `favourite.toggle`.
+- `sf-admin-menu-save` — `detail`: `{ kind: string, intent: string, payload: object, values?: object, id?: any, revision?: number|null }`. Запрошено сохранение предпочтения или `view.save`.
+- `sf-admin-menu-create` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `view.create`.
+- `sf-admin-menu-rename` — `detail`: `{ kind: string, intent: string, payload: object, id: any, title: string }`. Запрошено `view.rename`.
+- `sf-admin-menu-delete` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `view.delete`.
+- `sf-admin-menu-read` — `detail`: `{ kind: string, intent: string, payload: object, ids: array }`. Запрошено `notifications.read`.
+- `sf-admin-menu-sign-out` — `detail`: `{ kind: string, intent: string, payload: object }`. Запрошено `session.sign-out`.
 - `sf-host-port-request` — `detail`: `{ component: object, context: object }`. При подключении спросить у страницы порт приложения. Страница, ответившая портом `simai.admin-navigation-port`, получает оболочку навигации; не ответившая ничем — меню из пунктов без изменений. Страница может и сама передать порт через `connectPort({port})`.
 
 ### Доступность
@@ -363,7 +363,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 - Роль: навигация (`navigation`).
 - Доступное имя: обязательно.
 - Клавиши: `Tab`, `Enter`, `Space`, `Escape`.
-- Фокус: Контекстные меню после отрисовки переносят фокус на первый доступный нативный пункт. Escape возвращает фокус на нативный элемент, открывший меню; Tab/Shift+Tab закрывают меню и продолжают от него. Фокус снаружи сохраняется. Если сохранение или отмена удаляет открывший элемент, потерянный фокус `body` возвращается на элемент управления настройками или другой доступный элемент управления в этом Admin Menu. Общее владение порталом и устаревшие колбэки защищены. Геометрия всплывающего окна следует за нативным открывающим элементом, включая смарт-элементы с `display: contents`, LTR/RTL, адаптивное перемещение, изменения содержимого, шрифта и окна просмотра; `--sf-context-menu-viewport-space` выводится из шкалы отступов. Внутренняя прокрутка сохраняет меню; прокрутка документа снаружи закрывает его. Слои поиска и вложенного перехода делают неактивные панели инертными. Открытие вложенного слоя переносит фокус на его локализованную кнопку «Назад»; «Назад» возвращает фокус на соответствующий триггер дерева. Компактный поиск переносит фокус на открывшееся поле ввода. Размещение поиска и направленные шевроны учитывают LTR или RTL.
+- Фокус: Открытое меню ставит фокус на первый доступный пункт. Escape возвращает фокус на кнопку, открывшую меню; Tab и Shift+Tab закрывают меню и идут дальше от неё. Если кнопка исчезла после сохранения или отмены, фокус переходит на кнопку настроек или другую кнопку меню. Меню держится рядом со своей кнопкой при прокрутке внутри, смене размера окна, шрифта и направления письма; прокрутка страницы закрывает его. Во вложенном уровне фокус встаёт на кнопку «Назад», а «Назад» возвращает к пункту, который этот уровень открыл. Компактный поиск ставит фокус в поле поиска.
 
 ### Минимальная разметка
 

@@ -257,8 +257,8 @@ Escape закрывает его и возвращает фокус на ком�
 ### Атрибуты
 
 - `template` — `string`, по умолчанию `default`. Имя шаблона отрисовки; `default` — встроенный.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `capabilities` — `string`, по умолчанию пусто. Возможности порта, которые предлагает приложение, через пробел (`assistant`, `people`, `files`, `edit`, `delete`, `feedback`, `proposals`, `conversation-create`, `conversation-manage`, `interlocutors`, `read`), и расширения окна (`x-archive-view`, `x-conversations-paging`, `x-conversations-search`, `x-conversation-pin`, `x-early-upload`, `x-my-files`, `x-brief`, `x-conversation-start`, `x-members`, `x-members-manage`, `x-reactions`, `x-reply`, `x-threads`, `x-blocks`). Что не объявлено, то не предлагается: на такое намерение приходит ответ «недоступно» без события. Свойство принимает и массив.
 - `landmark` — `string`, по умолчанию `main`, значения: `main`, `section`. `main`, когда окно и есть страница; `section` внутри страницы со своим `main`.
 - `heading-level` — `integer`, по умолчанию `1`, значения: от 1; до 2. Уровень собственных заголовков окна (разговор, приветствие): `2` внутри чужой страницы.
@@ -307,7 +307,7 @@ Escape закрывает его и возвращает фокус на ком�
 - `applyData(partial: object)` — возвращает `object`. Задаёт несколько данных порта сразу (и свои данные окна); неизвестные ключи пропускаются. Каждое данное — ещё и свойство со своим именем. Осталось от 0.3; действие `set-data` — его вид в манифесте.
 - `answer(request_id: string, result: object)` — возвращает `boolean`. Ответ приложения на намерение: `{answer, reason, text, data, current}`. Данные применённого ответа применяются как данные. Возвращает `false` для неизвестного `request_id`. Осталось от 0.3 для приложения без порта; действие `settle` — его вид в манифесте.
 - `request(intent: string, payload?: object)` — возвращает `object`. Поднимает намерение по имени порта: событие `sf-chat-window-<глагол>`, затем `raise` порта или `settle` приложения; выполняется ответом. Необъявленная возможность отвечает `unavailable` без события, отменённое событие — `refused` с причиной `prevented`.
-- `connectPort(port: object)` — возвращает `object`. Базовое действие `connect-port {port}` (§4.1, §4.9; то же делает `setHostPort`): адаптер `{port: 'simai.chat-port', version, capabilities, raise(intent, payload)}`, который отвечает на каждое намерение.
+- `connectPort(port: object)` — возвращает `object`. Базовое действие `connect-port {port}` (то же делает `setHostPort`): адаптер `{port: 'simai.chat-port', version, capabilities, raise(intent, payload)}`, который отвечает на каждое намерение.
 
 ### События
 
@@ -330,7 +330,7 @@ Escape закрывает его и возвращает фокус на ком�
 - `sf-chat-window-restore` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор возвращён из архива (порт `conversation.archive {conversation_id, archived: false}`).
 - `sf-chat-window-select` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Выбран другой собеседник; выбор начинает новый разговор (порт `interlocutor.choose {interlocutor}`).
 - `sf-chat-window-query` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Список найден по заголовку (`x-conversations-search`, `conversations.search {query}`) — после паузы в наборе, по Enter или очищен Escape. Либо найдены люди для нового разговора (1.4.0, `x-conversation-start`, `recipients.search {query}`, kind `recipients`).
-- `sf-chat-window-pin` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор закреплён или откреплён из действий строки (`x-conversation-pin`, `conversation.pin {conversation_id, pinned}`); собственный глагол чата (словарь §5.1), его слово — `events.pin.label`.
+- `sf-chat-window-pin` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Разговор закреплён или откреплён из действий строки (`x-conversation-pin`, `conversation.pin {conversation_id, pinned}`); собственный глагол чата, его слово — `events.pin.label`.
 - `sf-chat-window-attach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Файлы выбраны, перетащены или вставлены, чтобы загрузить их сразу (`x-early-upload`, `file.attach {files, conversation_id, interlocutor}`).
 - `sf-chat-window-detach` — `detail`: `{ requestId: string, intent: string, kind?: string, payload: object }`. Чип убран из поля (`x-early-upload`, `file.detach {key}`).
 - `sf-chat-window-settled` — `detail`: `{ requestId: string, intent: string, payload: object, answer: any, reason?: string|null }`. Факт ответа приложения — от порта или от `settle`: `{request-id, intent, payload, answer, reason}`; сообщается после того, как данные ответа применены, и до того, как окно само на него отреагирует (фокус).

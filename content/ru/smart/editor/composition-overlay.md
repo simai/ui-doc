@@ -213,8 +213,8 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -224,7 +224,7 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 |:---|:---|:---|
 | `attach(canvas: object)` | — | Рисует поверх элемента-холста; холст никогда не меняется. |
 | `attachFrame(iframe: object)` | — | Рисует поверх холста в iframe того же источника, который питает `set-nodes`. |
-| `setDocument(document: object, options: object)` | — | Читает узлы документа композиции. |
+| `setDocument(document: object, options: object)` | — | Читает блоки документа страницы. |
 | `setNodes(nodes: array, options: object)` | — | Читает плоский список узлов (режим во фрейме). |
 | `setDropFilter(filter: object)` | — | `filter({parent_id, slot, index}, item)` скрывает места, куда сбрасывать нельзя. |
 | `setActions(actions: array)` | — | Записывает действия выбранного узла (настройка actions). |
@@ -240,12 +240,12 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-editor-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран (или выбор снят): словарь 1.1.5 §5 select; в `detail` остаётся `node_id` для приложения, в котором работает композиция. |
-| `sf-editor-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи (словарь §5 apply, стандарт §18.3). |
-| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }` | Выбрано место вставки или элемент библиотеки сброшен на холст: место `{parent, slot, index}` и элемент, если его перетаскивали; в `detail` остаётся `parent_id` для приложения, в котором работает композиция. |
-| `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён указателем или клавиатурой: один ручной перенос (словарь §5 move, `{id, parent, position}`); в `detail` остаются `node_id`, `parent_id` и `index` для приложения, в котором работает композиция. |
+| `sf-editor-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран или выбор снят; в `detail` есть `node_id`. |
+| `sf-editor-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи. |
+| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }` | Выбрано место вставки или на холст брошен элемент библиотеки: место `{parent, slot, index}` и элемент, если его перетаскивали; в `detail` есть `parent_id`. |
+| `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён мышью или клавиатурой: `{id, parent, position}`; в `detail` есть `node_id`, `parent_id` и `index`. |
 | `sf-editor-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё. |
-| `sf-editor-overlay-open` | `{ ids: array, id: any, node: any, point: object\\|null, trigger: any }` | Человек попросил открыть узел: второй щелчок по выбранному узлу, двойной щелчок по узлу или Enter на выбранном узле в дереве (словарь 1.1.5 §5 open). Отправляется один раз на жест и никогда в пассивном режиме; редактируемый узел холста в рамке открывается своей правкой простой строки. |
+| `sf-editor-overlay-open` | `{ ids: array, id: any, node: any, point: object\\|null, trigger: any }` | Человек попросил открыть узел: второй щелчок по выбранному узлу, двойной щелчок по узлу или Enter на выбранном узле в дереве. Отправляется один раз на жест и никогда в пассивном режиме; редактируемый узел холста в рамке открывается своей правкой простой строки. |
 
 ### О компоненте
 

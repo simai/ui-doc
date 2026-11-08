@@ -140,8 +140,8 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
 | `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -163,10 +163,10 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `change` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит. |
-| `input` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Отправляется при каждом изменении, перед ним, с тем же detail — как нативный файловый input отправляет input и change вместе. |
-| `sf-input-image-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Приложение загружает его и задаёт сохранённое значение. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
-| `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1). |
+| `input` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Приходит перед каждым `change`, с тем же `detail`, как у обычного поля выбора файла. |
+| `sf-input-image-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Приложение загружает его и задаёт сохранённое значение. |
+| `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. |
+| `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. |
 
 ### О компоненте
 
