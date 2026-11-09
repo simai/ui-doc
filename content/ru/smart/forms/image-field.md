@@ -99,7 +99,7 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
     const stored = await upload(event.detail.file);
     logo.setValue(stored);
   } catch {
-    logo.setError('Не удалось загрузить файл');
+    logo.setError({message: 'Не удалось загрузить файл'});
   }
 });
 ```

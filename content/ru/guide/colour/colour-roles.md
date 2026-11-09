@@ -293,14 +293,14 @@ on-primary:
 интерфейса остаётся на `--sf-on-surface`.
 
 **Колодец утоплен.** В светлой теме он на ступень ниже `surface-1`, и белый
-лист отделяется от него тенью `--sf-elevation-1--shadow`. В тёмной теме
+лист отделяется от него тенью приподнятого места `--sf-shadow-raised`. В тёмной теме
 колодец — самая тёмная ступень, и лист выделяется сам. Текст на колодце, например
 подпись ширины предпросмотра, берёт обычные роли `--sf-on-surface` и
 `--sf-on-surface-variant`.
 
 ```html
 <div style="background: var(--sf-surface-well); padding: var(--sf-space-3)">
-  <iframe title="Предпросмотр письма" style="background: var(--sf-paper); box-shadow: var(--sf-elevation-1--shadow)"></iframe>
+  <iframe title="Предпросмотр письма" style="background: var(--sf-paper); box-shadow: var(--sf-shadow-raised)"></iframe>
 </div>
 ```
 

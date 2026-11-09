@@ -299,8 +299,8 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 дату в формате `format`, для периода — `formattedStartValue` и
 `formattedEndValue`; читать их можно в любой момент, без события.
 `openPanel()`, `closePanel()` и `togglePanel()` открывают и закрывают окно из
-кода; `openPanel({focusCalendar: true})` переводит фокус на активный день,
-`closePanel({restoreFocus: true})` возвращает его в поле.
+кода; `openPanel({options: {focusCalendar: true}})` переводит фокус на активный
+день, `closePanel({options: {restoreFocus: true}})` возвращает его в поле.
 
 ```js
 const period = document.querySelector('sf-datepicker[name="period"]');

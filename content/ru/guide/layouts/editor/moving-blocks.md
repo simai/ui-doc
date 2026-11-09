@@ -29,7 +29,7 @@ overlay.addEventListener('sf-composition-overlay-insert', (event) => {
   const {parent_id, slot, index, item} = event.detail; // item — карточка из библиотеки
   applyAndSave({type: 'insert', parent_id, slot, index, block: item});
 });
-overlay.setDropFilter((place) => place.slot !== 'header');
+overlay.setDropFilter({filter: (place) => place.slot !== 'header'});
 ```
 
 Обратите внимание: `applyAndSave` принадлежит приложению. `setDropFilter`

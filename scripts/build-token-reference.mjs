@@ -115,7 +115,9 @@ const GROUPS = [
   ['Цвет: границы и отключённое', (n) => /^--sf-(outline|disable|on-disable|focus)/u.test(n)],
   ['Текст', (n) => /^--sf-(text|body-text|heading|display|title|label|weight|font|mono)/u.test(n)],
   ['Размеры и интервалы', (n) => /^--sf-(space|size|icon-size|breakpoint|container|max-width)/u.test(n)],
-  ['Границы, радиусы и тени', (n) => /^--sf-(radius|border|shadow|elevation|divider)/u.test(n)],
+  // The shadows, their former layer styles (--sf-ui-shadow-N) and the scrim a
+  // modal place stands over are one system (C20), read on one table.
+  ['Границы, радиусы и тени', (n) => /^--sf-(radius|border|shadow|elevation|divider|ui-shadow|scrim)/u.test(n)],
   ['Движение', (n) => /^--sf-(animation|duration|transition|easing)/u.test(n)],
   ['Слои и прозрачность', (n) => /^--sf-(z|opacity|alfa|blur|scroll|floating)/u.test(n)],
   ['Геометрия элементов управления', (n) => /^--sf-ui-/u.test(n)],

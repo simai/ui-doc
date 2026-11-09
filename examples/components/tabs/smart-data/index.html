@@ -4,7 +4,7 @@
   const tabs = document.currentScript.previousElementSibling;
   customElements.whenDefined('sf-tabs').then(async () => {
     await tabs.updateComplete;
-    tabs.setData({
+    tabs.setData({data: {
       tabs: [
         { label: 'Обзор', component: { type: 'sf-button', props: { text: 'Обзор' } } },
         { label: 'История' },
@@ -13,7 +13,7 @@
         { text: 'Данные переданы через setData().' },
         { text: 'Обычная вкладка может соседствовать с пользовательским представлением.' },
       ],
-    });
+    }});
   });
 })();
 </script>

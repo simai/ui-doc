@@ -1,15 +1,17 @@
 # Тени
 
-Утилиты категории `Тени` управляют глубиной и цветом тени для элементов
-интерфейса, а `elevation-*` — высотой целиком: и тенью, и поверхностью,
-на которой элемент стоит.
+Утилиты категории `Тени` ставят элементу тень одного из четырёх мест: на
+странице (`flat`), приподнятое (`raised`), всплывающее (`overlay`) и окно
+(`modal`). `elevation-*` поднимает элемент целиком: ставит и тень, и
+поверхность, на которой он стоит. Как устроены места — в руководстве
+[Поверхность и тень](/ru/guide/colour/elevation/).
 
 ## Материалы раздела
-- [Цвет падающей тени (drop-shadow-color)](/ru/utilities/shadows/drop-shadow-color/)
-- [Падающая тень (drop-shadow)](/ru/utilities/shadows/drop-shadow/)
-- [Цвет тени элемента (box-shadow-color)](/ru/utilities/shadows/element-color/)
-- [Глубина тени элемента (box-shadow)](/ru/utilities/shadows/element-shadow/)
 - [Высота (elevation)](/ru/utilities/shadows/elevation/)
+- [Тень элемента (box-shadow)](/ru/utilities/shadows/element-shadow/)
+- [Падающая тень (drop-shadow)](/ru/utilities/shadows/drop-shadow/)
+- [Цвет тени элемента (box-shadow-color)](/ru/utilities/shadows/element-color/) — уходит 2027-01-01
+- [Цвет падающей тени (drop-shadow-color)](/ru/utilities/shadows/drop-shadow-color/) — уходит 2027-01-01
 
 ## Связанные категории
 - [Фон](/ru/utilities/background/)

@@ -13,7 +13,7 @@ const initialize = async () => {
       item: item ? {value: item.value, label: item.label} : null,
     });
   });
-  document.querySelector('[data-action="select"]').addEventListener('click', () => group.select('month'));
+  document.querySelector('[data-action="select"]').addEventListener('click', () => group.select({value: 'month'}));
   document.querySelector('[data-action="clear"]').addEventListener('click', () => group.clear());
 };
 

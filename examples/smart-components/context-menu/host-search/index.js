@@ -56,7 +56,7 @@ const initialize = async () => {
     menu.entries = rows(last, current);
     docara.example.log('sf-menu-context-select', {id: event.detail.id});
   });
-  anchor.addEventListener('click', () => menu.toggleFor(anchor));
+  anchor.addEventListener('click', () => menu.toggleFor({anchor}));
 };
 
 initialize();

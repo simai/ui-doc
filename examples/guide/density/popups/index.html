@@ -1,0 +1,38 @@
+<div data-sf-overlay-container>
+  <div class="query-container">
+    <div class="grid grid-col-1 cq-sm:grid-col-2 gap-4">
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 flex-wrap gap-2 items-cross-center">
+          <sf-button text="Панель" data-drawer="toggle" aria-controls="density-drawer-normal"></sf-button>
+          <sf-menu-context aria-label="Действия" entries='[{"id":"edit","text":"Изменить","icon":"edit"},{"id":"copy","text":"Копировать","icon":"content_copy"}]'></sf-menu-context>
+        </div>
+        <span class="text-1/2 color-on-surface-variant wrap-none">обычная</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2" data-sf-density="compact">
+        <div class="flex flex-1 flex-wrap gap-2 items-cross-center">
+          <sf-button text="Панель" data-drawer="toggle" aria-controls="density-drawer-compact"></sf-button>
+          <sf-menu-context aria-label="Действия" entries='[{"id":"edit","text":"Изменить","icon":"edit"},{"id":"copy","text":"Копировать","icon":"content_copy"}]'></sf-menu-context>
+        </div>
+        <span class="text-1/2 color-on-surface-variant wrap-none">compact</span>
+        <sf-drawer id="density-drawer-compact" modal="false" placement="inline-end" size="1/2" heading="Компактная панель">
+          <div class="flex flex-col gap-2">
+            <sf-input name="title-compact" placeholder="Название"></sf-input>
+            <div class="flex flex-wrap gap-2">
+              <sf-button text="Без size"></sf-button>
+              <sf-button size="1" text="size=&quot;1&quot;"></sf-button>
+            </div>
+          </div>
+        </sf-drawer>
+      </div>
+    </div>
+  </div>
+  <sf-drawer id="density-drawer-normal" modal="false" placement="inline-end" size="1/2" heading="Обычная панель">
+    <div class="flex flex-col gap-2">
+      <sf-input name="title-normal" placeholder="Название"></sf-input>
+      <div class="flex flex-wrap gap-2">
+        <sf-button text="Без size"></sf-button>
+        <sf-button size="1" text="size=&quot;1&quot;"></sf-button>
+      </div>
+    </div>
+  </sf-drawer>
+</div>

@@ -36,7 +36,7 @@ const initialize = async () => {
     result.textContent = `Язык страницы: ${SF.language.current()}`;
   };
 
-  anchor.addEventListener('click', () => menu.toggleFor(anchor));
+  anchor.addEventListener('click', () => menu.toggleFor({anchor}));
   menu.addEventListener('sf-menu-context-select', (event) => {
     if (event.detail.id !== current) switchLanguage(event.detail.id);
   });

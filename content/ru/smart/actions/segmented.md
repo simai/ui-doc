@@ -324,7 +324,7 @@ description: "Выбирает ровно одно значение из нес�
 `value` • [справочник](#события)
 
 Нажатие или стрелка выбирает вариант и отправляет всплывающее событие
-`change`. Методы `select(value)` и `clear()` меняют выбор из кода и
+`change`. Методы `select({value})` и `clear()` меняют выбор из кода и
 отправляют то же событие.
 
 :::example {id="smart-components/button-group/events" label="Выбор из кода" preview=sandbox log_console=true log_open=false}

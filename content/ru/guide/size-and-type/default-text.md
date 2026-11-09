@@ -92,7 +92,7 @@ description: "Как ядро оформляет текст без классо�
 
 | Роль | Кегль | Высота строки |
 | :--- | :--- | :--- |
-| `heading-1` … `heading-6` | `--sf-text--size-6` … `--sf-text--size-1` | `--sf-title--height-6` … `--sf-title--height-1` |
+| `heading-1` … `heading-6` | `--sf-text--size-6`, `-5`, `-3`, `-2`, `-1`, `-1` | `--sf-title--height-6`, `-5`, `-3`, `-2`, `-1`, `-1` ([Лестница заголовков](/ru/guide/size-and-type/typography/#лестница-заголовков)) |
 | `display-1` … `display-6` | `--sf-text--size-12` … `--sf-text--size-7` | `--sf-title--height-12` … `--sf-title--height-7` |
 | `text-large` | `--sf-text--size-2` | `--sf-text--height-2` |
 | `text-medium` | `--sf-text--size-1` | `--sf-text--height-1` |

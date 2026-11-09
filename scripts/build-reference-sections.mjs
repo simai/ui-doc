@@ -83,6 +83,22 @@ const legacyModifiers = (block, present) => {
   return out;
 };
 
+// Utility classes the journal keeps only as former names of a successor
+// (kind utility, stage compat, an exact class in `from` and one in `to`):
+// shadow-1 → shadow-raised. A page describes the current names only
+// (docs-review decision D03); the former ones are named in one line under the
+// table, with the date they go. Patterns (`m-left-*`) are not class names and
+// stay out; a former class with no successor (a coloured shadow) stays a row,
+// because its page says it is going.
+const formerUtilities = new Map();
+for (const record of journal.records ?? []) {
+  if (record.kind !== 'utility' || record.stage !== 'compat') continue;
+  for (const item of record.items ?? []) {
+    if (!item.from || !item.to || /[*<{\s]/u.test(item.from) || /[*<{\s]/u.test(item.to) || item.from.includes(':')) continue;
+    formerUtilities.set(item.from, {to: item.to, removeAfter: record.remove_after ?? null});
+  }
+}
+
 // ---- CSS ----------------------------------------------------------------------
 
 const unescape = (name) => name.replace(/\\(.)/gu, '$1');
@@ -203,6 +219,9 @@ const utilityClasses = (families) => {
       }
     }
   }
+  // Former names leave the table and are listed under it.
+  const former = [...byClass.keys()].filter((name) => formerUtilities.has(name)).sort();
+  for (const name of former) byClass.delete(name);
   // A run of classes that differ in one value, and whose CSS differs in that
   // same value, is one row: `radius-top-{значение}` with the values listed.
   // The value may be any dash segment of the name (`color-on-{значение}-container`);
@@ -259,6 +278,11 @@ const utilityClasses = (families) => {
       const shown = row.entry.selector ? ` (${code(row.entry.selector)})` : '';
       lines.push(`| ${code(row.name)}${shown} | ${code(row.entry.css)} | — |`);
     }
+  }
+  if (former.length) {
+    const dates = [...new Set(former.map((name) => formerUtilities.get(name).removeAfter).filter(Boolean))].sort();
+    const until = dates.length ? ` до ${dates.join(', ')}` : '';
+    lines.push('', `Прежние имена работают${until}: ${former.map((name) => `${code(name)} → ${code(formerUtilities.get(name).to)}`).join(', ')}. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).`);
   }
   return lines;
 };

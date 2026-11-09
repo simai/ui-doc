@@ -28,7 +28,7 @@ const initialize = async () => {
     menu.entries = rows();
     docara.example.log('sf-menu-context-select', {id: event.detail.id});
   });
-  anchor.addEventListener('click', () => menu.toggleFor(anchor));
+  anchor.addEventListener('click', () => menu.toggleFor({anchor}));
 };
 
 initialize();

@@ -19,7 +19,7 @@ document.querySelectorAll('[data-context-menu-demo="standard"]').forEach((demo) 
   };
 
   render();
-  anchor.addEventListener('click', () => menu.toggleFor(anchor));
+  anchor.addEventListener('click', () => menu.toggleFor({anchor}));
   menu.addEventListener('sf-menu-context-select', (event) => {
     const {id, checked} = event.detail;
     if (id === 'pin') state.pinned = checked;
