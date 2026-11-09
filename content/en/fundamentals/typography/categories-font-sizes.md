@@ -53,9 +53,9 @@ For **heading**:
 |:-----------------------|:--------------------|
 | `--sf-heading-1--size` | `--sf-text-size-6` |
 | `--sf-heading-2--size` | `--sf-text-size-5` |
-| `--sf-heading-3--size` | `--sf-text-size-4` |
-| `--sf-heading-4--size` | `--sf-text-size-3` |
-| `--sf-heading-5--size` | `--sf-text-size-2` |
+| `--sf-heading-3--size` | `--sf-text-size-3` |
+| `--sf-heading-4--size` | `--sf-text-size-2` |
+| `--sf-heading-5--size` | `--sf-text-size-1` |
 | `--sf-heading-6--size` | `--sf-text-size-1` |
 
 For **display**:
