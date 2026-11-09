@@ -107,7 +107,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -116,7 +116,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 | Тег | `<sf-confirm-change>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
 | Контракт | `smart.confirm-change`, версия `1.5.1` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -165,5 +165,5 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/confirm-change`
-- `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-confirm-change`
+- `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/confirm-change`
+- `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-confirm-change`

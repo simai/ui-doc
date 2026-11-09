@@ -5,7 +5,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 # Поиск по сайту
 
-:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.6.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Поиск по сайту открывается кнопкой в шапке или клавишами `Command/Control+K` и
 `/`: крупное скруглённое поле и карточка результатов под ним, над лёгким
@@ -258,7 +258,7 @@ search.addEventListener('sf-search-navigate', (event) => {
 |:---|:---|
 | `--sf-search-inline-size` | ширину окна (36rem) |
 | `--sf-search-inset-block-start` | расстояние от верха окна браузера (4rem) |
-| `--sf-search-background` | фон поля и карточки |
+| `--sf-search-background-color` | фон поля и карточки |
 | `--sf-search-scrim-color` | затемнение |
 | `--sf-search-mark-color` | заливку совпавшего текста |
 | `--sf-search-radius` | скругление карточки результатов |
@@ -343,13 +343,13 @@ search.addEventListener('sf-search-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-search>`, контракт `smart.search` версии `1.6.2` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-search>`, контракт `smart.search` версии `1.7.2` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+K` или `/` вне текстового поля открывают окно; `↓` и `↑` двигают выбор по результатам, `Enter` открывает выбранный; `Esc` очищает поле, а в пустом поле закрывает окно и возвращает фокус. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/search` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-search` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/search` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-search` |
 
 ## См. также
 

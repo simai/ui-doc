@@ -92,16 +92,21 @@ try {
   // Without the source checkout the page is built without the journal notes;
   // --check then reports the difference rather than passing silently.
 }
-const retiredNote = (name) => {
-  const record = retired.get(name);
-  return record ? ` · устарела: удаляется после ${record.remove_after}, запись \`${record.id}\` журнала` : '';
-};
+// A retired name is not described beside the current ones (owner rule D03):
+// the list leaves it out and the update guide lists every retired name with
+// its successor and its date, in one generated table.
+const retiredPage = 'content/ru/guide/connection/updating.md';
+const retiredHeading = '## Прежние имена переменных';
 
 // A primitive is a step of a ramp: it has no meaning of its own, only a value.
+// The sixteen hues of the static palette (C17) are ramps as well; their page
+// is the palette guide.
+const STATIC_HUES = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'pink', 'brown', 'gray'];
 const isPrimitive = (name) => {
   const bare = name.replace('--sf-', '');
   return /^[a-i]\d$/u.test(bare)
     || /^(neutral|primary|secondary|tertiary|success|warning|error|info)-\d+/u.test(bare)
+    || new RegExp(`^(${STATIC_HUES.join('|')})-\\d+`, 'u').test(bare)
     || /^alpha-\d+$/u.test(bare)
     || bare.includes('--alfa-')
     || ['black', 'white', 'transparent', 'alpha-base'].includes(bare);
@@ -111,7 +116,10 @@ const isPrimitive = (name) => {
 // lands in the first group whose test it matches, so the order is the rule.
 const GROUPS = [
   ['Цвет: роли поверхности и содержимого', (n) => /^--sf-(surface|on-surface|on-[a-z]+-container|inverse)/u.test(n)],
-  ['Цвет: акцентные роли', (n) => /^--sf-(primary|secondary|tertiary|success|warning|error|info|link|mark|code)(-|$)/u.test(n)],
+  ['Цвет: акцентные роли', (n) => /^--sf-(on-)?(primary|secondary|tertiary|neutral|success|warning|error|info|link|mark|code)(-|$)/u.test(n)],
+  // The static palette's role set (.sf-hue-*) and the chart colours read the
+  // static hues (C17): one table for the colours that do not follow the brand.
+  ['Цвет: оттенки и графики', (n) => /^--sf-(hue|on-hue|chart)(-|$)/u.test(n)],
   ['Цвет: границы и отключённое', (n) => /^--sf-(outline|disable|on-disable|focus)/u.test(n)],
   ['Текст', (n) => /^--sf-(text|body-text|heading|display|title|label|weight|font|mono)/u.test(n)],
   ['Размеры и интервалы', (n) => /^--sf-(space|size|icon-size|breakpoint|container|max-width)/u.test(n)],
@@ -127,9 +135,10 @@ const GROUPS = [
 const declarations = [...css.matchAll(/(--sf-[a-z0-9\\/-]+):\s*([^;]+);/gu)];
 const values = new Map();
 for (const [, name, value] of declarations) {
-  if (isPrimitive(name)) continue;
+  if (isPrimitive(name) || retired.has(name)) continue;
   const list = values.get(name) ?? [];
-  const trimmed = value.trim();
+  // A value written over several lines (a font stack) is one line in a cell.
+  const trimmed = value.trim().replace(/\s+/gu, ' ');
   if (!list.includes(trimmed)) list.push(trimmed);
   values.set(name, list);
 }
@@ -159,7 +168,7 @@ const unread = (name) => {
 // A value is CSS and is copied into CSS, so it keeps the escape.
 const shown = (name) => values.get(name)
   .map((value) => `\`${value.replace(/\|/gu, '\\|')}\``)
-  .join(' · ') + unread(name) + retiredNote(name);
+  .join(' · ') + unread(name);
 
 const total = values.size;
 const sections = [...grouped.entries()]
@@ -188,9 +197,9 @@ ${total} переменных, которые объявляет ядро, со 
 записаны так, как их пишут в CSS.
 
 Пометка «не читается» стоит у переменной, которую ядро объявляет, но не
-читает ни один файл поставки: её значение ничего не меняет. Пометка
-«устарела» называет дату, после которой переменная уходит из ядра, и запись
-[журнала изменений](/ru/guide/connection/change-lifecycle/#журнал-изменений).
+читает ни один файл поставки: её значение ничего не меняет. Прежние имена,
+которые ещё работают до даты удаления, здесь не показаны: их таблица — на
+странице [Как обновить проект](/ru/guide/connection/updating/#прежние-имена-переменных).
 
 ## Когда применять
 
@@ -218,14 +227,53 @@ ${total} переменных, которые объявляет ядро, со 
 ${sections}
 `;
 
+// The retired names, one table per journal record, in the update guide.
+const seen = new Set();
+const retiredRows = [];
+for (const [name, record] of retired) {
+  if (seen.has(name)) continue;
+  seen.add(name);
+  // A successor that is itself retired (--sf-elevation-1--shadow →
+  // --sf-shadow-card → --sf-shadow-raised) is followed to the current name.
+  let to = record.items.find((item) => item.from === name)?.to;
+  for (let hops = 0; to && retired.has(to) && hops < 5; hops += 1) {
+    to = retired.get(to).items.find((item) => item.from === to)?.to ?? null;
+  }
+  retiredRows.push(`| \`${readable(name)}\` | ${to ? `\`${readable(to)}\`` : 'без замены'} | ${record.remove_after} | \`${record.id}\` |`);
+}
+const retiredSection = [
+  retiredHeading,
+  '',
+  'Переменные, которые ядро переименовало или убирает. Прежнее имя работает до даты в третьем столбце; в новом коде пишите имя из второго. Таблица собрана из журнала изменений выпуска (`node scripts/build-token-reference.mjs`).',
+  '',
+  '| Прежнее имя | Новое имя | Работает до | Запись журнала |',
+  '| :--- | :--- | :--- | :--- |',
+  ...retiredRows,
+].join('\n');
+const updating = readFileSync(resolve(root, retiredPage), 'utf8');
+const withRetired = (() => {
+  const begin = updating.indexOf(`\n${retiredHeading}\n`);
+  if (begin < 0) {
+    const anchor = updating.indexOf('\n## Связь с другими частями\n');
+    if (anchor < 0) throw new Error(`${retiredPage}: no place for ${retiredHeading}`);
+    return `${updating.slice(0, anchor + 1)}${retiredSection}\n\n${updating.slice(anchor + 1)}`;
+  }
+  const after = begin + 1 + retiredHeading.length + 1;
+  const next = updating.slice(after).search(/^## /mu);
+  const end = next < 0 ? updating.length : after + next;
+  return `${updating.slice(0, begin + 1)}${retiredSection}\n${next < 0 ? '' : `\n${updating.slice(end)}`}`;
+})();
+
 if (process.argv.includes('--check')) {
   const current = readFileSync(resolve(root, page), 'utf8');
-  if (current !== body) {
+  if (current !== body || updating !== withRetired || retired.size === 0) {
     console.error(JSON.stringify({
       schema: 'ui-doc.token_reference_audit.v1',
       status: 'fail',
       page,
-      reason: 'the page differs from what the core declares now; run node scripts/build-token-reference.mjs',
+      reason: retired.size === 0
+        ? 'the change journal was not read: set SIMAI_UI_SOURCE_ROOT to a ui-source checkout'
+        : 'the page or the update guide differs from what the core and the journal say now; run node scripts/build-token-reference.mjs',
     }, null, 2));
     process.exit(1);
   }
@@ -233,5 +281,10 @@ if (process.argv.includes('--check')) {
   process.exit(0);
 }
 
+if (retired.size === 0) {
+  console.error('the change journal was not read: set SIMAI_UI_SOURCE_ROOT to a ui-source checkout');
+  process.exit(2);
+}
 writeFileSync(resolve(root, page), body);
+writeFileSync(resolve(root, retiredPage), withRetired);
 console.log(`${page}: ${total} tokens in ${[...grouped.values()].filter((n) => n.length).length} groups`);

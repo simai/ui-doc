@@ -5,10 +5,11 @@ description: "Окрашивает текст цветовой ролью тем
 
 # Цвет текста
 
-Классы `color-*` задают цвет текста через цветовые роли и палитры темы.
-Берите роль (`color-on-surface`, `color-primary`, `color-error`), когда цвет
-несёт смысл, и палитру (`color-blue-5`), только когда нужен конкретный оттенок
-вне ролей.
+Классы `color-*` задают цвет текста через цветовые роли темы: текст на
+поверхности (`color-on-surface`), акцентные и статусные роли (`color-primary`,
+`color-error`) и текст на их заливке. Роль сама подстраивается под светлую и
+тёмную тему. Классов для отдельных ступеней палитры нет: оттенок вне ролей
+берут из [статической палитры](/ru/guide/colour/palettes/#статическая-палитра).
 
 ## Пример
 
@@ -60,114 +61,18 @@ description: "Окрашивает текст цветовой ролью тем
 :::example {id="utilities/text-formatting/text-color-keywords" label="color-inherit, color-current, color-transparent"}
 :::
 
-### Палитра
-
-Цвета палитры заданы числом и не зависят от темы: светлые ступени не видны на
-светлом фоне, тёмные — на тёмном.
-
-:::example {id="utilities/text-formatting/text-color-palette" label="Ступени палитры"}
-:::
-
 ## Классы
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `color-{значение}` | `color: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `color-on-{значение}` | `color: var(--sf-on-{значение})` | `surface`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `color-{значение}` | `color: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `color-on-{значение}` | `color: var(--sf-on-{значение})` | `surface`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `color-on-surface-{значение}` | `color: var(--sf-on-surface-{значение})` | `fixed`, `variant`, `inverse` |
 | `color-on-surface-inverse-fixed` | `color: var(--sf-on-surface-inverse-fixed)` | — |
-| `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `color-white` | `color: rgb(255, 255, 255)` | — |
-| `color-black` | `color: rgb(0, 0, 0)` | — |
-| `color-gray` | `color: rgb(106, 115, 125)` | — |
-| `color-gray-0` | `color: rgb(250, 251, 252)` | — |
-| `color-gray-1` | `color: rgb(246, 248, 250)` | — |
-| `color-gray-2` | `color: rgb(225, 228, 232)` | — |
-| `color-gray-3` | `color: rgb(209, 213, 218)` | — |
-| `color-gray-4` | `color: rgb(149, 157, 165)` | — |
-| `color-gray-5` | `color: rgb(106, 115, 125)` | — |
-| `color-gray-6` | `color: rgb(88, 96, 105)` | — |
-| `color-gray-7` | `color: rgb(68, 77, 86)` | — |
-| `color-gray-8` | `color: rgb(47, 54, 61)` | — |
-| `color-gray-9` | `color: rgb(36, 41, 46)` | — |
-| `color-red` | `color: rgb(215, 58, 73)` | — |
-| `color-red-0` | `color: rgb(255, 238, 240)` | — |
-| `color-red-1` | `color: rgb(255, 220, 224)` | — |
-| `color-red-2` | `color: rgb(253, 174, 183)` | — |
-| `color-red-3` | `color: rgb(249, 117, 131)` | — |
-| `color-red-4` | `color: rgb(234, 74, 90)` | — |
-| `color-red-5` | `color: rgb(215, 58, 73)` | — |
-| `color-red-6` | `color: rgb(203, 36, 49)` | — |
-| `color-red-7` | `color: rgb(179, 29, 40)` | — |
-| `color-red-8` | `color: rgb(158, 28, 35)` | — |
-| `color-red-9` | `color: rgb(134, 24, 29)` | — |
-| `color-orange` | `color: rgb(246, 106, 10)` | — |
-| `color-orange-0` | `color: rgb(255, 248, 242)` | — |
-| `color-orange-1` | `color: rgb(255, 235, 218)` | — |
-| `color-orange-2` | `color: rgb(255, 209, 172)` | — |
-| `color-orange-3` | `color: rgb(255, 171, 112)` | — |
-| `color-orange-4` | `color: rgb(251, 133, 50)` | — |
-| `color-orange-5` | `color: rgb(246, 106, 10)` | — |
-| `color-orange-6` | `color: rgb(227, 98, 9)` | — |
-| `color-orange-7` | `color: rgb(209, 87, 4)` | — |
-| `color-orange-8` | `color: rgb(194, 78, 0)` | — |
-| `color-orange-9` | `color: rgb(160, 65, 0)` | — |
-| `color-yellow` | `color: rgb(255, 211, 61)` | — |
-| `color-yellow-0` | `color: rgb(255, 253, 239)` | — |
-| `color-yellow-1` | `color: rgb(255, 251, 221)` | — |
-| `color-yellow-2` | `color: rgb(255, 245, 177)` | — |
-| `color-yellow-3` | `color: rgb(255, 234, 127)` | — |
-| `color-yellow-4` | `color: rgb(255, 223, 93)` | — |
-| `color-yellow-5` | `color: rgb(255, 211, 61)` | — |
-| `color-yellow-6` | `color: rgb(249, 197, 19)` | — |
-| `color-yellow-7` | `color: rgb(219, 171, 9)` | — |
-| `color-yellow-8` | `color: rgb(176, 136, 0)` | — |
-| `color-yellow-9` | `color: rgb(115, 92, 15)` | — |
-| `color-green` | `color: rgb(40, 167, 69)` | — |
-| `color-green-0` | `color: rgb(240, 255, 244)` | — |
-| `color-green-1` | `color: rgb(220, 255, 228)` | — |
-| `color-green-2` | `color: rgb(190, 245, 203)` | — |
-| `color-green-3` | `color: rgb(133, 232, 157)` | — |
-| `color-green-4` | `color: rgb(52, 208, 88)` | — |
-| `color-green-5` | `color: rgb(40, 167, 69)` | — |
-| `color-green-6` | `color: rgb(34, 134, 58)` | — |
-| `color-green-7` | `color: rgb(23, 111, 44)` | — |
-| `color-green-8` | `color: rgb(22, 92, 38)` | — |
-| `color-green-9` | `color: rgb(20, 70, 32)` | — |
-| `color-blue` | `color: rgb(3, 102, 214)` | — |
-| `color-blue-0` | `color: rgb(241, 248, 255)` | — |
-| `color-blue-1` | `color: rgb(219, 237, 255)` | — |
-| `color-blue-2` | `color: rgb(200, 225, 255)` | — |
-| `color-blue-3` | `color: rgb(121, 184, 255)` | — |
-| `color-blue-4` | `color: rgb(33, 136, 255)` | — |
-| `color-blue-5` | `color: rgb(3, 102, 214)` | — |
-| `color-blue-6` | `color: rgb(0, 92, 197)` | — |
-| `color-blue-7` | `color: rgb(4, 66, 137)` | — |
-| `color-blue-8` | `color: rgb(3, 47, 98)` | — |
-| `color-blue-9` | `color: rgb(5, 38, 76)` | — |
-| `color-purple` | `color: rgb(111, 66, 193)` | — |
-| `color-purple-0` | `color: rgb(245, 240, 255)` | — |
-| `color-purple-1` | `color: rgb(230, 220, 253)` | — |
-| `color-purple-2` | `color: rgb(209, 188, 249)` | — |
-| `color-purple-3` | `color: rgb(179, 146, 240)` | — |
-| `color-purple-4` | `color: rgb(138, 99, 210)` | — |
-| `color-purple-5` | `color: rgb(111, 66, 193)` | — |
-| `color-purple-6` | `color: rgb(90, 50, 163)` | — |
-| `color-purple-7` | `color: rgb(76, 40, 136)` | — |
-| `color-purple-8` | `color: rgb(58, 29, 110)` | — |
-| `color-purple-9` | `color: rgb(41, 19, 78)` | — |
-| `color-pink` | `color: rgb(234, 74, 170)` | — |
-| `color-pink-0` | `color: rgb(255, 238, 248)` | — |
-| `color-pink-1` | `color: rgb(254, 219, 240)` | — |
-| `color-pink-2` | `color: rgb(249, 179, 221)` | — |
-| `color-pink-3` | `color: rgb(246, 146, 206)` | — |
-| `color-pink-4` | `color: rgb(236, 108, 185)` | — |
-| `color-pink-5` | `color: rgb(234, 74, 170)` | — |
-| `color-pink-6` | `color: rgb(208, 53, 146)` | — |
-| `color-pink-7` | `color: rgb(185, 58, 134)` | — |
-| `color-pink-8` | `color: rgb(153, 48, 111)` | — |
-| `color-pink-9` | `color: rgb(109, 34, 79)` | — |
+| `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+
+Ещё 90 классов уходят без замены и работают до 2027-01-01 (запись `utility-c17-legacy-palette-classes` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:color-transparent`.
 
@@ -210,6 +115,10 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-on-success` | `light-dark(var(--sf-white), var(--sf-success-20))` |
 | `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` |
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
+| `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` |
+| `--sf-on-info-container` | `light-dark(var(--sf-info-10), var(--sf-info-90))` |
+| `--sf-on-info-container-graphic` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
 | `--sf-disable` | `var(--sf-surface-disabled)` |
@@ -227,7 +136,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `color-on-surface-inverse` | текст на инверсной поверхности `bg-surface-inverse` |
 
 ```html
-<article class="bg-surface-0">
+<article class="bg-surface-page">
   <h2 class="color-on-surface">Заголовок и основной текст</h2>
   <p class="color-on-surface-variant">Вспомогательное описание или метаданные</p>
 </article>

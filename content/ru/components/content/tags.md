@@ -170,7 +170,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-tag` |
 | Части | `sf-tag-check`, `sf-tag-color-icon`, `sf-tag-container`, `sf-tag-count` |
-| Модификаторы | `sf-tag--appearance-ghost`, `sf-tag--appearance-surface`, `sf-tag--avatar`, `sf-tag--checkbox`, `sf-tag--color`, `sf-tag--default`, `sf-tag--error`, `sf-tag--icon`, `sf-tag--inline`, `sf-tag--interactive`, `sf-tag--line-1`, `sf-tag--line-1/2`, `sf-tag--line-2`, `sf-tag--removable`, `sf-tag--success`, `sf-tag--warning` |
+| Модификаторы | `sf-tag--appearance-ghost`, `sf-tag--appearance-surface`, `sf-tag--avatar`, `sf-tag--checkbox`, `sf-tag--color`, `sf-tag--default`, `sf-tag--error`, `sf-tag--icon`, `sf-tag--info`, `sf-tag--inline`, `sf-tag--interactive`, `sf-tag--line-1`, `sf-tag--line-1/2`, `sf-tag--line-2`, `sf-tag--removable`, `sf-tag--success`, `sf-tag--warning` |
 | Размеры | `sf-tag--size-1`, `sf-tag--size-1/2`, `sf-tag--size-1/3`, `sf-tag--size-2`, `sf-tag--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

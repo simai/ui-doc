@@ -30,7 +30,7 @@ description: "Оформляет таблицу классом table: ширин
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `table` | `--sf-table-color: var(--sf-on-surface); --sf-table-border-color: var(--sf-outline-variant); --sf-table-accent-bg: var(--sf-transparent); --sf-table-stripe-color: var(--sf-on-surface); --sf-table-stripe-bg: var(--sf-surface-transparent-select); --sf-table-active-color: var(--sf-on-surface); --sf-table-active-bg: var(--sf-surface-transparent-select); --sf-table-hover-color: var(--sf-on-surface); --sf-table-hover-bg: var(--sf-surface-transparent-hover); width: 100%; inline-size: 100%; margin-bottom: var(--sf-b6); -webkit-margin-after: var(--sf-b6); margin-block-end: var(--sf-b6); color: var(--sf-table-color); vertical-align: top; border-color: var(--sf-table-border-color); text-align: start; .table > :not(caption) > * > * { padding: var(--sf-a8) var(--sf-a8); border-bottom-width: var(--sf-px); border-block-end-width: var(--sf-px); background-image: linear-gradient(var(--sf-table-accent-bg), var(--sf-table-accent-bg)) }; .table > tbody { vertical-align: inherit }; .table > thead { vertical-align: bottom }; .table > thead > tr > th { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > tbody > tr > th[scope=row] { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > caption { padding-top: var(--sf-space-1/2); padding-bottom: var(--sf-space-1/2); padding-block: var(--sf-space-1/2); color: var(--sf-on-surface-variant); font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2); text-align: start }; .table .table-numeric { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: end }` | — |
+| `table` | `--sf-table-color: var(--sf-on-surface); --sf-table-border-color: var(--sf-outline-variant); --sf-table-accent-bg: var(--sf-transparent); --sf-table-stripe-color: var(--sf-on-surface); --sf-table-stripe-bg: var(--sf-surface-state-hover); --sf-table-active-color: var(--sf-on-surface); --sf-table-active-bg: var(--sf-surface-state-select); --sf-table-hover-color: var(--sf-on-surface); --sf-table-hover-bg: var(--sf-surface-state-hover); width: 100%; inline-size: 100%; margin-bottom: var(--sf-b6); -webkit-margin-after: var(--sf-b6); margin-block-end: var(--sf-b6); color: var(--sf-table-color); vertical-align: top; border-color: var(--sf-table-border-color); text-align: start; .table > :not(caption) > * > * { padding: var(--sf-a8) var(--sf-a8); border-bottom-width: var(--sf-px); border-block-end-width: var(--sf-px); background-image: linear-gradient(var(--sf-table-accent-bg), var(--sf-table-accent-bg)) }; .table > tbody { vertical-align: inherit }; .table > thead { vertical-align: bottom }; .table > thead > tr > th { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > tbody > tr > th[scope=row] { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > caption { padding-top: var(--sf-space-1/2); padding-bottom: var(--sf-space-1/2); padding-block: var(--sf-space-1/2); color: var(--sf-on-surface-variant); font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2); text-align: start }; .table .table-numeric { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: end }` | — |
 | `table-sm` (`.table-sm > :not(caption) > * > *`) | `padding: var(--sf-a4) var(--sf-a4)` | — |
 | `table-small` (`.table-small > :not(caption) > * > *`) | `padding: var(--sf-a4) var(--sf-a4)` | — |
 
@@ -47,8 +47,8 @@ description: "Оформляет таблицу классом table: ширин
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-transparent` | `rgba(255,255,255,0)` |
-| `--sf-surface-transparent-select` | `var(--sf-surface-state-select)` |
-| `--sf-surface-transparent-hover` | `var(--sf-surface-state-hover)` |
+| `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
+| `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 | `--sf-b6` | `1rem` |
 | `--sf-a8` | `0.5rem` |
 | `--sf-px` | `1px` |
@@ -86,9 +86,9 @@ description: "Оформляет таблицу классом table: ширин
 | `--sf-table-color` | `var(--sf-on-surface)` | текст |
 | `--sf-table-border-color` | `var(--sf-outline-variant)` | линии |
 | `--sf-table-accent-bg` | прозрачный | фон ячейки; его меняют полосы и подсветка |
-| `--sf-table-stripe-bg`, `--sf-table-stripe-color` | `var(--sf-surface-transparent-select)`, `var(--sf-on-surface)` | полосы `table-stripe` |
-| `--sf-table-active-bg`, `--sf-table-active-color` | `var(--sf-surface-transparent-select)`, `var(--sf-on-surface)` | `table-active` |
-| `--sf-table-hover-bg`, `--sf-table-hover-color` | `var(--sf-surface-transparent-hover)`, `var(--sf-on-surface)` | `table-hover` |
+| `--sf-table-stripe-bg`, `--sf-table-stripe-color` | `var(--sf-surface-state-hover)`, `var(--sf-on-surface)` | полосы `table-stripe` |
+| `--sf-table-active-bg`, `--sf-table-active-color` | `var(--sf-surface-state-select)`, `var(--sf-on-surface)` | `table-active` |
+| `--sf-table-hover-bg`, `--sf-table-hover-color` | `var(--sf-surface-state-hover)`, `var(--sf-on-surface)` | `table-hover` |
 
 Переменную задают на таблице, чтобы перекрасить её одну, или в теме проекта —
 для всех таблиц.

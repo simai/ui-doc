@@ -5,7 +5,7 @@ description: "Список, с которым работают: строки и�
 
 # Список
 
-:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Список — для того, с чем что-то делают: беседы, письма, шаблоны, файлы,
 участники, версии. Строки строятся из данных — название и тихая вторая строка;
@@ -36,7 +36,7 @@ list.actions = [
   {id: 'copy', text: 'Копировать', icon: 'content_copy'},
   {id: 'delete', text: 'Удалить', icon: 'delete', destructive: true},
 ];
-list.setItems(await api.letters(), {hasMore: true});
+list.setItems({items: await api.letters(), options: {hasMore: true}});
 ```
 
 Строка — обычные данные `{id, text, supporting?, icon?, date?, group?,
@@ -130,7 +130,7 @@ list.addEventListener('sf-list-open', (event) => {
 `has-more` говорит, что есть продолжение: видна кнопка «Показать ещё», а
 когда конец списка близко, список сам просит следующую страницу событием
 `sf-list-load-more` с `{direction: 'after', after}`, где `after` — `id`
-последней строки. Ответ передайте `appendItems(items, {hasMore})`; если
+последней строки. Ответ передайте `appendItems({items, options: {hasMore}})`; если
 загрузить не удалось — `moreFailed()`, и список попросит снова.
 
 :::example {id="smart-components/list/more" label="Версии с продолжением"}
@@ -143,9 +143,9 @@ list.addEventListener('sf-list-open', (event) => {
 
 | Метод | Что делает |
 |:---|:---|
-| `setItems(items, {hasMore})` | Весь список и есть ли продолжение; завершает запрос страницы. |
-| `appendItems(items, {hasMore})` | Следующая страница после показанных строк. |
-| `upsert(item)` | Новая строка в начало или изменившаяся на своём месте. |
+| `setItems({items, options: {hasMore}})` | Весь список и есть ли продолжение; завершает запрос страницы. |
+| `appendItems({items, options: {hasMore}})` | Следующая страница после показанных строк. |
+| `upsert({item})` | Новая строка в начало или изменившаяся на своём месте. |
 | `detach(id)` | Убрать строку. |
 | `rename(id)` | Начать переименование, как `F2`. Отказ `not-renamable`, `unknown`, `disabled`. |
 | `openMenu(id)` | Открыть действия строки, как «⋯» и `Shift+F10`. Отказ `no-actions`, `unknown`. |
@@ -225,13 +225,13 @@ list.addEventListener('sf-list-open', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list>`, контракт `smart.list` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-list>`, контракт `smart.list` версии `1.3.2` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`); пока ждёт данные, компонент показывает свою. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `клавиша меню`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/list` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/list` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

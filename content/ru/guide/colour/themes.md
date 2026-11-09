@@ -28,7 +28,7 @@ description: "Тема определяет, какие значения пол�
 
 ```css
 --sf-primary: light-dark(var(--sf-primary-40), var(--sf-primary-80));
---sf-surface-0: light-dark(var(--sf-white), var(--sf-neutral-5));
+--sf-surface-page: light-dark(var(--sf-white), var(--sf-neutral-5));
 ```
 
 Браузер берёт первое значение при `color-scheme: light` и второе при `dark`.
@@ -95,7 +95,7 @@ SF.Loader.themePreference;  // 'system', 'light' или 'dark'
 ### Участок другой темы
 
 Саму страницу красит ядро: базовый стиль `body` в `core.css` задаёт фон
-`--sf-surface-0` и цвет текста `--sf-on-surface` ([Что в каком слое](/ru/guide/colour/cascade-layers/#что-в-каком-слое)).
+`--sf-surface-page` и цвет текста `--sf-on-surface` ([Что в каком слое](/ru/guide/colour/cascade-layers/#что-в-каком-слое)).
 Странице с темой на `<html>` свой фон не нужен.
 
 Класс темы можно поставить и на часть страницы — например, тёмный блок на
@@ -103,7 +103,7 @@ SF.Loader.themePreference;  // 'system', 'light' или 'dark'
 но фона не задаёт. Участку обязательно нужны свой фон и цвет текста:
 
 ```html
-<section class="theme-dark bg-surface-0 color-on-surface">
+<section class="theme-dark bg-surface-page color-on-surface">
   Тёмный блок на светлой странице
 </section>
 ```

@@ -52,6 +52,7 @@ description: "Рисует кольцо вокруг элемента тенью
 | `ring-on-surface` | `--sf-ring-color: var(--sf-on-surface)` | — |
 | `ring-on-surface-variant` | `--sf-ring-color: var(--sf-on-surface-variant)` | — |
 | `ring-{значение}` | `--sf-ring-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `ring-info-container-strong` | `--sf-ring-color: var(--sf-info-container-strong)` | — |
 | `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `ring-offset-outline-variant` | `--sf-ring-offset-color: var(--sf-outline-variant)` | — |
 | `ring-offset-surface` | `--sf-ring-offset-color: var(--sf-surface-1)` | — |
@@ -61,6 +62,7 @@ description: "Рисует кольцо вокруг элемента тенью
 | `ring-offset-on-surface` | `--sf-ring-offset-color: var(--sf-on-surface)` | — |
 | `ring-offset-on-surface-variant` | `--sf-ring-offset-color: var(--sf-on-surface-variant)` | — |
 | `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `ring-offset-info-container-strong` | `--sf-ring-offset-color: var(--sf-info-container-strong)` | — |
 | `ring-offset-{значение}` | `--sf-ring-offset-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4` |
 | `ring-offset-0` | `--sf-ring-offset-width: var(--sf-0)` | — |
 | `ring-1` | `--sf-ring-width: var(--sf-a1); box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + 0px) color-mix(in srgb, transparent, currentColor calc(1 * 100%)), 0 0 0 0px transparent; box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px)) color-mix(in srgb, transparent, var(--sf-ring-color, currentColor) calc(var(--sf-ring--alfa, 1) * 100%)), 0 0 0 var(--sf-ring-offset-width, 0px) var(--sf-ring-offset-color, transparent)` | — |
@@ -79,7 +81,7 @@ description: "Рисует кольцо вокруг элемента тенью
 |:---|:---|
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-1` | `var(--sf-surface-area)` |
 | `--sf-surface-0` | `var(--sf-surface-page)` |
@@ -109,6 +111,7 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
 | `--sf-outline-info` | `var(--sf-info-outline)` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
+| `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 | `--sf-a1` | `0.0625rem` |
 | `--sf-a2` | `0.125rem` |
 | `--sf-a3` | `0.1875rem` |

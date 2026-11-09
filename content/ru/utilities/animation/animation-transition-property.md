@@ -94,7 +94,7 @@ description: "Включает плавный переход для выбран
 
 ```html
 <button type="button" class="transition-colors hover:color-primary">Кнопка</button>
-<div class="transition hover:shadow-3 hover:scale-2">Карточка</div>
+<div class="transition hover:shadow-overlay hover:scale-2">Карточка</div>
 ```
 
 ### Размеры и флекс

@@ -210,12 +210,12 @@ count.addEventListener('change', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-quantity>`, контракт `smart.input-quantity` версии `1.3.3` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как числовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `PageUp`, `PageDown`, `Home`, `End`, `Enter`, `Esc`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-quantity` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-quantity` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-quantity` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-quantity` |
 
 ## См. также
 

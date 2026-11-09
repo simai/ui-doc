@@ -31,19 +31,19 @@ description: "Задаёт цвета точек градиента класса
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `gr1-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `gr1-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
 | `gr1-surface-0` | `--sf-gradient--color-1: var(--sf-surface-0)` | — |
 | `gr1-surface-1` | `--sf-gradient--color-1: var(--sf-surface-1)` | — |
 | `gr1-surface-2` | `--sf-gradient--color-1: var(--sf-surface-2)` | — |
 | `gr1-on-surface` | `--sf-gradient--color-1: var(--sf-on-surface)` | — |
 | `gr1-{значение}-container` | `--sf-gradient--color-1: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
-| `gr2-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `gr2-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
 | `gr2-surface-0` | `--sf-gradient--color-2: var(--sf-surface-0)` | — |
 | `gr2-surface-1` | `--sf-gradient--color-2: var(--sf-surface-1)` | — |
 | `gr2-surface-2` | `--sf-gradient--color-2: var(--sf-surface-2)` | — |
 | `gr2-on-surface` | `--sf-gradient--color-2: var(--sf-on-surface)` | — |
 | `gr2-{значение}-container` | `--sf-gradient--color-2: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
-| `gr3-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `gr3-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
 | `gr3-surface-{значение}` | `--sf-gradient--color-3: var(--sf-surface-{значение})` | `0`, `1`, `2` |
 | `gr3-on-surface` | `--sf-gradient--color-3: var(--sf-on-surface)` | — |
 | `gr3-{значение}-container` | `--sf-gradient--color-3: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary` |
@@ -73,6 +73,7 @@ description: "Задаёт цвета точек градиента класса
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
 | `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
 | `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
 
 ## Применение
 

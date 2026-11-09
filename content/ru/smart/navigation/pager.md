@@ -5,7 +5,7 @@ description: "Ведёт на соседнюю страницу или шаг п
 
 # Листалка страниц
 
-:badge[sf-pager]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pager]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Листалка страниц ведёт на соседнюю страницу или шаг по смыслу: предыдущая и
 следующая страница документации, записи блога или товара, шаги мастера, уроки
@@ -180,15 +180,15 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 ### Внешний вид
 
 Листалка берёт только роли темы: ссылки — `--sf-primary`, заметки —
-`--sf-on-surface-variant`, карточки — на `--sf-surface-0` с краем
-`--sf-outline-variant` (`--sf-outline-primary` при наведении), дорожка —
+`--sf-on-surface-variant`, карточки — на `--sf-surface-card` с краем
+`--sf-outline-variant` (`--sf-primary-outline` при наведении), дорожка —
 `--sf-surface-container`, заливка — `--sf-primary`, как у
 [Прогресса](/ru/smart/feedback/progress-bar/).
 
 | Переменная | По умолчанию | Что меняет |
 |:---|:---|:---|
 | `--sf-pager-gap` | `var(--sf-ui-1--text-space-x)` | расстояние между частями |
-| `--sf-pager-card-background` | `var(--sf-surface-0)` | заливку карточек и карточки урока |
+| `--sf-pager-card-background-color` | `var(--sf-surface-card)` | заливку карточек и карточки урока |
 | `--sf-pager-card-border-color` | `var(--sf-outline-variant)` | их край |
 | `--sf-pager-card-radius` | `var(--sf-radius--ui)` | их скругление |
 | `--sf-pager-link-color` | `var(--sf-primary)` | названия в карточках и строке |
@@ -272,13 +272,13 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-pager>`, контракт `smart.pager` версии `1.1.1` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-pager>`, контракт `smart.pager` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит ссылки и кнопки; `Enter` или `Пробел` нажимают кнопку, `Enter` открывает ссылку; с атрибутом `keys` клавиши `←` и `→` переходят к предыдущей и следующей записи. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/pager` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-pager` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/pager` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-pager` |
 
 ## См. также
 

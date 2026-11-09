@@ -13,7 +13,7 @@ const initialize = async () => {
     result.textContent = 'Гость: в шапке кнопка «Войти».';
   };
   const showPerson = () => {
-    slot.innerHTML = '<sf-avatar text="АБ" tone="auto" size="1/2" aria-label="Анна Белова, меню пользователя" data-user-avatar></sf-avatar>'
+    slot.innerHTML = '<sf-avatar text="АБ" hue="auto" size="1/2" aria-label="Анна Белова, меню пользователя" data-user-avatar></sf-avatar>'
       + '<sf-button size="1/2" appearance="ghost" scheme="on-surface" text="Выйти" data-user-sign-out></sf-button>';
     result.textContent = 'Вход выполнен: на месте кнопки аватар.';
   };

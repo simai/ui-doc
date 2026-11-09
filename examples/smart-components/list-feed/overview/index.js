@@ -19,13 +19,13 @@ const initialize = async () => {
   const add = document.querySelector('#list-feed-overview-add');
   if (!feed || !add || feed.dataset.exampleReady === 'true') return;
   feed.dataset.exampleReady = 'true';
-  feed.setItems(comments, {hasMore: true});
+  feed.setItems({items: comments, options: {hasMore: true}});
   feed.addEventListener('sf-list-feed-load-more', () => {
-    setTimeout(() => feed.prependItems(earlier, {hasMore: false}), 600);
+    setTimeout(() => feed.prependItems({items: earlier, options: {hasMore: false}}), 600);
   });
   let next = 9;
   add.addEventListener('click', () => {
-    feed.upsert({id: `c${next}`, author: 'me', 'author-name': 'Вы', own: true, text: `Комментарий ${next}`});
+    feed.upsert({item: {id: `c${next}`, author: 'me', 'author-name': 'Вы', own: true, text: `Комментарий ${next}`}});
     next += 1;
   });
 };

@@ -5,7 +5,7 @@ description: "Показывает и правит поля одного объ�
 
 # Представление свойств
 
-:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.11.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view-properties]{variant=tonal scheme=primary size=1/2} :badge[1.13.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-properties>` — карточка одного объекта: поля сгруппированы в области,
 области — в разделы, а каждое поле рисуется отрисовщиком своего типа. Берите
@@ -394,7 +394,7 @@ view: {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -402,7 +402,7 @@ view: {
 |:---|:---|
 | Тег | `<sf-view-properties>` |
 | Назначение | Поля одного объекта по разделам, группам и полям; каждое поле рисует набор рендереров своего типа, данные идут через отдельный порт приложения. Группа редактируется и сохраняется одной ревизией по кнопке, а значение ссылочного поля выбирается из кандидатов элемента постранично. Парный компонент к представлению данных: то показывает набор записей, этот — один объект. |
-| Контракт | `smart.view-properties`, версия `1.11.1` |
+| Контракт | `smart.view-properties`, версия `1.13.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -504,12 +504,12 @@ view: {
 ### Методы
 
 - `refresh()` — возвращает `object`. Действие refresh.
-- `load(reason: string)` — возвращает `object`. Повторно читает объект через порт.
-- `editGroup(section: string, group: string)` — возвращает `object`. Открывает одну группу для редактирования.
+- `load(args?: object|string)` — возвращает `object`. Повторно читает объект через порт.
+- `editGroup(args: object)` — возвращает `object`. Открывает одну группу для редактирования.
 - `cancelEdit()` — возвращает `object`. Закрывает открытую группу, отбрасывая введённое. Ничего не записывает.
-- `saveGroup(options: object)` — возвращает `object`. Сохраняет изменённые поля открытой группы одной ревизией.
-- `selectSection(key: string)` — возвращает `object`. Открывает один раздел.
-- `closePanel(reason: string)` — возвращает `object`. Сообщает, что панель следует закрыть. Решение о закрытии принимает приложение.
+- `saveGroup(args?: object)` — возвращает `object`. Сохраняет изменённые поля открытой группы одной ревизией.
+- `selectSection(args: object|string)` — возвращает `object`. Открывает один раздел.
+- `closePanel(args?: object|string)` — возвращает `object`. Сообщает, что панель следует закрыть. Решение о закрытии принимает приложение.
 - `copyAddress()` — возвращает `object`. Копирует адрес, переданный приложением, и сообщает, разрешил ли это браузер.
 - `openFullPage()` — возвращает `object`. Сообщает, что этот объект следует открыть на отдельной странице.
 - `confirmSave()` — возвращает `object`. Повторить сохранение, которое приложение попросило подтвердить, с выданным им отпечатком (порт 1.14.0).
@@ -529,7 +529,7 @@ view: {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-view-properties-close` — `detail`: `{ reason: "close" | "escape" | "cancelled" | "deleted" | "api", record_id: any, unsaved_fields: array }`. Панель просит закрыть её (крестиком, Esc или «Отменить») и передаёт, сколько полей будет потеряно: изменённых и не сохранённых или введённых, но ещё не ставших значением.
+- `sf-view-properties-close` — `detail`: `{ reason: "close" | "escape" | "outside" | "cancelled" | "deleted" | "api", record_id: any, unsaved_fields: array }`. Панель просит закрыть её (своей кнопкой закрытия, Esc, нажатием на затемнённую страницу или «Отмена») и сообщает, сколько полей будет потеряно: изменённых и не сохранённых или введённых, но ещё не ставших значением.
 - `sf-view-properties-open-full` — `detail`: `{ id: any, address: string, record_id: any }`. Пользователь запросил этот объект на полной странице по адресу, который передал приложение.
 - `sf-view-properties-saved` — `detail`: `{ id: any, revision?: string }`. Факт после применённого сохранения (`group.save` или `record.save`): `{id, revision}`.
 - `sf-view-properties-failed` — `detail`: `{ reason: string, message?: string }`. Факт после записи, которую не удалось прочитать, `{reason, message}`: код приложения (record-unknown для устаревшей ссылки) и его фраза.
@@ -557,8 +557,8 @@ view: {
 
 ### Источник
 
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view-properties`
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view-properties/rule.js#name=cl-view-properties`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-properties`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-properties/rule.js#name=cl-view-properties`
 
 ## См. также
 

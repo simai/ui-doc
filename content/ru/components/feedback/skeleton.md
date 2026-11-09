@@ -125,7 +125,7 @@ Framework вроде `d2`), `animation` (`pulse` — по умолчанию, `w
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-skeleton-background-color` | Полоски и фигуры-заполнители. | `var(--sf-ui-skeleton)` |
+| `--sf-skeleton-background-color` | Полоски и фигуры-заполнители. | `var(--sf-surface-container)` |
 | `--sf-skeleton-highlight-color` | Свет, который пробегает по полоске в анимации волны. | `var(--sf-surface-container-active)`; зависит от animation |
 | `--sf-skeleton-radius` | Углы полоски; круг остаётся круглым. | `var(--sf-radius--ui)` |
 | `--sf-skeleton-gap` | Расстояние между повторяющимися полосками (строки идут одна за другой без него). | `0` |
@@ -143,7 +143,7 @@ Framework вроде `d2`), `animation` (`pulse` — по умолчанию, `w
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-skeleton-base` | `var(--sf-ui-skeleton)` | `background` |
+| `--sf-skeleton-base` | `var(--sf-surface-container)` | `background` |
 | `--sf-skeleton-duration` | `calc(var(--sf-duration-slow) * 3)` | `animation` |
 | `--sf-skeleton-highlight` | `var(--sf-surface-container-active)` | `background-image` |
 | `--sf-skeleton-text--height` | не задана; задают модификаторы, например `.sf-skeleton-text--size-1`: `var(--sf-text-size-1)` | `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `width`, `inline-size` |

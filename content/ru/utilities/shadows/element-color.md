@@ -40,6 +40,7 @@ description: "Цветные тени уходят из SIMAI Framework 2027-01-
 | `shadow-error` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-error) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-error) var(--sf-shadow--alfa-shade))` | — |
 | `shadow-warning` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-warning) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-warning) var(--sf-shadow--alfa-shade))` | — |
 | `shadow-success` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-success) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-success) var(--sf-shadow--alfa-shade))` | — |
+| `shadow-info` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-info) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-info) var(--sf-shadow--alfa-shade))` | — |
 | `shadow-on-surface` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-shade))` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `hover:`. Например: `active:shadow-primary`.
@@ -61,6 +62,7 @@ description: "Цветные тени уходят из SIMAI Framework 2027-01-
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
 | `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 
 ## Применение

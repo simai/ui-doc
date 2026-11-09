@@ -20,5 +20,6 @@ Framework: откуда берётся значение, как цвет пол�
 - [Цветовые роли](/ru/guide/colour/colour-roles/)
 - [Прозрачность](/ru/guide/colour/transparency/)
 - [Контраст](/ru/guide/colour/contrast/)
+- [Фоны](/ru/guide/colour/surfaces/) — какой фон для какого места, слои поверх, выбранное, статусы
 - [Поверхность и тень](/ru/guide/colour/elevation/)
 - [Темы](/ru/guide/colour/themes/)

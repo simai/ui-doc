@@ -1,0 +1,41 @@
+<div class="grid grid-col-1 sm:grid-col-2 gap-3">
+  <section class="theme-light relative bg-surface-page color-on-surface radius-surface border border-outline-variant overflow-hidden p-2 flex flex-col gap-1" aria-label="Светлая тема" style="min-block-size: 15rem">
+    <p class="m-0 text-1/3 color-on-surface-variant">Светлая тема: страница под окном</p>
+    <div class="bg-surface-card border border-outline-variant radius-surface p-2 flex flex-col gap-1/2">
+      <span class="weight-6">Счёт № 214</span>
+      <span class="text-1/3 color-on-surface-variant">Оплатить до 15 ноября</span>
+    </div>
+    <div class="absolute inset-0 bg-scrim flex items-cross-center content-main-center p-2">
+      <div class="bg-surface-popup color-on-surface shadow-modal radius-surface p-2 flex flex-col gap-1" role="dialog" aria-label="Удалить счёт" style="max-inline-size: 15rem">
+        <span class="weight-6">Удалить счёт?</span>
+        <span class="text-1/3" style="color: var(--sf-on-surface-popup-variant)">Окно: фон popup, тень modal. Под ним scrim — чёрный 64.</span>
+      </div>
+    </div>
+  </section>
+  <section class="theme-dark relative bg-surface-page color-on-surface radius-surface border border-outline-variant overflow-hidden p-2 flex flex-col gap-1" aria-label="Тёмная тема" style="min-block-size: 15rem">
+    <p class="m-0 text-1/3 color-on-surface-variant">Тёмная тема: страница под окном</p>
+    <div class="bg-surface-card border border-outline-variant radius-surface p-2 flex flex-col gap-1/2">
+      <span class="weight-6">Счёт № 214</span>
+      <span class="text-1/3 color-on-surface-variant">Оплатить до 15 ноября</span>
+    </div>
+    <div class="absolute inset-0 bg-scrim flex items-cross-center content-main-center p-2">
+      <div class="bg-surface-popup color-on-surface shadow-modal radius-surface p-2 flex flex-col gap-1" role="dialog" aria-label="Удалить счёт" style="max-inline-size: 15rem">
+        <span class="weight-6">Удалить счёт?</span>
+        <span class="text-1/3" style="color: var(--sf-on-surface-popup-variant)">Окно: фон popup, тень modal. Под ним scrim — чёрный 64.</span>
+      </div>
+    </div>
+  </section>
+  <figure class="m-0 relative radius-surface overflow-hidden aspect-3x4 sm:aspect-16x9 sm:col-span-2" aria-label="Стекло на фото">
+    <img class="w-full h-full object-cover" src="assets/photo.jpg" alt="Натюрморт: ваза и стеклянный шар на ткани">
+    <div class="absolute inset-0 p-2 flex flex-col content-main-between">
+      <div class="flex content-main-between items-cross-start gap-1">
+        <span class="sf-surface-media radius-ui p-x-1 p-y-1/2 text-1/3">3 из 12</span>
+        <button type="button" class="sf-surface-media radius-ui p-x-1 p-y-1/2 text-1/3 border-0 cursor-pointer" aria-label="Закрыть просмотр">Закрыть</button>
+      </div>
+      <figcaption class="sf-surface-media radius-ui p-x-1 p-y-1/2 flex flex-col gap-1/2">
+        <span>Натюрморт с вазой</span>
+        <span class="text-1/3 color-on-surface-variant">surface-media — чёрный 48 и размытие</span>
+      </figcaption>
+    </div>
+  </figure>
+</div>

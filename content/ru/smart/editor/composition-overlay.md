@@ -5,7 +5,7 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
-:badge[sf-editor-overlay]{variant=tonal scheme=primary size=1/2} :badge[1.6.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-overlay]{variant=tonal scheme=primary size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
 
 Оверлей редактора даёт править страницу на месте, а не в отдельной форме:
 поверх страницы, собранной из Composition Document, он показывает рамку при
@@ -251,13 +251,13 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.6.4` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.7.1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/editor-overlay` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-editor-overlay` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/editor-overlay` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-editor-overlay` |
 
 ## См. также
 

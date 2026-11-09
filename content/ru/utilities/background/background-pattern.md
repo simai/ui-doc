@@ -62,7 +62,7 @@ description: "Заполняет фон элемента мелким узоро
 на родителе: класс узора сбрасывает цвет фона своего элемента.
 
 ```html
-<div class="bg-white radius-1 overflow-hidden">
+<div class="bg-surface-card radius-1 overflow-hidden">
   <div class="pattern-4 h-e0"></div>
 </div>
 ```

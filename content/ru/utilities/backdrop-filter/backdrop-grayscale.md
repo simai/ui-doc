@@ -56,7 +56,7 @@ description: "Переводит в оттенки серого то, что в�
 ### Приглушённый фон
 
 ```html
-<div class="bg-surface-transparent-overlay backdrop-grayscale">…</div>
+<div class="bg-surface-container-strong backdrop-grayscale">…</div>
 ```
 
 `backdrop-grayscale-none` снимает фильтр, заданный классом с префиксом
@@ -68,7 +68,7 @@ description: "Переводит в оттенки серого то, что в�
 `hover:` тоже добавляется к остальным, а не заменяет их.
 
 ```html
-<div class="bg-surface-transparent-overlay backdrop-blur-large backdrop-grayscale">…</div>
+<div class="bg-surface-container-strong backdrop-blur-large backdrop-grayscale">…</div>
 ```
 
 ## Ограничения

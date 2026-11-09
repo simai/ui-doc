@@ -80,7 +80,7 @@ description: "Снижает или повышает насыщенность ц
 `hover:` тоже добавляется к остальным, а не заменяет их.
 
 ```html
-<div class="bg-surface-transparent-overlay backdrop-blur-large backdrop-saturate-2">…</div>
+<div class="bg-surface-container-strong backdrop-blur-large backdrop-saturate-2">…</div>
 ```
 
 ## Ограничения

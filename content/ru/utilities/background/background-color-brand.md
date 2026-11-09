@@ -68,7 +68,7 @@ description: "Заливает элемент фирменным цветом с
 `bg-qzone`) нужен тёмный текст, на остальных — светлый.
 
 ```html
-<a class="inline-flex items-center gap-1 p-x-3 p-y-2 radius-ui bg-telegram color-white"
+<a class="inline-flex items-center gap-1 p-x-3 p-y-2 radius-ui bg-telegram color-on-surface-inverse-fixed"
    href="https://t.me/share/url?url=…">Telegram</a>
 ```
 

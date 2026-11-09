@@ -198,7 +198,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-quantity-background-color` | Заливка поля в покое; у ошибки своя. | `var(--sf-surface-0)` |
+| `--sf-quantity-background-color` | Заливка поля в покое; у ошибки своя. | `var(--sf-transparent)` |
 | `--sf-quantity-border-color` | Рамка поля в покое; у наведения, нажатия, ошибки и недоступного поля своя. | `var(--sf-outline)` |
 | `--sf-quantity-border-width` | Толщина рамки поля со всех сторон. | `var(--sf-px)` |
 | `--sf-quantity-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
@@ -248,7 +248,7 @@ whenLoader(() => SF.Loader.ready('Quantity', (Quantity) => {
 | `--sf-quantity-text--font-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-quantity-text--font-weight` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-quantity-text--line-height` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-text`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-quantity-wrap--background-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-quantity-wrap--background-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-quantity-wrap--block-size` | не задана; задают модификаторы, например `.sf-quantity.sf-quantity--size-1 .sf-quantity-wrap`: `var(--sf-ui-1--control-height)` | `height`, `block-size` |
 | `--sf-quantity-wrap--border` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-quantity-wrap--border-color` | не задана; задают модификаторы, например `.sf-quantity .sf-quantity-wrap`: `var(--sf-quantity-border-color, var(--sf-outline))` | `border-color` |

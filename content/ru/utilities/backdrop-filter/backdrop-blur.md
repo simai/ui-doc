@@ -85,7 +85,7 @@ description: "Размывает то, что видно за элементом
 убирает мелкие детали под ним.
 
 ```html
-<header class="sticky top-0 bg-surface-transparent-overlay backdrop-blur-large backdrop-saturate-3">…</header>
+<header class="sticky top-0 bg-surface-container-strong backdrop-blur-large backdrop-saturate-3">…</header>
 ```
 
 Классы разных семейств фильтра фона складываются на одном элементе; класс с

@@ -186,7 +186,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-country-code-background-color` | Заливка поля в покое. | `var(--sf-surface-0)` |
+| `--sf-country-code-background-color` | Заливка поля в покое. | `var(--sf-transparent)` |
 | `--sf-country-code-border-color` | Граница поля в покое; у наведения, фокуса, ошибки и выключенного состояния свои. | `var(--sf-outline)` |
 | `--sf-country-code-radius` | Скругление углов поля. | `var(--sf-ui-radius-default)` |
 | `--sf-country-code-color` | Цвет номера в покое; у выключенного состояния свой. | `var(--sf-on-surface)` |
@@ -204,7 +204,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-country-code-field--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-country-code-field--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-country-code-field--border` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-country-code-field--border-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-country-code-field--border-end-end-radius` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-field`: `var(--sf-country-code-radius, var(--sf-ui-radius-default))` | `border-end-end-radius` |

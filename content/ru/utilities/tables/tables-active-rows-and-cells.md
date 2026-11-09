@@ -31,7 +31,7 @@ description: "Подсвечивает выбранную строку или я
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `table-active` | `--sf-table-accent-bg: var(--sf-table-active-bg); color: var(--sf-table-active-color)` | — |
-| `table-hover` (`.table-hover > tbody > tr:hover > *`) | `--sf-table-accent-bg: var(--sf-table-hover-bg); color: var(--sf-table-hover-color)` | — |
+| `table-hover` | `.table-hover > tbody > tr:hover > * { --sf-table-accent-bg: var(--sf-table-hover-bg); color: var(--sf-table-hover-color) }; .table-hover.table-stripe > tbody > tr:nth-of-type(odd):hover > * { --sf-table-accent-bg: var(--sf-surface-state-select) }` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -47,6 +47,7 @@ description: "Подсвечивает выбранную строку или я
 | `--sf-table-active-color` | задаётся темой |
 | `--sf-table-hover-bg` | задаётся темой |
 | `--sf-table-hover-color` | задаётся темой |
+| `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
 
 ## Применение
 
@@ -69,9 +70,9 @@ description: "Подсвечивает выбранную строку или я
 
 | Переменная | Значение в классе `table` |
 | :--- | :--- |
-| `--sf-table-active-bg` | `var(--sf-surface-transparent-select)` |
+| `--sf-table-active-bg` | `var(--sf-surface-state-select)` |
 | `--sf-table-active-color` | `var(--sf-on-surface)` |
-| `--sf-table-hover-bg` | `var(--sf-surface-transparent-hover)` |
+| `--sf-table-hover-bg` | `var(--sf-surface-state-hover)` |
 | `--sf-table-hover-color` | `var(--sf-on-surface)` |
 
 ## Ограничения

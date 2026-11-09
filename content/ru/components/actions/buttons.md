@@ -98,19 +98,29 @@ profile: reference
 :::example {id="components/buttons/icons" label="Иконки в кнопке"}
 :::
 
-### Плотность
+### Высота
 
-Плотность меняет вертикальные отступы, не меняя размер текста. Без класса
-отступы обычные; `spacing-compact` подходит плотным таблицам и панелям,
-`spacing-comfortable` и `spacing-spacious` — крупным одиночным действиям.
-Ставьте на кнопку один класс плотности.
+Высота меняет только высоту кнопки, а размер текста и значков остаётся тем,
+что задал класс размера. Берите её, когда кнопка должна встать вровень с
+соседями другой высоты или выделиться без крупного текста. Класс высоты
+ставят рядом с классом размера `sf-button--size-*`; без класса кнопка
+стандартной высоты своего размера.
 
-:::example {id="components/buttons/tightness" label="Плотность кнопки"}
+:::example {id="components/buttons/height" label="Высота кнопки"}
 :::
 
-Имена `tightness-low`, `tightness-high` и `tightness-highest` работают так же,
-как `spacing-compact`, `spacing-comfortable` и `spacing-spacious`, но читаются
-наоборот: «low» в них значит «мало места». В разметке пишите `spacing-*`.
+| Класс | Высота при `sf-button--size-1` | Когда брать |
+|:---|:---|:---|
+| `sf-button--height-low` | 32 | плотные таблицы и панели |
+| без класса | 40 | почти везде |
+| `sf-button--height-high` | 48 | крупное одиночное действие |
+| `sf-button--height-highest` | 56 | самое крупное одиночное действие |
+
+Каждая ступень — ступень [линейки высот](/ru/guide/size-and-type/size-ladder/)
+размера кнопки. Боковые поля растут вместе с высотой, поэтому расстояние от
+края до значка не меняется. В компактной области (`data-sf-density="compact"`)
+все ступени сдвигаются на одну вниз. Переменные `--sf-button-padding-block` и
+`--sf-button-padding-inline` сильнее класса высоты.
 
 ### Радиус
 
@@ -266,7 +276,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `size` | `1` | размер |
 | `icon`, `iconPosition` | —, `start` | иконка и её место: `start` или `end` |
 | `iconLeft`, `iconRight` | — | иконки до и после подписи явно |
-| `spacing` | — | плотность: `compact`, `normal`, `comfortable`, `spacious`; при заданном `spacing` параметр `tightness` не учитывается |
+| `height` | `default` | высота: `low`, `default`, `high`, `highest`; ставит класс `sf-button--height-{значение}` |
 | `radius` | — | добавляет класс `radius-{значение}` |
 | `loading` | `false` | ставит `loading`, `aria-busy="true"` и `disabled` и рисует спиннер |
 | `disabled` | `false` | ставит нативный `disabled` |
@@ -280,7 +290,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--default`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Модификаторы | `sf-button--default`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 | Устаревшие | `sf-button--danger` → `sf-button--error`, `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link` |
 

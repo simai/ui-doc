@@ -37,7 +37,7 @@ Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-cb287da78ab1` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-b4a77681f0a7` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
 Публичные имена (75) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
@@ -110,7 +110,7 @@ Loader выбрал тему при запуске.
 | `SF.Tabs` | объект | компонент `tabs` | Скриптовый API компонента Tabs; приходит вместе с компонентом (`component/tabs`), его методы описаны на странице компонента. | — |
 | `SF.tags` | объект | ядро, сразу после `core.js` | Псевдонимы тегов с датой: Smart-компонент, получивший новый тег, сохраняет старый до `remove_after`. `names(tag)` перечисляет тег и его действующие прежние имена, `selector(tag)` — селектор, который находит их все, `is(element, tag)` проверяет элемент, `canonical(tag)` даёт текущее имя для прежнего, `list()` — все действующие псевдонимы. | `names`, `selector`, `is`, `canonical`, `list` |
 | `SF.Textarea` | объект | компонент `textarea` | Скриптовый API компонента Textarea; приходит вместе с компонентом (`component/textarea`), его методы описаны на странице компонента. | — |
-| `SF.ThemePalette` | объект | компонент `theme-palette` (`SF.Loader.ensurePlugin('theme-palette')` или `data-sf-theme-palette`) и смарт-компонент `sf-theme-generator` | Целая тема из одного цвета: восемь тональных палитр как 128 примитивов `--sf-<палитра>-<тон>` и 104 полупрозрачные ступени на них (`--sf-<палитра>-<тон>--alfa-<n>`), всего 232 переменные. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
+| `SF.ThemePalette` | объект | компонент `theme-palette` (`SF.Loader.ensurePlugin('theme-palette')` или `data-sf-theme-palette`) и смарт-компонент `sf-theme-generator` | Целая тема из одного цвета: восемь тональных палитр как 128 примитивов --sf-&lt;palette&gt;-&lt;tone&gt; и 160 полупрозрачных ступеней, которые ядро задаёт на них (--sf-&lt;palette&gt;-&lt;tone&gt;--alfa-&lt;n&gt;, список в THEME_ALPHA), всего 288 переменных. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
 | `SF.Toast` | объект | компонент `toast` | Скриптовый API компонента Toast; приходит вместе с компонентом (`component/toast`), его методы описаны на странице компонента. | — |
 | `SF.Tree` | объект | компонент `tree` | Скриптовый API компонента Tree; приходит вместе с компонентом (`component/tree`), его методы описаны на странице компонента. | — |
 | `SF.Verification` | объект | компонент `verification` | Скриптовый API компонента Verification; приходит вместе с компонентом (`component/verification`), его методы описаны на странице компонента. | — |

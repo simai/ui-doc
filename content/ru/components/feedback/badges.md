@@ -158,7 +158,7 @@ profile: reference
 цвета поверхности под якорем. Цвет кольца — `--sf-badge-ring-color`, если её
 задала страница; иначе цвет поднятой поверхности Framework — выпадающего
 списка, контекстного меню, подменю, панели админ-меню, шторки, поповера,
-модального окна или тоста; иначе поверхность страницы `--sf-surface-0`.
+модального окна или тоста; иначе поверхность страницы `--sf-surface-page`.
 Кольцо верно в светлой и тёмной теме.
 
 Смарт-элементы [Аватар](/ru/smart/content/avatar/),
@@ -190,7 +190,7 @@ profile: reference
 |:---|:---|
 | Блок | `sf-badge` |
 | Части | `sf-badge-anchor`, `sf-badge-anchor--round`, `sf-badge-anchor--rounded`, `sf-badge-anchor--size-1`, `sf-badge-anchor--size-1/2`, `sf-badge-anchor--size-1/3`, `sf-badge-anchor--size-2`, `sf-badge-anchor--size-3`, `sf-badge-anchor--square`, `sf-badge-anchored-text`, `sf-badge-icon-container`, `sf-badge-spinner`, `sf-badge-text`, `sf-badge-text-container` |
-| Модификаторы | `sf-badge--anchored`, `sf-badge--compact`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--figure`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tight`, `sf-badge--tonal`, `sf-badge--warning` |
+| Модификаторы | `sf-badge--anchored`, `sf-badge--compact`, `sf-badge--disabled`, `sf-badge--dot`, `sf-badge--error`, `sf-badge--figure`, `sf-badge--info`, `sf-badge--line-1`, `sf-badge--line-1/2`, `sf-badge--line-2`, `sf-badge--main`, `sf-badge--neutral`, `sf-badge--on-surface`, `sf-badge--outline`, `sf-badge--primary`, `sf-badge--secondary`, `sf-badge--success`, `sf-badge--tertiary`, `sf-badge--tight`, `sf-badge--tonal`, `sf-badge--warning` |
 | Размеры | `sf-badge--size-1`, `sf-badge--size-1/2`, `sf-badge--size-1/3` |
 | Устаревшие | `sf-badge--danger` → `sf-badge--error` |
 
@@ -212,7 +212,7 @@ profile: reference
 | `--sf-badge-padding-inline` | Отступ до и после текста: по умолчанию `--sf-space-1/2` при любом размере; `sf-badge--tight` (`<sf-badge tight>`) и одна цифра берут собственный отступ текста размера, поэтому цифра остаётся круглой; компактный бейдж берёт блочный отступ и остаётся квадратным. | `var(--sf-space-1/2)`; зависит от размера, tight |
 | `--sf-badge-padding-block` | Отступ над и под текстом. | `var(--sf-ui-1/3--space-y-tightness-low)`; зависит от размера |
 | `--sf-badge-gap` | Промежуток между иконкой и текстом. | `var(--sf-space-1/4)` |
-| `--sf-badge-ring-color` | Кольцо, которое отделяет бейдж на аватаре, иконке или кнопке-иконке от якоря: цвет поверхности, на которой стоит якорь. Поверхности Framework (меню, списки, шторки, модальные окна, тосты) задают свой; задайте её там, где страница рисует собственную поверхность. | `var(--sf-surface-0)` |
+| `--sf-badge-ring-color` | Кольцо, которое отделяет бейдж на аватаре, иконке или кнопке-иконке от якоря: цвет поверхности, на которой стоит якорь. Поверхности Framework (меню, списки, шторки, модальные окна, тосты) задают свой; задайте её там, где страница рисует собственную поверхность. | `var(--sf-surface-place)` |
 
 ```css
 .sf-badge {
@@ -251,7 +251,7 @@ profile: reference
 | `--sf-badge--padding-block` | `var(--sf-badge-padding-block, var(--sf-ui-1/3--space-y-tightness-low))` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `--sf-badge--min-size`, `--sf-badge--line-box`, `--sf-badge--padding-inline-start`, `--sf-badge--padding-inline-end` |
 | `--sf-badge--padding-inline-end` | `var(--sf-badge-padding-inline, var(--sf-badge--side-room))` | `padding-inline-end` |
 | `--sf-badge--padding-inline-start` | `var(--sf-badge-padding-inline, var(--sf-badge--side-room))` | `padding-inline-start` |
-| `--sf-badge--ring` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge-ring-color, var(--sf-badge--surface, var(--sf-surface-0)))` | `box-shadow`, `outline` |
+| `--sf-badge--ring` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge-ring-color, var(--sf-badge--surface, var(--sf-surface-place)))` | `box-shadow`, `outline` |
 | `--sf-badge--ring-width` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a2)` | `box-shadow`, `outline` |
 | `--sf-badge--side-room` | `var(--sf-space-1/2)` | `--sf-badge--padding-inline-end`, `--sf-badge--padding-inline-start` |
 | `--sf-badge--side-tight` | `var(--sf-ui-1/3--text-space-x)` | `--sf-badge--side-room` |

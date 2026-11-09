@@ -5,7 +5,7 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
-:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[2.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[2.0.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
@@ -103,7 +103,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 канал); `icon` — знак вместо инициалов (канал, агент, бот; имя значка Framework),
 картинка `image-url` важнее знака. Нет `avatar` — нет и колонки под него: в списке
 только с ИИ-разговорами пустого места слева не остаётся. Инициалы рисуются
-приглушённым цветом по названию разговора (`sf-avatar` `tone="auto"`, см.
+приглушённым цветом по названию разговора (`sf-avatar` `hue="auto"`, см.
 [Цвет инициалов](/ru/smart/content/avatar/#цвет-инициалов)): у одного
 названия цвет всегда один.
 `activity` (`running`, `waiting`, `done`, `stopped`, `failed`) is where the work in the
@@ -129,7 +129,7 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -137,7 +137,7 @@ noted in `SF.deprecations`.
 |:---|:---|
 | Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.chat-threads`, версия `2.0.1` |
+| Контракт | `smart.chat-threads`, версия `2.0.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -202,5 +202,5 @@ noted in `SF.deprecations`.
 
 ### Источник
 
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-threads`
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/chat-threads`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

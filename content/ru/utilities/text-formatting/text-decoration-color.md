@@ -47,6 +47,7 @@ description: "Окрашивает подчёркивание и другие л
 | `decoration-error` | `text-decoration-color: var(--sf-outline-error)` | — |
 | `decoration-warning` | `text-decoration-color: var(--sf-outline-warning)` | — |
 | `decoration-success` | `text-decoration-color: var(--sf-outline-success)` | — |
+| `decoration-info` | `text-decoration-color: var(--sf-info-outline)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:decoration-inherit`.
 
@@ -67,6 +68,7 @@ description: "Окрашивает подчёркивание и другие л
 | `--sf-outline-error` | `var(--sf-error-outline)` |
 | `--sf-outline-warning` | `var(--sf-warning-outline)` |
 | `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 
 ## Применение
 

@@ -23,7 +23,7 @@ const initialize = async () => {
     node.textContent = entry.text;
     return node;
   };
-  feed.setItems(entries, {hasMore: false});
+  feed.setItems({items: entries, options: {hasMore: false}});
 };
 
 initialize();

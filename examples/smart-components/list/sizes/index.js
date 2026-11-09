@@ -9,7 +9,7 @@ const initialize = async () => {
   for (const list of document.querySelectorAll('[data-list-sizes-example]')) {
     if (list.dataset.exampleReady === 'true') continue;
     list.dataset.exampleReady = 'true';
-    list.setItems(rows, {hasMore: false});
+    list.setItems({items: rows, options: {hasMore: false}});
   }
 };
 

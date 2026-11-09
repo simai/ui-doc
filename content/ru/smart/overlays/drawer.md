@@ -6,7 +6,7 @@ profile: reference
 
 # Боковая панель
 
-:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.9.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.10.1]{variant=outline scheme=on-surface size=1/2}
 
 Боковая панель открывается рядом со страницей и оставляет её доступной:
 подсказка у формы, библиотека блоков и свойства в редакторе страниц.
@@ -117,7 +117,7 @@ profile: reference
 64rem` на корне страницы задаёт порог всем панелям, а `dock-breakpoint="80rem"`
 — одной из них.
 
-Колонка окрашена как страница: фон `--sf-surface-0`, без тени, от страницы
+Колонка окрашена как страница: фон `--sf-surface-page`, без тени, от страницы
 её отделяет граница. Когда места не хватает и панель ложится поверх, она
 снова выглядит всплывающей: поднятая поверхность и тень. Корень панели
 сообщает форму атрибутом `data-sf-drawer-column="true"` или `"false"`. Свой
@@ -330,13 +330,13 @@ document.addEventListener('sf-drawer-opened', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.9.5` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.10.1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Esc`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/drawer` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-drawer` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/drawer` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-drawer` |
 
 ## См. также
 

@@ -33,14 +33,16 @@ description: "Цветные падающие тени уходят из SIMAI F
 | Класс | CSS | Значения |
 |:---|:---|:---|
 | `drop-shadow-transparent` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-transparent) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-transparent) var(--sf-shadow--alfa-shade))` | — |
-| `drop-shadow-{значение}` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}) var(--sf-shadow--alfa-shade))` | `current`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `drop-shadow-{значение}` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}) var(--sf-shadow--alfa-shade))` | `current`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `drop-shadow-surface` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-surface-1) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-surface-1) var(--sf-shadow--alfa-shade))` | — |
 | `drop-shadow-surface-{значение}` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-surface-{значение}) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-surface-{значение}) var(--sf-shadow--alfa-shade))` | `0`, `1`, `2`, `3`, `4`, `inverse` |
-| `drop-shadow-{значение}-container` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-container) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-container) var(--sf-shadow--alfa-shade))` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `drop-shadow-{значение}-container` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-container) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-container) var(--sf-shadow--alfa-shade))` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `drop-shadow-surface-inverse-fixed` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-surface-inverse-fixed) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-surface-inverse-fixed) var(--sf-shadow--alfa-shade))` | — |
 | `drop-shadow-on-surface-variant` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface-variant) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface-variant) var(--sf-shadow--alfa-shade))` | — |
 | `drop-shadow-{значение}-transparent-select` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-select) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-select) var(--sf-shadow--alfa-shade))` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `drop-shadow-{значение}-transparent-overlay` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-overlay) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-{значение}-transparent-overlay) var(--sf-shadow--alfa-shade))` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `drop-shadow-info-state-select` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-info-state-select) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-info-state-select) var(--sf-shadow--alfa-shade))` | — |
+| `drop-shadow-info-container-strong` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-info-container-strong) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-info-container-strong) var(--sf-shadow--alfa-shade))` | — |
 | `drop-shadow-on-surface` | `--sf-shadow-key-color: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-fill)); --sf-shadow-ambient-color: color-mix(in srgb, var(--sf-transparent), var(--sf-on-surface) var(--sf-shadow--alfa-shade))` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-transparent`.
@@ -90,6 +92,10 @@ description: "Цветные падающие тени уходят из SIMAI F
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
 | `--sf-success-transparent-select` | `var(--sf-success-state-select)` |
 | `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
+| `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
+| `--sf-info-state-select` | `light-dark(var(--sf-info-50--alfa-8), var(--sf-info-90--alfa-8))` |
+| `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 
 ## Применение

@@ -56,12 +56,14 @@ profile: reference
 
 `sf-menu--navigation` на корневом списке — разделы сайта, как их рисует
 шапка: строки без рамки и заливки, под указателем — лёгкая заливка
-состояния (`--sf-surface-transparent-hover`, при нажатии `-active`),
-открытая ветка — `--sf-surface-transparent-select`, текущая страница
-(`aria-current="page"` или `"true"` на пункте или ссылке) — плашка
-`--sf-surface-container-active`, которая под указателем не меняется. Высота,
-отступы и шрифт — обычной строки меню. Работает с `sf-menu--horizontal` и без
-него; в режиме принудительных цветов текущая страница обводится рамкой.
+состояния (`--sf-surface-state-hover`, при нажатии `-active`);
+открытая ветка не заливается — её показывает открытый список. Текущая
+страница (`aria-current="page"` или `"true"` на пункте или ссылке) — плашка
+навигации: `--sf-primary-container-active` (основной цвет, 20 % в светлой теме
+и 32 % в тёмной), слова и значок `--sf-on-primary-container`, средняя
+насыщенность подписи; под указателем плашка не меняется. Высота, отступы и
+шрифт — обычной строки меню. Работает с `sf-menu--horizontal` и без него; в
+режиме принудительных цветов текущая страница обводится рамкой.
 
 :::example {id="components/menu/navigation" label="Разделы сайта в шапке"}
 :::
@@ -155,9 +157,21 @@ profile: reference
 ### Текущий пункт
 
 Ссылке текущей страницы добавьте `aria-current="page"`. Дерево документации
-`sf-menu--documentation-tree` выделяет такой пункт фоном и начертанием;
-вертикальное и горизонтальное меню его не выделяют, атрибут нужен экранному
-диктору.
+`sf-menu--documentation-tree` и навигация `sf-menu--navigation` выделяют такой
+пункт плашкой навигации (`--sf-primary-container-active`) и средним
+начертанием; вертикальное и горизонтальное меню без этих модификаторов его не
+выделяют, атрибут нужен экранному диктору.
+
+Где плашки нет, у начала строки стоит полоска `--sf-primary` 3 × 16: на
+закрытой ветке, в списке которой лежит текущая страница (её находят по
+разметке, а если списка в разметке нет — по классу
+`sf-menu-element--holds-current` на ветке). Открытая ветка полоску не рисует,
+горизонтальное меню в шапке — тоже: его ветки открывают панели, а не столбец. В компактном меню текущий пункт получает
+плашку, а пункт со скрытой текущей страницей — полоску у значка.
+
+Дерево навигации сайта или документации — не глубже двух уровней. Четыре
+уровня, которые рисует класс, нужны второй панели меню администратора: там
+второй–четвёртый уровни раздела, выбранного в первой панели.
 
 :::example {id="components/menu/state-current" label="Текущий пункт в дереве и в вертикальном меню"}
 :::
@@ -191,7 +205,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-menu` |
-| Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group` |
+| Части | `sf-menu-element`, `sf-menu-element--holds-current`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group` |
 | Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--navigation` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -232,6 +246,7 @@ profile: reference
 | `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-border-color, var(--sf-surface-container))` | `border-color` |
 | `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width` |
 | `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-color, var(--sf-on-surface))` | `color` |
+| `--sf-menu-element--font-weight` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation .sf-menu-element[aria-current=page]:not(:disabled):not(.disabled):not([aria-disabled=true])`: `var(--sf-font-weight-medium)` | `font-weight` |
 | `--sf-menu-element--gap` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-menu-element--padding-bottom` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-bottom`, `padding-block-end` |
 | `--sf-menu-element--padding-inline-start` | не задана; задают модификаторы, например `.sf-menu-element--level-1`: `var(--sf-space-1)` | `padding-inline-start` |

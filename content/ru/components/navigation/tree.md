@@ -180,7 +180,7 @@ whenLoader(() => SF.Loader.ready('Tree', () => {
 | `--sf-tree-indent` | Насколько каждый уровень смещён относительно уровня выше. | `var(--sf-space-3)` |
 | `--sf-tree-radius` | Скругление углов строки. | `var(--sf-radius--ui)` |
 | `--sf-tree-color` | Цвет текста строки. | `var(--sf-on-surface)` |
-| `--sf-tree-selected-background-color` | Заливка выбранной или текущей строки. | `var(--sf-surface-container-active)` |
+| `--sf-tree-selected-background-color` | Заливка выбранной или текущей строки. | `var(--sf-primary-container)` |
 
 ```css
 sf-tree, .sf-tree {

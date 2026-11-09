@@ -121,7 +121,7 @@ document.addEventListener('sf:carousel-change', (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-carousel` |
-| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary-container`, `sf-carousel-pagination--surface-2`, `sf-carousel-pagination--surface-inverse`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--right`, `sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-inverse`, `sf-carousel-switch--surface-zero` |
+| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary-container`, `sf-carousel-pagination--surface-2`, `sf-carousel-pagination--surface-inverse`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--media`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--right`, `sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-inverse`, `sf-carousel-switch--surface-zero` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

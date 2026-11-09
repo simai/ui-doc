@@ -38,7 +38,7 @@ description: "Делает элемент прозрачным для мыши �
 ```html
 <div class="relative">
   <a href="/catalog/">Каталог</a>
-  <div class="absolute inset-0 pointer-event-none bg-primary-transparent-overlay"></div>
+  <div class="absolute inset-0 pointer-event-none bg-primary-container-strong"></div>
 </div>
 ```
 

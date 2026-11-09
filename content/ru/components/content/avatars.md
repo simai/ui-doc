@@ -167,10 +167,10 @@ unread" и "new". В имени всегда точное число: при `99
 
 ### Цвет инициалов
 
-Только у инициалов: `.sf-avatar--text.sf-avatar--tone-<название>`, где название —
-`rose`, `amber`, `lime`, `green`, `teal`, `sky`, `indigo` или `violet`. Приглушённая
-заливка и чернила, которые читаются на ней в обеих темах, из токенов
-`--sf-tone-<название>-container` и `--sf-on-tone-<название>-container`. Картинка и
+Только у инициалов: `.sf-avatar--text.sf-hue-<название>`, где название — любой
+из шестнадцати оттенков [статической палитры](/ru/guide/colour/palettes/#статическая-палитра).
+Приглушённая заливка и чернила, которые читаются на ней в обеих темах, из
+ролей оттенка `--sf-hue-container` и `--sf-on-hue-container`. Картинка и
 заглушка не меняются, а `--sf-avatar-background-color` и `--sf-avatar-color` по-прежнему
 важнее. Как выбрать цвет по имени на сервере — на странице
 [смарт-аватара](/ru/smart/content/avatar/#цвет-инициалов).
@@ -213,8 +213,9 @@ unread" и "new". В имени всегда точное число: при `99
 |:---|:---|
 | Блок | `sf-avatar` |
 | Части | `sf-avatar-badge`, `sf-avatar-badge--company`, `sf-avatar-badge--size-1`, `sf-avatar-badge--size-1/2`, `sf-avatar-badge--size-1/3`, `sf-avatar-badge--size-1/4`, `sf-avatar-badge--size-2`, `sf-avatar-badge--size-3`, `sf-avatar-badge--verified`, `sf-avatar-badge-glyph`, `sf-avatar-badge-plate`, `sf-avatar-card`, `sf-avatar-card--portrait`, `sf-avatar-card--square`, `sf-avatar-card-content`, `sf-avatar-card-image`, `sf-avatar-card-portrait`, `sf-avatar-card-row`, `sf-avatar-card-square`, `sf-avatar-card-title`, `sf-avatar-group`, `sf-avatar-group--size-md`, `sf-avatar-group--size-sm`, `sf-avatar-group--size-xs`, `sf-avatar-group-avatars`, `sf-avatar-image`, `sf-avatar-label-group`, `sf-avatar-label-group--size-1`, `sf-avatar-label-group--size-1/2`, `sf-avatar-label-group--size-1/3`, `sf-avatar-label-group--size-1/4`, `sf-avatar-label-group--size-2`, `sf-avatar-label-group--size-3`, `sf-avatar-label-group--status-icon-company`, `sf-avatar-label-group-container`, `sf-avatar-label-group-text`, `sf-avatar-label-group-title` |
-| Модификаторы | `sf-avatar--line-1`, `sf-avatar--line-1/2`, `sf-avatar--line-2`, `sf-avatar--placeholder`, `sf-avatar--square`, `sf-avatar--text`, `sf-avatar--tone-amber`, `sf-avatar--tone-green`, `sf-avatar--tone-indigo`, `sf-avatar--tone-lime`, `sf-avatar--tone-rose`, `sf-avatar--tone-sky`, `sf-avatar--tone-teal`, `sf-avatar--tone-violet` |
+| Модификаторы | `sf-avatar--line-1`, `sf-avatar--line-1/2`, `sf-avatar--line-2`, `sf-avatar--placeholder`, `sf-avatar--square`, `sf-avatar--text` |
 | Размеры | `sf-avatar--size-1`, `sf-avatar--size-1/2`, `sf-avatar--size-1/3`, `sf-avatar--size-1/4`, `sf-avatar--size-2`, `sf-avatar--size-3` |
+| Устаревшие | `sf-avatar--tone-amber` → `sf-hue-amber`, `sf-avatar--tone-green` → `sf-hue-green`, `sf-avatar--tone-indigo` → `sf-hue-indigo`, `sf-avatar--tone-lime` → `sf-hue-lime`, `sf-avatar--tone-rose` → `sf-hue-pink`, `sf-avatar--tone-sky` → `sf-hue-sky`, `sf-avatar--tone-teal` → `sf-hue-teal`, `sf-avatar--tone-violet` → `sf-hue-purple` |
 
 **`sf-online-indicator`**
 
@@ -270,13 +271,13 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar--border-top-right-radius` | не задана; задают модификаторы, например `.sf-avatar--square`: `var(--sf-avatar-radius, var(--sf-radius--ui))` | `border-start-end-radius` |
 | `--sf-avatar--border-top-width` | `var(--sf-avatar-border-width, var(--sf-px))` | `border-top-width` |
 | `--sf-avatar--border-width` | не задана; задают модификаторы, например `button.sf-avatar:not(:disabled):not(.disabled):hover`: `var(--sf-px)` | `border-width` |
-| `--sf-avatar--color` | не задана; задают модификаторы, например `.sf-avatar--text.sf-avatar--tone-rose`: `var(--sf-avatar-color, var(--sf-on-tone-rose-container))` | `color` |
+| `--sf-avatar--color` | не задана; задают модификаторы, например `.sf-avatar--text.sf-hue-red`: `var(--sf-avatar-color, var(--sf-on-hue-container))` | `color` |
 | `--sf-avatar--font-size` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-avatar--height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `height` |
 | `--sf-avatar--line-height` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-avatar--width` | не задана; задают модификаторы, например `.sf-avatar--size-1`: `var(--sf-ui-1--control-height)` | `width` |
 | `--sf-avatar-badge--border` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `border-style`, `border-width` |
-| `--sf-avatar-badge--border-color` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-surface-0)` | `border-color` |
+| `--sf-avatar-badge--border-color` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-surface-place)` | `border-color` |
 | `--sf-avatar-badge--border-end-end-radius` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-radius-circle)` | `border-end-end-radius` |
 | `--sf-avatar-badge--border-end-start-radius` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-radius-circle)` | `border-end-start-radius` |
 | `--sf-avatar-badge--border-start-end-radius` | не задана; задают модификаторы, например `.sf-avatar .sf-avatar-badge.sf-avatar-badge--company`: `var(--sf-radius-circle)` | `border-start-end-radius` |

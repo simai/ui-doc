@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.9.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.15.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.16.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-table>` показывает серверную коллекцию записей: поиск, фильтры, таблицу,
 выбор строк, действия, настройки колонок и пагинацию. Данные, права и
@@ -791,7 +791,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -801,7 +801,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view>` |
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
-| Контракт | `smart.view`, версия `1.9.0` |
+| Контракт | `smart.view`, версия `1.10.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -857,15 +857,15 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Методы
 
-- `refresh(reason: string)` — возвращает `object`. Запрашивает текущую выборку с новым номером последовательности.
-- `changeQuery(patch: object, reason: string)` — возвращает `object`. Изменяет поиск, фильтры, сортировку или окно.
-- `openView(key: string)` — возвращает `object`. Открывает сохранённое представление.
-- `saveView(view: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0 и новее. Бросает TypeError без key и label или для другого уровня.
-- `deleteView(key: string)` — возвращает `object`. Удаляет сохранённое представление.
-- `applyUnderFilter(actionId: string, confirmedTotal: number)` — возвращает `object`. Выполняет подтверждённое действие над всем фильтром (bulk.apply_under_filter) по текущим фильтрам. Бросает TypeError, если confirmedTotal не равен текущему общему числу.
+- `refresh(args?: object|string)` — возвращает `object`. Запрашивает текущую выборку с новым номером последовательности.
+- `changeQuery(args: object)` — возвращает `object`. Изменяет поиск, фильтры, сортировку или окно.
+- `openView(args: object|string)` — возвращает `object`. Открывает сохранённое представление.
+- `saveView(args: object)` — возвращает `object`. Сохраняет личное или общее представление: view.save или view.save_shared на порте 1.1.0 и новее. Бросает TypeError без key и label или для другого уровня.
+- `deleteView(args: object|string)` — возвращает `object`. Удаляет сохранённое представление.
+- `applyUnderFilter(args: object)` — возвращает `object`. Выполняет подтверждённое действие над всем фильтром (bulk.apply_under_filter) по текущим фильтрам. Бросает TypeError, если confirmedTotal не равен текущему общему числу.
 - `resetColumnSettings()` — возвращает `object`. Сбрасывает раскладку колонок человека: пустой личный слой, записанный против его ревизии, — это сброс по порту (запись, а не удаление). Значения по умолчанию даёт приложение.
 - `clearSelection()` — возвращает `object`. Действие `clear-selection`.
-- `notify(text: string, options: object)` — возвращает `object`. Показывает одно уведомление поверх карточки или убирает его при пустом тексте. Отказ, конфликт и недоступность приложения выводят его сами.
+- `notify(args: object)` — возвращает `object`. Показывает одно уведомление поверх карточки или убирает его при пустом тексте. Отказ, конфликт и недоступность приложения выводят его сами.
 - `applyProjection(data: object)` — возвращает `null`. Отображает ответ приложения во всех трёх слотах.
 - `saveColumnSettings(columnSettings: object, options?: object)` — возвращает `object`. Записывает слой настроек колонок, личный или общий, против его ревизии: `settings.save_personal` или `settings.save_shared`. Базовая ревизия — переданная, иначе ревизия слоя, иначе ревизия цели порта. После конфликта представление берёт `current_revision` (и колонки слоя), которые ответ несёт рядом с `answer`, как требует `simai.dataview-port` 1.12.0; `data.current_revision` и `data.column_settings` оно тоже читает, а если конфликт не называет ревизию, перечитывает список.
 - `setHostPort(host: object)` — возвращает `object`. Привязывает конкретный адаптер приложения.
@@ -893,7 +893,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-table-create-intent` — `detail`: `{ item: string|null }`. Событие таблицы, которое слушает представление: нажата кнопка создания или пункт её меню. Представление отправляет view.create_record с detail в том виде, в каком он пришёл.
 - `sf-table-query-intent` — `detail`: `{ reason: any, context: object, sequence: integer }`. Событие таблицы, которое слушает представление: изменился входной порт контекста его таблицы. Представление не берёт номер последовательности таблицы и перечитывает список своим query.change.
 - `sf-table-template-delete` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» удалён сохранённый шаблон, по одному событию на шаблон. Представление отправляет view.delete с ключом.
-- `sf-table-template-save` — `detail` не описан. Событие таблицы, которое слушает представление: сохранён шаблон фильтра. Представление превращает его в saveView (view.save) с key, label, revision, level, roles, layout и settings; массив в detail сохраняется по одному шаблону, каждый своим view.save, записи без key пропускаются.
+- `sf-table-template-save` — `detail`: `{ templates: array }`. Событие таблицы, которое слушает представление: шаблоны фильтров сохранены (detail {templates}). Представление превращает каждый шаблон в saveView (view.save) с key, label, revision, level, roles, layout и settings — каждый своим view.save; записи без key пропускаются.
 - `sf-table-template-select` — `detail`: `{ key: string }`. Событие таблицы, которое слушает представление: на вкладке «Шаблоны» применён другой сохранённый шаблон. Представление отправляет view.open с ключом и восстанавливает поля фильтра, с которыми представление было сохранено.
 - `sf-host-port-request` — `detail`: `{ component?: object, context?: object }`. Запрашивает у страницы порт приложения — один раз за подключение и только пока у элемента его нет. Общее соглашение для всех компонентов, принимающих `setHostPort`: потребителю, встраивающему такой компонент в другой, не нужно искать элемент и вызывать у него метод. Ответ — вызов `setHostPort` на цели события, сразу или позже.
 - `sf-view-list-open` — `detail`: `{ reason: "row-cap", query: object }`. Пользователь запросил весь список, часть которого показана из-за ограничения числа строк. Передаёт запрос, чтобы приложение открыло полное представление с теми же записями; компонент не строит собственный адрес.
@@ -915,8 +915,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view`
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -924,7 +924,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.15.1` |
+| Контракт | `smart.view-table`, версия `1.16.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1002,16 +1002,16 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Методы
 
-- `addRows(rows: array)` — возвращает `object`. Добавляет ещё одну страницу с бэкенда в режиме «показать ещё».
-- `applyQueryResult(sequence: integer, rows: array)` — возвращает `boolean`. Применяет строки, отвечающие на последний ожидающий запрос контекста. Для устаревшей, повторной или неизвестной последовательности возвращает `false` и ничего не меняет.
+- `addRows(args: object|list)` — возвращает `object`. Добавляет ещё одну страницу с бэкенда в режиме «показать ещё».
+- `applyQueryResult(args: object)` — возвращает `boolean`. Применяет строки, отвечающие на последний ожидающий запрос контекста. Для устаревшей, повторной или неизвестной последовательности возвращает `false` и ничего не меняет.
 - `clearSelection()` — возвращает `object`. Сбрасывает явное выделение этого экземпляра; при изменении один раз отправляет порт выделения.
-- `requestActionIntent(actionId: string, recordIds: array)` — возвращает `object`. Отправляет типизированный запрос действия над строкой или пакетного действия; выполнение и авторизация на стороне приложения. При недопустимых аргументах до отправки выбрасывается `TypeError`.
-- `requestCreateIntent(itemId: string|null)` — возвращает `object`. Отправляет `sf-table-create-intent` для основной кнопки (`null`) или объявленного id пункта создания.
+- `requestActionIntent(args: object)` — возвращает `object`. Отправляет типизированный запрос действия над строкой или пакетного действия; выполнение и авторизация на стороне приложения. При недопустимых аргументах до отправки выбрасывается `TypeError`.
+- `requestCreateIntent(args?: object|string)` — возвращает `object`. Отправляет `sf-table-create-intent` для основной кнопки (`null`) или объявленного id пункта создания.
 - `requestRetry()` — возвращает `object`. Отправляет намерение повтора после неудачного запроса данных.
-- `setSort(key: string|null, direction: any)` — возвращает `object`. Показывает в заголовках текущую сортировку приложения без отправки события; (null, null) сбрасывает её.
-- `toggleTreeRow(row: object)` — возвращает `object`. Сообщает, что строку дерева открыли или закрыли (sf-table-tree-toggle).
-- `requestTreeMore(row: object)` — возвращает `object`. Запрашивает следующую страницу уровня дерева (sf-table-tree-more).
-- `focusRow(id: any)` — возвращает `object`. Действие focus-row.
+- `setSort(args: object)` — возвращает `object`. Показывает в заголовках текущую сортировку приложения без отправки события; (null, null) сбрасывает её.
+- `toggleTreeRow(args: object)` — возвращает `object`. Сообщает, что строку дерева открыли или закрыли (sf-table-tree-toggle).
+- `requestTreeMore(args: object)` — возвращает `object`. Запрашивает следующую страницу уровня дерева (sf-table-tree-more).
+- `focusRow(args: object|string)` — возвращает `object`. Действие focus-row.
 - `getActiveFilterFieldKeys()` — возвращает `array`. Какие поля фильтра отображаются, в порядке полей приложения.
 - `getColumnSettings()` — возвращает `object`. Читает текущее изменение настроек столбцов.
 - `getFilterPayload()` — возвращает `object`. Читает текущий черновик фильтра для проверки запроса на стороне приложения.
@@ -1051,7 +1051,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-view-table-search-change` — `detail`: `{ search: string }`. Запрашивает у приложения выборку после изменения значения поиска (с задержкой debounce).
 - `sf-view-table-sort-change` — `detail`: `{ key: string, direction: "asc" | "desc" | null }`. Пользователь активировал сортируемый заголовок. Направление циклически меняется: asc, desc, null (без сортировки). Только намерение: таблица отмечает заголовок, но не переупорядочивает строки; переупорядочивает или перезагружает их приложение.
 - `sf-view-table-template-delete` — `detail`: `{ key: string }`. Пользователь удалил сохранённые шаблоны на вкладке «Шаблоны» и нажал «Применить». Только намерение: приложение удаляет сохранённое представление. Одно событие на каждый удалённый шаблон.
-- `sf-view-table-template-save` — ничего не передаёт. Запрашивает сохранение одного или нескольких шаблонов фильтра (порядок, закрепление, удаление, флаги по умолчанию и выбора или данные). О загрузке сохранённого представления сообщает событие sf-table-template-select.
+- `sf-view-table-template-save` — `detail`: `{ templates: array }`. Запрос на сохранение одного или нескольких шаблонов фильтров (порядок, закрепление, удаление, флаги «по умолчанию» и «выбран» или данные): detail {templates}, одна запись или несколько. О загрузке сохранённого представления сообщает sf-table-template-select.
 - `sf-view-table-template-select` — `detail`: `{ key: string }`. Пользователь применил другой сохранённый шаблон на вкладке «Шаблоны». Только намерение: приложение загружает это сохранённое представление.
 - `sf-view-table-toolbar-action` — `detail`: `{ action: string, href?: string|null }`. Пользователь выбрал одно из собственных действий представления в меню панели инструментов. Только намерение, событие можно отменить: компонент переходит по href пункта на том же сайте, если приложение не перехватит переход через preventDefault.
 - `sf-view-table-reference-open` — `detail`: `{ field: string, value: object, href: string }`.
@@ -1090,5 +1090,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view-table`
-- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-table`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-table/rule.js#name=cl-view-table`

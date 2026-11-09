@@ -256,6 +256,10 @@ bold.onClick(() => {
 :::example {id="smart-components/icon-buttons/cycle" label="Кнопки-циклы с иконкой" preview=sandbox log_console=true log_open=false}
 :::
 
+Тему примеров задаёт сам сайт документации, поэтому кнопка темы в примере
+тему не меняет и `change` не присылает. На вашей странице каждое нажатие
+ставит следующую тему.
+
 `cycle` — список значений `{value, label, icon, pressed?}`, `value` — текущее.
 Имя и значок говорят текущее значение («Повтор: один трек»), подсказка —
 текущее и следующее; `aria-label` для цикла не нужен. После нажатия приходит
@@ -395,12 +399,12 @@ document.querySelector('sf-button-icon').focus();
 | | |
 |:---|:---|
 | Тег | `<sf-button-icon>`, контракт `smart.button-icon` версии `1.7.1` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/button-icon` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-button-icon` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/button-icon` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-button-icon` |
 
 ### Для разработчика
 

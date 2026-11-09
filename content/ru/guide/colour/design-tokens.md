@@ -12,7 +12,7 @@ description: "Дизайн-токены — это именованные зна
 ## Что такое дизайн-токен
 
 **Дизайн-токен** — это именованное значение оформления, записанное как
-CSS-переменная с префиксом `--sf-`: `--sf-primary`, `--sf-surface-0`,
+CSS-переменная с префиксом `--sf-`: `--sf-primary`, `--sf-surface-page`,
 `--sf-space-2`, `--sf-focus--width`.
 
 Токен отвечает на вопрос «какое значение здесь должно стоять» одним словом
@@ -113,7 +113,6 @@ CSS-переменная с префиксом `--sf-`: `--sf-primary`, `--sf-su
 | Имя | Владелец | Свойство |
 |:---|:---|:---|
 | `--sf-focus--color` | кольцо фокуса | цвет |
-| `--sf-elevation-2--surface` | ступень высоты 2 | поверхность |
 | `--sf-primary-50--alfa-12` | тон 50 палитры primary | ступень прозрачности 12 % |
 | `--sf-button--background-color` | кнопка | цвет фона |
 | `--sf-input-field--border-color` | поле ввода, часть «field» | цвет границы |
@@ -131,11 +130,14 @@ CSS-переменная с префиксом `--sf-`: `--sf-primary`, `--sf-su
 | `on-` | цвет содержимого (текста, иконки) поверх фона роли | `--sf-on-primary` |
 | `-container` | спокойная заливка небольшой области в тоне роли | `--sf-error-container` |
 | `-hover`, `-active` | та же роль при наведении и нажатии | `--sf-primary-hover` |
-| `-transparent-…` | полупрозрачный слой состояния поверх поверхности | `--sf-primary-transparent-select` |
+| `-state-…` | полупрозрачный слой состояния поверх поверхности: `-hover`, `-select`, `-active` | `--sf-primary-state-select` |
+| `-strong` | сильная вуаль в тоне роли | `--sf-primary-container-strong` |
 | `-variant` | менее контрастная версия роли | `--sf-on-surface-variant`, `--sf-outline-variant` |
+| `surface-<место>` | фон места по назначению: `page`, `area`, `card`, `raised`, `popup`, `popup-nested` ([Фоны](/ru/guide/colour/surfaces/)) | `--sf-surface-card` |
 | `-inverse` | инверсная пара: тёмное на светлом и наоборот | `--sf-surface-inverse` |
 | `-fixed` | значение, которое не меняется с темой | `--sf-on-surface-fixed` |
-| `outline-` | граница в тоне роли | `--sf-outline-error` |
+| `-outline` | граница в тоне роли | `--sf-error-outline` |
+| `-disabled` | отключённый элемент | `--sf-surface-disabled`, `--sf-on-surface-disabled` |
 
 В именах примитивов прозрачности пишется `alfa`: `--sf-primary-50--alfa-12`.
 Нейтральная половина шкалы прозрачности называется `--sf-alpha-*` (см. [Нейтральная половина шкалы](/ru/guide/colour/transparency/#нейтральная-половина-шкалы)).

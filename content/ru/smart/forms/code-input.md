@@ -191,12 +191,12 @@ code.addEventListener('sf-code-input-completed', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Backspace`, `Delete`, `←`, `→`, `Home`, `End`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-code` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-code` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-code` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-code` |
 
 ## См. также
 

@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-cb287da78ab1` это ревизия
-`44a5efda6649def849c960c11ac56b2db90693b8`.
+выпуска `ui-b4a77681f0a7` это ревизия
+`a29cc9989bebace9a98c235b074ce23998ad39c6`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/b671241d4d341b2fbfd3b1f6e37703e0b330aabb/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/7a2900066a50a6c683edfe57367c442223d48532/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-cb287da78ab1` (`@simai-studio/ui` 5.20261109.559) часть
+С выпуска `ui-b4a77681f0a7` (`@simai-studio/ui` 5.20261109.1121) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -386,6 +386,198 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 Затемнение под окном и шторкой — `--sf-scrim-color`, чёрный 64 из шкалы
 прозрачности; `--sf-scrim-opacity` по умолчанию `1`. Страница, которая
 задавала `--sf-scrim-opacity`, по-прежнему делает затемнение ещё прозрачнее.
+
+## Прежние имена переменных
+
+Переменные, которые ядро переименовало или убирает. Прежнее имя работает до даты в третьем столбце; в новом коде пишите имя из второго. Таблица собрана из журнала изменений выпуска (`node scripts/build-token-reference.mjs`).
+
+| Прежнее имя | Новое имя | Работает до | Запись журнала |
+| :--- | :--- | :--- | :--- |
+| `--sf-text--size-1/7` | без замены | 2026-12-01 | `token-text-size-below-quarter` |
+| `--sf-text--size-1/6` | без замены | 2026-12-01 | `token-text-size-below-quarter` |
+| `--sf-text--size-1/5` | без замены | 2026-12-01 | `token-text-size-below-quarter` |
+| `sf-skeleton-text--size-1/7` | `sf-skeleton-text--size-1/4` | 2026-12-01 | `token-text-size-below-quarter` |
+| `sf-skeleton-text--size-1/6` | `sf-skeleton-text--size-1/4` | 2026-12-01 | `token-text-size-below-quarter` |
+| `sf-skeleton-text--size-1/5` | `sf-skeleton-text--size-1/4` | 2026-12-01 | `token-text-size-below-quarter` |
+| `--sf-heading--font-family` | `--sf-heading--family` | 2026-12-01 | `token-heading-font-unused` |
+| `--sf-heading--font-weight` | `--sf-heading--weight` | 2026-12-01 | `token-heading-font-unused` |
+| `--sf-heading--font-style` | без замены | 2026-12-01 | `token-heading-font-unused` |
+| `--sf-button-loading-stripe` | без замены | 2026-12-01 | `token-button-loading-stripe` |
+| `--sf-icon-button-loading-stripe` | без замены | 2026-12-01 | `token-button-loading-stripe` |
+| `--sf-disable` | `--sf-surface-disabled` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-elevation-1--shadow` | `--sf-shadow-raised` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-elevation-1--surface` | `--sf-surface-card` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-elevation-3--shadow` | `--sf-shadow-overlay` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-elevation-3--surface` | `--sf-surface-popup` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-elevation-4--shadow` | `--sf-shadow-modal` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-elevation-4--surface` | `--sf-surface-popup-nested` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-error-transparent-active` | `--sf-error-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-error-transparent-hover` | `--sf-error-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-error-transparent-overlay` | `--sf-error-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-error-transparent-select` | `--sf-error-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-on-disable` | `--sf-on-surface-disabled` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-on-elevation-1--variant` | `--sf-on-surface-card-variant` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-on-elevation-3--variant` | `--sf-on-surface-popup-variant` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-on-elevation-4--variant` | `--sf-on-surface-popup-nested-variant` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-on-surface-container--variant` | `--sf-on-surface-container-variant` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-disable` | `--sf-outline-disabled` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-error` | `--sf-error-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-info` | `--sf-info-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-primary` | `--sf-primary-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-secondary` | `--sf-secondary-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-success` | `--sf-success-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-tertiary` | `--sf-tertiary-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-outline-warning` | `--sf-warning-outline` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-primary-transparent-active` | `--sf-primary-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-primary-transparent-hover` | `--sf-primary-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-primary-transparent-overlay` | `--sf-primary-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-primary-transparent-select` | `--sf-primary-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-secondary-transparent-active` | `--sf-secondary-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-secondary-transparent-hover` | `--sf-secondary-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-secondary-transparent-overlay` | `--sf-secondary-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-secondary-transparent-select` | `--sf-secondary-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-success-transparent-active` | `--sf-success-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-success-transparent-hover` | `--sf-success-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-success-transparent-overlay` | `--sf-success-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-success-transparent-select` | `--sf-success-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-0` | `--sf-surface-page` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-1` | `--sf-surface-area` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-overlay` | `--sf-surface-veil` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-transparent-active` | `--sf-surface-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-transparent-hover` | `--sf-surface-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-transparent-overlay` | `--sf-surface-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-surface-transparent-select` | `--sf-surface-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-tertiary-transparent-active` | `--sf-tertiary-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-tertiary-transparent-hover` | `--sf-tertiary-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-tertiary-transparent-overlay` | `--sf-tertiary-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-tertiary-transparent-select` | `--sf-tertiary-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-warning-transparent-active` | `--sf-warning-state-active` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-warning-transparent-hover` | `--sf-warning-state-hover` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-warning-transparent-overlay` | `--sf-warning-container-strong` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-warning-transparent-select` | `--sf-warning-state-select` | 2027-01-01 | `token-c16-theme-role-names` |
+| `--sf-alert-bar-danger-background` | `--sf-alert-bar-error-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-alert-bar-info-background` | `--sf-alert-bar-info-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-alert-bar-list-background` | `--sf-alert-bar-list-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-alert-bar-warning-background` | `--sf-alert-bar-warning-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-card-background` | `--sf-card-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-code-background` | `--sf-code-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-contents-background` | `--sf-contents-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-figure-background` | `--sf-figure-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-kbd-background` | `--sf-kbd-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-list-attention-background` | `--sf-list-attention-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-pager-card-background` | `--sf-pager-card-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-procedure-marker-background` | `--sf-procedure-marker-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-progress-run-background` | `--sf-progress-run-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-progress-run-output-background` | `--sf-progress-run-output-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-search-background` | `--sf-search-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-site-header-background` | `--sf-site-header-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-tile-metric-background` | `--sf-tile-metric-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-tile-metric-hover-background` | `--sf-tile-metric-hover-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-wizard-background` | `--sf-wizard-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-workspace-drawer-background` | `--sf-workspace-drawer-background-color` | 2027-01-01 | `token-component-background-color-names` |
+| `--sf-shadow-card` | `--sf-shadow-raised` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow-popup` | `--sf-shadow-overlay` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow-popup-nested` | `--sf-shadow-overlay` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-elevation-2--shadow` | `--sf-shadow-overlay` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-elevation-5--shadow` | `--sf-shadow-modal` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-elevation-2--surface` | `--sf-surface-popup` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-elevation-5--surface` | `--sf-surface-popup-nested` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-on-elevation-2--variant` | `--sf-on-surface-popup-variant` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-on-elevation-5--variant` | `--sf-on-surface-popup-nested-variant` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-ui-shadow-1` | `--sf-shadow-raised` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-ui-shadow-2` | `--sf-shadow-overlay` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-ui-shadow-3` | `--sf-shadow-overlay` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-ui-shadow-4` | `--sf-shadow-modal` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-ui-shadow-5` | `--sf-shadow-modal` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-ui-shadow-top` | `--sf-shadow-flat` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow--color-fill` | `--sf-shadow-key-color` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow--color-outline` | `--sf-shadow-key-color` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow--color-shading` | `--sf-shadow-ambient-color` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow--color-shade` | `--sf-shadow-ambient-color` | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-shadow--rim` | без замены | 2027-01-01 | `token-c20-shadow-places` |
+| `--sf-tone-rose-50--alfa-12` | `--sf-pink-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-50--alfa-16` | `--sf-pink-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-50--alfa-20` | `--sf-pink-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-50--alfa-24` | `--sf-pink-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-50--alfa-28` | `--sf-pink-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-50--alfa-32` | `--sf-pink-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-30` | `--sf-pink-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-50` | `--sf-pink-50` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-60` | `--sf-pink-60` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-85` | `--sf-pink-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-50--alfa-12` | `--sf-amber-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-50--alfa-16` | `--sf-amber-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-50--alfa-20` | `--sf-amber-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-50--alfa-24` | `--sf-amber-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-50--alfa-28` | `--sf-amber-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-50--alfa-32` | `--sf-amber-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-30` | `--sf-amber-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-60` | `--sf-amber-60` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-amber-85` | `--sf-amber-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50--alfa-12` | `--sf-lime-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50--alfa-16` | `--sf-lime-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50--alfa-20` | `--sf-lime-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50--alfa-24` | `--sf-lime-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50--alfa-28` | `--sf-lime-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50--alfa-32` | `--sf-lime-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-30` | `--sf-lime-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-50` | `--sf-lime-50` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-60` | `--sf-lime-60` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-lime-85` | `--sf-lime-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-50--alfa-12` | `--sf-green-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-50--alfa-16` | `--sf-green-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-50--alfa-20` | `--sf-green-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-50--alfa-24` | `--sf-green-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-50--alfa-28` | `--sf-green-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-50--alfa-32` | `--sf-green-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-30` | `--sf-green-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-green-85` | `--sf-green-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50--alfa-12` | `--sf-teal-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50--alfa-16` | `--sf-teal-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50--alfa-20` | `--sf-teal-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50--alfa-24` | `--sf-teal-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50--alfa-28` | `--sf-teal-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50--alfa-32` | `--sf-teal-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-30` | `--sf-teal-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-50` | `--sf-teal-50` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-60` | `--sf-teal-60` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-teal-85` | `--sf-teal-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-50--alfa-12` | `--sf-sky-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-50--alfa-16` | `--sf-sky-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-50--alfa-20` | `--sf-sky-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-50--alfa-24` | `--sf-sky-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-50--alfa-28` | `--sf-sky-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-50--alfa-32` | `--sf-sky-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-30` | `--sf-sky-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-sky-85` | `--sf-sky-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-indigo-50--alfa-20` | `--sf-indigo-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-indigo-50--alfa-32` | `--sf-indigo-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-indigo-30` | `--sf-indigo-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-indigo-85` | `--sf-indigo-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-50--alfa-12` | `--sf-purple-50--alfa-12` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-50--alfa-16` | `--sf-purple-50--alfa-16` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-50--alfa-20` | `--sf-purple-50--alfa-20` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-50--alfa-24` | `--sf-purple-50--alfa-24` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-50--alfa-28` | `--sf-purple-50--alfa-28` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-50--alfa-32` | `--sf-purple-50--alfa-32` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-30` | `--sf-purple-30` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-violet-85` | `--sf-purple-85` | 2027-01-01 | `token-c17-tone-primitives-to-hues` |
+| `--sf-tone-rose-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-rose-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-amber-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-amber-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-lime-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-lime-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-green-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-green-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-teal-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-teal-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-sky-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-sky-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-indigo-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-indigo-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-tone-violet-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
+| `--sf-on-tone-violet-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
 
 ## Связь с другими частями
 

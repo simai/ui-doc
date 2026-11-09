@@ -88,13 +88,23 @@ const legacyModifiers = (block, present) => {
 // shadow-1 → shadow-raised. A page describes the current names only
 // (docs-review decision D03); the former ones are named in one line under the
 // table, with the date they go. Patterns (`m-left-*`) are not class names and
-// stay out; a former class with no successor (a coloured shadow) stays a row,
-// because its page says it is going.
+// stay out. A former class with no successor stays a row where its page is
+// about its going (the coloured shadows); the legacy palette classes C17
+// retired leave the colour tables (R087: no legacy colour on the pages), and
+// the line under the table names how many go, until when and the record.
 const formerUtilities = new Map();
+const goingUtilities = new Map();
 for (const record of journal.records ?? []) {
   if (record.kind !== 'utility' || record.stage !== 'compat') continue;
   for (const item of record.items ?? []) {
-    if (!item.from || !item.to || /[*<{\s]/u.test(item.from) || /[*<{\s]/u.test(item.to) || item.from.includes(':')) continue;
+    // A conditional name (hover:bg-primary-transparent) is a row of its own
+    // in the table, so it leaves the table the same way.
+    if (!item.from || /[*<{\s]/u.test(item.from)) continue;
+    if (!item.to) {
+      if (/-c17-/u.test(record.id)) goingUtilities.set(item.from, {id: record.id, removeAfter: record.remove_after ?? null});
+      continue;
+    }
+    if (/[*<{\s]/u.test(item.to)) continue;
     formerUtilities.set(item.from, {to: item.to, removeAfter: record.remove_after ?? null});
   }
 }
@@ -222,6 +232,8 @@ const utilityClasses = (families) => {
   // Former names leave the table and are listed under it.
   const former = [...byClass.keys()].filter((name) => formerUtilities.has(name)).sort();
   for (const name of former) byClass.delete(name);
+  const going = [...byClass.keys()].filter((name) => goingUtilities.has(name)).sort();
+  for (const name of going) byClass.delete(name);
   // A run of classes that differ in one value, and whose CSS differs in that
   // same value, is one row: `radius-top-{значение}` with the values listed.
   // The value may be any dash segment of the name (`color-on-{значение}-container`);
@@ -284,6 +296,21 @@ const utilityClasses = (families) => {
     const until = dates.length ? ` до ${dates.join(', ')}` : '';
     lines.push('', `Прежние имена работают${until}: ${former.map((name) => `${code(name)} → ${code(formerUtilities.get(name).to)}`).join(', ')}. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).`);
   }
+  if (going.length) {
+    const byRecord = new Map();
+    for (const name of going) {
+      const {id, removeAfter} = goingUtilities.get(name);
+      const entry = byRecord.get(id) ?? {removeAfter, names: []};
+      entry.names.push(name);
+      byRecord.set(id, entry);
+    }
+    for (const [id, {removeAfter, names}] of byRecord) {
+      const until = removeAfter ? ` до ${removeAfter}` : '';
+      const count = names.length;
+      const word = count % 10 === 1 && count % 100 !== 11 ? 'класс' : (count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14) ? 'класса' : 'классов');
+      lines.push('', `Ещё ${count} ${word} уходят без замены и работают${until} (запись \`${id}\` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
+    }
+  }
   return lines;
 };
 
@@ -333,7 +360,11 @@ const utilityTokens = (families) => {
       for (const [, name] of css.matchAll(/(--sf-[a-zA-Z0-9_\\/-]+)\s*:/gu)) own.add(unescape(name));
     }
   }
-  return [...names].filter((name) => !own.has(name));
+  // A step of the static palette (--sf-blue-40) is read only by the legacy
+  // palette classes C17 retires, which leave the tables (R087); a page lists
+  // the roles its classes read, and the palette has its own guide page.
+  const staticStep = /^--sf-(red|orange|amber|yellow|lime|green|teal|cyan|sky|blue|indigo|violet|purple|pink|brown|gray|white|black)(-\d+)?$/u;
+  return [...names].filter((name) => !own.has(name) && !staticStep.test(name));
 };
 
 const coreCss = show('distr/core/css/core.css') ?? '';

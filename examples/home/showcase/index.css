@@ -1,6 +1,6 @@
 /* One tab bar, then a panel that fills the rest of the frame. */
 html, body { block-size: 100%; margin: 0; }
-body { box-sizing: border-box; padding: var(--sf-space-1); background: var(--sf-surface-0, transparent); }
+body { box-sizing: border-box; padding: var(--sf-space-1); background: var(--sf-surface-page, transparent); }
 .showcase__panel { box-sizing: border-box; block-size: calc(100dvh - 4rem - var(--sf-space-1)); padding-block-start: var(--sf-space-1); }
 .showcase__frame { display: block; inline-size: 100%; block-size: 100%; border: 1px solid var(--sf-outline-variant); border-radius: var(--sf-radius--surface, 8px); box-sizing: border-box; }
 .showcase__frame--scroll { overflow: auto; }

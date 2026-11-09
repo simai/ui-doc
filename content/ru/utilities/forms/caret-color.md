@@ -30,6 +30,7 @@ description: "Задаёт цвет мигающего курсора ввода
 | `caret-error` | `caret-color: var(--sf-error)` | — |
 | `caret-warning` | `caret-color: var(--sf-warning)` | — |
 | `caret-success` | `caret-color: var(--sf-success)` | — |
+| `caret-info` | `caret-color: var(--sf-info)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -50,6 +51,7 @@ description: "Задаёт цвет мигающего курсора ввода
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
 | `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
 
 ## Применение
 
