@@ -62,6 +62,9 @@
     },
     {
       "command": ["node", "scripts/example-frame-permissions.mjs"]
+    },
+    {
+      "command": ["node", "scripts/inline-code-wrap.mjs"]
     }
   ],
   "base_url": "/",
