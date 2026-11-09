@@ -103,8 +103,8 @@ Recipe и вышел изданием 1.0.3. Динамический соста
 | Конверт разработки с ИИ | [`/ai/standards/simai.ai-development/1.0.0/standard.json`](/ai/standards/simai.ai-development/1.0.0/standard.json) |
 | Конверт фонового эффекта | [`/ai/standards/simai.effect/1.4.0/standard.json`](/ai/standards/simai.effect/1.4.0/standard.json) |
 | Схема манифеста эффекта | [`/ai/standards/effect-schema/1.3.0/effect.schema.json`](/ai/standards/effect-schema/1.3.0/effect.schema.json) |
-| Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.0/standard.json`](/ai/standards/simai.change-lifecycle/1.0.0/standard.json) |
-| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.1/standard.json`](/ai/standards/simai.component-package/1.1.1/standard.json) |
+| Конверт жизненного цикла изменений | [`/ai/standards/simai.change-lifecycle/1.0.1/standard.json`](/ai/standards/simai.change-lifecycle/1.0.1/standard.json) |
+| Конверт пакета компонентов | [`/ai/standards/simai.component-package/1.1.2/standard.json`](/ai/standards/simai.component-package/1.1.2/standard.json) |
 | Порты и наборы проверок | `/ai/ports/<порт>/<версия>/port.json` и набор `kit/` рядом — каждая версия каждого порта, например [`simai.dataview-port/1.9.0`](/ai/ports/simai.dataview-port/1.9.0/port.json) |
 
 Копии берутся из закреплённого выпуска при каждой сборке сайта: схема
