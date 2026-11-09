@@ -334,10 +334,10 @@ search.addEventListener('sf-search-navigate', (event) => {
 |:---|:---|:---|
 | `sf-search-open` | пустой объект | Окно вот-вот откроется: просьба, которую страница может отменить. |
 | `sf-search-opened` | пустой объект | Окно открылось, и фокус в его поле. |
-| `sf-search-close` | `{ reason: any }` | Окно вот-вот закроется, и почему: кнопка закрытия в поле или стрелка назад (`close`), Escape на пустом поле (`escape`), нажатие на затемнение (`outside`) или действие и выбранный результат (`api`). |
-| `sf-search-closed` | `{ reason: any }` | Окно закрылось, и почему. |
+| `sf-search-close` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | Окно вот-вот закроется, и почему: кнопка закрытия в поле или стрелка назад (`close`), Escape на пустом поле (`escape`), нажатие на затемнение (`outside`) или действие и выбранный результат (`api`). |
+| `sf-search-closed` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | Окно закрылось, и почему. |
 | `sf-search-navigate` | `{ id: string, href: string, action: string, query: string, group: string }` | Выбран результат (Enter или нажатие): окно закрылось, запрос записан; страница, которая переходит сама или выполняет действие, отменяет событие, иначе браузер переходит по `href`. Результат-действие несёт `action` и не несёт `href`. |
-| `sf-search-intent` | `{ intent: any, payload: object, answer: object }` | Единственное событие порта (`simai.search-port`: его называет каждое обращение): панель отправила обращение, и вот что вернулось, каким бы ни был ответ, — `applied`, `refused`, `unavailable` и ответы, которые панель даёт сама. Страница может наблюдать за обменом, не вмешиваясь в него. |
+| `sf-search-intent` | `{ intent: "query.change" \| "result.open" \| "result.preview" \| "action.run" \| "recent.forget" \| "recent.clear", payload: object, answer: object }` | Единственное событие порта (`simai.search-port`: его называет каждое обращение): панель отправила обращение, и вот что вернулось, каким бы ни был ответ, — `applied`, `refused`, `unavailable` и ответы, которые панель даёт сама. Страница может наблюдать за обменом, не вмешиваясь в него. |
 
 ### О компоненте
 

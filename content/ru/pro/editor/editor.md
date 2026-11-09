@@ -230,11 +230,11 @@ Markdown текстовых областей; то же даёт действи�
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `change` — `detail`: `{ document: object, reason: string, scope: any }`. Страница изменилась: {document, reason, scope}. Приложение сохраняет документ; scope template означает шапку или подвал всех страниц.
+- `change` — `detail`: `{ document: object, reason: string, scope: "page" | "template" }`. Страница изменилась: {document, reason, scope}. Приложение сохраняет документ; scope template означает шапку или подвал всех страниц.
 - `sf-editor-select` — `detail`: `{ ids: array }`. Выбран блок: {ids}; пусто, если не выбран ни один.
 - `sf-editor-block-save` — `detail`: `{ manifest: object, words: object, changes: array }`. Сохранён блок сайта: {manifest, words, changes}. Сохраните манифест в site-blocks.
-- `sf-editor-page-change` — `detail`: `{ key: any, value: string }`. Изменилась настройка страницы: `{key: name | address | template, value}`. Сохраните её и задайте `page-settings` заново.
-- `sf-editor-page-action` — `detail`: `{ action: any }`. Нажата кнопка публикации или истории: `{action: publish | history}`. Действует приложение.
+- `sf-editor-page-change` — `detail`: `{ key: "name" | "address" | "template", value: string }`. Изменилась настройка страницы: `{key: name | address | template, value}`. Сохраните её и задайте `page-settings` заново.
+- `sf-editor-page-action` — `detail`: `{ action: "publish" | "history" }`. Нажата кнопка публикации или истории: `{action: publish | history}`. Действует приложение.
 
 ### Доступность
 

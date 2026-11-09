@@ -340,8 +340,8 @@ modal.open();
 |:---|:---|:---|
 | `sf-modal-open` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-opened` | `{ modalId: string, phase: string }` | — |
-| `sf-modal-close` | `{ modalId: string, phase: string, reason: any, unsaved: boolean }` | — |
-| `sf-modal-closed` | `{ modalId: string, phase: string, reason: any, accepted: boolean }` | — |
+| `sf-modal-close` | `{ modalId: string, phase: string, reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", unsaved: boolean }` | — |
+| `sf-modal-closed` | `{ modalId: string, phase: string, reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", accepted: boolean }` | — |
 | `sf-modal-minimize` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-minimized` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-expand` | `{ modalId: string, phase: string }` | — |

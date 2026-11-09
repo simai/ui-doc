@@ -240,8 +240,8 @@ const detach = SF.Sortable.attach(table.tHead.rows[0], {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: any }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос, `{id, parent, position}` под именами item, to и index; применяет его приложение. |
-| `sf-sortable-state` | `{ state: any, item: string }` | Шаг перетаскивания: взяли, отпустили или отменили. |
+| `sf-sortable-move` | `{ item: string, from: string, to: string, index: number, mode: "move" \| "copy" }` | Просьба перенести (или скопировать) элемент в место: один ручной перенос, `{id, parent, position}` под именами item, to и index; применяет его приложение. |
+| `sf-sortable-state` | `{ state: "picked" \| "dropped" \| "cancelled", item: string }` | Шаг перетаскивания: взяли, отпустили или отменили. |
 | `sf-sortable-insert` | `{ index: integer, item: string, to: string }` | Просьба вставщика поставить новый элемент палитры в место; отменяемая. |
 
 ### О компоненте

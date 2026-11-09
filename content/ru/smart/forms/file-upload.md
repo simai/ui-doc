@@ -311,8 +311,8 @@ async function store(item) {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ files: array, source: any }` | Выбраны файлы — через окно выбора или перетаскиванием (тогда в `detail` есть `files` и `source: 'drop'`); форма узнаёт об обоих случаях. |
-| `sf-file-upload-attach` | `{ files: array, source: any, multiple: boolean }` | Выбраны файлы для загрузки. |
+| `change` | `{ files: array, source: "input" \| "drop" }` | Выбраны файлы — через окно выбора или перетаскиванием (тогда в `detail` есть `files` и `source: 'drop'`); форма узнаёт об обоих случаях. |
+| `sf-file-upload-attach` | `{ files: array, source: "input" \| "drop", multiple: boolean }` | Выбраны файлы для загрузки. |
 | `sf-file-upload-attached` | `{ id: any, item: object, index: number, items: array, source: string, multiple: boolean }` | Файл попал в список. |
 | `sf-file-upload-detach` | `{ id: any, item: object, index: number, items: array }` | Файл убран из списка. |
 | `sf-file-upload-rejected` | `{ files: array, accept: string, source: string }` | Перетащенные файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил. |

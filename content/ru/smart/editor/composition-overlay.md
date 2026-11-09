@@ -242,10 +242,10 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 |:---|:---|:---|
 | `sf-editor-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран или выбор снят; в `detail` есть `node_id`. |
 | `sf-editor-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи. |
-| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }` | Выбрано место вставки или на холст брошен элемент библиотеки: место `{parent, slot, index}` и элемент, если его перетаскивали; в `detail` есть `parent_id`. |
+| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: "move" \| "copy", parent_id: any }` | Выбрано место вставки или на холст брошен элемент библиотеки: место `{parent, slot, index}` и элемент, если его перетаскивали; в `detail` есть `parent_id`. |
 | `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён мышью или клавиатурой: `{id, parent, position}`; в `detail` есть `node_id`, `parent_id` и `index`. |
 | `sf-editor-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё. |
-| `sf-editor-overlay-open` | `{ ids: array, id: any, node: any, point: object\\|null, trigger: any }` | Человек попросил открыть узел: второй щелчок по выбранному узлу, двойной щелчок по узлу или Enter на выбранном узле в дереве. Отправляется один раз на жест и никогда в пассивном режиме; редактируемый узел холста в рамке открывается своей правкой простой строки. |
+| `sf-editor-overlay-open` | `{ ids: array, id: any, node: any, point: object\|null, trigger: "click" \| "dblclick" \| "enter" }` | Человек попросил открыть узел: второй щелчок по выбранному узлу, двойной щелчок по узлу или Enter на выбранном узле в дереве. Отправляется один раз на жест и никогда в пассивном режиме; редактируемый узел холста в рамке открывается своей правкой простой строки. |
 
 ### О компоненте
 

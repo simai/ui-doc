@@ -215,7 +215,7 @@ list.addEventListener('sf-list-open', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-list-open` | `{ id: any, trigger: any }` | Запрошено открытие строки: нажатие или Enter; приложение открывает её и записывает `selected`. |
+| `sf-list-open` | `{ id: any, trigger: "pointer" \| "keyboard" }` | Запрошено открытие строки: нажатие или Enter; приложение открывает её и записывает `selected`. |
 | `sf-list-apply` | `{ action: string, scope: any, ids: array }` | Выбрано одно из действий строки: `{action, scope: entry, ids}`. |
 | `sf-list-rename` | `{ id: any, text: string }` | Строка переименована на месте; новое название видно сразу. Отмените событие, чтобы вернуть прежнее. |
 | `sf-list-load-more` | `{ direction: any, after: any }` | Запрошена следующая страница: конец списка близко или нажата «Показать ещё»: `{direction: after, after}`. Отмена события — то же, что `moreFailed()`. |

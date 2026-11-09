@@ -137,9 +137,9 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-editor-inline-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе. |
-| `sf-editor-inline-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе. |
-| `sf-editor-inline-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе. |
+| `sf-editor-inline-input` | `{ id: string\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе. |
+| `sf-editor-inline-change` | `{ id: string\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе. |
+| `sf-editor-inline-cancel` | `{ id: string\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе. |
 
 ### О компоненте
 

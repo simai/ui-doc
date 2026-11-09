@@ -340,7 +340,7 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-tabs-change` | `{ selected: any, previous: number, current: number, item: object, items: array }` | — |
-| `sf-tabs-settings-change` | `{ order: array, hidden: array, reason?: any }` | Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Приложение сохраняет выбор и возвращает его через setSettings. |
+| `sf-tabs-settings-change` | `{ order: array, hidden: array, reason?: "order" \| "visibility" }` | Человек переставил, показал или скрыл вкладку в настройках; применяется сразу. Приложение сохраняет выбор и возвращает его через setSettings. |
 | `sf-tabs-settings-reset` | пустой объект | Человек попросил вернуть объявленный порядок; компонент показывает его, пока приложение не ответит через setSettings. |
 
 ### О компоненте

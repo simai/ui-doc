@@ -320,9 +320,9 @@ document.addEventListener('sf-drawer-opened', (event) => {
 |:---|:---|:---|
 | `sf-drawer-open` | `{ drawerId: string }` | — |
 | `sf-drawer-opened` | `{ drawerId: string }` | — |
-| `sf-drawer-close` | `{ drawerId: string, reason: any, unsaved: boolean }` | — |
-| `sf-drawer-closed` | `{ drawerId: string, reason: any }` | — |
-| `sf-drawer-snapped` | `{ drawerId: string, snap: any }` | — |
+| `sf-drawer-close` | `{ drawerId: string, reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", unsaved: boolean }` | — |
+| `sf-drawer-closed` | `{ drawerId: string, reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | — |
+| `sf-drawer-snapped` | `{ drawerId: string, snap: "auto" \| "half" \| "full" }` | — |
 | `drawer:ready` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | Поверхность портала готова. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
 | `drawer:update` | `{ component?: any, drawer?: any, drawerId?: string, root?: any }` | Поверхность портала обновлена. Всплывает и является composed; detail.drawer — drawer, отправивший событие. |
 

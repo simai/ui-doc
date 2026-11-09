@@ -183,7 +183,7 @@ faq.open(location.hash.slice(1));
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-accordion-toggle` | `{ id: any, open: boolean, source: any, section: object }` | — |
+| `sf-accordion-toggle` | `{ id: any, open: boolean, source: "user" \| "method", section: object }` | — |
 
 ### О компоненте
 

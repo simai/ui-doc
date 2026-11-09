@@ -265,14 +265,14 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-pagination-change` | `{ previous: number, current: number, total: number, pageCount: number\\|null, pageSize: number }` | — |
-| `sf-pagination-size-change` | `{ previous: number, pageSize: number, current: number, total: number, pageCount: number\\|null }` | — |
-| `sf-pagination-count` | `{ reason: any, current: number, pageSize: number }` | — |
-| `sf-pagination-load-more` | `{ direction: any, current: number, total: number, pageSize: number, pageCount: number\\|null, hasNext: boolean }` | — |
+| `sf-pagination-change` | `{ previous: number, current: number, total: number, pageCount: number\|null, pageSize: number }` | — |
+| `sf-pagination-size-change` | `{ previous: number, pageSize: number, current: number, total: number, pageCount: number\|null }` | — |
+| `sf-pagination-count` | `{ reason: "total" \| "last-page" \| "action-for-all", current: number, pageSize: number }` | — |
+| `sf-pagination-load-more` | `{ direction: any, current: number, total: number, pageSize: number, pageCount: number\|null, hasNext: boolean }` | — |
 | `sf-pagination-selection-clear` | `{ selectedCount: number, total: number }` | — |
 | `sf-pagination-action-change` | `{ previous: string, action: string }` | — |
 | `sf-pagination-action-for-all-change` | `{ previous: boolean, actionForAll: boolean }` | — |
-| `sf-pagination-apply` | `{ action: string, scope: any, current: number, total: number, pageSize: number, pageCount: number\\|null }` | — |
+| `sf-pagination-apply` | `{ action: string, scope: "selection" \| "filter", current: number, total: number, pageSize: number, pageCount: number\|null }` | — |
 
 ### О компоненте
 

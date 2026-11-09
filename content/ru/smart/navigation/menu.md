@@ -234,7 +234,7 @@ menu.addEventListener('sf-menu-navigate', (event) => {
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-menu-navigate` | `{ id: any, href: string, item: object }` | — |
-| `sf-menu-toggle` | `{ id: any, open: boolean, source: any, item: object\\|null }` | — |
+| `sf-menu-toggle` | `{ id: any, open: boolean, source: "user" \| "method", item: object\|null }` | — |
 
 ### О компоненте
 

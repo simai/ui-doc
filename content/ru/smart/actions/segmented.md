@@ -430,7 +430,7 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ previous: string, value: string, item: object\\|null }` | Выбор изменился, в том числе через `select()` или `clear()`. На это событие и подписывайтесь. |
+| `change` | `{ previous: string, value: string, item: object\|null }` | Выбор изменился, в том числе через `select()` или `clear()`. На это событие и подписывайтесь. |
 
 ### О компоненте
 

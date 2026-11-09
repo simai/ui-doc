@@ -162,9 +162,9 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит. |
-| `input` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Приходит перед каждым `change`, с тем же `detail`, как у обычного поля выбора файла. |
-| `sf-input-image-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Приложение загружает его и задаёт сохранённое значение. |
+| `change` | `{ value: object\|null, file: object\|null, source: "input" \| "drop" \| "remove", name: string }` | Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит. |
+| `input` | `{ value: object\|null, file: object\|null, source: "input" \| "drop" \| "remove", name: string }` | Приходит перед каждым `change`, с тем же `detail`, как у обычного поля выбора файла. |
+| `sf-input-image-attach` | `{ files: array, file: object, source: "input" \| "drop", value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Приложение загружает его и задаёт сохранённое значение. |
 | `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. |
 | `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. |
 

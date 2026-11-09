@@ -224,7 +224,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 - `sf-mail-canvas-hover` — `detail`: `{ id: any }`. Указатель над этим блоком: {id}. Пустой id — ни над каким.
 - `change` — `detail`: `{ value: string, previous: string }`. Теперь используется эта ширина: {value, previous}.
 - `sf-mail-canvas-apply` — `detail`: `{ action: string, scope: any, ids: array }`. Для этого блока выбрано это действие панели: {action, scope, ids}.
-- `sf-mail-canvas-insert` — `detail`: `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any }`. Попросили блок в этом месте: {parent, slot, index, item, from, mode}.
+- `sf-mail-canvas-insert` — `detail`: `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: "move" | "copy" }`. Попросили блок в этом месте: {parent, slot, index, item, from, mode}.
 - `sf-mail-canvas-move` — `detail`: `{ ids: array, id: any, parent: any, position: number, slot: string }`. Переместить этот блок в это место: {ids, id, parent, position, slot}.
 - `sf-mail-canvas-edit` — `detail`: `{ id: any, value: string, previous: string }`. Теперь текст этого узла такой: {id, value, previous}. При отмене текст возвращается.
 - `sf-mail-canvas-draw` — ничего не передаёт. В рамке новое письмо, ещё не измеренное.

@@ -149,8 +149,8 @@ popover.addEventListener('sf-popover-closed', () => {
 |:---|:---|:---|
 | `sf-popover-open` | пустой объект | Запрос на открытие, отправляется до того, как поверхность откроется (`show()`, `toggle()`, кнопка-триггер); отменяемый — `preventDefault()` оставляет её закрытой, и вызов отвечает `refused`. После открытия приходит `sf-popover-opened`. |
 | `sf-popover-opened` | пустой объект | Поверхность открылась: отправляется после того, как настройка `open` стала `true` — через `show()` или записью настройки со страницы. |
-| `sf-popover-close` | `{ reason: any, unsaved: boolean }` | Запрос на закрытие, отправляется до того, как поверхность закроется (`close()`, `toggle()`, кнопка-триггер, Escape, нажатие снаружи); отменяемый — `preventDefault()` оставляет её открытой. `detail.reason` называет причину. После закрытия приходит `sf-popover-closed`. |
-| `sf-popover-closed` | `{ reason: any }` | Поверхность закрылась: отправляется после того, как настройка `open` стала `false`; `detail.reason` называет причину (`api`, если настройку записала страница). |
+| `sf-popover-close` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", unsaved: boolean }` | Запрос на закрытие, отправляется до того, как поверхность закроется (`close()`, `toggle()`, кнопка-триггер, Escape, нажатие снаружи); отменяемый — `preventDefault()` оставляет её открытой. `detail.reason` называет причину. После закрытия приходит `sf-popover-closed`. |
+| `sf-popover-closed` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | Поверхность закрылась: отправляется после того, как настройка `open` стала `false`; `detail.reason` называет причину (`api`, если настройку записала страница). |
 
 ### О компоненте
 

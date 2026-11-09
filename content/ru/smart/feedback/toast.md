@@ -162,8 +162,8 @@ Toast отвечает за одно сообщение. Позицию на э�
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-toast-action` | `{ action: string }` | Отправляется один раз при активации необязательного доступного действия. |
-| `sf-toast-close` | `{ reason: any }` | Приходит один раз перед тем, как уведомление закроется по команде из кода. |
-| `sf-toast-closed` | `{ reason: any }` | — |
+| `sf-toast-close` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | Приходит один раз перед тем, как уведомление закроется по команде из кода. |
+| `sf-toast-closed` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | — |
 
 ### О компоненте
 

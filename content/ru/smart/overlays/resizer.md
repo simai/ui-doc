@@ -229,7 +229,7 @@ SF.Resizer.attach(table, {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-resizer-resize` | `{ width: number, phase: any }` | — |
+| `sf-resizer-resize` | `{ width: number, phase: "move" \| "end" \| "reset" }` | — |
 
 ### Персональный вид
 

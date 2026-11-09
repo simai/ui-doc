@@ -198,7 +198,7 @@ Dropdown не меняются.
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-list-item-open` | `{ id: string, trigger: any }` | Человек нажал на интерактивную строку или Enter на ней: open `{id}`, где id — это value. |
+| `sf-list-item-open` | `{ id: string, trigger: "pointer" \| "keyboard" }` | Человек нажал на интерактивную строку или Enter на ней: open `{id}`, где id — это value. |
 
 ### О компоненте
 

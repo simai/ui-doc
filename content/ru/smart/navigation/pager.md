@@ -265,8 +265,8 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-pager-navigate` | `{ direction: any, index: number\\|null, id: string\\|null, href: string\\|null }` | Человек попросил другую страницу, шаг или запись: просьба, которую страница отменяет, чтобы остаться на текущей (шаг ещё не годен), или чтобы перейти самой. `index` — место цели в `items` (для `finish` — текущее), `null` для стороны из `prev-href`/`next-href`; после просьбы по ссылке браузер переходит по ней. |
-| `sf-pager-change` | `{ previous: number, current: number, complete: boolean, item: object\\|null }` | Факт после перехода по `items`, который сделал человек (нажатие, клавиша, сторона из `items`): прежнее и текущее место, завершён ли проход и текущий пункт. Действия и значение, заданное снаружи, его не отправляют. |
+| `sf-pager-navigate` | `{ direction: "prev" \| "next" \| "finish" \| "restart" \| "go-to", index: number\|null, id: string\|null, href: string\|null }` | Человек попросил другую страницу, шаг или запись: просьба, которую страница отменяет, чтобы остаться на текущей (шаг ещё не годен), или чтобы перейти самой. `index` — место цели в `items` (для `finish` — текущее), `null` для стороны из `prev-href`/`next-href`; после просьбы по ссылке браузер переходит по ней. |
+| `sf-pager-change` | `{ previous: number, current: number, complete: boolean, item: object\|null }` | Факт после перехода по `items`, который сделал человек (нажатие, клавиша, сторона из `items`): прежнее и текущее место, завершён ли проход и текущий пункт. Действия и значение, заданное снаружи, его не отправляют. |
 
 ### О компоненте
 

@@ -166,7 +166,7 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-include-loaded` | `{ src: string, status: number }` | Часть пришла и стоит на странице: `src` — адрес, как он задан, `status` — HTTP-статус. Отправляется после вставки разметки, так что слушатель находит её внутри элемента. |
-| `sf-include-load-failed` | `{ src: string, status: number\\|null, reason: any }` | Часть не пришла: `reason` — `network` (запрос не прошёл или другой источник отказал по CORS; `status` равен `null`) или `http` (сервер ответил вне 200–299; `status` — его код). Элемент показывает ошибку с «Повторить». |
+| `sf-include-load-failed` | `{ src: string, status: number\|null, reason: "network" \| "http" }` | Часть не пришла: `reason` — `network` (запрос не прошёл или другой источник отказал по CORS; `status` равен `null`) или `http` (сервер ответил вне 200–299; `status` — его код). Элемент показывает ошибку с «Повторить». |
 
 ### О компоненте
 

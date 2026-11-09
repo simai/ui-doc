@@ -445,14 +445,14 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-menu-context-select` | `{ id: string\\|null, entry: object, checked: boolean\\|null, group: string\\|null }` | Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым. |
-| `sf-menu-context-change` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Человек просит изменить настройку в строке значения: это запрос, он приходит до записи значения. Возникает после `select` и только если `select` не отменён; командная строка вызывает только `select`. Если отменить, ничего не меняется и строка сохраняет прежнее значение — вид никогда не показывает значение, которое приложение не приняло. |
-| `sf-menu-context-changed` | `{ id: string\\|null, value: any, previous: any, entry: object }` | Факт изменения: значение записано в пункт, и строка его показывает. Приложение, которое только сохраняет сделанное человеком, слушает это событие и больше ничего. `reset` вызывает его по разу на каждую сдвинувшуюся строку; `set-value` и `set-all` его не вызывают: значение, заданное извне, обратно не сообщается. |
+| `sf-menu-context-select` | `{ id: string\|null, entry: object, checked: boolean\|null, group: string\|null }` | Выбран пункт на любом уровне. Отмените событие, чтобы меню осталось открытым. |
+| `sf-menu-context-change` | `{ id: string\|null, value: any, previous: any, entry: object }` | Человек просит изменить настройку в строке значения: это запрос, он приходит до записи значения. Возникает после `select` и только если `select` не отменён; командная строка вызывает только `select`. Если отменить, ничего не меняется и строка сохраняет прежнее значение — вид никогда не показывает значение, которое приложение не приняло. |
+| `sf-menu-context-changed` | `{ id: string\|null, value: any, previous: any, entry: object }` | Факт изменения: значение записано в пункт, и строка его показывает. Приложение, которое только сохраняет сделанное человеком, слушает это событие и больше ничего. `reset` вызывает его по разу на каждую сдвинувшуюся строку; `set-value` и `set-all` его не вызывают: значение, заданное извне, обратно не сообщается. |
 | `sf-menu-context-reset` | пустой объект | Человек попросил вернуть объявленные значения: это запрос. Если отменить, текущие значения остаются; иначе меню показывает объявленные, по разу на каждую сдвинувшуюся строку сообщает `changed` и ждёт, пока приложение их сохранит, как при `sf-tabs-settings-reset`. |
 | `sf-menu-context-open` | пустой объект | Открыто через openFor(). Всплывает и с composed: true; detail не передаётся. |
 | `sf-menu-context-opened` | пустой объект | — |
-| `sf-menu-context-close` | `{ reason: any, unsaved: boolean }` | Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся. |
-| `sf-menu-context-closed` | `{ reason: any }` | — |
+| `sf-menu-context-close` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", unsaved: boolean }` | Меню, открытое через openFor(), закрыто. Всплывает и с composed: true; detail не передаётся. |
+| `sf-menu-context-closed` | `{ reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api" }` | — |
 | `sf-menu-context-search` | `{ query: string }` | Запрос поиска, на который отвечает приложение (search.remote). |
 | `sf-menu-context-tab` | `{ id: string, index: number }` | Выбрана вкладка панели; приложение показывает её строки. |
 

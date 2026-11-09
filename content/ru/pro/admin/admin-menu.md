@@ -339,13 +339,13 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: any }`. Уведомляет оболочку приложения о режиме ширины.
-- `sf-admin-menu-query` — `detail`: `{ kind: any, query: string, requestId?: string, intent?: string, payload?: object }`. Запрос: kind menu (меню элементов), site или search.
-- `sf-admin-menu-settings-cancel` — `detail`: `{ target: any, baseRevision: integer }`. Отбрасывает локальный черновик.
-- `sf-admin-menu-settings-mode-change` — `detail`: `{ target: any }`. Запрашивает состояние для другого уровня настроек.
-- `sf-admin-menu-settings-refresh` — `detail`: `{ target: any, baseRevision: integer, profile: object }`. Запрашивает актуальное состояние бэкенда после конфликта.
-- `sf-admin-menu-settings-save` — `detail`: `{ target: any, baseRevision: integer, profile: object }`. Запрашивает сохранение текущих изменений.
-- `sf-admin-menu-reset` — `detail`: `{ kind: any, target?: string, baseRevision?: number, id?: any, intent?: string, payload?: object }`. kind settings (меню элементов) или view.
+- `sf-admin-menu-compact-change` — `detail`: `{ compact: boolean, source: "toggle" | "api" }`. Уведомляет оболочку приложения о режиме ширины.
+- `sf-admin-menu-query` — `detail`: `{ kind: "menu" | "site" | "search", query: string, requestId?: string, intent?: string, payload?: object }`. Запрос: kind menu (меню элементов), site или search.
+- `sf-admin-menu-settings-cancel` — `detail`: `{ target: "user" | "system", baseRevision: integer }`. Отбрасывает локальный черновик.
+- `sf-admin-menu-settings-mode-change` — `detail`: `{ target: "user" | "system" }`. Запрашивает состояние для другого уровня настроек.
+- `sf-admin-menu-settings-refresh` — `detail`: `{ target: "user" | "system", baseRevision: integer, profile: object }`. Запрашивает актуальное состояние бэкенда после конфликта.
+- `sf-admin-menu-settings-save` — `detail`: `{ target: "user" | "system", baseRevision: integer, profile: object }`. Запрашивает сохранение текущих изменений.
+- `sf-admin-menu-reset` — `detail`: `{ kind: "settings" | "view", target?: string, baseRevision?: number, id?: any, intent?: string, payload?: object }`. kind settings (меню элементов) или view.
 - `sf-admin-menu-navigate` — `detail`: `{ id: any, key: string, href: string|null, region?: boolean }`. Приложение подтвердило применение item.open: страница теперь принадлежит этой строке. Для приложения, которое выполняет переход в собственном маршрутизаторе, а не по адресу из ответа.
 - `sf-admin-menu-refresh` — `detail`: `{ kind: string, intent: string, payload: object, reason?: string|null, site?: any }`. У приложения запрошено `navigation.load` или `notifications.load`.
 - `sf-admin-menu-open` — `detail`: `{ kind: string, intent: string, payload: object, id: any, href?: string|null, group?: string|null }`. Запрошено `item.open`, `site.switch`, `view.profile` или `search.choose`.

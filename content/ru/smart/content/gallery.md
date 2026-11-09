@@ -197,7 +197,7 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ previous: number, current: number, total: number, from: any }` | — |
+| `change` | `{ previous: number, current: number, total: number, from: "api" \| "inline" \| "lightbox" }` | — |
 | `sf-gallery-opened` | `{ current: number, total: number }` | — |
 | `sf-gallery-closed` | `{ current: number, total: number }` | — |
 

@@ -149,7 +149,7 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-profile-picker-select` | `{ id: string, ids: array }` | — |
-| `sf-profile-picker-create` | `{ label: string, shared: boolean, from: string, kind: any }` | — |
+| `sf-profile-picker-create` | `{ label: string, shared: boolean, from: string, kind: "personal" \| "shared" }` | — |
 | `sf-profile-picker-rename` | `{ id: string, label: string, title: string }` | — |
 | `sf-profile-picker-delete` | `{ id: string, ids: array }` | — |
 | `sf-profile-picker-reset` | `{ id: string }` | — |
