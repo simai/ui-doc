@@ -5,7 +5,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 # Генератор темы
 
-:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.9]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.10]{variant=outline scheme=on-surface size=1/2}
 
 Генератор темы строит тему из одного цвета: человек выбирает основной цвет и
 сразу видит восемь тональных палитр SIMAI Framework — основную, вторичную,
@@ -232,13 +232,13 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 
 | | |
 |:---|:---|
-| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.9` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.10` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/theme-generator` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-theme-generator` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/theme-generator` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-theme-generator` |
 
 ## См. также
 

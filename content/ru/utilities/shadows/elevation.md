@@ -32,12 +32,12 @@ description: "Поднимает элемент над страницей одн
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `elevation-1` | `background-color: var(--sf-elevation-1--surface); box-shadow: var(--sf-elevation-1--shadow); --sf-on-surface-variant: var(--sf-on-elevation-1--variant)` | — |
-| `elevation-2` | `background-color: var(--sf-elevation-2--surface); box-shadow: var(--sf-elevation-2--shadow); --sf-on-surface-variant: var(--sf-on-elevation-2--variant)` | — |
-| `elevation-3` | `background-color: var(--sf-elevation-3--surface); box-shadow: var(--sf-elevation-3--shadow); --sf-on-surface-variant: var(--sf-on-elevation-3--variant)` | — |
-| `elevation-4` | `background-color: var(--sf-elevation-4--surface); box-shadow: var(--sf-elevation-4--shadow); --sf-on-surface-variant: var(--sf-on-elevation-4--variant)` | — |
-| `elevation-5` | `background-color: var(--sf-elevation-5--surface); box-shadow: var(--sf-elevation-5--shadow); --sf-on-surface-variant: var(--sf-on-elevation-5--variant)` | — |
-| `elevation-0` | `background-color: var(--sf-surface-0); box-shadow: none` | — |
+| `elevation-1` | `background-color: var(--sf-surface-card); box-shadow: var(--sf-shadow-raised); --sf-on-surface-variant: var(--sf-on-surface-card-variant)` | — |
+| `elevation-2` | `background-color: var(--sf-surface-popup); box-shadow: var(--sf-shadow-overlay); --sf-on-surface-variant: var(--sf-on-surface-popup-variant)` | — |
+| `elevation-3` | `background-color: var(--sf-surface-popup); box-shadow: var(--sf-shadow-overlay); --sf-on-surface-variant: var(--sf-on-surface-popup-variant)` | — |
+| `elevation-4` | `background-color: var(--sf-surface-popup-nested); box-shadow: var(--sf-shadow-modal); --sf-on-surface-variant: var(--sf-on-surface-popup-nested-variant)` | — |
+| `elevation-5` | `background-color: var(--sf-surface-popup-nested); box-shadow: var(--sf-shadow-modal); --sf-on-surface-variant: var(--sf-on-surface-popup-nested-variant)` | — |
+| `elevation-0` | `background-color: var(--sf-surface-page); box-shadow: var(--sf-shadow-flat)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -49,22 +49,17 @@ description: "Поднимает элемент над страницей одн
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-elevation-1--surface` | `var(--sf-surface-card)` |
-| `--sf-elevation-1--shadow` | `var(--sf-shadow-card)` |
-| `--sf-on-elevation-1--variant` | `var(--sf-on-surface-card-variant)` |
-| `--sf-elevation-2--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
-| `--sf-elevation-2--shadow` | `var(--sf-ui-shadow-2), var(--sf-shadow--rim)` |
-| `--sf-on-elevation-2--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-elevation-3--surface` | `var(--sf-surface-popup)` |
-| `--sf-elevation-3--shadow` | `var(--sf-shadow-popup)` |
-| `--sf-on-elevation-3--variant` | `var(--sf-on-surface-popup-variant)` |
-| `--sf-elevation-4--surface` | `var(--sf-surface-popup-nested)` |
-| `--sf-elevation-4--shadow` | `var(--sf-shadow-popup-nested)` |
-| `--sf-on-elevation-4--variant` | `var(--sf-on-surface-popup-nested-variant)` |
-| `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
-| `--sf-elevation-5--shadow` | `var(--sf-ui-shadow-5), var(--sf-shadow--rim)` |
-| `--sf-on-elevation-5--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-surface-0` | `var(--sf-surface-page)` |
+| `--sf-surface-card` | `light-dark(var(--sf-surface-page), var(--sf-surface-2))` |
+| `--sf-shadow-raised` | `0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color), 0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color)` |
+| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
+| `--sf-shadow-overlay` | `0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` |
+| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-shadow-modal` | `0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` |
+| `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
+| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-shadow-flat` | `none` |
 
 ## Применение
 

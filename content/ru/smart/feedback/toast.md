@@ -5,7 +5,7 @@ description: "Кратко сообщает результат действия 
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.1.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.1.10]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия: статус, заголовок,
 пояснение, необязательное действие и кнопку закрытия. Для постоянного текста
@@ -150,7 +150,7 @@ Toast отвечает за одно сообщение. Позицию на э�
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `close()` | объект | То же, что dismiss: отправляет sf-toast-close и удаляет уведомление. |
-| `show(text: string, code: string, count: number, tone: any)` | объект | Действие show. |
+| `show(args?: object\|string)` | объект | Действие show. |
 | `setState(nextState: object)` | объект | Записывает каждый ключ как атрибут в kebab-case: false, null, undefined или пустое значение удаляет его, true устанавливает пустым, всё остальное приводится к строке. |
 | `onAction(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-toast-action; обработчик вызывается с (action, detail, event). Обработчик, не являющийся функцией, игнорируется. |
 | `onClose(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-toast-close; обработчик вызывается с (detail, event). Обработчик, не являющийся функцией, игнорируется. |
@@ -169,13 +169,13 @@ Toast отвечает за одно сообщение. Позицию на э�
 
 | | |
 |:---|:---|
-| Тег | `<sf-toast>`, контракт `smart.toast` версии `1.1.8` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-toast>`, контракт `smart.toast` версии `1.1.10` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/toast` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-toast` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/toast` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-toast` |
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Показывает иерархию папок или разде
 
 # Дерево
 
-:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[2.0.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[2.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенный список: папки и файлы, разделы сайта, категории
 каталога. Ветви раскрываются и сворачиваются, пункты выбираются мышью и
@@ -205,9 +205,9 @@ tree.items = await fetchFolders();
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `expand(id: any)` | объект | Открывает ветку; отказ для неизвестного id, листа или выключенной записи. |
-| `collapse(id: any)` | объект | Действие collapse. |
-| `focusEntry(id: any)` | объект | Переводит фокус на запись, сначала нарисовав её, если окно её не показывает. |
+| `expand(args: object)` | объект | Открывает ветку; отказ для неизвестного id, листа или выключенной записи. |
+| `collapse(args: object)` | объект | Действие collapse. |
+| `focusEntry(args: object)` | объект | Переводит фокус на запись, сначала нарисовав её, если окно её не показывает. |
 | `onToggle(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-tree-toggle от любого пункта дерева; обработчик вызывается с (item, detail, event). |
 
 ### События
@@ -227,13 +227,13 @@ tree.items = await fetchFolders();
 
 | | |
 |:---|:---|
-| Тег | `<sf-tree>`, контракт `smart.tree` версии `2.0.8` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-tree>`, контракт `smart.tree` версии `2.1.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «меню» (сервер пишет `data-sf-skeleton="menu"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`; поиск по первым буквам. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/tree` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-tree` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/tree` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-tree` |
 
 ## См. также
 

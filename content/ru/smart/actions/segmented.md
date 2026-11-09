@@ -5,7 +5,7 @@ description: "Выбирает ровно одно значение из нес�
 
 # Сегментный переключатель
 
-:badge[sf-segmented]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-segmented]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Сегментный переключатель даёт выбрать ровно одно значение из нескольких и
 сразу его применяет: период отчёта, вид списка, фильтр, тему оформления. У
@@ -418,7 +418,7 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `select(value: string)` | объект | Выбирает кнопку по значению, если она доступна. |
+| `select(args: object)` | объект | Выбирает кнопку по значению, если она доступна. |
 | `clear()` | объект | Снимает выбор. |
 | `focus()` | объект или пусто | Переводит фокус на выбранную кнопку, а если выбора нет — на первую доступную. |
 
@@ -434,13 +434,13 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 
 | | |
 |:---|:---|
-| Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/segmented` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-segmented` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/segmented` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-segmented` |
 
 ### Для разработчика
 

@@ -5,7 +5,7 @@ description: "Даёт административному приложению �
 
 # Меню администратора
 
-:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.7.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.7.8]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-admin-menu>` — боковая навигация административного приложения: вложенные
 разделы, поиск, компактный режим и настройка порядка и видимости пунктов.
@@ -264,7 +264,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -272,7 +272,7 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 |:---|:---|
 | Тег | `<sf-admin-menu>` |
 | Назначение | Вложенная навигация администратора с поиском, компактным режимом и редактируемыми личными или системными настройками. |
-| Контракт | `smart.admin-menu`, версия `1.7.5` |
+| Контракт | `smart.admin-menu`, версия `1.7.8` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -323,13 +323,13 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Методы
 
-- `applyExternalSettingsState(state: object, target: any)` — возвращает `null`. Применяет состояние и дерево, вычисленные бэкендом.
-- `applySettingsResult(result: object)` — возвращает `null`. Фиксирует успешный ответ внешнего сохранения.
-- `applySettingsError(error: object)` — возвращает `null`. Сохраняет черновик и показывает состояние ошибки или конфликта.
+- `applyExternalSettingsState(args: object)` — возвращает `null`. Применяет состояние и дерево, вычисленные бэкендом.
+- `applySettingsResult(args: object)` — возвращает `null`. Фиксирует успешный ответ внешнего сохранения.
+- `applySettingsError(args: object)` — возвращает `null`. Сохраняет черновик и показывает состояние ошибки или конфликта.
 - `toggleMenuSettings()` — возвращает `null`. Входит в редактор настроек или выходит из него.
 - `refresh()` — возвращает `object`. Повторно читает меню навигации у приложения после того, как что-то вне меню изменило его содержимое (звёздочка в заголовке страницы). На меню элементов не влияет.
-- `setSearchResults(requestId: string, groups: array)` — возвращает `boolean`. Приложение отвечает на один поисковый запрос своими группами результатов. Ответ на запрос, который пользователь уже сменил, отбрасывается.
-- `toggle(id: any, on: boolean)` — возвращает `object`. Добавить строку в избранное человека или убрать из него (`favourite.toggle`). Меню элементов отказывает.
+- `setSearchResults(args: object)` — возвращает `boolean`. Приложение отвечает на один поисковый запрос своими группами результатов. Ответ на запрос, который пользователь уже сменил, отбрасывается.
+- `toggle(args: object)` — возвращает `object`. Добавить строку в избранное человека или убрать из него (`favourite.toggle`). Меню элементов отказывает.
 - `setCompact(compact: boolean)` — возвращает `boolean`. Включает компактный режим навигации.
 - `setHostPort(host: object)` — возвращает `object`. Подключает приложение, которое отвечает по порту `simai.admin-navigation-port`; меню рисует оболочку навигации вместо меню из пунктов.
 - `setRecentResults(groups?: array)` — возвращает `boolean`. Что приложение предлагает пустому полю поиска: недавний список, пока приложение не задаст другой.
@@ -373,8 +373,8 @@ document.addEventListener('sf-admin-menu-navigate', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/admin-menu`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/admin-menu`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/admin-menu/rule.js#name=cl-admin-menu`
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
-:badge[sf-editor-overlay]{variant=tonal scheme=primary size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-overlay]{variant=tonal scheme=primary size=1/2} :badge[1.6.4]{variant=outline scheme=on-surface size=1/2}
 
 Оверлей редактора даёт править страницу на месте, а не в отдельной форме:
 поверх страницы, собранной из Composition Document, он показывает рамку при
@@ -222,16 +222,16 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `attach(canvas: object)` | — | Рисует поверх элемента-холста; холст никогда не меняется. |
-| `attachFrame(iframe: object)` | — | Рисует поверх холста в iframe того же источника, который питает `set-nodes`. |
-| `setDocument(document: object, options: object)` | — | Читает блоки документа страницы. |
-| `setNodes(nodes: array, options: object)` | — | Читает плоский список узлов (режим во фрейме). |
-| `setDropFilter(filter: object)` | — | `filter({parent_id, slot, index}, item)` скрывает места, куда сбрасывать нельзя. |
-| `setActions(actions: array)` | — | Записывает действия выбранного узла (настройка actions). |
-| `setMessages(messages: object)` | — | Записывает собственные слова приложения (настройка messages). |
-| `setInsertionTarget(target: object\|null)` | — | Записывает отмеченное место вставки (настройка insertion-target). |
-| `select(id: any, options: object)` | — | Выбирает узел; `{focus, emit}`. |
-| `edit(id: string)` | да/нет | Начинает правку простой строки в редактируемом узле. |
+| `attach(args: object)` | — | Рисует поверх элемента-холста; холст никогда не меняется. |
+| `attachFrame(args: object)` | — | Рисует поверх холста в iframe того же источника, который питает `set-nodes`. |
+| `setDocument(args: object)` | — | Читает блоки документа страницы. |
+| `setNodes(args: object)` | — | Читает плоский список узлов (режим во фрейме). |
+| `setDropFilter(args: object)` | — | `filter({parent_id, slot, index}, item)` скрывает места, куда сбрасывать нельзя. |
+| `setActions(args: object)` | — | Записывает действия выбранного узла (настройка actions). |
+| `setMessages(args: object)` | — | Записывает собственные слова приложения (настройка messages). |
+| `setInsertionTarget(args: object)` | — | Записывает отмеченное место вставки (настройка insertion-target). |
+| `select(args: object)` | — | Выбирает узел; `{focus, emit}`. |
+| `edit(args: object)` | да/нет | Начинает правку простой строки в редактируемом узле. |
 | `refresh()` | — | Заново измеряет холст. |
 
 ### События
@@ -251,13 +251,13 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.5.3` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.6.4` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/editor-overlay` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-editor-overlay` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/editor-overlay` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-editor-overlay` |
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Показывает этапы последовательного
 
 # Шаги
 
-:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Шаги показывают этапы процесса, который проходят по порядку: оформление
 заказа, публикация, мастер настройки. Пройденные этапы отмечены галочкой,
@@ -142,7 +142,7 @@ document.querySelector('#next').addEventListener('click', () => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `goToStep(index: number)` | объект | Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-steps-change. |
+| `goToStep(args: object\|number)` | объект | Переводит current на шаг с индексом index, ограничивая его границами списка; ничего не делает для отключённого или текущего шага. Отправляет sf-steps-change. |
 | `setState(nextState: object)` | объект | Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label:disabled, соединённые через \|. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым. |
 | `onStepChange(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-steps-change; обработчик вызывается с (current, detail, event). Обработчик, не являющийся функцией, игнорируется. |
 
@@ -158,13 +158,13 @@ document.querySelector('#next').addEventListener('click', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-steps>`, контракт `smart.steps` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-steps>`, контракт `smart.steps` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/steps` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-steps` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/steps` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-steps` |
 
 ## См. также
 

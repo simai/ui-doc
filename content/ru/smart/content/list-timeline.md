@@ -5,7 +5,7 @@ description: "Короткая история событий на вертика
 
 # Хронология
 
-:badge[sf-list-timeline]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-timeline]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Короткая история, которую читают сверху: последние действия на сервере,
 журнал аудита, история записи, страница уведомлений, история заданий.
@@ -214,13 +214,13 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.0.2` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: `Tab` проходит по заголовкам-ссылкам и кнопке «Показать ещё» по порядку; `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/list-timeline` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-list-timeline` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/list-timeline` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-list-timeline` |
 
 ## См. также
 

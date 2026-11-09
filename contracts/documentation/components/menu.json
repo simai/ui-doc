@@ -3,17 +3,17 @@
   "component": "menu",
   "page": "content/ru/components/navigation/menu.md",
   "reviewed": {
-    "source_revision": "277ef3bf9dfe4014a3d312cc7e9b2278ec176517",
-    "core_revision": "d6f01121bacac28bc9200d51f46f7389b38920c6",
+    "source_revision": "44a5efda6649def849c960c11ac56b2db90693b8",
+    "core_revision": "cb287da78ab1130641d5a628654dabc3d29e1f7a",
     "source_files": {
-      "src/component/menu/js/_menu.js": "2d2232494439742c231cf035c2766799dcd6f8d6fa7ffffa84a80e4d101c0ca1",
-      "src/component/menu/scss/_css__menu.scss": "1353648b9230b4628ec5fe2891544ae6db0814c69ca4841f21e847a5576bf27a",
+      "src/component/menu/js/_menu.js": "fd6821aba38719a1e2e0a242ecb9a79c87b503a59d6a7136eba7ca620caebc6c",
+      "src/component/menu/scss/_css__menu.scss": "be0a16f0f7b954b14cc160ae06df82b6ebbe08c661a6d17ccb22de54d0388468",
       "src/component/menu/scss/_css__menu_compact.scss": "d724e97ae5cd7098dc974a20d1b50a5d8d90c08a74010eb9f503b11aefa74ec0",
-      "src/component/menu/docs/docs.md": "59a42b44fea2845dbb5f563e7d5e00befec9bb8b6f83de4a88b751cde2ab274d"
+      "src/component/menu/docs/docs.md": "28e42c8e131ce91f65b17877d3b1aede786d4eece52a4ab52ddc447e0a9c6b04"
     },
     "generated_files": {
-      "distr/component/menu/css/menu.css": "cd93cafa789e38e2aa5872051eda40efc180e1dd9c979809135cc3ac41bce96e",
-      "distr/component/menu/js/menu.js": "866abe639abd036d521eb6ca2444d06cf557241e6a2796ee8978ffabf620ed91"
+      "distr/component/menu/css/menu.css": "a22af56598282022abe8f32f2d753b2fe4f91bfa83d1193ba96d4e7d0fbfea15",
+      "distr/component/menu/js/menu.js": "d470a5ad927cb2d6d937e2c37c03088893a6550789ef8f55a419a29103f494be"
     }
   },
   "source_files": [

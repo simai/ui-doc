@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-714 переменных, которые объявляет ядро, со значениями по умолчанию.
+722 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -75,6 +75,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-surface-muted` | `light-dark(var(--sf-neutral-60), var(--sf-neutral-40))` |
 | `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-on-surface-raised-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-white--alfa-80)` · `var(--sf-on-primary)` |
 | `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
 | `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
@@ -105,6 +106,7 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-place` | `var(--sf-surface-page)` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-surface-raised` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
 | `--sf-surface-state-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
 | `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` · `var(--sf-white--alfa-4)` |
 | `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` · `var(--sf-white--alfa-8)` |
@@ -296,12 +298,12 @@ description: "Полный список переменных, которые о�
 | `--sf-heading-1--size` | `var(--sf-text--size-6)` |
 | `--sf-heading-2--height` | `var(--sf-title--height-5)` |
 | `--sf-heading-2--size` | `var(--sf-text--size-5)` |
-| `--sf-heading-3--height` | `var(--sf-title--height-2)` |
-| `--sf-heading-3--size` | `var(--sf-text--size-2)` |
-| `--sf-heading-4--height` | `var(--sf-title--height-1)` |
-| `--sf-heading-4--size` | `var(--sf-text--size-1)` |
-| `--sf-heading-5--height` | `var(--sf-title--height-2)` |
-| `--sf-heading-5--size` | `var(--sf-text--size-2)` |
+| `--sf-heading-3--height` | `var(--sf-title--height-3)` |
+| `--sf-heading-3--size` | `var(--sf-text--size-3)` |
+| `--sf-heading-4--height` | `var(--sf-title--height-2)` |
+| `--sf-heading-4--size` | `var(--sf-text--size-2)` |
+| `--sf-heading-5--height` | `var(--sf-title--height-1)` |
+| `--sf-heading-5--size` | `var(--sf-text--size-1)` |
 | `--sf-heading-6--height` | `var(--sf-title--height-1)` |
 | `--sf-heading-6--size` | `var(--sf-text--size-1)` |
 | `--sf-label-large--height` | `var(--sf-c0)` |
@@ -322,7 +324,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--font-weight-7` | `700` |
 | `--sf-text--font-weight-8` | `800` |
 | `--sf-text--font-weight-9` | `900` |
-| `--sf-text--height` | `var(--sf-text--height-1)` · `var(--sf-text--height-1\/2)` |
+| `--sf-text--height` | `var(--sf-text--height-1)` |
 | `--sf-text--height-1` | `var(--sf-c0)` · `var(--sf-c2)` |
 | `--sf-text--height-10` | `var(--sf-d5)` · `var(--sf-e2)` |
 | `--sf-text--height-11` | `var(--sf-d6)` · `var(--sf-e3)` |
@@ -331,7 +333,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--height-1/3` | `1rem` · `var(--sf-b6)` |
 | `--sf-text--height-1/4` | `0.75rem` · `var(--sf-b2)` |
 | `--sf-text--height-2` | `var(--sf-c2)` · `var(--sf-c4)` |
-| `--sf-text--height-3` | `var(--sf-c2)` · `var(--sf-c8)` |
+| `--sf-text--height-3` | `var(--sf-c2)` · `var(--sf-c8)` · `var(--sf-c4)` |
 | `--sf-text--height-4` | `var(--sf-c4)` · `var(--sf-d0)` |
 | `--sf-text--height-5` | `var(--sf-c6)` · `var(--sf-d2)` |
 | `--sf-text--height-6` | `var(--sf-c8)` · `var(--sf-d3)` |
@@ -348,7 +350,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--measure` | `65ch` |
 | `--sf-text--measure-narrow` | `45ch` |
 | `--sf-text--measure-wide` | `80ch` |
-| `--sf-text--size` | `var(--sf-text--size-1)` · `var(--sf-text--size-1\/2)` |
+| `--sf-text--size` | `var(--sf-text--size-1)` |
 | `--sf-text--size-1` | `var(--sf-b4)` · `var(--sf-b6)` |
 | `--sf-text--size-10` | `var(--sf-d0)` · `var(--sf-d6)` |
 | `--sf-text--size-11` | `var(--sf-d1)` · `var(--sf-d8)` |
@@ -360,7 +362,7 @@ description: "Полный список переменных, которые о�
 | `--sf-text--size-1/6` | `0.375rem` · `var(--sf-a6)` · устарела: удаляется после 2026-12-01, запись `token-text-size-below-quarter` журнала |
 | `--sf-text--size-1/7` | `0.25rem` · `var(--sf-a4)` · устарела: удаляется после 2026-12-01, запись `token-text-size-below-quarter` журнала |
 | `--sf-text--size-2` | `var(--sf-b6)` · `var(--sf-c0)` |
-| `--sf-text--size-3` | `var(--sf-b8)` · `var(--sf-c2)` |
+| `--sf-text--size-3` | `var(--sf-b8)` · `var(--sf-c2)` · `var(--sf-c0)` |
 | `--sf-text--size-4` | `var(--sf-c0)` · `var(--sf-c4)` |
 | `--sf-text--size-5` | `var(--sf-c1)` · `var(--sf-c6)` |
 | `--sf-text--size-6` | `var(--sf-c2)` · `var(--sf-c8)` |
@@ -467,28 +469,28 @@ description: "Полный список переменных, которые о�
 | `--sf-container-6--size-max` | `var(--sf-i2)` |
 | `--sf-container-7--size-max` | `var(--sf-i3)` |
 | `--sf-container-8--size-max` | `var(--sf-i4)` |
-| `--sf-icon-size-1` | `var(--sf-b6)` |
-| `--sf-icon-size-1/2` | `0.875rem` · `var(--sf-b4)` |
+| `--sf-icon-size-1` | `var(--sf-b6)` · `var(--sf-b4)` |
+| `--sf-icon-size-1/2` | `0.875rem` · `var(--sf-b4)` · `0.75rem` · `var(--sf-b2)` |
 | `--sf-icon-size-1/3` | `0.75rem` · `var(--sf-b2)` |
 | `--sf-icon-size-1/4` | `0.625rem` · `var(--sf-b0)` |
-| `--sf-icon-size-2` | `var(--sf-c0)` |
-| `--sf-icon-size-3` | `var(--sf-c2)` |
-| `--sf-icon-size-4` | `var(--sf-c4)` |
-| `--sf-icon-size-5` | `var(--sf-c6)` |
-| `--sf-icon-size-6` | `var(--sf-c8)` |
-| `--sf-icon-size-7` | `var(--sf-d0)` |
+| `--sf-icon-size-2` | `var(--sf-c0)` · `var(--sf-b6)` |
+| `--sf-icon-size-3` | `var(--sf-c2)` · `var(--sf-c0)` |
+| `--sf-icon-size-4` | `var(--sf-c4)` · `var(--sf-c2)` |
+| `--sf-icon-size-5` | `var(--sf-c6)` · `var(--sf-c4)` |
+| `--sf-icon-size-6` | `var(--sf-c8)` · `var(--sf-c6)` |
+| `--sf-icon-size-7` | `var(--sf-d0)` · `var(--sf-c8)` |
 | `--sf-space-0` | `0` |
 | `--sf-space-1` | `var(--sf-b2)` · `var(--sf-b6)` |
 | `--sf-space-1/2` | `0.5rem` · `var(--sf-a8)` · `0.75rem` · `var(--sf-b2)` |
-| `--sf-space-1/3` | `0.5rem` · `var(--sf-a8)` |
+| `--sf-space-1/3` | `0.5rem` · `var(--sf-a8)` · `0.25rem` · `var(--sf-a4)` |
 | `--sf-space-1/4` | `0.25rem` · `var(--sf-a4)` |
 | `--sf-space-2` | `var(--sf-b6)` · `var(--sf-c0)` |
-| `--sf-space-3` | `var(--sf-b6)` · `var(--sf-c2)` |
+| `--sf-space-3` | `var(--sf-b6)` · `var(--sf-c2)` · `var(--sf-c0)` |
 | `--sf-space-4` | `var(--sf-c2)` · `var(--sf-c6)` |
 | `--sf-space-5` | `var(--sf-c6)` · `var(--sf-d0)` |
-| `--sf-space-6` | `var(--sf-c6)` · `var(--sf-d2)` |
-| `--sf-space-7` | `var(--sf-d0)` · `var(--sf-d6)` |
-| `--sf-space-8` | `var(--sf-d2)` · `var(--sf-e0)` |
+| `--sf-space-6` | `var(--sf-c6)` · `var(--sf-d2)` · `var(--sf-d0)` |
+| `--sf-space-7` | `var(--sf-d0)` · `var(--sf-d6)` · `var(--sf-d2)` |
+| `--sf-space-8` | `var(--sf-d2)` · `var(--sf-e0)` · `var(--sf-d6)` |
 | `--sf-space-auto` | `auto` |
 
 ### Границы, радиусы и тени
@@ -502,14 +504,14 @@ description: "Полный список переменных, которые о�
 | `--sf-divider--alfa` | `1` |
 | `--sf-elevation-1--shadow` | `var(--sf-shadow-card)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-elevation-1--surface` | `var(--sf-surface-card)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-elevation-2--shadow` | `var(--sf-ui-shadow-2), var(--sf-shadow--rim)` |
-| `--sf-elevation-2--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
+| `--sf-elevation-2--shadow` | `var(--sf-shadow-overlay)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-elevation-2--surface` | `var(--sf-surface-popup)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 | `--sf-elevation-3--shadow` | `var(--sf-shadow-popup)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-elevation-3--surface` | `var(--sf-surface-popup)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-elevation-4--shadow` | `var(--sf-shadow-popup-nested)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-elevation-4--shadow` | `var(--sf-shadow-modal)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 | `--sf-elevation-4--surface` | `var(--sf-surface-popup-nested)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-elevation-5--shadow` | `var(--sf-ui-shadow-5), var(--sf-shadow--rim)` |
-| `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-elevation-5--shadow` | `var(--sf-shadow-modal)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-elevation-5--surface` | `var(--sf-surface-popup-nested)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
 | `--sf-radius--ui` | `var(--sf-radius-1\/2)` |
 | `--sf-radius-0` | `var(--sf-a0)` |
@@ -522,16 +524,29 @@ description: "Полный список переменных, которые о�
 | `--sf-radius-circle` | `1000px` |
 | `--sf-radius-rounded` | `1000px` |
 | `--sf-radius-square` | `0` |
+| `--sf-scrim-color` | `var(--sf-black--alfa-64)` |
+| `--sf-scrim-opacity` | `1` |
 | `--sf-shadow--alfa` | `1` |
-| `--sf-shadow--color-fill` | `var(--sf-black--alfa-12)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-fill))` |
-| `--sf-shadow--color-outline` | `var(--sf-black--alfa-8)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-outline))` |
-| `--sf-shadow--color-shade` | `var(--sf-shadow--color-shading)` |
-| `--sf-shadow--color-shading` | `var(--sf-black--alfa-4)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-shade))` |
-| `--sf-shadow--level-ratio` | `1` |
-| `--sf-shadow--rim` | `0 0 0 0 transparent` |
-| `--sf-shadow-card` | `var(--sf-ui-shadow-1), var(--sf-shadow--rim)` |
-| `--sf-shadow-popup` | `var(--sf-ui-shadow-3), var(--sf-shadow--rim)` |
-| `--sf-shadow-popup-nested` | `var(--sf-ui-shadow-4), var(--sf-shadow--rim)` |
+| `--sf-shadow--color-fill` | `var(--sf-shadow-key-color)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow--color-outline` | `var(--sf-shadow-key-color)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow--color-shade` | `var(--sf-shadow-ambient-color)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow--color-shading` | `var(--sf-shadow-ambient-color)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow--rim` | `0 0 0 0 transparent` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow-ambient-color` | `light-dark(var(--sf-black--alfa-8), var(--sf-transparent))` |
+| `--sf-shadow-card` | `var(--sf-shadow-raised)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow-flat` | `none` |
+| `--sf-shadow-key-color` | `light-dark(var(--sf-black--alfa-16), var(--sf-black--alfa-28))` |
+| `--sf-shadow-modal` | `0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` |
+| `--sf-shadow-overlay` | `0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` |
+| `--sf-shadow-popup` | `var(--sf-shadow-overlay)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow-popup-nested` | `var(--sf-shadow-overlay)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-shadow-raised` | `0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color), 0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color)` |
+| `--sf-ui-shadow-1` | `var(--sf-shadow-raised)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-ui-shadow-2` | `var(--sf-shadow-overlay)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-ui-shadow-3` | `var(--sf-shadow-overlay)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-ui-shadow-4` | `var(--sf-shadow-modal)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-ui-shadow-5` | `var(--sf-shadow-modal)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
+| `--sf-ui-shadow-top` | `var(--sf-shadow-flat)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 
 ### Движение
 
@@ -604,18 +619,18 @@ description: "Полный список переменных, которые о�
 | :--- | :--- |
 | `--sf-ui-1--control-height` | `calc(var(--sf-text--height-1) + 2 * var(--sf-ui-1--space-y-tightness-default))` |
 | `--sf-ui-1--space-x` | `var(--sf-b4)` · `var(--sf-b6)` |
-| `--sf-ui-1--space-y` | `var(--sf-a4)` · `var(--sf-a8)` |
-| `--sf-ui-1--space-y-tightness-default` | `var(--sf-a8)` |
-| `--sf-ui-1--space-y-tightness-high` | `var(--sf-b2)` |
-| `--sf-ui-1--space-y-tightness-highest` | `var(--sf-b6)` |
+| `--sf-ui-1--space-y` | `var(--sf-a4)` · `var(--sf-a8)` · `var(--sf-a6)` |
+| `--sf-ui-1--space-y-tightness-default` | `var(--sf-a8)` · `var(--sf-a6)` |
+| `--sf-ui-1--space-y-tightness-high` | `var(--sf-b2)` · `var(--sf-b0)` |
+| `--sf-ui-1--space-y-tightness-highest` | `var(--sf-b6)` · `var(--sf-b4)` |
 | `--sf-ui-1--space-y-tightness-low` | `var(--sf-a4)` |
-| `--sf-ui-1--text-space-x` | `var(--sf-a6)` · `var(--sf-a8)` |
+| `--sf-ui-1--text-space-x` | `var(--sf-a6)` · `var(--sf-a8)` · `var(--sf-a7)` |
 | `--sf-ui-1/2--control-height` | `calc(var(--sf-text--height-1\/2) + 2 * var(--sf-ui-1\/2--space-y-tightness-default))` |
 | `--sf-ui-1/2--space-x` | `0.75rem` · `var(--sf-b2)` · `0.875rem` · `var(--sf-b4)` |
 | `--sf-ui-1/2--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
-| `--sf-ui-1/2--space-y-tightness-default` | `0.375rem` · `var(--sf-a6)` |
-| `--sf-ui-1/2--space-y-tightness-high` | `0.625rem` · `var(--sf-b0)` |
-| `--sf-ui-1/2--space-y-tightness-highest` | `0.875rem` · `var(--sf-b4)` |
+| `--sf-ui-1/2--space-y-tightness-default` | `0.375rem` · `var(--sf-a6)` · `0.25rem` · `var(--sf-a4)` |
+| `--sf-ui-1/2--space-y-tightness-high` | `0.625rem` · `var(--sf-b0)` · `0.5rem` · `var(--sf-a8)` |
+| `--sf-ui-1/2--space-y-tightness-highest` | `0.875rem` · `var(--sf-b4)` · `0.75rem` · `var(--sf-b2)` |
 | `--sf-ui-1/2--space-y-tightness-low` | `0.25rem` · `var(--sf-a4)` |
 | `--sf-ui-1/2--text-space-x` | `0.375rem` · `var(--sf-a6)` · `0.4375rem` · `var(--sf-a7)` |
 | `--sf-ui-1/3--control-height` | `calc(var(--sf-text--height-1\/3) + 2 * var(--sf-ui-1\/3--space-y-tightness-default))` |
@@ -627,19 +642,19 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-1/3--space-y-tightness-low` | `0.125rem` · `var(--sf-a2)` · `0.25rem` · `var(--sf-a4)` |
 | `--sf-ui-1/3--text-space-x` | `0.3125rem` · `var(--sf-a5)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-2--control-height` | `calc(var(--sf-text--height-2) + 2 * var(--sf-ui-2--space-y-tightness-default))` |
-| `--sf-ui-2--space-x` | `var(--sf-b8)` · `var(--sf-c0)` |
-| `--sf-ui-2--space-y` | `var(--sf-a6)` · `var(--sf-b0)` |
-| `--sf-ui-2--space-y-tightness-default` | `var(--sf-b0)` |
-| `--sf-ui-2--space-y-tightness-high` | `var(--sf-b4)` |
-| `--sf-ui-2--space-y-tightness-highest` | `var(--sf-c0)` |
-| `--sf-ui-2--space-y-tightness-low` | `var(--sf-a6)` |
+| `--sf-ui-2--space-x` | `var(--sf-b8)` · `var(--sf-c0)` · `var(--sf-b6)` |
+| `--sf-ui-2--space-y` | `var(--sf-a6)` · `var(--sf-b0)` · `var(--sf-a8)` |
+| `--sf-ui-2--space-y-tightness-default` | `var(--sf-b0)` · `var(--sf-a8)` |
+| `--sf-ui-2--space-y-tightness-high` | `var(--sf-b4)` · `var(--sf-b2)` |
+| `--sf-ui-2--space-y-tightness-highest` | `var(--sf-c0)` · `var(--sf-b6)` |
+| `--sf-ui-2--space-y-tightness-low` | `var(--sf-a6)` · `var(--sf-a4)` |
 | `--sf-ui-2--text-space-x` | `var(--sf-a8)` · `var(--sf-b0)` |
 | `--sf-ui-3--control-height` | `calc(var(--sf-text--height-3) + 2 * var(--sf-ui-3--space-y-tightness-default))` |
-| `--sf-ui-3--space-x` | `var(--sf-c1)` · `var(--sf-c2)` |
+| `--sf-ui-3--space-x` | `var(--sf-c1)` · `var(--sf-c2)` · `var(--sf-c0)` |
 | `--sf-ui-3--space-y` | `var(--sf-a6)` · `var(--sf-b0)` |
 | `--sf-ui-3--space-y-tightness-default` | `var(--sf-b4)` · `var(--sf-b0)` |
-| `--sf-ui-3--space-y-tightness-high` | `var(--sf-c0)` · `var(--sf-b6)` |
-| `--sf-ui-3--space-y-tightness-highest` | `var(--sf-c3)` · `var(--sf-c1)` |
+| `--sf-ui-3--space-y-tightness-high` | `var(--sf-c0)` · `var(--sf-b6)` · `var(--sf-b4)` |
+| `--sf-ui-3--space-y-tightness-highest` | `var(--sf-c3)` · `var(--sf-c1)` · `var(--sf-c0)` |
 | `--sf-ui-3--space-y-tightness-low` | `var(--sf-b0)` · `var(--sf-a6)` |
 | `--sf-ui-3--text-space-x` | `var(--sf-b0)` · `var(--sf-b2)` |
 | `--sf-ui-blur-large` | `blur(var(--sf-blur-large))` |
@@ -649,12 +664,6 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-focus` | `0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
 | `--sf-ui-focus-inset` | `inset 0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
 | `--sf-ui-radius-default` | `var(--sf-radius--ui)` |
-| `--sf-ui-shadow-1` | `0 var(--sf-a2) var(--sf-a4) var(--sf-px) var(--sf-shadow--color-shading), 0 var(--sf-px) var(--sf-a3) 0 var(--sf-shadow--color-outline), 0 var(--sf-a2) var(--sf-a2) calc(-1 * var(--sf-px)) var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-2` | `0 var(--sf-a4) var(--sf-a8) var(--sf-a2) var(--sf-shadow--color-shading), 0 var(--sf-a2) var(--sf-a6) 0 var(--sf-shadow--color-outline), 0 var(--sf-a4) var(--sf-a4) calc(-1 * var(--sf-a2)) var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-3` | `0 var(--sf-a8) var(--sf-b6) var(--sf-a4) var(--sf-shadow--color-shading), 0 var(--sf-a4) var(--sf-b2) 0 var(--sf-shadow--color-outline), 0 var(--sf-a8) var(--sf-a8) calc(-1 * var(--sf-a4)) var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-4` | `0 var(--sf-b6) var(--sf-c6) var(--sf-a4) var(--sf-shadow--color-shading), 0 var(--sf-a8) var(--sf-c2) 0 var(--sf-shadow--color-outline), 0 var(--sf-b6) var(--sf-b6) calc(-1 * var(--sf-a8)) var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-5` | `0 var(--sf-c6) var(--sf-d6) var(--sf-a8) var(--sf-shadow--color-shading), 0 var(--sf-b6) var(--sf-d2) 0 var(--sf-shadow--color-outline), 0 var(--sf-c6) var(--sf-c6) calc(-1 * var(--sf-b6)) var(--sf-shadow--color-fill)` |
-| `--sf-ui-shadow-top` | `0 0 var(--sf-px) 0 var(--sf-shadow--color-fill), 0 calc(-1 * var(--sf-a4)) var(--sf-b0) var(--sf-a4) var(--sf-shadow--color-outline), 0 calc(-1 * var(--sf-a2)) var(--sf-a3) var(--sf-px) var(--sf-shadow--color-shading)` |
 | `--sf-ui-skeleton` | `linear-gradient(180deg, var(--sf-neutral-80--alfa-48) 0%, var(--sf-neutral-60--alfa-48) 100%)` |
 
 ### Поток содержимого
@@ -665,7 +674,7 @@ description: "Полный список переменных, которые о�
 | `--sf-auto` | `auto` |
 | `--sf-bg--alfa` | `1` |
 | `--sf-caret--alfa` | `1` |
-| `--sf-composition-region-gap` | `var(--sf-space-4, 1rem)` |
+| `--sf-composition-region-gap` | `var(--sf-space-4)` |
 | `--sf-composition-region-side` | `minmax(0, var(--sf-f6))` |
 | `--sf-content--space-block` | `var(--sf-space-3)` |
 | `--sf-content--space-related` | `var(--sf-space-2)` |
@@ -678,7 +687,7 @@ description: "Полный список переменных, которые о�
 | `--sf-ring-color` | `` |
 | `--sf-stripe--alfa` | `1` |
 | `--sf-stripe--color` | `var(--sf-surface-inverse)` |
-| `--sf-stripe--size` | `var(--sf-a1, 1px)` |
+| `--sf-stripe--size` | `var(--sf-a1)` |
 | `--sf-viewport-height-dynamic` | `100vh` · `100dvh` |
 | `--sf-viewport-height-large` | `100vh` · `100lvh` |
 | `--sf-viewport-height-small` | `100vh` · `100svh` |
@@ -735,6 +744,7 @@ description: "Полный список переменных, которые о�
 | `--sf-gradient--angle` | `90deg` |
 | `--sf-icon--color` | `var(--sf-primary)` · `var(--sf-on-primary)` |
 | `--sf-inherit` | `inherit` |
+| `--sf-language--box` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-layout-floating-panel-height` | `calc(var(--sf-h0) + var(--sf-d0))` |
 | `--sf-layout-floating-panel-width` | `calc(var(--sf-g2) + var(--sf-b6))` |
 | `--sf-layout-reading-width` | `var(--sf-h2)` |
@@ -745,10 +755,10 @@ description: "Полный список переменных, которые о�
 | `--sf-neutral-container-hover` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-35))` |
 | `--sf-neutral-hover` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` |
 | `--sf-on-elevation-1--variant` | `var(--sf-on-surface-card-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-on-elevation-2--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-on-elevation-2--variant` | `var(--sf-on-surface-popup-variant)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 | `--sf-on-elevation-3--variant` | `var(--sf-on-surface-popup-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-on-elevation-4--variant` | `var(--sf-on-surface-popup-nested-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-on-elevation-5--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
+| `--sf-on-elevation-5--variant` | `var(--sf-on-surface-popup-nested-variant)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 | `--sf-on-error` | `light-dark(var(--sf-white), var(--sf-error-20))` |
 | `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` |
 | `--sf-on-neutral` | `light-dark(var(--sf-white), var(--sf-neutral-20))` |
@@ -775,8 +785,6 @@ description: "Полный список переменных, которые о�
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
-| `--sf-scrim-color` | `var(--sf-black)` |
-| `--sf-scrim-opacity` | `var(--sf-opacity-60)` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
 | `--sf-skeleton-bar` | `var(--sf-text-size-1)` |
 | `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |

@@ -5,7 +5,7 @@ description: "Параметры письма, строки блоков в по
 
 # Структура письма
 
-:badge[sf-mail-structure]{variant=tonal scheme=primary size=1/2} :badge[1.0.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-structure]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-structure>` — структура письма в редакторе писем: параметры письма, по
 строке на блок в порядке письма и способ добавить блок. Элемент не хранит письмо
@@ -99,7 +99,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -107,7 +107,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 |:---|:---|
 | Тег | `<sf-mail-structure>` |
 | Назначение | Структура письма в SIMAI Email Editor: параметры письма, по строке на блок и способ добавить блок. Строка выбирает, двигает, копирует и удаляет свой блок; точка между строками просит там новый блок; шапка и подвал закреплены. Элемент не хранит письмо и не меняет его; он сообщает, о чём попросил человек. |
-| Контракт | `smart.mail-structure`, версия `1.0.4` |
+| Контракт | `smart.mail-structure`, версия `1.0.5` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -158,5 +158,5 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-structure`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-structure`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`

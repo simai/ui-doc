@@ -5,7 +5,7 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
-:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
 
 Inline-редактор даёт править текст заголовков и абзацев (`content.heading` и
 `content.paragraph`) прямо на странице. Доступно то, что есть в модели
@@ -129,7 +129,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `edit(element: object, options: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением). |
+| `edit(args: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением). |
 
 ### События
 
@@ -145,13 +145,13 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.5.3` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Esc`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-editor-inline` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

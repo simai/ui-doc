@@ -5,7 +5,7 @@ description: "Поле формы для одного изображения: м
 
 # Поле изображения
 
-:badge[sf-input-image]{variant=tonal scheme=primary size=1/2} :badge[1.2.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-image]{variant=tonal scheme=primary size=1/2} :badge[1.2.5]{variant=outline scheme=on-surface size=1/2}
 
 Поле изображения принимает одно изображение в форме: логотип, обложку,
 картинку в блоке. Оно показывает миниатюру с именем и размером файла, кнопки
@@ -152,8 +152,8 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | `clear()` | объект | Очищает поле из кода; то же, что setValue(null). Возвращает тег. |
 | `choose()` | да/нет | Открывает окно выбора файла, как «Заменить…» и «Выбрать…». Возвращает false, если поле недоступно или только для чтения. |
 | `removeImage()` | да/нет | Убирает изображение, как человек кнопкой «Убрать»: приходят input, change и sf-image-field-detach, фокус переходит на «Выбрать…». Возвращает, было ли что убирать. |
-| `takeFile(file: object, source: string)` | да/нет | Принимает File, как если бы его выбрал человек (source input, drop или другой, названный приложением): миниатюра показывает его по object URL, приходят input, change и sf-image-field-attach. Файл, которого нет в accept, вместо этого отклоняется. Возвращает, принят ли файл. |
-| `setError(message: string)` | объект | Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает тег. |
+| `takeFile(args: object)` | да/нет | Принимает File, как если бы его выбрал человек (source input, drop или другой, названный приложением): миниатюра показывает его по object URL, приходят input, change и sf-image-field-attach. Файл, которого нет в accept, вместо этого отклоняется. Возвращает, принят ли файл. |
+| `setError(args: object)` | объект | Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает тег. |
 | `setValue(value: object\|string\|null)` | объект | Задаёт изображение из кода — в форме файла или адресом; null очищает поле. Событий не отправляет: значение из кода — не изменение. Возвращает тег. |
 
 ### События
@@ -172,13 +172,13 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.4` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.5` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/input-image` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-input-image` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-image` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 

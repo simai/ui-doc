@@ -5,7 +5,7 @@ description: "Показывает долю выполненного кольц�
 
 # Кольцо прогресса
 
-:badge[sf-progress-ring]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-ring]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Кольцо прогресса показывает значение от 0 до 100 кольцом размером с элемент
 управления: в панели инструментов, в боковой полосе, вокруг аватара. Для
@@ -165,7 +165,7 @@ ring.setAttribute('value-text', 'Файлы загружены');
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `chunk(done: number, total: number)` | объект | Показывает часть работы (`chunk {done, total}`): `value` становится долей `done` от `total` в процентах; `total` по умолчанию 100. Принимает `chunk({done, total})` или `chunk(done, total)`. |
+| `chunk(args: object)` | объект | Показывает часть работы (`chunk {done, total}`): `value` становится долей `done` от `total` в процентах; `total` по умолчанию 100. Принимает `chunk({done, total})` или `chunk(done, total)`. |
 
 ### События
 
@@ -175,13 +175,13 @@ ring.setAttribute('value-text', 'Файлы загружены');
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.0.2` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шкала; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/progress-ring` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-progress-ring` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/progress-ring` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-progress-ring` |
 
 ## См. также
 

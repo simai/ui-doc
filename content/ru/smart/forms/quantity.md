@@ -5,7 +5,7 @@ description: "Числовое поле с кнопками «−» и «+»: г
 
 # Количество
 
-:badge[sf-input-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Количество — поле для числа с границами, которое удобно менять по шагам:
 количество, сумма, целое свойство. Для значения, которое выбирают
@@ -188,9 +188,9 @@ count.addEventListener('change', (event) => {
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `clear()` | объект | Очищает поле из кода; то же, что setValue(null). Возвращает тег. |
-| `stepUp(count: number)` | объект | Увеличивает значение на `count` шагов (по умолчанию 1), не выходя за границы. Событий не отправляет. Возвращает тег. |
-| `stepDown(count: number)` | объект | Уменьшает значение на `count` шагов (по умолчанию 1) в пределах границ. Событий не отправляет. Возвращает тег. |
-| `setError(message: string)` | объект | Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает тег. |
+| `stepUp(args?: object)` | объект | Увеличивает значение на `count` шагов (по умолчанию 1), не выходя за границы. Событий не отправляет. Возвращает тег. |
+| `stepDown(args?: object)` | объект | Уменьшает значение на `count` шагов (по умолчанию 1) в пределах границ. Событий не отправляет. Возвращает тег. |
+| `setError(args: object)` | объект | Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает тег. |
 | `setValue(value: number\|string\|null)` | объект | Задаёт число из кода: число, текст числа с точкой или null — нет значения. Округляется до знаков поля, но не подтягивается к границам. Событий не отправляет: значение из кода — не изменение. Возвращает тег. |
 | `resetToInherited()` | да/нет | Возвращает поле к наследуемому значению, как кнопка сброса: сначала sf-field-reset (отменяемое), затем input и change. Возвращает, был ли сброс. |
 | `getInputElement()` | объект или пусто | Возвращает текстовое поле spinbutton или null до отрисовки. |
@@ -209,13 +209,13 @@ count.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-quantity>`, контракт `smart.input-quantity` версии `1.3.2` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-input-quantity>`, контракт `smart.input-quantity` версии `1.3.3` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как числовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `PageUp`, `PageDown`, `Home`, `End`, `Enter`, `Esc`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/input-quantity` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-input-quantity` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-quantity` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-quantity` |
 
 ## См. также
 

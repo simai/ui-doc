@@ -210,7 +210,7 @@ profile: reference
 | `--sf-menu-item-background-color` | Заливка строки в покое; у наведения и открытой ветки своя. | `var(--sf-transparent)` |
 | `--sf-menu-item-border-color` | Цвет тонкой рамки строки в покое; у наведения и открытой ветки свой. | `var(--sf-surface-container)` |
 | `--sf-menu-item-radius` | Скругление углов строки. | `var(--sf-radius--ui)` |
-| `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-elevation-2--surface)`; зависит от orientation |
+| `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-surface-popup)`; зависит от orientation |
 | `--sf-menu-submenu-border-color` | Цвет рамки панели горизонтального меню. | `var(--sf-outline-variant)`; зависит от orientation |
 | `--sf-menu-submenu-radius` | Скругление углов панели горизонтального меню. | `var(--sf-radius--ui)`; зависит от orientation |
 | `--sf-menu-sticky-top` | На каком расстоянии от верха окна останавливается закреплённое меню (`sticky`): высота закреплённой шапки над ним. | `0` |

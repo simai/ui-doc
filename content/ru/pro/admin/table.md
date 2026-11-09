@@ -791,7 +791,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -915,8 +915,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/view`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -1090,5 +1090,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/view-table`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view-table`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/view-table/rule.js#name=cl-view-table`

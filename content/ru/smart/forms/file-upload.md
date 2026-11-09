@@ -5,7 +5,7 @@ description: "Зона выбора и перетаскивания файлов
 
 # Загрузка файлов
 
-:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.8]{variant=outline scheme=on-surface size=1/2}
 
 Загрузка файлов даёт выбрать файлы в системном окне или перетащить их и
 показывает список выбранных файлов с прогрессом и состоянием передачи. Сами
@@ -293,7 +293,7 @@ async function store(item) {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `removeItem(index: number)` | объект | Удаляет из списка пункт с этим индексом; индекс вне списка ничего не делает. Возвращает тег. |
+| `removeItem(args: object)` | объект | Удаляет из списка пункт с этим индексом; индекс вне списка ничего не делает. Возвращает тег. |
 | `clear()` | объект | Очищает список. Возвращает тег. |
 | `getItems()` | список: объект | Файлы списка в виде объектов пунктов. |
 | `setItems(items: array)` | объект | Заменяет список этими пунктами (name, fileSize, state, progress, errorMessage). Возвращает тег. |
@@ -328,13 +328,13 @@ async function store(item) {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.8` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/file-upload` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-file-upload` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/file-upload` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-file-upload` |
 
 ## См. также
 

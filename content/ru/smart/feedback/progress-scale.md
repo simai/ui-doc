@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса ш
 
 # Шкала прогресса
 
-:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.1.4]{variant=outline scheme=on-surface size=1/2}
 
 Шкала прогресса показывает известную долю выполненного десятью делениями.
 Берите её, когда точность до процента не нужна и ход удобнее читать крупными
@@ -122,7 +122,7 @@ scale.setProgress(completedSteps * 20);
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `chunk(done: number, total: number)` | объект | Действие chunk. |
+| `chunk(args: object)` | объект | Действие chunk. |
 | `getProgress()` | число | Возвращает значение как число, ограниченное диапазоном 0..100; нечисловое значение читается как 0. |
 | `setProgress(nextValue: number\|string)` | объект | Устанавливает атрибут value; null или undefined удаляет его. |
 
@@ -134,13 +134,13 @@ scale.setProgress(completedSteps * 20);
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.1.3` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.1.4` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/progress-scale` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-progress-scale` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/progress-scale` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-progress-scale` |
 
 ## См. также
 

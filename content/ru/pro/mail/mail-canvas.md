@@ -5,7 +5,7 @@ description: "Готовое письмо в рамке, которая ниче
 
 # Холст письма
 
-:badge[sf-mail-canvas]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-canvas]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-canvas>` — холст редактора писем: готовое письмо в рамке, которая ничего
 не запускает, переключатель ширины над ним, две заметки о письме («устарел» и
@@ -177,7 +177,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -185,7 +185,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 |:---|:---|
 | Тег | `<sf-mail-canvas>` |
 | Назначение | Холст SIMAI Email Editor: готовое письмо в рамке, которая ничего не запускает, переключатель ширины, заметки об устаревании и весе и sf-editor-overlay сверху. Элемент не знает письма, манифеста блоков и рендерера: приложение передаёт HTML и данные о нём и слышит, что сделал человек. |
-| Контракт | `smart.mail-canvas`, версия `1.1.3` |
+| Контракт | `smart.mail-canvas`, версия `1.1.5` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -244,5 +244,5 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-canvas`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-canvas`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`

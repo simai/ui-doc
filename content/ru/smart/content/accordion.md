@@ -5,7 +5,7 @@ description: "Раскрывающиеся секции из данных или
 
 # Аккордеон
 
-:badge[sf-accordion]{variant=tonal scheme=primary size=1/2} :badge[1.1.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-accordion]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
 
 Аккордеон делит одно содержание на секции, которые открываются и закрываются
 по нажатию на шапку: группы полей записи, разделы настроек, вопросы и ответы.
@@ -172,9 +172,9 @@ faq.open(location.hash.slice(1));
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `open(id: any)` | да/нет | Открывает секцию с этим id; в режиме single открытая закрывается. sf-accordion-toggle приходит для каждой изменившейся секции, source method. Возвращает, изменилось ли что-нибудь. |
-| `close(id: any)` | да/нет | Закрывает секцию с этим id. Возвращает, изменилось ли что-нибудь. |
-| `toggle(id: any)` | да/нет | Открывает секцию, если она закрыта, и закрывает, если открыта. Возвращает, изменилось ли что-нибудь. |
+| `open(args: object\|string)` | да/нет | Открывает секцию с этим id; в режиме single открытая закрывается. sf-accordion-toggle приходит для каждой изменившейся секции, source method. Возвращает, изменилось ли что-нибудь. |
+| `close(args: object\|string)` | да/нет | Закрывает секцию с этим id. Возвращает, изменилось ли что-нибудь. |
+| `toggle(args: object\|string)` | да/нет | Открывает секцию, если она закрыта, и закрывает, если открыта. Возвращает, изменилось ли что-нибудь. |
 | `isOpen(id: string)` | да/нет | Открыта ли секция с этим id. Единственная секция открыта всегда. |
 
 ### События
@@ -189,13 +189,13 @@ faq.open(location.hash.slice(1));
 
 | | |
 |:---|:---|
-| Тег | `<sf-accordion>`, контракт `smart.accordion` версии `1.1.6` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-accordion>`, контракт `smart.accordion` версии `1.1.7` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↓`, `↑`, `Home`, `End`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/accordion` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-accordion` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/accordion` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-accordion` |
 
 ## См. также
 

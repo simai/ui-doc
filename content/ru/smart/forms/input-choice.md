@@ -5,7 +5,7 @@ description: "Поле формы, где один вариант или нес�
 
 # Выбор карточками
 
-:badge[sf-input-choice]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-choice]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Поле формы, в котором человек выбирает один вариант или несколько из
 карточек: у каждой название, пояснение, иконка и короткая метка. Берите его,
@@ -191,13 +191,13 @@ field.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-choice>`, контракт `smart.input-choice` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-input-choice>`, контракт `smart.input-choice` версии `1.0.2` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: один вариант: `Tab` приводит на выбранную карточку (или первую), стрелки переходят к соседней карточке и выбирают её, с конца — на начало; несколько вариантов: `Tab` проходит по каждой карточке, `Пробел` включает и выключает её. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/input-choice` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-input-choice` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-choice` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-choice` |
 
 ## См. также
 

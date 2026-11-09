@@ -5,7 +5,7 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
-:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-confirm-change>` — карточка подготовленного изменения, которое ждёт
 «да» или «нет» человека: каждое значение как было и как станет, два
@@ -107,7 +107,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -115,8 +115,8 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 |:---|:---|
 | Тег | `<sf-confirm-change>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.confirm-change`, версия `1.4.2` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Контракт | `smart.confirm-change`, версия `1.5.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -139,7 +139,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 ### Методы
 
 - `open()` — возвращает `object`. Задаёт вопрос снова: ответы опять можно нажать. Когда вопрос задаёт сборка, она получает ответ `{accepted, reason, value}`, как только человек ответит или выйдет срок.
-- `answer(accepted: boolean)` — возвращает `object`. Ответить, как ответил бы человек: `accepted` true подтверждает, false отклоняет. Отказ, если карточка закрыта, выключена или ответ отменён.
+- `answer(args: object)` — возвращает `object`. Ответить, как ответил бы человек: `accepted` true подтверждает, false отклоняет. Отказ, если карточка закрыта, выключена или ответ отменён.
 - `confirm()` — возвращает `object`. Отвечает «да», как нажатие кнопки согласия; с разметки — `data-sf-action="<id>.confirm"`.
 - `cancel()` — возвращает `object`. Кнопка отказа.
 
@@ -165,5 +165,5 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/confirm-change`
-- `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-confirm-change`
+- `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/confirm-change`
+- `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-confirm-change`

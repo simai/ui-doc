@@ -5,7 +5,7 @@ description: "Переключает страницы длинного спис�
 
 # Пагинация
 
-:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.10]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.11]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация — подвал длинного списка или таблицы: сколько всего записей, на
 какой странице читатель, как перейти на другую и сколько записей показывать.
@@ -247,7 +247,7 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `goToPage(page: number)` | объект | Переходит на страницу: номер разбирается как целое число и ограничивается диапазоном 1..pageCount, если количество известно (иначе только снизу значением 1). Отправляет sf-pagination-change, когда страница действительно меняется; ничего не делает, если известно, что всего страниц ноль. |
+| `goToPage(args: object\|number)` | объект | Переходит на страницу: номер разбирается как целое число и ограничивается диапазоном 1..pageCount, если количество известно (иначе только снизу значением 1). Отправляет sf-pagination-change, когда страница действительно меняется; ничего не делает, если известно, что всего страниц ноль. |
 | `showMore()` | объект | Отправляет sf-pagination-load-more с текущими параметрами пагинации и переданным пунктом; не выполняет запрос и не меняет состояние. |
 | `getTopSection()` | объект или пусто | Возвращает элемент верхней секции (.sf-pagination-top) или null, если она не отрисована. |
 | `getMainSection()` | объект или пусто | Возвращает элемент основной секции (.sf-pagination-main) или null, если она не отрисована. |
@@ -278,13 +278,13 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.10` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.11` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/pagination` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-pagination` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/pagination` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-pagination` |
 
 ## См. также
 

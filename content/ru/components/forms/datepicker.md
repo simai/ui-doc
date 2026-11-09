@@ -131,7 +131,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-datepicker-background-color` | Поверхность календаря и его списков месяцев и лет. | `var(--sf-elevation-3--surface)` |
+| `--sf-datepicker-background-color` | Поверхность календаря и его списков месяцев и лет. | `var(--sf-surface-popup)` |
 | `--sf-datepicker-day-color` | Число дня в покое; у дней другого месяца, выходных, выключенных и выбранных дней свои. | `var(--sf-on-surface)` |
 | `--sf-datepicker-selected-background-color` | Выбранный день и концы выбранного диапазона. | `var(--sf-primary)` |
 | `--sf-datepicker-selected-color` | Число на выбранном дне. | `var(--sf-on-primary)` |
@@ -140,7 +140,7 @@ profile: reference
 
 ```css
 .sf-datepicker {
-  --sf-datepicker-background-color: var(--sf-elevation-3--surface);
+  --sf-datepicker-background-color: var(--sf-surface-popup);
 }
 ```
 
@@ -152,7 +152,7 @@ profile: reference
 |:---|:---|:---|
 | `--sf-datepicker--inline-size` | `calc(var(--sf-ui-1--control-height) * 7 + var(--sf-space-1))` | `width`, `inline-size` |
 | `--sf-datepicker-another-month--opacity` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-another-month:not(:disabled):not(.active):not(.disabled):not(.sf-datepicker-day-selected)`: `1` | `opacity` |
-| `--sf-datepicker-context--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-context`: `var(--sf-datepicker--background-color, var(--sf-datepicker-background-color, var(--sf-elevation-3--surface)))` | `background` |
+| `--sf-datepicker-context--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-context`: `var(--sf-datepicker--background-color, var(--sf-datepicker-background-color, var(--sf-surface-popup)))` | `background` |
 | `--sf-datepicker-day--background-color` | не задана; задают модификаторы, например `.sf-datepicker-day`: `var(--sf-transparent)` | `background-color` |
 | `--sf-datepicker-day--border-end-end-radius` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-day-start:not(.sf-datepicker-day.sf-datepicker-day-end)`: `0` | `border-end-end-radius` |
 | `--sf-datepicker-day--border-end-start-radius` | не задана; задают модификаторы, например `.sf-datepicker-day.sf-datepicker-day-end:not(.sf-datepicker-day.sf-datepicker-day-start)`: `0` | `border-end-start-radius` |
@@ -177,7 +177,7 @@ profile: reference
 | `--sf-datepicker-text--border-start-end-radius` | не задана; задают модификаторы, например `.sf-datepicker-text.sf-datepicker-text-start`: `var(--sf-radius-square)` | `border-start-end-radius` |
 | `--sf-datepicker-text--border-start-start-radius` | не задана; задают модификаторы, например `.sf-datepicker-text.sf-datepicker-text-end`: `var(--sf-radius-square)` | `border-start-start-radius` |
 | `--sf-datepicker-text--color` | не задана; задают модификаторы, например `.sf-datepicker-text`: `var(--sf-on-surface)` | `color` |
-| `--sf-datepicker-top--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-elevation-3--surface)` | `background-color` |
+| `--sf-datepicker-top--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-surface-popup)` | `background-color` |
 | `--sf-datepicker-top--padding-bottom` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1)` | `padding-bottom` |
 | `--sf-datepicker-top--padding-inline-end` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/3)` | `padding-inline-end` |
 | `--sf-datepicker-top--padding-inline-start` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/3)` | `padding-inline-start` |

@@ -5,7 +5,7 @@ description: "Показывает известный ход процесса с
 
 # Прогресс
 
-:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Прогресс показывает ход процесса, у которого известна доля выполненного:
 загрузка файла, импорт, проверка. Когда доля неизвестна, берите
@@ -121,7 +121,7 @@ upload.addEventListener('load', () => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `chunk(done: number, total: number)` | объект | Действие chunk. |
+| `chunk(args: object)` | объект | Действие chunk. |
 | `getProgress()` | число | Возвращает атрибут value как число (0, если атрибута нет); значение не ограничивается. |
 | `setProgress(nextValue: number\|string)` | объект | Устанавливает атрибут value; null или undefined удаляет его. |
 | `setTextPosition(nextValue: string)` | объект | Устанавливает text-position; null или undefined удаляет его. |
@@ -134,13 +134,13 @@ upload.addEventListener('load', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-bar>`, контракт `smart.progress-bar` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-progress-bar>`, контракт `smart.progress-bar` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/progress-bar` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-progress-bar` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/progress-bar` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-progress-bar` |
 
 ## См. также
 

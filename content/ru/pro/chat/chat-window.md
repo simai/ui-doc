@@ -5,7 +5,7 @@ description: "Окно чата целиком на порте хоста: сп�
 
 # Окно чата
 
-:badge[sf-chat-window]{variant=tonal scheme=primary size=1/2} :badge[1.14.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-window]{variant=tonal scheme=primary size=1/2} :badge[1.14.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-window>` — окно чата целиком: список разговоров, открытый разговор,
 поле ввода, выбор собеседника и «Мои файлы». Окно собрано из частей —
@@ -241,7 +241,7 @@ Escape закрывает его и возвращает фокус на ком�
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -249,7 +249,7 @@ Escape закрывает его и возвращает фокус на ком�
 |:---|:---|
 | Тег | `<sf-chat-window>` |
 | Назначение | Окно чата целиком на порту приложения `simai.chat-port` 1.0.0: разговоры (архив, постраничная загрузка, поиск, закрепление), открытый разговор с сообщениями, предложениями, оценками и описаниями задач, поле ввода с файлами и вопросами в очереди, пока ждётся ответ, поиск по разговору, собеседник и «Мои файлы». С сервером не говорит: данные даёт приложение, оно же отвечает на каждое намерение — через порт или действие `settle`. |
-| Контракт | `smart.chat-window`, версия `1.14.0` |
+| Контракт | `smart.chat-window`, версия `1.14.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -287,22 +287,22 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Методы
 
-- `setData(data: object)` — возвращает `object`. несколько данных порта сразу, по именам порта или по именам настроек; неизвестные ключи пропускаются (метод 0.3 `applyData(partial)` сохранён) (действие `set-data`; отвечает исходом).
-- `settle(requestId: string, result: object)` — возвращает `object`. приложение без порта отвечает на намерение: `result {answer, reason, text, data, current}`; отказ `unknown-request`, если под этим кодом ничего не ждёт (метод 0.3 `answer(request_id, result)` сохранён) (действие `settle`; отвечает исходом).
+- `setData(args: object)` — возвращает `object`. несколько данных порта сразу, по именам порта или по именам настроек; неизвестные ключи пропускаются (метод 0.3 `applyData(partial)` сохранён) (действие `set-data`; отвечает исходом).
+- `settle(args: object)` — возвращает `object`. приложение без порта отвечает на намерение: `result {answer, reason, text, data, current}`; отказ `unknown-request`, если под этим кодом ничего не ждёт (метод 0.3 `answer(request_id, result)` сохранён) (действие `settle`; отвечает исходом).
 - `startConversation()` — возвращает `object`. «Новый разговор» с собственной кнопки страницы (порт `conversation.create`); отвечает, когда ответило приложение (действие `start-conversation`; отвечает исходом).
-- `openConversation(id: any)` — возвращает `object`. открыть разговор (порт `conversation.open`) (действие `open-conversation`; отвечает исходом).
+- `openConversation(args: object|string)` — возвращает `object`. открыть разговор (порт `conversation.open`) (действие `open-conversation`; отвечает исходом).
 - `focusComposer()` — возвращает `object`. поле (ссылка пропуска страницы); из «Моих файлов» — путь обратно (действие `focus-composer`; отвечает исходом).
 - `openFiles()` — возвращает `object`. «Мои файлы» на месте разговора (`x-my-files`); без этой возможности — отказ `capability-not-provided` (действие `open-files`; отвечает исходом).
-- `closeFiles(focus: boolean)` — возвращает `object`. обратно к разговору; `focus` false оставляет фокус на месте (действие `close-files`; отвечает исходом).
-- `setListFooter(node: object|null)` — возвращает `object`. что страница показывает под списком разговоров, после «Моих файлов» (у Mirai24 — расход); `null` убирает это (действие `set-list-footer`; отвечает исходом).
-- `openFind(query: string)` — возвращает `object`. Открыть поиск по разговору с фокусом в его поле; query сразу запускает поиск (действие open-find; отвечает исходом).
-- `closeFind(focus: boolean)` — возвращает `object`. Закрыть поиск по разговору; фокус возвращается туда, откуда поиск открыли (действие close-find; отвечает исходом).
-- `openPreview(source: object)` — возвращает `object`. Открыть предпросмотр источника рядом с разговором (действие `open-preview`; отвечает итогом).
-- `closePreview(focus: boolean)` — возвращает `object`. Закрыть предпросмотр источника; фокус возвращается туда, откуда его открыли (действие `close-preview`; отвечает итогом).
-- `openStart(kind: any)` — возвращает `object`. форма нового разговора или группы на месте разговора (`x-conversation-start`); kind `private`, по умолчанию, или `group`; без этой возможности — отказ `capability-not-provided` (действие `open-start`; отвечает исходом).
-- `closeStart(focus: boolean)` — возвращает `object`. закрывает форму; `focus` false оставляет фокус на месте, иначе он возвращается на команду, которая её открыла (действие `close-start`; отвечает исходом).
+- `closeFiles(args?: object)` — возвращает `object`. обратно к разговору; `focus` false оставляет фокус на месте (действие `close-files`; отвечает исходом).
+- `setListFooter(args: object)` — возвращает `object`. что страница показывает под списком разговоров, после «Моих файлов» (у Mirai24 — расход); `null` убирает это (действие `set-list-footer`; отвечает исходом).
+- `openFind(args?: object)` — возвращает `object`. Открыть поиск по разговору с фокусом в его поле; query сразу запускает поиск (действие open-find; отвечает исходом).
+- `closeFind(args?: object)` — возвращает `object`. Закрыть поиск по разговору; фокус возвращается туда, откуда поиск открыли (действие close-find; отвечает исходом).
+- `openPreview(args: object)` — возвращает `object`. Открыть предпросмотр источника рядом с разговором (действие `open-preview`; отвечает итогом).
+- `closePreview(args?: object)` — возвращает `object`. Закрыть предпросмотр источника; фокус возвращается туда, откуда его открыли (действие `close-preview`; отвечает итогом).
+- `openStart(args?: object|string)` — возвращает `object`. форма нового разговора или группы на месте разговора (`x-conversation-start`); kind `private`, по умолчанию, или `group`; без этой возможности — отказ `capability-not-provided` (действие `open-start`; отвечает исходом).
+- `closeStart(args?: object)` — возвращает `object`. закрывает форму; `focus` false оставляет фокус на месте, иначе он возвращается на команду, которая её открыла (действие `close-start`; отвечает исходом).
 - `openMembers()` — возвращает `object`. участники группы на месте разговора (`x-members`); без этой возможности — отказ `capability-not-provided`, `no-members`, если открытый разговор не группа (действие `open-members`; отвечает исходом).
-- `closeMembers(focus: boolean)` — возвращает `object`. закрывает участников; `focus` false оставляет фокус на месте, иначе он возвращается на команду, которая их открыла (действие `close-members`; отвечает исходом).
+- `closeMembers(args?: object)` — возвращает `object`. закрывает участников; `focus` false оставляет фокус на месте, иначе он возвращается на команду, которая их открыла (действие `close-members`; отвечает исходом).
 - `focus(options?: object)` — возвращает `null`. Фокус базового элемента.
 - `applyData(partial: object)` — возвращает `object`. Задаёт несколько данных порта сразу (и свои данные окна); неизвестные ключи пропускаются. Каждое данное — ещё и свойство со своим именем. Осталось от 0.3; действие `set-data` — его вид в манифесте.
 - `answer(request_id: string, result: object)` — возвращает `boolean`. Ответ приложения на намерение: `{answer, reason, text, data, current}`. Данные применённого ответа применяются как данные. Возвращает `false` для неизвестного `request_id`. Осталось от 0.3 для приложения без порта; действие `settle` — его вид в манифесте.
@@ -353,8 +353,8 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-window`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-window`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

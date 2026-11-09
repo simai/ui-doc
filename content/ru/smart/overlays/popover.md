@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и
@@ -136,9 +136,9 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `toggle(force: boolean)` | да/нет | Открыть или закрыть; логическое значение задаёт одно из состояний принудительно. |
+| `toggle(args?: object\|boolean)` | да/нет | Открыть или закрыть; логическое значение задаёт одно из состояний принудительно. |
 | `show()` | да/нет | Открыть. |
-| `close(reason: any)` | да/нет | Закрыть. |
+| `close(args?: object)` | да/нет | Закрыть. |
 | `returnFocus()` | пусто | Вернуть фокус на триггер. |
 
 ### События
@@ -156,12 +156,12 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.3.2` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/popover` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/popover` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 

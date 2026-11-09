@@ -5,7 +5,7 @@ description: "Выводит готовые сочетания аватаров:
 
 # Аватары
 
-:badge[sf-avatar-group]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar-group]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Аватары — готовые сочетания: человек с источником, группа с остатком, аватар с
 двумя строками подписи, аватар профиля. Для одного аватара, аватара с подписью
@@ -116,13 +116,13 @@ description: "Выводит готовые сочетания аватаров:
 
 | | |
 |:---|:---|
-| Тег | `<sf-avatar-group>`, контракт `smart.avatar-group` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-avatar-group>`, контракт `smart.avatar-group` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/avatar-group` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-avatar-group` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/avatar-group` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-avatar-group` |
 
 ## См. также
 

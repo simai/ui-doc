@@ -6,7 +6,7 @@ profile: reference
 
 # Боковая панель
 
-:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.8.8]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.9.5]{variant=outline scheme=on-surface size=1/2}
 
 Боковая панель открывается рядом со страницей и оставляет её доступной:
 подсказка у формы, библиотека блоков и свойства в редакторе страниц.
@@ -302,7 +302,7 @@ document.addEventListener('sf-drawer-opened', (event) => {
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `open()` | объект | Открывает Drawer или выводит его на передний план, если он уже открыт. Отправляет sf-drawer-open (отменяемое) и затем sf-drawer-opened, если options.emit не равно false. Возвращает тег. |
-| `close(reason: any)` | объект | Закрывает Drawer и возвращает фокус (тому, кто его открыл, если Drawer — верхний слой; Drawer, закрывающийся под другим слоем, фокус не переносит). Отправляет sf-drawer-close (отменяемое) и sf-drawer-closed, если options.emit не равно false; options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api). Возвращает тег. |
+| `close(args?: object)` | объект | Закрывает Drawer и возвращает фокус (тому, кто его открыл, если Drawer — верхний слой; Drawer, закрывающийся под другим слоем, фокус не переносит). Отправляет sf-drawer-close (отменяемое) и sf-drawer-closed, если options.emit не равно false; options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api). Возвращает тег. |
 | `toggle()` | объект | Вызывает close(), если открыто, иначе open(). Возвращает тег. |
 | `setState(state?: object)` | объект | Ключ `open` открывает или закрывает панель; другие ключи становятся атрибутами тега. Возвращает тег. |
 | `getState()` | объект | Возвращает текущий контекст шаблона вместе с состоянием открытия. |
@@ -330,13 +330,13 @@ document.addEventListener('sf-drawer-opened', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.8.8` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.9.5` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Esc`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/drawer` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-drawer` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/drawer` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-drawer` |
 
 ## См. также
 

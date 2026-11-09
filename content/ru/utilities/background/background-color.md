@@ -63,15 +63,13 @@ description: "Заливает элемент цветовой ролью тем
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `bg-{значение}` | `background-color: var(--sf-{значение})` | `transparent`, `current`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `bg-surface-{значение}` | `background-color: var(--sf-surface-{значение})` | `0`, `1`, `2`, `3`, `4`, `inverse`, `veil`, `disabled` |
+| `bg-{значение}` | `background-color: var(--sf-{значение})` | `transparent`, `current`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `bg-surface-{значение}` | `background-color: var(--sf-surface-{значение})` | `2`, `3`, `4`, `inverse`, `veil`, `disabled` |
 | `bg-surface` | `background-color: var(--sf-surface-1)` | — |
 | `bg-surface-inverse-fixed` | `background-color: var(--sf-surface-inverse-fixed)` | — |
 | `bg-surface-container` | `background-color: var(--sf-surface-container); --sf-on-surface-variant: var(--sf-on-surface-container--variant)` | — |
 | `bg-on-surface` | `background-color: var(--sf-on-surface)` | — |
 | `bg-on-surface-variant` | `background-color: var(--sf-on-surface-variant)` | — |
-| `bg-{значение}-transparent-select` | `background-color: var(--sf-{значение}-transparent-select)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `bg-{значение}-transparent-overlay` | `background-color: var(--sf-{значение}-transparent-overlay)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `bg-{значение}-container` | `background-color: var(--sf-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `bg-{значение}-state-select` | `background-color: var(--sf-{значение}-state-select)` | `info`, `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `bg-{значение}-container-strong` | `background-color: var(--sf-{значение}-container-strong)` | `info`, `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
@@ -180,6 +178,8 @@ description: "Заливает элемент цветовой ролью тем
 | `bg-pink-7` | `background-color: rgb(185, 58, 134)` | — |
 | `bg-pink-8` | `background-color: rgb(153, 48, 111)` | — |
 | `bg-pink-9` | `background-color: rgb(109, 34, 79)` | — |
+
+Прежние имена работают до 2027-01-01: `bg-disable` → `bg-surface-disabled`, `bg-error-transparent-overlay` → `bg-error-container-strong`, `bg-error-transparent-select` → `bg-error-state-select`, `bg-primary-transparent-overlay` → `bg-primary-container-strong`, `bg-primary-transparent-select` → `bg-primary-state-select`, `bg-secondary-transparent-overlay` → `bg-secondary-container-strong`, `bg-secondary-transparent-select` → `bg-secondary-state-select`, `bg-success-transparent-overlay` → `bg-success-container-strong`, `bg-success-transparent-select` → `bg-success-state-select`, `bg-surface-0` → `bg-surface-page`, `bg-surface-1` → `bg-surface-area`, `bg-surface-transparent-overlay` → `bg-surface-container-strong`, `bg-surface-transparent-select` → `bg-surface-state-select`, `bg-tertiary-transparent-overlay` → `bg-tertiary-container-strong`, `bg-tertiary-transparent-select` → `bg-tertiary-state-select`, `bg-warning-transparent-overlay` → `bg-warning-container-strong`, `bg-warning-transparent-select` → `bg-warning-state-select`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `hover:`. Например: `active:bg-surface-container`.
 

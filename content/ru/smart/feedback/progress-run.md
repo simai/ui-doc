@@ -5,7 +5,7 @@ description: "Долгое задание глазами человека: ша�
 
 # Ход выполнения
 
-:badge[sf-progress-run]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-run]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Показывает долгое задание так, как его видит человек: создание сайта,
 обновление, резервную копию и восстановление, импорт, публикацию, установку
@@ -194,9 +194,9 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `chunk(text: string)` | объект | Дописывает текст к выводу. Перевод строки заканчивает строку; панель идёт за новым текстом, только пока читатель в конце вывода. Без текста — отказ `{reason: invalid}`. |
+| `chunk(args: object\|string)` | объект | Добавляет текст в вывод: chunk({text}) — очередная часть потока; короткая запись chunk(text) тоже принимается. Перевод строки завершает строку; окно следует за новым текстом, только пока читатель в конце. Без текста — отказ с причиной invalid. |
 | `clear()` | объект | Очищает вывод, например когда задание запущено заново. |
-| `step(id: string, state: string, text: string, started: string, finished: string, duration: number)` | объект | Меняет один шаг: переданные поля (`state`, `text`, `started`, `finished`, `duration`) заменяют поля этого шага. Для неизвестного `id` — отказ `{reason: missing}`. |
+| `step(args: object)` | объект | Меняет один шаг: переданные поля (`state`, `text`, `started`, `finished`, `duration`) заменяют поля этого шага. Для неизвестного `id` — отказ `{reason: missing}`. |
 
 ### События
 
@@ -214,13 +214,13 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.2.2` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab` проходит по кнопке «Вывод», выводу, копированию, скачиванию и кнопкам действий по порядку; `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/progress-run` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-progress-run` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/progress-run` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-progress-run` |
 
 ## См. также
 

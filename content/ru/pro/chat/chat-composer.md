@@ -5,7 +5,7 @@ description: "Поле вопроса и файлов чата: Enter отпра
 
 # Поле чата
 
-:badge[sf-chat-composer]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-composer]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-composer>` — поле вопроса и файлов чата: текст растёт до восьми
 строк, Enter отправляет, Shift+Enter переносит строку. Файлы поле только
@@ -116,7 +116,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -124,7 +124,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 |:---|:---|
 | Тег | `<sf-chat-composer>` |
 | Назначение | Место, где пишут вопрос и добавляют файлы: Enter отправляет, Shift+Enter переносит строку, набор через IME никогда не прерывается, кнопка отправки на время ожидания ответа становится «остановить ожидание», а файлы только сообщаются — загружает их приложение; их плашки приходят обратно через `files`. |
-| Контракт | `smart.chat-composer`, версия `1.2.1` |
+| Контракт | `smart.chat-composer`, версия `1.2.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -149,7 +149,7 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Методы
 
-- `setFiles(files: array)` — возвращает `object`. Чипы, как свойство `files` (действие `set-files`).
+- `setFiles(args: object)` — возвращает `object`. Чипы, как свойство `files` (действие `set-files`).
 - `clear()` — возвращает `object`. Очищает поле и предупреждение (действие `clear`).
 - `focus(options?: object)` — возвращает `null`. Переводит фокус в поле (фокус базового элемента, передан полю).
 
@@ -177,8 +177,8 @@ composer.files = [{id: 'att_1', name: 'Договор.pdf', bytes: 48213}];
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-composer`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-composer`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-composer/rule.js#name=cl-chat-composer`
 
 ## См. также
 

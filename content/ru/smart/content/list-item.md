@@ -205,12 +205,12 @@ Dropdown не меняются.
 | | |
 |:---|:---|
 | Тег | `<sf-list-item>`, контракт `smart.list-item` версии `1.2.6` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/list-item` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-list-item` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/list-item` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-list-item` |
 
 ## См. также
 

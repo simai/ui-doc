@@ -5,7 +5,7 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
-:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[2.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[2.0.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
@@ -129,7 +129,7 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -137,7 +137,7 @@ noted in `SF.deprecations`.
 |:---|:---|
 | Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.chat-threads`, версия `2.0.0` |
+| Контракт | `smart.chat-threads`, версия `2.0.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -164,13 +164,13 @@ noted in `SF.deprecations`.
 
 ### Методы
 
-- `setThreads(threads: array, hasMore: boolean)` — возвращает `object`. Заменяет список; остаются только разговоры показанного вида (в архиве или нет).
-- `appendThreads(threads: array, hasMore: boolean)` — возвращает `object`. Следующая страница после показанных; разговор, который уже есть в списке, не повторяется.
-- `upsert(thread: object)` — возвращает `object`. Новый или изменившийся разговор; встаёт на место по своей дате.
-- `removeThread(id: any)` — возвращает `object`. Убирает один разговор из списка.
+- `setThreads(args: object|list)` — возвращает `object`. Заменяет список; остаются только разговоры показанного вида (в архиве или нет).
+- `appendThreads(args: object|list)` — возвращает `object`. Следующая страница после показанных; разговор, который уже есть в списке, не повторяется.
+- `upsert(args: object)` — возвращает `object`. Новый или изменившийся разговор; встаёт на место по своей дате.
+- `removeThread(args: object|string)` — возвращает `object`. Убирает один разговор из списка.
 - `moreFailed()` — возвращает `object`. Следующую страницу загрузить не удалось: достижение конца попросит снова.
-- `rename(id: any)` — возвращает `object`. Начинает переименование разговора на месте, как F2.
-- `openMenu(id: any)` — возвращает `object`. Открывает действия разговора, как «⋯» в строке и Shift+F10.
+- `rename(args: object|string)` — возвращает `object`. Начинает переименование разговора на месте, как F2.
+- `openMenu(args: object|string)` — возвращает `object`. Открывает действия разговора, как «⋯» в строке и Shift+F10.
 - `setLoading(loading: boolean)` — возвращает `null`. Пока загружается первая страница: форма списка и занятость списка.
 - `setStatus(message: string)` — возвращает `null`. Фраза вместо списка (ошибка); пусто — убирает её.
 
@@ -202,5 +202,5 @@ noted in `SF.deprecations`.
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-threads`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-threads`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

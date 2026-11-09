@@ -30,9 +30,9 @@ description: "Оформляет таблицу классом table: ширин
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `table` | `--sf-table-color: var(--sf-on-surface); --sf-table-border-color: var(--sf-outline-variant); --sf-table-accent-bg: rgba(0, 0, 0, 0); --sf-table-stripe-color: var(--sf-on-surface); --sf-table-stripe-bg: var(--sf-surface-transparent-select); --sf-table-active-color: var(--sf-on-surface); --sf-table-active-bg: var(--sf-surface-transparent-select); --sf-table-hover-color: var(--sf-on-surface); --sf-table-hover-bg: var(--sf-surface-transparent-hover); width: 100%; inline-size: 100%; margin-bottom: var(--sf-b6); -webkit-margin-after: var(--sf-b6); margin-block-end: var(--sf-b6); color: var(--sf-table-color); vertical-align: top; border-color: var(--sf-table-border-color); text-align: start; .table > :not(caption) > * > * { padding: 0.5rem 0.5rem; border-bottom-width: var(--sf-px); border-block-end-width: var(--sf-px); background-image: linear-gradient(var(--sf-table-accent-bg), var(--sf-table-accent-bg)) }; .table > tbody { vertical-align: inherit }; .table > thead { vertical-align: bottom }; .table > thead > tr > th { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > tbody > tr > th[scope=row] { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > caption { padding-top: var(--sf-space-1/2); padding-bottom: var(--sf-space-1/2); padding-block: var(--sf-space-1/2); color: var(--sf-on-surface-variant); font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2); text-align: start }; .table .table-numeric { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: end }` | — |
-| `table-sm` (`.table-sm > :not(caption) > * > *`) | `padding: 0.25rem 0.25rem` | — |
-| `table-small` (`.table-small > :not(caption) > * > *`) | `padding: 0.25rem 0.25rem` | — |
+| `table` | `--sf-table-color: var(--sf-on-surface); --sf-table-border-color: var(--sf-outline-variant); --sf-table-accent-bg: var(--sf-transparent); --sf-table-stripe-color: var(--sf-on-surface); --sf-table-stripe-bg: var(--sf-surface-transparent-select); --sf-table-active-color: var(--sf-on-surface); --sf-table-active-bg: var(--sf-surface-transparent-select); --sf-table-hover-color: var(--sf-on-surface); --sf-table-hover-bg: var(--sf-surface-transparent-hover); width: 100%; inline-size: 100%; margin-bottom: var(--sf-b6); -webkit-margin-after: var(--sf-b6); margin-block-end: var(--sf-b6); color: var(--sf-table-color); vertical-align: top; border-color: var(--sf-table-border-color); text-align: start; .table > :not(caption) > * > * { padding: var(--sf-a8) var(--sf-a8); border-bottom-width: var(--sf-px); border-block-end-width: var(--sf-px); background-image: linear-gradient(var(--sf-table-accent-bg), var(--sf-table-accent-bg)) }; .table > tbody { vertical-align: inherit }; .table > thead { vertical-align: bottom }; .table > thead > tr > th { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > tbody > tr > th[scope=row] { font-weight: var(--sf-font-weight-bold); text-align: start }; .table > caption { padding-top: var(--sf-space-1/2); padding-bottom: var(--sf-space-1/2); padding-block: var(--sf-space-1/2); color: var(--sf-on-surface-variant); font-size: var(--sf-text-size-1/2); line-height: var(--sf-text-height-1/2); text-align: start }; .table .table-numeric { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; text-align: end }` | — |
+| `table-sm` (`.table-sm > :not(caption) > * > *`) | `padding: var(--sf-a4) var(--sf-a4)` | — |
+| `table-small` (`.table-small > :not(caption) > * > *`) | `padding: var(--sf-a4) var(--sf-a4)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -46,15 +46,18 @@ description: "Оформляет таблицу классом table: ширин
 |:---|:---|
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
+| `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-surface-transparent-select` | `var(--sf-surface-state-select)` |
 | `--sf-surface-transparent-hover` | `var(--sf-surface-state-hover)` |
 | `--sf-b6` | `1rem` |
+| `--sf-a8` | `0.5rem` |
 | `--sf-px` | `1px` |
 | `--sf-font-weight-bold` | `700` |
 | `--sf-space-1/2` | `0.5rem; от ширины lg: 0.75rem` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
 | `--sf-text-size-1/2` | `var(--sf-text--size-1\/2)` |
 | `--sf-text-height-1/2` | `var(--sf-text--height-1\/2)` |
+| `--sf-a4` | `0.25rem` |
 
 В CSS косую черту в имени экранируют: `var(--sf-space-1\/2)`.
 

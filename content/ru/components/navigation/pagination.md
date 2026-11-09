@@ -154,7 +154,7 @@ profile: reference
 | `--sf-pagination--block-size` | `calc(2 * var(--sf-pagination--padding-block) + var(--sf-pagination--control-height) + var(--sf-px))` | `min-height`, `min-block-size` |
 | `--sf-pagination--control-height` | `var(--sf-ui-1--control-height)` | `--sf-pagination--block-size` |
 | `--sf-pagination--padding-block` | `var(--sf-space-1)` | `--sf-pagination--block-size`, `--sf-pagination-main--padding-bottom`, `--sf-pagination-main--padding-top` |
-| `--sf-pagination-actions--background-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-elevation-2--surface)` | `background-color` |
+| `--sf-pagination-actions--background-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-surface-raised)` | `background-color` |
 | `--sf-pagination-actions--border-color` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-outline-variant)` | `border-top`, `border-block-start` |
 | `--sf-pagination-actions--gap` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-space-1)` | `gap` |
 | `--sf-pagination-actions--padding-block` | не задана; задают модификаторы, например `.sf-pagination-actions`: `var(--sf-space-1)` | `padding-top`, `padding-bottom`, `padding-block` |

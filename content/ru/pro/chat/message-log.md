@@ -5,7 +5,7 @@ description: "Прежнее имя ленты SIMAI Framework sf-list-feed в �
 
 # Лента сообщений
 
-:badge[sf-message-log]{variant=tonal scheme=primary size=1/2} :badge[2.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-message-log]{variant=tonal scheme=primary size=1/2} :badge[2.0.2]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-message-log>` — устаревшее имя [Ленты](/ru/smart/content/list-feed/)
 (`sf-list-feed`) SIMAI Framework, которое работает до 2027-01-01. Поведение
@@ -131,7 +131,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -139,7 +139,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 |:---|:---|
 | Тег | `<sf-message-log>` |
 | Назначение | Та же лента, что `sf-list-feed`, под другим тегом; отвечает и на имена `messages`, `setMessages`, `prependMessages`, `renderMessage`, `announceMessage` и события `sf-message-log-*`. |
-| Контракт | `smart.message-log`, версия `2.0.1` |
+| Контракт | `smart.message-log`, версия `2.0.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -158,17 +158,17 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ### Методы
 
-- `setMessages(messages: array, options: object)` — возвращает `object`. Заменяет весь разговор и показывает его конец. Содержимое не объявляется.
-- `prependMessages(messages: array, options: object)` — возвращает `object`. Ранняя история сверху, без сдвига читаемого; завершает запрос ранней истории.
-- `upsert(message: object, view: object, options: object)` — возвращает `object`. Добавляет сообщение в конец или обновляет его на месте; перерисовывает, только если изменилось то, что оно показывает.
-- `setView(id: any, view: object)` — возвращает `object`. Дополняет вид уже показанного сообщения.
-- `detach(id: any)` — возвращает `object`. Убрать одно сообщение; если это был поток, он кончается как отменённый. `remove(id)` читается до 2026-12-01.
-- `cancel(id: any)` — возвращает `object`. Сразу прекратить рисовать растущее сообщение; поток кончается как отменённый.
-- `redraw(id: any)` — возвращает `object`. Перерисовывает одно сообщение или все, после того как изменились собственные входные данные функции отрисовки.
+- `setMessages(args: object|list)` — возвращает `object`. Заменяет весь разговор и показывает его конец. Содержимое не объявляется.
+- `prependMessages(args: object|list)` — возвращает `object`. Ранняя история сверху, без сдвига читаемого; завершает запрос ранней истории.
+- `upsert(args: object)` — возвращает `object`. Добавляет сообщение в конец или обновляет его на месте; перерисовывает, только если изменилось то, что оно показывает.
+- `setView(args: object)` — возвращает `object`. Дополняет вид уже показанного сообщения.
+- `detach(args: object|string)` — возвращает `object`. Убрать одно сообщение; если это был поток, он кончается как отменённый. `remove(id)` читается до 2026-12-01.
+- `cancel(args: object|string)` — возвращает `object`. Сразу прекратить рисовать растущее сообщение; поток кончается как отменённый.
+- `redraw(args?: object|string)` — возвращает `object`. Перерисовывает одно сообщение или все, после того как изменились собственные входные данные функции отрисовки.
 - `requestEarlier()` — возвращает `object`. Просит раннюю историю, как кнопка и достижение верха; пока запрос не завершён — ничего.
 - `earlierFailed()` — возвращает `object`. Приложение не смогло загрузить раннюю историю: кнопку снова можно нажать.
-- `scrollToLatest(options: object)` — возвращает `object`. Прокручивает к последнему сообщению; с focus фокус переходит на него.
-- `announce(text: string)` — возвращает `object`. Один раз произносит текст через вежливую живую область ленты (обрезается до 240 символов).
+- `scrollToLatest(args?: object)` — возвращает `object`. Прокручивает к последнему сообщению; с focus фокус переходит на него.
+- `announce(args: object|string)` — возвращает `object`. Один раз произносит текст через вежливую живую область ленты (обрезается до 240 символов).
 - `setHasMore(value: boolean)` — возвращает `null`. Есть ли ранняя история.
 - `isAtLatest()` — возвращает `boolean`. Виден ли конец разговора.
 
@@ -199,5 +199,5 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/message-log`
-- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/message-log`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/message-log/rule.js#name=cl-message-log`

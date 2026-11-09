@@ -5,7 +5,7 @@ description: "Переключает язык сайта: сегментами �
 
 # Выбор языка
 
-:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Выбор языка переключает язык сайта. Вид следует за числом языков: при
 двух-трёх все языки видны сразу и выбираются одним нажатием, при четырёх и
@@ -283,7 +283,7 @@ picker.addEventListener('change', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `select(value: string)` | объект | Выбирает язык по коду, как нажатие, и посылает `change` с `reason: api`; отказ `{reason: unknown}` — кода нет в списке, `{reason: unchanged}` — язык уже выбран, `{reason: disabled}`, `{reason: prevented}` — страница отменила `change`. |
+| `select(args: object\|string)` | объект | Выбирает язык по коду, как нажатие, и посылает `change` с `reason: api`; отказ `{reason: unknown}` — кода нет в списке, `{reason: unchanged}` — язык уже выбран, `{reason: disabled}`, `{reason: prevented}` — страница отменила `change`. |
 
 ### События
 
@@ -297,13 +297,13 @@ picker.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-language>`, контракт `smart.language` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-language>`, контракт `smart.language` версии `1.2.2` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; название компонент ставит сам; с клавиатуры: в строке: `Tab` ставит фокус на выбранный язык, стрелки, `Home` и `End` переходят между языками и выбирают; в меню: `Tab` ставит фокус на кнопку, `Enter` или `Пробел` открывают меню, стрелки переходят, буква переводит к языку на эту букву, `Enter` выбирает, `Esc` закрывает и возвращает фокус на кнопку; поиск: при открытии меню фокус в поле поиска, `↓` переходит к строкам. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/language` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-language` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/language` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-language` |
 
 ## См. также
 

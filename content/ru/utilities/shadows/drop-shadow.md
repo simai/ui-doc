@@ -39,16 +39,31 @@ description: "Отбрасывает тень места по контуру в�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `drop-shadow-0` | `--sf-shadow--level-ratio: 0` | — |
-| `drop-shadow-1` | `--sf-shadow--level-ratio: 1` | — |
-| `drop-shadow-2` | `--sf-shadow--level-ratio: 2` | — |
-| `drop-shadow-3` | `--sf-shadow--level-ratio: 4` | — |
-| `drop-shadow-4` | `--sf-shadow--level-ratio: 8` | — |
-| `drop-shadow-5` | `--sf-shadow--level-ratio: 16` | — |
+| `drop-shadow-flat` | `box-shadow: none; filter: none` | — |
+| `drop-shadow-raised` | `box-shadow: none; filter: drop-shadow(0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color))` | — |
+| `drop-shadow-overlay` | `box-shadow: none; filter: drop-shadow(0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color))` | — |
+| `drop-shadow-modal` | `box-shadow: none; filter: drop-shadow(0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color))` | — |
 
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-0`.
+Прежние имена работают до 2027-01-01: `drop-shadow-0` → `drop-shadow-flat`, `drop-shadow-1` → `drop-shadow-raised`, `drop-shadow-2` → `drop-shadow-overlay`, `drop-shadow-3` → `drop-shadow-overlay`, `drop-shadow-4` → `drop-shadow-modal`, `drop-shadow-5` → `drop-shadow-modal`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-flat`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
+
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-px` | `1px` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-shadow-key-color` | `light-dark(var(--sf-black--alfa-16), var(--sf-black--alfa-28))` |
+| `--sf-a8` | `0.5rem` |
+| `--sf-shadow-ambient-color` | `light-dark(var(--sf-black--alfa-8), var(--sf-transparent))` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-b6` | `1rem` |
+| `--sf-c6` | `2rem` |
 
 ## Применение
 

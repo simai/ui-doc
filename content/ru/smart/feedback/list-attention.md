@@ -5,7 +5,7 @@ description: "Список проблем, которым нужен челов�
 
 # Требует внимания
 
-:badge[sf-list-attention]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-attention]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Список проблем, которые ждут человека, на обзорном экране: здоровье сервера,
 проверки сайта, ошибки импорта и переноса, готовность к обновлению,
@@ -176,13 +176,13 @@ list.addEventListener('sf-list-attention-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-list-attention>`, контракт `smart.list-attention` версии `1.1.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab` проходит по действиям по порядку; `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/list-attention` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-list-attention` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/list-attention` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-list-attention` |
 
 ## См. также
 

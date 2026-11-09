@@ -111,7 +111,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-context-menu-background-color` | Заливка меню вместе с закреплённым подвалом. | `var(--sf-elevation-3--surface)` |
+| `--sf-context-menu-background-color` | Заливка меню вместе с закреплённым подвалом. | `var(--sf-surface-popup)` |
 | `--sf-context-menu-color` | Цвет подписи строки в покое; у текущей, опасной и недоступной строки — свой. | `var(--sf-on-surface)` |
 | `--sf-context-menu-border-color` | Цвет тонкой линии вокруг меню. | `var(--sf-outline-variant)` |
 | `--sf-context-menu-border-width` | Толщина линии вокруг меню. | `var(--sf-px)` |
@@ -157,7 +157,7 @@ profile: reference
 | `--sf-context-menu--thumb` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `--sf-context-menu--track` |
 | `--sf-context-menu--track` | не задана; задают модификаторы, например `.sf-context-menu:not(.sf-context-menu--panel) .sf-context-menu-content`: `calc(2 * var(--sf-context-menu-content--padding-inline-end) + var(--sf-context-menu--thumb))` | `width`, `height`, `border-radius` |
 | `--sf-context-menu-choice--option-height` | не задана; задают модификаторы, например `.sf-context-menu-choice-option.sf-context-menu-item`: `min(var(--sf-context-menu--inner-height), calc(var(--sf-context-menu--row-height) - 2 * var(--sf-a2)))` | `min-height`, `min-block-size`, `width`, `inline-size` |
-| `--sf-context-menu-content--background-color` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-background-color, var(--sf-elevation-3--surface))` | `--sf-badge--surface`, `background-color` |
+| `--sf-context-menu-content--background-color` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-background-color, var(--sf-surface-popup))` | `--sf-badge--surface`, `background-color` |
 | `--sf-context-menu-content--border-radius` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-radius, var(--sf-radius--surface))` | `border-radius` |
 | `--sf-context-menu-content--padding-bottom` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-block, var(--sf-space-1/4))` | `padding-bottom`, `min-height`, `min-block-size`, `padding-block`, `bottom`, `inset-block-end`, `margin-bottom`, `margin-block-end`, `padding-block-end` |
 | `--sf-context-menu-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-inline, var(--sf-space-1/4))` | `padding-inline-end`, `padding-inline`, `margin-inline`, `--sf-context-menu--track`, `border` |
