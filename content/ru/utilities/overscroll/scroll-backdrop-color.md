@@ -44,13 +44,13 @@ description: "Окрашивает дорожку полосы прокрутк�
 |:---|:---|
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
-| `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
-| `--sf-primary-transparent-overlay` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
-| `--sf-secondary-transparent-overlay` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
-| `--sf-tertiary-transparent-overlay` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
-| `--sf-error-transparent-overlay` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
-| `--sf-warning-transparent-overlay` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
-| `--sf-success-transparent-overlay` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
+| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
+| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |
+| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` |
+| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` |
+| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
+| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
+| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
 
 ## Применение
 

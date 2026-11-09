@@ -1,74 +1,92 @@
 ---
 title: "Падающая тень"
-description: "Отбрасывает тень по контуру видимой части элемента — по форме значка, прозрачной картинки или текста."
+description: "Отбрасывает тень места по контуру видимой части элемента — по форме значка, прозрачной картинки или текста."
 ---
 
 # Падающая тень
 
-Классы `drop-shadow-{n}` отбрасывают тень фильтром `drop-shadow()`: тень
-повторяет форму видимой части элемента, а не его прямоугольник. Берите их для
-значков, SVG и картинок с прозрачностью; для блоков берите
+Классы `drop-shadow-{место}` отбрасывают тень места фильтром `drop-shadow()`:
+тень повторяет форму видимой части элемента, а не его прямоугольник. Берите
+их для значков, SVG и картинок с прозрачностью; для блоков берите
 [тень элемента](/ru/utilities/shadows/element-shadow/).
 
 ## Пример
 
-### Шкала
+### Четыре места
 
-Под каждым образцом — класс ступени.
+Под каждым образцом — класс тени.
 
-:::example {id="utilities/shadows/drop-shadow" label="drop-shadow-0 … drop-shadow-5"}
+:::example {id="utilities/shadows/drop-shadow" label="drop-shadow-flat … drop-shadow-modal"}
 :::
 
 ### Падающая тень и тень элемента
 
-`shadow-3` рисует тень прямоугольника, `drop-shadow-3` — тень формы.
+`shadow-overlay` рисует тень прямоугольника, `drop-shadow-overlay` — тень
+формы.
 
-:::example {id="utilities/shadows/drop-shadow-compare" label="shadow-3 и drop-shadow-3"}
+:::example {id="utilities/shadows/drop-shadow-compare" label="shadow-overlay и drop-shadow-overlay"}
 :::
 
 ### Наведение
 
-С префиксом `hover:` ступень меняется при наведении. Наведите указатель на
+С префиксом `hover:` тень меняется при наведении. Наведите указатель на
 звезду.
 
-:::example {id="utilities/shadows/drop-shadow-hover" label="hover:drop-shadow-5"}
+:::example {id="utilities/shadows/drop-shadow-hover" label="hover:drop-shadow-overlay"}
 :::
 
 ## Классы
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `drop-shadow-0` | `--sf-shadow--level-ratio: 0` | — |
-| `drop-shadow-1` | `--sf-shadow--level-ratio: 1` | — |
-| `drop-shadow-2` | `--sf-shadow--level-ratio: 2` | — |
-| `drop-shadow-3` | `--sf-shadow--level-ratio: 4` | — |
-| `drop-shadow-4` | `--sf-shadow--level-ratio: 8` | — |
-| `drop-shadow-5` | `--sf-shadow--level-ratio: 16` | — |
+| `drop-shadow-flat` | `box-shadow: none; filter: none` | — |
+| `drop-shadow-raised` | `box-shadow: none; filter: drop-shadow(0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color))` | — |
+| `drop-shadow-overlay` | `box-shadow: none; filter: drop-shadow(0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color))` | — |
+| `drop-shadow-modal` | `box-shadow: none; filter: drop-shadow(0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color)) drop-shadow(0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color))` | — |
 
-Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-0`.
+Прежние имена работают до 2027-01-01: `drop-shadow-0` → `drop-shadow-flat`, `drop-shadow-1` → `drop-shadow-raised`, `drop-shadow-2` → `drop-shadow-overlay`, `drop-shadow-3` → `drop-shadow-overlay`, `drop-shadow-4` → `drop-shadow-modal`, `drop-shadow-5` → `drop-shadow-modal`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+
+Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:drop-shadow-flat`.
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
+## Переменные
+
+Классы читают эти токены темы. Изменённый токен меняет все места, где он используется, — классы, компоненты и тему; задайте его в теме проекта, а не на отдельном элементе. Все токены — на странице [Все токены](/ru/guide/colour/all-tokens/).
+
+| Переменная | Значение по умолчанию |
+|:---|:---|
+| `--sf-px` | `1px` |
+| `--sf-a2` | `0.125rem` |
+| `--sf-shadow-key-color` | `light-dark(var(--sf-black--alfa-16), var(--sf-black--alfa-28))` |
+| `--sf-a8` | `0.5rem` |
+| `--sf-shadow-ambient-color` | `light-dark(var(--sf-black--alfa-8), var(--sf-transparent))` |
+| `--sf-a4` | `0.25rem` |
+| `--sf-b6` | `1rem` |
+| `--sf-c6` | `2rem` |
+
 ## Применение
 
-Ступени `1` … `5` удваивают смещение и размытие тени: множители 1, 2, 4, 8 и
-16. `drop-shadow-0` снимает тень.
+Места те же, что у [тени элемента](/ru/utilities/shadows/element-shadow/):
+`drop-shadow-flat` снимает тень, `drop-shadow-raised`, `drop-shadow-overlay`
+и `drop-shadow-modal` рисуют тень приподнятого, всплывающего места и окна.
+Каждый слой тени — отдельный `drop-shadow()` из двух цветов темы,
+`--sf-shadow-key-color` и `--sf-shadow-ambient-color`.
 
 ```html
-<img class="drop-shadow-2" src="/images/product.png" alt="Наушники">
-<svg class="drop-shadow-1 color-primary" aria-hidden="true">…</svg>
+<img class="drop-shadow-raised" src="/images/product.png" alt="Наушники">
+<svg class="drop-shadow-overlay color-primary" aria-hidden="true">…</svg>
 ```
 
 ## Ограничения
 
-- Ядро ставит фильтр каждому элементу, в классе которого есть слово
-  `drop-shadow`, и убирает у него `box-shadow`: падающая тень и тень элемента
-  на одном элементе не сочетаются.
+- Класс снимает с элемента `box-shadow`: падающая тень и тень элемента на
+  одном элементе не сочетаются.
 - Фильтр задаёт свойство `filter` и перекрывает другие фильтры того же
   элемента.
 - Префиксов ширины экрана у семейства нет.
 
 ## См. также
 
-- [Цвет падающей тени](/ru/utilities/shadows/drop-shadow-color/)
 - [Тень элемента](/ru/utilities/shadows/element-shadow/)
+- [Поверхность и тень](/ru/guide/colour/elevation/)

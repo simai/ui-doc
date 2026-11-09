@@ -1,0 +1,16 @@
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="buttons" aria-label="Период отчёта" value="week" items="day::День|week::Неделя|month::Месяц"></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">короткая запись</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="buttons" aria-label="Вид" value="list" items='[{"value":"list","label":"Список","icon":"list"},{"value":"grid","label":"Плитка","icon":"grid_view"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">массив JSON</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="buttons" aria-label="Язык" value="ru" items='[{"value":"ru","label":"Русский"},{"value":"de","label":"Deutsch","lang":"de"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">lang</span>
+    </div>
+  </div>
+</div>

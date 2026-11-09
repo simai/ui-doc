@@ -1,0 +1,16 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col items-cross-center gap-2">
+    <sf-settings look="tiles" label="Быстрые настройки">
+      <script type="application/json" data-sf-settings>
+        {"items": [
+          {"id": "sound", "type": "switch", "text": "Звук", "icon": "volume_up", "value": true, "tile": true},
+          {"id": "night", "type": "switch", "text": "Ночь", "icon": "dark_mode", "value": false, "tile": true},
+          {"id": "alerts", "type": "switch", "text": "Сигналы", "icon": "notifications", "value": true, "tile": true},
+          {"id": "theme", "type": "choice", "text": "Тема", "icon": "contrast", "value": "system", "options": [{"id": "system", "text": "Авто", "icon": "computer"}, {"id": "light", "text": "Светлая", "icon": "light_mode"}, {"id": "dark", "text": "Тёмная", "icon": "dark_mode"}]},
+          {"id": "scale", "type": "range", "text": "Масштаб", "icon": "format_size", "value": 100, "min": 80, "max": 140, "step": 10, "unit": "%"}
+        ]}
+      </script>
+    </sf-settings>
+    <span class="text-1/2 color-on-surface-variant wrap-none">tiles</span>
+  </div>
+</div>

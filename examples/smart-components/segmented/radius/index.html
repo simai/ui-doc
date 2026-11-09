@@ -1,7 +1,20 @@
-<div class="flex flex-col gap-3 items-cross-start">
-  <sf-button-group appearance="segmented" aria-label="Период, обычный радиус" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" radius="default" aria-label="Период, radius=default" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" radius="square" aria-label="Период, radius=square" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" radius="rounded" aria-label="Период, radius=rounded" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" class="segmented-soft-corners" aria-label="Период, свой радиус" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-button-group>
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" aria-label="Период, обычное скругление" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">по умолчанию</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" radius="square" aria-label="Период, radius=square" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">square</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" radius="rounded" aria-label="Период, radius=rounded" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">rounded</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" class="segmented-soft-corners" aria-label="Период, свой радиус" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">своя переменная</span>
+    </div>
+  </div>
 </div>

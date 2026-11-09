@@ -1,5 +1,41 @@
-<div role="group" aria-label="Выравнивание текста" class="flex">
-  <sf-button-icon appearance="outline" scheme="on-surface" segment="start" icon="format_align_left" aria-label="По началу"></sf-button-icon>
-  <sf-button-icon appearance="outline" scheme="on-surface" segment="middle" icon="format_align_center" aria-label="По центру"></sf-button-icon>
-  <sf-button-icon appearance="outline" scheme="on-surface" segment="end" icon="format_align_right" aria-label="По концу"></sf-button-icon>
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Правка" class="flex">
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="start" icon="undo" aria-label="Отменить"></sf-button-icon>
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="end" icon="redo" aria-label="Повторить"></sf-button-icon>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">две кнопки</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Буфер обмена" class="flex">
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="start" icon="content_cut" aria-label="Вырезать"></sf-button-icon>
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="middle" icon="content_copy" aria-label="Копировать"></sf-button-icon>
+          <sf-button-icon appearance="outline" scheme="on-surface" segment="end" icon="content_paste" aria-label="Вставить"></sf-button-icon>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">три и больше</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Масштаб" class="flex">
+          <sf-button-icon appearance="tonal" segment="start" icon="zoom_out" aria-label="Уменьшить"></sf-button-icon>
+          <sf-button-icon appearance="tonal" segment="end" icon="zoom_in" aria-label="Увеличить"></sf-button-icon>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">тональные</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center">
+        <div role="group" aria-label="Порядок строк" class="flex">
+          <sf-button-icon size="1/2" appearance="outline" scheme="on-surface" segment="start" icon="arrow_upward" aria-label="Поднять строку"></sf-button-icon>
+          <sf-button-icon size="1/2" appearance="outline" scheme="on-surface" segment="end" icon="arrow_downward" aria-label="Опустить строку"></sf-button-icon>
+        </div>
+      </div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">мелкие в строке таблицы</span>
+    </div>
+  </div>
 </div>

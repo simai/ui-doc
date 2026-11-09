@@ -81,8 +81,8 @@ description: "Задаёт заливку фигур SVG цветом роли �
 |:---|:---|
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
-| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
-| `--sf-surface-1` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-0` | `var(--sf-surface-page)` |
+| `--sf-surface-1` | `var(--sf-surface-area)` |
 | `--sf-surface-2` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-15))` |
 | `--sf-surface-3` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
 | `--sf-surface-4` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-25))` |
@@ -91,54 +91,54 @@ description: "Задаёт заливку фигур SVG цветом роли �
 | `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
-| `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
-| `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
-| `--sf-disable` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-surface-transparent-select` | `var(--sf-surface-state-select)` |
+| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
+| `--sf-disable` | `var(--sf-surface-disabled)` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
-| `--sf-primary-transparent-select` | `light-dark(var(--sf-primary-50--alfa-8), var(--sf-primary-90--alfa-8))` |
-| `--sf-primary-transparent-overlay` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
+| `--sf-primary-transparent-select` | `var(--sf-primary-state-select)` |
+| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |
 | `--sf-secondary` | `light-dark(var(--sf-secondary-40), var(--sf-secondary-80))` |
 | `--sf-secondary-container` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` |
-| `--sf-secondary-transparent-select` | `light-dark(var(--sf-secondary-50--alfa-8), var(--sf-secondary-90--alfa-8))` |
-| `--sf-secondary-transparent-overlay` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
+| `--sf-secondary-transparent-select` | `var(--sf-secondary-state-select)` |
+| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` |
 | `--sf-tertiary` | `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` |
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
-| `--sf-tertiary-transparent-select` | `light-dark(var(--sf-tertiary-50--alfa-8), var(--sf-tertiary-90--alfa-8))` |
-| `--sf-tertiary-transparent-overlay` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
+| `--sf-tertiary-transparent-select` | `var(--sf-tertiary-state-select)` |
+| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` |
 | `--sf-error` | `light-dark(var(--sf-error-40), var(--sf-error-80))` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
-| `--sf-error-transparent-select` | `light-dark(var(--sf-error-50--alfa-8), var(--sf-error-90--alfa-8))` |
-| `--sf-error-transparent-overlay` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
+| `--sf-error-transparent-select` | `var(--sf-error-state-select)` |
+| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
 | `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
 | `--sf-warning-container` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-50--alfa-24))` |
-| `--sf-warning-transparent-select` | `light-dark(var(--sf-warning-50--alfa-8), var(--sf-warning-90--alfa-8))` |
-| `--sf-warning-transparent-overlay` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
+| `--sf-warning-transparent-select` | `var(--sf-warning-state-select)` |
+| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
 | `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
-| `--sf-success-transparent-select` | `light-dark(var(--sf-success-50--alfa-8), var(--sf-success-90--alfa-8))` |
-| `--sf-success-transparent-overlay` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
+| `--sf-success-transparent-select` | `var(--sf-success-state-select)` |
+| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
 | `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` |
 | `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` |
-| `--sf-surface-transparent-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
+| `--sf-surface-transparent-hover` | `var(--sf-surface-state-hover)` |
 | `--sf-primary-hover` | `light-dark(var(--sf-primary-35), var(--sf-primary-85))` |
 | `--sf-primary-container-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` |
-| `--sf-primary-transparent-hover` | `light-dark(var(--sf-primary-50--alfa-4), var(--sf-primary-90--alfa-4))` |
+| `--sf-primary-transparent-hover` | `var(--sf-primary-state-hover)` |
 | `--sf-secondary-hover` | `light-dark(var(--sf-secondary-35), var(--sf-secondary-85))` |
 | `--sf-secondary-container-hover` | `light-dark(var(--sf-secondary-50--alfa-16), var(--sf-secondary-50--alfa-28))` |
-| `--sf-secondary-transparent-hover` | `light-dark(var(--sf-secondary-50--alfa-4), var(--sf-secondary-90--alfa-4))` |
+| `--sf-secondary-transparent-hover` | `var(--sf-secondary-state-hover)` |
 | `--sf-tertiary-hover` | `light-dark(var(--sf-tertiary-35), var(--sf-tertiary-85))` |
 | `--sf-tertiary-container-hover` | `light-dark(var(--sf-tertiary-50--alfa-16), var(--sf-tertiary-50--alfa-28))` |
-| `--sf-tertiary-transparent-hover` | `light-dark(var(--sf-tertiary-50--alfa-4), var(--sf-tertiary-90--alfa-4))` |
+| `--sf-tertiary-transparent-hover` | `var(--sf-tertiary-state-hover)` |
 | `--sf-error-hover` | `light-dark(var(--sf-error-35), var(--sf-error-85))` |
 | `--sf-error-container-hover` | `light-dark(var(--sf-error-50--alfa-16), var(--sf-error-50--alfa-28))` |
-| `--sf-error-transparent-hover` | `light-dark(var(--sf-error-50--alfa-4), var(--sf-error-90--alfa-4))` |
+| `--sf-error-transparent-hover` | `var(--sf-error-state-hover)` |
 | `--sf-warning-hover` | `light-dark(var(--sf-warning-35), var(--sf-warning-85))` |
 | `--sf-warning-container-hover` | `light-dark(var(--sf-warning-50--alfa-16), var(--sf-warning-50--alfa-28))` |
-| `--sf-warning-transparent-hover` | `light-dark(var(--sf-warning-50--alfa-4), var(--sf-warning-90--alfa-4))` |
+| `--sf-warning-transparent-hover` | `var(--sf-warning-state-hover)` |
 | `--sf-success-hover` | `light-dark(var(--sf-success-35), var(--sf-success-85))` |
 | `--sf-success-container-hover` | `light-dark(var(--sf-success-50--alfa-16), var(--sf-success-50--alfa-28))` |
-| `--sf-success-transparent-hover` | `light-dark(var(--sf-success-50--alfa-4), var(--sf-success-90--alfa-4))` |
+| `--sf-success-transparent-hover` | `var(--sf-success-state-hover)` |
 
 ## Применение
 

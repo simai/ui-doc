@@ -1,0 +1,18 @@
+<div class="flex flex-col gap-4">
+  <div class="query-container">
+    <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-col flex-1 gap-2"><sf-confirm question="Удалить файл «Смета.xlsx»?" confirm-id="f-18" accept-text="Удалить" status="danger" data-server="ok"></sf-confirm></div>
+        <span class="text-1/2 color-on-surface-variant wrap-none">сервер удалил файл</span>
+      </div>
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-col flex-1 gap-2">
+          <sf-confirm question="Удалить файл «Договор.docx»?" confirm-id="f-21" accept-text="Удалить" status="danger" data-server="fail"></sf-confirm>
+          <p class="m-0 text-1/2 color-on-surface-variant" role="status" id="confirm-server-status"></p>
+        </div>
+        <span class="text-1/2 color-on-surface-variant wrap-none">сервер ответил ошибкой</span>
+      </div>
+    </div>
+  </div>
+  <div><sf-button id="confirm-server-reset" text="Начать заново" appearance="outline" scheme="on-surface" icon-start="restart_alt"></sf-button></div>
+</div>

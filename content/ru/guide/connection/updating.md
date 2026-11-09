@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-e22fefb3c1f8` это ревизия
-`297a56c0914a42ff2c24bcba1f45ae0234e3a483`.
+выпуска `ui-cb287da78ab1` это ревизия
+`44a5efda6649def849c960c11ac56b2db90693b8`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/0516a01732c81983bc88a0db311c876c21666679/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/b671241d4d341b2fbfd3b1f6e37703e0b330aabb/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-e22fefb3c1f8` (`@simai-studio/ui` 5.20261105.829) часть
+С выпуска `ui-cb287da78ab1` (`@simai-studio/ui` 5.20261109.559) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -325,6 +325,67 @@ Loader определяет его как псевдоним нового, по�
 
 `sf-change-confirm` при этом перешёл из пакета `pro` в выпуск SIMAI
 Framework (см. [Подтверждение изменения](/ru/pro/admin/change-confirm/)).
+
+## Новые имена теней
+
+В выпуске с системой теней тень называется по месту, а не по номеру: на
+странице, приподнятое, всплывающее, окно (см. [Поверхность и тень](/ru/guide/colour/elevation/)).
+Прежнее имя работает до 2027-01-01 и показывает тень своего места, поэтому
+страницы на прежних именах не ломаются; там, где тень места отличается от
+прежнего уровня, она выглядит по-новому. Записи журнала —
+`token-c20-shadow-places`, `utility-c20-shadow-places` и
+`utility-c20-coloured-shadows`. Переименования — механическая замена,
+`sf-upgrade` переписывает их сам; цветные тени — ручная работа (см. ниже).
+
+Классы:
+
+| Прежний класс | Новый класс |
+|:---|:---|
+| `shadow-0` | `shadow-flat` |
+| `shadow-1` | `shadow-raised` |
+| `shadow-2`, `shadow-3` | `shadow-overlay` |
+| `shadow-4`, `shadow-5` | `shadow-modal` |
+| `drop-shadow-0` | `drop-shadow-flat` |
+| `drop-shadow-1` | `drop-shadow-raised` |
+| `drop-shadow-2`, `drop-shadow-3` | `drop-shadow-overlay` |
+| `drop-shadow-4`, `drop-shadow-5` | `drop-shadow-modal` |
+
+С префиксом `hover:` — так же (`hover:shadow-1` → `hover:shadow-raised`).
+Классы `elevation-0` … `elevation-5` остаются: каждый берёт поверхность своей
+ступени и тень своего места (1 — приподнятое, 2 и 3 — всплывающее, 4 и 5 —
+окно).
+
+Переменные:
+
+| Прежняя переменная | Новая переменная |
+|:---|:---|
+| `--sf-ui-shadow-top` | `--sf-shadow-flat` |
+| `--sf-ui-shadow-1`, `--sf-elevation-1--shadow`, `--sf-shadow-card` | `--sf-shadow-raised` |
+| `--sf-ui-shadow-2`, `--sf-ui-shadow-3`, `--sf-elevation-2--shadow`, `--sf-elevation-3--shadow`, `--sf-elevation-4--shadow`, `--sf-shadow-popup`, `--sf-shadow-popup-nested` | `--sf-shadow-overlay` |
+| `--sf-ui-shadow-4`, `--sf-ui-shadow-5`, `--sf-elevation-5--shadow` | `--sf-shadow-modal` |
+| `--sf-shadow--color-fill`, `--sf-shadow--color-outline` | `--sf-shadow-key-color` |
+| `--sf-shadow--color-shading`, `--sf-shadow--color-shade` | `--sf-shadow-ambient-color` |
+| `--sf-elevation-1--surface` | `--sf-surface-card` |
+| `--sf-elevation-2--surface`, `--sf-elevation-3--surface` | `--sf-surface-popup` |
+| `--sf-elevation-4--surface`, `--sf-elevation-5--surface` | `--sf-surface-popup-nested` |
+| `--sf-on-elevation-1--variant` | `--sf-on-surface-card-variant` |
+| `--sf-on-elevation-2--variant`, `--sf-on-elevation-3--variant` | `--sf-on-surface-popup-variant` |
+| `--sf-on-elevation-4--variant`, `--sf-on-elevation-5--variant` | `--sf-on-surface-popup-nested-variant` |
+
+Без замены уходят:
+
+- `--sf-shadow--rim` — последний, всегда выключенный слой каждой тени; до
+  2027-01-01 сохраняет значение `0 0 0 0 transparent`;
+- цветные тени `shadow-{цвет}`, `hover:shadow-{цвет}`, `active:shadow-{цвет}`,
+  `drop-shadow-{цвет}`, `hover:drop-shadow-{цвет}`: тень не несёт цвета (см.
+  [Цвет тени элемента](/ru/utilities/shadows/element-color/)); до этой даты
+  класс окрашивает тень своего элемента;
+- правило ядра, которое давало тень любому элементу со словом `shadow` или
+  `drop-shadow` в классе: тень рисует только класс тени.
+
+Затемнение под окном и шторкой — `--sf-scrim-color`, чёрный 64 из шкалы
+прозрачности; `--sf-scrim-opacity` по умолчанию `1`. Страница, которая
+задавала `--sf-scrim-opacity`, по-прежнему делает затемнение ещё прозрачнее.
 
 ## Связь с другими частями
 

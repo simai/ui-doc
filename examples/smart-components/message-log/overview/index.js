@@ -6,9 +6,9 @@ const conversation = [
   ['m3', 'me', 'Вы', 'Посмотрел. Фильтр по цене лучше поставить первым.'],
   ['m4', 'anna', 'Анна', 'Поменяю и пришлю новую версию.'],
   ['m5', 'me', 'Вы', 'Спасибо! Тогда завтра запускаем.'],
-].map(([id, author, author_name, text]) => ({id, author, author_name, text, own: author === 'me'}));
+].map(([id, author, name, text]) => ({id, author, 'author-name': name, text, own: author === 'me'}));
 const earlier = [
-  {id: 'm0', author: 'me', author_name: 'Вы', own: true, text: 'Анна, как продвигается каталог?'},
+  {id: 'm0', author: 'me', 'author-name': 'Вы', own: true, text: 'Анна, как продвигается каталог?'},
 ];
 
 const initialize = async () => {
@@ -17,7 +17,7 @@ const initialize = async () => {
   if (!log || log.dataset.exampleReady === 'true') return;
   log.dataset.exampleReady = 'true';
   log.setMessages(conversation, {hasMore: true});
-  log.addEventListener('sf-message-log-load-earlier', () => {
+  log.addEventListener('sf-message-log-load-more', () => {
     setTimeout(() => log.prependMessages(earlier, {hasMore: false}), 600);
   });
 };

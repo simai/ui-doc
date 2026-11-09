@@ -22,10 +22,9 @@ loads when you open it.
 [Open the demo](/demos/home/showcase/)
 :::
 
-More: [the admin](/demos/home/admin/) on its own page,
-[the chat](/ru/pro/chat/) and [the editor](/ru/pro/editor/editor/) (in
-Russian). They are the [component sets](/ru/guide/sets/) `admin`, `chat` and
-`editor` under the Pro licence; SIMAI Framework is open under Apache-2.0.
+[The admin on its own page](/demos/home/admin/). The admin, the chat and
+the editor are component sets under the Pro licence, listed below; SIMAI
+Framework is open under Apache-2.0.
 
 ## Three steps
 
@@ -34,9 +33,9 @@ Russian). They are the [component sets](/ru/guide/sets/) `admin`, `chat` and
 3. Open the page — the loader fetches what the page uses.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261105.829/distr/core/css/core.min.css">
-<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261105.829/distr/';</script>
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261105.829/distr/core/js/core.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261109.559/distr/core/css/core.min.css">
+<script>window.sfPath = 'https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261109.559/distr/';</script>
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261109.559/distr/core/js/core.min.js"></script>
 
 <sf-button text="Save"></sf-button>
 ```
@@ -55,13 +54,33 @@ Russian). They are the [component sets](/ru/guide/sets/) `admin`, `chat` and
 :::features
 - **[Themes](/ru/guide/colour/themes/)** Light, dark and your own theme from one colour.
 - **[Updating](/ru/guide/connection/updating/)** A pinned release and the change journal.
-- **[Component sets](/ru/guide/sets/)** Admin, tables, chat, mail, editor, effects.
+- **[Component sets](/ru/guide/sets/)** What a set is, connecting, versions and the licence.
 - **[Working with AI](/ru/guide/standards/ai/)** The `ai.json` index and a text version of every page.
+:::
+
+## Component sets
+
+A set is ready Smart Components for one task on top of SIMAI Framework.
+Each set has its own site; until it does, the set is documented here (in
+Russian).
+
+:::features
+- **[Admin — admin](/ru/pro/admin/)** Menu, work screens, settings. Pro · own site coming.
+- **[Data — view](/ru/pro/admin/table/)** A table with sorting and filters, record properties, kanban. Pro · coming.
+- **[Chat — chat](/ru/pro/chat/)** Message feed, composer, thread list. Pro · own site coming.
+- **[Mail — mail](/ru/pro/mail/)** Letter builder and viewer. Pro · own site coming.
+:::
+
+:::features
+- **[Editor — editor](/ru/pro/editor/editor/)** Page and text editor. Pro · own site coming.
+- **Charts — chart** Charts and diagrams. Pro · coming.
+- **[Effects — effects](https://effects.simai.io/)** Background effects and animations. Free · released.
+- **[How sets work](/ru/guide/sets/)** Connecting in one line, versions, licence.
 :::
 
 ---
 
-**SIMAI Framework** · release `ui-e22fefb3c1f8` ·
+**SIMAI Framework** · release `ui-cb287da78ab1` ·
 [GitHub](https://github.com/simai/ui-source) ·
 [Report a problem](https://github.com/simai/ui-source/issues) ·
 [Versions](/ru/guide/connection/versions/) ·

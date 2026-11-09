@@ -1,0 +1,9 @@
+<sf-progress-run id="run-output" label="Резервная копия demo.test" output-open file-name="backup-demo.txt">
+  <script type="application/json" data-sf-settings>
+    {"steps": [
+      {"id": "dump", "title": "Выгрузка базы", "state": "done", "duration": 8200},
+      {"id": "pack", "title": "Упаковка файлов", "state": "running", "text": "Идёт упаковка"}
+    ],
+    "output": "$ backup demo.test\nDumping database... ok (48 MB)\nPacking files...\n"}
+  </script>
+</sf-progress-run>

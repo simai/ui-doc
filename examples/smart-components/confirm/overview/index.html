@@ -1,1 +1,27 @@
-<sf-confirm question="Удалить файл «Отчёт.pdf»? Его не будет у всех участников." confirm-id="f-17" accept-text="Удалить" destructive></sf-confirm>
+<div class="flex flex-col gap-3 items-cross-start">
+  <div class="table-frame w-full">
+    <table class="table w-full">
+      <thead>
+        <tr><th>Файл</th><th>Размер</th><th><span class="sr-only">Действия</span></th></tr>
+      </thead>
+      <tbody id="confirm-files">
+        <tr data-file="f-17" data-name="Отчёт за квартал.pdf">
+          <td>Отчёт за квартал.pdf</td>
+          <td class="wrap-none">2,4 МБ</td>
+          <td class="text-end"><sf-button-icon icon="delete" appearance="ghost" scheme="on-surface-variant" size="1/2" aria-label="Удалить «Отчёт за квартал.pdf»"></sf-button-icon></td>
+        </tr>
+        <tr data-file="f-18" data-name="Смета.xlsx">
+          <td>Смета.xlsx</td>
+          <td class="wrap-none">86 КБ</td>
+          <td class="text-end"><sf-button-icon icon="delete" appearance="ghost" scheme="on-surface-variant" size="1/2" aria-label="Удалить «Смета.xlsx»"></sf-button-icon></td>
+        </tr>
+        <tr data-file="f-19" data-name="Логотип.svg">
+          <td>Логотип.svg</td>
+          <td class="wrap-none">12 КБ</td>
+          <td class="text-end"><sf-button-icon icon="delete" appearance="ghost" scheme="on-surface-variant" size="1/2" aria-label="Удалить «Логотип.svg»"></sf-button-icon></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <sf-button id="confirm-files-reset" text="Вернуть файлы" appearance="outline" scheme="on-surface" icon-start="restart_alt"></sf-button>
+</div>

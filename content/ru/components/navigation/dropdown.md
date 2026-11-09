@@ -102,8 +102,23 @@ profile: reference
 
 ### Поиск
 
-Поле поиска `sf-input` в начале `sf-list` фильтрует пункты по видимой
-подписи. Машинные значения поиск не меняет.
+Поиск — шапка списка `sf-list-search` без рамки: иконка и текст поиска
+стоят ровно над иконками и текстом строк, под шапкой линия на всю ширину.
+Шапка стоит на месте, прокручиваются только строки. Поиск фильтрует пункты
+по видимой подписи; машинные значения он не меняет.
+
+```html
+<div class="sf-list sf-list--size-1 flex flex-col">
+  <label class="sf-list-search">
+    <i class="sf-icon sf-list-search-icon" aria-hidden="true">search</i>
+    <input class="sf-list-search-input" type="text" aria-label="Поиск по списку" placeholder="Поиск">
+  </label>
+  <div class="sf-list-container-wrap">…</div>
+</div>
+```
+
+Прежнюю разметку с полем `sf-input` внутри `sf-list` скрипт списка ещё
+понимает; в новой разметке берите шапку.
 
 :::example {id="components/dropdown/search" label="Список с поиском"}
 :::

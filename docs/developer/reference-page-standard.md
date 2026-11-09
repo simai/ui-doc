@@ -21,7 +21,19 @@ here.
 
 - Front matter: `title` (the Russian name), `description` (one sentence: what
   it does for the reader). No badges in the body: the generated sections
-  carry the facts badges repeated.
+  carry the facts badges repeated. The one exception is generated: on a
+  Smart page `scripts/build-smart-reference.mjs` writes one line under the
+  H1 with the tag and the version of every component the page documents
+  (owner remark R007, 2026-11-07), and the audit fails a Smart page without
+  it (`version_badges_missing`) or with a version left in its prose
+  (`version_in_prose`).
+- A component page shows only what to write today: no earlier names, no
+  retired attributes, variables or appearances, no «работает до …». Earlier
+  names live in one place, the generated «Прежние имена по компонентам» of
+  the names guide (`content/ru/guide/smart-components/names.md`); the audit
+  fails a page that still carries them (`earlier_names_on_page`), unless the
+  page documents an alias as its subject (`alias_of` in
+  `config/reference-pages.json`). Owner remark R006, 2026-11-07.
 - `# <title>`, then one or two sentences: what it does and when to choose
   it. No «Модификатор …», no CSS property lists here — that is the classes
   section.
@@ -70,11 +82,12 @@ Every example labels each sample with the class it demonstrates.
 | 2 | `## Разметка` | yes | hand: the minimal correct markup and which parts are required |
 | 3 | `## Варианты` | when the component has them | hand: one H3 per modifier axis (вид, схема, статус, размер, иконки …), each a short description and a live example showing every value of that axis |
 | 4 | `## Состояния` | when it has them | hand: one H3 per state (недоступна, загрузка, активна …) with a description and a live example |
-| 5 | `## Доступность` | yes | hand |
-| 6 | `## JavaScript` | when it has a public runtime API | hand now; generated from `public-js-api.json` once the release ships it |
-| 7 | `## Классы` | yes | generated from `distr/component/<name>/css` |
-| 8 | `## Переменные` | when it has its own variables | generated: each `--<block>…` property, its default, what it sets |
-| 9 | `## См. также` | no | hand |
+| 5 | `## Применение` | no | hand: one H3 per everyday task the component solves (a language switch, a user menu), each with a live example and the reason for the choice (owner, 2026-11-06) |
+| 6 | `## Доступность` | yes | hand |
+| 7 | `## JavaScript` | when it has a public runtime API | hand now; generated from `public-js-api.json` once the release ships it |
+| 8 | `## Классы` | yes | generated from `distr/component/<name>/css` |
+| 9 | `## Переменные` | when it has its own variables | generated: each `--<block>…` property, its default, what it sets |
+| 10 | `## См. также` | no | hand |
 
 `## Классы` groups the component's public classes: the block, its parts
 (`sf-x-…`) and modifiers (`sf-x--…`), sizes apart, and the modifiers the
@@ -139,12 +152,13 @@ redirect for every page).
 | — | introduction | yes | hand; when a class twin exists, a line «То же на классах — …» links it |
 | 1 | `## Пример` | yes | hand |
 | 2 | `## Разметка` | yes | hand: the minimal tag, how the label and slots are given |
-| 3 | `## Варианты` | when it has visual axes | hand: the class page's H3 names (Вид, Схема, Размер, Иконки …), each with a live example |
+| 3 | `## Варианты` | when it has visual axes | hand: the class page's H3 names with the attribute they describe («Вид `appearance`», «Размер `size`» …), each with a specimen grid (below) |
 | 4 | `## Состояния` | when it has states | hand: one H3 per state with a live example |
 | 5 | `## Поведение` | no | hand: events, methods and JavaScript in context; one H3 per topic |
-| 6 | `## Доступность` | yes | hand |
-| 7 | `## Справочник` | yes | generated: attributes, methods and events as tables, earlier names in a closed `<details>`, then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
-| 8 | `## См. также` | no | hand |
+| 6 | `## Применение` | no | hand: one H3 per everyday task the component solves, each with a live example and the reason for the choice; it replaces a separate «Решения» section (owner, 2026-11-06) |
+| 7 | `## Доступность` | yes | hand |
+| 8 | `## Справочник` | yes | generated: attributes (the ones every Smart component has — `template`, `root-class`, `root-style` — last, under «Общие для всех компонентов»), methods and events as tables (events without their aliases), then «О компоненте» (tag and contract, delivery, readiness, accessibility facts, layout node, source) |
+| 9 | `## См. также` | no | hand |
 
 The generated «Минимальная разметка» and «Свойства в документе макета» are
 not repeated here: the page's «Разметка» shows the markup, and the layout
@@ -161,6 +175,66 @@ Rules that come with it:
   sandbox (`preview="sandbox"`), which gives the full-width viewer.
 - An axis is shown by values, not by prose: a size axis is one example with
   every size side by side, labelled; a state is the component in that state.
+- **One specimen grid for every axis** (owner remark R002, 2026-11-07). The
+  values sit in equal cells, each specimen centred in its cell, with one
+  small muted line under it that holds the value alone — no attribute name
+  and no code chip, since the H3 already names the attribute. The grid is
+  utilities only, so the example stays inline (`preview=inline` on its
+  `:::example` keeps the container query from forcing a sandbox):
+
+  ```html
+  <div class="query-container">
+    <div class="grid grid-col-2 cq-sm:grid-col-3 cq-md:grid-col-5 gap-4">
+      <div class="flex flex-col items-cross-center gap-2">
+        <div class="flex flex-1 items-cross-center"><sf-button text="Сохранить" appearance="tonal"></sf-button></div>
+        <span class="text-1/2 color-on-surface-variant wrap-none">tonal</span>
+      </div>
+      …
+    </div>
+  </div>
+  ```
+
+  Columns follow the example's own width, not the window's: two on a
+  phone, three from 32rem, five from 44rem. A grid of fewer values uses
+  fewer columns at the widest step, and a grid whose largest specimen is
+  wider than its cell (a size scale up to `3`) uses one column on a phone
+  and three above: a specimen never leaves its cell.
+- **A live example says what it sends.** An example that reacts — a form,
+  a toggle, a shortcut, a choice — shows its events in the shared event
+  log under it: `examples/shared/event-log.js`, copied into the example's
+  `index.js` by `composer docs:example-helpers:sync` and checked by
+  `docs:check` (owner remark R011, 2026-11-07).
+
+### Smart component page, standard 4 (draft, R022)
+
+A rewrite of the third standard from three critics' review of Buttons
+(2026-11-07), pending the owner's acceptance; Buttons is the only page on it.
+A page moves to it with `"standard": 4`. The reference is the third
+standard's, generated the same way.
+
+| # | Section | Required | Written by |
+|:--|:---|:---|:---|
+| — | introduction | yes | hand, as in the third standard |
+| 1 | `## Пример` | yes | hand: the live example and the minimal tag |
+| 2 | `## Когда брать` | no | hand: the choices a reader makes before writing it |
+| 3 | `## Когда не брать` | no | hand: the alternatives, each with a link to what to take instead (owner, 2026-11-09) |
+| 4 | `## Частые задачи` | no | hand: one H3 per everyday task, with code that copies as is |
+| 5 | `## Внешний вид` | when it has visual axes | hand: one H3 per axis, each with a live example |
+| 6 | `## Состояния` | when it has states | hand: one H3 per state, each with a live example |
+| 7 | `## Сочетание клавиш` | no | hand: when the component draws and listens for a shortcut |
+| 8 | `## Работа из кода` | no | hand: events (which fires when), properties; methods link the reference |
+| 9 | `## Доступность` | yes | hand, with code for each point |
+| 10 | `## Справочник` | yes | generated, as in the third standard; a hand-written `### Для разработчика` after the tables (the traps) is kept by the generator; the component's places (slots) and public variables are tables there once `config/smart-reference.json` describes them |
+| 11 | `## См. также` | no | hand |
+
+Section rules: a heading is up to three plain Russian words, no code; under a
+feature heading one line names the attribute, its default and links the
+reference («`appearance` · по умолчанию `default` · справочник»); the first
+sentence says why, without values; three values or more are a table
+«Значение | Когда брать»; «Учтите:» at most once per section and only for a real trap; tables carry
+no «(по умолчанию)» — the attribute line says it; example tabs are named in
+two or three words; a code block that repeats the example's HTML tab is left
+out.
 
 ## Generated sections
 

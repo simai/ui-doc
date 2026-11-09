@@ -279,10 +279,10 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button` |
-| Части | `sf-button-shortcut`, `sf-button-shortcut-key--chars-3`, `sf-button-shortcut-key--chars-4`, `sf-button-shortcut-key--chars-5`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--default`, `sf-button--error`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
+| Модификаторы | `sf-button--default`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
-| Устаревшие | `sf-button--ghost` → `sf-button--link` |
+| Устаревшие | `sf-button--danger` → `sf-button--error`, `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -301,6 +301,8 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button-radius` | Скругление углов. | `var(--sf-radius--ui)` |
 | `--sf-button-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-ui-1--space-x)`; зависит от размера |
 | `--sf-button-padding-block` | Отступ над и под содержимым. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+| `--sf-button-pressed-background-color` | Заливка включённой кнопки-переключателя (`pressed`, `aria-pressed="true"`); наведение, нажатие и отключённое состояние рисуются поверх своими цветами. | `var(--sf-primary-container)` |
+| `--sf-button-pressed-color` | Цвет подписи и иконки включённой кнопки-переключателя. | `var(--sf-on-primary-container)` |
 
 ```css
 .sf-button {
@@ -318,7 +320,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
 | `--sf-button--border-bottom-width` | `var(--sf-button-border-width, 0)` | `padding-bottom`, `border-bottom-width` |
-| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--primary`: `var(--sf-button-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-button--border-color` | не задана; задают модификаторы, например `.sf-button.sf-button--outline.sf-button--on-surface`: `var(--sf-button-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-button--border-inline-end-width` | `var(--sf-button-border-width, 0)` | `padding-inline-end`, `border-inline-end-width` |
 | `--sf-button--border-inline-start-width` | `var(--sf-button-border-width, 0)` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-button--border-style` | не задана; задают модификаторы, например `.sf-button--outline`: `solid` | `border-style` |
@@ -333,15 +335,13 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | `--sf-button--padding-inline-start` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-inline, var(--sf-ui-1--space-x))` | `padding-inline-start` |
 | `--sf-button--padding-top` | не задана; задают модификаторы, например `.sf-button--size-1`: `var(--sf-button-padding-block, var(--sf-ui-1--space-y-tightness-default))` | `padding-top` |
 | `--sf-button--radius` | `var(--sf-button-radius, var(--sf-radius--ui))` | `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-button-shortcut--key-chars` | не задана; задают модификаторы, например `.sf-button .sf-button-shortcut > kbd.sf-button-shortcut-key--chars-3`: `3` | `width`, `inline-size` |
-| `--sf-button-shortcut--key-size` | `var(--sf-text-height-1/2)` | `height`, `block-size`, `min-width`, `min-inline-size` |
 | `--sf-button-spinner--size` | `var(--sf-icon-size-3)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size` |
 | `--sf-button-text-container--background-color` | не задана; задают модификаторы, например `.sf-button .sf-button-text-container`: `transparent` | `background-color` |
 | `--sf-button-text-container--color` | не задана; задают модификаторы, например `.sf-button.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-button-color, var(--sf-on-primary))` | `color` |
 | `--sf-button-text-container--font-family` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text--family)` | `font-family` |
-| `--sf-button-text-container--font-size` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text-size-1)` | `font-size` |
+| `--sf-button-text-container--font-size` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-button-text-container--font-weight` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-font-weight-medium)` | `font-weight` |
-| `--sf-button-text-container--line-height` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--tonal.sf-button--secondary .sf-button-text-container`: `var(--sf-text-height-1)` | `line-height` |
+| `--sf-button-text-container--line-height` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1.sf-button--default.sf-button--primary .sf-button-text-container`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-button-text-container--padding-inline-end` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1 .sf-button-text-container`: `var(--sf-ui-1--text-space-x)` | `padding-inline-end` |
 | `--sf-button-text-container--padding-inline-start` | не задана; задают модификаторы, например `.sf-button.sf-button--size-1 .sf-button-text-container`: `var(--sf-ui-1--text-space-x)` | `padding-inline-start` |
 

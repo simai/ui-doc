@@ -52,12 +52,12 @@ description: "Задаёт цвет обводки фигур SVG по роля�
 | `--sf-current` | `currentColor` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
-| `--sf-outline-primary` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
-| `--sf-outline-secondary` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
-| `--sf-outline-tertiary` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
-| `--sf-outline-error` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
-| `--sf-outline-warning` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
-| `--sf-outline-success` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
+| `--sf-outline-primary` | `var(--sf-primary-outline)` |
+| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
+| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
+| `--sf-outline-error` | `var(--sf-error-outline)` |
+| `--sf-outline-warning` | `var(--sf-warning-outline)` |
+| `--sf-outline-success` | `var(--sf-success-outline)` |
 
 ## Применение
 

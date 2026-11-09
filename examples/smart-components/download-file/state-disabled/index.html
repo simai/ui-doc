@@ -1,6 +1,12 @@
-<div class="flex flex-wrap gap-3 items-end">
-  <div class="flex flex-col gap-1 items-start">
-    <sf-file-download file-name="Архив проекта.zip" file-size="120 МБ" href="data:text/plain;charset=utf-8,SIMAI%20Framework" disabled></sf-file-download>
-    <code class="text-1/2 color-on-surface-variant">disabled</code>
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-file-download file-name="Архив проекта.zip" file-size="120 МБ" href="data:text/plain;charset=utf-8,SIMAI%20Framework" download></sf-file-download></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">доступен</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-file-download file-name="Архив проекта.zip" file-size="120 МБ" href="data:text/plain;charset=utf-8,SIMAI%20Framework" disabled></sf-file-download></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">недоступен</span>
+    </div>
   </div>
 </div>

@@ -5,12 +5,14 @@ description: "Рисует поверх отрисованной страниц�
 
 # Оверлей редактора
 
-`<sf-editor-overlay>` — часть редактора страниц: рисует поверх страницы,
-собранной из Composition Document, рамку при наведении и выборе, подпись и
-значки узла, панель действий, место вставки у стыка блоков и дерево структуры для
-клавиатуры. HTML холста оверлей не меняет, поэтому опубликованная страница
-одинакова с открытым и закрытым редактором. Берите его, когда страницу нужно
-править в контексте, а не в отдельной форме.
+:badge[sf-editor-overlay]{variant=tonal scheme=primary size=1/2} :badge[1.6.4]{variant=outline scheme=on-surface size=1/2}
+
+Оверлей редактора даёт править страницу на месте, а не в отдельной форме:
+поверх страницы, собранной из Composition Document, он показывает рамку при
+наведении и выборе, подпись и значки блока, панель действий, место вставки у
+стыка блоков и дерево структуры для клавиатуры. Саму страницу оверлей не
+меняет, поэтому опубликованная страница одинакова с открытым и закрытым
+редактором.
 
 ## Пример
 
@@ -32,7 +34,7 @@ description: "Рисует поверх отрисованной страниц�
 
 Холст — элемент с HTML из `SF.Composition.render`; каждый узел Document
 отмечен в нём атрибутом `data-sf-composition-id`. Атрибут `for` называет `id`
-холста, метод `attach(canvas)` передаёт его явно. Код оверлея загрузчик
+холста, метод `attach({canvas})` передаёт его явно. Код оверлея загрузчик
 SIMAI Framework подключает по требованию — только на странице с тегом
 `sf-editor-overlay`, поэтому перед вызовом методов дождитесь
 `customElements.whenDefined('sf-editor-overlay')`.
@@ -43,7 +45,7 @@ SIMAI Framework подключает по требованию — только 
 родителе с `gap` (flex, grid) он добавит один `gap`, поэтому родителем лучше
 сделать обычный блок.
 
-`setDocument(document, {describe})` передаёт Document. `describe(node)`
+`setDocument({document, options: {describe}})` передаёт Document. `describe(node)`
 возвращает подпись и значки узла: `{label, badges}`, например
 `{label: 'Шапка', badges: ['Общий']}` для блока, который используется на
 нескольких страницах. Без подписи оверлей показывает `id` узла; значков —
@@ -53,7 +55,7 @@ SIMAI Framework подключает по требованию — только 
 
 ### Действия
 
-`setActions(actions)` задаёт кнопки панели действий выбранного узла, не
+`setActions({actions})` задаёт кнопки панели действий выбранного узла, не
 больше 16. Обязательны только `id` по шаблону `^[a-z][a-z0-9-]{0,63}$` и
 `label`: `{id, label}` — текстовая кнопка. Необязательные поля:
 
@@ -86,9 +88,9 @@ SIMAI Framework подключает по требованию — только 
 
 ### Выбор узла
 
-Выбор мышью, клавишей или методом `select(id)` отправляет
+Выбор мышью, клавишей или методом `select({id})` отправляет
 `sf-composition-overlay-select` с `{ids, id}`, а для хоста композиции — ещё с
-`node_id`; `null` означает, что выбор снят. `select(id, {emit: false})` выбирает узел без события — например, когда
+`node_id`; `null` означает, что выбор снят. `select({id, options: {emit: false}})` выбирает узел без события — например, когда
 выбор пришёл из боковой панели приложения. Наведение показывает рамку 1 px,
 выбор — рамку 2 px, без заливки и оттенка: содержимое выглядит так, как
 будет опубликовано.
@@ -117,24 +119,24 @@ SIMAI Framework подключает по требованию — только 
 узел, блоки и рамка приезжают на место за 180 мс; при
 `prefers-reduced-motion` движения нет.
 
-`setDropFilter((place, item) => boolean)` скрывает места, которые приложение
+`setDropFilter({filter: (place, item) => boolean})` скрывает места, которые приложение
 отклонит; окончательную проверку выполняет Document.
-`setInsertionTarget({parent_id, slot, index})` отмечает на холсте место, куда
-приложение вставит блок, а значение `null` снимает отметку.
+`setInsertionTarget({target: {parent_id, slot, index}})` отмечает на холсте
+место, куда приложение вставит блок, а `{target: null}` снимает отметку.
 
 ### Холст во фрейме
 
 Если холст редактора — фрейм того же источника, укажите его `id` в атрибуте
-`frame` (вместо `for`) или вызовите `attachFrame(iframe)`. Документ во фрейме
+`frame` (вместо `for`) или вызовите `attachFrame({iframe})`. Документ во фрейме
 слой не читает: приложение передаёт плоский список узлов методом
-`setNodes(nodes, {describe})`, где `describe(node)` возвращает подпись и
+`setNodes({nodes, options: {describe}})`, где `describe(node)` возвращает подпись и
 бейджи узла. Рамки, панель действий, места вставки и дерево для клавиатуры
 рисуются над фреймом так же, как над обычным холстом; у списка верхнего
 уровня `parent_id` в `sf-composition-overlay-insert` пустой, а `slot` —
 `default`.
 
 Узел, помеченный как редактируемый, можно править на месте: `Enter` в
-дереве или метод `edit(id)`. Это правка обычной
+дереве или метод `edit({id})`. Это правка обычной
 строки — `Enter` сохраняет, `Escape` отменяет. Сохранённое значение
 приходит событием `sf-composition-overlay-change` с `id`, `value` и
 `previous` (прежнее `sf-composition-overlay-edit` с `node_id` вместо `id`
@@ -157,20 +159,20 @@ Document оверлею.
 ### Подписи
 
 Подписи дерева, панели и объявлений оверлей берёт на языке страницы (русском
-или английском). `setMessages(messages)` заменяет их своими.
+или английском). `setMessages({messages})` заменяет их своими.
 
 ```js
 await customElements.whenDefined('sf-editor-overlay');
-overlay.attach(canvas);
-overlay.setDocument(document, {
+overlay.attach({canvas});
+overlay.setDocument({document, options: {
   describe: (node) => ({label: titleOf(node), badges: node.shared ? ['Общий'] : []}),
-});
-overlay.setActions([
+}});
+overlay.setActions({actions: [
   {id: 'move', label: 'Перенести', icon: 'drag_indicator'},
   {id: 'move-up', label: 'Выше', icon: 'arrow_upward', shortcut: '⌥↑'},
   {id: 'remove', label: 'Удалить', icon: 'delete', shortcut: '⌫', tone: 'danger'},
-]);
-overlay.setDropFilter((place, item) => place.slot === 'default');
+]});
+overlay.setDropFilter({filter: (place, item) => place.slot === 'default'});
 overlay.addEventListener('sf-composition-overlay-apply', (event) => {
   applyAction(event.detail.action, event.detail.ids[0]);
 });
@@ -192,23 +194,27 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
-| `for` | строка | пусто | — | id элемента-холста, поверх которого рисует слой |
-| `frame` | строка | пусто | — | id холста в iframe того же источника (режим во фрейме, его питает `setNodes`) |
-| `accepts` | строка | пусто | — | Группы `sf-sortable`, элементы которых можно сбросить на холст, через пробел |
-| `label` | строка | пусто | — | Имя дерева структуры; иначе — `runtime.tree` из языкового файла |
-| `placement` | строка | `top` | `top`, `side` | Где стоит панель действий: `top` — над блоком по правому краю, по умолчанию; `side` — сбоку от блока, если рядом есть место, а если места нет — над блоком |
-| `actions` | список | `[]` | — | Действия выбранного узла: до 16 `{id, label}` с необязательными `icon`, `shortcut`, `disabled` и `tone`; записываются через ту же проверку, что и `setActions` |
-| `messages` | объект | `{}` | — | Собственные слова хоста поверх языкового файла; записываются через `setMessages` |
-| `insertion-target` | объект | `{}` | — | Место вставки, которое хост держит отмеченным `{parent_id, slot, index}`; записывается через `setInsertionTarget` |
+| `for` | строка | пусто | — | id элемента-холста, поверх которого рисует слой. |
+| `frame` | строка | пусто | — | id холста в iframe того же источника (режим во фрейме, его питает `setNodes`). |
+| `accepts` | строка | пусто | — | Группы `sf-sortable`, элементы которых можно сбросить на холст, через пробел. |
+| `label` | строка | пусто | — | Имя дерева структуры; иначе — `runtime.tree` из языкового файла. |
+| `placement` | строка | `top` | `top`, `side` | Где стоит панель действий: `top` — над блоком по правому краю, по умолчанию; `side` — сбоку от блока, если рядом есть место, а если места нет — над блоком. |
+| `passive` | да/нет | нет | — | Пока включено, не принимает ввод на холсте: щелчки, двойные щелчки, клавиши, наведение и перетаскивание доходят до страницы (до редактора, который приложение поставило в выбранный блок), выбор сохраняется, а рамка выбранного блока остаётся видна; панель инструментов, точки вставки и ручка перемещения уходят, а дерево выходит из порядка Tab. После выключения слой снова принимает ввод. |
+| `actions` | список | `[]` | — | Действия выбранного узла: до 16 `{id, label}` с необязательными `icon`, `shortcut`, `disabled` и `tone`; записываются через ту же проверку, что и `setActions`. |
+| `messages` | объект | `{}` | — | Собственные слова приложения поверх языкового файла; записываются через `setMessages`. |
+| `insertion-target` | объект | `{}` | — | Место вставки, которое приложение держит отмеченным `{parent_id, slot, index}`; записывается через `setInsertionTarget`. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -216,17 +222,17 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `attach(canvas: object)` | — | Рисует поверх элемента-холста; холст никогда не меняется |
-| `attachFrame(iframe: object)` | — | Рисует поверх холста в iframe того же источника, который питает `set-nodes` |
-| `setDocument(document: object, options: object)` | — | Читает узлы документа композиции |
-| `setNodes(nodes: array, options: object)` | — | Читает плоский список узлов (режим во фрейме) |
-| `setDropFilter(filter: object)` | — | `filter({parent_id, slot, index}, item)` скрывает места, куда сбрасывать нельзя |
-| `setActions(actions: array)` | — | Записывает действия выбранного узла (настройка actions) |
-| `setMessages(messages: object)` | — | Записывает собственные слова хоста (настройка messages) |
-| `setInsertionTarget(target: object\|null)` | — | Записывает отмеченное место вставки (настройка insertion-target) |
-| `select(id: any, options: object)` | — | Выбирает узел; `{focus, emit}` |
-| `edit(id: string)` | да/нет | Начинает правку простой строки в редактируемом узле |
-| `refresh()` | — | Заново измеряет холст |
+| `attach(args: object)` | — | Рисует поверх элемента-холста; холст никогда не меняется. |
+| `attachFrame(args: object)` | — | Рисует поверх холста в iframe того же источника, который питает `set-nodes`. |
+| `setDocument(args: object)` | — | Читает блоки документа страницы. |
+| `setNodes(args: object)` | — | Читает плоский список узлов (режим во фрейме). |
+| `setDropFilter(args: object)` | — | `filter({parent_id, slot, index}, item)` скрывает места, куда сбрасывать нельзя. |
+| `setActions(args: object)` | — | Записывает действия выбранного узла (настройка actions). |
+| `setMessages(args: object)` | — | Записывает собственные слова приложения (настройка messages). |
+| `setInsertionTarget(args: object)` | — | Записывает отмеченное место вставки (настройка insertion-target). |
+| `select(args: object)` | — | Выбирает узел; `{focus, emit}`. |
+| `edit(args: object)` | да/нет | Начинает правку простой строки в редактируемом узле. |
+| `refresh()` | — | Заново измеряет холст. |
 
 ### События
 
@@ -234,30 +240,24 @@ overlay.addEventListener('sf-composition-overlay-apply', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-editor-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран (или выбор снят): словарь 1.1.5 §5 select; в detail остаётся `node_id` для хоста композиции |
-| `sf-editor-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи (словарь §5 apply, стандарт §18.3) |
-| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: any, parent_id: any }` | Выбрано место вставки или элемент библиотеки сброшен на холст: место `{parent, slot, index}` и элемент, если его перетаскивали; в detail остаётся `parent_id` для хоста композиции |
-| `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён указателем или клавиатурой: один ручной перенос (словарь §5 move, `{id, parent, position}`); в detail остаются `node_id`, `parent_id` и `index` для хоста композиции |
-| `sf-editor-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё |
-| `sf-composition-overlay-action` | `{ action_id: string, node_id: string }` | устаревший псевдоним `sf-editor-overlay-apply`: подписывайтесь на `sf-editor-overlay-apply` |
-| `sf-composition-overlay-edit` | `{ node_id: string, value: string, previous: string }` | устаревший псевдоним `sf-editor-overlay-change`: подписывайтесь на `sf-editor-overlay-change` |
-| `sf-composition-overlay-select` | не описан | устаревший псевдоним `sf-editor-overlay-select`: подписывайтесь на `sf-editor-overlay-select` |
-| `sf-composition-overlay-apply` | не описан | устаревший псевдоним `sf-editor-overlay-apply`: подписывайтесь на `sf-editor-overlay-apply` |
-| `sf-composition-overlay-insert` | не описан | устаревший псевдоним `sf-editor-overlay-insert`: подписывайтесь на `sf-editor-overlay-insert` |
-| `sf-composition-overlay-move` | не описан | устаревший псевдоним `sf-editor-overlay-move`: подписывайтесь на `sf-editor-overlay-move` |
-| `sf-composition-overlay-change` | не описан | устаревший псевдоним `sf-editor-overlay-change`: подписывайтесь на `sf-editor-overlay-change` |
+| `sf-editor-overlay-select` | `{ ids: array, id: any, node_id: any }` | Узел выбран или выбор снят; в `detail` есть `node_id`. |
+| `sf-editor-overlay-apply` | `{ action: string, scope: any, ids: array }` | Для выбранного узла выбрано действие панели инструментов: собственное действие записи. |
+| `sf-editor-overlay-insert` | `{ parent: any, slot: string, index: integer, item?: string, from?: string, mode?: "move" \| "copy", parent_id: any }` | Выбрано место вставки или на холст брошен элемент библиотеки: место `{parent, slot, index}` и элемент, если его перетаскивали; в `detail` есть `parent_id`. |
+| `sf-editor-overlay-move` | `{ ids: array, id: any, parent: any, position: number, slot: string, node_id: any, parent_id: any, index: integer }` | Узел перенесён мышью или клавиатурой: `{id, parent, position}`; в `detail` есть `node_id`, `parent_id` и `index`. |
+| `sf-editor-overlay-change` | `{ id: any, value: string, previous: string }` | Правка простой строки принята; при отмене текст показывает то, что было до неё. |
+| `sf-editor-overlay-open` | `{ ids: array, id: any, node: any, point: object\|null, trigger: "click" \| "dblclick" \| "enter" }` | Человек попросил открыть узел: второй щелчок по выбранному узлу, двойной щелчок по узлу или Enter на выбранном узле в дереве. Отправляется один раз на жест и никогда в пассивном режиме; редактируемый узел холста в рамке открывается своей правкой простой строки. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль дерево (`tree`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`, `Home`, `End`, `Enter`, `Space`, `Escape` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/editor-overlay` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-editor-overlay` |
+| Тег | `<sf-editor-overlay>`, контракт `smart.editor-overlay` версии `1.6.4` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как дерево; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/editor-overlay` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-editor-overlay` |
 
 ## См. также
 

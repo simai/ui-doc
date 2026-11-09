@@ -1,4 +1,12 @@
-<div class="flex flex-wrap gap-4 items-cross-start">
-  <sf-button-group appearance="segmented" orientation="vertical" aria-label="Выравнивание текста" value="start" items='[{"value":"start","label":"По началу","icon":"format_align_left"},{"value":"center","label":"По центру","icon":"format_align_center"},{"value":"end","label":"По концу","icon":"format_align_right"}]'></sf-button-group>
-  <sf-button-group appearance="segmented" orientation="vertical" plate="raised" size="1/2" aria-label="Раздел настроек" value="profile" items='[{"value":"profile","label":"Профиль"},{"value":"access","label":"Доступ"},{"value":"notifications","label":"Уведомления","count":3}]'></sf-button-group>
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" orientation="vertical" aria-label="Выравнивание текста" value="start" items='[{"value":"start","label":"По началу","icon":"format_align_left"},{"value":"center","label":"По центру","icon":"format_align_center"},{"value":"end","label":"По концу","icon":"format_align_right"}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">с иконками</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" orientation="vertical" plate="raised" size="1/2" aria-label="Раздел настроек" value="profile" items='[{"value":"profile","label":"Профиль"},{"value":"access","label":"Доступ"},{"value":"notifications","label":"Уведомления","count":3}]'></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">plate="raised", с числом</span>
+    </div>
+  </div>
 </div>

@@ -115,6 +115,41 @@ profile: reference
 :::example {id="components/menu/compact" label="Счётчики в обычном и компактном меню"}
 :::
 
+### Группы разделов
+
+`sf-menu-item--group`, `sf-menu-group-heading`, `sf-menu-group-label` • [классы](#классы)
+
+Группа — заголовок над своими пунктами первого уровня, как в колонке
+разделов сайта или настроек. Её пишут так:
+
+```html
+<li class="sf-menu-item sf-menu-item--group">
+  <span class="sf-menu-group-heading" id="group-site">
+    <span class="sf-menu-group-label">Сайт</span>
+  </span>
+  <ul class="sf-menu" aria-labelledby="group-site">
+    <li class="sf-menu-item">…</li>
+  </ul>
+</li>
+```
+
+Пункты группы стоят без отступа, как строки первого уровня, а слова
+заголовка — на одной линии со словами строк. Заголовок мельче строки и
+приглушён; между группами — небольшой зазор. Если группу можно свернуть,
+заголовок — кнопка `<button class="sf-menu-group-heading">` с
+`aria-expanded`: под указателем у неё лёгкая заливка, при фокусе — общее
+кольцо фокуса. В конце строки может стоять цветная точка состояния
+`.sf-dot` — перед счётчиком, а её слово для экранного диктора лежит рядом в
+скрытом `.sf-menu-element-status`.
+
+Скрипт классового меню групп не строит и не сворачивает: пункт с вложенным
+списком он считает веткой. Группы из данных рисует и сворачивает
+смарт-компонент [Меню](/ru/smart/navigation/menu/#группы-разделов), а эти
+классы дают им вид.
+
+:::example {id="smart-components/menu/groups" label="Группы разделов в смарт-меню" preview=sandbox log_console=true log_open=false}
+:::
+
 ## Состояния
 
 ### Текущий пункт
@@ -156,7 +191,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-menu` |
-| Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-item` |
+| Части | `sf-menu-element`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group` |
 | Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--navigation` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -175,9 +210,10 @@ profile: reference
 | `--sf-menu-item-background-color` | Заливка строки в покое; у наведения и открытой ветки своя. | `var(--sf-transparent)` |
 | `--sf-menu-item-border-color` | Цвет тонкой рамки строки в покое; у наведения и открытой ветки свой. | `var(--sf-surface-container)` |
 | `--sf-menu-item-radius` | Скругление углов строки. | `var(--sf-radius--ui)` |
-| `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-elevation-2--surface)`; зависит от orientation |
+| `--sf-menu-submenu-background-color` | Заливка панели горизонтального меню; этим же цветом обведены счётчики в ней. | `var(--sf-surface-popup)`; зависит от orientation |
 | `--sf-menu-submenu-border-color` | Цвет рамки панели горизонтального меню. | `var(--sf-outline-variant)`; зависит от orientation |
 | `--sf-menu-submenu-radius` | Скругление углов панели горизонтального меню. | `var(--sf-radius--ui)`; зависит от orientation |
+| `--sf-menu-sticky-top` | На каком расстоянии от верха окна останавливается закреплённое меню (`sticky`): высота закреплённой шапки над ним. | `0` |
 
 ```css
 .sf-menu {
@@ -202,6 +238,7 @@ profile: reference
 | `--sf-menu-element--padding-right` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-inline-end` |
 | `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-top`, `padding-block-start` |
 | `--sf-menu-element--radius` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-radius, var(--sf-radius--ui))` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
+| `--sf-menu-group-heading--border-width` | не задана; задают модификаторы, например `.sf-menu-group-heading`: `var(--sf-px)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-menu-item--background-color` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `transparent` | `background-color` |
 | `--sf-menu-item--gap` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `var(--sf-space-1/3)` | `gap` |
 

@@ -42,7 +42,9 @@ profile: reference
 ### Размер
 
 Размеры `1/3`, `1/2`, `1`, `2` и `3` согласованно меняют отступ, текст,
-промежутки и иконку. Без класса размера компонент берёт ступень `1`.
+промежутки и иконку. Каждый размер одной высоты с кнопкой того же размера:
+24, 32, 40, 48 и 56 px на широком экране. Без класса размера компонент
+берёт ступень `1`.
 Выбирайте размер по окружающему тексту: в плотном списке вложений — `1/2`, в
 карточке документа — `1` или `2`.
 
@@ -136,7 +138,7 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-download-file` |
-| Части | `sf-download-file-container`, `sf-download-file-file-name`, `sf-download-file-file-size`, `sf-download-file-wrap`, `sf-download-file__body`, `sf-download-file__icon`, `sf-download-file__main`, `sf-download-file__name`, `sf-download-file__size` |
+| Части | `sf-download-file-container`, `sf-download-file-file-name`, `sf-download-file-file-size`, `sf-download-file-wrap`, `sf-download-file__body`, `sf-download-file__icon`, `sf-download-file__main`, `sf-download-file__meta`, `sf-download-file__name`, `sf-download-file__size`, `sf-download-file__spinner`, `sf-download-file__tab`, `sf-download-file__tab-words`, `sf-download-file__type` |
 | Размеры | `sf-download-file--size-1/2`, `sf-download-file--size-1/3`, `sf-download-file--size-2`, `sf-download-file--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -152,9 +154,9 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 | `--sf-download-file-background-color` | Заливка карточки в покое; у наведения, нажатия и выключенного состояния свои. | `transparent` |
 | `--sf-download-file-border-color` | Рамка карточки в покое; у наведения и выключенного состояния свои. | `var(--sf-outline-variant)` |
 | `--sf-download-file-radius` | Скругление углов карточки. | `var(--sf-radius--ui)` |
-| `--sf-download-file-padding` | Отступ вокруг содержимого карточки. | `var(--sf-space-1/3)`; зависит от размера |
-| `--sf-download-file-gap` | Расстояние между именем файла и его размером. | `var(--sf-space-1/3)`; зависит от размера |
-| `--sf-download-file-icon-size` | Размер значка скачивания. | `var(--sf-text-size-3)`; зависит от размера |
+| `--sf-download-file-padding` | Отступ вокруг содержимого карточки внутри рамки: шаг размера сверху и снизу и боковой отступ кнопки, без толщины рамки, поэтому карточка одной высоты с кнопкой того же размера. | `calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)) calc(var(--sf-ui-1--space-x) - var(--sf-px))`; зависит от размера |
+| `--sf-download-file-gap` | Промежуток между иконкой и именем файла и между именем и размером: отступ подписи кнопки того же размера. | `var(--sf-ui-1--text-space-x)`; зависит от размера |
+| `--sf-download-file-icon-size` | Размер иконки скачивания: иконка кнопки того же размера (высота её текста). | `var(--sf-text-height-1)`; зависит от размера |
 | `--sf-download-file-icon-color` | Цвет значка скачивания; у выключенного состояния свой. | `var(--sf-primary)` |
 
 ```css
@@ -171,10 +173,12 @@ whenLoader(() => SF.Loader.ready('DownloadFile', (DownloadFile) => {
 |:---|:---|:---|
 | `--sf-download-file--background-color` | `var(--sf-download-file-background-color, transparent)` | `background-color` |
 | `--sf-download-file--border-color` | `var(--sf-download-file-border-color, var(--sf-outline-variant))` | `border` |
-| `--sf-download-file--gap` | `var(--sf-space-1/3)` | `gap` |
-| `--sf-download-file--icon-size` | `var(--sf-text-size-3)` | `height`, `block-size`, `width`, `inline-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
-| `--sf-download-file--padding` | `var(--sf-space-1/3)` | `padding` |
-| `--sf-download-file--text-height` | `var(--sf-text-height-1)` | `line-height` |
+| `--sf-download-file--border-width` | `var(--sf-px)` | `padding` |
+| `--sf-download-file--gap` | `var(--sf-ui-1--text-space-x)` | `gap` |
+| `--sf-download-file--icon-size` | `var(--sf-text-height-1)` | `--sf-loader-svg-width`, `--sf-loader-svg-height`, `width`, `inline-size`, `height`, `block-size`, `font-size`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width` |
+| `--sf-download-file--padding-block` | `var(--sf-ui-1--space-y-tightness-default)` | `padding` |
+| `--sf-download-file--padding-inline` | `var(--sf-ui-1--space-x)` | `padding` |
+| `--sf-download-file--text-height` | `var(--sf-text-height-1)` | `line-height`, `--sf-download-file--icon-size` |
 | `--sf-download-file--text-size` | `var(--sf-text-size-1)` | `font-size` |
 
 ## См. также

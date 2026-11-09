@@ -183,6 +183,7 @@ function inSite(path) {
 async function checkPage(context, path) {
   const page = await context.newPage();
   const findings = [];
+  let skipped = 0;
   const add = (kind, detail) => findings.push({kind, detail: String(detail).slice(0, 300)});
   page.on('pageerror', (error) => add('pageerror', error.message || error));
   page.on('response', (response) => {
@@ -202,7 +203,25 @@ async function checkPage(context, path) {
     // example's document in data-docara-srcdoc and moves it to srcdoc when the
     // frame nears the screen; a srcdoc frame keeps reporting about:blank, so
     // the move itself is the signal (the frame check below reads its document).
-    for (const handle of await page.$$('iframe[loading="lazy"]')) {
+    // A responsive frame (Docara 3.13, marked data-docara-example-responsive-frame)
+    // holds an inline example's device-width copy; Docara keeps it display:none
+    // and loads it only when the reader opens the viewer. Only such a marked
+    // frame that is still hidden is skipped (and counted); every other frame,
+    // a marked one on display included, is waited for and checked.
+    const RESPONSIVE = 'data-docara-example-responsive-frame';
+    const liveFrames = async () => {
+      const live = [];
+      let hidden = 0;
+      for (const handle of await page.$$('iframe')) {
+        const skip = await handle.evaluate((frame, marker) => frame.hasAttribute(marker)
+          && getComputedStyle(frame).display === 'none', RESPONSIVE).catch(() => false);
+        if (skip) hidden++;
+        else live.push(handle);
+      }
+      return {live, hidden};
+    };
+    for (const handle of (await liveFrames()).live) {
+      if (await handle.getAttribute('loading') !== 'lazy') continue;
       await handle.scrollIntoViewIfNeeded().catch(() => {});
       for (let waited = 0; waited < 5000; waited += 100) {
         const url = (await handle.contentFrame())?.url() || '';
@@ -235,7 +254,8 @@ async function checkPage(context, path) {
     }
     if (undefinedNow.length) add('undefined', undefinedNow.join(','));
     // Example frames: each must have loaded a document with content.
-    const frames = await page.$$('iframe');
+    const {live: frames, hidden} = await liveFrames();
+    skipped = hidden;
     for (const [index, handle] of frames.entries()) {
       const title = (await handle.getAttribute('title')) || `#${index}`;
       const frame = await handle.contentFrame();
@@ -259,7 +279,7 @@ async function checkPage(context, path) {
     add('timeout', error.message);
   }
   await page.close().catch(() => {});
-  return {path, findings};
+  return {path, findings, skipped};
 }
 
 async function run(context, pages, label) {
@@ -314,6 +334,9 @@ if (retry) {
   const flaky = firstPass.filter((first) => !failing.some((result) => result.path === first.path));
   for (const result of flaky) console.log(`flake (passed on retry) ${result.path}: ${result.findings.map((f) => f.kind).join(',')}`);
 }
+const withSkipped = results.filter((result) => result.skipped);
+for (const result of withSkipped) console.log(`skipped ${result.skipped} hidden responsive frame(s) ${result.path}`);
+console.log(`hidden responsive frames skipped: ${withSkipped.reduce((sum, result) => sum + result.skipped, 0)} on ${withSkipped.length} page(s)`);
 console.log(`pages ${pages.length}, failing ${failing.length}, ${seconds} s, ${base}`);
 if (jsonOut) writeFileSync(jsonOut, JSON.stringify({base, pages: pages.length, seconds: Number(seconds), firstPass, results: failing}, null, 2));
 process.exit(failing.length ? 1 : 0);

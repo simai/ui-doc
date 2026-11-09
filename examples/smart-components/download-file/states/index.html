@@ -1,0 +1,16 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-3 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-start"><sf-file-download file-name="Отчёт.pdf" file-type="PDF" file-size="2,4 МБ" href="data:text/plain;charset=utf-8,SIMAI%20Framework"></sf-file-download></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">ready</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-start"><sf-file-download file-name="Выгрузка.csv" file-type="CSV" state="preparing"></sf-file-download></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">preparing</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-start"><sf-file-download id="download-file-failed" file-name="Архив.zip" file-type="ZIP" state="error" error-text="Сервер не ответил. Попробуйте ещё раз."></sf-file-download></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">error</span>
+    </div>
+  </div>
+</div>

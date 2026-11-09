@@ -5,11 +5,12 @@ description: "Поле формы для одного изображения: м
 
 # Поле изображения
 
-`<sf-input-image>` — поле формы для одного изображения: логотипа, обложки,
-картинки в блоке. Оно показывает миниатюру с именем и размером файла, кнопки
-«Заменить…» и «Убрать» и принимает файл, перетащенный на поле. Загружает
-файл приложение: компонент только передаёт выбранный `File`. Для нескольких
-файлов, списка передачи и прогресса берите
+:badge[sf-input-image]{variant=tonal scheme=primary size=1/2} :badge[1.2.5]{variant=outline scheme=on-surface size=1/2}
+
+Поле изображения принимает одно изображение в форме: логотип, обложку,
+картинку в блоке. Оно показывает миниатюру с именем и размером файла, кнопки
+«Заменить…» и «Убрать» и принимает файл, перетащенный на поле; загружает файл
+приложение. Для нескольких файлов, списка передачи и прогресса берите
 [Загрузку файлов](/ru/smart/forms/file-upload/).
 
 ## Пример
@@ -98,7 +99,7 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
     const stored = await upload(event.detail.file);
     logo.setValue(stored);
   } catch {
-    logo.setError('Не удалось загрузить файл');
+    logo.setError({message: 'Не удалось загрузить файл'});
   }
 });
 ```
@@ -114,15 +115,10 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `name` | строка | пусто | — | Имя, под которым выбранный файл уходит с формой через встроенный файловый input. |
 | `label` | строка | пусто | — | Подпись над изображением; называет группу. Без неё группа называется «Изображение» / Image. |
 | `hint` | строка | пусто | — | Пояснение под полем; слот `hint` принимает разметку вместо строки. |
@@ -137,7 +133,15 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | `error-message` | строка | пусто | — | Ошибка, которая видна вместо пояснения, пока поле с ошибкой; слот `error` принимает разметку вместо строки. |
 | `aria-label` | строка | пусто | — | Доступное имя группы, когда подпись внутри поля не выводится: форма, которая печатает подпись рядом (рендереры полей Framework), называет поле без второй видимой подписи. |
 | `error` | да/нет | нет | — | Состояние ошибки; то же, что invalid. |
-| `value` | объект | `null` | — | Изображение в форме файла `{value, label, mime, size, href, file?}` или null; атрибут принимает адрес или эту форму в JSON |
+| `value` | объект | `null` | — | Изображение в форме файла `{value, label, mime, size, href, file?}` или null; атрибут принимает адрес или эту форму в JSON. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -145,12 +149,12 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `clear()` | объект | Очищает поле из кода; то же, что setValue(null). Возвращает элемент. |
+| `clear()` | объект | Очищает поле из кода; то же, что setValue(null). Возвращает тег. |
 | `choose()` | да/нет | Открывает окно выбора файла, как «Заменить…» и «Выбрать…». Возвращает false, если поле недоступно или только для чтения. |
 | `removeImage()` | да/нет | Убирает изображение, как человек кнопкой «Убрать»: приходят input, change и sf-image-field-detach, фокус переходит на «Выбрать…». Возвращает, было ли что убирать. |
-| `takeFile(file: object, source: string)` | да/нет | Принимает File, как если бы его выбрал человек (source input, drop или другой, названный хостом): миниатюра показывает его по object URL, приходят input, change и sf-image-field-attach. Файл, которого нет в accept, вместо этого отклоняется. Возвращает, принят ли файл. |
-| `setError(message: string)` | объект | Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает элемент. |
-| `setValue(value: object\|string\|null)` | объект | Задаёт изображение из кода — в форме файла или адресом; null очищает поле. Событий не отправляет: значение из кода — не изменение. Возвращает элемент. |
+| `takeFile(args: object)` | да/нет | Принимает File, как если бы его выбрал человек (source input, drop или другой, названный приложением): миниатюра показывает его по object URL, приходят input, change и sf-image-field-attach. Файл, которого нет в accept, вместо этого отклоняется. Возвращает, принят ли файл. |
+| `setError(args: object)` | объект | Показывает сообщение об ошибке и состояние ошибки или убирает оба пустым сообщением. Записывает error-message и invalid. Возвращает тег. |
+| `setValue(value: object\|string\|null)` | объект | Задаёт изображение из кода — в форме файла или адресом; null очищает поле. Событий не отправляет: значение из кода — не изменение. Возвращает тег. |
 
 ### События
 
@@ -158,29 +162,23 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит. |
-| `input` | `{ value: object\\|null, file: object\\|null, source: any, name: string }` | Отправляется при каждом изменении, перед ним, с тем же detail — как нативный файловый input отправляет input и change вместе. |
-| `sf-input-image-attach` | `{ files: array, file: object, source: any, value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Хост загружает его и задаёт сохранённое значение. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:select` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:remove` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. Имя по стандарту simai.smart-component 1.3.8 (словарь 1.1.5 §9.1); `sf-image-field:reject` отправляется после него с тем же detail до 2026-12-01 (aliases.json). |
-| `sf-image-field:select` | `{ file?: object, source?: string, value?: object, name?: string }` | устаревший псевдоним `sf-input-image-attach`: подписывайтесь на `sf-input-image-attach` |
-| `sf-image-field:remove` | `{ value?: object, name?: string }` | устаревший псевдоним `sf-input-image-detach`: подписывайтесь на `sf-input-image-detach` |
-| `sf-image-field:reject` | `{ files?: array, accept?: string, source?: string }` | устаревший псевдоним `sf-input-image-rejected`: подписывайтесь на `sf-input-image-rejected` |
-| `sf-image-field-attach` | не описан | устаревший псевдоним `sf-input-image-attach`: подписывайтесь на `sf-input-image-attach` |
-| `sf-image-field-detach` | не описан | устаревший псевдоним `sf-input-image-detach`: подписывайтесь на `sf-input-image-detach` |
-| `sf-image-field-rejected` | не описан | устаревший псевдоним `sf-input-image-rejected`: подписывайтесь на `sf-input-image-rejected` |
+| `change` | `{ value: object\|null, file: object\|null, source: "input" \| "drop" \| "remove", name: string }` | Изображение выбрали, перетащили или убрали: один раз на каждое изменение, сделанное человеком, CustomEvent на элементе со значением, File и именем в форме. Собственное change встроенного input наружу не выходит. |
+| `input` | `{ value: object\|null, file: object\|null, source: "input" \| "drop" \| "remove", name: string }` | Приходит перед каждым `change`, с тем же `detail`, как у обычного поля выбора файла. |
+| `sf-input-image-attach` | `{ files: array, file: object, source: "input" \| "drop", value: object, name: string }` | Файл выбран или перетащен: File для загрузки. Приложение загружает его и задаёт сохранённое значение. |
+| `sf-input-image-detach` | `{ value: object, name: string }` | Человек убрал изображение; detail несёт значение, которое было. |
+| `sf-input-image-rejected` | `{ files: array, accept: string, source: string }` | Файлы, которых нет в списке accept, пропущены — системный диалог их бы и не предложил; об этом вежливо сообщается. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль группа (`group`); доступное имя рекомендуется; клавиши `Tab`, `Enter`, `Space` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/input-image` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-input-image` |
+| Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.2.5` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-image` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 

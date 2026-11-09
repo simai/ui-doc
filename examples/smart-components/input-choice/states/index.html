@@ -1,0 +1,10 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-2">
+    <sf-input-choice label="Тип сайта" name="kind-invalid" required invalid error-message="Выберите тип сайта." items='[{"value": "site", "label": "Сайт", "caption": "Страницы, разделы и меню", "icon": "language"}, {"value": "shop", "label": "Магазин", "caption": "Каталог, корзина и заказы", "icon": "storefront", "badge": "Pro"}, {"value": "docs", "label": "Документация", "caption": "Статьи с поиском и оглавлением", "icon": "menu_book"}]'></sf-input-choice>
+    <span class="text-1/2 color-on-surface-variant">invalid</span>
+  </div>
+  <div class="flex flex-col gap-2">
+    <sf-input-choice label="Тип сайта" name="kind-disabled" value="site" disabled items='[{"value": "site", "label": "Сайт", "caption": "Страницы, разделы и меню", "icon": "language"}, {"value": "shop", "label": "Магазин", "caption": "Каталог, корзина и заказы", "icon": "storefront", "badge": "Pro"}, {"value": "docs", "label": "Документация", "caption": "Статьи с поиском и оглавлением", "icon": "menu_book"}]'></sf-input-choice>
+    <span class="text-1/2 color-on-surface-variant">disabled</span>
+  </div>
+</div>

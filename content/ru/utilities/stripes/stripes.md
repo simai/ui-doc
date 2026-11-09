@@ -51,7 +51,7 @@ description: "Заполняет фон элемента тонкими лини
 |:---|:---|
 | `--sf-stripe--color` | `var(--sf-surface-inverse)` |
 | `--sf-px` | `1px` |
-| `--sf-stripe--size` | `var(--sf-a1, 1px)` |
+| `--sf-stripe--size` | `var(--sf-a1)` |
 
 ## Применение
 

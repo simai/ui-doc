@@ -1,22 +1,22 @@
 {
   "schema": "ui-doc.composition_documentation_contract.v1",
   "reviewed": {
-    "source_revision": "297a56c0914a42ff2c24bcba1f45ae0234e3a483",
-    "core_revision": "e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f",
+    "source_revision": "44a5efda6649def849c960c11ac56b2db90693b8",
+    "core_revision": "cb287da78ab1130641d5a628654dabc3d29e1f7a",
     "source_files": {
       "src/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
-      "src/core/contracts/composition-type-manifest.v1.schema.json": "3e69b3a767e11d625524eed32ba48e861ef8458856d3d4638c70210bebde4b0c",
-      "src/core/contracts/composition-types.v1.json": "fb48c63dcc3d537914cd962df8b193fe2d0ab87aa57aea89ef85bb7280c2af46",
-      "src/core/js/composition/index.mjs": "0a1c570ad1dccca6b93eb37b7f60f09b41a23c9c2c14384342d2a4f00932cc59",
-      "src/core/js/composition/builtins.mjs": "dfbe64fa37a1db35af95551ac2efa500d142425a2cf3a477b985eb5bb94a6788",
+      "src/core/contracts/composition-type-manifest.v1.schema.json": "53f603377124a90a2340ce42453998f65642e0e28b046a4d9c7b5328024389b0",
+      "src/core/contracts/composition-types.v1.json": "563beb8838199832c7f82e97897234eae7ef52f47e1321db0df3382c19b677f5",
+      "src/core/js/composition/index.mjs": "0263635804d9aefab969de925209d60b560d941b1fe377b5a704bfc33446646a",
+      "src/core/js/composition/builtins.mjs": "1d8b3a543a1d624964483711256b4dab430ea922c8d0e351291baaf8d72bb22f",
       "tests/fixtures/composition/catalog-page.json": "3f9c8f86ccf8203509fad4c702318885815f550c17055613d41f04bf815dedfc",
-      "src/smart/button/smart.manifest.json": "55cf1240a5648ed3fd1d8f2c910cf235cf69c21fe2eec14713ec21aad8746039"
+      "src/smart/button/smart.manifest.json": "e3ced72c606070a9dddfdaf227821b81ea5e38aafd8908917f95ff39d49afa20"
     },
     "generated_files": {
       "distr/core/contracts/composition-document.v1.schema.json": "344b41cdcfd72bc60ff75bb7b71612ae217c023983f5d98f67ffeee0def06f14",
-      "distr/core/contracts/composition-type-manifest.v1.schema.json": "3e69b3a767e11d625524eed32ba48e861ef8458856d3d4638c70210bebde4b0c",
-      "distr/core/contracts/composition-types.v1.json": "fb48c63dcc3d537914cd962df8b193fe2d0ab87aa57aea89ef85bb7280c2af46",
-      "distr/core/js/core.js": "0153871c29bbe9e2d86296ca5586c42a74114ad1c54388eb0393155972e54c58"
+      "distr/core/contracts/composition-type-manifest.v1.schema.json": "53f603377124a90a2340ce42453998f65642e0e28b046a4d9c7b5328024389b0",
+      "distr/core/contracts/composition-types.v1.json": "563beb8838199832c7f82e97897234eae7ef52f47e1321db0df3382c19b677f5",
+      "distr/core/js/core.js": "9d8e9a7dc69e05712dd555d48d38073318ad311248eebe7a28557efb8da6f915"
     }
   },
   "source_files": [

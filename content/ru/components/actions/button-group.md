@@ -9,8 +9,8 @@ profile: reference
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
 по смыслу действий над одним объектом; для выбора одного значения из нескольких
-есть [смарт-компонент Группа кнопок](/ru/smart/actions/button-group/),
-а в виде утопленной дорожки с плашкой — [сегментный переключатель](/ru/smart/actions/segmented/).
+есть [смарт-компонент Сегментный переключатель](/ru/smart/actions/segmented/):
+кнопками или утопленной дорожкой с плашкой.
 
 ## Пример
 
@@ -115,8 +115,8 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-button-group` |
-| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-segment` |
-| Модификаторы | `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
+| Части | `sf-button-group-count`, `sf-button-group-icon-only`, `sf-button-group-label--hidden`, `sf-button-group-plate`, `sf-button-group-segment` |
+| Модификаторы | `sf-button-group--backdrop-color`, `sf-button-group--backdrop-media`, `sf-button-group--full-width`, `sf-button-group--on-surface`, `sf-button-group--plate-raised`, `sf-button-group--primary`, `sf-button-group--radius-default`, `sf-button-group--radius-rounded`, `sf-button-group--radius-square`, `sf-button-group--secondary`, `sf-button-group--segmented` |
 | Размеры | `sf-button-group--size-1/2`, `sf-button-group--size-1/3`, `sf-button-group--size-2`, `sf-button-group--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -151,7 +151,10 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 |:---|:---|:---|
 | `--sf-button-group--count-gap` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-ui-1--text-space-x)` | `margin-inline-start` |
 | `--sf-button-group--padding` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-group-padding, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-ui-1--space-y-tightness-low)))` | `--sf-button-group--radius`, `gap`, `padding`, `--sf-button-group--segment-padding-block` |
+| `--sf-button-group--plate-fill` | не задана; задают модификаторы, например `.sf-button-group--segmented.sf-button-group--primary`: `var(--sf-button-group-plate-background-color, var(--sf-primary))` | `--sf-button--background-color`, `background-color` |
 | `--sf-button-group--plate-radius` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-button-group-radius, var(--sf-button-radius, var(--sf-radius--ui)))` | `--sf-button-group--radius`, `border-radius` |
+| `--sf-button-group--plate-shadow` | не задана; задают модификаторы, например `.sf-button-group--segmented.sf-button-group--primary`: `none` | `--sf-button--box-shadow`, `box-shadow` |
+| `--sf-button-group--plate-variant` | не задана; задают модификаторы, например `.sf-button-group--segmented.sf-button-group--plate-raised`: `var(--sf-on-surface-raised-variant)` | `--sf-on-surface-variant` |
 | `--sf-button-group--radius` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `calc(var(--sf-button-group--plate-radius) + var(--sf-button-group--padding))` | `border-radius` |
 | `--sf-button-group--segment-padding-block` | не задана; задают модификаторы, например `.sf-button-group--segmented > .sf-button-group-segment`: `max(calc(var(--sf-px) * 0), calc(var(--sf-button--padding-top) - var(--sf-button-group--padding)))` | `padding-top`, `padding-bottom`, `padding-block`, `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-button-group--text-height` | не задана; задают модификаторы, например `.sf-button-group.sf-button-group--segmented`: `var(--sf-text-height-1)` | `line-height` |
@@ -160,4 +163,4 @@ whenLoader(() => SF.Loader.ready('ButtonGroup', () => {
 ## См. также
 
 - [Кнопки](/ru/components/actions/buttons/)
-- [Группа кнопок — смарт-компонент](/ru/smart/actions/button-group/)
+- [Сегментный переключатель — смарт-компонент](/ru/smart/actions/segmented/)

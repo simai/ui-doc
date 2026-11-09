@@ -1,0 +1,13 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col items-cross-center gap-2">
+    <sf-settings id="settings-server" look="rows" label="Уведомления">
+      <script type="application/json" data-sf-settings>
+        {"items": [
+          {"id": "email", "type": "switch", "text": "Письма", "icon": "mail", "value": true},
+          {"id": "push", "type": "switch", "text": "Push-уведомления", "icon": "notifications", "value": false},
+          {"id": "digest", "type": "choice", "text": "Сводка", "value": "week", "options": [{"id": "day", "text": "День"}, {"id": "week", "text": "Неделя"}]}
+        ]}
+      </script>
+    </sf-settings>
+  </div>
+</div>

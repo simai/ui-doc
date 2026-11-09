@@ -6,11 +6,13 @@ profile: reference
 
 # Модальное окно
 
-`<sf-modal>` показывает одну ограниченную задачу поверх страницы:
-подтверждение, короткую форму, подробности. Компонент управляет верхним
-слоем, клавиатурной границей, блокировкой страницы и возвратом фокуса;
-приложение отвечает за смысл действий и данные внутри. Самостоятельный
-долгий процесс лучше открыть отдельной страницей.
+:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.5.6]{variant=outline scheme=on-surface size=1/2}
+
+Модальное окно показывает одну ограниченную задачу поверх страницы:
+подтверждение, короткую форму, подробности. Пока оно открыто, страница за ним
+недоступна, фокус не уходит из окна, а после закрытия возвращается на место;
+смысл действий и данные внутри задаёт приложение. Самостоятельный долгий
+процесс лучше открыть отдельной страницей.
 
 То же на классах — [Модальное окно](/ru/components/overlays-media/modal/):
 окно, которое собирает скрипт компонента из параметров, без тега `<sf-modal>`.
@@ -247,16 +249,11 @@ modal.open();
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
-| `modal-id` | строка | пусто | — | Идентификатор окна: его называют элементы управления с `data-sf-modal-close` и `data-sf-modal-hide`. Пусто — `id` элемента, иначе идентификатор по пути. |
+| `modal-id` | строка | пусто | — | `id` окна: по нему окно закрывают и сворачивают кнопки с `data-sf-modal-close` и `data-sf-modal-hide`. Пусто — `id` тега, а без него — имя по месту окна на странице. |
 | `heading` | строка | — | — | Заголовок окна в стандартной шапке. Пусто — текст на языке страницы (по-английски «Dialog»). |
 | `text` | строка | пусто | — | Простой текст в теле, когда содержимое не задано. |
 | `autoload` | да/нет | нет | — | Открывает окно один раз, без анимации, сразу после отрисовки. |
@@ -279,7 +276,7 @@ modal.open();
 | `height` | строка | пусто | — | Высота панели, длина CSS (задаёт `--sf-modal-height`). |
 | `backdrop-blur` | строка | пусто | — | Размывает страницу за затемнением: атрибут без значения или `true` — сила из `blur-type`, либо сама сила (`none`, `small`, `medium`, `large`). |
 | `blur-type` | строка | `medium` | `none`, `small`, `medium`, `large` | Сила, которую берёт `backdrop-blur`. |
-| `overlay-preset` | строка | `default` | `default`, `focus` | Затемнение: `default` — постоянное чёрное затемнение 60%; `focus` — то же с небольшим размытием фона. |
+| `overlay-preset` | строка | `default` | `default`, `focus` | Затемнение под окном: default — общее чёрное затемнение 64; focus — то же с лёгким размытием фона. |
 | `overlay-class` | строка | пусто | — | Классы затемнения; применяются последними, поэтому сильнее заготовки. |
 | `close-class` | строка | пусто | — | Классы кнопки закрытия. |
 | `surface-class` | строка | пусто | — | Классы поверхности окна. |
@@ -288,16 +285,20 @@ modal.open();
 | `header-class` | строка | пусто | — | Классы шапки. |
 | `body-class` | строка | пусто | — | Классы прокручиваемой области тела. |
 | `content-class` | строка | пусто | — | Классы обёртки содержимого слота. |
-| `footer-class` | строка | пусто | — | Классы подвала. Его действия стоят в конце, между ними --sf-modal-footer-gap (space-1/2); эти значения лежат под утилитами, поэтому утилита здесь всё равно побеждает. |
+| `footer-class` | строка | пусто | — | Классы подвала. Кнопки в подвале стоят в конце с небольшим зазором; ваши классы важнее этих настроек. |
 | `unsaved` | да/нет | нет | — | В окне есть несохранённое: запрос на закрытие (`sf-modal-close`) несёт это как `detail.unsaved`, и страница может спросить, прежде чем дать окну закрыться. |
-| `dismissible` | да/нет | да | — | `false`: Escape, нажатие на затемнение и кнопка закрытия окно не закрывают; `close()` и элементы управления страницы закрывают. |
+| `dismissible` | да/нет | да | — | `false`: Escape, щелчок по затемнению и кнопка закрытия не закрывают окно; закрывают `close()` и кнопки страницы. |
 | `open` | да/нет | нет | — | — |
 | `minimized` | да/нет | нет | — | — |
 | `aria-label` | строка | пусто | — | — |
-| `title` | строка | — | — | Псевдоним с датой для `heading` до 2026-12-01: заголовок окна. |
-| `blur` | строка | пусто | — | Псевдоним с датой для `backdrop-blur` до 2026-12-01. |
-| `hide` | да/нет | нет | — | Псевдоним с датой для `minimizable` до 2026-12-01. |
-| `unclose` | да/нет | нет | — | Псевдоним с датой для `dismissible` до 2026-12-01, с обратным значением. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -305,31 +306,31 @@ modal.open();
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `open(animate: boolean)` | объект | Открывает окно или выводит его на передний план, если оно уже открыто. Отправляет sf-modal-open (отменяемое), затем sf-modal-opened после проецирования; загружает удалённое содержимое, если задан src. options.animate (или логическое значение) управляет анимацией открытия. Возвращает элемент. |
-| `close(reason: any)` | объект | Закрывает окно после sf-modal-close (отменяемое), проигрывает переход закрытия, возвращает фокус и отправляет sf-modal-closed. options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api), его несут оба события. Возвращает элемент. |
+| `open(args?: object\|boolean)` | объект | Открывает окно или выводит его на передний план, если оно уже открыто. Отправляет sf-modal-open (отменяемое), затем sf-modal-opened после проецирования; загружает удалённое содержимое, если задан src. options.animate (или логическое значение) управляет анимацией открытия. Возвращает тег. |
+| `close(args?: object)` | объект | Закрывает окно после sf-modal-close (отменяемое), проигрывает переход закрытия, возвращает фокус и отправляет sf-modal-closed. options.reason говорит почему (close, escape, outside, cancelled, api; по умолчанию api), его несут оба события. Возвращает тег. |
 | `minimize()` | объект | Действие minimize. |
 | `expand()` | объект | Действие expand. |
-| `toggle()` | объект | Вызывает close(), если открыто, иначе open(). Возвращает элемент. |
-| `reloadContent()` | объект | Сбрасывает удалённое содержимое и снова загружает src, даже если окно закрыто и preload выключен. Возвращает элемент. |
-| `confirm(value: object)` | объект | Действие confirm. |
-| `getSlotHtml(name: string)` | строка | Возвращает HTML захваченного содержимого именованного слота — для чтения. Окно не рисует по нему: оно ставит на место собственные узлы страницы (стандарт 1.3.8 §4.5). |
-| `hide()` | объект | Сворачивает открытое накладываемое окно после sf-modal-minimize (отменяемое) и отправляет sf-modal-minimized. Во встроенном режиме ничего не делает. Возвращает элемент. |
-| `show()` | объект | Восстанавливает свёрнутое окно после sf-modal-expand (отменяемое) и отправляет sf-modal-expanded. Возвращает элемент. |
-| `setSrc(src: string)` | объект | Устанавливает атрибут src, прерывает и сбрасывает текущее удалённое содержимое и загружает новый источник, если загрузка сейчас разрешена. Возвращает элемент. |
-| `getModalRoot()` | объект или пусто | Возвращает отрисованный элемент .sf-modal или null до отрисовки. |
-| `onKeyDown(event: KeyboardEvent)` | пусто | Обработчик keydown документа, который модальное окно привязывает само: Escape закрывает верхнее открытое окно, если это разрешает close-on-esc, Tab удерживается внутри него. Не предназначен для вызова хостом. |
+| `toggle()` | объект | Вызывает close(), если открыто, иначе open(). Возвращает тег. |
+| `reloadContent()` | объект | Сбрасывает удалённое содержимое и снова загружает src, даже если окно закрыто и preload выключен. Возвращает тег. |
+| `confirm(args?: object)` | объект | Действие confirm. |
+| `getSlotHtml(name: string)` | строка | Возвращает HTML захваченного содержимого именованного слота — для чтения. Окно не рисует по нему: оно ставит на место собственные узлы страницы. |
+| `hide()` | объект | Сворачивает открытое накладываемое окно после sf-modal-minimize (отменяемое) и отправляет sf-modal-minimized. Во встроенном режиме ничего не делает. Возвращает тег. |
+| `show()` | объект | Восстанавливает свёрнутое окно после sf-modal-expand (отменяемое) и отправляет sf-modal-expanded. Возвращает тег. |
+| `setSrc(src: string)` | объект | Устанавливает атрибут src, прерывает и сбрасывает текущее удалённое содержимое и загружает новый источник, если загрузка сейчас разрешена. Возвращает тег. |
+| `getModalRoot()` | объект или пусто | Возвращает отрисованный элемент.sf-modal или null до отрисовки. |
+| `onKeyDown(event: KeyboardEvent)` | пусто | Обработчик keydown документа, который модальное окно привязывает само: Escape закрывает верхнее открытое окно, если это разрешает close-on-esc, Tab удерживается внутри него. Не предназначен для вызова приложением. |
 | `resetRemoteContent()` | пусто | Очищает загруженный удалённый HTML, ошибку и состояние загрузки и прерывает выполняющийся запрос. |
 | `clearPortal()` | пусто | Снимает отрисовку и удаляет корень портала, в который проецировалось окно, если он есть. |
-| `onBeforeOpen(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-open, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onAfterOpen(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-opened, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onBeforeClose(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-close, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onAfterClose(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-closed, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onBeforeHide(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-minimize, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onAfterHide(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-minimized, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onBeforeShow(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-expand, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onAfterShow(handler: function, options?: object\|boolean)` | объект | Добавляет на хост обработчик sf-modal-expanded, который срабатывает только на события этого модального окна. Возвращает элемент. |
-| `onModalReady(handler: function, options?: object\|boolean)` | объект | Сразу вызывает обработчик с событием modal:ready, если модальное окно уже отрисовано, иначе добавляет обработчик его собственного modal:ready. Возвращает элемент. |
-| `onModalUpdate(handler: function, options?: object\|boolean)` | объект | Добавляет на хост-элементе обработчик modal:update, который срабатывает только на собственные события этого модального окна. Возвращает элемент. |
+| `onBeforeOpen(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-open` у тега, только на события этого модального окна. Возвращает тег. |
+| `onAfterOpen(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-opened` у тега, только на события этого модального окна. Возвращает тег. |
+| `onBeforeClose(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-close` у тега, только на события этого модального окна. Возвращает тег. |
+| `onAfterClose(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-closed` у тега, только на события этого модального окна. Возвращает тег. |
+| `onBeforeHide(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-minimize` у тега, только на события этого модального окна. Возвращает тег. |
+| `onAfterHide(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-minimized` у тега, только на события этого модального окна. Возвращает тег. |
+| `onBeforeShow(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-expand` у тега, только на события этого модального окна. Возвращает тег. |
+| `onAfterShow(handler: function, options?: object\|boolean)` | объект | Подписывает на `sf-modal-expanded` у тега, только на события этого модального окна. Возвращает тег. |
+| `onModalReady(handler: function, options?: object\|boolean)` | объект | Сразу вызывает обработчик с событием modal:ready, если модальное окно уже отрисовано, иначе добавляет обработчик его собственного modal:ready. Возвращает тег. |
+| `onModalUpdate(handler: function, options?: object\|boolean)` | объект | Подписывает на `modal:update` у тега, только на события этого модального окна. Возвращает тег. |
 
 ### События
 
@@ -339,38 +340,28 @@ modal.open();
 |:---|:---|:---|
 | `sf-modal-open` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-opened` | `{ modalId: string, phase: string }` | — |
-| `sf-modal-close` | `{ modalId: string, phase: string, reason: any, unsaved: boolean }` | — |
-| `sf-modal-closed` | `{ modalId: string, phase: string, reason: any, accepted: boolean }` | — |
+| `sf-modal-close` | `{ modalId: string, phase: string, reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", unsaved: boolean }` | — |
+| `sf-modal-closed` | `{ modalId: string, phase: string, reason: "close" \| "escape" \| "outside" \| "cancelled" \| "api", accepted: boolean }` | — |
 | `sf-modal-minimize` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-minimized` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-expand` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-expanded` | `{ modalId: string, phase: string }` | — |
 | `sf-modal-content-upload` | `{ modalId: string, src: string, remote: object }` | — |
 | `sf-modal-content-uploaded` | `{ modalId: string, src: string, remote: object }` | — |
-| `modal:after-close` | `{ modalId: string, phase: string, reason: string, accepted: boolean, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-closed`: подписывайтесь на `sf-modal-closed` |
-| `modal:after-hide` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-minimized`: подписывайтесь на `sf-modal-minimized` |
-| `modal:after-open` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-opened`: подписывайтесь на `sf-modal-opened` |
-| `modal:after-show` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-expanded`: подписывайтесь на `sf-modal-expanded` |
-| `modal:before-close` | `{ modalId: string, phase: string, reason: string, unsaved: boolean, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-close`: подписывайтесь на `sf-modal-close` |
-| `modal:before-hide` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-minimize`: подписывайтесь на `sf-modal-minimize` |
-| `modal:before-open` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-open`: подписывайтесь на `sf-modal-open` |
-| `modal:before-show` | `{ modalId: string, phase: string, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-expand`: подписывайтесь на `sf-modal-expand` |
 | `modal:ready` | `{ component?: any, modal?: any, modalId?: string, root?: any }` | Окно отрисовано впервые. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие. |
 | `modal:update` | `{ component?: any, modal?: any, modalId?: string, root?: any }` | Окно отрисовано повторно после первой отрисовки. Всплывает и с composed: true; detail.modal — sf-modal, отправивший событие. |
-| `modal:before-content-upload` | `{ modalId: string, src: string, remote: object, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-content-upload`: подписывайтесь на `sf-modal-content-upload` |
-| `modal:after-content-upload` | `{ modalId: string, src: string, remote: object, component?: any, modal?: any, root?: any }` | устаревший псевдоним `sf-modal-content-uploaded`: подписывайтесь на `sf-modal-content-uploaded` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-modal>`, контракт `smart.modal` версии `1.4.6` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
-| До прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль диалог (`dialog`); доступное имя обязательно; клавиши `Tab`, `Shift+Tab`, `Escape` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/modal` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-modal` |
+| Тег | `<sf-modal>`, контракт `smart.modal` версии `1.5.6` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
+| До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Esc`. |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/modal` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-modal` |
 
 ## См. также
 

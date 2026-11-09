@@ -3463,23 +3463,6 @@
       ]
     },
     {
-      "place": "content/ru/smart/actions/button-group.md",
-      "units": [
-        {
-          "id": "smart.button",
-          "version": "1.2.1",
-          "content_sha256": "3d030ebfaa696851db0261fbb2d2a46483c2770aa2ec714e29c0f94d6419ab7d",
-          "source": "simai/ui-source"
-        },
-        {
-          "id": "smart.button-group",
-          "version": "1.1.5",
-          "content_sha256": "7c7c16716e163fdbb1ab4442fb9d62a09e2a6f33aa47b26b4b6a080cd4fcb524",
-          "source": "simai/ui-source"
-        }
-      ]
-    },
-    {
       "place": "content/ru/smart/actions/buttons.md",
       "units": [
         {
@@ -3551,14 +3534,20 @@
       "units": [
         {
           "id": "smart.button",
-          "version": "1.2.1",
-          "content_sha256": "3d030ebfaa696851db0261fbb2d2a46483c2770aa2ec714e29c0f94d6419ab7d",
+          "version": "1.5.0",
+          "content_sha256": "e1d0328824f240083d4a8603121c06994e32f7acf9bd33b48f313a32b828b907",
           "source": "simai/ui-source"
         },
         {
           "id": "smart.button-group",
-          "version": "1.1.5",
-          "content_sha256": "7c7c16716e163fdbb1ab4442fb9d62a09e2a6f33aa47b26b4b6a080cd4fcb524",
+          "version": "1.2.0",
+          "content_sha256": "1ad38d3b5548a7d6f2159be5b49c9aaa3a1f100fe285e613aab2b38412cccb43",
+          "source": "simai/ui-source"
+        },
+        {
+          "id": "smart.pagination",
+          "version": "1.3.7",
+          "content_sha256": "d32657f575facb5d86a7c98ba64d86de46fadfbfc13f83675a40c9d82f5c58f5",
           "source": "simai/ui-source"
         }
       ]

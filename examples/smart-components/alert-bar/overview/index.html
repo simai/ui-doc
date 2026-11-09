@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-3">
+  <sf-alert-bar id="alert-bar-overview">
+    <script type="application/json" data-sf-settings>
+      {"items": [
+        {"id": "swap", "level": "warning", "text": "Подкачка занята на 92%: серверу не хватает памяти, сайты замедляются.", "source": "Сервер", "time": "2026-10-27T08:55:00Z", "action": {"label": "Посмотреть память", "href": "#memory"}, "acknowledge": {"label": "Отметить, что видели"}},
+        {"id": "disk", "level": "danger", "text": "Диск заполнен на 98%: сайты перестанут сохранять файлы и базы.", "source": "Сервер", "time": "2026-10-27T08:58:00Z", "action": {"label": "Освободить место", "href": "#disk"}},
+        {"id": "update", "level": "info", "text": "Доступна новая версия панели 0.3.1.", "source": "Обновление", "action": {"label": "Посмотреть", "href": "#update"}}
+      ]}
+    </script>
+  </sf-alert-bar>
+  <output id="alert-bar-overview-output" class="p-x-1 color-on-surface-variant">Событий пока нет</output>
+</div>

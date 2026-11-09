@@ -1,0 +1,39 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
+    <div class="flex flex-col gap-2">
+      <sf-progress-run label="Обновление панели" hideable>
+        <script type="application/json" data-sf-settings>
+          {"steps": [
+            {"id": "backup", "title": "Резервная копия", "state": "done", "duration": 42000},
+            {"id": "update", "title": "Обновление панели", "state": "done", "duration": 3723000},
+            {"id": "check", "title": "Проверка", "state": "skipped"}
+          ], "result-text": "Панель обновлена"}
+        </script>
+      </sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">готово</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-progress-run label="Создание сайта demo.test" retryable hideable>
+        <script type="application/json" data-sf-settings>
+          {"steps": [
+            {"id": "dns", "title": "Адрес demo.test", "state": "done", "duration": 1200},
+            {"id": "files", "title": "Файлы сайта", "state": "failed", "duration": 64000, "text": "Не хватает места на диске"},
+            {"id": "db", "title": "База данных", "state": "skipped"}
+          ], "result-text": "Не хватает места на диске: освободите 2 ГБ и повторите."}
+        </script>
+      </sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">не удалось</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-progress-run label="Импорт каталога" run-state="cancelled" retryable hideable>
+        <script type="application/json" data-sf-settings>
+          {"steps": [
+            {"id": "read", "title": "Чтение файла", "state": "done", "duration": 3000},
+            {"id": "rows", "title": "Загрузка товаров", "state": "waiting"}
+          ]}
+        </script>
+      </sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">run-state="cancelled"</span>
+    </div>
+  </div>
+</div>

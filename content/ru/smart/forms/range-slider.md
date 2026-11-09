@@ -5,7 +5,9 @@ description: "Выбирает одно значение или две гран�
 
 # Слайдер диапазона
 
-`<sf-slider-range>` — шкала с одной или двумя ручками для приблизительной
+:badge[sf-slider-range]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+
+Слайдер диапазона — шкала с одной или двумя ручками для приблизительной
 настройки: цены, громкости, расстояния. Когда важно точное число, добавьте
 рядом [поле ввода](/ru/smart/forms/inputs/).
 
@@ -147,15 +149,10 @@ price.setValue([10000, 30000]);
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `min` | число | `0` | — | — |
 | `max` | число | `100` | — | — |
 | `start` | строка | пусто | — | — |
@@ -176,7 +173,14 @@ price.setValue([10000, 30000]);
 | `disabled` | да/нет | нет | — | — |
 | `value` | строка | пусто | — | — |
 | `aria-label` | строка | пусто | — | — |
-| `prefix` | строка | пусто | — | Псевдоним с датой для `prefix-text` до 2026-12-01. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -191,7 +195,7 @@ price.setValue([10000, 30000]);
 | `setState(nextState: object)` | объект | Применяет ключи: value — через setValue, multiple явно задаёт число ручек, disabled — через setDisabled; любой другой ключ записывается как атрибут в kebab-case (false, null, undefined или пустое значение удаляет его, true устанавливает пустым). |
 | `onUpdateValue(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-range-slider-update; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется. |
 | `onSliderUpdate(handler: function, options?: object\|boolean)` | объект | То же, что onUpdateValue. |
-| `onChange(handler: function, options?: object)` | — | Подписывается на change — зафиксированное значение: handler(value, detail, event). Возвращает элемент. |
+| `onChange(handler: function, options?: object)` | — | Подписывается на change — зафиксированное значение: handler(value, detail, event). Возвращает тег. |
 | `onSliderChange(handler: function, options?: object\|boolean)` | объект | То же, что onChange: подписывается на change — каноническое имя. |
 | `onSet(handler: function, options?: object\|boolean)` | объект | Добавляет обработчик sf-range-slider-set; обработчик вызывается с (value, detail, event). Обработчик, не являющийся функцией, игнорируется. |
 | `onSliderSet(handler: function, options?: object\|boolean)` | объект | То же, что onSet. |
@@ -206,21 +210,19 @@ price.setValue([10000, 30000]);
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `change` | `{ values: array, value: object, handleCount: number, handle: number }` | Пользователь зафиксировал значение (конец перетаскивания, щелчок, клавиша); всплывает от корня слайдера с `values`, `value`, `handleCount` и `handle`. Значение, установленное из кода, не является изменением. Имя для привязки. |
-| `sf-range-slider-change` | `{ component: object, values: array, value: number\\|array, handleCount: number, handle: number }` | устаревший псевдоним `change`: подписывайтесь на `change` |
-| `onSliderChange` | не описан | устаревший псевдоним `change`: подписывайтесь на `change` |
+| `change` | `{ values: array, value: object, handleCount: number, handle: number }` | Человек выбрал значение: отпустил ползунок, щёлкнул или нажал клавишу; в `detail` — `values`, `value`, `handleCount` и `handle`. Значение, заданное из кода, событие не присылает. На это событие и подписывайтесь. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
 | Тег | `<sf-slider-range>`, контракт `smart.slider-range` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; описан: манифест и сценарий есть, продуктовой приёмки нет |
-| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль slider; доступное имя обязательно; клавиши `Tab`, `ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/slider-range` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-slider-range` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
+| До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как ползунок; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`. |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/slider-range` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-slider-range` |
 
 ## См. также
 

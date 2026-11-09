@@ -3,6 +3,7 @@
   "schema_version": 2,
   "pages": {
     "avatar-group": "smart/content/avatars.md",
+    "button-group": "smart/actions/segmented.md",
     "button-close": "smart/actions/close.md",
     "button-copy": "smart/actions/copy-button.md",
     "button-icon": "smart/actions/icon-buttons.md",
@@ -29,9 +30,15 @@
     "view": "pro/admin/table.md",
     "view-properties": "pro/admin/property-view.md",
     "view-table": "pro/admin/table.md",
-    "editor": "pro/editor/editor.md"
+    "editor": "pro/editor/editor.md",
+    "alert-bar": "smart/feedback/alert-bar.md",
+    "list": "smart/content/list.md",
+    "list-feed": "smart/content/list-feed.md"
   },
-  "skip": {},
+  "skip": {
+    "wizard": "New in ui-b58b5dec35e4 (sf-wizard); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
+    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
+  },
   "suppress": {
     "popover": {
       "sections": [
@@ -40,5 +47,60 @@
       "reason": "The ui-9fb0297bb5c2 and ui-ec56cef08625 manifests carry sf-switch's accessibility (role switch); reported to ui-source 2026-10-12."
     }
   },
-  "why": "Folders renamed by the R2 tag renames (ui-c3015f76bcc2; the old tags stay aliases until 2027-01-01) keep the pages written under the old names."
+  "why": "Folders renamed by the R2 tag renames (ui-c3015f76bcc2; the old tags stay aliases until 2027-01-01) keep the pages written under the old names.",
+  "event_summaries": {
+    "button": {
+      "sf-button-press": "Нажатие человеком: щелчок, Enter, пробел или сочетание `shortcut-listen`; вызов `click()` у тега его не присылает, недоступная кнопка и кнопка в загрузке — тоже"
+    },
+    "button-copy": {
+      "sf-button-copy-copied": "Текст попал в буфер обмена: `text` — что скопировано, `method` — как: `native` — через буфер обмена браузера, `legacy` — запасным способом браузера",
+      "sf-button-copy-copy-failed": "Скопировать не удалось: `empty_source` — копировать нечего, `missing_target` — элемента из `target` нет, `ambiguous_source` — заданы и `value`, и `target`, `denied` — браузер не дал доступ к буферу, и кнопка выделила текст для Ctrl+C"
+    },
+    "file-download": {
+      "sf-file-download-download": "Человек нажал на файл. Событие отменяемое: `preventDefault()` останавливает скачивание или переход, и страница может скачать файл сама"
+    }
+  },
+  "attribute_summaries": {
+    "button-copy": {
+      "size": "Размер кнопки по общей линейке высот: `1/2` — по умолчанию, `1` — рядом с полем размера `1`",
+      "appearance": "Вид кнопки: `link` и `ghost` — без фона, пока не наведут, `outline` — с рамкой, `tonal` — с мягкой заливкой",
+      "success-icon": "Значок после копирования, на время `duration`",
+      "success-text": "Свои слова сообщения об удачном копировании; пусто — «Скопировано»",
+      "error-text": "Свои слова сообщения, когда скопировать не удалось"
+    },
+    "file-download": {
+      "target": "Где открыть ссылку без `download`, как у атрибута `target` ссылки HTML: `_blank` — в новой вкладке, `_self` — на месте",
+      "aria-label": "Имя ссылки или кнопки для экранного диктора вместо имени и размера файла; назовите в нём файл"
+    }
+  },
+  "slots": {
+    "confirm": {
+      "description": "Пояснение под вопросом, когда одного вопроса мало: что останется, что пропадёт"
+    }
+  },
+  "css_variables": {
+    "confirm": {
+      "--sf-confirm-gap": "Расстояние между вопросом, пояснением и ответами",
+      "--sf-confirm-inset": "Внутренний отступ карточки (`appearance=\"card\"`)",
+      "--sf-confirm-radius": "Скругление карточки",
+      "--sf-confirm-background-color": "Заливка карточки",
+      "--sf-confirm-border-color": "Цвет края карточки"
+    },
+    "file-download": {
+      "--sf-download-file-background-color": "Заливка в покое; у наведения, нажатия и недоступного состояния свои",
+      "--sf-download-file-border-color": "Цвет рамки в покое",
+      "--sf-download-file-radius": "Скругление",
+      "--sf-download-file-padding": "Внутренний отступ",
+      "--sf-download-file-gap": "Промежуток между иконкой, именем и размером",
+      "--sf-download-file-icon-size": "Размер иконки",
+      "--sf-download-file-icon-color": "Цвет иконки"
+    },
+    "button-copy": {
+      "--sf-copy-button-display": "Как кнопка стоит в строке: значение `display`",
+      "--sf-copy-button-vertical-align": "Выравнивание кнопки по строке текста: значение `vertical-align`",
+      "--sf-copy-button-pending-opacity": "Прозрачность кнопки, пока идёт копирование",
+      "--sf-copy-button-success-color": "Цвет значка и подписи после удачного копирования",
+      "--sf-copy-button-error-color": "Цвет значка и подписи, когда скопировать не удалось"
+    }
+  }
 }

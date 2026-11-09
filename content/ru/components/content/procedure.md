@@ -79,7 +79,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-procedure-marker-background` | Заливка маркера шага; у выполненного и текущего шага — своя. | `var(--sf-surface-container)` |
+| `--sf-procedure-marker-background-color` | Заливка отметки шага; у выполненного и текущего шага своя. | `var(--sf-surface-container)` |
 | `--sf-procedure-marker-color` | Цвет номера в маркере шага. | `var(--sf-on-surface)` |
 | `--sf-procedure-line-color` | Цвет линии от маркера к следующему. | `var(--sf-outline-variant)` |
 | `--sf-procedure-line-width` | Толщина линии между маркерами. | `var(--sf-px)` |
@@ -88,7 +88,7 @@ profile: reference
 
 ```css
 .sf-procedure {
-  --sf-procedure-marker-background: var(--sf-surface-container);
+  --sf-procedure-marker-background-color: var(--sf-surface-container);
 }
 ```
 

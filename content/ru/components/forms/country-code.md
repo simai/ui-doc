@@ -190,7 +190,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-border-color` | Граница поля в покое; у наведения, фокуса, ошибки и выключенного состояния свои. | `var(--sf-outline)` |
 | `--sf-country-code-radius` | Скругление углов поля. | `var(--sf-ui-radius-default)` |
 | `--sf-country-code-color` | Цвет номера в покое; у выключенного состояния свой. | `var(--sf-on-surface)` |
-| `--sf-country-code-list-background-color` | Заливка открытого списка стран. | `var(--sf-elevation-3--surface)` |
+| `--sf-country-code-list-background-color` | Заливка открытого списка стран. | `var(--sf-surface-popup)` |
 
 ```css
 .sf-country-code {
@@ -251,8 +251,8 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-label--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-label`: `transparent` | `background-color` |
 | `--sf-country-code-label--gap` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-label`: `var(--sf-space-1/4)` | `gap` |
 | `--sf-country-code-left--background-color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-left`: `transparent` | `background-color` |
-| `--sf-country-code-list--background-color` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-country-code-list-background-color, var(--sf-elevation-3--surface))` | `background-color` |
-| `--sf-country-code-list--box-shadow` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-elevation-3--shadow)` | `box-shadow` |
+| `--sf-country-code-list--background-color` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-country-code-list-background-color, var(--sf-surface-popup))` | `background-color` |
+| `--sf-country-code-list--box-shadow` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-shadow-overlay)` | `box-shadow` |
 | `--sf-country-code-list--padding-bottom` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-space-1/3)` | `padding-bottom` |
 | `--sf-country-code-list--padding-inline-end` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-space-1/3)` | `padding-inline-end`, `--sf-country-code-item--padding-inline-end` |
 | `--sf-country-code-list--padding-inline-start` | не задана; задают модификаторы, например `.sf-country-code.open .sf-country-code-list`: `var(--sf-space-1/3)` | `padding-inline-start`, `--sf-country-code-item--padding-inline-start` |

@@ -24,8 +24,8 @@ document.querySelectorAll('[data-context-menu-demo="profile"]').forEach((demo) =
     {id: 'sign-out', text: 'Выйти', icon: 'logout', danger: true},
   ];
 
-  anchor.addEventListener('click', () => menu.toggleFor(anchor));
-  menu.addEventListener('sf-context-menu-select', (event) => {
+  anchor.addEventListener('click', () => menu.toggleFor({anchor}));
+  menu.addEventListener('sf-menu-context-select', (event) => {
     const {id, group} = event.detail;
     result.textContent = group ? `Тема: ${id}.` : `Выбран пункт ${id}.`;
   });

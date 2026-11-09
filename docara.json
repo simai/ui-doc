@@ -56,6 +56,15 @@
   "page_transforms": [
     {
       "command": ["node", "scripts/highlight-code.mjs"]
+    },
+    {
+      "command": ["node", "scripts/code-copy-root.mjs"]
+    },
+    {
+      "command": ["node", "scripts/example-frame-permissions.mjs"]
+    },
+    {
+      "command": ["node", "scripts/inline-code-wrap.mjs"]
     }
   ],
   "base_url": "/",

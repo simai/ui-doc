@@ -5,10 +5,12 @@ description: "Выбирает, создаёт, переименовывает, 
 
 # Выбор профиля
 
-`<sf-profile-picker>` — один способ работать с профилями: профилями меню,
-видами записи и всем, у чего есть профили. В свёрнутом виде это кнопка,
-похожая на поле: «Профиль: Обычный». В открытой панели всё делается на месте.
-Им пользуются меню администратора и представление свойств Larena.
+:badge[sf-profile-picker]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+
+Выбор профиля даёт одно место для работы с профилями: профилями меню, видами
+записи и всем, у чего есть профили. В свёрнутом виде это кнопка, похожая на
+поле: «Профиль: Обычный», а в открытой панели всё делается на месте. Им
+пользуются меню администратора и представление свойств Larena.
 
 ## Пример
 
@@ -109,23 +111,26 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
 | `label` | строка | — | — | Как здесь называется профиль («Профиль», «Вид»); без значения — «Профиль» на языке страницы. |
 | `size` | строка | `1/2` | `1/2`, `1` | — |
 | `resettable` | да/нет | нет | — | Показывает внизу «Сбросить к стандартному». |
-| `message` | строка | пусто | — | Почему хост отказал в последнем действии; показывается в панели. |
+| `message` | строка | пусто | — | Почему приложение отказало в последнем действии; показывается в панели. |
 | `disabled` | да/нет | нет | — | — |
 | `current` | строка | пусто | — | Идентификатор текущего профиля. |
-| `profiles` | список | — | — | Профили, которые предлагает хост, `[{id, label, shared, builtin, editable}]`: `builtin` — стандартный, его не переименовывают и не удаляют; при `editable: false` профиль можно выбрать, но не изменить. Выбор свой список сам не меняет. |
+| `profiles` | список | — | — | Профили, которые предлагает приложение, `[{id, label, shared, builtin, editable}]`: `builtin` — стандартный, его не переименовывают и не удаляют; при `editable: false` профиль можно выбрать, но не изменить. Выбор свой список сам не меняет. |
 | `rights` | объект | — | — | Что этот человек может создавать, `{create: {personal, shared}}`; если ни того, ни другого, новый профиль не предлагается. Сброс задаёт настройка `resettable`. |
+
+#### Общие для всех компонентов
+
+| Атрибут | Тип | По умолчанию | Значения | Что делает |
+|:---|:---|:---|:---|:---|
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -144,27 +149,22 @@ picker.addEventListener('sf-profile-picker-select', (event) => openProfile(event
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
 | `sf-profile-picker-select` | `{ id: string, ids: array }` | — |
-| `sf-profile-picker-create` | `{ label: string, shared: boolean, from: string, kind: any }` | — |
+| `sf-profile-picker-create` | `{ label: string, shared: boolean, from: string, kind: "personal" \| "shared" }` | — |
 | `sf-profile-picker-rename` | `{ id: string, label: string, title: string }` | — |
 | `sf-profile-picker-delete` | `{ id: string, ids: array }` | — |
 | `sf-profile-picker-reset` | `{ id: string }` | — |
-| `sf-profile-select` | `{ id: string, ids: array }` | устаревший псевдоним `sf-profile-picker-select`: подписывайтесь на `sf-profile-picker-select` |
-| `sf-profile-create` | `{ label: string, shared: boolean, from: string, kind: any }` | устаревший псевдоним `sf-profile-picker-create`: подписывайтесь на `sf-profile-picker-create` |
-| `sf-profile-rename` | `{ id: string, label: string, title: string }` | устаревший псевдоним `sf-profile-picker-rename`: подписывайтесь на `sf-profile-picker-rename` |
-| `sf-profile-delete` | `{ id: string, ids: array }` | устаревший псевдоним `sf-profile-picker-delete`: подписывайтесь на `sf-profile-picker-delete` |
-| `sf-profile-reset` | `{ id: string }` | устаревший псевдоним `sf-profile-picker-reset`: подписывайтесь на `sf-profile-picker-reset` |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.1.10` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль меню (`menu`); доступное имя рекомендуется; клавиши `ArrowUp`, `ArrowDown`, `Home`, `End`, `Enter`, `Space`, `F2`, `Delete`, `Escape` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/profile-picker` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-profile-picker` |
+| Тег | `<sf-profile-picker>`, контракт `smart.profile-picker` версии `1.2.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Читается как меню; желательна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `Home`, `End`, `Enter`, `Пробел`, `F2`, `Delete`, `Esc`. |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/profile-picker` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-profile-picker` |
 
 ## См. также
 

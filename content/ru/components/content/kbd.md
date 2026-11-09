@@ -56,29 +56,45 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-kbd` |
-| Модификаторы | `sf-kbd--group` |
+| Части | `sf-kbd-join` |
+| Модификаторы | `sf-kbd--group`, `sf-kbd--square` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
 ## Переменные
 
-Компонент читает свои переменные, а модификаторы задают им значения; таблица показывает, из чего складывается вид. Переменные компонента — его внутренняя проводка, а не поверхность настройки: их имена и устройство могут меняться. Вид проекта меняют общие токены, а глубокий вид смарт-компонента — его шаблон (см. [Переменные компонента](/ru/guide/components/what-is/#переменные-компонента)). Значение по умолчанию — из базового правила блока (`.sf-kbd`); переменную без него задают только модификаторы.
+### Настройка
+
+Эти переменные — поверхность настройки компонента. Их имена стабильны: переименовать или убрать такую переменную можно только через журнал изменений, с предупреждением, как атрибут. Framework их не задаёт, поэтому значение можно поставить на сам компонент (`kbd`) или на любого предка. Переменные действуют на спокойный вид; наведение, фокус, нажатие, недоступность и ошибка рисуются поверх, поэтому состояния остаются видны.
+
+| Переменная | Что задаёт | По умолчанию |
+|:---|:---|:---|
+| `--sf-kbd-size` | Высота и наименьшая ширина плашки и клавиши относительно их букв. | `1.6em` |
+| `--sf-kbd-padding-inline` | Отступ по бокам от букв плашки или клавиши. | `0.4em` |
+| `--sf-kbd-gap` | Промежуток между клавишами сочетания, нарисованного плашками или клавишами. | `0.25em` |
+| `--sf-kbd-font-size` | Размер букв плашки и клавиши относительно текста вокруг. | `0.8125em` |
+| `--sf-kbd-font-family` | Шрифт плашки и клавиши. | `var(--sf-text--family)` |
+| `--sf-kbd-radius` | Скругление плашки и клавиши. | `var(--sf-radius--ui)` |
+| `--sf-kbd-background-color` | Заливка плашки (в кнопке или поле): смесь с цветом текста вокруг. | `color-mix(in srgb, currentColor 12%, transparent)` |
+| `--sf-kbd-color` | Цвет букв плашки (в кнопке или поле): смесь с цветом текста вокруг. | `color-mix(in srgb, currentColor 80%, transparent)` |
+| `--sf-kbd-border-color` | Рамка клавиши и её нижний край (в тексте). | `var(--sf-outline-variant)` |
+| `--sf-kbd-plain-color` | Цвет знаков без плашек (в меню или списке выбора). | `var(--sf-on-surface-variant)` |
+
+```css
+kbd {
+  --sf-kbd-radius: 0;
+}
+```
+
+### Устройство
+
+Остальные переменные — внутренняя проводка компонента: модификаторы задают им значения, а части их читают. Их имена и устройство могут меняться в любом выпуске, поэтому проект их не задаёт. Значение по умолчанию — из базового правила блока (`.sf-kbd`); переменную без него задают только модификаторы.
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-kbd--background` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-surface-container)` | `background` |
-| `--sf-kbd--border-color` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-outline-variant)` | `border` |
-| `--sf-kbd--border-width` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-px)` | `border` |
-| `--sf-kbd--color` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-on-surface)` | `color` |
-| `--sf-kbd--font-family` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-mono)` | `font-family` |
-| `--sf-kbd--font-size` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-text-size-1/3)` | `font-size` |
-| `--sf-kbd--font-weight` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-font-weight-medium)` | `font-weight` |
-| `--sf-kbd--line-height` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-text-height-1/3)` | `line-height` |
-| `--sf-kbd--min-block-size` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-text-height-1/3)` | `min-height`, `min-block-size` |
-| `--sf-kbd--min-inline-size` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-text-height-1/3)` | `min-width`, `min-inline-size` |
-| `--sf-kbd--padding-block` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-space-1/4)` | `padding-top`, `padding-bottom`, `padding-block` |
-| `--sf-kbd--padding-inline` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-space-1/2)` | `padding-left`, `padding-right`, `padding-inline` |
-| `--sf-kbd--radius` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-radius--ui)` | `border-radius` |
+| `--sf-kbd--inline-size` | не задана; задают модификаторы, например `:where(kbd.sf-kbd--square, .sf-kbd.sf-kbd--square)`: `var(--sf-kbd--size)` | `width`, `inline-size` |
+| `--sf-kbd--padding-inline` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group):not(:has(> kbd)), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-kbd-padding-inline, 0.4em)` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-kbd--size` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group):not(:has(> kbd)), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-kbd-size, 1.6em)` | `min-width`, `min-inline-size`, `height`, `block-size`, `--sf-kbd--inline-size` |
 
 ## См. также
 

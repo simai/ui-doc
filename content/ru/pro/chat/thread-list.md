@@ -5,6 +5,8 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
+:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[2.0.1]{variant=outline scheme=on-surface size=1/2}
+
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
 открытый, даёт переименовать разговор на месте, отправить его в архив и
@@ -97,11 +99,11 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 
 ### Аватар строки
 
-`avatar` (1.6.0): `shape` — `circle` (по умолчанию, один человек) или `square` (группа,
+`avatar`: `shape` — `circle` (по умолчанию, один человек) или `square` (группа,
 канал); `icon` — знак вместо инициалов (канал, агент, бот; имя значка Framework),
 картинка `image-url` важнее знака. Нет `avatar` — нет и колонки под него: в списке
 только с ИИ-разговорами пустого места слева не остаётся. Инициалы рисуются
-приглушённым цветом по названию разговора (1.6.1, `sf-avatar` `tone="auto"`, см.
+приглушённым цветом по названию разговора (`sf-avatar` `tone="auto"`, см.
 [Цвет инициалов](/ru/smart/content/avatar/#цвет-инициалов)): у одного
 названия цвет всегда один.
 `activity` (`running`, `waiting`, `done`, `stopped`, `failed`) is where the work in the
@@ -127,7 +129,7 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -135,7 +137,7 @@ noted in `SF.deprecations`.
 |:---|:---|
 | Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.chat-threads`, версия `1.7.0` |
+| Контракт | `smart.chat-threads`, версия `2.0.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -143,66 +145,47 @@ noted in `SF.deprecations`.
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `has-more` — `boolean`, по умолчанию `false`. Есть следующая страница: когда показался конец, список её просит.
 - `archived` — `boolean`, по умолчанию `false`. Показывает архив: переход обратно, «Вернуть» вместо «В архив», без нового разговора.
 - `no-create` — `boolean`, по умолчанию `false`. Без кнопки «Новый разговор».
 - `no-manage` — `boolean`, по умолчанию `false`. Без действий строки: нет меню и F2.
 - `no-archive` — `boolean`, по умолчанию `false`. Без архива: нет перехода в него и нет «В архив» среди действий строки.
-- `group-by` — `string`, по умолчанию `day`, значения: `day`, `none`. day: «Сегодня», «Вчера», «Раньше» по updated_at в часовом поясе читателя. none: один список.
+- `group-by` — `string`, по умолчанию `day`, значения: `day`, `none`. `day` — группы «Сегодня», «Вчера», день недели, дата по `updated-at` в часовом поясе читателя (как в `sf-list`). `none` — один список.
 - `label` — `string`. Доступное имя навигации; пусто — «Разговоры» или «Архив» на языке страницы.
 - `loading` — `boolean`, по умолчанию `false`. Форма списка, пока загружается первая страница.
 - `status` — `string`, по умолчанию пусто. Фраза вместо списка (ошибка); пустая строка её убирает.
-- `selected` — `string`, по умолчанию пусто. открытый разговор; нажатие просит о нём через open {id}, а хост записывает его обратно
+- `selected` — `string`, по умолчанию пусто. открытый разговор; нажатие просит о нём через open {id}, а приложение записывает его обратно.
 - `threads` — `array` из `object`, по умолчанию `[]`.
 - `create-commands` — `array` из `object`, по умолчанию `[]`. Команды в шапке вместо «Нового разговора»: [{id, text, icon?}], свойство. Нажатая команда сообщает create {kind: id}. Если список пуст, остаётся один «Новый разговор», как раньше; no-create и архив убирают и команды.
 - `actions` — `array`, по умолчанию `[]`.
 
-Прежние имена:
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
 ### Методы
 
-- `setThreads(threads: array, hasMore: boolean)` — возвращает `object`. Заменяет список; остаются только разговоры показанного вида (в архиве или нет).
-- `appendThreads(threads: array, hasMore: boolean)` — возвращает `object`. Следующая страница после показанных; разговор, который уже есть в списке, не повторяется.
-- `upsert(thread: object)` — возвращает `object`. Новый или изменившийся разговор; встаёт на место по своей дате.
-- `removeThread(id: any)` — возвращает `object`. Убирает один разговор из списка.
+- `setThreads(args: object|list)` — возвращает `object`. Заменяет список; остаются только разговоры показанного вида (в архиве или нет).
+- `appendThreads(args: object|list)` — возвращает `object`. Следующая страница после показанных; разговор, который уже есть в списке, не повторяется.
+- `upsert(args: object)` — возвращает `object`. Новый или изменившийся разговор; встаёт на место по своей дате.
+- `removeThread(args: object|string)` — возвращает `object`. Убирает один разговор из списка.
 - `moreFailed()` — возвращает `object`. Следующую страницу загрузить не удалось: достижение конца попросит снова.
-- `rename(id: any)` — возвращает `object`. Начинает переименование разговора на месте, как F2.
-- `openMenu(id: any)` — возвращает `object`. Открывает действия разговора, как «⋯» в строке и Shift+F10.
-- `setLoading(loading: boolean)` — возвращает `null`. Пока загружается первая страница: форма списка и занятость списка. Устарело: настройка `loading` (до 2026-12-01).
-- `setStatus(message: string)` — возвращает `null`. Фраза вместо списка (ошибка); пусто — убирает её. Устарело: настройка `status` (до 2026-12-01).
+- `rename(args: object|string)` — возвращает `object`. Начинает переименование разговора на месте, как F2.
+- `openMenu(args: object|string)` — возвращает `object`. Открывает действия разговора, как «⋯» в строке и Shift+F10.
+- `setLoading(loading: boolean)` — возвращает `null`. Пока загружается первая страница: форма списка и занятость списка.
+- `setStatus(message: string)` — возвращает `null`. Фраза вместо списка (ошибка); пусто — убирает её.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
 - `sf-chat-threads-create` — `detail`: `{ kind?: string }`. Нажали «Новый разговор» или команду создания (`kind` — её `id`).
-- `sf-chat-threads-open` — `detail`: `{ id: any }`. Человек просит открыть беседу (словарь open); хост записывает `selected` обратно. Имя версии 1.0 `sf-thread-list-select` отправляется после него до 2026-12-01.
-- `sf-chat-threads-rename` — `detail`: `{ id: any, title: string }`. Разговор переименовали на месте; новое название видно сразу. Хост, который не может его сохранить, возвращает прежнее название через upsert.
-- `sf-chat-threads-archive` — `detail`: `{ ids?: array, id: any }`. Архивировать `{ids, id}` (словарь archive; id остаётся для слушателей версии 1.0).
-- `sf-chat-threads-restore` — `detail`: `{ ids?: array, id: any }`. Восстановить `{ids, id}` (словарь restore). Имя версии 1.0 `sf-thread-list-unarchive` отправляется после него до 2026-12-01.
-- `sf-chat-threads-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий хоста над строкой: `{action, scope: entry, ids, id}` (словарь apply). Имя версии 1.0 `sf-thread-list-action` отправляется после него до 2026-12-01.
+- `sf-chat-threads-open` — `detail`: `{ id: any }`. Человек просит открыть беседу; приложение записывает `selected` обратно.
+- `sf-chat-threads-rename` — `detail`: `{ id: any, title: string }`. Разговор переименовали на месте; новое название видно сразу. Приложение, которое не может его сохранить, возвращает прежнее название через upsert.
+- `sf-chat-threads-archive` — `detail`: `{ ids?: array, id: any }`. Архивировать `{ids, id}` (id остаётся для слушателей версии 1.0).
+- `sf-chat-threads-restore` — `detail`: `{ ids?: array, id: any }`. Восстановить `{ids, id}`.
+- `sf-chat-threads-apply` — `detail`: `{ action: string, scope?: any, ids?: array, id: any }`. Одно из действий приложения над строкой: `{action, scope: entry, ids, id}`.
 - `sf-chat-threads-load-more` — `detail`: `{ direction: any }`. Конец списка показался на экране, пока `has-more`: `{direction: after}`.
-- `sf-chat-threads-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно. Имя версии 1.0 `sf-thread-list-view` отправляется после него до 2026-12-01.
-- `sf-thread-list-select` — устаревший псевдоним события `sf-chat-threads-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-open`.
-- `sf-thread-list-unarchive` — устаревший псевдоним события `sf-chat-threads-restore`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-restore`.
-- `sf-thread-list-action` — устаревший псевдоним события `sf-chat-threads-apply`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-apply`.
-- `sf-thread-list-view` — устаревший псевдоним события `sf-chat-threads-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-toggle`.
-- `sf-thread-list-create` — устаревший псевдоним события `sf-chat-threads-create`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-create`.
-- `sf-thread-list-open` — устаревший псевдоним события `sf-chat-threads-open`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-open`.
-- `sf-thread-list-rename` — устаревший псевдоним события `sf-chat-threads-rename`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-rename`.
-- `sf-thread-list-archive` — устаревший псевдоним события `sf-chat-threads-archive`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-archive`.
-- `sf-thread-list-restore` — устаревший псевдоним события `sf-chat-threads-restore`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-restore`.
-- `sf-thread-list-apply` — устаревший псевдоним события `sf-chat-threads-apply`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-apply`.
-- `sf-thread-list-load-more` — устаревший псевдоним события `sf-chat-threads-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-load-more`.
-- `sf-thread-list-toggle` — устаревший псевдоним события `sf-chat-threads-toggle`: приходит с тем же `detail`, подписывайтесь на `sf-chat-threads-toggle`.
+- `sf-chat-threads-toggle` — `detail`: `{ archived: boolean }`. Архив или путь обратно.
 
 ### Доступность
 
@@ -219,5 +202,5 @@ noted in `SF.deprecations`.
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-threads`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-threads`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

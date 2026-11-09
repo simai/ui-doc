@@ -66,6 +66,13 @@
         ]
       },
       {
+        "key": "licence",
+        "label": "Лицензия",
+        "property_type": "lookup",
+        "source": "licences",
+        "width": "half"
+      },
+      {
         "key": "tags",
         "label": "Метки",
         "property_type": "choices",
@@ -112,6 +119,12 @@
         "width": "full"
       },
       {
+        "key": "body",
+        "label": "Текст страницы",
+        "property_type": "html",
+        "width": "full"
+      },
+      {
         "key": "version",
         "label": "Версия",
         "property_type": "string",
@@ -139,6 +152,12 @@
         "key": "checked_at",
         "label": "Проверено",
         "property_type": "datetime",
+        "width": "half"
+      },
+      {
+        "key": "review_time",
+        "label": "Время проверки",
+        "property_type": "time",
         "width": "half"
       },
       {
@@ -228,8 +247,10 @@
               "section",
               "owner",
               "status",
+              "licence",
               "tags",
-              "summary"
+              "summary",
+              "body"
             ]
           },
           {
@@ -242,6 +263,7 @@
               "budget",
               "released",
               "checked_at",
+              "review_time",
               "public",
               "deprecated"
             ]
@@ -319,6 +341,10 @@
           "sortable": true
         },
         {
+          "key": "licence",
+          "sortable": true
+        },
+        {
           "key": "tags"
         },
         {
@@ -344,6 +370,10 @@
           "sortable": true
         },
         {
+          "key": "review_time",
+          "sortable": true
+        },
+        {
           "key": "public"
         },
         {
@@ -360,6 +390,10 @@
         },
         {
           "key": "summary",
+          "width": "20rem"
+        },
+        {
+          "key": "body",
           "width": "20rem"
         }
       ],
@@ -383,11 +417,13 @@
         "code",
         "section",
         "status",
+        "licence",
         "owner",
         "priority",
         "budget",
         "released",
-        "checked_at"
+        "checked_at",
+        "review_time"
       ],
       "default_sort": {
         "field": "released",
@@ -509,6 +545,40 @@
         "scheme": "danger"
       }
     ],
+    "licences": [
+      {
+        "value": "lic-apache",
+        "label": "Apache-2.0"
+      },
+      {
+        "value": "lic-polyform-sb",
+        "label": "PolyForm Small Business"
+      },
+      {
+        "value": "lic-polyform-nc",
+        "label": "PolyForm Noncommercial"
+      },
+      {
+        "value": "lic-commercial",
+        "label": "SIMAI Commercial License"
+      },
+      {
+        "value": "lic-larena",
+        "label": "В составе Larena"
+      },
+      {
+        "value": "lic-trial",
+        "label": "Пробная, 30 дней"
+      },
+      {
+        "value": "lic-internal",
+        "label": "Внутренняя"
+      },
+      {
+        "value": "lic-none",
+        "label": "Без лицензии"
+      }
+    ],
     "tags": [
       {
         "value": "billing",
@@ -594,7 +664,7 @@
         "label": "Схема обмена.svg",
         "mime": "image/svg+xml",
         "size": 12288,
-        "href": "assets/icons.svg"
+        "href": "/icons.svg"
       }
     ]
   },
@@ -622,13 +692,19 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [],
         "summary": "Приём платежей, возвраты и сверка с банком.",
+        "body": "<h2>Платежи</h2><p>Приём платежей, возвраты и сверка с банком.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.0.0",
         "priority": 1,
         "budget": 1474500,
         "released": "2026-03-24",
         "checked_at": "2026-11-24T21:51:00+03:00",
+        "review_time": "00:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -679,6 +755,10 @@
           "avatarText": "ДО"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "infra",
           "notify",
@@ -686,11 +766,13 @@
           "crm"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.1.1",
         "priority": 2,
         "budget": 2114300,
         "released": "2026-02-25",
         "checked_at": "2026-06-10T11:04:00+03:00",
+        "review_time": "07:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -743,13 +825,19 @@
           "avatarText": "СИ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.2.2",
         "priority": 3,
         "budget": 609200,
         "released": "2026-02-12",
         "checked_at": "2026-07-06T07:16:00+03:00",
+        "review_time": "14:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -766,7 +854,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -810,16 +898,22 @@
           "avatarText": "ИС"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "crm",
           "search"
         ],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<h2>Резервные копии</h2><p>Снимки файлов и базы по расписанию.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.3.3",
         "priority": 4,
         "budget": 0,
         "released": "2026-03-27",
         "checked_at": "2027-02-14T22:57:00+03:00",
+        "review_time": "21:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -876,15 +970,21 @@
           "avatarText": "АП"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "search"
         ],
         "summary": "Корзина покупателя и оформление заказа.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "5.4.0",
         "priority": 5,
         "budget": 2818300,
         "released": "2026-02-05",
         "checked_at": "2027-01-02T19:22:00+03:00",
+        "review_time": "04:00",
         "public": true,
         "deprecated": true,
         "accent": "#be123c",
@@ -940,13 +1040,19 @@
         },
         "owner": null,
         "status": "frozen",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "6.5.1",
         "priority": 6,
         "budget": null,
         "released": "2026-03-23",
         "checked_at": null,
+        "review_time": "11:15",
         "public": false,
         "deprecated": false,
         "accent": null,
@@ -986,16 +1092,22 @@
           "avatarText": "СИ"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "billing",
           "files"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.6.2",
         "priority": 7,
         "budget": 752400,
         "released": "2026-02-18",
         "checked_at": "2026-03-19T18:52:00+03:00",
+        "review_time": "18:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -1042,15 +1154,21 @@
           "avatarText": "МВ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "notify"
         ],
         "summary": "Конструктор форм и обработка заявок.",
+        "body": "<h2>Формы</h2><p>Конструктор форм и обработка заявок.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.7.3",
         "priority": 0,
         "budget": 3984600,
         "released": "2026-05-14",
         "checked_at": "2026-03-26T01:25:00+03:00",
+        "review_time": "01:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -1067,7 +1185,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -1111,17 +1229,23 @@
           "avatarText": "ДО"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "crm",
           "files",
           "notify"
         ],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.8.0",
         "priority": 9,
         "budget": 1560800,
         "released": "2026-04-15",
         "checked_at": "2027-01-14T21:42:00+03:00",
+        "review_time": "08:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -1176,16 +1300,22 @@
           "avatarText": "ИС"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "notify",
           "search"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.9.1",
         "priority": 1,
         "budget": 4402300,
         "released": "2026-05-19",
         "checked_at": "2027-03-25T06:42:00+03:00",
+        "review_time": "15:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -1202,7 +1332,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -1246,17 +1376,23 @@
           "avatarText": "МВ"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "search",
           "notify",
           "billing"
         ],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<h2>Отчёты</h2><p>Сводки по продажам и обращениям.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.0.2",
         "priority": 2,
         "budget": 0,
         "released": "2026-04-15",
         "checked_at": "2026-09-13T19:32:00+03:00",
+        "review_time": "22:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -1306,16 +1442,22 @@
           "avatarText": "ДО"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "files",
           "search"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<h2>Права</h2><p>Роли, доступы и журнал действий.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.1.3",
         "priority": 3,
         "budget": 951800,
         "released": "2026-04-28",
         "checked_at": "2026-05-03T01:39:00+03:00",
+        "review_time": "05:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -1338,7 +1480,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -1382,6 +1524,10 @@
           "avatarText": "АП"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "shop",
           "billing",
@@ -1389,11 +1535,13 @@
           "infra"
         ],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.2.0",
         "priority": 4,
         "budget": 492800,
         "released": "2026-07-07",
         "checked_at": "2026-07-12T07:03:00+03:00",
+        "review_time": "12:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -1410,7 +1558,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -1452,6 +1600,10 @@
           "avatarText": "ДО"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "search",
           "infra",
@@ -1459,11 +1611,13 @@
           "portal"
         ],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.3.1",
         "priority": -2,
         "budget": 2789400,
         "released": "2026-04-26",
         "checked_at": "2026-06-08T01:58:00+03:00",
+        "review_time": "19:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -1513,15 +1667,21 @@
           "avatarText": "ДО"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "portal"
         ],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<h2>Медиа</h2><p>Изображения, видео и их варианты.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.4.2",
         "priority": 6,
         "budget": 4045400,
         "released": "2026-07-20",
         "checked_at": "2027-01-08T16:53:00+03:00",
+        "review_time": "02:30",
         "public": false,
         "deprecated": true,
         "accent": "#c2410c",
@@ -1575,13 +1735,19 @@
           "avatarText": "МВ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [],
         "summary": "Приём платежей, возвраты и сверка с банком.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "4.5.3",
         "priority": 7,
         "budget": 3649100,
         "released": "2026-04-27",
         "checked_at": "2026-07-15T02:24:00+03:00",
+        "review_time": "09:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -1643,13 +1809,19 @@
         },
         "owner": null,
         "status": "failed",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "5.6.0",
         "priority": 8,
         "budget": null,
         "released": "2026-07-18",
         "checked_at": null,
+        "review_time": "16:00",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -1669,14 +1841,14 @@
     {
       "record_id": "r-018",
       "revision": 9,
-      "label": "SIMAI: Биллинг №219",
-      "editable": true,
+      "label": "SIMAI: Биллинг №219 · Нет прав",
+      "editable": false,
       "actions": [
         "view"
       ],
       "values": {
         "code": "simai.billing",
-        "title": "SIMAI: Биллинг №219",
+        "title": "SIMAI: Биллинг №219 · Нет прав",
         "section": {
           "value": "sec-content",
           "label": "Контент"
@@ -1687,6 +1859,10 @@
           "avatarText": "МВ"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "notify",
           "billing",
@@ -1694,11 +1870,13 @@
           "files"
         ],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.7.1",
         "priority": 9,
         "budget": 0,
         "released": "2026-07-02",
         "checked_at": "2027-05-16T06:56:00+03:00",
+        "review_time": "23:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -1725,7 +1903,7 @@
         },
         "head_script": "<script>\n  window.addEventListener('DOMContentLoaded', () => {\n    document.documentElement.dataset.ready = 'true';\n  });\n</script>",
         "theme_css": "",
-        "notes": ""
+        "notes": "Демо: у вас нет прав на эту запись — правка и удаление запрещены намеренно."
       }
     },
     {
@@ -1751,13 +1929,19 @@
           "avatarText": "МВ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<h2>Резервные копии</h2><p>Снимки файлов и базы по расписанию.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.8.2",
         "priority": 1,
         "budget": 1035300,
         "released": "2026-06-22",
         "checked_at": "2026-08-30T06:46:00+03:00",
+        "review_time": "06:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -1801,17 +1985,23 @@
           "avatarText": "МВ"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "portal",
           "crm",
           "search"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Корзина</h2><p>Корзина покупателя и оформление заказа.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.9.3",
         "priority": 2,
         "budget": 1858000,
         "released": "2026-05-28",
         "checked_at": "2027-02-11T07:47:00+03:00",
+        "review_time": "13:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -1834,7 +2024,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -1878,17 +2068,23 @@
           "avatarText": "МВ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "crm",
           "shop",
           "files"
         ],
         "summary": "Товары, разделы и свойства каталога.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.0.0",
         "priority": 3,
         "budget": 3227300,
         "released": "2026-08-05",
         "checked_at": "2027-05-04T15:48:00+03:00",
+        "review_time": "20:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -1946,6 +2142,10 @@
           "avatarText": "ЕК"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "shop",
           "billing",
@@ -1953,11 +2153,13 @@
           "search"
         ],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.1.1",
         "priority": 4,
         "budget": 367000,
         "released": "2026-06-18",
         "checked_at": "2027-03-30T22:30:00+03:00",
+        "review_time": "03:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -2010,17 +2212,23 @@
           "avatarText": "ИС"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "files",
           "portal",
           "infra"
         ],
         "summary": "Конструктор форм и обработка заявок.",
+        "body": "<h2>Формы</h2><p>Конструктор форм и обработка заявок.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.2.2",
         "priority": 5,
         "budget": 1242000,
         "released": "2026-09-16",
         "checked_at": "2026-08-28T15:05:00+03:00",
+        "review_time": "10:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -2076,16 +2284,22 @@
           "avatarText": "АП"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "portal",
           "files"
         ],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.3.3",
         "priority": 6,
         "budget": 3854800,
         "released": "2026-09-28",
         "checked_at": "2027-06-20T11:06:00+03:00",
+        "review_time": "17:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -2135,17 +2349,23 @@
           "avatarText": "ДО"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "notify",
           "files",
           "billing"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.4.0",
         "priority": 7,
         "budget": 0,
         "released": "2026-08-11",
         "checked_at": "2027-03-27T15:37:00+03:00",
+        "review_time": "00:00",
         "public": true,
         "deprecated": true,
         "accent": "#2f6feb",
@@ -2209,6 +2429,10 @@
           "avatarText": "МВ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "shop",
           "crm",
@@ -2216,11 +2440,13 @@
           "billing"
         ],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<h2>Отчёты</h2><p>Сводки по продажам и обращениям.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.5.1",
         "priority": 8,
         "budget": 3788500,
         "released": "2026-10-19",
         "checked_at": "2026-07-14T03:11:00+03:00",
+        "review_time": "07:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -2280,16 +2506,22 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "crm",
           "shop"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "3.6.2",
         "priority": 0,
         "budget": 1579000,
         "released": "2026-07-14",
         "checked_at": "2026-09-15T03:31:00+03:00",
+        "review_time": "14:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -2332,13 +2564,19 @@
         },
         "owner": null,
         "status": "failed",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "4.7.3",
         "priority": 1,
         "budget": null,
         "released": "2026-09-14",
         "checked_at": null,
+        "review_time": "21:45",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -2378,15 +2616,21 @@
           "avatarText": "ДО"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "crm"
         ],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.8.0",
         "priority": 2,
         "budget": 1796600,
         "released": "2026-09-06",
         "checked_at": "2027-01-03T05:06:00+03:00",
+        "review_time": "04:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -2403,7 +2647,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": null,
@@ -2438,13 +2682,19 @@
           "avatarText": "МВ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<h2>Медиа</h2><p>Изображения, видео и их варианты.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.9.1",
         "priority": 3,
         "budget": 1760700,
         "released": "2026-10-17",
         "checked_at": "2026-08-05T08:31:00+03:00",
+        "review_time": "11:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -2461,7 +2711,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -2505,16 +2755,22 @@
           "avatarText": "ЕК"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "billing",
           "shop"
         ],
         "summary": "Приём платежей, возвраты и сверка с банком.",
+        "body": "<h2>Платежи</h2><p>Приём платежей, возвраты и сверка с банком.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.0.2",
         "priority": 4,
         "budget": 2221000,
         "released": "2026-09-15",
         "checked_at": "2026-11-11T13:01:00+03:00",
+        "review_time": "18:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -2561,15 +2817,21 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "search"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.1.3",
         "priority": 5,
         "budget": 0,
         "released": "2026-09-27",
         "checked_at": "2027-05-18T07:26:00+03:00",
+        "review_time": "01:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -2629,16 +2891,22 @@
           "avatarText": "ИС"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "infra",
           "search"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.2.0",
         "priority": 6,
         "budget": 2723700,
         "released": "2026-09-15",
         "checked_at": "2026-12-17T01:53:00+03:00",
+        "review_time": "08:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -2689,15 +2957,21 @@
           "avatarText": "АП"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "billing"
         ],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<h2>Резервные копии</h2><p>Снимки файлов и базы по расписанию.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.3.1",
         "priority": 7,
         "budget": 1697400,
         "released": "2026-11-01",
         "checked_at": "2026-12-27T09:12:00+03:00",
+        "review_time": "15:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -2747,17 +3021,23 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "shop",
           "portal",
           "infra"
         ],
         "summary": "Корзина покупателя и оформление заказа.",
+        "body": "<h2>Корзина</h2><p>Корзина покупателя и оформление заказа.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.4.2",
         "priority": 8,
         "budget": 754100,
         "released": "2026-12-07",
         "checked_at": "2027-08-31T02:03:00+03:00",
+        "review_time": "22:30",
         "public": true,
         "deprecated": true,
         "accent": "#be123c",
@@ -2800,17 +3080,23 @@
           "avatarText": "ДО"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "notify",
           "files",
           "search"
         ],
         "summary": "Товары, разделы и свойства каталога.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.5.3",
         "priority": 9,
         "budget": 3205100,
         "released": "2026-10-07",
         "checked_at": "2026-12-19T17:28:00+03:00",
+        "review_time": "05:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -2876,16 +3162,22 @@
           "avatarText": "АП"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "files",
           "portal"
         ],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.6.0",
         "priority": -2,
         "budget": 4100300,
         "released": "2026-12-20",
         "checked_at": "2027-03-09T12:34:00+03:00",
+        "review_time": "12:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -2949,15 +3241,21 @@
           "avatarText": "АП"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "portal"
         ],
         "summary": "Конструктор форм и обработка заявок.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "2.7.1",
         "priority": 2,
         "budget": 4144700,
         "released": "2026-10-09",
         "checked_at": "2026-11-07T03:39:00+03:00",
+        "review_time": "19:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -2980,7 +3278,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -3020,13 +3318,19 @@
         },
         "owner": null,
         "status": "active",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "3.8.2",
         "priority": 3,
         "budget": null,
         "released": "2027-01-03",
         "checked_at": null,
+        "review_time": "02:30",
         "public": false,
         "deprecated": false,
         "accent": null,
@@ -3063,16 +3367,22 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "search",
           "shop"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.9.3",
         "priority": 4,
         "budget": 911800,
         "released": "2026-10-13",
         "checked_at": "2027-08-13T04:02:00+03:00",
+        "review_time": "09:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -3138,15 +3448,21 @@
           "avatarText": "ЕК"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "search"
         ],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<h2>Отчёты</h2><p>Сводки по продажам и обращениям.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.0.0",
         "priority": 5,
         "budget": 3537200,
         "released": "2026-12-05",
         "checked_at": "2027-09-24T16:54:00+03:00",
+        "review_time": "16:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -3200,17 +3516,23 @@
           "avatarText": "АП"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "search",
           "billing",
           "shop"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<h2>Права</h2><p>Роли, доступы и журнал действий.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.1.1",
         "priority": 6,
         "budget": 1078300,
         "released": "2026-10-28",
         "checked_at": "2027-03-27T07:43:00+03:00",
+        "review_time": "23:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -3263,6 +3585,10 @@
           "avatarText": "СИ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "portal",
           "files",
@@ -3270,11 +3596,13 @@
           "search"
         ],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.2.2",
         "priority": 7,
         "budget": 4362100,
         "released": "2026-11-09",
         "checked_at": "2027-04-26T04:27:00+03:00",
+        "review_time": "06:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -3285,7 +3613,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -3329,13 +3657,19 @@
           "avatarText": "ЕК"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.3.3",
         "priority": 8,
         "budget": 1351600,
         "released": "2026-12-04",
         "checked_at": "2026-12-07T10:59:00+03:00",
+        "review_time": "13:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -3352,7 +3686,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           },
           {
             "value": "f-acts",
@@ -3399,17 +3733,23 @@
           "avatarText": "СИ"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "search",
           "crm",
           "portal"
         ],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<h2>Медиа</h2><p>Изображения, видео и их варианты.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.4.0",
         "priority": 9,
         "budget": 4215100,
         "released": "2027-02-05",
         "checked_at": "2026-02-21T17:39:00+03:00",
+        "review_time": "20:00",
         "public": false,
         "deprecated": true,
         "accent": "#c2410c",
@@ -3460,13 +3800,19 @@
           "avatarText": "ДО"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Платежи</h2><p>Приём платежей, возвраты и сверка с банком.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.5.1",
         "priority": 0,
         "budget": 0,
         "released": "2026-12-21",
         "checked_at": "2027-01-11T11:36:00+03:00",
+        "review_time": "03:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -3499,8 +3845,8 @@
     {
       "record_id": "r-047",
       "revision": 2,
-      "label": "SIMAI: Уведомления №422",
-      "editable": true,
+      "label": "SIMAI: Уведомления №422 · Нет прав",
+      "editable": false,
       "actions": [
         "view",
         "edit",
@@ -3508,7 +3854,7 @@
       ],
       "values": {
         "code": "simai.notify.v3",
-        "title": "SIMAI: Уведомления №422",
+        "title": "SIMAI: Уведомления №422 · Нет прав",
         "section": {
           "value": "sec-shop",
           "label": "Магазин"
@@ -3519,15 +3865,21 @@
           "avatarText": "ИС"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "crm"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.6.2",
         "priority": 2,
         "budget": 714300,
         "released": "2026-12-01",
         "checked_at": "2026-03-05T23:50:00+03:00",
+        "review_time": "10:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -3544,7 +3896,7 @@
         "reviewer": null,
         "head_script": "",
         "theme_css": "",
-        "notes": ""
+        "notes": "Демо: у вас нет прав на эту запись — правка и удаление запрещены намеренно."
       }
     },
     {
@@ -3570,6 +3922,10 @@
           "avatarText": "МВ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "files",
           "crm",
@@ -3577,11 +3933,13 @@
           "search"
         ],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.7.3",
         "priority": 3,
         "budget": 920900,
         "released": "2027-02-01",
         "checked_at": "2026-01-02T17:32:00+03:00",
+        "review_time": "17:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -3598,7 +3956,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           },
           {
             "value": "f-sheet",
@@ -3648,15 +4006,21 @@
           "avatarText": "ДО"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "billing"
         ],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "1.8.0",
         "priority": 4,
         "budget": 1217900,
         "released": "2027-01-19",
         "checked_at": "2026-01-27T17:58:00+03:00",
+        "review_time": "00:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -3700,13 +4064,19 @@
         },
         "owner": null,
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "2.9.1",
         "priority": 5,
         "budget": null,
         "released": "2027-01-03",
         "checked_at": null,
+        "review_time": "07:15",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -3746,17 +4116,23 @@
           "avatarText": "ДО"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "portal",
           "crm",
           "search"
         ],
         "summary": "Товары, разделы и свойства каталога.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.0.2",
         "priority": 6,
         "budget": 4327100,
         "released": "2027-03-24",
         "checked_at": "2026-12-19T05:57:00+03:00",
+        "review_time": "14:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -3803,17 +4179,23 @@
           "avatarText": "МВ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "infra",
           "files",
           "crm"
         ],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.1.3",
         "priority": 7,
         "budget": 4452800,
         "released": "2026-12-29",
         "checked_at": "2027-01-28T02:42:00+03:00",
+        "review_time": "21:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -3879,17 +4261,23 @@
           "avatarText": "ЕК"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "shop",
           "files",
           "portal"
         ],
         "summary": "Конструктор форм и обработка заявок.",
+        "body": "<h2>Формы</h2><p>Конструктор форм и обработка заявок.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.2.0",
         "priority": 8,
         "budget": 0,
         "released": "2027-03-28",
         "checked_at": "2027-08-08T06:15:00+03:00",
+        "review_time": "04:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -3949,17 +4337,23 @@
           "avatarText": "МВ"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "infra",
           "billing",
           "search"
         ],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.3.1",
         "priority": 9,
         "budget": 1095900,
         "released": "2027-01-18",
         "checked_at": "2027-07-05T04:52:00+03:00",
+        "review_time": "11:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -4009,6 +4403,10 @@
           "avatarText": "ЕК"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "billing",
           "infra",
@@ -4016,11 +4414,13 @@
           "crm"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.4.2",
         "priority": 1,
         "budget": 3729100,
         "released": "2027-01-23",
         "checked_at": "2026-01-27T19:05:00+03:00",
+        "review_time": "18:30",
         "public": true,
         "deprecated": true,
         "accent": "#2f6feb",
@@ -4067,13 +4467,19 @@
           "avatarText": "МВ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<h2>Отчёты</h2><p>Сводки по продажам и обращениям.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.5.3",
         "priority": 2,
         "budget": 2926100,
         "released": "2027-03-12",
         "checked_at": "2027-05-20T00:47:00+03:00",
+        "review_time": "01:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -4133,15 +4539,21 @@
           "avatarText": "ЕК"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "search"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<h2>Права</h2><p>Роли, доступы и журнал действий.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.6.0",
         "priority": 3,
         "budget": 4754100,
         "released": "2027-05-03",
         "checked_at": "2027-09-13T03:28:00+03:00",
+        "review_time": "08:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -4205,17 +4617,23 @@
           "avatarText": "ИС"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "shop",
           "notify",
           "portal"
         ],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.7.1",
         "priority": 4,
         "budget": 1471300,
         "released": "2027-04-05",
         "checked_at": "2026-02-14T18:18:00+03:00",
+        "review_time": "15:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -4232,7 +4650,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -4276,16 +4694,22 @@
           "avatarText": "АП"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "files",
           "crm"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.8.2",
         "priority": 5,
         "budget": 3248900,
         "released": "2027-02-28",
         "checked_at": "2026-05-11T07:54:00+03:00",
+        "review_time": "22:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -4296,7 +4720,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": null,
@@ -4333,6 +4757,10 @@
           "avatarText": "АП"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "shop",
           "crm",
@@ -4340,11 +4768,13 @@
           "files"
         ],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "6.9.3",
         "priority": -2,
         "budget": 0,
         "released": "2027-06-15",
         "checked_at": "2026-04-30T10:47:00+03:00",
+        "review_time": "05:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -4400,13 +4830,19 @@
         },
         "owner": null,
         "status": "review",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "1.0.0",
         "priority": 7,
         "budget": null,
         "released": "2027-03-14",
         "checked_at": null,
+        "review_time": "12:00",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -4444,15 +4880,21 @@
           "avatarText": "СИ"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "shop"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.1.1",
         "priority": 8,
         "budget": 2602000,
         "released": "2027-06-09",
         "checked_at": "2027-05-16T23:28:00+03:00",
+        "review_time": "19:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -4512,6 +4954,10 @@
           "avatarText": "СИ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "billing",
           "files",
@@ -4519,11 +4965,13 @@
           "portal"
         ],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.2.2",
         "priority": 9,
         "budget": 2001800,
         "released": "2027-03-12",
         "checked_at": "2026-02-27T02:48:00+03:00",
+        "review_time": "02:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -4577,16 +5025,22 @@
           "avatarText": "ИС"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "shop",
           "portal"
         ],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<h2>Резервные копии</h2><p>Снимки файлов и базы по расписанию.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.3.3",
         "priority": 1,
         "budget": 139500,
         "released": "2027-04-09",
         "checked_at": "2027-08-02T21:02:00+03:00",
+        "review_time": "09:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -4636,15 +5090,21 @@
           "avatarText": "АП"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "portal"
         ],
         "summary": "Корзина покупателя и оформление заказа.",
+        "body": "<h2>Корзина</h2><p>Корзина покупателя и оформление заказа.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.4.0",
         "priority": 0,
         "budget": 1697500,
         "released": "2027-05-09",
         "checked_at": "2027-05-07T22:32:00+03:00",
+        "review_time": "16:00",
         "public": true,
         "deprecated": true,
         "accent": "#be123c",
@@ -4704,17 +5164,23 @@
           "avatarText": "АП"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "crm",
           "shop",
           "files"
         ],
         "summary": "Товары, разделы и свойства каталога.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.5.1",
         "priority": 3,
         "budget": 3924000,
         "released": "2027-04-11",
         "checked_at": "2027-10-02T11:01:00+03:00",
+        "review_time": "23:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -4774,13 +5240,19 @@
           "avatarText": "ДО"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.6.2",
         "priority": 4,
         "budget": 0,
         "released": "2027-07-06",
         "checked_at": "2026-04-17T14:17:00+03:00",
+        "review_time": "06:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -4791,7 +5263,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -4835,13 +5307,19 @@
           "avatarText": "ДО"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [],
         "summary": "Конструктор форм и обработка заявок.",
+        "body": "<h2>Формы</h2><p>Конструктор форм и обработка заявок.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.7.3",
         "priority": 5,
         "budget": 417900,
         "released": "2027-07-03",
         "checked_at": "2027-05-31T07:21:00+03:00",
+        "review_time": "13:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -4858,7 +5336,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -4902,13 +5380,19 @@
           "avatarText": "СИ"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.8.0",
         "priority": 6,
         "budget": 4168000,
         "released": "2027-07-26",
         "checked_at": "2026-08-18T02:27:00+03:00",
+        "review_time": "20:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -4956,6 +5440,10 @@
           "avatarText": "МВ"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "shop",
           "billing",
@@ -4963,11 +5451,13 @@
           "portal"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.9.1",
         "priority": 7,
         "budget": 1130300,
         "released": "2027-08-05",
         "checked_at": "2026-08-15T06:40:00+03:00",
+        "review_time": "03:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -5027,6 +5517,10 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "crm",
           "infra",
@@ -5034,11 +5528,13 @@
           "billing"
         ],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "5.0.2",
         "priority": 8,
         "budget": 4092800,
         "released": "2027-06-07",
         "checked_at": "2027-07-17T20:06:00+03:00",
+        "review_time": "10:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -5077,13 +5573,19 @@
         },
         "owner": null,
         "status": "done",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "6.1.3",
         "priority": 9,
         "budget": null,
         "released": "2027-07-03",
         "checked_at": null,
+        "review_time": "17:45",
         "public": false,
         "deprecated": false,
         "accent": null,
@@ -5123,13 +5625,19 @@
           "avatarText": "МВ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.2.0",
         "priority": 1,
         "budget": 4483900,
         "released": "2027-07-15",
         "checked_at": "2027-09-03T10:50:00+03:00",
+        "review_time": "00:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -5193,15 +5701,21 @@
           "avatarText": "СИ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "crm"
         ],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.3.1",
         "priority": 2,
         "budget": 0,
         "released": "2027-08-27",
         "checked_at": "2027-07-25T03:17:00+03:00",
+        "review_time": "07:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -5251,16 +5765,22 @@
           "avatarText": "АП"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "notify",
           "billing"
         ],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<h2>Медиа</h2><p>Изображения, видео и их варианты.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.4.2",
         "priority": 3,
         "budget": 1799700,
         "released": "2027-09-04",
         "checked_at": "2026-10-03T00:41:00+03:00",
+        "review_time": "14:30",
         "public": false,
         "deprecated": true,
         "accent": "#c2410c",
@@ -5300,8 +5820,8 @@
     {
       "record_id": "r-076",
       "revision": 4,
-      "label": "SIMAI: Платежи №625",
-      "editable": true,
+      "label": "SIMAI: Платежи №625 · Нет прав",
+      "editable": false,
       "actions": [
         "view",
         "edit",
@@ -5309,7 +5829,7 @@
       ],
       "values": {
         "code": "simai.payments.v4",
-        "title": "SIMAI: Платежи №625",
+        "title": "SIMAI: Платежи №625 · Нет прав",
         "section": {
           "value": "sec-billing",
           "label": "Платежи и биллинг"
@@ -5320,6 +5840,10 @@
           "avatarText": "СИ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "notify",
           "shop",
@@ -5327,11 +5851,13 @@
           "portal"
         ],
         "summary": "Приём платежей, возвраты и сверка с банком.",
+        "body": "<h2>Платежи</h2><p>Приём платежей, возвраты и сверка с банком.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.5.3",
         "priority": 4,
         "budget": 3793100,
         "released": "2027-06-28",
         "checked_at": "2026-07-06T23:04:00+03:00",
+        "review_time": "21:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -5358,7 +5884,7 @@
         },
         "head_script": "",
         "theme_css": "",
-        "notes": ""
+        "notes": "Демо: у вас нет прав на эту запись — правка и удаление запрещены намеренно."
       }
     },
     {
@@ -5384,15 +5910,21 @@
           "avatarText": "ЕК"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "shop"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.6.0",
         "priority": 5,
         "budget": 798700,
         "released": "2027-09-09",
         "checked_at": "2027-06-22T07:12:00+03:00",
+        "review_time": "04:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -5452,17 +5984,23 @@
           "avatarText": "ДО"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "search",
           "files",
           "infra"
         ],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.7.1",
         "priority": 6,
         "budget": 716400,
         "released": "2027-09-06",
         "checked_at": "2026-09-28T12:48:00+03:00",
+        "review_time": "11:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -5485,7 +6023,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -5529,13 +6067,19 @@
           "avatarText": "АП"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<h2>Резервные копии</h2><p>Снимки файлов и базы по расписанию.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.8.2",
         "priority": 7,
         "budget": 2268000,
         "released": "2026-01-18",
         "checked_at": "2026-01-06T14:18:00+03:00",
+        "review_time": "18:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -5564,7 +6108,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": null,
@@ -5605,15 +6149,21 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "shop"
         ],
         "summary": "Корзина покупателя и оформление заказа.",
+        "body": "<h2>Корзина</h2><p>Корзина покупателя и оформление заказа.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.9.3",
         "priority": 8,
         "budget": 565700,
         "released": "2026-01-10",
         "checked_at": "2027-08-02T06:02:00+03:00",
+        "review_time": "01:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -5630,7 +6180,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           },
           {
             "value": "f-sheet",
@@ -5680,15 +6230,21 @@
           "avatarText": "МВ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "shop"
         ],
         "summary": "Товары, разделы и свойства каталога.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.0.0",
         "priority": 9,
         "budget": 0,
         "released": "2026-01-27",
         "checked_at": "2026-05-16T14:32:00+03:00",
+        "review_time": "08:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -5752,13 +6308,19 @@
           "avatarText": "СИ"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "4.1.1",
         "priority": 1,
         "budget": 2909400,
         "released": "2026-01-14",
         "checked_at": "2026-10-23T05:07:00+03:00",
+        "review_time": "15:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -5807,13 +6369,19 @@
         },
         "owner": null,
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "5.2.2",
         "priority": -2,
         "budget": null,
         "released": "2026-02-01",
         "checked_at": null,
+        "review_time": "22:30",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -5853,15 +6421,21 @@
           "avatarText": "ИС"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "billing"
         ],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.3.3",
         "priority": 0,
         "budget": 3379000,
         "released": "2027-09-11",
         "checked_at": "2026-06-27T14:30:00+03:00",
+        "review_time": "05:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -5911,16 +6485,22 @@
           "avatarText": "МВ"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "portal",
           "infra"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.4.0",
         "priority": 4,
         "budget": 1735900,
         "released": "2027-08-26",
         "checked_at": "2026-04-07T09:02:00+03:00",
+        "review_time": "12:00",
         "public": true,
         "deprecated": true,
         "accent": "#2f6feb",
@@ -5978,15 +6558,21 @@
           "avatarText": "АП"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "files"
         ],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<h2>Отчёты</h2><p>Сводки по продажам и обращениям.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.5.1",
         "priority": 5,
         "budget": 1370500,
         "released": "2026-02-23",
         "checked_at": "2026-11-28T16:43:00+03:00",
+        "review_time": "19:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -6046,15 +6632,21 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "portal"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<h2>Права</h2><p>Роли, доступы и журнал действий.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.6.2",
         "priority": 6,
         "budget": 4191100,
         "released": "2026-01-22",
         "checked_at": "2026-03-29T21:46:00+03:00",
+        "review_time": "02:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -6101,15 +6693,21 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "notify"
         ],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.7.3",
         "priority": 7,
         "budget": 0,
         "released": "2026-03-15",
         "checked_at": "2026-11-19T18:25:00+03:00",
+        "review_time": "09:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -6162,16 +6760,22 @@
           "avatarText": "АП"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "crm",
           "portal"
         ],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.8.0",
         "priority": 8,
         "budget": 4744200,
         "released": "2026-03-02",
         "checked_at": "2026-07-16T04:37:00+03:00",
+        "review_time": "16:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -6228,13 +6832,19 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<h2>Медиа</h2><p>Изображения, видео и их варианты.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.9.1",
         "priority": 9,
         "budget": 3551700,
         "released": "2026-03-27",
         "checked_at": "2026-03-07T05:09:00+03:00",
+        "review_time": "23:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -6287,13 +6897,19 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [],
         "summary": "Приём платежей, возвраты и сверка с банком.",
+        "body": "<h2>Платежи</h2><p>Приём платежей, возвраты и сверка с банком.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.0.2",
         "priority": 1,
         "budget": 4276800,
         "released": "2026-04-11",
         "checked_at": "2026-09-10T02:50:00+03:00",
+        "review_time": "06:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -6340,6 +6956,10 @@
           "avatarText": "ЕК"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "notify",
           "crm",
@@ -6347,11 +6967,13 @@
           "files"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.1.3",
         "priority": 2,
         "budget": 1511000,
         "released": "2026-03-13",
         "checked_at": "2027-01-05T01:19:00+03:00",
+        "review_time": "13:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -6368,7 +6990,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -6412,15 +7034,21 @@
           "avatarText": "ИС"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "shop"
         ],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "3.2.0",
         "priority": 3,
         "budget": 3606600,
         "released": "2026-03-17",
         "checked_at": "2026-10-16T16:01:00+03:00",
+        "review_time": "20:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -6437,7 +7065,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           },
           {
             "value": "f-acts",
@@ -6481,13 +7109,19 @@
         },
         "owner": null,
         "status": "frozen",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "4.3.1",
         "priority": 4,
         "budget": null,
         "released": "2026-03-29",
         "checked_at": null,
+        "review_time": "03:15",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -6524,13 +7158,19 @@
           "avatarText": "ДО"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [],
         "summary": "Корзина покупателя и оформление заказа.",
+        "body": "<h2>Корзина</h2><p>Корзина покупателя и оформление заказа.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.4.2",
         "priority": 5,
         "budget": 0,
         "released": "2026-02-22",
         "checked_at": "2026-12-17T05:15:00+03:00",
+        "review_time": "10:30",
         "public": true,
         "deprecated": true,
         "accent": "#be123c",
@@ -6573,16 +7213,22 @@
           "avatarText": "АП"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "files",
           "shop"
         ],
         "summary": "Товары, разделы и свойства каталога.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.5.3",
         "priority": 6,
         "budget": 2868200,
         "released": "2026-05-10",
         "checked_at": "2027-01-22T20:58:00+03:00",
+        "review_time": "17:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -6599,7 +7245,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -6643,17 +7289,23 @@
           "avatarText": "ЕК"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [
           "shop",
           "infra",
           "portal"
         ],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.6.0",
         "priority": 7,
         "budget": 2459900,
         "released": "2026-05-14",
         "checked_at": "2026-12-03T14:10:00+03:00",
+        "review_time": "00:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -6704,15 +7356,21 @@
           "avatarText": "ИС"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "crm"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Формы</h2><p>Конструктор форм и обработка заявок.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.7.1",
         "priority": 8,
         "budget": 552800,
         "released": "2026-06-03",
         "checked_at": "2026-10-15T17:19:00+03:00",
+        "review_time": "07:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -6735,7 +7393,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": {
@@ -6779,17 +7437,23 @@
           "avatarText": "ЕК"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "files",
           "portal",
           "billing"
         ],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.8.2",
         "priority": 9,
         "budget": 3738800,
         "released": "2026-05-23",
         "checked_at": "2027-02-08T17:56:00+03:00",
+        "review_time": "14:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -6833,17 +7497,23 @@
           "avatarText": "ЕК"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "search",
           "files",
           "infra"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<h2>Доставка</h2><p>Службы доставки, зоны и расчёт стоимости.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.9.3",
         "priority": 1,
         "budget": 2741800,
         "released": "2026-05-16",
         "checked_at": "2026-11-15T04:21:00+03:00",
+        "review_time": "21:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -6903,15 +7573,21 @@
           "avatarText": "ИС"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "search"
         ],
         "summary": "Сводки по продажам и обращениям.",
+        "body": "<h2>Отчёты</h2><p>Сводки по продажам и обращениям.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.0.0",
         "priority": 2,
         "budget": 4193300,
         "released": "2026-06-22",
         "checked_at": "2026-10-02T13:24:00+03:00",
+        "review_time": "04:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -6928,7 +7604,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           },
           {
             "value": "f-spec",
@@ -6972,15 +7648,21 @@
           "avatarText": "МВ"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "files"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<h2>Права</h2><p>Роли, доступы и журнал действий.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.1.1",
         "priority": 3,
         "budget": 0,
         "released": "2026-06-02",
         "checked_at": "2026-05-02T01:32:00+03:00",
+        "review_time": "11:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -7033,15 +7715,21 @@
           "avatarText": "ЕК"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "files"
         ],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.2.2",
         "priority": 0,
         "budget": 2052700,
         "released": "2026-07-05",
         "checked_at": "2026-07-04T12:37:00+03:00",
+        "review_time": "18:30",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -7088,17 +7776,23 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "shop",
           "files",
           "search"
         ],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "2.3.3",
         "priority": 5,
         "budget": 3627000,
         "released": "2026-07-18",
         "checked_at": "2026-06-24T09:12:00+03:00",
+        "review_time": "01:45",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -7128,8 +7822,8 @@
     {
       "record_id": "r-105",
       "revision": 6,
-      "label": "SIMAI: Медиа №828",
-      "editable": true,
+      "label": "SIMAI: Медиа №828 · Нет прав",
+      "editable": false,
       "actions": [
         "view",
         "edit",
@@ -7137,20 +7831,26 @@
       ],
       "values": {
         "code": "simai.media.v1",
-        "title": "SIMAI: Медиа №828",
+        "title": "SIMAI: Медиа №828 · Нет прав",
         "section": {
           "value": "sec-content",
           "label": "Контент"
         },
         "owner": null,
         "status": "failed",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "3.4.0",
         "priority": 6,
         "budget": null,
         "released": "2026-04-14",
         "checked_at": null,
+        "review_time": "08:00",
         "public": false,
         "deprecated": true,
         "accent": null,
@@ -7164,7 +7864,7 @@
         "reviewer": null,
         "head_script": "",
         "theme_css": "",
-        "notes": ""
+        "notes": "Демо: у вас нет прав на эту запись — правка и удаление запрещены намеренно."
       }
     },
     {
@@ -7188,16 +7888,22 @@
           "avatarText": "ЕК"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [
           "crm",
           "files"
         ],
         "summary": "Приём платежей, возвраты и сверка с банком.",
+        "body": "<h2>Платежи</h2><p>Приём платежей, возвраты и сверка с банком.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.5.1",
         "priority": -2,
         "budget": 3730800,
         "released": "2026-06-19",
         "checked_at": "2027-02-28T21:36:00+03:00",
+        "review_time": "15:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -7257,16 +7963,22 @@
           "avatarText": "ЕК"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "infra",
           "billing"
         ],
         "summary": "Письма, SMS и push по событиям системы.",
+        "body": "<h2>Уведомления</h2><p>Письма, SMS и push по событиям системы.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.6.2",
         "priority": 8,
         "budget": 4139100,
         "released": "2026-07-09",
         "checked_at": "2027-02-22T14:51:00+03:00",
+        "review_time": "22:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -7322,15 +8034,21 @@
           "avatarText": "ДО"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [
           "portal"
         ],
         "summary": "Тарифы, подписки и выставление счетов.",
+        "body": "<h2>Биллинг</h2><p>Тарифы, подписки и выставление счетов.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.7.3",
         "priority": 9,
         "budget": 1190000,
         "released": "2026-05-20",
         "checked_at": "2026-11-08T21:21:00+03:00",
+        "review_time": "05:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -7396,13 +8114,19 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [],
         "summary": "Снимки файлов и базы по расписанию.",
+        "body": "<h2>Резервные копии</h2><p>Снимки файлов и базы по расписанию.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "1.8.0",
         "priority": 1,
         "budget": 0,
         "released": "2026-05-14",
         "checked_at": "2026-12-19T14:46:00+03:00",
+        "review_time": "12:00",
         "public": true,
         "deprecated": false,
         "accent": "#2f6feb",
@@ -7419,7 +8143,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           }
         ],
         "parent": null,
@@ -7458,15 +8182,21 @@
           "avatarText": "МВ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "billing"
         ],
         "summary": "Корзина покупателя и оформление заказа.",
+        "body": "<h2>Корзина</h2><p>Корзина покупателя и оформление заказа.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "2.9.1",
         "priority": 2,
         "budget": 4245000,
         "released": "2026-05-04",
         "checked_at": "2026-10-31T05:48:00+03:00",
+        "review_time": "19:15",
         "public": true,
         "deprecated": false,
         "accent": "#1f9d55",
@@ -7532,16 +8262,22 @@
           "avatarText": "ИС"
         },
         "status": "active",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "search",
           "infra"
         ],
         "summary": "Модуль закрывает весь путь обращения: приём, разбор, маршрутизацию ответственному, напоминания по срокам, закрытие с обязательным комментарием и выгрузку в отчётность. Настройки хранятся отдельно для каждой организации портала, а журнал действий пишется целиком и не чистится автоматически.",
+        "body": "<h2>Каталог</h2><p>Товары, разделы и свойства каталога.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.0.2",
         "priority": 3,
         "budget": 3297400,
         "released": "2026-07-14",
         "checked_at": "2027-03-30T02:53:00+03:00",
+        "review_time": "02:30",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -7588,17 +8324,23 @@
           "avatarText": "СИ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "billing",
           "search",
           "portal"
         ],
         "summary": "Индексация и выдача по сайту.",
+        "body": "<h2>Поиск</h2><p>Индексация и выдача по сайту.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.1.3",
         "priority": 4,
         "budget": 3782200,
         "released": "2026-08-13",
         "checked_at": "2026-08-10T15:43:00+03:00",
+        "review_time": "09:45",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -7651,13 +8393,19 @@
           "avatarText": "АП"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-apache",
+          "label": "Apache-2.0"
+        },
         "tags": [],
         "summary": "Конструктор форм и обработка заявок.",
+        "body": "<h2>Формы</h2><p>Конструктор форм и обработка заявок.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.2.0",
         "priority": 5,
         "budget": 420100,
         "released": "2026-08-02",
         "checked_at": "2027-03-01T03:33:00+03:00",
+        "review_time": "16:00",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -7704,13 +8452,19 @@
           "avatarText": "ДО"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-polyform-sb",
+          "label": "PolyForm Small Business"
+        },
         "tags": [],
         "summary": "Остатки, резервы и движения по складам.",
+        "body": "<h2>Склад</h2><p>Остатки, резервы и движения по складам.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.3.1",
         "priority": 6,
         "budget": 117200,
         "released": "2026-07-04",
         "checked_at": "2027-02-17T05:43:00+03:00",
+        "review_time": "23:15",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",
@@ -7727,7 +8481,7 @@
             "label": "Схема обмена.svg",
             "mime": "image/svg+xml",
             "size": 12288,
-            "href": "assets/icons.svg"
+            "href": "/icons.svg"
           },
           {
             "value": "f-notes",
@@ -7774,15 +8528,21 @@
           "avatarText": "МВ"
         },
         "status": "review",
+        "licence": {
+          "value": "lic-polyform-nc",
+          "label": "PolyForm Noncommercial"
+        },
         "tags": [
           "billing"
         ],
         "summary": "Службы доставки, зоны и расчёт стоимости.",
+        "body": "<div style=\"color:red\"><b>Важно:</b> перенесено со старого сайта.</div><p onclick=\"alert(1)\">Ссылка <a href=\"javascript:alert(1)\">без адреса</a> и <a href=\"https://simai.io/\">simai.io</a>.</p><script>alert(1)</script>",
         "version": "1.4.2",
         "priority": 7,
         "budget": 1488100,
         "released": "2026-09-05",
         "checked_at": "2026-06-16T10:02:00+03:00",
+        "review_time": "06:30",
         "public": true,
         "deprecated": true,
         "accent": "#2f6feb",
@@ -7825,13 +8585,19 @@
         },
         "owner": null,
         "status": "done",
+        "licence": {
+          "value": "lic-commercial",
+          "label": "SIMAI Commercial License"
+        },
         "tags": [],
         "summary": null,
+        "body": null,
         "version": "2.5.3",
         "priority": 8,
         "budget": null,
         "released": "2026-06-26",
         "checked_at": null,
+        "review_time": "13:45",
         "public": true,
         "deprecated": false,
         "accent": null,
@@ -7871,16 +8637,22 @@
           "avatarText": "ЕК"
         },
         "status": "done",
+        "licence": {
+          "value": "lic-larena",
+          "label": "В составе Larena"
+        },
         "tags": [
           "search",
           "portal"
         ],
         "summary": "Роли, доступы и журнал действий.",
+        "body": "<h2>Права</h2><p>Роли, доступы и журнал действий.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "3.6.0",
         "priority": 9,
         "budget": 2732900,
         "released": "2026-10-12",
         "checked_at": "2026-12-31T18:23:00+03:00",
+        "review_time": "20:00",
         "public": false,
         "deprecated": false,
         "accent": "#c2410c",
@@ -7938,6 +8710,10 @@
           "avatarText": "ДО"
         },
         "status": "failed",
+        "licence": {
+          "value": "lic-trial",
+          "label": "Пробная, 30 дней"
+        },
         "tags": [
           "shop",
           "infra",
@@ -7945,11 +8721,13 @@
           "billing"
         ],
         "summary": "Загрузка данных из внешних систем.",
+        "body": "<h2>Импорт</h2><p>Загрузка данных из внешних систем.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "4.7.1",
         "priority": 1,
         "budget": 414000,
         "released": "2026-08-28",
         "checked_at": "2027-05-12T01:56:00+03:00",
+        "review_time": "03:15",
         "public": true,
         "deprecated": false,
         "accent": "#7c3aed",
@@ -8015,15 +8793,21 @@
           "avatarText": "СИ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-internal",
+          "label": "Внутренняя"
+        },
         "tags": [
           "portal"
         ],
         "summary": "Обмен с 1С, CRM и платёжными шлюзами.",
+        "body": "<h2>Интеграции</h2><p>Обмен с 1С, CRM и платёжными шлюзами.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "5.8.2",
         "priority": 2,
         "budget": 3566500,
         "released": "2026-10-15",
         "checked_at": "2026-10-04T13:56:00+03:00",
+        "review_time": "10:30",
         "public": true,
         "deprecated": false,
         "accent": "#be123c",
@@ -8063,15 +8847,21 @@
           "avatarText": "МВ"
         },
         "status": "frozen",
+        "licence": {
+          "value": "lic-none",
+          "label": "Без лицензии"
+        },
         "tags": [
           "billing"
         ],
         "summary": "Изображения, видео и их варианты.",
+        "body": "<h2>Медиа</h2><p>Изображения, видео и их варианты.</p><ul><li>Ответственный назначен</li><li>Права <strong>проверены</strong></li></ul>",
         "version": "6.9.3",
         "priority": 3,
         "budget": 991700,
         "released": "2026-08-30",
         "checked_at": "2027-08-09T22:07:00+03:00",
+        "review_time": "17:45",
         "public": false,
         "deprecated": false,
         "accent": "#0f766e",

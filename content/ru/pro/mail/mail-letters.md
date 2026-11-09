@@ -5,6 +5,8 @@ description: "Письма человека в редакторе: поиск п
 
 # Список писем
 
+:badge[sf-mail-letters]{variant=tonal scheme=primary size=1/2} :badge[1.0.6]{variant=outline scheme=on-surface size=1/2}
+
 `<sf-mail-letters>` — письма человека в редакторе писем: поиск по названию,
 порядок и то, что предлагает строка, — «Открыть» и под ⋯ копия, переименование
 и удаление. Элемент не хранит писем и ничего не делает сам: он сообщает, что
@@ -104,7 +106,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -112,16 +114,16 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 |:---|:---|
 | Тег | `<sf-mail-letters>` |
 | Назначение | Все письма человека в SIMAI Email Editor: поиск по названию, порядок и то, что предлагает каждая строка, — «Открыть» и под ⋯ копия, переименование и удаление. Момент изменения и число блоков записаны на языке страницы. Элемент не хранит писем и ничего не запоминает; он сообщает, что выбрал человек. |
-| Контракт | `smart.mail-letters`, версия `1.0.2` |
+| Контракт | `smart.mail-letters`, версия `1.0.6` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `query` — `string`, по умолчанию пусто. Поиск по названию; поле внутри элемента записывает его, пока человек печатает.
 - `order` — `string`, по умолчанию `changed`, значения: `changed`, `title`. `changed` (сначала новые) или `title` (по названию, с сортировкой по языку страницы); список порядка внутри элемента записывает его сам.
 - `current` — `string`, по умолчанию пусто. Письмо, открытое в редакторе: его строка отмечена, говорит «открыто сейчас» и не предлагает «Открыть».
@@ -139,8 +141,8 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 - `sf-mail-letters-open` — `detail`: `{ id: any }`. Открыть это письмо: `{id}`. Текущее письмо не предлагается.
 - `sf-mail-letters-copy` — `detail`: `{ id: any }`. Сделать копию этого письма: `{id}`.
-- `sf-mail-letters-rename` — `detail`: `{ id: any }`. Переименовать это письмо: `{id}`. Новое название спрашивает хост.
-- `sf-mail-letters-delete` — `detail`: `{ ids: array, id: any }`. Удалить это письмо: `{ids: [id], id}`. Подтверждает и удаляет хост.
+- `sf-mail-letters-rename` — `detail`: `{ id: any }`. Переименовать это письмо: `{id}`. Новое название спрашивает приложение.
+- `sf-mail-letters-delete` — `detail`: `{ ids: array, id: any }`. Удалить это письмо: `{ids: [id], id}`. Подтверждает и удаляет приложение.
 - `sf-mail-letters-create` — ничего не передаёт. Запрошено новое письмо.
 
 ### Доступность
@@ -158,5 +160,5 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-letters`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-letters`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`

@@ -58,7 +58,7 @@ Framework поставляет базовые типы, на которых мо
 | `layout.section` | смысловая секция, слот `default` | `<section>` |
 | `layout.columns` | колонки, слот `columns`, настройка `columns` от 1 до 12 | сетка колонок |
 | `layout.container` | часть секции своей ширины, слот `default` | `<div>` с контейнером |
-| `layout.grid` | сетка одинаковых ячеек, слот `default`: одна колонка на телефоне, три от планшета | `<div>` с сеткой |
+| `layout.grid` | сетка одинаковых ячеек, слот `default`: по умолчанию три колонки на любом экране, промежуток 5 | `<div>` с сеткой |
 | `layout.spacer` | пустое место по вертикали, настройка `size` от 1 до 8 | пустой `<div>` |
 | `layout.area` | место, где пишет автор, внутри раскладки | `<div>` |
 | `content.heading` | заголовок уровня 1–6 со структурированным текстом | `<h1>`–`<h6>` |
@@ -66,9 +66,13 @@ Framework поставляет базовые типы, на которых мо
 | `layout.regions`, `layout.region` | именованные области страницы ([Области страницы](/ru/guide/layouts/building/slots/#области-страницы)) | ориентиры `header`, `main`, `aside` и др. |
 | `layout.scope` | общий родитель для связи компонентов маршрутами ([Составной компонент в макете](/ru/guide/layouts/building/composite-smart-component/)) | `<sf-composition-scope>` |
 | `element.button`, `element.button-icon`, `element.badge`, `element.icon` | кнопка (с `href` — ссылка с видом кнопки), кнопка-значок, метка, значок | `<sf-button>`, `<sf-button-icon>`, `<sf-badge>`, `<sf-icon>` |
+| `form.form`, `form.input`, `form.textarea`, `form.checkbox`, `form.switch`, `form.select`, `form.button-submit` | форма вокруг своих блоков (настройка `method`: `post` или `get`) и её поля; поле без подписи берёт слово по своему имени (`name`, `phone`, `email`, `message`) или «Поле» на языке документа | `<form>`, `<sf-input>`, `<sf-input-textarea>`, `<sf-checkbox>`, `<sf-switch>`, `<sf-dropdown>`, `<sf-button>` отправки формы |
 
 Типы `layout.container`, `layout.grid`, `layout.spacer`, `layout.area` и
-`element.*` появились в выпуске `ui-e22fefb3c1f8` (`core.runtime` 1.26.0).
+`element.*` появились в выпуске `ui-c3015f76bcc2` (`core.runtime` 1.26.0), типы
+`form.*` — с `core.runtime` 1.27.0. Вариант `accent` секции
+(`layout.section` 1.3.0) задаёт фон `accent` — `bg-primary color-on-primary`,
+и текст внутри такого блока берёт роли `on-primary`.
 
 Полный перечень с допустимыми значениями — в реестре типов
 (`distr/core/contracts/composition-types.v1.json` поставки `ui`).

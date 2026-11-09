@@ -1,10 +1,12 @@
-<div class="flex flex-col gap-3 items-start">
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-group aria-label="Период, обычный вид" value="week" items="day::День|week::Неделя|month::Месяц"></sf-button-group>
-    <code class="text-1/2 color-on-surface-variant">appearance="default"</code>
-  </div>
-  <div class="flex flex-col gap-1 items-start">
-    <sf-button-group appearance="segmented" aria-label="Период, сегменты" value="week" items="day::День|week::Неделя|month::Месяц"></sf-button-group>
-    <code class="text-1/2 color-on-surface-variant">appearance="segmented"</code>
+<div class="query-container">
+  <div class="flex flex-wrap content-main-center gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented aria-label="Период, дорожка" value="week" items="day::День|week::Неделя|month::Месяц"></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">track</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="buttons" aria-label="Период, кнопки" value="week" items="day::День|week::Неделя|month::Месяц"></sf-segmented></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">buttons</span>
+    </div>
   </div>
 </div>

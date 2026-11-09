@@ -39,7 +39,9 @@ const listMissing = args.has('--missing');
 const HEADING = '## Справочник API';
 // A page on the third Smart standard (owner, 2026-11-02) takes the reference
 // as tables under «Справочник», with the component's facts last.
+// The fourth standard (R022) keeps the same reference.
 const HEADING3 = '## Справочник';
+const DEVELOPER = '### Для разработчика';
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
 const lock = readJson(join(root, 'simai-framework.lock.json'));
@@ -189,7 +191,16 @@ const ru = (text) => {
 };
 // A list item is not a table cell: the pipe needs no escape there.
 const item = (text) => tagsAsCode(text).replace(/\\\|/gu, '|').replace(/\s*\n\s*/gu, ' ');
-const cell = (text) => tagsAsCode(String(text)).replace(/\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
+// A pipe code() already escaped stays escaped once: escaping it again showed
+// a backslash on the page («number\\|null»).
+const cell = (text) => tagsAsCode(String(text)).replace(/(?<!\\)\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
+// A description in a table or a list reads as a sentence: it ends with a stop
+// whether or not the manifest's prose (or its translation) did.
+const sentence = (text) => {
+  const value = String(text ?? '').trim();
+  if (!value || value === '—' || /[.!?…]$/u.test(value)) return value;
+  return `${value}.`;
+};
 const code = (text) => `\`${String(text).replace(/\|/gu, '\\|')}\``;
 const literal = (value) => {
   if (value === '') return 'пусто';
@@ -241,7 +252,10 @@ const shape = (manifest, payload) => {
     const required = new Set(schema.required ?? []);
     const keys = Object.entries(schema.properties).map(([key, value]) => {
       const inner = resolveRef(manifest, value);
-      const type = [inner?.type].flat().filter(Boolean).join('|') || (inner?.$ref ? inner.$ref.split('/').pop() : 'any');
+      // A field that lists its values («method: native or legacy») reads as
+      // those values, not as `any`.
+      const values = Array.isArray(inner?.enum) && inner.enum.length ? inner.enum.map((item) => JSON.stringify(item)).join(' | ') : '';
+      const type = [inner?.type].flat().filter(Boolean).join('|') || values || (inner?.$ref ? inner.$ref.split('/').pop() : 'any');
       return `${key}${required.has(key) ? '' : '?'}: ${type}`;
     });
     return code(`{ ${keys.join(', ')} }`);
@@ -263,6 +277,45 @@ const READINESS = {
   accepted: 'принят в продукт',
 };
 const NAME_RULE = {required: 'обязательно', optional: 'необязательно', none: 'не нужно', inherited: 'наследуется от содержимого'};
+// «О компоненте» reads as plain sentences for a product developer (owner,
+// 2026-11-08): what the release promises, what a screen reader hears and
+// which keys work, without manifest vocabulary. Only facts the manifest
+// states; a value with no plain wording here is shown as code.
+const LIFECYCLE_PLAIN = {
+  experimental: 'Пробный: может измениться в следующих выпусках',
+  stable: 'Стабильный',
+  released: 'Выпущен',
+  deprecated: 'Устаревший: замените, пока его не убрали',
+  internal: 'Внутренний: не используйте напрямую',
+};
+const READINESS_PLAIN = {
+  described: 'описан и проверен своим сценарием, в продуктах ещё не проверен',
+  runnable: 'работает в Студии, в продуктах ещё не проверен',
+  verified: 'проверен приёмкой',
+  accepted: 'используется в продуктах',
+  'host-required': 'работает только с приложением, подключённым через порт',
+};
+const ROLE_PLAIN = {
+  banner: 'шапка сайта', button: 'кнопка', checkbox: 'флажок', combobox: 'поле со списком', dialog: 'диалоговое окно',
+  group: 'группа', img: 'изображение', link: 'ссылка', list: 'список', menu: 'меню', meter: 'шкала',
+  navigation: 'навигация', progressbar: 'индикатор прогресса', radio: 'радиокнопка', radiogroup: 'группа переключателей',
+  region: 'область страницы', separator: 'разделитель', slider: 'ползунок', spinbutton: 'числовое поле',
+  status: 'строка состояния', switch: 'переключатель', tablist: 'вкладки', textbox: 'текстовое поле',
+  tooltip: 'подсказка', tree: 'дерево', treeitem: 'пункт дерева',
+};
+const NAME_PLAIN = {
+  required: 'нужна подпись или `aria-label`',
+  recommended: 'желательна подпись или `aria-label`',
+  optional: 'подпись или `aria-label` по желанию',
+  none: 'подпись не нужна',
+  inherited: 'название берётся из содержимого',
+  internal: 'название компонент ставит сам',
+};
+const KEY_PLAIN = {
+  Space: 'Пробел', Escape: 'Esc', ArrowUp: '↑', ArrowDown: '↓', ArrowLeft: '←', ArrowRight: '→', ContextMenu: 'клавиша меню',
+};
+const keyPlain = (name) => (KEY_PLAIN[name] ?? name).replace(/^Mod\+/u, 'Ctrl/Cmd+');
+const SHAPE_PLAIN = {rows: 'строки', record: 'запись', menu: 'меню', block: 'блок', line: 'строка'};
 
 // A journal item names its component, or names only an attribute when the rename
 // holds for every component that has it (`status="danger"` became `error`).
@@ -313,7 +366,7 @@ const viewPreferenceTable = (preference) => {
   ];
   for (const [name, field] of Object.entries(preference.fields ?? {})) {
     const writers = (field.written_by ?? []).map((writer) => code(writer)).join(', ') || '—';
-    lines.push(`| ${code(name)} | ${code(field.type)} | ${writers} | ${field.seed ? 'да' : 'нет'} | ${cell(ru(field.description))} |`);
+    lines.push(`| ${code(name)} | ${code(field.type)} | ${writers} | ${field.seed ? 'да' : 'нет'} | ${cell(sentence(ru(field.description)))} |`);
   }
   lines.push('');
   return lines;
@@ -323,11 +376,106 @@ const viewPreferenceTable = (preference) => {
 // the data-sf-skeleton value the server writes, and whether the component
 // draws a skeleton of its own while it waits for data.
 const SKELETON_SHAPES = ['rows', 'record', 'menu', 'block', 'line', 'none'];
+const skeletonPlain = (skeleton) => (skeleton.shape === 'none'
+  ? `Заготовки нет${skeleton.while_loading === 'template' ? '; пока ждёт данные, компонент показывает свою' : ''}.`
+  : `Пока грузится код, на месте компонента видна заготовка «${SHAPE_PLAIN[skeleton.shape] ?? skeleton.shape}»`
+    + ` (сервер пишет ${code(`data-sf-skeleton="${skeleton.shape}"`)})`
+    + `${skeleton.while_loading === 'template' ? '; пока ждёт данные, компонент показывает свою' : ''}.`)
+  + ' Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода).';
 const skeletonText = (skeleton) => (skeleton.shape === 'none'
   ? 'нет: атрибут `data-sf-skeleton` не пишется; '
   : `сервер пишет ${code(`data-sf-skeleton="${skeleton.shape}"`)}; `)
   + (skeleton.while_loading === 'template' ? 'пока ждёт данные, рисует свой скелетон' : 'своего скелетона при загрузке данных нет')
   + ' ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода))';
+
+// Earlier names are not on a component page: the page describes the version
+// the release ships (owner, 2026-11-06, R006). They are collected here, per
+// tag, and the names guide lists them all in one generated table, so a reader
+// migrating old markup still finds every one.
+const legacyByTag = new Map();
+const eventStage = (name) => {
+  const record = journal.records.find((entry) => entry.kind === 'event'
+    && (entry.items ?? []).some((one) => one.from === name));
+  return record ? `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}` : 'работает как псевдоним | —';
+};
+// A manifest may keep an old name as its own entry and say so only in its
+// prose: «Dated alias of heading until 2026-12-01.», «Compatibility alias for
+// spacing.», «Legacy name for invalid, still honoured.», «Alias of dismiss():
+// …». The page describes the current version (R006): such an entry leaves the
+// page for the names guide when the name it stands for is declared beside it.
+const ALIAS_PROSE = /^(?:Dated alias of|Compatibility alias for|Legacy name (?:for|of)|Alias of)\s+`?([A-Za-z][\w-]*)(?:\(\))?`?/u;
+const aliasOf = (text, declared) => {
+  const match = ALIAS_PROSE.exec(String(text ?? ''));
+  return match && Object.hasOwn(declared ?? {}, match[1]) ? match[1] : null;
+};
+const aliasUntil = (text) => /until (\d{4}-\d{2}-\d{2})/u.exec(String(text ?? ''))?.[1] ?? '—';
+const proseAliases = (manifest) => {
+  const properties = manifest.inputs?.properties ?? {};
+  const pick = (entries, declared, field) => entries
+    .map(([name, entry]) => [name, aliasOf(entry?.[field], declared), aliasUntil(entry?.[field])])
+    .filter(([name, target]) => target && target !== name);
+  return {
+    inputs: pick(Object.entries(properties), properties, 'description'),
+    methods: pick(Object.entries(manifest.methods ?? {}), manifest.methods, 'summary'),
+    events: pick(Object.entries(manifest.events ?? {}).filter(([, event]) => !event.alias_of), manifest.events, 'summary'),
+  };
+};
+const isProseAlias = (manifest, kind, name) => proseAliases(manifest)[kind].some(([alias]) => alias === name);
+const collectLegacy = (folder, manifest) => {
+  const tag = manifest.custom_element;
+  const properties = manifest.inputs?.properties ?? {};
+  const inputs = Object.entries(properties);
+  const legacy = legacyFor(tag, properties);
+  const ownAxis = new Set(legacy
+    .filter(({record, item}) => record.kind === 'attribute' && staysOwnAxis(folder, item.from, item.to))
+    .map(({item}) => item.from));
+  const legacyNames = new Set(legacy
+    .filter(({record, item}) => record.kind === 'attribute' && !ownAxis.has(item.from))
+    .map(({item}) => item.from));
+  // `type` and `variant` beside a named axis are the words the axes replaced
+  // (scripts/audit-smart-attribute-tables.mjs holds the same rule), whether or
+  // not the journal lists this component.
+  const hasAxis = inputs.some(([name]) => AXES.includes(name));
+  const unlisted = inputs.map(([name]) => name)
+    .filter((name) => hasAxis && LEGACY_WORDS.includes(name) && !legacyNames.has(name));
+  // The journal can hold one rename twice (in a component's record and in the
+  // record for every component); the table names it once. The current name
+  // leads each row: a row that starts with an old name reads as a public one.
+  const rows = new Set();
+  for (const {record, item} of legacy) {
+    const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
+    const stage = `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}`;
+    if (record.kind === 'attribute' && ownAxis.has(item.from)) {
+      // Only the new axis's words moved; the old attribute keeps its own values.
+      const words = (properties[item.to]?.enum ?? []).filter((value) => value !== '');
+      const which = words.length ? ` — только значения ${words.map(code).join(', ')}` : '';
+      rows.add(`| ${code(item.to)} | ${code(item.from)}${which} | ${stage} |`);
+      continue;
+    }
+    const to = item.attribute ? `${item.attribute}="${item.to}"` : item.to;
+    rows.add(`| ${code(to)} | ${code(from)} | ${stage} |`);
+    if (record.kind === 'attribute' && !item.attribute) {
+      for (const [before, after] of valueMap(item.from, item.to, properties)) {
+        rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(`${item.from}="${before}"`)} | ${stage} |`);
+      }
+    }
+  }
+  for (const name of unlisted) {
+    rows.add(`| ${AXES.filter((axis) => inputs.some(([input]) => input === axis)).map(code).join(', ')} | ${code(name)} | принимается для совместимости | — |`);
+  }
+  for (const [name, event] of Object.entries(manifest.events ?? {})) {
+    if (event.alias_of) rows.add(`| событие ${code(event.alias_of)} | ${code(name)} | ${eventStage(name)} |`);
+  }
+  const prose = proseAliases(manifest);
+  for (const [name, target, until] of prose.inputs) {
+    if (!legacyNames.has(name) && !unlisted.includes(name)) rows.add(`| ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
+  }
+  for (const [name, target, until] of prose.methods) rows.add(`| метод ${code(`${target}()`)} | ${code(`${name}()`)} | работает как псевдоним | ${until} |`);
+  for (const [name, target, until] of prose.events) rows.add(`| событие ${code(target)} | ${code(name)} | работает как псевдоним | ${until} |`);
+  if (rows.size) legacyByTag.set(tag, [...rows]);
+  const aliasInputs = new Set(prose.inputs.map(([name]) => name));
+  return {current: inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name) && !aliasInputs.has(name))};
+};
 
 const renderComponent = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
@@ -347,21 +495,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     '',
   );
 
-  const inputs = Object.entries(manifest.inputs?.properties ?? {});
-  const legacy = legacyFor(tag, manifest.inputs?.properties ?? {});
-  const ownAxis = new Set(legacy
-    .filter(({record, item}) => record.kind === 'attribute' && staysOwnAxis(folder, item.from, item.to))
-    .map(({item}) => item.from));
-  const legacyNames = new Set(legacy
-    .filter(({record, item}) => record.kind === 'attribute' && !ownAxis.has(item.from))
-    .map(({item}) => item.from));
-  // `type` and `variant` beside a named axis are the words the axes replaced
-  // (scripts/audit-smart-attribute-tables.mjs holds the same rule), whether or
-  // not the journal lists this component.
-  const hasAxis = inputs.some(([name]) => AXES.includes(name));
-  const unlisted = inputs.map(([name]) => name)
-    .filter((name) => hasAxis && LEGACY_WORDS.includes(name) && !legacyNames.has(name));
-  const current = inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name));
+  const {current} = collectLegacy(folder, manifest);
   lines.push(`${h} Атрибуты`, '');
   if (current.length === 0) {
     lines.push('Атрибутов нет.', '');
@@ -373,7 +507,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       if (schema.default !== undefined) facts.push(`по умолчанию ${literal(schema.default)}`);
       if (values(schema) !== '—') facts.push(`значения: ${values(schema)}`);
       if (schema.examples) facts.push(`например ${schema.examples.map(literal).join(', ')}`);
-      const purpose = ru(schema.description);
+      const purpose = sentence(ru(schema.description));
       lines.push(item(`- ${code(name)} — ${facts.join(', ')}.${purpose ? ` ${purpose}` : ''}`));
     }
     lines.push('');
@@ -381,39 +515,6 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       lines.push(`Свойство атрибута ${code(attribute)} называется ${code(property)}.`, '');
     }
   }
-  // The current name leads each row: a row that starts with an old name reads
-  // as a public attribute.
-  if (legacy.length || unlisted.length) {
-    lines.push('Прежние имена:', '', '| Имя | Прежнее имя | Состояние | Убирается после |', '|:---|:---|:---|:---|');
-    // The journal can hold one rename twice (in a component's record and in
-    // the record for every component); the table names it once.
-    const rows = new Set();
-    const properties = manifest.inputs?.properties ?? {};
-    for (const {record, item} of legacy) {
-      const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
-      const stage = `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}`;
-      if (record.kind === 'attribute' && ownAxis.has(item.from)) {
-        // Only the new axis's words moved; the old attribute keeps its own values.
-        const words = (properties[item.to]?.enum ?? []).filter((value) => value !== '');
-        const which = words.length ? ` — только значения ${words.map(code).join(', ')}` : '';
-        rows.add(`| ${code(item.to)} | ${code(item.from)}${which} | ${stage} |`);
-        continue;
-      }
-      const to = item.attribute ? `${item.attribute}="${item.to}"` : item.to;
-      rows.add(`| ${code(to)} | ${code(from)} | ${stage} |`);
-      if (record.kind === 'attribute' && !item.attribute) {
-        for (const [before, after] of valueMap(item.from, item.to, properties)) {
-          rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(`${item.from}="${before}"`)} | ${stage} |`);
-        }
-      }
-    }
-    lines.push(...rows);
-    for (const name of unlisted) {
-      lines.push(`| ${AXES.filter((axis) => inputs.some(([input]) => input === axis)).map(code).join(', ')} | ${code(name)} | принимается для совместимости | — |`);
-    }
-    lines.push('');
-  }
-
   // What a node of this component takes in a layout document, when the
   // manifest declares it (composition.declarative).
   const declarative = manifest.composition?.declarative;
@@ -428,7 +529,7 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     lines.push('', 'Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.', '');
   }
 
-  const methods = Object.entries(manifest.methods ?? {});
+  const methods = Object.entries(manifest.methods ?? {}).filter(([name]) => !isProseAlias(manifest, 'methods', name));
   lines.push(`${h} Методы`, '');
   if (methods.length === 0) {
     lines.push('Публичных методов нет.', '');
@@ -442,13 +543,15 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
       const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
       const parts = [];
       if (method.returns && !unknown) parts.push(`возвращает ${typeName(method.returns)}.`);
-      if (!generic(method.summary)) parts.push(ru(method.summary));
+      if (!generic(method.summary)) parts.push(sentence(ru(method.summary)));
       lines.push(item(`- ${code(`${name}(${argumentList.join(', ')})`)}${parts.length ? ` — ${parts.join(' ')}` : ''}`));
     }
     lines.push('');
   }
 
-  const events = Object.entries(manifest.events ?? {});
+  // An event's dated old name is an earlier name: the names guide lists it.
+  const declared = Object.entries(manifest.events ?? {});
+  const events = declared.filter(([name, event]) => !event.alias_of && !isProseAlias(manifest, 'events', name));
   lines.push(`${h} События`, '');
   if (events.length === 0) {
     lines.push('Своих событий нет; общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).', '');
@@ -457,16 +560,16 @@ const renderComponent = (folder, {manifest, citation, rule, delivery}, single) =
     for (const [name, event] of events) {
       // Both names carry one detail; when only the alias declares its shape,
       // the name to bind shows it too.
-      const alias = events.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
+      const alias = declared.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
       const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
       // An alias keeps the canonical detail only when the manifest says so;
       // most carry their former detail (component, originalEvent ...).
       const own = shape(manifest, event.payload);
-      const canonical = event.alias_of ? (events.find(([other]) => other === event.alias_of)?.[1]) : null;
+      const canonical = event.alias_of ? (declared.find(([other]) => other === event.alias_of)?.[1]) : null;
       const same = own === 'не описан' || (canonical && own === shape(manifest, canonical.payload));
       const when = event.alias_of
         ? `устаревший псевдоним события ${code(event.alias_of)}: ${same ? 'приходит с тем же `detail`' : `приходит с прежним \`detail\`: ${own}`}, подписывайтесь на ${code(event.alias_of)}.`
-        : (generic(event.summary) ? '' : ru(event.summary));
+        : (generic(event.summary) ? '' : sentence(ru(event.summary)));
       const detailText = detail === 'не описан'
         ? '`detail` не описан.'
         : (detail === 'пустой' ? 'ничего не передаёт.' : `\`detail\`: ${detail}.`);
@@ -525,37 +628,69 @@ const typeRu = (schema) => {
   return types.length ? types.map((type) => TYPE_RU[type] ?? code(type)).join(' или ') : '—';
 };
 
+const COMMON_ATTRIBUTES = new Set(['template', 'root-class', 'root-style']);
+
+// The places a component takes content in (slots) and its public CSS
+// variables come from the release's distr/smart/<folder>/component.json. The
+// manifest carries no words for them, so a component's tables appear once
+// config/smart-reference.json `slots` and `css_variables` describe every one
+// the release declares; --check fails on a name the release does not declare
+// and on one the release declares and the config leaves out.
+const partsTables = (folder, h) => {
+  const said = {slots: settings.slots?.[folder], variables: settings.css_variables?.[folder]};
+  if (!said.slots && !said.variables) return [];
+  const text = show(uiRepo, uiCommit, `distr/smart/${folder}/component.json`);
+  const declared = text ? JSON.parse(text) : {};
+  const lines = [];
+  const table = (kind, names, words, head) => {
+    for (const name of names) if (words[name] === undefined) unplaced.push(`${folder}: ${kind} ${name} has no description in config/smart-reference.json`);
+    for (const name of Object.keys(words)) if (!names.includes(name)) unplaced.push(`${folder}: ${kind} ${name} is not in the release`);
+    return [head, '|:---|:---|', ...names.filter((name) => words[name] !== undefined).map((name) => `| ${code(name)} | ${cell(sentence(words[name]))} |`), ''];
+  };
+  if (said.slots) {
+    lines.push(`${h} Места`, '', 'Содержимое в место кладут элементом с атрибутом `slot`: `<p slot="description">…</p>`.', '',
+      ...table('slot', Object.keys(declared.slots ?? {}), said.slots, '| Место | Что в нём |'));
+  }
+  if (said.variables) {
+    lines.push(`${h} Переменные`, '', 'Публичные переменные: имя стабильно, значение ставят на сам элемент или на любого предка.', '',
+      ...table('variable', Object.keys(declared['css-variables'] ?? {}), said.variables, '| Переменная | Что задаёт |'));
+  }
+  return lines;
+};
+
 const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
   const lines = [];
   const h = single ? '###' : '####';
   if (!single) lines.push(`### \`<${tag}>\``, '');
 
-  const inputs = Object.entries(manifest.inputs?.properties ?? {});
-  const legacy = legacyFor(tag, manifest.inputs?.properties ?? {});
-  const ownAxis = new Set(legacy
-    .filter(({record, item}) => record.kind === 'attribute' && staysOwnAxis(folder, item.from, item.to))
-    .map(({item}) => item.from));
-  const legacyNames = new Set(legacy
-    .filter(({record, item}) => record.kind === 'attribute' && !ownAxis.has(item.from))
-    .map(({item}) => item.from));
-  const hasAxis = inputs.some(([name]) => AXES.includes(name));
-  const unlisted = inputs.map(([name]) => name)
-    .filter((name) => hasAxis && LEGACY_WORDS.includes(name) && !legacyNames.has(name));
-  const current = inputs.filter(([name]) => !legacyNames.has(name) && !unlisted.includes(name));
+  const {current} = collectLegacy(folder, manifest);
   lines.push(`${h} Атрибуты`, '');
   if (current.length === 0) {
     lines.push('Атрибутов нет.', '');
   } else {
-    lines.push('| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|');
-    for (const [name, schema] of current) {
+    // The attributes every Smart component has (template, root-class,
+    // root-style) are not what a reader looks for: they close the list in a
+    // group of their own (R022, 2026-11-07).
+    const own = current.filter(([name]) => !COMMON_ATTRIBUTES.has(name));
+    const common = current.filter(([name]) => COMMON_ATTRIBUTES.has(name));
+    const row = ([name, schema]) => {
       const fallback = schema.default === undefined ? '—'
         : (typeof schema.default === 'boolean' ? (schema.default ? 'да' : 'нет') : literal(schema.default));
       const choice = values(schema) !== '—'
         ? values(schema)
         : (schema.examples ? `например ${schema.examples.map(literal).join(', ')}` : '—');
-      lines.push(`| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(ru(schema.description) || '—')} |`);
-    }
+      // An attribute the manifest leaves undescribed takes the page's own
+      // words from config/smart-reference.json `attribute_summaries`, written
+      // from the component's docs, until the manifest says it.
+      const stated = settings.attribute_summaries?.[folder]?.[name];
+      const purpose = schema.description ? sentence(ru(schema.description)) : sentence(stated ?? '');
+      return `| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(purpose || '—')} |`;
+    };
+    const head = ['| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|'];
+    if (own.length) lines.push(...head, ...own.map(row));
+    if (own.length && common.length) lines.push('', `${h}# Общие для всех компонентов`, '');
+    if (common.length) lines.push(...head, ...common.map(row));
     lines.push('', 'Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase:'
       + ' `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.');
     for (const [attribute, property] of Object.entries(PROPERTY_EXCEPTIONS[folder] ?? {})) {
@@ -563,34 +698,7 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     }
     lines.push('');
   }
-  if (legacy.length || unlisted.length) {
-    const rows = new Set();
-    const properties = manifest.inputs?.properties ?? {};
-    for (const {record, item} of legacy) {
-      const from = item.attribute ? `${item.attribute}="${item.from}"` : item.from;
-      const stage = `${STAGE[record.stage] ?? record.stage} | ${record.remove_after ?? '—'}`;
-      if (record.kind === 'attribute' && ownAxis.has(item.from)) {
-        const words = (properties[item.to]?.enum ?? []).filter((value) => value !== '');
-        const which = words.length ? ` — только значения ${words.map(code).join(', ')}` : '';
-        rows.add(`| ${code(item.to)} | ${code(item.from)}${which} | ${stage} |`);
-        continue;
-      }
-      const to = item.attribute ? `${item.attribute}="${item.to}"` : item.to;
-      rows.add(`| ${code(to)} | ${code(from)} | ${stage} |`);
-      if (record.kind === 'attribute' && !item.attribute) {
-        for (const [before, after] of valueMap(item.from, item.to, properties)) {
-          rows.add(`| ${code(`${item.to}="${after}"`)} | ${code(`${item.from}="${before}"`)} | ${stage} |`);
-        }
-      }
-    }
-    for (const name of unlisted) {
-      rows.add(`| ${AXES.filter((axis) => inputs.some(([input]) => input === axis)).map(code).join(', ')} | ${code(name)} | принимается для совместимости | — |`);
-    }
-    lines.push(':::details {layout=lines}', `${h}# Прежние имена (${rows.size})`, '',
-      '| Имя | Прежнее имя | Состояние | Убирается после |', '|:---|:---|:---|:---|', ...rows, ':::', '');
-  }
-
-  const methods = Object.entries(manifest.methods ?? {});
+  const methods = Object.entries(manifest.methods ?? {}).filter(([name]) => !isProseAlias(manifest, 'methods', name));
   lines.push(`${h} Методы`, '');
   if (methods.length === 0) {
     lines.push('Публичных методов нет.', '');
@@ -602,12 +710,14 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
         : `${argument.name}${argument.required === false ? '?' : ''}: ${[argument.type ?? argument.schema?.type].flat().filter(Boolean).join('|') || 'any'}`));
       const unknown = JSON.stringify(method.returns?.type) === '["object","boolean","null"]';
       const returns = method.returns && !unknown ? typeRu(method.returns) : '—';
-      lines.push(`| ${code(`${name}(${argumentList.join(', ')})`)} | ${returns} | ${generic(method.summary) ? '—' : cell(ru(method.summary))} |`);
+      lines.push(`| ${code(`${name}(${argumentList.join(', ')})`)} | ${returns} | ${generic(method.summary) ? '—' : cell(sentence(ru(method.summary)))} |`);
     }
     lines.push('');
   }
 
-  const events = Object.entries(manifest.events ?? {});
+  // An event's dated old name is an earlier name: the names guide lists it.
+  const declared = Object.entries(manifest.events ?? {});
+  const events = declared.filter(([name, event]) => !event.alias_of && !isProseAlias(manifest, 'events', name));
   lines.push(`${h} События`, '');
   const shared = 'Общие события базового элемента — в главе [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс).';
   if (events.length === 0) {
@@ -616,16 +726,23 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     lines.push(`События приходят на сам элемент и всплывают; глаголы в именах — из [общего словаря](/ru/guide/smart-components/names/). ${shared}`, '',
       '| Событие | `detail` | Когда приходит |', '|:---|:---|:---|');
     for (const [name, event] of events) {
-      const alias = events.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
+      const alias = declared.find(([, other]) => other.alias_of === name && shape(manifest, other.payload) !== 'не описан');
       const detail = shape(manifest, event.payload) === 'не описан' && alias ? shape(manifest, alias[1].payload) : shape(manifest, event.payload);
+      // A manifest that only points at the vocabulary («press (vocabulary).»)
+      // says nothing about when this component sends it; the page's own words
+      // stand in, from config/smart-reference.json `event_summaries`, until
+      // the manifest says it.
+      const stated = settings.event_summaries?.[folder]?.[name];
       const when = event.alias_of
         ? `устаревший псевдоним ${code(event.alias_of)}: подписывайтесь на ${code(event.alias_of)}`
-        : (generic(event.summary) ? '—' : ru(event.summary));
-      const detailText = detail === 'не описан' ? 'не описан' : (detail === 'пустой' ? 'нет' : detail);
-      lines.push(`| ${code(name)} | ${cell(detailText)} | ${cell(when)} |`);
+        : (generic(event.summary) ? (stated ?? '—') : ru(event.summary));
+      const detailText = detail === 'не описан' ? 'не описан' : (detail === 'пустой' ? 'пустой объект' : detail);
+      lines.push(`| ${code(name)} | ${cell(detailText)} | ${cell(sentence(when))} |`);
     }
     lines.push('');
   }
+
+  lines.push(...partsTables(folder, h));
 
   const preference = manifest.persistence?.view_preference;
   if (preference) lines.push(`${h} Персональный вид`, '', ...viewPreferenceTable(preference));
@@ -634,10 +751,23 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
   const access = suppressed.has('accessibility') ? {} : (manifest.accessibility ?? {});
   const key = (entry) => (dictionary[entry] === undefined && /^[A-Z][A-Za-z0-9]*(\+[A-Za-z0-9]+)*$/u.test(entry) ? code(entry) : ru(entry));
   const accessParts = [];
-  if (access.role) accessParts.push(`роль ${ru(access.role)}`);
-  if (access.accessible_name) accessParts.push(`доступное имя ${NAME_RULE[access.accessible_name] ?? ru(access.accessible_name)}`);
-  if (Array.isArray(access.keyboard) && access.keyboard.length) accessParts.push(`клавиши ${access.keyboard.map(key).join(', ')}`);
+  // A key name is code; a phrase the manifest writes about keys is text.
+  const keyText = (entry) => (dictionary[entry] === undefined && (/^[A-Z][A-Za-z0-9]*(\+[A-Za-z0-9]+)*$/u.test(entry) || /^[^\sа-яё]{1,3}$/iu.test(entry))
+    ? code(keyPlain(entry)) : ru(entry).replace(/\.$/u, ''));
+  if (access.role) {
+    accessParts.push(access.role === 'none' ? 'Своей роли для экранного диктора нет'
+      : ROLE_PLAIN[access.role] ? `Читается как ${ROLE_PLAIN[access.role]}` : `Роль ${code(access.role)}`);
+  }
+  if (access.accessible_name) accessParts.push(NAME_PLAIN[access.accessible_name] ?? `название: ${code(access.accessible_name)}`);
+  // Key names read as a list; a phrase about keys has commas of its own, so
+  // a phrase stands apart from its neighbours with a semicolon.
+  if (Array.isArray(access.keyboard) && access.keyboard.length) {
+    const keys = access.keyboard.map(keyText);
+    const bare = (text) => /^`[^`]+`$/u.test(text);
+    accessParts.push(`с клавиатуры: ${keys.map((text, i) => (i === 0 ? '' : (bare(text) && bare(keys[i - 1]) ? ', ' : '; ')) + text).join('')}`);
+  }
   else if (typeof access.keyboard === 'string' && access.keyboard) accessParts.push(ru(access.keyboard).replace(/\.$/u, ''));
+  if (accessParts.length) accessParts[0] = accessParts[0][0].toUpperCase() + accessParts[0].slice(1);
   const declarative = manifest.composition?.declarative;
   const quality = '/ru/guide/smart-components/quality/#готовность-компонента-к-использованию';
   lines.push(`${h} О компоненте`, '',
@@ -645,9 +775,9 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     '|:---|:---|',
     `| Тег | ${code(`<${tag}>`)}, контракт ${code(manifest.id)} версии ${code(manifest.version)} |`,
     `| Поставка | ${delivery} |`,
-    `| [Готовность](${quality}) | ${LIFECYCLE[manifest.lifecycle] ?? code(manifest.lifecycle)}; ${READINESS[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')} |`,
-    ...(manifest.presentation?.skeleton ? [`| До прихода кода | ${skeletonText(manifest.presentation.skeleton)} |`] : []),
-    ...(accessParts.length ? [`| Доступность | ${cell(accessParts.join('; '))} |`] : []),
+    `| [Готовность](${quality}) | ${LIFECYCLE_PLAIN[manifest.lifecycle] ?? `Состояние ${code(manifest.lifecycle)}`}; ${READINESS_PLAIN[manifest.readiness?.level] ?? code(manifest.readiness?.level ?? '—')}. |`,
+    ...(manifest.presentation?.skeleton ? [`| До прихода кода | ${skeletonPlain(manifest.presentation.skeleton)} |`] : []),
+    ...(accessParts.length ? [`| Доступность | ${cell(`${accessParts.join('; ')}.`)} |`] : []),
     ...(declarative?.type ? [`| [Документ макета](/ru/guide/layouts/building/smart-component/#декларативный-контракт) | узел ${code(declarative.type)}; свойства — атрибуты из таблицы выше${(() => { const props = new Set(declarative.props ?? []); const out = current.map(([name]) => name).filter((name) => !props.has(name)); return out.length ? `, кроме ${out.map(code).join(', ')}` : ''; })()}${Object.keys(declarative.data ?? {}).length ? `, данные: ${Object.keys(declarative.data).map(code).join(', ')}` : ''} |`] : []),
     `| Источник | ${code(citation)} |`,
     ...(rule ? [`| Правило классов | ${code(rule)} |`] : []),
@@ -656,13 +786,9 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
 };
 
 const renderSection3 = (entries) => {
-  const lines = [
-    HEADING3,
-    '',
-    `Собран из манифеста ${entries.length > 1 ? 'компонентов' : 'компонента'} выпуска ${code(pair)}`
-      + ' и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.',
-    '',
-  ];
+  // The release is named in «О компоненте» (Поставка, Источник); the page
+  // does not open its reference with how it was built (R022).
+  const lines = [HEADING3, ''];
   for (const [folder, component] of entries) lines.push(...renderComponent3(folder, component, entries.length === 1));
   return `${lines.join('\n').replace(/\n+$/u, '')}\n`;
 };
@@ -705,6 +831,11 @@ const rewrite = (text, entries, third) => {
   // What follows the generated section (the standard's «См. также») stays.
   const next = at === -1 ? -1 : text.indexOf('\n## ', at + heading.length + 1);
   const tail = next === -1 ? '' : text.slice(next + 1);
+  // A page may close its reference with a hand-written «### Для разработчика»
+  // (R022): it is kept, from its heading to the next H2, after the tables.
+  const sectionText = at === -1 ? '' : text.slice(at + 1, next === -1 ? text.length : next + 1);
+  const ownAt = sectionText.indexOf(`\n${DEVELOPER}\n`);
+  const own = ownAt === -1 ? '' : sectionText.slice(ownAt + 1).replace(/\n+$/u, '\n');
   body = body.replace(IDENTIFIER, '');
   const parts = body.split(/^(?=## )/mu);
   const kept = parts.filter((part) => {
@@ -714,13 +845,27 @@ const rewrite = (text, entries, third) => {
     return !(test && test(match[2]));
   });
   body = kept.join('').replace(/\n+$/u, '');
-  return `${body}\n\n${(third ? renderSection3 : renderSection)(entries)}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
+  return `${body}\n\n${(third ? renderSection3 : renderSection)(entries)}${own ? `\n${own}` : ''}${tail ? `\n${tail.replace(/\n*$/u, '\n')}` : ''}`;
+};
+
+// The version a page describes stands under its title as two Framework badges
+// per component, the tag and its contract version (owner, 2026-11-06, R007):
+// the whole page is about that version, so its prose names none. The line is
+// the one right after the H1 and is rewritten with every release.
+const BADGE_LINE = /^\n:badge\[[^\n]*\n+/u;
+const withBadges = (text, entries) => {
+  const title = text.match(/^# .+\n/mu);
+  if (!title) return text;
+  const at = title.index + title[0].length;
+  const badges = entries.map(([, {manifest}]) => `:badge[${manifest.custom_element}]{variant=tonal scheme=primary size=1/2}`
+    + ` :badge[${manifest.version}]{variant=outline scheme=on-surface size=1/2}`).join(' ');
+  return `${text.slice(0, at)}\n${badges}\n${text.slice(at).replace(BADGE_LINE, '\n')}`;
 };
 
 const changed = [];
 for (const [page, entries] of [...pages].sort(([a], [b]) => a.localeCompare(b))) {
   const current = readFileSync(page, 'utf8');
-  const expected = rewrite(current, entries, enrolment[relative(contentRoot, page)]?.standard === 3);
+  const expected = withBadges(rewrite(current, entries, (enrolment[relative(contentRoot, page)]?.standard ?? 0) >= 3), entries);
   if (expected === current) continue;
   changed.push(relative(root, page));
   if (!checkOnly && !listMissing) writeFileSync(page, expected);
@@ -751,6 +896,17 @@ const writeGuideSection = (page, heading, body) => {
 };
 const byTag = (list) => list.sort(([, a], [, b]) => a.manifest.custom_element.localeCompare(b.manifest.custom_element));
 const releaseLine = 'Раздел собран из манифестов выпуска ' + code(pair) + ' и пакетов и обновляется вместе с ними.';
+
+// The names guide lists every earlier name the release still answers to, per
+// tag: renamed attributes and values, the words the axes replaced and the
+// dated old names of events. Component pages leave them out (R006).
+{
+  const body = [releaseLine + ' Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.', ''];
+  for (const tag of [...legacyByTag.keys()].sort()) {
+    body.push(`#### \`<${tag}>\``, '', '| Имя | Прежнее имя | Состояние | Убирается после |', '|:---|:---|:---|:---|', ...legacyByTag.get(tag), '');
+  }
+  writeGuideSection('content/ru/guide/smart-components/names.md', '### Прежние имена по компонентам', body);
+}
 
 // The view-preferences guide quotes every declared view preference.
 {

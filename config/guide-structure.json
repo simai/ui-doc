@@ -155,6 +155,11 @@
      "order": 30
     },
     {
+     "slug": "density",
+     "title": "Плотность",
+     "order": 35
+    },
+    {
      "slug": "spacing",
      "title": "Пространство",
      "order": 40

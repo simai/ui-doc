@@ -11,9 +11,8 @@ description: "Смарт-компоненты по задачам интерфе
 
 - [Кнопки](/ru/smart/actions/buttons/)
 - [Кнопки с иконкой](/ru/smart/actions/icon-buttons/)
-- [Группа кнопок](/ru/smart/actions/button-group/)
 - [Сегментный переключатель](/ru/smart/actions/segmented/)
-- [Закрытие](/ru/smart/actions/close/)
+- [Кнопка закрытия](/ru/smart/actions/close/)
 - [Скачивание файла](/ru/smart/actions/download-file/)
 - [Кнопка копирования](/ru/smart/actions/copy-button/)
 - [Подтверждение](/ru/smart/actions/confirm/)
@@ -27,6 +26,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Выбор из поиска](/ru/smart/forms/lookup/)
 - [Флажок](/ru/smart/forms/checkbox/)
 - [Радиокнопки](/ru/smart/forms/radio/)
+- [Выбор карточками](/ru/smart/forms/input-choice/) — Поле формы: один вариант или несколько из карточек с названием, пояснением и иконкой.
 - [Переключатель](/ru/smart/forms/switch/)
 - [Слайдер контента](/ru/smart/forms/slider/)
 - [Слайдер диапазона](/ru/smart/forms/range-slider/)
@@ -51,15 +51,20 @@ description: "Смарт-компоненты по задачам интерфе
 - [Элемент дерева](/ru/smart/navigation/tree-item/)
 - [Выпадающий список](/ru/smart/navigation/dropdown/)
 - [Контекстное меню](/ru/smart/navigation/context-menu/)
+- [Настройки](/ru/smart/navigation/settings/)
+- [Выбор языка](/ru/smart/navigation/language/)
 
 ## Уведомления и состояния
 
 - [Уведомление](/ru/smart/feedback/alert/)
+- [Плашка уведомлений](/ru/smart/feedback/alert-bar/)
+- [Требует внимания](/ru/smart/feedback/list-attention/) — Список проблем, которым нужен человек: самые серьёзные первыми, у каждой одно действие.
 - [Всплывающие сообщения](/ru/smart/feedback/toast/)
 - [Бейджи](/ru/smart/feedback/badges/)
 - [Прогресс](/ru/smart/feedback/progress-bar/)
 - [Кольцо прогресса](/ru/smart/feedback/progress-ring/)
 - [Шкала прогресса](/ru/smart/feedback/progress-scale/)
+- [Ход выполнения](/ru/smart/feedback/progress-run/) — Долгое задание по шагам: состояния и время шагов, вывод, итог, отмена и повтор.
 - [Скелетон](/ru/smart/feedback/skeleton/)
 - [Спиннер](/ru/smart/feedback/spinner/)
 - [Подсказка](/ru/smart/feedback/tooltip/)
@@ -73,7 +78,12 @@ description: "Смарт-компоненты по задачам интерфе
 - [Иконки](/ru/smart/content/icons/)
 - [Теги](/ru/smart/content/tags/)
 - [Строка списка](/ru/smart/content/list-item/)
+- [Список](/ru/smart/content/list/)
+- [Лента](/ru/smart/content/list-feed/)
 - [Аккордеон](/ru/smart/content/accordion/)
+- [Плитка показателя](/ru/smart/content/tile-metric/) — Одно важное число на панели: значение, изменение за период, предел со шкалой и состояние.
+- [Список сведений](/ru/smart/content/list-description/) — Факты парами «подпись — значение»: сводка сайта, сведения о сервере, параметры задания.
+- [Хронология](/ru/smart/content/list-timeline/) — Короткая история событий на линии, по дням: последние действия, журнал, история записи.
 - [Галерея](/ru/smart/content/gallery/)
 - [Предпросмотр файла](/ru/smart/content/file-preview/)
 - [Справочная ссылка](/ru/smart/content/reference-link/)

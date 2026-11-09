@@ -66,9 +66,9 @@ foreach ($paths as $path) {
         if ($tags !== []) {
             $package = $tags[0];
             $conditions = array_values(array_intersect(['sm', 'md', 'lg', 'xl', 'xxl'], $tags));
-            $badges = [':badge[' . $package . ']{type=main scheme=on-surface size=1}'];
+            $badges = [':badge[' . $package . ']{variant=main scheme=on-surface size=1}'];
             foreach ($conditions as $condition) {
-                $badges[] = ':badge[' . $condition . ']{type=tonal scheme=neutral size=1}';
+                $badges[] = ':badge[' . $condition . ']{variant=tonal scheme=neutral size=1}';
             }
             $h1 = '# ' . $newTitle;
             $normalized = preg_replace(

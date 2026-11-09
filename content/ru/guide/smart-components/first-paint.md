@@ -26,7 +26,7 @@ description: "Начальный вид у каждого смарт-компо�
 
 С выпуска `ui-133dc02b833d` начальный вид поставляется у всех 59
 смарт-компонентов SIMAI Framework, а новые компоненты приходят уже с ним:
-`sf-contents`, `sf-pager` и `sf-search` в выпуске `ui-e22fefb3c1f8`.
+`sf-contents`, `sf-pager` и `sf-search` в выпуске `ui-cb287da78ab1`.
 
 ## Снимок при построении
 
@@ -216,16 +216,16 @@ node scripts/snapshot-first-paint.mjs <папка сборки> --check
 
 ### Формы компонентов
 
-Раздел собран из манифестов выпуска `ui-e22fefb3c1f8` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
+Раздел собран из манифестов выпуска `ui-cb287da78ab1` и пакетов и обновляется вместе с ними. Форму объявляет `presentation.skeleton.shape`, свой скелетон при загрузке данных — `while_loading: template`.
 
 | Форма | Компоненты |
 |:---|:---|
 | `rows` | `<sf-chat-threads>` (свой скелетон), `<sf-view>` (свой скелетон), `<sf-view-table>` (свой скелетон) |
 | `record` | `<sf-view-properties>` (свой скелетон) |
 | `menu` | `<sf-admin-menu>`, `<sf-tree>` |
-| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-contents>`, `<sf-editor-inline>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-header-page>`, `<sf-header-site>`, `<sf-include>` (свой скелетон), `<sf-input>`, `<sf-input-code>`, `<sf-input-color>`, `<sf-input-country>`, `<sf-input-date>`, `<sf-input-image>`, `<sf-input-lookup>`, `<sf-input-quantity>`, `<sf-input-rich>`, `<sf-input-textarea>`, `<sf-menu>`, `<sf-pager>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-slider>`, `<sf-slider-range>`, `<sf-steps>`, `<sf-tabs>`, `<sf-theme-generator>` |
+| `block` | `<sf-accordion>`, `<sf-alert>`, `<sf-alert-bar>`, `<sf-contents>`, `<sf-editor-inline>`, `<sf-empty-state>`, `<sf-file-preview>`, `<sf-file-upload>`, `<sf-gallery>`, `<sf-header-page>`, `<sf-header-site>`, `<sf-include>` (свой скелетон), `<sf-input>`, `<sf-input-choice>`, `<sf-input-code>`, `<sf-input-color>`, `<sf-input-country>`, `<sf-input-date>`, `<sf-input-image>`, `<sf-input-lookup>`, `<sf-input-quantity>`, `<sf-input-rich>`, `<sf-input-textarea>`, `<sf-language>`, `<sf-list>` (свой скелетон), `<sf-menu>`, `<sf-pager>`, `<sf-pagination>`, `<sf-profile-picker>`, `<sf-settings>`, `<sf-slider>`, `<sf-slider-range>`, `<sf-steps>`, `<sf-tabs>`, `<sf-theme-generator>`, `<sf-tile-metric>`, `<sf-wizard>`, `<sf-wizard-step>` |
 | `line` | `<sf-breadcrumbs>`, `<sf-list-item>`, `<sf-tree-item>` |
-| `none` | `<sf-avatar>`, `<sf-avatar-group>`, `<sf-badge>`, `<sf-button>`, `<sf-button-close>`, `<sf-button-copy>`, `<sf-button-group>`, `<sf-button-icon>`, `<sf-checkbox>`, `<sf-confirm>`, `<sf-confirm-change>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-editor-overlay>`, `<sf-file-download>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-menu-context>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-search>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-tooltip>` |
+| `none` | `<sf-avatar>`, `<sf-avatar-group>`, `<sf-badge>`, `<sf-button>`, `<sf-button-close>`, `<sf-button-copy>`, `<sf-button-icon>`, `<sf-checkbox>`, `<sf-confirm>`, `<sf-confirm-change>`, `<sf-drawer>`, `<sf-dropdown>`, `<sf-editor-overlay>`, `<sf-file-download>`, `<sf-help-mark>`, `<sf-icon>`, `<sf-list-attention>`, `<sf-list-description>`, `<sf-list-feed>`, `<sf-list-timeline>`, `<sf-menu-context>`, `<sf-message-log>`, `<sf-modal>`, `<sf-popover>`, `<sf-progress-bar>`, `<sf-progress-ring>`, `<sf-progress-run>`, `<sf-progress-scale>`, `<sf-radio>`, `<sf-reference-link>`, `<sf-resizer>`, `<sf-search>`, `<sf-segmented>`, `<sf-skeleton>`, `<sf-sortable>`, `<sf-spinner>`, `<sf-switch>`, `<sf-tag>`, `<sf-toast>`, `<sf-tooltip>` |
 
 Формы не объявляют: `<sf-chat-composer>`, `<sf-chat-interlocutor>`, `<sf-chat-message>`, `<sf-chat-window>`, `<sf-editor>`, `<sf-editor-content>`, `<sf-mail-canvas>`, `<sf-mail-inspector>`, `<sf-mail-letters>`, `<sf-mail-library>`, `<sf-mail-structure>`.
 

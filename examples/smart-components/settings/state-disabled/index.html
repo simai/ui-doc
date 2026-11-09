@@ -1,0 +1,11 @@
+<div class="flex flex-col items-cross-center gap-2">
+  <sf-settings look="rows" label="Настройки">
+    <script type="application/json" data-sf-settings>
+      {"items": [
+        {"id": "theme", "type": "choice", "text": "Тема", "icon": "contrast", "value": "light", "options": [{"id": "system", "text": "Как в системе", "icon": "computer", "disabled": true}, {"id": "light", "text": "Светлая", "icon": "light_mode"}, {"id": "dark", "text": "Тёмная", "icon": "dark_mode"}]},
+        {"id": "sync", "type": "switch", "text": "Синхронизация", "icon": "sync", "caption": "Доступна после входа", "value": false, "disabled": true},
+        {"id": "sound", "type": "switch", "text": "Звук", "icon": "volume_up", "value": true}
+      ]}
+    </script>
+  </sf-settings>
+</div>

@@ -5,6 +5,8 @@ description: "Кнопка с именем текущего собеседник
 
 # Выбор собеседника
 
+:badge[sf-chat-interlocutor]{variant=tonal scheme=primary size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
+
 `<sf-chat-interlocutor>` показывает, с кем разговор, и даёт выбрать другого
 собеседника. Список собеседников — серверный: элемент только показывает его и
 сообщает о выборе. Разговор принадлежит одному собеседнику, поэтому выбор
@@ -98,38 +100,37 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-chat-interlocutor>` |
-| Назначение | С кем разговор: собеседники сервера в контекстном меню SIMAI Framework, текущий отмечен, а выбор другого сообщается хосту, чтобы тот начал новый разговор. Один собеседник — это имя, а не выбор. |
-| Контракт | `smart.chat-interlocutor`, версия `1.0.5` |
+| Назначение | С кем разговор: собеседники сервера в контекстном меню SIMAI Framework, текущий отмечен, а выбор другого сообщается приложению, чтобы оно начало новый разговор. Один собеседник — это имя, а не выбор. |
+| Контракт | `smart.chat-interlocutor`, версия `1.0.7` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
-- `value` — `string`, по умолчанию пусто. текущий собеседник; выбор просит другого через `select {id}`, и хост записывает его обратно, когда новый разговор готов
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
+- `value` — `string`, по умолчанию пусто. текущий собеседник; выбор просит другого через `select {id}`, и приложение записывает его обратно, когда новый разговор готов.
 - `options` — `array` из `object`, по умолчанию `[]`. Собеседники (`bootstrap.interlocutors`): свойство или JSON-остров; от восьми в меню появляется поиск.
 
 ### Методы
 
-- `setOptions(options: array)` — возвращает `object`. Собеседники, как свойство `options` (действие `set-options`); `kind: knowledge` идёт под своим заголовком, от восьми в меню появляется поиск.
+- `setOptions(args: object)` — возвращает `object`. Собеседники, как свойство `options` (действие `set-options`); `kind: knowledge` идёт под своим заголовком, от восьми в меню появляется поиск.
 - `open()` — возвращает `object`. Открывает меню, как нажатие; отказ `single`, если собеседников меньше двух.
 
 ### События
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-chat-interlocutor-select` — `detail`: `{ id: any }`. Выбран другой собеседник (словарь select). Имя 0.3 `sf-chat-interlocutor` отправляется после него до 2026-12-01.
-- `sf-chat-interlocutor` — устаревший псевдоним события `sf-chat-interlocutor-select`: приходит с тем же `detail`, подписывайтесь на `sf-chat-interlocutor-select`.
+- `sf-chat-interlocutor-select` — `detail`: `{ id: any }`. Выбран другой собеседник.
 
 ### Доступность
 
@@ -146,8 +147,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 

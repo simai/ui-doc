@@ -1,15 +1,18 @@
 ---
 title: "Лента сообщений"
-description: "Переписка прокручиваемой колонкой: ранняя история сверху без сдвига, новое снизу, серии одного автора."
+description: "Прежнее имя ленты SIMAI Framework sf-list-feed в пакете Pro: переписка прокручиваемой колонкой, которая отвечает на прежние имена до 2027-01-01."
 ---
 
 # Лента сообщений
 
-`<sf-message-log>` — переписка прокручиваемой колонкой: человек и
-ассистент или люди между собой. Компонент отвечает за положение чтения:
-ранняя история добавляется сверху, не сдвигая читаемое; новое сообщение тянет
-колонку вниз, только если человек уже был внизу; подряд идущие сообщения
-одного автора собираются в серию. Сообщения передаёт и рисует приложение.
+:badge[sf-message-log]{variant=tonal scheme=primary size=1/2} :badge[2.0.2]{variant=outline scheme=on-surface size=1/2}
+
+`<sf-message-log>` — устаревшее имя [Ленты](/ru/smart/content/list-feed/)
+(`sf-list-feed`) SIMAI Framework, которое работает до 2027-01-01. Поведение
+ленты — положение чтения, серии одного автора, растущие записи, перерисовка на
+месте, объявления и клавиатура — принадлежит `sf-list-feed`: элемент под
+прежним тегом — её наследник, он рисует ту же разметку, отправляет её события
+и отвечает на прежние имена. В новом коде пишите `<sf-list-feed>`.
 
 **Компонент Pro.** Входит в [SIMAI Pro](/ru/pro/), а не в выпуск SIMAI
 Framework: поставляется пакетом `pro` из репозитория `simai/ui-pro`.
@@ -24,13 +27,15 @@ Framework: поставляется пакетом `pro` из репозитор
 
 В разметке — только тег; высоту ему даёт контейнер. Сам тег —
 `display: contents`, а колонка растягивается во flex-контейнере и
-прокручивается внутри.
+прокручивается внутри. Правило `cl-message-log` связано с `cl-list-feed`:
+Loader загружает ленту вместе с элементом, а элемент определяется, как только
+определена лента.
 
 - Сообщения передаёт скрипт: `setMessages()`, `prependMessages()`,
-  `upsert()`.
+  `upsert()`, или JSON-блок `data-sf-settings` с `messages`.
 - Сообщение — обычные данные. Компонент читает `id` (обязательный
-  постоянный ключ), `author`, `own`, `pending`, а без своей функции
-  отрисовки — ещё `author_name` и `text`. Остальные поля — для функции
+  постоянный ключ), `author`, `own`, `growing`, а без своей функции
+  отрисовки — ещё `author-name` и `text`. Остальные поля — для функции
   отрисовки приложения.
 - Слот `empty` показывается вместо колонки, пока сообщений нет.
 
@@ -39,10 +44,9 @@ Framework: поставляется пакетом `pro` из репозитор
 ### Своя отрисовка сообщения
 
 Свойство `renderMessage(message, context)` возвращает узел, строку (она
-выводится как текст) или `null`. В `context` — `own`, `first` и `last`
-(начало и конец серии автора), `previous`, `next` и `view`. Без функции
-лента выводит имя автора над первым сообщением серии и текст — только
-текст, никогда разметку.
+выводится как текст) или `null`; в `context` — те же поля, что у
+`renderItem` ленты. Без функции лента выводит имя автора над первым
+сообщением серии и текст — только текст, никогда разметку.
 
 :::example {id="smart-components/message-log/custom-render" label="Сообщения человека и ассистента"}
 :::
@@ -58,24 +62,57 @@ Framework: поставляется пакетом `pro` из репозитор
 
 ## Применение
 
+### Прежние имена
+
+Каждое прежнее имя работает до 2027-01-01 и записывается в
+`SF.deprecations`; первый `<sf-message-log>` на странице один раз
+называется в консоли.
+
+| Прежнее имя | Имя ленты |
+|:---|:---|
+| `<sf-message-log>` | `<sf-list-feed>` |
+| `messages` | `items` |
+| `setMessages(messages, {hasMore})` | `setItems(items, {hasMore})` |
+| `prependMessages(messages, {hasMore})` | `prependItems(items, {hasMore})` |
+| `renderMessage(message, context)` | `renderItem(entry, context)`; в `context` вместо `log` — `feed` |
+| `announceMessage(message, context)` | `announceItem(entry, context)` |
+| `sf-message-log-load-more`, `-begun`, `-chunk`, `-completed`, `-failed`, `-cancelled` | `sf-list-feed-load-more`, `-begun`, `-chunk`, `-completed`, `-failed`, `-cancelled` |
+| `setHasMore(value)` | настройка `has-more` (`hasMore`) |
+| `isNearBottom()` | `isAtLatest()` |
+| `cl-message-log` | `cl-list-feed` |
+| `--sf-message-log-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` | `--sf-list-feed-column-width`, `-inset`, `-run-gap`, `-turn-gap`, `-fade-size` |
+
+Каждое событие ленты уходит и под прежним именем с тем же `detail`; один
+`preventDefault()` отменяет оба. До 2026-12-01 действуют ещё более ранние
+имена: событие `sf-message-log-load-earlier` (теперь `-load-more`), поля
+сообщения `pending` (теперь `growing`) и `author_name` (теперь
+`author-name`), а `remove(id)` — это `detach(id)`; `remove()` без `id` —
+браузерный.
+
+Разметка и внутренние переменные — ленты: стили страницы для
+`.sf-message-log`, `.sf-message-log__*` и `--sf-message-log--*` переносятся
+на `.sf-list-feed`, `.sf-list-feed__*` и `--sf-list-feed--*`. Публичные
+переменные `--sf-message-log-*` продолжают работать.
+
 ### Ранняя история
 
-При `has-more` вверху есть кнопка «Раньше», а верх колонки один раз
-просит предыдущие сообщения: приходит `sf-message-log-load-earlier` с
-`before` — `id` первого показанного сообщения. Ответ передайте
-`prependMessages()`; если загрузить не удалось, вызовите `earlierFailed()`.
+При `has-more` вверху есть кнопка «Показать предыдущие сообщения», а верх колонки один раз
+просит предыдущие сообщения: приходит `sf-message-log-load-more` (и
+`sf-list-feed-load-more`) с `{direction: 'before', before}`, где `before` —
+`id` первого показанного сообщения. Ответ передайте `prependMessages()`; если
+загрузить не удалось, вызовите `earlierFailed()`.
 
 ### Новые и изменившиеся сообщения
 
-`upsert(message)` добавляет сообщение в конец или обновляет его на месте;
-`upsert(saved, undefined, {replaces: localKey})` заменяет отправленное
+`upsert({item: message})` добавляет сообщение в конец или обновляет его на
+месте; `upsert({item: saved, options: {replaces: localKey}})` заменяет отправленное
 сообщение с местным ключом ответом сервера, не меняя его места.
 `scrollToLatest()` возвращает вниз, `isAtLatest()` отвечает, виден ли конец.
 
 ```js
 const log = document.querySelector('sf-message-log');
 log.setMessages(await api.messages(threadId), {hasMore: true});
-log.addEventListener('sf-message-log-load-earlier', async (event) => {
+log.addEventListener('sf-message-log-load-more', async (event) => {
   const page = await api.messages(threadId, {before: event.detail.before});
   log.prependMessages(page.items, {hasMore: page.hasMore});
 });
@@ -83,8 +120,8 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Доступность
 
-- Колонка — названная область, которая получает фокус и прокручивается
-  обычными клавишами.
+- Колонка — названная область (по умолчанию «Переписка»), которая получает
+  фокус и прокручивается обычными клавишами.
 - Законченное сообщение другого участника объявляется один раз вежливо
   (`live="polite"`); `live="off"` оставляет объявления приложению — метод
   `announce()`.
@@ -94,15 +131,15 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
 | | |
 |:---|:---|
 | Тег | `<sf-message-log>` |
-| Назначение | Переписка прокручиваемой колонкой сообщений, которые рисует хост: сохраняет положение чтения, когда сверху добавляется история, следует за низом, только когда читатель внизу, объединяет подряд идущие сообщения одного автора и объявляет новое один раз. |
-| Контракт | `smart.message-log`, версия `1.2.5` |
+| Назначение | Та же лента, что `sf-list-feed`, под другим тегом; отвечает и на имена `messages`, `setMessages`, `prependMessages`, `renderMessage`, `announceMessage` и события `sf-message-log-*`. |
+| Контракт | `smart.message-log`, версия `2.0.2` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -110,28 +147,28 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
-- `changes` — `string`, по умолчанию `content`, значения: `content`, `revision`. Как сравниваются две записи одного сообщения (§18.4).
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
+- `changes` — `string`, по умолчанию `content`, значения: `content`, `revision`. Как сравниваются две записи одного сообщения.
 - `has-more` — `boolean`, по умолчанию `false`. Есть ранняя история: видна кнопка «Раньше», а достижение верха её просит.
 - `label` — `string`. Доступное имя области; пусто — «Переписка» на языке страницы.
-- `live` — `string`, по умолчанию `polite`, значения: `polite`, `off`. polite: законченное сообщение другого участника объявляется один раз. off: объявляет хост через announce(), или ничего не объявляется.
+- `live` — `string`, по умолчанию `polite`, значения: `polite`, `off`. polite: законченное сообщение другого участника объявляется один раз. off: объявляет приложение через announce(), или ничего не объявляется.
 - `messages` — `array` из `object`, по умолчанию `[]`.
 
 ### Методы
 
-- `setMessages(messages: array, options: object)` — возвращает `object`. Заменяет весь разговор и показывает его конец. Содержимое не объявляется.
-- `prependMessages(messages: array, options: object)` — возвращает `object`. Ранняя история сверху, без сдвига читаемого; завершает запрос ранней истории.
-- `upsert(message: object, view: object, options: object)` — возвращает `object`. Добавляет сообщение в конец или обновляет его на месте; перерисовывает, только если изменилось то, что оно показывает.
-- `setView(id: any, view: object)` — возвращает `object`. Дополняет вид уже показанного сообщения.
-- `detach(id: any)` — возвращает `object`. Убрать одно сообщение; если это был поток, он кончается как отменённый. `remove(id)` читается до 2026-12-01.
-- `cancel(id: any)` — возвращает `object`. Сразу прекратить рисовать растущее сообщение; поток кончается как отменённый.
-- `redraw(id: any)` — возвращает `object`. Перерисовывает одно сообщение или все, после того как изменились собственные входные данные функции отрисовки.
+- `setMessages(args: object|list)` — возвращает `object`. Заменяет весь разговор и показывает его конец. Содержимое не объявляется.
+- `prependMessages(args: object|list)` — возвращает `object`. Ранняя история сверху, без сдвига читаемого; завершает запрос ранней истории.
+- `upsert(args: object)` — возвращает `object`. Добавляет сообщение в конец или обновляет его на месте; перерисовывает, только если изменилось то, что оно показывает.
+- `setView(args: object)` — возвращает `object`. Дополняет вид уже показанного сообщения.
+- `detach(args: object|string)` — возвращает `object`. Убрать одно сообщение; если это был поток, он кончается как отменённый. `remove(id)` читается до 2026-12-01.
+- `cancel(args: object|string)` — возвращает `object`. Сразу прекратить рисовать растущее сообщение; поток кончается как отменённый.
+- `redraw(args?: object|string)` — возвращает `object`. Перерисовывает одно сообщение или все, после того как изменились собственные входные данные функции отрисовки.
 - `requestEarlier()` — возвращает `object`. Просит раннюю историю, как кнопка и достижение верха; пока запрос не завершён — ничего.
-- `earlierFailed()` — возвращает `object`. Хост не смог загрузить раннюю историю: кнопку снова можно нажать.
-- `scrollToLatest(options: object)` — возвращает `object`. Прокручивает к последнему сообщению; с focus фокус переходит на него.
-- `announce(text: string)` — возвращает `object`. Один раз произносит текст через вежливую живую область ленты (обрезается до 240 символов).
+- `earlierFailed()` — возвращает `object`. Приложение не смогло загрузить раннюю историю: кнопку снова можно нажать.
+- `scrollToLatest(args?: object)` — возвращает `object`. Прокручивает к последнему сообщению; с focus фокус переходит на него.
+- `announce(args: object|string)` — возвращает `object`. Один раз произносит текст через вежливую живую область ленты (обрезается до 240 символов).
 - `setHasMore(value: boolean)` — возвращает `null`. Есть ли ранняя история.
 - `isAtLatest()` — возвращает `boolean`. Виден ли конец разговора.
 
@@ -139,20 +176,20 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-message-log-load-more` — `detail`: `{ direction?: any, before: any }`. Запрошена более ранняя история: `{direction: before, before}`. Отменить запрос — `earlierFailed()`. Имя версии 1.0 `sf-message-log-load-earlier` отправляется после него до 2026-12-01.
-- `sf-message-log-begun` — `detail`: `{ id: any }`. Пришло растущее сообщение (словарь §5.2).
+- `sf-message-log-load-more` — `detail`: `{ direction?: any, before: any }`. Запрошена более ранняя история: `{direction: before, before}`. Отменить запрос — `earlierFailed()`.
+- `sf-message-log-begun` — `detail`: `{ id: any }`. Пришло растущее сообщение.
 - `sf-message-log-chunk` — `detail`: `{ id: any, revision?: string }`. Растущее сообщение изменилось и нарисовано заново на том же месте.
 - `sf-message-log-completed` — `detail`: `{ id: any }`. Сообщение перестало расти целиком.
 - `sf-message-log-failed` — `detail`: `{ id: any, reason: string, message: string }`. Сообщение перестало расти с ошибкой: `{id, reason, message}`.
 - `sf-message-log-cancelled` — `detail`: `{ id: any }`. Поток остановлен: cancel, ожидание прервано, сообщение убрано, беседа заменена.
-- `sf-message-log-load-earlier` — устаревший псевдоним события `sf-message-log-load-more`: приходит с тем же `detail`, подписывайтесь на `sf-message-log-load-more`.
+- `sf-message-log-load-earlier` — `detail` не описан. То же, что `sf-list-feed-load-more`.
 
 ### Доступность
 
 - Роль: область (`region`).
 - Доступное имя: внутренний.
 - Клавиши: `Tab`, `Enter`, `Space`, `ArrowUp`, `ArrowDown`, `Home`, `End`.
-- Фокус: Прокручиваемая колонка — названная область с фокусом, внутри — лог с aria-live off; один вежливый диктор объявляет новое один раз. «К последнему сообщению» переносит фокус на последнее сообщение (article хоста, иначе элемент списка). Из сообщения в фокусе ArrowUp/ArrowDown переходят к соседнему, Home/End — к первому и последнему загруженному; ArrowUp на первом просит раннюю историю. Плавная прокрутка учитывает prefers-reduced-motion.
+- Фокус: Прокручиваемая колонка — названная область с фокусом, внутри — лог с aria-live off; один вежливый диктор объявляет новое один раз. «К последнему сообщению» переносит фокус на последнее сообщение (article приложения, иначе элемент списка). Из сообщения в фокусе ArrowUp/ArrowDown переходят к соседнему, Home/End — к первому и последнему загруженному; ArrowUp на первом просит раннюю историю. Плавная прокрутка учитывает prefers-reduced-motion.
 
 ### Минимальная разметка
 
@@ -162,5 +199,5 @@ log.addEventListener('sf-message-log-load-earlier', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/message-log`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/message-log`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/message-log/rule.js#name=cl-message-log`

@@ -5,6 +5,8 @@ description: "Параметры письма, строки блоков в по
 
 # Структура письма
 
+:badge[sf-mail-structure]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+
 `<sf-mail-structure>` — структура письма в редакторе писем: параметры письма, по
 строке на блок в порядке письма и способ добавить блок. Элемент не хранит письмо
 и ничего в нём не меняет: он сообщает, о чём попросил человек, а приложение
@@ -97,7 +99,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -105,16 +107,16 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 |:---|:---|
 | Тег | `<sf-mail-structure>` |
 | Назначение | Структура письма в SIMAI Email Editor: параметры письма, по строке на блок и способ добавить блок. Строка выбирает, двигает, копирует и удаляет свой блок; точка между строками просит там новый блок; шапка и подвал закреплены. Элемент не хранит письмо и не меняет его; он сообщает, о чём попросил человек. |
-| Контракт | `smart.mail-structure`, версия `1.0.2` |
+| Контракт | `smart.mail-structure`, версия `1.0.5` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
-- `root-class` — `string`, по умолчанию пусто. Классы, которые добавляются корневому элементу, нарисованному компонентом.
-- `root-style` — `string`, по умолчанию пусто. Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства.
+- `template` — `string`, по умолчанию `default`. Имя шаблона отрисовки; `default` — встроенный.
+- `root-class` — `string`, по умолчанию пусто. Свои CSS-классы для нарисованного элемента.
+- `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `selected` — `string`, по умолчанию пусто. Выбранный блок; пусто — выбраны параметры письма.
 - `rows` — `array` из `object`, по умолчанию `[]`. Блоки в порядке письма, по строке на блок: {id, title, summary, icon, family}. family отмечает место, которое есть в каждом письме (header, footer): оно не двигается, и за него ничего не встанет.
 - `inserter-items` — `array` из `object`, по умолчанию `[]`. Виды, которые предлагает точка вставки между строками, в форме sf-sortable: {value, label, icon, caption, keywords} и {type: 'heading', label}. Пусто — точек вставки нет.
@@ -136,7 +138,7 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 - `sf-mail-structure-select` — `detail`: `{ id: any, keyboard?: boolean }`. Выбран этот блок: {id, keyboard}. Пустой id — параметры письма.
 - `sf-mail-structure-move` — `detail`: `{ id: any, index: number }`. Переместить этот блок в это место: {id, index}.
 - `sf-mail-structure-insert` — `detail`: `{ type: any, index: number }`. Добавить в этом месте новый блок этого вида: {type, index}.
-- `sf-mail-structure-add` — ничего не передаёт. Попросили блок; место выбирает хост.
+- `sf-mail-structure-add` — ничего не передаёт. Попросили блок; место выбирает приложение.
 - `sf-mail-structure-duplicate` — `detail`: `{ id: any }`. Сделать копию этого блока: {id}.
 - `sf-mail-structure-delete` — `detail`: `{ ids: array, id: any }`. Удалить этот блок: {ids: [id], id}.
 - `sf-mail-structure-replace` — `detail`: `{ family: any }`. Попросили другой вариант этого места: {family}.
@@ -156,5 +158,5 @@ structure.inserterItems = [{type: 'heading', label: 'Основа'}, {value: 'te
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-structure`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-structure`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-structure/rule.js#name=cl-mail-structure`

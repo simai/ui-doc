@@ -225,8 +225,9 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 |:---|:---|
 | Блок | `sf-icon-button` |
 | Части | `sf-icon-button-spinner`, `sf-icon-button-state-loading` |
-| Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--error`, `sf-icon-button--ghost`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
+| Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--error`, `sf-icon-button--ghost`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
+| Устаревшие | `sf-icon-button--danger` → `sf-icon-button--error` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -245,6 +246,8 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | `--sf-icon-button-radius` | Скругление углов. | `var(--sf-radius--ui)` |
 | `--sf-icon-button-padding-inline` | Отступ до и после значка. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
 | `--sf-icon-button-padding-block` | Отступ сверху и снизу от значка. | `var(--sf-ui-1--space-y-tightness-default)`; зависит от размера, spacing |
+| `--sf-icon-button-pressed-background-color` | Заливка включённой кнопки-переключателя (`pressed`, `aria-pressed="true"`); наведение, нажатие и отключённое состояние рисуются поверх своими цветами. | `var(--sf-primary-container)` |
+| `--sf-icon-button-pressed-color` | Цвет иконки включённой кнопки-переключателя. | `var(--sf-on-primary-container)` |
 
 ```css
 .sf-icon-button {
@@ -283,6 +286,6 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 ## См. также
 
 - [Кнопки](/ru/components/actions/buttons/)
-- [Закрытие](/ru/components/actions/close/)
+- [Кнопка закрытия](/ru/components/actions/close/)
 - [Группа кнопок](/ru/components/actions/button-group/)
 - [Кнопки с иконкой — смарт-компонент](/ru/smart/actions/icon-buttons/)

@@ -1,7 +1,12 @@
-document.querySelectorAll('[data-button-group-demo]').forEach((demo) => {
-  const result = demo.querySelector('[data-button-group-result]');
-  demo.addEventListener('change', (event) => {
-    if (event.target.localName !== 'sf-button-group') return;
-    result.textContent = `Выбран вид: ${event.detail.value}`;
+// The group sends change on every new choice; the log shows the value.
+const initialize = async () => {
+  await customElements.whenDefined('sf-segmented');
+  const group = document.querySelector('sf-segmented');
+  if (!group || group.dataset.exampleReady === 'true') return;
+  group.dataset.exampleReady = 'true';
+  group.addEventListener('change', (event) => {
+    docara.example.log('change', `value: ${event.detail.value}`);
   });
-});
+};
+
+initialize();

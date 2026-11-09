@@ -56,8 +56,8 @@ description: "Красит текст-подсказку в пустом пол�
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
-| `--sf-disable` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
-| `--sf-on-disable` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
+| `--sf-disable` | `var(--sf-surface-disabled)` |
+| `--sf-on-disable` | `var(--sf-on-surface-disabled)` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` |
 | `--sf-on-primary-container` | `light-dark(var(--sf-primary-10), var(--sf-primary-90))` |

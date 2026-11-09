@@ -1,16 +1,18 @@
-<div class="flex flex-col gap-3">
-  <div class="flex flex-wrap items-center gap-2">
+<div class="flex flex-col gap-3 p-3 radius-surface border border-outline-variant bg-surface color-on-surface">
+  <p class="m-0 font-medium">Подключение проекта</p>
+  <div class="flex flex-wrap items-cross-center gap-2">
     <span class="text-1/2 color-on-surface-variant">Идентификатор</span>
     <code id="copy-button-id">fhmm3nb668n747qpocad</code>
     <sf-button-copy target="#copy-button-id" label="Скопировать идентификатор"></sf-button-copy>
   </div>
-  <div class="flex flex-wrap items-center gap-2">
-    <code>npm install @simai/ui</code>
-    <sf-button-copy value="npm install @simai/ui" text="Копировать" label="Копировать команду" appearance="outline"></sf-button-copy>
+  <div class="flex flex-wrap items-cross-center gap-2">
+    <span class="text-1/2 color-on-surface-variant">Установка</span>
+    <code id="copy-button-command">npm install @simai-studio/ui</code>
+    <sf-button-copy target="#copy-button-command" label="Скопировать команду"></sf-button-copy>
   </div>
-  <div class="flex flex-wrap items-center gap-2">
-    <span class="text-1/2 color-on-surface-variant">Ссылка на запись</span>
-    <sf-button-copy value="https://larena.test/admin/cms/42" icon="link" label="Скопировать ссылку" success-text="Ссылка скопирована" appearance="tonal"></sf-button-copy>
+  <div class="flex flex-wrap items-cross-center gap-2">
+    <span class="text-1/2 color-on-surface-variant">Документация</span>
+    <code id="copy-button-link">https://ui.simai.io/ru/smart/actions/copy-button/</code>
+    <sf-button-copy target="#copy-button-link" icon="link" label="Скопировать ссылку" success-text="Ссылка скопирована"></sf-button-copy>
   </div>
-  <output class="text-1/2 color-on-surface-variant" id="copy-button-log" aria-live="off"></output>
 </div>

@@ -1,0 +1,22 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-3 gap-4">
+    <div class="flex flex-col gap-2">
+      <sf-progress-run label="Импорт каталога" cancelable>
+        <script type="application/json" data-sf-settings>{"steps": [{"id": "read", "title": "Чтение файла", "state": "done", "duration": 3000}, {"id": "rows", "title": "Загрузка товаров", "state": "running"}]}</script>
+      </sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">cancelable — пока идёт</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-progress-run label="Импорт каталога" retryable>
+        <script type="application/json" data-sf-settings>{"steps": [{"id": "read", "title": "Чтение файла", "state": "failed", "duration": 3000, "text": "Файл повреждён"}, {"id": "rows", "title": "Загрузка товаров", "state": "skipped"}]}</script>
+      </sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">retryable — после неудачи</span>
+    </div>
+    <div class="flex flex-col gap-2">
+      <sf-progress-run label="Импорт каталога" hideable>
+        <script type="application/json" data-sf-settings>{"steps": [{"id": "read", "title": "Чтение файла", "state": "done", "duration": 3000}, {"id": "rows", "title": "Загрузка товаров", "state": "done", "duration": 41000}]}</script>
+      </sf-progress-run>
+      <span class="text-1/2 color-on-surface-variant">hideable — когда закончилось</span>
+    </div>
+  </div>
+</div>

@@ -5,10 +5,13 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
-`<sf-editor-inline>` — часть редактора страниц: правка текста
-`content.heading` и `content.paragraph` прямо на холсте. Доступно то, что есть
-в модели content: полужирный, курсив, код, ссылки и встроенные компоненты
-(`badge`, `kbd`, `icon`, `button`); списков нет, потому что их нет в модели. События несут нормализованную модель, а не HTML.
+:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.5.3]{variant=outline scheme=on-surface size=1/2}
+
+Inline-редактор даёт править текст заголовков и абзацев (`content.heading` и
+`content.paragraph`) прямо на странице. Доступно то, что есть в модели
+content: полужирный, курсив, код, ссылки и встроенные компоненты (`badge`,
+`kbd`, `icon`, `button`); списков нет, потому что их нет в модели. Изменения
+приходят моделью content, а не HTML.
 
 ## Пример
 
@@ -28,7 +31,7 @@ description: "Даёт править текст заголовков и абз�
 
 Атрибутов, без которых он не работает, нет: что править, говорит вызов из
 кода. Правку запускает `SF.Composition.startInlineEdit(element, options)`
-или метод `edit(element, options)` элемента. До загрузки вызов завершается
+или метод `edit({element, options})` элемента. До загрузки вызов завершается
 ошибкой `inline_editor_not_loaded`, поэтому сначала дождитесь
 `customElements.whenDefined('sf-editor-inline')`. Повторный запуск на элементе,
 который уже правится, завершается ошибкой `inline_edit_active`.
@@ -112,15 +115,13 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 ## Справочник
 
-Собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
-
 ### Атрибуты
 
 | Атрибут | Тип | По умолчанию | Значения | Что делает |
 |:---|:---|:---|:---|:---|
-| `template` | строка | `default` | — | Имя варианта шаблона для внешних шаблонов SfBaseElement. |
-| `root-class` | строка | пусто | — | Классы, которые добавляются корневому элементу, нарисованному компонентом. |
-| `root-style` | строка | пусто | — | Объявления стиля, которые ставятся корневому элементу, нарисованному компонентом, в том числе пользовательские свойства. |
+| `template` | строка | `default` | — | Имя шаблона отрисовки; `default` — встроенный. |
+| `root-class` | строка | пусто | — | Свои CSS-классы для нарисованного элемента. |
+| `root-style` | строка | пусто | — | Свои стили для нарисованного элемента, например `max-width: 20rem`. |
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `icon-start` — `iconStart`. Свойство атрибута `template` называется `templateName`.
 
@@ -128,7 +129,7 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `edit(element: object, options: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением) |
+| `edit(args: object)` | объект | Начинает правку элемента холста (`SF.Composition.startInlineEdit`): параметры `content`, `nodeId`, `label`, `marks`, `links`, `messages`, `toolbar` (`session` — панель на всё время правки над элементом, по умолчанию; `selection` — только пока выделен текст, над выделением). |
 
 ### События
 
@@ -136,27 +137,21 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-editor-inline-input` | `{ id: string\\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе |
-| `sf-editor-inline-change` | `{ id: string\\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе |
-| `sf-editor-inline-cancel` | `{ id: string\\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе |
-| `sf-inline-edit-input` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-editor-inline-input`: подписывайтесь на `sf-editor-inline-input` |
-| `sf-inline-edit-commit` | `{ node_id: string\\|null, content: array }` | устаревший псевдоним `sf-editor-inline-change`: подписывайтесь на `sf-editor-inline-change` |
-| `sf-inline-edit-cancel` | `{ node_id?: string\\|null }` | устаревший псевдоним `sf-editor-inline-cancel`: подписывайтесь на `sf-editor-inline-cancel` |
-| `sf-inline-editor-input` | не описан | устаревший псевдоним `sf-editor-inline-input`: подписывайтесь на `sf-editor-inline-input` |
-| `sf-inline-editor-change` | не описан | устаревший псевдоним `sf-editor-inline-change`: подписывайтесь на `sf-editor-inline-change` |
-| `sf-inline-editor-cancel` | не описан | устаревший псевдоним `sf-editor-inline-cancel`: подписывайтесь на `sf-editor-inline-cancel` |
+| `sf-editor-inline-input` | `{ id: string\|null, content: array }` | Текст изменился во время правки; отправляется на редактируемом элементе. |
+| `sf-editor-inline-change` | `{ id: string\|null, content: array }` | Правка принята (Enter или уход фокуса): содержимое для сохранения; отправляется на редактируемом элементе. |
+| `sf-editor-inline-cancel` | `{ id: string\|null }` | Правка отменена (Escape): элемент показывает свой прежний HTML; отправляется на редактируемом элементе. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-e22fefb3c1f8` |
-| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками; работает в сценарии студии, продуктовой приёмки нет |
-| До прихода кода | сервер пишет `data-sf-skeleton="block"`; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
-| Доступность | роль нет (`none`); доступное имя внутренний; клавиши `Mod+B`, `Mod+I`, `Mod+E`, `Mod+K`, `Mod+Z`, `Mod+Shift+Z`, `Mod+Y`, `Enter`, `Escape` |
-| Источник | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@e22fefb3c1f8bed4c7ad8d8745a408ecedc5029f:distr/rule/rule.json#name=cl-editor-inline` |
+| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.5.3` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
+| До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
+| Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Esc`. |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

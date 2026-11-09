@@ -60,8 +60,8 @@ description: "Задаёт начальный, средний и конечны�
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
-| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
-| `--sf-surface-1` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-0` | `var(--sf-surface-page)` |
+| `--sf-surface-1` | `var(--sf-surface-area)` |
 | `--sf-surface-2` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-15))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |

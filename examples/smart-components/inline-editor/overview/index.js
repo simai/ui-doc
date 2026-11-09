@@ -16,7 +16,7 @@ const initializeInlineExample = async () => {
     const element = event.target.closest('[data-sf-composition-id="note"]');
     if (!element || element.hasAttribute('data-sf-inline-editing')) return;
     event.preventDefault();
-    editor.edit(element, { content, nodeId: 'note', label: 'Условия доставки' });
+    editor.edit({element, options: { content, nodeId: 'note', label: 'Условия доставки' }});
   });
   canvas.addEventListener('sf-inline-editor-change', (event) => {
     content = event.detail.content;

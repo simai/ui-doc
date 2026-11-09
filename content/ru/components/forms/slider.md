@@ -203,14 +203,14 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 | `--sf-slider--duration` | `var(--sf-duration-normal)` | — |
 | `--sf-slider--space-between` | `var(--sf-space-1)` | — |
 | `--sf-slider-arrows--backdrop-filter` | не задана; задают модификаторы, например `.sf-slider-arrows--light`: `var(--sf-ui-blur-medium)` | `backdrop-filter` |
-| `--sf-slider-arrows--box-shadow` | не задана; задают модификаторы, например `.sf-slider-arrows--light`: `var(--sf-blur-medium)` | `box-shadow` |
+| `--sf-slider-arrows--box-shadow` | не задана; задают модификаторы, например `.sf-slider-arrows--light`: `var(--sf-shadow-raised)` | `box-shadow` |
 | `--sf-slider-dots--backdrop-filter` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--clear.sf-slider-dots--framed.sf-slider-dots--dark`: `var(--sf-ui-blur-medium)` | `backdrop-filter` |
 | `--sf-slider-dots--background-color` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-primary)` | `background-color` |
 | `--sf-slider-dots--border-end-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-end-end-radius` |
 | `--sf-slider-dots--border-end-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-end-start-radius` |
 | `--sf-slider-dots--border-start-end-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-start-end-radius` |
 | `--sf-slider-dots--border-start-start-radius` | не задана; задают модификаторы, например `.sf-slider-dots--framed`: `var(--sf-radius-3)` | `border-start-start-radius` |
-| `--sf-slider-dots--box-shadow` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--clear.sf-slider-dots--framed.sf-slider-dots--dark`: `var(--sf-blur-medium)` | `box-shadow` |
+| `--sf-slider-dots--box-shadow` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--clear.sf-slider-dots--framed.sf-slider-dots--dark`: `var(--sf-shadow-raised)` | `box-shadow` |
 | `--sf-slider-dots--gap` | не задана; задают модификаторы, например `.sf-slider-dots--size-1`: `var(--sf-space-1/2)` | `gap`, `outline` |
 | `--sf-slider-dots--padding-bottom` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-bottom` |
 | `--sf-slider-dots--padding-inline-end` | не задана; задают модификаторы, например `.sf-slider-dots.sf-slider-dots--size-1.sf-slider-dots--primary.sf-slider-dots--framed.sf-slider-dots--light`: `var(--sf-ui-1--space-y)` | `padding-inline-end` |

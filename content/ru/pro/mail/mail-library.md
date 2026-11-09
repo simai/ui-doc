@@ -5,6 +5,8 @@ description: "Блоки, которые можно добавить в пись
 
 # Библиотека блоков письма
 
+:badge[sf-mail-library]{variant=tonal scheme=primary size=1/2} :badge[1.0.4]{variant=outline scheme=on-surface size=1/2}
+
 `<sf-mail-library>` — блоки, которые можно добавить в письмо, по группам
 назначения, с чипами категорий, поиском по названию и описанию и вариантами шапки
 и подвала. Строка сообщает, что выбрал человек, а куда вставить блок, решает
@@ -105,7 +107,7 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-e22fefb3c1f8` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-cb287da78ab1` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -113,14 +115,14 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 |:---|:---|
 | Тег | `<sf-mail-library>` |
 | Назначение | Блоки, которые может принять письмо в SIMAI Email Editor, по группам назначения, с чипами категорий, поиском по названию и назначению и вариантами шапки и подвала письма. Строка добавляет свой блок или заменяет вариант; элемент вызывает событие и письмо не меняет. |
-| Контракт | `smart.mail-library`, версия `1.0.2` |
+| Контракт | `smart.mail-library`, версия `1.0.4` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 
 ### Атрибуты
 
-- `template` — `string`, по умолчанию `default`, значения: `default`. Имя варианта шаблона для внешних шаблонов SfBaseElement.
+- `template` — `string`, по умолчанию `default`, значения: `default`. Имя шаблона отрисовки; `default` — встроенный.
 - `root-class` — `string`, по умолчанию пусто.
 - `root-style` — `string`, по умолчанию пусто.
 - `query` — `string`, по умолчанию пусто. Слова поиска; поле внутри элемента записывает их, пока человек печатает. Блок находится по названию, назначению и типу.
@@ -140,8 +142,8 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 Все события приходят на сам элемент и всплывают. Что означает глагол в имени события, говорит общий словарь: [Имена и общие слова](/ru/guide/smart-components/names/). Общие события базового элемента перечислены в главе [Модель компонента → Базовый интерфейс](/ru/guide/smart-components/model/#базовый-интерфейс).
 
-- `sf-mail-library-add` — `detail`: `{ type: any }`. Выбран блок, который нужно добавить: `{type}`. Хост добавляет его туда, куда решит; сам элемент письмо не меняет.
-- `sf-mail-library-replace` — `detail`: `{ family: any, type: any }`. Выбран другой вариант места: `{family, type}`. Блок заменяет хост; вариант, который сейчас в письме, ничего не сообщает.
+- `sf-mail-library-add` — `detail`: `{ type: any }`. Выбран блок, который нужно добавить: `{type}`. Приложение добавляет его туда, куда решит; сам элемент письмо не меняет.
+- `sf-mail-library-replace` — `detail`: `{ family: any, type: any }`. Выбран другой вариант места: `{family, type}`. Блок заменяет приложение; вариант, который сейчас в письме, ничего не сообщает.
 
 ### Доступность
 
@@ -158,5 +160,5 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-library`
-- `simai/ui-pro@0516a01732c81983bc88a0db311c876c21666679:components/src/smart/mail-library/rule.js#name=cl-mail-library`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-library`
+- `simai/ui-pro@b671241d4d341b2fbfd3b1f6e37703e0b330aabb:components/src/smart/mail-library/rule.js#name=cl-mail-library`

@@ -70,7 +70,7 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-figure-background` | Заливка рамки медиа; видна вокруг вписанного медиа. | `var(--sf-surface-container)` |
+| `--sf-figure-background-color` | Заливка блока медиа; видна вокруг вписанного изображения или видео. | `var(--sf-surface-container)` |
 | `--sf-figure-border-color` | Цвет границы рамки медиа. | `var(--sf-outline-variant)` |
 | `--sf-figure-border-width` | Толщина границы рамки медиа; пока не задана, границы нет. | `var(--sf-0)` |
 | `--sf-figure-radius` | Скругление углов рамки медиа. | `var(--sf-radius--surface)` |

@@ -1,10 +1,10 @@
 ---
-title: "Закрытие"
+title: "Кнопка закрытия"
 description: "Рисует знак закрытия для кнопки, которая закрывает окно, панель или уведомление."
 profile: reference
 ---
 
-# Закрытие
+# Кнопка закрытия
 
 `sf-close` рисует знак закрытия — крестик из маски, без иконочного шрифта.
 Сам знак декоративный: действие выполняет нативная кнопка
@@ -136,13 +136,13 @@ profile: reference
 | `--sf-close--padding-inline-end` | не задана; задают модификаторы, например `.sf-close--size-1`: `var(--sf-a4)` | `padding-inline-end` |
 | `--sf-close--padding-inline-start` | не задана; задают модификаторы, например `.sf-close--size-1`: `var(--sf-a4)` | `padding-inline-start` |
 | `--sf-close--padding-top` | не задана; задают модификаторы, например `.sf-close--size-1`: `var(--sf-a4)` | `padding-top` |
-| `--sf-close-icon---webkit-mask-image` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M15.998%201.41504L9.41309%208L15.998%2014.5859L14.584%2016.001L7.99902%209.41504L1.41406%2016.001L0%2014.5859L6.58398%208L0%201.41504L1.41406%200.000976562L7.99805%206.58594L14.584%200L15.998%201.41504Z%22%20fill%3D%22%2376777C%22%2F%3E%0A%3C%2Fsvg%3E%0A")` | — |
+| `--sf-close-icon---webkit-mask-image` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cdefs%3E%3Cmask%20id=%27m%27%3E%3Crect%20width=%27100%25%27%20height=%27100%25%27%20fill=%27white%27/%3E%3Cpolygon%20points=%270,0%201.4142,0%200,1.4142%27/%3E%3Csvg%20x=%27100%25%27%20overflow=%27visible%27%3E%3Cpolygon%20points=%270,0%20-1.4142,0%200,1.4142%27/%3E%3C/svg%3E%3Csvg%20y=%27100%25%27%20overflow=%27visible%27%3E%3Cpolygon%20points=%270,0%201.4142,0%200,-1.4142%27/%3E%3C/svg%3E%3Csvg%20x=%27100%25%27%20y=%27100%25%27%20overflow=%27visible%27%3E%3Cpolygon%20points=%270,0%20-1.4142,0%200,-1.4142%27/%3E%3C/svg%3E%3C/mask%3E%3C/defs%3E%3Cg%20mask=%27url%28%23m%29%27%20stroke=%27black%27%20stroke-width=%272%27%3E%3Cline%20x1=%270%27%20y1=%270%27%20x2=%27100%25%27%20y2=%27100%25%27/%3E%3Cline%20x1=%27100%25%27%20y1=%270%27%20x2=%270%27%20y2=%27100%25%27/%3E%3C/g%3E%3C/svg%3E")` | — |
 | `--sf-close-icon---webkit-mask-repeat` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `no-repeat` | — |
 | `--sf-close-icon---webkit-mask-size` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `contain` | — |
 | `--sf-close-icon--background-color` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `var(--sf-close-color, var(--sf-on-surface-variant))` | `background-color` |
 | `--sf-close-icon--font-size` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-close-icon--height` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `var(--sf-text-size-1)` | `height` |
-| `--sf-close-icon--mask-image` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M15.998%201.41504L9.41309%208L15.998%2014.5859L14.584%2016.001L7.99902%209.41504L1.41406%2016.001L0%2014.5859L6.58398%208L0%201.41504L1.41406%200.000976562L7.99805%206.58594L14.584%200L15.998%201.41504Z%22%20fill%3D%22%2376777C%22%2F%3E%0A%3C%2Fsvg%3E%0A")` | `mask-image` |
+| `--sf-close-icon--mask-image` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cdefs%3E%3Cmask%20id=%27m%27%3E%3Crect%20width=%27100%25%27%20height=%27100%25%27%20fill=%27white%27/%3E%3Cpolygon%20points=%270,0%201.4142,0%200,1.4142%27/%3E%3Csvg%20x=%27100%25%27%20overflow=%27visible%27%3E%3Cpolygon%20points=%270,0%20-1.4142,0%200,1.4142%27/%3E%3C/svg%3E%3Csvg%20y=%27100%25%27%20overflow=%27visible%27%3E%3Cpolygon%20points=%270,0%201.4142,0%200,-1.4142%27/%3E%3C/svg%3E%3Csvg%20x=%27100%25%27%20y=%27100%25%27%20overflow=%27visible%27%3E%3Cpolygon%20points=%270,0%20-1.4142,0%200,-1.4142%27/%3E%3C/svg%3E%3C/mask%3E%3C/defs%3E%3Cg%20mask=%27url%28%23m%29%27%20stroke=%27black%27%20stroke-width=%272%27%3E%3Cline%20x1=%270%27%20y1=%270%27%20x2=%27100%25%27%20y2=%27100%25%27/%3E%3Cline%20x1=%27100%25%27%20y1=%270%27%20x2=%270%27%20y2=%27100%25%27/%3E%3C/g%3E%3C/svg%3E")` | `mask-image` |
 | `--sf-close-icon--mask-repeat` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `no-repeat` | `mask-repeat` |
 | `--sf-close-icon--mask-size` | не задана; задают модификаторы, например `.sf-close .sf-close-icon`: `contain` | `mask-size` |
 | `--sf-close-icon--width` | не задана; задают модификаторы, например `.sf-close.sf-close--size-1 .sf-close-icon`: `var(--sf-text-size-1)` | `width` |
@@ -150,4 +150,4 @@ profile: reference
 ## См. также
 
 - [Кнопки с иконкой](/ru/components/actions/icon-buttons/)
-- [Закрытие — смарт-компонент](/ru/smart/actions/close/)
+- [Кнопка закрытия — смарт-компонент](/ru/smart/actions/close/)

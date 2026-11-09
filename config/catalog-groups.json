@@ -112,7 +112,6 @@
       "items": [
         "buttons",
         "icon-buttons",
-        "button-group",
         "segmented",
         "close",
         "download-file",
@@ -130,6 +129,7 @@
         "lookup",
         "checkbox",
         "radio",
+        "input-choice",
         "switch",
         "slider",
         "range-slider",
@@ -155,18 +155,23 @@
         "tree",
         "tree-item",
         "dropdown",
-        "context-menu"
+        "context-menu",
+        "settings",
+        "language"
       ]
     },
     "feedback": {
       "title": "Уведомления и состояния",
       "items": [
         "alert",
+        "alert-bar",
+        "list-attention",
         "toast",
         "badges",
         "progress-bar",
         "progress-ring",
         "progress-scale",
+        "progress-run",
         "skeleton",
         "spinner",
         "tooltip",
@@ -182,7 +187,12 @@
         "icons",
         "tags",
         "list-item",
+        "list",
+        "list-feed",
         "accordion",
+        "tile-metric",
+        "list-description",
+        "list-timeline",
         "gallery",
         "file-preview",
         "reference-link",
