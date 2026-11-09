@@ -60,6 +60,11 @@ profile: reference
 :::example {id="components/badges/sizes" label="Размеры бейджа"}
 :::
 
+Отступ текста от края — `--sf-space-1/2`: 12 px на компьютере и 8 px на телефоне, как у всей линейки отступов; плотный `sf-badge--tight` — свой отступ размера.
+
+:::example {id="components/badges/tight" label="Обычный и плотный отступ: sf-badge--tight"}
+:::
+
 ### В строке текста
 
 Классы `sf-badge--line-1/2`, `sf-badge--line-1` и `sf-badge--line-2` ставят
