@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#F1F3F5"/>
+  <path d="M0 220 H480 M140 0 V320 M360 0 V320" stroke="#CED4DA" stroke-width="18"/>
+  <path d="M40 300 C120 240 200 260 250 200 S330 110 360 90" fill="none" stroke="#3B5BDB" stroke-width="6" stroke-dasharray="14 10"/>
+  <circle cx="360" cy="90" r="16" fill="#E03131"/>
+  <text x="360" y="60" font-family="sans-serif" font-size="18" text-anchor="middle" fill="#212529">Офис</text>
+  <text x="40" y="290" font-family="sans-serif" font-size="16" fill="#212529">Метро</text>
+</svg>

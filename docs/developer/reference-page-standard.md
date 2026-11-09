@@ -217,14 +217,15 @@ standard's, generated the same way.
 | — | introduction | yes | hand, as in the third standard |
 | 1 | `## Пример` | yes | hand: the live example and the minimal tag |
 | 2 | `## Когда брать` | no | hand: the choices a reader makes before writing it |
-| 3 | `## Частые задачи` | no | hand: one H3 per everyday task, with code that copies as is |
-| 4 | `## Внешний вид` | when it has visual axes | hand: one H3 per axis, each with a live example |
-| 5 | `## Состояния` | when it has states | hand: one H3 per state, each with a live example |
-| 6 | `## Сочетание клавиш` | no | hand: when the component draws and listens for a shortcut |
-| 7 | `## Работа из кода` | no | hand: events (which fires when), properties; methods link the reference |
-| 8 | `## Доступность` | yes | hand, with code for each point |
-| 9 | `## Справочник` | yes | generated, as in the third standard; a hand-written `### Для разработчика` after the tables (the traps) is kept by the generator |
-| 10 | `## См. также` | no | hand |
+| 3 | `## Когда не брать` | no | hand: the alternatives, each with a link to what to take instead (owner, 2026-11-09) |
+| 4 | `## Частые задачи` | no | hand: one H3 per everyday task, with code that copies as is |
+| 5 | `## Внешний вид` | when it has visual axes | hand: one H3 per axis, each with a live example |
+| 6 | `## Состояния` | when it has states | hand: one H3 per state, each with a live example |
+| 7 | `## Сочетание клавиш` | no | hand: when the component draws and listens for a shortcut |
+| 8 | `## Работа из кода` | no | hand: events (which fires when), properties; methods link the reference |
+| 9 | `## Доступность` | yes | hand, with code for each point |
+| 10 | `## Справочник` | yes | generated, as in the third standard; a hand-written `### Для разработчика` after the tables (the traps) is kept by the generator; the component's places (slots) and public variables are tables there once `config/smart-reference.json` describes them |
+| 11 | `## См. также` | no | hand |
 
 Section rules: a heading is up to three plain Russian words, no code; under a
 feature heading one line names the attribute, its default and links the

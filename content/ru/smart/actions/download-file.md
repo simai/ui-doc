@@ -16,14 +16,18 @@ description: "Показывает файл для скачивания с им�
 
 ## Пример
 
-:::example {id="smart-components/download-file/overview" label="Два файла" preview=sandbox log_console=true log_open=false}
+Нажмите «Смета.csv» или «Логотип.svg»: браузер скачает файл. «Акт
+сверки.csv» приложение собирает по нажатию и отдаёт браузеру, когда файл
+готов. Журнал под примером показывает события.
+
+:::example {id="smart-components/download-file/overview" label="Вложения к заказу" preview=sandbox log_console=true log_open=false}
 :::
 
 Готовый файл — ссылка с адресом, именем и размером:
 
 ```html
-<sf-file-download href="/files/report.pdf" download
-  file-name="Отчёт за квартал.pdf" file-size="2,4 МБ"></sf-file-download>
+<sf-file-download href="/files/smeta.csv" download
+  file-name="Смета.csv" file-size="112 Б" icon="table"></sf-file-download>
 ```
 
 ## Когда брать
@@ -32,7 +36,14 @@ description: "Показывает файл для скачивания с им�
   файл сам.
 - **Файл собирает приложение** — без `href`: нажатие сообщает событием, что
   файл нужен. См. [Файл готовит приложение](#файл-готовит-приложение).
+
+## Когда не брать
+
 - **Действие без файла** — обычная [кнопка](/ru/smart/actions/buttons/).
+- **Файл нужно показать, а не только скачать** — миниатюра, удаление,
+  замена: [Предпросмотр файла](/ru/smart/content/file-preview/).
+- **Человек выбирает и загружает файлы** — [Загрузка
+  файлов](/ru/smart/forms/file-upload/).
 
 ## Частые задачи
 
@@ -43,26 +54,34 @@ description: "Показывает файл для скачивания с им�
 С `download` браузер скачивает файл под именем из `file-name`, а не
 открывает его. Без `download` ссылка открывается в новой вкладке.
 
+:::example {id="smart-components/download-file/link" label="Скачать и открыть" preview=sandbox}
+:::
+
 `file-name` — видимое имя файла; задавайте его всегда. `file-size` —
 размер, как его прочтёт человек: «2,4 МБ». Если размер не задан, компонент
-спрашивает его у адреса и показывает в английских единицах, поэтому
-известный размер передавайте сами.
+один раз спрашивает его у адреса файла; известный размер передавайте сами:
+тогда запроса нет.
 
 ### Файл готовит приложение
 
 `sf-file-download-download` • [справочник](#события)
 
 Без `href` нажатие отправляет событие, и приложение собирает файл: отчёт,
-выгрузку, архив. Пока файл готовится, элемент недоступен.
+выгрузку, архив. В примере на это время приложение делает элемент
+недоступным (`disabled`), пишет, что происходит, в строке состояния и
+отдаёт готовый файл браузеру.
 
 :::example {id="smart-components/download-file/prepare" label="Выгрузка по запросу" preview=sandbox log_console=true log_open=false}
 :::
 
 ```js
-document.addEventListener('sf-file-download-download', async (event) => {
-  if (event.detail.href) return;
-  const file = await buildReport();
-  saveFile(file, event.detail.fileName);
+file.addEventListener('sf-file-download-download', async (event) => {
+  file.disabled = true;
+  status.textContent = 'Готовим файл…';
+  const text = await buildReport();
+  saveFile(text, event.detail.fileName);
+  file.disabled = false;
+  status.textContent = 'Файл скачан.';
 });
 ```
 
@@ -132,8 +151,8 @@ document.addEventListener('sf-file-download-download', async (event) => {
 | `href` | строка | пусто | — | Адрес файла. |
 | `download` | да/нет | нет | — | Ссылка скачивает файл, а не открывает его. |
 | `disabled` | да/нет | нет | — | Кнопка недоступна, ссылка не работает. |
-| `target` | строка | `_blank` | — | — |
-| `aria-label` | строка | пусто | — | — |
+| `target` | строка | `_blank` | — | Где открыть ссылку без `download`, как у атрибута `target` ссылки HTML: `_blank` — в новой вкладке, `_self` — на месте. |
+| `aria-label` | строка | пусто | — | Имя ссылки или кнопки для экранного диктора вместо имени и размера файла; назовите в нём файл. |
 
 #### Общие для всех компонентов
 
@@ -155,7 +174,21 @@ document.addEventListener('sf-file-download-download', async (event) => {
 
 | Событие | `detail` | Когда приходит |
 |:---|:---|:---|
-| `sf-file-download-download` | `{ href: string, fileName: string, download: boolean }` | — |
+| `sf-file-download-download` | `{ href: string, fileName: string, download: boolean }` | Человек нажал на файл. Событие отменяемое: `preventDefault()` останавливает скачивание или переход, и страница может скачать файл сама. |
+
+### Переменные
+
+Публичные переменные: имя стабильно, значение ставят на сам элемент или на любого предка.
+
+| Переменная | Что задаёт |
+|:---|:---|
+| `--sf-download-file-background-color` | Заливка в покое; у наведения, нажатия и недоступного состояния свои. |
+| `--sf-download-file-border-color` | Цвет рамки в покое. |
+| `--sf-download-file-radius` | Скругление. |
+| `--sf-download-file-padding` | Внутренний отступ. |
+| `--sf-download-file-gap` | Промежуток между иконкой, именем и размером. |
+| `--sf-download-file-icon-size` | Размер иконки. |
+| `--sf-download-file-icon-color` | Цвет иконки. |
 
 ### О компоненте
 

@@ -53,9 +53,10 @@ const STANDARD = {
   // reader's questions first (when to choose it, everyday tasks with ready
   // code), then the look, the states, keyboard shortcuts, code, accessibility
   // and the third standard's reference, closed by a hand-written «Для
-  // разработчика» for the traps.
+  // разработчика» for the traps. «Когда не брать» names the alternatives
+  // apart from the reasons to choose it (owner, docs review 2026-11-09).
   smart4: {
-    order: ['Пример', 'Когда брать', 'Частые задачи', 'Внешний вид', 'Состояния', 'Сочетание клавиш', 'Работа из кода', 'Доступность', 'Справочник', 'См. также'],
+    order: ['Пример', 'Когда брать', 'Когда не брать', 'Частые задачи', 'Внешний вид', 'Состояния', 'Сочетание клавиш', 'Работа из кода', 'Доступность', 'Справочник', 'См. также'],
     required: ['Пример', 'Доступность', 'Справочник'],
   },
 };

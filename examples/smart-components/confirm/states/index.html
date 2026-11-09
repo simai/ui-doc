@@ -1,24 +1,20 @@
 <div class="query-container">
   <div class="grid grid-col-1 cq-md:grid-col-2 gap-4">
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-17" accept-text="Удалить" destructive state="pending"></sf-confirm></div>
-      <span class="text-1/2 color-on-surface-variant wrap-none">pending</span>
+      <div class="flex flex-1 items-cross-start"><sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-17" accept-text="Удалить" destructive data-specimen="pending"></sf-confirm></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">ответ применяется</span>
     </div>
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-18" state="accepted"></sf-confirm></div>
-      <span class="text-1/2 color-on-surface-variant wrap-none">accepted</span>
+      <div class="flex flex-1 items-cross-start"><sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-18" state="accepted"></sf-confirm></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">готово</span>
     </div>
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-19" state="declined"></sf-confirm></div>
-      <span class="text-1/2 color-on-surface-variant wrap-none">declined</span>
+      <div class="flex flex-1 items-cross-start"><sf-confirm question="Удалить файл «Отчёт.pdf»?" confirm-id="f-19" state="declined"></sf-confirm></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">отменено</span>
     </div>
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-confirm question="Принять приглашение в чат «Продажи»?" confirm-id="i-3" state="expired"></sf-confirm></div>
-      <span class="text-1/2 color-on-surface-variant wrap-none">expired</span>
-    </div>
-    <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-confirm question="Убрать участника из чата?" confirm-id="m-4" accept-text="Убрать" disabled></sf-confirm></div>
-      <span class="text-1/2 color-on-surface-variant wrap-none">disabled</span>
+      <div class="flex flex-1 items-cross-start"><sf-confirm question="Принять приглашение в чат «Продажи»?" confirm-id="i-3" state="expired"></sf-confirm></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">срок истёк</span>
     </div>
   </div>
 </div>
