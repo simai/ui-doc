@@ -103,7 +103,7 @@ list.addEventListener('sf-thread-list-load-more', async () => {
 канал); `icon` — знак вместо инициалов (канал, агент, бот; имя значка Framework),
 картинка `image-url` важнее знака. Нет `avatar` — нет и колонки под него: в списке
 только с ИИ-разговорами пустого места слева не остаётся. Инициалы рисуются
-приглушённым цветом по названию разговора (`sf-avatar` `tone="auto"`, см.
+приглушённым цветом по названию разговора (`sf-avatar` `hue="auto"`, см.
 [Цвет инициалов](/ru/smart/content/avatar/#цвет-инициалов)): у одного
 названия цвет всегда один.
 `activity` (`running`, `waiting`, `done`, `stopped`, `failed`) is where the work in the

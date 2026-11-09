@@ -103,7 +103,7 @@ SF.Loader.themePreference;  // 'system', 'light' или 'dark'
 но фона не задаёт. Участку обязательно нужны свой фон и цвет текста:
 
 ```html
-<section class="theme-dark bg-surface-0 color-on-surface">
+<section class="theme-dark bg-surface-page color-on-surface">
   Тёмный блок на светлой странице
 </section>
 ```

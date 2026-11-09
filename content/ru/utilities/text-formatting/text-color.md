@@ -5,10 +5,11 @@ description: "Окрашивает текст цветовой ролью тем
 
 # Цвет текста
 
-Классы `color-*` задают цвет текста через цветовые роли и палитры темы.
-Берите роль (`color-on-surface`, `color-primary`, `color-error`), когда цвет
-несёт смысл, и палитру (`color-blue-5`), только когда нужен конкретный оттенок
-вне ролей.
+Классы `color-*` задают цвет текста через цветовые роли темы: текст на
+поверхности (`color-on-surface`), акцентные и статусные роли (`color-primary`,
+`color-error`) и текст на их заливке. Роль сама подстраивается под светлую и
+тёмную тему. Классов для отдельных ступеней палитры нет: оттенок вне ролей
+берут из [статической палитры](/ru/guide/colour/palettes/#статическая-палитра).
 
 ## Пример
 
@@ -60,82 +61,18 @@ description: "Окрашивает текст цветовой ролью тем
 :::example {id="utilities/text-formatting/text-color-keywords" label="color-inherit, color-current, color-transparent"}
 :::
 
-### Палитра
-
-Цвета палитры заданы числом и не зависят от темы: светлые ступени не видны на
-светлом фоне, тёмные — на тёмном.
-
-:::example {id="utilities/text-formatting/text-color-palette" label="Ступени палитры"}
-:::
-
 ## Классы
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `color-{значение}` | `color: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `white`, `black` |
+| `color-{значение}` | `color: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `color-on-{значение}` | `color: var(--sf-on-{значение})` | `surface`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `color-on-surface-{значение}` | `color: var(--sf-on-surface-{значение})` | `fixed`, `variant`, `inverse` |
 | `color-on-surface-inverse-fixed` | `color: var(--sf-on-surface-inverse-fixed)` | — |
 | `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `color-gray` | `color: var(--sf-gray-50)` | — |
-| `color-{значение}-0` | `color: var(--sf-{значение}-98)` | `gray`, `orange`, `yellow`, `green`, `blue` |
-| `color-{значение}-1` | `color: var(--sf-{значение}-98)` | `gray`, `yellow`, `green` |
-| `color-{значение}-2` | `color: var(--sf-{значение}-90)` | `gray`, `green`, `blue` |
-| `color-gray-3` | `color: var(--sf-gray-85)` | — |
-| `color-{значение}-4` | `color: var(--sf-{значение}-60)` | `gray`, `red`, `blue`, `pink` |
-| `color-gray-5` | `color: var(--sf-gray-50)` | — |
-| `color-{значение}-6` | `color: var(--sf-{значение}-40)` | `gray`, `red`, `blue` |
-| `color-gray-7` | `color: var(--sf-gray-30)` | — |
-| `color-{значение}-8` | `color: var(--sf-{значение}-20)` | `gray`, `blue`, `purple` |
-| `color-{значение}-9` | `color: var(--sf-{значение}-15)` | `gray`, `blue`, `purple` |
-| `color-red` | `color: var(--sf-red-50)` | — |
-| `color-{значение}-0` | `color: var(--sf-{значение}-95)` | `red`, `purple`, `pink` |
-| `color-{значение}-1` | `color: var(--sf-{значение}-90)` | `red`, `purple`, `pink` |
-| `color-{значение}-2` | `color: var(--sf-{значение}-80)` | `red`, `purple`, `pink` |
-| `color-{значение}-3` | `color: var(--sf-{значение}-70)` | `red`, `blue`, `purple`, `pink` |
-| `color-red-5` | `color: var(--sf-red-50)` | — |
-| `color-red-7` | `color: var(--sf-red-40)` | — |
-| `color-red-8` | `color: var(--sf-red-35)` | — |
-| `color-red-9` | `color: var(--sf-red-30)` | — |
-| `color-{значение}` | `color: var(--sf-{значение}-60)` | `orange`, `green`, `pink` |
-| `color-orange-1` | `color: var(--sf-orange-95)` | — |
-| `color-orange-2` | `color: var(--sf-orange-85)` | — |
-| `color-orange-3` | `color: var(--sf-orange-80)` | — |
-| `color-orange-4` | `color: var(--sf-orange-70)` | — |
-| `color-{значение}-5` | `color: var(--sf-{значение}-60)` | `orange`, `green`, `pink` |
-| `color-orange-6` | `color: var(--sf-orange-60)` | — |
-| `color-orange-7` | `color: var(--sf-orange-50)` | — |
-| `color-orange-8` | `color: var(--sf-orange-50)` | — |
-| `color-orange-9` | `color: var(--sf-orange-40)` | — |
-| `color-yellow` | `color: var(--sf-yellow-85)` | — |
-| `color-yellow-2` | `color: var(--sf-yellow-95)` | — |
-| `color-yellow-3` | `color: var(--sf-yellow-90)` | — |
-| `color-yellow-4` | `color: var(--sf-yellow-90)` | — |
-| `color-yellow-5` | `color: var(--sf-yellow-85)` | — |
-| `color-yellow-6` | `color: var(--sf-yellow-80)` | — |
-| `color-yellow-7` | `color: var(--sf-yellow-70)` | — |
-| `color-yellow-8` | `color: var(--sf-yellow-60)` | — |
-| `color-yellow-9` | `color: var(--sf-yellow-40)` | — |
-| `color-green-3` | `color: var(--sf-green-85)` | — |
-| `color-green-4` | `color: var(--sf-green-70)` | — |
-| `color-green-6` | `color: var(--sf-green-50)` | — |
-| `color-green-7` | `color: var(--sf-green-40)` | — |
-| `color-green-8` | `color: var(--sf-green-35)` | — |
-| `color-green-9` | `color: var(--sf-green-25)` | — |
-| `color-blue` | `color: var(--sf-blue-40)` | — |
-| `color-blue-1` | `color: var(--sf-blue-95)` | — |
-| `color-blue-5` | `color: var(--sf-blue-40)` | — |
-| `color-blue-7` | `color: var(--sf-blue-30)` | — |
-| `color-purple` | `color: var(--sf-purple-40)` | — |
-| `color-purple-4` | `color: var(--sf-purple-50)` | — |
-| `color-purple-5` | `color: var(--sf-purple-40)` | — |
-| `color-purple-6` | `color: var(--sf-purple-30)` | — |
-| `color-purple-7` | `color: var(--sf-purple-25)` | — |
-| `color-pink-6` | `color: var(--sf-pink-50)` | — |
-| `color-pink-7` | `color: var(--sf-pink-50)` | — |
-| `color-pink-8` | `color: var(--sf-pink-40)` | — |
-| `color-pink-9` | `color: var(--sf-pink-25)` | — |
+
+Ещё 90 классов уходят без замены и работают до 2027-01-01 (запись `utility-c17-legacy-palette-classes` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:color-transparent`.
 
@@ -185,78 +122,6 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
 | `--sf-disable` | `var(--sf-surface-disabled)` |
-| `--sf-white` | `#ffffff` |
-| `--sf-black` | `#000000` |
-| `--sf-gray-50` | `#777777` |
-| `--sf-gray-98` | `#f9f9f9` |
-| `--sf-gray-90` | `#e2e2e2` |
-| `--sf-gray-85` | `#d4d4d4` |
-| `--sf-gray-60` | `#919191` |
-| `--sf-gray-40` | `#5e5e5e` |
-| `--sf-gray-30` | `#474747` |
-| `--sf-gray-20` | `#303030` |
-| `--sf-gray-15` | `#262626` |
-| `--sf-red-50` | `#df362f` |
-| `--sf-red-95` | `#ffedea` |
-| `--sf-red-90` | `#ffdad6` |
-| `--sf-red-80` | `#ffb4ab` |
-| `--sf-red-70` | `#ff897d` |
-| `--sf-red-60` | `#ff5449` |
-| `--sf-red-40` | `#bb1919` |
-| `--sf-red-35` | `#a9040e` |
-| `--sf-red-30` | `#93000a` |
-| `--sf-orange-60` | `#e4702d` |
-| `--sf-orange-98` | `#fff8f6` |
-| `--sf-orange-95` | `#ffede6` |
-| `--sf-orange-85` | `#ffc9af` |
-| `--sf-orange-80` | `#ffb692` |
-| `--sf-orange-70` | `#ff8d4f` |
-| `--sf-orange-50` | `#c25713` |
-| `--sf-orange-40` | `#9f4200` |
-| `--sf-yellow-85` | `#ffce41` |
-| `--sf-yellow-98` | `#fff8f1` |
-| `--sf-yellow-95` | `#ffefcf` |
-| `--sf-yellow-90` | `#ffdf92` |
-| `--sf-yellow-80` | `#f4c002` |
-| `--sf-yellow-70` | `#d3a500` |
-| `--sf-yellow-60` | `#b28b00` |
-| `--sf-yellow-40` | `#755b00` |
-| `--sf-green-60` | `#3ba53f` |
-| `--sf-green-98` | `#ecffe4` |
-| `--sf-green-90` | `#8ffa88` |
-| `--sf-green-85` | `#81ec7c` |
-| `--sf-green-70` | `#58c157` |
-| `--sf-green-50` | `#198a27` |
-| `--sf-green-40` | `#006e17` |
-| `--sf-green-35` | `#006013` |
-| `--sf-green-25` | `#00460b` |
-| `--sf-blue-40` | `#005bbe` |
-| `--sf-blue-98` | `#f9f9ff` |
-| `--sf-blue-95` | `#edf0ff` |
-| `--sf-blue-90` | `#d7e2ff` |
-| `--sf-blue-70` | `#7eabff` |
-| `--sf-blue-60` | `#538ff5` |
-| `--sf-blue-30` | `#004492` |
-| `--sf-blue-20` | `#002f67` |
-| `--sf-blue-15` | `#002453` |
-| `--sf-purple-40` | `#8c3c9f` |
-| `--sf-purple-95` | `#ffebfd` |
-| `--sf-purple-90` | `#fdd6ff` |
-| `--sf-purple-80` | `#f4aeff` |
-| `--sf-purple-70` | `#e18af3` |
-| `--sf-purple-50` | `#a856ba` |
-| `--sf-purple-30` | `#712085` |
-| `--sf-purple-25` | `#641079` |
-| `--sf-purple-20` | `#55006a` |
-| `--sf-purple-15` | `#440056` |
-| `--sf-pink-60` | `#dd68a9` |
-| `--sf-pink-95` | `#ffecf2` |
-| `--sf-pink-90` | `#ffd8e8` |
-| `--sf-pink-80` | `#ffafd6` |
-| `--sf-pink-70` | `#fd82c5` |
-| `--sf-pink-50` | `#be4e8f` |
-| `--sf-pink-40` | `#a03575` |
-| `--sf-pink-25` | `#730a50` |
 
 ## Применение
 
@@ -271,7 +136,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `color-on-surface-inverse` | текст на инверсной поверхности `bg-surface-inverse` |
 
 ```html
-<article class="bg-surface-0">
+<article class="bg-surface-page">
   <h2 class="color-on-surface">Заголовок и основной текст</h2>
   <p class="color-on-surface-variant">Вспомогательное описание или метаданные</p>
 </article>

@@ -5,26 +5,28 @@ description: "Заливает элемент цветовой ролью тем
 
 # Цвет фона
 
-Классы `bg-*` задают `background-color` через цветовые роли и палитры темы.
-Берите роль (`bg-surface-container`, `bg-primary`, `bg-error-container`), когда
-цвет несёт смысл, и палитру (`bg-blue-5`), только когда нужен конкретный
-оттенок вне ролей.
+Классы `bg-*` задают `background-color` через цветовые роли темы:
+поверхности (`bg-surface-card`), акцентные и статусные роли (`bg-primary`,
+`bg-info`, `bg-error-container`) и их состояния. Роль сама подстраивается под
+светлую и тёмную тему. Классов для отдельных ступеней палитры нет: оттенок вне
+ролей берут из [статической палитры](/ru/guide/colour/palettes/#статическая-палитра).
 
 ## Пример
 
 ### Поверхности
 
-Ступени поверхности от `bg-surface-0` до `bg-surface-4`, мягкий контейнер и
-инверсная поверхность. `bg-surface` — то же, что `bg-surface-1`.
+Поверхности по месту — страница, область, карточка, всплывающая панель и
+вложенная в неё, — мягкий контейнер и инверсная поверхность.
 
 :::example {id="utilities/background/background-color" label="Поверхности"}
 :::
 
 ### Заливка акцентом и статусом
 
-Насыщенная заливка роли; текст на ней берёт парную роль `color-on-*`.
+Насыщенная заливка роли; текст на ней берёт парную роль `color-on-*`. У
+сведений (`info`) тот же набор, что у успеха, предупреждения и ошибки.
 
-:::example {id="utilities/background/background-color-accent" label="bg-primary … bg-success и bg-disable"}
+:::example {id="utilities/background/background-color-accent" label="bg-primary … bg-error и bg-surface-disabled"}
 :::
 
 ### Контейнеры
@@ -35,12 +37,12 @@ description: "Заливает элемент цветовой ролью тем
 :::example {id="utilities/background/background-color-container" label="bg-*-container"}
 :::
 
-### Полупрозрачные слои
+### Выбор и плотный слой
 
-`-transparent-select` — лёгкий слой выбранной строки или пункта,
-`-transparent-overlay` — плотный слой поверх содержимого.
+`-state-select` — лёгкий слой выбранной строки или пункта,
+`-container-strong` — плотная плашка роли поверх содержимого.
 
-:::example {id="utilities/background/background-color-transparent" label="bg-*-transparent-select и bg-*-transparent-overlay"}
+:::example {id="utilities/background/background-color-transparent" label="bg-*-state-select и bg-*-container-strong"}
 :::
 
 ### Состояния
@@ -51,19 +53,21 @@ description: "Заливает элемент цветовой ролью тем
 :::example {id="utilities/background/background-color-states" label="hover: и active:"}
 :::
 
-### Палитра и служебные значения
+### Служебные значения
 
-Цвета палитры заданы числом и не зависят от темы. `bg-current` берёт цвет
-текста элемента, `bg-transparent` убирает заливку.
+`bg-current` берёт цвет текста элемента, `bg-transparent` убирает заливку,
+`bg-on-surface` и `bg-on-surface-variant` заливают цветом текста — для
+полосок и меток.
 
-:::example {id="utilities/background/background-color-palette" label="Палитра, bg-current, bg-transparent, bg-on-surface"}
+:::example {id="utilities/background/background-color-palette" label="bg-transparent, bg-current, bg-on-surface"}
 :::
 
 ## Классы
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `bg-{значение}` | `background-color: var(--sf-{значение})` | `transparent`, `current`, `white`, `black` |
+| `bg-transparent` | `background-color: var(--sf-transparent)` | — |
+| `bg-current` | `background-color: var(--sf-current)` | — |
 | `bg-surface-{значение}` | `background-color: var(--sf-surface-{значение})` | `2`, `3`, `4`, `inverse`, `veil`, `disabled` |
 | `bg-surface` | `background-color: var(--sf-surface-1); --sf-surface-place: var(--sf-surface-area); --sf-on-surface: light-dark(var(--sf-neutral-10), var(--sf-neutral-90)); --sf-on-surface-variant: light-dark(var(--sf-neutral-40), var(--sf-neutral-60)); --sf-on-surface-container-variant: light-dark(var(--sf-neutral-35), var(--sf-neutral-85)); --sf-surface-state-hover: light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4)); --sf-surface-state-select: light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8)); --sf-surface-state-active: light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12)); --sf-surface-container: light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16)); --sf-surface-container-hover: light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20)); --sf-surface-container-active: light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24)); --sf-outline: light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48)); --sf-outline-variant: light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24)); --sf-surface-disabled: light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12)); --sf-on-surface-disabled: light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48)); --sf-disable: var(--sf-surface-disabled); --sf-on-disable: var(--sf-on-surface-disabled); --sf-on-surface-container--variant: var(--sf-on-surface-container-variant); --sf-surface-transparent-active: var(--sf-surface-state-active); --sf-surface-transparent-hover: var(--sf-surface-state-hover); --sf-surface-transparent-select: var(--sf-surface-state-select)` | — |
 | `bg-surface-inverse-fixed` | `background-color: var(--sf-surface-inverse-fixed)` | — |
@@ -82,74 +86,16 @@ description: "Заливает элемент цветовой ролью тем
 | `bg-scrim` | `background-color: var(--sf-scrim-color)` | — |
 | `active:bg-{значение}-container` (`.active:bg-{значение}-container:active`) | `background-color: var(--sf-{значение}-container-active)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `active:bg-on-surface` (`.active:bg-on-surface:active`) | `background-color: var(--sf-on-surface-active)` | — |
-| `active:bg-{значение}-transparent` (`.active:bg-{значение}-transparent:active`) | `background-color: var(--sf-{значение}-transparent-active)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `active:bg-{значение}` (`.active:bg-{значение}:active`) | `background-color: var(--sf-{значение}-active)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `active:bg-{значение}-state` (`.active:bg-{значение}-state:active`) | `background-color: var(--sf-{значение}-state-active)` | `info`, `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `hover:bg-{значение}-container` (`.hover:bg-{значение}-container:hover`) | `background-color: var(--sf-{значение}-container-hover)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `hover:bg-on-surface` (`.hover:bg-on-surface:hover`) | `background-color: var(--sf-on-surface-hover)` | — |
-| `hover:bg-{значение}-transparent` (`.hover:bg-{значение}-transparent:hover`) | `background-color: var(--sf-{значение}-transparent-hover)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `hover:bg-{значение}` (`.hover:bg-{значение}:hover`) | `background-color: var(--sf-{значение}-hover)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `hover:bg-{значение}-state` (`.hover:bg-{значение}-state:hover`) | `background-color: var(--sf-{значение}-state-hover)` | `info`, `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `bg-gray` | `background-color: var(--sf-gray-50)` | — |
-| `bg-{значение}-0` | `background-color: var(--sf-{значение}-98)` | `gray`, `orange`, `yellow`, `green`, `blue` |
-| `bg-{значение}-1` | `background-color: var(--sf-{значение}-98)` | `gray`, `yellow`, `green` |
-| `bg-{значение}-2` | `background-color: var(--sf-{значение}-90)` | `gray`, `green`, `blue` |
-| `bg-gray-3` | `background-color: var(--sf-gray-85)` | — |
-| `bg-{значение}-4` | `background-color: var(--sf-{значение}-60)` | `gray`, `red`, `blue`, `pink` |
-| `bg-gray-5` | `background-color: var(--sf-gray-50)` | — |
-| `bg-{значение}-6` | `background-color: var(--sf-{значение}-40)` | `gray`, `red`, `blue` |
-| `bg-gray-7` | `background-color: var(--sf-gray-30)` | — |
-| `bg-{значение}-8` | `background-color: var(--sf-{значение}-20)` | `gray`, `blue`, `purple` |
-| `bg-{значение}-9` | `background-color: var(--sf-{значение}-15)` | `gray`, `blue`, `purple` |
-| `bg-red` | `background-color: var(--sf-red-50)` | — |
-| `bg-{значение}-0` | `background-color: var(--sf-{значение}-95)` | `red`, `purple`, `pink` |
-| `bg-{значение}-1` | `background-color: var(--sf-{значение}-90)` | `red`, `purple`, `pink` |
-| `bg-{значение}-2` | `background-color: var(--sf-{значение}-80)` | `red`, `purple`, `pink` |
-| `bg-{значение}-3` | `background-color: var(--sf-{значение}-70)` | `red`, `blue`, `purple`, `pink` |
-| `bg-red-5` | `background-color: var(--sf-red-50)` | — |
-| `bg-red-7` | `background-color: var(--sf-red-40)` | — |
-| `bg-red-8` | `background-color: var(--sf-red-35)` | — |
-| `bg-red-9` | `background-color: var(--sf-red-30)` | — |
-| `bg-{значение}` | `background-color: var(--sf-{значение}-60)` | `orange`, `green`, `pink` |
-| `bg-orange-1` | `background-color: var(--sf-orange-95)` | — |
-| `bg-orange-2` | `background-color: var(--sf-orange-85)` | — |
-| `bg-orange-3` | `background-color: var(--sf-orange-80)` | — |
-| `bg-orange-4` | `background-color: var(--sf-orange-70)` | — |
-| `bg-{значение}-5` | `background-color: var(--sf-{значение}-60)` | `orange`, `green`, `pink` |
-| `bg-orange-6` | `background-color: var(--sf-orange-60)` | — |
-| `bg-orange-7` | `background-color: var(--sf-orange-50)` | — |
-| `bg-orange-8` | `background-color: var(--sf-orange-50)` | — |
-| `bg-orange-9` | `background-color: var(--sf-orange-40)` | — |
-| `bg-yellow` | `background-color: var(--sf-yellow-85)` | — |
-| `bg-yellow-2` | `background-color: var(--sf-yellow-95)` | — |
-| `bg-yellow-3` | `background-color: var(--sf-yellow-90)` | — |
-| `bg-yellow-4` | `background-color: var(--sf-yellow-90)` | — |
-| `bg-yellow-5` | `background-color: var(--sf-yellow-85)` | — |
-| `bg-yellow-6` | `background-color: var(--sf-yellow-80)` | — |
-| `bg-yellow-7` | `background-color: var(--sf-yellow-70)` | — |
-| `bg-yellow-8` | `background-color: var(--sf-yellow-60)` | — |
-| `bg-yellow-9` | `background-color: var(--sf-yellow-40)` | — |
-| `bg-green-3` | `background-color: var(--sf-green-85)` | — |
-| `bg-green-4` | `background-color: var(--sf-green-70)` | — |
-| `bg-green-6` | `background-color: var(--sf-green-50)` | — |
-| `bg-green-7` | `background-color: var(--sf-green-40)` | — |
-| `bg-green-8` | `background-color: var(--sf-green-35)` | — |
-| `bg-green-9` | `background-color: var(--sf-green-25)` | — |
-| `bg-blue` | `background-color: var(--sf-blue-40)` | — |
-| `bg-blue-1` | `background-color: var(--sf-blue-95)` | — |
-| `bg-blue-5` | `background-color: var(--sf-blue-40)` | — |
-| `bg-blue-7` | `background-color: var(--sf-blue-30)` | — |
-| `bg-purple` | `background-color: var(--sf-purple-40)` | — |
-| `bg-purple-4` | `background-color: var(--sf-purple-50)` | — |
-| `bg-purple-5` | `background-color: var(--sf-purple-40)` | — |
-| `bg-purple-6` | `background-color: var(--sf-purple-30)` | — |
-| `bg-purple-7` | `background-color: var(--sf-purple-25)` | — |
-| `bg-pink-6` | `background-color: var(--sf-pink-50)` | — |
-| `bg-pink-7` | `background-color: var(--sf-pink-50)` | — |
-| `bg-pink-8` | `background-color: var(--sf-pink-40)` | — |
-| `bg-pink-9` | `background-color: var(--sf-pink-25)` | — |
 
-Прежние имена работают до 2027-01-01: `bg-disable` → `bg-surface-disabled`, `bg-error-transparent-overlay` → `bg-error-container-strong`, `bg-error-transparent-select` → `bg-error-state-select`, `bg-primary-transparent-overlay` → `bg-primary-container-strong`, `bg-primary-transparent-select` → `bg-primary-state-select`, `bg-secondary-transparent-overlay` → `bg-secondary-container-strong`, `bg-secondary-transparent-select` → `bg-secondary-state-select`, `bg-success-transparent-overlay` → `bg-success-container-strong`, `bg-success-transparent-select` → `bg-success-state-select`, `bg-surface-0` → `bg-surface-page`, `bg-surface-1` → `bg-surface-area`, `bg-surface-transparent-overlay` → `bg-surface-container-strong`, `bg-surface-transparent-select` → `bg-surface-state-select`, `bg-tertiary-transparent-overlay` → `bg-tertiary-container-strong`, `bg-tertiary-transparent-select` → `bg-tertiary-state-select`, `bg-warning-transparent-overlay` → `bg-warning-container-strong`, `bg-warning-transparent-select` → `bg-warning-state-select`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+Прежние имена работают до 2027-01-01: `active:bg-error-transparent` → `active:bg-error-state`, `active:bg-primary-transparent` → `active:bg-primary-state`, `active:bg-secondary-transparent` → `active:bg-secondary-state`, `active:bg-success-transparent` → `active:bg-success-state`, `active:bg-surface-transparent` → `active:bg-surface-state`, `active:bg-tertiary-transparent` → `active:bg-tertiary-state`, `active:bg-warning-transparent` → `active:bg-warning-state`, `bg-disable` → `bg-surface-disabled`, `bg-error-transparent-overlay` → `bg-error-container-strong`, `bg-error-transparent-select` → `bg-error-state-select`, `bg-primary-transparent-overlay` → `bg-primary-container-strong`, `bg-primary-transparent-select` → `bg-primary-state-select`, `bg-secondary-transparent-overlay` → `bg-secondary-container-strong`, `bg-secondary-transparent-select` → `bg-secondary-state-select`, `bg-success-transparent-overlay` → `bg-success-container-strong`, `bg-success-transparent-select` → `bg-success-state-select`, `bg-surface-0` → `bg-surface-page`, `bg-surface-1` → `bg-surface-area`, `bg-surface-transparent-overlay` → `bg-surface-container-strong`, `bg-surface-transparent-select` → `bg-surface-state-select`, `bg-tertiary-transparent-overlay` → `bg-tertiary-container-strong`, `bg-tertiary-transparent-select` → `bg-tertiary-state-select`, `bg-warning-transparent-overlay` → `bg-warning-container-strong`, `bg-warning-transparent-select` → `bg-warning-state-select`, `hover:bg-error-transparent` → `hover:bg-error-state`, `hover:bg-primary-transparent` → `hover:bg-primary-state`, `hover:bg-secondary-transparent` → `hover:bg-secondary-state`, `hover:bg-success-transparent` → `hover:bg-success-state`, `hover:bg-surface-transparent` → `hover:bg-surface-state`, `hover:bg-tertiary-transparent` → `hover:bg-tertiary-state`, `hover:bg-warning-transparent` → `hover:bg-warning-state`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+
+Ещё 90 классов уходят без замены и работают до 2027-01-01 (запись `utility-c17-legacy-palette-classes` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `hover:`. Например: `active:bg-surface-container`.
 
@@ -376,78 +322,6 @@ description: "Заливает элемент цветовой ролью тем
 | `--sf-success-hover` | `light-dark(var(--sf-success-35), var(--sf-success-85))` |
 | `--sf-success-transparent-hover` | `var(--sf-success-state-hover)` |
 | `--sf-info-hover` | `light-dark(var(--sf-info-35), var(--sf-info-85))` |
-| `--sf-white` | `#ffffff` |
-| `--sf-black` | `#000000` |
-| `--sf-gray-50` | `#777777` |
-| `--sf-gray-98` | `#f9f9f9` |
-| `--sf-gray-90` | `#e2e2e2` |
-| `--sf-gray-85` | `#d4d4d4` |
-| `--sf-gray-60` | `#919191` |
-| `--sf-gray-40` | `#5e5e5e` |
-| `--sf-gray-30` | `#474747` |
-| `--sf-gray-20` | `#303030` |
-| `--sf-gray-15` | `#262626` |
-| `--sf-red-50` | `#df362f` |
-| `--sf-red-95` | `#ffedea` |
-| `--sf-red-90` | `#ffdad6` |
-| `--sf-red-80` | `#ffb4ab` |
-| `--sf-red-70` | `#ff897d` |
-| `--sf-red-60` | `#ff5449` |
-| `--sf-red-40` | `#bb1919` |
-| `--sf-red-35` | `#a9040e` |
-| `--sf-red-30` | `#93000a` |
-| `--sf-orange-60` | `#e4702d` |
-| `--sf-orange-98` | `#fff8f6` |
-| `--sf-orange-95` | `#ffede6` |
-| `--sf-orange-85` | `#ffc9af` |
-| `--sf-orange-80` | `#ffb692` |
-| `--sf-orange-70` | `#ff8d4f` |
-| `--sf-orange-50` | `#c25713` |
-| `--sf-orange-40` | `#9f4200` |
-| `--sf-yellow-85` | `#ffce41` |
-| `--sf-yellow-98` | `#fff8f1` |
-| `--sf-yellow-95` | `#ffefcf` |
-| `--sf-yellow-90` | `#ffdf92` |
-| `--sf-yellow-80` | `#f4c002` |
-| `--sf-yellow-70` | `#d3a500` |
-| `--sf-yellow-60` | `#b28b00` |
-| `--sf-yellow-40` | `#755b00` |
-| `--sf-green-60` | `#3ba53f` |
-| `--sf-green-98` | `#ecffe4` |
-| `--sf-green-90` | `#8ffa88` |
-| `--sf-green-85` | `#81ec7c` |
-| `--sf-green-70` | `#58c157` |
-| `--sf-green-50` | `#198a27` |
-| `--sf-green-40` | `#006e17` |
-| `--sf-green-35` | `#006013` |
-| `--sf-green-25` | `#00460b` |
-| `--sf-blue-40` | `#005bbe` |
-| `--sf-blue-98` | `#f9f9ff` |
-| `--sf-blue-95` | `#edf0ff` |
-| `--sf-blue-90` | `#d7e2ff` |
-| `--sf-blue-70` | `#7eabff` |
-| `--sf-blue-60` | `#538ff5` |
-| `--sf-blue-30` | `#004492` |
-| `--sf-blue-20` | `#002f67` |
-| `--sf-blue-15` | `#002453` |
-| `--sf-purple-40` | `#8c3c9f` |
-| `--sf-purple-95` | `#ffebfd` |
-| `--sf-purple-90` | `#fdd6ff` |
-| `--sf-purple-80` | `#f4aeff` |
-| `--sf-purple-70` | `#e18af3` |
-| `--sf-purple-50` | `#a856ba` |
-| `--sf-purple-30` | `#712085` |
-| `--sf-purple-25` | `#641079` |
-| `--sf-purple-20` | `#55006a` |
-| `--sf-purple-15` | `#440056` |
-| `--sf-pink-60` | `#dd68a9` |
-| `--sf-pink-95` | `#ffecf2` |
-| `--sf-pink-90` | `#ffd8e8` |
-| `--sf-pink-80` | `#ffafd6` |
-| `--sf-pink-70` | `#fd82c5` |
-| `--sf-pink-50` | `#be4e8f` |
-| `--sf-pink-40` | `#a03575` |
-| `--sf-pink-25` | `#730a50` |
 
 ## Применение
 
@@ -455,14 +329,13 @@ description: "Заливает элемент цветовой ролью тем
 
 | Задача | Классы |
 | :--- | :--- |
-| Фон страницы и крупных блоков | `bg-surface`, `bg-surface-0` … `bg-surface-4` |
+| Фон страницы и крупных блоков | `bg-surface-page`, `bg-surface-area`, `bg-surface-card`, `bg-surface-popup` |
 | Мягкая подложка без смысла | `bg-surface-container` |
 | Главное действие, акцент | `bg-primary`, `bg-secondary`, `bg-tertiary` |
-| Статус | `bg-error`, `bg-warning`, `bg-success` |
+| Статус | `bg-info`, `bg-success`, `bg-warning`, `bg-error` |
 | Плашка статуса или акцента | `bg-*-container` |
-| Выбранная строка, слой поверх | `bg-*-transparent-select`, `bg-*-transparent-overlay` |
+| Выбранная строка, плотная плашка | `bg-*-state-select`, `bg-*-container-strong` |
 | Тёмная плашка на светлой теме и наоборот | `bg-surface-inverse` |
-| Цвет вне ролей | палитра: `bg-red-5`, `bg-blue-2` … |
 
 ### Парный цвет текста
 
@@ -474,7 +347,9 @@ description: "Заливает элемент цветовой ролью тем
 | `bg-primary` | `color-on-primary` |
 | `bg-primary-container` | `color-on-primary-container` |
 | `bg-surface-inverse` | `color-on-surface-inverse` |
-| `bg-disable` | `color-on-disable` |
+| `bg-info` | `color-on-info` |
+| `bg-info-container` | `color-on-info-container` |
+| `bg-surface-disabled` | `color-on-disable` |
 
 ```html
 <div class="bg-error-container color-on-error-container p-2 radius-ui">
@@ -491,17 +366,15 @@ description: "Заливает элемент цветовой ролью тем
 
 ```html
 <button class="bg-primary color-on-primary hover:bg-primary active:bg-primary">Сохранить</button>
-<button class="color-primary hover:bg-primary-transparent active:bg-primary-transparent">Отмена</button>
+<button class="color-primary hover:bg-primary-state active:bg-primary-state">Отмена</button>
 ```
 
 `hover:` и `active:` есть у ролей `surface-container`, `on-surface`,
-`surface-transparent` и у каждой акцентной и статусной роли в трёх видах:
-заливка, `-container`, `-transparent`.
+`surface-state` и у каждой акцентной и статусной роли в трёх видах:
+заливка, `-container`, `-state`.
 
 ## Ограничения
 
-- Цвета палитры (`bg-white`, `bg-gray-*`, `bg-blue-*` …) одинаковы в обеих
-  темах: светлые ступени теряются на светлом фоне, тёмные — на тёмном.
 - Префиксов ширины экрана у семейства нет.
 - Цвет фона не сообщает смысл программам экранного доступа: статус
   дублируйте текстом или значком.
