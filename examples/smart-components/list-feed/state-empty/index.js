@@ -4,7 +4,7 @@ const initialize = async () => {
   const feed = document.querySelector('#list-feed-empty');
   if (!feed || feed.dataset.exampleReady === 'true') return;
   feed.dataset.exampleReady = 'true';
-  feed.setItems([], {hasMore: false});
+  feed.setItems({items: [], options: {hasMore: false}});
 };
 
 initialize();

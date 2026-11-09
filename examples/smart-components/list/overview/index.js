@@ -16,7 +16,7 @@ const initialize = async () => {
     {id: 'copy', text: 'Копировать', icon: 'content_copy'},
     {id: 'delete', text: 'Удалить', icon: 'delete', destructive: true},
   ];
-  list.setItems(letters, {hasMore: false});
+  list.setItems({items: letters, options: {hasMore: false}});
   list.selected = 'l2';
   list.addEventListener('sf-list-open', (event) => {
     list.selected = event.detail.id;

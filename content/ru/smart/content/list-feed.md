@@ -39,7 +39,7 @@ flex-контейнере (`flex: 1`) и прокручивается внутр
 
 ```js
 const feed = document.querySelector('sf-list-feed');
-feed.setItems(await api.comments(taskId), {hasMore: true});
+feed.setItems({items: await api.comments(taskId), options: {hasMore: true}});
 ```
 
 Запись — обычные данные. Лента читает `id` (обязательный постоянный ключ),
@@ -75,28 +75,28 @@ feed.setItems(await api.comments(taskId), {hasMore: true});
 При `has-more` вверху видна кнопка «Показать предыдущие», а верх колонки один
 раз просит предыдущие записи: приходит `sf-list-feed-load-more` с
 `{direction: 'before', before}`, где `before` — `id` первой показанной записи.
-Ответ передайте `prependItems(items, {hasMore})`: записи встают сверху, а
+Ответ передайте `prependItems({items, options: {hasMore}})`: записи встают сверху, а
 читаемое не сдвигается. Если загрузить не удалось, вызовите
 `earlierFailed()`, и кнопка снова нажимается.
 
 ```js
 feed.addEventListener('sf-list-feed-load-more', async (event) => {
   const page = await api.comments(taskId, {before: event.detail.before});
-  feed.prependItems(page.items, {hasMore: page.hasMore});
+  feed.prependItems({items: page.items, options: {hasMore: page.hasMore}});
 });
 ```
 
 ### Новые и изменившиеся записи
 
-`upsert(entry)` добавляет запись в конец или перерисовывает её на месте:
+`upsert({item})` добавляет запись в конец или перерисовывает её на месте:
 элемент записи остаётся тем же, и фокус на кнопке внутри растущей записи не
-сбрасывается. `upsert(saved, undefined, {replaces: localKey})` заменяет
+сбрасывается. `upsert({item: saved, options: {replaces: localKey}})` заменяет
 запись с местным ключом ответом сервера, не меняя её места. `changes` задаёт,
 как сравнивать две записи одного `id`: `content` (по умолчанию — поля и
 `view`) или `revision` (хост повышает её с каждым изменением).
 
 Кнопка «К последней записи» возвращает вниз и переносит туда фокус; то же
-делает `scrollToLatest({instant, focus})`. `isAtLatest()` отвечает, виден ли
+делает `scrollToLatest({options: {instant, focus}})`. `isAtLatest()` отвечает, виден ли
 конец ленты.
 
 ### Своя отрисовка записи
@@ -129,16 +129,16 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 
 | Метод | Что делает |
 |:---|:---|
-| `setItems(items, {hasMore})` | Заменить ленту и показать её конец; ничего из неё не объявляется. |
-| `prependItems(items, {hasMore})` | Ранняя история сверху, не сдвигая читаемое; завершает запрос. |
-| `upsert(entry, view?, {replaces?})` | Добавить в конец или перерисовать на месте. |
-| `setView(id, view)` | Дописать в `view` показанной записи. |
+| `setItems({items, options: {hasMore}})` | Заменить ленту и показать её конец; ничего из неё не объявляется. |
+| `prependItems({items, options: {hasMore}})` | Ранняя история сверху, не сдвигая читаемое; завершает запрос. |
+| `upsert({item, view?, options: {replaces?}})` | Добавить в конец или перерисовать на месте. |
+| `setView({id, view})` | Дописать в `view` показанной записи. |
 | `detach(id)` | Снять одну запись; её поток кончается `cancelled`. |
 | `cancel(id)` | Перестать рисовать растущую запись. |
 | `redraw(id?)` | Нарисовать заново одну запись или все. |
 | `requestEarlier()` | Попросить ранние записи, как кнопка. Отказ `loading`, `no-more`, `prevented`. |
 | `earlierFailed()` | Хост не смог загрузить: кнопка снова нажимается. |
-| `scrollToLatest({instant, focus})` | К последней записи; с `focus` фокус переходит на неё. |
+| `scrollToLatest({options: {instant, focus}})` | К последней записи; с `focus` фокус переходит на неё. |
 | `announce(text)` | Сказать один раз через вежливую живую область (до 240 символов). |
 
 ## Доступность

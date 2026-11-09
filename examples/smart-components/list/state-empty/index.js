@@ -4,7 +4,7 @@ const initialize = async () => {
   const list = document.querySelector('#list-empty');
   if (!list || list.dataset.exampleReady === 'true') return;
   list.dataset.exampleReady = 'true';
-  list.setItems([], {hasMore: false});
+  list.setItems({items: [], options: {hasMore: false}});
 };
 
 initialize();

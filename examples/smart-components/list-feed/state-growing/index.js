@@ -11,17 +11,17 @@ const initialize = async () => {
   if (!feed || !finish || !output || feed.dataset.exampleReady === 'true') return;
   feed.dataset.exampleReady = 'true';
   feed.addEventListener('sf-list-feed-completed', () => { output.value = 'Ответ закончен'; });
-  feed.setItems([{id: 'q1', author: 'me', own: true, text: 'Как вернуть товар?'}], {hasMore: false});
+  feed.setItems({items: [{id: 'q1', author: 'me', own: true, text: 'Как вернуть товар?'}], options: {hasMore: false}});
   let text = '';
   parts.forEach((part, index) => {
     setTimeout(() => {
       text += part;
-      feed.upsert(answer(text, true));
+      feed.upsert({item: answer(text, true)});
     }, 400 * (index + 1));
   });
   finish.addEventListener('click', () => {
     text += ' Деньги придут за 3–5 дней.';
-    feed.upsert(answer(text, false));
+    feed.upsert({item: answer(text, false)});
   }, {once: true});
 };
 

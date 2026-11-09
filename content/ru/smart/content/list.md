@@ -36,7 +36,7 @@ list.actions = [
   {id: 'copy', text: 'Копировать', icon: 'content_copy'},
   {id: 'delete', text: 'Удалить', icon: 'delete', destructive: true},
 ];
-list.setItems(await api.letters(), {hasMore: true});
+list.setItems({items: await api.letters(), options: {hasMore: true}});
 ```
 
 Строка — обычные данные `{id, text, supporting?, icon?, date?, group?,
@@ -130,7 +130,7 @@ list.addEventListener('sf-list-open', (event) => {
 `has-more` говорит, что есть продолжение: видна кнопка «Показать ещё», а
 когда конец списка близко, список сам просит следующую страницу событием
 `sf-list-load-more` с `{direction: 'after', after}`, где `after` — `id`
-последней строки. Ответ передайте `appendItems(items, {hasMore})`; если
+последней строки. Ответ передайте `appendItems({items, options: {hasMore}})`; если
 загрузить не удалось — `moreFailed()`, и список попросит снова.
 
 :::example {id="smart-components/list/more" label="Версии с продолжением"}
@@ -143,9 +143,9 @@ list.addEventListener('sf-list-open', (event) => {
 
 | Метод | Что делает |
 |:---|:---|
-| `setItems(items, {hasMore})` | Весь список и есть ли продолжение; завершает запрос страницы. |
-| `appendItems(items, {hasMore})` | Следующая страница после показанных строк. |
-| `upsert(item)` | Новая строка в начало или изменившаяся на своём месте. |
+| `setItems({items, options: {hasMore}})` | Весь список и есть ли продолжение; завершает запрос страницы. |
+| `appendItems({items, options: {hasMore}})` | Следующая страница после показанных строк. |
+| `upsert({item})` | Новая строка в начало или изменившаяся на своём месте. |
 | `detach(id)` | Убрать строку. |
 | `rename(id)` | Начать переименование, как `F2`. Отказ `not-renamable`, `unknown`, `disabled`. |
 | `openMenu(id)` | Открыть действия строки, как «⋯» и `Shift+F10`. Отказ `no-actions`, `unknown`. |

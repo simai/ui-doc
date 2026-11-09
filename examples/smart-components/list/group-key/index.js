@@ -5,11 +5,11 @@ const initialize = async () => {
   if (!list || list.dataset.exampleReady === 'true') return;
   list.dataset.exampleReady = 'true';
   list.groups = [{key: 'docs', text: 'Документы'}, {key: 'images', text: 'Изображения'}];
-  list.setItems([
+  list.setItems({items: [
     {id: 'f1', text: 'Отчёт.pdf', supporting: '1,2 МБ', icon: 'description', group: 'docs'},
     {id: 'f2', text: 'Логотип.svg', supporting: '14 КБ', icon: 'image', group: 'images'},
     {id: 'f3', text: 'Договор.docx', supporting: '86 КБ', icon: 'description', group: 'docs'},
-  ], {hasMore: false});
+  ], options: {hasMore: false}});
 };
 
 initialize();
