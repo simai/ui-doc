@@ -191,7 +191,9 @@ const ru = (text) => {
 };
 // A list item is not a table cell: the pipe needs no escape there.
 const item = (text) => tagsAsCode(text).replace(/\\\|/gu, '|').replace(/\s*\n\s*/gu, ' ');
-const cell = (text) => tagsAsCode(String(text)).replace(/\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
+// A pipe code() already escaped stays escaped once: escaping it again showed
+// a backslash on the page («number\\|null»).
+const cell = (text) => tagsAsCode(String(text)).replace(/(?<!\\)\|/gu, '\\|').replace(/\s*\n\s*/gu, ' ');
 // A description in a table or a list reads as a sentence: it ends with a stop
 // whether or not the manifest's prose (or its translation) did.
 const sentence = (text) => {
@@ -250,7 +252,10 @@ const shape = (manifest, payload) => {
     const required = new Set(schema.required ?? []);
     const keys = Object.entries(schema.properties).map(([key, value]) => {
       const inner = resolveRef(manifest, value);
-      const type = [inner?.type].flat().filter(Boolean).join('|') || (inner?.$ref ? inner.$ref.split('/').pop() : 'any');
+      // A field that lists its values («method: native or legacy») reads as
+      // those values, not as `any`.
+      const values = Array.isArray(inner?.enum) && inner.enum.length ? inner.enum.map((item) => JSON.stringify(item)).join(' | ') : '';
+      const type = [inner?.type].flat().filter(Boolean).join('|') || values || (inner?.$ref ? inner.$ref.split('/').pop() : 'any');
       return `${key}${required.has(key) ? '' : '?'}: ${type}`;
     });
     return code(`{ ${keys.join(', ')} }`);
@@ -625,6 +630,34 @@ const typeRu = (schema) => {
 
 const COMMON_ATTRIBUTES = new Set(['template', 'root-class', 'root-style']);
 
+// The places a component takes content in (slots) and its public CSS
+// variables come from the release's distr/smart/<folder>/component.json. The
+// manifest carries no words for them, so a component's tables appear once
+// config/smart-reference.json `slots` and `css_variables` describe every one
+// the release declares; --check fails on a name the release does not declare
+// and on one the release declares and the config leaves out.
+const partsTables = (folder, h) => {
+  const said = {slots: settings.slots?.[folder], variables: settings.css_variables?.[folder]};
+  if (!said.slots && !said.variables) return [];
+  const text = show(uiRepo, uiCommit, `distr/smart/${folder}/component.json`);
+  const declared = text ? JSON.parse(text) : {};
+  const lines = [];
+  const table = (kind, names, words, head) => {
+    for (const name of names) if (words[name] === undefined) unplaced.push(`${folder}: ${kind} ${name} has no description in config/smart-reference.json`);
+    for (const name of Object.keys(words)) if (!names.includes(name)) unplaced.push(`${folder}: ${kind} ${name} is not in the release`);
+    return [head, '|:---|:---|', ...names.filter((name) => words[name] !== undefined).map((name) => `| ${code(name)} | ${cell(sentence(words[name]))} |`), ''];
+  };
+  if (said.slots) {
+    lines.push(`${h} Места`, '', 'Содержимое в место кладут элементом с атрибутом `slot`: `<p slot="description">…</p>`.', '',
+      ...table('slot', Object.keys(declared.slots ?? {}), said.slots, '| Место | Что в нём |'));
+  }
+  if (said.variables) {
+    lines.push(`${h} Переменные`, '', 'Публичные переменные: имя стабильно, значение ставят на сам элемент или на любого предка.', '',
+      ...table('variable', Object.keys(declared['css-variables'] ?? {}), said.variables, '| Переменная | Что задаёт |'));
+  }
+  return lines;
+};
+
 const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) => {
   const tag = manifest.custom_element;
   const lines = [];
@@ -647,7 +680,12 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
       const choice = values(schema) !== '—'
         ? values(schema)
         : (schema.examples ? `например ${schema.examples.map(literal).join(', ')}` : '—');
-      return `| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(sentence(ru(schema.description)) || '—')} |`;
+      // An attribute the manifest leaves undescribed takes the page's own
+      // words from config/smart-reference.json `attribute_summaries`, written
+      // from the component's docs, until the manifest says it.
+      const stated = settings.attribute_summaries?.[folder]?.[name];
+      const purpose = schema.description ? sentence(ru(schema.description)) : sentence(stated ?? '');
+      return `| ${code(name)} | ${typeRu(schema)} | ${fallback} | ${cell(choice)} | ${cell(purpose || '—')} |`;
     };
     const head = ['| Атрибут | Тип | По умолчанию | Значения | Что делает |', '|:---|:---|:---|:---|:---|'];
     if (own.length) lines.push(...head, ...own.map(row));
@@ -703,6 +741,8 @@ const renderComponent3 = (folder, {manifest, citation, rule, delivery}, single) 
     }
     lines.push('');
   }
+
+  lines.push(...partsTables(folder, h));
 
   const preference = manifest.persistence?.view_preference;
   if (preference) lines.push(`${h} Персональный вид`, '', ...viewPreferenceTable(preference));
