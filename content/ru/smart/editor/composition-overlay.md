@@ -32,7 +32,7 @@ description: "Рисует поверх отрисованной страниц�
 
 Холст — элемент с HTML из `SF.Composition.render`; каждый узел Document
 отмечен в нём атрибутом `data-sf-composition-id`. Атрибут `for` называет `id`
-холста, метод `attach(canvas)` передаёт его явно. Код оверлея загрузчик
+холста, метод `attach({canvas})` передаёт его явно. Код оверлея загрузчик
 SIMAI Framework подключает по требованию — только на странице с тегом
 `sf-editor-overlay`, поэтому перед вызовом методов дождитесь
 `customElements.whenDefined('sf-editor-overlay')`.
@@ -43,7 +43,7 @@ SIMAI Framework подключает по требованию — только 
 родителе с `gap` (flex, grid) он добавит один `gap`, поэтому родителем лучше
 сделать обычный блок.
 
-`setDocument(document, {describe})` передаёт Document. `describe(node)`
+`setDocument({document, options: {describe}})` передаёт Document. `describe(node)`
 возвращает подпись и значки узла: `{label, badges}`, например
 `{label: 'Шапка', badges: ['Общий']}` для блока, который используется на
 нескольких страницах. Без подписи оверлей показывает `id` узла; значков —
@@ -53,7 +53,7 @@ SIMAI Framework подключает по требованию — только 
 
 ### Действия
 
-`setActions(actions)` задаёт кнопки панели действий выбранного узла, не
+`setActions({actions})` задаёт кнопки панели действий выбранного узла, не
 больше 16. Обязательны только `id` по шаблону `^[a-z][a-z0-9-]{0,63}$` и
 `label`: `{id, label}` — текстовая кнопка. Необязательные поля:
 
@@ -86,9 +86,9 @@ SIMAI Framework подключает по требованию — только 
 
 ### Выбор узла
 
-Выбор мышью, клавишей или методом `select(id)` отправляет
+Выбор мышью, клавишей или методом `select({id})` отправляет
 `sf-composition-overlay-select` с `{ids, id}`, а для хоста композиции — ещё с
-`node_id`; `null` означает, что выбор снят. `select(id, {emit: false})` выбирает узел без события — например, когда
+`node_id`; `null` означает, что выбор снят. `select({id, options: {emit: false}})` выбирает узел без события — например, когда
 выбор пришёл из боковой панели приложения. Наведение показывает рамку 1 px,
 выбор — рамку 2 px, без заливки и оттенка: содержимое выглядит так, как
 будет опубликовано.
@@ -117,24 +117,24 @@ SIMAI Framework подключает по требованию — только 
 узел, блоки и рамка приезжают на место за 180 мс; при
 `prefers-reduced-motion` движения нет.
 
-`setDropFilter((place, item) => boolean)` скрывает места, которые приложение
+`setDropFilter({filter: (place, item) => boolean})` скрывает места, которые приложение
 отклонит; окончательную проверку выполняет Document.
-`setInsertionTarget({parent_id, slot, index})` отмечает на холсте место, куда
-приложение вставит блок, а значение `null` снимает отметку.
+`setInsertionTarget({target: {parent_id, slot, index}})` отмечает на холсте
+место, куда приложение вставит блок, а `{target: null}` снимает отметку.
 
 ### Холст во фрейме
 
 Если холст редактора — фрейм того же источника, укажите его `id` в атрибуте
-`frame` (вместо `for`) или вызовите `attachFrame(iframe)`. Документ во фрейме
+`frame` (вместо `for`) или вызовите `attachFrame({iframe})`. Документ во фрейме
 слой не читает: приложение передаёт плоский список узлов методом
-`setNodes(nodes, {describe})`, где `describe(node)` возвращает подпись и
+`setNodes({nodes, options: {describe}})`, где `describe(node)` возвращает подпись и
 бейджи узла. Рамки, панель действий, места вставки и дерево для клавиатуры
 рисуются над фреймом так же, как над обычным холстом; у списка верхнего
 уровня `parent_id` в `sf-composition-overlay-insert` пустой, а `slot` —
 `default`.
 
 Узел, помеченный как редактируемый, можно править на месте: `Enter` в
-дереве или метод `edit(id)`. Это правка обычной
+дереве или метод `edit({id})`. Это правка обычной
 строки — `Enter` сохраняет, `Escape` отменяет. Сохранённое значение
 приходит событием `sf-composition-overlay-change` с `id`, `value` и
 `previous` (прежнее `sf-composition-overlay-edit` с `node_id` вместо `id`
@@ -157,20 +157,20 @@ Document оверлею.
 ### Подписи
 
 Подписи дерева, панели и объявлений оверлей берёт на языке страницы (русском
-или английском). `setMessages(messages)` заменяет их своими.
+или английском). `setMessages({messages})` заменяет их своими.
 
 ```js
 await customElements.whenDefined('sf-editor-overlay');
-overlay.attach(canvas);
-overlay.setDocument(document, {
+overlay.attach({canvas});
+overlay.setDocument({document, options: {
   describe: (node) => ({label: titleOf(node), badges: node.shared ? ['Общий'] : []}),
-});
-overlay.setActions([
+}});
+overlay.setActions({actions: [
   {id: 'move', label: 'Перенести', icon: 'drag_indicator'},
   {id: 'move-up', label: 'Выше', icon: 'arrow_upward', shortcut: '⌥↑'},
   {id: 'remove', label: 'Удалить', icon: 'delete', shortcut: '⌫', tone: 'danger'},
-]);
-overlay.setDropFilter((place, item) => place.slot === 'default');
+]});
+overlay.setDropFilter({filter: (place, item) => place.slot === 'default'});
 overlay.addEventListener('sf-composition-overlay-apply', (event) => {
   applyAction(event.detail.action, event.detail.ids[0]);
 });

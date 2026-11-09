@@ -28,7 +28,7 @@ description: "Даёт править текст заголовков и абз�
 
 Атрибутов, без которых он не работает, нет: что править, говорит вызов из
 кода. Правку запускает `SF.Composition.startInlineEdit(element, options)`
-или метод `edit(element, options)` элемента. До загрузки вызов завершается
+или метод `edit({element, options})` элемента. До загрузки вызов завершается
 ошибкой `inline_editor_not_loaded`, поэтому сначала дождитесь
 `customElements.whenDefined('sf-editor-inline')`. Повторный запуск на элементе,
 который уже правится, завершается ошибкой `inline_edit_active`.

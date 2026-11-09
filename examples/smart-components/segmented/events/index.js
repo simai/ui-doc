@@ -11,6 +11,6 @@ document.querySelectorAll('[data-events-demo]').forEach((demo) => {
       `component: <${component.localName}>`,
     ].join('\n');
   });
-  demo.querySelector('[data-action="select"]').addEventListener('click', () => group.select('m'));
+  demo.querySelector('[data-action="select"]').addEventListener('click', () => group.select({value: 'm'}));
   demo.querySelector('[data-action="clear"]').addEventListener('click', () => group.clear());
 });

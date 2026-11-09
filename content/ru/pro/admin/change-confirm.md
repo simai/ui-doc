@@ -76,8 +76,8 @@ description: "Подготовленное изменение ждёт отве�
 `false` для «нет». Приложение применяет или отклоняет изменение и ставит
 итог. Если отменить событие (`preventDefault()`), вопрос остаётся открытым.
 `answer({accepted: true})` и `answer({accepted: false})` отвечают из кода, как
-человек. Прежние имена `sf-change-confirm-accept`, `-decline` и `-expire` и
-вызов `answer('accept')` работают до 2026-12-01, имена
+человек. Прежние имена `sf-change-confirm-accept`, `-decline` и `-expire`
+работают до 2026-12-01, имена
 `sf-change-confirm-answer` и `sf-change-confirm-expired` — до 2027-01-01, как
 и прежний тег.
 

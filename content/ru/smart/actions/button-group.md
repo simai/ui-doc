@@ -153,7 +153,7 @@ group.addEventListener('change', (event) => {
 ```
 
 Группа хранит выбор только в атрибуте `value`; сохранить его и применить
-выбранный вид — задача страницы. Методы `select(value)` и `clear()` меняют
+выбранный вид — задача страницы. Методы `select({value})` и `clear()` меняют
 выбор из кода и отправляют то же событие; повторный выбор текущего варианта и
 выбор недоступного варианта ничего не меняют.
 
@@ -174,7 +174,7 @@ await group.whenRendered();
 group.addEventListener('change', (event) => {
   loadReport({period: event.detail.value});
 });
-group.select('month');
+group.select({value: 'month'});
 ```
 
 ### В форме

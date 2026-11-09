@@ -36,7 +36,7 @@ const newNode = (type) => {
 async function draw() {
   const result = await SF.Composition.render(model);
   canvas.innerHTML = result.html;
-  overlay.setDocument(model, { describe: (node) => ({ label: `${names[node.type] || node.type} · ${node.id}` }) });
+  overlay.setDocument({ document: model, options: { describe: (node) => ({ label: `${names[node.type] || node.type} · ${node.id}` }) } });
   output.textContent = JSON.stringify(model, null, 2);
 }
 
@@ -90,9 +90,9 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
   // The editor surfaces are Smart components: the loader fetches them because
   // their tags are on this page.
   await Promise.all(['sf-sortable', 'sf-editor-overlay', 'sf-editor-inline'].map((tag) => customElements.whenDefined(tag)));
-  overlay.attach(canvas);
-  overlay.setActions([{ id: 'remove', label: 'Удалить' }]);
-  overlay.setDropFilter((place) => place.parent_id === 'page');
+  overlay.attach({ canvas });
+  overlay.setActions({ actions: [{ id: 'remove', label: 'Удалить' }] });
+  overlay.setDropFilter({ filter: (place) => place.parent_id === 'page' });
   await draw();
   status.textContent = 'Редактор готов. Выберите блок, перетащите блок из библиотеки или дважды щёлкните по тексту.';
 })().catch((error) => { status.textContent = `Редактор не загрузился: ${error.message}`; });
