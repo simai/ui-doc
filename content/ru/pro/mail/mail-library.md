@@ -160,5 +160,5 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/mail-library`
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/mail-library/rule.js#name=cl-mail-library`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-library`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-library/rule.js#name=cl-mail-library`

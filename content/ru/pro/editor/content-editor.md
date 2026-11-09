@@ -5,7 +5,7 @@ description: "Страница набирается одним потоком: �
 
 # Редактор содержимого
 
-:badge[sf-editor-content]{variant=tonal scheme=primary size=1/2} :badge[1.4.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-content]{variant=tonal scheme=primary size=1/2} :badge[1.4.7]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-editor-content>` — режим «Содержимое» редактора страниц SIMAI: страница
 набирается одним потоком, как в обычном текстовом редакторе. Элемент ничего не
@@ -210,7 +210,7 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 |:---|:---|
 | Тег | `<sf-editor-content>` |
 | Назначение | Режим «Содержимое» редактора страниц SIMAI: страница набирается одним потоком поверх Composition Document (structured-content). Enter и Backspace делят и соединяют блоки, Markdown в начале строки и «/» меняют вид блока, «+» и ручка на поле слева (вне текста) добавляют, двигают блок и открывают его меню; каждое меню открывается у того, что его вызвало. Выделение показывает панель форматирования, Esc выбирает блоки, вставка становится блоками через html@1, по таблице ходит Tab. У выбранного блока над ним — быстрые настройки, остальное уходит в панель приложения (или во всплывающее окно). Картинку бросают, вставляют или выбирают прямо на странице, хранит её приложение. Элемент ничего не сохраняет: новый документ он отправляет в `change`. |
-| Контракт | `smart.editor-content`, версия `1.4.6` |
+| Контракт | `smart.editor-content`, версия `1.4.7` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -264,5 +264,5 @@ Esc в поле выбирает его блок. Стрелки выбираю�
 
 ### Источник
 
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/editor-content`
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/editor-content/rule.js#name=cl-editor-content`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/editor-content`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/editor-content/rule.js#name=cl-editor-content`

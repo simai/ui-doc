@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.16.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.16.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-table>` показывает серверную коллекцию записей: поиск, фильтры, таблицу,
 выбор строк, действия, настройки колонок и пагинацию. Данные, права и
@@ -915,8 +915,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/view`
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -924,7 +924,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.16.0` |
+| Контракт | `smart.view-table`, версия `1.16.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -1090,5 +1090,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/view-table`
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-table`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-table/rule.js#name=cl-view-table`

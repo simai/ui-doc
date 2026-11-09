@@ -199,5 +199,5 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/message-log`
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/message-log`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/message-log/rule.js#name=cl-message-log`

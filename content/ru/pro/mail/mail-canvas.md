@@ -244,5 +244,5 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 
 ### Источник
 
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/mail-canvas`
-- `simai/ui-pro@cfad790254d6c9430948556e0c2f384b4d85e8f4:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-canvas`
+- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`
