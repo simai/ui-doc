@@ -35,7 +35,7 @@ SIMAI: каталогу эффектов, сайтам документации 
     <a href="/docara/">Docara</a>
   </nav>
   <a slot="actions" href="https://github.com/simai">GitHub</a>
-  <sf-button-group slot="tools" appearance="segmented" theme-switch size="1/2" aria-label="Тема"></sf-button-group>
+  <sf-segmented slot="tools" appearance="track" theme-switch size="1/2" aria-label="Тема"></sf-segmented>
 </sf-header-site>
 ```
 

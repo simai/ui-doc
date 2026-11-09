@@ -1,6 +1,6 @@
 <form id="button-group-form" action="/report" class="flex flex-col gap-3 items-cross-start">
-  <sf-button-group name="period" value="week" aria-label="Период" items="day::День|week::Неделя|month::Месяц"></sf-button-group>
-  <sf-button-group name="format" value="pdf" disabled aria-label="Формат, недоступен" items="pdf::PDF|csv::CSV"></sf-button-group>
+  <sf-segmented appearance="buttons" name="period" value="week" aria-label="Период" items="day::День|week::Неделя|month::Месяц"></sf-segmented>
+  <sf-segmented appearance="buttons" name="format" value="pdf" disabled aria-label="Формат, недоступен" items="pdf::PDF|csv::CSV"></sf-segmented>
   <div class="flex flex-wrap gap-2">
     <sf-button native-type="submit" text="Отправить"></sf-button>
     <sf-button native-type="reset" appearance="outline" scheme="on-surface" text="Сбросить"></sf-button>

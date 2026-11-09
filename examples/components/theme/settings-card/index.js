@@ -25,7 +25,7 @@ const applyToCard = async (chosen) => {
     button.classList.toggle('active', pressed);
     if (!button.dataset.theme) button.querySelector('.sf-icon').textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
   });
-  const group = root.querySelector('sf-button-group[theme-switch]');
+  const group = root.querySelector('sf-segmented[theme-switch]');
   if (group) group.value = chosen;
   show(theme, chosen);
 };
@@ -36,10 +36,10 @@ const docsKeepTheme = () => window.SF_BOOT_CONFIG?.theme === false;
 
 root?.addEventListener('click', (event) => {
   if (!docsKeepTheme()) return;
-  const button = event.target.closest('.sf-theme-button, sf-button-group[theme-switch] button');
+  const button = event.target.closest('.sf-theme-button, sf-segmented[theme-switch] button');
   if (!button) return;
   if (button.dataset.theme) return applyToCard(button.dataset.theme);
-  const group = button.closest('sf-button-group');
+  const group = button.closest('sf-segmented');
   if (group) {
     const index = [...group.querySelectorAll('button')].indexOf(button);
     return applyToCard(group.themeItems?.[index]?.value ?? ['system', 'light', 'dark'][index]);
@@ -48,7 +48,7 @@ root?.addEventListener('click', (event) => {
 }, true);
 
 const start = async () => {
-  if (root?.querySelector('sf-button-group')) await customElements.whenDefined('sf-button-group');
+  if (root?.querySelector('sf-segmented')) await customElements.whenDefined('sf-segmented');
   if (docsKeepTheme()) return applyToCard(preference);
   card?.classList.remove('theme-light');
   window.addEventListener('sf-theme-change', (event) => show(event.detail.theme, event.detail.preference));

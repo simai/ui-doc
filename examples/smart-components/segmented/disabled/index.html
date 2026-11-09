@@ -1,15 +1,15 @@
 <div class="query-container">
   <div class="flex flex-wrap content-main-center gap-4">
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-button-group appearance="segmented" aria-label="Период, год недоступен" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"y","label":"Год","disabled":true}]'></sf-button-group></div>
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" aria-label="Период, год недоступен" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"y","label":"Год","disabled":true}]'></sf-segmented></div>
       <span class="text-1/2 color-on-surface-variant wrap-none">один вариант</span>
     </div>
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-button-group appearance="segmented" disabled aria-label="Период, группа недоступна" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-button-group></div>
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" disabled aria-label="Период, группа недоступна" value="w" items='[{"value":"d","label":"День"},{"value":"w","label":"Неделя"},{"value":"m","label":"Месяц"}]'></sf-segmented></div>
       <span class="text-1/2 color-on-surface-variant wrap-none">вся группа</span>
     </div>
     <div class="flex flex-col items-cross-center gap-2">
-      <div class="flex flex-1 items-cross-center"><sf-button-group appearance="segmented" aria-label="Период, неделя загружается" value="d" items="d::День|w::Неделя::loading|m::Месяц"></sf-button-group></div>
+      <div class="flex flex-1 items-cross-center"><sf-segmented appearance="track" aria-label="Период, неделя загружается" value="d" items="d::День|w::Неделя::loading|m::Месяц"></sf-segmented></div>
       <span class="text-1/2 color-on-surface-variant wrap-none">загрузка</span>
     </div>
   </div>

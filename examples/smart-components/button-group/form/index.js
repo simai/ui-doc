@@ -1,7 +1,7 @@
 // The form receives name=value of the chosen option; a disabled group is left
 // out, and reset returns the value the group was written with.
 const initialize = async () => {
-  await customElements.whenDefined('sf-button-group');
+  await customElements.whenDefined('sf-segmented');
   const form = document.querySelector('#button-group-form');
   if (!form || form.dataset.exampleReady === 'true') return;
   form.dataset.exampleReady = 'true';

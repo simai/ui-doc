@@ -220,7 +220,7 @@ picker.addEventListener('change', (event) => {
 ```html
 <sf-header-site>
   <sf-language slot="tools" languages="ru en" size="1/2"></sf-language>
-  <sf-button-group slot="tools" appearance="segmented" theme-switch size="1/2"></sf-button-group>
+  <sf-segmented slot="tools" appearance="track" theme-switch size="1/2"></sf-segmented>
 </sf-header-site>
 ```
 

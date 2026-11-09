@@ -10,8 +10,8 @@ const initialize = async () => {
   const root = document.querySelector('[data-solution-language="segmented"]');
   if (!root || root.dataset.exampleReady === 'true') return;
   root.dataset.exampleReady = 'true';
-  await customElements.whenDefined('sf-button-group');
-  const group = root.querySelector('sf-button-group');
+  await customElements.whenDefined('sf-segmented');
+  const group = root.querySelector('sf-segmented');
   const switchLanguage = (code) => {
     SF.language.use(code);
     document.documentElement.lang = code;

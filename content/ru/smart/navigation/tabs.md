@@ -133,11 +133,11 @@ profile: reference
 
 Вкладки показывают панели: у каждой вкладки своя панель. Переключатель из
 двух-трёх вариантов без панелей — это группа кнопок
-`<sf-button-group appearance="segmented">`:
+`<sf-segmented appearance="track">`:
 
 ```html
-<sf-button-group appearance="segmented" aria-label="Вид" value="edit"
-  items='[{"value":"edit","label":"Редактор"},{"value":"code","label":"Код"}]'></sf-button-group>
+<sf-segmented appearance="track" aria-label="Вид" value="edit"
+  items='[{"value":"edit","label":"Редактор"},{"value":"code","label":"Код"}]'></sf-segmented>
 ```
 
 Это `radiogroup` с одной остановкой `Tab`, стрелками, `Home` и `End`, а

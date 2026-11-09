@@ -85,7 +85,10 @@ profile: reference
 утилиты положения не нужны. Якорь — аватар `sf-avatar`, кнопка-иконка
 `sf-icon-button` или обёртка `sf-badge-anchor` вокруг иконки или любого
 другого элемента. Бейдж — прямой потомок якоря:
-`<span class="sf-badge sf-badge--anchored" data-count="3"></span>`.
+
+```html
+<span class="sf-badge sf-badge--anchored" data-count="3"></span>
+```
 
 Центр бейджа лежит в верхнем конце якоря (справа, при письме справа налево —
 слева). У круглого якоря это точка окружности под 45°, у скруглённого — та же
