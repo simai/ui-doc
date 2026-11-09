@@ -6,7 +6,7 @@ profile: reference
 
 # Вкладки
 
-:badge[sf-tabs]{variant=tonal scheme=primary size=1/2} :badge[1.1.13]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tabs]{variant=tonal scheme=primary size=1/2} :badge[1.1.16]{variant=outline scheme=on-surface size=1/2}
 
 Вкладки показывают несколько панелей одного уровня на одном месте: человек
 переключает их и смотрит по очереди. Вкладки задают строкой, разметкой внутри
@@ -41,9 +41,13 @@ profile: reference
 вкладки в ряду после перестановки.
 
 После `::` в пункте перечисляются через запятую его поля. Иконки задают поля
-`icon-start` и `icon-end`, например
-`Обзор::icon-start=home|Настройки::icon-start=settings`; `icon-left` и
-`icon-right` — другие имена тех же полей. Строка `items` несёт только иконки и
+`icon-start` и `icon-end`:
+
+```html
+<sf-tabs items="Обзор::icon-start=home|Настройки::icon-start=settings"></sf-tabs>
+```
+
+`icon-left` и `icon-right` — другие имена тех же полей. Строка `items` несёт только иконки и
 `disabled`; `key`, `count`, `href` и `pinned` задаёт `setItems()`
 (см. [Значок, счётчик и ссылка](#значок-счётчик-и-ссылка)).
 
@@ -324,9 +328,9 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
-| `setData(data: object, reason: string)` | объект | Объединяет data с текущими данными (функция получает текущие данные и возвращает новые) и перерисовывает. tabs или items становятся вкладками; panels или content — панелями. Значение, не являющееся объектом, игнорируется. |
-| `setPanels(panels: array, reason: string)` | объект | Заменяет панели в данных (функция получает текущие панели) и перерисовывает. |
-| `goTo(index: number)` | объект | Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tabs-change. |
+| `setData(args: object)` | объект | Объединяет data с текущими данными (функция получает текущие данные и возвращает новые) и перерисовывает. tabs или items становятся вкладками; panels или content — панелями. Значение, не являющееся объектом, игнорируется. |
+| `setPanels(args: object)` | объект | Заменяет панели в данных (функция получает текущие панели) и перерисовывает. |
+| `goTo(args: object\|number)` | объект | Активирует вкладку с индексом index (индекс вне диапазона означает 0); ничего не делает для отключённой или активной вкладки. Устанавливает active-index и отправляет sf-tabs-change. |
 | `getData()` | объект | Возвращает данные, заданные через setData: {tabs, panels, ...}; {tabs: [], panels: []}, если ничего не задано. |
 | `setItems(items: array\|function, reason?: string)` | объект | Заменяет вкладки в данных (функция получает текущие вкладки) и перерисовывает. |
 | `setState(nextState: object)` | объект | Записывает каждый ключ как атрибут в kebab-case; массив (items) сериализуется как записи label:flags, соединённые через \|. false, null, undefined или пустое значение удаляет атрибут, true устанавливает его пустым. |
@@ -347,13 +351,13 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 
 | | |
 |:---|:---|
-| Тег | `<sf-tabs>`, контракт `smart.tabs` версии `1.1.13` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-tabs>`, контракт `smart.tabs` версии `1.1.16` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как вкладки; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/tabs` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-tabs` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/tabs` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-tabs` |
 
 ## См. также
 

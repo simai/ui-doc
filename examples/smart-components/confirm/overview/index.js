@@ -18,7 +18,7 @@ const initialize = async () => {
     confirm.setAttribute('question', `Удалить файл «${row.dataset.name}»? Его не будет у всех участников.`);
     confirm.setAttribute('confirm-id', row.dataset.file);
     confirm.setAttribute('accept-text', 'Удалить');
-    confirm.setAttribute('destructive', '');
+    confirm.setAttribute('status', 'danger');
     cell.append(confirm);
     row.replaceChildren(cell);
     confirm.addEventListener('sf-confirm-answer', (event) => {

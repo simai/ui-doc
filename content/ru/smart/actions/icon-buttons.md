@@ -5,7 +5,7 @@ description: "Запускает действие компактной кноп�
 
 # Кнопки с иконкой
 
-:badge[sf-button-icon]{variant=tonal scheme=primary size=1/2} :badge[1.7.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-button-icon]{variant=tonal scheme=primary size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие одной иконкой вместо подписи: изменить,
 поделиться, закрыть, открыть меню. Берите её в панелях инструментов и строках
@@ -58,9 +58,7 @@ description: "Запускает действие компактной кноп�
 | `default` | главное действие панели |
 | `tonal` | важное, но не главное |
 | `outline` | второстепенное рядом с главным |
-| `link` | самое лёгкое: рядом с текстом |
-| `surface` | панель инструментов, цветной фон или изображение |
-| `ghost` | действия в строке таблицы и шапке: без фона, пока не наведут |
+| `ghost` | самое лёгкое: без фона и рамки, пока не наведут; в строке таблицы, шапке, рядом с текстом |
 
 ### Цвет и статус
 
@@ -74,12 +72,11 @@ description: "Запускает действие компактной кноп�
 | Значение | Когда брать |
 |:---|:---|
 | `primary` | акцентное действие |
-| `secondary` | тихое второе действие |
 | `on-surface` | нейтральные действия в строке и на панели |
 | `on-surface-variant` | тихая кнопка рядом с полем или в шапке панели; в виде `default` такая же, как `on-surface` |
 
-`status="error"` окрашивает кнопку цветом ошибки: для удаления и необратимых
-действий.
+`status="danger"` окрашивает кнопку красным цветом ошибки: для удаления и
+необратимых действий. Ведёт себя такая кнопка как обычная.
 
 ### Иконка
 
@@ -248,6 +245,31 @@ bold.onClick(() => {
 });
 ```
 
+### Несколько значений по кругу
+
+`cycle`, `theme-cycle`, `value` • [справочник](#атрибуты)
+
+Одна кнопка перебирает несколько значений: каждое нажатие ставит следующее, за
+последним снова идёт первое — повтор списка, тема страницы. Нажмите кнопки в
+примере: журнал покажет событие `change`.
+
+:::example {id="smart-components/icon-buttons/cycle" label="Кнопки-циклы с иконкой" preview=sandbox log_console=true log_open=false}
+:::
+
+`cycle` — список значений `{value, label, icon, pressed?}`, `value` — текущее.
+Имя и значок говорят текущее значение («Повтор: один трек»), подсказка —
+текущее и следующее; `aria-label` для цикла не нужен. После нажатия приходит
+`change` с `{previous, value, item}`.
+
+```html
+<sf-button-icon value="off" cycle='[{"value":"off","label":"Повтор: выключен","icon":"repeat"},{"value":"one","label":"Повтор: один трек","icon":"repeat_one","pressed":true}]'></sf-button-icon>
+<sf-button-icon theme-cycle></sf-button-icon>
+```
+
+`theme-cycle` — готовый переключатель темы страницы, как у
+[кнопок](/ru/smart/actions/buttons/#несколько-значений-по-кругу). `pressed` и
+`label-pressed` рядом с `cycle` не действуют.
+
 ## Работа из кода
 
 Кнопку создают, слушают и настраивают из JavaScript, как обычный элемент.
@@ -298,6 +320,11 @@ remove.onClick(() => deleteRow(row));
 ```js
 document.querySelector('sf-button-icon').focus();
 ```
+
+**Прежние имена.** До 2027-01-01 `appearance="link"` читается как `ghost`,
+`status="error"` — как `danger`, `appearance="surface"` рисуется как `tonal`
+с цветом `on-surface`, а `scheme="secondary"` — как `on-surface-variant`;
+новая разметка пишет текущие значения.
 
 Кнопка-переключатель сообщает своё состояние через `aria-pressed`, поэтому
 её имя не меняется при включении.
@@ -367,13 +394,13 @@ document.querySelector('sf-button-icon').focus();
 
 | | |
 |:---|:---|
-| Тег | `<sf-button-icon>`, контракт `smart.button-icon` версии `1.7.0` |
-| Поставка | выпуск Framework `ui-d6f01121baca` |
+| Тег | `<sf-button-icon>`, контракт `smart.button-icon` версии `1.7.1` |
+| Поставка | выпуск Framework `ui-cb287da78ab1` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/button-icon` |
-| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-button-icon` |
+| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/button-icon` |
+| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-button-icon` |
 
 ### Для разработчика
 
