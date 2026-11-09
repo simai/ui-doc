@@ -55,7 +55,7 @@ description: "Окрашивает в коричневые тона то, что
 ### Тонированная подложка
 
 ```html
-<div class="bg-surface-transparent-overlay backdrop-sepia">…</div>
+<div class="bg-surface-container-strong backdrop-sepia">…</div>
 ```
 
 ### Сочетание с другими фильтрами фона
@@ -64,7 +64,7 @@ description: "Окрашивает в коричневые тона то, что
 `hover:` тоже добавляется к остальным, а не заменяет их.
 
 ```html
-<div class="bg-surface-transparent-overlay backdrop-blur-large backdrop-sepia">…</div>
+<div class="bg-surface-container-strong backdrop-blur-large backdrop-sepia">…</div>
 ```
 
 ## Ограничения

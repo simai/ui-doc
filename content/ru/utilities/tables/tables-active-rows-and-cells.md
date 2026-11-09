@@ -70,9 +70,9 @@ description: "Подсвечивает выбранную строку или я
 
 | Переменная | Значение в классе `table` |
 | :--- | :--- |
-| `--sf-table-active-bg` | `var(--sf-surface-transparent-select)` |
+| `--sf-table-active-bg` | `var(--sf-surface-state-select)` |
 | `--sf-table-active-color` | `var(--sf-on-surface)` |
-| `--sf-table-hover-bg` | `var(--sf-surface-transparent-hover)` |
+| `--sf-table-hover-bg` | `var(--sf-surface-state-hover)` |
 | `--sf-table-hover-color` | `var(--sf-on-surface)` |
 
 ## Ограничения

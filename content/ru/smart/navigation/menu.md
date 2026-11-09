@@ -83,9 +83,9 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 | Состояние | Заливка |
 |:---|:---|
 | покой | прозрачная |
-| наведение | `--sf-surface-transparent-hover` (4 %) |
-| нажатие | `--sf-surface-transparent-active` (12 %) |
-| открытая ветка | `--sf-surface-transparent-select` (8 %) |
+| наведение | `--sf-surface-state-hover` (4 %) |
+| нажатие | `--sf-surface-state-active` (12 %) |
+| открытая ветка | `--sf-surface-state-select` (8 %) |
 | текущая страница | `--sf-surface-container-active` (24 % в обеих темах) |
 
 Плашка текущей страницы под указателем не меняется. В режиме

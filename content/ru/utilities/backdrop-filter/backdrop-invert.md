@@ -68,7 +68,7 @@ description: "Инвертирует цвета того, что видно за
 `hover:` тоже добавляется к остальным, а не заменяет их.
 
 ```html
-<div class="bg-surface-transparent-overlay backdrop-blur-large backdrop-invert">…</div>
+<div class="bg-surface-container-strong backdrop-blur-large backdrop-invert">…</div>
 ```
 
 ## Ограничения

@@ -258,7 +258,7 @@ search.addEventListener('sf-search-navigate', (event) => {
 |:---|:---|
 | `--sf-search-inline-size` | ширину окна (36rem) |
 | `--sf-search-inset-block-start` | расстояние от верха окна браузера (4rem) |
-| `--sf-search-background` | фон поля и карточки |
+| `--sf-search-background-color` | фон поля и карточки |
 | `--sf-search-scrim-color` | затемнение |
 | `--sf-search-mark-color` | заливку совпавшего текста |
 | `--sf-search-radius` | скругление карточки результатов |

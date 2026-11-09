@@ -67,7 +67,7 @@ description: "Задаёт цвет обводки фигур SVG по роля�
 | :--- | :--- |
 | `stroke`, `stroke-outline-variant` | спокойная граница: `--sf-outline-variant` |
 | `stroke-outline` | заметная граница: `--sf-outline` |
-| `stroke-primary`, `stroke-secondary`, `stroke-tertiary` | граница акцентной роли: `--sf-outline-primary` … |
+| `stroke-primary`, `stroke-secondary`, `stroke-tertiary` | граница акцентной роли: `--sf-primary-outline` … |
 | `stroke-error`, `stroke-warning`, `stroke-success` | граница статусной роли |
 | `stroke-current` | цвет текста |
 | `stroke-transparent` | без видимой обводки |

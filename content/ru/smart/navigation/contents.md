@@ -206,7 +206,7 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 | `--sf-contents-color` | цвет ссылок | `--sf-on-surface-variant` |
 | `--sf-contents-current-color` | текущую ссылку, её полосу, штрих или подчёркивание и линию прочитанного | `--sf-primary` |
 | `--sf-contents-line-color` | линию колонки, край строки якорей, дорожку линии прочитанного | `--sf-outline-variant` |
-| `--sf-contents-background` | заливку строки якорей и открытого списка свёрнутой строки | `--sf-surface-0` / `--sf-elevation-2--surface` |
+| `--sf-contents-background-color` | заливку строки якорей и открытого списка свёрнутой строки | `--sf-surface-page` / `--sf-surface-popup` |
 | `--sf-contents-indent` | отступ более глубокого уровня | `--sf-space-1/2` |
 | `--sf-contents-gap` | расстояние между ссылками | `0` (колонка), `--sf-space-1/2` (штрихи), `--sf-space-1/4` (якоря) |
 | `--sf-contents-inset-block-start` | где останавливаются липкие колонка, штрихи и строка якорей | `--sf-space-1` |

@@ -90,7 +90,7 @@ description: "Условие говорит, **когда** работает у�
 `var(--sf-primary-hover)`, `active:bg-primary` — `var(--sf-primary-active)`.
 Цвет при наведении и нажатии выбирает тема, а не автор разметки. Утилиты цвета
 текста и границы в состоянии так не делают: `hover:color-primary` даёт ту же
-`var(--sf-primary)`, а `hover:border-primary` — `var(--sf-outline-primary)`.
+`var(--sf-primary)`, а `hover:border-primary` — `var(--sf-primary-outline)`.
 
 Варианты состояний есть у утилит, которым они нужны: например, у цвета
 текста, фона и границы, заливки и обводки SVG, тени, прозрачности, фильтров,

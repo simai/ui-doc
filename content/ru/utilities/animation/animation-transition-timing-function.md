@@ -42,7 +42,7 @@ description: "Задаёт, как переход набирает и сбрас
 | `ease-in-out` | перемещение на месте: мягко в начале и в конце |
 
 ```html
-<div class="duration-normal ease-out hover:shadow-3">Карточка</div>
+<div class="duration-normal ease-out hover:shadow-overlay">Карточка</div>
 ```
 
 ### Кривые темы

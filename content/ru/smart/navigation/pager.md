@@ -180,15 +180,15 @@ pager.addEventListener('sf-pager-navigate', (event) => {
 ### Внешний вид
 
 Листалка берёт только роли темы: ссылки — `--sf-primary`, заметки —
-`--sf-on-surface-variant`, карточки — на `--sf-surface-0` с краем
-`--sf-outline-variant` (`--sf-outline-primary` при наведении), дорожка —
+`--sf-on-surface-variant`, карточки — на `--sf-surface-card` с краем
+`--sf-outline-variant` (`--sf-primary-outline` при наведении), дорожка —
 `--sf-surface-container`, заливка — `--sf-primary`, как у
 [Прогресса](/ru/smart/feedback/progress-bar/).
 
 | Переменная | По умолчанию | Что меняет |
 |:---|:---|:---|
 | `--sf-pager-gap` | `var(--sf-ui-1--text-space-x)` | расстояние между частями |
-| `--sf-pager-card-background` | `var(--sf-surface-0)` | заливку карточек и карточки урока |
+| `--sf-pager-card-background-color` | `var(--sf-surface-card)` | заливку карточек и карточки урока |
 | `--sf-pager-card-border-color` | `var(--sf-outline-variant)` | их край |
 | `--sf-pager-card-radius` | `var(--sf-radius--ui)` | их скругление |
 | `--sf-pager-link-color` | `var(--sf-primary)` | названия в карточках и строке |

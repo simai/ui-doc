@@ -5,6 +5,21 @@
 // generator and its «soft» set, and every other name the change journal
 // retires under C17.
 //
+// Since the «Фоны» guide (owner task, 2026-11-09) it also fails on the names
+// the background system (C16) and the shadow system (C20) retire: the
+// numbered surfaces and elevations, the -transparent-* states, outline-<role>,
+// disable, the numbered shadows and the coloured shadows -- every name of a
+// -c16- or -c20- journal record, the component variables the release's
+// token-aliases contract renames, and the placeholder forms a page writes by
+// hand (--sf-{роль}-transparent-hover). Two places may still show them:
+//   - the release-derived «## Классы» and «## Переменные» sections of a page
+//     enrolled in config/reference-pages.json: they print what the release
+//     CSS reads, and some utility families still read the former names (a
+//     Framework gap, not a page's);
+//   - the pages of the coloured shadows, a family that leaves on 2027-01-01
+//     with no successor (utilities/shadows/element-color, drop-shadow-color
+//     and their examples), for the C20 coloured-shadow record only.
+//
 // The old forms may be named only where a reader looks for the way off them:
 // the update guide and the names guide, and the generated migration lines of
 // a reference page (the «Устаревшие» row of a class table, the «Прежние имена
@@ -57,7 +72,7 @@ const RULES = [
 ];
 
 // The journal: every name a C17 record retires.
-const sourceRoot = process.env.SIMAI_UI_SOURCE_ROOT ?? resolve(root, '../ui-source');
+const sourceRoot = process.env.SIMAI_UI_SOURCE_ROOT ?? process.env.SIMAI_UI_SOURCE_REPO ?? resolve(root, '../ui-source');
 let journal = null;
 try {
   const registry = JSON.parse(readFileSync(join(root, 'contracts/generated/framework-contract-registry.json'), 'utf8'));
@@ -77,11 +92,69 @@ for (const record of journal?.records ?? []) {
 }
 const journalPatterns = [...journalNames].map(([name, id]) => ({name, id, re: word(name)}));
 
+// C16 and C20: the background and the shadow systems. A record's own match
+// expression is used where it has one; the coloured drop shadows are named
+// by their colours, because the record's expression also takes a place name
+// it does not know (drop-shadow-compare in an example id).
+const COLOURS = '(?:current|transparent|surface|on-surface|primary|secondary|tertiary|info|success|warning|error)';
+const placeNames = [];
+for (const record of journal?.records ?? []) {
+  if (!/-c(?:16|20)-/u.test(record.id) || !['compat', 'removed'].includes(record.stage)) continue;
+  for (const item of record.items ?? []) {
+    if (!item.from) continue;
+    let re;
+    if (item.from === 'drop-shadow-<colour>') re = new RegExp(`(?<![A-Za-z0-9_/-])(?:hover:)?drop-shadow-${COLOURS}(?:-[a-z0-9-]+)?(?![A-Za-z0-9_/-])`, 'u');
+    else if (/[*<{\s]/u.test(item.from)) continue;
+    else re = item.match ? new RegExp(item.match, 'u') : word(item.from);
+    placeNames.push({name: item.from, id: record.id, re, coloured: record.id === 'utility-c20-coloured-shadows'});
+  }
+}
+// The component variables C16 renames (-background → -background-color), from
+// the release's token-aliases contract at the lock's ui commit.
+try {
+  const lock = JSON.parse(readFileSync(join(root, 'simai-framework.lock.json'), 'utf8'));
+  const uiRepo = process.env.SIMAI_UI_REPO ?? resolve(root, '../ui');
+  const aliases = JSON.parse(execFileSync('git', ['-C', uiRepo, 'show', `${lock.runtime.ui.commit}:distr/core/contracts/token-aliases.v1.json`], {encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['ignore', 'pipe', 'ignore']}));
+  for (const item of aliases.component_variables ?? []) {
+    if (item.from) placeNames.push({name: item.from, id: 'token-aliases component_variables (C16)', re: word(item.from), coloured: false});
+  }
+} catch {
+  // No ui checkout: the journal names still run.
+}
+const PLACEHOLDERS = [
+  {id: 'c16-state-placeholder', why: 'the -transparent-* states are -state-* since C16: --sf-{роль}-state-hover', re: /--sf-(?:\{[^}]+\}|<[^>]+>)-transparent-(?:hover|select|active|overlay|\*)/u},
+  {id: 'c16-outline-placeholder', why: 'outline-<role> is <role>-outline since C16: --sf-{роль}-outline', re: /--sf-outline-(?:\{[^}]+\}|<[^>]+>)/u},
+  {id: 'c16-elevation-placeholder', why: 'the numbered elevations are places since C16/C20: --sf-surface-card, -popup, -popup-nested', re: /--sf-(?:on-)?elevation-(?:N|\{[^}]+\}|<[^>]+>)--/u},
+];
+const enrolled = new Set();
+try {
+  const settings = JSON.parse(readFileSync(join(root, 'config/reference-pages.json'), 'utf8'));
+  for (const page of Object.keys(settings.pages ?? {})) enrolled.add(`content/ru/${page}`);
+} catch {
+  // Without the enrolment list every section is checked.
+}
+const GENERATED = new Set(['Классы', 'Переменные']);
+const COLOURED_SHADOW_PAGES = /^(?:content\/ru\/utilities\/shadows\/(?:element-color|drop-shadow-color)\.md|examples\/utilities\/shadows\/(?:element-color|drop-shadow-color)[^/]*\/)/u;
+
 const findings = [];
 for (const path of files) {
   const lines = readFileSync(join(root, path), 'utf8').split('\n');
+  let generated = false;
   lines.forEach((line, index) => {
+    const heading = line.match(/^## (.+)$/u);
+    if (heading) generated = enrolled.has(path) && GENERATED.has(heading[1].trim());
     if (MIGRATION_LINE.test(line)) return;
+    if (!generated) {
+      for (const {name, id, re, coloured} of placeNames) {
+        if (coloured && COLOURED_SHADOW_PAGES.test(path)) continue;
+        const match = line.match(re);
+        if (match) findings.push({path, line: index + 1, rule: 'c16-c20', found: match[0], why: `retired by ${id}`});
+      }
+      for (const rule of PLACEHOLDERS) {
+        const match = line.match(rule.re);
+        if (match) findings.push({path, line: index + 1, rule: rule.id, found: match[0], why: rule.why});
+      }
+    }
     for (const rule of RULES) {
       const match = line.match(rule.re);
       if (match) findings.push({path, line: index + 1, rule: rule.id, found: match[0], why: rule.why});
@@ -119,7 +192,7 @@ const report = {
   schema: 'ui-doc.colour_legacy_audit.v1',
   status: findings.length ? 'fail' : 'pass',
   files: files.length,
-  journal: journal ? `${journalNames.size} names from C17 records` : 'skipped: no ui-source checkout with the journal',
+  journal: journal ? `${journalNames.size} names from C17 records, ${placeNames.length} from C16/C20 records and component variables` : 'skipped: no ui-source checkout with the journal',
   findings,
 };
 console.log(JSON.stringify(report, null, 2));

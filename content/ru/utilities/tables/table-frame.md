@@ -68,7 +68,7 @@ description: "Ставит таблицу в скруглённую рамку �
 |:---|:---|:---|
 | `--sf-table-frame-border-color` | `var(--sf-outline-variant)` | Цвет рамки и линий между ячейками |
 | `--sf-table-frame-radius` | `var(--sf-radius--surface)` | Скругление углов рамки |
-| `--sf-table-frame-background` | `var(--sf-surface-0)` | Фон рамки и ячеек |
+| `--sf-table-frame-background` | `var(--sf-surface-place)` — фон места, на котором стоит рамка | Фон рамки и ячеек |
 | `--sf-table-frame-head-background` | `var(--sf-surface-container)` | Заливка шапки |
 | `--sf-table-frame-head-color` | `var(--sf-on-surface)` | Цвет текста шапки |
 | `--sf-table-frame-head-padding-block` | `var(--sf-space-1)` | Отступ сверху и снизу в шапке |

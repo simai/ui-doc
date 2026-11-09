@@ -86,9 +86,9 @@ description: "Оформляет таблицу классом table: ширин
 | `--sf-table-color` | `var(--sf-on-surface)` | текст |
 | `--sf-table-border-color` | `var(--sf-outline-variant)` | линии |
 | `--sf-table-accent-bg` | прозрачный | фон ячейки; его меняют полосы и подсветка |
-| `--sf-table-stripe-bg`, `--sf-table-stripe-color` | `var(--sf-surface-transparent-select)`, `var(--sf-on-surface)` | полосы `table-stripe` |
-| `--sf-table-active-bg`, `--sf-table-active-color` | `var(--sf-surface-transparent-select)`, `var(--sf-on-surface)` | `table-active` |
-| `--sf-table-hover-bg`, `--sf-table-hover-color` | `var(--sf-surface-transparent-hover)`, `var(--sf-on-surface)` | `table-hover` |
+| `--sf-table-stripe-bg`, `--sf-table-stripe-color` | `var(--sf-surface-state-hover)`, `var(--sf-on-surface)` | полосы `table-stripe` |
+| `--sf-table-active-bg`, `--sf-table-active-color` | `var(--sf-surface-state-select)`, `var(--sf-on-surface)` | `table-active` |
+| `--sf-table-hover-bg`, `--sf-table-hover-color` | `var(--sf-surface-state-hover)`, `var(--sf-on-surface)` | `table-hover` |
 
 Переменную задают на таблице, чтобы перекрасить её одну, или в теме проекта —
 для всех таблиц.

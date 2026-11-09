@@ -244,6 +244,7 @@ Recipe, ИИ находит в индексе знание
 
 - Закрепление выпуска, обновление и журнал — [Версии: как закрепить выпуск](/ru/guide/connection/versions/)–[Как обновить проект](/ru/guide/connection/updating/#как-обновить-проект).
 - Токены, роли цвета, контраст — [Дизайн-токены](/ru/guide/colour/design-tokens/), [Цветовые роли](/ru/guide/colour/colour-roles/) и [Контраст](/ru/guide/colour/contrast/).
+- Фоны — [Фоны](/ru/guide/colour/surfaces/): фон выбирают по месту (страница, область, карточка, всплывающее, обратное), поверх места — только полупрозрачные слои, выбранное — `--sf-primary-container`; тени мест — [Поверхность и тень](/ru/guide/colour/elevation/).
 - Лестница размеров, фокус, направления, язык — [Одна лестница размеров](/ru/guide/size-and-type/size-ladder/), [Фокус](/ru/guide/size-and-type/focus/)–[Язык интерфейса](/ru/guide/size-and-type/language/); стандарт
   геометрии — [Геометрия: стандарт и проверка](/ru/guide/size-and-type/geometry/#геометрия-стандарт-и-проверка).
 - Composition Recipe и композиция — [Макеты и композиция](/ru/guide/layouts/).

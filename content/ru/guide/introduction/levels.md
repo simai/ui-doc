@@ -60,7 +60,7 @@ Framework устроен как лестница уровней. Каждый с
 `gap-2` означает `gap: var(--sf-space-2)`, а не «16 пикселей».
 
 ```html
-<div class="flex flex-col gap-2 p-4 bg-surface-0">
+<div class="flex flex-col gap-2 p-4 bg-surface-page">
   <h1 class="text-2">Заголовок</h1>
   <p class="color-on-surface-variant">Текст страницы.</p>
 </div>

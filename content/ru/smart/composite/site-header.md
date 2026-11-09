@@ -122,7 +122,7 @@ header.addEventListener('sf-site-header-opened', () => {
 
 Боковые поля полосы — поля `.container`: сайт задаёт `--sf-container-gutter`
 один раз для всей страницы, и полоса берёт их. Открытые переменные полосы —
-`--sf-site-header-background`, `--sf-site-header-color`,
+`--sf-site-header-background-color`, `--sf-site-header-color`,
 `--sf-site-header-border-color`, `--sf-site-header-block-size`,
 `--sf-site-header-gap`, `--sf-site-header-tools-gap` (шаг между
 инструментами; его же берёт выбор цвета между образцом и кнопкой сброса),

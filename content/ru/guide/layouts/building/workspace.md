@@ -50,7 +50,7 @@ description: "Экран приложения из рельса, списка, �
 | `--sf-workspace-panel` | `var(--sf-g1)`, 22rem | ширину панели — колонкой и поверх |
 | `--sf-workspace-gap` | `var(--sf-0)` | расстояние между областями |
 | `--sf-workspace-divider-color` | `var(--sf-outline-variant)` | цвет линии между областями |
-| `--sf-workspace-drawer-background` | `var(--sf-elevation-4--surface)` | фон панели поверх |
+| `--sf-workspace-drawer-background-color` | `var(--sf-surface-popup)` | фон панели поверх |
 
 Основная область занимает остальное. В документе с письмом справа налево рельс
 стоит справа, а панель выезжает слева.
