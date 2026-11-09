@@ -159,7 +159,7 @@ document.addEventListener('verification:complete', (event) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-verification-background-color` | Заливка ячейки в покое: поверхность в виде bordered, тоновая заливка в виде filled; у кода filled в фокусе, ошибки и недоступного поля своя. | `var(--sf-surface-0)`; зависит от вида |
+| `--sf-verification-background-color` | Заливка ячейки в покое: поверхность в виде bordered, тоновая заливка в виде filled; у кода filled в фокусе, ошибки и недоступного поля своя. | `var(--sf-transparent)`; зависит от вида |
 | `--sf-verification-border-color` | Рамка ячейки в покое; у наведения, текущей ячейки, ошибки и недоступного поля своя, у кода filled её нет. | `var(--sf-outline)` |
 | `--sf-verification-border-width` | Толщина рамки ячейки. | `var(--sf-px)` |
 | `--sf-verification-radius` | Скругление углов ячейки и кольца фокуса вокруг ячеек. | `var(--sf-radius--ui)` |

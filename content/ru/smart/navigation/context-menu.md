@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-:badge[sf-menu-context]{variant=tonal scheme=primary size=1/2} :badge[1.13.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu-context]{variant=tonal scheme=primary size=1/2} :badge[1.13.6]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — панель с коротким списком действий над объектом: страницей,
 строкой таблицы, файлом, профилем; пунктами можно управлять с клавиатуры.
@@ -463,13 +463,13 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.13.4` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.13.6` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как меню; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `→`, `←`, `Enter`, `Пробел`, `Esc`, `Tab`; поиск по первым буквам. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/menu-context` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-menu-context` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/menu-context` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-menu-context` |
 
 ## См. также
 

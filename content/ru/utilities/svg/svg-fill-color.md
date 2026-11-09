@@ -55,19 +55,22 @@ description: "Задаёт заливку фигур SVG цветом роли �
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `fill-{значение}` | `fill: var(--sf-{значение})` | `transparent`, `current`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `fill-{значение}` | `fill: var(--sf-{значение})` | `transparent`, `current`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `fill-surface-{значение}` | `fill: var(--sf-surface-{значение})` | `0`, `1`, `2`, `3`, `4`, `inverse` |
 | `fill-surface` | `fill: var(--sf-surface-1)` | — |
 | `fill-surface-inverse-fixed` | `fill: var(--sf-surface-inverse-fixed)` | — |
-| `fill-{значение}-container` | `fill: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `fill-{значение}-container` | `fill: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `fill-on-surface` | `fill: var(--sf-on-surface)` | — |
 | `fill-on-surface-variant` | `fill: var(--sf-on-surface-variant)` | — |
 | `fill-{значение}-transparent-select` | `fill: var(--sf-{значение}-transparent-select)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
 | `fill-{значение}-transparent-overlay` | `fill: var(--sf-{значение}-transparent-overlay)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `hover:fill-{значение}-container` (`.hover:fill-{значение}-container:hover`) | `fill: var(--sf-{значение}-container-hover)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `fill-info-state-select` | `fill: var(--sf-info-state-select)` | — |
+| `fill-info-container-strong` | `fill: var(--sf-info-container-strong)` | — |
+| `hover:fill-{значение}-container` (`.hover:fill-{значение}-container:hover`) | `fill: var(--sf-{значение}-container-hover)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `hover:fill-on-surface` (`.hover:fill-on-surface:hover`) | `fill: var(--sf-on-surface-hover)` | — |
 | `hover:fill-{значение}-transparent` (`.hover:fill-{значение}-transparent:hover`) | `fill: var(--sf-{значение}-transparent-hover)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `hover:fill-{значение}` (`.hover:fill-{значение}:hover`) | `fill: var(--sf-{значение}-hover)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `hover:fill-{значение}` (`.hover:fill-{значение}:hover`) | `fill: var(--sf-{значение}-hover)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `hover:fill-info-state` (`.hover:fill-info-state:hover`) | `fill: var(--sf-info-state-hover)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:fill-surface-container`.
 
@@ -118,6 +121,10 @@ description: "Задаёт заливку фигур SVG цветом роли �
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
 | `--sf-success-transparent-select` | `var(--sf-success-state-select)` |
 | `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
+| `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
+| `--sf-info-state-select` | `light-dark(var(--sf-info-50--alfa-8), var(--sf-info-90--alfa-8))` |
+| `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 | `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` |
 | `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` |
 | `--sf-surface-transparent-hover` | `var(--sf-surface-state-hover)` |
@@ -139,6 +146,9 @@ description: "Задаёт заливку фигур SVG цветом роли �
 | `--sf-success-hover` | `light-dark(var(--sf-success-35), var(--sf-success-85))` |
 | `--sf-success-container-hover` | `light-dark(var(--sf-success-50--alfa-16), var(--sf-success-50--alfa-28))` |
 | `--sf-success-transparent-hover` | `var(--sf-success-state-hover)` |
+| `--sf-info-hover` | `light-dark(var(--sf-info-35), var(--sf-info-85))` |
+| `--sf-info-container-hover` | `light-dark(var(--sf-info-50--alfa-16), var(--sf-info-50--alfa-28))` |
+| `--sf-info-state-hover` | `light-dark(var(--sf-info-50--alfa-4), var(--sf-info-90--alfa-4))` |
 
 ## Применение
 

@@ -5,7 +5,7 @@ description: "Кратко сообщает результат действия 
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.1.10]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.1.11]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия: статус, заголовок,
 пояснение, необязательное действие и кнопку закрытия. Для постоянного текста
@@ -169,13 +169,13 @@ Toast отвечает за одно сообщение. Позицию на э�
 
 | | |
 |:---|:---|
-| Тег | `<sf-toast>`, контракт `smart.toast` версии `1.1.10` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-toast>`, контракт `smart.toast` версии `1.1.11` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; название компонент ставит сам; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/toast` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-toast` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/toast` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-toast` |
 
 ## См. также
 

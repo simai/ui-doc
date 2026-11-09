@@ -217,7 +217,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-file-upload-background-color` | Заливка области в покое; у наведения, фокуса, перетаскивания над ней и выключенного состояния свои. | `var(--sf-surface-0)` |
+| `--sf-file-upload-background-color` | Заливка области в покое; у наведения, фокуса, перетаскивания над ней и выключенного состояния свои. | `var(--sf-transparent)` |
 | `--sf-file-upload-border-color` | Граница области в покое. | `var(--sf-outline)` |
 | `--sf-file-upload-radius` | Скругление углов области; хуки отдельных углов по-прежнему важнее. | `var(--sf-radius--surface)` |
 | `--sf-file-upload-link-color` | Цвет слов, которые открывают диалог выбора файла. | `var(--sf-primary)` |
@@ -237,7 +237,7 @@ upload.addEventListener('sf-file-upload:select', async (event) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-file-upload--background-color` | `var(--sf-file-upload-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-file-upload--background-color` | `var(--sf-file-upload-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-file-upload--border-color` | `var(--sf-file-upload-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-file-upload--gap` | не задана; задают модификаторы, например `.sf-file-upload--size-1`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-file-upload--padding-bottom` | не задана; задают модификаторы, например `.sf-file-upload--size-1`: `var(--sf-space-1)` | `padding-bottom` |

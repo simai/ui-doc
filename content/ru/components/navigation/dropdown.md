@@ -223,7 +223,7 @@ document.querySelector('.sf-dropdown').addEventListener('change', (event) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
-| `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-dropdown-field--background-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-dropdown-field--border` | не задана; задают модификаторы, например `.sf-dropdown .sf-dropdown-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-dropdown-field--border-color` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--outlined.sf-dropdown--text:not(:has(> .sf-dropdown-field > :disabled)) .sf-dropdown-field`: `var(--sf-dropdown-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-dropdown-field--gap` | не задана; задают модификаторы, например `.sf-dropdown.sf-dropdown--size-1/2 .sf-dropdown-field`: `var(--sf-space-1/4)` | `gap` |

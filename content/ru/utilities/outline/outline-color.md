@@ -41,6 +41,7 @@ description: "Окрашивает внешний контур элемента 
 | `outline-error` | `outline-color: var(--sf-outline-error)` | — |
 | `outline-warning` | `outline-color: var(--sf-outline-warning)` | — |
 | `outline-success` | `outline-color: var(--sf-outline-success)` | — |
+| `outline-info` | `outline-color: var(--sf-info-outline)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus-visible:`, `focus:`, `hover:`. Например: `active:outline-transparent`.
 
@@ -54,7 +55,7 @@ description: "Окрашивает внешний контур элемента 
 |:---|:---|
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-outline-primary` | `var(--sf-primary-outline)` |
 | `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
@@ -62,6 +63,7 @@ description: "Окрашивает внешний контур элемента 
 | `--sf-outline-error` | `var(--sf-error-outline)` |
 | `--sf-outline-warning` | `var(--sf-warning-outline)` |
 | `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 
 ## Применение
 

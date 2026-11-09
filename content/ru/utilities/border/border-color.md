@@ -48,7 +48,7 @@ description: "Окрашивает рамку элемента цветовой 
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `border-{значение}` | `border-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
+| `border-{значение}` | `border-color: var(--sf-{значение})` | `transparent`, `current`, `outline`, `white`, `black` |
 | `border-outline-variant` | `border-color: var(--sf-outline-variant)` | — |
 | `border-surface` | `border-color: var(--sf-surface-1)` | — |
 | `border-surface-{значение}` | `border-color: var(--sf-surface-{значение})` | `0`, `1`, `overlay`, `inverse` |
@@ -57,96 +57,65 @@ description: "Окрашивает рамку элемента цветовой 
 | `border-on-surface` | `border-color: var(--sf-on-surface)` | — |
 | `border-on-surface-variant` | `border-color: var(--sf-on-surface-variant)` | — |
 | `border-{значение}` | `border-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `border-white` | `border-color: rgb(255, 255, 255)` | — |
-| `border-black` | `border-color: rgb(0, 0, 0)` | — |
-| `border-gray` | `border-color: rgb(106, 115, 125)` | — |
-| `border-gray-0` | `border-color: rgb(250, 251, 252)` | — |
-| `border-gray-1` | `border-color: rgb(246, 248, 250)` | — |
-| `border-gray-2` | `border-color: rgb(225, 228, 232)` | — |
-| `border-gray-3` | `border-color: rgb(209, 213, 218)` | — |
-| `border-gray-4` | `border-color: rgb(149, 157, 165)` | — |
-| `border-gray-5` | `border-color: rgb(106, 115, 125)` | — |
-| `border-gray-6` | `border-color: rgb(88, 96, 105)` | — |
-| `border-gray-7` | `border-color: rgb(68, 77, 86)` | — |
-| `border-gray-8` | `border-color: rgb(47, 54, 61)` | — |
-| `border-gray-9` | `border-color: rgb(36, 41, 46)` | — |
-| `border-red` | `border-color: rgb(215, 58, 73)` | — |
-| `border-red-0` | `border-color: rgb(255, 238, 240)` | — |
-| `border-red-1` | `border-color: rgb(255, 220, 224)` | — |
-| `border-red-2` | `border-color: rgb(253, 174, 183)` | — |
-| `border-red-3` | `border-color: rgb(249, 117, 131)` | — |
-| `border-red-4` | `border-color: rgb(234, 74, 90)` | — |
-| `border-red-5` | `border-color: rgb(215, 58, 73)` | — |
-| `border-red-6` | `border-color: rgb(203, 36, 49)` | — |
-| `border-red-7` | `border-color: rgb(179, 29, 40)` | — |
-| `border-red-8` | `border-color: rgb(158, 28, 35)` | — |
-| `border-red-9` | `border-color: rgb(134, 24, 29)` | — |
-| `border-orange` | `border-color: rgb(246, 106, 10)` | — |
-| `border-orange-0` | `border-color: rgb(255, 248, 242)` | — |
-| `border-orange-1` | `border-color: rgb(255, 235, 218)` | — |
-| `border-orange-2` | `border-color: rgb(255, 209, 172)` | — |
-| `border-orange-3` | `border-color: rgb(255, 171, 112)` | — |
-| `border-orange-4` | `border-color: rgb(251, 133, 50)` | — |
-| `border-orange-5` | `border-color: rgb(246, 106, 10)` | — |
-| `border-orange-6` | `border-color: rgb(227, 98, 9)` | — |
-| `border-orange-7` | `border-color: rgb(209, 87, 4)` | — |
-| `border-orange-8` | `border-color: rgb(194, 78, 0)` | — |
-| `border-orange-9` | `border-color: rgb(160, 65, 0)` | — |
-| `border-yellow` | `border-color: rgb(255, 211, 61)` | — |
-| `border-yellow-0` | `border-color: rgb(255, 253, 239)` | — |
-| `border-yellow-1` | `border-color: rgb(255, 251, 221)` | — |
-| `border-yellow-2` | `border-color: rgb(255, 245, 177)` | — |
-| `border-yellow-3` | `border-color: rgb(255, 234, 127)` | — |
-| `border-yellow-4` | `border-color: rgb(255, 223, 93)` | — |
-| `border-yellow-5` | `border-color: rgb(255, 211, 61)` | — |
-| `border-yellow-6` | `border-color: rgb(249, 197, 19)` | — |
-| `border-yellow-7` | `border-color: rgb(219, 171, 9)` | — |
-| `border-yellow-8` | `border-color: rgb(176, 136, 0)` | — |
-| `border-yellow-9` | `border-color: rgb(115, 92, 15)` | — |
-| `border-green` | `border-color: rgb(40, 167, 69)` | — |
-| `border-green-0` | `border-color: rgb(240, 255, 244)` | — |
-| `border-green-1` | `border-color: rgb(220, 255, 228)` | — |
-| `border-green-2` | `border-color: rgb(190, 245, 203)` | — |
-| `border-green-3` | `border-color: rgb(133, 232, 157)` | — |
-| `border-green-4` | `border-color: rgb(52, 208, 88)` | — |
-| `border-green-5` | `border-color: rgb(40, 167, 69)` | — |
-| `border-green-6` | `border-color: rgb(34, 134, 58)` | — |
-| `border-green-7` | `border-color: rgb(23, 111, 44)` | — |
-| `border-green-8` | `border-color: rgb(22, 92, 38)` | — |
-| `border-green-9` | `border-color: rgb(20, 70, 32)` | — |
-| `border-blue` | `border-color: rgb(3, 102, 214)` | — |
-| `border-blue-0` | `border-color: rgb(241, 248, 255)` | — |
-| `border-blue-1` | `border-color: rgb(219, 237, 255)` | — |
-| `border-blue-2` | `border-color: rgb(200, 225, 255)` | — |
-| `border-blue-3` | `border-color: rgb(121, 184, 255)` | — |
-| `border-blue-4` | `border-color: rgb(33, 136, 255)` | — |
-| `border-blue-5` | `border-color: rgb(3, 102, 214)` | — |
-| `border-blue-6` | `border-color: rgb(0, 92, 197)` | — |
-| `border-blue-7` | `border-color: rgb(4, 66, 137)` | — |
-| `border-blue-8` | `border-color: rgb(3, 47, 98)` | — |
-| `border-blue-9` | `border-color: rgb(5, 38, 76)` | — |
-| `border-purple` | `border-color: rgb(111, 66, 193)` | — |
-| `border-purple-0` | `border-color: rgb(245, 240, 255)` | — |
-| `border-purple-1` | `border-color: rgb(230, 220, 253)` | — |
-| `border-purple-2` | `border-color: rgb(209, 188, 249)` | — |
-| `border-purple-3` | `border-color: rgb(179, 146, 240)` | — |
-| `border-purple-4` | `border-color: rgb(138, 99, 210)` | — |
-| `border-purple-5` | `border-color: rgb(111, 66, 193)` | — |
-| `border-purple-6` | `border-color: rgb(90, 50, 163)` | — |
-| `border-purple-7` | `border-color: rgb(76, 40, 136)` | — |
-| `border-purple-8` | `border-color: rgb(58, 29, 110)` | — |
-| `border-purple-9` | `border-color: rgb(41, 19, 78)` | — |
-| `border-pink` | `border-color: rgb(234, 74, 170)` | — |
-| `border-pink-0` | `border-color: rgb(255, 238, 248)` | — |
-| `border-pink-1` | `border-color: rgb(254, 219, 240)` | — |
-| `border-pink-2` | `border-color: rgb(249, 179, 221)` | — |
-| `border-pink-3` | `border-color: rgb(246, 146, 206)` | — |
-| `border-pink-4` | `border-color: rgb(236, 108, 185)` | — |
-| `border-pink-5` | `border-color: rgb(234, 74, 170)` | — |
-| `border-pink-6` | `border-color: rgb(208, 53, 146)` | — |
-| `border-pink-7` | `border-color: rgb(185, 58, 134)` | — |
-| `border-pink-8` | `border-color: rgb(153, 48, 111)` | — |
-| `border-pink-9` | `border-color: rgb(109, 34, 79)` | — |
+| `border-info-container-strong` | `border-color: var(--sf-info-container-strong)` | — |
+| `border-gray` | `border-color: var(--sf-gray-50)` | — |
+| `border-{значение}-0` | `border-color: var(--sf-{значение}-98)` | `gray`, `orange`, `yellow`, `green`, `blue` |
+| `border-{значение}-1` | `border-color: var(--sf-{значение}-98)` | `gray`, `yellow`, `green` |
+| `border-{значение}-2` | `border-color: var(--sf-{значение}-90)` | `gray`, `green`, `blue` |
+| `border-gray-3` | `border-color: var(--sf-gray-85)` | — |
+| `border-{значение}-4` | `border-color: var(--sf-{значение}-60)` | `gray`, `red`, `blue`, `pink` |
+| `border-gray-5` | `border-color: var(--sf-gray-50)` | — |
+| `border-{значение}-6` | `border-color: var(--sf-{значение}-40)` | `gray`, `red`, `blue` |
+| `border-gray-7` | `border-color: var(--sf-gray-30)` | — |
+| `border-{значение}-8` | `border-color: var(--sf-{значение}-20)` | `gray`, `blue`, `purple` |
+| `border-{значение}-9` | `border-color: var(--sf-{значение}-15)` | `gray`, `blue`, `purple` |
+| `border-red` | `border-color: var(--sf-red-50)` | — |
+| `border-{значение}-0` | `border-color: var(--sf-{значение}-95)` | `red`, `purple`, `pink` |
+| `border-{значение}-1` | `border-color: var(--sf-{значение}-90)` | `red`, `purple`, `pink` |
+| `border-{значение}-2` | `border-color: var(--sf-{значение}-80)` | `red`, `purple`, `pink` |
+| `border-{значение}-3` | `border-color: var(--sf-{значение}-70)` | `red`, `blue`, `purple`, `pink` |
+| `border-red-5` | `border-color: var(--sf-red-50)` | — |
+| `border-red-7` | `border-color: var(--sf-red-40)` | — |
+| `border-red-8` | `border-color: var(--sf-red-35)` | — |
+| `border-red-9` | `border-color: var(--sf-red-30)` | — |
+| `border-{значение}` | `border-color: var(--sf-{значение}-60)` | `orange`, `green`, `pink` |
+| `border-orange-1` | `border-color: var(--sf-orange-95)` | — |
+| `border-orange-2` | `border-color: var(--sf-orange-85)` | — |
+| `border-orange-3` | `border-color: var(--sf-orange-80)` | — |
+| `border-orange-4` | `border-color: var(--sf-orange-70)` | — |
+| `border-{значение}-5` | `border-color: var(--sf-{значение}-60)` | `orange`, `green`, `pink` |
+| `border-orange-6` | `border-color: var(--sf-orange-60)` | — |
+| `border-orange-7` | `border-color: var(--sf-orange-50)` | — |
+| `border-orange-8` | `border-color: var(--sf-orange-50)` | — |
+| `border-orange-9` | `border-color: var(--sf-orange-40)` | — |
+| `border-yellow` | `border-color: var(--sf-yellow-85)` | — |
+| `border-yellow-2` | `border-color: var(--sf-yellow-95)` | — |
+| `border-yellow-3` | `border-color: var(--sf-yellow-90)` | — |
+| `border-yellow-4` | `border-color: var(--sf-yellow-90)` | — |
+| `border-yellow-5` | `border-color: var(--sf-yellow-85)` | — |
+| `border-yellow-6` | `border-color: var(--sf-yellow-80)` | — |
+| `border-yellow-7` | `border-color: var(--sf-yellow-70)` | — |
+| `border-yellow-8` | `border-color: var(--sf-yellow-60)` | — |
+| `border-yellow-9` | `border-color: var(--sf-yellow-40)` | — |
+| `border-green-3` | `border-color: var(--sf-green-85)` | — |
+| `border-green-4` | `border-color: var(--sf-green-70)` | — |
+| `border-green-6` | `border-color: var(--sf-green-50)` | — |
+| `border-green-7` | `border-color: var(--sf-green-40)` | — |
+| `border-green-8` | `border-color: var(--sf-green-35)` | — |
+| `border-green-9` | `border-color: var(--sf-green-25)` | — |
+| `border-blue` | `border-color: var(--sf-blue-40)` | — |
+| `border-blue-1` | `border-color: var(--sf-blue-95)` | — |
+| `border-blue-5` | `border-color: var(--sf-blue-40)` | — |
+| `border-blue-7` | `border-color: var(--sf-blue-30)` | — |
+| `border-purple` | `border-color: var(--sf-purple-40)` | — |
+| `border-purple-4` | `border-color: var(--sf-purple-50)` | — |
+| `border-purple-5` | `border-color: var(--sf-purple-40)` | — |
+| `border-purple-6` | `border-color: var(--sf-purple-30)` | — |
+| `border-purple-7` | `border-color: var(--sf-purple-25)` | — |
+| `border-pink-6` | `border-color: var(--sf-pink-50)` | — |
+| `border-pink-7` | `border-color: var(--sf-pink-50)` | — |
+| `border-pink-8` | `border-color: var(--sf-pink-40)` | — |
+| `border-pink-9` | `border-color: var(--sf-pink-25)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:border-transparent`.
 
@@ -160,7 +129,7 @@ description: "Окрашивает рамку элемента цветовой 
 |:---|:---|
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-1` | `var(--sf-surface-area)` |
 | `--sf-surface-0` | `var(--sf-surface-page)` |
@@ -190,6 +159,79 @@ description: "Окрашивает рамку элемента цветовой 
 | `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
 | `--sf-outline-info` | `var(--sf-info-outline)` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
+| `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
+| `--sf-white` | `#ffffff` |
+| `--sf-black` | `#000000` |
+| `--sf-gray-50` | `#777777` |
+| `--sf-gray-98` | `#f9f9f9` |
+| `--sf-gray-90` | `#e2e2e2` |
+| `--sf-gray-85` | `#d4d4d4` |
+| `--sf-gray-60` | `#919191` |
+| `--sf-gray-40` | `#5e5e5e` |
+| `--sf-gray-30` | `#474747` |
+| `--sf-gray-20` | `#303030` |
+| `--sf-gray-15` | `#262626` |
+| `--sf-red-50` | `#df362f` |
+| `--sf-red-95` | `#ffedea` |
+| `--sf-red-90` | `#ffdad6` |
+| `--sf-red-80` | `#ffb4ab` |
+| `--sf-red-70` | `#ff897d` |
+| `--sf-red-60` | `#ff5449` |
+| `--sf-red-40` | `#bb1919` |
+| `--sf-red-35` | `#a9040e` |
+| `--sf-red-30` | `#93000a` |
+| `--sf-orange-60` | `#e4702d` |
+| `--sf-orange-98` | `#fff8f6` |
+| `--sf-orange-95` | `#ffede6` |
+| `--sf-orange-85` | `#ffc9af` |
+| `--sf-orange-80` | `#ffb692` |
+| `--sf-orange-70` | `#ff8d4f` |
+| `--sf-orange-50` | `#c25713` |
+| `--sf-orange-40` | `#9f4200` |
+| `--sf-yellow-85` | `#ffce41` |
+| `--sf-yellow-98` | `#fff8f1` |
+| `--sf-yellow-95` | `#ffefcf` |
+| `--sf-yellow-90` | `#ffdf92` |
+| `--sf-yellow-80` | `#f4c002` |
+| `--sf-yellow-70` | `#d3a500` |
+| `--sf-yellow-60` | `#b28b00` |
+| `--sf-yellow-40` | `#755b00` |
+| `--sf-green-60` | `#3ba53f` |
+| `--sf-green-98` | `#ecffe4` |
+| `--sf-green-90` | `#8ffa88` |
+| `--sf-green-85` | `#81ec7c` |
+| `--sf-green-70` | `#58c157` |
+| `--sf-green-50` | `#198a27` |
+| `--sf-green-40` | `#006e17` |
+| `--sf-green-35` | `#006013` |
+| `--sf-green-25` | `#00460b` |
+| `--sf-blue-40` | `#005bbe` |
+| `--sf-blue-98` | `#f9f9ff` |
+| `--sf-blue-95` | `#edf0ff` |
+| `--sf-blue-90` | `#d7e2ff` |
+| `--sf-blue-70` | `#7eabff` |
+| `--sf-blue-60` | `#538ff5` |
+| `--sf-blue-30` | `#004492` |
+| `--sf-blue-20` | `#002f67` |
+| `--sf-blue-15` | `#002453` |
+| `--sf-purple-40` | `#8c3c9f` |
+| `--sf-purple-95` | `#ffebfd` |
+| `--sf-purple-90` | `#fdd6ff` |
+| `--sf-purple-80` | `#f4aeff` |
+| `--sf-purple-70` | `#e18af3` |
+| `--sf-purple-50` | `#a856ba` |
+| `--sf-purple-30` | `#712085` |
+| `--sf-purple-25` | `#641079` |
+| `--sf-purple-20` | `#55006a` |
+| `--sf-purple-15` | `#440056` |
+| `--sf-pink-60` | `#dd68a9` |
+| `--sf-pink-95` | `#ffecf2` |
+| `--sf-pink-90` | `#ffd8e8` |
+| `--sf-pink-80` | `#ffafd6` |
+| `--sf-pink-70` | `#fd82c5` |
+| `--sf-pink-50` | `#be4e8f` |
+| `--sf-pink-40` | `#a03575` |
+| `--sf-pink-25` | `#730a50` |
 
 ## Применение
 

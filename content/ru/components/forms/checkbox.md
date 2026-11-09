@@ -184,7 +184,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-checkbox-background-color` | Заливка квадрата без отметки; у отмеченного, ошибки и недоступного — своя. | `var(--sf-surface-0)` |
+| `--sf-checkbox-background-color` | Заливка квадрата без отметки; у отмеченного, ошибки и недоступного — своя. | `var(--sf-surface-place)` |
 | `--sf-checkbox-border-color` | Рамка квадрата без отметки; у отмеченного, наведения, ошибки и недоступного — своя. | `var(--sf-outline)` |
 | `--sf-checkbox-border-width` | Толщина рамки квадрата со всех сторон. | `var(--sf-px)` |
 | `--sf-checkbox-radius` | Скругление углов квадрата. | `var(--sf-radius--ui)` |
@@ -206,7 +206,7 @@ whenLoader(() => SF.Loader.ready('Checkbox', (Checkbox) => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-checkbox--gap` | не задана; задают модификаторы, например `.sf-checkbox--size-1/2`: `var(--sf-checkbox-gap, var(--sf-ui-1/2--text-space-x))` | `gap` |
-| `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-checkbox-box--background-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-background-color, var(--sf-surface-place))` | `background-color` |
 | `--sf-checkbox-box--border` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-width, var(--sf-px)) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-checkbox-box--border-color` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-checkbox-box--border-end-end-radius` | не задана; задают модификаторы, например `.sf-checkbox .sf-checkbox-box`: `var(--sf-checkbox-radius, var(--sf-radius--ui))` | `border-end-end-radius` |

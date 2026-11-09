@@ -5,7 +5,7 @@ description: "Навигация по сайту из данных или спи
 
 # Меню
 
-:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Меню ведёт по сайту, разделу или кабинету: вложенные разделы, текущая
 страница, ветки, которые открываются и закрываются; пункты задают данными или
@@ -240,13 +240,13 @@ menu.addEventListener('sf-menu-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-menu>`, контракт `smart.menu` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-menu>`, контракт `smart.menu` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/menu` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-menu` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/menu` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-menu` |
 
 ## См. также
 

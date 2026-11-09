@@ -5,7 +5,7 @@ description: "Оглавление одной страницы: разделы �
 
 # Оглавление
 
-:badge[sf-contents]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-contents]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Оглавление показывает разделы одной страницы ссылками и отмечает текущий, пока
 читатель прокручивает текст. Есть четыре вида — для документации, справки,
@@ -273,13 +273,13 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.4.0` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит ссылки разделов; `Enter` на ссылке прокручивает к разделу и ставит туда фокус; `Enter` или `Пробел` на кнопке свёрнутого оглавления открывают список, `Esc` закрывает его и возвращает фокус на кнопку. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/contents` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-contents` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/contents` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-contents` |
 
 ## См. также
 

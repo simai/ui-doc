@@ -51,7 +51,7 @@ description: "Задаёт цвет обводки фигур SVG по роля�
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-current` | `currentColor` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-primary` | `var(--sf-primary-outline)` |
 | `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
 | `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |

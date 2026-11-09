@@ -280,7 +280,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--default`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Модификаторы | `sf-button--default`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
 | Устаревшие | `sf-button--danger` → `sf-button--error`, `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link` |
 

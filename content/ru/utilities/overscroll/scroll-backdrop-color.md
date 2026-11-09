@@ -31,6 +31,7 @@ description: "Окрашивает дорожку полосы прокрутк�
 | `scroll-bg-error` | `--sf-scroll-bg-track: var(--sf-error-transparent-overlay)` | — |
 | `scroll-bg-warning` | `--sf-scroll-bg-track: var(--sf-warning-transparent-overlay)` | — |
 | `scroll-bg-success` | `--sf-scroll-bg-track: var(--sf-success-transparent-overlay)` | — |
+| `scroll-bg-info` | `--sf-scroll-bg-track: var(--sf-info-container-strong)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — нет.
 
@@ -51,6 +52,7 @@ description: "Окрашивает дорожку полосы прокрутк�
 | `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
 | `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
 | `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
+| `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 
 ## Применение
 

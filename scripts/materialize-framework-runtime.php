@@ -40,11 +40,11 @@ declare(strict_types=1);
  * into a Docara checkout, which never carries package bytes.
  */
 
-const UI_METADATA_REVISION = 'fd651a12bcd3315cc7b71e251628b1d0d557e52d';
-const UI_RUNTIME_REVISION = 'cb287da78ab1130641d5a628654dabc3d29e1f7a';
-const SOURCE_REVISION = '44a5efda6649def849c960c11ac56b2db90693b8';
-const BUILDER_REVISION = '993e4be571687c7f02c78fc3c779382d861f56b6';
-const RELEASE_LOCK = 'contracts/releases/ui-cb287da78ab1.lock.json';
+const UI_METADATA_REVISION = 'c62eae925213318fca769c5cf0149f60b53df76c';
+const UI_RUNTIME_REVISION = 'b4a77681f0a7f1c540566e5abac2a4f9d3082a3d';
+const SOURCE_REVISION = 'a29cc9989bebace9a98c235b074ce23998ad39c6';
+const BUILDER_REVISION = 'e87e47dc7b69e696e7aef48ffa626a307e6763ad';
+const RELEASE_LOCK = 'contracts/releases/ui-b4a77681f0a7.lock.json';
 // The release on npm, the form the guide's CDN snippets use
 // (https://cdn.jsdelivr.net/npm/<package>@<version>/distr/...). The version is
 // derived from the release commit, never chosen: 5.<yyyymmdd>.<hhmm> of its
@@ -52,7 +52,7 @@ const RELEASE_LOCK = 'contracts/releases/ui-cb287da78ab1.lock.json';
 // the commit. scripts/sync-framework-documentation-versions.php checks the
 // version against UI_RUNTIME_REVISION and moves the snippets with it.
 const NPM_PACKAGE = '@simai-studio/ui';
-const NPM_VERSION = '5.20261109.559';
+const NPM_VERSION = '5.20261109.1121';
 // Product component packages, each taken by its package receipt. The build is
 // reproducible, so the archive digest names the exact bytes. A package names
 // the ui-builder commit that built it: it may be newer than the one the
@@ -63,10 +63,10 @@ const NPM_VERSION = '5.20261109.559';
 const PACKAGES = [
     'pro' => [
         'repository' => 'simai/ui-pro',
-        'revision' => 'b671241d4d341b2fbfd3b1f6e37703e0b330aabb',
+        'revision' => 'cfad790254d6c9430948556e0c2f384b4d85e8f4',
         'path' => 'components',
-        'archive_sha256' => 'fc4a964f5785f5bfb6ba4263028cff54676369c26c9940f0c739e64ae3e1638e',
-        'builder' => '993e4be571687c7f02c78fc3c779382d861f56b6',
+        'archive_sha256' => 'd709316c7820a98b2e47c3d99a5e1d2ea1d52fb426bec9898784fc7218bafa93',
+        'builder' => 'e87e47dc7b69e696e7aef48ffa626a307e6763ad',
     ],
 ];
 

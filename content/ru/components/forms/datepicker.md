@@ -135,7 +135,7 @@ profile: reference
 | `--sf-datepicker-day-color` | Число дня в покое; у дней другого месяца, выходных, выключенных и выбранных дней свои. | `var(--sf-on-surface)` |
 | `--sf-datepicker-selected-background-color` | Выбранный день и концы выбранного диапазона. | `var(--sf-primary)` |
 | `--sf-datepicker-selected-color` | Число на выбранном дне. | `var(--sf-on-primary)` |
-| `--sf-datepicker-range-background-color` | Дни внутри выбранного диапазона. | `var(--sf-primary-container-active)` |
+| `--sf-datepicker-range-background-color` | Дни внутри выбранного диапазона. | `var(--sf-primary-container)` |
 | `--sf-datepicker-weekday-color` | Названия дней недели над сеткой. | `var(--sf-on-surface-variant)` |
 
 ```css
@@ -171,7 +171,7 @@ profile: reference
 | `--sf-datepicker-main--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-main`: `var(--sf-transparent)` | `background-color` |
 | `--sf-datepicker-presets--inline-size` | не задана; задают модификаторы, например `.sf-datepicker.sf-datepicker--presets`: `calc(var(--sf-ui-1--control-height) * 5)` | `width`, `inline-size`, `flex` |
 | `--sf-datepicker-row--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-row`: `var(--sf-transparent)` | `background-color` |
-| `--sf-datepicker-text--background-color` | не задана; задают модификаторы, например `.sf-datepicker-text`: `var(--sf-surface-0)` | `background-color` |
+| `--sf-datepicker-text--background-color` | не задана; задают модификаторы, например `.sf-datepicker-text`: `var(--sf-transparent)` | `background-color` |
 | `--sf-datepicker-text--border-end-end-radius` | не задана; задают модификаторы, например `.sf-datepicker-text.sf-datepicker-text-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
 | `--sf-datepicker-text--border-end-start-radius` | не задана; задают модификаторы, например `.sf-datepicker-text.sf-datepicker-text-end`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-datepicker-text--border-start-end-radius` | не задана; задают модификаторы, например `.sf-datepicker-text.sf-datepicker-text-start`: `var(--sf-radius-square)` | `border-start-end-radius` |

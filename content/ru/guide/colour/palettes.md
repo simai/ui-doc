@@ -23,6 +23,9 @@ description: "Цветовые примитивы — это конкретны�
 Отдельно стоят три базовых цвета без тонов: `--sf-white`, `--sf-black` и
 `--sf-transparent`.
 
+Ещё шестнадцать постоянных оттенков, которые от темы не зависят, описаны в
+разделе [«Статическая палитра»](#статическая-палитра).
+
 У каждой палитры шестнадцать тонов: **98, 95, 90, 85, 80, 70, 60, 50, 40, 35,
 30, 25, 20, 15, 10, 5**. **Тон** — это светлота: 98 почти белый, 5 почти
 чёрный. Тона 100 и 0 заменяют белый и чёрный.
@@ -68,6 +71,110 @@ Material Design 3: тон в имени означает одинаковую в
 рисуют. В основном это тон **50** (заливки и слои состояния в светлой теме) и
 тон **90** (слои состояния в тёмной). Примитив, который ничто во
 Framework не использует, не проходит контракт `alpha-scale`.
+
+## Статическая палитра
+
+Кроме восьми палитр темы, которые идут за фирменным цветом, во Framework есть
+шестнадцать постоянных оттенков (решение C17): `red`, `orange`, `amber`,
+`yellow`, `lime`, `green`, `teal`, `cyan`, `sky`, `blue`, `indigo`, `violet`,
+`purple`, `pink`, `brown` и `gray`. У каждого те же шестнадцать тонов и
+полупрозрачные ступени: `--sf-green-50`, `--sf-green-50--alfa-12`. Смена
+фирменного цвета их не двигает. Статусы — четыре из них: ошибка — `red`,
+предупреждение — `amber`, успех — `green`, информация — `blue`.
+
+:::example {label="Шестнадцать оттенков статической палитры, тона от 95 до 10"}
+```html
+<div class="sf-doc-palette-grid">
+    <span></span><span class="sf-doc-palette-tone">95</span><span class="sf-doc-palette-tone">90</span><span class="sf-doc-palette-tone">80</span><span class="sf-doc-palette-tone">70</span><span class="sf-doc-palette-tone">60</span><span class="sf-doc-palette-tone">50</span><span class="sf-doc-palette-tone">40</span><span class="sf-doc-palette-tone">30</span><span class="sf-doc-palette-tone">20</span><span class="sf-doc-palette-tone">10</span>
+    <code>red</code><span class="sf-doc-palette-swatch" style="background: var(--sf-red-95)" title="--sf-red-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-90)" title="--sf-red-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-80)" title="--sf-red-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-70)" title="--sf-red-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-60)" title="--sf-red-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-50)" title="--sf-red-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-40)" title="--sf-red-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-30)" title="--sf-red-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-20)" title="--sf-red-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-red-10)" title="--sf-red-10"></span>
+    <code>orange</code><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-95)" title="--sf-orange-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-90)" title="--sf-orange-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-80)" title="--sf-orange-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-70)" title="--sf-orange-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-60)" title="--sf-orange-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-50)" title="--sf-orange-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-40)" title="--sf-orange-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-30)" title="--sf-orange-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-20)" title="--sf-orange-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-orange-10)" title="--sf-orange-10"></span>
+    <code>amber</code><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-95)" title="--sf-amber-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-90)" title="--sf-amber-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-80)" title="--sf-amber-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-70)" title="--sf-amber-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-60)" title="--sf-amber-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-50)" title="--sf-amber-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-40)" title="--sf-amber-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-30)" title="--sf-amber-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-20)" title="--sf-amber-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-amber-10)" title="--sf-amber-10"></span>
+    <code>yellow</code><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-95)" title="--sf-yellow-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-90)" title="--sf-yellow-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-80)" title="--sf-yellow-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-70)" title="--sf-yellow-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-60)" title="--sf-yellow-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-50)" title="--sf-yellow-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-40)" title="--sf-yellow-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-30)" title="--sf-yellow-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-20)" title="--sf-yellow-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-yellow-10)" title="--sf-yellow-10"></span>
+    <code>lime</code><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-95)" title="--sf-lime-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-90)" title="--sf-lime-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-80)" title="--sf-lime-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-70)" title="--sf-lime-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-60)" title="--sf-lime-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-50)" title="--sf-lime-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-40)" title="--sf-lime-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-30)" title="--sf-lime-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-20)" title="--sf-lime-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-lime-10)" title="--sf-lime-10"></span>
+    <code>green</code><span class="sf-doc-palette-swatch" style="background: var(--sf-green-95)" title="--sf-green-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-90)" title="--sf-green-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-80)" title="--sf-green-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-70)" title="--sf-green-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-60)" title="--sf-green-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-50)" title="--sf-green-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-40)" title="--sf-green-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-30)" title="--sf-green-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-20)" title="--sf-green-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-green-10)" title="--sf-green-10"></span>
+    <code>teal</code><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-95)" title="--sf-teal-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-90)" title="--sf-teal-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-80)" title="--sf-teal-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-70)" title="--sf-teal-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-60)" title="--sf-teal-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-50)" title="--sf-teal-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-40)" title="--sf-teal-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-30)" title="--sf-teal-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-20)" title="--sf-teal-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-teal-10)" title="--sf-teal-10"></span>
+    <code>cyan</code><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-95)" title="--sf-cyan-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-90)" title="--sf-cyan-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-80)" title="--sf-cyan-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-70)" title="--sf-cyan-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-60)" title="--sf-cyan-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-50)" title="--sf-cyan-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-40)" title="--sf-cyan-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-30)" title="--sf-cyan-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-20)" title="--sf-cyan-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-cyan-10)" title="--sf-cyan-10"></span>
+    <code>sky</code><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-95)" title="--sf-sky-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-90)" title="--sf-sky-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-80)" title="--sf-sky-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-70)" title="--sf-sky-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-60)" title="--sf-sky-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-50)" title="--sf-sky-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-40)" title="--sf-sky-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-30)" title="--sf-sky-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-20)" title="--sf-sky-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-sky-10)" title="--sf-sky-10"></span>
+    <code>blue</code><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-95)" title="--sf-blue-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-90)" title="--sf-blue-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-80)" title="--sf-blue-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-70)" title="--sf-blue-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-60)" title="--sf-blue-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-50)" title="--sf-blue-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-40)" title="--sf-blue-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-30)" title="--sf-blue-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-20)" title="--sf-blue-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-blue-10)" title="--sf-blue-10"></span>
+    <code>indigo</code><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-95)" title="--sf-indigo-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-90)" title="--sf-indigo-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-80)" title="--sf-indigo-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-70)" title="--sf-indigo-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-60)" title="--sf-indigo-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-50)" title="--sf-indigo-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-40)" title="--sf-indigo-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-30)" title="--sf-indigo-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-20)" title="--sf-indigo-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-indigo-10)" title="--sf-indigo-10"></span>
+    <code>violet</code><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-95)" title="--sf-violet-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-90)" title="--sf-violet-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-80)" title="--sf-violet-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-70)" title="--sf-violet-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-60)" title="--sf-violet-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-50)" title="--sf-violet-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-40)" title="--sf-violet-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-30)" title="--sf-violet-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-20)" title="--sf-violet-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-violet-10)" title="--sf-violet-10"></span>
+    <code>purple</code><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-95)" title="--sf-purple-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-90)" title="--sf-purple-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-80)" title="--sf-purple-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-70)" title="--sf-purple-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-60)" title="--sf-purple-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-50)" title="--sf-purple-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-40)" title="--sf-purple-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-30)" title="--sf-purple-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-20)" title="--sf-purple-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-purple-10)" title="--sf-purple-10"></span>
+    <code>pink</code><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-95)" title="--sf-pink-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-90)" title="--sf-pink-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-80)" title="--sf-pink-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-70)" title="--sf-pink-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-60)" title="--sf-pink-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-50)" title="--sf-pink-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-40)" title="--sf-pink-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-30)" title="--sf-pink-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-20)" title="--sf-pink-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-pink-10)" title="--sf-pink-10"></span>
+    <code>brown</code><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-95)" title="--sf-brown-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-90)" title="--sf-brown-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-80)" title="--sf-brown-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-70)" title="--sf-brown-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-60)" title="--sf-brown-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-50)" title="--sf-brown-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-40)" title="--sf-brown-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-30)" title="--sf-brown-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-20)" title="--sf-brown-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-brown-10)" title="--sf-brown-10"></span>
+    <code>gray</code><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-95)" title="--sf-gray-95"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-90)" title="--sf-gray-90"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-80)" title="--sf-gray-80"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-70)" title="--sf-gray-70"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-60)" title="--sf-gray-60"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-50)" title="--sf-gray-50"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-40)" title="--sf-gray-40"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-30)" title="--sf-gray-30"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-20)" title="--sf-gray-20"></span><span class="sf-doc-palette-swatch" style="background: var(--sf-gray-10)" title="--sf-gray-10"></span>
+</div>
+```
+```css
+.sf-doc-palette-grid {
+  display: grid;
+  grid-template-columns: minmax(3.5rem, auto) repeat(10, minmax(0, 1fr));
+  gap: var(--sf-space-1\/4);
+  align-items: center;
+}
+
+.sf-doc-palette-grid code {
+  overflow-wrap: anywhere;
+  padding-inline-end: var(--sf-space-1\/2);
+}
+
+.sf-doc-palette-tone {
+  text-align: center;
+  font-size: var(--sf-text--size-1\/2);
+  color: var(--sf-on-surface-variant);
+}
+
+.sf-doc-palette-swatch {
+  block-size: var(--sf-space-3);
+  border-radius: var(--sf-radius--ui);
+}
+```
+:::
+
+Примитивы в стилях интерфейса не пишут. Компоненту, которому нужен свой цвет,
+дают имя оттенка: класс `sf-hue-{имя}` (любой статический оттенок, а также
+`primary`, `secondary` и `tertiary`) задаёт элементу роли `--sf-hue`,
+`--sf-on-hue`, `--sf-hue-container` (с `-hover` и `-active`),
+`--sf-on-hue-container`, `--sf-on-hue-container-graphic` и `--sf-hue-outline`
+для светлой и тёмной темы. Так окрашены, например, инициалы
+[аватара](/ru/smart/content/avatar/). Переключите тему: плашки ниже сменят
+тон сами.
+
+:::example {label="Роли оттенка: --sf-hue-container и --sf-on-hue-container"}
+```html
+<div class="sf-doc-hue-grid">
+    <span class="sf-hue-red sf-doc-hue-chip">red</span>
+    <span class="sf-hue-orange sf-doc-hue-chip">orange</span>
+    <span class="sf-hue-amber sf-doc-hue-chip">amber</span>
+    <span class="sf-hue-yellow sf-doc-hue-chip">yellow</span>
+    <span class="sf-hue-lime sf-doc-hue-chip">lime</span>
+    <span class="sf-hue-green sf-doc-hue-chip">green</span>
+    <span class="sf-hue-teal sf-doc-hue-chip">teal</span>
+    <span class="sf-hue-cyan sf-doc-hue-chip">cyan</span>
+    <span class="sf-hue-sky sf-doc-hue-chip">sky</span>
+    <span class="sf-hue-blue sf-doc-hue-chip">blue</span>
+    <span class="sf-hue-indigo sf-doc-hue-chip">indigo</span>
+    <span class="sf-hue-violet sf-doc-hue-chip">violet</span>
+    <span class="sf-hue-purple sf-doc-hue-chip">purple</span>
+    <span class="sf-hue-pink sf-doc-hue-chip">pink</span>
+    <span class="sf-hue-brown sf-doc-hue-chip">brown</span>
+    <span class="sf-hue-gray sf-doc-hue-chip">gray</span>
+</div>
+```
+```css
+.sf-doc-hue-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sf-space-1\/2);
+}
+
+.sf-doc-hue-chip {
+  padding: var(--sf-space-1\/4) var(--sf-space-1);
+  border-radius: var(--sf-radius--ui);
+  background: var(--sf-hue-container);
+  color: var(--sf-on-hue-container);
+}
+```
+:::
 
 ## Примитивы не зависят от темы
 

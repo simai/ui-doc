@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-722 переменных, которые объявляет ядро, со значениями по умолчанию.
+1006 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -51,6 +51,8 @@ description: "Полный список переменных, которые о�
 | :--- | :--- |
 | `--sf-on-error-container` | `light-dark(var(--sf-error-10), var(--sf-error-90))` |
 | `--sf-on-error-container-graphic` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-on-hue-container` | `light-dark(var(--sf-red-10), var(--sf-red-90))` · `light-dark(var(--sf-orange-10), var(--sf-orange-90))` · `light-dark(var(--sf-amber-10), var(--sf-amber-90))` · `light-dark(var(--sf-yellow-10), var(--sf-yellow-90))` · `light-dark(var(--sf-lime-10), var(--sf-lime-90))` · `light-dark(var(--sf-green-10), var(--sf-green-90))` · `light-dark(var(--sf-teal-10), var(--sf-teal-90))` · `light-dark(var(--sf-cyan-10), var(--sf-cyan-90))` · `light-dark(var(--sf-sky-10), var(--sf-sky-90))` · `light-dark(var(--sf-blue-10), var(--sf-blue-90))` · `light-dark(var(--sf-indigo-10), var(--sf-indigo-90))` · `light-dark(var(--sf-violet-10), var(--sf-violet-90))` · `light-dark(var(--sf-purple-10), var(--sf-purple-90))` · `light-dark(var(--sf-pink-10), var(--sf-pink-90))` · `light-dark(var(--sf-brown-10), var(--sf-brown-90))` · `light-dark(var(--sf-gray-10), var(--sf-gray-90))` · `light-dark(var(--sf-primary-10), var(--sf-primary-90))` · `light-dark(var(--sf-secondary-10), var(--sf-secondary-90))` · `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
+| `--sf-on-hue-container-graphic` | `light-dark(var(--sf-red-50), var(--sf-red-60))` · `light-dark(var(--sf-orange-50), var(--sf-orange-60))` · `light-dark(var(--sf-amber-50), var(--sf-amber-60))` · `light-dark(var(--sf-yellow-50), var(--sf-yellow-60))` · `light-dark(var(--sf-lime-50), var(--sf-lime-60))` · `light-dark(var(--sf-green-50), var(--sf-green-60))` · `light-dark(var(--sf-teal-50), var(--sf-teal-60))` · `light-dark(var(--sf-cyan-50), var(--sf-cyan-60))` · `light-dark(var(--sf-sky-50), var(--sf-sky-60))` · `light-dark(var(--sf-blue-50), var(--sf-blue-60))` · `light-dark(var(--sf-indigo-50), var(--sf-indigo-60))` · `light-dark(var(--sf-violet-50), var(--sf-violet-60))` · `light-dark(var(--sf-purple-50), var(--sf-purple-60))` · `light-dark(var(--sf-pink-50), var(--sf-pink-60))` · `light-dark(var(--sf-brown-50), var(--sf-brown-60))` · `light-dark(var(--sf-gray-50), var(--sf-gray-60))` · `light-dark(var(--sf-primary-50), var(--sf-primary-60))` · `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` · `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-on-info-container` | `light-dark(var(--sf-info-10), var(--sf-info-90))` |
 | `--sf-on-info-container-graphic` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-on-neutral-container` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
@@ -61,11 +63,11 @@ description: "Полный список переменных, которые о�
 | `--sf-on-secondary-container-graphic` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
 | `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` |
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
-| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-surface-media)` · `var(--sf-on-primary)` |
+| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-surface-media)` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
 | `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
 | `--sf-on-surface-container--variant` | `var(--sf-on-surface-container-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` · `var(--sf-white--alfa-80)` |
+| `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` · `var(--sf-white--alfa-80)` |
 | `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
 | `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` |
@@ -76,7 +78,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-raised-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-white--alfa-80)` · `var(--sf-on-primary)` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-white--alfa-80)` |
 | `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
 | `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-on-warning-container` | `light-dark(var(--sf-warning-10), var(--sf-warning-90))` |
@@ -103,7 +105,7 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-overlay` | `var(--sf-surface-veil)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` |
 | `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
-| `--sf-surface-place` | `var(--sf-surface-page)` |
+| `--sf-surface-place` | `var(--sf-surface-page)` · `var(--sf-surface-media)` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
 | `--sf-surface-raised` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
@@ -161,8 +163,8 @@ description: "Полный список переменных, которые о�
 | `--sf-link-active` | `light-dark(var(--sf-primary-30), var(--sf-primary-90))` |
 | `--sf-link-hover` | `light-dark(var(--sf-primary-35), var(--sf-primary-85))` |
 | `--sf-link-visited` | `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` |
-| `--sf-mark` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
-| `--sf-mark--color` | `var(--sf-warning-transparent-overlay)` |
+| `--sf-mark` | `light-dark(var(--sf-yellow-50--alfa-24), var(--sf-yellow-90--alfa-24))` |
+| `--sf-mark--color` | `var(--sf-mark)` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-primary-active` | `light-dark(var(--sf-primary-30), var(--sf-primary-90))` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
@@ -251,7 +253,7 @@ description: "Полный список переменных, которые о�
 | `--sf-focus--width` | `var(--sf-focus-outline-width)` |
 | `--sf-focus-outline-width` | `calc(var(--sf-px) * 2)` |
 | `--sf-on-disable` | `var(--sf-on-surface-disabled)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` · `var(--sf-white--alfa-64)` |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
 | `--sf-outline--alfa` | `1` |
 | `--sf-outline-disable` | `var(--sf-outline-disabled)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-outline-disabled` | `light-dark(var(--sf-neutral-50--alfa-48), var(--sf-neutral-60--alfa-48))` |
@@ -590,7 +592,7 @@ description: "Полный список переменных, которые о�
 | `--sf-opacity-80` | `80%` |
 | `--sf-opacity-90` | `90%` |
 | `--sf-scroll--alfa` | `1` |
-| `--sf-scroll-bg-thumb` | `var(--sf-on-neutral-container-graphic)` |
+| `--sf-scroll-bg-thumb` | `var(--sf-outline)` |
 | `--sf-scroll-bg-track` | `var(--sf-transparent)` |
 | `--sf-scroll-bg-width` | `var(--sf-b4)` |
 | `--sf-scroll-radius` | `var(--sf-d6)` |
@@ -628,7 +630,7 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-1/2--control-height` | `calc(var(--sf-text--height-1\/2) + 2 * var(--sf-ui-1\/2--space-y-tightness-default))` |
 | `--sf-ui-1/2--space-x` | `0.75rem` · `var(--sf-b2)` · `0.875rem` · `var(--sf-b4)` |
 | `--sf-ui-1/2--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
-| `--sf-ui-1/2--space-y-tightness-default` | `0.375rem` · `var(--sf-a6)` · `0.25rem` · `var(--sf-a4)` |
+| `--sf-ui-1/2--space-y-tightness-default` | `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-1/2--space-y-tightness-high` | `0.625rem` · `var(--sf-b0)` · `0.5rem` · `var(--sf-a8)` |
 | `--sf-ui-1/2--space-y-tightness-highest` | `0.875rem` · `var(--sf-b4)` · `0.75rem` · `var(--sf-b2)` |
 | `--sf-ui-1/2--space-y-tightness-low` | `0.25rem` · `var(--sf-a4)` |
@@ -636,9 +638,9 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-1/3--control-height` | `calc(var(--sf-text--height-1\/3) + 2 * var(--sf-ui-1\/3--space-y-tightness-default))` |
 | `--sf-ui-1/3--space-x` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` |
 | `--sf-ui-1/3--space-y` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
-| `--sf-ui-1/3--space-y-tightness-default` | `0.25rem` · `var(--sf-a4)` |
+| `--sf-ui-1/3--space-y-tightness-default` | `0.25rem` · `var(--sf-a4)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-1/3--space-y-tightness-high` | `0.375rem` · `var(--sf-a6)` · `0.5rem` · `var(--sf-a8)` |
-| `--sf-ui-1/3--space-y-tightness-highest` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` |
+| `--sf-ui-1/3--space-y-tightness-highest` | `0.625rem` · `var(--sf-b0)` · `0.75rem` · `var(--sf-b2)` · `0.5rem` · `var(--sf-a8)` |
 | `--sf-ui-1/3--space-y-tightness-low` | `0.125rem` · `var(--sf-a2)` · `0.25rem` · `var(--sf-a4)` |
 | `--sf-ui-1/3--text-space-x` | `0.3125rem` · `var(--sf-a5)` · `0.375rem` · `var(--sf-a6)` |
 | `--sf-ui-2--control-height` | `calc(var(--sf-text--height-2) + 2 * var(--sf-ui-2--space-y-tightness-default))` |
@@ -664,7 +666,7 @@ description: "Полный список переменных, которые о�
 | `--sf-ui-focus` | `0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
 | `--sf-ui-focus-inset` | `inset 0 0 0 var(--sf-focus-outline-width) var(--sf-focus)` |
 | `--sf-ui-radius-default` | `var(--sf-radius--ui)` |
-| `--sf-ui-skeleton` | `linear-gradient(180deg, var(--sf-neutral-80--alfa-48) 0%, var(--sf-neutral-60--alfa-48) 100%)` |
+| `--sf-ui-skeleton` | `var(--sf-surface-container)` |
 
 ### Поток содержимого
 
@@ -700,54 +702,207 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-0` | `0` |
+| `--sf-amber-10` | `#2e1500` |
+| `--sf-amber-15` | `#3d1e00` |
+| `--sf-amber-20` | `#4c2700` |
+| `--sf-amber-25` | `#5c3000` |
+| `--sf-amber-30` | `#6c3a00` |
+| `--sf-amber-35` | `#7d4400` |
+| `--sf-amber-40` | `#8f4e00` |
+| `--sf-amber-5` | `#1f0c00` |
+| `--sf-amber-50` | `#b26300` |
+| `--sf-amber-60` | `#d87900` |
+| `--sf-amber-70` | `#fa911c` |
+| `--sf-amber-80` | `#ffb779` |
+| `--sf-amber-85` | `#ffca9f` |
+| `--sf-amber-90` | `#ffdcc1` |
+| `--sf-amber-95` | `#ffeee2` |
+| `--sf-amber-98` | `#fff8f5` |
+| `--sf-blue-10` | `#001a40` |
+| `--sf-blue-15` | `#002453` |
+| `--sf-blue-20` | `#002f67` |
+| `--sf-blue-25` | `#00397c` |
+| `--sf-blue-30` | `#004492` |
+| `--sf-blue-35` | `#0050a8` |
+| `--sf-blue-40` | `#005bbe` |
+| `--sf-blue-5` | `#00102c` |
+| `--sf-blue-50` | `#3375d9` |
+| `--sf-blue-60` | `#538ff5` |
+| `--sf-blue-70` | `#7eabff` |
+| `--sf-blue-80` | `#acc7ff` |
+| `--sf-blue-85` | `#c2d4ff` |
+| `--sf-blue-90` | `#d7e2ff` |
+| `--sf-blue-95` | `#edf0ff` |
+| `--sf-blue-98` | `#f9f9ff` |
+| `--sf-brown-10` | `#321300` |
+| `--sf-brown-15` | `#411b01` |
+| `--sf-brown-20` | `#4f2507` |
+| `--sf-brown-25` | `#5c3011` |
+| `--sf-brown-30` | `#6a3b1c` |
+| `--sf-brown-35` | `#784626` |
+| `--sf-brown-40` | `#865231` |
+| `--sf-brown-5` | `#220a00` |
+| `--sf-brown-50` | `#a26a47` |
+| `--sf-brown-60` | `#c0835e` |
+| `--sf-brown-70` | `#dd9d76` |
+| `--sf-brown-80` | `#fcb78f` |
+| `--sf-brown-85` | `#ffc9aa` |
+| `--sf-brown-90` | `#ffdbc8` |
+| `--sf-brown-95` | `#ffede5` |
+| `--sf-brown-98` | `#fff8f5` |
 | `--sf-button--background-color` | `var(--sf-button-background-color, var(--sf-on-primary))` · `var(--sf-primary-container)` |
 | `--sf-button--border-color` | `var(--sf-button-border-color, var(--sf-on-primary))` |
 | `--sf-button-text-container--color` | `var(--sf-button-color, var(--sf-primary))` · `var(--sf-button-color, var(--sf-on-primary))` |
-| `--sf-chart-1` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
-| `--sf-chart-1-fill` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
-| `--sf-chart-1-fill-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` |
-| `--sf-chart-1-fill-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` |
-| `--sf-chart-2` | `light-dark(var(--sf-tone-rose-50), var(--sf-tone-rose-60))` |
-| `--sf-chart-2-fill` | `light-dark(var(--sf-tone-rose-50--alfa-12), var(--sf-tone-rose-50--alfa-24))` |
-| `--sf-chart-2-fill-active` | `light-dark(var(--sf-tone-rose-50--alfa-20), var(--sf-tone-rose-50--alfa-32))` |
-| `--sf-chart-2-fill-hover` | `light-dark(var(--sf-tone-rose-50--alfa-16), var(--sf-tone-rose-50--alfa-28))` |
-| `--sf-chart-3` | `light-dark(var(--sf-tone-green-30), var(--sf-tone-green-85))` |
-| `--sf-chart-3-fill` | `light-dark(var(--sf-tone-green-50--alfa-12), var(--sf-tone-green-50--alfa-24))` |
-| `--sf-chart-3-fill-active` | `light-dark(var(--sf-tone-green-50--alfa-20), var(--sf-tone-green-50--alfa-32))` |
-| `--sf-chart-3-fill-hover` | `light-dark(var(--sf-tone-green-50--alfa-16), var(--sf-tone-green-50--alfa-28))` |
-| `--sf-chart-4` | `light-dark(var(--sf-tone-violet-30), var(--sf-tone-violet-85))` |
-| `--sf-chart-4-fill` | `light-dark(var(--sf-tone-violet-50--alfa-12), var(--sf-tone-violet-50--alfa-24))` |
-| `--sf-chart-4-fill-active` | `light-dark(var(--sf-tone-violet-50--alfa-20), var(--sf-tone-violet-50--alfa-32))` |
-| `--sf-chart-4-fill-hover` | `light-dark(var(--sf-tone-violet-50--alfa-16), var(--sf-tone-violet-50--alfa-28))` |
-| `--sf-chart-5` | `light-dark(var(--sf-tone-lime-50), var(--sf-tone-lime-60))` |
-| `--sf-chart-5-fill` | `light-dark(var(--sf-tone-lime-50--alfa-12), var(--sf-tone-lime-50--alfa-24))` |
-| `--sf-chart-5-fill-active` | `light-dark(var(--sf-tone-lime-50--alfa-20), var(--sf-tone-lime-50--alfa-32))` |
-| `--sf-chart-5-fill-hover` | `light-dark(var(--sf-tone-lime-50--alfa-16), var(--sf-tone-lime-50--alfa-28))` |
-| `--sf-chart-6` | `light-dark(var(--sf-tone-teal-50), var(--sf-tone-teal-60))` |
-| `--sf-chart-6-fill` | `light-dark(var(--sf-tone-teal-50--alfa-12), var(--sf-tone-teal-50--alfa-24))` |
-| `--sf-chart-6-fill-active` | `light-dark(var(--sf-tone-teal-50--alfa-20), var(--sf-tone-teal-50--alfa-32))` |
-| `--sf-chart-6-fill-hover` | `light-dark(var(--sf-tone-teal-50--alfa-16), var(--sf-tone-teal-50--alfa-28))` |
-| `--sf-chart-7` | `light-dark(var(--sf-tone-amber-30), var(--sf-tone-amber-60))` |
-| `--sf-chart-7-fill` | `light-dark(var(--sf-tone-amber-50--alfa-12), var(--sf-tone-amber-50--alfa-24))` |
-| `--sf-chart-7-fill-active` | `light-dark(var(--sf-tone-amber-50--alfa-20), var(--sf-tone-amber-50--alfa-32))` |
-| `--sf-chart-7-fill-hover` | `light-dark(var(--sf-tone-amber-50--alfa-16), var(--sf-tone-amber-50--alfa-28))` |
-| `--sf-chart-8` | `light-dark(var(--sf-tone-sky-30), var(--sf-tone-sky-85))` |
-| `--sf-chart-8-fill` | `light-dark(var(--sf-tone-sky-50--alfa-12), var(--sf-tone-sky-50--alfa-24))` |
-| `--sf-chart-8-fill-active` | `light-dark(var(--sf-tone-sky-50--alfa-20), var(--sf-tone-sky-50--alfa-32))` |
-| `--sf-chart-8-fill-hover` | `light-dark(var(--sf-tone-sky-50--alfa-16), var(--sf-tone-sky-50--alfa-28))` |
+| `--sf-chart-1` | `light-dark(var(--sf-blue-50), var(--sf-blue-60))` |
+| `--sf-chart-1-fill` | `light-dark(var(--sf-blue-50--alfa-12), var(--sf-blue-50--alfa-24))` |
+| `--sf-chart-1-fill-active` | `light-dark(var(--sf-blue-50--alfa-20), var(--sf-blue-50--alfa-32))` |
+| `--sf-chart-1-fill-hover` | `light-dark(var(--sf-blue-50--alfa-16), var(--sf-blue-50--alfa-28))` |
+| `--sf-chart-2` | `light-dark(var(--sf-amber-50), var(--sf-amber-60))` |
+| `--sf-chart-2-fill` | `light-dark(var(--sf-amber-50--alfa-12), var(--sf-amber-50--alfa-24))` |
+| `--sf-chart-2-fill-active` | `light-dark(var(--sf-amber-50--alfa-20), var(--sf-amber-50--alfa-32))` |
+| `--sf-chart-2-fill-hover` | `light-dark(var(--sf-amber-50--alfa-16), var(--sf-amber-50--alfa-28))` |
+| `--sf-chart-3` | `light-dark(var(--sf-teal-30), var(--sf-teal-85))` |
+| `--sf-chart-3-fill` | `light-dark(var(--sf-teal-50--alfa-12), var(--sf-teal-50--alfa-24))` |
+| `--sf-chart-3-fill-active` | `light-dark(var(--sf-teal-50--alfa-20), var(--sf-teal-50--alfa-32))` |
+| `--sf-chart-3-fill-hover` | `light-dark(var(--sf-teal-50--alfa-16), var(--sf-teal-50--alfa-28))` |
+| `--sf-chart-4` | `light-dark(var(--sf-violet-30), var(--sf-violet-85))` |
+| `--sf-chart-4-fill` | `light-dark(var(--sf-violet-50--alfa-12), var(--sf-violet-50--alfa-24))` |
+| `--sf-chart-4-fill-active` | `light-dark(var(--sf-violet-50--alfa-20), var(--sf-violet-50--alfa-32))` |
+| `--sf-chart-4-fill-hover` | `light-dark(var(--sf-violet-50--alfa-16), var(--sf-violet-50--alfa-28))` |
+| `--sf-chart-5` | `light-dark(var(--sf-yellow-30), var(--sf-yellow-85))` |
+| `--sf-chart-5-fill` | `light-dark(var(--sf-yellow-50--alfa-12), var(--sf-yellow-50--alfa-24))` |
+| `--sf-chart-5-fill-active` | `light-dark(var(--sf-yellow-50--alfa-20), var(--sf-yellow-50--alfa-32))` |
+| `--sf-chart-5-fill-hover` | `light-dark(var(--sf-yellow-50--alfa-16), var(--sf-yellow-50--alfa-28))` |
+| `--sf-chart-6` | `light-dark(var(--sf-pink-50), var(--sf-pink-60))` |
+| `--sf-chart-6-fill` | `light-dark(var(--sf-pink-50--alfa-12), var(--sf-pink-50--alfa-24))` |
+| `--sf-chart-6-fill-active` | `light-dark(var(--sf-pink-50--alfa-20), var(--sf-pink-50--alfa-32))` |
+| `--sf-chart-6-fill-hover` | `light-dark(var(--sf-pink-50--alfa-16), var(--sf-pink-50--alfa-28))` |
+| `--sf-chart-7` | `light-dark(var(--sf-green-50), var(--sf-green-60))` |
+| `--sf-chart-7-fill` | `light-dark(var(--sf-green-50--alfa-12), var(--sf-green-50--alfa-24))` |
+| `--sf-chart-7-fill-active` | `light-dark(var(--sf-green-50--alfa-20), var(--sf-green-50--alfa-32))` |
+| `--sf-chart-7-fill-hover` | `light-dark(var(--sf-green-50--alfa-16), var(--sf-green-50--alfa-28))` |
+| `--sf-chart-8` | `light-dark(var(--sf-red-30), var(--sf-red-85))` |
+| `--sf-chart-8-fill` | `light-dark(var(--sf-red-50--alfa-12), var(--sf-red-50--alfa-24))` |
+| `--sf-chart-8-fill-active` | `light-dark(var(--sf-red-50--alfa-20), var(--sf-red-50--alfa-32))` |
+| `--sf-chart-8-fill-hover` | `light-dark(var(--sf-red-50--alfa-16), var(--sf-red-50--alfa-28))` |
+| `--sf-chart-brand` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-chart-brand-fill` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
+| `--sf-chart-brand-fill-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` |
+| `--sf-chart-brand-fill-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` |
+| `--sf-chart-cool-1` | `light-dark(var(--sf-blue-30), var(--sf-blue-85))` |
+| `--sf-chart-cool-2` | `light-dark(var(--sf-teal-30), var(--sf-teal-85))` |
+| `--sf-chart-cool-3` | `light-dark(var(--sf-violet-50), var(--sf-violet-60))` |
+| `--sf-chart-cool-4` | `light-dark(var(--sf-cyan-50), var(--sf-cyan-60))` |
+| `--sf-chart-cool-5` | `light-dark(var(--sf-indigo-40), var(--sf-indigo-70))` |
+| `--sf-chart-cool-6` | `light-dark(var(--sf-green-50), var(--sf-green-60))` |
+| `--sf-chart-diverging-bad` | `light-dark(var(--sf-red-30), var(--sf-red-80))` |
+| `--sf-chart-diverging-good` | `light-dark(var(--sf-blue-30), var(--sf-blue-80))` |
+| `--sf-chart-diverging-high` | `light-dark(var(--sf-teal-30), var(--sf-teal-80))` |
+| `--sf-chart-diverging-low` | `light-dark(var(--sf-purple-30), var(--sf-purple-80))` |
 | `--sf-chart-midpoint` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
+| `--sf-chart-warm-1` | `light-dark(var(--sf-red-30), var(--sf-red-85))` |
+| `--sf-chart-warm-2` | `light-dark(var(--sf-orange-50), var(--sf-orange-60))` |
+| `--sf-chart-warm-3` | `light-dark(var(--sf-amber-40), var(--sf-amber-80))` |
+| `--sf-chart-warm-4` | `light-dark(var(--sf-pink-50), var(--sf-pink-60))` |
+| `--sf-chart-warm-5` | `light-dark(var(--sf-brown-50), var(--sf-brown-60))` |
+| `--sf-chart-warm-6` | `light-dark(var(--sf-yellow-50), var(--sf-yellow-60))` |
 | `--sf-color--alfa` | `1` |
 | `--sf-current` | `currentColor` |
+| `--sf-cyan-10` | `#002022` |
+| `--sf-cyan-15` | `#002b2e` |
+| `--sf-cyan-20` | `#00363b` |
+| `--sf-cyan-25` | `#004248` |
+| `--sf-cyan-30` | `#004f55` |
+| `--sf-cyan-35` | `#005c62` |
+| `--sf-cyan-40` | `#006970` |
+| `--sf-cyan-5` | `#001416` |
+| `--sf-cyan-50` | `#00848d` |
+| `--sf-cyan-60` | `#00a0ab` |
+| `--sf-cyan-70` | `#00bdca` |
+| `--sf-cyan-80` | `#00dbea` |
+| `--sf-cyan-85` | `#00eafa` |
+| `--sf-cyan-90` | `#80f4ff` |
+| `--sf-cyan-95` | `#c8faff` |
+| `--sf-cyan-98` | `#eafdff` |
 | `--sf-decoration--alfa` | `1` |
 | `--sf-drop-shadow--alfa` | `1` |
 | `--sf-empty` | `` |
 | `--sf-gradient--angle` | `90deg` |
+| `--sf-gray-10` | `#1b1b1b` |
+| `--sf-gray-15` | `#262626` |
+| `--sf-gray-20` | `#303030` |
+| `--sf-gray-25` | `#3b3b3b` |
+| `--sf-gray-30` | `#474747` |
+| `--sf-gray-35` | `#525252` |
+| `--sf-gray-40` | `#5e5e5e` |
+| `--sf-gray-5` | `#111111` |
+| `--sf-gray-50` | `#777777` |
+| `--sf-gray-60` | `#919191` |
+| `--sf-gray-70` | `#ababab` |
+| `--sf-gray-80` | `#c6c6c6` |
+| `--sf-gray-85` | `#d4d4d4` |
+| `--sf-gray-90` | `#e2e2e2` |
+| `--sf-gray-95` | `#f1f1f1` |
+| `--sf-gray-98` | `#f9f9f9` |
+| `--sf-green-10` | `#002203` |
+| `--sf-green-15` | `#002d05` |
+| `--sf-green-20` | `#003908` |
+| `--sf-green-25` | `#00460b` |
+| `--sf-green-30` | `#00530f` |
+| `--sf-green-35` | `#006013` |
+| `--sf-green-40` | `#006e17` |
+| `--sf-green-5` | `#001501` |
+| `--sf-green-50` | `#198a27` |
+| `--sf-green-60` | `#3ba53f` |
+| `--sf-green-70` | `#58c157` |
+| `--sf-green-80` | `#74dd6f` |
+| `--sf-green-85` | `#81ec7c` |
+| `--sf-green-90` | `#8ffa88` |
+| `--sf-green-95` | `#c9ffbe` |
+| `--sf-green-98` | `#ecffe4` |
+| `--sf-hue` | `light-dark(var(--sf-red-40), var(--sf-red-80))` · `light-dark(var(--sf-orange-40), var(--sf-orange-80))` · `light-dark(var(--sf-amber-40), var(--sf-amber-80))` · `light-dark(var(--sf-yellow-40), var(--sf-yellow-80))` · `light-dark(var(--sf-lime-40), var(--sf-lime-80))` · `light-dark(var(--sf-green-40), var(--sf-green-80))` · `light-dark(var(--sf-teal-40), var(--sf-teal-80))` · `light-dark(var(--sf-cyan-40), var(--sf-cyan-80))` · `light-dark(var(--sf-sky-40), var(--sf-sky-80))` · `light-dark(var(--sf-blue-40), var(--sf-blue-80))` · `light-dark(var(--sf-indigo-40), var(--sf-indigo-80))` · `light-dark(var(--sf-violet-40), var(--sf-violet-80))` · `light-dark(var(--sf-purple-40), var(--sf-purple-80))` · `light-dark(var(--sf-pink-40), var(--sf-pink-80))` · `light-dark(var(--sf-brown-40), var(--sf-brown-80))` · `light-dark(var(--sf-gray-40), var(--sf-gray-80))` · `light-dark(var(--sf-primary-40), var(--sf-primary-80))` · `light-dark(var(--sf-secondary-40), var(--sf-secondary-80))` · `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` |
+| `--sf-hue-container` | `light-dark(var(--sf-red-50--alfa-12), var(--sf-red-50--alfa-24))` · `light-dark(var(--sf-orange-50--alfa-12), var(--sf-orange-50--alfa-24))` · `light-dark(var(--sf-amber-50--alfa-12), var(--sf-amber-50--alfa-24))` · `light-dark(var(--sf-yellow-50--alfa-12), var(--sf-yellow-50--alfa-24))` · `light-dark(var(--sf-lime-50--alfa-12), var(--sf-lime-50--alfa-24))` · `light-dark(var(--sf-green-50--alfa-12), var(--sf-green-50--alfa-24))` · `light-dark(var(--sf-teal-50--alfa-12), var(--sf-teal-50--alfa-24))` · `light-dark(var(--sf-cyan-50--alfa-12), var(--sf-cyan-50--alfa-24))` · `light-dark(var(--sf-sky-50--alfa-12), var(--sf-sky-50--alfa-24))` · `light-dark(var(--sf-blue-50--alfa-12), var(--sf-blue-50--alfa-24))` · `light-dark(var(--sf-indigo-50--alfa-12), var(--sf-indigo-50--alfa-24))` · `light-dark(var(--sf-violet-50--alfa-12), var(--sf-violet-50--alfa-24))` · `light-dark(var(--sf-purple-50--alfa-12), var(--sf-purple-50--alfa-24))` · `light-dark(var(--sf-pink-50--alfa-12), var(--sf-pink-50--alfa-24))` · `light-dark(var(--sf-brown-50--alfa-12), var(--sf-brown-50--alfa-24))` · `light-dark(var(--sf-gray-50--alfa-12), var(--sf-gray-50--alfa-24))` · `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` · `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` · `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
+| `--sf-hue-container-active` | `light-dark(var(--sf-red-50--alfa-20), var(--sf-red-50--alfa-32))` · `light-dark(var(--sf-orange-50--alfa-20), var(--sf-orange-50--alfa-32))` · `light-dark(var(--sf-amber-50--alfa-20), var(--sf-amber-50--alfa-32))` · `light-dark(var(--sf-yellow-50--alfa-20), var(--sf-yellow-50--alfa-32))` · `light-dark(var(--sf-lime-50--alfa-20), var(--sf-lime-50--alfa-32))` · `light-dark(var(--sf-green-50--alfa-20), var(--sf-green-50--alfa-32))` · `light-dark(var(--sf-teal-50--alfa-20), var(--sf-teal-50--alfa-32))` · `light-dark(var(--sf-cyan-50--alfa-20), var(--sf-cyan-50--alfa-32))` · `light-dark(var(--sf-sky-50--alfa-20), var(--sf-sky-50--alfa-32))` · `light-dark(var(--sf-blue-50--alfa-20), var(--sf-blue-50--alfa-32))` · `light-dark(var(--sf-indigo-50--alfa-20), var(--sf-indigo-50--alfa-32))` · `light-dark(var(--sf-violet-50--alfa-20), var(--sf-violet-50--alfa-32))` · `light-dark(var(--sf-purple-50--alfa-20), var(--sf-purple-50--alfa-32))` · `light-dark(var(--sf-pink-50--alfa-20), var(--sf-pink-50--alfa-32))` · `light-dark(var(--sf-brown-50--alfa-20), var(--sf-brown-50--alfa-32))` · `light-dark(var(--sf-gray-50--alfa-20), var(--sf-gray-50--alfa-32))` · `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` · `light-dark(var(--sf-secondary-50--alfa-20), var(--sf-secondary-50--alfa-32))` · `light-dark(var(--sf-tertiary-50--alfa-20), var(--sf-tertiary-50--alfa-32))` |
+| `--sf-hue-container-hover` | `light-dark(var(--sf-red-50--alfa-16), var(--sf-red-50--alfa-28))` · `light-dark(var(--sf-orange-50--alfa-16), var(--sf-orange-50--alfa-28))` · `light-dark(var(--sf-amber-50--alfa-16), var(--sf-amber-50--alfa-28))` · `light-dark(var(--sf-yellow-50--alfa-16), var(--sf-yellow-50--alfa-28))` · `light-dark(var(--sf-lime-50--alfa-16), var(--sf-lime-50--alfa-28))` · `light-dark(var(--sf-green-50--alfa-16), var(--sf-green-50--alfa-28))` · `light-dark(var(--sf-teal-50--alfa-16), var(--sf-teal-50--alfa-28))` · `light-dark(var(--sf-cyan-50--alfa-16), var(--sf-cyan-50--alfa-28))` · `light-dark(var(--sf-sky-50--alfa-16), var(--sf-sky-50--alfa-28))` · `light-dark(var(--sf-blue-50--alfa-16), var(--sf-blue-50--alfa-28))` · `light-dark(var(--sf-indigo-50--alfa-16), var(--sf-indigo-50--alfa-28))` · `light-dark(var(--sf-violet-50--alfa-16), var(--sf-violet-50--alfa-28))` · `light-dark(var(--sf-purple-50--alfa-16), var(--sf-purple-50--alfa-28))` · `light-dark(var(--sf-pink-50--alfa-16), var(--sf-pink-50--alfa-28))` · `light-dark(var(--sf-brown-50--alfa-16), var(--sf-brown-50--alfa-28))` · `light-dark(var(--sf-gray-50--alfa-16), var(--sf-gray-50--alfa-28))` · `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` · `light-dark(var(--sf-secondary-50--alfa-16), var(--sf-secondary-50--alfa-28))` · `light-dark(var(--sf-tertiary-50--alfa-16), var(--sf-tertiary-50--alfa-28))` |
+| `--sf-hue-outline` | `light-dark(var(--sf-red-50), var(--sf-red-60))` · `light-dark(var(--sf-orange-50), var(--sf-orange-60))` · `light-dark(var(--sf-amber-50), var(--sf-amber-60))` · `light-dark(var(--sf-yellow-50), var(--sf-yellow-60))` · `light-dark(var(--sf-lime-50), var(--sf-lime-60))` · `light-dark(var(--sf-green-50), var(--sf-green-60))` · `light-dark(var(--sf-teal-50), var(--sf-teal-60))` · `light-dark(var(--sf-cyan-50), var(--sf-cyan-60))` · `light-dark(var(--sf-sky-50), var(--sf-sky-60))` · `light-dark(var(--sf-blue-50), var(--sf-blue-60))` · `light-dark(var(--sf-indigo-50), var(--sf-indigo-60))` · `light-dark(var(--sf-violet-50), var(--sf-violet-60))` · `light-dark(var(--sf-purple-50), var(--sf-purple-60))` · `light-dark(var(--sf-pink-50), var(--sf-pink-60))` · `light-dark(var(--sf-brown-50), var(--sf-brown-60))` · `light-dark(var(--sf-gray-50), var(--sf-gray-60))` · `light-dark(var(--sf-primary-50), var(--sf-primary-60))` · `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` · `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-icon--color` | `var(--sf-primary)` · `var(--sf-on-primary)` |
+| `--sf-indigo-10` | `#08006c` |
+| `--sf-indigo-15` | `#0d008a` |
+| `--sf-indigo-20` | `#1c1794` |
+| `--sf-indigo-25` | `#29279e` |
+| `--sf-indigo-30` | `#3535aa` |
+| `--sf-indigo-35` | `#4243b6` |
+| `--sf-indigo-40` | `#4e50c3` |
+| `--sf-indigo-5` | `#04004c` |
+| `--sf-indigo-50` | `#686ade` |
+| `--sf-indigo-60` | `#8284fa` |
+| `--sf-indigo-70` | `#a1a2ff` |
+| `--sf-indigo-80` | `#c1c1ff` |
+| `--sf-indigo-85` | `#d1d0ff` |
+| `--sf-indigo-90` | `#e1dfff` |
+| `--sf-indigo-95` | `#f2efff` |
+| `--sf-indigo-98` | `#fcf8ff` |
 | `--sf-inherit` | `inherit` |
 | `--sf-language--box` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-layout-floating-panel-height` | `calc(var(--sf-h0) + var(--sf-d0))` |
 | `--sf-layout-floating-panel-width` | `calc(var(--sf-g2) + var(--sf-b6))` |
 | `--sf-layout-reading-width` | `var(--sf-h2)` |
+| `--sf-lime-10` | `#181e00` |
+| `--sf-lime-15` | `#222900` |
+| `--sf-lime-20` | `#2c3400` |
+| `--sf-lime-25` | `#364000` |
+| `--sf-lime-30` | `#404c00` |
+| `--sf-lime-35` | `#4b5800` |
+| `--sf-lime-40` | `#566500` |
+| `--sf-lime-5` | `#0f1300` |
+| `--sf-lime-50` | `#6d7f00` |
+| `--sf-lime-60` | `#859a00` |
+| `--sf-lime-70` | `#9fb526` |
+| `--sf-lime-80` | `#bad241` |
+| `--sf-lime-85` | `#c8e04e` |
+| `--sf-lime-90` | `#d6ee5b` |
+| `--sf-lime-95` | `#e4fd68` |
+| `--sf-lime-98` | `#f6ffc1` |
 | `--sf-neutral` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-neutral-active` | `light-dark(var(--sf-neutral-30), var(--sf-neutral-90))` |
 | `--sf-neutral-container` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-30))` |
@@ -760,6 +915,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-elevation-4--variant` | `var(--sf-on-surface-popup-nested-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-on-elevation-5--variant` | `var(--sf-on-surface-popup-nested-variant)` · устарела: удаляется после 2027-01-01, запись `token-c20-shadow-places` журнала |
 | `--sf-on-error` | `light-dark(var(--sf-white), var(--sf-error-20))` |
+| `--sf-on-hue` | `light-dark(var(--sf-white), var(--sf-red-20))` · `light-dark(var(--sf-white), var(--sf-orange-20))` · `light-dark(var(--sf-white), var(--sf-amber-20))` · `light-dark(var(--sf-white), var(--sf-yellow-20))` · `light-dark(var(--sf-white), var(--sf-lime-20))` · `light-dark(var(--sf-white), var(--sf-green-20))` · `light-dark(var(--sf-white), var(--sf-teal-20))` · `light-dark(var(--sf-white), var(--sf-cyan-20))` · `light-dark(var(--sf-white), var(--sf-sky-20))` · `light-dark(var(--sf-white), var(--sf-blue-20))` · `light-dark(var(--sf-white), var(--sf-indigo-20))` · `light-dark(var(--sf-white), var(--sf-violet-20))` · `light-dark(var(--sf-white), var(--sf-purple-20))` · `light-dark(var(--sf-white), var(--sf-pink-20))` · `light-dark(var(--sf-white), var(--sf-brown-20))` · `light-dark(var(--sf-white), var(--sf-gray-20))` · `light-dark(var(--sf-white), var(--sf-primary-20))` · `light-dark(var(--sf-white), var(--sf-secondary-20))` · `light-dark(var(--sf-white), var(--sf-tertiary-20))` |
 | `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` |
 | `--sf-on-neutral` | `light-dark(var(--sf-white), var(--sf-neutral-20))` |
 | `--sf-on-paper` | `var(--sf-neutral-10)` |
@@ -767,60 +923,188 @@ description: "Полный список переменных, которые о�
 | `--sf-on-secondary` | `light-dark(var(--sf-white), var(--sf-secondary-20))` |
 | `--sf-on-success` | `light-dark(var(--sf-white), var(--sf-success-20))` |
 | `--sf-on-tertiary` | `light-dark(var(--sf-white), var(--sf-tertiary-20))` |
-| `--sf-on-tone-amber-container` | `light-dark(var(--sf-tone-amber-30), var(--sf-tone-amber-85))` |
-| `--sf-on-tone-green-container` | `light-dark(var(--sf-tone-green-30), var(--sf-tone-green-85))` |
-| `--sf-on-tone-indigo-container` | `light-dark(var(--sf-tone-indigo-30), var(--sf-tone-indigo-85))` |
-| `--sf-on-tone-lime-container` | `light-dark(var(--sf-tone-lime-30), var(--sf-tone-lime-85))` |
-| `--sf-on-tone-rose-container` | `light-dark(var(--sf-tone-rose-30), var(--sf-tone-rose-85))` |
-| `--sf-on-tone-sky-container` | `light-dark(var(--sf-tone-sky-30), var(--sf-tone-sky-85))` |
-| `--sf-on-tone-teal-container` | `light-dark(var(--sf-tone-teal-30), var(--sf-tone-teal-85))` |
-| `--sf-on-tone-violet-container` | `light-dark(var(--sf-tone-violet-30), var(--sf-tone-violet-85))` |
+| `--sf-on-tone-amber-container` | `light-dark(var(--sf-amber-10), var(--sf-amber-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-green-container` | `light-dark(var(--sf-green-10), var(--sf-green-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-indigo-container` | `light-dark(var(--sf-indigo-10), var(--sf-indigo-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-lime-container` | `light-dark(var(--sf-lime-10), var(--sf-lime-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-rose-container` | `light-dark(var(--sf-pink-10), var(--sf-pink-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-sky-container` | `light-dark(var(--sf-sky-10), var(--sf-sky-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-teal-container` | `light-dark(var(--sf-teal-10), var(--sf-teal-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-on-tone-violet-container` | `light-dark(var(--sf-purple-10), var(--sf-purple-90))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
 | `--sf-on-warning` | `light-dark(var(--sf-white), var(--sf-warning-20))` |
+| `--sf-orange-10` | `#341100` |
+| `--sf-orange-15` | `#451800` |
+| `--sf-orange-20` | `#562000` |
+| `--sf-orange-25` | `#672800` |
+| `--sf-orange-30` | `#793000` |
+| `--sf-orange-35` | `#8c3900` |
+| `--sf-orange-40` | `#9f4200` |
+| `--sf-orange-5` | `#230900` |
+| `--sf-orange-50` | `#c25713` |
+| `--sf-orange-60` | `#e4702d` |
+| `--sf-orange-70` | `#ff8d4f` |
+| `--sf-orange-80` | `#ffb692` |
+| `--sf-orange-85` | `#ffc9af` |
+| `--sf-orange-90` | `#ffdbcb` |
+| `--sf-orange-95` | `#ffede6` |
+| `--sf-orange-98` | `#fff8f6` |
 | `--sf-paper` | `var(--sf-white)` |
 | `--sf-paper-hover` | `var(--sf-primary-50--alfa-4)` |
 | `--sf-paper-outline` | `var(--sf-neutral-50)` |
 | `--sf-paper-primary` | `var(--sf-primary-40)` |
 | `--sf-paper-select` | `var(--sf-primary-50--alfa-8)` |
+| `--sf-pink-10` | `#3c0028` |
+| `--sf-pink-15` | `#4f0035` |
+| `--sf-pink-20` | `#620043` |
+| `--sf-pink-25` | `#730a50` |
+| `--sf-pink-30` | `#811a5c` |
+| `--sf-pink-35` | `#902868` |
+| `--sf-pink-40` | `#a03575` |
+| `--sf-pink-5` | `#29001a` |
+| `--sf-pink-50` | `#be4e8f` |
+| `--sf-pink-60` | `#dd68a9` |
+| `--sf-pink-70` | `#fd82c5` |
+| `--sf-pink-80` | `#ffafd6` |
+| `--sf-pink-85` | `#ffc4df` |
+| `--sf-pink-90` | `#ffd8e8` |
+| `--sf-pink-95` | `#ffecf2` |
+| `--sf-pink-98` | `#fff8f8` |
+| `--sf-purple-10` | `#340042` |
+| `--sf-purple-15` | `#440056` |
+| `--sf-purple-20` | `#55006a` |
+| `--sf-purple-25` | `#641079` |
+| `--sf-purple-30` | `#712085` |
+| `--sf-purple-35` | `#7e2e92` |
+| `--sf-purple-40` | `#8c3c9f` |
+| `--sf-purple-5` | `#23002d` |
+| `--sf-purple-50` | `#a856ba` |
+| `--sf-purple-60` | `#c470d6` |
+| `--sf-purple-70` | `#e18af3` |
+| `--sf-purple-80` | `#f4aeff` |
+| `--sf-purple-85` | `#f9c2ff` |
+| `--sf-purple-90` | `#fdd6ff` |
+| `--sf-purple-95` | `#ffebfd` |
+| `--sf-purple-98` | `#fff7fa` |
 | `--sf-px` | `1px` |
+| `--sf-red-10` | `#410002` |
+| `--sf-red-15` | `#540003` |
+| `--sf-red-20` | `#690005` |
+| `--sf-red-25` | `#7e0007` |
+| `--sf-red-30` | `#93000a` |
+| `--sf-red-35` | `#a9040e` |
+| `--sf-red-40` | `#bb1919` |
+| `--sf-red-5` | `#2d0001` |
+| `--sf-red-50` | `#df362f` |
+| `--sf-red-60` | `#ff5449` |
+| `--sf-red-70` | `#ff897d` |
+| `--sf-red-80` | `#ffb4ab` |
+| `--sf-red-85` | `#ffc7c0` |
+| `--sf-red-90` | `#ffdad6` |
+| `--sf-red-95` | `#ffedea` |
+| `--sf-red-98` | `#fff8f7` |
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |
 | `--sf-skeleton-bar` | `var(--sf-text-size-1)` |
-| `--sf-skeleton-base` | `var(--sf-neutral-60--alfa-48)` |
+| `--sf-skeleton-base` | `var(--sf-surface-container)` |
 | `--sf-skeleton-line` | `var(--sf-text-height-1)` |
 | `--sf-skeleton-row` | `calc(var(--sf-text-height-1) + 2 * var(--sf-space-1))` |
-| `--sf-tone-amber-30` | `#693c00` |
-| `--sf-tone-amber-60` | `#cb8024` |
-| `--sf-tone-amber-85` | `#ffcb98` |
-| `--sf-tone-amber-container` | `light-dark(var(--sf-tone-amber-50--alfa-20), var(--sf-tone-amber-50--alfa-32))` |
-| `--sf-tone-green-30` | `#00531f` |
-| `--sf-tone-green-85` | `#95e79d` |
-| `--sf-tone-green-container` | `light-dark(var(--sf-tone-green-50--alfa-20), var(--sf-tone-green-50--alfa-32))` |
-| `--sf-tone-indigo-30` | `#3b3d8f` |
-| `--sf-tone-indigo-85` | `#d1d0ff` |
-| `--sf-tone-indigo-container` | `light-dark(var(--sf-tone-indigo-50--alfa-20), var(--sf-tone-indigo-50--alfa-32))` |
-| `--sf-tone-lime-30` | `#4a4900` |
-| `--sf-tone-lime-50` | `#7d7b00` |
-| `--sf-tone-lime-60` | `#979523` |
-| `--sf-tone-lime-85` | `#dcda62` |
-| `--sf-tone-lime-container` | `light-dark(var(--sf-tone-lime-50--alfa-20), var(--sf-tone-lime-50--alfa-32))` |
-| `--sf-tone-rose-30` | `#7c2942` |
-| `--sf-tone-rose-50` | `#b85871` |
-| `--sf-tone-rose-60` | `#d7718b` |
-| `--sf-tone-rose-85` | `#ffc6d1` |
-| `--sf-tone-rose-container` | `light-dark(var(--sf-tone-rose-50--alfa-20), var(--sf-tone-rose-50--alfa-32))` |
-| `--sf-tone-sky-30` | `#004b72` |
-| `--sf-tone-sky-85` | `#afd9ff` |
-| `--sf-tone-sky-container` | `light-dark(var(--sf-tone-sky-50--alfa-20), var(--sf-tone-sky-50--alfa-32))` |
-| `--sf-tone-teal-30` | `#00504b` |
-| `--sf-tone-teal-50` | `#00857e` |
-| `--sf-tone-teal-60` | `#00a299` |
-| `--sf-tone-teal-85` | `#61e9de` |
-| `--sf-tone-teal-container` | `light-dark(var(--sf-tone-teal-50--alfa-20), var(--sf-tone-teal-50--alfa-32))` |
-| `--sf-tone-violet-30` | `#682e76` |
-| `--sf-tone-violet-85` | `#f9c2ff` |
-| `--sf-tone-violet-container` | `light-dark(var(--sf-tone-violet-50--alfa-20), var(--sf-tone-violet-50--alfa-32))` |
+| `--sf-sky-10` | `#001e2c` |
+| `--sf-sky-15` | `#00293b` |
+| `--sf-sky-20` | `#00344a` |
+| `--sf-sky-25` | `#004059` |
+| `--sf-sky-30` | `#004c69` |
+| `--sf-sky-35` | `#005979` |
+| `--sf-sky-40` | `#00668a` |
+| `--sf-sky-5` | `#00131d` |
+| `--sf-sky-50` | `#0080ad` |
+| `--sf-sky-60` | `#009bd1` |
+| `--sf-sky-70` | `#00b7f7` |
+| `--sf-sky-80` | `#7cd0ff` |
+| `--sf-sky-85` | `#a2dcff` |
+| `--sf-sky-90` | `#c4e7ff` |
+| `--sf-sky-95` | `#e3f3ff` |
+| `--sf-sky-98` | `#f5faff` |
+| `--sf-teal-10` | `#002018` |
+| `--sf-teal-15` | `#002c22` |
+| `--sf-teal-20` | `#00382c` |
+| `--sf-teal-25` | `#004436` |
+| `--sf-teal-30` | `#005140` |
+| `--sf-teal-35` | `#005e4b` |
+| `--sf-teal-40` | `#006b56` |
+| `--sf-teal-5` | `#00150e` |
+| `--sf-teal-50` | `#00876d` |
+| `--sf-teal-60` | `#00a484` |
+| `--sf-teal-70` | `#00c19d` |
+| `--sf-teal-80` | `#00e0b6` |
+| `--sf-teal-85` | `#20efc3` |
+| `--sf-teal-90` | `#3efed1` |
+| `--sf-teal-95` | `#b9ffe7` |
+| `--sf-teal-98` | `#e6fff4` |
+| `--sf-tone-amber-30` | `var(--sf-amber-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-amber-60` | `var(--sf-amber-60)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-amber-85` | `var(--sf-amber-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-amber-container` | `light-dark(var(--sf-amber-50--alfa-12), var(--sf-amber-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-green-30` | `var(--sf-green-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-green-85` | `var(--sf-green-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-green-container` | `light-dark(var(--sf-green-50--alfa-12), var(--sf-green-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-indigo-30` | `var(--sf-indigo-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-indigo-85` | `var(--sf-indigo-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-indigo-container` | `light-dark(var(--sf-indigo-50--alfa-12), var(--sf-indigo-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-lime-30` | `var(--sf-lime-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-lime-50` | `var(--sf-lime-50)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-lime-60` | `var(--sf-lime-60)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-lime-85` | `var(--sf-lime-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-lime-container` | `light-dark(var(--sf-lime-50--alfa-12), var(--sf-lime-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-rose-30` | `var(--sf-pink-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-rose-50` | `var(--sf-pink-50)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-rose-60` | `var(--sf-pink-60)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-rose-85` | `var(--sf-pink-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-rose-container` | `light-dark(var(--sf-pink-50--alfa-12), var(--sf-pink-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-sky-30` | `var(--sf-sky-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-sky-85` | `var(--sf-sky-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-sky-container` | `light-dark(var(--sf-sky-50--alfa-12), var(--sf-sky-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-teal-30` | `var(--sf-teal-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-teal-50` | `var(--sf-teal-50)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-teal-60` | `var(--sf-teal-60)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-teal-85` | `var(--sf-teal-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-teal-container` | `light-dark(var(--sf-teal-50--alfa-12), var(--sf-teal-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
+| `--sf-tone-violet-30` | `var(--sf-purple-30)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-violet-85` | `var(--sf-purple-85)` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-primitives-to-hues` журнала |
+| `--sf-tone-violet-container` | `light-dark(var(--sf-purple-50--alfa-12), var(--sf-purple-50--alfa-24))` · устарела: удаляется после 2027-01-01, запись `token-c17-tone-roles-to-hue-roles` журнала |
 | `--sf-transparent-for-focus` | `var(--sf-transparent)` |
+| `--sf-violet-10` | `#280056` |
+| `--sf-violet-15` | `#35006f` |
+| `--sf-violet-20` | `#420486` |
+| `--sf-violet-25` | `#4e1a91` |
+| `--sf-violet-30` | `#5a2a9d` |
+| `--sf-violet-35` | `#6637aa` |
+| `--sf-violet-40` | `#7345b7` |
+| `--sf-violet-5` | `#1a003d` |
+| `--sf-violet-50` | `#8c5fd2` |
+| `--sf-violet-60` | `#a779ee` |
+| `--sf-violet-70` | `#c098ff` |
+| `--sf-violet-80` | `#d6baff` |
+| `--sf-violet-85` | `#e1cbff` |
+| `--sf-violet-90` | `#ecdcff` |
+| `--sf-violet-95` | `#f8edff` |
+| `--sf-violet-98` | `#fef7ff` |
 | `--sf-workspace--layout` | `narrow` · `split` · `wide` |
 | `--sf-workspace--list-edge` | `0` |
+| `--sf-yellow-10` | `#241a00` |
+| `--sf-yellow-15` | `#312400` |
+| `--sf-yellow-20` | `#3e2e00` |
+| `--sf-yellow-25` | `#4b3900` |
+| `--sf-yellow-30` | `#594400` |
+| `--sf-yellow-35` | `#674f00` |
+| `--sf-yellow-40` | `#755b00` |
+| `--sf-yellow-5` | `#171000` |
+| `--sf-yellow-50` | `#937300` |
+| `--sf-yellow-60` | `#b28b00` |
+| `--sf-yellow-70` | `#d3a500` |
+| `--sf-yellow-80` | `#f4c002` |
+| `--sf-yellow-85` | `#ffce41` |
+| `--sf-yellow-90` | `#ffdf92` |
+| `--sf-yellow-95` | `#ffefcf` |
+| `--sf-yellow-98` | `#fff8f1` |

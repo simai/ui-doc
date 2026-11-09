@@ -5,7 +5,7 @@ description: "Поле формы для текста с заголовками,
 
 # Форматированный текст
 
-:badge[sf-input-rich]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-rich]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Форматированный текст — поле формы для текста с оформлением: абзацы, заголовки
 второго–четвёртого уровня, полужирный, курсив, ссылки, списки и цитаты, с
@@ -203,13 +203,13 @@ field.addEventListener('change', () => save(field.value));
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.1.2` |
-| Поставка | выпуск Framework `ui-cb287da78ab1` |
+| Тег | `<sf-input-rich>`, контракт `smart.input-rich` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-b4a77681f0a7` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab` ведёт на панель кнопок (одна остановка), затем в текст, а из текста — дальше из поля; `←`, `→`, `Home` и `End` переходят между кнопками панели; `Ctrl/Cmd+B` и `Ctrl/Cmd+I` включают и выключают полужирный и курсив, `Ctrl/Cmd+K` открывает поле ссылки; `Ctrl/Cmd+Z` отменяет, `Ctrl/Cmd+Shift+Z` и `Ctrl/Cmd+Y` повторяют; `Enter` в поле ссылки применяет адрес, `Esc` закрывает поле. |
-| Источник | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/smart/input-rich` |
-| Правило классов | `simai/ui@cb287da78ab1130641d5a628654dabc3d29e1f7a:distr/rule/rule.json#name=cl-input-rich` |
+| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-rich` |
+| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-rich` |
 
 ## См. также
 

@@ -30,9 +30,9 @@ description: "Задаёт начальный, средний и конечны�
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `from-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
-| `via-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
-| `to-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning` |
+| `from-{значение}` | `--sf-gradient--color-1: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
+| `via-{значение}` | `--sf-gradient--color-2: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
+| `to-{значение}` | `--sf-gradient--color-3: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `success`, `warning`, `info` |
 | `from-surface-0` | `--sf-gradient--color-1: var(--sf-surface-0)` | — |
 | `via-surface-0` | `--sf-gradient--color-2: var(--sf-surface-0)` | — |
 | `to-surface-{значение}` | `--sf-gradient--color-3: var(--sf-surface-{значение})` | `0`, `1`, `2` |
@@ -72,6 +72,7 @@ description: "Задаёт начальный, средний и конечны�
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
 | `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
 | `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
+| `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
 
 ## Применение
 

@@ -240,7 +240,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-textarea-background-color` | Заливка поля в покое; у наведения, фокуса, только чтения, ошибки и недоступного — своя. | `var(--sf-surface-0)`; зависит от вида |
+| `--sf-textarea-background-color` | Заливка поля в покое; у наведения, фокуса, только чтения, ошибки и недоступного — своя. | `var(--sf-transparent)`; зависит от вида |
 | `--sf-textarea-border-color` | Рамка поля в спокойном состоянии. | `var(--sf-outline)`; зависит от вида |
 | `--sf-textarea-color` | Цвет введённого текста; у недоступного — свой. | `var(--sf-on-surface)` |
 | `--sf-textarea-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
@@ -284,7 +284,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-text--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-textarea-text--font-weight` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-textarea-text--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-height-1/2)` | `line-height` |
-| `--sf-textarea-textarea--background-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-background-color, var(--sf-surface-0))` | `background-color` |
+| `--sf-textarea-textarea--background-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-textarea-textarea--border` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
 | `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-textarea-textarea--border-end-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-end-radius` |

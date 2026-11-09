@@ -259,7 +259,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-input-background-color` | Заливка поля в спокойном состоянии; у фокуса, ошибки и недоступности своя. | `var(--sf-surface-0)`; зависит от вида |
+| `--sf-input-background-color` | Заливка поля в спокойном состоянии; у фокуса, ошибки и недоступности своя. | `var(--sf-transparent)`; зависит от вида |
 | `--sf-input-border-color` | Рамка поля в спокойном состоянии. | `var(--sf-outline)`; зависит от вида |
 | `--sf-input-color` | Цвет введённого текста. | `inherit` |
 | `--sf-input-radius` | Скругление углов поля. | `var(--sf-radius--ui)` |
