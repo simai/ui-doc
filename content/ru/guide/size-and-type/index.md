@@ -24,6 +24,7 @@ description: "Эта часть описывает все величины SIMAI
 - [Адаптивные размеры](/ru/guide/size-and-type/adaptive-sizing/) и справочник
   [«Значения вертикальных размеров»](/ru/guide/size-and-type/vertical-sizing/)
 - [Одна лестница размеров](/ru/guide/size-and-type/size-ladder/)
+- [Плотность](/ru/guide/size-and-type/density/) — компактные области
 - [Пространство](/ru/guide/size-and-type/spacing/) и справочник
   [«Значения интервалов»](/ru/guide/size-and-type/spacing-scale/)
 - [Типографика](/ru/guide/size-and-type/typography/) и
