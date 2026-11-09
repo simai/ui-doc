@@ -5,7 +5,7 @@ description: "Компактная панель настроек: переклю
 
 # Настройки
 
-:badge[sf-settings]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-settings]{variant=tonal scheme=primary size=1/2} :badge[1.0.3]{variant=outline scheme=on-surface size=1/2}
 
 Настройки — компактная панель с несколькими настройками, которые человек
 меняет на месте: тема и размер текста у читалки, плотность таблицы, звук в
@@ -272,13 +272,13 @@ applyTheme(settings.values.theme);
 
 | | |
 |:---|:---|
-| Тег | `<sf-settings>`, контракт `smart.settings` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-settings>`, контракт `smart.settings` версии `1.0.3` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как меню; название компонент ставит сам; с клавиатуры: `Tab` ставит фокус на панель (одна остановка), стрелки переходят по строкам, `Home` и `End` — к первой и последней; `Enter` или `Пробел` переключают, выбирают вариант или открывают вложенный список, `→` уходит внутрь, `←` и `Esc` возвращают назад; ползунок двигают `←` и `→`, `Esc` на верхнем уровне закрывает панель и возвращает фокус на кнопку. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/settings` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-settings` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/settings` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-settings` |
 
 ## См. также
 

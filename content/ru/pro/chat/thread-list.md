@@ -5,7 +5,7 @@ description: "Разговоры человека, новые сверху: гр
 
 # Список разговоров
 
-:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-threads]{variant=tonal scheme=primary size=1/2} :badge[2.0.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-threads>` — разговоры человека, новые сверху: с ассистентом или
 между людьми. Он группирует их по дню последнего изменения, отмечает
@@ -129,7 +129,7 @@ noted in `SF.deprecations`.
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -137,7 +137,7 @@ noted in `SF.deprecations`.
 |:---|:---|
 | Тег | `<sf-chat-threads>` |
 | Назначение | Разговоры человека, новые сверху: по дням, открытый отмечен, переименование на месте, архив и действия через меню Framework, одна остановка Tab, следующая страница — по достижении конца. |
-| Контракт | `smart.chat-threads`, версия `1.7.2` |
+| Контракт | `smart.chat-threads`, версия `2.0.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -153,7 +153,7 @@ noted in `SF.deprecations`.
 - `no-create` — `boolean`, по умолчанию `false`. Без кнопки «Новый разговор».
 - `no-manage` — `boolean`, по умолчанию `false`. Без действий строки: нет меню и F2.
 - `no-archive` — `boolean`, по умолчанию `false`. Без архива: нет перехода в него и нет «В архив» среди действий строки.
-- `group-by` — `string`, по умолчанию `day`, значения: `day`, `none`. day: «Сегодня», «Вчера», «Раньше» по updated_at в часовом поясе читателя. none: один список.
+- `group-by` — `string`, по умолчанию `day`, значения: `day`, `none`. `day` — группы «Сегодня», «Вчера», день недели, дата по `updated-at` в часовом поясе читателя (как в `sf-list`). `none` — один список.
 - `label` — `string`. Доступное имя навигации; пусто — «Разговоры» или «Архив» на языке страницы.
 - `loading` — `boolean`, по умолчанию `false`. Форма списка, пока загружается первая страница.
 - `status` — `string`, по умолчанию пусто. Фраза вместо списка (ошибка); пустая строка её убирает.
@@ -202,5 +202,5 @@ noted in `SF.deprecations`.
 
 ### Источник
 
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-threads`
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-threads`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-threads/rule.js#name=cl-chat-threads`

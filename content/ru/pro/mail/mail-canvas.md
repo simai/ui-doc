@@ -5,7 +5,7 @@ description: "Готовое письмо в рамке, которая ниче
 
 # Холст письма
 
-:badge[sf-mail-canvas]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-canvas]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-canvas>` — холст редактора писем: готовое письмо в рамке, которая ничего
 не запускает, переключатель ширины над ним, две заметки о письме («устарел» и
@@ -177,7 +177,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -185,7 +185,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 |:---|:---|
 | Тег | `<sf-mail-canvas>` |
 | Назначение | Холст SIMAI Email Editor: готовое письмо в рамке, которая ничего не запускает, переключатель ширины, заметки об устаревании и весе и sf-editor-overlay сверху. Элемент не знает письма, манифеста блоков и рендерера: приложение передаёт HTML и данные о нём и слышит, что сделал человек. |
-| Контракт | `smart.mail-canvas`, версия `1.1.1` |
+| Контракт | `smart.mail-canvas`, версия `1.1.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -204,7 +204,7 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 - `box-attribute` — `string`, по умолчанию пусто. Атрибут, которым отмечена рамка блока внутри него: по этой рамке проходит линия оверлея. Пусто — сам блок. Имя вида `data-`.
 - `paper` — `string`, по умолчанию пусто. Селектор бумаги письма внутри рамки: бумага отбрасывает тень, когда рамка шире письма. Иначе тень отбрасывает рамка.
 - `overlay-target` — `string`, по умолчанию пусто. id оверлея sf-editor-overlay, поставленного приложением в другом месте страницы, вне предка с contain (simai/ui-source#58). Пусто — оверлей стоит в разметке самого элемента.
-- `widths` — `array` из `object`, по умолчанию `[]`. Предлагаемые ширины, в форме sf-button-group: {value, label, icon, icon-only, aria-label}. value — ширина письма; frame — ширина рамки в пикселях, если она отличается от value. Пусто — переключателя нет, и рамка занимает всю область.
+- `widths` — `array` из `object`, по умолчанию `[]`. Предлагаемые ширины в формате `sf-segmented`: `{value, label, icon, icon-only, aria-label}`. `value` — ширина письма; `frame` — ширина рамки в пикселях, если отличается от `value`. Пусто — переключателя нет, рамка занимает всё место.
 - `weight` — `object`, по умолчанию `{}`. Насколько тяжёл HTML письма, {bytes, max} в килобайтах, когда он приближается к порогу обрезки. Пусто — заметки нет.
 - `items` — `array` из `object`, по умолчанию `[]`. Что есть в письме для оверлея и что считается блоком: {id, label, kind, parent, editable, rect}. Метка в письме, чьего id здесь нет, блоком не считается.
 - `actions` — `array` из `object`, по умолчанию `[]`. Панель действий выбранного блока: до 16 `{id, label, icon, shortcut, disabled, tone}`, с собственной проверкой оверлея.
@@ -244,5 +244,5 @@ Tab не входят. Клавиши дерева и панели — у `sf-ed
 
 ### Источник
 
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/mail-canvas`
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-canvas`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-canvas/rule.js#name=cl-mail-canvas`

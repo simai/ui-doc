@@ -5,7 +5,7 @@ description: "Поле формы для выбора людей или объе
 
 # Выбор из поиска
 
-:badge[sf-input-lookup]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-lookup]{variant=tonal scheme=primary size=1/2} :badge[1.2.4]{variant=outline scheme=on-surface size=1/2}
 
 Выбор из поиска даёт выбрать людей или объекты по имени: человек набирает имя,
 видит строки с аватаром, именем и подписью и выбирает одно значение или
@@ -216,13 +216,13 @@ lookup.provider = async (query, {cursor, limit, signal}) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-lookup>`, контракт `smart.input-lookup` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-input-lookup>`, контракт `smart.input-lookup` версии `1.2.4` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как поле со списком; нужна подпись или `aria-label`; с клавиатуры: набор текста ищет, `↓` открывает список и идёт вниз, `↑` — вверх, `Home` и `End` — к началу и концу открытого списка; `Enter` выбирает строку, а в поле с одним значением ещё и закрывает список; `Esc` закрывает список, второй `Esc` очищает запрос; `Backspace` в пустом поле поиска убирает последнюю плашку; `Tab` проходит по кнопкам удаления плашек и уходит из поля. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/input-lookup` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-input-lookup` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/input-lookup` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-input-lookup` |
 
 ## См. также
 

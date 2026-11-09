@@ -5,7 +5,7 @@ description: "Факты парами «подпись — значение»: �
 
 # Список сведений
 
-:badge[sf-list-description]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-description]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
 
 Показывает факты парами «подпись — значение»: сводку сайта, сведения о
 сервере, шапку записи, параметры задания, данные лицензии. Значение может
@@ -187,13 +187,13 @@ facts.addEventListener('sf-list-description-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-list-description>`, контракт `smart.list-description` версии `1.0.2` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab` проходит по ссылкам, кнопкам копирования и, при `overflow="truncate"`, по обрезанным значениям; `Enter` открывает ссылку или копирует. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/list-description` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-list-description` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/list-description` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-list-description` |
 
 ## См. также
 

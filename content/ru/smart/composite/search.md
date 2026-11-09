@@ -5,7 +5,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 # Поиск по сайту
 
-:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Поиск по сайту открывается кнопкой в шапке или клавишами `Command/Control+K` и
 `/`: крупное скруглённое поле и карточка результатов под ним, над лёгким
@@ -343,13 +343,13 @@ search.addEventListener('sf-search-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-search>`, контракт `smart.search` версии `1.2.3` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-search>`, контракт `smart.search` версии `1.5.0` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+K` или `/` вне текстового поля открывают окно; `↓` и `↑` двигают выбор по результатам, `Enter` открывает выбранный; `Esc` очищает поле, а в пустом поле закрывает окно и возвращает фокус. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/search` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-search` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/search` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-search` |
 
 ## См. также
 

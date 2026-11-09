@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.component-set",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "SIMAI Framework Component Set",
   "appliesTo": [
     "simai.framework.component-set"
@@ -170,23 +170,23 @@
   "references": [
     {
       "id": "simai.component-package",
-      "version": "1.1.1",
-      "path": "../../simai.component-package/1.1.1/standard.json",
-      "sha256": "f6c675628da5ee977faca1d1fb1400423cf29257eb3d0c89790fddece1ed1315",
+      "version": "1.1.2",
+      "path": "../../simai.component-package/1.1.2/standard.json",
+      "sha256": "9f1a9c57110e08f7a523dc3c02a223477f4e831a616b4d2673ec7674efaa9529",
       "description": "The package folder of a set follows it as published, except own-element-prefix and delivered-in-owners-distribution, which this standard replaces."
     },
     {
       "id": "simai.change-lifecycle",
-      "version": "1.0.0",
-      "path": "../../simai.change-lifecycle/1.0.0/standard.json",
-      "sha256": "e63f4550d2c967e4f65c917677be849a6640614bad33c00c31cb0c6aef7ed860",
+      "version": "1.0.1",
+      "path": "../../simai.change-lifecycle/1.0.1/standard.json",
+      "sha256": "3f3790a95d540c1453ba33848e2463301c71a13510178b93c8ba90a78c9b26a2",
       "description": "How a set's public names leave, the set's owner in the role of SIMAI Framework; a bundle's alias leaves the same way."
     },
     {
       "id": "simai.linkage",
-      "version": "1.0.0",
-      "path": "../../simai.linkage/1.0.0/standard.json",
-      "sha256": "0690a30fd14505cbfa1d66dc8ca0e5003e5fd1e2262c2618f587e9ff4047da02",
+      "version": "1.0.1",
+      "path": "../../simai.linkage/1.0.1/standard.json",
+      "sha256": "8f07cdd5f3c7b117ada3c66142e2c3949b1acc2132b3553a0dc4783384c9a603",
       "description": "The linkage gate every set passes: passports, inventory per release, compare."
     },
     {
@@ -210,7 +210,7 @@
       "publication": "ui-doc",
       "status": "draft",
       "scope_note": "Everything outside the free SIMAI Framework, in sets: one repository per set with its components, its documentation site and its demonstrations; one passport form, one name registry, one set of gates, one release route, one compatibility index and one connection line for every set. For components outside SIMAI Framework it supersedes simai.component-package, which stays the standard of the package folder a set is built from and of the pro and larena packages until pro moves onto sets.",
-      "relation_to_component_package": "Supersedes, by reference. simai.component-set does not extend simai.component-package: an extends would inherit own-element-prefix (a set uses sf-) and delivered-in-owners-distribution (a set has one release route), and the envelope cannot override an inherited requirement. It references 1.1.1 by digest and keeps every other requirement of it for a set's package folder.",
+      "relation_to_component_package": "Supersedes, by reference. simai.component-set does not extend simai.component-package: an extends would inherit own-element-prefix (a set uses sf-) and delivered-in-owners-distribution (a set has one release route), and the envelope cannot override an inherited requirement. It references 1.1.2 by digest and keeps every other requirement of it for a set's package folder.",
       "decisions": [
         "ui-control control/decisions/2026-11-03-component-sets.md (owner, 2026-11-03, points 1-11)",
         "ui-control control/decisions/2026-11-02-smart-component-naming.md (owner, 2026-11-02: set-block-variant)",
@@ -244,7 +244,7 @@
         "framework-first is a review item with no gate",
         "the set view (data views: table, kanban, calendar, gantt, list) awaits the owner; the registry holds the family view for it as pending"
       ],
-      "reissue": "Issued as 1.1.0 on 2026-11-07: one-framework-pair allows a pair receipt of an unchanged release instead of a new release, one-release-route names its asset, one-compatibility-index lets a row list the pairs it was re-receipted over, and the index form is pinned at 1.1.0 (the optional pairs). Every 1.0.0 passport, release and index row still holds. 1.0.0 keeps its published bytes under contracts/standards/history."
+      "reissue": "Re-issued as 1.1.1 on 2026-11-08 because three standards it references by digest were re-issued: simai.change-lifecycle 1.0.1 (the change journal schema 1.3.0 pinned), simai.component-package 1.1.2 and simai.linkage 1.0.1; requirements are unchanged since 1.1.0, and 1.1.0 keeps its published bytes under contracts/standards/history. Before: Issued as 1.1.0 on 2026-11-07: one-framework-pair allows a pair receipt of an unchanged release instead of a new release, one-release-route names its asset, one-compatibility-index lets a row list the pairs it was re-receipted over, and the index form is pinned at 1.1.0 (the optional pairs). Every 1.0.0 passport, release and index row still holds. 1.0.0 keeps its published bytes under contracts/standards/history."
     }
   }
 }

@@ -185,7 +185,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
-| `--sf-on-disable` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
+| `--sf-on-disable` | `var(--sf-on-surface-disabled)` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` |
 | `--sf-on-primary-container` | `light-dark(var(--sf-primary-10), var(--sf-primary-90))` |
@@ -212,7 +212,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
-| `--sf-disable` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-disable` | `var(--sf-surface-disabled)` |
 
 ## Применение
 

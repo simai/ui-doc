@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-654 переменных, которые объявляет ядро, со значениями по умолчанию.
+714 переменных, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -61,37 +61,58 @@ description: "Полный список переменных, которые о�
 | `--sf-on-secondary-container-graphic` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
 | `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` |
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
-| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-primary)` |
+| `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-surface-media)` · `var(--sf-on-primary)` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
-| `--sf-on-surface-container--variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` |
+| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-container--variant` | `var(--sf-on-surface-container-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` · `var(--sf-white--alfa-80)` |
+| `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
 | `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
+| `--sf-on-surface-media` | `var(--sf-white)` |
 | `--sf-on-surface-muted` | `light-dark(var(--sf-neutral-60), var(--sf-neutral-40))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-on-primary)` |
+| `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
+| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-white--alfa-80)` · `var(--sf-on-primary)` |
 | `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
 | `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-on-warning-container` | `light-dark(var(--sf-warning-10), var(--sf-warning-90))` |
 | `--sf-on-warning-container-graphic` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
-| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
-| `--sf-surface-1` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-0` | `var(--sf-surface-page)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-surface-1` | `var(--sf-surface-area)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-surface-2` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-15))` |
 | `--sf-surface-3` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-20))` |
 | `--sf-surface-4` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-25))` |
 | `--sf-surface-5` | `light-dark(var(--sf-neutral-80), var(--sf-neutral-30))` |
-| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
-| `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` |
+| `--sf-surface-area` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-card` | `light-dark(var(--sf-surface-page), var(--sf-surface-2))` |
+| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` · `var(--sf-white--alfa-16)` |
+| `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` · `var(--sf-white--alfa-24)` |
+| `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` · `var(--sf-white--alfa-20)` |
+| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
+| `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-inverse-hover` | `light-dark(var(--sf-neutral-25), var(--sf-neutral-85))` |
-| `--sf-surface-overlay` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
+| `--sf-surface-media` | `var(--sf-black--alfa-48)` |
+| `--sf-surface-media-active` | `var(--sf-black--alfa-80)` |
+| `--sf-surface-media-hover` | `var(--sf-black--alfa-64)` |
+| `--sf-surface-overlay` | `var(--sf-surface-veil)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` |
-| `--sf-surface-transparent-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
-| `--sf-surface-transparent-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
-| `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
-| `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
+| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-place` | `var(--sf-surface-page)` |
+| `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
+| `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
+| `--sf-surface-state-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
+| `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` · `var(--sf-white--alfa-4)` |
+| `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` · `var(--sf-white--alfa-8)` |
+| `--sf-surface-transparent-active` | `var(--sf-surface-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-surface-transparent-hover` | `var(--sf-surface-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-surface-transparent-select` | `var(--sf-surface-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
 | `--sf-surface-well` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-5))` |
 
 ### Цвет: акцентные роли
@@ -110,17 +131,27 @@ description: "Полный список переменных, которые о�
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
 | `--sf-error-container-active` | `light-dark(var(--sf-error-50--alfa-20), var(--sf-error-50--alfa-32))` |
 | `--sf-error-container-hover` | `light-dark(var(--sf-error-50--alfa-16), var(--sf-error-50--alfa-28))` |
+| `--sf-error-container-strong` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
 | `--sf-error-hover` | `light-dark(var(--sf-error-35), var(--sf-error-85))` |
-| `--sf-error-transparent-active` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-90--alfa-12))` |
-| `--sf-error-transparent-hover` | `light-dark(var(--sf-error-50--alfa-4), var(--sf-error-90--alfa-4))` |
-| `--sf-error-transparent-overlay` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
-| `--sf-error-transparent-select` | `light-dark(var(--sf-error-50--alfa-8), var(--sf-error-90--alfa-8))` |
+| `--sf-error-outline` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-error-state-active` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-90--alfa-12))` |
+| `--sf-error-state-hover` | `light-dark(var(--sf-error-50--alfa-4), var(--sf-error-90--alfa-4))` |
+| `--sf-error-state-select` | `light-dark(var(--sf-error-50--alfa-8), var(--sf-error-90--alfa-8))` |
+| `--sf-error-transparent-active` | `var(--sf-error-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-error-transparent-hover` | `var(--sf-error-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-error-transparent-select` | `var(--sf-error-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-info` | `light-dark(var(--sf-info-40), var(--sf-info-80))` |
 | `--sf-info-active` | `light-dark(var(--sf-info-30), var(--sf-info-90))` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
 | `--sf-info-container-active` | `light-dark(var(--sf-info-50--alfa-20), var(--sf-info-50--alfa-32))` |
 | `--sf-info-container-hover` | `light-dark(var(--sf-info-50--alfa-16), var(--sf-info-50--alfa-28))` |
+| `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 | `--sf-info-hover` | `light-dark(var(--sf-info-35), var(--sf-info-85))` |
+| `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
+| `--sf-info-state-active` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-90--alfa-12))` |
+| `--sf-info-state-hover` | `light-dark(var(--sf-info-50--alfa-4), var(--sf-info-90--alfa-4))` |
+| `--sf-info-state-select` | `light-dark(var(--sf-info-50--alfa-8), var(--sf-info-90--alfa-8))` |
 | `--sf-link` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-link--underline-dashed` | `var(--sf-a6)` |
 | `--sf-link--underline-dotted` | `var(--sf-a3)` |
@@ -135,75 +166,101 @@ description: "Полный список переменных, которые о�
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
 | `--sf-primary-container-active` | `light-dark(var(--sf-primary-50--alfa-20), var(--sf-primary-50--alfa-32))` |
 | `--sf-primary-container-hover` | `light-dark(var(--sf-primary-50--alfa-16), var(--sf-primary-50--alfa-28))` |
+| `--sf-primary-container-strong` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
 | `--sf-primary-hover` | `light-dark(var(--sf-primary-35), var(--sf-primary-85))` |
-| `--sf-primary-transparent-active` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-90--alfa-12))` |
-| `--sf-primary-transparent-hover` | `light-dark(var(--sf-primary-50--alfa-4), var(--sf-primary-90--alfa-4))` |
-| `--sf-primary-transparent-overlay` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
-| `--sf-primary-transparent-select` | `light-dark(var(--sf-primary-50--alfa-8), var(--sf-primary-90--alfa-8))` |
+| `--sf-primary-outline` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-primary-state-active` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-90--alfa-12))` |
+| `--sf-primary-state-hover` | `light-dark(var(--sf-primary-50--alfa-4), var(--sf-primary-90--alfa-4))` |
+| `--sf-primary-state-select` | `light-dark(var(--sf-primary-50--alfa-8), var(--sf-primary-90--alfa-8))` |
+| `--sf-primary-transparent-active` | `var(--sf-primary-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-primary-transparent-hover` | `var(--sf-primary-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-primary-transparent-select` | `var(--sf-primary-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-secondary` | `light-dark(var(--sf-secondary-40), var(--sf-secondary-80))` |
 | `--sf-secondary-active` | `light-dark(var(--sf-secondary-30), var(--sf-secondary-90))` |
 | `--sf-secondary-container` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` |
 | `--sf-secondary-container-active` | `light-dark(var(--sf-secondary-50--alfa-20), var(--sf-secondary-50--alfa-32))` |
 | `--sf-secondary-container-hover` | `light-dark(var(--sf-secondary-50--alfa-16), var(--sf-secondary-50--alfa-28))` |
+| `--sf-secondary-container-strong` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
 | `--sf-secondary-hover` | `light-dark(var(--sf-secondary-35), var(--sf-secondary-85))` |
-| `--sf-secondary-transparent-active` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-90--alfa-12))` |
-| `--sf-secondary-transparent-hover` | `light-dark(var(--sf-secondary-50--alfa-4), var(--sf-secondary-90--alfa-4))` |
-| `--sf-secondary-transparent-overlay` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
-| `--sf-secondary-transparent-select` | `light-dark(var(--sf-secondary-50--alfa-8), var(--sf-secondary-90--alfa-8))` |
+| `--sf-secondary-outline` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
+| `--sf-secondary-state-active` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-90--alfa-12))` |
+| `--sf-secondary-state-hover` | `light-dark(var(--sf-secondary-50--alfa-4), var(--sf-secondary-90--alfa-4))` |
+| `--sf-secondary-state-select` | `light-dark(var(--sf-secondary-50--alfa-8), var(--sf-secondary-90--alfa-8))` |
+| `--sf-secondary-transparent-active` | `var(--sf-secondary-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-secondary-transparent-hover` | `var(--sf-secondary-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-secondary-transparent-select` | `var(--sf-secondary-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-success` | `light-dark(var(--sf-success-40), var(--sf-success-80))` |
 | `--sf-success-active` | `light-dark(var(--sf-success-30), var(--sf-success-90))` |
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
 | `--sf-success-container-active` | `light-dark(var(--sf-success-50--alfa-20), var(--sf-success-50--alfa-32))` |
 | `--sf-success-container-hover` | `light-dark(var(--sf-success-50--alfa-16), var(--sf-success-50--alfa-28))` |
+| `--sf-success-container-strong` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
 | `--sf-success-hover` | `light-dark(var(--sf-success-35), var(--sf-success-85))` |
-| `--sf-success-transparent-active` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-90--alfa-12))` |
-| `--sf-success-transparent-hover` | `light-dark(var(--sf-success-50--alfa-4), var(--sf-success-90--alfa-4))` |
-| `--sf-success-transparent-overlay` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
-| `--sf-success-transparent-select` | `light-dark(var(--sf-success-50--alfa-8), var(--sf-success-90--alfa-8))` |
+| `--sf-success-outline` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
+| `--sf-success-state-active` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-90--alfa-12))` |
+| `--sf-success-state-hover` | `light-dark(var(--sf-success-50--alfa-4), var(--sf-success-90--alfa-4))` |
+| `--sf-success-state-select` | `light-dark(var(--sf-success-50--alfa-8), var(--sf-success-90--alfa-8))` |
+| `--sf-success-transparent-active` | `var(--sf-success-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-success-transparent-hover` | `var(--sf-success-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-success-transparent-select` | `var(--sf-success-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-tertiary` | `light-dark(var(--sf-tertiary-40), var(--sf-tertiary-80))` |
 | `--sf-tertiary-active` | `light-dark(var(--sf-tertiary-30), var(--sf-tertiary-90))` |
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
 | `--sf-tertiary-container-active` | `light-dark(var(--sf-tertiary-50--alfa-20), var(--sf-tertiary-50--alfa-32))` |
 | `--sf-tertiary-container-hover` | `light-dark(var(--sf-tertiary-50--alfa-16), var(--sf-tertiary-50--alfa-28))` |
+| `--sf-tertiary-container-strong` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
 | `--sf-tertiary-hover` | `light-dark(var(--sf-tertiary-35), var(--sf-tertiary-85))` |
-| `--sf-tertiary-transparent-active` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-90--alfa-12))` |
-| `--sf-tertiary-transparent-hover` | `light-dark(var(--sf-tertiary-50--alfa-4), var(--sf-tertiary-90--alfa-4))` |
-| `--sf-tertiary-transparent-overlay` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
-| `--sf-tertiary-transparent-select` | `light-dark(var(--sf-tertiary-50--alfa-8), var(--sf-tertiary-90--alfa-8))` |
+| `--sf-tertiary-outline` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
+| `--sf-tertiary-state-active` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-90--alfa-12))` |
+| `--sf-tertiary-state-hover` | `light-dark(var(--sf-tertiary-50--alfa-4), var(--sf-tertiary-90--alfa-4))` |
+| `--sf-tertiary-state-select` | `light-dark(var(--sf-tertiary-50--alfa-8), var(--sf-tertiary-90--alfa-8))` |
+| `--sf-tertiary-transparent-active` | `var(--sf-tertiary-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-tertiary-transparent-hover` | `var(--sf-tertiary-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-tertiary-transparent-select` | `var(--sf-tertiary-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-warning` | `light-dark(var(--sf-warning-40), var(--sf-warning-80))` |
 | `--sf-warning-active` | `light-dark(var(--sf-warning-30), var(--sf-warning-90))` |
 | `--sf-warning-container` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-50--alfa-24))` |
 | `--sf-warning-container-active` | `light-dark(var(--sf-warning-50--alfa-20), var(--sf-warning-50--alfa-32))` |
 | `--sf-warning-container-hover` | `light-dark(var(--sf-warning-50--alfa-16), var(--sf-warning-50--alfa-28))` |
+| `--sf-warning-container-strong` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
 | `--sf-warning-hover` | `light-dark(var(--sf-warning-35), var(--sf-warning-85))` |
-| `--sf-warning-transparent-active` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-90--alfa-12))` |
-| `--sf-warning-transparent-hover` | `light-dark(var(--sf-warning-50--alfa-4), var(--sf-warning-90--alfa-4))` |
-| `--sf-warning-transparent-overlay` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
-| `--sf-warning-transparent-select` | `light-dark(var(--sf-warning-50--alfa-8), var(--sf-warning-90--alfa-8))` |
+| `--sf-warning-outline` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-warning-state-active` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-90--alfa-12))` |
+| `--sf-warning-state-hover` | `light-dark(var(--sf-warning-50--alfa-4), var(--sf-warning-90--alfa-4))` |
+| `--sf-warning-state-select` | `light-dark(var(--sf-warning-50--alfa-8), var(--sf-warning-90--alfa-8))` |
+| `--sf-warning-transparent-active` | `var(--sf-warning-state-active)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-warning-transparent-hover` | `var(--sf-warning-state-hover)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-warning-transparent-select` | `var(--sf-warning-state-select)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 
 ### Цвет: границы и отключённое
 
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
-| `--sf-disable` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-disable` | `var(--sf-surface-disabled)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-focus` | `light-dark(var(--sf-primary-50), var(--sf-primary-90))` |
 | `--sf-focus--color` | `var(--sf-focus)` |
 | `--sf-focus--offset` | `var(--sf-px)` |
 | `--sf-focus--style` | `solid` |
 | `--sf-focus--width` | `var(--sf-focus-outline-width)` |
 | `--sf-focus-outline-width` | `calc(var(--sf-px) * 2)` |
-| `--sf-on-disable` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
-| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
+| `--sf-on-disable` | `var(--sf-on-surface-disabled)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` · `var(--sf-white--alfa-64)` |
 | `--sf-outline--alfa` | `1` |
-| `--sf-outline-disable` | `light-dark(var(--sf-neutral-50--alfa-48), var(--sf-neutral-60--alfa-48))` |
-| `--sf-outline-error` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
-| `--sf-outline-info` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
-| `--sf-outline-primary` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
-| `--sf-outline-secondary` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
-| `--sf-outline-success` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
-| `--sf-outline-tertiary` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
-| `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-outline-warning` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-outline-disable` | `var(--sf-outline-disabled)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-disabled` | `light-dark(var(--sf-neutral-50--alfa-48), var(--sf-neutral-60--alfa-48))` |
+| `--sf-outline-error` | `var(--sf-error-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-info` | `var(--sf-info-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-primary` | `var(--sf-primary-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-secondary` | `var(--sf-secondary-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-success` | `var(--sf-success-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` · `var(--sf-white--alfa-24)` |
+| `--sf-outline-warning` | `var(--sf-warning-outline)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 
 ### Текст
 
@@ -443,16 +500,16 @@ description: "Полный список переменных, которые о�
 | `--sf-border--style` | `solid` |
 | `--sf-border--width` | `0` |
 | `--sf-divider--alfa` | `1` |
-| `--sf-elevation-1--shadow` | `var(--sf-ui-shadow-1), var(--sf-shadow--rim)` |
-| `--sf-elevation-1--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-2))` |
+| `--sf-elevation-1--shadow` | `var(--sf-shadow-card)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-elevation-1--surface` | `var(--sf-surface-card)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-elevation-2--shadow` | `var(--sf-ui-shadow-2), var(--sf-shadow--rim)` |
-| `--sf-elevation-2--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-3))` |
-| `--sf-elevation-3--shadow` | `var(--sf-ui-shadow-3), var(--sf-shadow--rim)` |
-| `--sf-elevation-3--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-4))` |
-| `--sf-elevation-4--shadow` | `var(--sf-ui-shadow-4), var(--sf-shadow--rim)` |
-| `--sf-elevation-4--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-5))` |
+| `--sf-elevation-2--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
+| `--sf-elevation-3--shadow` | `var(--sf-shadow-popup)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-elevation-3--surface` | `var(--sf-surface-popup)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-elevation-4--shadow` | `var(--sf-shadow-popup-nested)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-elevation-4--surface` | `var(--sf-surface-popup-nested)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-elevation-5--shadow` | `var(--sf-ui-shadow-5), var(--sf-shadow--rim)` |
-| `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-5))` |
+| `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
 | `--sf-radius--ui` | `var(--sf-radius-1\/2)` |
 | `--sf-radius-0` | `var(--sf-a0)` |
@@ -472,6 +529,9 @@ description: "Полный список переменных, которые о�
 | `--sf-shadow--color-shading` | `var(--sf-black--alfa-4)` · `color-mix(in srgb, var(--sf-transparent), var(--sf-shadow--color, var(--sf-black, #000)) var(--sf-shadow--alfa-shade))` |
 | `--sf-shadow--level-ratio` | `1` |
 | `--sf-shadow--rim` | `0 0 0 0 transparent` |
+| `--sf-shadow-card` | `var(--sf-ui-shadow-1), var(--sf-shadow--rim)` |
+| `--sf-shadow-popup` | `var(--sf-ui-shadow-3), var(--sf-shadow--rim)` |
+| `--sf-shadow-popup-nested` | `var(--sf-ui-shadow-4), var(--sf-shadow--rim)` |
 
 ### Движение
 
@@ -684,10 +744,10 @@ description: "Полный список переменных, которые о�
 | `--sf-neutral-container-active` | `light-dark(var(--sf-neutral-80), var(--sf-neutral-40))` |
 | `--sf-neutral-container-hover` | `light-dark(var(--sf-neutral-85), var(--sf-neutral-35))` |
 | `--sf-neutral-hover` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` |
-| `--sf-on-elevation-1--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-elevation-1--variant` | `var(--sf-on-surface-card-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-on-elevation-2--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-on-elevation-3--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-on-elevation-4--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
+| `--sf-on-elevation-3--variant` | `var(--sf-on-surface-popup-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
+| `--sf-on-elevation-4--variant` | `var(--sf-on-surface-popup-nested-variant)` · устарела: удаляется после 2027-01-01, запись `token-c16-theme-role-names` журнала |
 | `--sf-on-elevation-5--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-on-error` | `light-dark(var(--sf-white), var(--sf-error-20))` |
 | `--sf-on-info` | `light-dark(var(--sf-white), var(--sf-info-20))` |

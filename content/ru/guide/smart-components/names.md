@@ -283,7 +283,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-0c23f6a0af12` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-d6f01121baca` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -309,6 +309,14 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="neutral"` | `status="clear"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | метод `dismiss()` | `close()` | работает как псевдоним | — |
+
+#### `<sf-alert-bar>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `items.level="error"` | `items.level="danger"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `sf-alert-bar--error` | `sf-alert-bar--danger` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `--sf-alert-bar-error-background-color` | `--sf-alert-bar-danger-background` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-avatar>`
 
@@ -355,6 +363,9 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `appearance="link"` | `appearance="ghost"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="danger"` | `status="error"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `status="danger"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `appearance="ghost"` | `appearance="link"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-button-copy>`
 
@@ -364,16 +375,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | событие `sf-button-copy-copy-failed` | `sf-copy-error` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-button-copy-copied` | `sf-copy-button-copied` | работает как псевдоним | — |
 | событие `sf-button-copy-copy-failed` | `sf-copy-button-copy-failed` | работает как псевдоним | — |
-
-#### `<sf-button-group>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `spacing` | `tightness` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="compact"` | `tightness="low"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="comfortable"` | `tightness="high"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `change` | `sf-button-group-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 
 #### `<sf-button-icon>`
 
@@ -387,6 +388,10 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `spacing="spacious"` | `tightness="highest"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `status="danger"` | `status="error"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `appearance="ghost"` | `appearance="link"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `appearance="tonal"` | `appearance="surface"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `scheme="on-surface-variant"` | `scheme="secondary"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-chat-composer>`
 
@@ -687,6 +692,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
+| `entries.status="danger"` | `entries.status="error"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-menu-context-select` | `sf-context-menu-select` | работает как псевдоним | — |
 | событие `sf-menu-context-change` | `sf-context-menu-change` | работает как псевдоним | — |
 | событие `sf-menu-context-changed` | `sf-context-menu-changed` | работает как псевдоним | — |
@@ -782,6 +788,15 @@ id?}` значит «перестать ждать», а `wait` принимае
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | событие `sf-resizer-resize` | `sf-resize` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+
+#### `<sf-segmented>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `appearance="track"` | `appearance="segmented"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `appearance="buttons"` | `appearance="default"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| событие `change` | `sf-button-group-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+| `spacing` | `tightness` | работает как псевдоним | — |
 
 #### `<sf-skeleton>`
 

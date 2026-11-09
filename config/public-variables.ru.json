@@ -279,6 +279,19 @@
     "The inset: space between the menu's edge and a row's highlight, before and after; a search header's text and a scrollbar's gaps on either side of its thumb follow it.": "Отступ от края меню до подсветки строки слева и справа; по нему же стоят текст шапки поиска и зазоры полосы прокрутки по сторонам ползунка.",
     "Space above the first row's highlight and below the last; a search header is a row's height and this space above and below.": "Отступ над подсветкой первой строки и под последней; шапка поиска — высота строки и этот отступ сверху и снизу.",
     "The corner radius of a row's highlight -- hover, chosen, current -- a control's by default.": "Скругление подсветки строки — при наведении, у выбранной и текущей; по умолчанию как у элементов управления.",
-    "How far from the top of the view a sticky menu stops (sticky): the height of a fixed header above it.": "На каком расстоянии от верха окна останавливается закреплённое меню (`sticky`): высота закреплённой шапки над ним."
+    "How far from the top of the view a sticky menu stops (sticky): the height of a fixed header above it.": "На каком расстоянии от верха окна останавливается закреплённое меню (`sticky`): высота закреплённой шапки над ним.",
+    "The card's fill. The former name --sf-card-background is still read, under this one, until 2027-01-01 (C16 naming, src/core/contracts/token-aliases.v1.json).": "Заливка карточки.",
+    "The media box's fill, seen around contained media. The former name --sf-figure-background is still read, under this one, until 2027-01-01 (C16 naming, src/core/contracts/token-aliases.v1.json).": "Заливка блока медиа; видна вокруг вписанного изображения или видео.",
+    "The fill of a step's marker; a complete or current step draws its own. The former name --sf-procedure-marker-background is still read, under this one, until 2027-01-01 (C16 naming, src/core/contracts/token-aliases.v1.json).": "Заливка отметки шага; у выполненного и текущего шага своя.",
+    "A cap's and a key's height and least width, relative to its own letters.": "Высота и наименьшая ширина плашки и клавиши относительно их букв.",
+    "The room on each side of a cap's or a key's letters.": "Отступ по бокам от букв плашки или клавиши.",
+    "The space between the keys of a combination drawn as caps or keys.": "Промежуток между клавишами сочетания, нарисованного плашками или клавишами.",
+    "A cap's and a key's letters against the text around them.": "Размер букв плашки и клавиши относительно текста вокруг.",
+    "A cap's and a key's typeface.": "Шрифт плашки и клавиши.",
+    "A cap's and a key's corners.": "Скругление плашки и клавиши.",
+    "A cap's fill (in a button or a field): the ink it sits in, mixed. The former name --sf-kbd-background is still read, under this one, until 2027-01-01 (C16 naming, src/core/contracts/token-aliases.v1.json).": "Заливка плашки (в кнопке или поле): смесь с цветом текста вокруг.",
+    "A cap's letters (in a button or a field): the ink it sits in, mixed.": "Цвет букв плашки (в кнопке или поле): смесь с цветом текста вокруг.",
+    "A key's edge and its inset bottom edge (in running text).": "Рамка клавиши и её нижний край (в тексте).",
+    "The ink of plain glyphs (in a menu or a list box).": "Цвет знаков без плашек (в меню или списке выбора)."
   }
 }

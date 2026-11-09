@@ -37,7 +37,7 @@ Loader выбрал тему при запуске.
 
 ## Глобальные объекты
 
-Раздел собран из контракта выпуска `ui-0c23f6a0af12` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-d6f01121baca` (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.
 
 Публичные имена (75) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.
 
@@ -95,7 +95,7 @@ Loader выбрал тему при запуске.
 | `SF.render` | функция | основа смарт-компонентов | `render` библиотеки Lit. | — |
 | `SF.Resizer` | объект | смарт-компонент `sf-resizer` | Скриптовый API компонента Resizer; приходит вместе с компонентом (`smart/resizer`), его методы описаны на странице компонента. | — |
 | `SF.RuleLoader` | объект | ядро, сразу после `core.js` | Правила загрузки по имени: что нужно классу, тегу или компоненту. Набор компонентов добавляет сюда свои правила (свой rule.js) через `SF.RuleLoader.registerPackage(name, {rules, api, aliases, exports, base})`; `SF.RuleLoader.packageOf(name)` отвечает, откуда подаётся набор (`{name, base, declared, registered, version, release, api, exported}`, неизменяемый объект). Обе — функции, а не правила, и при переборе не видны (с `core.runtime` 1.25.0). | — |
-| `SF.runtimeModule` | функция | ядро, сразу после `core.js` | Обещание одного модуля общей среды смарт-компонентов по его id (`lit`, `smart-base`, `page-language` и другие); через него импортирует собранный смарт-бандл. | — |
+| `SF.runtimeModule` | функция | ядро, сразу после `core.js` | Обещание одного модуля общей среды смарт-компонентов по его имени (`lit`, `smart-base`, `page-language` …) или общего ядра пакета по имени `<пакет>/<модуль>`; через него импортирует собранный смарт-компонент. `SF.runtimeModule.register(<пакет>, <abi>, {<модуль>: namespace})` регистрирует общее ядро пакета. | — |
 | `SF.safeHref` | функция | ядро, сразу после `core.js` | Адрес, который оставляет `SF.sanitizeHtml`, или null: адреса http, https и mailto и пути от корня, но никогда `//host` или `/\host`. | — |
 | `SF.sanitizeHtml` | функция | ядро, сразу после `core.js` | Очищает непроверенный HTML в DocumentFragment по разрешённому списку: `SF.sanitizeHtml(html, {elements?, codeLanguage?, document?})`. Скрипты и чужое содержимое выбрасываются вместе с содержимым, другие неизвестные элементы разворачиваются, остаются только безопасные ссылки и объединения ячеек таблицы. | — |
 | `SF.Scrollbar` | объект | компонент `scrollbar` | Скриптовый API компонента Scrollbar; приходит вместе с компонентом (`component/scrollbar`), его методы описаны на странице компонента. | — |
@@ -110,7 +110,7 @@ Loader выбрал тему при запуске.
 | `SF.Tabs` | объект | компонент `tabs` | Скриптовый API компонента Tabs; приходит вместе с компонентом (`component/tabs`), его методы описаны на странице компонента. | — |
 | `SF.tags` | объект | ядро, сразу после `core.js` | Псевдонимы тегов с датой: Smart-компонент, получивший новый тег, сохраняет старый до `remove_after`. `names(tag)` перечисляет тег и его действующие прежние имена, `selector(tag)` — селектор, который находит их все, `is(element, tag)` проверяет элемент, `canonical(tag)` даёт текущее имя для прежнего, `list()` — все действующие псевдонимы. | `names`, `selector`, `is`, `canonical`, `list` |
 | `SF.Textarea` | объект | компонент `textarea` | Скриптовый API компонента Textarea; приходит вместе с компонентом (`component/textarea`), его методы описаны на странице компонента. | — |
-| `SF.ThemePalette` | объект | компонент `theme-palette` (`SF.Loader.ensurePlugin('theme-palette')` или `data-sf-theme-palette`) и смарт-компонент `sf-theme-generator` | Тема из одного цвета: восемь тональных палитр — 128 примитивов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней, которые ядро определяет на них (`--sf-<палитра>-<тон>--alfa-<n>`, список — в `THEME_ALPHA`), всего 226 переменных. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
+| `SF.ThemePalette` | объект | компонент `theme-palette` (`SF.Loader.ensurePlugin('theme-palette')` или `data-sf-theme-palette`) и смарт-компонент `sf-theme-generator` | Целая тема из одного цвета: восемь тональных палитр как 128 примитивов `--sf-<палитра>-<тон>` и 104 полупрозрачные ступени на них (`--sf-<палитра>-<тон>--alfa-<n>`), всего 232 переменные. | `themeFromColor`, `themeFromHct`, `colorToHct`, `themeToCss`, `themeVariables`, `applyTheme`, `isThemeColor`, `THEME_TONES`, `THEME_PALETTES`, `THEME_ALPHA`, `DEFAULT_THEME_COLOR` |
 | `SF.Toast` | объект | компонент `toast` | Скриптовый API компонента Toast; приходит вместе с компонентом (`component/toast`), его методы описаны на странице компонента. | — |
 | `SF.Tree` | объект | компонент `tree` | Скриптовый API компонента Tree; приходит вместе с компонентом (`component/tree`), его методы описаны на странице компонента. | — |
 | `SF.Verification` | объект | компонент `verification` | Скриптовый API компонента Verification; приходит вместе с компонентом (`component/verification`), его методы описаны на странице компонента. | — |

@@ -5,7 +5,7 @@ description: "Блоки, которые можно добавить в пись
 
 # Библиотека блоков письма
 
-:badge[sf-mail-library]{variant=tonal scheme=primary size=1/2} :badge[1.0.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-library]{variant=tonal scheme=primary size=1/2} :badge[1.0.3]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-library>` — блоки, которые можно добавить в письмо, по группам
 назначения, с чипами категорий, поиском по названию и описанию и вариантами шапки
@@ -107,7 +107,7 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -115,7 +115,7 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 |:---|:---|
 | Тег | `<sf-mail-library>` |
 | Назначение | Блоки, которые может принять письмо в SIMAI Email Editor, по группам назначения, с чипами категорий, поиском по названию и назначению и вариантами шапки и подвала письма. Строка добавляет свой блок или заменяет вариант; элемент вызывает событие и письмо не меняет. |
-| Контракт | `smart.mail-library`, версия `1.0.2` |
+| Контракт | `smart.mail-library`, версия `1.0.3` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -160,5 +160,5 @@ library.addEventListener('sf-mail-library-replace', (event) => {
 
 ### Источник
 
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/mail-library`
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/mail-library/rule.js#name=cl-mail-library`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-library`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/mail-library/rule.js#name=cl-mail-library`

@@ -46,8 +46,8 @@ description: "Оформляет таблицу классом table: ширин
 |:---|:---|
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-surface-transparent-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
-| `--sf-surface-transparent-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` |
+| `--sf-surface-transparent-select` | `var(--sf-surface-state-select)` |
+| `--sf-surface-transparent-hover` | `var(--sf-surface-state-hover)` |
 | `--sf-b6` | `1rem` |
 | `--sf-px` | `1px` |
 | `--sf-font-weight-bold` | `700` |

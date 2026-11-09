@@ -49,22 +49,22 @@ description: "Поднимает элемент над страницей одн
 
 | Переменная | Значение по умолчанию |
 |:---|:---|
-| `--sf-elevation-1--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-2))` |
-| `--sf-elevation-1--shadow` | `var(--sf-ui-shadow-1), var(--sf-shadow--rim)` |
-| `--sf-on-elevation-1--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
-| `--sf-elevation-2--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-3))` |
+| `--sf-elevation-1--surface` | `var(--sf-surface-card)` |
+| `--sf-elevation-1--shadow` | `var(--sf-shadow-card)` |
+| `--sf-on-elevation-1--variant` | `var(--sf-on-surface-card-variant)` |
+| `--sf-elevation-2--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
 | `--sf-elevation-2--shadow` | `var(--sf-ui-shadow-2), var(--sf-shadow--rim)` |
 | `--sf-on-elevation-2--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-elevation-3--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-4))` |
-| `--sf-elevation-3--shadow` | `var(--sf-ui-shadow-3), var(--sf-shadow--rim)` |
-| `--sf-on-elevation-3--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-elevation-4--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-5))` |
-| `--sf-elevation-4--shadow` | `var(--sf-ui-shadow-4), var(--sf-shadow--rim)` |
-| `--sf-on-elevation-4--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-0), var(--sf-surface-5))` |
+| `--sf-elevation-3--surface` | `var(--sf-surface-popup)` |
+| `--sf-elevation-3--shadow` | `var(--sf-shadow-popup)` |
+| `--sf-on-elevation-3--variant` | `var(--sf-on-surface-popup-variant)` |
+| `--sf-elevation-4--surface` | `var(--sf-surface-popup-nested)` |
+| `--sf-elevation-4--shadow` | `var(--sf-shadow-popup-nested)` |
+| `--sf-on-elevation-4--variant` | `var(--sf-on-surface-popup-nested-variant)` |
+| `--sf-elevation-5--surface` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
 | `--sf-elevation-5--shadow` | `var(--sf-ui-shadow-5), var(--sf-shadow--rim)` |
 | `--sf-on-elevation-5--variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-0` | `var(--sf-surface-page)` |
 
 ## Применение
 

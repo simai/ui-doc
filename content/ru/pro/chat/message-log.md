@@ -5,7 +5,7 @@ description: "Прежнее имя ленты SIMAI Framework sf-list-feed в �
 
 # Лента сообщений
 
-:badge[sf-message-log]{variant=tonal scheme=primary size=1/2} :badge[2.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-message-log]{variant=tonal scheme=primary size=1/2} :badge[2.0.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-message-log>` — устаревшее имя [Ленты](/ru/smart/content/list-feed/)
 (`sf-list-feed`) SIMAI Framework, которое работает до 2027-01-01. Поведение
@@ -131,7 +131,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -139,7 +139,7 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 |:---|:---|
 | Тег | `<sf-message-log>` |
 | Назначение | Та же лента, что `sf-list-feed`, под другим тегом; отвечает и на имена `messages`, `setMessages`, `prependMessages`, `renderMessage`, `announceMessage` и события `sf-message-log-*`. |
-| Контракт | `smart.message-log`, версия `2.0.0` |
+| Контракт | `smart.message-log`, версия `2.0.1` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -199,5 +199,5 @@ log.addEventListener('sf-message-log-load-more', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/message-log`
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/message-log/rule.js#name=cl-message-log`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/message-log`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/message-log/rule.js#name=cl-message-log`

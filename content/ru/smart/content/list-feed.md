@@ -5,7 +5,7 @@ description: "Прокручиваемая колонка записей, кот
 
 # Лента
 
-:badge[sf-list-feed]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-feed]{variant=tonal scheme=primary size=1/2} :badge[1.0.3]{variant=outline scheme=on-surface size=1/2}
 
 Лента — прокручиваемая колонка записей, которую читают от новой записи внизу:
 переписка, комментарии к задаче, история действий, журнал, ход выполнения
@@ -211,13 +211,13 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-feed>`, контракт `smart.list-feed` версии `1.0.1` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-list-feed>`, контракт `smart.list-feed` версии `1.0.3` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/list-feed` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-list-feed` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/list-feed` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-list-feed` |
 
 ## См. также
 

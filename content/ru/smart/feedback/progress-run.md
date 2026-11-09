@@ -5,7 +5,7 @@ description: "Долгое задание глазами человека: ша�
 
 # Ход выполнения
 
-:badge[sf-progress-run]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-progress-run]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Показывает долгое задание так, как его видит человек: создание сайта,
 обновление, резервную копию и восстановление, импорт, публикацию, установку
@@ -214,13 +214,13 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 
 | | |
 |:---|:---|
-| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-progress-run>`, контракт `smart.progress-run` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab` проходит по кнопке «Вывод», выводу, копированию, скачиванию и кнопкам действий по порядку; `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/progress-run` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-progress-run` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/progress-run` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-progress-run` |
 
 ## См. также
 

@@ -62,7 +62,7 @@ JavaScript.
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-card-background` | Заливка карточки. | `var(--sf-surface-0)` |
+| `--sf-card-background-color` | Заливка карточки. | `var(--sf-surface-0)` |
 | `--sf-card-color` | Цвет текста карточки. | `var(--sf-on-surface)` |
 | `--sf-card-border-color` | Цвет границы карточки. | `var(--sf-outline-variant)` |
 | `--sf-card-border-width` | Толщина границы карточки. | `var(--sf-px)` |

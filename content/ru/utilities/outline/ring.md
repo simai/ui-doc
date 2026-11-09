@@ -81,33 +81,33 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-current` | `currentColor` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-60--alfa-64))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-surface-1` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
-| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-1` | `var(--sf-surface-area)` |
+| `--sf-surface-0` | `var(--sf-surface-page)` |
 | `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
-| `--sf-surface-overlay` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
-| `--sf-surface-transparent-overlay` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
+| `--sf-surface-overlay` | `var(--sf-surface-veil)` |
+| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
-| `--sf-outline-primary` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-outline-primary` | `var(--sf-primary-outline)` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
-| `--sf-primary-transparent-overlay` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
-| `--sf-outline-secondary` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
+| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |
+| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
 | `--sf-secondary-container` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` |
-| `--sf-secondary-transparent-overlay` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
-| `--sf-outline-tertiary` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
+| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` |
+| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
-| `--sf-tertiary-transparent-overlay` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
-| `--sf-outline-error` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` |
+| `--sf-outline-error` | `var(--sf-error-outline)` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
-| `--sf-error-transparent-overlay` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
-| `--sf-outline-warning` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
+| `--sf-outline-warning` | `var(--sf-warning-outline)` |
 | `--sf-warning-container` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-50--alfa-24))` |
-| `--sf-warning-transparent-overlay` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
-| `--sf-outline-success` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
+| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
+| `--sf-outline-success` | `var(--sf-success-outline)` |
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
-| `--sf-success-transparent-overlay` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
-| `--sf-outline-info` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
+| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
+| `--sf-outline-info` | `var(--sf-info-outline)` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
 | `--sf-a1` | `0.0625rem` |
 | `--sf-a2` | `0.125rem` |

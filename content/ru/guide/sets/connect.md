@@ -15,17 +15,17 @@ Loader сам найдёт подходящий выпуск набора и з�
 
 ## Одна строка
 
-Пример подключает набор эффектов к выпуску SIMAI Framework `5.20261108.1449`
+Пример подключает набор эффектов к выпуску SIMAI Framework `5.20261108.2127`
 и ставит на страницу один эффект:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261108.1449/distr/core/css/core.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261108.1449/distr/core/js/core.min.js" data-sf-sets="effects"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261108.2127/distr/core/css/core.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261108.2127/distr/core/js/core.min.js" data-sf-sets="effects"></script>
 
 <sf-effect effect="aurora-curtain" speed="200"></sf-effect>
 ```
 
-В своём проекте на месте `5.20261108.1449` стоит версия пакета
+В своём проекте на месте `5.20261108.2127` стоит версия пакета
 `@simai-studio/ui`, которую закрепил проект (см.
 [Версии](/ru/guide/connection/versions/)): `5.20261103.2154` или новее.
 Набор берётся из общего каталога выпусков: Loader выбирает самый новый

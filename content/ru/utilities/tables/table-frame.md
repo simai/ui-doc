@@ -34,14 +34,14 @@ description: "Ставит таблицу в скруглённую рамку �
 |:---|:---|
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-radius--surface` | `var(--sf-radius-1)` |
-| `--sf-surface-0` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-0` | `var(--sf-surface-page)` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-space-1` | `var(--sf-b2); от ширины lg: var(--sf-b6)` |
 | `--sf-space-1/2` | `0.5rem; от ширины lg: 0.75rem` |
 | `--sf-e0` | `5rem` |
 | `--sf-px` | `1px` |
 | `--sf-0` | `0` |
-| `--sf-on-surface-container--variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-80))` |
+| `--sf-on-surface-container--variant` | `var(--sf-on-surface-container-variant)` |
 | `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
 | `--sf-table-frame-head-background` | задаётся темой |
 | `--sf-font-weight-bold` | `700` |

@@ -205,7 +205,8 @@ profile: reference
 | `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-tag-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-tag--block` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-block, var(--sf-ui-1/3--space-y-tightness-default))` | `padding-top`, `padding-bottom` |
 | `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag.sf-tag--appearance-surface.sf-tag--color`: `inset 0 0 0 var(--sf-px) var(--sf-alpha-8)` | `box-shadow` |
-| `--sf-tag--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/3)` | `font-size`, `--sf-close-icon--height`, `--sf-close-icon--width` |
+| `--sf-tag--close-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/4)` | `--sf-close-icon--height`, `--sf-close-icon--width` |
+| `--sf-tag--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/3)` | `font-size` |
 | `--sf-tag--gap` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-gap, 0)` | `gap` |
 | `--sf-tag--inline-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-inline, var(--sf-ui-1/3--space-x))` | `padding-inline-end` |
 | `--sf-tag--inline-line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `var(--sf-tag--line)` | `line-height` |

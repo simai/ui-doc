@@ -5,7 +5,7 @@ description: "Кнопка с именем текущего собеседник
 
 # Выбор собеседника
 
-:badge[sf-chat-interlocutor]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-chat-interlocutor]{variant=tonal scheme=primary size=1/2} :badge[1.0.6]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-chat-interlocutor>` показывает, с кем разговор, и даёт выбрать другого
 собеседника. Список собеседников — серверный: элемент только показывает его и
@@ -100,7 +100,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-0c23f6a0af12` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-d6f01121baca` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -108,7 +108,7 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 |:---|:---|
 | Тег | `<sf-chat-interlocutor>` |
 | Назначение | С кем разговор: собеседники сервера в контекстном меню SIMAI Framework, текущий отмечен, а выбор другого сообщается приложению, чтобы оно начало новый разговор. Один собеседник — это имя, а не выбор. |
-| Контракт | `smart.chat-interlocutor`, версия `1.0.5` |
+| Контракт | `smart.chat-interlocutor`, версия `1.0.6` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -147,8 +147,8 @@ picker.addEventListener('sf-chat-interlocutor-select', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-interlocutor`
-- `simai/ui-pro@abe29151620b0ef7004473ffcd4ee8049cbbccf1:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-interlocutor`
+- `simai/ui-pro@a046f296acd004487ae65015524a6231b006fdbc:components/src/smart/chat-interlocutor/rule.js#name=cl-chat-interlocutor`
 
 ## См. также
 

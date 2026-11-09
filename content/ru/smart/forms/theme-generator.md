@@ -5,7 +5,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 # Генератор темы
 
-:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.7]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.9]{variant=outline scheme=on-surface size=1/2}
 
 Генератор темы строит тему из одного цвета: человек выбирает основной цвет и
 сразу видит восемь тональных палитр SIMAI Framework — основную, вторичную,
@@ -216,7 +216,7 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `reset()` | объект | Вернуть собственный цвет SIMAI Framework; выбор принят. |
-| `toCSS(selector?: string)` | строка | Тема одним правилом CSS из 128 примитивов и 98 полупрозрачных ступеней под переданным селектором или под атрибутом `selector`. |
+| `toCSS(selector?: string)` | строка | Тема одним правилом стилей: 128 примитивов и 104 полупрозрачные ступени под заданным селектором или селектором из атрибута `selector`. |
 | `toJSON()` | объект | Объект темы (`simai.framework.theme` с `schema_version: 1`): тон и насыщенность источника и у каждой палитры её тон, насыщенность и тона. |
 
 ### События
@@ -232,13 +232,13 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 
 | | |
 |:---|:---|
-| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.9` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/theme-generator` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-theme-generator` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/theme-generator` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-theme-generator` |
 
 ## См. также
 

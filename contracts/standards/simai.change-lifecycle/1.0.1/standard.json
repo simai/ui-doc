@@ -2,7 +2,7 @@
   "format": "standard-contract",
   "formatVersion": "1.0",
   "id": "simai.change-lifecycle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "SIMAI Framework Change Lifecycle",
   "appliesTo": [
     "simai.framework.component",
@@ -118,9 +118,9 @@
   "uses": [
     {
       "id": "simai.framework.change-journal-schema",
-      "version": "1.0.0",
-      "path": "../../pinned/change-journal-1.0.0.schema.json",
-      "sha256": "83ce7198fb4a82917331cc5b397f669d8c8e6e70ef3a96918468244e0ea2c0f1",
+      "version": "1.3.0",
+      "path": "../../pinned/change-journal-1.3.0.schema.json",
+      "sha256": "273477d663bfde8e4e228acce1d4d87a7ace8ed32bd6f9a9cd4b0e7dd084d206",
       "description": "The form of a journal record."
     },
     {
@@ -142,7 +142,8 @@
     "simai.ownership": {
       "owner": "simai/ui-source",
       "publication": "ui-doc",
-      "scope_note": "How a public name leaves the Framework and how a product follows it. Which names leave is recorded in contracts/changes/journal.json, not here."
+      "scope_note": "How a public name leaves the Framework and how a product follows it. Which names leave is recorded in contracts/changes/journal.json, not here.",
+      "reissue": "Re-issued as 1.0.1 on 2026-11-08 to pin the change journal schema as it stands: 1.0.0 pinned the schema 1.0.0, and the live schema has since become 1.3.0 (1.1.0 and 1.2.0 on 2026-10-18: internal names and format names without a version; 1.3.0 on 2026-11-03: kind tag and rewrite rename-tag). The frozen copy pinned/change-journal-1.3.0.schema.json equals contracts/schema/change-journal.v1.schema.json byte for byte. The lifecycle policy pin stays 1.0.0: the live policy declares no version of its own (schema_version only), so it cannot be pinned as a newer edition yet. Requirements are unchanged; 1.0.0 keeps its published bytes under contracts/standards/history."
     }
   }
 }

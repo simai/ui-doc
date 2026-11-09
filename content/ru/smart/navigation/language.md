@@ -5,7 +5,7 @@ description: "Переключает язык сайта: сегментами �
 
 # Выбор языка
 
-:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Выбор языка переключает язык сайта. Вид следует за числом языков: при
 двух-трёх все языки видны сразу и выбираются одним нажатием, при четырёх и
@@ -297,13 +297,13 @@ picker.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-language>`, контракт `smart.language` версии `1.0.0` |
-| Поставка | выпуск Framework `ui-0c23f6a0af12` |
+| Тег | `<sf-language>`, контракт `smart.language` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-d6f01121baca` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; название компонент ставит сам; с клавиатуры: в строке: `Tab` ставит фокус на выбранный язык, стрелки, `Home` и `End` переходят между языками и выбирают; в меню: `Tab` ставит фокус на кнопку, `Enter` или `Пробел` открывают меню, стрелки переходят, буква переводит к языку на эту букву, `Enter` выбирает, `Esc` закрывает и возвращает фокус на кнопку; поиск: при открытии меню фокус в поле поиска, `↓` переходит к строкам. |
-| Источник | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/smart/language` |
-| Правило классов | `simai/ui@0c23f6a0af12ddc32846ff868aab4d9849dabd75:distr/rule/rule.json#name=cl-language` |
+| Источник | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/smart/language` |
+| Правило классов | `simai/ui@d6f01121bacac28bc9200d51f46f7389b38920c6:distr/rule/rule.json#name=cl-language` |
 
 ## См. также
 
