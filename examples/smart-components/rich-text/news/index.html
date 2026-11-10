@@ -1,0 +1,14 @@
+<form id="rich-text-news" class="flex flex-col gap-3 p-3 radius-surface border border-outline-variant bg-surface color-on-surface" novalidate>
+  <p class="m-0 font-medium">Новая новость</p>
+  <sf-input name="title" label="Заголовок" value="Открыта запись на осенний поток" required></sf-input>
+  <sf-input-rich
+    name="body"
+    label="Текст новости"
+    rows="4"
+    required
+    value="&lt;p&gt;Занятия начнутся &lt;strong&gt;1 декабря&lt;/strong&gt;. В программе:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;вёрстка и доступность;&lt;/li&gt;&lt;li&gt;работа с формами.&lt;/li&gt;&lt;/ul&gt;">
+  </sf-input-rich>
+  <div class="flex gap-2">
+    <sf-button text="Опубликовать" data-example-send></sf-button>
+  </div>
+</form>
