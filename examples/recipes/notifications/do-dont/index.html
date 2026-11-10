@@ -1,0 +1,27 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 items-cross-center content-main-center gap-3 p-2 radius-surface border border-outline-variant">
+        <sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" badge-count="3" badge-label="3 непрочитанных" aria-label="Уведомления"></sf-button-icon>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — колокольчик считает только непрочитанное</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 items-cross-center content-main-center gap-3 p-2 radius-surface border border-outline-variant">
+        <sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" badge-count="128" aria-label="Уведомления"></sf-button-icon>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — все уведомления за год: число перестают замечать</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 p-1 radius-surface border border-outline-variant"><sf-list id="notes-do" label="Уведомления, так" size="1/2"></sf-list></div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — что случилось и с чем, новое отмечено словом</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 flex flex-col gap-1 p-2 radius-surface border border-outline-variant">
+        <sf-toast status="info" title="Новый заказ 1042" closable="false"></sf-toast>
+        <sf-toast status="error" title="Резервная копия не создана" closable="false"></sf-toast>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — уведомления в углу вместо списка: уходят, не прочитанные</figcaption>
+    </figure>
+  </div>
+</div>
