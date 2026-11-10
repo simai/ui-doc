@@ -30,6 +30,12 @@ const check = process.argv.includes('--check');
 const GUIDES = new Set(['pro/editor/blocks']);
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
+// A group whose reader has to choose between its components gets a written
+// lead: a description that answers what the group is for and a short guide
+// placed above the list (docs review FX-01, 2026-11-10). The list itself stays
+// the catalogue's slice.
+const leadsPath = join(root, 'config/catalogue-group-leads.json');
+const leads = existsSync(leadsPath) ? readJson(leadsPath).groups ?? {} : {};
 
 // The frontmatter block, then the body.
 const frontmatter = (text) => {
@@ -118,15 +124,20 @@ for (const catalogue of CATALOGUES) {
     const n100 = count % 100;
     const plural = n10 === 1 && n100 !== 11 ? noun
       : n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14) ? `${noun}а` : `${noun}ов`;
+    const lead = leads[`${catalogue}/${entry.name}`];
+    const description = lead?.description ?? `${section.title} — ${count} ${plural} ${PRODUCT[catalogue]}.`;
+    const body = lead
+      ? `${lead.body.trim()}\n\n## ${lead.list_heading}\n\n${described.join('\n')}`
+      : described.join('\n');
     const page = `---
 title: "${section.title}"
-description: "${section.title} — ${count} ${plural} ${PRODUCT[catalogue]}."
+description: "${description}"
 profile: reference
 ---
 
 # ${section.title}
 
-${described.join('\n')}
+${body}
 `;
     const meta = `${JSON.stringify({
       schema: 'docara.page.v1',

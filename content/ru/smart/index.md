@@ -19,14 +19,14 @@ description: "Смарт-компоненты по задачам интерфе
 
 ## Формы и ввод
 
-- [Текстовые поля](/ru/smart/forms/inputs/)
+- [Текстовое поле](/ru/smart/forms/inputs/)
 - [Количество](/ru/smart/forms/quantity/)
 - [Многострочное поле](/ru/smart/forms/textarea/)
 - [Форматированный текст](/ru/smart/forms/rich-text/)
 - [Выбор из поиска](/ru/smart/forms/lookup/)
 - [Флажок](/ru/smart/forms/checkbox/)
 - [Радиокнопки](/ru/smart/forms/radio/)
-- [Выбор карточками](/ru/smart/forms/input-choice/) — Поле формы: один вариант или несколько из карточек с названием, пояснением и иконкой.
+- [Выбор карточками](/ru/smart/forms/input-choice/) — Даёт выбрать один вариант или несколько из карточек с названием, пояснением и иконкой.
 - [Переключатель](/ru/smart/forms/switch/)
 - [Слайдер контента](/ru/smart/forms/slider/)
 - [Слайдер диапазона](/ru/smart/forms/range-slider/)
