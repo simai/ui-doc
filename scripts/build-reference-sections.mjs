@@ -618,6 +618,26 @@ const setSection = (text, kind, heading, body) => {
   return `${head}${sections.join('')}`.replace(/\n{3,}/gu, '\n\n').replace(/\n*$/u, '\n');
 };
 
+// A class page carries the same version line as a Smart page (dispatcher
+// call 2026-11-10 on D01): under the H1, the block's name and the version of
+// the component's passport at the release. The line is rewritten with every
+// release, so the prose names no version of its own.
+const BADGE_LINE = /^\n:badge\[[^\n]*\n+/u;
+const passportVersion = (component) => {
+  try {
+    return JSON.parse(show(`distr/component/${component}/passport.json`) ?? 'null')?.version ?? null;
+  } catch {
+    return null;
+  }
+};
+const withBadges = (text, block, version) => {
+  const title = text.match(/^# .+\n/mu);
+  if (!title || !version || !block?.startsWith('sf-')) return text;
+  const at = title.index + title[0].length;
+  const line = `:badge[${block}]{variant=tonal scheme=primary size=1/2} :badge[${version}]{variant=outline scheme=on-surface size=1/2}`;
+  return `${text.slice(0, at)}\n${line}\n${text.slice(at).replace(BADGE_LINE, '\n')}`;
+};
+
 const changed = [];
 for (const [page, entry] of Object.entries(settings.pages)) {
   const path = join(root, 'content/ru', page);
@@ -641,6 +661,9 @@ for (const [page, entry] of Object.entries(settings.pages)) {
       : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block)]);
     next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE]);
     next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, blocks));
+  }
+  if (entry.kind === 'component') {
+    next = withBadges(next, (entry.blocks ?? [entry.block])[0], passportVersion(entry.component));
   }
   if (next !== current) {
     changed.push(page);
