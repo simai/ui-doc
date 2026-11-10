@@ -1,8 +1,12 @@
 <div data-sf-density="compact">
   <section class="sf-card max-w-g8" aria-labelledby="code-heading">
-    <h2 id="code-heading" class="m-0 text-1 weight-6">Сборка проекта</h2>
-    <pre><code data-lang="bash" data-lines>cd my-site
+    <div class="flex items-cross-center gap-1">
+      <h2 id="code-heading" class="flex-1 m-0 text-1 weight-6">Сборка проекта</h2>
+      <sf-button-copy target="#code-build" text="Копировать" label="Копировать команды сборки" appearance="outline"></sf-button-copy>
+    </div>
+    <pre class="m-0"><code id="code-build" data-lang="bash" data-lines data-chrome="none">cd my-site
 npm i @simai-studio/ui
 npm run build</code></pre>
+    <p class="m-0 text-1/2 color-on-surface-variant">В буфере: <span data-buffer>пока ничего — нажмите «Копировать»</span></p>
   </section>
 </div>
