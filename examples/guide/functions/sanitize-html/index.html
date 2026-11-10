@@ -1,0 +1,5 @@
+<div class="flex flex-col gap-3">
+  <label class="sf-textarea sf-textarea--size-1 sf-textarea--bordered flex flex-col"><span class="sf-textarea-label flex"><span class="sf-textarea-text">HTML из ответа сервера</span></span><textarea id="sanitize-source" class="transition" name="html" rows="4"><p onclick="alert(1)">Заказ <b>№ 2041</b> <a href="https://simai.io/">оформлен</a>.</p><script>alert(2)</script><img src="x" onerror="alert(3)" alt=""><a href="javascript:alert(4)">Отменить</a></textarea></label>
+  <div class="flex"><sf-button id="sanitize-run" text="Очистить и вставить" appearance="outline"></sf-button></div>
+  <div id="sanitize-output" class="p-3 radius-3 bg-surface-container" aria-live="polite"></div>
+</div>
