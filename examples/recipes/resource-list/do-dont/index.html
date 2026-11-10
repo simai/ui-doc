@@ -1,0 +1,26 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-button appearance="outline" scheme="on-surface" text="Экспорт"></sf-button>
+        <sf-button icon-start="add" text="Создать"></sf-button>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — одна залитая кнопка, второе действие с рамкой</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-button text="Экспорт"></sf-button>
+        <sf-button icon-start="add" text="Создать"></sf-button>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — две залитые кнопки спорят, главное не видно</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1"><sf-list id="rows-do" label="Сайты, так"></sf-list></div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — бейдж только у записи с проблемой</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1"><sf-list id="rows-dont" label="Сайты, не так"></sf-list></div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — «Работает» на каждой строке прячет проблему</figcaption>
+    </figure>
+  </div>
+</div>
