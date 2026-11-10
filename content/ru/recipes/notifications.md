@@ -41,9 +41,9 @@ description: "Уведомления под колокольчиком в шап
 | Строки | [Список](/ru/smart/content/list/) | `group-by="day"` `size="1/2"`; у строки `text` — что случилось, `supporting` — с чем, `date`; непрочитанная — `badge: {text: 'Новое', tone: 'info'}` |
 | Прокрутка | обёртка | `max-h-g4 overflow-auto`: шапка панели стоит, прокручиваются строки |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/notifications/do-dont" label="Так и не так"}
+:::example {id="recipes/notifications/do-dont" label="Как делать"}
 :::
 
 - **Число — только непрочитанное.** Колокольчик с «128» за все дни

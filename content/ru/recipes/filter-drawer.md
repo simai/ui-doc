@@ -43,9 +43,9 @@ description: "Отбор списка по нескольким признака
 | Выбранные фильтры | [Тег](/ru/smart/content/tags/) | `kind="default"` `closable`, `close-label` с названием; за ними «Сбросить все» `appearance="ghost"` `size="1/2"` |
 | Ничего не подошло | [Пустое состояние](/ru/smart/feedback/empty-state/) | в слоте `empty` списка, `kind="nothing-found"`, действие «Сбросить фильтры» |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/filter-drawer/do-dont" label="Так и не так"}
+:::example {id="recipes/filter-drawer/do-dont" label="Как делать"}
 :::
 
 - **Выбранное видно.** Фильтры, которые сейчас действуют, стоят тегами над

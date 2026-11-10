@@ -39,9 +39,9 @@ description: "Первый экран админки: сначала то, чт�
 | Числа | [Плитка показателя](/ru/smart/content/tile-metric/) | в `div.sf-tile-metric-grid`, ширина колонки — `--sf-tile-metric-min-width` (здесь `var(--sf-f6)`: четыре плитки встают по две, а не три и одна); `previous` и `period-text` — сравнение; `max`, `warning-at`, `error-at` — порог; `href` — отчёт |
 | События | [Хронология](/ru/smart/content/list-timeline/) в [Карточке](/ru/components/content/card/) | `size="1/2"` `density="compact"` `group="none"` |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/dashboard/do-dont" label="Так и не так"}
+:::example {id="recipes/dashboard/do-dont" label="Как делать"}
 :::
 
 - **Цвет — сигнал.** Плитка окрашивается сама, когда число переходит порог

@@ -1,26 +1,26 @@
 <div class="query-container" data-sf-density="compact">
   <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — одна залитая кнопка, второе действие с рамкой</span></figcaption>
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2">
         <sf-button appearance="outline" scheme="on-surface" text="Экспорт"></sf-button>
         <sf-button icon-start="add" text="Создать"></sf-button>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — одна залитая кнопка, второе действие с рамкой</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — две залитые кнопки спорят, главное не видно</span></figcaption>
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2">
         <sf-button text="Экспорт"></sf-button>
         <sf-button icon-start="add" text="Создать"></sf-button>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — две залитые кнопки спорят, главное не видно</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1"><sf-list id="rows-do" label="Сайты, так"></sf-list></div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — бейдж только у записи с проблемой</figcaption>
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — бейдж только у записи с проблемой</span></figcaption>
+      <div class="flex-1 p-2"><sf-list id="rows-do" label="Сайты, правильно"></sf-list></div>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1"><sf-list id="rows-dont" label="Сайты, не так"></sf-list></div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — «Работает» на каждой строке прячет проблему</figcaption>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — «Работает» на каждой строке прячет проблему</span></figcaption>
+      <div class="flex-1 p-2"><sf-list id="rows-dont" label="Сайты, неправильно"></sf-list></div>
     </figure>
   </div>
 </div>

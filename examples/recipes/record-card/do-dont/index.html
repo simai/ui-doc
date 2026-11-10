@@ -1,35 +1,35 @@
 <div class="query-container" data-sf-density="compact">
   <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-2 radius-surface border border-outline-variant">
-        <sf-list-description label="Так: пустое значение" empty-text="Не указан">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — пустое значение словами: «Не указан»</span></figcaption>
+      <div class="flex-1 p-2">
+        <sf-list-description label="Правильно: пустое значение" empty-text="Не указан">
           <script type="application/json" data-sf-settings>{"items": [{"label": "Тип", "value": "Магазин"}, {"label": "Ответственный", "value": ""}]}</script>
         </sf-list-description>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — пустое значение словами: «Не указан»</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-2 radius-surface border border-outline-variant">
-        <sf-list-description label="Не так: пустое значение">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — прочерк: не понять, пусто или не загрузилось</span></figcaption>
+      <div class="flex-1 p-2">
+        <sf-list-description label="Неправильно: пустое значение">
           <script type="application/json" data-sf-settings>{"items": [{"label": "Тип", "value": "Магазин"}, {"label": "Ответственный", "value": ""}]}</script>
         </sf-list-description>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — прочерк: не понять, пусто или не загрузилось</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-2 radius-surface border border-outline-variant">
-        <sf-list-description label="Так: сведения">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — сведения текстом, править — по «Изменить»</span></figcaption>
+      <div class="flex-1 p-2">
+        <sf-list-description label="Правильно: сведения">
           <script type="application/json" data-sf-settings>{"items": [{"label": "Адрес", "value": "nord-wind.ru", "href": "#site"}, {"label": "Сертификат", "value": "Действует до 14 декабря", "status": "success"}]}</script>
         </sf-list-description>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — сведения текстом, править — по «Изменить»</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — поля только для чтения вместо сведений</span></figcaption>
+      <div class="flex-1 flex flex-col gap-2 p-2">
         <sf-input label="Адрес" value="nord-wind.ru" readonly></sf-input>
         <sf-input label="Сертификат" value="Действует до 14 декабря" readonly></sf-input>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — поля только для чтения вместо сведений</figcaption>
     </figure>
   </div>
 </div>

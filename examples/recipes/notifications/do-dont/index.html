@@ -1,27 +1,27 @@
 <div class="query-container" data-sf-density="compact">
   <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 items-cross-center content-main-center gap-3 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — колокольчик считает только непрочитанное</span></figcaption>
+      <div class="flex flex-1 items-cross-center content-main-center gap-3 p-2">
         <sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" badge-count="3" badge-label="3 непрочитанных" aria-label="Уведомления"></sf-button-icon>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — колокольчик считает только непрочитанное</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 items-cross-center content-main-center gap-3 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — все уведомления за год: число перестают замечать</span></figcaption>
+      <div class="flex flex-1 items-cross-center content-main-center gap-3 p-2">
         <sf-button-icon icon="notifications" appearance="ghost" scheme="on-surface" badge-count="128" aria-label="Уведомления"></sf-button-icon>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — все уведомления за год: число перестают замечать</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-1 radius-surface border border-outline-variant"><sf-list id="notes-do" label="Уведомления, так" size="1/2"></sf-list></div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — что случилось и с чем, новое отмечено словом</figcaption>
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — что случилось и с чем, новое отмечено словом</span></figcaption>
+      <div class="flex-1 p-2"><sf-list id="notes-do" label="Уведомления, правильно" size="1/2"></sf-list></div>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 flex flex-col gap-1 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — уведомления в углу вместо списка: уходят, не прочитанные</span></figcaption>
+      <div class="flex-1 flex flex-col gap-1 p-2">
         <sf-toast status="info" title="Новый заказ 1042" closable="false"></sf-toast>
         <sf-toast status="error" title="Резервная копия не создана" closable="false"></sf-toast>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — уведомления в углу вместо списка: уходят, не прочитанные</figcaption>
     </figure>
   </div>
 </div>

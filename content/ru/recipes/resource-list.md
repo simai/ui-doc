@@ -48,9 +48,9 @@ description: "Страница админки со списком сайтов, 
 на корне экрана сдвигает все части на ступень вниз вместе
 ([Плотность](/ru/guide/size-and-type/density/)).
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/resource-list/do-dont" label="Так и не так"}
+:::example {id="recipes/resource-list/do-dont" label="Как делать"}
 :::
 
 - **Одно залитое действие.** «Создать» — единственная залитая кнопка

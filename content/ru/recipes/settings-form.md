@@ -42,9 +42,9 @@ description: "Страница настроек записи или прилож
 | Ответы | [Кнопка](/ru/smart/actions/buttons/) | «Сохранить» — `native-type="submit"`, вид по умолчанию; «Отмена» — `native-type="reset"` `appearance="ghost"` `scheme="on-surface"` |
 | Результат | [Уведомление](/ru/smart/feedback/toast/) | `status="success"`, `duration="5000"`, в контейнере с `role="status"` в углу |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/settings-form/do-dont" label="Так и не так"}
+:::example {id="recipes/settings-form/do-dont" label="Как делать"}
 :::
 
 - **«Отмена» — тихая.** Красный цвет говорит «удалит или не вернётся»;

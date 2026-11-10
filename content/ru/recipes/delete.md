@@ -62,9 +62,9 @@ description: "Как удалять по-разному в зависимост�
 | Ввод названия | [Текстовое поле](/ru/smart/forms/inputs/) | подпись «Чтобы подтвердить, введите …», `error-message` объясняет раннее нажатие |
 | Ответы окна | [Кнопка](/ru/smart/actions/buttons/) | красная залитая `status="danger"` первой, затем «Отмена» `appearance="ghost"` `scheme="on-surface"` |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/delete/do-dont" label="Так и не так"}
+:::example {id="recipes/delete/do-dont" label="Как делать"}
 :::
 
 - **Вопрос называет, что удалится.** «Удалить «Смета на декабрь.xlsx»?» —

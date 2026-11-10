@@ -1,37 +1,37 @@
 <div class="query-container" data-sf-density="compact">
   <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — цвет только там, где перейдён порог</span></figcaption>
+      <div class="flex-1 p-2">
         <div class="sf-tile-metric-grid">
           <sf-tile-metric size="1/2" label="Заказы" value="214" previous="236" format="integer" period-text="к прошлой неделе"></sf-tile-metric>
           <sf-tile-metric size="1/2" label="Диск" value="91" max="100" format="integer" unit="ГБ" warning-at="80" error-at="95" hint="Мало места"></sf-tile-metric>
         </div>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — цвет только там, где перейдён порог</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — зелёное везде и число без сравнения</span></figcaption>
+      <div class="flex-1 p-2">
         <div class="sf-tile-metric-grid">
           <sf-tile-metric size="1/2" label="Заказы" value="214" format="integer" status="success" hint="Всё хорошо"></sf-tile-metric>
           <sf-tile-metric size="1/2" label="Диск" value="91" format="integer" unit="ГБ" status="success" hint="Всё хорошо"></sf-tile-metric>
         </div>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — зелёное везде и число без сравнения</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — проблемы одним списком, серьёзные первыми</span></figcaption>
+      <div class="flex-1 p-2">
         <sf-list-attention size="1/2" label="Требует внимания">
           <script type="application/json" data-sf-settings>{"items": [{"id": "a", "status": "error", "title": "Резервная копия не создана", "action": {"label": "Открыть", "href": "#backups"}}, {"id": "b", "status": "warning", "title": "Сертификат истекает через 5 дней"}]}</script>
         </sf-list-attention>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — проблемы одним списком, серьёзные первыми</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — стопка цветных плашек сдвигает весь экран</span></figcaption>
+      <div class="flex-1 flex flex-col gap-2 p-2">
         <sf-alert status="error" title="Резервная копия не создана"></sf-alert>
         <sf-alert status="warning" title="Сертификат истекает через 5 дней"></sf-alert>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — стопка цветных плашек сдвигает весь экран</figcaption>
     </figure>
   </div>
 </div>

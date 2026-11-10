@@ -39,9 +39,9 @@ description: "Страница одной записи: путь назад к �
 | Сведения | [Список сведений](/ru/smart/content/list-description/) | `empty-text="Не указан"`; состояние — `status` у строки, путь — `mono` и `copy` |
 | История | [Хронология](/ru/smart/content/list-timeline/) | `size="1/2"`, события новые сверху |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/record-card/do-dont" label="Так и не так"}
+:::example {id="recipes/record-card/do-dont" label="Как делать"}
 :::
 
 - **Пустое — словами.** Пустое значение пишется «Не указан»: прочерк

@@ -1,7 +1,8 @@
 <div class="query-container" data-sf-density="compact">
   <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 flex-col gap-2 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — выбранное видно над списком и снимается по одному</span></figcaption>
+      <div class="flex flex-1 flex-col gap-2 p-2">
         <div class="flex flex-wrap gap-2 items-cross-center">
           <sf-input root-class="flex-1 min-w-0" input-type="search" icon-start="search" aria-label="Поиск по заказам"></sf-input>
           <sf-button appearance="outline" scheme="on-surface" icon-start="filter_list" text="Фильтры"></sf-button>
@@ -12,30 +13,29 @@
           <sf-button appearance="ghost" scheme="on-surface" size="1/2" text="Сбросить все"></sf-button>
         </div>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — выбранное видно над списком и снимается по одному</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 flex-col gap-2 p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — фильтры включены, но этого не видно</span></figcaption>
+      <div class="flex flex-1 flex-col gap-2 p-2">
         <div class="flex flex-wrap gap-2 items-cross-center">
           <sf-input root-class="flex-1 min-w-0" input-type="search" icon-start="search" aria-label="Поиск по заказам"></sf-input>
           <sf-button appearance="outline" scheme="on-surface" icon-start="filter_list" text="Фильтры"></sf-button>
         </div>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — фильтры включены, но этого не видно</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — кнопка заранее говорит, сколько покажет</span></figcaption>
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2">
         <sf-button text="Показать 3 заказа"></sf-button>
         <sf-button appearance="ghost" scheme="on-surface" text="Сбросить"></sf-button>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — кнопка заранее говорит, сколько покажет</figcaption>
     </figure>
-    <figure class="m-0 flex flex-col gap-1">
-      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — «Применить» вслепую и две равные кнопки</span></figcaption>
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2">
         <sf-button text="Применить"></sf-button>
         <sf-button text="Сбросить"></sf-button>
       </div>
-      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — «Применить» вслепую и две равные кнопки</figcaption>
     </figure>
   </div>
 </div>

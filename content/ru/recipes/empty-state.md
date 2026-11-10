@@ -42,9 +42,9 @@ description: "Что показать, когда в разделе ещё ни�
 | Место | рамка | `radius-surface border border-outline-variant` на месте будущего списка |
 | Первая запись | [Список](/ru/smart/content/list/) | заменяет пустой экран; кнопка «Добавить» переходит в заголовок |
 
-## Так и не так
+## Как делать
 
-:::example {id="recipes/empty-state/do-dont" label="Так и не так"}
+:::example {id="recipes/empty-state/do-dont" label="Как делать"}
 :::
 
 - **Одно действие.** Пустой экран ведёт к одному шагу. Импорт и справку
