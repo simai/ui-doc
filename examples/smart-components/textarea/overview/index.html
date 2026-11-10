@@ -1,8 +1,17 @@
-<sf-input-textarea
-  name="comment"
-  label="Комментарий"
-  placeholder="Опишите задачу"
-  hint="До 500 символов"
-  maxlength="500"
-  rows="4">
-</sf-input-textarea>
+<form id="textarea-support" class="flex flex-col gap-3 p-3 radius-surface border border-outline-variant bg-surface color-on-surface" novalidate>
+  <p class="m-0 font-medium">Обращение в поддержку</p>
+  <sf-input name="subject" label="Тема" placeholder="Например, не приходит письмо со входом" required></sf-input>
+  <sf-input-textarea
+    name="details"
+    label="Что случилось"
+    placeholder="Что вы делали, что ожидали увидеть и что произошло"
+    hint="От 20 до 1000 символов"
+    minlength="20"
+    maxlength="1000"
+    rows="4"
+    required>
+  </sf-input-textarea>
+  <div class="flex gap-2">
+    <sf-button text="Отправить" data-example-send></sf-button>
+  </div>
+</form>
