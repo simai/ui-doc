@@ -28,7 +28,7 @@ JavaScript.
 <sf-file-preview file-name="Отчёт за квартал.pdf" file-size="1,2 МБ"></sf-file-preview>
 ```
 
-`file-name` — видимое имя файла (прежнее имя атрибута — `name`),
+`file-name` — видимое имя файла,
 `file-size` — размер готовым текстом («1,2 МБ»); компонент его не
 вычисляет. `href` — адрес файла для скачивания. Слева показывается значок
 из `icon` (по умолчанию `description`) или миниатюра.
@@ -99,7 +99,7 @@ JavaScript.
 ### Скачивание и удаление
 
 Нажатие на кнопку отправляет всплывающее событие с возможностью отмены:
-`sf-file-preview:download` или `sf-file-preview:remove`. В `event.detail`:
+`sf-file-preview-download` или `sf-file-preview-detach`. В `event.detail`:
 
 | Поле | Содержимое |
 |:---|:---|

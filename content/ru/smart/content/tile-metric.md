@@ -18,7 +18,7 @@ description: "Одно важное число на панели: подпись
 
 ## Пример
 
-:::example {id="smart-components/tile-metric/overview" label="Четыре плитки в ряду" preview=sandbox}
+:::example {id="smart-components/tile-metric/overview" label="Плитки показателей" preview=sandbox}
 :::
 
 ## Разметка

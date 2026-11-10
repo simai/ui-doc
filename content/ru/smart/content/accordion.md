@@ -132,13 +132,13 @@ description: "Раскрывающиеся секции из данных или
 
 `open(id)`, `close(id)` и `toggle(id)` открывают и закрывают секцию и
 возвращают, изменилось ли что-нибудь; `isOpen(id)` отвечает, открыта ли она.
-Каждое открытие и закрытие отправляет `sf-accordion:toggle` с `id`, `open` и
+Каждое открытие и закрытие отправляет `sf-accordion-toggle` с `id`, `open` и
 `source`: `user` — нажал человек, `method` — вызван метод. В режиме `single`
 закрытая при этом секция отправляет своё событие следом.
 
 ```js
 const faq = document.querySelector('sf-accordion');
-faq.addEventListener('sf-accordion:toggle', (event) => {
+faq.addEventListener('sf-accordion-toggle', (event) => {
   if (event.detail.open) history.replaceState(null, '', `#${event.detail.id}`);
 });
 faq.open(location.hash.slice(1));

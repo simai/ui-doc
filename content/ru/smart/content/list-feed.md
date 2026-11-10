@@ -25,9 +25,7 @@ description: "Прокручиваемая колонка записей, кот
 
 ## Разметка
 
-В разметке — тег с доступным именем; высоту ленте даёт контейнер. Сам тег —
-`display: contents`, а колонка `.sf-list-feed` растягивается во
-flex-контейнере (`flex: 1`) и прокручивается внутри:
+В разметке — тег с доступным именем; высоту ленте даёт контейнер. Лента занимает всю высоту контейнера и прокручивается внутри него:
 
 ```html
 <div style="display: flex; flex-direction: column; block-size: 32rem">
@@ -222,7 +220,7 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 ## См. также
 
 - [Список](/ru/smart/content/list/) — список, с которым что-то делают.
-- [Лента сообщений](/ru/pro/chat/message-log/) — прежнее имя ленты в пакете
+- [Лента сообщений](/ru/pro/chat/message-log/) — лента сообщений чата в пакете
   Pro.
 - [JavaScript API](/ru/guide/connection/js-api/) — `SF.readingPosition`,
   правило положения чтения, на котором построена лента.

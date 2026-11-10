@@ -154,8 +154,7 @@ document.querySelector('.filters').addEventListener('change', (event) => {
 
 ### Удаление
 
-Нажатие на кнопку удаления отправляет всплывающее событие `sf-tag-close`
-(прежнее имя — `close`); `event.detail` пустой, сам тег — `event.target`. Тег
+Нажатие на кнопку удаления отправляет всплывающее событие `sf-tag-close`; `event.detail` пустой, сам тег — `event.target`. Тег
 не исчезает: убирает его приложение, когда удаление принято.
 
 ```js
