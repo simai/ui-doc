@@ -105,23 +105,20 @@ SIMAI Framework `#005bbe` и его собственная тема. Цвет к
 
 | Событие | Когда |
 |:---|:---|
-| `sf-theme-generator-change` | выбор меняется: перетаскивание в палитре, образец цвета, число в поле |
-| `sf-theme-generator-apply` | выбор зафиксирован: `change` палитры, образец цвета, `Enter` или уход из поля, «Сбросить» |
+| `change` | выбор меняется: перетаскивание в палитре, образец цвета, число в поле |
+| `sf-theme-generator-committed` | выбор зафиксирован: `change` палитры, образец цвета, `Enter` или уход из поля, «Сбросить» |
 
 В `detail` обоих — `value` (пусто, пока действует цвет SIMAI Framework), `hue`,
 `chroma`, `theme` (объект темы), `variables` (226 переменных) и `css` —
 правило под `selector` (по умолчанию `:root`). Сохраните `css` в CSS сайта —
 и тема действует на каждой странице без компонента.
 
-Прежние имена `sf-theme-change` и `sf-theme-apply` компонент отправляет
-рядом с новыми для совместимости до 2026-12-01 (запись журнала
-`event-theme-generator-names`); в новом коде слушайте новые имена.
-`sf-theme-change` — ещё и событие Loader на `window` о смене светлой и тёмной
-темы (см. [События загрузчика](/ru/guide/connection/loader/#события-загрузчика)).
+О смене светлой и тёмной темы сообщает другое событие — `sf-theme-change`
+загрузчика на `window` (см. [События загрузчика](/ru/guide/connection/loader/#события-загрузчика)).
 
 ```js
 const generator = document.querySelector('sf-theme-generator');
-generator.addEventListener('sf-theme-generator-apply', ({detail}) => {
+generator.addEventListener('sf-theme-generator-committed', ({detail}) => {
   saveSiteSetting('theme', {value: detail.value, hue: detail.hue, chroma: detail.chroma, css: detail.css});
 });
 ```

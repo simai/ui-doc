@@ -63,7 +63,7 @@ description: "Даёт выбрать одно изображение: мини�
 
 `invalid`, `error-message`, `required` • [справочник](#атрибуты)
 
-`invalid` (или `error`) и `error-message` показывают ошибку вместо пояснения.
+`invalid` и `error-message` показывают ошибку вместо пояснения.
 `required` не даёт отправить форму без изображения.
 
 :::example {id="smart-components/image-field/state-error" label="Обязательное поле с ошибкой"}
@@ -93,18 +93,16 @@ description: "Даёт выбрать одно изображение: мини�
 
 ### Загрузка и события
 
-Когда человек выбрал или перетащил файл, приходит `sf-image-field-attach` с
+Когда человек выбрал или перетащил файл, приходит `sf-input-image-attach` с
 `file`: приложение загружает его и затем задаёт сохранённое значение через
-`setValue()`. «Убрать» отправляет `sf-image-field-detach` с прежним
+`setValue()`. «Убрать» отправляет `sf-input-image-detach` с прежним
 значением; файлы, которых нет в `accept`, отбрасываются с событием
-`sf-image-field-rejected`. Каждое изменение сопровождают `input` и `change` с
+`sf-input-image-rejected`. Каждое изменение сопровождают `input` и `change` с
 `value`, `file`, `source` и `name`.
-Прежние имена `sf-image-field:select`, `sf-image-field:remove` и
-`sf-image-field:reject` приходят следом с тем же `detail` до 2026-12-01.
 
 ```js
-const logo = document.querySelector('sf-image-field[name="logo"]');
-logo.addEventListener('sf-image-field-attach', async (event) => {
+const logo = document.querySelector('sf-input-image[name="logo"]');
+logo.addEventListener('sf-input-image-attach', async (event) => {
   try {
     const stored = await upload(event.detail.file);
     logo.setValue(stored);

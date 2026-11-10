@@ -272,7 +272,7 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 <sf-input-date label="Дата доставки" input-name="delivery_date_text"></sf-input-date>
 <input type="hidden" name="delivery_date">
 <script>
-  const picker = document.querySelector('sf-datepicker[input-name="delivery_date_text"]');
+  const picker = document.querySelector('sf-input-date[input-name="delivery_date_text"]');
   const iso = document.querySelector('input[name="delivery_date"]');
   picker.addEventListener('change', (event) => { iso.value = event.detail.isoValue ?? ''; });
 </script>
@@ -305,9 +305,6 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 дату ISO показанным текстом. Слушатель на предке, например на форме, слышит
 и `change` других полей, поэтому проверяет `event.target`.
 
-Устаревшее событие `sf-change` приходит вместе с `change` и с тем же
-`detail`. Подписывайтесь на `change`.
-
 ### Значение и окно из кода
 
 Свойство `value` возвращает дату или массив границ периода и принимает то же
@@ -321,7 +318,7 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 день, `closePanel({options: {restoreFocus: true}})` возвращает его в поле.
 
 ```js
-const period = document.querySelector('sf-datepicker[name="period"]');
+const period = document.querySelector('sf-input-date[name="period"]');
 period.addEventListener('change', (event) => {
   const {startValue, endValue} = event.detail;
   if (startValue && endValue) loadReport(startValue, endValue);

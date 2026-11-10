@@ -146,7 +146,7 @@ description: "Принимает телефон с выбором страны: 
 или страны из `setState()` тоже отправляет `change`.
 
 ```js
-const phone = document.querySelector('sf-country-code[name="phone"]');
+const phone = document.querySelector('sf-input-country[name="phone"]');
 phone.addEventListener('change', () => {
   const {value, iso2, dialCode} = phone.state;
   savePhone({value, iso2, dialCode});

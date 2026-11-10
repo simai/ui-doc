@@ -128,16 +128,14 @@ description: "Принимает одноразовый код из сообще
 
 ### Проверка кода и события
 
-Когда заполнены все ячейки, приходит `sf-code-input-completed` с `value` —
+Когда заполнены все ячейки, приходит `sf-input-code-completed` с `value` —
 один раз на каждый целый код. Компонент сам форму не отправляет и код не
 проверяет: проверяет приложение. Обычные события `input` и `change` всплывают
 от внутреннего input без `detail`.
-Прежнее имя `sf-code-input:complete` приходит следом с тем же `detail` до
-2026-12-01.
 
 ```js
-const code = document.querySelector('sf-code-input[name="code"]');
-code.addEventListener('sf-code-input-completed', async (event) => {
+const code = document.querySelector('sf-input-code[name="code"]');
+code.addEventListener('sf-input-code-completed', async (event) => {
   const ok = await verify(event.detail.value);
   code.toggleAttribute('invalid', !ok);
   if (!ok) code.setAttribute('error-message', 'Код не подошёл');

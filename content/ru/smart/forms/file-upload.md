@@ -194,8 +194,6 @@ upload.onFileAdd((event) => add(event.detail.item));
 события `sf-file-upload-attached`, `sf-file-upload-failed`,
 `sf-file-upload-completed`, `sf-file-upload-detach`,
 `sf-file-upload-retry` и `sf-file-upload-finished`.
-Прежние имена с двоеточием (`sf-file-upload:select`, `sf-file-upload:file-add`
-и другие) приходят следом с тем же `detail` до 2026-12-01.
 
 ### Отправка файлов
 

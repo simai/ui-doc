@@ -146,7 +146,7 @@ description: "Выбирает цвет системной палитрой ил
 поэтому форма передаёт «не задано» без дополнительного кода.
 
 ```js
-const accent = document.querySelector('sf-color[name="accent"]');
+const accent = document.querySelector('sf-input-color[name="accent"]');
 accent.addEventListener('change', (event) => {
   saveTheme({accent: event.detail.value || null});
 });

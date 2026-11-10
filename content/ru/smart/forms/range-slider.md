@@ -51,7 +51,7 @@ description: "Выбирает одно значение или две гран�
 
 `label` выбирает, как ручка показывает значение: `none` (по умолчанию) — без
 подписи, `text` — постоянной подписью, `tooltip` — подсказкой. `prefix-text`
-и `suffix` добавляют единицы; `prefix` — прежнее имя `prefix-text`.
+и `suffix` добавляют единицы.
 
 :::example {id="smart-components/range-slider/labels" label="Подпись значения"}
 :::
