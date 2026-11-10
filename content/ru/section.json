@@ -32,6 +32,11 @@
         "id": "smart-components",
         "label": "Смарт-компоненты",
         "href": "/ru/smart/"
+      },
+      {
+        "id": "recipes",
+        "label": "Рецепты",
+        "href": "/ru/recipes/"
       }
     ]
   }
