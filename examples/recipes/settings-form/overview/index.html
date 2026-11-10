@@ -20,6 +20,14 @@
         </fieldset>
         <sf-switch name="index" label="Показывать в поисковых системах" checked></sf-switch>
       </section>
+      <section class="sf-card" aria-labelledby="settings-address">
+        <h2 id="settings-address" class="m-0 text-1 weight-6">Адрес для писем</h2>
+        <sf-input name="street" label="Улица, дом" default-value="ул. Ленина, 12"></sf-input>
+        <div class="flex flex-wrap gap-1">
+          <div class="flex-auto w-f6"><sf-input name="city" label="Город" default-value="Казань"></sf-input></div>
+          <div class="w-e6"><sf-input name="postcode" label="Индекс" inputmode="numeric" default-value="420111"></sf-input></div>
+        </div>
+      </section>
       <section class="sf-card" aria-labelledby="settings-notify">
         <h2 id="settings-notify" class="m-0 text-1 weight-6">Уведомления</h2>
         <sf-switch name="notify-down" label="Сайт не отвечает" description="Письмо и сообщение в мессенджер" checked></sf-switch>

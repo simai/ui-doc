@@ -35,10 +35,11 @@ description: "Страница настроек записи или прилож
 | Часть | Компонент | Как задано |
 |:---|:---|:---|
 | Заголовок и путь | [Заголовок страницы](/ru/smart/composite/page-header/) | `heading`; путь через запись, к которой относятся настройки |
-| Раздел | [Карточка](/ru/components/content/card/) | `section.sf-card` с заголовком `h2`; колонка формы не шире `max-w-h0` |
+| Раздел | [Карточка](/ru/components/content/card/) | `section.sf-card` с заголовком `h2`; между карточками `gap-3`, внутри — отступы самой карточки; колонка формы не шире `max-w-h0` |
 | Текстовые поля | [Текстовое поле](/ru/smart/forms/inputs/), [Многострочное поле](/ru/smart/forms/textarea/) | `label` над полем; `hint` — пояснение; `required` и `error-message` — у обязательного |
 | Выбор одного | [Радиокнопки](/ru/smart/forms/radio/) | в `fieldset` с `legend`; у вариантов `description` |
 | Включить и выключить | [Переключатель](/ru/smart/forms/switch/) | `label` и `description` |
+| Части одного ответа | [Текстовое поле](/ru/smart/forms/inputs/) | город и индекс в одной строке `flex flex-wrap gap-1`; ширина по ответу задаёт обёртка поля: индекс `w-e6`, город `flex-auto w-f6` |
 | Ответы | [Кнопка](/ru/smart/actions/buttons/) | «Сохранить» — `native-type="submit"`, вид по умолчанию; «Отмена» — `native-type="reset"` `appearance="ghost"` `scheme="on-surface"` |
 | Результат | [Уведомление](/ru/smart/feedback/toast/) | `status="success"`, `duration="5000"`, в контейнере с `role="status"` в углу |
 
@@ -57,15 +58,23 @@ description: "Страница настроек записи или прилож
   начинает печатать.
 - **Одна кнопка «Сохранить» на форму.** Не по кнопке в каждой карточке:
   человек не понимает, что сохранилось, а что нет.
+- **Поля с рамкой, вид не меняем.** Заливка — только для поиска и фильтров
+  над таблицей. На серую область поля не ставят: сначала карточка раздела.
+  Почему — в руководстве [Формы: фон и группировка](/ru/guide/colour/forms/).
+
+Те же настройки в шторке — без карточек внутри: группы делят заголовок и
+линия, как в рецепте [Фильтры в шторке](/ru/recipes/filter-drawer/). На
+телефоне форма — одна колонка: город и индекс складываются в столбик, кнопки
+стоят в конце формы.
 
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Форма настроек», выпуск ui-b4a77681f0a7.
+<!-- Рецепт SIMAI Framework «Форма настроек», выпуск ui-2bd5a3ab478a.
 Правила:
 1. Корень экрана админки — data-sf-density="compact"; заголовок — sf-header-page с путём через запись.
 2. Форма — колонка max-w-h0; каждый раздел — section.sf-card с h2 class="m-0 text-1 weight-6".
-3. Каждое поле с label над полем; placeholder — только образец формата; пояснение — hint.
+3. Каждое поле с label над полем; placeholder — только образец формата; пояснение — hint. Поля с рамкой (вид по умолчанию), appearance="filled" не берём. Части одного ответа (город и индекс) — в одной строке flex flex-wrap gap-1; ширина по ответу задаёт обёртка поля: индекс в div class="w-e6", город в div class="flex-auto w-f6".
 4. Обязательное поле — required и error-message; при ошибке страница ставит invalid и фокус в поле. Общей плашки ошибок над формой нет.
 5. Выбор одного — sf-radio в fieldset с legend; включить и выключить — sf-switch с label и description.
 6. Одни ответы на форму, под последним разделом: sf-button native-type="submit" text="Сохранить" (вид по умолчанию) и sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена". Не status="danger".
@@ -88,6 +97,14 @@ description: "Страница настроек записи или прилож
         <sf-radio name="access" value="link" label="Только по ссылке" description="Сайт не попадает в поиск"></sf-radio>
       </fieldset>
       <sf-switch name="index" label="Показывать в поисковых системах" checked></sf-switch>
+    </section>
+    <section class="sf-card" aria-labelledby="settings-address">
+      <h2 id="settings-address" class="m-0 text-1 weight-6">Адрес для писем</h2>
+      <sf-input name="street" label="Улица, дом"></sf-input>
+      <div class="flex flex-wrap gap-1">
+        <div class="flex-auto w-f6"><sf-input name="city" label="Город"></sf-input></div>
+        <div class="w-e6"><sf-input name="postcode" label="Индекс" inputmode="numeric"></sf-input></div>
+      </div>
     </section>
     <div class="flex flex-wrap gap-2">
       <sf-button native-type="submit" text="Сохранить"></sf-button>

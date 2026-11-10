@@ -1,0 +1,19 @@
+<form class="flex flex-col gap-3 max-w-h0" onsubmit="return false">
+  <section class="sf-card" aria-labelledby="form-cards-main">
+    <h3 id="form-cards-main" class="m-0 text-1 weight-6">Основное</h3>
+    <sf-input name="name" label="Название сайта" default-value="Магазин «Северный ветер»"></sf-input>
+    <sf-input name="domain" label="Адрес" input-type="url" default-value="https://nord-wind.ru"></sf-input>
+  </section>
+  <section class="sf-card" aria-labelledby="form-cards-access">
+    <h3 id="form-cards-access" class="m-0 text-1 weight-6">Доступ</h3>
+    <fieldset class="border-0 p-0 m-0 flex flex-col gap-1/2">
+      <legend class="p-0 m-bottom-1/2 text-1/2 color-on-surface-variant">Кто видит сайт</legend>
+      <sf-radio name="form-cards-access" value="all" label="Все посетители" checked></sf-radio>
+      <sf-radio name="form-cards-access" value="link" label="Только по ссылке"></sf-radio>
+    </fieldset>
+  </section>
+  <div class="flex flex-wrap gap-2">
+    <sf-button native-type="submit" text="Сохранить"></sf-button>
+    <sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена"></sf-button>
+  </div>
+</form>

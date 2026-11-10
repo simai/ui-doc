@@ -1,0 +1,12 @@
+<form class="flex flex-col gap-3 max-w-h0" aria-labelledby="form-page-title" onsubmit="return false">
+  <h3 id="form-page-title" class="m-0 text-2 weight-6">Новый проект</h3>
+  <div class="flex flex-col gap-1">
+    <sf-input name="title" label="Название" required default-value="Каталог «Северный ветер»"></sf-input>
+    <div class="w-f6"><sf-input name="code" label="Код" default-value="nord-wind" hint="Латиница и дефис, попадёт в адрес"></sf-input></div>
+    <sf-input-textarea name="about" label="Описание" rows="3" hint="Две-три фразы для участников проекта"></sf-input-textarea>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <sf-button native-type="submit" text="Создать"></sf-button>
+    <sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена"></sf-button>
+  </div>
+</form>

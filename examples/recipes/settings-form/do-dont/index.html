@@ -39,5 +39,19 @@
         <sf-input placeholder="Адрес сайта" aria-label="Адрес сайта"></sf-input>
       </div>
     </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — раздел в карточке, поля с рамкой</span></figcaption>
+      <div class="flex-1 p-2 bg-surface-area">
+        <section class="sf-card" aria-label="Почта для уведомлений">
+          <sf-input name="right-mail" label="Почта для уведомлений" input-type="email" default-value="admin@nord-wind.ru"></sf-input>
+        </section>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — залитое поле прямо на серой области</span></figcaption>
+      <div class="flex-1 p-2 bg-surface-area">
+        <sf-input appearance="filled" name="wrong-mail" label="Почта для уведомлений" input-type="email" default-value="admin@nord-wind.ru"></sf-input>
+      </div>
+    </figure>
   </div>
 </div>
