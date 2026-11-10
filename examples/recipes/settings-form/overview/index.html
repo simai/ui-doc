@@ -1,0 +1,35 @@
+<div data-sf-density="compact">
+  <div class="flex flex-col gap-3">
+    <sf-header-page heading="Настройки сайта">
+      <sf-breadcrumbs slot="path" aria-label="Путь к странице" items='[{"label":"Сайты","href":"#sites"},{"label":"Магазин «Северный ветер»","href":"#site"},{"label":"Настройки"}]'></sf-breadcrumbs>
+    </sf-header-page>
+    <form id="settings-form" class="flex flex-col gap-3 max-w-h0" novalidate>
+      <section class="sf-card" aria-labelledby="settings-main">
+        <h2 id="settings-main" class="m-0 text-1 weight-6">Основное</h2>
+        <sf-input id="settings-name" name="name" label="Название сайта" required default-value="Магазин «Северный ветер»" error-message="Введите название: его видно во вкладке браузера и в поиске"></sf-input>
+        <sf-input name="domain" label="Адрес" input-type="url" default-value="https://nord-wind.ru" hint="С этого адреса сайт открывается у посетителей"></sf-input>
+        <sf-input-textarea name="description" label="Описание" rows="3" hint="Две-три фразы для поисковых систем"></sf-input-textarea>
+      </section>
+      <section class="sf-card" aria-labelledby="settings-access">
+        <h2 id="settings-access" class="m-0 text-1 weight-6">Доступ</h2>
+        <fieldset class="border-0 p-0 m-0 flex flex-col gap-2">
+          <legend class="p-0 m-bottom-1 text-1/2 color-on-surface-variant">Кто видит сайт</legend>
+          <sf-radio name="access" value="all" label="Все посетители" checked></sf-radio>
+          <sf-radio name="access" value="link" label="Только по ссылке" description="Сайт не попадает в поиск"></sf-radio>
+          <sf-radio name="access" value="none" label="Никто" description="Посетители видят страницу «Сайт на обслуживании»"></sf-radio>
+        </fieldset>
+        <sf-switch name="index" label="Показывать в поисковых системах" checked></sf-switch>
+      </section>
+      <section class="sf-card" aria-labelledby="settings-notify">
+        <h2 id="settings-notify" class="m-0 text-1 weight-6">Уведомления</h2>
+        <sf-switch name="notify-down" label="Сайт не отвечает" description="Письмо и сообщение в мессенджер" checked></sf-switch>
+        <sf-switch name="notify-ssl" label="Сертификат скоро истечёт" description="За 14 дней до срока"></sf-switch>
+      </section>
+      <div class="flex flex-wrap gap-2">
+        <sf-button native-type="submit" text="Сохранить"></sf-button>
+        <sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена"></sf-button>
+      </div>
+    </form>
+  </div>
+  <div id="settings-toasts" class="fixed block-end-b6 inline-end-b6 z-9 flex flex-col gap-2" role="status"></div>
+</div>

@@ -1,0 +1,43 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-button text="Сохранить"></sf-button>
+        <sf-button appearance="ghost" scheme="on-surface" text="Отмена"></sf-button>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — «Отмена» тихая, она ничего не ломает</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-wrap gap-2 items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-button text="Сохранить"></sf-button>
+        <sf-button status="danger" text="Отмена"></sf-button>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — красный значит «удалит», а не «закроет»</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+        <sf-input label="Название сайта" required invalid error-message="Введите название: его видно во вкладке браузера"></sf-input>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — ошибка под полем и что сделать</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+        <sf-alert status="error" title="Форма заполнена с ошибками"></sf-alert>
+        <sf-input label="Название сайта" required></sf-input>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — общая ошибка сверху, поле не отмечено</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+        <sf-input label="Адрес" placeholder="https://example.ru"></sf-input>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — подпись над полем, в поле — образец</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+        <sf-input placeholder="Адрес сайта" aria-label="Адрес сайта"></sf-input>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — подпись в поле пропадает при вводе</figcaption>
+    </figure>
+  </div>
+</div>
