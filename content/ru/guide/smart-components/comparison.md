@@ -9,10 +9,11 @@ description: "Таблица соответствия: понятие прежн
 `SfBaseElement` с манифестом `smart.manifest.json`, который писал автор.
 Таблицы ниже показывают, куда в стандарте переходит каждое знакомое понятие
 прежнего устройства. Компоненты переходили по одной семье на выпуск пары
-SIMAI Framework; все 59 смарт-компонентов переведены в выпусках
+SIMAI Framework; все смарт-компоненты переведены в выпусках
 `ui-8e0b5505db8f` … `ui-363de49bdfa8`, а с выпуска `ui-e84590925e63` все
 смарт-компоненты SIMAI Framework лежат в папке вида 1.4. Старые имена событий и методов
-продолжают работать как псевдонимы до 2026-12-01.
+продолжают работать как псевдонимы; сроки — на странице
+[Имена и общие слова](/ru/guide/smart-components/names/).
 
 Новые компоненты следуют стандарту с первого выпуска. Компоненту, у которого
 ещё нет манифеста, интерфейс на время перехода даёт адаптер; других задач у
@@ -25,9 +26,9 @@ SIMAI Framework; все 59 смарт-компонентов переведен�
 | Атрибуты и свойства (`static props`, `inputs`) | **настройки** (`settings`) и **значения** (`values`); значение, которое меняет человек, указано один раз в `values` | [Модель компонента](/ru/guide/smart-components/model/) |
 | Состояние компонента | значения наружу; видимые состояния — атрибуты хоста `host-states` | [Разметка и шаблоны](/ru/guide/smart-components/markup/#состояние-видно-из-разметки) |
 | Публичные методы (`methods`) | **действия** (`actions`) с исходом `applied` или `refused`; методы генерируются; методов-читателей нет | [Модель компонента](/ru/guide/smart-components/model/#действия-и-их-исход) |
-| Класс на `SfBaseElement`, `index.js`, `rule.js`, `meta.mjs` | одна папка: `component.json`, `template.html`, `behaviour.js`; код элемента, правило загрузчика и реестр генерируются | [Папка компонента и манифест](/ru/guide/smart-components/folder/) |
+| Класс на `SfBaseElement`, `index.js`, `rule.js`, `meta.mjs` | одна папка из пяти файлов, которые пишет человек: `component.json`, `examples.json`, `index.js` с папкой `js/`, `lang/<язык>.json`, `docs.md`; правило загрузчика, реестр и остальное генерирует построение | [Папка компонента и манифест](/ru/guide/smart-components/folder/) |
 | Методы для переопределения (`onConnected`, `beforeRender`…) | `behaviour.js` с вычисляемыми значениями и кодом действий; события отрисовки — только базовые | [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс) |
-| Шаблон Lit и `templateContext()` | **HTML-шаблоны** с `{{…}}`, `:attr`, `@event`, `if`, `each … key`, которые построение компилирует в Lit; Lit внутри JavaScript — переходная форма | [Разметка и шаблоны](/ru/guide/smart-components/markup/) |
+| Шаблон Lit и `templateContext()` | цель стандарта — **HTML-шаблоны** с `{{…}}`, `:attr`, `@event`, `if`, `each … key`, которые построение компилирует в Lit; сегодня большинство компонентов рисует разметку в JavaScript (`js/templates/`) | [Разметка и шаблоны](/ru/guide/smart-components/markup/) |
 | Внешний шаблон (`template="compact"`) | `template.<имя>.html` в папке компонента; шаблоны называются по расположению | [Внешний вид](/ru/guide/smart-components/look/) |
 | Публичные `refresh(reason)`, `set()` и `state` базового элемента | переименованы в `rerender`, `assign` и закрытое `#state` с псевдонимами, чтобы имя `refresh` осталось действию из словаря | [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс) |
 | Слоты, забранные из детей тега | содержимое ставится и не копируется; слоты с `accepts` и `each` | [Слоты](/ru/guide/smart-components/slots/) |
@@ -40,11 +41,11 @@ SIMAI Framework; все 59 смарт-компонентов переведен�
 
 | Прежнее понятие | Место в стандарте | Где описано |
 |:---|:---|:---|
-| События с двоеточием (`sf-menu:navigate`, `modal:after-close`) | `sf-<тег>-<глагол>` и `sf-<тег>-<глагол>ed`; старые имена — псевдонимы с датой | [Имена и общие слова](/ru/guide/smart-components/names/#имена-событий) |
+| События с двоеточием (`sf-menu:navigate`, `modal:after-close`) | `<тег>-<глагол>` и `<тег>-<глагол>ed`; старые имена — псевдонимы с датой | [Имена и общие слова](/ru/guide/smart-components/names/#имена-событий) |
 | Имя события в манифесте как DOM-имя (`events.sf-modal-closed`) | событие объявлено глаголом (`closed`), DOM-имя выводит построение | [На странице](/ru/guide/smart-components/page/#имена-событий) |
 | Суффикс `-intent` (`sf-table-query-intent`) | глагол словаря: `sf-table-query`, `sf-table-apply` | [Имена и общие слова](/ru/guide/smart-components/names/#свой-глагол-компонента) |
 | Соглашение `change` | `change` сообщает только об изменении человеком; изменение снаружи слушают через `data.<ключ>` | [На странице](/ru/guide/smart-components/page/#событие-change) |
-| `modal:before-close` и подобные «перед» | отклоняемая просьба `sf-<тег>-close {reason, unsaved}` | [Окна и панели](/ru/guide/smart-components/layers/#закрытие-с-причиной) |
+| `modal:before-close` и подобные «перед» | отклоняемая просьба `<тег>-close {reason, unsaved}` | [Окна и панели](/ru/guide/smart-components/layers/#закрытие-с-причиной) |
 | Этапы `sf-connected`, `sf-before-render`, `sf-disconnected` | базовые события `sf-props-change`, `sf-updated`, `sf-after-render`, `sf-component-error`; свои копии этапов не заводятся | [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс) |
 | `data-sf-modal-*`, `data-sf-drawer-*` | одна кнопка `data-sf-action="<id>.<действие>"` | [На странице](/ru/guide/smart-components/page/#кнопка-data-sf-action) |
 
@@ -55,7 +56,7 @@ SIMAI Framework; все 59 смарт-компонентов переведен�
 | Составной компонент (`kind: "composite"`) | **сборка** (`kind: "assembly"`): детали по ролям, данные с одним хозяином, правила | [Сборки](/ru/guide/smart-components/assemblies/) |
 | Связь компонентов без кода проекта, `composition` | `roles` и `bind`; моменты — `rules` «Когда → Только если → Сделать» | [Правила](/ru/guide/smart-components/rules/) |
 | Всплытие событий вложенных элементов | события частей останавливаются на рамке сборки; наружу — только `emit` | [Сборки](/ru/guide/smart-components/assemblies/#рамка-ничего-не-выходит-само) |
-| Пакеты компонентов продуктов (приставка владельца) | компоненты SIMAI делают только в SIMAI Framework и ui-pro, приставка одна — `sf-`; экраны продукта — сборки; партнёр или проект выпускает пакет под своей приставкой и входит в сборку через интерфейс | [Папка компонента и манифест](/ru/guide/smart-components/folder/#где-делают-компоненты), [Пакеты партнёров и проектов](/ru/guide/smart-components/packages/) |
+| Пакеты компонентов продуктов (приставка владельца) | компоненты SIMAI делают в SIMAI Framework и его наборах компонентов (view, chat, mail, editor, effects, chart, pro), приставка одна — `sf-`; экраны продукта — сборки; партнёр или проект выпускает пакет под своей приставкой и входит в сборку через интерфейс | [Папка компонента и манифест](/ru/guide/smart-components/folder/#где-делают-компоненты), [Пакеты партнёров и проектов](/ru/guide/smart-components/packages/) |
 | Вычисления и флаги в коде проекта | **производные ключи** из закрытого списка чтений и условий; шаги `append` и `remove`; остальное — код детали | [Сборки](/ru/guide/smart-components/assemblies/#производные-ключи), [Правила](/ru/guide/smart-components/rules/) |
 | Скрытие поля стилями | `if` убирает деталь из DOM, формы и проверки; `hidden` оставляет её и отключает поля внутри | [Сборки](/ru/guide/smart-components/assemblies/#показ-и-скрытие-детали) |
 | Обработка отказа хоста после неудачного изменения | ветка `otherwise` читает исход чтением `{"outcome": "answer"}`, `"reason"` или `"message"`; `from` читает событие | [Правила](/ru/guide/smart-components/rules/#что-читает-иначе) |
@@ -72,7 +73,7 @@ SIMAI Framework; все 59 смарт-компонентов переведен�
 | Запрос списка: вид, порядок, страница | ключи `saved-view`, `sort` списком `[{key, direction}]`, числа `page` и `page-size`; старые формы — псевдонимы до 2026-12-01 | [Имена и общие слова](/ru/guide/smart-components/names/#ключи-экрана) |
 | Перечитывание данных за закрытой вкладкой | запущенная деталь в закрытом контейнере откладывает чтения и читает один раз при открытии | [Первый кадр и ленивая загрузка](/ru/guide/smart-components/first-paint/) |
 | Состояния данных (`populated` и другие) | семь состояний словаря; `ready` вместо `populated` | [Данные с сервера](/ru/guide/smart-components/data/#семь-состояний-данных) |
-| Персональный вид (`persistence.view_preference`) | флаг ключа `"persist": "local"` или `"host"` | [Сборки](/ru/guide/smart-components/assemblies/#история-и-сохранение) |
+| Персональный вид (`persistence.view_preference`) | у компонента остаётся `persistence.view_preference` в манифесте; у ключа сборки — флаг `"persist": "local"` или `"host"` | [Сборки](/ru/guide/smart-components/assemblies/#история-и-сохранение) |
 | Поля по типу свойства, ячейки таблицы | ячейка, которая показывает значение, — разметка на классах; смарт-элемент — только при правке; запись в ячейке ждёт `settle` | [Записи: строки и узлы](/ru/guide/smart-components/entries/) |
 
 ## Манифест `smart.manifest.json` → `component.json`

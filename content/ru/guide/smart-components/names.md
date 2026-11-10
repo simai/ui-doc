@@ -74,7 +74,7 @@ description: "Как называются смарт-компоненты, их 
 | `filter` | условия на записи | фильтры таблицы |
 | `list` | показывает записи; открывает одну, выбирает несколько | `sf-view-table`, `sf-view`, `sf-chat-threads` |
 | `pagination` | страница, размер страницы, полоса массовых действий | `sf-pagination` |
-| `feed` | лента, новое внизу, раннее по запросу | `sf-message-log` (станет общим `sf-view-feed`) |
+| `feed` | лента, новое внизу, раннее по запросу | `sf-list-feed` |
 | `record` | показывает и правит одну запись | `sf-view-properties` |
 | `actions` | команды для выбранного или записи | панель инструментов, действия строки |
 | `composer` | пишет новую запись | поле ввода UI Chat |
@@ -113,7 +113,7 @@ description: "Как называются смарт-компоненты, их 
 
 ## Имена событий
 
-- Просьба: `sf-<тег>-<глагол>`; факт: `sf-<тег>-<глагол>ed`. В имени —
+- Просьба: `<тег>-<глагол>`; факт: `<тег>-<глагол>ed`. В имени —
   **тег компонента**: `sf-view-properties-close`, `sf-view-table-apply`,
   `sf-chat-threads-open`, `sf-view-properties-saved`. Когда тег
   переименован, его события переименованы вместе с ним, а старые имена
@@ -194,18 +194,18 @@ description: "Как называются смарт-компоненты, их 
 
 | Старое имя | Новое имя |
 |:---|:---|
-| `sf-table-query-intent` | `sf-table-query` |
-| `sf-table-tree-toggle`, `sf-table-tree-more` | `sf-table-expand`, `sf-table-load-more` |
-| `sf-table-tree-intent` | `sf-data-view-tree` |
-| `sf-table:column-settings-change` | `sf-table-save {kind: columns}` |
+| `sf-table-query-intent` | `sf-view-table-query` |
+| `sf-table-tree-toggle`, `sf-table-tree-more` | `sf-view-table-expand`, `sf-view-table-load-more` |
+| `sf-table-tree-intent` | `sf-view-tree` |
+| `sf-table:column-settings-change` | `sf-view-table-save {kind: columns}` |
 | `sf-sortable-intent` | `sf-sortable-move` |
 | `sf-tree:activate`, `sf-tree:selection-change` | `sf-tree-open`, `sf-tree-select` |
 | `sf-menu:navigate` | `sf-menu-navigate` |
-| `sf-download-file:click` | `sf-download-file-download` |
+| `sf-download-file:click` | `sf-file-download-download` |
 | `sf-file-upload:select`, `:remove`, `:reject` | `sf-file-upload-attach`, `-detach`, `-rejected` |
 | `sf-file-upload:file-complete`, `:file-error`, `:complete` | `sf-file-upload-completed {id}` (конец потока), `-failed {id, reason}`, `-finished` |
-| `sf-image-field:reject`, `:remove` | `sf-image-field-rejected`, `-detach` |
-| `sf-code-input:complete` | `sf-code-input-completed` |
+| `sf-image-field:reject`, `:remove` | `sf-input-image-rejected`, `-detach` |
+| `sf-code-input:complete` | `sf-input-code-completed` |
 | `sf-hide-show:change`, `sf-theme-change` | `change` |
 | `drawer:snap` | `sf-drawer-snapped {point}` |
 | `drawer:ready`, `drawer:update` | уходят без замены |

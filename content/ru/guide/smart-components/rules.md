@@ -314,7 +314,7 @@ sequenceDiagram
 {"id": "r-trash", "on": "trash.press", "concurrency": "drop",
  "if": {"left": {"key": "chosen"}, "op": "filled"},
  "steps": [
-   {"ask": "confirm.open", "with": {"code": {"value": "delete"}, "count": {"value": 1}}, "answer": "answer"},
+   {"ask": "confirm.open", "answer": "answer"},
    {"check": {"left": {"key": "answer.accepted"}, "op": "yes"}},
    {"do": "source.delete", "with": {"ids": {"key": "chosen"}}},
    {"reset": "chosen"}
@@ -363,7 +363,7 @@ sequenceDiagram
 **Вернуться на первую страницу при новом запросе.**
 
 ```json
-{"id": "r-first-page", "on": "data.query", "steps": [{"do": "pagination.reset"}]}
+{"id": "r-first-page", "on": "data.query", "steps": [{"do": "pagination.go-to-page", "with": {"page": {"value": 1}}}]}
 ```
 
 Новый запрос сам страницу не сдвигает: на первую страницу её возвращает
