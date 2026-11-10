@@ -1,0 +1,34 @@
+<div id="filters-root" data-sf-overlay-container data-sf-density="compact">
+  <div class="flex flex-col gap-3">
+    <sf-header-page heading="Заказы" count="8"></sf-header-page>
+    <div class="flex flex-wrap gap-2 items-cross-center">
+      <sf-input root-class="flex-1 min-w-0" input-type="search" icon-start="search" placeholder="Номер или покупатель" aria-label="Поиск по заказам"></sf-input>
+      <sf-button appearance="outline" scheme="on-surface" icon-start="filter_list" text="Фильтры" data-drawer="toggle" aria-controls="orders-filters"></sf-button>
+    </div>
+    <div id="filters-applied" class="flex flex-wrap gap-1 items-cross-center" aria-label="Выбранные фильтры" role="group"></div>
+    <sf-list id="orders" label="Заказы">
+      <sf-empty-state slot="empty" id="orders-empty" kind="nothing-found" size="1/2" text="По этим фильтрам заказов нет."></sf-empty-state>
+    </sf-list>
+  </div>
+  <sf-drawer id="orders-filters" modal="false" placement="inline-end" size="1/2" heading="Фильтры">
+    <form id="filters-form" class="flex flex-col gap-3">
+      <fieldset class="border-0 p-0 m-0 flex flex-col gap-1">
+        <legend class="p-0 m-bottom-1 weight-6">Статус</legend>
+        <sf-checkbox name="status" value="new" label="Новый"></sf-checkbox>
+        <sf-checkbox name="status" value="paid" label="Оплачен"></sf-checkbox>
+        <sf-checkbox name="status" value="sent" label="Отправлен"></sf-checkbox>
+        <sf-checkbox name="status" value="cancelled" label="Отменён"></sf-checkbox>
+      </fieldset>
+      <fieldset class="border-0 p-0 m-0 flex flex-col gap-1">
+        <legend class="p-0 m-bottom-1 weight-6">Доставка</legend>
+        <sf-radio name="delivery" value="any" label="Любая" checked></sf-radio>
+        <sf-radio name="delivery" value="courier" label="Курьером"></sf-radio>
+        <sf-radio name="delivery" value="pickup" label="Самовывоз"></sf-radio>
+      </fieldset>
+      <div class="flex flex-wrap gap-2">
+        <sf-button id="filters-apply" text="Показать заказы"></sf-button>
+        <sf-button id="filters-clear" appearance="ghost" scheme="on-surface" text="Сбросить"></sf-button>
+      </div>
+    </form>
+  </sf-drawer>
+</div>
