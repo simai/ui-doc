@@ -87,9 +87,9 @@ description: "Копирует значение или текст элемент
 
 Если `target` указывает на блок кода с номерами строк, номера в буфер не
 попадают. Здесь у блока убрана своя шапка (`data-chrome="none"`), и
-кнопка стоит над ним.
+кнопка стоит над ним. Нажмите «Копировать» и вставьте в любое поле.
 
-:::example {id="smart-components/copy-button/code" label="Блок кода" preview=sandbox log="sf-button-copy-copied" log_console=true log_open=false}
+:::example {id="smart-components/copy-button/code" label="Блок кода"}
 :::
 
 У блока кода со своей шапкой кнопка «Копировать код» уже есть — вторую рядом

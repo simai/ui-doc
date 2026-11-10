@@ -27,9 +27,10 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
 
 ### Блок кода
 
-Кнопку в шапке ставит сам блок кода. Номера строк в буфер не попадают.
+Кнопку в шапке ставит сам блок кода. Нажмите её и вставьте в любое поле:
+номеров строк в тексте нет.
 
-:::example {id="recipes/copy/code" label="Команды" preview=sandbox log="sf:copy-success" log_console=true log_open=false}
+:::example {id="recipes/copy/code" label="Команды"}
 :::
 
 ### Строка таблицы
