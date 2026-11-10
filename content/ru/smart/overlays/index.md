@@ -1,6 +1,6 @@
 ---
 title: "Окна и панели"
-description: "Окна и панели — 4 смарт-компонента SIMAI Framework."
+description: "Окна и панели — смарт-компоненты SIMAI Framework."
 profile: reference
 ---
 

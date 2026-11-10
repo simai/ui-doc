@@ -1,6 +1,6 @@
 ---
 title: "Содержимое и медиа"
-description: "Содержимое и медиа — 16 смарт-компонентов SIMAI Framework."
+description: "Содержимое и медиа — смарт-компоненты SIMAI Framework."
 profile: reference
 ---
 

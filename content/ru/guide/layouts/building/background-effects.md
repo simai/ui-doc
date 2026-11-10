@@ -212,7 +212,7 @@ export function mount(host, settings, context) {
 эффектов, их схем и настроек. Исходники и файлы каталога лежат в репозитории
 `simai/ui-effects`; страница подключает каталог по адресу с коммитом, а не с
 веткой. Примеры этой документации закреплены на коммите
-`e3a6c512f562e214bb33cab79cfac0c8ad1ead4e`, 17 эффектов без пар:
+`e3a6c512f562e214bb33cab79cfac0c8ad1ead4e`, эффекты без пар:
 
 ```text
 https://cdn.jsdelivr.net/gh/simai/ui-effects@e3a6c512f562e214bb33cab79cfac0c8ad1ead4e/

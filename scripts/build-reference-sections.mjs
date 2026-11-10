@@ -306,9 +306,9 @@ const utilityClasses = (families) => {
     }
     for (const [id, {removeAfter, names}] of byRecord) {
       const until = removeAfter ? ` до ${removeAfter}` : '';
-      const count = names.length;
-      const word = count % 10 === 1 && count % 100 !== 11 ? 'класс' : (count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14) ? 'класса' : 'классов');
-      lines.push('', `Ещё ${count} ${word} уходят без замены и работают${until} (запись \`${id}\` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
+      // No count: the number changes between releases (D19).
+      if (!names.length) continue;
+      lines.push('', `Другие классы записи \`${id}\` журнала уходят без замены и работают${until} ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
     }
   }
   return lines;

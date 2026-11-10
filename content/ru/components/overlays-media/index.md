@@ -1,6 +1,6 @@
 ---
 title: "Слои и медиаконтент"
-description: "Слои и медиаконтент — 5 компонентов SIMAI Framework."
+description: "Слои и медиаконтент — компоненты SIMAI Framework."
 profile: reference
 ---
 
