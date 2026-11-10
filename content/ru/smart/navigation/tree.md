@@ -88,7 +88,6 @@ JavaScript.
 | `one` | выбирает один пункт |
 | `many` | переключает выбор каждого пункта отдельно |
 
-`single` и `multiple` — другие имена `one` и `many`, работают до 2026-12-01.
 Значение `selected` — код текущего пункта, `selected-ids` — все выбранные
 при `many`, по порядку записей. Изначальный выбор задают атрибутом
 `selected` у пункта или полем `selected: true` у записи.
@@ -98,18 +97,17 @@ JavaScript.
 
 ### События
 
-| Событие | Когда | `event.detail` | Прежнее имя (до 2026-12-01) |
-|:---|:---|:---|:---|
-| `sf-tree-open` | нажата подпись пункта или `Enter` на листе без ссылки | `id`, `value` | `sf-tree-item-click` |
-| `sf-tree-select` | выбор изменился | `ids` — весь выбор, `id` — нажатый пункт, `selected` | `sf-tree-selection-change` |
-| `sf-tree-toggle` | ветвь раскрыта или свёрнута | `id`, `open`, `value` | `sf-tree-item-toggle` |
-| `sf-tree-move` | на пункт отпустили записи из списка (`accept-records`) | `ids`, `parent`, `before`, `source` | `sf-tree-records-drop` |
-| `sf-tree-attach` | на пункт отпустили файлы (`accept-files`) | `files`, `parent` | `sf-tree-files-drop` |
-| `sf-tree-window` | изменилось окно длинного дерева | `first`, `last` | — |
+| Событие | Когда | `event.detail` |
+|:---|:---|:---|
+| `sf-tree-open` | нажата подпись пункта или `Enter` на листе без ссылки | `id`, `value` |
+| `sf-tree-select` | выбор изменился | `ids` — весь выбор, `id` — нажатый пункт, `selected` |
+| `sf-tree-toggle` | ветвь раскрыта или свёрнута | `id`, `open`, `value` |
+| `sf-tree-move` | на пункт отпустили записи из списка (`accept-records`) | `ids`, `parent`, `before`, `source` |
+| `sf-tree-attach` | на пункт отпустили файлы (`accept-files`) | `files`, `parent` |
+| `sf-tree-window` | изменилось окно длинного дерева | `first`, `last` |
 
 События приходят на `<sf-tree>`. В `detail` — только данные: код записи, а
-не элемент. Прежнее имя приходит следом за новым с прежним `detail`, где
-`item` — элемент строки; такие события отмечаются в `SF.deprecations`. `onToggle(handler)` слушает `sf-tree-toggle` и
+не элемент. `onToggle(handler)` слушает `sf-tree-toggle` и
 передаёт обработчику элемент строки первым аргументом.
 
 ```js

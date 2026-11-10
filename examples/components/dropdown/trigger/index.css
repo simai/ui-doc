@@ -1,0 +1,5 @@
+/* The open list hangs below the icon button; the stage keeps room for it
+   inside the example frame. */
+.sf-dropdown-example-stage {
+  min-block-size: 26rem;
+}

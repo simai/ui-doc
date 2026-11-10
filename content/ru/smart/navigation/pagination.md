@@ -114,13 +114,6 @@ description: "Переключает страницы длинного спис�
 | `sf-pagination-load-more` | нажата «Показать ещё» | `direction` (всегда `after`), `current`, `total`, `pageSize`, `pageCount`, `hasNext` |
 | `sf-pagination-count` | запрошено общее количество | `reason`, `current`, `pageSize` |
 
-Прежние имена этих событий — `sf-page-change`, `sf-page-size-change`,
-`sf-show-more`, `sf-count-request`, `sf-action-change`,
-`sf-action-for-all-change`, `sf-action-apply` и `sf-selection-clear` —
-приходят до 2026-12-01 с прежним `detail`: в нём ещё `component`, у
-`sf-show-more` — `item`, у `sf-action-apply` — `actionForAll`. Подписывайтесь на
-новые.
-
 При смене размера `current` остаётся в пределах нового числа страниц.
 `goToPage(n)`, `setPageSize(n)` и `showMore()` делают то же из кода,
 `onPageChange(handler)` передаёт обработчику номер новой страницы первым

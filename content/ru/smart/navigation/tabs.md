@@ -251,8 +251,7 @@ tabs.setItems([
 
 `goTo(index)` открывает вкладку по номеру в объявленном списке, считая с нуля, — и после того, как человек переставил вкладки; на недоступную вкладку он не переключает.
 При переключении элемент отправляет всплывающее событие `sf-tabs-change` с
-`detail.previous`, `detail.current`, `detail.item` и `detail.items`
-(`sf-tab-change` — его устаревшее имя с тем же `detail`).
+`detail.previous`, `detail.current`, `detail.item` и `detail.items`.
 `previous` и `current` — номера в объявленном списке, `item` — пункт
 целиком, с `key`, `label` и `count`. `onTabChange(handler)` подписывается на
 событие и передаёт обработчику номер новой вкладки первым аргументом.

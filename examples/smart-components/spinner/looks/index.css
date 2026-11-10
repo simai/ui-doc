@@ -9,3 +9,16 @@
   max-inline-size: 100%;
   overflow-x: auto;
 }
+
+/* On a phone the five columns do not fit: each step becomes its own row
+   of four spinners, and the button follows them. */
+@media (max-width: 32rem) {
+  .spinner-looks {
+    grid-template-columns: repeat(4, max-content);
+    justify-content: start;
+  }
+  .spinner-looks > sf-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}

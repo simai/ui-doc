@@ -78,7 +78,7 @@ description: "Показывает путь от корня сайта до те
 ### Нажатие на пункт
 
 Нажатие на пункт отправляет всплывающее отменяемое событие
-`sf-breadcrumbs-press` (прежнее имя — `sf-breadcrumb-click`). Его
+`sf-breadcrumbs-press`. Его
 `event.detail` содержит `item` — данные пункта (`label`, `href`, `value`,
 `ellipsis` и другие поля), `index` — номер пункта среди показанных, `items` —
 все показанные пункты. У кнопки «…» в `item` есть `ellipsis: true` и

@@ -24,3 +24,13 @@
 .contents-demo-article p {
   margin-block: 0 0.5rem;
 }
+
+/* On a phone the article needs the whole width: the column moves above it. */
+@media (max-width: 40rem) {
+  .contents-demo:not(.contents-demo--stack):not(.contents-demo--rail) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .contents-demo:not(.contents-demo--stack):not(.contents-demo--rail) > aside {
+    order: -1;
+  }
+}

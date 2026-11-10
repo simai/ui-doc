@@ -157,10 +157,6 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 клавишей-модификатором или средней кнопкой событие не отправляет.
 `sf-menu-toggle` сообщает, что ветка открылась или закрылась.
 
-Прежние имена `sf-menu:navigate` и `sf-menu:toggle` приходят с тем же
-`detail` до 2026-12-01; отмена перехода действует для обоих имён. Каждое
-обращение к прежнему имени записывается в `SF.deprecations`.
-
 ```js
 const menu = document.querySelector('sf-menu');
 menu.addEventListener('sf-menu-navigate', (event) => {
