@@ -1,0 +1,10 @@
+<div class="flex flex-col gap-2">
+  <div class="flex items-cross-center gap-1">
+    <span class="flex-1 weight-5">Сборка</span>
+    <sf-button-copy target="#copy-button-build" text="Копировать" label="Копировать команды сборки" appearance="outline"></sf-button-copy>
+  </div>
+  <pre class="m-0"><code id="copy-button-build" data-lang="bash" data-lines data-chrome="none">cd my-site
+npm i @simai-studio/ui
+npm run build</code></pre>
+  <p class="m-0 text-1/2 color-on-surface-variant">В буфере: <span data-buffer>пока ничего — нажмите «Копировать»</span></p>
+</div>
