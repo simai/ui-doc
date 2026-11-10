@@ -1,7 +1,13 @@
-<div class="flex flex-col gap-3 items-cross-start">
-  <div class="flex flex-wrap gap-2 items-cross-center">
-    <sf-button id="position-toggle" text="Открыть панель" appearance="outline"></sf-button>
-    <sf-button id="position-top" text="Сверху" appearance="outline"></sf-button>
+<style>
+  .position-scroller { block-size: var(--sf-f6); overflow: auto; }
+  .position-track { block-size: var(--sf-g4); }
+</style>
+<div class="flex flex-col gap-2">
+  <p class="m-0 text-1/2 color-on-surface-variant">Прокрутите рамку вниз и вверх: панель держится у кнопки, у нижнего края встаёт сверху, а у правого края сдвигается внутрь.</p>
+  <div class="position-scroller radius-surface border border-outline-variant bg-surface-container">
+    <div class="position-track flex flex-col content-main-center items-cross-end p-3">
+      <sf-button id="position-anchor" text="Якорь" appearance="outline"></sf-button>
+    </div>
   </div>
-  <div id="position-panel" class="p-3 radius-3 bg-surface-popup elevation-2 max-w-sm" hidden>Панель стоит у кнопки и переворачивается у края.</div>
+  <div id="position-panel" class="p-1 radius-1 bg-surface-popup elevation-2 text-1/2">Панель: <b data-side>снизу</b></div>
 </div>
