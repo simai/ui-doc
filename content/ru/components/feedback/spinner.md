@@ -47,15 +47,6 @@ profile: reference
   `data-direction` (`clockwise` или `counterclockwise`). Размер точек задаёт
   ступень.
 
-### Устаревшие атрибуты
-
-`data-width`, `data-height`, `data-stroke-width` и `data-dot-radius` (и
-параметры конструктора `width`, `height`, `strokeWidth`, `dotRadius`) задают
-размеры в пикселях. Они устарели и читаются до 2026-12-01: спиннер с любым
-из них рисуется в пикселях и попадает в `SF.deprecations.list()`. Уберите их
-и задайте ступень классом `sf-loader--size-…`; линия идёт вместе со
-ступенью, цвет — из текста или `--sf-loader--color`.
-
 ## Варианты
 
 ### Вид

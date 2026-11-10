@@ -33,12 +33,13 @@ profile: reference
 
 ### Статус
 
-`sf-dot--primary`, `sf-dot--info`, `sf-dot--success` • [справочник](#классы)
+`sf-dot--info`, `sf-dot--success`, `sf-dot--warning`, `sf-dot--error` • [справочник](#классы)
 
-Статус задаёт цвет точки: `sf-dot--primary` (основной цвет, он же цвет по
-умолчанию), `sf-dot--info`, `sf-dot--success`, `sf-dot--warning`,
+Статус задаёт цвет точки: `sf-dot--info`, `sf-dot--success`, `sf-dot--warning`,
 `sf-dot--error` и `sf-dot--neutral` для отсутствия статуса. Выбирайте статус
-по реальному состоянию объекта.
+по реальному состоянию объекта. Без модификатора точка берёт основной цвет
+темы — `sf-dot--primary`; в теме по умолчанию он тот же синий, что у `info`,
+поэтому для статуса берите `info`.
 
 :::example {id="components/dot/tones" label="Статусы точки"}
 :::

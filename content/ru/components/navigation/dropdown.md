@@ -98,7 +98,7 @@ profile: reference
 
 ### Флаги в пунктах
 
-Флаг [Flag](/ru/components/content/flag/) встаёт в пункт `sf-list-item--icon`
+[Флаг](/ru/components/content/flag/) встаёт в пункт `sf-list-item--icon`
 на место иконки: элемент `sf-flag sf-flag--rect` с кодом страны в
 `data-country` и `aria-hidden="true"`. Выбранный флаг повторяется в поле.
 Название языка пишите на самом языке и отметьте пункт атрибутом `lang`.
@@ -124,9 +124,6 @@ profile: reference
   <div class="sf-list-container-wrap">…</div>
 </div>
 ```
-
-Прежнюю разметку с полем `sf-input` внутри `sf-list` скрипт списка ещё
-понимает; в новой разметке берите шапку.
 
 :::example {id="components/dropdown/search" label="Список с поиском"}
 :::
@@ -204,9 +201,7 @@ profile: reference
 При выборе корень отправляет всплывающее событие `change`. В `detail`:
 `value` и `label` выбранного пункта, `values` — все выбранные значения,
 `item`, `root` и `multiple`. Снятие тега крестиком отправляет то же событие
-с пустыми `value`, `label` и `item: null`. Одновременно уходит
-`sf-dropdown:change` с тем же `detail` — его выпуск оставляет для
-совместимости, слушайте `change`.
+с пустыми `value`, `label` и `item: null`.
 
 ```js
 document.querySelector('.sf-dropdown').addEventListener('change', (event) => {

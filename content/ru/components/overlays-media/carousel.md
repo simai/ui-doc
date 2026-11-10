@@ -146,4 +146,4 @@ document.addEventListener('sf:carousel-change', (event) => {
 ## См. также
 
 - [Swiper](/ru/components/overlays-media/swiper/)
-- [Слайдер контента](/ru/components/forms/slider/)
+- [Слайдер контента](/ru/components/overlays-media/slider/)

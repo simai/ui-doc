@@ -28,7 +28,6 @@ description: "Смарт-компоненты по задачам интерфе
 - [Радиокнопки](/ru/smart/forms/radio/)
 - [Выбор карточками](/ru/smart/forms/input-choice/) — Даёт выбрать один вариант или несколько из карточек с названием, пояснением и иконкой.
 - [Переключатель](/ru/smart/forms/switch/)
-- [Слайдер контента](/ru/smart/forms/slider/)
 - [Слайдер диапазона](/ru/smart/forms/range-slider/)
 - [Календарь](/ru/smart/forms/datepicker/)
 - [Код страны](/ru/smart/forms/country-code/)
@@ -88,6 +87,7 @@ description: "Смарт-компоненты по задачам интерфе
 - [Предпросмотр файла](/ru/smart/content/file-preview/)
 - [Справочная ссылка](/ru/smart/content/reference-link/)
 - [Часть страницы по адресу](/ru/smart/content/include/)
+- [Слайдер контента](/ru/smart/content/slider/)
 
 ## Окна и панели
 

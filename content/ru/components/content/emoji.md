@@ -1,10 +1,10 @@
 ---
-title: "Emoji"
-description: "Выводит emoji в размер строки текста цветным системным шрифтом."
+title: "Эмодзи"
+description: "Выводит эмодзи в размер строки текста цветным системным шрифтом."
 profile: reference
 ---
 
-# Emoji
+# Эмодзи
 
 :badge[sf-emoji]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
 

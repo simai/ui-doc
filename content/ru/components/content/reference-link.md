@@ -28,10 +28,6 @@ profile: reference
   карточку.
 - Иконка и пояснение необязательны. Иконка декоративная:
   `aria-hidden="true"`.
-- Имена `sf-reference-link__main`, `sf-reference-link__link`,
-  `sf-reference-link__icon` и `sf-reference-link__meta` работают так же, как
-  части выше; в разметке пишите `sf-reference-link-left` и
-  `sf-reference-link-text`.
 - У компонента нет своего JavaScript.
 
 ## Варианты

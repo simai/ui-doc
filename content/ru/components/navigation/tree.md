@@ -131,17 +131,15 @@ Enter раскрывает ветвь или активирует лист; пр
 | `SF.Tree.sync(root)` | пересчитывает роли, группы и иконки после изменения разметки |
 | `SF.Tree.open(item)`, `SF.Tree.close(item)`, `SF.Tree.toggle(item)` | раскрывает, сворачивает или переключает ветвь; для листа возвращают `false` |
 
-События всплывают. С выпуска `ui-363de49bdfa8` классовое дерево шлёт те же
-имена, что и смарт-компонент `<sf-tree>`, а следом за каждым — прежнее имя
-с прежним `detail`, до 2026-12-01:
+События всплывают; их имена те же, что у смарт-компонента `<sf-tree>`:
 
-| Событие | Где и когда | `event.detail` | Прежнее имя |
-|:---|:---|:---|:---|
-| `sf-tree-toggle` | на узле: ветвь раскрыта или свёрнута | `id`, `open`, `value` | `sf-tree:toggle` с `item`, `open` |
-| `sf-tree-open` | на узле: Enter на листе, подпись которого не ссылка | `id`, `value` | `sf-tree:activate` с `item`, `value` |
-| `sf-tree-select` | на корне: выбор изменён | `ids`, `id`, `selected` | `sf-tree:selection-change` с `item`, `selected`, `value` |
+| Событие | Где и когда | `event.detail` |
+|:---|:---|:---|
+| `sf-tree-toggle` | на узле: ветвь раскрыта или свёрнута | `id`, `open`, `value` |
+| `sf-tree-open` | на узле: Enter на листе, подпись которого не ссылка | `id`, `value` |
+| `sf-tree-select` | на корне: выбор изменён | `ids`, `id`, `selected` |
 
-`id` и `value` — атрибут `data-value` узла. В новых событиях `detail` несёт
+`id` и `value` — атрибут `data-value` узла. `detail` несёт
 только данные; сам узел — `event.target` (у `sf-tree-select` — корень,
 узел ищите по `id`). Выбор по-прежнему включает `data-selection` со
 значениями `single` и `multiple`.

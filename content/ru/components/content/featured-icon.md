@@ -38,8 +38,7 @@ profile: reference
 `sf-featured-icon--medium` — тон насыщеннее; `sf-featured-icon--solid` —
 полная заливка цветом роли, для одного главного акцента;
 `sf-featured-icon--elevated` — нейтральная подложка с тенью и иконкой цвета
-роли. Имена `light`, `mid`, `dark` и `modern` работают так же, как `soft`,
-`medium`, `solid` и `elevated`; в разметке пишите вторые.
+роли.
 
 :::example {id="components/featured-icon/tones" label="Интенсивность"}
 :::
@@ -47,8 +46,7 @@ profile: reference
 ### Цвет
 
 Цвет задаёт роль: `primary` — тема продукта, `neutral` — нейтральный
-раздел, `info`, `success`, `warning` и `error` — статусы. Имя `clear`
-работает так же, как `neutral`.
+раздел, `info`, `success`, `warning` и `error` — статусы.
 
 :::example {id="components/featured-icon/colors" label="Цвета акцентной иконки"}
 :::

@@ -376,7 +376,7 @@
     },
     {
       "from": "ru/components/reference/slider",
-      "to": "ru/components/forms/slider"
+      "to": "ru/components/overlays-media/slider"
     },
     {
       "from": "ru/components/reference/spinner",
@@ -452,7 +452,7 @@
     },
     {
       "from": "ru/components/slider",
-      "to": "ru/components/forms/slider"
+      "to": "ru/components/overlays-media/slider"
     },
     {
       "from": "ru/components/spinner",
@@ -896,7 +896,7 @@
     },
     {
       "from": "ru/framework-components/reference/slider",
-      "to": "ru/components/forms/slider"
+      "to": "ru/components/overlays-media/slider"
     },
     {
       "from": "ru/framework-components/reference/spinner",
@@ -972,7 +972,7 @@
     },
     {
       "from": "ru/framework-components/slider",
-      "to": "ru/components/forms/slider"
+      "to": "ru/components/overlays-media/slider"
     },
     {
       "from": "ru/framework-components/spinner",
@@ -2120,7 +2120,7 @@
     },
     {
       "from": "ru/smart-components/reference/slider",
-      "to": "ru/smart/forms/slider"
+      "to": "ru/smart/content/slider"
     },
     {
       "from": "ru/smart-components/reference/spinner",
@@ -3796,7 +3796,7 @@
     },
     {
       "from": "ru/smart-components/forms/slider",
-      "to": "ru/smart/forms/slider"
+      "to": "ru/smart/content/slider"
     },
     {
       "from": "ru/smart-components/forms/switch",
@@ -3881,6 +3881,14 @@
     {
       "from": "ru/smart-components/overlays/resizer",
       "to": "ru/smart/overlays/resizer"
+    },
+    {
+      "from": "ru/components/forms/slider",
+      "to": "ru/components/overlays-media/slider"
+    },
+    {
+      "from": "ru/smart/forms/slider",
+      "to": "ru/smart/content/slider"
     }
   ]
 }

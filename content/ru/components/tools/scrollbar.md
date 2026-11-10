@@ -38,7 +38,7 @@ profile: reference
 гаснет в покое; `persistent` — полоса видна всегда; `standard` — системная
 полоса, окрашенная в цвета темы; `hidden` — полосы нет, область прокручивается
 колесом, касанием и клавишами. Режимы `standard` и `hidden` работают без
-скрипта. `data-sf-scrollbar` — другое имя того же атрибута.
+скрипта.
 
 :::example {id="components/scrollbar/modes" label="Режимы полосы прокрутки"}
 :::
@@ -47,8 +47,7 @@ profile: reference
 
 `data-axis="vertical"` (по умолчанию) рисует полосу у конца строки,
 `data-axis="horizontal"` — внизу, для горизонтальной ленты. Горизонтальная
-полоса учитывает направление письма. `data-sf-scrollbar-axis` — другое имя
-того же атрибута.
+полоса учитывает направление письма.
 
 :::example {id="components/scrollbar/horizontal" label="Горизонтальная прокрутка"}
 :::

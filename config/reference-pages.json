@@ -284,7 +284,7 @@
         "sf-range-slider"
       ]
     },
-    "components/forms/slider.md": {
+    "components/overlays-media/slider.md": {
       "kind": "component",
       "component": "slider",
       "blocks": [
@@ -635,7 +635,7 @@
       "kind": "smart",
       "standard": 3
     },
-    "smart/forms/slider.md": {
+    "smart/content/slider.md": {
       "kind": "smart",
       "standard": 3
     },

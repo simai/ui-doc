@@ -240,4 +240,4 @@ swiper?.on('slideChange', () => console.log(swiper.realIndex));
 ## См. также
 
 - [Swiper](/ru/components/overlays-media/swiper/)
-- [Slider — смарт-компонент](/ru/smart/forms/slider/)
+- [Slider — смарт-компонент](/ru/smart/content/slider/)

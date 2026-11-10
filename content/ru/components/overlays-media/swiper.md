@@ -117,4 +117,4 @@ swiper.on('slideChange', (instance) => console.log(instance.activeIndex));
 ## См. также
 
 - [Карусель](/ru/components/overlays-media/carousel/)
-- [Слайдер контента](/ru/components/forms/slider/)
+- [Слайдер контента](/ru/components/overlays-media/slider/)

@@ -53,9 +53,9 @@ profile: reference
 
 ### Статус
 
-`sf-tag--success`, `sf-tag--warning`, `sf-tag--error` • [справочник](#классы)
+`sf-tag--info`, `sf-tag--success`, `sf-tag--warning`, `sf-tag--error` • [справочник](#классы)
 
-`sf-tag--success`, `sf-tag--warning` и `sf-tag--error` окрашивают тег цветом
+`sf-tag--info`, `sf-tag--success`, `sf-tag--warning` и `sf-tag--error` окрашивают тег цветом
 статуса, точка [`sf-dot`](/ru/components/feedback/dot/) перед подписью
 повторяет его. Нейтральный статус — `sf-tag--default`. Статус не передавайте
 только цветом: подпись называет его словами.

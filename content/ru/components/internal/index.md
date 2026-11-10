@@ -6,4 +6,4 @@ profile: reference
 
 # Технические контракты
 
-- **[Основа Admin Menu](/ru/components/internal/admin-menu/)** — Низкоуровневый
+- **[Основа Admin Menu](/ru/components/internal/admin-menu/)** — низкоуровневый
