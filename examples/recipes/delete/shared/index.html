@@ -1,0 +1,24 @@
+<div data-sf-density="compact">
+  <div class="flex flex-col gap-2 items-cross-start">
+    <div class="table-frame w-full">
+      <table class="table w-full">
+        <thead>
+          <tr><th>Файл проекта</th><th>Размер</th><th><span class="sr-only">Действия</span></th></tr>
+        </thead>
+        <tbody id="shared-files">
+          <tr data-file="f1" data-name="Смета на декабрь.xlsx">
+            <td>Смета на декабрь.xlsx</td>
+            <td class="wrap-none">86 КБ</td>
+            <td class="text-end"><sf-button-icon icon="delete" appearance="ghost" scheme="on-surface-variant" size="1/2" aria-label="Удалить «Смета на декабрь.xlsx»"></sf-button-icon></td>
+          </tr>
+          <tr data-file="f2" data-name="Договор с подрядчиком.pdf">
+            <td>Договор с подрядчиком.pdf</td>
+            <td class="wrap-none">2,4 МБ</td>
+            <td class="text-end"><sf-button-icon icon="delete" appearance="ghost" scheme="on-surface-variant" size="1/2" aria-label="Удалить «Договор с подрядчиком.pdf»"></sf-button-icon></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <sf-button id="shared-reset" hidden appearance="outline" scheme="on-surface" icon-start="restart_alt" text="Вернуть файлы"></sf-button>
+  </div>
+</div>

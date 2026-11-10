@@ -1,0 +1,4 @@
+/* The window opens inside this block (data-sf-overlay-container) and covers only it. */
+#final-root {
+  min-block-size: var(--sf-g8);
+}
