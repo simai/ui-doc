@@ -5,7 +5,7 @@ description: "Письма человека в редакторе: поиск п
 
 # Список писем
 
-:badge[sf-mail-letters]{variant=tonal scheme=primary size=1/2} :badge[1.0.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-letters]{variant=tonal scheme=primary size=1/2} :badge[1.0.8]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-letters>` — письма человека в редакторе писем: поиск по названию,
 порядок и то, что предлагает строка, — «Открыть» и под ⋯ копия, переименование
@@ -106,7 +106,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2bd5a3ab478a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -114,7 +114,7 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 |:---|:---|
 | Тег | `<sf-mail-letters>` |
 | Назначение | Все письма человека в SIMAI Email Editor: поиск по названию, порядок и то, что предлагает каждая строка, — «Открыть» и под ⋯ копия, переименование и удаление. Момент изменения и число блоков записаны на языке страницы. Элемент не хранит писем и ничего не запоминает; он сообщает, что выбрал человек. |
-| Контракт | `smart.mail-letters`, версия `1.0.6` |
+| Контракт | `smart.mail-letters`, версия `1.0.8` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -160,5 +160,5 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-letters`
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-letters`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`

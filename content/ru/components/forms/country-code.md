@@ -6,7 +6,7 @@ profile: reference
 
 # Код страны
 
-:badge[sf-country-code]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-country-code]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по

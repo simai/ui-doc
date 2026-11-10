@@ -93,7 +93,7 @@ description: "Задаёт заливку фигур SVG цветом роли �
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
 | `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-surface-transparent-select` | `var(--sf-surface-state-select)` |
 | `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
 | `--sf-disable` | `var(--sf-surface-disabled)` |

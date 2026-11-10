@@ -226,12 +226,12 @@ tree.items = await fetchFolders();
 | | |
 |:---|:---|
 | Тег | `<sf-tree>`, контракт `smart.tree` версии `2.1.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «меню» (сервер пишет `data-sf-skeleton="menu"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`; поиск по первым буквам. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/tree` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-tree` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tree` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tree` |
 
 ## См. также
 

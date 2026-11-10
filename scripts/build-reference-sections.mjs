@@ -67,15 +67,32 @@ try {
   console.error(`no ui-source checkout with the journal at ${sourceRepo}; set SIMAI_UI_SOURCE_REPO`);
   process.exit(2);
 }
+// A status rename that names no component is the general rule (danger →
+// error, 2026-10-09). A rename the journal records for this block itself
+// that goes the other way is the block's own later word (C13: a control says
+// danger, value-control-status-error-to-danger), so the general one is not
+// listed for that block: otherwise the table names both directions. The
+// journal names the Smart tag; sf-button-icon draws the sf-icon-button block.
+const BLOCK_OF_COMPONENT = {'sf-button-icon': 'sf-icon-button'};
 const legacyModifiers = (block, present) => {
   const out = new Map();
+  const own = (item) => item.component && (BLOCK_OF_COMPONENT[item.component] ?? item.component) === block;
+  const reversed = new Set();
+  for (const record of journal.records) {
+    for (const item of record.items ?? []) {
+      if (!item.from || !item.to) continue;
+      if (record.kind === 'class' && item.from.startsWith(`${block}--`)) reversed.add(`${item.to}>${item.from}`);
+      if (record.kind === 'value' && item.attribute === 'status' && own(item)) reversed.add(`${block}--${item.to}>${block}--${item.from}`);
+    }
+  }
   for (const record of journal.records) {
     for (const item of record.items ?? []) {
       if (!item.from || !item.to) continue;
       if (record.kind === 'class' && item.from.startsWith(`${block}--`)) out.set(item.from, item.to);
-      if (record.kind === 'value' && item.attribute === 'status' && (!item.component || item.component === block)) {
+      if (record.kind === 'value' && item.attribute === 'status' && (!item.component || own(item))) {
         const from = `${block}--${item.from}`;
         const to = `${block}--${item.to}`;
+        if (!item.component && reversed.has(`${from}>${to}`)) continue;
         if (present.has(from) && present.has(to)) out.set(from, to);
       }
     }

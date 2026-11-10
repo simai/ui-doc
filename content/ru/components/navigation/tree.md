@@ -6,7 +6,7 @@ profile: reference
 
 # Дерево
 
-:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенную иерархию — папки, разделы, категории — и даёт
 раскрывать и сворачивать ветви. Для навигации по страницам сайта с

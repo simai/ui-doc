@@ -5,7 +5,7 @@ description: "Показывает короткую неинтерактивну
 
 # Бейджи
 
-:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткую пометку рядом с объектом: статус записи, категорию,
 версию, число новых событий. Пометку не нажимают. Для метки, которую выбирают
@@ -133,7 +133,7 @@ JavaScript.
 | `appearance` | строка | `main` | `main`, `tonal`, `outline` | Вид значка: наиболее заметная заливка, более спокойная тональная или контур. |
 | `scheme` | строка | `neutral` | `neutral`, `primary`, `secondary`, `tertiary`, `on-surface` | Цвет бейджа, например `primary`. Слово статуса, например `error`, здесь тоже работает. |
 | `status` | строка | пусто | пусто, `info`, `success`, `warning`, `error` | Цвет по смыслу, например `success` или `error`. `danger` тоже принимается и значит `error`. |
-| `activity` | строка | пусто | пусто, `running`, `waiting`, `done`, `stopped`, `failed` | Где находится выполнение: `running` рисует индикатор на месте значка, `waiting`, `done`, `stopped` и `failed` — свой значок, у каждого своё слово и цветовая роль. Важнее `status` и `scheme` для значка, текста и цвета; `text` и `icon` его переопределяют. |
+| `activity` | строка | пусто | пусто, `running`, `waiting`, `done`, `stopped`, `failed`, `paused`, `queued` | Где находится выполнение: `running` рисует спиннер на месте иконки, у `waiting` (нужен ввод человека), `done`, `stopped`, `failed`, `paused` (остановлено и продолжится) и `queued` (в очереди) — своя иконка, своё слово и свой цвет. Важнее `status` и `scheme` для иконки, текста и цвета; `text` и `icon` его переопределяют. |
 | `compact` | да/нет | нет | — | Показывает только значок — для тесной строки списка; текст остаётся доступным именем. Нужен значок: без него текст остаётся видимым. Вид не меняется. |
 | `tight` | да/нет | нет | — | Оставляет узкие поля по бокам, свои у каждого размера, — для плотных мест: таблицы, счётчика, метки в строке. По умолчанию текст отстоит от краёв бейджа на `--sf-space-1/2` при любом размере. |
 | `text` | строка | пусто | — | — |
@@ -165,13 +165,13 @@ JavaScript.
 
 | | |
 |:---|:---|
-| Тег | `<sf-badge>`, контракт `smart.badge` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-badge>`, контракт `smart.badge` версии `1.4.0` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/badge` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-badge` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/badge` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-badge` |
 
 ## См. также
 

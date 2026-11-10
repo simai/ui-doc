@@ -6,7 +6,7 @@ profile: reference
 
 # Основа Admin Menu
 
-:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-admin-menu]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 `sf-admin-menu` — оформление и поведение боковой навигации административного
 приложения: шапка, поиск, пункты с иконками, вложенные панели, компактный

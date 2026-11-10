@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки с иконкой
 
-:badge[sf-icon-button]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon-button]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие без видимой подписи: редактировать,
 удалить, открыть настройки. Берите её, когда иконка общепринята и места мало;
@@ -226,9 +226,9 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 |:---|:---|
 | Блок | `sf-icon-button` |
 | Части | `sf-icon-button-spinner`, `sf-icon-button-state-loading` |
-| Модификаторы | `sf-icon-button--close`, `sf-icon-button--default`, `sf-icon-button--error`, `sf-icon-button--ghost`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
+| Модификаторы | `sf-icon-button--close`, `sf-icon-button--danger`, `sf-icon-button--default`, `sf-icon-button--ghost`, `sf-icon-button--height-high`, `sf-icon-button--height-highest`, `sf-icon-button--height-low`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
-| Устаревшие | `sf-icon-button--danger` → `sf-icon-button--error` |
+| Устаревшие | `sf-icon-button--error` → `sf-icon-button--danger` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

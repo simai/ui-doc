@@ -41,18 +41,18 @@ Loader загружает по умолчанию, и читаемая для о
 Выпуск — один коммит сборки в `ui`. Его идентификатор составлен из первых 12
 знаков этого коммита:
 
-| Что | Значение для выпуска `ui-b4a77681f0a7` |
+| Что | Значение для выпуска `ui-2bd5a3ab478a` |
 |:---|:---|
-| Идентификатор выпуска | `ui-b4a77681f0a7` |
-| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `b4a77681f0a7f1c540566e5abac2a4f9d3082a3d` |
-| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261109.1121` |
-| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `a29cc9989bebace9a98c235b074ce23998ad39c6` |
-| Коммит сборщика `ui-builder` | `e87e47dc7b69e696e7aef48ffa626a307e6763ad` |
-| Запись о выпуске | `contracts/releases/ui-b4a77681f0a7.lock.json` в репозитории `ui`, добавлена коммитом `c62eae925213318fca769c5cf0149f60b53df76c` |
-| Пакет продукта `pro`, собранный для этого выпуска | Исходник — `simai/ui-pro`, коммит `7a2900066a50a6c683edfe57367c442223d48532` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
+| Идентификатор выпуска | `ui-2bd5a3ab478a` |
+| Полный коммит `ui` (своя копия поставки, закрепление проекта) | `2bd5a3ab478a46fcee24d2460e7792135b0bb864` |
+| Версия пакета npm `@simai-studio/ui` (адрес CDN) | `5.20261110.1541` |
+| Коммит исходников `ui-source` (`framework.lock.json` пакета) | `d25a01f9989df2ec920364a23ed76d494d91844c` |
+| Коммит сборщика `ui-builder` | `16e9a81c1f2838f7cfeebbbd19654016743c9672` |
+| Запись о выпуске | `contracts/releases/ui-2bd5a3ab478a.lock.json` в репозитории `ui`, добавлена коммитом `c4d7d46f481d15af1601ba1c937863d933ebde83` |
+| Пакет продукта `pro`, собранный для этого выпуска | Исходник — `simai/ui-pro`, коммит `dc13c0f724009847add06c25bf98a6c033c037db` (см. [Пакеты компонентов продуктов](/ru/guide/introduction/structure/#пакеты-компонентов-продуктов)) |
 
 **Идентификатор выпуска — не тег git.** Тегов у выпусков нет (в записи о
-выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-b4a77681f0a7`
+выпуске поле `tag` равно `null`), поэтому адрес вида `simai/ui@ui-2bd5a3ab478a`
 не существует. Своя копия поставки берётся по полному коммиту, адрес CDN —
 по версии пакета npm этого выпуска (см. [Пакет npm](#пакет-npm)).
 
@@ -95,9 +95,9 @@ git log --diff-filter=A --format='%cs %s' -- 'contracts/releases/ui-*.lock.json'
 `simai/ui` по полному коммиту выпуска и сверяют с записью о выпуске:
 
 ```bash
-git archive --format=tar b4a77681f0a7f1c540566e5abac2a4f9d3082a3d distr | shasum -a 256
+git archive --format=tar 2bd5a3ab478a46fcee24d2460e7792135b0bb864 distr | shasum -a 256
 # равно runtime_sources.core.archive_sha256
-git rev-parse b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr
+git rev-parse 2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr
 # равно runtime_sources.core.runtime_tree
 ```
 
@@ -117,10 +117,10 @@ git rev-parse b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr
 Framework подключают из этого пакета: jsDelivr и unpkg отдают любой файл
 пакета по адресу с его версией.
 
-| CDN | Адрес папки `distr/` выпуска `ui-b4a77681f0a7` |
+| CDN | Адрес папки `distr/` выпуска `ui-2bd5a3ab478a` |
 |:---|:---|
-| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261109.1121/distr/` |
-| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261109.1121/distr/` |
+| jsDelivr | `https://cdn.jsdelivr.net/npm/@simai-studio/ui@5.20261110.1541/distr/` |
+| unpkg | `https://unpkg.com/@simai-studio/ui@5.20261110.1541/distr/` |
 
 Адрес папки становится значением `window.sfPath`, а стиль и скрипт ядра
 лежат внутри неё: `core/css/core.css` и `core/js/core.js` (см. [Порядок подключения](/ru/guide/connection/project-setup/#порядок-подключения)).
@@ -133,8 +133,8 @@ Framework подключают из этого пакета: jsDelivr и unpkg �
 файла `package.json` пакета:
 
 ```bash
-npm view @simai-studio/ui@5.20261109.1121 simai
-# { release: 'ui-b4a77681f0a7', commit: 'b4a77681f0a7f1c540566e5abac2a4f9d3082a3d' }
+npm view @simai-studio/ui@5.20261110.1541 simai
+# { release: 'ui-2bd5a3ab478a', commit: '2bd5a3ab478a46fcee24d2460e7792135b0bb864' }
 ```
 
 **Что в пакете.** Каталог `distr/` выпуска с двумя отличиями от репозитория

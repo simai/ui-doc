@@ -6,7 +6,7 @@ profile: reference
 
 # Бейджи
 
-:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
@@ -245,7 +245,7 @@ profile: reference
 | `--sf-badge--anchored-max` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `none` | `max-width`, `max-inline-size` |
 | `--sf-badge--anchored-padding` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-a4)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-badge--anchored-size` | не задана; задают модификаторы, например `.sf-badge.sf-badge--anchored`: `var(--sf-badge--anchored-count)` | `height`, `block-size`, `min-height`, `min-block-size`, `min-width`, `min-inline-size`, `line-height` |
-| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-on-surface-variant))` | `background-color` |
+| `--sf-badge--background-color` | `var(--sf-badge-background-color, var(--sf-on-surface-variant))` | `background-color`, `background-image` |
 | `--sf-badge--border-bottom-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-bottom`, `padding-block-end`, `border-bottom-width`, `--sf-badge--line-box` |
 | `--sf-badge--border-color` | `var(--sf-badge-border-color, transparent)` | `border-color` |
 | `--sf-badge--border-inline-end-width` | `var(--sf-badge-border-width, var(--sf-a0))` | `padding-inline-end`, `border-inline-end-width` |

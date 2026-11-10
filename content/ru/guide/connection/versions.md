@@ -15,23 +15,23 @@ Framework, а для каждого подключённого пакета пр
 выпуск и коммит, см. [Пакет npm](/ru/guide/connection/delivery/#пакет-npm)) или по полному коммиту,
 из которого взята своя копия, — и сразу записывают его в файл блокировки;
 номер из `VERSION` выпуск не определяет. Пример показывает
-минимальное содержание для выпуска `ui-b4a77681f0a7` с пакетом продукта
+минимальное содержание для выпуска `ui-2bd5a3ab478a` с пакетом продукта
 `pro`, собранным для этого выпуска:
 
 ```json
 {
   "framework": {
-    "release": "ui-b4a77681f0a7",
-    "commit": "b4a77681f0a7f1c540566e5abac2a4f9d3082a3d",
-    "npm": "@simai-studio/ui@5.20261109.1121",
+    "release": "ui-2bd5a3ab478a",
+    "commit": "2bd5a3ab478a46fcee24d2460e7792135b0bb864",
+    "npm": "@simai-studio/ui@5.20261110.1541",
     "distr_archive_sha256": "<runtime_sources.core.archive_sha256 из записи о выпуске>",
     "distr_tree": "<runtime_sources.core.runtime_tree из записи о выпуске>"
   },
   "packages": {
     "pro": {
       "receipt": "<путь к квитанции пакета>",
-      "source_revision": "7a2900066a50a6c683edfe57367c442223d48532",
-      "framework": "ui-b4a77681f0a7",
+      "source_revision": "dc13c0f724009847add06c25bf98a6c033c037db",
+      "framework": "ui-2bd5a3ab478a",
       "manifest_sha256": "<output.manifest_sha256 из квитанции>"
     }
   }

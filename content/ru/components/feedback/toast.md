@@ -6,7 +6,7 @@ profile: reference
 
 # Всплывающие сообщения
 
-:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы
@@ -193,7 +193,7 @@ handle.close();
 | `--sf-toast-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-toast-radius` | Скругление углов. | `var(--sf-radius--surface)` |
 | `--sf-toast-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-space-1)` |
-| `--sf-toast-padding-block` | Отступ над и под содержимым. | `var(--sf-space-1)` |
+| `--sf-toast-padding-block` | Отступ над и под содержимым: первая строка стоит в рамке низкого элемента управления. | `var(--sf-space-1/2)` |
 | `--sf-toast-gap` | Промежуток между значком, текстом и кнопкой закрытия. | `var(--sf-space-1/2)` |
 
 ```css
@@ -210,6 +210,7 @@ handle.close();
 |:---|:---|:---|
 | `--sf-toast--background-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-background-color, var(--sf-surface-container))` | `background-image` |
 | `--sf-toast--content-color` | не задана; задают модификаторы, например `.sf-toast--neutral`: `var(--sf-toast-color, var(--sf-on-surface))` | `color` |
+| `--sf-toast--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `margin-top`, `margin-block-start`, `margin-inline-end`, `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-toast-bottom--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-bottom`: `transparent` | `background-color` |
 | `--sf-toast-container--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `transparent` | `background-color` |
 | `--sf-toast-container--gap` | не задана; задают модификаторы, например `.sf-toast .sf-toast-container`: `var(--sf-space-1/2)` | `gap` |
@@ -224,7 +225,7 @@ handle.close();
 | `--sf-toast-text--font-weight` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-font-weight-medium)` | `font-weight` |
 | `--sf-toast-text--line-height` | не задана; задают модификаторы, например `.sf-toast .sf-toast-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-toast-wrap--background-color` | не задана; задают модификаторы, например `.sf-toast .sf-toast-wrap`: `transparent` | `background-color` |
-| `--sf-toast-wrap--gap` | не задана; задают модификаторы, например `.sf-toast .sf-toast-wrap`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-toast-wrap--gap` | не задана; задают модификаторы, например `.sf-toast .sf-toast-wrap`: `var(--sf-0)` | `gap` |
 
 ## См. также
 

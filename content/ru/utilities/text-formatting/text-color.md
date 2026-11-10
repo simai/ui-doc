@@ -87,7 +87,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
 | `--sf-on-disable` | `var(--sf-on-surface-disabled)` |

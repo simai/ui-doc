@@ -6,7 +6,7 @@ profile: reference
 
 # Карточка
 
-:badge[sf-card]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-card]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Карточка собирает несколько блоков содержимого — заголовок, абзац, список,
 действие — в одну отдельную область с тонкой границей и скруглёнными углами.

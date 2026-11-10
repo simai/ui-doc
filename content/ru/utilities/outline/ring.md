@@ -90,7 +90,7 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-outline-primary` | `var(--sf-primary-outline)` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
 | `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |

@@ -5,7 +5,7 @@ description: "Показывает серверную коллекцию таб�
 
 # Представление данных
 
-:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.10.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.16.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-view]{variant=tonal scheme=primary size=1/2} :badge[1.11.0]{variant=outline scheme=on-surface size=1/2} :badge[sf-view-table]{variant=tonal scheme=primary size=1/2} :badge[1.17.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-view-table>` показывает серверную коллекцию записей: поиск, фильтры, таблицу,
 выбор строк, действия, настройки колонок и пагинацию. Данные, права и
@@ -791,7 +791,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонентов выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонентов выпуска `ui-2bd5a3ab478a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -801,7 +801,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view>` |
 | Назначение | Представление данных под управлением элемента: панель инструментов, содержимое и пагинация вокруг отдельного порта данных. |
-| Контракт | `smart.view`, версия `1.10.0` |
+| Контракт | `smart.view`, версия `1.11.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -819,6 +819,11 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `port-record` — `string`, по умолчанию пусто. Запись, которую показывает встраивающий составной компонент; передаётся с запросом к порту приложения.
 - `port-group` — `string`, по умолчанию пусто. Группа внутри составного компонента, которую представляет этот список; передаётся с запросом к порту приложения.
 - `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`. Размер кнопок и полей; его же получают таблица, строка страниц и полоса выбора: `1` или плотный `1/2`, как в админке.
+- `layout` — `string`, по умолчанию `auto`, значения: `auto`, `table`, `list`. Как рисуются записи, передаётся таблице: `auto` — таблица, где хватает места, и список уже `list-below`; `table`; `list`. Таблица, которой приложение задало `layout`, сохраняет его. Встроенный вид (без панели инструментов) без этого атрибута — таблица, как раньше.
+- `layout-switch` — `boolean`, по умолчанию `false`. Переключатель «список / таблица» на панели инструментов таблицы (`layout-switch` у `sf-view-table`): выбор человека сохраняется под `preferences-key` и в настройках сохранённого вида (`settings.layout`), а открытый сохранённый вид возвращает его. Уже `list-below` остаётся только список, без переключателя; у вида без панели инструментов его нет.
+- `list-below` — `number`, по умолчанию `600`. Ширина контейнера таблицы в пикселях, уже которой `auto` рисует список (`list-below` у `sf-view-table`); передаётся, если задана.
+- `quick-actions` — `string`, по умолчанию пусто. Действия строки, которые список показывает кнопками-иконками, по идентификатору, не больше трёх (`quick-actions` у `sf-view-table`); остальные — в меню «ещё». Идентификаторы — действия строк приложения; иконка берётся из записи `row_actions`.
+- `row-open` — `string`, по умолчанию `title`, значения: `title`, `row`. `row`: нажатие в любом месте строки, кроме её элементов управления, открывает запись через `record.open`, как ссылка заголовка (`row-open` у `sf-view-table`).
 - `column-search-placeholder` — `string`, по умолчанию пусто. Передаётся как column-search-placeholder в таблицу, которую рисует представление; без него действует собственная подпись таблицы на языке страницы.
 - `column-search-empty-text` — `string`, по умолчанию пусто. Передаётся как column-search-empty-text в таблицу, которую рисует представление; без него действует собственная подпись таблицы на языке страницы.
 - `column-move-label` — `string`, по умолчанию пусто. Передаётся как column-move-label в таблицу, которую рисует представление; без него действует собственная подпись таблицы на языке страницы.
@@ -851,7 +856,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 Узел типа `smart.view` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `template`, `chrome`, `row-cap`, `expected-columns`, `port-owner`, `port-record`, `port-group`, `size`, `column-search-placeholder`, `column-search-empty-text`, `column-move-label`, `filter-apply-text`, `show-more-text`, `selected-label`, `total-label`, `pages-label`, `first-label`, `previous-label`, `page-label`, `next-label`, `last-label`, `page-field-label`, `action-choose-label`, `actions-label`, `actions-region-label`, `clear-selection-label`, `page-size-label`, `pagination-aria-label`, `preferences-key`, `accept-files`, `collection`, `current`, `aria-label`.
+- свойства: `template`, `chrome`, `row-cap`, `expected-columns`, `port-owner`, `port-record`, `port-group`, `size`, `layout`, `layout-switch`, `list-below`, `quick-actions`, `row-open`, `list-roles`, `column-search-placeholder`, `column-search-empty-text`, `column-move-label`, `filter-apply-text`, `show-more-text`, `selected-label`, `total-label`, `pages-label`, `first-label`, `previous-label`, `page-label`, `next-label`, `last-label`, `page-field-label`, `action-choose-label`, `actions-label`, `actions-region-label`, `clear-selection-label`, `page-size-label`, `pagination-aria-label`, `preferences-key`, `accept-files`, `collection`, `current`, `aria-label`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
 
@@ -915,8 +920,8 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view`
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view/rule.js#name=cl-view`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/view`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/view/rule.js#name=cl-view`
 
 ### `<sf-view-table>`
 
@@ -924,7 +929,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 |:---|:---|
 | Тег | `<sf-view-table>` |
 | Назначение | Полное представление коллекции с серверными данными: поиск, фильтры, настройки таблицы, действия над строками и массовые действия, пагинация. |
-| Контракт | `smart.view-table`, версия `1.16.1` |
+| Контракт | `smart.view-table`, версия `1.17.0` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -967,9 +972,12 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `column-search-empty-text` — `string`. Выводится вместо списка настроек столбцов, когда поиск не нашёл ни одного поля.
 - `vertical-scroll` — `string`, по умолчанию `self`, значения: `self`, `page`. Прокручивается ли таблица внутри себя или прокручивается страница. Объявлено как строка с двумя значениями.
 - `filter-apply-text` — `string`. Подпись кнопки подтверждения в окне фильтра; пока есть черновик, к ней добавляется число условий, которые изменит нажатие.
-- `layout` — `string`, по умолчанию `table`, значения: `auto`, `table`, `list`. Как рисуются записи: таблицей, компактным списком или auto — таблицей, пока контейнер таблицы не уже list-below пикселей, и списком, когда уже. sf-view выбирает auto для списка на странице.
+- `layout` — `string`, по умолчанию `table`, значения: `auto`, `table`, `list`. Как рисуются записи: таблица, компактный список записей или `auto` — таблица, пока её контейнер не уже `list-below` пикселей, и список, когда уже. `sf-view` просит `auto` для списка страницы. С `layout-switch` первым идёт выбор человека.
+- `layout-switch` — `boolean`, по умолчанию `false`. Переключатель «список / таблица» (`sf-segmented` с двумя иконками) на панели перед кнопкой создания. Выбор за человеком: он сохраняется в настройках таблицы (`preferences-key`, `table-settings-key` или `remember-widths`, иначе для страницы) и в настройках сохранённого вида; с переключателем `layout="table"` читается как `auto`. Уже `list-below` остаётся только список, без переключателя.
 - `list-below` — `number`, по умолчанию `600`. Ширина контейнера в пикселях, уже которой режим auto рисует компактный список.
 - `list-fields` — `number`, по умолчанию `3`. Сколько полей запись показывает под заголовком в компактном списке; поля выбираются по приоритету колонок.
+- `quick-actions` — `string`, по умолчанию пусто. Действия строки, которые список показывает кнопками-иконками, всегда видимыми: их идентификаторы через запятую, не больше трёх. Остальные остаются в меню строки, которое в списке открывает кнопка «ещё» (`more_horiz`) вместо иконки меню; в узком списке (уже 37.5rem) быстрые действия тоже уходят в меню. Действие без иконки — текстовая кнопка.
+- `row-open` — `string`, по умолчанию `title`, значения: `title`, `row`. Что открывает нажатие на строку: `title` — только ссылка заголовка (и двойной щелчок, Enter); `row` — нажатие в любом месте строки, кроме её элементов управления, открывает запись тем же намерением вида (`sf-view-table-apply view`), в таблице и в списке.
 - `size` — `string`, по умолчанию `1`, значения: `1/2`, `1`. Размер кнопок и строк таблицы: `1` или плотный `1/2` — кнопки высотой 32 px, текст 14/20. `size="1"` на элементе внутри таблицы получает размер таблицы.
 - `preferences-key` — `string`, по умолчанию пусто. Ключ, под которым раскладка таблицы — порядок, видимость, закрепление, ширины — хранится как персональный вид (SF.Preferences, `sf-table/<key>`); представление данных передаёт свой. Без него используется table-settings-key, а без обоих ничего не хранится.
 - `row-actions-visible` — `string`, по умолчанию `hover`, значения: `hover`, `always`. Где видны кнопки действий строки: в строке под указателем, в фокусе или текущей (hover, по умолчанию) или во всех строках (always).
@@ -995,7 +1003,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 Узел типа `smart.view-table` в [документе макета](/ru/guide/layouts/building/smart-component/) (`simai.composition.document.v1`) принимает:
 
-- свойства: `template`, `selectable`, `settings`, `actions`, `row-actions`, `creatable`, `filter-templates`, `settings-menu`, `pagin`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `pagination-total`, `pagination-page-size`, `page-sizes`, `context-menu-columns`, `remember-widths`, `table-settings-key`, `data-state`, `loading-text`, `empty-text`, `empty-description`, `error-text`, `retry-text`, `toolbar`, `pin-column-label`, `unpin-column-label`, `column-move-label`, `column-search-placeholder`, `column-search-empty-text`, `vertical-scroll`, `filter-apply-text`, `layout`, `list-below`, `list-fields`, `size`, `preferences-key`, `row-actions-visible`, `drag-rows`, `row-reorder`, `inline-edit`, `current`, `aria-label`;
+- свойства: `template`, `selectable`, `settings`, `actions`, `row-actions`, `creatable`, `filter-templates`, `settings-menu`, `pagin`, `filter-text`, `clear-text`, `search-placeholder`, `create-text`, `pagination-total`, `pagination-page-size`, `page-sizes`, `context-menu-columns`, `remember-widths`, `table-settings-key`, `data-state`, `loading-text`, `empty-text`, `empty-description`, `error-text`, `retry-text`, `toolbar`, `pin-column-label`, `unpin-column-label`, `column-move-label`, `column-search-placeholder`, `column-search-empty-text`, `vertical-scroll`, `filter-apply-text`, `layout`, `layout-switch`, `list-below`, `list-fields`, `quick-actions`, `row-open`, `size`, `preferences-key`, `row-actions-visible`, `drag-rows`, `row-reorder`, `inline-edit`, `current`, `aria-label`;
 - данные: `columns`, `rows`.
 
 Значения свойств те же, что у одноимённых атрибутов, и того же типа, что в списке атрибутов: строковое значение пишется строкой (`"size": "1"`, а не `1` — число отклоняется с диагностикой `schema_enum` или `schema_type`), логическое — `true` или `false`.
@@ -1012,6 +1020,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `toggleTreeRow(args: object)` — возвращает `object`. Сообщает, что строку дерева открыли или закрыли (sf-table-tree-toggle).
 - `requestTreeMore(args: object)` — возвращает `object`. Запрашивает следующую страницу уровня дерева (sf-table-tree-more).
 - `focusRow(args: object|string)` — возвращает `object`. Действие focus-row.
+- `setLayout(args: object|string)` — возвращает `object`. Выбирает для человека список или таблицу, как переключатель: выбор сохраняется в настройках таблицы и сразу рисуется. Другое значение отклоняется; если выбор уже такой, ничего не меняется.
 - `getActiveFilterFieldKeys()` — возвращает `array`. Какие поля фильтра отображаются, в порядке полей приложения.
 - `getColumnSettings()` — возвращает `object`. Читает текущее изменение настроек столбцов.
 - `getFilterPayload()` — возвращает `object`. Читает текущий черновик фильтра для проверки запроса на стороне приложения.
@@ -1062,6 +1071,7 @@ table.addEventListener('sf-table-apply', async (event) => {
 - `sf-view-table-cell-set` — `detail`: `{ id: object, key: string, value: object, revision: object }`. Нажат флажок в ячейке: запись, поле, новое значение и ревизия записи.
 - `sf-view-table-view-change` — `detail`: `{ view: object, everywhere: boolean }`.
 - `sf-view-table-window` — `detail`: `{ first: integer, last: integer }`. Изменились нарисованные строки длинного списка: `{first, last}`, номера строк в списке.
+- `sf-view-table-layout-change` — `detail`: `{ layout: "list" | "table" }`. Человек выбрал список или таблицу переключателем (или вызван `set-layout`); выбор уже сохранён. `sf-view` хранит его вместе с видом.
 
 #### Персональный вид
 
@@ -1090,5 +1100,5 @@ table.addEventListener('sf-table-apply', async (event) => {
 
 #### Источник
 
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-table`
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/view-table/rule.js#name=cl-view-table`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/view-table`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/view-table/rule.js#name=cl-view-table`

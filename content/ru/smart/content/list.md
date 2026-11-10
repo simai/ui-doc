@@ -5,7 +5,7 @@ description: "Список, с которым работают: строки и�
 
 # Список
 
-:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Список — для того, с чем что-то делают: беседы, письма, шаблоны, файлы,
 участники, версии. Строки строятся из данных — название и тихая вторая строка;
@@ -235,13 +235,13 @@ list.addEventListener('sf-list-open', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list>`, контракт `smart.list` версии `1.3.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-list>`, контракт `smart.list` версии `1.3.4` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`); пока ждёт данные, компонент показывает свою. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `клавиша меню`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/list` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/list` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 
