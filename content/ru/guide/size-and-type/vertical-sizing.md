@@ -71,27 +71,27 @@ description: "Пары значений mobile и desktop для типогра�
 ## Высоты элементов управления
 
 Высота — это высота строки плюс два отступа по вертикали; рамка входит в
-итоговую высоту. Плотность задают классы `spacing-*` компонента.
+итоговую высоту. Ступень высоты выбирает настройка `height` (см. [Высота: `height`](/ru/guide/size-and-type/size-ladder/#высота-height)).
 
-| Плотность | Размер | Отступ по вертикали mobile / desktop | Высота mobile / desktop |
+| `height` | Размер | Отступ по вертикали mobile / desktop | Высота mobile / desktop |
 | --- | --- | --- | --- |
-| `spacing-compact` | 1/3 | a2 (2 px) / a4 (4 px) | 20 px / 24 px |
-| `spacing-compact` | 1/2 | a4 (4 px) / a4 (4 px) | 24 px / 28 px |
-| `spacing-compact` | 1 | a4 (4 px) / a4 (4 px) | 28 px / 32 px |
-| `spacing-compact` | 2 | a6 (6 px) / a6 (6 px) | 36 px / 40 px |
-| `spacing-compact` | 3 | b0 (10 px) / a6 (6 px) | 44 px / 48 px |
-| обычная | 1/3 | a4 (4 px) / a4 (4 px) | 24 px / 24 px |
-| обычная | 1/2 | a6 (6 px) / a6 (6 px) | 28 px / 32 px |
-| обычная | 1 | a8 (8 px) / a8 (8 px) | 36 px / 40 px |
-| обычная | 2 | b0 (10 px) / b0 (10 px) | 44 px / 48 px |
-| обычная | 3 | b4 (14 px) / b0 (10 px) | 52 px / 56 px |
-| `spacing-comfortable` | 1/3 | a6 (6 px) / a8 (8 px) | 28 px / 32 px |
-| `spacing-comfortable` | 1/2 | b0 (10 px) / b0 (10 px) | 36 px / 40 px |
-| `spacing-comfortable` | 1 | b2 (12 px) / b2 (12 px) | 44 px / 48 px |
-| `spacing-comfortable` | 2 | b4 (14 px) / b4 (14 px) | 52 px / 56 px |
-| `spacing-comfortable` | 3 | c0 (20 px) / b6 (16 px) | 64 px / 68 px |
-| `spacing-spacious` | 1/3 | b0 (10 px) / b2 (12 px) | 36 px / 40 px |
-| `spacing-spacious` | 1/2 | b4 (14 px) / b4 (14 px) | 44 px / 48 px |
-| `spacing-spacious` | 1 | b6 (16 px) / b6 (16 px) | 52 px / 56 px |
-| `spacing-spacious` | 2 | c0 (20 px) / c0 (20 px) | 64 px / 68 px |
-| `spacing-spacious` | 3 | c3 (26 px) / c1 (22 px) | 76 px / 80 px |
+| `low` | 1/3 | a2 (2 px) / a4 (4 px) | 20 px / 24 px |
+| `low` | 1/2 | a4 (4 px) / a4 (4 px) | 24 px / 28 px |
+| `low` | 1 | a4 (4 px) / a4 (4 px) | 28 px / 32 px |
+| `low` | 2 | a6 (6 px) / a6 (6 px) | 36 px / 40 px |
+| `low` | 3 | b0 (10 px) / a6 (6 px) | 44 px / 48 px |
+| `default` | 1/3 | a4 (4 px) / a6 (6 px) | 24 px / 28 px |
+| `default` | 1/2 | a6 (6 px) / a6 (6 px) | 28 px / 32 px |
+| `default` | 1 | a8 (8 px) / a8 (8 px) | 36 px / 40 px |
+| `default` | 2 | b0 (10 px) / b0 (10 px) | 44 px / 48 px |
+| `default` | 3 | b4 (14 px) / b0 (10 px) | 52 px / 56 px |
+| `high` | 1/3 | a6 (6 px) / a8 (8 px) | 28 px / 32 px |
+| `high` | 1/2 | b0 (10 px) / b0 (10 px) | 36 px / 40 px |
+| `high` | 1 | b2 (12 px) / b2 (12 px) | 44 px / 48 px |
+| `high` | 2 | b4 (14 px) / b4 (14 px) | 52 px / 56 px |
+| `high` | 3 | c0 (20 px) / b6 (16 px) | 64 px / 68 px |
+| `highest` | 1/3 | b0 (10 px) / b2 (12 px) | 36 px / 40 px |
+| `highest` | 1/2 | b4 (14 px) / b4 (14 px) | 44 px / 48 px |
+| `highest` | 1 | b6 (16 px) / b6 (16 px) | 52 px / 56 px |
+| `highest` | 2 | c0 (20 px) / c0 (20 px) | 64 px / 68 px |
+| `highest` | 3 | c3 (26 px) / c1 (22 px) | 76 px / 80 px |

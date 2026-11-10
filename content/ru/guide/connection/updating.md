@@ -361,8 +361,8 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 |:---|:---|
 | `--sf-ui-shadow-top` | `--sf-shadow-flat` |
 | `--sf-ui-shadow-1`, `--sf-elevation-1--shadow`, `--sf-shadow-card` | `--sf-shadow-raised` |
-| `--sf-ui-shadow-2`, `--sf-ui-shadow-3`, `--sf-elevation-2--shadow`, `--sf-elevation-3--shadow`, `--sf-elevation-4--shadow`, `--sf-shadow-popup`, `--sf-shadow-popup-nested` | `--sf-shadow-overlay` |
-| `--sf-ui-shadow-4`, `--sf-ui-shadow-5`, `--sf-elevation-5--shadow` | `--sf-shadow-modal` |
+| `--sf-ui-shadow-2`, `--sf-ui-shadow-3`, `--sf-elevation-2--shadow`, `--sf-elevation-3--shadow`, `--sf-shadow-popup`, `--sf-shadow-popup-nested` | `--sf-shadow-overlay` |
+| `--sf-ui-shadow-4`, `--sf-ui-shadow-5`, `--sf-elevation-4--shadow`, `--sf-elevation-5--shadow` | `--sf-shadow-modal` |
 | `--sf-shadow--color-fill`, `--sf-shadow--color-outline` | `--sf-shadow-key-color` |
 | `--sf-shadow--color-shading`, `--sf-shadow--color-shade` | `--sf-shadow-ambient-color` |
 | `--sf-elevation-1--surface` | `--sf-surface-card` |
