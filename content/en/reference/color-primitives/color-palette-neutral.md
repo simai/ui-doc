@@ -8,7 +8,7 @@ description: Neutral
 
 # Neutral
 
-The `neutral` color in SIMAI Framework is intended for surfaces and neutral interface elements. In Google Material this
+The `neutral` color in SIMAI Framework is intended for surfaces and neutral interface elements. It
 is a shade based on the Primary color with reduced chroma (by default 4), which gives a gray color with a tint of the
 primary color.
 

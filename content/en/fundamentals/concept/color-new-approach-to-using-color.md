@@ -5,10 +5,9 @@ description: "A new approach to using color"
 
 # A new approach to using color
 
-SIMAI Framework uses an updated approach to color management inspired by Google Material 3 concepts, but adapted for web projects.
-The changes take web development specifics into account, simplifying the implementation of element states without adding extra layers, as is done in Material 3\.
+States are expressed as their own colour roles, not as an extra layer over the element.
 
-A key difference is the use of three main accent colors: **primary**, **secondary**, and **tertiary**, rather than a single one as in traditional schemes.
+SIMAI Framework uses three main accent colors: **primary**, **secondary**, and **tertiary**.
 This makes it possible to build a more flexible visual hierarchy:
 
 * **Primary** — a saturated color for the most important, attention‑demanding elements. It’s recommended to use it sparingly — no more than one key element per screen.

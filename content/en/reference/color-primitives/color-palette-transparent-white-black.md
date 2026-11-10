@@ -11,7 +11,7 @@ In addition to primary and accent colors, the following base primitives are used
 * **white** — white color.
 * **black** — black color.
 
-To optimize the number of variables, tones 0 and 100 are not used for all colors (similar to Material Design). Their
+To optimize the number of variables, tones 0 and 100 are not used for all colors. Their
 role is played by white and black:
 
 * White and black colors do not change during generation, so their semi-transparent variations are written directly as

@@ -56,9 +56,6 @@ functionality.
 Framework frontend is built on UI components and utilities, simplifying creation of responsive and interactive
 interfaces.
 
-**Bootstrap** — a popular CSS framework for rapid prototyping and building responsive web applications. It is used in
-some SIMAI Framework projects to speed up frontend development.
-
 **REST API** — an architectural style for web services based on standard HTTP methods (GET, POST, PUT, DELETE) for data
 exchange. SIMAI Framework supports building and using REST APIs for integration with external systems and services.
 
