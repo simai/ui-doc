@@ -6,7 +6,7 @@ const start = async () => {
   if (document.body.dataset.exampleReady === 'true') return;
   document.body.dataset.exampleReady = 'true';
   document.getElementById('loader-ensure').addEventListener('click', async () => {
-    const answer = await SF.Loader.ensure(['input-quantity', 'project-unknown'], {timeout: 5000});
+    const answer = await SF.Loader.ensure(['input-quantity', 'project-unknown'], {timeout: 2000});
     log('SF.Loader.ensure', answer);
     const slot = document.getElementById('loader-slot');
     if (answer.ready.includes('sf-input-quantity') && !slot.children.length) {

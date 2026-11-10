@@ -45,7 +45,7 @@ Loader: `SF.create` и `SF.createAsync` появляются после собы
 
 ## Пример
 
-Кнопка создаёт метку через `SF.createAsync` и добавляет её в строку. В
+Кнопка создаёт поле количества через `SF.createAsync` и добавляет его в строку. В
 журнале — тег созданного элемента и определён ли он к моменту вставки.
 
 :::example {id="guide/functions/create" label="Создание элемента" preview=sandbox log_console=true}
