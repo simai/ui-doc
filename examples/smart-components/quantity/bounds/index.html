@@ -1,4 +1,7 @@
+<style>
+  .quantity-cell { inline-size: 10rem; max-inline-size: 100%; }
+</style>
 <div class="flex flex-col gap-3">
-  <sf-input-quantity label="Места в зале, шаг 5" value="20" min="0" max="200" step="5" page-step="50"></sf-input-quantity>
-  <sf-input-quantity label="Год выпуска, без разделителя" value="2026" min="1900" max="2100" grouping="false"></sf-input-quantity>
+  <div class="quantity-cell"><sf-input-quantity label="Места в зале" value="20" min="0" max="200" step="5" page-step="50" hint="Шаг 5 мест"></sf-input-quantity></div>
+  <div class="quantity-cell"><sf-input-quantity label="Год выпуска" value="2026" min="1900" max="2100" grouping="false"></sf-input-quantity></div>
 </div>

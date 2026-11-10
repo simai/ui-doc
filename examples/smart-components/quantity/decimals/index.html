@@ -1,4 +1,7 @@
+<style>
+  .quantity-cell { inline-size: 10rem; max-inline-size: 100%; }
+</style>
 <div class="flex flex-col gap-3">
-  <sf-input-quantity label="Вес, кг" value="2.5" step="0.25" min="0"></sf-input-quantity>
-  <sf-input-quantity label="Сумма, ₽" value="125000" step="100" precision="2"></sf-input-quantity>
+  <div class="quantity-cell"><sf-input-quantity label="Вес, кг" value="2.5" step="0.25" min="0.25" max="30"></sf-input-quantity></div>
+  <div class="quantity-cell"><sf-input-quantity label="Масштаб" value="1.25" step="0.05" min="0.5" max="3" precision="2"></sf-input-quantity></div>
 </div>
