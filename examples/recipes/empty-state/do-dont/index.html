@@ -1,0 +1,38 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-col items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-empty-state kind="no-data" size="1/2" heading-level="4" heading="Товаров пока нет" text="Добавьте первый товар.">
+          <sf-button slot="actions" icon-start="add" text="Добавить товар"></sf-button>
+        </sf-empty-state>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — одно действие, которое снимает пустоту</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-col items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-empty-state kind="no-data" size="1/2" heading-level="4" heading="Товаров пока нет" text="Добавьте первый товар.">
+          <sf-button slot="actions" icon-start="add" text="Добавить"></sf-button>
+          <sf-button slot="actions" icon-start="upload" text="Импорт"></sf-button>
+          <sf-button slot="actions" icon-start="help" text="Справка"></sf-button>
+        </sf-empty-state>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — три равные кнопки, непонятно, с чего начать</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-col items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-empty-state kind="nothing-found" size="1/2" heading-level="4" text="По фильтру «Нет в наличии» товаров нет.">
+          <sf-button slot="actions" appearance="outline" scheme="on-surface" text="Сбросить фильтры"></sf-button>
+        </sf-empty-state>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — пусто из-за фильтра: так и сказать, дать сбросить</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex flex-1 flex-col items-cross-center p-2 radius-surface border border-outline-variant">
+        <sf-empty-state kind="no-data" size="1/2" heading-level="4" heading="Товаров пока нет" text="Добавьте первый товар.">
+          <sf-button slot="actions" icon-start="add" text="Добавить товар"></sf-button>
+        </sf-empty-state>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — при фильтре «товаров нет»: человек решит, что их удалили</figcaption>
+    </figure>
+  </div>
+</div>
