@@ -1,7 +1,8 @@
 const log = (name, data) => (window.docara?.example?.log ? window.docara.example.log(name, data) : console.log(name, data));
+const sfReady = () => (window.SF?.ready ? Promise.resolve(window.SF.ready) : new Promise((resolve) => window.addEventListener('sf-loader-init', () => resolve(window.SF), {once: true})));
 // SF.language.use switches the page language; register corrects one word of sf-pager.
 const start = async () => {
-  const SF = await window.SF.ready;
+  const SF = await sfReady();
   if (document.body.dataset.exampleReady === 'true') return;
   document.body.dataset.exampleReady = 'true';
   SF.language.onChange(() => log('SF.language.onChange', {current: SF.language.current(), known: SF.language.known('sf-pager')}));

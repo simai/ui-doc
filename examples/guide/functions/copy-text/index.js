@@ -1,7 +1,8 @@
 const log = (name, data) => (window.docara?.example?.log ? window.docara.example.log(name, data) : console.log(name, data));
+const sfReady = () => (window.SF?.ready ? Promise.resolve(window.SF.ready) : new Promise((resolve) => window.addEventListener('sf-loader-init', () => resolve(window.SF), {once: true})));
 // SF.copyText says how it copied, or why it could not.
 const start = async () => {
-  const SF = await window.SF.ready;
+  const SF = await sfReady();
   if (document.body.dataset.exampleReady === 'true') return;
   document.body.dataset.exampleReady = 'true';
   document.getElementById('copy-text-run').addEventListener('click', async () => {

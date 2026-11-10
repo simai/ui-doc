@@ -1,4 +1,5 @@
 const log = (name, data) => (window.docara?.example?.log ? window.docara.example.log(name, data) : console.log(name, data));
+const sfReady = () => (window.SF?.ready ? Promise.resolve(window.SF.ready) : new Promise((resolve) => window.addEventListener('sf-loader-init', () => resolve(window.SF), {once: true})));
 // SF.readingPosition keeps the reader's place while entries are added at both ends.
 let first = 0;
 let last = 0;
@@ -9,7 +10,7 @@ const entry = (number) => {
   return item;
 };
 const start = async () => {
-  const SF = await window.SF.ready;
+  const SF = await sfReady();
   if (document.body.dataset.exampleReady === 'true') return;
   document.body.dataset.exampleReady = 'true';
   const scroller = document.getElementById('reading-scroller');

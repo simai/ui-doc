@@ -1,6 +1,8 @@
 const log = (name, data) => (window.docara?.example?.log ? window.docara.example.log(name, data) : console.log(name, data));
+const sfReady = () => (window.SF?.ready ? Promise.resolve(window.SF.ready) : new Promise((resolve) => window.addEventListener('sf-loader-init', () => resolve(window.SF), {once: true})));
 // The same values through SF.format in a Russian and an English block.
 const start = async () => {
+  await sfReady();
   const {format} = window.SF;
   if (document.body.dataset.exampleReady === 'true') return;
   document.body.dataset.exampleReady = 'true';
