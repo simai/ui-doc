@@ -13,7 +13,7 @@ Swiper — движок перелистывания Framework: он сдвиг�
 
 ## Пример
 
-:::example {id="components/swiper/overview" label="Слайды с кнопками перелистывания"}
+:::example {id="components/swiper/overview" label="Слайды"}
 :::
 
 ## Разметка
@@ -41,7 +41,7 @@ Swiper — движок перелистывания Framework: он сдвиг�
 пикселях. Движок читает `breakpoints` при создании и при вызове `update()`,
 поэтому при изменении ширины окна вызывайте `update()` сами.
 
-:::example {id="components/swiper/responsive" label="Один, два или три слайда по ширине окна"}
+:::example {id="components/swiper/responsive" label="По ширине"}
 :::
 
 ## Доступность
@@ -90,7 +90,7 @@ Swiper — движок перелистывания Framework: он сдвиг�
 После изменения набора слайдов вызывайте `update()` у уже созданного
 экземпляра — второй экземпляр поверх первого не создавайте.
 
-:::example {id="components/swiper/lifecycle" label="Добавление и удаление слайдов"}
+:::example {id="components/swiper/lifecycle" label="Добавление"}
 :::
 
 Создание движка с кнопками и числом слайдов по ширине окна:

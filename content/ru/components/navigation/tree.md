@@ -6,6 +6,8 @@ profile: reference
 
 # Дерево
 
+:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Дерево показывает вложенную иерархию — папки, разделы, категории — и даёт
 раскрывать и сворачивать ветви. Для навигации по страницам сайта с
 подменю берите [меню](/ru/components/navigation/menu/), для двух уровней
@@ -56,7 +58,7 @@ profile: reference
 раскрывается, атрибут `data-sf-tree-flat="true"` на корне убирает эти
 отступы.
 
-:::example {id="components/tree/alignment" label="Отступ под переключатель и плоское дерево"}
+:::example {id="components/tree/alignment" label="Выравнивание листьев"}
 :::
 
 ## Состояния

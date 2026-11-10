@@ -6,8 +6,10 @@ profile: reference
 
 # Точка состояния
 
-Точка состояния — компактный неинтерактивный индикатор доступности,
-активности или результата. Она подходит для строк списка и других мест, где
+:badge[sf-dot]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
+Точка состояния цветом показывает, доступен ли человек или сервис, идёт ли
+работа и чем она закончилась. Она подходит для строк списка и других мест, где
 текстовый [бейдж](/ru/components/feedback/badges/) занял бы слишком много
 места.
 
@@ -31,6 +33,8 @@ profile: reference
 
 ### Статус
 
+`sf-dot--primary`, `sf-dot--info`, `sf-dot--success` • [справочник](#классы)
+
 Статус задаёт цвет точки: `sf-dot--primary` (основной цвет, он же цвет по
 умолчанию), `sf-dot--info`, `sf-dot--success`, `sf-dot--warning`,
 `sf-dot--error` и `sf-dot--neutral` для отсутствия статуса. Выбирайте статус
@@ -40,6 +44,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-dot--size-1/3`, `sf-dot--size-1/2`, `sf-dot--size-1` • [справочник](#классы)
 
 Четыре ступени — `sf-dot--size-1/3`, `sf-dot--size-1/2`, `sf-dot--size-1` и
 `sf-dot--size-2` — меняют диаметр точки. Берите ступень текста, рядом с

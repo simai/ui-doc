@@ -6,6 +6,8 @@ profile: reference
 
 # Контекстное меню
 
+:badge[sf-context-menu]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+
 Контекстное меню — приподнятая панель с коротким списком действий над
 выбранным объектом: строкой таблицы, файлом, карточкой. Ширина панели
 подстраивается под самый длинный пункт. Для выбора значения в форме берите
@@ -29,7 +31,7 @@ profile: reference
 - Пункты — кнопки `sf-button` прямыми потомками `sf-context-menu-content`.
   Меню выравнивает их подписи по началу строки и подгоняет отступы к размеру
   кнопки; подпись пункта не переносится.
-  Обычно берут вид `sf-button--link` со схемой `sf-button--on-surface`.
+  Обычно берут вид `sf-button--ghost` со схемой `sf-button--on-surface`.
 - Компонент — только оформление. Открыть меню у объекта, поставить его рядом,
   закрыть по Escape и вернуть фокус — задача вызывающего кода или
   смарт-компонента `<sf-menu-context>`.
@@ -48,6 +50,8 @@ profile: reference
 
 ### Поиск
 
+`sf-context-menu-content--search` • [справочник](#классы)
+
 В меню с поиском панель получает модификатор `sf-context-menu-content--search`
 и сама больше не прокручивается. Сверху стоит поле `sf-context-menu-search` с
 полем ввода `sf-context-menu-search-input`, под ним — `sf-context-menu-list`,
@@ -58,12 +62,14 @@ profile: reference
 поиска. Высоту меню в примере задаёт обёртка `h-f6`; меню у кнопки
 ограничивает высота окна.
 
-:::example {id="components/context-menu/search" label="Поле поиска над прокручиваемым списком"}
+:::example {id="components/context-menu/search" label="Поиск"}
 :::
 
 ## Состояния
 
 ### Выбранная строка
+
+`sf-context-menu-item--chosen` • [справочник](#классы)
 
 `sf-context-menu-item--chosen` отмечает выбранную строку списка, где выбирают
 одно: мягкая заливка `--sf-secondary-container` (ступень 12 в светлой теме, 24
@@ -74,7 +80,7 @@ profile: reference
 `sf-context-menu-item-lead`; колонку получают все строки, чтобы подписи
 начинались на одной линии.
 
-:::example {id="components/context-menu/chosen" label="Выбранная строка и строки с галочкой слева"}
+:::example {id="components/context-menu/chosen" label="Выбранная строка"}
 :::
 
 ## Доступность

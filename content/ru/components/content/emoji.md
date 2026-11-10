@@ -6,6 +6,8 @@ profile: reference
 
 # Emoji
 
+:badge[sf-emoji]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Компонент выводит emoji цветным системным шрифтом и согласует его размер с
 типографической шкалой: символ стоит в строке текста ровно и не сдвигает
 её высоту. Берите его для эмоциональных акцентов в тексте; статус и действия
@@ -44,7 +46,7 @@ profile: reference
 - Декоративный символ скрывайте: `aria-hidden="true"`.
 - Не сообщайте статус, ошибку или действие только emoji: рядом нужен текст.
 
-:::example {id="components/emoji/semantics" label="Смысловой и декоративный emoji"}
+:::example {id="components/emoji/semantics" label="Доступность"}
 :::
 
 ## JavaScript

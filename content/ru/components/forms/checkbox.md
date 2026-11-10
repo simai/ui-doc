@@ -6,6 +6,8 @@ profile: reference
 
 # Флажок
 
+:badge[sf-checkbox]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Флажок включает независимый параметр или выбирает несколько значений из
 списка. Для одного выбора из взаимоисключающих вариантов берите
 [радиокнопку](/ru/components/forms/radio/), для мгновенного включения
@@ -13,7 +15,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/checkbox/overview" label="Флажок с подписью и пояснением"}
+:::example {id="components/checkbox/overview" label="Флажок с подписью"}
 :::
 
 ## Разметка
@@ -37,6 +39,8 @@ profile: reference
 ## Варианты
 
 ### Размер
+
+`sf-checkbox--size-1/2`, `sf-checkbox--size-1`, `sf-checkbox--size-2` • [справочник](#классы)
 
 Три ступени — `sf-checkbox--size-1/2`, `sf-checkbox--size-1` и
 `sf-checkbox--size-2`, как у полей форм, радиокнопки и переключателя. Размер
@@ -87,7 +91,7 @@ profile: reference
 компонента переносит в свойство один раз при подключении; дальше меняйте
 состояние через JavaScript.
 
-:::example {id="components/checkbox/state-indeterminate" label="Смешанное состояние"}
+:::example {id="components/checkbox/state-indeterminate" label="Смешанное"}
 :::
 
 ### Недоступен

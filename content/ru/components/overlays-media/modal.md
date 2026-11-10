@@ -6,6 +6,8 @@ profile: reference
 
 # Модальное окно
 
+:badge[sf-modal]{variant=tonal scheme=primary size=1/2} :badge[1.1.3]{variant=outline scheme=on-surface size=1/2}
+
 Модальное окно переводит пользователя к одной важной задаче поверх страницы:
 подтвердить действие, заполнить короткую форму. Страница за окном недоступна,
 пока оно открыто. Для длинного самостоятельного процесса берите отдельную
@@ -14,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/modal/overview" label="Окно подтверждения"}
+:::example {id="components/modal/overview" label="Окно"}
 :::
 
 ## Разметка
@@ -42,7 +44,7 @@ profile: reference
 `right` — физические стороны, берите их, только когда сторона экрана не
 зависит от языка.
 
-:::example {id="components/modal/positions" label="Положения окна"}
+:::example {id="components/modal/positions" label="Положение"}
 :::
 
 ### Фон
@@ -52,7 +54,7 @@ profile: reference
 размывает страницу за окном с выбранной силой. `overlay: false` убирает фон:
 страница видна как есть, но по-прежнему недоступна.
 
-:::example {id="components/modal/backdrop" label="Фон за окном"}
+:::example {id="components/modal/backdrop" label="Фон"}
 :::
 
 ### Размер
@@ -61,7 +63,7 @@ profile: reference
 `width` и `height` задают размеры панели любой длиной CSS, `fullscreen: true`
 раскрывает окно на весь экран.
 
-:::example {id="components/modal/size" label="Ширина и полноэкранный режим"}
+:::example {id="components/modal/size" label="Размер"}
 :::
 
 ## Доступность

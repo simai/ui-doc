@@ -6,6 +6,8 @@ profile: reference
 
 # Слайдер диапазона
 
+:badge[sf-range-slider]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+
 Слайдер диапазона выбирает одно значение или две границы перетаскиванием ручки
 по шкале. Подходит для приблизительной настройки цены, громкости или
 расстояния с известными пределами; когда важно точное число, добавьте рядом
@@ -14,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/range-slider/overview" label="Слайдер громкости с подписью значения"}
+:::example {id="components/range-slider/overview" label="Слайдер громкости" preview=sandbox log="sf-range-slider-start sf-range-slider-end sf-range-slider-change change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -52,7 +54,7 @@ profile: reference
 `data-prefix` и `data-suffix` добавляют к значению единицы. Подписи не
 выходят за шкалу, а у двух близких ручек сливаются в одну.
 
-:::example {id="components/range-slider/labels" label="Без подписи, с подписью и с подсказкой"}
+:::example {id="components/range-slider/labels" label="Подпись значения"}
 :::
 
 ### Положение подписи
@@ -61,7 +63,7 @@ profile: reference
 `data-tooltip-position` для подсказки (по умолчанию `top`) ставят её над или
 под ручкой.
 
-:::example {id="components/range-slider/label-position" label="Подпись и подсказка сверху и снизу"}
+:::example {id="components/range-slider/label-position" label="Положение подписи"}
 :::
 
 ### Заполнение шкалы
@@ -70,7 +72,7 @@ profile: reference
 заполняет её от ручки до максимума — для настроек вида «не меньше». У двух
 ручек заполнен отрезок между ними.
 
-:::example {id="components/range-slider/connect" label="Заполнение до ручки, после ручки и между ручками"}
+:::example {id="components/range-slider/connect" label="Заполнение шкалы"}
 :::
 
 ### Шаг и точность
@@ -80,7 +82,7 @@ profile: reference
 точность: значение в событиях и для вспомогательных технологий остаётся
 полным.
 
-:::example {id="components/range-slider/precision" label="Целый шаг, видимая точность и малый шаг"}
+:::example {id="components/range-slider/precision" label="Шаг и точность"}
 :::
 
 ### Управление с клавиатуры

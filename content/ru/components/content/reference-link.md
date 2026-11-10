@@ -6,6 +6,8 @@ profile: reference
 
 # Справочная ссылка
 
+:badge[sf-reference-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Справочная ссылка показывает переход вместе с коротким пояснением: путём,
 источником, идентификатором записи. Вся карточка — область нажатия. Для
 обычной ссылки в тексте без пояснения берите
@@ -36,6 +38,8 @@ profile: reference
 
 ### Размер
 
+`sf-reference-link--size-1/2` • [справочник](#классы)
+
 Без класса размера пояснение стоит под ссылкой, с отступом на ширину
 иконки, — для карточки в колонке. `sf-reference-link--size-1/2`, `--size-1`
 и `--size-2` ставят ссылку и пояснение в одну строку и согласуют отступы и
@@ -46,14 +50,18 @@ profile: reference
 
 ### По строке текста
 
+`sf-reference-link--line-1/2` • [справочник](#классы)
+
 `sf-reference-link--line-1/2`, `--line-1` и `--line-2` убирают внутренние
 отступы и ставят ссылку в одну строку с высотой текста той же ступени — для
 ссылки среди текста или в списке.
 
-:::example {id="components/reference-link/line" label="Справочная ссылка по высоте строки"}
+:::example {id="components/reference-link/line" label="По строке текста"}
 :::
 
 ### Без рамки
+
+`sf-reference-link--plain` • [справочник](#классы)
 
 `sf-reference-link--plain` убирает рамку, фон и отступы и сужает ссылку по
 тексту. Берите его там, где ссылка уже стоит в своей рамке — в поле записи
@@ -73,7 +81,7 @@ profile: reference
 `<a>` поставьте неинтерактивный элемент без `href`: класс не мешает переходу
 по ссылке.
 
-:::example {id="components/reference-link/state-disabled" label="Доступная и недоступная справочная ссылка"}
+:::example {id="components/reference-link/state-disabled" label="Недоступна"}
 :::
 
 ### Фокус

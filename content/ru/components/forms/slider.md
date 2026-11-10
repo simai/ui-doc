@@ -6,6 +6,8 @@ profile: reference
 
 # Слайдер контента
 
+:badge[sf-slider]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Слайдер контента показывает изображения, карточки или другие равноправные
 слайды по одному и листает их стрелками и точками.
 Подходит, когда все слайды не нужно видеть сразу; обычный список или сетку
@@ -13,7 +15,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/slider/overview" label="Слайдер со стрелками и точками"}
+:::example {id="components/slider/overview" label="Слайдер со стрелками"}
 :::
 
 ## Разметка
@@ -42,11 +44,13 @@ profile: reference
 
 ### Положение навигации
 
+`sf-slider--content` • [справочник](#классы)
+
 Без модификатора стрелки и точки лежат поверх слайдов — для изображений и
 другой медиа. `sf-slider--content` переносит их под слайды и оставляет слайдам
 естественную высоту — для карточек с текстом и действиями.
 
-:::example {id="components/slider/content" label="Навигация поверх слайдов и под ними"}
+:::example {id="components/slider/content" label="Положение навигации"}
 :::
 
 ### Стрелки
@@ -55,10 +59,12 @@ profile: reference
 `--dark` добавляют размытый фон и тень, чтобы стрелки читались поверх любого
 изображения: `--light` со светлыми кнопками, `--dark` с тёмными.
 
-:::example {id="components/slider/arrows" label="Стрелки без подложки, светлые и тёмные"}
+:::example {id="components/slider/arrows" label="Стрелки"}
 :::
 
 ### Цвет точек
+
+`sf-slider-dots--primary`, `sf-slider-dots--clear` • [справочник](#классы)
 
 `sf-slider-dots--primary` красит точки основным цветом — для слайдера на фоне
 страницы. `sf-slider-dots--clear` — нейтральным цветом текста.
@@ -68,14 +74,18 @@ profile: reference
 
 ### Подложка точек
 
+`sf-slider-dots--framed` • [справочник](#классы)
+
 `sf-slider-dots--framed` кладёт точки на подложку со скруглением; `--light` и
 `--dark` выбирают светлую или тёмную подложку. Подложка нужна точкам поверх
 изображения.
 
-:::example {id="components/slider/dots-framed" label="Точки на светлой и тёмной подложке"}
+:::example {id="components/slider/dots-framed" label="Подложка точек"}
 :::
 
 ### Размер точек
+
+`sf-slider-dots--size-1`, `sf-slider-dots--size-2` • [справочник](#классы)
 
 Две ступени — `sf-slider-dots--size-1` и `sf-slider-dots--size-2`. Область
 нажатия у точки больше самой точки.

@@ -348,7 +348,7 @@ set.renderCellField(status, 'live');
 Страница получает набор через `SF.whenFieldRenderers()`, рисует четыре поля для просмотра и два для правки,
 а под ними показывает, что получил хост, и содержимое ячейки:
 
-:::example {id="guide/field-renderers/overview" label="Просмотр, правка и ячейка"}
+:::example {id="guide/field-renderers/overview" label="Просмотр"}
 :::
 
 Как каждый тип и вариант выглядит в просмотре и в правке, показывает

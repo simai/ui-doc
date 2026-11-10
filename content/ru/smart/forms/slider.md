@@ -17,7 +17,7 @@ description: "Показывает последовательность слай
 
 ## Пример
 
-:::example {id="smart-components/slider/overview" label="Результат"}
+:::example {id="smart-components/slider/overview" label="Результат" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -44,10 +44,12 @@ description: "Показывает последовательность слай
 слайдами — для текста и карточек. Без этого класса навигация лежит поверх
 слайдов, что подходит изображениям.
 
-:::example {id="smart-components/slider/navigation-position" label="Навигация поверх слайдов и под ними"}
+:::example {id="smart-components/slider/navigation-position" label="Положение навигации"}
 :::
 
 ### Стрелки
+
+`arrows`, `dots`, `button-type` • [справочник](#атрибуты)
 
 `arrows` и `dots` включают стрелки и точки; оба включены по умолчанию.
 `button-type` выбирает вид стрелок — `primary`, `secondary`, `dark` или
@@ -58,6 +60,8 @@ description: "Показывает последовательность слай
 
 ### Цвет точек
 
+`dots-type` • по умолчанию `primary-dark` • [справочник](#атрибуты)
+
 `dots-type` задаёт вид точек.
 
 :::example {id="smart-components/slider/dots-type" label="Точки primary-dark и primary-light"}
@@ -65,12 +69,16 @@ description: "Показывает последовательность слай
 
 ### Размер точек
 
+`dots-size` • по умолчанию `2` • [справочник](#атрибуты)
+
 `dots-size` задаёт размер точек.
 
 :::example {id="smart-components/slider/dots-size" label="Точки размера 1 и 2"}
 :::
 
 ### Миниатюры
+
+`thumbs`, `thumbs-class`, `thumb-class` • [справочник](#атрибуты)
 
 `thumbs` добавляет под слайдами полосу миниатюр: если в слайде есть
 изображение или видео, миниатюра показывает его, иначе — копию слайда.
@@ -81,6 +89,8 @@ description: "Показывает последовательность слай
 
 ### Повтор
 
+`loop` • [справочник](#атрибуты)
+
 `loop` замыкает последовательность.
 
 :::example {id="smart-components/slider/loop" label="Слайдер с краями и по кругу"}
@@ -88,16 +98,20 @@ description: "Показывает последовательность слай
 
 ### Оформление
 
+`slide-class`, `thumbs-class`, `thumb-class` • [справочник](#атрибуты)
+
 `root-class`, `slide-class`, `thumbs-class` и `thumb-class` принимают утилиты
 SIMAI Framework: цветовые роли, отступы и радиусы задавайте ими, без своих стилей.
 Изменение только оформления сохраняет текущий слайд и фокус.
 
-:::example {id="components/slider/smart-customization" label="Слайдер на поверхности контейнера"}
+:::example {id="components/slider/smart-customization" label="Оформление"}
 :::
 
 ## Состояния
 
 ### На краю
+
+`loop` • [справочник](#атрибуты)
 
 Без `loop` у последовательности есть первый и последний слайд: на краю
 стрелка в его сторону недоступна.

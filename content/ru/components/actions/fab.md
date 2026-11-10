@@ -6,6 +6,8 @@ profile: reference
 
 # Плавающая кнопка
 
+:badge[sf-fab]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+
 Плавающая кнопка (FAB) — круглая кнопка с иконкой для одного главного и
 частого действия экрана: создать запись, написать сообщение. Для обычного
 действия без подписи берите [кнопку с иконкой](/ru/components/actions/icon-buttons/).
@@ -37,7 +39,7 @@ profile: reference
 `tonal secondary` и `tonal on-surface` — спокойная заливка, когда кнопка не
 должна спорить с содержимым. Других сочетаний в CSS нет.
 
-:::example {id="components/fab/variants" label="Виды и схемы плавающей кнопки"}
+:::example {id="components/fab/variants" label="Вид и схема"}
 :::
 
 ### Размер
@@ -58,7 +60,7 @@ profile: reference
 Класс `active` оставляет кнопке тон нажатия. Для кнопки-переключателя
 сообщайте состояние атрибутом `aria-pressed`: класс меняет только вид.
 
-:::example {id="components/fab/state-active" label="Обычная и нажатая плавающая кнопка"}
+:::example {id="components/fab/state-active" label="Нажата"}
 :::
 
 ### Недоступна
@@ -67,7 +69,7 @@ profile: reference
 и не срабатывает. Класс `disabled` только отключает эффекты наведения и
 нажатия.
 
-:::example {id="components/fab/state-disabled" label="Недоступные плавающие кнопки"}
+:::example {id="components/fab/state-disabled" label="Недоступна"}
 :::
 
 ### Фокус

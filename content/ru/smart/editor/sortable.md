@@ -47,7 +47,7 @@ description: "Даёт переставлять элементы, перенос
 ячейку в порядке чтения. Перемещение с клавиатуры и внешние цели всегда
 показывают линию.
 
-:::example {id="smart-components/sortable/preview" label="Контур и линия на месте вставки"}
+:::example {id="smart-components/sortable/preview" label="Контур и линия"}
 :::
 
 ### Ориентация

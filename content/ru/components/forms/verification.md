@@ -6,6 +6,8 @@ profile: reference
 
 # Код подтверждения
 
+:badge[sf-verification]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
 поэтому вставка, автозаполнение кода из сообщения, менеджеры паролей и
@@ -13,7 +15,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/verification/overview" label="Шестизначный код из сообщения"}
+:::example {id="components/verification/overview" label="Шестизначный код" preview=sandbox log="verification:complete" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -40,6 +42,8 @@ profile: reference
 
 ### Вид
 
+`sf-verification--filled` • [справочник](#классы)
+
 Без модификатора ячейки отделены границей. `sf-verification--filled` на
 `sf-verification` отделяет их тональной заливкой; пока фокус в поле, ячейки
 получают фон поверхности и границу. Ячейка, в которую попадёт следующий символ,
@@ -49,6 +53,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-verification--size-1/2`, `sf-verification--size-1`, `sf-verification--size-2` • [справочник](#классы)
 
 Три ступени — `sf-verification--size-1/2`, `sf-verification--size-1` и
 `sf-verification--size-2` на рамке и такие же
@@ -64,7 +70,7 @@ profile: reference
 `data-mode="alphanumeric"` — латинские буквы и цифры, любое другое значение —
 все символы, кроме пробелов. Лишнее скрипт убирает при вводе и вставке.
 
-:::example {id="components/verification/modes" label="Цифры, буквы и цифры, любые символы"}
+:::example {id="components/verification/modes" label="Символы"}
 :::
 
 ### Длина
@@ -72,7 +78,7 @@ profile: reference
 `data-length` задаёт число ячеек и предел ввода. Без него длина берётся из
 `maxlength` поля, а без обоих — шесть символов.
 
-:::example {id="components/verification/length" label="Код из четырёх и из шести символов"}
+:::example {id="components/verification/length" label="Длина"}
 :::
 
 ## Состояния

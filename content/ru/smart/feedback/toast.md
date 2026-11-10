@@ -90,7 +90,7 @@ Toast отвечает за одно сообщение. Позицию на э�
 добавляются в него через `append()` и сами удаляются при закрытии или по
 истечении `duration`.
 
-:::example {id="smart-components/toast/container" label="Контейнер сообщений"}
+:::example {id="smart-components/toast/container" label="Размещение"}
 :::
 
 Это правило — только для своего контейнера. Открытое модальное окно лежит

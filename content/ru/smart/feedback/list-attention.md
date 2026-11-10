@@ -20,7 +20,7 @@ description: "Список проблем, которым нужен челов�
 
 ## Пример
 
-:::example {id="smart-components/list-attention/overview" label="Здоровье сервера: самое серьёзное первым" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/list-attention/overview" label="Здоровье" preview=sandbox log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -89,7 +89,7 @@ description: "Список проблем, которым нужен челов�
 С `empty="none"` пустой список не рисует ничего. С `empty="line"` — одну тихую
 строку с галочкой: «Всё в порядке» или текст из `empty-text`.
 
-:::example {id="smart-components/list-attention/empty" label="Пустой список: ничего или тихая строка" preview=sandbox}
+:::example {id="smart-components/list-attention/empty" label="Нет проблем" preview=sandbox}
 :::
 
 ## Поведение

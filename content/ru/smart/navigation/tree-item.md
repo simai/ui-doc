@@ -16,7 +16,7 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ## Пример
 
-:::example {id="smart-components/tree-item/overview" label="Результат"}
+:::example {id="smart-components/tree-item/overview" label="Результат" preview=sandbox log="sf-tree-item-open sf-tree-item-toggle" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -45,6 +45,8 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Папка или файл
 
+`kind` • по умолчанию `folder` • [справочник](#атрибуты)
+
 `kind` — `folder` (по умолчанию) или `file`; `type` — другое имя `kind`,
 работает до 2026-12-01. Папка с вложенными `<sf-tree-item>` получает кнопку
 раскрытия и иконку открытой или закрытой папки, файл — иконку документа и
@@ -56,14 +58,18 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Иконка
 
+`icon`, `open-icon`, `closed-icon` • [справочник](#атрибуты)
+
 `icon="false"` убирает иконку пункта: так выглядит дерево разделов, а не
 файлов, как в разделе «Пример». `open-icon` и `closed-icon` заменяют иконки
 папки, `chevron-open-icon` и `chevron-closed-icon` — стрелку раскрытия.
 
-:::example {id="smart-components/tree-item/icons" label="Без иконки и со своими иконками"}
+:::example {id="smart-components/tree-item/icons" label="Иконка"}
 :::
 
 ### Подпись-ссылка
+
+`href`, `target`, `rel` • [справочник](#атрибуты)
 
 `href` делает подпись ссылкой, `target` и `rel` переходят на неё.
 
@@ -74,12 +80,16 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Раскрыт
 
+`open` • [справочник](#атрибуты)
+
 `open` раскрывает ветвь.
 
 :::example {id="smart-components/tree-item/state-open" label="Раскрытая и свёрнутая ветви"}
 :::
 
 ### Выбран
+
+`selected` • [справочник](#атрибуты)
 
 `selected` отмечает выбранный пункт, если дерево разрешает выбор.
 
@@ -88,12 +98,16 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Текущая страница
 
+`active` • [справочник](#атрибуты)
+
 `active` выделяет пункт текущей страницы и ставит ему `aria-current="page"`.
 
 :::example {id="smart-components/tree-item/state-active" label="Пункт текущей страницы"}
 :::
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` выключает пункт: он не раскрывается, его ссылка не рисуется, а
 нажатие ничего не делает.

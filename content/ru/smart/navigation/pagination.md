@@ -18,7 +18,7 @@ description: "Переключает страницы длинного спис�
 
 ## Пример
 
-:::example {id="smart-components/pagination/overview" label="Результат"}
+:::example {id="smart-components/pagination/overview" label="Результат" preview=sandbox log="sf-pagination-change sf-pagination-size-change sf-pagination-count sf-pagination-load-more sf-pagination-selection-clear sf-pagination-action-change sf-pagination-action-for-all-change sf-pagination-apply" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -39,6 +39,8 @@ description: "Переключает страницы длинного спис�
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — ступень лестницы размеров для полей, кнопок, подписей и номеров
 страниц: `1` (по умолчанию) или плотная `1/2`, как в админке.
 
@@ -46,6 +48,8 @@ description: "Переключает страницы длинного спис�
 :::
 
 ### Состав подвала
+
+`top`, `show-page-size`, `page-sizes` • [справочник](#атрибуты)
 
 В начале строки — общее количество. В середине — подпись «Страницы:», стрелки «В
 начало» и «Предыдущая страница», поле с номером текущей страницы и стрелки
@@ -63,12 +67,14 @@ description: "Переключает страницы длинного спис�
 «Показать ещё» и выбор размера начинают новую строку, сохраняя свой размер, и
 не накрывают друг друга.
 
-:::example {id="smart-components/pagination/composition" label="Полный подвал, подвал без кнопки и размера, свои размеры страницы"}
+:::example {id="smart-components/pagination/composition" label="Состав подвала"}
 :::
 
 ## Состояния
 
 ### Догрузка
+
+`show-more-busy` • [справочник](#атрибуты)
 
 `show-more-busy` делает кнопку «Показать ещё» занятой, пока приложение
 догружает записи.
@@ -77,6 +83,8 @@ description: "Переключает страницы длинного спис�
 :::
 
 ### Количество неизвестно
+
+`count-known`, `has-next`, `can-count` • [справочник](#атрибуты)
 
 Список, который не считает записи на каждом запросе, задаёт
 `count-known="false"` и сообщает `has-next`, есть ли следующая страница.

@@ -33,7 +33,7 @@ description: "Цветовые примитивы — это конкретны�
 Восемь палитр по всем шестнадцати тонам. Наведите указатель на образец:
 подсказка назовёт примитив.
 
-:::example {label="Восемь палитр темы, тона от 98 до 5"}
+:::example {label="Палитры и тоны"}
 ```html
 <div class="sf-doc-ramp-grid">
     <span></span><span class="sf-doc-ramp-tone">98</span><span class="sf-doc-ramp-tone">95</span><span class="sf-doc-ramp-tone">90</span><span class="sf-doc-ramp-tone">85</span><span class="sf-doc-ramp-tone">80</span><span class="sf-doc-ramp-tone">70</span><span class="sf-doc-ramp-tone">60</span><span class="sf-doc-ramp-tone">50</span><span class="sf-doc-ramp-tone">40</span><span class="sf-doc-ramp-tone">35</span><span class="sf-doc-ramp-tone">30</span><span class="sf-doc-ramp-tone">25</span><span class="sf-doc-ramp-tone">20</span><span class="sf-doc-ramp-tone">15</span><span class="sf-doc-ramp-tone">10</span><span class="sf-doc-ramp-tone">5</span>
@@ -120,7 +120,7 @@ Framework не использует, не проходит контракт `alp
 фирменного цвета их не двигает. Статусы — четыре из них: ошибка — `red`,
 предупреждение — `amber`, успех — `green`, информация — `blue`.
 
-:::example {label="Шестнадцать оттенков статической палитры, тона от 95 до 10"}
+:::example {label="Оттенки"}
 ```html
 <div class="sf-doc-palette-grid">
     <span></span><span class="sf-doc-palette-tone">95</span><span class="sf-doc-palette-tone">90</span><span class="sf-doc-palette-tone">80</span><span class="sf-doc-palette-tone">70</span><span class="sf-doc-palette-tone">60</span><span class="sf-doc-palette-tone">50</span><span class="sf-doc-palette-tone">40</span><span class="sf-doc-palette-tone">30</span><span class="sf-doc-palette-tone">20</span><span class="sf-doc-palette-tone">10</span>
@@ -177,7 +177,7 @@ Framework не использует, не проходит контракт `alp
 [аватара](/ru/smart/content/avatar/). Переключите тему: плашки ниже сменят
 тон сами.
 
-:::example {label="Роли оттенка: --sf-hue-container и --sf-on-hue-container"}
+:::example {label="Роли оттенка"}
 ```html
 <div class="sf-doc-hue-grid">
     <span class="sf-hue-red sf-doc-hue-chip">red</span>

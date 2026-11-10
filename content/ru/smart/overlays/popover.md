@@ -61,7 +61,7 @@ description: "Открывает небольшую панель у кнопки
 задайте `width`, например `width="20rem"`, если в поверхности список
 строк разной длины.
 
-:::example {id="smart-components/popover/width" label="Ширина по строке и заданная ширина"}
+:::example {id="smart-components/popover/width" label="Ширина"}
 :::
 
 ## Поведение

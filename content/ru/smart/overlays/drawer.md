@@ -52,7 +52,7 @@ profile: reference
 `placement` — `inline-start` или `inline-end`; сторона отражается при письме
 справа налево. `placement="bottom"` открывает [нижний лист](#нижний-лист).
 
-:::example {id="smart-components/drawer/placement" label="Панели у начального и конечного края" preview=sandbox}
+:::example {id="smart-components/drawer/placement" label="Сторона" preview=sandbox}
 :::
 
 ### Размер
@@ -60,7 +60,7 @@ profile: reference
 `size` берёт ступень общей шкалы `1/2`, `1`, `2` или `full` — во всю ширину.
 `width` задаёт точную ширину, если ступеней мало, `z-index` — слой.
 
-:::example {id="smart-components/drawer/sizes" label="Ширина панели на каждой ступени" preview=sandbox}
+:::example {id="smart-components/drawer/sizes" label="Размер" preview=sandbox}
 :::
 
 ### Закреплённая панель

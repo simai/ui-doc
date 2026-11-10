@@ -68,7 +68,7 @@ const button = document.querySelector('sf-button');
 ```html
 <sf-switch id="notify" label="Уведомления" name="notify"></sf-switch>
 
-<sf-modal id="confirm" label="Удалить запись?">…</sf-modal>
+<sf-modal id="confirm" heading="Удалить запись?">…</sf-modal>
 <button type="button" data-sf-action="confirm.open">Удалить</button>
 
 <script>

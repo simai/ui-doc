@@ -16,7 +16,7 @@ description: "Даёт выбрать или перетащить файлы и 
 
 ## Пример
 
-:::example {id="smart-components/file-upload/overview" label="Результат"}
+:::example {id="smart-components/file-upload/overview" label="Результат" preview=sandbox log="change sf-file-upload-attach sf-file-upload-attached sf-file-upload-detach sf-file-upload-rejected sf-file-upload-retry sf-file-upload-completed sf-file-upload-failed sf-file-upload-cancelled sf-file-upload-finished" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -34,6 +34,8 @@ description: "Даёт выбрать или перетащить файлы и 
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` выбирает ступень размерной шкалы: `1/2`, `1` или `2`. Зона и строки
 файлов меняются вместе.
 
@@ -41,6 +43,8 @@ description: "Даёт выбрать или перетащить файлы и 
 :::
 
 ### Состав зоны
+
+`link-text`, `text`, `supporting-text` • [справочник](#атрибуты)
 
 `link-text` — слова ссылки в зоне («Выберите файл»), `text` — слова **после**
 ссылки в той же строке («или перетащите его сюда»). `text` — не всё
@@ -51,10 +55,12 @@ description: "Даёт выбрать или перетащить файлы и 
 какие файлы принимает поле, компонент сам не знает. `icon` меняет значок
 зоны; нейтральное значение по умолчанию — `upload_file`.
 
-:::example {id="smart-components/file-upload/composition" label="Приглашение по умолчанию, свои слова и строка под ними"}
+:::example {id="smart-components/file-upload/composition" label="Состав зоны"}
 :::
 
 ### Один или несколько файлов
+
+`accept`, `multiple` • [справочник](#атрибуты)
 
 `accept` передаётся системному окну выбора и сужает список файлов в нём. Из
 перетащенных файлов компонент оставляет те, что названы в `accept`, а
@@ -63,7 +69,7 @@ description: "Даёт выбрать или перетащить файлы и 
 несколько файлов; без него из перетащенных берётся первый. Новый выбор
 заменяет список файлов.
 
-:::example {id="components/file-upload/smart-selection" label="Несколько документов PDF и Word"}
+:::example {id="components/file-upload/smart-selection" label="PDF и Word"}
 :::
 
 ### Оформление
@@ -71,7 +77,7 @@ description: "Даёт выбрать или перетащить файлы и 
 `root-class` добавляет зоне утилиты SIMAI Framework — поверхность, отступы,
 радиус — без своих стилей.
 
-:::example {id="components/file-upload/smart-customization" label="Зона на поверхности контейнера"}
+:::example {id="components/file-upload/smart-customization" label="Оформление"}
 :::
 
 ## Состояния
@@ -103,6 +109,8 @@ description: "Даёт выбрать или перетащить файлы и 
 
 ### Недоступна
 
+`disabled` • [справочник](#атрибуты)
+
 `disabled` выключает выбор и перетаскивание, убирает зону из порядка `Tab` и
 выключает кнопки в строках; список при этом сохраняется.
 
@@ -129,7 +137,7 @@ description: "Даёт выбрать или перетащить файлы и 
 `sf-file-upload-finished`. События считаются по разнице с прошлым списком,
 поэтому передавайте в `setItems()` новые объекты, а не изменённые старые.
 
-:::example {id="components/file-upload/smart-states" label="Три файла: в передаче, переданный и с ошибкой"}
+:::example {id="components/file-upload/smart-states" label="Три файла в передаче"}
 :::
 
 ### Элемент списка

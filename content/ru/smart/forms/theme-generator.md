@@ -17,7 +17,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 ## Пример
 
-:::example {id="smart-components/theme-generator/overview" label="Тема участка страницы"}
+:::example {id="smart-components/theme-generator/overview" label="Тема участка страницы" preview=sandbox log="change sf-theme-generator-committed" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -36,6 +36,8 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — `1/2`, `1` (по умолчанию) или `2`.
 
 :::example {id="smart-components/theme-generator/sizes" label="Размеры 1/2, 1 и 2"}
@@ -43,10 +45,12 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 ### Палитра продукта
 
+`swatches` • [справочник](#атрибуты)
+
 `swatches` — цвета продукта рядом с выбором, как у
 [`<sf-input-color>`](/ru/smart/forms/color/): `#hex|Название, #hex`.
 
-:::example {id="smart-components/theme-generator/swatches" label="Цвета продукта рядом с выбором"}
+:::example {id="smart-components/theme-generator/swatches" label="Палитра продукта"}
 :::
 
 ## Состояния
@@ -56,7 +60,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 Пустое значение — цвет SIMAI Framework `#005bbe` и его собственная тема.
 «Сбросить» и `reset()` возвращают генератор в это состояние.
 
-:::example {id="smart-components/theme-generator/state-default" label="Генератор без выбранного цвета"}
+:::example {id="smart-components/theme-generator/state-default" label="Цвет SIMAI Framework"}
 :::
 
 ## Поведение

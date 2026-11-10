@@ -76,7 +76,7 @@ description: "Цветовые роли — это токены, которые 
 тёмную тему в настройках документации: фон и текст каждой карточки сменятся
 сами, потому что это роли, а не примитивы.
 
-:::example {label="Пары «фон / содержимое» в текущей теме"}
+:::example {label="Пары"}
 ```html
 <div class="sf-doc-color-role-grid">
     <div class="sf-doc-color-role" style="--sf-doc-role-background: var(--sf-primary); --sf-doc-role-color: var(--sf-on-primary)">

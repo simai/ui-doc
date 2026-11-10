@@ -15,7 +15,7 @@ description: "Ведёт на соседнюю страницу или шаг п
 
 ## Пример
 
-:::example {id="smart-components/pager/overview" label="Две карточки внизу страницы документации"}
+:::example {id="smart-components/pager/overview" label="Две карточки внизу" preview=sandbox log="sf-pager-navigate sf-pager-change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -57,50 +57,62 @@ description: "Ведёт на соседнюю страницу или шаг п
 
 ### Карточки
 
+`appearance` • по умолчанию `cards` • [справочник](#атрибуты)
+
 `appearance="cards"` (по умолчанию) — две карточки «‹ Назад / название» и
 «Далее › / название» под страницей документации. Пустая сторона держит своё
 место: на первой странице карточка «Далее» остаётся во второй колонке.
 
-:::example {id="smart-components/pager/first-page" label="Первая страница: только «Далее», место «Назад» сохранено"}
+:::example {id="smart-components/pager/first-page" label="Карточки"}
 :::
 
 ### Строка
+
+`appearance` • по умолчанию `cards` • [справочник](#атрибуты)
 
 `appearance="row"` — одна строка с двумя названиями по краям, каждое
 обрезается многоточием: под записью блога, новостью или товаром. Направление
 экранный диктор слышит, а на экране его нет.
 
-:::example {id="smart-components/pager/row" label="Строка ссылок под записью блога"}
+:::example {id="smart-components/pager/row" label="Строка"}
 :::
 
 ### Шаги
+
+`appearance`, `complete` • [справочник](#атрибуты)
 
 `appearance="steps"` — мастер: «Назад», строка «Шаг 2 из 4 · название» над
 сегментной дорожкой и главная кнопка «Далее». На последнем шаге она
 называется «Готово» и завершает проход (`complete`).
 
-:::example {id="smart-components/pager/steps" label="Шаги мастера импорта"}
+:::example {id="smart-components/pager/steps" label="Шаги"}
 :::
 
 ### Курс
+
+`appearance` • по умолчанию `cards` • [справочник](#атрибуты)
 
 `appearance="course"` — точки уроков (пройденные, текущий, впереди) со
 строкой «Урок 3 из 5» и карточка следующего урока с заметкой (`meta`) и
 главной кнопкой «Начать». На последнем уроке карточка предлагает «Готово».
 
-:::example {id="smart-components/pager/course" label="Следующий урок курса"}
+:::example {id="smart-components/pager/course" label="Курс"}
 :::
 
 ### Счётчик
+
+`appearance`, `keys` • [справочник](#атрибуты)
 
 `appearance="counter"` — «‹ 3 из 12 ›» с двумя кнопками-иконками, чтобы
 просматривать записи по одной. С `keys` листают и стрелки `←` и `→` на
 странице.
 
-:::example {id="smart-components/pager/counter" label="Просмотр заявок по одной, стрелки на клавиатуре"}
+:::example {id="smart-components/pager/counter" label="Счётчик"}
 :::
 
 ### Размер
+
+`size` • по умолчанию `1` • [справочник](#атрибуты)
 
 `size` — ступень лестницы: `1` (по умолчанию) или `1/2`. Её берут кнопки, а
 строки текста, картинки и отступы карточек следуют за ней.
@@ -112,14 +124,18 @@ description: "Ведёт на соседнюю страницу или шаг п
 
 ### Последний шаг
 
+`complete` • [справочник](#атрибуты)
+
 На последнем шаге главная кнопка называется «Готово». Нажатие на неё
 завершает проход: `complete` включается, и листалка сообщает об этом
 событием.
 
-:::example {id="smart-components/pager/steps-last" label="Последний шаг: «Готово»"}
+:::example {id="smart-components/pager/steps-last" label="Последний шаг"}
 :::
 
 ### Курс пройден
+
+`complete` • [справочник](#атрибуты)
 
 `complete` в виде `course` показывает «Курс пройден» и кнопку «Сначала».
 
@@ -144,7 +160,7 @@ description: "Ведёт на соседнюю страницу или шаг п
 оставляет текущую страницу или шаг — например, пока шаг не заполнен, — или
 позволяет перейти самой странице.
 
-:::example {id="smart-components/pager/validation" label="Шаг не пускает дальше, пока не отмечен флажок"}
+:::example {id="smart-components/pager/validation" label="Разрешение"}
 :::
 
 ```js

@@ -15,7 +15,7 @@ content: полужирный, курсив, код, ссылки и встро�
 
 ## Пример
 
-:::example {id="smart-components/inline-editor/overview" label="Правка условий доставки"}
+:::example {id="smart-components/inline-editor/overview" label="Правка условий"}
 :::
 
 ## Разметка

@@ -94,7 +94,7 @@ panel.addEventListener('sf-drawer-close', (event) => {
   `{"check": {"left": {"key": "answer.accepted"}, "op": "yes"}}`.
 
 ```html
-<sf-modal id="ask-delete" label="Удалить запись?">
+<sf-modal id="ask-delete" heading="Удалить запись?">
   <p slot="content">Запись удалится без возможности восстановления.</p>
   <div slot="footer" class="flex gap-1/2">
     <button type="button" data-sf-action="ask-delete.close">Отмена</button>

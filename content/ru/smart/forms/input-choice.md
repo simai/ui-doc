@@ -62,7 +62,7 @@ description: "Поле формы, где один вариант или нес�
 квадрате — и плотной рамкой основного цвета на лёгкой заливке: два признака,
 а не только цвет.
 
-:::example {id="smart-components/input-choice/multiple" label="Несколько вариантов, один недоступен" preview=sandbox}
+:::example {id="smart-components/input-choice/multiple" label="Один или несколько" preview=sandbox}
 :::
 
 ### Сетка
@@ -110,7 +110,7 @@ description: "Поле формы, где один вариант или нес�
 В примере отправьте форму без выбора типа, затем выберите тип и отправьте
 снова; журнал покажет, что ушло с формой.
 
-:::example {id="smart-components/input-choice/form" label="Форма с двумя полями" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/input-choice/form" label="Два поля" preview=sandbox log_console=true log_open=false}
 :::
 
 ### События
@@ -121,7 +121,7 @@ description: "Поле формы, где один вариант или нес�
 он сейчас. Запись `value` из кода, сброс и восстановление формы событий не
 дают.
 
-:::example {id="smart-components/input-choice/events" label="input и change в журнале" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/input-choice/events" label="События" preview=sandbox log_console=true log_open=false}
 :::
 
 ```js

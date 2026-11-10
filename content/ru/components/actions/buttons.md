@@ -6,6 +6,8 @@ profile: reference
 
 # Кнопки
 
+:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
+
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
 действия без подписи — [кнопку с иконкой](/ru/components/actions/icon-buttons/).
@@ -52,7 +54,7 @@ profile: reference
 
 Вид задаёт вес действия классом `sf-button--{вид}`: `default` — главное
 действие экрана, обычно одно; `tonal` — важное, но не главное; `outline` —
-второстепенное, например «Отмена»; `link` — самое лёгкое, в строке таблицы или
+второстепенное, например «Отмена»; `ghost` — самое лёгкое, в строке таблицы или
 рядом с текстом. `surface` нужен на цветном фоне или поверх изображения: его
 заливка и граница — полупрозрачные ступени
 [нейтральной шкалы](/ru/guide/colour/palettes/), поэтому одна
@@ -138,7 +140,7 @@ profile: reference
 
 `segment-start`, `segment-middle` и `segment-end` соединяют соседние кнопки в
 один составной элемент: внутренние углы становятся прямыми, общие границы
-рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `link`.
+рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `ghost`.
 Группе нужна семантика: `role="group"` и общее доступное имя.
 
 :::example {id="components/buttons/segments" label="Сегментированные кнопки"}
@@ -271,7 +273,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Параметр `param` | По умолчанию | Назначение |
 |:---|:---|:---|
 | `text` | пусто | подпись |
-| `type` | `default` | вид: `default`, `tonal`, `outline`, `surface`, `link` |
+| `type` | `default` | вид: `default`, `tonal`, `outline`, `surface`, `ghost` |
 | `scheme` | `primary` | схема |
 | `size` | `1` | размер |
 | `icon`, `iconPosition` | —, `start` | иконка и её место: `start` или `end` |

@@ -128,7 +128,7 @@ run.addEventListener('sf-progress-run-retry', () => job.start());
 есть полный журнал, отменяет событие и отдаёт свой файл. Открытие и закрытие
 панели сообщает `sf-progress-run-toggle` с `{open}`.
 
-:::example {id="smart-components/progress-run/output" label="Вывод дописывается; скачивание отменено" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/progress-run/output" label="Вывод" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Шаг из кода

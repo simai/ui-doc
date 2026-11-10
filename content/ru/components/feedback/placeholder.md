@@ -6,6 +6,8 @@ profile: reference
 
 # Заполнитель
 
+:badge[sf-placeholder]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Заполнитель объясняет пустое состояние: данных нет, поиск ничего не нашёл или
 раздел не заполнен. Для ожидания данных берите
 [скелетон](/ru/components/feedback/skeleton/), а не пустое состояние.
@@ -37,6 +39,8 @@ profile: reference
 ## Варианты
 
 ### Компоновка
+
+`sf-placeholder--column`, `sf-placeholder--row` • [справочник](#классы)
 
 `sf-placeholder--column` ставит изображение над текстом и выравнивает всё по
 центру — для пустого состояния в центре раздела; это компоновка по

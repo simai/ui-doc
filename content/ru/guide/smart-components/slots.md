@@ -16,7 +16,7 @@ description: "Как страница вставляет своё содержи
 ```
 
 ```html
-<sf-modal id="edit" label="Правка записи">
+<sf-modal id="edit" heading="Правка записи">
   <form slot="content">…</form>
   <div slot="footer">
     <button type="button" data-sf-action="edit.close">Отмена</button>

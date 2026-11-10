@@ -6,6 +6,8 @@ profile: reference
 
 # Предпросмотр файла
 
+:badge[sf-file-preview]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+
 Предпросмотр показывает выбранный или прикреплённый файл одной строкой:
 иконку типа или миниатюру, имя, размер и действия с файлом. Берите его для
 списков вложений и для файла, выбранного перед отправкой формы; ход загрузки
@@ -47,11 +49,13 @@ profile: reference
 
 ### Поверхность
 
+`sf-file-preview--surface` • [справочник](#классы)
+
 Без модификатора строка прозрачна и встраивается в список или поле.
 `sf-file-preview--surface` даёт ей собственную заливку и внутренний
 отступ — для отдельного файла на странице.
 
-:::example {id="components/file-preview/surface" label="Строка без поверхности и с поверхностью"}
+:::example {id="components/file-preview/surface" label="Поверхность"}
 :::
 
 ## Состояния

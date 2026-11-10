@@ -66,7 +66,7 @@ description: "Факты парами «подпись — значение»: �
 колонки, а в колонке уже 24rem (телефон, узкая боковая панель) подпись над
 значением.
 
-:::example {id="smart-components/list-description/layout" label="Колонки и подпись над значением" preview=sandbox}
+:::example {id="smart-components/list-description/layout" label="Раскладка" preview=sandbox}
 :::
 
 ### Размер

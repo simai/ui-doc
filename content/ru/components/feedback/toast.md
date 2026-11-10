@@ -6,6 +6,8 @@ profile: reference
 
 # Всплывающие сообщения
 
+:badge[sf-toast]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+
 Всплывающее сообщение коротко сообщает результат действия поверх интерфейса
 и не блокирует дальнейшую работу. Для постоянного текста внутри страницы
 берите [уведомление](/ru/components/feedback/alerts/), для подтверждения с
@@ -35,6 +37,8 @@ profile: reference
 
 ### Статус
 
+`sf-toast--neutral`, `sf-toast--info`, `sf-toast--success` • [справочник](#классы)
+
 Статус задаёт цвет заливки, границы, текста и иконки: `sf-toast--neutral`,
 `sf-toast--info`, `sf-toast--success`, `sf-toast--warning`,
 `sf-toast--error` — общий словарь статусов Framework. Выбирайте статус по
@@ -52,7 +56,7 @@ profile: reference
 сообщения. Сообщение с действием и сообщение об ошибке оставляйте
 постоянными: их легко не успеть прочитать.
 
-:::example {id="components/toast/lifetime" label="Постоянное и временное сообщение"}
+:::example {id="components/toast/lifetime" label="Время жизни"}
 :::
 
 ## Доступность
@@ -86,7 +90,7 @@ profile: reference
 `data-toast-close` — другие имена тех же атрибутов. Само действие выполняет
 приложение.
 
-:::example {id="components/toast/actions" label="Действие и закрытие"}
+:::example {id="components/toast/actions" label="Действие"}
 :::
 
 Функции `SF.Toast`:
@@ -116,7 +120,7 @@ SF.Toast.show('#toasts', {
 теми же параметрами: `SF.Loader.ready('Toast', callback)` передаёт его после
 события `sf-loader-init`.
 
-### Уведомления страницы: `SF.notify`
+### Уведомления страницы
 
 Сообщение, которое должно появиться и исчезнуть, поднимают через
 `SF.notify`, а не ставят блок рядом с компонентом. У страницы одна область
@@ -124,10 +128,10 @@ SF.Toast.show('#toasts', {
 
 ### Пример уведомлений страницы
 
-:::example {id="components/toast/notify" label="Уведомления страницы"}
+:::example {id="components/toast/notify" label="Уведомления"}
 :::
 
-### Параметры `SF.notify`
+### Параметры уведомления
 
 ```js
 const handle = SF.notify({

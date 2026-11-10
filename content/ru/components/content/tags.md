@@ -6,6 +6,8 @@ profile: reference
 
 # Теги
 
+:badge[sf-tag]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+
 Тег компактно показывает категорию, выбранное значение, фильтр или статус.
 Сам по себе тег — надпись, а не действие: кнопкой становится только тег, который
 действительно можно выбрать, а удаляемое значение получает отдельную кнопку
@@ -38,6 +40,8 @@ profile: reference
 
 ### Содержимое
 
+`sf-tag--default`, `sf-tag--checkbox`, `sf-tag--icon` • [справочник](#классы)
+
 Модификатор содержимого добавляет маркер перед подписью: `sf-tag--default` —
 только текст; `sf-tag--checkbox` — отметка `sf-tag-check` для выбираемого
 фильтра; `sf-tag--icon` — иконка `sf-icon`; `sf-tag--color` — цветная метка
@@ -49,6 +53,8 @@ profile: reference
 
 ### Статус
 
+`sf-tag--success`, `sf-tag--warning`, `sf-tag--error` • [справочник](#классы)
+
 `sf-tag--success`, `sf-tag--warning` и `sf-tag--error` окрашивают тег цветом
 статуса, точка [`sf-dot`](/ru/components/feedback/dot/) перед подписью
 повторяет его. Нейтральный статус — `sf-tag--default`. Статус не передавайте
@@ -58,6 +64,8 @@ profile: reference
 :::
 
 ### Вид
+
+`sf-tag--appearance-surface`, `sf-tag--appearance-ghost` • [справочник](#классы)
 
 Вид — отдельная ось. Без класса тег стоит на нейтральной заливке.
 `sf-tag--appearance-surface` берёт слабую заливку и контур на ступень сильнее
@@ -92,15 +100,19 @@ profile: reference
 
 ### Счётчик и удаление
 
+`sf-tag--removable` • [справочник](#классы)
+
 `sf-tag-count` после подписи показывает вспомогательное число, например
 количество задач. `sf-tag--removable` готовит тег к кнопке удаления: внутри
 стоит [кнопка закрытия](/ru/components/actions/close/) размера `1/3`, её
 доступное имя называет удаляемое значение.
 
-:::example {id="components/tags/actions" label="Тег со счётчиком и удаляемый тег"}
+:::example {id="components/tags/actions" label="Тег"}
 :::
 
 ### В строке
+
+`sf-tag--inline`, `sf-tag--line-1/2` • [справочник](#классы)
 
 `sf-tag--inline` ставит тег на строку другого элемента — текста, ячейки,
 поля выпадающего списка: убирает отступы сверху и снизу и делает кнопку
@@ -119,7 +131,7 @@ profile: reference
 горизонтальной прокрутки. Переносы и промежутки между тегами группы задают
 утилиты контейнера.
 
-:::example {id="components/tags/wrapping" label="Группа тегов с длинной подписью"}
+:::example {id="components/tags/wrapping" label="Длинный текст"}
 :::
 
 ## Состояния
@@ -132,7 +144,7 @@ profile: reference
 отметка `sf-tag-check` заполняется. Состояние сообщает `aria-pressed`, а не
 класс.
 
-:::example {id="components/tags/state-active" label="Невыбранный и выбранный фильтр"}
+:::example {id="components/tags/state-active" label="Выбран"}
 :::
 
 ### Недоступен

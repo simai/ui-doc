@@ -6,6 +6,8 @@ profile: reference
 
 # Карусель
 
+:badge[sf-carousel]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Карусель показывает материалы по одному в области постоянной высоты: баннеры,
 новости, изображения. Она добавляет к движку
 [Swiper](/ru/components/overlays-media/swiper/) готовые переключатели,
@@ -14,7 +16,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/carousel/overview" label="Карусель с переключателями и пагинацией"}
+:::example {id="components/carousel/overview" label="Карусель"}
 :::
 
 ## Разметка
@@ -44,16 +46,20 @@ profile: reference
 
 ### Переключатели
 
+`sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-zero`, `sf-carousel-switch--surface-inverse` • [справочник](#классы)
+
 Цвет переключателей по умолчанию — основной.
 `sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-zero`
 и `sf-carousel-switch--surface-inverse` дают вторичный, светлый и инверсный
 фон — выбирайте тот, что читается поверх слайдов. `sf-carousel-switch--big`
 увеличивает кнопку до высоты элемента управления ступени `2`.
 
-:::example {id="components/carousel/switches" label="Цвета и размер переключателей"}
+:::example {id="components/carousel/switches" label="Переключатели"}
 :::
 
 ### Пагинация
+
+`sf-carousel-pagination--primary-container`, `sf-carousel-pagination--surface-2`, `sf-carousel-pagination--surface-inverse` • [справочник](#классы)
 
 Фон пагинации по умолчанию — основной цвет.
 `sf-carousel-pagination--primary-container`,
@@ -62,7 +68,7 @@ profile: reference
 `sf-carousel-pagination--big` увеличивает область нажатия каждой точки до
 высоты элемента управления.
 
-:::example {id="components/carousel/pagination" label="Фон и размер пагинации"}
+:::example {id="components/carousel/pagination" label="Пагинация"}
 :::
 
 ### Автопрокрутка

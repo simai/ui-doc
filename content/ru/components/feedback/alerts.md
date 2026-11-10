@@ -6,6 +6,8 @@ profile: reference
 
 # Уведомления
 
+:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Уведомление выделяет важную информацию в потоке страницы: подсказку,
 предупреждение, ошибку или подтверждение результата. Для краткого сообщения
 поверх интерфейса берите [всплывающее сообщение](/ru/components/feedback/toast/).
@@ -32,6 +34,8 @@ profile: reference
 
 ### Статус
 
+`sf-alert--neutral`, `sf-alert--info`, `sf-alert--success` • [справочник](#классы)
+
 Статус задаёт цвет заливки, границы, текста и иконки:
 `sf-alert--neutral`, `sf-alert--info`, `sf-alert--success`,
 `sf-alert--warning`, `sf-alert--error` — общий словарь статусов Framework.
@@ -44,13 +48,15 @@ profile: reference
 
 ### Вид
 
+`sf-alert--default`, `sf-alert--outlined`, `sf-alert--flat` • [справочник](#классы)
+
 Вид задаёт, чем уведомление отделено от окружения: `sf-alert--default` —
 заливкой и границей, для самостоятельного заметного сообщения;
 `sf-alert--outlined` — только границей, спокойнее на фоне страницы;
 `sf-alert--flat` — только заливкой, внутри поверхности, границы которой задаёт
 окружающий контейнер. В одном сценарии держите один вид.
 
-:::example {id="components/alerts/appearance" label="Виды уведомления в каждом статусе"}
+:::example {id="components/alerts/appearance" label="Вид"}
 :::
 
 ### Состав
@@ -94,7 +100,7 @@ profile: reference
 сразу. `data-alert-action`, `data-alert-close` и класс `sf-alert--close` —
 другие имена тех же атрибутов.
 
-:::example {id="components/alerts/actions" label="Действие и закрытие"}
+:::example {id="components/alerts/actions" label="Действия" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
 :::
 
 Подписка на действие:

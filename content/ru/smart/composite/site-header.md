@@ -17,7 +17,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 
 ## Пример
 
-:::example {id="smart-components/site-header/overview" label="Бренд, разделы и переключатель темы" preview=sandbox}
+:::example {id="smart-components/site-header/overview" label="Шапка сайта" preview=sandbox}
 :::
 
 ## Разметка
@@ -66,7 +66,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 задан правилом `@media` в стилях компонента, поэтому первая отрисовка верна и
 без скрипта.
 
-:::example {id="smart-components/site-header/collapse" label="Полоса с меню при любой ширине" preview=sandbox}
+:::example {id="smart-components/site-header/collapse" label="Ширина сворачивания" preview=sandbox}
 :::
 
 ### Размер и прилипание
@@ -76,7 +76,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 граница в 1 px; кнопкам в слотах сайт ставит тот же `size`. `sticky`
 оставляет полосу вверху окна при прокрутке.
 
-:::example {id="smart-components/site-header/compact" label="Половинный размер и прилипшая полоса" preview=sandbox}
+:::example {id="smart-components/site-header/compact" label="Размер и прилипание" preview=sandbox}
 :::
 
 ### Навигация по центру
@@ -140,7 +140,7 @@ header.addEventListener('sf-site-header-opened', () => {
 с меню пользователя. Все одного размера `1/2`, как полоса. Сузьте окно
 примера, чтобы увидеть панель.
 
-:::example {id="smart-components/site-header/tools" label="Шапка с инструментами" preview=sandbox}
+:::example {id="smart-components/site-header/tools" label="Шапка" preview=sandbox}
 :::
 
 ## Доступность

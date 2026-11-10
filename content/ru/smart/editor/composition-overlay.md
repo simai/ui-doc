@@ -16,7 +16,7 @@ description: "Рисует поверх отрисованной страниц�
 
 ## Пример
 
-:::example {id="smart-components/composition-overlay/overview" label="Выбор блока и действия"}
+:::example {id="smart-components/composition-overlay/overview" label="Выбор блока"}
 :::
 
 ## Разметка

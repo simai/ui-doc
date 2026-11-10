@@ -39,6 +39,8 @@ JavaScript.
 
 ### Вид
 
+`appearance` • по умолчанию `main` • [справочник](#атрибуты)
+
 `appearance` задаёт, насколько пометка заметна: `main` — плотная заливка
 (по умолчанию), `tonal` — спокойная, `outline` — контур.
 
@@ -46,6 +48,8 @@ JavaScript.
 :::
 
 ### Цвет
+
+`scheme`, `status` • [справочник](#атрибуты)
 
 `scheme` выбирает цветовую роль: `neutral`, `primary`, `secondary`,
 `tertiary`, `on-surface`. `status` говорит, о чём пометка сообщает: `info`,
@@ -59,6 +63,8 @@ JavaScript.
 
 ### Размер
 
+`size` • по умолчанию `1/3` • [справочник](#атрибуты)
+
 `size` — ступень `1/3` (по умолчанию), `1/2` или `1`.
 
 :::example {id="smart-components/badges/sizes" label="Размеры пометки"}
@@ -66,18 +72,22 @@ JavaScript.
 
 Отступ текста от края — `--sf-space-1/2`: 12 px на компьютере и 8 px на телефоне, как у всей линейки отступов; плотный `sf-badge--tight` — свой отступ размера.
 
-:::example {id="smart-components/badges/tight" label="Обычный и плотный отступ: атрибут tight"}
+:::example {id="smart-components/badges/tight" label="Размер"}
 :::
 
 ### В строке текста
 
+`line` • [справочник](#атрибуты)
+
 В строке таблицы или в ряду полей задайте `line` (`1/2`, `1`, `2`): пометка
 займёт строку текста этого размера формы, и строка не станет выше.
 
-:::example {id="smart-components/badges/line" label="Пометка рядом с кнопкой того же размера"}
+:::example {id="smart-components/badges/line" label="В строке текста"}
 :::
 
 ### Иконки
+
+`icon`, `icon-position`, `icon-start` • [справочник](#атрибуты)
 
 `icon` ставит иконку перед текстом; `icon-position="end"` переносит её за
 текст. Для двух иконок сразу есть `icon-start` и `icon-end`.
@@ -86,6 +96,8 @@ JavaScript.
 :::
 
 ### Состояние работы
+
+`activity`, `status`, `text` • [справочник](#атрибуты)
 
 `activity` показывает, где сейчас работа: `running`, `waiting`, `done`,
 `stopped` или `failed`. У каждого состояния своя иконка и слово на языке
@@ -97,7 +109,7 @@ JavaScript.
 так метка помещается в строку списка. Пометка не объявляется вслух сама: строка
 списка не живая область. Без анимации индикатор стоит на месте.
 
-:::example {id="smart-components/badges/activity" label="Пять состояний работы и компактный вид"}
+:::example {id="smart-components/badges/activity" label="Состояние работы"}
 :::
 
 ## Доступность

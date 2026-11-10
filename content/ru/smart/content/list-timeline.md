@@ -18,7 +18,7 @@ description: "Короткая история событий на вертика
 
 ## Пример
 
-:::example {id="smart-components/list-timeline/overview" label="Действия на сервере по дням" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/list-timeline/overview" label="Действия" preview=sandbox log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -125,7 +125,7 @@ description: "Короткая история событий на вертика
 С `has-more` после последнего события стоит кнопка «Показать ещё». Пока
 `loading`, кнопка показывает загрузку и больше ничего не спрашивает.
 
-:::example {id="smart-components/list-timeline/more" label="Кнопка «Показать ещё» и её загрузка" preview=sandbox}
+:::example {id="smart-components/list-timeline/more" label="Кнопка «Показать ещё»" preview=sandbox}
 :::
 
 В примере в начале страницы кнопка работает: следующие события

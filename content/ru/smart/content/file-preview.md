@@ -17,7 +17,7 @@ JavaScript.
 
 ## Пример
 
-:::example {id="smart-components/file-preview/overview" label="Файлы в списке"}
+:::example {id="smart-components/file-preview/overview" label="Файлы в списке" preview=sandbox log="sf-file-preview-download sf-file-preview-detach" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -37,6 +37,8 @@ JavaScript.
 
 ### Миниатюра
 
+`kind`, `mime-type`, `image-url` • [справочник](#атрибуты)
+
 `kind` решает, что стоит слева:
 
 - `auto` — миниатюра, если `mime-type` начинается с `image/` или адрес
@@ -48,36 +50,44 @@ JavaScript.
 Для адреса без расширения, например `data:` или адреса хранилища, задайте
 `kind="image"` явно.
 
-:::example {id="smart-components/file-preview/thumbnail" label="Значок и миниатюра при разных kind"}
+:::example {id="smart-components/file-preview/thumbnail" label="Миниатюра"}
 :::
 
 ### Поверхность
 
+`surface` • [справочник](#атрибуты)
+
 `surface` добавляет строке фон — для файла, который стоит отдельно, а не в
 списке.
 
-:::example {id="smart-components/file-preview/surface" label="Строка без поверхности и с поверхностью"}
+:::example {id="smart-components/file-preview/surface" label="Поверхность"}
 :::
 
 ### Действия
 
+`download-action`, `remove-action`, `actions` • [справочник](#атрибуты)
+
 `download-action="false"` и `remove-action="false"` убирают одну кнопку,
 `actions="false"` — обе.
 
-:::example {id="smart-components/file-preview/actions" label="Обе кнопки, без удаления и без кнопок"}
+:::example {id="smart-components/file-preview/actions" label="Действия"}
 :::
 
 ### Компактный
 
+`compact` • [справочник](#атрибуты)
+
 `compact` оставляет только ведущий значок высотой со строку списка:
 изображение или расширение файла в плитке. Для файла в ячейке таблицы.
 
-:::example {id="smart-components/file-preview/compact" label="Компактный файл и изображение"}
+:::example {id="smart-components/file-preview/compact" label="Компактный"}
 :::
 
 ## Состояния
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` выключает кнопки.
 

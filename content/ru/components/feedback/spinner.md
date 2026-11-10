@@ -6,6 +6,8 @@ profile: reference
 
 # Спиннер
 
+:badge[sf-loader]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Спиннер показывает, что операция выполняется, когда процент завершения
 неизвестен. Если процент известен, берите
 [индикатор прогресса](/ru/components/feedback/progress-bar/); для формы или
@@ -71,7 +73,7 @@ profile: reference
 Здесь у каждого спиннера свой `data-variant`, чтобы показать виды рядом. На
 сайте вид задают один раз для всей страницы.
 
-:::example {id="components/spinner/variant" label="Четыре вида на трёх ступенях рядом с кнопкой"}
+:::example {id="components/spinner/variant" label="Вид"}
 :::
 
 ### Вид страницы
@@ -104,13 +106,15 @@ SIMAI Framework: `window.SF_BOOT_CONFIG = {spinner: 'comet'}` записывае
 Неизвестное значение означает `arc`; пустое `data-sf-spinner=""` ничего не
 задаёт, и блок берёт вид предка.
 
-:::example {id="components/spinner/page-look" label="Вид на html, свой вид блока и свой вид спиннера"}
+:::example {id="components/spinner/page-look" label="Вид страницы"}
 :::
 
 Заставка с логотипом SIMAI, которую Framework показывает при загрузке
 страницы, — не вид спиннера, и `data-sf-spinner` её не меняет.
 
 ### Размер
+
+`sf-loader--size-1/3`, `sf-loader--size-1/2`, `sf-loader--size-1` • [справочник](#классы)
 
 Пять ступеней общей лестницы размеров — `sf-loader--size-1/3`,
 `sf-loader--size-1/2`, `sf-loader--size-1`, `sf-loader--size-2` и
@@ -129,7 +133,7 @@ SIMAI Framework: `window.SF_BOOT_CONFIG = {spinner: 'comet'}` записывае
 Берите ступень того элемента, рядом с которым стоит спиннер: кнопки, поля,
 строки списка. Для ожидания целой области подходят `2` и `3`.
 
-:::example {id="components/spinner/sizes" label="Спиннер рядом с кнопкой той же ступени"}
+:::example {id="components/spinner/sizes" label="Размер"}
 :::
 
 ### Цвет

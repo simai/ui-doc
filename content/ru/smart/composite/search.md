@@ -15,7 +15,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 ## Пример
 
-:::example {id="smart-components/search/overview" label="Кнопка поиска открывает окно: наберите запрос"}
+:::example {id="smart-components/search/overview" label="Кнопка"}
 :::
 
 ## Разметка
@@ -52,7 +52,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 `on-surface-variant`, подписью в начале (`text-position="start"`) и
 сочетанием клавиш в конце (`shortcut="mod+k"`) читается как поле поиска.
 
-:::example {id="smart-components/search/field" label="Кнопка во всю ширину с подсказкой клавиш"}
+:::example {id="smart-components/search/field" label="Кнопка"}
 :::
 
 ### Значок на узком экране
@@ -60,7 +60,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 Кнопка-иконка занимает меньше места в шапке телефона. `keys="false"` убирает
 подвал с подсказками клавиш, `popular="false"` — частые запросы.
 
-:::example {id="smart-components/search/icon" label="Значок без подсказок клавиш и частых запросов"}
+:::example {id="smart-components/search/icon" label="Значок"}
 :::
 
 ### Только результаты
@@ -69,7 +69,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 маленького сайта: здесь нет фильтров (`scopes`), недавних запросов
 (`recent`), быстрых действий (`actions`) и строки пути (`path`).
 
-:::example {id="smart-components/search/quiet" label="Окно без фильтров, недавних, действий и пути"}
+:::example {id="smart-components/search/quiet" label="Окно"}
 :::
 
 ### Подключённый источник
@@ -79,7 +79,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 окна примера, поэтому откройте его кнопкой «Проверить адаптивность». Как
 подключить источник — в разделе [Свой источник результатов](#свой-источник-результатов).
 
-:::example {id="smart-components/search/host" label="Подключённый источник: наберите «тблица», потом походите стрелками"}
+:::example {id="smart-components/search/host" label="Подключённый"}
 :::
 
 ## Поведение

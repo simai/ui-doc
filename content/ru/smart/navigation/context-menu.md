@@ -36,7 +36,7 @@ description: "Показывает короткий список действи�
 `toggleFor({anchor: кнопка})` открывает его у кнопки или закрывает, если оно уже
 открыто у неё. Выбор пункта приходит событием `sf-menu-context-select`.
 
-:::example {id="smart-components/context-menu/standard" label="Меню действий у кнопки"}
+:::example {id="smart-components/context-menu/standard" label="Меню действий"}
 :::
 
 ### Пункты данными
@@ -69,7 +69,7 @@ description: "Показывает короткий список действи�
 
 Меню без `entries` показывает пункты, переданные со `slot="content"`:
 `<sf-button>`, нативные `<button>` и `<a href>`. Обычно берут `<sf-button>`
-вида `link` со схемой `on-surface` и размером `1/2`; держите в одном меню
+вида `ghost` со схемой `on-surface` и размером `1/2`; держите в одном меню
 пункты одного размера. Меню выравнивает подписи по началу строки.
 
 Пункты можно передать и данными в свойстве `items`: каждый элемент массива —
@@ -97,7 +97,7 @@ description: "Показывает короткий список действи�
 выбрать его нельзя. `danger` отмечает опасное действие, `current` — место,
 где человек находится.
 
-:::example {id="smart-components/context-menu/state-disabled" label="Недоступный пункт и опасное действие"}
+:::example {id="smart-components/context-menu/state-disabled" label="Недоступен"}
 :::
 
 ### Отмечен
@@ -109,7 +109,7 @@ description: "Показывает короткий список действи�
 иконку, если она есть. Отметки хранит приложение — см.
 [Выбор пункта](#выбор-пункта).
 
-:::example {id="smart-components/context-menu/state-checked" label="Флажки с галочкой слева и выбранный вариант"}
+:::example {id="smart-components/context-menu/state-checked" label="Отмечен"}
 :::
 
 ### Выбранная строка
@@ -121,7 +121,7 @@ description: "Показывает короткий список действи�
 нейтральная подложка, фокус с клавиатуры — рамка, поэтому их не спутать с
 выбранной строкой. Заливку даёт класс `.sf-context-menu-item--chosen`.
 
-:::example {id="smart-components/context-menu/state-chosen" label="Выбранная строка в списке сортировки"}
+:::example {id="smart-components/context-menu/state-chosen" label="Выбранная строка"}
 :::
 
 ## Поведение
@@ -267,7 +267,7 @@ layer.addEventListener('keydown', (event) => {
 текст, когда ничего не найдено. Такое подменю открывается сразу на поле, и
 мышью, и с клавиатуры.
 
-:::example {id="smart-components/context-menu/profile" label="Меню профиля с выбором темы и поиском языка"}
+:::example {id="smart-components/context-menu/profile" label="Меню профиля"}
 :::
 
 ### Строки со значением
@@ -297,7 +297,7 @@ layer.addEventListener('keydown', (event) => {
 панели с заходом. Панель с вкладками прокручивает своё тело под шапкой, как и
 раньше.
 
-:::example {id="smart-components/context-menu/search" label="Поиск города: поле на месте, строки прокручиваются" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/context-menu/search" label="Поиск" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Поиск на стороне хоста
@@ -322,7 +322,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 шесть первых сайтов, а ответ на прежний запрос, пришедший позже нового,
 отбрасывается.
 
-:::example {id="smart-components/context-menu/host-search" label="Поиск сайта на стороне хоста" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/context-menu/host-search" label="Поиск сайта" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Панель с вкладками
@@ -347,7 +347,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 `.sf-context-menu-row`: в ней может быть ручка, флажок или кнопка, а подпись
 `.sf-context-menu-row-text` занимает остаток и обрезается многоточием.
 
-:::example {id="smart-components/context-menu/panel" label="Панель с вкладками «Поля» и «Вид»"}
+:::example {id="smart-components/context-menu/panel" label="Панель"}
 :::
 
 ## Применение
@@ -363,7 +363,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 словах компонентов — в руководстве
 [Язык интерфейса](/ru/guide/size-and-type/language/).
 
-:::example {id="smart-components/context-menu/language" label="Меню языков у кнопки"}
+:::example {id="smart-components/context-menu/language" label="Меню языков"}
 :::
 
 ## Доступность

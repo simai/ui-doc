@@ -6,13 +6,15 @@ profile: reference
 
 # Переключатель
 
+:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+
 Переключатель включает или выключает настройку сразу после нажатия. Если
 значение уходит вместе с формой после подтверждения, берите
 [флажок](/ru/components/forms/checkbox/).
 
 ## Пример
 
-:::example {id="components/switch/overview" label="Переключатель с подписью и пояснением"}
+:::example {id="components/switch/overview" label="Переключатель с подписью"}
 :::
 
 ## Разметка
@@ -35,6 +37,8 @@ profile: reference
 
 ### Размер
 
+`sf-switch--size-1/2`, `sf-switch--size-1`, `sf-switch--size-2` • [справочник](#классы)
+
 Три ступени — `sf-switch--size-1/2`, `sf-switch--size-1` и `sf-switch--size-2`,
 как у полей форм, флажка и радиокнопки. Высота дорожки равна высоте строки
 подписи своего размера. Берите ступень полей и кнопок той же формы.
@@ -44,6 +48,8 @@ profile: reference
 
 ### Длина дорожки
 
+`sf-switch--short` • [справочник](#классы)
+
 Обычная дорожка вдвое длиннее своей высоты. `sf-switch--short` укорачивает её
 до полутора высот — для плотных списков настроек.
 
@@ -52,12 +58,14 @@ profile: reference
 
 ### Значок в бегунке
 
+`sf-switch-icon--off`, `sf-switch-icon--on` • [справочник](#классы)
+
 Значок кладут в `sf-switch-inner`, модификатор не нужен. Один `sf-icon` виден в
 обоих положениях. Два значка с классами `sf-switch-icon--off` и
 `sf-switch-icon--on` сменяют друг друга, когда переключатель включается. Значок
 декоративный: настройку называет подпись.
 
-:::example {id="components/switch/icons" label="Бегунок без значка, с одним и с двумя значками"}
+:::example {id="components/switch/icons" label="Значок в бегунке"}
 :::
 
 ### Состав
@@ -68,7 +76,7 @@ profile: reference
 оболочке задают два текста пояснения: скрипт подставляет нужный при каждом
 переключении. Оба атрибута нужны вместе.
 
-:::example {id="components/switch/composition" label="Подпись, пояснение, подсказка и текст по состоянию"}
+:::example {id="components/switch/composition" label="Состав"}
 :::
 
 ### Положение
@@ -78,7 +86,7 @@ profile: reference
 поставьте `sf-switch-container-wrap` первым и добавьте оболочке
 `content-main-between`.
 
-:::example {id="components/switch/position" label="Переключатель в начале и в конце строки"}
+:::example {id="components/switch/position" label="Положение"}
 :::
 
 ## Состояния

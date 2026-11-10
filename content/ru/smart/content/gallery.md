@@ -15,7 +15,7 @@ description: "Показывает набор материалов слайде�
 
 ## Пример
 
-:::example {id="components/gallery/overview" label="Галерея проекта"}
+:::example {id="components/gallery/overview" label="Галерея проекта" preview=sandbox log="change sf-gallery-opened sf-gallery-closed" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -40,6 +40,8 @@ description: "Показывает набор материалов слайде�
 ## Варианты
 
 ### Без модального окна
+
+`lightbox`, `inline` • [справочник](#атрибуты)
 
 `lightbox="false"` оставляет галерею в потоке страницы, без модального окна.
 Так делайте, когда увеличение не нужно или материалы уже занимают крупную

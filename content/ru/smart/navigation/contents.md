@@ -15,7 +15,7 @@ description: "Оглавление одной страницы: разделы �
 
 ## Пример
 
-:::example {id="smart-components/contents/overview" label="Колонка рядом со статьёй: прокрутите текст" preview=sandbox}
+:::example {id="smart-components/contents/overview" label="Колонка" preview=sandbox}
 :::
 
 ## Разметка
@@ -58,32 +58,40 @@ CSS-селектором. Оглавление рядом со статьёй с
 
 ### Свёрнутая строка
 
+`layout` • по умолчанию `auto` • [справочник](#атрибуты)
+
 `layout="compact"` — одна кнопка: название текущего раздела и под ней линия
 прочитанного. Нажатие открывает весь список; выбор раздела, `Escape` или
 нажатие снаружи его закрывают.
 
-:::example {id="smart-components/contents/compact" label="Кнопка с текущим разделом над текстом"}
+:::example {id="smart-components/contents/compact" label="Кнопка"}
 :::
 
 ### Штрихи у края
+
+`layout` • по умолчанию `auto` • [справочник](#атрибуты)
 
 `layout="rail"` — по короткому штриху на раздел, у текущего штрих длиннее.
 Названия появляются при наведении и фокусе, а для экранного диктора они
 всегда остаются именами ссылок.
 
-:::example {id="smart-components/contents/rail" label="Штрихи справа от статьи: наведите на них"}
+:::example {id="smart-components/contents/rail" label="Штрихи у края"}
 :::
 
 ### Якоря-вкладки
+
+`layout` • по умолчанию `auto` • [справочник](#атрибуты)
 
 `layout="bar"` — строка якорей над разделами, текущий подчёркнут. Строка
 прилипает к верху, пока страница прокручивается. Подходит для длинной
 формы, где все разделы на одной странице.
 
-:::example {id="smart-components/contents/bar" label="Разделы страницы настроек"}
+:::example {id="smart-components/contents/bar" label="Якоря-вкладки"}
 :::
 
 ### Выбор по ширине
+
+`layout`, `collapse` • [справочник](#атрибуты)
 
 `layout="auto"` (по умолчанию) рисует колонку от ступени `collapse` и шире и
 свёрнутую строку — уже. `collapse` — ступень сетки SIMAI Framework: `sm`
@@ -92,10 +100,12 @@ CSS-селектором. Оглавление рядом со статьёй с
 и без скрипта. В примере `collapse="sm"`: сузьте окно просмотра, и колонка
 станет кнопкой.
 
-:::example {id="smart-components/contents/auto" label="Колонка на широком экране, кнопка — на узком" preview=sandbox}
+:::example {id="smart-components/contents/auto" label="Колонка" preview=sandbox}
 :::
 
 ### Размер
+
+`size` • по умолчанию `1/2` • [справочник](#атрибуты)
 
 `size` — ступень текста и кнопки свёрнутой строки: `1/2` (по умолчанию) или
 `1`.

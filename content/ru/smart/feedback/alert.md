@@ -18,7 +18,7 @@ description: "Показывает постоянное сообщение в п
 
 ## Пример
 
-:::example {id="smart-components/alert/overview" label="Предупреждение и успех"}
+:::example {id="smart-components/alert/overview" label="Предупреждение и успех" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -44,6 +44,8 @@ description: "Показывает постоянное сообщение в п
 
 ### Статус
 
+`status` • по умолчанию `neutral` • [справочник](#атрибуты)
+
 `status` выбирает смысл из общего словаря: `neutral`, `info`, `success`,
 `warning`, `error`. Выбирайте его по смыслу сообщения, а не ради цвета.
 Статус ставит подходящую иконку.
@@ -53,6 +55,8 @@ description: "Показывает постоянное сообщение в п
 
 ### Вид
 
+`appearance` • по умолчанию `default` • [справочник](#атрибуты)
+
 `appearance` задаёт, чем сообщение отделено от окружения: `default` —
 заливкой и границей, `outlined` — только границей, `flat` — только заливкой,
 когда границы задаёт окружающий контейнер.
@@ -61,6 +65,8 @@ description: "Показывает постоянное сообщение в п
 :::
 
 ### Состав
+
+`icon`, `action-text`, `secondary-action-text` • [справочник](#атрибуты)
 
 Обязателен только заголовок. `icon` заменяет иконку статуса другой,
 `icon="none"` убирает её. `action-text` показывает основную кнопку действия,

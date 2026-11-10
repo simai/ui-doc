@@ -17,7 +17,7 @@ description: "Показывает путь от корня сайта до те
 
 ## Пример
 
-:::example {id="smart-components/breadcrumbs/overview" label="Путь к товару"}
+:::example {id="smart-components/breadcrumbs/overview" label="Путь к товару" preview=sandbox log="sf-breadcrumbs-press" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -43,21 +43,25 @@ description: "Показывает путь от корня сайта до те
 
 ### Иконка
 
+`separator-icon`, `home-label`, `home-icon` • [справочник](#атрибуты)
+
 Поле `icon` ставит иконку в пункт. `separator-icon` меняет разделитель, по
 умолчанию `chevron_right`. `home-label` и `home-icon` подписывают первый
 пункт, если у него нет своей подписи.
 
-:::example {id="smart-components/breadcrumbs/icons" label="Иконка пункта и свой разделитель"}
+:::example {id="smart-components/breadcrumbs/icons" label="Иконка"}
 :::
 
 ### Длинный путь
+
+`max-items` • по умолчанию `4` • [справочник](#атрибуты)
 
 Если пунктов больше `max-items` (по умолчанию 4), середина пути сворачивается
 в кнопку «…»: остаются первый пункт и два последних. Скрытые пункты кнопка
 передаёт в событии нажатия, в поле `item.hiddenItems`. `max-items` меньше 3
 отключает сворачивание.
 
-:::example {id="smart-components/breadcrumbs/long-path" label="Шесть пунктов, середина свёрнута"}
+:::example {id="smart-components/breadcrumbs/long-path" label="Длинный путь"}
 :::
 
 ## Состояния
@@ -66,7 +70,7 @@ description: "Показывает путь от корня сайта до те
 
 Флаг `disabled` в полях пункта делает его недоступным.
 
-:::example {id="smart-components/breadcrumbs/state-disabled" label="Недоступный раздел в середине пути"}
+:::example {id="smart-components/breadcrumbs/state-disabled" label="Недоступный пункт"}
 :::
 
 ## Поведение

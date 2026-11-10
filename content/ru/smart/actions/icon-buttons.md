@@ -253,7 +253,7 @@ bold.onClick(() => {
 последним снова идёт первое — повтор списка, тема страницы. Нажмите кнопки в
 примере: журнал покажет событие `change`.
 
-:::example {id="smart-components/icon-buttons/cycle" label="Кнопки-циклы с иконкой" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/icon-buttons/cycle" label="Кнопки-циклы" preview=sandbox log_console=true log_open=false}
 :::
 
 Тему примеров задаёт сам сайт документации, поэтому кнопка темы в примере

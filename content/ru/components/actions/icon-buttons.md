@@ -6,6 +6,8 @@ profile: reference
 
 # Кнопки с иконкой
 
+:badge[sf-icon-button]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+
 Кнопка с иконкой запускает действие без видимой подписи: редактировать,
 удалить, открыть настройки. Берите её, когда иконка общепринята и места мало;
 если действие нельзя однозначно узнать по иконке, нужна
@@ -37,25 +39,24 @@ profile: reference
 
 ### Вид
 
-Вид задаёт вес действия классом `sf-icon-button--{вид}`, как у
-[кнопки](/ru/components/actions/buttons/): `default` — главное действие,
-`tonal` — важное, но не главное, `outline` — второстепенное, `link` — самое
-лёгкое, в строке таблицы или панели инструментов. `surface` нужен на цветном
-фоне или поверх изображения: его заливка и граница — полупрозрачные ступени
-[нейтральной шкалы](/ru/guide/colour/palettes/), а иконка
-сохраняет цвет схемы. Класс `sf-icon-button--ghost` работает так же, как
-`link`; в разметке пишите `link`.
+`sf-icon-button--default`, `sf-icon-button--tonal`, `sf-icon-button--outline`, `sf-icon-button--ghost` • [справочник](#классы)
+
+Вид задаёт вес действия, как у [кнопки](/ru/components/actions/buttons/):
+`default` — главное действие, `tonal` — важное, но не главное, `outline` —
+второстепенное, `ghost` — самое лёгкое, без подложки: заливка появляется
+только при наведении.
 
 :::example {id="components/icon-buttons/variants" label="Виды кнопки с иконкой"}
 :::
 
 ### Схема
 
-Схема задаёт цвет классом `sf-icon-button--{схема}`: `primary` — акцентное
-действие, `on-surface` — нейтральное, `error` — необратимое, например
-«Удалить». `secondary` есть только у вида `tonal`, `error` нет у вида
-`surface`; прочерк в примере — сочетание, которого нет. Необратимое действие
-кнопка только начинает: спросите подтверждение в
+`sf-icon-button--primary`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--danger` • [справочник](#классы)
+
+Схема задаёт цвет: `primary` — акцентное действие, `on-surface` —
+нейтральное, `on-surface-variant` — то же нейтральное на ступень тише,
+`danger` — опасное, которое удаляет или необратимо, например «Удалить».
+Опасное действие кнопка только начинает: спросите подтверждение в
 [модальном окне](/ru/smart/overlays/modal/) и выполните действие
 после ответа. На время самого действия кнопке ставят класс `loading`, а не
 `disabled` (см. [Недоступная](#недоступная)): так окно возвращает фокус на
@@ -64,13 +65,21 @@ profile: reference
 :::example {id="components/icon-buttons/schemes" label="Сочетания вида и схемы"}
 :::
 
-`on-surface-variant` — то же нейтральное действие на ступень тише: заливка и
-граница как у `on-surface`, иконка — цветом `--sf-on-surface-variant`. Так
-выглядит тихая кнопка рядом с полем или в шапке панели. Класс ставят вместе с
-`sf-icon-button--on-surface`. У вида `default` иконка остаётся как у
-`on-surface`: на тёмной заливке тише некуда.
+`on-surface-variant` даёт заливку и границу как у `on-surface`, а иконку —
+цветом `--sf-on-surface-variant`; при наведении она темнеет до `on-surface`.
+Класс ставят вместе с `sf-icon-button--on-surface`. У вида `default` иконка
+остаётся как у `on-surface`: на тёмной заливке тише некуда.
+
+| Место | Вид и схема |
+|:---|:---|
+| Панель редактора, панель инструментов | `ghost` + `on-surface` |
+| Строка таблицы, шапка окна, очистка поля | `ghost` + `on-surface-variant` |
+| «Добавить» в шапке списка | `default` + `primary` |
+| Удаление записи | `ghost` или `outline` + `danger`, затем подтверждение |
 
 ### Содержимое
+
+`sf-icon-button--icon`, `sf-icon-button--close` • [справочник](#классы)
 
 `sf-icon-button--icon` — кнопка с иконкой из шрифта `sf-icon`.
 `sf-icon-button--close` — кнопка со [знаком закрытия](/ru/components/actions/close/)
@@ -92,9 +101,6 @@ profile: reference
 Плотность меняет внутренние отступы выбранного размера. Без класса отступы
 обычные; `spacing-compact` подходит плотным таблицам и панелям,
 `spacing-comfortable` и `spacing-spacious` — крупным одиночным действиям.
-Имена `tightness-low`, `tightness-high` и `tightness-highest` работают так же,
-как `spacing-compact`, `spacing-comfortable` и `spacing-spacious`; в разметке
-пишите `spacing-*`.
 
 :::example {id="components/icon-buttons/tightness" label="Плотность кнопки с иконкой"}
 :::
@@ -102,8 +108,7 @@ profile: reference
 ### Радиус
 
 Кнопка берёт смысловой радиус контрола (`radius-ui`). `radius-square`
-убирает скругление, `radius-rounded` делает кнопку круглой, `radius-default`
-оставлен для совместимости и даёт тот же радиус контрола `--sf-radius--ui`. Общей переменной радиуса, как
+убирает скругление, `radius-rounded` делает кнопку круглой. Общей переменной радиуса, как
 `--sf-button-radius` у кнопок, у кнопок с иконкой нет: радиус задаёт класс на
 каждой кнопке.
 
@@ -114,10 +119,10 @@ profile: reference
 
 `segment-start`, `segment-middle` и `segment-end` соединяют соседние кнопки в
 один составной элемент: внутренние углы становятся прямыми, общие границы
-рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `link`.
+рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `ghost`.
 Группе нужна семантика: `role="group"` и общее доступное имя.
 
-:::example {id="components/icon-buttons/segments" label="Сегментированные кнопки с иконкой"}
+:::example {id="components/icon-buttons/segments" label="Сегменты"}
 :::
 
 ## Состояния
@@ -130,14 +135,14 @@ profile: reference
 нажатой. Доступное имя при переключении не меняется: состояние сообщает
 `aria-pressed`.
 
-:::example {id="components/icon-buttons/state-active" label="Кнопки-переключатели с иконкой"}
+:::example {id="components/icon-buttons/state-active" label="Нажатая"}
 :::
 
 ### Недоступная
 
 Нативный `disabled` приглушает кнопку любого вида: она не получает фокус и
 не срабатывает. Класс `disabled` только отключает эффекты наведения, нажатия
-и фокуса; вид недоступной он даёт лишь варианту `sf-icon-button--surface`.
+и фокуса.
 На время операции ставьте кнопке класс `loading`, `aria-busy="true"` и
 `aria-disabled="true"`, а результат сообщайте текстом. `loading` показывает
 спиннер на месте иконки и не пропускает указатель, но фокус остаётся на кнопке, и `Enter` её
@@ -169,7 +174,7 @@ profile: reference
 задаёт `--sf-loader--color`. Вид спиннера — [вид страницы](/ru/components/feedback/spinner/#вид-страницы); при
 уменьшении движения спиннер показывает неподвижный кадр этого вида.
 
-:::example {id="components/icon-buttons/state-loading" label="Кнопки с иконкой в загрузке и в покое"}
+:::example {id="components/icon-buttons/state-loading" label="Загрузка"}
 :::
 
 ```html
@@ -177,10 +182,6 @@ profile: reference
   <span class="sf-loader-container sf-loader--infinite sf-icon-button-spinner" data-infinite="true" aria-hidden="true"></span>
 </button>
 ```
-
-Переменная `--sf-icon-button-loading-stripe` устарела: Framework её не
-задаёт, а страница, которая задаёт её сама, до 2026-12-01 получает
-неподвижные полосы поверх кнопки в загрузке. Удалите её.
 
 Загрузка на всех размерах рядом с обычными кнопками — в разделе
 [Загрузка](/ru/components/actions/buttons/#загрузка) кнопок.

@@ -64,7 +64,7 @@ description: "Выбирает ровно одно значение из нес�
 Готовый переключатель темы: три пункта только с иконками — как в системе,
 светлая и тёмная.
 
-:::example {id="smart-components/segmented/theme-switch" label="Переключатель темы" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/segmented/theme-switch" label="Переключатель" preview=sandbox log_console=true log_open=false}
 :::
 
 Тему примеров задаёт сам сайт документации, поэтому здесь выбор не меняется
@@ -292,7 +292,7 @@ description: "Выбирает ровно одно значение из нес�
 :::example {id="smart-components/button-group/loading" label="Варианты в загрузке" preview=inline}
 :::
 
-:::example {id="smart-components/segmented/disabled" label="Дорожка: недоступные и в загрузке" preview=inline}
+:::example {id="smart-components/segmented/disabled" label="Загрузка варианта" preview=inline}
 :::
 
 Спиннер стоит на месте иконки, а без иконки — поверх подписи, поэтому

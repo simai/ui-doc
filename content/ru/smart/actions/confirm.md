@@ -19,7 +19,7 @@ description: "Вопрос человеку прямо на месте: что �
 возвращает строку. «Вернуть файлы» начинает пример заново, журнал под ним
 показывает ответы.
 
-:::example {id="smart-components/confirm/overview" label="Удаление в строке таблицы" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/confirm/overview" label="Удаление" preview=sandbox log_console=true log_open=false}
 :::
 
 Вопрос, который страница ставит в строку:
@@ -58,7 +58,7 @@ description: "Вопрос человеку прямо на месте: что �
 применить не удалось, возвращает вопрос открытым и говорит почему. Нажмите
 «Удалить» в обоих вопросах.
 
-:::example {id="smart-components/confirm/server" label="Сервер удалил и не смог" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/confirm/server" label="Отказ" preview=sandbox log_console=true log_open=false}
 :::
 
 ```js

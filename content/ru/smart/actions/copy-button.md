@@ -21,7 +21,7 @@ description: "Копирует значение или текст элемент
 на миг станет галочкой. Что скопировано, видно в журнале под примером;
 вставьте в любое поле, чтобы проверить.
 
-:::example {id="smart-components/copy-button/overview" label="Подключение проекта" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/copy-button/overview" label="Подключение" preview=sandbox log_console=true log_open=false}
 :::
 
 Кнопке нужны источник текста и имя — так устроена строка с командой:

@@ -6,6 +6,8 @@ profile: reference
 
 # Радиокнопки
 
+:badge[sf-radio-button]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Радиокнопки выбирают ровно один вариант из группы, когда все варианты нужно
 показать сразу. Для независимых параметров берите
 [флажки](/ru/components/forms/checkbox/), для длинного списка — выпадающий
@@ -39,6 +41,8 @@ profile: reference
 
 ### Размер
 
+`sf-radio-button--size-1/2`, `sf-radio-button--size-1`, `sf-radio-button--size-2` • [справочник](#классы)
+
 Три ступени — `sf-radio-button--size-1/2`, `sf-radio-button--size-1` и
 `sf-radio-button--size-2`, как у полей форм, флажка и переключателя. Размер
 меняет индикатор, подпись и пояснение вместе. Берите ступень полей и кнопок той
@@ -64,10 +68,12 @@ profile: reference
 поставьте `sf-radio-button-container` первым и добавьте оболочке
 `content-main-between`.
 
-:::example {id="components/radio/position" label="Индикатор в начале и в конце строки"}
+:::example {id="components/radio/position" label="Положение индикатора"}
 :::
 
 ### Образцы шрифта
+
+`sf-radio-group--font` • [справочник](#классы)
 
 Вид `font` показывает варианты плитками с образцом текста вместо круглых
 индикаторов — для выбора начертания или шрифта. Группу оборачивает
@@ -82,7 +88,7 @@ profile: reference
   `active` на образец выбранной плитки и пишет её пояснение в
   `sf-radio-button-description`.
 
-:::example {id="components/radio/types" label="Обычная радиокнопка и образцы шрифта"}
+:::example {id="components/radio/types" label="Образцы шрифта"}
 :::
 
 ## Состояния

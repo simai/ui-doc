@@ -18,7 +18,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/tabs/smart-overview" label="Результат"}
+:::example {id="components/tabs/smart-overview" label="Результат" preview=sandbox log="sf-tabs-change sf-tabs-settings-change sf-tabs-settings-reset" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -65,6 +65,8 @@ profile: reference
 
 ### Вид
 
+`type`, `scheme` • [справочник](#атрибуты)
+
 `type="underline"`, `type="pills"` и `type="full"` дают ту же геометрию, что
 одноимённые классы обычных вкладок. `scheme` выбирает вид кнопок пунктов:
 `default`, `outline` или `link`; это вид, а не семантический цвет.
@@ -81,15 +83,19 @@ profile: reference
 
 ### Размер
 
+`size`, `type` • [справочник](#атрибуты)
+
 `size` — `1/2`, `1` (по умолчанию) или `2`. У `type="underline"` вкладка — это подпись и линия под ней, без отступов по
 бокам. Между вкладками один промежуток по размеру: 20 px при `size="1/2"`,
 24 px при `size="1"`, 32 px при `size="2"`. Высота вкладки — высота контрола
 своего размера, 32, 40 и 48 px, и нажимается вся она; линия 2, 2 и 3 px.
 
-:::example {id="smart-components/tabs/sizes" label="Подчёркнутые вкладки трёх размеров"}
+:::example {id="smart-components/tabs/sizes" label="Размер"}
 :::
 
 ### Расположение
+
+`type` • [справочник](#атрибуты)
 
 `type="vertical"` ставит вкладки столбцом и меняет направление клавиатурного
 управления: стрелки вверх и вниз.
@@ -98,6 +104,8 @@ profile: reference
 :::
 
 ### Только иконки
+
+`variant`, `items` • [справочник](#атрибуты)
 
 `variant="icons"` показывает компактные пункты-иконки с доступными именами:
 подпись из `items` остаётся именем пункта.
@@ -108,6 +116,8 @@ profile: reference
 ## Состояния
 
 ### Выбрана
+
+`active-index` • по умолчанию `0` • [справочник](#атрибуты)
 
 Начальную вкладку задаёт `active-index` — номер в объявленном списке, считая
 с нуля.
@@ -191,7 +201,7 @@ tabs.setItems([
 показывает так же — закреплёнными впереди. В «Ещё» закреплённые не уходят
 никогда. Изменения применяются сразу, в подвале меню только «Сбросить».
 
-:::example {id="smart-components/tabs/configurable" label="Ещё и настройка вкладок"}
+:::example {id="smart-components/tabs/configurable" label="Ещё"}
 :::
 
 Компонент выбор не хранит. Он отправляет `sf-tabs-settings-change` с

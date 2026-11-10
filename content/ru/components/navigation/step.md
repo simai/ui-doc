@@ -6,6 +6,8 @@ profile: reference
 
 # Шаги
 
+:badge[sf-steps]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Шаги показывают этапы линейного процесса — оформления заказа, публикации,
 настройки — и отмечают завершённые, текущий и будущие. Берите их для трёх и
 более этапов с постоянным порядком; для разделов без порядка подходят
@@ -38,6 +40,8 @@ profile: reference
 
 ### Этап
 
+`sf-step--stage-default`, `sf-step--stage-completed`, `sf-step--stage-error` • [справочник](#классы)
+
 Этап задаёт цвет иконки шага: `sf-step--stage-default` — этап без отметки,
 `sf-step--stage-completed` — завершённый, иконка цветом успеха,
 `sf-step--stage-error` — этап с ошибкой, иконка цветом ошибки. Иконку
@@ -47,6 +51,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-step--size-1`, `sf-step--size-1/2` • [справочник](#классы)
 
 Две ступени: `sf-step--size-1` для обычного интерфейса и `sf-step--size-1/2`
 для узкой панели или плотного экрана. Размер ставят и корню

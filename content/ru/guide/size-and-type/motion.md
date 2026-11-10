@@ -60,7 +60,7 @@ description: "Переменные длительности и кривых дв
 
 Наведите указатель на плашки: цвет меняется с разной длительностью.
 
-:::example {id="guide/fundamentals/motion" label="duration-fast, duration-normal, duration-slow"}
+:::example {id="guide/fundamentals/motion" label="Длительность"}
 :::
 
 Переход в своём CSS — те же переменные:

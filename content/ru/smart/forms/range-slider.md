@@ -16,7 +16,7 @@ description: "Выбирает одно значение или две гран�
 
 ## Пример
 
-:::example {id="smart-components/range-slider/overview" label="Результат"}
+:::example {id="smart-components/range-slider/overview" label="Результат" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -36,6 +36,8 @@ description: "Выбирает одно значение или две гран�
 
 ### Одно значение или диапазон
 
+`value`, `multiple`, `margin` • [справочник](#атрибуты)
+
 Два числа в `value` или атрибут `multiple` дают две ручки — нижнюю и верхнюю
 границу. `margin` задаёт наименьшее расстояние между ними. У каждой ручки
 своё доступное имя: `lower-label` и `upper-label`.
@@ -45,14 +47,18 @@ description: "Выбирает одно значение или две гран�
 
 ### Подпись значения
 
+`label`, `prefix-text`, `suffix` • [справочник](#атрибуты)
+
 `label` выбирает, как ручка показывает значение: `none` (по умолчанию) — без
 подписи, `text` — постоянной подписью, `tooltip` — подсказкой. `prefix-text`
 и `suffix` добавляют единицы; `prefix` — прежнее имя `prefix-text`.
 
-:::example {id="smart-components/range-slider/labels" label="Без подписи, подпись текстом и подсказкой"}
+:::example {id="smart-components/range-slider/labels" label="Подпись значения"}
 :::
 
 ### Положение подписи
+
+`text-position`, `tooltip-position`, `label-position` • [справочник](#атрибуты)
 
 `text-position` и `tooltip-position` ставят подпись над (`top`) или под
 (`bottom`) ручкой; `label-position` задаёт положение для обоих видов.
@@ -62,25 +68,31 @@ description: "Выбирает одно значение или две гран�
 
 ### Заполнение шкалы
 
+`connect` • [справочник](#атрибуты)
+
 `connect` задаёт заполненный отрезок: у одной ручки по умолчанию `lower` — от
 минимума до ручки, `upper` — от ручки до максимума, для настроек вида «не
 меньше». У двух ручек заполнен отрезок между ними; `connect="false"` убирает
 заполнение.
 
-:::example {id="smart-components/range-slider/connect" label="Заполнение от минимума, до максимума и без заполнения"}
+:::example {id="smart-components/range-slider/connect" label="Заполнение шкалы"}
 :::
 
 ### Шаг и точность
 
+`step`, `decimals` • [справочник](#атрибуты)
+
 `step` — шаг; без него значение меняется непрерывно. `decimals` меняет только
 видимое число знаков, без него точность берётся из `step`.
 
-:::example {id="smart-components/range-slider/step" label="Шаг 5, шаг 0,5 и два знака после запятой"}
+:::example {id="smart-components/range-slider/step" label="Шаг и точность"}
 :::
 
 ## Состояния
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` выключает слайдер; из кода то же делает `setDisabled()`.
 
@@ -89,7 +101,7 @@ description: "Выбирает одно значение или две гран�
 
 ## Поведение
 
-### Значение и событие `change`
+### Значение и событие
 
 Когда пользователь отпускает ручку, щёлкает по шкале или двигает ручку
 клавишей, элемент отправляет всплывающее событие `change`. Его
@@ -106,7 +118,7 @@ description: "Выбирает одно значение или две гран�
 перетаскивания значение меняется непрерывно; `onUpdateValue(handler)`
 вызывает обработчик на каждом шаге с текущим значением первым аргументом.
 
-:::example {id="smart-components/range-slider/range" label="Диапазон цены и значение из события"}
+:::example {id="smart-components/range-slider/range" label="Диапазон цены"}
 :::
 
 ### Значение из кода и в форме

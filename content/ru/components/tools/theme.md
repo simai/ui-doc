@@ -44,7 +44,7 @@ profile: reference
 явного выбора это `system`. Одиночная кнопка без `data-theme` подходит для
 шапки сайта, группа — для страницы настроек.
 
-:::example {id="components/theme/preferences" label="Системная, светлая и тёмная тема" preview=sandbox}
+:::example {id="components/theme/preferences" label="Выбор режима" preview=sandbox}
 :::
 
 ## Применение

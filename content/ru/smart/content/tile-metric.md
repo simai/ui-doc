@@ -68,7 +68,7 @@ description: "Одно важное число на панели: подпись
 хорош (посетители), `better="down"` — рост плох (нагрузка, ошибки,
 очередь), `better="none"` — ни то ни другое.
 
-:::example {id="smart-components/tile-metric/change" label="Рост хорош, рост плох и без изменений" preview=sandbox}
+:::example {id="smart-components/tile-metric/change" label="Изменение за период" preview=sandbox}
 :::
 
 ### Предел
@@ -81,7 +81,7 @@ description: "Одно важное число на панели: подпись
 плитка сами становятся предупреждением или ошибкой. Пороги задаёт страница,
 плитка только сравнивает.
 
-:::example {id="smart-components/tile-metric/limit" label="Обычно, предупреждение и ошибка по порогу" preview=sandbox}
+:::example {id="smart-components/tile-metric/limit" label="Предел" preview=sandbox}
 :::
 
 ### Состояние и подсказка
@@ -93,7 +93,7 @@ description: "Одно важное число на панели: подпись
 состояния. Если заданы пороги, плитка берёт более серьёзное из `status` и
 достигнутого порога.
 
-:::example {id="smart-components/tile-metric/status" label="Успех, сведения, предупреждение и ошибка" preview=sandbox}
+:::example {id="smart-components/tile-metric/status" label="Состояние и подсказка" preview=sandbox}
 :::
 
 ### Размер
@@ -115,7 +115,7 @@ description: "Одно важное число на панели: подпись
 на которую отправляет `sf-tile-metric-open`. Внутри плитки других ссылок и
 кнопок нет.
 
-:::example {id="smart-components/tile-metric/target" label="Плитка-ссылка и плитка-кнопка" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/tile-metric/target" label="Плитка-ссылка" preview=sandbox log_console=true log_open=false}
 :::
 
 ### График

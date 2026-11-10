@@ -16,7 +16,7 @@ description: "Показывает этапы последовательного
 
 ## Пример
 
-:::example {id="smart-components/steps/overview" label="Результат"}
+:::example {id="smart-components/steps/overview" label="Результат" preview=sandbox log="sf-steps-change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -37,6 +37,8 @@ description: "Показывает этапы последовательного
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — `1/2` или `1` (по умолчанию).
 
 :::example {id="smart-components/steps/sizes" label="Две ступени размера"}
@@ -44,15 +46,19 @@ description: "Показывает этапы последовательного
 
 ### Разделитель
 
+`separator-icon` • по умолчанию `chevron_right` • [справочник](#атрибуты)
+
 `separator-icon` меняет иконку разделителя между этапами, по умолчанию
 `chevron_right`.
 
-:::example {id="smart-components/steps/separator" label="Разделитель по умолчанию и свой"}
+:::example {id="smart-components/steps/separator" label="Разделитель"}
 :::
 
 ## Состояния
 
 ### Текущий
+
+`current` • по умолчанию `0` • [справочник](#атрибуты)
 
 Этап с номером `current` выделен, этапы перед ним отмечены пройденными.
 
@@ -60,6 +66,8 @@ description: "Показывает этапы последовательного
 :::
 
 ### Ошибка
+
+`error-step` • [справочник](#атрибуты)
 
 `error-step` отмечает этап с ошибкой — номер, тоже с нуля. Такой этап
 получает иконку ошибки вместо галочки.

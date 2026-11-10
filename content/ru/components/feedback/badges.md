@@ -6,6 +6,8 @@ profile: reference
 
 # Бейджи
 
+:badge[sf-badge]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+
 Бейдж показывает короткий статус, категорию или счётчик рядом с объектом. Он
 дополняет основное содержимое и не заменяет кнопку, фильтр или
 [уведомление](/ru/components/feedback/alerts/); для статуса без текста
@@ -33,6 +35,8 @@ profile: reference
 
 ### Вид
 
+`sf-badge--main`, `sf-badge--tonal`, `sf-badge--outline` • [справочник](#классы)
+
 Вид задаёт выраженность: `sf-badge--main` — сплошная заливка, самый заметный
 акцент; `sf-badge--tonal` — спокойная тональная заливка; `sf-badge--outline` —
 только граница. Вид меняет вес бейджа, а не смысл.
@@ -41,6 +45,8 @@ profile: reference
 :::
 
 ### Цвет
+
+`sf-badge--neutral`, `sf-badge--primary`, `sf-badge--secondary` • [справочник](#классы)
 
 Цвет берётся из ролей темы: `sf-badge--neutral`, `sf-badge--primary`,
 `sf-badge--secondary`, `sf-badge--tertiary`, `sf-badge--on-surface` и статусы
@@ -53,6 +59,8 @@ profile: reference
 
 ### Размер
 
+`sf-badge--size-1/3`, `sf-badge--size-1/2`, `sf-badge--size-1` • [справочник](#классы)
+
 Три ступени — `sf-badge--size-1/3`, `sf-badge--size-1/2` и `sf-badge--size-1`
 — меняют кегль, отступы и иконку вместе. Берите ступень окружающих элементов
 управления.
@@ -62,10 +70,12 @@ profile: reference
 
 Отступ текста от края — `--sf-space-1/2`: 12 px на компьютере и 8 px на телефоне, как у всей линейки отступов; плотный `sf-badge--tight` — свой отступ размера.
 
-:::example {id="components/badges/tight" label="Обычный и плотный отступ: sf-badge--tight"}
+:::example {id="components/badges/tight" label="Размер"}
 :::
 
 ### В строке текста
+
+`sf-badge--line-1/2`, `sf-badge--line-1`, `sf-badge--line-2` • [справочник](#классы)
 
 Классы `sf-badge--line-1/2`, `sf-badge--line-1` и `sf-badge--line-2` ставят
 бейдж в строку текста той же ступени: бейдж получает высоту строки, а надпись —
@@ -101,7 +111,7 @@ profile: reference
 за него не больше чем на половину своего размера. Индикатор статуса аватара
 остаётся в нижнем конце.
 
-:::example {id="components/badges/anchored" label="Счётчик и точка на кнопках-иконках"}
+:::example {id="components/badges/anchored" label="Бейдж на якоре"}
 :::
 
 Иконку оборачивают в `sf-badge-anchor`: текст глифа — его лигатура, поэтому
@@ -110,7 +120,7 @@ profile: reference
 `sf-badge-anchor--square` (по умолчанию), `--rounded` (радиус элементов
 управления) или `--round`. Так же обёртка служит якорем для элемента пакета.
 
-:::example {id="components/badges/anchor-wrapper" label="Обёртка sf-badge-anchor вокруг иконки"}
+:::example {id="components/badges/anchor-wrapper" label="Обёртка вокруг иконки"}
 :::
 
 | Атрибут | Что делает |
@@ -151,7 +161,7 @@ profile: reference
 `sf-badge--neutral` и другие. Тональный вид полупрозрачен и на якоре
 теряется, поэтому для счётчика берите `sf-badge--main`.
 
-:::example {id="components/badges/anchored-colours" label="Цвет бейджа на якоре: по умолчанию и с классами цвета"}
+:::example {id="components/badges/anchored-colours" label="Цвет бейджа на якоре"}
 :::
 
 От якоря бейдж отделяет кольцо

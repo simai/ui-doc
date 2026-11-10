@@ -16,7 +16,7 @@ description: "Компактная панель настроек: переклю
 
 ## Пример
 
-:::example {id="smart-components/settings/overview" label="Настройки чтения у кнопки" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/overview" label="Настройки" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -63,7 +63,9 @@ description: "Компактная панель настроек: переклю
 
 ## Варианты
 
-### Вид `look`
+### Вид
+
+`look` • по умолчанию `drill` • [справочник](#атрибуты)
 
 Атрибут `look` раскладывает одни и те же данные тремя способами.
 
@@ -75,7 +77,7 @@ description: "Компактная панель настроек: переклю
 занимают всю ширину панели. Переключатель остаётся в своей строке. Подходит, когда вариантов
 много или они длинные: тема, язык, размер текста.
 
-:::example {id="smart-components/settings/drill" label="Переход внутрь: значение под названием" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/drill" label="Переход внутрь" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 #### rows — строки
@@ -84,7 +86,7 @@ description: "Компактная панель настроек: переклю
 переключатель, ползунок. Всё видно сразу, без перехода; подходит для вида
 таблицы или списка.
 
-:::example {id="smart-components/settings/rows" label="Строки: управление в конце строки" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/rows" label="Строки" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 #### tiles — плитки сверху
@@ -93,10 +95,12 @@ description: "Компактная панель настроек: переклю
 ниже, как быстрые настройки телефона. Плитками становятся переключатели с
 `tile: true`, а если таких нет — переключатели верхнего уровня.
 
-:::example {id="smart-components/settings/tiles" label="Плитки сверху: быстрые настройки" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/tiles" label="Плитки сверху" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
-### Размер `size`
+### Размер
+
+`size` • по умолчанию `1/2` • [справочник](#атрибуты)
 
 Ступень лестницы размеров меню: `1/2` (по умолчанию) даёт строки высотой
 32 px, `1` — 40 px. Ширина панели от размера не зависит.
@@ -112,7 +116,7 @@ description: "Компактная панель настроек: переклю
 значение не меняется. `disabled` у варианта выбора отключает только этот
 вариант.
 
-:::example {id="smart-components/settings/state-disabled" label="Недоступная настройка и недоступный вариант" preview=sandbox}
+:::example {id="smart-components/settings/state-disabled" label="Недоступна" preview=sandbox}
 :::
 
 ## Поведение
@@ -130,7 +134,7 @@ description: "Компактная панель настроек: переклю
 <sf-settings for="table-view-settings" look="rows" label="Вид таблицы">…</sf-settings>
 ```
 
-:::example {id="smart-components/settings/for" label="Кнопка, названная в for" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/for" label="Кнопка" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 Без кнопки и без `for` панель стоит открытой в потоке страницы — в боковой
@@ -172,7 +176,7 @@ settings.addEventListener('sf-settings-change', async (event) => {
 В примере сервер соглашается на всё, кроме push-уведомлений: их переключатель
 остаётся выключенным.
 
-:::example {id="smart-components/settings/server" label="Сначала сервер, потом значение" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/server" label="Сервер" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 ### Методы
@@ -186,7 +190,7 @@ settings.addEventListener('sf-settings-change', async (event) => {
 
 Объявленные значения — те, с которыми страница отдала `items`.
 
-:::example {id="smart-components/settings/api" label="setValue, setAll, show и reset" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/api" label="Методы" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 ### Запомнить выбор
@@ -207,7 +211,7 @@ applyTheme(settings.values.theme);
 Измените настройки и нажмите «Нарисовать заново»: новый элемент с теми же
 объявленными значениями покажет сохранённые.
 
-:::example {id="smart-components/settings/remember" label="Значения переживают новую отрисовку" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
+:::example {id="smart-components/settings/remember" label="Значения" preview=sandbox log="sf-settings-change sf-settings-changed sf-settings-reset" log_console=true log_open=false}
 :::
 
 ## Доступность

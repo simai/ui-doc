@@ -94,7 +94,7 @@ description: "Принимает текст в несколько строк —
 с меткой «наследуется», но не уходит с формой. Напишите свою подпись и
 нажмите кнопку сброса — поле вернётся к наследуемой.
 
-:::example {id="smart-components/textarea/inherited" label="Подпись в письмах" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/textarea/inherited" label="Подпись" preview=sandbox log_console=true log_open=false}
 :::
 
 ## Внешний вид

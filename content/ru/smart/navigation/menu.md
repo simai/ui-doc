@@ -112,7 +112,7 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 В строке (`orientation="horizontal"`) и в компактной полосе групп нет: их
 пункты стоят на месте группы, без заголовка.
 
-:::example {id="smart-components/menu/groups" label="Две группы: постоянная и сворачиваемая" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/menu/groups" label="Две группы" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Точка состояния и счётчик
@@ -126,7 +126,7 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 числовой `badge`: больше 99 — `99+`, ноль не показывается. Если у строки
 есть и точка, и счётчик, точка стоит перед счётчиком.
 
-:::example {id="smart-components/menu/status" label="Пять точек состояния и счётчики"}
+:::example {id="smart-components/menu/status" label="Пять точек состояния"}
 :::
 
 ## Состояния
@@ -144,7 +144,7 @@ disabled, open, children}`: в свойстве — массивом, в атр�
 
 `disabled: true` делает пункт недоступным.
 
-:::example {id="smart-components/menu/state-disabled" label="Недоступный пункт «Планшеты»"}
+:::example {id="smart-components/menu/state-disabled" label="Недоступный пункт"}
 :::
 
 ## Поведение

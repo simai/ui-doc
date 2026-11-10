@@ -6,6 +6,8 @@ profile: reference
 
 # Код страны
 
+:badge[sf-country-code]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по
 правилам страны. Для телефона одной заранее известной страны достаточно
@@ -41,16 +43,20 @@ profile: reference
 
 ### Выбор страны
 
+`sf-country-code--fixed-dial-code` • [справочник](#классы)
+
 `data-multi-country="true"` (по умолчанию) открывает список стран по нажатию
 на флаг. `data-multi-country="false"` фиксирует страну из `data-iso2` или
 `data-dial-code`: скрипт убирает стрелку, ставит оболочке класс
 `sf-country-code--fixed-dial-code`, и флаг перестаёт быть кнопкой. Берите
 фиксированную страну, когда номер другой страны принять нельзя.
 
-:::example {id="components/country-code/modes" label="Выбор страны и фиксированная страна"}
+:::example {id="components/country-code/modes" label="Выбор страны"}
 :::
 
 ### Размер
+
+`sf-country-code--size-1/2`, `sf-country-code--size-1`, `sf-country-code--size-2` • [справочник](#классы)
 
 Три ступени — `sf-country-code--size-1/2`, `sf-country-code--size-1` и
 `sf-country-code--size-2`, как у текстового поля. Размер меняет подпись,
@@ -67,7 +73,7 @@ profile: reference
 оператора или город в скобки. Своя маска для всех стран задаётся в
 `data-mask-pattern` вместе с `data-use-country-masks="false"`.
 
-:::example {id="components/country-code/masks" label="Без маски, маска страны и маска со скобками"}
+:::example {id="components/country-code/masks" label="Маска"}
 :::
 
 ### Свой список стран
@@ -132,7 +138,7 @@ profile: reference
 `input` и `change`. Сброс формы возвращает исходные номер и страну и закрывает
 список без лишних событий.
 
-:::example {id="components/country-code/form" label="Поле в форме: проверка и сброс"}
+:::example {id="components/country-code/form" label="В форме" preview=sandbox log="input change" log_console=true log_open=false}
 :::
 
 `SF.CountryCode.setState(target, state)` меняет поле: `target` — оболочка или

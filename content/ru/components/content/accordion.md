@@ -6,6 +6,8 @@ profile: reference
 
 # Аккордеон
 
+:badge[sf-accordion]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+
 Аккордеон раскрывает и скрывает разделы содержимого под их заголовками.
 Берите его, чтобы сократить длинную страницу с независимыми разделами —
 вопросы и ответы, подробности, настройки, — не теряя структуры заголовков.
@@ -40,6 +42,8 @@ profile: reference
 
 ### Поверхность
 
+`sf-accordion--outline`, `sf-accordion--flush` • [справочник](#классы)
+
 Без модификатора аккордеон — самостоятельная карточка с заливкой.
 `sf-accordion--outline` оставляет фон прозрачным и обводит раздел контуром —
 для аккордеона на уже заданной поверхности. `sf-accordion--flush` убирает
@@ -50,6 +54,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-accordion--size-1/3`, `sf-accordion--size-1/2`, `sf-accordion--size-1` • [справочник](#классы)
 
 Без класса размера у заголовка просторный отступ для страниц с текстом. В
 плотном интерфейсе — в панели свойств или боковой колонке — поставьте
@@ -68,10 +74,12 @@ profile: reference
 обычным. Класс размера задаёт отступы, поэтому свои значения переменных
 отступов ставьте после него.
 
-:::example {id="components/accordion/sizes" label="Аккордеон рядом с полями того же размера"}
+:::example {id="components/accordion/sizes" label="Размер"}
 :::
 
 ### Иконка
+
+`sf-accordion--plus-minus` • [справочник](#классы)
 
 Шеврон смотрит в сторону у закрытого раздела и вниз у открытого; он
 подходит меню, иерархии и последовательным шагам. `sf-accordion--plus-minus`
@@ -88,10 +96,12 @@ profile: reference
 открытие следующего закрывает предыдущий. Аккордеоны лежат прямыми
 потомками контейнера.
 
-:::example {id="components/accordion/single" label="Группа с одним открытым разделом"}
+:::example {id="components/accordion/single" label="Один открытый раздел"}
 :::
 
 ### Одна секция
+
+`sf-accordion--static` • [справочник](#классы)
 
 Одной секции раскрываться незачем. Единственный `.sf-accordion` в
 `.sf-accordion-group` или секция с классом `sf-accordion--single` показывается
@@ -105,7 +115,7 @@ profile: reference
 раскрывающейся, например список, который заполнится позже, получает
 `data-single-section="toggle"`.
 
-:::example {id="components/accordion/single-section" label="Одна секция и группа с переключателем"}
+:::example {id="components/accordion/single-section" label="Одна секция"}
 :::
 
 ## Состояния

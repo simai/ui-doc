@@ -6,6 +6,8 @@ profile: reference
 
 # Меню
 
+:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
 панели, строкой в шапке или деревом документации. Для действий над
@@ -43,16 +45,20 @@ profile: reference
 
 ### Вид
 
+`sf-menu--horizontal`, `sf-menu--documentation-tree` • [справочник](#классы)
+
 Без модификатора меню вертикальное — для боковой панели, каталога, настроек.
 `sf-menu--horizontal` выстраивает первый уровень строкой — для основных
 разделов в шапке; ставьте его только корневому списку.
 `sf-menu--documentation-tree` — компактное дерево без рамок с отступом по
 уровню, для навигации по документации.
 
-:::example {id="components/menu/layouts" label="Вертикальное, горизонтальное и дерево документации"}
+:::example {id="components/menu/layouts" label="Вид"}
 :::
 
 ### Навигация в шапке
+
+`sf-menu--navigation`, `sf-menu--horizontal` • [справочник](#классы)
 
 `sf-menu--navigation` на корневом списке — разделы сайта, как их рисует
 шапка: строки без рамки и заливки, под указателем — лёгкая заливка
@@ -79,7 +85,7 @@ profile: reference
 строку: на узком экране показывайте те же пункты вертикальным меню в
 выдвижной панели.
 
-:::example {id="components/menu/horizontal" label="Горизонтальное меню с подменю"}
+:::example {id="components/menu/horizontal" label="Горизонтальное"}
 :::
 
 ### Уровни вложенности
@@ -96,10 +102,12 @@ profile: reference
 `icon` ставит иконку перед подписью пункта или ветки. `trailing-icon`
 заменяет стрелку ветки своей иконкой.
 
-:::example {id="components/menu/icons" label="Иконка пункта и своя иконка ветки"}
+:::example {id="components/menu/icons" label="Иконки"}
 :::
 
 ### Счётчик и компактное меню
+
+`sf-menu--compact` • [справочник](#классы)
 
 Счётчик строки — `.sf-badge` с `data-count` внутри `sf-menu-element-wrap`,
 после `sf-menu-element-text`. Он стоит в конце строки, показывает `99+` после
@@ -114,7 +122,7 @@ profile: reference
 [Меню администратора](/ru/pro/admin/admin-menu/) так же переносит
 счётчик пункта на его иконку.
 
-:::example {id="components/menu/compact" label="Счётчики в обычном и компактном меню"}
+:::example {id="components/menu/compact" label="Счётчики"}
 :::
 
 ### Группы разделов
@@ -149,12 +157,14 @@ profile: reference
 смарт-компонент [Меню](/ru/smart/navigation/menu/#группы-разделов), а эти
 классы дают им вид.
 
-:::example {id="smart-components/menu/groups" label="Группы разделов в смарт-меню" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/menu/groups" label="Группы" preview=sandbox log_console=true log_open=false}
 :::
 
 ## Состояния
 
 ### Текущий пункт
+
+`sf-menu--documentation-tree`, `sf-menu--navigation`, `sf-menu-element--holds-current` • [справочник](#классы)
 
 Ссылке текущей страницы добавьте `aria-current="page"`. Дерево документации
 `sf-menu--documentation-tree` и навигация `sf-menu--navigation` выделяют такой
@@ -173,7 +183,7 @@ profile: reference
 уровня, которые рисует класс, нужны второй панели меню администратора: там
 второй–четвёртый уровни раздела, выбранного в первой панели.
 
-:::example {id="components/menu/state-current" label="Текущий пункт в дереве и в вертикальном меню"}
+:::example {id="components/menu/state-current" label="Текущий пункт"}
 :::
 
 ### Открытая и недоступная ветка
@@ -183,7 +193,7 @@ profile: reference
 раскрывать и приглушает подпись. Недоступную ссылку лучше убрать из
 навигации.
 
-:::example {id="components/menu/states" label="Текущий пункт, открытая и недоступная ветка"}
+:::example {id="components/menu/states" label="Ветки"}
 :::
 
 ## Доступность

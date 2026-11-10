@@ -6,6 +6,8 @@ profile: reference
 
 # Многострочное поле
 
+:badge[sf-textarea]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Многострочное поле принимает комментарий, описание или другой свободный текст с
 переносами строк. Для короткого значения в одну строку берите
 [поле ввода](/ru/components/forms/inputs/).
@@ -38,6 +40,8 @@ profile: reference
 
 ### Вид
 
+`sf-textarea--bordered`, `sf-textarea--filled` • [справочник](#классы)
+
 `sf-textarea--bordered` отделяет поле тонкой границей — для форм на фоне
 страницы. `sf-textarea--filled` отделяет его тональной поверхностью — для
 плотных форм внутри карточек. Пока фокус внутри поля с заливкой, оно получает
@@ -48,6 +52,8 @@ profile: reference
 :::
 
 ### Без рамки
+
+`sf-textarea--flush` • [справочник](#классы)
 
 `sf-textarea--flush` — поле внутри составного элемента, например строки ввода
 сообщения, где рамку, фон, тень и фокус рисует общий блок. У такого поля нет
@@ -65,10 +71,12 @@ profile: reference
 блок; `--sf-textarea-padding-block` и `--sf-textarea-padding-inline` по-прежнему
 меняют отступы самого поля.
 
-:::example {id="components/textarea/flush" label="Поле без рамки в строке ввода сообщения"}
+:::example {id="components/textarea/flush" label="Без рамки"}
 :::
 
 ### Размер
+
+`sf-textarea--size-1/2`, `sf-textarea--size-1`, `sf-textarea--size-2` • [справочник](#классы)
 
 Три ступени — `sf-textarea--size-1/2`, `sf-textarea--size-1` и
 `sf-textarea--size-2`, как у поля ввода и других полей форм. Размер меняет
@@ -91,7 +99,7 @@ profile: reference
 скрипт ставит `required` сам. Постоянное пояснение под полем —
 `sf-textarea-hint-text-wrap`.
 
-:::example {id="components/textarea/composition" label="Подпись, обязательность и подсказка"}
+:::example {id="components/textarea/composition" label="Состав"}
 :::
 
 ### Изменение размера
@@ -106,6 +114,8 @@ profile: reference
 
 ### Высота по тексту
 
+`sf-textarea--auto-grow` • [справочник](#классы)
+
 `data-auto-grow` на `<textarea>` (или класс `sf-textarea--auto-grow` на корне)
 делает высоту поля равной его тексту. `data-min-rows` (по умолчанию 1) и
 `data-max-rows` (без него предела нет) ограничивают её: после максимума поле
@@ -115,7 +125,7 @@ profile: reference
 переносит строку. Из скрипта те же настройки задают `autoGrow`,
 `minRows` и `maxRows`.
 
-:::example {id="components/textarea/auto-grow" label="Поле по высоте текста: от одной до шести строк и от двух до четырёх"}
+:::example {id="components/textarea/auto-grow" label="Высота по тексту"}
 :::
 
 ### Маска
@@ -147,7 +157,7 @@ profile: reference
 скопировать текст; значение отправляется с формой. Фон поля становится
 приглушённым.
 
-:::example {id="components/textarea/state-readonly" label="Поле только для чтения обоих видов"}
+:::example {id="components/textarea/state-readonly" label="Только чтение"}
 :::
 
 ### Ошибка
@@ -161,6 +171,8 @@ profile: reference
 :::
 
 ### Фокус
+
+`sf-textarea--pointer-focus` • [справочник](#классы)
 
 При переходе клавишей Tab поле получает кольцо фокуса по `:focus-visible`. При
 нажатии мышью скрипт ставит оболочке `sf-textarea--pointer-focus`, и кольцо не

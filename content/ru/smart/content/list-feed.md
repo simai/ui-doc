@@ -20,7 +20,7 @@ description: "Прокручиваемая колонка записей, кот
 
 ## Пример
 
-:::example {id="smart-components/list-feed/overview" label="Комментарии с ранней историей"}
+:::example {id="smart-components/list-feed/overview" label="Комментарии" preview=sandbox log="sf-list-feed-load-more sf-list-feed-completed sf-list-feed-failed sf-list-feed-cancelled" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -56,7 +56,7 @@ feed.setItems({items: await api.comments(taskId), options: {hasMore: true}});
 
 Пока записей нет, вместо колонки виден слот `empty`.
 
-:::example {id="smart-components/list-feed/state-empty" label="Комментариев ещё нет"}
+:::example {id="smart-components/list-feed/state-empty" label="Пусто"}
 :::
 
 ### Запись пишется
@@ -65,7 +65,7 @@ feed.setItems({items: await api.comments(taskId), options: {hasMore: true}});
 другая сторона её пишет, и каждая часть — новый `upsert()` с более длинным
 текстом. Пока запись растёт, у неё `aria-busy`, и она не объявляется.
 
-:::example {id="smart-components/list-feed/state-growing" label="Ответ ассистента пишется"}
+:::example {id="smart-components/list-feed/state-growing" label="Запись пишется"}
 :::
 
 ## Поведение
@@ -108,7 +108,7 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 серии и текст — только текст, никогда разметку: хост, у которого есть HTML,
 рисует и очищает его сам.
 
-:::example {id="smart-components/list-feed/custom-render" label="Записи человека и ассистента"}
+:::example {id="smart-components/list-feed/custom-render" label="Записи"}
 :::
 
 Рисовальщик может опираться на классы `.sf-list-feed__item` с модификаторами

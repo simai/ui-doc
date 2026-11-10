@@ -46,7 +46,7 @@ description: "Выбирает, создаёт, переименовывает, 
 
 `size` — `1/2` (по умолчанию) или `1`.
 
-:::example {id="smart-components/profile-picker/sizes" label="Размеры выбора профиля"}
+:::example {id="smart-components/profile-picker/sizes" label="Размер"}
 :::
 
 ## Состояния
@@ -55,7 +55,7 @@ description: "Выбирает, создаёт, переименовывает, 
 
 `disabled` отключает выбор профиля.
 
-:::example {id="smart-components/profile-picker/state-disabled" label="Недоступный выбор профиля"}
+:::example {id="smart-components/profile-picker/state-disabled" label="Недоступен"}
 :::
 
 ## Поведение

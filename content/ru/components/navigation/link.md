@@ -6,6 +6,8 @@ profile: reference
 
 # Ссылка
 
+:badge[sf-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Ссылка ведёт на другую страницу, раздел страницы или файл. Для действия на
 текущей странице — сохранить, отправить, открыть окно — берите
 [кнопку](/ru/components/actions/buttons/).
@@ -53,7 +55,7 @@ profile: reference
 берёт цвет недоступного текста. Без `href` элемент `<a>` не получает фокус и
 не переходит. Рядом объясните, почему переход недоступен.
 
-:::example {id="components/link/disabled" label="Доступная и недоступная ссылка"}
+:::example {id="components/link/disabled" label="Недоступна"}
 :::
 
 ### Фокус

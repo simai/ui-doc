@@ -19,7 +19,7 @@ JavaScript.
 
 ## Пример
 
-:::example {id="smart-components/tree/overview" label="Результат"}
+:::example {id="smart-components/tree/overview" label="Результат" preview=sandbox log="sf-tree-open sf-tree-select sf-tree-toggle sf-tree-move sf-tree-attach sf-tree-window" log_console=true log_open=false}
 :::
 
 ## Разметка
