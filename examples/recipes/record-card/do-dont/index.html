@@ -1,0 +1,35 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 p-2 radius-surface border border-outline-variant">
+        <sf-list-description label="Так: пустое значение" empty-text="Не указан">
+          <script type="application/json" data-sf-settings>{"items": [{"label": "Тип", "value": "Магазин"}, {"label": "Ответственный", "value": ""}]}</script>
+        </sf-list-description>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — пустое значение словами: «Не указан»</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 p-2 radius-surface border border-outline-variant">
+        <sf-list-description label="Не так: пустое значение">
+          <script type="application/json" data-sf-settings>{"items": [{"label": "Тип", "value": "Магазин"}, {"label": "Ответственный", "value": ""}]}</script>
+        </sf-list-description>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — прочерк: не понять, пусто или не загрузилось</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 p-2 radius-surface border border-outline-variant">
+        <sf-list-description label="Так: сведения">
+          <script type="application/json" data-sf-settings>{"items": [{"label": "Адрес", "value": "nord-wind.ru", "href": "#site"}, {"label": "Сертификат", "value": "Действует до 14 декабря", "status": "success"}]}</script>
+        </sf-list-description>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Так</b> — сведения текстом, править — по «Изменить»</figcaption>
+    </figure>
+    <figure class="m-0 flex flex-col gap-1">
+      <div class="flex-1 flex flex-col gap-2 p-2 radius-surface border border-outline-variant">
+        <sf-input label="Адрес" value="nord-wind.ru" readonly></sf-input>
+        <sf-input label="Сертификат" value="Действует до 14 декабря" readonly></sf-input>
+      </div>
+      <figcaption class="text-1/2 color-on-surface-variant"><b class="color-on-surface">Не так</b> — поля только для чтения вместо сведений</figcaption>
+    </figure>
+  </div>
+</div>
