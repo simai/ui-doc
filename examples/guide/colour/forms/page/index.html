@@ -1,12 +1,21 @@
-<form class="flex flex-col gap-3 max-w-h0" aria-labelledby="form-page-title" onsubmit="return false">
-  <h3 id="form-page-title" class="m-0 text-2 weight-6">Новый проект</h3>
-  <div class="flex flex-col gap-1">
-    <sf-input name="title" label="Название" required default-value="Каталог «Северный ветер»"></sf-input>
-    <div class="w-f6"><sf-input name="code" label="Код" default-value="nord-wind" hint="Латиница и дефис, попадёт в адрес"></sf-input></div>
-    <sf-input-textarea name="about" label="Описание" rows="3" hint="Две-три фразы для участников проекта"></sf-input-textarea>
+<div class="flex flex-col gap-2 max-w-h0">
+  <div class="flex flex-col gap-1/4">
+    <a href="#projects" class="text-1/2 color-on-surface-variant">Проекты</a>
+    <h3 id="opening-title" class="m-0 text-3 weight-6">Новый проект</h3>
   </div>
-  <div class="flex flex-wrap gap-2">
-    <sf-button native-type="submit" text="Создать"></sf-button>
-    <sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена"></sf-button>
-  </div>
-</form>
+  <form class="flex flex-col gap-3" aria-labelledby="opening-title" onsubmit="return false">
+    <div class="flex flex-col gap-1">
+      <sf-input name="title" label="Название" required default-value="Каталог «Северный ветер»"></sf-input>
+      <div class="w-f6"><sf-input name="code" label="Код" default-value="nord-wind" hint="Латиница и дефис, попадёт в адрес"></sf-input></div>
+      <fieldset class="border-0 p-0 m-0 flex flex-col gap-1/2">
+        <legend class="p-0 m-bottom-1/2 text-1/2 color-on-surface-variant">Кто видит проект</legend>
+        <sf-radio name="opening-access" value="team" label="Только участники" checked></sf-radio>
+        <sf-radio name="opening-access" value="all" label="Все в компании"></sf-radio>
+      </fieldset>
+    </div>
+    <div class="flex flex-wrap gap-1">
+      <sf-button native-type="submit" text="Создать"></sf-button>
+      <sf-button native-type="reset" appearance="ghost" scheme="on-surface" text="Отмена"></sf-button>
+    </div>
+  </form>
+</div>
