@@ -183,7 +183,7 @@ Framework не использует, не проходит контракт `alp
 <div class="sf-doc-status-grid">
   <span class="sf-doc-status-head">Роль</span>
   <span class="sf-doc-status-head">Оттенок</span>
-  <span class="sf-doc-status-head">Цвет роли, тона 40 и 80 оттенка, подложка</span>
+  <span class="sf-doc-status-head">Роль, тона 40 и 80, подложка</span>
 
   <code>error</code>
   <code>red</code>
@@ -216,6 +216,11 @@ Framework не использует, не проходит контракт `alp
   color: var(--sf-on-surface-variant);
 }
 
+.sf-doc-status-note {
+  display: block;
+  max-inline-size: var(--sf-e4);
+}
+
 .sf-doc-status-tones {
   display: flex;
   flex-wrap: wrap;
@@ -237,7 +242,7 @@ Framework не использует, не проходит контракт `alp
 ```
 :::
 
-Первый образец в строке — сама роль, второй и третий — тоны 40 и 80 оттенка:
+Первый образец в строке — сама роль, второй и третий — тона 40 и 80 оттенка:
 в светлой теме роль совпадает со вторым, в тёмной — с третьим. Информация
 сейчас берёт `blue`; в следующем выпуске Framework она переходит на `sky`.
 
