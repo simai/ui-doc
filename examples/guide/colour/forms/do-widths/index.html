@@ -1,0 +1,24 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-2">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — в строке части одного ответа, ширина по ответу</span></figcaption>
+      <div class="flex-1 p-2 flex flex-col gap-1">
+        <div class="flex flex-wrap gap-1">
+          <div class="flex-auto w-e8"><sf-input name="widths-right-city" label="Город" default-value="Казань"></sf-input></div>
+          <div class="w-e6"><sf-input name="widths-right-index" label="Индекс" inputmode="numeric" default-value="420111"></sf-input></div>
+        </div>
+        <div class="w-f6 max-w-full"><sf-input name="widths-right-phone" label="Телефон" input-type="tel" default-value="+7 900 123-45-67"></sf-input></div>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — в строке разные вопросы, всё одной ширины</span></figcaption>
+      <div class="flex-1 p-2 flex flex-col gap-1">
+        <div class="grid grid-col-1 cq-sm:grid-col-2 gap-1">
+          <sf-input name="widths-wrong-city" label="Город" default-value="Казань"></sf-input>
+          <sf-input name="widths-wrong-phone" label="Телефон" input-type="tel" default-value="+7 900 123-45-67"></sf-input>
+        </div>
+        <sf-input name="widths-wrong-index" label="Индекс" inputmode="numeric" default-value="420111"></sf-input>
+      </div>
+    </figure>
+  </div>
+</div>

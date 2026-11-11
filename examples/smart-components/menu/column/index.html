@@ -37,3 +37,14 @@
     {"id": "contacts", "label": "Контакты", "href": "#contacts"}
   ]'></sf-menu>
 </div>
+<script>
+(() => {
+  // The example behaves like a site: a press moves the current page.
+  const root = document.currentScript.previousElementSibling;
+  const menus = root.matches('sf-menu') ? [root] : root.querySelectorAll('sf-menu');
+  menus.forEach((menu) => menu.addEventListener('sf-menu-navigate', (event) => {
+    event.preventDefault();
+    menu.setAttribute('current', event.detail.id);
+  }));
+})();
+</script>

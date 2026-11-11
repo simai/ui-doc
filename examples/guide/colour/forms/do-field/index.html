@@ -1,0 +1,18 @@
+<div class="query-container">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-2">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — в форме все поля с рамкой</span></figcaption>
+      <div class="flex-1 p-2 flex flex-col gap-1">
+        <sf-input name="field-right-name" label="Имя" default-value="Анна"></sf-input>
+        <sf-input name="field-right-mail" label="Почта" input-type="email" default-value="anna@nord-wind.ru"></sf-input>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — в одной форме поле с рамкой и залитое</span></figcaption>
+      <div class="flex-1 p-2 flex flex-col gap-1">
+        <sf-input name="field-wrong-name" label="Имя" default-value="Анна"></sf-input>
+        <sf-input appearance="filled" name="field-wrong-mail" label="Почта" input-type="email" default-value="anna@nord-wind.ru"></sf-input>
+      </div>
+    </figure>
+  </div>
+</div>
