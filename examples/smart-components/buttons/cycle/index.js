@@ -1,5 +1,6 @@
 // A cycle button steps through its values on every press and says the new
-// one in change; theme-cycle does the same over the page's theme.
+// one in change. The speed button shows each value as its text beside the
+// icon; the sort button shows each value as its own icon.
 const initialize = async () => {
   await customElements.whenDefined('sf-button');
   if (document.body.dataset.exampleReady === 'true') return;

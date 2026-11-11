@@ -322,21 +322,29 @@ bold.addEventListener('sf-button-press', () => {
 Одна кнопка перебирает несколько значений: каждое нажатие ставит следующее, за
 последним снова идёт первое. Подходит для скорости воспроизведения, порядка
 сортировки, темы. Нажмите кнопки в примере: журнал покажет событие `change`.
+У скорости значение — подпись рядом со значком, у сортировки — свой значок
+у каждого значения.
 
-:::example {id="smart-components/buttons/cycle" label="Кнопки-циклы" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/buttons/cycle" label="Кнопки-циклы: скорость и сортировка" preview=sandbox log_console=true log_open=false}
 :::
 
-Тему примеров задаёт сам сайт документации, поэтому кнопка темы в примере
-тему не меняет и `change` не присылает. На вашей странице каждое нажатие
-ставит следующую тему.
+Кнопка темы меняет тему страницы. У этого примера своя тема, поэтому нажатие
+меняет тему только внутри него.
+
+:::example {id="smart-components/buttons/cycle-theme" label="Кнопка темы" theme_switch=true log_console=true log_open=false}
+:::
 
 `cycle` — список значений `{value, label, icon, pressed?}`, `value` — текущее.
 Подпись и значок говорят текущее значение, подсказка — текущее и следующее.
+У значения со своим `icon` подпись остаётся в имени кнопки, а видна только
+иконка, поэтому у разных значений должны быть разные значки. Без `icon`
+подпись значения видна текстом; `icon-start` кнопки ставит рядом общий
+значок, а `aria-label` — начало имени: «Скорость: 1,5×».
 `pressed: true` рисует кнопку нажатой, пока стоит это значение. После нажатия
 приходит `change` с `{previous, value, item}`.
 
 ```html
-<sf-button value="1" cycle='[{"value":"1","label":"Скорость: 1×","icon":"speed"},{"value":"1.5","label":"Скорость: 1,5×","icon":"speed","pressed":true}]'></sf-button>
+<sf-button icon-start="speed" aria-label="Скорость" value="1" cycle='[{"value":"1","label":"1×"},{"value":"1.5","label":"1,5×","pressed":true}]'></sf-button>
 <sf-button theme-cycle></sf-button>
 ```
 
