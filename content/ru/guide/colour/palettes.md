@@ -18,7 +18,7 @@ description: "Цветовые примитивы — это конкретны�
 |:---|:---|
 | Нейтральная | `neutral` |
 | Акцентные | `primary`, `secondary`, `tertiary` |
-| Статусные | `info`, `success`, `warning`, `error` |
+| Статусные | `info`, `success`, `warning`, `error` — имена оттенков [статической палитры](#статусы-оттенки-статической-палитры), а не свои цвета |
 
 Отдельно стоят три базовых цвета без тонов: `--sf-white`, `--sf-black` и
 `--sf-transparent`.
@@ -77,9 +77,10 @@ description: "Цветовые примитивы — это конкретны�
 означает одинаковую воспринимаемую светлоту во всех палитрах. Поэтому `--sf-primary-40` и `--sf-error-40` одинаково светлы, и
 пара «тон 40 на белом» даёт сопоставимый контраст в любой палитре.
 
-Палитра `info` — своя палитра цвета `#005bbe`, как `error`, `warning` и
-`success`: она статусная и за фирменным цветом не идёт. Поэтому при красном
-фирменном цвете «информация» остаётся синей и не читается как опасность.
+Статусные палитры — не отдельные цвета: каждая из них — другое имя оттенка
+[статической палитры](#статусы-оттенки-статической-палитры), поэтому за
+фирменным цветом они не идут. При красном фирменном цвете «информация» не
+становится красной и не читается как опасность.
 
 Значения примитивов выбранного выпуска читаются в поставке, в
 `distr/core/css/core.css`. Справочник [«Все переменные»](/ru/guide/colour/all-tokens/)
@@ -116,8 +117,8 @@ Framework не использует, не проходит контракт `alp
 `yellow`, `lime`, `green`, `teal`, `cyan`, `sky`, `blue`, `indigo`, `violet`,
 `purple`, `pink`, `brown` и `gray`. У каждого те же шестнадцать тонов и
 полупрозрачные ступени: `--sf-green-50`, `--sf-green-50--alfa-12`. Смена
-фирменного цвета их не двигает. Статусы — четыре из них: ошибка — `red`,
-предупреждение — `amber`, успех — `green`, информация — `blue`.
+фирменного цвета их не двигает. Статусы своих цветов не имеют: каждый берёт
+один из этих оттенков (ниже, «Статусы — оттенки статической палитры»).
 
 :::example {label="Оттенки"}
 ```html
@@ -166,6 +167,79 @@ Framework не использует, не проходит контракт `alp
 }
 ```
 :::
+
+### Статусы — оттенки статической палитры
+
+Роль статуса (`--sf-error`, `--sf-warning`, `--sf-success`, `--sf-info` и их
+`-container`, `on-…`) — имя оттенка статической палитры: её примитивы
+`--sf-error-40` и другие ссылаются на тоны оттенка (`var(--sf-red-40)`). Цвет
+и подложку статус берёт из тех же тонов, что и акцент: текст и сплошная
+заливка — тон 40 в светлой теме и 80 в тёмной, подложка `-container` — тон 50
+при 12 % в светлой и при 24 % в тёмной. В строке ниже слева — роль, справа —
+тоны её оттенка: они совпадают. Переключите тему.
+
+:::example {label="Статусы и их оттенки"}
+```html
+<div class="sf-doc-status-grid">
+  <span class="sf-doc-status-head">Роль</span>
+  <span class="sf-doc-status-head">Оттенок</span>
+  <span class="sf-doc-status-head">Цвет роли, тона 40 и 80 оттенка, подложка</span>
+
+  <code>error</code>
+  <code>red</code>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-error)" title="--sf-error"></span><span class="sf-doc-status-swatch" style="background: var(--sf-red-40)" title="--sf-red-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-red-80)" title="--sf-red-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-error-container); color: var(--sf-on-error-container)">Ошибка</span></span>
+
+  <code>warning</code>
+  <code>amber</code>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-warning)" title="--sf-warning"></span><span class="sf-doc-status-swatch" style="background: var(--sf-amber-40)" title="--sf-amber-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-amber-80)" title="--sf-amber-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-warning-container); color: var(--sf-on-warning-container)">Внимание</span></span>
+
+  <code>success</code>
+  <code>green</code>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-success)" title="--sf-success"></span><span class="sf-doc-status-swatch" style="background: var(--sf-green-40)" title="--sf-green-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-green-80)" title="--sf-green-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-success-container); color: var(--sf-on-success-container)">Успех</span></span>
+
+  <code>info</code>
+  <span><code>blue</code><br><span class="sf-doc-status-note"><code>sky</code> — в следующем выпуске</span></span>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-info)" title="--sf-info"></span><span class="sf-doc-status-swatch" style="background: var(--sf-blue-40)" title="--sf-blue-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-blue-80)" title="--sf-blue-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-info-container); color: var(--sf-on-info-container)">Информация</span></span>
+</div>
+```
+```css
+.sf-doc-status-grid {
+  display: grid;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
+  gap: var(--sf-space-1\/2) var(--sf-space-1);
+  align-items: center;
+}
+
+.sf-doc-status-head,
+.sf-doc-status-note {
+  font-size: var(--sf-text--size-1\/2);
+  color: var(--sf-on-surface-variant);
+}
+
+.sf-doc-status-tones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sf-space-1\/4);
+}
+
+.sf-doc-status-swatch {
+  inline-size: var(--sf-space-3);
+  block-size: var(--sf-space-3);
+  border-radius: var(--sf-radius--ui);
+}
+
+.sf-doc-status-chip {
+  margin-inline-start: var(--sf-space-1\/2);
+  padding: var(--sf-space-1\/4) var(--sf-space-1);
+  border-radius: var(--sf-radius--ui);
+}
+```
+:::
+
+Первый образец в строке — сама роль, второй и третий — тоны 40 и 80 оттенка:
+в светлой теме роль совпадает со вторым, в тёмной — с третьим. Информация
+сейчас берёт `blue`; в следующем выпуске Framework она переходит на `sky`.
 
 Примитивы в стилях интерфейса не пишут. Компоненту, которому нужен свой цвет,
 дают имя оттенка: класс `sf-hue-{имя}` (любой статический оттенок, а также
@@ -345,9 +419,10 @@ Framework не использует, не проходит контракт `alp
 | `success` | 145 | 65 |
 | `info` | 265.1 | 58.6 |
 
-Статусные палитры — `error`, `warning`, `success` и `info` — заданы числами:
+Статусные палитры — `error`, `warning`, `success` и `info` — оттенки
+статической палитры (`red`, `amber`, `green`, `blue`), их числа постоянны:
 выбранный цвет двигает только `primary`, `secondary`, `tertiary` и `neutral`.
-Тон и насыщенность `info` — собственные значения цвета `#005bbe` в HCT: тон
+Тон и насыщенность `blue`, а с ним `info`, — собственные значения цвета `#005bbe` в HCT: тон
 265.1 и насыщенность 58.5, округлённая вверх до 58.6, при которой тон 40
 палитры — ровно `#005bbe`. Поэтому «информация» остаётся синей при любом
 фирменном цвете. Это не то же, что прочтение цвета генератором (см. ниже): у
@@ -422,9 +497,9 @@ HCT, например классом `TonalPalette` из пакета
   полупрозрачные ступени — иначе часть ролей останется в исходном цвете;
 - рекомендуется строить палитру целиком по модели HCT, а не подбирать тона по
   одному;
-- палитры независимы. `info` — своя палитра с собственными примитивами
-  (`--sf-info-*`), а не производная от `primary`: смена `primary` её не
-  меняет. То же верно для `secondary` и `tertiary`. Если информационный цвет
+- палитры независимы. `info` — оттенок статической палитры со своими
+  примитивами (`--sf-info-*` ссылаются на тоны оттенка), а не производная от
+  `primary`: смена `primary` её не меняет. То же верно для `secondary` и `tertiary`. Если информационный цвет
   должен следовать фирменному, переопределите и палитру `info`.
 
 ## Смотрите также
