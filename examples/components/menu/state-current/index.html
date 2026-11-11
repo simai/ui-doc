@@ -10,6 +10,22 @@
     <code class="text-1/2 color-on-surface-variant">sf-menu--documentation-tree, aria-current="page"</code>
   </div>
   <div class="flex flex-col gap-1">
+    <nav aria-label="Путь к текущей странице в колонке с рамкой">
+      <ul class="sf-menu sf-menu--navigation sf-menu--bordered">
+        <li class="sf-menu-item"><a class="sf-menu-element" href="#c-start">Главная</a></li>
+        <li class="sf-menu-item">
+          Каталог
+          <ul class="sf-menu">
+            <li class="sf-menu-item"><a class="sf-menu-element" href="#c-pumps" aria-current="page">Насосы</a></li>
+            <li class="sf-menu-item"><a class="sf-menu-element" href="#c-valves">Арматура</a></li>
+          </ul>
+        </li>
+        <li class="sf-menu-item"><a class="sf-menu-element" href="#c-contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <code class="text-1/2 color-on-surface-variant">sf-menu--navigation sf-menu--bordered</code>
+  </div>
+  <div class="flex flex-col gap-1">
     <nav aria-label="Текущий пункт в вертикальном меню">
       <ul class="sf-menu">
         <li class="sf-menu-item"><a class="sf-menu-element" href="#c-home">Главная</a></li>
