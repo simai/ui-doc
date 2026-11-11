@@ -43,7 +43,7 @@ SIMAI Framework; все смарт-компоненты переведены в 
 |:---|:---|:---|
 | События с двоеточием (`sf-menu:navigate`, `modal:after-close`) | `<тег>-<глагол>` и `<тег>-<глагол>ed`; старые имена — псевдонимы с датой | [Имена и общие слова](/ru/guide/smart-components/names/#имена-событий) |
 | Имя события в манифесте как DOM-имя (`events.sf-modal-closed`) | событие объявлено глаголом (`closed`), DOM-имя выводит построение | [На странице](/ru/guide/smart-components/page/#имена-событий) |
-| Суффикс `-intent` (`sf-table-query-intent`) | глагол словаря: `sf-table-query`, `sf-table-apply` | [Имена и общие слова](/ru/guide/smart-components/names/#свой-глагол-компонента) |
+| Суффикс `-intent` (`sf-table-query-intent`) | глагол словаря: `sf-view-table-query`, `sf-view-table-apply` | [Имена и общие слова](/ru/guide/smart-components/names/#свой-глагол-компонента) |
 | Соглашение `change` | `change` сообщает только об изменении человеком; изменение снаружи слушают через `data.<ключ>` | [На странице](/ru/guide/smart-components/page/#событие-change) |
 | `modal:before-close` и подобные «перед» | отклоняемая просьба `<тег>-close {reason, unsaved}` | [Окна и панели](/ru/guide/smart-components/layers/#закрытие-с-причиной) |
 | Этапы `sf-connected`, `sf-before-render`, `sf-disconnected` | базовые события `sf-props-change`, `sf-updated`, `sf-after-render`, `sf-component-error`; свои копии этапов не заводятся | [Модель компонента](/ru/guide/smart-components/model/#базовый-интерфейс) |
