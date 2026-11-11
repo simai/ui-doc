@@ -5,7 +5,7 @@ description: "Заголовок с действиями, путь, вкладк
 
 # Панель свойств письма
 
-:badge[sf-mail-inspector]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-mail-inspector]{variant=tonal scheme=primary size=1/2} :badge[1.0.7]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-mail-inspector>` — правая панель редактора писем: заголовок с действиями,
 путь, вкладки, разделы и все виды полей редактора. Это форма, нарисованная из
@@ -180,7 +180,7 @@ panel.sections = [
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2bd5a3ab478a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -188,7 +188,7 @@ panel.sections = [
 |:---|:---|
 | Тег | `<sf-mail-inspector>` |
 | Назначение | Правая панель SIMAI Email Editor как форма, нарисованная из данных: заголовок с действиями, путь уровней, вкладки, раскрывающиеся разделы и все поля редактора. Приложение передаёт форму на языке человека, включая значение, ошибку, подсказку и заполнитель каждого поля; элемент сообщает, что сделал человек, и ничего не меняет. Набранный текст, который приложение не приняло, переживает перерисовку, а перерисовка никогда не уводит фокус и курсор из поля, где человек печатает. |
-| Контракт | `smart.mail-inspector`, версия `1.0.5` |
+| Контракт | `smart.mail-inspector`, версия `1.0.7` |
 | Поставка | пакет `pro` (`SF_BOOT_CONFIG.packages.pro`) |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
@@ -260,5 +260,5 @@ panel.sections = [
 
 ### Источник
 
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-inspector`
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-inspector`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`

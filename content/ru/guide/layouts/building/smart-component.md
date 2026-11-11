@@ -52,7 +52,7 @@ description: "Смарт-компоненты попадают в макет к�
 в поставке `ui`, `src/smart/<папка>/smart.manifest.json` в пакете).
 
 Настройки, которые узел `smart.button` принимает в документе: `template`,
-`size`, `appearance`, `scheme`, `status`, `text-position`, `text`, `segment`,
+`size`, `height`, `appearance`, `scheme`, `status`, `text-position`, `text`, `segment`,
 `icon`, `icon-start`, `icon-end`, `icon-position`, `spacing`, `radius`,
 `loading`, `disabled`, `native-type`, `form`, `name`, `value`, `href`,
 `target`, `rel`, `shortcut`, `shortcut-listen`, `expanded`, `pressed`,

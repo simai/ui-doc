@@ -8,7 +8,7 @@ const initialize = async () => {
   document.body.dataset.exampleReady = 'true';
   const settings = document.querySelector('#settings-api');
   const values = document.querySelector('#settings-api-values');
-  const print = () => { values.textContent = JSON.stringify(settings.values); };
+  const print = () => { values.textContent = JSON.stringify(settings.values).replace(/,"/g, ', "'); };
   settings.addEventListener('sf-settings-changed', print);
   print();
   const calls = {

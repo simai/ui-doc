@@ -1,10 +1,12 @@
 ---
-title: "Emoji"
-description: "Выводит emoji в размер строки текста цветным системным шрифтом."
+title: "Эмодзи"
+description: "Выводит эмодзи в размер строки текста цветным системным шрифтом."
 profile: reference
 ---
 
-# Emoji
+# Эмодзи
+
+:badge[sf-emoji]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
 
 Компонент выводит emoji цветным системным шрифтом и согласует его размер с
 типографической шкалой: символ стоит в строке текста ровно и не сдвигает
@@ -44,7 +46,7 @@ profile: reference
 - Декоративный символ скрывайте: `aria-hidden="true"`.
 - Не сообщайте статус, ошибку или действие только emoji: рядом нужен текст.
 
-:::example {id="components/emoji/semantics" label="Смысловой и декоративный emoji"}
+:::example {id="components/emoji/semantics" label="Доступность"}
 :::
 
 ## JavaScript

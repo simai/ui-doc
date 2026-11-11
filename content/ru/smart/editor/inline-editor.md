@@ -5,7 +5,7 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
-:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.6.2]{variant=outline scheme=on-surface size=1/2}
 
 Inline-редактор даёт править текст заголовков и абзацев (`content.heading` и
 `content.paragraph`) прямо на странице. Доступно то, что есть в модели
@@ -15,7 +15,7 @@ content: полужирный, курсив, код, ссылки и встро�
 
 ## Пример
 
-:::example {id="smart-components/inline-editor/overview" label="Правка условий доставки"}
+:::example {id="smart-components/inline-editor/overview" label="Правка условий"}
 :::
 
 ## Разметка
@@ -145,13 +145,13 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.6.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.6.2` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Esc`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-editor-inline` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

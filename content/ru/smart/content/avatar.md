@@ -5,7 +5,7 @@ description: "Показывает человека или организаци�
 
 # Аватар
 
-:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Аватар показывает одного человека или одну организацию: фотографию, инициалы
 или значок-заполнитель, при необходимости — состояние в сети или отметку
@@ -39,16 +39,19 @@ JavaScript.
 
 ### Содержимое
 
+`image-url`, `text`, `heading` • [справочник](#атрибуты)
+
 Содержимое выбирается по порядку: изображение из `image-url`, затем текст из
-`text`, затем инициалы, которые компонент берёт из `heading` (прежнее имя —
-`title`) или из явно заданного `aria-label`. Если нет ничего из этого,
+`text`, затем инициалы, которые компонент берёт из `heading` или из явно заданного `aria-label`. Если нет ничего из этого,
 показывается значок человека. Изображение декоративно: имя человека
 передаёт `aria-label`, а не альтернативный текст картинки.
 
-:::example {id="smart-components/avatar/content" label="Изображение, текст, инициалы из имени и значок"}
+:::example {id="smart-components/avatar/content" label="Содержимое"}
 :::
 
 ### Размер
+
+`size` • по умолчанию `1` • [справочник](#атрибуты)
 
 `size` выбирает ступень от `1/4` до `3` (по умолчанию `1`).
 
@@ -57,14 +60,18 @@ JavaScript.
 
 ### Размер по строке текста
 
+`line` • [справочник](#атрибуты)
+
 Рядом с подписью в строке или в ячейке таблицы задайте `line` со значением
 `1/2`, `1` или `2`: аватар займёт строку текста этого размера формы, и
 строка не станет выше.
 
-:::example {id="smart-components/avatar/line" label="Аватар в строках текста трёх размеров"}
+:::example {id="smart-components/avatar/line" label="Размер по строке текста"}
 :::
 
 ### Форма
+
+`shape` • по умолчанию `circle` • [справочник](#атрибуты)
 
 `shape="square"` делает аватар квадратным — для организаций и проектов; по
 умолчанию он круглый (`circle`).
@@ -73,6 +80,8 @@ JavaScript.
 :::
 
 ### Статус
+
+`status`, `aria-label` • [справочник](#атрибуты)
 
 `status` добавляет индикатор в углу аватара: `online` и `offline` — точка
 присутствия, `company` и `verified` — значок организации и проверенного
@@ -84,6 +93,8 @@ JavaScript.
 :::
 
 ### Счётчик и точка
+
+`badge-count`, `size`, `badge-dot` • [справочник](#атрибуты)
 
 - `badge-count` — счётчик в верхнем конце аватара: целое число больше `0`;
   `0` или пусто прячет бейдж. Размер бейджа следует `size`: на `1/4`, `1/3` и
@@ -99,19 +110,23 @@ JavaScript.
 бейджа описано в разделе
 [Бейдж на якоре](/ru/components/feedback/badges/#бейдж-на-якоре).
 
-:::example {id="smart-components/avatar/badge" label="badge-count на пяти размерах, порог, точка со статусом и свои слова"}
+:::example {id="smart-components/avatar/badge" label="Счётчик и точка"}
 :::
 
 ### Подпись
+
+`heading`, `description`, `no-wrap` • [справочник](#атрибуты)
 
 `template="label"` ставит подпись рядом с аватаром: `heading` — имя,
 `description` — вторая строка. `no-wrap` обрезает обе строки многоточием
 вместо переноса.
 
-:::example {id="smart-components/avatar/label" label="Аватар с подписью и с обрезкой строк"}
+:::example {id="smart-components/avatar/label" label="Подпись"}
 :::
 
 ### Карточка
+
+`heading`, `meta`, `description` • [справочник](#атрибуты)
 
 `template="card"` — карточка: изображение, `heading` и строка `meta` (или
 `description`) со значком `meta-icon`. `card-variant` задаёт пропорции
@@ -122,6 +137,8 @@ JavaScript.
 :::
 
 ### Цвет инициалов
+
+`hue`, `heading`, `aria-label` • [справочник](#атрибуты)
 
 Аватар с инициалами по умолчанию серый. `hue` красит его в оттенок
 [статической палитры](/ru/guide/colour/palettes/#статическая-палитра):
@@ -139,12 +156,14 @@ JavaScript.
 оттенка. В разметке без компонента классы такие:
 `sf-avatar sf-avatar--text sf-hue-teal`.
 
-:::example {id="smart-components/avatar/tones" label="Восемь цветов по именам, заданный цвет и серый по умолчанию"}
+:::example {id="smart-components/avatar/tones" label="Цвет инициалов"}
 :::
 
 ## Состояния
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` выключает кнопку аватара в шаблонах `default` и `label`.
 
@@ -179,7 +198,7 @@ avatar.addEventListener('click', () => openProfile('anna'));
 новом до открытия меню. Доступное имя — имя и назначение («Анна Белова, меню
 пользователя»), `aria-haspopup="menu"` говорит, что откроется меню.
 
-:::example {id="smart-components/avatar/user-menu" label="Аватар открывает меню"}
+:::example {id="smart-components/avatar/user-menu" label="Аватар"}
 :::
 
 ### Гость и вход
@@ -252,13 +271,13 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 | | |
 |:---|:---|
-| Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/avatar` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-avatar` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/avatar` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-avatar` |
 
 ## См. также
 

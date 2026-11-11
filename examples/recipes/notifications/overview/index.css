@@ -1,0 +1,5 @@
+/* The panel opens under the bell inside this frame and takes a share of the
+   frame height: room for it below the bar. */
+#notify-root {
+  min-block-size: var(--sf-h2);
+}

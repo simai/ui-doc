@@ -5,7 +5,7 @@ description: "Показывает файл для скачивания с им�
 
 # Скачивание файла
 
-:badge[sf-file-download]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-download]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Скачивание файла показывает файл, который можно скачать: знак скачивания,
 имя, тип и размер. С адресом это обычная ссылка на файл, без адреса — кнопка, по которой
@@ -20,7 +20,7 @@ description: "Показывает файл для скачивания с им�
 сверки.csv» приложение собирает по нажатию и отдаёт браузеру, когда файл
 готов. Журнал под примером показывает события.
 
-:::example {id="smart-components/download-file/overview" label="Вложения к заказу" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/download-file/overview" label="Вложения" preview=sandbox log_console=true log_open=false}
 :::
 
 Готовый файл — ссылка с адресом, именем и размером:
@@ -54,10 +54,9 @@ description: "Показывает файл для скачивания с им�
 Ссылка на файл скачивает его в той же вкладке под именем из `file-name`.
 `target="_blank"` вместо этого открывает файл для просмотра в новой вкладке:
 у ссылки появляется знак новой вкладки, а экранный диктор слышит «откроется в
-новой вкладке». Атрибут `download` оставлен для совместимости и ничего не
-меняет.
+новой вкладке».
 
-:::example {id="smart-components/download-file/link" label="Скачать и открыть" preview=sandbox}
+:::example {id="smart-components/download-file/link" label="Ссылки" preview=sandbox}
 :::
 
 `file-name` — видимое имя файла; задавайте его всегда. `file-type` — тип
@@ -73,10 +72,11 @@ description: "Показывает файл для скачивания с им�
 Без `href` нажатие отправляет событие, и приложение собирает файл: отчёт,
 выгрузку, архив. На это время оно ставит `state="preparing"`: на месте знака
 крутится индикатор, рядом — «Готовим файл…», повторное нажатие не
-срабатывает. Когда файл готов, приложение задаёт `href` и возвращает
-`state="ready"`: файл, за которым пришёл человек, скачивается один раз.
+срабатывает. Когда файл готов, приложение задаёт его размер в `file-size`,
+адрес в `href` и возвращает `state="ready"`: файл, за которым пришёл человек,
+скачивается один раз.
 
-:::example {id="smart-components/download-file/prepare" label="Выгрузка по запросу" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/download-file/prepare" label="Выгрузка" preview=sandbox log_console=true log_open=false}
 :::
 
 ```js
@@ -85,7 +85,9 @@ file.addEventListener('sf-file-download-download', async (event) => {
   event.preventDefault();
   file.setAttribute('state', 'preparing');
   try {
-    file.setAttribute('href', await buildReport());
+    const {url, size} = await buildReport();
+    file.setAttribute('file-size', size);
+    file.setAttribute('href', url);
     file.setAttribute('state', 'ready');
   } catch {
     file.setAttribute('state', 'error');
@@ -97,7 +99,6 @@ file.addEventListener('sf-file-download-download', async (event) => {
 |:---|:---|
 | `href` | адрес файла; у кнопки без адреса — пустая строка |
 | `fileName` | имя файла |
-| `download` | `true`, если задан `download` |
 
 ## Внешний вид
 
@@ -106,8 +107,9 @@ file.addEventListener('sf-file-download-download', async (event) => {
 `size` • по умолчанию `1` • [справочник](#атрибуты)
 
 Размер подгоняет элемент к тексту и кнопкам рядом: каждый размер одной
-высоты с кнопкой того же размера — 24, 32, 40, 48 и 56 px на широком
-экране. В примере рядом с файлом стоит кнопка той же ступени.
+высоты с кнопкой того же размера — 28, 32, 40, 48 и 56 px на широком
+экране. В примере рядом с каждым файлом стоит кнопка со значком той же
+ступени.
 
 :::example {id="smart-components/download-file/sizes" label="Размеры" preview=inline}
 :::
@@ -122,9 +124,6 @@ file.addEventListener('sf-file-download-download', async (event) => {
 :::example {id="smart-components/download-file/icons" label="Тип файла" preview=inline}
 :::
 
-Прежний способ — назвать тип значком в `icon` — до 2027-01-01 ещё рисуется,
-но занимает место знака скачивания; пишите тип в `file-type`.
-
 ## Состояния
 
 ### Подготовка и ошибка
@@ -137,7 +136,7 @@ file.addEventListener('sf-file-download-download', async (event) => {
 `sf-file-download-retry`, и приложение готовит файл снова. `error-text`
 добавляет к сообщению, что случилось и что делать.
 
-:::example {id="smart-components/download-file/states" label="Готов, готовится, ошибка" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/download-file/states" label="Состояния" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Недоступный
@@ -147,7 +146,7 @@ file.addEventListener('sf-file-download-download', async (event) => {
 Недоступный файл — кнопка без адреса, даже если `href` задан; событий он не
 отправляет.
 
-:::example {id="smart-components/download-file/state-disabled" label="Доступный и недоступный"}
+:::example {id="smart-components/download-file/state-disabled" label="Недоступный"}
 :::
 
 ## Доступность
@@ -222,13 +221,13 @@ file.addEventListener('sf-file-download-download', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ссылка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/file-download` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-file-download` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/file-download` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-file-download` |
 
 ## См. также
 

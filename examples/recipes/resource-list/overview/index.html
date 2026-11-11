@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-3" data-sf-density="compact">
+  <sf-header-page heading="Сайты" count="9">
+    <sf-breadcrumbs slot="path" aria-label="Путь к странице" items='[{"label":"Хостинг","href":"#hosting"},{"label":"Сайты"}]'></sf-breadcrumbs>
+    <sf-button slot="actions" appearance="outline" scheme="on-surface" icon-start="download" text="Экспорт"></sf-button>
+    <sf-button slot="actions" icon-start="add" text="Создать сайт"></sf-button>
+  </sf-header-page>
+  <div class="flex flex-col md:flex-row gap-2 md:items-cross-center">
+    <sf-input id="sites-search" root-class="flex-1 min-w-0" input-type="search" icon-start="search" placeholder="Название или домен" aria-label="Поиск по сайтам"></sf-input>
+    <sf-segmented id="sites-state" aria-label="Какие сайты показать" value="all" items='[{"value":"all","label":"Все","count":9},{"value":"problems","label":"С проблемами","count":4}]'></sf-segmented>
+  </div>
+  <sf-list id="sites" label="Сайты">
+    <sf-empty-state slot="empty" id="sites-empty" kind="nothing-found" size="1/2" heading-level="3" text="Измените запрос или покажите все сайты."></sf-empty-state>
+  </sf-list>
+</div>

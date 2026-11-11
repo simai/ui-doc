@@ -16,6 +16,14 @@ description: "Как интерфейс смарт-компонента выгл
 их по `window.sfPath`, который шаблон проекта задаёт один раз до подключения
 `core.js` — см. [Порядок подключения](/ru/guide/connection/project-setup/#порядок-подключения)
 и [Глобальные настройки](/ru/guide/connection/project-setup/#глобальные-настройки).
+В шапке страницы — три строки:
+
+```html
+<link rel="stylesheet" href="/assets/simai-framework/ui/distr/core/css/core.min.css">
+<script>window.sfPath = '/assets/simai-framework/ui/distr/';</script>
+<script src="/assets/simai-framework/ui/distr/core/js/core.min.js"></script>
+```
+
 После этого на странице достаточно тега:
 
 :::internal_preview {size="tall" title="Работающий пример"}
@@ -68,7 +76,7 @@ const button = document.querySelector('sf-button');
 ```html
 <sf-switch id="notify" label="Уведомления" name="notify"></sf-switch>
 
-<sf-modal id="confirm" label="Удалить запись?">…</sf-modal>
+<sf-modal id="confirm" heading="Удалить запись?">…</sf-modal>
 <button type="button" data-sf-action="confirm.open">Удалить</button>
 
 <script>
@@ -93,8 +101,8 @@ const button = document.querySelector('sf-button');
 
 | Вид | Шаблон | Пример |
 |:---|:---|:---|
-| Просьба | `<тег>-<глагол>` | `sf-property-view-close` |
-| Свершившийся факт | `<тег>-<глагол>ed` | `sf-property-view-saved` |
+| Просьба | `<тег>-<глагол>` | `sf-view-properties-close` |
+| Свершившийся факт | `<тег>-<глагол>ed` | `sf-view-properties-saved` |
 | Событие общей черты | `sf-<черта>-<глагол>` с `tag` в `detail` | `sf-field-reset` |
 | Обычное событие браузера | своё имя при `"carries": "native"` | `change`, `input` |
 | Событие компонента из пакета партнёра | `<тег>-<глагол>` с приставкой пакета | `acme-map-pick` |
@@ -161,8 +169,7 @@ editor.addEventListener('sf-modal-close', (event) => {
 
 Атрибут `data-sf-action="<id элемента>.<действие>"` на кнопке страницы
 запускает это действие без своего кода. Атрибут генерируется из списка
-`actions` компонента и заменяет `data-sf-modal-*` и `data-sf-drawer-*`, которые
-остаются псевдонимами.
+`actions` компонента.
 
 ```html
 <sf-drawer id="filters" label="Фильтры">…</sf-drawer>
@@ -200,5 +207,5 @@ editor.addEventListener('sf-modal-close', (event) => {
 
 - [Модель компонента](/ru/guide/smart-components/model/) — четыре части интерфейса.
 - [Загрузка и общая среда](/ru/guide/smart-components/runtime/) — порядок загрузки.
-- [Окна и панели](/ru/guide/smart-components/layers/) — причины закрытия и событие `sf-<тег>-close`.
+- [Окна и панели](/ru/guide/smart-components/layers/) — причины закрытия и событие `<тег>-close`.
 - [Имена и общие слова](/ru/guide/smart-components/names/) — глаголы и их содержимое.

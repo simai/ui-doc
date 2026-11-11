@@ -6,6 +6,8 @@ profile: reference
 
 # Уведомления
 
+:badge[sf-alert]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
+
 Уведомление выделяет важную информацию в потоке страницы: подсказку,
 предупреждение, ошибку или подтверждение результата. Для краткого сообщения
 поверх интерфейса берите [всплывающее сообщение](/ru/components/feedback/toast/).
@@ -32,6 +34,8 @@ profile: reference
 
 ### Статус
 
+`sf-alert--neutral`, `sf-alert--info`, `sf-alert--success` • [справочник](#классы)
+
 Статус задаёт цвет заливки, границы, текста и иконки:
 `sf-alert--neutral`, `sf-alert--info`, `sf-alert--success`,
 `sf-alert--warning`, `sf-alert--error` — общий словарь статусов Framework.
@@ -44,13 +48,15 @@ profile: reference
 
 ### Вид
 
+`sf-alert--default`, `sf-alert--outlined`, `sf-alert--flat` • [справочник](#классы)
+
 Вид задаёт, чем уведомление отделено от окружения: `sf-alert--default` —
 заливкой и границей, для самостоятельного заметного сообщения;
 `sf-alert--outlined` — только границей, спокойнее на фоне страницы;
 `sf-alert--flat` — только заливкой, внутри поверхности, границы которой задаёт
 окружающий контейнер. В одном сценарии держите один вид.
 
-:::example {id="components/alerts/appearance" label="Виды уведомления в каждом статусе"}
+:::example {id="components/alerts/appearance" label="Вид"}
 :::
 
 ### Состав
@@ -94,7 +100,7 @@ profile: reference
 сразу. `data-alert-action`, `data-alert-close` и класс `sf-alert--close` —
 другие имена тех же атрибутов.
 
-:::example {id="components/alerts/actions" label="Действие и закрытие"}
+:::example {id="components/alerts/actions" label="Действия" preview=sandbox log="sf-alert-action sf-alert-close" log_console=true log_open=false}
 :::
 
 Подписка на действие:
@@ -130,8 +136,8 @@ document.addEventListener('sf-alert-action', (event) => {
 | `--sf-alert-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-alert-radius` | Скругление углов. | `var(--sf-radius--surface)` |
 | `--sf-alert-padding-inline` | Отступ до и после содержимого по строчной оси. | `var(--sf-space-1)` |
-| `--sf-alert-padding-block` | Отступ над и под содержимым. | `var(--sf-space-1)` |
-| `--sf-alert-gap` | Промежуток между иконкой, текстом и кнопками. | `var(--sf-space-1)` |
+| `--sf-alert-padding-block` | Отступ над и под содержимым: первая строка стоит в рамке низкого элемента управления. | `var(--sf-space-1/2)` |
+| `--sf-alert-gap` | Промежуток между иконкой, текстом и кнопками. | `var(--sf-space-1/2)` |
 
 ```css
 .sf-alert {
@@ -148,11 +154,12 @@ document.addEventListener('sf-alert-action', (event) => {
 | `--sf-alert--background-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-alert--border-color` | не задана; задают модификаторы, например `.sf-alert.sf-alert--neutral.sf-alert--default`: `var(--sf-alert-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-alert--color` | `var(--sf-alert-color, var(--sf-on-surface))` | `color`, `--sf-alert-supporting-text--color`, `--sf-alert-text--color` |
+| `--sf-alert--lead` | `var(--sf-ui-1--space-y-tightness-low)` | `padding-top`, `padding-bottom`, `padding-block`, `margin-top`, `margin-block-start`, `margin-inline-end` |
 | `--sf-alert--opacity` | не задана; задают модификаторы, например `.sf-alert.closing`: `0` | `opacity` |
 | `--sf-alert-buttons--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `transparent` | `background-color` |
 | `--sf-alert-buttons--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-buttons`: `var(--sf-space-1/3)` | `gap` |
 | `--sf-alert-content--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `transparent` | `background-color` |
-| `--sf-alert-content--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `var(--sf-space-1/2)` | `gap` |
+| `--sf-alert-content--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-content`: `var(--sf-0)` | `gap` |
 | `--sf-alert-supporting-text--color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-alert--color)` | `color` |
 | `--sf-alert-supporting-text--font-family` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-alert-supporting-text--font-size` | не задана; задают модификаторы, например `.sf-alert .sf-alert-supporting-text`: `var(--sf-text-size-1)` | `font-size` |
@@ -164,7 +171,7 @@ document.addEventListener('sf-alert-action', (event) => {
 | `--sf-alert-text--font-weight` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-font-weight-medium)` | `font-weight` |
 | `--sf-alert-text--line-height` | не задана; задают модификаторы, например `.sf-alert .sf-alert-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-alert-wrap--background-color` | не задана; задают модификаторы, например `.sf-alert .sf-alert-wrap`: `transparent` | `background-color` |
-| `--sf-alert-wrap--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-wrap`: `var(--sf-space-1)` | `gap` |
+| `--sf-alert-wrap--gap` | не задана; задают модификаторы, например `.sf-alert .sf-alert-wrap`: `var(--sf-space-1/2)` | `gap` |
 
 ## См. также
 

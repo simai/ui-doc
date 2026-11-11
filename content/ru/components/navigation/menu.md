@@ -6,6 +6,8 @@ profile: reference
 
 # Меню
 
+:badge[sf-menu]{variant=tonal scheme=primary size=1/2} :badge[1.6.1]{variant=outline scheme=on-surface size=1/2}
+
 Меню ведёт по разделам сайта, раздела или личного кабинета и раскрывает
 группы вложенных разделов. Один компонент показывается вертикально в боковой
 панели, строкой в шапке или деревом документации. Для действий над
@@ -43,16 +45,20 @@ profile: reference
 
 ### Вид
 
+`sf-menu--horizontal`, `sf-menu--documentation-tree` • [справочник](#классы)
+
 Без модификатора меню вертикальное — для боковой панели, каталога, настроек.
 `sf-menu--horizontal` выстраивает первый уровень строкой — для основных
 разделов в шапке; ставьте его только корневому списку.
 `sf-menu--documentation-tree` — компактное дерево без рамок с отступом по
 уровню, для навигации по документации.
 
-:::example {id="components/menu/layouts" label="Вертикальное, горизонтальное и дерево документации"}
+:::example {id="components/menu/layouts" label="Вид"}
 :::
 
 ### Навигация в шапке
+
+`sf-menu--navigation`, `sf-menu--horizontal` • [справочник](#классы)
 
 `sf-menu--navigation` на корневом списке — разделы сайта, как их рисует
 шапка: строки без рамки и заливки, под указателем — лёгкая заливка
@@ -71,7 +77,10 @@ profile: reference
 ### Подменю горизонтального меню
 
 В горизонтальном меню подменю первого уровня открывается вниз, следующие —
-в сторону; внутри все подменю вертикальные. Подменю, которое не помещается у
+в сторону; внутри все подменю вертикальные. Стрелка первого уровня смотрит
+вниз (вверх, пока ветка открыта), а у более глубокой ветки всегда стоит ›:
+панель открывается в ту сторону, где есть место, и стрелка за ней не
+поворачивается. Подменю, которое не помещается у
 края экрана, сдвигается в свободную сторону. Открытие одного верхнего
 раздела закрывает соседний, щелчок вне меню закрывает открытую ветку.
 При письме справа налево направление раскрытия меняется само: оно задано
@@ -79,7 +88,7 @@ profile: reference
 строку: на узком экране показывайте те же пункты вертикальным меню в
 выдвижной панели.
 
-:::example {id="components/menu/horizontal" label="Горизонтальное меню с подменю"}
+:::example {id="components/menu/horizontal" label="Горизонтальное"}
 :::
 
 ### Уровни вложенности
@@ -96,10 +105,12 @@ profile: reference
 `icon` ставит иконку перед подписью пункта или ветки. `trailing-icon`
 заменяет стрелку ветки своей иконкой.
 
-:::example {id="components/menu/icons" label="Иконка пункта и своя иконка ветки"}
+:::example {id="components/menu/icons" label="Иконки"}
 :::
 
 ### Счётчик и компактное меню
+
+`sf-menu--compact` • [справочник](#классы)
 
 Счётчик строки — `.sf-badge` с `data-count` внутри `sf-menu-element-wrap`,
 после `sf-menu-element-text`. Он стоит в конце строки, показывает `99+` после
@@ -114,7 +125,7 @@ profile: reference
 [Меню администратора](/ru/pro/admin/admin-menu/) так же переносит
 счётчик пункта на его иконку.
 
-:::example {id="components/menu/compact" label="Счётчики в обычном и компактном меню"}
+:::example {id="components/menu/compact" label="Счётчики"}
 :::
 
 ### Группы разделов
@@ -136,8 +147,9 @@ profile: reference
 ```
 
 Пункты группы стоят без отступа, как строки первого уровня, а слова
-заголовка — на одной линии со словами строк. Заголовок мельче строки и
-приглушён; между группами — небольшой зазор. Если группу можно свернуть,
+заголовка — на одной линии со словами строк. В колонке заголовок высотой со
+строку, тем же размером и начертанием шрифта, но приглушённым цветом
+(`--sf-on-surface-variant`); между группами — небольшой зазор. Если группу можно свернуть,
 заголовок — кнопка `<button class="sf-menu-group-heading">` с
 `aria-expanded`: под указателем у неё лёгкая заливка, при фокусе — общее
 кольцо фокуса. В конце строки может стоять цветная точка состояния
@@ -149,12 +161,14 @@ profile: reference
 смарт-компонент [Меню](/ru/smart/navigation/menu/#группы-разделов), а эти
 классы дают им вид.
 
-:::example {id="smart-components/menu/groups" label="Группы разделов в смарт-меню" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/menu/groups" label="Группы" preview=sandbox log_console=true log_open=false}
 :::
 
 ## Состояния
 
 ### Текущий пункт
+
+`sf-menu--documentation-tree`, `sf-menu--navigation`, `sf-menu-element--holds-current` • [справочник](#классы)
 
 Ссылке текущей страницы добавьте `aria-current="page"`. Дерево документации
 `sf-menu--documentation-tree` и навигация `sf-menu--navigation` выделяют такой
@@ -162,18 +176,31 @@ profile: reference
 начертанием; вертикальное и горизонтальное меню без этих модификаторов его не
 выделяют, атрибут нужен экранному диктору.
 
-Где плашки нет, у начала строки стоит полоска `--sf-primary` 3 × 16: на
-закрытой ветке, в списке которой лежит текущая страница (её находят по
-разметке, а если списка в разметке нет — по классу
-`sf-menu-element--holds-current` на ветке). Открытая ветка полоску не рисует,
-горизонтальное меню в шапке — тоже: его ветки открывают панели, а не столбец. В компактном меню текущий пункт получает
-плашку, а пункт со скрытой текущей страницей — полоску у значка.
+Путь к текущей странице отмечен одним знаком. Строка, которая ведёт к
+текущей странице, но сама ею не является, — закрытая ветка, в списке которой
+лежит текущая страница (её находят по разметке, а если списка в разметке нет —
+по классу `sf-menu-element--holds-current`), — получает среднее начертание
+подписи. Если у колонки есть своя рамка (`sf-menu--bordered` на корневом
+списке: тонкая линия `--sf-outline-variant` со скруглением поверхности), на
+рамке у такой строки лежит линия `--sf-primary` толщиной 2 px высотой со
+строку. Стрелка ветки остаётся нейтральной: она только говорит, что под
+строкой есть уровень. В компактном меню текущий пункт получает плашку, а пункт
+со скрытой текущей страницей — ту же линию у начального края колонки.
 
-Дерево навигации сайта или документации — не глубже двух уровней. Четыре
-уровня, которые рисует класс, нужны второй панели меню администратора: там
-второй–четвёртый уровни раздела, выбранного в первой панели.
+В горизонтальном меню раздел первого уровня, который является текущей
+страницей или содержит её, получает среднее начертание и линию 2 px под всем
+пунктом — на нижней границе шапки, как у вкладок; с `sf-menu--indicator-fill`
+на корневом списке вместо линии — плашка навигации, для шапки без нижней
+границы. Открытая ветка получает нейтральную подложку выбора, никогда не
+основной цвет. В панелях горизонтального меню каждая строка пути получает
+среднее начертание и линию на начальной границе панели.
 
-:::example {id="components/menu/state-current" label="Текущий пункт в дереве и в вертикальном меню"}
+Столбец навигации сайта или документации держит до четырёх уровней.
+
+В примере в середине текущая страница «Насосы» лежит в свёрнутой ветке
+«Каталог»: линия на рамке колонки показывает, где она.
+
+:::example {id="components/menu/state-current" label="Текущий пункт"}
 :::
 
 ### Открытая и недоступная ветка
@@ -183,7 +210,7 @@ profile: reference
 раскрывать и приглушает подпись. Недоступную ссылку лучше убрать из
 навигации.
 
-:::example {id="components/menu/states" label="Текущий пункт, открытая и недоступная ветка"}
+:::example {id="components/menu/states" label="Ветки"}
 :::
 
 ## Доступность
@@ -205,8 +232,8 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-menu` |
-| Части | `sf-menu-element`, `sf-menu-element--holds-current`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group` |
-| Модификаторы | `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--navigation` |
+| Части | `sf-menu-element`, `sf-menu-element--holds-current`, `sf-menu-element--level-1`, `sf-menu-element--level-2`, `sf-menu-element--level-3`, `sf-menu-element--level-4`, `sf-menu-element-external`, `sf-menu-element-icon`, `sf-menu-element-status`, `sf-menu-element-text`, `sf-menu-element-wrap`, `sf-menu-group-heading`, `sf-menu-group-label`, `sf-menu-item`, `sf-menu-item--group`, `sf-menu-item--has-submenu`, `sf-menu-region`, `sf-menu-region-column`, `sf-menu-region-columns`, `sf-menu-region-foot`, `sf-menu-region-head`, `sf-menu-region-link`, `sf-menu-region-list`, `sf-menu-region-list--small`, `sf-menu-region-small` |
+| Модификаторы | `sf-menu--bordered`, `sf-menu--compact`, `sf-menu--documentation-tree`, `sf-menu--horizontal`, `sf-menu--indicator-fill`, `sf-menu--navigation`, `sf-menu--scroll`, `sf-menu--scrollbar` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -241,21 +268,32 @@ profile: reference
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-menu--border-width` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-px)` | `border`, `--sf-menu--line-border`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
 | `--sf-menu--gap` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation`: `var(--sf-menu-gap, var(--sf-space-1/4))` | `gap` |
+| `--sf-menu--inset` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--padding, var(--sf-space-1/3))` | `padding`, `padding-inline`, `padding-inline-end`, `padding-top`, `padding-bottom`, `padding-block`, `inset-inline-start`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
+| `--sf-menu--line-border` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu)`: `var(--sf-menu--border-width, var(--sf-px))` | `inset-inline-start` |
+| `--sf-menu--radius` | не задана; задают модификаторы, например `.sf-menu.sf-menu--horizontal > .sf-menu-item > .sf-menu`: `var(--sf-menu-horizontal-submenu--radius, var(--sf-menu-submenu-radius, var(--sf-radius--ui)))` | `border-radius`, `--sf-menu-path--block-start`, `--sf-menu-path--block-end` |
+| `--sf-menu--row-padding` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation:not(.sf-menu--horizontal)`: `var(--sf-space-1/2)` | `--sf-menu-element--padding-inline-start`, `--sf-menu-element--padding-inline-end`, `padding-inline` |
 | `--sf-menu-element--background-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-background-color, var(--sf-transparent))` | `background-color` |
 | `--sf-menu-element--border-color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-border-color, var(--sf-surface-container))` | `border-color` |
-| `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width` |
+| `--sf-menu-element--border-width` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-px)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `border-top-width`, `border-block-start-width`, `border-bottom-width`, `border-block-end-width`, `border-inline-start-width`, `border-inline-end-width`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end` |
 | `--sf-menu-element--color` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-color, var(--sf-on-surface))` | `color` |
-| `--sf-menu-element--font-weight` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation .sf-menu-element[aria-current=page]:not(:disabled):not(.disabled):not([aria-disabled=true])`: `var(--sf-font-weight-medium)` | `font-weight` |
+| `--sf-menu-element--font-size` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-small`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-menu-element--font-weight` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-head`: `var(--sf-font-weight-medium)` | `font-weight` |
 | `--sf-menu-element--gap` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-space-1/3)` | `gap` |
-| `--sf-menu-element--padding-bottom` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-bottom`, `padding-block-end` |
-| `--sf-menu-element--padding-inline-start` | не задана; задают модификаторы, например `.sf-menu-element--level-1`: `var(--sf-space-1)` | `padding-inline-start` |
+| `--sf-menu-element--line-height` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-small`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--height`, `--sf-icon--width`, `height`, `block-size`, `margin-top`, `margin-bottom`, `margin-block`, `--sf-menu-element--padding-inline-start` |
+| `--sf-menu-element--padding-block` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element.sf-menu-region-link`: `calc((var(--sf-ui-1/2--control-height) - var(--sf-text-height-1)) / 2)` | `padding-top`, `padding-block-start`, `padding-bottom`, `padding-block-end`, `margin-top`, `margin-block-start`, `margin-bottom`, `margin-block-end` |
+| `--sf-menu-element--padding-bottom` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-bottom`, `padding-block-end`, `margin-bottom`, `margin-block-end` |
+| `--sf-menu-element--padding-inline-end` | не задана; задают модификаторы, например `.sf-menu .sf-menu-region .sf-menu-element`: `var(--sf-space-1/2)` | `padding-inline-end`, `padding-inline` |
+| `--sf-menu-element--padding-inline-start` | не задана; задают модификаторы, например `.sf-menu-element--level-1`: `var(--sf-menu--row-padding, var(--sf-space-1))` | `padding-inline-start` |
 | `--sf-menu-element--padding-right` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-inline-end` |
-| `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-top`, `padding-block-start` |
+| `--sf-menu-element--padding-top` | не задана; задают модификаторы, например `.sf-menu.sf-menu--documentation-tree .sf-menu-element`: `var(--sf-0)` | `padding-top`, `padding-block-start`, `margin-top`, `margin-block-start` |
 | `--sf-menu-element--radius` | не задана; задают модификаторы, например `.sf-menu-element`: `var(--sf-menu-item-radius, var(--sf-radius--ui))` | `border-start-start-radius`, `border-start-end-radius`, `border-end-start-radius`, `border-end-end-radius` |
 | `--sf-menu-group-heading--border-width` | не задана; задают модификаторы, например `.sf-menu-group-heading`: `var(--sf-px)` | `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-menu-item--background-color` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `transparent` | `background-color` |
 | `--sf-menu-item--gap` | не задана; задают модификаторы, например `.sf-menu .sf-menu-item`: `var(--sf-space-1/3)` | `gap` |
+| `--sf-menu-path--block-end` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu) > .sf-menu-item:last-child > .sf-menu-element`: `max(calc(var(--sf-px) * 0), calc(var(--sf-menu--radius, calc(var(--sf-px) * 0)) - var(--sf-menu--inset, calc(var(--sf-px) * 0)) - var(--sf-menu--border-width, var(--sf-px))))` | `bottom`, `inset-block` |
+| `--sf-menu-path--block-start` | не задана; задают модификаторы, например `.sf-menu.sf-menu--navigation.sf-menu--bordered:not(.sf-menu--horizontal):not(.sf-menu-item > .sf-menu) > .sf-menu-item:first-child > .sf-menu-element`: `max(calc(var(--sf-px) * 0), calc(var(--sf-menu--radius-block-start, var(--sf-menu--radius, calc(var(--sf-px) * 0))) - var(--sf-menu--inset, calc(var(--sf-px) * 0)) - var(--sf-menu--border-width, var(--sf-px))))` | `top`, `inset-block` |
 
 ## См. также
 

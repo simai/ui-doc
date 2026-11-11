@@ -5,12 +5,12 @@ description: "Выбирает одно или несколько значени
 
 # Выпадающий список
 
-:badge[sf-dropdown]{variant=tonal scheme=primary size=1/2} :badge[1.7.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-dropdown]{variant=tonal scheme=primary size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Выпадающий список даёт выбрать одно или несколько значений из раскрывающегося
 списка с поиском. Берите его, когда вариантов больше, чем удобно показать
-[радиокнопками](/ru/components/forms/radio/) или
-[флажками](/ru/components/forms/checkbox/), или когда значения нужно показать
+[радиокнопками](/ru/smart/forms/radio/) или
+[флажками](/ru/smart/forms/checkbox/), или когда значения нужно показать
 тегами.
 
 То же на классах — [Выпадающий список](/ru/components/navigation/dropdown/):
@@ -18,7 +18,7 @@ description: "Выбирает одно или несколько значени
 
 ## Пример
 
-:::example {id="smart-components/dropdown/overview" label="Выбор представления"}
+:::example {id="smart-components/dropdown/overview" label="Выбор" preview=sandbox log="change sf-field-reset" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -52,6 +52,8 @@ description: "Выбирает одно или несколько значени
 
 ### Вид поля
 
+`appearance` • по умолчанию `outlined` • [справочник](#атрибуты)
+
 `appearance` выбирает вид поля: `outlined` (по умолчанию) — с рамкой,
 `filled` — с заливкой.
 
@@ -60,6 +62,8 @@ description: "Выбирает одно или несколько значени
 
 ### Отображение выбора
 
+`multiple`, `mode` • [справочник](#атрибуты)
+
 `multiple` разрешает несколько значений; `mode="tag"` показывает выбранное
 тегами, `select` (по умолчанию) — подписями строкой.
 
@@ -67,10 +71,12 @@ description: "Выбирает одно или несколько значени
 выбрано, а не только по цвету строки. Пункт со своей картинкой — значком,
 цветом или аватаром — показывает её на месте чекбокса.
 
-:::example {id="smart-components/dropdown/mode" label="Несколько значений строкой и тегами"}
+:::example {id="smart-components/dropdown/mode" label="Отображение выбора"}
 :::
 
 ### Размер
+
+`size` • по умолчанию `1` • [справочник](#атрибуты)
 
 `size` — ступень `1/2`, `1` (по умолчанию) или `2`, как у полей форм.
 
@@ -78,6 +84,8 @@ description: "Выбирает одно или несколько значени
 :::
 
 ### Сетка пунктов
+
+`layout`, `columns` • [справочник](#атрибуты)
 
 `layout="grid"` раскладывает пункты по нескольку в ряд, `columns` задаёт
 сколько. Сетка выше нескольких рядов прокручивается; её высоту задаёт токен
@@ -87,10 +95,12 @@ description: "Выбирает одно или несколько значени
 подпись остаётся именем для поиска и подсказкой при наведении. Так удобно
 выбирать из сотни значков: колонкой их не долистать.
 
-:::example {id="smart-components/dropdown/grid" label="Значки в сетке из четырёх колонок"}
+:::example {id="smart-components/dropdown/grid" label="Сетка пунктов"}
 :::
 
 ### Группы
+
+`options` • [справочник](#атрибуты)
 
 Пункт может сказать, откуда он: поле `group` в данных `options` или атрибут
 `group` у `sf-list-item`. Идущие подряд пункты с одинаковым `group` рисуются
@@ -116,6 +126,8 @@ description: "Выбирает одно или несколько значени
 
 ### Выбран
 
+`value` • [справочник](#атрибуты)
+
 `value` задаёт выбранное машинное значение; поле показывает подпись
 выбранного пункта.
 
@@ -124,12 +136,16 @@ description: "Выбирает одно или несколько значени
 
 ### Недоступен
 
+`disabled` • [справочник](#атрибуты)
+
 `disabled` выключает поле: список не открывается.
 
 :::example {id="smart-components/dropdown/state-disabled" label="Недоступное поле"}
 :::
 
 ### Обязательный
+
+`required` • [справочник](#атрибуты)
 
 `required` делает выбор обязательным для формы.
 
@@ -138,7 +154,7 @@ description: "Выбирает одно или несколько значени
 
 ## Поведение
 
-### Значение и событие `change`
+### Значение и событие
 
 Свойство `value` возвращает выбранное машинное значение строкой. При
 `multiple` значения перечислены через запятую, без выбора это пустая строка.
@@ -159,9 +175,6 @@ description: "Выбирает одно или несколько значени
 | `item` | данные нажатого пункта; при удалении тега — `null` |
 | `root` | элемент `<sf-dropdown>` |
 | `multiple` | `true`, если разрешён выбор нескольких значений |
-
-Устаревшее имя `sf-dropdown:change` приходит вместе с `change` и с тем же
-`detail`; подписывайтесь на `change`.
 
 `root` — живой элемент, а не данные, поэтому `detail` — не JSON:
 `JSON.stringify(event.detail)` падает на циклической структуре. Берите нужные
@@ -212,7 +225,7 @@ view.value = 'archived';
 `change` страница вызывает `SF.language.use(value)` и сохраняет выбор:
 SIMAI Framework язык не запоминает.
 
-:::example {id="smart-components/dropdown/language" label="Поле «Язык интерфейса»"}
+:::example {id="smart-components/dropdown/language" label="Язык"}
 :::
 
 ## Доступность
@@ -287,13 +300,13 @@ SIMAI Framework язык не запоминает.
 
 | | |
 |:---|:---|
-| Тег | `<sf-dropdown>`, контракт `smart.dropdown` версии `1.7.4` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-dropdown>`, контракт `smart.dropdown` версии `1.8.1` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как поле со списком; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↓`, `↑`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/dropdown` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-dropdown` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/dropdown` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-dropdown` |
 
 ## См. также
 

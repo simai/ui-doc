@@ -1,19 +1,12 @@
-<div class="grid grid-col-1 md:grid-col-2 gap-3 items-cross-start">
-  <sf-input
-    name="search"
-    label="Поиск по документации"
-    placeholder="Компонент или утилита"
-    hint="Введите минимум два символа"
-    icon-start="search"
-    text-end="Ctrl K">
-  </sf-input>
-
-  <sf-input
-    name="project-code"
-    label="Код проекта"
-    value="simai.docs"
-    hint="Это значение доступно только для чтения"
-    icon-start="code"
-    readonly>
-  </sf-input>
-</div>
+<form id="inputs-signup" class="query-container flex flex-col gap-3 p-3 radius-surface border border-outline-variant bg-surface color-on-surface" novalidate>
+  <p class="m-0 font-medium">Заявка на вебинар</p>
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3 items-cross-start">
+    <sf-input name="name" label="Имя и фамилия" autocomplete="name" required></sf-input>
+    <sf-input name="email" label="Рабочая почта" input-type="email" autocomplete="email" placeholder="name@company.ru" required></sf-input>
+    <sf-input name="phone" label="Телефон" input-type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (000) 000-00-00" hint="Пришлём напоминание за час" mask mask-pattern="+{7} (000) 000-00-00"></sf-input>
+    <sf-input name="company" label="Компания" autocomplete="organization" hint="Необязательно"></sf-input>
+  </div>
+  <div class="flex gap-2">
+    <sf-button text="Записаться" data-example-send></sf-button>
+  </div>
+</form>

@@ -5,7 +5,7 @@ description: "Переключает страницы длинного спис�
 
 # Пагинация
 
-:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.11]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-pagination]{variant=tonal scheme=primary size=1/2} :badge[1.3.13]{variant=outline scheme=on-surface size=1/2}
 
 Пагинация — подвал длинного списка или таблицы: сколько всего записей, на
 какой странице читатель, как перейти на другую и сколько записей показывать.
@@ -18,7 +18,7 @@ description: "Переключает страницы длинного спис�
 
 ## Пример
 
-:::example {id="smart-components/pagination/overview" label="Результат"}
+:::example {id="smart-components/pagination/overview" label="Результат" preview=sandbox log="sf-pagination-change sf-pagination-size-change sf-pagination-count sf-pagination-load-more sf-pagination-selection-clear sf-pagination-action-change sf-pagination-action-for-all-change sf-pagination-apply" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -39,6 +39,8 @@ description: "Переключает страницы длинного спис�
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — ступень лестницы размеров для полей, кнопок, подписей и номеров
 страниц: `1` (по умолчанию) или плотная `1/2`, как в админке.
 
@@ -46,6 +48,8 @@ description: "Переключает страницы длинного спис�
 :::
 
 ### Состав подвала
+
+`top`, `show-page-size`, `page-sizes` • [справочник](#атрибуты)
 
 В начале строки — общее количество. В середине — подпись «Страницы:», стрелки «В
 начало» и «Предыдущая страница», поле с номером текущей страницы и стрелки
@@ -63,12 +67,14 @@ description: "Переключает страницы длинного спис�
 «Показать ещё» и выбор размера начинают новую строку, сохраняя свой размер, и
 не накрывают друг друга.
 
-:::example {id="smart-components/pagination/composition" label="Полный подвал, подвал без кнопки и размера, свои размеры страницы"}
+:::example {id="smart-components/pagination/composition" label="Состав подвала"}
 :::
 
 ## Состояния
 
 ### Догрузка
+
+`show-more-busy` • [справочник](#атрибуты)
 
 `show-more-busy` делает кнопку «Показать ещё» занятой, пока приложение
 догружает записи.
@@ -77,6 +83,8 @@ description: "Переключает страницы длинного спис�
 :::
 
 ### Количество неизвестно
+
+`count-known`, `has-next`, `can-count` • [справочник](#атрибуты)
 
 Список, который не считает записи на каждом запросе, задаёт
 `count-known="false"` и сообщает `has-next`, есть ли следующая страница.
@@ -105,13 +113,6 @@ description: "Переключает страницы длинного спис�
 | `sf-pagination-size-change` | выбран другой размер страницы | `previous`, `pageSize`, `current`, `total`, `pageCount` |
 | `sf-pagination-load-more` | нажата «Показать ещё» | `direction` (всегда `after`), `current`, `total`, `pageSize`, `pageCount`, `hasNext` |
 | `sf-pagination-count` | запрошено общее количество | `reason`, `current`, `pageSize` |
-
-Прежние имена этих событий — `sf-page-change`, `sf-page-size-change`,
-`sf-show-more`, `sf-count-request`, `sf-action-change`,
-`sf-action-for-all-change`, `sf-action-apply` и `sf-selection-clear` —
-приходят до 2026-12-01 с прежним `detail`: в нём ещё `component`, у
-`sf-show-more` — `item`, у `sf-action-apply` — `actionForAll`. Подписывайтесь на
-новые.
 
 При смене размера `current` остаётся в пределах нового числа страниц.
 `goToPage(n)`, `setPageSize(n)` и `showMore()` делают то же из кода,
@@ -278,13 +279,13 @@ pagination.addEventListener('sf-pagination-apply', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.11` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-pagination>`, контракт `smart.pagination` версии `1.3.13` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/pagination` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-pagination` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/pagination` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-pagination` |
 
 ## См. также
 

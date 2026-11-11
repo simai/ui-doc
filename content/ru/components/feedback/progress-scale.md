@@ -6,6 +6,8 @@ profile: reference
 
 # Шкала прогресса
 
+:badge[sf-progress-scale]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Шкала делит ход операции на десять участков, по одному на каждые десять
 процентов. Она наглядна там, где обычная полоса выглядит слишком абстрактно:
 заполнение профиля, шаги настройки. Если значение меняется плавно, берите
@@ -54,6 +56,8 @@ profile: reference
 
 ### В строке текста
 
+`sf-progress-scale--line-1/2`, `sf-progress-scale--line-1`, `sf-progress-scale--line-2` • [справочник](#классы)
+
 Классы `sf-progress-scale--line-1/2`, `sf-progress-scale--line-1` и
 `sf-progress-scale--line-2` ставят шкалу в строку текста той же ступени: блок
 получает высоту строки, а подпись встаёт справа от участков. Так шкала
@@ -80,7 +84,7 @@ profile: reference
 `showText`, `label` и `valueText` меняют то же, что и атрибуты.
 `SF.ProgressScale.getState(element)` возвращает текущие значения.
 
-:::example {id="components/progress-scale/update" label="Изменение значения из скрипта"}
+:::example {id="components/progress-scale/update" label="Изменение"}
 :::
 
 ```js

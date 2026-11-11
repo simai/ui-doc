@@ -24,8 +24,11 @@ here.
   carry the facts badges repeated. The one exception is generated: on a
   Smart page `scripts/build-smart-reference.mjs` writes one line under the
   H1 with the tag and the version of every component the page documents
-  (owner remark R007, 2026-11-07), and the audit fails a Smart page without
-  it (`version_badges_missing`) or with a version left in its prose
+  (owner remark R007, 2026-11-07). A class component page gets the same
+  line from `scripts/build-reference-sections.mjs`: its `sf-` block and the
+  version of the component's passport (dispatcher call on D01,
+  2026-11-10). The audit fails either page without it
+  (`version_badges_missing`) or with a version left in its prose
   (`version_in_prose`).
 - A component page shows only what to write today: no earlier names, no
   retired attributes, variables or appearances, no «работает до …». Earlier

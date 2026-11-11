@@ -1,0 +1,38 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — одно действие, которое снимает пустоту</span></figcaption>
+      <div class="flex flex-1 flex-col items-cross-center p-2">
+        <sf-empty-state kind="no-data" size="1/2" heading-level="4" heading="Товаров пока нет" text="Добавьте первый товар.">
+          <sf-button slot="actions" icon-start="add" text="Добавить товар"></sf-button>
+        </sf-empty-state>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — три равные кнопки, непонятно, с чего начать</span></figcaption>
+      <div class="flex flex-1 flex-col items-cross-center p-2">
+        <sf-empty-state kind="no-data" size="1/2" heading-level="4" heading="Товаров пока нет" text="Добавьте первый товар.">
+          <sf-button slot="actions" icon-start="add" text="Добавить"></sf-button>
+          <sf-button slot="actions" icon-start="upload" text="Импорт"></sf-button>
+          <sf-button slot="actions" icon-start="help" text="Справка"></sf-button>
+        </sf-empty-state>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — пусто из-за фильтра: так и сказать, дать сбросить</span></figcaption>
+      <div class="flex flex-1 flex-col items-cross-center p-2">
+        <sf-empty-state kind="nothing-found" size="1/2" heading-level="4" text="По фильтру «Нет в наличии» товаров нет.">
+          <sf-button slot="actions" appearance="outline" scheme="on-surface" text="Сбросить фильтры"></sf-button>
+        </sf-empty-state>
+      </div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — при фильтре «товаров нет»: человек решит, что их удалили</span></figcaption>
+      <div class="flex flex-1 flex-col items-cross-center p-2">
+        <sf-empty-state kind="no-data" size="1/2" heading-level="4" heading="Товаров пока нет" text="Добавьте первый товар.">
+          <sf-button slot="actions" icon-start="add" text="Добавить товар"></sf-button>
+        </sf-empty-state>
+      </div>
+    </figure>
+  </div>
+</div>

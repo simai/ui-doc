@@ -83,6 +83,143 @@
    ]
   },
   {
+   "slug": "functions",
+   "title": "Функции",
+   "order": 25,
+   "pages": [
+    {
+     "slug": "loading/index",
+     "title": "Загрузка и готовность",
+     "order": 10
+    },
+    {
+     "slug": "loading/ready",
+     "title": "Готовность Loader",
+     "order": 10
+    },
+    {
+     "slug": "loading/loader",
+     "title": "Загрузка по требованию",
+     "order": 20
+    },
+    {
+     "slug": "loading/when-defined",
+     "title": "Ожидание элемента",
+     "order": 30
+    },
+    {
+     "slug": "loading/create",
+     "title": "Создание элемента",
+     "order": 40
+    },
+    {
+     "slug": "loading/smart-base",
+     "title": "Загрузка основы смарт-компонентов",
+     "order": 50
+    },
+    {
+     "slug": "loading/smart",
+     "title": "Свой смарт-компонент",
+     "order": 60
+    },
+    {
+     "slug": "loading/package",
+     "title": "API набора",
+     "order": 70
+    },
+    {
+     "slug": "text/index",
+     "title": "Текст, язык и значения",
+     "order": 20
+    },
+    {
+     "slug": "text/format",
+     "title": "Даты, числа и размеры",
+     "order": 10
+    },
+    {
+     "slug": "text/language",
+     "title": "Язык страницы",
+     "order": 20
+    },
+    {
+     "slug": "text/page-text",
+     "title": "Слово компонента",
+     "order": 30
+    },
+    {
+     "slug": "text/sanitize-html",
+     "title": "Чужой HTML",
+     "order": 40
+    },
+    {
+     "slug": "text/mask",
+     "title": "Маска поля",
+     "order": 50
+    },
+    {
+     "slug": "actions/index",
+     "title": "Действия на странице",
+     "order": 30
+    },
+    {
+     "slug": "actions/copy-text",
+     "title": "Копирование текста",
+     "order": 10
+    },
+    {
+     "slug": "actions/code-copy",
+     "title": "Копирование кода в тексте",
+     "order": 20
+    },
+    {
+     "slug": "actions/notify",
+     "title": "Уведомления",
+     "order": 30
+    },
+    {
+     "slug": "actions/theme",
+     "title": "Тема",
+     "order": 40
+    },
+    {
+     "slug": "screen/index",
+     "title": "Экран и прокрутка",
+     "order": 40
+    },
+    {
+     "slug": "screen/breakpoints",
+     "title": "Контрольные точки",
+     "order": 10
+    },
+    {
+     "slug": "screen/reading-position",
+     "title": "Положение чтения",
+     "order": 20
+    },
+    {
+     "slug": "screen/position",
+     "title": "Привязка к якорю",
+     "order": 30
+    },
+    {
+     "slug": "person/index",
+     "title": "Выбор человека",
+     "order": 50
+    },
+    {
+     "slug": "person/preferences",
+     "title": "Настройки вида",
+     "order": 10
+    },
+    {
+     "slug": "person/icons",
+     "title": "Значки на выбор",
+     "order": 20
+    }
+   ]
+  },
+  {
    "slug": "colour",
    "title": "Токены, цвет и темы",
    "order": 30,
@@ -121,6 +258,11 @@
      "slug": "surfaces",
      "title": "Фоны",
      "order": 65
+    },
+    {
+     "slug": "forms",
+     "title": "Формы: фон и группировка",
+     "order": 66
     },
     {
      "slug": "elevation",

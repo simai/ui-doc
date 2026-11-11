@@ -6,6 +6,8 @@ profile: reference
 
 # Выпадающий список
 
+:badge[sf-dropdown]{variant=tonal scheme=primary size=1/2} :badge[1.5.2]{variant=outline scheme=on-surface size=1/2}
+
 Выпадающий список экономит место и даёт выбрать одно или несколько значений
 из набора вариантов; видимая подпись пункта отделена от его машинного
 значения. Для небольшого набора, который помещается на экране, удобнее
@@ -43,6 +45,8 @@ profile: reference
 
 ### Вид поля
 
+`sf-dropdown--outlined`, `sf-dropdown--filled` • [справочник](#классы)
+
 `sf-dropdown--outlined` — поле с рамкой, `sf-dropdown--filled` — с тональной
 заливкой. Поле берёт радиус элементов управления (`--sf-radius--ui`), панель
 списка — радиус крупных поверхностей (`--sf-radius--surface`). Пока список
@@ -53,6 +57,8 @@ profile: reference
 :::
 
 ### Отображение выбора
+
+`sf-dropdown--text`, `sf-dropdown--tag` • [справочник](#классы)
 
 `sf-dropdown--text` показывает выбранные подписи строкой,
 `sf-dropdown--tag` — отдельными тегами. Множественный выбор включает
@@ -67,6 +73,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-dropdown--size-1/2`, `sf-dropdown--size-1`, `sf-dropdown--size-2` • [справочник](#классы)
 
 Три ступени, как у полей форм: `sf-dropdown--size-1/2`,
 `sf-dropdown--size-1` и `sf-dropdown--size-2`. Размер меняет высоту,
@@ -90,7 +98,7 @@ profile: reference
 
 ### Флаги в пунктах
 
-Флаг [Flag](/ru/components/content/flag/) встаёт в пункт `sf-list-item--icon`
+[Флаг](/ru/components/content/flag/) встаёт в пункт `sf-list-item--icon`
 на место иконки: элемент `sf-flag sf-flag--rect` с кодом страны в
 `data-country` и `aria-hidden="true"`. Выбранный флаг повторяется в поле.
 Название языка пишите на самом языке и отметьте пункт атрибутом `lang`.
@@ -116,9 +124,6 @@ profile: reference
   <div class="sf-list-container-wrap">…</div>
 </div>
 ```
-
-Прежнюю разметку с полем `sf-input` внутри `sf-list` скрипт списка ещё
-понимает; в новой разметке берите шапку.
 
 :::example {id="components/dropdown/search" label="Список с поиском"}
 :::
@@ -146,7 +151,7 @@ profile: reference
 показывает картинку, а подпись остаётся его именем для поиска и подсказкой
 `title`.
 
-:::example {id="components/dropdown/trigger" label="Список за кнопкой-иконкой, сеткой"}
+:::example {id="components/dropdown/trigger" label="Свой триггер"}
 :::
 
 ### Размещение списка
@@ -157,7 +162,7 @@ profile: reference
 экрана у края и ограничивает высоту видимой областью. Атрибут
 `portal="false"` оставляет список в потоке страницы.
 
-:::example {id="components/dropdown/portal" label="Список в обрезающем контейнере"}
+:::example {id="components/dropdown/portal" label="Размещение списка"}
 :::
 
 ## Состояния
@@ -171,7 +176,7 @@ profile: reference
 звёздочку в подписи оформляет `sf-dropdown-required`. Сброс формы
 возвращает выбор, заданный при подключении.
 
-:::example {id="components/dropdown/states" label="Обязательный и недоступный список"}
+:::example {id="components/dropdown/states" label="Обязательный"}
 :::
 
 ## Доступность
@@ -196,9 +201,7 @@ profile: reference
 При выборе корень отправляет всплывающее событие `change`. В `detail`:
 `value` и `label` выбранного пункта, `values` — все выбранные значения,
 `item`, `root` и `multiple`. Снятие тега крестиком отправляет то же событие
-с пустыми `value`, `label` и `item: null`. Одновременно уходит
-`sf-dropdown:change` с тем же `detail` — его выпуск оставляет для
-совместимости, слушайте `change`.
+с пустыми `value`, `label` и `item: null`.
 
 ```js
 document.querySelector('.sf-dropdown').addEventListener('change', (event) => {

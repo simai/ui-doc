@@ -1,6 +1,6 @@
 ---
 title: "Код страны"
-description: "Телефонное поле с выбором страны, флагом, кодом и маской номера, которое отправляется с формой."
+description: "Принимает телефон с выбором страны: флаг, код и маска номера; номер уходит с формой."
 ---
 
 # Код страны
@@ -16,7 +16,7 @@ description: "Телефонное поле с выбором страны, фл
 
 ## Пример
 
-:::example {id="smart-components/country-code/overview" label="Результат"}
+:::example {id="smart-components/country-code/overview" label="Результат" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -39,15 +39,19 @@ description: "Телефонное поле с выбором страны, фл
 
 ### Выбор страны
 
+`iso2`, `dial-code`, `multi-country` • [справочник](#атрибуты)
+
 `iso2` задаёт начальную страну двухбуквенным кодом, `dial-code` — телефонным
 кодом. По умолчанию пользователь может сменить страну кнопкой с флагом.
 `multi-country="false"` оставляет страну фиксированной: список не создаётся,
 код остаётся перед номером.
 
-:::example {id="components/country-code/smart-modes" label="Выбор страны и фиксированная страна"}
+:::example {id="components/country-code/smart-modes" label="Выбор страны"}
 :::
 
 ### Размер
+
+`size` • по умолчанию `1` • [справочник](#атрибуты)
 
 `size` выбирает ступень размерной шкалы: `1/2`, `1` или `2`. Подпись, поле и
 подсказка сохраняют одну структуру на всех ступенях.
@@ -57,16 +61,20 @@ description: "Телефонное поле с выбором страны, фл
 
 ### Маска
 
+`use-mask`, `use-country-masks`, `mask-pattern` • [справочник](#атрибуты)
+
 `use-mask="true"` включает маску номера. Маска берётся из данных выбранной
 страны и меняется вместе с ней; `use-country-masks="false"` отключает маски
 стран, и тогда действует общий шаблон из `mask-pattern`. Маска помогает
 вводить номер, но существование номера не проверяет: это задача приложения и
 сервера.
 
-:::example {id="smart-components/country-code/masks" label="Без маски, маска страны и общий шаблон"}
+:::example {id="smart-components/country-code/masks" label="Маска"}
 :::
 
 ### Свой список стран
+
+`iso2`, `label`, `max-items` • [справочник](#атрибуты)
 
 Свойство `countries` принимает массив объектов с полями `iso2`, `code` или
 `dialCode`, `label` и необязательным `maskPattern`. Для известных кодов ISO
@@ -82,12 +90,14 @@ description: "Телефонное поле с выбором страны, фл
 `root-class` добавляет корню утилиты SIMAI Framework: поверхность, отступы и радиус
 контейнера меняются без своих стилей, а само поле сохраняет системный радиус.
 
-:::example {id="components/country-code/smart-customization" label="Поверхность и отступы контейнера"}
+:::example {id="components/country-code/smart-customization" label="Оформление"}
 :::
 
 ## Состояния
 
 ### Список открыт
+
+`open` • [справочник](#атрибуты)
 
 `open` показывает список стран открытым; из кода его открывает
 `setState({open: true})`.
@@ -96,6 +106,8 @@ description: "Телефонное поле с выбором страны, фл
 :::
 
 ### Недоступно
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` отключает поле; недоступное поле список не открывает.
 
@@ -110,7 +122,7 @@ description: "Телефонное поле с выбором страны, фл
 `required`, поэтому он попадает в `FormData`, проходит нативную проверку
 обязательности, а сброс формы возвращает исходные номер и страну.
 
-:::example {id="components/country-code/smart-form" label="Поле в форме с проверкой и сбросом"}
+:::example {id="components/country-code/smart-form" label="Значение в форме"}
 :::
 
 ### Флаги и язык
@@ -122,7 +134,7 @@ description: "Телефонное поле с выбором страны, фл
 странице с `lang="ru"` — русские, на любой другой — английские. `locale="ru"`
 или `locale="en"` задаёт язык явно.
 
-### Состояние из кода и событие `change`
+### Состояние из кода и событие
 
 Когда номер или страна зафиксированы, нативное событие `change` внутреннего
 поля всплывает через `<sf-input-country>`; `detail` у него нет. Номер
@@ -134,7 +146,7 @@ description: "Телефонное поле с выбором страны, фл
 или страны из `setState()` тоже отправляет `change`.
 
 ```js
-const phone = document.querySelector('sf-country-code[name="phone"]');
+const phone = document.querySelector('sf-input-country[name="phone"]');
 phone.addEventListener('change', () => {
   const {value, iso2, dialCode} = phone.state;
   savePhone({value, iso2, dialCode});
@@ -214,14 +226,14 @@ phone.setState({iso2: 'KZ'});
 | | |
 |:---|:---|
 | Тег | `<sf-input-country>`, контракт `smart.input-country` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`, `Esc`, `↓`, `↑`, `Home`, `End`; поиск по первым буквам. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-country` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-country` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-country` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-country` |
 
 ## См. также
 
-- [Текстовые поля](/ru/smart/forms/inputs/) — телефон без выбора страны, с маской.
+- [Текстовое поле](/ru/smart/forms/inputs/) — телефон без выбора страны, с маской.
 - [Код страны на классах](/ru/components/forms/country-code/) — то же поле в статической разметке.

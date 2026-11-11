@@ -917,55 +917,50 @@ const releaseLine = 'Раздел собран из манифестов вып�
   writeGuideSection('content/ru/guide/smart-components/view-preferences.md', '## Поля значения', body);
 }
 
-// The JavaScript API guide lists every global the release declares on
-// window.SF (core/contracts/public-js-api.json, schema
-// simai.framework.public-js-api): the public ones with what they are, where
-// they come from and their members; the internal ones by name only.
+// The JavaScript API guide is the index of window.SF (owner D17, 2026-11-10):
+// every public name of core/contracts/public-js-api.json (schema
+// simai.framework.public-js-api), grouped by what brings it, with a short line
+// and a link to its function page, or to the page that describes it; a
+// component's script API links to the component's page. The lines and links
+// are config/js-api-index.json: --check fails when a public name has no row
+// there or a row names no public name. Internal names are not listed.
 {
   const text = show(uiRepo, uiCommit, 'distr/core/contracts/public-js-api.json');
   if (text) {
     const contract = JSON.parse(text);
-    const KIND = {object: 'объект', function: 'функция', value: 'значение', class: 'класс'};
-    // A name may come with more than one unit, and a unit may say how it is
-    // asked for: «component/theme-palette (SF.Loader.ensurePlugin('theme-palette')
-    // or data-sf-theme-palette), and smart/theme-generator». Reading the whole
-    // string as one layer/name turned that into one mangled cell.
-    const asked = (note) => note
-      .split(/\s+or\s+/u)
-      .map((one) => code(one.trim()))
-      .join(' или ');
-    const unit = (text) => {
-      if (text === 'core') return 'ядро, сразу после `core.js`';
-      if (text === 'core-loader') return 'Loader, после `sf-loader-init`';
-      if (text === 'smart-base') return 'основа смарт-компонентов';
-      const match = /^([a-z-]+)\/([a-z0-9-]+)(?:\s*\((.+)\))?$/u.exec(text);
-      if (!match) return code(text);
-      const [, layer, name, note] = match;
-      const where = layer === 'component' ? `компонент ${code(name)}`
-        : layer === 'smart' ? `смарт-компонент ${code(`sf-${name}`)}`
-          : code(`${layer}/${name}`);
-      return note ? `${where} (${asked(note)})` : where;
-    };
-    const origin = (loadedBy) => String(loadedBy)
-      .split(/,?\s+and\s+/u)
-      .map((part) => unit(part.trim()))
-      .join(' и ');
+    const index = readJson(join(root, 'config/js-api-index.json')).names;
+    const publicGlobals = contract.globals.filter((item) => item.status === 'public');
+    const unlisted = publicGlobals.filter((item) => !index[item.name]).map((item) => item.name);
+    const stale = Object.keys(index).filter((name) => !publicGlobals.some((item) => item.name === name));
+    if (unlisted.length || stale.length) {
+      console.error(`config/js-api-index.json does not match the contract: unlisted ${JSON.stringify(unlisted)}, not public ${JSON.stringify(stale)}`);
+      process.exit(2);
+    }
+    const LAYERS = [
+      ['core', 'Ядро', 'Есть сразу после выполнения `core.js`, ждать не нужно.'],
+      ['core-loader', 'Loader', 'Появляются вместе, когда запустился Loader: после события `sf-loader-init` или `await SF.ready`.'],
+      ['smart-base', 'Основа смарт-компонентов', 'Появляются с первым смарт-элементом на странице или после `await SF.loadSmartBase()`.'],
+      ['component', 'Скрипт компонентов', 'Объект компонента появляется, только когда Loader загрузил этот компонент по разметке страницы; его методы описаны на странице компонента.'],
+    ];
+    const layerOf = (item) => (['core', 'core-loader', 'smart-base'].includes(item.loaded_by) ? item.loaded_by : 'component');
     const byName = (a, b) => a.name.localeCompare(b.name);
-    const publicGlobals = contract.globals.filter((item) => item.status === 'public').sort(byName);
-    const internalGlobals = contract.globals.filter((item) => item.status !== 'public').sort(byName);
     const body = [
-      'Раздел собран из контракта выпуска ' + code(pair) + ' (`core/contracts/public-js-api.json`, формат `simai.framework.public-js-api`) и обновляется вместе с выпуском.',
-      '',
-      `Публичные имена (${publicGlobals.length}) сохраняют смысл; переименовать или убрать такое имя можно только через журнал изменений, как атрибут. Когда имя появляется на странице, говорит столбец «Откуда»: имя компонента приходит вместе с его кодом.`,
-      '',
-      '| Имя | Вид | Откуда | Что это | Члены |',
-      '|:---|:---|:---|:---|:---|',
-      ...publicGlobals.map((item) => `| ${code(item.name)} | ${KIND[item.kind] ?? code(item.kind)} | ${origin(item.loaded_by)} | ${cell(ru(item.summary))} | ${(item.members ?? []).map((member) => code(member)).join(', ') || '—'} |`),
-      '',
-      `Внутренние имена (${internalGlobals.length}) принадлежат среде выполнения и могут измениться в любом выпуске; страница их не вызывает: ${internalGlobals.map((item) => code(item.name)).join(', ')}.`,
+      'Раздел собран из контракта выпуска ' + code(pair) + ' (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.',
       '',
     ];
-    writeGuideSection('content/ru/guide/connection/js-api.md', '## Глобальные объекты', body);
+    for (const [layer, title, when] of LAYERS) {
+      const rows = publicGlobals.filter((item) => layerOf(item) === layer).sort(byName);
+      body.push(`### ${title}`, '', when, '');
+      if (layer === 'component') {
+        body.push('| Имя | Где описан |', '|:---|:---|');
+        for (const item of rows) body.push(`| ${code(item.name)} | [${cell(index[item.name].label)}](${index[item.name].page}) |`);
+      } else {
+        body.push('| Имя | Что делает | Где описано |', '|:---|:---|:---|');
+        for (const item of rows) body.push(`| ${code(item.name)} | ${cell(index[item.name].text)} | [${cell(index[item.name].label)}](${index[item.name].page}) |`);
+      }
+      body.push('');
+    }
+    writeGuideSection('content/ru/guide/connection/js-api.md', '## Имена по уровням', body);
   }
 }
 

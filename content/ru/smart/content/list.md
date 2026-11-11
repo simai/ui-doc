@@ -5,7 +5,7 @@ description: "Список, с которым работают: строки и�
 
 # Список
 
-:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list]{variant=tonal scheme=primary size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Список — для того, с чем что-то делают: беседы, письма, шаблоны, файлы,
 участники, версии. Строки строятся из данных — название и тихая вторая строка;
@@ -19,7 +19,7 @@ description: "Список, с которым работают: строки и�
 
 ## Пример
 
-:::example {id="smart-components/list/overview" label="Письма с действиями и переименованием"}
+:::example {id="smart-components/list/overview" label="Письма" preview=sandbox log="sf-list-open sf-list-apply sf-list-rename sf-list-load-more" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -50,6 +50,8 @@ disabled?, actions?}`: `text` — название, `supporting` — втора�
 
 ### Группы по дням
 
+`group-by` • по умолчанию `none` • [справочник](#атрибуты)
+
 `group-by="day"` делит строки по календарному дню `date` в часовом поясе
 читателя: «Сегодня», «Вчера», день недели, дата. В полночь читателя группы
 перерисовываются.
@@ -58,6 +60,8 @@ disabled?, actions?}`: `text` — название, `supporting` — втора�
 :::
 
 ### Группы по ключу
+
+`group-by`, `groups`, `heading-level` • [справочник](#атрибуты)
 
 `group-by="key"` делит строки по полю `group` в порядке `groups`
 (`[{key, text}]`). Ключ, которого нет в `groups`, идёт последним, его
@@ -68,6 +72,8 @@ disabled?, actions?}`: `text` — название, `supporting` — втора�
 :::
 
 ### Размер
+
+`size` • по умолчанию `1` • [справочник](#атрибуты)
 
 `size` — ступень строк на лестнице размеров: `1/2`, `1` (по умолчанию) или
 `2`, как у `sf-list-item`. Кнопка «⋯» и поле переименования берут ту же
@@ -80,12 +86,16 @@ disabled?, actions?}`: `text` — название, `supporting` — втора�
 
 ### Загрузка
 
+`loading` • [справочник](#атрибуты)
+
 `loading` — первая страница в пути: вместо слов видна форма строк.
 
 :::example {id="smart-components/list/state-loading" label="Список во время загрузки"}
 :::
 
 ### Пусто
+
+`empty-text` • [справочник](#атрибуты)
 
 Без строк список показывает [Пустое состояние](/ru/smart/feedback/empty-state/);
 его заголовок задаёт `empty-text` (по умолчанию «Здесь пока пусто»).
@@ -133,7 +143,7 @@ list.addEventListener('sf-list-open', (event) => {
 последней строки. Ответ передайте `appendItems({items, options: {hasMore}})`; если
 загрузить не удалось — `moreFailed()`, и список попросит снова.
 
-:::example {id="smart-components/list/more" label="Версии с продолжением"}
+:::example {id="smart-components/list/more" label="Версии"}
 :::
 
 ### Методы
@@ -225,13 +235,13 @@ list.addEventListener('sf-list-open', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-list>`, контракт `smart.list` версии `1.3.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-list>`, контракт `smart.list` версии `1.3.4` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`); пока ждёт данные, компонент показывает свою. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `клавиша меню`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/list` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/list` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

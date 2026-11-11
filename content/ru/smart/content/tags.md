@@ -5,7 +5,7 @@ description: "Показывает короткую метку — катего�
 
 # Теги
 
-:badge[sf-tag]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tag]{variant=tonal scheme=primary size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Тег показывает одну короткую метку: категорию, выбранное значение, фильтр или
 статус. Он может быть статичным, переключаться нажатием и предлагать отдельную
@@ -17,7 +17,7 @@ description: "Показывает короткую метку — катего�
 
 ## Пример
 
-:::example {id="smart-components/tags/overview" label="Фильтры и значения"}
+:::example {id="smart-components/tags/overview" label="Фильтры" preview=sandbox log="change sf-tag-close" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -37,6 +37,8 @@ description: "Показывает короткую метку — катего�
 
 ### Содержимое
 
+`kind`, `count`, `icon` • [справочник](#атрибуты)
+
 `kind` выбирает содержимое и поведение:
 
 - `checkbox` — переключатель с флажком, вид по умолчанию;
@@ -50,13 +52,17 @@ description: "Показывает короткую метку — катего�
 
 ### Статус
 
+`status` • [справочник](#атрибуты)
+
 `status` сообщает смысл из общего словаря: `info`, `success`, `warning`,
 `error`; без него тег нейтральный.
 
-:::example {id="smart-components/tags/status" label="Нейтральный тег и четыре статуса"}
+:::example {id="smart-components/tags/status" label="Статус"}
 :::
 
 ### Вид
+
+`appearance` • по умолчанию `default` • [справочник](#атрибуты)
 
 `appearance` задаёт вид нейтрального тега на незнакомом фоне: `default`,
 `surface` — лёгкая заливка с границей, `ghost` — фон появляется только при
@@ -66,6 +72,8 @@ description: "Показывает короткую метку — катего�
 :::
 
 ### Размер
+
+`size` • по умолчанию `1/2` • [справочник](#атрибуты)
 
 `size` — ступень `1/3`, `1/2`, `1`, `2` или `3`, по умолчанию `1/2`. Кнопка
 удаления везде держится строки подписи и не делает тег выше: её область
@@ -77,6 +85,8 @@ description: "Показывает короткую метку — катего�
 
 ### Плотность
 
+`spacing` • по умолчанию `normal` • [справочник](#атрибуты)
+
 `spacing` (`compact`, `normal`, `comfortable`, `spacious`) меняет
 вертикальные отступы, как у кнопок.
 
@@ -85,27 +95,33 @@ description: "Показывает короткую метку — катего�
 
 ### Счётчик и удаление
 
+`count`, `closable`, `icon` • [справочник](#атрибуты)
+
 `count` — число после подписи у тега `default`. `closable` добавляет
 отдельную кнопку удаления. У тегов `icon`, `color` и `avatar` она есть по
 умолчанию — `closable="false"` её убирает; у `checkbox` и `default` она
 появляется только с `closable`.
 
-:::example {id="smart-components/tags/count-close" label="Счётчик, удаление по closable и без удаления"}
+:::example {id="smart-components/tags/count-close" label="Счётчик и удаление"}
 :::
 
 ### В строке
+
+`inline`, `line` • [справочник](#атрибуты)
 
 `inline` ставит тег на строку другого элемента управления: без вертикальных
 отступов. В ячейке таблицы задайте `line` (`1/2`, `1`, `2`): тег станет на
 ступень меньше и уместится в строку текста этого размера, поэтому строка
 таблицы не вырастет.
 
-:::example {id="smart-components/tags/inline" label="Теги на строке кнопки и в строке текста"}
+:::example {id="smart-components/tags/inline" label="В строке"}
 :::
 
 ## Состояния
 
 ### Выбран
+
+`active`, `kind` • [справочник](#атрибуты)
 
 `active` задаёт выбранное состояние тега `kind="checkbox"`.
 
@@ -113,6 +129,8 @@ description: "Показывает короткую метку — катего�
 :::
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` запрещает нажатие, переключение, удаление и их события.
 
@@ -136,8 +154,7 @@ document.querySelector('.filters').addEventListener('change', (event) => {
 
 ### Удаление
 
-Нажатие на кнопку удаления отправляет всплывающее событие `sf-tag-close`
-(прежнее имя — `close`); `event.detail` пустой, сам тег — `event.target`. Тег
+Нажатие на кнопку удаления отправляет всплывающее событие `sf-tag-close`; `event.detail` пустой, сам тег — `event.target`. Тег
 не исчезает: убирает его приложение, когда удаление принято.
 
 ```js
@@ -232,13 +249,13 @@ tags.addEventListener('sf-tag-close', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-tag>`, контракт `smart.tag` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-tag>`, контракт `smart.tag` версии `1.3.4` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/tag` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-tag` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tag` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tag` |
 
 ## См. также
 

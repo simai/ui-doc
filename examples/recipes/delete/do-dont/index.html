@@ -1,0 +1,20 @@
+<div class="query-container" data-sf-density="compact">
+  <div class="grid grid-col-1 cq-md:grid-col-2 gap-3">
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — вопрос называет, что удалится, «Удалить» красная</span></figcaption>
+      <div class="flex-1 p-2"><sf-confirm question="Удалить «Смета на декабрь.xlsx»?" accept-text="Удалить" status="danger" size="1/2"></sf-confirm></div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — «Вы уверены?» и обычное «Подтвердить»</span></figcaption>
+      <div class="flex-1 p-2"><sf-confirm question="Вы уверены?" size="1/2"></sf-confirm></div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-success overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-success-container color-on-success-container"><i class="sf-icon" aria-hidden="true">check_circle</i><span><b>Правильно</b> — своё и обратимое: удалить сразу, дать «Вернуть»</span></figcaption>
+      <div class="flex-1 p-2"><sf-toast icon="delete" title="Фильтр «Крупные заказы» удалён" action-text="Вернуть" action="undo"></sf-toast></div>
+    </figure>
+    <figure class="m-0 flex flex-col radius-surface border border-error overflow-hidden">
+      <figcaption class="flex items-start gap-1/3 p-x-1 p-y-1/2 text-1/2 bg-error-container color-on-error-container"><i class="sf-icon" aria-hidden="true">cancel</i><span><b>Неправильно</b> — вопрос там, где можно просто вернуть</span></figcaption>
+      <div class="flex-1 p-2"><sf-confirm question="Удалить фильтр «Крупные заказы»?" accept-text="Удалить" status="danger" size="1/2"></sf-confirm></div>
+    </figure>
+  </div>
+</div>

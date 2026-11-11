@@ -1,6 +1,6 @@
 ---
 title: "Составные компоненты"
-description: "Составные компоненты — 4 смарт-компонента SIMAI Framework."
+description: "Составные компоненты — смарт-компоненты SIMAI Framework."
 profile: reference
 ---
 

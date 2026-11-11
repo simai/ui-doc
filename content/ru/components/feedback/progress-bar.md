@@ -6,6 +6,8 @@ profile: reference
 
 # Прогресс
 
+:badge[sf-progress-bar]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+
 Индикатор прогресса показывает ход операции, когда долю выполненного можно
 выразить от 0 до 100 процентов. Для операции без известного процента берите
 [спиннер](/ru/components/feedback/spinner/), для деления на этапы —
@@ -44,6 +46,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-progress-bar--size-1/3`, `sf-progress-bar--size-1/2`, `sf-progress-bar--size-1` • [справочник](#классы)
 
 Пять ступеней — `sf-progress-bar--size-1/3`, `sf-progress-bar--size-1/2`,
 `sf-progress-bar--size-1`, `sf-progress-bar--size-2` и
@@ -84,7 +88,7 @@ profile: reference
 `SF.ProgressBar.getState(element)` возвращает текущие значения этих полей.
 Обе функции принимают блок или любой элемент внутри него.
 
-:::example {id="components/progress-bar/update" label="Изменение значения из скрипта"}
+:::example {id="components/progress-bar/update" label="Изменение"}
 :::
 
 ```js
@@ -117,7 +121,7 @@ whenLoader(() => SF.Loader.ready('ProgressBar', (ProgressBar) => {
 |:---|:---|
 | Блок | `sf-progress-bar` |
 | Части | `sf-progress-bar-main`, `sf-progress-bar-progress` |
-| Модификаторы | `sf-progress-bar--error`, `sf-progress-bar--info`, `sf-progress-bar--success`, `sf-progress-bar--warning` |
+| Модификаторы | `sf-progress-bar--error`, `sf-progress-bar--indeterminate`, `sf-progress-bar--info`, `sf-progress-bar--paused`, `sf-progress-bar--success`, `sf-progress-bar--warning` |
 | Размеры | `sf-progress-bar--size-1`, `sf-progress-bar--size-1/2`, `sf-progress-bar--size-1/3`, `sf-progress-bar--size-2`, `sf-progress-bar--size-3` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.

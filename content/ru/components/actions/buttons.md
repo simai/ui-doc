@@ -6,6 +6,8 @@ profile: reference
 
 # Кнопки
 
+:badge[sf-button]{variant=tonal scheme=primary size=1/2} :badge[1.9.1]{variant=outline scheme=on-surface size=1/2}
+
 Кнопка запускает действие на текущей странице: сохраняет изменения, отправляет
 форму или подтверждает выбор. Для перехода на другую страницу берите ссылку, для
 действия без подписи — [кнопку с иконкой](/ru/components/actions/icon-buttons/).
@@ -52,7 +54,7 @@ profile: reference
 
 Вид задаёт вес действия классом `sf-button--{вид}`: `default` — главное
 действие экрана, обычно одно; `tonal` — важное, но не главное; `outline` —
-второстепенное, например «Отмена»; `link` — самое лёгкое, в строке таблицы или
+второстепенное, например «Отмена»; `ghost` — самое лёгкое, в строке таблицы или
 рядом с текстом. `surface` нужен на цветном фоне или поверх изображения: его
 заливка и граница — полупрозрачные ступени
 [нейтральной шкалы](/ru/guide/colour/palettes/), поэтому одна
@@ -64,9 +66,9 @@ profile: reference
 ### Схема
 
 Схема задаёт цвет классом `sf-button--{схема}`: `primary` — акцентное действие,
-`on-surface` — нейтральное, `error` — необратимое или опасное, например
-«Удалить». `secondary` есть только у вида `tonal`, `error` нет у вида
-`surface`; прочерк в таблице — сочетание, которого нет.
+`on-surface` — нейтральное, `danger` — необратимое или опасное, например
+«Удалить»; оно рисуется красным цветом ошибки. `secondary` есть только у
+вида `tonal`; прочерк в таблице — сочетание, которого нет.
 
 :::example {id="components/buttons/schemes" label="Сочетания вида и схемы"}
 :::
@@ -138,7 +140,7 @@ profile: reference
 
 `segment-start`, `segment-middle` и `segment-end` соединяют соседние кнопки в
 один составной элемент: внутренние углы становятся прямыми, общие границы
-рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `link`.
+рисуются один раз. Выбранный сегмент обычно `outline`, остальные — `ghost`.
 Группе нужна семантика: `role="group"` и общее доступное имя.
 
 :::example {id="components/buttons/segments" label="Сегментированные кнопки"}
@@ -223,7 +225,7 @@ profile: reference
 
 Модификатор `sf-button--loading` из списка классов — не состояние загрузки:
 он только снимает заливку у сочетаний `sf-button--default` с
-`sf-button--primary` и с `sf-button--error` и спиннера не рисует. Загрузку
+`sf-button--primary` и с `sf-button--danger` и спиннера не рисует. Загрузку
 задают классы `loading sf-button-state-loading`.
 
 Переменная `--sf-button-loading-stripe` устарела: Framework её не задаёт,
@@ -271,7 +273,7 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 | Параметр `param` | По умолчанию | Назначение |
 |:---|:---|:---|
 | `text` | пусто | подпись |
-| `type` | `default` | вид: `default`, `tonal`, `outline`, `surface`, `link` |
+| `type` | `default` | вид: `default`, `tonal`, `outline`, `surface`, `ghost` |
 | `scheme` | `primary` | схема |
 | `size` | `1` | размер |
 | `icon`, `iconPosition` | —, `start` | иконка и её место: `start` или `end` |
@@ -290,9 +292,9 @@ whenLoader(() => SF.Loader.ready('Buttons', (Buttons) => {
 |:---|:---|
 | Блок | `sf-button` |
 | Части | `sf-button-shortcut`, `sf-button-spinner`, `sf-button-spinner--overlay`, `sf-button-state-loading`, `sf-button-text-container` |
-| Модификаторы | `sf-button--default`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
+| Модификаторы | `sf-button--danger`, `sf-button--default`, `sf-button--full-width`, `sf-button--height-high`, `sf-button--height-highest`, `sf-button--height-low`, `sf-button--link`, `sf-button--loading`, `sf-button--on-surface`, `sf-button--on-surface-variant`, `sf-button--outline`, `sf-button--pressed`, `sf-button--primary`, `sf-button--secondary`, `sf-button--surface`, `sf-button--tonal` |
 | Размеры | `sf-button--size-1`, `sf-button--size-1/2`, `sf-button--size-1/3`, `sf-button--size-2`, `sf-button--size-3` |
-| Устаревшие | `sf-button--danger` → `sf-button--error`, `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link` |
+| Устаревшие | `sf-button--error` → `sf-button--danger`, `sf-button--ghost` → `sf-button--link` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

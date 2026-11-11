@@ -6,6 +6,8 @@ profile: reference
 
 # Оглавление
 
+:badge[sf-outline]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Оглавление показывает разделы длинной страницы списком якорных ссылок и
 отмечает текущий раздел. Для навигации между страницами берите меню или
 хлебные крошки.

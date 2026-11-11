@@ -16,7 +16,7 @@ description: "Показывает этапы последовательного
 
 ## Пример
 
-:::example {id="smart-components/steps/overview" label="Результат"}
+:::example {id="smart-components/steps/overview" label="Результат" preview=sandbox log="sf-steps-change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -37,6 +37,8 @@ description: "Показывает этапы последовательного
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — `1/2` или `1` (по умолчанию).
 
 :::example {id="smart-components/steps/sizes" label="Две ступени размера"}
@@ -44,15 +46,19 @@ description: "Показывает этапы последовательного
 
 ### Разделитель
 
+`separator-icon` • по умолчанию `chevron_right` • [справочник](#атрибуты)
+
 `separator-icon` меняет иконку разделителя между этапами, по умолчанию
 `chevron_right`.
 
-:::example {id="smart-components/steps/separator" label="Разделитель по умолчанию и свой"}
+:::example {id="smart-components/steps/separator" label="Разделитель"}
 :::
 
 ## Состояния
 
 ### Текущий
+
+`current` • по умолчанию `0` • [справочник](#атрибуты)
 
 Этап с номером `current` выделен, этапы перед ним отмечены пройденными.
 
@@ -60,6 +66,8 @@ description: "Показывает этапы последовательного
 :::
 
 ### Ошибка
+
+`error-step` • [справочник](#атрибуты)
 
 `error-step` отмечает этап с ошибкой — номер, тоже с нуля. Такой этап
 получает иконку ошибки вместо галочки.
@@ -81,7 +89,7 @@ description: "Показывает этапы последовательного
 Каждый доступный этап — кнопка. Нажатие делает этап текущим и отправляет
 всплывающее событие `sf-steps-change` с `detail.previous`, `detail.current`
 (номера с нуля), `detail.item` — данными этапа и `detail.items` — всеми
-этапами; `sf-step-change` — его устаревшее имя с тем же `detail`.
+этапами.
 Недоступный этап не нажимается. Если переход назад или вперёд нельзя
 разрешить без проверки — например, пока форма этапа не заполнена, —
 отметьте следующие этапы `disabled` и снимайте флаг по мере прохождения.
@@ -159,12 +167,12 @@ document.querySelector('#next').addEventListener('click', () => {
 | | |
 |:---|:---|
 | Тег | `<sf-steps>`, контракт `smart.steps` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/steps` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-steps` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/steps` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-steps` |
 
 ## См. также
 

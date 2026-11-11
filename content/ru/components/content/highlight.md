@@ -6,6 +6,8 @@ profile: reference
 
 # Подсветка кода
 
+:badge[sf-highlight]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+
 Подсветка кода раскрашивает синтаксис в блоках `pre code` и оформляет их
 поверхностью с панелью: название языка и кнопка копирования. Берите её для
 примеров кода в документации и интерфейсах разработчика; короткий
@@ -57,7 +59,7 @@ profile: reference
 неуместен. Нажатая кнопка сообщает о себе через `aria-pressed`, а её имя
 можно задать своим словом в `data-wrap-label`.
 
-:::example {id="components/highlight/wrap" label="Прокрутка и включённый перенос"}
+:::example {id="components/highlight/wrap" label="Перенос длинных строк"}
 :::
 
 ### Номера строк
@@ -69,7 +71,7 @@ profile: reference
 настоящие номера. Номера не выделяются вместе с кодом: выделенный и
 скопированный фрагмент содержит только код.
 
-:::example {id="components/highlight/line-numbers" label="Номера строк и отрывок с заданного номера"}
+:::example {id="components/highlight/line-numbers" label="Номера строк"}
 :::
 
 ### Язык

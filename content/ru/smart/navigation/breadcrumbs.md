@@ -17,7 +17,7 @@ description: "Показывает путь от корня сайта до те
 
 ## Пример
 
-:::example {id="smart-components/breadcrumbs/overview" label="Путь к товару"}
+:::example {id="smart-components/breadcrumbs/overview" label="Путь к товару" preview=sandbox log="sf-breadcrumbs-press" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -43,21 +43,25 @@ description: "Показывает путь от корня сайта до те
 
 ### Иконка
 
+`separator-icon`, `home-label`, `home-icon` • [справочник](#атрибуты)
+
 Поле `icon` ставит иконку в пункт. `separator-icon` меняет разделитель, по
 умолчанию `chevron_right`. `home-label` и `home-icon` подписывают первый
 пункт, если у него нет своей подписи.
 
-:::example {id="smart-components/breadcrumbs/icons" label="Иконка пункта и свой разделитель"}
+:::example {id="smart-components/breadcrumbs/icons" label="Иконка"}
 :::
 
 ### Длинный путь
+
+`max-items` • по умолчанию `4` • [справочник](#атрибуты)
 
 Если пунктов больше `max-items` (по умолчанию 4), середина пути сворачивается
 в кнопку «…»: остаются первый пункт и два последних. Скрытые пункты кнопка
 передаёт в событии нажатия, в поле `item.hiddenItems`. `max-items` меньше 3
 отключает сворачивание.
 
-:::example {id="smart-components/breadcrumbs/long-path" label="Шесть пунктов, середина свёрнута"}
+:::example {id="smart-components/breadcrumbs/long-path" label="Длинный путь"}
 :::
 
 ## Состояния
@@ -66,7 +70,7 @@ description: "Показывает путь от корня сайта до те
 
 Флаг `disabled` в полях пункта делает его недоступным.
 
-:::example {id="smart-components/breadcrumbs/state-disabled" label="Недоступный раздел в середине пути"}
+:::example {id="smart-components/breadcrumbs/state-disabled" label="Недоступный пункт"}
 :::
 
 ## Поведение
@@ -74,7 +78,7 @@ description: "Показывает путь от корня сайта до те
 ### Нажатие на пункт
 
 Нажатие на пункт отправляет всплывающее отменяемое событие
-`sf-breadcrumbs-press` (прежнее имя — `sf-breadcrumb-click`). Его
+`sf-breadcrumbs-press`. Его
 `event.detail` содержит `item` — данные пункта (`label`, `href`, `value`,
 `ellipsis` и другие поля), `index` — номер пункта среди показанных, `items` —
 все показанные пункты. У кнопки «…» в `item` есть `ellipsis: true` и
@@ -159,12 +163,12 @@ crumbs.onItemClick((item) => {
 | | |
 |:---|:---|
 | Тег | `<sf-breadcrumbs>`, контракт `smart.breadcrumbs` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; нужна подпись или `aria-label`; с клавиатуры: `Tab`; `Enter` на ссылках; `Enter` или `Пробел` на кнопке «…». |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/breadcrumbs` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-breadcrumbs` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/breadcrumbs` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-breadcrumbs` |
 
 ## См. также
 

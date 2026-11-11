@@ -6,6 +6,8 @@ profile: reference
 
 # Подсказка
 
+:badge[sf-tooltip]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
+
 Подсказка показывает короткое пояснение к элементу при наведении указателя
 или фокусе с клавиатуры. Не переносите в неё сведения, без которых нельзя
 выполнить действие: на сенсорном экране подсказка не открывается.
@@ -44,6 +46,8 @@ profile: reference
 
 ### Вид
 
+`sf-tooltip--dark`, `sf-tooltip--light` • [справочник](#классы)
+
 `sf-tooltip--dark` — контрастная тёмная поверхность, заметная на любом фоне.
 `sf-tooltip--light` — светлая поверхность без границы; она читается на
 затемнённом или цветном фоне и теряется на светлом. Класс вида обязателен:
@@ -54,6 +58,8 @@ profile: reference
 
 ### Размер
 
+`sf-tooltip--size-1/3`, `sf-tooltip--size-1/2`, `sf-tooltip--size-1` • [справочник](#классы)
+
 Пять ступеней — `sf-tooltip--size-1/3`, `sf-tooltip--size-1/2`,
 `sf-tooltip--size-1`, `sf-tooltip--size-2` и `sf-tooltip--size-3` — меняют
 кегль и отступы. Берите ступень триггера.
@@ -62,6 +68,8 @@ profile: reference
 :::
 
 ### Положение стрелки
+
+`sf-tooltip--arrow-inline-end`, `sf-tooltip--arrow-inline-start`, `sf-tooltip--arrow-none` • [справочник](#классы)
 
 Класс стрелки задаёт и сторону, на которой открывается подсказка: стрелка
 снизу (`sf-tooltip--arrow-bottom-*`) ставит подсказку над триггером, стрелка

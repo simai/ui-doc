@@ -1,0 +1,20 @@
+<div class="query-container">
+  <form class="flex flex-col gap-3 max-w-h0" onsubmit="return false">
+    <section class="flex flex-col gap-1" aria-labelledby="form-widths-who">
+      <h3 id="form-widths-who" class="m-0 text-1 weight-6">Получатель</h3>
+      <div class="grid grid-col-1 cq-sm:grid-col-2 gap-1">
+        <sf-input name="surname" label="Фамилия" default-value="Смирнова"></sf-input>
+        <sf-input name="name" label="Имя" default-value="Анна"></sf-input>
+      </div>
+      <div class="w-f6"><sf-input name="phone" label="Телефон" input-type="tel" default-value="+7 900 123-45-67"></sf-input></div>
+    </section>
+    <section class="flex flex-col gap-1" aria-labelledby="form-widths-where">
+      <h3 id="form-widths-where" class="m-0 text-1 weight-6">Адрес</h3>
+      <sf-input name="street" label="Улица, дом, квартира" default-value="ул. Ленина, 12, кв. 5"></sf-input>
+      <div class="flex flex-wrap gap-1">
+        <div class="flex-auto w-f6"><sf-input name="city" label="Город" default-value="Казань"></sf-input></div>
+        <div class="w-e6"><sf-input name="postcode" label="Индекс" inputmode="numeric" default-value="420111"></sf-input></div>
+      </div>
+    </section>
+  </form>
+</div>

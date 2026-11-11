@@ -5,7 +5,7 @@ description: "Поле формы, где один вариант или нес�
 
 # Выбор карточками
 
-:badge[sf-input-choice]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-choice]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Поле формы, в котором человек выбирает один вариант или несколько из
 карточек: у каждой название, пояснение, иконка и короткая метка. Берите его,
@@ -62,7 +62,7 @@ description: "Поле формы, где один вариант или нес�
 квадрате — и плотной рамкой основного цвета на лёгкой заливке: два признака,
 а не только цвет.
 
-:::example {id="smart-components/input-choice/multiple" label="Несколько вариантов, один недоступен" preview=sandbox}
+:::example {id="smart-components/input-choice/multiple" label="Один или несколько" preview=sandbox}
 :::
 
 ### Сетка
@@ -110,7 +110,7 @@ description: "Поле формы, где один вариант или нес�
 В примере отправьте форму без выбора типа, затем выберите тип и отправьте
 снова; журнал покажет, что ушло с формой.
 
-:::example {id="smart-components/input-choice/form" label="Форма с двумя полями" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/input-choice/form" label="Два поля" preview=sandbox log_console=true log_open=false}
 :::
 
 ### События
@@ -121,7 +121,7 @@ description: "Поле формы, где один вариант или нес�
 он сейчас. Запись `value` из кода, сброс и восстановление формы событий не
 дают.
 
-:::example {id="smart-components/input-choice/events" label="input и change в журнале" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/input-choice/events" label="События" preview=sandbox log_console=true log_open=false}
 :::
 
 ```js
@@ -192,13 +192,13 @@ field.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-choice>`, контракт `smart.input-choice` версии `1.1.0` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-input-choice>`, контракт `smart.input-choice` версии `1.1.1` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: один вариант: `Tab` приводит на выбранную карточку (или первую), стрелки переходят к соседней карточке и выбирают её, с конца — на начало; несколько вариантов: `Tab` проходит по каждой карточке, `Пробел` включает и выключает её. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-choice` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-choice` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-choice` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-choice` |
 
 ## См. также
 

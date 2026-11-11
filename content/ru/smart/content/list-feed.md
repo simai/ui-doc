@@ -20,14 +20,12 @@ description: "Прокручиваемая колонка записей, кот
 
 ## Пример
 
-:::example {id="smart-components/list-feed/overview" label="Комментарии с ранней историей"}
+:::example {id="smart-components/list-feed/overview" label="Комментарии" preview=sandbox log="sf-list-feed-load-more sf-list-feed-completed sf-list-feed-failed sf-list-feed-cancelled" log_console=true log_open=false}
 :::
 
 ## Разметка
 
-В разметке — тег с доступным именем; высоту ленте даёт контейнер. Сам тег —
-`display: contents`, а колонка `.sf-list-feed` растягивается во
-flex-контейнере (`flex: 1`) и прокручивается внутри:
+В разметке — тег с доступным именем; высоту ленте даёт контейнер. Лента занимает всю высоту контейнера и прокручивается внутри него:
 
 ```html
 <div style="display: flex; flex-direction: column; block-size: 32rem">
@@ -56,7 +54,7 @@ feed.setItems({items: await api.comments(taskId), options: {hasMore: true}});
 
 Пока записей нет, вместо колонки виден слот `empty`.
 
-:::example {id="smart-components/list-feed/state-empty" label="Комментариев ещё нет"}
+:::example {id="smart-components/list-feed/state-empty" label="Пусто"}
 :::
 
 ### Запись пишется
@@ -65,7 +63,7 @@ feed.setItems({items: await api.comments(taskId), options: {hasMore: true}});
 другая сторона её пишет, и каждая часть — новый `upsert()` с более длинным
 текстом. Пока запись растёт, у неё `aria-busy`, и она не объявляется.
 
-:::example {id="smart-components/list-feed/state-growing" label="Ответ ассистента пишется"}
+:::example {id="smart-components/list-feed/state-growing" label="Запись пишется"}
 :::
 
 ## Поведение
@@ -108,7 +106,7 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 серии и текст — только текст, никогда разметку: хост, у которого есть HTML,
 рисует и очищает его сам.
 
-:::example {id="smart-components/list-feed/custom-render" label="Записи человека и ассистента"}
+:::example {id="smart-components/list-feed/custom-render" label="Записи"}
 :::
 
 Рисовальщик может опираться на классы `.sf-list-feed__item` с модификаторами
@@ -212,17 +210,17 @@ feed.addEventListener('sf-list-feed-load-more', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list-feed>`, контракт `smart.list-feed` версии `1.1.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/list-feed` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-list-feed` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/list-feed` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-list-feed` |
 
 ## См. также
 
 - [Список](/ru/smart/content/list/) — список, с которым что-то делают.
-- [Лента сообщений](/ru/pro/chat/message-log/) — прежнее имя ленты в пакете
+- [Лента сообщений](/ru/pro/chat/message-log/) — лента сообщений чата в пакете
   Pro.
-- [JavaScript API](/ru/guide/connection/js-api/) — `SF.readingPosition`,
-  правило положения чтения, на котором построена лента.
+- [Положение чтения](/ru/guide/functions/screen/reading-position/) — `SF.readingPosition`,
+  правило, на котором построена лента.

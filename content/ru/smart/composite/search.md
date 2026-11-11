@@ -5,7 +5,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 # Поиск по сайту
 
-:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-search]{variant=tonal scheme=primary size=1/2} :badge[1.7.3]{variant=outline scheme=on-surface size=1/2}
 
 Поиск по сайту открывается кнопкой в шапке или клавишами `Command/Control+K` и
 `/`: крупное скруглённое поле и карточка результатов под ним, над лёгким
@@ -15,7 +15,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 
 ## Пример
 
-:::example {id="smart-components/search/overview" label="Кнопка поиска открывает окно: наберите запрос"}
+:::example {id="smart-components/search/overview" label="Кнопка"}
 :::
 
 ## Разметка
@@ -52,7 +52,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 `on-surface-variant`, подписью в начале (`text-position="start"`) и
 сочетанием клавиш в конце (`shortcut="mod+k"`) читается как поле поиска.
 
-:::example {id="smart-components/search/field" label="Кнопка во всю ширину с подсказкой клавиш"}
+:::example {id="smart-components/search/field" label="Кнопка"}
 :::
 
 ### Значок на узком экране
@@ -60,7 +60,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 Кнопка-иконка занимает меньше места в шапке телефона. `keys="false"` убирает
 подвал с подсказками клавиш, `popular="false"` — частые запросы.
 
-:::example {id="smart-components/search/icon" label="Значок без подсказок клавиш и частых запросов"}
+:::example {id="smart-components/search/icon" label="Значок"}
 :::
 
 ### Только результаты
@@ -69,7 +69,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 маленького сайта: здесь нет фильтров (`scopes`), недавних запросов
 (`recent`), быстрых действий (`actions`) и строки пути (`path`).
 
-:::example {id="smart-components/search/quiet" label="Окно без фильтров, недавних, действий и пути"}
+:::example {id="smart-components/search/quiet" label="Окно"}
 :::
 
 ### Подключённый источник
@@ -79,7 +79,7 @@ description: "Окно поиска по сайту: крупное поле, ф
 окна примера, поэтому откройте его кнопкой «Проверить адаптивность». Как
 подключить источник — в разделе [Свой источник результатов](#свой-источник-результатов).
 
-:::example {id="smart-components/search/host" label="Подключённый источник: наберите «тблица», потом походите стрелками"}
+:::example {id="smart-components/search/host" label="Подключённый"}
 :::
 
 ## Поведение
@@ -343,13 +343,13 @@ search.addEventListener('sf-search-navigate', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-search>`, контракт `smart.search` версии `1.7.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-search>`, контракт `smart.search` версии `1.7.3` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+K` или `/` вне текстового поля открывают окно; `↓` и `↑` двигают выбор по результатам, `Enter` открывает выбранный; `Esc` очищает поле, а в пустом поле закрывает окно и возвращает фокус. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/search` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-search` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/search` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-search` |
 
 ## См. также
 

@@ -5,7 +5,7 @@ description: "Переключает язык сайта: сегментами �
 
 # Выбор языка
 
-:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-language]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 Выбор языка переключает язык сайта. Вид следует за числом языков: при
 двух-трёх все языки видны сразу и выбираются одним нажатием, при четырёх и
@@ -14,7 +14,7 @@ description: "Переключает язык сайта: сегментами �
 
 ## Пример
 
-:::example {id="smart-components/language/overview" label="Два, пять и двенадцать языков" preview=sandbox log="change" log_console=true log_open=false}
+:::example {id="smart-components/language/overview" label="Число языков" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -80,7 +80,7 @@ description: "Переключает язык сайта: сегментами �
 числе языков. Вид, который сейчас нарисован, читается свойством `look` и
 атрибутом `data-look` хоста: `none`, `inline`, `menu`, `search`.
 
-:::example {id="smart-components/language/looks" label="Переключатель, меню и меню с поиском" preview=inline}
+:::example {id="smart-components/language/looks" label="Вид" preview=inline}
 :::
 
 ### Коды вместо названий
@@ -110,7 +110,7 @@ description: "Переключает язык сайта: сегментами �
 `disabled` отключает переключатель или кнопку меню: язык виден, но не
 меняется. В форме отключённое поле не отправляется.
 
-:::example {id="smart-components/language/state-disabled" label="Недоступный переключатель и кнопка меню" preview=inline}
+:::example {id="smart-components/language/state-disabled" label="Недоступен" preview=inline}
 :::
 
 ## Поведение
@@ -136,7 +136,7 @@ description: "Переключает язык сайта: сегментами �
 В примере язык применяется к рамке примера, а не ко всей странице
 документации: пагинация под переключателем отвечает на выбранном языке.
 
-:::example {id="smart-components/language/apply" label="Язык применяется к странице примера" preview=sandbox log="change" log_console=true log_open=false}
+:::example {id="smart-components/language/apply" label="Язык" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ### Адрес для каждого языка
@@ -160,7 +160,7 @@ picker.addEventListener('change', (event) => {
 });
 ```
 
-:::example {id="smart-components/language/url" label="Шаблон адреса и переход с сохранением пути" preview=sandbox log="change" log_console=true log_open=false}
+:::example {id="smart-components/language/url" label="Шаблон адреса" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ### Запомнить выбор
@@ -195,7 +195,7 @@ picker.addEventListener('change', (event) => {
 возвращает значение, с которым он был написан, а отключённый не
 отправляется. Отдельного поля для языка не нужно.
 
-:::example {id="smart-components/language/form" label="Язык в форме настроек" preview=sandbox log="change" log_console=true log_open=false}
+:::example {id="smart-components/language/form" label="В форме" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ### Из скрипта
@@ -206,7 +206,7 @@ picker.addEventListener('change', (event) => {
 `disabled` — компонент недоступен, `prevented` — `change` отменили.
 `toggleMenu()` открывает и закрывает меню видов `menu` и `search`.
 
-:::example {id="smart-components/language/api" label="select() и toggleMenu()" preview=sandbox log="change" log_console=true log_open=false}
+:::example {id="smart-components/language/api" label="Из скрипта" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Применение
@@ -231,7 +231,7 @@ picker.addEventListener('change', (event) => {
 `detail.dir` в `change` сообщает направление заранее — сайт, который
 переходит сам, передаёт его дальше.
 
-:::example {id="smart-components/language/rtl" label="Арабский переворачивает направление" preview=sandbox log="change" log_console=true log_open=false}
+:::example {id="smart-components/language/rtl" label="Арабский" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Доступность
@@ -297,13 +297,13 @@ picker.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-language>`, контракт `smart.language` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-language>`, контракт `smart.language` версии `1.2.3` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; название компонент ставит сам; с клавиатуры: в строке: `Tab` ставит фокус на выбранный язык, стрелки, `Home` и `End` переходят между языками и выбирают; в меню: `Tab` ставит фокус на кнопку, `Enter` или `Пробел` открывают меню, стрелки переходят, буква переводит к языку на эту букву, `Enter` выбирает, `Esc` закрывает и возвращает фокус на кнопку; поиск: при открытии меню фокус в поле поиска, `↓` переходит к строкам. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/language` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-language` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/language` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-language` |
 
 ## См. также
 

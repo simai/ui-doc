@@ -1,10 +1,15 @@
-<div class="flex flex-wrap gap-3 items-end">
-  <div class="flex flex-col gap-1 items-start">
-    <sf-input-quantity label="Гостей" value="1" min="1" max="8"></sf-input-quantity>
-    <code class="text-1/2 color-on-surface-variant">value="1" min="1"</code>
-  </div>
-  <div class="flex flex-col gap-1 items-start">
-    <sf-input-quantity label="Гостей" value="8" min="1" max="8"></sf-input-quantity>
-    <code class="text-1/2 color-on-surface-variant">value="8" max="8"</code>
+<style>
+  .quantity-cell { inline-size: 10rem; max-inline-size: 100%; }
+</style>
+<div class="query-container">
+  <div class="grid grid-col-1 cq-sm:grid-col-2 gap-4">
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-end"><div class="quantity-cell"><sf-input-quantity label="Гостей" value="1" min="1" max="8"></sf-input-quantity></div></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">на нижней границе</span>
+    </div>
+    <div class="flex flex-col items-cross-center gap-2">
+      <div class="flex flex-1 items-cross-end"><div class="quantity-cell"><sf-input-quantity label="Гостей" value="8" min="1" max="8"></sf-input-quantity></div></div>
+      <span class="text-1/2 color-on-surface-variant wrap-none">на верхней границе</span>
+    </div>
   </div>
 </div>

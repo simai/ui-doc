@@ -51,7 +51,7 @@ description: "Окрашивает рамку элемента цветовой 
 | `border-{значение}` | `border-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `border-info-container-strong` | `border-color: var(--sf-info-container-strong)` | — |
 
-Ещё 90 классов уходят без замены и работают до 2027-01-01 (запись `utility-c17-legacy-palette-classes` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
+Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят без замены и работают до 2027-01-01 ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:border-transparent`.
 
@@ -74,7 +74,7 @@ description: "Окрашивает рамку элемента цветовой 
 | `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-outline-primary` | `var(--sf-primary-outline)` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
 | `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |

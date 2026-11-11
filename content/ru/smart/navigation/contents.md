@@ -5,7 +5,7 @@ description: "Оглавление одной страницы: разделы �
 
 # Оглавление
 
-:badge[sf-contents]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-contents]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Оглавление показывает разделы одной страницы ссылками и отмечает текущий, пока
 читатель прокручивает текст. Есть четыре вида — для документации, справки,
@@ -15,7 +15,7 @@ description: "Оглавление одной страницы: разделы �
 
 ## Пример
 
-:::example {id="smart-components/contents/overview" label="Колонка рядом со статьёй: прокрутите текст" preview=sandbox}
+:::example {id="smart-components/contents/overview" label="Колонка" preview=sandbox}
 :::
 
 ## Разметка
@@ -58,32 +58,40 @@ CSS-селектором. Оглавление рядом со статьёй с
 
 ### Свёрнутая строка
 
+`layout` • по умолчанию `auto` • [справочник](#атрибуты)
+
 `layout="compact"` — одна кнопка: название текущего раздела и под ней линия
 прочитанного. Нажатие открывает весь список; выбор раздела, `Escape` или
 нажатие снаружи его закрывают.
 
-:::example {id="smart-components/contents/compact" label="Кнопка с текущим разделом над текстом"}
+:::example {id="smart-components/contents/compact" label="Кнопка"}
 :::
 
 ### Штрихи у края
+
+`layout` • по умолчанию `auto` • [справочник](#атрибуты)
 
 `layout="rail"` — по короткому штриху на раздел, у текущего штрих длиннее.
 Названия появляются при наведении и фокусе, а для экранного диктора они
 всегда остаются именами ссылок.
 
-:::example {id="smart-components/contents/rail" label="Штрихи справа от статьи: наведите на них"}
+:::example {id="smart-components/contents/rail" label="Штрихи у края"}
 :::
 
 ### Якоря-вкладки
+
+`layout` • по умолчанию `auto` • [справочник](#атрибуты)
 
 `layout="bar"` — строка якорей над разделами, текущий подчёркнут. Строка
 прилипает к верху, пока страница прокручивается. Подходит для длинной
 формы, где все разделы на одной странице.
 
-:::example {id="smart-components/contents/bar" label="Разделы страницы настроек"}
+:::example {id="smart-components/contents/bar" label="Якоря-вкладки"}
 :::
 
 ### Выбор по ширине
+
+`layout`, `collapse` • [справочник](#атрибуты)
 
 `layout="auto"` (по умолчанию) рисует колонку от ступени `collapse` и шире и
 свёрнутую строку — уже. `collapse` — ступень сетки SIMAI Framework: `sm`
@@ -92,10 +100,12 @@ CSS-селектором. Оглавление рядом со статьёй с
 и без скрипта. В примере `collapse="sm"`: сузьте окно просмотра, и колонка
 станет кнопкой.
 
-:::example {id="smart-components/contents/auto" label="Колонка на широком экране, кнопка — на узком" preview=sandbox}
+:::example {id="smart-components/contents/auto" label="Колонка" preview=sandbox}
 :::
 
 ### Размер
+
+`size` • по умолчанию `1/2` • [справочник](#атрибуты)
 
 `size` — ступень текста и кнопки свёрнутой строки: `1/2` (по умолчанию) или
 `1`.
@@ -273,13 +283,13 @@ contents.addEventListener('sf-contents-change', ({detail}) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-contents>`, контракт `smart.contents` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как навигация; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит ссылки разделов; `Enter` на ссылке прокручивает к разделу и ставит туда фокус; `Enter` или `Пробел` на кнопке свёрнутого оглавления открывают список, `Esc` закрывает его и возвращает фокус на кнопку. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/contents` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-contents` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/contents` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-contents` |
 
 ## См. также
 

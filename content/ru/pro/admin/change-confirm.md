@@ -5,7 +5,7 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
-:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-confirm-change>` — карточка подготовленного изменения, которое ждёт
 «да» или «нет» человека: каждое значение как было и как станет, два
@@ -107,7 +107,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2bd5a3ab478a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -115,8 +115,8 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 |:---|:---|
 | Тег | `<sf-confirm-change>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.confirm-change`, версия `1.5.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Контракт | `smart.confirm-change`, версия `1.6.0` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -128,7 +128,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 - `root-style` — `string`, по умолчанию пусто. Свои стили для нарисованного элемента, например `max-width: 20rem`.
 - `heading` — `string`, по умолчанию пусто. Что это за изменение; без него карточка называется «Что изменится».
 - `heading-level` — `string`, по умолчанию `3`, значения: `2`, `3`, `4`, `5`, `6`. Уровень заголовка там, где стоит карточка.
-- `state` — `string`, по умолчанию `open`, значения: `open`, `pending`, `accepted`, `declined`, `expired`. Состояние вопроса: `open` — ответы можно нажать; `pending` — ответ отправляется (ставится нажатием); `accepted`, `declined`, `expired` — виден только итог.
+- `state` — `string`, по умолчанию `open`, значения: `open`, `pending`, `accepted`, `declined`, `expired`. `open` — ответы предложены. `pending` — ответ в пути (ставится нажатием). `accepted`, `declined`, `expired` — показывается только итог. Если человек отказался здесь, поверхность сворачивается (`hidden`), а фокус с кольцом возвращается к элементу, который задал вопрос, иначе — к ближайшему доступному для фокуса месту рядом или к следующему элементу страницы; состояние `declined`, заданное приложением без такого ответа, остаётся видимым.
 - `expires-at` — `string`, по умолчанию пусто. ISO 8601. После этого момента открытая карточка считается просроченной и один раз сообщает об этом через sf-change-confirm-expired.
 - `change-id` — `string`, по умолчанию пусто. Имя изменения у приложения; возвращается в каждом событии.
 - `disabled` — `boolean`, по умолчанию `false`. Ответы видны, но нажать их нельзя, например пока отправляется другой ответ.
@@ -165,5 +165,5 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/confirm-change`
-- `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-confirm-change`
+- `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/confirm-change`
+- `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-confirm-change`

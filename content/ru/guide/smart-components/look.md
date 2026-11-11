@@ -18,7 +18,7 @@ description: "Как меняют вид смарт-компонента: нас
 | интерфейс или порт хоста | **новый компонент** с именем по назначению |
 
 Шаблоны называют по расположению — `rows`, `cards`, `rail` — и никогда по
-продукту.
+продукту. В примере `sf-record-list` — образец, такого тега в поставке нет:
 
 ```html
 <sf-record-list collection="orders" template="cards" size="1/2"></sf-record-list>
@@ -33,15 +33,18 @@ description: "Как меняют вид смарт-компонента: нас
 - `parts` — по желанию: классы, к которым может обращаться страница.
   Компоненты рисуют в обычном DOM, поэтому это классы, а не `::part`.
 
-Объявление может выглядеть так (имена переменных — пример):
+Так это объявлено у поставляемого переключателя `sf-switch`:
 
 ```json
 "css-variables": {
+  "--sf-switch-color": {"type": "color", "state": "default"},
+  "--sf-switch-background-color": {"type": "color", "state": "default"},
+  "--sf-switch-border-color": {"type": "color", "state": "default"},
+  "--sf-switch-border-width": {"type": "length", "state": "default"},
+  "--sf-switch-radius": {"type": "length", "state": "default"},
+  "--sf-switch-gap": {"type": "length", "state": "default"},
   "--sf-switch-checked-background-color": {"type": "color", "state": "checked"},
-  "--sf-switch-track-background-color": {"type": "color", "state": "default"},
-  "--sf-switch-thumb-color": {"type": "color", "state": "default"},
-  "--sf-switch-disabled-opacity": {"type": "number", "state": "disabled"},
-  "--sf-switch-focus-ring-color": {"type": "color", "state": "focus-visible"}
+  "--sf-switch-checked-thumb-color": {"type": "color", "state": "checked"}
 },
 "host-states": {"data-inherited": "boolean"}
 ```
@@ -57,8 +60,8 @@ description: "Как меняют вид смарт-компонента: нас
   служит ей запасным значением — никогда только токен:
 
   ```css
-  .sf-switch:has(input:checked) .sf-switch-track {
-    background-color: var(--sf-switch-checked-background-color, var(--sf-primary));
+  .sf-switch:has(input:checked):not(:has(input:disabled)) .sf-switch-toggler {
+    --sf-switch-toggler--background-color: var(--sf-switch-checked-background-color, var(--sf-primary));
   }
   ```
 

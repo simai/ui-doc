@@ -1,0 +1,38 @@
+<div data-sf-density="compact">
+  <div class="flex flex-col gap-3">
+    <sf-header-page heading="Магазин «Северный ветер»">
+      <sf-breadcrumbs slot="path" aria-label="Путь к странице" items='[{"label":"Хостинг","href":"#hosting"},{"label":"Сайты","href":"#sites"},{"label":"Магазин «Северный ветер»"}]'></sf-breadcrumbs>
+      <sf-button slot="actions" appearance="outline" scheme="on-surface" icon-start="open_in_new" text="Открыть сайт" href="#site"></sf-button>
+      <sf-button-icon slot="actions" id="record-more" icon="more_horiz" appearance="outline" scheme="on-surface" aria-label="Ещё действия с сайтом" aria-haspopup="menu"></sf-button-icon>
+    </sf-header-page>
+    <sf-menu-context id="record-menu" popup aria-label="Действия с сайтом"></sf-menu-context>
+    <div class="grid grid-col-1 md:grid-col-3 gap-3 items-cross-start">
+      <section class="sf-card md:col-span-2" aria-labelledby="record-facts">
+        <div class="flex items-cross-center gap-2">
+          <h2 id="record-facts" class="flex-1 m-0 text-1 weight-6">Сведения</h2>
+          <sf-button appearance="ghost" scheme="on-surface" icon-start="edit" text="Изменить"></sf-button>
+        </div>
+        <sf-list-description empty-text="Не указан">
+          <script type="application/json" data-sf-settings>{"items": [
+            {"label": "Адрес", "value": "nord-wind.ru", "href": "#site"},
+            {"label": "Тип", "value": "Магазин"},
+            {"label": "Сертификат", "value": "Действует до 14 декабря", "status": "success", "hint": "Продлевается сам"},
+            {"label": "Резервная копия", "value": "Сегодня в 04:00, 1,2 ГБ", "status": "success"},
+            {"label": "Корень сайта", "value": "/var/www/nord-wind/public", "mono": true, "copy": true},
+            {"label": "Ответственный", "value": ""}
+          ]}</script>
+        </sf-list-description>
+      </section>
+      <section class="sf-card" aria-labelledby="record-history">
+        <h2 id="record-history" class="m-0 text-1 weight-6">История</h2>
+        <sf-list-timeline size="1/2" now="2026-11-10T12:00:00+03:00" label="История сайта">
+          <script type="application/json" data-sf-settings>{"items": [
+            {"id": "h1", "time": "2026-11-10T04:00:00+03:00", "status": "success", "title": "Резервная копия создана", "text": "1,2 ГБ"},
+            {"id": "h2", "time": "2026-11-09T18:12:00+03:00", "title": "Изменён тип сайта", "actor": "Анна Белова"},
+            {"id": "h3", "time": "2026-11-07T10:30:00+03:00", "status": "warning", "title": "Сайт отвечал медленно", "text": "12 минут, до 4 секунд"}
+          ]}</script>
+        </sf-list-timeline>
+      </section>
+    </div>
+  </div>
+</div>

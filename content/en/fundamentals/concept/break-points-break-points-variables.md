@@ -5,7 +5,7 @@ description: "Breakpoint variables"
 
 # Breakpoint variables
 
-Each breakpoint is defined via a variable, which makes it easy to change values centrally. The breakpoints are adapted from Bootstrap with these conditions in mind:
+Each breakpoint is defined via a variable, which makes it easy to change values centrally. The breakpoints follow these conditions:
 
 * A breakpoint size should align with the framework’s sizing system.
 * Breakpoint values should be divisible by 12 (with 1rem = 16px) to support a 12‑column grid.

@@ -6,6 +6,8 @@ profile: reference
 
 # Клавиши
 
+:badge[sf-kbd]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+
 Компонент оформляет клавишу или сочетание клавиш как надпись на клавише:
 «нажмите `Ctrl` + `S`». Берите его в инструкциях, подсказках и справке по
 горячим клавишам.
@@ -30,6 +32,8 @@ profile: reference
 ## Варианты
 
 ### Сочетание
+
+`sf-kbd--group` • [справочник](#классы)
 
 Сочетание записывают тремя способами. Отдельные `<kbd>` с текстом «+» между
 ними — самый простой. `<kbd>`, внутри которого лежат клавиши, — так HTML
@@ -69,14 +73,14 @@ profile: reference
 
 | Переменная | Что задаёт | По умолчанию |
 |:---|:---|:---|
-| `--sf-kbd-size` | Высота и наименьшая ширина плашки и клавиши относительно их букв. | `1.6em` |
-| `--sf-kbd-padding-inline` | Отступ по бокам от букв плашки или клавиши. | `0.4em` |
-| `--sf-kbd-gap` | Промежуток между клавишами сочетания, нарисованного плашками или клавишами. | `0.25em` |
-| `--sf-kbd-font-size` | Размер букв плашки и клавиши относительно текста вокруг. | `0.8125em` |
+| `--sf-kbd-size` | Высота и наименьшая ширина клавиши: высота строки текста на шаг меньше, чем у места. Берётся из места: размер кнопки или поля, класс текста, иначе основной текст. | `var(--sf-text-height-1\/2) (body text)` |
+| `--sf-kbd-padding-inline` | Отступ по бокам от букв плашки или клавиши. | `var(--sf-space-1\/4)` |
+| `--sf-kbd-gap` | Промежуток между клавишами сочетания, нарисованного плашками или клавишами. | `var(--sf-space-1\/4)` |
+| `--sf-kbd-font-size` | Буквы клавиши: размер текста на шаг меньше, чем у места. Берётся из места: размер кнопки или поля, класс текста, иначе основной текст. | `var(--sf-text-size-1\/2) (body text)` |
 | `--sf-kbd-font-family` | Шрифт плашки и клавиши. | `var(--sf-text--family)` |
 | `--sf-kbd-radius` | Скругление плашки и клавиши. | `var(--sf-radius--ui)` |
-| `--sf-kbd-background-color` | Заливка плашки (в кнопке или поле): смесь с цветом текста вокруг. | `color-mix(in srgb, currentColor 12%, transparent)` |
-| `--sf-kbd-color` | Цвет букв плашки (в кнопке или поле): смесь с цветом текста вокруг. | `color-mix(in srgb, currentColor 80%, transparent)` |
+| `--sf-kbd-background-color` | Заливка плашки (в кнопке или поле): смесь с цветом текста вокруг. | `color-mix(in srgb, currentColor 8%, transparent)` |
+| `--sf-kbd-color` | Буквы клавиши в кнопке или поле: цвет текста места целиком — не меньше 4.5:1 к заливке клавиши на любом виде `sf-button`. | `currentColor` |
 | `--sf-kbd-border-color` | Рамка клавиши и её нижний край (в тексте). | `var(--sf-outline-variant)` |
 | `--sf-kbd-plain-color` | Цвет знаков без плашек (в меню или списке выбора). | `var(--sf-on-surface-variant)` |
 
@@ -93,8 +97,10 @@ kbd {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-kbd--inline-size` | не задана; задают модификаторы, например `:where(kbd.sf-kbd--square, .sf-kbd.sf-kbd--square)`: `var(--sf-kbd--size)` | `width`, `inline-size` |
-| `--sf-kbd--padding-inline` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group):not(:has(> kbd)), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-kbd-padding-inline, 0.4em)` | `padding-left`, `padding-right`, `padding-inline` |
-| `--sf-kbd--size` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group):not(:has(> kbd)), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-kbd-size, 1.6em)` | `min-width`, `min-inline-size`, `height`, `block-size`, `--sf-kbd--inline-size` |
+| `--sf-kbd--padding-inline` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group):not(:has(> kbd)), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-kbd-padding-inline, var(--sf-space-1/4))` | `padding-left`, `padding-right`, `padding-inline` |
+| `--sf-kbd--size` | не задана; задают модификаторы, например `:where(kbd:not(.sf-kbd--group):not(:has(> kbd)), .sf-kbd:not(.sf-kbd--group))`: `var(--sf-kbd-size, var(--sf-kbd--step-size, var(--sf-text-height-1/2)))` | `margin`, `min-width`, `min-inline-size`, `height`, `block-size`, `--sf-kbd--inline-size` |
+| `--sf-kbd--step-font-size` | не задана; задают модификаторы, например `:where(button, [role=button], [role=combobox], [role=searchbox])`: `var(--sf-text-size-1/2)` | `font-size` |
+| `--sf-kbd--step-size` | не задана; задают модификаторы, например `:where(button, [role=button], [role=combobox], [role=searchbox])`: `var(--sf-text-height-1/2)` | `--sf-kbd--size`, `line-height` |
 
 ## См. также
 

@@ -5,19 +5,19 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 # Генератор темы
 
-:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.11]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-theme-generator]{variant=tonal scheme=primary size=1/2} :badge[1.1.12]{variant=outline scheme=on-surface size=1/2}
 
 Генератор темы строит тему из одного цвета: человек выбирает основной цвет и
 сразу видит восемь тональных палитр SIMAI Framework — основную, вторичную,
 дополнительную, нейтральную, ошибку, предупреждение, успех и информацию. Из
-них получаются 128 тонов `--sf-<палитра>-<тон>` и 98 полупрозрачных ступеней
+них получаются тона `--sf-<палитра>-<тон>` и полупрозрачные ступени
 `--sf-<палитра>-<тон>--alfa-<ступень>`, на которых держатся цвета интерфейса.
 Берите его в настройках сайта или документации, где владелец выбирает
 фирменный цвет.
 
 ## Пример
 
-:::example {id="smart-components/theme-generator/overview" label="Тема участка страницы"}
+:::example {id="smart-components/theme-generator/overview" label="Тема участка страницы" preview=sandbox log="change sf-theme-generator-committed" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -36,6 +36,8 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — `1/2`, `1` (по умолчанию) или `2`.
 
 :::example {id="smart-components/theme-generator/sizes" label="Размеры 1/2, 1 и 2"}
@@ -43,10 +45,12 @@ description: "Строит тему SIMAI Framework из одного цвета
 
 ### Палитра продукта
 
+`swatches` • [справочник](#атрибуты)
+
 `swatches` — цвета продукта рядом с выбором, как у
 [`<sf-input-color>`](/ru/smart/forms/color/): `#hex|Название, #hex`.
 
-:::example {id="smart-components/theme-generator/swatches" label="Цвета продукта рядом с выбором"}
+:::example {id="smart-components/theme-generator/swatches" label="Палитра продукта"}
 :::
 
 ## Состояния
@@ -56,7 +60,7 @@ description: "Строит тему SIMAI Framework из одного цвета
 Пустое значение — цвет SIMAI Framework `#005bbe` и его собственная тема.
 «Сбросить» и `reset()` возвращают генератор в это состояние.
 
-:::example {id="smart-components/theme-generator/state-default" label="Генератор без выбранного цвета"}
+:::example {id="smart-components/theme-generator/state-default" label="Цвет SIMAI Framework"}
 :::
 
 ## Поведение
@@ -101,23 +105,20 @@ SIMAI Framework `#005bbe` и его собственная тема. Цвет к
 
 | Событие | Когда |
 |:---|:---|
-| `sf-theme-generator-change` | выбор меняется: перетаскивание в палитре, образец цвета, число в поле |
-| `sf-theme-generator-apply` | выбор зафиксирован: `change` палитры, образец цвета, `Enter` или уход из поля, «Сбросить» |
+| `change` | выбор меняется: перетаскивание в палитре, образец цвета, число в поле |
+| `sf-theme-generator-committed` | выбор зафиксирован: `change` палитры, образец цвета, `Enter` или уход из поля, «Сбросить» |
 
 В `detail` обоих — `value` (пусто, пока действует цвет SIMAI Framework), `hue`,
-`chroma`, `theme` (объект темы), `variables` (226 переменных) и `css` —
+`chroma`, `theme` (объект темы), `variables` (все переменные темы) и `css` —
 правило под `selector` (по умолчанию `:root`). Сохраните `css` в CSS сайта —
 и тема действует на каждой странице без компонента.
 
-Прежние имена `sf-theme-change` и `sf-theme-apply` компонент отправляет
-рядом с новыми для совместимости до 2026-12-01 (запись журнала
-`event-theme-generator-names`); в новом коде слушайте новые имена.
-`sf-theme-change` — ещё и событие Loader на `window` о смене светлой и тёмной
-темы (см. [События загрузчика](/ru/guide/connection/loader/#события-загрузчика)).
+О смене светлой и тёмной темы сообщает другое событие — `sf-theme-change`
+загрузчика на `window` (см. [События загрузчика](/ru/guide/connection/loader/#события-загрузчика)).
 
 ```js
 const generator = document.querySelector('sf-theme-generator');
-generator.addEventListener('sf-theme-generator-apply', ({detail}) => {
+generator.addEventListener('sf-theme-generator-committed', ({detail}) => {
   saveSiteSetting('theme', {value: detail.value, hue: detail.hue, chroma: detail.chroma, css: detail.css});
 });
 ```
@@ -150,8 +151,8 @@ const variables = themeVariables(themeFromColor('#833ab6'));   // 226 пар {и
 | `themeFromColor(color, options)` | тема из цвета `#rgb` или `#rrggbb` |
 | `themeFromHct({hue, chroma}, options)` | тема из тона и насыщенности; `options[палитра]` — свои `{hue, chroma}` для палитры |
 | `colorToHct(color)` | как цвет читается: `{hex, hue, chroma, tone}` |
-| `themeVariables(theme)` | 226 переменных `{имя: значение}`: 128 тонов и 98 полупрозрачных ступеней |
-| `themeToCss(theme, selector)` | правило CSS с теми же 226 переменными под селектором, по умолчанию `:root` |
+| `themeVariables(theme)` | переменные темы `{имя: значение}`: тоны и полупрозрачные ступени |
+| `themeToCss(theme, selector)` | правило CSS с теми же переменными под селектором, по умолчанию `:root` |
 | `applyTheme(theme, target)` | пишет переменные во встроенный стиль `target` и возвращает функцию, которая их снимает |
 
 ```js
@@ -216,7 +217,7 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 | Метод | Возвращает | Что делает |
 |:---|:---|:---|
 | `reset()` | объект | Вернуть собственный цвет SIMAI Framework; выбор принят. |
-| `toCSS(selector?: string)` | строка | Тема одним правилом таблицы стилей из 128 примитивов и 160 полупрозрачных ступеней — под заданным селектором или селектором из атрибута `selector`. |
+| `toCSS(selector?: string)` | строка | Тема одним правилом таблицы стилей из примитивов и полупрозрачных ступеней — под заданным селектором или селектором из атрибута `selector`. |
 | `toJSON()` | объект | Объект темы (`simai.framework.theme` с `schema_version: 1`): тон и насыщенность источника и у каждой палитры её тон, насыщенность и тона. |
 
 ### События
@@ -232,13 +233,13 @@ Apache-2.0): нужные модули лежат в исходниках SIMAI 
 
 | | |
 |:---|:---|
-| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.11` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-theme-generator>`, контракт `smart.theme-generator` версии `1.1.12` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/theme-generator` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-theme-generator` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/theme-generator` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-theme-generator` |
 
 ## См. также
 

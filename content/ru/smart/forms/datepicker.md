@@ -5,7 +5,7 @@ description: "Выбирает дату, дату со временем, вре�
 
 # Календарь
 
-:badge[sf-input-date]{variant=tonal scheme=primary size=1/2} :badge[1.4.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-date]{variant=tonal scheme=primary size=1/2} :badge[1.4.5]{variant=outline scheme=on-surface size=1/2}
 
 Календарь даёт выбрать одну дату или период с переходом по месяцам и годам, а
 также дату со временем или одно время суток. Берите его, когда дату удобнее
@@ -17,7 +17,7 @@ description: "Выбирает дату, дату со временем, вре�
 
 ## Пример
 
-:::example {id="smart-components/datepicker/overview" label="Результат"}
+:::example {id="smart-components/datepicker/overview" label="Результат" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -41,12 +41,16 @@ description: "Выбирает дату, дату со временем, вре�
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` выбирает ступень размерной шкалы поля: `1/2`, `1` или `2`.
 
 :::example {id="smart-components/datepicker/sizes" label="Размеры 1/2, 1 и 2"}
 :::
 
 ### Период
+
+`range`, `start-value`, `end-value` • [справочник](#атрибуты)
 
 `range` включает выбор периода: первый щелчок задаёт начало, второй — конец.
 Если второй день раньше первого, границы меняются местами. Начальный период
@@ -56,6 +60,8 @@ description: "Выбирает дату, дату со временем, вре�
 :::
 
 ### Дата и время
+
+`mode`, `date`, `min-time` • [справочник](#атрибуты)
 
 `mode` выбирает, что задаёт поле:
 
@@ -70,10 +76,12 @@ description: "Выбирает дату, дату со временем, вре�
 `15` минуты — 00, 15, 30 и 45. `range` выбирает период дат и работает только в
 режиме `date`.
 
-:::example {id="smart-components/datepicker/datetime" label="Дата со временем и время напоминания"}
+:::example {id="smart-components/datepicker/datetime" label="Дата и время"}
 :::
 
 ### Быстрые диапазоны
+
+`presets`, `min-date`, `max-date` • [справочник](#атрибуты)
 
 В режиме периода `presets` выводит рядом с сеткой список готовых диапазонов.
 В атрибуте их перечисляют через запятую встроенными id: `today`, `yesterday`,
@@ -89,10 +97,12 @@ description: "Выбирает дату, дату со временем, вре�
 Если рядом с сеткой списку не хватает места, он переносится над ней строкой.
 Список — одна остановка табуляции, по пунктам ходят стрелками.
 
-:::example {id="smart-components/datepicker/presets" label="Период с быстрыми диапазонами"}
+:::example {id="smart-components/datepicker/presets" label="Быстрые диапазоны"}
 :::
 
 ### Календарь на странице
+
+`input` • [справочник](#атрибуты)
 
 `input="false"` выводит календарь прямо на странице, без поля и окна, —
 например, в боковой панели с расписанием.
@@ -101,6 +111,8 @@ description: "Выбирает дату, дату со временем, вре�
 :::
 
 ### Ячейки месяца и года
+
+`context` • [справочник](#атрибуты)
 
 `context="month"` или `context="year"` открывает календарь сразу на выборе
 месяца или года; из кода то же делает `setContext()`.
@@ -111,6 +123,8 @@ description: "Выбирает дату, дату со временем, вре�
 ## Состояния
 
 ### Ошибка
+
+`invalid`, `error-message` • [справочник](#атрибуты)
 
 `invalid` показывает поле недопустимым: рамка ошибки и `aria-invalid="true"` у
 нативного поля. `error-message` — текст под полем; пока поле допустимо, он не
@@ -124,12 +138,16 @@ description: "Выбирает дату, дату со временем, вре�
 
 ### Недоступен
 
+`disabled` • [справочник](#атрибуты)
+
 `disabled` отключает поле и календарь.
 
 :::example {id="smart-components/datepicker/state-disabled" label="Недоступное поле"}
 :::
 
 ### Только чтение
+
+`readonly`, `range` • [справочник](#атрибуты)
 
 `readonly` запрещает ввод: дату выбирают только в календаре. Поле периода
 (`range`) всегда только для чтения: в одном поле две даты, и прочитать их
@@ -254,13 +272,13 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 <sf-input-date label="Дата доставки" input-name="delivery_date_text"></sf-input-date>
 <input type="hidden" name="delivery_date">
 <script>
-  const picker = document.querySelector('sf-datepicker[input-name="delivery_date_text"]');
+  const picker = document.querySelector('sf-input-date[input-name="delivery_date_text"]');
   const iso = document.querySelector('input[name="delivery_date"]');
   picker.addEventListener('change', (event) => { iso.value = event.detail.isoValue ?? ''; });
 </script>
 ```
 
-### Событие `change`
+### Событие изменения
 
 Выбор дня отправляет на элементе всплывающее событие `change`. Его
 `event.detail`:
@@ -287,9 +305,6 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 дату ISO показанным текстом. Слушатель на предке, например на форме, слышит
 и `change` других полей, поэтому проверяет `event.target`.
 
-Устаревшее событие `sf-change` приходит вместе с `change` и с тем же
-`detail`. Подписывайтесь на `change`.
-
 ### Значение и окно из кода
 
 Свойство `value` возвращает дату или массив границ периода и принимает то же
@@ -303,7 +318,7 @@ ISO принимается тоже: `14.10.2026` и `2026-10-14` дают од�
 день, `closePanel({options: {restoreFocus: true}})` возвращает его в поле.
 
 ```js
-const period = document.querySelector('sf-datepicker[name="period"]');
+const period = document.querySelector('sf-input-date[name="period"]');
 period.addEventListener('change', (event) => {
   const {startValue, endValue} = event.detail;
   if (startValue && endValue) loadReport(startValue, endValue);
@@ -414,15 +429,15 @@ period.value = ['2026-10-01', '2026-10-31'];
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-date>`, контракт `smart.input-date` версии `1.4.4` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-input-date>`, контракт `smart.input-date` версии `1.4.5` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Enter`, `Пробел`, `Esc`, `←`, `→`, `↑`, `↓`, `Home`, `End`, `PageUp`, `PageDown`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-date` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-date` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-date` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-date` |
 
 ## См. также
 
-- [Текстовые поля](/ru/smart/forms/inputs/) — когда дату удобнее напечатать.
+- [Текстовое поле](/ru/smart/forms/inputs/) — когда дату удобнее напечатать.
 - [Календарь на классах](/ru/components/forms/datepicker/) — оформление календаря в статической разметке.

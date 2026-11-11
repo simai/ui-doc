@@ -6,13 +6,15 @@ profile: reference
 
 # Загрузка файлов
 
+:badge[sf-file-upload]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+
 Загрузка файлов принимает один или несколько файлов через системное окно или
 перетаскиванием и показывает список выбранных файлов с ходом передачи. Сами
 файлы компонент не отправляет: это делает приложение своим запросом.
 
 ## Пример
 
-:::example {id="components/file-upload/overview" label="Зона загрузки изображений"}
+:::example {id="components/file-upload/overview" label="Зона загрузки изображений" preview=sandbox log="sf-file-upload:select sf-file-upload:file-add sf-file-upload:remove sf-file-upload:retry sf-file-upload:file-error sf-file-upload:file-complete sf-file-upload:complete" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -42,6 +44,8 @@ profile: reference
 
 ### Размер
 
+`sf-file-upload--size-1/2`, `sf-file-upload--size-1`, `sf-file-upload--size-2` • [справочник](#классы)
+
 Три ступени — `sf-file-upload--size-1/2`, `sf-file-upload--size-1` и
 `sf-file-upload--size-2`. Пункты списка берут размер зоны:
 `sf-upload-progress--size-*`. Берите ступень полей той же формы.
@@ -66,7 +70,7 @@ profile: reference
 прежний список, отмена системного окна его не меняет; один и тот же файл можно
 выбрать повторно.
 
-:::example {id="components/file-upload/selection" label="Зона на один файл и на несколько"}
+:::example {id="components/file-upload/selection" label="Один и много"}
 :::
 
 ## Состояния
@@ -76,6 +80,8 @@ profile: reference
 
 ### Передача
 
+`sf-upload-progress--process` • [справочник](#классы)
+
 `sf-upload-progress--process` — файл передаётся: под именем полоса прогресса,
 справа кнопка удаления.
 
@@ -83,6 +89,8 @@ profile: reference
 :::
 
 ### Передан
+
+`sf-upload-progress--done` • [справочник](#классы)
 
 `sf-upload-progress--done` — передача завершена, вместо кнопки удаления стоит
 отметка. Значение 100 само по себе не означает успех: состояние `done`
@@ -92,6 +100,8 @@ profile: reference
 :::
 
 ### Ошибка
+
+`sf-upload-progress--error` • [справочник](#классы)
 
 `sf-upload-progress--error` — передача не удалась: значок окрашен цветом
 ошибки, под именем кнопка повтора `sf-upload-progress-repeat`. Причину ошибки
@@ -156,7 +166,7 @@ profile: reference
 (`process`), и такой пункт никогда не даст `sf-file-upload:file-complete`.
 Прогресс вне 0–100 обрезается до границы, нечисловой читается как 0.
 
-:::example {id="components/file-upload/actions" label="Удаление и повтор"}
+:::example {id="components/file-upload/actions" label="Удаление"}
 :::
 
 `SF.FileUpload` управляет списком; `target` — зона или элемент внутри неё:

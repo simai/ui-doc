@@ -1,0 +1,15 @@
+<div data-sf-density="compact">
+  <div class="flex flex-col gap-3">
+    <sf-header-page id="first-header" heading="Товары">
+      <sf-breadcrumbs slot="path" aria-label="Путь к странице" items='[{"label":"Магазин","href":"#shop"},{"label":"Товары"}]'></sf-breadcrumbs>
+      <div slot="actions" id="first-add" hidden><sf-button icon-start="add" text="Добавить товар"></sf-button></div>
+    </sf-header-page>
+    <div id="first-empty" class="flex flex-col items-cross-center p-y-4 radius-surface border border-outline-variant">
+      <sf-empty-state id="first-state" kind="no-data" size="2" heading-level="2" heading="Товаров пока нет" text="Добавьте первый товар — с ним магазин начнёт принимать заказы.">
+        <sf-button slot="actions" icon-start="add" text="Добавить товар"></sf-button>
+      </sf-empty-state>
+    </div>
+    <sf-list id="first-list" label="Товары" hidden></sf-list>
+    <div><sf-button id="first-reset" appearance="outline" scheme="on-surface" icon-start="restart_alt" text="Начать сначала" hidden></sf-button></div>
+  </div>
+</div>

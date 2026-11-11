@@ -57,7 +57,7 @@ description: "Компоненты, которые рисуются поверх
 ## Закрытие с причиной
 
 Перед закрытием слой отправляет **отклоняемую просьбу**
-`sf-<тег>-close {reason, unsaved}`, а после — факт `sf-<тег>-closed {reason}`.
+`<тег>-close {reason, unsaved}`, а после — факт `<тег>-closed {reason}`.
 
 | `reason` | Что закрыло |
 |:---|:---|
@@ -69,7 +69,7 @@ description: "Компоненты, которые рисуются поверх
 
 - `unsaved` — настройка слоя `unsaved`: её задаёт страница или связывают с
   ключом «форма изменена».
-- `dismissible: false` (псевдоним `unclose`) убирает `escape` и `outside`, но
+- `dismissible: false` убирает `escape` и `outside`, но
   никогда не явное действие.
 - Глагол `cancel` в панели превращается в `close {reason: cancelled}`.
 
@@ -94,11 +94,15 @@ panel.addEventListener('sf-drawer-close', (event) => {
   `{"check": {"left": {"key": "answer.accepted"}, "op": "yes"}}`.
 
 ```html
-<sf-modal id="ask-delete" label="Удалить запись?">
+<sf-modal id="ask-delete" heading="Удалить запись?">
   <p slot="content">Запись удалится без возможности восстановления.</p>
   <div slot="footer" class="flex gap-1/2">
-    <button type="button" data-sf-action="ask-delete.close">Отмена</button>
-    <button type="button" data-sf-action="ask-delete.confirm">Удалить</button>
+    <button type="button" class="sf-button sf-button--danger sf-button--size-1" data-sf-action="ask-delete.confirm">
+      <span class="sf-button-text-container">Удалить</span>
+    </button>
+    <button type="button" class="sf-button sf-button--outline sf-button--on-surface sf-button--size-1" data-sf-action="ask-delete.close">
+      <span class="sf-button-text-container">Отмена</span>
+    </button>
   </div>
 </sf-modal>
 ```

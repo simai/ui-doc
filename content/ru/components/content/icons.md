@@ -6,6 +6,8 @@ profile: reference
 
 # Иконки
 
+:badge[sf-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+
 Иконка выводит символ шрифта Material Symbols по его имени и согласует
 размер, начертание и форму со шкалами Framework. Берите её, чтобы подкрепить
 подпись или узнаваемо обозначить действие; на цветной подложке её
@@ -13,7 +15,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/icons/overview" label="Декоративная и значимая иконка"}
+:::example {id="components/icons/overview" label="Смысл иконки"}
 :::
 
 ## Разметка
@@ -28,10 +30,6 @@ profile: reference
   других компонентов размер задаёт компонент.
 - Цвет иконка наследует от текста (`currentColor`); утилиты цвета на самой
   иконке или на родителе меняют его.
-- Имена с одним дефисом (`sf-icon-bold`, `sf-icon-filled`, `sf-icon-solid`,
-  `sf-icon-rounded`, `sf-icon-shape` и другие) работают так же, как
-  модификаторы `sf-icon--weight-bold`, `sf-icon--filled`,
-  `sf-icon--rounded` и `sf-icon--sharp`; в разметке пишите модификаторы.
 - Класс `sf-icon-loaded` ставит загрузчик иконок Framework, когда шрифт
   готов; до этого иконка не видна, и вместо символа не мелькает его имя.
   Этот класс не пишите в разметке вручную.
@@ -39,6 +37,8 @@ profile: reference
 ## Варианты
 
 ### Семейство
+
+`sf-icon--rounded`, `sf-icon--sharp` • [справочник](#классы)
 
 Без класса иконка рисуется семейством Outlined. `sf-icon--rounded` берёт
 Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp с острыми углами.
@@ -49,6 +49,8 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 
 ### Начертание
 
+`sf-icon--weight-thin` • [справочник](#классы)
+
 Толщину линии задают `sf-icon--weight-thin`, `-extra-light`, `-light`,
 `-regular` (по умолчанию), `-medium`, `-semi-bold` и `-bold`. Берите
 начертание, близкое к начертанию соседнего текста.
@@ -57,6 +59,8 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 :::
 
 ### Заливка
+
+`sf-icon--filled` • [справочник](#классы)
 
 `sf-icon--filled` заливает символ. Заливкой показывают выбранное состояние
 рядом с невыбранным контуром, например отмеченное избранное.
@@ -82,6 +86,8 @@ Rounded со скруглёнными концами, `sf-icon--sharp` — Sharp
 :::
 
 ### Поворот
+
+`sf-icon--rotate-315` • [справочник](#классы)
 
 `sf-icon--rotate-45` … `sf-icon--rotate-315` поворачивают символ с шагом 45°
 вокруг центра: одна стрелка служит любым направлением.

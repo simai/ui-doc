@@ -1,0 +1,4 @@
+/* The panel opens inside this block (data-sf-overlay-container) on its height. */
+#filters-root {
+  min-block-size: var(--sf-h0);
+}

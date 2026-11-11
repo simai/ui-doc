@@ -1,6 +1,6 @@
 ---
 title: "Загрузка файлов"
-description: "Зона выбора и перетаскивания файлов со списком выбранных файлов, прогрессом и ошибками передачи."
+description: "Даёт выбрать или перетащить файлы и показывает их список, прогресс и ошибки передачи."
 ---
 
 # Загрузка файлов
@@ -16,7 +16,7 @@ description: "Зона выбора и перетаскивания файлов
 
 ## Пример
 
-:::example {id="smart-components/file-upload/overview" label="Результат"}
+:::example {id="smart-components/file-upload/overview" label="Результат" preview=sandbox log="change sf-file-upload-attach sf-file-upload-attached sf-file-upload-detach sf-file-upload-rejected sf-file-upload-retry sf-file-upload-completed sf-file-upload-failed sf-file-upload-cancelled sf-file-upload-finished" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -34,6 +34,8 @@ description: "Зона выбора и перетаскивания файлов
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` выбирает ступень размерной шкалы: `1/2`, `1` или `2`. Зона и строки
 файлов меняются вместе.
 
@@ -41,6 +43,8 @@ description: "Зона выбора и перетаскивания файлов
 :::
 
 ### Состав зоны
+
+`link-text`, `text`, `supporting-text` • [справочник](#атрибуты)
 
 `link-text` — слова ссылки в зоне («Выберите файл»), `text` — слова **после**
 ссылки в той же строке («или перетащите его сюда»). `text` — не всё
@@ -51,10 +55,12 @@ description: "Зона выбора и перетаскивания файлов
 какие файлы принимает поле, компонент сам не знает. `icon` меняет значок
 зоны; нейтральное значение по умолчанию — `upload_file`.
 
-:::example {id="smart-components/file-upload/composition" label="Приглашение по умолчанию, свои слова и строка под ними"}
+:::example {id="smart-components/file-upload/composition" label="Состав зоны"}
 :::
 
 ### Один или несколько файлов
+
+`accept`, `multiple` • [справочник](#атрибуты)
 
 `accept` передаётся системному окну выбора и сужает список файлов в нём. Из
 перетащенных файлов компонент оставляет те, что названы в `accept`, а
@@ -63,7 +69,7 @@ description: "Зона выбора и перетаскивания файлов
 несколько файлов; без него из перетащенных берётся первый. Новый выбор
 заменяет список файлов.
 
-:::example {id="components/file-upload/smart-selection" label="Несколько документов PDF и Word"}
+:::example {id="components/file-upload/smart-selection" label="PDF и Word"}
 :::
 
 ### Оформление
@@ -71,7 +77,7 @@ description: "Зона выбора и перетаскивания файлов
 `root-class` добавляет зоне утилиты SIMAI Framework — поверхность, отступы,
 радиус — без своих стилей.
 
-:::example {id="components/file-upload/smart-customization" label="Зона на поверхности контейнера"}
+:::example {id="components/file-upload/smart-customization" label="Оформление"}
 :::
 
 ## Состояния
@@ -103,6 +109,8 @@ description: "Зона выбора и перетаскивания файлов
 
 ### Недоступна
 
+`disabled` • [справочник](#атрибуты)
+
 `disabled` выключает выбор и перетаскивание, убирает зону из порядка `Tab` и
 выключает кнопки в строках; список при этом сохраняется.
 
@@ -129,7 +137,7 @@ description: "Зона выбора и перетаскивания файлов
 `sf-file-upload-finished`. События считаются по разнице с прошлым списком,
 поэтому передавайте в `setItems()` новые объекты, а не изменённые старые.
 
-:::example {id="components/file-upload/smart-states" label="Три файла: в передаче, переданный и с ошибкой"}
+:::example {id="components/file-upload/smart-states" label="Три файла в передаче"}
 :::
 
 ### Элемент списка
@@ -186,8 +194,6 @@ upload.onFileAdd((event) => add(event.detail.item));
 события `sf-file-upload-attached`, `sf-file-upload-failed`,
 `sf-file-upload-completed`, `sf-file-upload-detach`,
 `sf-file-upload-retry` и `sf-file-upload-finished`.
-Прежние имена с двоеточием (`sf-file-upload:select`, `sf-file-upload:file-add`
-и другие) приходят следом с тем же `detail` до 2026-12-01.
 
 ### Отправка файлов
 
@@ -329,12 +335,12 @@ async function store(item) {
 | | |
 |:---|:---|
 | Тег | `<sf-file-upload>`, контракт `smart.file-upload` версии `1.1.8` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/file-upload` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-file-upload` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/file-upload` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-file-upload` |
 
 ## См. также
 

@@ -1,0 +1,4 @@
+/* Four tiles split two by two in a narrow column instead of three and one. */
+#overview-root .sf-tile-metric-grid {
+  --sf-tile-metric-min-width: var(--sf-f6);
+}

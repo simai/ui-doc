@@ -6,6 +6,8 @@ profile: reference
 
 # Копирование
 
+:badge[sf-clipboard]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+
 Кнопка копирования кладёт в буфер обмена готовое значение или текст другого
 элемента: команду, ключ, код заказа. Ставьте её рядом с текстом, который
 читатель переносит в другое место, и не прячьте этот текст: его должно быть
@@ -46,7 +48,7 @@ profile: reference
 [кнопку](/ru/components/actions/buttons/) с подписью и добавьте
 `sf-clipboard`: поведение то же.
 
-:::example {id="components/clipboard/appearance" label="Оформление кнопки копирования"}
+:::example {id="components/clipboard/appearance" label="Оформление"}
 :::
 
 ### Размер
@@ -60,6 +62,8 @@ profile: reference
 :::
 
 ### Положение
+
+`sf-clipboard--overlay` • [справочник](#классы)
 
 `sf-clipboard--overlay` прижимает кнопку к верхнему конечному углу блока с
 текстом; блоку нужен `position: relative` (утилита `relative`). Без
@@ -76,7 +80,7 @@ profile: reference
 кнопка приглушается и повторное нажатие ничего не делает. После записи
 атрибут снимается.
 
-:::example {id="components/clipboard/state-pending" label="Кнопка в ожидании и в процессе копирования"}
+:::example {id="components/clipboard/state-pending" label="Копирование"}
 :::
 
 ### Результат
@@ -86,7 +90,7 @@ profile: reference
 время из `data-duration` кнопка возвращается к исходному виду. Нажмите
 кнопки в примере: у второй нет источника, и она показывает ошибку.
 
-:::example {id="components/clipboard/state-result" label="Успешное и неудачное копирование"}
+:::example {id="components/clipboard/state-result" label="Результат"}
 :::
 
 ## Доступность

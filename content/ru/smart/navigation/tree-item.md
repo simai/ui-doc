@@ -16,7 +16,7 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ## Пример
 
-:::example {id="smart-components/tree-item/overview" label="Результат"}
+:::example {id="smart-components/tree-item/overview" label="Результат" preview=sandbox log="sf-tree-item-open sf-tree-item-toggle" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -32,7 +32,7 @@ description: "Задаёт один пункт дерева: подпись, с�
 ```
 
 `label` — подпись пункта; без неё подписью служит текст внутри
-`<sf-tree-item>`. `text` — другое имя `label`, работает до 2026-12-01.
+`<sf-tree-item>`.
 `value` — код пункта: его получает строка как `data-value`, и его несут
 события.
 
@@ -45,8 +45,9 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Папка или файл
 
-`kind` — `folder` (по умолчанию) или `file`; `type` — другое имя `kind`,
-работает до 2026-12-01. Папка с вложенными `<sf-tree-item>` получает кнопку
+`kind` • по умолчанию `folder` • [справочник](#атрибуты)
+
+`kind` — `folder` (по умолчанию) или `file`. Папка с вложенными `<sf-tree-item>` получает кнопку
 раскрытия и иконку открытой или закрытой папки, файл — иконку документа и
 никогда не раскрывается. Дерево с файлами удобнее передавать данными, как в
 [примере Дерево](/ru/smart/navigation/tree/#пункты-данными).
@@ -56,14 +57,18 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Иконка
 
+`icon`, `open-icon`, `closed-icon` • [справочник](#атрибуты)
+
 `icon="false"` убирает иконку пункта: так выглядит дерево разделов, а не
 файлов, как в разделе «Пример». `open-icon` и `closed-icon` заменяют иконки
 папки, `chevron-open-icon` и `chevron-closed-icon` — стрелку раскрытия.
 
-:::example {id="smart-components/tree-item/icons" label="Без иконки и со своими иконками"}
+:::example {id="smart-components/tree-item/icons" label="Иконка"}
 :::
 
 ### Подпись-ссылка
+
+`href`, `target`, `rel` • [справочник](#атрибуты)
 
 `href` делает подпись ссылкой, `target` и `rel` переходят на неё.
 
@@ -74,12 +79,16 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Раскрыт
 
+`open` • [справочник](#атрибуты)
+
 `open` раскрывает ветвь.
 
 :::example {id="smart-components/tree-item/state-open" label="Раскрытая и свёрнутая ветви"}
 :::
 
 ### Выбран
+
+`selected` • [справочник](#атрибуты)
 
 `selected` отмечает выбранный пункт, если дерево разрешает выбор.
 
@@ -88,12 +97,16 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### Текущая страница
 
+`active` • [справочник](#атрибуты)
+
 `active` выделяет пункт текущей страницы и ставит ему `aria-current="page"`.
 
 :::example {id="smart-components/tree-item/state-active" label="Пункт текущей страницы"}
 :::
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` выключает пункт: он не раскрывается, его ссылка не рисуется, а
 нажатие ничего не делает.
@@ -123,10 +136,10 @@ description: "Задаёт один пункт дерева: подпись, с�
 
 ### События
 
-| Событие | Когда | `event.detail` | Прежнее имя (до 2026-12-01) |
-|:---|:---|:---|:---|
-| `sf-tree-item-open` | нажата подпись или `Enter` на листе без ссылки | `id`, `value` | `sf-tree-item-click` с `{item, value, originalEvent}` |
-| `sf-tree-item-toggle` | ветвь раскрыта или свёрнута | `id`, `open`, `value` | имя то же; элемента в `detail` нет — это `event.target` |
+| Событие | Когда | `event.detail` |
+|:---|:---|:---|
+| `sf-tree-item-open` | нажата подпись или `Enter` на листе без ссылки | `id`, `value` |
+| `sf-tree-item-toggle` | ветвь раскрыта или свёрнута | `id`, `open`, `value`; сам пункт — `event.target` |
 
 `onToggle(handler)` передаёт обработчику новое состояние первым аргументом.
 Внутри `<sf-tree>` слушайте события дерева — `sf-tree-open` и
@@ -216,12 +229,12 @@ section.expand();
 | | |
 |:---|:---|
 | Тег | `<sf-tree-item>`, контракт `smart.tree-item` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как пункт дерева; нужна подпись или `aria-label`; с клавиатуры: `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/tree-item` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-tree-item` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tree-item` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tree-item` |
 
 ## См. также
 

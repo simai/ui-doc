@@ -1,31 +1,32 @@
 ---
 title: "Высота"
-description: "Поднимает элемент над страницей одним классом: ставит поверхность места, его тень и приглушённый текст на нём."
+description: "Поднимает элемент над страницей парой классов: поверхность места и тень этого места."
 ---
 
 # Высота
 
-Классы `elevation-{n}` поднимают элемент над страницей одним классом: ставят
-поверхность места, тень этого места и цвет второстепенного текста на нём.
-Берите их для панелей, меню, модальных окон и других слоёв поверх
-содержимого вместо отдельных классов фона и тени.
+Высота элемента — его место: на странице, приподнятое, всплывающее или окно.
+Место задают два класса вместе: поверхность места `bg-surface-*` и его тень
+`shadow-*`. Поверхность ставит и цвет второстепенного текста на ней. Берите
+пару для панелей, меню, модальных окон и других слоёв поверх содержимого.
 
 ## Пример
 
-### Ступени
+### Места
 
-Панели на фоне области; под каждой — класс высоты. Переключите тему сайта:
+Панели на фоне области; под каждой — пара классов. Переключите тему сайта:
 в светлой место показывает тень, в тёмной — светлеющая поверхность.
 
-:::example {id="utilities/shadows/elevation" label="elevation-0 … elevation-5"}
+:::example {id="utilities/shadows/elevation" label="Четыре места"}
 :::
 
-### Высота и тень
+### Тень без поверхности
 
-`shadow-overlay` на поверхности страницы и `elevation-2`. В светлой теме они
-похожи; в тёмной панель с одной тенью сливается с фоном.
+`shadow-overlay` на поверхности страницы и пара `bg-surface-popup
+shadow-overlay`. В светлой теме они похожи; в тёмной панель с одной тенью
+сливается с фоном.
 
-:::example {id="utilities/shadows/elevation-compare" label="bg-surface-page shadow-overlay и elevation-2"}
+:::example {id="utilities/shadows/elevation-compare" label="Тень одна и тень с поверхностью"}
 :::
 
 ## Классы
@@ -51,10 +52,10 @@ description: "Поднимает элемент над страницей одн
 |:---|:---|
 | `--sf-surface-card` | `light-dark(var(--sf-surface-page), var(--sf-surface-2))` |
 | `--sf-shadow-raised` | `0 var(--sf-px) var(--sf-a2) var(--sf-shadow-key-color), 0 var(--sf-a2) var(--sf-a8) var(--sf-shadow-ambient-color)` |
-| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-shadow-overlay` | `0 var(--sf-a2) var(--sf-a4) var(--sf-shadow-key-color), 0 var(--sf-a8) var(--sf-b6) var(--sf-shadow-ambient-color)` |
-| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
 | `--sf-shadow-modal` | `0 var(--sf-a4) var(--sf-a8) var(--sf-shadow-key-color), 0 var(--sf-b6) var(--sf-c6) var(--sf-shadow-ambient-color)` |
 | `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
@@ -65,20 +66,22 @@ description: "Поднимает элемент над страницей одн
 
 ### Как выбрать
 
-| Класс | Место | Поверхность | Тень | Куда |
+| Место | Классы | Поверхность | Тень | Куда |
 | :--- | :--- | :--- | :--- | :--- |
-| `elevation-0` | на странице | `--sf-surface-page` | `--sf-shadow-flat` | вернуть элемент на страницу |
-| `elevation-1` | приподнятое | `--sf-surface-card` | `--sf-shadow-raised` | приподнятый элемент в потоке |
-| `elevation-2`, `elevation-3` | всплывающее | `--sf-surface-popup` | `--sf-shadow-overlay` | меню, выпадающий список, поповер, подсказка |
-| `elevation-4`, `elevation-5` | окно | `--sf-surface-popup-nested` | `--sf-shadow-modal` | диалог и шторка над затемнением |
+| на странице | `bg-surface-page shadow-flat` | `--sf-surface-page` | `--sf-shadow-flat` | вернуть элемент на страницу |
+| приподнятое | `bg-surface-card shadow-raised` | `--sf-surface-card` | `--sf-shadow-raised` | приподнятый элемент в потоке |
+| всплывающее | `bg-surface-popup shadow-overlay` | `--sf-surface-popup` | `--sf-shadow-overlay` | меню, выпадающий список, поповер, подсказка |
+| окно | `bg-surface-popup-nested shadow-modal` | `--sf-surface-popup-nested` | `--sf-shadow-modal` | диалог и шторка над затемнением |
 
-Ступени `1` … `5` задают `--sf-on-surface-variant`, поэтому второстепенный
+Поверхность места задаёт `--sf-on-surface-variant`, поэтому второстепенный
 текст на поднятой панели остаётся читаемым. Какие компоненты стоят на каком
 месте — в руководстве [Поверхность и тень](/ru/guide/colour/elevation/#какие-компоненты-где-стоят).
 
 ```html
-<div class="elevation-2 radius-surface p-2">Меню</div>
+<div class="bg-surface-popup shadow-overlay radius-surface p-2">Меню</div>
 ```
+
+Прежние имена работают до 2027-01-01: классы `elevation-{n}` рисуют ту же пару — `0` как `bg-surface-page shadow-flat`, `1` как `bg-surface-card shadow-raised`, `2` и `3` как `bg-surface-popup shadow-overlay`, `4` и `5` как `bg-surface-popup-nested shadow-modal` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке пишите пару.
 
 ### Высота в своём CSS
 
@@ -109,9 +112,8 @@ description: "Поднимает элемент над страницей одн
 
 ## Ограничения
 
-- Класс задаёт `background-color` и `box-shadow`: класс цвета фона или тени
-  на том же элементе спорит с ним.
-- Префиксов ширины экрана и состояния у семейства нет.
+- Два класса места задают `background-color` и `box-shadow`: другой класс
+  цвета фона или тени на том же элементе спорит с ними.
 
 ## См. также
 

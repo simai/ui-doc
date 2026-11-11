@@ -1,0 +1,28 @@
+<div data-sf-density="compact" style="max-inline-size: var(--sf-f6)">
+  <sf-menu label="Разделы админки" appearance="navigation" collapse="none" current="goods" items='[
+    {"id": "dash", "label": "Рабочий стол", "icon": "space_dashboard", "href": "#dash"},
+    {"group": true, "id": "g-shop", "label": "Магазин", "items": [
+      {"id": "orders", "label": "Заказы", "icon": "receipt_long", "href": "#orders", "badge": "12"},
+      {"id": "goods-root", "label": "Каталог", "icon": "inventory_2", "children": [
+        {"id": "goods", "label": "Товары", "href": "#goods"},
+        {"id": "cats", "label": "Категории", "href": "#cats"},
+        {"id": "prices", "label": "Цены и остатки", "href": "#prices"}
+      ]},
+      {"id": "clients", "label": "Клиенты", "icon": "group", "href": "#clients"},
+      {"id": "promo", "label": "Маркетинг", "icon": "sell", "children": [
+        {"id": "discounts", "label": "Скидки", "href": "#discounts"},
+        {"id": "coupons", "label": "Промокоды", "href": "#coupons"}
+      ]}
+    ]},
+    {"group": true, "id": "g-site", "label": "Сайт", "items": [
+      {"id": "pages", "label": "Страницы", "icon": "description", "href": "#pages"},
+      {"id": "news", "label": "Новости", "icon": "newspaper", "href": "#news", "badge": "3"}
+    ]},
+    {"group": true, "id": "g-system", "label": "Система", "items": [
+      {"id": "settings", "label": "Настройки", "icon": "settings", "children": [
+        {"id": "general", "label": "Общие", "href": "#general"},
+        {"id": "users", "label": "Пользователи и права", "href": "#users"}
+      ]}
+    ]}
+  ]'></sf-menu>
+</div>

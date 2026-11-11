@@ -6,6 +6,8 @@ profile: reference
 
 # Количество
 
+:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и
 других ограниченных числовых величин; для произвольного текста берите
@@ -13,7 +15,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/quantity/overview" label="Поле количества мест"}
+:::example {id="components/quantity/overview" label="Поле количества мест" preview=sandbox log="change" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -39,6 +41,8 @@ profile: reference
 ## Варианты
 
 ### Размер
+
+`sf-quantity--size-1/2`, `sf-quantity--size-1`, `sf-quantity--size-2` • [справочник](#классы)
 
 Три ступени — `sf-quantity--size-1/2`, `sf-quantity--size-1` и
 `sf-quantity--size-2`, как у текстового поля. Размер меняет подпись, поле и
@@ -90,7 +94,7 @@ profile: reference
 Когда значение равно `min`, недоступна кнопка уменьшения; когда равно `max` —
 кнопка увеличения.
 
-:::example {id="components/quantity/state-boundary" label="Значение на нижней и на верхней границе"}
+:::example {id="components/quantity/state-boundary" label="На границе"}
 :::
 
 ### Только чтение
@@ -119,6 +123,8 @@ input через `aria-describedby`, сам input получает `aria-invalid
 :::
 
 ### Фокус
+
+`sf-quantity--pointer-focus` • [справочник](#классы)
 
 При переходе клавишей Tab рамка поля или кнопка получает кольцо фокуса по
 `:focus-visible`. При нажатии мышью скрипт ставит оболочке

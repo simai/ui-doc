@@ -1,6 +1,6 @@
 // Without href the press is the application's: it cancels the request, sets
-// state="preparing" while it builds the file, then gives the href and
-// state="ready"; the element fetches the file the person pressed for once.
+// state="preparing" while it builds the file, then gives the size, the href
+// and state="ready"; the element fetches the file the person pressed for once.
 const buildReport = () => new Promise((done) => setTimeout(() => done(
   'Заказ;Дата;Сумма, ₽\n1040;03.11.2026;12500\n1041;04.11.2026;8900\n1042;05.11.2026;440000\n',
 ), 1200));
@@ -17,7 +17,11 @@ const initialize = async () => {
     file.setAttribute('state', 'preparing');
     docara.example.log('state', 'preparing');
     const text = await buildReport();
-    file.setAttribute('href', URL.createObjectURL(new Blob([text], {type: 'text/csv;charset=utf-8'})));
+    const report = new Blob([text], {type: 'text/csv;charset=utf-8'});
+    // The size of the built file is known here: with file-size set the
+    // element does not ask the address for it.
+    file.setAttribute('file-size', `${report.size} Б`);
+    file.setAttribute('href', URL.createObjectURL(report));
     file.setAttribute('state', 'ready');
     docara.example.log('state', 'ready');
   });

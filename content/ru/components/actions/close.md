@@ -6,11 +6,12 @@ profile: reference
 
 # Кнопка закрытия
 
-`sf-close` рисует знак закрытия — крестик из маски, без иконочного шрифта.
-Сам знак декоративный: действие выполняет нативная кнопка
-[`sf-icon-button`](/ru/components/actions/icon-buttons/) с модификатором
-`sf-icon-button--close`. Берите его для кнопки, которая закрывает окно,
-панель, уведомление или тег.
+:badge[sf-close]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
+Кнопка закрытия закрывает окно, панель, уведомление или убирает тег. Она
+рисует крестик без иконочного шрифта, а действие выполняет нативная кнопка
+[с иконкой](/ru/components/actions/icon-buttons/) с модификатором
+`sf-icon-button--close`.
 
 ## Пример
 
@@ -73,7 +74,7 @@ profile: reference
 Нативный `disabled` приглушает кнопку и знак: кнопка не получает фокус и не
 срабатывает.
 
-:::example {id="components/close/state-disabled" label="Доступная и недоступные кнопки закрытия"}
+:::example {id="components/close/state-disabled" label="Недоступна"}
 :::
 
 ### Фокус

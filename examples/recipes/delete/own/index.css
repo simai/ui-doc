@@ -1,0 +1,4 @@
+/* The toast appears in the corner of this frame: room for it under the list. */
+#own-root {
+  min-block-size: var(--sf-f8);
+}

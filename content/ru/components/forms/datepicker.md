@@ -6,8 +6,10 @@ profile: reference
 
 # Календарь
 
-Календарь — набор классов поверхности, на которой показывают дни месяца,
-выбранную дату или период. Поведения у него нет: перелистывание, выбор даты и
+:badge[sf-datepicker]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+
+Календарь показывает дни месяца, выбранную дату или период. Поведения у
+классов нет: перелистывание, выбор даты и
 клавиатуру даёт [смарт-компонент Календарь](/ru/smart/forms/datepicker/),
 который рисует эту же поверхность. Классы нужны, чтобы показать календарь,
 собранный своим кодом или на сервере.
@@ -45,7 +47,7 @@ profile: reference
 месяца в первой и последней неделе. `sf-datepicker-day-info` под числом
 показывает короткую подпись дня: число мест, событий или цену.
 
-:::example {id="components/datepicker/day-kinds" label="Выходные, дни соседнего месяца и подпись дня"}
+:::example {id="components/datepicker/day-kinds" label="Вид дня"}
 :::
 
 ### Ячейки месяца и года
@@ -57,7 +59,7 @@ profile: reference
 (`grid grid-col-3` без класса `gap-*`): промежуток разрывает полосу периода.
 Каждая ячейка периода, включая средние, получает `aria-pressed="true"`.
 
-:::example {id="components/datepicker/text-cells" label="Ячейки месяцев в разных состояниях"}
+:::example {id="components/datepicker/text-cells" label="Ячейки месяца и года"}
 :::
 
 ## Состояния

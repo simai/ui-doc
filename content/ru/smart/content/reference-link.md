@@ -41,6 +41,8 @@ JavaScript.
 
 ### Без рамки
 
+`appearance` • по умолчанию `card` • [справочник](#атрибуты)
+
 `appearance` выбирает вид:
 
 - `card` — ссылка в собственной рамке с фоном и отступами, вид по умолчанию;
@@ -52,13 +54,17 @@ JavaScript.
 
 ### Иконка
 
+`icon` • по умолчанию `arrow_forward` • [справочник](#атрибуты)
+
 `icon` — значок перед подписью, по умолчанию стрелка `arrow_forward`. Пустой
 `icon=""` убирает значок — для ссылки рядом с собственной подписью.
 
-:::example {id="smart-components/reference-link/icon" label="Стрелка, свой значок и без значка"}
+:::example {id="smart-components/reference-link/icon" label="Иконка"}
 :::
 
 ### Размер
+
+`size` • [справочник](#атрибуты)
 
 `size` (`1/2`, `1`, `2`) делает ссылку элементом формы этого размера — для
 ряда полей.
@@ -68,15 +74,19 @@ JavaScript.
 
 ### По строке текста
 
+`line` • [справочник](#атрибуты)
+
 `line` (`1/2`, `1`, `2`) ставит ссылку без рамки на строку текста этого
 размера — для ячейки таблицы, чтобы строка не стала выше.
 
-:::example {id="smart-components/reference-link/line" label="Ссылка в строках текста трёх размеров"}
+:::example {id="smart-components/reference-link/line" label="По строке текста"}
 :::
 
 ## Состояния
 
 ### Недоступна
+
+`disabled`, `href` • [справочник](#атрибуты)
 
 `disabled` выводит подпись без ссылки: элемент не получает фокус, а нажатия
 на нём гасятся. Адрес при этом не нужен — не оставляйте `href` у ссылки,
@@ -145,12 +155,12 @@ JavaScript.
 | | |
 |:---|:---|
 | Тег | `<sf-reference-link>`, контракт `smart.reference-link` версии `1.0.5` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ссылка; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/reference-link` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-reference-link` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/reference-link` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-reference-link` |
 
 ## См. также
 

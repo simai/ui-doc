@@ -6,6 +6,8 @@ profile: reference
 
 # Хлебные крошки
 
+:badge[sf-breadcrumbs]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Хлебные крошки показывают путь от главной страницы до текущей и дают перейти
 на любой родительский уровень. Это вторичная навигация: она дополняет
 [меню](/ru/components/navigation/menu/), а не заменяет его, и описывает
@@ -36,13 +38,15 @@ profile: reference
 
 ### Вид пункта
 
+`sf-breadcrumbs-item--link` • [справочник](#классы)
+
 Ссылка (`sf-breadcrumbs-item--link`) окрашена основным цветом. Пункт без
 модификатора — приглушённый текст: так показывают уровень, у которого нет
 своей страницы. Текущая страница с `aria-current="page"` набрана основным
 цветом текста и средним начертанием. Разделитель отражается при письме справа
 налево.
 
-:::example {id="components/breadcrumbs/items" label="Ссылка, текст, текущая страница и разделитель"}
+:::example {id="components/breadcrumbs/items" label="Вид пункта"}
 :::
 
 ### Иконка
@@ -51,7 +55,7 @@ profile: reference
 высоту строки пункта. Главную часто показывают одной иконкой `home`; у такой
 ссылки обязателен `aria-label`.
 
-:::example {id="components/breadcrumbs/icon" label="Иконка без подписи и с подписью"}
+:::example {id="components/breadcrumbs/icon" label="Иконка"}
 :::
 
 ### Длинный путь

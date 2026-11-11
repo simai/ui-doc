@@ -5,7 +5,7 @@ description: "Выбирает ровно одно значение из нес�
 
 # Сегментный переключатель
 
-:badge[sf-segmented]{variant=tonal scheme=primary size=1/2} :badge[1.4.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-segmented]{variant=tonal scheme=primary size=1/2} :badge[1.4.3]{variant=outline scheme=on-surface size=1/2}
 
 Сегментный переключатель даёт выбрать ровно одно значение из нескольких и
 сразу его применяет: период отчёта, вид списка, фильтр, тему оформления. У
@@ -64,7 +64,7 @@ description: "Выбирает ровно одно значение из нес�
 Готовый переключатель темы: три пункта только с иконками — как в системе,
 светлая и тёмная.
 
-:::example {id="smart-components/segmented/theme-switch" label="Переключатель темы" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/segmented/theme-switch" label="Переключатель" preview=sandbox log_console=true log_open=false}
 :::
 
 Тему примеров задаёт сам сайт документации, поэтому здесь выбор не меняется
@@ -292,7 +292,7 @@ description: "Выбирает ровно одно значение из нес�
 :::example {id="smart-components/button-group/loading" label="Варианты в загрузке" preview=inline}
 :::
 
-:::example {id="smart-components/segmented/disabled" label="Дорожка: недоступные и в загрузке" preview=inline}
+:::example {id="smart-components/segmented/disabled" label="Загрузка варианта" preview=inline}
 :::
 
 Спиннер стоит на месте иконки, а без иконки — поверх подписи, поэтому
@@ -442,13 +442,13 @@ Tab на выбранном варианте. Стрелки, Home и End пер
 
 | | |
 |:---|:---|
-| Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.4.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-segmented>`, контракт `smart.segmented` версии `1.4.3` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа переключателей; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/segmented` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-segmented` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/segmented` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-segmented` |
 
 ### Для разработчика
 

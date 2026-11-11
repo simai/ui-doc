@@ -18,7 +18,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/tabs/smart-overview" label="Результат"}
+:::example {id="components/tabs/smart-overview" label="Результат" preview=sandbox log="sf-tabs-change sf-tabs-settings-change sf-tabs-settings-reset" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -65,6 +65,8 @@ profile: reference
 
 ### Вид
 
+`type`, `scheme` • [справочник](#атрибуты)
+
 `type="underline"`, `type="pills"` и `type="full"` дают ту же геометрию, что
 одноимённые классы обычных вкладок. `scheme` выбирает вид кнопок пунктов:
 `default`, `outline` или `link`; это вид, а не семантический цвет.
@@ -81,15 +83,19 @@ profile: reference
 
 ### Размер
 
+`size`, `type` • [справочник](#атрибуты)
+
 `size` — `1/2`, `1` (по умолчанию) или `2`. У `type="underline"` вкладка — это подпись и линия под ней, без отступов по
 бокам. Между вкладками один промежуток по размеру: 20 px при `size="1/2"`,
 24 px при `size="1"`, 32 px при `size="2"`. Высота вкладки — высота контрола
 своего размера, 32, 40 и 48 px, и нажимается вся она; линия 2, 2 и 3 px.
 
-:::example {id="smart-components/tabs/sizes" label="Подчёркнутые вкладки трёх размеров"}
+:::example {id="smart-components/tabs/sizes" label="Размер"}
 :::
 
 ### Расположение
+
+`type` • [справочник](#атрибуты)
 
 `type="vertical"` ставит вкладки столбцом и меняет направление клавиатурного
 управления: стрелки вверх и вниз.
@@ -98,6 +104,8 @@ profile: reference
 :::
 
 ### Только иконки
+
+`variant`, `items` • [справочник](#атрибуты)
 
 `variant="icons"` показывает компактные пункты-иконки с доступными именами:
 подпись из `items` остаётся именем пункта.
@@ -108,6 +116,8 @@ profile: reference
 ## Состояния
 
 ### Выбрана
+
+`active-index` • по умолчанию `0` • [справочник](#атрибуты)
 
 Начальную вкладку задаёт `active-index` — номер в объявленном списке, считая
 с нуля.
@@ -191,7 +201,7 @@ tabs.setItems([
 показывает так же — закреплёнными впереди. В «Ещё» закреплённые не уходят
 никогда. Изменения применяются сразу, в подвале меню только «Сбросить».
 
-:::example {id="smart-components/tabs/configurable" label="Ещё и настройка вкладок"}
+:::example {id="smart-components/tabs/configurable" label="Ещё"}
 :::
 
 Компонент выбор не хранит. Он отправляет `sf-tabs-settings-change` с
@@ -241,8 +251,7 @@ tabs.setItems([
 
 `goTo(index)` открывает вкладку по номеру в объявленном списке, считая с нуля, — и после того, как человек переставил вкладки; на недоступную вкладку он не переключает.
 При переключении элемент отправляет всплывающее событие `sf-tabs-change` с
-`detail.previous`, `detail.current`, `detail.item` и `detail.items`
-(`sf-tab-change` — его устаревшее имя с тем же `detail`).
+`detail.previous`, `detail.current`, `detail.item` и `detail.items`.
 `previous` и `current` — номера в объявленном списке, `item` — пункт
 целиком, с `key`, `label` и `count`. `onTabChange(handler)` подписывается на
 событие и передаёт обработчику номер новой вкладки первым аргументом.
@@ -352,12 +361,12 @@ window.addEventListener('popstate', () => tabs.goTo(fromAddress()));
 | | |
 |:---|:---|
 | Тег | `<sf-tabs>`, контракт `smart.tabs` версии `1.1.16` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как вкладки; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `←`, `→`, `↑`, `↓`, `Home`, `End`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/tabs` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-tabs` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tabs` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tabs` |
 
 ## См. также
 

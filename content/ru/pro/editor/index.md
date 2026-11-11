@@ -1,6 +1,6 @@
 ---
 title: "Редактор страниц"
-description: "Редактор страниц — 2 компонента SIMAI Pro."
+description: "Редактор страниц — компоненты SIMAI Pro."
 profile: reference
 ---
 

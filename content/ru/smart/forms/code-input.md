@@ -1,6 +1,6 @@
 ---
 title: "Код подтверждения"
-description: "Поле одноразового кода из сообщения, приложения или письма: ячейки, вставка целиком и автозаполнение."
+description: "Принимает одноразовый код из сообщения, приложения или письма: ячейки, вставка целиком и автозаполнение."
 ---
 
 # Код подтверждения
@@ -18,7 +18,7 @@ description: "Поле одноразового кода из сообщения
 
 ## Пример
 
-:::example {id="smart-components/code-input/overview" label="Шесть цифр из сообщения"}
+:::example {id="smart-components/code-input/overview" label="Шесть цифр из сообщения" preview=sandbox log="change sf-input-code-completed" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -39,6 +39,8 @@ description: "Поле одноразового кода из сообщения
 
 ### Вид
 
+`appearance` • по умолчанию `bordered` • [справочник](#атрибуты)
+
 `appearance="bordered"` (по умолчанию) делит ячейки рамкой,
 `appearance="filled"` ставит их на тоновую заливку; в фокусе ячейки получают
 рамку.
@@ -48,12 +50,16 @@ description: "Поле одноразового кода из сообщения
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` выбирает ступень полей формы: `1/2`, `1` или `2`.
 
 :::example {id="smart-components/code-input/sizes" label="Размеры 1/2, 1 и 2"}
 :::
 
 ### Символы
+
+`mode` • по умолчанию `numeric` • [справочник](#атрибуты)
 
 `mode="numeric"` (по умолчанию) принимает цифры и открывает цифровую
 клавиатуру, `mode="alphanumeric"` — латинские буквы и цифры. Остальное при
@@ -64,6 +70,8 @@ description: "Поле одноразового кода из сообщения
 
 ### Длина
 
+`length` • по умолчанию `6` • [справочник](#атрибуты)
+
 `length` — сколько символов в коде, от 1 до 12; каждому символу — своя
 ячейка.
 
@@ -71,6 +79,8 @@ description: "Поле одноразового кода из сообщения
 :::
 
 ### Скрытый код
+
+`mask` • [справочник](#атрибуты)
 
 `mask` показывает каждый символ точкой; поле становится полем пароля, и
 экранный диктор не читает код вслух.
@@ -82,6 +92,8 @@ description: "Поле одноразового кода из сообщения
 
 ### Ошибка
 
+`invalid`, `error-message` • [справочник](#атрибуты)
+
 Когда приложение отклонило код, задайте `invalid` и `error-message`: ячейки
 и сообщение окрашиваются цветом ошибки, поле получает `aria-invalid`.
 Снимает состояние тоже приложение.
@@ -91,12 +103,16 @@ description: "Поле одноразового кода из сообщения
 
 ### Недоступно
 
+`disabled` • [справочник](#атрибуты)
+
 `disabled` запрещает ввод и не отправляет значение.
 
 :::example {id="smart-components/code-input/state-disabled" label="Недоступное поле"}
 :::
 
 ### Только чтение
+
+`readonly` • [справочник](#атрибуты)
 
 `readonly` показывает код без правки.
 
@@ -112,16 +128,14 @@ description: "Поле одноразового кода из сообщения
 
 ### Проверка кода и события
 
-Когда заполнены все ячейки, приходит `sf-code-input-completed` с `value` —
+Когда заполнены все ячейки, приходит `sf-input-code-completed` с `value` —
 один раз на каждый целый код. Компонент сам форму не отправляет и код не
 проверяет: проверяет приложение. Обычные события `input` и `change` всплывают
 от внутреннего input без `detail`.
-Прежнее имя `sf-code-input:complete` приходит следом с тем же `detail` до
-2026-12-01.
 
 ```js
-const code = document.querySelector('sf-code-input[name="code"]');
-code.addEventListener('sf-code-input-completed', async (event) => {
+const code = document.querySelector('sf-input-code[name="code"]');
+code.addEventListener('sf-input-code-completed', async (event) => {
   const ok = await verify(event.detail.value);
   code.toggleAttribute('invalid', !ok);
   if (!ok) code.setAttribute('error-message', 'Код не подошёл');
@@ -191,14 +205,14 @@ code.addEventListener('sf-code-input-completed', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-code>`, контракт `smart.input-code` версии `1.2.0` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Backspace`, `Delete`, `←`, `→`, `Home`, `End`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-code` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-code` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-code` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-code` |
 
 ## См. также
 
-- [Текстовые поля](/ru/smart/forms/inputs/) — пароль и PIN-код, которые человек придумывает сам.
+- [Текстовое поле](/ru/smart/forms/inputs/) — пароль и PIN-код, которые человек придумывает сам.
 - [Код подтверждения на классах](/ru/components/forms/verification/) — то же поле в статической разметке.

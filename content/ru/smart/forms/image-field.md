@@ -1,6 +1,6 @@
 ---
 title: "Поле изображения"
-description: "Поле формы для одного изображения: миниатюра, имя и размер файла, замена, удаление и перетаскивание."
+description: "Даёт выбрать одно изображение: миниатюра, имя и размер файла, замена, удаление и перетаскивание."
 ---
 
 # Поле изображения
@@ -15,7 +15,7 @@ description: "Поле формы для одного изображения: м
 
 ## Пример
 
-:::example {id="smart-components/image-field/overview" label="Логотип с миниатюрой"}
+:::example {id="smart-components/image-field/overview" label="Логотип с миниатюрой" preview=sandbox log="change sf-input-image-attach sf-input-image-detach sf-input-image-rejected" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -40,6 +40,8 @@ description: "Поле формы для одного изображения: м
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` выбирает ступень полей формы: `1/2`, `1` или `2`.
 
 :::example {id="smart-components/image-field/sizes" label="Размеры 1/2, 1 и 2"}
@@ -49,6 +51,8 @@ description: "Поле формы для одного изображения: м
 
 ### Пусто
 
+`empty-text` • [справочник](#атрибуты)
+
 Пока изображения нет, поле показывает `empty-text` («Изображение не выбрано»
 по умолчанию) и кнопку «Выбрать…».
 
@@ -57,13 +61,17 @@ description: "Поле формы для одного изображения: м
 
 ### Ошибка
 
-`invalid` (или `error`) и `error-message` показывают ошибку вместо пояснения.
+`invalid`, `error-message`, `required` • [справочник](#атрибуты)
+
+`invalid` и `error-message` показывают ошибку вместо пояснения.
 `required` не даёт отправить форму без изображения.
 
 :::example {id="smart-components/image-field/state-error" label="Обязательное поле с ошибкой"}
 :::
 
 ### Недоступно
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` показывает изображение с недоступными кнопками; перетаскивание
 не принимается.
@@ -72,6 +80,8 @@ description: "Поле формы для одного изображения: м
 :::
 
 ### Только чтение
+
+`readonly` • [справочник](#атрибуты)
 
 `readonly` показывает изображение без кнопок; перетаскивание не
 принимается.
@@ -83,18 +93,16 @@ description: "Поле формы для одного изображения: м
 
 ### Загрузка и события
 
-Когда человек выбрал или перетащил файл, приходит `sf-image-field-attach` с
+Когда человек выбрал или перетащил файл, приходит `sf-input-image-attach` с
 `file`: приложение загружает его и затем задаёт сохранённое значение через
-`setValue()`. «Убрать» отправляет `sf-image-field-detach` с прежним
+`setValue()`. «Убрать» отправляет `sf-input-image-detach` с прежним
 значением; файлы, которых нет в `accept`, отбрасываются с событием
-`sf-image-field-rejected`. Каждое изменение сопровождают `input` и `change` с
+`sf-input-image-rejected`. Каждое изменение сопровождают `input` и `change` с
 `value`, `file`, `source` и `name`.
-Прежние имена `sf-image-field:select`, `sf-image-field:remove` и
-`sf-image-field:reject` приходят следом с тем же `detail` до 2026-12-01.
 
 ```js
-const logo = document.querySelector('sf-image-field[name="logo"]');
-logo.addEventListener('sf-image-field-attach', async (event) => {
+const logo = document.querySelector('sf-input-image[name="logo"]');
+logo.addEventListener('sf-input-image-attach', async (event) => {
   try {
     const stored = await upload(event.detail.file);
     logo.setValue(stored);
@@ -173,12 +181,12 @@ logo.addEventListener('sf-image-field-attach', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-input-image>`, контракт `smart.input-image` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/input-image` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-input-image` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-image` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-image` |
 
 ## См. также
 

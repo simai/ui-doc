@@ -1,1 +1,32 @@
-<sf-input-quantity label="Количество" name="count" value="2" min="1" max="99" hint="От 1 до 99 штук"></sf-input-quantity>
+<style>
+  .cart-line { display: grid; grid-template-columns: minmax(0, 1fr) 9rem 7rem; align-items: center; gap: var(--sf-space-2); }
+  .cart-sum { text-align: end; font-variant-numeric: tabular-nums; }
+  .cart-total { border-block-start: var(--sf-px) solid var(--sf-outline-variant); padding-block-start: var(--sf-space-3); }
+  @media (max-width: 32rem) {
+    .cart-line { grid-template-columns: minmax(0, 1fr) 9rem; }
+    .cart-line .cart-sum { grid-column: 1 / -1; }
+  }
+</style>
+<form id="quantity-cart" class="sf-card flex flex-col gap-3">
+  <p class="m-0 font-medium">Корзина</p>
+  <div class="cart-line" data-price="1290">
+    <div class="flex flex-col min-w-0">
+      <span>Блокнот в клетку, А5</span>
+      <span class="text-1/2 color-on-surface-variant">1 290 ₽ за штуку</span>
+    </div>
+    <sf-input-quantity name="notebook" aria-label="Количество: Блокнот в клетку" value="2" min="1" max="20"></sf-input-quantity>
+    <span class="cart-sum"></span>
+  </div>
+  <div class="cart-line" data-price="350">
+    <div class="flex flex-col min-w-0">
+      <span>Ручка гелевая, синяя</span>
+      <span class="text-1/2 color-on-surface-variant">350 ₽ за штуку · на складе 8</span>
+    </div>
+    <sf-input-quantity name="pen" aria-label="Количество: Ручка гелевая" value="3" min="1" max="8"></sf-input-quantity>
+    <span class="cart-sum"></span>
+  </div>
+  <div class="cart-total flex content-main-between items-cross-center">
+    <span class="font-medium">Итого</span>
+    <span id="quantity-cart-total" class="font-medium cart-sum"></span>
+  </div>
+</form>

@@ -21,5 +21,6 @@ Framework: откуда берётся значение, как цвет пол�
 - [Прозрачность](/ru/guide/colour/transparency/)
 - [Контраст](/ru/guide/colour/contrast/)
 - [Фоны](/ru/guide/colour/surfaces/) — какой фон для какого места, слои поверх, выбранное, статусы
+- [Формы: фон и группировка](/ru/guide/colour/forms/) — на каком месте стоит форма, какое поле брать, как делить поля на группы
 - [Поверхность и тень](/ru/guide/colour/elevation/)
 - [Темы](/ru/guide/colour/themes/)

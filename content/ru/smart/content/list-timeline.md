@@ -18,7 +18,7 @@ description: "Короткая история событий на вертика
 
 ## Пример
 
-:::example {id="smart-components/list-timeline/overview" label="Действия на сервере по дням" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/list-timeline/overview" label="Действия" preview=sandbox log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -125,7 +125,7 @@ description: "Короткая история событий на вертика
 С `has-more` после последнего события стоит кнопка «Показать ещё». Пока
 `loading`, кнопка показывает загрузку и больше ничего не спрашивает.
 
-:::example {id="smart-components/list-timeline/more" label="Кнопка «Показать ещё» и её загрузка" preview=sandbox}
+:::example {id="smart-components/list-timeline/more" label="Кнопка «Показать ещё»" preview=sandbox}
 :::
 
 В примере в начале страницы кнопка работает: следующие события
@@ -215,12 +215,12 @@ timeline.addEventListener('sf-list-timeline-load-more', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list-timeline>`, контракт `smart.list-timeline` версии `1.0.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; желательна подпись или `aria-label`; с клавиатуры: `Tab` проходит по заголовкам-ссылкам и кнопке «Показать ещё» по порядку; `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/list-timeline` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-list-timeline` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/list-timeline` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-list-timeline` |
 
 ## См. также
 

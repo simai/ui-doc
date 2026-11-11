@@ -1,9 +1,26 @@
-<sf-menu orientation="horizontal" appearance="navigation" collapse="none" label="Разделы" items='[
-  {"id":"home","label":"Главная","href":"#home","current":true},
-  {"id":"start","label":"Быстрый старт","href":"#start"},
-  {"id":"components","label":"Компоненты","href":"#components"},
-  {"id":"guide","label":"Руководство","children":[
-    {"id":"layouts","label":"Макеты","href":"#layouts"},
-    {"id":"themes","label":"Темы","href":"#themes"}
-  ]}
-]'></sf-menu>
+<div class="flex flex-col gap-4">
+  <sf-header-site collapse="none">
+    <a slot="brand" href="#home"><span class="font-medium">Технопром</span></a>
+    <sf-menu label="Разделы сайта: отметка линией" orientation="horizontal" appearance="navigation" overflow="more" collapse="none" indicator="line" current="pumps" items='[
+      {"id": "catalog", "label": "Каталог", "href": "#catalog", "children": [
+        {"id": "pumps", "label": "Насосное оборудование", "href": "#pumps"},
+        {"id": "valves", "label": "Трубопроводная арматура", "href": "#valves"}
+      ]},
+      {"id": "services", "label": "Услуги", "href": "#services"},
+      {"id": "projects", "label": "Проекты", "href": "#projects"},
+      {"id": "contacts", "label": "Контакты", "href": "#contacts"}
+    ]'></sf-menu>
+  </sf-header-site>
+  <sf-header-site collapse="none" style="--sf-site-header-border-color: var(--sf-transparent)">
+    <a slot="brand" href="#home"><span class="font-medium">Технопром</span></a>
+    <sf-menu label="Разделы сайта: отметка заливкой" orientation="horizontal" appearance="navigation" overflow="more" collapse="none" indicator="fill" current="pumps" items='[
+      {"id": "catalog", "label": "Каталог", "href": "#catalog", "children": [
+        {"id": "pumps", "label": "Насосное оборудование", "href": "#pumps"},
+        {"id": "valves", "label": "Трубопроводная арматура", "href": "#valves"}
+      ]},
+      {"id": "services", "label": "Услуги", "href": "#services"},
+      {"id": "projects", "label": "Проекты", "href": "#projects"},
+      {"id": "contacts", "label": "Контакты", "href": "#contacts"}
+    ]'></sf-menu>
+  </sf-header-site>
+</div>

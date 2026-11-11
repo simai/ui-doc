@@ -5,7 +5,7 @@ description: "Вариант выпадающего списка и общая �
 
 # Строка списка
 
-:badge[sf-list-item]{variant=tonal scheme=primary size=1/2} :badge[1.2.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-list-item]{variant=tonal scheme=primary size=1/2} :badge[1.2.7]{variant=outline scheme=on-surface size=1/2}
 
 Строка списка задаёт один вариант [выпадающего
 списка](/ru/smart/navigation/dropdown/): значение, подпись и вид строки —
@@ -17,7 +17,7 @@ description: "Вариант выпадающего списка и общая �
 
 ## Пример
 
-:::example {id="smart-components/list-item/overview" label="Пункты с иконками и цветом"}
+:::example {id="smart-components/list-item/overview" label="Пункты с иконками и цветом" preview=sandbox log="sf-list-item-open" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -27,24 +27,26 @@ description: "Вариант выпадающего списка и общая �
 
 ```html
 <sf-dropdown name="owner" label="Ответственный" placeholder="Выберите ответственного">
-  <sf-list-item value="anna" type="avatar" text="Анна Белова" avatar-image-url="/team/anna.jpg"></sf-list-item>
-  <sf-list-item value="ivan" type="avatar" text="Иван Петров" avatar-image-url="/team/ivan.jpg"></sf-list-item>
+  <sf-list-item value="anna" kind="avatar" text="Анна Белова" avatar-image-url="/team/anna.jpg"></sf-list-item>
+  <sf-list-item value="ivan" kind="avatar" text="Иван Петров" avatar-image-url="/team/ivan.jpg"></sf-list-item>
 </sf-dropdown>
 ```
 
-Dropdown читает атрибуты пунктов до первой отрисовки и строит из них
+Выпадающий список читает атрибуты пунктов до первой отрисовки и строит из них
 список. `value` — машинное значение, которое уходит в форму и в событие
-`change` Dropdown; без `value` значением становится `text`. `text` —
+`change` выпадающего списка; без `value` значением становится `text`. `text` —
 видимая подпись, она же доступное имя варианта. `group` объединяет идущие
 подряд пункты под одним заголовком.
 
-Пункт вне Dropdown без `interactive` и `sortable-item` показывается
+Пункт вне выпадающего списка без `interactive` и `sortable-item` показывается
 статичной строкой: без роли, фокуса и реакции на нажатие. Его нельзя
 использовать как кнопку, ссылку или отдельный флажок.
 
 ## Варианты
 
 ### Вид строки
+
+`kind`, `text`, `icon` • [справочник](#атрибуты)
 
 Вид строки задаёт атрибут `kind`:
 
@@ -56,17 +58,17 @@ Dropdown читает атрибуты пунктов до первой отри
 - `color` — цветовой маркер; цвет задаёт утилита фона в `color-class`,
   например `bg-error`.
 
-Манифест называет эту ось `kind`, а `type` — прежним именем. Dropdown читает
-у дочерних пунктов только `type`, поэтому внутри Dropdown вид строки задавайте
-им.
+Вид строки задаёт атрибут `kind` — и в выпадающем списке, и вне его.
 
 :::example {id="smart-components/list-item/kinds" label="Пять видов строки"}
 :::
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — ступень `1/3`, `1/2`, `1`, `2` или `3`. Без него пункт берёт размер
-своего Dropdown. Высота однострочной строки равна высоте элемента управления
+своего выпадающего списка. Высота однострочной строки равна высоте элемента управления
 своего размера.
 
 :::example {id="smart-components/list-item/sizes" label="Размеры от 1/3 до 3"}
@@ -74,17 +76,21 @@ Dropdown читает атрибуты пунктов до первой отри
 
 ### Вторая строка
 
+`supporting`, `text`, `icon` • [справочник](#атрибуты)
+
 `supporting` или потомок `slot="supporting"` дают вторую строку под
 заголовком, на ступень лестницы меньше (строки 1/3 и 1/2 — 1/3; 1 — 1/2;
 2 — 1; 3 — 2). Двухстрочная строка выше на эту строку. Виды `text`, `icon`
 и `checkbox`.
 
-:::example {id="smart-components/list-item/supporting" label="Строка без второй строки и со второй строкой"}
+:::example {id="smart-components/list-item/supporting" label="Вторая строка"}
 :::
 
 ## Состояния
 
 ### Выбрана
+
+`selected` • [справочник](#атрибуты)
 
 `selected` отмечает вариант выбранным при загрузке; в строке списка
 выбранная строка получает `aria-current="true"`.
@@ -93,6 +99,8 @@ Dropdown читает атрибуты пунктов до первой отри
 :::
 
 ### Недоступна
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` запрещает выбор варианта; стрелки пропускают недоступную строку.
 
@@ -103,18 +111,18 @@ Dropdown читает атрибуты пунктов до первой отри
 
 ### Строка списка
 
-Вне Dropdown `<sf-list-item>` — общая строка списка: писем, диалогов,
+Вне выпадающего списка `<sf-list-item>` — общая строка списка: писем, диалогов,
 блоков редактора, записей. Места `leading`, `text` и `trailing` те же, что у
-варианта Dropdown. В Dropdown эти возможности выключены, и варианты
-Dropdown не меняются.
+варианта выпадающего списка. В выпадающем списке эти возможности выключены, и варианты
+списка не меняются.
 
 | Атрибут | Что даёт |
 |:---|:---|
-| `interactive` | Строка, с которой работают: наведение, фокус с клавиатуры и `selected`, указатель-рука и событие `sf-list-item-open` (`detail: {id, trigger}`, `id` — это `value`; прежнее имя события — `sf-list-item-activate`) по щелчку или `Enter`. Щелчок по элементу управления внутри строки, например по действию в `trailing`, принадлежит этому элементу, а не строке. |
+| `interactive` | Строка, с которой работают: наведение, фокус с клавиатуры и `selected`, указатель-рука и событие `sf-list-item-open` (`detail: {id, trigger}`, `id` — это `value`) по щелчку или `Enter`. Щелчок по элементу управления внутри строки, например по действию в `trailing`, принадлежит этому элементу, а не строке. |
 | `sortable-item="<id>"` | Строка — элемент окружающего `sf-sortable`: получает ручку перетаскивания перед содержимым и `data-sf-sortable-item` на своём блоке. |
 | `pinned` | Строка списка, которая не двигается: без ручки и не элемент `sf-sortable`. Место ручки остаётся пустым, поэтому текст начинается там же, где у остальных строк. |
 
-:::example {id="smart-components/list-item/rows" label="Строки списка в sf-sortable"}
+:::example {id="smart-components/list-item/rows" label="Строки" preview=sandbox log="sf-list-item-open" log_console=true log_open=false}
 :::
 
 ### Клавиатура
@@ -128,7 +136,7 @@ Dropdown не меняются.
 `Tab`; чтобы остановка на списке осталась одна, дайте ему `tabindex="-1"` и
 повторите действие другим путём, например контекстным меню строки.
 
-### Перестановка в `sf-sortable`
+### Перестановка строк
 
 Пробел или `Enter` берут строку, стрелки двигают, пробел или `Enter`
 кладут — как у любого элемента списка; поэтому `Enter` не активирует
@@ -139,10 +147,10 @@ Dropdown не меняются.
 
 ## Доступность
 
-- В Dropdown каждый пункт получает `role="option"`, `aria-selected` и
+- В выпадающем списке каждый пункт получает `role="option"`, `aria-selected` и
   `aria-disabled`. Имя варианта — `text`; `aria-label` заменяет его, если
   подпись сокращена или неоднозначна.
-- Клавиши принадлежат Dropdown: стрелки перемещают по вариантам, `Home` и
+- Клавиши принадлежат выпадающему списку: стрелки перемещают по вариантам, `Home` и
   `End` — к первому и последнему, `Enter` и пробел выбирают, `Escape`
   закрывает список.
 - Иконка, аватар, цветовой маркер и флажок декоративны и не создают
@@ -204,13 +212,13 @@ Dropdown не меняются.
 
 | | |
 |:---|:---|
-| Тег | `<sf-list-item>`, контракт `smart.list-item` версии `1.2.6` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-list-item>`, контракт `smart.list-item` версии `1.2.7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «строка» (сервер пишет `data-sf-skeleton="line"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/list-item` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-list-item` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/list-item` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-list-item` |
 
 ## См. также
 

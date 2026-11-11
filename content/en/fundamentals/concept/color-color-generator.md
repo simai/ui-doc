@@ -5,10 +5,7 @@ description: "Color generator"
 
 # Color generator
 
-To build a color palette, SIMAI Framework provides its own generator based on Google’s generator.
-
-* SIMAI generator: [http://sf5.simai.pro/ru/bx/color/](http://sf5.simai.pro/ru/bx/color/)
-* Google generator: [https://m3.material.io/theme-builder/](https://m3.material.io/theme-builder/#/)
+To build a color palette, SIMAI Framework provides its own generator: [http://sf5.simai.pro/ru/bx/color/](http://sf5.simai.pro/ru/bx/color/).
 
 Generation process:
 

@@ -6,6 +6,8 @@ profile: reference
 
 # Текстовые поля
 
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите
 [многострочное поле](/ru/components/forms/textarea/), для числа с шагом —
@@ -40,6 +42,8 @@ profile: reference
 
 ### Вид
 
+`sf-input--bordered`, `sf-input--filled` • [справочник](#классы)
+
 `sf-input--bordered` отделяет поле тонкой границей — для форм на фоне
 страницы. `sf-input--filled` отделяет его тональной поверхностью — для плотных
 форм и панелей. Пока фокус внутри поля с заливкой, оно получает фон
@@ -50,6 +54,8 @@ profile: reference
 :::
 
 ### Размер
+
+`sf-input--size-1/2`, `sf-input--size-1`, `sf-input--size-2` • [справочник](#классы)
 
 Три ступени — `sf-input--size-1/2`, `sf-input--size-1` и `sf-input--size-2`.
 Высота поля совпадает с кнопкой той же ступени; размер меняет подпись, текст,
@@ -81,7 +87,7 @@ input, а при звёздочке скрипт ставит его сам. З�
 сочетание клавиш, `sf-icon sf-icon-hint` в конце рамки — значок подсказки.
 Постоянное пояснение под полем — `sf-input-hint-text-wrap`.
 
-:::example {id="components/inputs/composition" label="Обязательность, значок, текст справа и подсказка"}
+:::example {id="components/inputs/composition" label="Состав"}
 :::
 
 ### Маска
@@ -162,7 +168,7 @@ basis-60` растёт и начинает с доли строки. Поэто�
 скопировать значение; оно отправляется с формой. Фон рамки становится
 приглушённым.
 
-:::example {id="components/inputs/state-readonly" label="Поле только для чтения обоих видов"}
+:::example {id="components/inputs/state-readonly" label="Только чтение"}
 :::
 
 ### Ошибка
@@ -176,6 +182,8 @@ basis-60` растёт и начинает с доли строки. Поэто�
 :::
 
 ### Фокус
+
+`sf-input--pointer-focus` • [справочник](#классы)
 
 При переходе клавишей Tab рамка получает кольцо фокуса по `:focus-visible`.
 При нажатии мышью скрипт ставит оболочке `sf-input--pointer-focus`, и кольцо
@@ -245,7 +253,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-input` |
-| Части | `sf-input-field`, `sf-input-hint`, `sf-input-hint-text-wrap`, `sf-input-label`, `sf-input-left`, `sf-input-required`, `sf-input-right`, `sf-input-text` |
+| Части | `sf-input-field`, `sf-input-hint`, `sf-input-hint-text-wrap`, `sf-input-label`, `sf-input-left`, `sf-input-required`, `sf-input-right`, `sf-input-shortcut`, `sf-input-text` |
 | Модификаторы | `sf-input--bordered`, `sf-input--filled`, `sf-input--pointer-focus`, `sf-input--radius-rounded`, `sf-input--radius-square` |
 | Размеры | `sf-input--size-1`, `sf-input--size-1/2`, `sf-input--size-1/3`, `sf-input--size-2`, `sf-input--size-3` |
 

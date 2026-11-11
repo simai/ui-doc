@@ -1,0 +1,349 @@
+{
+  "schema": "ui-doc.js-api-index.v1",
+  "why": "The JavaScript API page is the index of window.SF (owner D17, 2026-11-10): every public name of core/contracts/public-js-api.json, grouped by what brings it, links to its function page or to the page that describes it; a component's script API links to the component's page. text is the short line the index shows (the contract's summary is the release's record, not an author's line); a component row shows the page title. scripts/build-smart-reference.mjs fails --check when a public name has no row here or a row names no public name.",
+  "names": {
+    "SF.ready": {
+      "text": "Ждёт запуска Loader: обещание или вызов функцией.",
+      "page": "/ru/guide/functions/loading/ready/",
+      "label": "Готовность Loader"
+    },
+    "SF.package": {
+      "text": "Отдаёт API набора компонентов: функции, которые набор зарегистрировал.",
+      "page": "/ru/guide/functions/loading/package/",
+      "label": "API набора"
+    },
+    "SF.format": {
+      "text": "Даты, дни, числа и размеры файлов на языке страницы.",
+      "page": "/ru/guide/functions/text/format/",
+      "label": "Даты, числа и размеры"
+    },
+    "SF.language": {
+      "text": "Язык всей страницы и слова, добавленные для компонентов.",
+      "page": "/ru/guide/functions/text/language/",
+      "label": "Язык страницы"
+    },
+    "SF.pageLanguage": {
+      "text": "Язык, который действует для узла страницы.",
+      "page": "/ru/guide/functions/text/page-text/",
+      "label": "Слово компонента"
+    },
+    "SF.pageText": {
+      "text": "Слово компонента на языке узла.",
+      "page": "/ru/guide/functions/text/page-text/",
+      "label": "Слово компонента"
+    },
+    "SF.sanitizeHtml": {
+      "text": "Очищает HTML из чужого источника перед вставкой на страницу.",
+      "page": "/ru/guide/functions/text/sanitize-html/",
+      "label": "Чужой HTML"
+    },
+    "SF.safeHref": {
+      "text": "Отвечает, можно ли оставить адрес ссылки.",
+      "page": "/ru/guide/functions/text/sanitize-html/",
+      "label": "Чужой HTML"
+    },
+    "SF.Mask": {
+      "text": "Маска ввода у поля и форматирование значения по маске.",
+      "page": "/ru/guide/functions/text/mask/",
+      "label": "Маска поля"
+    },
+    "SF.copyText": {
+      "text": "Кладёт текст в буфер обмена.",
+      "page": "/ru/guide/functions/actions/copy-text/",
+      "label": "Копирование текста"
+    },
+    "SF.codeCopy": {
+      "text": "Код в тексте копируется по нажатию.",
+      "page": "/ru/guide/functions/actions/code-copy/",
+      "label": "Копирование кода в тексте"
+    },
+    "SF.notify": {
+      "text": "Показывает сообщение в области уведомлений страницы.",
+      "page": "/ru/guide/functions/actions/notify/",
+      "label": "Уведомления"
+    },
+    "SF.notifications": {
+      "text": "Настройки области уведомлений и показанные сообщения.",
+      "page": "/ru/guide/functions/actions/notify/",
+      "label": "Уведомления"
+    },
+    "SF.breakpoints": {
+      "text": "Контрольные точки ширины для скрипта.",
+      "page": "/ru/guide/functions/screen/breakpoints/",
+      "label": "Контрольные точки"
+    },
+    "SF.readingPosition": {
+      "text": "Сохраняет место читателя в прокручиваемой колонке.",
+      "page": "/ru/guide/functions/screen/reading-position/",
+      "label": "Положение чтения"
+    },
+    "SF.Position": {
+      "text": "Держит всплывающую панель у её якоря.",
+      "page": "/ru/guide/functions/screen/position/",
+      "label": "Привязка к якорю"
+    },
+    "SF.Preferences": {
+      "text": "Хранит вид, который выбрал человек: порядок, ширину, сортировку.",
+      "page": "/ru/guide/functions/person/preferences/",
+      "label": "Настройки вида"
+    },
+    "SF.icons": {
+      "text": "Список значков, из которых выбирает человек.",
+      "page": "/ru/guide/functions/person/icons/",
+      "label": "Значки на выбор"
+    },
+    "SF.RegionNavigation": {
+      "text": "Переходы между страницами заменой области содержимого.",
+      "page": "/ru/guide/layouts/building/region-navigation/",
+      "label": "Навигация по областям страницы"
+    },
+    "SF.workspace": {
+      "text": "Управляет рабочей областью: список, основная часть, панель.",
+      "page": "/ru/guide/layouts/building/workspace/",
+      "label": "Рабочая область"
+    },
+    "SF.Composition": {
+      "text": "Помощники композиции и редактора блоков.",
+      "page": "/ru/guide/layouts/reference/api/",
+      "label": "API композиции"
+    },
+    "SF.Assembly": {
+      "text": "Среда выполнения сборок.",
+      "page": "/ru/guide/smart-components/assemblies/",
+      "label": "Сборки"
+    },
+    "SF.EarlyPort": {
+      "text": "Порты, объявленные в разметке: первый запрос до кода компонента.",
+      "page": "/ru/guide/smart-components/data/",
+      "label": "Данные с сервера"
+    },
+    "SF.Effects": {
+      "text": "Прежнее имя движка фоновых эффектов; новое — `SF.package('effects')`.",
+      "page": "/ru/guide/layouts/building/background-effects/",
+      "label": "Фоновые эффекты"
+    },
+    "SF.RuleLoader": {
+      "text": "Правила загрузки и регистрация пакета компонентов.",
+      "page": "/ru/guide/connection/loader/#пакеты-компонентов",
+      "label": "Пакеты компонентов"
+    },
+    "SF.loadRuntime": {
+      "text": "Загружает общую среду смарт-компонентов; её вызывает Loader.",
+      "page": "/ru/guide/smart-components/runtime/",
+      "label": "Загрузка и общая среда"
+    },
+    "SF.runtimeModule": {
+      "text": "Модуль общей среды для собранного смарт-компонента.",
+      "page": "/ru/guide/smart-components/runtime/",
+      "label": "Загрузка и общая среда"
+    },
+    "SF.deprecations": {
+      "text": "Прежние имена, которые ещё принимаются, и чем их заменить.",
+      "page": "/ru/guide/connection/change-lifecycle/",
+      "label": "Жизненный цикл изменений"
+    },
+    "SF.tags": {
+      "text": "Прежние теги переименованных смарт-компонентов.",
+      "page": "/ru/guide/smart-components/names/",
+      "label": "Имена и общие слова"
+    },
+    "SF.aliases": {
+      "text": "Прежние имена событий, настроек и атрибутов у элемента.",
+      "page": "/ru/guide/smart-components/names/",
+      "label": "Имена и общие слова"
+    },
+    "SF.Loader": {
+      "text": "Загружает компоненты по требованию и следит за новыми частями страницы.",
+      "page": "/ru/guide/functions/loading/loader/",
+      "label": "Загрузка по требованию"
+    },
+    "SF.whenDefined": {
+      "text": "Ждёт, когда смарт-элемент будет определён.",
+      "page": "/ru/guide/functions/loading/when-defined/",
+      "label": "Ожидание элемента"
+    },
+    "SF.whenDefine": {
+      "text": "Прежнее имя `SF.whenDefined`.",
+      "page": "/ru/guide/functions/loading/when-defined/",
+      "label": "Ожидание элемента"
+    },
+    "SF.create": {
+      "text": "Создаёт элемент компонента по имени.",
+      "page": "/ru/guide/functions/loading/create/",
+      "label": "Создание элемента"
+    },
+    "SF.createAsync": {
+      "text": "Создаёт элемент и ждёт, когда его тег будет определён.",
+      "page": "/ru/guide/functions/loading/create/",
+      "label": "Создание элемента"
+    },
+    "SF.loadSmartBase": {
+      "text": "Загружает основу смарт-компонентов.",
+      "page": "/ru/guide/functions/loading/smart-base/",
+      "label": "Загрузка основы смарт-компонентов"
+    },
+    "SF.smartBaseReady": {
+      "text": "Обещание основы смарт-компонентов, как бы она ни пришла.",
+      "page": "/ru/guide/functions/loading/smart-base/",
+      "label": "Загрузка основы смарт-компонентов"
+    },
+    "SF.whenFieldRenderers": {
+      "text": "Загружает набор отрисовщиков полей.",
+      "page": "/ru/guide/smart-components/field-renderers/",
+      "label": "Поля по типу свойства"
+    },
+    "SF.smart": {
+      "text": "Базовый класс и помощники для своего смарт-компонента.",
+      "page": "/ru/guide/functions/loading/smart/",
+      "label": "Свой смарт-компонент"
+    },
+    "SF.SfBaseElement": {
+      "text": "Базовый класс смарт-элемента.",
+      "page": "/ru/guide/functions/loading/smart/",
+      "label": "Свой смарт-компонент"
+    },
+    "SF.html": {
+      "text": "Тег шаблона, которым рисуют смарт-элементы.",
+      "page": "/ru/guide/functions/loading/smart/",
+      "label": "Свой смарт-компонент"
+    },
+    "SF.render": {
+      "text": "Рисует шаблон в узел.",
+      "page": "/ru/guide/functions/loading/smart/",
+      "label": "Свой смарт-компонент"
+    },
+    "SF.nothing": {
+      "text": "Пустое место в шаблоне.",
+      "page": "/ru/guide/functions/loading/smart/",
+      "label": "Свой смарт-компонент"
+    },
+    "SF.AdminMenu": {
+      "page": "/ru/components/internal/admin-menu/#javascript",
+      "label": "Основа Admin Menu"
+    },
+    "SF.AnchoredBadge": {
+      "page": "/ru/components/feedback/badges/#бейдж-на-якоре",
+      "label": "Бейджи"
+    },
+    "SF.ButtonGroup": {
+      "page": "/ru/components/actions/button-group/#javascript",
+      "label": "Группа кнопок"
+    },
+    "SF.Carousel": {
+      "page": "/ru/components/overlays-media/carousel/#javascript",
+      "label": "Карусель"
+    },
+    "SF.Checkbox": {
+      "page": "/ru/components/forms/checkbox/#javascript",
+      "label": "Флажок"
+    },
+    "SF.Clipboard": {
+      "page": "/ru/components/actions/clipboard/#javascript",
+      "label": "Копирование"
+    },
+    "SF.CountryCode": {
+      "page": "/ru/components/forms/country-code/#javascript",
+      "label": "Код страны"
+    },
+    "SF.DownloadFile": {
+      "page": "/ru/components/actions/download-file/#javascript",
+      "label": "Скачивание файла"
+    },
+    "SF.FileUpload": {
+      "page": "/ru/components/forms/file-upload/#javascript",
+      "label": "Загрузка файлов"
+    },
+    "SF.Flag": {
+      "page": "/ru/components/content/flag/#javascript",
+      "label": "Флаг"
+    },
+    "SF.Highlight": {
+      "page": "/ru/components/content/highlight/#javascript",
+      "label": "Подсветка кода"
+    },
+    "SF.Input": {
+      "page": "/ru/components/forms/inputs/#javascript",
+      "label": "Текстовые поля"
+    },
+    "SF.ProgressBar": {
+      "page": "/ru/components/feedback/progress-bar/#javascript",
+      "label": "Прогресс"
+    },
+    "SF.ProgressScale": {
+      "page": "/ru/components/feedback/progress-scale/#javascript",
+      "label": "Шкала прогресса"
+    },
+    "SF.Radio": {
+      "page": "/ru/components/forms/radio/#javascript",
+      "label": "Радиокнопки"
+    },
+    "SF.RangeSlider": {
+      "page": "/ru/components/forms/range-slider/#javascript",
+      "label": "Слайдер диапазона"
+    },
+    "SF.Scrollbar": {
+      "page": "/ru/components/tools/scrollbar/#javascript",
+      "label": "Полоса прокрутки"
+    },
+    "SF.Slider": {
+      "page": "/ru/components/overlays-media/slider/#javascript",
+      "label": "Слайдер контента"
+    },
+    "SF.Spinner": {
+      "page": "/ru/components/feedback/spinner/#javascript",
+      "label": "Спиннер"
+    },
+    "SF.Switch": {
+      "page": "/ru/components/forms/switch/#javascript",
+      "label": "Переключатель"
+    },
+    "SF.Tab": {
+      "page": "/ru/components/navigation/tab/#javascript",
+      "label": "Вкладка (совместимость)"
+    },
+    "SF.Tabs": {
+      "page": "/ru/components/navigation/tabs/#javascript",
+      "label": "Вкладки"
+    },
+    "SF.Textarea": {
+      "page": "/ru/components/forms/textarea/#javascript",
+      "label": "Многострочное поле"
+    },
+    "SF.Toast": {
+      "page": "/ru/components/feedback/toast/#javascript",
+      "label": "Всплывающие сообщения"
+    },
+    "SF.Tree": {
+      "page": "/ru/components/navigation/tree/#javascript",
+      "label": "Дерево"
+    },
+    "SF.Verification": {
+      "page": "/ru/components/forms/verification/#javascript",
+      "label": "Код подтверждения"
+    },
+    "SF.CompositionOverlay": {
+      "page": "/ru/smart/editor/composition-overlay/#методы",
+      "label": "Оверлей редактора"
+    },
+    "SF.InlineEditor": {
+      "page": "/ru/smart/editor/inline-editor/#методы",
+      "label": "Inline-редактор"
+    },
+    "SF.Resizer": {
+      "page": "/ru/smart/overlays/resizer/#методы",
+      "label": "Изменение ширины"
+    },
+    "SF.Sortable": {
+      "page": "/ru/smart/editor/sortable/#методы",
+      "label": "Перетаскивание"
+    },
+    "SF.fieldRenderers": {
+      "page": "/ru/guide/smart-components/field-renderers/",
+      "label": "Поля по типу свойства"
+    },
+    "SF.ThemePalette": {
+      "page": "/ru/smart/forms/theme-generator/",
+      "label": "Генератор темы"
+    }
+  }
+}

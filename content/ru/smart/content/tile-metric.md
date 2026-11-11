@@ -5,7 +5,7 @@ description: "Одно важное число на панели: подпись
 
 # Плитка показателя
 
-:badge[sf-tile-metric]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tile-metric]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Плитка показателя показывает одно число, которое важно на панели
 администратора или на сводной странице: нагрузку сервера, занятое место из
@@ -18,7 +18,7 @@ description: "Одно важное число на панели: подпись
 
 ## Пример
 
-:::example {id="smart-components/tile-metric/overview" label="Четыре плитки в ряду" preview=sandbox}
+:::example {id="smart-components/tile-metric/overview" label="Плитки показателей" preview=sandbox}
 :::
 
 ## Разметка
@@ -68,7 +68,7 @@ description: "Одно важное число на панели: подпись
 хорош (посетители), `better="down"` — рост плох (нагрузка, ошибки,
 очередь), `better="none"` — ни то ни другое.
 
-:::example {id="smart-components/tile-metric/change" label="Рост хорош, рост плох и без изменений" preview=sandbox}
+:::example {id="smart-components/tile-metric/change" label="Изменение за период" preview=sandbox}
 :::
 
 ### Предел
@@ -81,7 +81,7 @@ description: "Одно важное число на панели: подпись
 плитка сами становятся предупреждением или ошибкой. Пороги задаёт страница,
 плитка только сравнивает.
 
-:::example {id="smart-components/tile-metric/limit" label="Обычно, предупреждение и ошибка по порогу" preview=sandbox}
+:::example {id="smart-components/tile-metric/limit" label="Предел" preview=sandbox}
 :::
 
 ### Состояние и подсказка
@@ -93,7 +93,7 @@ description: "Одно важное число на панели: подпись
 состояния. Если заданы пороги, плитка берёт более серьёзное из `status` и
 достигнутого порога.
 
-:::example {id="smart-components/tile-metric/status" label="Успех, сведения, предупреждение и ошибка" preview=sandbox}
+:::example {id="smart-components/tile-metric/status" label="Состояние и подсказка" preview=sandbox}
 :::
 
 ### Размер
@@ -115,7 +115,7 @@ description: "Одно важное число на панели: подпись
 на которую отправляет `sf-tile-metric-open`. Внутри плитки других ссылок и
 кнопок нет.
 
-:::example {id="smart-components/tile-metric/target" label="Плитка-ссылка и плитка-кнопка" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/tile-metric/target" label="Плитка-ссылка" preview=sandbox log_console=true log_open=false}
 :::
 
 ### График
@@ -210,13 +210,13 @@ description: "Одно важное число на панели: подпись
 
 | | |
 |:---|:---|
-| Тег | `<sf-tile-metric>`, контракт `smart.tile-metric` версии `1.2.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-tile-metric>`, контракт `smart.tile-metric` версии `1.2.2` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: плитка-ссылка или плитка-кнопка — одна остановка `Tab`: `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/tile-metric` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-tile-metric` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tile-metric` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tile-metric` |
 
 ## См. также
 

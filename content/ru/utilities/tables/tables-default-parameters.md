@@ -54,7 +54,7 @@ description: "Оформляет таблицу классом table: ширин
 | `--sf-px` | `1px` |
 | `--sf-font-weight-bold` | `700` |
 | `--sf-space-1/2` | `0.5rem; от ширины lg: 0.75rem` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-text-size-1/2` | `var(--sf-text--size-1\/2)` |
 | `--sf-text-height-1/2` | `var(--sf-text--height-1\/2)` |
 | `--sf-a4` | `0.25rem` |

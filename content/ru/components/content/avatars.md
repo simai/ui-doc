@@ -6,6 +6,8 @@ profile: reference
 
 # Аватары
 
+:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.6]{variant=outline scheme=on-surface size=1/2}
+
 Аватар помогает быстро узнать человека, организацию или системный объект по
 фотографии, инициалам или значку. Он представляет идентичность, а не
 действие: кликабельным его делает только обёртка-ссылка или кнопка.
@@ -35,6 +37,8 @@ profile: reference
 
 ### Содержимое
 
+`sf-avatar--text`, `sf-avatar--placeholder` • [справочник](#классы)
+
 Фотография — лучший способ узнать человека. Инициалы (`sf-avatar--text`)
 подходят, когда фотографии нет, но имя известно; значок
 (`sf-avatar--placeholder`) — для гостя или неизвестного объекта. Инициалы и
@@ -54,6 +58,8 @@ profile: reference
 
 ### Размер по строке текста
 
+`sf-avatar--line-1/2`, `sf-avatar--line-1`, `sf-avatar--line-2` • [справочник](#классы)
+
 `sf-avatar--line-1/2`, `sf-avatar--line-1` и `sf-avatar--line-2` делают
 аватар высотой со строку текста той же ступени — для аватара внутри
 предложения, комментария или ячейки. Ставьте их вместо класса размера.
@@ -62,6 +68,8 @@ profile: reference
 :::
 
 ### Форма
+
+`sf-avatar--square` • [справочник](#классы)
 
 Круг — форма аватара человека. `sf-avatar--square` скругляет углы радиусом
 контролов: так показывают организации, приложения и другие объекты, для
@@ -72,6 +80,8 @@ profile: reference
 
 ### Статус
 
+`sf-online-indicator--online`, `sf-online-indicator--offline` • [справочник](#классы)
+
 Индикатор `sf-online-indicator` в углу аватара показывает доступность:
 `sf-online-indicator--online` — в сети, `sf-online-indicator--offline` — не
 в сети. Бейдж `sf-avatar-badge sf-avatar-badge--company` показывает связанную
@@ -81,7 +91,7 @@ profile: reference
 различается только цветом, а аватар скрыт от вспомогательных технологий,
 поэтому доступность пишите текстом рядом: «Анна Белова — в сети».
 
-:::example {id="components/avatars/status" label="Индикаторы доступности и бейдж"}
+:::example {id="components/avatars/status" label="Статус"}
 :::
 
 ### Счётчик и точка
@@ -95,7 +105,7 @@ profile: reference
 Индикатор статуса остаётся в нижнем конце, поэтому счётчик и статус видны
 вместе.
 
-:::example {id="components/avatars/badge-sizes" label="Счётчик на пяти размерах круглого и квадратного аватара"}
+:::example {id="components/avatars/badge-sizes" label="Счётчик и точка"}
 :::
 
 Размер бейджа задаёт размер аватара:
@@ -114,7 +124,7 @@ profile: reference
 знак рисуется кругом, два и три — бейдж растёт вширь. Число больше порога
 `data-cap` (по умолчанию `99`) показывается как `99+`.
 
-:::example {id="components/avatars/badge-kinds" label="Порог 99+, точка, счётчик со статусом и точка на квадратном аватаре"}
+:::example {id="components/avatars/badge-kinds" label="Порог и точка"}
 :::
 
 Цифры и точка скрыты от вспомогательных технологий. Скрипт компонента
@@ -145,16 +155,20 @@ unread" и "new". В имени всегда точное число: при `99
 
 ### Группа
 
+`sf-avatar-group--size-xs` • [справочник](#классы)
+
 `sf-avatar-group` показывает участников стопкой: аватары лежат в
 `sf-avatar-group-avatars` и заходят друг на друга. Насколько — задают
 `sf-avatar-group--size-xs`, `--size-sm` и `--size-md`. Обёртка
-`sf-add-button` с кнопкой с иконкой завершает группу действием «Добавить»;
-кнопка получает пунктирную границу.
+`sf-add-button` с контурной кнопкой с иконкой завершает группу действием
+«Добавить».
 
 :::example {id="components/avatars/group" label="Группы аватаров"}
 :::
 
 ### Карточка
+
+`sf-avatar-card--square`, `sf-avatar-card--portrait` • [справочник](#классы)
 
 `sf-avatar-card` показывает фотографию крупно с именем
 (`sf-avatar-card-title`) и строкой (`sf-avatar-card-row`) под ней.
@@ -162,7 +176,7 @@ unread" и "new". В имени всегда точное число: при `99
 `sf-avatar-card--portrait` — 9:16. Поверхность и отступы карточки задают
 утилиты.
 
-:::example {id="components/avatars/cards" label="Квадратная и портретная карточка"}
+:::example {id="components/avatars/cards" label="Карточка"}
 :::
 
 ### Цвет инициалов
@@ -246,6 +260,8 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar-border-color` | Цвет рамки в покое; у наведения — свой. | `transparent` |
 | `--sf-avatar-border-width` | Ширина рамки со всех сторон. | `var(--sf-px)` |
 | `--sf-avatar-radius` | Скругление углов — одинаково для круглой и квадратной формы. | `var(--sf-radius-circle)`; зависит от вида |
+| `--sf-avatar-offline-background-color` | Цвет под точкой «не в сети»: фон места, где стоит аватар, чтобы сквозь точку не просвечивали ни фото, ни инициалы. | `var(--sf-surface-place)` |
+| `--sf-avatar-offline-overlay` | Слой поверх этого цвета: цвет отключённого. Задайте `none`, чтобы точка «не в сети» была ровно цвета `--sf-avatar-offline-background-color`. | `linear-gradient(var(--sf-on-surface-disabled) 0 0)` |
 
 ```css
 .sf-avatar {
@@ -290,7 +306,7 @@ unread" и "new". В имени всегда точное число: при `99
 | `--sf-avatar-label-group-text--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group.sf-avatar-label-group--size-2.sf-avatar-label-group--status-icon-company .sf-avatar-label-group-text`: `var(--sf-text-height-1)` | `line-height` |
 | `--sf-avatar-label-group-title--font-size` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1 .sf-avatar-label-group-title`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-avatar-label-group-title--line-height` | не задана; задают модификаторы, например `.sf-avatar-label-group--size-1 .sf-avatar-label-group-title`: `var(--sf-text-height-1)` | `line-height` |
-| `--sf-online-indicator--background-color` | не задана; задают модификаторы, например `.sf-online-indicator--offline`: `var(--sf-on-surface-muted)` | `background-color` |
+| `--sf-online-indicator--background-color` | не задана; задают модификаторы, например `.sf-online-indicator--offline`: `var(--sf-avatar-offline-background-color, var(--sf-surface-place))` | `background-color` |
 | `--sf-online-indicator--height` | `var(--sf-b6)` | `height` |
 | `--sf-online-indicator--width` | `var(--sf-b6)` | `width` |
 

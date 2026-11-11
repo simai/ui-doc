@@ -18,7 +18,7 @@ description: "Включает или выключает настройку ср
 
 ## Пример
 
-:::example {id="smart-components/switch/overview" label="Результат"}
+:::example {id="smart-components/switch/overview" label="Результат" preview=sandbox log="change sf-field-reset" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -45,6 +45,8 @@ description: "Включает или выключает настройку ср
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` выбирает ступень размерной шкалы: `1/2`, `1` или `2`. Берите ступень
 полей и кнопок той же формы.
 
@@ -61,16 +63,20 @@ description: "Включает или выключает настройку ср
 
 ### Состав
 
+`label`, `description`, `help` • [справочник](#атрибуты)
+
 `label` называет настройку, `description` поясняет, что она меняет, `help`
 выводит рядом с подписью значок с указанным именем; экранный диктор значок не
 читает.
 
-:::example {id="smart-components/switch/labels" label="Подпись, пояснение, значок и подпись страницы"}
+:::example {id="smart-components/switch/labels" label="Состав"}
 :::
 
 ## Состояния
 
 ### Включён
+
+`checked` • [справочник](#атрибуты)
 
 `checked` включает переключатель. Атрибут следует за положением: после
 нажатия он ставится или снимается.
@@ -80,10 +86,12 @@ description: "Включает или выключает настройку ср
 
 ### Недоступен
 
+`disabled` • [справочник](#атрибуты)
+
 `disabled` запрещает менять положение; недоступный переключатель не попадает
 в отправку формы.
 
-:::example {id="smart-components/switch/state-disabled" label="Недоступный выключенный и включённый"}
+:::example {id="smart-components/switch/state-disabled" label="Недоступен"}
 :::
 
 ## Поведение
@@ -94,7 +102,7 @@ description: "Включает или выключает настройку ср
 выключенный — нет. Сброс формы возвращает положение, заданное атрибутом
 `checked` в разметке.
 
-### Применение настройки и событие `change`
+### Применение настройки и событие
 
 Нажатие отправляет нативное событие `change` внутреннего input; оно
 всплывает через `<sf-switch>`, `detail` у него нет. Новое положение читайте из
@@ -181,12 +189,12 @@ compact.addEventListener('change', async (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-switch>`, контракт `smart.switch` версии `1.3.4` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как переключатель; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/switch` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-switch` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/switch` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-switch` |
 
 ## См. также
 

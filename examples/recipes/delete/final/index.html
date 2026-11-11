@@ -1,0 +1,23 @@
+<div id="final-root" data-sf-overlay-container data-sf-density="compact">
+  <div class="flex flex-col gap-2 items-cross-start">
+    <section class="sf-card w-full max-w-h0" aria-labelledby="final-heading">
+      <h2 id="final-heading" class="m-0 text-1 weight-6">Удаление сайта</h2>
+      <p class="m-0 color-on-surface-variant">Удаляет сайт shop-example со всеми файлами, базами данных и резервными копиями.</p>
+      <div><sf-button status="danger" appearance="outline" icon-start="delete" text="Удалить сайт" data-sf-modal-open="final-modal"></sf-button></div>
+    </section>
+    <p id="final-result" class="m-0 text-1/2 color-on-surface-variant" role="status"></p>
+  </div>
+  <sf-modal modal-id="final-modal" heading="Удалить сайт shop-example?" show-footer="false" width="var(--sf-g4)">
+    <form slot="content" data-final-form class="flex flex-col" novalidate>
+      <div class="bg-surface-container radius-surface p-1 flex flex-col gap-1/2">
+        <p class="m-0">Удалятся сайт, 3 базы данных, 1,2 ГБ файлов и 14 резервных копий. Посетители увидят ошибку 404.</p>
+        <p class="m-0 weight-5">Вернуть будет нельзя.</p>
+      </div>
+      <div class="m-top-2"><sf-input name="confirm" label="Чтобы подтвердить, введите shop-example" autocomplete="off" error-message="Введите shop-example — так вы подтверждаете удаление"></sf-input></div>
+      <div class="m-top-3 flex flex-wrap gap-2">
+        <sf-button native-type="submit" status="danger" text="Удалить сайт"></sf-button>
+        <sf-button appearance="ghost" scheme="on-surface" text="Отмена" data-sf-modal-close="final-modal"></sf-button>
+      </div>
+    </form>
+  </sf-modal>
+</div>

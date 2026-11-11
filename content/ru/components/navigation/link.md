@@ -6,6 +6,8 @@ profile: reference
 
 # Ссылка
 
+:badge[sf-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Ссылка ведёт на другую страницу, раздел страницы или файл. Для действия на
 текущей странице — сохранить, отправить, открыть окно — берите
 [кнопку](/ru/components/actions/buttons/).
@@ -22,11 +24,9 @@ profile: reference
 
 - Блок `sf-link` — строчный flex-контейнер: ссылку можно ставить внутрь
   абзаца, длинная подпись переносится внутри неё.
-- Подпись лежит в `sf-link-content`. CSS читает и написание
-  `sf-link__content`; в разметке используйте `sf-link-content`.
+- Подпись лежит в `sf-link-content`.
 - Иконка — `<i class="sf-icon sf-link-icon" aria-hidden="true">` до или после
-  подписи; её размер равен высоте строки ссылки. Написание `sf-link__icon`
-  CSS тоже читает.
+  подписи; её размер равен высоте строки ссылки.
 - Скрипта у ссылки нет: переход выполняет браузер.
 
 ## Варианты
@@ -53,7 +53,7 @@ profile: reference
 берёт цвет недоступного текста. Без `href` элемент `<a>` не получает фокус и
 не переходит. Рядом объясните, почему переход недоступен.
 
-:::example {id="components/link/disabled" label="Доступная и недоступная ссылка"}
+:::example {id="components/link/disabled" label="Недоступна"}
 :::
 
 ### Фокус

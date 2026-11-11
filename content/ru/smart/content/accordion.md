@@ -19,7 +19,7 @@ description: "Раскрывающиеся секции из данных или
 
 ## Пример
 
-:::example {id="smart-components/accordion/overview" label="Три секции, открыта одна"}
+:::example {id="smart-components/accordion/overview" label="Три секции, открыта одна" preview=sandbox log="sf-accordion-toggle" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -57,6 +57,8 @@ description: "Раскрывающиеся секции из данных или
 
 ### Поверхность
 
+`appearance` • по умолчанию `default` • [справочник](#атрибуты)
+
 `appearance` выбирает вид: `default` — секции на заливке, `outline` — тонкая
 рамка без заливки, `flush` — без заливки и скругления, секции разделены
 линией; для панелей и списков.
@@ -65,6 +67,8 @@ description: "Раскрывающиеся секции из данных или
 :::
 
 ### Размер
+
+`size` • [справочник](#атрибуты)
 
 Без `size` шапка просторная, как на странице с текстом. `size` ставит
 ступень лестницы элементов управления: шапка ровно такой высоты, как
@@ -75,6 +79,8 @@ description: "Раскрывающиеся секции из данных или
 
 ### Иконка
 
+`marker` • по умолчанию `chevron` • [справочник](#атрибуты)
+
 `marker` выбирает, чем отмечена открытая секция: шевроном (по умолчанию) или
 плюсом и минусом (`plus-minus`).
 
@@ -82,6 +88,8 @@ description: "Раскрывающиеся секции из данных или
 :::
 
 ### Один открытый раздел
+
+`single` • [справочник](#атрибуты)
 
 `single` оставляет открытой только одну секцию: открытие другой закрывает
 прежнюю. Так удобно читать вопросы и ответы.
@@ -91,11 +99,13 @@ description: "Раскрывающиеся секции из данных или
 
 ### Одна секция
 
+`single-section` • по умолчанию `static` • [справочник](#атрибуты)
+
 Если секция одна, это обычный раздел: содержимое видно, шапка не
 переключает. `single-section="toggle"` оставляет её раскрывающейся — для
 списка, который пополнится позже.
 
-:::example {id="smart-components/accordion/single-section" label="Одна секция: обычная и раскрывающаяся"}
+:::example {id="smart-components/accordion/single-section" label="Одна секция"}
 :::
 
 ## Состояния
@@ -122,13 +132,13 @@ description: "Раскрывающиеся секции из данных или
 
 `open(id)`, `close(id)` и `toggle(id)` открывают и закрывают секцию и
 возвращают, изменилось ли что-нибудь; `isOpen(id)` отвечает, открыта ли она.
-Каждое открытие и закрытие отправляет `sf-accordion:toggle` с `id`, `open` и
+Каждое открытие и закрытие отправляет `sf-accordion-toggle` с `id`, `open` и
 `source`: `user` — нажал человек, `method` — вызван метод. В режиме `single`
 закрытая при этом секция отправляет своё событие следом.
 
 ```js
 const faq = document.querySelector('sf-accordion');
-faq.addEventListener('sf-accordion:toggle', (event) => {
+faq.addEventListener('sf-accordion-toggle', (event) => {
   if (event.detail.open) history.replaceState(null, '', `#${event.detail.id}`);
 });
 faq.open(location.hash.slice(1));
@@ -190,12 +200,12 @@ faq.open(location.hash.slice(1));
 | | |
 |:---|:---|
 | Тег | `<sf-accordion>`, контракт `smart.accordion` версии `1.1.7` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `↓`, `↑`, `Home`, `End`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/accordion` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-accordion` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/accordion` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-accordion` |
 
 ## См. также
 

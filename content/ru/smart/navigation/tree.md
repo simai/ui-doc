@@ -19,7 +19,7 @@ JavaScript.
 
 ## Пример
 
-:::example {id="smart-components/tree/overview" label="Результат"}
+:::example {id="smart-components/tree/overview" label="Результат" preview=sandbox log="sf-tree-open sf-tree-select sf-tree-toggle sf-tree-move sf-tree-attach sf-tree-window" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -88,7 +88,6 @@ JavaScript.
 | `one` | выбирает один пункт |
 | `many` | переключает выбор каждого пункта отдельно |
 
-`single` и `multiple` — другие имена `one` и `many`, работают до 2026-12-01.
 Значение `selected` — код текущего пункта, `selected-ids` — все выбранные
 при `many`, по порядку записей. Изначальный выбор задают атрибутом
 `selected` у пункта или полем `selected: true` у записи.
@@ -98,18 +97,17 @@ JavaScript.
 
 ### События
 
-| Событие | Когда | `event.detail` | Прежнее имя (до 2026-12-01) |
-|:---|:---|:---|:---|
-| `sf-tree-open` | нажата подпись пункта или `Enter` на листе без ссылки | `id`, `value` | `sf-tree-item-click` |
-| `sf-tree-select` | выбор изменился | `ids` — весь выбор, `id` — нажатый пункт, `selected` | `sf-tree-selection-change` |
-| `sf-tree-toggle` | ветвь раскрыта или свёрнута | `id`, `open`, `value` | `sf-tree-item-toggle` |
-| `sf-tree-move` | на пункт отпустили записи из списка (`accept-records`) | `ids`, `parent`, `before`, `source` | `sf-tree-records-drop` |
-| `sf-tree-attach` | на пункт отпустили файлы (`accept-files`) | `files`, `parent` | `sf-tree-files-drop` |
-| `sf-tree-window` | изменилось окно длинного дерева | `first`, `last` | — |
+| Событие | Когда | `event.detail` |
+|:---|:---|:---|
+| `sf-tree-open` | нажата подпись пункта или `Enter` на листе без ссылки | `id`, `value` |
+| `sf-tree-select` | выбор изменился | `ids` — весь выбор, `id` — нажатый пункт, `selected` |
+| `sf-tree-toggle` | ветвь раскрыта или свёрнута | `id`, `open`, `value` |
+| `sf-tree-move` | на пункт отпустили записи из списка (`accept-records`) | `ids`, `parent`, `before`, `source` |
+| `sf-tree-attach` | на пункт отпустили файлы (`accept-files`) | `files`, `parent` |
+| `sf-tree-window` | изменилось окно длинного дерева | `first`, `last` |
 
 События приходят на `<sf-tree>`. В `detail` — только данные: код записи, а
-не элемент. Прежнее имя приходит следом за новым с прежним `detail`, где
-`item` — элемент строки; такие события отмечаются в `SF.deprecations`. `onToggle(handler)` слушает `sf-tree-toggle` и
+не элемент. `onToggle(handler)` слушает `sf-tree-toggle` и
 передаёт обработчику элемент строки первым аргументом.
 
 ```js
@@ -228,12 +226,12 @@ tree.items = await fetchFolders();
 | | |
 |:---|:---|
 | Тег | `<sf-tree>`, контракт `smart.tree` версии `2.1.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «меню» (сервер пишет `data-sf-skeleton="menu"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`; поиск по первым буквам. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/tree` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-tree` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tree` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tree` |
 
 ## См. также
 

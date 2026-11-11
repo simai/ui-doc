@@ -18,7 +18,7 @@ description: "Цветовые примитивы — это конкретны�
 |:---|:---|
 | Нейтральная | `neutral` |
 | Акцентные | `primary`, `secondary`, `tertiary` |
-| Статусные | `info`, `success`, `warning`, `error` |
+| Статусные | `info`, `success`, `warning`, `error` — имена оттенков [статической палитры](#статусы-оттенки-статической-палитры), а не свои цвета |
 
 Отдельно стоят три базовых цвета без тонов: `--sf-white`, `--sf-black` и
 `--sf-transparent`.
@@ -33,7 +33,7 @@ description: "Цветовые примитивы — это конкретны�
 Восемь палитр по всем шестнадцати тонам. Наведите указатель на образец:
 подсказка назовёт примитив.
 
-:::example {label="Восемь палитр темы, тона от 98 до 5"}
+:::example {label="Палитры и тоны"}
 ```html
 <div class="sf-doc-ramp-grid">
     <span></span><span class="sf-doc-ramp-tone">98</span><span class="sf-doc-ramp-tone">95</span><span class="sf-doc-ramp-tone">90</span><span class="sf-doc-ramp-tone">85</span><span class="sf-doc-ramp-tone">80</span><span class="sf-doc-ramp-tone">70</span><span class="sf-doc-ramp-tone">60</span><span class="sf-doc-ramp-tone">50</span><span class="sf-doc-ramp-tone">40</span><span class="sf-doc-ramp-tone">35</span><span class="sf-doc-ramp-tone">30</span><span class="sf-doc-ramp-tone">25</span><span class="sf-doc-ramp-tone">20</span><span class="sf-doc-ramp-tone">15</span><span class="sf-doc-ramp-tone">10</span><span class="sf-doc-ramp-tone">5</span>
@@ -73,14 +73,14 @@ description: "Цветовые примитивы — это конкретны�
 Шаг неравномерный: у краёв (светлые фоны, тёмный текст) нужны мелкие различия,
 поэтому там шаг 5; в середине, где цвет используется реже, — шаг 10.
 
-Палитры построены по модели HCT (оттенок, насыщенность, тон), той же, что у
-Material Design 3: тон в имени означает одинаковую воспринимаемую светлоту во
-всех палитрах. Поэтому `--sf-primary-40` и `--sf-error-40` одинаково светлы, и
+Палитры построены по модели HCT (оттенок, насыщенность, тон): тон в имени
+означает одинаковую воспринимаемую светлоту во всех палитрах. Поэтому `--sf-primary-40` и `--sf-error-40` одинаково светлы, и
 пара «тон 40 на белом» даёт сопоставимый контраст в любой палитре.
 
-Палитра `info` — своя палитра цвета `#005bbe`, как `error`, `warning` и
-`success`: она статусная и за фирменным цветом не идёт. Поэтому при красном
-фирменном цвете «информация» остаётся синей и не читается как опасность.
+Статусные палитры — не отдельные цвета: каждая из них — другое имя оттенка
+[статической палитры](#статусы-оттенки-статической-палитры), поэтому за
+фирменным цветом они не идут. При красном фирменном цвете «информация» не
+становится красной и не читается как опасность.
 
 Значения примитивов выбранного выпуска читаются в поставке, в
 `distr/core/css/core.css`. Справочник [«Все переменные»](/ru/guide/colour/all-tokens/)
@@ -117,10 +117,10 @@ Framework не использует, не проходит контракт `alp
 `yellow`, `lime`, `green`, `teal`, `cyan`, `sky`, `blue`, `indigo`, `violet`,
 `purple`, `pink`, `brown` и `gray`. У каждого те же шестнадцать тонов и
 полупрозрачные ступени: `--sf-green-50`, `--sf-green-50--alfa-12`. Смена
-фирменного цвета их не двигает. Статусы — четыре из них: ошибка — `red`,
-предупреждение — `amber`, успех — `green`, информация — `blue`.
+фирменного цвета их не двигает. Статусы своих цветов не имеют: каждый берёт
+один из этих оттенков (ниже, «Статусы — оттенки статической палитры»).
 
-:::example {label="Шестнадцать оттенков статической палитры, тона от 95 до 10"}
+:::example {label="Оттенки"}
 ```html
 <div class="sf-doc-palette-grid">
     <span></span><span class="sf-doc-palette-tone">95</span><span class="sf-doc-palette-tone">90</span><span class="sf-doc-palette-tone">80</span><span class="sf-doc-palette-tone">70</span><span class="sf-doc-palette-tone">60</span><span class="sf-doc-palette-tone">50</span><span class="sf-doc-palette-tone">40</span><span class="sf-doc-palette-tone">30</span><span class="sf-doc-palette-tone">20</span><span class="sf-doc-palette-tone">10</span>
@@ -168,6 +168,84 @@ Framework не использует, не проходит контракт `alp
 ```
 :::
 
+### Статусы — оттенки статической палитры
+
+Роль статуса (`--sf-error`, `--sf-warning`, `--sf-success`, `--sf-info` и их
+`-container`, `on-…`) — имя оттенка статической палитры: её примитивы
+`--sf-error-40` и другие ссылаются на тоны оттенка (`var(--sf-red-40)`). Цвет
+и подложку статус берёт из тех же тонов, что и акцент: текст и сплошная
+заливка — тон 40 в светлой теме и 80 в тёмной, подложка `-container` — тон 50
+при 12 % в светлой и при 24 % в тёмной. В строке ниже слева — роль, справа —
+тоны её оттенка: они совпадают. Переключите тему.
+
+:::example {label="Статусы и их оттенки"}
+```html
+<div class="sf-doc-status-grid">
+  <span class="sf-doc-status-head">Роль</span>
+  <span class="sf-doc-status-head">Оттенок</span>
+  <span class="sf-doc-status-head">Роль, тона 40 и 80, подложка</span>
+
+  <code>error</code>
+  <code>red</code>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-error)" title="--sf-error"></span><span class="sf-doc-status-swatch" style="background: var(--sf-red-40)" title="--sf-red-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-red-80)" title="--sf-red-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-error-container); color: var(--sf-on-error-container)">Ошибка</span></span>
+
+  <code>warning</code>
+  <code>amber</code>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-warning)" title="--sf-warning"></span><span class="sf-doc-status-swatch" style="background: var(--sf-amber-40)" title="--sf-amber-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-amber-80)" title="--sf-amber-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-warning-container); color: var(--sf-on-warning-container)">Внимание</span></span>
+
+  <code>success</code>
+  <code>green</code>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-success)" title="--sf-success"></span><span class="sf-doc-status-swatch" style="background: var(--sf-green-40)" title="--sf-green-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-green-80)" title="--sf-green-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-success-container); color: var(--sf-on-success-container)">Успех</span></span>
+
+  <code>info</code>
+  <span><code>blue</code><br><span class="sf-doc-status-note"><code>sky</code> — в следующем выпуске</span></span>
+  <span class="sf-doc-status-tones"><span class="sf-doc-status-swatch" style="background: var(--sf-info)" title="--sf-info"></span><span class="sf-doc-status-swatch" style="background: var(--sf-blue-40)" title="--sf-blue-40, светлая тема"></span><span class="sf-doc-status-swatch" style="background: var(--sf-blue-80)" title="--sf-blue-80, тёмная тема"></span><span class="sf-doc-status-chip" style="background: var(--sf-info-container); color: var(--sf-on-info-container)">Информация</span></span>
+</div>
+```
+```css
+.sf-doc-status-grid {
+  display: grid;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
+  gap: var(--sf-space-1\/2) var(--sf-space-1);
+  align-items: center;
+}
+
+.sf-doc-status-head,
+.sf-doc-status-note {
+  font-size: var(--sf-text--size-1\/2);
+  color: var(--sf-on-surface-variant);
+}
+
+.sf-doc-status-note {
+  display: block;
+  max-inline-size: var(--sf-e4);
+}
+
+.sf-doc-status-tones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sf-space-1\/4);
+}
+
+.sf-doc-status-swatch {
+  inline-size: var(--sf-space-3);
+  block-size: var(--sf-space-3);
+  border-radius: var(--sf-radius--ui);
+}
+
+.sf-doc-status-chip {
+  margin-inline-start: var(--sf-space-1\/2);
+  padding: var(--sf-space-1\/4) var(--sf-space-1);
+  border-radius: var(--sf-radius--ui);
+}
+```
+:::
+
+Первый образец в строке — сама роль, второй и третий — тона 40 и 80 оттенка:
+в светлой теме роль совпадает со вторым, в тёмной — с третьим. Информация
+сейчас берёт `blue`; в следующем выпуске Framework она переходит на `sky`.
+
 Примитивы в стилях интерфейса не пишут. Компоненту, которому нужен свой цвет,
 дают имя оттенка: класс `sf-hue-{имя}` (любой статический оттенок, а также
 `primary`, `secondary` и `tertiary`) задаёт элементу роли `--sf-hue`,
@@ -177,7 +255,7 @@ Framework не использует, не проходит контракт `alp
 [аватара](/ru/smart/content/avatar/). Переключите тему: плашки ниже сменят
 тон сами.
 
-:::example {label="Роли оттенка: --sf-hue-container и --sf-on-hue-container"}
+:::example {label="Роли оттенка"}
 ```html
 <div class="sf-doc-hue-grid">
     <span class="sf-hue-red sf-doc-hue-chip">red</span>
@@ -223,6 +301,66 @@ Framework не использует, не проходит контракт `alp
 Поэтому примитив в стилях интерфейса — почти всегда ошибка: элемент,
 окрашенный `--sf-primary-40`, в тёмной теме останется тёмно-синим на почти
 чёрном фоне.
+
+## Тона, прозрачность и роли
+
+Роли берут цвет из трёх источников:
+
+- **шестнадцать тонов** каждой палитры, белый и чёрный — для текста, линий и
+  сплошных заливок;
+- **одиннадцать ступеней [прозрачности](/ru/guide/colour/transparency/)** в
+  трёх семействах: состояние 4, 8, 12; заливка 12–32; штрих 48, 64, 80 — для
+  наведения, выбора, нажатия, плашек и линий;
+- **оттенки [статической палитры](#статическая-палитра)** — для цветов, которые
+  от темы не зависят.
+
+Других тонов Framework не добавляет: нейтральная палитра сама берёт оттенок
+темы, `gray` даёт чистый серый, `brown` — тёплый приглушённый.
+
+### Какой тон берёт роль
+
+| Роль | Светлая тема | Тёмная тема |
+|:---|:---|:---|
+| Страница `--sf-surface-page` | белый | `neutral-5` |
+| Область `--sf-surface-area` | `neutral-98` | `neutral-10` |
+| Карточка, поднятое, всплывающее, вложенное | белый, место отделяет тень | `neutral-15`, `neutral-20`, `neutral-25`, `neutral-30` |
+| Обратная поверхность `--sf-surface-inverse` | `neutral-20` | `neutral-90` |
+| Основной текст `--sf-on-surface` | `neutral-10` | `neutral-90` |
+| Второстепенный текст `--sf-on-surface-variant` | `neutral-40` | `neutral-60`; на поднятом и всплывающем — 70, на вложенном — 80 |
+| Акцент и статусы: текст и сплошная заливка | тон 40 | тон 80 |
+| Наведение и нажатие на акценте | тона 35 и 30 | тона 85 и 90 |
+| Текст на акценте `--sf-on-primary` | белый | `primary-20` |
+| Подложка акцента `--sf-primary-container` | `primary-50` при 12 % | `primary-50` при 24 % |
+| Текст на подложке акцента `--sf-on-primary-container` | `primary-10` | `primary-90` |
+| Наведение, выбор, нажатие | `neutral-50` при 4, 8 и 12 % | `neutral-90` при 4, 8 и 12 % |
+| Линия `--sf-outline` | `neutral-50` при 80 % | `neutral-90` при 48 % |
+| Тонкая линия `--sf-outline-variant` | `neutral-50` при 24 % | `neutral-90` при 24 % |
+
+Текст на основном фоне читается с запасом: основной — 17,2 : 1 в светлой
+теме и 14,7 : 1 в тёмной, акцентный — около 6,5 : 1 и 11 : 1.
+
+### Полупрозрачные подложки и состояния
+
+Подложки, наведение, выбор и нажатие — полупрозрачный цвет, а не отдельный
+тон. `neutral-50` на белом при 4, 8, 12, 16 и 20 % даёт светлоту 98, 96, 94,
+92 и 91; в тёмной теме `neutral-90` на странице при 8, 12, 16 и 20 % даёт 13,
+17, 21 и 25.
+
+Полупрозрачный слой подстраивается под место, на котором лежит: на белой
+карточке, на тёмной панели и на цветной шапке он остаётся «на ступеньку
+темнее места». Один и тот же слой работает на любом месте.
+
+### Где нужен сплошной цвет
+
+- **Текст** берёт только сплошные тона. Единственные полупрозрачные чернила —
+  у недоступных элементов, `--sf-on-surface-disabled`: к ним требования
+  контраста не относятся.
+- **Там, где под элементом движется содержимое** — липкая колонка таблицы,
+  кольцо вокруг аватара или бейджа, элемент над картинкой, — полупрозрачный
+  слой кладётся поверх сплошного цвета места `--sf-surface-place`. Новый тон
+  для этого не нужен: каждое непрозрачное место объявляет свой цвет, и бейджи,
+  аватары, флажки, переключатели и слайдеры его читают. Подробнее —
+  [«Место под вырезом»](/ru/guide/colour/surfaces/#место-под-вырезом).
 
 ## Замена палитры
 
@@ -286,9 +424,10 @@ Framework не использует, не проходит контракт `alp
 | `success` | 145 | 65 |
 | `info` | 265.1 | 58.6 |
 
-Статусные палитры — `error`, `warning`, `success` и `info` — заданы числами:
+Статусные палитры — `error`, `warning`, `success` и `info` — оттенки
+статической палитры (`red`, `amber`, `green`, `blue`), их числа постоянны:
 выбранный цвет двигает только `primary`, `secondary`, `tertiary` и `neutral`.
-Тон и насыщенность `info` — собственные значения цвета `#005bbe` в HCT: тон
+Тон и насыщенность `blue`, а с ним `info`, — собственные значения цвета `#005bbe` в HCT: тон
 265.1 и насыщенность 58.5, округлённая вверх до 58.6, при которой тон 40
 палитры — ровно `#005bbe`. Поэтому «информация» остаётся синей при любом
 фирменном цвете. Это не то же, что прочтение цвета генератором (см. ниже): у
@@ -296,15 +435,15 @@ Framework не использует, не проходит контракт `alp
 палитры `primary` и `info` расходятся, хотя тон 40 у обеих — `#005bbe`.
 
 Цвет Framework `#005bbe` читается как тон 265 и насыщенность 85, и по этим
-правилам получаются ровно 128 примитивов поставки. Насыщенность читается так:
+правилам получаются ровно примитивы поставки. Насыщенность читается так:
 если цвет насыщен настолько, насколько его тон позволяет при его светлоте, —
 так бывает у тёмного или светлого фирменного цвета, — насыщенность палитры
 берётся не ниже 85, иначе — собственная насыщенность цвета. Тон и насыщенность можно задать и
 числами — поля «Тонкая настройка» генератора или `themeFromHct({hue, chroma})`.
 
 Вместе с тонами генератор пишет полупрозрачные ступени, которые ядро
-выводит из тонов (`--sf-<палитра>-<тон>--alfa-<ступень>`, 98 переменных; список
-— `SF.ThemePalette.THEME_ALPHA`): тема — 226 переменных, и заливки
+выводит из тонов (`--sf-<палитра>-<тон>--alfa-<ступень>`; список —
+`SF.ThemePalette.THEME_ALPHA`): тема — тоны и полупрозрачные ступени, и заливки
 `*-container`, фоны наведения и выбора следуют за новым цветом. Цвет Framework
 даёт обратно и каждую полупрозрачную ступень поставки.
 
@@ -363,9 +502,9 @@ HCT, например классом `TonalPalette` из пакета
   полупрозрачные ступени — иначе часть ролей останется в исходном цвете;
 - рекомендуется строить палитру целиком по модели HCT, а не подбирать тона по
   одному;
-- палитры независимы. `info` — своя палитра с собственными примитивами
-  (`--sf-info-*`), а не производная от `primary`: смена `primary` её не
-  меняет. То же верно для `secondary` и `tertiary`. Если информационный цвет
+- палитры независимы. `info` — оттенок статической палитры со своими
+  примитивами (`--sf-info-*` ссылаются на тоны оттенка), а не производная от
+  `primary`: смена `primary` её не меняет. То же верно для `secondary` и `tertiary`. Если информационный цвет
   должен следовать фирменному, переопределите и палитру `info`.
 
 ## Смотрите также

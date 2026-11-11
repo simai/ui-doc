@@ -151,7 +151,7 @@ log.renderMessage = (message, {view}) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-b4a77681f0a7` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-2bd5a3ab478a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -213,8 +213,8 @@ log.renderMessage = (message, {view}) => {
 
 ### Источник
 
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/chat-message`
-- `simai/ui-pro@7a2900066a50a6c683edfe57367c442223d48532:components/src/smart/chat-message/rule.js#name=cl-chat-message`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/chat-message`
+- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/chat-message/rule.js#name=cl-chat-message`
 
 ## См. также
 

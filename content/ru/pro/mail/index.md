@@ -1,6 +1,6 @@
 ---
 title: "Письма"
-description: "Письма — 5 компонентов SIMAI Pro."
+description: "Письма — компоненты SIMAI Pro."
 profile: reference
 ---
 

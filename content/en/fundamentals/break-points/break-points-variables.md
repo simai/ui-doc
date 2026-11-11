@@ -5,7 +5,7 @@ description: "Breakpoint variables"
 
 # Breakpoint variables
 
-Each breakpoint has a variable so you can adjust values centrally. The breakpoints are adapted from Bootstrap with these
+Each breakpoint has a variable so you can adjust values centrally. The breakpoints follow these
 rules:
 
 * Breakpoint sizes align with the framework's sizing system.

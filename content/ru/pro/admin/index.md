@@ -1,6 +1,6 @@
 ---
 title: "Админка"
-description: "Админка — 4 компонента SIMAI Pro."
+description: "Админка — компоненты SIMAI Pro."
 profile: reference
 ---
 

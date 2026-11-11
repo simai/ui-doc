@@ -67,15 +67,32 @@ try {
   console.error(`no ui-source checkout with the journal at ${sourceRepo}; set SIMAI_UI_SOURCE_REPO`);
   process.exit(2);
 }
+// A status rename that names no component is the general rule (danger →
+// error, 2026-10-09). A rename the journal records for this block itself
+// that goes the other way is the block's own later word (C13: a control says
+// danger, value-control-status-error-to-danger), so the general one is not
+// listed for that block: otherwise the table names both directions. The
+// journal names the Smart tag; sf-button-icon draws the sf-icon-button block.
+const BLOCK_OF_COMPONENT = {'sf-button-icon': 'sf-icon-button'};
 const legacyModifiers = (block, present) => {
   const out = new Map();
+  const own = (item) => item.component && (BLOCK_OF_COMPONENT[item.component] ?? item.component) === block;
+  const reversed = new Set();
+  for (const record of journal.records) {
+    for (const item of record.items ?? []) {
+      if (!item.from || !item.to) continue;
+      if (record.kind === 'class' && item.from.startsWith(`${block}--`)) reversed.add(`${item.to}>${item.from}`);
+      if (record.kind === 'value' && item.attribute === 'status' && own(item)) reversed.add(`${block}--${item.to}>${block}--${item.from}`);
+    }
+  }
   for (const record of journal.records) {
     for (const item of record.items ?? []) {
       if (!item.from || !item.to) continue;
       if (record.kind === 'class' && item.from.startsWith(`${block}--`)) out.set(item.from, item.to);
-      if (record.kind === 'value' && item.attribute === 'status' && (!item.component || item.component === block)) {
+      if (record.kind === 'value' && item.attribute === 'status' && (!item.component || own(item))) {
         const from = `${block}--${item.from}`;
         const to = `${block}--${item.to}`;
+        if (!item.component && reversed.has(`${from}>${to}`)) continue;
         if (present.has(from) && present.has(to)) out.set(from, to);
       }
     }
@@ -306,9 +323,9 @@ const utilityClasses = (families) => {
     }
     for (const [id, {removeAfter, names}] of byRecord) {
       const until = removeAfter ? ` до ${removeAfter}` : '';
-      const count = names.length;
-      const word = count % 10 === 1 && count % 100 !== 11 ? 'класс' : (count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14) ? 'класса' : 'классов');
-      lines.push('', `Ещё ${count} ${word} уходят без замены и работают${until} (запись \`${id}\` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
+      // No count: the number changes between releases (D19).
+      if (!names.length) continue;
+      lines.push('', `Другие классы записи \`${id}\` журнала уходят без замены и работают${until} ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
     }
   }
   return lines;
@@ -618,6 +635,26 @@ const setSection = (text, kind, heading, body) => {
   return `${head}${sections.join('')}`.replace(/\n{3,}/gu, '\n\n').replace(/\n*$/u, '\n');
 };
 
+// A class page carries the same version line as a Smart page (dispatcher
+// call 2026-11-10 on D01): under the H1, the block's name and the version of
+// the component's passport at the release. The line is rewritten with every
+// release, so the prose names no version of its own.
+const BADGE_LINE = /^\n:badge\[[^\n]*\n+/u;
+const passportVersion = (component) => {
+  try {
+    return JSON.parse(show(`distr/component/${component}/passport.json`) ?? 'null')?.version ?? null;
+  } catch {
+    return null;
+  }
+};
+const withBadges = (text, block, version) => {
+  const title = text.match(/^# .+\n/mu);
+  if (!title || !version || !block?.startsWith('sf-')) return text;
+  const at = title.index + title[0].length;
+  const line = `:badge[${block}]{variant=tonal scheme=primary size=1/2} :badge[${version}]{variant=outline scheme=on-surface size=1/2}`;
+  return `${text.slice(0, at)}\n${line}\n${text.slice(at).replace(BADGE_LINE, '\n')}`;
+};
+
 const changed = [];
 for (const [page, entry] of Object.entries(settings.pages)) {
   const path = join(root, 'content/ru', page);
@@ -641,6 +678,9 @@ for (const [page, entry] of Object.entries(settings.pages)) {
       : blocks.flatMap((block, index) => [...(index ? [''] : []), `**${code(block)}**`, '', ...componentClasses(entry.component, block)]);
     next = setSection(next, 'component', 'Классы', [...classes, '', SOURCE_NOTE]);
     next = setSection(next, 'component', 'Переменные', componentVariablesSection(entry.component, blocks));
+  }
+  if (entry.kind === 'component') {
+    next = withBadges(next, (entry.blocks ?? [entry.block])[0], passportVersion(entry.component));
   }
   if (next !== current) {
     changed.push(page);

@@ -38,6 +38,8 @@ description: "Показывает известный ход процесса ш
 
 ### Подпись значения
 
+`show-text` • [справочник](#атрибуты)
+
 `show-text` (по умолчанию включён) показывает значение в процентах под
 шкалой; `show-text="false"` оставляет одну шкалу.
 
@@ -45,6 +47,8 @@ description: "Показывает известный ход процесса ш
 :::
 
 ### Статус
+
+`status` • по умолчанию `neutral` • [справочник](#атрибуты)
 
 `status` сообщает смысл из общего словаря: `neutral` (по умолчанию), `info`,
 `success`, `warning`, `error`. Компонент не выводит статус из процента:
@@ -56,6 +60,8 @@ description: "Показывает известный ход процесса ш
 
 ### Размер
 
+`size` • по умолчанию `1` • [справочник](#атрибуты)
+
 `size` — ступень `1/3`, `1/2`, `1`, `2` или `3`.
 
 :::example {id="smart-components/progress-scale/sizes" label="Размеры шкалы"}
@@ -63,10 +69,12 @@ description: "Показывает известный ход процесса ш
 
 ### В строке текста
 
+`line` • [справочник](#атрибуты)
+
 В ячейке таблицы или в ряду полей задайте `line` (`1/2`, `1`, `2`): шкала и
 значение встанут в одну строку текста этого размера формы.
 
-:::example {id="smart-components/progress-scale/line" label="Шкала рядом с кнопкой того же размера"}
+:::example {id="smart-components/progress-scale/line" label="В строке текста"}
 :::
 
 ## Поведение
@@ -135,12 +143,12 @@ scale.setProgress(completedSteps * 20);
 | | |
 |:---|:---|
 | Тег | `<sf-progress-scale>`, контракт `smart.progress-scale` версии `1.1.4` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как индикатор прогресса; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/progress-scale` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-progress-scale` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/progress-scale` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-progress-scale` |
 
 ## См. также
 

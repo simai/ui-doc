@@ -6,6 +6,8 @@ profile: reference
 
 # Группа кнопок
 
+:badge[sf-button-group]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+
 Группа объединяет несколько связанных кнопок в один компактный элемент: соседние
 границы сливаются, внешние углы сохраняют радиус кнопок. Берите её для близких
 по смыслу действий над одним объектом; для выбора одного значения из нескольких
@@ -44,7 +46,7 @@ profile: reference
 панели. Атрибут `aria-orientation="vertical"` скрипт понимает так же, но
 сам переносит значение в `data-orientation`.
 
-:::example {id="components/button-group/orientation" label="Горизонтальная и вертикальная группа"}
+:::example {id="components/button-group/orientation" label="Ориентация"}
 :::
 
 ## Состояния

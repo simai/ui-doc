@@ -6,6 +6,8 @@ profile: reference
 
 # Разделитель
 
+:badge[sf-divider]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+
 Разделитель отделяет соседние части содержимого или действий линией. Для
 простой границы между разделами достаточно `<hr>`; компонент нужен, когда
 на линии стоит подпись («или», название раздела) или кнопка, либо когда
@@ -36,10 +38,12 @@ profile: reference
 она растягивается на высоту строки. Вертикальному разделителю задайте
 `role="separator"` и `aria-orientation="vertical"`.
 
-:::example {id="components/content-divider/orientation" label="Горизонтальный и вертикальный разделитель"}
+:::example {id="components/content-divider/orientation" label="Ориентация"}
 :::
 
 ### Подпись
+
+`sf-divider-content--bold`, `sf-divider-content--small` • [справочник](#классы)
 
 `sf-divider-content` ставит текст посередине линии. `sf-divider-content--bold`
 набирает его жирным — для названия раздела; `sf-divider-content--small` —
@@ -51,17 +55,13 @@ profile: reference
 
 ### Кнопки на линии
 
+`sf-divider-buttons` • [справочник](#классы)
+
 `sf-divider-buttons` ставит на линию обычные
 [кнопки](/ru/components/actions/buttons/) `sf-button` и
 [кнопки с иконкой](/ru/components/actions/icon-buttons/) `sf-icon-button` и
 держит между ними промежуток. Так в редакторах вставляют блок или меняют
 порядок блоков.
-
-Классы `sf-divider-button`, `sf-divider-button--solo`,
-`sf-divider-button--left`, `sf-divider-button--right`,
-`sf-divider-button-square--left` и `sf-divider-button-square--right` — старые
-имена кнопок на линии. Они работают для совместимости; в новой разметке
-используйте `sf-button` и `sf-icon-button`.
 
 :::example {id="components/content-divider/buttons" label="Кнопки на линии"}
 :::

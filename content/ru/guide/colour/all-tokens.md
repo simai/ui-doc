@@ -5,7 +5,7 @@ description: "Полный список переменных, которые о�
 
 # Все переменные
 
-634 переменных, которые объявляет ядро, со значениями по умолчанию.
+Переменные, которые объявляет ядро, со значениями по умолчанию.
 Примитивы сюда не входят: ступени цвета, размера и прозрачности — это ряды
 значений, у каждого ряда своя страница, и повторять их здесь значило бы
 держать вторую копию.
@@ -65,7 +65,7 @@ description: "Полный список переменных, которые о�
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-surface-media)` |
 | `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
-| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` · `var(--sf-white--alfa-80)` |
 | `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
@@ -73,11 +73,10 @@ description: "Полный список переменных, которые о�
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
 | `--sf-on-surface-media` | `var(--sf-white)` |
-| `--sf-on-surface-muted` | `light-dark(var(--sf-neutral-60), var(--sf-neutral-40))` |
 | `--sf-on-surface-popup-nested-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
-| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
+| `--sf-on-surface-popup-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-80))` |
 | `--sf-on-surface-raised-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` · `var(--sf-white--alfa-80)` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` · `var(--sf-white--alfa-80)` |
 | `--sf-on-tertiary-container` | `light-dark(var(--sf-tertiary-10), var(--sf-tertiary-90))` |
 | `--sf-on-tertiary-container-graphic` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-on-warning-container` | `light-dark(var(--sf-warning-10), var(--sf-warning-90))` |
@@ -102,12 +101,14 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` |
 | `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
 | `--sf-surface-place` | `var(--sf-surface-page)` · `var(--sf-surface-media)` |
+| `--sf-surface-place-solid` | `var(--sf-surface-page)` · `initial` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
 | `--sf-surface-raised` | `light-dark(var(--sf-surface-page), var(--sf-surface-3))` |
 | `--sf-surface-state-active` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
 | `--sf-surface-state-hover` | `light-dark(var(--sf-neutral-50--alfa-4), var(--sf-neutral-90--alfa-4))` · `var(--sf-white--alfa-4)` |
 | `--sf-surface-state-select` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` · `var(--sf-white--alfa-8)` |
+| `--sf-surface-underlay` | `initial` |
 | `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
 | `--sf-surface-well` | `light-dark(var(--sf-neutral-95), var(--sf-neutral-5))` |
 
@@ -728,6 +729,12 @@ description: "Полный список переменных, которые о�
 | `--sf-paper-outline` | `var(--sf-neutral-50)` |
 | `--sf-paper-primary` | `var(--sf-primary-40)` |
 | `--sf-paper-select` | `var(--sf-primary-50--alfa-8)` |
+| `--sf-popup-form-wide-width` | `var(--sf-g2)` · `var(--sf-g1)` |
+| `--sf-popup-form-width` | `var(--sf-g0)` · `var(--sf-f8)` |
+| `--sf-popup-list-max-width` | `var(--sf-g0)` · `var(--sf-f8)` |
+| `--sf-popup-menu-max-width` | `var(--sf-f8)` · `var(--sf-f6)` |
+| `--sf-popup-menu-min-width` | `var(--sf-f0)` · `var(--sf-e8)` |
+| `--sf-popup-panel-width` | `var(--sf-g0)` · `var(--sf-f8)` |
 | `--sf-px` | `1px` |
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |

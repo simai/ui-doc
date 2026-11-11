@@ -49,7 +49,7 @@ profile: reference
 или содержимому атрибут `hidden` — тогда содержимое не мелькает до запуска
 скрипта.
 
-:::example {id="components/hide-show/initial-hidden" label="Содержимое скрыто изначально"}
+:::example {id="components/hide-show/initial-hidden" label="Скрыто"}
 :::
 
 ## Доступность

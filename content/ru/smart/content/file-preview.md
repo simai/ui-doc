@@ -17,7 +17,7 @@ JavaScript.
 
 ## Пример
 
-:::example {id="smart-components/file-preview/overview" label="Файлы в списке"}
+:::example {id="smart-components/file-preview/overview" label="Файлы в списке" preview=sandbox log="sf-file-preview-download sf-file-preview-detach" log_console=true log_open=false}
 :::
 
 ## Разметка
@@ -28,7 +28,7 @@ JavaScript.
 <sf-file-preview file-name="Отчёт за квартал.pdf" file-size="1,2 МБ"></sf-file-preview>
 ```
 
-`file-name` — видимое имя файла (прежнее имя атрибута — `name`),
+`file-name` — видимое имя файла,
 `file-size` — размер готовым текстом («1,2 МБ»); компонент его не
 вычисляет. `href` — адрес файла для скачивания. Слева показывается значок
 из `icon` (по умолчанию `description`) или миниатюра.
@@ -36,6 +36,8 @@ JavaScript.
 ## Варианты
 
 ### Миниатюра
+
+`kind`, `mime-type`, `image-url` • [справочник](#атрибуты)
 
 `kind` решает, что стоит слева:
 
@@ -48,36 +50,44 @@ JavaScript.
 Для адреса без расширения, например `data:` или адреса хранилища, задайте
 `kind="image"` явно.
 
-:::example {id="smart-components/file-preview/thumbnail" label="Значок и миниатюра при разных kind"}
+:::example {id="smart-components/file-preview/thumbnail" label="Миниатюра"}
 :::
 
 ### Поверхность
 
+`surface` • [справочник](#атрибуты)
+
 `surface` добавляет строке фон — для файла, который стоит отдельно, а не в
 списке.
 
-:::example {id="smart-components/file-preview/surface" label="Строка без поверхности и с поверхностью"}
+:::example {id="smart-components/file-preview/surface" label="Поверхность"}
 :::
 
 ### Действия
 
+`download-action`, `remove-action`, `actions` • [справочник](#атрибуты)
+
 `download-action="false"` и `remove-action="false"` убирают одну кнопку,
 `actions="false"` — обе.
 
-:::example {id="smart-components/file-preview/actions" label="Обе кнопки, без удаления и без кнопок"}
+:::example {id="smart-components/file-preview/actions" label="Действия"}
 :::
 
 ### Компактный
 
+`compact` • [справочник](#атрибуты)
+
 `compact` оставляет только ведущий значок высотой со строку списка:
 изображение или расширение файла в плитке. Для файла в ячейке таблицы.
 
-:::example {id="smart-components/file-preview/compact" label="Компактный файл и изображение"}
+:::example {id="smart-components/file-preview/compact" label="Компактный"}
 :::
 
 ## Состояния
 
 ### Недоступен
+
+`disabled` • [справочник](#атрибуты)
 
 `disabled` выключает кнопки.
 
@@ -89,7 +99,7 @@ JavaScript.
 ### Скачивание и удаление
 
 Нажатие на кнопку отправляет всплывающее событие с возможностью отмены:
-`sf-file-preview:download` или `sf-file-preview:remove`. В `event.detail`:
+`sf-file-preview-download` или `sf-file-preview-detach`. В `event.detail`:
 
 | Поле | Содержимое |
 |:---|:---|
@@ -188,12 +198,12 @@ file.onDownload((event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-file-preview>`, контракт `smart.file-preview` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/file-preview` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-file-preview` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/file-preview` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-file-preview` |
 
 ## См. также
 

@@ -72,7 +72,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 
-Ещё 90 классов уходят без замены и работают до 2027-01-01 (запись `utility-c17-legacy-palette-classes` журнала, [Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
+Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят без замены и работают до 2027-01-01 ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:color-transparent`.
 
@@ -87,7 +87,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-transparent` | `rgba(255,255,255,0)` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
-| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-60))` |
+| `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
 | `--sf-on-disable` | `var(--sf-on-surface-disabled)` |

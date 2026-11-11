@@ -6,6 +6,8 @@ profile: reference
 
 # Скелетон
 
+:badge[sf-skeleton]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+
 Скелетон заранее занимает место загружаемого содержимого и повторяет его
 форму: строки текста, аватар, изображение. При замене интерфейс не смещается.
 Для короткой операции без известной геометрии берите
@@ -47,6 +49,8 @@ profile: reference
 
 ### Размер
 
+`sf-skeleton-text--size-1/7`, `sf-skeleton-text--size-7` • [справочник](#классы)
+
 Классы `sf-skeleton-text--size-1/7` … `sf-skeleton-text--size-7` задают высоту
 фигуры по шкале кегля Framework. Для строки берите размер будущего текста.
 Строка-фигура высотой с кегль стоит посередине высоты строки того же размера,
@@ -62,6 +66,8 @@ profile: reference
 :::
 
 ### Движение
+
+`sf-skeleton--animation-pulse`, `sf-skeleton--animation-wave`, `sf-skeleton--animation-none` • [справочник](#классы)
 
 Класс на контейнере задаёт движение всех его фигур:
 `sf-skeleton--animation-pulse` мягко меняет прозрачность,

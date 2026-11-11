@@ -23,7 +23,6 @@
         "switch",
         "quantity",
         "range-slider",
-        "slider",
         "datepicker",
         "country-code",
         "file-upload",
@@ -87,7 +86,8 @@
         "modal",
         "tooltip",
         "carousel",
-        "swiper"
+        "swiper",
+        "slider"
       ]
     },
     "tools": {
@@ -131,7 +131,6 @@
         "radio",
         "input-choice",
         "switch",
-        "slider",
         "range-slider",
         "datepicker",
         "country-code",
@@ -196,7 +195,8 @@
         "gallery",
         "file-preview",
         "reference-link",
-        "include"
+        "include",
+        "slider"
       ]
     },
     "overlays": {

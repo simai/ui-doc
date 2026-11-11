@@ -5,7 +5,7 @@ description: "Показывает короткий список действи�
 
 # Контекстное меню
 
-:badge[sf-menu-context]{variant=tonal scheme=primary size=1/2} :badge[1.13.6]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-menu-context]{variant=tonal scheme=primary size=1/2} :badge[1.14.2]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — панель с коротким списком действий над объектом: страницей,
 строкой таблицы, файлом, профилем; пунктами можно управлять с клавиатуры.
@@ -36,7 +36,7 @@ description: "Показывает короткий список действи�
 `toggleFor({anchor: кнопка})` открывает его у кнопки или закрывает, если оно уже
 открыто у неё. Выбор пункта приходит событием `sf-menu-context-select`.
 
-:::example {id="smart-components/context-menu/standard" label="Меню действий у кнопки"}
+:::example {id="smart-components/context-menu/standard" label="Меню действий"}
 :::
 
 ### Пункты данными
@@ -69,7 +69,7 @@ description: "Показывает короткий список действи�
 
 Меню без `entries` показывает пункты, переданные со `slot="content"`:
 `<sf-button>`, нативные `<button>` и `<a href>`. Обычно берут `<sf-button>`
-вида `link` со схемой `on-surface` и размером `1/2`; держите в одном меню
+вида `ghost` со схемой `on-surface` и размером `1/2`; держите в одном меню
 пункты одного размера. Меню выравнивает подписи по началу строки.
 
 Пункты можно передать и данными в свойстве `items`: каждый элемент массива —
@@ -97,7 +97,7 @@ description: "Показывает короткий список действи�
 выбрать его нельзя. `danger` отмечает опасное действие, `current` — место,
 где человек находится.
 
-:::example {id="smart-components/context-menu/state-disabled" label="Недоступный пункт и опасное действие"}
+:::example {id="smart-components/context-menu/state-disabled" label="Недоступен"}
 :::
 
 ### Отмечен
@@ -109,7 +109,7 @@ description: "Показывает короткий список действи�
 иконку, если она есть. Отметки хранит приложение — см.
 [Выбор пункта](#выбор-пункта).
 
-:::example {id="smart-components/context-menu/state-checked" label="Флажки с галочкой слева и выбранный вариант"}
+:::example {id="smart-components/context-menu/state-checked" label="Отмечен"}
 :::
 
 ### Выбранная строка
@@ -121,7 +121,7 @@ description: "Показывает короткий список действи�
 нейтральная подложка, фокус с клавиатуры — рамка, поэтому их не спутать с
 выбранной строкой. Заливку даёт класс `.sf-context-menu-item--chosen`.
 
-:::example {id="smart-components/context-menu/state-chosen" label="Выбранная строка в списке сортировки"}
+:::example {id="smart-components/context-menu/state-chosen" label="Выбранная строка"}
 :::
 
 ## Поведение
@@ -267,7 +267,7 @@ layer.addEventListener('keydown', (event) => {
 текст, когда ничего не найдено. Такое подменю открывается сразу на поле, и
 мышью, и с клавиатуры.
 
-:::example {id="smart-components/context-menu/profile" label="Меню профиля с выбором темы и поиском языка"}
+:::example {id="smart-components/context-menu/profile" label="Меню профиля"}
 :::
 
 ### Строки со значением
@@ -297,7 +297,7 @@ layer.addEventListener('keydown', (event) => {
 панели с заходом. Панель с вкладками прокручивает своё тело под шапкой, как и
 раньше.
 
-:::example {id="smart-components/context-menu/search" label="Поиск города: поле на месте, строки прокручиваются" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/context-menu/search" label="Поиск" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Поиск на стороне хоста
@@ -322,7 +322,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 шесть первых сайтов, а ответ на прежний запрос, пришедший позже нового,
 отбрасывается.
 
-:::example {id="smart-components/context-menu/host-search" label="Поиск сайта на стороне хоста" preview=sandbox log_console=true log_open=false}
+:::example {id="smart-components/context-menu/host-search" label="Поиск сайта" preview=sandbox log_console=true log_open=false}
 :::
 
 ### Панель с вкладками
@@ -347,7 +347,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 `.sf-context-menu-row`: в ней может быть ручка, флажок или кнопка, а подпись
 `.sf-context-menu-row-text` занимает остаток и обрезается многоточием.
 
-:::example {id="smart-components/context-menu/panel" label="Панель с вкладками «Поля» и «Вид»"}
+:::example {id="smart-components/context-menu/panel" label="Панель"}
 :::
 
 ## Применение
@@ -363,7 +363,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 словах компонентов — в руководстве
 [Язык интерфейса](/ru/guide/size-and-type/language/).
 
-:::example {id="smart-components/context-menu/language" label="Меню языков у кнопки"}
+:::example {id="smart-components/context-menu/language" label="Меню языков"}
 :::
 
 ## Доступность
@@ -407,7 +407,7 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 | `popup` | да/нет | нет | — | Не рисуется, пока его не откроет openFor(). Меню без этого атрибута рисуется на месте. |
 | `submenu` | строка | `flyout` | `flyout`, `drill` | Как открывается подменю строки: `flyout` (вторая панель рядом со строкой, по умолчанию) или `drill` (та же панель показывает подменю вместо своих строк, с возвратом и подписью родителя в шапке). Ширина панели с переходами не растёт с глубиной. |
 | `size` | строка | `1/2` | `1/2`, `1` | Размер меню: строки высотой с поле того же размера, текст, отступы, поиск и подвал. Подменю берёт размер родительского меню. |
-| `width` | строка | `content` | — | Какой ширины openFor() открывает меню: content — по самой длинной строке, в пределах --sf-context-menu--min-inline-size и --sf-context-menu--max-inline-size; trigger — точно по элементу, который его открыл (длинная строка обрезается многоточием); или длина CSS. openFor(anchor, {width}) переопределяет значение. |
+| `width` | строка | `content` | — | Какой ширины `openFor()` открывает меню, по тому, что в нём (шаги — переменные ядра `--sf-popup-*-width`, компактная плотность сдвигает их вместе с текстом): `content` — меню: по самой длинной строке, между `--sf-popup-menu-min-width` и `--sf-popup-menu-max-width` (10–18rem, в компактной плотности 9–16rem); `list` — варианты у поля: не уже кнопки, до `--sf-popup-list-max-width` или ширины кнопки, что шире; `panel` — панель с поиском и действиями: `--sf-popup-panel-width` или ширина кнопки, что шире, постоянная; `form` и `form-wide` — форма: `--sf-popup-form-width` или `--sf-popup-form-wide-width`, а на телефоне (уже 44rem) — лист внизу экрана во всю ширину поверх затемнения, фокус на первом поле, Escape закрывает; `trigger` — ровно ширина открывшего элемента, длинная строка кончается многоточием; или длина CSS. Любой вариант остаётся в пределах экрана. Пока меню открыто, оно публикует ширину открывшего элемента в `--sf-context-menu-trigger-inline-size`. `openFor(anchor, {width})` её переопределяет. |
 | `tabs` | строка или список | пусто | — | Панель с вкладками: подписи через «\|» или свойством `[{id, label}]`. Шапка с вкладками и кнопкой закрытия и подвал не прокручиваются, прокручивается середина; ширина панели не зависит от вкладки. |
 | `active-tab` | строка | пусто | — | id или номер выбранной вкладки; приложение выводит строки этой вкладки в слот content. |
 | `closable` | да/нет | нет | — | Кнопка закрытия в конце шапки панели. |
@@ -463,13 +463,13 @@ menu.addEventListener('sf-menu-context-search', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.13.6` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-menu-context>`, контракт `smart.menu-context` версии `1.14.2` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как меню; нужна подпись или `aria-label`; с клавиатуры: `↓`, `↑`, `Home`, `End`, `→`, `←`, `Enter`, `Пробел`, `Esc`, `Tab`; поиск по первым буквам. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/menu-context` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-menu-context` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/menu-context` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-menu-context` |
 
 ## См. также
 

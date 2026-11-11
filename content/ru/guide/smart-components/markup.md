@@ -5,8 +5,11 @@ description: "Шаблон по умолчанию как разметка ко�
 
 # Разметка и шаблоны
 
-Разметка смарт-компонента — это HTML-шаблоны на классах SIMAI Framework,
-которые компилируются при построении. JavaScript разметку не собирает.
+По стандарту разметка смарт-компонента — это HTML-шаблоны на классах SIMAI
+Framework, которые компилируются при построении. Это цель стандарта:
+поставляемые компоненты пока рисуют разметку в JavaScript
+(`js/templates/`), а их начальный вид записан снимком (см.
+[Первый кадр и ленивая загрузка](/ru/guide/smart-components/first-paint/)).
 Страница описывает синтаксис шаблонов, правило «состояние видно из разметки»
 и статическую разметку, которую печатает сервер.
 
@@ -44,6 +47,9 @@ SIMAI Framework. Классы остаются общим визуальным �
 Lit. Следующее построение может компилировать в другой движок, и ни один
 манифест или шаблон при этом не меняется. Своего движка отрисовки у
 стандарта нет.
+
+Пример ниже показывает синтаксис шаблона, а не разметку поставляемого
+`sf-switch`:
 
 ```html
 <label class="sf-switch flex items-cross-center gap-1/2">
@@ -93,7 +99,7 @@ Lit. Следующее построение может компилироват
 | `static/<шаблон>/<пример>.skeleton.html` | скелетон примера — у компонента, чьи данные приходят позже |
 | `static/sheets.json` | какие таблицы стилей нужны разметке (ядро, компонент, значки, семейства утилит) и нужен ли класс темы на `<html>` |
 
-Одного `core.css` мало: переключателю нужны ещё восемь таблиц и класс
+Одного `core.css` мало: переключателю нужны ещё десять таблиц и класс
 `theme-light` или `theme-dark` на `<html>`.
 
 **Кто печатает.** Статическая разметка — первая отрисовка компонента. Её
@@ -134,12 +140,17 @@ Lit. Следующее построение может компилироват
 статическая разметка или скелетоны. Прятать можно только неопределённые
 элементы без того и другого.
 
+Так выглядит снимок поставляемого `sf-switch` (пример `reference`,
+файл `static/default/reference.html`); сервер печатает этот файл, а не
+разметку, собранную по образцу выше:
+
 ```html
-<sf-switch id="notify" name="notify" label="Уведомления" checked>
-  <label class="sf-switch flex items-cross-center gap-1/2" data-sf-static>
-    <input type="checkbox" class="sf-switch-input" role="switch" name="notify" value="on" checked>
-    <span class="sf-switch-track"></span>
-    <span class="sf-switch-label">Уведомления</span>
+<sf-switch style="display: contents;">
+  <label class="sf-switch sf-switch--size-1 flex" data-sf-switch-bound="1" data-sf-static>
+    <span class="sf-switch-toggler transition flex items-cross-center content-main-start">
+      <input type="checkbox" role="switch" value="on">
+      <span class="sf-switch-inner transition" aria-hidden="true"></span>
+    </span>
   </label>
 </sf-switch>
 ```

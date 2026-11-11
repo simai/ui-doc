@@ -5,7 +5,7 @@ description: "Верхняя полоса сайта: бренд, разделы
 
 # Шапка сайта
 
-:badge[sf-header-site]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-header-site]{variant=tonal scheme=primary size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Шапка сайта — верхняя полоса с брендом, разделами, ссылками и инструментами в
 одну строку по ширине контейнера. На узком экране разделы и ссылки уходят в
@@ -17,7 +17,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 
 ## Пример
 
-:::example {id="smart-components/site-header/overview" label="Бренд, разделы и переключатель темы" preview=sandbox}
+:::example {id="smart-components/site-header/overview" label="Шапка сайта" preview=sandbox}
 :::
 
 ## Разметка
@@ -66,7 +66,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 задан правилом `@media` в стилях компонента, поэтому первая отрисовка верна и
 без скрипта.
 
-:::example {id="smart-components/site-header/collapse" label="Полоса с меню при любой ширине" preview=sandbox}
+:::example {id="smart-components/site-header/collapse" label="Ширина сворачивания" preview=sandbox}
 :::
 
 ### Размер и прилипание
@@ -76,7 +76,7 @@ SIMAI: каталогу эффектов, сайтам документации 
 граница в 1 px; кнопкам в слотах сайт ставит тот же `size`. `sticky`
 оставляет полосу вверху окна при прокрутке.
 
-:::example {id="smart-components/site-header/compact" label="Половинный размер и прилипшая полоса" preview=sandbox}
+:::example {id="smart-components/site-header/compact" label="Размер и прилипание" preview=sandbox}
 :::
 
 ### Навигация по центру
@@ -140,7 +140,7 @@ header.addEventListener('sf-site-header-opened', () => {
 с меню пользователя. Все одного размера `1/2`, как полоса. Сузьте окно
 примера, чтобы увидеть панель.
 
-:::example {id="smart-components/site-header/tools" label="Шапка с инструментами" preview=sandbox}
+:::example {id="smart-components/site-header/tools" label="Шапка" preview=sandbox}
 :::
 
 ## Доступность
@@ -166,7 +166,7 @@ header.addEventListener('sf-site-header-opened', () => {
 | `sticky` | да/нет | нет | — | Полоса остаётся вверху окна при прокрутке страницы; вверху страницы она плоская, а когда под ней проходит содержимое, получает тень места raised (состояние data-scrolled). |
 | `size` | строка | `1` | `1/2`, `1` | Размер полосы: от него зависят её высота и кнопки меню и закрытия. Своим кнопкам в слотах тот же размер задаёт страница. |
 | `navigation-align` | строка | `start` | `start`, `center` | Где стоит навигация в широкой шапке: `start` — сразу после названия; `center` — по центру шапки между названием и действиями: в настоящем центре, пока обе стороны помещаются, иначе в центре оставшегося места, никогда поверх них. В свёрнутой шапке навигация в любом случае в боковой панели. |
-| `label` | строка | — | — | Заголовок и доступное имя боковой панели; если не задано — «Навигация» или «Navigation» на языке страницы. |
+| `label` | строка | — | — | Заголовок и доступное имя боковой панели; если не задан — «Меню» / «Menu» на языке страницы (панель — это меню на телефоне). |
 | `menu-label` | строка | — | — | Имя кнопки меню; если не задано — «Открыть меню» или «Open menu» на языке страницы. |
 | `close-label` | строка | — | — | Имя кнопки закрытия панели; если не задано — «Закрыть меню» или «Close menu» на языке страницы. |
 
@@ -203,13 +203,13 @@ header.addEventListener('sf-site-header-opened', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-header-site>`, контракт `smart.header-site` версии `1.7.2` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-header-site>`, контракт `smart.header-site` версии `1.8.1` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шапка сайта; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит логотип, разделы, ссылки и инструменты; `Enter` или `Пробел` на кнопке меню открывают боковую панель; `Esc` закрывает боковую панель и возвращает фокус на кнопку меню. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/header-site` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-header-site` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/header-site` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-header-site` |
 
 ## См. также
 

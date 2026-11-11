@@ -6,6 +6,8 @@ profile: reference
 
 # Акцентная иконка
 
+:badge[sf-featured-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+
 Акцентная иконка ставит [иконку](/ru/components/content/icons/) на цветную
 подложку и выделяет тему карточки, раздела, статуса или пустого состояния.
 Берите её, когда иконка открывает блок содержимого; иконка внутри строки
@@ -13,7 +15,7 @@ profile: reference
 
 ## Пример
 
-:::example {id="components/featured-icon/overview" label="Акцентная иконка у заголовка карточки"}
+:::example {id="components/featured-icon/overview" label="Акцентная иконка"}
 :::
 
 ## Разметка
@@ -30,26 +32,28 @@ profile: reference
 
 ### Интенсивность
 
+`sf-featured-icon--soft`, `sf-featured-icon--medium`, `sf-featured-icon--solid` • [справочник](#классы)
+
 `sf-featured-icon--soft` — мягкий тон по умолчанию, для большинства карточек;
 `sf-featured-icon--medium` — тон насыщеннее; `sf-featured-icon--solid` —
 полная заливка цветом роли, для одного главного акцента;
 `sf-featured-icon--elevated` — нейтральная подложка с тенью и иконкой цвета
-роли. Имена `light`, `mid`, `dark` и `modern` работают так же, как `soft`,
-`medium`, `solid` и `elevated`; в разметке пишите вторые.
+роли.
 
-:::example {id="components/featured-icon/tones" label="Интенсивность акцентной иконки"}
+:::example {id="components/featured-icon/tones" label="Интенсивность"}
 :::
 
 ### Цвет
 
 Цвет задаёт роль: `primary` — тема продукта, `neutral` — нейтральный
-раздел, `info`, `success`, `warning` и `error` — статусы. Имя `clear`
-работает так же, как `neutral`.
+раздел, `info`, `success`, `warning` и `error` — статусы.
 
 :::example {id="components/featured-icon/colors" label="Цвета акцентной иконки"}
 :::
 
 ### Форма
+
+`sf-featured-icon--circle`, `sf-featured-icon--square` • [справочник](#классы)
 
 `sf-featured-icon--circle` — круг, форма по умолчанию.
 `sf-featured-icon--square` скругляет углы радиусом, согласованным с
@@ -77,7 +81,7 @@ profile: reference
 - В режиме высокой контрастности подложка становится системным фоном с
   рамкой цвета текста.
 
-:::example {id="components/featured-icon/accessibility" label="Декоративная и значимая акцентная иконка"}
+:::example {id="components/featured-icon/accessibility" label="Доступность"}
 :::
 
 ## Классы

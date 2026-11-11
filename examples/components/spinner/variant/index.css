@@ -5,7 +5,7 @@
   grid-template-columns: repeat(5, max-content);
   align-items: center;
   justify-items: center;
-  gap: var(--sf-space-3) var(--sf-space-4);
+  gap: var(--sf-space-3) var(--sf-space-1);
   max-inline-size: 100%;
   overflow-x: auto;
 }

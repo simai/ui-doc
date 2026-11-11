@@ -6,7 +6,7 @@ profile: reference
 
 # Боковая панель
 
-:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.10.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-drawer]{variant=tonal scheme=primary size=1/2} :badge[1.10.2]{variant=outline scheme=on-surface size=1/2}
 
 Боковая панель открывается рядом со страницей и оставляет её доступной:
 подсказка у формы, библиотека блоков и свойства в редакторе страниц.
@@ -52,7 +52,7 @@ profile: reference
 `placement` — `inline-start` или `inline-end`; сторона отражается при письме
 справа налево. `placement="bottom"` открывает [нижний лист](#нижний-лист).
 
-:::example {id="smart-components/drawer/placement" label="Панели у начального и конечного края" preview=sandbox}
+:::example {id="smart-components/drawer/placement" label="Сторона" preview=sandbox}
 :::
 
 ### Размер
@@ -60,7 +60,7 @@ profile: reference
 `size` берёт ступень общей шкалы `1/2`, `1`, `2` или `full` — во всю ширину.
 `width` задаёт точную ширину, если ступеней мало, `z-index` — слой.
 
-:::example {id="smart-components/drawer/sizes" label="Ширина панели на каждой ступени" preview=sandbox}
+:::example {id="smart-components/drawer/sizes" label="Размер" preview=sandbox}
 :::
 
 ### Закреплённая панель
@@ -330,13 +330,13 @@ document.addEventListener('sf-drawer-opened', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.10.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-drawer>`, контракт `smart.drawer` версии `1.10.2` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; используется в продуктах. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как диалоговое окно; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Shift+Tab`, `Esc`. |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/drawer` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-drawer` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/drawer` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-drawer` |
 
 ## См. также
 

@@ -5,9 +5,7 @@ description: "Color roles"
 
 # Color roles
 
-SIMAI Framework uses an extended approach to color roles based on the principles of Material Design (more details:
-[Material Design Color Roles](https://m3.material.io/styles/color/roles)). In the current version, the approach is
-expanded to simplify usage in web development.
+SIMAI Framework colours interfaces with color roles.
 
 Roles can be divided into several categories:
 

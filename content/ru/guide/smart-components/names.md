@@ -74,7 +74,7 @@ description: "Как называются смарт-компоненты, их 
 | `filter` | условия на записи | фильтры таблицы |
 | `list` | показывает записи; открывает одну, выбирает несколько | `sf-view-table`, `sf-view`, `sf-chat-threads` |
 | `pagination` | страница, размер страницы, полоса массовых действий | `sf-pagination` |
-| `feed` | лента, новое внизу, раннее по запросу | `sf-message-log` (станет общим `sf-view-feed`) |
+| `feed` | лента, новое внизу, раннее по запросу | `sf-list-feed` |
 | `record` | показывает и правит одну запись | `sf-view-properties` |
 | `actions` | команды для выбранного или записи | панель инструментов, действия строки |
 | `composer` | пишет новую запись | поле ввода UI Chat |
@@ -113,7 +113,7 @@ description: "Как называются смарт-компоненты, их 
 
 ## Имена событий
 
-- Просьба: `sf-<тег>-<глагол>`; факт: `sf-<тег>-<глагол>ed`. В имени —
+- Просьба: `<тег>-<глагол>`; факт: `<тег>-<глагол>ed`. В имени —
   **тег компонента**: `sf-view-properties-close`, `sf-view-table-apply`,
   `sf-chat-threads-open`, `sf-view-properties-saved`. Когда тег
   переименован, его события переименованы вместе с ним, а старые имена
@@ -194,18 +194,18 @@ description: "Как называются смарт-компоненты, их 
 
 | Старое имя | Новое имя |
 |:---|:---|
-| `sf-table-query-intent` | `sf-table-query` |
-| `sf-table-tree-toggle`, `sf-table-tree-more` | `sf-table-expand`, `sf-table-load-more` |
-| `sf-table-tree-intent` | `sf-data-view-tree` |
-| `sf-table:column-settings-change` | `sf-table-save {kind: columns}` |
+| `sf-table-query-intent` | `sf-view-table-query` |
+| `sf-table-tree-toggle`, `sf-table-tree-more` | `sf-view-table-expand`, `sf-view-table-load-more` |
+| `sf-table-tree-intent` | `sf-view-tree` |
+| `sf-table:column-settings-change` | `sf-view-table-save {kind: columns}` |
 | `sf-sortable-intent` | `sf-sortable-move` |
 | `sf-tree:activate`, `sf-tree:selection-change` | `sf-tree-open`, `sf-tree-select` |
 | `sf-menu:navigate` | `sf-menu-navigate` |
-| `sf-download-file:click` | `sf-download-file-download` |
+| `sf-download-file:click` | `sf-file-download-download` |
 | `sf-file-upload:select`, `:remove`, `:reject` | `sf-file-upload-attach`, `-detach`, `-rejected` |
 | `sf-file-upload:file-complete`, `:file-error`, `:complete` | `sf-file-upload-completed {id}` (конец потока), `-failed {id, reason}`, `-finished` |
-| `sf-image-field:reject`, `:remove` | `sf-image-field-rejected`, `-detach` |
-| `sf-code-input:complete` | `sf-code-input-completed` |
+| `sf-image-field:reject`, `:remove` | `sf-input-image-rejected`, `-detach` |
+| `sf-code-input:complete` | `sf-input-code-completed` |
 | `sf-hide-show:change`, `sf-theme-change` | `change` |
 | `drawer:snap` | `sf-drawer-snapped {point}` |
 | `drawer:ready`, `drawer:update` | уходят без замены |
@@ -237,7 +237,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 ## Псевдонимы старых имён
 
 **Теги.** Волна переименований тегов ноября 2026 (`sf-table` →
-`sf-view-table`, `sf-datepicker` → `sf-input-date` и ещё 24 имени) — в
+`sf-view-table`, `sf-datepicker` → `sf-input-date` и другие) — в
 таблице на странице [Обновление](/ru/guide/connection/updating/). Старый тег
 работает до **2027-01-01** и пишет в консоль, каким тегом его заменить.
 Подсказки `sf-tooltip` и `sf-help-mark` станут одним `sf-popover` (с
@@ -285,9 +285,17 @@ id?}` значит «перестать ждать», а `wait` принимае
 другой стороной и реакции. Ход долгой задачи — это `chunk {id, done, total}`
 её потока, а имя `progress` не используется.
 
+**Размеры спиннера в пикселях.** Атрибуты `width`, `height`, `stroke-width` и
+`dot-radius` у `<sf-spinner>` и `data-width`, `data-height`,
+`data-stroke-width`, `data-dot-radius` у классового спиннера (и параметры
+конструктора `width`, `height`, `strokeWidth`, `dotRadius`) читаются до
+2026-12-01: спиннер с любым из них рисуется в пикселях и попадает в
+`SF.deprecations.list()`. Вместо них задайте ступень: `size` или класс
+`sf-loader--size-…`.
+
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-b4a77681f0a7` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-2bd5a3ab478a` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
@@ -375,6 +383,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `status="danger"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `appearance="ghost"` | `appearance="link"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `height` | `spacing` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `scheme="on-surface"` | `scheme="on-surface-variant"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-button-copy>`
 
@@ -694,6 +703,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `spell-check` | `spellcheck` | работает как псевдоним | 2026-12-01 |
 | `invalid` | `error` | работает как псевдоним | 2026-12-01 |
 
+#### `<sf-list-attention>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `data-sf-density` | `size` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+
 #### `<sf-list-item>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
@@ -940,6 +955,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
+| `columns[].list` | `list-roles` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `sf-view-tree` | `sf-table-tree-intent` | работает как псевдоним | — |
 | событие `sf-view-open` | `sf-data-view-open` | работает как псевдоним | — |
 | событие `sf-view-deleted` | `sf-data-view-deleted` | работает как псевдоним | — |

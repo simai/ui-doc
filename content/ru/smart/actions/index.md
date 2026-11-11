@@ -1,6 +1,6 @@
 ---
 title: "Действия"
-description: "Действия — 7 смарт-компонентов SIMAI Framework."
+description: "Действия — смарт-компоненты SIMAI Framework."
 profile: reference
 ---
 

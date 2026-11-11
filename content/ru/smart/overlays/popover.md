@@ -5,7 +5,7 @@ description: "Открывает небольшую панель у кнопки
 
 # Всплывающая панель
 
-:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-popover]{variant=tonal scheme=primary size=1/2} :badge[1.4.5]{variant=outline scheme=on-surface size=1/2}
 
 Всплывающая панель открывается рядом с кнопкой: фильтр, настройки поля, список
 того, что можно добавить. Она закрывается по `Escape` и нажатию снаружи и
@@ -61,7 +61,7 @@ description: "Открывает небольшую панель у кнопки
 задайте `width`, например `width="20rem"`, если в поверхности список
 строк разной длины.
 
-:::example {id="smart-components/popover/width" label="Ширина по строке и заданная ширина"}
+:::example {id="smart-components/popover/width" label="Ширина"}
 :::
 
 ## Поведение
@@ -156,12 +156,12 @@ popover.addEventListener('sf-popover-closed', () => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.4.1` |
-| Поставка | выпуск Framework `ui-b4a77681f0a7` |
+| Тег | `<sf-popover>`, контракт `smart.popover` версии `1.4.5` |
+| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
-| Источник | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/smart/popover` |
-| Правило классов | `simai/ui@b4a77681f0a7f1c540566e5abac2a4f9d3082a3d:distr/rule/rule.json#name=cl-popover` |
+| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/popover` |
+| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-popover` |
 
 ## См. также
 

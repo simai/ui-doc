@@ -1,6 +1,6 @@
 ---
 title: "Чат"
-description: "Чат — 6 компонентов SIMAI Pro."
+description: "Чат — компоненты SIMAI Pro."
 profile: reference
 ---
 
