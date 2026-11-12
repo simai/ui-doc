@@ -86,7 +86,7 @@ description: "Как дать скопировать ключ, команду, �
 | Значок | [Кнопка копирования](/ru/smart/actions/copy-button/) | `icon="link"` у ссылки, `icon="key"` у ключа; по умолчанию `content_copy` |
 | Поле с ключом | [Текстовые поля](/ru/components/forms/inputs/) | `input readonly`, кнопка внутри `sf-input-field` после поля |
 | Блок кода | [Подсветка кода](/ru/components/content/highlight/) | `<pre><code data-lang="bash" data-lines>`; со своей шапкой — кнопка «Копировать код» в ней, с `data-chrome="none"` — `sf-button-copy target` над блоком |
-| Таблица | [Таблицы](/ru/utilities/tables/tables-default-parameters/) | `table`; кнопка `size="1/3"` в ячейке рядом со значением |
+| Таблица | [Таблицы](/ru/utilities/tables/tables-default-parameters/) | `table` с `text-1/2`; кнопка `size="1/2"` в ячейке рядом со значением — одна ступень с текстом строки |
 | Обычная кнопка | [Кнопки](/ru/smart/actions/buttons/), [Кнопки со значком](/ru/smart/actions/icon-buttons/) | `data-sf-copy="текст"` или `data-sf-copy-target="#id"`; результат — события `sf:copy-success` и `sf:copy-error` |
 | Подсказка при отказе | [Кнопка копирования](/ru/smart/actions/copy-button/) | кнопка сама пишет над собой «Выделено — нажмите Ctrl+C» (⌘C на Mac), пока держится результат |
 
@@ -118,7 +118,7 @@ description: "Как дать скопировать ключ, команду, �
 3. label называет, что копируется: «Скопировать API-ключ»; в строке таблицы — со значением строки: «Скопировать номер заказа ORD-2026-0042». Никогда несколько кнопок «Копировать» подряд.
 4. Ключ в поле: input readonly, sf-button-copy target="#id" внутри sf-input-field после поля.
 5. Команды и код — <pre><code data-lang="…" data-lines>: в шапке блока кнопку «Копировать код» ставит сам блок, своей рядом не ставьте; без шапки (data-chrome="none") — sf-button-copy target="#id блока" над ним. Номера строк в буфер не попадают.
-6. В таблице — sf-button-copy size="1/3" в ячейке рядом со значением; icon="link" у ссылки.
+6. В таблице — sf-button-copy в ячейке рядом со значением, на ступени текста строки: table text-1/2 → size="1/2"; icon="link" у ссылки. Подпись, значение и кнопка в одной строке — одна ступень: текст 1/2 → size="1/2", текст 1 → size="1".
 7. Своя кнопка копирует с атрибутом: data-sf-copy="текст" или data-sf-copy-target="#id" у <button>, sf-button или sf-button-icon; отклик тот же, события sf:copy-success {text, method} и sf:copy-error {code}.
 8. Отказ браузера (code "denied"): кнопка сама выделяет текст и пишет над собой «Выделено — нажмите Ctrl+C» (⌘C на Mac); своей подсказки рядом не ставьте. -->
 <div data-sf-density="compact">
@@ -137,7 +137,7 @@ description: "Как дать скопировать ключ, команду, �
     </div>
     <div class="flex flex-wrap items-cross-center gap-1/2">
       <code id="order-id">ORD-2026-0042</code>
-      <sf-button-icon icon="content_copy" appearance="ghost" scheme="on-surface-variant" size="1/2" label="Скопировать номер заказа ORD-2026-0042" data-sf-copy-target="#order-id"></sf-button-icon>
+      <sf-button-icon icon="content_copy" appearance="ghost" scheme="on-surface-variant" label="Скопировать номер заказа ORD-2026-0042" data-sf-copy-target="#order-id"></sf-button-icon>
     </div>
   </section>
 </div>
