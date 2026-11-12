@@ -1,0 +1,10 @@
+<form class="flex flex-col gap-3 max-w-sm" onsubmit="event.preventDefault()">
+  <div class="flex flex-col gap-1">
+    <sf-input name="full-width-mail" label="Почта" input-type="email" default-value="anna@nord-wind.ru"></sf-input>
+    <sf-input name="full-width-pass" label="Пароль" input-type="password" default-value="nord-wind"></sf-input>
+  </div>
+  <div class="flex flex-col gap-1">
+    <sf-button full-width native-type="submit" icon-start="login" text="Войти"></sf-button>
+    <sf-button full-width appearance="outline" text="Войти по коду из письма"></sf-button>
+  </div>
+</form>
