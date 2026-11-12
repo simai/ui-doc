@@ -6,7 +6,7 @@ profile: reference
 
 # Клавиши
 
-:badge[sf-kbd]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-kbd]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
 
 Компонент оформляет клавишу или сочетание клавиш как надпись на клавише:
 «нажмите `Ctrl` + `S`». Берите его в инструкциях, подсказках и справке по

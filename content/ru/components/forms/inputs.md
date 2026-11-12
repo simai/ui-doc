@@ -6,7 +6,7 @@ profile: reference
 
 # Текстовые поля
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите
@@ -287,6 +287,7 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-input--place-variant` | не задана; задают модификаторы, например `.sf-input.sf-input--filled`: `var(--sf-place--fill-placeholder, var(--sf-on-surface-variant))` | `--sf-input-placeholder--color` |
 | `--sf-input--radius` | `var(--sf-input-radius, var(--sf-radius--ui))` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
 | `--sf-input-field--background-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-transparent-for-focus)` | `background-color` |
 | `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
@@ -315,7 +316,8 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input-input--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field input`: `var(--sf-ui-1/3--text-space-x)` | `padding-inline-end` |
 | `--sf-input-input--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field input`: `var(--sf-ui-1/3--text-space-x)` | `padding-inline-start` |
 | `--sf-input-label--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `transparent` | `background-color` |
-| `--sf-input-label--gap` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `var(--sf-space-1/4)` | `gap` |
+| `--sf-input-label--gap` | не задана; задают модификаторы, например `.sf-input .sf-input-label`: `var(--sf-space-1/4)` | `margin-inline-start`, `gap` |
+| `--sf-input-label--line` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-label`: `var(--sf-text-height-1/4)` | `height`, `block-size` |
 | `--sf-input-left--background-color` | не задана; задают модификаторы, например `.sf-input .sf-input-left`: `transparent` | `background-color` |
 | `--sf-input-placeholder--color` | не задана; задают модификаторы, например `.sf-input .sf-input-field input::-webkit-input-placeholder`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-input-placeholder--font-family` | не задана; задают модификаторы, например `.sf-input .sf-input-field input::-webkit-input-placeholder`: `var(--sf-text--family)` | `font-family` |

@@ -64,7 +64,7 @@ description: "Задаёт шаг между линиями полосатого
 `--sf-stripe--size`.
 
 ```html
-<div class="stripe-3 stripe-size-4 stripe-surface-transparent-overlay h-f0"></div>
+<div class="stripe-3 stripe-size-4 stripe-surface-container-strong h-f0"></div>
 ```
 
 ## Ограничения

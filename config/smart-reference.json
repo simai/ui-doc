@@ -37,7 +37,9 @@
   },
   "skip": {
     "wizard": "New in ui-b58b5dec35e4 (sf-wizard); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
-    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
+    "wizard-step": "New in ui-b58b5dec35e4 (sf-wizard-step); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
+    "time": "New in ui-7f1d29b02919 (sf-time, C40); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands.",
+    "change": "New in ui-7f1d29b02919 (sf-change, C40); the site has no page for it yet. The page is a separate docs task; remove this entry when it lands."
   },
   "suppress": {
     "popover": {
@@ -131,7 +133,8 @@
   },
   "slots": {
     "confirm": {
-      "description": "Пояснение под вопросом, когда одного вопроса мало: что останется, что пропадёт"
+      "description": "Пояснение под вопросом, когда одного вопроса мало: что останется, что пропадёт",
+      "options": "Вид окна: выбор, который страница делает вместе с ответом (флажок «Удалить сразу, без корзины»), на `--sf-space-2` ниже последствий"
     }
   },
   "css_variables": {
@@ -143,13 +146,13 @@
       "--sf-confirm-border-color": "Цвет края карточки"
     },
     "file-download": {
-      "--sf-download-file-background-color": "Заливка в покое; у наведения, нажатия и недоступного состояния свои",
-      "--sf-download-file-border-color": "Цвет рамки в покое",
-      "--sf-download-file-radius": "Скругление",
-      "--sf-download-file-padding": "Внутренний отступ",
-      "--sf-download-file-gap": "Промежуток между иконкой, именем и размером",
-      "--sf-download-file-icon-size": "Размер иконки",
-      "--sf-download-file-icon-color": "Цвет иконки"
+      "--sf-file-download-background-color": "Заливка в покое; у наведения, нажатия и недоступного состояния свои",
+      "--sf-file-download-border-color": "Цвет рамки в покое",
+      "--sf-file-download-radius": "Скругление",
+      "--sf-file-download-padding": "Внутренний отступ",
+      "--sf-file-download-gap": "Промежуток между иконкой, именем и размером",
+      "--sf-file-download-icon-size": "Размер иконки",
+      "--sf-file-download-icon-color": "Цвет иконки"
     },
     "button-copy": {
       "--sf-copy-button-display": "Как кнопка стоит в строке: значение `display`",

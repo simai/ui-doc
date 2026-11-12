@@ -5,7 +5,7 @@ description: "Показывает иерархию папок или разде
 
 # Дерево
 
-:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[2.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tree]{variant=tonal scheme=primary size=1/2} :badge[2.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Дерево показывает вложенный список: папки и файлы, разделы сайта, категории
 каталога. Ветви раскрываются и сворачиваются, пункты выбираются мышью и
@@ -225,13 +225,13 @@ tree.items = await fetchFolders();
 
 | | |
 |:---|:---|
-| Тег | `<sf-tree>`, контракт `smart.tree` версии `2.1.1` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-tree>`, контракт `smart.tree` версии `2.1.2` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «меню» (сервер пишет `data-sf-skeleton="menu"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как дерево; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `←`, `→`, `Home`, `End`, `Enter`, `Пробел`; поиск по первым буквам. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/tree` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-tree` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/tree` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-tree` |
 
 ## См. также
 

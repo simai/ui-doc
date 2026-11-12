@@ -5,7 +5,7 @@ description: "Показывает файл для скачивания с им�
 
 # Скачивание файла
 
-:badge[sf-file-download]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-file-download]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Скачивание файла показывает файл, который можно скачать: знак скачивания,
 имя, тип и размер. С адресом это обычная ссылка на файл, без адреса — кнопка, по которой
@@ -209,25 +209,25 @@ file.addEventListener('sf-file-download-download', async (event) => {
 
 | Переменная | Что задаёт |
 |:---|:---|
-| `--sf-download-file-background-color` | Заливка в покое; у наведения, нажатия и недоступного состояния свои. |
-| `--sf-download-file-border-color` | Цвет рамки в покое. |
-| `--sf-download-file-radius` | Скругление. |
-| `--sf-download-file-padding` | Внутренний отступ. |
-| `--sf-download-file-gap` | Промежуток между иконкой, именем и размером. |
-| `--sf-download-file-icon-size` | Размер иконки. |
-| `--sf-download-file-icon-color` | Цвет иконки. |
+| `--sf-file-download-background-color` | Заливка в покое; у наведения, нажатия и недоступного состояния свои. |
+| `--sf-file-download-border-color` | Цвет рамки в покое. |
+| `--sf-file-download-radius` | Скругление. |
+| `--sf-file-download-padding` | Внутренний отступ. |
+| `--sf-file-download-gap` | Промежуток между иконкой, именем и размером. |
+| `--sf-file-download-icon-size` | Размер иконки. |
+| `--sf-file-download-icon-color` | Цвет иконки. |
 
 ### О компоненте
 
 | | |
 |:---|:---|
-| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.3.1` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-file-download>`, контракт `smart.file-download` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как ссылка; желательна подпись или `aria-label`; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/file-download` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-file-download` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/file-download` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-file-download` |
 
 ## См. также
 

@@ -98,7 +98,7 @@ description: "Рисует фоновый градиент: линейный п�
 
 ```html
 <div class="bg-gradient-to-br from-primary via-tertiary to-warning h-f0"></div>
-<div class="gr-radial-2 gr1-primary-container gr2-surface-0 h-f0"></div>
+<div class="gr-radial-2 gr1-primary-container gr2-surface-page h-f0"></div>
 ```
 
 ### Свой угол

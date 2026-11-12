@@ -5,7 +5,7 @@ description: "Подготовленное изменение ждёт отве�
 
 # Подтверждение изменения
 
-:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-confirm-change]{variant=tonal scheme=primary size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
 
 `<sf-confirm-change>` — карточка подготовленного изменения, которое ждёт
 «да» или «нет» человека: каждое значение как было и как станет, два
@@ -107,7 +107,7 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ## Справочник API
 
-Раздел собран из манифеста компонента выпуска `ui-2bd5a3ab478a` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
+Раздел собран из манифеста компонента выпуска `ui-7f1d29b02919` и обновляется вместе с выпуском. Чтобы исправить описание, исправьте манифест.
 
 Каждому атрибуту соответствует свойство элемента с тем же именем в camelCase: `search-placeholder` — `searchPlaceholder`. Свойство атрибута `template` называется `templateName`.
 
@@ -115,8 +115,8 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 |:---|:---|
 | Тег | `<sf-confirm-change>` |
 | Назначение | Подготовленное изменение, предложенное человеку: каждое значение как было и как станет, два равноценных ответа, срок ответа, а затем только итог. Ничего не применяет; нажатие — это событие. |
-| Контракт | `smart.confirm-change`, версия `1.6.0` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Контракт | `smart.confirm-change`, версия `1.7.1` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Жизненный цикл](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | экспериментальный: API может меняться между выпусками |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | `host-required` |
 | Заготовка до прихода кода | нет: атрибут `data-sf-skeleton` не пишется; своего скелетона при загрузке данных нет ([Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода)) |
@@ -165,5 +165,5 @@ card.addEventListener('sf-confirm-change-answer', async (event) => {
 
 ### Источник
 
-- `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/confirm-change`
-- `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-confirm-change`
+- `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/confirm-change`
+- `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-confirm-change`

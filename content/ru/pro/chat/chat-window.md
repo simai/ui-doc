@@ -353,8 +353,8 @@ Escape закрывает его и возвращает фокус на ком�
 
 ### Источник
 
-- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/chat-window`
-- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/chat-window/rule.js#name=cl-chat-window`
+- `simai/ui-pro@9fcf81535f75d3a0eb0dbc31983c55e7346ada3d:components/src/smart/chat-window`
+- `simai/ui-pro@9fcf81535f75d3a0eb0dbc31983c55e7346ada3d:components/src/smart/chat-window/rule.js#name=cl-chat-window`
 
 ## См. также
 

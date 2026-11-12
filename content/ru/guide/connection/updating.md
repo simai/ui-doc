@@ -70,8 +70,8 @@ JavaScript и TypeScript, CSS и SCSS, Markdown, JSON. Инструмент и �
 на который проект переходит: `git checkout <build_inputs.source.commit>`. Более
 новый журнал может назвать каноническое имя, которого в целевом выпуске ещё
 нет, и `--apply` записал бы в проект имя, которое этот выпуск не знает. Для
-выпуска `ui-2bd5a3ab478a` это ревизия
-`d25a01f9989df2ec920364a23ed76d494d91844c`.
+выпуска `ui-7f1d29b02919` это ревизия
+`be0a8d39e0e4aac7637a451d8a5752f7fce0158e`.
 
 Инструменту нужен только Node.js: зависимостей у него нет, устанавливать
 ничего не нужно.
@@ -169,7 +169,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
   `sf-property-view` и `sf-admin-menu`; запись журнала —
   `component-larena-package-move`. В поставке `ui` их нет; на странице они
   работают, только если она объявила пакет `pro`, например
-  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/dc13c0f724009847add06c25bf98a6c033c037db/smart'}`
+  `SF_BOOT_CONFIG.packages.pro = {base: '/assets/pro/9fcf81535f75d3a0eb0dbc31983c55e7346ada3d/smart'}`
   (путь — по правилу из [Пакеты компонентов](/ru/guide/connection/loader/#пакеты-компонентов)), и
   подключила его сборку, квитанция которой называет выпуск Framework на
   странице. Проект без Larena берёт сборку из выпуска `simai/ui-pro` (см. [Готовая сборка пакета `pro`](/ru/guide/introduction/structure/#готовая-сборка-пакета-pro)).
@@ -281,7 +281,7 @@ node scripts/sf-upgrade.mjs ../my-product --journal ./journal.json   # друг�
 
 ## Новые имена тегов
 
-С выпуска `ui-2bd5a3ab478a` (`@simai-studio/ui` 5.20261110.1541) часть
+С выпуска `ui-7f1d29b02919` (`@simai-studio/ui` 5.20261112.110) часть
 смарт-компонентов называется по-новому: сначала семейство, затем уточнение
 (`sf-input-date`, а не `sf-datepicker`). Прежний тег работает до 2027-01-01:
 Loader определяет его как псевдоним нового, поэтому страницы на прежних
@@ -579,6 +579,14 @@ Framework (см. [Подтверждение изменения](/ru/pro/admin/c
 | `--sf-tone-violet-container` | `--sf-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
 | `--sf-on-tone-violet-container` | `--sf-on-hue-container` | 2027-01-01 | `token-c17-tone-roles-to-hue-roles` |
 | `--sf-on-surface-muted` | `--sf-on-surface-disabled` | 2027-01-01 | `token-c43-muted-is-disabled` |
+| `--sf-download-file-background-color` | `--sf-file-download-background-color` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-border-color` | `--sf-file-download-border-color` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-radius` | `--sf-file-download-radius` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-padding` | `--sf-file-download-padding` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-gap` | `--sf-file-download-gap` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-icon-size` | `--sf-file-download-icon-size` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-download-file-icon-color` | `--sf-file-download-icon-color` | 2027-01-01 | `token-file-download-variable-names` |
+| `--sf-spinner-track-color` | `--sf-spinner-track-color` | 2027-01-01 | `token-spinner-track-carries-alpha` |
 
 ## Связь с другими частями
 

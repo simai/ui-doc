@@ -35,12 +35,12 @@ description: "Окрашивает внешний контур элемента 
 | `outline-current` | `outline-color: var(--sf-current)` | — |
 | `outline-outline` | `outline-color: var(--sf-outline)` | — |
 | `outline-outline-variant` | `outline-color: var(--sf-outline-variant)` | — |
-| `outline-primary` | `outline-color: var(--sf-outline-primary)` | — |
-| `outline-secondary` | `outline-color: var(--sf-outline-secondary)` | — |
-| `outline-tertiary` | `outline-color: var(--sf-outline-tertiary)` | — |
-| `outline-error` | `outline-color: var(--sf-outline-error)` | — |
-| `outline-warning` | `outline-color: var(--sf-outline-warning)` | — |
-| `outline-success` | `outline-color: var(--sf-outline-success)` | — |
+| `outline-primary` | `outline-color: var(--sf-primary-outline)` | — |
+| `outline-secondary` | `outline-color: var(--sf-secondary-outline)` | — |
+| `outline-tertiary` | `outline-color: var(--sf-tertiary-outline)` | — |
+| `outline-error` | `outline-color: var(--sf-error-outline)` | — |
+| `outline-warning` | `outline-color: var(--sf-warning-outline)` | — |
+| `outline-success` | `outline-color: var(--sf-success-outline)` | — |
 | `outline-info` | `outline-color: var(--sf-info-outline)` | — |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus-visible:`, `focus:`, `hover:`. Например: `active:outline-transparent`.
@@ -57,12 +57,12 @@ description: "Окрашивает внешний контур элемента 
 | `--sf-current` | `currentColor` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-outline-primary` | `var(--sf-primary-outline)` |
-| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
-| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
-| `--sf-outline-error` | `var(--sf-error-outline)` |
-| `--sf-outline-warning` | `var(--sf-warning-outline)` |
-| `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-primary-outline` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-secondary-outline` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
+| `--sf-tertiary-outline` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
+| `--sf-error-outline` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-warning-outline` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-success-outline` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 
 ## Применение

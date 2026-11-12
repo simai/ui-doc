@@ -6,7 +6,7 @@ profile: reference
 
 # Количество
 
-:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Поле количества принимает число с клавиатуры или меняет его кнопками «минус» и
 «плюс» на заданный шаг. Подходит для количества товаров, мест, участников и

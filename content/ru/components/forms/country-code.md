@@ -6,7 +6,7 @@ profile: reference
 
 # Код страны
 
-:badge[sf-country-code]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-country-code]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Поле кода страны принимает номер телефона вместе с международным кодом: флаг
 показывает страну, список позволяет её сменить, маска форматирует номер по
@@ -272,6 +272,7 @@ whenLoader(() => SF.Loader.ready('CountryCode', (CountryCode) => {
 | `--sf-country-code-required--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-required`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-country-code-required--font-weight` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-required`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-country-code-required--line-height` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-required`: `var(--sf-text-height-1/2)` | `line-height` |
+| `--sf-country-code-row--block-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1/2`: `var(--sf-ui-1/2--control-height)` | `max-height`, `max-block-size` |
 | `--sf-country-code-text--color` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-text`: `var(--sf-on-surface-variant)` | `color` |
 | `--sf-country-code-text--font-family` | не задана; задают модификаторы, например `.sf-country-code .sf-country-code-text`: `var(--sf-text--family)` | `font-family` |
 | `--sf-country-code-text--font-size` | не задана; задают модификаторы, например `.sf-country-code.sf-country-code--size-1 .sf-country-code-text`: `var(--sf-text-size-1/2)` | `font-size` |

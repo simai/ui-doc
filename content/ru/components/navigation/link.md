@@ -6,7 +6,7 @@ profile: reference
 
 # Ссылка
 
-:badge[sf-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-link]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
 
 Ссылка ведёт на другую страницу, раздел страницы или файл. Для действия на
 текущей странице — сохранить, отправить, открыть окно — берите

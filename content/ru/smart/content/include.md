@@ -5,7 +5,7 @@ description: "Загружает часть страницы с адреса с�
 
 # Часть страницы по адресу
 
-:badge[sf-include]{variant=tonal scheme=primary size=1/2} :badge[1.0.4]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-include]{variant=tonal scheme=primary size=1/2} :badge[1.0.5]{variant=outline scheme=on-surface size=1/2}
 
 Часть страницы по адресу подгружает то, что сервер сайта отдаёт отдельно: блок
 новостей, список, собранный на сервере, нижнюю часть страницы, которую стоит
@@ -174,13 +174,13 @@ document.querySelector('#news').addEventListener('sf-include-load-failed', (even
 
 | | |
 |:---|:---|
-| Тег | `<sf-include>`, контракт `smart.include` версии `1.0.4` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-include>`, контракт `smart.include` версии `1.0.5` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`); пока ждёт данные, компонент показывает свою. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Tab` доходит до «Повторить», когда показана ошибка; `Enter` или `Пробел` нажимают «Повторить». |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/include` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-include` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/include` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-include` |
 
 ## См. также
 

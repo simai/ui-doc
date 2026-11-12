@@ -87,10 +87,10 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-5` | `light-dark(var(--sf-neutral-80), var(--sf-neutral-30))` |
 | `--sf-surface-area` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
 | `--sf-surface-card` | `light-dark(var(--sf-surface-page), var(--sf-surface-2))` |
-| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` · `var(--sf-white--alfa-16)` |
-| `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` · `var(--sf-white--alfa-24)` |
-| `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-20), var(--sf-neutral-90--alfa-20))` · `var(--sf-white--alfa-20)` |
-| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-32), var(--sf-neutral-90--alfa-32))` |
+| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` · `var(--sf-white--alfa-8)` |
+| `--sf-surface-container-active` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` · `var(--sf-white--alfa-16)` |
+| `--sf-surface-container-hover` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
+| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` · `var(--sf-white--alfa-12)` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-surface-inverse-fixed` | `var(--sf-neutral-20)` |
@@ -101,6 +101,8 @@ description: "Полный список переменных, которые о�
 | `--sf-surface-overlay--blur` | `var(--sf-d6)` |
 | `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
 | `--sf-surface-place` | `var(--sf-surface-page)` · `var(--sf-surface-media)` |
+| `--sf-surface-place-fill` | `initial` |
+| `--sf-surface-place-ground` | `var(--sf-surface-page)` · `var(--sf-black)` |
 | `--sf-surface-place-solid` | `var(--sf-surface-page)` · `initial` |
 | `--sf-surface-popup` | `light-dark(var(--sf-surface-page), var(--sf-surface-4))` |
 | `--sf-surface-popup-nested` | `light-dark(var(--sf-surface-page), var(--sf-surface-5))` |
@@ -116,7 +118,7 @@ description: "Полный список переменных, которые о�
 
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
-| `--sf-code` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
+| `--sf-code` | `var(--sf-surface-container)` |
 | `--sf-code--background` | `var(--sf-surface-container)` |
 | `--sf-code--color` | `var(--sf-on-surface)` |
 | `--sf-code--font-family` | `var(--sf-mono)` |
@@ -331,17 +333,17 @@ description: "Полный список переменных, которые о�
 | `--sf-heading--space-top` | `var(--sf-content--space-section)` |
 | `--sf-heading--weight` | `var(--sf-weight--bold)` · `700` |
 | `--sf-heading-1--height` | `var(--sf-title--height-6)` |
-| `--sf-heading-1--size` | `var(--sf-text--size-6)` |
+| `--sf-heading-1--size` | `var(--sf-text--size-6)` · `var(--sf-c8)` |
 | `--sf-heading-2--height` | `var(--sf-title--height-5)` |
-| `--sf-heading-2--size` | `var(--sf-text--size-5)` |
+| `--sf-heading-2--size` | `var(--sf-text--size-5)` · `var(--sf-c6)` |
 | `--sf-heading-3--height` | `var(--sf-title--height-3)` |
-| `--sf-heading-3--size` | `var(--sf-text--size-3)` |
+| `--sf-heading-3--size` | `var(--sf-text--size-3)` · `var(--sf-c2)` |
 | `--sf-heading-4--height` | `var(--sf-title--height-2)` |
-| `--sf-heading-4--size` | `var(--sf-text--size-2)` |
+| `--sf-heading-4--size` | `var(--sf-text--size-2)` · `var(--sf-c0)` |
 | `--sf-heading-5--height` | `var(--sf-title--height-1)` |
-| `--sf-heading-5--size` | `var(--sf-text--size-1)` |
+| `--sf-heading-5--size` | `var(--sf-text--size-1)` · `var(--sf-b6)` |
 | `--sf-heading-6--height` | `var(--sf-title--height-1)` |
-| `--sf-heading-6--size` | `var(--sf-text--size-1)` |
+| `--sf-heading-6--size` | `var(--sf-text--size-1)` · `var(--sf-b6)` |
 | `--sf-label-large--height` | `var(--sf-c0)` |
 | `--sf-label-large--size` | `var(--sf-b4)` |
 | `--sf-label-medium--height` | `var(--sf-text--height-1\/3)` |
@@ -708,16 +710,12 @@ description: "Полный список переменных, которые о�
 | Переменная | Значение по умолчанию |
 | :--- | :--- |
 | `--sf-0` | `0` |
-| `--sf-button--background-color` | `var(--sf-button-background-color, var(--sf-on-primary))` · `var(--sf-primary-container)` |
-| `--sf-button--border-color` | `var(--sf-button-border-color, var(--sf-on-primary))` |
-| `--sf-button-text-container--color` | `var(--sf-button-color, var(--sf-primary))` · `var(--sf-button-color, var(--sf-on-primary))` |
 | `--sf-color--alfa` | `1` |
 | `--sf-current` | `currentColor` |
 | `--sf-decoration--alfa` | `1` |
 | `--sf-drop-shadow--alfa` | `1` |
 | `--sf-empty` | `` |
 | `--sf-gradient--angle` | `90deg` |
-| `--sf-icon--color` | `var(--sf-primary)` · `var(--sf-on-primary)` |
 | `--sf-inherit` | `inherit` |
 | `--sf-language--box` | `var(--sf-ui-1--control-height)` · `var(--sf-ui-1\/3--control-height)` · `var(--sf-ui-1\/2--control-height)` · `var(--sf-ui-2--control-height)` · `var(--sf-ui-3--control-height)` |
 | `--sf-layout-floating-panel-height` | `calc(var(--sf-h0) + var(--sf-d0))` |
@@ -735,6 +733,7 @@ description: "Полный список переменных, которые о�
 | `--sf-popup-menu-max-width` | `var(--sf-f8)` · `var(--sf-f6)` |
 | `--sf-popup-menu-min-width` | `var(--sf-f0)` · `var(--sf-e8)` |
 | `--sf-popup-panel-width` | `var(--sf-g0)` · `var(--sf-f8)` |
+| `--sf-popup-question-width` | `var(--sf-g4)` · `var(--sf-g3)` |
 | `--sf-px` | `1px` |
 | `--sf-sans` | `ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` |
 | `--sf-serif` | `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif` |

@@ -42,16 +42,17 @@ description: "Окрашивает рамку элемента цветовой 
 |:---|:---|:---|
 | `border-{значение}` | `border-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `border-outline-variant` | `border-color: var(--sf-outline-variant)` | — |
-| `border-surface` | `border-color: var(--sf-surface-1)` | — |
-| `border-surface-{значение}` | `border-color: var(--sf-surface-{значение})` | `0`, `1`, `overlay`, `inverse` |
+| `border-surface` | `border-color: var(--sf-surface-area)` | — |
+| `border-surface-{значение}` | `border-color: var(--sf-surface-{значение})` | `page`, `area`, `veil`, `inverse` |
 | `border-{значение}-container` | `border-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `border-{значение}-transparent-overlay` | `border-color: var(--sf-{значение}-transparent-overlay)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `border-{значение}-container-strong` | `border-color: var(--sf-{значение}-container-strong)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `border-on-surface` | `border-color: var(--sf-on-surface)` | — |
 | `border-on-surface-variant` | `border-color: var(--sf-on-surface-variant)` | — |
-| `border-{значение}` | `border-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `border-info-container-strong` | `border-color: var(--sf-info-container-strong)` | — |
+| `border-{значение}` | `border-color: var(--sf-{значение}-outline)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
 
-Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят без замены и работают до 2027-01-01 ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
+Прежние имена работают до 2027-01-01: `border-error-transparent-overlay` → `border-error-container-strong`, `border-primary-transparent-overlay` → `border-primary-container-strong`, `border-secondary-transparent-overlay` → `border-secondary-container-strong`, `border-success-transparent-overlay` → `border-success-container-strong`, `border-surface-0` → `border-surface-page`, `border-surface-1` → `border-surface-area`, `border-surface-overlay` → `border-surface-veil`, `border-surface-transparent-overlay` → `border-surface-container-strong`, `border-tertiary-transparent-overlay` → `border-tertiary-container-strong`, `border-warning-transparent-overlay` → `border-warning-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+
+Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — класс оттенка рядом с ролевым классом: `sf-hue-{оттенок} border-hue` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:border-transparent`.
 
@@ -67,35 +68,36 @@ description: "Окрашивает рамку элемента цветовой 
 | `--sf-current` | `currentColor` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-surface-1` | `var(--sf-surface-area)` |
-| `--sf-surface-0` | `var(--sf-surface-page)` |
-| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
-| `--sf-surface-overlay` | `var(--sf-surface-veil)` |
-| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
+| `--sf-surface-area` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
+| `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
+| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-outline-primary` | `var(--sf-primary-outline)` |
+| `--sf-primary-outline` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
-| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |
-| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
+| `--sf-primary-container-strong` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
+| `--sf-secondary-outline` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
 | `--sf-secondary-container` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` |
-| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` |
-| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
+| `--sf-secondary-container-strong` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
+| `--sf-tertiary-outline` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
-| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` |
-| `--sf-outline-error` | `var(--sf-error-outline)` |
+| `--sf-tertiary-container-strong` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
+| `--sf-error-outline` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
-| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
-| `--sf-outline-warning` | `var(--sf-warning-outline)` |
+| `--sf-error-container-strong` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
+| `--sf-warning-outline` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
 | `--sf-warning-container` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-50--alfa-24))` |
-| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
-| `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-warning-container-strong` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
+| `--sf-success-outline` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
-| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
-| `--sf-outline-info` | `var(--sf-info-outline)` |
+| `--sf-success-container-strong` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
+| `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
 | `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
+| `--sf-hue-outline` | задаётся темой |
 
 ## Применение
 
@@ -108,7 +110,7 @@ description: "Окрашивает рамку элемента цветовой 
 | Выбранный элемент, фокус | `border-primary` |
 | Ошибка, предупреждение, успех, сведения | `border-error`, `border-warning`, `border-success`, `border-info` |
 | Рамка цвета текста | `border-current` |
-| Вырез вокруг аватара на заливке | `border-surface`, `border-surface-0` |
+| Вырез вокруг аватара на заливке | `border-surface`, `border-surface-page` |
 | Невидимая рамка, которая держит размер | `border-transparent` |
 
 Классы цвета не включают рамку: толщину задают классы

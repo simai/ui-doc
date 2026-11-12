@@ -6,7 +6,7 @@ profile: reference
 
 # Оглавление
 
-:badge[sf-outline]{variant=tonal scheme=primary size=1/2} :badge[1.0.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-outline]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Оглавление показывает разделы длинной страницы списком якорных ссылок и
 отмечает текущий раздел. Для навигации между страницами берите меню или
@@ -78,9 +78,9 @@ profile: reference
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-outline--color` | `var(--sf-on-surface-variant)` | `color` |
-| `--sf-outline--current-background` | `var(--sf-surface-container-active)` | `background-color` |
-| `--sf-outline--current-color` | `var(--sf-on-surface)` | `color` |
-| `--sf-outline--current-indicator` | `var(--sf-primary)` | `border-inline-start-color` |
+| `--sf-outline--current-background` | `var(--sf-primary-container-active)` | `background-color` |
+| `--sf-outline--current-color` | `var(--sf-on-primary-container)` | `color` |
+| `--sf-outline--current-indicator` | `var(--sf-transparent)` | `border-inline-start-color` |
 | `--sf-outline--gap` | `var(--sf-space-1/3)` | `gap` |
 | `--sf-outline--hover-background` | `var(--sf-surface-container-hover)` | `background-color` |
 | `--sf-outline--hover-color` | `var(--sf-on-surface)` | `color` |

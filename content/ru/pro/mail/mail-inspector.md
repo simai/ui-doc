@@ -260,5 +260,5 @@ panel.sections = [
 
 ### Источник
 
-- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-inspector`
-- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`
+- `simai/ui-pro@9fcf81535f75d3a0eb0dbc31983c55e7346ada3d:components/src/smart/mail-inspector`
+- `simai/ui-pro@9fcf81535f75d3a0eb0dbc31983c55e7346ada3d:components/src/smart/mail-inspector/rule.js#name=cl-mail-inspector`

@@ -65,14 +65,17 @@ description: "Окрашивает текст цветовой ролью тем
 
 | Класс | CSS | Значения |
 |:---|:---|:---|
-| `color-{значение}` | `color: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `color-on-{значение}` | `color: var(--sf-on-{значение})` | `surface`, `disable`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `color-on-surface-{значение}` | `color: var(--sf-on-surface-{значение})` | `fixed`, `variant`, `inverse` |
+| `color-{значение}` | `color: var(--sf-{значение})` | `transparent`, `current`, `inherit`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
+| `color-on-{значение}` | `color: var(--sf-on-{значение})` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
+| `color-on-surface-{значение}` | `color: var(--sf-on-surface-{значение})` | `fixed`, `variant`, `inverse`, `disabled` |
 | `color-on-surface-inverse-fixed` | `color: var(--sf-on-surface-inverse-fixed)` | — |
-| `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `color-disable` | `color: var(--sf-surface-disabled)` | — |
+| `color-on-{значение}-container` | `color: var(--sf-on-{значение}-container)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
+| `color-on-{значение}-container-graphic` | `color: var(--sf-on-{значение}-container-graphic)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info`, `hue` |
 
-Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят без замены и работают до 2027-01-01 ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
+Прежние имена работают до 2027-01-01: `color-on-disable` → `color-on-surface-disabled`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
+
+Другие классы записи `utility-c17-legacy-palette-classes` журнала уходят и работают до 2027-01-01; замена — класс оттенка рядом с ролевым классом: `sf-hue-{оттенок} color-hue` ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `active:`, `focus:`, `hover:`. Например: `active:color-transparent`.
 
@@ -90,7 +93,7 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
-| `--sf-on-disable` | `var(--sf-on-surface-disabled)` |
+| `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-primary` | `light-dark(var(--sf-primary-40), var(--sf-primary-80))` |
 | `--sf-on-primary` | `light-dark(var(--sf-white), var(--sf-primary-20))` |
 | `--sf-on-primary-container` | `light-dark(var(--sf-primary-10), var(--sf-primary-90))` |
@@ -121,7 +124,11 @@ description: "Окрашивает текст цветовой ролью тем
 | `--sf-on-info-container-graphic` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-current` | `currentColor` |
 | `--sf-inherit` | `inherit` |
-| `--sf-disable` | `var(--sf-surface-disabled)` |
+| `--sf-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-12), var(--sf-neutral-90--alfa-12))` |
+| `--sf-hue` | задаётся темой |
+| `--sf-on-hue` | задаётся темой |
+| `--sf-on-hue-container` | задаётся темой |
+| `--sf-on-hue-container-graphic` | задаётся темой |
 
 ## Применение
 
@@ -150,7 +157,7 @@ description: "Окрашивает текст цветовой ролью тем
 
 `color-primary`, `color-secondary`, `color-tertiary` окрашивают текст
 акцентными ролями, `color-success`, `color-warning`, `color-error` — статусными.
-`color-on-disable` — цвет текста недоступного элемента. Роли для
+`color-on-surface-disabled` — цвет текста недоступного элемента. Роли для
 информационного статуса (`info`) у текста нет.
 
 На цветном фоне роли берите в паре с фоном: на `bg-primary` —
@@ -179,7 +186,7 @@ description: "Окрашивает текст цветовой ролью тем
 - `color-secondary` — акцентная роль, а не уровень важности текста. Для
   вспомогательного текста берите `color-on-surface-variant`.
 - `color-disable` — почти прозрачный цвет заливки недоступного элемента, текст
-  с ним не читается. Цвет текста недоступного элемента — `color-on-disable`.
+  с ним не читается. Цвет текста недоступного элемента — `color-on-surface-disabled`.
 - Готового класса для токена `--sf-on-surface-muted` нет. Он слабее
   `--sf-on-surface-variant`; если проекту нужен такой уровень, объявите свой
   класс и проверьте контраст в обеих темах:

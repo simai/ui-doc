@@ -160,5 +160,5 @@ list.addEventListener('sf-mail-letters-delete', async (event) => {
 
 ### Источник
 
-- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-letters`
-- `simai/ui-pro@dc13c0f724009847add06c25bf98a6c033c037db:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`
+- `simai/ui-pro@9fcf81535f75d3a0eb0dbc31983c55e7346ada3d:components/src/smart/mail-letters`
+- `simai/ui-pro@9fcf81535f75d3a0eb0dbc31983c55e7346ada3d:components/src/smart/mail-letters/rule.js#name=cl-mail-letters`

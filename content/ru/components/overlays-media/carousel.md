@@ -6,7 +6,7 @@ profile: reference
 
 # Карусель
 
-:badge[sf-carousel]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-carousel]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Карусель показывает материалы по одному в области постоянной высоты: баннеры,
 новости, изображения. Она добавляет к движку
@@ -127,7 +127,7 @@ document.addEventListener('sf:carousel-change', (event) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-carousel` |
-| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary-container`, `sf-carousel-pagination--surface-2`, `sf-carousel-pagination--surface-inverse`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--media`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--right`, `sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-inverse`, `sf-carousel-switch--surface-zero` |
+| Части | `sf-carousel-pagination`, `sf-carousel-pagination--big`, `sf-carousel-pagination--no-background`, `sf-carousel-pagination--primary`, `sf-carousel-pagination--primary-container`, `sf-carousel-pagination--surface-2`, `sf-carousel-pagination--surface-area`, `sf-carousel-pagination--surface-inverse`, `sf-carousel-pagination-item`, `sf-carousel-pagination-item--active`, `sf-carousel-rotation`, `sf-carousel-slide`, `sf-carousel-slider`, `sf-carousel-switch`, `sf-carousel-switch--big`, `sf-carousel-switch--left`, `sf-carousel-switch--media`, `sf-carousel-switch--next`, `sf-carousel-switch--prev`, `sf-carousel-switch--primary`, `sf-carousel-switch--right`, `sf-carousel-switch--secondary-container`, `sf-carousel-switch--surface-inverse`, `sf-carousel-switch--surface-page`, `sf-carousel-switch--surface-zero` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -138,10 +138,14 @@ document.addEventListener('sf:carousel-change', (event) => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-carousel--block-size` | `var(--sf-g3)` | `height`, `block-size` |
-| `--sf-carousel-control--background-color` | `var(--sf-primary)` | `background-color` |
-| `--sf-carousel-control--color` | `var(--sf-on-primary)` | `color` |
-| `--sf-carousel-pagination--background-color` | `var(--sf-primary)` | `background-color` |
-| `--sf-carousel-pagination-item--color` | `var(--sf-on-primary)` | `color` |
+| `--sf-carousel-control--backdrop` | `blur(var(--sf-blur-large))` | `backdrop-filter` |
+| `--sf-carousel-control--background-color` | `var(--sf-surface-media)` | `background-color` |
+| `--sf-carousel-control--color` | `var(--sf-on-surface-media)` | `color` |
+| `--sf-carousel-control--radius` | `var(--sf-radius-rounded)` | `border-radius` |
+| `--sf-carousel-pagination--backdrop` | не задана; задают модификаторы, например `.sf-carousel-pagination--primary`: `none` | `backdrop-filter` |
+| `--sf-carousel-pagination--background-color` | `var(--sf-surface-media)` | `background-color` |
+| `--sf-carousel-pagination--radius` | `var(--sf-radius-rounded)` | `border-radius` |
+| `--sf-carousel-pagination-item--color` | `var(--sf-on-surface-media)` | `color` |
 
 ## См. также
 

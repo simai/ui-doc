@@ -6,7 +6,7 @@ profile: reference
 
 # Код подтверждения
 
-:badge[sf-verification]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-verification]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Код подтверждения принимает одноразовый код из сообщения или приложения и
 показывает его по отдельным ячейкам. Под ячейками лежит одно нативное поле,
@@ -170,7 +170,7 @@ document.addEventListener('verification:complete', (event) => {
 | `--sf-verification-border-width` | Толщина рамки ячейки. | `var(--sf-px)` |
 | `--sf-verification-radius` | Скругление углов ячейки и кольца фокуса вокруг ячеек. | `var(--sf-radius--ui)` |
 | `--sf-verification-color` | Цвет символов в ячейках; у ошибки и недоступного поля свой. | `var(--sf-on-surface)` |
-| `--sf-verification-cell-size` | Ширина и высота ячейки; если задана — одинаковая на всех размерах. | `var(--sf-title-height-6)`; зависит от размера |
+| `--sf-verification-cell-size` | Ширина и высота ячейки; если задана — одинаковая на всех размерах. | `var(--sf-ui-1--control-height)`; зависит от размера |
 | `--sf-verification-gap` | Расстояние между ячейками. | `var(--sf-space-1/3)` |
 | `--sf-verification-invalid-border-color` | Рамка ячейки при ошибке в коде. | `var(--sf-error)` |
 
@@ -187,7 +187,7 @@ document.addEventListener('verification:complete', (event) => {
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
 | `--sf-verification--border-width` | `var(--sf-verification-border-width, var(--sf-px))` | `border` |
-| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-title-height-6))` | `width`, `inline-size`, `height`, `block-size` |
+| `--sf-verification--cell-size` | `var(--sf-verification-cell-size, var(--sf-ui-1--control-height))` | `width`, `inline-size`, `height`, `block-size` |
 | `--sf-verification--font-size` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-verification--gap` | `var(--sf-verification-gap, var(--sf-space-1/3))` | `gap` |
 | `--sf-verification--line-height` | не задана; задают модификаторы, например `.sf-verification--size-1/2`: `var(--sf-text-height-1/2)` | `line-height` |

@@ -39,10 +39,8 @@ description: "Окрашивает линии между соседними эл
 | `divide-outline` (`.divide-outline > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
 | `divider-outline-variant` (`.divider-outline-variant > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline-variant) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline-variant) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
 | `divide-outline-variant` (`.divide-outline-variant > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline-variant) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline-variant) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
-| `divider-{значение}` (`.divider-{значение} > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline-{значение}) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline-{значение}) calc(var(--sf-divider--alfa, 1) * 100%))` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `divide-{значение}` (`.divide-{значение} > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-outline-{значение}) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-outline-{значение}) calc(var(--sf-divider--alfa, 1) * 100%))` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
-| `divider-info` (`.divider-info > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-info-outline) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-info-outline) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
-| `divide-info` (`.divide-info > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-info-outline) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-info-outline) calc(var(--sf-divider--alfa, 1) * 100%))` | — |
+| `divider-{значение}` (`.divider-{значение} > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-{значение}-outline) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-{значение}-outline) calc(var(--sf-divider--alfa, 1) * 100%))` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
+| `divide-{значение}` (`.divide-{значение} > :not([hidden]) ~ :not([hidden])`) | `border-color: color-mix(in srgb, transparent, var(--sf-{значение}-outline) calc(1 * 100%)); border-color: color-mix(in srgb, transparent, var(--sf-{значение}-outline) calc(var(--sf-divider--alfa, 1) * 100%))` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `hover:`. Например: `hover:divider-transparent`.
 
@@ -59,12 +57,12 @@ description: "Окрашивает линии между соседними эл
 | `--sf-current` | `currentColor` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-outline-primary` | `var(--sf-primary-outline)` |
-| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
-| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
-| `--sf-outline-error` | `var(--sf-error-outline)` |
-| `--sf-outline-warning` | `var(--sf-warning-outline)` |
-| `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-primary-outline` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
+| `--sf-secondary-outline` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
+| `--sf-tertiary-outline` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
+| `--sf-error-outline` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
+| `--sf-warning-outline` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
+| `--sf-success-outline` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 
 ## Применение

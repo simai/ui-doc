@@ -5,7 +5,7 @@ description: "Даёт править текст заголовков и абз�
 
 # Inline-редактор
 
-:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.6.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-editor-inline]{variant=tonal scheme=primary size=1/2} :badge[1.6.3]{variant=outline scheme=on-surface size=1/2}
 
 Inline-редактор даёт править текст заголовков и абзацев (`content.heading` и
 `content.paragraph`) прямо на странице. Доступно то, что есть в модели
@@ -145,13 +145,13 @@ canvas.addEventListener('sf-inline-editor-change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.6.2` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-editor-inline>`, контракт `smart.editor-inline` версии `1.6.3` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; название компонент ставит сам; с клавиатуры: `Ctrl/Cmd+B`, `Ctrl/Cmd+I`, `Ctrl/Cmd+E`, `Ctrl/Cmd+K`, `Ctrl/Cmd+Z`, `Ctrl/Cmd+Shift+Z`, `Ctrl/Cmd+Y`, `Enter`, `Esc`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/editor-inline` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-editor-inline` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/editor-inline` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-editor-inline` |
 
 ## См. также
 

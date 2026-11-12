@@ -6,7 +6,7 @@ profile: reference
 
 # Контекстное меню
 
-:badge[sf-context-menu]{variant=tonal scheme=primary size=1/2} :badge[1.8.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-context-menu]{variant=tonal scheme=primary size=1/2} :badge[1.8.1]{variant=outline scheme=on-surface size=1/2}
 
 Контекстное меню — приподнятая панель с коротким списком действий над
 выбранным объектом: строкой таблицы, файлом, карточкой. Ширина панели
@@ -155,17 +155,18 @@ profile: reference
 | `--sf-context-menu--item-inset-start-2` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu--row-padding)` | `--sf-button--padding-inline-start` |
 | `--sf-context-menu--label-inset-1` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `calc(var(--sf-context-menu--item-inset-start-1) + var(--sf-ui-1--text-space-x))` | — |
 | `--sf-context-menu--label-inset-2` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `calc(var(--sf-context-menu--item-inset-start-2) + var(--sf-ui-2--text-space-x))` | — |
-| `--sf-context-menu--line` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height`, `width`, `inline-size`, `height`, `block-size`, `margin-inline-start`, `--sf-context-menu-switch--track`, `min-width`, `min-inline-size` |
-| `--sf-context-menu--row-height` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-ui-1/2--control-height)` | `min-height`, `min-block-size`, `--sf-context-menu-choice--option-height` |
+| `--sf-context-menu--line` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-icon--font-size`, `--sf-icon--width`, `--sf-icon--height`, `padding-top`, `padding-bottom`, `padding-block`, `width`, `inline-size`, `height`, `block-size`, `margin-inline-start`, `--sf-context-menu-switch--track`, `min-width`, `min-inline-size` |
+| `--sf-context-menu--row-height` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-ui-1/2--control-height)` | `min-height`, `min-block-size`, `padding-top`, `padding-bottom`, `padding-block`, `--sf-context-menu-choice--option-height`, `--sf-context-menu--row-step` |
 | `--sf-context-menu--row-padding` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/2)` | `--sf-context-menu--inset-start`, `--sf-context-menu--inset-end`, `padding-left`, `padding-right`, `padding-inline` |
 | `--sf-context-menu--row-radius` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-row-radius, var(--sf-radius--ui))` | `border-radius` |
+| `--sf-context-menu--row-step` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `max(var(--sf-context-menu--row-height), var(--sf-d1))` | `padding-top`, `padding-bottom`, `padding-block` |
 | `--sf-context-menu--screen-inline-size` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content[data-sf-width=list]`: `var(--sf-context-menu-available-inline-size, calc(100vi - var(--sf-space-1)))` | `min-width`, `min-inline-size`, `max-width`, `max-inline-size` |
 | `--sf-context-menu--space-y` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-ui-1/2--space-y)` | `padding`, `min-width`, `min-inline-size` |
 | `--sf-context-menu--text-size` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-text-size-1/2)` | `font-size` |
 | `--sf-context-menu--thumb` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-space-1/4)` | `--sf-context-menu--track` |
 | `--sf-context-menu--track` | не задана; задают модификаторы, например `.sf-context-menu:not(.sf-context-menu--panel) .sf-context-menu-content`: `calc(2 * var(--sf-context-menu-content--padding-inline-end) + var(--sf-context-menu--thumb))` | `width`, `height`, `border-radius` |
 | `--sf-context-menu-choice--option-height` | не задана; задают модификаторы, например `.sf-context-menu-choice-option.sf-context-menu-item`: `min(var(--sf-context-menu--inner-height), calc(var(--sf-context-menu--row-height) - 2 * var(--sf-a2)))` | `min-height`, `min-block-size`, `width`, `inline-size` |
-| `--sf-context-menu-content--background-color` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-background-color, var(--sf-surface-popup))` | `--sf-surface-place`, `--sf-surface-place-solid`, `background-color` |
+| `--sf-context-menu-content--background-color` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-background-color, var(--sf-surface-popup))` | `--sf-surface-place`, `--sf-surface-place-solid`, `--sf-surface-place-ground`, `background-color` |
 | `--sf-context-menu-content--border-radius` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-radius, var(--sf-radius--surface))` | `border-radius` |
 | `--sf-context-menu-content--padding-bottom` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-block, var(--sf-space-1/4))` | `padding-bottom`, `min-height`, `min-block-size`, `padding-block`, `bottom`, `inset-block-end`, `margin-bottom`, `margin-block-end`, `padding-block-end` |
 | `--sf-context-menu-content--padding-inline-end` | не задана; задают модификаторы, например `.sf-context-menu .sf-context-menu-content`: `var(--sf-context-menu-padding-inline, var(--sf-space-1/4))` | `padding-inline-end`, `padding-inline`, `margin-inline`, `--sf-context-menu--track`, `border` |

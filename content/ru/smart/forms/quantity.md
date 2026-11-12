@@ -5,7 +5,7 @@ description: "Даёт набрать число или поменять его 
 
 # Количество
 
-:badge[sf-input-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input-quantity]{variant=tonal scheme=primary size=1/2} :badge[1.3.4]{variant=outline scheme=on-surface size=1/2}
 
 Количество — поле для небольшого числа, которое удобно менять по шагу:
 товаров в корзине, гостей, записей на странице. Число можно набрать или
@@ -250,13 +250,13 @@ guests.addEventListener('change', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-input-quantity>`, контракт `smart.input-quantity` версии `1.3.3` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-input-quantity>`, контракт `smart.input-quantity` версии `1.3.4` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как числовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `↑`, `↓`, `PageUp`, `PageDown`, `Home`, `End`, `Enter`, `Esc`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/input-quantity` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-input-quantity` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/input-quantity` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-input-quantity` |
 
 ## См. также
 

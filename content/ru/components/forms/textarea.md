@@ -6,7 +6,7 @@ profile: reference
 
 # Многострочное поле
 
-:badge[sf-textarea]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-textarea]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле принимает комментарий, описание или другой свободный текст с
 переносами строк. Для короткого значения в одну строку берите
@@ -272,6 +272,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 
 | Переменная | По умолчанию | Задаёт |
 |:---|:---|:---|
+| `--sf-textarea--place-variant` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--filled`: `var(--sf-place--fill-placeholder, var(--sf-on-surface-variant))` | `--sf-textarea-placeholder--color` |
 | `--sf-textarea--radius` | `var(--sf-textarea-radius, var(--sf-radius--ui))` | `--sf-textarea-textarea--border-end-end-radius`, `--sf-textarea-textarea--border-end-start-radius`, `--sf-textarea-textarea--border-start-end-radius`, `--sf-textarea-textarea--border-start-start-radius` |
 | `--sf-textarea--row-frame` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--auto-grow textarea[rows]`: `calc(var(--sf-textarea-textarea--padding-top) + var(--sf-textarea-textarea--padding-bottom) + 2 * var(--sf-px))` | `min-height`, `min-block-size`, `max-height`, `max-block-size` |
 | `--sf-textarea-hint-text-wrap--background-color` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-hint-text-wrap`: `transparent` | `background-color` |

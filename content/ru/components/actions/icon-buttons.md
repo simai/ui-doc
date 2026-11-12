@@ -6,7 +6,7 @@ profile: reference
 
 # Кнопки с иконкой
 
-:badge[sf-icon-button]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-icon-button]{variant=tonal scheme=primary size=1/2} :badge[1.6.0]{variant=outline scheme=on-surface size=1/2}
 
 Кнопка с иконкой запускает действие без видимой подписи: редактировать,
 удалить, открыть настройки. Берите её, когда иконка общепринята и места мало;
@@ -226,9 +226,9 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 |:---|:---|
 | Блок | `sf-icon-button` |
 | Части | `sf-icon-button-spinner`, `sf-icon-button-state-loading` |
-| Модификаторы | `sf-icon-button--close`, `sf-icon-button--danger`, `sf-icon-button--default`, `sf-icon-button--ghost`, `sf-icon-button--height-high`, `sf-icon-button--height-highest`, `sf-icon-button--height-low`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--secondary`, `sf-icon-button--surface`, `sf-icon-button--tonal` |
+| Модификаторы | `sf-icon-button--close`, `sf-icon-button--danger`, `sf-icon-button--default`, `sf-icon-button--ghost`, `sf-icon-button--height-high`, `sf-icon-button--height-highest`, `sf-icon-button--height-low`, `sf-icon-button--icon`, `sf-icon-button--link`, `sf-icon-button--on-surface`, `sf-icon-button--on-surface-variant`, `sf-icon-button--outline`, `sf-icon-button--pressed`, `sf-icon-button--primary`, `sf-icon-button--tonal` |
 | Размеры | `sf-icon-button--size-1`, `sf-icon-button--size-1/2`, `sf-icon-button--size-1/3`, `sf-icon-button--size-2`, `sf-icon-button--size-3` |
-| Устаревшие | `sf-icon-button--error` → `sf-icon-button--danger` |
+| Устаревшие | `sf-icon-button--error` → `sf-icon-button--danger`, `sf-icon-button--secondary` → `sf-icon-button--on-surface sf-icon-button--on-surface-variant`, `sf-icon-button--surface` → `sf-icon-button--tonal` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 
@@ -267,7 +267,7 @@ whenLoader(() => SF.Loader.ready('IconButtons', (IconButtons) => {
 | `--sf-icon-button--border-bottom-left-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-middle`: `var(--sf-radius-square)` | `border-end-start-radius` |
 | `--sf-icon-button--border-bottom-right-radius` | не задана; задают модификаторы, например `.sf-icon-button.segment-start`: `var(--sf-radius-square)` | `border-end-end-radius` |
 | `--sf-icon-button--border-bottom-width` | `var(--sf-icon-button-border-width, 0)` | `padding-bottom`, `border-bottom-width` |
-| `--sf-icon-button--border-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--outline.sf-icon-button--primary.sf-icon-button--icon`: `var(--sf-icon-button-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-icon-button--border-color` | не задана; задают модификаторы, например `.sf-icon-button.sf-icon-button--outline.sf-icon-button--on-surface.sf-icon-button--icon`: `var(--sf-icon-button-border-color, var(--sf-outline))` | `border-color` |
 | `--sf-icon-button--border-inline-end-width` | `var(--sf-icon-button-border-width, 0)` | `padding-inline-end`, `border-inline-end-width` |
 | `--sf-icon-button--border-inline-start-width` | `var(--sf-icon-button-border-width, 0)` | `padding-inline-start`, `border-inline-start-width` |
 | `--sf-icon-button--border-style` | не задана; задают модификаторы, например `.sf-icon-button--outline`: `solid` | `border-style` |

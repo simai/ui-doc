@@ -5,7 +5,7 @@ description: "Показывает, почему в списке, панели �
 
 # Пустое состояние
 
-:badge[sf-empty-state]{variant=tonal scheme=primary size=1/2} :badge[1.1.10]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-empty-state]{variant=tonal scheme=primary size=1/2} :badge[1.1.11]{variant=outline scheme=on-surface size=1/2}
 
 Пустое состояние объясняет, почему в списке, панели или на странице нечего
 показать. Одна причина — один вид: значок, заголовок, пояснение и, если нужно,
@@ -150,13 +150,13 @@ description: "Показывает, почему в списке, панели �
 
 | | |
 |:---|:---|
-| Тег | `<sf-empty-state>`, контракт `smart.empty-state` версии `1.1.10` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Тег | `<sf-empty-state>`, контракт `smart.empty-state` версии `1.1.11` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает в Студии, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как строка состояния; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/empty-state` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-empty-state` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/empty-state` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-empty-state` |
 
 ## См. также
 

@@ -117,10 +117,14 @@ for (const record of journal.records ?? []) {
     // A conditional name (hover:bg-primary-transparent) is a row of its own
     // in the table, so it leaves the table the same way.
     if (!item.from || /[*<{\s]/u.test(item.from)) continue;
-    if (!item.to) {
-      if (/-c17-/u.test(record.id)) goingUtilities.set(item.from, {id: record.id, removeAfter: record.remove_after ?? null});
+    // The legacy palette (C17) leaves the tables whether or not the journal
+    // names a successor: since ui-7f1d29b02919 most of its classes point at a
+    // pair of classes (bg-gray → sf-hue-gray bg-hue), which is no table row.
+    if (/-c17-/u.test(record.id)) {
+      goingUtilities.set(item.from, {id: record.id, removeAfter: record.remove_after ?? null, to: item.to ?? null});
       continue;
     }
+    if (!item.to) continue;
     if (/[*<{\s]/u.test(item.to)) continue;
     formerUtilities.set(item.from, {to: item.to, removeAfter: record.remove_after ?? null});
   }
@@ -316,16 +320,20 @@ const utilityClasses = (families) => {
   if (going.length) {
     const byRecord = new Map();
     for (const name of going) {
-      const {id, removeAfter} = goingUtilities.get(name);
-      const entry = byRecord.get(id) ?? {removeAfter, names: []};
+      const {id, removeAfter, to} = goingUtilities.get(name);
+      const entry = byRecord.get(id) ?? {removeAfter, names: [], sample: null};
       entry.names.push(name);
+      if (to && !entry.sample) entry.sample = [name, to];
       byRecord.set(id, entry);
     }
-    for (const [id, {removeAfter, names}] of byRecord) {
+    for (const [id, {removeAfter, names, sample}] of byRecord) {
       const until = removeAfter ? ` до ${removeAfter}` : '';
       // No count: the number changes between releases (D19).
       if (!names.length) continue;
-      lines.push('', `Другие классы записи \`${id}\` журнала уходят без замены и работают${until} ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
+      const replacement = sample
+        ? `; замена — класс оттенка рядом с ролевым классом: ${code(sample[1].replace(/\bsf-hue-[a-z]+/u, 'sf-hue-{оттенок}'))}`
+        : ' без замены';
+      lines.push('', `Другие классы записи \`${id}\` журнала уходят${sample ? '' : replacement} и работают${until}${sample ? replacement : ''} ([Как обновить проект](/ru/guide/connection/updating/)); в новой разметке их не пишите.`);
     }
   }
   return lines;

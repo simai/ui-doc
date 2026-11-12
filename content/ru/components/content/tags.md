@@ -6,7 +6,7 @@ profile: reference
 
 # Теги
 
-:badge[sf-tag]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tag]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
 
 Тег компактно показывает категорию, выбранное значение, фильтр или статус.
 Сам по себе тег — надпись, а не действие: кнопкой становится только тег, который
@@ -216,7 +216,7 @@ profile: reference
 |:---|:---|:---|
 | `--sf-tag--background-color` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-tag-background-color, var(--sf-surface-container))` | `background-color` |
 | `--sf-tag--block` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-block, var(--sf-ui-1/3--space-y-tightness-default))` | `padding-top`, `padding-bottom` |
-| `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag.sf-tag--appearance-surface.sf-tag--color`: `inset 0 0 0 var(--sf-px) var(--sf-alpha-8)` | `box-shadow` |
+| `--sf-tag--box-shadow` | не задана; задают модификаторы, например `.sf-tag.sf-tag--appearance-surface.sf-tag--color`: `inset 0 0 0 var(--sf-px) var(--sf-surface-state-select)` | `box-shadow` |
 | `--sf-tag--close-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/4)` | `--sf-close-icon--height`, `--sf-close-icon--width` |
 | `--sf-tag--font-size` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-size-1/3)` | `font-size` |
 | `--sf-tag--gap` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-gap, 0)` | `gap` |
@@ -225,8 +225,8 @@ profile: reference
 | `--sf-tag--inline-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-tag-padding-inline, var(--sf-ui-1/3--space-x))` | `padding-inline-start` |
 | `--sf-tag--label-end` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-end` |
 | `--sf-tag--label-start` | не задана; задают модификаторы, например `.sf-tag.sf-tag--inline.sf-tag--inline`: `0` | `padding-inline-start` |
-| `--sf-tag--line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--line-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-tag--inline-line`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size` |
-| `--sf-tag--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-height-1/3)` | `line-height`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size` |
+| `--sf-tag--line` | не задана; задают модификаторы, например `.sf-tag.sf-tag--line-1/2`: `var(--sf-text-height-1/2)` | `line-height`, `--sf-tag--inline-line`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height` |
+| `--sf-tag--line-height` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1/3`: `var(--sf-text-height-1/3)` | `line-height`, `min-height`, `min-block-size`, `height`, `block-size`, `width`, `inline-size`, `--sf-avatar--height`, `--sf-avatar--width`, `--sf-avatar--font-size`, `--sf-avatar--line-height` |
 | `--sf-tag--padding-bottom` | не задана; задают модификаторы, например `.sf-tag.sf-tag--size-1.sf-tag--color`: `var(--sf-ui-1--space-y-tightness-default)` | `padding-bottom` |
 | `--sf-tag--padding-inline-end` | не задана; задают модификаторы, например `.sf-tag--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-end` |
 | `--sf-tag--padding-inline-start` | не задана; задают модификаторы, например `.sf-tag--size-1`: `var(--sf-ui-1--space-x)` | `padding-inline-start`, `--sf-tag-container--padding-inline-start` |

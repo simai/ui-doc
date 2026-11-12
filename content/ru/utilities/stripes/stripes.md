@@ -66,7 +66,7 @@ description: "Заполняет фон элемента тонкими лини
 сплошную заливку.
 
 ```html
-<div class="stripe-3 stripe-size-4 stripe-surface-transparent-overlay h-f0 radius-surface">
+<div class="stripe-3 stripe-size-4 stripe-surface-container-strong h-f0 radius-surface">
   Место для графика
 </div>
 ```

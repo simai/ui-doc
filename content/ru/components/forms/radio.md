@@ -6,7 +6,7 @@ profile: reference
 
 # Радиокнопки
 
-:badge[sf-radio-button]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio-button]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки выбирают ровно один вариант из группы, когда все варианты нужно
 показать сразу. Для независимых параметров берите

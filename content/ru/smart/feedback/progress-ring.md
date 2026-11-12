@@ -184,12 +184,12 @@ ring.setAttribute('value-text', 'Файлы загружены');
 | | |
 |:---|:---|
 | Тег | `<sf-progress-ring>`, контракт `smart.progress-ring` версии `1.0.2` |
-| Поставка | выпуск Framework `ui-2bd5a3ab478a` |
+| Поставка | выпуск Framework `ui-7f1d29b02919` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шкала; нужна подпись или `aria-label`. |
-| Источник | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/smart/progress-ring` |
-| Правило классов | `simai/ui@2bd5a3ab478a46fcee24d2460e7792135b0bb864:distr/rule/rule.json#name=cl-progress-ring` |
+| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/progress-ring` |
+| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-progress-ring` |
 
 ## См. также
 

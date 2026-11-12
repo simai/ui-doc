@@ -26,7 +26,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 
 ## Имена по уровням
 
-Раздел собран из контракта выпуска `ui-2bd5a3ab478a` (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.
+Раздел собран из контракта выпуска `ui-7f1d29b02919` (`core/contracts/public-js-api.json`) и обновляется вместе с выпуском.
 
 ### Ядро
 
@@ -39,6 +39,7 @@ API компонента (`SF.Input`, `SF.Tabs` и другие) описан н
 | `SF.breakpoints` | Контрольные точки ширины для скрипта. | [Контрольные точки](/ru/guide/functions/screen/breakpoints/) |
 | `SF.codeCopy` | Код в тексте копируется по нажатию. | [Копирование кода в тексте](/ru/guide/functions/actions/code-copy/) |
 | `SF.Composition` | Помощники композиции и редактора блоков. | [API композиции](/ru/guide/layouts/reference/api/) |
+| `SF.copyFeedback` | Отклик копирования для своей кнопки: галочка, «Скопировано» для диктора, подсказка при отказе. | [Копирование текста](/ru/guide/functions/actions/copy-text/) |
 | `SF.copyText` | Кладёт текст в буфер обмена. | [Копирование текста](/ru/guide/functions/actions/copy-text/) |
 | `SF.deprecations` | Прежние имена, которые ещё принимаются, и чем их заменить. | [Жизненный цикл изменений](/ru/guide/connection/change-lifecycle/) |
 | `SF.EarlyPort` | Порты, объявленные в разметке: первый запрос до кода компонента. | [Данные с сервера](/ru/guide/smart-components/data/) |

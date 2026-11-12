@@ -295,21 +295,13 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 ### Прежние имена по компонентам
 
-Раздел собран из манифестов выпуска `ui-2bd5a3ab478a` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
+Раздел собран из манифестов выпуска `ui-7f1d29b02919` и пакетов и обновляется вместе с ними. Старое имя работает до даты в последнем столбце и отмечается в `SF.deprecations`; в новой разметке пишите имя из первого столбца.
 
 #### `<sf-accordion>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | событие `sf-accordion-toggle` | `sf-accordion:toggle` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
-#### `<sf-admin-menu>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-admin-menu-query` | `sf-admin-menu-search` | работает как псевдоним | — |
-| событие `sf-admin-menu-reset` | `sf-admin-menu-settings-reset` | работает как псевдоним | — |
-| событие `sf-admin-menu-refresh` | `sf-admin-menu-intent` | работает как псевдоним | — |
 
 #### `<sf-alert>`
 
@@ -412,76 +404,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `appearance="tonal"` | `appearance="surface"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `scheme="on-surface-variant"` | `scheme="secondary"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
-#### `<sf-chat-composer>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-chat-composer-submit` | `sf-chat-send` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-composer-stop` | `sf-chat-stop` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-composer-attach` | `sf-chat-files` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-composer-detach` | `sf-chat-action` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
-#### `<sf-chat-interlocutor>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-chat-interlocutor-select` | `sf-chat-interlocutor` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
-#### `<sf-chat-message>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-chat-message-retry` | `sf-chat-action` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `display` | `view` | работает как псевдоним | 2026-12-01 |
-
-#### `<sf-chat-threads>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `status="error"` | `status="danger"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `status="error"` | `status="critical"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-threads-open` | `sf-thread-list-select` | работает как псевдоним | — |
-| событие `sf-chat-threads-restore` | `sf-thread-list-unarchive` | работает как псевдоним | — |
-| событие `sf-chat-threads-apply` | `sf-thread-list-action` | работает как псевдоним | — |
-| событие `sf-chat-threads-toggle` | `sf-thread-list-view` | работает как псевдоним | — |
-| событие `sf-chat-threads-create` | `sf-thread-list-create` | работает как псевдоним | — |
-| событие `sf-chat-threads-open` | `sf-thread-list-open` | работает как псевдоним | — |
-| событие `sf-chat-threads-rename` | `sf-thread-list-rename` | работает как псевдоним | — |
-| событие `sf-chat-threads-archive` | `sf-thread-list-archive` | работает как псевдоним | — |
-| событие `sf-chat-threads-restore` | `sf-thread-list-restore` | работает как псевдоним | — |
-| событие `sf-chat-threads-apply` | `sf-thread-list-apply` | работает как псевдоним | — |
-| событие `sf-chat-threads-load-more` | `sf-thread-list-load-more` | работает как псевдоним | — |
-| событие `sf-chat-threads-toggle` | `sf-thread-list-toggle` | работает как псевдоним | — |
-
-#### `<sf-chat-window>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-chat-window-open` | `chat-port:open` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-load-more` | `chat-port:older` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-submit` | `chat-port:send` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-retry` | `chat-port:retry` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-save` | `chat-port:edit` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-delete` | `chat-port:delete` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-read` | `chat-port:read` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-rate` | `chat-port:rate` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-retry` | `chat-port:file-retry` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-answer` | `chat-port:decide` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-check` | `chat-port:check` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-stop` | `chat-port:stop` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-create` | `chat-port:create` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-rename` | `chat-port:rename` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-archive` | `chat-port:archive` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-select` | `chat-port:interlocutor` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-open` | `chat-window:view` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-load-more` | `chat-window:more` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-query` | `chat-window:search` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-pin` | `chat-window:pin` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-attach` | `chat-window:attach` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-detach` | `chat-window:detach` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-open` | `chat-window:files` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| событие `sf-chat-window-delete` | `chat-window:file-remove` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
 #### `<sf-checkbox>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
@@ -531,15 +453,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `size="2"` | `size="3"` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `change` | `sf-dropdown:change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-
-#### `<sf-editor-content>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-editor-content-select` | `sf-content-editor-select` | работает как псевдоним | — |
-| событие `sf-editor-content-leave` | `sf-content-editor-leave` | работает как псевдоним | — |
-| событие `sf-editor-content-params` | `sf-content-editor-params` | работает как псевдоним | — |
-| событие `sf-editor-content-file` | `sf-content-editor-file` | работает как псевдоним | — |
 
 #### `<sf-editor-inline>`
 
@@ -665,8 +578,16 @@ id?}` значит «перестать ждать», а `wait` принимае
 
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
-| `appearance` | `variant` | принимается для совместимости | — |
 | событие `sf-field-reset` | `sf-field:reset` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+
+#### `<sf-input-country>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `fixed-country` | `multi-country="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `fixed-mask` | `use-country-masks="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `hide-code` | `show-code="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `eager-flags` | `lazy-flags="false"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-input-date>`
 
@@ -703,6 +624,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `spell-check` | `spellcheck` | работает как псевдоним | 2026-12-01 |
 | `invalid` | `error` | работает как псевдоним | 2026-12-01 |
 
+#### `<sf-list>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `groups="layout"` | `groups="structure"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+
 #### `<sf-list-attention>`
 
 | Имя | Прежнее имя | Состояние | Убирается после |
@@ -715,6 +642,12 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-list-item-open` | `sf-list-item-activate` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
+
+#### `<sf-list-timeline>`
+
+| Имя | Прежнее имя | Состояние | Убирается после |
+|:---|:---|:---|:---|
+| `data-sf-density` | `density` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 
 #### `<sf-menu>`
 
@@ -830,6 +763,7 @@ id?}` значит «перестать ждать», а `wait` принимае
 |:---|:---|:---|:---|
 | `appearance="track"` | `appearance="segmented"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | `appearance="buttons"` | `appearance="default"` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
+| `height` | `spacing` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
 | событие `change` | `sf-button-group-change` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `spacing` | `tightness` | работает как псевдоним | — |
 
@@ -838,7 +772,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | Имя | Прежнее имя | Состояние | Убирается после |
 |:---|:---|:---|:---|
 | `kind` | `variant` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
-| `kind` | `type` | принимается для совместимости | — |
 
 #### `<sf-slider>`
 
@@ -950,80 +883,6 @@ id?}` значит «перестать ждать», а `wait` принимае
 | `kind` | `type` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | событие `sf-tree-item-open` | `sf-tree-item-click` | работает, отмечается в `SF.deprecations` | 2026-12-01 |
 | `label` | `text` | работает как псевдоним | 2026-12-01 |
-
-#### `<sf-view>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| `columns[].list` | `list-roles` | работает, отмечается в `SF.deprecations` | 2027-01-01 |
-| событие `sf-view-tree` | `sf-table-tree-intent` | работает как псевдоним | — |
-| событие `sf-view-open` | `sf-data-view-open` | работает как псевдоним | — |
-| событие `sf-view-deleted` | `sf-data-view-deleted` | работает как псевдоним | — |
-| событие `sf-view-answer` | `sf-data-view-answer` | работает как псевдоним | — |
-| событие `sf-view-state` | `sf-data-view-state` | работает как псевдоним | — |
-| событие `sf-view-tree` | `sf-data-view-tree` | работает как псевдоним | — |
-| событие `sf-view-files-drop` | `sf-data-view-files-drop` | работает как псевдоним | — |
-| событие `sf-view-saved-view-intent` | `sf-data-view-saved-view-intent` | работает как псевдоним | — |
-| событие `sf-view-list-open` | `sf-data-view-list-open` | работает как псевдоним | — |
-
-#### `<sf-view-properties>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-view-properties-delete` | `sf-property-view-delete-record` | работает как псевдоним | — |
-| событие `sf-view-properties-open` | `sf-property-view-open-record` | работает как псевдоним | — |
-| событие `sf-view-properties-close` | `sf-property-view-close` | работает как псевдоним | — |
-| событие `sf-view-properties-open-full` | `sf-property-view-open-full` | работает как псевдоним | — |
-| событие `sf-view-properties-saved` | `sf-property-view-saved` | работает как псевдоним | — |
-| событие `sf-view-properties-failed` | `sf-property-view-failed` | работает как псевдоним | — |
-| событие `sf-view-properties-open` | `sf-property-view-open` | работает как псевдоним | — |
-| событие `sf-view-properties-delete` | `sf-property-view-delete` | работает как псевдоним | — |
-| событие `sf-view-properties-created` | `sf-property-view-created` | работает как псевдоним | — |
-| событие `sf-view-properties-cancel` | `sf-property-view-cancel` | работает как псевдоним | — |
-| событие `sf-view-properties-state` | `sf-property-view-state` | работает как псевдоним | — |
-| событие `sf-view-properties-address-copy` | `sf-property-view-address-copy` | работает как псевдоним | — |
-| событие `sf-view-properties-favourite` | `sf-property-view-favourite` | работает как псевдоним | — |
-
-#### `<sf-view-table>`
-
-| Имя | Прежнее имя | Состояние | Убирается после |
-|:---|:---|:---|:---|
-| событие `sf-view-table-select` | `sf-port-output` | работает как псевдоним | — |
-| событие `sf-view-table-apply` | `sf-table-action-intent` | работает как псевдоним | — |
-| событие `sf-view-table-save` | `sf-table-column-settings-change` | работает как псевдоним | — |
-| событие `sf-view-table-create` | `sf-table-create-intent` | работает как псевдоним | — |
-| событие `sf-view-table-query` | `sf-table-query-intent` | работает как псевдоним | — |
-| событие `sf-view-table-refresh` | `sf-table-retry` | работает как псевдоним | — |
-| событие `sf-view-table-expand` | `sf-table-tree-toggle` | работает как псевдоним | — |
-| событие `sf-view-table-load-more` | `sf-table-tree-more` | работает как псевдоним | — |
-| событие `sf-view-table-move` | `sf-table-rows-reorder` | работает как псевдоним | — |
-| событие `sf-view-table-save` | `sf-table:column-settings-change` | работает как псевдоним | — |
-| событие `sf-view-table-save` | `onColumnSettingsChange` | работает как псевдоним | — |
-| событие `sf-view-table-search-change` | `onSearchEnd` | работает как псевдоним | — |
-| событие `sf-view-table-template-save` | `onTemplateSave` | работает как псевдоним | — |
-| событие `sf-view-table-filter-change` | `onFilterUpdate` | работает как псевдоним | — |
-| событие `sf-view-table-select` | `sf-table-select` | работает как псевдоним | — |
-| событие `sf-view-table-apply` | `sf-table-apply` | работает как псевдоним | — |
-| событие `sf-view-table-save` | `sf-table-save` | работает как псевдоним | — |
-| событие `sf-view-table-column-settings-reset` | `sf-table-column-settings-reset` | работает как псевдоним | — |
-| событие `sf-view-table-create` | `sf-table-create` | работает как псевдоним | — |
-| событие `sf-view-table-filter-change` | `sf-table-filter-change` | работает как псевдоним | — |
-| событие `sf-view-table-query` | `sf-table-query` | работает как псевдоним | — |
-| событие `sf-view-table-refresh` | `sf-table-refresh` | работает как псевдоним | — |
-| событие `sf-view-table-search-change` | `sf-table-search-change` | работает как псевдоним | — |
-| событие `sf-view-table-sort-change` | `sf-table-sort-change` | работает как псевдоним | — |
-| событие `sf-view-table-template-delete` | `sf-table-template-delete` | работает как псевдоним | — |
-| событие `sf-view-table-template-save` | `sf-table-template-save` | работает как псевдоним | — |
-| событие `sf-view-table-template-select` | `sf-table-template-select` | работает как псевдоним | — |
-| событие `sf-view-table-toolbar-action` | `sf-table-toolbar-action` | работает как псевдоним | — |
-| событие `sf-view-table-reference-open` | `sf-table-reference-open` | работает как псевдоним | — |
-| событие `sf-view-table-expand` | `sf-table-expand` | работает как псевдоним | — |
-| событие `sf-view-table-load-more` | `sf-table-load-more` | работает как псевдоним | — |
-| событие `sf-view-table-rows-drag` | `sf-table-rows-drag` | работает как псевдоним | — |
-| событие `sf-view-table-move` | `sf-table-move` | работает как псевдоним | — |
-| событие `sf-view-table-cell-set` | `sf-table-cell-set` | работает как псевдоним | — |
-| событие `sf-view-table-view-change` | `sf-table-view-change` | работает как псевдоним | — |
-| событие `sf-view-table-window` | `sf-table-window` | работает как псевдоним | — |
 
 ## Смотрите также
 

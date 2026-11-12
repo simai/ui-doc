@@ -6,7 +6,7 @@ profile: reference
 
 # Плавающая кнопка
 
-:badge[sf-fab]{variant=tonal scheme=primary size=1/2} :badge[1.0.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-fab]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
 
 Плавающая кнопка (FAB) — круглая кнопка с иконкой для одного главного и
 частого действия экрана: создать запись, написать сообщение. Для обычного
@@ -119,8 +119,9 @@ whenLoader(() => SF.Loader.ready('Fab', (Fab) => {
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-fab` |
-| Модификаторы | `sf-fab--default`, `sf-fab--on-surface`, `sf-fab--primary`, `sf-fab--secondary`, `sf-fab--tonal` |
+| Модификаторы | `sf-fab--default`, `sf-fab--on-surface`, `sf-fab--primary`, `sf-fab--tonal` |
 | Размеры | `sf-fab--size-1`, `sf-fab--size-2`, `sf-fab--size-3` |
+| Устаревшие | `sf-fab--secondary` → `sf-fab--primary` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
 

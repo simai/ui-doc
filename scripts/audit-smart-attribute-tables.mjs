@@ -140,7 +140,12 @@ for (const [name, manifestRoot] of manifestNames) {
       findings.push({ component: name, page: relative, code: 'axis_values_missing', axis, missing });
     }
   }
-  for (const legacy of defined.filter((attribute) => LEGACY.has(attribute))) {
+  // A word that takes none of the axes' values is an axis of its own
+  // (sf-input-color: variant field | theme beside appearance), as
+  // scripts/build-smart-reference.mjs reads it.
+  const axisValues = new Set([...AXES].flatMap((axis) => inputs[axis]?.enum ?? []));
+  const replaced = (attribute) => !inputs[attribute]?.enum || inputs[attribute].enum.some((value) => axisValues.has(value));
+  for (const legacy of defined.filter((attribute) => LEGACY.has(attribute) && replaced(attribute))) {
     findings.push({ component: name, page: relative, code: 'legacy_named_as_public', attribute: legacy });
   }
 }

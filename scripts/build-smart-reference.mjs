@@ -436,8 +436,13 @@ const collectLegacy = (folder, manifest) => {
   // (scripts/audit-smart-attribute-tables.mjs holds the same rule), whether or
   // not the journal lists this component.
   const hasAxis = inputs.some(([name]) => AXES.includes(name));
+  // A word that takes none of the axes' values is an axis of its own
+  // (sf-input-color: variant field | theme beside appearance), not a word an
+  // axis replaced.
+  const axisValues = new Set(AXES.flatMap((axis) => properties[axis]?.enum ?? []));
+  const replaced = (name) => !properties[name]?.enum || properties[name].enum.some((value) => axisValues.has(value));
   const unlisted = inputs.map(([name]) => name)
-    .filter((name) => hasAxis && LEGACY_WORDS.includes(name) && !legacyNames.has(name));
+    .filter((name) => hasAxis && LEGACY_WORDS.includes(name) && !legacyNames.has(name) && replaced(name));
   // The journal can hold one rename twice (in a component's record and in the
   // record for every component); the table names it once. The current name
   // leads each row: a row that starts with an old name reads as a public one.

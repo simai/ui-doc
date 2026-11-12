@@ -45,29 +45,29 @@ description: "Рисует кольцо вокруг элемента тенью
 |:---|:---|:---|
 | `ring-{значение}` | `--sf-ring-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `ring-outline-variant` | `--sf-ring-color: var(--sf-outline-variant)` | — |
-| `ring-surface` | `--sf-ring-color: var(--sf-surface-1)` | — |
-| `ring-surface-{значение}` | `--sf-ring-color: var(--sf-surface-{значение})` | `0`, `1`, `overlay`, `inverse` |
+| `ring-surface` | `--sf-ring-color: var(--sf-surface-area)` | — |
+| `ring-surface-{значение}` | `--sf-ring-color: var(--sf-surface-{значение})` | `page`, `area`, `veil`, `inverse` |
 | `ring-{значение}-container` | `--sf-ring-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `ring-{значение}-transparent-overlay` | `--sf-ring-color: var(--sf-{значение}-transparent-overlay)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `ring-{значение}-container-strong` | `--sf-ring-color: var(--sf-{значение}-container-strong)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-on-surface` | `--sf-ring-color: var(--sf-on-surface)` | — |
 | `ring-on-surface-variant` | `--sf-ring-color: var(--sf-on-surface-variant)` | — |
-| `ring-{значение}` | `--sf-ring-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `ring-info-container-strong` | `--sf-ring-color: var(--sf-info-container-strong)` | — |
+| `ring-{значение}` | `--sf-ring-color: var(--sf-{значение}-outline)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-{значение})` | `transparent`, `current`, `outline` |
 | `ring-offset-outline-variant` | `--sf-ring-offset-color: var(--sf-outline-variant)` | — |
-| `ring-offset-surface` | `--sf-ring-offset-color: var(--sf-surface-1)` | — |
-| `ring-offset-surface-{значение}` | `--sf-ring-offset-color: var(--sf-surface-{значение})` | `0`, `1`, `overlay`, `inverse` |
+| `ring-offset-surface` | `--sf-ring-offset-color: var(--sf-surface-area)` | — |
+| `ring-offset-surface-{значение}` | `--sf-ring-offset-color: var(--sf-surface-{значение})` | `page`, `area`, `veil`, `inverse` |
 | `ring-offset-{значение}-container` | `--sf-ring-offset-color: var(--sf-{значение}-container)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `ring-offset-{значение}-transparent-overlay` | `--sf-ring-offset-color: var(--sf-{значение}-transparent-overlay)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success` |
+| `ring-offset-{значение}-container-strong` | `--sf-ring-offset-color: var(--sf-{значение}-container-strong)` | `surface`, `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-offset-on-surface` | `--sf-ring-offset-color: var(--sf-on-surface)` | — |
 | `ring-offset-on-surface-variant` | `--sf-ring-offset-color: var(--sf-on-surface-variant)` | — |
-| `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-outline-{значение})` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
-| `ring-offset-info-container-strong` | `--sf-ring-offset-color: var(--sf-info-container-strong)` | — |
+| `ring-offset-{значение}` | `--sf-ring-offset-color: var(--sf-{значение}-outline)` | `primary`, `secondary`, `tertiary`, `error`, `warning`, `success`, `info` |
 | `ring-offset-{значение}` | `--sf-ring-offset-width: var(--sf-a{значение})` | `1`, `2`, `3`, `4` |
 | `ring-offset-0` | `--sf-ring-offset-width: var(--sf-0)` | — |
 | `ring-1` | `--sf-ring-width: var(--sf-a1); box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + 0px) color-mix(in srgb, transparent, currentColor calc(1 * 100%)), 0 0 0 0px transparent; box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px)) color-mix(in srgb, transparent, var(--sf-ring-color, currentColor) calc(var(--sf-ring--alfa, 1) * 100%)), 0 0 0 var(--sf-ring-offset-width, 0px) var(--sf-ring-offset-color, transparent)` | — |
 | `ring-{значение}` | `--sf-ring-width: var(--sf-a{значение}); box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + 0px) color-mix(in srgb, transparent, currentColor calc(1 * 100%)), 0 0 0 0px transparent; box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px)) color-mix(in srgb, transparent, var(--sf-ring-color, currentColor) calc(var(--sf-ring--alfa, 1) * 100%)), 0 0 0 var(--sf-ring-offset-width, 0px) var(--sf-ring-offset-color, transparent)` | `2`, `3`, `4` |
 | `ring-0` | `--sf-ring-width: var(--sf-0); box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + 0px) color-mix(in srgb, transparent, currentColor calc(1 * 100%)), 0 0 0 0px transparent; box-shadow: var(--sf-ring-inset, ) 0 0 0 calc(var(--sf-ring-width) + var(--sf-ring-offset-width, 0px)) color-mix(in srgb, transparent, var(--sf-ring-color, currentColor) calc(var(--sf-ring--alfa, 1) * 100%)), 0 0 0 var(--sf-ring-offset-width, 0px) var(--sf-ring-offset-color, transparent)` | — |
+
+Прежние имена работают до 2027-01-01: `ring-error-transparent-overlay` → `ring-error-container-strong`, `ring-offset-error-transparent-overlay` → `ring-offset-error-container-strong`, `ring-offset-primary-transparent-overlay` → `ring-offset-primary-container-strong`, `ring-offset-secondary-transparent-overlay` → `ring-offset-secondary-container-strong`, `ring-offset-success-transparent-overlay` → `ring-offset-success-container-strong`, `ring-offset-surface-0` → `ring-offset-surface-page`, `ring-offset-surface-1` → `ring-offset-surface-area`, `ring-offset-surface-overlay` → `ring-offset-surface-veil`, `ring-offset-surface-transparent-overlay` → `ring-offset-surface-container-strong`, `ring-offset-tertiary-transparent-overlay` → `ring-offset-tertiary-container-strong`, `ring-offset-warning-transparent-overlay` → `ring-offset-warning-container-strong`, `ring-primary-transparent-overlay` → `ring-primary-container-strong`, `ring-secondary-transparent-overlay` → `ring-secondary-container-strong`, `ring-success-transparent-overlay` → `ring-success-container-strong`, `ring-surface-0` → `ring-surface-page`, `ring-surface-1` → `ring-surface-area`, `ring-surface-overlay` → `ring-surface-veil`, `ring-surface-transparent-overlay` → `ring-surface-container-strong`, `ring-tertiary-transparent-overlay` → `ring-tertiary-container-strong`, `ring-warning-transparent-overlay` → `ring-warning-container-strong`. Все замены — на странице [Как обновить проект](/ru/guide/connection/updating/).
 
 Условия ([что это](/ru/guide/utilities/conditions/)): ширина экрана — нет; состояния — `focus-visible:`, `focus:`, `hover:`. Например: `focus-visible:ring-transparent`.
 
@@ -83,33 +83,33 @@ description: "Рисует кольцо вокруг элемента тенью
 | `--sf-current` | `currentColor` |
 | `--sf-outline` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` |
 | `--sf-outline-variant` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
-| `--sf-surface-1` | `var(--sf-surface-area)` |
-| `--sf-surface-0` | `var(--sf-surface-page)` |
-| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-16), var(--sf-neutral-90--alfa-16))` |
-| `--sf-surface-overlay` | `var(--sf-surface-veil)` |
-| `--sf-surface-transparent-overlay` | `var(--sf-surface-container-strong)` |
+| `--sf-surface-area` | `light-dark(var(--sf-neutral-98), var(--sf-neutral-10))` |
+| `--sf-surface-page` | `light-dark(var(--sf-white), var(--sf-neutral-5))` |
+| `--sf-surface-container` | `light-dark(var(--sf-neutral-50--alfa-8), var(--sf-neutral-90--alfa-8))` |
+| `--sf-surface-veil` | `light-dark(var(--sf-black--alfa-8), var(--sf-white--alfa-8))` |
+| `--sf-surface-container-strong` | `light-dark(var(--sf-neutral-50--alfa-24), var(--sf-neutral-90--alfa-24))` |
 | `--sf-surface-inverse` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-90))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` |
 | `--sf-on-surface-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
-| `--sf-outline-primary` | `var(--sf-primary-outline)` |
+| `--sf-primary-outline` | `light-dark(var(--sf-primary-50), var(--sf-primary-60))` |
 | `--sf-primary-container` | `light-dark(var(--sf-primary-50--alfa-12), var(--sf-primary-50--alfa-24))` |
-| `--sf-primary-transparent-overlay` | `var(--sf-primary-container-strong)` |
-| `--sf-outline-secondary` | `var(--sf-secondary-outline)` |
+| `--sf-primary-container-strong` | `light-dark(var(--sf-primary-50--alfa-24), var(--sf-primary-90--alfa-24))` |
+| `--sf-secondary-outline` | `light-dark(var(--sf-secondary-50), var(--sf-secondary-60))` |
 | `--sf-secondary-container` | `light-dark(var(--sf-secondary-50--alfa-12), var(--sf-secondary-50--alfa-24))` |
-| `--sf-secondary-transparent-overlay` | `var(--sf-secondary-container-strong)` |
-| `--sf-outline-tertiary` | `var(--sf-tertiary-outline)` |
+| `--sf-secondary-container-strong` | `light-dark(var(--sf-secondary-50--alfa-24), var(--sf-secondary-90--alfa-24))` |
+| `--sf-tertiary-outline` | `light-dark(var(--sf-tertiary-50), var(--sf-tertiary-60))` |
 | `--sf-tertiary-container` | `light-dark(var(--sf-tertiary-50--alfa-12), var(--sf-tertiary-50--alfa-24))` |
-| `--sf-tertiary-transparent-overlay` | `var(--sf-tertiary-container-strong)` |
-| `--sf-outline-error` | `var(--sf-error-outline)` |
+| `--sf-tertiary-container-strong` | `light-dark(var(--sf-tertiary-50--alfa-24), var(--sf-tertiary-90--alfa-24))` |
+| `--sf-error-outline` | `light-dark(var(--sf-error-50), var(--sf-error-60))` |
 | `--sf-error-container` | `light-dark(var(--sf-error-50--alfa-12), var(--sf-error-50--alfa-24))` |
-| `--sf-error-transparent-overlay` | `var(--sf-error-container-strong)` |
-| `--sf-outline-warning` | `var(--sf-warning-outline)` |
+| `--sf-error-container-strong` | `light-dark(var(--sf-error-50--alfa-24), var(--sf-error-90--alfa-24))` |
+| `--sf-warning-outline` | `light-dark(var(--sf-warning-50), var(--sf-warning-60))` |
 | `--sf-warning-container` | `light-dark(var(--sf-warning-50--alfa-12), var(--sf-warning-50--alfa-24))` |
-| `--sf-warning-transparent-overlay` | `var(--sf-warning-container-strong)` |
-| `--sf-outline-success` | `var(--sf-success-outline)` |
+| `--sf-warning-container-strong` | `light-dark(var(--sf-warning-50--alfa-24), var(--sf-warning-90--alfa-24))` |
+| `--sf-success-outline` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-success-container` | `light-dark(var(--sf-success-50--alfa-12), var(--sf-success-50--alfa-24))` |
-| `--sf-success-transparent-overlay` | `var(--sf-success-container-strong)` |
-| `--sf-outline-info` | `var(--sf-info-outline)` |
+| `--sf-success-container-strong` | `light-dark(var(--sf-success-50--alfa-24), var(--sf-success-90--alfa-24))` |
+| `--sf-info-outline` | `light-dark(var(--sf-info-50), var(--sf-info-60))` |
 | `--sf-info-container` | `light-dark(var(--sf-info-50--alfa-12), var(--sf-info-50--alfa-24))` |
 | `--sf-info-container-strong` | `light-dark(var(--sf-info-50--alfa-24), var(--sf-info-90--alfa-24))` |
 | `--sf-a1` | `0.0625rem` |
