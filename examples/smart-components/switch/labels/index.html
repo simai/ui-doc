@@ -1,9 +1,18 @@
-<div class="flex flex-col gap-3">
-  <sf-switch label="Только подпись"></sf-switch>
-  <sf-switch label="Подпись и пояснение" description="Пояснение говорит, что меняет настройка"></sf-switch>
-  <sf-switch label="Со значком рядом с подписью" help="info"></sf-switch>
-  <div class="flex items-cross-center gap-2">
-    <span>Подпись выводит страница</span>
-    <sf-switch aria-label="Подпись выводит страница"></sf-switch>
+<div class="flex flex-wrap gap-3 items-start">
+  <div class="flex flex-col gap-1 items-start">
+    <sf-switch label="Сохранять черновики"></sf-switch>
+    <code class="text-1/2 color-on-surface-variant">label</code>
+  </div>
+  <div class="flex flex-col gap-1 items-start">
+    <sf-switch label="Сохранять черновики" description="Каждые пять минут"></sf-switch>
+    <code class="text-1/2 color-on-surface-variant">label description</code>
+  </div>
+  <div class="flex flex-col gap-1 items-start">
+    <sf-switch label="Сохранять черновики" description="Каждые пять минут" help="info"></sf-switch>
+    <code class="text-1/2 color-on-surface-variant">label description help</code>
+  </div>
+  <div class="flex flex-col gap-1 items-start">
+    <span class="flex items-cross-center gap-1/2"><span>Сохранять черновики</span><sf-switch aria-label="Сохранять черновики"></sf-switch></span>
+    <code class="text-1/2 color-on-surface-variant">aria-label</code>
   </div>
 </div>
