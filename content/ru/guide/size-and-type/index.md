@@ -27,6 +27,8 @@ description: "Эта часть описывает все величины SIMAI
 - [Плотность](/ru/guide/size-and-type/density/) — компактные области
 - [Пространство](/ru/guide/size-and-type/spacing/) и справочник
   [«Значения интервалов»](/ru/guide/size-and-type/spacing-scale/)
+- [Горизонтальные отступы](/ru/guide/size-and-type/horizontal-spacing/) — значок и
+  текст, край поля, соседи и группы
 - [Типографика](/ru/guide/size-and-type/typography/) и
   [Текст по умолчанию](/ru/guide/size-and-type/default-text/)
 - [Границы, скругления и высота](/ru/guide/size-and-type/borders-and-radii/)
