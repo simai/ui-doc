@@ -8,12 +8,8 @@ description: "Как дать скопировать ключ, команду, �
 Ключ, команду, номер заказа или ссылку человек переносит в другое место.
 Кнопка копирования стоит рядом со значением и кладёт в буфер обмена его
 целиком, а не ту часть, что видна. Имя кнопки говорит, что она копирует.
-Если браузер не дал доступ к буферу, кнопка выделяет текст, и рядом видно,
-что нажать.
-
-<!-- TODO(C48): когда выйдет выпуск Framework с атрибутами data-sf-copy и
-data-sf-copy-target, добавить сцену «обычная кнопка с атрибутом копирования»
-и строку о них в «Из чего собрано» и «Копию для ИИ». -->
+Если браузер не дал доступ к буферу, кнопка выделяет текст и сама
+показывает, что нажать.
 
 ## Пример
 
@@ -48,10 +44,21 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
 :::example {id="recipes/copy/group" label="Вебхук" preview=sandbox log="sf-button-copy-copied" log_console=true log_open=false}
 :::
 
+### Обычная кнопка с атрибутом
+
+Кнопка уже есть в ряду действий или в строке таблицы и должна выглядеть как
+соседние. Атрибут `data-sf-copy` с текстом или `data-sf-copy-target` с
+элементом делает её кнопкой копирования: отклик тот же, отдельного класса не
+нужно.
+
+:::example {id="smart-components/copy-button/attribute" label="Кнопки с атрибутом" preview=sandbox log_console=true log_open=false}
+:::
+
 ### Браузер не дал доступ к буферу
 
 Так бывает во встроенном фрейме или по политике сайта; здесь отказ
-смоделирован. Нажмите кнопку: ключ выделится, и рядом появится, что нажать.
+смоделирован. Нажмите кнопку: ключ выделится, и над кнопкой появится, что
+нажать.
 
 :::example {id="recipes/copy/denied" label="Отказ" preview=sandbox log="sf-button-copy-copy-failed" log_console=true log_open=false}
 :::
@@ -64,6 +71,7 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
 | Команда, отрывок кода | Блок кода со своей шапкой ставит кнопку «Копировать код» сам; без шапки (`data-chrome="none"`) — кнопка над блоком с `target` |
 | Номер или ссылка в строке таблицы | Маленькая кнопка рядом со значением, источник — `value` с самим значением |
 | Несколько значений в одной карточке | Кнопка у каждого, у каждой своё имя |
+| Действие в ряду кнопок или значок в строке | Своя кнопка (`sf-button`, `sf-button-icon`, `<button>`) с `data-sf-copy="текст"` или `data-sf-copy-target="#id"` |
 | Код в тексте абзаца | Не кнопка, а копирование по нажатию — [Копирование кода в тексте](/ru/guide/functions/actions/code-copy/) |
 
 Короткое значение в тексте — число, имя, слово — кнопкой не снабжают: его
@@ -79,7 +87,8 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
 | Поле с ключом | [Текстовые поля](/ru/components/forms/inputs/) | `input readonly`, кнопка внутри `sf-input-field` после поля |
 | Блок кода | [Подсветка кода](/ru/components/content/highlight/) | `<pre><code data-lang="bash" data-lines>`; со своей шапкой — кнопка «Копировать код» в ней, с `data-chrome="none"` — `sf-button-copy target` над блоком |
 | Таблица | [Таблицы](/ru/utilities/tables/tables-default-parameters/) | `table`; кнопка `size="1/3"` в ячейке рядом со значением |
-| Подсказка при отказе | строка страницы | по событию `sf-button-copy-copy-failed` с `code: "denied"`: «Выделено — нажмите Ctrl+C» (⌘C на Mac), пока держится результат |
+| Обычная кнопка | [Кнопки](/ru/smart/actions/buttons/), [Кнопки со значком](/ru/smart/actions/icon-buttons/) | `data-sf-copy="текст"` или `data-sf-copy-target="#id"`; результат — события `sf:copy-success` и `sf:copy-error` |
+| Подсказка при отказе | [Кнопка копирования](/ru/smart/actions/copy-button/) | кнопка сама пишет над собой «Выделено — нажмите Ctrl+C» (⌘C на Mac), пока держится результат |
 
 ## Как делать
 
@@ -96,14 +105,13 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
 - **Код — без номеров строк.** Номера помогают читать, но в буфер не
   попадают: и кнопка блока кода, и кнопка копирования с `target` на блок
   берут только текст кода.
-- **Отказ браузера — не тупик.** Кнопка выделяет текст и сообщает экранному
-  диктору, что нажать; страница показывает ту же фразу рядом с кнопкой,
-  чтобы её видел и зрячий человек.
+- **Отказ браузера — не тупик.** Кнопка выделяет текст и показывает над
+  собой, что нажать; ту же фразу вежливо слышит экранный диктор.
 
 ## Копия для ИИ
 
 ```html
-<!-- Рецепт SIMAI Framework «Копирование», выпуск ui-b4a77681f0a7.
+<!-- Рецепт SIMAI Framework «Копирование», выпуск ui-7f1d29b02919.
 Правила:
 1. Кнопка копирования — sf-button-copy рядом со значением; источник — target="#id" (значение поля или текст элемента) или value (сам текст), не оба сразу.
 2. Копируется значение целиком: источник — поле или полный текст, не сокращённая строка с экрана.
@@ -111,7 +119,8 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
 4. Ключ в поле: input readonly, sf-button-copy target="#id" внутри sf-input-field после поля.
 5. Команды и код — <pre><code data-lang="…" data-lines>: в шапке блока кнопку «Копировать код» ставит сам блок, своей рядом не ставьте; без шапки (data-chrome="none") — sf-button-copy target="#id блока" над ним. Номера строк в буфер не попадают.
 6. В таблице — sf-button-copy size="1/3" в ячейке рядом со значением; icon="link" у ссылки.
-7. Отказ браузера (sf-button-copy-copy-failed, code "denied"): кнопка уже выделила текст; покажите рядом «Выделено — нажмите Ctrl+C» (⌘C на Mac) на duration миллисекунд. -->
+7. Своя кнопка копирует с атрибутом: data-sf-copy="текст" или data-sf-copy-target="#id" у <button>, sf-button или sf-button-icon; отклик тот же, события sf:copy-success {text, method} и sf:copy-error {code}.
+8. Отказ браузера (code "denied"): кнопка сама выделяет текст и пишет над собой «Выделено — нажмите Ctrl+C» (⌘C на Mac); своей подсказки рядом не ставьте. -->
 <div data-sf-density="compact">
   <section class="sf-card max-w-g8" aria-labelledby="key-heading">
     <h2 id="key-heading" class="m-0 text-1 weight-6">Ключ доступа к API</h2>
@@ -125,27 +134,14 @@ data-sf-copy-target, добавить сцену «обычная кнопка �
     <div class="flex flex-wrap items-cross-center gap-1/2">
       <code id="webhook-secret">whsec_Zq41Lk0P</code>
       <sf-button-copy target="#webhook-secret" icon="key" label="Скопировать секрет вебхука"></sf-button-copy>
-      <span class="text-1/2 color-on-surface-variant" data-copy-hint hidden></span>
+    </div>
+    <div class="flex flex-wrap items-cross-center gap-1/2">
+      <code id="order-id">ORD-2026-0042</code>
+      <sf-button-icon icon="content_copy" appearance="ghost" scheme="on-surface-variant" size="1/2" label="Скопировать номер заказа ORD-2026-0042" data-sf-copy-target="#order-id"></sf-button-icon>
     </div>
   </section>
 </div>
-<script type="module">
-  const mac = /Mac|iPhone|iPad/.test(navigator.platform);
-  document.addEventListener('sf-button-copy-copy-failed', (event) => {
-    const hint = event.target.parentElement.querySelector('[data-copy-hint]');
-    if (event.detail.code !== 'denied' || !hint) return;
-    hint.textContent = `Выделено — нажмите ${mac ? '⌘C' : 'Ctrl+C'}`;
-    hint.hidden = false;
-    setTimeout(() => { hint.hidden = true; }, Number(event.target.getAttribute('duration')) || 2000);
-  });
-</script>
 ```
-
-> **Что ещё в пути.** Копирование любой кнопкой с атрибутом и тот же отклик,
-> что у кнопки копирования; подсказка «Выделено — нажмите Ctrl+C» и
-> «Скопировано» видны у самой кнопки; имя кнопки — в подсказке Framework при
-> наведении и с клавиатуры. Всё это приходит с ближайшими выпусками
-> Framework; пока подсказку при отказе показывает страница.
 
 ## См. также
 

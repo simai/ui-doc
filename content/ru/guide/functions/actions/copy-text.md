@@ -54,6 +54,36 @@ try {
 - `SF.Clipboard` с заглавной буквы — скрипт компонента на классах, а не эта
   функция.
 
+## Отклик для своей кнопки
+
+`SF.copyFeedback` — тот же отклик, что у кнопки копирования, для своего
+элемента управления: он копирует, ведёт состояние и возвращает слова, а
+рисует их ваш элемент. Обычной кнопке он не нужен — достаточно атрибута
+`data-sf-copy` или `data-sf-copy-target` (см. [Кнопка
+копирования](/ru/smart/actions/copy-button/#любая-кнопка-с-атрибутом)).
+
+```js
+const feedback = SF.copyFeedback.create({
+  onPhase: (phase, message) => {
+    // pending, success, error, затем снова idle через две секунды
+    button.dataset.phase = phase;
+    status.textContent = message;
+  },
+});
+button.addEventListener('click', async () => {
+  const result = await feedback.run({
+    read: () => SF.copyFeedback.readText(document.querySelector('#key')),
+    element: () => document.querySelector('#key'),
+    node: button,
+  });
+  // {outcome: 'applied', text, method} или {outcome: 'refused', reason}
+});
+```
+
+`run()` при отказе браузера сам выделяет источник, а слова «Выделено —
+нажмите Ctrl+C» (⌘C на Mac) приходят в `onPhase`. Пока идёт копирование,
+повторный `run()` отвечает `{outcome: 'refused', reason: 'busy'}`.
+
 ## См. также
 
 - [Кнопка копирования](/ru/smart/actions/copy-button/) — готовая кнопка с отметкой «Скопировано».
