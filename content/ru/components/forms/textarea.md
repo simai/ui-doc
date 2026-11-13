@@ -6,7 +6,7 @@ profile: reference
 
 # Многострочное поле
 
-:badge[sf-textarea]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-textarea]{variant=tonal scheme=primary size=1/2} :badge[1.2.1]{variant=outline scheme=on-surface size=1/2}
 
 Многострочное поле принимает комментарий, описание или другой свободный текст с
 переносами строк. Для короткого значения в одну строку берите
@@ -298,8 +298,8 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-text--font-weight` | не задана; задают модификаторы, например `.sf-textarea .sf-textarea-text`: `var(--sf-font-weight-regular)` | `font-weight` |
 | `--sf-textarea-text--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 .sf-textarea-text`: `var(--sf-text-height-1/2)` | `line-height` |
 | `--sf-textarea-textarea--background-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-background-color, var(--sf-transparent))` | `background-color` |
-| `--sf-textarea-textarea--border` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `border-color` |
+| `--sf-textarea-textarea--border` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-px) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `--sf-textarea-textarea--line-color` |
+| `--sf-textarea-textarea--border-color` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--bordered textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `border-color`, `border-bottom-color`, `border-block-end-color`, `--sf-textarea-textarea--line-color` |
 | `--sf-textarea-textarea--border-end-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-end-radius` |
 | `--sf-textarea-textarea--border-end-start-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-end-start-radius` |
 | `--sf-textarea-textarea--border-start-end-radius` | не задана; задают модификаторы, например `.sf-textarea textarea`: `var(--sf-textarea--radius)` | `border-start-end-radius` |
@@ -309,6 +309,7 @@ whenLoader(() => SF.Loader.ready('Textarea', (Textarea) => {
 | `--sf-textarea-textarea--font-family` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text--family)` | `font-family` |
 | `--sf-textarea-textarea--font-size` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text-size-1)` | `font-size` |
 | `--sf-textarea-textarea--font-weight` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-font-weight-regular)` | `font-weight` |
+| `--sf-textarea-textarea--line-color` | не задана; задают модификаторы, например `.sf-textarea:not(.error).sf-textarea--filled:not(:has(textarea:disabled)) textarea`: `var(--sf-textarea-border-color, var(--sf-outline))` | `border-bottom-color`, `border-block-end-color` |
 | `--sf-textarea-textarea--line-height` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1.sf-textarea--bordered textarea`: `var(--sf-text-height-1)` | `line-height`, `min-height`, `min-block-size`, `max-height`, `max-block-size` |
 | `--sf-textarea-textarea--padding-bottom` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `var(--sf-textarea-padding-block, calc(var(--sf-ui-1--space-y-tightness-default) - var(--sf-px)))` | `padding-bottom`, `--sf-textarea--row-frame` |
 | `--sf-textarea-textarea--padding-inline-end` | не задана; задают модификаторы, например `.sf-textarea.sf-textarea--size-1 textarea`: `var(--sf-textarea-padding-inline, calc(var(--sf-ui-1--space-x) + var(--sf-ui-1--text-space-x)))` | `padding-inline-end` |

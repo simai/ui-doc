@@ -6,7 +6,7 @@ profile: reference
 
 # Шаги инструкции
 
-:badge[sf-procedure]{variant=tonal scheme=primary size=1/2} :badge[1.1.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-procedure]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
 
 Шаги инструкции показывают нумерованную последовательность действий, которую
 читают сверху вниз: установку, настройку, перенос. В каждом шаге может быть

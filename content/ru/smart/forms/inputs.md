@@ -5,7 +5,7 @@ description: "Принимает одну строку — имя, почту, �
 
 # Текстовое поле
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.7.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.7.2]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает одну строку — имя, почту, пароль, телефон, адрес
 сайта или поисковый запрос — вместе с подписью, подсказкой и сообщением об
@@ -350,13 +350,13 @@ email.focus();
 
 | | |
 |:---|:---|
-| Тег | `<sf-input>`, контракт `smart.input` версии `1.7.1` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-input>`, контракт `smart.input` версии `1.7.2` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как текстовое поле; нужна подпись или `aria-label`; с клавиатуры: `Tab`; обычная правка текста. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/input` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-input` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/input` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-input` |
 
 ## См. также
 

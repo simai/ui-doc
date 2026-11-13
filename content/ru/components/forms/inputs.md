@@ -6,7 +6,7 @@ profile: reference
 
 # Текстовые поля
 
-:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-input]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Текстовое поле принимает короткое значение в одну строку: имя, адрес почты,
 пароль или поисковый запрос. Для текста с переносами строк берите
@@ -290,13 +290,14 @@ whenLoader(() => SF.Loader.ready('Inputs', (Inputs) => {
 | `--sf-input--place-variant` | не задана; задают модификаторы, например `.sf-input.sf-input--filled`: `var(--sf-place--fill-placeholder, var(--sf-on-surface-variant))` | `--sf-input-placeholder--color` |
 | `--sf-input--radius` | `var(--sf-input-radius, var(--sf-radius--ui))` | `--sf-input-field--border-end-end-radius`, `--sf-input-field--border-end-start-radius`, `--sf-input-field--border-start-end-radius`, `--sf-input-field--border-start-start-radius` |
 | `--sf-input-field--background-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-transparent-for-focus)` | `background-color` |
-| `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius` |
-| `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-input-invalid-border-color, var(--sf-error))` | `border-color` |
+| `--sf-input-field--border` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-px) solid` | `border`, `border-color`, `border-bottom-color`, `border-block-end-color`, `border-end-end-radius`, `border-end-start-radius`, `border-start-end-radius`, `border-start-start-radius`, `--sf-input-field--line-color` |
+| `--sf-input-field--border-color` | не задана; задают модификаторы, например `.sf-input.error.sf-input--bordered .sf-input-field`: `var(--sf-input-invalid-border-color, var(--sf-error))` | `border-color`, `border-bottom-color`, `border-block-end-color`, `--sf-input-field--line-color` |
 | `--sf-input-field--border-end-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-end-radius` |
 | `--sf-input-field--border-end-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-end-start-radius` |
 | `--sf-input-field--border-start-end-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-end-radius` |
 | `--sf-input-field--border-start-start-radius` | не задана; задают модификаторы, например `.sf-input .sf-input-field`: `var(--sf-input--radius)` | `border-start-start-radius` |
 | `--sf-input-field--box-shadow` | не задана; задают модификаторы, например `.sf-input:not(.sf-input--pointer-focus):has(input:not(:disabled):not(.disabled).focus-visible) .sf-input-field`: `none` | `box-shadow` |
+| `--sf-input-field--line-color` | не задана; задают модификаторы, например `.sf-input:not(.error).sf-input--filled:not(:has(input:disabled)) .sf-input-field`: `var(--sf-input-border-color, var(--sf-outline))` | `border-bottom-color`, `border-block-end-color` |
 | `--sf-input-field--padding-bottom` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field`: `var(--sf-input-padding-block, calc(var(--sf-ui-1/3--space-y-tightness-default) - var(--sf-px)))` | `padding-bottom` |
 | `--sf-input-field--padding-inline-end` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field`: `var(--sf-input-padding-inline, var(--sf-ui-1/3--space-x))` | `padding-inline-end` |
 | `--sf-input-field--padding-inline-start` | не задана; задают модификаторы, например `.sf-input.sf-input--size-1/3 .sf-input-field`: `var(--sf-input-padding-inline, var(--sf-ui-1/3--space-x))` | `padding-inline-start` |

@@ -5,7 +5,7 @@ description: "Даёт выбрать ровно один вариант из в
 
 # Радиокнопки
 
-:badge[sf-radio]{variant=tonal scheme=primary size=1/2} :badge[1.1.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-radio]{variant=tonal scheme=primary size=1/2} :badge[1.2.0]{variant=outline scheme=on-surface size=1/2}
 
 Радиокнопки дают выбрать один вариант из группы взаимоисключающих, где все
 варианты видны сразу. Для независимых вариантов берите
@@ -142,7 +142,7 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 | `size` | строка | `1` | `1/2`, `1`, `2` | Размер радиокнопки: чем больше число, тем крупнее. |
 | `label` | строка | пусто | — | — |
 | `description` | строка | пусто | — | — |
-| `help` | строка | пусто | — | — |
+| `help` | строка | пусто | — | Пояснение за кнопкой «?» (sf-help-mark) после текста подписи; нажатие на кнопку открывает его и никогда не меняет сам элемент. В слот help можно поставить свой sf-help-mark страницы. |
 | `disabled` | да/нет | нет | — | — |
 | `name` | строка | пусто | — | — |
 | `value` | строка | `on` | — | Что отправляет выбранная радиокнопка; без значения — "on", как у родной радиокнопки. |
@@ -183,13 +183,13 @@ document.querySelector('sf-radio[value="draft"]').setChecked(true);
 
 | | |
 |:---|:---|
-| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.1.5` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-radio>`, контракт `smart.radio` версии `1.2.0` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как радиокнопка; нужна подпись или `aria-label`; с клавиатуры: `Tab`; стрелки; `Пробел`. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/radio` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-radio` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/radio` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-radio` |
 
 ## См. также
 

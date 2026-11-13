@@ -5,7 +5,7 @@ description: "Показывает человека или организаци�
 
 # Аватар
 
-:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-avatar]{variant=tonal scheme=primary size=1/2} :badge[1.3.3]{variant=outline scheme=on-surface size=1/2}
 
 Аватар показывает одного человека или одну организацию: фотографию, инициалы
 или значок-заполнитель, при необходимости — состояние в сети или отметку
@@ -271,13 +271,13 @@ avatar.addEventListener('click', () => openProfile('anna'));
 
 | | |
 |:---|:---|
-| Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.3.2` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-avatar>`, контракт `smart.avatar` версии `1.3.3` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как кнопка; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/avatar` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-avatar` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/avatar` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-avatar` |
 
 ## См. также
 

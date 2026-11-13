@@ -207,12 +207,12 @@ API, а вызывайте методы галереи. `getInlineSlider()`, `ge
 | | |
 |:---|:---|
 | Тег | `<sf-gallery>`, контракт `smart.gallery` версии `1.1.12` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Своей роли для экранного диктора нет; желательна подпись или `aria-label`; с клавиатуры: `Tab`. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/gallery` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-gallery` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/gallery` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-gallery` |
 
 ## См. также
 

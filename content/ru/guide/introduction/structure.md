@@ -62,7 +62,7 @@ git: в адресах и закреплении проекта использу
 `sf-thread-list`, `sf-message-log`, `sf-chat-message`, `sf-chat-composer`,
 `sf-chat-interlocutor`, части редактора писем `sf-mail-*` и
 `sf-content-editor` (описаны в справочнике
-смарт-компонентов). `sf-change-confirm` с выпуска `ui-7f1d29b02919` входит в
+смарт-компонентов). `sf-change-confirm` с выпуска `ui-7fb26d395af2` входит в
 сам Framework под именем `sf-confirm-change`. Его исходник —
 папка `components` открытого репозитория `simai/ui-pro`. Лицензия пакета —
 PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбор, по
@@ -141,7 +141,7 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбо�
     "package": "shop",
     "source": {
       "repository": "simai/ui-source",
-      "revision": "be0a8d39e0e4aac7637a451d8a5752f7fce0158e"
+      "revision": "8c13bf45aecaae2c31188b729ef4765fc91bffae"
     }
   }
   ```
@@ -149,7 +149,7 @@ PolyForm Small Business 1.0.0 или PolyForm Noncommercial 1.0.0 на выбо�
   `schema` — точно эта строка; `source.repository` — всегда
   `simai/ui-source`; `source.revision` — полный коммит исходников, из которых
   собран выбранный выпуск Framework (поле `build_inputs.source.commit` записи о
-  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-7f1d29b02919`). `package` необязателен; если он есть, он совпадает с
+  выпуске, см. [Выпуск и запись о выпуске](/ru/guide/connection/delivery/#выпуск-и-запись-о-выпуске); в примере — ревизия выпуска `ui-7fb26d395af2`). `package` необязателен; если он есть, он совпадает с
   именем пакета в сборке. Других полей сборка не читает.
 - **Правило компонента.** Файл `src/smart/<папка>/rule.js` записывает ровно
   одно правило `cl-<папка>` простыми данными, без регулярных выражений,
@@ -545,7 +545,7 @@ node <ui-builder>/bin/sf-build.js package --kind theme \
 пакет оттуда:
 
 ```bash
-commit=9fcf81535f75d3a0eb0dbc31983c55e7346ada3d
+commit=db490626ba74caeed832352c7bc005410ca825e2
 tag="pro-${commit:0:12}"
 gh release download "$tag" --repo simai/ui-pro \
   --pattern 'package-pro.tar*' --pattern package-receipt.json
@@ -566,9 +566,9 @@ tar -xf package-pro.tar -C "public/assets/pro/$commit"
 ревизиях: `simai/ui-builder` (сборщик; установка зависимостей и команда — в
 его [README](https://github.com/simai/ui-builder#using-sf-build-in-a-product)), `simai/ui-source` (исходники
 Framework на ревизии, которую закрепляет `components/framework.lock.json`
-пакета, для этого выпуска — `be0a8d39e0e4aac7637a451d8a5752f7fce0158e`) и `simai/ui-pro`
+пакета, для этого выпуска — `8c13bf45aecaae2c31188b729ef4765fc91bffae`) и `simai/ui-pro`
 (исходник пакета).
-Пример воспроизведения — для выпуска `ui-7f1d29b02919`; `<ui-builder>`, `<ui-source>` и `<ui>` —
+Пример воспроизведения — для выпуска `ui-7fb26d395af2`; `<ui-builder>`, `<ui-source>` и `<ui>` —
 пути к рабочим копиям, `<ui>` стоит на текущей ветке `main`.
 
 1. **Сборка.** Папка пакета — `components` репозитория `simai/ui-pro`,
@@ -581,26 +581,26 @@ Framework на ревизии, которую закрепляет `components/f
 
    ```bash
    git clone https://github.com/simai/ui-pro.git
-   git -C ui-pro checkout 9fcf81535f75d3a0eb0dbc31983c55e7346ada3d
+   git -C ui-pro checkout db490626ba74caeed832352c7bc005410ca825e2
    node <ui-builder>/bin/sf-build.js package --name pro \
      --package-root ui-pro/components \
-     --package-revision 9fcf81535f75d3a0eb0dbc31983c55e7346ada3d \
+     --package-revision db490626ba74caeed832352c7bc005410ca825e2 \
      --package-repository simai/ui-pro \
      --ui-source <ui-source> --ui <ui> --out build/pro --json
    ```
 
 2. **Проверка квитанции.** Команда завершается с кодом `0` и `status: "PASS"`.
    В `build/pro/package-receipt.json` поле `framework.release` равно
-   `ui-7f1d29b02919`, `package_source.revision` — коммиту из шага 1, а
+   `ui-7fb26d395af2`, `package_source.revision` — коммиту из шага 1, а
    `package_reference.status` — `agrees`.
 3. **Подключение.** Каталог `build/pro/smart` кладут в публичную папку
    проекта под путём с коммитом пакета, например
-   `public/assets/pro/9fcf81535f75d3a0eb0dbc31983c55e7346ada3d/smart/`, и объявляют
+   `public/assets/pro/db490626ba74caeed832352c7bc005410ca825e2/smart/`, и объявляют
    до `core.js`:
 
    ```js
    window.SF_BOOT_CONFIG = {
-     packages: {pro: {base: '/assets/pro/9fcf81535f75d3a0eb0dbc31983c55e7346ada3d/smart'}},
+     packages: {pro: {base: '/assets/pro/db490626ba74caeed832352c7bc005410ca825e2/smart'}},
    };
    ```
 

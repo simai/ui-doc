@@ -237,12 +237,12 @@ list.addEventListener('sf-list-open', (event) => {
 | | |
 |:---|:---|
 | Тег | `<sf-list>`, контракт `smart.list` версии `1.5.1` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`); пока ждёт данные, компонент показывает свою. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как список; название компонент ставит сам; с клавиатуры: `Tab`, `↑`, `↓`, `Home`, `End`, `Enter`, `F2`, `Shift+F10`, `клавиша меню`. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/list` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-list` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/list` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-list` |
 
 ## См. также
 

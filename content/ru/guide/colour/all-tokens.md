@@ -64,12 +64,12 @@ description: "Полный список переменных, которые о�
 | `--sf-on-success-container` | `light-dark(var(--sf-success-10), var(--sf-success-90))` |
 | `--sf-on-success-container-graphic` | `light-dark(var(--sf-success-50), var(--sf-success-60))` |
 | `--sf-on-surface` | `light-dark(var(--sf-neutral-10), var(--sf-neutral-90))` · `var(--sf-on-surface-media)` |
-| `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` |
+| `--sf-on-surface-active` | `light-dark(var(--sf-neutral-20), var(--sf-neutral-80))` · `var(--sf-on-surface-media)` |
 | `--sf-on-surface-card-variant` | `light-dark(var(--sf-neutral-40), var(--sf-neutral-70))` |
 | `--sf-on-surface-container-variant` | `light-dark(var(--sf-neutral-35), var(--sf-neutral-85))` · `var(--sf-white--alfa-80)` |
 | `--sf-on-surface-disabled` | `light-dark(var(--sf-neutral-50--alfa-80), var(--sf-neutral-90--alfa-48))` · `var(--sf-white--alfa-64)` |
 | `--sf-on-surface-fixed` | `var(--sf-neutral-10)` |
-| `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` |
+| `--sf-on-surface-hover` | `light-dark(var(--sf-neutral-15), var(--sf-neutral-85))` · `var(--sf-on-surface-media)` |
 | `--sf-on-surface-inverse` | `light-dark(var(--sf-neutral-90), var(--sf-neutral-10))` |
 | `--sf-on-surface-inverse-fixed` | `var(--sf-neutral-90)` |
 | `--sf-on-surface-media` | `var(--sf-white)` |
@@ -727,6 +727,7 @@ description: "Полный список переменных, которые о�
 | `--sf-paper-outline` | `var(--sf-neutral-50)` |
 | `--sf-paper-primary` | `var(--sf-primary-40)` |
 | `--sf-paper-select` | `var(--sf-primary-50--alfa-8)` |
+| `--sf-place--container-outline` | `var(--sf-outline)` |
 | `--sf-popup-form-wide-width` | `var(--sf-g2)` · `var(--sf-g1)` |
 | `--sf-popup-form-width` | `var(--sf-g0)` · `var(--sf-f8)` |
 | `--sf-popup-list-max-width` | `var(--sf-g0)` · `var(--sf-f8)` |

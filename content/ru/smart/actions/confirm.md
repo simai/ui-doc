@@ -5,7 +5,7 @@ description: "Вопрос человеку прямо на месте: что �
 
 # Подтверждение
 
-:badge[sf-confirm]{variant=tonal scheme=primary size=1/2} :badge[1.3.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-confirm]{variant=tonal scheme=primary size=1/2} :badge[1.3.1]{variant=outline scheme=on-surface size=1/2}
 
 Подтверждение спрашивает человека прямо там, где он работает: удалить файл в
 его строке, убрать участника, вернуть вид раздела. Оно показывает, что
@@ -233,13 +233,13 @@ Tab доходит до ответов, Enter и пробел отвечают, 
 
 | | |
 |:---|:---|
-| Тег | `<sf-confirm>`, контракт `smart.confirm` версии `1.3.0` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-confirm>`, контракт `smart.confirm` версии `1.3.1` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; работает только с приложением, подключённым через порт. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; название компонент ставит сам; с клавиатуры: `Tab`, `Enter`, `Пробел`, `Esc`. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/confirm` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-confirm` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/confirm` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-confirm` |
 
 ## См. также
 

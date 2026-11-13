@@ -6,7 +6,7 @@ profile: reference
 
 # Календарь
 
-:badge[sf-datepicker]{variant=tonal scheme=primary size=1/2} :badge[1.3.5]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-datepicker]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
 
 Календарь показывает дни месяца, выбранную дату или период. Поведения у
 классов нет: перелистывание, выбор даты и
@@ -120,7 +120,7 @@ profile: reference
 | Что | Классы |
 |:---|:---|
 | Блок | `sf-datepicker` |
-| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-row`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-weekday`, `sf-datepicker-wrap` |
+| Части | `sf-datepicker-another-month`, `sf-datepicker-container`, `sf-datepicker-context`, `sf-datepicker-day`, `sf-datepicker-day-date`, `sf-datepicker-day-end`, `sf-datepicker-day-info`, `sf-datepicker-day-off`, `sf-datepicker-day-selected`, `sf-datepicker-day-start`, `sf-datepicker-main`, `sf-datepicker-period`, `sf-datepicker-preset`, `sf-datepicker-presets`, `sf-datepicker-row`, `sf-datepicker-text`, `sf-datepicker-text-end`, `sf-datepicker-text-selected`, `sf-datepicker-text-start`, `sf-datepicker-time`, `sf-datepicker-time-separator`, `sf-datepicker-time-value`, `sf-datepicker-top`, `sf-datepicker-week`, `sf-datepicker-weekday`, `sf-datepicker-wrap` |
 | Модификаторы | `sf-datepicker--inline`, `sf-datepicker--presets`, `sf-datepicker--time` |
 
 Классы и переменные собраны из CSS выпуска и обновляются вместе с ним.
@@ -181,10 +181,10 @@ profile: reference
 | `--sf-datepicker-text--border-start-start-radius` | не задана; задают модификаторы, например `.sf-datepicker-text.sf-datepicker-text-end`: `var(--sf-radius-square)` | `border-start-start-radius` |
 | `--sf-datepicker-text--color` | не задана; задают модификаторы, например `.sf-datepicker-text`: `var(--sf-on-surface)` | `color` |
 | `--sf-datepicker-top--background-color` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-surface-popup)` | `background-color` |
-| `--sf-datepicker-top--padding-bottom` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1)` | `padding-bottom` |
+| `--sf-datepicker-top--padding-bottom` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/4)` | `padding-bottom` |
 | `--sf-datepicker-top--padding-inline-end` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/3)` | `padding-inline-end` |
 | `--sf-datepicker-top--padding-inline-start` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/3)` | `padding-inline-start` |
-| `--sf-datepicker-top--padding-top` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1)` | `padding-top` |
+| `--sf-datepicker-top--padding-top` | не задана; задают модификаторы, например `.sf-datepicker .sf-datepicker-top`: `var(--sf-space-1/4)` | `padding-top` |
 
 ## См. также
 

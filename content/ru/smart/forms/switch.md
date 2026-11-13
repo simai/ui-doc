@@ -5,7 +5,7 @@ description: "Включает или выключает настройку ср
 
 # Переключатель
 
-:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-switch]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
 
 Переключатель включает или выключает настройку сразу после нажатия. Подпись
 называет состояние или возможность — «Уведомления», «Компактный режим», — а не
@@ -145,7 +145,7 @@ compact.addEventListener('change', async (event) => {
 | `short` | да/нет | нет | — | Короткая дорожка — в полторы высоты вместо двух — для плотной строки. То же, что класс `sf-switch--short` в разметке на классах. |
 | `label` | строка | пусто | — | — |
 | `description` | строка | пусто | — | — |
-| `help` | строка | пусто | — | — |
+| `help` | строка | пусто | — | Пояснение за кнопкой «?» (sf-help-mark) после текста подписи; нажатие на кнопку открывает его и никогда не меняет сам элемент. В слот help можно поставить свой sf-help-mark страницы. |
 | `disabled` | да/нет | нет | — | — |
 | `name` | строка | пусто | — | — |
 | `value` | строка | `on` | — | Что отправляет включённый переключатель; без значения — "on", как у родного флажка (simai/ui-source#38). |
@@ -191,13 +191,13 @@ compact.addEventListener('change', async (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-switch>`, контракт `smart.switch` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-switch>`, контракт `smart.switch` версии `1.5.0` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Заготовки нет. Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как переключатель; нужна подпись или `aria-label`; с клавиатуры: `Tab`, `Пробел`. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/switch` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-switch` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/switch` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-switch` |
 
 ## См. также
 

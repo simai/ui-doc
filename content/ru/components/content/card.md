@@ -6,7 +6,7 @@ profile: reference
 
 # Карточка
 
-:badge[sf-card]{variant=tonal scheme=primary size=1/2} :badge[1.5.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-card]{variant=tonal scheme=primary size=1/2} :badge[1.5.1]{variant=outline scheme=on-surface size=1/2}
 
 Карточка собирает несколько блоков содержимого — заголовок, абзац, список,
 действие — в одну отдельную область с тонкой границей и скруглёнными углами.
@@ -74,7 +74,7 @@ profile: reference
 | `--sf-card-padding-block` | Отступ над содержимым и под ним. | `var(--sf-space-2)` |
 | `--sf-card-padding-inline` | Отступ слева и справа от содержимого. | `min(var(--sf-space-2), 8%)` |
 | `--sf-card-gap` | Промежуток между блоками карточки. | `var(--sf-content--space-text)` |
-| `--sf-card-title-size` | Размер заголовка внутри карточки — её названия. | `var(--sf-b6)` |
+| `--sf-card-title-size` | Размер заголовка внутри карточки — её названия. | `var(--sf-heading-6--size)` |
 | `--sf-card-title-weight` | Насыщенность заголовка внутри карточки — её названия. | `var(--sf-text--font-weight-6)` |
 
 ```css

@@ -5,7 +5,7 @@ description: "Одно важное число на панели: подпись
 
 # Плитка показателя
 
-:badge[sf-tile-metric]{variant=tonal scheme=primary size=1/2} :badge[1.2.2]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-tile-metric]{variant=tonal scheme=primary size=1/2} :badge[1.2.3]{variant=outline scheme=on-surface size=1/2}
 
 Плитка показателя показывает одно число, которое важно на панели
 администратора или на сводной странице: нагрузку сервера, занятое место из
@@ -210,13 +210,13 @@ description: "Одно важное число на панели: подпись
 
 | | |
 |:---|:---|
-| Тег | `<sf-tile-metric>`, контракт `smart.tile-metric` версии `1.2.2` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-tile-metric>`, контракт `smart.tile-metric` версии `1.2.3` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как группа; нужна подпись или `aria-label`; с клавиатуры: плитка-ссылка или плитка-кнопка — одна остановка `Tab`: `Enter` открывает ссылку, `Enter` или `Пробел` нажимают кнопку. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/tile-metric` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-tile-metric` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/tile-metric` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-tile-metric` |
 
 ## См. также
 

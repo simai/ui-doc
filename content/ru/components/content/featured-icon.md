@@ -6,7 +6,7 @@ profile: reference
 
 # Акцентная иконка
 
-:badge[sf-featured-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.1]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-featured-icon]{variant=tonal scheme=primary size=1/2} :badge[1.1.2]{variant=outline scheme=on-surface size=1/2}
 
 Акцентная иконка ставит [иконку](/ru/components/content/icons/) на цветную
 подложку и выделяет тему карточки, раздела, статуса или пустого состояния.

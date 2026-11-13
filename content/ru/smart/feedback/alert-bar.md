@@ -5,7 +5,7 @@ description: "Полоса во всю ширину над шапкой стра
 
 # Плашка уведомлений
 
-:badge[sf-alert-bar]{variant=tonal scheme=primary size=1/2} :badge[1.4.0]{variant=outline scheme=on-surface size=1/2}
+:badge[sf-alert-bar]{variant=tonal scheme=primary size=1/2} :badge[1.4.1]{variant=outline scheme=on-surface size=1/2}
 
 Плашка уведомлений — полоса во всю ширину над шапкой страницы или
 административного интерфейса для состояний, которые требуют действия сейчас:
@@ -203,13 +203,13 @@ bar.addEventListener('sf-alert-bar-close', (event) => {
 
 | | |
 |:---|:---|
-| Тег | `<sf-alert-bar>`, контракт `smart.alert-bar` версии `1.4.0` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Тег | `<sf-alert-bar>`, контракт `smart.alert-bar` версии `1.4.1` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как область страницы; название компонент ставит сам; с клавиатуры: `Tab` проходит по ссылке действия, «Принять к сведению», времени каждого пункта (с подсказкой), стрелкам листания, «Все N» и закрытию по порядку; `Enter` или `Пробел` нажимают кнопку, `Enter` открывает ссылку действия; `Esc` закрывает открытый список и возвращает фокус на «Все N». |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/alert-bar` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-alert-bar` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/alert-bar` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-alert-bar` |
 
 ## См. также
 

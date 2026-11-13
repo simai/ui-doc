@@ -204,12 +204,12 @@ header.addEventListener('sf-site-header-opened', () => {
 | | |
 |:---|:---|
 | Тег | `<sf-header-site>`, контракт `smart.header-site` версии `1.8.3` |
-| Поставка | выпуск Framework `ui-7f1d29b02919` |
+| Поставка | выпуск Framework `ui-7fb26d395af2` |
 | [Готовность](/ru/guide/smart-components/quality/#готовность-компонента-к-использованию) | Пробный: может измениться в следующих выпусках; описан и проверен своим сценарием, в продуктах ещё не проверен. |
 | До прихода кода | Пока грузится код, на месте компонента видна заготовка «блок» (сервер пишет `data-sf-skeleton="block"`). Подробнее — [Коробка до кода](/ru/guide/smart-components/first-paint/#коробка-до-кода). |
 | Доступность | Читается как шапка сайта; название компонент ставит сам; с клавиатуры: `Tab` по порядку проходит логотип, разделы, ссылки и инструменты; `Enter` или `Пробел` на кнопке меню открывают боковую панель; `Esc` закрывает боковую панель и возвращает фокус на кнопку меню. |
-| Источник | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/smart/header-site` |
-| Правило классов | `simai/ui@7f1d29b0291913902332b48520c65ed7a1841710:distr/rule/rule.json#name=cl-header-site` |
+| Источник | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/smart/header-site` |
+| Правило классов | `simai/ui@7fb26d395af28dfcaac2a5df9de254b3067dc4ae:distr/rule/rule.json#name=cl-header-site` |
 
 ## См. также
 
